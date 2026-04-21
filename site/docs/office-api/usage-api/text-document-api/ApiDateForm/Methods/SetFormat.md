@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to set the date format on a date form.
+Set the date format on a date form in a document.
 
 ```javascript editor-docx
 // Specify the format of the date for the form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has format: " + format);
 doc.Push(paragraph);
 ```
-

@@ -17,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onFocusAnnotation", (data) => {
     console.log("rangeId: " + data.rangeId);
 });
 ```
-

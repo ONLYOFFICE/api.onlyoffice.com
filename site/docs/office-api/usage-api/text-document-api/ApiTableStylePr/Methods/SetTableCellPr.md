@@ -22,7 +22,7 @@ expression.SetTableCellPr(oTableCellPr);
 
 ## Example
 
-This example shows how to create and set the table cell properties which will be applied to all the cells within a table which match the conditional formatting type.
+Create and set the table cell properties which will be applied to all the cells within a table which match the conditional formatting type.
 
 ```javascript editor-docx
 // How to set the table cell properties to table style.
@@ -48,4 +48,3 @@ tableStylePr.SetTableCellPr(tableCellPr);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数据集的四分位数。
+在电子表格中返回数据集的四分位数。
 
 ```javascript editor-xlsx
-// How to get the quartile of a data set.
+// How to get the quartile of a data set in a spreadsheet.
 
-// Use a function to calculate a part divided by four of a data set.
+// Use a function to calculate a part divided by four of a data set in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,3 @@ let ans = func.QUARTILE(array, quart);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

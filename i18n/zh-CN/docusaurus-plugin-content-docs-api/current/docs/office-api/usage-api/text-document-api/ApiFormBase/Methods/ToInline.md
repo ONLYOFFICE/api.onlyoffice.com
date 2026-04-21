@@ -21,7 +21,7 @@ boolean
 
 ## 示例
 
-此示例将表单转换为内联表单。
+将表单转换为内联表单。
 
 ```javascript editor-docx
 // How to make the form inline.
@@ -46,4 +46,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
 doc.Push(paragraph);
 ```
-

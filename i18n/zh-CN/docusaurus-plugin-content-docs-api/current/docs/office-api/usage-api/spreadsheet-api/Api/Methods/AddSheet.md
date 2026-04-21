@@ -22,13 +22,12 @@ expression.AddSheet(sName);
 
 ## 示例
 
-此示例创建一个新工作表。
+创建新的工作表。
 
 ```javascript editor-xlsx
 // How to create a new worksheet.
 
-// Create a worksheet.
+// Add the sheet and display the result in a spreadsheet.
 
 Api.AddSheet("New sheet");
 ```
-

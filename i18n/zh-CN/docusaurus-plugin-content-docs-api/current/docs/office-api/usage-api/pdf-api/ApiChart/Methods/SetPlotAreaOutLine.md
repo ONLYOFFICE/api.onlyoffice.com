@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何为绑定区域设置轮廓颜色。
+如何在 PDF 文档中为绘图区域设置轮廓颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its plot area outline.
+// Create a chart, set its properties and its plot area outline in a PDF document.
+
+// Use chart to set plot area out line in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +47,3 @@ let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColo
 chart.SetPlotAreaOutLine(stroke);
 page.AddObject(chart);
 ```
-

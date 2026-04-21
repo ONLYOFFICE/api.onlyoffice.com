@@ -21,12 +21,12 @@ expression.GetParagraphMarkTextPr();
 
 ## 示例
 
-此示例展示如何获取用于标记段落结尾的段落标记的文本属性。
+获取文档中用于标记段落结尾的段落标记的文本属性。
 
 ```javascript editor-docx
-// Get the mark text properties of the paragraph.
+// Get the mark text properties of the paragraph in a document.
 
-// How to update the text properties of the paragraph mark.
+// How to update the text properties of the paragraph mark in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraphMarkTextPr.SetFontSize(52);
 paragraphMarkTextPr.SetColor(Api.HexColor('#FFFF00'));
 paragraphMarkTextPr.SetSpacing(5);
 ```
-

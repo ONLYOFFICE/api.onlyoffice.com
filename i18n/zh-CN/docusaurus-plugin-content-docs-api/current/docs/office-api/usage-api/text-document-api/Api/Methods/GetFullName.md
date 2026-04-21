@@ -20,16 +20,13 @@ string
 
 ## 示例
 
-此示例获取文档名称并将其插入到文档中。
+获取文档名称并将其插入文档。
 
 ```javascript editor-docx
-// Returns the first paragraph of the document and adds the document full name to it.
+// Return the first paragraph of the document and add the document full name to it.
 
-// How to get the full name of the current document and add it to the paragraph.
-
-// Returns the full name of the currently opened file and write it to the first paragraph of the document.
+// Return the full name of the currently opened file and write it to the first paragraph of the document.
 
 let paragraph = Api.GetDocument().GetElement(0);
 paragraph.AddText("File name: " + Api.GetFullName());
 ```
-

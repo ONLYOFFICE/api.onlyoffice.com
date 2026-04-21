@@ -29,4 +29,3 @@ window.Asc.plugin.executeMethod("GetCurrentAddinField", [], function(data){
 	}
 });
 ```
-

@@ -20,9 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Check the class type returned by an unsupported annotation in a document.
 
 ```javascript editor-docx
-// todo_example
-```
+// How do I check what type an unsupported annotation object is in a document?
 
+// Retrieve and output the class type string for an unsupported annotation in a document.
+```

@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get and display a X position of a drawing.
+How to get and display a X position of a drawing in a PDF document.
 
 ```javascript editor-pdf
 // Get a shape object from a page and get its X position.
+
+// Get the pos x using a drawing object object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,4 +43,3 @@ paragraph.AddText(`Drawing X position is: ${shape.GetPosX()}`);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

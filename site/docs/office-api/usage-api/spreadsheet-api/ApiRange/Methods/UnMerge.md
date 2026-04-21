@@ -20,7 +20,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example splits the selected merged cell range into the single cells.
+Splits the selected merged cell range into the single cells.
 
 ```javascript editor-xlsx
 // How to unmerge a range of cells.
@@ -31,4 +31,3 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A3:E8").Merge(true);
 worksheet.GetRange("A5:E5").UnMerge();
 ```
-

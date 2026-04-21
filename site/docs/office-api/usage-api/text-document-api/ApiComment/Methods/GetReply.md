@@ -22,10 +22,10 @@ expression.GetReply(nIndex);
 
 ## Example
 
-This example shows how to get the specified comment reply.
+Get the specified comment reply in a document.
 
 ```javascript editor-docx
-// Get a comment reply by knowing its index.
+// Get a comment reply by knowing its index in a document.
 
 // How to get the first comment reply text and display it in the document.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("First comment reply: " + commentReply.GetText());
 doc.Push(paragraph);
 ```
-

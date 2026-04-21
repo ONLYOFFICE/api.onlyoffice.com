@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md)
 
 ## Example
 
-This example checks if the current form is required.
+Check if the current form is required.
 
 ```javascript editor-forms
 // How to know whether a text form is required or not.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
-

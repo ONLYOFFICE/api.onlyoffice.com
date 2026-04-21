@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the major tick mark "cross" for the horizontal axis.
+Specify the major tick mark "cross" for the horizontal axis in a presentation.
 
 ```javascript editor-pptx
-// How to set a major tick mark using predefined symbols.
+// How to set a major tick mark using predefined symbols in a presentation.
 
-// Create a chart, set its properties and major tick mark for horizontal axis.
+// Create a chart, set its properties and major tick mark for horizontal axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -56,4 +56,3 @@ chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 slide.AddObject(chart);
 ```
-

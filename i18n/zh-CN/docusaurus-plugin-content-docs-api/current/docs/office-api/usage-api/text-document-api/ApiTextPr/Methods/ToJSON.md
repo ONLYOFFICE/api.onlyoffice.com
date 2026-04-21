@@ -22,10 +22,10 @@ JSON
 
 ## 示例
 
-此示例将 ApiTextPr 对象转换为 JSON 对象。
+在文档中将文本属性对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the text properties.
+// How to get a JSON from the text properties in a document.
 
 // Convert the text properties to json and add it to the document.
 
@@ -39,4 +39,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("A sample text with the font size set to 15 points using the text properties.");
 paragraph.SetTextPr(textPrFromJSON);
 ```
-

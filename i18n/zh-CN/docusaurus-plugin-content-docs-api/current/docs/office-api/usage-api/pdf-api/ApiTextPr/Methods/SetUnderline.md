@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例指定文本块的内容与直接显示在字符下方的线条一起显示（小于行上字符上方和下方的所有间距）。
+指定在 PDF 文档中 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
 
 ```javascript editor-pdf
-// How to underline a text.
+// How to underline a text in a PDF document.
 
-// Get the text properties of the run and underline its text.
+// Get the text properties of the run and underline its text in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +49,3 @@ run.AddText("This is an underlined text inside the shape.");
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

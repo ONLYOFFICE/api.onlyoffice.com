@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-This example adds a caption paragraph after the paragraph.
+Add a caption paragraph after the paragraph in a document.
 
 ```javascript editor-docx
-// How to add caption to the paragraph.
+// How to add caption to the paragraph in a document.
 
-// Add a caption to the text specifying its properties.
+// Add a caption to the text specifying its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
 ```
-

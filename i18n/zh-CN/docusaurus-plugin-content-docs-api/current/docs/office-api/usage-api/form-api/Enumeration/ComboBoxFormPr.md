@@ -11,10 +11,9 @@
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [ComboBoxFormPrBase](../Enumeration/ComboBoxFormPrBase.md)
 
-
 ## 示例
 
-此示例使用通用和特定的组合框表单属性创建组合框表单。
+使用通用和特定的组合框表单属性创建组合框表单。
 
 ```javascript editor-forms
 // How to create a combo box form with its properties.
@@ -32,4 +31,3 @@ let comboBoxFormPr = {
 };
 let comboBoxForm = Api.CreateComboBoxForm(comboBoxFormPr);
 ```
-

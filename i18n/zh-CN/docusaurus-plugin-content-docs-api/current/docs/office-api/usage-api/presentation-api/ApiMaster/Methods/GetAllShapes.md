@@ -20,7 +20,7 @@ expression.GetAllShapes();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片母版中所有形状对象的数组。
+获取演示文稿中幻灯片母版的所有形状对象数组。
 
 ```javascript editor-pptx
 // How to get all shapes from the presentation slide master.
@@ -47,4 +47,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type = " + classType);
 shape.SetVerticalTextAlign("center");
 ```
-

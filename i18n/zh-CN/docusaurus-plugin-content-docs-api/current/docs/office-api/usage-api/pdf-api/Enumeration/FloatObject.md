@@ -11,5 +11,3 @@
 - [ApiBaseField](../ApiBaseField/ApiBaseField.md)
 - [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md)
 - [Drawing](../Enumeration/Drawing.md)
-
-

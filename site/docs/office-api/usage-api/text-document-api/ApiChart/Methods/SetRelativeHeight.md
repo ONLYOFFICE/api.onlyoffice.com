@@ -6,12 +6,13 @@ Inherited from [ApiDrawing.SetRelativeHeight](../../ApiDrawing/Methods/SetRelati
 
 ## Example
 
-This example demonstrates relative height shape sizing to page dimensions.
+Relative height shape sizing to page dimensions.
 
 ```javascript editor-docx
 // How to set shape width and height as percentages of the page.
 
 // Create a responsive rectangle that scales with page size.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
@@ -27,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The shape was created with a width 100% of page width and 25% of height page");
 doc.Push(paragraph);
 ```
-

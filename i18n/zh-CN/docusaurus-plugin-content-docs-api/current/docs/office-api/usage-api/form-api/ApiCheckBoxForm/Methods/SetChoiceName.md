@@ -22,11 +22,12 @@ boolean
 
 ## 示例
 
-此示例展示如何创建包含三个单选按钮的表单并为每个单选按钮指定选项名称。
+创建一个包含三个单选按钮的表单，并为每个单选按钮指定选项名称。通过为每个单选按钮设置相同的单选组键将单选按钮分组在一起。单选组键显示在文档末尾。
 
 ```javascript editor-forms
-// The radio buttons are grouped together by setting the same radio group key for each radio button.
-// The radio group key is displayed at the end of the document.
+// How can I set choice name using a checkbox form in a document?
+
+// Set choice name for a checkbox form in a document.
 
 let doc = Api.GetDocument();
 
@@ -81,4 +82,3 @@ doc.GetAllForms().forEach(form => {
 });
 doc.Push(paragraph);
 ```
-

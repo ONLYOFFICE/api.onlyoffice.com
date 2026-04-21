@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置指定图表系列的轮廓。
+在电子表格中为指定的图表系列设置轮廓。
 
 ```javascript editor-xlsx
-// How to outline chart series.
+// How to outline chart series in a spreadsheet.
 
-// Add colored stroke for a chart seria.
+// Add colored stroke for a chart seria in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -52,4 +52,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetSeriesOutLine(stroke, 1, false);
 ```
-

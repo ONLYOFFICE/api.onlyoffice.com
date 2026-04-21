@@ -23,4 +23,3 @@ expression.GetTheme();
 ```javascript editor-xlsx
 
 ```
-

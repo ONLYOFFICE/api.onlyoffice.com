@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例向文本块添加文本。
+在 PDF 文档中向 run 添加文本。
 
 ```javascript editor-pdf
-// How to add a text to a text run object.
+// How to add a text to a text run object in a PDF document.
 
 // How to add a text to the page.
 
@@ -45,4 +45,3 @@ run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

@@ -2,13 +2,17 @@
 
 从文档中移除字段。
 
-Inherited from [ApiBaseField.Delete](../../ApiBaseField/Methods/Delete.md).
+继承自 [ApiBaseField.Delete](../../ApiBaseField/Methods/Delete.md)。
 
 ## 示例
 
-此示例从文档中删除字段。
+从文档中移除字段。
 
 ```javascript editor-pdf
+// How to delete for a base field in a PDF document?
+
+// Delete and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -18,4 +22,3 @@ textField.SetValue('Example text');
 textField.AddWidget(0, [10, 40, 160, 60]);
 textField.Delete();
 ```
-

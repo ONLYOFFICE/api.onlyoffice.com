@@ -20,7 +20,7 @@ expression.GetImage();
 
 ## 示例
 
-此示例展示如何从图片表单获取 base64 格式的图像。
+从文档中的图片表单获取 base64 格式的图像。
 
 ```javascript editor-docx
 // How to get an image from the picture form.
@@ -36,4 +36,3 @@ let base64img = pictureForm.GetImage();
 let drawing = Api.CreateImage(base64img, 60 * 36000, 35 * 36000);
 paragraph.AddDrawing(drawing);
 ```
-

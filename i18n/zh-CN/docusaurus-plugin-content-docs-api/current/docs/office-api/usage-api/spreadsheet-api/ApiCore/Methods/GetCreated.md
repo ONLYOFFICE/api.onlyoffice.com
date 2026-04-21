@@ -20,9 +20,13 @@ Date
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取工作簿的创建日期。
+获取电子表格中工作簿的创建日期（使用核心属性）。
 
 ```javascript editor-xlsx
+// How can I get the created using a core properties in a spreadsheet?
+
+// Get the created for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -41,4 +45,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Created: " + createdDate);
 ```
-

@@ -18,5 +18,3 @@ Enumeration
 - "euro"
 - "europlain"
 - "ch"
-
-

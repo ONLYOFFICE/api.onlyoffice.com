@@ -14,7 +14,7 @@ Object
 
 ## Example
 
-This example creates a checkbox form with the specific checkbox form properties.
+Create a checkbox form with the specific checkbox form properties.
 
 ```javascript editor-forms
 // How to create a checkbox form with its base properties.
@@ -24,4 +24,3 @@ This example creates a checkbox form with the specific checkbox form properties.
 let checkBoxFormPrBase = {"radio": true};
 let checkBoxForm = Api.CreateCheckBoxForm(checkBoxFormPrBase)
 ```
-

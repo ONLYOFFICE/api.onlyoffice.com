@@ -11,5 +11,3 @@
 
 - string
 - number
-
-

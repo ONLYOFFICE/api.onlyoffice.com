@@ -12,7 +12,7 @@
 
 ## 类型
 
-array
+[pt](../Enumeration/pt.md)[]
 
 ## 属性
 
@@ -26,4 +26,3 @@ array
 | 5 | [pt](../Enumeration/pt.md) | y3（左下） |
 | 6 | [pt](../Enumeration/pt.md) | x4（右下） |
 | 7 | [pt](../Enumeration/pt.md) | y4（右下） |
-

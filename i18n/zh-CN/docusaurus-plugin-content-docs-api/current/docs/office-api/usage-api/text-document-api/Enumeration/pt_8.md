@@ -17,4 +17,3 @@ number
 
 paraPr.SetBottomBorder("single", 48, 0, 0, 255, 0);
 ```
-

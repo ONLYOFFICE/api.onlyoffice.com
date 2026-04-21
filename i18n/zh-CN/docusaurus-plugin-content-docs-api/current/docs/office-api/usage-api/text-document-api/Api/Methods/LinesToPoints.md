@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将行转换为磅。
+在文档中将行转换为磅。
 
 ```javascript editor-docx
+// How do I convert lines to points in a document?
+
+// Convert lines to points and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const points = Api.LinesToPoints(lines);
 paragraph.AddText(lines + ' lines are equal to ' + points + ' points.');
 doc.Push(paragraph);
 ```
-

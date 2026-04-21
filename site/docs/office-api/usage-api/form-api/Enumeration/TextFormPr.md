@@ -11,13 +11,12 @@ Enumeration
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [TextFormPrBase](../Enumeration/TextFormPrBase.md)
 
-
 ## Example
 
-This example creates a a text form with the common and specific text form properties.
+Create a text form specifying its common and specific properties.
 
 ```javascript editor-forms
-// How to create a text form with adding properties like tip text, placeholder, etc. to it.
+// Set text form properties like tip text, placeholder, and characters limit.
 
 // Create a text form with properties.
 
@@ -34,4 +33,3 @@ let textFormPr = {
 };
 let textForm = Api.CreateTextForm(textFormPr);
 ```
-

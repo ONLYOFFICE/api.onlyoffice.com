@@ -16,5 +16,3 @@ Enumeration
 - "xlValidateTime"
 - "xlValidateTextLength"
 - "xlValidateCustom"
-
-

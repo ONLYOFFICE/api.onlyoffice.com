@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example pushes new element to rich paragraph.
+Pushes new element to rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How do I push in a PDF document?
+
+// Push using a rich paragraph object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -41,4 +45,3 @@ para.Push(newRun);
 
 console.log("We pushed new rich run element to rich paragraph");
 ```
-

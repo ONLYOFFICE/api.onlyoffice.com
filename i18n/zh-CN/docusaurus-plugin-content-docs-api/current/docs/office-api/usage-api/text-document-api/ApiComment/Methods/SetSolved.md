@@ -22,10 +22,10 @@ expression.SetSolved(bSolved);
 
 ## 示例
 
-此示例将批注标记为已解决。
+在文档中将批注标记为已解决。
 
 ```javascript editor-docx
-// How to make a comment solved.
+// How to make a comment solved in a document.
 
 // Get all comments from the presentation and set it solved.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The comment is solved: " + solved);
 doc.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a hidden fields of a pivot table.
+Get a hidden fields of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a hidden filds of a table.
+// How to get a hidden filds of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then get its invisible fields.
+// Create a pivot table, add data to it then get its invisible fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ for (let i = 0; i < hiddenFields.length; i += 1) {
     cell.SetValue(hiddenFields[i].GetName());
 }
 ```
-

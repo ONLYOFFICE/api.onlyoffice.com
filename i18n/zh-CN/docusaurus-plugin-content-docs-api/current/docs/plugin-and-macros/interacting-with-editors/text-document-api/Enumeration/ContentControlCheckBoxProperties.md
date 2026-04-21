@@ -24,4 +24,3 @@ let controlCheckBoxPr = {
 };
 window.Asc.plugin.executeMethod ("AddContentControlCheckBox", [controlCheckBoxPr, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
 ```
-

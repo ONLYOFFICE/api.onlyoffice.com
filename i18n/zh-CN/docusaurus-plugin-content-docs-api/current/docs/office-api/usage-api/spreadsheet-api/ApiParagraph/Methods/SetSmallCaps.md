@@ -23,9 +23,13 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-此示例展示如何为形状内段落中的所有文本设置小型大写字母格式。
+为电子表格中形状内段落的所有文本设置小型大写字母格式。
 
 ```javascript editor-xlsx
+// How can I set small caps using a paragraph in a spreadsheet?
+
+// Set small caps for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 120, 160));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -45,4 +49,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has normal capitalization.');
 content.Push(paragraph2);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Retrieve the class type of a numbering level in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiNumberingLevel.
+// How to identify the class type of a numbering level in a document?
 
-// Retrieve class type of ApiNumberingLevel object and insert it to the document.
+// Obtain the class type identifier of a numbering level object in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");
@@ -40,4 +40,3 @@ for (let lvl = 0; lvl < 8; ++lvl) {
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class Type = " + numbering.GetLevel(0).GetClassType());
 ```
-

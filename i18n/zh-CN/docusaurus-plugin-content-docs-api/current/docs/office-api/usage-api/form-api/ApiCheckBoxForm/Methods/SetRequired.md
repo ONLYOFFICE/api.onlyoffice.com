@@ -2,11 +2,11 @@
 
 指定当前表单是否为必填项。
 
-Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
+继承自 [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md)。
 
 ## 示例
 
-此示例指定当前表单是否应为必填项。
+指定当前表单是否应为必填。
 
 ```javascript editor-forms
 // How to make a text form required.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
-

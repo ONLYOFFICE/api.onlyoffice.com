@@ -20,14 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets reference style.
+Get reference style in a spreadsheet.
 
 ```javascript editor-xlsx
-// Get style of a reference.
+// Get style of a reference in a spreadsheet.
 
 // Insert a reference style into the cell.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());
 ```
-

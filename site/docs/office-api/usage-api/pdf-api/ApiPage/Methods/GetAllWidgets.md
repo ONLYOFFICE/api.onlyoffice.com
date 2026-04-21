@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all fields on the page.
+Get all fields on the page.
 
 ```javascript editor-pdf
+// How can I get all widgets using a page in a PDF document?
+
+// Get all widgets for a page in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -39,4 +43,3 @@ allWidgets.forEach(function(field) {
     console.log(field.GetClassType());
 });
 ```
-

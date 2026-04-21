@@ -15,7 +15,7 @@ Object
 
 ## 示例
 
-此示例创建具有特定日期表单属性的日期表单。
+创建具有特定日期表单属性的日期表单。
 
 ```javascript editor-forms
 // How to create a date form with its base properties.
@@ -28,4 +28,3 @@ let dateFormPrBase = {
 };
 let dateForm = Api.CreateDateForm(dateFormPrBase);
 ```
-

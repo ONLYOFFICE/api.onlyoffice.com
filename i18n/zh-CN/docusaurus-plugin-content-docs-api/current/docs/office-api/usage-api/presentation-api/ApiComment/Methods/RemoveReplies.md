@@ -24,10 +24,10 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 ## 示例
 
-此示例演示如何从批注中删除回复。
+从演示文稿中的批注移除回复。
 
 ```javascript editor-pptx
-// How to delete specified comment reply.
+// How to delete specified comment reply in a presentation.
 
 // Get all comments from the presentation and remove a reply from the first one's.
 
@@ -57,4 +57,3 @@ paragraph.AddText("Comment replies count: " + arrComments[0].GetRepliesCount());
 paragraph.AddLineBreak();
 paragraph.AddText("Own reply was removed, but other two replies are still here.");
 ```
-

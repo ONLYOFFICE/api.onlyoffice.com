@@ -2,11 +2,11 @@
 
 返回绘图的父对象。
 
-Inherited from [ApiDrawing.GetParent](../../ApiDrawing/Methods/GetParent.md).
+继承自 [ApiDrawing.GetParent](../../ApiDrawing/Methods/GetParent.md)。
 
 ## 示例
 
-此示例演示如何获取父对象。
+获取演示文稿中的父对象。
 
 ```javascript editor-pptx
 // How to get a parent of a slide shape.
@@ -31,4 +31,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
 ```
-

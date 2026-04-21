@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-此示例在当前表格之后添加题注段落。
+在文档中在当前表格后添加题注段落。
 
 ```javascript editor-docx
-// How to add caption to the table.
+// How to add caption to the table in a document.
 
-// Add text as a table caption specifying its properties.
+// Add text as a table caption specifying its properties in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -50,4 +50,3 @@ let cell = table.GetCell(0, 0);
 table.AddElement(cell, 0, paragraph);
 table.AddCaption("", "Table", false, "Arabic", false, undefined, "hyphen");
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何向形状内的段落添加文本块元素。
+将 run 元素推送到电子表格中形状内的段落。
 
 ```javascript editor-xlsx
+// How do I push in a spreadsheet?
+
+// Push using a paragraph object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 100, 160));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -46,4 +50,3 @@ paragraph.Push(run);
 
 worksheet.GetRange('A1').SetValue('Elements in paragraph: ' + paragraph.GetElementsCount());
 ```
-

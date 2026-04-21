@@ -20,10 +20,10 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the current document content.
+Get a number of elements in the current document content in a document.
 
 ```javascript editor-docx
-// How to get elements count and push it to the paragraph.
+// How to get elements count and push it to the paragraph in a document.
 
 // Count the number of elements in the document.
 
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of elements inside the shape: " + docContent.GetElementsCount());
 doc.Push(paragraph);
 ```
-

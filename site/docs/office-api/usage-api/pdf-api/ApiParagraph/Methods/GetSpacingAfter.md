@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAft
 
 ## Example
 
-This example shows how to get the spacing after value of the current paragraph.
+Get the spacing after value of the current paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to get the size of a spacing after a text from a paragraph.
+// How to get the size of a spacing after a text from a paragraph in a PDF document.
 
-// Return a property of the spacing size after a paragraph.
+// Return a property of the spacing size after a paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing after : " + spacingAfter);
 docContent.Push(paragraph);
 ```
-

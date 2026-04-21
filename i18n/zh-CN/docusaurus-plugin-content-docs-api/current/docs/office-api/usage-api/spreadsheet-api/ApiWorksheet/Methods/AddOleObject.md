@@ -30,7 +30,7 @@ expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nCo
 
 ## 示例
 
-此示例使用指定的参数向工作表添加 OLE 对象。
+在电子表格中使用指定参数向工作表添加 OLE 对象。
 
 ```javascript editor-xlsx
 // How to add an OLE object to the worksheet specifying its url, size, etc.
@@ -46,4 +46,3 @@ worksheet.AddOleObject(
 	0, 2 * 36000, 4, 3 * 36000
 );
 ```
-

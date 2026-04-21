@@ -12,4 +12,3 @@ Object
 | ---- | ---- | ----------- |
 | content | string | 要替换的 HTML 内容。 |
 | separateParagraphs | boolean | 指定是否在单独的形状中创建每个段落。 |
-

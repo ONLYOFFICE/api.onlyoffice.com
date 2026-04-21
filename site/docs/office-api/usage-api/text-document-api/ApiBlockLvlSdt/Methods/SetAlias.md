@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets an alias attribute to the container.
+Set an alias attribute to the container in a document.
 
 ```javascript editor-docx
-// Creates a block content control and sets an alias to it.
+// Create a block content control and set an alias to it in a document.
 
-// How to set an alias to the ApiBlockLvlSdt object.
+// How to set an alias to the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -38,4 +38,3 @@ let alias = blockLvlSdt.GetAlias();
 let paragraph = doc.GetElement(1);
 paragraph.AddText("Alias: " + alias);
 ```
-

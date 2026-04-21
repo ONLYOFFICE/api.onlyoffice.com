@@ -20,7 +20,7 @@ expression.GetFreezePanesType();
 
 ## 示例
 
-此示例冻结第一列并将冻结类型粘贴到表格中。
+冻结第一列并将冻结类型粘贴到电子表格中的表格。
 
 ```javascript editor-xlsx
 // How to freeze a column in a worksheet.
@@ -32,4 +32,3 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Type: ");
 worksheet.GetRange("B1").SetValue(Api.GetFreezePanesType());
 ```
-

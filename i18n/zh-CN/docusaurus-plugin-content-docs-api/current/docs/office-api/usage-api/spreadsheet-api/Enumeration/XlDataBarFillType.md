@@ -10,5 +10,3 @@
 
 - "xlDataBarFillSolid"
 - "xlDataBarFillGradient"
-
-

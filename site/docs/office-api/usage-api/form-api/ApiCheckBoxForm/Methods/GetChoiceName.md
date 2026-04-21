@@ -20,11 +20,12 @@ string
 
 ## Example
 
-This example shows how to create a form with three radio buttons and specify choice names for each radio button.
+Create a form with three radio buttons and specify choice names for each radio button. The radio buttons are grouped together by setting the same radio group key for each radio button. The radio group key is displayed at the end of the document in a document.
 
 ```javascript editor-forms
-// The radio buttons are grouped together by setting the same radio group key for each radio button.
-// The radio group key is displayed at the end of the document.
+// How to get the choice name for a checkbox form?
+
+// Get the choice name and display the result in a document.
 
 let doc = Api.GetDocument();
 
@@ -79,4 +80,3 @@ doc.GetAllForms().forEach(form => {
 });
 doc.Push(paragraph);
 ```
-

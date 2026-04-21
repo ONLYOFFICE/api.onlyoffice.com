@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何删除自定义 XML 部件。
+删除演示文稿中的自定义 XML 部件。
 
 ```javascript editor-pptx
 // How to delete a custom XML part from the presentation.
 
-// Delete an XML part.
+// Delete and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -52,4 +52,3 @@ run.AddText(displayText);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

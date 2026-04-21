@@ -17,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onBlurAnnotation", (data) => {
     console.log("rangeId: " + data.rangeId);
 });
 ```
-

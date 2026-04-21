@@ -20,9 +20,13 @@ string[]
 
 ## Example
 
-This example shows how to get all font names used in a paragraph inside a shape.
+Get all font names used in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the font names for a paragraph in a spreadsheet?
+
+// Get the font names and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(140, 120, 160));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -41,4 +45,3 @@ paragraph.SetFontFamily('Consolas');
 const fontNames = paragraph.GetFontNames();
 worksheet.GetRange('A1').SetValue('Fonts used: ' + fontNames.join(', '));
 ```
-

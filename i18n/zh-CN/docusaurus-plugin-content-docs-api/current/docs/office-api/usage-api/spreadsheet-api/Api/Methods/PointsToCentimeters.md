@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为厘米。
+在电子表格中将磅转换为厘米。
 
 ```javascript editor-xlsx
+// How can I convert points to centimeters in a spreadsheet?
+
+// Convert points to centimeters in a spreadsheet.
+
 const points = 1000;
 const centimeters = Api.PointsToCentimeters(points);
 const text = points + ' points are equal to ' + centimeters + ' centimeters.';
@@ -32,4 +36,3 @@ const text = points + ' points are equal to ' + centimeters + ' centimeters.';
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
 ```
-

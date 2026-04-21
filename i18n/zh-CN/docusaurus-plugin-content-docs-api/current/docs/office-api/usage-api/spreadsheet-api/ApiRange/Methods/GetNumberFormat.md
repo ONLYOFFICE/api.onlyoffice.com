@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-此示例演示如何获取表示当前范围的格式代码的值。
+获取电子表格中当前范围的格式代码值。
 
 ```javascript editor-xlsx
 // How to find out a number format of a range.
@@ -33,4 +33,3 @@ range.SetValue(3);
 let format = range.GetNumberFormat();
 worksheet.GetRange("B3").SetValue("Number format: " + format);
 ```
-

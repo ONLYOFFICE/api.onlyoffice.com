@@ -23,10 +23,10 @@ expression.CreateNumbering(numType, startAt);
 
 ## Example
 
-This example creates a bullet for paragraphs.
+Create a bullet for paragraphs in a PDF document.
 
 ```javascript editor-pdf
-// How to create a numbered paragraph specifying its numerical.
+// How to create a numbered paragraph specifying its numerical in a PDF document.
 
 // Add numbered paragraph to the page.
 
@@ -48,4 +48,3 @@ paragraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

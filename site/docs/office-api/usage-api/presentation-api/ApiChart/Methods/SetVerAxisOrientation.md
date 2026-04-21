@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the vertical axis orientation.
+Specify the vertical axis orientation in a presentation.
 
 ```javascript editor-pptx
-// How to set an orientation of vertical axis.
+// How to set an orientation of vertical axis in a presentation.
 
-// Create a chart, set its properties and its vertical axis orientation.
+// Create a chart, set its properties and its vertical axis orientation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,3 @@ const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51,
 chart.SetTitleOutLine(stroke);
 slide.AddObject(chart);
 ```
-

@@ -23,7 +23,7 @@ expression.MergeCells(aCells);
 
 ## Example
 
-This example merges an array of cells.
+Merge an array of cells.
 
 ```javascript editor-pptx
 // How to get two cells by their position index and merge them into one.
@@ -48,4 +48,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

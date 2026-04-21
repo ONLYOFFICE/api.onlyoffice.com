@@ -22,16 +22,15 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-This example sets the italic property to the text character.
+Set the italic property to the text character in a document.
 
 ```javascript editor-docx
-// How to make text italic.
+// How to make text italic in a document.
 
-// Create a paragraph and make its text style italic.
+// Create a paragraph and make its text style italic in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a text run with the font set to italicized letters.");
 paragraph.SetItalic(true);
 ```
-

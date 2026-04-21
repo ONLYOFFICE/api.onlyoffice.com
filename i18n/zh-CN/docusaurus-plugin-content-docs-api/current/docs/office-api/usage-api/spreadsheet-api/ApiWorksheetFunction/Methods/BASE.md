@@ -24,15 +24,14 @@ number
 
 ## 示例
 
-此示例演示如何将数字转换为具有给定基数的文本表示形式。
+在电子表格中将数字转换为给定基数的文本表示。
 
 ```javascript editor-xlsx
-// How to convert a number into text.
+// How to convert a number into text in a spreadsheet.
 
-// Use function to get a text from a number.
+// Use function to get a text from a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BASE(5, 2, 5));
 ```
-

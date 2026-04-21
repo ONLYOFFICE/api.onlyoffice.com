@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的 XPath。
+获取文档中自定义 XML 节点的 XPath。
 
 ```javascript editor-docx
+// How to set node value for a custom XML node in a document?
+
+// Set node value and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -44,4 +48,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(xml.GetXml());
 doc.AddElement(0, paragraph);
 ```
-

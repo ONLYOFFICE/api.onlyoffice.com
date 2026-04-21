@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a report about every change which was made to the document in the review mode.
+Get a report about every change which was made to the document in the review mode.
 
 ```javascript editor-docx
 // How to get the report after the document review.
@@ -104,4 +104,3 @@ for (let userName in reviewReport) {
 }
 table.SetStyle(doc.GetStyle("Bordered"));
 ```
-

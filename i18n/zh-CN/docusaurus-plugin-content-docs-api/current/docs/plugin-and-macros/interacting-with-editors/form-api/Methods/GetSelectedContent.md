@@ -38,4 +38,3 @@ const prepareShape = function () {
 Asc.plugin.callCommand(prepareShape);
 Asc.plugin.executeMethod('GetSelectedContent', [], console.log);
 ```
-

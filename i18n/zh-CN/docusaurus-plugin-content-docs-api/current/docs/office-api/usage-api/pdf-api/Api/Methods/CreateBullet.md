@@ -22,12 +22,12 @@ expression.CreateBullet(sSymbol);
 
 ## 示例
 
-此示例演示如何创建项目符号。
+在 PDF 文档中创建项目符号。
 
 ```javascript editor-pdf
-// How to add a bullet to the paragraph.
+// How to add a bullet to the paragraph in a PDF document.
 
-// Add bulleted paragraph.
+// Create the bullet and display the result in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,4 +43,3 @@ paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
 ```
-

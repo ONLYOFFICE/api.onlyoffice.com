@@ -22,12 +22,12 @@ expression.GetPivotByName(name);
 
 ## 示例
 
-此示例展示如何按名称获取数据透视表。
+在电子表格中通过名称获取数据透视表。
 
 ```javascript editor-xlsx
-// How to find a pivot table.
+// How to find a pivot table in a spreadsheet.
 
-// Get a pivot table and by its name and update its fields.
+// Get a pivot table and by its name and update its fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,4 +47,3 @@ Api.GetActiveSheet().GetPivotByName(pivotTable.GetName()).AddFields({
 
 Api.GetActiveSheet().GetPivotByName(pivotTable.GetName()).AddDataField('Price');
 ```
-

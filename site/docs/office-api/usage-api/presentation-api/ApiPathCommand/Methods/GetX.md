@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes path commands of a star shape on a presentation slide.
+Analyzes path commands of a star shape on a presentation slide. Shows command count and first command details in a text shape.
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I get the x in a presentation?
+
+// Get the x using a path command object in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
@@ -39,4 +42,3 @@ paragraph.AddText(", First: " + cmd.GetType() + " at (" + cmd.GetX() + ", " + cm
 shape.SetPosition(1000000, 1000000);
 slide.AddObject(shape);
 ```
-

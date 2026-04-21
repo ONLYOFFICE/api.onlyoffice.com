@@ -29,9 +29,13 @@ string
 
 ## 示例
 
-此示例返回文档内容中的文本。
+返回文档内容中的文本。
 
 ```javascript editor-pptx
+// How can I get the text using a document content in a presentation?
+
+// Get the text for a document content in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,4 +53,3 @@ infoParagraph.AddText('Text from document content: ' + text);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
 ```
-

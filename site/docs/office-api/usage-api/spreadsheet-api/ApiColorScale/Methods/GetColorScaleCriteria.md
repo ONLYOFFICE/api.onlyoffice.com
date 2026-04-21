@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the color scale criteria collection.
+Get the color scale criteria collection in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to access and display color scale criteria information.
@@ -46,4 +46,3 @@ let criteria = colorScale.GetColorScaleCriteria();
 worksheet.GetRange("C1").SetValue("Criteria Count:");
 worksheet.GetRange("C2").SetValue(criteria ? criteria.length : 0);
 ```
-

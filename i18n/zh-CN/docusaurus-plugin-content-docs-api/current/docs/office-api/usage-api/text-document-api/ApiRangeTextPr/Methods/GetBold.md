@@ -2,16 +2,16 @@
 
 从当前文本属性获取粗体属性。
 
-Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
+继承自 [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md)。
 
 ## 示例
 
-此示例将当前表单转换为内联表单。
+将当前表单转换为内联表单。
 
 ```javascript editor-docx
-// How to find out whether a text is bold or not.
+// How to find out whether a text is bold or not in a document.
 
-// Get the bold property of the text.
+// Get the bold property of the text in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -34,4 +34,3 @@ let bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 doc.Push(paragraph);
 ```
-

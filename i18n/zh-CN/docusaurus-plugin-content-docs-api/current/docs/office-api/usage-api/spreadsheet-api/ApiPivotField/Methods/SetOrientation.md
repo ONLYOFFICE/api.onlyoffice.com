@@ -23,12 +23,12 @@ expression.SetOrientation(type);
 
 ## 示例
 
-此示例展示如何设置透视字段的方向。
+在电子表格中设置透视字段的方向。
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation.
+// How to change a pivot field orientation in a spreadsheet.
 
-// Create a pivot table, add data to it then change an orientation a specified pivot.
+// Create a pivot table, add data to it then change an orientation a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -69,4 +69,3 @@ setTimeout(function () {
     pivotField.SetOrientation("Columns");
 }, 5000);
 ```
-

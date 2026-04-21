@@ -2,11 +2,11 @@
 
 从当前 ApiDocumentContent 对象返回文档元素数组。
 
-Inherited from [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md).
+继承自 [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取文档元素数组。
+从文档中的文档内容获取文档元素数组。
 
 ```javascript editor-docx
 // Retrieve each document element.
@@ -41,4 +41,3 @@ docElements[0].SetBold(true);
 docElements[1].SetBackgroundColor(Api.HexColor('#EBEBEB'));
 docElements[2].Search("block text content control")[0].SetBold(true);
 ```
-

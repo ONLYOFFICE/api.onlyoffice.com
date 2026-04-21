@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example sets the parameters of the watermark settings and apply them to the document.
+Set the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
 // How to retrieve the text properties from the watermark and display it in the document.
 
-// Get the text properties from the watermark settings.
+// Get the text properties from the watermark settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
@@ -43,4 +43,3 @@ textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);
 ```
-

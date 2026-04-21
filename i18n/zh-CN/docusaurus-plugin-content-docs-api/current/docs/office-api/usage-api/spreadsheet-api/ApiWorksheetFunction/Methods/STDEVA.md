@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何根据样本估算标准差，包括逻辑值和文本。文本和 false 逻辑值的值为 0；true 逻辑值的值为 1。
+在电子表格中基于样本估计标准差，包括逻辑值和文本。文本和 false 逻辑值为 0；true 逻辑值为 1。
 
 ```javascript editor-xlsx
-// How to estimate standard deviation based on a sample considering logical and text data types.
+// How to estimate standard deviation based on a sample considering logical and text data types in a spreadsheet.
 
-// Use a function to get the standard deviation.
+// Use a function to get the standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ let ans = func.STDEVA(
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

@@ -24,9 +24,13 @@ expression.AddEffect(drawing, effectType, trigger);
 
 ## Example
 
-This example adds an animation effect to a sequence.
+Add an animation effect to a sequence in a presentation.
 
 ```javascript editor-pptx
+// How to add the effect for an animation sequence in a presentation?
+
+// Add the effect and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -63,4 +67,3 @@ paragraph.AddLineBreak();
 paragraph.AddText('Duration: ' + effect.GetDuration() + 'ms');
 slide.AddObject(infoShape);
 ```
-

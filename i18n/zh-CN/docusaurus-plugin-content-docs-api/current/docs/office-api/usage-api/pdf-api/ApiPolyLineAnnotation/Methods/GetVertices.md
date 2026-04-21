@@ -20,9 +20,13 @@ expression.GetVertices();
 
 ## 示例
 
-此示例从折线注释获取顶点。
+获取 PDF 文档中折线注释的顶点。
 
 ```javascript editor-pdf
+// How to get the vertices for a polyline annotation in a PDF document?
+
+// Get the vertices and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polylineAnnot = Api.CreatePolyLineAnnot([40, 5, 160, 110], vertices);
@@ -31,4 +35,3 @@ let page = doc.GetPage(0);
 page.AddObject(polylineAnnot);
 console.log(`Polyline vertices are: ${JSON.stringify(polylineAnnot.GetVertices())}`);
 ```
-

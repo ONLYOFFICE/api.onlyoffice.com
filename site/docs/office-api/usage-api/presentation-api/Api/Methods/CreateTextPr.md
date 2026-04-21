@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create a text properties and use it.
+Create a text properties and use it in a presentation.
 
 ```javascript editor-pptx
-// How to change text style, size and font.
+// How to change text style, size and font in a presentation.
 
-// Change text properties.
+// Create the text pr and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ paragraph.AddElement(run);
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

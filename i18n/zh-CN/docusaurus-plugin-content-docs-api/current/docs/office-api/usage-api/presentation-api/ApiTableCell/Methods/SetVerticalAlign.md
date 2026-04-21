@@ -22,7 +22,7 @@ expression.SetVerticalAlign(sType);
 
 ## 示例
 
-此示例指定当前表格单元格内文本的垂直对齐方式。
+指定当前表格单元格内文本的垂直对齐方式。
 
 ```javascript editor-pptx
 // How to set the cell text vertical alignment.
@@ -45,4 +45,3 @@ cell.SetVerticalAlign("bottom");
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

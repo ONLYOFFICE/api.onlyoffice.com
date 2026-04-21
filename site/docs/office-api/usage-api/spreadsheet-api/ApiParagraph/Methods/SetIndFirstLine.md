@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLi
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Set the paragraph first line indentation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the first sentence indentation of the paragraph.
+// How to change the first sentence indentation of the paragraph in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the first line indentation.
+// Get a paragraph from the shape's content then add a text specifying the first line indentation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -27,4 +27,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 ```
-

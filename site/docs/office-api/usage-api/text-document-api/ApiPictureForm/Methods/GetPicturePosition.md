@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the picture position inside the current form.
+Get the picture position inside the current form in a document.
 
 ```javascript editor-docx
-// How to get a picture position.
+// How to get a picture position in a document.
 
 // Get the image position in the picture form and display it in the document.
 
@@ -44,4 +44,3 @@ for (let i = 0; i < position.length; i++ ){
 }
 doc.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ expression.GetSpacingBefore();
 
 ## 示例
 
-此示例展示如何获取当前段落的段前间距值。
+获取 PDF 文档中当前段落的段前间距值。
 
 ```javascript editor-pdf
-// How to get the size of a spacing before a text from a paragraph.
+// How to get the size of a spacing before a text from a paragraph in a PDF document.
 
-// Return a property of the spacing size before a paragraph.
+// Return a property of the spacing size before a paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -55,4 +55,3 @@ const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
 ```
-

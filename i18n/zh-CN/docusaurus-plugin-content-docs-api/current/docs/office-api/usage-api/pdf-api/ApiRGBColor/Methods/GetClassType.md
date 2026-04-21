@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+获取 PDF 文档中 RGB 颜色的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiRGBColor.
+// How to identify the class type of a RGB color in a PDF document?
 
-// Retrieve class type of ApiRGBColor object and insert it to the page.
+// Obtain the class type identifier of a RGB color object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,4 +46,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the specified section to the current paragraph.
+Set the specified section to the current paragraph in a document.
 
 ```javascript editor-docx
-// How to set section to the paragraph.
+// How to set section to the paragraph in a document.
 
-// Add the section to the text.
+// Add the section to the text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ paragraph.AddText("This is a paragraph in a new section. The properties from the
 doc.Push(paragraph);
 paragraph.SetSection(section);
 ```
-

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all tables from the slide.
+Get an array with all tables from the slide.
 
 ```javascript editor-pptx
+// How can I get all tables using a slide in a presentation?
+
+// Get all tables for a slide in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -47,4 +51,3 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Number of tables on slide: " + slide.GetAllTables().length);
 ```
-

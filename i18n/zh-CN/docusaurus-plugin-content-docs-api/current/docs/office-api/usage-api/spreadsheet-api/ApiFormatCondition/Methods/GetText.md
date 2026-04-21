@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例从基于文本的条件格式规则获取文本值。
+从基于文本的条件格式规则获取文本值。
 
 ```javascript editor-xlsx
 // How to retrieve text values from text-based conditional formatting rules.
@@ -48,4 +48,3 @@ let textValue = condition1.GetText();
 worksheet.GetRange("C1").SetValue("Text value:");
 worksheet.GetRange("C2").SetValue(textValue);
 ```
-

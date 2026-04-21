@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何返回按指定位数右移后的数字。
+在电子表格中返回按指定位数右移的数字。
 
 ```javascript editor-xlsx
-// How to get a result from bits right shift.
+// How to get a result from bits right shift in a spreadsheet.
 
-// Use function to calculate bitwise right shift operation.
+// Use function to calculate bitwise right shift operation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BITRSHIFT(13, 2));
 ```
-

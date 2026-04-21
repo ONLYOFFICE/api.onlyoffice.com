@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例为表单设置文本属性。
+为表单设置文本属性。
 
 ```javascript editor-docx
 // Add text properties to the text form.
@@ -39,4 +39,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 textForm.SetTextPr(textPr);
 ```
-

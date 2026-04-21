@@ -28,12 +28,12 @@ boolean
 
 ## Example
 
-This example specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge of the parent table.
+Specify the border which will be displayed on all vertical table cell borders which are not on the outmost edge of the parent table.
 
 ```javascript editor-docx
-// How to set inside vertical border to the table.
+// How to set inside vertical border to the table in a document.
 
-// How to create a 3x3 table and add the inside vertical 4 point orange borders.
+// How to create a 3x3 table and add the inside vertical 4 point orange borders in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

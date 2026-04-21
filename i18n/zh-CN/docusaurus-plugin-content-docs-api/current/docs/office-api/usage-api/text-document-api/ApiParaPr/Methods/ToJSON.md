@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiParaPr 对象转换为 JSON 对象。
+在文档中将段落属性对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the paragraph properties.
+// How to get a JSON from the paragraph properties in a document.
 
-// Convert the paragraph properties to json and add it to the paragraph.
+// Convert the paragraph properties to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -39,4 +39,3 @@ let type = paraPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
-

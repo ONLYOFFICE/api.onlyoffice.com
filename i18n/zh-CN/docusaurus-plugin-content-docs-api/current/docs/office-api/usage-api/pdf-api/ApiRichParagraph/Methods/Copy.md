@@ -20,9 +20,13 @@ expression.Copy();
 
 ## 示例
 
-此示例复制富文本段落。
+在 PDF 文档中复制富文本段落。
 
 ```javascript editor-pdf
+// How can I copy using a rich paragraph in a PDF document?
+
+// Copy for a rich paragraph in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -39,4 +43,3 @@ richContent.AddElement(1, copyPara);
 
 console.log(`We copied paragraph from rich content`);
 ```
-

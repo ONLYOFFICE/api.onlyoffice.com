@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.GetInternalId](../../ApiFormBase/Methods/GetInternal
 
 ## Example
 
-This example shows how to get the internal id of a form.
+Get the internal id of a form in a document.
 
 ```javascript editor-docx
 // How to get an internal id of a text form.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);
 ```
-

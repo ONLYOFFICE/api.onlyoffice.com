@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all the OLE objects from the current presentation.
+Get all the OLE objects from the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How can I get all ole objects using a presentation in a presentation?
+
+// Get all ole objects for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -51,4 +55,3 @@ const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('OLE Objects: ' + oleObjects.length);
 ```
-

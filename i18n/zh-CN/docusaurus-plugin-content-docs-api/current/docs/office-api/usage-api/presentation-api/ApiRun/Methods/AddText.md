@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例向文本块添加文本。
+在演示文稿中向 run 添加文本。
 
 ```javascript editor-pptx
-// How to add a text to a text run object.
+// How to add a text to a text run object in a presentation.
 
 // How to add a text to the slide.
 
@@ -46,4 +46,3 @@ run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

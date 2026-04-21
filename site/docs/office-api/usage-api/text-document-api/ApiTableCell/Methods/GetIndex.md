@@ -20,7 +20,7 @@ Number
 
 ## Example
 
-This example shows how to get the cell index.
+Get the cell index in a document.
 
 ```javascript editor-docx
 // How to get position index of the cell.
@@ -36,4 +36,3 @@ table.SetStyle(tableStyle);
 doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell index: " + table.GetCell(0, 0).GetIndex());
 ```
-

@@ -2,16 +2,16 @@
 
 返回当前段落的段后间距值。
 
-Inherited from [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md).
+继承自 [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md)。
 
 ## 示例
 
-此示例展示如何获取当前段落的段后间距值。
+获取 PDF 文档中当前段落的段后间距值。
 
 ```javascript editor-pdf
-// How to get the size of a spacing after a text from a paragraph.
+// How to get the size of a spacing after a text from a paragraph in a PDF document.
 
-// Return a property of the spacing size after a paragraph.
+// Return a property of the spacing size after a paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing after : " + spacingAfter);
 docContent.Push(paragraph);
 ```
-

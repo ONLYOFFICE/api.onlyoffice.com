@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## 示例
 
-此示例设置当前文本块的文本轮廓。
+在演示文稿中为当前文本 run 设置文本轮廓。
 
 ```javascript editor-pptx
-// How to make a text outlined.
+// How to make a text outlined in a presentation.
 
-// Get the text properties of the run and outline it with a stroke.
+// Get the text properties of the run and outline it with a stroke in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ run.AddText("This is a text run with the black text outline set using the text p
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

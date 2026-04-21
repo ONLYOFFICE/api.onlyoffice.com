@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the string of keywords of the current presentation using the ApiCore.
+Set and get the string of keywords of the current presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How to get the keywords for a core properties in a presentation?
+
+// Get the keywords and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetKeywords("Example; ApiCore; Presentation");
@@ -39,4 +43,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

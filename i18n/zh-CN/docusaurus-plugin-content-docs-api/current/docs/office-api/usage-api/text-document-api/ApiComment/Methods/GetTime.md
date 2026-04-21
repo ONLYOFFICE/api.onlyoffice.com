@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-此示例展示如何获取批注创建时间戳（当前时区格式）。
+获取文档中批注创建的当前时区格式时间戳。
 
 ```javascript editor-docx
-// How to know when a comment was added.
+// How to know when a comment was added in a document.
 
 // Get all comments from the presentation and the first one's time of creation.
 
@@ -38,4 +38,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Comment creation timestamp: " + time);
 doc.Push(paragraph);
 ```
-

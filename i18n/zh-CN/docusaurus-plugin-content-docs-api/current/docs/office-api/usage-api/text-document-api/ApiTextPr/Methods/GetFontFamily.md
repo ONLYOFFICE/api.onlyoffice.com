@@ -21,7 +21,7 @@ string
 
 ## 示例
 
-此示例展示如何获取文本的字体系列。
+获取文档中文本的字体系列。
 
 ```javascript editor-docx
 // How to know the font name of the form.
@@ -49,4 +49,3 @@ let fontFamily = textPr.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 doc.Push(paragraph);
 ```
-

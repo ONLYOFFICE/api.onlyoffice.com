@@ -13,4 +13,3 @@ Object
 | prefixMapping | string | 用于解释 xpath 中指定的 XPath 表达式的前缀映射集。 |
 | storeItemID | string | 自定义 XML 数据标识符。 |
 | xpath | string | XPath 表达式。 |
-

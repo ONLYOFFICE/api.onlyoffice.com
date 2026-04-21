@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the marker in the specified chart series.
+Set the outline to the marker in the specified chart series in a document.
 
 ```javascript editor-docx
-// How to set an outline to the marker.
+// How to set an outline to the marker in a document.
 
-// Create a chart, set its properties and its marker outline.
+// Create a chart, set its properties and its marker outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +46,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```
-

@@ -24,12 +24,12 @@ expression.GetAllTablesOnPage(nPage);
 
 ## Example
 
-This example shows how to get a collection of tables on a given absolute page.
+Get a collection of tables on a given absolute page in a document.
 
 ```javascript editor-docx
 // Get all tables added to the page.
 
-// How to retrieve all tables and add delete its first row.
+// How to retrieve all tables and add delete its first row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");
@@ -41,4 +41,3 @@ let tables = doc.GetAllTablesOnPage(0);
 let row1 = tables[0].GetRow(0);
 row1.Remove();
 ```
-

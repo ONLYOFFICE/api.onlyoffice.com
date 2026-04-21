@@ -20,9 +20,13 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例展示如何从文档内容获取当前文本域。
+从文档中的文档内容获取当前文本块。
 
 ```javascript editor-docx
+// How to get current run for a document content?
+
+// Get current run and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -42,4 +46,3 @@ currentParagraph.AddElement(newRun);
 const currentRun = docContent.GetCurrentRun();
 currentRun.AddText("<CURRENT_RUN />");
 ```
-

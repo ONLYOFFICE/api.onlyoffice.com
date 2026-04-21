@@ -21,12 +21,12 @@ string
 
 ## Example
 
-This example shows how to get the text content of a custom XML node.
+Get the text content of a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve text content from custom XML node elements.
+// How to retrieve text content from custom XML node elements in a spreadsheet.
 
-// Get text from message node.
+// Get text from message node in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -35,4 +35,3 @@ let messageNode = xml.GetNodes('/message')[0];
 let text = messageNode.GetText();
 worksheet.GetRange("A1").SetValue("Message: " + text);
 ```
-

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例展示如何替换当前句子。
+替换文档中的当前句子。
 
 ```javascript editor-docx
-// How to change the text to another one.
+// How to change the text to another one in a document.
 
-// Add the new run instead of another sentence.
+// Add the new run instead of another sentence in a document.
 
 let doc = Api.GetDocument();
 
@@ -42,4 +42,3 @@ let run = para2.AddText(text);
 run.MoveCursorToPos(80);
 doc.ReplaceCurrentSentence("The quick brown fox jumps over the lazy dog.");
 ```
-

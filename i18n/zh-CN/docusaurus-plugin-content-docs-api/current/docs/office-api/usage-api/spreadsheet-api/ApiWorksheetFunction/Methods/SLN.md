@@ -24,15 +24,14 @@ number
 
 ## 示例
 
-此示例演示如何返回资产一期的直线折旧。
+在电子表格中返回一个期间资产的直线折旧。
 
 ```javascript editor-xlsx
-// How to return the straight-line depreciation of an asset.
+// How to return the straight-line depreciation of an asset in a spreadsheet.
 
-// Use a function to get the straight-line depreciation of an asset.
+// Use a function to get the straight-line depreciation of an asset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SLN(3500, 500, 5));
 ```
-

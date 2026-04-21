@@ -20,12 +20,12 @@ expression.GetNextShape();
 
 ## 示例
 
-此示例展示如何获取下一个内联形状。
+获取文档中的下一个内联形状。
 
 ```javascript editor-docx
-// How to get next shape from the current one.
+// How to get next shape from the current one in a document.
 
-// Color the next shape with a solid fill.
+// Color the next shape with a solid fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ let nextShape = shape1.GetNextShape();
 fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 nextShape.Fill(fill);
 ```
-

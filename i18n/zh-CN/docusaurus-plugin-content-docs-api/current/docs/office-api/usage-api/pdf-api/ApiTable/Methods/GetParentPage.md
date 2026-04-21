@@ -2,14 +2,16 @@
 
 返回 ApiDrawing 类的类型。
 
-Inherited from [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md).
+继承自 [ApiDrawing.GetParentPage](../../ApiDrawing/Methods/GetParentPage.md)。
 
 ## 示例
 
-如何获取 ApiDrawing 的类类型。
+获取 PDF 文档中绘图对象的类类型。
 
 ```javascript editor-pdf
-// Retrieve class type of ApiDrawing object and insert it to the page.
+// How can I get the class type of a drawing object in a PDF document?
+
+// Get the class type of a drawing object and display it in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,4 +30,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + sType);
 ```
-

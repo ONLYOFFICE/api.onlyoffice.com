@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the specified chart series.
+Set the fill to the specified chart series in a presentation.
 
 ```javascript editor-pptx
-// How to color a chart seria.
+// How to color a chart seria in a presentation.
 
-// Create a chart, set its properties and its series background.
+// Create a chart, set its properties and its series background in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

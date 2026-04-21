@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-应用具有特定填充和描边属性的自定义几何图形。
+在 PDF 文档中应用具有特定填充和笔触属性的自定义几何图形。
 
 ```javascript editor-pdf
+// How to set geometry for a shape in a PDF document?
+
+// Set geometry and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -47,4 +51,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 page.AddObject(shape);
 ```
-

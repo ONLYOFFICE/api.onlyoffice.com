@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example gets the first formula in data validation.
+Get the first formula in data validation.
 
 ```javascript editor-xlsx
 // How to retrieve the validation formula.
 
-// Get the first formula.
+// Get the formula1 for a validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,4 +34,3 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let formula1 = validation.GetFormula1();
 worksheet.GetRange("B1").SetValue("Formula1: " + formula1);
 ```
-

@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example clears the content from the run.
+Clear the content from the run in a presentation.
 
 ```javascript editor-pptx
-// How to delete content from the text run.
+// How to delete content from the text run in a presentation.
 
 // Remove text from the slide.
 
@@ -52,4 +52,3 @@ paragraph.AddElement(run);
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

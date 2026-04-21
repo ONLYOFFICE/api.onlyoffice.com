@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何从表格删除列。
+如何从 PDF 文档中的表格删除列。
 
 ```javascript editor-pdf
 // Create a table, create cells and remove the whole column by its cell.
+
+// Use table to remove the column in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

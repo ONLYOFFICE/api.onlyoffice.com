@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example accepts all changes made in review mode.
+Accepts all changes made in review mode in a document.
 
 ```javascript editor-docx
-// How to apply all changes and fixes after review.
+// How to apply all changes and fixes after review in a document.
 
 // Change the status of the document to the review mode and apply all changes.
 
@@ -43,4 +43,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("All revision changes in this document were accepted.");
 doc.Push(paragraph);
 ```
-

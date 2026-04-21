@@ -20,7 +20,7 @@ expression.GetWorksheet();
 
 ## 示例
 
-此示例演示如何获取表示包含指定范围的工作表的 Worksheet 对象。
+获取表示电子表格中包含指定范围的工作表的 Worksheet 对象。
 
 ```javascript editor-xlsx
 // How to get a worksheet where a range is contained in.
@@ -33,4 +33,3 @@ range.SetValue("1");
 let oSheet = range.GetWorksheet();
 worksheet.GetRange("A3").SetValue("Worksheet name: " + oSheet.GetName());
 ```
-

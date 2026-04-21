@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-此示例设置块级文本内容控件的锁定。
+为文档中的块级文本内容控件设置锁定。
 
 ```javascript editor-docx
-// Creates a block content control and sets its lock to "sdtContentLocked", which means that the content cannot be edited and the container cannot be deleted.
+// Create a block content control and set its lock to "sdtContentLocked", which means that the content cannot be edited and the container cannot be deleted in a document.
 
-// How to set the lock to the ApiBlockLvlSdt object.
+// How to set the lock to the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -42,4 +42,3 @@ let lock = blockLvlSdt.GetLock();
 let paragraph = doc.GetElement(1);
 paragraph.AddText("Lock type: " + lock);
 ```
-

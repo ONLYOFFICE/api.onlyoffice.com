@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.GetTable](../../ApiPivotField/Methods/GetTable.md)
 
 ## Example
 
-This example shows how to get table object of a pivot field.
+Get table object of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's table.
+// How to get a pivot field's table in a spreadsheet.
 
-// Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it.
+// Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,3 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotField.GetTable().AddDataField('Region');
 ```
-

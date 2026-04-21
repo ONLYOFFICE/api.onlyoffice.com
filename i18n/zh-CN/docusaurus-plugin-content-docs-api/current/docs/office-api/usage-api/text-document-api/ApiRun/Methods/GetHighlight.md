@@ -2,11 +2,11 @@
 
 从当前文本属性获取高亮属性。
 
-Inherited from [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md).
+继承自 [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md)。
 
 ## 示例
 
-此示例展示如何获取文本的高亮属性。
+获取文档中文本的突出显示属性。
 
 ```javascript editor-docx
 // How to know the highlight type of the form.
@@ -34,4 +34,3 @@ let highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 doc.Push(paragraph);
 ```
-

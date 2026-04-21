@@ -25,4 +25,3 @@ expression.SelectContentControl(id);
 ```javascript
 window.Asc.plugin.executeMethod ("SelectContentControl", ["5_665"]);
 ```
-

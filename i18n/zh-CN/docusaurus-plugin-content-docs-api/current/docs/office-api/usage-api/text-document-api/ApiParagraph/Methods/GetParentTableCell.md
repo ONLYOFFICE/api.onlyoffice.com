@@ -20,7 +20,7 @@ expression.GetParentTableCell();
 
 ## 示例
 
-此示例展示如何获取包含当前段落的表格单元格。
+获取文档中包含当前段落的表格单元格。
 
 ```javascript editor-docx
 // How to get the parent table cell of the paragraph.
@@ -41,4 +41,3 @@ table.AddElement(cell, 0, paragraph);
 let parentTableCell = paragraph.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
-

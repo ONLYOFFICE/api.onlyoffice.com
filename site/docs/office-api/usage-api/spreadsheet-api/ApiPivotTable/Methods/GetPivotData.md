@@ -23,12 +23,12 @@ expression.GetPivotData(dataField, fieldItemsArray);
 
 ## Example
 
-This example shows how to get a pivot data of a pivot table.
+Get a pivot data of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table pivot data.
+// How to get table pivot data in a spreadsheet.
 
-// Create a pivot table, add data to it then get its pivot data.
+// Create a pivot table, add data to it then get its pivot data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,4 +68,3 @@ let range = pivotTable.GetPivotData('Price', ['Region', 'East']);
 let value = range.GetValue();
 pivotWorksheet.GetRange('B9').SetValue(value);
 ```
-

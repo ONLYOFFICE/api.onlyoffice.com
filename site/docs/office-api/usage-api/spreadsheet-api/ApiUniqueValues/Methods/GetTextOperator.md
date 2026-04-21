@@ -6,7 +6,7 @@ Inherited from [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Met
 
 ## Example
 
-This example gets the text operator from a text-based conditional formatting rule.
+Get the text operator from a text-based conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve text operators from text-based conditional formatting rules.
@@ -34,4 +34,3 @@ let textOperator = condition1.GetTextOperator();
 worksheet.GetRange("C1").SetValue("Text operator:");
 worksheet.GetRange("C2").SetValue(textOperator ? textOperator : "None");
 ```
-

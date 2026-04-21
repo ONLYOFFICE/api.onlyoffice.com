@@ -2,14 +2,14 @@
 
 获取当前文本属性的样式。
 
-Inherited from [ApiTextPr.GetStyle](../../ApiTextPr/Methods/GetStyle.md).
+继承自 [ApiTextPr.GetStyle](../../ApiTextPr/Methods/GetStyle.md)。
 
 ## 示例
 
-此示例查明文本是否设置了属性。
+检查文档中的文本是否设置了属性。
 
 ```javascript editor-docx
-// How to know whether a text's style is changed or not.
+// How to know whether a text's style is changed or not in a document.
 
 // Retrieve text properties of the form and display its style name.
 
@@ -33,4 +33,3 @@ let style = textPr.GetStyle();
 paragraph.AddText("Style: " + style.GetName());
 doc.Push(paragraph);
 ```
-

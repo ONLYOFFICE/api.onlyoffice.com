@@ -13,5 +13,3 @@
 - "pattern"
 - "blip"
 - "nofill"
-
-

@@ -20,9 +20,13 @@ expression.GetParent();
 
 ## 示例
 
-此示例展示如何获取条件格式规则的父范围。
+获取电子表格中条件格式规则的父范围。
 
 ```javascript editor-xlsx
+// How to get the parent for a format condition?
+
+// Get the parent and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Sales Data');
@@ -39,4 +43,3 @@ const parentRange = condition.GetParent();
 worksheet.GetRange('C1').SetValue('Parent range:');
 worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
 ```
-

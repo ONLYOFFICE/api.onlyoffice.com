@@ -19,7 +19,7 @@ Object
 
 ## Example
 
-This example adds a table of contents with the specified properties to the document.
+Add a table of contents with the specified properties to the document.
 
 ```javascript editor-docx
 // How to create a table of contents properties.
@@ -38,4 +38,3 @@ let tocPr = {
 };
 doc.AddTableOfContents(tocPr);
 ```
-

@@ -23,7 +23,7 @@ number \| string \| boolean
 
 ## Example
 
-This example shows how to check if there is an error in the formula in the first argument. The function returns the specified value if the formula returns the N/A error value, otherwise returns the result of the formula.
+Check if there is an error in the formula in the first argument. The function returns the specified value if the formula returns the N/A error value, otherwise returns the result of the formula.
 
 ```javascript editor-xlsx
 // How to check whether a formula result is N/A.
@@ -49,4 +49,3 @@ for (let n = 0; n < phones.length; n++) {
 let range = worksheet.GetRange("B1:B5");
 worksheet.GetRange("D6").SetValue(func.IFNA(func.MATCH("Mark Potato", range, 0), "Not found"));
 ```
-

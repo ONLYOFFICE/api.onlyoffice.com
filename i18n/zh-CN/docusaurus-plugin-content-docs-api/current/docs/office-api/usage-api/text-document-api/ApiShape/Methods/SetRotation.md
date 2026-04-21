@@ -2,13 +2,17 @@
 
 设置当前绘图对象的旋转角度。
 
-Inherited from [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md).
+继承自 [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md)。
 
 ## 示例
 
-此示例展示如何设置绘图的旋转角度。
+设置文档中绘图对象的旋转角度。
 
 ```javascript editor-docx
+// How to set rotation for a drawing object in a document?
+
+// Set rotation and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
@@ -24,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
 docContent.AddElement(0, paragraph);
 ```
-

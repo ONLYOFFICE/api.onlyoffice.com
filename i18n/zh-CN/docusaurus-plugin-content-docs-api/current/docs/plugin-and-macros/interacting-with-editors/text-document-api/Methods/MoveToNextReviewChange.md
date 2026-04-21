@@ -25,4 +25,3 @@ expression.MoveToNextReviewChange(isForward);
 ```javascript
 window.Asc.plugin.executeMethod ("MoveToNextReviewChange", [true]);
 ```
-

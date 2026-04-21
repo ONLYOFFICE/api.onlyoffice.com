@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current run from the document content of a shape.
+Get the current run from the document content of a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get current run for a document content?
+
+// Get current run and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -43,4 +47,3 @@ const currentRun = content.GetCurrentRun();
 const result = currentRun ? currentRun.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current run: ' + result);
 ```
-

@@ -20,7 +20,7 @@ string \| string[][]
 
 ## 示例
 
-此示例演示如何获取指定范围的公式。
+获取电子表格中指定范围的公式。
 
 ```javascript editor-xlsx
 // How to find out a range formula.
@@ -35,4 +35,3 @@ range.SetValue("=SUM(B1:C1)");
 let formula = range.GetFormula();
 worksheet.GetRange("A3").SetValue("Formula from cell A1: " + formula);
 ```
-

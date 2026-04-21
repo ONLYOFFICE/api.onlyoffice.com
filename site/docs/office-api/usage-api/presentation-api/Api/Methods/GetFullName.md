@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example gets a presentation name and inserts it into the presentation.
+Get a presentation name and insert it into the presentation.
 
 ```javascript editor-pptx
 // How to get a presentation name.
@@ -43,4 +43,3 @@ const fullName = Api.GetFullName();
 paragraph.AddText("File name: " + fullName);
 slide.AddObject(shape);
 ```
-

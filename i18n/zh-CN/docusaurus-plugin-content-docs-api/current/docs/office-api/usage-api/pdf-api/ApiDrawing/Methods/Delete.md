@@ -25,6 +25,8 @@ boolean
 ```javascript editor-pdf
 // Get a page drawing and delete it.
 
+// Delete using a drawing object object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -58,4 +60,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The chart was deleted from this page.");
 ```
-

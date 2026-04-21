@@ -37,7 +37,6 @@ Enumeration
 - "##0.0E+0"
 - "@"
 
-
 ## Example
 
 Set the "0.00" numeric format to the chart data point.
@@ -49,4 +48,3 @@ Set the "0.00" numeric format to the chart data point.
 
 chart.SetDataPointNumFormat("0.00", 0, 1, true);
 ```
-

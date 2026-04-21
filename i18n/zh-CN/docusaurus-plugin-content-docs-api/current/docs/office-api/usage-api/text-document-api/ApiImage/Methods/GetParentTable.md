@@ -2,16 +2,16 @@
 
 返回包含图形对象的父表格。
 
-Inherited from [ApiDrawing.GetParentTable](../../ApiDrawing/Methods/GetParentTable.md).
+继承自 [ApiDrawing.GetParentTable](../../ApiDrawing/Methods/GetParentTable.md)。
 
 ## 示例
 
-此示例展示如何获取包含图形对象的父表格。
+获取文档中包含图形对象的父表格。
 
 ```javascript editor-docx
-// Get an element's parent table.
+// Get an element's parent table in a document.
 
-// How to show the shape's wrapper table.
+// How to show the shape's wrapper table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
@@ -28,4 +28,3 @@ let parentTable = drawing.GetParentTable();
 let tableStyle = doc.GetStyle("Bordered");
 parentTable.SetStyle(tableStyle);
 ```
-

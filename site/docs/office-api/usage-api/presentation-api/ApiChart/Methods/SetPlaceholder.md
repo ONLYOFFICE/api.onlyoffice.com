@@ -6,10 +6,10 @@ Inherited from [ApiDrawing.SetPlaceholder](../../ApiDrawing/Methods/SetPlacehold
 
 ## Example
 
-This example sets a placeholder for the shape.
+Set a placeholder for the shape in a presentation.
 
 ```javascript editor-pptx
-// How to set a placeholder for a shape.
+// How to set a placeholder for a shape in a presentation.
 
 // Select a shape object from a slide and change its placeholder.
 
@@ -26,4 +26,3 @@ const placeholder = Api.CreatePlaceholder("picture");
 shape.SetPlaceholder(placeholder);
 slide.AddObject(shape);
 ```
-

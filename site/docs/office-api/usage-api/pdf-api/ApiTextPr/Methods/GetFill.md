@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to find out a text color.
+Find out a text color in a PDF document.
 
 ```javascript editor-pdf
-// How to know with which color a text is filled.
+// How to know with which color a text is filled in a PDF document.
 
-// Get the text properties of the run and get its font color.
+// Get the text properties of the run and get its font color in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -54,4 +54,3 @@ const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);
 ```
-

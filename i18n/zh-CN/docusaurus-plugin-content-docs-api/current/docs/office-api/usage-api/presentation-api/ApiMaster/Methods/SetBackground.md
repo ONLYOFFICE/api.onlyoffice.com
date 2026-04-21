@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置当前幻灯片母版的背景。
+为当前幻灯片母版设置背景。
 
 ```javascript editor-pptx
 // How to set a background of a slide master.
@@ -38,4 +38,3 @@ master.ClearBackground();
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 master.SetBackground(fill);
 ```
-

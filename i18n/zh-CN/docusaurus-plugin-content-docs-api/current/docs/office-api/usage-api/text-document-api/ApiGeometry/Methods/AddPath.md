@@ -20,10 +20,13 @@ expression.AddPath();
 
 ## 示例
 
-创建自定义三角形几何形状并将其应用于形状。
+创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
 
 ```javascript editor-docx
-// Uses basic path drawing commands: MoveTo, LineTo and Close.
+// How to add the path for a geometry in a document?
+
+// Add the path and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -44,4 +47,3 @@ let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

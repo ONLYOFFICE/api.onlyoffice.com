@@ -22,9 +22,13 @@ expression.GetLayoutByType(sType);
 
 ## 示例
 
-此示例根据类型从幻灯片母版返回布局。
+从幻灯片母版中按类型返回版式。
 
 ```javascript editor-pptx
+// How to get the layout by type for a slide master?
+
+// Get the layout by type and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +50,3 @@ if (layout) {
 }
 slide.AddObject(shape);
 ```
-

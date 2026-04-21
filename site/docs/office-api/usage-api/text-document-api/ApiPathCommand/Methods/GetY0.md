@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Retrieves control points and end point from a cubic bezier curve command.
+Retrieve control points and end point from a cubic bezier curve command. Displays all control points coordinates of the bezier curve in a document.
 
 ```javascript editor-docx
-// Displays all control points coordinates of the bezier curve.
+// How to get the y0 for a path command in a document?
+
+// Get the y0 and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -45,4 +48,3 @@ let shape = Api.CreateShape("rect", 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

@@ -26,10 +26,9 @@
 - "lightGray"
 - "none"
 
-
 ## 示例
 
-此示例将段落突出显示设置为绿色。
+将段落突出显示设置为绿色。
 
 ```javascript editor-docx
 // How to change a highlight color to green.
@@ -38,4 +37,3 @@
 
 paragraph.SetHighlight("green");
 ```
-

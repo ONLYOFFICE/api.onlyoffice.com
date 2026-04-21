@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example shows how to get the index of an icon criterion in the collection.
+Get the index of an icon criterion in the collection in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I get the index in a spreadsheet?
+
+// Get the index using an icon criterion object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Data');
 worksheet.GetRange('A2').SetValue(90);
@@ -38,4 +42,3 @@ const lastCriterion = criteria[criteria.length - 1];
 worksheet.GetRange('B1').SetValue('Last criterion index: ' + lastCriterion.GetIndex());
 worksheet.GetRange('B2').SetValue('Total criteria: ' + criteria.length);
 ```
-

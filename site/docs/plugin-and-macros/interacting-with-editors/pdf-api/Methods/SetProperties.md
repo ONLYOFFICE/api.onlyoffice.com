@@ -90,4 +90,3 @@ window.Asc.plugin.executeMethod ("SetProperties", [initSettings], function () {
     window.Asc.plugin.executeCommand ("close", "");
 });
 ```
-

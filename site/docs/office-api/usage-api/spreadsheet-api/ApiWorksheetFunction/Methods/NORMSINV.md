@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the inverse of the standard normal cumulative distribution (has a mean of zero and a standard deviation of one).
+Return the inverse of the standard normal cumulative distribution (has a mean of zero and a standard deviation of one) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the inverse of the standard normal cumulative distribution.
+// How to calculate the inverse of the standard normal cumulative distribution in a spreadsheet.
 
-// Use a function to get the inverse of the standard normal cumulative distribution.
+// Use a function to get the inverse of the standard normal cumulative distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -41,4 +41,3 @@ let ans = func.NORMSINV(value);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

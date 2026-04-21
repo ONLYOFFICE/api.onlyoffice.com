@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example clears the content from the cell.
+Clear the content from the cell.
 
 ```javascript editor-docx
 // Remove the content of the table cell.
@@ -40,4 +40,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The content of the table cell was cleared.");
 doc.Push(paragraph);
 ```
-

@@ -24,10 +24,10 @@ string
 
 ## 示例
 
-此示例从文本块返回文本。
+返回文档中文本 run 的文本。
 
 ```javascript editor-docx
-// How to get a raw text value.
+// How to get a raw text value in a document.
 
 // Get a run, get its text value and show it in the document.
 
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The text of the specified run: " + text);
 doc.Push(paragraph);
 ```
-

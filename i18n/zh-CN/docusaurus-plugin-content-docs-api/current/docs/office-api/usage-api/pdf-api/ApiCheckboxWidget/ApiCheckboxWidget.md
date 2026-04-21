@@ -1,6 +1,6 @@
 # ApiCheckboxWidget
 
-ApiCheckboxWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
+ApiCheckboxWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子类。
 
 ## 方法
 

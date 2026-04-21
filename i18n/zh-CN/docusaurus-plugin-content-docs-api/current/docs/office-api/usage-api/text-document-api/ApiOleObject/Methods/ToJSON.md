@@ -2,16 +2,16 @@
 
 将 ApiDrawing 对象转换为 JSON 对象。
 
-Inherited from [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md).
+继承自 [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md)。
 
 ## 示例
 
-此示例将 ApiDrawing 对象转换为 JSON 对象。
+将文档中的绘图对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON object from the drawing.
+// How to get a JSON object from the drawing in a document.
 
-// Convert the shape to json and add it to the paragraph.
+// Convert the shape to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -24,4 +24,3 @@ let json = drawing.ToJSON(false, true);
 let drawingFromJSON = Api.FromJSON(json);
 paragraph.AddDrawing(drawingFromJSON);
 ```
-

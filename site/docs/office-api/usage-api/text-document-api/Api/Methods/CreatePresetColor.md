@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## Example
 
-This example creates a color for the gradient stop selecting it from one of the available color presets.
+Create a color for the gradient stop selecting it from one of the available color presets in a document.
 
 ```javascript editor-docx
-// Creates the ApiPresetColor object and applies it to the ApiGradientStop class.
+// Create the preset color object and apply it to the gradient stop class in a document.
 
-// How to create a preset color and use it for the gradient stop.
+// How to create a preset color and use it for the gradient stop in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 paragraph.AddDrawing(shape);
 ```
-

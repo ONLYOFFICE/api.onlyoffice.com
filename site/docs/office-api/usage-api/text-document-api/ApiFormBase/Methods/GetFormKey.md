@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the form key.
+Get the form key in a document.
 
 ```javascript editor-docx
 // How get a key of a comboBox form.
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
-

@@ -2,13 +2,17 @@
 
 获取当前字段的控件数组。
 
-Inherited from [ApiBaseField.GetAllWidgets](../../ApiBaseField/Methods/GetAllWidgets.md).
+继承自 [ApiBaseField.GetAllWidgets](../../ApiBaseField/Methods/GetAllWidgets.md)。
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置边框颜色。
+获取 PDF 文档中的所有字段控件并为其设置边框颜色。
 
 ```javascript editor-pdf
+// How to get all widgets for a base field in a PDF document?
+
+// Get all widgets and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -22,4 +26,3 @@ widgets.forEach(function(widget) {
     widget.SetBorderColor(rgbColor);
 });
 ```
-

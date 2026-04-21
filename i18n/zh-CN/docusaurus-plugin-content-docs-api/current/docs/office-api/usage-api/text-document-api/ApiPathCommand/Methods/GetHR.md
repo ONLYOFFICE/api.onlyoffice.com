@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析弧线命令参数，包括半径和角度。
+分析圆弧命令参数，包括半径和角度。获取文档中圆弧的宽度半径、高度半径、起始角度和扫掠角度。
 
 ```javascript editor-docx
-// Retrieves width radius, height radius, start and sweep angles of an arc.
+// How do I get the h r in a document?
+
+// Get the h r using a path command object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -44,4 +47,3 @@ let shape = Api.CreateShape("rect", 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例删除包含指定单元格的表格列。
+移除包含指定单元格的表格列。
 
 ```javascript editor-docx
-// How to remove the column from the table.
+// How to remove the column from the table in a document.
 
 // Create a table, get one of its cells and delete the column.
 
@@ -41,4 +41,3 @@ let cell = table.GetRow(2).GetCell(1);
 table.RemoveColumn(cell);
 doc.Push(table);
 ```
-

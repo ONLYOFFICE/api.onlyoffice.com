@@ -11,5 +11,3 @@ Enumeration
 - "normal"
 - "down"
 - "hover"
-
-

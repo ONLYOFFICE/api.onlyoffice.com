@@ -25,7 +25,7 @@ string
 
 ## 示例
 
-此示例将文档转换为 Markdown。
+将文档转换为 Markdown。
 
 ```javascript editor-docx
 // How to get a markdown object from the document content.
@@ -58,4 +58,3 @@ paragraph5.AddLineBreak();
 paragraph5.AddText(markdown);
 doc.Push(paragraph5);
 ```
-

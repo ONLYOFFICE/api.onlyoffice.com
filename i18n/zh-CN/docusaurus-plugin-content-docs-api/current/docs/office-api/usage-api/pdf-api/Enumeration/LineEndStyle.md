@@ -18,5 +18,3 @@
 - "rOpenArrow"
 - "rClosedArrow"
 - "slash"
-
-

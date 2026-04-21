@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to enable percentile values for icon set thresholds.
+Enable percentile values for icon set thresholds in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to configure icon set to use percentile values instead of actual values.
+// How to configure icon set to use percentile values instead of actual values in a spreadsheet.
 
-// Enable percentile values for icon set threshold calculation.
+// Enable percentile values for icon set threshold calculation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,4 +46,3 @@ worksheet.GetRange("B1").SetValue("Before: Using number values");
 iconCondition.SetPercentileValues(true);
 worksheet.GetRange("B2").SetValue("After: Using percentile values");
 ```
-

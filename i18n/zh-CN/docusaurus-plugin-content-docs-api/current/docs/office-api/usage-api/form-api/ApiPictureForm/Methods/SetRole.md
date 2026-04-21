@@ -2,13 +2,17 @@
 
 为当前表单设置角色。
 
-Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
+继承自 [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md)。
 
 ## 示例
 
-此示例展示如何为表单元素设置角色。
+为文档中的表单元素设置角色。
 
 ```javascript editor-forms
+// How can I set role using a form base in a document?
+
+// Set role for a form base in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -35,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
 ```
-

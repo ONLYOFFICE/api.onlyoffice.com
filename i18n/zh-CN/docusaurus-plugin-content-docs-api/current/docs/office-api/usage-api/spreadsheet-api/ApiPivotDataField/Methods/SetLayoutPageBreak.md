@@ -2,11 +2,11 @@
 
 设置指定是否在每个字段后插入分页符的设置。
 
-Inherited from [ApiPivotField.SetLayoutPageBreak](../../ApiPivotField/Methods/SetLayoutPageBreak.md).
+继承自 [ApiPivotField.SetLayoutPageBreak](../../ApiPivotField/Methods/SetLayoutPageBreak.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的布局分页符。
+在电子表格中设置透视字段的布局分页符。
 
 ```javascript editor-xlsx
 // How to change a pivot field layout page break.
@@ -51,4 +51,3 @@ pivotField.SetLayoutPageBreak(true);
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
-

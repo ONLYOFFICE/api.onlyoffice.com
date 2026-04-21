@@ -24,9 +24,13 @@ boolean
 
 ## Example
 
-This example shows how to insert an attribute into a custom XML part element.
+Insert an attribute into a custom XML part element in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I insert the attribute in a spreadsheet?
+
+// Insert the attribute using a custom XML part object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = '<config />';
@@ -36,4 +40,3 @@ xml.InsertAttribute('/config', 'version', '9.4');
 worksheet.GetRange('A1').SetValue('XML after insertion:');
 worksheet.GetRange('A2').SetValue(xml.GetXml());
 ```
-

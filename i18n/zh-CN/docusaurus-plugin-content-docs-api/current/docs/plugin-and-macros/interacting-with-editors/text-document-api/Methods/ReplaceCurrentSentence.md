@@ -26,4 +26,3 @@ expression.ReplaceCurrentSentence(replaceString, type);
 ```javascript
 window.Asc.plugin.executeMethod ("ReplaceCurrentSentence", ["ONLYOFFICE", "entirely"]);
 ```
-

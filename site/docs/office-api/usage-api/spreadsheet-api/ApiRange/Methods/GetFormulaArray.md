@@ -20,7 +20,7 @@ string \| null
 
 ## Example
 
-This example shows how to get the array formula of a range.
+Get the array formula of a range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get an array formula value.
@@ -39,4 +39,3 @@ value = worksheet.GetRange("A3").GetFormulaArray();
 worksheet.GetRange("A6").SetValue("Array formula of the cell A3: ");
 worksheet.GetRange("B6").SetValue("'" + value);
 ```
-

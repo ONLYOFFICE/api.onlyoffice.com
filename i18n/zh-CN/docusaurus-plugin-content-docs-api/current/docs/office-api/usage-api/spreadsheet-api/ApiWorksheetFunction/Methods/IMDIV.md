@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何返回两个复数的商。
+在电子表格中返回两个复数的商。
 
 ```javascript editor-xlsx
-// How to get the quotient of two comlex numbers.
+// How to get the quotient of two comlex numbers in a spreadsheet.
 
-// Use a function to get the quotient.
+// Use a function to get the quotient in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMDIV("-2+2.5i", "0.1+1.5j"));
 ```
-

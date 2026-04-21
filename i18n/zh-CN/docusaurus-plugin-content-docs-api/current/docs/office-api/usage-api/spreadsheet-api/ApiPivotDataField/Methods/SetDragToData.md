@@ -2,16 +2,16 @@
 
 设置指定是否可以将指定字段拖动到数据位置的设置。
 
-Inherited from [ApiPivotField.SetDragToData](../../ApiPivotField/Methods/SetDragToData.md).
+继承自 [ApiPivotField.SetDragToData](../../ApiPivotField/Methods/SetDragToData.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到数据。
+在电子表格中设置透视字段的拖动到数据属性。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to data.
+// How to rename a pivot field drag to data in a spreadsheet.
 
-// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value.
+// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,4 +53,3 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to data');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToData());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to data!');
 ```
-

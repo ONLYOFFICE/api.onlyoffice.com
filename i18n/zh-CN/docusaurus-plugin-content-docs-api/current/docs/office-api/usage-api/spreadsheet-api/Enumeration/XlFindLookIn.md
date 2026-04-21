@@ -11,10 +11,9 @@
 - "xlFormulas"
 - "xlValues"
 
-
 ## 示例
 
-此示例指定在区域中搜索完整文本匹配。
+指定在区域中搜索完整文本匹配。
 
 ```javascript editor-xlsx
 // How to indicate from where the text should be searched.
@@ -31,4 +30,3 @@ let searchRange = range.Find({
 	MatchCase: true
 });
 ```
-

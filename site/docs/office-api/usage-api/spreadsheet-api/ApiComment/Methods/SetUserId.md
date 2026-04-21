@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the user ID to the comment author.
+Set the user ID to the comment author in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a comment author ID.
+// How to change a comment author ID in a spreadsheet.
 
-// Replace a comment author ID to a new one.
+// Replace a comment author ID to a new one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -37,4 +37,3 @@ worksheet.GetRange("A3").SetValue("Comment's user Id: ");
 comment.SetUserId("uid-2");
 worksheet.GetRange("B3").SetValue(comment.GetUserId());
 ```
-

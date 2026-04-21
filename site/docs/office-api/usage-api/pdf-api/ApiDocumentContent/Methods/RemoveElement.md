@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to remove an element.
+Remove an element in a PDF document.
 
 ```javascript editor-pdf
 // How to remove an elements from the page shape.
@@ -46,4 +46,3 @@ paragraph.AddText("This is the second paragraph. The first paragraph was removed
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

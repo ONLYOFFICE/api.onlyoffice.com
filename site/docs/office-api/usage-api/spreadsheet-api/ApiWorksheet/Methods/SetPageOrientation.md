@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the page orientation.
+Set the page orientation.
 
 ```javascript editor-xlsx
 // How to change a page orientation.
@@ -35,4 +35,3 @@ let pageOrientation = worksheet.GetPageOrientation();
 worksheet.GetRange("A1").SetValue("Page orientation: ");
 worksheet.GetRange("C1").SetValue(pageOrientation);
 ```
-

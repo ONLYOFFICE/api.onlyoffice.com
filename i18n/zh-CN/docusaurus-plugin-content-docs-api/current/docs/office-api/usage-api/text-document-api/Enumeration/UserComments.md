@@ -11,4 +11,3 @@ Object
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | comments | [CommentReportRecord](../Enumeration/CommentReportRecord.md)[] | 批注列表。 |
-

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the bullet or numbering to the current paragraph.
+Set the bullet or numbering to the current paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a dash bullet to the paragraph.
+// How to add a dash bullet to the paragraph in a spreadsheet.
 
-// Numbering and adding custom bullet points to the text.
+// Numbering and adding custom bullet points to the text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -40,4 +40,3 @@ let bullet = Api.CreateBullet("-");
 paraPr.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 ```
-

@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBe
 
 ## Example
 
-This example shows how to get the spacing before value of the current paragraph.
+Get the spacing before value of the current paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to get the size of a spacing before a text from a paragraph.
+// How to get the size of a spacing before a text from a paragraph in a presentation.
 
-// Return a property of the spacing size before a paragraph.
+// Return a property of the spacing size before a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,4 +42,3 @@ const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
 ```
-

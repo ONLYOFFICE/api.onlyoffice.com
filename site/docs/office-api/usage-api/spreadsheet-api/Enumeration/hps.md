@@ -8,7 +8,7 @@ number
 
 ## Example
 
-This example sets the text font size to 22 half-points.
+Set the text font size to 22 half-points.
 
 ```javascript editor-xlsx
 // How to resize a text using half-points.
@@ -17,4 +17,3 @@ This example sets the text font size to 22 half-points.
 
 textPr.SetFontSize(22);
 ```
-

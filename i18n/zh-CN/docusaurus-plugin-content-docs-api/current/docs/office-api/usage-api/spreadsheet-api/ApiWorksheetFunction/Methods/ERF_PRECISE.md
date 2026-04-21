@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回在 0 和指定下界之间积分的误差函数。
+在电子表格中返回在 0 和指定下限之间积分的误差函数。
 
 ```javascript editor-xlsx
-// How to get an error function (from 0 to lower).
+// How to get an error function (from 0 to lower) in a spreadsheet.
 
-// Use function to get an error function set between 0 and lower limits.
+// Use function to get an error function set between 0 and lower limits in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ERF_PRECISE(0.745));
 ```
-

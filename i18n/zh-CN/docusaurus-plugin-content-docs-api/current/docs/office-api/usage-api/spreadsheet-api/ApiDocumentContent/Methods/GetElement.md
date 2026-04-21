@@ -22,7 +22,7 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例展示如何通过元素在文档内容中的位置获取元素。
+通过位置获取文档内容中的元素。
 
 ```javascript editor-xlsx
 // How to get an element of the document content knowing its index position.
@@ -42,4 +42,3 @@ paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 ```
-

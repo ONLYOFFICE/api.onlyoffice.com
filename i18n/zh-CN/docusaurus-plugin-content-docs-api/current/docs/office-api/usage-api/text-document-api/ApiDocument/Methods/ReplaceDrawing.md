@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例用新图形替换图形。
+在文档中用新的绘图对象替换绘图对象。
 
 ```javascript editor-docx
-// How to change the image to another one.
+// How to change the image to another one in a document.
 
-// Add the new drawing instead of another one.
+// Add the new drawing instead of another one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -53,4 +53,3 @@ paragraph.AddText("The chart was replaced with the current shape in this documen
 docContent.AddElement(0, paragraph);
 doc.ReplaceDrawing(oldDrawing, newDrawing, false);
 ```
-

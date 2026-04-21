@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置当前形状的文本内边距。
+在演示文稿中为当前形状设置文本内边距。
 
 ```javascript editor-pptx
-// How to update paddings of the drawing.
+// How to update paddings of the drawing in a presentation.
 
-// Create a shape and set its paddings.
+// Create a shape and set its paddings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,3 @@ docContent.Push(paragraph);
 shape.SetPaddings(20 * 36000, 5 * 36000, 5 * 36000, 3 * 36000);
 slide.AddObject(shape);
 ```
-

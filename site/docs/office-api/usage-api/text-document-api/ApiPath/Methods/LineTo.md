@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom triangle geometry and applies it to a shape.
+Create a custom triangle geometry and apply it to a shape. Uses basic path drawing commands: MoveTo, LineTo and Close in a document.
 
 ```javascript editor-docx
-// Uses basic path drawing commands: MoveTo, LineTo and Close.
+// How do I line to in a document?
+
+// Line to using a geometry path object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -47,4 +50,3 @@ let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

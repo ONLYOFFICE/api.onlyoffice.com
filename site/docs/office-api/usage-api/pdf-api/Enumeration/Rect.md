@@ -8,7 +8,7 @@ Invariants:
 
 ## Type
 
-array
+[pt](../Enumeration/pt.md)[]
 
 ## Properties
 
@@ -18,4 +18,3 @@ array
 | 1 | [pt](../Enumeration/pt.md) | y1 (top) |
 | 2 | [pt](../Enumeration/pt.md) | x2 (right) |
 | 3 | [pt](../Enumeration/pt.md) | y2 (bottom) |
-

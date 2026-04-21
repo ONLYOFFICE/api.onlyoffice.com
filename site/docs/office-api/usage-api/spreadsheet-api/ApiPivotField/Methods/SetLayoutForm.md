@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a layout form of a pivot field.
+Set a layout form of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to change a pivot field layout form.
@@ -67,4 +67,3 @@ pivotField.SetLayoutForm("Tabular");
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
-

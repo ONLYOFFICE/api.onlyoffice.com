@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取批注 ID。
+获取文档中的批注 ID。
 
 ```javascript editor-docx
-// Display comment author name by finding a comment by its ID.
+// Display comment author name by finding a comment by its ID in a document.
 
-// How to get a comment knowing its ID.
+// How to get a comment knowing its ID in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Comment author name: " + authorName);
 doc.Push(paragraph);
 ```
-

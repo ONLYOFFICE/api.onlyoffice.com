@@ -20,12 +20,12 @@ expression.GetAllImages();
 
 ## 示例
 
-此示例展示如何从文档内容获取图像对象集合。
+从文档中的文档内容获取图像对象集合。
 
 ```javascript editor-docx
 // Get all images added to the document.
 
-// How to retrieve all images and display the class type of the first one.
+// How to retrieve all images and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Class type: ' + classType);
 doc.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例清除行的内容。
+清除文档中行的内容。
 
 ```javascript editor-docx
-// How to delete the content of the first row.
+// How to delete the content of the first row in a document.
 
-// Remove the text from the table row.
+// Remove the text from the table row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -39,4 +39,3 @@ row = table.GetRow(1);
 row.GetCell(0).GetContent().GetElement(0).AddText("The first row content was cleared.");
 doc.Push(table);
 ```
-

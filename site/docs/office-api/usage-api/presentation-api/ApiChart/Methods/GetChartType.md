@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a type of a chart
+Get a type of a chart in a presentation.
 
 ```javascript editor-pptx
+// How can I get the chart type using a chart in a presentation?
+
+// Get the chart type for a chart in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -41,4 +45,3 @@ chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 slide.RemoveAllObjects();
 slide.AddObject(chart);
 ```
-

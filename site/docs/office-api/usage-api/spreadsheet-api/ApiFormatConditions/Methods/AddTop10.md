@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds top 10 conditional formatting to a range.
+Add top 10 conditional formatting to a range.
 
 ```javascript editor-xlsx
 // How to add top 10 conditional formatting rules to highlight highest values.
@@ -51,4 +51,3 @@ if (top10Condition) {
     top10Condition.SetFillColor(Api.CreateColorFromRGB(255, 215, 0));
 }
 ```
-

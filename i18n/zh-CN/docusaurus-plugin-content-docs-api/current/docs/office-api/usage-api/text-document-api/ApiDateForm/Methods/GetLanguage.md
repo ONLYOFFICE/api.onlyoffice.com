@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何从日期表单获取日期语言。
+获取文档中日期表单的日期语言。
 
 ```javascript editor-docx
 // How to know which language is used for a date form.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has setted language: " + langId);
 doc.Push(paragraph);
 ```
-

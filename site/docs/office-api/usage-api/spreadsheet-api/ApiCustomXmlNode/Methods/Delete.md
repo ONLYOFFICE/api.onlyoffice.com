@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to delete a custom XML node.
+Delete a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to remove custom XML node elements from the document.
 
-// Delete first item node.
+// Delete and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -36,4 +36,3 @@ itemNodes[0].Delete();
 let remainingNodes = rootNode.GetNodes("/item");
 worksheet.GetRange("A1").SetValue("Remaining items: " + remainingNodes.length);
 ```
-

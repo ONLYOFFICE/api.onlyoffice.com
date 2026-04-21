@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取文本字段并为其设置数字格式，然后清除格式。
+获取文本字段并为其设置数字格式，然后清除格式。
 
 ```javascript editor-pdf
+// How do I clear format in a PDF document?
+
+// Clear format using a combobox field object.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -32,4 +36,3 @@ comboboxField.SetNumberFormat(0, "us", "black-minus", "$", true);
 comboboxField.SetValue('-1000');
 comboboxField.ClearFormat();
 ```
-

@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## Example
 
-This example shows how to restore a shape fill color from JSON.
+Restore a shape fill color from JSON in a presentation.
 
 ```javascript editor-pptx
+// The JSON string contains the color type and value properties.
+
+// Restore the color object from JSON and apply it to a shape fill.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +50,3 @@ run.AddText('Original: ' + original.GetHex() + '\nRestored: ' + restored.GetHex(
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes an element using the position specified from the inline text content control.
+Remove an element using the position specified from the inline text content control in a document.
 
 ```javascript editor-docx
-// How to remove an element from the inline text control.
+// How to remove an element from the inline text control in a document.
 
-// Delete the element using its position index from the inline text control.
+// Delete the element using its position index from the inline text control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ run2.AddText("This is the second text run in the inline text content control. Th
 inlineLvlSdt.AddElement(run2, 1);
 inlineLvlSdt.RemoveElement(0);
 ```
-

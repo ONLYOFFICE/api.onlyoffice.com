@@ -23,7 +23,7 @@ number \| string \| null
 
 ## 示例
 
-此示例展示如何使用位置获取透视值单元格。
+使用位置获取电子表格中的透视值单元格。
 
 ```javascript editor-xlsx
 // How to get a pivot value cell.
@@ -67,4 +67,3 @@ pivotWorksheet.GetRange('A9').SetValue('First value in Pivot Table');
 
 pivotWorksheet.GetRange('C9').SetValue(pivotTable.PivotValueCell(1, 1));
 ```
-

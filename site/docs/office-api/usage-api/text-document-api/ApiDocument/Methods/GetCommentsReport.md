@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a report about all the comments added to the document.
+Get a report about all the comments added to the document.
 
 ```javascript editor-docx
-// Retrieve each comment reports and display their contents one by one.
+// Retrieve each comment reports and display their contents one by one in a document.
 
 // Create a table and insert the comment reports to its cells.
 
@@ -103,4 +103,3 @@ for (let userName in commentsReport) {
 }
 table.SetStyle(doc.GetStyle("Bordered"));
 ```
-

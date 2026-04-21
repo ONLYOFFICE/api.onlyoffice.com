@@ -22,10 +22,10 @@ expression.SetFill(oApiFill);
 
 ## Example
 
-This example sets the text color to the current text run.
+Set the text color to the current text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color a text object.
+// How to color a text object in a spreadsheet.
 
 // Create a text run object, add a color to it using RGB format.
 
@@ -44,4 +44,3 @@ run.SetFill(fill);
 run.AddText("This is a text run with the font color set to gray.");
 paragraph.AddElement(run);
 ```
-

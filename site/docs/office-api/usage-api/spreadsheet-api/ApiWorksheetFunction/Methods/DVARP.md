@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to calculate variance based on the entire population of the selected database entries.
+Calculate variance based on the entire population of the selected database entries in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to estimate variance form the entire population.
 
-// Use function to calculate entire population variance.
+// Use function to calculate entire population variance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -53,4 +53,3 @@ let range1 = worksheet.GetRange("A1:C4");
 let range2 = worksheet.GetRange("E1:F2");
 worksheet.GetRange("F4").SetValue(func.DVARP(range1, "Sales", range2));
 ```
-

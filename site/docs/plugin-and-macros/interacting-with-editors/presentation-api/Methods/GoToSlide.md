@@ -36,4 +36,3 @@ Asc.scope.count = 1;
 Asc.plugin.callCommand(addSlides);
 Asc.plugin.executeMethod('GoToSlide', [2]);
 ```
-

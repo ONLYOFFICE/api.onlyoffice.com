@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例指定将在文档中表格前缘之前添加的缩进。
+指定在文档中表格前导边缘之前添加的缩进。
 
 ```javascript editor-docx
 // How to display the table description in the document.
 
-// Get the table description from the table properties.
+// Get the table description from the table properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

@@ -20,12 +20,12 @@ expression.GetNextChart();
 
 ## 示例
 
-此示例展示如何获取下一个图表。
+获取文档中的下一个图表。
 
 ```javascript editor-docx
-// How to update minor horizontal gridlines of the next chart.
+// How to update minor horizontal gridlines of the next chart in a document.
 
-// Get the next chart and set its horizontal lines as a stroke. 
+// Get the next chart and set its horizontal lines as a stroke in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,4 +49,3 @@ let nextChart = chart.GetNextChart();
 let stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 nextChart.SetMinorHorizontalGridlines(stroke);
 ```
-

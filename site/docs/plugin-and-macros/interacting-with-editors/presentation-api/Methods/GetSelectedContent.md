@@ -20,4 +20,3 @@ expression.GetSelectedContent(prop);
 ## Returns
 
 string
-

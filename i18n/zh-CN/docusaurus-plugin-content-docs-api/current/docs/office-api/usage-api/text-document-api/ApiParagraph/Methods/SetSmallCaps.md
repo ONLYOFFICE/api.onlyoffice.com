@@ -23,16 +23,15 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-此示例指定此段落中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。
+指定此段落中的所有小写字母字符仅以比指定字体大小小两磅的对应大写字母格式显示。
 
 ```javascript editor-docx
-// How to create a paragraph with the font set to small capitalized letters.
+// How to create a paragraph with the font set to small capitalized letters in a document.
 
-// Make the paragraph text letters lowercase.
+// Make the paragraph text letters lowercase in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with the font set to small capitalized letters.");
 paragraph.SetSmallCaps(true);
 ```
-

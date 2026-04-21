@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a set of the table cell properties which will be applied to all the cells within a table which match the conditional formatting type.
+Get a set of the table cell properties which will be applied to all the cells within a table which match the conditional formatting type.
 
 ```javascript editor-docx
 // How to get the table cell properties.
@@ -40,4 +40,3 @@ tableStylePr.GetTableCellPr().SetShd("clear", 0xEE, 0xEE, 0xEE);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

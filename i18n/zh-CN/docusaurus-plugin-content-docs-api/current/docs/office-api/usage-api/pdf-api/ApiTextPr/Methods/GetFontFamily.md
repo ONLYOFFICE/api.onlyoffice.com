@@ -21,12 +21,12 @@ string
 
 ## 示例
 
-此示例演示如何确定文本字体系列。
+获取 PDF 文档中的文本字体系列。
 
 ```javascript editor-pdf
-// How to know font name of a text run.
+// How to know font name of a text run in a PDF document.
 
-// Get the text properties of the run and display its font family.
+// Get the text properties of the run and display its font family in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -53,4 +53,3 @@ const fontFamily = textPr.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 docContent.Push(paragraph);
 ```
-

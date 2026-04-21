@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例返回超链接地址。
+返回演示文稿中的超链接地址。
 
 ```javascript editor-pptx
+// How do I get the linked text in a presentation?
+
+// Get the linked text using a hyperlink object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -52,4 +56,3 @@ infoParagraph.AddText('Shape hyperlink linked text: ' + hyperlink.GetLinkedText(
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
 ```
-

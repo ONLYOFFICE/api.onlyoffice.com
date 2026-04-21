@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example gets all field widgets and sets border color for them.
+Get all field widgets and set border color for them in a PDF document.
 
 ```javascript editor-pdf
+// How can I set border color using a widget in a PDF document?
+
+// Set border color for a widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -38,4 +42,3 @@ widgets.forEach(function(widget) {
     widget.SetBorderColor(rgbColor);
 });
 ```
-

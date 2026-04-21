@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all existing forms in the document.
+Get all existing forms in the document.
 
 ```javascript editor-forms
 // Get all forms added to the document.
@@ -38,4 +38,3 @@ let forms = doc.GetAllForms();
 forms[0].SetText("John Smith");
 forms[1].SelectListValue("USA");
 ```
-

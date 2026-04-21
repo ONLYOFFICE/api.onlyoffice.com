@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取富文本块对象的类类型。
+获取 PDF 文档中富文本 run 对象的类类型。
 
 ```javascript editor-pdf
+// How can I get the class type of a rich text run in a PDF document?
+
+// Get the class type of a rich text run and display it in the PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -38,4 +42,3 @@ run.AddText("Some example text");
 
 console.log(`Object class type is: ${run.GetClassType()}`);
 ```
-

@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何从当前 XML 节点删除属性。
+从演示文稿中当前 XML 节点删除属性。
 
 ```javascript editor-pptx
+// How do I delete the attribute in a presentation?
+
+// Delete the attribute using a custom XML node object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +50,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after deletion: ' + xml.GetXml());
 ```
-

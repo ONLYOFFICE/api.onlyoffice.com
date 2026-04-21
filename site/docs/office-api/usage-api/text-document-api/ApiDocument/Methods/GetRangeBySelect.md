@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a range object by the selection.
+Get a range object by the selection in a document.
 
 ```javascript editor-docx
 // How to get the range selected on the document.
 
-// Select a range and make it bold.
+// Select a range and make it bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run1.Select();
 let range = doc.GetRangeBySelect();
 range.SetBold(true);
 ```
-

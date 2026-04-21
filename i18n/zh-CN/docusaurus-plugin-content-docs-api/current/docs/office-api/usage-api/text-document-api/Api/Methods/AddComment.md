@@ -25,18 +25,15 @@ expression.AddComment(element, text, author, userId);
 
 ## 示例
 
-此示例向第一个段落添加文本和批注。
+在文档中向第一个段落添加文本和批注。
 
 ```javascript editor-docx
-// How to add a comment to the ApiParagraph class.
+// The comment is attached to the paragraph with the specified author name.
 
-// How to comment on text.
-
-// Adds a paragraph to the document and comments on it.
+// Add a paragraph to the document and comment on it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 Api.AddComment(paragraph, "ONLYOFFICE for developers", "Jane");
 ```
-

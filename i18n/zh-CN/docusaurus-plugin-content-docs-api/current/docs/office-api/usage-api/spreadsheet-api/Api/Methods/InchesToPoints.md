@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将英寸转换为磅。
+在电子表格中将英寸转换为磅。
 
 ```javascript editor-xlsx
+// How do I convert inches to points in a spreadsheet?
+
+// Convert inches to points and display the result in a spreadsheet.
+
 const inches = 100;
 const points = Api.InchesToPoints(inches);
 const text = inches + ' inches are equal to ' + points + ' points.';
@@ -32,4 +36,3 @@ const text = inches + ' inches are equal to ' + points + ' points.';
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
 ```
-

@@ -23,12 +23,12 @@ string \| null
 
 ## 示例
 
-此示例演示如何从自定义 XML 节点获取属性值。
+从电子表格中的自定义 XML 节点获取属性值。
 
 ```javascript editor-xlsx
-// How to get an attribute from an XML node.
+// How to get an attribute from an XML node in a spreadsheet.
 
-// Get an XML node attribute.
+// Get an XML node attribute in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -41,4 +41,3 @@ worksheet.GetRange("A1").SetValue("Product ID: " + id);
 worksheet.GetRange("A2").SetValue("Product Name: " + name);
 worksheet.GetRange("A3").SetValue("Product Price: " + price);
 ```
-

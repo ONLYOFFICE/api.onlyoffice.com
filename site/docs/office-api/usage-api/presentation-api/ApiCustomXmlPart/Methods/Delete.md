@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example demonstrates how to delete a custom XML part.
+Delete a custom XML part in a presentation.
 
 ```javascript editor-pptx
 // How to delete a custom XML part from the presentation.
 
-// Delete an XML part.
+// Delete and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -52,4 +52,3 @@ run.AddText(displayText);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查幻灯片放映切换效果返回的类类型。
 
 ```javascript editor-pptx
+// How do I check what type a slide show transition object is?
+
+// Retrieve and output the class type string for a slide show transition.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,4 +48,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
 ```
-

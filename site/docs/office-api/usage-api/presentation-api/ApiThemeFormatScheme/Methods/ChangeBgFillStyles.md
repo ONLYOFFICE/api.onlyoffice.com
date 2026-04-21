@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the background fill styles to the current theme format scheme.
+Set the background fill styles to the current theme format scheme.
 
 ```javascript editor-pptx
 // How to change background fill styles of a format scheme.
@@ -68,4 +68,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets next rich paragraph and adds some text to it.
+Get next rich paragraph and add some text to it in a PDF document.
 
 ```javascript editor-pdf
+// How do I get next in a PDF document?
+
+// Get next using a rich paragraph object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -40,4 +44,3 @@ nextPara.AddText("This is next paragraph");
 
 console.log(`We got next paragraph and added some text to it`);
 ```
-

@@ -2,16 +2,16 @@
 
 设置当前段落的项目符号或编号。
 
-Inherited from [ApiParaPr.SetBullet](../../ApiParaPr/Methods/SetBullet.md).
+继承自 [ApiParaPr.SetBullet](../../ApiParaPr/Methods/SetBullet.md)。
 
 ## 示例
 
-此示例设置当前段落的项目符号或编号。
+在 PDF 文档中为当前段落设置项目符号或编号。
 
 ```javascript editor-pdf
-// How to set a bullet type to the paragraph properties.
+// How to set a bullet type to the paragraph properties in a PDF document.
 
-// Create a bulleted paragraph setting its bullet type.
+// Create a bulleted paragraph setting its bullet type in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -31,4 +31,3 @@ paraPr.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
 ```
-

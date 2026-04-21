@@ -22,7 +22,7 @@ expression.SetLayoutPageBreak(insert);
 
 ## 示例
 
-此示例展示如何设置透视字段的布局分页符。
+在电子表格中设置透视字段的布局分页符。
 
 ```javascript editor-xlsx
 // How to change a pivot field layout page break.
@@ -67,4 +67,3 @@ pivotField.SetLayoutPageBreak(true);
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
-

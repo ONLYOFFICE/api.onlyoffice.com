@@ -20,12 +20,12 @@ JSON
 
 ## Example
 
-This example converts the ApiThemeColorScheme object into the JSON object.
+Convert the theme color scheme object into the JSON object in a presentation.
 
 ```javascript editor-pptx
-// How to convert a ApiThemeColorScheme object to a JSON object.
+// How to convert a theme color scheme object to a JSON object in a presentation.
 
-// Create a ApiThemeColorScheme, convert it to JSON and create a new object from it.
+// Create a theme color scheme, convert it to JSON and create a new object from it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,4 +58,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

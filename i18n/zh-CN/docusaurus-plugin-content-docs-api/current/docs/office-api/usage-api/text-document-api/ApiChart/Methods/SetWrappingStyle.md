@@ -10,16 +10,16 @@
 -**"behind"** - 文本覆盖在对象上方。
 -**"inFront"** - 对象覆盖在文本上方。
 
-Inherited from [ApiDrawing.SetWrappingStyle](../../ApiDrawing/Methods/SetWrappingStyle.md).
+继承自 [ApiDrawing.SetWrappingStyle](../../ApiDrawing/Methods/SetWrappingStyle.md)。
 
 ## 示例
 
-此示例创建一个环绕样式为「square」的形状。
+在文档中创建环绕样式为"square"的形状。
 
 ```javascript editor-docx
-// How to wrap the shape with squared style.
+// How to wrap the shape with squared style in a document.
 
-// Create a drawing, add its properties and set its wrapping style.
+// Create a drawing, add its properties and set its wrapping style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,3 @@ drawing.SetDistances(457200, 457200, 457200, 0);
 drawing.SetWrappingStyle("square");
 paragraph.AddDrawing(drawing);
 ```
-

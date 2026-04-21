@@ -25,4 +25,3 @@ expression.SelectOleObject(id);
 ```javascript
 window.Asc.plugin.executeMethod ("SelectOleObject", ["5_665"]);
 ```
-

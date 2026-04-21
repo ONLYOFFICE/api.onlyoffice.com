@@ -16,5 +16,3 @@ Enumeration
 - "xlLess"
 - "xlGreaterEqual"
 - "xlLessEqual"
-
-

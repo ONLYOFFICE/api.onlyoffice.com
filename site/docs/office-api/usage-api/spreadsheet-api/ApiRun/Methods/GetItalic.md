@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
 ## Example
 
-This example gets a text italic property.
+Get a text italic property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is italic or not.
+// How to find out whether a text is italic or not in a spreadsheet.
 
-// Get a text italic property as a boolean value.
+// Get a text italic property as a boolean value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -31,4 +31,3 @@ let isItalic = textProps.GetItalic();
 paragraph.AddText("Italic property: " + isItalic);
 content.Push(paragraph);
 ```
-

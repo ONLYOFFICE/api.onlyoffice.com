@@ -23,7 +23,7 @@ expression.SetCellBorderLeft(fSize, oApiFill);
 
 ## 示例
 
-此示例设置应在表格单元格左侧显示的边框。
+设置表格单元格左侧显示的边框。
 
 ```javascript editor-pptx
 // How to set cell left border with its fill color.
@@ -42,4 +42,3 @@ cell.SetCellBorderLeft(2, fill);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

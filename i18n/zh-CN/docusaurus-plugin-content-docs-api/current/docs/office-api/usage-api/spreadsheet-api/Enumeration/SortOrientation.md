@@ -11,10 +11,9 @@
 - "xlSortColumns"
 - "xlSortRows"
 
-
 ## 示例
 
-此示例指定应按列排序。
+指定应按列排序。
 
 ```javascript editor-xlsx
 // How to specify a sorting orientation (column wise or row wise) for each range.
@@ -23,4 +22,3 @@
 
 worksheet.GetRange("A1:C5").SetSort("A1:A5", "xlAscending", "B1:B5", "xlDescending", "C1:C5", "xlAscending", "xlYes", "xlSortColumns");
 ```
-

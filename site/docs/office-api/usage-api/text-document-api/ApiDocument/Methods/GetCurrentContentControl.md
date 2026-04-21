@@ -6,9 +6,13 @@ Inherited from [ApiDocumentContent.GetCurrentContentControl](../../ApiDocumentCo
 
 ## Example
 
-This example shows how to get the currently selected content control.
+Get the currently selected content control in a document.
 
 ```javascript editor-docx
+// How to get current content control for a document content?
+
+// Get current content control and display the result in a document.
+
 const doc = Api.GetDocument();
 
 const blockSdt = Api.CreateBlockLvlSdt();
@@ -26,4 +30,3 @@ if (currentCC) {
 }
 doc.Push(paragraph);
 ```
-

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last non-empty element of a paragraph inside a shape.
+Get the last non-empty element of a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I last using a paragraph in a spreadsheet?
+
+// Last for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(140, 100, 120));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -46,4 +50,3 @@ paragraph.AddElement(run2);
 const last = paragraph.Last();
 worksheet.GetRange('A1').SetValue('Last element text: ' + last.GetText());
 ```
-

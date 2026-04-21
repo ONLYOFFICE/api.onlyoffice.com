@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.SetLayoutCompactRow](../../ApiPivotField/Methods/S
 
 ## Example
 
-This example shows how to set a layout compact row line of a pivot field.
+Set a layout compact row line of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout compact row.
+// How to change a pivot field layout compact row in a spreadsheet.
 
-// Create a pivot table, add data to it then set layout compact row of a specified pivot.
+// Create a pivot table, add data to it then set layout compact row of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,4 +51,3 @@ pivotField.SetLayoutCompactRow(false);
 pivotWorksheet.GetRange('A12').SetValue('Region layout compact');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutCompactRow());
 ```
-

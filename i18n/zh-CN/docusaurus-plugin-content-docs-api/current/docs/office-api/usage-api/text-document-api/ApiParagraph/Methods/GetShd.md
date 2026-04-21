@@ -2,16 +2,16 @@
 
 返回应用于段落内容的底纹。
 
-Inherited from [ApiParaPr.GetShd](../../ApiParaPr/Methods/GetShd.md).
+继承自 [ApiParaPr.GetShd](../../ApiParaPr/Methods/GetShd.md)。
 
 ## 示例
 
-此示例展示如何获取应用于段落内容的底纹。
+获取文档中应用于段落内容的底纹。
 
 ```javascript editor-docx
-// How to get the shading type of the paragraph.
+// How to get the shading type of the paragraph in a document.
 
-// Get the paragraph shading and fill the drawing with it.
+// Get the paragraph shading and fill the drawing with it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -30,4 +30,3 @@ paragraph.AddText('Shade: ');
 paragraph.AddDrawing(drawing);
 doc.Push(paragraph);
 ```
-

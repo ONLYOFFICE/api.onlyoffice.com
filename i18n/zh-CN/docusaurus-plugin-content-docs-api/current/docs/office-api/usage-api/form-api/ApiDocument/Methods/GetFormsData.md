@@ -21,7 +21,7 @@ expression.GetFormsData();
 
 ## 示例
 
-此示例展示如何获取添加到文档的所有表单的数据。
+获取添加到文档的所有表单的数据。
 
 ```javascript editor-forms
 // How to get form information as a string.
@@ -42,4 +42,3 @@ let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText(text);
 doc.Push(paragraph2);
 ```
-

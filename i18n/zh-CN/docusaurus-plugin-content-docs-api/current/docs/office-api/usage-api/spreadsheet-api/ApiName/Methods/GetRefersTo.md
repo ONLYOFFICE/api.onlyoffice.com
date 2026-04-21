@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何获取名称定义引用的公式。
+获取电子表格中名称定义要引用的公式。
 
 ```javascript editor-xlsx
 // How to add a defname that refers to the formula from the specified range.
@@ -37,4 +37,3 @@ defName.SetRefersTo("=SUM(A1:B1)");
 worksheet.GetRange("A3").SetValue("The name 'summa' refers to the formula from the cell C1.");
 worksheet.GetRange("A4").SetValue("Formula: " + defName.GetRefersTo());
 ```
-

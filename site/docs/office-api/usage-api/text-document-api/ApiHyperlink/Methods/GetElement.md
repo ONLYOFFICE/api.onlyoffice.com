@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get the hyperlink element using the position specified.
+Get the hyperlink element using the position specified in a document.
 
 ```javascript editor-docx
-// How to get the element of the hyperlink knowing its index.
+// How to get the element of the hyperlink knowing its index in a document.
 
-// Add a hyperlink to the paragraph and get its element.
+// Add a hyperlink to the paragraph and get its element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddElement(element);
 doc.Push(paragraph);
 ```
-

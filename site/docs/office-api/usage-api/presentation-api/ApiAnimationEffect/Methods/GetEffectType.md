@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the effect type of an animation effect.
+Get the effect type of an animation effect in a presentation.
 
 ```javascript editor-pptx
+// How to get the effect type for an animation effect in a presentation?
+
+// Get the effect type and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -53,4 +57,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Effect type: ' + effectType);
 slide.AddObject(infoShape);
 ```
-

@@ -22,9 +22,13 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置演示文稿的类别。
+在演示文稿中使用核心属性设置演示文稿的类别。
 
 ```javascript editor-pptx
+// How to set category for a core properties in a presentation?
+
+// Set category and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
@@ -43,4 +47,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

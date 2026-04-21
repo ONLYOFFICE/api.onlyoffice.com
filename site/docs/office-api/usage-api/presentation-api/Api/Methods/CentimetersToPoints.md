@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert centimeters to points.
+Convert centimeters to points in a presentation.
 
 ```javascript editor-pptx
+// How do I convert centimeters to points in a presentation?
+
+// Convert centimeters to points and display the result in a presentation.
+
 const centimeters = 1000;
 const points = Api.CentimetersToPoints(centimeters);
 
@@ -40,4 +44,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

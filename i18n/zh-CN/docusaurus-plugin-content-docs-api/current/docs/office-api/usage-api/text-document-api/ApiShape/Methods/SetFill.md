@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充。
+为形状设置纯色填充颜色。在文档中创建矩形并为其应用红色填充。
 
 ```javascript editor-docx
-// Creates a rectangle and applies a red fill to it.
+// How to set fill for a shape in a document?
+
+// Set fill and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -38,4 +41,3 @@ let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddText("Fill changed to red");
 ```
-

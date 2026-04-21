@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-此示例将指定的数字格式设置为坐标轴值。
+为轴值设置指定的数字格式。
 
 ```javascript editor-docx
-// How to set number format style to the axis. 
+// How to set number format style to the axis.
 
 // Create a chart and format its axis numbering.
 
@@ -43,4 +43,3 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetAxieNumFormat("0.00", "left");
 paragraph.AddDrawing(chart);
 ```
-

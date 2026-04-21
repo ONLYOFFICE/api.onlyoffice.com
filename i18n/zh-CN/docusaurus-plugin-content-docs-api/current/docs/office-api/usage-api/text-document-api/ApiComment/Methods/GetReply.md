@@ -22,10 +22,10 @@ expression.GetReply(nIndex);
 
 ## 示例
 
-此示例展示如何获取指定的批注回复。
+获取文档中指定的批注回复。
 
 ```javascript editor-docx
-// Get a comment reply by knowing its index.
+// Get a comment reply by knowing its index in a document.
 
 // How to get the first comment reply text and display it in the document.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("First comment reply: " + commentReply.GetText());
 doc.Push(paragraph);
 ```
-

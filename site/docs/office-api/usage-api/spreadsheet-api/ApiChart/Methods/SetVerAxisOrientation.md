@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the direction of the data displayed on the vertical axis.
+Specify the direction of the data displayed on the vertical axis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to indicate the direction of values of the chart vertical axis.
+// How to indicate the direction of values of the chart vertical axis in a spreadsheet.
 
-// Specify the vertical axis orientation.
+// Specify the vertical axis orientation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -49,4 +49,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

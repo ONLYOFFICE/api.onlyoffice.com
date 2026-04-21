@@ -20,12 +20,12 @@ expression.GetTopBottom();
 
 ## 示例
 
-此示例演示如何获取前 10 项条件的顶部/底部设置。
+获取电子表格中前 10 条件的顶部/底部设置。
 
 ```javascript editor-xlsx
-// How to determine if the condition evaluates top or bottom values.
+// How to determine if the condition evaluates top or bottom values in a spreadsheet.
 
-// Get the top/bottom direction setting from the top 10 rule.
+// Get the top/bottom direction setting from the top 10 rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,4 +42,3 @@ let top10Condition = formatConditions.AddTop10();
 let topBottom = top10Condition.GetTopBottom();
 worksheet.GetRange("B1").SetValue("Direction: " + topBottom);
 ```
-

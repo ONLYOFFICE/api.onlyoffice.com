@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the shape objects from the slide master.
+Get an array with all the shape objects from the slide master in a presentation.
 
 ```javascript editor-pptx
 // How to get all shapes from the presentation slide master.
@@ -47,4 +47,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type = " + classType);
 shape.SetVerticalTextAlign("center");
 ```
-

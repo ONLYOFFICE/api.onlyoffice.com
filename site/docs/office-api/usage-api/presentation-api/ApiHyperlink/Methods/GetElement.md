@@ -22,9 +22,13 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example returns the hyperlink element using the position specified.
+Return the hyperlink element using the position specified in a presentation.
 
 ```javascript editor-pptx
+// How can I get the element using a hyperlink in a presentation?
+
+// Get the element for a hyperlink in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -68,4 +72,3 @@ if (element) {
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
 ```
-

@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example specifies which chart data labels are shown for the chart.
+Specify which chart data labels are shown for the chart in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to hide chart data labels.
+// How to hide chart data labels in a spreadsheet.
 
-// Show only values as chart lables.
+// Show only values as chart lables in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -52,4 +52,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

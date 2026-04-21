@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a type of the current style.
+Get a type of the current style in a document.
 
 ```javascript editor-docx
-// How to get type of the table style.
+// How to get type of the table style in a document.
 
-// Display the name of the table style.
+// Display the name of the table style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");
@@ -38,4 +38,3 @@ let tableStyleType = tableStyle.GetType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Style type = " + tableStyleType);
 ```
-

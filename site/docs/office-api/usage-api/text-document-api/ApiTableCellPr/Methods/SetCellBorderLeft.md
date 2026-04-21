@@ -27,7 +27,7 @@ boolean
 
 ## Example
 
-This example sets the border which will be displayed to the left of the table cell.
+Set the border which will be displayed to the left of the table cell.
 
 ```javascript editor-docx
 // How to add border to the left of the cell.
@@ -46,4 +46,3 @@ tableCellPr.SetCellBorderLeft("single", 32, 0, 51, 51, 51);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

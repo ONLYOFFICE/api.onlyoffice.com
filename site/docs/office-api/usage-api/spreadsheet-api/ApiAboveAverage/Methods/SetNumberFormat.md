@@ -6,7 +6,7 @@ Inherited from [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Met
 
 ## Example
 
-This example sets the number format for a conditional formatting rule.
+Set the number format for a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to apply number formatting to conditional formatting rules.
@@ -37,4 +37,3 @@ condition1.SetNumberFormat("$#,##0.00");
 worksheet.GetRange("C4").SetValue("New format:");
 worksheet.GetRange("C5").SetValue(condition1.GetNumberFormat());
 ```
-

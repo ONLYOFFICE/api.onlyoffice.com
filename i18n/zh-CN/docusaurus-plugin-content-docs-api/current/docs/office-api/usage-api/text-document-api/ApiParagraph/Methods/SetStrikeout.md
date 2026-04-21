@@ -22,16 +22,15 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定此段落的内容显示为中间有一条水平线穿过。
+指定在文档中此段落的内容以通过行中心的单条水平线显示。
 
 ```javascript editor-docx
-// How to cross the paragraph with onle line.
+// How to cross the paragraph with onle line in a document.
 
-// Create a paragraph with the text struck out with a single line.
+// Create a paragraph with the text struck out with a single line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with the text struck out with a single line.");
 paragraph.SetStrikeout(true);
 ```
-

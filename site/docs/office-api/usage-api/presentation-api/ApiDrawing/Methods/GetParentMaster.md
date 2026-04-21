@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get the drawing parent slide master.
+Get the drawing parent slide master.
 
 ```javascript editor-pptx
 // How to get a parent master of a slide shape.
@@ -46,4 +46,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
 ```
-

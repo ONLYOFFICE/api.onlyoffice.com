@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to picas.
+Convert points to picas in a document.
 
 ```javascript editor-docx
+// How can I convert points to picas in a document?
+
+// Convert points to picas in a document.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const picas = Api.PointsToPicas(points);
 paragraph.AddText(points + ' points are equal to ' + picas + ' picas.');
 doc.Push(paragraph);
 ```
-

@@ -25,7 +25,7 @@ string
 
 ## Example
 
-This example converts a document to Markdown.
+Convert a document to Markdown.
 
 ```javascript editor-docx
 // How to get a markdown object from the document content.
@@ -58,4 +58,3 @@ paragraph5.AddLineBreak();
 paragraph5.AddText(markdown);
 doc.Push(paragraph5);
 ```
-

@@ -26,15 +26,14 @@ number
 
 ## 示例
 
-此示例演示如何返回完全投资证券到期时收到的金额。
+在电子表格中返回完全投资证券到期时收到的金额。
 
 ```javascript editor-xlsx
-// How to estimate the amount received at maturity.
+// How to estimate the amount received at maturity in a spreadsheet.
 
-// Use a function to calculate the funds got at maturity for a fully invested security.
+// Use a function to calculate the funds got at maturity for a fully invested security in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.RECEIVED("1/1/2017", "6/1/2019", "$10,000.00", "3.75%", 2));
 ```
-

@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example deletes the current slide from the presentation.
+Delete the current slide from the presentation.
 
 ```javascript editor-pptx
 // How to delete a slide.
@@ -39,4 +39,3 @@ presentation.AddSlide(slide);
 slide = presentation.GetSlideByIndex(0);
 slide.Delete();
 ```
-

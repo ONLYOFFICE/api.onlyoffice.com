@@ -23,10 +23,10 @@ boolean
 
 ## Example
 
-This example adds a paragraph in document content.
+Add a paragraph in document content.
 
 ```javascript editor-xlsx
-// How to add text to the document using ApiParagraph.
+// How to add text to the document using paragraph.
 
 // Update the document content adding a paragraph to it.
 
@@ -41,4 +41,3 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 content.AddElement(paragraph);
 content.Push(paragraph);
 ```
-

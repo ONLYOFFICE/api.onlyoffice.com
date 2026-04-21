@@ -21,10 +21,10 @@ boolean
 
 ## Example
 
-This example deletes the specified object from the parent if it exists.
+Delete the specified object from the parent if it exists in a presentation.
 
 ```javascript editor-pptx
-// How to delete a master.
+// How to delete a master in a presentation.
 
 // Remove a master from a presentation.
 
@@ -50,4 +50,3 @@ paragraph.AddText("Number of masters after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

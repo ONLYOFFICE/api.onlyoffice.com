@@ -22,7 +22,7 @@ JSON
 
 ## 示例
 
-此示例将 ApiRun 对象转换为 JSON 对象。
+在文档中将文本 run 对象转换为 JSON 对象。
 
 ```javascript editor-docx
 // How to convert a slide object to a JSON object.
@@ -38,4 +38,3 @@ let runFromJSON = Api.FromJSON(json);
 runFromJSON.SetBold(true);
 paragraph.AddElement(runFromJSON);
 ```
-

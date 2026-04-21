@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to outline data points.
+How to outline data points in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart then apply outline to its data points.
+// Create a chart then apply outline to its data points in a PDF document.
+
+// Use chart to set data point out line in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +50,3 @@ let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColo
 chart.SetDataPointOutLine(stroke, 0, 0, false);
 page.AddObject(chart);
 ```
-

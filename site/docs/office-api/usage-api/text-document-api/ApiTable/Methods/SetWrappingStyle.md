@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the table wrapping style.
+Set the table wrapping style in a document.
 
 ```javascript editor-docx
-// How to set the wrapping to the table.
+// How to set the wrapping to the table in a document.
 
-// Resize table by making its the width 100 percent.
+// Resize table by making its the width 100 percent in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,4 +49,3 @@ paragraph.AddText("The tables were added to the paragraph. Table 1 is inline and
 table1.SetWrappingStyle(true);
 table2.SetWrappingStyle(false);
 ```
-

@@ -22,9 +22,13 @@ expression.SetOperator(operator);
 
 ## 示例
 
-此示例展示如何为图标条件设置比较运算符。
+在电子表格中设置图标条件的比较运算符。
 
 ```javascript editor-xlsx
+// How do I set operator in a spreadsheet?
+
+// Set operator using an icon criterion object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Results');
 worksheet.GetRange('A2').SetValue(80);
@@ -41,4 +45,3 @@ worksheet.GetRange('B1').SetValue('Operator before: ' + secondCriterion.GetOpera
 secondCriterion.SetOperator('xlGreater');
 worksheet.GetRange('B2').SetValue('Operator after: ' + secondCriterion.GetOperator());
 ```
-

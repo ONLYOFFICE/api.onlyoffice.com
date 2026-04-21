@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the specified chart series.
+Set the outline to the specified chart series in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to outline chart series.
+// How to outline chart series in a spreadsheet.
 
-// Add colored stroke for a chart seria.
+// Add colored stroke for a chart seria in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -52,4 +52,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetSeriesOutLine(stroke, 1, false);
 ```
-

@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md).
 
 ## Example
 
-This example gets a text color property.
+Get a text color property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text color type.
+// How to find out a text color type in a spreadsheet.
 
-// Get a text solid color fill.
+// Get a text solid color fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -33,4 +33,3 @@ let type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 content.Push(paragraph);
 ```
-

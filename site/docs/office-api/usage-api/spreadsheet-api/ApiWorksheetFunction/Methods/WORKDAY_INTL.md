@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the serial number of the date before or after a specified number of workdays with custom weekend parameters.
+Return the serial number of the date before or after a specified number of workdays with custom weekend parameters in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the serial number of the date adding some workdays.
+// How to return the serial number of the date adding some workdays in a spreadsheet.
 
-// Use a function to calculate the serial number of the date.
+// Use a function to calculate the serial number of the date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -39,4 +39,3 @@ let ans = func.WORKDAY_INTL("9/8/2017", "-20", "0000011", "8/15/2017");
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

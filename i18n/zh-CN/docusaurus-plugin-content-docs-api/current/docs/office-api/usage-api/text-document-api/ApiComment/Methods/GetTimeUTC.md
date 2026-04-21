@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-此示例展示如何获取批注创建时间戳（UTC 格式）。
+获取文档中批注创建的 UTC 格式时间戳。
 
 ```javascript editor-docx
-// How to know when a comment was added.
+// How to know when a comment was added in a document.
 
 // Get all comments from the presentation and the first one's time of creation in UTC format.
 
@@ -38,4 +38,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The timestamp of comment creation in UTC format: " + timeUTC);
 doc.Push(paragraph);
 ```
-

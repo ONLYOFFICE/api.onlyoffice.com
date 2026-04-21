@@ -11,5 +11,3 @@
 - "slow"
 - "medium"
 - "fast"
-
-

@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to make a copy of the form.
+Make a copy of the form in a document.
 
 ```javascript editor-docx
 // How to create the same text form.
@@ -35,4 +35,3 @@ let copyTextForm = textForm.Copy();
 paragraph.AddLineBreak();
 paragraph.AddElement(copyTextForm);
 ```
-

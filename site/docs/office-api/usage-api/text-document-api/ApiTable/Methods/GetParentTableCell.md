@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table cell that contains the table.
+Get a table cell that contains the table in a document.
 
 ```javascript editor-docx
 // How to get the parent table cell.
@@ -42,4 +42,3 @@ table1.AddElement(cell, 0, table2);
 let parentTableCell = table2.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
-

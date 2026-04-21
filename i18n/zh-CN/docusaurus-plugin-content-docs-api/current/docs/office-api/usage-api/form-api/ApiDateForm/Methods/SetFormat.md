@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例展示如何在日期表单上设置日期格式。
+设置文档中日期表单的日期格式。
 
 ```javascript editor-forms
 // Specify the format of the date for the form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has format: " + format);
 doc.Push(paragraph);
 ```
-

@@ -13,10 +13,9 @@
 - "right"
 - "left"
 
-
 ## 示例
 
-此示例将坐标轴值设置到图表的顶部位置。
+将坐标轴值设置到图表的顶部位置。
 
 ```javascript editor-xlsx
 // How to change the axis labels format of the chart.
@@ -25,4 +24,3 @@
 
 chart.SetAxieNumFormat("top", "0.00");
 ```
-

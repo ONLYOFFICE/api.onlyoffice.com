@@ -20,16 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of the custom XML parts manager.
+Retrieve the class type of a custom XML parts in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the class type of the XML parts manager.
+// How to identify the class type of a custom XML parts in a spreadsheet?
 
-// Get the class type.
+// Obtain the class type identifier of a custom XML parts object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
 let classType = xmlManager.GetClassType();
 worksheet.GetRange("A1").SetValue("XML manager class type: " + classType);
 ```
-

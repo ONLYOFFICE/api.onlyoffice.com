@@ -20,10 +20,13 @@ number
 
 ## 示例
 
-分析云形状的路径属性。
+分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
 
 ```javascript editor-docx
-// Retrieves and displays path dimensions, stroke and fill information.
+// How can I get the width using a geometry path in a document?
+
+// Get the width for a geometry path in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
@@ -38,4 +41,3 @@ let paths = geometry.GetPaths();
 paragraph.AddText(", Total paths: " + paths.length);
 paragraph.AddDrawing(shape);
 ```
-

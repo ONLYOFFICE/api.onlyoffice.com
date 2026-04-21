@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a page break and starts the next element from the next page.
+Add a page break and start the next element from the next page.
 
 ```javascript editor-docx
 // How to add a page break to the text.
 
-// Add a break between the text of a paragraph. 
+// Add a break between the text of a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -34,4 +34,3 @@ paragraph.AddPageBreak();
 paragraph.AddText("This is the text which starts from the beginning of the second page. ");
 paragraph.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 ```
-

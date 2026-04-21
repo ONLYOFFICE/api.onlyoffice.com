@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the type of a conditional formatting rule.
+Get the type of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve the type of existing conditional formatting rules.
@@ -48,4 +48,3 @@ let ruleType = condition1.GetType();
 worksheet.GetRange("C1").SetValue("Rule type:");
 worksheet.GetRange("C2").SetValue(ruleType);
 ```
-

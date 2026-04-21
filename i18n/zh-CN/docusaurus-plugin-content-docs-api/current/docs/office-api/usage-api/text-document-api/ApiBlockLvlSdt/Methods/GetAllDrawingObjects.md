@@ -20,9 +20,13 @@ expression.GetAllDrawingObjects();
 
 ## 示例
 
-此示例演示如何获取内容控件中的绘图对象集合。
+获取文档中内容控件中的绘图对象集合。
 
 ```javascript editor-docx
+// How can I get all drawing objects using a block-level content control in a document?
+
+// Get all drawing objects for a block-level content control in a document.
+
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -39,4 +43,3 @@ doc.AddElement(0, blockLvlSdt);
 let drawingObjects = blockLvlSdt.GetAllDrawingObjects();
 drawingObjects[0].Delete();
 ```
-

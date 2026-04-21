@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to delete a row from the table.
+How to delete a row from the table in a PDF document.
 
 ```javascript editor-pdf
 // Create a table, create cells and remove the whole row by its cell.
+
+// Remove the row for a table in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,4 +45,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

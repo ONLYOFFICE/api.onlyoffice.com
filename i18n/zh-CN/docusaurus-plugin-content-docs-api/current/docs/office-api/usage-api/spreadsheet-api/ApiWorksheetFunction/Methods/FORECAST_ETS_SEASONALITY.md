@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回应用程序为指定时间序列检测到的重复模式的长度。
+在电子表格中返回应用程序为指定时间序列检测到的重复模式的长度。
 
 ```javascript editor-xlsx
-// How to return the length of the repetitive pattern.
+// How to return the length of the repetitive pattern in a spreadsheet.
 
-// Use function to return the length of the repetitive pattern for the specified time series.
+// Use function to return the length of the repetitive pattern for the specified time series in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -48,4 +48,3 @@ let range1 = worksheet.GetRange("B1:B5");
 let range2 = worksheet.GetRange("A1:A5");
 worksheet.GetRange("B6").SetValue(func.FORECAST_ETS_SEASONALITY(range1, range2, 1, 1));
 ```
-

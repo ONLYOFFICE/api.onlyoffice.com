@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a theme of the slide master.
+Get a theme of the slide master in a presentation.
 
 ```javascript editor-pptx
 // How to get a theme knowing a slide master and set its color scheme.
 
-// Get slide master theme.
+// Get slide master theme using the slide master API in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,4 +54,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

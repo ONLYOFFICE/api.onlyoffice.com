@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get element.
+Get element in a PDF document.
 
 ```javascript editor-pdf
 // How to get an element from the content of a page shape.
 
-// Find an element from the shape using its index.
+// Find an element from the shape using its index in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,4 +50,3 @@ oParagraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(oParagraph);
 page.AddObject(shape);
 ```
-

@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## 示例
 
-此示例展示如何从文档中获取具有指定名称的所有绘图对象。
+从文档中获取具有指定名称的所有绘图对象。
 
 ```javascript editor-docx
-// Get drawings by their names.
+// Get drawings by their names in a document.
 
-// How to retrieve drawings by their names and rotate them.
+// How to retrieve drawings by their names and rotate them in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
@@ -51,4 +51,3 @@ for (let i = 0; i < drawings.length; i++) {
 	drawings[i].SetRotation(45);
 }
 ```
-

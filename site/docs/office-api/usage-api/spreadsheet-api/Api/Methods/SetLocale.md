@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets a locale to the document.
+Set a locale to the document.
 
 ```javascript editor-xlsx
 // How to set a region to the document.
@@ -33,4 +33,3 @@ let worksheet = Api.GetActiveSheet();
 Api.SetLocale("en-CA");
 worksheet.GetRange("A1").SetValue("A sample spreadsheet with the language set to English (Canada).");
 ```
-

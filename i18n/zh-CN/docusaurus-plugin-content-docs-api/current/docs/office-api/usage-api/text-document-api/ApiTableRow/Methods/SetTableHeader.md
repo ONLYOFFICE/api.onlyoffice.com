@@ -5,16 +5,16 @@
 此元素可应用于表格结构顶部的任意数量的行，
 以生成多行表格标题。
 
-Inherited from [ApiTableRowPr.SetTableHeader](../../ApiTableRowPr/Methods/SetTableHeader.md).
+继承自 [ApiTableRowPr.SetTableHeader](../../ApiTableRowPr/Methods/SetTableHeader.md)。
 
 ## 示例
 
-此示例指定当前表格行将在显示此表格的每个新页面顶部重复显示。
+指定当前表格行在表格显示时在每个新页面的顶部重复。
 
 ```javascript editor-docx
-// Rename the header of the table.
+// Rename the header of the table in a document.
 
-// How to set table row as a header.
+// How to set table row as a header in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -29,4 +29,3 @@ tableRowPr.SetTableHeader(true);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

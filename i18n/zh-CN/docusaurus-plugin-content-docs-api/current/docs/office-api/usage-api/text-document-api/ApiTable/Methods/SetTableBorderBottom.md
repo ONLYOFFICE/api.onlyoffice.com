@@ -2,16 +2,16 @@
 
 设置将在当前表格底部显示的边框。
 
-Inherited from [ApiTablePr.SetTableBorderBottom](../../ApiTablePr/Methods/SetTableBorderBottom.md).
+继承自 [ApiTablePr.SetTableBorderBottom](../../ApiTablePr/Methods/SetTableBorderBottom.md)。
 
 ## 示例
 
-此示例设置将在表格底部显示的边框。
+在文档中设置表格底部显示的边框。
 
 ```javascript editor-docx
-// How to find out a style that will be applied to the table elements whish satisfy the condition.
+// How to find out a style that will be applied to the table elements whish satisfy the condition in a document.
 
-// Retrieve a conditional table style.
+// Retrieve a conditional table style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -26,4 +26,3 @@ table.SetTableLook(true, true, true, true, true, true);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

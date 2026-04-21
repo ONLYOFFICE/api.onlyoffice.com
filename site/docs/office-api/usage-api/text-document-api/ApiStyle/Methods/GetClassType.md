@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a style object in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiStyle.
+// How can I get the class type of a style in a document?
 
-// Retrieve class type of ApiStyle object and insert it to the document.
+// Get the class type of a style and display it in the document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");
@@ -38,4 +38,3 @@ let classType = tableStyle.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 ```
-

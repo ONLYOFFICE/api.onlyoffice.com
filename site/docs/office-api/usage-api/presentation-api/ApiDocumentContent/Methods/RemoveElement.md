@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to remove an element.
+Remove an element in a presentation.
 
 ```javascript editor-pptx
 // How to remove an elements from the slide shape.
@@ -47,4 +47,3 @@ paragraph.AddText("This is the second paragraph. The first paragraph was removed
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

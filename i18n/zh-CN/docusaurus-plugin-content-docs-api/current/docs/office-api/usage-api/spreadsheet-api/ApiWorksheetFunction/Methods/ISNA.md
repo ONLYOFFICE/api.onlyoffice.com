@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查值是否为 N/A，并返回 true 或 false。
+在电子表格中检查值是否为 N/A，并返回 true 或 false。
 
 ```javascript editor-xlsx
 // How to check if the cell contains N/A value.
 
-// Use a function to check whether a range data is an N/A value.
+// Use a function to check whether a range data is an N/A value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -35,4 +35,3 @@ worksheet.GetRange("A1").SetValue(func.ISNA("#N/A"));
 worksheet.GetRange("A2").SetValue(func.ISNA(255));
 worksheet.GetRange("A3").SetValue(func.ISNA("www.example.com"));
 ```
-

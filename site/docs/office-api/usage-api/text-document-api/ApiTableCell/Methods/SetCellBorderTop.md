@@ -6,7 +6,7 @@ Inherited from [ApiTableCellPr.SetCellBorderTop](../../ApiTableCellPr/Methods/Se
 
 ## Example
 
-This example sets the border which will be displayed at the top of the table cell.
+Set the border which will be displayed at the top of the table cell.
 
 ```javascript editor-docx
 // How to add border to the top of the cell.
@@ -25,4 +25,3 @@ tableCellPr.SetCellBorderTop("single", 32, 0, 51, 51, 51);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

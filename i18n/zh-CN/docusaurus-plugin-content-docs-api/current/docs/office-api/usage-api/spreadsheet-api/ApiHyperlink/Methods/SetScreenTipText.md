@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何为形状内的超链接设置工具提示。
+在电子表格中为形状内的超链接设置工具提示。
 
 ```javascript editor-xlsx
+// How do I set screen tip text in a spreadsheet?
+
+// Set screen tip text using a hyperlink object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -47,4 +51,3 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'NO SCREEN TIP'
 hyperlink.SetScreenTipText('ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Screen tip: ' + hyperlink.GetScreenTipText());
 ```
-

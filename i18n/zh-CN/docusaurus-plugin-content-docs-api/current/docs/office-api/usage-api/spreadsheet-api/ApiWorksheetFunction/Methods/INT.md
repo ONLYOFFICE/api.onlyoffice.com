@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何将数字向下舍入到最接近的整数。
+在电子表格中将数字向下舍入到最接近的整数。
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest integer.
+// How to round a number down to the nearest integer in a spreadsheet.
 
-// Use a function to round down a number.
+// Use a function to round down a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.INT(2.3));
 ```
-

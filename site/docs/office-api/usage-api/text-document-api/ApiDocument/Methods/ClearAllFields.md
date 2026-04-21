@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example clears all forms in the document.
+Clear all forms in the document.
 
 ```javascript editor-docx
 // How to remove all answers from all forms.
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("All fields from this document were just cleared.");
 doc.Push(paragraph);
 ```
-

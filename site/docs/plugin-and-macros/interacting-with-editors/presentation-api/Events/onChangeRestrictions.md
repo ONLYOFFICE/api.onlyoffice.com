@@ -17,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {
     }
 });
 ```
-

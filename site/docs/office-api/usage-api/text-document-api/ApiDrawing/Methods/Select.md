@@ -22,14 +22,12 @@ boolean
 
 ## Example
 
-This example selects the current graphic object.
+Select the current graphic object in a document.
 
 ```javascript editor-docx
-// How to select drawing objects with the cursor.
+// How to select drawing objects with the cursor in a document.
 
-// Create three shapes, select the first one,
-// then select the second shape with isReplace=true (replacing the selection),
-// and finally select the third shape without isReplace parameter (adding to selection).
+// Create three shapes, select the first one, then select the second shape with isReplace=true (replacing the selection), and finally select the third shape without isReplace parameter (adding to selection) in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -58,4 +56,3 @@ drawing1.Select(true);
 drawing2.Select(true);
 drawing3.Select();
 ```
-

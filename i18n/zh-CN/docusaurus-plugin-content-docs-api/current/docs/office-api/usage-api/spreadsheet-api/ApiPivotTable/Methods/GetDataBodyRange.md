@@ -20,12 +20,12 @@ expression.GetDataBodyRange();
 
 ## 示例
 
-此示例展示如何获取数据主体区域。
+获取电子表格中的数据正文范围。
 
 ```javascript editor-xlsx
-// How to get a field a data body range from a pivot table.
+// How to get a field a data body range from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get a data body range and select it.
+// Create a pivot table, add data to it then get a data body range and select it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ pivotTable.AddDataField('Price');
 
 pivotTable.GetDataBodyRange().Select();
 ```
-

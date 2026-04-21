@@ -17,10 +17,9 @@
 - "aboveBelow"
 - "formFootnoteNum"
 
-
 ## 示例
 
-此示例添加指向包含脚注的页面的交叉引用。
+添加指向包含脚注的页面的交叉引用。
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with an footnote.
@@ -29,4 +28,3 @@
 
 paragraph.AddFootnoteCrossRef("pageNum", footnoteParagraph);
 ```
-

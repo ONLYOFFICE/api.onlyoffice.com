@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example show how to set the fill to the data point.
+Set the fill to the data point in a spreadsheet.
 
 ```javascript editor-xlsx
-// Sets the fill to the data point in the specified chart series.
+// Set the fill to the data point in the specified chart series in a spreadsheet.
 
-// How to set data point fill filling it with a solid color.
+// How to set data point fill filling it with a solid color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -53,4 +53,3 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 ```
-

@@ -22,7 +22,7 @@ expression.GetSeries(nIdx);
 
 ## Example
 
-This example gets the first series of ApiChart class and inserts its type into the document.
+Get the first series of chart class and insert its type into the document.
 
 ```javascript editor-docx
 // How to get first series from the chart and show its type in the document.
@@ -51,4 +51,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Series Type = " + seriesType);
 doc.Push(paragraph);
 ```
-

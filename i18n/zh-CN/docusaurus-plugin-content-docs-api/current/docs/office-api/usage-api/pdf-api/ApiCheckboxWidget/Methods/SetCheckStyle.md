@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置复选框控件的选中样式。
+在 PDF 文档中设置复选框控件的选中样式。
 
 ```javascript editor-pdf
+// How can I set check style using a checkbox widget in a PDF document?
+
+// Set check style for a checkbox widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);
@@ -33,4 +37,3 @@ page.AddObject(radiobuttonField);
 let widgets = radiobuttonField.GetAllWidgets();
 widgets[0].SetCheckStyle('square');
 ```
-

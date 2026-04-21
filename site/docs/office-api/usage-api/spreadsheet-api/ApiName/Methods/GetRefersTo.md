@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get a formula that the name is defined to refer to.
+Get a formula that the name is defined to refer to in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to add a defname that refers to the formula from the specified range.
@@ -37,4 +37,3 @@ defName.SetRefersTo("=SUM(A1:B1)");
 worksheet.GetRange("A3").SetValue("The name 'summa' refers to the formula from the cell C1.");
 worksheet.GetRange("A4").SetValue("Formula: " + defName.GetRefersTo());
 ```
-

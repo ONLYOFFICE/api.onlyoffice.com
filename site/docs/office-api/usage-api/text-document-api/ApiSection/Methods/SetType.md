@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets section break type "continuous".
+Set section break type "continuous" in a document.
 
 ```javascript editor-docx
-// How to update a section type.
+// How to update a section type in a document.
 
-// Create a section from a paragraph and make it continuous.
+// Create a section from a paragraph and make it continuous in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ paragraph.AddText("As you can see, the section is not on a new page. ");
 paragraph.AddText("If this section had some other type (nextPage, oddPage, evenPage), it would start a new page.");
 doc.Push(paragraph);
 ```
-

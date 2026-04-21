@@ -26,15 +26,14 @@ number
 
 ## 示例
 
-此示例演示如何根据固定付款和固定利率计算贷款的付款额。
+在电子表格中基于固定付款和固定利率计算贷款的付款额。
 
 ```javascript editor-xlsx
-// How to return the payment for a loan based on different parameters.
+// How to return the payment for a loan based on different parameters in a spreadsheet.
 
-// Use a function to return the payment for a loan.
+// Use a function to return the payment for a loan in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.PMT(0.08/12, 2*12, 10000, 0));
 ```
-

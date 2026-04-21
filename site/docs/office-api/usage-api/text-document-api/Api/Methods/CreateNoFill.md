@@ -20,14 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates no fill and removes the fill from the element.
+Create no fill and remove the fill from the element in a document.
 
 ```javascript editor-docx
-// How to create the ApiNoFill object and applies it to the shape stroke.
+// The no-fill object removes any existing fill from the shape stroke.
 
-// Creates a stroke with no fill.
-
-// How to create the ApiStroke object with no fill and apply it to the shape.
+// Create a stroke with no fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +36,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 paragraph.AddDrawing(shape);
 ```
-

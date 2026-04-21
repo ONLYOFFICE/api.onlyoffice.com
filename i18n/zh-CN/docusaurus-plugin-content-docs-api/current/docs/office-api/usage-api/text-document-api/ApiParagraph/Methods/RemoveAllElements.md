@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例从当前段落中移除所有元素。
+从文档中的当前段落移除所有元素。
 
 ```javascript editor-docx
-// How to delete the paragraph.
+// How to delete the paragraph in a document.
 
-// Delete all ellements from the paragraph.
+// Delete all ellements from the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ run.AddText("We removed all the paragraph elements and added a new text run insi
 paragraph.AddElement(run);
 doc.Push(paragraph);
 ```
-

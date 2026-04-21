@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到表格中。
+获取电子表格中图表对象的类类型。
 
 ```javascript editor-xlsx
-// How to show class type on the worksheet.
+// How can I get the class type of a chart in a spreadsheet?
 
-// Get class type of the chart and insert it in the range.
+// Get the class type of a chart and display it in the spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -48,4 +48,3 @@ chart.SetSeriesFill(fill, 1, false);
 let classType = chart.GetClassType();
 worksheet.GetRange("F1").SetValue("Class Type: " + classType);
 ```
-

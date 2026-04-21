@@ -7,7 +7,7 @@ Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.m
 
 ## Example
 
-This example shows how to get the font family of the text.
+Get the font family of the text in a document.
 
 ```javascript editor-docx
 // How to know the font name of the form.
@@ -35,4 +35,3 @@ let fontFamily = textPr.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 doc.Push(paragraph);
 ```
-

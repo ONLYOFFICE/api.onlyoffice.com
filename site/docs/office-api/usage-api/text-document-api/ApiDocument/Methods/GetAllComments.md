@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all comments from the current document.
+Get all comments from the current document in a document.
 
 ```javascript editor-docx
 // Get all comments added to the document.
 
-// How to retrieve all comments and display the class type of the first one.
+// How to retrieve all comments and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + type);
 doc.Push(paragraph);
 ```
-

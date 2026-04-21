@@ -20,14 +20,13 @@ expression.GetReferenceStyle();
 
 ## 示例
 
-此示例获取引用样式。
+获取电子表格中的引用样式。
 
 ```javascript editor-xlsx
-// Get style of a reference.
+// Get style of a reference in a spreadsheet.
 
 // Insert a reference style into the cell.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());
 ```
-

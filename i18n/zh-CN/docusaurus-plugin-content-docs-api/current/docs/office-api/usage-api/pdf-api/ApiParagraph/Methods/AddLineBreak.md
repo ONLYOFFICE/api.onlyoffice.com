@@ -20,12 +20,12 @@ expression.AddLineBreak();
 
 ## 示例
 
-此示例在当前位置添加换行符，并从新行开始下一个元素。
+在 PDF 文档中向当前位置添加换行符并从新行开始下一个元素。
 
 ```javascript editor-pdf
-// How to add a line break after a sentence in a paragraph.
+// How to add a line break after a sentence in a paragraph in a PDF document.
 
-// How to split a text with a line break.
+// How to split a text with a line break in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +45,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 page.AddObject(shape);
 ```
-

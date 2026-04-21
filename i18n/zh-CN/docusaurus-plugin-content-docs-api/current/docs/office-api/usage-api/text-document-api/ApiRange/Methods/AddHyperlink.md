@@ -24,12 +24,12 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 ## 示例
 
-此示例向指定范围添加超链接。
+在文档中向指定范围添加超链接。
 
 ```javascript editor-docx
-// Insert a link to the range.
+// Insert a link to the range in a document.
 
-// Get range and add a hyperlink to it. 
+// Get range and add a hyperlink to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(0, 11);
 range.AddHyperlink("https://www.onlyoffice.com/", "Main portal");
 ```
-

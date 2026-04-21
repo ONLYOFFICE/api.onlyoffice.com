@@ -24,10 +24,10 @@ boolean
 
 ## Example
 
-This example replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.
+Replace each paragraph (or text in cell) in the select with the corresponding text from an array of strings.
 
 ```javascript editor-xlsx
-// Replace string values of the selected range with a new values.
+// Replace string values of the selected range with a new values in a spreadsheet.
 
 // Replace cell string values with a new ones.
 
@@ -38,4 +38,3 @@ let range = worksheet.GetRange("A1:A2");
 range.Select();
 Api.ReplaceTextSmart(["Cell 1", "Cell 2"]);
 ```
-

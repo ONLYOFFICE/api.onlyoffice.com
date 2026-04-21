@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.GetDragToRow](../../ApiPivotField/Methods/GetDragT
 
 ## Example
 
-This example shows how to get a drag to row of a pivot field.
+Get a drag to row of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to row.
+// How to get a pivot field drag to row in a spreadsheet.
 
-// Create a pivot table, add data to it then get a drag to row of a specified pivot field.
+// Create a pivot table, add data to it then get a drag to row of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,4 +50,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A13').SetValue('Drag to row');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToRow());
 ```
-

@@ -27,4 +27,3 @@ document.getElementById ("buttonIDChangeState").onclick = function () {
     window.Asc.plugin.executeMethod("GetCurrentContentControl");
 };
 ```
-

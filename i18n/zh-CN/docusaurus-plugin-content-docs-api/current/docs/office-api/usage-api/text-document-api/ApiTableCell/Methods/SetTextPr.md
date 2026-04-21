@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例将文本设置应用于单元格的整个内容。
+将文本设置应用于单元格的全部内容。
 
 ```javascript editor-docx
 // Set text properties to the table cell.
@@ -42,4 +42,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 table.GetCell(0, 0).SetTextPr(textPr);
 ```
-

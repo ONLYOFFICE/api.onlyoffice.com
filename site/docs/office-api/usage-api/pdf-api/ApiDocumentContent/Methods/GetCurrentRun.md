@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the current run from the document content.
+Return the current run from the document content.
 
 ```javascript editor-pdf
+// How to get current run for a document content?
+
+// Get current run and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -43,4 +47,3 @@ if (currentRun) {
 }
 page.AddObject(shape);
 ```
-

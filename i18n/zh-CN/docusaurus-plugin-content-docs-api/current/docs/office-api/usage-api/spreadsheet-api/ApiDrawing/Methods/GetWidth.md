@@ -20,10 +20,10 @@ expression.GetWidth();
 
 ## 示例
 
-此示例展示如何获取绘图的宽度。
+获取电子表格中绘图对象的宽度。
 
 ```javascript editor-xlsx
-// How to know a width of a drawing.
+// How to know a width of a drawing in a spreadsheet.
 
 // Get a drawing's width and display it in the worksheet.
 
@@ -36,4 +36,3 @@ drawing.SetPosition(0, 2 * 36000, 1, 3 * 36000);
 let width = drawing.GetWidth();
 worksheet.GetRange("A1").SetValue("Drawing width = " + width);
 ```
-

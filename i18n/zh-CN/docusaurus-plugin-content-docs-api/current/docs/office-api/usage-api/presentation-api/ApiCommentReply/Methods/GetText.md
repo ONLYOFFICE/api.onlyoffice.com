@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例演示如何获取批注回复的文本。
+获取演示文稿中批注回复的文本。
 
 ```javascript editor-pptx
-// How to get a raw text of a comment reply.
+// How to get a raw text of a comment reply in a presentation.
 
 // Get all comments from the presentation, get the first one's reply and return its text.
 
@@ -49,4 +49,3 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply text: " + reply.GetText());
 ```
-

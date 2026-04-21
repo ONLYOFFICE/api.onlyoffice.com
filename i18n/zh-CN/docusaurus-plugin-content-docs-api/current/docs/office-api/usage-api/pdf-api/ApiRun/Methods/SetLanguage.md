@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在 PDF 文档中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
 
 ```javascript editor-pdf
-// How to change language of the text for grammar check.
+// How to change language of the text for grammar check in a PDF document.
 
-// Create a new text run and change its language.
+// Create a new text run and change its language in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +45,3 @@ paragraph.AddElement(run);
 run.SetLanguage("en-CA");
 page.AddObject(shape);
 ```
-

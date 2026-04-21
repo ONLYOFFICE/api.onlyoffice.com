@@ -20,12 +20,12 @@ string[]
 
 ## Example
 
-This example shows how to get all font names from all elements inside the run.
+Get all font names from all elements inside the run in a presentation.
 
 ```javascript editor-pptx
-// How to get all font names used in the text.
+// How to get all font names used in the text in a presentation.
 
-// Retrieve ApiRun font names and display them in the slide.
+// Retrieve text run font names and display them in the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -59,4 +59,3 @@ for (let i = 0; i < fontNames.length; i++) {
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

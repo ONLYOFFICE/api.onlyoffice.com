@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to set the direction of the watermark.
+// How to set the direction of the watermark in a document.
 
-// Indicate the direction "clockwise45" in the watermark settings.
+// Indicate the direction "clockwise45" in the watermark settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
@@ -46,4 +46,3 @@ watermarkSettings.SetOpacity(127);
 watermarkSettings.SetDirection("clockwise45");
 doc.SetWatermarkSettings(watermarkSettings);
 ```
-

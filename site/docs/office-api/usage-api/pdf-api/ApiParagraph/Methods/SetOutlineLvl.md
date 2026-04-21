@@ -6,9 +6,13 @@ Inherited from [ApiParaPr.SetOutlineLvl](../../ApiParaPr/Methods/SetOutlineLvl.m
 
 ## Example
 
-This example sets the outline level for the specified paragraph via paragraph properties.
+Set the outline level for the specified paragraph via paragraph properties in a PDF document.
 
 ```javascript editor-pdf
+// How can I set outline lvl using a paragraph properties in a PDF document?
+
+// Set outline lvl for a paragraph properties in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -27,4 +31,3 @@ const paraPr = paragraph.GetParaPr();
 paraPr.SetOutlineLvl(outlineLvlIndex);
 paragraph.AddText("This is a paragraph with outline level parameter set to " + (outlineLvlIndex + 1));
 ```
-

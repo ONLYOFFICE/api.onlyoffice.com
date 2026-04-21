@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example enables advancing to the next slide on mouse click.
+Enable advancing to the next slide on mouse click.
 
 ```javascript editor-pptx
+// How do I set advance on click in a presentation?
+
+// Set advance on click using a slide show transition object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -48,4 +52,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Click set to false. Slide will advance automatically after 5 seconds.');
 slide.AddObject(shape);
 ```
-

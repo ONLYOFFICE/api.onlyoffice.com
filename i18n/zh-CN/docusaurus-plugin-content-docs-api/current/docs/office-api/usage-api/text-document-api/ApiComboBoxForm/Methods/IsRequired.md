@@ -2,11 +2,11 @@
 
 检查当前表单是否为必填项。
 
-Inherited from [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md).
+继承自 [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md)。
 
 ## 示例
 
-此示例检查当前表单是否为必填项。
+检查当前表单是否为必填。
 
 ```javascript editor-docx
 // How to know whether a text form is required or not.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
-

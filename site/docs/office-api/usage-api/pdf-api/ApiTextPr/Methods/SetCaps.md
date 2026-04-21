@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+Specify that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
 
 ```javascript editor-pdf
-// How to make a text capitalized.
+// How to make a text capitalized in a PDF document.
 
-// Get the text properties of the run and set its letters uppercase.
+// Get the text properties of the run and set its letters uppercase in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +48,3 @@ run.AddText("This is a sample text inside the shape set to capital letters using
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

@@ -11,7 +11,7 @@ Invariants:
 
 ## Type
 
-array
+[pt](../Enumeration/pt.md)[]
 
 ## Properties
 
@@ -21,4 +21,3 @@ array
 | 1 | [pt](../Enumeration/pt.md) | dy1 (top delta) |
 | 2 | [pt](../Enumeration/pt.md) | dx2 (right delta) |
 | 3 | [pt](../Enumeration/pt.md) | dy2 (bottom delta) |
-

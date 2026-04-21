@@ -20,10 +20,10 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the current paragraph.
+Get a number of elements in the current paragraph in a document.
 
 ```javascript editor-docx
-// How to get the number of elements of the paragraph.
+// How to get the number of elements of the paragraph in a document.
 
 // Count words of the paragraph and print it in the document.
 
@@ -40,4 +40,3 @@ run.AddText("Number of paragraph elements after we added a text run: ");
 run.AddTabStop();
 run.AddText("" + paragraph.GetElementsCount());
 ```
-

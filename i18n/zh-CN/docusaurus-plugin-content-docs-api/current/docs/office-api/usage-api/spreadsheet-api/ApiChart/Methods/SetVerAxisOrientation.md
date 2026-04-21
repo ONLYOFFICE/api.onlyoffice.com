@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定垂直轴上显示数据的方向。
+在电子表格中指定垂直轴上数据的显示方向。
 
 ```javascript editor-xlsx
-// How to indicate the direction of values of the chart vertical axis.
+// How to indicate the direction of values of the chart vertical axis in a spreadsheet.
 
-// Specify the vertical axis orientation.
+// Specify the vertical axis orientation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -49,4 +49,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

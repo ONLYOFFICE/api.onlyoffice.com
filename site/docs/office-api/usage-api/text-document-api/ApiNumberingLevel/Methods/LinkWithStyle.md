@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This shows how to link numbering level with the specified heading style.
+Link numbering level with the specified heading style in a document.
 
 ```javascript editor-docx
-// How to link the numbering with the style of another element.
+// How to link the numbering with the style of another element in a document.
 
-// Apply the style of the element to the numbering.
+// Apply the style of the element to the numbering in a document.
 
 const doc = Api.GetDocument();
 const headings = [];
@@ -58,4 +58,3 @@ for (let nLvl = 0; nLvl < 3; ++nLvl) {
     doc.Push(para);
 }
 ```
-

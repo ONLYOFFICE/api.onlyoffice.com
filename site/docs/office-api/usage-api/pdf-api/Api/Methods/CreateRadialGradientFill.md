@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## Example
 
-This example shows how to create a radial gradient fill.
+Create a radial gradient fill in a PDF document.
 
 ```javascript editor-pdf
-// How to create a radial gradient fill.
+// How to create a radial gradient fill in a PDF document.
 
-// Add a radial gradient fill.
+// Add a radial gradient fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,4 +40,3 @@ const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
 ```
-

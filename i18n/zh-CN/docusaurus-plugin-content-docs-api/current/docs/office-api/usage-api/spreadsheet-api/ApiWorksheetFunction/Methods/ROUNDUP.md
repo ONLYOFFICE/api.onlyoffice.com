@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何将数字向上舍入，远离零方向。
+在电子表格中将数字远离零方向向上舍入。
 
 ```javascript editor-xlsx
-// How to round a number up.
+// How to round a number up in a spreadsheet.
 
-// Use a function to round a number away from zero.
+// Use a function to round a number away from zero in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ROUNDUP(3.456, 0));
 ```
-

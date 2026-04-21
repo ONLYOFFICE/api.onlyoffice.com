@@ -6,9 +6,13 @@ Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
 
 ## Example
 
-This example shows how to get the text fill of the text properties.
+Get the text fill of the text properties in a document.
 
 ```javascript editor-docx
+// How do I get the text fill in a document?
+
+// Get the text fill using a text properties object in a document.
+
 const doc = Api.GetDocument();
 
 const textPr = Api.CreateTextPr();
@@ -29,4 +33,3 @@ const drawing = Api.CreateShape("rect", 130 * 36000, 30 * 36000, textArtFill, st
 drawing.GetDocContent().GetElement(0).AddText('This is a rectangle with the same fill as the WordArt text.');
 paragraph.AddDrawing(drawing);
 ```
-

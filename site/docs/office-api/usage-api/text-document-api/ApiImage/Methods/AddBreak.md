@@ -6,10 +6,10 @@ Inherited from [ApiDrawing.AddBreak](../../ApiDrawing/Methods/AddBreak.md).
 
 ## Example
 
-This example inserts a break at the specified location in the main document.
+Insert a break at the specified location in the main document.
 
 ```javascript editor-docx
-// How to add some space from the drawing.
+// How to add some space from the drawing in a document.
 
 // Insert a drawing and text into document and add a break to them.
 
@@ -22,4 +22,3 @@ paragraph.AddDrawing(drawing);
 drawing.InsertParagraph("Added a line break after this paragraph.", "before", false);
 drawing.AddBreak(1, "before");
 ```
-

@@ -8,16 +8,13 @@ number
 
 ## 示例
 
-此示例创建两个 RGB 颜色。
+创建两个 RGB 颜色。
 
 ```javascript editor-pdf
-// How to use bytes to create a color.
-
 // Create RGB colors using bytes in decimal and hexadecimal.
 
-// The resulting color is green, the bytes are measured in decimal numbers:
+// The resulting colors are green (decimal) and red (hexadecimal).
+
 let rgbColorGreen = Api.RGB(0, 255, 0);
-// The resulting color is red, the bytes are measured in hexadecimal numbers:
 let rgbColorRed = Api.RGB(0xff, 0, 0);
 ```
-

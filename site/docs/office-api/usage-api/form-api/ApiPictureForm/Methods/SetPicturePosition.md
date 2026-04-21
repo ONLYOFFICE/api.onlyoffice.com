@@ -26,7 +26,7 @@ boolean
 
 ## Example
 
-This example sets the picture position inside the form.
+Set the picture position inside the form.
 
 ```javascript editor-forms
 // How to move the picture inside the form.
@@ -50,4 +50,3 @@ for (let i = 0; i < position.length; i++ ){
 }
 doc.Push(paragraph);
 ```
-

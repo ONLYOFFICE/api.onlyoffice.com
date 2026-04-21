@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何将十进制数转换为十六进制数。
+在电子表格中将十进制数转换为十六进制。
 
 ```javascript editor-xlsx
-// How to get decimal number from hexadecimal.
+// How to get decimal number from hexadecimal in a spreadsheet.
 
-// Use function to convert a decimal number to hexadecimal.
+// Use function to convert a decimal number to hexadecimal in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DEC2HEX(-100));
 ```
-

@@ -20,12 +20,12 @@ expression.GetImageWidth();
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to get the width of the image. 
+// How to get the width of the image in a document.
 
-// Get the watermark image width.
+// Get the watermark image width in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
@@ -39,4 +39,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark width = " + doc.GetWatermarkSettings().GetImageWidth());
 doc.Push(paragraph);
 ```
-

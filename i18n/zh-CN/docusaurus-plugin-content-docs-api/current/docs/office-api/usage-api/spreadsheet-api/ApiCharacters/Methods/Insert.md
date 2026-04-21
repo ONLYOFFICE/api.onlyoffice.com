@@ -22,12 +22,12 @@ expression.Insert(String);
 
 ## 示例
 
-此示例插入字符串以替换指定的字符。
+在电子表格中插入字符串替换指定字符。
 
 ```javascript editor-xlsx
-// How to replace characters with a different string value.
+// How to replace characters with a different string value in a spreadsheet.
 
-// Change the characters to another string value.
+// Change the characters to another string value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -35,4 +35,3 @@ range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(23, 4);
 characters.Insert("string");
 ```
-

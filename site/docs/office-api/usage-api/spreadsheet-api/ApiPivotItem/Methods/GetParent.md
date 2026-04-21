@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a parent of a pivot item.
+Get a parent of a pivot item in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot item parent.
+// How to get a pivot item parent in a spreadsheet.
 
-// Create a pivot table, add data to it then get a parent of a specified pivot item.
+// Create a pivot table, add data to it then get a parent of a specified pivot item in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ let pivotItem = pivotField.GetPivotItems()[0];
 pivotWorksheet.GetRange('A15').SetValue(pivotItem.GetName() + ' parent:');
 pivotWorksheet.GetRange('B15').SetValue(pivotItem.GetParent().GetName());
 ```
-

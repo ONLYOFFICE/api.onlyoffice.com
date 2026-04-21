@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例演示如何更新自定义 XML 节点中属性的值。
+更新演示文稿中自定义 XML 节点中属性的值。
 
 ```javascript editor-pptx
+// How can I update attribute using a custom XML part in a presentation?
+
+// Update attribute for a custom XML part in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,4 +49,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after update: ' + xml.GetXml());
 ```
-

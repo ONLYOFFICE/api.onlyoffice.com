@@ -1,6 +1,6 @@
 # ApiTable
 
-ApiTable is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
+ApiTable 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
 

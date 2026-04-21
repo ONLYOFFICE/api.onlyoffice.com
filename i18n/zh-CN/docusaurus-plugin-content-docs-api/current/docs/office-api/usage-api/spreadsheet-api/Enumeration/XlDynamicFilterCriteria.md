@@ -41,5 +41,3 @@
 - "xlFilterTomorrow"
 - "xlFilterYearToDate"
 - "xlFilterYesterday"
-
-

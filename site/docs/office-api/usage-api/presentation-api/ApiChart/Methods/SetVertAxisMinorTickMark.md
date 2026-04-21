@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the minor tick mark for the vertical axis.
+Specify the minor tick mark for the vertical axis in a presentation.
 
 ```javascript editor-pptx
-// How to set a minor tick mark using predefined symbols.
+// How to set a minor tick mark using predefined symbols in a presentation.
 
-// Create a chart, set its properties and minor tick mark for vertical axis.
+// Create a chart, set its properties and minor tick mark for vertical axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
 ```
-

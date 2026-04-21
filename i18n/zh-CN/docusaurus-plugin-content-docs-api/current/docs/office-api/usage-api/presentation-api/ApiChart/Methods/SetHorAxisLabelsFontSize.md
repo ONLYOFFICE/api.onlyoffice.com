@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为水平轴标签设置字体大小。
+在演示文稿中为水平轴标签设置字体大小。
 
 ```javascript editor-pptx
-// How to resize a font size of the horizontal axis labels.
+// How to resize a font size of the horizontal axis labels in a presentation.
 
-// Create a chart then change a font size of axis labels.
+// Create a chart then change a font size of axis labels in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

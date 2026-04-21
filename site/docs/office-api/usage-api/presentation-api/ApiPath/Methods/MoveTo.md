@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a slide.
+Create a custom shape and add it to a slide. Applies custom geometry with specific fill and stroke properties.
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// How can I move to using a geometry path in a presentation?
+
+// Move to for a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -48,4 +51,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 slide.AddObject(shape);
 ```
-

@@ -26,15 +26,14 @@ number
 
 ## 示例
 
-此示例演示如何使用双倍余额递减法或指定的其他方法计算资产在指定期间的折旧。
+在电子表格中使用双倍余额递减法或指定的其他方法计算指定期间资产的折旧。
 
 ```javascript editor-xlsx
 // How to count the non-empty cells containing numbers in the field (column) of records in the database that match the conditions you specify.
 
-// Use function to count numbers from non-empty database records that met a condition specified.
+// Use function to count numbers from non-empty database records that met a condition specified in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DDB(3500, 500, 5, 1, 2));
 ```
-

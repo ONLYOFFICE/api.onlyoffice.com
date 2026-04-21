@@ -20,10 +20,10 @@ JSON
 
 ## Example
 
-This example converts the ApiStroke object into the JSON object.
+Convert the stroke object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the stroke object.
+// How to get a JSON from the stroke object in a document.
 
 // Convert the stroke to json and add it to the document.
 
@@ -37,4 +37,3 @@ let strokeFromJSON = Api.FromJSON(json);
 let drawing = Api.CreateShape("roundRect", 5930900, 395605, fill, strokeFromJSON);
 paragraph.AddDrawing(drawing);
 ```
-

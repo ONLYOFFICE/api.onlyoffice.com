@@ -8,7 +8,7 @@ number
 
 ## Example
 
-This example set the cell width measured in millimeters to the applied comb of characters.
+Set the cell width measured in millimeters to the applied comb of characters.
 
 ```javascript editor-pptx
 // How to set a cell width in millimeters.
@@ -17,4 +17,3 @@ This example set the cell width measured in millimeters to the applied comb of c
 
 textForm.SetCellWidth(7);
 ```
-

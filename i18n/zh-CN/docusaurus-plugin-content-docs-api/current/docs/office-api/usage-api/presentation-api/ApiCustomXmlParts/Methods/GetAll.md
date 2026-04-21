@@ -20,12 +20,12 @@ expression.GetAll();
 
 ## 示例
 
-此示例演示如何获取所有自定义 XML 部件。
+获取演示文稿中的所有自定义 XML 部件。
 
 ```javascript editor-pptx
 // How to retrieve all custom XML parts from the presentation.
 
-// Get all XML parts.
+// Get all XML parts using the custom XML parts API in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -52,4 +52,3 @@ for (let i = 0; i < allParts.length; i++) {
 }
 slide.AddObject(shape);
 ```
-

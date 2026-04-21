@@ -24,15 +24,14 @@ number
 
 ## Example
 
-This example shows how to convert real and imaginary coefficients into a complex number.
+Convert real and imaginary coefficients into a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a complex number using coefficients.
+// How to create a complex number using coefficients in a spreadsheet.
 
-// Use function to convert real and imaginary coefficients into a complex number.
+// Use function to convert real and imaginary coefficients into a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.COMPLEX(-2, 2.5, "i"));
 ```
-

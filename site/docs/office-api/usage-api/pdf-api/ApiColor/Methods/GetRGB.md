@@ -20,9 +20,13 @@ Object
 
 ## Example
 
-This example shows how to get the RGB components of the color.
+Get the RGB components of the color in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the r g b in a PDF document?
+
+// Get the r g b using a color object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,4 +45,3 @@ run.AddText('RGB of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + 
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

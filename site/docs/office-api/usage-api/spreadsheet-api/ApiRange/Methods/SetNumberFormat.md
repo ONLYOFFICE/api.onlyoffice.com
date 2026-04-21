@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies whether a number in the cell should be treated like number, currency, date, time, etc. or just like text.
+Specify whether a number in the cell should be treated like number, currency, date, time, etc. or just like text.
 
 ```javascript editor-xlsx
 // How to set number format of cells.
@@ -69,4 +69,3 @@ worksheet.GetRange("A13").SetNumberFormat("@");
 worksheet.GetRange("A13").SetValue("123456");
 worksheet.GetRange("B13").SetValue("Text");
 ```
-

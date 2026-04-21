@@ -10,5 +10,3 @@ Enumeration
 
 - "freeText"
 - "freeTextCallout"
-
-

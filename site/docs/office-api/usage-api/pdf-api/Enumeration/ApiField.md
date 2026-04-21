@@ -14,5 +14,3 @@ Enumeration
 - [ApiButtonField](../ApiButtonField/ApiButtonField.md)
 - [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md)
 - [ApiRadiobuttonField](../ApiRadiobuttonField/ApiRadiobuttonField.md)
-
-

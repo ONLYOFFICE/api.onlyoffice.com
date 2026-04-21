@@ -12,10 +12,9 @@
 - "CanView"
 - "NotView"
 
-
 ## 示例
 
-此示例将任何人类型设置到受保护区域。
+将任何人类型设置到受保护区域。
 
 ```javascript editor-xlsx
 // How to change the anyone type of protected range to "NotView".
@@ -24,4 +23,3 @@
 
 protectedRange.SetAnyoneType("NotView");
 ```
-

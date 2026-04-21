@@ -20,9 +20,13 @@ expression.CreateRichTextPr();
 
 ## 示例
 
-如何创建新的富文本属性并将其设置为富文本块。
+如何在 PDF 文档中创建新的富文本属性并将其设置给富文本 run。
 
 ```javascript editor-pdf
+// How to create the rich text pr in a PDF document?
+
+// Create the rich text pr using the PDF document API.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -42,4 +46,3 @@ textPr.SetUnderline(true);
 
 run.SetTextPr(textPr);
 ```
-

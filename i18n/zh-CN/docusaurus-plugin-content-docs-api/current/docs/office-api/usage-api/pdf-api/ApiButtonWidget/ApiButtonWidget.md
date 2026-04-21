@@ -1,6 +1,6 @@
 # ApiButtonWidget
 
-ApiButtonWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md).
+ApiButtonWidget 是 [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md) 的子类。
 
 ## 方法
 

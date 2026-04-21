@@ -21,10 +21,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the shape inner contents where a paragraph or text runs can be inserted.
+Get the shape inner contents where a paragraph or text runs can be inserted in a presentation.
 
 ```javascript editor-pptx
-// How to get a content of a shape.
+// How to get a content of a shape in a presentation.
 
 // Retrieve a slide content and insert a paragraph to it.
 
@@ -47,4 +47,3 @@ paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

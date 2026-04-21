@@ -28,7 +28,7 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 ## Example
 
-This example adds an image to the sheet with the parameters specified.
+Add an image to the sheet with the parameters specified in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to add an image to the worksheet specifying its url and size.
@@ -38,4 +38,3 @@ This example adds an image to the sheet with the parameters specified.
 let worksheet = Api.GetActiveSheet();
 worksheet.AddImage("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", 60 * 36000, 35 * 36000, 0, 2 * 36000, 0, 3 * 36000);
 ```
-

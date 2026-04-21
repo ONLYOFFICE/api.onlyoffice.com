@@ -20,10 +20,10 @@ boolean \| null
 
 ## Example
 
-This example shows how to get the subscript property of the specified font.
+Get the subscript property of the specified font in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine a font subscript property.
+// How to determine a font subscript property in a spreadsheet.
 
 // Get a boolean value that represents whether a font has a subscript property or not and show the value in the worksheet.
 
@@ -36,4 +36,3 @@ font.SetSubscript(true);
 let isSubscript = font.GetSubscript();
 worksheet.GetRange("B3").SetValue("Subscript property: " + isSubscript);
 ```
-

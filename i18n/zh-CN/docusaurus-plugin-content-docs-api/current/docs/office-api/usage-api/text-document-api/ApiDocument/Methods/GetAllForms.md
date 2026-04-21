@@ -20,7 +20,7 @@ expression.GetAllForms();
 
 ## 示例
 
-此示例展示如何获取文档中所有现有的表单。
+获取文档中所有现有的表单。
 
 ```javascript editor-docx
 // Get all forms added to the document.
@@ -38,4 +38,3 @@ let forms = doc.GetAllForms();
 forms[0].SetText("John Smith");
 forms[1].SelectListValue("USA");
 ```
-

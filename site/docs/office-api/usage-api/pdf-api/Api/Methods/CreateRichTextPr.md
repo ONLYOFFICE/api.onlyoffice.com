@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to create a new rich text properties and set it for rich run.
+How to create a new rich text properties and set it for rich run in a PDF document.
 
 ```javascript editor-pdf
+// How to create the rich text pr in a PDF document?
+
+// Create the rich text pr using the PDF document API.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -42,4 +46,3 @@ textPr.SetUnderline(true);
 
 run.SetTextPr(textPr);
 ```
-

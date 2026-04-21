@@ -22,7 +22,7 @@ expression.Delete(shift);
 
 ## 示例
 
-此示例删除 Range 对象。
+删除电子表格中的 Range 对象。
 
 ```javascript editor-xlsx
 // How to remove a range from the worksheet.
@@ -37,4 +37,3 @@ worksheet.GetRange("C5").SetValue("5");
 let range = worksheet.GetRange("C4");
 range.Delete("up");
 ```
-

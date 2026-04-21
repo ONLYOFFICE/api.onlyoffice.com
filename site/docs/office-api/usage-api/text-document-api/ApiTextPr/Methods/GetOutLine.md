@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the outline of the existing text properties.
+Get the outline of the existing text properties in a document.
 
 ```javascript editor-docx
+// How can I get the out line using a text properties in a document?
+
+// Get the out line for a text properties in a document.
+
 const doc = Api.GetDocument();
 
 const textPr = Api.CreateTextPr();
@@ -43,4 +47,3 @@ const drawing = Api.CreateShape('rect', 100 * 36000, 20 * 36000, fill, stroke);
 drawing.GetDocContent().GetElement(0).AddText('This is a rectangle with the same fill and outline as the WordArt text.');
 paragraph.AddDrawing(drawing);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表标题的轮廓。
+在电子表格中为图表标题设置轮廓。
 
 ```javascript editor-xlsx
-// How to outline a chart title.
+// How to outline a chart title in a spreadsheet.
 
-// Add a stroke for the chart title outline.
+// Add a stroke for the chart title outline in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 ```
-

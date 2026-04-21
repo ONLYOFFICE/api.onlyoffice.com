@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何更新自定义 XML 部件中的 XML 元素。
+更新文档中自定义 XML 部件中的 XML 元素。
 
 ```javascript editor-docx
+// How to update element for a custom XML part in a document?
+
+// Update element and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'><text>Example</text></content>");
@@ -34,4 +38,3 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Xml string representaion: " + xml.GetXml());
 doc.Push(infoParagraph);
 ```
-

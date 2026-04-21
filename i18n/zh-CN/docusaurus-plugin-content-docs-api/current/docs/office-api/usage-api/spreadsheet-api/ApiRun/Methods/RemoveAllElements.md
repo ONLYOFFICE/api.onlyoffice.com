@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例从文本块中移除所有元素。
+从电子表格中的 run 移除所有元素。
 
 ```javascript editor-xlsx
-// How to remove all text elements.
+// How to remove all text elements in a spreadsheet.
 
-// Create a text run object, add a text to it and clear its content.
+// Create a text run object, add a text to it and clear its content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -39,4 +39,3 @@ run.RemoveAllElements();
 run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 ```
-

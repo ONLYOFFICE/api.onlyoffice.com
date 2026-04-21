@@ -12,4 +12,3 @@ Object
 | ---- | ---- | ----------- |
 | name | string | The attribute name. |
 | value | string | The attribute value. |
-

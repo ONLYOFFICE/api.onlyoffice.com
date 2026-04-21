@@ -18,10 +18,9 @@
 - "complexForm"
 - "dateForm"
 
-
 ## 示例
 
-此示例返回当前表单的类型。
+返回当前表单的类型。
 
 ```javascript editor-docx
 // How to get a form type.
@@ -30,4 +29,3 @@
 
 let formType = textForm.GetFormType();
 ```
-

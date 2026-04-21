@@ -20,12 +20,12 @@ expression.GetAllContentControls();
 
 ## 示例
 
-此示例展示如何获取段落中的内容控件对象集合。
+获取文档中段落内的内容控件对象集合。
 
 ```javascript editor-docx
 // How to retrieve all content controls from the document.
 
-// Get all content controls and show the class type of the first one.
+// Get all content controls and show the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

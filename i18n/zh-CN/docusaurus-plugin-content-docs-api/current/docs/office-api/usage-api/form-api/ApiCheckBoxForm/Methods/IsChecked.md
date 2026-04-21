@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例展示如何获取复选框的状态。
+获取文档中复选框的状态。
 
 ```javascript editor-forms
 // How to know whether the checkbox form is checked.
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The second radio button from this document is checked: " + checked);
 doc.Push(paragraph);
 ```
-

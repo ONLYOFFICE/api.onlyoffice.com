@@ -14,7 +14,7 @@ Object
 
 ## 示例
 
-此示例创建具有特定复选框表单属性的复选框表单。
+创建具有特定复选框表单属性的复选框表单。
 
 ```javascript editor-forms
 // How to create a checkbox form with its base properties.
@@ -24,4 +24,3 @@ Object
 let checkBoxFormPrBase = {"radio": true};
 let checkBoxForm = Api.CreateCheckBoxForm(checkBoxFormPrBase)
 ```
-

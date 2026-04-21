@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the ID of the container.
+Get the ID of the container in a document.
 
 ```javascript editor-docx
+// How do I get the id in a document?
+
+// Get the id using an inline content control object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
@@ -36,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Id: " + contentControlId);
 doc.Push(paragraph);
 ```
-

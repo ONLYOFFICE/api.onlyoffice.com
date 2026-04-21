@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to check if the selection is empty.
+Check if the selection is empty in a presentation.
 
 ```javascript editor-pptx
+// How can I is empty using a selection in a presentation?
+
+// Is empty for a selection in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,4 +52,3 @@ const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(text);
 slide.AddObject(outShape);
 ```
-

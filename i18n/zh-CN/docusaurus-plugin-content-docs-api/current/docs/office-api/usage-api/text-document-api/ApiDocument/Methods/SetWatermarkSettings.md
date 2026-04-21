@@ -22,10 +22,10 @@ expression.SetWatermarkSettings(Settings);
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to specify the watermark settings such as text and type.
+// How to specify the watermark settings such as text and type in a document.
 
 // Set watermark settings for the document with text properties.
 
@@ -45,4 +45,3 @@ textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);
 ```
-

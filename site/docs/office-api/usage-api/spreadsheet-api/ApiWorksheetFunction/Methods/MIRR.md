@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the internal rate of return for a series of periodic cash flows, considering both cost of investment and interest on reinvestment of cash.
+Return the internal rate of return for a series of periodic cash flows, considering both cost of investment and interest on reinvestment of cash in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the internal rate of return for a series of periodic cash flows.
+// How to get the internal rate of return for a series of periodic cash flows in a spreadsheet.
 
-// Use a function to calculate the internal rate of return.
+// Use a function to calculate the internal rate of return in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -47,4 +47,3 @@ worksheet.GetRange("C2").SetValue(0.23);
 let range = worksheet.GetRange("A2:A5");
 worksheet.GetRange("B5").SetValue(func.MIRR(range, 0.2, 0.23));
 ```
-

@@ -20,15 +20,14 @@ expression.Save();
 
 ## 示例
 
-此示例保存对指定文档的更改。
+保存对指定文档的更改。
 
 ```javascript editor-xlsx
 // How to save changes of the spreadsheets.
 
-// Save all applied changes.
+// Save all applied changes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("This sample text is saved to the worksheet.");
 Api.Save();
 ```
-

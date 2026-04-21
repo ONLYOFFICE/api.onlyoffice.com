@@ -3,11 +3,11 @@
 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。
 对于内联表单将返回 null 值。
 
-Inherited from [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md).
+继承自 [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md)。
 
 ## 示例
 
-此示例展示如何获取放置表单的形状，用于控制固定大小表单框架的位置和大小。
+获取文档中放置表单的形状，以控制固定大小表单框架的位置和大小。
 
 ```javascript editor-forms
 // Get wrapper shape of the text form.
@@ -23,4 +23,3 @@ let shape = textForm.GetWrapperShape();
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 shape.SetOutLine(stroke);
 ```
-

@@ -33,4 +33,3 @@ let contentControlPr = {
 };
 window.Asc.plugin.executeMethod ("AddContentControl", [1, contentControlPr]);
 ```
-

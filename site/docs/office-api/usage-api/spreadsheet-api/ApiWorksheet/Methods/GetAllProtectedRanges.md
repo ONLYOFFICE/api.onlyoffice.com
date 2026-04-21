@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents all protected ranges.
+Get an object that represents all protected ranges in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all protected ranges.
+// How to get all protected ranges in a spreadsheet.
 
-// Get all protected ranges as an array.
+// Get all protected ranges as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange1", "Sheet1!$A$1:$B$1");
@@ -34,4 +34,3 @@ let protectedRanges = worksheet.GetAllProtectedRanges();
 protectedRanges[0].SetTitle("protectedRangeNew1");
 protectedRanges[1].SetTitle("protectedRangeNew2");
 ```
-

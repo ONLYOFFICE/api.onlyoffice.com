@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline properties to the specified graphic object.
+Set the outline properties to the specified graphic object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to outline the drawing with the stroke.
+// How to outline the drawing with the stroke in a spreadsheet.
 
-// Set the borders of the shape.
+// Set the borders of the shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
@@ -36,4 +36,3 @@ let drawing1 = worksheet.AddShape("cube", 90 * 36000, 27 * 36000, fill, stroke, 
 stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
 drawing1.SetOutLine(stroke);
 ```
-

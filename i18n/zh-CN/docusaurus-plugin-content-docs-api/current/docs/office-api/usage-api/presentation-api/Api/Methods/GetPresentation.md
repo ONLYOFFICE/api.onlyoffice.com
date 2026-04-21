@@ -20,10 +20,10 @@ expression.GetPresentation();
 
 ## 示例
 
-此示例演示如何获取演示文稿。
+获取演示文稿。
 
 ```javascript editor-pptx
-// How to get the ApiPresentation object.
+// How to get the presentation object.
 
 // Retrieve the current presentation object and work with its slides.
 
@@ -49,4 +49,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

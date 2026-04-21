@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set the value of an icon criterion.
+Set the value of an icon criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to modify the threshold value for an icon set criterion.
+// How to modify the threshold value for an icon set criterion in a spreadsheet.
 
-// Set the value used for criterion threshold comparison.
+// Set the value used for criterion threshold comparison in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,4 +47,3 @@ worksheet.GetRange("B1").SetValue("Before: Default threshold values");
 criteria[1].SetValue("80");
 worksheet.GetRange("B2").SetValue("After: Second threshold set to 80");
 ```
-

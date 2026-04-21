@@ -28,6 +28,8 @@ How to set cell top border with its fill color.
 ```javascript editor-pdf
 // Create table and set its cell top border.
 
+// Set cell border top using a table cell object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,4 +41,3 @@ cell.SetCellBorderTop(2, fill);
 
 page.AddObject(table);
 ```
-

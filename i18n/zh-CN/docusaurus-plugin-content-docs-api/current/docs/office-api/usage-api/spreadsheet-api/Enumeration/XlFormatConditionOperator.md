@@ -20,5 +20,3 @@
 - "xlEndsWith"
 - "xlContains"
 - "xlNotContains"
-
-

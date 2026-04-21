@@ -2,11 +2,11 @@
 
 清除当前表单。
 
-Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
+继承自 [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md)。
 
 ## 示例
 
-此示例清除当前表单。
+清除当前表单。
 
 ```javascript editor-forms
 // How to remove texy from the form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);
 ```
-

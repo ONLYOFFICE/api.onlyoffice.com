@@ -2,14 +2,14 @@
 
 设置当前文本块的文本颜色。
 
-Inherited from [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md).
+继承自 [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md)。
 
 ## 示例
 
-此示例为当前文本块设置文本颜色。
+在文档中为当前文本 run 设置文本颜色。
 
 ```javascript editor-docx
-// How to change a text color.
+// How to change a text color in a document.
 
 // Get a font object of characters and color it specifying a color in RGB format.
 
@@ -25,4 +25,3 @@ const color = Api.RGB(255, 111, 61);
 secondParagraph.GetTextPr().SetColor(color);
 doc.Push(secondParagraph);
 ```
-

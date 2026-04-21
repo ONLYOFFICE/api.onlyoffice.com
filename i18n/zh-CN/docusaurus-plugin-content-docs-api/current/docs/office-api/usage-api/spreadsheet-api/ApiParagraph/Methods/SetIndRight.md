@@ -2,16 +2,16 @@
 
 设置段落右侧缩进。
 
-Inherited from [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md).
+继承自 [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md)。
 
 ## 示例
 
-此示例设置段落右侧缩进。
+设置电子表格中段落的右侧缩进。
 
 ```javascript editor-xlsx
-// How to change the sentence's right side indentation of the paragraph.
+// How to change the sentence's right side indentation of the paragraph in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the right side indentation.
+// Get a paragraph from the shape's content then add a text specifying the right side indentation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -25,4 +25,3 @@ paragraph.AddText("This is the first paragraph with the right offset of 2 inches
 paragraph.AddText("This offset is set by the paragraph style. No paragraph inline style is applied. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 ```
-

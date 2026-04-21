@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example adds a paragraph in document content.
+Add a paragraph in document content.
 
 ```javascript editor-docx
 // How to add elements to the document content.
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.AddElement(0, paragraph);
 ```
-

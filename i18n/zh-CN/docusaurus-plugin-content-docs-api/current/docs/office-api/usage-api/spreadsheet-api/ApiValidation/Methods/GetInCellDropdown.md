@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例获取是否显示下拉列表。
+获取电子表格中是否显示下拉列表。
 
 ```javascript editor-xlsx
-// How to check if validation displays a dropdown list.
+// How to check if validation displays a dropdown list in a spreadsheet.
 
 // Get the InCellDropdown setting.
 
@@ -34,4 +34,3 @@ validation.Add("xlValidateList", null, null, "Apple,Banana,Cherry");
 let hasDropdown = validation.GetInCellDropdown();
 worksheet.GetRange("B1").SetValue("Has dropdown: " + hasDropdown);
 ```
-

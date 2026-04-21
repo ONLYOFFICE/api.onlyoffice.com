@@ -19,7 +19,7 @@ Object
 
 ## 示例
 
-此示例向文档添加具有指定属性的目录。
+向文档添加具有指定属性的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties.
@@ -38,4 +38,3 @@ let tocPr = {
 };
 doc.AddTableOfContents(tocPr);
 ```
-

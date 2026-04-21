@@ -20,10 +20,10 @@ expression.Select();
 
 ## 示例
 
-此示例选择当前范围。
+选择电子表格中的当前范围。
 
 ```javascript editor-xlsx
-// How to select a range.
+// How to select a range in a spreadsheet.
 
 // Select a range and get a selection from the worksheet.
 
@@ -33,4 +33,3 @@ range.SetValue("1");
 range.Select();
 Api.GetSelection().SetValue("selected");
 ```
-

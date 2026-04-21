@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example changes the type of the first series of ApiChart class and inserts the new type into the pdf document.
+Change the type of the first series of chart class and insert the new type into the pdf document.
 
 ```javascript editor-pdf
-// How to change a chart type.
+// How to change a chart type in a PDF document.
 
-// Change a chart type to the "area" type.
+// Change a chart type to the "area" type in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -58,4 +58,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

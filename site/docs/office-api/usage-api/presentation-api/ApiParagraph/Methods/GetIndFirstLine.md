@@ -6,10 +6,10 @@ Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLi
 
 ## Example
 
-This example shows how to get the paragraph first line indentation.
+Get the paragraph first line indentation in a presentation.
 
 ```javascript editor-pptx
-// How to return the first line identation of a paragraph property.
+// How to return the first line identation of a paragraph property in a presentation.
 
 // Return the first line indentation of a text property from the slide.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
 ```
-

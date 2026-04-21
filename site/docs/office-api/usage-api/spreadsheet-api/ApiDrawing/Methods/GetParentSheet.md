@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show get drawing parent sheet.
+Show get drawing parent sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know a parent sheet of a shape.
+// How to know a parent sheet of a shape in a spreadsheet.
 
 // Get a shape's parent sheet and display it in the worksheet.
 
@@ -36,4 +36,3 @@ let content = shape.GetDocContent();
 let paragraph = content.GetElement(0);
 paragraph.AddText("Parent sheet name is " + parentSheet.GetName());
 ```
-

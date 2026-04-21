@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example adds some text to the run.
+Add some text to the run in a presentation.
 
 ```javascript editor-pptx
-// How to add a text to a text run object.
+// How to add a text to a text run object in a presentation.
 
 // How to add a text to the slide.
 
@@ -46,4 +46,3 @@ run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

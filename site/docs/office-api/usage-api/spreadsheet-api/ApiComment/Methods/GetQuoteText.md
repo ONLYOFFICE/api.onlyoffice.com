@@ -20,10 +20,10 @@ String \| null
 
 ## Example
 
-This example shows how to get the quote text of the comment.
+Get the quote text of the comment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a comment quote.
+// How to get a comment quote in a spreadsheet.
 
 // Add a comment to the range and display its quote text in the worksheet.
 
@@ -34,4 +34,3 @@ let comment = range.AddComment("This is just a number.");
 worksheet.GetRange("A3").SetValue("Comment's quote text: ");
 worksheet.GetRange("B3").SetValue(comment.GetQuoteText());
 ```
-

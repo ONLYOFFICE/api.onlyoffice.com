@@ -2,11 +2,11 @@
 
 删除当前格式条件。
 
-Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md).
+继承自 [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md)。
 
 ## 示例
 
-此示例删除条件格式规则。
+删除条件格式规则。
 
 ```javascript editor-xlsx
 // How to remove specific conditional formatting rules from a range.
@@ -37,4 +37,3 @@ condition1.Delete();
 worksheet.GetRange("D1").SetValue("Rules after deletion:");
 worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
 ```
-

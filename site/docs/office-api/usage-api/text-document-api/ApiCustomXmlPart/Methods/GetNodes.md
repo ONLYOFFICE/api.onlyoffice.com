@@ -22,9 +22,13 @@ expression.GetNodes(xPath);
 
 ## Example
 
-This example shows how to update the value of an attribute in a custom XML node.
+Update the value of an attribute in a custom XML node in a document.
 
 ```javascript editor-docx
+// How can I get the nodes using a custom XML part in a document?
+
+// Get the nodes for a custom XML part in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -43,4 +47,3 @@ nodes.forEach(node => {
 paragraph.AddText("Label attribute: " + label.GetAttribute("name"));
 doc.Push(paragraph);
 ```
-

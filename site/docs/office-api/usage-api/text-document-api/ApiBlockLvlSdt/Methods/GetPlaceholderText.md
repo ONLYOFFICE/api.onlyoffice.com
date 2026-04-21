@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the placeholder text from the content control.
+Get the placeholder text from the content control in a document.
 
 ```javascript editor-docx
-// Creates a block content control, sets the placeholder text to it, and returns this placeholder to insert it into the second paragraph of the document.
+// Create a block content control, set the placeholder text to it, and return this placeholder to insert it into the second paragraph of the document.
 
-// How to get the placeholder text from the ApiBlockLvlSdt object.
+// How to get the placeholder text from the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -36,4 +36,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + text);
 doc.Push(paragraph);
 ```
-

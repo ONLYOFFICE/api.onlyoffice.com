@@ -20,7 +20,7 @@ expression.GetAllShapes();
 
 ## 示例
 
-此示例展示如何获取幻灯片中所有形状对象的数组。
+获取演示文稿中幻灯片的所有形状对象数组。
 
 ```javascript editor-pptx
 // How to get all shapes from the slide.
@@ -41,4 +41,3 @@ slide.AddObject(shape);
 const allShapes = slide.GetAllShapes();
 allShapes[0].SetSize(150 * 36000, 65 * 36000);
 ```
-

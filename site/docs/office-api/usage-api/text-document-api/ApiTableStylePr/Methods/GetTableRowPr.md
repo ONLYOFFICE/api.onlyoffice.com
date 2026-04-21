@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a set of the table row properties which will be applied to all the rows within a table which match the conditional formatting type.
+Get a set of the table row properties which will be applied to all the rows within a table which match the conditional formatting type.
 
 ```javascript editor-docx
-// How to get table properties and set its height.
+// How to get table properties and set its height in a document.
 
-// Update the table row properties by setting its style.
+// Update the table row properties by setting its style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ tableStylePr.GetTableRowPr().SetHeight("atLeast", 720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

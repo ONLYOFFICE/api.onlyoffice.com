@@ -25,15 +25,14 @@ number
 
 ## 示例
 
-此示例演示如何返回从结算日到下一个付息日的天数。
+在电子表格中返回从结算日期到下一个息票日期的天数。
 
 ```javascript editor-xlsx
-// How to find the number of days from the settlement date to the next coupon date.
+// How to find the number of days from the settlement date to the next coupon date in a spreadsheet.
 
-// Use function to get the number of days from the settlement date to the next coupon date.
+// Use function to get the number of days from the settlement date to the next coupon date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.COUPDAYSNC("1/10/2018", "6/15/2019", 4, 1));
 ```
-

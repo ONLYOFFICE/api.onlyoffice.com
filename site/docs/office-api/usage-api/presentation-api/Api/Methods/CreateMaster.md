@@ -22,7 +22,7 @@ expression.CreateMaster(oTheme);
 
 ## Example
 
-This example shows how to create a slide master.
+Create a slide master in a presentation.
 
 ```javascript editor-pptx
 // How to add master to the slide.
@@ -51,4 +51,3 @@ paragraph.AddText("Number of masters after adding new master: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

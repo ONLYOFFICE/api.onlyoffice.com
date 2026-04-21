@@ -20,12 +20,12 @@ expression.GetDisplayFieldsInReportFilterArea();
 
 ## 示例
 
-此示例展示如何获取数据透视表报表筛选区域中的显示字段。
+获取电子表格中数据透视表报表筛选区域中的显示字段。
 
 ```javascript editor-xlsx
-// How to get a display fields in report filter area value.
+// How to get a display fields in report filter area value in a spreadsheet.
 
-// Create a pivot table, add data to it then get its display the value of a display fields in report filter.
+// Create a pivot table, add data to it then get its display the value of a display fields in report filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ pivotWorksheet.GetRange('B9').SetValue(info.Type);
 pivotWorksheet.GetRange('A10').SetValue('ReportFilterFields');
 pivotWorksheet.GetRange('B10').SetValue(info.ReportFilterFields);
 ```
-

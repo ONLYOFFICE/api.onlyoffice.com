@@ -2,16 +2,16 @@
 
 设置当前文本块的文本轮廓。
 
-Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
+继承自 [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md)。
 
 ## 示例
 
-此示例设置当前文本块的文本轮廓。
+在 PDF 文档中为当前文本 run 设置文本轮廓。
 
 ```javascript editor-pdf
-// How to make a text outlined.
+// How to make a text outlined in a PDF document.
 
-// Get the text properties of the run and outline it with a stroke.
+// Get the text properties of the run and outline it with a stroke in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -33,4 +33,3 @@ run.AddText("This is a text run with the black text outline set using the text p
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

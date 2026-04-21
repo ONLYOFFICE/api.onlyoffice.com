@@ -34,4 +34,3 @@ Asc.plugin.executeMethod('Undo');
 Asc.scope.text = 'And the second one, which is the only one that will remain visible after calling Undo method.';
 Asc.plugin.callCommand(addTextToDocument);
 ```
-

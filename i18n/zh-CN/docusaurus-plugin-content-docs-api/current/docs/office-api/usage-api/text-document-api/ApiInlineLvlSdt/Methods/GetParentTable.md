@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-此示例展示如何获取包含内容控件的表格。
+获取文档中包含内容控件的表格。
 
 ```javascript editor-docx
-// How to display the parent table of the inline text control.
+// How to display the parent table of the inline text control in a document.
 
-// Update the parent table of inline content control.
+// Update the parent table of inline content control in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -44,4 +44,3 @@ let parentTable = inlineLvlSdt.GetParentTable();
 cell = parentTable.GetRow(2).GetCell(0);
 parentTable.RemoveRow(cell);
 ```
-

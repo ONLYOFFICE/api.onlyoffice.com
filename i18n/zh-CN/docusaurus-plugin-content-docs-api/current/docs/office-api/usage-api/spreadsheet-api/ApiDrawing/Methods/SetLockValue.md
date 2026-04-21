@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-此示例设置当前绘图的指定锁定类型的锁定值。
+在电子表格中为当前绘图对象的指定锁定类型设置锁定值。
 
 ```javascript editor-xlsx
-// How to set a lock type of a drawing.
+// How to set a lock type of a drawing in a spreadsheet.
 
 // Create a drawing, set its lock value and display it in the worksheet.
 
@@ -40,4 +40,3 @@ drawing.SetLockValue("noSelect", true);
 let lockValue = drawing.GetLockValue("noSelect");
 worksheet.GetRange("A1").SetValue("This drawing cannot be selected: " + lockValue);
 ```
-

@@ -20,12 +20,12 @@ expression.GetDefNames();
 
 ## 示例
 
-此示例展示如何获取 ApiName 对象数组。
+获取电子表格中命名范围对象的数组。
 
 ```javascript editor-xlsx
-// How to get all def names.
+// How to get all def names in a spreadsheet.
 
-// Get all def names as an array.
+// Get all def names as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -37,4 +37,3 @@ worksheet.AddDefName("letters", "Sheet1!$A$2:$B$2");
 let defNames = worksheet.GetDefNames();
 worksheet.GetRange("A4").SetValue("DefNames: " + defNames[0].GetName() + ", " + defNames[1].GetName());
 ```
-

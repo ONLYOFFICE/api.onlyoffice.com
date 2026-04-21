@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md).
 
 ## Example
 
-This example specifies if the current form should be locked.
+Specify if the current form should be locked.
 
 ```javascript editor-forms
 // How to lock a form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
 ```
-

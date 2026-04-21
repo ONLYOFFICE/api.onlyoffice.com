@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the previous section.
+Get the previous section in a document.
 
 ```javascript editor-docx
-// How to get prevoius section from the current one.
+// How to get prevoius section from the current one in a document.
 
-// Update the margins of the next section.
+// Update the margins of the next section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ let section2 = doc.CreateSection(paragraph);
 let previousSection = section2.GetPrevious();
 previousSection.SetPageMargins(7200, 2880, 1440, 5760);
 ```
-

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets current paragraph from rich content.
+Get current paragraph from rich content in a PDF document.
 
 ```javascript editor-pdf
+// How to get current run for a rich content in a PDF document?
+
+// Get current run and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -37,4 +41,3 @@ run.AddText("Example text");
 
 console.log(`We added some text to current run`);
 ```
-

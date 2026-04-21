@@ -22,16 +22,15 @@ boolean
 
 ## 示例
 
-此示例向内容控件添加文本。
+向文档中的内容控件添加文本。
 
 ```javascript editor-docx
-// Creates a block content control in the current document and adds a text to it.
+// Create a block content control in the current document and add a text to it.
 
-// How to add a text to the ApiBlockLvlSdt object.
+// How to add a text to the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.AddText("This is a block text content control.");
 doc.AddElement(0, blockLvlSdt);
 ```
-

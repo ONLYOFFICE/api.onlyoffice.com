@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example gets a lock value of a shape and inserts it into the presentation.
+Get a lock value of a shape and insert it into the presentation.
 
 ```javascript editor-pptx
 // How to get a slide shape's lock value and display it in the slide.
@@ -46,4 +46,3 @@ paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 slide.AddObject(shape);
 ```
-

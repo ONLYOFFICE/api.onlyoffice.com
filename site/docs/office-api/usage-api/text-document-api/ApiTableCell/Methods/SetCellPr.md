@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the cell properties to the current cell.
+Set the cell properties to the current cell.
 
 ```javascript editor-docx
 // How to add properties to the cell.
@@ -46,4 +46,3 @@ table2.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 doc.Push(table2);
 table2.GetCell(0, 0).SetCellPr(tableCellPr);
 ```
-

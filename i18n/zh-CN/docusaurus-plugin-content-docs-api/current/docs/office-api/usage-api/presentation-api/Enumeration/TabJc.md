@@ -13,10 +13,9 @@
 - "right"
 - "center"
 
-
 ## 示例
 
-此示例在 50、75 和 150 磅位置设置制表位，文本分别在各制表位处居中、左对齐和右对齐。
+在 50、75 和 150 磅位置设置制表位，文本分别在各制表位处居中、左对齐和右对齐。
 
 ```javascript editor-pptx
 // How to set tabs and indicate justifications of text at each tab stop.
@@ -25,4 +24,3 @@
 
 paraPr.SetTabs([1000, 1500, 3000], ["center", "left", "right"]);
 ```
-

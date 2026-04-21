@@ -10,5 +10,3 @@ Enumeration
 
 - "ltr"
 - "rtl"
-
-

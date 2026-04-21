@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to rename a chart seria.
+How to rename a chart seria in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series names.
+// Create a chart, set its properties and its series names in a PDF document.
+
+// Set seria name using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +47,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

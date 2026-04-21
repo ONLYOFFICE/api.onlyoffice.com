@@ -1,6 +1,6 @@
 # ApiComboboxField
 
-ApiComboboxField is a subclass of [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md).
+ApiComboboxField 是 [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md) 的子类。
 
 ## 方法
 

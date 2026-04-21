@@ -23,12 +23,12 @@ expression.GetDataFields(field);
 
 ## Example
 
-This example shows how to get data fields.
+Get data fields in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get data fields from a pivot table.
+// How to get data fields from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get data fields from it.
+// Create a pivot table, add data to it then get data fields from it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,4 +68,3 @@ for (let i = 0; i < dataFields.length; i += 1) {
     dataFields[i].SetFunction('Count');
 }
 ```
-

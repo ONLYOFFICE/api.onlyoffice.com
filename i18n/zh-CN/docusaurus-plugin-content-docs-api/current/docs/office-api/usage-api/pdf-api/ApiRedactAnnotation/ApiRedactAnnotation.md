@@ -1,6 +1,6 @@
 # ApiRedactAnnotation
 
-ApiRedactAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md).
+ApiRedactAnnotation 是 [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md) 的子类。
 
 ## 方法
 

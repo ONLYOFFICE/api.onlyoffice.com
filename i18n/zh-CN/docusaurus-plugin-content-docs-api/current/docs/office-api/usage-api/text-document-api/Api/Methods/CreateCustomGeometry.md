@@ -20,9 +20,13 @@ expression.CreateCustomGeometry();
 
 ## 示例
 
-此示例演示如何创建自定义几何图形。
+在文档中创建自定义几何图形。
 
 ```javascript editor-docx
+// How to create custom geometry in a document?
+
+// Create custom geometry using the document API.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
  // Airplane shape in EMU units
@@ -153,4 +157,3 @@ paragraph.AddText("Custom geometry - Is custom: " + customGeometry.IsCustom());
 paragraph.AddLineBreak();
 paragraph.AddDrawing(shape);
 ```
-

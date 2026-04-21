@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-此示例向文本块添加批注。
+在文档中向 run 添加批注。
 
 ```javascript editor-docx
-// How to comment a specific text.
+// How to comment a specific text in a document.
 
-// Insert a comment into the run and add an author to it.
+// Insert a comment into the run and add an author to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 run.AddComment("comment", "John Smith");
 ```
-

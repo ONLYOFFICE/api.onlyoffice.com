@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the double factorial of a number.
+Return the double factorial of a number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate a double factorial.
+// How to calculate a double factorial in a spreadsheet.
 
-// Use function to calculate the double factorial of a number.
+// Use function to calculate the double factorial of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.FACTDOUBLE(123));
 ```
-

@@ -23,10 +23,13 @@ expression.AddDropDownListContentControl(list, selected);
 
 ## Example
 
-This example shows how to add a dropdown list content control to a document
+Add a dropdown list content control to a document in a document.
 
 ```javascript editor-docx
+// How do I add the drop down list content control in a document?
+
+// Add the drop down list content control using a document object.
+
 let doc = Api.GetDocument();
 doc.AddDropDownListContentControl();
 ```
-

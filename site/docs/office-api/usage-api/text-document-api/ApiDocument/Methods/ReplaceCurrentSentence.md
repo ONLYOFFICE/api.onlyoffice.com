@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example shows how to replace the current sentence.
+Replace the current sentence in a document.
 
 ```javascript editor-docx
-// How to change the text to another one.
+// How to change the text to another one in a document.
 
-// Add the new run instead of another sentence.
+// Add the new run instead of another sentence in a document.
 
 let doc = Api.GetDocument();
 
@@ -42,4 +42,3 @@ let run = para2.AddText(text);
 run.MoveCursorToPos(80);
 doc.ReplaceCurrentSentence("The quick brown fox jumps over the lazy dog.");
 ```
-

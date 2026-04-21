@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例将主题应用于演示文稿中的所有幻灯片。
+将主题应用于演示文稿中的所有幻灯片。
 
 ```javascript editor-pptx
 // How to apply a theme to the presentation.
 
-// Create the ApiTheme object and apply it to the presentation.
+// Create the theme object and apply it to the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,4 +54,3 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme = Api.CreateTheme("New theme", master, colorScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
 ```
-

@@ -20,7 +20,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example removes all the objects from the current slide.
+Remove all the objects from the current slide.
 
 ```javascript editor-pptx
 // How to remove all elements from the slide.
@@ -50,4 +50,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("All objects were removed from this slide before adding this shape.");
 slide.AddObject(shape);
 ```
-

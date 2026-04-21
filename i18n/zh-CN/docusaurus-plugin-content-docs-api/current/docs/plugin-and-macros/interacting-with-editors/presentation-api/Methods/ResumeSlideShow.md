@@ -23,4 +23,3 @@ expression.ResumeSlideShow();
 ```javascript
 window.Asc.plugin.executeMethod ("ResumeSlideShow");
 ```
-

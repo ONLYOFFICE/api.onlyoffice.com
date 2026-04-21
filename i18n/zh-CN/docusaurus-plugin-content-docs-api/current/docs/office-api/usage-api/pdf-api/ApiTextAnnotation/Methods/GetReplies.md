@@ -2,13 +2,17 @@
 
 获取此批注的回复。
 
-Inherited from [ApiBaseAnnotation.GetReplies](../../ApiBaseAnnotation/Methods/GetReplies.md).
+继承自 [ApiBaseAnnotation.GetReplies](../../ApiBaseAnnotation/Methods/GetReplies.md)。
 
 ## 示例
 
-此示例创建方形注释并获取其回复。
+在 PDF 文档中创建方形注释并获取其回复。
 
 ```javascript editor-pdf
+// How to get the replies for an annotation in a PDF document?
+
+// Get the replies and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 squareAnnot.SetContents("Annot contents");
@@ -24,4 +28,3 @@ replies.forEach((reply, idx) => {
 	console.log(`Reply with idx ${idx}: "${reply.GetContents()}"`);
 });
 ```
-

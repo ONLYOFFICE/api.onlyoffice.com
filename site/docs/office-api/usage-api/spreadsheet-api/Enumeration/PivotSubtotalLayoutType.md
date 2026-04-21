@@ -11,5 +11,3 @@ Enumeration
 - "Hidden"
 - "Top"
 - "Bottom"
-
-

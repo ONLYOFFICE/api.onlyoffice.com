@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example show how to set the outline to the data point.
+Set the outline to the data point in a presentation.
 
 ```javascript editor-pptx
-// How to outline data points.
+// How to outline data points in a presentation.
 
-// Create a chart then apply outline to its data points.
+// Create a chart then apply outline to its data points in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,3 @@ let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111,
 chart.SetDataPointOutLine(stroke, 0, 0, false);
 slide.AddObject(chart);
 ```
-

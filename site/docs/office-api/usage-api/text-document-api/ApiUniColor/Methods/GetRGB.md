@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example shows how to get the RGB values of a ApiUniColor (ApiPresetColor is inherited from ApiUniColor).
+Get the RGB values of an uni color (preset color is inherited from uni color) in a document.
 
 ```javascript editor-docx
+// How to get the r g b for an uni color in a document?
+
+// Get the r g b and display the result in a document.
+
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 
@@ -48,4 +52,3 @@ text += '\nB: ' + rgb.B;
 paragraph.AddText(text);
 doc.Push(paragraph);
 ```
-

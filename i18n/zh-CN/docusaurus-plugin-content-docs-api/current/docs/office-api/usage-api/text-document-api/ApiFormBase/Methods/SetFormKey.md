@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为表单设置键。
+为表单设置键。
 
 ```javascript editor-docx
 // Change the key of the text form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
-

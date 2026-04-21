@@ -23,14 +23,15 @@ expression.CreateTable(nCols, nRows);
 
 ## 示例
 
-如何创建包含两行四列的新表格。
+如何在 PDF 文档中创建具有两行四列的新表格。
 
 ```javascript editor-pdf
 // Add a table to the pdf document.
+
+// Create the table using the PDF document API.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 const table = Api.CreateTable(2, 4);
 page.AddObject(table);
 ```
-

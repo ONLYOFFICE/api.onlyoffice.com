@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example adds an object (image, shape or chart) to the current slide master.
+Add an object (image, shape or chart) to the current slide master.
 
 ```javascript editor-pptx
 // Create a shape and add it to the presentation master.
@@ -41,4 +41,3 @@ shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 master.AddObject(shape);
 ```
-

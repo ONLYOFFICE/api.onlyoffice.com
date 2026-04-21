@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets radiobutton field check in unison property.
+Set radiobutton field check in unison property in a PDF document.
 
 ```javascript editor-pdf
+// How to set check in unison for a radio button field in a PDF document?
+
+// Set check in unison and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);
@@ -36,4 +40,3 @@ radiobuttonField.AddOption(0, [10, 70, 25, 85], 'Choice3');
 radiobuttonField.SetCheckInUnison(true);
 radiobuttonField.SetValue('Choice1');
 ```
-

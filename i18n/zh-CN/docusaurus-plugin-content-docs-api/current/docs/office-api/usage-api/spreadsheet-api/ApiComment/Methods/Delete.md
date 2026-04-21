@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-此示例删除 ApiComment 对象。
+删除电子表格中的批注对象。
 
 ```javascript editor-xlsx
-// How to remove a comment from a range.
+// How to remove a comment from a range in a spreadsheet.
 
-// Get a range add a comment to it and then remove it.
+// Get a range add a comment to it and then remove it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -35,4 +35,3 @@ let comment = range.GetComment();
 comment.Delete();
 worksheet.GetRange("A3").SetValue("The comment was just deleted from A1.");
 ```
-

@@ -24,7 +24,7 @@ expression.Split(oCell, nRow, nCol);
 
 ## 示例
 
-此示例将单元格拆分为指定数量的行和列。
+将单元格拆分为指定数量的行和列。
 
 ```javascript editor-docx
 // How to divide the table cell.
@@ -41,4 +41,3 @@ doc.Push(table);
 let cell = table.GetCell(0, 0);
 table.Split(cell, 2, 2);
 ```
-

@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
 ## Example
 
-This example converts the current form to an inline form.
+Convert the current form to an inline form.
 
 ```javascript editor-docx
-// How to find out whether a text is bold or not.
+// How to find out whether a text is bold or not in a document.
 
-// Get the bold property of the text.
+// Get the bold property of the text in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -34,4 +34,3 @@ let bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 doc.Push(paragraph);
 ```
-

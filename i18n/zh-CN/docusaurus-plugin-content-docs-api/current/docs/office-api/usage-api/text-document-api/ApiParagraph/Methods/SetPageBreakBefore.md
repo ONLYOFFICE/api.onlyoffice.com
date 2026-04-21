@@ -2,11 +2,11 @@
 
 指定在使用分页视图呈现文档时，当前段落的内容呈现在文档新页的开头。
 
-Inherited from [ApiParaPr.SetPageBreakBefore](../../ApiParaPr/Methods/SetPageBreakBefore.md).
+继承自 [ApiParaPr.SetPageBreakBefore](../../ApiParaPr/Methods/SetPageBreakBefore.md)。
 
 ## 示例
 
-此示例指定在使用分页视图呈现文档时，当前段落的内容呈现在文档新页的开头。
+指定在使用分页视图呈现文档时，当前段落的内容在文档的新页面开头呈现。
 
 ```javascript editor-docx
 // How to set a page break before the current paragraph.
@@ -26,4 +26,3 @@ paragraph.AddText("This is the second paragraph and it has page break before it 
 paragraph.SetStyle(myStyle);
 doc.Push(paragraph);
 ```
-

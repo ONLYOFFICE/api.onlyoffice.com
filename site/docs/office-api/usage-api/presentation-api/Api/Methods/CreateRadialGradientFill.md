@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## Example
 
-This example shows how to create a radial gradient fill.
+Create a radial gradient fill in a presentation.
 
 ```javascript editor-pptx
-// How to create a radial gradient fill.
+// How to create a radial gradient fill in a presentation.
 
-// Add a radial gradient fill.
+// Add a radial gradient fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,3 @@ const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 3600
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a document content object.
 
 ```javascript editor-docx
-// How get a class type of ApiDocumentContent.
+// How can I get the class type of a document content?
 
-// Retrieve class type of a created document content and display it.
+// Get the class type of a document content and display it in the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,4 +44,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 doc.Push(paragraph);
 ```
-

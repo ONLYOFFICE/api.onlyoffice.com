@@ -6,7 +6,7 @@ Inherited from [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/Ge
 
 ## Example
 
-This example shows how to get a layout page break of a pivot field.
+Get a layout page break of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a layout page break of a pivot field.
@@ -49,4 +49,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
-

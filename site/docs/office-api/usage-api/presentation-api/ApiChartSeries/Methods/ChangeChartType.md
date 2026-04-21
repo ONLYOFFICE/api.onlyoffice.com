@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example changes the type of the first series of ApiChart class and inserts the new type into the presentation.
+Change the type of the first series of chart class and insert the new type into the presentation.
 
 ```javascript editor-pptx
-// How to change a chart type.
+// How to change a chart type in a presentation.
 
-// Change a chart type to the "area" type.
+// Change a chart type to the "area" type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -59,4 +59,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

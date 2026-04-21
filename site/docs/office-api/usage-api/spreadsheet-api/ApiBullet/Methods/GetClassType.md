@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a type of the ApiBullet class and insert it into the table.
+Check the class type returned by a bullet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of a bullet and show it in the sheet.
+// How do I check what type a bullet object is in a spreadsheet?
 
-// Get a class type of an object.
+// Retrieve and output the class type string for a bullet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -46,4 +46,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 docContent.Push(paragraph);
 ```
-

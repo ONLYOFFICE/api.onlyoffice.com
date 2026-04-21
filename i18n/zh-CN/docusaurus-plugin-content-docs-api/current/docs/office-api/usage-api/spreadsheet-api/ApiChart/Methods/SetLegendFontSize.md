@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定图例字体大小。
+在电子表格中指定图例的字体大小。
 
 ```javascript editor-xlsx
-// How to change the font size of the chart legend.
+// How to change the font size of the chart legend in a spreadsheet.
 
-// Resize the font of the chart legend.
+// Resize the font of the chart legend in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -49,4 +49,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

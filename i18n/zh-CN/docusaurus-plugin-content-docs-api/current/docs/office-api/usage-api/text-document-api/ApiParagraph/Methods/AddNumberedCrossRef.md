@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-此示例向段落添加编号交叉引用。
+在文档中向段落添加编号交叉引用。
 
 ```javascript editor-docx
-// How to create a numbered reference to the paragraph.
+// How to create a numbered reference to the paragraph in a document.
 
-// Add a cross-reference to the numbered paragraph.
+// Add a cross-reference to the numbered paragraph in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -56,4 +56,3 @@ paragraph.AddText("An example of the customized numbering type can be found in t
 doc.Push(paragraph);
 paragraph.AddNumberedCrossRef("paraNum", numberedParagraphs[1], true, true);
 ```
-

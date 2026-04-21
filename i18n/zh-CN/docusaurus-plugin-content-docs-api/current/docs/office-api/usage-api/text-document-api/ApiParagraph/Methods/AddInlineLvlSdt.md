@@ -22,12 +22,12 @@ expression.AddInlineLvlSdt(oSdt);
 
 ## 示例
 
-此示例向段落添加一个行内容器。
+在文档中向段落添加内联容器。
 
 ```javascript editor-docx
-// How to create an inline content control and add it to the paragraph.
+// How to create an inline content control and add it to the paragraph in a document.
 
-// Add an inline text element to the paragraph.
+// Add an inline text element to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ run.AddText("This is an inline text content control.");
 inlineLvlSdt.AddElement(run, 0);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 ```
-

@@ -23,4 +23,3 @@ let contentControlParentPr = {
     "Count" : 1
 };
 ```
-

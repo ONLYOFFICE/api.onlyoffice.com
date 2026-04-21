@@ -23,12 +23,12 @@ expression.GetConditionalTableStyle(sType);
 
 ## Example
 
-This example shows how to get a set of formatting properties which will be conditionally applied to the parts of a table that match the requirement specified in the sType parameter.
+Get a set of formatting properties which will be conditionally applied to the parts of a table that match the requirement specified in the sType parameter in a document.
 
 ```javascript editor-docx
-// How to find out a style that will be applied to the table elements whish satisfy the condition.
+// How to find out a style that will be applied to the table elements whish satisfy the condition in a document.
 
-// Retrieve a conditional table style.
+// Retrieve a conditional table style in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);
@@ -57,4 +57,3 @@ cellContent = table.GetRow(1).GetCell(1).GetContent();
 paragraph = cellContent.GetElement(0);
 paragraph.AddText("This cell font also remains default");
 ```
-

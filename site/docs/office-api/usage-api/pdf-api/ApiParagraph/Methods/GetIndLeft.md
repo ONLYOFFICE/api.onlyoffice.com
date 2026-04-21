@@ -6,10 +6,10 @@ Inherited from [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md).
 
 ## Example
 
-This example shows how to get the paragraph left side indentation.
+Get the paragraph left side indentation in a PDF document.
 
 ```javascript editor-pdf
-// How to return a left side identation of a paragraph property.
+// How to return a left side identation of a paragraph property in a PDF document.
 
 // Return a left side indentation of a text property from the page.
 
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
 ```
-

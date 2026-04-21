@@ -1,6 +1,6 @@
 # ApiRadiobuttonField
 
-ApiRadiobuttonField is a subclass of [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md).
+ApiRadiobuttonField 是 [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.md) 的子类。
 
 ## 方法
 

@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacing
 
 ## Example
 
-This example shows how to get the paragraph line spacing rule.
+Get the paragraph line spacing rule in a document.
 
 ```javascript editor-docx
-// How to get the spacing line rule of the paragraph and display it.
+// How to get the spacing line rule of the paragraph and display it in a document.
 
-// Get the paragraph spacing line rule.
+// Get the paragraph spacing line rule in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -25,4 +25,3 @@ paragraph.AddLineBreak();
 let spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph.AddText("Spacing line rule: " + spacingLineRule);
 ```
-

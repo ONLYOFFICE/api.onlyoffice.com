@@ -22,7 +22,7 @@ expression.SetHidden(isHidden);
 
 ## 示例
 
-此示例设置值隐藏属性。
+设置电子表格中的值隐藏属性。
 
 ```javascript editor-xlsx
 // How to hide cells from a range.
@@ -38,4 +38,3 @@ worksheet.GetRange("C1").SetValue("3");
 let hidden = range.GetHidden();
 worksheet.GetRange("A4").SetValue("The values from A1:C1 are hidden: " + hidden);
 ```
-

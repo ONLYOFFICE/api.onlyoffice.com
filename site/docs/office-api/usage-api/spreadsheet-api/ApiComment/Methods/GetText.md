@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the comment text.
+Get the comment text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a comment raw text.
+// How to get a comment raw text in a spreadsheet.
 
 // Add a comment text to a range of the worksheet.
 
@@ -34,4 +34,3 @@ range.AddComment("This is just a number.");
 worksheet.GetRange("A3").SetValue("Comment: ");
 worksheet.GetRange("B3").SetValue(range.GetComment().GetText());
 ```
-

@@ -2,11 +2,11 @@
 
 返回指定数据透视表项目的显示方式 - 表格格式或大纲格式。
 
-Inherited from [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md).
+继承自 [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局形式。
+获取电子表格中透视字段的布局形式。
 
 ```javascript editor-xlsx
 // How to get a layout form of a pivot field.
@@ -49,4 +49,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
-

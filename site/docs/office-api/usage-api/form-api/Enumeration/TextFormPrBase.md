@@ -18,7 +18,7 @@ Object
 
 ## Example
 
-This example creates a text form with the specific text form properties.
+Create a text form with the specific text form properties.
 
 ```javascript editor-forms
 // How to create a text form with adding base properties like max characters limit, cell width, etc. to it.
@@ -34,4 +34,3 @@ let textFormPrBase = {
 };
 let textForm = Api.CreateTextForm(textFormPrBase);
 ```
-

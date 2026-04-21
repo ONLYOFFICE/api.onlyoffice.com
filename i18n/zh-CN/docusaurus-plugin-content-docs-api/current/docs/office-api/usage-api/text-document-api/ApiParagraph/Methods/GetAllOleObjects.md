@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-此示例展示如何获取段落中的 OLE 对象集合。
+获取文档中段落内的 OLE 对象集合。
 
 ```javascript editor-docx
 // How to retrieve all OLE objects from the document.
 
-// Get all OLE objects and get the application ID of the first one.
+// Get all OLE objects and get the application ID of the first one in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 doc.Push(paragraph);
 ```
-

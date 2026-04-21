@@ -15,10 +15,9 @@
 - "title"
 - "even"
 
-
 ## 示例
 
-此示例从文档最后一节中删除 'title' 类型的页眉。
+从文档最后一节中删除 'title' 类型的页眉。
 
 ```javascript editor-docx
 // How to delete a header from the title type.
@@ -27,4 +26,3 @@
 
 let docContent = finalSection.RemoveHeader("title");
 ```
-

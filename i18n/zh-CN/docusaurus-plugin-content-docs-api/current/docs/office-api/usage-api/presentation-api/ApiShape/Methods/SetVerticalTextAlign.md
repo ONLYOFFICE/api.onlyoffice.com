@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetVerticalTextAlign(VerticalAlign);
+expression.SetVerticalTextAlign(verticalAlign);
 ```
 
 `expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetVerticalTextAlign(VerticalAlign);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| VerticalAlign | 必需 | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | 形状内部内容的垂直对齐类型。 |
+| verticalAlign | 必需 | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | 形状内部内容的垂直对齐类型。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetVerticalTextAlign(VerticalAlign);
 
 ## 示例
 
-此示例设置可以插入段落或文本块的形状内容的垂直对齐方式。
+在演示文稿中为可以插入段落或文本 run 的形状内容设置垂直对齐方式。
 
 ```javascript editor-pptx
-// How to set vertical alignment of the shape content.
+// How to set vertical alignment of the shape content in a presentation.
 
-// Adjust vertical alignment of the text inside the shape.
+// Adjust vertical alignment of the text inside the shape in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -48,4 +48,3 @@ paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

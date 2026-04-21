@@ -3,11 +3,11 @@
 将当前表单转换为内联表单。
 *图片表单无法转换为内联表单，它始终是固定大小的对象。*
 
-Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
+继承自 [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md)。
 
 ## 示例
 
-此示例将表单转换为内联表单。
+将表单转换为内联表单。
 
 ```javascript editor-docx
 // How to make the form inline.
@@ -32,4 +32,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
 doc.Push(paragraph);
 ```
-

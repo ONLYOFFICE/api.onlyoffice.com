@@ -20,10 +20,10 @@ expression.GetBarColor();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取条颜色。
+从数据条条件格式规则获取条形颜色。
 
 ```javascript editor-xlsx
-// How to retrieve the bar color of a data bar.
+// How to retrieve the bar color of a data bar in a spreadsheet.
 
 // Get the bar color of a data bar conditional formatting rule.
 
@@ -46,4 +46,3 @@ let barColor = dataBar.GetBarColor();
 worksheet.GetRange("C1").SetValue("Has Bar Color:");
 worksheet.GetRange("C2").SetValue(barColor ? "Yes" : "No");
 ```
-

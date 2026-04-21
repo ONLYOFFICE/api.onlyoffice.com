@@ -22,9 +22,13 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-This example sets the italic property to the text character.
+Set the italic property to the text character in a PDF document.
 
 ```javascript editor-pdf
+// How can I set italic using a paragraph in a PDF document?
+
+// Set italic for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,4 +42,3 @@ paragraph.AddText('This is a paragraph with the font set to italicized letters.'
 paragraph.SetItalic(true);
 page.AddObject(shape);
 ```
-

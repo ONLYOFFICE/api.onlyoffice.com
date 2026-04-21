@@ -10,5 +10,3 @@ Enumeration
 
 - "solid"
 - "dashed"
-
-

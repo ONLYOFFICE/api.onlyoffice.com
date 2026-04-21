@@ -24,10 +24,10 @@ string
 
 ## Example
 
-This example returns a text from the text run.
+Return a text from the text run in a document.
 
 ```javascript editor-docx
-// How to get a raw text value.
+// How to get a raw text value in a document.
 
 // Get a run, get its text value and show it in the document.
 
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The text of the specified run: " + text);
 doc.Push(paragraph);
 ```
-

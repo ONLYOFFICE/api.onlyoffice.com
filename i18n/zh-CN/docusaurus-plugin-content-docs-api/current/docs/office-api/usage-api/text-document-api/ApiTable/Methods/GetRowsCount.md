@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取表格中的行数。
+获取文档中表格的行数。
 
 ```javascript editor-docx
 // How to count the number of rows of the table and display it in the document.
 
-// Add text showing the rows count of two tables.
+// Add text showing the rows count of two tables in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,4 +44,3 @@ paragraph.AddText("The table above had " + tableRowsNumber + " rows before we ad
 paragraph.AddText("Now this table has " + tableRowsNumber1 + " rows.");
 doc.Push(paragraph);
 ```
-

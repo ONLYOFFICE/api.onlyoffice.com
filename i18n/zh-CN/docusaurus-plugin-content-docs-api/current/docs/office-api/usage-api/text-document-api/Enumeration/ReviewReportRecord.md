@@ -14,4 +14,3 @@ Object
 | ReviewedElement | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| [ApiTable](../ApiTable/ApiTable.md) | 已审阅的元素。 |
 | Type | [ReviewReportRecordType](../Enumeration/ReviewReportRecordType.md) | 修订记录类型。 |
 | Value | string | 修订更改值（仅适用于「TextAdd」和「TextRem」类型）。 |
-

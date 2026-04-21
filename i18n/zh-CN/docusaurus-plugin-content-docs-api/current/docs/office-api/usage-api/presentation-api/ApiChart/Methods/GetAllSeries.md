@@ -20,12 +20,12 @@ expression.GetAllSeries();
 
 ## 示例
 
-此示例获取 ApiChart 类的所有系列并将其类型插入演示文稿。
+获取图表类的所有系列并将其类型插入演示文稿。
 
 ```javascript editor-pptx
-// How to get types of all series of a chart.
+// How to get types of all series of a chart in a presentation.
 
-// Get all series from a chart.
+// Get all series from a chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -57,4 +57,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

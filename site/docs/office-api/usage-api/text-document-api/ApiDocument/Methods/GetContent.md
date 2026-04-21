@@ -6,7 +6,7 @@ Inherited from [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/
 
 ## Example
 
-This example shows how to get an array of document elements from the document content.
+Get an array of document elements from the document content in a document.
 
 ```javascript editor-docx
 // Retrieve each document element.
@@ -41,4 +41,3 @@ docElements[0].SetBold(true);
 docElements[1].SetBackgroundColor(Api.HexColor('#EBEBEB'));
 docElements[2].Search("block text content control")[0].SetBold(true);
 ```
-

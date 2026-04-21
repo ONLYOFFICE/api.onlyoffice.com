@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes arc command parameters in a presentation shape.
+Analyzes arc command parameters in a presentation shape. Retrieves and display arc radii and angle information.
 
 ```javascript editor-pptx
-// Retrieves and displays arc radii and angle information.
+// How can I get the h r using a path command in a presentation?
+
+// Get the h r for a path command in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -47,4 +50,3 @@ shape.SetPosition(1500000, 1500000);
 shape.SetVerticalTextAlign("bottom");
 slide.AddObject(shape);
 ```
-

@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to calculate predicted exponential growth by using existing data.
+Calculate predicted exponential growth by using existing data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate predicted exponential growth by using existing data.
+// How to calculate predicted exponential growth by using existing data in a spreadsheet.
 
-// Use a function to calculate predicted exponential growth.
+// Use a function to calculate predicted exponential growth in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ let growth = func.GROWTH(data_arrayRange, months_arrayRange);
 // Print the growth result
 worksheet.GetRange("D1").SetValue(growth);
 ```
-

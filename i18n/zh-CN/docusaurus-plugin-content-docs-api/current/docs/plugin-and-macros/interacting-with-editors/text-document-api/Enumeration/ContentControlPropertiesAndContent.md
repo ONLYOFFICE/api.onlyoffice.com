@@ -27,4 +27,3 @@ let documents = [{
 }];
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [documents]);
 ```
-

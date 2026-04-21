@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to get the cosine of an angle.
+Get the cosine of an angle in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find a cosine.
+// How to find a cosine in a spreadsheet.
 
-// Use function to get the cosine of an angle.
+// Use function to get the cosine of an angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.COS(1.5));
 ```
-

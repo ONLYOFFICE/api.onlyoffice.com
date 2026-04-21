@@ -196,10 +196,9 @@
 - "wedgeRectCallout"
 - "wedgeRoundRectCallout"
 
-
 ## 示例
 
-此示例使用 'diamond' 预设创建形状。
+使用 'diamond' 预设创建形状。
 
 ```javascript editor-pptx
 // How to change a shape type of a drawing.
@@ -208,4 +207,3 @@
 
 let drawing = Api.CreateShape("diamond", 100 * 36000, 100 * 36000, fill, stroke);
 ```
-

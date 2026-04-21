@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取当前样式的文本属性。
+获取文档中当前样式的文本属性。
 
 ```javascript editor-docx
-// How to update text properties.
+// How to update text properties in a document.
 
-// Get the default style text properties of the paragraph.
+// Get the default style text properties of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");
@@ -38,4 +38,3 @@ paragraph.AddText("This is a paragraph with the text color, font family and font
 paragraph.AddText("We do not change the style of the paragraph itself. ");
 paragraph.AddText("Only document-wide text styles are applied.");
 ```
-

@@ -1,6 +1,6 @@
 # ApiPolyLineAnnotation
 
-ApiPolyLineAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md).
+ApiPolyLineAnnotation 是 [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation.md) 的子类。
 
 ## 方法
 

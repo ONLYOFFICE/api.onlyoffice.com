@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the line styles to the current theme format scheme.
+Set the line styles to the current theme format scheme.
 
 ```javascript editor-pptx
 // How to change line styles of a format scheme.
@@ -70,4 +70,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Create a shape by yourself to see the stroke style set to this presentation.");
 slide.AddObject(shape);
 ```
-

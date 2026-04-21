@@ -4,16 +4,16 @@
 nBefore 的任何值都将被忽略。如果未指定 isBeforeAuto 参数，则
 将其解释为 false。
 
-Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md).
+继承自 [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md)。
 
 ## 示例
 
-此示例设置当前段落的段前间距。
+在演示文稿中设置当前段落的段前间距。
 
 ```javascript editor-pptx
-// How to set the size of a spacing before a text from a paragraph properties.
+// How to set the size of a spacing before a text from a paragraph properties in a presentation.
 
-// Change the size property of a spacing before a paragraph.
+// Change the size property of a spacing before a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,3 @@ secondParagraph.AddText("This is the second paragraph and it is one inch away fr
 docContent.Push(secondParagraph);
 slide.AddObject(shape);
 ```
-

@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例展示如何加载邮件合并的数据。
+在文档中加载邮件合并的数据。
 
 ```javascript editor-docx
-// Wraps the text runs in the mail merge fields, loads the mail merge data into the document, and starts the mail merge process.
+// Wrap the text runs in the mail merge fields, loads the mail merge data into the document, and start the mail merge process.
 
 // How to load the data source for mail merge into the document.
 
@@ -44,4 +44,3 @@ paragraph.AddText("!");
 Api.LoadMailMergeData([fields, ["Dear", "John", "Smith"], ["Hello", "Lara", "Davis"]]);
 Api.MailMerge();
 ```
-

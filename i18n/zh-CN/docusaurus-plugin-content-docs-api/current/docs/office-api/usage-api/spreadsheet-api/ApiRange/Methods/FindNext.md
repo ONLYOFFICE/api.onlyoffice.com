@@ -22,7 +22,7 @@ expression.FindNext(After);
 
 ## 示例
 
-此示例查找匹配相同条件的下一个单元格。
+查找与这些相同条件匹配的下一个单元格。
 
 ```javascript editor-xlsx
 // How to get the next cell from a range that meets search requirements.
@@ -51,4 +51,3 @@ searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 let nextSearchRange = range.FindNext(searchRange);
 nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
-

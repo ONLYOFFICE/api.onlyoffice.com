@@ -2,16 +2,16 @@
 
 指定将在指定段落周围的页面左侧显示的边框。
 
-Inherited from [ApiParaPr.SetLeftBorder](../../ApiParaPr/Methods/SetLeftBorder.md).
+继承自 [ApiParaPr.SetLeftBorder](../../ApiParaPr/Methods/SetLeftBorder.md)。
 
 ## 示例
 
-此示例指定将在指定段落周围的页面左侧显示的边框。
+指定在指定段落周围页面左侧显示的边框。
 
 ```javascript editor-docx
-// How to add border to the left side of the paragraph.
+// How to add border to the left side of the paragraph in a document.
 
-// Add left single border.
+// Set left border for a paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -22,4 +22,3 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is the first paragraph. ");
 paragraph.AddText("The paragraph properties styled above set a border at its left side.");
 ```
-

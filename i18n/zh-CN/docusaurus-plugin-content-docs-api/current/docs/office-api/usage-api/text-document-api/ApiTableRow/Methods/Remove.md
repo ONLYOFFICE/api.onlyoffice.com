@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除表格行。
+删除文档中的表格行。
 
 ```javascript editor-docx
-// Delete the row from the table.
+// Delete the row from the table in a document.
 
-// How to remove the first row.
+// How to remove the first row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -37,4 +37,3 @@ row.GetCell(0).GetContent().GetElement(0).AddText("First row");
 row.Remove();
 doc.Push(table);
 ```
-

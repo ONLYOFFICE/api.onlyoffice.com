@@ -2,16 +2,16 @@
 
 设置段落右侧缩进。
 
-Inherited from [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md).
+继承自 [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md)。
 
 ## 示例
 
-此示例设置段落右侧缩进。
+在 PDF 文档中设置段落右侧缩进。
 
 ```javascript editor-pdf
-// How to set a right side indentation using a paragraph properties.
+// How to set a right side indentation using a paragraph properties in a PDF document.
 
-// Create a paragraph setting its right side indentation property.
+// Create a paragraph setting its right side indentation property in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -33,4 +33,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 page.AddObject(shape);
 ```
-

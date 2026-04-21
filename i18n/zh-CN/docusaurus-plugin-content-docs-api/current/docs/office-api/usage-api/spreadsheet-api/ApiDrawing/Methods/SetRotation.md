@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置绘图的旋转角度。
+在电子表格中为绘图对象设置旋转角度。
 
 ```javascript editor-xlsx
+// How do I set rotation in a spreadsheet?
+
+// Set rotation using a drawing object object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -35,4 +39,3 @@ drawing.SetRotation(90);
 let rotAngle = drawing.GetRotation();
 worksheet.GetRange("A1").SetValue("Drawing rotation angle is set to: " + rotAngle + " degrees");
 ```
-

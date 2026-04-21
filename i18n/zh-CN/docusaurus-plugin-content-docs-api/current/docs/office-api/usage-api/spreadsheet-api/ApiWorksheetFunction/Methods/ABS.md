@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何获取数字的绝对值。
+在电子表格中获取数字的绝对值。
 
 ```javascript editor-xlsx
 // How to add absolute value to the worksheet.
 
-// Get a function that gets absolute value.
+// Get a function that gets absolute value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ABS(-123.14));
 ```
-

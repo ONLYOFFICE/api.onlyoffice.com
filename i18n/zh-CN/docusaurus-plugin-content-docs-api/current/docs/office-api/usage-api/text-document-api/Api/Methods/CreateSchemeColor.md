@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-此示例展示如何使用 'dk1' 标识符创建方案颜色。
+在文档中创建标识符为 'dk1' 的配色方案颜色。
 
 ```javascript editor-docx
-// Creates a complex color scheme using the 'dk1' scheme identifier.
+// Create a complex color scheme using the 'dk1' scheme identifier in a document.
 
-// How to create the ApiSchemeColor object and use it as a background for the ApiShape object.
+// How to create the scheme color object and use it as a background for the shape object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("curvedUpArrow", 5930900, 595605, fill, stroke);
 paragraph.AddDrawing(shape);
 ```
-

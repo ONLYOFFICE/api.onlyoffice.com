@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get the count of custom XML parts in the XML manager.
+Get the count of custom XML parts in the XML manager in a presentation.
 
 ```javascript editor-pptx
-// How to get the count of custom XML parts.
+// How to get the count of custom XML parts in a presentation.
 
-// Get the count of XML parts.
+// Get the count of XML parts in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -46,4 +46,3 @@ run.AddText("There are " + count + " custom XML parts in the presentation.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

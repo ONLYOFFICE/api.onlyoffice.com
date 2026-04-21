@@ -25,7 +25,7 @@ object
 
 ## Example
 
-This example shows how to get the document statistics represented as an object.
+Get the document statistics represented as an object in a document.
 
 ```javascript editor-docx
 // How to get the document statistics showing pages count, words count, etc.
@@ -57,4 +57,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Symbols with spaces: " + statistics.SymbolsWSCount);
 doc.Push(paragraph);
 ```
-

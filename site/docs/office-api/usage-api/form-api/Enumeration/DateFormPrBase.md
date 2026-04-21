@@ -15,7 +15,7 @@ Object
 
 ## Example
 
-This example creates a date form with the specific date form properties.
+Create a date form with the specific date form properties.
 
 ```javascript editor-forms
 // How to create a date form with its base properties.
@@ -28,4 +28,3 @@ let dateFormPrBase = {
 };
 let dateForm = Api.CreateDateForm(dateFormPrBase);
 ```
-

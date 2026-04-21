@@ -20,7 +20,7 @@ expression.GetParentMaster();
 
 ## 示例
 
-此示例演示如何获取绘图的父幻灯片母版。
+获取绘图对象的父幻灯片母版。
 
 ```javascript editor-pptx
 // How to get a parent master of a slide shape.
@@ -46,4 +46,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
 ```
-

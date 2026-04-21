@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何获取容器的别名属性。
+获取文档中容器的别名属性。
 
 ```javascript editor-docx
-// How to get an alias of the inline text element.
+// How to get an alias of the inline text element in a document.
 
 // Retrieve the alias of the text element and display it in the document.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Alias: " + alias);
 doc.Push(paragraph);
 ```
-

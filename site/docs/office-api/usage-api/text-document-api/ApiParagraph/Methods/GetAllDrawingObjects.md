@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a collection of drawing objects in the paragraph.
+Get a collection of drawing objects in the paragraph in a document.
 
 ```javascript editor-docx
 // How to retrieve all drawing objects from the document.
 
-// Get all drawings and add color to the first one.
+// Get all drawings and add color to the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -53,4 +53,3 @@ let drawings = paragraph.GetAllDrawingObjects();
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 drawings[0].Fill(fill);
 ```
-

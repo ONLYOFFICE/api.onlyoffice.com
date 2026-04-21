@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example replaces the paragraph with a block level content control.
+Replace the paragraph with a block level content control in a document.
 
 ```javascript editor-docx
-// How to replace paragraph with another element.
+// How to replace paragraph with another element in a document.
 
-// Add a block level content control instead of the paragraph.
+// Add a block level content control instead of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("The paragraph was replaced with the current content control.");
 paragraph.ReplaceByElement(blockLvlSdt);
 ```
-

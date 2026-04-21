@@ -17,10 +17,9 @@
 - "aboveBelow"
 - "formEndnoteNum"
 
-
 ## 示例
 
-此示例添加指向包含尾注的页面的交叉引用。
+添加指向包含尾注的页面的交叉引用。
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with an endnote.
@@ -29,4 +28,3 @@
 
 paragraph.AddEndnoteCrossRef("pageNum", endnoteParagraph);
 ```
-

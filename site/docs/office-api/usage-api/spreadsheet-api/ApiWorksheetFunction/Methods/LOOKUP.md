@@ -24,12 +24,12 @@ number \| string \| boolean
 
 ## Example
 
-This example shows how to look up a value either from a one-row or one-column range. Provided for backwards compatibility.
+Look up a value either from an one-row or one-column range. Provided for backwards compatibility in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to look up a value from a one-row or one-column range.
+// How to look up a value from an one-row or one-column range in a spreadsheet.
 
-// Use a function to find a value from a row or a column range.
+// Use a function to find a value from a row or a column range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -54,4 +54,3 @@ let range1 = worksheet.GetRange("B2:B5");
 let range2 = worksheet.GetRange("C2:C5");
 worksheet.GetRange("F2").SetValue(func.LOOKUP("Ella Tompson", range1, range2));
 ```
-

@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all the chart objects from the slide master.
+Get an array with all the chart objects from the slide master.
 
 ```javascript editor-pptx
 // How to get all charts from the master of presentation.
@@ -54,4 +54,3 @@ const aCharts = master.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 aCharts[0].SetMinorHorizontalGridlines(stroke);
 ```
-

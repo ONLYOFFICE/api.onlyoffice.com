@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何返回所有参数的逻辑异或值。当 true 输入的数量为奇数时，函数返回 true；当 true 输入的数量为偶数时，返回 false。
+在电子表格中返回所有参数的逻辑异或值。当 true 输入的数量为奇数时返回 true，为偶数时返回 false。
 
 ```javascript editor-xlsx
-// How to return the logical Exclusive Or value of all arguments.
+// How to return the logical Exclusive Or value of all arguments in a spreadsheet.
 
-// Use a function to calculate Exclusive Or.
+// Use a function to calculate Exclusive Or in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,4 +36,3 @@ let ans = func.TRUE(); //returns TRUE, doesnt require arguments
 
 worksheet.GetRange("A1").SetValue(ans);
 ```
-

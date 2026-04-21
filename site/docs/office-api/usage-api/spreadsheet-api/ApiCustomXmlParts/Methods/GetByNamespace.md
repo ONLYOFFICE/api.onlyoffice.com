@@ -22,12 +22,12 @@ expression.GetByNamespace(namespace);
 
 ## Example
 
-This example shows how to get custom XML parts by their namespace.
+Get custom XML parts by their namespace in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve custom XML parts using their namespace.
+// How to retrieve custom XML parts using their namespace in a spreadsheet.
 
-// Get XML parts by namespace.
+// Get XML parts by namespace in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -40,4 +40,3 @@ for (let i = 0; i < configParts.length; i++) {
     worksheet.GetRange("A" + (i + 2)).SetValue("Config part " + (i + 1) + ": " + configParts[i].GetXml());
 }
 ```
-

@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to count the cells containing numbers in the field (column) of records in the database that match the conditions you specify.
+Count the cells containing numbers in the field (column) of records in the database that match the conditions you specify in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to count the cells containing numbers in the field (column) of records in the database that match the conditions you specify.
 
-// Use function to count numbers from database records that met a condition specified.
+// Use function to count numbers from database records that met a condition specified in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -48,4 +48,3 @@ let range1 = worksheet.GetRange("A1:C3");
 let range2 = worksheet.GetRange("E1:E2");
 worksheet.GetRange("E4").SetValue(func.DCOUNT(range1, "Sales", range2));
 ```
-

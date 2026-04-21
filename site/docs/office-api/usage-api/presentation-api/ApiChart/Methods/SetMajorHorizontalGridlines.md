@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the visual properties for the major horizontal gridlines.
+Specify the visual properties for the major horizontal gridlines in a presentation.
 
 ```javascript editor-pptx
-// How to set major horizontal gridlines of the chart.
+// How to set major horizontal gridlines of the chart in a presentation.
 
-// Create a chart, set its properties and its major gridlines.
+// Create a chart, set its properties and its major gridlines in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,3 @@ let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.RGB(255, 111, 6
 chart.SetMajorHorizontalGridlines(stroke);
 slide.AddObject(chart);
 ```
-

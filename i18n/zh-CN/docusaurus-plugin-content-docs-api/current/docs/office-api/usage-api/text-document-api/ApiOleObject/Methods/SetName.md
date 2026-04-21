@@ -3,13 +3,17 @@
 设置当前绘图的名称。
 如果已存在同名的另一个绘图，该绘图的名称将重置为默认的自动生成名称。
 
-Inherited from [ApiDrawing.SetName](../../ApiDrawing/Methods/SetName.md).
+继承自 [ApiDrawing.SetName](../../ApiDrawing/Methods/SetName.md)。
 
 ## 示例
 
-此示例展示如何设置绘图的名称。
+设置文档中绘图对象的名称。
 
 ```javascript editor-docx
+// How to set name for a drawing object in a document?
+
+// Set name and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -28,4 +32,3 @@ nameRun.AddText(drawing.GetName());
 nameRun.SetBold(true);
 shapeParagraph.AddElement(nameRun);
 ```
-

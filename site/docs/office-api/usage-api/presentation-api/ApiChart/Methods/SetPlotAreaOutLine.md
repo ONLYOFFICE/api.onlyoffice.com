@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the chart plot area.
+Set the outline to the chart plot area in a presentation.
 
 ```javascript editor-pptx
-// How to set an outline color for the plot area.
+// How to set an outline color for the plot area in a presentation.
 
-// Create a chart, set its properties and its plot area outline.
+// Create a chart, set its properties and its plot area outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111,
 chart.SetPlotAreaOutLine(stroke);
 slide.AddObject(chart);
 ```
-

@@ -6,10 +6,10 @@ Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleS
 
 ## Example
 
-This example finds out whether a text has the double strikeout property set.
+Find out whether a text has the double strikeout property set in a document.
 
 ```javascript editor-docx
-// How to know whether a text is crossed by two horizontal lines.
+// How to know whether a text is crossed by two horizontal lines in a document.
 
 // Retrieve text properties of the form to find out whether it is double stroke out.
 
@@ -34,4 +34,3 @@ let doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 doc.Push(paragraph);
 ```
-

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all slides from current presentation.
+Get all slides from current presentation in a presentation.
 
 ```javascript editor-pptx
+// How to get all slides for a presentation?
+
+// Get all slides and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const firstSlide = presentation.GetSlideByIndex(0);
 
@@ -41,4 +45,3 @@ firstSlide.AddObject(shape);
 const paragraph =  shape.GetContent().GetElement(0);
 paragraph.AddText('Total slides count: ' + slides.length);
 ```
-

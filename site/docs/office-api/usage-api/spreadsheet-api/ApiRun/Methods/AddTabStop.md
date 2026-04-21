@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example adds a tab stop to the run.
+Add a tab stop to the run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a tab to a sentence.
+// How to add a tab to a sentence in a spreadsheet.
 
-// Break two lines of a text run with a tab. 
+// Break two lines of a text run with a tab in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,4 +42,3 @@ run.AddTabStop();
 run.AddText("This is the text which starts after the tab stops.");
 paragraph.AddElement(run);
 ```
-

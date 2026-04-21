@@ -20,10 +20,10 @@ Number
 
 ## Example
 
-This example shows how to get a time of a comment creation in UTC.
+Get a time of a comment creation in UTC in a presentation.
 
 ```javascript editor-pptx
-// How to know when a comment was added.
+// How to know when a comment was added in a presentation.
 
 // Get all comments from the presentation and the first one's time of creation in UTC format.
 
@@ -48,4 +48,3 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's time (UTC): " + timeUTC);
 ```
-

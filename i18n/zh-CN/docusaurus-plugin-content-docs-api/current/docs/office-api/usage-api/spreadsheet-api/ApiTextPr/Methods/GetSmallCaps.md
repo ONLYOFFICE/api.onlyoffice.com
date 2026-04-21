@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例使用其属性获取文本大小写。
+获取电子表格中文本的大写属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is uncapitalized or not.
+// How to find out whether a text is uncapitalized or not in a spreadsheet.
 
-// Find whether a text characters are in small caps or not.
+// Find whether a text characters are in small caps or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -45,4 +45,3 @@ let isSmallCaps = textProps.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + isSmallCaps);
 content.Push(paragraph);
 ```
-

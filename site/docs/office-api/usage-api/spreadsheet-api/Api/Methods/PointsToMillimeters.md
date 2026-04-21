@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to millimeters.
+Convert points to millimeters in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I convert points to millimeters in a spreadsheet?
+
+// Convert points to millimeters in a spreadsheet.
+
 const points = 100;
 const millimeters = Api.PointsToMillimeters(points);
 const text = points + ' points are equal to ' + millimeters + ' millimeters.';
@@ -32,4 +36,3 @@ const text = points + ' points are equal to ' + millimeters + ' millimeters.';
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
 ```
-

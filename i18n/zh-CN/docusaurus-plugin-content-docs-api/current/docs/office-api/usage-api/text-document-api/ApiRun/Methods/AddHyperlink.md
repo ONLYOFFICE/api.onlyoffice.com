@@ -24,12 +24,12 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 ## 示例
 
-此示例向文本块添加超链接。
+在文档中向 run 添加超链接。
 
 ```javascript editor-docx
-// How to add a link to the text.
+// How to add a link to the text in a document.
 
-// Insert a hyperlink to the run indicating its link and title.
+// Insert a hyperlink to the run indicating its link and title in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ run.AddText("ONLYOFFICE Document Builder");
 paragraph.AddElement(run);
 run.AddHyperlink("https://www.onlyoffice.com", "main page");
 ```
-

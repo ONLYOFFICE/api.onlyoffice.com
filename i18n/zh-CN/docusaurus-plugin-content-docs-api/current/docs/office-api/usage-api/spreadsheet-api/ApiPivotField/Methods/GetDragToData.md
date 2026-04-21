@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取透视字段的拖动到数据。
+获取电子表格中透视字段的拖动到数据属性。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to data.
+// How to get a pivot field drag to data in a spreadsheet.
 
-// Create a pivot table, add data to it then get a drag to data of a specified pivot field.
+// Create a pivot table, add data to it then get a drag to data of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -64,4 +64,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A13').SetValue('Drag to data');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToData());
 ```
-

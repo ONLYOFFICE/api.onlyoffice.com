@@ -23,12 +23,12 @@ expression.SetSizes(nWidth, nHeight);
 
 ## 示例
 
-此示例设置当前演示文稿的大小。
+设置当前演示文稿的大小。
 
 ```javascript editor-pptx
 // How to specify the sizes of the current presentation.
 
-// Set the width and height of the ApiPesentation object.
+// Set the width and height of the ApiPesentation object in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -46,4 +46,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("The size of this presentation was changed: width - 254 mm, height - 190 mm.");
 slide.AddObject(shape);
 ```
-

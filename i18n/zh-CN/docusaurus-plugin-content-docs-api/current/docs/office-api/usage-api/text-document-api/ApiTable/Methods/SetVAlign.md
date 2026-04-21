@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置表格的垂直对齐方式。
+在文档中设置表格的垂直对齐方式。
 
 ```javascript editor-docx
 // How to indicate the vertical alignment of the table cell.
 
-// Align the content of the table as bottom.
+// Align the content of the table as bottom in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,4 +47,3 @@ table.SetTableBorderInsideH("single", 4, 0, 255, 111, 61);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample text.");
 table.SetVAlign("bottom");
 ```
-

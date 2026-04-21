@@ -20,7 +20,7 @@ string \| null
 
 ## Example
 
-This example gets a watermark text and pastes it into the document.
+Get a watermark text and paste it into the document.
 
 ```javascript editor-docx
 // How to retrieve the text from the watermark and display it in the document.
@@ -49,4 +49,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Text = " + watermarkSettings2.GetText());
 doc.Push(paragraph);
 ```
-

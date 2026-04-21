@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何获取 XML 管理器中自定义 XML 部件的数量。
+获取电子表格中 XML 管理器中自定义 XML 部件的数量。
 
 ```javascript editor-xlsx
-// How to get the count of custom XML parts.
+// How to get the count of custom XML parts in a spreadsheet.
 
-// Get the count of XML parts.
+// Get the count of XML parts in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -34,4 +34,3 @@ xmlManager.Add("<user><name>John Doe</name><email>john@example.com</email></user
 let count = xmlManager.GetCount();
 worksheet.GetRange("A1").SetValue("There are " + count + " custom XML parts in the workbook.");
 ```
-

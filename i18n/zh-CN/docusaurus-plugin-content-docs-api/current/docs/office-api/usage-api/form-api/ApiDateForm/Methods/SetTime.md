@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例展示如何为日期表单设置日期。
+为文档中的日期表单设置日期。
 
 ```javascript editor-forms
 // How to add a time to the date form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has setted time: " + new Date(timeStamp));
 doc.Push(paragraph);
 ```
-

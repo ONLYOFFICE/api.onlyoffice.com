@@ -11,10 +11,9 @@
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [PictureFormPrBase](../Enumeration/PictureFormPrBase.md)
 
-
 ## 示例
 
-此示例使用通用和特定的图片表单属性创建图片表单。
+使用通用和特定的图片表单属性创建图片表单。
 
 ```javascript editor-forms
 // How to set the properties to the ApiPictureForm object.
@@ -34,4 +33,3 @@ let pictureFormPr = {
 };
 let pictureForm = Api.CreatePictureForm(pictureFormPr);
 ```
-

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a name for data field.
+Set a name for data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a table element.
+// How to rename a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then set a custom data field's name.
+// Create a pivot table, add data to it then set a custom data field's name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -69,4 +69,3 @@ dataField.SetName('My Sum of Price');
 pivotWorksheet.GetRange('A13').SetValue('New Data field name');
 pivotWorksheet.GetRange('B13').SetValue(dataField.GetName());
 ```
-

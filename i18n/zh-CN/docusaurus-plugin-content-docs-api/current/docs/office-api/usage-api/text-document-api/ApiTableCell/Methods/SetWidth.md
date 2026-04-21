@@ -2,11 +2,11 @@
 
 设置当前表格单元格的首选宽度。
 
-Inherited from [ApiTableCellPr.SetWidth](../../ApiTableCellPr/Methods/SetWidth.md).
+继承自 [ApiTableCellPr.SetWidth](../../ApiTableCellPr/Methods/SetWidth.md)。
 
 ## 示例
 
-此示例设置当前表格单元格的首选宽度。
+设置当前表格单元格的首选宽度。
 
 ```javascript editor-docx
 // Resize the width of the cell.
@@ -24,4 +24,3 @@ tableCellPr.SetWidth("twips", 2880);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

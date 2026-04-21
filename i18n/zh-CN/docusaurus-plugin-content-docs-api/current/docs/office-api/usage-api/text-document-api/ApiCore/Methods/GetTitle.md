@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取当前文档的标题。
+获取文档中当前文档的标题。
 
 ```javascript editor-docx
+// How can I get the title using a core properties in a document?
+
+// Get the title for a core properties in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetTitle("My Document Title");
@@ -31,4 +35,3 @@ const title = core.GetTitle();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Title: " + title);
 ```
-

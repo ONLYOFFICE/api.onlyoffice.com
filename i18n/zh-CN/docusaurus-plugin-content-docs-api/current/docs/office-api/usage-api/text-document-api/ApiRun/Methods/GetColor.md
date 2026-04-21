@@ -2,16 +2,16 @@
 
 从当前文本属性获取 RGB 颜色。
 
-Inherited from [ApiTextPr.GetColor](../../ApiTextPr/Methods/GetColor.md).
+继承自 [ApiTextPr.GetColor](../../ApiTextPr/Methods/GetColor.md)。
 
 ## 示例
 
-此示例获取文本的颜色属性。
+获取文档中文本的颜色属性。
 
 ```javascript editor-docx
-// How to get a text color and apply it to the paragraph.
+// How to get a text color and apply it to the paragraph in a document.
 
-// Retrieve color properties of the text.
+// Retrieve color properties of the text in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -36,4 +36,3 @@ paragraph.AddText("Color type: " + type);
 paragraph.SetColor(color);
 doc.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to find out whether a text is italic.
+Find out whether a text is italic in a PDF document.
 
 ```javascript editor-pdf
-// How to know whether a text is set to italic or not.
+// How to know whether a text is set to italic or not in a PDF document.
 
-// Get the text properties of the run and find whether it is italic or not.
+// Get the text properties of the run and find whether it is italic or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,4 +51,3 @@ const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
 ```
-

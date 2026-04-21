@@ -6,7 +6,7 @@ Inherited from [ApiTableCellPr.SetCellMarginRight](../../ApiTableCellPr/Methods/
 
 ## Example
 
-This example specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
+Specify an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
 
 ```javascript editor-docx
 // How to add margin to the right of the cell.
@@ -26,4 +26,3 @@ tableCellPr.SetCellMarginRight(720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

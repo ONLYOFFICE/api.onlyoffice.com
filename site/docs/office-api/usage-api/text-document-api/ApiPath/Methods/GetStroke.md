@@ -20,10 +20,13 @@ boolean
 
 ## Example
 
-Analyzes path properties of a cloud shape.
+Analyzes path properties of a cloud shape. Retrieves and display path dimensions, stroke and fill information.
 
 ```javascript editor-docx
-// Retrieves and displays path dimensions, stroke and fill information.
+// How can I get the stroke using a geometry path in a document?
+
+// Get the stroke for a geometry path in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
@@ -38,4 +41,3 @@ let paths = geometry.GetPaths();
 paragraph.AddText(", Total paths: " + paths.length);
 paragraph.AddDrawing(shape);
 ```
-

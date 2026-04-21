@@ -14,5 +14,3 @@ Enumeration
 - "circle"
 - "star"
 - "square"
-
-

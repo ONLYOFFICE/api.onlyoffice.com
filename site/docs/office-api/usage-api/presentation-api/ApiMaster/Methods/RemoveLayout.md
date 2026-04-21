@@ -23,10 +23,10 @@ boolean
 
 ## Example
 
-This example removes the layouts from the current slide master.
+Remove the layouts from the current slide master.
 
 ```javascript editor-pptx
-// How to delete layout from a master.
+// How to delete layout from a master in a presentation.
 
 // Delete a slide master layout.
 
@@ -52,4 +52,3 @@ paragraph.AddText("Number of layouts after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

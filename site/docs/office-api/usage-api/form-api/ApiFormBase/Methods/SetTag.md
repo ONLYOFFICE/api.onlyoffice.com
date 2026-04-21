@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the tag of a form element.
+Set the tag of a form element in a document.
 
 ```javascript editor-forms
+// How to set tag for a form base?
+
+// Set tag and display the result in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -47,4 +51,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
 ```
-

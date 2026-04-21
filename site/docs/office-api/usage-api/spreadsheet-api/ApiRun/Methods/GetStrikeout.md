@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)
 
 ## Example
 
-This example gets a text strikeout using its property.
+Get a text strikeout using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out or not.
+// How to find out whether a text is stroke out or not in a spreadsheet.
 
-// Get cross out property of a text.
+// Get cross out property of a text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -31,4 +31,3 @@ let isStrikeout = textProps.GetStrikeout();
 paragraph.AddText("Strikeout property: " + isStrikeout);
 content.Push(paragraph);
 ```
-

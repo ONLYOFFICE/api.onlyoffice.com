@@ -196,10 +196,9 @@ Enumeration
 - "wedgeRectCallout"
 - "wedgeRoundRectCallout"
 
-
 ## Example
 
-This example creates a shape using the 'diamond' preset.
+Create a shape using the 'diamond' preset.
 
 ```javascript editor-pptx
 // How to change a shape type of a drawing.
@@ -208,4 +207,3 @@ This example creates a shape using the 'diamond' preset.
 
 let drawing = Api.CreateShape("diamond", 100 * 36000, 100 * 36000, fill, stroke);
 ```
-

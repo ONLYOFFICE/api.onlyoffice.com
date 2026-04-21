@@ -2,16 +2,16 @@
 
 使用指定的系数缩放图形的高度。
 
-Inherited from [ApiDrawing.ScaleHeight](../../ApiDrawing/Methods/ScaleHeight.md).
+继承自 [ApiDrawing.ScaleHeight](../../ApiDrawing/Methods/ScaleHeight.md)。
 
 ## 示例
 
-此示例使用指定的系数缩放图形的高度。
+使用指定系数在文档中缩放图形的高度。
 
 ```javascript editor-docx
-// How to increase the height of the drawing.
+// How to increase the height of the drawing in a document.
 
-// Make the cube longer.
+// Scale height and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -23,4 +23,3 @@ for (let i = 3; i > 0; i--) {
     drawing.ScaleHeight(i);
 }
 ```
-

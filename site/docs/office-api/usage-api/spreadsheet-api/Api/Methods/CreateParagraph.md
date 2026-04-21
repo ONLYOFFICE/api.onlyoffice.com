@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a new paragraph.
+Create a new paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a text in a shape.
+// How to add a text in a shape in a spreadsheet.
 
-// Create a text paragraph for a shape.
+// Create a text paragraph for a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -38,4 +38,3 @@ paragraph.SetJc("left");
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.Push(paragraph);
 ```
-

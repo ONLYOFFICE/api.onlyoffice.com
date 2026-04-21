@@ -20,12 +20,12 @@ expression.GetTextFill();
 
 ## 示例
 
-此示例演示如何确定文本的颜色。
+获取演示文稿中文本的颜色。
 
 ```javascript editor-pptx
-// How to know a color fill of a text.
+// How to know a color fill of a text in a presentation.
 
-// Get the text properties of the run and display its font color.
+// Get the text properties of the run and display its font color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,4 +54,3 @@ const type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 docContent.Push(paragraph);
 ```
-

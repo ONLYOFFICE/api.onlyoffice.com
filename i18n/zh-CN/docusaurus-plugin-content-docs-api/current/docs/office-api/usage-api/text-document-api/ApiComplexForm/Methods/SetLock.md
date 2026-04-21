@@ -2,11 +2,11 @@
 
 设置当前表单的锁定状态。
 
-Inherited from [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md).
+继承自 [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md)。
 
 ## 示例
 
-此示例指定当前表单是否应被锁定。
+指定当前表单是否应被锁定。
 
 ```javascript editor-docx
 // How to lock a form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
 ```
-

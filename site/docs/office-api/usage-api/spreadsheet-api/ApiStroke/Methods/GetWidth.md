@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the width of a stroke in EMU.
+Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a spreadsheet.
 
 ```javascript editor-xlsx
-// Creates shapes with different border widths and displays their widths.
+// How to get the width for a stroke in a spreadsheet?
+
+// Get the width and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 
@@ -45,4 +48,3 @@ let shape3 = worksheet.AddShape("rect", 40 * 36000, 25 * 36000, fill, stroke3, 3
 let width3 = shape3.GetLine().GetWidth();
 worksheet.GetRange("A3").SetValue("Border 3: " + width3 + " EMU (" + (width3 / 12700).toFixed(2) + " pt)");
 ```
-

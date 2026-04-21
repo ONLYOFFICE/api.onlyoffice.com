@@ -28,6 +28,8 @@ boolean
 ```javascript editor-pdf
 // Create table and set its cell bottom border.
 
+// Set cell border bottom using a table cell object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,4 +41,3 @@ cell.SetCellBorderBottom(2, fill);
 
 page.AddObject(table);
 ```
-

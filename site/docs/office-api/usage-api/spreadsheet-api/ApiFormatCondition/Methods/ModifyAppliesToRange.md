@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example modifies the range where a conditional formatting rule applies.
+Modify the range where a conditional formatting rule applies.
 
 ```javascript editor-xlsx
 // How to change the cell range for existing conditional formatting rules.
@@ -56,4 +56,3 @@ condition1.ModifyAppliesToRange(newRange);
 worksheet.GetRange("D1").SetValue("Modified range:");
 worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
 ```
-

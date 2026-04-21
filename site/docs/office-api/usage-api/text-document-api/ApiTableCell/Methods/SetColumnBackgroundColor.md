@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the background color to all cells in the column containing the cell.
+Set the background color to all cells in the column containing the cell.
 
 ```javascript editor-docx
 // How to color the cell column background.
@@ -39,4 +39,3 @@ let cell = table.GetRow(0).GetCell(0);
 cell.SetColumnBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
 ```
-

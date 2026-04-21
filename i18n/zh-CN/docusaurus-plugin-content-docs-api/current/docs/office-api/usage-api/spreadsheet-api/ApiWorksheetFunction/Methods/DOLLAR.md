@@ -23,10 +23,10 @@ string
 
 ## 示例
 
-此示例演示如何使用货币格式 $#.## 将数字转换为文本。
+在电子表格中使用货币格式 $#.## 将数字转换为文本。
 
 ```javascript editor-xlsx
-// How to convert a number to text.
+// How to convert a number to text in a spreadsheet.
 
 // Use function to get text from a number using dollar format.
 
@@ -34,4 +34,3 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DOLLAR(98.9997, 3));
 ```
-

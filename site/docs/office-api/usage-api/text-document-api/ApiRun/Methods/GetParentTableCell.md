@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table cell that contains the run.
+Get a table cell that contains the run in a document.
 
 ```javascript editor-docx
 // Get a parent table cell of the text.
@@ -43,4 +43,3 @@ table.AddElement(cell, 0, paragraph);
 let parentTableCell = run.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
-

@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Sets the outline properties to a shape.
+Set the outline properties to a shape. Creates a rectangle and change its outline to a thick blue line in a presentation.
 
 ```javascript editor-pptx
-// Creates a rectangle and changes its outline to a thick blue line.
+// How to set line for a shape in a presentation?
+
+// Set line and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -41,4 +44,3 @@ shape.SetLine(newStroke);
 paragraph.AddLineBreak();
 paragraph.AddText("Border changed to 3pt blue line");
 ```
-

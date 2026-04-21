@@ -24,12 +24,12 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## Example
 
-This example inserts a paragraph at the specified position.
+Insert a paragraph at the specified position in a document.
 
 ```javascript editor-docx
-// How to insert the paragraph object into the another element.
+// How to insert the paragraph object into the another element in a document.
 
-// Add paragraph to the content control.
+// Add paragraph to the content control in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -38,4 +38,3 @@ let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText("This paragraph was inserted here.");
 paragraph1.InsertParagraph(paragraph2, "after", true);
 ```
-

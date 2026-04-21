@@ -6,10 +6,10 @@ Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)
 
 ## Example
 
-This example finds out whether a text has the strikeout property set.
+Find out whether a text has the strikeout property set in a document.
 
 ```javascript editor-docx
-// How to know whether a text is crossed by one horizontal line.
+// How to know whether a text is crossed by one horizontal line in a document.
 
 // Retrieve text properties of the form to find out whether it is stroke out.
 
@@ -34,4 +34,3 @@ let strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 doc.Push(paragraph);
 ```
-

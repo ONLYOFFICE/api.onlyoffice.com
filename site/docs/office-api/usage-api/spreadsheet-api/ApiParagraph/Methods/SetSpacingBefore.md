@@ -8,12 +8,12 @@ Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBe
 
 ## Example
 
-This example sets the spacing before the current paragraph.
+Set the spacing before the current paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the spacing before the paragraphs using points.
+// How to add the spacing before the paragraphs using points in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing before a custom text.
+// Get a paragraph from the shape's content then add a text specifying the spacing before a custom text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -30,4 +30,3 @@ paraPr.SetSpacingBefore(1440);
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 content.Push(paragraph);
 ```
-

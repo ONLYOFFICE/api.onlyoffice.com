@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the color of color scale criterion.
+Set the color of color scale criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the color of a color scale criterion.
+// How to change the color of a color scale criterion in a spreadsheet.
 
-// Set the color of a color scale criterion.
+// Set the color of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -55,4 +55,3 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C4").SetValue(criteria[0].GetColor() ? "Set" : "None");
 }
 ```
-

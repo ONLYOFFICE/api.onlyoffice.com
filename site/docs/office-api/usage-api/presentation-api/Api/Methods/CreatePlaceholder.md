@@ -22,12 +22,12 @@ expression.CreatePlaceholder(sType);
 
 ## Example
 
-This example shows how to create placeholder for shape.
+Create placeholder for shape in a presentation.
 
 ```javascript editor-pptx
-// How to change a placeholder type of an object.
+// How to change a placeholder type of an object in a presentation.
 
-// Add a placeholder to the shape.
+// Add a placeholder to the shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,4 +42,3 @@ const placeholder = Api.CreatePlaceholder("picture");
 shape.SetPlaceholder(placeholder);
 slide.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如果复选框是单选按钮，如何获取单选按钮组的键。
+获取文档中复选框为单选按钮时的单选组键。
 
 ```javascript editor-docx
 // How to get checkbox form radio group.
 
-// Retrieve type of a created checkbox object and display it.
+// Retrieve type of a created checkbox object and display it in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
@@ -43,4 +43,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Radio group name of the radio buttons in this document: " + radioGroup);
 doc.Push(paragraph);
 ```
-

@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Analyzes path commands of a star shape on a pdf document page. Shows command count and first command details in a text shape.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// How do I get the x in a PDF document?
+
+// Get the x using a path command object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,4 +43,3 @@ paragraph.AddText(", First: " + cmd.GetType() + " at (" + cmd.GetX() + ", " + cm
 shape.SetPosition(1000000, 1000000);
 page.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何转到书签并选择它。
+在文档中转到书签并选中。
 
 ```javascript editor-docx
-// Get a bookmark by its name and then jump to it.
+// Get a bookmark by its name and then jump to it in a document.
 
-// Select a bookmark from the documnet by going to it.
+// Select a bookmark from the documnet by going to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,3 @@ range.AddBookmark("BookmarkName");
 let bookmark = doc.GetBookmark("BookmarkName");
 bookmark.GoTo();
 ```
-

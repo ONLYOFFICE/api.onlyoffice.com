@@ -2,16 +2,16 @@
 
 指定将用于在文档中布局当前表格内容的算法。
 
-Inherited from [ApiTablePr.SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md).
+继承自 [ApiTablePr.SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md)。
 
 ## 示例
 
-此示例指定将用于在文档中布局表格内容的算法。
+指定在文档中用于布局表格内容的算法。
 
 ```javascript editor-docx
-// How to set the table layout.
+// How to set the table layout in a document.
 
-// Create a table and make its layout fixed.
+// Create a table and make its layout fixed in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -27,4 +27,3 @@ let cell = table.GetRow(0).GetCell(0);
 cell.GetContent().GetElement(0).AddText("Fixed layout");
 doc.Push(table);
 ```
-

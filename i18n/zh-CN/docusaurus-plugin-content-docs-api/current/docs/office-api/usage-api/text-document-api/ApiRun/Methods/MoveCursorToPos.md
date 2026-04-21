@@ -24,16 +24,15 @@ boolean
 
 ## 示例
 
-此示例展示如何将光标放置在文本中的指定位置。
+在文档中将光标放置在文本的指定位置。
 
 ```javascript editor-docx
-// How to move the cursor to the specific position of the text.
+// How to move the cursor to the specific position of the text in a document.
 
-// Add text to the paragraph and move the cursor to the 16 position.
+// Add text to the paragraph and move the cursor to the 16 position in a document.
 
 let doc = Api.GetDocument();
 let para = doc.GetElement(0);
 let run = para.AddText("The quick brown fox jumps over the lazy dog");
 run.MoveCursorToPos(16);
 ```
-

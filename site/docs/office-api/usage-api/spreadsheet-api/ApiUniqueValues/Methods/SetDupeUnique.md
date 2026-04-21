@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the duplicate/unique value setting for a unique values conditional formatting rule.
+Set the duplicate/unique value setting for an unique values conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change between highlighting unique or duplicate values.
+// How to change between highlighting unique or duplicate values in a spreadsheet.
 
-// Set unique values rule to highlight duplicates instead.
+// Set unique values rule to highlight duplicates instead in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,4 +52,3 @@ worksheet.GetRange("C1").SetValue("Setting before: " + settingBefore);
 worksheet.GetRange("C2").SetValue("Setting after: " + settingAfter);
 worksheet.GetRange("C3").SetValue("Now highlighting duplicates");
 ```
-

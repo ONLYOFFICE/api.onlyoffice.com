@@ -22,9 +22,13 @@ expression.GetItem(nIndex);
 
 ## 示例
 
-此示例展示如何获取组合框/下拉列表的值项目。
+获取文档中组合框/下拉列表的值项目。
 
 ```javascript editor-docx
+// How do I get the item in a document?
+
+// Get the item using a content control list object in a document.
+
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let contentControlList = cc.GetDropdownList();
@@ -33,4 +37,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("First item value: " + listItem.GetValue());
 doc.AddElement(0, paragraph);
 ```
-

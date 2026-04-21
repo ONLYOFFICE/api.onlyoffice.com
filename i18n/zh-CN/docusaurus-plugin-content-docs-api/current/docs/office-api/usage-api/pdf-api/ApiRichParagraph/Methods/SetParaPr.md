@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为富文本段落设置富文本段落属性。
+在 PDF 文档中为富文本段落设置富文本段落属性。
 
 ```javascript editor-pdf
+// How do I set para pr in a PDF document?
+
+// Set para pr using a rich paragraph object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -43,4 +47,3 @@ para.SetParaPr(paraPr);
 
 console.log(`We set new rich paragraph properties to rich paragraph`);
 ```
-

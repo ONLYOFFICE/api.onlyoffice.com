@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何根据整个总体计算标准差，包括逻辑值和文本。文本和 false 逻辑值的值为 0；true 逻辑值的值为 1。
+在电子表格中基于整个总体计算标准差，包括逻辑值和文本。文本和 false 逻辑值为 0；true 逻辑值为 1。
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population considering logical and text data types.
+// How to calculate standard deviation based on the entire population considering logical and text data types in a spreadsheet.
 
-// Use a function to get the standard deviation.
+// Use a function to get the standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -44,4 +44,3 @@ let ans = func.STDEVPA(1, 0, 0, false, 5, 1, 0, 0, 2, true, 6, 7, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

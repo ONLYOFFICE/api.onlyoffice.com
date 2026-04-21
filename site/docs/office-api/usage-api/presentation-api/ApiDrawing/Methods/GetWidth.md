@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets width of shape and inserts it into the presentation.
+Get width of shape and insert it into the presentation.
 
 ```javascript editor-pptx
 // How to find a shape's width and display it on the slide.
@@ -42,4 +42,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing width: " + width);
 slide.AddObject(shape);
 ```
-

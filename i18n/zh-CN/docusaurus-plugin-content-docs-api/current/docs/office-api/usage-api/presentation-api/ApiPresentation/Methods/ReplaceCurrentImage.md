@@ -24,12 +24,12 @@ expression.ReplaceCurrentImage(sImageUrl, Width, Height);
 
 ## 示例
 
-此示例演示如何用指定的图像替换当前图像。
+在演示文稿中用指定的图像替换当前图像。
 
 ```javascript editor-pptx
-// How to replace an image with another one.
+// How to replace an image with another one in a presentation.
 
-// Replace the current ApiImage with another image on the slide.
+// Replace the current image with another image on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,4 +43,3 @@ slide.AddObject(drawing);
 drawing.Select();
 presentation.ReplaceCurrentImage(url2, 60 * 36000, 60 * 36000);
 ```
-

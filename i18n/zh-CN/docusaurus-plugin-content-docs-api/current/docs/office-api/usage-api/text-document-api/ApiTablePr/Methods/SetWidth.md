@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置表格的首选宽度。
+在文档中设置表格的首选宽度。
 
 ```javascript editor-docx
-// How to change the width of the table.
+// How to change the width of the table in a document.
 
-// Set the table width in percentage.
+// Set the table width in percentage in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ tablePr.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

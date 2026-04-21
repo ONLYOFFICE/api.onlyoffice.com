@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetIndLeft](../../ApiParaPr/Methods/SetIndLeft.md).
 
 ## Example
 
-This example sets the paragraph left side indentation.
+Set the paragraph left side indentation in a document.
 
 ```javascript editor-docx
-// How to set the indentation for the paragraph left side.
+// How to set the indentation for the paragraph left side in a document.
 
-// Create a new paragraph and set its left side indentation.
+// Create a new paragraph and set its left side indentation in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -33,4 +33,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 doc.Push(paragraph);
 ```
-

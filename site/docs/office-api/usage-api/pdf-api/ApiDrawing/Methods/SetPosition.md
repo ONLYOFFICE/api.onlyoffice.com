@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to change a position of a drawing.
+How to change a position of a drawing in a PDF document.
 
 ```javascript editor-pdf
 // Get a shape object from a page and move it.
+
+// Set position using a drawing object object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +47,3 @@ paragraph.AddText("This is an example of a paragraph inside a shape. Nothing spe
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-此示例指定图表数据标签的显示选项。
+在演示文稿中指定图表数据标签的显示选项。
 
 ```javascript editor-pptx
-// How to show specific chart data labels with options.
+// How to show specific chart data labels with options in a presentation.
 
-// Create a chart, set its properties and the visibility of its data labels options.
+// Create a chart, set its properties and the visibility of its data labels options in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,4 +55,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

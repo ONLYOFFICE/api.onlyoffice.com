@@ -24,7 +24,7 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-此示例向文档添加批注。
+向文档添加批注。
 
 ```javascript editor-docx
 // How to comment the document.
@@ -38,4 +38,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("The comment was added to this document.");
 doc.AddComment("This is a comment to the document.", "Jane");
 ```
-

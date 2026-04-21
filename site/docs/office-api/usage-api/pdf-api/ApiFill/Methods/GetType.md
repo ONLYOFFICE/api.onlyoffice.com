@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill type and displays it.
+Get the fill type and display it. Creates shapes with different fill types and show their types in a PDF document.
 
 ```javascript editor-pdf
-// Creates shapes with different fill types and shows their types.
+// How to get the type for a fill in a PDF document?
+
+// Get the type and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -60,4 +63,3 @@ let para3 = content3.GetElement(0);
 let fill3 = shape3.GetFill();
 para3.AddText("No fill: " + fill3.GetType());
 ```
-

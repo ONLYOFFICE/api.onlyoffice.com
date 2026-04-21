@@ -20,12 +20,12 @@ expression.GetTheme();
 
 ## 示例
 
-此示例演示如何获取幻灯片母版的主题。
+获取演示文稿中幻灯片母版的主题。
 
 ```javascript editor-pptx
 // How to get a theme knowing a slide master and set its color scheme.
 
-// Get slide master theme.
+// Get slide master theme using the slide master API in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,4 +54,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

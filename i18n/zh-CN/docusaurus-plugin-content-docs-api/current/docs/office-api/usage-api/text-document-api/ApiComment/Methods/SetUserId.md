@@ -22,10 +22,10 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-此示例设置批注作者的用户 ID。
+在文档中设置批注作者的用户 ID。
 
 ```javascript editor-docx
-// How to change an author's user ID of a comment.
+// How to change an author's user ID of a comment in a document.
 
 // Get all comments from the presentation and change its first one's user ID.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Comment user ID: " + userId);
 doc.Push(paragraph);
 ```
-

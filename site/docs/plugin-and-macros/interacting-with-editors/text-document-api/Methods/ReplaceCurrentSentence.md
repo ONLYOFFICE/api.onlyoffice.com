@@ -26,4 +26,3 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("ReplaceCurrentSentence", ["ONLYOFFICE", "entirely"]);
 ```
-

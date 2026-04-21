@@ -2,13 +2,17 @@
 
 从文档中移除批注。
 
-Inherited from [ApiBaseAnnotation.Delete](../../ApiBaseAnnotation/Methods/Delete.md).
+继承自 [ApiBaseAnnotation.Delete](../../ApiBaseAnnotation/Methods/Delete.md)。
 
 ## 示例
 
-此示例从文档中删除方形注释。
+从文档中移除方形注释。
 
 ```javascript editor-pdf
+// How to delete for an annotation in a PDF document?
+
+// Delete and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
@@ -17,4 +21,3 @@ squareAnnot.SetBorderStyle("dashed");
 squareAnnot.SetDashPattern([8, 4, 4, 4]);
 squareAnnot.Delete();
 ```
-

@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建内联内容控件的副本。
+在文档中创建内联内容控件的副本。
 
 ```javascript editor-docx
-// How to create a duplicate of the inline text element.
+// How to create a duplicate of the inline text element in a document.
 
-// Add inline content control and its copy to the paragraph separated by a line break.
+// Add inline content control and its copy to the paragraph separated by a line break in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ let copyInlineLvlSdt = inlineLvlSdt.Copy();
 paragraph.AddLineBreak();
 paragraph.AddInlineLvlSdt(copyInlineLvlSdt);
 ```
-

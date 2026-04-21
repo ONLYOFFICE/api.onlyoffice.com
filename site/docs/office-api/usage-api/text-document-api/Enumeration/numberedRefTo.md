@@ -21,10 +21,9 @@ Enumeration
 - "text"
 - "aboveBelow"
 
-
 ## Example
 
-This example adds a cross-reference to the page containing a numbered paragraph.
+Add a cross-reference to the page containing a numbered paragraph.
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with a numbered paragraph.
@@ -33,4 +32,3 @@ This example adds a cross-reference to the page containing a numbered paragraph.
 
 paragraph.AddNumberedCrossRef("pageNum", numberedParagraph, true, true);
 ```
-

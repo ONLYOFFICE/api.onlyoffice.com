@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例使用其属性获取文本下划线。
+获取电子表格中文本的下划线属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is underlined or not.
+// How to find out whether a text is underlined or not in a spreadsheet.
 
-// Get underlined property of a text run object.
+// Get underlined property of a text run object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -45,4 +45,3 @@ let isUnderline = textProps.GetUnderline();
 paragraph.AddText("Underline property: " + isUnderline);
 content.Push(paragraph);
 ```
-

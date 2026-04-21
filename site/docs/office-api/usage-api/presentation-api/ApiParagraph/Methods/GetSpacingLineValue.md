@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacin
 
 ## Example
 
-This example shows how to get the paragraph line spacing value.
+Get the paragraph line spacing value in a presentation.
 
 ```javascript editor-pptx
-/// How to get the spacing line value between sentences of a paragraph.
+// / How to get the spacing line value between sentences of a paragraph in a presentation.
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value.
+// Create a paragraph, set the spacing line between the sentences and retrieve the value in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line value : " + spacingLineValue);
 docContent.Push(paragraph);
 ```
-

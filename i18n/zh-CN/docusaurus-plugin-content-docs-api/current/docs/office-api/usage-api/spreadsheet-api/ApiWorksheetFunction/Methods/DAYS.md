@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回两个日期之间的天数。
+在电子表格中返回两个日期之间的天数。
 
 ```javascript editor-xlsx
-// How to get difference between two dates in days.
+// How to get difference between two dates in days in a spreadsheet.
 
-// Use function to get days count between two dates.
+// Use function to get days count between two dates in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,4 +37,3 @@ let ans = func.DAYS("3/31/2018", "3/16/2018");
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

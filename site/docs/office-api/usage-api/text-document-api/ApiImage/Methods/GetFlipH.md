@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md).
 
 ## Example
 
-This example checks whether the drawing is flipped horizontally.
+Check whether the drawing is flipped horizontally in a document.
 
 ```javascript editor-docx
-// How to get the horizontal flip property of the shape.
+// How to get the horizontal flip property of the shape in a document.
 
-// Create a drawing, add text to it, and read its horizontal flip value.
+// Create a drawing, add text to it, and read its horizontal flip value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -24,4 +24,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing is flipped horizontally: " + flip);
 doc.AddElement(0, paragraph);
 ```
-

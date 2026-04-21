@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何将以小数形式表示的美元价格转换为以分数形式表示的美元价格。
+在电子表格中将以小数表示的美元价格转换为以分数表示的美元价格。
 
 ```javascript editor-xlsx
-// How to convert a dollar price from decimal to fraction.
+// How to convert a dollar price from decimal to fraction in a spreadsheet.
 
-// Use function to get fraction from decimal price.
+// Use function to get fraction from decimal price in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DOLLARFR(1.1875, 16));
 ```
-

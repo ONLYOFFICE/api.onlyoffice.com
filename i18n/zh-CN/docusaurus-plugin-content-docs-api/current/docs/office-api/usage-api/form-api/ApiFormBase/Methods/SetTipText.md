@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为表单设置提示文本。
+为表单设置提示文本。
 
 ```javascript editor-forms
 // Add text as a tip of the form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Tip text: " + tipText);
 doc.Push(paragraph);
 ```
-

@@ -20,10 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-如何获取 ApiTableCell 的类类型。
+获取表格单元格对象的类类型。
 
 ```javascript editor-pdf
-// Retrieve class type of ApiTableCell object and insert it to the page.
+// How can I get the class type of a table cell?
+
+// Get the class type of a table cell and display it in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +41,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

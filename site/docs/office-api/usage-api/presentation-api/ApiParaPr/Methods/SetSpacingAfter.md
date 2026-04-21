@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Set the spacing after the current paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set the size of a spacing after a text from a paragraph properties.
+// How to set the size of a spacing after a text from a paragraph properties in a presentation.
 
-// Change the size property of a spacing after a paragraph.
+// Change the size property of a spacing after a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -56,4 +56,3 @@ secondParagraph.AddText("This is the second paragraph and it is one inch away fr
 docContent.Push(secondParagraph);
 slide.AddObject(shape);
 ```
-

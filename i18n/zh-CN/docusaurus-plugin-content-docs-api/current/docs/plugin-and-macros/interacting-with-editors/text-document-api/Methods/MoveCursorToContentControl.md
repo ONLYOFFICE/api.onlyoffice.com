@@ -26,4 +26,3 @@ expression.MoveCursorToContentControl(id, isBegin);
 ```javascript
 window.Asc.plugin.executeMethod ("MoveCursorToContentControl", ["2_839", false]);
 ```
-

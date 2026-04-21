@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a number from 1 to 7 identifying the day of the week of the specified date.
+Return a number from 1 to 7 identifying the day of the week of the specified date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return a weekday.
+// How to return a weekday in a spreadsheet.
 
-// Use a function to get a weekday using numbers.
+// Use a function to get a weekday using numbers in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,4 +37,3 @@ let ans = func.WEEKDAY("11/5/2018", 2);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

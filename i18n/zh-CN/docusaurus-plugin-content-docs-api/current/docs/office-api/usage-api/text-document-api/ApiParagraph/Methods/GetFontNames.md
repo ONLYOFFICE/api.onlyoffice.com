@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-此示例展示如何获取段落中所有元素的所有字体名称。
+获取文档中段落内所有元素的所有字体名称。
 
 ```javascript editor-docx
-// How to get the font names of the paragraph.
+// How to get the font names of the paragraph in a document.
 
-// Print all font names separated by a colon.
+// Print all font names separated by a colon in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ let newParagraph = Api.CreateParagraph();
 newParagraph.AddText("Fonts from previous paragraph: " + fonts.join(", "));
 doc.AddElement(1, newParagraph);
 ```
-

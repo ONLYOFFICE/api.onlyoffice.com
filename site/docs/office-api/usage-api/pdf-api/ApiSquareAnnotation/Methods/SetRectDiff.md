@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets rect diff to square annotation.
+Set rect diff to square annotation in a PDF document.
 
 ```javascript editor-pdf
+// How can I set rect diff using a square annotation in a PDF document?
+
+// Set rect diff for a square annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
@@ -34,4 +38,3 @@ squareAnnot.SetBorderEffectIntensity(1);
 squareAnnot.SetRectDiff([10, 10, 10, 10]);
 console.log(`Annot rect diff is: ${squareAnnot.GetRectDiff()}`);
 ```
-

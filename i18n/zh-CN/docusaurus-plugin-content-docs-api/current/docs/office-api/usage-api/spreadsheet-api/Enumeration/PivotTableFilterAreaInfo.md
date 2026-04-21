@@ -12,4 +12,3 @@ object
 | ---- | ---- | ----------- |
 | ReportFilterFields | number | 定义报表筛选字段的数量。 |
 | Type | [FieldsInReportFilterType](../Enumeration/FieldsInReportFilterType.md) | 指定报表筛选字段的位置方式。 |
-

@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the text paddings to the current shape.
+Set the text paddings to the current shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to update paddings of the drawing.
+// How to update paddings of the drawing in a spreadsheet.
 
-// Create a shape and set its paddings.
+// Create a shape and set its paddings in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -46,4 +46,3 @@ paragraph.AddText("Left: 2cm, Top: 0.5cm, Right: 0.5cm, Bottom: 0.3cm");
 shape.SetPaddings(20 * 36000, 5 * 36000, 5 * 36000, 3 * 36000);
 content.Push(paragraph);
 ```
-

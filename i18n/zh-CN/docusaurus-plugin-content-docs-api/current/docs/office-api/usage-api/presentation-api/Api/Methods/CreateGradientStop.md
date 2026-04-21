@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## 示例
 
-此示例展示如何创建用于不同类型渐变的渐变光圈。
+在演示文稿中创建用于不同类型渐变的渐变光圈。
 
 ```javascript editor-pptx
-// How to add a gradient stop for gradient.
+// How to add a gradient stop for gradient in a presentation.
 
-// Create a stop for a gradient.
+// Create a stop for a gradient in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,4 +42,3 @@ const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 3600
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
 ```
-

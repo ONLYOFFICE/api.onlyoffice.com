@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the format scheme of the theme.
+Get the format scheme of the theme in a presentation.
 
 ```javascript editor-pptx
 // How to get a format scheme from a theme.
@@ -48,4 +48,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
 ```
-

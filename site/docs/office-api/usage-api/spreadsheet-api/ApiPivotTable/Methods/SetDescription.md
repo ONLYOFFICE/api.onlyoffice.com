@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a description of a table.
+Set a description of a table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a description of a table.
+// How to rename a description of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its description.
+// Create a pivot table, add data to it then set its description in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,4 +68,3 @@ pivotWorksheet.GetRange('A11').SetValue('My description');
 pivotTable.SetDescription('Awesome description');
 pivotWorksheet.GetRange('B11').SetValue(pivotTable.GetDescription());
 ```
-

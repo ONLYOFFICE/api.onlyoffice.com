@@ -22,9 +22,13 @@ expression.SetCreator(sCreator);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置当前工作簿的创建者。
+在电子表格中使用核心属性设置当前工作簿的创建者。
 
 ```javascript editor-xlsx
+// How to set creator for a core properties in a spreadsheet?
+
+// Set creator and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -43,4 +47,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Creator: " + creator);
 ```
-

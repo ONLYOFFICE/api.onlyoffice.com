@@ -27,4 +27,3 @@ window.Asc.plugin.executeMethod ("SetMacros", [JSON.stringify (Content)], functi
     window.Asc.plugin.executeCommand ("close", "");
 });
 ```
-

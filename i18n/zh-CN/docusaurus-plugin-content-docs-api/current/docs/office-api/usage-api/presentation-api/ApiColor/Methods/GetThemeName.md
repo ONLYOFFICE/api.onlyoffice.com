@@ -20,9 +20,13 @@ expression.GetThemeName();
 
 ## 示例
 
-此示例展示如何获取形状填充中使用的主题颜色名称。
+获取演示文稿中形状填充使用的主题颜色名称。
 
 ```javascript editor-pptx
+// How do I get the theme name in a presentation?
+
+// Get the theme name using a color object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,4 +45,3 @@ run.AddText('Theme name: ' + themeColor.GetThemeName());
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

@@ -22,12 +22,12 @@ expression.SetSubtotals(subtotals);
 
 ## 示例
 
-此示例展示如何设置透视字段的分类汇总。
+在电子表格中设置透视字段的小计。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotals.
+// How to change a pivot field subtotals in a spreadsheet.
 
-// Create a pivot table, add data to it then set subtotals of a specified pivot.
+// Create a pivot table, add data to it then set subtotals of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -75,4 +75,3 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 ```
-

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get bookmark name.
+Get bookmark name in a document.
 
 ```javascript editor-docx
-// How to add a bookmark indicating its name and then display it.
+// How to add a bookmark indicating its name and then display it in a document.
 
-// Show current bookmark name.
+// Show current bookmark name in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ let bookmark = doc.GetBookmark("BookmarkName");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark with name: " + bookmark.GetName());
 ```
-

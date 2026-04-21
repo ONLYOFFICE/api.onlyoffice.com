@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查演示文稿中组返回的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiGroup.
+// How do I check what type a group object is in a presentation?
 
-// Retrieve class type of ApiGroup object and insert it to the slide.
+// Retrieve and output the class type string for a group in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -55,4 +55,3 @@ const docContent2 = shape2.GetDocContent();
 const paragraph2 = docContent2.GetElement(0);
 paragraph2.AddText("Class Type = " + classType);
 ```
-

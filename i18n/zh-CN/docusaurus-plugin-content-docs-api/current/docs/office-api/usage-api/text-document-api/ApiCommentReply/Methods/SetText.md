@@ -22,10 +22,10 @@ expression.SetText(sText);
 
 ## 示例
 
-此示例设置批注回复文本。
+设置文档中批注回复的文本。
 
 ```javascript editor-docx
-// How to change a text of a comment reply.
+// How to change a text of a comment reply in a document.
 
 // Get all comments from the presentation and set its first one's reply text.
 
@@ -38,4 +38,3 @@ comments[0].AddReply("reply1", "Mark Potato", "uid-2", 0);
 let commentReply = comments[0].GetReply(0);
 commentReply.SetText("new reply");
 ```
-

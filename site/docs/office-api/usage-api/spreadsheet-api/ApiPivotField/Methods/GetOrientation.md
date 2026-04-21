@@ -21,12 +21,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an orientation of a pivot field.
+Get an orientation of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field orientation.
+// How to get a pivot field orientation in a spreadsheet.
 
-// Create a pivot table, add data to it then get an orientation of a specified pivot field.
+// Create a pivot table, add data to it then get an orientation of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -64,4 +64,3 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A12').SetValue('The Style field orientation');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetOrientation());
 ```
-

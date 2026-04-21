@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example reads the operator used by a filter.
+Read the operator used by a filter in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to detect the type of filter (values, custom AND/OR, dynamic, top10, etc.).
+// How to detect the type of filter (values, custom AND/OR, dynamic, top10, etc.) in a spreadsheet.
 
-// Use ApiFilter.GetOperator() to identify the filter operator.
+// Use ApiFilter.GetOperator() to identify the filter operator in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,4 +52,3 @@ if (filters.length > 0) {
     worksheet.GetRange("D1").SetValue(filter.GetOperator());   // or filter.Operator
 }
 ```
-

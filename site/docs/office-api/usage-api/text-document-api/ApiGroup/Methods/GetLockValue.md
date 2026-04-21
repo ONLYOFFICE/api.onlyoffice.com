@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetLockValue](../../ApiDrawing/Methods/GetLockValue.m
 
 ## Example
 
-This example shows how to get the lock value for the specified lock type of the drawing.
+Get the lock value for the specified lock type of the drawing in a document.
 
 ```javascript editor-docx
-// How to set lock value of the shape.
+// How to set lock value of the shape in a document.
 
-// Get a boolean that shows that drawing can be selected or not.
+// Get a boolean that shows that drawing can be selected or not in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 ```
-

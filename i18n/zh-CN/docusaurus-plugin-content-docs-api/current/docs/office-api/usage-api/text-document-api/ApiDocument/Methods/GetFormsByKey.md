@@ -22,9 +22,13 @@ expression.GetFormsByKey(key);
 
 ## 示例
 
-此示例展示如何获取文档中具有指定键的所有表单列表。
+获取文档中具有指定键的所有表单列表。
 
 ```javascript editor-docx
+// How do I get the forms by key in a document?
+
+// Get the forms by key using a document object.
+
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "FirstName", "tip": "Enter your first name", "tag": "form_1", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);
@@ -43,4 +47,3 @@ paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Number of forms with key 'FirstName': " + forms.length);
 ```
-

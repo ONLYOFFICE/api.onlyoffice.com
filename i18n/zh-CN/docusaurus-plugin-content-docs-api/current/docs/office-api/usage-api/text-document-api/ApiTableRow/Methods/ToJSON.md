@@ -2,14 +2,14 @@
 
 将 ApiTableRowPr 对象转换为 JSON 对象。
 
-Inherited from [ApiTableRowPr.ToJSON](../../ApiTableRowPr/Methods/ToJSON.md).
+继承自 [ApiTableRowPr.ToJSON](../../ApiTableRowPr/Methods/ToJSON.md)。
 
 ## 示例
 
-此示例将 ApiTableRowPr 对象转换为 JSON 对象。
+将文档中的表格行属性对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the table row properties.
+// How to get a JSON from the table row properties in a document.
 
 // Convert the table row properties to json and add it to the document.
 
@@ -28,4 +28,3 @@ let classType = tableRowPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 ```
-

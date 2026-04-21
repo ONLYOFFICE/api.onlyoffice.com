@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例获取区域中条件格式规则的数量。
+获取范围内条件格式规则的数量。
 
 ```javascript editor-xlsx
 // How to get the number of conditional formatting rules applied to cells.
@@ -44,4 +44,3 @@ formatConditions.AddDatabar();
 
 worksheet.GetRange("B1").SetValue("Count: " + formatConditions.GetCount());
 ```
-

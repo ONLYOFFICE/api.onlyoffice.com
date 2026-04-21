@@ -2,16 +2,16 @@
 
 设置对象（图像、形状、图表）边界框的大小。
 
-Inherited from [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md).
+继承自 [ApiDrawing.SetSize](../../ApiDrawing/Methods/SetSize.md)。
 
 ## 示例
 
-此示例设置形状边界框的大小。
+设置文档中形状边界框的大小。
 
 ```javascript editor-docx
-// How to resize the drawing.
+// How to resize the drawing in a document.
 
-// Set the height and the width of the shape. 
+// Set the height and the width of the shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -31,4 +31,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The shape was created with a size of 53x39 millimeters, then resized to the size of 2x2 inches.");
 doc.Push(paragraph);
 ```
-

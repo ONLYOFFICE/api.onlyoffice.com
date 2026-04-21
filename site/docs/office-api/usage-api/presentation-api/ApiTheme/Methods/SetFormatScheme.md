@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the format scheme to the current presentation theme.
+Set the format scheme to the current presentation theme.
 
 ```javascript editor-pptx
 // How to get a theme and set a new format scheme.
@@ -63,4 +63,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

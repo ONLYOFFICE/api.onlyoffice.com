@@ -6,7 +6,7 @@ Inherited from [ApiDrawing.GetParentTableCell](../../ApiDrawing/Methods/GetParen
 
 ## Example
 
-This example showh how to get a parent table cell that contains the graphic object.
+Get the parent table cell that contains the graphic object.
 
 ```javascript editor-docx
 // Get an element's parent table cell.
@@ -30,4 +30,3 @@ let cellContent = parentCell.GetContent().GetElement(0);
 cellContent.AddLineBreak();
 cellContent.AddText("This is a parent cell");
 ```
-

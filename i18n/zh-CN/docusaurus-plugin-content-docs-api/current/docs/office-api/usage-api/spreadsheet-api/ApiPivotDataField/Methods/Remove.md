@@ -20,12 +20,12 @@ expression.Remove();
 
 ## 示例
 
-此示例展示如何删除数据字段。
+删除电子表格中的数据字段。
 
 ```javascript editor-xlsx
-// How to remove a table element.
+// How to remove a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then delete a custom data field.
+// Create a pivot table, add data to it then delete a custom data field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ setTimeout(function() {
     dataField.Remove();
 }, 5000);
 ```
-

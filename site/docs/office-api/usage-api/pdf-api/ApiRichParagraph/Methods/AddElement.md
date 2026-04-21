@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example adds new element to rich paragraph.
+Add new element to rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How do I add the element in a PDF document?
+
+// Add the element using a rich paragraph object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -42,4 +46,3 @@ para.AddElement(newRun, 0);
 
 console.log("We added new rich run element to rich paragraph");
 ```
-

@@ -97,4 +97,3 @@ var initSettings = {
 };
 window.Asc.plugin.executeMethod("SetProperties", [initSettings]);
 ```
-

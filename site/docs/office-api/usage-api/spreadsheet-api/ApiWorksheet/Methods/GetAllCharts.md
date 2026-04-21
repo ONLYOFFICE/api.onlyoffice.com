@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all charts from the sheet.
+Get all charts from the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all charts.
+// How to get all charts in a spreadsheet.
 
-// Get all charts as an array.
+// Get all charts as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -49,4 +49,3 @@ let charts = worksheet.GetAllCharts();
 let stroke = Api.CreateStroke(1 * 5000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
 ```
-

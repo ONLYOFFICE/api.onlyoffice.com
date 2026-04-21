@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例展示如何替换当前单词。
+替换文档中的当前单词。
 
 ```javascript editor-docx
-// How to change the word to another one.
+// How to change the word to another one in a document.
 
-// Add the new word instead of another using cursor position.
+// Add the new word instead of another using cursor position in a document.
 
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.MoveCursorToPos(1);
 
 doc.ReplaceCurrentWord("fox");
 ```
-

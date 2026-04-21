@@ -31,7 +31,7 @@ object
 
 ## 示例
 
-此示例演示如何获取表示为对象的文档信息并将应用程序名称粘贴到「A1」单元格。
+获取表示为对象的文档信息，并将应用程序名称粘贴到电子表格的"A1"单元格。
 
 ```javascript editor-xlsx
 // How to get document info and iys application name.
@@ -42,4 +42,3 @@ let docInfo = Api.GetDocumentInfo();
 let range = Api.GetActiveSheet().GetRange('A1');
 range.SetValue('This document has been created with: ' + docInfo.Application);
 ```
-

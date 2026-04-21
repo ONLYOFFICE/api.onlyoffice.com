@@ -37,4 +37,3 @@ let commentData = {
 };
 window.Asc.plugin.executeMethod ("AddComment", [commentData]);
 ```
-

@@ -6,7 +6,7 @@ Inherited from [ApiDrawing.GetParentSlide](../../ApiDrawing/Methods/GetParentSli
 
 ## Example
 
-This example show how to get the drawing parent slide.
+Get the drawing parent slide.
 
 ```javascript editor-pptx
 // How to get a parent slide of a slide shape.
@@ -32,4 +32,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
 ```
-

@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例展示如何获取当前幻灯片在演示文稿中的位置。
+获取当前幻灯片在演示文稿中的位置。
 
 ```javascript editor-pptx
 // How to return a slide index.
@@ -45,4 +45,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Slide index = " + index);
 slide.AddObject(shape);
 ```
-

@@ -2,16 +2,16 @@
 
 返回下一个内联绘图对象（如果存在）。
 
-Inherited from [ApiDrawing.GetNextDrawing](../../ApiDrawing/Methods/GetNextDrawing.md).
+继承自 [ApiDrawing.GetNextDrawing](../../ApiDrawing/Methods/GetNextDrawing.md)。
 
 ## 示例
 
-此示例展示如何获取下一个内联绘图对象（如果存在）。
+获取文档中的下一个内联绘图对象（如果存在）。
 
 ```javascript editor-docx
-// How to set horizontal flip for the next drawing.
+// How to set horizontal flip for the next drawing in a document.
 
-// Get the next drawing and update its properties.
+// Get the next drawing and update its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -24,4 +24,3 @@ paragraph.AddDrawing(copyDrawing);
 let nextDrawing = drawing.GetNextDrawing();
 nextDrawing.SetHorFlip(true);
 ```
-

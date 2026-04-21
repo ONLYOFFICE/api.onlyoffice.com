@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example checks if the content control is a form.
+Check if the content control is a form.
 
 ```javascript editor-docx
 // How to know whether the inline text control is a form or not.
 
-// Check whether the inline text control is a fomrm and display it.
+// Check whether the inline text control is a fomrm and display it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first content control from this document is a form: " + isForm);
 doc.Push(paragraph);
 ```
-

@@ -25,4 +25,3 @@ expression.SetDisplayModeInReview(sMode);
 ```javascript
 window.Asc.plugin.executeMethod ("SetDisplayModeInReview", ["edit"]);
 ```
-

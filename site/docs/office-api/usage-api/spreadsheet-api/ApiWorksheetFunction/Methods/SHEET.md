@@ -22,16 +22,15 @@ number
 
 ## Example
 
-This example shows how to return the sheet number of the reference sheet.
+Return the sheet number of the reference sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a sheet number.
+// How to get a sheet number in a spreadsheet.
 
-// Use a function to get a sheet index.
+// Use a function to get a sheet index in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet(); 
 let func = Api.WorksheetFunction;
 let result = func.SHEET("Sheet1");
 worksheet.GetRange("C3").SetValue(result);
 ```
-

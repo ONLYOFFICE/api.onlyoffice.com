@@ -17,5 +17,3 @@ PsfFormat 定义要应用的格式类型：
 - "zip+4"
 - "phone"
 - "ssn"
-
-

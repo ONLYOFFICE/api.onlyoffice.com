@@ -20,7 +20,7 @@ expression.GetCurrentSlide();
 
 ## 示例
 
-此示例演示如何获取当前幻灯片。
+获取演示文稿中的当前幻灯片。
 
 ```javascript editor-pptx
 // How to get a current slide as an object.
@@ -37,4 +37,3 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
 ```
-

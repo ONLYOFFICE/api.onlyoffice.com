@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的反双曲余弦。
+在电子表格中返回数字的反双曲余弦值。
 
 ```javascript editor-xlsx
 // How to get an inverse hyperbolic cosine of a number and display it in the worksheet.
 
-// Get a function that gets inverse hyperbolic cosine of a number.
+// Get a function that gets inverse hyperbolic cosine of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ACOSH(3.25));
 ```
-

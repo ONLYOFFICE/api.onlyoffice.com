@@ -20,5 +20,3 @@ Enumeration
 - "xlEndsWith"
 - "xlContains"
 - "xlNotContains"
-
-

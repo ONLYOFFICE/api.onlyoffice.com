@@ -20,9 +20,13 @@ string \| null
 
 ## Example
 
-This example shows how to get the chart title text.
+Get the chart title text in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the title in a PDF document?
+
+// Get the title using a chart object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -52,4 +56,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Chart Title: ' + chartTitle);
 page.AddObject(shape);
 ```
-

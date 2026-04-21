@@ -20,12 +20,12 @@ boolean \| null
 
 ## Example
 
-This example checks whether the drawing is flipped horizontally.
+Check whether the drawing is flipped horizontally in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the horizontal flip property of the shape.
+// How to get the horizontal flip property of the shape in a spreadsheet.
 
-// Create a drawing and read its horizontal flip value.
+// Create a drawing and read its horizontal flip value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -35,4 +35,3 @@ let flip = drawing.GetFlipH();
 worksheet.SetColumnWidth(0, 25);
 worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
 ```
-

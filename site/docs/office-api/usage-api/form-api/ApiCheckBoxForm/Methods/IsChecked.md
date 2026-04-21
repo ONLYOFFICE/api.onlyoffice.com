@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example shows how to get the state of the checkbox.
+Get the state of the checkbox in a document.
 
 ```javascript editor-forms
 // How to know whether the checkbox form is checked.
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The second radio button from this document is checked: " + checked);
 doc.Push(paragraph);
 ```
-

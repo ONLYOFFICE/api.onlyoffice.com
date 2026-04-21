@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例设置段落字符的字体大小。
+在 PDF 文档中为段落的字符设置字体大小。
 
 ```javascript editor-pdf
+// How to set font size for a paragraph in a PDF document?
+
+// Set font size and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,4 +42,3 @@ paragraph.AddText('This is a paragraph with the font size set to 24 points.');
 paragraph.SetFontSize(48);
 page.AddObject(shape);
 ```
-

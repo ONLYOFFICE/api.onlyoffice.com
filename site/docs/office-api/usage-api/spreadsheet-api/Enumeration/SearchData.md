@@ -17,4 +17,3 @@ Object
 | SearchDirection | [XlSearchDirection](../Enumeration/XlSearchDirection.md) | Range search direction - next match or previous match. |
 | SearchOrder | [XlSearchOrder](../Enumeration/XlSearchOrder.md) | Range search order - by rows or by columns. |
 | What | string \| undefined | The data to search for. |
-

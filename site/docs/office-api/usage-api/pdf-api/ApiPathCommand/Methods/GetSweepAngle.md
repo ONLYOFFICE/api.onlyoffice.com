@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes arc command parameters in a page shape.
+Analyzes arc command parameters in a page shape. Retrieves and display arc radii and angle information.
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// How to get the sweep angle for a path command in a PDF document?
+
+// Get the sweep angle and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -48,4 +51,3 @@ shape.SetPosition(1500000, 1500000);
 shape.SetVerticalTextAlign("bottom");
 page.AddObject(shape);
 ```
-

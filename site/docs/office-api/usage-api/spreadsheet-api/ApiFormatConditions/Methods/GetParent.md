@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the parent range of conditional formatting rules.
+Get the parent range of conditional formatting rules.
 
 ```javascript editor-xlsx
 // How to get the range that contains conditional formatting rules.
@@ -46,4 +46,3 @@ let parentRange = formatConditions.GetParent();
 
 worksheet.GetRange("B1").SetValue("Parent: " + parentRange.GetAddress());
 ```
-

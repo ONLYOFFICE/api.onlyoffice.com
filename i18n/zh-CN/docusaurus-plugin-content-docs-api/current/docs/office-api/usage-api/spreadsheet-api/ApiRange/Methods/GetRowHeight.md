@@ -20,7 +20,7 @@ expression.GetRowHeight();
 
 ## 示例
 
-此示例演示如何获取行高值。
+获取电子表格中的行高值。
 
 ```javascript editor-xlsx
 // How to get a cell row height.
@@ -32,4 +32,3 @@ let height = worksheet.GetRange("A1").GetRowHeight();
 worksheet.GetRange("A1").SetValue("Height: ");
 worksheet.GetRange("B1").SetValue(height);
 ```
-

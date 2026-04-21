@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies the direction of the text flow for the current table cell.
+Specify the direction of the text flow for the current table cell.
 
 ```javascript editor-pptx
 // How to set text direction of the table cell.
 
-// Create a table and set the text direction for the ApiTableCell object.
+// Create a table and set the text direction for the table cell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,3 @@ content.Push(paragraph);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

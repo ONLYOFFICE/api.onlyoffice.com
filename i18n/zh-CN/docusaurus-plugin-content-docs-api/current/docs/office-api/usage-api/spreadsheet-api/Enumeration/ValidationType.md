@@ -16,5 +16,3 @@
 - "xlValidateTime"
 - "xlValidateTextLength"
 - "xlValidateCustom"
-
-

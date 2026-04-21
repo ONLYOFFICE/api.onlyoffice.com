@@ -2,16 +2,16 @@
 
 从当前文本属性获取删除线属性。
 
-Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
+继承自 [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否有单线删除线。
+检查 PDF 文档中的文本是否有单线删除线。
 
 ```javascript editor-pdf
-// How to know whether a text is crossed with one horizontal line.
+// How to know whether a text is crossed with one horizontal line in a PDF document.
 
-// Get the text properties of the run and find whether it is strikethrough or not.
+// Get the text properties of the run and find whether it is strikethrough or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,4 +37,3 @@ const strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
 ```
-

@@ -2,16 +2,16 @@
 
 返回具有当前文本属性的文本是否显示为比实际字体大小小两磅的大写字母。
 
-Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md).
+继承自 [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)。
 
 ## 示例
 
-此示例使用其属性获取文本大小写。
+获取电子表格中文本的大写属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is uncapitalized or not.
+// How to find out whether a text is uncapitalized or not in a spreadsheet.
 
-// Find whether a text characters are in small caps or not.
+// Find whether a text characters are in small caps or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -31,4 +31,3 @@ let isSmallCaps = textProps.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + isSmallCaps);
 content.Push(paragraph);
 ```
-

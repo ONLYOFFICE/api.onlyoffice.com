@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何将文本形式的日期转换为表示日期时间代码中日期的数字。
+将文本形式的日期转换为日期时间代码中表示日期的数字。
 
 ```javascript editor-xlsx
 // How to convert a date from the form of text.
 
-// Use function to get the date from a text.
+// Use function to get the date from a text in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,4 +36,3 @@ let ans = func.DATEVALUE("2018-3-16");
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

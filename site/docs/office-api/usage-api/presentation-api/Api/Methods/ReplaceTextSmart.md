@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example replaces text from two paragraphs with another text.
+Replace text from two paragraphs with another text in a presentation.
 
 ```javascript editor-pptx
-// How to replace a substring with another one.
+// How to replace a substring with another one in a presentation.
 
-// Replace text from an array with another one.
+// Replace text from an array with another one in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -60,4 +60,3 @@ slide.AddObject(shape);
 const arr = ["test_1", "test_2"];
 Api.ReplaceTextSmart(arr, "", "");
 ```
-

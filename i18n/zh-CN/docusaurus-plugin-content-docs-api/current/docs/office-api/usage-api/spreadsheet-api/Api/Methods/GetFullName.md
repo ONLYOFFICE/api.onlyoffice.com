@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例演示如何获取当前打开文件的完整名称。
+获取电子表格中当前打开文件的完整名称。
 
 ```javascript editor-xlsx
-// How to get a full name of the file.
+// How to get a full name of the file in a spreadsheet.
 
 // Insert a full name of the file into a cell.
 
@@ -31,4 +31,3 @@ let worksheet = Api.GetActiveSheet();
 let name = Api.GetFullName();
 worksheet.GetRange("B1").SetValue("File name: " + name);
 ```
-

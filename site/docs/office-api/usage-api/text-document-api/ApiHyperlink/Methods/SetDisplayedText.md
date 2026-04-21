@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the hyperlink display text.
+Set the hyperlink display text in a document.
 
 ```javascript editor-docx
-// How to specify the hyperlink text that is displayed.
+// How to specify the hyperlink text that is displayed in a document.
 
-// Set the visible text of the link.
+// Set the visible text of the link in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraph.AddElement(run);
 let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
 hyperlink.SetDisplayedText("Api ONLYOFFICE DocBuilder");
 ```
-

@@ -8,7 +8,7 @@ number
 
 ## Example
 
-This example sets the paragraph line spacing to 1 line.
+Set the paragraph line spacing to 1 line.
 
 ```javascript editor-pdf
 // How to change a spacing of a line.
@@ -17,4 +17,3 @@ This example sets the paragraph line spacing to 1 line.
 
 paraPr.SetSpacingLine(240, "auto");
 ```
-

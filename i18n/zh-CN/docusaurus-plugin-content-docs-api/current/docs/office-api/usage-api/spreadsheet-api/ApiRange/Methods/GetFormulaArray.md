@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-此示例演示如何获取范围的数组公式。
+获取电子表格中范围的数组公式。
 
 ```javascript editor-xlsx
 // How to get an array formula value.
@@ -39,4 +39,3 @@ value = worksheet.GetRange("A3").GetFormulaArray();
 worksheet.GetRange("A6").SetValue("Array formula of the cell A3: ");
 worksheet.GetRange("B6").SetValue("'" + value);
 ```
-

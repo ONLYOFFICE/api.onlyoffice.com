@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetLanguage](../../ApiTextPr/Methods/GetLanguage.md).
 
 ## Example
 
-This example shows how to find out the text language.
+Find out the text language in a document.
 
 ```javascript editor-docx
-// Get the language of the text properties.
+// Get the language of the text properties in a document.
 
-// How to know the text language property.
+// How to know the text language property in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -34,4 +34,3 @@ let language = textPr.GetLanguage();
 paragraph.AddText("Language: " + language);
 doc.Push(paragraph);
 ```
-

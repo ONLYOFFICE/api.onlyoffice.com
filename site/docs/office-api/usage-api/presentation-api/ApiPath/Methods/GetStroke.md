@@ -20,10 +20,13 @@ boolean
 
 ## Example
 
-Analyzes cloud shape path properties on a slide.
+Analyzes cloud shape path properties on a slide. Displays comprehensive path information in a text shape.
 
 ```javascript editor-pptx
-// Displays comprehensive path information in a text shape.
+// How can I get the stroke using a geometry path in a presentation?
+
+// Get the stroke for a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
@@ -39,4 +42,3 @@ paragraph.AddText(", Fill: " + path.GetFill() + ", Array: " + paths.length);
 shape.SetPosition(1000000, 1000000);
 slide.AddObject(shape);
 ```
-

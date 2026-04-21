@@ -1,6 +1,6 @@
 # ApiStrikeoutAnnotation
 
-ApiStrikeoutAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md).
+ApiStrikeoutAnnotation 是 [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md) 的子类。
 
 ## 方法
 

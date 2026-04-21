@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example gets the error message title.
+Get the error message title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the validation error title.
+// How to retrieve the validation error title in a spreadsheet.
 
-// Get the error title.
+// Get the error title and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -35,4 +35,3 @@ validation.SetErrorTitle("Invalid Input");
 let errorTitle = validation.GetErrorTitle();
 worksheet.GetRange("B1").SetValue("Error title: " + errorTitle);
 ```
-

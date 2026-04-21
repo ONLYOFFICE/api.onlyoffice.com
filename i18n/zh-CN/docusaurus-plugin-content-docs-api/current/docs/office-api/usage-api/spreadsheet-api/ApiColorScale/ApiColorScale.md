@@ -1,6 +1,6 @@
 # ApiColorScale
 
-ApiColorScale is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
+ApiColorScale 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
 

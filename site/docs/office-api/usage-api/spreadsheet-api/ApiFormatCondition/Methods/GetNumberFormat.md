@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example gets the number format of a conditional formatting rule.
+Get the number format of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve number formatting from conditional formatting rules.
@@ -49,4 +49,3 @@ let numberFormat = condition1.GetNumberFormat();
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
 ```
-

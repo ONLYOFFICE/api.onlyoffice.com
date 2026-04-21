@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the OLE objects from the slide layout.
+Get an array with all the OLE objects from the slide layout in a presentation.
 
 ```javascript editor-pptx
 // How to get all OLE objects from the layout of presentation.
@@ -57,4 +57,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 layout.AddObject(drawing);
 ```
-

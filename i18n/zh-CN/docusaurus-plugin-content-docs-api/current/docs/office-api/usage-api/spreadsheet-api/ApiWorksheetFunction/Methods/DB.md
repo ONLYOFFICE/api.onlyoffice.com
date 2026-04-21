@@ -26,15 +26,14 @@ number
 
 ## 示例
 
-此示例演示如何使用固定余额递减法返回资产在指定期间的折旧。
+在电子表格中使用固定余额递减法返回指定期间资产的折旧。
 
 ```javascript editor-xlsx
-// How to get the depreciation of an asset for a specified period.
+// How to get the depreciation of an asset for a specified period in a spreadsheet.
 
-// Use function to return the depreciation of an asset for a specified period using the fixed-declining balance method.
+// Use function to return the depreciation of an asset for a specified period using the fixed-declining balance method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DB(3500, 500, 5, 1, 10));
 ```
-

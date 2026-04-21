@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-此示例指定文本块中的任何小写字符仅格式化显示为其对应的大写字母。
+指定文本 run 中的所有小写字符仅以其对应的大写字母格式显示。
 
 ```javascript editor-pdf
-// How to make a text capitalized.
+// How to make a text capitalized in a PDF document.
 
-// Get the text properties of the run and set its letters uppercase.
+// Get the text properties of the run and set its letters uppercase in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +48,3 @@ run.AddText("This is a sample text inside the shape set to capital letters using
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

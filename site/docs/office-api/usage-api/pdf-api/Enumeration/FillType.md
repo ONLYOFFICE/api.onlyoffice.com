@@ -13,5 +13,3 @@ Enumeration
 - "pattern"
 - "blip"
 - "nofill"
-
-

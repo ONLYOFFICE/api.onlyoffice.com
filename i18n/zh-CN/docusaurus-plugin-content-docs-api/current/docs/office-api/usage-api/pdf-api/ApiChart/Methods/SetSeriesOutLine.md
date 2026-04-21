@@ -24,10 +24,12 @@ boolean
 
 ## 示例
 
-如何为图表系列添加轮廓。
+如何在 PDF 文档中为图表系列设置轮廓。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series outline.
+// Create a chart, set its properties and its series outline in a PDF document.
+
+// Set series out line using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 page.AddObject(chart);
 ```
-

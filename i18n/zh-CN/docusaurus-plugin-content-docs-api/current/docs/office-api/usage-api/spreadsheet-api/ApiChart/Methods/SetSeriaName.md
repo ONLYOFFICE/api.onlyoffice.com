@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例设置指定系列的名称。
+在电子表格中为指定系列设置名称。
 
 ```javascript editor-xlsx
-// How to name chart series.
+// How to name chart series in a spreadsheet.
 
-// Set seria name for a chart.
+// Set seria name for a chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

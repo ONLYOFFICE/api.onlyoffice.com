@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的类类型并显示它。
+获取演示文稿中自定义 XML 节点对象的类类型。
 
 ```javascript editor-pptx
-// How to get the class type of an XML node.
+// How can I get the class type of a custom XML node in a presentation?
 
-// Get the class type.
+// Get the class type of a custom XML node and display it in the presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -56,4 +56,3 @@ run.AddText("Class type of the node: " + classType);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

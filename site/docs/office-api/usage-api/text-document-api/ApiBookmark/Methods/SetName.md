@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example shows how to set bookmark name.
+Set bookmark name in a document.
 
 ```javascript editor-docx
-// How to rename a bookmark.
+// How to rename a bookmark in a document.
 
 // Get a bookmark from the document by its name then set a new name to it.
 
@@ -40,4 +40,3 @@ bookmark.SetName("Bookmark_B");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark name changed from: '" + oldName + "' to: '" + bookmark.GetName() + "'");
 ```
-

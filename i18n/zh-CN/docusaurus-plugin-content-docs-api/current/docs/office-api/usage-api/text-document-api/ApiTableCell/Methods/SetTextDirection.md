@@ -2,11 +2,11 @@
 
 指定此表格单元格的文本流方向。
 
-Inherited from [ApiTableCellPr.SetTextDirection](../../ApiTableCellPr/Methods/SetTextDirection.md).
+继承自 [ApiTableCellPr.SetTextDirection](../../ApiTableCellPr/Methods/SetTextDirection.md)。
 
 ## 示例
 
-此示例指定此表格单元格的文本流方向。
+指定此表格单元格的文本流方向。
 
 ```javascript editor-docx
 // Set the direction of the cell text.
@@ -28,4 +28,3 @@ paragraph.AddText("btlr");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

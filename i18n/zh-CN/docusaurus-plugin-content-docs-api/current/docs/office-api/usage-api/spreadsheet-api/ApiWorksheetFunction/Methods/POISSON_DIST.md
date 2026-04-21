@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何计算泊松分布。
+在电子表格中计算泊松分布。
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution.
+// How to return the Poisson distribution in a spreadsheet.
 
-// Use a function to calculate the Poisson distribution.
+// Use a function to calculate the Poisson distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -43,4 +43,3 @@ let ans = func.POISSON_DIST(x, mean, cumulative);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

@@ -36,4 +36,3 @@ window.Asc.plugin.executeMethod ("InsertOleObject", [
     },
 true]);
 ```
-

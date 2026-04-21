@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将应用于当前文本块内容相对于文本块默认外观的对齐方式。
+指定在演示文稿中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
 
 ```javascript editor-pptx
-// How to change a vertical alignment of a text run.
+// How to change a vertical alignment of a text run in a presentation.
 
-// Create a new text run and make it subscript, baseline or superscript.
+// Create a new text run and make it subscript, baseline or superscript in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -64,4 +64,3 @@ run.AddText("This is a text run with the text aligned above the baseline vertica
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

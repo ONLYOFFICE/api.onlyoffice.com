@@ -12,5 +12,3 @@ Enumeration
 - [ApiTextWidget](../ApiTextWidget/ApiTextWidget.md)
 - [ApiCheckboxWidget](../ApiCheckboxWidget/ApiCheckboxWidget.md)
 - [ApiButtonWidget](../ApiButtonWidget/ApiButtonWidget.md)
-
-

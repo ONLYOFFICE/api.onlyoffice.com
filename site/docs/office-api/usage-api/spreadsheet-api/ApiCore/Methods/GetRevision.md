@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the revision of the current workbook.
+Get the revision of the current workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the revision for a core properties in a spreadsheet?
+
+// Get the revision and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -41,4 +45,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Revision: " + revision);
 ```
-

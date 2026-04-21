@@ -26,4 +26,3 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("OpenFile", [[Uint8Array], ["id", "name"]]);
 ```
-

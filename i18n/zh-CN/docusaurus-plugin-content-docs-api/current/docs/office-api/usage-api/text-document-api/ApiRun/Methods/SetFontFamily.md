@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-此示例使用指定的字体系列设置所有 4 个字体槽。
+在文档中使用指定的字体系列设置所有 4 个字体槽。
 
 ```javascript editor-docx
-// How to set font family to the text run.
+// How to set font family to the text run in a document.
 
-// Create a new text run and change its font family.
+// Create a new text run and change its font family in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.SetFontFamily("Calibri Light");
 run.AddText("This is a text run with the font family set to 'Calibri Light'.");
 paragraph.AddElement(run);
 ```
-

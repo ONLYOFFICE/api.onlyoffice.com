@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets button widget scale how type and displays it.
+Get button widget scale how type and display it in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the scale how in a PDF document?
+
+// Get the scale how using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);
@@ -33,4 +37,3 @@ widgets[0].SetLayout('iconTextV');
 widgets[0].SetScaleHow('proportional');
 widgets[0].SetLabel('Scale how is: ' + widgets[0].GetScaleHow());
 ```
-

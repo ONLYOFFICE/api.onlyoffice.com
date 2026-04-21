@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Check the class type returned by a fill in a document.
 
 ```javascript editor-docx
-// How get a class type of ApiFill.
+// How do I check what type a fill object is in a document?
 
-// Retrieve class type of a created radial gradient fill and display it.
+// Retrieve and output the class type string for a fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ paragraph.AddDrawing(drawing);
 let classType = fill.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 ```
-

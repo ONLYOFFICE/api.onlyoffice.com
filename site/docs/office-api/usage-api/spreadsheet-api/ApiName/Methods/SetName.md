@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example sets a string value representing the object name.
+Set a string value representing the object name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename an object.
+// How to rename an object in a spreadsheet.
 
 // Set a new name for an object and display it in the worksheet.
 
@@ -38,4 +38,3 @@ defName.SetName("new_name");
 let newDefName = Api.GetDefName("new_name");
 worksheet.GetRange("A3").SetValue("The new name of the range: " + newDefName.GetName());
 ```
-

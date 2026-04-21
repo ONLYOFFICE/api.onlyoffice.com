@@ -17,5 +17,3 @@ Enumeration
 - "zip+4"
 - "phone"
 - "ssn"
-
-

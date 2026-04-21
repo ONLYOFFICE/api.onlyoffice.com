@@ -31,4 +31,3 @@ let oleProperties = {
     "heightPix": 60 * 36000
 };
 ```
-

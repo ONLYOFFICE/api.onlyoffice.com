@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取将应用于表格中符合条件格式类型的所有文本块的文本属性集。
+获取将应用于表格中与条件格式类型匹配的所有文本 run 的文本 run 属性集。
 
 ```javascript editor-docx
-// How to get text properties of the table style and make it bold.
+// How to get text properties of the table style and make it bold in a document.
 
-// Make the table text bold.
+// Make the table text bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,4 +44,3 @@ paragraph.AddText("Normal text");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

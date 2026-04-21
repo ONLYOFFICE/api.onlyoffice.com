@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to apply text properties to all text in a paragraph inside a shape.
+Apply text properties to all text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set text pr using a paragraph in a spreadsheet?
+
+// Set text pr for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 140, 130));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -49,4 +53,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has default properties.');
 content.Push(paragraph2);
 ```
-

@@ -11,10 +11,9 @@
 - "xlNo"
 - "xlYes"
 
-
 ## 示例
 
-此示例指定第一行包含标题信息。
+指定第一行包含标题信息。
 
 ```javascript editor-xlsx
 // How to specify a sorting header for a range.
@@ -23,4 +22,3 @@
 
 worksheet.GetRange("A1:C5").SetSort("A1:A5", "xlAscending", "B1:B5", "xlDescending", "C1:C5", "xlAscending", "xlYes", "xlSortColumns");
 ```
-

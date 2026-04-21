@@ -6,10 +6,10 @@ Inherited from [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle
 
 ## Example
 
-This example shows how to get the table title.
+Get the table title in a document.
 
 ```javascript editor-docx
-// How to get the table title.
+// How to get the table title in a document.
 
 // Display the title of the table in the document.
 
@@ -25,4 +25,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
-

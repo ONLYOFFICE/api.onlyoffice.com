@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
+Specify the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set vertical alignment of a text object.
+// How to set vertical alignment of a text object in a spreadsheet.
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript" in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -54,4 +54,3 @@ run.SetVertAlign("superscript");
 run.AddText("This is a text run with the text aligned above the baseline vertically.");
 paragraph.AddElement(run);
 ```
-

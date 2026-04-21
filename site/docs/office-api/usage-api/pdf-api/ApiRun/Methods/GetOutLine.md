@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
 ## Example
 
-This example shows how to find out whether a text is outlined.
+Find out whether a text is outlined in a PDF document.
 
 ```javascript editor-pdf
-// How to know whether an outline is set to the text.
+// How to know whether an outline is set to the text in a PDF document.
 
-// Get the text properties of the run and find whether it is outlined or not.
+// Get the text properties of the run and find whether it is outlined or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +39,3 @@ const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
 ```
-

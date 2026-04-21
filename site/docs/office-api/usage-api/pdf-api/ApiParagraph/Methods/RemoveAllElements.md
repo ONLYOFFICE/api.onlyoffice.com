@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes all the elements from the paragraph.
+Remove all the elements from the paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to delete all elements from the paragraph.
+// How to delete all elements from the paragraph in a PDF document.
 
-// Clear all elements from the paragraph.
+// Clear all elements from the paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,4 +47,3 @@ paragraph.AddText("We removed all the paragraph elements and added a new text ru
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

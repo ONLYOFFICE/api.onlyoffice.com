@@ -23,7 +23,7 @@ expression.GetPageFields(field);
 
 ## 示例
 
-此示例展示如何获取数据透视表的页字段。
+获取电子表格中数据透视表的页字段。
 
 ```javascript editor-xlsx
 // How to get table page fields as an array of fields.
@@ -70,4 +70,3 @@ for (let i = 0; i < pageFields.length; i += 1) {
     cell.SetValue(pageFields[i].GetName());
 }
 ```
-

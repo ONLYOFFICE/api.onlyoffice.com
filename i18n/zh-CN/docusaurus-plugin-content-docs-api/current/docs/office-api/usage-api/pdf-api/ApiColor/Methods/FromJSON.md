@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-此示例展示如何从 JSON 恢复形状填充颜色。
+在 PDF 文档中从 JSON 恢复形状填充颜色。
 
 ```javascript editor-pdf
+// The JSON string contains the color type and value properties.
+
+// Restore the color object from JSON and display the theme name.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,4 +49,3 @@ run.AddText('Original: ' + original.GetHex() + '\nRestored: ' + restored.GetHex(
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

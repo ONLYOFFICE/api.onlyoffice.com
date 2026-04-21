@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the paragraph ID.
+Set the paragraph ID in a document.
 
 ```javascript editor-docx
+// How to set para id for a paragraph in a document?
+
+// Set para id and display the result in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText('This paragraph will have a custom ID.');
@@ -41,4 +45,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Retrieved paragraph ID: ' + retrievedId);
 doc.Push(paragraph);
 ```
-

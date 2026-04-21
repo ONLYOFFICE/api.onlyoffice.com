@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set table style column stripes of a pivot table.
+Set table style column stripes of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set table style column stripes of a table.
+// How to set table style column stripes of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its table style column stripes.
+// Create a pivot table, add data to it then set its table style column stripes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A12').SetValue('Table Style Column Stripes');
 pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetTableStyleColumnStripes());
 ```
-

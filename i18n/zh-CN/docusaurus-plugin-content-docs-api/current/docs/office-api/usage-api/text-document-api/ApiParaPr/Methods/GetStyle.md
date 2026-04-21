@@ -20,12 +20,12 @@ expression.GetStyle();
 
 ## 示例
 
-此示例展示如何获取段落样式。
+获取文档中的段落样式。
 
 ```javascript editor-docx
-// How to get the style of the paragraph.
+// How to get the style of the paragraph in a document.
 
-// Get the paragraph style and display its name.
+// Get the paragraph style and display its name in a document.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");
@@ -38,4 +38,3 @@ let style = paraPr.GetStyle();
 paragraph.AddLineBreak();
 paragraph.AddText("Style: " + style.GetName());
 ```
-

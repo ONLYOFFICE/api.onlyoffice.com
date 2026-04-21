@@ -10,5 +10,3 @@ Enumeration
 
 - "Tabular"
 - "Outline"
-
-

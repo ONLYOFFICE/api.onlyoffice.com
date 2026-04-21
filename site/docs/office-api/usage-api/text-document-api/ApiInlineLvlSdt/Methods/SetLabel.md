@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a string label to the inline text content control.
+Set a string label to the inline text content control in a document.
 
 ```javascript editor-docx
-// How to set label for the inline content control.
+// How to set label for the inline content control in a document.
 
-// Display the label set for inline text element.
+// Display the label set for inline text element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Label: " + label);
 doc.Push(paragraph);
 ```
-

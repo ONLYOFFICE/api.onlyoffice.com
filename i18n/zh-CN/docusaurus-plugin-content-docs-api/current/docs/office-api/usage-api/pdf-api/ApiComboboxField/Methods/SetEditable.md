@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为组合框字段设置可编辑属性。
+在 PDF 文档中为组合框字段设置可编辑属性。
 
 ```javascript editor-pdf
+// How can I set editable using a combobox field in a PDF document?
+
+// Set editable for a combobox field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -33,4 +37,3 @@ page.AddObject(comboboxField);
 comboboxField.SetEditable(true);
 comboboxField.SetValue('Editable is: ' + comboboxField.IsEditable());
 ```
-

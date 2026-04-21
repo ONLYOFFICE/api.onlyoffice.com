@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to remove all elements from a shape.
+Remove all elements from a shape in a PDF document.
 
 ```javascript editor-pdf
 // How to remove all elements from the page shape.
@@ -46,4 +46,3 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

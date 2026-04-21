@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
 ## Example
 
-This example clears the current form.
+Clear the current form.
 
 ```javascript editor-forms
 // How to remove texy from the form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);
 ```
-

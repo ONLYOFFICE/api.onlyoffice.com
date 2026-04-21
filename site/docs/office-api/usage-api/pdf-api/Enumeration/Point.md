@@ -12,4 +12,3 @@ object
 | ---- | ---- | ----------- |
 | x | [pt](../Enumeration/pt.md) | No description provided. |
 | y | [pt](../Enumeration/pt.md) | No description provided. |
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the application ID to the current OLE object.
+Set the application ID to the current OLE object in a presentation.
 
 ```javascript editor-pptx
-// Set an application ID for an OLE object.
+// Set an application ID for an OLE object in a presentation.
 
-// Create an OLE object and set its application ID.
+// Create an OLE object and set its application ID in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,4 +44,3 @@ oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
 ```
-

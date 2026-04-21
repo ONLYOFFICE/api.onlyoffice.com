@@ -32,4 +32,3 @@ Asc.plugin.callCommand(addTextToDocument);
 Asc.plugin.executeMethod('Undo');
 Asc.plugin.executeMethod('Redo');
 ```
-

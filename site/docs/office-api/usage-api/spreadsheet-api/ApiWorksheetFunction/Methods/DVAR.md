@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to estimate variance based on a sample from the selected database entries.
+Estimate variance based on a sample from the selected database entries in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to estimate variance.
+// How to estimate variance in a spreadsheet.
 
-// Use function to calculate a variance from a range sample.
+// Use function to calculate a variance from a range sample in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -53,4 +53,3 @@ let range1 = worksheet.GetRange("A1:C4");
 let range2 = worksheet.GetRange("E1:F2");
 worksheet.GetRange("F4").SetValue(func.DVAR(range1, "Sales", range2));
 ```
-

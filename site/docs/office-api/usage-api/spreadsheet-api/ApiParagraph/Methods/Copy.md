@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a paragraph copy.
+Create a paragraph copy in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create an identical paragraph.
+// How to create an identical paragraph in a spreadsheet.
 
-// Get a paragraph from the content of the shape create its copy and add it to the shape.
+// Get a paragraph from the content of the shape create its copy and add it to the shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -40,4 +40,3 @@ paragraph.AddText("This is a text after the line break.");
 let paragraph2 = paragraph.Copy();
 content.Push(paragraph2);
 ```
-

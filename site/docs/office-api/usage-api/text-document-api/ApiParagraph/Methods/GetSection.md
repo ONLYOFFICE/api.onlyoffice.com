@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph section.
+Get the paragraph section in a document.
 
 ```javascript editor-docx
-// How to get the section where the paragraph is located.
+// How to get the section where the paragraph is located in a document.
 
 // Get the paragraph section and set its page size.
 
@@ -33,4 +33,3 @@ paragraph.AddText("This is a new paragraph.");
 let section = paragraph.GetSection();
 section.SetPageSize(7200, 4320);
 ```
-

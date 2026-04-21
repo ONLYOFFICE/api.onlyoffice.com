@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get and display a Y position of a drawing.
+How to get and display a Y position of a drawing in a PDF document.
 
 ```javascript editor-pdf
 // Get a shape object from a page and get its Y position.
+
+// Use drawing object to get the pos y in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,4 +43,3 @@ paragraph.AddText(`Drawing Y position is: ${shape.GetPosY()}`);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

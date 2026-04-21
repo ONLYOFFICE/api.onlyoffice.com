@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create a text properties and use it.
+Create a text properties and use it in a PDF document.
 
 ```javascript editor-pdf
-// How to change text style, size and font.
+// How to change text style, size and font in a PDF document.
 
-// Change text properties.
+// Change text properties using the editor API in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +49,3 @@ paragraph.AddElement(run);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取文档中形状的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiShape.
+// How to identify the class type of a shape in a document?
 
-// Retrieve class type of ApiShape object and insert it to the document.
+// Obtain the class type identifier of a shape object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent.AddElement(0, paragraph);
 ```
-

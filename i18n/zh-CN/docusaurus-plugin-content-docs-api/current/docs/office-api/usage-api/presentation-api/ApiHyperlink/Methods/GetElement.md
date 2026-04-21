@@ -22,9 +22,13 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例使用指定位置返回超链接元素。
+使用演示文稿中指定的位置返回超链接元素。
 
 ```javascript editor-pptx
+// How can I get the element using a hyperlink in a presentation?
+
+// Get the element for a hyperlink in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -68,4 +72,3 @@ if (element) {
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
 ```
-

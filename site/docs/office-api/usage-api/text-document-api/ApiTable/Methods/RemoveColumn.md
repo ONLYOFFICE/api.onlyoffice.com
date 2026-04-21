@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example removes a table column with the specified cell.
+Remove a table column with the specified cell.
 
 ```javascript editor-docx
-// How to remove the column from the table.
+// How to remove the column from the table in a document.
 
 // Create a table, get one of its cells and delete the column.
 
@@ -41,4 +41,3 @@ let cell = table.GetRow(2).GetCell(1);
 table.RemoveColumn(cell);
 doc.Push(table);
 ```
-

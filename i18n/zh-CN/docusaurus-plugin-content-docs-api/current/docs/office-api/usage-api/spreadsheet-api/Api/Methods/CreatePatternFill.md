@@ -24,16 +24,15 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## 示例
 
-此示例创建图案填充，使用选定的图案作为对象背景应用于对象。
+在电子表格中创建图案填充，使用所选图案作为对象背景应用于对象。
 
 ```javascript editor-xlsx
-// Create customized pattern to fill background of a shape.
+// Create customized pattern to fill background of a shape in a spreadsheet.
 
-// Set a shape background using a pattern fill.
+// Set a shape background using a pattern fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```
-

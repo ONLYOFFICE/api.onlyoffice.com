@@ -2,16 +2,16 @@
 
 返回段落右侧缩进。
 
-Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
+继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+获取文档中的段落右侧缩进。
 
 ```javascript editor-docx
 // Get the right indentation of the paragraph and show it in the document.
 
-// How to know the number of inches of the right indentation.
+// How to know the number of inches of the right indentation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 doc.Push(paragraph);
 ```
-

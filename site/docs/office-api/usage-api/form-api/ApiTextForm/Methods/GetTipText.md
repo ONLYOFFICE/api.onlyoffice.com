@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md)
 
 ## Example
 
-This example shows how to get the tip text of the form.
+Get the tip text of the form in a document.
 
 ```javascript editor-forms
 // Get a comboBox form tip text and show it in the document.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tip text: " + tipText);
 doc.Push(paragraph);
 ```
-

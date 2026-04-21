@@ -26,9 +26,13 @@ boolean
 
 ## 示例
 
-此示例演示如何向特定幻灯片添加批注。
+在演示文稿中向特定幻灯片添加批注。
 
 ```javascript editor-pptx
+// How to add the comment for a slide?
+
+// Add the comment and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -60,4 +64,3 @@ slide.RemoveAllObjects();
 shape.SetPosition(posX, posY);
 slide.AddObject(shape);
 ```
-

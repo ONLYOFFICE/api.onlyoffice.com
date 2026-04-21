@@ -22,12 +22,12 @@ expression.SetText(sText);
 
 ## 示例
 
-此示例设置批注回复文本。
+在电子表格中设置批注回复文本。
 
 ```javascript editor-xlsx
-// How to change a reply text.
+// How to change a reply text in a spreadsheet.
 
-// Replace a reply text with a new text.
+// Replace a reply text with a new text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -39,4 +39,3 @@ reply.SetText("New reply text.");
 worksheet.GetRange("A3").SetValue("Comment's reply text: ");
 worksheet.GetRange("B3").SetValue(reply.GetText());
 ```
-

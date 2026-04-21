@@ -2,11 +2,11 @@
 
 设置条件格式规则的边框样式。
 
-Inherited from [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md).
+继承自 [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md)。
 
 ## 示例
 
-此示例设置条件格式规则的边框。
+为条件格式规则设置边框。
 
 ```javascript editor-xlsx
 // How to apply border formatting to conditional formatting rules.
@@ -36,4 +36,3 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
 ```
-

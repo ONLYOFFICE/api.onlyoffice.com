@@ -20,9 +20,13 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取图标条件的比较运算符。
+获取电子表格中图标条件的比较运算符。
 
 ```javascript editor-xlsx
+// How do I get the operator in a spreadsheet?
+
+// Get the operator using an icon criterion object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Scores');
 worksheet.GetRange('A2').SetValue(85);
@@ -41,4 +45,3 @@ for (let i = 0; i < criteria.length; i++) {
 	range.SetValue('Criterion ' + (i + 1) + ' operator: ' + criteria[i].GetOperator());
 }
 ```
-

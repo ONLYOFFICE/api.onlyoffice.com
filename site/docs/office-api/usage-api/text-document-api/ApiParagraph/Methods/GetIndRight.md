@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## Example
 
-This example shows how to get the paragraph right side indentation.
+Get the paragraph right side indentation in a document.
 
 ```javascript editor-docx
 // Get the right indentation of the paragraph and show it in the document.
 
-// How to know the number of inches of the right indentation.
+// How to know the number of inches of the right indentation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 doc.Push(paragraph);
 ```
-

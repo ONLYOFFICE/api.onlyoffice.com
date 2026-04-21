@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set layout blank line of a table.
+Set layout blank line of a table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set layout blank line of a table.
+// How to set layout blank line of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set layout blank line.
+// Create a pivot table, add data to it then set layout blank line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,4 +61,3 @@ pivotTable.AddDataField('Price');
 
 pivotTable.SetLayoutBlankLine(true);
 ```
-

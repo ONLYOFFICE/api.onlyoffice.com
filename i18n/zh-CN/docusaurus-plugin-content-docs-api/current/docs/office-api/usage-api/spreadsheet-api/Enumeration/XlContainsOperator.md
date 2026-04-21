@@ -12,5 +12,3 @@
 - "xlDoesNotContain"
 - "xlBeginsWith"
 - "xlEndsWith"
-
-

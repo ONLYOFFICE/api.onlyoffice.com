@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last Run with text in the paragraph.
+Get the last Run with text in the paragraph in a document.
 
 ```javascript editor-docx
 // Get the final text run of the paragraph and show it in the document.
 
-// How to get the paragraph last text element.
+// How to get the paragraph last text element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ for (let i = 0; i < 5; ++i) {
 let lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(" Last run.");
 ```
-

@@ -21,4 +21,3 @@ expression.SetPicture(imageUrl);
 ## 返回值
 
 boolean
-

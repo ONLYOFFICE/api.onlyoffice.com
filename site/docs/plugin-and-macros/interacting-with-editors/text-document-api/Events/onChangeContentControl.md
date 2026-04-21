@@ -21,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onChangeContentControl", (control) => {
     console.log("Appearance: " + control.Appearance);
 });
 ```
-

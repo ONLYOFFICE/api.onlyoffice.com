@@ -22,12 +22,12 @@ expression.SetFunction(func);
 
 ## 示例
 
-此示例展示如何为数据字段设置函数。
+在电子表格中为数据字段设置函数。
 
 ```javascript editor-xlsx
-// How to change a function of a table element.
+// How to change a function of a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then set a custom data field's function.
+// Create a pivot table, add data to it then set a custom data field's function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -64,4 +64,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 let dataField = pivotTable.GetDataFields('Sum of Price');
 dataField.SetFunction('Count');
 ```
-

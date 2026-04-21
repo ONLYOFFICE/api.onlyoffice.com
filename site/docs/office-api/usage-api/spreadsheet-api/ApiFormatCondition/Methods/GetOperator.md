@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the operator of a conditional formatting rule.
+Get the operator of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve the operator from conditional formatting rules.
@@ -48,4 +48,3 @@ let operator = condition1.GetOperator();
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
 ```
-

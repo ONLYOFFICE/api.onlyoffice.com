@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set a minor tick mark using predefined symbols.
+How to set a minor tick mark using predefined symbols in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and minor tick mark for horizontal axis.
+// Create a chart, set its properties and minor tick mark for horizontal axis in a PDF document.
+
+// Set hor axis minor tick mark for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -53,4 +55,3 @@ chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 page.AddObject(chart);
 ```
-

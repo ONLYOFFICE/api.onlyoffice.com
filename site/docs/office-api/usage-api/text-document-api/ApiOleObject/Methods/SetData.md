@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the data to the current OLE object.
+Set the data to the current OLE object in a document.
 
 ```javascript editor-docx
-// How to add link to the OLE object.
+// How to add link to the OLE object in a document.
 
-// Update content of the OLE object.
+// Update content of the OLE object in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(
@@ -40,4 +40,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(oleObject);
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
 ```
-

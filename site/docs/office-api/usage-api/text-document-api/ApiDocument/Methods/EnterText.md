@@ -22,13 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to enter text at the current cursor position.
+Enter text at the current cursor position in a document.
 
 ```javascript editor-docx
-// How to add a line break at the cursor position.
+// How to add a line break at the cursor position in a document.
 
-// Enter text in a paragraph and add a line break.
+// Enter text in a paragraph and add a line break in a document.
+
 let doc = Api.GetDocument();
 doc.EnterText("This is the text in your document.");
 ```
-

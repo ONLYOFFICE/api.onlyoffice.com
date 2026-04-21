@@ -20,12 +20,12 @@ JSON
 
 ## Example
 
-This example converts the ApiNumbering object into the JSON object.
+Convert the numbering object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the numbering object.
+// How to get a JSON from the numbering object in a document.
 
-// Convert the bullet numbering to json and add it to the paragraph.
+// Convert the bullet numbering to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");
@@ -43,4 +43,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type = " + type);
 doc.Push(paragraph);
 ```
-

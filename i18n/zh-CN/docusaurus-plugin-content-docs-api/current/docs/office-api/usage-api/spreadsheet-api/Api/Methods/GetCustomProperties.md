@@ -20,9 +20,13 @@ expression.GetCustomProperties();
 
 ## 示例
 
-此示例演示如何使用 ApiCustomProperties 在电子表格中配置自定义属性。
+使用自定义属性在电子表格中配置自定义属性。
 
 ```javascript editor-xlsx
+// How can I get custom properties in a spreadsheet?
+
+// Get custom properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const customProps = Api.GetCustomProperties();
@@ -52,4 +56,3 @@ paragraph.AddText("Custom Number Property: " + numberValue + "\n");
 paragraph.AddText("Custom Date Property: " + dateValue.toDateString() + "\n");
 paragraph.AddText("Custom Boolean Property: " + boolValue);
 ```
-

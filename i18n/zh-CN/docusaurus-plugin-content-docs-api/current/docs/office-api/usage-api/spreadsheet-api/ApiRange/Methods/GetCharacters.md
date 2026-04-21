@@ -23,12 +23,12 @@ expression.GetCharacters(Start, Length);
 
 ## 示例
 
-此示例演示如何获取表示对象文本中字符范围的 ApiCharacters 对象。
+获取表示电子表格中对象文本内字符范围的字符对象。
 
 ```javascript editor-xlsx
-// How to get range characters.
+// How to get range characters in a spreadsheet.
 
-// Get the range characters, get their font object and set it to bold.
+// Get the range characters, get their font object and set it to bold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -37,4 +37,3 @@ let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
 font.SetBold(true);
 ```
-

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取超链接中的元素数量。
+获取 PDF 文档中超链接的元素数量。
 
 ```javascript editor-pdf
-// How to get the number of elements of the hyperlink.
+// How to get the number of elements of the hyperlink in a PDF document.
 
-// Add a hyperlink to the paragraph and show its elements count.
+// Add a hyperlink to the paragraph and show its elements count in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -52,4 +52,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("Elements: paragraph, run1, run2, hyperlink");
 docContent.Push(paragraph);
 ```
-

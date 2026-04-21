@@ -2,13 +2,17 @@
 
 用幻灯片上的绘图替换占位符。
 
-Inherited from [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplacePlaceholder.md).
+继承自 [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplacePlaceholder.md)。
 
 ## 示例
 
-此示例用幻灯片上的绘图替换占位符。
+在幻灯片上用绘图对象替换占位符。
 
 ```javascript editor-pptx
+// How can I replace placeholder using a drawing object in a presentation?
+
+// Replace placeholder for a drawing object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -29,4 +33,3 @@ slide.AddObject(shapeCopy);
 const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
 ```
-

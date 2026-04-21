@@ -15,7 +15,7 @@ Object
 
 ## 示例
 
-此示例在选定文本上方插入具有指定文本框属性的文本框。
+在选定文本上方插入具有指定文本框属性的文本框。
 
 ```javascript editor-forms
 // How to create a text form with its properties and insert it into the ApiDocument object.
@@ -37,4 +37,3 @@ let textFormInsertPr = {
 };
 doc.InsertTextForm(textFormInsertPr);
 ```
-

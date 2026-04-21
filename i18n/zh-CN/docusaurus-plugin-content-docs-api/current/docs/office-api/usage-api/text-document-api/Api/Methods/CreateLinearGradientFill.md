@@ -23,12 +23,12 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 
 ## 示例
 
-此示例创建线性渐变填充，使用所选线性渐变作为对象背景应用于绘图。
+在文档中创建线性渐变填充，使用所选线性渐变作为绘图对象背景。
 
 ```javascript editor-docx
-// Creates the ApiLinearGradientFill object using two gradient stops and applies it to the created shape.
+// Create the ApiLinearGradientFill object using two gradient stops and apply it to the created shape in a document.
 
-// How to create a shape using a linear gradient fill.
+// How to create a shape using a linear gradient fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 paragraph.AddDrawing(shape);
 ```
-

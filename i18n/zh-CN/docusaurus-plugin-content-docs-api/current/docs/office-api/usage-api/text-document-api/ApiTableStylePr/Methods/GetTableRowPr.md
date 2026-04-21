@@ -20,12 +20,12 @@ expression.GetTableRowPr();
 
 ## 示例
 
-此示例展示如何获取将应用于表格中符合条件格式类型的所有行的表格行属性集。
+获取将应用于表格中与条件格式类型匹配的所有行的表格行属性集。
 
 ```javascript editor-docx
-// How to get table properties and set its height.
+// How to get table properties and set its height in a document.
 
-// Update the table row properties by setting its style.
+// Update the table row properties by setting its style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ tableStylePr.GetTableRowPr().SetHeight("atLeast", 720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

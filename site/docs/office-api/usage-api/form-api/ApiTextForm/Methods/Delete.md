@@ -6,9 +6,13 @@ Inherited from [ApiFormBase.Delete](../../ApiFormBase/Methods/Delete.md).
 
 ## Example
 
-This example shows how to delete the checkbox form.
+Delete the checkbox form in a document.
 
 ```javascript editor-forms
+// How can I delete using a form base in a document?
+
+// Delete for a form base in a document.
+
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({
 	'key': 'Marital status',
@@ -25,4 +29,3 @@ paragraph.AddElement(copyCheckBoxForm);
 paragraph.AddText(' Single');
 checkBoxForm.Delete();
 ```
-

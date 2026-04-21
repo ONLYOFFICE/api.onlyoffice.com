@@ -20,9 +20,13 @@ expression.GetAllItems();
 
 ## 示例
 
-此示例展示如何获取 ApiContentControlListEntry 集合作为列表。
+获取文档中内容控件列表条目的集合。
 
 ```javascript editor-docx
+// How can I get all items using a content control list in a document?
+
+// Get all items for a content control list in a document.
+
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let paragraph = doc.GetElement(0);
@@ -35,4 +39,3 @@ for (let i = 0; i < listItems.length; i++) {
 }
 doc.Push(paragraph);
 ```
-

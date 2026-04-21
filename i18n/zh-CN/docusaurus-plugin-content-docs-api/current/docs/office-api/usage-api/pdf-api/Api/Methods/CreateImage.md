@@ -24,10 +24,12 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## 示例
 
-如何使用 URL 创建图像对象并指定其宽度和高度。
+如何在 PDF 文档中使用 URL 创建图像对象并指定其宽度和高度。
 
 ```javascript editor-pdf
 // Create an image and insert it to the page.
+
+// Create the image in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,4 +39,3 @@ const shape = Api.CreateImage(
 );
 page.AddObject(shape);
 ```
-

@@ -22,7 +22,7 @@ number
 
 ## Example
 
-This example shows how to count a number of cells in a range that contains numbers ignoring empty cells or those.
+Count a number of cells in a range that contains numbers ignoring empty cells or those in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find a number of cells.
@@ -47,4 +47,3 @@ let func = Api.WorksheetFunction;
 let ans = func.COUNT(worksheet.GetRange("A1:C3"));
 worksheet.GetRange("D3").SetValue(ans);
 ```
-

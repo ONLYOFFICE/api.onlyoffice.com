@@ -6,7 +6,7 @@ Inherited from [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md)
 
 ## Example
 
-This example shows how to get the highlight property of the text.
+Get the highlight property of the text in a document.
 
 ```javascript editor-docx
 // How to know the highlight type of the form.
@@ -34,4 +34,3 @@ let highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 doc.Push(paragraph);
 ```
-

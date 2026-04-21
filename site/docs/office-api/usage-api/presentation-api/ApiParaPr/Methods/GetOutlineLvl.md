@@ -20,9 +20,13 @@ Number
 
 ## Example
 
-This example shows how to get the outline level of the specified paragraph via paragraph properties.
+Get the outline level of the specified paragraph via paragraph properties in a presentation.
 
 ```javascript editor-pptx
+// How can I get the outline lvl using a paragraph properties in a presentation?
+
+// Get the outline lvl for a paragraph properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -47,4 +51,3 @@ text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
 ```
-

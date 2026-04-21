@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set the top/bottom direction for top 10 condition.
+Set the top/bottom direction for top 10 condition in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to configure whether the condition evaluates top or bottom values.
+// How to configure whether the condition evaluates top or bottom values in a spreadsheet.
 
-// Set the top/bottom direction for the top 10 rule.
+// Set the top/bottom direction for the top 10 rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,4 +45,3 @@ worksheet.GetRange("B1").SetValue("Before: Top values");
 top10Condition.SetTopBottom("xlTop10Bottom");
 worksheet.GetRange("B2").SetValue("After: Bottom values");
 ```
-

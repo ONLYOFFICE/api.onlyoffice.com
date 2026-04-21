@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-此示例展示如何获取行索引。
+获取文档中的行索引。
 
 ```javascript editor-docx
-// Display the row index.
+// Display the row index in a document.
 
-// Get the index of the table row.
+// Get the index of the table row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -37,4 +37,3 @@ let row = table.GetRow(1);
 row.GetCell(0).GetContent().GetElement(0).AddText("Row index: " + row.GetIndex());
 doc.Push(table);
 ```
-

@@ -20,12 +20,12 @@ expression.GetFinalSection();
 
 ## 示例
 
-此示例展示如何获取文档的最后一节。
+获取文档中的最后一节。
 
 ```javascript editor-docx
 // How to get the last section of the document.
 
-// Update the header of the final section.
+// Update the header of the final section in a document.
 
 let doc = Api.GetDocument();
 let section = doc.GetFinalSection();
@@ -42,4 +42,3 @@ paraPr.SetSpacingAfter(200);
 paragraph = doc.GetElement(0);
 paragraph.AddText("This is a text in a paragraph.");
 ```
-

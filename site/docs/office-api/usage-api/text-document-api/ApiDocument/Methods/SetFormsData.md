@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to set data to forms.
+Set data to forms in a document.
 
 ```javascript editor-docx
 // How to set forms data in the document.
@@ -41,4 +41,3 @@ doc.SetFormsData([
     {key: "CompanyName", value: "OnlyOffice"}
 ]);
 ```
-

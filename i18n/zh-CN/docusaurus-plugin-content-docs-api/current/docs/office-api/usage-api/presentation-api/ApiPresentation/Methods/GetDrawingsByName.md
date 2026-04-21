@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## 示例
 
-此示例展示如何从当前演示文稿中获取具有指定名称的所有绘图对象。
+从当前演示文稿中获取具有指定名称的所有绘图对象。
 
 ```javascript editor-pptx
-// Get drawings by their names.
+// Get drawings by their names in a presentation.
 
-// How to retrieve drawings by their names and rotate them.
+// How to retrieve drawings by their names and rotate them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,4 +55,3 @@ for (let i = 0; i < drawings.length; i++) {
 	drawings[i].SetRotation(45);
 }
 ```
-

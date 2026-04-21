@@ -13,10 +13,9 @@ Enumeration
 - "sdtContentLocked"
 - "sdtLocked"
 
-
 ## Example
 
-This example set the "sdtContentLocked" lock to the current inline text content control which means that the content cannot be edited and the container cannot be deleted.
+Set the "sdtContentLocked" lock to the current inline text content control which means that the content cannot be edited and the container cannot be deleted.
 
 ```javascript editor-docx
 // How to set lock for a content control of the text.
@@ -25,4 +24,3 @@ This example set the "sdtContentLocked" lock to the current inline text content 
 
 inlineLvlSdt.SetLock("sdtContentLocked");
 ```
-

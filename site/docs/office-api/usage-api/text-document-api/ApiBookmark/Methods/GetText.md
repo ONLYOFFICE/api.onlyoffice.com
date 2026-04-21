@@ -29,10 +29,10 @@ string
 
 ## Example
 
-This example shows how to get bookmark text.
+Get bookmark text in a document.
 
 ```javascript editor-docx
-// How to add a bookmark and then display its content's text.
+// How to add a bookmark and then display its content's text in a document.
 
 // Show a bookmark text in the document.
 
@@ -45,4 +45,3 @@ let bookmark = doc.GetBookmark("BookmarkName")
 paragraph.AddLineBreak()
 paragraph.AddText("Bookmark text is: " + bookmark.GetText())
 ```
-

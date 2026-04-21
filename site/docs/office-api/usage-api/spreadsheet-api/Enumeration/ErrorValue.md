@@ -25,5 +25,3 @@ Enumeration
 - "#NUM!"
 - "#N/A"
 - "#GETTING_DATA"
-
-

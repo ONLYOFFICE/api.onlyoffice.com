@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置您自己的自定义编号类型。
+在文档中设置自定义编号类型。
 
 ```javascript editor-docx
-// How to set the custom type of the numbering.
+// How to set the custom type of the numbering in a document.
 
-// Apply the lower roman style to the numbering level.
+// Apply the lower roman style to the numbering level in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -47,4 +47,3 @@ for (let lvl = 0; lvl < 8; ++lvl) {
 	doc.Push(paragraph);
 }
 ```
-

@@ -1,6 +1,6 @@
 # ApiTableCell
 
-ApiTableCell is a subclass of [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md).
+ApiTableCell 是 [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md) 的子类。
 
 ## 方法
 

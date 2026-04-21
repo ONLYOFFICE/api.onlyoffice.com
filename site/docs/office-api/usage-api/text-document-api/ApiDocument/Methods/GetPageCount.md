@@ -22,7 +22,7 @@ number
 
 ## Example
 
-This example shows how to get a number of pages in the current document.
+Get a number of pages in the current document in a document.
 
 ```javascript editor-docx
 // How to count the number of pages in the document.
@@ -34,4 +34,3 @@ let pageCount = doc.GetPageCount();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Number of pages: " + pageCount);
 ```
-

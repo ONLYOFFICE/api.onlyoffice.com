@@ -20,10 +20,10 @@ expression.GetCommentsReport();
 
 ## 示例
 
-此示例展示如何获取文档中所有批注的报告。
+获取添加到文档的所有批注的报告。
 
 ```javascript editor-docx
-// Retrieve each comment reports and display their contents one by one.
+// Retrieve each comment reports and display their contents one by one in a document.
 
 // Create a table and insert the comment reports to its cells.
 
@@ -103,4 +103,3 @@ for (let userName in commentsReport) {
 }
 table.SetStyle(doc.GetStyle("Bordered"));
 ```
-

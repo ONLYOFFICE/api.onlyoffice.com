@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-This example adds a footnote cross-reference to the paragraph.
+Add a footnote cross-reference to the paragraph in a document.
 
 ```javascript editor-docx
-// How to create a footnote reference to the paragraph.
+// How to create a footnote reference to the paragraph in a document.
 
-// Add a cross-reference to the footnote of the paragraph.
+// Add a cross-reference to the footnote of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 
@@ -44,4 +44,3 @@ paragraph.AddText("For more information on previous sentences see footnote ");
 doc.Push(paragraph);
 paragraph.AddFootnoteCrossRef("formFootnoteNum", footnotesFirstParagraphs[0]);
 ```
-

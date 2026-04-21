@@ -6,7 +6,7 @@ Inherited from [ApiTableCellPr.SetTextDirection](../../ApiTableCellPr/Methods/Se
 
 ## Example
 
-This example specifies the direction of the text flow for this table cell.
+Specify the direction of the text flow for this table cell.
 
 ```javascript editor-docx
 // Set the direction of the cell text.
@@ -28,4 +28,3 @@ paragraph.AddText("btlr");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

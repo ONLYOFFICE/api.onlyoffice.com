@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示为每个字符都有两条水平线穿过。
+指定在演示文稿中 run 的内容以每个字符上显示两条水平线的方式显示。
 
 ```javascript editor-pptx
-// How to strike out a text with two lines.
+// How to strike out a text with two lines in a presentation.
 
-// Get the text propertiesof the run and cross it out with two lines.
+// Get the text propertiesof the run and cross it out with two lines in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,3 @@ run.AddText("This is a sample text inside the shape struck out with two lines us
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

@@ -25,7 +25,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies the shading which shall be applied to the extents of the current table cell.
+Specify the shading which shall be applied to the extents of the current table cell.
 
 ```javascript editor-pptx
 // How to set shading fill to the cell.
@@ -44,4 +44,3 @@ cell.SetShd(fill);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

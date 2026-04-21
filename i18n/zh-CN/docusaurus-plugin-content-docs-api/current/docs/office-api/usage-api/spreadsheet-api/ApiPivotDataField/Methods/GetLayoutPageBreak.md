@@ -2,11 +2,11 @@
 
 返回指定是否在每个字段后插入分页符的设置。
 
-Inherited from [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md).
+继承自 [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局分页符。
+获取电子表格中透视字段的布局分页符。
 
 ```javascript editor-xlsx
 // How to get a layout page break of a pivot field.
@@ -49,4 +49,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A15').SetValue('Page break:');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetLayoutPageBreak());
 ```
-

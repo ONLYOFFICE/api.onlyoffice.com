@@ -6,12 +6,12 @@ Inherited from [ApiDocumentContent.GetAllOleObjects](../../ApiDocumentContent/Me
 
 ## Example
 
-This example showh how to get a collection of OLE objects from the document content.
+Get a collection of OLE objects from the document content.
 
 ```javascript editor-docx
 // Get all OLE objects added to the document.
 
-// How to retrieve all OLE objects and display the application ID of the first one.
+// How to retrieve all OLE objects and display the application ID of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 doc.Push(paragraph);
 ```
-

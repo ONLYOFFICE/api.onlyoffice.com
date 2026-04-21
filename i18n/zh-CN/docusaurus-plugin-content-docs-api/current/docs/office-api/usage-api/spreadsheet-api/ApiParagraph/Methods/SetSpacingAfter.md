@@ -4,16 +4,16 @@
 nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
 将其解释为 false。
 
-Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
+继承自 [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md)。
 
 ## 示例
 
-此示例设置当前段落的段后间距。
+设置电子表格中当前段落之后的间距。
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points.
+// How to add the spacing after the paragraphs using points in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
+// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -30,4 +30,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 content.Push(paragraph);
 ```
-

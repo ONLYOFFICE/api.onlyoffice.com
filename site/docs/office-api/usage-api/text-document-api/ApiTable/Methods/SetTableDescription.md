@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.SetTableDescription](../../ApiTablePr/Methods/SetTabl
 
 ## Example
 
-This example sets the table description.
+Set the table description in a document.
 
 ```javascript editor-docx
 // How to display the table description in the document.
 
-// Get the table description from the table properties.
+// Get the table description from the table properties in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -25,4 +25,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
-

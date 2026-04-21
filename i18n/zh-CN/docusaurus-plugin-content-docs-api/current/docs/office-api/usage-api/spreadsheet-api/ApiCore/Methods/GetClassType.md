@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到工作表中。
+检查电子表格中核心属性返回的类类型。
 
 ```javascript editor-xlsx
+// How do I check what type a core properties object is in a spreadsheet?
+
+// Retrieve and output the class type string for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 const classType = core.GetClassType();
@@ -39,4 +43,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Class type: " + classType);
 ```
-

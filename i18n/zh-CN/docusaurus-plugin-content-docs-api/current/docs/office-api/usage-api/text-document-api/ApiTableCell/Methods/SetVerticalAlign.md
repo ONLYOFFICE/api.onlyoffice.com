@@ -2,11 +2,11 @@
 
 指定当前表格单元格中文本内容的垂直对齐方式。
 
-Inherited from [ApiTableCellPr.SetVerticalAlign](../../ApiTableCellPr/Methods/SetVerticalAlign.md).
+继承自 [ApiTableCellPr.SetVerticalAlign](../../ApiTableCellPr/Methods/SetVerticalAlign.md)。
 
 ## 示例
 
-此示例指定表格单元格中文本内容的垂直对齐方式。
+指定表格单元格内文本内容的垂直对齐方式。
 
 ```javascript editor-docx
 // Set text vertical alignment to the cell.
@@ -28,4 +28,3 @@ paragraph.AddText("Align bottom");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

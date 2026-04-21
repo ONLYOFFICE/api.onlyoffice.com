@@ -16,4 +16,3 @@ window.Asc.plugin.attachEditorEvent("onRemoveComment", (comment) => {
     console.log("Id: " + comment.Id);
 });
 ```
-

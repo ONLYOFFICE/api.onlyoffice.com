@@ -20,12 +20,12 @@ expression.GetRefersToRange();
 
 ## 示例
 
-此示例展示如何按名称获取 ApiRange 对象。
+通过名称获取电子表格中的单元格范围对象。
 
 ```javascript editor-xlsx
-// How to get a range knowig its defname.
+// How to get a range knowig its defname in a spreadsheet.
 
-// Find a range by its name and change its properties.
+// Find a range by its name and change its properties in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -35,4 +35,3 @@ let defName = Api.GetDefName("numbers");
 let range = defName.GetRefersToRange();
 range.SetBold(true);
 ```
-

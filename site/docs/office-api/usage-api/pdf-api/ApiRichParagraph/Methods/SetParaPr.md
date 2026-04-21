@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets rich paragraph properties to rich paragraph.
+Set rich paragraph properties to rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How do I set para pr in a PDF document?
+
+// Set para pr using a rich paragraph object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -43,4 +47,3 @@ para.SetParaPr(paraPr);
 
 console.log(`We set new rich paragraph properties to rich paragraph`);
 ```
-

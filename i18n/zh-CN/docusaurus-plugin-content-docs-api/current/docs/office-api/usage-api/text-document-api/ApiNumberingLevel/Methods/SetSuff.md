@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定将在给定编号级别文本和引用该编号级别的每个编号段落的文本之间添加的内容。
+指定将在给定编号级别文本与文档中引用该编号级别的每个编号段落的文本之间添加的内容。
 
 ```javascript editor-docx
-// How to set separating symbol between numbering and numbered text.
+// How to set separating symbol between numbering and numbered text in a document.
 
-// Set space between numbering level text and the text itself.
+// Set space between numbering level text and the text itself in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -42,4 +42,3 @@ paragraph.SetNumbering(numLvl);
 paragraph.AddText("This is the second element of a numbered list using custom text with numbering");
 doc.Push(paragraph);
 ```
-

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向文档添加目录。
+向文档添加目录。
 
 ```javascript editor-docx
 // How to add headings to the document and generate a table of contents.
 
-// Insert a table of contents specifying its properties.
+// Insert a table of contents specifying its properties in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");
@@ -43,4 +43,3 @@ doc.Push(paragraph);
 let tocPr = {"ShowPageNums": true, "RightAlgn": true, "LeaderType": "dot", "FormatAsLinks": true, "BuildFrom": {"OutlineLvls": 9}, "TocStyle": "standard"};
 doc.AddTableOfContents(tocPr);
 ```
-

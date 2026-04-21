@@ -22,4 +22,3 @@ window.Asc.plugin.attachEditorEvent('onSlideShowSlideChanged', (data) => {
 			to slide index ${data.slideIndex}`);
 });
 ```
-

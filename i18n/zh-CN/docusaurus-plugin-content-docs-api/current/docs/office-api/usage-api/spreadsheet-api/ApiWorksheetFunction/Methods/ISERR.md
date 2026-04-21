@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查值是否为 N/A 以外的错误，并返回 true 或 false。
+在电子表格中检查值是否为 N/A 以外的错误，并返回 true 或 false。
 
 ```javascript editor-xlsx
 // How to check if the cell contains an error and not N/A value.
 
-// Use a function to check whether the value is error or not and is not N/A.
+// Use a function to check whether the value is error or not and is not N/A in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -35,4 +35,3 @@ worksheet.GetRange("B3").SetValue("45")
 let result = func.ISERROR("B3");
 worksheet.GetRange("C3").SetValue(result)
 ```
-

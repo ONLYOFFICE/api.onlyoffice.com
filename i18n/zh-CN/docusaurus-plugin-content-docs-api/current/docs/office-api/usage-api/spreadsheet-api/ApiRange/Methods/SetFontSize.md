@@ -22,16 +22,15 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例设置单元格范围中字符的字体大小。
+设置单元格范围中字符的字体大小。
 
 ```javascript editor-xlsx
 // How to resize a cell font size.
 
-// Get a range and set its font size.
+// Get a range and set its font size in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");
 let range = worksheet.GetRange("A1:D5");
 range.SetFontSize(20);
 ```
-

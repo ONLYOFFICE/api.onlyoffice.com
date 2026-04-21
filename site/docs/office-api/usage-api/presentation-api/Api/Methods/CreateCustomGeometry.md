@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates creating a preset geometry in presentations.
+Create a preset geometry in presentations.
 
 ```javascript editor-pptx
+// How can I create custom geometry in a presentation?
+
+// Create custom geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 
@@ -159,4 +163,3 @@ if (docContent)
 }
 slide.AddObject(shape);
 ```
-

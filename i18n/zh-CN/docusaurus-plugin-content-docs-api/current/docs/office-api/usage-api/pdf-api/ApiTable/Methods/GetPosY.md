@@ -2,14 +2,16 @@
 
 获取绘图在页面上的 y 位置。
 
-Inherited from [ApiDrawing.GetPosY](../../ApiDrawing/Methods/GetPosY.md).
+继承自 [ApiDrawing.GetPosY](../../ApiDrawing/Methods/GetPosY.md)。
 
 ## 示例
 
-如何获取并显示绘图的 Y 坐标位置。
+如何在 PDF 文档中获取并显示绘图对象的 Y 位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and get its Y position.
+
+// Use drawing object to get the pos y in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -27,4 +29,3 @@ paragraph.AddText(`Drawing Y position is: ${shape.GetPosY()}`);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

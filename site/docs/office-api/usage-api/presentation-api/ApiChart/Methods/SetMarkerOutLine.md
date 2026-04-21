@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the marker in the specified chart series.
+Set the outline to the marker in the specified chart series in a presentation.
 
 ```javascript editor-pptx
-// How to set an outline to the marker.
+// How to set an outline to the marker in a presentation.
 
-// Create a chart, set its properties and its marker outline.
+// Create a chart, set its properties and its marker outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,3 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
 ```
-

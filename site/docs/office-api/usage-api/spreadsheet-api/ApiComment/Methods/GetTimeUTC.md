@@ -20,10 +20,10 @@ Number
 
 ## Example
 
-This example shows how to get the timestamp of the comment creation in UTC format.
+Get the timestamp of the comment creation in UTC format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a time in UTC when a comment was created.
+// How to get a time in UTC when a comment was created in a spreadsheet.
 
 // Add a comment creation timestamp UTC to a range of the worksheet.
 
@@ -34,4 +34,3 @@ let comment = range.AddComment("This is just a number.");
 worksheet.GetRange("A3").SetValue("Timestamp UTC: ");
 worksheet.GetRange("B3").SetValue(comment.GetTimeUTC());
 ```
-

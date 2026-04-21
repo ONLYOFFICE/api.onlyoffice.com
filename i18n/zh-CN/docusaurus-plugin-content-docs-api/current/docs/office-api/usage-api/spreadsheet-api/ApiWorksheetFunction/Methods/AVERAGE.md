@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何返回数据点与其平均值之间绝对偏差的平均值。
+在电子表格中返回数据点与其平均值的绝对偏差的平均值。
 
 ```javascript editor-xlsx
-// How to get an average of the absolute deviations.
+// How to get an average of the absolute deviations in a spreadsheet.
 
-// Use function to get the average of the absolute deviations of data points from their mean.
+// Use function to get the average of the absolute deviations of data points from their mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.AVERAGE(123, 197, 46, 345, 67, 456);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the value of a custom XML node and display it.
+Get the value of a custom XML node and display it in a document.
 
 ```javascript editor-docx
+// How do I get the node value in a document?
+
+// Get the node value using a custom XML node object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -41,4 +45,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(animalNode.GetNodeValue());
 doc.Push(paragraph);
 ```
-

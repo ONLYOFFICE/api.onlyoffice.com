@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the theme color name used in a shape fill.
+Get the theme color name used in a shape fill in a presentation.
 
 ```javascript editor-pptx
+// How do I get the theme name in a presentation?
+
+// Get the theme name using a color object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,4 +45,3 @@ run.AddText('Theme name: ' + themeColor.GetThemeName());
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

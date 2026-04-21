@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-此示例从可用方案中选择一个来创建复杂配色方案。
+在电子表格中从可用的配色方案中选择创建复杂配色方案。
 
 ```javascript editor-xlsx
-// Get a color scheme using its name.
+// Get a color scheme using its name in a spreadsheet.
 
-// How to create a color from the schemes.
+// How to create a color from the schemes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let schemeColor = Api.CreateSchemeColor("dk1");
@@ -35,4 +35,3 @@ let fill = Api.CreateSolidFill(schemeColor);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("curvedUpArrow", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```
-

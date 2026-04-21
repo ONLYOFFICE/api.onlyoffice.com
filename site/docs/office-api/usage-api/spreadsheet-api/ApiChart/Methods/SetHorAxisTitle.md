@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example specifies the chart horizontal axis title.
+Specify the chart horizontal axis title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set title for horizontal axis.
+// How to set title for horizontal axis in a spreadsheet.
 
-// Add title for the axis.
+// Add title for the axis using the chart API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -51,4 +51,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

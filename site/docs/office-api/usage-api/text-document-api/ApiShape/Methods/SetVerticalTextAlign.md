@@ -5,7 +5,7 @@ Sets the vertical alignment to the shape content where a paragraph or text runs 
 ## Syntax
 
 ```javascript
-expression.SetVerticalTextAlign(VerticalAlign);
+expression.SetVerticalTextAlign(verticalAlign);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetVerticalTextAlign(VerticalAlign);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| VerticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The type of the vertical alignment for the shape inner contents. |
+| verticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The type of the vertical alignment for the shape inner contents. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
+Set the vertical alignment to the shape content where a paragraph or text runs can be inserted in a document.
 
 ```javascript editor-docx
-// How to align the text of the shape to top.
+// How to align the text of the shape to top in a document.
 
-// Set vertical text align to top.
+// Set vertical text align to top in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ paragraph.AddText("Class Type = " + classType);
 docContent.AddElement(0, paragraph);
 drawing.SetVerticalTextAlign("top");
 ```
-

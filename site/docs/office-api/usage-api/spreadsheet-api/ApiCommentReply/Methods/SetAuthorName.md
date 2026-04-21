@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the comment reply author's name.
+Set the comment reply author's name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add author's name to the reply.
+// How to add author's name to the reply in a spreadsheet.
 
 // Add a reply to the comment and set author name, then show author name in the worksheet.
 
@@ -39,4 +39,3 @@ reply.SetAuthorName("Mark Potato");
 worksheet.GetRange("A3").SetValue("Comment's reply author: ");
 worksheet.GetRange("B3").SetValue(reply.GetAuthorName());
 ```
-

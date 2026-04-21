@@ -20,10 +20,10 @@ string \| number \| null
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取最小点值。
+从数据条条件格式规则获取最小点值。
 
 ```javascript editor-xlsx
-// How to retrieve the value of the minimum condition.
+// How to retrieve the value of the minimum condition in a spreadsheet.
 
 // Get the minimum point value of a data bar conditional formatting rule.
 
@@ -46,4 +46,3 @@ let minPointValue = dataBar.GetMinPointValue();
 worksheet.GetRange("C1").SetValue("Min Point Value:");
 worksheet.GetRange("C2").SetValue(minPointValue || "Auto");
 ```
-

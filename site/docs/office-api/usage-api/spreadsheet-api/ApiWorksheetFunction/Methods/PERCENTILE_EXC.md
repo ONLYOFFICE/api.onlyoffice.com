@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the k-th percentile of values in a range, where k is in the range 0..1, exclusive.
+Return the k-th percentile of values in a range, where k is in the range 0..1, exclusive in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the k-th percentile of values in a range (exclusive).
+// How to get the k-th percentile of values in a range (exclusive) in a spreadsheet.
 
-// Use a function to get the k-th percentile of values.
+// Use a function to get the k-th percentile of values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -53,4 +53,3 @@ for (let m = 0; m < column4.length; m++) {
 let range = worksheet.GetRange("A1:D4");
 worksheet.GetRange("D5").SetValue(func.PERCENTILE_EXC(range, 0.5));
 ```
-

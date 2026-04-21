@@ -38,4 +38,3 @@ window.Asc.plugin.executeMethod("AnnotateParagraph", [{
     ]
 }]);
 ```
-

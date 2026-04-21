@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何为标记设置轮廓。
+如何在 PDF 文档中为标记设置轮廓。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker outline.
+// Create a chart, set its properties and its marker outline in a PDF document.
+
+// Set marker out line for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +51,3 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
 ```
-

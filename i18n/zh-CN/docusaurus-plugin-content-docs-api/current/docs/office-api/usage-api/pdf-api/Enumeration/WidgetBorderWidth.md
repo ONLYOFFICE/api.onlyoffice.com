@@ -12,5 +12,3 @@
 - "thin"
 - "medium"
 - "thick"
-
-

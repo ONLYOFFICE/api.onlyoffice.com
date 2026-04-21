@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get text from the body shape of the notes page.
+Get text from the body shape of the notes page in a presentation.
 
 ```javascript editor-pptx
+// How do I get the body shape text in a presentation?
+
+// Get the body shape text using a notes page object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,4 +43,3 @@ const text = notesPage.GetBodyShapeText();
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText(text);
 ```
-

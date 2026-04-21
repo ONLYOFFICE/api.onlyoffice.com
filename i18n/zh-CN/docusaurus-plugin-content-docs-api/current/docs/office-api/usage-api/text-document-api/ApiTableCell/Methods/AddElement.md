@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例使用在单元格中的位置添加段落。
+使用单元格中的位置添加段落。
 
 ```javascript editor-docx
 // Insert new paragraph into the current cell.
@@ -42,4 +42,3 @@ paragraph.AddText("This is just a sample text in the first cell.");
 let cell = table.GetCell(0, 0);
 cell.AddElement(0, paragraph);
 ```
-

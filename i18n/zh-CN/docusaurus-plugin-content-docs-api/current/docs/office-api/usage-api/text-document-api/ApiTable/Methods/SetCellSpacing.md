@@ -2,11 +2,11 @@
 
 指定默认表格单元格间距（相邻单元格之间以及单元格与表格边缘之间的间距）。
 
-Inherited from [ApiTablePr.SetCellSpacing](../../ApiTablePr/Methods/SetCellSpacing.md).
+继承自 [ApiTablePr.SetCellSpacing](../../ApiTablePr/Methods/SetCellSpacing.md)。
 
 ## 示例
 
-此示例指定默认表格单元格间距。
+指定默认的表格单元格间距。
 
 ```javascript editor-docx
 // How to set the size of the cell spacing.
@@ -24,4 +24,3 @@ table.SetStyle(tableStyle);
 tablePr.SetCellSpacing(720);
 doc.Push(table);
 ```
-

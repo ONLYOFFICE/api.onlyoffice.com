@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-此示例指定节中所有页面的属性（大小和方向）。
+指定节中所有页面的属性（大小和方向）。
 
 ```javascript editor-docx
 // How to set page size.
@@ -41,4 +41,3 @@ let section = doc.GetFinalSection();
 section.SetPageMargins(720, 720, 720, 720);
 section.SetPageSize(7200, 4320);
 ```
-

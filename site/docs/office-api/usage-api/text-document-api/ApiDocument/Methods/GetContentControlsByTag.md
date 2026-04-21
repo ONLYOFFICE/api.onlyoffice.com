@@ -22,12 +22,12 @@ expression.GetContentControlsByTag(sTag);
 
 ## Example
 
-This example shows how to get a list of all content controls in the document with the specified tag name.
+Get a list of all content controls in the document with the specified tag name.
 
 ```javascript editor-docx
-// Retrieve each content control with the specified tag.
+// Retrieve each content control with the specified tag in a document.
 
-// Get the first content control with the tag and set its alias.
+// Get the first content control with the tag and set its alias in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ doc.AddElement(0, blockLvlSdt);
 let contentControls = doc.GetContentControlsByTag("Tag 1");
 contentControls[0].SetAlias("№1");
 ```
-

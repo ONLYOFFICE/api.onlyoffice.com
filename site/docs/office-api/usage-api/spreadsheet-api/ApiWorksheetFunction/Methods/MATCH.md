@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the relative position of an item in a range that matches the specified value in the specified order.
+Return the relative position of an item in a range that matches the specified value in the specified order in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an index of an element that matches a condition.
+// How to get an index of an element that matches a condition in a spreadsheet.
 
-// Use a function to find an item in a range.
+// Use a function to find an item in a range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -50,4 +50,3 @@ for (let n = 0; n < phones.length; n++) {
 let range = worksheet.GetRange("B1:B5");
 worksheet.GetRange("D6").SetValue(func.MATCH("Ella Tompson", range, 0));
 ```
-

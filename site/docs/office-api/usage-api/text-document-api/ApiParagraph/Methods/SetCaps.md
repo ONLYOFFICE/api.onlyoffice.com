@@ -22,16 +22,15 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example specifies that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents.
+Specify that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents.
 
 ```javascript editor-docx
-// Make capitalized the paragraph text.
+// Make capitalized the paragraph text in a document.
 
-// Create a paragraph with the font set to capitalized letters.
+// Create a paragraph with the font set to capitalized letters in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is a paragraph with the font set to capitalized letters.");
 paragraph.SetCaps(true);
 ```
-

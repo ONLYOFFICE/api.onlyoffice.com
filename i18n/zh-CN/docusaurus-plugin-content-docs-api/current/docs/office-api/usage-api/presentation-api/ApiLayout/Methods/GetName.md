@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取当前版式的名称。
+获取演示文稿中当前版式的名称。
 
 ```javascript editor-pptx
+// How do I get the name in a presentation?
+
+// Get the name using a layout object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,4 +44,3 @@ const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Name of the first layout: ' + layout.GetName());
 layout.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ expression.GetDocContent();
 
 ## 示例
 
-此示例展示如何获取可以插入段落或文本块的形状内部内容。
+获取文档中可以插入段落或文本 run 的形状内部内容。
 
 ```javascript editor-docx
-// How to get the doc content of the drawing.
+// How to get the doc content of the drawing in a document.
 
-// Retrieve the content of the shape add the paragraph to it.
+// Retrieve the content of the shape add the paragraph to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent.AddElement(0, paragraph);
 ```
-

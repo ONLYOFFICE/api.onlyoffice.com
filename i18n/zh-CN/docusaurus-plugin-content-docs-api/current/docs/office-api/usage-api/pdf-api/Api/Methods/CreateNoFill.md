@@ -20,12 +20,12 @@ expression.CreateNoFill();
 
 ## 示例
 
-此示例创建无填充并移除元素的填充。
+在 PDF 文档中创建无填充并移除元素的填充。
 
 ```javascript editor-pdf
-// How to remove background fill from the object.
+// How to remove background fill from the object in a PDF document.
 
-// Create no fill and apply it to the element.
+// Create no fill and apply it to the element in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +39,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("The stroke of this shape is transparent.");
 page.AddObject(shape);
 ```
-

@@ -23,4 +23,3 @@ This method doesn't have any parameters.
 ```javascript editor-xlsx
 
 ```
-

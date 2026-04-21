@@ -20,12 +20,12 @@ expression.GetTableRowPr();
 
 ## 示例
 
-此示例展示如何获取当前样式的表格行属性。
+获取文档中当前样式的表格行属性。
 
 ```javascript editor-docx
-// How to get table row and set its height.
+// How to get table row and set its height in a document.
 
-// Resize the row of the table.
+// Resize the row of the table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -40,4 +40,3 @@ tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("cle
 tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
 tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
 ```
-

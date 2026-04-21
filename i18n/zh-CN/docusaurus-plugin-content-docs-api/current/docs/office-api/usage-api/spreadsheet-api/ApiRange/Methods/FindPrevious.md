@@ -22,7 +22,7 @@ expression.FindPrevious(Before);
 
 ## 示例
 
-此示例查找匹配相同条件的上一个单元格。
+查找与这些相同条件匹配的上一个单元格。
 
 ```javascript editor-xlsx
 // How to get the previous cell from a range that meets search requirements.
@@ -53,4 +53,3 @@ nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 let prevSearchRange = range.FindPrevious(nextSearchRange);
 prevSearchRange.SetValue(0);
 ```
-

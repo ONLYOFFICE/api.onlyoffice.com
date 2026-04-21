@@ -22,7 +22,7 @@ expression.GetCell(nPos);
 
 ## Example
 
-This example shows how to get a cell by its position in the row.
+Get a cell by its position in the row in a presentation.
 
 ```javascript editor-pptx
 // How to return a cell using its row index.
@@ -43,4 +43,3 @@ content.Push(paragraph);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例设置现有的预定义编号模板之一。
+在文档中设置一个现有的预定义编号模板。
 
 ```javascript editor-docx
-// How to set template type of the numbering.
+// How to set template type of the numbering in a document.
 
-// Set "A." template to the numbering.
+// Set "A." template to the numbering in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -46,4 +46,3 @@ paragraph.SetNumbering(numLvl);
 paragraph.AddText("This is the third element of an A.-B.-C. numbered list");
 doc.Push(paragraph);
 ```
-

@@ -22,7 +22,7 @@ expression.SetPriority(Priority);
 
 ## 示例
 
-此示例设置条件格式规则的优先级。
+设置条件格式规则的优先级。
 
 ```javascript editor-xlsx
 // How to change the priority value of conditional formatting rules.
@@ -53,4 +53,3 @@ condition1.SetPriority(5);
 worksheet.GetRange("C4").SetValue("New priority:");
 worksheet.GetRange("C5").SetValue(condition1.GetPriority());
 ```
-

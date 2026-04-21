@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例按样式 ID 设置图表的样式。
+在电子表格中通过样式 ID 为图表设置样式。
 
 ```javascript editor-xlsx
-// How to update visualization of a chart setting a new style by using its ID.
+// How to update visualization of a chart setting a new style by using its ID in a spreadsheet.
 
-// Apply new style by its ID.
+// Apply new style by its ID in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -53,4 +53,3 @@ chart.SetSeriesFill(fill, 1, false);
 stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetSeriesOutLine(stroke, 1, false);
 ```
-

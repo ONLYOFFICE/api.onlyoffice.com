@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill color of a stroke.
+Get the fill color of a stroke. Creates a shape with a colored border and retrieve its fill properties in a PDF document.
 
 ```javascript editor-pdf
-// Creates a shape with a colored border and retrieves its fill properties.
+// How to get the fill for a stroke in a PDF document?
+
+// Get the fill and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,4 +45,3 @@ if (strokeObj) {
     }
 }
 ```
-

@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何检查颜色是否为自动颜色。
+检查文档中的颜色是否为自动颜色。
 
 ```javascript editor-docx
+// How to is auto color for a color in a document?
+
+// Is auto color and display the result in a document.
+
 const doc = Api.GetDocument();
 const themeColor = Api.ThemeColor('accent1');
 const autoColor = Api.AutoColor();
@@ -31,4 +35,3 @@ paragraph.AddText('Is themeColor an auto color? ' + themeColor.IsAutoColor());
 paragraph.AddLineBreak();
 paragraph.AddText('Is autoColor an auto color? ' + autoColor.IsAutoColor());
 ```
-

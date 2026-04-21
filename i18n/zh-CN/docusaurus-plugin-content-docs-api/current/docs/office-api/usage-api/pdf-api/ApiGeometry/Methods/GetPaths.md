@@ -20,10 +20,13 @@ expression.GetPaths();
 
 ## 示例
 
-分析页面上云形状的路径属性。
+分析页面上云形路径属性。在文本形状中显示全面的路径信息。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How can I get the paths using a geometry in a PDF document?
+
+// Get the paths for a geometry in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,4 +43,3 @@ paragraph.AddText(", Fill: " + path.GetFill() + ", Array: " + paths.length);
 shape.SetPosition(1000000, 1000000);
 page.AddObject(shape);
 ```
-

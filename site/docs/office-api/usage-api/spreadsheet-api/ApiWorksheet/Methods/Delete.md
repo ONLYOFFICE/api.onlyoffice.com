@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example deletes the worksheet.
+Delete the worksheet.
 
 ```javascript editor-xlsx
-// How to delete sheets.
+// How to delete sheets in a spreadsheet.
 
-// Remove a worksheet.
+// Delete and display the result in a spreadsheet.
 
 Api.AddSheet("New sheet");
 let sheet = Api.GetActiveSheet();
@@ -33,4 +33,3 @@ sheet.Delete();
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A3").SetValue("This method just deleted the second sheet from this spreadsheet.");
 ```
-

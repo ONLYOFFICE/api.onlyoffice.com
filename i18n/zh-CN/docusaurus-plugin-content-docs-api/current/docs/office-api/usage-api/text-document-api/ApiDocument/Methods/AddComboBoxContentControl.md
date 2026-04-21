@@ -23,10 +23,13 @@ expression.AddComboBoxContentControl(list, selected);
 
 ## 示例
 
-此示例展示如何向文档添加组合框内容控件：
+在文档中添加组合框内容控件。
 
 ```javascript editor-docx
+// How do I add the combo box content control in a document?
+
+// Add the combo box content control using a document object.
+
 let doc = Api.GetDocument();
 doc.AddComboBoxContentControl();
 ```
-

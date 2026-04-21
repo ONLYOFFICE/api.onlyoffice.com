@@ -3,11 +3,11 @@
 返回当前表单的文本属性。
 *如果该表单类型支持则使用*
 
-Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
+继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
 
 ## 示例
 
-此示例展示如何从表单获取文本属性。
+获取文档中表单的文本属性。
 
 ```javascript editor-forms
 // How to get a text properties of a text form.
@@ -26,4 +26,3 @@ let formTextPr = textForm.GetTextPr();
 formTextPr.SetItalic(true);
 textForm.SetTextPr(formTextPr);
 ```
-

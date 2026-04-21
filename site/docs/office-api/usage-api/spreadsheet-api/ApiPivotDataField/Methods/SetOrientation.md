@@ -7,12 +7,12 @@ Inherited from [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOri
 
 ## Example
 
-This example shows how to set an orientation of a pivot field.
+Set an orientation of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation.
+// How to change a pivot field orientation in a spreadsheet.
 
-// Create a pivot table, add data to it then change an orientation a specified pivot.
+// Create a pivot table, add data to it then change an orientation a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,4 +53,3 @@ setTimeout(function () {
     pivotField.SetOrientation("Columns");
 }, 5000);
 ```
-

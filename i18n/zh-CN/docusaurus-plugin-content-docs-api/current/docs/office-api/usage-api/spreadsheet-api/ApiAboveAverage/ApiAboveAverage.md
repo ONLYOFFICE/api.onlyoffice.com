@@ -1,6 +1,6 @@
 # ApiAboveAverage
 
-ApiAboveAverage is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
+ApiAboveAverage 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
 
 ## 属性
 

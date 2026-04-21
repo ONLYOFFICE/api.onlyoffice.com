@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes all the elements from the paragraph.
+Remove all the elements from the paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to delete all elements from the paragraph.
+// How to delete all elements from the paragraph in a presentation.
 
-// Clear all elements from the paragraph.
+// Clear all elements from the paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ paragraph.AddText("We removed all the paragraph elements and added a new text ru
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

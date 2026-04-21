@@ -21,10 +21,10 @@ string
 
 ## Example
 
-This example gets a text font family.
+Get a text font family in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text font family.
+// How to find out a text font family in a spreadsheet.
 
 // Get a text font family name and display it in the worksheet.
 
@@ -46,4 +46,3 @@ let fontFamily = textProps.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 content.Push(paragraph);
 ```
-

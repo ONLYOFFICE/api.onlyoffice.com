@@ -23,10 +23,10 @@ boolean
 
 ## Example
 
-This example sets the lock value to the specified lock type of the current drawing.
+Set the lock value to the specified lock type of the current drawing in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a lock type of a drawing.
+// How to set a lock type of a drawing in a spreadsheet.
 
 // Create a drawing, set its lock value and display it in the worksheet.
 
@@ -40,4 +40,3 @@ drawing.SetLockValue("noSelect", true);
 let lockValue = drawing.GetLockValue("noSelect");
 worksheet.GetRange("A1").SetValue("This drawing cannot be selected: " + lockValue);
 ```
-

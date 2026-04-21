@@ -10,5 +10,3 @@
 
 - "OverThenDown"
 - "DownThenOver"
-
-

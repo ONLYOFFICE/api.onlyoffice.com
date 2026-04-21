@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the parent of a custom XML node and display its value.
+Get the parent of a custom XML node and display its value in a document.
 
 ```javascript editor-docx
+// How do I get the parent in a document?
+
+// Get the parent using a custom XML node object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -43,4 +47,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(`Root node name: ${rootNode.GetNodeName()}; parent of root node: ${nullNode}`);
 doc.Push(paragraph);
 ```
-

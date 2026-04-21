@@ -13,4 +13,3 @@ Object
 | name | string | 批注类型（例如，`"grammar"`）。 |
 | paragraphId | string | 包含批注的段落 ID。 |
 | rangeId | string | 批注范围 ID。 |
-

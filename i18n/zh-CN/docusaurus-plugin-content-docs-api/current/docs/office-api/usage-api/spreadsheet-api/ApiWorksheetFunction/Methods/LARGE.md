@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数据集中第 k 个最大值。例如，第五大的数字。
+在电子表格中返回数据集中第 k 个最大值。例如，第五大的数字。
 
 ```javascript editor-xlsx
-// How to find the k-th largest value in a data set.
+// How to find the k-th largest value in a data set in a spreadsheet.
 
-// Use a function to find out the largest value in a data set specifying its order number.
+// Use a function to find out the largest value in a data set specifying its order number in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -46,4 +46,3 @@ let largePostion = 4;
 let kLargest = func.LARGE(range, largePostion);
 worksheet.GetRange("C1").SetValue(kLargest);
 ```
-

@@ -1,6 +1,6 @@
 # ApiShape
 
-ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
+ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
 

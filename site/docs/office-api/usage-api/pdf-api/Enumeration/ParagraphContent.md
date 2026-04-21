@@ -12,10 +12,9 @@ Enumeration
 - [ApiRun](../ApiRun/ApiRun.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
 
-
 ## Example
 
-This example adds an element called 'text run' to the paragraph.
+Add an element called 'text run' to the paragraph.
 
 ```javascript editor-pdf
 // How to add an element to paragraph.
@@ -24,4 +23,3 @@ This example adds an element called 'text run' to the paragraph.
 
 paragraph.AddElement(run, 0);
 ```
-

@@ -23,10 +23,10 @@ expression.Intersect(Range1, Range2);
 
 ## Example
 
-This example shows how to get the ApiRange object that represents the rectangular intersection of two or more ranges.
+Get the cell range object that represents the rectangular intersection of two or more ranges in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find intersection of two ranges and highlight it.
+// How to find intersection of two ranges and highlight it in a spreadsheet.
 
 // Find common cells of two ranges and fill them with a color.
 
@@ -36,4 +36,3 @@ let range2 = worksheet.GetRange("B2:B4");
 let range = Api.Intersect(range1, range2);
 range.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
-

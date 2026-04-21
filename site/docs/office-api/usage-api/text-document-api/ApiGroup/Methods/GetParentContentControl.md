@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetParentContentControl](../../ApiDrawing/Methods/Get
 
 ## Example
 
-This example shows how to get a parent content control that contains the graphic object.
+Get a parent content control that contains the graphic object in a document.
 
 ```javascript editor-docx
-// Get an element's parent control.
+// Get an element's parent control in a document.
 
-// How to show the shape's wrapper control.
+// How to show the shape's wrapper control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();
@@ -25,4 +25,3 @@ doc.AddElement(0, blockLvlSdt);
 let parentContentControl = drawing.GetParentContentControl();
 parentContentControl.AddText("This is a parent content control.");
 ```
-

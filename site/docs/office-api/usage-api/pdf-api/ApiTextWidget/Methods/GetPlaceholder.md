@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example gets placeholder from text widget and displays it.
+Get placeholder from text widget and display it in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the placeholder in a PDF document?
+
+// Get the placeholder using a text widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -32,4 +36,3 @@ let widgets = comboboxField.GetAllWidgets();
 widgets[0].SetPlaceholder('Your text here');
 console.log('Text widget placeholder is: "' + widgets[0].GetPlaceholder() + '"');
 ```
-

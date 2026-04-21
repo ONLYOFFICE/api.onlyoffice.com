@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the placeholder text to the form.
+Set the placeholder text to the form.
 
 ```javascript editor-docx
 // Add text as a placeholder of the form.
@@ -36,4 +36,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetPlaceholderText("First name");
 ```
-

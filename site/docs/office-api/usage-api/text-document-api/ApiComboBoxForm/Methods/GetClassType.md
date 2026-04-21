@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a combo box form object.
 
 ```javascript editor-docx
-// How get a class type of ApiComboBoxForm.
+// How can I get the class type of a combo box form?
 
-// Retrieve class type of a created combobox object and display it.
+// Get the class type of a combo box form and display it in the document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

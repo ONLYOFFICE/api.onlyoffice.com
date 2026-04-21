@@ -22,9 +22,13 @@ string[]
 
 ## 示例
 
-此示例展示如何获取附加到指定角色的所有表单键列表。
+获取文档中附加到指定角色的所有表单键列表。
 
 ```javascript editor-forms
+// How to get the form keys by role for a document?
+
+// Get the form keys by role and display the result in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");
@@ -51,4 +55,3 @@ keys.forEach(key => {
     paragraph.AddText(key);
 });
 ```
-

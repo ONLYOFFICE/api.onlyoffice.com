@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-此示例为文本字符设置斜体属性。
+在文档中为文本字符设置斜体属性。
 
 ```javascript editor-docx
-// How to make text run italic.
+// How to make text run italic in a document.
 
-// Create a new text run and make its style italic.
+// Create a new text run and make its style italic in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.SetItalic(true);
 run.AddText("This is a text run with the font set to italicized letters.");
 paragraph.AddElement(run);
 ```
-

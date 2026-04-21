@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example retrieves the parent AutoFilter of a filter column.
+Retrieve the parent AutoFilter of a filter column in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to navigate from ApiFilter back to ApiAutoFilter.
+// How to navigate from filter back to auto filter in a spreadsheet.
 
-// Use ApiFilter.GetParent() to access the parent filters collection.
+// Use ApiFilter.GetParent() to access the parent filters collection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -62,4 +62,3 @@ if (filters.length > 0) {
     worksheet.GetRange("D5").SetValue(parentAutoFilter.Parent.GetName());
 }
 ```
-

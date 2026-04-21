@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the validation type.
+Get the validation type in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the validation type.
+// How to retrieve the validation type in a spreadsheet.
 
-// Get the validation type.
+// Get the validation type using the validation API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,4 +34,3 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let validationType = validation.GetType();
 worksheet.GetRange("B1").SetValue("Validation type: " + validationType);
 ```
-

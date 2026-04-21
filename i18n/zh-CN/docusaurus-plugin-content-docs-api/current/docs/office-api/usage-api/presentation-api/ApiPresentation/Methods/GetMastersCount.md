@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例演示如何获取幻灯片母版的数量。
+获取演示文稿中的幻灯片母版数量。
 
 ```javascript editor-pptx
 // How to get a master count from the presentation.
@@ -45,4 +45,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Number of masters = " + mastersCount);
 slide.AddObject(shape);
 ```
-

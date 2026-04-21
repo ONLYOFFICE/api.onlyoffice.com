@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the name of a drawing.
+Get the name of a drawing in a document.
 
 ```javascript editor-docx
+// How to get the name for a drawing object in a document?
+
+// Get the name and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -37,4 +41,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Drawing name: ' + shapeName);
 doc.Push(paragraph2);
 ```
-

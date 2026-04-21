@@ -12,10 +12,9 @@
 - "center"
 - "bottom"
 
-
 ## 示例
 
-在此示例中，创建的形状的内部文本将垂直对齐到更靠近形状上部的位置。
+为创建的形状添加垂直对齐到更靠近形状上部位置的内部文本。
 
 ```javascript editor-pptx
 // How to set a vertical position of a text in a shape.
@@ -24,4 +23,3 @@
 
 drawing.SetVerticalTextAlign("top");
 ```
-

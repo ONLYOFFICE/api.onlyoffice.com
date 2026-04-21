@@ -23,4 +23,3 @@ expression.PauseSlideShow();
 ```javascript
 window.Asc.plugin.executeMethod ("PauseSlideShow");
 ```
-

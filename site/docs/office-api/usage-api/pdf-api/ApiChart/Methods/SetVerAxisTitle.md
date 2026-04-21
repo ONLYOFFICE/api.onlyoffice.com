@@ -24,10 +24,12 @@ boolean
 
 ## Example
 
-Title the chart's vertical axis.
+Title the chart's vertical axis in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and name its vertical axis title.
+// Create a chart, set its properties and name its vertical axis title in a PDF document.
+
+// Set ver axis title using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,4 +52,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

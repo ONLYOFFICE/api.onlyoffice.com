@@ -18,4 +18,3 @@ window.Asc.plugin.attachEditorEvent("onEnableMouseEvent", (isEnabled) => {
     }
 });
 ```
-

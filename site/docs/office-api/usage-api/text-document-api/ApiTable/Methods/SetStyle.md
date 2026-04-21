@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a style to the table.
+Set a style to the table in a document.
 
 ```javascript editor-docx
-// How to set style of the table.
+// How to set style of the table in a document.
 
-// Create a bordered table.
+// Set style and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

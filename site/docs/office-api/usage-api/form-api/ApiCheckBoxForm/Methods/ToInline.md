@@ -7,7 +7,7 @@ Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
 ## Example
 
-This example converts the form to an inline form.
+Convert the form to an inline form.
 
 ```javascript editor-forms
 // How to make the form inline.
@@ -32,4 +32,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("The second form from this document has a fixed size: " + fixedCopy);
 doc.Push(paragraph);
 ```
-

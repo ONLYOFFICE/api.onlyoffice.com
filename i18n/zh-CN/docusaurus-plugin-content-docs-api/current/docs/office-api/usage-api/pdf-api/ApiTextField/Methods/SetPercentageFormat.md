@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例获取文本字段并为其设置百分比格式。
+获取文本字段并为其设置百分比格式。
 
 ```javascript editor-pdf
+// How to set percentage format for a text field?
+
+// Set percentage format and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -34,4 +38,3 @@ page.AddObject(textField);
 textField.SetPercentageFormat(0, "us");
 textField.SetValue(10);
 ```
-

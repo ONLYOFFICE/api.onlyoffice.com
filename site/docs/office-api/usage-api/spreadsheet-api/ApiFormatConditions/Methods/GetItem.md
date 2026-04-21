@@ -22,7 +22,7 @@ expression.GetItem(index);
 
 ## Example
 
-This example gets a specific conditional formatting rule by index.
+Get a specific conditional formatting rule by index.
 
 ```javascript editor-xlsx
 // How to get individual conditional formatting rules from a collection.
@@ -48,4 +48,3 @@ let firstRule = formatConditions.GetItem(1);
 
 worksheet.GetRange("B1").SetValue("Rule found: " + (firstRule !== null));
 ```
-

@@ -26,4 +26,3 @@ expression.MoveCursorToEnd(isMoveToMainContent);
 ```javascript
 window.Asc.plugin.executeMethod ("MoveCursorToEnd", [true]);
 ```
-

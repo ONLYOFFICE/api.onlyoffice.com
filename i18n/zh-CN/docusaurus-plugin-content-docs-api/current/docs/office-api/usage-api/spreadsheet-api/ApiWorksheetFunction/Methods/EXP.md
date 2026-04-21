@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回 e 常数的给定数字次幂。e 常数等于 2.71828182845904，是自然对数的底数。
+在电子表格中返回 e 常数的给定数字次幂。e 常数等于 2.71828182845904，是自然对数的底。
 
 ```javascript editor-xlsx
-// How to get the result from raising the e constant to a power.
+// How to get the result from raising the e constant to a power in a spreadsheet.
 
-// Use function to raise the e constant to a specified power.
+// Use function to raise the e constant to a specified power in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.EXP(5));
 ```
-

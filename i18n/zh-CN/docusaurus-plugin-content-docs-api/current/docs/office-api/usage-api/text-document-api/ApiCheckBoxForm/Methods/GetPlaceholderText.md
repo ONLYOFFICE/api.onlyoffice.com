@@ -2,11 +2,11 @@
 
 返回当前表单的占位符文本。
 
-Inherited from [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md).
+继承自 [ApiFormBase.GetPlaceholderText](../../ApiFormBase/Methods/GetPlaceholderText.md)。
 
 ## 示例
 
-此示例展示如何获取表单的占位符文本。
+获取文档中表单的占位符文本。
 
 ```javascript editor-docx
 // How to get the placeholder text of a text form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);
 ```
-

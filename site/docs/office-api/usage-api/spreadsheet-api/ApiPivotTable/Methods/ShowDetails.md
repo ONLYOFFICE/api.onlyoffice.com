@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example shows how to show details of a pivot table.
+Show details of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to display details of a field using its position.
+// How to display details of a field using its position in a spreadsheet.
 
-// Create a pivot table, add data to it then get and show its fiels details.
+// Create a pivot table, add data to it then get and show its fiels details in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ pivotTable.ShowDetails(1, 3);
 let showDetailsSheet = Api.GetActiveSheet();
 showDetailsSheet.GetRange('A5').SetValue('East details');
 ```
-

@@ -6,10 +6,10 @@ Inherited from [ApiDrawing.SetVerAlign](../../ApiDrawing/Methods/SetVerAlign.md)
 
 ## Example
 
-This example specifies how the floating object will be vertically aligned.
+Specify how the floating object will be vertically aligned in a document.
 
 ```javascript editor-docx
-// How to set the vertical alignment of the drawing.
+// How to set the vertical alignment of the drawing in a document.
 
 // Move the shape to the top of the page.
 
@@ -31,4 +31,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The shape is aligned to the top of the page.");
 doc.Push(paragraph);
 ```
-

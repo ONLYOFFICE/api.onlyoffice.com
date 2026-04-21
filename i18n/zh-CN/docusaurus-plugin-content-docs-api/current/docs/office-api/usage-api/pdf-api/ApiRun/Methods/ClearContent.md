@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例清除文本块中的内容。
+清除 PDF 文档中 run 的内容。
 
 ```javascript editor-pdf
-// How to delete content from the text run.
+// How to delete content from the text run in a PDF document.
 
 // Remove text from the page.
 
@@ -51,4 +51,3 @@ paragraph.AddElement(run);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

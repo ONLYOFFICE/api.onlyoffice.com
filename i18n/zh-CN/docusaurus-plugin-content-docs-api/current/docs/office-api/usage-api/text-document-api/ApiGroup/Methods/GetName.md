@@ -2,13 +2,17 @@
 
 返回当前绘图的名称。
 
-Inherited from [ApiDrawing.GetName](../../ApiDrawing/Methods/GetName.md).
+继承自 [ApiDrawing.GetName](../../ApiDrawing/Methods/GetName.md)。
 
 ## 示例
 
-此示例展示如何获取绘图的名称。
+获取文档中绘图对象的名称。
 
 ```javascript editor-docx
+// How to get the name for a drawing object in a document?
+
+// Get the name and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -23,4 +27,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Drawing name: ' + shapeName);
 doc.Push(paragraph2);
 ```
-

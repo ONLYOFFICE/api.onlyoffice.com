@@ -20,10 +20,13 @@ expression.Close();
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+创建自定义形状并将其添加到幻灯片。应用具有特定填充和笔触属性的自定义几何图形。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// How can I close using a geometry path in a presentation?
+
+// Close for a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -45,4 +48,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 slide.AddObject(shape);
 ```
-

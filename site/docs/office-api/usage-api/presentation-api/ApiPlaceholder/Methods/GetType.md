@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the placeholder type.
+Get the placeholder type in a presentation.
 
 ```javascript editor-pptx
-// How to get a placeholder type (chart, table, etc.).
+// How to get a placeholder type (chart, table, etc.) in a presentation.
 
-// Create a shape and get its placeholder type.
+// Create a shape and get its placeholder type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Placeholder type in this shape is: "' + placeholder.GetType() + '"');
 slide.AddObject(shape);
 ```
-

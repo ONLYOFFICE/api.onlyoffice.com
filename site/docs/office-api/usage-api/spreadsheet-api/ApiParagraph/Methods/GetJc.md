@@ -6,10 +6,10 @@ Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Get the paragraph contents justification in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph.
+// How to know the justification type of a paragraph in a spreadsheet.
 
 // Create a paragraph set justification type, get it and display in the worksheet.
 
@@ -31,4 +31,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + justification);
 content.Push(paragraph);
 ```
-

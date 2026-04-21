@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all OLE objects from the sheet.
+Get all OLE objects from the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all OLE objects images.
+// How to get all OLE objects images in a spreadsheet.
 
-// Get all OLE objects as an array.
+// Get all OLE objects as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddOleObject(
@@ -39,4 +39,3 @@ let oleObjects = worksheet.GetAllOleObjects();
 let appId = oleObjects[0].GetApplicationId();
 worksheet.GetRange('A1').SetValue('The application ID for the current OLE object: ' + appId);
 ```
-

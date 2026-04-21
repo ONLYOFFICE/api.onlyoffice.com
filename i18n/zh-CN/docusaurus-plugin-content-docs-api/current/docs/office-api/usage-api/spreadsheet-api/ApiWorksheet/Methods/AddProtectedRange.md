@@ -23,10 +23,10 @@ expression.AddProtectedRange(sTitle, sDataRange);
 
 ## 示例
 
-此示例添加新的受保护区域。
+在电子表格中添加新的受保护范围。
 
 ```javascript editor-xlsx
-// How to add the protected ApiRange object.
+// How to add the protected cell range object.
 
 // Insert a protected range to the worksheet.
 
@@ -35,4 +35,3 @@ worksheet.GetRange("A1").SetValue("1");
 worksheet.GetRange("B1").SetValue("2");
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");
 ```
-

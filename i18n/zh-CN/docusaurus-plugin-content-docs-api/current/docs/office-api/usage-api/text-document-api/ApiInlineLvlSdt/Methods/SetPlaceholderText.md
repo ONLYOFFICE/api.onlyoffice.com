@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例设置内联内容控件的占位符文本。
+为文档中的内联内容控件设置占位符文本。
 
 ```javascript editor-docx
-// How to set placeholder text for the inline content control.
+// How to set placeholder text for the inline content control in a document.
 
-// Display the placeholder set for inline text element.
+// Display the placeholder set for inline text element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ let inlineLvlSdt = Api.CreateInlineLvlSdt();
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 inlineLvlSdt.SetPlaceholderText("Custom placeholder");
 ```
-

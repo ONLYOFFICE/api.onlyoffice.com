@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of rich text properties object.
+Find out the class type of a rich text properties object in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the class type of a rich text properties in a PDF document?
+
+// Get the class type of a rich text properties and display it in the PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -40,4 +44,3 @@ let textPr = run.GetTextPr();
 
 console.log(`Object class type is: ${textPr.GetClassType()}`);
 ```
-

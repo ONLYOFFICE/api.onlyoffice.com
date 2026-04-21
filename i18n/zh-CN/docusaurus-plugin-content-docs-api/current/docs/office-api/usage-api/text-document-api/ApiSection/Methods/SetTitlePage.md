@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例指定此文档中当前节的第一页是否具有不同的页眉和页脚。
+指定此文档中当前节的首页是否具有不同的页眉和页脚。
 
 ```javascript editor-docx
 // How to make a page a title one.
@@ -44,4 +44,3 @@ paragraph.AddText("This is page #2 and it has a footer. ");
 paragraph.AddText("Scroll down the page to see it.");
 doc.Push(paragraph);
 ```
-

@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何将描边设置为主垂直网格线。
+如何在 PDF 文档中将笔触设置为主要垂直网格线。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical gridlines properties.
+// Create a chart, set its properties and its vertical gridlines properties in a PDF document.
+
+// Set major vertical gridlines using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +50,3 @@ let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.CreateRGBColor(
 chart.SetMajorVerticalGridlines(stroke);
 page.AddObject(chart);
 ```
-

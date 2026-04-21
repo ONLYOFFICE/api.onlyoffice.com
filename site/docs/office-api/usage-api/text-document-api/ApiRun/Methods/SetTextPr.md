@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## Example
 
-This example sets the text properties to the current run.
+Set the text properties to the current run in a document.
 
 ```javascript editor-docx
-// How to create the new text properties and apply it to the text run.
+// How to create the new text properties and apply it to the text run in a document.
 
-// Create a new text run and set its properties like font size, color, etc.
+// Create a new text run and set its properties like font size, color, etc in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 run.SetTextPr(textPr);
 ```
-

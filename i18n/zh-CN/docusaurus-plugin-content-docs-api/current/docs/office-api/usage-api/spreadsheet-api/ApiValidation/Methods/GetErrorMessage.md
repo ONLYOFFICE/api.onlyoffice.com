@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取错误消息文本。
+获取电子表格中的错误消息文本。
 
 ```javascript editor-xlsx
-// How to retrieve the validation error message.
+// How to retrieve the validation error message in a spreadsheet.
 
-// Get the error message.
+// Get the error message using the validation API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -35,4 +35,3 @@ validation.SetErrorMessage("Value must be greater than 10");
 let errorMessage = validation.GetErrorMessage();
 worksheet.GetRange("B1").SetValue("Error message: " + errorMessage);
 ```
-

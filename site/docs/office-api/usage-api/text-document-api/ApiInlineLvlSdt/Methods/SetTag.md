@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a string tag to the inline text content control.
+Set a string tag to the inline text content control in a document.
 
 ```javascript editor-docx
-// How to set tag for the inline content control.
+// How to set tag for the inline content control in a document.
 
-// Display the tag set for inline text element.
+// Display the tag set for inline text element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Tag: " + tag);
 doc.Push(paragraph);
 ```
-

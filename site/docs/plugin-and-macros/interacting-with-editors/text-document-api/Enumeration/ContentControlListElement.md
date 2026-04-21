@@ -12,4 +12,3 @@ Object
 | ---- | ---- | ----------- |
 | Display | string | The element display text. |
 | Value | string | The element value. |
-

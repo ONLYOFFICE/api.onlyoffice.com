@@ -33,4 +33,3 @@ window.saveImage = function () {
     window.Asc.plugin.callCommand("close", "");
 };
 ```
-

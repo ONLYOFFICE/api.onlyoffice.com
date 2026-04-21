@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例将光标移动到范围对象内的指定位置。
+在文档中将光标移动到范围对象内的指定位置。
 
 ```javascript editor-docx
+// How can I move cursor to pos using a document in a document?
+
+// Move cursor to pos for a document in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the text in your document.");
@@ -35,4 +39,3 @@ doc.Push(paragraph);
 let range = doc.GetRange();
 doc.MoveCursorToPos(range.GetEndPos());
 ```
-

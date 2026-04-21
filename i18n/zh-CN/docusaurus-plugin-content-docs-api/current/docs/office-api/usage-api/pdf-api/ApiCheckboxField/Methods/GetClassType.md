@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取复选框字段对象的类类型。
+检查 PDF 文档中复选框字段返回的类类型。
 
 ```javascript editor-pdf
+// How do I check what type a checkbox field object is in a PDF document?
+
+// Retrieve and output the class type string for a checkbox field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);
@@ -30,4 +34,3 @@ page.AddObject(checkboxField);
 
 console.log('Field type is: ' + checkboxField.GetClassType());
 ```
-

@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetBetweenBorder](../../ApiParaPr/Methods/SetBetweenBo
 
 ## Example
 
-This example specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.
+Specify the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings in a document.
 
 ```javascript editor-docx
-// How to set the border between paragraphs.
+// How to set the border between paragraphs in a document.
 
-// Create a paragraph, add text to it and the single border between the text.
+// Create a paragraph, add text to it and the single border between the text in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -34,4 +34,3 @@ paragraph.AddText("No need to add anything additionally to it. ");
 paragraph.AddText("The borders between the paragraphs have already been set.");
 doc.Push(paragraph);
 ```
-

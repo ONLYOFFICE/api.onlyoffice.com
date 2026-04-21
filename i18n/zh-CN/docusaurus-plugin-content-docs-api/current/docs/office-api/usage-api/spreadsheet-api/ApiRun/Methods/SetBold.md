@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-此示例为文本字符设置粗体属性。
+在电子表格中为文本字符设置粗体属性。
 
 ```javascript editor-xlsx
-// How to make text bold.
+// How to make text bold in a spreadsheet.
 
-// Create a text run object, update its style by making it bold.
+// Create a text run object, update its style by making it bold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -43,4 +43,3 @@ run.SetBold(true);
 run.AddText("This is a text run with the font set to bold.");
 paragraph.AddElement(run);
 ```
-

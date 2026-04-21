@@ -20,9 +20,13 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例从富文本块对象获取富文本属性并为其设置一些属性。
+从 PDF 文档中的富文本 run 对象获取富文本属性并为其设置一些属性。
 
 ```javascript editor-pdf
+// How can I get the text pr using a rich text run in a PDF document?
+
+// Get the text pr for a rich text run in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -42,4 +46,3 @@ textPr.SetUnderline(true);
 
 console.log(`We set some properties to rich text properties from rich run object`);
 ```
-

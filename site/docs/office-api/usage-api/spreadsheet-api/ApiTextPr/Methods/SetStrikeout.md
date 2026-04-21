@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+Specify that the contents of the run are displayed with a single horizontal line through the center of the line in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to strike out a text with one line.
+// How to strike out a text with one line in a spreadsheet.
 
-// Cross out a text with one line.
+// Cross out a text with one line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -43,4 +43,3 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 ```
-

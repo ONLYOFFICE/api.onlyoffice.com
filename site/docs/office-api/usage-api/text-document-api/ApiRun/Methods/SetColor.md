@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## Example
 
-This example sets the text color for the current text run.
+Set the text color for the current text run in a document.
 
 ```javascript editor-docx
-// How to change text color.
+// How to change text color in a document.
 
-// Create a new text run and change its font color.
+// Create a new text run and change its font color in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ const hexColor = Api.HexColor('#219ebc');
 secondRun.SetColor(hexColor);
 paragraph.AddElement(secondRun);
 ```
-

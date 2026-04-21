@@ -20,7 +20,7 @@ expression.GetTableCellPr();
 
 ## 示例
 
-此示例展示如何获取将应用于表格中符合条件格式类型的所有单元格的表格单元格属性集。
+获取将应用于表格中与条件格式类型匹配的所有单元格的表格单元格属性集。
 
 ```javascript editor-docx
 // How to get the table cell properties.
@@ -40,4 +40,3 @@ tableStylePr.GetTableCellPr().SetShd("clear", 0xEE, 0xEE, 0xEE);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

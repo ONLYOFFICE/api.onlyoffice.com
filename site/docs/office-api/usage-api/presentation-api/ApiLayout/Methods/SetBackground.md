@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the background to the current slide layout.
+Set the background to the current slide layout.
 
 ```javascript editor-pptx
-// How to set a background of a layout.
+// How to set a background of a layout in a presentation.
 
-// Create a gradient fill and apply it as a background.
+// Create a gradient fill and apply it as a background in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,3 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
 ```
-

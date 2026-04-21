@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all the drawing objects from the slide.
+Get an array with all the drawing objects from the slide.
 
 ```javascript editor-pptx
 // How to get all drawings from the slide.
@@ -42,4 +42,3 @@ const allDrawings = slide.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("chart");
 allDrawings[0].SetPlaceholder(placeholder);
 ```
-

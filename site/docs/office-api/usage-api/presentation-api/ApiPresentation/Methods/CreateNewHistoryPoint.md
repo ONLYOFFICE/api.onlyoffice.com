@@ -20,7 +20,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example creates a new history point.
+Create a new history point in a presentation.
 
 ```javascript editor-pptx
 // How to add a new history point to the presentation.
@@ -45,4 +45,3 @@ paragraph.AddText("New history point was just created.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

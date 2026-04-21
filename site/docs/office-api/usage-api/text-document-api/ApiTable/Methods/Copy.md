@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the table.
+Create a copy of the table in a document.
 
 ```javascript editor-docx
-// How to create identical table.
+// How to create identical table in a document.
 
-// Get a table object and create a copy of it.
+// Get a table object and create a copy of it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -37,4 +37,3 @@ doc.Push(table);
 let copyTable = table.Copy();
 doc.Push(copyTable);
 ```
-

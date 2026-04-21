@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.SetJc](../../ApiTablePr/Methods/SetJc.md).
 
 ## Example
 
-This example specifies the alignment of the table with respect to the text margins in the current section.
+Specify the alignment of the table with respect to the text margins in the current section in a document.
 
 ```javascript editor-docx
-// How to set justification of the paragraph content.
+// How to set justification of the paragraph content in a document.
 
-// Change the justification of the paragraph.
+// Change the justification of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -26,4 +26,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

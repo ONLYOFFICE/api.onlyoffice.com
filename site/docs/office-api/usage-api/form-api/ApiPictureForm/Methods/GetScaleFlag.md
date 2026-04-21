@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current scaling condition of the picture form.
+Get the current scaling condition of the picture form in a document.
 
 ```javascript editor-forms
-// How to enable a picture scaling.
+// How to enable a picture scaling in a document.
 
-// Set picture scale flag to true.
+// Set picture scale flag to true in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Picture scale flag: " + scaleFlag);
 doc.Push(paragraph);
 ```
-

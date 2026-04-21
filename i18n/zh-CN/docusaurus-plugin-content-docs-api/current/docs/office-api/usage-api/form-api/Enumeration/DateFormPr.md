@@ -11,10 +11,9 @@
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [DateFormPrBase](../Enumeration/DateFormPrBase.md)
 
-
 ## 示例
 
-此示例使用通用和特定的日期表单属性创建日期表单。
+使用通用和特定的日期表单属性创建日期表单。
 
 ```javascript editor-forms
 // How to create a date form with its properties.
@@ -31,4 +30,3 @@ let dateFormPr = {
 };
 let dateForm = Api.CreateDateForm(dateFormPr);
 ```
-

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向容器添加段落。
+向文档中的容器添加段落。
 
 ```javascript editor-docx
-// Creates a block content control and adds a paragraph with a text to it.
+// Create a block content control and add a paragraph with a text to it in a document.
 
-// How to add the ApiParagraph object to the first position of the ApiBlockLvlSdt object.
+// How to add the paragraph object to the first position of the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -37,4 +37,3 @@ paragraph.AddText("This is a block text content control.");
 blockLvlSdt.AddElement(paragraph, 0);
 doc.AddElement(0, blockLvlSdt);
 ```
-

@@ -20,9 +20,13 @@ expression.GetColumnsSpaces();
 
 ## 示例
 
-此示例指定当前节中的所有列具有不同的宽度。
+指定文档中当前节的所有列具有不同的宽度。
 
 ```javascript editor-docx
+// How do I get the columns spaces in a document?
+
+// Get the columns spaces using a section object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();
@@ -41,4 +45,3 @@ paragraph.AddText("This text starts from column #3. ");
 paragraph.AddText("This column is 3 inches wide (" + columnsWidths[2] + " twentieths of a point). ");
 paragraph.AddText("The distance between this column and column #2 is 1/3 of an inch (" + columnsSpaces[1] + " twentieths of a point).");
 ```
-

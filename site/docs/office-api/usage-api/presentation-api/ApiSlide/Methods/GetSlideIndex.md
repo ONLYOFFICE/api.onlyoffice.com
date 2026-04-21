@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get a position of the current slide in the presentation.
+Get a position of the current slide in the presentation.
 
 ```javascript editor-pptx
 // How to return a slide index.
@@ -45,4 +45,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Slide index = " + index);
 slide.AddObject(shape);
 ```
-

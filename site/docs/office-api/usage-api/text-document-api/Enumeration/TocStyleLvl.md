@@ -15,7 +15,7 @@ Object
 
 ## Example
 
-This example adds a table of contents which is generated from the specified styles to the document.
+Add a table of contents which is generated from the specified styles to the document.
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its style levels.
@@ -38,4 +38,3 @@ let tocPr = {
 };
 doc.AddTableOfContents(tocPr);
 ```
-

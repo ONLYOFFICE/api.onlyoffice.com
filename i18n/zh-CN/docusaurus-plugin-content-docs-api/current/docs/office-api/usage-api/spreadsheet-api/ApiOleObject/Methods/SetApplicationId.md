@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例设置当前 OLE 对象的应用程序 ID。
+在电子表格中为当前 OLE 对象设置应用程序 ID。
 
 ```javascript editor-xlsx
-// How to set application id of OLE object.
+// How to set application id of OLE object in a spreadsheet.
 
 // Add Ole object, set its application id and display it in the worksheet.
 
@@ -39,4 +39,3 @@ let oleObject = worksheet.AddOleObject(
 );
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
 ```
-

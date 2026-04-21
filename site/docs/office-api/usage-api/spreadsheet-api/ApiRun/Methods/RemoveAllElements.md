@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example removes all the elements from the run.
+Remove all the elements from the run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove all text elements.
+// How to remove all text elements in a spreadsheet.
 
-// Create a text run object, add a text to it and clear its content.
+// Create a text run object, add a text to it and clear its content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -39,4 +39,3 @@ run.RemoveAllElements();
 run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 ```
-

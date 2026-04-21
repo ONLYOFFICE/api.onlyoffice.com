@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-此示例将 ApiStroke 对象转换为 JSON 对象。
+将文档中的笔触对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the stroke object.
+// How to get a JSON from the stroke object in a document.
 
 // Convert the stroke to json and add it to the document.
 
@@ -37,4 +37,3 @@ let strokeFromJSON = Api.FromJSON(json);
 let drawing = Api.CreateShape("roundRect", 5930900, 395605, fill, strokeFromJSON);
 paragraph.AddDrawing(drawing);
 ```
-

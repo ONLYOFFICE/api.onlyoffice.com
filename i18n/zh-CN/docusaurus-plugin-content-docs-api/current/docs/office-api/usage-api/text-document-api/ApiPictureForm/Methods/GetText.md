@@ -2,11 +2,11 @@
 
 返回当前表单中的文本。
 
-Inherited from [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md).
+继承自 [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md)。
 
 ## 示例
 
-此示例展示如何从表单中获取文本。
+获取文档中表单的文本。
 
 ```javascript editor-docx
 // How to get a raw text of a text form.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form text: " + text);
 doc.Push(paragraph);
 ```
-

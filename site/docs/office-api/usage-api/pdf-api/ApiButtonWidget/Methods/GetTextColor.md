@@ -6,9 +6,13 @@ Inherited from [ApiBaseWidget.GetTextColor](../../ApiBaseWidget/Methods/GetTextC
 
 ## Example
 
-This example gets field widget and displays it's text color.
+Get field widget and display it's text color in a PDF document.
 
 ```javascript editor-pdf
+// How to get the text color for a widget in a PDF document?
+
+// Get the text color and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -23,4 +27,3 @@ widgets.forEach(function(widget) {
 let bgColor = widgets[0].GetTextColor();
 textField.SetValue('Widgets text color is: ' + bgColor.R + ',' + bgColor.G + ',' + bgColor.B);
 ```
-

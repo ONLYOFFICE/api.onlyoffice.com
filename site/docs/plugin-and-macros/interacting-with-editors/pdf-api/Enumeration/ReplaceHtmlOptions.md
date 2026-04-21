@@ -12,4 +12,3 @@ Object
 | ---- | ---- | ----------- |
 | content | string | The HTML content to replace. |
 | separateParagraphs | boolean | Specifies whether each paragraph will be created in a separate shape. |
-

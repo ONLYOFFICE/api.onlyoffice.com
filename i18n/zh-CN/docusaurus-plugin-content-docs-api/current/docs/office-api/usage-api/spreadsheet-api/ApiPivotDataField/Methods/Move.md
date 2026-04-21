@@ -23,12 +23,12 @@ expression.Move(type, index);
 
 ## 示例
 
-此示例展示如何移动数据字段。
+在电子表格中移动数据字段。
 
 ```javascript editor-xlsx
-// How to change a table element position by moving it by rows.
+// How to change a table element position by moving it by rows in a spreadsheet.
 
-// Create a pivot table, add data to it then move data field's by rows.
+// Create a pivot table, add data to it then move data field's by rows in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -70,4 +70,3 @@ setTimeout(function() {
     dataField.Move("Rows");
 }, 5000);
 ```
-

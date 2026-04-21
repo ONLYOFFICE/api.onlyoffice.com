@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-此示例将指定范围的值设置到指定系列。
+在电子表格中将指定范围的值设置到指定系列。
 
 ```javascript editor-xlsx
-// How to add values to series from the indicated range using addresses.
+// How to add values to series from the indicated range using addresses in a spreadsheet.
 
 // Fill series with values obtained from the worksheet cells.
 
@@ -56,4 +56,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

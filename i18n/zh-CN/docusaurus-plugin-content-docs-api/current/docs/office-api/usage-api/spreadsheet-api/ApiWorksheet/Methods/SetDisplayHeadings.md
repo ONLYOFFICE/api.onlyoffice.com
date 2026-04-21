@@ -22,15 +22,14 @@ expression.SetDisplayHeadings(isDisplayed);
 
 ## 示例
 
-此示例指定是否必须显示工作表的行/列标题。
+指定电子表格中是否必须显示工作表行/列标题。
 
 ```javascript editor-xlsx
-// How to set whether sheet headings should be displayed or not.
+// How to set whether sheet headings should be displayed or not in a spreadsheet.
 
-// Set a boolean value representing whether to display row/column headings or not.
+// Set a boolean value representing whether to display row/column headings or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The sheet settings make it display no row/column headers");
 worksheet.SetDisplayHeadings(false);
 ```
-

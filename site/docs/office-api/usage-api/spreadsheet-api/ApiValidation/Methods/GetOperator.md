@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the data validation operator.
+Get the data validation operator in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the validation operator.
+// How to retrieve the validation operator in a spreadsheet.
 
-// Get the operator.
+// Get the operator using the validation API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,4 +34,3 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let operator = validation.GetOperator();
 worksheet.GetRange("B1").SetValue("Operator: " + operator);
 ```
-

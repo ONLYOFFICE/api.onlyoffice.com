@@ -47,5 +47,3 @@ Enumeration
 - "radarMarker"
 - "radarFilled"
 - "unknown"
-
-

@@ -6,7 +6,7 @@ Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods
 
 ## Example
 
-This example gets the priority of a conditional formatting rule.
+Get the priority of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve the priority value from conditional formatting rules.
@@ -34,4 +34,3 @@ let priority = condition1.GetPriority();
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定主要水平网格线的视觉属性。
+指定文档中主要水平网格线的视觉属性。
 
 ```javascript editor-docx
-// How to set major horizontal gridlines of the chart.
+// How to set major horizontal gridlines of the chart in a document.
 
-// Create a chart, set its properties and its major gridlines as a stroke.
+// Create a chart, set its properties and its major gridlines as a stroke in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +46,3 @@ chart.SetMajorHorizontalGridlines(stroke);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

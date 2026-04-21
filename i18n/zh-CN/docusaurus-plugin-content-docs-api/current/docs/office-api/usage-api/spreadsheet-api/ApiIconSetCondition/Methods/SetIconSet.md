@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例演示如何更改条件格式的图标集类型。
+在电子表格中更改条件格式的图标集类型。
 
 ```javascript editor-xlsx
 // How to modify the icon set type used in conditional formatting.
@@ -45,4 +45,3 @@ worksheet.GetRange("B1").SetValue("Before: Default icon set");
 iconCondition.SetIconSet("xl4Arrows");
 worksheet.GetRange("B2").SetValue("After: Changed to 4 arrows");
 ```
-

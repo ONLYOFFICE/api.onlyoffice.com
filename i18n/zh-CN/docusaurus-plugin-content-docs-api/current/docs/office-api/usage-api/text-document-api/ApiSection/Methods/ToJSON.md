@@ -23,10 +23,10 @@ JSON
 
 ## 示例
 
-此示例将 ApiSection 对象转换为 JSON 对象。
+将文档中的节对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the section object.
+// How to get a JSON from the section object in a document.
 
 // Convert the section to json and add it to the document.
 
@@ -42,4 +42,3 @@ let type = sectionFromJSON.GetClassType();
 paragraph.AddLineBreak();
 paragraph.AddText("Class type = " + type);
 ```
-

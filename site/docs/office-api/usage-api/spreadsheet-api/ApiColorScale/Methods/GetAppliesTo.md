@@ -6,7 +6,7 @@ Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Method
 
 ## Example
 
-This example gets the range where a conditional formatting rule applies.
+Get the range where a conditional formatting rule applies.
 
 ```javascript editor-xlsx
 // How to retrieve the cell range of existing conditional formatting rules.
@@ -34,4 +34,3 @@ let appliedRange = condition1.GetAppliesTo();
 worksheet.GetRange("C1").SetValue("Rule applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
 ```
-

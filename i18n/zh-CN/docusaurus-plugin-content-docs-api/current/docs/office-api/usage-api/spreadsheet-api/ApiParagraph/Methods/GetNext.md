@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-此示例展示如何获取下一个段落。
+获取电子表格中的下一个段落。
 
 ```javascript editor-xlsx
-// How to get the next paragraph from the current one.
+// How to get the next paragraph from the current one in a spreadsheet.
 
-// Add two paragraphs into the shape content then get the second one using the GetNext method.
+// Add two paragraphs into the shape content then get the second one using the GetNext method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,4 +42,3 @@ content.Push(paragraph2);
 let nextParagraph = paragraph1.GetNext();
 nextParagraph.SetBold(true);
 ```
-

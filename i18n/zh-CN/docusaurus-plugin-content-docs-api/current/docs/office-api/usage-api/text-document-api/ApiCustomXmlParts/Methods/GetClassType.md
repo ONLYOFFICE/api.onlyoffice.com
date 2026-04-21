@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取自定义 XML 部件管理器的类类型。
+获取文档中自定义 XML 部件的类类型。
 
 ```javascript editor-docx
+// How to identify the class type of a custom XML parts in a document?
+
+// Obtain the class type identifier of a custom XML parts object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let classType = xmlManager.GetClassType();
@@ -30,4 +34,3 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Class type: " + classType);
 doc.Push(infoParagraph);
 ```
-

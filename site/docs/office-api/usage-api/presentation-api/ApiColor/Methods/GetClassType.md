@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a class type of the color used in a shape fill.
+Find out the class type of a color object in a presentation.
 
 ```javascript editor-pptx
+// How can I get the class type of a color in a presentation?
+
+// Get the class type of a color and display it in the presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,4 +45,3 @@ run.AddText("Class Type = " + color.GetClassType());
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

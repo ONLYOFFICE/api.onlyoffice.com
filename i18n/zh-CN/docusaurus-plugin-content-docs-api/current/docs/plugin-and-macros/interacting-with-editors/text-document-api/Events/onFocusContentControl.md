@@ -21,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onFocusContentControl", (control) => {
     console.log("Appearance: " + control.Appearance);
 });
 ```
-

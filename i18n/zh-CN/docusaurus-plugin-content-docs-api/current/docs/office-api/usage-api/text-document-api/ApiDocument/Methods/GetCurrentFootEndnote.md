@@ -20,12 +20,12 @@ expression.GetCurrentFootEndnote();
 
 ## 示例
 
-此示例获取文档中的当前脚注。
+获取文档中的当前脚注。
 
 ```javascript editor-docx
 // How to add footnote to the document.
 
-// Get text from the current footnote.
+// Get text from the current footnote in a document.
 
 let doc = Api.GetDocument();
 let footnote = doc.AddFootnote();
@@ -37,4 +37,3 @@ paragraph = doc.GetElement(0);
 let footnoteText = curFootnote.GetText();
 paragraph.AddText(footnoteText);
 ```
-

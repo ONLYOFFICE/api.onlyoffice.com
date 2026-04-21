@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何获取批注作者的用户 ID。
+获取电子表格中批注作者的用户 ID。
 
 ```javascript editor-xlsx
-// How to get a comment author's user ID.
+// How to get a comment author's user ID in a spreadsheet.
 
 // Add a comment author's ID to a range of the worksheet.
 
@@ -34,4 +34,3 @@ let comment = range.AddComment("This is just a number.");
 worksheet.GetRange("A3").SetValue("Comment's user Id: ");
 worksheet.GetRange("B3").SetValue(comment.GetUserId());
 ```
-

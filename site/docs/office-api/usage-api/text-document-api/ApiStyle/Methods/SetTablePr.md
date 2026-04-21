@@ -22,12 +22,12 @@ expression.SetTablePr(tablePr);
 
 ## Example
 
-This example shows how to set the table properties to the style.
+Set the table properties to the style in a document.
 
 ```javascript editor-docx
 // How to create table properties for style and set its cells margins.
 
-// Update table properties in the style.
+// Update table properties in the style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -49,4 +49,3 @@ tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("cle
 tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
 tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
 ```
-

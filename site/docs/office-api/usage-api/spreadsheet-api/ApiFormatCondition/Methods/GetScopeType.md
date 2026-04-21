@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the scope type of a conditional formatting rule.
+Get the scope type of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve the scope type from conditional formatting rules.
@@ -48,4 +48,3 @@ let scopeType = condition1.GetScopeType();
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
 ```
-

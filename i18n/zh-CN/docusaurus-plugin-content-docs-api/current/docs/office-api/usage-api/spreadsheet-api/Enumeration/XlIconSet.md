@@ -28,5 +28,3 @@
 - "xl3Stars"
 - "xl3Triangles"
 - "xl5Boxes"
-
-

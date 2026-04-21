@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the maximum point type of a data bar conditional formatting rule.
+Set the maximum point type of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the type of the maximum condition value.
+// How to change the type of the maximum condition value in a spreadsheet.
 
 // Set the maximum point type of a data bar conditional formatting rule.
 
@@ -51,4 +51,3 @@ dataBar.SetMaxPointType("xlConditionValuePercent");
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMaxPointType());
 ```
-

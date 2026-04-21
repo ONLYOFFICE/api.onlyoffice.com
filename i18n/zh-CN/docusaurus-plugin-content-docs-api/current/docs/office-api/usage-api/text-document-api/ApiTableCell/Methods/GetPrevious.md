@@ -20,7 +20,7 @@ expression.GetPrevious();
 
 ## 示例
 
-此示例展示如何获取上一个单元格。
+获取文档中的上一个单元格。
 
 ```javascript editor-docx
 // How to get previous cell.
@@ -39,4 +39,3 @@ doc.Push(table);
 let previousCell = table.GetCell(0, 1).GetPrevious();
 previousCell.GetContent().GetElement(0).SetBold(true);
 ```
-

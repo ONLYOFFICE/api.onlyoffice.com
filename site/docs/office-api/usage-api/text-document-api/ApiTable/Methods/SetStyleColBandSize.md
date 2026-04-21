@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.SetStyleColBandSize](../../ApiTablePr/Methods/SetStyl
 
 ## Example
 
-This example specifies a number of columns which will comprise each table column band for this table style.
+Specify a number of columns which will comprise each table column band for this table style in a document.
 
 ```javascript editor-docx
-// How to set column band size.
+// How to set column band size in a document.
 
-// How to style a column band size.
+// How to style a column band size in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();
@@ -34,4 +34,3 @@ table.GetRow(1).GetCell(2).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(1).GetCell(3).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
-

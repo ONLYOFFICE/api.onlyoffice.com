@@ -25,6 +25,8 @@ How to return a number of cells from the row.
 ```javascript editor-pdf
 // Create a table, count its cells and display the number in the page.
 
+// Get the cells count using a table row object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,4 +41,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

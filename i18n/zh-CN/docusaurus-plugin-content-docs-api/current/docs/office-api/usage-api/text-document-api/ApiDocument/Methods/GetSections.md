@@ -20,12 +20,12 @@ expression.GetSections();
 
 ## 示例
 
-此示例展示如何获取文档中节对象的集合。
+获取文档中的节对象集合。
 
 ```javascript editor-docx
 // How to get all sections from the document.
 
-// Get all sections and display the class type of the first one.
+// Get all sections and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ let classType = sections[1].GetClassType();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

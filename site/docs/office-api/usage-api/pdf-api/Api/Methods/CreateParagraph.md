@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a new paragraph and inserts it into the shape.
+Create a new paragraph and insert it into the shape in a PDF document.
 
 ```javascript editor-pdf
-// How to add a text.
+// How to add a text in a PDF document.
 
 // Insert text to the paragraph and add it to the page.
 
@@ -42,4 +42,3 @@ paragraph.AddText("This is an example of a paragraph inside a shape. Nothing spe
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

@@ -24,16 +24,15 @@ number
 
 ## 示例
 
-此示例演示如何返回指数分布。
+在电子表格中返回指数分布。
 
 ```javascript editor-xlsx
-// How to get the exponential distribution.
+// How to get the exponential distribution in a spreadsheet.
 
-// Use function to calculate an exponential distribution.
+// Use function to calculate an exponential distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.F_DIST(10, 6, 4, false);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example checks if the combo box text can be edited.
+Check if the combo box text can be edited in a document.
 
 ```javascript editor-docx
 // How to know whether a combobox form is editable.
 
-// Display a boolean representing editability of a combobox.
+// Display a boolean representing editability of a combobox in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first combo box from this document is editable: " + editable);
 doc.Push(paragraph);
 ```
-

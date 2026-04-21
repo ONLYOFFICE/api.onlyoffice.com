@@ -23,12 +23,12 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## Example
 
-This example shows how to create a blip fill to apply to the object using the selected image as the object background.
+Create a blip fill to apply to the object using the selected image as the object background in a PDF document.
 
 ```javascript editor-pdf
-// How to set an image as a background.
+// How to set an image as a background in a PDF document.
 
-// Use blip fill to fill a background with an image.
+// Use blip fill to fill a background with an image in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +39,3 @@ const drawing = Api.CreateShape("star10", 150 * 36000, 65 * 36000, fill, stroke)
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
 ```
-

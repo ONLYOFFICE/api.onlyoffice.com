@@ -36,4 +36,3 @@ Asc.plugin.executeMethod('CanRedo', [], result => console.log('Can redo: ' + res
 Asc.plugin.executeMethod('Undo');
 Asc.plugin.executeMethod('CanRedo', [], result => console.log('Can redo: ' + result));
 ```
-

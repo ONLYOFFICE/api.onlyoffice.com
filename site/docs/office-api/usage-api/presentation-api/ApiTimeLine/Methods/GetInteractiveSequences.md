@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all interactive animation sequences from a timeline.
+Get all interactive animation sequences from a timeline in a presentation.
 
 ```javascript editor-pptx
+// How do I get the interactive sequences in a presentation?
+
+// Get the interactive sequences using a timeline object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -66,4 +70,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Interactive sequences count: ' + sequences.length);
 slide.AddObject(infoShape);
 ```
-

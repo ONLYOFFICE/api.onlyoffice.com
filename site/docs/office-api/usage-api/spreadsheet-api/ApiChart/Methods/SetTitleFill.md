@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart title.
+Set the fill to the chart title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color a chart title.
+// How to color a chart title in a spreadsheet.
 
-// Add a solid color for a chart title.
+// Add a solid color for a chart title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetTitleFill(fill);
 ```
-

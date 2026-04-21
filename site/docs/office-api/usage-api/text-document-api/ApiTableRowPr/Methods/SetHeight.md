@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets the height to the current table row within the table.
+Set the height to the current table row within the table in a document.
 
 ```javascript editor-docx
-// Resize the height of the row.
+// Resize the height of the row in a document.
 
-// How to set a minimum row height of the table.
+// How to set a minimum row height of the table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ tableRowPr.SetHeight("atLeast", 720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

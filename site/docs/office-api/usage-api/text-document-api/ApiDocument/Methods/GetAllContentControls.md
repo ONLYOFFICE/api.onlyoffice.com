@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a list of all the content controls from the document.
+Get a list of all the content controls from the document in a document.
 
 ```javascript editor-docx
 // Get all content controls added to the document.
 
-// How to retrieve all content controls and display the class type of the first one.
+// How to retrieve all content controls and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

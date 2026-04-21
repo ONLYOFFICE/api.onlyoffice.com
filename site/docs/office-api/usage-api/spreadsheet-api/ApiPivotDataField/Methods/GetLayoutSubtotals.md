@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.GetLayoutSubtotals](../../ApiPivotField/Methods/Ge
 
 ## Example
 
-This example shows how to get a layout subtotals of a pivot field.
+Get a layout subtotals of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a layout subtotals of a pivot field.
+// How to get a layout subtotals of a pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then get a layout subtotals of a specified pivot field.
+// Create a pivot table, add data to it then get a layout subtotals of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -49,4 +49,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotals');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotals());
 ```
-

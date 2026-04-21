@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Set the spacing after the current paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points.
+// How to add the spacing after the paragraphs using points in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
+// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -47,4 +47,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 content.Push(paragraph);
 ```
-

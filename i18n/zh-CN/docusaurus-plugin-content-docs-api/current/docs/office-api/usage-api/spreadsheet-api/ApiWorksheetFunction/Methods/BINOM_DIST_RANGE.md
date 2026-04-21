@@ -25,15 +25,14 @@ number
 
 ## 示例
 
-此示例演示如何使用二项分布返回试验结果的概率。
+在电子表格中使用二项分布返回试验结果的概率。
 
 ```javascript editor-xlsx
-// How to get a probability of a trial result.
+// How to get a probability of a trial result in a spreadsheet.
 
-// Use function to get a probability of a trial result using binomial distribution.
+// Use function to get a probability of a trial result using binomial distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BINOM_DIST_RANGE(60, 0.75, 45, 50));
 ```
-

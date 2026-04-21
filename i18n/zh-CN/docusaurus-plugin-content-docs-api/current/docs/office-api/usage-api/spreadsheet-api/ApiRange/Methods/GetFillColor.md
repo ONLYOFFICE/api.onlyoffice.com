@@ -20,10 +20,10 @@ expression.GetFillColor();
 
 ## 示例
 
-此示例演示如何获取单元格范围的背景颜色。
+获取电子表格中单元格范围的背景颜色。
 
 ```javascript editor-xlsx
-// How to find out a range background color.
+// How to find out a range background color in a spreadsheet.
 
 // Get a range get, set its background color using RGB value and show it in the worksheet.
 
@@ -36,4 +36,3 @@ let fillColor = range.GetFillColor();
 worksheet.GetRange("A3").SetValue("This is another cell with the same color set to its background");
 worksheet.GetRange("A3").SetFillColor(fillColor);
 ```
-

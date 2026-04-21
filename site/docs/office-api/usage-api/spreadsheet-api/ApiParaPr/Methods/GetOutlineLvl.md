@@ -20,9 +20,13 @@ Number
 
 ## Example
 
-This example shows how to set and get the outline level of the specified paragraph via paragraph properties.
+Set and get the outline level of the specified paragraph via paragraph properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the outline lvl for a paragraph properties in a spreadsheet?
+
+// Get the outline lvl and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -40,4 +44,3 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
 ```
-

@@ -22,12 +22,12 @@ expression.AddDrawing(oDrawing);
 
 ## Example
 
-This example adds a chart to the paragraph.
+Add a chart to the paragraph in a document.
 
 ```javascript editor-docx
-// How to add a drawing to the paragraph.
+// How to add a drawing to the paragraph in a document.
 
-// Add a chart to the paragraph.
+// Add a chart to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +46,3 @@ chart.SetShowDataLabels(false, false, true, false);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

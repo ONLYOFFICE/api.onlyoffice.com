@@ -8,7 +8,7 @@ number
 
 ## Example
 
-This example sets the picture position measured in percent inside the current form.
+Set the picture position measured in percent inside the current form.
 
 ```javascript editor-docx
 // How to set a position of a picture form.
@@ -17,4 +17,3 @@ This example sets the picture position measured in percent inside the current fo
 
 pictureForm.SetPicturePosition(70, 70);
 ```
-

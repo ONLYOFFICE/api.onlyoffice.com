@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the XML string representation of a custom XML part.
+Get the XML string representation of a custom XML part in a document.
 
 ```javascript editor-docx
+// How to get the xml for a custom XML part in a document?
+
+// Get the xml and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -37,4 +41,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("XML string representation: " + xmlString);
 doc.Push(paragraph);
 ```
-

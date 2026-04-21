@@ -15,5 +15,3 @@ Enumeration
 - "iconTextH"
 - "textIconH"
 - "overlay"
-
-

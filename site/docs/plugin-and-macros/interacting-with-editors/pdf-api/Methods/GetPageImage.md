@@ -24,4 +24,3 @@ expression.GetPageImage(nPage, oParams);
 ## Returns
 
 canvas
-

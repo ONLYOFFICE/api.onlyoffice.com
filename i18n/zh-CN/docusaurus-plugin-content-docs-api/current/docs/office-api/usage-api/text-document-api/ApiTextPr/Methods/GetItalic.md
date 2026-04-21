@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例展示如何查明文本是否为斜体。
+检查文档中的文本是否为斜体。
 
 ```javascript editor-docx
 // How to know if the text of the form is italic.
@@ -48,4 +48,3 @@ let italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 doc.Push(paragraph);
 ```
-

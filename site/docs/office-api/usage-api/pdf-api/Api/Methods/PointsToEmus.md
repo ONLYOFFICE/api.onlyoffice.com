@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to emus.
+Convert points to emus in a PDF document.
 
 ```javascript editor-pdf
+// How do I convert points to emus in a PDF document?
+
+// Convert points to emus and display the result in a PDF document.
+
 const points = 1000;
 const emus = Api.PointsToEmus(points);
 
@@ -39,4 +43,3 @@ const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
 ```
-

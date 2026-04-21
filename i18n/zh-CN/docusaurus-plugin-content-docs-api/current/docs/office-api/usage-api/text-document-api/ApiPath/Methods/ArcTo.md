@@ -25,10 +25,13 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用三次贝塞尔、二次贝塞尔和弧线命令创建复杂曲线。
+使用三次贝塞尔、二次贝塞尔和圆弧命令创建复杂曲线。在文档中演示不同类型的曲线绘制方法。
 
 ```javascript editor-docx
-// Demonstrates different types of curve drawing methods.
+// How do I arc to in a document?
+
+// Arc to using a geometry path object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -46,4 +49,3 @@ let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

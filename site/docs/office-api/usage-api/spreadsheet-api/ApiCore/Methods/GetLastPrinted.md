@@ -20,9 +20,13 @@ Date
 
 ## Example
 
-This example demonstrates how to get the date when the current workbook was printed last time.
+Get the date when the current workbook was printed last time in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get last printed for a core properties in a spreadsheet?
+
+// Get last printed and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -41,4 +45,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
 ```
-

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to get showing in axis of a pivot field.
+Get showing in axis of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's showing in axis.
+// How to get a pivot field's showing in axis in a spreadsheet.
 
-// Create a pivot table, add data to it then get showing in axis of a specified pivot field.
+// Create a pivot table, add data to it then get showing in axis of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetPivotFields('Region').GetS
 pivotWorksheet.GetRange('A13').SetValue('Style showing in axis');
 pivotWorksheet.GetRange('B13').SetValue(pivotTable.GetPivotFields('Style').GetShowingInAxis());
 ```
-

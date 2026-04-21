@@ -16,7 +16,6 @@ Enumeration
 - "ParaPr"
 - "Unknown"
 
-
 ## Example
 
 Report on all review changes that contains review records of four different types: "TextRem" - removing text, "TextAdd" - adding text, "ParaRem" - removing a paragraph, "TextPr" - changing text properties.
@@ -35,4 +34,3 @@ let reviewRecord = {
 	"Mark Pottato" : [reviewReportRecord3, reviewReportRecord4]
 };
 ```
-

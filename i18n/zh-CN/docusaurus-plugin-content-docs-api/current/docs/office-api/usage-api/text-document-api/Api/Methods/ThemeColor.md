@@ -22,13 +22,16 @@ expression.ThemeColor(name);
 
 ## 示例
 
-此示例展示如何创建主题颜色并将其用作字体颜色。
+在文档中创建主题颜色并将其用作字体颜色。
 
 ```javascript editor-docx
+// How can I theme color in a document?
+
+// Theme color in a document.
+
 const doc = Api.GetDocument();
 const color = Api.ThemeColor('accent6');
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This text is in theme color.');
 paragraph.SetColor(color);
 ```
-

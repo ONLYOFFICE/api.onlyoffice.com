@@ -24,5 +24,3 @@ Enumeration
 - "subTitle"
 - "table"
 - "title"
-
-

@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+Specify that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line) in a PDF document.
 
 ```javascript editor-pdf
-// How to create a new text and underline it.
+// How to create a new text and underline it in a PDF document.
 
-// Create a new text run and underline it.
+// Create a new text run and underline it in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,4 +50,3 @@ run.AddText("This is a text run with the text underlined with a single line.");
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

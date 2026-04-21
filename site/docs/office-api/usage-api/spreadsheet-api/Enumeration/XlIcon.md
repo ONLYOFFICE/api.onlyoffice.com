@@ -61,5 +61,3 @@ Enumeration
 - "xlIconYellowTrafficLight"
 - "xlIconYellowTriangle"
 - "xlIconYellowUpInclineArrow"
-
-

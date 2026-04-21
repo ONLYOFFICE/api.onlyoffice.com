@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查测试中的所有条件是否都为 true。
+在电子表格中检查测试中的所有条件是否为 true。
 
 ```javascript editor-xlsx
-// How to apply logical AND operation for a list of conditions.
+// How to apply logical AND operation for a list of conditions in a spreadsheet.
 
-// Use logical AND to evaluate an expression.
+// Use logical AND to evaluate an expression in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,4 +36,3 @@ let ans = func.AND(12 < 100, 34 < 100, 50 < 100); //AND logical function
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

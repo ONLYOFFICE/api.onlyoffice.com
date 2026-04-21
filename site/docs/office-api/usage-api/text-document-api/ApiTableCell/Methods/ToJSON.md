@@ -6,7 +6,7 @@ Inherited from [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md).
 
 ## Example
 
-This example converts the ApiTableCellPr object into the JSON object.
+Convert the table cell properties object into the JSON object.
 
 ```javascript editor-docx
 // How to get a JSON from the table cell object.
@@ -28,4 +28,3 @@ let type = tableCellPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
-

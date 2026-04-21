@@ -22,12 +22,12 @@ expression.SetDupeUnique(dupeUnique);
 
 ## 示例
 
-此示例演示如何设置唯一值条件格式规则的重复/唯一值设置。
+设置唯一值条件格式规则的重复/唯一值设置。
 
 ```javascript editor-xlsx
-// How to change between highlighting unique or duplicate values.
+// How to change between highlighting unique or duplicate values in a spreadsheet.
 
-// Set unique values rule to highlight duplicates instead.
+// Set unique values rule to highlight duplicates instead in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,4 +52,3 @@ worksheet.GetRange("C1").SetValue("Setting before: " + settingBefore);
 worksheet.GetRange("C2").SetValue("Setting after: " + settingAfter);
 worksheet.GetRange("C3").SetValue("Now highlighting duplicates");
 ```
-

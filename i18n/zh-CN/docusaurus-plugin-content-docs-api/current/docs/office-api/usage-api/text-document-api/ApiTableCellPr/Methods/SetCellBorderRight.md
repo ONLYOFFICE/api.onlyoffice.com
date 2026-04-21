@@ -27,7 +27,7 @@ boolean
 
 ## 示例
 
-此示例设置将显示在表格单元格右侧的边框。
+设置将显示在表格单元格右侧的边框。
 
 ```javascript editor-docx
 // How to add margin to the right of the cell.
@@ -46,4 +46,3 @@ tableCellPr.SetCellBorderRight("single", 32, 0, 51, 51, 51);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

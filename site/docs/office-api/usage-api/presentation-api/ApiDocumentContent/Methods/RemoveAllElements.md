@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to remove all elements from a shape.
+Remove all elements from a shape in a presentation.
 
 ```javascript editor-pptx
 // How to remove all elements from the slide shape.
@@ -47,4 +47,3 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

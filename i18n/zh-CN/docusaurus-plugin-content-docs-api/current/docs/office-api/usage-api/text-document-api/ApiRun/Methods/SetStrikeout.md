@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定当前文本块的内容显示为中间有一条水平线穿过。
+指定在文档中当前 run 的内容以通过行中心的单条水平线显示。
 
 ```javascript editor-docx
-// How to strike out a text run.
+// How to strike out a text run in a document.
 
-// Create a new text run and set cross it out.
+// Create a new text run and set cross it out in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.SetStrikeout(true);
 run.AddText("This is a text run with the text struck out with a single line.");
 paragraph.AddElement(run);
 ```
-

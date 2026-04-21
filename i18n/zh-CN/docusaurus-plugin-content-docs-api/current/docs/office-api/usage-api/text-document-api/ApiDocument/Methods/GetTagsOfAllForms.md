@@ -20,12 +20,12 @@ String[]
 
 ## 示例
 
-此示例展示如何获取文档中所有表单使用的所有标签列表。
+获取文档中所有表单使用的所有标签列表。
 
 ```javascript editor-docx
 // How to get tags of all forms and print their names in the document.
 
-// Display the style name of the "Heading 6".
+// Display the style name of the "Heading 6" in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "tag": "form_1", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
@@ -47,4 +47,3 @@ for (let i = 0; i < tags.length; i++ ){
 }
 doc.Push(paragraph);
 ```
-

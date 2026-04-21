@@ -20,12 +20,12 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-此示例展示如何从文档内容获取所有段落的数组。
+从文档中的文档内容获取所有段落的数组。
 
 ```javascript editor-docx
 // Get all paragraphs added to the document.
 
-// How to retrieve all paragraphs and make the first one bold.
+// How to retrieve all paragraphs and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ docContent.Push(paragraph);
 let paragraphs = docContent.GetAllParagraphs();
 paragraphs[0].SetBold(true);
 ```
-

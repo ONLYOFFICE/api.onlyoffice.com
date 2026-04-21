@@ -20,9 +20,13 @@ expression.GetCurrentContentControl();
 
 ## 示例
 
-此示例展示如何获取当前选中的内容控件。
+获取文档中当前选中的内容控件。
 
 ```javascript editor-docx
+// How to get current content control for a document content?
+
+// Get current content control and display the result in a document.
+
 const doc = Api.GetDocument();
 
 const blockSdt = Api.CreateBlockLvlSdt();
@@ -40,4 +44,3 @@ if (currentCC) {
 }
 doc.Push(paragraph);
 ```
-

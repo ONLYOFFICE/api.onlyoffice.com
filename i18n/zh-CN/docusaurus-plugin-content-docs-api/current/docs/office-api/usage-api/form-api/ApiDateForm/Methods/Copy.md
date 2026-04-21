@@ -2,11 +2,11 @@
 
 复制当前表单（如果存在形状，则连同形状一起复制）。
 
-Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
+继承自 [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md)。
 
 ## 示例
 
-此示例展示如何复制表单。
+在文档中复制表单。
 
 ```javascript editor-forms
 // How to create the same text form.
@@ -21,4 +21,3 @@ let copyTextForm = textForm.Copy();
 paragraph.AddLineBreak();
 paragraph.AddElement(copyTextForm);
 ```
-

@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)
 
 ## Example
 
-This example gets a text capitalization using its property.
+Get a text capitalization using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is uncapitalized or not.
+// How to find out whether a text is uncapitalized or not in a spreadsheet.
 
-// Find whether a text characters are in small caps or not.
+// Find whether a text characters are in small caps or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -31,4 +31,3 @@ let isSmallCaps = textProps.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + isSmallCaps);
 content.Push(paragraph);
 ```
-

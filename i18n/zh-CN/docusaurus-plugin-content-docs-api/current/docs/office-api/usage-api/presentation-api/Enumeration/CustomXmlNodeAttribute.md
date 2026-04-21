@@ -12,4 +12,3 @@ Object
 | ---- | ---- | ----------- |
 | name | string | 属性名称。 |
 | value | string | 属性值。 |
-

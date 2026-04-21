@@ -20,9 +20,13 @@ number \| undefined
 
 ## 示例
 
-此示例获取自动前进时间并显示。
+获取并显示演示文稿中的自动换片时间。
 
 ```javascript editor-pptx
+// How to get the advance time for a slide show transition?
+
+// Get the advance time and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -47,4 +51,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Advance Time: ' + advanceTime + ' ms');
 slide.AddObject(shape);
 ```
-

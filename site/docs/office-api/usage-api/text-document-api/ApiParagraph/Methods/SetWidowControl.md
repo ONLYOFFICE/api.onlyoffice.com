@@ -6,10 +6,10 @@ Inherited from [ApiParaPr.SetWidowControl](../../ApiParaPr/Methods/SetWidowContr
 
 ## Example
 
-This example specifies whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.
+Specify whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.
 
 ```javascript editor-docx
-// Set the window control of the paragraph.
+// Set the window control of the paragraph in a document.
 
 // Make the last line to be displayed on the next page, by setting widow control method set to 'true'.
 
@@ -34,4 +34,3 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This last line would be displayed on the next page, if we had not used the set widow control method.");
 doc.Push(paragraph);
 ```
-

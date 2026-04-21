@@ -20,12 +20,12 @@ expression.GetFootnotesFirstParagraphs();
 
 ## 示例
 
-此示例展示如何获取文档中所有脚注的首段。
+获取文档中所有脚注的第一个段落。
 
 ```javascript editor-docx
-// How to get the first footnote paragraph, add text to it and make it bold.
+// How to get the first footnote paragraph, add text to it and make it bold in a document.
 
-// Retrieve all footnote first paragraph for further manipulation.
+// Retrieve all footnote first paragraph for further manipulation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 
@@ -35,4 +35,3 @@ let footnotesFirstParagraphs = doc.GetFootnotesFirstParagraphs();
 footnotesFirstParagraphs[0].AddText("Footnote 1");
 footnotesFirstParagraphs[0].SetBold(true);
 ```
-

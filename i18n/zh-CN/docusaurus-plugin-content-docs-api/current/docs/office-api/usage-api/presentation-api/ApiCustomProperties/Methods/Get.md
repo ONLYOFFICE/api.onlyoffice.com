@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-此示例演示如何根据名称获取自定义属性的值。
+通过名称获取演示文稿中自定义属性的值。
 
 ```javascript editor-pptx
+// Return null for properties that do not exist.
+
+// Get using a custom properties object in a presentation.
+
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 
@@ -44,4 +48,3 @@ let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
 ```
-

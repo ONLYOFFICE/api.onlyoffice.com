@@ -2,14 +2,14 @@
 
 指定在使用页面视图呈现文档时，尽可能将当前段落的所有行保持在同一页上。
 
-Inherited from [ApiParaPr.SetKeepLines](../../ApiParaPr/Methods/SetKeepLines.md).
+继承自 [ApiParaPr.SetKeepLines](../../ApiParaPr/Methods/SetKeepLines.md)。
 
 ## 示例
 
-此示例指定在使用页面视图呈现文档时，尽可能将段落的所有行保持在同一页上。
+指定在使用页面视图呈现文档时，尽可能将段落的所有行保持在同一页上。
 
 ```javascript editor-docx
-// How to set keep lines property of the paragraph content.
+// How to set keep lines property of the paragraph content in a document.
 
 // Keep all lines of the paragraph on the same page.
 
@@ -35,4 +35,3 @@ for (let i = 0; i < 10; ++i) {
 paragraph.SetStyle(myStyle);
 doc.Push(paragraph);
 ```
-

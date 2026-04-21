@@ -26,10 +26,10 @@ number
 
 ## 示例
 
-此示例演示如何计算由给定条件或标准集指定的单元格的平均值（算术平均数）。
+在电子表格中查找符合一组给定条件的单元格的平均值（算术平均数）。
 
 ```javascript editor-xlsx
-// How to find an average if list of conditions are met.
+// How to find an average if list of conditions are met in a spreadsheet.
 
 // Use function to get an average (arithmetic mean) of the cells if the set of requirements is satisfied.
 
@@ -54,4 +54,3 @@ let range2 = worksheet.GetRange("B1:B6");
 let range3 = worksheet.GetRange("A1:A6");
 worksheet.GetRange("E6").SetValue(func.AVERAGEIFS(range1, range2, "*Apples", range3, 2016));
 ```
-

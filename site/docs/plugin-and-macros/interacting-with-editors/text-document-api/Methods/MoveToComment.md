@@ -25,4 +25,3 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("MoveToComment", ["1_631"]);
 ```
-

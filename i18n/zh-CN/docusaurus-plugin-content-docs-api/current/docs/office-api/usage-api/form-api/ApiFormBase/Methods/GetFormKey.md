@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何获取表单键。
+获取文档中的表单键。
 
 ```javascript editor-forms
 // How get a key of a comboBox form.
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
-

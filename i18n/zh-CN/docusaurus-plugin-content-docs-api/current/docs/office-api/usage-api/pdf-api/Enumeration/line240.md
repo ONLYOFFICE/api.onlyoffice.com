@@ -8,7 +8,7 @@ number
 
 ## 示例
 
-此示例将段落行距设置为 1 行。
+将段落行距设置为 1 行。
 
 ```javascript editor-pdf
 // How to change a spacing of a line.
@@ -17,4 +17,3 @@ number
 
 paraPr.SetSpacingLine(240, "auto");
 ```
-

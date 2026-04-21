@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-此示例展示如何复制表单。
+在文档中复制表单。
 
 ```javascript editor-forms
 // How to create the same text form.
@@ -35,4 +35,3 @@ let copyTextForm = textForm.Copy();
 paragraph.AddLineBreak();
 paragraph.AddElement(copyTextForm);
 ```
-

@@ -20,9 +20,13 @@ expression.GetCustomProperties();
 
 ## 示例
 
-此示例演示如何使用 ApiCustomProperties 在演示文稿中配置自定义属性。
+在演示文稿中使用自定义属性配置自定义属性。
 
 ```javascript editor-pptx
+// How do I get custom properties in a presentation?
+
+// Get custom properties using a presentation object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -51,4 +55,3 @@ paragraph.AddText("Custom Boolean Property: " + boolValue);
 
 slide.AddObject(shape);
 ```
-

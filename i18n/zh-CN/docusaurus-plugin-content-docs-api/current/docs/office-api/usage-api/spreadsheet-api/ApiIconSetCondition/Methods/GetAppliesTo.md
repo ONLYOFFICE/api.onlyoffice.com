@@ -2,11 +2,11 @@
 
 返回当前条件格式规则应用的单元格区域。
 
-Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
+继承自 [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md)。
 
 ## 示例
 
-此示例获取条件格式规则应用的区域。
+获取条件格式规则应用的范围。
 
 ```javascript editor-xlsx
 // How to retrieve the cell range of existing conditional formatting rules.
@@ -34,4 +34,3 @@ let appliedRange = condition1.GetAppliesTo();
 worksheet.GetRange("C1").SetValue("Rule applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
 ```
-

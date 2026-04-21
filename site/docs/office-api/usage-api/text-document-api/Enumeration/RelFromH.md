@@ -15,10 +15,9 @@ Enumeration
 - "margin"
 - "page"
 
-
 ## Example
 
-This example sets horizontal aligment for a drawing object.
+Set horizontal alignment for a drawing object.
 
 ```javascript editor-docx
 // How to align a drawing to the center.
@@ -27,4 +26,3 @@ This example sets horizontal aligment for a drawing object.
 
 drawing.SetHorAlign("page", "center");
 ```
-

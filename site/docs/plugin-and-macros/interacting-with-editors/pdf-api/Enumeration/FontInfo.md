@@ -63,4 +63,3 @@ let fontInfo = {
     "m_shCapHeight": 713
 };
 ```
-

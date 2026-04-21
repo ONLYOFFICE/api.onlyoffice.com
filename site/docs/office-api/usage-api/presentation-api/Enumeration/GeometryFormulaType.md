@@ -25,5 +25,3 @@ Enumeration
 - "sqrt"
 - "tan"
 - "val"
-
-

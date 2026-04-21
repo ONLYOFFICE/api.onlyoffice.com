@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状内文档内容元素的内部标识符。
+获取电子表格中形状内文档内容元素的内部标识符。
 
 ```javascript editor-xlsx
+// How can I get the internal id using a document content in a spreadsheet?
+
+// Get the internal id for a document content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -36,4 +40,3 @@ const content = shape.GetContent();
 const internalId = content.GetInternalId();
 worksheet.GetRange('A1').SetValue('Internal ID: ' + internalId);
 ```
-

@@ -26,12 +26,12 @@ expression.CreateOleObject(imageSrc, width, height, data, appId);
 
 ## 示例
 
-此示例创建一个 OLE 对象并将其插入到文档中。
+创建 OLE 对象并将其插入文档。
 
 ```javascript editor-docx
-// Creates the ApiOleObject object and adds it to the first paragraph of the document.
+// Create the OLE object object and add it to the first paragraph of the document.
 
-// How to create an Ole object using the specified image source, width, height, Ole data, application ID and insert it into the ApiParagraph class. 
+// How to create an Ole object using the specified image source, width, height, Ole data, application ID and insert it into the paragraph class in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(
@@ -43,4 +43,3 @@ let oleObject = Api.CreateOleObject(
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(oleObject);
 ```
-

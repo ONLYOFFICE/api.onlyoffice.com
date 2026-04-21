@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the previous cell.
+Get the previous cell in a document.
 
 ```javascript editor-docx
 // How to get previous cell.
@@ -39,4 +39,3 @@ doc.Push(table);
 let previousCell = table.GetCell(0, 1).GetPrevious();
 previousCell.GetContent().GetElement(0).SetBold(true);
 ```
-

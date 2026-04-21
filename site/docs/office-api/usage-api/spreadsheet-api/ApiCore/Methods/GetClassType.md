@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the worksheet.
+Check the class type returned by a core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I check what type a core properties object is in a spreadsheet?
+
+// Retrieve and output the class type string for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 const classType = core.GetClassType();
@@ -39,4 +43,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Class type: " + classType);
 ```
-

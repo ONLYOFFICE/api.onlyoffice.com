@@ -7,12 +7,12 @@ Inherited from [ApiTablePr.SetTableInd](../../ApiTablePr/Methods/SetTableInd.md)
 
 ## Example
 
-This example specifies the indentation which will be added before the leading edge of the table in the document.
+Specify the indentation which will be added before the leading edge of the table in the document.
 
 ```javascript editor-docx
 // How to display the table description in the document.
 
-// Get the table description from the table properties.
+// Get the table description from the table properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -27,4 +27,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

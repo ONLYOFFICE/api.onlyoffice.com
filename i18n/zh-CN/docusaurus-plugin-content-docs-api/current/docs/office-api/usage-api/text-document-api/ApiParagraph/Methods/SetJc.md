@@ -2,16 +2,16 @@
 
 设置段落内容对齐方式。
 
-Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
+继承自 [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md)。
 
 ## 示例
 
-此示例设置段落内容对齐方式。
+在文档中设置段落内容对齐方式。
 
 ```javascript editor-docx
-// How to set justification of the paragraph content.
+// How to set justification of the paragraph content in a document.
 
-// Change the justification of the paragraph.
+// Change the justification of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyleLeft = doc.CreateStyle("My style with left text alignment");
@@ -54,4 +54,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.SetStyle(myStyleBoth);
 doc.Push(paragraph);
 ```
-

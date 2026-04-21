@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.ToFixed](../../ApiFormBase/Methods/ToFixed.md).
 
 ## Example
 
-This example converts the form to a fixed size form.
+Convert the form to a fixed size form.
 
 ```javascript editor-docx
 // How to fix the size of the text form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document has a fixed size: " + fixed);
 doc.Push(paragraph);
 ```
-

@@ -6,7 +6,7 @@ Inherited from [ApiPivotField.SetDragToPage](../../ApiPivotField/Methods/SetDrag
 
 ## Example
 
-This example shows how to set a drag to page of a pivot field.
+Set a drag to page of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to rename a pivot field drag to page.
@@ -53,4 +53,3 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to pages!');
 ```
-

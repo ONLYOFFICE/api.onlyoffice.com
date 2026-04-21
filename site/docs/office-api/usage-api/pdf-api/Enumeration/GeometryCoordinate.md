@@ -11,5 +11,3 @@ Enumeration
 
 - string
 - number
-
-

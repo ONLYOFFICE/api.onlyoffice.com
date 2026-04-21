@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-此示例在段落之后添加题注段落。
+在文档中在段落后添加题注段落。
 
 ```javascript editor-docx
-// How to add caption to the paragraph.
+// How to add caption to the paragraph in a document.
 
-// Add a caption to the text specifying its properties.
+// Add a caption to the text specifying its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
 ```
-

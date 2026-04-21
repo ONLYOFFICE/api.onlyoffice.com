@@ -20,12 +20,12 @@ expression.GetSpacingBefore();
 
 ## 示例
 
-此示例展示如何获取当前段落的段前间距值。
+获取文档中当前段落的段前间距值。
 
 ```javascript editor-docx
-// How to get the spacing before of the paragraph and display it.
+// How to get the spacing before of the paragraph and display it in a document.
 
-// Get the paragraph spacing value.
+// Get the paragraph spacing value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ let spacingBefore = paraPr.GetSpacingBefore();
 paragraph.AddText("Spacing before: " + spacingBefore);
 doc.Push(paragraph);
 ```
-

@@ -22,15 +22,14 @@ expression.SetPrintGridlines(bPrint);
 
 ## 示例
 
-此示例指定是否必须打印工作表网格线。
+指定电子表格中工作表网格线是否必须打印。
 
 ```javascript editor-xlsx
-// How to set whether sheet gridlines should be printed or not.
+// How to set whether sheet gridlines should be printed or not in a spreadsheet.
 
-// Set a boolean value representing whether to print gridlines or not.
+// Set a boolean value representing whether to print gridlines or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintGridlines(true);
 worksheet.GetRange("A1").SetValue("Gridlines of cells will be printed on this page: " + worksheet.GetPrintGridlines());
 ```
-

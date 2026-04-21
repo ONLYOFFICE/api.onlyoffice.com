@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置超链接地址。
+设置文档中的超链接地址。
 
 ```javascript editor-docx
-// How to change the link address of the hyperlink object.
+// How to change the link address of the hyperlink object in a document.
 
-// Set link of the hyperlink.
+// Set link of the hyperlink in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraph.AddElement(run);
 let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
 hyperlink.SetLink("https://api.onlyoffice.com/");
 ```
-

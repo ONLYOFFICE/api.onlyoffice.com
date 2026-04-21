@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds footnote fot the document.
+Add footnote fot the document.
 
 ```javascript editor-docx
 // How to add footnote to the document.
 
-// Get all footnotes first paragraphs and make the first one bold.
+// Get all footnotes first paragraphs and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 
@@ -35,4 +35,3 @@ let footnotesFirstParagraphs = doc.GetFootnotesFirstParagraphs();
 footnotesFirstParagraphs[0].AddText("Footnote 1");
 footnotesFirstParagraphs[0].SetBold(true);
 ```
-

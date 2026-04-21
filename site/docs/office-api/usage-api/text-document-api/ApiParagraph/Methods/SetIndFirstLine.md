@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLi
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Set the paragraph first line indentation in a document.
 
 ```javascript editor-docx
-// How to set the indentation size for the paragraph first line.
+// How to set the indentation size for the paragraph first line in a document.
 
-// Create a new paragraph and set its first line indentation.
+// Create a new paragraph and set its first line indentation in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -33,4 +33,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 doc.Push(paragraph);
 ```
-

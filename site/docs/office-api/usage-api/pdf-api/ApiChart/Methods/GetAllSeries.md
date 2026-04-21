@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get types of all series of a chart.
+How to get types of all series of a chart in a PDF document.
 
 ```javascript editor-pdf
-// Get all series from a chart.
+// Get all series from a chart in a PDF document.
+
+// Get all series for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -54,4 +56,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

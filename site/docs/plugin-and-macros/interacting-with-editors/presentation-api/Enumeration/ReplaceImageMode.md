@@ -13,7 +13,6 @@ Enumeration
 - "original"
 - "stretch"
 
-
 ## Example
 
 ```javascript
@@ -32,4 +31,3 @@ window.saveImage = function () {
     window.Asc.plugin.executeCommand("close", "");
 };
 ```
-

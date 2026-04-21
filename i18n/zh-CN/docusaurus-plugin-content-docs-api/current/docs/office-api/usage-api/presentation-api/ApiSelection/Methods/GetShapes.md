@@ -20,9 +20,13 @@ expression.GetShapes();
 
 ## 示例
 
-此示例展示如何从当前选择中获取选中的形状。
+从演示文稿中的当前选区获取选中的形状。
 
 ```javascript editor-pptx
+// How can I get the shapes using a selection in a presentation?
+
+// Get the shapes for a selection in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -53,4 +57,3 @@ const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(result);
 slide.AddObject(outShape);
 ```
-

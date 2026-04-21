@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example sets the application ID to the current OLE object.
+Set the application ID to the current OLE object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set application id of OLE object.
+// How to set application id of OLE object in a spreadsheet.
 
 // Add Ole object, set its application id and display it in the worksheet.
 
@@ -39,4 +39,3 @@ let oleObject = worksheet.AddOleObject(
 );
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
 ```
-

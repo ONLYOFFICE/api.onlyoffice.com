@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何确定文本是否突出显示。
+检查演示文稿中的文本是否有突出显示。
 
 ```javascript editor-pptx
-// How to know whether a highlight set to the text.
+// How to know whether a highlight set to the text in a presentation.
 
-// Get the text properties of the run and find whether it is highlighted or not.
+// Get the text properties of the run and find whether it is highlighted or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,3 @@ const highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 docContent.Push(paragraph);
 ```
-

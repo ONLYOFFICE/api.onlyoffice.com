@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何获取批注回复作者的用户 ID。
+获取电子表格中批注回复作者的用户 ID。
 
 ```javascript editor-xlsx
-// How to get a reply author's user ID.
+// How to get a reply author's user ID in a spreadsheet.
 
 // Add a reply author's ID to a range of the worksheet.
 
@@ -36,4 +36,3 @@ let reply = comment.GetReply();
 worksheet.GetRange("A3").SetValue("Comment's reply user Id: ");
 worksheet.GetRange("B3").SetValue(reply.GetUserId());
 ```
-

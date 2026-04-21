@@ -22,10 +22,10 @@ expression.SetColor(color);
 
 ## 示例
 
-此示例以 RGB 格式设置当前文本块的文本颜色。
+以 RGB 格式为当前文本 run 设置文本颜色。
 
 ```javascript editor-xlsx
-// How to change text color.
+// How to change text color in a spreadsheet.
 
 // Create a text run object, update its font color using RGB format values.
 
@@ -45,4 +45,3 @@ run.AddText('This is a text run with the font color set to gray.');
 paragraph.AddElement(run);
 run.SetColor(Api.HexColor('#808080'));
 ```
-

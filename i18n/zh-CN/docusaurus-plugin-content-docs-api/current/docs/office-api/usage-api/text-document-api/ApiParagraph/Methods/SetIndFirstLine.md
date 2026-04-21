@@ -2,16 +2,16 @@
 
 设置段落首行缩进。
 
-Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md).
+继承自 [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md)。
 
 ## 示例
 
-此示例设置段落首行缩进。
+在文档中设置段落首行缩进。
 
 ```javascript editor-docx
-// How to set the indentation size for the paragraph first line.
+// How to set the indentation size for the paragraph first line in a document.
 
-// Create a new paragraph and set its first line indentation.
+// Create a new paragraph and set its first line indentation in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -33,4 +33,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 doc.Push(paragraph);
 ```
-

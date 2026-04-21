@@ -2,16 +2,16 @@
 
 指定浮动对象的水平对齐方式。
 
-Inherited from [ApiDrawing.SetHorAlign](../../ApiDrawing/Methods/SetHorAlign.md).
+继承自 [ApiDrawing.SetHorAlign](../../ApiDrawing/Methods/SetHorAlign.md)。
 
 ## 示例
 
-此示例指定浮动对象的水平对齐方式。
+指定文档中浮动对象的水平对齐方式。
 
 ```javascript editor-docx
 // How to set the drawing to the center of the page.
 
-// Create a drawing and align it horizontaly to the center.
+// Create a drawing and align it horizontaly to the center in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -34,4 +34,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The shape is aligned at the center of the page horizontally.");
 doc.Push(paragraph);
 ```
-

@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.ToJSON](../../ApiDrawing/Methods/ToJSON.md).
 
 ## Example
 
-This example converts the ApiDrawing object into the JSON object.
+Convert the drawing object object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON object from the drawing.
+// How to get a JSON object from the drawing in a document.
 
-// Convert the shape to json and add it to the paragraph.
+// Convert the shape to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -24,4 +24,3 @@ let json = drawing.ToJSON(false, true);
 let drawingFromJSON = Api.FromJSON(json);
 paragraph.AddDrawing(drawingFromJSON);
 ```
-

@@ -2,16 +2,16 @@
 
 从当前文本属性获取文本颜色。
 
-Inherited from [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md).
+继承自 [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md)。
 
 ## 示例
 
-此示例获取文本颜色属性。
+获取电子表格中文本的颜色属性。
 
 ```javascript editor-xlsx
-// How to find out a text color type.
+// How to find out a text color type in a spreadsheet.
 
-// Get a text solid color fill.
+// Get a text solid color fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -33,4 +33,3 @@ let type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 content.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example adds a line break to the run position and starts the next element from a new line.
+Add a line break to the run position and start the next element from a new line in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to start a sentence on a new line.
+// How to start a sentence on a new line in a spreadsheet.
 
-// Break two lines of a text run with a line. 
+// Break two lines of a text run with a line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -40,4 +40,3 @@ run.AddText("This is the text which starts from the beginning of the second line
 run.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 paragraph.AddElement(run);
 ```
-

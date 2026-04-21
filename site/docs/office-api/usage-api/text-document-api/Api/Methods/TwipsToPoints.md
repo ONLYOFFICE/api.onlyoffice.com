@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert twips to points.
+Convert twips to points in a document.
 
 ```javascript editor-docx
+// How can I convert twips to points in a document?
+
+// Convert twips to points in a document.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const points = Api.TwipsToPoints(twips);
 paragraph.AddText(twips + ' twips are equal to ' + points + ' points.');
 doc.Push(paragraph);
 ```
-

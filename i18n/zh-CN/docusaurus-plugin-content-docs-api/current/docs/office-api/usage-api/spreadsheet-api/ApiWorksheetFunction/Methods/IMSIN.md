@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的正弦。
+在电子表格中返回复数的正弦值。
 
 ```javascript editor-xlsx
-// How to get the sine.
+// How to get the sine in a spreadsheet.
 
-// Use a function to get the sine of a complex number.
+// Use a function to get the sine of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMSIN("-2+2.5i"));
 ```
-

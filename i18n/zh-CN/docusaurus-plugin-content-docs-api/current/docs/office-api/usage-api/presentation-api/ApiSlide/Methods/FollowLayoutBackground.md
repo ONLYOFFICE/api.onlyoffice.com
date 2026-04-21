@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例将版式背景设置为幻灯片的背景。
+将版式背景设置为幻灯片的背景。
 
 ```javascript editor-pptx
 // How to set a slide's background same as the layout's.
@@ -36,4 +36,3 @@ const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
 ```
-

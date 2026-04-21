@@ -21,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onClick", (isSelectionUse) => {
     });
 });
 ```
-

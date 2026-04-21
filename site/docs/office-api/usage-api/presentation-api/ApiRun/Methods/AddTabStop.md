@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example adds a tab stop to the run.
+Add a tab stop to the run in a presentation.
 
 ```javascript editor-pptx
-// How to add a tab after a string in a text run.
+// How to add a tab after a string in a text run in a presentation.
 
-// How to split a text with a tab.
+// How to split a text with a tab in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ run.AddText("This is the text which starts after the tab stops.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

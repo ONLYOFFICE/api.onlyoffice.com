@@ -20,12 +20,12 @@ expression.CreateNoFill();
 
 ## 示例
 
-此示例创建无填充并移除元素的填充。
+在电子表格中创建无填充并移除元素的填充。
 
 ```javascript editor-xlsx
-// How to remove fill from the element.
+// How to remove fill from the element in a spreadsheet.
 
-// Set no fill color for the element.
+// Set no fill color for the element in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
@@ -34,4 +34,3 @@ let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```
-

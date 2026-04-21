@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return numbers in a linear trend matching known data points, using the least squares method.
+Return numbers in a linear trend matching known data points, using the least squares method in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get numbers in a linear trend using the least squares method.
+// How to get numbers in a linear trend using the least squares method in a spreadsheet.
 
-// Use a function to find a linear trend using data points by the least squares method.
+// Use a function to find a linear trend using data points by the least squares method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -49,4 +49,3 @@ let range1 = worksheet.GetRange("B2:B11");
 let range2 = worksheet.GetRange("A2:A11");
 worksheet.GetRange("C2:C11").SetValue(func.TREND(range1, range2));
 ```
-

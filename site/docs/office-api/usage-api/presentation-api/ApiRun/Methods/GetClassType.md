@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Find out the class type of a text run object in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiRun.
+// How can I get the class type of a text run in a presentation?
 
-// Retrieve class type of ApiRun object and insert it to the slide.
+// Get the class type of a text run and display it in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,3 @@ run.AddText("Class Type = " + classType);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

@@ -1,6 +1,6 @@
 # ApiComplexForm
 
-ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
+ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 
 ## 方法
 

@@ -21,12 +21,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties which will be applied to the text in the numbering level itself, not to the text in the subsequent paragraph.
+Get the text properties which will be applied to the text in the numbering level itself, not to the text in the subsequent paragraph in a document.
 
 ```javascript editor-docx
-// How to retrieve the text properties of the numbering.
+// How to retrieve the text properties of the numbering in a document.
 
-// Update text properties of the numbering.
+// Update text properties of the numbering in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -43,4 +43,3 @@ paragraph.SetNumbering(numLvl);
 paragraph.AddText("This is the second element of a numbered list which starts with '2'");
 doc.Push(paragraph);
 ```
-

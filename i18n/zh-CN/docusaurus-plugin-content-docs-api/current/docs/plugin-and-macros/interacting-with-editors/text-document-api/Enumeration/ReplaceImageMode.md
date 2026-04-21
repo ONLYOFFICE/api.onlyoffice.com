@@ -13,7 +13,6 @@
 - "original"
 - "stretch"
 
-
 ## 示例
 
 ```javascript
@@ -32,4 +31,3 @@ window.saveImage = function () {
     window.Asc.plugin.executeCommand("close", "");
 };
 ```
-

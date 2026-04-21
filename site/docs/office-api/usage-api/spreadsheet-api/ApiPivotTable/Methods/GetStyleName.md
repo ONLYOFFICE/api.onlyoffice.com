@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get style name of a pivot table.
+Get style name of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table style name.
+// How to get table style name in a spreadsheet.
 
-// Create a pivot table, add data to it then get its style name.
+// Create a pivot table, add data to it then get its style name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -62,4 +62,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Style name');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetStyleName());
 ```
-

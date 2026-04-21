@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTabl
 
 ## Example
 
-This example shows how to get the table description.
+Get the table description in a document.
 
 ```javascript editor-docx
 // How to get the table description and display it in the document.
 
-// Add text showing the description of the table.
+// Add text showing the description of the table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -25,4 +25,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
-

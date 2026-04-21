@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置将用于段落中任何制表符的自定义制表位序列。
+在 PDF 文档中设置一系列自定义制表位，用于段落中的所有制表符。
 
 ```javascript editor-pdf
-// How to set the size of a spacing tabs from a paragraph properties.
+// How to set the size of a spacing tabs from a paragraph properties in a PDF document.
 
-// Change a tabs size property of a paragraph properties.
+// Change a tabs size property of a paragraph properties in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -57,4 +57,3 @@ paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");
 page.AddObject(shape);
 ```
-

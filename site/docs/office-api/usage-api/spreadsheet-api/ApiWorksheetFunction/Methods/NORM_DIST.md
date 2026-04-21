@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the normal distribution for the specified mean and standard deviation.
+Return the normal distribution for the specified mean and standard deviation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the normal distribution.
+// How to calculate the normal distribution in a spreadsheet.
 
-// Use a function to get the normal distribution knowing the mean and standard deviation.
+// Use a function to get the normal distribution knowing the mean and standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [36, 6, 7, false];
@@ -49,4 +49,3 @@ let func = Api.WorksheetFunction;
 let normalDist = func.NORM_DIST(x, mean, standardDeviation, cumulative);
 worksheet.GetRange("C1").SetValue(normalDist);
 ```
-

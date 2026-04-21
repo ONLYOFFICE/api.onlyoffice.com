@@ -23,10 +23,10 @@ JSON
 
 ## Example
 
-This example converts the ApiSection object into the JSON object.
+Convert the section object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the section object.
+// How to get a JSON from the section object in a document.
 
 // Convert the section to json and add it to the document.
 
@@ -42,4 +42,3 @@ let type = sectionFromJSON.GetClassType();
 paragraph.AddLineBreak();
 paragraph.AddText("Class type = " + type);
 ```
-

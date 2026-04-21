@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the row height value.
+Get the row height value in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a cell row height.
@@ -32,4 +32,3 @@ let height = worksheet.GetRange("A1").GetRowHeight();
 worksheet.GetRange("A1").SetValue("Height: ");
 worksheet.GetRange("B1").SetValue(height);
 ```
-

@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example removes all the elements from the run.
+Remove all the elements from the run in a PDF document.
 
 ```javascript editor-pdf
-// How to remove all elements from the text run object.
+// How to remove all elements from the text run object in a PDF document.
 
 // Delete text from the page.
 
@@ -44,4 +44,3 @@ run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

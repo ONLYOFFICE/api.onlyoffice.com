@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph left side indentation.
+Get the paragraph left side indentation in a presentation.
 
 ```javascript editor-pptx
-// How to return a left side identation of a paragraph property.
+// How to return a left side identation of a paragraph property in a presentation.
 
 // Return a left side indentation of a text property from the slide.
 
@@ -54,4 +54,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
 ```
-

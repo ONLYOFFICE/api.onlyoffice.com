@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table that contains the table.
+Get a table that contains the table in a document.
 
 ```javascript editor-docx
-// How to get the parent table and delete its row.
+// How to get the parent table and delete its row in a document.
 
 // Retrieve the parent table, get its cell and remove the row of it.
 
@@ -43,4 +43,3 @@ let parentTable = table2.GetParentTable();
 cell = parentTable.GetRow(2).GetCell(0);
 parentTable.RemoveRow(cell);
 ```
-

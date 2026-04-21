@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the next paragraph.
+Get the next paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the next paragraph from the current one.
+// How to get the next paragraph from the current one in a spreadsheet.
 
-// Add two paragraphs into the shape content then get the second one using the GetNext method.
+// Add two paragraphs into the shape content then get the second one using the GetNext method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,4 +42,3 @@ content.Push(paragraph2);
 let nextParagraph = paragraph1.GetNext();
 nextParagraph.SetBold(true);
 ```
-

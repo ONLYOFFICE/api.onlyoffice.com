@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the current checkbox is a radio button.
+Check if the current checkbox is a radio button in a document.
 
 ```javascript editor-docx
 // How to know whether the checkbox form is radio button.
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The second form from this document is a radio button: " + radioButton);
 doc.Push(paragraph);
 ```
-

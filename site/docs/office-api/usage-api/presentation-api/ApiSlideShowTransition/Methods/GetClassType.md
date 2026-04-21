@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Check the class type returned by a slide show transition.
 
 ```javascript editor-pptx
+// How do I check what type a slide show transition object is?
+
+// Retrieve and output the class type string for a slide show transition.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,4 +48,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
 ```
-

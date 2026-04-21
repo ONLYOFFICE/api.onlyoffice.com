@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-This example specifies the border which will be displayed at the right side of the page around the specified paragraph.
+Specify the border which will be displayed at the right side of the page around the specified paragraph.
 
 ```javascript editor-docx
-// How to add border to the right side of the paragraph.
+// How to add border to the right side of the paragraph in a document.
 
-// Add right single border.
+// Add right single border using the paragraph properties API in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -43,4 +43,3 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is the first paragraph. ");
 paragraph.AddText("The paragraph properties styled above set a border at its right side.");
 ```
-

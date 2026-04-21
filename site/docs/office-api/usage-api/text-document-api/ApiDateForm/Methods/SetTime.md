@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to set the date to a date form.
+Set the date to a date form in a document.
 
 ```javascript editor-docx
 // How to add a time to the date form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has setted time: " + new Date(timeStamp));
 doc.Push(paragraph);
 ```
-

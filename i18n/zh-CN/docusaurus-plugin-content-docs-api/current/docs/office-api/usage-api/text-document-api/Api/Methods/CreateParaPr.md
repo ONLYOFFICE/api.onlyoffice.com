@@ -20,10 +20,12 @@ expression.CreateParaPr();
 
 ## 示例
 
-此示例展示如何创建和使用段落属性。
+在文档中创建并使用段落属性。
 
 ```javascript editor-docx
-// How to set paragraph properties to the table style.
+// How to set paragraph properties to the table style in a document.
+
+// Create the para pr in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +48,3 @@ paragraph.AddText("This is a paragraph with the text in it aligned by the center
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置表格标题。
+在文档中设置表格标题。
 
 ```javascript editor-docx
-// How to rename the table title.
+// How to rename the table title in a document.
 
-// Create a table and indicate its title.
+// Create a table and indicate its title in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -41,4 +41,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
-

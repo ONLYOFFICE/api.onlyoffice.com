@@ -17,5 +17,3 @@ NumberNegStyle 定义负数的格式样式：
 - "red-minus"
 - "black-parens"
 - "red-parens"
-
-

@@ -24,15 +24,14 @@ number
 
 ## 示例
 
-此示例演示如何将数字从一种度量系统转换为另一种度量系统。
+在电子表格中将数字从一种度量单位系统转换为另一种。
 
 ```javascript editor-xlsx
-// How to convert a number from one measurement system to another.
+// How to convert a number from one measurement system to another in a spreadsheet.
 
-// Use function to convert a number from one measurement system to another.
+// Use function to convert a number from one measurement system to another in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.CONVERT(2, "Ibm", "kg"));
 ```
-

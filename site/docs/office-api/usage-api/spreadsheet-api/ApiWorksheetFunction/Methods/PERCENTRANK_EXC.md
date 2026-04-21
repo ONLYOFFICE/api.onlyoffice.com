@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the rank of a value in a data set as a percentage (0..1, exclusive) of the data set.
+Return the rank of a value in a data set as a percentage (0..1, exclusive) of the data set in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the rank of a value in a data set as a percentage.
+// How to return the rank of a value in a data set as a percentage in a spreadsheet.
 
-// Use a function to get a rank of a value in a data set.
+// Use a function to get a rank of a value in a data set in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -54,4 +54,3 @@ for (let m = 0; m < column4.length; m++) {
 let range = worksheet.GetRange("A1:D4");
 worksheet.GetRange("D5").SetValue(func.PERCENTRANK_EXC(range, 2, 4));
 ```
-

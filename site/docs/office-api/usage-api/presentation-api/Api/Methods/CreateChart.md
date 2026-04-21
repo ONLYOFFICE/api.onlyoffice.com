@@ -29,12 +29,12 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 ## Example
 
-This example shows how to create a chart and paste it into the document.
+Create a chart and paste it into the document.
 
 ```javascript editor-pptx
 // How to add charts to slides.
 
-// Create a 3D bar chart, set its size, position, color and other properties.
+// Create a 3D bar chart, set its size, position, color and other properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

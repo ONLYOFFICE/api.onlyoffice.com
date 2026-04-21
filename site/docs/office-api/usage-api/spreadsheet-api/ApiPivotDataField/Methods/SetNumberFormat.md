@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a number format for data field.
+Set a number format for data field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to change a number format a table element.
@@ -63,4 +63,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 let dataField = pivotTable.GetDataFields('Sum of Price');
 dataField.SetNumberFormat('0.00E+00');
 ```
-

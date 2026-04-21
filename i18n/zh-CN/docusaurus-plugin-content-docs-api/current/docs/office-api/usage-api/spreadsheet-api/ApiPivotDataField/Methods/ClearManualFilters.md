@@ -2,16 +2,16 @@
 
 从透视筛选器集合中删除所有手动筛选器。
 
-Inherited from [ApiPivotField.ClearManualFilters](../../ApiPivotField/Methods/ClearManualFilters.md).
+继承自 [ApiPivotField.ClearManualFilters](../../ApiPivotField/Methods/ClearManualFilters.md)。
 
 ## 示例
 
-此示例展示如何从透视字段清除手动筛选器。
+清除电子表格中透视字段的手动筛选器。
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field manual filters.
+// How to remove previously applied pivot field manual filters in a spreadsheet.
 
-// Create a pivot table, add data to it then delete manual filters from a custom field.
+// Create a pivot table, add data to it then delete manual filters from a custom field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 let pivotField = pivotTable.GetPivotFields('Region');
 pivotField.ClearManualFilters();
 ```
-

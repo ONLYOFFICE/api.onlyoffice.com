@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-This example creates a shape with wrapping style "square".
+Create a shape with wrapping style "square" in a document.
 
 ```javascript editor-docx
-// How to wrap the shape with squared style.
+// How to wrap the shape with squared style in a document.
 
-// Create a drawing, add its properties and set its wrapping style.
+// Create a drawing, add its properties and set its wrapping style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -51,4 +51,3 @@ drawing.SetDistances(457200, 457200, 457200, 0);
 drawing.SetWrappingStyle("square");
 paragraph.AddDrawing(drawing);
 ```
-

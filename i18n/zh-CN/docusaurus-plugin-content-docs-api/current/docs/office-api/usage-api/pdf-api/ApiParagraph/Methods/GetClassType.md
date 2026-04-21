@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+获取 PDF 文档中段落的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiParagraph.
+// How to identify the class type of a paragraph in a PDF document?
 
-// Retrieve class type of ApiParagraph object and insert it to the page.
+// Obtain the class type identifier of a paragraph object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +42,3 @@ const classType = paragraph.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ expression.GetSpacingLineRule();
 
 ## 示例
 
-此示例展示如何获取段落行距规则。
+获取演示文稿中的段落行距规则。
 
 ```javascript editor-pptx
-// How to get the size of a spacing line rule of a text from a paragraph.
+// How to get the size of a spacing line rule of a text from a paragraph in a presentation.
 
-// Return a spacing line rule property of a paragraph.
+// Return a spacing line rule property of a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
 ```
-

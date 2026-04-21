@@ -3,11 +3,11 @@
 设置当前表单的文本属性。
 *如果该表单类型支持则使用*
 
-Inherited from [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md).
+继承自 [ApiFormBase.SetTextPr](../../ApiFormBase/Methods/SetTextPr.md)。
 
 ## 示例
 
-此示例为表单设置文本属性。
+为表单设置文本属性。
 
 ```javascript editor-forms
 // Add text properties to the text form.
@@ -23,4 +23,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 textForm.SetTextPr(textPr);
 ```
-

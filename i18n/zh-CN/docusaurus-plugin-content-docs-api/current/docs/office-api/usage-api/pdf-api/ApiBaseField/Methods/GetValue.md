@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例从第一个文本字段获取值并设置到第二个文本字段。
+从 PDF 文档中的第一个文本字段获取值并设置到第二个文本字段。
 
 ```javascript editor-pdf
+// How can I get the value using a base field in a PDF document?
+
+// Get the value for a base field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -35,4 +39,3 @@ page.AddObject(textField2);
 textField1.SetValue('Name Surname');
 textField2.SetValue(textField1.GetValue());
 ```
-

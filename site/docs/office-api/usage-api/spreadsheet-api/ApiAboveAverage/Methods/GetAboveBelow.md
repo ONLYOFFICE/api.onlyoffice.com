@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example demonstrates getting the above/below setting from an above average conditional formatting rule.
+Get the above/below setting from an above average conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to check if the rule is looking for above or below average values.
+// How to check if the rule is looking for above or below average values in a spreadsheet.
 
-// Get whether the rule is checking for above or below average values.
+// Get whether the rule is checking for above or below average values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,4 +47,3 @@ let aboveBelow = condition.GetAboveBelow();
 worksheet.GetRange("C1").SetValue("Above Average:");
 worksheet.GetRange("C2").SetValue(aboveBelow ? "Yes" : "No");
 ```
-

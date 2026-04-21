@@ -24,10 +24,9 @@ Enumeration
 - "noCrop"
 - "txBox"
 
-
 ## Example
 
-This example shows how to get the lock value for the specified lock type of a drawing.
+Get the lock value for the specified lock type of a drawing.
 
 ```javascript editor-xlsx
 // How to get a lock value of the drawing.
@@ -36,4 +35,3 @@ This example shows how to get the lock value for the specified lock type of a dr
 
 let lockValue = drawing.GetLockValue("noSelect");
 ```
-

@@ -25,10 +25,13 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+使用各种贝塞尔和弧线命令创建复杂的曲线形状。在页面上的单条路径中演示不同的曲线类型。
 
 ```javascript editor-pdf
-// Demonstrates different curve types in a single path on a page.
+// How can I arc to using a geometry path in a PDF document?
+
+// Arc to for a geometry path in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -48,4 +51,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 page.AddObject(shape);
 ```
-

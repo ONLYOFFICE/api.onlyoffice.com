@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为 EMU。
+在文档中将磅转换为 EMU。
 
 ```javascript editor-docx
+// How to convert points to emus in a document?
+
+// Convert points to emus using the document API.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const emus = Api.PointsToEmus(points);
 paragraph.AddText(points + ' points are equal to ' + emus + ' english metric units.');
 doc.Push(paragraph);
 ```
-

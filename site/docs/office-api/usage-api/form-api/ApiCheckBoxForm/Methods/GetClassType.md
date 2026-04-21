@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Retrieve the class type of a checkbox form in a document.
 
 ```javascript editor-forms
-// How get a class type of ApiCheckBoxForm.
+// How to identify the class type of a checkbox form?
 
-// Retrieve class type of a created checkbox object and display it.
+// Obtain the class type identifier of a checkbox form object.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

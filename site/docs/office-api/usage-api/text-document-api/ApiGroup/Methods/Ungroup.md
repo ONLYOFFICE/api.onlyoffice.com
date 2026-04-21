@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to ungroup a group drawing element.
+Ungroup a group drawing element in a document.
 
 ```javascript editor-docx
-// How to remove grouping from the two shapes.
+// How to remove grouping from the two shapes in a document.
 
-// Ungroup two shapes.
+// Ungroup for a group in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -50,4 +50,3 @@ paragraph.AddText("Shapes are ungrouped");
 docContent2.AddElement(0, paragraph);
 group.Ungroup();
 ```
-

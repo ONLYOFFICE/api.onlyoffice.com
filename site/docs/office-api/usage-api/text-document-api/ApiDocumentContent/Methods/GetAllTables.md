@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get an array of all tables from the document content.
+Get an array of all tables from the document content.
 
 ```javascript editor-docx
 // Get all tables added to the document.
@@ -46,4 +46,3 @@ paragraph.AddText("This is just a sample text in the first cell.");
 let cell = tables[0].GetCell(0, 0);
 tables[0].AddElement(cell, 0, paragraph);
 ```
-

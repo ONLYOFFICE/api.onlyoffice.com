@@ -25,7 +25,9 @@ boolean
 如何设置表格单元格的文本方向。
 
 ```javascript editor-pdf
-// Create a table and set the text direction for the ApiTableCell object.
+// Create a table and set the text direction for the table cell object.
+
+// Set text direction using a table cell object.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

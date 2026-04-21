@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the chart legend.
+Set the outline to the chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the outline of the chart legend using a stoke.
+// How to change the outline of the chart legend using a stoke in a spreadsheet.
 
-// Outline the chart legend creating a solid stroke.
+// Outline the chart legend creating a solid stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetLegendOutLine(stroke);
 ```
-

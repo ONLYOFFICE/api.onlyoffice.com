@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to round a positive number up and negative number down to the nearest even integer.
+Round a positive number up and negative number down to the nearest even integer in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round up a number.
+// How to round up a number in a spreadsheet.
 
-// Use function to round up positive/negative numbers.
+// Use function to round up positive/negative numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.EVEN(15.67));
 ```
-

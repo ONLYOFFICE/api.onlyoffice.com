@@ -20,7 +20,7 @@ string \| string[][]
 
 ## 示例
 
-此示例演示如何获取指定范围的文本。
+获取电子表格中指定范围的文本。
 
 ```javascript editor-xlsx
 // How to get a cell raw text value.
@@ -35,4 +35,3 @@ let range = worksheet.GetRange("A1:C1");
 let text = range.GetText();
 worksheet.GetRange("A3").SetValue("Text from the cell A1: " + text);
 ```
-

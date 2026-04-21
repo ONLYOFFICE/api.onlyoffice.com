@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows hpw to get the lock type of the container.
+Show hpw to get the lock type of the container in a document.
 
 ```javascript editor-docx
 // How to display the lock of the inline text control in the document.
 
-// Set the lock type of the inline text element and print it.
+// Set the lock type of the inline text element and print it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Lock type: " + lock);
 doc.Push(paragraph);
 ```
-

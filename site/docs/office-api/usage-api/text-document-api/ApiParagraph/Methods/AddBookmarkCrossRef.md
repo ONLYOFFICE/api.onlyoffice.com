@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-This example adds a bookmark cross-reference to the paragraph.
+Add a bookmark cross-reference to the paragraph in a document.
 
 ```javascript editor-docx
-// How to create a bookmark reference to the paragraph.
+// How to create a bookmark reference to the paragraph in a document.
 
-// Add a cross-reference to the bookmark of the paragraph.
+// Add a cross-reference to the bookmark of the paragraph in a document.
 
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 
@@ -45,4 +45,3 @@ paragraph.AddText("A bookmark was added ");
 doc.Push(paragraph);
 paragraph.AddBookmarkCrossRef("aboveBelow", bookmarks[0]);
 ```
-

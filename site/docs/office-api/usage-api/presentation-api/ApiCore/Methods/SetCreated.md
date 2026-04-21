@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the creation date of a presentation using the ApiCore.
+Set and get the creation date of a presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How can I set created using a core properties in a presentation?
+
+// Set created for a core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreated(new Date('20 January 2000'));
@@ -41,4 +45,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

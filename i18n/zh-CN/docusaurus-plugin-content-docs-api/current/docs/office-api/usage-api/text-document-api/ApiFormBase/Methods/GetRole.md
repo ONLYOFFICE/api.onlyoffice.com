@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取表单元素的角色。
+获取表单元素的角色。
 
 ```javascript editor-docx
+// How can I get the role using a form base in a document?
+
+// Get the role for a form base in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -49,4 +53,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
 ```
-

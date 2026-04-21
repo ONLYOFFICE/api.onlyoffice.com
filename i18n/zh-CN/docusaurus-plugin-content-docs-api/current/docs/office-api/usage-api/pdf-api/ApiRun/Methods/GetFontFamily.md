@@ -3,16 +3,16 @@
 从当前文本属性返回字体系列。
 如果字体是通过主题设置的，此方法会自动从主题计算字体。
 
-Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md).
+继承自 [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md)。
 
 ## 示例
 
-此示例演示如何确定文本字体系列。
+获取 PDF 文档中的文本字体系列。
 
 ```javascript editor-pdf
-// How to know font name of a text run.
+// How to know font name of a text run in a PDF document.
 
-// Get the text properties of the run and display its font family.
+// Get the text properties of the run and display its font family in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +39,3 @@ const fontFamily = textPr.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 docContent.Push(paragraph);
 ```
-

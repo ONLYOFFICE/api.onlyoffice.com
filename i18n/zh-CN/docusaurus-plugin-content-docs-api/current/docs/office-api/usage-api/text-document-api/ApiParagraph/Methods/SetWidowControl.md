@@ -2,14 +2,14 @@
 
 指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。
 
-Inherited from [ApiParaPr.SetWidowControl](../../ApiParaPr/Methods/SetWidowControl.md).
+继承自 [ApiParaPr.SetWidowControl](../../ApiParaPr/Methods/SetWidowControl.md)。
 
 ## 示例
 
-此示例指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。
+指定在显示时是否将当前段落的单行通过移至下一页的方式显示在与其余内容不同的页面上。
 
 ```javascript editor-docx
-// Set the window control of the paragraph.
+// Set the window control of the paragraph in a document.
 
 // Make the last line to be displayed on the next page, by setting widow control method set to 'true'.
 
@@ -34,4 +34,3 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This last line would be displayed on the next page, if we had not used the set widow control method.");
 doc.Push(paragraph);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例向文本块添加图表。
+在文档中向 run 添加图表。
 
 ```javascript editor-docx
-// How to add a drawing into the text.
+// How to add a drawing into the text in a document.
 
-// Insert a drawing to the text run.
+// Insert a drawing to the text run in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ drawing.SetTitle("Financial Overview", 13);
 run.AddDrawing(drawing);
 paragraph.AddElement(run);
 ```
-

@@ -2,13 +2,17 @@
 
 从当前文本属性获取文本填充。
 
-Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
+继承自 [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md)。
 
 ## 示例
 
-此示例展示如何获取文本属性的文本填充。
+获取文档中文本属性的文本填充。
 
 ```javascript editor-docx
+// How do I get the text fill in a document?
+
+// Get the text fill using a text properties object in a document.
+
 const doc = Api.GetDocument();
 
 const textPr = Api.CreateTextPr();
@@ -29,4 +33,3 @@ const drawing = Api.CreateShape("rect", 130 * 36000, 30 * 36000, textArtFill, st
 drawing.GetDocContent().GetElement(0).AddText('This is a rectangle with the same fill as the WordArt text.');
 paragraph.AddDrawing(drawing);
 ```
-

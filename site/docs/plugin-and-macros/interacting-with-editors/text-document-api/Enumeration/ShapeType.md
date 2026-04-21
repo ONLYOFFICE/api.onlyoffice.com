@@ -195,5 +195,3 @@ Enumeration
 - "wedgeEllipseCallout"
 - "wedgeRectCallout"
 - "wedgeRoundRectCallout"
-
-

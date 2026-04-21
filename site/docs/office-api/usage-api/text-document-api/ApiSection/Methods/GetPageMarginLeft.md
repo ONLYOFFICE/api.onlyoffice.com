@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example specifies the page margins for all the pages in this section and returns it back.
+Specify the page margins for all the pages in this section and return it back.
 
 ```javascript editor-docx
 // How to get left page margin.
+
+// Use section to get the page margin left.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +37,3 @@ paragraph.AddText("The top margin is 2 inches high (" + section.GetPageMarginTop
 paragraph.AddText("The right margin is 1 inch wide (" + section.GetPageMarginRight() + " twentieths of a point). ");
 paragraph.AddText("The bottom margin is 4 inches high (" + section.GetPageMarginBottom() + " twentieths of a point). ");
 ```
-

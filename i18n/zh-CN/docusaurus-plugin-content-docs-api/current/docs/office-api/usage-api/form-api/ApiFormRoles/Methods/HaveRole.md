@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何添加新角色。
+在表单文档中添加新角色。
 
 ```javascript editor-forms
+// How to have role for a form roles?
+
+// Have role and display the result in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -39,4 +43,3 @@ let paragraph = doc.GetElement(0);
     paragraph.AddLineBreak();
 });
 ```
-

@@ -22,7 +22,7 @@ expression.FindNext(After);
 
 ## Example
 
-This example finds the next cell that matches those same conditions.
+Find the next cell that matches those same conditions.
 
 ```javascript editor-xlsx
 // How to get the next cell from a range that meets search requirements.
@@ -51,4 +51,3 @@ searchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 let nextSearchRange = range.FindNext(searchRange);
 nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 ```
-

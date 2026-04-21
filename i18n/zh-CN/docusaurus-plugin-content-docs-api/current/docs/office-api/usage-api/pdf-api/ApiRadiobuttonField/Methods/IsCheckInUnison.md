@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取单选按钮字段的统一选中属性。
+获取 PDF 文档中单选按钮字段的统一选中属性。
 
 ```javascript editor-pdf
+// How do I is check in unison in a PDF document?
+
+// Is check in unison using a radio button field object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);
@@ -35,4 +39,3 @@ radiobuttonField.SetCheckInUnison(true);
 radiobuttonField.SetValue('Choice1');
 console.log('Check in unison is: ' + radiobuttonField.IsCheckInUnison());
 ```
-

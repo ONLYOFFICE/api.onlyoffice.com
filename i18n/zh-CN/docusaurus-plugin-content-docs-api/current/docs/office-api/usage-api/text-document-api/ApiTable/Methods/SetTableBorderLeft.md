@@ -2,16 +2,16 @@
 
 设置将在当前表格左侧显示的边框。
 
-Inherited from [ApiTablePr.SetTableBorderLeft](../../ApiTablePr/Methods/SetTableBorderLeft.md).
+继承自 [ApiTablePr.SetTableBorderLeft](../../ApiTablePr/Methods/SetTableBorderLeft.md)。
 
 ## 示例
 
-此示例设置将在表格左侧显示的边框。
+在文档中设置表格左侧显示的边框。
 
 ```javascript editor-docx
-// How to create a 3x3 table and add the left 4 point black border.
+// How to create a 3x3 table and add the left 4 point black border in a document.
 
-// Add left border to the table.
+// Add left border to the table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -26,4 +26,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

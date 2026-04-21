@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example shows how to get the value hiding property.
+Get the value hiding property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out hidden property from a range.
+// How to find out hidden property from a range in a spreadsheet.
 
 // Get a range, get its cell hiding property and show it in the worksheet.
 
@@ -36,4 +36,3 @@ worksheet.GetRange("C1").SetValue("3");
 let hidden = range.GetHidden();
 worksheet.GetRange("A4").SetValue("The values from A1:C1 are hidden: " + hidden);
 ```
-

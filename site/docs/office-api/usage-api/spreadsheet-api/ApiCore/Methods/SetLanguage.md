@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the language of the workbook using the ApiCore.
+Set the language of the workbook using the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set language using a core properties in a spreadsheet?
+
+// Set language for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -43,4 +47,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Language: " + language);
 ```
-

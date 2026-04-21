@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the table properties of the style.
+Get the table properties of the style in a document.
 
 ```javascript editor-docx
 // How to get table properties and set its cells margins.
@@ -45,4 +45,3 @@ tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("cle
 tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
 tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
 ```
-

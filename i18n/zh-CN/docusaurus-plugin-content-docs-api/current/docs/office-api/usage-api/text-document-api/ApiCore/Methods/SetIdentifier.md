@@ -22,9 +22,13 @@ expression.SetIdentifier(sIdentifier);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置当前文档的标识符。
+使用文档中的核心属性设置当前文档的标识符。
 
 ```javascript editor-docx
+// How to set identifier for a core properties in a document?
+
+// Set identifier and display the result in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetIdentifier("#ID42");
@@ -33,4 +37,3 @@ const identifier = core.GetIdentifier();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Identifier: " + identifier);
 ```
-

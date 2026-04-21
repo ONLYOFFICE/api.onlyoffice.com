@@ -23,9 +23,13 @@ expression.SetPosition(x, y);
 
 ## 示例
 
-此示例设置演示文稿中批注的位置。
+在演示文稿中设置批注的位置。
 
 ```javascript editor-pptx
+// How do I set position in a presentation?
+
+// Set position using a comment object in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.GetAllComments().forEach(comment => {
 	comment.Delete();
@@ -47,4 +51,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The comment position was changed from (0, 0) to (320, 165).');
 ```
-

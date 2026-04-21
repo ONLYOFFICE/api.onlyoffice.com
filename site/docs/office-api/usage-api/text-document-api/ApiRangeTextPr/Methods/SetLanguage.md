@@ -7,12 +7,12 @@ Inherited from [ApiTextPr.SetLanguage](../../ApiTextPr/Methods/SetLanguage.md).
 
 ## Example
 
-This example specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of the text run.
+Specify the languages which will be used to check spelling and grammar (if requested) when processing the contents of the text run in a document.
 
 ```javascript editor-docx
-// How to set a language to the text for grammar checking.
+// How to set a language to the text for grammar checking in a document.
 
-// Create a text run object, change its language to English for grammar check.
+// Create a text run object, change its language to English for grammar check in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();
@@ -26,4 +26,3 @@ run.AddText("This is a text run with the text language set to English (Canada)."
 run.SetTextPr(textPr);
 paragraph.AddElement(run);
 ```
-

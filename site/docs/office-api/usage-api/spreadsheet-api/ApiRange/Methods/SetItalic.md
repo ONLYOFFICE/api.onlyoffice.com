@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the italic property to the text characters in the cell.
+Set the italic property to the text characters in the cell.
 
 ```javascript editor-xlsx
 // How to make a text value of cells italic.
@@ -34,4 +34,3 @@ worksheet.GetRange("A2").SetValue("Italicized text");
 worksheet.GetRange("A2").SetItalic(true);
 worksheet.GetRange("A3").SetValue("Normal text");
 ```
-

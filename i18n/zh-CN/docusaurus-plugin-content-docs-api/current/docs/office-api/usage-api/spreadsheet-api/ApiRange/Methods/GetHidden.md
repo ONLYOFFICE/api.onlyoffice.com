@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例演示如何获取值隐藏属性。
+获取电子表格中的值隐藏属性。
 
 ```javascript editor-xlsx
-// How to find out hidden property from a range.
+// How to find out hidden property from a range in a spreadsheet.
 
 // Get a range, get its cell hiding property and show it in the worksheet.
 
@@ -36,4 +36,3 @@ worksheet.GetRange("C1").SetValue("3");
 let hidden = range.GetHidden();
 worksheet.GetRange("A4").SetValue("The values from A1:C1 are hidden: " + hidden);
 ```
-

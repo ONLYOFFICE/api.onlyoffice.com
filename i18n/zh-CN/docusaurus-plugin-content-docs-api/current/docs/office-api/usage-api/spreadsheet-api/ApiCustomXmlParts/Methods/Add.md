@@ -22,16 +22,15 @@ expression.Add(xml);
 
 ## 示例
 
-此示例演示如何添加新的自定义 XML 部件然后访问它。
+在电子表格中添加新的自定义 XML 部件并访问它。
 
 ```javascript editor-xlsx
-// How to add a custom XML part to the workbook.
+// How to add a custom XML part to the workbook in a spreadsheet.
 
-// Add a new XML part.
+// Add and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
 let newXml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");
 worksheet.GetRange("A1").SetValue("New XML part added: " + newXml.GetXml());
 ```
-

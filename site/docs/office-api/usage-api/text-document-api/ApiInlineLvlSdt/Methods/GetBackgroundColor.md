@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the border color for the container.
+Get the border color for the container in a document.
 
 ```javascript editor-docx
+// How can I get the background color using an inline content control in a document?
+
+// Get the background color for an inline content control in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
@@ -40,4 +44,3 @@ run.AddText("BackgroundColor: " + (color ? color.GetHex() : "none"));
 inlineLvlSdt.AddElement(run, 0);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
 ```
-

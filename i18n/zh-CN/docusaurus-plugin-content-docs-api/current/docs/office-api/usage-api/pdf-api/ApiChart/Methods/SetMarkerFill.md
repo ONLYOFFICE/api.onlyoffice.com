@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何为标记设置填充。
+如何在 PDF 文档中为标记设置填充。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker color.
+// Create a chart, set its properties and its marker color in a PDF document.
+
+// Set marker fill using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,4 +53,3 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
 ```
-

@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the axis values.
+Set the specified numeric format to the axis values.
 
 ```javascript editor-xlsx
 // How to format numbers of the axis.
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

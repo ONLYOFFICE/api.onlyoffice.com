@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the shape inner contents where a paragraph or text runs can be inserted.
+Get the shape inner contents where a paragraph or text runs can be inserted in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get content of ApiShape.
+// How to get content of shape in a spreadsheet.
 
-// Get content of ApiShape, remove all its elements and add a new paragraph to it.
+// Get content of shape, remove all its elements and add a new paragraph to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -38,4 +38,3 @@ paragraph.SetJc("left");
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 content.Push(paragraph);
 ```
-

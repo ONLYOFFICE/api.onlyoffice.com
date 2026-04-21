@@ -22,16 +22,15 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the right margin of the sheet.
+Set the right margin of the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set margin of the right side.
+// How to set margin of the right side in a spreadsheet.
 
-// Resize the right margin of the sheet.
+// Resize the right margin of the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRightMargin(20.8);
 let rightMargin = worksheet.GetRightMargin();
 worksheet.GetRange("A1").SetValue("Right margin: " + rightMargin + " mm");
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the entry effect for a slide show transition.
+Set the entry effect for a slide show transition.
 
 ```javascript editor-pptx
+// How to set entry effect for a slide show transition?
+
+// Set entry effect and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -45,4 +49,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Entry Effect: effectCoverLeftDown');
 slide.AddObject(shape);
 ```
-

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例指定图表纵轴标题。
+指定文档中图表的垂直轴标题。
 
 ```javascript editor-docx
-// Title the chart's vertical axis.
+// Title the chart's vertical axis in a document.
 
-// Create a chart, set its properties and name its vertical axis title.
+// Create a chart, set its properties and name its vertical axis title in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ chart.SetShowDataLabels(false, false, true, false);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

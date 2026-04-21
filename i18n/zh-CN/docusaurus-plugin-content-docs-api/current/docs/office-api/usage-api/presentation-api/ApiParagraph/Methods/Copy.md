@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建段落副本。
+在演示文稿中创建段落副本。
 
 ```javascript editor-pptx
-// How to add a duplicate paragraph.
+// How to add a duplicate paragraph in a presentation.
 
-// Copy a paragraph and add it to the shape.
+// Copy a paragraph and add it to the shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,3 @@ const copyParagraph = paragraph.Copy();
 docContent.Push(copyParagraph);
 slide.AddObject(shape);
 ```
-

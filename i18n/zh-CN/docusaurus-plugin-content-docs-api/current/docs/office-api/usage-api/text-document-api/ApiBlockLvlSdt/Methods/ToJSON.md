@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiBlockLvlSdt 对象转换为 JSON 对象。
+将文档中的块级内容控件对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// Creates a block content control and converts it into the JSON object.
+// Create a block content control and convert it into the JSON object in a document.
 
-// How to create the JSON object from the ApiBlockLvlSdt object.
+// How to create the JSON object from the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -38,4 +38,3 @@ let blockLvlSdtFromJSON = Api.FromJSON(json);
 blockLvlSdtFromJSON.GetContent().GetElement(0).AddText("This is a block text content control.");
 doc.AddElement(0, blockLvlSdtFromJSON);
 ```
-

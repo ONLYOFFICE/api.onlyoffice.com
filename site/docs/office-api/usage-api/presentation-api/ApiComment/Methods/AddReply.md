@@ -25,10 +25,10 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## Example
 
-This example shows how to add a reply to the comment.
+Add a reply to the comment in a presentation.
 
 ```javascript editor-pptx
-// How to reply to the comment.
+// How to reply to the comment in a presentation.
 
 // Get all comments from the presentation and reply to the first one.
 
@@ -61,4 +61,3 @@ paragraph.AddText("Comment from John Doe is aligned to the bottom right corner o
 paragraph.AddLineBreak();
 paragraph.AddText("Comment's reply text: " + reply.GetText());
 ```
-

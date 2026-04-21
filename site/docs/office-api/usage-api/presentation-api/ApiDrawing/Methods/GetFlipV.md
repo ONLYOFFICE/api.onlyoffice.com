@@ -20,12 +20,12 @@ boolean \| null
 
 ## Example
 
-This example checks whether the drawing is flipped vertically.
+Check whether the drawing is flipped vertically in a presentation.
 
 ```javascript editor-pptx
-// How to get the vertical flip property of the shape.
+// How to get the vertical flip property of the shape in a presentation.
 
-// Create a drawing, flip it vertically, and read its vertical flip value.
+// Create a drawing, flip it vertically, and read its vertical flip value in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,4 +42,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped vertically: " + flip);
 ```
-

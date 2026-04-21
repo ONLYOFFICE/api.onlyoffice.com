@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例演示如何获取元素。
+获取演示文稿中的元素。
 
 ```javascript editor-pptx
 // How to get an element from the content of a slide shape.
 
-// Find an element from the shape using its index.
+// Find an element from the shape using its index in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,3 @@ oParagraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(oParagraph);
 slide.AddObject(shape);
 ```
-

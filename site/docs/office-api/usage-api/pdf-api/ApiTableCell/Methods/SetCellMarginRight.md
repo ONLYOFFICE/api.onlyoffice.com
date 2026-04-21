@@ -26,7 +26,9 @@ boolean
 How to set the cell right margin for the current table cell.
 
 ```javascript editor-pdf
-// Specify the right margin value for the ApiTableCell object.
+// Specify the right margin value for the table cell object.
+
+// Use table cell to set cell margin right.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ cell.SetCellMarginRight(600);
 
 page.AddObject(table);
 ```
-

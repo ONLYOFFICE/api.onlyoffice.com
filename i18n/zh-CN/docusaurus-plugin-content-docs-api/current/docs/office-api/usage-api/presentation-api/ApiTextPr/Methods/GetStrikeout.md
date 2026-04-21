@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何确定文本是否有单线删除线。
+检查演示文稿中的文本是否有单线删除线。
 
 ```javascript editor-pptx
-// How to know whether a text is crossed with one horizontal line.
+// How to know whether a text is crossed with one horizontal line in a presentation.
 
-// Get the text properties of the run and find whether it is strikethrough or not.
+// Get the text properties of the run and find whether it is strikethrough or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,3 @@ const strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
 ```
-

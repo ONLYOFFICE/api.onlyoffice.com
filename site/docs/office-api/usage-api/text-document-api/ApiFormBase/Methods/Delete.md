@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to delete the checkbox form.
+Delete the checkbox form in a document.
 
 ```javascript editor-docx
+// How can I delete using a form base in a document?
+
+// Delete for a form base in a document.
+
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({
 	'key': 'Marital status',
@@ -41,4 +45,3 @@ paragraph.AddElement(copyCheckBoxForm);
 paragraph.AddText(' Single');
 checkBoxForm.Delete();
 ```
-

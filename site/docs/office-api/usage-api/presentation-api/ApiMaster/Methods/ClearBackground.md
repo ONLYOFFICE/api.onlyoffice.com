@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example clears the slide master background.
+Clear the slide master background.
 
 ```javascript editor-pptx
-// How to remove a background from a master.
+// How to remove a background from a master in a presentation.
 
-// Clear background from a master object.
+// Clear background from a master object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,3 @@ shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 master.AddObject(shape);
 ```
-

@@ -20,9 +20,13 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取图表标题文本。
+获取 PDF 文档中的图表标题文本。
 
 ```javascript editor-pdf
+// How do I get the title in a PDF document?
+
+// Get the title using a chart object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -52,4 +56,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Chart Title: ' + chartTitle);
 page.AddObject(shape);
 ```
-

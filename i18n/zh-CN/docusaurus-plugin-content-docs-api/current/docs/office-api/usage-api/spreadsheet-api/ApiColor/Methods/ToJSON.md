@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何将形状填充颜色转换为 JSON。
+在电子表格中将形状填充颜色转换为 JSON。
 
 ```javascript editor-xlsx
+// The color is obtained from the first shape fill on the worksheet.
+
+// Convert the color to a JSON string and display the result.
+
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGB(64, 128, 192);
 
@@ -32,4 +36,3 @@ worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 
 
 worksheet.GetRange("A12").SetValue("Color JSON: " + color.ToJSON());
 ```
-

@@ -25,7 +25,7 @@ JSON
 
 ## Example
 
-This example converts the ApiSlide object into the JSON object.
+Convert the slide object into the JSON object.
 
 ```javascript editor-pptx
 // How to convert a slide object to a JSON object.
@@ -52,4 +52,3 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents the active sheet.
+Get an object that represents the active sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an active sheet object.
+// How to get an active sheet object in a spreadsheet.
 
-// Get worksheet.
+// Get active sheet for an editor in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue("2");
@@ -33,4 +33,3 @@ worksheet.GetRange("B2").SetValue("2");
 worksheet.GetRange("A3").SetValue("2x2=");
 worksheet.GetRange("B3").SetValue("=B1*B2");
 ```
-

@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-此示例为图表设置「0.00」数字格式。
+为图表设置"0.00"数字格式。
 
 ```javascript editor-pptx
 // How to change a number format of a data point.
@@ -51,4 +51,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

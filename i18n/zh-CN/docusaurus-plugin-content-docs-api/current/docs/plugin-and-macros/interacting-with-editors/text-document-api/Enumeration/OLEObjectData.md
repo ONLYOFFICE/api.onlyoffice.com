@@ -34,4 +34,3 @@ let oleObjectData = {
 };
 window.Asc.plugin.executeMethod("InsertOleObject", [oleObjectData, true]);
 ```
-

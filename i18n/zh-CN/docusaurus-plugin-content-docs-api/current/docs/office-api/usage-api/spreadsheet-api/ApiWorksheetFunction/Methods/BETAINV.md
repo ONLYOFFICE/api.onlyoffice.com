@@ -26,15 +26,14 @@ number
 
 ## 示例
 
-此示例演示如何返回累积 beta 概率密度函数的反函数 (BETA_DIST)。
+在电子表格中返回累积 Beta 概率密度函数 (BETA_DIST) 的逆函数。
 
 ```javascript editor-xlsx
-// How to get a result from the inverse of the cumulative beta probability density function.
+// How to get a result from the inverse of the cumulative beta probability density function in a spreadsheet.
 
-// Use function to get the inverse of the cumulative beta probability distribution function.
+// Use function to get the inverse of the cumulative beta probability distribution function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.BETAINV(0.2, 4, 5));
 ```
-

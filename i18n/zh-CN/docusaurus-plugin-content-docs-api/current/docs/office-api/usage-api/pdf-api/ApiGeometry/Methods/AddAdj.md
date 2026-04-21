@@ -23,10 +23,13 @@ boolean
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调整几何图形。
+为 PDF 文档创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How can I add the adj using a geometry in a PDF document?
+
+// Add the adj for a geometry in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -53,4 +56,3 @@ shape.GetContent().GetElement(0).AddText("Adj value: " + customGeometry.GetAdjVa
 shape.SetPosition(1500000, 1500000);
 page.AddObject(shape);
 ```
-

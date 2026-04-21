@@ -12,5 +12,3 @@
 - "invert"
 - "push"
 - "outline"
-
-

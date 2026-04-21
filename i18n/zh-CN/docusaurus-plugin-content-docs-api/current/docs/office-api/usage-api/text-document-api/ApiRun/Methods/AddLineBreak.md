@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例在文本块位置添加换行符，并从新行开始下一个元素。
+在文档中向 run 位置添加换行符并从新行开始下一个元素。
 
 ```javascript editor-docx
-// How to start a sentence on a new line.
+// How to start a sentence on a new line in a document.
 
-// Break two lines of a text run with a line. 
+// Break two lines of a text run with a line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ run.AddText("This is the text which starts from the beginning of the second line
 run.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 paragraph.AddElement(run);
 ```
-

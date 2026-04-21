@@ -20,7 +20,7 @@ string \| null
 
 ## Example
 
-This example shows how to get a number format of a data field.
+Get a number format of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a table element format.
@@ -63,4 +63,3 @@ let dataField = pivotTable.GetDataFields('Sum of Price');
 pivotWorksheet.GetRange('A15').SetValue('Number format:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetNumberFormat());
 ```
-

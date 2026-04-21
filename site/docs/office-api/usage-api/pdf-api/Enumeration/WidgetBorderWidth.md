@@ -12,5 +12,3 @@ Enumeration
 - "thin"
 - "medium"
 - "thick"
-
-

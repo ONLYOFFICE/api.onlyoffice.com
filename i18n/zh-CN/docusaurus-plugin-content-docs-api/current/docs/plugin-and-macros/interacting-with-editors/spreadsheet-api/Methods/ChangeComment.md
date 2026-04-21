@@ -42,4 +42,3 @@ window.Asc.plugin.executeMethod ("ChangeComment", ["1_631",
     }
 ]);
 ```
-

@@ -22,7 +22,7 @@ expression.GetFormsByTag(sTag);
 
 ## 示例
 
-此示例展示如何获取文档中具有指定标签名称的所有表单列表。
+获取文档中具有指定标签名称的所有表单列表。
 
 ```javascript editor-forms
 // How to get all forms with a specific tag.
@@ -40,4 +40,3 @@ let forms = doc.GetFormsByTag("form_1");
 forms[0].SetText("John Smith");
 forms[1].SelectListValue("USA");
 ```
-

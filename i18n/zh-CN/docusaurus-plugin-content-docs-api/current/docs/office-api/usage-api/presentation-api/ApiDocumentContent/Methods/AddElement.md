@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例向演示文稿添加段落。
+向演示文稿添加段落。
 
 ```javascript editor-pptx
 // How to create an element, add it to a shape and insert the shape to the slide.
@@ -47,4 +47,3 @@ docContent.AddElement(paragraph);
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

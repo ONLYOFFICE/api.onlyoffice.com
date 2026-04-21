@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the current theme format scheme.
+Create a copy of the current theme format scheme.
 
 ```javascript editor-pptx
 // How to create a copy of a format scheme.
@@ -68,4 +68,3 @@ copyFormatScheme.ChangeBgFillStyles([newBgFill1, newBgFill2, newBgFill3]);
 const theme2 = Api.CreateTheme("Theme 2", master, colorScheme, copyFormatScheme, fontScheme);
 slide.ApplyTheme(theme2);
 ```
-

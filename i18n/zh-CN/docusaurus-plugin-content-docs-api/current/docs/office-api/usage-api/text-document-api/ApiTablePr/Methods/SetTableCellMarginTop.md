@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例指定在父表格中所有表格单元格的单元格内容顶部范围与顶边框之间保留的空间量。
+指定单元格内容顶部边缘与父表格中所有表格单元格顶边框之间保留的间距。
 
 ```javascript editor-docx
 // How to add margin to the top of the cell.
@@ -43,4 +43,3 @@ table.SetStyle(tableStyle);
 let cell = table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample text to show that the top cell margin is 36 points.");
 doc.Push(table);
 ```
-

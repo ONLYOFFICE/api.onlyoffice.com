@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何反转图标顺序显示。
+在电子表格中反转图标顺序显示。
 
 ```javascript editor-xlsx
 // How to change the display order of icons in icon set formatting.
 
-// Reverse the order in which icons are displayed.
+// Reverse the order in which icons are displayed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -44,4 +44,3 @@ worksheet.GetRange("B1").SetValue("Before: Normal icon order");
 iconCondition.SetReverseOrder(true);
 worksheet.GetRange("B2").SetValue("After: Reversed icon order");
 ```
-

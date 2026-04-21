@@ -1,6 +1,6 @@
 # ApiTextField
 
-ApiTextField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
+ApiTextField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 
 ## 方法
 

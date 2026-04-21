@@ -11,5 +11,3 @@
 - "xlValidAlertStop"
 - "xlValidAlertWarning"
 - "xlValidAlertInformation"
-
-

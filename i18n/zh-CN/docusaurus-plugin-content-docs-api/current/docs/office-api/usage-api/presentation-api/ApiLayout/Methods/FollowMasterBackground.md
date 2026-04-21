@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例将母版背景设置为版式的背景。
+在演示文稿中将母版背景设置为版式的背景。
 
 ```javascript editor-pptx
-// How to apply master background to the layout.
+// How to apply master background to the layout in a presentation.
 
 // Change background of the presentation layout to the background of a master.
 
@@ -37,4 +37,3 @@ const layout = master.GetLayout(0);
 layout.FollowMasterBackground();
 slide.FollowLayoutBackground();
 ```
-

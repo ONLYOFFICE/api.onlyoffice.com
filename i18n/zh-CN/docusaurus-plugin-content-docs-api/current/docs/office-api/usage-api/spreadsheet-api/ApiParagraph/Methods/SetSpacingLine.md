@@ -5,16 +5,16 @@
 sLineRule 参数的值为 "auto"，则
 nLine 参数的值将被解释为行的 240 分之一。
 
-Inherited from [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md).
+继承自 [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md)。
 
 ## 示例
 
-此示例设置段落行距。
+设置电子表格中的段落行距。
 
 ```javascript editor-xlsx
-// How to add a spacing line between paragraphs.
+// How to add a spacing line between paragraphs in a spreadsheet.
 
-// Get a paragraph from the shape's content then add a text specifying spacing between text lines.
+// Get a paragraph from the shape's content then add a text specifying spacing between text lines in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -29,4 +29,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 ```
-

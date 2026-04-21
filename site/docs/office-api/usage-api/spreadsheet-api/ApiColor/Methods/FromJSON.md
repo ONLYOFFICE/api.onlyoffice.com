@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## Example
 
-This example shows how to restore a shape fill color from JSON.
+Restore a shape fill color from JSON in a spreadsheet.
 
 ```javascript editor-xlsx
+// The JSON string contains the color type and value properties.
+
+// Restore the color object from JSON and display the result.
+
 const worksheet = Api.GetActiveSheet();
 const original = Api.RGB(93, 192, 232);
 const json = JSON.parse(original.ToJSON());
@@ -36,4 +40,3 @@ worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 
 
 worksheet.GetRange("A12").SetValue("Original: " + original.GetHex() + " | Restored: " + restored.GetHex());
 ```
-

@@ -22,9 +22,13 @@ expression.SetDescription(sDescription);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置当前工作簿的描述。
+在电子表格中使用核心属性设置当前工作簿的描述。
 
 ```javascript editor-xlsx
+// How do I set description in a spreadsheet?
+
+// Set description using a core properties object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -43,4 +47,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Description: " + description);
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the XML content of the current XML node.
+Set the XML content of the current XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I set xml in a presentation?
+
+// Set xml using a custom XML node object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,4 +49,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after SetXml:\n' + xml.GetXml());
 ```
-

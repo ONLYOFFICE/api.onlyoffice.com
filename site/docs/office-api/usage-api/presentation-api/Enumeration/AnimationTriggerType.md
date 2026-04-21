@@ -11,5 +11,3 @@ Enumeration
 - "onclick"
 - "withprevious"
 - "afterprevious"
-
-

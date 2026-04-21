@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetHorAlign](../../ApiDrawing/Methods/SetHorAlign.md)
 
 ## Example
 
-This example specifies how the floating object will be horizontally aligned.
+Specify how the floating object will be horizontally aligned in a document.
 
 ```javascript editor-docx
 // How to set the drawing to the center of the page.
 
-// Create a drawing and align it horizontaly to the center.
+// Create a drawing and align it horizontaly to the center in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -34,4 +34,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The shape is aligned at the center of the page horizontally.");
 doc.Push(paragraph);
 ```
-

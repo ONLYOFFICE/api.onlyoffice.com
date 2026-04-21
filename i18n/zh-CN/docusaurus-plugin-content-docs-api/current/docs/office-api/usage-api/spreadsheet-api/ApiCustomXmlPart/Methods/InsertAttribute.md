@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例展示如何向自定义 XML 部件元素中插入属性。
+在电子表格中向自定义 XML 部件元素插入属性。
 
 ```javascript editor-xlsx
+// How do I insert the attribute in a spreadsheet?
+
+// Insert the attribute using a custom XML part object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = '<config />';
@@ -36,4 +40,3 @@ xml.InsertAttribute('/config', 'version', '9.4');
 worksheet.GetRange('A1').SetValue('XML after insertion:');
 worksheet.GetRange('A2').SetValue(xml.GetXml());
 ```
-

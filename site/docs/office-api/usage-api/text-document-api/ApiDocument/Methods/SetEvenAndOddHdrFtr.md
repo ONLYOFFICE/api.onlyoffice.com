@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example specifies whether sections in this document will have different headers and footers for even and odd pages.
+Specify whether sections in this document will have different headers and footers for even and odd pages.
 
 ```javascript editor-docx
 // How to make headers and footers different for even and odd pages.
@@ -70,4 +70,3 @@ paragraph.AddText("This is section #4 of the document. ");
 paragraph.AddText("It has a header and a footer for even pages.");
 doc.Push(paragraph);
 ```
-

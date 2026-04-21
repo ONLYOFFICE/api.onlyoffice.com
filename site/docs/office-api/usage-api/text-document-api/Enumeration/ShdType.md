@@ -11,10 +11,9 @@ Enumeration
 - "nil"
 - "clear"
 
-
 ## Example
 
-This example adds a green shadow to the table.
+Add a green shadow to the table.
 
 ```javascript editor-docx
 // How to change a table shadow type.
@@ -23,4 +22,3 @@ This example adds a green shadow to the table.
 
 tablePr.SetShd("clear", 0, 255, 0, false);
 ```
-

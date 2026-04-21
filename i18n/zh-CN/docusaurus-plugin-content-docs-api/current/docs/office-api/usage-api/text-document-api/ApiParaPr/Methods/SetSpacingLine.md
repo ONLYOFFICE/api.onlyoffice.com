@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-此示例设置段落行距。
+在文档中设置段落行距。
 
 ```javascript editor-docx
-// How to set the size of a spacing line from a paragraph properties.
+// How to set the size of a spacing line from a paragraph properties in a document.
 
-// Change a spacing line size property of a paragraph properties.
+// Change a spacing line size property of a paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let myStyle1 = doc.CreateStyle("My document style #1");
@@ -70,4 +70,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 doc.Push(paragraph);
 ```
-

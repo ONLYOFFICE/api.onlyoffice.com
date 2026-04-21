@@ -29,9 +29,13 @@ string
 
 ## 示例
 
-此示例返回文档内容中的文本。
+返回文档内容中的文本。
 
 ```javascript editor-pdf
+// How to get the text for a document content?
+
+// Get the text and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -48,4 +52,3 @@ infoParagraph.AddText('Text from document content: ' + text);
 docContent.Push(infoParagraph);
 page.AddObject(shape);
 ```
-

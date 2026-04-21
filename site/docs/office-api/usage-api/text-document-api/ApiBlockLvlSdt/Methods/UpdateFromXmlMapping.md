@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to synchronize data from a mapped XML file with a content control using data binding.
+Synchronize data from a mapped XML file with a content control using data binding in a document.
 
 ```javascript editor-docx
+// How to update from xml mapping for a block-level content control in a document?
+
+// Update from xml mapping and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -47,4 +51,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(contentControl.GetContent().GetText());
 doc.Push(paragraph);
 ```
-

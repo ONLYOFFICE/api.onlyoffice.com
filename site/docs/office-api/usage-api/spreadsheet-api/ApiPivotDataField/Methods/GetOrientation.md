@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an orientation of a data field.
+Get an orientation of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a table element orientation.
+// How to get a table element orientation in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's orientation.
+// Create a pivot table, add data to it then display a custom data field's orientation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -64,4 +64,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 orientation:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetOrientation());
 ```
-

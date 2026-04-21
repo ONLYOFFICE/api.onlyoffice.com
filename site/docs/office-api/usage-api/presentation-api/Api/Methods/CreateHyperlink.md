@@ -23,9 +23,13 @@ expression.CreateHyperlink(link, tooltip);
 
 ## Example
 
-This example shows how to create a hyperlink and set it to an image.
+Create a hyperlink and set it to an image in a presentation.
 
 ```javascript editor-pptx
+// How can I create the hyperlink in a presentation?
+
+// Create the hyperlink in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,4 +43,3 @@ slide.AddObject(image);
 const hyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
 image.SetHyperlink(hyperlink);
 ```
-

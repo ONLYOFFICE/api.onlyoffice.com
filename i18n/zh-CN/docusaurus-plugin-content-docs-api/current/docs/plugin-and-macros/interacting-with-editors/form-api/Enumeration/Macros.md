@@ -31,4 +31,3 @@ let macros = {
 };
 window.Asc.plugin.executeMethod("SetMacros", [macros]);
 ```
-

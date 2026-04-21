@@ -2,11 +2,11 @@
 
 将光标放置在当前表单之前/之后。
 
-Inherited from [ApiFormBase.MoveCursorOutside](../../ApiFormBase/Methods/MoveCursorOutside.md).
+继承自 [ApiFormBase.MoveCursorOutside](../../ApiFormBase/Methods/MoveCursorOutside.md)。
 
 ## 示例
 
-此示例展示如何将光标移到外部。
+在文档中将光标移到外部。
 
 ```javascript editor-docx
 // How to know whether the cursor should be moved out of the text form.
@@ -20,4 +20,3 @@ paragraph.AddElement(textForm);
 textForm.SetText("The cursor will be placed after the current form.");
 textForm.MoveCursorOutside(true);
 ```
-

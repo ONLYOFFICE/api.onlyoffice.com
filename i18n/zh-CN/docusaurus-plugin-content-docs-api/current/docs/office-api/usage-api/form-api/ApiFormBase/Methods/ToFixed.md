@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-此示例将表单转换为固定大小的表单。
+将表单转换为固定大小的表单。
 
 ```javascript editor-forms
 // How to fix the size of the text form.
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document has a fixed size: " + fixed);
 doc.Push(paragraph);
 ```
-

@@ -21,12 +21,12 @@ number
 
 ## Example
 
-This example shows how to get position of a pivot field.
+Get position of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field position.
+// How to get a pivot field position in a spreadsheet.
 
-// Create a pivot table, add data to it then get the position of a specified pivot field.
+// Create a pivot table, add data to it then get the position of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -62,4 +62,3 @@ let pivotField = pivotTable.GetPivotFields('Style');
 pivotWorksheet.GetRange('A12').SetValue('Style field position');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetPosition());
 ```
-

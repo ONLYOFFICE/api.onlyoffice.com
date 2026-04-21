@@ -4,5 +4,4 @@
 
 ## 类型
 
-array
-
+[Point](../Enumeration/Point.md)[]

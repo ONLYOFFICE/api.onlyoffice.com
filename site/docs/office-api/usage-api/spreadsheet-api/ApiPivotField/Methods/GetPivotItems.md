@@ -23,12 +23,12 @@ expression.GetPivotItems(index);
 
 ## Example
 
-This example shows how to get items of a pivot field.
+Get items of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field items.
+// How to get a pivot field items in a spreadsheet.
 
-// Create a pivot table, add data to it then get items of a specified pivot field as an array.
+// Create a pivot table, add data to it then get items of a specified pivot field as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -70,4 +70,3 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
 }
 ```
-

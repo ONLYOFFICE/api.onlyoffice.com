@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the outline level for the specified paragraph via paragraph properties.
+Set the outline level for the specified paragraph via paragraph properties in a presentation.
 
 ```javascript editor-pptx
+// How can I set outline lvl using a paragraph properties in a presentation?
+
+// Set outline lvl for a paragraph properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,4 +48,3 @@ const paraPr = paragraph.GetParaPr();
 paraPr.SetOutlineLvl(outlineLvlIndex);
 paragraph.AddText("This is a paragraph with outline level parameter set to " + (outlineLvlIndex + 1));
 ```
-

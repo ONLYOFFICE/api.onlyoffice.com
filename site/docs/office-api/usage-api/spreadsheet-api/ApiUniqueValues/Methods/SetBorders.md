@@ -6,7 +6,7 @@ Inherited from [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/
 
 ## Example
 
-This example sets borders for a conditional formatting rule.
+Set borders for a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to apply border formatting to conditional formatting rules.
@@ -36,4 +36,3 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
 ```
-

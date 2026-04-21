@@ -13,10 +13,9 @@
 - "sdtContentLocked"
 - "sdtLocked"
 
-
 ## 示例
 
-此示例将 "sdtContentLocked" 锁定设置到当前内联文本内容控件，这意味着内容无法编辑且容器无法删除。
+将 "sdtContentLocked" 锁定设置到当前内联文本内容控件，这意味着内容无法编辑且容器无法删除。
 
 ```javascript editor-docx
 // How to set lock for a content control of the text.
@@ -25,4 +24,3 @@
 
 inlineLvlSdt.SetLock("sdtContentLocked");
 ```
-

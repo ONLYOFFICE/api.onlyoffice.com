@@ -22,9 +22,13 @@ expression.CreatePresetGeometry(sPreset);
 
 ## 示例
 
-此示例演示在电子表格中创建预设几何图形。
+在电子表格中创建预设几何图形。
 
 ```javascript editor-xlsx
+// How do I create the preset geometry in a spreadsheet?
+
+// Create the preset geometry and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 
 // Create shape with preset geometry
@@ -39,4 +43,3 @@ worksheet.GetRange("A1").SetValue("Preset Shape Info:");
 worksheet.GetRange("A2").SetValue("Type: " + presetGeometry.GetPreset());
 worksheet.GetRange("A3").SetValue("Is custom: " + presetGeometry.IsCustom());
 ```
-

@@ -11,10 +11,9 @@
 - "xlAscending"
 - "xlDescending"
 
-
 ## 示例
 
-此示例指定 "A1:A5" 中指定值的排序顺序为升序。
+指定 "A1:A5" 中指定值的排序顺序为升序。
 
 ```javascript editor-xlsx
 // How to specify a sorting order (ascending or descending) for each range.
@@ -23,4 +22,3 @@
 
 worksheet.GetRange("A1:C5").SetSort("A1:A5", "xlAscending", "B1:B5", "xlDescending", "C1:C5", "xlAscending", "xlYes", "xlSortColumns");
 ```
-

@@ -20,7 +20,7 @@ Object
 
 ## 示例
 
-此示例向文档添加具有指定属性的图表目录。
+向文档添加具有指定属性的图表目录。
 
 ```javascript editor-docx
 // How to create a table of figures properties.
@@ -38,4 +38,3 @@ let tofPr = {
 };
 doc.AddTableOfFigures(tofPr);
 ```
-

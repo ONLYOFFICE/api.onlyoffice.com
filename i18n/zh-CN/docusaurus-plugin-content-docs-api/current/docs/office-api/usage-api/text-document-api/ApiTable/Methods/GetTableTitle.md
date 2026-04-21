@@ -2,14 +2,14 @@
 
 返回表格标题（题注）。
 
-Inherited from [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle.md).
+继承自 [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle.md)。
 
 ## 示例
 
-此示例展示如何获取表格标题。
+获取文档中的表格标题。
 
 ```javascript editor-docx
-// How to get the table title.
+// How to get the table title in a document.
 
 // Display the title of the table in the document.
 
@@ -25,4 +25,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table title: " + tablePr.GetTableTitle());
 doc.Push(table);
 ```
-

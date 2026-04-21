@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the possible values for the position of the chart tick labels in relation to the main vertical label or the chart data values.
+Set the possible values for the position of the chart tick labels in relation to the main vertical label or the chart data values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a tick position to the high of the vertical axis labels.
+// How to set a tick position to the high of the vertical axis labels in a spreadsheet.
 
-// Specifies tick mark position for the vertical axis.
+// Specify tick mark position for the vertical axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -49,4 +49,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

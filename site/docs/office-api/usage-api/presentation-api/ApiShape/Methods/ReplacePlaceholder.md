@@ -6,9 +6,13 @@ Inherited from [ApiDrawing.ReplacePlaceholder](../../ApiDrawing/Methods/ReplaceP
 
 ## Example
 
-This example replaces the placeholder by a drawing on the slide.
+Replace the placeholder by a drawing on the slide.
 
 ```javascript editor-pptx
+// How can I replace placeholder using a drawing object in a presentation?
+
+// Replace placeholder for a drawing object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -29,4 +33,3 @@ slide.AddObject(shapeCopy);
 const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
 ```
-

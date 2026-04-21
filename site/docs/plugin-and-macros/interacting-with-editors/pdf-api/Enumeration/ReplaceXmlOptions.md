@@ -11,4 +11,3 @@ Object
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | content | string[] | An array with XML shapes to be replaced. |
-

@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-此示例展示如何获取将应用于表格中符合条件格式类型的所有段落的段落属性集。
+获取将应用于表格中与条件格式类型匹配的所有段落的段落属性集。
 
 ```javascript editor-docx
-// How to get the paragraph properties.
+// How to get the paragraph properties in a document.
 
-// Get the table properties of the first row and obtain its paragraph properties.
+// Get the table properties of the first row and obtain its paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ paragraph.AddText("This is a paragraph with the text in it aligned by the center
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

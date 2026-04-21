@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查当前表单是否为固定大小。
+检查当前表单是否为固定大小。
 
 ```javascript editor-forms
 // How to know whether a text form is fixed or not.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is fixed: " + fixed);
 doc.Push(paragraph);
 ```
-

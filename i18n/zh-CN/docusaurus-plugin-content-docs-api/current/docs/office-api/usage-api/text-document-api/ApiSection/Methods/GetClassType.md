@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取文档中节的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiSection.
+// How to identify the class type of a section in a document?
 
-// Retrieve class type of ApiSection object and insert it to the document.
+// Obtain the class type identifier of a section object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,3 @@ section.SetPageSize(7200, 4320);
 let classType = section.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 ```
-

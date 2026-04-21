@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the tangent of an angle.
+Return the tangent of an angle in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return a tangent of an angle.
+// How to return a tangent of an angle in a spreadsheet.
 
-// Use a function to calculate angle's tangent.
+// Use a function to calculate angle's tangent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.TAN(0.5));
 ```
-

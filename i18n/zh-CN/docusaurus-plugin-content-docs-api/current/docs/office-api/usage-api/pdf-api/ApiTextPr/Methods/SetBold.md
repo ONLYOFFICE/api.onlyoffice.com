@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-此示例为文本字符设置粗体属性。
+在 PDF 文档中为文本字符设置粗体属性。
 
 ```javascript editor-pdf
-// How to make a text bold.
+// How to make a text bold in a PDF document.
 
-// Get the text properties of the run and set it to bold.
+// Get the text properties of the run and set it to bold in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +48,3 @@ run.AddText("This is a sample text inside the shape with the font weight set to 
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

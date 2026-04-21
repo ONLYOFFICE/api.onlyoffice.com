@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a caption for data field.
+Set a caption for data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a caption of a table element.
+// How to rename a caption of a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then set a custom data field's caption.
+// Create a pivot table, add data to it then set a custom data field's caption in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -69,4 +69,3 @@ dataField.SetCaption('My Sum of Price');
 pivotWorksheet.GetRange('A13').SetValue('New Data field caption');
 pivotWorksheet.GetRange('B13').SetValue(dataField.GetCaption());
 ```
-

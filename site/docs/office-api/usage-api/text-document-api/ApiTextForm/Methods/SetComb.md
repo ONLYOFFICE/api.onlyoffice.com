@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example specifies if the text field should be a comb of characters with the same cell width.
+Specify if the text field should be a comb of characters with the same cell width.
 
 ```javascript editor-docx
 // How to specify the comb property of the text form.
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first text form from this document is comb: " + comb);
 doc.Push(paragraph);
 ```
-

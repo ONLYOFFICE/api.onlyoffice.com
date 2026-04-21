@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何将正数向上舍入、负数向下舍入到最接近的奇数整数。
+在电子表格中将正数向上、负数向下舍入到最接近的奇整数。
 
 ```javascript editor-xlsx
-// How to round a number the nearest odd integer.
+// How to round a number the nearest odd integer in a spreadsheet.
 
-// Use a function round a negative/positive number the nearest odd integer.
+// Use a function round a negative/positive number the nearest odd integer in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ODD(7.675));
 ```
-

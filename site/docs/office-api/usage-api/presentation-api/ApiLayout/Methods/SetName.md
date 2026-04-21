@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a name to the current layout.
+Set a name to the current layout in a presentation.
 
 ```javascript editor-pptx
-// How to set name for a layout.
+// How to set name for a layout in a presentation.
 
-// Rename a slide layout.
+// Rename a slide layout using the layout API in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ paragraph.SetJc("left");
 paragraph.AddText("A new name was set to the current layout.");
 layout.AddObject(shape);
 ```
-

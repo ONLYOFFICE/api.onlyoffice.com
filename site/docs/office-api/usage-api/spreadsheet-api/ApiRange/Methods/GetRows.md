@@ -22,7 +22,7 @@ expression.GetRows(nRow);
 
 ## Example
 
-This example shows how to get a Range object that represents the rows in the specified range.
+Get a Range object that represents the rows in the specified range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a cell rows of a range.
@@ -36,4 +36,3 @@ for (let i=1; i <= 3; i++) {
 	rows.SetValue(i);
 }
 ```
-

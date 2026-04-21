@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查值是否为逻辑值（true 或 false），并返回 true 或 false。
+在电子表格中检查值是否为逻辑值（true 或 false），并返回 true 或 false。
 
 ```javascript editor-xlsx
 // How to check if the cell contains a logical value.
 
-// Use a function to check whether a range data is a logical value.
+// Use a function to check whether a range data is a logical value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B3").SetValue("66");
@@ -36,4 +36,3 @@ let func = Api.WorksheetFunction;
 let result = func.ISLOGICAL(worksheet.GetRange("B3"));
 worksheet.GetRange("C3").SetValue(result);
 ```
-

@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的指定底数对数。
+在电子表格中返回数字以指定底数的对数。
 
 ```javascript editor-xlsx
-// How to get the logarithm to the specified base.
+// How to get the logarithm to the specified base in a spreadsheet.
 
-// Use a function to return the logarithm.
+// Use a function to return the logarithm in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LOG(56, 5));
 ```
-

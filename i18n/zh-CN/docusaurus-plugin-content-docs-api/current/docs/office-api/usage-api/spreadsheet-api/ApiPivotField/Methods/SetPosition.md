@@ -23,12 +23,12 @@ expression.SetPosition(position);
 
 ## 示例
 
-此示例展示如何设置透视字段的位置。
+在电子表格中设置透视字段的位置。
 
 ```javascript editor-xlsx
-// How to change a pivot field position.
+// How to change a pivot field position in a spreadsheet.
 
-// Create a pivot table, add data to it then change a position a specified pivot.
+// Create a pivot table, add data to it then change a position a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -69,4 +69,3 @@ setTimeout(function () {
     pivotField.SetPosition(1);
 }, 5000);
 ```
-

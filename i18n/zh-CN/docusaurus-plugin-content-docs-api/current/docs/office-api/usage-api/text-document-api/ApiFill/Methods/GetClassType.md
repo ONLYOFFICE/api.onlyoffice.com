@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+检查文档中填充返回的类类型。
 
 ```javascript editor-docx
-// How get a class type of ApiFill.
+// How do I check what type a fill object is in a document?
 
-// Retrieve class type of a created radial gradient fill and display it.
+// Retrieve and output the class type string for a fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ paragraph.AddDrawing(drawing);
 let classType = fill.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 ```
-

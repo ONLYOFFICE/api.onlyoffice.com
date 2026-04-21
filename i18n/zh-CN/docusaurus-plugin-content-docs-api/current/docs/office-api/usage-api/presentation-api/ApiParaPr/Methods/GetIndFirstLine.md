@@ -20,10 +20,10 @@ expression.GetIndFirstLine();
 
 ## 示例
 
-此示例展示如何获取段落首行缩进。
+获取演示文稿中的段落首行缩进。
 
 ```javascript editor-pptx
-// How to return the first line identation of a paragraph property.
+// How to return the first line identation of a paragraph property in a presentation.
 
 // Return the first line indentation of a text property from the slide.
 
@@ -54,4 +54,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
 ```
-

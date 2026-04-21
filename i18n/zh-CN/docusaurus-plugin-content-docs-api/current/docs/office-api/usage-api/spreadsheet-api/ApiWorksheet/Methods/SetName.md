@@ -22,12 +22,12 @@ expression.SetName(sName);
 
 ## 示例
 
-此示例为活动工作表设置名称。
+在电子表格中为活动工作表设置名称。
 
 ```javascript editor-xlsx
-// How to set name of the sheet.
+// How to set name of the sheet in a spreadsheet.
 
-// Rename the sheet.
+// Set name for a worksheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetName("sheet 1");
@@ -36,4 +36,3 @@ worksheet.GetRange("A1").SetValue("Worksheet name: ");
 worksheet.GetRange("A1").AutoFit(false, true);
 worksheet.GetRange("B1").SetValue(name);
 ```
-

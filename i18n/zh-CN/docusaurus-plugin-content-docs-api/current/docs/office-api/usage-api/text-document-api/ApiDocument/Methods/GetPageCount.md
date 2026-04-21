@@ -21,7 +21,7 @@ number
 
 ## 示例
 
-此示例展示如何获取当前文档的页数。
+获取文档中当前文档的页数。
 
 ```javascript editor-docx
 // How to count the number of pages in the document.
@@ -33,4 +33,3 @@ let pageCount = doc.GetPageCount();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Number of pages: " + pageCount);
 ```
-

@@ -22,12 +22,12 @@ expression.Add(nodeName);
 
 ## Example
 
-This example shows how to create a new child node and insert it as a child of the current XML node.
+Create a new child node and insert it as a child of the current XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a child node to an XML node.
+// How to add a child node to an XML node in a spreadsheet.
 
-// Add a new child node.
+// Add a new child node using the custom XML node API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -37,4 +37,3 @@ let textNode = rootNode.Add("text");
 let classType = textNode.GetClassType();
 worksheet.GetRange("A1").SetValue("Class type: " + classType);
 ```
-

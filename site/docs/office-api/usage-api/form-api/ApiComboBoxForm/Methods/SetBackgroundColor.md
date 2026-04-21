@@ -6,10 +6,10 @@ Inherited from [ApiFormBase.SetBackgroundColor](../../ApiFormBase/Methods/SetBac
 
 ## Example
 
-This example sets the background color to the form.
+Set the background color to the form.
 
 ```javascript editor-forms
-// Applies an RGB background color to the text form element.
+// Apply an RGB background color to the text form element.
 
 // How to change background color of the text form.
 
@@ -19,4 +19,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 ```
-

@@ -22,16 +22,15 @@ number
 
 ## Example
 
-This example shows how to return the average of the absolute deviations of data points from their mean.
+Return the average of the absolute deviations of data points from their mean in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an average of the absolute deviations.
+// How to get an average of the absolute deviations in a spreadsheet.
 
-// Use function to get the average of the absolute deviations of data points from their mean.
+// Use function to get the average of the absolute deviations of data points from their mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.AVERAGE(123, 197, 46, 345, 67, 456);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

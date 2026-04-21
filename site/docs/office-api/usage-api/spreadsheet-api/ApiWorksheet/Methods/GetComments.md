@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array of ApiComment objects.
+Get an array of comment objects in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all comments.
+// How to get all comments in a spreadsheet.
 
 // Get all comments from the worksheet.
 
@@ -34,4 +34,3 @@ range.AddComment("This is just a number.");
 let comments = worksheet.GetComments();
 worksheet.GetRange("A4").SetValue("Comment: " + comments[0].GetText());
 ```
-

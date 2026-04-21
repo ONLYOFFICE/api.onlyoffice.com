@@ -20,12 +20,12 @@ expression.GetOrientation();
 
 ## 示例
 
-此示例展示如何获取数据字段的方向。
+获取电子表格中数据字段的方向。
 
 ```javascript editor-xlsx
-// How to get a table element orientation.
+// How to get a table element orientation in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's orientation.
+// Create a pivot table, add data to it then display a custom data field's orientation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -64,4 +64,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 orientation:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetOrientation());
 ```
-

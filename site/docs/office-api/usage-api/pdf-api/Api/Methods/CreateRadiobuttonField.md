@@ -25,6 +25,10 @@ expression.CreateRadiobuttonField(aRect);
 How to create and add a radiobutton field to document.
 
 ```javascript editor-pdf
+// How do I create the radiobutton field in a PDF document?
+
+// Create the radiobutton field and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -33,4 +37,3 @@ page.AddObject(radioField);
 radioField.AddOption(0, [10, 30, 25, 45], 'Choice 2');
 radioField.SetValue('Choice 2');
 ```
-

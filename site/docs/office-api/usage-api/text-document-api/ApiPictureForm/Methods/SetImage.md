@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets an image to the current picture form.
+Set an image to the current picture form.
 
 ```javascript editor-docx
 // How to set image of the picture form.
@@ -35,4 +35,3 @@ pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/only
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(pictureForm);
 ```
-

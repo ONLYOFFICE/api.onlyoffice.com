@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何放置图表图例。
+如何在 PDF 文档中放置图表图例。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's position.
+// Create a chart, set its properties and its legend's position in a PDF document.
+
+// Set legend pos for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +50,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

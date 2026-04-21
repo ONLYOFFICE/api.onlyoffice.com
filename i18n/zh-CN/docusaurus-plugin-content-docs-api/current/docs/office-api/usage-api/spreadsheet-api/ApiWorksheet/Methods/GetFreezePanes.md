@@ -20,10 +20,10 @@ expression.GetFreezePanes();
 
 ## 示例
 
-此示例冻结第一列并将冻结的范围地址粘贴到表格中。
+冻结第一列并将冻结的范围地址粘贴到电子表格中的表格。
 
 ```javascript editor-xlsx
-// How to get freezed panes.
+// How to get freezed panes in a spreadsheet.
 
 // Get all freezed panes, its location and show it on the worksheet.
 
@@ -34,4 +34,3 @@ let range = freezePanes.GetLocation();
 worksheet.GetRange("A1").SetValue("Location: ");
 worksheet.GetRange("B1").SetValue(range.GetAddress());
 ```
-

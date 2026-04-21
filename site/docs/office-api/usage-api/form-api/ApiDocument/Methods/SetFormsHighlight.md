@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the highlight to the forms in the document.
+Set the highlight to the forms in the document.
 
 ```javascript editor-forms
 // How to set color for forms background.
@@ -35,4 +35,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 doc.SetFormsHighlight(Api.HexColor('#FF6F3D'));
 ```
-

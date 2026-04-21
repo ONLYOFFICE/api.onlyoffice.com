@@ -11,5 +11,3 @@
 - "top"
 - "center"
 - "bottom"
-
-

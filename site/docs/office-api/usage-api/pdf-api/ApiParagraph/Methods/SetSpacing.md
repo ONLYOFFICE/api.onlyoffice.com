@@ -22,9 +22,13 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-This example sets the text spacing measured in twentieths of a point.
+Set the text spacing measured in twentieths of a point in a PDF document.
 
 ```javascript editor-pdf
+// How can I set spacing using a paragraph in a PDF document?
+
+// Set spacing for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,4 +42,3 @@ paragraph.AddText('This is a paragraph with the text spacing set to 5 points.');
 paragraph.SetSpacing(60);
 page.AddObject(shape);
 ```
-

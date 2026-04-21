@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何返回卡方分布的右尾概率。
+在电子表格中返回卡方分布的右尾概率。
 
 ```javascript editor-xlsx
-// How to return the right-tailed probability of the chi-squared distribution.
+// How to return the right-tailed probability of the chi-squared distribution in a spreadsheet.
 
-// Use function to return the right-tailed probability of the chi-squared distribution.
+// Use function to return the right-tailed probability of the chi-squared distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.CHISQ_DIST_RT(12, 10));
 ```
-

@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例展示如何使用指定的位置获取段落元素。
+使用 PDF 文档中指定的位置获取段落元素。
 
 ```javascript editor-pdf
-// How to return an element from the ApiPargaraph object.
+// How to return an element from the ApiPargaraph object in a PDF document.
 
-// Get an object from the paragraph.
+// Get an object from the paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -58,4 +58,3 @@ run = paragraph.GetElement(2);
 run.SetBold(true);
 page.AddObject(shape);
 ```
-

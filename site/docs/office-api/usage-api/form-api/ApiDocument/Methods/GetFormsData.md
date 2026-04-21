@@ -21,7 +21,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get the data for all forms added to the document.
+Get the data for all forms added to the document.
 
 ```javascript editor-forms
 // How to get form information as a string.
@@ -42,4 +42,3 @@ let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText(text);
 doc.Push(paragraph2);
 ```
-

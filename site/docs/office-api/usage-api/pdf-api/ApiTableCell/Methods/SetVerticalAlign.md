@@ -27,6 +27,8 @@ How to set the cell text vertical alignment.
 ```javascript editor-pdf
 // Create a table and set the text alignment of its cell from the row.
 
+// Use table cell to set vertical align.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,4 +44,3 @@ cell.SetVerticalAlign("bottom");
 
 page.AddObject(table);
 ```
-

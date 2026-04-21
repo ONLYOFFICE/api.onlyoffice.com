@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the run.
+Create a copy of the run in a document.
 
 ```javascript editor-docx
-// How to create a duplicate of the text.
+// How to create a duplicate of the text in a document.
 
-// Create a copy of the run and insert it to the paragraph. 
+// Create a copy of the run and insert it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,3 @@ paragraph.AddElement(run1);
 let run2 = run1.Copy();
 paragraph.AddElement(run2);
 ```
-

@@ -7,12 +7,12 @@ Inherited from [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/Set
 
 ## Example
 
-This example sets the properties from another drawing to the drawing.
+Set the properties from another drawing to the drawing in a document.
 
 ```javascript editor-docx
-// How to apply the properties of one shape to another.
+// How to apply the properties of one shape to another in a document.
 
-// Create the second drawing with the same style.
+// Create the second drawing with the same style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +46,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("It has the same properties (alignment type, distances and wrapping type) as the shape above.");
 doc.Push(paragraph);
 ```
-

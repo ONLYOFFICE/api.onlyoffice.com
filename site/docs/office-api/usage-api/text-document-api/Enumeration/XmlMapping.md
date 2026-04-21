@@ -13,4 +13,3 @@ Object
 | prefixMapping | string | The set of prefix mappings which shall be used to interpret the XPath expression specified in xpath. |
 | storeItemID | string | The custom XML data identifier. |
 | xpath | string | The XPath expression. |
-

@@ -13,10 +13,9 @@ Enumeration
 - "run"
 - "numbering"
 
-
 ## Example
 
-This example assigns the default document paragraph style to the 'oNormalStyle' variable.
+Assign the default document paragraph style to the 'oNormalStyle' variable.
 
 ```javascript editor-docx
 // How to get a default style of the paragraph from the document.
@@ -25,4 +24,3 @@ This example assigns the default document paragraph style to the 'oNormalStyle' 
 
 let normalStyle = doc.GetDefaultStyle("paragraph");
 ```
-

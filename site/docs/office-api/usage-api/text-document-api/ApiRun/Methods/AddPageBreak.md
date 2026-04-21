@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example adds a page break and starts the next element from a new page.
+Add a page break and start the next element from a new page.
 
 ```javascript editor-docx
 // How to start a sentence from the new page.
 
-// Break two lines of a text run with a page break. 
+// Break two lines of a text run with a page break.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,3 @@ run.AddText("This is the text which starts from the beginning of the second page
 run.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 paragraph.AddElement(run);
 ```
-

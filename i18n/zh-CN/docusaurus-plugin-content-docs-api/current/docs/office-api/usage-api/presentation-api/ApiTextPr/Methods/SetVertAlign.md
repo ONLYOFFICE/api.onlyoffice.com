@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将相对于文本块的默认外观应用于文本块内容的对齐方式。
+指定在演示文稿中相对于 run 文本默认外观应用于 run 内容的对齐方式。
 
 ```javascript editor-pptx
-// How to set a vertical alignment of the text.
+// How to set a vertical alignment of the text in a presentation.
 
-// Get the text properties of the run and make it superscript, subscript, etc.
+// Get the text properties of the run and make it superscript, subscript, etc in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,3 @@ run.AddText("This is a text inside the shape with vertical alignment set to 'sup
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

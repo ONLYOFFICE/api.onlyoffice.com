@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to push a run element to a paragraph inside a shape.
+Push a run element to a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I push in a spreadsheet?
+
+// Push using a paragraph object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 100, 160));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -46,4 +50,3 @@ paragraph.Push(run);
 
 worksheet.GetRange('A1').SetValue('Elements in paragraph: ' + paragraph.GetElementsCount());
 ```
-

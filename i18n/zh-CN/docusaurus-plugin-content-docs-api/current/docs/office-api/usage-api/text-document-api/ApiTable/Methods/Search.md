@@ -23,10 +23,10 @@ expression.Search(sText, isMatchCase);
 
 ## 示例
 
-此示例展示如何在表格中进行搜索。
+在文档中的表格内进行搜索。
 
 ```javascript editor-docx
-// How to search throughout the table.
+// How to search throughout the table in a document.
 
 // Get a table, search information using value, position, order, etc.
 
@@ -43,4 +43,3 @@ doc.Push(table);
 let searchResults = table.Search("Cell");
 searchResults[0].SetBold(true);
 ```
-

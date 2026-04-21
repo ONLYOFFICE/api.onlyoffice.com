@@ -20,10 +20,10 @@ JSON
 
 ## Example
 
-This example converts the table object into the JSON object.
+Convert the table object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the table properties.
+// How to get a JSON from the table properties in a document.
 
 // Convert the table property to json and add it to the document.
 
@@ -37,4 +37,3 @@ let type = tablePrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
-

@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
+Specify that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ```javascript editor-pdf
-// How to make text uncapitalized.
+// How to make text uncapitalized in a PDF document.
 
-// Create a new text run and make its letters lowercase.
+// Create a new text run and make its letters lowercase in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,4 +50,3 @@ run.AddText("This is a text run with the font set to small capitalized letters."
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

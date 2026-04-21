@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-从形状获取填充属性并显示详细信息。
+从形状获取填充属性并显示详细信息。创建带渐变填充的形状，获取并显示填充详细信息。
 
 ```javascript editor-xlsx
-// Creates a shape with gradient fill, retrieves it and shows fill details.
+// How to get the fill for a shape in a spreadsheet?
+
+// Get the fill and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
 let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
@@ -35,4 +38,3 @@ if (retrievedFill) {
     worksheet.GetRange("A1").SetValue("Fill type: " + retrievedFill.GetType());
 }
 ```
-

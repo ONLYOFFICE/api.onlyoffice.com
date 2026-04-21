@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例清除表格中的内容。
+清除文档中表格的内容。
 
 ```javascript editor-docx
-// How to clear a content of a table.
+// How to clear a content of a table in a document.
 
-// Get a table and remove everything from it.
+// Get a table and remove everything from it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -40,4 +40,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The content of the table was cleared.");
 doc.Push(paragraph);
 ```
-

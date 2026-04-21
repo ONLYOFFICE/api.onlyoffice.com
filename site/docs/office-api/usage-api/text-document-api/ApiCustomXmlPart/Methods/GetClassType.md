@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to update the value of an attribute in a custom XML node.
+Check the class type returned by a custom XML part in a document.
 
 ```javascript editor-docx
+// How do I check what type a custom XML part object is in a document?
+
+// Retrieve and output the class type string for a custom XML part in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");
@@ -31,4 +35,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

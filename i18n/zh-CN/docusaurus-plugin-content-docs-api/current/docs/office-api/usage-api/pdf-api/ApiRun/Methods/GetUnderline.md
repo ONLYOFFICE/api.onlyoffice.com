@@ -2,16 +2,16 @@
 
 从当前文本属性获取下划线属性。
 
-Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
+继承自 [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md)。
 
 ## 示例
 
-此示例展示如何查明文本是否带下划线。
+检查 PDF 文档中的文本是否有下划线。
 
 ```javascript editor-pdf
-// How to know whether a text is underlined or not.
+// How to know whether a text is underlined or not in a PDF document.
 
-// Get the text properties of the run and find whether it is underlined or not.
+// Get the text properties of the run and find whether it is underlined or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,4 +37,3 @@ const underline = textPr.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
 ```
-

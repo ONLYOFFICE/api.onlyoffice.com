@@ -20,10 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-如何获取 ApiTableRow 的类类型。
+检查 PDF 文档中表格行返回的类类型。
 
 ```javascript editor-pdf
-// Retrieve class type of ApiTableRow object and insert it to the page.
+// How do I check what type a table row object is in a PDF document?
+
+// Retrieve and output the class type string for a table row in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,4 +41,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

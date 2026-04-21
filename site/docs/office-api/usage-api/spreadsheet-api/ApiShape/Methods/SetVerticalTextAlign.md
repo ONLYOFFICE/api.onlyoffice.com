@@ -5,7 +5,7 @@ Sets the vertical alignment to the shape content where a paragraph or text runs 
 ## Syntax
 
 ```javascript
-expression.SetVerticalTextAlign(sVerticalAlign);
+expression.SetVerticalTextAlign(verticalAlign);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetVerticalTextAlign(sVerticalAlign);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sVerticalAlign | Required | "top" \| "center" \| "bottom" |  | The vertical alignment type for the shape inner contents. |
+| verticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The vertical alignment type for the shape inner contents. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
+Set the vertical alignment to the shape content where a paragraph or text runs can be inserted in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to specify a vertical alignment of a shape content.
+// How to specify a vertical alignment of a shape content in a spreadsheet.
 
-// Set text vertical alignment of a shape to bottom.
+// Set text vertical alignment of a shape to bottom in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,4 +42,3 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 paragraph.AddText("aligning it vertically by the bottom.");
 content.Push(paragraph);
 ```
-

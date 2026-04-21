@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example shows how to find out whether the text italic or not.
+Find out whether the text italic or not in a document.
 
 ```javascript editor-docx
 // How to know if the text of the form is italic.
@@ -48,4 +48,3 @@ let italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 doc.Push(paragraph);
 ```
-

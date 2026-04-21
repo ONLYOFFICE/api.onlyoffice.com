@@ -16,16 +16,17 @@ expression.GetDashType();
 
 ## 返回值
 
-[LineDashType](../../Enumeration/LineDashType.md) \| null
+[DashType](../../Enumeration/DashType.md) \| null
 
 ## 示例
 
-获取描边的虚线类型。
+获取笔触的虚线类型。在文档中创建带有实线边框的形状并显示其虚线类型。返回字符串值："dash"、"dashDot"、"dot"、"lgDash"、"lgDashDot"、"lgDashDotDot"、"solid"、"sysDash"、"sysDashDot"、"sysDashDotDot"、"sysDot"。
 
 ```javascript editor-docx
-// Creates a shape with a solid border and displays its dash type.
-// Returns string value: "dash", "dashDot", "dot", "lgDash", "lgDashDot",
-// "lgDashDotDot", "solid", "sysDash", "sysDashDot", "sysDashDotDot", "sysDot"
+// How can I get the dash type using a stroke in a document?
+
+// Get the dash type for a stroke in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -37,4 +38,3 @@ let retrievedStroke = shape.GetLine();
 let dashType = retrievedStroke.GetDashType();
 paragraph.AddText("Dash type: " + (dashType ? dashType : "not set"));
 ```
-

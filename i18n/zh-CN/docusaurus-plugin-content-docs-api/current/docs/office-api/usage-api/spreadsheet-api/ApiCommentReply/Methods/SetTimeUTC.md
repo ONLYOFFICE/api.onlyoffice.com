@@ -22,10 +22,10 @@ expression.SetTimeUTC(nTimeStamp);
 
 ## 示例
 
-此示例设置 UTC 格式的批注回复创建时间戳。
+设置批注回复创建的 UTC 格式时间戳。
 
 ```javascript editor-xlsx
-// How to change a timestamp in UTC when a reply was created.
+// How to change a timestamp in UTC when a reply was created in a spreadsheet.
 
 // Add a reply then update its creation time in UTC format and show it in the worksheet.
 
@@ -39,4 +39,3 @@ reply.SetTimeUTC(Date.now());
 worksheet.GetRange("A3").SetValue("Comment's reply timestamp UTC: ");
 worksheet.GetRange("B3").SetValue(reply.GetTimeUTC());
 ```
-

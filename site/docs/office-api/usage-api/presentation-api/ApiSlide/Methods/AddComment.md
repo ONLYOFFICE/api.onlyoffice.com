@@ -26,9 +26,13 @@ boolean
 
 ## Example
 
-This example demonstrates how to add a comment to a specific slide.
+Add a comment to a specific slide in a presentation.
 
 ```javascript editor-pptx
+// How to add the comment for a slide?
+
+// Add the comment and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -60,4 +64,3 @@ slide.RemoveAllObjects();
 shape.SetPosition(posX, posY);
 slide.AddObject(shape);
 ```
-

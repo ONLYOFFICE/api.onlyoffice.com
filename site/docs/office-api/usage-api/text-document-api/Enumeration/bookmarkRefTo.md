@@ -21,10 +21,9 @@ Enumeration
 - "fullCtxParaNum"
 - "aboveBelow"
 
-
 ## Example
 
-This example adds a cross-reference to the page containing a bookmark.
+Add a cross-reference to the page containing a bookmark.
 
 ```javascript editor-docx
 // How to add reference to the bookmarked page.
@@ -33,4 +32,3 @@ This example adds a cross-reference to the page containing a bookmark.
 
 paragraph.AddBookmarkCrossRef("pageNum", bookmark);
 ```
-

@@ -2,16 +2,16 @@
 
 返回布局分类汇总位置。
 
-Inherited from [ApiPivotField.GetLayoutSubtotalLocation](../../ApiPivotField/Methods/GetLayoutSubtotalLocation.md).
+继承自 [ApiPivotField.GetLayoutSubtotalLocation](../../ApiPivotField/Methods/GetLayoutSubtotalLocation.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局分类汇总位置。
+获取电子表格中透视字段的布局小计位置。
 
 ```javascript editor-xlsx
-// How to get a layout subtotal location of a pivot field.
+// How to get a layout subtotal location of a pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then get a layout subtotal location of a specified pivot field.
+// Create a pivot table, add data to it then get a layout subtotal location of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -49,4 +49,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A14').SetValue('Region layout subtotal location');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutSubtotalLocation());
 ```
-

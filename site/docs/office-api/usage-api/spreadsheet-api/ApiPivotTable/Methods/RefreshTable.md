@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to refresh a table.
+Refresh a table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to refresh table values.
+// How to refresh table values in a spreadsheet.
 
-// Create a pivot table, add data to it then refresh it.
+// Create a pivot table, add data to it then refresh it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ pivotTable.AddDataField('Price');
 
 pivotTable.RefreshTable();
 ```
-

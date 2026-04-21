@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to retrieve the data binding of an inline content control.
+Retrieve the data binding of an inline content control in a document.
 
 ```javascript editor-docx
+// How do I get the data binding in a document?
+
+// Get the data binding using an inline content control object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -45,4 +49,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText(dataBinding.storeItemID);
 doc.Push(paragraph);
 ```
-

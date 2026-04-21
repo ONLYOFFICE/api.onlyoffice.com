@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何根据样本估算方差（忽略样本中的逻辑值和文本）。
+在电子表格中基于样本估计方差（忽略样本中的逻辑值和文本）。
 
 ```javascript editor-xlsx
-// How to estimate variance based on a sample.
+// How to estimate variance based on a sample in a spreadsheet.
 
-// Use a function to estimate variance ignoring logical and text values.
+// Use a function to estimate variance ignoring logical and text values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.VAR(1, 4, 2, 6, 0, 1, 3, 8, 0, 0, 6, 10, 0, 0, 7, 12)
 worksheet.GetRange("B2").SetValue(result);
 ```
-

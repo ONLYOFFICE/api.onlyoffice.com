@@ -22,12 +22,12 @@ expression.CreateComplexForm(formPr);
 
 ## 示例
 
-此示例使用通用的复杂表单属性创建复杂表单。
+使用通用复合表单属性创建复合表单。
 
 ```javascript editor-forms
 // How to create a complex form and add it to the paragraph.
 
-// Add a complex form with the state options to the ApiDocument object.
+// Add a complex form with the state options to the document object.
 
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({
@@ -40,4 +40,3 @@ complexForm.Add("@onlyoffice.com");
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(complexForm);
 ```
-

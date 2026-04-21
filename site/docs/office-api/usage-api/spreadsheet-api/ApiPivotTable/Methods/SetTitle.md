@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set title of a pivot table.
+Set title of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set table title.
+// How to set table title in a spreadsheet.
 
-// Create a pivot table, add data to it then set its table title.
+// Create a pivot table, add data to it then set its table title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,4 +68,3 @@ pivotWorksheet.GetRange('A11').SetValue('New Pivot Table title');
 pivotTable.SetTitle('My Pivot Table');
 pivotWorksheet.GetRange('B11').SetValue(pivotTable.GetTitle());
 ```
-

@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-此示例将 ApiTableStylePr 对象转换为 JSON 对象。
+将文档中的表格样式属性对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the table style properties.
+// How to get a JSON from the table style properties in a document.
 
 // Convert the table style properties to json and add it to the document.
 
@@ -41,4 +41,3 @@ let type = tableStylePrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
-

@@ -17,11 +17,9 @@
 - 'forms'
 - 'readOnly'
 
-
 ## 示例
 
 ```javascript
 let documentEditingRestrictions = "readOnly";
 window.Asc.plugin.executeMethod("SetEditingRestrictions", [documentEditingRestrictions]);
 ```
-

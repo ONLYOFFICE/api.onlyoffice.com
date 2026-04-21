@@ -21,12 +21,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取将应用于编号级别本身文本的文本属性，而不是后续段落中的文本。
+获取将应用于编号级别本身文本的文本属性，而非文档中后续段落的文本。
 
 ```javascript editor-docx
-// How to retrieve the text properties of the numbering.
+// How to retrieve the text properties of the numbering in a document.
 
-// Update text properties of the numbering.
+// Update text properties of the numbering in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -43,4 +43,3 @@ paragraph.SetNumbering(numLvl);
 paragraph.AddText("This is the second element of a numbered list which starts with '2'");
 doc.Push(paragraph);
 ```
-

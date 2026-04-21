@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values).
+Return the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the net present value of an investment.
+// How to get the net present value of an investment in a spreadsheet.
 
-// Use a function to get the net present value of an investment based on different parameters.
+// Use a function to get the net present value of an investment based on different parameters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -42,4 +42,3 @@ for (let i = 0; i < values.length; i++) {
 let range = worksheet.GetRange("B2:B5");
 worksheet.GetRange("B6").SetValue(func.NPV(0.05, range));
 ```
-

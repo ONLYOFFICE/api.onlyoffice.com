@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the shape objects from the slide.
+Get an array with all the shape objects from the slide in a presentation.
 
 ```javascript editor-pptx
 // How to get all shapes from the slide.
@@ -41,4 +41,3 @@ slide.AddObject(shape);
 const allShapes = slide.GetAllShapes();
 allShapes[0].SetSize(150 * 36000, 65 * 36000);
 ```
-

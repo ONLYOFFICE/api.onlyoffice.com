@@ -2,14 +2,14 @@
 
 返回段落右侧缩进。
 
-Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
+继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+获取 PDF 文档中的段落右侧缩进。
 
 ```javascript editor-pdf
-// How to return a right side identation of a paragraph property.
+// How to return a right side identation of a paragraph property in a PDF document.
 
 // Return a right side indentation of a text property from the page.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
 ```
-

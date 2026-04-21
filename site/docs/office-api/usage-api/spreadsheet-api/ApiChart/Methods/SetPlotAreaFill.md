@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart plot area.
+Set the fill to the chart plot area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color chart plot area.
+// How to color chart plot area in a spreadsheet.
 
-// Fill plot area with a solid fill.
+// Fill plot area with a solid fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetPlotAreaFill(fill);
 ```
-

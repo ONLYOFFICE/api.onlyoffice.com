@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a paragraph copy.
+Create a paragraph copy in a document.
 
 ```javascript editor-docx
-// How to add a duplicate paragraph.
+// How to add a duplicate paragraph in a document.
 
-// Copy a paragraph.
+// Copy a paragraph using the paragraph API in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -33,4 +33,3 @@ paragraph1.AddText("This is just a sample text that was copied.");
 let paragraph2 = paragraph1.Copy();
 doc.Push(paragraph2);
 ```
-

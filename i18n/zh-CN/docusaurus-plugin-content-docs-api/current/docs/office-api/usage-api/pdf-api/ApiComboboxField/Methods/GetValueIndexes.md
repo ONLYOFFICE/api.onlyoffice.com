@@ -2,13 +2,17 @@
 
 获取选定值的索引。
 
-Inherited from [ApiBaseListField.GetValueIndexes](../../ApiBaseListField/Methods/GetValueIndexes.md).
+继承自 [ApiBaseListField.GetValueIndexes](../../ApiBaseListField/Methods/GetValueIndexes.md)。
 
 ## 示例
 
-此示例从带有选项列表的字段获取选中值索引。
+从 PDF 文档中带有选项列表的字段获取选中值的索引。
 
 ```javascript editor-pdf
+// How do I get the value indexes in a PDF document?
+
+// Get the value indexes using a list field object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -20,4 +24,3 @@ comboboxField.AddOption('Option 3');
 comboboxField.SetValueIndexes([0]);
 console.log('Selected indexes is: ' + comboboxField.GetValueIndexes());
 ```
-

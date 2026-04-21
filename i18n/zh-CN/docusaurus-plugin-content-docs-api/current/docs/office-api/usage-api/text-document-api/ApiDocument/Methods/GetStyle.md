@@ -22,12 +22,12 @@ expression.GetStyle(sStyleName);
 
 ## 示例
 
-此示例展示如何按名称获取样式。
+通过名称获取文档中的样式。
 
 ```javascript editor-docx
-// How to get the style of the heading.
+// How to get the style of the heading in a document.
 
-// Display the style name of the "Heading 6".
+// Display the style name of the "Heading 6" in a document.
 
 let doc = Api.GetDocument();
 let noSpacingStyle = doc.GetStyle("Heading 6");
@@ -35,4 +35,3 @@ let paragraph = doc.GetElement(0);
 paragraph.SetStyle(noSpacingStyle);
 paragraph.AddText("This is a text in a paragraph styled with the 'Heading 6' style.");
 ```
-

@@ -1,6 +1,6 @@
 # ApiListboxField
 
-ApiListboxField is a subclass of [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md).
+ApiListboxField 是 [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md) 的子类。
 
 ## 方法
 

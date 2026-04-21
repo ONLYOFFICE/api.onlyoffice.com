@@ -2,11 +2,11 @@
 
 返回当前表单的锁定状态。
 
-Inherited from [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md).
+继承自 [ApiFormBase.GetLock](../../ApiFormBase/Methods/GetLock.md)。
 
 ## 示例
 
-此示例检查当前表单是否已锁定。
+检查当前表单是否被锁定。
 
 ```javascript editor-forms
 // How to know whether a form is locked or not.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
 ```
-

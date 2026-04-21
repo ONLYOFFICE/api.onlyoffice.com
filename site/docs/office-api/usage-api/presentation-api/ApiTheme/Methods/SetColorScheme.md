@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example sets the color scheme to the current presentation theme.
+Set the color scheme to the current presentation theme.
 
 ```javascript editor-pptx
-// How to get a theme and set a new color scheme.
+// How to get a theme and set a new color scheme in a presentation.
 
 // Create a new color scheme and apply it to the slide theme.
 
@@ -56,4 +56,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

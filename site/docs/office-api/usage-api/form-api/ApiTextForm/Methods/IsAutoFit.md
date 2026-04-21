@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the text field content is autofit.
+Check if the text field content is autofit in a document.
 
 ```javascript editor-forms
 // How to know whether the first text form from this document is autofit.
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first text form from this document is autofit: " + autoFit);
 doc.Push(paragraph);
 ```
-

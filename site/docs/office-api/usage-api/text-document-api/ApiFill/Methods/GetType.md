@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill type and displays it.
+Get the fill type and display it. Creates shapes with different fill types and show their types in a document.
 
 ```javascript editor-docx
-// Creates shapes with different fill types and shows their types.
+// How can I get the type using a fill in a document?
+
+// Get the type for a fill in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -53,4 +56,3 @@ paragraph.AddDrawing(shape3);
 let fill3 = shape3.GetFill();
 paragraph.AddText("No fill type: " + fill3.GetType());
 ```
-

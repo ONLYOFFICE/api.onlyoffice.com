@@ -20,10 +20,10 @@ boolean \| null
 
 ## 示例
 
-此示例演示如何获取指定字体的上标属性。
+获取电子表格中指定字体的上标属性。
 
 ```javascript editor-xlsx
-// How to determine a font superscript property.
+// How to determine a font superscript property in a spreadsheet.
 
 // Get a boolean value that represents whether a font has a superscript property or not and show the value in the worksheet.
 
@@ -36,4 +36,3 @@ font.SetSuperscript(true);
 let isSuperscript = font.GetSuperscript();
 worksheet.GetRange("B3").SetValue("Superscript property: " + isSuperscript);
 ```
-

@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the specified chart series.
+Set the outline to the specified chart series in a presentation.
 
 ```javascript editor-pptx
-// How to outline a chart seria.
+// How to outline a chart seria in a presentation.
 
-// Create a chart, set its properties and its series outline.
+// Create a chart, set its properties and its series outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,3 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 slide.AddObject(chart);
 ```
-

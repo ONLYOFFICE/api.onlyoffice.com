@@ -6,7 +6,7 @@ Inherited from [ApiTableCellPr.SetWidth](../../ApiTableCellPr/Methods/SetWidth.m
 
 ## Example
 
-This example sets the preferred width to the current table cell.
+Set the preferred width to the current table cell.
 
 ```javascript editor-docx
 // Resize the width of the cell.
@@ -24,4 +24,3 @@ tableCellPr.SetWidth("twips", 2880);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the text field is multiline.
+Check if the text field is multiline in a document.
 
 ```javascript editor-docx
 // How to know whether the first text form from this document is multiline.
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first text form from this document is multiline: " + multiline);
 doc.Push(paragraph);
 ```
-

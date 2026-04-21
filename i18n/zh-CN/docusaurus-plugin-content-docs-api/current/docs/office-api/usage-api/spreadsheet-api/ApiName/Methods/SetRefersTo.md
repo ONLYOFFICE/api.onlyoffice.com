@@ -22,7 +22,7 @@ expression.SetRefersTo(sRef);
 
 ## 示例
 
-此示例设置名称定义引用的公式。
+设置名称定义要引用的公式。
 
 ```javascript editor-xlsx
 // How to add a name and refer it to the formula.
@@ -38,4 +38,3 @@ let defName = Api.GetDefName("summa");
 defName.SetRefersTo("=SUM(A1:B1)");
 worksheet.GetRange("A3").SetValue("The name 'summa' refers to the formula from the cell C1.");
 ```
-

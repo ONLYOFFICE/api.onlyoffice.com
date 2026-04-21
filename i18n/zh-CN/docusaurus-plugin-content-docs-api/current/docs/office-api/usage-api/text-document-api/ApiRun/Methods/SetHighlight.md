@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定作为背景应用于文本块内容的高亮颜色。
+指定在文档中作为背景应用于 run 内容的突出显示颜色。
 
 ```javascript editor-docx
-// How to set highlight to the text run.
+// How to set highlight to the text run in a document.
 
-// Create a new text run and highlight it.
+// Create a new text run and highlight it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.SetHighlight("lightGray");
 run.AddText("This is a text run with the text highlighted with light gray color.");
 paragraph.AddElement(run);
 ```
-

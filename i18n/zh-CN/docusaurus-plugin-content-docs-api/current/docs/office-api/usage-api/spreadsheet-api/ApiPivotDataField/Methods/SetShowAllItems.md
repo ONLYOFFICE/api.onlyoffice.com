@@ -2,16 +2,16 @@
 
 设置指定是否显示无数据项的设置。
 
-Inherited from [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md).
+继承自 [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的显示所有项。
+在电子表格中设置透视字段的显示所有项。
 
 ```javascript editor-xlsx
-// How to change a pivot field show all items value.
+// How to change a pivot field show all items value in a spreadsheet.
 
-// Create a pivot table, add data to it then set show all items of a specified pivot.
+// Create a pivot table, add data to it then set show all items of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,4 +51,3 @@ pivotField.SetShowAllItems(true);
 pivotWorksheet.GetRange('A12').SetValue('Style get show all items');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetShowAllItems());
 ```
-

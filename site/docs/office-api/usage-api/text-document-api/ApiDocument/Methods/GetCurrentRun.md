@@ -6,9 +6,13 @@ Inherited from [ApiDocumentContent.GetCurrentRun](../../ApiDocumentContent/Metho
 
 ## Example
 
-This example shows how to get the current run from the document content.
+Get the current run from the document content in a document.
 
 ```javascript editor-docx
+// How to get current run for a document content?
+
+// Get current run and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -28,4 +32,3 @@ currentParagraph.AddElement(newRun);
 const currentRun = docContent.GetCurrentRun();
 currentRun.AddText("<CURRENT_RUN />");
 ```
-

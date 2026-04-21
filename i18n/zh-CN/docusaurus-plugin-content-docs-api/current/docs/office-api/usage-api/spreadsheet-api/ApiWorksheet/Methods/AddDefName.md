@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-此示例向工作表添加新名称。
+向工作表添加新名称。
 
 ```javascript editor-xlsx
 // How to change a name of the worksheet range.
@@ -37,4 +37,3 @@ worksheet.GetRange("B1").SetValue("2");
 worksheet.AddDefName("numbers", "Sheet1!$A$1:$B$1");
 worksheet.GetRange("A3").SetValue("We defined a name 'numbers' for a range of cells A1:B1.");
 ```
-

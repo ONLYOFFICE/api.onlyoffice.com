@@ -15,10 +15,9 @@ Enumeration
 - [ApiDateForm](../ApiDateForm/ApiDateForm.md)
 - [ApiComplexForm](../ApiComplexForm/ApiComplexForm.md)
 
-
 ## Example
 
-This example copies a text form.
+Copy a text form.
 
 ```javascript editor-docx
 // Get a form and create its copy. 
@@ -27,4 +26,3 @@ This example copies a text form.
 
 let copyTextForm = textForm.Copy();
 ```
-

@@ -2,11 +2,11 @@
 
 返回包含图形对象的父表格单元格。
 
-Inherited from [ApiDrawing.GetParentTableCell](../../ApiDrawing/Methods/GetParentTableCell.md).
+继承自 [ApiDrawing.GetParentTableCell](../../ApiDrawing/Methods/GetParentTableCell.md)。
 
 ## 示例
 
-此示例展示如何获取包含图形对象的父表格单元格。
+获取包含图形对象的父表格单元格。
 
 ```javascript editor-docx
 // Get an element's parent table cell.
@@ -30,4 +30,3 @@ let cellContent = parentCell.GetContent().GetElement(0);
 cellContent.AddLineBreak();
 cellContent.AddText("This is a parent cell");
 ```
-

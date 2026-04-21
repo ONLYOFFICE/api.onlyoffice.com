@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例设置当前文本块的文本属性。
+在文档中为当前 run 设置文本属性。
 
 ```javascript editor-docx
-// How to create the new text properties and apply it to the text run.
+// How to create the new text properties and apply it to the text run in a document.
 
-// Create a new text run and set its properties like font size, color, etc.
+// Create a new text run and set its properties like font size, color, etc in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 run.SetTextPr(textPr);
 ```
-

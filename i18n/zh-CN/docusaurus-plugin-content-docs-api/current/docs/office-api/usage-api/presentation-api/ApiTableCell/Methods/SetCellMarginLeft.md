@@ -23,12 +23,12 @@ expression.SetCellMarginLeft(nValue);
 
 ## 示例
 
-此示例指定表格中特定单元格的当前单元格内容左侧与左边框之间应保留的空间量。
+指定表格中特定单元格当前内容左侧边缘与左边框之间应保留的间距。
 
 ```javascript editor-pptx
 // How to set the cell left margin for the current table cell.
 
-// Specify the left margin value for the ApiTableCell object.
+// Specify the left margin value for the table cell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,3 @@ cell.SetCellMarginLeft(720);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

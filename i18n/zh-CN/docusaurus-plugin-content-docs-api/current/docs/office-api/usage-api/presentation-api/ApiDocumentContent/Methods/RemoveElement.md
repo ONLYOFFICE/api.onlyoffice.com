@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例演示如何删除元素。
+移除演示文稿中的元素。
 
 ```javascript editor-pptx
 // How to remove an elements from the slide shape.
@@ -47,4 +47,3 @@ paragraph.AddText("This is the second paragraph. The first paragraph was removed
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

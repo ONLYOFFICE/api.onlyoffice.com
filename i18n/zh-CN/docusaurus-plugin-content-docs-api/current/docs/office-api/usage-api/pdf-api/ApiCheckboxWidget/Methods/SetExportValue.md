@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置复选框控件的导出（选中）值。
+在 PDF 文档中设置复选框控件的导出（选中）值。
 
 ```javascript editor-pdf
+// How to set export value for a checkbox widget in a PDF document?
+
+// Set export value and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);
@@ -34,4 +38,3 @@ let widgets = radiobuttonField.GetAllWidgets();
 widgets[0].SetExportValue('Export value');
 console.log('Export value is: ' + widgets[0].GetExportValue());
 ```
-

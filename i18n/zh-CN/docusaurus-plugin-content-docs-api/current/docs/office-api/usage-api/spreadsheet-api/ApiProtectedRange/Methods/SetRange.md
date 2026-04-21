@@ -22,16 +22,15 @@ boolean
 
 ## 示例
 
-此示例更改受保护区域的区域。
+在电子表格中更改受保护范围的范围。
 
 ```javascript editor-xlsx
-// How to set a protected range.
+// How to set a protected range in a spreadsheet.
 
-// Update a range of a protected range.
+// Update a range of a protected range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");
 let protectedRange = worksheet.GetProtectedRange("protectedRange");
 protectedRange.SetRange("Sheet1!$A$2:$B$2");
 ```
-

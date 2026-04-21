@@ -20,12 +20,12 @@ expression.GetFont();
 
 ## 示例
 
-此示例演示如何获取表示指定字符字体的 ApiFont 对象。
+获取表示电子表格中指定字符字体的字体对象。
 
 ```javascript editor-xlsx
-// How to get font style of the array of characters.
+// How to get font style of the array of characters in a spreadsheet.
 
-// Use font of the specified characters to set their style.
+// Use font of the specified characters to set their style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -34,4 +34,3 @@ let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
 font.SetBold(true);
 ```
-

@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回与文本第一个字符对应的编号（码位）。
+在电子表格中返回与文本第一个字符对应的数字（码位）。
 
 ```javascript editor-xlsx
-// How to get a Unicode of a character.
+// How to get an Unicode of a character in a spreadsheet.
 
-// Use a function to return the character's Unicode.
+// Use a function to return the character's Unicode in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.UNICODE("example"));
 ```
-

@@ -27,15 +27,14 @@ number
 
 ## 示例
 
-此示例演示如何返回假定面值为 100 美元的证券的修正麦考利久期。
+在电子表格中返回假定面值为 $100 的证券的修正麦考利久期。
 
 ```javascript editor-xlsx
-// How to get a modified Macauley duration of a security.
+// How to get a modified Macauley duration of a security in a spreadsheet.
 
-// Use a function to get a result from modified Macauley duration.
+// Use a function to get a result from modified Macauley duration in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.MDURATION("1/10/2018", "6/15/2019", 0.08, 0.09, 4, 1));
 ```
-

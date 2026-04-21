@@ -22,12 +22,12 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-此示例获取 ApiChart 类的第一个系列并将其类型插入到表格中。
+获取图表类的第一个系列并将其类型插入电子表格中的表格。
 
 ```javascript editor-xlsx
-// How to get series using indices.
+// How to get series using indices in a spreadsheet.
 
-// Find series by its location index.
+// Find series by its location index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -51,4 +51,3 @@ let series = chart.GetSeries(0);
 let seriesType = series.GetChartType();
 worksheet.GetRange("F1").SetValue("1 Series Type = " + seriesType);
 ```
-

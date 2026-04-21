@@ -11,5 +11,3 @@ Enumeration
 - "lrtb"
 - "tbrl"
 - "btlr"
-
-

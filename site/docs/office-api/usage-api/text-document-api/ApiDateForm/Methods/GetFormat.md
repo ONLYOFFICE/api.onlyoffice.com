@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the date format from a date form.
+Get the date format from a date form in a document.
 
 ```javascript editor-docx
 // How to get a date form format.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has format: " + format);
 doc.Push(paragraph);
 ```
-

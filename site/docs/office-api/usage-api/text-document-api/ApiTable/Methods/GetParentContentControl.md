@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a content control that contains the table.
+Get a content control that contains the table in a document.
 
 ```javascript editor-docx
-// How to get the parent element of the table and set its alias.
+// How to get the parent element of the table and set its alias in a document.
 
-// Retrieve the parent content control of the table.
+// Retrieve the parent content control of the table in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -39,4 +39,3 @@ doc.AddElement(0, blockLvlSdt);
 let parentContentControl = table.GetParentContentControl();
 parentContentControl.SetAlias("№1");
 ```
-

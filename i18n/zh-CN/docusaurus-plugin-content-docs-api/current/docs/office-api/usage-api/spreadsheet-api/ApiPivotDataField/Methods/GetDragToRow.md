@@ -2,16 +2,16 @@
 
 返回指定是否可以将指定字段拖动到行位置的设置。
 
-Inherited from [ApiPivotField.GetDragToRow](../../ApiPivotField/Methods/GetDragToRow.md).
+继承自 [ApiPivotField.GetDragToRow](../../ApiPivotField/Methods/GetDragToRow.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的拖动到行。
+获取电子表格中透视字段的拖动到行属性。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to row.
+// How to get a pivot field drag to row in a spreadsheet.
 
-// Create a pivot table, add data to it then get a drag to row of a specified pivot field.
+// Create a pivot table, add data to it then get a drag to row of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,4 +50,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A13').SetValue('Drag to row');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToRow());
 ```
-

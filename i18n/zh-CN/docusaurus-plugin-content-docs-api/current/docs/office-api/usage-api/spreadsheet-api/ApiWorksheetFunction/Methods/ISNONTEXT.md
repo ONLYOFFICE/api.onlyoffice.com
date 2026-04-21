@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查值是否不是文本（空单元格不是文本），并返回 true 或 false。
+在电子表格中检查值是否不是文本（空白单元格不是文本），并返回 true 或 false。
 
 ```javascript editor-xlsx
 // How to check if the cell contains a non-text value.
 
-// Use a function to check whether a range data is a text or not.
+// Use a function to check whether a range data is a text or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -35,4 +35,3 @@ worksheet.GetRange("A1").SetValue(func.ISNONTEXT("#N/A"));
 worksheet.GetRange("A2").SetValue(func.ISNONTEXT(255));
 worksheet.GetRange("A3").SetValue(func.ISNONTEXT("Online Office"));
 ```
-

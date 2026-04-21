@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an image in the base64 format from the picture form.
+Get an image in the base64 format from the picture form in a document.
 
 ```javascript editor-docx
 // How to get an image from the picture form.
@@ -36,4 +36,3 @@ let base64img = pictureForm.GetImage();
 let drawing = Api.CreateImage(base64img, 60 * 36000, 35 * 36000);
 paragraph.AddDrawing(drawing);
 ```
-

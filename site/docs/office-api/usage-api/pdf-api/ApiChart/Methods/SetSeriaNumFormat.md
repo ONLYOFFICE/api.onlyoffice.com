@@ -28,6 +28,8 @@ How to set the "0.00" numeric format to the chart seria.
 ```javascript editor-pdf
 // Create a chart, set its properties and its series numeric format.
 
+// Use chart to set seria num format.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,4 +47,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

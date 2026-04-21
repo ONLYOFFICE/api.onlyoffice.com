@@ -22,12 +22,12 @@ expression.SetCaption(caption);
 
 ## 示例
 
-此示例展示如何为数据字段设置标题。
+在电子表格中设置数据字段的标题。
 
 ```javascript editor-xlsx
-// How to rename a caption of a table element.
+// How to rename a caption of a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then set a custom data field's caption.
+// Create a pivot table, add data to it then set a custom data field's caption in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -69,4 +69,3 @@ dataField.SetCaption('My Sum of Price');
 pivotWorksheet.GetRange('A13').SetValue('New Data field caption');
 pivotWorksheet.GetRange('B13').SetValue(dataField.GetCaption());
 ```
-

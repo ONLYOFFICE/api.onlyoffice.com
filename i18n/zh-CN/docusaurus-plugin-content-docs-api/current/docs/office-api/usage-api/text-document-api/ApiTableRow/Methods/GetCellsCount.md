@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例展示如何获取行中的单元格数量。
+获取文档中行内的单元格数量。
 
 ```javascript editor-docx
 // How to count the cells of the row.
@@ -39,4 +39,3 @@ doc.Push(table);
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Number of cells in the first row = " + cellsCount);
 ```
-

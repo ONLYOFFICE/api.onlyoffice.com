@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get an element of the inline text content control using the position specified.
+Get an element of the inline text content control using the position specified in a document.
 
 ```javascript editor-docx
-// Get the element of the inline text control, make it bold.
+// Get the element of the inline text control, make it bold in a document.
 
-// How to get the n^th element of the inline control.
+// How to get the n^th element of the inline control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ paragraph.AddLineBreak();
 paragraph.AddLineBreak();
 paragraph.AddText("We added 10 text runs to the above inline text content control. Then we changed the fifth run, so it is different from the others.");
 ```
-

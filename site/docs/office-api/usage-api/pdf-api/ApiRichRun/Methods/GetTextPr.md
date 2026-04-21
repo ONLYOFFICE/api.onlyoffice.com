@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets rich text properties from rich run object and set some properties to it.
+Get rich text properties from rich run object and set some properties to it in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the text pr using a rich text run in a PDF document?
+
+// Get the text pr for a rich text run in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -42,4 +46,3 @@ textPr.SetUnderline(true);
 
 console.log(`We set some properties to rich text properties from rich run object`);
 ```
-

@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的反余弦，以弧度表示，范围从 0 到 Pi。反余弦是余弦值为参数中指定数字的角。
+在电子表格中返回数字的反余弦值，以弧度表示，范围从 0 到 Pi。反余弦是余弦值为参数中指定数字的角度。
 
 ```javascript editor-xlsx
 // How to get an arccosine of a number and display it in the worksheet.
 
-// Get a function that gets arccosine of a number.
+// Get a function that gets arccosine of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ACOS(0));
 ```
-

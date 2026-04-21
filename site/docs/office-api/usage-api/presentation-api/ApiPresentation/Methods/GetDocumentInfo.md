@@ -31,7 +31,7 @@ object
 
 ## Example
 
-This example shows how to get the document info represented as an object and paste the application name into the document.
+Get the document info represented as an object and paste the application name into the document.
 
 ```javascript editor-pptx
 // How to get a document info from the presentation.
@@ -55,4 +55,3 @@ const docInfo = presentation.GetDocumentInfo();
 paragraph.AddText('This document has been created with: ' + docInfo.Application);
 slide.AddObject(shape);
 ```
-

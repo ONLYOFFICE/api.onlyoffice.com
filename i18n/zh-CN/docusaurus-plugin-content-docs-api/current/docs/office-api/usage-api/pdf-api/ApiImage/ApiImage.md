@@ -1,6 +1,6 @@
 # ApiImage
 
-ApiImage is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
+ApiImage 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
 

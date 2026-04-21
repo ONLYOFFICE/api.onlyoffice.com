@@ -26,12 +26,12 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## 示例
 
-此示例使用 'flowChartMagneticTape' 预设创建形状。
+在演示文稿中使用 'flowChartMagneticTape' 预设创建形状。
 
 ```javascript editor-pptx
-// How to add a new flowchart shape.
+// How to add a new flowchart shape in a presentation.
 
-// Add a new shape indicating its properties.
+// Add a new shape indicating its properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -56,4 +56,3 @@ run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

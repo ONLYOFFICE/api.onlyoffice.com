@@ -22,10 +22,13 @@ number \| null
 
 ## Example
 
-Creates a shape with adjustable parameters and guides.
+Create a shape with adjustable parameters and guides. Sets up text rectangle and connection points for the custom geometry in a document.
 
 ```javascript editor-docx
-// Sets up text rectangle and connection points for the custom geometry.
+// How can I get the adj value using a geometry in a document?
+
+// Get the adj value for a geometry in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -50,4 +53,3 @@ let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

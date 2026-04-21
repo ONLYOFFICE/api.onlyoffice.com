@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md).
 
 ## Example
 
-In this example, the WordArt text has a text fill.
+Set a text fill for the WordArt text in a document.
 
 ```javascript editor-docx
-// How to color a text object.
+// How to color a text object in a document.
 
-// Create a text run object, add color to it using solid fill.
+// Create a text run object, add color to it using solid fill in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();
@@ -25,4 +25,3 @@ let textArt = Api.CreateWordArt(textPr, "onlyoffice", "textArchUp", null, null, 
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(textArt);
 ```
-

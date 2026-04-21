@@ -20,7 +20,7 @@ string \| string[][]
 
 ## 示例
 
-此示例演示如何获取指定范围的不带格式的值。
+获取电子表格中指定范围的无格式值。
 
 ```javascript editor-xlsx
 // How to get a cell raw value.
@@ -34,4 +34,3 @@ range.SetValue(format);
 let value2 = range.GetValue2();
 worksheet.GetRange("A3").SetValue("Value of the cell A1 without format: " + value2);
 ```
-

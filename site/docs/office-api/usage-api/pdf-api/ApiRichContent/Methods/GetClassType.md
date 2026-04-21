@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of rich content.
+Check the class type returned by a rich content in a PDF document.
 
 ```javascript editor-pdf
+// How do I check what type a rich content object is in a PDF document?
+
+// Retrieve and output the class type string for a rich content in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -34,4 +38,3 @@ freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
 let richContent = freeTextAnnot.GetContent();
 console.log(`Object class type is: ${richContent.GetClassType()}`);
 ```
-

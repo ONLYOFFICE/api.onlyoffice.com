@@ -2,16 +2,16 @@
 
 返回当前绘图的高度。
 
-Inherited from [ApiDrawing.GetHeight](../../ApiDrawing/Methods/GetHeight.md).
+继承自 [ApiDrawing.GetHeight](../../ApiDrawing/Methods/GetHeight.md)。
 
 ## 示例
 
-此示例展示如何获取绘图的高度。
+获取文档中绘图对象的高度。
 
 ```javascript editor-docx
-// How to print the height of the drawing.
+// How to print the height of the drawing in a document.
 
-// Create a rectangle and then show its height in mm.
+// Create a rectangle and then show its height in mm in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -27,4 +27,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing height: " + height / 36000 + " mm");
 docContent.AddElement(0, paragraph);
 ```
-

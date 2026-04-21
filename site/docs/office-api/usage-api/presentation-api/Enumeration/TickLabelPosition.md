@@ -17,10 +17,9 @@ Enumeration
 - "low"
 - "high"
 
-
 ## Example
 
-This example sets the position of the vertical tick labels next to the main vertical label.
+Set the position of the vertical tick labels next to the main vertical label.
 
 ```javascript editor-pptx
 // How to set tick label positions for the chart.
@@ -29,4 +28,3 @@ This example sets the position of the vertical tick labels next to the main vert
 
 chart.SetVertAxisTickLabelPosition("nextTo");
 ```
-

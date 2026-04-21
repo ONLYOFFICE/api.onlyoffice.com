@@ -25,4 +25,3 @@ let contentControl = {
     "InternalId": "1_713"
 };
 ```
-

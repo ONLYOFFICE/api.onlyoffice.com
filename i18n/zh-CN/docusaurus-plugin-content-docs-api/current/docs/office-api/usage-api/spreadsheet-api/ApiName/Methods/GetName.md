@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取 ApiName 类的类型。
+在电子表格中获取命名范围类的类型。
 
 ```javascript editor-xlsx
-// How to retrieve name of ApiName class object.
+// How to retrieve name of named range class object in a spreadsheet.
 
-// Get name of a specified object.
+// Get name of a specified object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -34,4 +34,3 @@ Api.AddDefName("numbers", "Sheet1!$A$1:$B$1");
 let defName = Api.GetDefName("numbers");
 worksheet.GetRange("A3").SetValue("Name: " + defName.GetName());
 ```
-

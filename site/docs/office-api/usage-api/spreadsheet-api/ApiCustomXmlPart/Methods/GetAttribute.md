@@ -23,12 +23,12 @@ string \| null
 
 ## Example
 
-This example shows how to get an attribute from the root element of a custom XML part.
+Get an attribute from the root element of a custom XML part in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an attribute from an XML part element.
+// How to get an attribute from an XML part element in a spreadsheet.
 
-// Get an XML attribute.
+// Get an XML attribute using the custom XML part API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -41,4 +41,3 @@ if (rootNodes.length > 0) {
     worksheet.GetRange("A1").SetValue("No root node found");
 }
 ```
-

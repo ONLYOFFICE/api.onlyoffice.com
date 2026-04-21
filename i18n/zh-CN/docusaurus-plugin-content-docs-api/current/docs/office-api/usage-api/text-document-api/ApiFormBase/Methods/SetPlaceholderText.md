@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例为表单设置占位符文本。
+为表单设置占位符文本。
 
 ```javascript editor-docx
 // Add text as a placeholder of the form.
@@ -36,4 +36,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetPlaceholderText("First name");
 ```
-

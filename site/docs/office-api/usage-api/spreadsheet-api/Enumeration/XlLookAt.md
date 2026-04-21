@@ -11,10 +11,9 @@ Enumeration
 - "xlWhole"
 - "xlPart"
 
-
 ## Example
 
-This example specify that the whole text match will be searched in the range.
+Specify that the whole text match will be searched in the range.
 
 ```javascript editor-xlsx
 // How to indicate how the text should be searched.
@@ -31,4 +30,3 @@ let searchRange = range.Find({
 	MatchCase: true
 });
 ```
-

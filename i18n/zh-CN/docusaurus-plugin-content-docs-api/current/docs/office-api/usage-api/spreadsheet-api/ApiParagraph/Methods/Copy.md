@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建段落副本。
+在电子表格中创建段落副本。
 
 ```javascript editor-xlsx
-// How to create an identical paragraph.
+// How to create an identical paragraph in a spreadsheet.
 
-// Get a paragraph from the content of the shape create its copy and add it to the shape.
+// Get a paragraph from the content of the shape create its copy and add it to the shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -40,4 +40,3 @@ paragraph.AddText("This is a text after the line break.");
 let paragraph2 = paragraph.Copy();
 content.Push(paragraph2);
 ```
-

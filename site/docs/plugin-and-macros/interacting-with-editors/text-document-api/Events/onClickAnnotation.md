@@ -19,4 +19,3 @@ window.Asc.plugin.attachEditorEvent("onClickAnnotation", (data) => {
     }
 });
 ```
-

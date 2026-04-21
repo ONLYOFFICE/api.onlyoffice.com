@@ -26,12 +26,12 @@ expression.CreateTheme(sName, oMaster, oClrScheme, oFormatScheme, oFontScheme);
 
 ## 示例
 
-此示例创建主题并将其应用于演示文稿。
+创建主题并将其应用于演示文稿。
 
 ```javascript editor-pptx
 // How to change theme of the presentation.
 
-// Create new theme indicating all its properties.
+// Create new theme indicating all its properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -67,4 +67,3 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme = Api.CreateTheme("New theme", master, clrScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
 ```
-

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 部件的 ID。
+获取演示文稿中自定义 XML 部件的 ID。
 
 ```javascript editor-pptx
-// How to get the ID of an XML part.
+// How to get the ID of an XML part in a presentation.
 
-// Get an XML part ID.
+// Get the id and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -45,4 +45,3 @@ run.AddText("XML part ID: " + id);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

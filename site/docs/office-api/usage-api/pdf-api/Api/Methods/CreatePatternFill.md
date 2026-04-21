@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## Example
 
-This example creates a pattern fill and applies it to the object using the selected pattern as the object background.
+Create a pattern fill and apply it to the object using the selected pattern as the object background in a PDF document.
 
 ```javascript editor-pdf
-// How to apply pattern to the background of a drawing.
+// How to apply pattern to the background of a drawing in a PDF document.
 
-// Change color of an element using a pattern fill.
+// Change color of an element using a pattern fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,4 +40,3 @@ const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
 ```
-

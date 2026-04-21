@@ -1,6 +1,6 @@
 # ApiTable
 
-ApiTable is a subclass of [ApiTablePr](../ApiTablePr/ApiTablePr.md).
+ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
 
 ## 方法
 

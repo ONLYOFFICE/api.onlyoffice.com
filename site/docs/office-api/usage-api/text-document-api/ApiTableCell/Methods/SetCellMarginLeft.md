@@ -7,7 +7,7 @@ Inherited from [ApiTableCellPr.SetCellMarginLeft](../../ApiTableCellPr/Methods/S
 
 ## Example
 
-This example specifies an amount of space which will be left between the left extent of the cell contents and the border of a specific table cell within a table.
+Specify an amount of space which will be left between the left extent of the cell contents and the border of a specific table cell within a table.
 
 ```javascript editor-docx
 // How to add margin to the left of the cell.
@@ -27,4 +27,3 @@ tableCellPr.SetCellMarginLeft(720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

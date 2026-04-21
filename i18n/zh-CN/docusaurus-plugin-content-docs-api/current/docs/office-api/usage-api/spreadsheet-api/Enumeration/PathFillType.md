@@ -14,5 +14,3 @@
 - "lightenLess"
 - "darken"
 - "darkenLess"
-
-

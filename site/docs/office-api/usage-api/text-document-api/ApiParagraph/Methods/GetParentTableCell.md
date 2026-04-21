@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table cell that contains the current paragraph.
+Get a table cell that contains the current paragraph in a document.
 
 ```javascript editor-docx
 // How to get the parent table cell of the paragraph.
@@ -41,4 +41,3 @@ table.AddElement(cell, 0, paragraph);
 let parentTableCell = paragraph.GetParentTableCell();
 parentTableCell.SetShd("clear", Api.HexColor('#FF6F3D'));
 ```
-

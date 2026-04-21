@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+检查文档中渐变光圈返回的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiGradientStop.
+// How do I check what type a gradient stop object is in a document?
 
-// Retrieve class type of ApiGradientStop object and insert it to the slide.
+// Retrieve and output the class type string for a gradient stop in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ paragraph.AddDrawing(drawing);
 let classType = gs1.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 ```
-

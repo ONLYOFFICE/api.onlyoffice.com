@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a class type of a hyperlink.
+Find out the class type of a hyperlink object in a presentation.
 
 ```javascript editor-pptx
+// How can I get the class type of a hyperlink in a presentation?
+
+// Get the class type of a hyperlink and display it in the presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,4 +44,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Class Type of ApiHyperlink instance is \"' + classType + '\".');
 ```
-

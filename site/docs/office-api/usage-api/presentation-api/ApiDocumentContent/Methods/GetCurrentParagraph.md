@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the current paragraph from the document content.
+Return the current paragraph from the document content.
 
 ```javascript editor-pptx
+// How can I get current paragraph using a document content in a presentation?
+
+// Get current paragraph for a document content in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +50,3 @@ if (currentParagraph) {
 }
 slide.AddObject(shape);
 ```
-

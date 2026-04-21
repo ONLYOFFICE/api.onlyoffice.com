@@ -22,13 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example creates a new worksheet.
+Create a new worksheet.
 
 ```javascript editor-xlsx
 // How to create a new worksheet.
 
-// Create a worksheet.
+// Add the sheet and display the result in a spreadsheet.
 
 Api.AddSheet("New sheet");
 ```
-

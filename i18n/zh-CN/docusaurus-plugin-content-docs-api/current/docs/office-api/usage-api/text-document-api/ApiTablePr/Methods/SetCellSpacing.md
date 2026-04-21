@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例指定默认表格单元格间距。
+指定默认的表格单元格间距。
 
 ```javascript editor-docx
 // How to set the size of the cell spacing.
@@ -40,4 +40,3 @@ table.SetStyle(tableStyle);
 tablePr.SetCellSpacing(720);
 doc.Push(table);
 ```
-

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例以三种不同格式向文档添加数学公式：LaTeX、Unicode 和 MathML。
+以三种不同格式向文档添加数学公式：LaTeX、Unicode 和 MathML。
 
 ```javascript editor-docx
 // How to add math equations in different formats.
@@ -61,4 +61,3 @@ let xml = `<math>
 </math>`;
 doc.AddMathEquation(xml, "mathml");
 ```
-

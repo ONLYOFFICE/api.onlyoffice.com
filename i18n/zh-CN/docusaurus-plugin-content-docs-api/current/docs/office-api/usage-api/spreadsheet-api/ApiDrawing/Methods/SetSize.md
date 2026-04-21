@@ -23,12 +23,12 @@ expression.SetSize(nWidth, nHeight);
 
 ## 示例
 
-此示例设置形状边界框的大小。
+在电子表格中设置形状边界框的大小。
 
 ```javascript editor-xlsx
-// How to change the size of the drawing.
+// How to change the size of the drawing in a spreadsheet.
 
-// Resize a drawing by setting its width and height.
+// Resize a drawing by setting its width and height in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -37,4 +37,3 @@ let drawing = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 3600
 drawing.SetSize(120 * 36000, 70 * 36000);
 drawing.SetPosition(0, 2 * 36000, 2, 3 * 36000);
 ```
-

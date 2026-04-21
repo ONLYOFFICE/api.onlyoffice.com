@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## Example
 
-This example shows how to crate a stroke.
+Crate a stroke in a PDF document.
 
 ```javascript editor-pdf
-// How to add a stroke to the shape.
+// How to add a stroke to the shape in a PDF document.
 
-// Add solid fill and stroke to the shape properties.
+// Add solid fill and stroke to the shape properties in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,4 +43,3 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 ```
-

@@ -22,7 +22,7 @@ expression.GetMaster(nPos);
 
 ## 示例
 
-此示例演示如何按位置获取演示文稿中的幻灯片母版。
+通过位置获取演示文稿中的幻灯片母版。
 
 ```javascript editor-pptx
 // How to get a slide master from the presentation.
@@ -48,4 +48,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
 ```
-

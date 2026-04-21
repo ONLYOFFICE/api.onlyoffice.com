@@ -23,7 +23,7 @@ expression.AddRows(nCount, isBefore);
 
 ## 示例
 
-此示例向表格添加新行。
+在文档中向表格添加新行（多行）。
 
 ```javascript editor-docx
 // Insert new rows after the current cell.
@@ -40,4 +40,3 @@ doc.Push(table);
 table.GetCell(0, 0).GetContent().GetElement(0).AddText("Two new rows were added after this cell.");
 table.GetCell(0, 0).AddRows(2, false);
 ```
-

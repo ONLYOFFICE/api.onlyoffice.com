@@ -22,7 +22,7 @@ expression.GetSlideByIndex(nIndex);
 
 ## 示例
 
-此示例演示如何按位置获取演示文稿中的幻灯片。
+通过位置获取演示文稿中的幻灯片。
 
 ```javascript editor-pptx
 // How to find a slide from the presentation using its index.
@@ -39,4 +39,3 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
 ```
-

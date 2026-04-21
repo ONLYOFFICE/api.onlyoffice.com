@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds icon set conditional formatting to a range.
+Add icon set conditional formatting to a range.
 
 ```javascript editor-xlsx
 // How to add icon set conditional formatting rules to display icons based on values.
@@ -43,4 +43,3 @@ let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddIconSetCondition();
 ```
-

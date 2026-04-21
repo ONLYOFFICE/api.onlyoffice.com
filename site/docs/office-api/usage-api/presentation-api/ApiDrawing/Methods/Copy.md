@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of a shape and inserts it into the presentation.
+Create a copy of a shape and insert it into the presentation.
 
 ```javascript editor-pptx
 // How to create the same slide shape.
@@ -43,4 +43,3 @@ const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
 newSlide.AddObject(copyShape);
 ```
-

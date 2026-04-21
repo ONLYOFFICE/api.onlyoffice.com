@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes path commands of a star shape.
+Analyzes path commands of a star shape. Retrieves information about the first command including type and coordinates.
 
 ```javascript editor-docx
-// Retrieves information about the first command including type and coordinates.
+// How can I get the commands using a geometry path in a document?
+
+// Get the commands for a geometry path in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
@@ -37,4 +40,3 @@ let cmd = path.GetCommand(0);
 paragraph.AddText(", First command: " + cmd.GetType() + " (" + cmd.GetX() + ", " + cmd.GetY() + ")");
 paragraph.AddDrawing(shape);
 ```
-

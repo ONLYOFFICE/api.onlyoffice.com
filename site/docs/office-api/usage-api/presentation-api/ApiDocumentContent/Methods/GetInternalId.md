@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example returns an internal ID of the current document content.
+Return an internal ID of the current document content.
 
 ```javascript editor-pptx
+// How to get the internal id for a document content?
+
+// Get the internal id and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,4 +41,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('Document content internal ID: ' + internalId);
 slide.AddObject(shape);
 ```
-

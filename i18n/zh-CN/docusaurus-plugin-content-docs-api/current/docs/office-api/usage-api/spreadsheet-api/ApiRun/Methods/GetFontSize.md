@@ -2,14 +2,14 @@
 
 从当前文本属性获取字体大小。
 
-Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
+继承自 [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md)。
 
 ## 示例
 
-此示例获取文本字体大小。
+获取电子表格中文本的字体大小。
 
 ```javascript editor-xlsx
-// How to find out a text font size.
+// How to find out a text font size in a spreadsheet.
 
 // Get a text font size and display it in the worksheet.
 
@@ -31,4 +31,3 @@ let fontSize = textProps.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 content.Push(paragraph);
 ```
-

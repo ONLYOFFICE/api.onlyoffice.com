@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-此示例展示如何获取包含表格的内容控件。
+获取文档中包含表格的内容控件。
 
 ```javascript editor-docx
-// How to get the parent element of the table and set its alias.
+// How to get the parent element of the table and set its alias in a document.
 
-// Retrieve the parent content control of the table.
+// Retrieve the parent content control of the table in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -39,4 +39,3 @@ doc.AddElement(0, blockLvlSdt);
 let parentContentControl = table.GetParentContentControl();
 parentContentControl.SetAlias("№1");
 ```
-

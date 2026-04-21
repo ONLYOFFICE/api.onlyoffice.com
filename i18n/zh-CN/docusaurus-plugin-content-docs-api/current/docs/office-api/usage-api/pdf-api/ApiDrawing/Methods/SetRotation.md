@@ -27,6 +27,8 @@ boolean
 ```javascript editor-pdf
 // Rotate an object from a page.
 
+// Use drawing object to set rotation in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,4 +44,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
 page.AddObject(shape);
 ```
-

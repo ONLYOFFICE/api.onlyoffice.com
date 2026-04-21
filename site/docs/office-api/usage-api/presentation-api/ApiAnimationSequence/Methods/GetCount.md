@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example gets the number of effects in an animation sequence.
+Get the number of effects in an animation sequence in a presentation.
 
 ```javascript editor-pptx
+// How can I get the count using an animation sequence in a presentation?
+
+// Get the count for an animation sequence in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -65,4 +69,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Effects count: ' + count);
 slide.AddObject(infoShape);
 ```
-

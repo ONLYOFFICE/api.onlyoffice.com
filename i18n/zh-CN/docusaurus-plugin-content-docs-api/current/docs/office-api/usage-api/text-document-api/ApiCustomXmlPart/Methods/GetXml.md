@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 部件的 XML 字符串表示。
+获取文档中自定义 XML 部件的 XML 字符串表示。
 
 ```javascript editor-docx
+// How to get the xml for a custom XML part in a document?
+
+// Get the xml and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -37,4 +41,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("XML string representation: " + xmlString);
 doc.Push(paragraph);
 ```
-

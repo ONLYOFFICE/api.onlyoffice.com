@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回标准正态累积分布（平均值为零，标准差为一）。
+在电子表格中返回标准正态累积分布（均值为零，标准差为一）。
 
 ```javascript editor-xlsx
-// How to calculate the standard normal cumulative distribution.
+// How to calculate the standard normal cumulative distribution in a spreadsheet.
 
-// Use a function to get the standard normal cumulative distribution.
+// Use a function to get the standard normal cumulative distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [0.34, 7, 3];
@@ -46,4 +46,3 @@ let func = Api.WorksheetFunction;
 let inv = func.NORM_INV(probability, mean, standardDeviation);
 worksheet.GetRange("C1").SetValue(inv);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all heading paragraphs from the document.
+Get all heading paragraphs from the document in a document.
 
 ```javascript editor-docx
 // Get all heading paragraphs added to the document.
 
-// How to retrieve all heading paragraphs and make capitalized the first one.
+// How to retrieve all heading paragraphs and make capitalized the first one in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");
@@ -35,4 +35,3 @@ paragraph.AddText("Heading 1");
 let headingParagraphs = doc.GetAllHeadingParagraphs();
 headingParagraphs[0].SetCaps(true);
 ```
-

@@ -14,10 +14,9 @@ Enumeration
 - "modern"
 - "classic"
 
-
 ## Example
 
-This example adds a table of contents of the standard style to the document.
+Add a table of contents of the standard style to the document.
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its style.
@@ -37,4 +36,3 @@ let tocPr = {
 };
 doc.AddTableOfContents(tocPr);
 ```
-

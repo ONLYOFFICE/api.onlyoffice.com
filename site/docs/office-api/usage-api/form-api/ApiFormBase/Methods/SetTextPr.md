@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the text properties to the form.
+Set the text properties to the form.
 
 ```javascript editor-forms
 // Add text properties to the text form.
@@ -39,4 +39,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 textForm.SetTextPr(textPr);
 ```
-

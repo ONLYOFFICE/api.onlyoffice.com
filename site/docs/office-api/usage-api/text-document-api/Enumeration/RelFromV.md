@@ -15,10 +15,9 @@ Enumeration
 - "line"
 - "paragraph"
 
-
 ## Example
 
-This example set vertical aligment for a drawing object.
+Set vertical alignment for a drawing object.
 
 ```javascript editor-docx
 // How to align a drawing to the center.
@@ -27,4 +26,3 @@ This example set vertical aligment for a drawing object.
 
 drawing.SetVerAlign("page", "center");
 ```
-

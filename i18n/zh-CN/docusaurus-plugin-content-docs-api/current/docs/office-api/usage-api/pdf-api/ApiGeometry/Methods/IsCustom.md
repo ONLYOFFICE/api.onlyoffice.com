@@ -20,10 +20,13 @@ boolean
 
 ## 示例
 
-从 PDF 文档页面上的星形形状获取几何信息。
+从 PDF 文档页面上的星形获取几何图形信息。在文本形状中显示预设类型和自定义状态。
 
 ```javascript editor-pdf
-// Displays preset type and custom status in a text shape.
+// How do I is custom in a PDF document?
+
+// Is custom using a geometry object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -35,4 +38,3 @@ shape.GetContent().GetElement(0).AddText("Preset: " + geometry.GetPreset() + ", 
 shape.SetPosition(1000000, 1000000);
 page.AddObject(shape);
 ```
-

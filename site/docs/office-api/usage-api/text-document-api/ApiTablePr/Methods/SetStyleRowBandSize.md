@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies a number of rows which will comprise each table row band for this table style.
+Specify a number of rows which will comprise each table row band for this table style in a document.
 
 ```javascript editor-docx
-// How to set row band size.
+// How to set row band size in a document.
 
-// How to style a row band size.
+// How to style a row band size in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();
@@ -50,4 +50,3 @@ table.GetRow(3).GetCell(0).GetContent().GetElement(0).AddText("Normal");
 table.GetRow(3).GetCell(1).GetContent().GetElement(0).AddText("Normal");
 doc.Push(table);
 ```
-

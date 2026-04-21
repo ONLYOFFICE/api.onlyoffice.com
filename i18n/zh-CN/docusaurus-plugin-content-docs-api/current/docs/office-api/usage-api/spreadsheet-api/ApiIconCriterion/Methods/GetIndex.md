@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例展示如何获取图标条件在集合中的索引。
+获取电子表格中集合内图标条件的索引。
 
 ```javascript editor-xlsx
+// How do I get the index in a spreadsheet?
+
+// Get the index using an icon criterion object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Data');
 worksheet.GetRange('A2').SetValue(90);
@@ -38,4 +42,3 @@ const lastCriterion = criteria[criteria.length - 1];
 worksheet.GetRange('B1').SetValue('Last criterion index: ' + lastCriterion.GetIndex());
 worksheet.GetRange('B2').SetValue('Total criteria: ' + criteria.length);
 ```
-

@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## 示例
 
-此示例创建图案填充，并使用所选图案作为对象背景应用于对象。
+在演示文稿中创建图案填充，使用所选图案作为对象背景应用于对象。
 
 ```javascript editor-pptx
-// How to apply pattern to the background of a drawing.
+// How to apply pattern to the background of a drawing in a presentation.
 
-// Change color of an element using a pattern fill.
+// Change color of an element using a pattern fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,3 @@ const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 3600
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
 ```
-

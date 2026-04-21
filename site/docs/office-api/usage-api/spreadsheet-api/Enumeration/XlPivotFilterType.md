@@ -75,5 +75,3 @@ Enumeration
 - "xlValueIsLessThanOrEqualTo"
 - "xlValueIsNotBetween"
 - "xlYearToDate"
-
-

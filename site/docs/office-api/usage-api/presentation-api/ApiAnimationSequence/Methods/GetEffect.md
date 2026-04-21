@@ -22,9 +22,13 @@ expression.GetEffect(index);
 
 ## Example
 
-This example gets an effect at a specified index from an animation sequence.
+Get an effect at a specified index from an animation sequence in a presentation.
 
 ```javascript editor-pptx
+// How do I get the effect in a presentation?
+
+// Get the effect using an animation sequence object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -58,4 +62,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Effect at index 0: ' + effectType);
 slide.AddObject(infoShape);
 ```
-

@@ -22,12 +22,12 @@ expression.ExpandTo(oRange);
 
 ## 示例
 
-此示例返回一个新范围，该范围在任意方向上超出指定范围并跨越不同的范围。
+在文档中返回一个超出指定范围并在任意方向上跨越不同范围的新范围。
 
 ```javascript editor-docx
-// How to expand the first range to the second one.
+// How to expand the first range to the second one in a document.
 
-// Create a range and make it cover a different area.
+// Create a range and make it cover a different area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ let rangeSecond = doc.GetRange(49, 123);
 let range = rangeFirst.ExpandTo(rangeSecond);
 range.SetItalic(true);
 ```
-

@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example shows how to get the count of custom XML parts in the XML manager.
+Get the count of custom XML parts in the XML manager in a document.
 
 ```javascript editor-docx
+// How do I get the count in a document?
+
+// Get the count using a custom XML parts object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 xmlManager.Add("<products><item><name>Laptop</name><price>999</price></item></products>");
@@ -32,4 +36,3 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("There are " + count + " custom XML parts in the document.");
 doc.Push(infoParagraph);
 ```
-

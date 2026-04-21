@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例展示如何使用指定的位置获取超链接元素。
+通过文档中指定的位置获取超链接元素。
 
 ```javascript editor-docx
-// How to get the element of the hyperlink knowing its index.
+// How to get the element of the hyperlink knowing its index in a document.
 
-// Add a hyperlink to the paragraph and get its element.
+// Add a hyperlink to the paragraph and get its element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddElement(element);
 doc.Push(paragraph);
 ```
-

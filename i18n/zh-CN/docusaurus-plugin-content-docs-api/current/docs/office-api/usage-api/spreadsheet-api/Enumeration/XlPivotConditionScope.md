@@ -11,5 +11,3 @@
 - "xlFieldsScope"
 - "xlSelectionScope"
 - "xlDataFieldScope"
-
-

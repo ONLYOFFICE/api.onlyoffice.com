@@ -20,7 +20,7 @@ expression.AddTop10();
 
 ## 示例
 
-此示例向区域添加前 10 项条件格式。
+向范围添加前 10 项条件格式。
 
 ```javascript editor-xlsx
 // How to add top 10 conditional formatting rules to highlight highest values.
@@ -51,4 +51,3 @@ if (top10Condition) {
     top10Condition.SetFillColor(Api.CreateColorFromRGB(255, 215, 0));
 }
 ```
-

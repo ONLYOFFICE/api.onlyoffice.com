@@ -6,9 +6,13 @@ Inherited from [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md).
 
 ## Example
 
-This example shows how to get the tag of a form element.
+Get the tag of a form element in a document.
 
 ```javascript editor-docx
+// How to get the tag for a form base?
+
+// Get the tag and display the result in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -31,4 +35,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
 ```
-

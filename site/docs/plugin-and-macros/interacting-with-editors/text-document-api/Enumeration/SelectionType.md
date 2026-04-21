@@ -13,7 +13,6 @@ Enumeration
 - "drawing"
 - "slide"
 
-
 ## Example
 
 ```javascript
@@ -31,4 +30,3 @@ window.Asc.plugin.executeMethod ("GetSelectionType", [], function(type) {
     }
 });
 ```
-

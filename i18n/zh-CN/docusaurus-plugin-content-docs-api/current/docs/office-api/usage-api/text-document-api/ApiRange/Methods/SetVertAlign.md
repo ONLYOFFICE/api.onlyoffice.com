@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例为 [ApiRange](../ApiRange.md) 设置垂直对齐 "superscript"。
+为文本范围设置垂直对齐方式 "superscript"（上标）。
 
 ```javascript editor-docx
-// How to set vertical alignment of a text.
+// Set the vertical alignment of a text in a document.
 
-// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ paragraph.AddText("ONLYOFFICE Copyright Document Builder");
 let range = doc.GetRange(10, 19);
 range.SetVertAlign("superscript");
 ```
-

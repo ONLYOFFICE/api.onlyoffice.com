@@ -2,16 +2,16 @@
 
 设置当前绘图的指定锁定类型的锁定值。
 
-Inherited from [ApiDrawing.SetLockValue](../../ApiDrawing/Methods/SetLockValue.md).
+继承自 [ApiDrawing.SetLockValue](../../ApiDrawing/Methods/SetLockValue.md)。
 
 ## 示例
 
-此示例设置当前绘图的指定锁定类型的锁定值。
+为文档中当前绘图对象的指定锁定类型设置锁定值。
 
 ```javascript editor-docx
-// How to set the lock value to "noSelect" of the drawing.
+// How to set the lock value to "noSelect" of the drawing in a document.
 
-// Create a drawing and lock it.
+// Create a drawing and lock it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 ```
-

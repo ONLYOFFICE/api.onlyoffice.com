@@ -21,5 +21,3 @@ Enumeration
 - "xlColorScale"
 - "xlDatabar"
 - "xlIconSets"
-
-

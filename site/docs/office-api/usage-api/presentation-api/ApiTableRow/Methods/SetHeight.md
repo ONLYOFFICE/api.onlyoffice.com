@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the height to the table row.
+Set the height to the table row in a presentation.
 
 ```javascript editor-pptx
-// How to set a height of the row.
+// How to set a height of the row in a presentation.
 
-// Create a table and change its rows height.
+// Create a table and change its rows height in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,4 +39,3 @@ row.SetHeight(30 * 36000);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

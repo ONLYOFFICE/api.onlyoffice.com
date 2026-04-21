@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the paragraph contents justification.
+Set the paragraph contents justification in a presentation.
 
 ```javascript editor-pptx
-// How to set justification using a paragraph properties.
+// How to set justification using a paragraph properties in a presentation.
 
-// Create a paragraph setting its justification property.
+// Create a paragraph setting its justification property in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 slide.AddObject(shape);
 ```
-

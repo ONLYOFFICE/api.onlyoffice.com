@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例演示如何从演示文稿中删除一系列幻灯片。
+从演示文稿中移除一组幻灯片。
 
 ```javascript editor-pptx
 // How to remove the slides from the presentation.
 
-// Delete a range of the ApiSlide objects from the presentation.
+// Delete a range of the slide objects from the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
@@ -54,4 +54,3 @@ const sClassType = presentation.GetClassType();
 oParagraph.AddText("A slide with no background was removed from this presentation.");
 slide.AddObject(oShape);
 ```
-

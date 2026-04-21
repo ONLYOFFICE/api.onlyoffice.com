@@ -25,6 +25,10 @@ expression.CreateListboxField(aRect);
 How to create and add a listbox field to document.
 
 ```javascript editor-pdf
+// How do I create the listbox field in a PDF document?
+
+// Create the listbox field and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -34,4 +38,3 @@ listboxField.AddOption('Option 1');
 listboxField.AddOption('Option 2');
 listboxField.AddOption('Option 3');
 ```
-

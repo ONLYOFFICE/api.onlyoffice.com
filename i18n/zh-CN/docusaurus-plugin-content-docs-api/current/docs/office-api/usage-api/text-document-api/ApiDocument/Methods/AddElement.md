@@ -2,11 +2,11 @@
 
 使用在文档内容中的位置添加段落、表格或块级内容控件。
 
-Inherited from [ApiDocumentContent.AddElement](../../ApiDocumentContent/Methods/AddElement.md).
+继承自 [ApiDocumentContent.AddElement](../../ApiDocumentContent/Methods/AddElement.md)。
 
 ## 示例
 
-此示例在文档内容中添加段落。
+在文档内容中添加段落。
 
 ```javascript editor-docx
 // How to add elements to the document content.
@@ -25,4 +25,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.AddElement(0, paragraph);
 ```
-

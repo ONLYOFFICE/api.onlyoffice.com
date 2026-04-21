@@ -1,6 +1,6 @@
 # ApiButtonField
 
-ApiButtonField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
+ApiButtonField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 
 ## 方法
 

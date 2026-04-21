@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例在复选框控件组中设置复选框控件为选中状态。
+在 PDF 文档中设置复选框控件组中的复选框控件为选中状态。
 
 ```javascript editor-pdf
+// How can I set checked using a checkbox widget in a PDF document?
+
+// Set checked for a checkbox widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);
@@ -38,4 +42,3 @@ radiobuttonField.SetCheckInUnison(true);
 let widgets = radiobuttonField.GetAllWidgets();
 widgets[0].SetChecked(true);
 ```
-

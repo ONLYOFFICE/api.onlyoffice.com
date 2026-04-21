@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to ugroup a group drawing element.
+Ugroup a group drawing element in a presentation.
 
 ```javascript editor-pptx
-// How to ungroup a grouped drawings.
+// How to ungroup a grouped drawings in a presentation.
 
-// How to remove a grouping from objects.
+// How to remove a grouping from objects in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -55,4 +55,3 @@ const docContent2 = shape2.GetDocContent();
 const paragraph2 = docContent2.GetElement(0);
 paragraph2.AddText("Shapes are ungrouped");
 ```
-

@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to delete a chart seria indicating its index.
+How to delete a chart seria indicating its index in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart then delete a seria from it.
+// Create a chart then delete a seria from it in a PDF document.
+
+// Remove the seria using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 page.AddObject(chart);
 ```
-

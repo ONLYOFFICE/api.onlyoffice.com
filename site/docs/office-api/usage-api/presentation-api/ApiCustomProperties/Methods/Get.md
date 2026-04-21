@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## Example
 
-This example demonstrates how to get the value of a custom property by its name.
+Get the value of a custom property by its name in a presentation.
 
 ```javascript editor-pptx
+// Return null for properties that do not exist.
+
+// Get using a custom properties object in a presentation.
+
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 
@@ -44,4 +48,3 @@ let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
 ```
-

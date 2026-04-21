@@ -22,12 +22,12 @@ expression.ForEach(fCallback);
 
 ## 示例
 
-此示例为每个单元格执行一次提供的函数。
+对每个单元格执行一次提供的函数。
 
 ```javascript editor-xlsx
 // How to iterate through each cell from a range.
 
-// For Each cycle implementation for ApiRange.
+// For Each cycle implementation for cell range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -41,4 +41,3 @@ range.ForEach(function (range) {
     }
 });
 ```
-

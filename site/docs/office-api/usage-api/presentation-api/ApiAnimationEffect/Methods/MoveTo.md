@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example moves an animation effect to a different position.
+Move an animation effect to a different position in a presentation.
 
 ```javascript editor-pptx
+// How do I move to in a presentation?
+
+// Move to using an animation effect object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -78,4 +82,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('First effect moved to position 2');
 slide.AddObject(infoShape);
 ```
-

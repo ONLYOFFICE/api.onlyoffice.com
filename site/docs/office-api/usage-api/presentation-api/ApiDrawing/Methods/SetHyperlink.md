@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example sets a hyperlink for a shape and an image on a slide.
+Set a hyperlink for a shape and an image on a slide.
 
 ```javascript editor-pptx
+// How do I set hyperlink in a presentation?
+
+// Set hyperlink using a drawing object object in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.AddSlide(Api.CreateSlide());
 
@@ -49,4 +53,3 @@ const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);
 ```
-

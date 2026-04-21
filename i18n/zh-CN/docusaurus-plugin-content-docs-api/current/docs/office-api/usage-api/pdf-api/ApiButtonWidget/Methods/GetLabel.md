@@ -22,9 +22,13 @@ string
 
 ## 示例
 
-此示例获取按钮控件的标签并显示。
+获取并显示 PDF 文档中按钮控件的标签。
 
 ```javascript editor-pdf
+// How do I get the label in a PDF document?
+
+// Get the label using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);
@@ -41,4 +45,3 @@ widgets[0].SetLabel('Hover label', 'hover');
 let labels = [widgets[0].GetLabel('normal'), widgets[0].GetLabel('down'), widgets[0].GetLabel('hover')];
 console.log('Button widget labels are: ' + labels);
 ```
-

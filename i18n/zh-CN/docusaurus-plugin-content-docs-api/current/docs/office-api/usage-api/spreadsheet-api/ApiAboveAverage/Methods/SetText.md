@@ -2,11 +2,11 @@
 
 设置基于文本的条件格式规则中使用的文本值。
 
-Inherited from [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md).
+继承自 [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md)。
 
 ## 示例
 
-此示例设置基于文本的条件格式规则的文本值。
+设置基于文本的条件格式规则的文本值。
 
 ```javascript editor-xlsx
 // How to change text values in text-based conditional formatting rules.
@@ -37,4 +37,3 @@ condition1.SetText("Grape");
 worksheet.GetRange("C4").SetValue("New text:");
 worksheet.GetRange("C5").SetValue(condition1.GetText());
 ```
-

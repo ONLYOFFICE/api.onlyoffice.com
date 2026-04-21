@@ -12,5 +12,3 @@ Enumeration
 - "invert"
 - "push"
 - "outline"
-
-

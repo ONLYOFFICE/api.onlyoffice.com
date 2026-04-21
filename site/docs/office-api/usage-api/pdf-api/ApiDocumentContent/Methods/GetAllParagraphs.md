@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns an array of all paragraphs from the document content.
+Return an array of all paragraphs from the document content.
 
 ```javascript editor-pdf
+// How can I get all paragraphs using a document content in a PDF document?
+
+// Get all paragraphs for a document content in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -47,4 +51,3 @@ infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
 docContent.Push(infoParagraph);
 page.AddObject(shape);
 ```
-

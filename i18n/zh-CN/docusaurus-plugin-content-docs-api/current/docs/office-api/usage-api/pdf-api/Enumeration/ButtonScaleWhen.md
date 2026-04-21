@@ -12,5 +12,3 @@
 - "never"
 - "tooBig"
 - "tooSmall"
-
-

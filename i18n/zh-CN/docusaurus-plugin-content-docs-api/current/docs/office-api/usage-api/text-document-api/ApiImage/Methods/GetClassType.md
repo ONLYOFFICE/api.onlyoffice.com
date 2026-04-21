@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+检查文档中图像返回的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiImage.
+// How do I check what type an image object is in a document?
 
-// Retrieve class type of ApiImage object and insert it to the slide.
+// Retrieve and output the class type string for an image in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Class Type = ' + classType);
 doc.Push(paragraph);
 ```
-

@@ -13,5 +13,3 @@ Enumeration
 - "Filters"
 - "Values"
 - "Hidden"
-
-

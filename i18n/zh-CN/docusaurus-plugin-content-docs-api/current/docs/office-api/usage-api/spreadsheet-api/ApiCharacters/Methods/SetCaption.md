@@ -22,12 +22,12 @@ expression.SetCaption(Caption);
 
 ## 示例
 
-此示例设置表示指定字符范围文本的字符串值。
+在电子表格中设置表示指定字符范围文本的字符串值。
 
 ```javascript editor-xlsx
-// How to add a label for the specified characters.
+// How to add a label for the specified characters in a spreadsheet.
 
-// Set a caption for the characters collection.
+// Set a caption for the characters collection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -35,4 +35,3 @@ range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(23, 4);
 characters.SetCaption("string");
 ```
-

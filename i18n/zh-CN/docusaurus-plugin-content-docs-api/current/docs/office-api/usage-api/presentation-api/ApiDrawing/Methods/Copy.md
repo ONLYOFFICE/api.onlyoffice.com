@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-此示例创建形状的副本并将其插入演示文稿。
+创建形状的副本并将其插入演示文稿。
 
 ```javascript editor-pptx
 // How to create the same slide shape.
@@ -43,4 +43,3 @@ const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
 newSlide.AddObject(copyShape);
 ```
-

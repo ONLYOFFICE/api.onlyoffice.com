@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example removes all the elements from the current document or from the current document content.
+Remove all the elements from the current document or from the current document content.
 
 ```javascript editor-xlsx
 // How to clear a document.
@@ -42,4 +42,3 @@ paragraph.SetJc("left");
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 content.Push(paragraph);
 ```
-

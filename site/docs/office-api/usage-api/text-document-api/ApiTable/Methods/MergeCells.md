@@ -23,7 +23,7 @@ expression.MergeCells(aCells);
 
 ## Example
 
-This example merges an array of cells.
+Merge an array of cells.
 
 ```javascript editor-docx
 // How to merge cells of the table into one.
@@ -40,4 +40,3 @@ let cell = table.MergeCells([table.GetRow(1).GetCell(1), table.GetRow(1).GetCell
 cell.GetContent().GetElement(0).AddText("Merged cell");
 doc.Push(table);
 ```
-

@@ -20,9 +20,13 @@ expression.GetEffectType();
 
 ## 示例
 
-此示例获取动画效果的效果类型。
+获取演示文稿中动画效果的效果类型。
 
 ```javascript editor-pptx
+// How to get the effect type for an animation effect in a presentation?
+
+// Get the effect type and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -53,4 +57,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Effect type: ' + effectType);
 slide.AddObject(infoShape);
 ```
-

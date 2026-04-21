@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何为绑定区域设置背景颜色。
+如何在 PDF 文档中为绘图区域设置背景颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its plot area color.
+// Create a chart, set its properties and its plot area color in a PDF document.
+
+// Use chart to set plot area fill in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +47,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetPlotAreaFill(fill);
 page.AddObject(chart);
 ```
-

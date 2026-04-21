@@ -2,11 +2,11 @@
 
 返回条件格式规则的作用域类型。
 
-Inherited from [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md).
+继承自 [ApiFormatCondition.GetScopeType](../../ApiFormatCondition/Methods/GetScopeType.md)。
 
 ## 示例
 
-此示例获取条件格式规则的作用域类型。
+获取条件格式规则的范围类型。
 
 ```javascript editor-xlsx
 // How to retrieve the scope type from conditional formatting rules.
@@ -34,4 +34,3 @@ let scopeType = condition1.GetScopeType();
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
 ```
-

@@ -33,7 +33,7 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 ## Example
 
-This example creates a chart of the specified type from the selected data range of the sheet.
+Create a chart of the specified type from the selected data range of the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to add chart to the worksheet.
@@ -59,4 +59,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

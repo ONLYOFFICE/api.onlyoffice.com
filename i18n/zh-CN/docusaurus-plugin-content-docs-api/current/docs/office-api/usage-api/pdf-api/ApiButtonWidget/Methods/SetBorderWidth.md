@@ -2,13 +2,17 @@
 
 设置控件边框宽度。
 
-Inherited from [ApiBaseWidget.SetBorderWidth](../../ApiBaseWidget/Methods/SetBorderWidth.md).
+继承自 [ApiBaseWidget.SetBorderWidth](../../ApiBaseWidget/Methods/SetBorderWidth.md)。
 
 ## 示例
 
-此示例设置字段控件的边框宽度。
+在 PDF 文档中设置字段控件的边框宽度。
 
 ```javascript editor-pdf
+// How do I set border width in a PDF document?
+
+// Set border width using a widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -22,4 +26,3 @@ widgets.forEach(function(widget) {
     widget.SetBorderWidth('thick');
 });
 ```
-

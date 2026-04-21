@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies if the text field content should be autofit.
+Specify if the text field content should be autofit in a document.
 
 ```javascript editor-docx
 // How to make the first text form from this document autofit.
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first text form from this document is autofit: " + autoFit);
 doc.Push(paragraph);
 ```
-

@@ -21,4 +21,3 @@ Object
 | Sum | boolean | 指定是否使用 SUM 函数。 |
 | Var | boolean | 指定是否使用 VAR 函数。 |
 | VarP | boolean | 指定是否使用 VAR.P 函数。 |
-

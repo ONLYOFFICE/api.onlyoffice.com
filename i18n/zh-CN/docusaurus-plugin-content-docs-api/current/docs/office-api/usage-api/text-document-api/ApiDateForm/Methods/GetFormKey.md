@@ -2,11 +2,11 @@
 
 返回当前表单的键。
 
-Inherited from [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md).
+继承自 [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md)。
 
 ## 示例
 
-此示例展示如何获取表单键。
+获取文档中的表单键。
 
 ```javascript editor-docx
 // How get a key of a comboBox form.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
-

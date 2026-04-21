@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-This example specifies a highlighting color which is applied as a background to the contents of the run.
+Specify a highlighting color which is applied as a background to the contents of the run in a document.
 
 ```javascript editor-docx
-// How to set highlight to the text run.
+// How to set highlight to the text run in a document.
 
-// Create a new text run and highlight it.
+// Create a new text run and highlight it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.SetHighlight("lightGray");
 run.AddText("This is a text run with the text highlighted with light gray color.");
 paragraph.AddElement(run);
 ```
-

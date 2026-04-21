@@ -22,10 +22,10 @@ expression.SetText(sText);
 
 ## Example
 
-This example sets the comment text.
+Set the comment text in a document.
 
 ```javascript editor-docx
-// How to change a text of a comment.
+// How to change a text of a comment in a document.
 
 // Get all comments from the presentation and set its first one's text.
 
@@ -36,4 +36,3 @@ Api.AddComment(paragraph, "comment", "John Smith");
 let comments = doc.GetAllComments();
 comments[0].SetText("new comment's text");
 ```
-

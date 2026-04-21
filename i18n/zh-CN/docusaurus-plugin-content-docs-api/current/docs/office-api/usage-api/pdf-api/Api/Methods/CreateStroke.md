@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-此示例演示如何创建笔触。
+在 PDF 文档中创建笔触。
 
 ```javascript editor-pdf
-// How to add a stroke to the shape.
+// How to add a stroke to the shape in a PDF document.
 
-// Add solid fill and stroke to the shape properties.
+// Add solid fill and stroke to the shape properties in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,4 +43,3 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 ```
-

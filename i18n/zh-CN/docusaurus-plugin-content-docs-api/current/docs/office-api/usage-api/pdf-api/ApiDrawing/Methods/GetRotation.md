@@ -20,10 +20,12 @@ number
 
 ## 示例
 
-如何从绘图对象获取旋转角度。
+如何从 PDF 文档中的绘图对象获取旋转角度。
 
 ```javascript editor-pdf
-// Get drawing rotate
+// Get drawing rotate in a PDF document.
+
+// Get the rotation for a drawing object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,4 +42,3 @@ let paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is: " + rotAngle + " degrees");
 page.AddObject(shape);
 ```
-

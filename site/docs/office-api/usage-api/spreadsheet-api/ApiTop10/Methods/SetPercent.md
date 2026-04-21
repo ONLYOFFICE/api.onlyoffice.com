@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set the percentage mode for top 10 condition.
+Set the percentage mode for top 10 condition in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to configure if the condition uses percentage values instead of count values.
+// How to configure if the condition uses percentage values instead of count values in a spreadsheet.
 
-// Set the percentage mode for the top 10 rule.
+// Set the percentage mode for the top 10 rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,4 +45,3 @@ worksheet.GetRange("B1").SetValue("Before: Count mode");
 top10Condition.SetPercent(true);
 worksheet.GetRange("B2").SetValue("After: Percentage mode");
 ```
-

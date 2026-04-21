@@ -22,7 +22,7 @@ expression.GetFormsByTag(sTag);
 
 ## Example
 
-This example shows how to get a list of all forms in the document with the specified tag name.
+Get a list of all forms in the document with the specified tag name.
 
 ```javascript editor-docx
 // How to get all forms with a specific tag.
@@ -40,4 +40,3 @@ let forms = doc.GetFormsByTag("form_1");
 forms[0].SetText("John Smith");
 forms[1].SelectListValue("USA");
 ```
-

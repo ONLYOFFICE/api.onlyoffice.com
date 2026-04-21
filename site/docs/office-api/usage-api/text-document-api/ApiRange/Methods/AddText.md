@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example adds a text to the specified position.
+Add a text to the specified position in a document.
 
 ```javascript editor-docx
-// How to add raw text to the range.
+// How to add raw text to the range in a document.
 
-// Change content of the range by adding a text.
+// Change content of the range by adding a text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ let range = doc.GetRange(0, 7);
 range.AddText("ONLYOFFICE ", "before");
 range.AddText(" Builder", "after");
 ```
-

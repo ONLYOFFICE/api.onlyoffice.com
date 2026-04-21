@@ -2,16 +2,16 @@
 
 水平翻转当前绘图。
 
-Inherited from [ApiDrawing.SetHorFlip](../../ApiDrawing/Methods/SetHorFlip.md).
+继承自 [ApiDrawing.SetHorFlip](../../ApiDrawing/Methods/SetHorFlip.md)。
 
 ## 示例
 
-此示例水平翻转绘图。
+在文档中水平翻转绘图对象。
 
 ```javascript editor-docx
-// How to set the horizontal flip property of the shape.
+// How to set the horizontal flip property of the shape in a document.
 
-// Create a drawing, add text to it and flip it horizontally.
+// Create a drawing, add text to it and flip it horizontally in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -21,4 +21,3 @@ let drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);
 drawing.SetHorFlip(true);
 ```
-

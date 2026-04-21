@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the starting value for the numbering used by the parent numbering level within a given numbering level definition.
+Specify the starting value for the numbering used by the parent numbering level within a given numbering level definition in a document.
 
 ```javascript editor-docx
-// How to set the bullet numbering to the paragraph.
+// How to set the bullet numbering to the paragraph in a document.
 
-// Reset the numbering of the bulleted text.
+// Reset the numbering of the bulleted text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -42,4 +42,3 @@ paragraph.SetNumbering(numLvl1);
 paragraph.AddText("This is the first element of a child numbered list which starts with 'e'");
 doc.Push(paragraph);
 ```
-

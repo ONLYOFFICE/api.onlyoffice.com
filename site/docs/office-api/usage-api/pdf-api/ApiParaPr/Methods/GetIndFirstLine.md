@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph first line indentation.
+Get the paragraph first line indentation in a PDF document.
 
 ```javascript editor-pdf
-// How to return the first line identation of a paragraph property.
+// How to return the first line identation of a paragraph property in a PDF document.
 
 // Return the first line indentation of a text property from the page.
 
@@ -53,4 +53,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
 ```
-

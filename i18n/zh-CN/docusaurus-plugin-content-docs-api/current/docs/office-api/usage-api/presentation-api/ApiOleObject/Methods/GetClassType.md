@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查演示文稿中 OLE 对象返回的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiOleObject.
+// How do I check what type an OLE object object is in a presentation?
 
-// Retrieve class type of ApiOleObject object and insert it to the slide.
+// Retrieve and output the class type string for an OLE object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('Class type: ' + sType);
 slide.AddObject(drawing);
 ```
-

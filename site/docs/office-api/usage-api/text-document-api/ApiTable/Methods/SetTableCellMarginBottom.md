@@ -7,7 +7,7 @@ Inherited from [ApiTablePr.SetTableCellMarginBottom](../../ApiTablePr/Methods/Se
 
 ## Example
 
-This example specifies an amount of space which will be left between the bottom extent of the cell contents and the border of all table cells within the parent.
+Specify an amount of space which will be left between the bottom extent of the cell contents and the border of all table cells within the parent.
 
 ```javascript editor-docx
 // How to add margin to the bottom of the cell.
@@ -27,4 +27,3 @@ table.SetStyle(tableStyle);
 let cell = table.GetCell(0, 0).GetContent().GetElement(0).AddText("This is just a sample text to show that the bottom cell margin is 36 points.");
 doc.Push(table);
 ```
-

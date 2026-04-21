@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example sets the footer distance and then reads it back.
+Set the footer distance and then reads it back in a document.
 
 ```javascript editor-docx
-// How to get footer distance of the section.
+// How to get footer distance of the section in a document.
 
 // Retrieve the current distance between the end of the page and the footer.
 
@@ -38,4 +38,3 @@ paragraph = footer.GetElement(0);
 paragraph.AddText("This is a page footer. ");
 paragraph.AddText("The distance from the page bottom to the footer is 1 inch (" + section.GetFooterDistance() + " twentieths of a point).");
 ```
-

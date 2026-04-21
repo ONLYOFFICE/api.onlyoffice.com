@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a content control that contains the paragraph.
+Get a content control that contains the paragraph in a document.
 
 ```javascript editor-docx
-// How to get the parent control of the paragraph.
+// How to get the parent control of the paragraph in a document.
 
-// Make bold the parent element.
+// Make bold the parent element in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -36,4 +36,3 @@ blockLvlSdt.AddElement(paragraph, 0);
 let parentBlockLvlSdt = paragraph.GetParentContentControl();
 parentBlockLvlSdt.GetRange(0, 3).SetBold(true);
 ```
-

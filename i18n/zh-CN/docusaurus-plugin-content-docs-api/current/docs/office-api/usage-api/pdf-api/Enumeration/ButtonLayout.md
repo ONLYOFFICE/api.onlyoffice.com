@@ -15,5 +15,3 @@
 - "iconTextH"
 - "textIconH"
 - "overlay"
-
-

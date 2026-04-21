@@ -20,12 +20,12 @@ expression.RefreshAllPivots();
 
 ## 示例
 
-此示例演示如何刷新活动工作簿中的所有数据透视表。
+如何刷新电子表格中活动工作簿中的所有数据透视表。
 
 ```javascript editor-xlsx
 // How to refresh all pivot tables in a worksheet.
 
-// Refresh all values from the pivot table using a method.
+// Refresh all values from the pivot table using a method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,4 +46,3 @@ Api.GetPivotByName(pivotTable.GetName()).AddFields({
 Api.GetPivotByName(pivotTable.GetName()).AddDataField('Price');
 Api.RefreshAllPivots();
 ```
-

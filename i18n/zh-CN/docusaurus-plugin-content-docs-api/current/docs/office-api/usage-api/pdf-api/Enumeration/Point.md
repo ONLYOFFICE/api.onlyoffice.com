@@ -12,4 +12,3 @@ object
 | ---- | ---- | ----------- |
 | x | [pt](../Enumeration/pt.md) | 未提供描述。 |
 | y | [pt](../Enumeration/pt.md) | 未提供描述。 |
-

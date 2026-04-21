@@ -1,6 +1,6 @@
 # ApiUnderlineAnnotation
 
-ApiUnderlineAnnotation is a subclass of [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md).
+ApiUnderlineAnnotation 是 [ApiBaseMarkupAnnotation](../ApiBaseMarkupAnnotation/ApiBaseMarkupAnnotation.md) 的子类。
 
 ## 方法
 

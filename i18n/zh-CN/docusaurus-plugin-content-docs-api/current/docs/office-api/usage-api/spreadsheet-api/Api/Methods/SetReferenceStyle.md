@@ -22,15 +22,14 @@ expression.SetReferenceStyle(sReferenceStyle);
 
 ## 示例
 
-此示例设置引用样式。
+设置电子表格中的引用样式。
 
 ```javascript editor-xlsx
-// How to set a style of a reference.
+// How to set a style of a reference in a spreadsheet.
 
-// Set reference style using ID.
+// Set reference style using ID in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 Api.SetReferenceStyle("xlR1C1");
 worksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());
 ```
-

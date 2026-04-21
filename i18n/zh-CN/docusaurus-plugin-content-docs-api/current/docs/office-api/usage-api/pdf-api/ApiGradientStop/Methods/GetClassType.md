@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+检查 PDF 文档中渐变光圈返回的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiGradientStop.
+// How do I check what type a gradient stop object is in a PDF document?
 
-// Retrieve class type of ApiGradientStop object and insert it to the page.
+// Retrieve and output the class type string for a gradient stop in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +45,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
 ```
-

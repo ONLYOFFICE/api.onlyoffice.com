@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-此示例展示如何获取应用于引用给定编号定义和编号级别的任何编号段落的段落属性。
+获取应用于文档中引用给定编号定义和编号级别的任何编号段落的段落属性。
 
 ```javascript editor-docx
-// How to retrieve the paragraph properties.
+// How to retrieve the paragraph properties in a document.
 
-// Get the properties of the paragraph of the numbering.
+// Get the properties of the paragraph of the numbering in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -42,4 +42,3 @@ paragraph.AddText("This is the second element of a parent numbered list which st
 paragraph.SetNumbering(numLvl);
 doc.Push(paragraph);
 ```
-

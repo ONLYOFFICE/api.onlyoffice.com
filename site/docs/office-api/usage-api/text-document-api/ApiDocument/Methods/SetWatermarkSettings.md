@@ -22,10 +22,10 @@ expression.SetWatermarkSettings(Settings);
 
 ## Example
 
-This example sets the parameters of the watermark settings and apply them to the document.
+Set the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
-// How to specify the watermark settings such as text and type.
+// How to specify the watermark settings such as text and type in a document.
 
 // Set watermark settings for the document with text properties.
 
@@ -45,4 +45,3 @@ textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);
 ```
-

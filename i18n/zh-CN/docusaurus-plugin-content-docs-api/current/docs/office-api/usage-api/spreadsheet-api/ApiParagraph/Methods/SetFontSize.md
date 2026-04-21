@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例展示如何为形状内段落中的所有文本设置字体大小。
+为电子表格中形状内段落的所有文本设置字体大小。
 
 ```javascript editor-xlsx
+// How do I set font size in a spreadsheet?
+
+// Set font size using a paragraph object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(120, 140, 100));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -44,4 +48,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has the default font size.');
 content.Push(paragraph2);
 ```
-

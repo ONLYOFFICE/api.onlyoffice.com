@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a type of ApiChart class and inserts it into the presentation.
+Find out the class type of a chart object in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiChart.
+// How can I get the class type of a chart in a presentation?
 
-// Retrieve class type of ApiChart object and insert it to the slide.
+// Get the class type of a chart and display it in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

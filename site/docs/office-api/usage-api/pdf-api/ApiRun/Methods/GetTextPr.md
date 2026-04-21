@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties of the run.
+Get the text properties of the run in a PDF document.
 
 ```javascript editor-pdf
-// How to get the text properties of the current ApiRun object and change its font size.
+// How to get the text properties of the current text run object and change its font size in a PDF document.
 
-// Resize a font of a text run.
+// Resize a font of a text run in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +45,3 @@ run.AddText("This is a sample text inside the shape with the font size set to 15
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

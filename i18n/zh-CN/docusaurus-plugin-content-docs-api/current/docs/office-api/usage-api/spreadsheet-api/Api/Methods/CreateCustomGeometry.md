@@ -20,9 +20,13 @@ expression.CreateCustomGeometry();
 
 ## 示例
 
-此示例演示如何创建自定义几何图形。
+在电子表格中创建自定义几何图形。
 
 ```javascript editor-xlsx
+// How can I create custom geometry in a spreadsheet?
+
+// Create custom geometry in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 // Airplane shape in EMU units
 let customGeometry = Api.CreateCustomGeometry();
@@ -148,4 +152,3 @@ let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 80 * 36000, 80 * 36000, fill, stroke, 3, 0, 3, 0);
 shape.SetGeometry(customGeometry);
 ```
-

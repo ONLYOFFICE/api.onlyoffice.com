@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the visual properties of the minor vertical gridline.
+Specify the visual properties of the minor vertical gridline in a spreadsheet.
 
 ```javascript editor-xlsx
-// Set a stroke as a minor vertical gridline.
+// Set a stroke as a minor vertical gridline in a spreadsheet.
 
-// How to add gridlines for the chart.
+// How to add gridlines for the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 5000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMinorVerticalGridlines(stroke);
 ```
-

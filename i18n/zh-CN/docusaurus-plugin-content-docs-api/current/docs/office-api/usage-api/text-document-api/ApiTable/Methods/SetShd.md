@@ -2,16 +2,16 @@
 
 指定应用于当前表格范围的底纹。
 
-Inherited from [ApiTablePr.SetShd](../../ApiTablePr/Methods/SetShd.md).
+继承自 [ApiTablePr.SetShd](../../ApiTablePr/Methods/SetShd.md)。
 
 ## 示例
 
-此示例指定应应用于表格范围的底纹。
+指定在文档中应用于表格范围的底纹。
 
 ```javascript editor-docx
-// How to add shading to the paragraph.
+// How to add shading to the paragraph in a document.
 
-// Apply the clear shading to the paragraph.
+// Apply the clear shading to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -25,4 +25,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

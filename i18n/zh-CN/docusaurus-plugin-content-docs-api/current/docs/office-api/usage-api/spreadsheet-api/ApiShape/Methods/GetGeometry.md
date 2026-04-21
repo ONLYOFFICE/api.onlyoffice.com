@@ -20,10 +20,13 @@ expression.GetGeometry();
 
 ## 示例
 
-从电子表格中的星形中检索几何信息。
+从电子表格中的星形获取几何图形信息。在单元格中显示预设类型和自定义状态。
 
 ```javascript editor-xlsx
-// Displays preset type and custom status in cells.
+// How to get the geometry for a shape in a spreadsheet?
+
+// Get the geometry and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
@@ -32,4 +35,3 @@ let geometry = shape.GetGeometry();
 worksheet.GetRange("A1").SetValue("Preset: " + geometry.GetPreset());
 worksheet.GetRange("A2").SetValue("IsCustom: " + geometry.IsCustom());
 ```
-

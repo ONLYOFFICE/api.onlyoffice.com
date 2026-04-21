@@ -6,9 +6,13 @@ Inherited from [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md)
 
 ## Example
 
-This example shows how to get the rotation angle of the drawing.
+Get the rotation angle of the drawing in a document.
 
 ```javascript editor-docx
+// How do I get the rotation in a document?
+
+// Get the rotation using a drawing object object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
@@ -24,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing rotation angle is: " + rotAngle + " degrees");
 docContent.AddElement(0, paragraph);
 ```
-

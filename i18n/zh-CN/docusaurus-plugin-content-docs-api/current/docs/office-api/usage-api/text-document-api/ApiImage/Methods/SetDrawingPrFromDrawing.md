@@ -3,16 +3,16 @@
 将另一个绘图的属性设置到当前绘图。
 将复制以下属性：水平和垂直对齐方式、当前绘图对象边缘与任何后续文本之间的距离、环绕样式、绘图名称、标题和描述。
 
-Inherited from [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md).
+继承自 [ApiDrawing.SetDrawingPrFromDrawing](../../ApiDrawing/Methods/SetDrawingPrFromDrawing.md)。
 
 ## 示例
 
-此示例将另一个绘图的属性设置到绘图。
+将另一个绘图对象的属性设置到文档中的绘图对象。
 
 ```javascript editor-docx
-// How to apply the properties of one shape to another.
+// How to apply the properties of one shape to another in a document.
 
-// Create the second drawing with the same style.
+// Create the second drawing with the same style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +46,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("It has the same properties (alignment type, distances and wrapping type) as the shape above.");
 doc.Push(paragraph);
 ```
-

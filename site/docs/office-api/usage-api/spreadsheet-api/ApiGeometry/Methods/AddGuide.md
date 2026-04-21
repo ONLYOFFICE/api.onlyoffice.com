@@ -26,10 +26,13 @@ boolean
 
 ## Example
 
-Creates adjustable custom geometry with guides and connection points.
+Create adjustable custom geometry with guides and connection points. Displays adjustment value in a cell and apply geometry to shape.
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How can I add the guide using a geometry in a spreadsheet?
+
+// Add the guide for a geometry in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);
@@ -52,4 +55,3 @@ let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 9, 0, 2, 2);
 shape.SetGeometry(customGeometry);
 ```
-

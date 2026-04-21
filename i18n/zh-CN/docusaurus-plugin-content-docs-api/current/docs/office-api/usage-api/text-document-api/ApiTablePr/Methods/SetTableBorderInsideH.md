@@ -28,12 +28,12 @@ boolean
 
 ## 示例
 
-此示例指定将在所有不在父表格最外边缘的水平表格单元格边框上显示的边框。
+指定在不位于父表格最外边缘的所有水平表格单元格边框上显示的边框。
 
 ```javascript editor-docx
-// How to set inside horizontal border to the table.
+// How to set inside horizontal border to the table in a document.
 
-// How to create a 3x3 table and add the inside horizontal 4 point orange borders.
+// How to create a 3x3 table and add the inside horizontal 4 point orange borders in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -48,4 +48,3 @@ table.SetTableLook(true, true, true, true, false, false);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

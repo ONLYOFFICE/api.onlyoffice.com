@@ -24,10 +24,10 @@ expression.AddRows(oCell, nCount, isBefore);
 
 ## 示例
 
-此示例向表格添加新行。
+在文档中向表格添加新行（多行）。
 
 ```javascript editor-docx
-// How to add rows to the table.
+// How to add rows to the table in a document.
 
 // Get a table cell and insert two new rows after it.
 
@@ -41,4 +41,3 @@ doc.Push(table);
 let cell = table.GetCell(0, 0).GetContent().GetElement(0).AddText("Two new rows were added after this cell.");
 table.AddRows(cell, 2, false);
 ```
-

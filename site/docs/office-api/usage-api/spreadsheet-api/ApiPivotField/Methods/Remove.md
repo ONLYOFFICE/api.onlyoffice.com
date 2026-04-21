@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to remove a pivot field.
+Remove a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete a pivot field.
+// How to delete a pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then remove a specified pivot field.
+// Create a pivot table, add data to it then remove a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ setTimeout(function () {
     pivotField.Remove();
 }, 5000);
 ```
-

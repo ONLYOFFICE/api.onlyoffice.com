@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the strikethrough property to the specified font.
+Set the strikethrough property to the specified font in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make a text strikethrough.
+// How to make a text strikethrough in a spreadsheet.
 
-// Get a font object of characters and make it strikethrough.
+// Get a font object of characters and make it strikethrough in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -37,4 +37,3 @@ let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
 font.SetStrikethrough(true);
 ```
-

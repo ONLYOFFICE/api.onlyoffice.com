@@ -20,12 +20,12 @@ expression.RefreshTable();
 
 ## 示例
 
-此示例展示如何刷新表格。
+刷新电子表格中的表格。
 
 ```javascript editor-xlsx
-// How to refresh table values.
+// How to refresh table values in a spreadsheet.
 
-// Create a pivot table, add data to it then refresh it.
+// Create a pivot table, add data to it then refresh it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ pivotTable.AddDataField('Price');
 
 pivotTable.RefreshTable();
 ```
-

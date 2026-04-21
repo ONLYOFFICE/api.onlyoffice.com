@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## Example
 
-This example shows how to get a Range object that represents the part of the document contained in the specified run.
+Get a Range object that represents the part of the document contained in the specified run in a document.
 
 ```javascript editor-docx
-// Get a range using position index and make it bold.
+// Get a range using position index and make it bold in a document.
 
-// How to get the range where the run is located.
+// How to get the range where the run is located in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ paragraph.AddElement(run);
 let range = run.GetRange(0, 3);
 range.SetBold(true);
 ```
-

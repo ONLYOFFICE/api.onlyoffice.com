@@ -20,10 +20,10 @@ JSON
 
 ## Example
 
-This example converts the ApiSchemeColor object into the JSON object.
+Convert the scheme color object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the color object.
+// How to get a JSON from the color object in a document.
 
 // Convert the RGB color object to json and add it to the document.
 
@@ -37,4 +37,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("curvedUpArrow", 5930900, 595605, fill, stroke);
 paragraph.AddDrawing(drawing);
 ```
-

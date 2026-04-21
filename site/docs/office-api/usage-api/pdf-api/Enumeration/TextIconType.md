@@ -24,5 +24,3 @@ Enumeration
 - "star"
 - "upArrow"
 - "upLeftArrow"
-
-

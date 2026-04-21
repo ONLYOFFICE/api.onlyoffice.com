@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to specify an amount of space which shall be left between the bottom extent of the cell contents and the border of a specific individual table cell within a table.
+Specify an amount of space which shall be left between the bottom extent of the cell contents and the border of a specific individual table cell within a table.
 
 ```javascript editor-pptx
 // How to set the cell bottom margin for the current table cell.
 
-// Specify the bottom margin value for the ApiTableCell object.
+// Specify the bottom margin value for the table cell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,3 @@ cell.SetCellMarginBottom(600);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

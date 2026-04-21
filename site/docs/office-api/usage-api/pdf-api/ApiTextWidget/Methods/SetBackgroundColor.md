@@ -6,9 +6,13 @@ Inherited from [ApiBaseWidget.SetBackgroundColor](../../ApiBaseWidget/Methods/Se
 
 ## Example
 
-This example gets all field widgets and sets background color for them.
+Get all field widgets and set background color for them in a PDF document.
 
 ```javascript editor-pdf
+// How do I set background color in a PDF document?
+
+// Set background color using a widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -22,4 +26,3 @@ widgets.forEach(function(widget) {
     widget.SetBackgroundColor(rgbColor);
 });
 ```
-

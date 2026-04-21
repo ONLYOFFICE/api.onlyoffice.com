@@ -20,10 +20,10 @@ expression.GetPrevious();
 
 ## 示例
 
-此示例展示如何获取上一个段落。
+获取 PDF 文档中的上一个段落。
 
 ```javascript editor-pdf
-// How to get the previous paragraph of the current one.
+// How to get the previous paragraph of the current one in a PDF document.
 
 // Return the previous paragraph on the page and make its text bold.
 
@@ -52,4 +52,3 @@ page.AddObject(shape);
 const previousParagraph = paragraph2.GetPrevious();
 previousParagraph.SetBold(true);
 ```
-

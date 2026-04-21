@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何根据整个总体计算方差（忽略总体中的逻辑值和文本）。
+在电子表格中基于整个总体计算方差（忽略总体中的逻辑值和文本）。
 
 ```javascript editor-xlsx
-// How to estimate variance based on population.
+// How to estimate variance based on population in a spreadsheet.
 
-// Use a function to estimate variance based on population.
+// Use a function to estimate variance based on population in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.VARP(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
 worksheet.GetRange("B2").SetValue(result);
 ```
-

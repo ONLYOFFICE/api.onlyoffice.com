@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除文本块。
+删除 run。
 
 ```javascript editor-docx
 // How to delete the text from the document.
 
-// Remove the text run.
+// Delete for a text run in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run1.RemoveAllElements();
 paragraph.AddLineBreak();
 paragraph.AddText("The first run was removed from the document.");
 ```
-

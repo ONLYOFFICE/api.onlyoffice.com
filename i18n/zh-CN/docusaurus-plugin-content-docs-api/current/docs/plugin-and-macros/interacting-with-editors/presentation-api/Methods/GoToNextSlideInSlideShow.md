@@ -23,4 +23,3 @@ expression.GoToNextSlideInSlideShow();
 ```javascript
 window.Asc.plugin.executeMethod ("GoToNextSlideInSlideShow");
 ```
-

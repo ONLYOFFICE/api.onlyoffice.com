@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to twips.
+Convert points to twips in a presentation.
 
 ```javascript editor-pptx
+// How do I convert points to twips in a presentation?
+
+// Convert points to twips and display the result in a presentation.
+
 const points = 1000;
 const twips = Api.PointsToTwips(points);
 
@@ -40,4 +44,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

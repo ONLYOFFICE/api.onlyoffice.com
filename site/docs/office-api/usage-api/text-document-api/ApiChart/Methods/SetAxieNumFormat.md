@@ -23,10 +23,10 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the axis values.
+Set the specified numeric format to the axis values.
 
 ```javascript editor-docx
-// How to set number format style to the axis. 
+// How to set number format style to the axis.
 
 // Create a chart and format its axis numbering.
 
@@ -43,4 +43,3 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetAxieNumFormat("0.00", "left");
 paragraph.AddDrawing(chart);
 ```
-

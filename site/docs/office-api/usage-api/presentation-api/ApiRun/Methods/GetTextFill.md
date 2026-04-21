@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
 
 ## Example
 
-This example shows how to find out a color of a text.
+Find out a color of a text in a presentation.
 
 ```javascript editor-pptx
-// How to know a color fill of a text.
+// How to know a color fill of a text in a presentation.
 
-// Get the text properties of the run and display its font color.
+// Get the text properties of the run and display its font color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,3 @@ const type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 docContent.Push(paragraph);
 ```
-

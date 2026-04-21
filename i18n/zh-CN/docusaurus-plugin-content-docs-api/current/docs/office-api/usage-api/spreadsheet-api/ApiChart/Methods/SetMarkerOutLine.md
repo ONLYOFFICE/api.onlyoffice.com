@@ -25,14 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置指定图表系列中标记的轮廓。
+在电子表格中为指定图表系列中的标记设置轮廓。
 
 ```javascript editor-xlsx
-// Create the "scatter" chart and set an outline of the specified width and color to its markers.
+// Create the "scatter" chart and set an outline of the specified width and color to its markers in a spreadsheet.
 
-// How to use the ApiStroke object as an outline of the chart markers.
-
-// How to outline the markers of the ApiChart object.
+// Apply a stroke outline to the chart markers using a stroke object.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -56,4 +54,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```
-

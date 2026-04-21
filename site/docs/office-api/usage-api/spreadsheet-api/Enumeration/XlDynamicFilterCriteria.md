@@ -41,5 +41,3 @@ Enumeration
 - "xlFilterTomorrow"
 - "xlFilterYearToDate"
 - "xlFilterYesterday"
-
-

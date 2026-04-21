@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置段落左侧缩进。
+在文档中设置段落左侧缩进。
 
 ```javascript editor-docx
-// How to set the indentation for the paragraph left side.
+// How to set the indentation for the paragraph left side in a document.
 
-// Create a new paragraph and set its left side indentation.
+// Create a new paragraph and set its left side indentation in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -49,4 +49,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 doc.Push(paragraph);
 ```
-

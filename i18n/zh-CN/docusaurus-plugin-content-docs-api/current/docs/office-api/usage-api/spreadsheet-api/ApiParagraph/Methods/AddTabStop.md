@@ -20,12 +20,12 @@ expression.AddTabStop();
 
 ## 示例
 
-此示例向段落添加一个制表位。
+向电子表格中的段落添加制表位。
 
 ```javascript editor-xlsx
-// How to insert a text separated by a tab.
+// How to insert a text separated by a tab in a spreadsheet.
 
-// Get the paragraph from the shape and add two sentences separated by three tabs.
+// Get the paragraph from the shape and add two sentences separated by three tabs in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -39,4 +39,3 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("This is the text which starts after the tab stops.");
 ```
-

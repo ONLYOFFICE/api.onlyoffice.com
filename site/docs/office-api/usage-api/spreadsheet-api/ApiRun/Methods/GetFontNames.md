@@ -20,10 +20,10 @@ string[]
 
 ## Example
 
-This example shows how to get all font names from all elements inside the run.
+Get all font names from all elements inside the run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all font names from the ApiRun object elements.
+// How to get all font names from the text run object elements in a spreadsheet.
 
 // Get all font names from a text run as an array and display it in the worksheet.
 
@@ -51,4 +51,3 @@ for (let i = 0; i < fontNames.length; i++) {
 }
 content.Push(paragraph);
 ```
-

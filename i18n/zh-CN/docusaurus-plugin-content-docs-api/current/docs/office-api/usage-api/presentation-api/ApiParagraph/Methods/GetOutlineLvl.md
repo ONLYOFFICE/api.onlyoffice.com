@@ -2,13 +2,17 @@
 
 返回指定属性的大纲级别。
 
-Inherited from [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md).
+继承自 [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md)。
 
 ## 示例
 
-此示例展示如何通过段落属性获取指定段落的大纲级别。
+通过演示文稿中的段落属性获取指定段落的大纲级别。
 
 ```javascript editor-pptx
+// How can I get the outline lvl using a paragraph properties in a presentation?
+
+// Get the outline lvl for a paragraph properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -33,4 +37,3 @@ text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
 ```
-

@@ -26,10 +26,10 @@ number
 
 ## Example
 
-This example shows how to add the cells specified by a given set of conditions or criteria.
+Add the cells specified by a given set of conditions or criteria in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to sum up all elements under conditions.
+// How to sum up all elements under conditions in a spreadsheet.
 
 // Use a function to estimate a sum from the cells by a given condition.
 
@@ -54,4 +54,3 @@ let range2 = worksheet.GetRange("B1:B6");
 let range3 = worksheet.GetRange("A1:A6");
 worksheet.GetRange("D6").SetValue(func.SUMIFS(range1, range2, "*Apples", range3, 2016));
 ```
-

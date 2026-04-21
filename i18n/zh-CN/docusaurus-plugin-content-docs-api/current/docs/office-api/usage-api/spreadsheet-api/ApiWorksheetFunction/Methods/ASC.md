@@ -22,15 +22,14 @@ string
 
 ## 示例
 
-此示例演示对于双字节字符集 (DBCS) 语言，该函数如何将全角（双字节）字符转换为半角（单字节）字符。
+演示在电子表格中对于双字节字符集 (DBCS) 语言，该函数将全角（双字节）字符更改为半角（单字节）字符。
 
 ```javascript editor-xlsx
-// How to make characters half-width (single-byte) characters.
+// How to make characters half-width (single-byte) characters in a spreadsheet.
 
-// Use function to make characters half-width.
+// Use function to make characters half-width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ASC("text"));
 ```
-

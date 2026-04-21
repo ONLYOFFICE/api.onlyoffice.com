@@ -30,4 +30,3 @@ window.Asc.plugin.executeMethod ("GetAllForms", null, function (data) {
     }
 });
 ```
-

@@ -20,7 +20,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example deletes all conditional formatting from a range.
+Delete all conditional formatting from a range.
 
 ```javascript editor-xlsx
 // How to delete conditional formatting rules from cells.
@@ -47,4 +47,3 @@ worksheet.GetRange("B1").SetValue("Rules before delete: " + formatConditions.Get
 formatConditions.Delete();
 worksheet.GetRange("B2").SetValue("Rules after delete: " + formatConditions.GetCount());
 ```
-

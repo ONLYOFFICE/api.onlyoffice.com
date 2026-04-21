@@ -22,10 +22,10 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-此示例设置当前文本块的文本颜色。
+在电子表格中为当前文本 run 设置文本颜色。
 
 ```javascript editor-xlsx
-// How to color a text object.
+// How to color a text object in a spreadsheet.
 
 // Create a text run object, add a color to it using RGB format.
 
@@ -44,4 +44,3 @@ run.SetFill(fill);
 run.AddText("This is a text run with the font color set to gray.");
 paragraph.AddElement(run);
 ```
-

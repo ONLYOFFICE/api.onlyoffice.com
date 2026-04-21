@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the vertical axis orientation.
+Specify the vertical axis orientation in a document.
 
 ```javascript editor-docx
-// How to set an orientation of vertical axis.
+// How to set an orientation of vertical axis in a document.
 
-// Create a chart, set its properties and its vertical axis orientation.
+// Create a chart, set its properties and its vertical axis orientation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ chart.SetVerAxisOrientation(false);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

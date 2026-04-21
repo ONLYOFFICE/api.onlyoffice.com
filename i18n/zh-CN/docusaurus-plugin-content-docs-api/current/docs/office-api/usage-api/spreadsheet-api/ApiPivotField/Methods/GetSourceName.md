@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取透视字段的源名称。
+获取电子表格中透视字段的源名称。
 
 ```javascript editor-xlsx
-// How to get a pivot field's source name.
+// How to get a pivot field's source name in a spreadsheet.
 
-// Create a pivot table, add data to it then get source name of a specified pivot field.
+// Create a pivot table, add data to it then get source name of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -71,4 +71,3 @@ pivotWorksheet.GetRange('B14').SetValue(pivotField.GetName());
 pivotWorksheet.GetRange('A15').SetValue('Source Style field name');
 pivotWorksheet.GetRange('B15').SetValue(pivotField.GetSourceName());
 ```
-

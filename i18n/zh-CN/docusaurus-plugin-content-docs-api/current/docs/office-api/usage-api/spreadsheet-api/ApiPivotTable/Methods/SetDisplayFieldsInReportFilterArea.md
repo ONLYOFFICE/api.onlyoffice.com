@@ -23,12 +23,12 @@ expression.SetDisplayFieldsInReportFilterArea(type, fields);
 
 ## 示例
 
-此示例展示如何设置表格报表筛选区域值中的显示字段。
+在电子表格中设置表格报表筛选区域的显示字段值。
 
 ```javascript editor-xlsx
-// How to set a display fields in report filter area of a table.
+// How to set a display fields in report filter area of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set a display fields in report filter area.
+// Create a pivot table, add data to it then set a display fields in report filter area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -70,4 +70,3 @@ pivotWorksheet.GetRange('B9').SetValue(info.Type);
 pivotWorksheet.GetRange('A10').SetValue('ReportFilterFields');
 pivotWorksheet.GetRange('B10').SetValue(info.ReportFilterFields);
 ```
-

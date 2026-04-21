@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例展示如何获取文本字段的字符数限制。
+获取文档中文本字段的字符限制。
 
 ```javascript editor-docx
 // How to display the characters limit of the text form.
@@ -38,4 +38,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Characters limit: " + limit);
 doc.Push(paragraph);
 ```
-

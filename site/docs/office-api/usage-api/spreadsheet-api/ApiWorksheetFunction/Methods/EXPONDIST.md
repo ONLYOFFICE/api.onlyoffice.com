@@ -24,16 +24,15 @@ number
 
 ## Example
 
-This example shows how to return the exponential distribution.
+Return the exponential distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the exponential distribution.
+// How to get the exponential distribution in a spreadsheet.
 
-// Use function to calculate an exponential distribution.
+// Use function to calculate an exponential distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.F_DIST(10, 6, 4, false);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

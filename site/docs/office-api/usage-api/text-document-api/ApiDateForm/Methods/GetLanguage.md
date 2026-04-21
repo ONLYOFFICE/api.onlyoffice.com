@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the date language from a date form.
+Get the date language from a date form in a document.
 
 ```javascript editor-docx
 // How to know which language is used for a date form.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has setted language: " + langId);
 doc.Push(paragraph);
 ```
-

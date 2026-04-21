@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何根据作为参数给出的整个总体计算标准差（忽略逻辑值和文本）。
+在电子表格中基于作为参数给出的整个总体计算标准差（忽略逻辑值和文本）。
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population.
+// How to calculate standard deviation based on the entire population in a spreadsheet.
 
-// Use a function to get the standard deviation.
+// Use a function to get the standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -45,4 +45,3 @@ let ans = func.STDEV_P(3,2,3,4,5,6,7,8,9,10,11,12,0,1,13,14,3,5,17,18);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current paragraph from the document content of a shape.
+Get the current paragraph from the document content of a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get current paragraph for a document content?
+
+// Get current paragraph and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -42,4 +46,3 @@ const currentParagraph = content.GetCurrentParagraph();
 const result = currentParagraph ? currentParagraph.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current paragraph: ' + result);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the parameters of the watermark settings and apply them to the document.
+Set the parameters of the watermark settings and apply them to the document.
 
 ```javascript editor-docx
-// How to set the text properties of the watermark.
+// How to set the text properties of the watermark in a document.
 
-// Add text properties to the watermark using its settings.
+// Add text properties to the watermark using its settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
@@ -45,4 +45,3 @@ textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);
 ```
-

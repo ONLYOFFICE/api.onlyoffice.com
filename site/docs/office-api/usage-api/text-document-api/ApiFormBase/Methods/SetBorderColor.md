@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example sets the border color to the form.
+Set the border color to the form.
 
 ```javascript editor-docx
-// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+// Apply an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
 
 // Define the border color of the date form.
 
@@ -35,4 +35,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```
-

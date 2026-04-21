@@ -1,6 +1,6 @@
 # ApiRangeTextPr
 
-ApiRangeTextPr is a subclass of [ApiTextPr](../ApiTextPr/ApiTextPr.md).
+ApiRangeTextPr 是 [ApiTextPr](../ApiTextPr/ApiTextPr.md) 的子类。
 
 ## 方法
 

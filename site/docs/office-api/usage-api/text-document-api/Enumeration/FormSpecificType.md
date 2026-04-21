@@ -18,7 +18,6 @@ Enumeration
 - "complex"
 - "signature"
 
-
 ## Example
 
 Set the "text" form type to the first form of the current document.
@@ -36,4 +35,3 @@ const formData = {
 };
 doc.SetFormsData([formData]);
 ```
-

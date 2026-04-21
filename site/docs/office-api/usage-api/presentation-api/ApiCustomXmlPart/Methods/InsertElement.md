@@ -24,9 +24,13 @@ boolean
 
 ## Example
 
-This example shows how to insert a new XML element into the custom XML part.
+Insert a new XML element into the custom XML part in a presentation.
 
 ```javascript editor-pptx
+// How to insert the element for a custom XML part in a presentation?
+
+// Insert the element and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +50,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after insertion: ' + xml.GetXml());
 ```
-

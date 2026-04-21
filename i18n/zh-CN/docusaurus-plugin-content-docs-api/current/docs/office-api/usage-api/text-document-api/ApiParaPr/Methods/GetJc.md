@@ -20,12 +20,12 @@ expression.GetJc();
 
 ## 示例
 
-此示例展示如何获取段落内容对齐方式。
+获取文档中的段落内容对齐方式。
 
 ```javascript editor-docx
 // Get the justification of the paragraph and show it in the document.
 
-// How to know the justification type of the paragraph.
+// How to know the justification type of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + paraJc);
 doc.Push(paragraph);
 ```
-

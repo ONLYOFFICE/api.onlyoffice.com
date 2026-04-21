@@ -12,5 +12,3 @@ Enumeration
 - "never"
 - "tooBig"
 - "tooSmall"
-
-

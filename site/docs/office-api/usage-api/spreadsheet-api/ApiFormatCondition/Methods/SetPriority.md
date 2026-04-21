@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the priority of a conditional formatting rule.
+Set the priority of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to change the priority value of conditional formatting rules.
@@ -53,4 +53,3 @@ condition1.SetPriority(5);
 worksheet.GetRange("C4").SetValue("New priority:");
 worksheet.GetRange("C5").SetValue(condition1.GetPriority());
 ```
-

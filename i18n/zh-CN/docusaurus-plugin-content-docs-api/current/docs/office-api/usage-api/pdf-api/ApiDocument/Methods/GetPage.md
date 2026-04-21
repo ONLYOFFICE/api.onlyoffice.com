@@ -22,11 +22,14 @@ expression.GetPage(nPos);
 
 ## 示例
 
-此示例获取第一页并设置旋转。
+获取第一页并设置旋转。
 
 ```javascript editor-pdf
+// How to get the page for a document?
+
+// Get the page and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 page.SetRotation(90);
 ```
-

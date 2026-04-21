@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to check whether any of the arguments are true. Returns false only if all arguments are false.
+Check whether any of the arguments are true. Returns false only if all arguments are false in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to use OR logical operator.
+// How to use OR logical operator in a spreadsheet.
 
-// Use a function to apply OR operation.
+// Use a function to apply OR operation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -41,4 +41,3 @@ let func = Api.WorksheetFunction;
 let ans = func.OR(logical1, logical2, logical3);
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

@@ -22,10 +22,10 @@ expression.SetMinPointType(type);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的最小点类型。
+设置数据条条件格式规则的最小点类型。
 
 ```javascript editor-xlsx
-// How to change the type of the minimum condition value.
+// How to change the type of the minimum condition value in a spreadsheet.
 
 // Set the minimum point type of a data bar conditional formatting rule.
 
@@ -51,4 +51,3 @@ dataBar.SetMinPointType("xlConditionValuePercent");
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMinPointType());
 ```
-

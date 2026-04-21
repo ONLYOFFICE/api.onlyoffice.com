@@ -10,5 +10,3 @@
 
 - "freeText"
 - "freeTextCallout"
-
-

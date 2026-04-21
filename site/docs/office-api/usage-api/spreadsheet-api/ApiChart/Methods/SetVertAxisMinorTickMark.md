@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the minor tick mark for the vertical axis.
+Specify the minor tick mark for the vertical axis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a minor tick as a out for the vertical axis labels.
+// How to add a minor tick as an out for the vertical axis labels in a spreadsheet.
 
-// Specifies minor tick mark for the vertical axis.
+// Specify minor tick mark for the vertical axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -53,4 +53,3 @@ chart.SetMarkerFill(fill, 1, 0, true);
 stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```
-

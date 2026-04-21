@@ -26,4 +26,3 @@ window.Asc.plugin.attachEditorEvent("onInsertOleObjects", (arrData) => {
     }
 });
 ```
-

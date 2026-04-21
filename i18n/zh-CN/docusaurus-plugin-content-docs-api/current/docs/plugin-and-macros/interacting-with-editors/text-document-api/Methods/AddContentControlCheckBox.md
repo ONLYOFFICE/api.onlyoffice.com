@@ -37,4 +37,3 @@ window.Asc.plugin.executeMethod ("AddContentControlCheckBox", [
     }
 ]);
 ```
-

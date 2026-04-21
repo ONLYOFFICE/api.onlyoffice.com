@@ -75,5 +75,3 @@
 - "xlValueIsLessThanOrEqualTo"
 - "xlValueIsNotBetween"
 - "xlYearToDate"
-
-

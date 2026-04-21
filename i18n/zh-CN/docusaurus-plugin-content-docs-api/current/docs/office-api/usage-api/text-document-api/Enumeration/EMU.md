@@ -8,7 +8,7 @@ number
 
 ## 示例
 
-此示例将要创建的绘图尺寸设置为宽 100 毫米（10 厘米）、高 100 毫米（10 厘米）。
+将要创建的绘图尺寸设置为宽 100 毫米（10 厘米）、高 100 毫米（10 厘米）。
 
 ```javascript editor-docx
 // How to set a size of the drawing.
@@ -17,4 +17,3 @@ number
 
 drawing.SetSize(100 * 36000, 100 * 36000);
 ```
-

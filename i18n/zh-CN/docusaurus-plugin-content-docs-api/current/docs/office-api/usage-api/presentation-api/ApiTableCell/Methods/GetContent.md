@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-此示例展示如何获取当前单元格的内容。
+获取演示文稿中当前单元格的内容。
 
 ```javascript editor-pptx
-// How to get a content of the ApiTableCell object.
+// How to get a content of the table cell object.
 
-// Return the ApiDocumentContent object from the table cell.
+// Return the document content object from the table cell.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,3 @@ content.Push(paragraph);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

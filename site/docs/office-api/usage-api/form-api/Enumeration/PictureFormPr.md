@@ -11,10 +11,9 @@ Enumeration
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [PictureFormPrBase](../Enumeration/PictureFormPrBase.md)
 
-
 ## Example
 
-This example creates a picture form with the common and specific picture form properties.
+Create a picture form with the common and specific picture form properties.
 
 ```javascript editor-forms
 // How to set the properties to the ApiPictureForm object.
@@ -34,4 +33,3 @@ let pictureFormPr = {
 };
 let pictureForm = Api.CreatePictureForm(pictureFormPr);
 ```
-

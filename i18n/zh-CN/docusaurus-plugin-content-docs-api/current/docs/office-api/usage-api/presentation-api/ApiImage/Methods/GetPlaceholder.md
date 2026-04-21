@@ -2,11 +2,11 @@
 
 返回当前绘图对象的占位符。
 
-Inherited from [ApiDrawing.GetPlaceholder](../../ApiDrawing/Methods/GetPlaceholder.md).
+继承自 [ApiDrawing.GetPlaceholder](../../ApiDrawing/Methods/GetPlaceholder.md)。
 
 ## 示例
 
-此示例演示如何从当前绘图对象获取占位符。
+从演示文稿中当前绘图对象获取占位符。
 
 ```javascript editor-pptx
 // How to get a placeholder of a slide shape.
@@ -34,4 +34,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type of the element from the shape = " + type);
 slide.AddObject(shape);
 ```
-

@@ -23,12 +23,12 @@ expression.CreateStyle(sStyleName, sType);
 
 ## 示例
 
-此示例创建具有 "Heading 1" 类型和 "paragraph" 名称的新样式。
+在文档中创建类型为 "Heading 1"、名称为 "paragraph" 的新样式。
 
 ```javascript editor-docx
-// How to create a paragraph and set its style as a heading.
+// How to create a paragraph and set its style as a heading in a document.
 
-// Set style of the paragraph.
+// Set style of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let heading1Style = doc.CreateStyle("Heading 1", "paragraph");
@@ -47,4 +47,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is just a text.");
 doc.Push(paragraph);
 ```
-

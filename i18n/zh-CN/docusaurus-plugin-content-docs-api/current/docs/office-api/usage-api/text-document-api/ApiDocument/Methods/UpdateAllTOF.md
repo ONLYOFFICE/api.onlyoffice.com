@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例更新当前文档中的所有图表目录。
+更新当前文档中的所有图表目录。
 
 ```javascript editor-docx
-// How to update all table of figures.
+// How to update all table of figures in a document.
 
 // Edit document content, add drawings and update the table of figures.
 
@@ -53,4 +53,3 @@ doc.AddElement(2, paragraph);
 paragraph.AddCaption(" - Sample shape", "Figure", false, "Arabic", false, undefined, "hyphen");
 doc.UpdateAllTOF(false);
 ```
-

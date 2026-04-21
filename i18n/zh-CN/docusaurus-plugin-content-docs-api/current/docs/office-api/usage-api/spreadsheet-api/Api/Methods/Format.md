@@ -23,7 +23,7 @@ string
 
 ## 示例
 
-此示例演示如何获取根据格式表达式中包含的指令格式化的类。
+获取根据格式表达式中的指令格式化的类。
 
 ```javascript editor-xlsx
 // How to set a format for a cell or a range using a format expression.
@@ -34,4 +34,3 @@ let worksheet = Api.GetActiveSheet();
 let format = Api.Format("123456", "$#,##0");
 worksheet.GetRange("A1").SetValue(format);
 ```
-

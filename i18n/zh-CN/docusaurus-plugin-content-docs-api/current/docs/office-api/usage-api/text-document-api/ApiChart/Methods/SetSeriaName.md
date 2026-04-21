@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例为图表的系列设置名称。
+为文档中图表的系列设置名称。
 
 ```javascript editor-docx
-// How to rename a chart seria.
+// How to rename a chart seria in a document.
 
-// Create a chart, set its properties and its series names.
+// Create a chart, set its properties and its series names in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriaName("Projected Sales", 0);
 ```
-

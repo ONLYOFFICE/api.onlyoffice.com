@@ -15,4 +15,3 @@ window.Asc.plugin.attachEditorEvent("onExternalMouseUp", () => {
     document.dispatchEvent(evt);
 });
 ```
-

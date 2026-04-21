@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-此示例展示如何获取下一行。
+获取文档中的下一行。
 
 ```javascript editor-docx
-// Get the next row of the current row.
+// Get the next row of the current row in a document.
 
-// Display the first and the second row.
+// Display the first and the second row in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -37,4 +37,3 @@ row.GetCell(0).GetContent().GetElement(0).AddText("First row");
 row.GetNext().GetCell(0).GetContent().GetElement(0).AddText("Second row");
 doc.Push(table);
 ```
-

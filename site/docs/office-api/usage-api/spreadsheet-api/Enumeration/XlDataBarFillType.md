@@ -10,5 +10,3 @@ Enumeration
 
 - "xlDataBarFillSolid"
 - "xlDataBarFillGradient"
-
-

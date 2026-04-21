@@ -24,9 +24,13 @@ boolean
 
 ## Example
 
-This example shows how to update the value of an existing attribute in a custom XML node.
+Update the value of an existing attribute in a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I update attribute in a spreadsheet?
+
+// Update attribute using a custom XML node object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -43,4 +47,3 @@ bookNode.UpdateAttribute('category', 'ancient');
 const attributes = bookNode.GetAttributes();
 worksheet.GetRange('A1').SetValue('Updated attribute: ' + attributes[0].name + '=' + attributes[0].value);
 ```
-

@@ -24,14 +24,12 @@ boolean
 
 ## 示例
 
-此示例在保留格式和其他内容的同时替换文本。
+替换文本并保留格式和其他内容。
 
 ```javascript editor-docx
-// Adds a text to the first paragraph of the document, sets the bold and italic properties to it, and replaces it with a new text preserving the text style.
+// Add a text to the first paragraph of the document, set the bold and italic properties to it, and replace it with a new text preserving the text style.
 
-// Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.
-
-// How to replace the selected ApiRange object with a new text.
+// Replace each paragraph (or text in cell) in the select with the corresponding text from an array of strings.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +40,3 @@ paragraph.AddText("This is italic text.").SetItalic(true);
 paragraph.GetRange().Select();
 Api.ReplaceTextSmart(["This is the normal text. This bold text was smart replaced. This is italic text."]);
 ```
-

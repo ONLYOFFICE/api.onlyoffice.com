@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the text paddings to the current shape.
+Set the text paddings to the current shape in a presentation.
 
 ```javascript editor-pptx
-// How to update paddings of the drawing.
+// How to update paddings of the drawing in a presentation.
 
-// Create a shape and set its paddings.
+// Create a shape and set its paddings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,3 @@ docContent.Push(paragraph);
 shape.SetPaddings(20 * 36000, 5 * 36000, 5 * 36000, 3 * 36000);
 slide.AddObject(shape);
 ```
-

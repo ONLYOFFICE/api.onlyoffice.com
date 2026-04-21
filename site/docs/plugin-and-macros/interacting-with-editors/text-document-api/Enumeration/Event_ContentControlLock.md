@@ -18,7 +18,6 @@ Enumeration
 - 2
 - 3
 
-
 ## Example
 
 ```javascript
@@ -32,4 +31,3 @@ let documents = [{
 }];
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [documents]);
 ```
-

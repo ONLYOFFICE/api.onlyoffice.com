@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to get the class type of ApiCustomProperties.
+Check the class type returned by a custom properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I check what type a custom properties object is in a spreadsheet?
+
+// Retrieve and output the class type string for a custom properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 const classType = customProps.GetClassType();
@@ -34,4 +38,3 @@ const shape = worksheet.AddShape("rect", 100 * 36000, 50 * 36000, fill, stroke, 
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
 ```
-

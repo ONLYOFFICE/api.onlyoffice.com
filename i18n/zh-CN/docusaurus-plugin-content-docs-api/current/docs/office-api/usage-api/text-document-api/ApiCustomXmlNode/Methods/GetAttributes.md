@@ -20,9 +20,13 @@ expression.GetAttributes();
 
 ## 示例
 
-此示例演示如何检索并显示当前 XML 节点的属性列表。
+获取并显示文档中当前 XML 节点的属性列表。
 
 ```javascript editor-docx
+// How can I get the attributes using a custom XML node in a document?
+
+// Get the attributes for a custom XML node in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -45,4 +49,3 @@ attributes.forEach(function(attribute, index) {
 });
 doc.Push(paragraph);
 ```
-

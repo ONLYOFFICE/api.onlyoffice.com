@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the outline properties from a shape and displays detailed information.
+Get the outline properties from a shape and display detailed information. Creates a shape with a stroke, retrieve it and show stroke details.
 
 ```javascript editor-docx
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// How do I get the line in a document?
+
+// Get the line using a shape object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -47,4 +50,3 @@ if (retrievedStroke) {
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the font size to the horizontal axis labels.
+Set the font size to the horizontal axis labels in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to update font size of the horizontal axis labels.
+// How to update font size of the horizontal axis labels in a spreadsheet.
 
-// Change the size of the horizontal axis labels of the chart.
+// Change the size of the horizontal axis labels of the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -49,4 +49,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

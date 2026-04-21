@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example deletes the table.
+Delete the table in a document.
 
 ```javascript editor-docx
 // How to remove a table from the document.
 
-// Get a table and delete it.
+// Get a table and delete it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -39,4 +39,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The table was removed from the document.");
 doc.Push(paragraph);
 ```
-

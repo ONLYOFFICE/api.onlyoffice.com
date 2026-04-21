@@ -25,12 +25,12 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## 示例
 
-此示例添加批注并为其添加回复。
+在文档中添加批注并进行回复。
 
 ```javascript editor-docx
-// How to reply to the comment.
+// How to reply to the comment in a document.
 
-// Create a comment from a paragraph and add a reply to its first one.
+// Create a comment from a paragraph and add a reply to its first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ Api.AddComment(paragraph, "comment", "John Smith");
 let comments = doc.GetAllComments();
 comments[0].AddReply("reply1", "Mark Potato", "uid-2", 0);
 ```
-

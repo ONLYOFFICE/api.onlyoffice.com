@@ -7,7 +7,7 @@ Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
 
 ## Example
 
-This example shows how to get the text properties from the form.
+Get the text properties from the form in a document.
 
 ```javascript editor-docx
 // How to get a text properties of a text form.
@@ -26,4 +26,3 @@ let formTextPr = textForm.GetTextPr();
 formTextPr.SetItalic(true);
 textForm.SetTextPr(formTextPr);
 ```
-

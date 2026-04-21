@@ -2,16 +2,16 @@
 
 设置当前表格中当前表格行的高度。
 
-Inherited from [ApiTableRowPr.SetHeight](../../ApiTableRowPr/Methods/SetHeight.md).
+继承自 [ApiTableRowPr.SetHeight](../../ApiTableRowPr/Methods/SetHeight.md)。
 
 ## 示例
 
-此示例设置表格中当前表格行的高度。
+设置文档中表格内当前表格行的高度。
 
 ```javascript editor-docx
-// Resize the height of the row.
+// Resize the height of the row in a document.
 
-// How to set a minimum row height of the table.
+// How to set a minimum row height of the table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -26,4 +26,3 @@ tableRowPr.SetHeight("atLeast", 720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

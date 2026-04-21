@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example wraps a run in a mail merge field.
+Wrap a run in a mail merge field in a document.
 
 ```javascript editor-docx
-// How to create a run wrapped in 'Mail Merge Field'.
+// How to create a run wrapped in 'Mail Merge Field' in a document.
 
-// Add a text run to the mail merge field.
+// Add a text run to the mail merge field in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ run.AddText("Surname");
 paragraph.AddElement(run);
 run.WrapInMailMergeField();
 ```
-

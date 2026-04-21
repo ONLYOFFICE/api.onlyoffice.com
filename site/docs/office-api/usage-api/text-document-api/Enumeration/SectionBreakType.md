@@ -22,5 +22,3 @@ Enumeration
 - "evenPage"
 - "continuous"
 - "nextColumn"
-
-

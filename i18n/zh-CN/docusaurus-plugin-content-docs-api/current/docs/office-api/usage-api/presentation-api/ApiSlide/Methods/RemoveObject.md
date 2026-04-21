@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例从当前幻灯片中移除对象（图像、形状或图表）。
+从当前幻灯片移除对象（图像、形状或图表）。
 
 ```javascript editor-pptx
 // How to remove a specific object from the slide.
@@ -48,4 +48,3 @@ slide.AddObject(drawing);
 slide.AddObject(copyDrawing);
 slide.RemoveObject(1, 1);
 ```
-

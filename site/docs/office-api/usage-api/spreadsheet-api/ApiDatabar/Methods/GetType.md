@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the type of data bar conditional formatting rule.
+Get the type of data bar conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to identify the type of conditional formatting rule.
@@ -46,4 +46,3 @@ let conditionType = dataBar.GetType();
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
 ```
-

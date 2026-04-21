@@ -22,12 +22,12 @@ expression.SetTitle(title);
 
 ## 示例
 
-此示例展示如何设置数据透视表的标题。
+在电子表格中设置数据透视表的标题。
 
 ```javascript editor-xlsx
-// How to set table title.
+// How to set table title in a spreadsheet.
 
-// Create a pivot table, add data to it then set its table title.
+// Create a pivot table, add data to it then set its table title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,4 +68,3 @@ pivotWorksheet.GetRange('A11').SetValue('New Pivot Table title');
 pivotTable.SetTitle('My Pivot Table');
 pivotWorksheet.GetRange('B11').SetValue(pivotTable.GetTitle());
 ```
-

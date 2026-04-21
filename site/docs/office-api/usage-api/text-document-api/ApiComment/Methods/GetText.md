@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the comment text.
+Get the comment text in a document.
 
 ```javascript editor-docx
-// How to get a raw text of a comment.
+// How to get a raw text of a comment in a document.
 
 // Get all comments from the presentation and the first one's text.
 
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Comment text: " + text);
 doc.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ expression.GetDirection();
 
 ## 示例
 
-此示例获取水印设置的方向并将其粘贴到文档中。
+获取水印设置方向并将其粘贴到文档中。
 
 ```javascript editor-docx
-// How to get the direction of the text in watermark. 
+// How to get the direction of the text in watermark in a document.
 
-// Get the angle and the direction (for example, "clockwise45") of the watermark text.
+// Get the angle and the direction (for example, "clockwise45") of the watermark text in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
@@ -48,4 +48,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Direction = " + watermarkSettings2.GetDirection());
 doc.Push(paragraph);
 ```
-

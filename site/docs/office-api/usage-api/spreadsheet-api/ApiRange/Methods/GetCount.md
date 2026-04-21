@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get the cells count in the range.
+Get the cells count in the range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find out how many cells a range has.
@@ -35,4 +35,3 @@ let count = worksheet.GetRange("A1:C1").GetCount();
 worksheet.GetRange("A4").SetValue("Count: ");
 worksheet.GetRange("B4").SetValue(count);
 ```
-

@@ -20,9 +20,13 @@ expression.GetBorderColor();
 
 ## 示例
 
-此示例获取字段控件并显示其边框颜色。
+获取字段控件并显示其在 PDF 文档中的边框颜色。
 
 ```javascript editor-pdf
+// How to get the border color for a widget in a PDF document?
+
+// Get the border color and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -37,4 +41,3 @@ widgets.forEach(function(widget) {
 let borderColor = widgets[0].GetBorderColor();
 textField.SetValue('Widgets border color is: ' + borderColor.R + ',' + borderColor.G + ',' + borderColor.B);
 ```
-

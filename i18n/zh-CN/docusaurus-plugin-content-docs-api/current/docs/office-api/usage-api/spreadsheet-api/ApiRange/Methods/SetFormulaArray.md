@@ -22,14 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置范围的数组公式。
+设置范围的数组公式。
 
 ```javascript editor-xlsx
 // How to set the array formula value.
 
-// Set the array formula.
+// Set formula array and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:C3").SetFormulaArray("={1,2,3}");
 ```
-

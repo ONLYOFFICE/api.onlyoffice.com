@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例设置表示对象名称的字符串值。
+在电子表格中设置表示对象名称的字符串值。
 
 ```javascript editor-xlsx
-// How to rename an object.
+// How to rename an object in a spreadsheet.
 
 // Set a new name for an object and display it in the worksheet.
 
@@ -38,4 +38,3 @@ defName.SetName("new_name");
 let newDefName = Api.GetDefName("new_name");
 worksheet.GetRange("A3").SetValue("The new name of the range: " + newDefName.GetName());
 ```
-

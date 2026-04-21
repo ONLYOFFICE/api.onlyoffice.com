@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Check the class type returned by a uni color in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiUniColor.
+// How do I check what type a uni color object is in a document?
 
-// Retrieve class type of ApiUniColor object and insert it to the document.
+// Retrieve and output the class type string for a uni color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 doc.Push(paragraph);
 ```
-

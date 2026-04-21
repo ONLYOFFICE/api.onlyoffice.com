@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-此示例展示如何获取批注回复的数量。
+获取电子表格中批注的回复数量。
 
 ```javascript editor-xlsx
-// How to get a number of replies to the comment.
+// How to get a number of replies to the comment in a spreadsheet.
 
 // Add a comment to the range and display its replies count in the worksheet.
 
@@ -35,4 +35,3 @@ comment.AddReply("Reply 1", "John Smith", "uid-1");
 worksheet.GetRange("A3").SetValue("Comment replies count: ");
 worksheet.GetRange("B3").SetValue(comment.GetRepliesCount());
 ```
-

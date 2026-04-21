@@ -2,16 +2,16 @@
 
 返回指定数据透视表字段是否紧凑的设置。
 
-Inherited from [ApiPivotField.GetLayoutCompactRow](../../ApiPivotField/Methods/GetLayoutCompactRow.md).
+继承自 [ApiPivotField.GetLayoutCompactRow](../../ApiPivotField/Methods/GetLayoutCompactRow.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局紧凑行。
+获取电子表格中透视字段的紧凑行布局。
 
 ```javascript editor-xlsx
-// How to get a compact row layout of a pivot field.
+// How to get a compact row layout of a pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then get a layout compact row of a specified pivot field.
+// Create a pivot table, add data to it then get a layout compact row of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -49,4 +49,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout compact');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutCompactRow());
 ```
-

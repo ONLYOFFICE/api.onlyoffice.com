@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为单选按钮设置单选按钮组的键。
+设置文档中单选按钮的单选组键。
 
 ```javascript editor-docx
 // How to add a radio group to the form.
@@ -45,4 +45,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Radio group name of the radio buttons in this document: " + radioGroup);
 doc.Push(paragraph);
 ```
-

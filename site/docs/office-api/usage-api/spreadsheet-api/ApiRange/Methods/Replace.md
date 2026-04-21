@@ -22,12 +22,12 @@ expression.Replace(oReplaceData);
 
 ## Example
 
-This example replaces specific information to another one in a range.
+Replace specific information to another one in a range.
 
 ```javascript editor-xlsx
-// How to replace one data value with another in a range.
+// How to replace one data value with another in a range in a spreadsheet.
 
-// Create a range and replace its data field value with a new one.
+// Create a range and replace its data field value with a new one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -57,4 +57,3 @@ let replaceData = {
 };
 range.Replace(replaceData);
 ```
-

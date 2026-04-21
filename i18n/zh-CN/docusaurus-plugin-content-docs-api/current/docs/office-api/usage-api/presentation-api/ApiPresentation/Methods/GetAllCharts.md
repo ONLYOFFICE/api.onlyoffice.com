@@ -20,9 +20,13 @@ expression.GetAllCharts();
 
 ## 示例
 
-此示例演示如何获取当前演示文稿中的所有图表对象。
+获取当前演示文稿中的所有图表对象。
 
 ```javascript editor-pptx
+// How can I get all charts using a presentation in a presentation?
+
+// Get all charts for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,4 +53,3 @@ paragraph.AddText('Charts: ' + chartsCount);
 label.SetPosition(36000, 170 * 36000);
 slide.AddObject(label);
 ```
-

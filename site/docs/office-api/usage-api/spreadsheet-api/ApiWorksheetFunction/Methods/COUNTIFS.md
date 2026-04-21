@@ -25,7 +25,7 @@ number
 
 ## Example
 
-This example shows how to count a number of cells specified by a given set of conditions or criteria.
+Count a number of cells specified by a given set of conditions or criteria in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find a number of cells that satisfy a list of conditions.
@@ -52,4 +52,3 @@ let range1 = worksheet.GetRange("B2:B6");
 let range2 = worksheet.GetRange("C2:C6");
 worksheet.GetRange("E6").SetValue(func.COUNTIFS(range1, "*apples", range2, "45"));
 ```
-

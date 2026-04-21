@@ -1,6 +1,6 @@
 # ApiSmartArt
 
-ApiSmartArt is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
+ApiSmartArt 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
 

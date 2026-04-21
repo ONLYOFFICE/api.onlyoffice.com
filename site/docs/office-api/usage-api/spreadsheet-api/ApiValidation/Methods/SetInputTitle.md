@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the input message title.
+Set the input message title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the validation input title.
+// How to set the validation input title in a spreadsheet.
 
-// Set the input title.
+// Set input title for a validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -37,4 +37,3 @@ validation.SetInputTitle("Enter Value");
 validation.SetShowInput(true);
 worksheet.GetRange("B1").SetValue("Input title has been set");
 ```
-

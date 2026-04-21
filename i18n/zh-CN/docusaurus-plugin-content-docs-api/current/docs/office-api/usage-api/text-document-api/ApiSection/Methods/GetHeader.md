@@ -23,12 +23,12 @@ expression.GetHeader(sType, isCreate);
 
 ## 示例
 
-此示例展示如何获取指定页眉类型的内容。
+获取文档中指定页眉类型的内容。
 
 ```javascript editor-docx
 // How to get the header of the page.
 
-// Get the default header from the final section.
+// Get the default header from the final section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ let header = section.GetHeader("default", true);
 paragraph = header.GetElement(0);
 paragraph.AddText("This is a page header");
 ```
-

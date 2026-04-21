@@ -23,12 +23,12 @@ string \| null
 
 ## 示例
 
-此示例演示如何从自定义 XML 部件的根元素获取属性。
+从电子表格中自定义 XML 部件的根元素获取属性。
 
 ```javascript editor-xlsx
-// How to get an attribute from an XML part element.
+// How to get an attribute from an XML part element in a spreadsheet.
 
-// Get an XML attribute.
+// Get an XML attribute using the custom XML part API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -41,4 +41,3 @@ if (rootNodes.length > 0) {
     worksheet.GetRange("A1").SetValue("No root node found");
 }
 ```
-

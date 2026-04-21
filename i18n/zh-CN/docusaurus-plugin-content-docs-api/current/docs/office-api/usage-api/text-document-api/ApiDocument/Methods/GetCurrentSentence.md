@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-此示例展示如何获取当前句子。
+获取文档中的当前句子。
 
 ```javascript editor-docx
 // How to get current sentence of the document.
 
-// Find the current position sentence and add it to the paragraph.
+// Find the current position sentence and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);
@@ -38,4 +38,3 @@ let para2 = Api.CreateParagraph();
 para2.AddText("The current sentence is \"" + doc.GetCurrentSentence() + "\"");
 doc.Push(para2);
 ```
-

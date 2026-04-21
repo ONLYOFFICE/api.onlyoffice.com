@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例为形状设置占位符。
+在演示文稿中为形状设置占位符。
 
 ```javascript editor-pptx
-// How to set a placeholder for a shape.
+// How to set a placeholder for a shape in a presentation.
 
 // Select a shape object from a slide and change its placeholder.
 
@@ -42,4 +42,3 @@ const placeholder = Api.CreatePlaceholder("picture");
 shape.SetPlaceholder(placeholder);
 slide.AddObject(shape);
 ```
-

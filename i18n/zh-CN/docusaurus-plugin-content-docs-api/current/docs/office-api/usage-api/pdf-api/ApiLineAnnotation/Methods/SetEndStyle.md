@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为线条注释设置终点线条样式。
+在 PDF 文档中为线条注释设置终止线条样式。
 
 ```javascript editor-pdf
+// How to set end style for a line annotation in a PDF document?
+
+// Set end style and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 15, y: 15}, {x: 155, y: 30});
 lineAnnot.SetEndStyle("slash");
@@ -32,4 +36,3 @@ let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
 console.log(`End style set to: ${lineAnnot.GetEndStyle()}`);
 ```
-

@@ -22,12 +22,12 @@ expression.SetTextFill(oApiFill);
 
 ## 示例
 
-在此示例中，艺术字文本具有文本填充。
+为文档中的艺术字文本设置文本填充。
 
 ```javascript editor-docx
-// How to color a text object.
+// How to color a text object in a document.
 
-// Create a text run object, add color to it using solid fill.
+// Create a text run object, add color to it using solid fill in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();
@@ -41,4 +41,3 @@ let textArt = Api.CreateWordArt(textPr, "onlyoffice", "textArchUp", null, null, 
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(textArt);
 ```
-

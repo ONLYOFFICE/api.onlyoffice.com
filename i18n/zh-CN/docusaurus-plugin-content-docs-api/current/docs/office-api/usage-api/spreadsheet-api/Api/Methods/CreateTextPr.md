@@ -20,12 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-此示例创建空文本属性。
+在电子表格中创建空的文本属性。
 
 ```javascript editor-xlsx
-// How to set custom properties for an empty text.
+// How to set custom properties for an empty text in a spreadsheet.
 
-// Change a new text properties like font size, font style, etc.
+// Change a new text properties like font size, font style, etc in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,4 +42,3 @@ paragraph.AddText("This is a sample text with the font size set to 30 and the fo
 paragraph.SetTextPr(textPr);
 docContent.Push(paragraph);
 ```
-

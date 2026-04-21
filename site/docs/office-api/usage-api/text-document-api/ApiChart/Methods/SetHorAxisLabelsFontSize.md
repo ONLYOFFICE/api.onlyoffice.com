@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets font size for labels of the horizontal axis.
+Set font size for labels of the horizontal axis in a document.
 
 ```javascript editor-docx
-// How to resize a horizontal axis labels font.
+// How to resize a horizontal axis labels font in a document.
 
-// Create a chart and set its horizontal axis labels font to 8.
+// Create a chart and set its horizontal axis labels font to 8 in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ chart.SetHorAxisLabelsFontSize(8);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to insert a column to the table.
+How to insert a column to the table in a PDF document.
 
 ```javascript editor-pdf
-// Create a 2x4 table, set its position and then insert a column to it.
+// Create a 2x4 table, set its position and then insert a column to it in a PDF document.
+
+// Add the column using a table object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,4 +46,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

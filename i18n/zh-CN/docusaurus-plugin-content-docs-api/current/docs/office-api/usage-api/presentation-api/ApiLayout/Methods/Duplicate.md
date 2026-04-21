@@ -22,7 +22,7 @@ expression.Duplicate(nPos);
 
 ## 示例
 
-此示例创建幻灯片版式的副本并将其应用于另一个幻灯片。
+复制幻灯片版式并将其应用于另一张幻灯片。
 
 ```javascript editor-pptx
 // How to create a duplicate of a slide layout.
@@ -45,4 +45,3 @@ presentation.AddSlide(slide);
 const duplicateLayout = layout.Duplicate(1);
 slide.ApplyLayout(duplicateLayout);
 ```
-

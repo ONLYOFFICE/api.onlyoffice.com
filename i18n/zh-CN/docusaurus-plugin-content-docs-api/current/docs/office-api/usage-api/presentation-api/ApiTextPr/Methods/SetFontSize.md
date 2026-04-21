@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例设置文本块字符的字体大小。
+在演示文稿中为文本 run 的字符设置字体大小。
 
 ```javascript editor-pptx
-// How to change a text font size.
+// How to change a text font size in a presentation.
 
-// Get the text properties of the run and set its font size.
+// Get the text properties of the run and set its font size in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ run.AddText("This is a sample text inside the shape with the font size set to 30
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

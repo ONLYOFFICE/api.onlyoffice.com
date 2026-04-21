@@ -27,16 +27,15 @@ number
 
 ## 示例
 
-此示例演示如何返回累积 beta 概率密度函数。
+在电子表格中返回累积 Beta 概率密度函数。
 
 ```javascript editor-xlsx
-// How to get a result from cumulative beta probability density function.
+// How to get a result from cumulative beta probability density function in a spreadsheet.
 
-// Use function to get the cumulative beta probability density function.
+// Use function to get the cumulative beta probability density function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.BETA_DIST(0.4, 4, 5, false);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

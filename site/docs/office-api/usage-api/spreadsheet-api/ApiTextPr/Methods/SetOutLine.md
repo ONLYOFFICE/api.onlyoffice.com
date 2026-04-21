@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## Example
 
-This example sets the text outline to the current text run
+Set the text outline to the current text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to outline a text with a stroke.
+// How to outline a text with a stroke in a spreadsheet.
 
-// Add text ouline using colored stroke.
+// Add text ouline using colored stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,4 +44,3 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the gray text outline set using the text properties.");
 paragraph.AddElement(run);
 ```
-

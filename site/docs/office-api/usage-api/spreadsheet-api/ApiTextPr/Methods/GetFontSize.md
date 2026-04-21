@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a text font size.
+Get a text font size in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text font size.
+// How to find out a text font size in a spreadsheet.
 
 // Get a text font size and display it in the worksheet.
 
@@ -45,4 +45,3 @@ let fontSize = textProps.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 content.Push(paragraph);
 ```
-

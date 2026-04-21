@@ -20,12 +20,12 @@ expression.GetFunction();
 
 ## 示例
 
-此示例展示如何获取数据字段的函数。
+获取电子表格中数据字段的函数。
 
 ```javascript editor-xlsx
-// How to get a table element function.
+// How to get a table element function in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's function.
+// Create a pivot table, add data to it then display a custom data field's function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ pivotWorksheet.GetRange('A15').SetValue('Functions:');
 pivotWorksheet.GetRange('B15').SetValue(sumDataField.GetFunction());
 pivotWorksheet.GetRange('B16').SetValue(countDataField.GetFunction());
 ```
-

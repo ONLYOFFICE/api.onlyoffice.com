@@ -6,7 +6,7 @@ Inherited from [ApiDrawing.GetPlaceholder](../../ApiDrawing/Methods/GetPlacehold
 
 ## Example
 
-This example shows how to get a placeholder from the current drawing object.
+Get a placeholder from the current drawing object in a presentation.
 
 ```javascript editor-pptx
 // How to get a placeholder of a slide shape.
@@ -34,4 +34,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type of the element from the shape = " + type);
 slide.AddObject(shape);
 ```
-

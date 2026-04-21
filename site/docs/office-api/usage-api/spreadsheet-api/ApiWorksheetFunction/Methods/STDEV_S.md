@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to estimate standard deviation based on a sample (ignores logical values and text in the sample).
+Estimate standard deviation based on a sample (ignores logical values and text in the sample) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the standard deviation based on a sample.
+// How to calculate the standard deviation based on a sample in a spreadsheet.
 
-// Use a function to get the standard deviation.
+// Use a function to get the standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -43,4 +43,3 @@ let ans = func.STDEV_S(3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 0, 1, 13, 14); //i
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

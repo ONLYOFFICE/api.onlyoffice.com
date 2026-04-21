@@ -24,15 +24,14 @@ number
 
 ## 示例
 
-此示例演示如何返回 x 的对数正态累积分布函数的反函数，其中 ln(x) 按指定参数呈正态分布。
+在电子表格中返回 x 的对数正态累积分布函数的逆函数，其中 ln(x) 以指定参数正态分布。
 
 ```javascript editor-xlsx
-// How to get the inverse of the lognormal cumulative distribution function of x.
+// How to get the inverse of the lognormal cumulative distribution function of x in a spreadsheet.
 
-// Use a function to return the inverse of the lognormal cumulative distribution function.
+// Use a function to return the inverse of the lognormal cumulative distribution function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LOGNORM_INV(0.3, 2, 0.2));
 ```
-

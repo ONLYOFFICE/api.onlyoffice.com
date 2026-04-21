@@ -28,12 +28,12 @@ boolean
 
 ## Example
 
-This example checks whether a filter is active on a column.
+Check whether a filter is active on a column in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to see if a given column currently has any filter definition.
+// How to see if a given column currently has any filter definition in a spreadsheet.
 
-// Use ApiFilter.GetOn() to test if a filter is applied.
+// Use ApiFilter.GetOn() to test if a filter is applied in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ if (filters.length > 0) {
     worksheet.GetRange("D1").SetValue(filter.GetOn());    // or filter.On
 }
 ```
-

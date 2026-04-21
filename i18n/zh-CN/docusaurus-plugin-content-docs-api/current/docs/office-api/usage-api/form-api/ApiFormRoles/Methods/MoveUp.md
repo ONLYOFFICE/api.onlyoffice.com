@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何向上移动指定角色。
+在表单文档中上移指定角色。
 
 ```javascript editor-forms
+// How can I move up using a form roles in a form document?
+
+// Move up for a form roles in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -42,4 +46,3 @@ roles.GetAllRoles().forEach(role => {
     orderIndex++;
 });
 ```
-

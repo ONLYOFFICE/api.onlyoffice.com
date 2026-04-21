@@ -13,5 +13,3 @@
 - "Filters"
 - "Values"
 - "Hidden"
-
-

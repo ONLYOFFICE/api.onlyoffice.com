@@ -24,15 +24,14 @@ number
 
 ## 示例
 
-此示例演示如何在另一个字符串中查找指定的子字符串，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
+在电子表格中在另一个字符串中查找指定的子字符串，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
 
 ```javascript editor-xlsx
-// How to get an index of a substring from a string and its double-byte character language.
+// How to get an index of a substring from a string and its double-byte character language in a spreadsheet.
 
-// Use function to find out a starting position of a substring containing in another text and its character set (DBCS).
+// Use function to find out a starting position of a substring containing in another text and its character set (DBCS) in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.FINDB("line", "Online Office"));
 ```
-

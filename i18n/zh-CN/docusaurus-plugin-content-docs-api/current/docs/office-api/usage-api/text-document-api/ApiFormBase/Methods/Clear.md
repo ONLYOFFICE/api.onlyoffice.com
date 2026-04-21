@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例清除当前表单。
+清除当前表单。
 
 ```javascript editor-docx
 // How to remove texy from the form.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document was cleared.");
 doc.Push(paragraph);
 ```
-

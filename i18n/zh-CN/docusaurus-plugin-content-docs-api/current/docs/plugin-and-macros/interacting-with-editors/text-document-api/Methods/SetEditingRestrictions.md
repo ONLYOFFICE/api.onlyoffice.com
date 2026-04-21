@@ -25,4 +25,3 @@ expression.SetEditingRestrictions(restrictions);
 ```javascript
 window.Asc.plugin.executeMethod("SetEditingRestrictions", ["readOnly"]);
 ```
-

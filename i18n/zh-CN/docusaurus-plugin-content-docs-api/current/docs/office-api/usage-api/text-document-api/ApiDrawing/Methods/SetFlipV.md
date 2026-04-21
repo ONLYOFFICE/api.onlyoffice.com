@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何为绘图设置垂直翻转。
+设置文档中绘图对象的垂直翻转。
 
 ```javascript editor-docx
+// How to set flip v for a drawing object in a document?
+
+// Set flip v and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -41,4 +45,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('The right arrow shape above is flipped vertically.');
 doc.Push(paragraph2);
 ```
-

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例展示如何启动邮件合并过程。
+在文档中启动邮件合并过程。
 
 ```javascript editor-docx
-// Wraps the text runs in the mail merge fields, loads the mail merge data into the document, and starts the mail merge process.
+// Wrap the text runs in the mail merge fields, loads the mail merge data into the document, and start the mail merge process.
 
-// How to use the mail merge feature starting from the first mail merge record.
+// How to use the mail merge feature starting from the first mail merge record in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ paragraph.AddText("!");
 Api.LoadMailMergeData([fields, ["Dear", "John", "Smith"], ["Hello", "Lara", "Davis"]]);
 Api.MailMerge(1);
 ```
-

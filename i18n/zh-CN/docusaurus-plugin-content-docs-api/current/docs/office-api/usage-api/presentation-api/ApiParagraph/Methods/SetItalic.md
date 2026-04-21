@@ -22,9 +22,13 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-此示例为文本字符设置斜体属性。
+在演示文稿中为文本字符设置斜体属性。
 
 ```javascript editor-pptx
+// How to set italic for a paragraph in a presentation?
+
+// Set italic and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,4 +43,3 @@ paragraph.AddText('This is a paragraph with the font set to italicized letters.'
 paragraph.SetItalic(true);
 slide.AddObject(shape);
 ```
-

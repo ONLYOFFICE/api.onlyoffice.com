@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example specifies the distance from the bottom edge of the page to the bottom edge of the footer.
+Specify the distance from the bottom edge of the page to the bottom edge of the footer.
 
 ```javascript editor-docx
-// How to set footer distance of the section.
+// How to set footer distance of the section in a document.
 
 // Specify the distance between the page end and the footer.
 
@@ -40,4 +40,3 @@ paragraph = footer.GetElement(0);
 paragraph.AddText("This is a page footer. ");
 paragraph.AddText("The distance from the page bottom to the footer is 1 inch (1440 twentieths of a point).");
 ```
-

@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the show value setting of a data bar conditional formatting rule.
+Set the show value setting of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to control whether the data bar shows the value.
+// How to control whether the data bar shows the value in a spreadsheet.
 
 // Set the show value setting of a data bar conditional formatting rule.
 
@@ -51,4 +51,3 @@ dataBar.SetShowValue(false);
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetShowValue() ? "Yes" : "No");
 ```
-

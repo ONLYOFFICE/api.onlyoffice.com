@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例删除组合框或下拉列表内容控件中的指定项。
+删除文档中组合框或下拉列表内容控件中的指定项目。
 
 ```javascript editor-docx
+// How can I delete using a content control list entry in a document?
+
+// Delete for a content control list entry in a document.
+
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let contentControlList = cc.GetDropdownList();
@@ -34,4 +38,3 @@ listItem.Delete();
 paragraph.AddText("Count of items inside drop-down after delete: " + contentControlList.GetElementsCount());
 doc.AddElement(0, paragraph);
 ```
-

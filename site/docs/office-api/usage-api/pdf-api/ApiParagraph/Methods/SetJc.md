@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
 
 ## Example
 
-This example sets the paragraph contents justification.
+Set the paragraph contents justification in a PDF document.
 
 ```javascript editor-pdf
-// How to set justification using a paragraph properties.
+// How to set justification using a paragraph properties in a PDF document.
 
-// Create a paragraph setting its justification property.
+// Create a paragraph setting its justification property in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -33,4 +33,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
 ```
-

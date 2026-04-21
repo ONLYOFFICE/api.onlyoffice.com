@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the name of the current workbook (filename)
+Get the name of the current workbook (filename) in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I get active sheet using a workbook in a spreadsheet?
+
+// Get active sheet for a workbook in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 
@@ -43,4 +47,3 @@ let shape = worksheet.AddShape(
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Active Sheet Name: ' + worksheetName);
 ```
-

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取透视字段的分类汇总名称。
+获取电子表格中透视字段的小计名称。
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotal name.
+// How to get a pivot field's subtotal name in a spreadsheet.
 
-// Create a pivot table, add data to it then get subtotal name of a specified pivot field.
+// Create a pivot table, add data to it then get subtotal name of a specified pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ pivotField.SetSubtotalName('My name');
 pivotWorksheet.GetRange('A14').SetValue('Region subtotal name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetSubtotalName());
 ```
-

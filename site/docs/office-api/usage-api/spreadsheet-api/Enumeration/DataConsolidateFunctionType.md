@@ -19,5 +19,3 @@ Enumeration
 - "Sum"
 - "Var"
 - "VarP"
-
-

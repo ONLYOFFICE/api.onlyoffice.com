@@ -23,7 +23,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the border which shall be displayed at the top of the table cell.
+Set the border which shall be displayed at the top of the table cell.
 
 ```javascript editor-pptx
 // How to set cell top border with its fill color.
@@ -42,4 +42,3 @@ cell.SetCellBorderTop(2, fill);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

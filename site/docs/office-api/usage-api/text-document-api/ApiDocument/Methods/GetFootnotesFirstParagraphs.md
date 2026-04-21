@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get the first paragraphs from all footnotes in the document.
+Get the first paragraphs from all footnotes in the document.
 
 ```javascript editor-docx
-// How to get the first footnote paragraph, add text to it and make it bold.
+// How to get the first footnote paragraph, add text to it and make it bold in a document.
 
-// Retrieve all footnote first paragraph for further manipulation.
+// Retrieve all footnote first paragraph for further manipulation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 
@@ -35,4 +35,3 @@ let footnotesFirstParagraphs = doc.GetFootnotesFirstParagraphs();
 footnotesFirstParagraphs[0].AddText("Footnote 1");
 footnotesFirstParagraphs[0].SetBold(true);
 ```
-

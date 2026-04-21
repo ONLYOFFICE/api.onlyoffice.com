@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向段落添加文本块。
+在演示文稿中向段落添加 run。
 
 ```javascript editor-pptx
-// Insert a text run to the ApiParagraph object.
+// Insert a text run to the paragraph object in a presentation.
 
-// How to add the ApiRun object to the slide.
+// How to add the text run object to the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ run.AddText("This is the text for a text run. Nothing special.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

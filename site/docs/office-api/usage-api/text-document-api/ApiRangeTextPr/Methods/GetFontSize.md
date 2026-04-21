@@ -6,7 +6,7 @@ Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
 ## Example
 
-This example shows how to get the font size of the text.
+Get the font size of the text in a document.
 
 ```javascript editor-docx
 // How to know the font size of the form.
@@ -34,4 +34,3 @@ let fontSize = textPr.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 doc.Push(paragraph);
 ```
-

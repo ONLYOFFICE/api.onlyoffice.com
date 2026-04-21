@@ -2,11 +2,11 @@
 
 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回「无填充」。
 
-Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md).
+继承自 [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md)。
 
 ## 示例
 
-此示例从条件格式规则获取背景颜色。
+从条件格式规则获取背景颜色。
 
 ```javascript editor-xlsx
 // How to retrieve background colors from conditional formatting rules.
@@ -35,4 +35,3 @@ let currentColor = condition1.GetFillColor();
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
 ```
-

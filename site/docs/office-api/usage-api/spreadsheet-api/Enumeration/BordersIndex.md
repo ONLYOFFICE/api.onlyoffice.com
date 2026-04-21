@@ -17,10 +17,9 @@ Enumeration
 - "InsideHorizontal"
 - "InsideVertical"
 
-
 ## Example
 
-This example sets a bottom black dotted border for a cell.
+Set a bottom black dotted border for a cell.
 
 ```javascript editor-xlsx
 // How to add a border to the cell.
@@ -30,4 +29,3 @@ This example sets a bottom black dotted border for a cell.
 const color = Api.CreateColorFromRGB(0, 0, 0);
 worksheet.GetRange("E2").SetBorders("Bottom", "Dotted", color);
 ```
-

@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
 // How to retrieve the text properties from the watermark and display it in the document.
 
-// Get the text properties from the watermark settings.
+// Get the text properties from the watermark settings in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();
@@ -43,4 +43,3 @@ textPr.SetHighlight("blue");
 watermarkSettings.SetTextPr(textPr);
 doc.SetWatermarkSettings(watermarkSettings);
 ```
-

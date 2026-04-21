@@ -22,9 +22,13 @@ expression.GetElement(pos);
 
 ## 示例
 
-此示例从富文本段落获取元素。
+从 PDF 文档中的富文本段落获取元素。
 
 ```javascript editor-pdf
+// How to get the element for a rich paragraph in a PDF document?
+
+// Get the element and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -40,4 +44,3 @@ run.AddText("Some example text");
 
 console.log("We gets rich run element from rich paragraph and added some text to it");
 ```
-

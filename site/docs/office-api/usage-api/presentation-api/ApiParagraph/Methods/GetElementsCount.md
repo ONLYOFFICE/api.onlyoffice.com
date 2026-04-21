@@ -20,14 +20,12 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the current paragraph.
+Get a number of elements in the current paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to return a number of paragraph elements.
+// Find out how many elements a paragraph has in a presentation.
 
-// Find out how many elements a paragraph has.
-
-// Return a number of element from the ApiParagraph object.
+// Return a number of elements from the paragraph object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,4 +52,3 @@ run.AddTabStop();
 run.AddText("" + paragraph.GetElementsCount());
 slide.AddObject(shape);
 ```
-

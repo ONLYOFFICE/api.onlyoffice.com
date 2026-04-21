@@ -25,6 +25,8 @@ How to create the same page shape.
 ```javascript editor-pdf
 // Get a page shape, add it to the page and create its copy.
 
+// Copy using a drawing object object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,4 +41,3 @@ const copyShape = shape.Copy();
 const newPage = doc.AddPage(1);
 newPage.AddObject(copyShape);
 ```
-

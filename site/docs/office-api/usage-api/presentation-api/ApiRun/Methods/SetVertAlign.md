@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
+Specify the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run in a presentation.
 
 ```javascript editor-pptx
-// How to change a vertical alignment of a text run.
+// How to change a vertical alignment of a text run in a presentation.
 
-// Create a new text run and make it subscript, baseline or superscript.
+// Create a new text run and make it subscript, baseline or superscript in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -64,4 +64,3 @@ run.AddText("This is a text run with the text aligned above the baseline vertica
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

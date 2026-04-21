@@ -4,5 +4,4 @@ An array of points representing a continuous path.
 
 ## Type
 
-array
-
+[Point](../Enumeration/Point.md)[]

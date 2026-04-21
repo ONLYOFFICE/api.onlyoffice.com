@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例返回超链接的屏幕提示文本。
+返回演示文稿中超链接的屏幕提示文本。
 
 ```javascript editor-pptx
+// How to get the screen tip text for a hyperlink in a presentation?
+
+// Get the screen tip text and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -53,4 +57,3 @@ infoParagraph.AddText('Shape hyperlink screen tip: ' + hyperlink.GetScreenTipTex
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
 ```
-

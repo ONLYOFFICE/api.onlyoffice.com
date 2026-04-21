@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the user ID of the comment reply author.
+Get the user ID of the comment reply author in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a reply author's user ID.
+// How to get a reply author's user ID in a spreadsheet.
 
 // Add a reply author's ID to a range of the worksheet.
 
@@ -36,4 +36,3 @@ let reply = comment.GetReply();
 worksheet.GetRange("A3").SetValue("Comment's reply user Id: ");
 worksheet.GetRange("B3").SetValue(reply.GetUserId());
 ```
-

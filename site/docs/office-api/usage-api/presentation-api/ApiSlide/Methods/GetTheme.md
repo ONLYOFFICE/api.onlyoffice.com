@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a theme of the current slide.
+Get a theme of the current slide in a presentation.
 
 ```javascript editor-pptx
 // How to return a theme of the slide.
@@ -53,4 +53,3 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
 ```
-

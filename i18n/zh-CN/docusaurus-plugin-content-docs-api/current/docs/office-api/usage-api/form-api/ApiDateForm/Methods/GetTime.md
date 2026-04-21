@@ -20,12 +20,12 @@ undefined \| number
 
 ## 示例
 
-此示例展示如何从日期表单获取日期时间戳。
+获取文档中日期表单的日期时间戳。
 
 ```javascript editor-forms
 // How to get a time enetered to the date form.
 
-// Display the time from the date and time answer.
+// Display the time from the date and time answer in a document.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first date form from this document has setted time: " + new Date(timeStamp));
 doc.Push(paragraph);
 ```
-

@@ -8,7 +8,7 @@ number
 
 ## Example
 
-This example sets a gradient stop position in 100%.
+Set a gradient stop position in 100%.
 
 ```javascript editor-xlsx
 // How to create a gradient stop using positive percentage.
@@ -17,4 +17,3 @@ This example sets a gradient stop position in 100%.
 
 let gs = Api.CreateGradientStop(Api.RGB(255, 164, 101), 100000);
 ```
-

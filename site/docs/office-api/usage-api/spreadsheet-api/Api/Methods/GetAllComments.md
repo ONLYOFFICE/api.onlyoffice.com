@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all comments from the worksheet.
+Get all comments from the worksheet in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get all comments from the worksheet.
 
-// Get all cell comments.
+// Get all cell comments using the editor API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();Api.AddComment("Comment 1", "John Smith");
 worksheet.GetRange("A4").AddComment("Comment 2", "Mark Potato");
@@ -33,4 +33,3 @@ let arrComments = Api.GetAllComments();
 worksheet.GetRange("A1").SetValue("Comment text: " + arrComments[1].GetText());
 worksheet.GetRange("A2").SetValue("Comment author: " + arrComments[1].GetAuthorName());
 ```
-

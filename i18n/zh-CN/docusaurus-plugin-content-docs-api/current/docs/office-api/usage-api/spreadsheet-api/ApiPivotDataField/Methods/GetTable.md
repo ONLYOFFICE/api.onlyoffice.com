@@ -2,16 +2,16 @@
 
 返回表示当前字段的数据透视表的 ApiPivotTable 对象。
 
-Inherited from [ApiPivotField.GetTable](../../ApiPivotField/Methods/GetTable.md).
+继承自 [ApiPivotField.GetTable](../../ApiPivotField/Methods/GetTable.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的表对象。
+获取电子表格中透视字段的表格对象。
 
 ```javascript editor-xlsx
-// How to get a pivot field's table.
+// How to get a pivot field's table in a spreadsheet.
 
-// Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it.
+// Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,3 @@ let pivotField = pivotTable.GetPivotFields('Style');
 
 pivotField.GetTable().AddDataField('Region');
 ```
-

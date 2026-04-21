@@ -20,7 +20,7 @@ expression.AddDatabar();
 
 ## 示例
 
-此示例向区域添加数据条条件格式。
+向范围添加数据条条件格式。
 
 ```javascript editor-xlsx
 // How to add data bar conditional formatting rules to visualize cell values with bars.
@@ -45,4 +45,3 @@ let formatConditions = dataRange.GetFormatConditions();
 
 formatConditions.AddDatabar();
 ```
-

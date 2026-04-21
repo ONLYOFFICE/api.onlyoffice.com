@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定图表图例的字体大小。
+指定文档中图表图例的字体大小。
 
 ```javascript editor-docx
-// How to resize a legend font size.
+// How to resize a legend font size in a document.
 
-// Create a chart and set a font size of its legend.
+// Create a chart and set a font size of its legend in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ chart.SetLegendFontSize(12);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

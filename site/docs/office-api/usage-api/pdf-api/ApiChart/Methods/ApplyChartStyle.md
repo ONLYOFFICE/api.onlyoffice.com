@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to change a style of a chart.
+How to change a style of a chart in a PDF document.
 
 ```javascript editor-pdf
-// Update chart style.
+// Update chart style in a PDF document.
+
+// Apply chart style for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +51,3 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 page.AddObject(chart);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the presentation width in English measure units.
+Get the presentation width in English measure units in a presentation.
 
 ```javascript editor-pptx
 // How to get a width of the presentation.
 
-// Get a width of the ApiPresentation object.
+// Get a width of the presentation object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,4 +42,3 @@ const width = presentation.GetWidth();
 paragraph.AddText("Width = " + width);
 slide.AddObject(shape);
 ```
-

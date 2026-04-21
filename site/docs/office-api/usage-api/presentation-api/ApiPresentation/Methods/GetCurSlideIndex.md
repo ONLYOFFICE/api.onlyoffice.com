@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get the index for the current slide.
+Get the index for the current slide in a presentation.
 
 ```javascript editor-pptx
 // How to find out a position index of a current slide.
@@ -42,4 +42,3 @@ const currentSlideIndex = presentation.GetCurSlideIndex();
 paragraph.AddText("Current Slide Index = " + currentSlideIndex);
 slide.AddObject(shape);
 ```
-

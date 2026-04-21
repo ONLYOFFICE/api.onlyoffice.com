@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的 XML 字符串表示。
+获取演示文稿中自定义 XML 节点的 XML 字符串表示。
 
 ```javascript editor-pptx
-// How to get XML content from an XML node.
+// How to get XML content from an XML node in a presentation.
 
-// Get XML node content.
+// Get XML node content using the custom XML node API in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -46,4 +46,3 @@ run.AddText("XML content:\n" + xmlString);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

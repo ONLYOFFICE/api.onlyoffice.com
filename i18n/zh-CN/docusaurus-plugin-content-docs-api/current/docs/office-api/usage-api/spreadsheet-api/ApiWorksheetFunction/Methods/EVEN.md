@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何将正数向上舍入、负数向下舍入到最接近的偶数整数。
+在电子表格中将正数向上、负数向下舍入到最接近的偶整数。
 
 ```javascript editor-xlsx
-// How to round up a number.
+// How to round up a number in a spreadsheet.
 
-// Use function to round up positive/negative numbers.
+// Use function to round up positive/negative numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.EVEN(15.67));
 ```
-

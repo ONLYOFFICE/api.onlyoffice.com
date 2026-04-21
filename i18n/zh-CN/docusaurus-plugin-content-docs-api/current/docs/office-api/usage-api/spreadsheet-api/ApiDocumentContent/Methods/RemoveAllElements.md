@@ -21,7 +21,7 @@ boolean
 
 ## 示例
 
-此示例从当前文档或当前文档内容中移除所有元素。
+从当前文档或当前文档内容中移除所有元素。
 
 ```javascript editor-xlsx
 // How to clear a document.
@@ -41,4 +41,3 @@ paragraph.SetJc("left");
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 content.Push(paragraph);
 ```
-

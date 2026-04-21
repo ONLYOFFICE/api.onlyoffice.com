@@ -23,9 +23,13 @@ expression.CreateHyperlink(link, tooltip);
 
 ## 示例
 
-此示例展示如何创建超链接并将其设置到图像。
+在演示文稿中创建超链接并将其设置到图像。
 
 ```javascript editor-pptx
+// How can I create the hyperlink in a presentation?
+
+// Create the hyperlink in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,4 +43,3 @@ slide.AddObject(image);
 const hyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to OnlyOffice website');
 image.SetHyperlink(hyperlink);
 ```
-

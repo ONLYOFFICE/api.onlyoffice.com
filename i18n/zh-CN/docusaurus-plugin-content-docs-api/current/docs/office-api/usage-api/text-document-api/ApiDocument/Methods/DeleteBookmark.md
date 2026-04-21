@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例从文档中删除书签。
+从文档中移除书签。
 
 ```javascript editor-docx
-// How to delete a bookmark knowing its name.
+// How to delete a bookmark knowing its name in a document.
 
-// Remove the bookmark from the range.
+// Remove the bookmark from the range in a document.
 
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The bookmark was removed from this document.");
 doc.Push(paragraph);
 ```
-

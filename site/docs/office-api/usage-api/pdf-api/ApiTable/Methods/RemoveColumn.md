@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to delete a column from the table.
+How to delete a column from the table in a PDF document.
 
 ```javascript editor-pdf
 // Create a table, create cells and remove the whole column by its cell.
+
+// Use table to remove the column in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

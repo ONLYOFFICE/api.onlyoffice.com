@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the type of a top 10 conditional formatting rule.
+Get the type of a top 10 conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the type for a top 10 conditional format?
+
+// Get the type and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Employee');
@@ -53,4 +57,3 @@ worksheet.GetRange('E2').SetValue(conditionType);
 worksheet.GetRange('D3').SetValue('Rank:');
 worksheet.GetRange('E3').SetValue(top10Condition.GetRank());
 ```
-

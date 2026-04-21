@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## 示例
 
-此示例从可用颜色预设中选择一个来创建颜色。
+在电子表格中从可用的颜色预设中选择创建颜色。
 
 ```javascript editor-xlsx
-// How to get a color from a preset.
+// How to get a color from a preset in a spreadsheet.
 
-// Color a shape background using a color from a preset. 
+// Color a shape background using a color from a preset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let presetColor = Api.CreatePresetColor("peachPuff");
@@ -37,4 +37,3 @@ let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```
-

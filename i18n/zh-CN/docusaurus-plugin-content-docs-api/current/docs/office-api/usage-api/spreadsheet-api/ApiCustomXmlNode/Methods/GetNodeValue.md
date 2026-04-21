@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取自定义 XML 节点的值。
+获取电子表格中自定义 XML 节点的值。
 
 ```javascript editor-xlsx
+// How to get the node value for a custom XML node in a spreadsheet?
+
+// Get the node value and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -38,4 +42,3 @@ const animalNode = xml.GetNodes('/zoo/animal')[0];
 const nodeValue = animalNode.GetNodeValue();
 worksheet.GetRange('A1').SetValue('Node value: ' + nodeValue);
 ```
-

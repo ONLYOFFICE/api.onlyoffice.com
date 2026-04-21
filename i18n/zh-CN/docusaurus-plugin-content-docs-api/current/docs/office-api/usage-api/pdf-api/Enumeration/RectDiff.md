@@ -11,7 +11,7 @@
 
 ## 类型
 
-array
+[pt](../Enumeration/pt.md)[]
 
 ## 属性
 
@@ -21,4 +21,3 @@ array
 | 1 | [pt](../Enumeration/pt.md) | dy1（上增量） |
 | 2 | [pt](../Enumeration/pt.md) | dx2（右增量） |
 | 3 | [pt](../Enumeration/pt.md) | dy2（下增量） |
-

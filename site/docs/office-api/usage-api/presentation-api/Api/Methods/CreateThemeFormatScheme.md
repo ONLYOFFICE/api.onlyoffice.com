@@ -25,7 +25,7 @@ expression.CreateThemeFormatScheme(arrFill, arrBgFill, arrLine, sName);
 
 ## Example
 
-This example shows how to create a new theme format scheme.
+Create a new theme format scheme in a presentation.
 
 ```javascript editor-pptx
 // How to change theme format of the theme.
@@ -56,4 +56,3 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme = Api.CreateTheme("New theme", master, clrScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
 ```
-

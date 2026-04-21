@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiThemeFontScheme 对象转换为 JSON 对象。
+在演示文稿中将主题字体方案对象转换为 JSON 对象。
 
 ```javascript editor-pptx
-// How to convert a ApiThemeFontScheme object to a JSON object.
+// How to convert a theme font scheme object to a JSON object in a presentation.
 
-// Create a ApiThemeFontScheme, convert it to JSON and create a new object from it.
+// Create a theme font scheme, convert it to JSON and create a new object from it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,4 +55,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type = " + sType);
 slide.AddObject(shape);
 ```
-

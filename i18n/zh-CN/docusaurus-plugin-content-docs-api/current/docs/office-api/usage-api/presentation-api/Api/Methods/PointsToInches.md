@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为英寸。
+在演示文稿中将磅转换为英寸。
 
 ```javascript editor-pptx
+// How to convert points to inches in a presentation?
+
+// Convert points to inches using the presentation API.
+
 const points = 1000;
 const inches = Api.PointsToInches(points);
 
@@ -40,4 +44,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

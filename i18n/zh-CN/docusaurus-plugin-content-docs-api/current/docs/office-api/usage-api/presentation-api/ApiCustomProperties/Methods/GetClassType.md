@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取 ApiCustomProperties 的类类型。
+检查演示文稿中自定义属性返回的类类型。
 
 ```javascript editor-pptx
+// How do I check what type a custom properties object is in a presentation?
+
+// Retrieve and output the class type string for a custom properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 const classType = customProps.GetClassType();
@@ -37,4 +41,3 @@ slide.AddObject(shape);
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
 ```
-

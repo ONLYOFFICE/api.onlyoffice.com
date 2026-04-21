@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取数据透视表的表格样式行条纹。
+获取电子表格中数据透视表的表格样式行条纹。
 
 ```javascript editor-xlsx
-// How to get table style row stripes.
+// How to get table style row stripes in a spreadsheet.
 
-// Create a pivot table, add data to it then get its table style row stripes.
+// Create a pivot table, add data to it then get its table style row stripes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -62,4 +62,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A12').SetValue('Table Style Row Stripes');
 pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetTableStyleRowStripes());
 ```
-

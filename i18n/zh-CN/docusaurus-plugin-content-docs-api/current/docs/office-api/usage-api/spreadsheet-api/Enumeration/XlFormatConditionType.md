@@ -21,5 +21,3 @@
 - "xlColorScale"
 - "xlDatabar"
 - "xlIconSets"
-
-

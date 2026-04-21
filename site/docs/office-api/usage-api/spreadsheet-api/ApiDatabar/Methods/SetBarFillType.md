@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the bar fill type of a data bar conditional formatting rule.
+Set the bar fill type of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the fill type setting of a data bar.
+// How to change the fill type setting of a data bar in a spreadsheet.
 
 // Set the bar fill type of a data bar conditional formatting rule.
 
@@ -51,4 +51,3 @@ dataBar.SetBarFillType("xlDataBarFillSolid");
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetBarFillType());
 ```
-

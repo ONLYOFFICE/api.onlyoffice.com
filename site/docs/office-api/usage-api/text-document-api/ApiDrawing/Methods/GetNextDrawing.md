@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the next inline drawing object if exists.
+Get the next inline drawing object if exists in a document.
 
 ```javascript editor-docx
-// How to set horizontal flip for the next drawing.
+// How to set horizontal flip for the next drawing in a document.
 
-// Get the next drawing and update its properties.
+// Get the next drawing and update its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ paragraph.AddDrawing(copyDrawing);
 let nextDrawing = drawing.GetNextDrawing();
 nextDrawing.SetHorFlip(true);
 ```
-

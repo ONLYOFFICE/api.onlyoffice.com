@@ -11,4 +11,3 @@ Object
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | username | [UserReviewChanges](../Enumeration/UserReviewChanges.md) | The review changes grouped by username. |
-

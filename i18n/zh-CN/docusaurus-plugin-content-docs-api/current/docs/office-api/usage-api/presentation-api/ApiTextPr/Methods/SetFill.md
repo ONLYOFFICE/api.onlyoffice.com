@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-此示例设置文本块的文本颜色。
+在演示文稿中为文本 run 设置文本颜色。
 
 ```javascript editor-pptx
-// How to change a color of a text.
+// How to change a color of a text in a presentation.
 
-// Get the text properties of the run and color its font.
+// Get the text properties of the run and color its font in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ run.AddText("This is a text run with the font color set to black using the text 
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

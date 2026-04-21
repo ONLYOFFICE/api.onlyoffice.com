@@ -2,13 +2,17 @@
 
 为当前表单设置标签属性。
 
-Inherited from [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md).
+继承自 [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md)。
 
 ## 示例
 
-此示例展示如何设置表单元素的标签。
+设置文档中表单元素的标签。
 
 ```javascript editor-forms
+// How to set tag for a form base?
+
+// Set tag and display the result in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -31,4 +35,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
 ```
-

@@ -2,16 +2,16 @@
 
 从当前文本属性获取文本颜色。
 
-Inherited from [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md).
+继承自 [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md)。
 
 ## 示例
 
-此示例演示如何确定文本颜色。
+获取 PDF 文档中的文本颜色。
 
 ```javascript editor-pdf
-// How to know with which color a text is filled.
+// How to know with which color a text is filled in a PDF document.
 
-// Get the text properties of the run and get its font color.
+// Get the text properties of the run and get its font color in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,4 +40,3 @@ const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);
 ```
-

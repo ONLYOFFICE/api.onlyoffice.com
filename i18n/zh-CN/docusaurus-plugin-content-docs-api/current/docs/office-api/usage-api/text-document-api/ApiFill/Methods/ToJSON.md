@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiFill 对象转换为 JSON 对象。
+将文档中的填充对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON object from the fill object.
+// How to get a JSON object from the fill object in a document.
 
-// Convert the radial gradient fill to json and add it to the paragraph.
+// Convert the radial gradient fill to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 1908000, 1404000, fillFromJSON, stroke);
 paragraph.AddDrawing(drawing);
 ```
-

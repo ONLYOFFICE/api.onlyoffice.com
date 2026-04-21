@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the document final section.
+Get the document final section in a document.
 
 ```javascript editor-docx
 // How to get the last section of the document.
 
-// Update the header of the final section.
+// Update the header of the final section in a document.
 
 let doc = Api.GetDocument();
 let section = doc.GetFinalSection();
@@ -42,4 +42,3 @@ paraPr.SetSpacingAfter(200);
 paragraph = doc.GetElement(0);
 paragraph.AddText("This is a text in a paragraph.");
 ```
-

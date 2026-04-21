@@ -2,11 +2,11 @@
 
 返回当前表单的提示文本。
 
-Inherited from [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md).
+继承自 [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md)。
 
 ## 示例
 
-此示例展示如何获取表单的提示文本。
+获取文档中表单的提示文本。
 
 ```javascript editor-forms
 // Get a comboBox form tip text and show it in the document.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tip text: " + tipText);
 doc.Push(paragraph);
 ```
-

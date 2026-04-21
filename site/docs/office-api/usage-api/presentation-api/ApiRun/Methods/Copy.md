@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the run.
+Create a copy of the run in a presentation.
 
 ```javascript editor-pptx
-// How to copy a text run object and insert it to the paragraph.
+// How to copy a text run object and insert it to the paragraph in a presentation.
 
-// Create a duplicate of a text.
+// Create a duplicate of a text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,4 +46,3 @@ const copyRun = run.Copy();
 paragraph.AddElement(copyRun);
 slide.AddObject(shape);
 ```
-

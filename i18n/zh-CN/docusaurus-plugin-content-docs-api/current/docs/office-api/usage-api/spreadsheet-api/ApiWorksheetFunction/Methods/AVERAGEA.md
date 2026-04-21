@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何返回指定参数的平均值（算术平均数）。
+在电子表格中返回指定参数的平均值（算术平均数）。
 
 ```javascript editor-xlsx
-// How to find an average (arithmetic mean).
+// How to find an average (arithmetic mean) in a spreadsheet.
 
-// Use function to get the find an average (arithmetic mean).
+// Use function to get the find an average (arithmetic mean) in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.AVERAGEA(78, 98, 46, 123, 45, true, false);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

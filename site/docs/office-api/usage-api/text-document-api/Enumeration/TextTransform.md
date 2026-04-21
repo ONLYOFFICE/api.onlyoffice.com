@@ -50,10 +50,9 @@ Enumeration
 - "textWave4"
 - "textNoShape"
 
-
 ## Example
 
-This example creates a Text Art object with the "textArchUp" text transform type.
+Create a Text Art object with the "textArchUp" text transform type.
 
 ```javascript editor-docx
 // How to create a word art with adding properties like fill color, size, and transform type to it.
@@ -62,4 +61,3 @@ This example creates a Text Art object with the "textArchUp" text transform type
 
 let textArt = Api.CreateWordArt(oTextPr, "onlyoffice", "textArchUp", fill, stroke, 0, 150 * 36000, 50 * 36000);
 ```
-

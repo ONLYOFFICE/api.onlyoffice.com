@@ -2,14 +2,14 @@
 
 指定在使用分页视图呈现文档时，尽可能将当前段落的内容至少部分地与下一段落呈现在同一页上。
 
-Inherited from [ApiParaPr.SetKeepNext](../../ApiParaPr/Methods/SetKeepNext.md).
+继承自 [ApiParaPr.SetKeepNext](../../ApiParaPr/Methods/SetKeepNext.md)。
 
 ## 示例
 
-此示例指定在使用分页视图呈现文档时，尽可能将段落的内容至少部分地与下一段落呈现在同一页上。
+指定在使用分页视图呈现文档时，尽可能将段落的内容至少部分地与下一段落呈现在同一页上。
 
 ```javascript editor-docx
-// How to partly keep lines of the paragraph content.
+// How to partly keep lines of the paragraph content in a document.
 
 // How to try to keep all lines of the paragraph on the same page.
 
@@ -35,4 +35,3 @@ for (let i = 0; i < 10; ++i) {
 }
 doc.Push(paragraph);
 ```
-

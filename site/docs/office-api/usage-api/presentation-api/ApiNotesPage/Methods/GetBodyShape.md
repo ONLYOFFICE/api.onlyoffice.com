@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the body shape from a notes page.
+Get the body shape from a notes page in a presentation.
 
 ```javascript editor-pptx
+// How to get the body shape for a notes page?
+
+// Get the body shape and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const notesPage = slide.GetNotesPage();
@@ -49,4 +53,3 @@ paragraph.AddText(message);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

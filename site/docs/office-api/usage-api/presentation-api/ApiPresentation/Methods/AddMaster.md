@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example adds the slide master to the presentation slide masters collection.
+Add the slide master to the presentation slide masters collection.
 
 ```javascript editor-pptx
 // How to add a presentation master.
 
-// Create a shape and set its placeholder type to "chart".
+// Create a shape and set its placeholder type to "chart" in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after adding new master: " + countAfter);
 slide.AddObject(shape);
 ```
-

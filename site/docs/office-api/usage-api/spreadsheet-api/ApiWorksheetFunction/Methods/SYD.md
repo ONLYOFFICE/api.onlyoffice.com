@@ -25,15 +25,14 @@ number
 
 ## Example
 
-This example shows how to return the sum-of-years' digits depreciation of an asset for a specified period.
+Return the sum-of-years' digits depreciation of an asset for a specified period in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the sum-of-years' digits depreciation.
+// How to calculate the sum-of-years' digits depreciation in a spreadsheet.
 
-// Use a function to estimate the sum-of-years' digits depreciation of an asset.
+// Use a function to estimate the sum-of-years' digits depreciation of an asset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SYD(3500, 500, 5, 3));
 ```
-

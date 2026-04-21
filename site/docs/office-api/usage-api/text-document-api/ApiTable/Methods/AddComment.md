@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## Example
 
-This example adds a comment to all contents of the table.
+Add a comment to all contents of the table in a document.
 
 ```javascript editor-docx
-// How to add comment to the table indicating its author name.
+// How to add comment to the table indicating its author name in a document.
 
-// Insert a comment into a table.
+// Insert a comment into a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -45,4 +45,3 @@ let cell = table.GetCell(0, 0);
 table.AddElement(cell, 0, paragraph);
 table.AddComment("comment", "John Smith");
 ```
-

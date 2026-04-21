@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart legend.
+Set the fill to the chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to fill the chart legend with the solid fill.
+// How to fill the chart legend with the solid fill in a spreadsheet.
 
-// Color the legend of the chart.
+// Color the legend of the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetLegendFill(fill);
 ```
-

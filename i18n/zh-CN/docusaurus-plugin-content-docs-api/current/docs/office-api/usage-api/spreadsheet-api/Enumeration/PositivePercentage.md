@@ -8,7 +8,7 @@ number
 
 ## 示例
 
-此示例将渐变停止位置设置为 100%。
+将渐变停止位置设置为 100%。
 
 ```javascript editor-xlsx
 // How to create a gradient stop using positive percentage.
@@ -17,4 +17,3 @@ number
 
 let gs = Api.CreateGradientStop(Api.RGB(255, 164, 101), 100000);
 ```
-

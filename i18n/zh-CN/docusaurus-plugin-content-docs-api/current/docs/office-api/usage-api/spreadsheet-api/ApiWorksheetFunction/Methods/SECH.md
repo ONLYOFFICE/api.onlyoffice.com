@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回角的双曲正割。
+在电子表格中返回角度的双曲正割值。
 
 ```javascript editor-xlsx
-// How to get angle's hyperbolic secant.
+// How to get angle's hyperbolic secant in a spreadsheet.
 
-// Use a function to calculate the hyperbolic secant of an angle.
+// Use a function to calculate the hyperbolic secant of an angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SECH(0.785398));
 ```
-

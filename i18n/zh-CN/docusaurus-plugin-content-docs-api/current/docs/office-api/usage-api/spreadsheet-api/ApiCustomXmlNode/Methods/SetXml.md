@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何替换自定义 XML 节点的 XML 内容。
+替换电子表格中自定义 XML 节点的 XML 内容。
 
 ```javascript editor-xlsx
+// How can I set xml using a custom XML node in a spreadsheet?
+
+// Set xml for a custom XML node in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -41,4 +45,3 @@ bookNode.SetXml('<book><title>New Book</title></book>');
 worksheet.GetRange('A1').SetValue('XML after replacement:');
 worksheet.GetRange('A2').SetValue(xml.GetXml());
 ```
-

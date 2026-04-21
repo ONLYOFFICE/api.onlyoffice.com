@@ -11,5 +11,3 @@ Enumeration
 - "top"
 - "center"
 - "bottom"
-
-

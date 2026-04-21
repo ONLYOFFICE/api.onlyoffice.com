@@ -25,4 +25,3 @@ expression.RejectReviewChanges(isAll);
 ```javascript
 window.Asc.plugin.executeMethod ("RejectReviewChanges", [true]);
 ```
-

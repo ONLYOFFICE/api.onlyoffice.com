@@ -22,15 +22,14 @@ string
 
 ## 示例
 
-此示例演示如何将文本字符串转换为全部大写字母。
+在电子表格中将文本字符串转换为全部大写字母。
 
 ```javascript editor-xlsx
-// How to make a string characters uppercase.
+// How to make a string characters uppercase in a spreadsheet.
 
-// Use a function to convert all letters to uppercase.
+// Use a function to convert all letters to uppercase in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.UPPER("Online Office"));
 ```
-

@@ -22,4 +22,3 @@ expression.ReplacePageContent(nPage, oParams);
 ## Returns
 
 boolean
-

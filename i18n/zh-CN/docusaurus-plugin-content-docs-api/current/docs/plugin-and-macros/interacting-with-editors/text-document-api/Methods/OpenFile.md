@@ -26,4 +26,3 @@ expression.OpenFile(binaryFile, fields);
 ```javascript
 window.Asc.plugin.executeMethod ("OpenFile", [[Uint8Array], ["id", "name"]]);
 ```
-

@@ -18,5 +18,3 @@
 - "xlLastMonth"
 - "xlThisMonth"
 - "xlNextMonth"
-
-

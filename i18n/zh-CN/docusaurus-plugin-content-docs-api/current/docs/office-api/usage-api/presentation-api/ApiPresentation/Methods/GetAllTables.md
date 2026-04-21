@@ -20,9 +20,13 @@ expression.GetAllTables();
 
 ## 示例
 
-此示例演示如何获取包含演示文稿中所有表格的数组。
+获取演示文稿中所有表格的数组。
 
 ```javascript editor-pptx
+// How can I get all tables using a presentation in a presentation?
+
+// Get all tables for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
@@ -55,4 +59,3 @@ paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().l
 paragraph.AddLineBreak();
 paragraph.AddText("Total number of tables in presentation: " + presentation.GetAllTables().length);
 ```
-

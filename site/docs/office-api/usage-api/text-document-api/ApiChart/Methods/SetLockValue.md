@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetLockValue](../../ApiDrawing/Methods/SetLockValue.m
 
 ## Example
 
-This example sets the lock value to the specified lock type of the current drawing.
+Set the lock value to the specified lock type of the current drawing in a document.
 
 ```javascript editor-docx
-// How to set the lock value to "noSelect" of the drawing.
+// How to set the lock value to "noSelect" of the drawing in a document.
 
-// Create a drawing and lock it.
+// Create a drawing and lock it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 ```
-

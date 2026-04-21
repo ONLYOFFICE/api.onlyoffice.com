@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the net present value for a schedule of cash flows.
+Return the net present value for a schedule of cash flows in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the net present value for a schedule of cash flows.
+// How to return the net present value for a schedule of cash flows in a spreadsheet.
 
-// Use a function to return the net present value.
+// Use a function to return the net present value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -51,4 +51,3 @@ let range1 = worksheet.GetRange("B2:B5");
 let range2 = worksheet.GetRange("C2:C5");
 worksheet.GetRange("D5").SetValue(func.XNPV(0.05, range1, range2));
 ```
-

@@ -23,12 +23,12 @@ expression.CreateSection(oParagraph);
 
 ## Example
 
-This example creates a new document section which ends at the specified paragraph.
+Create a new document section which ends at the specified paragraph.
 
 ```javascript editor-docx
-// How to create a section indicating its size, margins, etc.
+// How to create a section indicating its size, margins, etc in a document.
 
-// Create a paragraph under the section.
+// Create a paragraph under the section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,4 +47,3 @@ paragraph.SetSpacingAfter(360);
 paragraph.AddText("This is a paragraph in a new section");
 doc.Push(paragraph);
 ```
-

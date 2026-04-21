@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get the previous chart.
+Get the previous chart in a document.
 
 ```javascript editor-docx
-// How to update minor horizontal gridlines of the previous chart.
+// How to update minor horizontal gridlines of the previous chart in a document.
 
-// Get the previous chart and set its horizontal lines as a stroke. 
+// Get the previous chart and set its horizontal lines as a stroke in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,4 +49,3 @@ let prevChart = copyChart.GetPrevChart();
 let stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 prevChart.SetMinorHorizontalGridlines(stroke);
 ```
-

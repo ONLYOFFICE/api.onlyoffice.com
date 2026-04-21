@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.ClearLabelFilters](../../ApiPivotField/Methods/Cle
 
 ## Example
 
-This example shows how to clear label filters from a pivot field.
+Clear label filters from a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field label filters.
+// How to remove previously applied pivot field label filters in a spreadsheet.
 
-// Create a pivot table, add data to it then delete label filters from a custom field.
+// Create a pivot table, add data to it then delete label filters from a custom field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 let pivotField = pivotTable.GetPivotFields('Region');
 pivotField.ClearLabelFilters();
 ```
-

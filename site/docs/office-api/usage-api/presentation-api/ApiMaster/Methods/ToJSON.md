@@ -22,7 +22,7 @@ JSON
 
 ## Example
 
-This example converts the ApiMaster object into the JSON object.
+Convert the slide master object into the JSON object.
 
 ```javascript editor-pptx
 // How to convert a slide master object to a JSON object.
@@ -48,4 +48,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
 ```
-

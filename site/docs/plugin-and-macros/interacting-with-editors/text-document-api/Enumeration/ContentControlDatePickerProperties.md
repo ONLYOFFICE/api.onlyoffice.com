@@ -23,4 +23,3 @@ let controlDatePickerPr = {
 };
 window.Asc.plugin.executeMethod ("AddContentControlDatePicker", [controlDatePickerPr, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
 ```
-

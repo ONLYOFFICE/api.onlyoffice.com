@@ -22,9 +22,13 @@ expression.GetById(xmlPartId);
 
 ## 示例
 
-此示例演示如何根据命名空间检索自定义 XML 部件。
+通过命名空间获取文档中的自定义 XML 部件。
 
 ```javascript editor-docx
+// How can I get the by id using a custom XML parts in a document?
+
+// Get the by id for a custom XML parts in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = "<content xmlns='http://example.com'><text>Example XML</text></content>";
@@ -37,4 +41,3 @@ xmlParts.forEach(part => {
 });
 doc.Push(infoParagraph);
 ```
-

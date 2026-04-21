@@ -14,4 +14,3 @@ Object
 | Color.B | number | 蓝色颜色分量值。 |
 | Color.G | number | 绿色颜色分量值。 |
 | Color.R | number | 红色颜色分量值。 |
-

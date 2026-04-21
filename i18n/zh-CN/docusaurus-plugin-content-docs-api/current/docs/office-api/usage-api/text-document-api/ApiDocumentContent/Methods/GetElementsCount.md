@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-此示例展示如何获取当前文档内容中的元素数量。
+获取文档中当前文档内容的元素数量。
 
 ```javascript editor-docx
-// How to get elements count and push it to the paragraph.
+// How to get elements count and push it to the paragraph in a document.
 
 // Count the number of elements in the document.
 
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Number of elements inside the shape: " + docContent.GetElementsCount());
 doc.Push(paragraph);
 ```
-

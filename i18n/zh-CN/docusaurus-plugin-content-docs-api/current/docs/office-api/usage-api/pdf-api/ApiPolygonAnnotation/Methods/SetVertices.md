@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为多边形注释设置顶点。
+在 PDF 文档中为多边形注释设置顶点。
 
 ```javascript editor-pdf
+// How can I set vertices using a polygon annotation in a PDF document?
+
+// Set vertices for a polygon annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polygonAnnot = Api.CreatePolygonAnnot([40, 5, 160, 110], vertices);
@@ -35,4 +39,3 @@ let page = doc.GetPage(0);
 page.AddObject(polygonAnnot);
 console.log(`We set vertices to polygon annotation`);
 ```
-

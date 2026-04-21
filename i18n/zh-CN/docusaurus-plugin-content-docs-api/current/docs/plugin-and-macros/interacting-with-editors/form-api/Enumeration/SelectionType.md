@@ -13,7 +13,6 @@
 - "drawing"
 - "slide"
 
-
 ## 示例
 
 ```javascript
@@ -31,4 +30,3 @@ window.Asc.plugin.executeMethod ("GetSelectionType", [], function(type) {
     }
 });
 ```
-

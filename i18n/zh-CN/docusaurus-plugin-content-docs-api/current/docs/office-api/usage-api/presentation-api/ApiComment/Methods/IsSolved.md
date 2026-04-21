@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例演示如何确定批注是否已解决。
+检查演示文稿中的批注是否已解决。
 
 ```javascript editor-pptx
+// How can I is solved using a comment in a presentation?
+
+// Is solved for a comment in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,4 +52,3 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Originally comment was ' + before + ', but currently it is ' + after);
 ```
-

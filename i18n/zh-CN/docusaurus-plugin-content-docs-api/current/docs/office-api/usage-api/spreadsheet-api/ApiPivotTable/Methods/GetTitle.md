@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取数据透视表标题。
+获取电子表格中数据透视表的标题。
 
 ```javascript editor-xlsx
-// How to get table title.
+// How to get table title in a spreadsheet.
 
-// Create a pivot table, add data to it then get its title.
+// Create a pivot table, add data to it then get its title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -62,4 +62,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Pivot Table title');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetTitle());
 ```
-

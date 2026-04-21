@@ -2,11 +2,11 @@
 
 设置条件格式规则的作用域类型。
 
-Inherited from [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md).
+继承自 [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md)。
 
 ## 示例
 
-此示例设置条件格式规则的作用域类型。
+设置条件格式规则的范围类型。
 
 ```javascript editor-xlsx
 // How to change the scope type of conditional formatting rules.
@@ -37,4 +37,3 @@ condition1.SetScopeType("xlDataFieldScope");
 worksheet.GetRange("C4").SetValue("New scope:");
 worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
 ```
-

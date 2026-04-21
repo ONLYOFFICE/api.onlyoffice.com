@@ -2,16 +2,16 @@
 
 返回当前绘图的指定锁定类型的锁定值。
 
-Inherited from [ApiDrawing.GetLockValue](../../ApiDrawing/Methods/GetLockValue.md).
+继承自 [ApiDrawing.GetLockValue](../../ApiDrawing/Methods/GetLockValue.md)。
 
 ## 示例
 
-此示例展示如何获取绘图的指定锁定类型的锁定值。
+获取文档中绘图对象指定锁定类型的锁定值。
 
 ```javascript editor-docx
-// How to set lock value of the shape.
+// How to set lock value of the shape in a document.
 
-// Get a boolean that shows that drawing can be selected or not.
+// Get a boolean that shows that drawing can be selected or not in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 ```
-

@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## Example
 
-This example shows how to create and set text run properties which will be applied to all the text runs within the table which match the conditional formatting type.
+Create and set text run properties which will be applied to all the text runs within the table which match the conditional formatting type.
 
 ```javascript editor-docx
-// How to set text properties to the table style and make it bold.
+// How to set text properties to the table style and make it bold in a document.
 
-// Update the table style text properties.
+// Update the table style text properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -53,4 +53,3 @@ paragraph.AddText("Normal text");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

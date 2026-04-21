@@ -22,7 +22,7 @@ expression.SetTableCellPr(tableCellPr);
 
 ## Example
 
-This example shows how set get the table cell properties to the style.
+Set the table cell properties for the style.
 
 ```javascript editor-docx
 // How to create table cell properties for style and add shading to it.
@@ -41,4 +41,3 @@ doc.Push(table);
 table.SetStyle(tableStyle);
 table.SetTableLook(true, true, true, true, true, true);
 ```
-

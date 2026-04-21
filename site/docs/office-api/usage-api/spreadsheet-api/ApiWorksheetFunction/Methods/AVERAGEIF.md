@@ -24,10 +24,10 @@ number
 
 ## Example
 
-This example shows how to find the average (arithmetic mean) for the cells specified by a given condition or criteria.
+Find the average (arithmetic mean) for the cells specified by a given condition or criteria in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find an average (arithmetic mean) using condition.
+// How to find an average (arithmetic mean) using condition in a spreadsheet.
 
 // Use function to get an average of the cells if the condition is met.
 
@@ -42,4 +42,3 @@ for (let i = 0; i < numbers.length; i++) {
 let range = worksheet.GetRange("A1:A4");
 worksheet.GetRange("C1").SetValue(func.AVERAGEIF(range, ">45"));
 ```
-

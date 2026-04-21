@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the category of the presentation using the ApiCore.
+Set the category of the presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How to set category for a core properties in a presentation?
+
+// Set category and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
@@ -43,4 +47,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

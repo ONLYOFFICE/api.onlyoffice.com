@@ -20,14 +20,12 @@ boolean
 
 ## Example
 
-This example clears the contents of the content control.
+Clear the contents of the content control in a document.
 
 ```javascript editor-docx
-// Creates a block content control, adds a text to it, and clears its contents.
+// Create a block content control, add a text to it, and clear its contents in a document.
 
-// Removes all elements from the block level content control.
-
-// How to clear the contents of the ApiBlockLvlSdt object.
+// Remove all elements from the block level content control in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -37,4 +35,3 @@ blockLvlSdt.RemoveAllElements();
 let paragraph = doc.GetElement(1);
 paragraph.AddText("All elements were removed from the content control.");
 ```
-

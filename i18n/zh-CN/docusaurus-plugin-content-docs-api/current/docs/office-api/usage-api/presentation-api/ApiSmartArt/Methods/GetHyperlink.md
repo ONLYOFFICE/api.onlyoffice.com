@@ -2,13 +2,17 @@
 
 返回当前绘图对象（形状或图像）的超链接。
 
-Inherited from [ApiDrawing.GetHyperlink](../../ApiDrawing/Methods/GetHyperlink.md).
+继承自 [ApiDrawing.GetHyperlink](../../ApiDrawing/Methods/GetHyperlink.md)。
 
 ## 示例
 
-此示例返回当前绘图对象的超链接。
+返回演示文稿中当前绘图对象的超链接。
 
 ```javascript editor-pptx
+// How to get the hyperlink for a drawing object in a presentation?
+
+// Get the hyperlink and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -32,4 +36,3 @@ if (retrievedHyperlink) {
 }
 slide.AddObject(shape);
 ```
-

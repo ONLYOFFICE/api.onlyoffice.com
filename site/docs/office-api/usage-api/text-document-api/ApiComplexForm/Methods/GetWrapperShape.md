@@ -7,7 +7,7 @@ Inherited from [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrappe
 
 ## Example
 
-This example shows how to get a shape in which the form is placed to control the position and size of the fixed size form frame.
+Get a shape in which the form is placed to control the position and size of the fixed size form frame in a document.
 
 ```javascript editor-docx
 // Get wrapper shape of the text form.
@@ -23,4 +23,3 @@ let shape = textForm.GetWrapperShape();
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 shape.SetOutLine(stroke);
 ```
-

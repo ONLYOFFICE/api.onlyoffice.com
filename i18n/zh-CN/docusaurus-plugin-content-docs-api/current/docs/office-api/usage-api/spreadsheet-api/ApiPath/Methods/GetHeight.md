@@ -20,10 +20,13 @@ number
 
 ## 示例
 
-分析云形状路径属性并在单元格中显示它们。
+分析云形路径属性并在单元格中显示。显示路径数量、尺寸、笔触和填充信息。
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How can I get the height using a geometry path in a spreadsheet?
+
+// Get the height for a geometry path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
@@ -36,4 +39,3 @@ worksheet.GetRange("A5").SetValue("Stroke: " + path.GetStroke() + ", Fill: " + p
 let paths = geometry.GetPaths();
 worksheet.GetRange("A6").SetValue("Total paths: " + paths.length);
 ```
-

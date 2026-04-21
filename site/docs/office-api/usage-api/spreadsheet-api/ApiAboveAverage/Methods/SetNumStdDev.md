@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the number of standard deviations from the average.
+Set the number of standard deviations from the average in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to modify the standard deviation setting for above average conditions.
+// How to modify the standard deviation setting for above average conditions in a spreadsheet.
 
 // Change the number of standard deviations for conditional formatting.
 
@@ -52,4 +52,3 @@ condition.SetNumStdDev(2);
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetNumStdDev().toString());
 ```
-

@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-此示例使用指定的字体系列设置所有 4 个字体槽。
+在电子表格中使用指定的字体系列设置所有 4 个字体槽。
 
 ```javascript editor-xlsx
-// How to change a font family of a text.
+// How to change a font family of a text in a spreadsheet.
 
-// Set text font family.
+// Set font family and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -43,4 +43,3 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font family set to 'Comic Sans MS' using the text properties.");
 paragraph.AddElement(run);
 ```
-

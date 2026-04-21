@@ -22,10 +22,10 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-此示例设置批注回复作者的用户 ID。
+设置文档中批注回复作者的用户 ID。
 
 ```javascript editor-docx
-// How to change a user ID of a comment reply.
+// How to change an user ID of a comment reply in a document.
 
 // Get all comments from the presentation and change its first one's reply user ID.
 
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Comment reply user ID: " + userId);
 doc.Push(paragraph);
 ```
-

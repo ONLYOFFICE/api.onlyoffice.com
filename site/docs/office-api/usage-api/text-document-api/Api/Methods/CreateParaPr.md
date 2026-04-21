@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create and use the paragraph properties.
+Create and use the paragraph properties in a document.
 
 ```javascript editor-docx
-// How to set paragraph properties to the table style.
+// How to set paragraph properties to the table style in a document.
+
+// Create the para pr in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +48,3 @@ paragraph.AddText("This is a paragraph with the text in it aligned by the center
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

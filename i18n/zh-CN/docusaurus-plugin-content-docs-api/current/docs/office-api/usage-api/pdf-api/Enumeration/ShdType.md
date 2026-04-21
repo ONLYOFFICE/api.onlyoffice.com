@@ -11,10 +11,9 @@
 - "nil"
 - "clear"
 
-
 ## 示例
 
-此示例为表格添加绿色阴影。
+为表格添加绿色阴影。
 
 ```javascript editor-pdf
 // How to change a table shadow type.
@@ -23,4 +22,3 @@
 
 tablePr.SetShd("clear", 0, 255, 0, false);
 ```
-

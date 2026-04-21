@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a position for data field.
+Set a position for data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a position of a table element.
+// How to change a position of a table element in a spreadsheet.
 
-// Create a pivot table, add data to it then move a custom data field chnaging its position.
+// Create a pivot table, add data to it then move a custom data field chnaging its position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A15').SetValue('Sum of Price2 position:');
 pivotWorksheet.GetRange('B15').SetValue(dataField.GetPosition());
 ```
-

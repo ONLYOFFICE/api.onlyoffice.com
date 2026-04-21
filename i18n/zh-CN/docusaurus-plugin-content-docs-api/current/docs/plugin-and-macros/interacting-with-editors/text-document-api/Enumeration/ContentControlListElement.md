@@ -12,4 +12,3 @@ Object
 | ---- | ---- | ----------- |
 | Display | string | 元素显示文本。 |
 | Value | string | 元素值。 |
-

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example locks the aspect ratio of the picture form.
+Lock the aspect ratio of the picture form.
 
 ```javascript editor-forms
 // How to lock an aspect ratio of the picture form in this document.
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The aspect ratio of the picture form in this document is locked: " + lock);
 doc.Push(paragraph);
 ```
-

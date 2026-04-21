@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Check the class type returned by a block-level content control in a document.
 
 ```javascript editor-docx
+// How do I check what type a block-level content control object is in a document?
+
+// Retrieve and output the class type string for a block-level content control in a document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let paragraph = Api.CreateParagraph();
@@ -31,4 +35,3 @@ doc.AddElement(0, blockLvlSdt);
 paragraph = doc.GetElement(1);
 paragraph.AddText("Class type: " + blockLvlSdt.GetClassType());
 ```
-

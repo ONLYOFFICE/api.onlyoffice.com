@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example shows how to get the number of roles.
+Get the number of roles in a form document.
 
 ```javascript editor-forms
+// How do I get the count in a form document?
+
+// Get the count using a form roles object.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -35,4 +39,3 @@ roles.GetAllRoles().forEach(role => {
 let numRoles = roles.GetCount();
 paragraph.AddText("Number of roles: " + numRoles);
 ```
-

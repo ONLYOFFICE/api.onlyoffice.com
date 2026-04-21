@@ -22,15 +22,14 @@ expression.SetDisplayGridlines(isDisplayed);
 
 ## 示例
 
-此示例指定是否必须显示工作表网格线。
+指定电子表格中是否必须显示工作表网格线。
 
 ```javascript editor-xlsx
-// How to set whether sheet gridlines should be displayed or not.
+// How to set whether sheet gridlines should be displayed or not in a spreadsheet.
 
-// Set a boolean value representing whether to display gridlines or not.
+// Set a boolean value representing whether to display gridlines or not in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The sheet settings make it display no gridlines");
 worksheet.SetDisplayGridlines(false);
 ```
-

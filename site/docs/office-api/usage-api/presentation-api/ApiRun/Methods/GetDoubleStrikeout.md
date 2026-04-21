@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleS
 
 ## Example
 
-This example shows how to find out whether a text has a double strikethrough.
+Find out whether a text has a double strikethrough in a presentation.
 
 ```javascript editor-pptx
-// How to know whether a text is crossed with two horizontal lines.
+// How to know whether a text is crossed with two horizontal lines in a presentation.
 
-// Get the text properties of the run and find whether it has a double strikethrough.
+// Get the text properties of the run and find whether it has a double strikethrough in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,4 +38,3 @@ const doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
 ```
-

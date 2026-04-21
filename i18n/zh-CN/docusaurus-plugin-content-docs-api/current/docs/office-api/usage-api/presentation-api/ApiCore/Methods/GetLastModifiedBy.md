@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何设置和获取最后修改当前演示文稿的用户名称。
+在演示文稿中设置和获取最后修改当前演示文稿的用户名称。
 
 ```javascript editor-pptx
+// How can I get last modified by using a core properties in a presentation?
+
+// Get last modified by for a core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -39,4 +43,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

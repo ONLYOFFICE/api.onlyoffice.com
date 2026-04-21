@@ -22,12 +22,12 @@ expression.SetRowGrand(show);
 
 ## 示例
 
-此示例展示如何设置数据透视表的行总计。
+在电子表格中设置数据透视表的行总计。
 
 ```javascript editor-xlsx
-// How to set row grand of a table.
+// How to set row grand of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its row grand.
+// Create a pivot table, add data to it then set its row grand in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Is Row Grand');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetRowGrand());
 ```
-

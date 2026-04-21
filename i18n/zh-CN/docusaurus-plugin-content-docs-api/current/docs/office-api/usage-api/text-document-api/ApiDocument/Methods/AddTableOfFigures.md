@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向当前文档添加图表目录。
+向当前文档添加图表目录。
 
 ```javascript editor-docx
 // How to add drawings to the document and generate a table of figures.
 
-// Insert a table of figures specifying its properties.
+// Insert a table of figures specifying its properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -50,4 +50,3 @@ paragraph.AddCaption(" - Financial Overview", "Figure", false, "Arabic", false, 
 let tofPr = {"ShowPageNums": true, "RightAlgn": true, "LeaderType": "dot", "FormatAsLinks": true, "BuildFrom": "Figure", "LabelNumber": true, "TofStyle": "distinctive"};
 doc.AddTableOfFigures(tofPr);
 ```
-

@@ -2,14 +2,14 @@
 
 返回段落内容对齐方式。
 
-Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
+继承自 [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md)。
 
 ## 示例
 
-此示例展示如何获取段落内容对齐方式。
+获取电子表格中段落内容的对齐方式。
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph.
+// How to know the justification type of a paragraph in a spreadsheet.
 
 // Create a paragraph set justification type, get it and display in the worksheet.
 
@@ -31,4 +31,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + justification);
 content.Push(paragraph);
 ```
-

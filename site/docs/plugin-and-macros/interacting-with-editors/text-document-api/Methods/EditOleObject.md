@@ -36,4 +36,3 @@ window.Asc.plugin.executeMethod ("EditOleObject", [_param], function () {
     window.Asc.plugin.executeCommand ("close", "");
 });
 ```
-

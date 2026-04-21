@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.m
 
 ## Example
 
-This example specifies if the current form should be required.
+Specify if the current form should be required.
 
 ```javascript editor-forms
 // How to make a text form required.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is required: " + required);
 doc.Push(paragraph);
 ```
-

@@ -19,4 +19,3 @@ expression.PixelsToEmus(px);
 ## Returns
 
 number
-

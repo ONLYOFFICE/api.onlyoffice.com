@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例展示如何设置数据点的轮廓。
+在电子表格中为数据点设置轮廓。
 
 ```javascript editor-xlsx
-// Sets the outline to the data point in the specified chart series.
+// Set the outline to the data point in the specified chart series in a spreadsheet.
 
-// How to set data point outline using a stroke.
+// How to set data point outline using a stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -53,4 +53,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetDataPointOutLine(stroke, 1, 0, false);
 ```
-

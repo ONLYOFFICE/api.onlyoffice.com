@@ -2,16 +2,16 @@
 
 返回具有当前文本属性的文本是否大写。
 
-Inherited from [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md).
+继承自 [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否大写。
+检查 PDF 文档中的文本是否为大写。
 
 ```javascript editor-pdf
-// How to know whether the text letters are uppercase or not.
+// How to know whether the text letters are uppercase or not in a PDF document.
 
-// Get the text properties of the run and find whether it is capitalized or not.
+// Get the text properties of the run and find whether it is capitalized or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,4 +37,3 @@ const caps = textPr.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 docContent.Push(paragraph);
 ```
-

@@ -22,7 +22,7 @@ expression.FindPrevious(Before);
 
 ## Example
 
-This example finds the previous cell that matches those same conditions.
+Find the previous cell that matches those same conditions.
 
 ```javascript editor-xlsx
 // How to get the previous cell from a range that meets search requirements.
@@ -53,4 +53,3 @@ nextSearchRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 let prevSearchRange = range.FindPrevious(nextSearchRange);
 prevSearchRange.SetValue(0);
 ```
-

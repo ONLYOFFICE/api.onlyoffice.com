@@ -24,12 +24,12 @@ expression.CreateImage(imageSrc, width, height);
 
 ## 示例
 
-此示例创建一个图像并将其粘贴到文档中。
+创建图像并将其粘贴到文档中。
 
 ```javascript editor-docx
-// Creates the ApiImage object and adds it to the ApiParagraph class.
+// Create the image object and add it to the paragraph class in a document.
 
-// How to create the ApiImage object using the URL to the image, its width and height.
+// How to create the image object using the URL to the image, its width and height in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ let image = Api.CreateImage(
 );
 paragraph.AddDrawing(image);
 ```
-

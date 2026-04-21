@@ -47,5 +47,3 @@
 - "radarMarker"
 - "radarFilled"
 - "unknown"
-
-

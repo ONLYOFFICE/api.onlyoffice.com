@@ -17,4 +17,3 @@ expression.GetCurrentPage();
 ## 返回值
 
 number
-

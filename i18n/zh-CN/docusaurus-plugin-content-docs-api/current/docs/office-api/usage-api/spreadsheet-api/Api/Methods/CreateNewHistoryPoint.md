@@ -20,16 +20,15 @@ expression.CreateNewHistoryPoint();
 
 ## 示例
 
-此示例创建一个新的历史记录点。
+在电子表格中创建新的历史点。
 
 ```javascript editor-xlsx
-// Add history point for a range.
+// Add history point for a range in a spreadsheet.
 
-// How to make a history point.
+// How to make a history point in a spreadsheet.
 
 var worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("This is just a sample text.");
 Api.CreateNewHistoryPoint();
 worksheet.GetRange("A3").SetValue("New history point was just created.");
 ```
-

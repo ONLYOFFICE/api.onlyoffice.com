@@ -20,7 +20,7 @@ Object
 
 ## Example
 
-This example adds a table of figures with the specified properties to the document.
+Add a table of figures with the specified properties to the document.
 
 ```javascript editor-docx
 // How to create a table of figures properties.
@@ -38,4 +38,3 @@ let tofPr = {
 };
 doc.AddTableOfFigures(tofPr);
 ```
-

@@ -22,9 +22,13 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-This example shows how to set the font family for all text in a paragraph inside a shape.
+Set the font family for all text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set font family using a paragraph in a spreadsheet?
+
+// Set font family for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 150, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -44,4 +48,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text uses the default font family.');
 content.Push(paragraph2);
 ```
-

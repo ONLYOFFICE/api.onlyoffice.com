@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+Specify that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to underline a text object.
+// How to underline a text object in a spreadsheet.
 
-// Create a text run object, underline it with a single line.
+// Create a text run object, underline it with a single line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,4 +44,3 @@ run.SetUnderline(true);
 run.AddText("This is a text run with the text underlined with a single line.");
 paragraph.AddElement(run);
 ```
-

@@ -20,16 +20,15 @@ boolean
 
 ## 示例
 
-此示例演示如何返回 false 逻辑值。
+在电子表格中返回 false 逻辑值。
 
 ```javascript editor-xlsx
-// How to get false value.
+// How to get false value in a spreadsheet.
 
-// Use function to get a boolean false.
+// Use function to get a boolean false in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.FALSE(); //returns false, doesnt require arguments
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

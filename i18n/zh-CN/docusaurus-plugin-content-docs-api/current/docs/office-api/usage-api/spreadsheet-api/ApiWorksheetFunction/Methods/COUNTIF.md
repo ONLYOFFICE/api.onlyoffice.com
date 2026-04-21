@@ -23,7 +23,7 @@ number
 
 ## 示例
 
-此示例演示如何计算区域内满足给定条件的单元格数量。
+在电子表格中计算范围内满足给定条件的单元格数量。
 
 ```javascript editor-xlsx
 // How to find a number of cells that satisfies some condition.
@@ -45,4 +45,3 @@ for (let j = 0; j < numbers.length; j++) {
 let range = worksheet.GetRange("A1:B3");
 worksheet.GetRange("D3").SetValue(func.COUNTIF(range, "*es"));
 ```
-

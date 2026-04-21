@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## Example
 
-In this example, the WordArt text has a text outline.
+Set a text outline for the WordArt text in a document.
 
 ```javascript editor-docx
-// How to set an outline to the text.
+// How to set an outline to the text in a document.
 
-// Create a text run object, change its property by outlining it with a color.
+// Create a text run object, change its property by outlining it with a color in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();
@@ -41,4 +41,3 @@ let textArt = Api.CreateWordArt(textPr, "onlyoffice", "textArchUp", null, null, 
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(textArt);
 ```
-

@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-This example specifies that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+Specify that the contents of the run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line) in a presentation.
 
 ```javascript editor-pptx
-// How to underline a text.
+// How to underline a text in a presentation.
 
-// Get the text properties of the run and underline its text.
+// Get the text properties of the run and underline its text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ run.AddText("This is an underlined text inside the shape.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

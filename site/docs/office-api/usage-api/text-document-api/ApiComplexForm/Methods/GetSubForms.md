@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to get all subforms of a complex form.
+Get all subforms of a complex form in a document.
 
 ```javascript editor-docx
+// How can I get the sub forms using a complex form in a document?
+
+// Get the sub forms for a complex form in a document.
+
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Email", "placeholder": "Start to fill complex form"});
 complexForm.Add(Api.CreateTextForm({"placeholder" : "username"}));
@@ -36,4 +40,3 @@ paragraph.AddLineBreak();
 let subForms = complexForm.GetSubForms();
 paragraph.AddText("Number of subforms: " + subForms.length);
 ```
-

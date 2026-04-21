@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the revision of the current presentation.
+Set and get the revision of the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How can I get the revision using a core properties in a presentation?
+
+// Get the revision for a core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetRevision("Rev. A");
@@ -39,4 +43,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

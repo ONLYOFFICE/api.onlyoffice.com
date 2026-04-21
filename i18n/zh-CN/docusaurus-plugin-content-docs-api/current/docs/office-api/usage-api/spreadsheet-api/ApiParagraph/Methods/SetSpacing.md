@@ -22,9 +22,13 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例展示如何为形状内段落中的所有文本设置字符间距。
+为电子表格中形状内段落的所有文本设置字符间距。
 
 ```javascript editor-xlsx
+// How do I set spacing in a spreadsheet?
+
+// Set spacing using a paragraph object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(150, 130, 100));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -44,4 +48,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has default spacing.');
 content.Push(paragraph2);
 ```
-

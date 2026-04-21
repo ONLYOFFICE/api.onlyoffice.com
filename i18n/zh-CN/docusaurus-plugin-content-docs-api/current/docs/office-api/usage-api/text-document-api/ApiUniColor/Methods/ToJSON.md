@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-此示例将 ApiUniColor 对象转换为 JSON 对象。
+将文档中的统一颜色对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the uni color object.
+// How to get a JSON from the uni color object in a document.
 
 // Convert the uni color to json and add it to the document.
 
@@ -39,4 +39,3 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = Api.CreateShape("rect", 5930900, 395605, fill, stroke);
 paragraph.AddDrawing(drawing);
 ```
-

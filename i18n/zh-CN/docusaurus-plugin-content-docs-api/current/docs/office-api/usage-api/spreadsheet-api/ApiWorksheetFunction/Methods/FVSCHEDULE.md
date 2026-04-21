@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何在应用一系列复利利率后返回初始本金的未来值。
+在电子表格中在应用一系列复合利率后返回初始本金的未来值。
 
 ```javascript editor-xlsx
-// How to get the future value of an initial principal.
+// How to get the future value of an initial principal in a spreadsheet.
 
-// Use a function to get future value of an initial principal based on different parameters.
+// Use a function to get future value of an initial principal based on different parameters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -43,4 +43,3 @@ worksheet.GetRange("B4").SetValue(0.1);
 let range = worksheet.GetRange("B2:B4");
 worksheet.GetRange("B5").SetValue(func.FVSCHEDULE(100, range));
 ```
-

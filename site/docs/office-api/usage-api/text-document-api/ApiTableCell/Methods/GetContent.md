@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current cell content.
+Get the current cell content in a document.
 
 ```javascript editor-docx
 // How to get the value from the cell.
@@ -37,4 +37,3 @@ cell.GetContent().GetElement(0).AddText("Cell #1");
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

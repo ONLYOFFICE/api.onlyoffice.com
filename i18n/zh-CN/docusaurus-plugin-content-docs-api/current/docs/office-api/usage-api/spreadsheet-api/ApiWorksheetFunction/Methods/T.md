@@ -22,10 +22,10 @@ expression.T(arg1);
 
 ## 示例
 
-此示例演示如何检查值是否为文本，如果是则返回该文本，如果不是则返回双引号（空文本）。
+在电子表格中检查值是否为文本，如果是则返回文本，如果不是则返回双引号（空文本）。
 
 ```javascript editor-xlsx
-// How to return a text if a value is a text otherwise return an empty string.
+// How to return a text if a value is a text otherwise return an empty string in a spreadsheet.
 
 // Use a function to check whether a cell value is a text.
 
@@ -33,4 +33,3 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.T("date and time"));
 ```
-

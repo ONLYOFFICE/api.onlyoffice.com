@@ -24,10 +24,10 @@ number
 
 ## 示例
 
-此示例演示如何将由给定条件或标准指定的单元格相加。
+在电子表格中将满足给定条件的指定单元格相加。
 
 ```javascript editor-xlsx
-// How to sum up all elements under the condition.
+// How to sum up all elements under the condition in a spreadsheet.
 
 // Use a function to estimate a sum from the cells by a given condition.
 
@@ -46,4 +46,3 @@ let func = Api.WorksheetFunction;
 let range = worksheet.GetRange("B2:B4");
 worksheet.GetRange("C4").SetValue(func.SUMIF(range, ">800"));
 ```
-

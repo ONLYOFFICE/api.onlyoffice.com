@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get roles manager.
+Get roles manager in a form document.
 
 ```javascript editor-forms
+// How can I get the form roles using a document in a form document?
+
+// Get the form roles for a document in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -33,4 +37,3 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
 });
 ```
-

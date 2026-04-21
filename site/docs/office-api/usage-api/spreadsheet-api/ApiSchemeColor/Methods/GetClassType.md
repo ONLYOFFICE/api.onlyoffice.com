@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Retrieve the class type of a scheme color in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiSchemeColor.
+// How to identify the class type of a scheme color in a spreadsheet?
 
-// Get a class type of ApiSchemeColor and display it in the worksheet.
+// Obtain the class type identifier of a scheme color object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let schemeColor = Api.CreateSchemeColor("dk1");
@@ -38,4 +38,3 @@ worksheet.SetColumnWidth(1, 10);
 worksheet.GetRange("A1").SetValue("Class Type = ");
 worksheet.GetRange("B1").SetValue(classType);
 ```
-

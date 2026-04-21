@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table that contains the content control.
+Get a table that contains the content control in a document.
 
 ```javascript editor-docx
-// How to display the parent table of the inline text control.
+// How to display the parent table of the inline text control in a document.
 
-// Update the parent table of inline content control.
+// Update the parent table of inline content control in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -44,4 +44,3 @@ let parentTable = inlineLvlSdt.GetParentTable();
 cell = parentTable.GetRow(2).GetCell(0);
 parentTable.RemoveRow(cell);
 ```
-

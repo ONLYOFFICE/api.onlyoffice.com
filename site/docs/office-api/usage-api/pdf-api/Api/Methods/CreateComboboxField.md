@@ -25,6 +25,10 @@ expression.CreateComboboxField(aRect);
 How to create and add a combobox field to document.
 
 ```javascript editor-pdf
+// How do I create the combobox field in a PDF document?
+
+// Create the combobox field and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -34,4 +38,3 @@ comboboxField.AddOption('Option 1');
 comboboxField.AddOption('Option 2');
 comboboxField.AddOption('Option 3');
 ```
-

@@ -23,10 +23,10 @@ JSON
 
 ## Example
 
-This example converts the ApiRange object into the JSON object.
+Convert the range object into the JSON object.
 
 ```javascript editor-docx
-// How to get a JSON from the range.
+// How to get a JSON from the range in a document.
 
 // Convert the range content to json and add it to the document.
 
@@ -39,4 +39,3 @@ let json = range.ToJSON(false, true);
 let rangeFromJSON = Api.FromJSON(json);
 doc.Push(rangeFromJSON[0]);
 ```
-

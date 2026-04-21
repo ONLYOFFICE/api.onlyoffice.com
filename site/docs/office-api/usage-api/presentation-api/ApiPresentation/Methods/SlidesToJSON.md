@@ -27,7 +27,7 @@ JSON[]
 
 ## Example
 
-This example shows how to convert the slides from the current ApiPresentation object into the JSON objects.
+Convert the slides from the current presentation object into the JSON objects in a presentation.
 
 ```javascript editor-pptx
 // How to convert slides to JSON objects.
@@ -55,4 +55,3 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 ```
-

@@ -23,16 +23,15 @@ boolean
 
 ## 示例
 
-此示例在每个文档页面上插入水印。
+在文档的每一页插入水印。
 
 ```javascript editor-docx
 // How to insert watermark to the document.
 
-// Watermark the document.
+// Insert the watermark and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("A watermark was inserted into this document.");
 doc.InsertWatermark("Watermark");
 ```
-

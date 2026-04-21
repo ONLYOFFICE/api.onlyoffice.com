@@ -26,4 +26,3 @@ expression.InputText(text, textReplace);
 ```javascript
 window.Asc.plugin.executeMethod ("InputText", ["ONLYOFFICE Plugins", "ONLYOFFICE for developers"]);
 ```
-

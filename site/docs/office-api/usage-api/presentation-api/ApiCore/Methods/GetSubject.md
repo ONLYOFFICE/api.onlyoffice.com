@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the subject of the current presentation.
+Set and get the subject of the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I get the subject in a presentation?
+
+// Get the subject using a core properties object in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetSubject("ApiCore Method Showcase");
@@ -39,4 +43,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a name to the theme font scheme.
+Set a name to the theme font scheme in a presentation.
 
 ```javascript editor-pptx
-// How to set a font scheme name.
+// How to set a font scheme name in a presentation.
 
-// Create new font scheme and set its name.
+// Create new font scheme and set its name in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,3 @@ paragraph.AddText("New name was set to the theme font scheme.");
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to find out the position of the text.
+Find out the position of the text in a document.
 
 ```javascript editor-docx
-// Get the location index of the text properties.
+// Get the location index of the text properties in a document.
 
-// How to know the text position.
+// How to know the text position in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -48,4 +48,3 @@ let position = textPr.GetPosition();
 paragraph.AddText("Text position: " + position);
 doc.Push(paragraph);
 ```
-

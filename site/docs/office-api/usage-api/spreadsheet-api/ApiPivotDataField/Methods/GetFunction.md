@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a function of a data field.
+Get a function of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a table element function.
+// How to get a table element function in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's function.
+// Create a pivot table, add data to it then display a custom data field's function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,3 @@ pivotWorksheet.GetRange('A15').SetValue('Functions:');
 pivotWorksheet.GetRange('B15').SetValue(sumDataField.GetFunction());
 pivotWorksheet.GetRange('B16').SetValue(countDataField.GetFunction());
 ```
-

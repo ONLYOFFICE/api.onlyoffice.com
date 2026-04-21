@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example freezes first column and get pastes a freezed type into the table.
+Freeze first column and get pastes a freezed type into the table in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to freeze a column in a worksheet.
@@ -32,4 +32,3 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Type: ");
 worksheet.GetRange("B1").SetValue(Api.GetFreezePanesType());
 ```
-

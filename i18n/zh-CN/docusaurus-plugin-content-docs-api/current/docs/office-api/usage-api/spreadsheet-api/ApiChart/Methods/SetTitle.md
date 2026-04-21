@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例使用指定的参数设置图表标题。
+在电子表格中使用指定的参数设置图表标题。
 
 ```javascript editor-xlsx
-// How to add chart title indicating its font size.
+// How to add chart title indicating its font size in a spreadsheet.
 
-// Add title for a chart with its font size and style.
+// Add title for a chart with its font size and style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```
-

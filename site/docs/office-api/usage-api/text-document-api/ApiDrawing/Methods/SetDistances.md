@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-This example specifies the minimum distance which will be maintained between the edges of the drawing object and any subsequent text.
+Specify the minimum distance which will be maintained between the edges of the drawing object and any subsequent text in a document.
 
 ```javascript editor-docx
-// How to create drawings and set the distance between them.
+// How to create drawings and set the distance between them in a document.
 
-// Create a rectangle, square and set the minimum distance between them.
+// Create a rectangle, square and set the minimum distance between them in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -50,4 +50,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is another paragraph.");
 doc.Push(paragraph);
 ```
-

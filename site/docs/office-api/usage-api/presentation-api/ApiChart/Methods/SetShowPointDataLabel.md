@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-This example specifies the show options for the chart data labels.
+Specify the show options for the chart data labels in a presentation.
 
 ```javascript editor-pptx
-// How to show specific chart data labels with options.
+// How to show specific chart data labels with options in a presentation.
 
-// Create a chart, set its properties and the visibility of its data labels options.
+// Create a chart, set its properties and the visibility of its data labels options in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,4 +55,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

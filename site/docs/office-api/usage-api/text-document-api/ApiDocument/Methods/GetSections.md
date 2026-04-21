@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a collection of section objects in the document.
+Get a collection of section objects in the document.
 
 ```javascript editor-docx
 // How to get all sections from the document.
 
-// Get all sections and display the class type of the first one.
+// Get all sections and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ let classType = sections[1].GetClassType();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

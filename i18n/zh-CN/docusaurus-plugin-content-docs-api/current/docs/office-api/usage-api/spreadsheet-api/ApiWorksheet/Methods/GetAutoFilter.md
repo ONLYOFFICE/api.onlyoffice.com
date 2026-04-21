@@ -20,12 +20,12 @@ expression.GetAutoFilter();
 
 ## 示例
 
-此示例获取工作表的自动筛选对象。
+获取工作表的自动筛选对象。
 
 ```javascript editor-xlsx
 // How to get the AutoFilter object of a worksheet.
 
-// Get the AutoFilter object.
+// Get the AutoFilter object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Product");
@@ -39,4 +39,3 @@ let filterRange = autoFilter.GetRange();
 worksheet.GetRange("C1").SetValue("AutoFilter range:");
 worksheet.GetRange("C2").SetValue(filterRange.GetAddress());
 ```
-

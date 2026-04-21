@@ -23,15 +23,14 @@ number
 
 ## Example
 
-This example shows how to return a complex number raised to an integer power.
+Return a complex number raised to an integer power in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the result from raising into power of a complex number.
+// How to get the result from raising into power of a complex number in a spreadsheet.
 
-// Use a function to get the result from the power.
+// Use a function to get the result from the power in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMPOWER("-2+2.5i", -3));
 ```
-

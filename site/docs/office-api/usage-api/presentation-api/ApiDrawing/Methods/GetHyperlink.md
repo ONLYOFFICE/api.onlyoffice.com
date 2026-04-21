@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the hyperlink from the current drawing object.
+Return the hyperlink from the current drawing object in a presentation.
 
 ```javascript editor-pptx
+// How to get the hyperlink for a drawing object in a presentation?
+
+// Get the hyperlink and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +50,3 @@ if (retrievedHyperlink) {
 }
 slide.AddObject(shape);
 ```
-

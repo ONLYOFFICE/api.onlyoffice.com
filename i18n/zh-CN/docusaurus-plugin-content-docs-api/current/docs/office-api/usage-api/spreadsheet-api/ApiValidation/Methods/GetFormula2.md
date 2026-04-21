@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取数据验证中的第二个公式。
+获取数据验证中的第二个公式。
 
 ```javascript editor-xlsx
 // How to retrieve the second validation formula.
 
-// Get the second formula.
+// Get the second formula using the validation API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,4 +34,3 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlBetween", 10, 20)
 let formula2 = validation.GetFormula2();
 worksheet.GetRange("B1").SetValue("Formula2: " + formula2);
 ```
-

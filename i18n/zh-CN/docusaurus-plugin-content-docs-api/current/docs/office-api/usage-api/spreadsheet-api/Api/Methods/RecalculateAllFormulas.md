@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例重新计算活动工作簿中的所有公式。
+重新计算活动工作簿中的所有公式。
 
 ```javascript editor-xlsx
 // How to recalculate all formulas in a worksheet.
@@ -40,4 +40,3 @@ worksheet.GetRange("B1").SetValue(3);
 Api.RecalculateAllFormulas();
 worksheet.GetRange("A3").SetValue("Formulas from cells A1 and E1 were recalculated with a new value from cell C1.");
 ```
-

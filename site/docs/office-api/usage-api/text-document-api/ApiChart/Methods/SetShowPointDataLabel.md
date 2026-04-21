@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-This example specifies the show options for the chart data labels.
+Specify the show options for the chart data labels in a document.
 
 ```javascript editor-docx
-// How to show specific chart data labels with options.
+// How to show specific chart data labels with options in a document.
 
-// Create a chart, set its properties and the visibility of its data labels options.
+// Create a chart, set its properties and the visibility of its data labels options in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -50,4 +50,3 @@ chart.SetShowPointDataLabel(1, 0, false, false, true, false);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

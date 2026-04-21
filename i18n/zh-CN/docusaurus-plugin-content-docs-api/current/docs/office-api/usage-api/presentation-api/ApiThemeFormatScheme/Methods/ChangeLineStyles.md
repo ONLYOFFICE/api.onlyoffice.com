@@ -22,7 +22,7 @@ expression.ChangeLineStyles(arrLine);
 
 ## 示例
 
-此示例为当前主题格式方案设置线条样式。
+为当前主题格式方案设置线条样式。
 
 ```javascript editor-pptx
 // How to change line styles of a format scheme.
@@ -70,4 +70,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Create a shape by yourself to see the stroke style set to this presentation.");
 slide.AddObject(shape);
 ```
-

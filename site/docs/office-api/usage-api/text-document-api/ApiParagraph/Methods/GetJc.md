@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Get the paragraph contents justification in a document.
 
 ```javascript editor-docx
 // Get the justification of the paragraph and show it in the document.
 
-// How to know the justification type of the paragraph.
+// How to know the justification type of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -26,4 +26,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + paraJc);
 doc.Push(paragraph);
 ```
-

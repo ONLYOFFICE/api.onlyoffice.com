@@ -2,16 +2,16 @@
 
 用富文本内容控件包装图形对象。
 
-Inherited from [ApiDrawing.InsertInContentControl](../../ApiDrawing/Methods/InsertInContentControl.md).
+继承自 [ApiDrawing.InsertInContentControl](../../ApiDrawing/Methods/InsertInContentControl.md)。
 
 ## 示例
 
-此示例用富文本内容控件包装图形对象。
+在文档中用富文本内容控件包裹图形对象。
 
 ```javascript editor-docx
-// How to add the drawing to the paragraph.
+// How to add the drawing to the paragraph in a document.
 
-// Create a rectangle and then insert it to the another content control.
+// Create a rectangle and then insert it to the another content control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -22,4 +22,3 @@ let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
 paragraph.AddDrawing(drawing);
 drawing.InsertInContentControl(1);
 ```
-

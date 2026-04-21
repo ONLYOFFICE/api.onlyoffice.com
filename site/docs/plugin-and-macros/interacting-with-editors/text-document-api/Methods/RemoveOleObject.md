@@ -25,4 +25,3 @@ This method doesn't return any data.
 ```javascript
 window.Asc.plugin.executeMethod ("RemoveOleObject", ["5_556"]);
 ```
-

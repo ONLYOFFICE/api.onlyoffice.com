@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例使用指定的位置移除元素。
+在电子表格中通过指定的位置删除元素。
 
 ```javascript editor-xlsx
 // How to remove an element from a document knowing its position in the document content.
@@ -46,4 +46,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed paragraph #3, check that out above.");
 content.Push(paragraph);
 ```
-

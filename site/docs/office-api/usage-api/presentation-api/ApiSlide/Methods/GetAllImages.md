@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all the image objects from the slide.
+Get an array with all the image objects from the slide.
 
 ```javascript editor-pptx
 // How to get all images from the slide.
@@ -51,4 +51,3 @@ paragraph.SetJc('left');
 paragraph.AddText('Class type = ' + type);
 slide.AddObject(shape);
 ```
-

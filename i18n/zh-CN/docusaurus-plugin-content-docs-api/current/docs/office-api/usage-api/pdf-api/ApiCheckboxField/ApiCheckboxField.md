@@ -1,6 +1,6 @@
 # ApiCheckboxField
 
-ApiCheckboxField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
+ApiCheckboxField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 
 ## 方法
 

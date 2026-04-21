@@ -23,7 +23,7 @@ expression.Search(sText, isMatchCase);
 
 ## Example
 
-This example shows how to make search in table cell.
+Make search in table cell in a document.
 
 ```javascript editor-docx
 // Search the word from the cell.
@@ -41,4 +41,3 @@ doc.Push(table);
 let searchResults = table.GetCell(0, 0).Search("Cell");
 searchResults[1].SetBold(true);
 ```
-

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example applies the text settings to the entire contents of the cell.
+Apply the text settings to the entire contents of the cell.
 
 ```javascript editor-docx
 // Set text properties to the table cell.
@@ -42,4 +42,3 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 table.GetCell(0, 0).SetTextPr(textPr);
 ```
-

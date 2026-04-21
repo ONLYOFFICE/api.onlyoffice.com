@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-从 PDF 文档中的三次贝塞尔曲线提取控制点。
+从 PDF 文档中的三次贝塞尔曲线提取控制点。在文本形状中显示所有控制点坐标。
 
 ```javascript editor-pdf
-// Displays all control point coordinates in a text shape.
+// How can I get the y1 using a path command in a PDF document?
+
+// Get the y1 for a path command in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -49,4 +52,3 @@ shape.SetVerticalTextAlign("bottom");
 shape.SetPosition(2000000, 1000000);
 page.AddObject(shape);
 ```
-

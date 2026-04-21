@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the ID of a custom XML part.
+Get the ID of a custom XML part in a presentation.
 
 ```javascript editor-pptx
-// How to get the ID of an XML part.
+// How to get the ID of an XML part in a presentation.
 
-// Get an XML part ID.
+// Get the id and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -45,4 +45,3 @@ run.AddText("XML part ID: " + id);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

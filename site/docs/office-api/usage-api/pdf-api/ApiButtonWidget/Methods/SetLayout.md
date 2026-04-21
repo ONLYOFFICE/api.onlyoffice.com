@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets button widget layout type.
+Set button widget layout type in a PDF document.
 
 ```javascript editor-pdf
+// How do I set layout in a PDF document?
+
+// Set layout using a button widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);
@@ -34,4 +38,3 @@ let widgets = buttonField.GetAllWidgets();
 widgets[0].SetLayout('iconTextV');
 widgets[0].SetLabel('Layout is: ' + widgets[0].GetLayout());
 ```
-

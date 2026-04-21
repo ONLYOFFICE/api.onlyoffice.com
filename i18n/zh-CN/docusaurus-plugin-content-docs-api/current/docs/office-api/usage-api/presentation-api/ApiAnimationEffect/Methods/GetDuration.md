@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例获取动画效果的持续时间。
+获取演示文稿中动画效果的持续时间。
 
 ```javascript editor-pptx
+// How do I get the duration in a presentation?
+
+// Get the duration using an animation effect object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -53,4 +57,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Duration: ' + duration + 'ms');
 slide.AddObject(infoShape);
 ```
-

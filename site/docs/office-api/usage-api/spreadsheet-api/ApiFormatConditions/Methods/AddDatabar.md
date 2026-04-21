@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds data bar conditional formatting to a range.
+Add data bar conditional formatting to a range.
 
 ```javascript editor-xlsx
 // How to add data bar conditional formatting rules to visualize cell values with bars.
@@ -45,4 +45,3 @@ let formatConditions = dataRange.GetFormatConditions();
 
 formatConditions.AddDatabar();
 ```
-

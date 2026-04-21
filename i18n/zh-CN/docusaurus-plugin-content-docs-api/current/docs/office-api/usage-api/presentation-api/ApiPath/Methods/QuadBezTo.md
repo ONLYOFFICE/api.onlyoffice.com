@@ -25,10 +25,13 @@ expression.QuadBezTo(x1, y1, x2, y2);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+使用各种贝塞尔和弧线命令创建复杂的曲线形状。在幻灯片上的单条路径中演示不同的曲线类型。
 
 ```javascript editor-pptx
-// Demonstrates different curve types in a single path on a slide.
+// How to quad bez to for a geometry path in a presentation?
+
+// Quad bez to and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -47,4 +50,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 slide.AddObject(shape);
 ```
-

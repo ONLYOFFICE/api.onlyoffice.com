@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-此示例为文本字符设置粗体属性。
+在演示文稿中为文本字符设置粗体属性。
 
 ```javascript editor-pptx
-// How to make a text bold.
+// How to make a text bold in a presentation.
 
-// Get the text properties of the run and set it to bold.
+// Get the text properties of the run and set it to bold in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,3 @@ run.AddText("This is a sample text inside the shape with the font weight set to 
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

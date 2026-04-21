@@ -2,14 +2,14 @@
 
 设置绘图在幻灯片上的位置。
 
-Inherited from [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md).
+继承自 [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md)。
 
 ## 示例
 
-此示例设置形状的位置。
+在演示文稿中为形状设置位置。
 
 ```javascript editor-pptx
-// How to change a position of a drawing.
+// How to change a position of a drawing in a presentation.
 
 // Get a shape object from a slide and move it.
 
@@ -31,4 +31,3 @@ paragraph.AddText("This is an example of a paragraph inside a shape. Nothing spe
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

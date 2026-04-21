@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of rich paragraph properties.
+Retrieve the class type of a rich paragraph properties in a PDF document.
 
 ```javascript editor-pdf
+// How to identify the class type of a rich paragraph properties in a PDF document?
+
+// Obtain the class type identifier of a rich paragraph properties object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -38,4 +42,3 @@ let paraPr = para.GetParaPr();
 
 console.log(`Object class type is: ${paraPr.GetClassType()}`);
 ```
-

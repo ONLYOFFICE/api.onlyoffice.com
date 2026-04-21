@@ -14,5 +14,3 @@ Enumeration
 - "lightenLess"
 - "darken"
 - "darkenLess"
-
-

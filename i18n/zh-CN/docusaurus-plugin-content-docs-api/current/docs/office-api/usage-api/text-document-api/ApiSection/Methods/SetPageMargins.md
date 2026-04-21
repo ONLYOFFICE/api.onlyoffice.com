@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-此示例指定此节中所有页面的页边距。
+指定此节中所有页面的页边距。
 
 ```javascript editor-docx
 // How to set page margins.
@@ -42,4 +42,3 @@ paragraph.AddText("The bottom margin is 4 inches high (5760 twentieths of a poin
 let section = doc.GetFinalSection();
 section.SetPageMargins(7200, 2880, 1440, 5760);
 ```
-

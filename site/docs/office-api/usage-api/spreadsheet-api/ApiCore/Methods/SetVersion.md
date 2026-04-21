@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to sets the version of the workbook.
+Set the version of the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to set version for a core properties in a spreadsheet?
+
+// Set version and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -43,4 +47,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Version: " + version);
 ```
-

@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md).
 
 ## Example
 
-This example shows how to make a copy of the form.
+Make a copy of the form in a document.
 
 ```javascript editor-forms
 // How to create the same text form.
@@ -21,4 +21,3 @@ let copyTextForm = textForm.Copy();
 paragraph.AddLineBreak();
 paragraph.AddElement(copyTextForm);
 ```
-

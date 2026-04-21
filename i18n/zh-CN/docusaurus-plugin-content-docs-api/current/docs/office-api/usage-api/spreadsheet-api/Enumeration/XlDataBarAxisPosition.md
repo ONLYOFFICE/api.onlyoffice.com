@@ -11,5 +11,3 @@
 - "xlDataBarAxisAutomatic"
 - "xlDataBarAxisMidpoint"
 - "xlDataBarAxisNone"
-
-

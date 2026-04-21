@@ -59,4 +59,3 @@ window.Asc.plugin.executeMethod ("GetVBAMacros", null, function (data) {
     }
 });
 ```
-

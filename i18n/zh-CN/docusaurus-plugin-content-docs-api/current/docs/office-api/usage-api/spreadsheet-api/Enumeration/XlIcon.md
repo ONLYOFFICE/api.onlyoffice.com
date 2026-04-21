@@ -61,5 +61,3 @@
 - "xlIconYellowTrafficLight"
 - "xlIconYellowTriangle"
 - "xlIconYellowUpInclineArrow"
-
-

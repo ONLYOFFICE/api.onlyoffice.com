@@ -22,12 +22,12 @@ expression.SetType(type);
 
 ## 示例
 
-此示例演示如何设置色阶条件的类型。
+在电子表格中设置色阶条件的类型。
 
 ```javascript editor-xlsx
-// How to change the type of a color scale criterion.
+// How to change the type of a color scale criterion in a spreadsheet.
 
-// Set the type of a color scale criterion.
+// Set the type of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -54,4 +54,3 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C4").SetValue(criteria[1].GetType());
 }
 ```
-

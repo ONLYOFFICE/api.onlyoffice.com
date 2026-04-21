@@ -34,4 +34,3 @@ window.Asc.plugin.executeMethod ("SearchNext", [
     true
 ]);
 ```
-

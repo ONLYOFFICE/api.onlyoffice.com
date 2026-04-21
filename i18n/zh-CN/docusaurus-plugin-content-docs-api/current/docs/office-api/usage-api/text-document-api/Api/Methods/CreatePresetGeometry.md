@@ -22,9 +22,13 @@ expression.CreatePresetGeometry(sPreset);
 
 ## 示例
 
-此示例演示如何创建预设几何图形。
+在文档中创建预设几何图形。
 
 ```javascript editor-docx
+// How to create the preset geometry in a document?
+
+// Create the preset geometry using the document API.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -42,4 +46,3 @@ paragraph.AddLineBreak();
 paragraph.AddDrawing(shape);
 paragraph.AddLineBreak();
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to get the XPath of a custom XML node.
+Get the XPath of a custom XML node in a document.
 
 ```javascript editor-docx
+// How to set node value for a custom XML node in a document?
+
+// Set node value and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -44,4 +48,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(xml.GetXml());
 doc.AddElement(0, paragraph);
 ```
-

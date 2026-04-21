@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定添加到文本属性并作为背景应用于文本块内容的高亮颜色。
+指定在演示文稿中添加到文本属性并作为背景应用于 run 内容的突出显示颜色。
 
 ```javascript editor-pptx
-// How to highlight a text with a color.
+// How to highlight a text with a color in a presentation.
 
-// Get the text properties of the run and highlight it.
+// Get the text properties of the run and highlight it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,3 @@ run.AddText("This is a sample text inside the shape with the text highlighted wi
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

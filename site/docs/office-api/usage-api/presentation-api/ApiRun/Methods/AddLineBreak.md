@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example adds a line break to the run position and starts the next element from a new line.
+Add a line break to the run position and start the next element from a new line in a presentation.
 
 ```javascript editor-pptx
-// How to add a line break after a sentence in a text run.
+// How to add a line break after a sentence in a text run in a presentation.
 
-// How to split a text with a line break.
+// How to split a text with a line break in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,4 +46,3 @@ run.AddText("It is written in two text runs, you need a space at the end of the 
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

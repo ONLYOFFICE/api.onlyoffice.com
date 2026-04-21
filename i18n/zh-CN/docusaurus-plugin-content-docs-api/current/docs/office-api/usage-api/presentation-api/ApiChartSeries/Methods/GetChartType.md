@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-此示例获取 ApiChart 类的第一个系列并将其类型插入演示文稿。
+获取图表类的第一个系列并将其类型插入演示文稿。
 
 ```javascript editor-pptx
 // How to get a chart type and show it on the slide.
 
-// Change a chart type to the "area" type.
+// Change a chart type to the "area" type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

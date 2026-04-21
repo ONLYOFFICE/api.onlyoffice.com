@@ -24,15 +24,14 @@ number
 
 ## Example
 
-This example shows how to return the inverse of the (right-tailed) F probability distribution: if p = F.DIST.RT(x,...), then F.INV.RT(p,...) = x.
+Return the inverse of the (right-tailed) F probability distribution: if p = F.DIST.RT(x,...), then F.INV.RT(p,...) = x in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the inverse of the (right-tailed) F probability distribution.
+// How to get the inverse of the (right-tailed) F probability distribution in a spreadsheet.
 
-// Use function to calculate an inverse of the F probability distribution.
+// Use function to calculate an inverse of the F probability distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.F_INV_RT(0.01, 6, 4));
 ```
-

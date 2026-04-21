@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-此示例将形状转换为 JSON。
+在演示文稿中将形状转换为 JSON。
 
 ```javascript editor-pptx
-// How to convert a drawing object to a JSON object.
+// How to convert a drawing object to a JSON object in a presentation.
 
 // Get a shape object from a slide and convert to JSON.
 
@@ -41,4 +41,3 @@ drawingFromJSON.SetPosition(608400, 1267200);
 drawingFromJSON.SetSize(300 * 36000, 130 * 36000);
 slide.AddObject(drawingFromJSON);
 ```
-

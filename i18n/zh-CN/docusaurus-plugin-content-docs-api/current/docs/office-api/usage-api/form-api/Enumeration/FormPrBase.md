@@ -19,7 +19,7 @@ Object
 
 ## 示例
 
-此示例创建具有通用表单属性的文本表单。
+创建具有通用表单属性的文本表单。
 
 ```javascript editor-forms
 // How to create a text form using its base properties.
@@ -34,4 +34,3 @@ let formPrBase = {
 };
 let textForm = Api.CreateTextForm(formPrBase);
 ```
-

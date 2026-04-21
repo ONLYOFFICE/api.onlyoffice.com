@@ -20,13 +20,12 @@ boolean
 
 ## Example
 
-This example unselects the current graphic object.
+Unselects the current graphic object in a presentation.
 
 ```javascript editor-pptx
 // How to unselect drawing objects of the slide.
 
-// Create three shapes, select all of them,
-// then unselect the second shape.
+// Create three shapes, select all of them, then unselect the second shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +49,3 @@ drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
 ```
-

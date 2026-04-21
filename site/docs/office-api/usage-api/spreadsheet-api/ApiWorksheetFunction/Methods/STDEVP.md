@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to calculate standard deviation based on the entire population given as arguments (ignores logical values and text).
+Calculate standard deviation based on the entire population given as arguments (ignores logical values and text) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population.
+// How to calculate standard deviation based on the entire population in a spreadsheet.
 
-// Use a function to get the standard deviation.
+// Use a function to get the standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -43,4 +43,3 @@ let ans = func.STDEVP(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为缇。
+在演示文稿中将磅转换为缇。
 
 ```javascript editor-pptx
+// How do I convert points to twips in a presentation?
+
+// Convert points to twips and display the result in a presentation.
+
 const points = 1000;
 const twips = Api.PointsToTwips(points);
 
@@ -40,4 +44,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

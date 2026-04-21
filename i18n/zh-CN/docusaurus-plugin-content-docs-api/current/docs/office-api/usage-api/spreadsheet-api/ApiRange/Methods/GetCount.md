@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例演示如何获取范围中的单元格数量。
+获取电子表格中范围内的单元格数量。
 
 ```javascript editor-xlsx
 // How to find out how many cells a range has.
@@ -35,4 +35,3 @@ let count = worksheet.GetRange("A1:C1").GetCount();
 worksheet.GetRange("A4").SetValue("Count: ");
 worksheet.GetRange("B4").SetValue(count);
 ```
-

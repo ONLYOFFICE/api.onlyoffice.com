@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## Example
 
-This example creates a color selecting it from one of the available color presets.
+Create a color selecting it from one of the available color presets in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a color from a preset.
+// How to get a color from a preset in a spreadsheet.
 
-// Color a shape background using a color from a preset. 
+// Color a shape background using a color from a preset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let presetColor = Api.CreatePresetColor("peachPuff");
@@ -37,4 +37,3 @@ let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example replaces the current table with a paragraph.
+Replace the current table with a paragraph in a document.
 
 ```javascript editor-docx
-// How to replace table with a paragraph.
+// How to replace table with a paragraph in a document.
 
-// Create paragraph and put it instead of the table.
+// Create paragraph and put it instead of the table in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(3, 3);
@@ -39,4 +39,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("The table was replaced with the current paragraph.");
 table.ReplaceByElement(paragraph);
 ```
-

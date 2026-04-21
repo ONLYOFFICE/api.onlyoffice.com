@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-此示例创建当前幻灯片对象的副本。
+创建当前幻灯片对象的副本。
 
 ```javascript editor-pptx
 // How to create a copy of the slide.
@@ -38,4 +38,3 @@ slide.SetBackground(fill);
 const copySlide = slide.Copy();
 presentation.AddSlide(copySlide);
 ```
-

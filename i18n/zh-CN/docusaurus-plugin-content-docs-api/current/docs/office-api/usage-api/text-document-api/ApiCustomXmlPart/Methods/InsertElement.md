@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例演示如何将新 XML 元素插入自定义 XML 部件。
+向文档中的自定义 XML 部件插入新的 XML 元素。
 
 ```javascript editor-docx
+// How can I insert the element using a custom XML part in a document?
+
+// Insert the element for a custom XML part in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'></content>");
@@ -36,4 +40,3 @@ let infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText("Xml string representaion: " + xml.GetXml());
 doc.Push(infoParagraph);
 ```
-

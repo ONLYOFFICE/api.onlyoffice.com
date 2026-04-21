@@ -12,10 +12,9 @@ Enumeration
 - "text"
 - "image"
 
-
 ## Example
 
-In this example sets the type of the watermark within the document.
+Set the type of the watermark within the document.
 
 ```javascript editor-docx
 // How to set a watermark type.
@@ -24,4 +23,3 @@ In this example sets the type of the watermark within the document.
 
 watermarkSettings.SetType("text");
 ```
-

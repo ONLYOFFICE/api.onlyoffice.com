@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to outline a chart title.
+How to outline a chart title in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title outline.
+// Create a chart, set its properties and its title outline in a PDF document.
+
+// Set title out line for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,4 +48,3 @@ let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColo
 chart.SetTitleOutLine(stroke);
 page.AddObject(chart);
 ```
-

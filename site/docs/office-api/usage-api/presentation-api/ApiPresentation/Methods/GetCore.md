@@ -21,9 +21,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how get ApiCore instance and use its methods to manage presentation metadata.
+How get core properties instance and use its methods to manage presentation metadata.
 
 ```javascript editor-pptx
+// How to get the core for a presentation?
+
+// Get the core and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -85,4 +89,3 @@ paragraph.AddText("Version: " + version);
 
 slide.AddObject(shape);
 ```
-

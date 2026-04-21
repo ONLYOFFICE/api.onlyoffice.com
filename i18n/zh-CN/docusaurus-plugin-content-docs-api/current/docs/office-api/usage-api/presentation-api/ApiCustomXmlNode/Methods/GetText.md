@@ -21,12 +21,12 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的文本内容。
+获取演示文稿中自定义 XML 节点的文本内容。
 
 ```javascript editor-pptx
-// How to get text content from an XML node.
+// How to get text content from an XML node in a presentation.
 
-// Get XML node text.
+// Get the text for a custom XML node in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -47,4 +47,3 @@ run.AddText("Message: " + text);
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

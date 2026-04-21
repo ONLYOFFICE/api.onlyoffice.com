@@ -63,10 +63,9 @@
 - "weave"
 - "zigZag"
 
-
 ## 示例
 
-此示例设置当前表单内以百分比计量的图片位置。
+设置当前表单内以百分比计量的图片位置。
 
 ```javascript editor-pdf
 // How to create a pattern fill indicating its pattern type.
@@ -79,4 +78,3 @@ let fill = Api.CreatePatternFill(
 	Api.RGB(255, 0, 0)
 );
 ```
-

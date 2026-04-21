@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何检索当前 XML 节点的名称。
+获取文档中当前 XML 节点的名称。
 
 ```javascript editor-docx
+// How to get the node name for a custom XML node in a document?
+
+// Get the node name and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -37,4 +41,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Node name: " + nodeName);
 doc.AddElement(0, paragraph);
 ```
-

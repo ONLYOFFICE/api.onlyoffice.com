@@ -28,15 +28,14 @@ number
 
 ## Example
 
-This example shows how to return a depreciation of an asset for any specified period, including partial periods, using the double-declining balance method or some other method specified.
+Return a depreciation of an asset for any specified period, including partial periods, using the double-declining balance method or some other method specified in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to estimate depreciation of an asset for any specified period.
+// How to estimate depreciation of an asset for any specified period in a spreadsheet.
 
-// Use a depreciation of an asset for any specified period including partial periods.
+// Use a depreciation of an asset for any specified period including partial periods in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.VDB(3500, 500, 5, 1, 3, 2, false));
 ```
-

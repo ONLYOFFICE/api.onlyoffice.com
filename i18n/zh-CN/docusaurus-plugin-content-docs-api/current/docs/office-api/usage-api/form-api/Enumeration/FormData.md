@@ -36,4 +36,3 @@ let formData = {
 	type: "text"
 };
 ```
-

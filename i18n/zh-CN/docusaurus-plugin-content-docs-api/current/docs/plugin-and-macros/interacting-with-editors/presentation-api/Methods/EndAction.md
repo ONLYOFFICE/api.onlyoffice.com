@@ -27,4 +27,3 @@ expression.EndAction(type, description, status);
 ```javascript
 window.Asc.plugin.executeMethod ("EndAction", ["Block", "Save to local storage...", ""]);
 ```
-

@@ -20,12 +20,12 @@ expression.GetSubtotals();
 
 ## 示例
 
-此示例展示如何获取透视字段的分类汇总。
+获取电子表格中透视字段的小计。
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotals.
+// How to get a pivot field's subtotals in a spreadsheet.
 
-// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array.
+// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -69,4 +69,3 @@ for (let i in subtotals) {
     pivotWorksheet.GetRangeByNumber(k++, 1).SetValue(subtotals[i]);
 }
 ```
-

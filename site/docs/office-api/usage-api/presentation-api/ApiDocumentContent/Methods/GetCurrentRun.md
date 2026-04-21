@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the current run from the document content.
+Return the current run from the document content.
 
 ```javascript editor-pptx
+// How to get current run for a document content?
+
+// Get current run and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,4 +48,3 @@ if (currentRun) {
 }
 slide.AddObject(shape);
 ```
-

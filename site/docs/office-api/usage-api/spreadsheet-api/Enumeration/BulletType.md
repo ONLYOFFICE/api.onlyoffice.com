@@ -18,18 +18,14 @@ Enumeration
 - "AlphaUcParenR"
 - "AlphaUcPeriod"
 
-
 ## Example
 
-This example shows how to create a numbering.
+Create a numbering.
 
 ```javascript editor-xlsx
 // The paragraph will be starting with the Arabic numeral which has parenthesis.
 
-// How to create a bullet indicating its type.
-
-// Create a numbered paragraph in arabic numeral.
+// Create a numbered paragraph in Arabic numeral format.
 
 let bullet = Api.CreateNumbering("ArabicParenR");
 ```
-

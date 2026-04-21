@@ -17,5 +17,3 @@
 - "xlConditionValuePercent"
 - "xlConditionValuePercentile"
 - "xlConditionValueFormula"
-
-

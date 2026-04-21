@@ -32,4 +32,3 @@ window.Asc.plugin.executeMethod ("ConvertDocument", ["markdown", false, false, t
     document.getElementById ("text-area").value = info + output;
 });
 ```
-

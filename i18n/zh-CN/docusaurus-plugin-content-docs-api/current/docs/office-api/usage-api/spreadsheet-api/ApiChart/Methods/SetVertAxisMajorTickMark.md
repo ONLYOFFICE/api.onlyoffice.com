@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定纵轴的主刻度线。
+在电子表格中为垂直轴指定主要刻度线。
 
 ```javascript editor-xlsx
-// How to add a major tick as a cross for the vertical axis labels.
+// How to add a major tick as a cross for the vertical axis labels in a spreadsheet.
 
-// Specifies major tick mark for the vertical axis.
+// Specify major tick mark for the vertical axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -53,4 +53,3 @@ chart.SetMarkerFill(fill, 1, 0, true);
 stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```
-

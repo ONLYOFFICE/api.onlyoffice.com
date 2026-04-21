@@ -18,18 +18,14 @@
 - "AlphaUcParenR"
 - "AlphaUcPeriod"
 
-
 ## 示例
 
-此示例展示如何创建编号。
+创建编号。
 
 ```javascript editor-xlsx
 // The paragraph will be starting with the Arabic numeral which has parenthesis.
 
-// How to create a bullet indicating its type.
-
-// Create a numbered paragraph in arabic numeral.
+// Create a numbered paragraph in Arabic numeral format.
 
 let bullet = Api.CreateNumbering("ArabicParenR");
 ```
-

@@ -32,4 +32,3 @@ window.Asc.plugin.executeMethod ("StartAction", ["Block", "Save to local storage
     }, 200););
 });
 ```
-

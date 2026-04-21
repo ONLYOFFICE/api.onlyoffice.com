@@ -2,14 +2,14 @@
 
 复制当前图形对象。
 
-Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
+继承自 [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md)。
 
 ## 示例
 
-此示例复制当前图形对象。
+复制文档中的当前图形对象。
 
 ```javascript editor-docx
-// How to create a duplicate of a drawing.
+// How to create a duplicate of a drawing in a document.
 
 // Add two similar shapes into the document.
 
@@ -26,4 +26,3 @@ fill = Api.CreateRadialGradientFill([gs1, gs2]);
 copyDrawing.Fill(fill);
 paragraph.AddDrawing(copyDrawing);
 ```
-

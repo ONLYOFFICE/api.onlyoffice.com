@@ -18,5 +18,3 @@ Enumeration
 - "xlLastMonth"
 - "xlThisMonth"
 - "xlNextMonth"
-
-

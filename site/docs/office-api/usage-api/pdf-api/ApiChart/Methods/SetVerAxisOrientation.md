@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set an orientation of vertical axis.
+How to set an orientation of vertical axis in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical axis orientation.
+// Create a chart, set its properties and its vertical axis orientation in a PDF document.
+
+// Set ver axis orientation using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,4 +48,3 @@ const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBCo
 chart.SetTitleOutLine(stroke);
 page.AddObject(chart);
 ```
-

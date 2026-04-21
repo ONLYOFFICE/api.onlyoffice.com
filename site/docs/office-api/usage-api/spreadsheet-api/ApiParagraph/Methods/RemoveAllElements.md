@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes all the elements from the current paragraph.
+Remove all the elements from the current paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to clear a content from the paragraph.
+// How to clear a content from the paragraph in a spreadsheet.
 
-// Create a paragraph, add a text to it then delete all elements from it.
+// Create a paragraph, add a text to it then delete all elements from it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,4 +44,3 @@ run.AddText("We removed all the paragraph elements and added a new text run insi
 paragraph.AddElement(run);
 content.Push(paragraph);
 ```
-

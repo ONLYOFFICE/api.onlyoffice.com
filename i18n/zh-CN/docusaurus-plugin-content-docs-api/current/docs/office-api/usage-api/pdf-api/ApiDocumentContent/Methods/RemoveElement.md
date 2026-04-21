@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例演示如何删除元素。
+移除 PDF 文档中的元素。
 
 ```javascript editor-pdf
 // How to remove an elements from the page shape.
@@ -46,4 +46,3 @@ paragraph.AddText("This is the second paragraph. The first paragraph was removed
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

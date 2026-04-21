@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example deletes an animation effect.
+Delete an animation effect in a presentation.
 
 ```javascript editor-pptx
+// How to delete for an animation effect in a presentation?
+
+// Delete and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -60,4 +64,3 @@ paragraph.AddLineBreak();
 paragraph.AddText('Effects after delete: ' + countAfter);
 slide.AddObject(infoShape);
 ```
-

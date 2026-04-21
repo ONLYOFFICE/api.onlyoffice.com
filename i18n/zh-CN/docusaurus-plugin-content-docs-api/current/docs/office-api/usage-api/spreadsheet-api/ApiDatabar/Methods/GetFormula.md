@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取公式。
+从数据条条件格式规则获取公式。
 
 ```javascript editor-xlsx
 // How to retrieve the formula string from a data bar.
@@ -46,4 +46,3 @@ let formula = dataBar.GetFormula();
 worksheet.GetRange("C1").SetValue("Formula:");
 worksheet.GetRange("C2").SetValue(formula || "None");
 ```
-

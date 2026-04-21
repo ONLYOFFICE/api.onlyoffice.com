@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查图标集是否使用百分位数值。
+检查电子表格中图标集是否使用百分位值。
 
 ```javascript editor-xlsx
-// How to determine if percentile values are used for icon set thresholds.
+// How to determine if percentile values are used for icon set thresholds in a spreadsheet.
 
-// Check if the icon set rule uses percentile values for criteria.
+// Check if the icon set rule uses percentile values for criteria in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -44,4 +44,3 @@ iconCondition.SetPercentileValues(true);
 let usesPercentiles = iconCondition.GetPercentileValues();
 worksheet.GetRange("B1").SetValue("Uses percentiles: " + usesPercentiles);
 ```
-

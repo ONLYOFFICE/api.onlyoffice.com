@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the entry effect from a slide show transition.
+Get the entry effect from a slide show transition.
 
 ```javascript editor-pptx
+// How do I get the entry effect in a presentation?
+
+// Get the entry effect using a slide show transition object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -45,4 +49,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Entry Effect: ' + entryEffect);
 slide.AddObject(shape);
 ```
-

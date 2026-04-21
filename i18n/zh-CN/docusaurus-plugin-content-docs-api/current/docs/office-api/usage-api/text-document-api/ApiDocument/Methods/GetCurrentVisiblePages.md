@@ -20,7 +20,7 @@ number[]
 
 ## 示例
 
-此示例展示如何获取当前可见页面的索引。
+获取文档中当前可见页面的索引。
 
 ```javascript editor-docx
 // How to get all indexes of non-hidden pages.
@@ -32,4 +32,3 @@ const paragraph = Api.CreateParagraph();
 paragraph.AddText("The current visibles pages indexes is: " + doc.GetCurrentVisiblePages());
 doc.Push(paragraph);
 ```
-

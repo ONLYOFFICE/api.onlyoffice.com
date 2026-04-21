@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the numbering definition and numbering level for the numbered list.
+Get the numbering definition and numbering level for the numbered list in a document.
 
 ```javascript editor-docx
-// Get the numbering from the paragraph.
+// Get the numbering from the paragraph in a document.
 
-// How to get the numbering of the numbered text.
+// How to get the numbering of the numbered text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");
@@ -42,4 +42,3 @@ paragraph.SetNumbering(numLvl);
 paragraph.SetContextualSpacing(true);
 doc.Push(paragraph);
 ```
-

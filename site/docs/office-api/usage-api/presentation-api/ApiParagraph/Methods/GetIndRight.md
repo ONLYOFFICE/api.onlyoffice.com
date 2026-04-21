@@ -6,10 +6,10 @@ Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## Example
 
-This example shows how to get the paragraph right side indentation.
+Get the paragraph right side indentation in a presentation.
 
 ```javascript editor-pptx
-// How to return a right side identation of a paragraph property.
+// How to return a right side identation of a paragraph property in a presentation.
 
 // Return a right side indentation of a text property from the slide.
 
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
 ```
-

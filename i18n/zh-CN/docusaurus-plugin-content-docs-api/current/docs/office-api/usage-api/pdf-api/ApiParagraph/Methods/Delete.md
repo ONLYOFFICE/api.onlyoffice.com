@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除段落。
+删除 PDF 文档中的段落。
 
 ```javascript editor-pdf
 // How to remove a paragraph from the page.
 
-// Delete a text.
+// Delete and display the result in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +48,3 @@ paragraph.AddText("This is the second paragraph. The first paragraph was removed
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

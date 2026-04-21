@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Retrieve the class type of a table in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiTable.
+// How to identify the class type of a table in a presentation?
 
-// Retrieve class type of ApiTable object and insert it to the slide.
+// Obtain the class type identifier of a table object in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -42,4 +42,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

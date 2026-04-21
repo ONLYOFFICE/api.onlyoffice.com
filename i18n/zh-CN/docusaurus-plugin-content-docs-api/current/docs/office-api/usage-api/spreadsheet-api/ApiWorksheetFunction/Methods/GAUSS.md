@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何计算标准正态总体成员落在平均值和距平均值 arg1 个标准差之间的概率。
+在电子表格中计算标准正态总体成员落在均值和均值偏离 arg1 个标准差之间的概率。
 
 ```javascript editor-xlsx
-// How to calculate the probability that a member of a standard normal population will fall between two values.
+// How to calculate the probability that a member of a standard normal population will fall between two values in a spreadsheet.
 
-// Use a function to calculate the probability.
+// Use a function to calculate the probability in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.GAUSS(2);
 worksheet.GetRange("B2").SetValue(ans);
 ```
-

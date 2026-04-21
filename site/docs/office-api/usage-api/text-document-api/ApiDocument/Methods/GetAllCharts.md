@@ -6,12 +6,12 @@ Inherited from [ApiDocumentContent.GetAllCharts](../../ApiDocumentContent/Method
 
 ## Example
 
-This example shows how to get a collection of chart objects from the document content.
+Get a collection of chart objects from the document content in a document.
 
 ```javascript editor-docx
 // Get all charts from the document.
 
-// How to retrieve all charts and set horizontal gridlines to the first one.
+// How to retrieve all charts and set horizontal gridlines to the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ let charts = docContent.GetAllCharts();
 stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
 ```
-

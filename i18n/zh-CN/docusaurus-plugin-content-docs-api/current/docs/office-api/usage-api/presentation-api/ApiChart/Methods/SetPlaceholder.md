@@ -2,14 +2,14 @@
 
 将指定的占位符设置到当前绘图对象。
 
-Inherited from [ApiDrawing.SetPlaceholder](../../ApiDrawing/Methods/SetPlaceholder.md).
+继承自 [ApiDrawing.SetPlaceholder](../../ApiDrawing/Methods/SetPlaceholder.md)。
 
 ## 示例
 
-此示例为形状设置占位符。
+在演示文稿中为形状设置占位符。
 
 ```javascript editor-pptx
-// How to set a placeholder for a shape.
+// How to set a placeholder for a shape in a presentation.
 
 // Select a shape object from a slide and change its placeholder.
 
@@ -26,4 +26,3 @@ const placeholder = Api.CreatePlaceholder("picture");
 shape.SetPlaceholder(placeholder);
 slide.AddObject(shape);
 ```
-

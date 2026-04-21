@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.
+Insert a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.
 
 ```javascript editor-xlsx
 // How to insert a range or a cell into a worksheet.
@@ -37,4 +37,3 @@ worksheet.GetRange("C5").SetValue("5");
 let range = worksheet.GetRange("C4");
 range.Insert("down");
 ```
-

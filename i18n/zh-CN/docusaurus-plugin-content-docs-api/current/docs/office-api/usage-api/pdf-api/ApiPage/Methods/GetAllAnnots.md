@@ -20,9 +20,13 @@ expression.GetAllAnnots();
 
 ## 示例
 
-此示例从页面获取所有注释。
+获取页面上的所有注释。
 
 ```javascript editor-pdf
+// How do I get all annots in a PDF document?
+
+// Get all annots using a page object.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
@@ -31,4 +35,3 @@ page.AddObject(freeTextAnnot);
 let annots = page.GetAllAnnots();
 annots[0].SetPosition({x: 30, y: 30});
 ```
-

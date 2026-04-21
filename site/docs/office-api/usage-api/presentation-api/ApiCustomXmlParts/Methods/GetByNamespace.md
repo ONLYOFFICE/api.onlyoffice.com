@@ -22,12 +22,12 @@ expression.GetByNamespace(namespace);
 
 ## Example
 
-This example shows how to get custom XML parts by their namespace.
+Get custom XML parts by their namespace in a presentation.
 
 ```javascript editor-pptx
-// How to retrieve custom XML parts using their namespace.
+// How to retrieve custom XML parts using their namespace in a presentation.
 
-// Get XML parts by namespace.
+// Get XML parts by namespace in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -54,4 +54,3 @@ for (let i = 0; i < configParts.length; i++) {
 }
 slide.AddObject(shape);
 ```
-

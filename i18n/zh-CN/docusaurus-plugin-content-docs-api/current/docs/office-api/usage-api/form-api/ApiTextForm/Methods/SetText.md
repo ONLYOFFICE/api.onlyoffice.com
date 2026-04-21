@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置当前文本字段的文本。
+设置文档中当前文本字段的文本。
 
 ```javascript editor-forms
 // How to add the text to the text form.
@@ -35,4 +35,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetText("John Smith");
 ```
-

@@ -31,4 +31,3 @@ else {
     window.Asc.plugin.executeMethod ("RemoveContentControl", [returnValue]);
 }
 ```
-

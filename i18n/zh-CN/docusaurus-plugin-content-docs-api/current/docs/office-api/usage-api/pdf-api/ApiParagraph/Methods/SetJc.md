@@ -2,16 +2,16 @@
 
 设置段落内容对齐方式。
 
-Inherited from [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md).
+继承自 [ApiParaPr.SetJc](../../ApiParaPr/Methods/SetJc.md)。
 
 ## 示例
 
-此示例设置段落内容对齐方式。
+在 PDF 文档中设置段落内容对齐方式。
 
 ```javascript editor-pdf
-// How to set justification using a paragraph properties.
+// How to set justification using a paragraph properties in a PDF document.
 
-// Create a paragraph setting its justification property.
+// Create a paragraph setting its justification property in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -33,4 +33,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
 ```
-

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取指定集合的父对象。
+获取电子表格中指定集合的父对象。
 
 ```javascript editor-xlsx
-// How to get a parent of the collection.
+// How to get a parent of the collection in a spreadsheet.
 
-// Find a collection parent of the selected range.
+// Find a collection parent of the selected range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");
@@ -43,4 +43,3 @@ range.SetValue("The type of the areas parent: ");
 range.AutoFit(false, true);
 worksheet.GetRange('B5').SetValue(type);
 ```
-

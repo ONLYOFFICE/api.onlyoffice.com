@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例从当前段落中移除所有元素。
+移除电子表格中当前段落的所有元素。
 
 ```javascript editor-xlsx
-// How to clear a content from the paragraph.
+// How to clear a content from the paragraph in a spreadsheet.
 
-// Create a paragraph, add a text to it then delete all elements from it.
+// Create a paragraph, add a text to it then delete all elements from it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,4 +44,3 @@ run.AddText("We removed all the paragraph elements and added a new text run insi
 paragraph.AddElement(run);
 content.Push(paragraph);
 ```
-

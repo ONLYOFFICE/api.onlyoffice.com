@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取表格说明。
+获取文档中的表格描述。
 
 ```javascript editor-docx
 // How to get the table description and display it in the document.
 
-// Add text showing the description of the table.
+// Add text showing the description of the table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -39,4 +39,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddText("Table description: " + tablePr.GetTableDescription());
 doc.Push(table);
 ```
-

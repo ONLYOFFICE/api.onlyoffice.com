@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all tables from the slide master.
+Get an array with all tables from the slide master.
 
 ```javascript editor-pptx
+// How can I get all tables using a slide master in a presentation?
+
+// Get all tables for a slide master in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -56,4 +60,3 @@ paragraph.AddText("Number of tables on slide layout: " + layout.GetAllTables().l
 paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().length);
 ```
-

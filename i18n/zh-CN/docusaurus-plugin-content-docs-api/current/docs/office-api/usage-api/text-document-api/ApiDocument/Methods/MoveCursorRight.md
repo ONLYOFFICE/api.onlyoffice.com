@@ -24,12 +24,13 @@ boolean
 
 ## 示例
 
-此示例展示如何在文档中向右移动光标。
+在文档中将光标向右移动。
 
 ```javascript editor-docx
-// How to move the cursor right by a specified number of characters.
+// How to move the cursor right by a specified number of characters in a document.
 
-// Add text and move cursor right with selection.
+// Add text and move cursor right with selection in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the text in your document.");
@@ -39,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText(doc.GetCurrentWord());
 doc.Push(paragraph);
 ```
-

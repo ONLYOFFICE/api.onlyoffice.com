@@ -2,11 +2,11 @@
 
 设置指定是否可以将指定字段拖动到页位置的设置。
 
-Inherited from [ApiPivotField.SetDragToPage](../../ApiPivotField/Methods/SetDragToPage.md).
+继承自 [ApiPivotField.SetDragToPage](../../ApiPivotField/Methods/SetDragToPage.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到页。
+在电子表格中设置透视字段的拖动到页属性。
 
 ```javascript editor-xlsx
 // How to rename a pivot field drag to page.
@@ -53,4 +53,3 @@ pivotWorksheet.GetRange('A13').SetValue('Drag to page');
 pivotWorksheet.GetRange('B13').SetValue(pivotField.GetDragToPage());
 pivotWorksheet.GetRange('A14').SetValue('Try drag Region to pages!');
 ```
-

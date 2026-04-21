@@ -2,16 +2,16 @@
 
 删除当前图形对象。
 
-Inherited from [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md).
+继承自 [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md)。
 
 ## 示例
 
-此示例删除当前图形对象。
+删除文档中的当前图形对象。
 
 ```javascript editor-docx
 // How to delete a shape from the document.
 
-// Remove the drawing object.
+// Remove the drawing object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -23,4 +23,3 @@ drawing.Delete();
 paragraph.AddLineBreak();
 paragraph.AddText("In this paragraph, the Drawing object has been deleted.");
 ```
-

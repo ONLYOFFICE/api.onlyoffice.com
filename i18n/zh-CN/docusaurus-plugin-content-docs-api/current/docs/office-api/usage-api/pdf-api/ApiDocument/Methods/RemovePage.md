@@ -22,11 +22,14 @@ boolean
 
 ## 示例
 
-此示例展示如何从文档中删除页面。
+从 PDF 文档中移除页面。
 
 ```javascript editor-pdf
+// How can I remove the page using a document in a PDF document?
+
+// Remove the page for a document in a PDF document.
+
 let doc = Api.GetDocument();
 doc.AddPage(1);
 doc.RemovePage(0);
 ```
-

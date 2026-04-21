@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取文本块的文本属性。
+获取文档中 run 的文本属性。
 
 ```javascript editor-docx
-// How to change the text properties.
+// How to change the text properties in a document.
 
-// Create a text object, set its font size, justification, etc.
+// Create a text object, set its font size, justification, etc in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -42,4 +42,3 @@ run.SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```
-

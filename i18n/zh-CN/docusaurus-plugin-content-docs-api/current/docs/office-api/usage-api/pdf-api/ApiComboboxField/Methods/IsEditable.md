@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取组合框字段的可编辑属性并显示。
+获取并显示 PDF 文档中组合框字段的可编辑属性。
 
 ```javascript editor-pdf
+// How to is editable for a combobox field in a PDF document?
+
+// Is editable and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -31,4 +35,3 @@ page.AddObject(comboboxField);
 comboboxField.SetEditable(true);
 comboboxField.SetValue('Editable is: ' + comboboxField.IsEditable());
 ```
-

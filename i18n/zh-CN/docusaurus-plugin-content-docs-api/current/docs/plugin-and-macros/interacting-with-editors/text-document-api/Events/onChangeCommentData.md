@@ -21,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onChangeCommentData", (comment) => {
     console.log("QuoteText: " + comment.Data.QuoteText);
 });
 ```
-

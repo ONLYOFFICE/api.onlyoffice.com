@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a line break to the current position and starts the next element from a new line.
+Add a line break to the current position and start the next element from a new line in a presentation.
 
 ```javascript editor-pptx
-// How to add a line break after a sentence in a paragraph.
+// How to add a line break after a sentence in a paragraph in a presentation.
 
-// How to split a text with a line break.
+// How to split a text with a line break in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,4 +46,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 slide.AddObject(shape);
 ```
-

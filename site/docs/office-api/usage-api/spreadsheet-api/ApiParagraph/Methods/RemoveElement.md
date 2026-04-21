@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example removes an element using the position specified.
+Remove an element using the position specified in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete a paragraph element knowing its index.
+// How to delete a paragraph element knowing its index in a spreadsheet.
 
-// Change the content of a shape by removing elements.
+// Change the content of a shape by removing elements in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -58,4 +58,3 @@ run.AddText("Please note that line breaks are not counted into paragraph element
 paragraph.AddElement(run);
 paragraph.RemoveElement(3);
 ```
-

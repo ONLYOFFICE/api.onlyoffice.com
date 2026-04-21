@@ -20,10 +20,10 @@ boolean \| null
 
 ## 示例
 
-此示例演示如何获取指定字体的斜体属性。
+获取电子表格中指定字体的斜体属性。
 
 ```javascript editor-xlsx
-// How to know whether a font style of characters is italic.
+// How to know whether a font style of characters is italic in a spreadsheet.
 
 // Get a boolean value that represents whether a font is italic or not and show the value in the worksheet.
 
@@ -36,4 +36,3 @@ font.SetItalic(true);
 let isItalic = font.GetItalic();
 worksheet.GetRange("B3").SetValue("Italic property: " + isItalic);
 ```
-

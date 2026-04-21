@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## Example
 
-This example shows how to create a scheme color with the 'dk1' identifier.
+Create a scheme color with the 'dk1' identifier in a presentation.
 
 ```javascript editor-pptx
-// How to create a new scheme color.
+// How to create a new scheme color in a presentation.
 
-// Add a scheme color to create a solid fill.
+// Add a scheme color to create a solid fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,3 @@ const drawing = Api.CreateShape("curvedUpArrow", 300 * 36000, 130 * 36000, fill,
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
 ```
-

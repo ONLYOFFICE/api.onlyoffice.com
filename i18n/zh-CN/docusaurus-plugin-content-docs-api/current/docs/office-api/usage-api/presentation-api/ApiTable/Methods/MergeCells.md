@@ -23,7 +23,7 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-此示例合并单元格数组。
+合并一组单元格。
 
 ```javascript editor-pptx
 // How to get two cells by their position index and merge them into one.
@@ -48,4 +48,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

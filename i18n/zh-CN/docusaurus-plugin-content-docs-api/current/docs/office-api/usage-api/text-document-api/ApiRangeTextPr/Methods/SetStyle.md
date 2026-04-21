@@ -4,16 +4,16 @@
 💡 此方法本身不单独使用，它仅构成 [ApiRun#SetStyle](../../ApiRun/Methods/SetStyle.md) 方法的基础，该方法将
 选定或创建的样式设置到文本。
 
-Inherited from [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md).
+继承自 [ApiTextPr.SetStyle](../../ApiTextPr/Methods/SetStyle.md)。
 
 ## 示例
 
-此示例为文本块设置样式。
+在文档中为 run 设置样式。
 
 ```javascript editor-docx
-// How to style a text.
+// How to style a text in a document.
 
-// Create a text run object, create a text style and apply it.
+// Create a text run object, create a text style and apply it in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -30,4 +30,3 @@ run.SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```
-

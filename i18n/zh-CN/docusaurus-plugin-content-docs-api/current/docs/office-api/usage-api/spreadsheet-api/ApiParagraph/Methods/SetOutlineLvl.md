@@ -2,13 +2,17 @@
 
 设置指定属性的大纲级别。
 
-Inherited from [ApiParaPr.SetOutlineLvl](../../ApiParaPr/Methods/SetOutlineLvl.md).
+继承自 [ApiParaPr.SetOutlineLvl](../../ApiParaPr/Methods/SetOutlineLvl.md)。
 
 ## 示例
 
-此示例演示如何通过段落属性设置和获取指定段落的大纲级别。
+通过电子表格中的段落属性设置和获取指定段落的大纲级别。
 
 ```javascript editor-xlsx
+// How do I set outline lvl in a spreadsheet?
+
+// Set outline lvl using a paragraph properties object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -26,4 +30,3 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
 ```
-

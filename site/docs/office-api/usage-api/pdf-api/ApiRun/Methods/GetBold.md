@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
 ## Example
 
-This example shows how to find out whether a text is bold.
+Find out whether a text is bold in a PDF document.
 
 ```javascript editor-pdf
-// How to know whether a text is set to bold or not.
+// How to know whether a text is set to bold or not in a PDF document.
 
-// Get the text properties of the run and find whether it is bold or not.
+// Get the text properties of the run and find whether it is bold or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,4 +37,3 @@ const bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
 ```
-

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the type of color scale criterion.
+Get the type of color scale criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check the type of a color scale criterion.
+// How to check the type of a color scale criterion in a spreadsheet.
 
-// Get the type of a color scale criterion.
+// Get the type of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -49,4 +49,3 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C2").SetValue(criterionType);
 }
 ```
-

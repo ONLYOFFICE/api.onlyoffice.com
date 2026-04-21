@@ -23,12 +23,12 @@ expression.Split(nRow, nCol);
 
 ## Example
 
-This example splits the cell into a given number of rows and columns.
+Splits the cell into a given number of rows and columns.
 
 ```javascript editor-docx
 // Split the first cell into two.
 
-// How to divide the cell.
+// Split for a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -40,4 +40,3 @@ doc.Push(table);
 let cell = table.GetCell(0, 0);
 cell.Split(2, 2);
 ```
-

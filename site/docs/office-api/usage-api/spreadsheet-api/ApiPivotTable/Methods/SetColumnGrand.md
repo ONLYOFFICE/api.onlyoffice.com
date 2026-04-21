@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to get a column grand.
+Get a column grand in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to select a column grand of a table.
+// How to select a column grand of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then get its column grand.
+// Create a pivot table, add data to it then get its column grand in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Is Column Grand');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetColumnGrand());
 ```
-

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set repeat all labels of a pivot table.
+Set repeat all labels of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set repeat all labels of a table.
+// How to set repeat all labels of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its repeat all labels.
+// Create a pivot table, add data to it then set its repeat all labels in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,4 +61,3 @@ pivotTable.AddDataField('Price');
 
 pivotTable.SetRepeatAllLabels(true);
 ```
-

@@ -6,7 +6,7 @@ Inherited from [ApiTableCellPr.SetCellBorderRight](../../ApiTableCellPr/Methods/
 
 ## Example
 
-This example sets the border which will be displayed to the right of the table cell.
+Set the border which will be displayed to the right of the table cell.
 
 ```javascript editor-docx
 // How to add margin to the right of the cell.
@@ -25,4 +25,3 @@ tableCellPr.SetCellBorderRight("single", 32, 0, 51, 51, 51);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

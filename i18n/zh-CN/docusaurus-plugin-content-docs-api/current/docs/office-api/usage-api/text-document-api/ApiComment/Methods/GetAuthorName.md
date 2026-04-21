@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何获取批注作者的姓名。
+获取文档中的批注作者名称。
 
 ```javascript editor-docx
-// How to find out a comment's author.
+// How to find out a comment's author in a document.
 
 // Get all comments from the presentation and display the first one's author name.
 
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Author name: " + authorName);
 doc.Push(paragraph);
 ```
-

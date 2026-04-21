@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to select a list item from a ComboBox content control.
+Select a list item from a ComboBox content control in a document.
 
 ```javascript editor-docx
+// How to select list item for an inline content control in a document?
+
+// Select list item and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddComboBoxContentControl();
@@ -33,4 +37,3 @@ contentControl.AddListItem('one', '1');
 contentControl.AddListItem('two', '2');
 contentControl.SelectListItem('2');
 ```
-

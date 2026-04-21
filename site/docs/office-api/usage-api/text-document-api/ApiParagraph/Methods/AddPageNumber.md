@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example inserts a number of the current document page into the paragraph.
+Insert a number of the current document page into the paragraph.
 
 ```javascript editor-docx
 // How to add a page number to the text.
@@ -44,4 +44,3 @@ paragraph = footer.GetElement(0);
 paragraph.AddText("Page #");
 paragraph.AddPageNumber();
 ```
-

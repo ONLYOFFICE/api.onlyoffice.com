@@ -22,7 +22,7 @@ expression.SetPageOrientation(sPageOrientation);
 
 ## 示例
 
-此示例设置页面方向。
+设置页面方向。
 
 ```javascript editor-xlsx
 // How to change a page orientation.
@@ -35,4 +35,3 @@ let pageOrientation = worksheet.GetPageOrientation();
 worksheet.GetRange("A1").SetValue("Page orientation: ");
 worksheet.GetRange("C1").SetValue(pageOrientation);
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为线条注释设置起点。
+在 PDF 文档中为线条注释设置起点。
 
 ```javascript editor-pdf
+// How do I set start point in a PDF document?
+
+// Set start point using a line annotation object in a PDF document.
+
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 12, y: 12}, {x: 155, y: 30});
 lineAnnot.SetEndStyle("openArrow");
@@ -33,4 +37,3 @@ let page = doc.GetPage(0);
 page.AddObject(lineAnnot);
 console.log(`Start point set to: ${lineAnnot.GetEndPoint()}`);
 ```
-

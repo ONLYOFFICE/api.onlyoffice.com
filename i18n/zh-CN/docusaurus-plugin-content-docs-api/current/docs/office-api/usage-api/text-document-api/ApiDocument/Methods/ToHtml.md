@@ -25,7 +25,7 @@ string
 
 ## 示例
 
-此示例将文档转换为 HTML。
+将文档转换为 HTML。
 
 ```javascript editor-docx
 // How to get an HTML from the document content.
@@ -58,4 +58,3 @@ paragraph5.AddLineBreak();
 paragraph5.AddText(html);
 doc.Push(paragraph5);
 ```
-

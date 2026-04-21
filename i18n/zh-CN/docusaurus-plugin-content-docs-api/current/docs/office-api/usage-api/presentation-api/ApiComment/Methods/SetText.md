@@ -22,10 +22,10 @@ expression.SetText(sText);
 
 ## 示例
 
-此示例演示如何设置批注文本。
+在演示文稿中设置批注文本。
 
 ```javascript editor-pptx
-// How to change a text of a comment.
+// How to change a text of a comment in a presentation.
 
 // Get all comments from the presentation and set its first one's text.
 
@@ -51,4 +51,3 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's text: " + text);
 ```
-

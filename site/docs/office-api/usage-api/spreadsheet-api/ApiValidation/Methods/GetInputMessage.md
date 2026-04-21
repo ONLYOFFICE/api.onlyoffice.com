@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example gets the input message text.
+Get the input message text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the validation input message.
+// How to retrieve the validation input message in a spreadsheet.
 
-// Get the input message.
+// Get the input message using the validation API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -35,4 +35,3 @@ validation.SetInputMessage("Enter a number greater than 10");
 let inputMessage = validation.GetInputMessage();
 worksheet.GetRange("B1").SetValue("Input message: " + inputMessage);
 ```
-

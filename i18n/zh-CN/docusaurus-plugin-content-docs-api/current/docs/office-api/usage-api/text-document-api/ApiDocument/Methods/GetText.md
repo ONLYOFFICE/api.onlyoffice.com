@@ -2,16 +2,16 @@
 
 返回当前文档内容对象的内部文本。
 
-Inherited from [ApiDocumentContent.GetText](../../ApiDocumentContent/Methods/GetText.md).
+继承自 [ApiDocumentContent.GetText](../../ApiDocumentContent/Methods/GetText.md)。
 
 ## 示例
 
-此示例从文档内容元素获取文本。
+从文档内容元素获取文本。
 
 ```javascript editor-docx
 // Get the text of the document content as a string.
 
-// Display all content. 
+// Display all content using the document content API in a document.
 
 const doc = Api.GetDocument();
 
@@ -25,4 +25,3 @@ const para = Api.CreateParagraph();
 para.AddText("This text from DocContent element: " + content.GetText());
 doc.Push(para);
 ```
-

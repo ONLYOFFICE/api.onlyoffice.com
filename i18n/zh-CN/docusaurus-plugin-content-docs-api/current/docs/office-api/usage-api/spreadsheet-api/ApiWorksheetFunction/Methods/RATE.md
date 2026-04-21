@@ -27,15 +27,14 @@ number
 
 ## 示例
 
-此示例演示如何返回贷款或投资每期的利率。例如，按 6% 年利率进行季度付款时使用 6%/4。
+在电子表格中返回贷款或投资每期的利率。例如，6% 年利率的季度付款使用 6%/4。
 
 ```javascript editor-xlsx
-// How to estimate the interest rate per period for a loan or an investment.
+// How to estimate the interest rate per period for a loan or an investment in a spreadsheet.
 
-// Use a function to get the loan/investment interest rate per period.
+// Use a function to get the loan/investment interest rate per period in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.RATE(2*12, -500, 10000, 0));
 ```
-

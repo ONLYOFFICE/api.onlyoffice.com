@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取表格行的内部 ID。
+获取文档中表格行的内部 ID。
 
 ```javascript editor-docx
+// How can I get the internal id using a table row in a document?
+
+// Get the internal id for a table row in a document.
+
 const doc = Api.GetDocument();
 const table = Api.CreateTable(3, 3);
 table.SetWidth('percent', 100);
@@ -36,4 +40,3 @@ for (let rowIndex = 0; rowIndex < 3; rowIndex++) {
 	cellParagraph.AddText('This row internal ID: ' + internalId);
 }
 ```
-

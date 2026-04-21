@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例在文档内容中添加段落。
+在文档内容中添加段落。
 
 ```javascript editor-docx
 // How to add elements to the document content.
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.AddElement(0, paragraph);
 ```
-

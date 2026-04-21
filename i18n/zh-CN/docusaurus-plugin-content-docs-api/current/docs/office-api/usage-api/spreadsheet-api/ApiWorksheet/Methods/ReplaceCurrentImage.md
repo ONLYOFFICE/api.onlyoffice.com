@@ -24,12 +24,12 @@ expression.ReplaceCurrentImage(sImageUrl, nWidth, nHeight);
 
 ## 示例
 
-此示例用新图像替换原图像。
+在电子表格中将图像替换为新图像。
 
 ```javascript editor-xlsx
-// How to replace an image to another one.
+// How to replace an image to another one in a spreadsheet.
 
-// Replace an image from one to another using their urls.
+// Replace an image from one to another using their urls in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let drawing = worksheet.AddImage(
@@ -42,4 +42,3 @@ worksheet.ReplaceCurrentImage(
 	60 * 36000, 60 * 36000
 );
 ```
-

@@ -20,12 +20,12 @@ expression.GetAllContentControls();
 
 ## 示例
 
-此示例展示如何获取文档中所有内容控件的列表。
+获取文档中所有内容控件的列表。
 
 ```javascript editor-docx
 // Get all content controls added to the document.
 
-// How to retrieve all content controls and display the class type of the first one.
+// How to retrieve all content controls and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

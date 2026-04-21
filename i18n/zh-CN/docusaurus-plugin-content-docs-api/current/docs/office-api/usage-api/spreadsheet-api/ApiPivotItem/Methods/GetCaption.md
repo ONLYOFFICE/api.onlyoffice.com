@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取数据透视项的标题。
+获取电子表格中透视项的标题。
 
 ```javascript editor-xlsx
-// How to get a pivot item's caption.
+// How to get a pivot item's caption in a spreadsheet.
 
-// Create a pivot table, add data to it then get a caption of a specified pivot item.
+// Create a pivot table, add data to it then get a caption of a specified pivot item in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -67,4 +67,3 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(15 + i, 1).SetValue(pivotItems[i].GetCaption());
 }
 ```
-

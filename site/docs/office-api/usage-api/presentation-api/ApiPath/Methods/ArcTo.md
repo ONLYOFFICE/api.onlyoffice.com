@@ -25,10 +25,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curved shape using various bezier and arc commands.
+Create a complex curved shape using various bezier and arc commands. Demonstrates different curve types in a single path on a slide.
 
 ```javascript editor-pptx
-// Demonstrates different curve types in a single path on a slide.
+// How can I arc to using a geometry path in a presentation?
+
+// Arc to for a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -47,4 +50,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 slide.AddObject(shape);
 ```
-

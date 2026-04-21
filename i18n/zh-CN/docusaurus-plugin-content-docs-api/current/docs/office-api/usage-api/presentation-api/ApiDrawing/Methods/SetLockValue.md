@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-此示例将锁定值设置为形状的指定锁定类型。
+在演示文稿中为形状的指定锁定类型设置锁定值。
 
 ```javascript editor-pptx
-// How to set a lock value to a shape which means that the shape cannot be selected.
+// How to set a lock value to a shape which means that the shape cannot be selected in a presentation.
 
 // Select a shape object from a slide and set its lock value.
 
@@ -47,4 +47,3 @@ paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 slide.AddObject(shape);
 ```
-

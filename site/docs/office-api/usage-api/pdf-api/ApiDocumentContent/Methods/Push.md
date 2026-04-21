@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example adds a paragraph to the pdf document.
+Add a paragraph to the pdf document.
 
 ```javascript editor-pdf
 // How to insert an element into a page shape.
@@ -45,4 +45,3 @@ docContent.AddElement(paragraph);
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

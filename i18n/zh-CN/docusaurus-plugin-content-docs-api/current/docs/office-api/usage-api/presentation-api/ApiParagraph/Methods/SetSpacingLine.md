@@ -5,16 +5,16 @@
 sLineRule 参数的值为 "auto"，则
 nLine 参数的值将被解释为行的 240 分之一。
 
-Inherited from [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md).
+继承自 [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md)。
 
 ## 示例
 
-此示例设置段落行距。
+在演示文稿中设置段落行距。
 
 ```javascript editor-pptx
-// How to set the size of a spacing line from a paragraph properties.
+// How to set the size of a spacing line from a paragraph properties in a presentation.
 
-// Change a spacing line size property of a paragraph properties.
+// Change a spacing line size property of a paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,4 +38,3 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 slide.AddObject(shape);
 ```
-

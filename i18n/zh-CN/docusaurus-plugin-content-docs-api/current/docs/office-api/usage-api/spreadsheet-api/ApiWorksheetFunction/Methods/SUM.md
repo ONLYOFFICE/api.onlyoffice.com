@@ -22,10 +22,10 @@ number
 
 ## 示例
 
-此示例演示如何将单元格区域中的所有数字相加。
+在电子表格中将单元格范围内的所有数字相加。
 
 ```javascript editor-xlsx
-// How to sum up all values from the list.
+// How to sum up all values from the list in a spreadsheet.
 
 // Use a function to estimate a sum from the cells.
 
@@ -33,4 +33,3 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SUM(145, 37, 236, 69, 567, 92));
 ```
-

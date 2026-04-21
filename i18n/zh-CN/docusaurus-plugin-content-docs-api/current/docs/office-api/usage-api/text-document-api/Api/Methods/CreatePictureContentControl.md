@@ -23,13 +23,16 @@ expression.CreatePictureContentControl(width, height);
 
 ## 示例
 
-此示例展示如何创建图片内容控件。
+在文档中创建图片内容控件。
 
 ```javascript editor-docx
+// How can I create the picture content control in a document?
+
+// Create the picture content control in a document.
+
 let doc = Api.GetDocument();
 let cc = Api.CreatePictureContentControl(2000000, 2000000);
 let paragraph = Api.CreateParagraph();
 paragraph.Push(cc);
 doc.Push(paragraph);
 ```
-

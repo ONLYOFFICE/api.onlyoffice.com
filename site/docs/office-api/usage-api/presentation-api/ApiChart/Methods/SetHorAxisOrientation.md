@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the horizontal axis orientation.
+Specify the horizontal axis orientation in a presentation.
 
 ```javascript editor-pptx
-// How to set an orientation of horizontal axis.
+// How to set an orientation of horizontal axis in a presentation.
 
-// Create a chart, set its properties and its horizontal axis orientation.
+// Create a chart, set its properties and its horizontal axis orientation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

@@ -3,16 +3,16 @@
 指定将用于当前段落中任何制表符的自定义制表位序列。
 -**警告**：aPos 数组和 aVal 数组的长度-**必须**相等。
 
-Inherited from [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md).
+继承自 [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md)。
 
 ## 示例
 
-此示例设置将用于段落中任何制表符的自定义制表位序列。
+在演示文稿中设置一系列自定义制表位，用于段落中的所有制表符。
 
 ```javascript editor-pptx
-// How to set the size of a spacing tabs from a paragraph properties.
+// How to set the size of a spacing tabs from a paragraph properties in a presentation.
 
-// Change a tabs size property of a paragraph properties.
+// Change a tabs size property of a paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,3 @@ paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");
 slide.AddObject(shape);
 ```
-

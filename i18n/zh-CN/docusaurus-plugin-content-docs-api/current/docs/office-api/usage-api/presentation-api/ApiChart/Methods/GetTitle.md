@@ -20,9 +20,13 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取图表标题文本。
+获取演示文稿中的图表标题文本。
 
 ```javascript editor-pptx
+// How do I get the title in a presentation?
+
+// Get the title using a chart object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -53,4 +57,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Chart Title: ' + chartTitle);
 slide.AddObject(shape);
 ```
-

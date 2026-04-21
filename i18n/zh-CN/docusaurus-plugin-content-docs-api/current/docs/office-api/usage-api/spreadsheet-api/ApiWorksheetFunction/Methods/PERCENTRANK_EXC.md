@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何将数据集中值的排名作为数据集的百分比（0 到 1，不含端点）返回。
+在电子表格中以数据集百分比（0..1，不含端点）形式返回值在数据集中的排名。
 
 ```javascript editor-xlsx
-// How to return the rank of a value in a data set as a percentage.
+// How to return the rank of a value in a data set as a percentage in a spreadsheet.
 
-// Use a function to get a rank of a value in a data set.
+// Use a function to get a rank of a value in a data set in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -54,4 +54,3 @@ for (let m = 0; m < column4.length; m++) {
 let range = worksheet.GetRange("A1:D4");
 worksheet.GetRange("D5").SetValue(func.PERCENTRANK_EXC(range, 2, 4));
 ```
-

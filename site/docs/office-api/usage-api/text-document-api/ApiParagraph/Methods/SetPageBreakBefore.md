@@ -7,7 +7,7 @@ Inherited from [ApiParaPr.SetPageBreakBefore](../../ApiParaPr/Methods/SetPageBre
 
 ## Example
 
-This example specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document.
+Specify that when rendering the document using a paginated view, the contents of the current paragraph are rendered at the beginning of a new page in the document.
 
 ```javascript editor-docx
 // How to set a page break before the current paragraph.
@@ -27,4 +27,3 @@ paragraph.AddText("This is the second paragraph and it has page break before it 
 paragraph.SetStyle(myStyle);
 doc.Push(paragraph);
 ```
-

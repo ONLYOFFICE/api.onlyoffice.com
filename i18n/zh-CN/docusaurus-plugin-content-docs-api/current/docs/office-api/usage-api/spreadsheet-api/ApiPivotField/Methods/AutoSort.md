@@ -23,12 +23,12 @@ expression.AutoSort(order, field);
 
 ## 示例
 
-此示例展示如何为数据透视表报表建立自动字段排序规则。
+在电子表格中为数据透视表报表建立自动字段排序规则。
 
 ```javascript editor-xlsx
-// How to use the AutoSort method to sort pivot field data.
+// How to use the AutoSort method to sort pivot field data in a spreadsheet.
 
-// Create a pivot table, add data to it then apply automatic sorting to a specified field.
+// Create a pivot table, add data to it then apply automatic sorting to a specified field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -91,4 +91,3 @@ let priorityPivotField = pivotTable.GetPivotFields('Priority');
 priorityPivotField.AutoSort("xlManual", priorityField.Name);
 pivotWorksheet.GetRange('A16').SetValue(`Priority field set to manual sorting mode (${priorityPivotField.AutoSortOrder} - ${priorityPivotField.AutoSortField})`);
 ```
-

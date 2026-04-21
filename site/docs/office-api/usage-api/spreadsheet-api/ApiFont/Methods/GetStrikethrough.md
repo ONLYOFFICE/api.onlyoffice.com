@@ -20,10 +20,10 @@ boolean \| null
 
 ## Example
 
-This example shows how to get the strikethrough property of the specified font.
+Get the strikethrough property of the specified font in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine a font strikethrough property.
+// How to determine a font strikethrough property in a spreadsheet.
 
 // Get a boolean value that represents whether a font is strikethrough or not and show the value in the worksheet.
 
@@ -36,4 +36,3 @@ font.SetStrikethrough(true);
 let isStrikethrough = font.GetStrikethrough();
 worksheet.GetRange("B3").SetValue("Strikethrough property: " + isStrikethrough);
 ```
-

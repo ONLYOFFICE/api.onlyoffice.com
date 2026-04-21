@@ -4,16 +4,16 @@
 nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
 将其解释为 false。
 
-Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
+继承自 [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md)。
 
 ## 示例
 
-此示例设置当前段落的段后间距。
+在文档中设置当前段落的段后间距。
 
 ```javascript editor-docx
-// How to set the size of a spacing after a text from a paragraph properties.
+// How to set the size of a spacing after a text from a paragraph properties in a document.
 
-// Change the size property of a spacing after a paragraph.
+// Change the size property of a spacing after a paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -28,4 +28,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 doc.Push(paragraph);
 ```
-

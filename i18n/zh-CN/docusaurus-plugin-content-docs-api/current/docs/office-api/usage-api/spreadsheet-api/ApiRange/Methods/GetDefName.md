@@ -20,10 +20,10 @@ expression.GetDefName();
 
 ## 示例
 
-此示例演示如何获取范围的 ApiName 对象。
+获取电子表格中范围的命名范围对象。
 
 ```javascript editor-xlsx
-// How to find out a range name.
+// How to find out a range name in a spreadsheet.
 
 // Get a range, get its name and show it in the worksheet.
 
@@ -35,4 +35,3 @@ let range = worksheet.GetRange("A1:B1");
 let defName = range.GetDefName();
 worksheet.GetRange("A3").SetValue("DefName: " + defName.GetName());
 ```
-

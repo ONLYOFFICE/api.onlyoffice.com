@@ -32,7 +32,9 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 如何向 PDF 文档添加图表。
 
 ```javascript editor-pdf
-// Create a 3D bar chart, set its size, position, color and other properties.
+// Create a 3D bar chart, set its size, position, color and other properties in a PDF document.
+
+// Create the chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,4 +52,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

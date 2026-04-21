@@ -29,14 +29,12 @@ expression.CreateWordArt(textPr, text, transform, fill, stroke, rotAngle, width,
 
 ## Example
 
-This example creates a Text Art object with the "textArchUp" text transform type.
+Create a Text Art object with the "textArchUp" text transform type.
 
 ```javascript editor-docx
-// Creates a Text Art object using the specified text properties.
+// Create a Text Art object using the specified text properties in a document.
 
-// How to create the ApiWordArt object and add it to the first paragraph of the document.
-
-// Creates the empty text properties object and sets the bold property, font size, capitalized letters, color, and font family to it.
+// Create the empty text properties object and set the bold property, font size, capitalized letters, color, and font family to it in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();
@@ -51,4 +49,3 @@ let textArt = Api.CreateWordArt(textPr, "onlyoffice", "textArchUp", fill, stroke
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(textArt);
 ```
-

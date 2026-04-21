@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状填充颜色的十六进制字符串。
+获取演示文稿中形状填充颜色的十六进制字符串。
 
 ```javascript editor-pptx
+// How can I get the hex using a color in a presentation?
+
+// Get the hex for a color in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,4 +45,3 @@ run.AddText('Hex: ' + color.GetHex());
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

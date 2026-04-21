@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to inches.
+Convert points to inches in a document.
 
 ```javascript editor-docx
+// How to convert points to inches in a document?
+
+// Convert points to inches using the document API.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const inches = Api.PointsToInches(points);
 paragraph.AddText(points + ' points are equal to ' + inches + ' inches.');
 doc.Push(paragraph);
 ```
-

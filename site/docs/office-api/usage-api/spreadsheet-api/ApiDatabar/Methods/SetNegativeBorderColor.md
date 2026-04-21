@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the negative bar border color of a data bar conditional formatting rule.
+Set the negative bar border color of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the border color of negative value bars.
+// How to change the border color of negative value bars in a spreadsheet.
 
 // Set the negative bar border color of a data bar conditional formatting rule.
 
@@ -52,4 +52,3 @@ dataBar.SetNegativeBorderColor(negativeBorderColor);
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetNegativeBorderColor() ? "Set" : "None");
 ```
-

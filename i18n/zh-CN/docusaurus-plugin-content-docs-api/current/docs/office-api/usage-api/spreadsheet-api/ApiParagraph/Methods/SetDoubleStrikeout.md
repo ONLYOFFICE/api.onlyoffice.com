@@ -22,9 +22,13 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例展示如何对形状内的段落应用双删除线格式。
+对电子表格中形状内的段落应用双删除线格式。
 
 ```javascript editor-xlsx
+// How do I set double strikeout in a spreadsheet?
+
+// Set double strikeout using a paragraph object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(150, 110, 90));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -44,4 +48,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has no strikeout.');
 content.Push(paragraph2);
 ```
-

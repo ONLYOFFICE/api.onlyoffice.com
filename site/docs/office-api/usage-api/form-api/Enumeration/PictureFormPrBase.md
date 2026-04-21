@@ -34,4 +34,3 @@ const pictureFormPrBase = {
 };
 const pictureForm = Api.CreatePictureForm(pictureFormPrBase);
 ```
-

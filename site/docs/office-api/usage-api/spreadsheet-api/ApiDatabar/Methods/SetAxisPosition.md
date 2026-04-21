@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the axis position of a data bar conditional formatting rule.
+Set the axis position of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the axis position setting of a data bar.
+// How to change the axis position setting of a data bar in a spreadsheet.
 
 // Set the axis position of a data bar conditional formatting rule.
 
@@ -51,4 +51,3 @@ dataBar.SetAxisPosition("xlDataBarAxisMidpoint");
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetAxisPosition());
 ```
-

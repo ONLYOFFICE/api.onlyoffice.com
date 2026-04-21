@@ -22,10 +22,10 @@ expression.GetReply(nIndex);
 
 ## Example
 
-This example shows how to get the specified comment reply.
+Get the specified comment reply in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a reply to the comment.
+// How to get a reply to the comment in a spreadsheet.
 
 // Add a cooment reply text to a range of the worksheet.
 
@@ -38,4 +38,3 @@ let reply = comment.GetReply();
 worksheet.GetRange("A3").SetValue("Comment's reply text: ");
 worksheet.GetRange("B3").SetValue(reply.GetText());
 ```
-

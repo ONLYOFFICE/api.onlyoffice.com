@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill properties from a shape and displays detailed information.
+Get the fill properties from a shape and display detailed information. Creates a shape with gradient fill, retrieve it and show fill details.
 
 ```javascript editor-pptx
-// Creates a shape with gradient fill, retrieves it and shows fill details.
+// How do I get the fill in a presentation?
+
+// Get the fill using a shape object in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -40,4 +43,3 @@ if (retrievedFill) {
     paragraph.AddText("Fill type: " + retrievedFill.GetType());
 }
 ```
-

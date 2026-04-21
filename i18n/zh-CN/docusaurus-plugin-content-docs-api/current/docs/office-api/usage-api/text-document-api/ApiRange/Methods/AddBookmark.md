@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例向指定范围添加书签。
+在文档中向指定范围添加书签。
 
 ```javascript editor-docx
 // How to bookmark a range of document.
 
-// Insert a bookmark into the 'ONLYOFFICE' range.
+// Insert a bookmark into the 'ONLYOFFICE' range in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ range.AddBookmark("Bookmark");
 paragraph.AddLineBreak();
 paragraph.AddText("A bookmark was added to the 'ONLYOFFICE' range.");
 ```
-

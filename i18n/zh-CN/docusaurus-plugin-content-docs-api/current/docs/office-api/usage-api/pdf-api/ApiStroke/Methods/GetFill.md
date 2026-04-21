@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-获取描边的填充颜色。
+获取笔触的填充颜色。在 PDF 文档中创建具有彩色边框的形状并获取其填充属性。
 
 ```javascript editor-pdf
-// Creates a shape with a colored border and retrieves its fill properties.
+// How to get the fill for a stroke in a PDF document?
+
+// Get the fill and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,4 +45,3 @@ if (strokeObj) {
     }
 }
 ```
-

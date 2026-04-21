@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the internal rate of return for a schedule of cash flows.
+Return the internal rate of return for a schedule of cash flows in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the internal rate of return.
+// How to return the internal rate of return in a spreadsheet.
 
-// Use a function to return the internal rate of return.
+// Use a function to return the internal rate of return in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -48,4 +48,3 @@ let range1 = worksheet.GetRange("A2:A5");
 let range2 = worksheet.GetRange("B2:B5");
 worksheet.GetRange("C5").SetValue(func.XIRR(range1, range2));
 ```
-

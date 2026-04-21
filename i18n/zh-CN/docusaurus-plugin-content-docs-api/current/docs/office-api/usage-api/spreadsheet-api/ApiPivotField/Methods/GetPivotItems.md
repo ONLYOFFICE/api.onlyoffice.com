@@ -23,12 +23,12 @@ expression.GetPivotItems(index);
 
 ## 示例
 
-此示例展示如何获取透视字段的项。
+获取电子表格中透视字段的项。
 
 ```javascript editor-xlsx
-// How to get a pivot field items.
+// How to get a pivot field items in a spreadsheet.
 
-// Create a pivot table, add data to it then get items of a specified pivot field as an array.
+// Create a pivot table, add data to it then get items of a specified pivot field as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -70,4 +70,3 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
 }
 ```
-

@@ -11,10 +11,9 @@ Enumeration
 - [ApiParagraph](../ApiParagraph/ApiParagraph.md)
 - [ApiTable](../ApiTable/ApiTable.md)
 
-
 ## Example
 
-This example adds a document element called "paragraph" to the document.
+Add a document element called "paragraph" to the document.
 
 ```javascript editor-pdf
 // How to add a paragraph element to the document.
@@ -23,4 +22,3 @@ This example adds a document element called "paragraph" to the document.
 
 doc.AddElement(paragraph);
 ```
-

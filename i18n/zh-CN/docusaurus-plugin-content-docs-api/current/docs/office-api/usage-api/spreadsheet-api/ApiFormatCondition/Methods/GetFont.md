@@ -20,7 +20,7 @@ expression.GetFont();
 
 ## 示例
 
-此示例获取条件格式规则应用的字体。
+获取条件格式规则应用的字体。
 
 ```javascript editor-xlsx
 // How to retrieve font settings from conditional formatting rules.
@@ -53,4 +53,3 @@ worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
 ```
-

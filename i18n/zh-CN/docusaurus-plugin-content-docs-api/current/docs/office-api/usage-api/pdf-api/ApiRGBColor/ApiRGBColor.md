@@ -1,6 +1,6 @@
 # ApiRGBColor
 
-ApiRGBColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
+ApiRGBColor 是 [ApiUniColor](../ApiUniColor/ApiUniColor.md) 的子类。
 
 ## 方法
 

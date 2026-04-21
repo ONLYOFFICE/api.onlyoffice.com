@@ -22,10 +22,10 @@ expression.SetTime(nTimeStamp);
 
 ## 示例
 
-此示例设置批注创建时间戳（当前时区格式）。
+设置批注创建的当前时区格式时间戳。
 
 ```javascript editor-xlsx
-// How to change a time when a comment was created.
+// How to change a time when a comment was created in a spreadsheet.
 
 // Add a comment then update its creation time and show it in the worksheet.
 
@@ -37,4 +37,3 @@ worksheet.GetRange("A3").SetValue("Timestamp: ");
 comment.SetTime(Date.now());
 worksheet.GetRange("B3").SetValue(comment.GetTime());
 ```
-

@@ -22,15 +22,14 @@ expression.AddText(text);
 
 ## 示例
 
-此示例向段落添加一些文本。
+在文档中向段落添加文本。
 
 ```javascript editor-docx
-// How to insert the text to the paragraph.
+// How to insert the text to the paragraph in a document.
 
-// Add paragraph text.
+// Add the text and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is just a sample text. Nothing special.");
 ```
-

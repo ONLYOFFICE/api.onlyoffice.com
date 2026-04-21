@@ -22,16 +22,15 @@ boolean
 
 ## 示例
 
-此示例更改受保护区域中任何人的访问类型。
+在电子表格中更改受保护范围的所有人访问类型。
 
 ```javascript editor-xlsx
-// How to set access type to the "can view" one.
+// How to set access type to the "can view" one in a spreadsheet.
 
-// Make a protected range viewable for anyone.
+// Make a protected range viewable for anyone in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");
 let protectedRange = worksheet.GetProtectedRange("protectedRange");
 protectedRange.SetAnyoneType("CanView");
 ```
-

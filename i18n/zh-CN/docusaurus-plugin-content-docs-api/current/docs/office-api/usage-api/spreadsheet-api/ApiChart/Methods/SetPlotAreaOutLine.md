@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表绘图区域的轮廓。
+在电子表格中为图表绘图区域设置轮廓。
 
 ```javascript editor-xlsx
-// How to color chart plot area outline.
+// How to color chart plot area outline in a spreadsheet.
 
-// Add a stroke for plot area outline.
+// Add a stroke for plot area outline in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -50,4 +50,3 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetPlotAreaOutLine(stroke);
 ```
-

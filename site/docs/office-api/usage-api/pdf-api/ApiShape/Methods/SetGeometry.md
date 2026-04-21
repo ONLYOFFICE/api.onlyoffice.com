@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-Applies custom geometry with specific fill and stroke properties.
+Apply custom geometry with specific fill and stroke properties in a PDF document.
 
 ```javascript editor-pdf
+// How to set geometry for a shape in a PDF document?
+
+// Set geometry and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -47,4 +51,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 page.AddObject(shape);
 ```
-

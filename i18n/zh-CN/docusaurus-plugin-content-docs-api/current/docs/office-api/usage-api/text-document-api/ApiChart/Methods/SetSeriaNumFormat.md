@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例将指定的数字格式设置为图表系列。
+为图表系列设置指定的数字格式。
 
 ```javascript editor-docx
 // How to set the "0.00" numeric format to the chart seria.
@@ -43,4 +43,3 @@ chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriaNumFormat("0.00", 0);
 paragraph.AddDrawing(chart);
 ```
-

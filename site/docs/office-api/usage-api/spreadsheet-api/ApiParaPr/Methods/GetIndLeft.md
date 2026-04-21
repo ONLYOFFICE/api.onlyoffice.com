@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph left side indentation.
+Get the paragraph left side indentation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a left indent of a paragraph.
+// How to get a left indent of a paragraph in a spreadsheet.
 
-// Get the left paragraph indent by the side.
+// Get the left paragraph indent by the side in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,4 +42,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 content.Push(paragraph);
 ```
-

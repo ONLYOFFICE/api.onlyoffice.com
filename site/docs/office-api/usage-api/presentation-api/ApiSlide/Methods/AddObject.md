@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example adds an object (image, shape or chart) to the current presentation slide.
+Add an object (image, shape or chart) to the current presentation slide.
 
 ```javascript editor-pptx
 // How to add an element to the slide.
 
-// Create a chart and add it to the ApiSlide object.
+// Create a chart and add it to the slide object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example removes all the elements from the run.
+Remove all the elements from the run in a presentation.
 
 ```javascript editor-pptx
-// How to remove all elements from the text run object.
+// How to remove all elements from the text run object in a presentation.
 
 // Delete text from the slide.
 
@@ -45,4 +45,3 @@ run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

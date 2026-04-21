@@ -26,7 +26,9 @@ boolean
 如何为当前表格单元格设置顶部边距。
 
 ```javascript editor-pdf
-// Specify the top margin value for the ApiTableCell object.
+// Specify the top margin value for the table cell object.
+
+// Set cell margin top using a table cell object.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ cell.SetCellMarginTop(720);
 
 page.AddObject(table);
 ```
-

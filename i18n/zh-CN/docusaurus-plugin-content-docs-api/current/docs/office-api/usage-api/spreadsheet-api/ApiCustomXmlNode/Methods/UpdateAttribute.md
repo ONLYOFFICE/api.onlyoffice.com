@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例演示如何更新自定义 XML 节点中现有属性的值。
+更新电子表格中自定义 XML 节点中现有属性的值。
 
 ```javascript editor-xlsx
+// How do I update attribute in a spreadsheet?
+
+// Update attribute using a custom XML node object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -43,4 +47,3 @@ bookNode.UpdateAttribute('category', 'ancient');
 const attributes = bookNode.GetAttributes();
 worksheet.GetRange('A1').SetValue('Updated attribute: ' + attributes[0].name + '=' + attributes[0].value);
 ```
-

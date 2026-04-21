@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example specifies that all the columns in the current section have the different widths.
+Specify that all the columns in the current section have the different widths in a document.
 
 ```javascript editor-docx
+// How do I get the columns spaces in a document?
+
+// Get the columns spaces using a section object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();
@@ -41,4 +45,3 @@ paragraph.AddText("This text starts from column #3. ");
 paragraph.AddText("This column is 3 inches wide (" + columnsWidths[2] + " twentieths of a point). ");
 paragraph.AddText("The distance between this column and column #2 is 1/3 of an inch (" + columnsSpaces[1] + " twentieths of a point).");
 ```
-

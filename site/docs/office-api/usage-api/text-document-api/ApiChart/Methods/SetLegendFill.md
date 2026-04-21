@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart legend.
+Set the fill to the chart legend in a document.
 
 ```javascript editor-docx
-// How to color a chart legend.
+// How to color a chart legend in a document.
 
-// Create a chart and set a solid fill to its legend.
+// Create a chart and set a solid fill to its legend in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetLegendFill(fill);
 ```
-

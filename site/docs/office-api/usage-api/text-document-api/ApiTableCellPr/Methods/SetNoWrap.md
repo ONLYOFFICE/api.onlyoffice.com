@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example specifies how the table cell is laid out when the parent table is displayed in a document.
+Specify how the table cell is laid out when the parent table is displayed in a document.
 
 ```javascript editor-docx
 // Create a table cell where text is not wrapped when we try to change table width.
@@ -59,4 +59,3 @@ tableCellPr.SetNoWrap(true);
 copyTable2.SetStyle(tableStyle);
 doc.Push(copyTable2);
 ```
-

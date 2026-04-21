@@ -22,7 +22,7 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get an element by its position in the document content.
+Get an element by its position in the document content.
 
 ```javascript editor-xlsx
 // How to get an element of the document content knowing its index position.
@@ -42,4 +42,3 @@ paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置动画效果的重复次数。
+在演示文稿中设置动画效果的重复次数。
 
 ```javascript editor-pptx
+// How do I set repeat count in a presentation?
+
+// Set repeat count using an animation effect object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -57,4 +61,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('New repeat count: ' + repeatCount);
 slide.AddObject(infoShape);
 ```
-

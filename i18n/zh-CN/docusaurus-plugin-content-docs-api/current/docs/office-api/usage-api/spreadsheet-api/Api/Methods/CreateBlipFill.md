@@ -23,16 +23,15 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## 示例
 
-此示例创建图片填充，使用选定的图像作为对象背景应用于对象。
+在电子表格中创建图片填充，使用所选图像作为对象背景应用于对象。
 
 ```javascript editor-xlsx
-// How to set image background to the shape object.
+// How to set image background to the shape object in a spreadsheet.
 
-// Create a blip fill from the image to set object background.
+// Create a blip fill from the image to set object background in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateBlipFill("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", "tile");
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```
-

@@ -20,9 +20,13 @@ expression.GetBackgroundColor();
 
 ## 示例
 
-此示例获取字段控件并显示其背景颜色。
+获取字段控件并显示其在 PDF 文档中的背景颜色。
 
 ```javascript editor-pdf
+// How do I get the background color in a PDF document?
+
+// Get the background color using a widget object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -37,4 +41,3 @@ widgets.forEach(function(widget) {
 let bgColor = widgets[0].GetBackgroundColor();
 textField.SetValue('Widgets background color is: ' + bgColor.R + ',' + bgColor.G + ',' + bgColor.B);
 ```
-

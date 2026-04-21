@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-此示例演示如何计算区域中非空单元格的数量。
+在电子表格中计算范围内非空单元格的数量。
 
 ```javascript editor-xlsx
 // How to find a number of non-empty cells.
@@ -47,4 +47,3 @@ let func = Api.WorksheetFunction;
 let ans = func.COUNTA(worksheet.GetRange("A1:C3"));
 worksheet.GetRange("D3").SetValue(ans);
 ```
-

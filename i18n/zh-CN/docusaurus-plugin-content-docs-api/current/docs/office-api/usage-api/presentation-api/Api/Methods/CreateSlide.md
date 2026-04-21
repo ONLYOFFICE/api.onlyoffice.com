@@ -20,7 +20,7 @@ expression.CreateSlide();
 
 ## 示例
 
-此示例创建幻灯片并将其插入演示文稿。
+创建幻灯片并将其插入到演示文稿中。
 
 ```javascript editor-pptx
 // How to add a new slide.
@@ -35,4 +35,3 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
 ```
-

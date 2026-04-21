@@ -44,5 +44,3 @@
 - "vertTitleAndTx"
 - "vertTitleAndTxOverChart"
 - "vertTx"
-
-

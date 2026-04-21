@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to retrieve the name of the current XML node.
+Retrieve the name of the current XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I get the node name in a presentation?
+
+// Get the node name using a custom XML node object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,4 +47,3 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Node name: ' + nodeName);
 ```
-

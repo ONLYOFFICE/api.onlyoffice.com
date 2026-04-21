@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an index of pivot field of a data field.
+Get an index of pivot field of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to use a table element pivot field.
+// How to use a table element pivot field in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's pivot index.
+// Create a pivot table, add data to it then display a custom data field's pivot index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -67,4 +67,3 @@ pivotWorksheet.GetRange('B15').SetValue(dataField.GetIndex());
 pivotWorksheet.GetRange('A16').SetValue('Price position:');
 pivotWorksheet.GetRange('B16').SetValue(dataField.GetPivotField().GetIndex());
 ```
-

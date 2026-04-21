@@ -19,4 +19,3 @@ expression.Push(oElement);
 ## Returns
 
 boolean
-

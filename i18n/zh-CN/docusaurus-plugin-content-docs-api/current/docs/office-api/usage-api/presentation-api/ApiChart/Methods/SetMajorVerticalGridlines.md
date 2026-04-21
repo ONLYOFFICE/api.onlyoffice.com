@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定主要垂直网格线的视觉属性。
+在演示文稿中指定主要垂直网格线的视觉属性。
 
 ```javascript editor-pptx
-// How to set a stroke as major vertical gridlines.
+// How to set a stroke as major vertical gridlines in a presentation.
 
-// Create a chart, set its properties and its vertical gridlines properties.
+// Create a chart, set its properties and its vertical gridlines properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,3 @@ let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.RGB(255, 111, 6
 chart.SetMajorVerticalGridlines(stroke);
 slide.AddObject(chart);
 ```
-

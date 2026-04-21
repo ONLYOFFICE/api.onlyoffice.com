@@ -24,10 +24,9 @@
 - "noCrop"
 - "txBox"
 
-
 ## 示例
 
-此示例展示如何获取绘图对象指定锁定类型的锁定值。
+获取绘图对象指定锁定类型的锁定值。
 
 ```javascript editor-xlsx
 // How to get a lock value of the drawing.
@@ -36,4 +35,3 @@
 
 let lockValue = drawing.GetLockValue("noSelect");
 ```
-

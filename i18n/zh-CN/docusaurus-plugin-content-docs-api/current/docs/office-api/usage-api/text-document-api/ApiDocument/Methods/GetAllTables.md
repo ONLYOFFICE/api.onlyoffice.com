@@ -2,11 +2,11 @@
 
 从当前文档内容返回所有表格的数组。
 
-Inherited from [ApiDocumentContent.GetAllTables](../../ApiDocumentContent/Methods/GetAllTables.md).
+继承自 [ApiDocumentContent.GetAllTables](../../ApiDocumentContent/Methods/GetAllTables.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取所有表格的数组。
+从文档内容中获取所有表格的数组。
 
 ```javascript editor-docx
 // Get all tables added to the document.
@@ -32,4 +32,3 @@ paragraph.AddText("This is just a sample text in the first cell.");
 let cell = tables[0].GetCell(0, 0);
 tables[0].AddElement(cell, 0, paragraph);
 ```
-

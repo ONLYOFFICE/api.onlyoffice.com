@@ -23,9 +23,13 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-This example shows how to apply underline formatting to all text in a paragraph inside a shape.
+Apply underline formatting to all text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to set underline for a paragraph in a spreadsheet?
+
+// Set underline and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 140, 140));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -45,4 +49,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not underlined.');
 content.Push(paragraph2);
 ```
-

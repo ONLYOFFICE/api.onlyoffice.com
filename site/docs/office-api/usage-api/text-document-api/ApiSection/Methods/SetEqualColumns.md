@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example specifies that all the text columns in the current section are of equal width.
+Specify that all the text columns in the current section are of equal width in a document.
 
 ```javascript editor-docx
-// How to split the text into 3 equal columns.
+// How to split the text into 3 equal columns in a document.
 
-// Get the final section and set its columns.
+// Get the final section and set its columns in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,3 @@ paragraph.AddColumnBreak();
 paragraph.AddText("This text starts from column #3. ");
 paragraph.AddText("This sentence is used to add lines for demonstrative purposes.");
 ```
-

@@ -6,9 +6,13 @@ Inherited from [ApiBaseListField.GetOptions](../../ApiBaseListField/Methods/GetO
 
 ## Example
 
-This example gets options from field with list of options.
+Get options from field with list of options in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the options using a list field in a PDF document?
+
+// Get the options for a list field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -20,4 +24,3 @@ comboboxField.AddOption('Option 3');
 let options = comboboxField.GetOptions();
 console.log('Combobox options is: ' + options);
 ```
-

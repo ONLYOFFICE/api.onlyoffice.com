@@ -24,5 +24,3 @@
 - "subTitle"
 - "table"
 - "title"
-
-

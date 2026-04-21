@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-此示例演示如何根据名称获取自定义属性的值。
+通过名称获取文档中自定义属性的值。
 
 ```javascript editor-docx
+// Return null for properties that do not exist.
+
+// Get for a custom properties in a document.
+
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 
@@ -37,4 +41,3 @@ const paragraph = doc.GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
 ```
-

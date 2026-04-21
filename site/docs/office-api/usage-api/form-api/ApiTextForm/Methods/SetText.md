@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the text to the current text field.
+Set the text to the current text field in a document.
 
 ```javascript editor-forms
 // How to add the text to the text form.
@@ -35,4 +35,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 textForm.SetText("John Smith");
 ```
-

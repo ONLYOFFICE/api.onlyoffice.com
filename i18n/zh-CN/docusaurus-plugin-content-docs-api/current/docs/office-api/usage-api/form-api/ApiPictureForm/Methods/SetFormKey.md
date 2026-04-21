@@ -2,11 +2,11 @@
 
 为当前表单设置键。
 
-Inherited from [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md).
+继承自 [ApiFormBase.SetFormKey](../../ApiFormBase/Methods/SetFormKey.md)。
 
 ## 示例
 
-此示例为表单设置键。
+为表单设置键。
 
 ```javascript editor-forms
 // Change the key of the text form.
@@ -23,4 +23,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
-

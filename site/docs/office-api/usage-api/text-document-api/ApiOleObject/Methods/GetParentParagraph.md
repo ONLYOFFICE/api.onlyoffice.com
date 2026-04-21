@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetParentParagraph](../../ApiDrawing/Methods/GetParen
 
 ## Example
 
-This example shows how to get a parent paragraph that contains the graphic object.
+Get a parent paragraph that contains the graphic object in a document.
 
 ```javascript editor-docx
-// Get an element's parent paragraph.
+// Get an element's parent paragraph in a document.
 
-// How to show the shape's wrapper paragraph.
+// How to show the shape's wrapper paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -23,4 +23,3 @@ let parentParagraph = drawing.GetParentParagraph();
 parentParagraph.AddLineBreak();
 parentParagraph.AddText("This is a parent paragraph");
 ```
-

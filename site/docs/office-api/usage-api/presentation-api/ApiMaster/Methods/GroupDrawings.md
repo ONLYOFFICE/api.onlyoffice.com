@@ -22,7 +22,7 @@ expression.GroupDrawings(aDrawings);
 
 ## Example
 
-This example shows how to group drawings on master slide.
+Group drawings on master slide in a presentation.
 
 ```javascript editor-pptx
 // How to group drawings on master slide.
@@ -45,4 +45,3 @@ master.AddObject(shape1);
 master.AddObject(shape2);
 master.GroupDrawings([shape1, shape2]);
 ```
-

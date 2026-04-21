@@ -22,7 +22,7 @@ JSON
 
 ## 示例
 
-此示例演示如何将 ApiPresentation 对象转换为 JSON 对象。
+在演示文稿中将演示文稿对象转换为 JSON 对象。
 
 ```javascript editor-pptx
 // How to convert the presentation object to JSON objects.
@@ -46,4 +46,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
 ```
-

@@ -21,10 +21,9 @@
 - "fullCtxParaNum"
 - "aboveBelow"
 
-
 ## 示例
 
-此示例添加指向包含书签的页面的交叉引用。
+添加指向包含书签的页面的交叉引用。
 
 ```javascript editor-docx
 // How to add reference to the bookmarked page.
@@ -33,4 +32,3 @@
 
 paragraph.AddBookmarkCrossRef("pageNum", bookmark);
 ```
-

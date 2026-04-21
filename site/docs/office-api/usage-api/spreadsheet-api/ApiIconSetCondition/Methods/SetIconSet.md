@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example shows how to change the icon set type for conditional formatting.
+Change the icon set type for conditional formatting in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to modify the icon set type used in conditional formatting.
@@ -45,4 +45,3 @@ worksheet.GetRange("B1").SetValue("Before: Default icon set");
 iconCondition.SetIconSet("xl4Arrows");
 worksheet.GetRange("B2").SetValue("After: Changed to 4 arrows");
 ```
-

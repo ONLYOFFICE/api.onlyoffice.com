@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## Example
 
-This example creates a pattern fill and applies it to the object using the selected pattern as the object background.
+Create a pattern fill and apply it to the object using the selected pattern as the object background in a presentation.
 
 ```javascript editor-pptx
-// How to apply pattern to the background of a drawing.
+// How to apply pattern to the background of a drawing in a presentation.
 
-// Change color of an element using a pattern fill.
+// Change color of an element using a pattern fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,3 @@ const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 3600
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
 ```
-

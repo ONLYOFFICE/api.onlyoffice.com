@@ -22,12 +22,12 @@ expression.detachEvent(eventName);
 
 ## 示例
 
-此示例取消订阅「onWorksheetChange」事件。
+取消订阅"onWorksheetChange"事件。
 
 ```javascript editor-xlsx
-// Detach from an event.
+// Detach from an event in a spreadsheet.
 
-// How to stop event handling.
+// How to stop event handling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -38,4 +38,3 @@ Api.attachEvent("onWorksheetChange", function(range){
 });
 Api.detachEvent("onWorksheetChange");
 ```
-

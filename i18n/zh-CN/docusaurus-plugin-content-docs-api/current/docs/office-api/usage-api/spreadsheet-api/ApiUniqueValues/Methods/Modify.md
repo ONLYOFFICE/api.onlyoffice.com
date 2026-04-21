@@ -2,11 +2,11 @@
 
 使用指定的参数修改当前格式条件。
 
-Inherited from [ApiFormatCondition.Modify](../../ApiFormatCondition/Methods/Modify.md).
+继承自 [ApiFormatCondition.Modify](../../ApiFormatCondition/Methods/Modify.md)。
 
 ## 示例
 
-此示例修改条件格式规则。
+修改条件格式规则。
 
 ```javascript editor-xlsx
 // How to change the conditions of existing conditional formatting rules.
@@ -37,4 +37,3 @@ condition1.Modify("xlCellValue", "xlGreater", "200");
 worksheet.GetRange("C4").SetValue("Modified formula:");
 worksheet.GetRange("C5").SetValue(condition1.Formula1);
 ```
-

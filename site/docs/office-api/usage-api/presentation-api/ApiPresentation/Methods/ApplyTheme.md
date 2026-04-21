@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example applies a theme to all the slides in the presentation.
+Apply a theme to all the slides in the presentation.
 
 ```javascript editor-pptx
 // How to apply a theme to the presentation.
 
-// Create the ApiTheme object and apply it to the presentation.
+// Create the theme object and apply it to the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,4 +54,3 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme = Api.CreateTheme("New theme", master, colorScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
 ```
-

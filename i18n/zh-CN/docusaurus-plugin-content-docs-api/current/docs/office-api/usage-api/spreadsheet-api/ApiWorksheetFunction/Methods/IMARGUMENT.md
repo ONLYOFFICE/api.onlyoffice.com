@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回辐角 Theta，一个以弧度表示的角。
+在电子表格中返回参数 Theta，以弧度表示的角度。
 
 ```javascript editor-xlsx
-// How to get an angle expressed in radians.
+// How to get an angle expressed in radians in a spreadsheet.
 
-// Use a function to get an angle expressed in radians.
+// Use a function to get an angle expressed in radians in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMARGUMENT("-2+2.5i"));
 ```
-

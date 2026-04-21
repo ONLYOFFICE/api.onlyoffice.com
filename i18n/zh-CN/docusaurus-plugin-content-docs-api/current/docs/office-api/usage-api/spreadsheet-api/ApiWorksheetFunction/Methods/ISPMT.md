@@ -25,15 +25,14 @@ number
 
 ## 示例
 
-此示例演示如何返回投资在特定期间支付的利息。
+在电子表格中返回投资特定期间支付的利息。
 
 ```javascript editor-xlsx
-// How to get the investment interest paid during a specific period.
+// How to get the investment interest paid during a specific period in a spreadsheet.
 
-// Use a function to get an interest paid during a specific period.
+// Use a function to get an interest paid during a specific period in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ISPMT(0.1/12, 1, 2*12, 2000));
 ```
-

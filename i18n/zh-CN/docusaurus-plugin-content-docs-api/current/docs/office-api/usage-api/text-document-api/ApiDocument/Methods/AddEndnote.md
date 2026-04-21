@@ -20,12 +20,12 @@ expression.AddEndnote();
 
 ## 示例
 
-此示例为文档添加尾注。
+为文档添加尾注。
 
 ```javascript editor-docx
 // How to add endnote to the document.
 
-// Get all endnotes first paragraphs and make the first one bold.
+// Get all endnotes first paragraphs and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 
@@ -35,4 +35,3 @@ let endNotesFirstParagraphs = doc.GetEndNotesFirstParagraphs();
 endNotesFirstParagraphs[0].AddText("Endnote 1");
 endNotesFirstParagraphs[0].SetBold(true);
 ```
-

@@ -22,12 +22,12 @@ expression.GetPivotByName(name);
 
 ## Example
 
-This example shows how to get pivot by its name.
+Get pivot by its name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get pivot knowing its pivot table name.
+// How to get pivot knowing its pivot table name in a spreadsheet.
 
-// Update pivot getting it by its name.
+// Update pivot getting it by its name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue('Region');
@@ -46,4 +46,3 @@ Api.GetPivotByName(pivotTable.GetName()).AddFields({
 
 Api.GetPivotByName(pivotTable.GetName()).AddDataField('Price');
 ```
-

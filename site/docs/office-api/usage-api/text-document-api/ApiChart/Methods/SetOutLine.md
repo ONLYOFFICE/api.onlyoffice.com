@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetOutLine](../../ApiDrawing/Methods/SetOutLine.md).
 
 ## Example
 
-This example sets the outline properties to the specified graphic object.
+Set the outline properties to the specified graphic object in a document.
 
 ```javascript editor-docx
-// How to outline the drawing with the stroke.
+// How to outline the drawing with the stroke in a document.
 
-// Set the borders of the shape.
+// Set the borders of the shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -24,4 +24,3 @@ stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 copyDrawing.SetOutLine(stroke);
 paragraph.AddDrawing(copyDrawing);
 ```
-

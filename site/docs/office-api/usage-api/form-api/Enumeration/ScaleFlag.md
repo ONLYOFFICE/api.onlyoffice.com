@@ -13,10 +13,9 @@ Enumeration
 - "tooBig"
 - "tooSmall"
 
-
 ## Example
 
-This example sets the scaling condition when the current picture form is scaled if it is too big.
+Set the scaling condition when the current picture form is scaled if it is too big.
 
 ```javascript editor-forms
 // How to set a scale flag for picture form.
@@ -25,4 +24,3 @@ This example sets the scaling condition when the current picture form is scaled 
 
 pictureForm.SetScaleFlag("tooBig");
 ```
-

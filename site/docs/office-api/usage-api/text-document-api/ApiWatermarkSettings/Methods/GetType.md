@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a watermark type and pastes it into the document.
+Get a watermark type and paste it into the document.
 
 ```javascript editor-docx
-// How to get type of the watermark.
+// How to get type of the watermark in a document.
 
-// Display the name of the watermark style.
+// Display the name of the watermark style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Watermark Type = " + classType);
 doc.Push(paragraph);
 ```
-

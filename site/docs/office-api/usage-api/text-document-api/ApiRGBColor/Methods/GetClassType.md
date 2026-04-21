@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a RGB color object in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiRGBColor.
+// How can I get the class type of a RGB color in a document?
 
-// Retrieve class type of ApiRGBColor object and insert it to the document.
+// Get the class type of a RGB color and display it in the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 doc.Push(paragraph);
 ```
-

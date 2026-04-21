@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array of all paragraphs from the document content.
+Get an array of all paragraphs from the document content in a document.
 
 ```javascript editor-docx
 // Get all paragraphs added to the document.
 
-// How to retrieve all paragraphs and make the first one bold.
+// How to retrieve all paragraphs and make the first one bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -42,4 +42,3 @@ docContent.Push(paragraph);
 let paragraphs = docContent.GetAllParagraphs();
 paragraphs[0].SetBold(true);
 ```
-

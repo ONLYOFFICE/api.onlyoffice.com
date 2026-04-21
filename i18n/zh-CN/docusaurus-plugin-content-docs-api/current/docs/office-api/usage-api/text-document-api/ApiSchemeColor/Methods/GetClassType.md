@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取文档中配色方案颜色对象的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiSchemeColor.
+// How can I get the class type of a scheme color in a document?
 
-// Retrieve class type of ApiSchemeColor object and insert it to the document.
+// Get the class type of a scheme color and display it in the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 doc.Push(paragraph);
 ```
-

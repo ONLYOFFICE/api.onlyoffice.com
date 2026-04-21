@@ -2,11 +2,11 @@
 
 返回绘图的父幻灯片版式。
 
-Inherited from [ApiDrawing.GetParentLayout](../../ApiDrawing/Methods/GetParentLayout.md).
+继承自 [ApiDrawing.GetParentLayout](../../ApiDrawing/Methods/GetParentLayout.md)。
 
 ## 示例
 
-此示例演示如何获取绘图的父幻灯片版式。
+演示如何获取绘图对象的父幻灯片版式。
 
 ```javascript editor-pptx
 // How to get a parent layout of a slide shape.
@@ -33,4 +33,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
 ```
-

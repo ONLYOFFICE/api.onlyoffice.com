@@ -20,10 +20,10 @@ boolean \| null
 
 ## Example
 
-This example shows how to get the superscript property of the specified font.
+Get the superscript property of the specified font in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine a font superscript property.
+// How to determine a font superscript property in a spreadsheet.
 
 // Get a boolean value that represents whether a font has a superscript property or not and show the value in the worksheet.
 
@@ -36,4 +36,3 @@ font.SetSuperscript(true);
 let isSuperscript = font.GetSuperscript();
 worksheet.GetRange("B3").SetValue("Superscript property: " + isSuperscript);
 ```
-

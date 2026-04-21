@@ -33,4 +33,3 @@ window.Asc.plugin.executeMethod ("GetAllOleObjects", ["asc.{38E022EA-AD92-45FC-B
     }
 });
 ```
-

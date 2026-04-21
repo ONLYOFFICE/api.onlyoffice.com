@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the change tracking mode.
+Set the change tracking mode in a document.
 
 ```javascript editor-docx
 // How to track revisions of the document.
@@ -34,4 +34,3 @@ let paragraph = doc.GetElement(0);
 doc.SetTrackRevisions(true);
 paragraph.AddText("Track revisions mode was set.");
 ```
-

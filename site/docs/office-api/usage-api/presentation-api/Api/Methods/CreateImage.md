@@ -24,10 +24,10 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## Example
 
-This example creates an image and pastes it into the document.
+Create an image and paste it into the document.
 
 ```javascript editor-pptx
-// How to create an image object using a url and specifying its width and height.
+// How to create an image object using an url and specifying its width and height in a presentation.
 
 // Create an image and insert it to the slide.
 
@@ -40,4 +40,3 @@ const shape = Api.CreateImage(
 );
 slide.AddObject(shape);
 ```
-

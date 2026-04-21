@@ -20,10 +20,12 @@ expression.CreateTablePr();
 
 ## 示例
 
-此示例展示如何创建和使用表格属性。
+在文档中创建并使用表格属性。
 
 ```javascript editor-docx
-// How to create table properties and set it to table style.
+// How to create table properties and set it to table style in a document.
+
+// Create the table pr in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,4 +46,3 @@ tableStylePr.SetTablePr(tablePr);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example demonstrates how to add string custom properties to a document.
+Add string custom properties to a document in a document.
 
 ```javascript editor-docx
+// Custom properties support string, boolean, number, and date value types.
+
+// Add using a custom properties object in a document.
+
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 
@@ -58,4 +62,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("\nBirthDate: " + birthDate.toDateString());
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
 ```
-

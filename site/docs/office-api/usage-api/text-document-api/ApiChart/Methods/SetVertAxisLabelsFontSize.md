@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies font size for the labels of the vertical axis.
+Specify font size for the labels of the vertical axis in a document.
 
 ```javascript editor-docx
-// How to resize a font size of the vertical axis labels.
+// How to resize a font size of the vertical axis labels in a document.
 
-// Create a chart then change a font size of axis labels.
+// Create a chart then change a font size of axis labels in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ chart.SetVertAxisLabelsFontSize(8);
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets a name to the specified chart series.
+Set a name to the specified chart series in a presentation.
 
 ```javascript editor-pptx
-// How to rename a chart seria.
+// How to rename a chart seria in a presentation.
 
-// Create a chart, set its properties and its series names.
+// Create a chart, set its properties and its series names in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

@@ -19,4 +19,3 @@ expression.RemoveAddinField(fieldId);
 ## Returns
 
 This method doesn't return any data.
-

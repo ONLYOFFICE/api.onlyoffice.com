@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例更新当前文档中的所有目录。
+更新当前文档中的所有目录。
 
 ```javascript editor-docx
-// How to update all table of contents.
+// How to update all table of contents in a document.
 
 // Edit document content and update the table of contents.
 
@@ -48,4 +48,3 @@ paragraph.AddText("Heading 2");
 doc.AddElement(3, paragraph);
 doc.UpdateAllTOC(false);
 ```
-

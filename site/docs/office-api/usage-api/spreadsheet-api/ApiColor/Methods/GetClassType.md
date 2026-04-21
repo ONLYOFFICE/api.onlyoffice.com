@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the table.
+Check the class type returned by a color in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a color class type.
+// How do I check what type a color object is in a spreadsheet?
 
-// Get an RGB color type.
+// Retrieve and output the class type string for a color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let color = Api.CreateColorFromRGB(255, 111, 61);
@@ -34,4 +34,3 @@ worksheet.GetRange("A2").SetFontColor(color);
 let colorClassType = color.GetClassType();
 worksheet.GetRange("A4").SetValue("Class type = " + colorClassType);
 ```
-

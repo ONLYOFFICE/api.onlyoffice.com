@@ -20,10 +20,13 @@ expression.AddPath();
 
 ## 示例
 
-创建自定义形状并将其添加到页面。
+创建自定义形状并将其添加到页面。应用具有特定填充和笔触属性的自定义几何图形。
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I add the path in a PDF document?
+
+// Add the path using a geometry object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -46,4 +49,3 @@ shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);
 page.AddObject(shape);
 ```
-

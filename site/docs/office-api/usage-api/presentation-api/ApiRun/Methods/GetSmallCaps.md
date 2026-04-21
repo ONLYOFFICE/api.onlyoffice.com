@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)
 
 ## Example
 
-This example shows how to find out whether a text is uncapitalized.
+Find out whether a text is uncapitalized in a presentation.
 
 ```javascript editor-pptx
-// How to know whether the text letters are lowercase or not.
+// How to know whether the text letters are lowercase or not in a presentation.
 
-// Get the text properties of the run and find whether it is uncapitalized or not.
+// Get the text properties of the run and find whether it is uncapitalized or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,4 +38,3 @@ const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
 ```
-

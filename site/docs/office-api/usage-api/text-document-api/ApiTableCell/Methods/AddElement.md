@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example adds a paragraph using its position in the cell.
+Add a paragraph using its position in the cell.
 
 ```javascript editor-docx
 // Insert new paragraph into the current cell.
@@ -42,4 +42,3 @@ paragraph.AddText("This is just a sample text in the first cell.");
 let cell = table.GetCell(0, 0);
 cell.AddElement(0, paragraph);
 ```
-

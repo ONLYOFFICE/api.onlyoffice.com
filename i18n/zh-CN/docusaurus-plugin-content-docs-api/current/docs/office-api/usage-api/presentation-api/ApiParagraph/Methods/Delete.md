@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除段落。
+删除演示文稿中的段落。
 
 ```javascript editor-pptx
 // How to remove a paragraph from the slide.
 
-// Delete a text.
+// Delete and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,3 @@ paragraph.AddText("This is the second paragraph. The first paragraph was removed
 docContent.Push(paragraph);
 slide.AddObject(shape);
 ```
-

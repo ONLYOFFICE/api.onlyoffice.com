@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定此文本块的文本相对于周围非定位文本的默认基线升高或降低的量。
+指定在文档中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-docx
-// How to change inline position of the text.
+// How to change inline position of the text in a document.
 
-// Create a new text run and make its position lower or higher.
+// Create a new text run and make its position lower or higher in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,4 +44,3 @@ run.SetPosition(-16);
 run.AddText("This is a text run with the text lowered 8 points (16 half-points).");
 paragraph.AddElement(run);
 ```
-

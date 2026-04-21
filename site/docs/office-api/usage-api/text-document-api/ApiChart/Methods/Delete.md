@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.Delete](../../ApiDrawing/Methods/Delete.md).
 
 ## Example
 
-This example deletes the current graphic object.
+Delete the current graphic object in a document.
 
 ```javascript editor-docx
 // How to delete a shape from the document.
 
-// Remove the drawing object.
+// Remove the drawing object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -23,4 +23,3 @@ drawing.Delete();
 paragraph.AddLineBreak();
 paragraph.AddText("In this paragraph, the Drawing object has been deleted.");
 ```
-

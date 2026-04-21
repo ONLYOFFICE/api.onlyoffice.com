@@ -11,10 +11,9 @@
 - [ApiParagraph](../ApiParagraph/ApiParagraph.md)
 - [ApiTable](../ApiTable/ApiTable.md)
 
-
 ## 示例
 
-此示例向文档添加名为 "paragraph" 的文档元素。
+向文档添加名为 "paragraph" 的文档元素。
 
 ```javascript editor-pdf
 // How to add a paragraph element to the document.
@@ -23,4 +22,3 @@
 
 doc.AddElement(paragraph);
 ```
-

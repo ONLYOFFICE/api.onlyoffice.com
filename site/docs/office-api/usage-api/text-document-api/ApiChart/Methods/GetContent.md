@@ -6,9 +6,13 @@ Inherited from [ApiDrawing.GetContent](../../ApiDrawing/Methods/GetContent.md).
 
 ## Example
 
-This example shows how to get content of a drawing.
+Get content of a drawing in a document.
 
 ```javascript editor-docx
+// How do I get the content in a document?
+
+// Get the content using a drawing object object in a document.
+
 const doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);
 
@@ -23,4 +27,3 @@ const shapeParagraph = Api.CreateParagraph();
 shapeParagraph.AddText('This is the text added to the paragraph inside the drawing using the GetContent method.');
 docContent.AddElement(0, shapeParagraph);
 ```
-

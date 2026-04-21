@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何检查内容控件是否为下拉列表。
+检查文档中的内容控件是否为下拉列表。
 
 ```javascript editor-docx
+// How can I is drop down list using an inline content control in a document?
+
+// Is drop down list for an inline content control in a document.
+
 let doc = Api.GetDocument();
 let inlineControl = doc.AddDropDownListContentControl();
 let isDropDown = inlineControl.IsDropDownList();
@@ -30,4 +34,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Is this content control a dropdown list? " + isDropDown);
 doc.Push(paragraph);
 ```
-

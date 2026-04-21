@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties of the run.
+Get the text properties of the run in a document.
 
 ```javascript editor-docx
-// How to change the text properties.
+// How to change the text properties in a document.
 
-// Create a text object, set its font size, justification, etc.
+// Create a text object, set its font size, justification, etc in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");
@@ -42,4 +42,3 @@ run.SetStyle(myNewRunStyle);
 run.AddText("This is a text run with its own style.");
 paragraph.AddElement(run);
 ```
-

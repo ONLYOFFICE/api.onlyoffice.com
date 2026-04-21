@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定纵轴的主刻度线。
+指定文档中垂直轴的主要刻度线。
 
 ```javascript editor-docx
-// How to set a major tick mark using predefined symbols.
+// How to set a major tick mark using predefined symbols in a document.
 
-// Create a chart, set its properties and major tick mark for vertical axis.
+// Create a chart, set its properties and major tick mark for vertical axis in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,4 +49,3 @@ chart.SetVertAxisMajorTickMark("cross");
 chart.SetTitle("Financial Overview", 13);
 paragraph.AddDrawing(chart);
 ```
-

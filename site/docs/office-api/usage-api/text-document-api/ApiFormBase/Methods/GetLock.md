@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the current form is locked.
+Check if the current form is locked.
 
 ```javascript editor-docx
 // How to know whether a form is locked or not.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
 ```
-

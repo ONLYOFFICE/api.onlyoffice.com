@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-此示例获取节的起始页码索引。
+获取节的起始页码。
 
 ```javascript editor-docx
 // How to get the start page number for the current section.
@@ -42,4 +42,3 @@ paragraph = footer.GetElement(0);
 paragraph.AddText("Page #");
 paragraph.AddPageNumber();
 ```
-

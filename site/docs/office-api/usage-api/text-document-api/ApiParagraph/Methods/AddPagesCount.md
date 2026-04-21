@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example inserts a number of pages in the current document into the paragraph.
+Insert a number of pages in the current document into the paragraph.
 
 ```javascript editor-docx
 // How to add the number of pages to the text.
@@ -40,4 +40,3 @@ paragraph.AddPageNumber();
 paragraph.AddText(" of ");
 paragraph.AddPagesCount();
 ```
-

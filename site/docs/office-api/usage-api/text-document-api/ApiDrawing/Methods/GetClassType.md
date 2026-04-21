@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Check the class type returned by a drawing object in a document.
 
 ```javascript editor-docx
-// How get a class type of ApiDrawing.
+// How do I check what type a drawing object object is in a document?
 
-// Retrieve class type of a created shape and display it.
+// Retrieve and output the class type string for a drawing object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 doc.Push(paragraph);
 ```
-

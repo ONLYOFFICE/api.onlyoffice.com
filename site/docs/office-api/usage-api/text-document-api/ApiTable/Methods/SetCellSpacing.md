@@ -6,7 +6,7 @@ Inherited from [ApiTablePr.SetCellSpacing](../../ApiTablePr/Methods/SetCellSpaci
 
 ## Example
 
-This example specifies the default table cell spacing.
+Specify the default table cell spacing.
 
 ```javascript editor-docx
 // How to set the size of the cell spacing.
@@ -24,4 +24,3 @@ table.SetStyle(tableStyle);
 tablePr.SetCellSpacing(720);
 doc.Push(table);
 ```
-

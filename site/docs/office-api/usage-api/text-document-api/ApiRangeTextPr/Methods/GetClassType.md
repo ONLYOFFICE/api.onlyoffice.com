@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetClassType](../../ApiTextPr/Methods/GetClassType.md)
 
 ## Example
 
-This example gets a class type and pastes it into the document.
+Retrieve the class type of a text properties in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiTextPr.
+// How to identify the class type of a text properties in a document?
 
-// Retrieve class type of ApiTextPr object and insert it to the document.
+// Obtain the class type identifier of a text properties object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -26,4 +26,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + classType);
 doc.Push(paragraph);
 ```
-

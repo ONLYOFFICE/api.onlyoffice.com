@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
+Specify that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
 
 ```javascript editor-xlsx
-// How to make text characters uncapitalized.
+// How to make text characters uncapitalized in a spreadsheet.
 
-// Create a text run object, update its style by making its letters uncapitalized.
+// Create a text run object, update its style by making its letters uncapitalized in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,4 +44,3 @@ run.SetSmallCaps(true);
 run.AddText("This is a text run with the font set to small capitalized letters.");
 paragraph.AddElement(run);
 ```
-

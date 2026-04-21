@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the number (code point) corresponding to the first character of the text.
+Return the number (code point) corresponding to the first character of the text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a Unicode of a character.
+// How to get an Unicode of a character in a spreadsheet.
 
-// Use a function to return the character's Unicode.
+// Use a function to return the character's Unicode in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.UNICODE("example"));
 ```
-

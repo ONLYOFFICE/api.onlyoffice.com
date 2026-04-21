@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为缇。
+在文档中将磅转换为缇。
 
 ```javascript editor-docx
+// How do I convert points to twips in a document?
+
+// Convert points to twips and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const twips = Api.PointsToTwips(points);
 paragraph.AddText(points + ' points are equal to ' + twips + ' twips.');
 doc.Push(paragraph);
 ```
-

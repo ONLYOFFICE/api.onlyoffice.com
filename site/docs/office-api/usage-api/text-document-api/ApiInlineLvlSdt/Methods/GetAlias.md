@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example showh how to get the alias attribute for the container.
+Get the alias attribute for the container in a document.
 
 ```javascript editor-docx
-// How to get an alias of the inline text element.
+// How to get an alias of the inline text element in a document.
 
 // Retrieve the alias of the text element and display it in the document.
 
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Alias: " + alias);
 doc.Push(paragraph);
 ```
-

@@ -20,7 +20,7 @@ string \| string[][]
 
 ## Example
 
-This example shows how to get the text of the specified range.
+Get the text of the specified range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a cell raw text value.
@@ -35,4 +35,3 @@ let range = worksheet.GetRange("A1:C1");
 let text = range.GetText();
 worksheet.GetRange("A3").SetValue("Text from the cell A1: " + text);
 ```
-

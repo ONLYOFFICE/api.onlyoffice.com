@@ -24,5 +24,3 @@
 - "star"
 - "upArrow"
 - "upLeftArrow"
-
-

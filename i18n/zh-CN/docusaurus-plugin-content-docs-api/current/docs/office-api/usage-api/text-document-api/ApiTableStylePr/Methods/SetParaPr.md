@@ -22,12 +22,12 @@ expression.SetParaPr(oParaPr);
 
 ## 示例
 
-此示例展示如何创建和设置将应用于表格中符合条件格式类型的所有段落的段落属性。
+创建并设置将应用于表格中与条件格式类型匹配的所有段落的段落属性。
 
 ```javascript editor-docx
-// How to set paragraph properties to the table style.
+// How to set paragraph properties to the table style in a document.
 
-// Update the table style paragraph properties.
+// Update the table style paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -50,4 +50,3 @@ paragraph.AddText("This is a paragraph with the text in it aligned by the center
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

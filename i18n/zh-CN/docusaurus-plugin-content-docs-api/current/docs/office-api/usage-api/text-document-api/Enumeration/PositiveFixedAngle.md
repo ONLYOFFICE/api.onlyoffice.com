@@ -8,7 +8,7 @@ number
 
 ## 示例
 
-此示例将渐变方向角度设置为 90 度。
+将渐变方向角度设置为 90 度。
 
 ```javascript editor-docx
 // How to create a gradient fill using positive fixed angle.
@@ -17,4 +17,3 @@ number
 
 let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 ```
-

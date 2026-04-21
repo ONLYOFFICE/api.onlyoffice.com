@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例为文档中的表单设置高亮显示。
+为文档中的表单设置突出显示。
 
 ```javascript editor-forms
 // How to set color for forms background.
@@ -35,4 +35,3 @@ let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
 doc.SetFormsHighlight(Api.HexColor('#FF6F3D'));
 ```
-

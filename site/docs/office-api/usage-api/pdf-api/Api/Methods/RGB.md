@@ -24,9 +24,13 @@ expression.RGB(r, g, b);
 
 ## Example
 
-This example shows how to create a color in RGB format and use it as a shape fill.
+Create a color in RGB format and use it as a shape fill in a PDF document.
 
 ```javascript editor-pdf
+// How to r g b in a PDF document?
+
+// R g b using the PDF document API.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,4 +41,3 @@ const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 ```
-

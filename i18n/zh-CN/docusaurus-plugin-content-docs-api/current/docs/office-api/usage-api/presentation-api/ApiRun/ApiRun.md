@@ -1,6 +1,6 @@
 # ApiRun
 
-ApiRun is a subclass of [ApiTextPr](../ApiTextPr/ApiTextPr.md).
+ApiRun 是 [ApiTextPr](../ApiTextPr/ApiTextPr.md) 的子类。
 
 ## 方法
 

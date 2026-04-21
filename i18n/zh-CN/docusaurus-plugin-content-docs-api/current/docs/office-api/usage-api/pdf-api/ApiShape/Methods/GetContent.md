@@ -20,10 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-如何获取形状的内容。
+如何获取 PDF 文档中形状的内容。
 
 ```javascript editor-pdf
-// Retrieve a shape content and insert a paragraph to it.
+// Retrieve a shape content and insert a paragraph to it in a PDF document.
+
+// Use shape to get the content in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +44,3 @@ paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

@@ -2,16 +2,16 @@
 
 获取当前绘图的水平翻转状态。
 
-Inherited from [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md).
+继承自 [ApiDrawing.GetFlipH](../../ApiDrawing/Methods/GetFlipH.md)。
 
 ## 示例
 
-此示例检查绘图是否水平翻转。
+检查文档中绘图对象是否水平翻转。
 
 ```javascript editor-docx
-// How to get the horizontal flip property of the shape.
+// How to get the horizontal flip property of the shape in a document.
 
-// Create a drawing, add text to it, and read its horizontal flip value.
+// Create a drawing, add text to it, and read its horizontal flip value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -24,4 +24,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing is flipped horizontally: " + flip);
 doc.AddElement(0, paragraph);
 ```
-

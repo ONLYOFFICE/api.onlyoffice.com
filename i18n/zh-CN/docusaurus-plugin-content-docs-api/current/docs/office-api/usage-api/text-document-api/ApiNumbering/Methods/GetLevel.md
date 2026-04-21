@@ -22,12 +22,12 @@ expression.GetLevel(nLevel);
 
 ## 示例
 
-此示例展示如何获取编号的指定级别。
+获取文档中编号的指定级别。
 
 ```javascript editor-docx
-// How to find out the level of the bulleted paragraph.
+// How to find out the level of the bulleted paragraph in a document.
 
-// Print the level of numbering of the text.
+// Print the level of numbering of the text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");
@@ -40,4 +40,3 @@ for (let nLvl = 0; nLvl < 8; ++nLvl) {
 	doc.Push(paragraph);
 }
 ```
-

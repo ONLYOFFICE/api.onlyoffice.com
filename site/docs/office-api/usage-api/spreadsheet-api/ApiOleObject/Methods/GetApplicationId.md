@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the application ID from the OLE object.
+Get the application ID from the OLE object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve application id of OLE object.
+// How to retrieve application id of OLE object in a spreadsheet.
 
 // Add Ole object and display its application id in the worksheet.
 
@@ -38,4 +38,3 @@ let oleObject = worksheet.AddOleObject(
 let appId = oleObject.GetApplicationId();
 worksheet.GetRange('A1').SetValue('The OLE object application ID: ' + appId);
 ```
-

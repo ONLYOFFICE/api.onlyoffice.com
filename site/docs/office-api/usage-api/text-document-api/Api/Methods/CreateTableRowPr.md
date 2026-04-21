@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create and use the table row properties.
+Create and use the table row properties in a document.
 
 ```javascript editor-docx
-// How to create table row properties and set it to table style.
+// How to create table row properties and set it to table style in a document.
+
+// Create the table row pr in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -44,4 +46,3 @@ tableStylePr.SetTableRowPr(tableRowPr);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

@@ -22,9 +22,13 @@ expression.GetFormsByRole(role);
 
 ## 示例
 
-此示例展示如何获取文档中具有指定角色的所有表单列表。
+获取文档中具有指定角色的所有表单列表。
 
 ```javascript editor-docx
+// How can I get the forms by role using a document in a document?
+
+// Get the forms by role for a document in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");
@@ -51,4 +55,3 @@ paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Number of forms with role 'Chief': " + forms.length);
 ```
-

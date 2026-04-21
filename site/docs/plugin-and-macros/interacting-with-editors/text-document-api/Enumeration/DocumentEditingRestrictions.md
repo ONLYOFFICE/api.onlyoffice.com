@@ -17,11 +17,9 @@ Enumeration
 - 'forms'
 - 'readOnly'
 
-
 ## Example
 
 ```javascript
 let documentEditingRestrictions = "readOnly";
 window.Asc.plugin.executeMethod("SetEditingRestrictions", [documentEditingRestrictions]);
 ```
-

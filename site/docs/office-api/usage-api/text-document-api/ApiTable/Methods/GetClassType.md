@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Retrieve the class type of a table in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiTable.
+// How to identify the class type of a table in a document?
 
-// Retrieve class type of ApiTable object and insert it to the document.
+// Obtain the class type identifier of a table object in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -37,4 +37,3 @@ let classType = table.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class Type = " + classType);
 ```
-

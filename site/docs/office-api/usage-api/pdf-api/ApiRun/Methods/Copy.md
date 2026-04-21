@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the run.
+Create a copy of the run in a PDF document.
 
 ```javascript editor-pdf
-// How to copy a text run object and insert it to the paragraph.
+// How to copy a text run object and insert it to the paragraph in a PDF document.
 
-// Create a duplicate of a text.
+// Create a duplicate of a text in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +45,3 @@ const copyRun = run.Copy();
 paragraph.AddElement(copyRun);
 page.AddObject(shape);
 ```
-

@@ -8,7 +8,7 @@ number
 
 ## Example
 
-This example set the distance between columns equal to 36 points.
+Set the distance between columns equal to 36 points.
 
 ```javascript editor-forms
 // How to set a column distance in twips.
@@ -17,4 +17,3 @@ This example set the distance between columns equal to 36 points.
 
 paragraph.SetEqualColumns(2, 720);
 ```
-

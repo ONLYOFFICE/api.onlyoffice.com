@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例清除文本块中的内容。
+清除电子表格中 run 的内容。
 
 ```javascript editor-xlsx
-// How to create a text run object, add a text to it and clear its value.
+// How to create a text run object, add a text to it and clear its value in a spreadsheet.
 
-// Clear content of an ApiRun object.
+// Clear content of an text run object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -45,4 +45,3 @@ run.AddText("The text in the previous paragraph cannot be seen, as it has been c
 paragraph.AddElement(run);
 content.Push(paragraph);
 ```
-

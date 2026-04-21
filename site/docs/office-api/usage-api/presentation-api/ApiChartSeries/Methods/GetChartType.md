@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the first series of ApiChart class and inserts its type into the presentation.
+Get the first series of chart class and insert its type into the presentation.
 
 ```javascript editor-pptx
 // How to get a chart type and show it on the slide.
 
-// Change a chart type to the "area" type.
+// Change a chart type to the "area" type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

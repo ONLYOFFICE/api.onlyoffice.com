@@ -2,14 +2,14 @@
 
 从当前文本属性获取双删除线属性。
 
-Inherited from [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md).
+继承自 [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md)。
 
 ## 示例
 
-此示例查明文本是否设置了双删除线属性。
+检查文档中的文本是否设置了双删除线属性。
 
 ```javascript editor-docx
-// How to know whether a text is crossed by two horizontal lines.
+// How to know whether a text is crossed by two horizontal lines in a document.
 
 // Retrieve text properties of the form to find out whether it is double stroke out.
 
@@ -34,4 +34,3 @@ let doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 doc.Push(paragraph);
 ```
-

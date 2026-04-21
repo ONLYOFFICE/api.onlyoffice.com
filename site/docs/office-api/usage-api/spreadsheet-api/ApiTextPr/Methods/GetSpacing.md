@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a text spacing using its property.
+Get a text spacing using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out space size of a text.
+// How to find out space size of a text in a spreadsheet.
 
-// Get spacing size.
+// Get the spacing for a text properties in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -45,4 +45,3 @@ let spacing = textProps.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 content.Push(paragraph);
 ```
-

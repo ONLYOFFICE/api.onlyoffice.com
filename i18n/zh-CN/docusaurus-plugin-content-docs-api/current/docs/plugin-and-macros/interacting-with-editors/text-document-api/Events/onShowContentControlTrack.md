@@ -18,4 +18,3 @@ window.Asc.plugin.attachEditorEvent("onShowContentControlTrack", (ids) => {
     }
 });
 ```
-

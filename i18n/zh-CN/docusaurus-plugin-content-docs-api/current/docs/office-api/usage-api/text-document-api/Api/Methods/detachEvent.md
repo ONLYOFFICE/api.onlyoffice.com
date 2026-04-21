@@ -22,13 +22,12 @@ boolean
 
 ## 示例
 
-此示例展示如何取消订阅超链接点击事件。
+在文档中取消订阅超链接点击事件。
 
 ```javascript editor-docx
-// How to detach from the "asc_onHyperlinkClick" event.
+// How to detach from the "asc_onHyperlinkClick" event in a document.
 
-// Unsubscribes from the "asc_onHyperlinkClick" event.
+// Unsubscribes from the "asc_onHyperlinkClick" event in a document.
 
 Api.detachEvent("asc_onHyperlinkClick");
 ```
-

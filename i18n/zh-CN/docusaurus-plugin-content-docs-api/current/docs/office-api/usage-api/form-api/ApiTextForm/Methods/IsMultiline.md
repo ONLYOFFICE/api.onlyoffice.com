@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查文本字段是否为多行。
+检查文档中文本字段是否为多行。
 
 ```javascript editor-forms
 // How to know whether the first text form from this document is multiline.
@@ -36,4 +36,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first text form from this document is multiline: " + multiline);
 doc.Push(paragraph);
 ```
-

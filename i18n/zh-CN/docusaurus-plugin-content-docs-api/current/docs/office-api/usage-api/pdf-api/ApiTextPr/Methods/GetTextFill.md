@@ -20,12 +20,12 @@ expression.GetTextFill();
 
 ## 示例
 
-此示例演示如何确定文本的颜色。
+获取 PDF 文档中文本的颜色。
 
 ```javascript editor-pdf
-// How to know a color fill of a text.
+// How to know a color fill of a text in a PDF document.
 
-// Get the text properties of the run and display its font color.
+// Get the text properties of the run and display its font color in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -53,4 +53,3 @@ const type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 docContent.Push(paragraph);
 ```
-

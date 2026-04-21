@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiAnimationEffect 对象的类类型。
+检查演示文稿中动画效果返回的类类型。
 
 ```javascript editor-pptx
+// How do I check what type an animation effect object is in a presentation?
+
+// Retrieve and output the class type string for an animation effect in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -53,4 +57,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(infoShape);
 ```
-

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例从当前 OLE 对象获取应用程序 ID。
+从演示文稿中的当前 OLE 对象获取应用程序 ID。
 
 ```javascript editor-pptx
-// How to return an application ID of the current OLE object.
+// How to return an application ID of the current OLE object in a presentation.
 
-// Get an application ID of a specified OLE object.
+// Get an application ID of a specified OLE object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 slide.AddObject(drawing);
 ```
-

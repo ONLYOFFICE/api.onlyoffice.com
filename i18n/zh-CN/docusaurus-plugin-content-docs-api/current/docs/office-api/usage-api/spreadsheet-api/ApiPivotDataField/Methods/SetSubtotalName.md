@@ -2,16 +2,16 @@
 
 设置在指定数据透视表报表的分类汇总列或行标题中显示的文本标签。
 
-Inherited from [ApiPivotField.SetSubtotalName](../../ApiPivotField/Methods/SetSubtotalName.md).
+继承自 [ApiPivotField.SetSubtotalName](../../ApiPivotField/Methods/SetSubtotalName.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的分类汇总名称。
+在电子表格中设置透视字段的小计名称。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotal name.
+// How to change a pivot field subtotal name in a spreadsheet.
 
-// Create a pivot table, add data to it then set subtotal name of a specified pivot.
+// Create a pivot table, add data to it then set subtotal name of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,4 +52,3 @@ pivotField.SetSubtotalName('My name');
 pivotWorksheet.GetRange('A14').SetValue('Region subtotal name');
 pivotWorksheet.GetRange('B14').SetValue(pivotField.GetSubtotalName());
 ```
-

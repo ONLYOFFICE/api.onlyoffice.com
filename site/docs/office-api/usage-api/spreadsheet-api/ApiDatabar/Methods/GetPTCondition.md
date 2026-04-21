@@ -6,7 +6,7 @@ Inherited from [ApiFormatCondition.GetPTCondition](../../ApiFormatCondition/Meth
 
 ## Example
 
-This example gets the pivot table condition from a conditional formatting rule.
+Get the pivot table condition from a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve pivot table conditions from conditional formatting rules.
@@ -34,4 +34,3 @@ let ptCondition = condition1.GetPTCondition();
 worksheet.GetRange("C1").SetValue("PT Condition:");
 worksheet.GetRange("C2").SetValue(ptCondition ? "Found" : "None");
 ```
-

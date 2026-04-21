@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get the parent object for the specified collection.
+Get the parent object for the specified collection in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a parent of the collection.
+// How to get a parent of the collection in a spreadsheet.
 
-// Find a collection parent of the selected range.
+// Find a collection parent of the selected range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");
@@ -43,4 +43,3 @@ range.SetValue("The type of the areas parent: ");
 range.AutoFit(false, true);
 worksheet.GetRange('B5').SetValue(type);
 ```
-

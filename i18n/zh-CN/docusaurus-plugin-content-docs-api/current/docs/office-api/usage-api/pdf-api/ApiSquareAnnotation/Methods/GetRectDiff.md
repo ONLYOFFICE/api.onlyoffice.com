@@ -20,9 +20,13 @@ expression.GetRectDiff();
 
 ## 示例
 
-此示例获取方形注释的矩形差异。
+获取 PDF 文档中方形注释的矩形差异。
 
 ```javascript editor-pdf
+// How to get the rect diff for a square annotation in a PDF document?
+
+// Get the rect diff and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
@@ -31,4 +35,3 @@ squareAnnot.SetBorderEffectStyle("cloud");
 squareAnnot.SetBorderEffectIntensity(1);
 console.log(`Annot rect diff is: ${squareAnnot.GetRectDiff()}`);
 ```
-

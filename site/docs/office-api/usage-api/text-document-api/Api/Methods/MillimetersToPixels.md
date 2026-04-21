@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert millimeters to pixels.
+Convert millimeters to pixels in a document.
 
 ```javascript editor-docx
+// How can I convert millimeters to pixels in a document?
+
+// Convert millimeters to pixels in a document.
+
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -33,4 +37,3 @@ const pixels = Api.MillimetersToPixels(millimeters);
 paragraph.AddText(millimeters + ' millimeters are equal to ' + pixels + ' pixels.');
 doc.Push(paragraph);
 ```
-

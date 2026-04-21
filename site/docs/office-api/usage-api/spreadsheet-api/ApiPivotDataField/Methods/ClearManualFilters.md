@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.ClearManualFilters](../../ApiPivotField/Methods/Cl
 
 ## Example
 
-This example shows how to clear manual filters from a pivot field.
+Clear manual filters from a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field manual filters.
+// How to remove previously applied pivot field manual filters in a spreadsheet.
 
-// Create a pivot table, add data to it then delete manual filters from a custom field.
+// Create a pivot table, add data to it then delete manual filters from a custom field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 let pivotField = pivotTable.GetPivotFields('Region');
 pivotField.ClearManualFilters();
 ```
-

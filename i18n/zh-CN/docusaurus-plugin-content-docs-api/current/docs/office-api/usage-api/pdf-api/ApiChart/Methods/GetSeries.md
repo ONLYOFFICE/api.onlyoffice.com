@@ -22,10 +22,12 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-如何使用索引从图表获取系列。
+如何在 PDF 文档中通过索引从图表获取系列。
 
 ```javascript editor-pdf
-// Find a chart seria.
+// Find a chart seria in a PDF document.
+
+// Use chart to get the series in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -53,4 +55,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

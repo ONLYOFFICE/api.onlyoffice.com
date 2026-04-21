@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example rejects all changes made in review mode.
+Rejects all changes made in review mode in a document.
 
 ```javascript editor-docx
-// How to reset all changes after review.
+// How to reset all changes after review in a document.
 
-// Do not apply edited text in the review mode.
+// Do not apply edited text in the review mode in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -43,4 +43,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("All revision changes in this document were rejected.");
 doc.Push(paragraph);
 ```
-

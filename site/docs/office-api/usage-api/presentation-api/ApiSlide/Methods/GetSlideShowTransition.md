@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the slide show transition from a slide.
+Get the slide show transition from a slide.
 
 ```javascript editor-pptx
+// How to get the slide show transition for a slide?
+
+// Get the slide show transition and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -47,4 +51,3 @@ paragraph.AddText('Effect: ' + transitionEffect + '\n');
 paragraph.AddText('Speed: ' + transitionSpeed);
 slide.AddObject(shape);
 ```
-

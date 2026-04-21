@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to calculate standard deviation based on the entire population, including logical values and text. Text and the false logical value have the value 0; the true logical value has the value 1.
+Calculate standard deviation based on the entire population, including logical values and text. Text and the false logical value have the value 0; the true logical value has the value 1 in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population considering logical and text data types.
+// How to calculate standard deviation based on the entire population considering logical and text data types in a spreadsheet.
 
-// Use a function to get the standard deviation.
+// Use a function to get the standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -44,4 +44,3 @@ let ans = func.STDEVPA(1, 0, 0, false, 5, 1, 0, 0, 2, true, 6, 7, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

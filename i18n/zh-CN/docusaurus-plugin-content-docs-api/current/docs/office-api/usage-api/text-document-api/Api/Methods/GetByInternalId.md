@@ -22,9 +22,13 @@ object
 
 ## 示例
 
-此示例展示如何通过内部 ID 获取对象。
+通过内部 ID 获取文档中的对象。
 
 ```javascript editor-docx
+// How to get the by internal id in a document?
+
+// Get the by internal id using the document API.
+
 const doc = Api.GetDocument();
 
 const paragraph = doc.GetElement(0);
@@ -39,4 +43,3 @@ resultParagraph.AddLineBreak();
 resultParagraph.AddText('Found paragraph text: ' + found.GetText());
 doc.Push(resultParagraph);
 ```
-

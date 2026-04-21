@@ -23,12 +23,12 @@ expression.GetFooter(sType, isCreate);
 
 ## Example
 
-This example shows how to get the content for the specified footer type.
+Get the content for the specified footer type in a document.
 
 ```javascript editor-docx
 // How to get the footer of the page.
 
-// Get the default footer from the final section. 
+// Get the default footer from the final section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ let footer = section.GetFooter("default", true);
 paragraph = footer.GetElement(0);
 paragraph.AddText("This is a page footer");
 ```
-

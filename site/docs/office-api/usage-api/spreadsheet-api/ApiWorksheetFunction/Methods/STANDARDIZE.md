@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return a normalised value from a distribution characterised by a mean and standard deviation.
+Return a normalised value from a distribution characterised by a mean and standard deviation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the normalised value from a distribution.
+// How to calculate the normalised value from a distribution in a spreadsheet.
 
-// Use a function to get the normalised value from a distribution by different parameters.
+// Use a function to get the normalised value from a distribution by different parameters in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -50,4 +50,3 @@ let ans = func.STANDARDIZE(x, mean, stdDev);
 
 worksheet.GetRange("C1").SetValue(ans);
 ```
-

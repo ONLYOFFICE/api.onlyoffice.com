@@ -23,7 +23,7 @@ number \| string \| boolean
 
 ## 示例
 
-此示例演示如何检查第一个参数中的公式是否有错误。如果公式返回 N/A 错误值，函数返回指定的值，否则返回公式的结果。
+检查第一个参数中的公式是否有错误。如果公式返回 N/A 错误值则返回指定的值，否则返回公式的结果。
 
 ```javascript editor-xlsx
 // How to check whether a formula result is N/A.
@@ -49,4 +49,3 @@ for (let n = 0; n < phones.length; n++) {
 let range = worksheet.GetRange("B1:B5");
 worksheet.GetRange("D6").SetValue(func.IFNA(func.MATCH("Mark Potato", range, 0), "Not found"));
 ```
-

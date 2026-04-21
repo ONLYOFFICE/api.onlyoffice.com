@@ -22,9 +22,13 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例对段落文本应用删除线格式。
+对段落文本应用删除线格式。
 
 ```javascript editor-pdf
+// How can I set strikeout using a paragraph in a PDF document?
+
+// Set strikeout for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,4 +42,3 @@ paragraph.AddText('This is a paragraph with the text struck out with a single li
 paragraph.SetStrikeout(true);
 page.AddObject(shape);
 ```
-

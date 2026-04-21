@@ -22,7 +22,7 @@ expression.SetDateOperator(DateOperator);
 
 ## 示例
 
-此示例设置时间段条件格式规则的日期运算符。
+设置时间段条件格式规则的日期运算符。
 
 ```javascript editor-xlsx
 // How to change date operators in time period conditional formatting rules.
@@ -53,4 +53,3 @@ condition1.SetDateOperator("xlLastWeek");
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetDateOperator() || "None");
 ```
-

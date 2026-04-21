@@ -20,7 +20,7 @@ expression.GetTablePr();
 
 ## 示例
 
-此示例展示如何获取样式的表格属性。
+获取文档中样式的表格属性。
 
 ```javascript editor-docx
 // How to get table properties and set its cells margins.
@@ -45,4 +45,3 @@ tableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("cle
 tableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 128, 128, 128);
 tableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 213, 191);
 ```
-

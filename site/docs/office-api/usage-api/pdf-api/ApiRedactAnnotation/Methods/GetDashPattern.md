@@ -6,9 +6,13 @@ Inherited from [ApiBaseAnnotation.GetDashPattern](../../ApiBaseAnnotation/Method
 
 ## Example
 
-This example creates a square annotation and gets its dash pattern.
+Create a square annotation and get its dash pattern in a PDF document.
 
 ```javascript editor-pdf
+// How to get the dash pattern for an annotation in a PDF document?
+
+// Get the dash pattern and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 squareAnnot.SetBorderStyle("dashed");
@@ -17,4 +21,3 @@ let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 console.log(`Annotation dash pattern is: ${squareAnnot.GetDashPattern()}`);
 ```
-

@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取当前工作簿的版本。
+获取电子表格中当前工作簿的版本。
 
 ```javascript editor-xlsx
+// How can I get the version using a core properties in a spreadsheet?
+
+// Get the version for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -41,4 +45,3 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Version: " + version);
 ```
-

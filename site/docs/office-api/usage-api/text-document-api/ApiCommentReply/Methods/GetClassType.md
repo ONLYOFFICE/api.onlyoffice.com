@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a comment reply object in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiCommentReply.
+// How can I get the class type of a comment reply in a document?
 
-// Retrieve class type of ApiCommentReply object and insert it to the slide.
+// Get the class type of a comment reply and display it in the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type: " + type);
 doc.Push(paragraph);
 ```
-

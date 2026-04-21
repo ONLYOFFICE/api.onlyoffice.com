@@ -2,11 +2,11 @@
 
 返回格式条件运算符。
 
-Inherited from [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md).
+继承自 [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md)。
 
 ## 示例
 
-此示例获取条件格式规则的运算符。
+获取条件格式规则的运算符。
 
 ```javascript editor-xlsx
 // How to retrieve the operator from conditional formatting rules.
@@ -34,4 +34,3 @@ let operator = condition1.GetOperator();
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
 ```
-

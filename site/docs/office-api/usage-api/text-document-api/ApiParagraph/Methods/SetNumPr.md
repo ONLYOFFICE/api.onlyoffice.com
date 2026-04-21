@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.SetNumPr](../../ApiParaPr/Methods/SetNumPr.md).
 
 ## Example
 
-This example specifies that the current paragraph references a numbering definition instance in the current document.
+Specify that the current paragraph references a numbering definition instance in the current document.
 
 ```javascript editor-docx
-// How to add numbering to the paragraph.
+// How to add numbering to the paragraph in a document.
 
-// Make the paragraph bulleted.
+// Make the paragraph bulleted in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");
@@ -31,4 +31,3 @@ paragraph.SetStyle(myStyle);
 paragraph.AddText("This is a paragraph styled as a bulleted list.");
 doc.Push(paragraph);
 ```
-

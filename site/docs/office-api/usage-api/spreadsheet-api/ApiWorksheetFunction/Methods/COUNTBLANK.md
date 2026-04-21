@@ -22,7 +22,7 @@ number
 
 ## Example
 
-This example shows how to counts a number of empty cells in a specified range of cells.
+Counts a number of empty cells in a specified range of cells in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find a number of empty cells.
@@ -47,4 +47,3 @@ let func = Api.WorksheetFunction;
 let ans = func.COUNTBLANK(worksheet.GetRange("A1:C3"));
 worksheet.GetRange("D3").SetValue(ans);
 ```
-

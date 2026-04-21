@@ -27,12 +27,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example changes the position for the drawing object.
+Change the position for the drawing object in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to change the position of the drawing on the worksheet.
 
-// Move a drawing by setting the position.
+// Move a drawing by setting the position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -41,4 +41,3 @@ let drawing = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 3600
 drawing.SetSize(120 * 36000, 70 * 36000);
 drawing.SetPosition(0, 2 * 36000, 2, 3 * 36000);
 ```
-

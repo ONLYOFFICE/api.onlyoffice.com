@@ -28,6 +28,8 @@ expression.MergeCells(aCells);
 ```javascript editor-pdf
 // Create a table, create cells and merge them into one.
 
+// Use table to merge cells.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,4 +47,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

@@ -22,9 +22,13 @@ expression.GetFormsByRole(role);
 
 ## Example
 
-This example shows how to get a list of all forms in the document with the specified role.
+Get a list of all forms in the document with the specified role.
 
 ```javascript editor-docx
+// How can I get the forms by role using a document in a document?
+
+// Get the forms by role for a document in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");
@@ -51,4 +55,3 @@ paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Number of forms with role 'Chief': " + forms.length);
 ```
-

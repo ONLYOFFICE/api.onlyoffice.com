@@ -11,5 +11,3 @@ Enumeration
 - "xlValidAlertStop"
 - "xlValidAlertWarning"
 - "xlValidAlertInformation"
-
-

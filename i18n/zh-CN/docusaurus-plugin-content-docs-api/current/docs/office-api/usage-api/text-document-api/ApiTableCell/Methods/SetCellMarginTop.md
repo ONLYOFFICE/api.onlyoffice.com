@@ -3,11 +3,11 @@
 指定表格中特定表格单元格的内容上边与
 单元格边框之间的间距。
 
-Inherited from [ApiTableCellPr.SetCellMarginTop](../../ApiTableCellPr/Methods/SetCellMarginTop.md).
+继承自 [ApiTableCellPr.SetCellMarginTop](../../ApiTableCellPr/Methods/SetCellMarginTop.md)。
 
 ## 示例
 
-此示例指定表格中特定表格单元格的内容上边与单元格边框之间的间距。
+指定表格中特定表格单元格的单元格内容顶部边缘与边框之间的间距。
 
 ```javascript editor-docx
 // How to add margin to the top of the cell.
@@ -27,4 +27,3 @@ tableCellPr.SetCellMarginTop(720);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

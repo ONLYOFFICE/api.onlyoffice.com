@@ -23,9 +23,13 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example shows how to set small caps formatting for all text in a paragraph inside a shape.
+Set small caps formatting for all text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set small caps using a paragraph in a spreadsheet?
+
+// Set small caps for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 120, 160));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -45,4 +49,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has normal capitalization.');
 content.Push(paragraph2);
 ```
-

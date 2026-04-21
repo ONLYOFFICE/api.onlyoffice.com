@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example checks if the current form is fixed size.
+Check if the current form is fixed size.
 
 ```javascript editor-forms
 // How to know whether a text form is fixed or not.
@@ -37,4 +37,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is fixed: " + fixed);
 doc.Push(paragraph);
 ```
-

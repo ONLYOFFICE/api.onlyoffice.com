@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set row grand of a pivot table.
+Set row grand of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set row grand of a table.
+// How to set row grand of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its row grand.
+// Create a pivot table, add data to it then set its row grand in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,4 +66,3 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Is Row Grand');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetRowGrand());
 ```
-

@@ -6,7 +6,7 @@ Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.m
 
 ## Example
 
-This example shows how to get a type of the form.
+Get a type of the form in a document.
 
 ```javascript editor-docx
 // How to know the type of a text form.
@@ -22,4 +22,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form type: " + formType);
 doc.Push(paragraph);
 ```
-

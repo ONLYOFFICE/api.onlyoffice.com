@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取指定字符范围的文本。
+获取电子表格中指定字符范围的文本。
 
 ```javascript editor-xlsx
-// How to get a raw text from the characters.
+// How to get a raw text from the characters in a spreadsheet.
 
-// Retrieve a text from the character collection.
+// Retrieve a text from the character collection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -34,4 +34,3 @@ let characters = range.GetCharacters(23, 4);
 let text = characters.GetText();
 worksheet.GetRange("B3").SetValue("Text: " + text);
 ```
-

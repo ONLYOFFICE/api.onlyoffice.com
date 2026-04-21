@@ -11,5 +11,3 @@ Enumeration
 - "xlDataBarAxisAutomatic"
 - "xlDataBarAxisMidpoint"
 - "xlDataBarAxisNone"
-
-

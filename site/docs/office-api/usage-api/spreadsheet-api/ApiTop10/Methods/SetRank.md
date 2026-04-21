@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to change the rank value for top 10 condition.
+Change the rank value for top 10 condition in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the number of top or bottom values to highlight in the condition.
+// How to set the number of top or bottom values to highlight in the condition in a spreadsheet.
 
-// Change the rank value for the top 10 rule.
+// Change the rank value for the top 10 rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,4 +45,3 @@ worksheet.GetRange("B1").SetValue("Before: Top 10 values");
 top10Condition.SetRank(2);
 worksheet.GetRange("B2").SetValue("After: Top 2 values");
 ```
-

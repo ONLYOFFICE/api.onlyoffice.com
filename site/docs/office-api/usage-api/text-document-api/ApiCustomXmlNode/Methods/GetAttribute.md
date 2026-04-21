@@ -23,9 +23,13 @@ string \| null
 
 ## Example
 
-This example shows how to retrieve the value of an attribute from the current XML node.
+Retrieve the value of an attribute from the current XML node in a document.
 
 ```javascript editor-docx
+// How to get the attribute for a custom XML node in a document?
+
+// Get the attribute and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -48,4 +52,3 @@ paragraph.AddText(`Species: ${species}\r\n`);
 paragraph.AddText(`ID: ${id}\r\n`);
 doc.Push(paragraph);
 ```
-

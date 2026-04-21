@@ -20,10 +20,10 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the current paragraph.
+Get a number of elements in the current paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// Get paragraph elements count.
+// Get paragraph elements count in a spreadsheet.
 
 // How to get number of elements of the paragraph and show it in the worksheet.
 
@@ -44,4 +44,3 @@ run.AddText("Number of paragraph elements after we added a text run: ");
 run.AddTabStop();
 run.AddText("" + paragraph.GetElementsCount());
 ```
-

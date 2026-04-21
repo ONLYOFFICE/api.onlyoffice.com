@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the type of the unique values conditional formatting rule.
+Get the type of the unique values conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to retrieve the formatting rule type from unique values conditional formatting.
 
-// Get the type of the unique values rule.
+// Get the type of the unique values rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,4 +42,3 @@ let uniqueValuesCondition = formatConditions.AddUniqueValues();
 let type = uniqueValuesCondition.GetType();
 worksheet.GetRange("B1").SetValue("Rule type: " + type);
 ```
-

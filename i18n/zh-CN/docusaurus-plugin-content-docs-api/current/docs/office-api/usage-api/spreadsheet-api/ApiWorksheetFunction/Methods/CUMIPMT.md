@@ -27,15 +27,14 @@ number
 
 ## 示例
 
-此示例演示如何获取两个期间之间支付的累计利息。
+在电子表格中获取两个期间之间支付的累计利息。
 
 ```javascript editor-xlsx
-// How to return the cumulative interest paid between two periods.
+// How to return the cumulative interest paid between two periods in a spreadsheet.
 
-// Use function to get cumulative interest paid between two periods.
+// Use function to get cumulative interest paid between two periods in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.CUMIPMT(0.1/12, 2*12, 2000, 1, 24, 0));
 ```
-

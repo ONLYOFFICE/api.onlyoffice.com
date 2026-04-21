@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the current text run.
+Set the font size to the characters of the current text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the text font size.
+// How to change the text font size in a spreadsheet.
 
-// Create a text run object, resize its font.
+// Create a text run object, resize its font in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -43,4 +43,3 @@ run.SetFontSize(30);
 run.AddText("This is a text run with the font size set to 15 points (30 half-points).");
 paragraph.AddElement(run);
 ```
-

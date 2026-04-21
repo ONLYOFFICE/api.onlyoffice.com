@@ -1,6 +1,6 @@
 # ApiDocument
 
-ApiDocument is a subclass of [ApiDocumentContent](../../text-document-api/ApiDocumentContent/ApiDocumentContent.md).
+ApiDocument 是 [ApiDocumentContent](../../text-document-api/ApiDocumentContent/ApiDocumentContent.md) 的子类。
 
 ## 方法
 

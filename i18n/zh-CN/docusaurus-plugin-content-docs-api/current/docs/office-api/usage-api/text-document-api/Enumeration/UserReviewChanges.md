@@ -11,4 +11,3 @@ Object
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | reviews | [ReviewReportRecord](../Enumeration/ReviewReportRecord.md)[] | 修订记录列表。 |
-

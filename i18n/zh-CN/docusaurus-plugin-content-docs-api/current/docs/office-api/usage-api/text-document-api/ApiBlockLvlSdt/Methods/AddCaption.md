@@ -30,14 +30,12 @@ boolean
 
 ## 示例
 
-此示例在当前内容控件之后（或之前）添加题注段落。
+在文档中当前内容控件之后（或之前）添加题注段落。
 
 ```javascript editor-docx
-// Adds a figure caption after the block content control and sets the Arabic caption numbering format.
+// Add a figure caption after the block content control and set the Arabic caption numbering format.
 
-// How to add a caption for the ApiBlockLvlSdt object.
-
-// Creates a block content control, adds a paragraph with an image to it, and adds a figure caption for the current content control.
+// Create a block content control, add a paragraph with an image to it, and add a figure caption for the current content control in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
@@ -51,4 +49,3 @@ blockLvlSdt.AddElement(paragraph, 0);
 doc.AddElement(0, blockLvlSdt);
 blockLvlSdt.AddCaption('', 'Figure', false, 'Arabic', false, undefined, 'hyphen');
 ```
-

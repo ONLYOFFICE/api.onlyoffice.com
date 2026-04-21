@@ -22,9 +22,13 @@ expression.GetElement(pos);
 
 ## 示例
 
-此示例获取富文本内容的第一个元素。
+获取 PDF 文档中富文本内容的第一个元素。
 
 ```javascript editor-pdf
+// How can I get the element using a rich content in a PDF document?
+
+// Get the element for a rich content in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
@@ -37,4 +41,3 @@ let richContent = freeTextAnnot.GetContent();
 let para = richContent.GetElement(0);
 console.log(`First element is: ${para.GetClassType()}`);
 ```
-

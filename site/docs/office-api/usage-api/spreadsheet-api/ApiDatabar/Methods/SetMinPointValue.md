@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the minimum point value of a data bar conditional formatting rule.
+Set the minimum point value of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the value of the minimum condition.
+// How to change the value of the minimum condition in a spreadsheet.
 
 // Set the minimum point value of a data bar conditional formatting rule.
 
@@ -51,4 +51,3 @@ dataBar.SetMinPointValue(50);
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMinPointValue() || "Auto");
 ```
-

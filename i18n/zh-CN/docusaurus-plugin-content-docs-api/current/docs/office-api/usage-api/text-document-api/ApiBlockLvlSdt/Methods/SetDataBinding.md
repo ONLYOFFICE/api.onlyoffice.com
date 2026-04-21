@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例演示如何在内容控件上设置数据绑定。
+为文档中的内容控件设置数据绑定。
 
 ```javascript editor-docx
+// How can I set data binding using a block-level content control in a document?
+
+// Set data binding for a block-level content control in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -41,4 +45,3 @@ contentControl.SetDataBinding({
   xpath : "/pic:documentData/pic:text"
 });
 ```
-

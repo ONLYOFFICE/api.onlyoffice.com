@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set style name of a pivot table.
+Set style name of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set style name of a table.
+// How to set style name of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its style name.
+// Create a pivot table, add data to it then set its style name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -67,4 +67,3 @@ setTimeout(function () {
     pivotTable.SetStyleName('PivotStyleLight14');
 }, 5000);
 ```
-

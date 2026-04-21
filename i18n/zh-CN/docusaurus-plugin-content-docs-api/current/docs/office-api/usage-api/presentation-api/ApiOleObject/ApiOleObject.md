@@ -1,6 +1,6 @@
 # ApiOleObject
 
-ApiOleObject is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
+ApiOleObject 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 ## 方法
 

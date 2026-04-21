@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取自定义 XML 部件的类类型。
+获取电子表格中自定义 XML 部件的类类型。
 
 ```javascript editor-xlsx
-// How to get the class type of an XML part.
+// How to identify the class type of a custom XML part in a spreadsheet?
 
-// Get the class type.
+// Obtain the class type identifier of a custom XML part object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -33,4 +33,3 @@ let xml = xmlManager.Add("<data><value>Sample</value></data>");
 let classType = xml.GetClassType();
 worksheet.GetRange("A1").SetValue("Class type: " + classType);
 ```
-

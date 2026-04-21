@@ -29,12 +29,12 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 ## 示例
 
-此示例展示如何创建图表并将其粘贴到文档中。
+创建图表并将其粘贴到文档中。
 
 ```javascript editor-pptx
 // How to add charts to slides.
 
-// Create a 3D bar chart, set its size, position, color and other properties.
+// Create a 3D bar chart, set its size, position, color and other properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,3 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
 ```
-

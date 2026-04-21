@@ -20,7 +20,7 @@ boolean
 
 ## Example
 
-This example shows how to get the information about the wrapping cell style.
+Get the information about the wrapping cell style in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a cell value wrapping type.
@@ -33,4 +33,3 @@ range.SetValue("This is the text wrapped to fit the cell size.");
 range.SetWrap(true);
 worksheet.GetRange("A3").SetValue("The text in the cell A1 is wrapped: " + range.GetWrapText());
 ```
-

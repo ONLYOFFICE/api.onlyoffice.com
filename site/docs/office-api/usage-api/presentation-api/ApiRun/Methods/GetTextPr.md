@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties of the run.
+Get the text properties of the run in a presentation.
 
 ```javascript editor-pptx
-// How to get the text properties of the current ApiRun object and change its font size.
+// How to get the text properties of the current text run object and change its font size in a presentation.
 
-// Resize a font of a text run.
+// Resize a font of a text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,4 +46,3 @@ run.AddText("This is a sample text inside the shape with the font size set to 15
 paragraph.AddElement(run);
 slide.AddObject(shape);
 ```
-

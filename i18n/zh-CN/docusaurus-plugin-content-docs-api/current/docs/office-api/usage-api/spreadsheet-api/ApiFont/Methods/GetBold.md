@@ -20,10 +20,10 @@ boolean \| null
 
 ## 示例
 
-此示例演示如何获取指定字体的粗体属性。
+获取电子表格中指定字体的粗体属性。
 
 ```javascript editor-xlsx
-// How to know whether a font style of characters is bold.
+// How to know whether a font style of characters is bold in a spreadsheet.
 
 // Get a boolean value that represents whether a font is bold or not and show the value in the worksheet.
 
@@ -36,4 +36,3 @@ font.SetBold(true);
 let isBold = font.GetBold();
 worksheet.GetRange("B3").SetValue("Bold property: " + isBold);
 ```
-

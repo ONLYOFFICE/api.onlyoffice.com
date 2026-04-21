@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of a custom XML node and display it.
+Retrieve the class type of a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the class type of an XML node.
+// How to identify the class type of a custom XML node in a spreadsheet?
 
-// Get the class type.
+// Obtain the class type identifier of a custom XML node object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();
@@ -44,4 +44,3 @@ let node = xml.GetNodes('/zoo/animal')[0];
 let classType = node.GetClassType();
 worksheet.GetRange("A1").SetValue("Class type of the node: " + classType);
 ```
-

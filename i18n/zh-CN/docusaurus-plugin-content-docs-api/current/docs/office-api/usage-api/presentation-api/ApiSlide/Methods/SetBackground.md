@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置幻灯片的背景颜色。
+设置幻灯片的背景颜色。
 
 ```javascript editor-pptx
 // How to change a background color of the slide.
@@ -37,4 +37,3 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
 ```
-

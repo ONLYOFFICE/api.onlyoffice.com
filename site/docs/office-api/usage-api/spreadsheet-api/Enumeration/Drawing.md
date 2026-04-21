@@ -14,5 +14,3 @@ Enumeration
 - [ApiChart](../ApiChart/ApiChart.md)
 - [ApiGroup](../ApiGroup/ApiGroup.md)
 - [ApiSmartArt](../ApiSmartArt/ApiSmartArt.md)
-
-

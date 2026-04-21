@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the pdf document.
+Retrieve the class type of a paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to get a class type of ApiParagraph.
+// How to identify the class type of a paragraph in a PDF document?
 
-// Retrieve class type of ApiParagraph object and insert it to the page.
+// Obtain the class type identifier of a paragraph object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,4 +42,3 @@ const classType = paragraph.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
 ```
-

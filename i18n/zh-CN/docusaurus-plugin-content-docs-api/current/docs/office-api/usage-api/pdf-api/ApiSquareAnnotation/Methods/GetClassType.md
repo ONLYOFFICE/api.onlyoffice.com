@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取方形注释的类类型。
+检查 PDF 文档中方形注释返回的类类型。
 
 ```javascript editor-pdf
+// How do I check what type a square annotation object is in a PDF document?
+
+// Retrieve and output the class type string for a square annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
@@ -31,4 +35,3 @@ squareAnnot.SetBorderEffectStyle("cloud");
 squareAnnot.SetBorderEffectIntensity(1);
 console.log(`Annot class type is: ${squareAnnot.GetClassType()}`);
 ```
-

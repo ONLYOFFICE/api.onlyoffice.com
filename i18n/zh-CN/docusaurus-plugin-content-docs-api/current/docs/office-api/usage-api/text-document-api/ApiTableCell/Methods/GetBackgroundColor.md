@@ -20,9 +20,13 @@ expression.GetBackgroundColor();
 
 ## 示例
 
-此示例展示如何设置和获取当前表格单元格的背景颜色。
+设置并获取文档中当前表格单元格的背景颜色。
 
 ```javascript editor-docx
+// How can I get the background color using a table cell in a document?
+
+// Get the background color for a table cell in a document.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
@@ -39,4 +43,3 @@ paragraph.AddText('This paragraph has the same color as the table cell backgroun
 paragraph.SetColor(backgroundColor);
 doc.Push(table);
 ```
-

@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to delete an attribute from a custom XML node.
+Delete an attribute from a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to delete the attribute for a custom XML node in a spreadsheet?
+
+// Delete the attribute and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -43,4 +47,3 @@ const attributes = bookNode.GetAttributes();
 worksheet.GetRange('A1').SetValue('Remaining attributes count: ' + attributes.length);
 worksheet.GetRange('A2').SetValue('XML after deletion: ' + xml.GetXml());
 ```
-

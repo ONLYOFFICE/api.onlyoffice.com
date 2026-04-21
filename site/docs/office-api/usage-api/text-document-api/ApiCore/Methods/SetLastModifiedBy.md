@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the name of the last user who modified the current document.
+Set the name of the last user who modified the current document in a document.
 
 ```javascript editor-docx
+// How can I set last modified by using a core properties in a document?
+
+// Set last modified by for a core properties in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -33,4 +37,3 @@ const lastModifiedBy = core.GetLastModifiedBy();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
 ```
-

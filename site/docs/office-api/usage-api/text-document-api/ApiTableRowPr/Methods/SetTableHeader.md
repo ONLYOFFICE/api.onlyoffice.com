@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example specifies that the current table row will be repeated at the top of each new page wherever this table is displayed.
+Specify that the current table row will be repeated at the top of each new page wherever this table is displayed.
 
 ```javascript editor-docx
-// Rename the header of the table.
+// Rename the header of the table in a document.
 
-// How to set table row as a header.
+// How to set table row as a header in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -45,4 +45,3 @@ tableRowPr.SetTableHeader(true);
 table.SetStyle(tableStyle);
 doc.Push(table);
 ```
-

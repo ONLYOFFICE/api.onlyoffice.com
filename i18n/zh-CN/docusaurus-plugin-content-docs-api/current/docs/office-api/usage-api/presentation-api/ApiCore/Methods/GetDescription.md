@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的描述。
+在演示文稿中使用核心属性设置和获取当前演示文稿的描述。
 
 ```javascript editor-pptx
+// How do I get the description in a presentation?
+
+// Get the description using a core properties object in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetDescription("This is a sample presentation made to help fellow users understand how to use the ApiCore methods.");
@@ -39,4 +43,3 @@ const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
 ```
-

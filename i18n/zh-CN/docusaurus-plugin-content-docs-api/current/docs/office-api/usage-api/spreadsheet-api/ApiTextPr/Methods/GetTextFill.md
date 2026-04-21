@@ -20,12 +20,12 @@ expression.GetTextFill();
 
 ## 示例
 
-此示例使用其属性获取文本填充。
+获取电子表格中文本的填充属性。
 
 ```javascript editor-xlsx
-// How to find out a text color type.
+// How to find out a text color type in a spreadsheet.
 
-// Get solid fill color of a text run object.
+// Get solid fill color of a text run object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -47,4 +47,3 @@ let type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 content.Push(paragraph);
 ```
-

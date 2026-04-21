@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets an outline property of a text.
+Get an outline property of a text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is outlined or not.
+// How to find out whether a text is outlined or not in a spreadsheet.
 
-// Get a text outline property type, for example as a stroke.
+// Get a text outline property type, for example as a stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -47,4 +47,3 @@ let type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 content.Push(paragraph);
 ```
-

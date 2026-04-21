@@ -3,16 +3,16 @@
 返回表示单个数据透视表项（ApiPivotItem 对象）
 或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。
 
-Inherited from [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md).
+继承自 [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的项。
+获取电子表格中透视字段的项。
 
 ```javascript editor-xlsx
-// How to get a pivot field items.
+// How to get a pivot field items in a spreadsheet.
 
-// Create a pivot table, add data to it then get items of a specified pivot field as an array.
+// Create a pivot table, add data to it then get items of a specified pivot field as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -54,4 +54,3 @@ for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(9 + i, 1).SetValue(pivotItems[i].GetName());
 }
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例删除内容控件及其内容。
+删除文档中的内容控件及其内容。
 
 ```javascript editor-docx
-// How to delete inline text element.
+// How to delete inline text element in a document.
 
-// Add inline content control and then clear its content.
+// Add inline content control and then clear its content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,3 @@ paragraph.AddInlineLvlSdt(inlineLvlSdt);
 inlineLvlSdt.Delete(false);
 paragraph.AddText("The inline text content control was removed.");
 ```
-

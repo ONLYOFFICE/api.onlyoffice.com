@@ -24,10 +24,10 @@ number
 
 ## 示例
 
-此示例演示如何计算由给定条件或标准指定的单元格的平均值（算术平均数）。
+在电子表格中查找符合给定条件的单元格的平均值（算术平均数）。
 
 ```javascript editor-xlsx
-// How to find an average (arithmetic mean) using condition.
+// How to find an average (arithmetic mean) using condition in a spreadsheet.
 
 // Use function to get an average of the cells if the condition is met.
 
@@ -42,4 +42,3 @@ for (let i = 0; i < numbers.length; i++) {
 let range = worksheet.GetRange("A1:A4");
 worksheet.GetRange("C1").SetValue(func.AVERAGEIF(range, ">45"));
 ```
-

@@ -15,7 +15,7 @@ Object
 
 ## 示例
 
-此示例向文档添加从指定样式生成的目录。
+向文档添加从指定样式生成的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its style levels.
@@ -38,4 +38,3 @@ let tocPr = {
 };
 doc.AddTableOfContents(tocPr);
 ```
-

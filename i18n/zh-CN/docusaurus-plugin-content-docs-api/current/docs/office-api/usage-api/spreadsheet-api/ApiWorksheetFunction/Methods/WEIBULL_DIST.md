@@ -25,17 +25,15 @@ number
 
 ## 示例
 
-此示例演示如何返回威布尔分布。
+在电子表格中返回威布尔分布。
 
 ```javascript editor-xlsx
-// How to return the Weibull distribution.
+// How to return the Weibull distribution in a spreadsheet.
 
-// Use a function to calculate the Weibull distribution.
-
+// Use a function to calculate the Weibull distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.WEIBULL_DIST(12, 2, 5, true);
 worksheet.GetRange("B2").SetValue(result);
 ```
-

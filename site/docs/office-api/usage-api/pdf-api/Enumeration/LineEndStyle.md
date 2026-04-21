@@ -18,5 +18,3 @@ Enumeration
 - "rOpenArrow"
 - "rClosedArrow"
 - "slash"
-
-

@@ -40,4 +40,3 @@ Asc.plugin.callCommand(addOleToWorksheet, false, true, (id) => {
 	console.log('We removed OLE object with id: ' + id);
 });
 ```
-

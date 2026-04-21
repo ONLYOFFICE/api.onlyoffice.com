@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes all the elements from the current paragraph.
+Remove all the elements from the current paragraph in a document.
 
 ```javascript editor-docx
-// How to delete the paragraph.
+// How to delete the paragraph in a document.
 
-// Delete all ellements from the paragraph.
+// Delete all ellements from the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -40,4 +40,3 @@ run.AddText("We removed all the paragraph elements and added a new text run insi
 paragraph.AddElement(run);
 doc.Push(paragraph);
 ```
-

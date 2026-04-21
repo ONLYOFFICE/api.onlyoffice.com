@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取表示指定字符范围文本的字符串值。
+获取表示电子表格中指定字符范围文本的字符串值。
 
 ```javascript editor-xlsx
-// Get a value that represents the label text for the pivot field.
+// Get a value that represents the label text for the pivot field in a spreadsheet.
 
-// How to get and display caption of the text.
+// How to get and display caption of the text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -34,4 +34,3 @@ let characters = range.GetCharacters(23, 4);
 let caption = characters.GetCaption();
 worksheet.GetRange("B3").SetValue("Caption: " + caption);
 ```
-

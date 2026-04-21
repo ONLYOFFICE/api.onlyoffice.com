@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example sets vertical aligment "superscript" for [ApiRange](../ApiRange.md).
+Set vertical alignment "superscript" for a text range.
 
 ```javascript editor-docx
-// How to set vertical alignment of a text.
+// Set the vertical alignment of a text in a document.
 
-// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,4 +38,3 @@ paragraph.AddText("ONLYOFFICE Copyright Document Builder");
 let range = doc.GetRange(10, 19);
 range.SetVertAlign("superscript");
 ```
-

@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the horizontal flip for a drawing.
+Set the horizontal flip for a drawing in a document.
 
 ```javascript editor-docx
+// How to set flip h for a drawing object in a document?
+
+// Set flip h and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -41,4 +45,3 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('The right arrow shape above is flipped horizontally.');
 doc.Push(paragraph2);
 ```
-

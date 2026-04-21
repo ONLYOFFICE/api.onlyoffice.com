@@ -23,15 +23,14 @@ number
 
 ## Example
 
-This example shows how to return a number rounded to the desired multiple.
+Return a number rounded to the desired multiple in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round the number.
+// How to round the number in a spreadsheet.
 
-// Use a function to round the number.
+// Use a function to round the number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.MROUND(14.35, 0.4));
 ```
-

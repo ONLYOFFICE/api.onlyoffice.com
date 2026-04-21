@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to check if the color used in a shape fill is a theme color.
+Check if the color used in a shape fill is a theme color in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I is theme color using a color in a spreadsheet?
+
+// Is theme color for a color in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const hexColor = Api.HexColor('#FF0000');
 const themeColor = Api.ThemeColor('accent1');
@@ -34,4 +38,3 @@ const shape = worksheet.AddShape("flowChartMagneticTape", 120 * 36000, 70 * 3600
 worksheet.GetRange("A12").SetValue("Is hexColor a theme color? " + hexColor.IsThemeColor());
 worksheet.GetRange("A14").SetValue("Is themeColor a theme color? " + themeColor.IsThemeColor());
 ```
-

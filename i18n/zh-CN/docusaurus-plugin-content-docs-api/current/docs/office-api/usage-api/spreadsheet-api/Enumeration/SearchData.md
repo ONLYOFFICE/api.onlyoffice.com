@@ -17,4 +17,3 @@ Object
 | SearchDirection | [XlSearchDirection](../Enumeration/XlSearchDirection.md) | 区域搜索方向 - 下一个匹配项或上一个匹配项。 |
 | SearchOrder | [XlSearchOrder](../Enumeration/XlSearchOrder.md) | 区域搜索顺序 - 按行或按列。 |
 | What | string \| undefined | 要搜索的数据。 |
-

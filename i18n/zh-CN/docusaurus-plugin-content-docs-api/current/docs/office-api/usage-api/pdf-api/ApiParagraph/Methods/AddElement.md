@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向段落添加文本块。
+在 PDF 文档中向段落添加 run。
 
 ```javascript editor-pdf
-// Insert a text run to the ApiParagraph object.
+// Insert a text run to the paragraph object in a PDF document.
 
-// How to add the ApiRun object to the page.
+// How to add the text run object to the page.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,4 +47,3 @@ run.AddText("This is the text for a text run. Nothing special.");
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

@@ -18,7 +18,6 @@
 - 2
 - 3
 
-
 ## 示例
 
 ```javascript
@@ -32,4 +31,3 @@ let documents = [{
 }];
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [documents]);
 ```
-

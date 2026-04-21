@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the animation timeline from a slide and adds an animation effect.
+Get the animation timeline from a slide and add an animation effect.
 
 ```javascript editor-pptx
+// How do I get the time line in a presentation?
+
+// Get the time line using a slide object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -51,4 +55,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Animation added: fade effect');
 slide.AddObject(infoShape);
 ```
-

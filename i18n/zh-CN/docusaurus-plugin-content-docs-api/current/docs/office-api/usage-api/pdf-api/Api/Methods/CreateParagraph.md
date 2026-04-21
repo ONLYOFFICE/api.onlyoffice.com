@@ -20,10 +20,10 @@ expression.CreateParagraph();
 
 ## 示例
 
-此示例创建新段落并将其插入形状。
+在 PDF 文档中创建新段落并将其插入形状。
 
 ```javascript editor-pdf
-// How to add a text.
+// How to add a text in a PDF document.
 
 // Insert text to the paragraph and add it to the page.
 
@@ -42,4 +42,3 @@ paragraph.AddText("This is an example of a paragraph inside a shape. Nothing spe
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

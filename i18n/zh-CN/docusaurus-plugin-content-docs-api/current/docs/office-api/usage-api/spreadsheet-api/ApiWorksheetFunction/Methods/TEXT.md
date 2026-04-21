@@ -23,15 +23,14 @@ string
 
 ## 示例
 
-此示例演示如何将值转换为特定数字格式的文本。
+在电子表格中以特定数字格式将值转换为文本。
 
 ```javascript editor-xlsx
-// How to convert a value to text.
+// How to convert a value to text in a spreadsheet.
 
-// Use a function to convert a value to text.
+// Use a function to convert a value to text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.TEXT(45.5, "$0.00"));
 ```
-

@@ -20,9 +20,13 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取图表标题文本。
+获取电子表格中的图表标题文本。
 
 ```javascript editor-xlsx
+// How do I get the title in a spreadsheet?
+
+// Get the title using a chart object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue(2014);
 worksheet.GetRange('C1').SetValue(2015);
@@ -40,4 +44,3 @@ chart.SetTitle('Financial Overview', 13);
 const chartTitle = chart.GetTitle();
 worksheet.GetRange('E1').SetValue('Chart Title: ' + chartTitle);
 ```
-

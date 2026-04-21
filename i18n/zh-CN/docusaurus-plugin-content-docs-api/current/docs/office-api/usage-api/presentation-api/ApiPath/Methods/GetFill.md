@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-分析幻灯片上云形状路径属性。
+分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
 
 ```javascript editor-pptx
-// Displays comprehensive path information in a text shape.
+// How to get the fill for a geometry path in a presentation?
+
+// Get the fill and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
@@ -39,4 +42,3 @@ paragraph.AddText(", Fill: " + path.GetFill() + ", Array: " + paths.length);
 shape.SetPosition(1000000, 1000000);
 slide.AddObject(shape);
 ```
-

@@ -24,9 +24,13 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## 示例
 
-此示例在指定位置插入段落。
+在 PDF 文档中的指定位置插入段落。
 
 ```javascript editor-pdf
+// How can I insert the paragraph using a paragraph in a PDF document?
+
+// Insert the paragraph for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -43,4 +47,3 @@ paragraph2.AddText('This paragraph was inserted after the first one.');
 paragraph.InsertParagraph(paragraph2, 'after', true);
 page.AddObject(shape);
 ```
-

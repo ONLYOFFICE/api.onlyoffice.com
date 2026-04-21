@@ -26,10 +26,13 @@ boolean
 
 ## 示例
 
-创建具有可调整参数和参考线的形状。
+创建具有可调参数和参考线的形状。在文档中为自定义几何图形设置文本矩形和连接点。
 
 ```javascript editor-docx
-// Sets up text rectangle and connection points for the custom geometry.
+// How to add the guide for a geometry in a document?
+
+// Add the guide and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -54,4 +57,3 @@ let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 paragraph.AddDrawing(shape);
 ```
-

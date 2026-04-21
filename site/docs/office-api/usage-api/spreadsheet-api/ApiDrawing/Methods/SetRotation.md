@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the rotation angle to the drawing.
+Set the rotation angle to the drawing in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set rotation in a spreadsheet?
+
+// Set rotation using a drawing object object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -35,4 +39,3 @@ drawing.SetRotation(90);
 let rotAngle = drawing.GetRotation();
 worksheet.GetRange("A1").SetValue("Drawing rotation angle is set to: " + rotAngle + " degrees");
 ```
-

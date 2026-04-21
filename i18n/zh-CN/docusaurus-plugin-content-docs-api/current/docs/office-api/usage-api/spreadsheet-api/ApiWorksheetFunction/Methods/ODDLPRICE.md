@@ -29,15 +29,14 @@ number
 
 ## 示例
 
-此示例演示如何返回末期不规则证券的每 100 美元面值价格。
+在电子表格中返回末期不规则证券每 $100 面值的价格。
 
 ```javascript editor-xlsx
-// How to get the price per $100 face value of a security.
+// How to get the price per $100 face value of a security in a spreadsheet.
 
-// Use a function to return the price per $100 face value of a security.
+// Use a function to return the price per $100 face value of a security in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.ODDLPRICE("1/1/2017", "6/1/2019", "12/1/2016", 0.05, 0.09, 100, 2));
 ```
-

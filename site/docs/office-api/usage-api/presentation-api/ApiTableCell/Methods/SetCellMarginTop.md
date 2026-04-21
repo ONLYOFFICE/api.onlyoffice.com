@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies an amount of space which shall be left between the top extent of the current cell contents and the top edge border of a specific individual table cell within a table.
+Specify an amount of space which shall be left between the top extent of the current cell contents and the top edge border of a specific individual table cell within a table.
 
 ```javascript editor-pptx
 // How to set the cell top margin for the current table cell.
 
-// Specify the top margin value for the ApiTableCell object.
+// Specify the top margin value for the table cell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,3 @@ cell.SetCellMarginTop(720);
 slide.RemoveAllObjects();
 slide.AddObject(table);
 ```
-

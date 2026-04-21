@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何显示特定的图表数据标签。
+如何在 PDF 文档中显示特定的图表数据标签。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its specific data labels visibility.
+// Create a chart, set its properties and its specific data labels visibility in a PDF document.
+
+// Use chart to set show data labels in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,4 +52,3 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
 ```
-

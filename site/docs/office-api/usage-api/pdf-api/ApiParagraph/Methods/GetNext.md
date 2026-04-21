@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the next paragraph.
+Get the next paragraph in a PDF document.
 
 ```javascript editor-pdf
-// How to get the next paragraph of the current one.
+// How to get the next paragraph of the current one in a PDF document.
 
 // Return the next paragraph on the page and make its text bold.
 
@@ -52,4 +52,3 @@ page.AddObject(shape);
 const nextParagraph = paragraph1.GetNext();
 nextParagraph.SetBold(true);
 ```
-

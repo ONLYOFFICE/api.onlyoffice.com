@@ -26,7 +26,7 @@ expression.Add(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## Example
 
-This example adds a data validation rule to a range of cells.
+Add a data validation rule to a range of cells.
 
 ```javascript editor-xlsx
 // How to apply data validation to a range of cells.
@@ -41,4 +41,3 @@ const validation = worksheet.GetRange("A2").GetValidation();
 validation.Add("xlValidateDecimal", "xlValidAlertWarning", "xlGreater", "12");
 worksheet.GetRange("A4").SetValue("Data Validation is now applied for A2 only");
 ```
-

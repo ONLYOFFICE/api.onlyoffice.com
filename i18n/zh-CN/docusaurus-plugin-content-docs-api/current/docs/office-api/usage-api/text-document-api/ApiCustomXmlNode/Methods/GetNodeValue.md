@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的值并显示它。
+获取自定义 XML 节点的值并在文档中显示。
 
 ```javascript editor-docx
+// How do I get the node value in a document?
+
+// Get the node value using a custom XML node object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -41,4 +45,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(animalNode.GetNodeValue());
 doc.Push(paragraph);
 ```
-

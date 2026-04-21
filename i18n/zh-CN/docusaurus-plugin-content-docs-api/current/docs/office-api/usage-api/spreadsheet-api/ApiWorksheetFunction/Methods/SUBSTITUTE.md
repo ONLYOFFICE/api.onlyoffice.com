@@ -25,15 +25,14 @@ string
 
 ## 示例
 
-此示例演示如何在文本字符串中用新文本替换现有文本。
+在电子表格中用新文本替换文本字符串中的现有文本。
 
 ```javascript editor-xlsx
-// How to substitute a substring with another one.
+// How to substitute a substring with another one in a spreadsheet.
 
-// Use a function to replace a text with another one.
+// Use a function to replace a text with another one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.SUBSTITUTE("Online Office is a cloud business service portal", "Office", "portal"));
 ```
-

@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例演示如何使用数据绑定将映射的 XML 文件中的数据与内容控件同步。
+在文档中使用数据绑定将映射的 XML 文件的数据与内容控件同步。
 
 ```javascript editor-docx
+// How to update from xml mapping for a block-level content control in a document?
+
+// Update from xml mapping and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -47,4 +51,3 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText(contentControl.GetContent().GetText());
 doc.Push(paragraph);
 ```
-

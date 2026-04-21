@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the slide master of the theme.
+Get the slide master of the theme in a presentation.
 
 ```javascript editor-pptx
-// How to get a master from a theme.
+// How to get a master from a theme in a presentation.
 
-// Get a theme master and display its class type.
+// Get a theme master and display its class type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,3 @@ paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
 ```
-

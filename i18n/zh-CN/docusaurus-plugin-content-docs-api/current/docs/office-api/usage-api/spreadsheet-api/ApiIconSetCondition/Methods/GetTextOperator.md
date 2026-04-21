@@ -2,11 +2,11 @@
 
 返回基于文本的条件格式规则的文本运算符。
 
-Inherited from [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Methods/GetTextOperator.md).
+继承自 [ApiFormatCondition.GetTextOperator](../../ApiFormatCondition/Methods/GetTextOperator.md)。
 
 ## 示例
 
-此示例从基于文本的条件格式规则获取文本运算符。
+从基于文本的条件格式规则获取文本运算符。
 
 ```javascript editor-xlsx
 // How to retrieve text operators from text-based conditional formatting rules.
@@ -34,4 +34,3 @@ let textOperator = condition1.GetTextOperator();
 worksheet.GetRange("C1").SetValue("Text operator:");
 worksheet.GetRange("C2").SetValue(textOperator ? textOperator : "None");
 ```
-

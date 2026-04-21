@@ -28,6 +28,8 @@ How to set cell right border with its fill color.
 ```javascript editor-pdf
 // Create table and set its cell right border.
 
+// Use table cell to set cell border right.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,4 +41,3 @@ cell.SetCellBorderRight(2, fill);
 
 page.AddObject(table);
 ```
-

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the data to the current OLE object.
+Set the data to the current OLE object in a presentation.
 
 ```javascript editor-pptx
-// Set data to an OLE object.
+// Set data to an OLE object in a presentation.
 
-// How to insert a url address to the OLE object.
+// How to insert an url address to the OLE object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,4 +43,3 @@ oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
 ```
-

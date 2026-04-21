@@ -2,14 +2,14 @@
 
 从当前文本属性获取删除线属性。
 
-Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md).
+继承自 [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)。
 
 ## 示例
 
-此示例查明文本是否设置了删除线属性。
+检查文档中的文本是否设置了删除线属性。
 
 ```javascript editor-docx
-// How to know whether a text is crossed by one horizontal line.
+// How to know whether a text is crossed by one horizontal line in a document.
 
 // Retrieve text properties of the form to find out whether it is stroke out.
 
@@ -34,4 +34,3 @@ let strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 doc.Push(paragraph);
 ```
-

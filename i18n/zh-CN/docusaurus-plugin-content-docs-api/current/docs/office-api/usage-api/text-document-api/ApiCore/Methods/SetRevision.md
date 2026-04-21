@@ -22,9 +22,13 @@ expression.SetRevision(sRevision);
 
 ## 示例
 
-此示例演示如何设置当前文档的修订版本。
+设置文档中当前文档的修订版本。
 
 ```javascript editor-docx
+// How do I set revision in a document?
+
+// Set revision using a core properties object in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetRevision("Rev. A");
@@ -33,4 +37,3 @@ const revision = core.GetRevision();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Revision: " + revision);
 ```
-

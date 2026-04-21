@@ -20,9 +20,13 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取图表标题文本。
+获取文档中的图表标题文本。
 
 ```javascript editor-docx
+// How do I get the title in a document?
+
+// Get the title using a chart object in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -49,4 +53,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Chart Title: ' + chartTitle);
 doc.Push(paragraph);
 ```
-

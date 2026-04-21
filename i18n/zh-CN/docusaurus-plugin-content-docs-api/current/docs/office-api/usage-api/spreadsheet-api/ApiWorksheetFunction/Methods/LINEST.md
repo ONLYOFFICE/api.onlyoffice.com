@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何通过使用最小二乘法拟合直线来返回描述与已知数据点匹配的线性趋势的统计信息。
+在电子表格中使用最小二乘法拟合直线，返回描述与已知数据点匹配的线性趋势的统计信息。
 
 ```javascript editor-xlsx
-// How to get statistics that describe a linear trend matching known data points.
+// How to get statistics that describe a linear trend matching known data points in a spreadsheet.
 
-// Use a function to return statistics that describe a linear trend matching known data points using the least squares method.
+// Use a function to return statistics that describe a linear trend matching known data points using the least squares method in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -59,4 +59,3 @@ let ans = func.LINEST(yRange, xRange, constant, stats);
 //print answer 
  worksheet.GetRange("D1").SetValue(ans);
 ```
-

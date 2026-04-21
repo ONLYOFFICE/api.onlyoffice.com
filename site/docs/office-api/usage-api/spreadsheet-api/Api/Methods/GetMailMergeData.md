@@ -23,7 +23,7 @@ string[][]
 
 ## Example
 
-This example shows how to get the mail merge data.
+Get the mail merge data in a spreadsheet.
 
 ```javascript editor-xlsx
 // Get mail merge data from the worksheet.
@@ -47,4 +47,3 @@ worksheet.GetRange("D3").SetValue("Cage");
 let mailMergeData = Api.GetMailMergeData(0);
 worksheet.GetRange("A5").SetValue("Mail merge data: " + mailMergeData);
 ```
-

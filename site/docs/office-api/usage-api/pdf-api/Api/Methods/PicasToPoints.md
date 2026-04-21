@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert picas to points.
+Convert picas to points in a PDF document.
 
 ```javascript editor-pdf
+// How can I convert picas to points in a PDF document?
+
+// Convert picas to points in a PDF document.
+
 const picas = 100;
 const points = Api.PicasToPoints(picas);
 
@@ -39,4 +43,3 @@ const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
 ```
-

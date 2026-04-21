@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Check the class type returned by an OLE object in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiOleObject.
+// How do I check what type an OLE object object is in a document?
 
-// Retrieve class type of ApiOleObject object and insert it to the document.
+// Retrieve and output the class type string for an OLE object in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(
@@ -41,4 +41,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Class type: ' + type);
 doc.Push(paragraph);
 ```
-

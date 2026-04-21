@@ -12,5 +12,3 @@ Enumeration
 - "xlDoesNotContain"
 - "xlBeginsWith"
 - "xlEndsWith"
-
-

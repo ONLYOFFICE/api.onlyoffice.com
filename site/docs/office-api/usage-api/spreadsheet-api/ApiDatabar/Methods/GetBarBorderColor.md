@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the bar border color from a data bar conditional formatting rule.
+Get the bar border color from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to retrieve the border color of a data bar.
+// How to retrieve the border color of a data bar in a spreadsheet.
 
 // Get the bar border color of a data bar conditional formatting rule.
 
@@ -46,4 +46,3 @@ let borderColor = dataBar.GetBarBorderColor();
 worksheet.GetRange("C1").SetValue("Border Color:");
 worksheet.GetRange("C2").SetValue(borderColor ? "Set" : "None");
 ```
-

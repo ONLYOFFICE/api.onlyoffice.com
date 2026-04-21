@@ -3,13 +3,17 @@
 为当前绘图对象（形状或图像）设置超链接。
 传递 null 以删除超链接。
 
-Inherited from [ApiDrawing.SetHyperlink](../../ApiDrawing/Methods/SetHyperlink.md).
+继承自 [ApiDrawing.SetHyperlink](../../ApiDrawing/Methods/SetHyperlink.md)。
 
 ## 示例
 
-此示例为幻灯片上的形状和图像设置超链接。
+在幻灯片上为形状和图像设置超链接。
 
 ```javascript editor-pptx
+// How do I set hyperlink in a presentation?
+
+// Set hyperlink using a drawing object object in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.AddSlide(Api.CreateSlide());
 
@@ -33,4 +37,3 @@ const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);
 ```
-

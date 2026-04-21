@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何返回一组值中的最小数字。忽略逻辑值和文本。
+在电子表格中返回一组值中的最小值。忽略逻辑值和文本。
 
 ```javascript editor-xlsx
-// How to get a minimum number from a list of numbers.
+// How to get a minimum number from a list of numbers in a spreadsheet.
 
-// Use a function to find a minimum from a list.
+// Use a function to find a minimum from a list in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let min = func.MIN(123, 197, 46, 345, 67, 456);
 worksheet.GetRange("C1").SetValue(min);
 ```
-

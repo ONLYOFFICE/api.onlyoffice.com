@@ -20,10 +20,10 @@ string[]
 
 ## 示例
 
-此示例展示如何获取文本块中所有元素的所有字体名称。
+获取文档中 run 内所有元素的所有字体名称。
 
 ```javascript editor-docx
-// How to get all font names from the ApiRun object elements.
+// How to get all font names from the text run object elements in a document.
 
 // Get all font names from a text run as an array and display it in the worksheet.
 
@@ -43,4 +43,3 @@ for (let i = 0; i < fontNames.length; i++) {
 }
 doc.Push(paragraph);
 ```
-

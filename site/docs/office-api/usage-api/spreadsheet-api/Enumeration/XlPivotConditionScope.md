@@ -11,5 +11,3 @@ Enumeration
 - "xlFieldsScope"
 - "xlSelectionScope"
 - "xlDataFieldScope"
-
-

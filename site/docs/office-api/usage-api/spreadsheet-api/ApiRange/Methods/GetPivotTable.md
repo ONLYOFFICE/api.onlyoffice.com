@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a pivot table of the current range.
+Get a pivot table of the current range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a pivot table of a cell.
 
-// Get a range, get its pivot table and add some data fields to it.
+// Get a range, get its pivot table and add some data fields to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,4 +60,3 @@ samePivotTable.AddFields({
 
 samePivotTable.AddDataField('Price');
 ```
-

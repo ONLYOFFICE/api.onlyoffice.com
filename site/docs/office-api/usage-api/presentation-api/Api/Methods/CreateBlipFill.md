@@ -23,12 +23,12 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## Example
 
-This example shows how to create a blip fill to apply to the object using the selected image as the object background.
+Create a blip fill to apply to the object using the selected image as the object background in a presentation.
 
 ```javascript editor-pptx
-// How to set an image as a background.
+// How to set an image as a background in a presentation.
 
-// Use blip fill to fill a background with an image.
+// Use blip fill to fill a background with an image in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,3 @@ const drawing = Api.CreateShape("star10", 300 * 36000, 130 * 36000, fill, stroke
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
 ```
-

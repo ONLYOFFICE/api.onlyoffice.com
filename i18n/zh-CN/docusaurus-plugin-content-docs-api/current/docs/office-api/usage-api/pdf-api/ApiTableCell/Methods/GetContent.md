@@ -20,10 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-如何获取 ApiTableCell 对象的内容。
+如何获取表格单元格对象的内容。
 
 ```javascript editor-pdf
-// Return the ApiDocumentContent object from the table cell.
+// Return the document content object from the table cell.
+
+// Get the content using a table cell object.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,4 +40,3 @@ content.Push(paragraph);
 
 page.AddObject(table);
 ```
-

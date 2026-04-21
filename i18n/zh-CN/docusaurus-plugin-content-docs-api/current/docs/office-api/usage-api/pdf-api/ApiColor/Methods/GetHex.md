@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取颜色的 RGB 分量。
+获取 PDF 文档中颜色的 RGB 分量。
 
 ```javascript editor-pdf
+// How to get the hex for a color in a PDF document?
+
+// Get the hex and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,4 +45,3 @@ run.AddText('Hex of rgbColor: ' + rgbColorHex);
 paragraph.AddElement(run);
 page.AddObject(shape);
 ```
-

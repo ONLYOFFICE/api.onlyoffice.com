@@ -20,16 +20,15 @@ boolean
 
 ## 示例
 
-此示例将段落内容包装在邮件合并域中。
+在文档中用邮件合并字段包装段落内容。
 
 ```javascript editor-docx
-// How to create a paragraph wrapped in 'Mail Merge Field'.
+// How to create a paragraph wrapped in 'Mail Merge Field' in a document.
 
-// Add a paragraph to the mail merge field.
+// Add a paragraph to the mail merge field in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Paragraph wrapped in 'Mail Merge Field'");
 paragraph.WrapInMailMergeField();
 ```
-

@@ -22,12 +22,12 @@ expression.AddText(text);
 
 ## 示例
 
-此示例向段落添加一些文本。
+在演示文稿中向段落添加文本。
 
 ```javascript editor-pptx
-// How to add a text to the ApiParagraph object.
+// How to add a text to the paragraph object in a presentation.
 
-// How to add a text to the shape.
+// How to add a text to the shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,3 @@ paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 slide.AddObject(shape);
 ```
-

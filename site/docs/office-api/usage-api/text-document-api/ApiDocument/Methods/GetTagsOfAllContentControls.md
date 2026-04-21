@@ -20,12 +20,12 @@ String[]
 
 ## Example
 
-This example shows how to get a list of all tags that are used for all content controls in the document.
+Get a list of all tags that are used for all content controls in the document.
 
 ```javascript editor-docx
-// How to get the style of the heading.
+// How to get the style of the heading in a document.
 
-// Display the style name of the "Heading 6".
+// Display the style name of the "Heading 6" in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,4 +47,3 @@ for (let i = 0; i < tags.length; i++ ){
 }
 doc.Push(paragraph);
 ```
-

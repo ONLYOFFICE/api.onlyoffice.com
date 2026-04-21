@@ -2,11 +2,11 @@
 
 将 ApiTableCellPr 对象转换为 JSON 对象。
 
-Inherited from [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md).
+继承自 [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md)。
 
 ## 示例
 
-此示例将 ApiTableCellPr 对象转换为 JSON 对象。
+将表格单元格属性对象转换为 JSON 对象。
 
 ```javascript editor-docx
 // How to get a JSON from the table cell object.
@@ -28,4 +28,3 @@ let type = tableCellPrFromJSON.GetClassType();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Class type = " + type);
 ```
-

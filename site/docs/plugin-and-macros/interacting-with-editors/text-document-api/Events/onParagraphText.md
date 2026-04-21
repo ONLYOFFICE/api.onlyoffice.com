@@ -24,4 +24,3 @@ window.Asc.plugin.attachEditorEvent("onParagraphText", (data) => {
     }
 });
 ```
-

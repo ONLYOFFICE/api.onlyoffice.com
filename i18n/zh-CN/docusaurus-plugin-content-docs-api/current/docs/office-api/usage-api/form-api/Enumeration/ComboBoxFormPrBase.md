@@ -16,7 +16,7 @@ Object
 
 ## 示例
 
-此示例创建具有特定组合框表单属性的组合框表单。
+创建具有特定组合框表单属性的组合框表单。
 
 ```javascript editor-forms
 // How to create a combo box form with its base properties.
@@ -30,4 +30,3 @@ let comboBoxFormPrBase = {
 };
 let comboBoxForm = Api.CreateComboBoxForm(comboBoxFormPrBase);
 ```
-

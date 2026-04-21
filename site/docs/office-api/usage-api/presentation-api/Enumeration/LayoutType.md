@@ -44,5 +44,3 @@ Enumeration
 - "vertTitleAndTx"
 - "vertTitleAndTxOverChart"
 - "vertTx"
-
-

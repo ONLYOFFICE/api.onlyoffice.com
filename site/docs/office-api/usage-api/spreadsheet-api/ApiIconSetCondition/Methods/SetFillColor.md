@@ -7,7 +7,7 @@ Inherited from [ApiFormatCondition.SetFillColor](../../ApiFormatCondition/Method
 
 ## Example
 
-This example sets the background color for a conditional formatting rule.
+Set the background color for a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to apply background colors to conditional formatting rules.
@@ -38,4 +38,3 @@ condition1.SetFillColor(fillColor);
 worksheet.GetRange("C4").SetValue("New color:");
 worksheet.GetRange("C5").SetValue("Yellow background");
 ```
-

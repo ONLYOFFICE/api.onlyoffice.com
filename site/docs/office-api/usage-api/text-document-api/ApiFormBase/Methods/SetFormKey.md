@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets a key to the form.
+Set a key to the form.
 
 ```javascript editor-docx
 // Change the key of the text form.
@@ -39,4 +39,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Form key: " + key);
 doc.Push(paragraph);
 ```
-

@@ -12,5 +12,3 @@ Enumeration
 - "Down"
 - "Begin"
 - "End"
-
-

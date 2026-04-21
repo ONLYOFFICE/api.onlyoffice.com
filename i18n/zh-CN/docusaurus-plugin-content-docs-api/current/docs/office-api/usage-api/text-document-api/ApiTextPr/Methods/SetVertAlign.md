@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将应用于当前文本块内容相对于文本块默认外观的对齐方式。
+指定在文档中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
 
 ```javascript editor-docx
-// How to set vertical alignment of a text object.
+// How to set vertical alignment of a text object in a document.
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -59,4 +59,3 @@ run.SetStyle(myNewRunStyle3);
 run.AddText("This is a text run with the text aligned above the baseline vertically.");
 paragraph.AddElement(run);
 ```
-

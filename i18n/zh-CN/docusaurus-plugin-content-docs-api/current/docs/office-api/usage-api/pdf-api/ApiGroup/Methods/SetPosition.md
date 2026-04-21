@@ -2,14 +2,16 @@
 
 设置绘图在页面上的位置。
 
-Inherited from [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md).
+继承自 [ApiDrawing.SetPosition](../../ApiDrawing/Methods/SetPosition.md)。
 
 ## 示例
 
-如何更改绘图的位置。
+如何在 PDF 文档中更改绘图对象的位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and move it.
+
+// Set position using a drawing object object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -28,4 +30,3 @@ paragraph.AddText("This is an example of a paragraph inside a shape. Nothing spe
 docContent.Push(paragraph);
 page.AddObject(shape);
 ```
-

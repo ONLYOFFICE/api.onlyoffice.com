@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例将过渡持续时间设置为 2000 毫秒。
+在演示文稿中将切换持续时间设置为 2000 毫秒。
 
 ```javascript editor-pptx
+// How do I set duration in a presentation?
+
+// Set duration using a slide show transition object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -45,4 +49,3 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Duration: 2000 ms');
 slide.AddObject(shape);
 ```
-

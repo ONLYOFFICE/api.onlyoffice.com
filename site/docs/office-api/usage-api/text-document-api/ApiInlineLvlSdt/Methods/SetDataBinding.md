@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set data binding for a content control.
+Set data binding for a content control in a document.
 
 ```javascript editor-docx
+// How to set data binding for an inline content control in a document?
+
+// Set data binding and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `
@@ -42,4 +46,3 @@ contentControl.SetDataBinding({
 let paragraph = doc.GetElement(0);
 paragraph.Push(contentControl);
 ```
-

@@ -20,7 +20,7 @@ expression.GetLayoutForm();
 
 ## 示例
 
-此示例展示如何获取透视字段的布局形式。
+获取电子表格中透视字段的布局形式。
 
 ```javascript editor-xlsx
 // How to get a layout form of a pivot field.
@@ -63,4 +63,3 @@ let pivotField = pivotTable.GetPivotFields('Region');
 pivotWorksheet.GetRange('A12').SetValue('Region layout form');
 pivotWorksheet.GetRange('B12').SetValue(pivotField.GetLayoutForm());
 ```
-

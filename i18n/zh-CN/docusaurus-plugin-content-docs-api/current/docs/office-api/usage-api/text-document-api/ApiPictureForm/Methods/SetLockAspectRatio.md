@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例锁定图片表单的宽高比。
+锁定图片表单的纵横比。
 
 ```javascript editor-docx
 // How to lock an aspect ratio of the picture form in this document.
@@ -40,4 +40,3 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("The aspect ratio of the picture form in this document is locked: " + lock);
 doc.Push(paragraph);
 ```
-

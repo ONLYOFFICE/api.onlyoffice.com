@@ -33,4 +33,3 @@ window.Asc.plugin.event_onClick = function (isSelectionUse) {
     }); 
 };
 ```
-

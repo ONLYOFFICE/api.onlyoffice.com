@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the cumulative lognormal distribution of x, where ln(x) is normally distributed with the specified parameters.
+Return the cumulative lognormal distribution of x, where ln(x) is normally distributed with the specified parameters in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the cumulative lognormal distribution of x.
+// How to get the cumulative lognormal distribution of x in a spreadsheet.
 
-// Use a function to return the cumulative lognormal distribution.
+// Use a function to return the cumulative lognormal distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -53,4 +53,3 @@ let ans = func.LOGNORMDIST(xValue, mean, standardDeviation);
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
 ```
-
