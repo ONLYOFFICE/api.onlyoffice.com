@@ -138,6 +138,7 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
   }
 
   const config = deepMerge<code>(
+    externalConfig || {},
     {
       document: documentConfig,
       documentType: getDocumentType(fileType),
@@ -151,7 +152,6 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
         },
       },
     },
-    externalConfig
   );
 
   const token = await createJWT(config, secret);
