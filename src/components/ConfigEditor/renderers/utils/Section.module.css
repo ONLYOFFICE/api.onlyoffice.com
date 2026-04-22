@@ -7,6 +7,10 @@
     padding: 10px 0 8px;
 }
 
+.section > .section:last-child {
+    border: none;
+}
+
 .summary {
     cursor: pointer;
     list-style: none;
