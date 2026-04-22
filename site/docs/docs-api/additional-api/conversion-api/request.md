@@ -7,7 +7,7 @@ sidebar_position: -4
 For the interaction with the **document conversion service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/converter` address where **documentserver** is the name of the server with the ONLYOFFICE Docs installed.
 
 :::tip
-Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
+Starting from version 8.1, it is recommended to add the [shardkey](../../get-started/configuration/shard-key.md) parameter to the query string with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
 :::
 
 :::note
@@ -15,7 +15,7 @@ Please note that prior to version 5.5, the `https://documentserver/ConvertServic
 :::
 
 :::note
-In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the *QueryString* were used.
+In **ONLYOFFICE Docs** prior to version 4.2 the GET request with the parameters in the query string were used.
 :::
 
 ## Request parameters

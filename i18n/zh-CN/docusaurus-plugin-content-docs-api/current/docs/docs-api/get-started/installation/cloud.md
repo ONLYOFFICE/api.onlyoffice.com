@@ -21,7 +21,7 @@ sidebar_label: Cloud
    `https://documentserver/web-apps/apps/api/documents/api.js` 是 API JavaScript 文件的默认访问地址。
    
    :::info
-   从 8.1 版本开始，建议在 URL *QueryString* 中添加 [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) 参数，并赋予其 *key* 值。例如：*?shardkey=Khirz6zTPdfd7*。此参数可用于请求负载均衡。
+   从 8.1 版本开始，建议在查询字符串中添加 [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) 参数，并赋予其 `key` 值。例如：`?shardkey=Khirz6zTPdfd7`。此参数可用于请求负载均衡。
    :::
    从 9.0 版本开始，你可以在打开文档之前将静态资源（HTML、CSS、JS、字体）[预加载](/docs/docs-api/get-started/configuration/preload.md)到浏览器缓存中，以加快文档编辑器首次加载的速度。
    :::

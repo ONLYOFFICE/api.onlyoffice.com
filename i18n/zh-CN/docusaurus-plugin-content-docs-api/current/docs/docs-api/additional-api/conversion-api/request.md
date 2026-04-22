@@ -7,7 +7,7 @@ sidebar_position: -4
  对于与**文档转换服务**的交互，使用 POST 请求。请求参数在请求正文中以 JSON。格式输入请求被发送到`https://documentserver/converter` 其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。
 
 :::tip
-从 8.1 版开始，建议将 [shardkey](../../get-started/configuration/shard-key.md) 参数添加到 URL *QueryString*，其中包含 *key* 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
+从 8.1 版开始，建议将 [shardkey](../../get-started/configuration/shard-key.md) 参数添加到查询字符串中，其中包含 `key` 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
 :::
 
 :::note
@@ -15,7 +15,7 @@ sidebar_position: -4
 :::
 
 :::note
-**ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求，请求参数在 *QueryString* 中。
+**ONLYOFFICE 文档**4.2 之前的版本中，使用了 GET 请求，请求参数在查询字符串中。
 :::
 
 ## 请求参数

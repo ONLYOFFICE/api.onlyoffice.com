@@ -4,8 +4,18 @@ sidebar_position: -1
 
 # Load balancing with shard key
 
-Starting from version 8.1, the *shardkey* parameter is added to the URL *QueryString* when sending requests to the ONLYOFFICE Docs API, **document command service**, **document conversion service**, or **document builder service**. It is also added to the browser-server interaction during the collaborative editing as the [WOPISrc](../../using-wopi/key-concepts.md#wopisrc) query parameter.
+When ONLYOFFICE Docs runs as a multi-server cluster, collaborative editing requires that all requests for the same document reach the same server node. The `shardkey` query parameter enables this: your load balancer can read it from the URL and route accordingly.
 
-The *key* field is used as a value. For example, *?shardkey=Khirz6zTPdfd7*. If there is no key in the body, you do not have to send it (for example, in the [getForgottenList](../../additional-api/command-service/getforgottenlist.md) command).
+## Adding shard key to API requests
 
-This is a recommendation when working with an editor server cluster to load balance requests during the collaborative editing: all users editing the same document are served by the same server.
+Add `shardkey` to the query string of every request you send to the **document command service**, **document conversion service**, or **document builder service**. Set its value to the document [`key`](../../usage-api/config/document/document.md#key) from the request body:
+
+```
+?shardkey=Khirz6zTPdfd7
+```
+
+If the request body has no `key` field (for example, the [getForgottenList](../../additional-api/command-service/getforgottenlist.md) command), omit the parameter.
+
+## Browser-to-server requests
+
+During collaborative editing, the **document editor** appends the shard key to its browser-to-server requests automatically. In WOPI integrations, the [WOPISrc](../../using-wopi/key-concepts.md#wopisrc) query parameter serves the same routing purpose.

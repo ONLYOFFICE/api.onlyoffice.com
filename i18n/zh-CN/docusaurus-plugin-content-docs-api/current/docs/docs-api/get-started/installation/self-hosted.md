@@ -27,7 +27,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
    `https://documentserver/web-apps/apps/api/documents/api.js` 是 API JavaScript 文件的默认访问路径。
 
    :::info
-   自 8.1 版本起，建议在 URL *QueryString* 中添加包含 *key* 值的 [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) 参数。例如：*?shardkey=Khirz6zTPdfd7*。此参数支持请求负载均衡。
+   自 8.1 版本起，建议在查询字符串中添加包含 `key` 值的 [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) 参数。例如：`?shardkey=Khirz6zTPdfd7`。此参数支持请求负载均衡。
 
    从 9.0 版本开始，您可以在打开文档前，将静态资源（HTML、CSS、JS、字体）[预加载](/docs/docs-api/get-started/configuration/preload.md)到浏览器缓存中，从而加快首次加载文档编辑器的速度。
    :::
