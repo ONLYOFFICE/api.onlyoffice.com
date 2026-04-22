@@ -4,53 +4,48 @@ sidebar_position: -9
 
 # Comparing documents
 
-The reference figure and the steps below explain the process of comparing documents in ONLYOFFICE Docs.
+Document comparison highlights the differences between two documents as tracked changes — the user can then accept or reject each one.
 
-<img alt="Comparing documents" src="/assets/images/editor/compare.png" width="720px" />
+The figure and steps below explain the comparison flow.
 
-1. The user opens the document for viewing or editing using the **document manager** (found in his/her browser).
-2. The **document storage service** sends the document information using the [JavaScript API](../basic-concepts.md) to the **document editor** and specifies the possibility to choose the file from the **document manager**.
+![Comparing documents](/assets/images/editor/compare.png)
+
+1. Using the **document manager** in the browser, the user opens a document to view or edit it.
+2. The **document manager** initializes the **document editor** with a [`config`](../../usage-api/config/config.md) that includes the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event handler.
 3. The file is [opened](./opening-file.md) for editing.
-4. The user sends a request to get a list of storage documents for comparing by clicking the *Document from Storage* button in the **document editor**.
-5. The **document editor** informs the **document manager** about the request.
-6. The **document manager** sends the document to the **document editor** for comparing.
+4. The user clicks **Document from Storage** in the Compare menu. The **document editor** fires the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event with `data.c` set to `"compare"`.
+5. The **document manager** lets the user select a comparison document from storage.
+6. The **document manager** calls [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) with the selected document's URL and `c: "compare"` to pass it to the **document editor** for comparison.
 
 ## How this can be done in practice
 
-1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
+1. Create an `.html` file to [open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for the *Document from Storage* button to be displayed in the *Compare* options in the configuration script for Document Editor initialization. When the user clicks the button, the [onRequestCompareFile](../../usage-api/config/events.md#onrequestcomparefile) event is called and they can select the document for comparing from the Storage.
+2. Add the [`onRequestSelectDocument`](../../usage-api/config/events.md#onrequestselectdocument) event handler to the editor config. When the user clicks **Document from Storage** in the Compare menu, this event fires with `data.c` set to `"compare"`. The handler calls [`setRequestedDocument`](../../usage-api/methods.md#setrequesteddocument) with the comparison document:
 
-   ![onRequestCompareFile](/assets/images/editor/onRequestCompareFile.png)
+   ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
    ``` ts
-   function onRequestCompareFile() {
-     docEditor.setRevisedFile({
-       fileType: "docx",
-       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-       url: "https://example.com/url-to-example-document.docx",
-     })
-   };
-   
-   const config = {
+   const docEditor = new DocsAPI.DocEditor("placeholder", {
      events: {
-       onRequestCompareFile,
+       onRequestSelectDocument(event) {
+         docEditor.setRequestedDocument({
+           c: event.data.c,
+           fileType: "docx",
+           token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
+           url: "https://example.com/url-to-example-document.docx",
+         });
+       },
      },
-   };
-
-   const docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-3. In order to select a document for comparing, the [setRevisedFile](../../usage-api/methods.md#setrevisedfile) method must be called. When calling this method, the token must be added to validate the parameters.
-
-   ``` ts
-   docEditor.setRevisedFile({
-     fileType: "docx",
-     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
-     url: "https://example.com/url-to-example-document.docx",
    });
    ```
 
-4. After that the user can accept or reject the changes using the corresponding buttons on the top toolbar.
+   :::caution
+   The `token` must be signed with your document server's JWT secret — the example token above is signed with a throwaway secret and will not validate on your server. Regenerate it whenever the parameters change. See [security](./security.md) for details.
+   :::
+
+3. After the comparison loads, the user can accept or reject changes using the corresponding buttons on the top toolbar.
 
    ![Accept changes](/assets/images/editor/compare-documents.png)
+
+When the user is done reviewing, the document is [saved](./saving-file.md) with the accepted changes.
