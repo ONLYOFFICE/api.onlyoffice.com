@@ -17,9 +17,13 @@ Append the `?preload=placeholder` parameter to the `api.js` URL:
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js?preload=placeholder"></script>
 ```
 
-Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
-In this case, in addition to creating `DocsAPI.DocEditor`, a hidden `<iframe>` will be automatically inserted into the DOM with `id="placeholder"`, which loads static editor assets in the background.
+:::tip
+Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+:::
+
+When this script loads, in addition to providing the `DocsAPI.DocEditor` constructor, it automatically inserts a hidden `<iframe>` into the element with `id="placeholder"` to preload static editor assets in the background.
 
 ## Option 2. Manually inserting a preload iframe
 
@@ -29,9 +33,9 @@ Alternatively, you can insert a hidden `<iframe>` pointing to the preload page m
 <iframe src="https://documentserver/web-apps/apps/api/documents/preload.html" style="display:none;"></iframe>
 ```
 
-Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
-This option is recommended if you need to set additional security parameters for the iframe or use a nonce to insert into the DOM.
+This option is recommended if you need to set additional security parameters for the iframe or use a nonce when inserting it into the DOM.
 
 :::note
 Use an `<iframe>` for preloading, not a `<link rel="prefetch">`. The editor's static assets (scripts, styles, fonts) are loaded within the iframe's context, and `<link rel="prefetch">` will not correctly trigger their loading or caching.
