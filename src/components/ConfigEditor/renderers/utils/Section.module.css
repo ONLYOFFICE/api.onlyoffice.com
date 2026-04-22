@@ -51,13 +51,6 @@
     color: var(--ifm-color-emphasis-900);
 }
 
-.description {
-    margin: var(--ce-space-2) 0 var(--ce-space-3);
-    color: var(--ifm-color-emphasis-700);
-    font-size: var(--ce-text-sm);
-    line-height: 1.5;
-}
-
 .descriptionInline {
     color: var(--ifm-color-emphasis-700);
     font-weight: 400;

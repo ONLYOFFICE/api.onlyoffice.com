@@ -5,12 +5,11 @@ interface SectionProps {
     title: string
     depth: number
     description?: string
-    shortDescription?: string
     defaultOpen?: boolean
     children: ReactNode
 }
 
-export function Section({ title, depth, description, shortDescription, defaultOpen = true, children }: SectionProps) {
+export function Section({ title, depth, description, defaultOpen = true, children }: SectionProps) {
     const level = Math.min(Math.max(depth, 1), 6)
     const headingTag = `h${level}`
 
@@ -34,9 +33,8 @@ export function Section({ title, depth, description, shortDescription, defaultOp
                     />
                 </svg>
                 {createElement(headingTag, { className: styles.heading }, title)}
-                {shortDescription && <span className={styles.descriptionInline}>{shortDescription}</span>}
+                {description && <span className={styles.descriptionInline}>{description}</span>}
             </summary>
-            {description && <p className={styles.description}>{description}</p>}
             {children}
         </details>
     )

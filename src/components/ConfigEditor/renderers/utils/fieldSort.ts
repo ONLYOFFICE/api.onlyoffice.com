@@ -1,43 +1,98 @@
-/**
- * Field sorting configuration for ConfigEditor
- * Defines the order in which fields should be displayed
- */
+import { JsonSchema } from '@jsonforms/core'
+
+enum FieldTypeCategory {
+    PRIMITIVE = 100,
+    COMPLEX = 200,
+    UNKNOWN = 999
+}
 
 const ROOT_FIELD_ORDER: Record<string, number> = {
-  // Single parameters first
-  'documentType': 1,
-  'type': 2,
-  'width': 3,
-  'height': 4,
-  'token': 5,
-  // Complex objects
-  'document': 10,
-  'editorConfig': 11
+    'documentType': 1,
+    'type': 2,
+    'width': 3,
+    'height': 4,
+    'token': 5,
 }
 
 const EDITOR_CONFIG_FIELD_ORDER: Record<string, number> = {}
 
-function getSortOrder(fieldName: string, path: string): number {
-  if (path === 'editorConfig') {
-    return EDITOR_CONFIG_FIELD_ORDER[fieldName] ?? 999
-  }
-
-  if (!path) {
-    return ROOT_FIELD_ORDER[fieldName] ?? 50
-  }
-
-  return 999
+function isPrimitiveType(schema: JsonSchema): boolean {
+    const type = schema.type
+    return (
+        type === 'string' ||
+        type === 'number' ||
+        type === 'integer' ||
+        type === 'boolean'
+    )
 }
 
-export function sortObjectKeys(keys: string[], path: string): string[] {
-  return [...keys].sort((a, b) => {
-    const orderA = getSortOrder(a, path)
-    const orderB = getSortOrder(b, path)
-    
-    if (orderA !== orderB) {
-      return orderA - orderB
+function isComplexType(schema: JsonSchema): boolean {
+    return (
+        schema.type === 'object' ||
+        schema.type === 'array' ||
+        !!schema.properties ||
+        !!schema.items ||
+        !!schema.$ref ||
+        !!schema.oneOf ||
+        !!schema.anyOf ||
+        !!schema.allOf
+    )
+}
+
+function getFieldTypeCategory(schema: JsonSchema): FieldTypeCategory {
+    if (isPrimitiveType(schema)) {
+        return FieldTypeCategory.PRIMITIVE
     }
-    
-    return a.localeCompare(b)
-  })
+
+    if (isComplexType(schema)) {
+        return FieldTypeCategory.COMPLEX
+    }
+
+    return FieldTypeCategory.UNKNOWN
+}
+
+function getSortOrder(
+    fieldName: string,
+    path: string,
+    schema?: JsonSchema
+): number {
+    if (path === 'editorConfig') {
+        const customOrder = EDITOR_CONFIG_FIELD_ORDER[fieldName]
+        if (customOrder !== undefined) {
+            return customOrder
+        }
+    }
+
+    if (!path) {
+        const customOrder = ROOT_FIELD_ORDER[fieldName]
+        if (customOrder !== undefined) {
+            return customOrder
+        }
+    }
+
+    if (schema) {
+        return getFieldTypeCategory(schema)
+    }
+
+    return FieldTypeCategory.UNKNOWN
+}
+
+export function sortObjectKeys(
+    keys: string[],
+    path: string,
+    properties?: Record<string, JsonSchema>
+): string[] {
+    return [...keys].sort((a, b) => {
+        const schemaA = properties?.[a]
+        const schemaB = properties?.[b]
+
+        const orderA = getSortOrder(a, path, schemaA)
+        const orderB = getSortOrder(b, path, schemaB)
+
+        if (orderA !== orderB) {
+            return orderA - orderB
+        }
+
+        return a.localeCompare(b)
+    })
 }

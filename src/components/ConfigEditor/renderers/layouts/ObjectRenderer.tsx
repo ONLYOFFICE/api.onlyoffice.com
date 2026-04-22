@@ -28,7 +28,7 @@ function ObjectRendererInner(props: any) {
     const lastKey = path ? path.split('.').pop() || '' : ''
     const title = label || s.title || titleFromKey(lastKey) || 'Root'
 
-    const sortedKeys = sortObjectKeys(Object.keys(properties), path)
+    const sortedKeys = sortObjectKeys(Object.keys(properties), path, properties)
     const body = sortedKeys.map(key => {
         const childPath = path ? composePaths(path, key) : key
         const rawChild = properties[key] as JsonSchema
@@ -68,8 +68,7 @@ function ObjectRendererInner(props: any) {
         <Section
             title={title}
             depth={depth}
-            description={s.description}
-            shortDescription={s['x-shortDescription']}
+            description={s['x-shortDescription']}
         >
             {body}
         </Section>
