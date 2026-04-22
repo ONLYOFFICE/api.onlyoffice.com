@@ -83,9 +83,10 @@ const getDocumentType = (fileType: string): string => {
 };
 
 const getDocumentName = (fileType: string, isDemo: boolean = false, isForm: boolean = false): string => {
-  if (isForm) return isDemo ? "demo-invoice" : "new";
-  if (fileType === "pdf") return "blank";
-  return isDemo ? "demo" : "new";
+  if (isDemo) {
+    return isForm ? "demo-invoice" : "demo";
+  }
+  return (fileType === "pdf") ? "blank" : "new";
 };
 
 const createDocumentConfig = (fileType: string, templateUrl: string, title?: string, isDemo: boolean = false, isForm: boolean = false): object => {
@@ -138,6 +139,7 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
   }
 
   const config = deepMerge<code>(
+    externalConfig || {},
     {
       document: documentConfig,
       documentType: getDocumentType(fileType),
@@ -151,7 +153,6 @@ const addScript = async (secret: string, fileType: string, code: string, theme: 
         },
       },
     },
-    externalConfig
   );
 
   const token = await createJWT(config, secret);
