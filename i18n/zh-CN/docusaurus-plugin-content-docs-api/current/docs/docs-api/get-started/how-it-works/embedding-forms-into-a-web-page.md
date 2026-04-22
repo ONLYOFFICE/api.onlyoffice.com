@@ -4,220 +4,131 @@ sidebar_position: -5
 
 # 将表单嵌入网页
 
-从 7.0 版本起，ONLYOFFICE 文档提供了创建、编辑在线表单、开展协作、填写表单以及将表单保存为 PDF 的功能。
+ONLYOFFICE文档支持 PDF 表单——带有可填写字段（如文本输入框、复选框和下拉列表）的 PDF 文件。PDF 表单有两种使用模式：
 
-ONLYOFFICE 表单采用 PDF 格式，该格式用于从空白文档或任何现有的 DOCX 文件创建表单模板，也可用于填写已完成的表单。
-
-:::note
-从 8.0 版本开始，OFORM 格式已被弃用。若要填写已完成的表单，仅可使用 PDF 格式。
-
-从 8.1 版本开始，DOCXF 格式已被弃用。若要创建和编辑表单，仅可使用 PDF 格式。
-:::
-
-这些说明将帮助您把在线表单添加到您的网站上，使其能够保存为 PDF 格式并可进行填写。
+- **编辑** — 设计表单模板：添加、删除和配置表单字段。需要将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `true`。
+- **填写** — 在已完成的表单中输入数据。需要将 [`permissions.fillForms`](../../usage-api/config/document/permissions.md#fillforms) 设置为 `true`，并将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `false`。
 
 :::note
-这些说明仅在 JWT 处于禁用状态时才有效。从 7.2 版本开始，JWT 默认是启用的，所以您需要将其禁用。有关令牌的更多信息，可在[此处](../../additional-api/signature/signature.md)找到。
+PDF 表单从 7.0 版本起可用。从 8.0 版本开始，OFORM 格式已被弃用——仅使用 PDF 格式进行填写。从 8.1 版本开始，DOCXF 格式已被弃用——仅使用 PDF 格式创建和编辑表单。
 :::
+
+:::caution
+当您的文档服务器启用了 JWT 验证（默认配置）时，每个 `config` 必须使用匹配的 [`token`](./security.md) 进行签名。请使用您的文档服务器的 JWT 密钥进行签名。有关设置说明和代码示例，请参阅[签名](../../additional-api/signature/signature.md)部分。
+:::
+
+在以下 HTML 示例中，请将 `documentserver` 替换为安装 ONLYOFFICE文档的服务器地址。
 
 ## 编辑表单
 
-### 如何从网站打开 PDF 表单进行编辑
+若要打开 PDF 表单进行编辑，请将 `documentType` 设置为 `"pdf"`，并将 `permissions.edit` 设置为 `true`。提供 [`key`](../../usage-api/config/document/document.md#key) 以便多个用户可以同时协同编辑表单模板：
 
-若要从您的网站打开 PDF 格式的在线表单以进行编辑，请按以下步骤操作：
+``` ts
+const config = {
+  document: {
+    fileType: "pdf",
+    key: "form-template-key",
+    permissions: {
+      edit: true,
+    },
+    title: "Form Template.pdf",
+    url: "https://example.com/url-to-example-form.pdf",
+  },
+  documentType: "pdf",
+};
 
-1. 找到并打开您的 ONLYOFFICE 文档的*index.html* 文件。
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
 
-2. 通过指定 API 的 JavaScript 文件路径，将其连接到 ONLYOFFICE 文档 API：
-
-   ``` html
-   <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-   ```
-
-3. 添加*button*元素，以便打开 PDF 表单：
-
-   ``` html
-   <button onclick="open_form_template()">Open Form Template</button>
-   ```
-
-4. 添加*div*元素，用于确定打开编辑器的位置：
-
-   ``` html
-   <div id="placeholder"></div>
-   ```
-
-5. 添加脚本，以便在编辑器已打开的情况下将其关闭：
-
-   ``` ts
-   if (this.docEditor) {
-     this.docEditor.destroyEditor()
-   }
-   ```
-
-6. 创建您需要打开的 PDF 表单的完整 URL 地址：
-
-   ``` ts
-   const url = "https://example.com/url-to-example-form.pdf"
-   ```
-
-7. 创建用于标识文件以进行协同编辑的密钥：
-
-   ``` ts
-   const key = `${filename}.pdf`
-   ```
-
-8. 添加脚本，使用您想要打开的文档的配置来初始化文档编辑器，并在占位符元素中打开编辑器：
-
-   ``` ts
-   const config = {
-     document: {
-       fileType: "pdf",
-       key,
-       permissions: {
-         edit: true,
-       },
-       title: "Form Template",
-       url: url
-     },
-     documentType: "pdf",
-   };
-
-   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-完整的代码片段如下：
+完整的 HTML 页面：
 
 ``` html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-<button onclick="open_form_template()">Open Form Template</button>
+<button onclick="openFormTemplate()">Open Form Template</button>
 <div id="placeholder"></div>
 <script>
-    function open_form_template() {
-        if (this.docEditor) {
-            this.docEditor.destroyEditor()
+    let docEditor;
+
+    function openFormTemplate() {
+        if (docEditor) {
+            docEditor.destroyEditor();
         }
-        const url = "https://example.com/url-to-example-form.pdf";
-        const key = filename + ".pdf";
+
         const config = {
-         "document": {
-               "fileType": "pdf",
-               "key": key,
-               "permissions": {
-                  "edit": true
-               },
-               "title": "Form Template",
-               "url": url
-         },
-         "documentType": "pdf"
+            "document": {
+                "fileType": "pdf",
+                "key": "form-template-key",
+                "permissions": {
+                    "edit": true
+                },
+                "title": "Form Template.pdf",
+                "url": "https://example.com/url-to-example-form.pdf"
+            },
+            "documentType": "pdf"
         };
-        this.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```
 
-完成上述操作后，即可打开 PDF 表单进行编辑。编辑完该文件后，您可以填写已准备好的表单。要进行填写，请点击**开始填写**按钮。
+编辑完成后，点击**开始填写**按钮切换到填写模式。
 
 ![嵌入pdf表单进行编辑](/assets/images/editor/embed-pdf-for-editing.png)
 
 ## 填写表单
 
-### 如何从网站打开 PDF 表单进行填写
+若要打开 PDF 表单进行填写，请将 `permissions.edit` 设置为 `false`，并将 `permissions.fillForms` 设置为 `true`。省略 [`key`](../../usage-api/config/document/document.md#key) 参数——编辑器将为每个会话生成一个随机密钥，因此每个用户都可以独立填写副本，互不影响：
 
-若要使 PDF 格式的在线表单可供填写，请按以下步骤操作：
+``` ts
+const config = {
+  document: {
+    fileType: "pdf",
+    permissions: {
+      edit: false,
+      fillForms: true,
+    },
+    title: "Form.pdf",
+    url: "https://example.com/url-to-example-form.pdf",
+  },
+  documentType: "pdf",
+};
 
-1. 找到并打开您的ONLYOFFICE文档的*index.html*文件。
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
 
-2. 通过指定 API 的 JavaScript 文件路径，将其连接到 ONLYOFFICE 文档 API：
-
-   ``` html
-   <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-   ```
-
-3. 添加*button*元素，以便打开 PDF 表单：
-
-   ``` html
-   <button onclick="open_form()">Open Form</button>
-   ```
-
-4. 添加*div*元素，用于确定打开编辑器的位置：
-
-   ``` html
-   <div id="placeholder"></div>
-   ```
-
-5. 添加脚本，以便在编辑器已打开的情况下将其关闭：
-
-   ``` ts
-   if (this.docEditor) {
-     this.docEditor.destroyEditor()
-   }
-   ```
-
-6. 创建您需要打开的 PDF 表单的完整 URL 地址：
-
-   ``` ts
-   const url = "https://example.com/url-to-example-form.pdf"
-   ```
-
-7. 创建用于标识文件的密钥：
-
-   ``` ts
-   const key = `${filename}.pdf`
-   ```
-
-   :::note
-   *key*字段不会传递到编辑器的配置中。此字段将自动生成为一个随机数。这使得打开表单的所有会话相互独立。因此，PDF 表单的协作功能被禁用。这就是为什么任何人都可以打开表单并填写，而不会干扰其他人。
-   :::
-
-8. 添加脚本，使用您想要打开的文档的配置来初始化文档编辑器，并在占位符元素中打开编辑器：
-
-   ``` ts
-   const config = {
-      document: {
-         fileType: "pdf",
-         permissions: {
-            edit: false,
-            fillForms: true,
-         },
-         title: "Form",
-         url: url
-      },
-      documentType: "pdf",
-   };
-
-   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-完整的代码片段如下：
+完整的 HTML 页面：
 
 ``` html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-<button onclick="open_form()">Open Form</button>
+<button onclick="openForm()">Open Form</button>
 <div id="placeholder"></div>
 <script>
-    function open_form() {
-        if (this.docEditor) {
-            this.docEditor.destroyEditor()
+    let docEditor;
+
+    function openForm() {
+        if (docEditor) {
+            docEditor.destroyEditor();
         }
-        const url = "https://example.com/url-to-example-form.pdf";
-        const key = filename + ".pdf";
-        this.docEditor = new DocsAPI.DocEditor("placeholder",
-        {
+
+        const config = {
             "document": {
                 "fileType": "pdf",
                 "permissions": {
                     "edit": false,
                     "fillForms": true
                 },
-                "title": "Form",
-                "url": url
+                "title": "Form.pdf",
+                "url": "https://example.com/url-to-example-form.pdf"
             },
             "documentType": "pdf"
-        });
+        };
+
+        docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```
 
-完成上述操作后，即可打开 PDF 表单进行填写。填写完所有必填字段后，您可以提交数据。要提交数据，请点击**完成并提交**按钮。
+填写完所有必填字段后，点击**完成并提交**按钮提交数据。
 
 ![嵌入pdf表格](/assets/images/editor/embed-pdf.png)
