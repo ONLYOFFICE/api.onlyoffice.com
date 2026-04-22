@@ -83,9 +83,10 @@ const getDocumentType = (fileType: string): string => {
 };
 
 const getDocumentName = (fileType: string, isDemo: boolean = false, isForm: boolean = false): string => {
-  if (isForm) return isDemo ? "demo-invoice" : "new";
-  if (fileType === "pdf") return "blank";
-  return isDemo ? "demo" : "new";
+  if (isDemo) {
+    return isForm ? "demo-invoice" : "demo";
+  }
+  return (fileType === "pdf") ? "blank" : "new";
 };
 
 const createDocumentConfig = (fileType: string, templateUrl: string, title?: string, isDemo: boolean = false, isForm: boolean = false): object => {
