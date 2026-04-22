@@ -23,7 +23,7 @@ sidebar_position: -2
 还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration?from=api)一个免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
 :::
 
-加载此脚本时，除了提供 `DocsAPI.DocEditor` 构造函数之外，脚本还会自动在 `id="placeholder"` 的元素中插入一个隐藏的 `<iframe>`，以在后台预加载编辑器的静态资源。
+加载此脚本时，除了提供 [`DocsAPI.DocEditor`](../../usage-api/doceditor.md) 构造函数之外，脚本还会自动在 `id="placeholder"` 的元素中插入一个隐藏的 `<iframe>`，以在后台预加载编辑器的静态资源。
 
 ## 选项 2：手动插入预加载 iframe
 

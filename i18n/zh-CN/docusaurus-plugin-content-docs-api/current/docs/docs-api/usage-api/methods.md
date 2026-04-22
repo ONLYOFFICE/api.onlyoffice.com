@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # 方法
 
-初始化**文档编辑器**后，您将获得可用于调用方法的对象。
+初始化 [`DocEditor`](./doceditor.md) 后，您将获得可用于调用方法的对象。
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);

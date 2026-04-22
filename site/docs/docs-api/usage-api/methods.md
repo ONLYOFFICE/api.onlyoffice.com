@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # Methods
 
-After initializing **document editor** you will get the object that can be used to call the methods.
+After initializing [`DocEditor`](./doceditor.md) you will get the object that can be used to call the methods.
 
 ``` ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
