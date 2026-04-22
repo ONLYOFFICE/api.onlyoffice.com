@@ -1,5 +1,13 @@
 # Change log
 
+## 8.3.1
+
+### Fixes
+
+#### Docs API
+
+* Fixed Try page documents not opening due to placeholder URLs overriding actual document URLs in editor configuration
+
 ## 8.3.0
 
 ### New features
