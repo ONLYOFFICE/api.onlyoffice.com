@@ -133,7 +133,12 @@ const ConfigEditorRoute = () => {
 
     return (
         <ColorModeProvider>
-            <Head>Config Editor | ONLYOFFICE</Head>
+            <Head>
+                <title>Configuration Editor | ONLYOFFICE</title>
+                <meta name="description" content="An interactive tool for configuring ONLYOFFICE Docs API initialization parameters — visually build, edit, and preview configuration objects in a live embedded editor." />
+                <meta property="og:title" content="Configuration Editor | ONLYOFFICE" />
+                <meta property="og:description" content="An interactive tool for configuring ONLYOFFICE Docs API initialization parameters — visually build, edit, and preview configuration objects in a live embedded editor." />
+            </Head>
             <BrowserOnly fallback={null}>
                 {() => <ConfigEditorInner docConfig={docConfig}/>}
             </BrowserOnly>
