@@ -104,44 +104,48 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     return (
         <TooltipProvider delayDuration={200}>
             <div className={styles.container}>
-                <button
-                    onClick={handleRun}
-                    className={styles.runButton}
-                    aria-label="Apply configuration changes"
-                    title="Apply configuration changes"
-                    type="button"
-                >
-                    <PlayIcon fill='currentColor' aria-hidden="true"/>
-                </button>
                 <Tabs.Root value={tab} onValueChange={handleTabChange} className={styles.tabs}>
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
                         <Tabs.Trigger value="json">JSON</Tabs.Trigger>
                     </Tabs.List>
-                    <Tabs.Content value="form" className={styles.content} forceMount>
-                        <div className={styles.formEditorContent}>
-                            <JsonForms
-                                schema={schema}
-                                uischema={ROOT_UISCHEMA}
-                                data={formData}
-                                renderers={renderers}
-                                onChange={handleFormChange}
-                                validationMode="NoValidation"
-                            />
-                        </div>
-                    </Tabs.Content>
-                    <Tabs.Content value='json' className={styles.content} forceMount>
-                        <div className={styles.monacoContainer}>
-                            <MonacoEditor
-                                language="json"
-                                value={jsonText}
-                                onChange={handleJsonChange}
-                                theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
-                                options={MONACO_OPTIONS}
-                            />
+                    <div className={styles.contentArea}>
+                        <div className={styles.floatingActions}>
                             <CopyButton getText={getCopyText} />
+                            <button
+                                onClick={handleRun}
+                                className={styles.runButton}
+                                aria-label="Apply configuration changes"
+                                title="Apply configuration changes"
+                                type="button"
+                            >
+                                <PlayIcon fill='currentColor' aria-hidden="true"/>
+                            </button>
                         </div>
-                    </Tabs.Content>
+                        <Tabs.Content value="form" className={styles.content} forceMount>
+                            <div className={styles.formEditorContent}>
+                                <JsonForms
+                                    schema={schema}
+                                    uischema={ROOT_UISCHEMA}
+                                    data={formData}
+                                    renderers={renderers}
+                                    onChange={handleFormChange}
+                                    validationMode="NoValidation"
+                                />
+                            </div>
+                        </Tabs.Content>
+                        <Tabs.Content value='json' className={styles.content} forceMount>
+                            <div className={styles.monacoContainer}>
+                                <MonacoEditor
+                                    language="json"
+                                    value={jsonText}
+                                    onChange={handleJsonChange}
+                                    theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
+                                    options={MONACO_OPTIONS}
+                                />
+                            </div>
+                        </Tabs.Content>
+                    </div>
                 </Tabs.Root>
             </div>
         </TooltipProvider>

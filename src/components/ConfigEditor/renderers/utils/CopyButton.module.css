@@ -1,7 +1,4 @@
 .button {
-    position: absolute;
-    top: var(--ce-space-3);
-    right: var(--ce-space-3);
     height: 2.5rem;
     width: 2.5rem;
     display: inline-flex;
@@ -17,7 +14,6 @@
     font-weight: 500;
     transition: all var(--ce-transition-base);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    z-index: 10;
 }
 
 .button:hover {

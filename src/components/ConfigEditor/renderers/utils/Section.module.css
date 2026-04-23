@@ -1,14 +1,13 @@
 .section {
-    margin: var(--ce-space-4) 0;
+    margin: 0;
     background: none;
-    border-width: medium medium 1px;
-    border-style: none none solid;
-    border-color: currentcolor currentcolor light-dark(rgb(236, 232, 223), rgb(236 232 223 / 0.2));
-    padding: 10px 0 8px;
+    border-bottom: 1px solid light-dark(rgb(236, 232, 223), rgb(236 232 223 / 0.2));
+    padding: var(--ce-space-4) 0;
 }
 
-.section > .section:last-child {
-    border: none;
+/* Nested sections: tighter spacing */
+.section .section {
+    padding: var(--ce-space-2) 0;
 }
 
 .summary {
@@ -20,10 +19,6 @@
     user-select: none;
     padding: 0;
     background: none;
-}
-
-.summary:has(> .heading2), .summary:has(> .heading3) {
-    margin-top: 2rem;
 }
 
 .summary::-webkit-details-marker { display: none; }

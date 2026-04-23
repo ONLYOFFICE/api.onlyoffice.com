@@ -33,6 +33,30 @@
     position: relative;
 }
 
+.contentArea {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.floatingActions {
+    position: absolute;
+    top: var(--ce-space-3);
+    right: var(--ce-space-3);
+    bottom: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--ce-space-2);
+    pointer-events: none;
+}
+
+.floatingActions > * {
+    pointer-events: auto;
+}
+
 .runButton {
     height: 2.5rem;
     width: 2.5rem;
@@ -42,14 +66,11 @@
     border-radius: var(--ifm-global-radius);
     cursor: pointer;
     transition: all var(--ifm-transition-fast) ease;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-top: auto;
 }
 
 .runButton:hover {
@@ -127,7 +148,7 @@
 }
 
 .formEditorContent {
-    padding: var(--ce-space-3) var(--ce-space-4) var(--ce-space-14);
+    padding: var(--ce-space-3) var(--ce-space-4) var(--ce-space-4);
 }
 
 .monacoContainer {
