@@ -69,7 +69,7 @@ export const PlaygroundPreview = () => {
         return {
             document: {
                 fileType: fileConfig.ext,
-                key: "0" + Math.random(),
+                key: crypto.randomUUID(),
                 title: `Example Document Title.${fileConfig.ext}`,
                 url: templateUrl ?? fileConfig.url,
             },
