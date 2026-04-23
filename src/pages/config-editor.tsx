@@ -5,7 +5,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 import { EditorPreview, EditorPreviewRef } from "@site/src/components/EditorPreview";
 import { SplitPane } from "@site/src/components/SplitPane";
 import styles from './config-editor.module.css';
-import { useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { useLocation } from "react-router-dom";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -88,17 +88,17 @@ const ConfigEditorInner = (props: { docConfig: DocumentConfig }) => {
         },
     }), [documentServerUrl, colorMode, props.docConfig])
 
-    const handleApply = (config: Record<string, unknown>) => {
+    const handleApply = useCallback((config: Record<string, unknown>) => {
         const c = withFreshKey(config)
         latestConfigRef.current = c
         editorRef.current?.initEditor(c)
-    }
+    }, [])
 
-    const handlePreviewReady = () => {
+    const handlePreviewReady = useCallback(() => {
         if (latestConfigRef.current) {
             editorRef.current?.initEditor(latestConfigRef.current)
         }
-    }
+    }, [])
 
     return (
         <div className={styles.container}>
