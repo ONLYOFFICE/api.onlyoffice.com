@@ -7,7 +7,7 @@ import rawSchema from '@site/static/schemas/config.json'
 import { JsonSchema, UISchemaElement } from "@jsonforms/core";
 import { JsonForms } from '@jsonforms/react'
 import { useColorMode } from "@docusaurus/theme-common";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import { filterSchema } from "./schemaFilter";
 import { CopyButton } from "./renderers/utils/CopyButton";
@@ -21,6 +21,16 @@ interface ConfigEditorProps {
 
 const ROOT_UISCHEMA: UISchemaElement = { type: 'Control', scope: '#' } as any
 
+const MONACO_OPTIONS = {
+    minimap: { enabled: false },
+    scrollBeyondLastLine: false,
+    fontSize: 14,
+    lineNumbers: 'on' as const,
+    renderLineHighlight: 'all' as const,
+    automaticLayout: true,
+    fixedOverflowWidgets: true,
+}
+
 export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEditorProps) {
     const { colorMode } = useColorMode()
 
@@ -33,12 +43,22 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2))
     const [tab, setTab] = useState<'form' | 'json'>('form')
     const debouncedJsonText = useDebounce(jsonText, 300)
+    const jsonDirtyRef = useRef(false)
+    const jsonTextRef = useRef(jsonText)
+    jsonTextRef.current = jsonText
+
+    const onApplyRef = useRef(onApply)
+    onApplyRef.current = onApply
+
+    const formDataRef = useRef(formData)
+    formDataRef.current = formData
 
     useEffect(() => {
         setFormData(defaultConfig)
         setJsonText(JSON.stringify(defaultConfig, null, 2))
-        onApply(defaultConfig)
-    }, [defaultConfig, onApply])
+        jsonDirtyRef.current = false
+        onApplyRef.current(defaultConfig)
+    }, [defaultConfig])
 
     // Sync debounced JSON to form data (only when editing JSON tab)
     useEffect(() => {
@@ -51,17 +71,35 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
         }
     }, [debouncedJsonText, tab])
 
+    // Serialize form data to JSON only when switching to JSON tab
+    const handleTabChange = useCallback((value: string) => {
+        if (value === 'json' && jsonDirtyRef.current) {
+            setJsonText(JSON.stringify(formDataRef.current, null, 2))
+            jsonDirtyRef.current = false
+        }
+        setTab(value as 'form' | 'json')
+    }, [])
+
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         const updated = data ?? {}
         setFormData(updated)
-        setJsonText(JSON.stringify(updated, null, 2))
+        jsonDirtyRef.current = true
     }, [])
 
-    const handleJsonChange = useCallback((value: string) => {
+    const handleJsonChange = useCallback((value: string | undefined) => {
         setJsonText(value ?? '')
     }, [])
 
-    const handleRun = () => { onApply(formData) }
+    const handleRun = useCallback(() => {
+        onApplyRef.current(formDataRef.current)
+    }, [])
+
+    const getCopyText = useCallback(() => {
+        if (jsonDirtyRef.current) {
+            return JSON.stringify(formDataRef.current, null, 2)
+        }
+        return jsonTextRef.current
+    }, [])
 
     return (
         <TooltipProvider delayDuration={200}>
@@ -75,7 +113,7 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
                 >
                     <PlayIcon fill='currentColor' aria-hidden="true"/>
                 </button>
-                <Tabs.Root value={tab} onValueChange={(v) => setTab(v as 'form' | 'json')} className={styles.tabs}>
+                <Tabs.Root value={tab} onValueChange={handleTabChange} className={styles.tabs}>
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
                         <Tabs.Trigger value="json">JSON</Tabs.Trigger>
@@ -97,19 +135,11 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
                             <MonacoEditor
                                 language="json"
                                 value={jsonText}
-                                onChange={(v) => handleJsonChange(v ?? '')}
+                                onChange={handleJsonChange}
                                 theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
-                                options={{
-                                    minimap: {enabled: false},
-                                    scrollBeyondLastLine: false,
-                                    fontSize: 14,
-                                    lineNumbers: 'on',
-                                    renderLineHighlight: 'all',
-                                    automaticLayout: true,
-                                    fixedOverflowWidgets: true,
-                                }}
+                                options={MONACO_OPTIONS}
                             />
-                            <CopyButton getText={() => jsonText} />
+                            <CopyButton getText={getCopyText} />
                         </div>
                     </Tabs.Content>
                 </Tabs.Root>
