@@ -1,7 +1,7 @@
 .section {
     margin: 0;
     background: none;
-    border-bottom: 1px solid light-dark(rgb(236, 232, 223), rgb(236 232 223 / 0.2));
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
     padding: var(--ce-space-4) 0;
 }
 
