@@ -67,6 +67,7 @@ const ChildDispatch = memo(({ childSchema, control, childPath, renderers, cells 
         cells={cells}
     />
 ))
+ChildDispatch.displayName = 'ChildDispatch'
 
 function ObjectRendererInner(props: any) {
     const { schema, path, label, renderers, cells } = props
