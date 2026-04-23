@@ -35,7 +35,7 @@ function variantLabel(v: JsonSchema, idx: number): string {
 }
 
 function OneOfControlRenderer(props: ControlProps) {
-    const { id, label, data, path, schema, description, enabled, handleChange, renderers, cells, uischema } = props
+    const { id, label, data, path, schema, description, enabled, handleChange, renderers, cells } = props
     const variants = (schema.oneOf ?? []) as JsonSchema[]
     const detected = useMemo(() => detectVariant(data, variants), [data, variants])
     const [selected, setSelected] = useState(detected)
