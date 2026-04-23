@@ -95,6 +95,11 @@
     z-index: 1;
 }
 
+.TabPanel[data-state="inactive"] {
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .TabPanel[hidden] {
     visibility: hidden;
     pointer-events: none;
