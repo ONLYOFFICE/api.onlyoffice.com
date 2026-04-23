@@ -35,7 +35,7 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
             <input
                 id={id}
                 type={type}
-                value={data}
+                value={data ?? ''}
                 onChange={onChange}
                 disabled={!enabled}
             />
