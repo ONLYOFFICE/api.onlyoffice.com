@@ -1,4 +1,4 @@
-import { ControlProps, isIntegerControl, isNumberControl, isStringControl, not, isEnumControl, and, or, rankWith              } from '@jsonforms/core'
+import { ControlProps, isIntegerControl, isNumberControl, isStringControl, not, isEnumControl, and, or, rankWith } from '@jsonforms/core'
 import { withJsonFormsControlProps } from '@jsonforms/react'
 import { Tooltip } from '../utils/Tooltip'
 import styles from '../../styles.module.css'
