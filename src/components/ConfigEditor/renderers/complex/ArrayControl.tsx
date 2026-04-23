@@ -4,6 +4,8 @@ import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from '../layouts/depth'
 import styles from '../../styles.module.css'
 
+const ITEM_UISCHEMA: ControlElement = { type: 'Control', scope: '#', label: false }
+
 function defaultForSchema(s: JsonSchema | undefined): unknown {
     if (!s) return undefined
     switch (s.type) {
@@ -46,8 +48,6 @@ function ArrayControlRenderer(props: ArrayControlProps) {
         effectiveItemSchema = { type: 'string' }
     }
 
-    const itemUischema: ControlElement = { type: 'Control', scope: '#', label: false }
-
     return (
         <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={(schema as JsonSchema).description}>
             {items.map((_, index) => {
@@ -69,7 +69,7 @@ function ArrayControlRenderer(props: ArrayControlProps) {
                         </div>
                         <JsonFormsDispatch
                             schema={effectiveItemSchema}
-                            uischema={itemUischema}
+                            uischema={ITEM_UISCHEMA}
                             path={itemPath}
                             renderers={renderers}
                             cells={cells}
@@ -80,7 +80,7 @@ function ArrayControlRenderer(props: ArrayControlProps) {
             {enabled && (
                 <button
                     type="button"
-                    onClick={addItem(path, defaultForSchema(effectiveItemSchema))}
+                    onClick={() => addItem(path, defaultForSchema(effectiveItemSchema))()}
                     data-variant="primary"
                     aria-label="Add new item"
                 >
