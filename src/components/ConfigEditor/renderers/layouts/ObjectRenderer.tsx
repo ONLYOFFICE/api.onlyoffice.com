@@ -1,5 +1,6 @@
 import { isObjectControl, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core'
 import { withJsonFormsControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react'
+import { memo, useMemo } from 'react'
 import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from './depth'
 import { sortObjectKeys } from '../utils/fieldSort'
@@ -17,19 +18,21 @@ function isRenderable(schema: JsonSchema): boolean {
     )
 }
 
-function ObjectRendererInner(props: any) {
-    const { schema, path, label, renderers, cells } = props
-    const ctx = useJsonForms()
-    const rootSchema = ctx.core?.schema as JsonSchema | undefined
+interface ResolvedChild {
+    childPath: string
+    childSchema: JsonSchema
+    control: ControlElement
+}
 
-    const s = schema as JsonSchema
-    const properties = s.properties ?? {}
-    const depth = depthOfPath(path)
-    const lastKey = path ? path.split('.').pop() || '' : ''
-    const title = label || s.title || titleFromKey(lastKey) || 'Root'
+function resolveChildren(
+    properties: Record<string, JsonSchema>,
+    path: string,
+    rootSchema: JsonSchema | undefined,
+): ResolvedChild[] {
+    const sorted = sortObjectKeys(Object.keys(properties), path, properties)
+    const result: ResolvedChild[] = []
 
-    const sortedKeys = sortObjectKeys(Object.keys(properties), path, properties)
-    const body = sortedKeys.map(key => {
+    for (const key of sorted) {
         const childPath = path ? composePaths(path, key) : key
         const rawChild = properties[key] as JsonSchema
         let childSchema: JsonSchema = rawChild
@@ -43,24 +46,48 @@ function ObjectRendererInner(props: any) {
             }
         }
 
-        if (!isRenderable(childSchema)) return null
+        if (!isRenderable(childSchema)) continue
 
-        const control: ControlElement = {
-            type: 'Control',
-            scope: '#',
-            label: childSchema.title || titleFromKey(key),
-        }
-        return (
-            <JsonFormsDispatch
-                key={childPath}
-                schema={childSchema}
-                uischema={control}
-                path={childPath}
-                renderers={renderers}
-                cells={cells}
-            />
-        )
-    })
+        result.push({
+            childPath,
+            childSchema,
+            control: { type: 'Control', scope: '#', label: childSchema.title || titleFromKey(key) },
+        })
+    }
+
+    return result
+}
+
+const ChildDispatch = memo(({ childSchema, control, childPath, renderers, cells }: ResolvedChild & { renderers: any; cells: any }) => (
+    <JsonFormsDispatch
+        schema={childSchema}
+        uischema={control}
+        path={childPath}
+        renderers={renderers}
+        cells={cells}
+    />
+))
+
+function ObjectRendererInner(props: any) {
+    const { schema, path, label, renderers, cells } = props
+    const ctx = useJsonForms()
+    const rootSchema = ctx.core?.schema as JsonSchema | undefined
+
+    const s = schema as JsonSchema
+    const properties = s.properties ?? {}
+
+    const children = useMemo(
+        () => resolveChildren(properties, path, rootSchema),
+        [properties, path, rootSchema],
+    )
+
+    const depth = depthOfPath(path)
+    const lastKey = path ? path.split('.').pop() || '' : ''
+    const title = label || s.title || titleFromKey(lastKey) || 'Root'
+
+    const body = children.map(child => (
+        <ChildDispatch key={child.childPath} {...child} renderers={renderers} cells={cells} />
+    ))
 
     if (!path) return <div>{body}</div>
 
