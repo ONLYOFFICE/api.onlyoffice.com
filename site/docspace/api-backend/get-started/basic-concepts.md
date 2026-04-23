@@ -18,8 +18,8 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
-- **Portal:** Your DocSpace cloud containing your rooms with all your documents and files.
-- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers different types of rooms (Collaboration, Meeting, Public, Custom, Form filling, and Virtual data rooms) based on your specific needs.
+- **Portal:** A secure, web-based gateway that provides a gateway for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources. 
+- **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](https://api.onlyoffice.com/docspace/api-backend/usage-api/create-room/) (Collaboration, Public, Custom, Form filling, Virtual data, and AI rooms) based on your specific needs.
 - **Users:** People with access to your DocSpace portal. Users are split between the owner, and other [members with different access levels](https://helpcenter.onlyoffice.com/docspace/administration/docspace-inviting-users.aspx) on who can access the documents and files in DocSpace. Other user types include the admin and guests.
 
 ## Quickstart
@@ -54,14 +54,15 @@ Set your Content-Type and Accept headers to application/json, as every endpoint 
 POST /api/2.0/files/rooms HTTP/1.1
 Host: yourportal.onlyoffice.com
 Content-Type: application/json
+Accept: application/json
 Authorization: Bearer API_KEY
 Content-Length: 115
 
 {
-    "title": "Chi's bridal shower",
+    "title": "Graduation planning",
     "roomType": "PublicRoom",
-    "private": false
-    
+    "color": "FF0000"
+    "private": false  
 }
 
 ```
@@ -70,6 +71,10 @@ Content-Length: 115
 
 - **API_KEY**: ONLYOFFICE API key.
 - **yourportal**: Your DocSpace portal
+
+:::important
+Note that the color should be a hex-code string as any other method leads to an error accessing your portal
+:::
 
 You can send requests to customize and change room details to fit your specific needs.
 
