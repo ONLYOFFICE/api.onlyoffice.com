@@ -91,6 +91,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 将 `example.com` 替换为您的**文档存储服务**的主机地址。[`callbackUrl`](./config/editor/editor.md#callbackurl) 是您服务器上的端点，ONLYOFFICE文档 会向该端点发送文档状态更新和已保存的文件。请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分，了解有关 ONLYOFFICE文档 服务客户端-服务器交互的更多信息。
 
+有关包含所有可用部分和参数的完整配置结构，请参阅[配置概述](./advanced-parameters.md)。
+
 :::caution
 当您的文档服务器启用了 JWT 验证（默认配置）时，`config` 必须包含匹配的 [`token`](../get-started/how-it-works/security.md)。请使用您的文档服务器的 JWT 密钥对配置进行签名。
 :::

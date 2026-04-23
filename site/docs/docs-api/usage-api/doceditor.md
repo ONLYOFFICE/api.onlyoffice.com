@@ -91,6 +91,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 Replace `example.com` with the host of your **document storage service**. The [`callbackUrl`](./config/editor/editor.md#callbackurl) is the endpoint on your server where ONLYOFFICE Docs sends document status updates and saved files. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
+For the complete configuration structure with all available sections and parameters, see [Configuration overview](./advanced-parameters.md).
+
 :::caution
 When JWT validation is enabled on your document server (the default configuration), the `config` must include a matching [`token`](../get-started/how-it-works/security.md). Sign the config with your document server's JWT secret.
 :::

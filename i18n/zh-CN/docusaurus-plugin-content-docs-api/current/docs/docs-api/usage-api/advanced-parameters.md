@@ -2,26 +2,26 @@
 sidebar_position: -5
 ---
 
-# 高级参数
+# 配置概述
 
-ONLYOFFICE 文档可以更改的参数可以细分为以下主要部分：
+传递给 [`DocsAPI.DocEditor`](./doceditor.md) 构造函数的[配置对象](./config/config.md)包含以下主要部分：
 
-[**config**](./config/config.md) - 允许更改使用的平台类型、文档显示大小（宽度和高度）和打开文档的类型；
+[`config`](./config/config.md) - 根部分，包含文档类型、平台类型和显示尺寸；
 
-- [**document**](./config/document/document.md) - 包含与文档有关的所有参数（标题、网址、文件类型等）；
+- [`document`](./config/document/document.md) - 包含文档参数（标题、网址、文件类型等）；
 
-  - [**info**](./config/document/info.md) - 包含文档的附加参数（文档所有者、存储文档的文件夹、上传日期、共享设置）；
-  - [**permissions**](./config/document/permissions.md) - 定义是否可以编辑和下载文档；
+  - [`info`](./config/document/info.md) - 包含文档元数据（所有者、文件夹、上传日期、共享设置）；
+  - [`permissions`](./config/document/permissions.md) - 定义文档访问权限（编辑、下载、评论、打印等）；
 
-- [**editorConfig**](./config/editor/editor.md) - 定义与编辑器界面有关的参数：打开模式（查看器或编辑器）、界面语言、附加按钮等）；
+- [`editorConfig`](./config/editor/editor.md) - 定义编辑器界面参数：打开模式、语言、回调 URL 等；
 
-  - [**customization**](./config/editor/customization/customization-standard-branding.md) - 允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改附加按钮、链接、更改徽标和编辑器所有者详细信息的显示或不显示；
-  - [**embedded**](./config/editor/embedded.md) - 仅用于嵌入式文档类型，并允许更改用于控制嵌入式模式的按钮的行为；
-  - [**plugins**](./config/editor/plugins.md)- 用于将必要的 [plugins](../../plugin-and-macros/get-started/get-started.md) 连接到您的文档，以便它们对所有文档编辑器用户可见；
+  - [`customization`](./config/editor/customization/customization-standard-branding.md) - 允许自定义编辑器界面：品牌、按钮、链接、徽标和其他 UI 元素；
+  - [`embedded`](./config/editor/embedded.md) - 定义嵌入模式控件的行为（当 type 为 embedded 时使用）；
+  - [`plugins`](./config/editor/plugins.md) - 将 [plugins](../../plugin-and-macros/get-started/get-started.md) 连接到 ONLYOFFICE文档，供所有编辑器用户使用；
 
-- [**events**](./config/events.md) - 是在对文档进行某些操作时调用的特殊事件列表，这些操作包括加载、修改等。
+- [`events`](./config/events.md) - 文档操作触发的事件处理程序列表（加载、编辑、保存等）。
 
-包含所有附加参数的完整 *config* 如下所示：
+包含所有可用参数的完整 `config`：
 
 ``` ts
 const config = {
@@ -327,6 +327,8 @@ const config = {
   type: "desktop",
   width: "100%",
 };
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关文档服务器服务客户机-服务器交互的更多信息，有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分。
+将 `example.com` 替换为您的**文档存储服务**的主机地址。请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分，了解有关 ONLYOFFICE文档 服务客户端-服务器交互的更多信息。
