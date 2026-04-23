@@ -40,15 +40,16 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
         onApply(defaultConfig)
     }, [defaultConfig, onApply])
 
-    // Sync debounced JSON to form data
+    // Sync debounced JSON to form data (only when editing JSON tab)
     useEffect(() => {
+        if (tab !== 'json') return
         try {
             const parsed = JSON.parse(debouncedJsonText)
             setFormData(parsed)
         } catch {
             // invalid JSON — keep current formData
         }
-    }, [debouncedJsonText])
+    }, [debouncedJsonText, tab])
 
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         const updated = data ?? {}
