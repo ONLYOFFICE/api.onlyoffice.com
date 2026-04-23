@@ -25,7 +25,7 @@ number
 
 ## 示例
 
-在电子表格中计算满足一组给定条件的指定单元格数量。
+此示例演示如何计算由给定条件或标准集指定的单元格数量。
 
 ```javascript editor-xlsx
 // How to find a number of cells that satisfy a list of conditions.

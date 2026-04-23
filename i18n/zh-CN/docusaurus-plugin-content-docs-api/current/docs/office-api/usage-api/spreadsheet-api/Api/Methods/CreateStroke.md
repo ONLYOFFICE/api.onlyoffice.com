@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-在电子表格中创建为元素添加阴影的笔触。
+此示例创建为元素添加阴影的描边。
 
 ```javascript editor-xlsx
-// How to create a stroke with a gradient fill in a spreadsheet.
+// How to create a stroke with a gradient fill.
 
-// Set a gradient stroke for a shape in a spreadsheet.
+// Set a gradient stroke for a shape.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

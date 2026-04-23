@@ -20,13 +20,9 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-获取电子表格中形状内段落中最后一个包含文本的 run。
+此示例展示如何从形状内的段落获取最后一个包含文本的运行。
 
 ```javascript editor-xlsx
-// How can I get last run with text using a paragraph in a spreadsheet?
-
-// Get last run with text for a paragraph in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 140, 120));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -50,4 +46,5 @@ paragraph.AddElement(run2);
 
 const lastRun = paragraph.GetLastRunWithText();
 worksheet.GetRange('A1').SetValue('Last run text: ' + lastRun.GetText());
+
 ```

@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取文档中块级容器的内部 ID。
+此示例演示如何获取块级容器的内部 ID
 
 ```javascript editor-docx
-// How to get the internal id for a block-level content control in a document?
-
-// Get the internal id and display the result in a document.
-
 const doc = Api.GetDocument();
 const blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
@@ -36,4 +32,5 @@ const internalId = blockLvlSdt.GetInternalId();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal ID: " + internalId);
 doc.Push(paragraph);
+
 ```

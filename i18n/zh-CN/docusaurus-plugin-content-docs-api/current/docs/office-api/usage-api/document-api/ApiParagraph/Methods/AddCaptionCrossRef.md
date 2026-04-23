@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加题注交叉引用。
+此示例向段落添加题注交叉引用。
 
 ```javascript editor-docx
-// How to create a caption reference to the paragraph in a document.
+// How to create a caption reference to the paragraph.
 
-// Add a cross-reference to the caption of the paragraph in a document.
+// Add a cross-reference to the caption of the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,4 +49,5 @@ doc.Push(paragraph);
 paragraph.AddText('Link to ');
 let captionParagraphs = doc.GetAllCaptionParagraphs('Figure');
 paragraph.AddCaptionCrossRef('Figure', 'entireCaption', captionParagraphs[0], true, false);
+
 ```

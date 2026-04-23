@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取电子表格中最后修改当前工作簿的用户名称。
+此示例演示如何获取最后修改当前工作簿的用户名称。
 
 ```javascript editor-xlsx
-// How to get last modified by for a core properties in a spreadsheet?
-
-// Get last modified by and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -44,4 +40,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
+
 ```

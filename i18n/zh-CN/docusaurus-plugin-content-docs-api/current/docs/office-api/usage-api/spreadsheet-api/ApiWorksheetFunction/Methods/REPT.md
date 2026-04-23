@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-在电子表格中将文本重复指定次数。使用此函数用多个文本字符串实例填充单元格。
+此示例演示如何将文本重复指定的次数。使用此函数用文本字符串的多个实例填充单元格。
 
 ```javascript editor-xlsx
-// How to create an indicated number of copies in a spreadsheet.
+// How to create an indicated number of copies.
 
-// Use a function to repeat a text n times in a spreadsheet.
+// Use a function to repeat a text n times.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

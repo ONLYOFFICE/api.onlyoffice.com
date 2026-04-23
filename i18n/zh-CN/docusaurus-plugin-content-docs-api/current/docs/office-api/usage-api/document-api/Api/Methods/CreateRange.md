@@ -25,12 +25,12 @@ expression.CreateRange(element, start, end);
 
 ## 示例
 
-在文档中创建范围并为前 10 个字符设置粗体。
+此示例创建一个范围并将前 10 个字符设置为粗体。
 
 ```javascript editor-docx
-// Create the range object from the paragraph class and set the range to bold.
+// Creates the ApiRange object from the ApiParagraph class and sets the range to bold.
 
-// How to create a range from the paragraph and set a bold property to it in a document.
+// How to create a range from the paragraph and set a bold property to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为垂直轴标签指定字体大小。
+此示例为垂直轴标签指定字体大小。
 
 ```javascript editor-xlsx
-// How to change a font size of the vertical axis labels in a spreadsheet.
+// How to change a font size of the vertical axis labels.
 
-// Resize a font size of the vertical axis labels in a spreadsheet.
+// Resize a font size of the vertical axis labels.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

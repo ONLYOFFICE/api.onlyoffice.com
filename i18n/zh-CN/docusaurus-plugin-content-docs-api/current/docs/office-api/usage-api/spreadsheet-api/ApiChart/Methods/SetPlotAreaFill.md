@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为图表绘图区域设置填充。
+此示例设置图表绘图区域的填充。
 
 ```javascript editor-xlsx
-// How to color chart plot area in a spreadsheet.
+// How to color chart plot area.
 
-// Fill plot area with a solid fill in a spreadsheet.
+// Fill plot area with a solid fill.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定图表标题。
+此示例指定图表标题。
 
 ```javascript editor-pptx
-// How to rename a chart in a presentation.
+// How to rename a chart.
 
-// Create a chart, set its properties and its title in a presentation.
+// Create a chart, set its properties and its title.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

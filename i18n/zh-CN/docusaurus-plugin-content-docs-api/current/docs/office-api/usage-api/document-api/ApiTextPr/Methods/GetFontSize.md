@@ -20,7 +20,7 @@ expression.GetFontSize();
 
 ## 示例
 
-获取文档中文本的字体大小。
+此示例展示如何获取文本的字体大小。
 
 ```javascript editor-docx
 // How to know the font size of the form.

@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字在数字列表中的排名：其相对于列表中其他值的大小。
+此示例演示如何返回数字在数字列表中的排名：其相对于列表中其他值的大小。
 
 ```javascript editor-xlsx
-// How to estimate the rank of a number in a list of numbers in a spreadsheet.
+// How to estimate the rank of a number in a list of numbers.
 
-// Use a function to estimate rank of the a number from the list in a spreadsheet.
+// Use a function to estimate rank of the a number from the list.
 
 const worksheet = Api.GetActiveSheet();
 

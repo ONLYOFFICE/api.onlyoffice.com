@@ -22,16 +22,13 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置显示方式。
+此示例创建方形注释并为其设置显示属性。
 
 ```javascript editor-pdf
-// How to set display for an annotation in a PDF document?
-
-// Set display and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 squareAnnot.SetDisplay("hidden");
+
 ```

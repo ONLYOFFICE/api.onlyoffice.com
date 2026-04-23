@@ -14,9 +14,10 @@
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
 - [ApiFormBase](../ApiFormBase/ApiFormBase.md)
 
+
 ## 示例
 
-向段落添加名为 'text run' 的元素。
+此示例向段落添加名为 'text run' 的元素。
 
 ```javascript editor-docx
 // How to add an element to paragraph.

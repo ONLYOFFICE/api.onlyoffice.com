@@ -23,16 +23,17 @@ expression.SetShd(type, color);
 
 ## 示例
 
-指定在文档中应用于当前文本范围内容的底纹。
+此示例指定应用于当前文本范围内容的底纹。
 
 ```javascript editor-docx
-// How to set a shading for a range text in a document.
+// How to set a shading for a range text.
 
-// Get a range text, specify its shading options in a document.
+// Get a range text, specify its shading options.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("ONLYOFFICE Document Builder");
 let range = doc.GetRange(0, 24);
 range.SetShd("clear", Api.HexColor('#FF6F3D'));
+
 ```

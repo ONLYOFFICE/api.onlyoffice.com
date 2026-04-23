@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-检查电子表格中的批注是否已解决。
+此示例检查批注是否已解决。
 
 ```javascript editor-xlsx
-// How to find out whether a comment is resolved in a spreadsheet.
+// How to find out whether a comment is resolved.
 
 // Add a comment resolved status to a range of the worksheet.
 

@@ -20,7 +20,7 @@ expression.GetIconCriteria();
 
 ## 示例
 
-获取电子表格中的图标条件集合。
+此示例演示如何获取图标条件集合。
 
 ```javascript editor-xlsx
 // How to retrieve icon criteria for conditional formatting.
@@ -40,4 +40,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 
 let criteria = iconCondition.GetIconCriteria();
 worksheet.GetRange("B1").SetValue("Number of criteria: " + criteria.length);
+
 ```

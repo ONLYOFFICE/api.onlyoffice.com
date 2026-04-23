@@ -24,13 +24,9 @@ boolean
 
 ## 示例
 
-更新文档中自定义 XML 节点中现有属性的值。
+此示例演示如何更新自定义 XML 节点中现有属性的值。
 
 ```javascript editor-docx
-// How can I update attribute using a custom XML node in a document?
-
-// Update attribute for a custom XML node in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `<?xml version="1.0" encoding="UTF-8"?>

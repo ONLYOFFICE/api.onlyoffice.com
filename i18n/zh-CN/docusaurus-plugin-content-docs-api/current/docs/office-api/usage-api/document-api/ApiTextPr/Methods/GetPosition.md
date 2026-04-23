@@ -20,12 +20,12 @@ expression.GetPosition();
 
 ## 示例
 
-获取文档中文本的位置。
+此示例展示如何查明文本的位置。
 
 ```javascript editor-docx
-// Get the location index of the text properties in a document.
+// Get the location index of the text properties.
 
-// How to know the text position in a document.
+// How to know the text position.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

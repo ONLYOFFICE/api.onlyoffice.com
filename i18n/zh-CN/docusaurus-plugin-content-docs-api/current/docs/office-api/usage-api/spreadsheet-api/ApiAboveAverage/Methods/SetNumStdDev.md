@@ -22,10 +22,10 @@ expression.SetNumStdDev(numStdDev);
 
 ## 示例
 
-在电子表格中设置与平均值的标准差数。
+此示例演示如何设置与平均值的标准偏差数。
 
 ```javascript editor-xlsx
-// How to modify the standard deviation setting for above average conditions in a spreadsheet.
+// How to modify the standard deviation setting for above average conditions.
 
 // Change the number of standard deviations for conditional formatting.
 
@@ -51,4 +51,5 @@ condition.SetNumStdDev(2);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetNumStdDev().toString());
+
 ```

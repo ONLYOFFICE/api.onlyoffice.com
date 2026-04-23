@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回最小公倍数。
+此示例演示如何返回最小公倍数。
 
 ```javascript editor-xlsx
-// How to find the least common multiple from the list of numbers in a spreadsheet.
+// How to find the least common multiple from the list of numbers.
 
-// Use a function to find out the least common multiple in a spreadsheet.
+// Use a function to find out the least common multiple.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

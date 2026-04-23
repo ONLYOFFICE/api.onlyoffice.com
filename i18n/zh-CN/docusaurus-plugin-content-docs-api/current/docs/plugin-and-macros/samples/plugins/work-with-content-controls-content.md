@@ -12,7 +12,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_content) 下载此插件，并按照[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_content) 下载此插件，并按照[桌面版](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用
 
@@ -98,12 +98,12 @@ GitHub 仓库：[example_work_with_content_controls_content](https://github.com/
 
 ## 方法和事件
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/SelectContentControl.md)")
+- [Asc.scope](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 

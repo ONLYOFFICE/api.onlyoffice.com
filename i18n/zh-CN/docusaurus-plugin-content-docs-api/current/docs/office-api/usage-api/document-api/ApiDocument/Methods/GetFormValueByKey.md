@@ -22,13 +22,9 @@ null \| boolean \| string
 
 ## 示例
 
-使用键获取指定表单的值。
+此示例展示如何使用键获取指定表单的值。
 
 ```javascript editor-docx
-// How do I get the form value by key in a document?
-
-// Get the form value by key using a document object.
-
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
 let checkBox = Api.CreateCheckBoxForm({key: "BestCompany"});
@@ -45,4 +41,5 @@ paragraph.AddText("CompanyName: " + formValue);
 paragraph.AddLineBreak();
 formValue = doc.GetFormValueByKey("BestCompany");
 paragraph.AddText("BestCompany: " + formValue);
+
 ```

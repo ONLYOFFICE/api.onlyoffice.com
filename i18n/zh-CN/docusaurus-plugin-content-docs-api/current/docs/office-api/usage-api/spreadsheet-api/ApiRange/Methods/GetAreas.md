@@ -20,10 +20,10 @@ expression.GetAreas();
 
 ## 示例
 
-获取电子表格中的范围集合。
+此示例演示如何获取范围的集合。
 
 ```javascript editor-xlsx
-// How to get range areas in a spreadsheet.
+// How to get range areas.
 
 // Get range areas, count them and display the result in the worksheet.
 
@@ -37,4 +37,5 @@ range = worksheet.GetRange("A5");
 range.SetValue("The number of ranges in the areas: ");
 range.AutoFit(false, true);
 worksheet.GetRange("B5").SetValue(count);
+
 ```

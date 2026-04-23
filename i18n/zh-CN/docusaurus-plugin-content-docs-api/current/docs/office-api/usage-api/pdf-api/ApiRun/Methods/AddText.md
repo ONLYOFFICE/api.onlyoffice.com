@@ -1,6 +1,6 @@
 # AddText
 
-向当前文本块添加文本。
+向当前运行添加一些文本。
 
 ## 语法
 
@@ -8,13 +8,13 @@
 expression.AddText(text);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| text | 必需 | string |  | 要添加到当前文本块的文本。 |
+| text | 必需 | string |  | 将添加到当前运行的文本。 |
 
 ## 返回值
 
@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在 PDF 文档中向 run 添加文本。
+此示例向运行添加一些文本。
 
 ```javascript editor-pdf
-// How to add a text to a text run object in a PDF document.
+// How to add a text to a text run object.
 
 // How to add a text to the page.
 
@@ -37,11 +37,12 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.SetFontSize(30);
 run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 page.AddObject(shape);
+
 ```

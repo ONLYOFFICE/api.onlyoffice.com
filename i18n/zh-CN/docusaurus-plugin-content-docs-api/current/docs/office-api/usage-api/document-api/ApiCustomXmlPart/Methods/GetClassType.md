@@ -20,13 +20,9 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中自定义 XML 部件返回的类类型。
+此示例演示如何更新自定义 XML 节点中属性的值。
 
 ```javascript editor-docx
-// How do I check what type a custom XML part object is in a document?
-
-// Retrieve and output the class type string for a custom XML part in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

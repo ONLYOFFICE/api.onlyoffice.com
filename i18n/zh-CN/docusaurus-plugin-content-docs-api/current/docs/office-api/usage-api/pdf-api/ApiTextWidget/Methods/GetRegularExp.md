@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-从 PDF 文档中的文本控件获取正则表达式并显示。
+此示例从文本控件获取正则表达式并显示。
 
 ```javascript editor-pdf
-// How can I get the regular exp using a text widget in a PDF document?
-
-// Get the regular exp for a text widget in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

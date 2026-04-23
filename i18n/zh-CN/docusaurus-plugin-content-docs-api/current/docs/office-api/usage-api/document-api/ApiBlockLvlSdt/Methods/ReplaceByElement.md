@@ -22,12 +22,14 @@ boolean
 
 ## 示例
 
-在文档中用段落替换内容控件。
+此示例用段落替换内容控件。
 
 ```javascript editor-docx
-// Create the block-level content control object and replace it with the paragraph object in a document.
+// How to replace the block content control with another document element (paragraph, table, or block content control).
 
-// Replace the block level content control with a text in a document.
+// Creates the ApiBlockLvlSdt object and replaces it with the ApiParagraph object.
+
+// Replaces the block level content control with a text.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

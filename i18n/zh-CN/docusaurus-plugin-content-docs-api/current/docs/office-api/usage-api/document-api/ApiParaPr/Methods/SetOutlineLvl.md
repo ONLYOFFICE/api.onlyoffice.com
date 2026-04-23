@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-通过文档中的段落属性获取指定段落的大纲级别。
+此示例展示如何通过段落属性获取指定段落的大纲级别。
 
 ```javascript editor-docx
-// How to set outline lvl for a paragraph properties in a document?
-
-// Set outline lvl and display the result in a document.
-
 const doc = Api.GetDocument();
 
 const paragraph = doc.GetElement(0);
@@ -41,4 +37,5 @@ const levelAfter = paraPr.GetOutlineLvl();
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
+
 ```

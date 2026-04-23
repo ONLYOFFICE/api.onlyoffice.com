@@ -24,13 +24,9 @@ boolean
 
 ## 示例
 
-更新电子表格中自定义 XML 部件元素中属性的值。
+此示例展示如何更新自定义 XML 部件元素中属性的值。
 
 ```javascript editor-xlsx
-// How can I update attribute using a custom XML part in a spreadsheet?
-
-// Update attribute for a custom XML part in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = "<config version='1.0' namespace='http://api.onlyoffice.com' />";
@@ -38,4 +34,5 @@ const xml = xmlManager.Add(xmlString);
 
 xml.UpdateAttribute('/config', 'version', '9.4');
 worksheet.GetRange('A1').SetValue('XML after update: ' + xml.GetXml());
+
 ```

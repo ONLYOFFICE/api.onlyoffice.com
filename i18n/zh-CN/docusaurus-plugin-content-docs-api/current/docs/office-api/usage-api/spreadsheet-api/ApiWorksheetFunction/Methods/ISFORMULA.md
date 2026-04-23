@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-在电子表格中检查单元格引用是否包含公式，并返回 true 或 false。
+此示例演示如何检查对单元格的引用是否包含公式，并返回 true 或 false。
 
 ```javascript editor-xlsx
 // How to check if the cell contains formula or not.

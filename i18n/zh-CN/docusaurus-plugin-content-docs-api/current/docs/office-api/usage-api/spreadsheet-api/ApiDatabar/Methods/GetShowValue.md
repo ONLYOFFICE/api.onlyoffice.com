@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-从数据条条件格式规则获取显示值设置。
+此示例演示如何从数据条条件格式规则获取显示值设置。
 
 ```javascript editor-xlsx
-// How to check if the data bar shows the value in a spreadsheet.
+// How to check if the data bar shows the value.
 
 // Get the show value setting of a data bar conditional formatting rule.
 
@@ -45,4 +45,5 @@ let showValue = dataBar.GetShowValue();
 
 worksheet.GetRange("C1").SetValue("Show Value:");
 worksheet.GetRange("C2").SetValue(showValue ? "Yes" : "No");
+
 ```

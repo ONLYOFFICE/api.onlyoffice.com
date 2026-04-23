@@ -8,13 +8,13 @@
 expression.SetItalic(isItalic);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isItalic | 必需 | boolean |  | 指定当前文本块的内容显示为斜体。 |
+| isItalic | 必需 | boolean |  | 指定当前运行的内容显示为斜体。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在电子表格中为文本字符设置斜体属性。
+此示例为文本字符设置斜体属性。
 
 ```javascript editor-xlsx
-// How to make a text italic in a spreadsheet.
+// How to make a text italic.
 
-// Create a text run object, change its properties by making it italic in a spreadsheet.
+// Create a text run object, change its properties by making it italic.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

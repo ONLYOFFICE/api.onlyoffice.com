@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表图例设置填充。
+此示例设置图表图例的填充。
 
 ```javascript editor-pptx
-// How to color a chart legend in a presentation.
+// How to color a chart legend.
 
-// Create a chart, set its properties and background color of a legend in a presentation.
+// Create a chart, set its properties and background color of a legend.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetLegendFill(fill);
 slide.AddObject(chart);
+
 ```

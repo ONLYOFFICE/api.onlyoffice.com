@@ -22,13 +22,9 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-从 JSON 还原文档中不同类型的颜色对象。
+此示例展示如何从 JSON 恢复不同类型的 ApiColor 对象。
 
 ```javascript editor-docx
-// The JSON string contains the color type and value properties.
-
-// Restore each color object from JSON and display the theme name.
-
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -60,4 +56,5 @@ for (let i = 0; i < colors.length; i++) {
 	run.AddText('Restored: ' + restored.GetHex());
 	paragraph.Push(run);
 }
+
 ```

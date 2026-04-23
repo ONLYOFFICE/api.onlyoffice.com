@@ -22,12 +22,12 @@ expression.SetInputTitle(InputTitle);
 
 ## 示例
 
-在电子表格中设置输入消息标题。
+此示例设置输入消息标题。
 
 ```javascript editor-xlsx
-// How to set the validation input title in a spreadsheet.
+// How to set the validation input title.
 
-// Set input title for a validation in a spreadsheet.
+// Set the input title.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -36,4 +36,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetInputTitle("Enter Value");
 validation.SetShowInput(true);
 worksheet.GetRange("B1").SetValue("Input title has been set");
+
 ```

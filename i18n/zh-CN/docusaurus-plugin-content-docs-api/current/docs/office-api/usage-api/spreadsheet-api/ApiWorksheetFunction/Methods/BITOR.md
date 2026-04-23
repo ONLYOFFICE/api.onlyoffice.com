@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个数字的按位 "OR"。
+此示例演示如何返回两个数的按位 OR 运算结果。
 
 ```javascript editor-xlsx
-// How to get a result from OR operation in a spreadsheet.
+// How to get a result from OR operation.
 
-// Use function to calculate bitwise "OR" operation in a spreadsheet.
+// Use function to calculate bitwise "OR" operation.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

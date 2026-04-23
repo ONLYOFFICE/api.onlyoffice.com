@@ -1,6 +1,6 @@
 # SetFill
 
-设置当前文本块的文本颜色。
+设置当前文本运行的文本颜色。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetFill(oApiFill);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-在 PDF 文档中为当前文本 run 设置文本颜色。
+此示例设置当前文本运行的文本颜色。
 
 ```javascript editor-pdf
-// How to set solid fill to the text in a PDF document.
+// How to set solid fill to the text.
 
-// Create a new text run and set its font color in a PDF document.
+// Create a new text run and set its font color.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -49,4 +49,5 @@ run.SetFill(runFill);
 run.AddText("This is a text run with the font color set to black.");
 paragraph.AddElement(run);
 page.AddObject(shape);
+
 ```

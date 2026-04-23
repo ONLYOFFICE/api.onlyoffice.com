@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将数字向上舍入到最接近的有效数字倍数。负数向零方向舍入。
+此示例演示如何将数字向上舍入到最接近的基数倍数。负数向零方向舍入。
 
 ```javascript editor-xlsx
-// How to round up the number in a spreadsheet.
+// How to round up the number.
 
-// Use function to round up a number to the nearest multiple of significance in a spreadsheet.
+// Use function to round up a number to the nearest multiple of significance.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

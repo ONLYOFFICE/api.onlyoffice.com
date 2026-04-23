@@ -22,12 +22,12 @@ expression.GetItem(ind);
 
 ## 示例
 
-通过 ID 从电子表格中的集合获取单个对象。
+此示例展示如何按 ID 从集合中获取单个对象。
 
 ```javascript editor-xlsx
-// How to find an object by its ID from the collection in a spreadsheet.
+// How to find an object by its ID from the collection.
 
-// Get element from an array by its ID in a spreadsheet.
+// Get element from an array by its ID.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");

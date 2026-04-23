@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回结算日期和到期日期之间应付的息票数。
+此示例演示如何返回结算日和到期日之间应付的票息数。
 
 ```javascript editor-xlsx
-// How to find the number of coupons payable between the settlement date and maturity date in a spreadsheet.
+// How to find the number of coupons payable between the settlement date and maturity date.
 
-// Use function to get the number of coupons payable between the settlement date and maturity date in a spreadsheet.
+// Use function to get the number of coupons payable between the settlement date and maturity date.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ expression.AddTabStop();
 
 ## 示例
 
-在文档中向段落添加制表位。
+此示例向段落添加一个制表位。
 
 ```javascript editor-docx
-// How to separate two texts with tabs in a document.
+// How to separate two texts with tabs.
 
-// Insert tabs to the paragraph in a document.
+// Insert tabs to the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

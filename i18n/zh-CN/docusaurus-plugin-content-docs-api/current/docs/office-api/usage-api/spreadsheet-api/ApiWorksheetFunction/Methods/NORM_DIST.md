@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定均值和标准差的正态分布。
+此示例演示如何返回指定平均值和标准差的正态分布。
 
 ```javascript editor-xlsx
-// How to calculate the normal distribution in a spreadsheet.
+// How to calculate the normal distribution.
 
-// Use a function to get the normal distribution knowing the mean and standard deviation in a spreadsheet.
+// Use a function to get the normal distribution knowing the mean and standard deviation.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [36, 6, 7, false];

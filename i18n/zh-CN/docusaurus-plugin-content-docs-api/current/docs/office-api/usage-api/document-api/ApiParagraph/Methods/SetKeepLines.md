@@ -2,14 +2,30 @@
 
 指定在使用页面视图呈现文档时，尽可能将当前段落的所有行保持在同一页上。
 
-继承自 [ApiParaPr.SetKeepLines](../../ApiParaPr/Methods/SetKeepLines.md)。
+## 语法
+
+```javascript
+expression.SetKeepLines(isKeepLines);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isKeepLines | 必需 | boolean |  | true 值启用将段落各行保持在同一页上的选项。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-指定在使用页面视图呈现文档时，尽可能将段落的所有行保持在同一页上。
+此示例指定在使用页面视图呈现文档时，尽可能将段落的所有行保持在同一页上。
 
 ```javascript editor-docx
-// How to set keep lines property of the paragraph content in a document.
+// How to set keep lines property of the paragraph content.
 
 // Keep all lines of the paragraph on the same page.
 

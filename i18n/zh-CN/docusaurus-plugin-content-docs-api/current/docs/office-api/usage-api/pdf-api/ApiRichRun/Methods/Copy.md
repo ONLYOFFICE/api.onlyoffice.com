@@ -1,6 +1,6 @@
 # Copy
 
-创建当前文本块的副本。
+创建当前运行的副本。
 
 ## 语法
 
@@ -20,13 +20,9 @@ expression.Copy();
 
 ## 示例
 
-在 PDF 文档中复制富文本 run 对象并将其添加到父富文本段落。
+此示例复制富文本运行对象并将其添加到父富文本段落。
 
 ```javascript editor-pdf
-// How do I copy in a PDF document?
-
-// Copy using a rich text run object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

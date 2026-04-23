@@ -20,12 +20,12 @@ expression.AddLineBreak();
 
 ## 示例
 
-在电子表格中当前位置添加换行符并从新行开始下一个元素。
+此示例在当前位置添加换行符，并从新行开始下一个元素。
 
 ```javascript editor-xlsx
-// How to insert a text from a new line in a spreadsheet.
+// How to insert a text from a new line.
 
-// Get the paragraph from the shape and add two sentences separated by a linebreak in a spreadsheet.
+// Get the paragraph from the shape and add two sentences separated by a linebreak.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

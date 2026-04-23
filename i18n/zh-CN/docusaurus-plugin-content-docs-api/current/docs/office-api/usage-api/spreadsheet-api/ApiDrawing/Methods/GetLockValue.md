@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-获取电子表格中绘图对象指定锁定类型的锁定值。
+此示例展示如何获取绘图的指定锁定类型的锁定值。
 
 ```javascript editor-xlsx
-// How to know a lock type of a drawing in a spreadsheet.
+// How to know a lock type of a drawing.
 
 // Set a drawing's lock type and display it in the worksheet.
 

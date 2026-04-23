@@ -24,7 +24,7 @@ expression.SetBorders(bordersIndex, lineStyle, oColor);
 
 ## 示例
 
-为条件格式规则设置边框。
+此示例设置条件格式规则的边框。
 
 ```javascript editor-xlsx
 // How to apply border formatting to conditional formatting rules.
@@ -53,4 +53,5 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
+
 ```

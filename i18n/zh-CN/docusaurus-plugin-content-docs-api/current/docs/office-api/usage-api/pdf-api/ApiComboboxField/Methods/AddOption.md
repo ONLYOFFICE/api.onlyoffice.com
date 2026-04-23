@@ -2,17 +2,30 @@
 
 向列表选项添加新选项。
 
-继承自 [ApiBaseListField.AddOption](../../ApiBaseListField/Methods/AddOption.md)。
+## 语法
+
+```javascript
+expression.AddOption(option, nPos);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| option | 必需 | [ListOption](../../Enumeration/ListOption.md) |  | 要添加的列表选项 |
+| nPos | 可选 | number | this.GetOptions().lenght | 添加选项的位置 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-在 PDF 文档中向带有选项列表的字段添加新选项。
+此示例向带有选项列表的字段添加新选项。
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
-
-// Add the option using a list field object in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格内边距。
+此示例设置表格内边距。
 
 ```javascript editor-docx
-// How to set paddings of the table in a document.
+// How to set paddings of the table.
 
-// Create a table and specify its paddings in a document.
+// Create a table and specify its paddings.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -25,8 +25,6 @@ expression.Copy();
 ```javascript editor-pdf
 // Get a page shape, add it to the page and create its copy.
 
-// Copy using a drawing object object in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

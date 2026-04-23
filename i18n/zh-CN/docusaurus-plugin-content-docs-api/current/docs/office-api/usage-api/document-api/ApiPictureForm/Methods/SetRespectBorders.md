@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-缩放图像时遵守表单边框宽度。
+此示例在缩放图像时遵守表单边框宽度。
 
 ```javascript editor-docx
-// How to make borders respected when increasing it in a document.
+// How to make borders respected when increasing it.
 
 // Set respect borders property of the picture form.
 

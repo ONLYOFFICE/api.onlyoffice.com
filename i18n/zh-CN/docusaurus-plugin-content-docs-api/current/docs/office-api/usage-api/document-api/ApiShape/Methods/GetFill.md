@@ -20,13 +20,10 @@ expression.GetFill();
 
 ## 示例
 
-从形状获取填充属性并显示详细信息。创建带渐变填充的形状，获取并显示填充详细信息。
+从形状获取填充属性并显示详细信息。
 
 ```javascript editor-docx
-// How do I get the fill in a document?
-
-// Get the fill using a shape object in a document.
-
+// Creates a shape with gradient fill, retrieves it and shows fill details.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -40,4 +37,5 @@ let retrievedFill = shape.GetFill();
 if (retrievedFill) {
     paragraph.AddText("Fill type: " + retrievedFill.GetType());
 }
+
 ```

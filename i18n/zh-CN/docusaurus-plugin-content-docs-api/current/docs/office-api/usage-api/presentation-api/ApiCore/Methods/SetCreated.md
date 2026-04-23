@@ -22,13 +22,9 @@ expression.SetCreated(oCreated);
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取演示文稿的创建日期。
+此示例演示如何使用 ApiCore 设置和获取演示文稿的创建日期。
 
 ```javascript editor-pptx
-// How can I set created using a core properties in a presentation?
-
-// Set created for a core properties in a presentation.
-
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreated(new Date('20 January 2000'));
@@ -44,4 +40,5 @@ paragraph.AddText("Created: " + createdDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

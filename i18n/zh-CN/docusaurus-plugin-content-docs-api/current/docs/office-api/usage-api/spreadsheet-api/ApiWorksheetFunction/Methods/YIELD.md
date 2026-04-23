@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-在电子表格中返回定期付息证券的收益率。
+此示例演示如何返回定期付息证券的收益率。
 
 ```javascript editor-xlsx
-// How to return the yield on a security in a spreadsheet.
+// How to return the yield on a security.
 
-// Use a function to calculate the yield on a security that pays periodic interest in a spreadsheet.
+// Use a function to calculate the yield on a security that pays periodic interest.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

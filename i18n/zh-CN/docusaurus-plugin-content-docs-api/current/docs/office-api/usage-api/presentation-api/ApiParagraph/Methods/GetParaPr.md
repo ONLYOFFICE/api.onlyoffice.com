@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取演示文稿中的段落属性。
+此示例展示如何获取段落属性。
 
 ```javascript editor-pptx
-// How to get a paragraph properties and set its spacing size in a presentation.
+// How to get a paragraph properties and set its spacing size.
 
-// Change paragraph properties in a presentation.
+// Change paragraph properties.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
+
 ```

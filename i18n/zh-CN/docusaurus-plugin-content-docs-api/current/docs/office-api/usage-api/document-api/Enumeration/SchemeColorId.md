@@ -23,9 +23,10 @@
 - "tx1"
 - "tx2"
 
+
 ## 示例
 
-创建具有 'accent2' 标识符的主题颜色。
+此示例创建具有 'accent2' 标识符的主题颜色。
 
 ```javascript editor-docx
 // How to create a scheme color.

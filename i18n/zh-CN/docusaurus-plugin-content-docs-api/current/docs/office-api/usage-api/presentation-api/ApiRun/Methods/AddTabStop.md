@@ -1,6 +1,6 @@
 # AddTabStop
 
-向当前文本块添加制表位。
+向当前运行添加制表位。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddTabStop();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在演示文稿中向 run 添加制表位。
+此示例向运行添加制表位。
 
 ```javascript editor-pptx
-// How to add a tab after a string in a text run in a presentation.
+// How to add a tab after a string in a text run.
 
-// How to split a text with a tab in a presentation.
+// How to split a text with a tab.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,5 @@ run.AddTabStop();
 run.AddText("This is the text which starts after the tab stops.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

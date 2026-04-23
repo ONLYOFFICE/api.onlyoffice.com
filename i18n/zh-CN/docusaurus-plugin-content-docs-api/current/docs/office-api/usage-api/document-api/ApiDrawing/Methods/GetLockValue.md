@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取文档中绘图对象指定锁定类型的锁定值。
+此示例展示如何获取绘图的指定锁定类型的锁定值。
 
 ```javascript editor-docx
-// How to set lock value of the shape in a document.
+// How to set lock value of the shape.
 
-// Get a boolean that shows that drawing can be selected or not in a document.
+// Get a boolean that shows that drawing can be selected or not.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

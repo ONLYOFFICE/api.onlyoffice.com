@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中组合框文本是否可以编辑。
+此示例检查组合框文本是否可编辑。
 
 ```javascript editor-forms
 // How to know whether a combobox form is editable.
 
-// Display a boolean representing editability of a combobox in a document.
+// Display a boolean representing editability of a combobox.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

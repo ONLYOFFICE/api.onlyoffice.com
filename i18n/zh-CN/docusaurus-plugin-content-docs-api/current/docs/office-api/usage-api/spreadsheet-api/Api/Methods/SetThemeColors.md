@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前电子表格设置主题颜色。
+此示例设置当前电子表格的主题颜色。
 
 ```javascript editor-xlsx
-// How to get all theme colors and apply one of them in a spreadsheet.
+// How to get all theme colors and apply one of them.
 
-// Apply one of the theme colors from the array of available ones in a spreadsheet.
+// Apply one of the theme colors from the array of available ones.
 
 let worksheet = Api.GetActiveSheet();
 let themes = Api.GetThemesColors();

@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-指定在文档中具有相同段落边框设置的一组段落之间显示的边框。
+此示例指定在具有相同段落边框设置的一组段落中每个段落之间显示的边框。
 
 ```javascript editor-docx
-// How to set the border between paragraphs in a document.
+// How to set the border between paragraphs.
 
-// Create a paragraph, add text to it and the single border between the text in a document.
+// Create a paragraph, add text to it and the single border between the text.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

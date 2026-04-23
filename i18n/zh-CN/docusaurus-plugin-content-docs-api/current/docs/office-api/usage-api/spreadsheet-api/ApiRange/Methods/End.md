@@ -22,12 +22,12 @@ expression.End(direction);
 
 ## 示例
 
-获取表示电子表格中指定范围中指定方向终点的 Range 对象。
+此示例演示如何获取表示指定范围中指定方向末端的 Range 对象。
 
 ```javascript editor-xlsx
-// Get a left end part of a range and fill it with color in a spreadsheet.
+// Get a left end part of a range and fill it with color.
 
-// Get a specified direction end of a range in a spreadsheet.
+// Get a specified direction end of a range.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("C4:D5");

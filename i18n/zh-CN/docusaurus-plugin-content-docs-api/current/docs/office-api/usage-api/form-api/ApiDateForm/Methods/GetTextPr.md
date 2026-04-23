@@ -3,11 +3,25 @@
 返回当前表单的文本属性。
 *如果该表单类型支持则使用*
 
-继承自 [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md)。
+## 语法
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-获取文档中表单的文本属性。
+此示例展示如何从表单获取文本属性。
 
 ```javascript editor-forms
 // How to get a text properties of a text form.

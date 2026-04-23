@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中指定工作表行/列标题是否必须打印的页面 PrintHeadings 属性。
+此示例展示如何获取页面 PrintHeadings 属性，该属性指定是否必须打印工作表的行/列标题。
 
 ```javascript editor-xlsx
-// How to find out whether sheet headings should be printed or not in a spreadsheet.
+// How to find out whether sheet headings should be printed or not.
 
-// Get a boolean value representing whether to print row and column headings or not in a spreadsheet.
+// Get a boolean value representing whether to print row and column headings or not.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintHeadings(true);

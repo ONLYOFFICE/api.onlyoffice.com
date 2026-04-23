@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-将文档中的统一颜色对象转换为 JSON 对象。
+此示例将 ApiUniColor 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the uni color object in a document.
+// How to get a JSON from the uni color object.
 
 // Convert the uni color to json and add it to the document.
 

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-选择文档中的内容控件。
+此示例选择内容控件。
 
 ```javascript editor-docx
-// Create a block content control and select it in a document.
+// Creates a block content control and selects it.
 
-// How to select the block-level content control object in the current document.
+// How to select the ApiBlockLvlSdt object in the current document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

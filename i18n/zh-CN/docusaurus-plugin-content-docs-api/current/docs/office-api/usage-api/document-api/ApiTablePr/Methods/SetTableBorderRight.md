@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格右侧显示的边框。
+此示例设置将在表格右侧显示的边框。
 
 ```javascript editor-docx
-// How to create a 3x3 table and add the right 4 point black border in a document.
+// How to create a 3x3 table and add the right 4 point black border.
 
-// Add right border to the table in a document.
+// Add right border to the table.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ expression.FromJSON(sMessage);
 
 ## 示例
 
-将字体方案转换为 JSON，然后从 JSON 恢复。
+此示例将字体方案转换为 JSON，然后从 JSON 还原。
 
 ```javascript editor-pptx
-// How to get a font scheme from JSON file in a presentation.
+// How to get a font scheme from JSON file.
 
-// Parse JSON file to get an object like font scheme in a presentation.
+// Parse JSON file to get an object like font scheme.
 
 const presentation = Api.GetPresentation();
 
@@ -56,4 +56,5 @@ paragraph.AddText("Class type = " + sType);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

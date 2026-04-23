@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在演示文稿中移动版式。
+此示例演示如何移动版式。
 
 ```javascript editor-pptx
-// How to move layout using a position index in a presentation.
+// How to move layout using a position index.
 
 // Move a layout of a slide.
 
@@ -53,4 +53,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The third layout was moved to the seventh position within the same collection.");
 presentation.AddSlide(slide3);
+
 ```

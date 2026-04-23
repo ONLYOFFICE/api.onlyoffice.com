@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取表示电子表格中集合中对象数量的值。
+此示例演示如何获取表示集合中对象数量的值。
 
 ```javascript editor-xlsx
-// How to get collection objects count in a spreadsheet.
+// How to get collection objects count.
 
-// How to get array length using the characters API in a spreadsheet.
+// How to get array length.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

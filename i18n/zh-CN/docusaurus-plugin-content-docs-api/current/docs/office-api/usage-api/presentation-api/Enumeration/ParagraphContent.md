@@ -12,9 +12,10 @@
 - [ApiRun](../ApiRun/ApiRun.md)
 - [ApiHyperlink](../ApiHyperlink/ApiHyperlink.md)
 
+
 ## 示例
 
-向段落添加名为 'text run' 的元素。
+此示例向段落添加名为 'text run' 的元素。
 
 ```javascript editor-pptx
 // How to add an element to paragraph.

@@ -20,12 +20,12 @@ expression.GetIndLeft();
 
 ## 示例
 
-获取电子表格中段落的左侧缩进。
+此示例展示如何获取段落左侧缩进。
 
 ```javascript editor-xlsx
-// How to get a left indent of a paragraph in a spreadsheet.
+// How to get a left indent of a paragraph.
 
-// Get the left paragraph indent by the side in a spreadsheet.
+// Get the left paragraph indent by the side.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

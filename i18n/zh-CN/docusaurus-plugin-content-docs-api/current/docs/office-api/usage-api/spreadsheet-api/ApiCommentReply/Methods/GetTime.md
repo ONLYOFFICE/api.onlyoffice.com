@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取电子表格中批注回复创建的当前时区格式时间戳。
+此示例演示如何获取当前时区格式的批注回复创建时间戳。
 
 ```javascript editor-xlsx
-// How to get a time when a reply was created in a spreadsheet.
+// How to get a time when a reply was created.
 
 // Add a reply creation timestamp to a range of the worksheet.
 

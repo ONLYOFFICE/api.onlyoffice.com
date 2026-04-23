@@ -22,13 +22,9 @@ expression.AddCheckBoxContentControl(checkBoxPr);
 
 ## 示例
 
-在文档中添加复选框内容控件。
+此示例展示如何向文档添加复选框内容控件：
 
 ```javascript editor-docx
-// How to add the check box content control for a document?
-
-// Add the check box content control and display the result in a document.
-
 let doc = Api.GetDocument();
 doc.AddCheckBoxContentControl({checked : true});
 ```

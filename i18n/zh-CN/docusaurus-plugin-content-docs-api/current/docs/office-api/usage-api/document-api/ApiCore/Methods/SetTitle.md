@@ -22,13 +22,9 @@ expression.SetTitle(sTitle);
 
 ## 示例
 
-设置文档中当前文档的标题。
+此示例演示如何设置当前文档的标题。
 
 ```javascript editor-docx
-// How to set title for a core properties in a document?
-
-// Set title and display the result in a document.
-
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetTitle("My Document Title");
@@ -36,4 +32,5 @@ core.SetTitle("My Document Title");
 const title = core.GetTitle();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Title: " + title);
+
 ```

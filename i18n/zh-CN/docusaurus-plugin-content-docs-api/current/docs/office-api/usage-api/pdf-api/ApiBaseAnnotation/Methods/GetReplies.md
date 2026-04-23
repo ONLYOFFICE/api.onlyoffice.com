@@ -20,13 +20,9 @@ expression.GetReplies();
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其回复。
+此示例创建方形注释并获取其回复。
 
 ```javascript editor-pdf
-// How to get the replies for an annotation in a PDF document?
-
-// Get the replies and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 squareAnnot.SetContents("Annot contents");
@@ -41,4 +37,5 @@ let replies = squareAnnot.GetReplies();
 replies.forEach((reply, idx) => {
 	console.log(`Reply with idx ${idx}: "${reply.GetContents()}"`);
 });
+
 ```

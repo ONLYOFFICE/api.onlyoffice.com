@@ -22,13 +22,9 @@ expression.ThemeColor(name);
 
 ## 示例
 
-在演示文稿中创建主题颜色并将其用作形状填充。
+此示例展示如何创建主题颜色并将其用作形状填充。
 
 ```javascript editor-pptx
-// How to theme color in a presentation?
-
-// Theme color using the presentation API.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,4 +35,5 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
+
 ```

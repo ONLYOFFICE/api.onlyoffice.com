@@ -22,15 +22,16 @@ expression.SetTopMargin(nPoints);
 
 ## 示例
 
-在电子表格中设置工作表的上边距。
+此示例设置工作表的顶边距。
 
 ```javascript editor-xlsx
-// How to set margin of the top side in a spreadsheet.
+// How to set margin of the top side.
 
-// Resize the top margin of the sheet in a spreadsheet.
+// Resize the top margin of the sheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetTopMargin(25.1);
 let topMargin = worksheet.GetTopMargin();
 worksheet.GetRange("A1").SetValue("Top margin: " + topMargin + " mm");
+
 ```

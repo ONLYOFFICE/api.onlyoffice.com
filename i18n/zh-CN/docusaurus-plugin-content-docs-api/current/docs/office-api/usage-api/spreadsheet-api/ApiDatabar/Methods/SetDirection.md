@@ -22,10 +22,10 @@ expression.SetDirection(direction);
 
 ## 示例
 
-设置数据条条件格式规则的方向。
+此示例演示如何设置数据条条件格式规则的方向。
 
 ```javascript editor-xlsx
-// How to change the reading order direction of a data bar in a spreadsheet.
+// How to change the reading order direction of a data bar.
 
 // Set the direction of a data bar conditional formatting rule.
 
@@ -50,4 +50,5 @@ dataBar.SetDirection("xlRTL");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetDirection());
+
 ```

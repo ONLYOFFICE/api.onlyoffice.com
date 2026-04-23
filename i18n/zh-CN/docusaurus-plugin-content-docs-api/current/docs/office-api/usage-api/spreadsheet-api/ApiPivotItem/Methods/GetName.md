@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中透视项的名称。
+此示例演示如何获取数据透视项的名称。
 
 ```javascript editor-xlsx
-// How to get a pivot item name in a spreadsheet.
+// How to get a pivot item name.
 
-// Create a pivot table, add data to it then get a name of a specified pivot item in a spreadsheet.
+// Create a pivot table, add data to it then get a name of a specified pivot item.
 
 let worksheet = Api.GetActiveSheet();
 

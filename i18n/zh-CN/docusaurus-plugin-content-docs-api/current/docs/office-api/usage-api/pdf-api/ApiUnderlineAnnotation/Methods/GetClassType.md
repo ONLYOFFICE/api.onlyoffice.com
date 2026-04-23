@@ -20,13 +20,9 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中下划线注释对象的类类型。
+此示例获取删除线注释的类类型。
 
 ```javascript editor-pdf
-// How can I get the class type of an underline annotation in a PDF document?
-
-// Get the class type of an underline annotation and display it in the PDF.
-
 let doc = Api.GetDocument();
 let strikeoutAnnot = Api.CreateStrikeoutAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

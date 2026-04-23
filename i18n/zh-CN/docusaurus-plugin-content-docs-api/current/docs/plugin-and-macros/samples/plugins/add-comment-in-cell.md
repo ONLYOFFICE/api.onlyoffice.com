@@ -12,7 +12,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_add_comment_in_cell) 下载此插件，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md) 或 [云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_add_comment_in_cell) 下载此插件，并根据以下说明进行安装：[桌面版](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md) 或 [云端版](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -99,10 +99,10 @@ GitHub 仓库地址：[example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 ## 方法与事件
 
-- [button](../../customization/buttons.md)
-- [init](../../interacting-with-editors/overview/overview.md#how-it-works)
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [button](../../plugins/customization/custom-buttons.md)
+- [init](../../plugins/interacting-with-editors/overview/overview.md#how-it-works)
+- [callCommand](../../plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 
 ## 支持
 

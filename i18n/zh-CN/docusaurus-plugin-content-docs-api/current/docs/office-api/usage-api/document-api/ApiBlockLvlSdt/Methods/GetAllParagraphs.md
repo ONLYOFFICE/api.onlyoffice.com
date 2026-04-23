@@ -20,13 +20,9 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-获取文档中内容控件中的段落对象集合。
+此示例演示如何获取内容控件中的段落对象集合。
 
 ```javascript editor-docx
-// How do I get all paragraphs in a document?
-
-// Get all paragraphs using a block-level content control object in a document.
-
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let paragraph = Api.CreateParagraph();

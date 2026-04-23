@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为主题字体方案设置名称。
+此示例为主题字体方案设置名称。
 
 ```javascript editor-pptx
-// How to set a font scheme name in a presentation.
+// How to set a font scheme name.
 
-// Create new font scheme and set its name in a presentation.
+// Create new font scheme and set its name.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,5 @@ paragraph.SetJc("left");
 paragraph.AddText("New name was set to the theme font scheme.");
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

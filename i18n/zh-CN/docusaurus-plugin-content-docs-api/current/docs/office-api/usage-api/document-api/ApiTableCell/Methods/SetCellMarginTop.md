@@ -3,11 +3,27 @@
 指定表格中特定表格单元格的内容上边与
 单元格边框之间的间距。
 
-继承自 [ApiTableCellPr.SetCellMarginTop](../../ApiTableCellPr/Methods/SetCellMarginTop.md)。
+## 语法
+
+```javascript
+expression.SetCellMarginTop(nValue);
+```
+
+`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格内容上边上方的间距值，以点的二十分之一为单位（1/1440 英寸）。如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认的表格单元格上边距，否则将使用当前单元格的指定值覆盖表格单元格上边距。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-指定表格中特定表格单元格的单元格内容顶部边缘与边框之间的间距。
+此示例指定表格中特定表格单元格的内容上边与单元格边框之间的间距。
 
 ```javascript editor-docx
 // How to add margin to the top of the cell.

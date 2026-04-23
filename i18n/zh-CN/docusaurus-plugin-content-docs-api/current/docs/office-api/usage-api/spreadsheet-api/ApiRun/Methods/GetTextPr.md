@@ -1,6 +1,6 @@
 # GetTextPr
 
-返回当前文本块的文本属性。
+返回当前运行的文本属性。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetTextPr();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取电子表格中 run 的文本属性。
+此示例展示如何获取运行的文本属性。
 
 ```javascript editor-xlsx
-// How to change the text properties in a spreadsheet.
+// How to change the text properties.
 
-// Create a text object, set its font size, justification, etc in a spreadsheet.
+// Create a text object, set its font size, justification, etc.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

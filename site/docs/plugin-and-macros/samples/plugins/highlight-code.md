@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 The plugin guid: `{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}`.
 
@@ -176,12 +176,12 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 
 ## Methods and events
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onExternalMouseUp](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
-- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onTranslate](/docs/plugin-and-macros/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
+- [resizeWindow](/docs/plugin-and-macros/plugins/customization/windows-and-panels.md#interacting-with-a-window)
 
 ## Support
 

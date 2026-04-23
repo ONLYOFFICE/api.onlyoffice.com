@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-删除演示文稿中的绘图对象。
+此示例演示如何删除绘图对象。
 
 ```javascript editor-pptx
 // How to delete a slide drawing.
@@ -58,4 +58,5 @@ const docContent = drawing1.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The chart was deleted from this slide.");
+
 ```

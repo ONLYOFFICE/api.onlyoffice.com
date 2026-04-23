@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-向第一页添加密文注释并应用密文。
+此示例向第一页添加密文注释并应用密文处理。
 
 ```javascript editor-pdf
-// How do I apply redact in a PDF document?
-
-// Apply redact using a document object.
-
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

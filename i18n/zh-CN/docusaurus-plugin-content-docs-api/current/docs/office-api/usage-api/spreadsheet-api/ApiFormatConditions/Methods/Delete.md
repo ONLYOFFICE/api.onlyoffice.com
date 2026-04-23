@@ -20,7 +20,7 @@ expression.Delete();
 
 ## 示例
 
-从范围删除所有条件格式。
+此示例从区域中删除所有条件格式。
 
 ```javascript editor-xlsx
 // How to delete conditional formatting rules from cells.
@@ -46,4 +46,5 @@ formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Rules before delete: " + formatConditions.GetCount());
 formatConditions.Delete();
 worksheet.GetRange("B2").SetValue("Rules after delete: " + formatConditions.GetCount());
+
 ```

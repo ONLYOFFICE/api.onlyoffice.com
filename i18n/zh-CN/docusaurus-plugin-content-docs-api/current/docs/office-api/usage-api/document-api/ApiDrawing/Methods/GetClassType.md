@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中绘图对象返回的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-docx
-// How do I check what type a drawing object object is in a document?
+// How get a class type of ApiDrawing.
 
-// Retrieve and output the class type string for a drawing object in a document.
+// Retrieve class type of a created shape and display it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

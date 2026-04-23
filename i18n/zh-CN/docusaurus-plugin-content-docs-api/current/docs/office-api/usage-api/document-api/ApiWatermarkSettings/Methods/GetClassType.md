@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中水印设置的类类型。
+此示例获取类类型并将其粘贴到文档中。
 
 ```javascript editor-docx
-// How to identify the class type of a watermark settings in a document?
+// How to get a class type of ApiWatermarkSettings.
 
-// Obtain the class type identifier of a watermark settings object in a document.
+// Retrieve class type of ApiWatermarkSettings object and insert it to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

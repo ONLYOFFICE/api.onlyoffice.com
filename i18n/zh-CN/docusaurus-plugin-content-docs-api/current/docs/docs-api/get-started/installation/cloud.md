@@ -59,5 +59,5 @@ sidebar_label: Cloud
 
 - [如何启用文档强制保存](/docs/docs-api/get-started/how-it-works/saving-file.md#force-saving)
 - [如何自定义编辑器界面](/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding.md)
-- [如何通过自动化 API 管理编辑器](/docs/docs-api/usage-api/automation-api/automation-api.md)
+- [如何通过自动化 API 管理编辑器](/docs/docs-api/usage-api/automation-api/)
 - [如何安装/禁用插件](/docs/docs-api/usage-api/config/editor/plugins.md)

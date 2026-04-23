@@ -20,12 +20,12 @@ expression.GetTableRange2();
 
 ## 示例
 
-返回表示整个数据透视表报表（包括页字段）的 Range 对象。
+返回表示整个数据透视表报表的 Range 对象，包括页字段。
 
 ```javascript editor-xlsx
 // How to get a pivot table range with page fields.
 
-// Create the pivot table object, add data to it then get the cell range object for the entire pivot table report, including page fields.
+// Create the ApiPivotTable object, add data to it then get the ApiRange object for the entire pivot table report, including page fields.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取文档中容器的别名属性。
+此示例展示如何获取容器的别名属性。
 
 ```javascript editor-docx
-// How to get an alias of the inline text element in a document.
+// How to get an alias of the inline text element.
 
 // Retrieve the alias of the text element and display it in the document.
 

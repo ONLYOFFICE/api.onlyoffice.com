@@ -20,12 +20,12 @@ expression.GetAllStyles();
 
 ## 示例
 
-获取文档中当前文档的所有样式。
+此示例展示如何获取当前文档的所有样式。
 
 ```javascript editor-docx
 // Get all styles added to the document.
 
-// How to retrieve all styles and display their names in a document.
+// How to retrieve all styles and display their names.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -16,7 +16,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) 下载该插件，并按照以下说明进行安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load) 下载该插件，并按照以下说明进行安装：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -104,11 +104,11 @@ GitHub 仓库：[example_customfields_load](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 方法和事件
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## 支持
 

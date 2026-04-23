@@ -22,10 +22,10 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-在演示文稿中设置批注的作者。
+此示例演示如何设置批注的作者。
 
 ```javascript editor-pptx
-// How to change a comment's author name in a presentation.
+// How to change a comment's author name.
 
 // Get all comments from the presentation and set an author for the first one.
 
@@ -50,4 +50,5 @@ const authorName = arrComments[0].GetAuthorName();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's author: " + authorName);
+
 ```

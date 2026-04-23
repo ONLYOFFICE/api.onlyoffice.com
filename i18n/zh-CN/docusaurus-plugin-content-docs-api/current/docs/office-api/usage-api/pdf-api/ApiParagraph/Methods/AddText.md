@@ -22,12 +22,12 @@ expression.AddText(text);
 
 ## 示例
 
-在 PDF 文档中向段落添加文本。
+此示例向段落添加一些文本。
 
 ```javascript editor-pdf
-// How to add a text to the paragraph object in a PDF document.
+// How to add a text to the ApiParagraph object.
 
-// How to add a text to the shape in a PDF document.
+// How to add a text to the shape.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 
 paragraph.SetJc("left");
@@ -46,4 +46,5 @@ paragraph.AddText("This is a text inside the shape aligned left.");
 paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 page.AddObject(shape);
+
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中内容控件的内容。
+此示例清除内容控件的内容。
 
 ```javascript editor-docx
-// How to remove all elements from the inline text control in a document.
+// How to remove all elements from the inline text control.
 
-// Delete text from the inline content control in a document.
+// Delete text from the inline content control.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

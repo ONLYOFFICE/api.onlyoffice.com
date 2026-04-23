@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取电子表格中的验证类型。
+此示例获取验证类型。
 
 ```javascript editor-xlsx
-// How to retrieve the validation type in a spreadsheet.
+// How to retrieve the validation type.
 
-// Get the validation type using the validation API in a spreadsheet.
+// Get the validation type.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -33,4 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let validationType = validation.GetType();
 worksheet.GetRange("B1").SetValue("Validation type: " + validationType);
+
 ```

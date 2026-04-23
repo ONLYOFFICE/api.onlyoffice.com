@@ -20,16 +20,13 @@ expression.GetActiveWorkbook();
 
 ## 示例
 
-获取表示电子表格中活动工作簿的对象。
+此示例演示如何获取表示活动工作簿的对象。
 
 ```javascript editor-xlsx
-// How do I get active workbook in a spreadsheet?
-
-// Get active workbook and display the result in a spreadsheet.
-
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 const cell = worksheet.GetActiveCell();
 const workbookName = workbook.GetName();
 cell.SetValue(workbookName);
+
 ```

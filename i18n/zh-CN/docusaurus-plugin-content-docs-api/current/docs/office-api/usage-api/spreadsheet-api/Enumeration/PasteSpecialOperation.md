@@ -14,11 +14,14 @@
 - "xlPasteSpecialOperationNone"
 - "xlPasteSpecialOperationSubtract"
 
+
 ## 示例
 
-使用粘贴选项粘贴数据。
+此示例使用粘贴选项粘贴数据。
 
 ```javascript editor-xlsx
+// How to paste indicating special parameters.
+
 // Specify the mathematical operation which will be applied to the copied data.
 
 // Specify that the add mathematical operation will be applied to the copied data.

@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-获取文档中的下一个段落。
+此示例展示如何获取下一个段落。
 
 ```javascript editor-docx
-// Get the next paragraph and make it bold in a document.
+// Get the next paragraph and make it bold.
 
-// How to access the next paragraph in a document.
+// How to access the next paragraph.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

@@ -2,16 +2,30 @@
 
 返回段落首行缩进。
 
-继承自 [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md)。
+## 语法
+
+```javascript
+expression.GetIndFirstLine();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
 
 ## 示例
 
-获取电子表格中段落的首行缩进。
+此示例展示如何获取段落首行缩进。
 
 ```javascript editor-xlsx
-// How to get first line indent of a paragraph in a spreadsheet.
+// How to get first line indent of a paragraph.
 
-// Get paragraph lines using the indent order in a spreadsheet.
+// Get paragraph lines using the indent order.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

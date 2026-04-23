@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据透视表的名称。
+此示例展示如何获取数据透视表的名称。
 
 ```javascript editor-xlsx
-// How to get a table name in a spreadsheet.
+// How to get a table name.
 
-// Create a pivot table, add data to it then get its name in a spreadsheet.
+// Create a pivot table, add data to it then get its name.
 
 let worksheet = Api.GetActiveSheet();
 

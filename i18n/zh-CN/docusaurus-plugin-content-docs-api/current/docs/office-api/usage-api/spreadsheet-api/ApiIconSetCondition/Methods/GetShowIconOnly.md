@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-检查电子表格中是否仅显示图标。
+此示例演示如何检查是否仅显示图标。
 
 ```javascript editor-xlsx
 // How to determine if icon set displays only icons without cell values.
 
-// Check if the icon set rule shows only icons in a spreadsheet.
+// Check if the icon set rule shows only icons.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,4 +42,5 @@ iconCondition.SetShowIconOnly(true);
 
 let showIconOnly = iconCondition.GetShowIconOnly();
 worksheet.GetRange("B1").SetValue("Show icon only: " + showIconOnly);
+
 ```

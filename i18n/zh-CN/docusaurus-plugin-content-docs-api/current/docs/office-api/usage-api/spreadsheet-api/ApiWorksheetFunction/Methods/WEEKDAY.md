@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回 1 到 7 的数字，标识指定日期是星期几。
+此示例演示如何返回从 1 到 7 的数字，以标识指定日期是星期几。
 
 ```javascript editor-xlsx
-// How to return a weekday in a spreadsheet.
+// How to return a weekday.
 
-// Use a function to get a weekday using numbers in a spreadsheet.
+// Use a function to get a weekday using numbers.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,4 +36,5 @@ let func = Api.WorksheetFunction;
 let ans = func.WEEKDAY("11/5/2018", 2); 
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

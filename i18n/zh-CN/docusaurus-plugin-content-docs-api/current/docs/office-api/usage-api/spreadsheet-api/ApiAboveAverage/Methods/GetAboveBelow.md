@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从高于平均值条件格式规则获取高于/低于设置。
+此示例演示如何从高于平均值条件格式规则获取高于/低于设置。
 
 ```javascript editor-xlsx
-// How to check if the rule is looking for above or below average values in a spreadsheet.
+// How to check if the rule is looking for above or below average values.
 
-// Get whether the rule is checking for above or below average values in a spreadsheet.
+// Get whether the rule is checking for above or below average values.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,4 +46,5 @@ let aboveBelow = condition.GetAboveBelow();
 
 worksheet.GetRange("C1").SetValue("Above Average:");
 worksheet.GetRange("C2").SetValue(aboveBelow ? "Yes" : "No");
+
 ```

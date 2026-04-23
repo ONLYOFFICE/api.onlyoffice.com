@@ -24,12 +24,12 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-在文档中为 run 设置样式。
+此示例为运行设置样式。
 
 ```javascript editor-docx
-// How to style a text in a document.
+// How to style a text.
 
-// Create a text run object, create a text style and apply it in a document.
+// Create a text run object, create a text style and apply it.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

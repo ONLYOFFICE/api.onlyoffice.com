@@ -1,6 +1,7 @@
 # ApiTable
 
-ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
+表示 ApiTable 类。
+
 
 ## 方法
 

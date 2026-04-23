@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的反余切值，以弧度表示，范围从 0 到 Pi。
+此示例演示如何返回数字的反余切，以弧度表示，范围从 0 到 Pi。
 
 ```javascript editor-xlsx
 // How to get an arccotangent of a number and display it in the worksheet.
 
-// Get a function that gets arccotangent of a number in a spreadsheet.
+// Get a function that gets arccotangent of a number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

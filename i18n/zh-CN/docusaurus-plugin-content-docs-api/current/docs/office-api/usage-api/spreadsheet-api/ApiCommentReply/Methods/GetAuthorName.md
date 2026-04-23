@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中的批注回复作者名称。
+此示例展示如何获取批注回复作者的姓名。
 
 ```javascript editor-xlsx
-// How to get the name of who wrote a reply in a spreadsheet.
+// How to get the name of who wrote a reply.
 
-// Get reply author's name and display it in the worksheet.
+// Get reply author's name and display it in the worksheet. 
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

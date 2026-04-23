@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定单元格的内容显示时在内容中间添加一条水平删除线。
+此示例指定单元格的内容显示时在内容中心有一条水平线。
 
 ```javascript editor-xlsx
 // How to add strikeout to the cell value.
 
-// Get a range and add strikeout to its text in a spreadsheet.
+// Get a range and add strikeout to its text.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Struckout text");

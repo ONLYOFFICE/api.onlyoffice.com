@@ -13,9 +13,10 @@
 - "tile"
 - "stretch"
 
+
 ## 示例
 
-创建一个图像填充，该图像平铺在整个创建的形状上。
+此示例创建一个图像填充，该图像平铺在整个创建的形状上。
 
 ```javascript editor-pptx
 // How to create a blip fill from the image URL.
@@ -24,4 +25,5 @@
 
 const imageUrl = 'https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png';
 let blipFill = Api.CreateBlipFill(imageUrl, 'tile');
+
 ```

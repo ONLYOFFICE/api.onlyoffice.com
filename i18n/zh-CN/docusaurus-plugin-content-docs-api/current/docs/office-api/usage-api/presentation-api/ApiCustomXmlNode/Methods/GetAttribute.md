@@ -23,12 +23,12 @@ string \| null
 
 ## 示例
 
-从演示文稿中的自定义 XML 节点获取属性值。
+此示例演示如何从自定义 XML 节点获取属性值。
 
 ```javascript editor-pptx
-// How to get an attribute from an XML node in a presentation.
+// How to get an attribute from an XML node.
 
-// Get an XML node attribute in a presentation.
+// Get an XML node attribute.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

@@ -20,7 +20,7 @@ expression.GetTablePr();
 
 ## 示例
 
-获取文档中样式的表格属性。
+此示例展示如何获取样式的表格属性。
 
 ```javascript editor-docx
 // How to get table properties and set its cells margins.

@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取文档中的表格标题。
+此示例展示如何获取表格标题。
 
 ```javascript editor-docx
-// How to get the table title in a document.
+// How to get the table title.
 
 // Display the title of the table in the document.
 

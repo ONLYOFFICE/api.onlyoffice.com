@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-在文档内容中添加段落。
+此示例在文档内容中添加段落。
 
 ```javascript editor-xlsx
-// How to add text to the document using paragraph.
+// How to add text to the document using ApiParagraph.
 
 // Update the document content adding a paragraph to it.
 

@@ -20,13 +20,9 @@ Object
 
 ## 示例
 
-获取演示文稿中批注的位置。
+此示例展示如何获取演示文稿中批注的位置。
 
 ```javascript editor-pptx
-// How to get the position for a comment in a presentation?
-
-// Get the position and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 presentation.GetAllComments().forEach(comment => {
 	comment.Delete();
@@ -47,4 +43,5 @@ const position = arrComments[0].GetPosition();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Comment position - X: ' + position.x + ', Y: ' + position.y);
+
 ```

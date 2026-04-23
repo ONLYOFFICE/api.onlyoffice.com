@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将表示数字的文本字符串转换为数字。
+此示例演示如何将表示数字的文本字符串转换为数字。
 
 ```javascript editor-xlsx
-// How to get number from a text in a spreadsheet.
+// How to get number from a text.
 
-// Use a function to return a number from a string in a spreadsheet.
+// Use a function to return a number from a string.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

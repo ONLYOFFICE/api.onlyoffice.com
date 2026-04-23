@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定目标日期的预测值的置信区间。
+此示例演示如何返回指定目标日期的预测值的置信区间。
 
 ```javascript editor-xlsx
-// How to calculate or predict a confidence interval for the forecast value in a spreadsheet.
+// How to calculate or predict a confidence interval for the forecast value.
 
-// Use a function to get a confidence interval for the forecast value at target date in a spreadsheet.
+// Use a function to get a confidence interval for the forecast value at target date.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

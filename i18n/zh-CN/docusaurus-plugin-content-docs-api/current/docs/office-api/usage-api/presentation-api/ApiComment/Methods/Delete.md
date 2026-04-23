@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-删除演示文稿中的批注。
+此示例演示如何删除批注。
 
 ```javascript editor-pptx
-// How to remove a comment in a presentation.
+// How to remove a comment.
 
 // Get all comments from the presentation and remove the first one.
 
@@ -48,4 +48,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The comment was just deleted from the current presentation.");
+
 ```

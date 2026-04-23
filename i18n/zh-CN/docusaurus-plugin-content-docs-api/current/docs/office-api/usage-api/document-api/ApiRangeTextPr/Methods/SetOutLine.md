@@ -1,17 +1,33 @@
 # SetOutLine
 
-设置当前文本块的文本轮廓。
+设置当前文本运行的文本轮廓。
 
-继承自 [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md)。
+## 语法
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建文本轮廓的笔画。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-为文档中的艺术字文本设置文本轮廓。
+在此示例中，艺术字文本具有文本轮廓。
 
 ```javascript editor-docx
-// How to set an outline to the text in a document.
+// How to set an outline to the text.
 
-// Create a text run object, change its property by outlining it with a color in a document.
+// Create a text run object, change its property by outlining it with a color.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

@@ -20,12 +20,12 @@ expression.GetAllDrawingObjects();
 
 ## 示例
 
-从文档中的文档内容获取绘图对象集合。
+此示例展示如何从文档内容获取绘图对象集合。
 
 ```javascript editor-docx
 // Get all drawing objects added to the document.
 
-// How to retrieve all drawing objects and fill with color its first one in a document.
+// How to retrieve all drawing objects and fill with color its first one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-为表单设置占位符文本。
+此示例为表单设置占位符文本。
 
 ```javascript editor-docx
 // Add text as a placeholder of the form.

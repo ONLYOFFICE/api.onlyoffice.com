@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-在电子表格中创建要插入到段落或表格中的新的较小文本块。
+此示例创建一个要插入到段落或表格中的新的较小文本块。
 
 ```javascript editor-xlsx
-// Create a text to construct a paragraph in a spreadsheet.
+// Create a text to construct a paragraph.
 
-// Add a text in a paragraph in a spreadsheet.
+// Add a text in a paragraph.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

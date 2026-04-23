@@ -23,12 +23,12 @@ expression.CreateNumbering(numType, startAt);
 
 ## 示例
 
-在电子表格中使用 sType 参数指定的编号字符或符号为段落创建项目符号。
+此示例使用 sType 参数指定的编号字符或符号为段落创建项目符号。
 
 ```javascript editor-xlsx
-// How to create a numbered paragraphs or sentences in a spreadsheet.
+// How to create a numbered paragraphs or sentences.
 
-// Create number bullets to number paragraphs in a spreadsheet.
+// Create number bullets to number paragraphs.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

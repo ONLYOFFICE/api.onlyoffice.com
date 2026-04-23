@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在演示文稿中设置超链接地址。
+此示例设置超链接地址。
 
 ```javascript editor-pptx
-// How to set link for a hyperlink in a presentation?
-
-// Set link and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -59,4 +55,5 @@ infoParagraph.AddText('Shape hyperlink updated link: ' + hyperlink.GetLinkedText
 
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
+
 ```

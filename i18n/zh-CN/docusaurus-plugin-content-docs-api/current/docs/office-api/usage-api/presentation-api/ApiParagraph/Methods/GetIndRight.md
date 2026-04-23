@@ -2,14 +2,28 @@
 
 返回段落右侧缩进。
 
-继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
+## 语法
+
+```javascript
+expression.GetIndRight();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
 
 ## 示例
 
-获取演示文稿中的段落右侧缩进。
+此示例展示如何获取段落右侧缩进。
 
 ```javascript editor-pptx
-// How to return a right side identation of a paragraph property in a presentation.
+// How to return a right side identation of a paragraph property.
 
 // Return a right side indentation of a text property from the slide.
 
@@ -40,4 +54,5 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
+
 ```

@@ -24,13 +24,9 @@ boolean
 
 ## 示例
 
-在演示文稿中向自定义 XML 节点插入属性。
+此示例演示如何将属性插入自定义 XML 节点。
 
 ```javascript editor-pptx
-// How to insert the attribute for a custom XML part in a presentation?
-
-// Insert the attribute and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,4 +44,5 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after insertion: ' + xml.GetXml());
+
 ```

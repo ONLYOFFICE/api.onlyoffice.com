@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表标题设置填充。
+此示例设置图表标题的填充。
 
 ```javascript editor-pptx
-// How to color a chart title in a presentation.
+// How to color a chart title.
 
-// Create a chart, set its properties and its title color in a presentation.
+// Create a chart, set its properties and its title color.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,5 @@ fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetTitle("Financial Overview", 13);
 chart.SetTitleFill(fill);
 slide.AddObject(chart);
+
 ```

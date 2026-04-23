@@ -22,13 +22,9 @@ expression.CreatePresetGeometry(sPreset);
 
 ## 示例
 
-在演示文稿中创建预设几何形状。
+此示例演示如何在演示文稿中创建预设几何图形。
 
 ```javascript editor-pptx
-// How can I create the preset geometry in a presentation?
-
-// Create the preset geometry in a presentation.
-
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 

@@ -22,15 +22,17 @@ number
 
 ## 示例
 
-在电子表格中返回 Gamma 函数的自然对数。
+此示例演示如何返回伽玛函数的自然对数。
 
 ```javascript editor-xlsx
-// How to calculate the natural logarithm of the gamma function in a spreadsheet.
+// How to calculate the natural logarithm of the gamma function.
 
-// Use a function to calculate the natural logarithm of the gamma function value in a spreadsheet.
+// Use a function to calculate the natural logarithm of the gamma function value.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.GAMMALN(0.5);
 worksheet.GetRange("B2").SetValue(ans);
+
+
 ```

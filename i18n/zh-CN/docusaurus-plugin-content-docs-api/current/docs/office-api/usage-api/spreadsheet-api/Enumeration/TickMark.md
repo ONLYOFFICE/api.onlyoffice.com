@@ -13,9 +13,10 @@
 - "none"
 - "out"
 
+
 ## 示例
 
-为垂直坐标轴指定 "cross" 主刻度线类型。
+此示例为垂直坐标轴指定 "cross" 主刻度线类型。
 
 ```javascript editor-xlsx
 // How to set major tick label symbol for the chart.

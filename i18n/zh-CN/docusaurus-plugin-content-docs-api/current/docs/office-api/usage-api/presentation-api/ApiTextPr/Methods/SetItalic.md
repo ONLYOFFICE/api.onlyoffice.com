@@ -14,7 +14,7 @@ expression.SetItalic(isItalic);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isItalic | 必需 | boolean |  | 指定当前文本块的内容显示为斜体。 |
+| isItalic | 必需 | boolean |  | 指定当前运行的内容显示为斜体。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在演示文稿中为文本字符设置斜体属性。
+此示例为文本字符设置斜体属性。
 
 ```javascript editor-pptx
-// How to make a text italic in a presentation.
+// How to make a text italic.
 
-// Get the text properties of the run and set it to italic in a presentation.
+// Get the text properties of the run and set it to italic.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font set to italicized letters using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

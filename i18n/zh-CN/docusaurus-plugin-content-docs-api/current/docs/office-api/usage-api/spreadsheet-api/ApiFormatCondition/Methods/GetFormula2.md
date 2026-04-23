@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-获取条件格式规则的第二个公式。
+此示例获取条件格式规则的第二个公式。
 
 ```javascript editor-xlsx
 // How to retrieve the second formula from conditional formatting rules.
@@ -50,4 +50,5 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
+
 ```

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回数据集中第 k 个最小值。例如，第五小的数字。
+此示例演示如何返回数据集中第 k 个最小值。例如，第五小的数字。
 
 ```javascript editor-xlsx
-// How to return the k-th smallest value from data set in a spreadsheet.
+// How to return the k-th smallest value from data set.
 
-// Use a function to get the smallest value from data set indicated in a spreadsheet.
+// Use a function to get the smallest value from data set indicated.
 
 const worksheet = Api.GetActiveSheet();
 

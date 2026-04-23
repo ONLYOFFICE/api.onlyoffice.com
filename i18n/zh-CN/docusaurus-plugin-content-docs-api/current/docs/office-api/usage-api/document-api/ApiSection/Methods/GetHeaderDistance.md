@@ -20,10 +20,10 @@ expression.GetHeaderDistance();
 
 ## 示例
 
-设置页眉距离，然后在文档中读取它。
+此示例设置页眉距离然后读取它。
 
 ```javascript editor-docx
-// How to get header distance of the section in a document.
+// How to get header distance of the section.
 
 // Retrieve the current distance between the top of the page and the header.
 

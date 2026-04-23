@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定超链接所包含的文档部分的 Range 对象。
+此示例展示如何获取表示指定超链接中所包含文档部分的 Range 对象。
 
 ```javascript editor-docx
-// Get the range where the hyperlink is located in a document.
+// Get the range where the hyperlink is located.
 
-// Make the hyperlink range bold in a document.
+// Make the hyperlink range bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

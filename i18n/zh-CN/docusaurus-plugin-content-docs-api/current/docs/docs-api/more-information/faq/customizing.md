@@ -8,9 +8,7 @@ sidebar_position: -7
 
 以下选项可用于定制 ONLYOFFICE 文档版本（白标化），修改**关于**页面显示信息（所有编辑器用户可见）：
 
-:::note
-请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx)用户。
-:::
+> 请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx)用户。
 
 - *editorConfig.customization.customer* 选项：
 
@@ -200,6 +198,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugin-and-macros/structure/configuration/configuration.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
+其中 *editorConfig.plugins.autostart* 是您希望在 ONLYOFFICE 文档启动时自动启动的插件的 GUID 数组（在插件 [config.json](../../../plugin-and-macros/plugins/fundamentals/configuration/config-json.md#guid) 文件中定义），*editorConfig.plugins.pluginsData* 是您希望 ONLYOFFICE 文档用户可以使用的所有插件的 **config.json** 配置文件数组。
 
 有关启用 ONLYOFFICE 文档插件的更多信息，请参见[此页面](../../usage-api/config/editor/plugins.md)。

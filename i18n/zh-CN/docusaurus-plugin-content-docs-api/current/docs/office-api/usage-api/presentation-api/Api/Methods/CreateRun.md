@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-创建文本块并将其插入文档。
+此示例创建一个文本域并将其插入到文档中。
 
 ```javascript editor-pptx
-// How to add text in a presentation.
+// How to add text.
 
-// Add an text run object that represents a text in a presentation.
+// Add an ApiRun object that represents a text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,5 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

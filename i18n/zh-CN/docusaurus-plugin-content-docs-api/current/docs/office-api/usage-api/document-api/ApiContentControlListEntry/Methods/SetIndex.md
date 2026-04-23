@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置文档中列表项集合中内容控件列表项的索引。
+此示例设置列表项集合中内容控件列表项的索引。
 
 ```javascript editor-docx
-// How to set index for a content control list entry in a document?
-
-// Set index and display the result in a document.
-
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let paragraph = doc.GetElement(0);

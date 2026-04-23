@@ -20,13 +20,14 @@ expression.GetParentTableCell();
 
 ## 示例
 
-获取文档中包含当前内容控件的表格单元格。
+此示例演示如何获取包含当前内容控件的表格单元格。
 
 ```javascript editor-docx
-// Create a block content control in the table cell, return this cell as a parent of the container, and set a black top border to this cell.
+// Creates a block content control in the table cell, returns this cell as a parent of the container, and sets a black top border to this cell.
 
-// Create a block level container, add it to the table in the current document, and return the parent table cell object.
+// How to return a parent table cell of the ApiBlockLvlSdt object.
 
+// Creates a block level container, adds it to the table in the current document, and returns the parent ApiTableCell object.
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

@@ -20,13 +20,13 @@ expression.Update();
 
 ## 示例
 
-更新电子表格中的数据透视表。
+此示例展示如何更新数据透视表。
 
 ```javascript editor-xlsx
-// How to update a table in a spreadsheet.
+// How to update a table.
 
-// Create a pivot table, add data to it then update it in a spreadsheet.
-
+// Create a pivot table, add data to it then update it. 
+ 
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');

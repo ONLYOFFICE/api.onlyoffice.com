@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中透视字段的紧凑行布局。
+此示例展示如何获取透视字段的布局紧凑行。
 
 ```javascript editor-xlsx
-// How to get a compact row layout of a pivot field in a spreadsheet.
+// How to get a compact row layout of a pivot field.
 
-// Create a pivot table, add data to it then get a layout compact row of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get a layout compact row of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

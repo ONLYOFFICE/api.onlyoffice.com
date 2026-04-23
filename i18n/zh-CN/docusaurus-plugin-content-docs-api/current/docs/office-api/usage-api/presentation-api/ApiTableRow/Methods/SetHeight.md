@@ -22,12 +22,12 @@ expression.SetHeight(nValue);
 
 ## 示例
 
-在演示文稿中设置表格行的高度。
+此示例设置表格行的高度。
 
 ```javascript editor-pptx
-// How to set a height of the row in a presentation.
+// How to set a height of the row.
 
-// Create a table and change its rows height in a presentation.
+// Create a table and change its rows height.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,4 +38,5 @@ row.SetHeight(30 * 36000);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

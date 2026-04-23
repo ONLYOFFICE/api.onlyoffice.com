@@ -22,12 +22,10 @@ expression.GetRow(nIndex);
 
 ## 示例
 
-如何从 PDF 文档中的表格获取行对象。
+如何从表格获取行对象。
 
 ```javascript editor-pdf
-// Create a table, add rows and columns, then get its row by index in a PDF document.
-
-// Get the row for a table in a PDF document.
+// Create a table, add rows and columns, then get its row by index.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在 PDF 文档中将像素转换为磅。
+此示例展示如何将像素转换为磅。
 
 ```javascript editor-pdf
-// How to convert pixels to points in a PDF document?
-
-// Convert pixels to points using the PDF document API.
-
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);
 
@@ -42,4 +38,5 @@ paragraph.AddText(pixels + ' pixels are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
+
 ```

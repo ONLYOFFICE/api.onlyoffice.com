@@ -2,14 +2,28 @@
 
 返回段落内容对齐方式。
 
-继承自 [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md)。
+## 语法
+
+```javascript
+expression.GetJc();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"left" \| "right" \| "both" \| "center" \| undefined
 
 ## 示例
 
-获取演示文稿中的段落内容对齐方式。
+此示例展示如何获取段落内容对齐方式。
 
 ```javascript editor-pptx
-// How to set a justification of a paragraph property in a presentation.
+// How to set a justification of a paragraph property.
 
 // Change a justification type of a text property from the slide.
 
@@ -39,4 +53,5 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
+
 ```

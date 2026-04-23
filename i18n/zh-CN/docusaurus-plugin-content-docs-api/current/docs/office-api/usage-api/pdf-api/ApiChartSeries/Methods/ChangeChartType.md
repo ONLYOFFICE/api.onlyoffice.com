@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更改图表类的第一个系列的类型并将新类型插入 PDF 文档。
+此示例更改 ApiChart 类第一个系列的类型并将新类型插入到 PDF 文档中。
 
 ```javascript editor-pdf
-// How to change a chart type in a PDF document.
+// How to change a chart type.
 
-// Change a chart type to the "area" type in a PDF document.
+// Change a chart type to the "area" type.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -57,4 +57,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

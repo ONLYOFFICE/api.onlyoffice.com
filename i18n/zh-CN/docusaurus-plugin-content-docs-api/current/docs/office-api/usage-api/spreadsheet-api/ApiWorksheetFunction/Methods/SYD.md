@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定期间资产的年数总和折旧。
+此示例演示如何返回资产在指定期间的年数总和折旧。
 
 ```javascript editor-xlsx
-// How to calculate the sum-of-years' digits depreciation in a spreadsheet.
+// How to calculate the sum-of-years' digits depreciation.
 
-// Use a function to estimate the sum-of-years' digits depreciation of an asset in a spreadsheet.
+// Use a function to estimate the sum-of-years' digits depreciation of an asset.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

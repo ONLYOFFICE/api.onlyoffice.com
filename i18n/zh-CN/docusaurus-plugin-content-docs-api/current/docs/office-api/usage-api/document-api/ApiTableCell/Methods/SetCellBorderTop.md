@@ -2,11 +2,32 @@
 
 设置将显示在当前表格单元格顶部的边框。
 
-继承自 [ApiTableCellPr.SetCellBorderTop](../../ApiTableCellPr/Methods/SetCellBorderTop.md)。
+## 语法
+
+```javascript
+expression.SetCellBorderTop(sType, nSize, nSpace, r, g, b);
+```
+
+`expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | 必需 | [BorderType](../../Enumeration/BorderType.md) |  | 单元格顶部边框样式。 |
+| nSize | 必需 | [pt_8](../../Enumeration/pt_8.md) |  | 当前单元格顶部边框的宽度，以点的八分之一为单位。 |
+| nSpace | 必需 | [pt](../../Enumeration/pt.md) |  | 表格单元格顶部用于放置此边框的间距偏移量，以磅为单位。 |
+| r | 必需 | [byte](../../Enumeration/byte.md) |  | 红色分量值。 |
+| g | 必需 | [byte](../../Enumeration/byte.md) |  | 绿色分量值。 |
+| b | 必需 | [byte](../../Enumeration/byte.md) |  | 蓝色分量值。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-设置将显示在表格单元格顶部的边框。
+此示例设置将显示在表格单元格顶部的边框。
 
 ```javascript editor-docx
 // How to add border to the top of the cell.

@@ -3,11 +3,25 @@
 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。
 对于内联表单将返回 null 值。
 
-继承自 [ApiFormBase.GetWrapperShape](../../ApiFormBase/Methods/GetWrapperShape.md)。
+## 语法
+
+```javascript
+expression.GetWrapperShape();
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiShape](../../../text-document-api/ApiShape/ApiShape.md)
 
 ## 示例
 
-获取文档中放置表单的形状，以控制固定大小表单框架的位置和大小。
+此示例展示如何获取放置表单的形状，用于控制固定大小表单框架的位置和大小。
 
 ```javascript editor-forms
 // Get wrapper shape of the text form.

@@ -23,7 +23,7 @@ expression.AddColumns(nCount, isBefore);
 
 ## 示例
 
-在文档中向表格添加新列（多列）。
+此示例向表格添加新列。
 
 ```javascript editor-docx
 // Insert new columns after the current cell.

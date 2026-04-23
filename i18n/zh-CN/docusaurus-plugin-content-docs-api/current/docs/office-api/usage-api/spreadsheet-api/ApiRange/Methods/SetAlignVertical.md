@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置单元格范围中文本的垂直对齐方式。
+此示例设置单元格范围中文本的垂直对齐方式。
 
 ```javascript editor-xlsx
 // How to change the vertical alignment of the cell content.
 
-// Change the vertical alignment of the cell range content to distributed.
+// Change the vertical alignment of the ApiRange content to distributed.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:D5");

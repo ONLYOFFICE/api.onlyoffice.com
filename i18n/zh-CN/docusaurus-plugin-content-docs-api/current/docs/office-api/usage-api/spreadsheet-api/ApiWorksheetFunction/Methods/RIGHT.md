@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-在电子表格中从文本字符串的末尾返回指定数量的字符。
+此示例演示如何从文本字符串的末尾返回指定数量的字符。
 
 ```javascript editor-xlsx
-// How to get characters from the end of a string in a spreadsheet.
+// How to get characters from the end of a string.
 
-// Use a function to return n characters from the right part of a text in a spreadsheet.
+// Use a function to return n characters from the right part of a text.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

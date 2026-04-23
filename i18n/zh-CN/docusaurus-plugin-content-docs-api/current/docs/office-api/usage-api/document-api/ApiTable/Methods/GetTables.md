@@ -20,12 +20,12 @@ expression.GetTables();
 
 ## 示例
 
-获取文档中指定表格的嵌套表格。
+此示例展示如何获取指定表格的嵌套表格。
 
 ```javascript editor-docx
-// How to get all tables from the table object in a document.
+// How to get all tables from the table object.
 
-// Get array of tables and update their width in a document.
+// Get array of tables and update their width.
 
 let doc = Api.GetDocument();
 let table1 = Api.CreateTable(3, 3);

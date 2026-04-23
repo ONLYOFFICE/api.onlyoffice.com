@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中使用预定义符号设置次要刻度线。
+如何使用预定义符号设置次刻度线。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and minor tick mark for vertical axis in a PDF document.
-
-// Set vert axis minor tick mark using a chart object in a PDF document.
+// Create a chart, set its properties and minor tick mark for vertical axis.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,4 +49,5 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
+
 ```

@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-在电子表格中将指定范围的值设置到指定系列。
+此示例将指定范围的值设置到指定系列。
 
 ```javascript editor-xlsx
-// How to add values to series from the indicated range using addresses in a spreadsheet.
+// How to add values to series from the indicated range using addresses.
 
 // Fill series with values obtained from the worksheet cells.
 

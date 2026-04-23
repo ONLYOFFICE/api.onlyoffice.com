@@ -1,7 +1,7 @@
 # MoveCursorToPos
 
-将光标移动到当前文本块的指定位置。
-如果当前文本块未分配给任何文档部分，则返回 -**false**。否则，此方法返回 -**true**。
+将光标移动到当前文本运行的指定位置。
+如果当前运行未分配给任何文档部分，则返回 -**false**。否则，此方法返回 -**true**。
 如果文档中有任何选区，将被移除。
 
 ## 语法
@@ -10,7 +10,7 @@
 expression.MoveCursorToPos(nPos);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -24,15 +24,16 @@ boolean
 
 ## 示例
 
-在文档中将光标放置在文本的指定位置。
+此示例展示如何将光标放置在文本中的指定位置。
 
 ```javascript editor-docx
-// How to move the cursor to the specific position of the text in a document.
+// How to move the cursor to the specific position of the text.
 
-// Add text to the paragraph and move the cursor to the 16 position in a document.
+// Add text to the paragraph and move the cursor to the 16 position.
 
 let doc = Api.GetDocument();
 let para = doc.GetElement(0);
 let run = para.AddText("The quick brown fox jumps over the lazy dog");
 run.MoveCursorToPos(16);
+
 ```

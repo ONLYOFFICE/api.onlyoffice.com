@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为图表标题设置填充。
+此示例设置图表标题的填充。
 
 ```javascript editor-xlsx
-// How to color a chart title in a spreadsheet.
+// How to color a chart title.
 
-// Add a solid color for a chart title in a spreadsheet.
+// Add a solid color for a chart title.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

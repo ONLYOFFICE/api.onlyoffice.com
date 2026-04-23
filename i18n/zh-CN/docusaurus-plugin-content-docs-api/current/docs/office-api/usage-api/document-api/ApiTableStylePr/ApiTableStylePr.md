@@ -2,6 +2,7 @@
 
 表示 ApiTableStylePr 类。
 
+
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -11,7 +12,7 @@
 | [GetTableCellPr](./Methods/GetTableCellPr.md) | [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md) | 返回将应用于表格中符合条件格式类型的所有单元格的表格单元格属性集。 |
 | [GetTablePr](./Methods/GetTablePr.md) | [ApiTablePr](../ApiTablePr/ApiTablePr.md) | 返回将应用于表格中符合条件格式类型的所有区域的表格属性集。 |
 | [GetTableRowPr](./Methods/GetTableRowPr.md) | [ApiTableRowPr](../ApiTableRowPr/ApiTableRowPr.md) | 返回将应用于表格中符合条件格式类型的所有行的表格行属性集。 |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回将应用于表格中符合条件格式类型的所有文本块的文本属性集。 |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 返回将应用于表格中符合条件格式类型的所有文本运行的文本运行属性集。 |
 | [GetType](./Methods/GetType.md) | [TableStyleOverrideType](../Enumeration/TableStyleOverrideType.md) | 返回当前表格条件样式的类型。 |
 | [SetParaPr](./Methods/SetParaPr.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | 设置当前表格样式属性的段落属性。 |
 | [SetTableCellPr](./Methods/SetTableCellPr.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | 设置当前表格样式属性的表格单元格属性。 |

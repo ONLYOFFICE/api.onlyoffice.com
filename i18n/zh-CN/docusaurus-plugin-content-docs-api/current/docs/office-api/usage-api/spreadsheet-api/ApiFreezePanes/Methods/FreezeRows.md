@@ -22,12 +22,12 @@ expression.FreezeRows(count);
 
 ## 示例
 
-在电子表格中冻结第一行。
+此示例冻结首行。
 
 ```javascript editor-xlsx
-// How to freeze rows using their indices in a spreadsheet.
+// How to freeze rows using their indices.
 
-// Get freeze panes and freeze a row using its index in a spreadsheet.
+// Get freeze panes and freeze a row using its index.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

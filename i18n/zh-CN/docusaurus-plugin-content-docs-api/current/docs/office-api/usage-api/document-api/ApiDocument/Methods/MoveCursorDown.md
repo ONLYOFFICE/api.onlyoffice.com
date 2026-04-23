@@ -23,13 +23,12 @@ boolean
 
 ## 示例
 
-在文档中将光标向下移动。
+此示例展示如何在文档中向下移动光标。
 
 ```javascript editor-docx
-// How to move the cursor down by a specified number of lines in a document.
+// How to move the cursor down by a specified number of lines.
 
-// Create multiple paragraphs and move cursor in a document.
-
+// Create multiple paragraphs and move cursor.
 let doc = Api.GetDocument();
 const paragraphCount = 5;
 for (let i = 0; i < paragraphCount; i++) {
@@ -44,4 +43,5 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddText("Current line is: ");
 paragraph.AddText(doc.GetCurrentSentence());
 doc.Push(paragraph);
+
 ```

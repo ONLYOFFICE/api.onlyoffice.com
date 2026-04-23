@@ -20,7 +20,7 @@ expression.GetBorderColor();
 
 ## 示例
 
-获取文档中表单的边框颜色。
+此示例展示如何获取表单的边框颜色。
 
 ```javascript editor-docx
 // How to get the border color of a text form.
@@ -36,4 +36,5 @@ let borderColor = textForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);
+
 ```

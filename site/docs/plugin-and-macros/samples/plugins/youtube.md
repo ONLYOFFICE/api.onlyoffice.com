@@ -21,7 +21,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.
 
-You can remove it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+You can remove it following the [desktop](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 The plugin guid: `{38E022EA-AD92-45FC-B22B-49DF39746DB4}`.
 
@@ -130,20 +130,20 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 
 ## Methods and events
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
-- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
-- [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.height](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
-- [info.mmToPx](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
-- [info.objectId](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#objectId)
-- [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
-- [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onTranslate](/docs/plugin-and-macros/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
+- [resizeWindow](/docs/plugin-and-macros/plugins/customization/windows-and-panels.md#interacting-with-a-window)
+- [info.data](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.height](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#height)
+- [info.imgSrc](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
+- [info.mmToPx](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
+- [info.objectId](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#objectId)
+- [info.resize](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#resize)
+- [info.width](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## Supports
 

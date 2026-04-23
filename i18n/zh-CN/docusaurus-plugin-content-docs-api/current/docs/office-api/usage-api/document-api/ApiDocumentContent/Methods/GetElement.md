@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-通过位置获取文档内容中的元素。
+此示例展示如何通过元素在文档内容中的位置获取元素。
 
 ```javascript editor-docx
-// How to get element knowing its index in a document.
+// How to get element knowing its index.
 
-// Get the first paragraph and add text to it in a document.
+// Get the first paragraph and add text to it.
 
 let doc = Api.GetDocument();
 let section = doc.GetFinalSection();

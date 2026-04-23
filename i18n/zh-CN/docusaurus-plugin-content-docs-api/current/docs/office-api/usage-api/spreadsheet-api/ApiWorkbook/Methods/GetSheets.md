@@ -20,13 +20,9 @@ expression.GetSheets();
 
 ## 示例
 
-获取电子表格中工作簿的所有工作表。
+此示例展示如何从工作簿获取所有工作表。
 
 ```javascript editor-xlsx
-// How can I get the sheets using a workbook in a spreadsheet?
-
-// Get the sheets for a workbook in a spreadsheet.
-
 Api.AddSheet('new_sheet_name');
 
 const workbook = Api.GetActiveWorkbook();
@@ -35,4 +31,5 @@ let sheetName1 = sheets[0].GetName();
 let sheetName2 = sheets[1].GetName();
 sheets[1].GetRange("A1").SetValue(sheetName1);
 sheets[1].GetRange("A2").SetValue(sheetName2);
+
 ```

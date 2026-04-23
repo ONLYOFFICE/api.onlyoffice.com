@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-检查文档中的内容控件是否为组合框列表。
+此示例展示如何检查内容控件是否为组合框列表。
 
 ```javascript editor-docx
-// How to is combo box for an inline content control in a document?
-
-// Is combo box and display the result in a document.
-
 let doc = Api.GetDocument();
 let comboboxControl = doc.AddComboBoxContentControl();
 let isComboBox = comboboxControl.IsComboBox();

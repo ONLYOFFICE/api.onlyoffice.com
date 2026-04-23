@@ -22,12 +22,12 @@ expression.AddText(text);
 
 ## 示例
 
-向电子表格中的段落添加文本。
+此示例向段落添加一些文本。
 
 ```javascript editor-xlsx
-// How to add raw text to the paragraph in a spreadsheet.
+// How to add raw text to the paragraph.
 
-// Change content of the shape by adding a text in a spreadsheet.
+// Change content of the shape by adding a text.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

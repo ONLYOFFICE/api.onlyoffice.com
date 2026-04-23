@@ -20,12 +20,12 @@ object
 
 ## 示例
 
-选中文档中的当前单词。
+此示例展示如何选择当前单词。
 
 ```javascript editor-docx
-// How to select the word at the specific cursor position in a document.
+// How to select the word at the specific cursor position.
 
-// Move the cursor to the position 16 and select the word in a document.
+// Move the cursor to the position 16 and select the word.
 
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);
@@ -37,4 +37,5 @@ doc.SelectCurrentWord();
 let para2 = Api.CreateParagraph();
 para2.AddText("The selected text is " + doc.GetRangeBySelect().GetText());
 doc.Push(para2);
+
 ```

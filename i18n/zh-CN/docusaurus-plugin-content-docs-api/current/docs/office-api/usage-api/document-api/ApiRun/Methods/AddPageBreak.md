@@ -8,7 +8,7 @@
 expression.AddPageBreak();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-添加分页符并从新页面开始下一个元素。
+此示例添加分页符，并从新页开始下一个元素。
 
 ```javascript editor-docx
 // How to start a sentence from the new page.
 
-// Break two lines of a text run with a page break.
+// Break two lines of a text run with a page break. 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

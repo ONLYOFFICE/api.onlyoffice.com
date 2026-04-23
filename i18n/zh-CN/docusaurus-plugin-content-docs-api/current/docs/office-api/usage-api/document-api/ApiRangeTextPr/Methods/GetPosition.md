@@ -2,16 +2,30 @@
 
 从当前文本属性获取文本位置，以半磅（1/144 英寸）为单位。
 
-继承自 [ApiTextPr.GetPosition](../../ApiTextPr/Methods/GetPosition.md)。
+## 语法
+
+```javascript
+expression.GetPosition();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[hps](../../Enumeration/hps.md)
 
 ## 示例
 
-获取文档中文本的位置。
+此示例展示如何查明文本的位置。
 
 ```javascript editor-docx
-// Get the location index of the text properties in a document.
+// Get the location index of the text properties.
 
-// How to know the text position in a document.
+// How to know the text position.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

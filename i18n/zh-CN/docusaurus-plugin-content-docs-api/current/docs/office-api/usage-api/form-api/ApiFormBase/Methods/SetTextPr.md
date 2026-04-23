@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-为表单设置文本属性。
+此示例为表单设置文本属性。
 
 ```javascript editor-forms
 // Add text properties to the text form.

@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-在电子表格中从文本字符串的开头返回指定数量的字符。
+此示例演示如何从文本字符串的开头返回指定数量的字符。
 
 ```javascript editor-xlsx
-// How to find the number of characters starting from the index in a spreadsheet.
+// How to find the number of characters starting from the index.
 
-// Use a function to get a length of a text starting from the index in a spreadsheet.
+// Use a function to get a length of a text starting from the index.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

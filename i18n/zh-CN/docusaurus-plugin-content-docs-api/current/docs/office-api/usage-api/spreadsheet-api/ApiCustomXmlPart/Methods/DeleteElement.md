@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-从电子表格中的自定义 XML 部件删除 XML 元素。
+此示例展示如何从自定义 XML 部件中删除 XML 元素。
 
 ```javascript editor-xlsx
-// How do I delete the element in a spreadsheet?
-
-// Delete the element using a custom XML part object in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -40,4 +36,5 @@ const xml = xmlManager.Add(xmlString);
 
 xml.DeleteElement('/content/extra');
 worksheet.GetRange('A1').SetValue('XML after deletion: ' + xml.GetXml());
+
 ```

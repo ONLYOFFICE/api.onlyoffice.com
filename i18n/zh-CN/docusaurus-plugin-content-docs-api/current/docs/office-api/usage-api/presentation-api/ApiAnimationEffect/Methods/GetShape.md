@@ -20,13 +20,9 @@ expression.GetShape();
 
 ## 示例
 
-获取演示文稿中与动画效果关联的形状。
+此示例获取与动画效果关联的形状。
 
 ```javascript editor-pptx
-// How do I get the shape in a presentation?
-
-// Get the shape using an animation effect object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -57,4 +53,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Animated object type: ' + shapeType);
 slide.AddObject(infoShape);
+
 ```

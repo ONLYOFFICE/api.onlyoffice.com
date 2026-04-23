@@ -22,10 +22,10 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-在文档中设置批注作者名称。
+此示例设置批注作者的姓名。
 
 ```javascript editor-docx
-// How to change a comment's author name in a document.
+// How to change a comment's author name.
 
 // Get all comments from the presentation and set an author for the first one.
 

@@ -1,6 +1,6 @@
 # SetStrikeout
 
-指定文本块的内容显示为中间有一条水平线穿过。
+指定运行的内容显示为中间有一条水平线穿过。
 
 ## 语法
 
@@ -14,7 +14,7 @@ expression.SetStrikeout(isStrikeout);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isStrikeout | 必需 | boolean |  | 指定当前文本块的内容显示为删除线。 |
+| isStrikeout | 必需 | boolean |  | 指定当前运行的内容显示为删除线。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定在电子表格中 run 的内容以通过行中心的单条水平线显示。
+此示例指定文本运行的内容显示时在行的中心有一条水平线。
 
 ```javascript editor-xlsx
-// How to strike out a text with one line in a spreadsheet.
+// How to strike out a text with one line.
 
-// Cross out a text with one line in a spreadsheet.
+// Cross out a text with one line.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

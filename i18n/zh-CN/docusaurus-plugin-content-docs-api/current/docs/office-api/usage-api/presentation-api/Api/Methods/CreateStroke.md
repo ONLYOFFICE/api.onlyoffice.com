@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-在演示文稿中创建笔触。
+此示例演示如何创建笔触。
 
 ```javascript editor-pptx
-// How to add a stroke to the shape in a presentation.
+// How to add a stroke to the shape.
 
-// Add solid fill and stroke to the shape properties in a presentation.
+// Add solid fill and stroke to the shape properties.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,4 +43,5 @@ const stroke = Api.CreateStroke(3 * 36000, fill1);
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
+
 ```

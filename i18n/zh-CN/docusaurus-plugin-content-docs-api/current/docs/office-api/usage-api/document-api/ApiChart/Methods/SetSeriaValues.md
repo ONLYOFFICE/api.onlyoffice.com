@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为文档中指定的图表系列设置值。
+此示例为指定的图表系列设置值。
 
 ```javascript editor-docx
-// How to set values to the specified chart object in a document.
+// How to set values to the specified ApiChart object.
 
-// Create a chart, set its properties and its series values in a document.
+// Create a chart, set its properties and its series values.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中指定的图形对象设置轮廓属性。
+此示例设置指定图形对象的轮廓属性。
 
 ```javascript editor-docx
-// How to outline the drawing with the stroke in a document.
+// How to outline the drawing with the stroke.
 
-// Set the borders of the shape in a document.
+// Set the borders of the shape.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

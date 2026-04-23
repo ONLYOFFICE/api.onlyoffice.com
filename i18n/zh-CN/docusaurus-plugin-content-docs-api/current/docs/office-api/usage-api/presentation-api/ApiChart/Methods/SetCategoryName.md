@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表设置类别名称。
+此示例为图表设置类别名称。
 
 ```javascript editor-pptx
-// How to rename a chart category in a presentation.
+// How to rename a chart category.
 
-// Create a chart then name its category in a presentation.
+// Create a chart then name its category.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,4 +47,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

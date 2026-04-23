@@ -1,17 +1,33 @@
 # SetTextFill
 
-设置当前文本块的文本填充。
+设置当前文本运行的文本填充。
 
-继承自 [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md)。
+## 语法
+
+```javascript
+expression.SetTextFill(oApiFill);
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充文本颜色的颜色或图案。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-在电子表格中为当前文本 run 设置文本填充。
+此示例设置当前文本运行的文本填充。
 
 ```javascript editor-xlsx
-// How to color a text with solid fill in a spreadsheet.
+// How to color a text with solid fill.
 
-// Set color a text using solid color fill in a spreadsheet.
+// Set color a text using solid color fill.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

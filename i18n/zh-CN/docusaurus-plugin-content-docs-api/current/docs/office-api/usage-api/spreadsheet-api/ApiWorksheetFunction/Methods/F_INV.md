@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回（左尾）F 概率分布的逆函数：若 p = F.DIST(x,...)，则 F.INV(p,...) = x。
+此示例演示如何返回（左尾）F 概率分布的反函数：如果 p = F.DIST(x,...)，则 F.INV(p,...) = x。
 
 ```javascript editor-xlsx
-// How to get the inverse of the (left-tailed) F probability distribution in a spreadsheet.
+// How to get the inverse of the (left-tailed) F probability distribution.
 
-// Use function to calculate an inverse of the F probability distribution in a spreadsheet.
+// Use function to calculate an inverse of the F probability distribution.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

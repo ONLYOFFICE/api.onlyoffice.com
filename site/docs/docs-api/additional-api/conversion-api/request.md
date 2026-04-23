@@ -68,7 +68,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | title | string | optional | Defines the converted file name. |
 | token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). |
 | url | string | required | Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-| watermark | object | optional | Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
+| watermark | object | optional | Defines a JSON object containing the [properties](../../../plugin-and-macros/plugins/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
 | watermark.align | integer | optional | Defines the vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
 | watermark.fill | integer[] \| string | optional | Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
 | watermark.height | integer | optional | Defines the watermark height measured in millimeters. |

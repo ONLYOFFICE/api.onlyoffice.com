@@ -110,7 +110,7 @@ New-Guid
 3. 浏览到您的 `hello-world-plugin` 文件夹。
 4. 点击**确定**。
 
-[桌面版安装详细指南](../../tutorials/installing/onlyoffice-desktop-editors.md)
+[桌面版安装详细指南](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)
 
 ### ONLYOFFICE Docs（本地部署）
 
@@ -120,7 +120,7 @@ New-Guid
 2. 重启 Document Server。
 3. 刷新浏览器。
 
-[Docs 安装详细指南](../../tutorials/installing/onlyoffice-docs-on-premises.md)
+[Docs 安装详细指南](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)
 
 ## 第 4 步：测试插件
 
@@ -181,9 +181,9 @@ function insertFormattedText() {
 
 **深入学习：**
 
-- [插件结构与配置](../../structure/configuration/configuration.md)
-- [完整 API 参考](../../interacting-with-editors/overview/overview.md)
-- [UI 自定义选项](../../customization/toolbar.md)
+- [插件结构与配置](../../plugins/fundamentals/configuration/config-json.md)
+- [完整 API 参考](../../plugins/interacting-with-editors/overview/overview.md)
+- [UI 自定义选项](../../plugins/customization/toolbar.md)
 
 **浏览示例：**
 

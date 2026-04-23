@@ -20,12 +20,12 @@ expression.GetTablePr();
 
 ## 示例
 
-获取将应用于表格中与条件格式类型匹配的所有区域的表格属性集。
+此示例展示如何获取将应用于表格中符合条件格式类型的所有区域的表格属性集。
 
 ```javascript editor-docx
-// How to get table properties and set its bottom border in a document.
+// How to get table properties and set its bottom border.
 
-// Update the table style by setting its border in a document.
+// Update the table style by setting its border.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,7 +20,7 @@ expression.GetParentLayout();
 
 ## 示例
 
-演示如何获取绘图对象的父幻灯片版式。
+此示例演示如何获取绘图的父幻灯片版式。
 
 ```javascript editor-pptx
 // How to get a parent layout of a slide shape.
@@ -46,4 +46,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
+
 ```

@@ -1,6 +1,7 @@
 # ApiDateForm
 
-ApiDateForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
+表示 ApiDateForm 类。
+
 
 ## 方法
 

@@ -22,13 +22,9 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-在电子表格中设置工作簿的版本。
+此示例演示如何设置工作簿的版本。
 
 ```javascript editor-xlsx
-// How to set version for a core properties in a spreadsheet?
-
-// Set version and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -46,4 +42,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Version: " + version);
+
 ```

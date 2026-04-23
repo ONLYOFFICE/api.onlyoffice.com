@@ -20,13 +20,9 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-获取当前演示文稿中的所有 OLE 对象。
+此示例演示如何获取当前演示文稿中的所有 OLE 对象。
 
 ```javascript editor-pptx
-// How can I get all ole objects using a presentation in a presentation?
-
-// Get all ole objects for a presentation in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -54,4 +50,5 @@ const oleObjects = presentation.GetAllOleObjects();
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('OLE Objects: ' + oleObjects.length);
+
 ```

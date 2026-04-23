@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-获取并显示演示文稿中的定时换片设置。
+此示例获取定时前进设置并显示。
 
 ```javascript editor-pptx
-// How can I get the advance on time using a slide show transition in a presentation?
-
-// Get the advance on time for a slide show transition in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -50,4 +46,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Time: ' + advanceOnTime);
 slide.AddObject(shape);
+
 ```

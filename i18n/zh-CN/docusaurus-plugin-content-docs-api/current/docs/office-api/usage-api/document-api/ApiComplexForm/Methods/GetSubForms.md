@@ -20,13 +20,9 @@ expression.GetSubForms();
 
 ## 示例
 
-获取文档中复杂表单的所有子表单。
+此示例演示如何获取复合表单的所有子表单。
 
 ```javascript editor-docx
-// How can I get the sub forms using a complex form in a document?
-
-// Get the sub forms for a complex form in a document.
-
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Email", "placeholder": "Start to fill complex form"});
 complexForm.Add(Api.CreateTextForm({"placeholder" : "username"}));
@@ -39,4 +35,5 @@ paragraph.AddElement(complexForm);
 paragraph.AddLineBreak();
 let subForms = complexForm.GetSubForms();
 paragraph.AddText("Number of subforms: " + subForms.length);
+
 ```

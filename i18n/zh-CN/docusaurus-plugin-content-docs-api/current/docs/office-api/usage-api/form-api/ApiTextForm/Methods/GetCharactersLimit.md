@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-获取文档中文本字段的字符限制。
+此示例展示如何获取文本字段的字符数限制。
 
 ```javascript editor-forms
 // How to display the characters limit of the text form.

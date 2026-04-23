@@ -20,12 +20,12 @@ expression.GetImageHeight();
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+此示例设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to get the height of the image in a document.
+// How to get the height of the image. 
 
-// Get the watermark image height in a document.
+// Get the watermark image height.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

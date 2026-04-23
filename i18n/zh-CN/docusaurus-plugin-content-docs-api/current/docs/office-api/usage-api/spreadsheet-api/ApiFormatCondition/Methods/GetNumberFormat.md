@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-获取条件格式规则的数字格式。
+此示例获取条件格式规则的数字格式。
 
 ```javascript editor-xlsx
 // How to retrieve number formatting from conditional formatting rules.
@@ -48,4 +48,5 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
+
 ```

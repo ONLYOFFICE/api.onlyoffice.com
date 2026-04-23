@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-获取电子表格中与平均值的标准差数。
+此示例演示如何获取与平均值的标准偏差数。
 
 ```javascript editor-xlsx
-// How to check the standard deviation setting for above average conditions in a spreadsheet.
+// How to check the standard deviation setting for above average conditions.
 
 // Get the number of standard deviations used in the conditional formatting rule.
 
@@ -46,4 +46,5 @@ let numStdDev = condition.GetNumStdDev();
 
 worksheet.GetRange("C1").SetValue("Std Deviations:");
 worksheet.GetRange("C2").SetValue(numStdDev.toString());
+
 ```

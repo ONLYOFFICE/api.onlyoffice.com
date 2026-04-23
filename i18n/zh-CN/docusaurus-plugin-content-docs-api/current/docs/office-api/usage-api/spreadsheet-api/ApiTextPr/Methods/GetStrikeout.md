@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中文本的删除线属性。
+此示例使用其属性获取文本删除线。
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out or not in a spreadsheet.
+// How to find out whether a text is stroke out or not.
 
-// Get cross out property of a text in a spreadsheet.
+// Get cross out property of a text.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -22,13 +22,9 @@ expression.SetId(id);
 
 ## 示例
 
-设置文档中容器的 ID。
+此示例演示如何设置容器的 ID。
 
 ```javascript editor-docx
-// How do I set id in a document?
-
-// Set id using a block-level content control object in a document.
-
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.SetId("4815162342");
@@ -39,4 +35,5 @@ let contentControlId = blockLvlSdt.GetId();
 let paragraph = Api.CreateParagraph();
 paragraph.AddText("Id: " + contentControlId);
 doc.Push(paragraph);
+
 ```

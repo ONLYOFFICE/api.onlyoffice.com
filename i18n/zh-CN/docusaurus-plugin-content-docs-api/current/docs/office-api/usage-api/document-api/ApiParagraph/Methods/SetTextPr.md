@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置段落文本属性。
+此示例设置段落文本属性。
 
 ```javascript editor-docx
-// Add text properties to the paragraph in a document.
+// Add text properties to the paragraph.
 
-// Make paragraph text bold and bigger in a document.
+// Make paragraph text bold and bigger.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

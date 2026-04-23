@@ -20,13 +20,9 @@ expression.GetBackgroundColor();
 
 ## 示例
 
-获取文档中容器的边框颜色。
+此示例展示如何获取容器的边框颜色。
 
 ```javascript editor-docx
-// How can I get the background color using an inline content control in a document?
-
-// Get the background color for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
@@ -43,4 +39,5 @@ color = inlineLvlSdt.GetBackgroundColor();
 run.AddText("BackgroundColor: " + (color ? color.GetHex() : "none"));
 inlineLvlSdt.AddElement(run, 0);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
+
 ```

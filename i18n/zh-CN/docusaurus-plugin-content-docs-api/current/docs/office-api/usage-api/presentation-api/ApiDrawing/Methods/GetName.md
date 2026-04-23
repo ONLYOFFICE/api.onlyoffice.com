@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-返回演示文稿中当前绘图对象的名称。
+此示例返回当前绘图的名称。
 
 ```javascript editor-pptx
-// How do I get the name in a presentation?
-
-// Get the name using a drawing object object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,4 +39,5 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing name: ' + name);
 slide.AddObject(shape);
+
 ```

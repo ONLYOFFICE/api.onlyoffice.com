@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定此段落中的所有小写字符仅以其对应的大写字母格式显示。
+此示例指定此段落中的任何小写字符仅格式化显示为其对应的大写字母。
 
 ```javascript editor-docx
-// Make capitalized the paragraph text in a document.
+// Make capitalized the paragraph text.
 
-// Create a paragraph with the font set to capitalized letters in a document.
+// Create a paragraph with the font set to capitalized letters.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,14 @@ boolean
 
 ## 示例
 
-在演示文稿中选中当前图形对象。
+此示例选择当前图形对象。
 
 ```javascript editor-pptx
 // How to select drawing objects of the slide.
 
-// Create three shapes, select the first one, then select the second shape with isReplace=true (replacing the selection), and finally select the third shape without isReplace parameter (adding to selection) in a presentation.
+// Create three shapes, select the first one,
+// then select the second shape with isReplace=true (replacing the selection),
+// and finally select the third shape without isReplace parameter (adding to selection).
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +51,5 @@ drawing3.SetPosition(8000000, 0);
 drawing1.Select(true);
 drawing2.Select(true);
 drawing3.Select();
+
 ```

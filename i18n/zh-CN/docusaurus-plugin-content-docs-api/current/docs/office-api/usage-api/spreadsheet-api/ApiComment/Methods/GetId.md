@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中的批注 ID。
+此示例展示如何获取批注 ID。
 
 ```javascript editor-xlsx
-// How to get a comment ID in a spreadsheet.
+// How to get a comment ID.
 
-// Find a comment by its ID and display its ID in a spreadsheet.
+// Find a comment by its ID and display its ID.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

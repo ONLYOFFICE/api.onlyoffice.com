@@ -20,13 +20,9 @@ expression.GetQuads();
 
 ## 示例
 
-获取 PDF 文档中标记注释的四边形。
+此示例获取标记注释的四边形。
 
 ```javascript editor-pdf
-// How do I get the quads in a PDF document?
-
-// Get the quads using a markup annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

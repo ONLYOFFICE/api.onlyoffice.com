@@ -2,14 +2,28 @@
 
 将 ApiTableRowPr 对象转换为 JSON 对象。
 
-继承自 [ApiTableRowPr.ToJSON](../../ApiTableRowPr/Methods/ToJSON.md)。
+## 语法
+
+```javascript
+expression.ToJSON();
+```
+
+`expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+JSON
 
 ## 示例
 
-将文档中的表格行属性对象转换为 JSON 对象。
+此示例将 ApiTableRowPr 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the table row properties in a document.
+// How to get a JSON from the table row properties.
 
 // Convert the table row properties to json and add it to the document.
 

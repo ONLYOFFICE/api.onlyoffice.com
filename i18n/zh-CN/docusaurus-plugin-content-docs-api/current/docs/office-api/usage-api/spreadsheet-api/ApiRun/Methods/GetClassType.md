@@ -8,7 +8,7 @@
 expression.GetClassType();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中文本 run 对象的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-xlsx
-// How can I get the class type of a text run in a spreadsheet?
+// How to get a class type of ApiRun.
 
-// Get the class type of a text run and display it in the spreadsheet.
+// Get a class type of ApiRun and display it in the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

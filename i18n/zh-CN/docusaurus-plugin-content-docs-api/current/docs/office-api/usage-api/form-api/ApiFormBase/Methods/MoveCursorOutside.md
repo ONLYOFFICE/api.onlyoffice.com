@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-在文档中将光标移到外部。
+此示例展示如何将光标移到外部。
 
 ```javascript editor-forms
 // How to know whether the cursor should be moved out of the text form.

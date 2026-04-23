@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中超链接的屏幕提示文本。
+此示例展示如何获取超链接的屏幕提示文本。
 
 ```javascript editor-docx
-// How to show the screen tip text of the hyperlink in a document.
+// How to show the screen tip text of the hyperlink.
 
-// Set and display the hyperlink tip text appearing on the screen in a document.
+// Set and display the hyperlink tip text appearing on the screen.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

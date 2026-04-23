@@ -12,7 +12,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation) 下载此插件，并按照[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_navigation) 下载此插件，并按照[桌面版](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端版](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用方法
 
@@ -112,15 +112,15 @@ GitHub 仓库：[example_work_with_content_controls_navigation](https://github.c
 
 ## 方法和事件
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- [onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
-- executeMethod ("[GetCurrentContentControl](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
-- executeMethod ("[MoveCursorToContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveCursorToContentControl.md)")
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- [onTargetPositionChanged](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAllContentControls.md)")
+- executeMethod ("[GetCurrentContentControl](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentContentControl.md)")
+- executeMethod ("[MoveCursorToContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/MoveCursorToContentControl.md)")
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/SelectContentControl.md)")
 
 ## 支持
 

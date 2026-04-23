@@ -20,13 +20,9 @@ expression.GetAllDrawings();
 
 ## 示例
 
-获取当前演示文稿中的所有绘图对象。
+此示例演示如何获取当前演示文稿中的所有绘图对象
 
 ```javascript editor-pptx
-// How to get all drawings for a presentation?
-
-// Get all drawings and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const slideMaster = presentation.GetMaster(0);
@@ -79,4 +75,5 @@ paragraph.AddText('Drawings: ' + drawings.length);
 label.SetPosition(0, 144 * 36000);
 slide.AddObject(label);
 label.Select();
+
 ```

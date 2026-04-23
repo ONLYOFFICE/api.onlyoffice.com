@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置段落首行缩进。
+此示例设置段落首行缩进。
 
 ```javascript editor-pptx
-// How to set a size of the first line indentation using a paragraph properties in a presentation.
+// How to set a size of the first line indentation using a paragraph properties.
 
-// Create a paragraph setting its first line indentation in a presentation.
+// Create a paragraph setting its first line indentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,5 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 slide.AddObject(shape);
+
 ```

@@ -26,12 +26,12 @@ string
 
 ## 示例
 
-获取文档中的段落文本。
+此示例展示如何获取段落文本。
 
 ```javascript editor-docx
-// How to get text of the paragraph object in a document.
+// How to get text of the paragraph object.
 
-// Get the paragraph text and display it in a document.
+// Get the paragraph text and display it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -13,9 +13,10 @@
 - "right"
 - "left"
 
+
 ## 示例
 
-将坐标轴值设置到图表的顶部位置。
+此示例将坐标轴值设置到图表的顶部位置。
 
 ```javascript editor-docx
 // How to change the axis labels format of the chart.

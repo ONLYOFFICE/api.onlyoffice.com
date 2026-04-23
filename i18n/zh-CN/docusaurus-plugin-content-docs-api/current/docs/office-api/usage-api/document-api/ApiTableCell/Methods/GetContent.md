@@ -20,7 +20,7 @@ expression.GetContent();
 
 ## 示例
 
-获取文档中当前单元格的内容。
+此示例展示如何获取当前单元格的内容。
 
 ```javascript editor-docx
 // How to get the value from the cell.

@@ -22,12 +22,12 @@ expression.SetValue(name);
 
 ## 示例
 
-在电子表格中设置数据字段的值。
+此示例展示如何为数据字段设置值。
 
 ```javascript editor-xlsx
-// How to change a value of a table element in a spreadsheet.
+// How to change a value of a table element.
 
-// Create a pivot table, add data to it then set a custom data field's value in a spreadsheet.
+// Create a pivot table, add data to it then set a custom data field's value.
 
 let worksheet = Api.GetActiveSheet();
 

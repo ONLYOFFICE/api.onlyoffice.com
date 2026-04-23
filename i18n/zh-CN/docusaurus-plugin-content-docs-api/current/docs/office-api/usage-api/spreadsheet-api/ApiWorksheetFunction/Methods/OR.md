@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查是否有任何参数为 true。仅当所有参数都为 false 时才返回 false。
+此示例演示如何检查是否有任何参数为 true。仅当所有参数都为 false 时才返回 false。
 
 ```javascript editor-xlsx
-// How to use OR logical operator in a spreadsheet.
+// How to use OR logical operator.
 
-// Use a function to apply OR operation in a spreadsheet.
+// Use a function to apply OR operation.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -40,4 +40,5 @@ let logical3 = 50 < 10;
 let func = Api.WorksheetFunction;
 let ans = func.OR(logical1, logical2, logical3);
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

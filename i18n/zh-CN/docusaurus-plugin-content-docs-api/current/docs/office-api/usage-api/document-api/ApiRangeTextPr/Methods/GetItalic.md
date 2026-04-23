@@ -2,11 +2,25 @@
 
 从当前文本属性获取斜体属性。
 
-继承自 [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md)。
+## 语法
+
+```javascript
+expression.GetItalic();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-检查文档中的文本是否为斜体。
+此示例展示如何查明文本是否为斜体。
 
 ```javascript editor-docx
 // How to know if the text of the form is italic.

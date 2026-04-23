@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中从左到右返回特定字符或文本字符串首次出现的字符编号（不区分大小写）。
+此示例演示如何返回从左到右读取时首次找到特定字符或文本字符串的字符位置（不区分大小写）。
 
 ```javascript editor-xlsx
-// How to get number of characters counting from first occurance of search text in a spreadsheet.
+// How to get number of characters counting from first occurance of search text.
 
-// Use a function to count characters starting from the index at which the search text appears in a spreadsheet.
+// Use a function to count characters starting from the index at which the search text appears.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

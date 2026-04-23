@@ -20,12 +20,14 @@ expression.CreateNoFill();
 
 ## 示例
 
-在文档中创建无填充并移除元素的填充。
+此示例创建无填充并移除元素的填充。
 
 ```javascript editor-docx
-// The no-fill object removes any existing fill from the shape stroke.
+// How to create the ApiNoFill object and applies it to the shape stroke.
 
-// Create a stroke with no fill in a document.
+// Creates a stroke with no fill.
+
+// How to create the ApiStroke object with no fill and apply it to the shape.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-获取演示文稿名称并将其插入到演示文稿中。
+此示例获取演示文稿名称并将其插入演示文稿。
 
 ```javascript editor-pptx
 // How to get a presentation name.
@@ -42,4 +42,5 @@ const paragraph = docContent.GetElement(0);
 const fullName = Api.GetFullName();
 paragraph.AddText("File name: " + fullName);
 slide.AddObject(shape);
+
 ```

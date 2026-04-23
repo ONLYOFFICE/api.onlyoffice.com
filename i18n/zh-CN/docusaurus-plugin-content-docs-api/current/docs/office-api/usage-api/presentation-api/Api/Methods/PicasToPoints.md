@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在演示文稿中将派卡转换为磅。
+此示例展示如何将派卡转换为磅。
 
 ```javascript editor-pptx
-// How do I convert picas to points in a presentation?
-
-// Convert picas to points and display the result in a presentation.
-
 const picas = 100;
 const points = Api.PicasToPoints(picas);
 
@@ -43,4 +39,5 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

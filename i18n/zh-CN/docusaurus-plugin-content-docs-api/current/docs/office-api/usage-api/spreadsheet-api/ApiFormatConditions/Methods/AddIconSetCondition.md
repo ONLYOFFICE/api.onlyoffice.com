@@ -20,7 +20,7 @@ expression.AddIconSetCondition();
 
 ## 示例
 
-向范围添加图标集条件格式。
+此示例向区域添加图标集条件格式。
 
 ```javascript editor-xlsx
 // How to add icon set conditional formatting rules to display icons based on values.
@@ -42,4 +42,5 @@ worksheet.GetRange("A9").SetValue(80);
 let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddIconSetCondition();
+
 ```

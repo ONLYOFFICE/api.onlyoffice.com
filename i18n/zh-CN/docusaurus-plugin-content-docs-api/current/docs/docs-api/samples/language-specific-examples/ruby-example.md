@@ -2,7 +2,7 @@
 sidebar_position: -4
 ---
 
-# Ruby 集成
+# Ruby 示例
 
 ## 概述
 

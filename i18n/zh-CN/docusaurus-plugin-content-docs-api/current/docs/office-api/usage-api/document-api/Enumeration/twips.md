@@ -6,9 +6,11 @@
 
 number
 
+
+
 ## 示例
 
-将列间距设置为 36 磅。
+此示例将列间距设置为 36 磅。
 
 ```javascript editor-docx
 // How to set a column distance in twips.

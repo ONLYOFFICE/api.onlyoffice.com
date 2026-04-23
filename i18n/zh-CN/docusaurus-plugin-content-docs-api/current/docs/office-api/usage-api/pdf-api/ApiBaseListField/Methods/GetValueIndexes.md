@@ -20,13 +20,9 @@ number[]
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取选中值的索引。
+此示例从带有选项列表的字段获取选中值索引。
 
 ```javascript editor-pdf
-// How do I get the value indexes in a PDF document?
-
-// Get the value indexes using a list field object in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

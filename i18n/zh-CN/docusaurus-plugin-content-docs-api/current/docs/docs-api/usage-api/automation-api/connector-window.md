@@ -58,7 +58,7 @@ testConnectorWindow.dispatchEvent("messageName", {
 
 | 名称     | 类型   | 描述                                                                                                                                      |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| settings | object | 模态窗口参数与插件 [variations](../../../plugin-and-macros/structure/configuration/configuration.md#variations) 相同。 |
+| settings | object | 模态窗口参数与插件 [variations](../../../plugin-and-macros/plugins/fundamentals/configuration/config-json.md#variations) 相同。 |
 
 ### 示例
 

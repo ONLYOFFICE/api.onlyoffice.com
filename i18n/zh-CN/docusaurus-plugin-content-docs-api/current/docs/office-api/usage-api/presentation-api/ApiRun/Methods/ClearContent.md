@@ -1,6 +1,6 @@
 # ClearContent
 
-清除当前文本块中的内容。
+清除当前运行中的内容。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.ClearContent();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-清除演示文稿中 run 的内容。
+此示例清除运行中的内容。
 
 ```javascript editor-pptx
-// How to delete content from the text run in a presentation.
+// How to delete content from the text run.
 
 // Remove text from the slide.
 
@@ -51,4 +51,5 @@ run.AddText("The text in the previous paragraph cannot be seen, as it has been c
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 slide.AddObject(shape);
+
 ```

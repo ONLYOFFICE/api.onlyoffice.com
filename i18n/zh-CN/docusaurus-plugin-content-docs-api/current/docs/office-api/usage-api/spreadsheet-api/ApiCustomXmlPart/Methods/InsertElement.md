@@ -24,13 +24,9 @@ boolean
 
 ## 示例
 
-在电子表格中向自定义 XML 部件插入新的 XML 元素。
+此示例展示如何向自定义 XML 部件中插入新的 XML 元素。
 
 ```javascript editor-xlsx
-// How can I insert the element using a custom XML part in a spreadsheet?
-
-// Insert the element for a custom XML part in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = "<content version='9.4' />";
@@ -39,4 +35,5 @@ const xml = xmlManager.Add(xmlString);
 xml.InsertElement('/content', '<text>lorem</text>');
 worksheet.GetRange('A1').SetValue('XML after insertion:');
 worksheet.GetRange('A2').SetValue(xml.GetXml());
+
 ```

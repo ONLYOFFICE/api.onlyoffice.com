@@ -22,15 +22,16 @@ number
 
 ## 示例
 
-在电子表格中返回一组值中的最大值。忽略逻辑值和文本。
+此示例演示如何返回一组值中的最大值。忽略逻辑值和文本。
 
 ```javascript editor-xlsx
-// How to get a maximum number from a list of numbers in a spreadsheet.
+// How to get a maximum number from a list of numbers.
 
-// Use a function to find a maximum from a list in a spreadsheet.
+// Use a function to find a maximum from a list.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let max = func.MAX(123, 197, 46, 354, 67, 456);
 worksheet.GetRange("C1").SetValue(max);
+
 ```

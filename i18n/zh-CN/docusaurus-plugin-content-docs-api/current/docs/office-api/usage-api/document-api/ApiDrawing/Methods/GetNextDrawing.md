@@ -20,12 +20,12 @@ expression.GetNextDrawing();
 
 ## 示例
 
-获取文档中的下一个内联绘图对象（如果存在）。
+此示例展示如何获取下一个内联绘图对象（如果存在）。
 
 ```javascript editor-docx
-// How to set horizontal flip for the next drawing in a document.
+// How to set horizontal flip for the next drawing.
 
-// Get the next drawing and update its properties in a document.
+// Get the next drawing and update its properties.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

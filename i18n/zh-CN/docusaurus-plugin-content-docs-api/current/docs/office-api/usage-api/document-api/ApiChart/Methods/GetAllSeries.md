@@ -20,7 +20,7 @@ expression.GetAllSeries();
 
 ## 示例
 
-获取图表类的所有系列并将其类型插入到文档中。
+此示例获取 ApiChart 类的所有系列并将其类型插入文档中。
 
 ```javascript editor-docx
 // How to get all series from the chart and show each one's type in the document.

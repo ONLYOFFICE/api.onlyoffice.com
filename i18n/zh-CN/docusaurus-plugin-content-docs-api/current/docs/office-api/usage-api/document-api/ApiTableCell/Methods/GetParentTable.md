@@ -20,7 +20,7 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中单元格的父表格。
+此示例展示如何获取单元格的父表格。
 
 ```javascript editor-docx
 // How to get parent table of the cell.

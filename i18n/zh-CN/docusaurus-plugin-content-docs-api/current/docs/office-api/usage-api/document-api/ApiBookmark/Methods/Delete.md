@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从文档中删除书签。
+此示例展示如何从文档中删除书签。
 
 ```javascript editor-docx
 // How to get a bookmark from the document by its name and remove it.
 
-// Add two bookmarks to the two ranges and delete the first one in a document.
+// Add two bookmarks to the two ranges and delete the first one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -36,4 +36,5 @@ let range2 = doc.GetRange(14, 22);
 range2.AddBookmark("Bookmark 2");
 let bookmark1 = doc.GetBookmark("Bookmark 1");
 bookmark1.Delete();
+
 ```

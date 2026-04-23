@@ -2,11 +2,25 @@
 
 清除当前表单。
 
-继承自 [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md)。
+## 语法
+
+```javascript
+expression.Clear();
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-清除当前表单。
+此示例清除当前表单。
 
 ```javascript editor-forms
 // How to remove texy from the form.

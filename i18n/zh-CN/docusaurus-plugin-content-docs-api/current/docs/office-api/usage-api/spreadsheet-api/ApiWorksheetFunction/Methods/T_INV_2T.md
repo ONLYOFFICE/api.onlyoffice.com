@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回学生 t 分布的双尾逆函数。
+此示例演示如何返回学生 t 分布的双尾反函数。
 
 ```javascript editor-xlsx
-// How to calculate the two-tailed inverse of Student's t-distribution in a spreadsheet.
+// How to calculate the two-tailed inverse of Student's t-distribution.
 
-// Use a function to estimate the Student's t-distribution two-tailed inverse in a spreadsheet.
+// Use a function to estimate the Student's t-distribution two-tailed inverse.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

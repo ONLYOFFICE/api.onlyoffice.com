@@ -22,13 +22,10 @@ expression.SetFill(sFill);
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。应用具有特定填充和笔触属性的自定义几何图形。
+创建自定义形状并将其添加到幻灯片。
 
 ```javascript editor-pptx
-// How can I set fill using a geometry path in a presentation?
-
-// Set fill for a geometry path in a presentation.
-
+// Applies custom geometry with specific fill and stroke properties.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查当前表单是否为大写。
+此示例查明当前表单是否大写。
 
 ```javascript editor-docx
-// How to find out whether a text is capitalized or not in a document.
+// How to find out whether a text is capitalized or not.
 
-// Get the property of the text that shows whether a text is in uppercase in a document.
+// Get the property of the text that shows whether a text is in uppercase.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

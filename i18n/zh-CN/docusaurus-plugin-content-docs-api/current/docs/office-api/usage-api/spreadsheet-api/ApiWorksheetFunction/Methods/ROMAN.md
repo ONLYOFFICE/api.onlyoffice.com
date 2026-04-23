@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-在电子表格中将阿拉伯数字转换为字符串格式的罗马数字。
+此示例演示如何将阿拉伯数字转换为字符串格式的罗马数字。
 
 ```javascript editor-xlsx
-// How to get roman numbers from arabic in a spreadsheet.
+// How to get roman numbers from arabic.
 
-// Use a function to convert numbers from arabic numeral to roman in a spreadsheet.
+// Use a function to convert numbers from arabic numeral to roman.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

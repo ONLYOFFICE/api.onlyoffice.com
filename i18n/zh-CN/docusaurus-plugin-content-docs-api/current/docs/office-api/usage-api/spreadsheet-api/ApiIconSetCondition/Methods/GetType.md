@@ -20,13 +20,9 @@ expression.GetType();
 
 ## 示例
 
-获取电子表格中图标集条件格式规则的类型。
+此示例展示如何获取图标集条件格式规则的类型。
 
 ```javascript editor-xlsx
-// How can I get the type using an icon set condition in a spreadsheet?
-
-// Get the type for an icon set condition in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Ratings');
@@ -40,4 +36,5 @@ const iconCondition = formatConditions.AddIconSetCondition();
 
 const conditionType = iconCondition.GetType();
 worksheet.GetRange('B1').SetValue('Icon set condition type: ' + conditionType);
+
 ```

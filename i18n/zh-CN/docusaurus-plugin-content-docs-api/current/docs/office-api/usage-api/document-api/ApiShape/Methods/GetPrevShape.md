@@ -20,12 +20,12 @@ expression.GetPrevShape();
 
 ## 示例
 
-获取文档中的上一个内联形状。
+此示例展示如何获取上一个内联形状。
 
 ```javascript editor-docx
-// How to get previous shape from the current one in a document.
+// How to get previous shape from the current one.
 
-// Color the previous shape with a solid fill in a document.
+// Color the previous shape with a solid fill.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

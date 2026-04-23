@@ -8,13 +8,13 @@
 expression.SetBold(isBold);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBold | 必需 | boolean |  | 指定当前文本块的内容显示为粗体。 |
+| isBold | 必需 | boolean |  | 指定当前运行的内容显示为粗体。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-在文档中为文本字符设置粗体属性。
+此示例为文本字符设置粗体属性。
 
 ```javascript editor-docx
-// How to make a text run bold in a document.
+// How to make a text run bold.
 
-// Create new run and set its font style in a document.
+// Create new run and set its font style.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

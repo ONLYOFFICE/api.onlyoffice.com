@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) 下载该插件，并按照以下说明进行安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/languagetool) 下载该插件，并按照以下说明进行安装：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -183,14 +183,14 @@ GitHub 仓库：[language tool](https://github.com/ONLYOFFICE/onlyoffice.github.
 - init
 - onExternalMouseUp
 - onTranslate
-- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetSelectionType.md)
-- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteText.md)
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
-- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [callCommand](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetSelectionType")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetSelectionType.md)
+- [executeMethod ("GetVersion")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- [Asc.scope](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [info.recalculate](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## 支持
 

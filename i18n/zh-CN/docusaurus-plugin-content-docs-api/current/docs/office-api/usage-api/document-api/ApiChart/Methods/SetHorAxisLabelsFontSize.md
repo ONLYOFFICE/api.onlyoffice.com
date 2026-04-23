@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中水平轴标签的字体大小。
+此示例为水平轴标签设置字体大小。
 
 ```javascript editor-docx
-// How to resize a horizontal axis labels font in a document.
+// How to resize a horizontal axis labels font.
 
-// Create a chart and set its horizontal axis labels font to 8 in a document.
+// Create a chart and set its horizontal axis labels font to 8.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

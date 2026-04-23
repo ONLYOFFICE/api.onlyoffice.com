@@ -23,12 +23,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中调整绘图对象的大小。
+如何调整绘图大小。
 
 ```javascript editor-pdf
 // Get a shape object from a page and set its size.
-
-// Set size using a drawing object object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-移除包含指定单元格的表格行。
+此示例删除包含指定单元格的表格行。
 
 ```javascript editor-docx
-// How to remove the row from the table in a document.
+// How to remove the row from the table.
 
 // Create a table, get one of its cells and delete the row.
 

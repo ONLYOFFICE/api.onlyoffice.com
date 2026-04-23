@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回从总对象中可选择给定数量对象（可重复）的排列数。
+此示例演示如何返回可从对象总数中选择的给定数量对象（可重复）的排列数。
 
 ```javascript editor-xlsx
-// How to return the number of permutations for a given number of objects with duplicates in a spreadsheet.
+// How to return the number of permutations for a given number of objects with duplicates.
 
-// Use a function to claculate the number of permutations including duplicates in a spreadsheet.
+// Use a function to claculate the number of permutations including duplicates.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -43,4 +43,5 @@ let func = Api.WorksheetFunction;
 let ans = func.PERMUTATIONA(number, number_chosen);
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

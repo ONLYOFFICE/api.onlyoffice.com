@@ -2,11 +2,25 @@
 
 返回当前表单的边框颜色。
 
-继承自 [ApiFormBase.GetBorderColor](../../ApiFormBase/Methods/GetBorderColor.md)。
+## 语法
+
+```javascript
+expression.GetBorderColor();
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md)
 
 ## 示例
 
-获取文档中表单的边框颜色。
+此示例展示如何获取表单的边框颜色。
 
 ```javascript editor-docx
 // How to get the border color of a text form.
@@ -22,4 +36,5 @@ let borderColor = textForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);
+
 ```

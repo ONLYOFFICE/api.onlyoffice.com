@@ -20,12 +20,12 @@ expression.AddFootnote();
 
 ## 示例
 
-为文档添加脚注。
+此示例为文档添加脚注。
 
 ```javascript editor-docx
 // How to add footnote to the document.
 
-// Get all footnotes first paragraphs and make the first one bold in a document.
+// Get all footnotes first paragraphs and make the first one bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 

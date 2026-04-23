@@ -1,6 +1,6 @@
 # GetTextPr
 
-返回当前文本块的文本属性。
+返回当前运行的文本属性。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetTextPr();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取 PDF 文档中 run 的文本属性。
+此示例展示如何获取运行的文本属性。
 
 ```javascript editor-pdf
-// How to get the text properties of the current text run object and change its font size in a PDF document.
+// How to get the text properties of the current ApiRun object and change its font size.
 
-// Resize a font of a text run in a PDF document.
+// Resize a font of a text run.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -44,4 +44,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font size set to 15 points using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
+
 ```

@@ -23,12 +23,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中向表格插入列。
+如何向表格插入列。
 
 ```javascript editor-pdf
-// Create a 2x4 table, set its position and then insert a column to it in a PDF document.
-
-// Add the column using a table object in a PDF document.
+// Create a 2x4 table, set its position and then insert a column to it.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

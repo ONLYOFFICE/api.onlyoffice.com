@@ -23,12 +23,12 @@ expression.SetCellMarginRight(nValue);
 
 ## 示例
 
-指定表格中特定单元格当前内容右侧边缘与右边框之间应保留的间距。
+此示例指定表格中特定单元格的当前单元格内容右侧与右边框之间应保留的空间量。
 
 ```javascript editor-pptx
 // How to set the cell right margin for the current table cell.
 
-// Specify the right margin value for the table cell object.
+// Specify the right margin value for the ApiTableCell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,4 +44,5 @@ cell.SetCellMarginRight(600);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

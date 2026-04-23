@@ -1,6 +1,6 @@
 # SetColor
 
-设置当前文本块的文本颜色。
+设置当前文本运行的文本颜色。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetColor(color);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,10 +22,10 @@ expression.SetColor(color);
 
 ## 示例
 
-以 RGB 格式为当前文本 run 设置文本颜色。
+此示例以 RGB 格式设置当前文本运行的文本颜色。
 
 ```javascript editor-xlsx
-// How to change text color in a spreadsheet.
+// How to change text color.
 
 // Create a text run object, update its font color using RGB format values.
 
@@ -44,4 +44,5 @@ let run = Api.CreateRun();
 run.AddText('This is a text run with the font color set to gray.');
 paragraph.AddElement(run);
 run.SetColor(Api.HexColor('#808080'));
+
 ```

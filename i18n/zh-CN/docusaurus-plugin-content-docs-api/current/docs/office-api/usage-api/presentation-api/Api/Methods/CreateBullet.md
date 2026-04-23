@@ -22,12 +22,12 @@ expression.CreateBullet(sSymbol);
 
 ## 示例
 
-在演示文稿中创建项目符号。
+此示例演示如何创建项目符号。
 
 ```javascript editor-pptx
-// How to add a bullet to the paragraph in a presentation.
+// How to add a bullet to the paragraph.
 
-// Create the bullet for an editor in a presentation.
+// Add bulleted paragraph.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,4 +43,5 @@ const bullet = Api.CreateBullet("-");
 paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 slide.AddObject(shape);
+
 ```

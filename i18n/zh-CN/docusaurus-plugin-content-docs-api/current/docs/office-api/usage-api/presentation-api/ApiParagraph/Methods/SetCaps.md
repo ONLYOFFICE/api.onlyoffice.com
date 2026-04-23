@@ -22,13 +22,9 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-在演示文稿中将段落中的所有字符设置为以大写字母显示。
+此示例将段落中的所有字符设置为大写显示。
 
 ```javascript editor-pptx
-// How can I set caps using a paragraph in a presentation?
-
-// Set caps for a paragraph in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,4 +38,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to capitalized letters.');
 paragraph.SetCaps(true);
 slide.AddObject(shape);
+
 ```

@@ -23,13 +23,9 @@ expression.AddDropDownListContentControl(list, selected);
 
 ## 示例
 
-在文档中添加下拉列表内容控件。
+此示例展示如何向文档添加下拉列表内容控件
 
 ```javascript editor-docx
-// How do I add the drop down list content control in a document?
-
-// Add the drop down list content control using a document object.
-
 let doc = Api.GetDocument();
 doc.AddDropDownListContentControl();
 ```

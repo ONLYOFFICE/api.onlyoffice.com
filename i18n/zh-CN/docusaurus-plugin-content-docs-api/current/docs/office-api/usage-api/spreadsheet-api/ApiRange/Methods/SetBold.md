@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-为当前单元格或单元格范围中的文本字符设置粗体属性。
+此示例设置当前单元格或单元格范围中文本字符的粗体属性。
 
 ```javascript editor-xlsx
-// How to change the font style properties of a range making it bold in a spreadsheet.
+// How to change the font style properties of a range making it bold.
 
-// Make characters of the cell range object bold.
+// Make characters of the ApiRange object bold.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Bold text");

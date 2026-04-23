@@ -22,12 +22,12 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-在电子表格中设置批注作者的用户 ID。
+此示例设置批注作者的用户 ID。
 
 ```javascript editor-xlsx
-// How to change a comment author ID in a spreadsheet.
+// How to change a comment author ID.
 
-// Replace a comment author ID to a new one in a spreadsheet.
+// Replace a comment author ID to a new one.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

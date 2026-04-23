@@ -22,13 +22,9 @@ expression.SetAppearance(type);
 
 ## 示例
 
-在文档中添加内容控件并更改其外观。
+此示例添加内容控件并更改其外观。
 
 ```javascript editor-docx
-// How can I set appearance using an inline content control in a document?
-
-// Set appearance for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = Api.CreateInlineLvlSdt();

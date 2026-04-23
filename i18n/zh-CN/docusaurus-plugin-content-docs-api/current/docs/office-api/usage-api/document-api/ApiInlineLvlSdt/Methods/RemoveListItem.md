@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-从文档中的组合框或下拉列表内容控件中删除项目。
+此示例展示如何从组合框或下拉列表内容控件中删除项目。
 
 ```javascript editor-docx
-// How can I remove the list item using an inline content control in a document?
-
-// Remove the list item for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = doc.AddComboBoxContentControl();

@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中基于所选数据库条目的整个总体计算方差。
+此示例演示如何根据所选数据库条目的整个总体计算方差。
 
 ```javascript editor-xlsx
 // How to estimate variance form the entire population.
 
-// Use function to calculate entire population variance in a spreadsheet.
+// Use function to calculate entire population variance.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

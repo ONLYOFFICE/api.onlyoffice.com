@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取电子表格中的上一个段落。
+此示例展示如何获取上一个段落。
 
 ```javascript editor-xlsx
-// How to get the previous paragraph from the current one in a spreadsheet.
+// How to get the previous paragraph from the current one.
 
-// Add two paragraphs into the shape content then get the first one using the GetPrevious method in a spreadsheet.
+// Add two paragraphs into the shape content then get the first one using the GetPrevious method.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

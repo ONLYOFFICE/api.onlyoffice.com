@@ -20,10 +20,10 @@ expression.GetPrevious();
 
 ## 示例
 
-获取演示文稿中的上一个段落。
+此示例展示如何获取上一个段落。
 
 ```javascript editor-pptx
-// How to get the previous paragraph of the current one in a presentation.
+// How to get the previous paragraph of the current one.
 
 // Return the previous paragraph on the slide and make its text bold.
 
@@ -52,4 +52,5 @@ docContent.Push(paragraph2);
 slide.AddObject(shape);
 const previousParagraph = paragraph2.GetPrevious();
 previousParagraph.SetBold(true);
+
 ```

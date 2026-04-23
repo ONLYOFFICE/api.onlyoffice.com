@@ -20,7 +20,7 @@ expression.GetOrientation();
 
 ## 示例
 
-获取电子表格中的范围角度。
+此示例演示如何获取范围角度。
 
 ```javascript editor-xlsx
 // How to find out cell orientation of a range.

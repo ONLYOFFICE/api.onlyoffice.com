@@ -20,12 +20,12 @@ expression.GetLock();
 
 ## 示例
 
-展示如何获取文档中容器的锁定类型。
+此示例展示如何获取容器的锁定类型。
 
 ```javascript editor-docx
 // How to display the lock of the inline text control in the document.
 
-// Set the lock type of the inline text element and print it in a document.
+// Set the lock type of the inline text element and print it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

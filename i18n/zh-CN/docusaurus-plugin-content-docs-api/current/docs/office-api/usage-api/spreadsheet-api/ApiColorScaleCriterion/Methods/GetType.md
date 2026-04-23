@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取电子表格中色阶条件的类型。
+此示例演示如何获取色阶条件的类型。
 
 ```javascript editor-xlsx
-// How to check the type of a color scale criterion in a spreadsheet.
+// How to check the type of a color scale criterion.
 
-// Get the type of a color scale criterion in a spreadsheet.
+// Get the type of a color scale criterion.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Criterion Type:");
     worksheet.GetRange("C2").SetValue(criterionType);
 }
+
 ```

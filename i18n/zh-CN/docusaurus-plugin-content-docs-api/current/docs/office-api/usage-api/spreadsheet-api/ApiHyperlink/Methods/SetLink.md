@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在电子表格中为形状内的超链接设置新 URL。
+此示例展示如何为形状内的超链接设置新 URL。
 
 ```javascript editor-xlsx
-// How can I set link using a hyperlink in a spreadsheet?
-
-// Set link for a hyperlink in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -50,4 +46,5 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for
 
 hyperlink.SetLink('https://helpcenter.onlyoffice.com');
 worksheet.GetRange('A1').SetValue('New link: ' + hyperlink.GetLinkedText());
+
 ```

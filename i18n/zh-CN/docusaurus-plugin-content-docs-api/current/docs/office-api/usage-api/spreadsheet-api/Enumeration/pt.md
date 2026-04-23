@@ -6,9 +6,11 @@
 
 number
 
+
+
 ## 示例
 
-设置 3 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为 1 磅。
+在此示例中，该段落将具有 3 磅宽的单条绿色底部边框，与段落底部边缘的偏移量为 1 磅。
 
 ```javascript editor-xlsx
 // How to set a bottom border indicating weight points and color.

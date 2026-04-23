@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中当前文档内容的元素数量。
+此示例展示如何获取当前文档内容中的元素数量。
 
 ```javascript editor-xlsx
 // How to get a number of elements of a shape from a document content.
 
-// Get a shape than count number of elements and display it using paragraph in a spreadsheet.
+// Get a shape than count number of elements and display it using paragraph.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -2,17 +2,27 @@
 
 获取列表中的所有选项。
 
-继承自 [ApiBaseListField.GetOptions](../../ApiBaseListField/Methods/GetOptions.md)。
+## 语法
+
+```javascript
+expression.GetOptions();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ListOption](../../Enumeration/ListOption.md)[]
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取所有选项。
+此示例从带有选项列表的字段获取所有选项。
 
 ```javascript editor-pdf
-// How can I get the options using a list field in a PDF document?
-
-// Get the options for a list field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

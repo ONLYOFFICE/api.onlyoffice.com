@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-在电子表格中以 MM/dd/yy 格式返回当前日期。
+此示例演示如何以 MM/dd/yy 格式返回当前日期。
 
 ```javascript editor-xlsx
-// How to get a current date in a spreadsheet.
+// How to get a current date.
 
 // Use a function to get current date in MM/dd/yy format.
 

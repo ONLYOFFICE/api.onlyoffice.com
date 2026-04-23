@@ -20,13 +20,9 @@ number
 
 ## 示例
 
-获取演示文稿中绘图对象的旋转角度。
+此示例展示如何获取绘图的旋转角度。
 
 ```javascript editor-pptx
-// How do I get the rotation in a presentation?
-
-// Get the rotation using a drawing object object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,4 +38,5 @@ let docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is: " + rotAngle + " degrees");
 slide.AddObject(shape);
+
 ```

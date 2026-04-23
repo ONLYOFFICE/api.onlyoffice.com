@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定范围所包含的文档部分的 Range 对象。
+此示例展示如何获取表示指定范围中包含的文档部分的 Range 对象。
 
 ```javascript editor-docx
-// Get the range from the range indicating its start and end positions in a document.
+// Get the range from the range indicating its start and end positions.
 
-// Retrieve a range and make them italic in a document.
+// Retrieve a range and make them italic.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -13,9 +13,10 @@ Object
 | format | string | 日期格式，例如：mm.dd.yyyy |
 | lang | string | 日期语言。此参数的可能值是由 RFC 4646/BCP 47 定义的语言标识符。示例：「en-CA」。 |
 
+
 ## 示例
 
-创建具有特定日期表单属性的日期表单。
+此示例创建具有特定日期表单属性的日期表单。
 
 ```javascript editor-forms
 // How to create a date form with its base properties.
@@ -27,4 +28,5 @@ let dateFormPrBase = {
 	"lang": "en-US"
 };
 let dateForm = Api.CreateDateForm(dateFormPrBase);
+
 ```

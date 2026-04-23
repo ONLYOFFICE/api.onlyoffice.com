@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置自定义 XML 节点的文本内容。
+此示例演示如何设置自定义 XML 节点的文本内容。
 
 ```javascript editor-pptx
-// How to set text content on an XML node in a presentation.
+// How to set text content on an XML node.
 
-// Set XML node text using the custom XML node API in a presentation.
+// Set XML node text.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

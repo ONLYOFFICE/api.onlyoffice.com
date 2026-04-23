@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-指定文档中图表显示的数据标签。
+此示例指定为图表显示哪些图表数据标签。
 
 ```javascript editor-docx
-// How to show specific chart data labels in a document.
+// How to show specific chart data labels.
 
-// Create a chart, set its properties and its specific data labels visibility in a document.
+// Create a chart, set its properties and its specific data labels visibility.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

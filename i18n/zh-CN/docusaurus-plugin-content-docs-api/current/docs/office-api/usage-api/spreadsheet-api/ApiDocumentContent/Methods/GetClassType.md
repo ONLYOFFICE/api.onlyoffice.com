@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档内容返回的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-xlsx
-// How do I check what type a document content object is?
+// How to get a class type of ApiDocumentContent.
 
-// Retrieve and output the class type string for a document content.
+// Get a class type of ApiDocumentContent and display it in the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

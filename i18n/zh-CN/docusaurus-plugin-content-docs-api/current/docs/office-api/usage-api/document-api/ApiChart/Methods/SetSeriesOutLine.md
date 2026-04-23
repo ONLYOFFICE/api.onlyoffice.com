@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置文档中指定图表系列的轮廓。
+此示例设置指定图表系列的轮廓。
 
 ```javascript editor-docx
-// How to outline a chart seria in a document.
+// How to outline a chart seria.
 
-// Create a chart, set its properties and its series outline in a document.
+// Create a chart, set its properties and its series outline.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

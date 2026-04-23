@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中超链接的屏幕提示文本。
+此示例设置超链接的屏幕提示文本。
 
 ```javascript editor-docx
-// How to specify the hyperlink screen tip text in a document.
+// How to specify the hyperlink screen tip text.
 
-// Set the screen tip text of the link in a document.
+// Set the screen tip text of the link.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

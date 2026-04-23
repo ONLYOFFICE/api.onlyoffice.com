@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-指定文档中当前节的所有列具有不同的宽度。
+此示例指定当前节中的所有列具有不同的宽度。
 
 ```javascript editor-docx
-// How to split the text into 3 columns with different sizes in a document.
+// How to split the text into 3 columns with different sizes.
 
-// Get the final section and divide it to columns in a document.
+// Get the final section and divide it to columns.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

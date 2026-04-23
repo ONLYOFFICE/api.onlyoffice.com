@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中的工作表名称。
+此示例展示如何获取工作表名称。
 
 ```javascript editor-xlsx
-// How to get name of the sheet in a spreadsheet.
+// How to get name of the sheet.
 
-// Get a sheet name using the worksheet API in a spreadsheet.
+// Get a sheet name.
 
 let worksheet = Api.GetActiveSheet();
 let name = worksheet.GetName();

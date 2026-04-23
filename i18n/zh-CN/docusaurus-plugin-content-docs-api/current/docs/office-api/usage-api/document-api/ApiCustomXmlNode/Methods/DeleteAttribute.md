@@ -23,13 +23,9 @@ boolean
 
 ## 示例
 
-从文档中的当前 XML 节点中删除属性。
+此示例演示如何从当前 XML 节点删除属性。
 
 ```javascript editor-docx
-// How to delete the attribute for a custom XML node in a document?
-
-// Delete the attribute and display the result in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

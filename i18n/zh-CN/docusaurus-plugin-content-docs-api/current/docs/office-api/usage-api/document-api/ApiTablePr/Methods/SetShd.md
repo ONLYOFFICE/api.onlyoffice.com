@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-指定在文档中应用于表格范围的底纹。
+此示例指定应应用于表格范围的底纹。
 
 ```javascript editor-docx
-// How to add shading to the paragraph in a document.
+// How to add shading to the paragraph.
 
-// Apply the clear shading to the paragraph in a document.
+// Apply the clear shading to the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

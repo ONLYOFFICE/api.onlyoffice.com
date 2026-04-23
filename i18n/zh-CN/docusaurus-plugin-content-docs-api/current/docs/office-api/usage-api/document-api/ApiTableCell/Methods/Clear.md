@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-清除单元格的内容。
+此示例清除单元格的内容。
 
 ```javascript editor-docx
 // Remove the content of the table cell.

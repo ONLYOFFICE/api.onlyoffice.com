@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除文档中的当前图形对象。
+此示例删除当前图形对象。
 
 ```javascript editor-docx
 // How to delete a shape from the document.
 
-// Remove the drawing object in a document.
+// Remove the drawing object.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

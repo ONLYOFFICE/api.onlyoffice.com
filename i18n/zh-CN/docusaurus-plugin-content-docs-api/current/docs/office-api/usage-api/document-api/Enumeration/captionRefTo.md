@@ -19,12 +19,13 @@
 - "pageNum"
 - "aboveBelow"
 
+
 ## 示例
 
-添加指向表格题注页码的交叉引用。
+此示例添加指向包含表格标题的页面的交叉引用。
 
 ```javascript editor-docx
-// Create a reference to the paragraph with a caption.
+// How to create a reference to the paragraph with a caption.
 
 // Use caption to create a cross-reference.
 

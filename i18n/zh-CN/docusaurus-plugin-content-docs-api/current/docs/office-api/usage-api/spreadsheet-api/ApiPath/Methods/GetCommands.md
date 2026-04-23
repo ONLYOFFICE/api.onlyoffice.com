@@ -20,13 +20,10 @@ expression.GetCommands();
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。在单元格中显示命令总数和第一个命令信息。
+分析星形的路径命令并显示命令详细信息。
 
 ```javascript editor-xlsx
-// How can I get the commands using a geometry path in a spreadsheet?
-
-// Get the commands for a geometry path in a spreadsheet.
-
+// Shows total command count and first command information in cells.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

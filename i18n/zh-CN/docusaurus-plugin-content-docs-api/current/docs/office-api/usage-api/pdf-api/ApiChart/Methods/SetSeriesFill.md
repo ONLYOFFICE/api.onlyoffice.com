@@ -24,12 +24,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为图表系列设置颜色。
+如何为图表系列着色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series background in a PDF document.
-
-// Set series fill using a chart object in a PDF document.
+// Create a chart, set its properties and its series background.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,4 +44,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

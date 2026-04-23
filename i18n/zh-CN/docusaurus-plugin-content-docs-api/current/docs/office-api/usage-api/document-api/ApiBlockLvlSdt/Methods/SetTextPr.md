@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将文本设置应用于文档中内容控件的内容。
+此示例将文本设置应用于内容控件的内容。
 
 ```javascript editor-docx
-// Create a block content control, add a text to it, and set the font size and bold property to this text in a document.
+// Creates a block content control, adds a text to it, and sets the font size and bold property to this text.
 
-// Specify the text properties object and apply its settings to the block-level content control object in a document.
+// Specifies the ApiTextPr object and applies its settings to the ApiBlockLvlSdt object.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

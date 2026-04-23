@@ -23,12 +23,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中重命名图表系列。
+如何重命名图表系列。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series names in a PDF document.
-
-// Set seria name using a chart object in a PDF document.
+// Create a chart, set its properties and its series names.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,4 +44,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

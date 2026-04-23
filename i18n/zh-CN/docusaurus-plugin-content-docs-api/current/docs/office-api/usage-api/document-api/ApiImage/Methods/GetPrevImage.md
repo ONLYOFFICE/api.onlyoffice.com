@@ -20,12 +20,12 @@ expression.GetPrevImage();
 
 ## 示例
 
-获取文档中的上一个内联图像（如果存在）。
+此示例展示如何获取上一个内联图像（如果存在）。
 
 ```javascript editor-docx
-// How to add the previous drawing to the paragraph in a document.
+// How to add the previous drawing to the paragraph.
 
-// Get the previous drawing and add it separated with a line break in a document.
+// Get the previous drawing and add it separated with a line break.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,4 +47,5 @@ let prevImage = image2.GetPrevImage();
 let copyImage = prevImage.Copy();
 paragraph.AddLineBreak();
 paragraph.AddDrawing(copyImage);
+
 ```

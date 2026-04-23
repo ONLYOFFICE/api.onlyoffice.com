@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -15,6 +15,7 @@ Object
 | scaleFlag | [ScaleFlag](../Enumeration/ScaleFlag.md) | 在图片表单中缩放图像的条件："always"、"never"、"tooBig" 或 "tooSmall"。 |
 | shiftX | [percentage](../Enumeration/percentage.md) | 图片在图片表单中的水平位置（以百分比表示）：**0** - 图片位于左侧；**50** - 图片位于中心；**100** - 图片位于右侧。 |
 | shiftY | [percentage](../Enumeration/percentage.md) | 图片在图片表单中的垂直位置（以百分比表示）：**0** - 图片位于顶部；**50** - 图片位于中心；**100** - 图片位于底部。 |
+
 
 ## 示例
 
@@ -33,4 +34,5 @@ const pictureFormPrBase = {
 	"shiftY": 50
 };
 const pictureForm = Api.CreatePictureForm(pictureFormPrBase);
+
 ```

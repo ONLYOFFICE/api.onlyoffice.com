@@ -20,13 +20,9 @@ number
 
 ## 示例
 
-指定文档中当前节的所有列具有不同的宽度。
+此示例指定当前节中的所有列具有不同的宽度。
 
 ```javascript editor-docx
-// How to get the columns count for a section in a document?
-
-// Get the columns count and display the result in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let section = doc.GetFinalSection();

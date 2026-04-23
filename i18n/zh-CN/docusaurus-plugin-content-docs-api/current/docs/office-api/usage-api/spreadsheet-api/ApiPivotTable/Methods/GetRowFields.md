@@ -22,12 +22,12 @@ expression.GetRowFields(field);
 
 ## 示例
 
-获取电子表格中数据透视表的行字段。
+此示例展示如何获取数据透视表的行字段。
 
 ```javascript editor-xlsx
-// How to get table row fields as an array of fields in a spreadsheet.
+// How to get table row fields as an array of fields.
 
-// Create a pivot table, add data to it then get its row fields in a spreadsheet.
+// Create a pivot table, add data to it then get its row fields.
 
 let worksheet = Api.GetActiveSheet();
 

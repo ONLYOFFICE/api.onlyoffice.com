@@ -2,16 +2,30 @@
 
 返回具有当前文本属性的文本是否大写。
 
-继承自 [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md)。
+## 语法
+
+```javascript
+expression.GetCaps();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-检查当前表单是否为大写。
+此示例查明当前表单是否大写。
 
 ```javascript editor-docx
-// How to find out whether a text is capitalized or not in a document.
+// How to find out whether a text is capitalized or not.
 
-// Get the property of the text that shows whether a text is in uppercase in a document.
+// Get the property of the text that shows whether a text is in uppercase.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

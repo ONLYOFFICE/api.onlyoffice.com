@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中 RGB 颜色对象的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-docx
-// How can I get the class type of a RGB color in a document?
+// How to get a class type of ApiRGBColor.
 
-// Get the class type of a RGB color and display it in the document.
+// Retrieve class type of ApiRGBColor object and insert it to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

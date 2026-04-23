@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-更新当前文档中的所有目录。
+此示例更新当前文档中的所有目录。
 
 ```javascript editor-docx
-// How to update all table of contents in a document.
+// How to update all table of contents.
 
 // Edit document content and update the table of contents.
 

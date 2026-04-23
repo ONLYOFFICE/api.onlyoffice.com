@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回文本字符串中的字符数。
+此示例演示如何返回文本字符串中的字符数。
 
 ```javascript editor-xlsx
-// How to get a length of a text in a spreadsheet.
+// How to get a length of a text.
 
-// Use a function to get length of a string in a spreadsheet.
+// Use a function to get length of a string.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

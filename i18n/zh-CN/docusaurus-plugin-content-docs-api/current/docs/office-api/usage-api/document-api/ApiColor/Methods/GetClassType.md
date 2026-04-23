@@ -20,15 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中颜色的类类型。
+此示例展示如何获取 ApiColor 对象的类类型。
 
 ```javascript editor-docx
-// How to identify the class type of a color in a document?
-
-// Obtain the class type identifier of a color object in a document.
-
 const doc = Api.GetDocument();
 const color = Api.ThemeColor('accent1');
 const paragraph = doc.GetElement(0);
 paragraph.AddText('Class type of ApiColor instance: ' + color.GetClassType());
+
 ```

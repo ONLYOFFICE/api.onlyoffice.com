@@ -25,10 +25,6 @@ expression.CreateTextField(aRect);
 如何创建文本字段并添加到文档。
 
 ```javascript editor-pdf
-// How do I create the text field in a PDF document?
-
-// Create the text field and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

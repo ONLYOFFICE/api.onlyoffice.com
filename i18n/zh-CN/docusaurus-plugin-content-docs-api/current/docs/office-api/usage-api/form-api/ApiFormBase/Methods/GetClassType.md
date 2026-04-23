@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取表单基础对象的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-forms
-// How can I get the class type of a form base?
+// How to get a class type of ApiFormBase.
 
-// Get the class type of a form base and display it in the document.
+// Retrieve class type of ApiFormBase object and insert it to the slide.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

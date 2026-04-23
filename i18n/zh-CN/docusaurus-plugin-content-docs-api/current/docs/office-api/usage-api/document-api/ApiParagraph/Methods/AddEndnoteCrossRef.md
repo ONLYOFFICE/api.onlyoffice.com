@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加尾注交叉引用。
+此示例向段落添加尾注交叉引用。
 
 ```javascript editor-docx
-// How to create an endnote reference to the paragraph in a document.
+// How to create an endnote reference to the paragraph.
 
-// Add a cross-reference to the endnote of the paragraph in a document.
+// Add a cross-reference to the endnote of the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 

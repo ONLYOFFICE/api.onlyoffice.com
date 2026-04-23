@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取电子表格中与图标集条件关联的公式。
+此示例展示如何获取与图标集条件关联的公式。
 
 ```javascript editor-xlsx
-// How do I get the formula in a spreadsheet?
-
-// Get the formula using an icon set condition object.
-
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Month');
 worksheet.GetRange('B1').SetValue('Revenue');
@@ -50,4 +46,5 @@ if (formula) {
 	worksheet.GetRange('D1').SetValue('Icon set condition does not have a formula.');
 }
 worksheet.GetRange('D2').SetValue('Type: ' + iconCondition.GetType());
+
 ```

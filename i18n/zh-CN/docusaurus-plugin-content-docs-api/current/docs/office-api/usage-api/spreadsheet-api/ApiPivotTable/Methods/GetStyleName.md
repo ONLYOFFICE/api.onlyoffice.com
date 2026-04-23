@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据透视表的样式名称。
+此示例展示如何获取数据透视表的样式名称。
 
 ```javascript editor-xlsx
-// How to get table style name in a spreadsheet.
+// How to get table style name.
 
-// Create a pivot table, add data to it then get its style name in a spreadsheet.
+// Create a pivot table, add data to it then get its style name.
 
 let worksheet = Api.GetActiveSheet();
 

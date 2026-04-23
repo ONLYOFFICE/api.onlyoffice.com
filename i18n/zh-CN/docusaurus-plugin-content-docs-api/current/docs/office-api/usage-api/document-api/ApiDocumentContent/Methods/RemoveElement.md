@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中使用指定位置移除元素。
+此示例使用指定的位置移除元素。
 
 ```javascript editor-docx
-// Remove the element using its index in a document.
+// Remove the element using its index.
 
-// Remove the element for a document content in a document.
+// Delete document item.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

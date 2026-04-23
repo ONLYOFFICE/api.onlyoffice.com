@@ -22,12 +22,12 @@ expression.IntersectWith(oRange);
 
 ## 示例
 
-在文档中返回当前范围与另一个范围的交集作为新范围。
+此示例返回当前范围与另一个范围的交集作为新范围。
 
 ```javascript editor-docx
-// How to intersect two ranges into the new one in a document.
+// How to intersect two ranges into the new one.
 
-// Create a range by intersection of two and make its text bold in a document.
+// Create a range by intersection of two and make its text bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

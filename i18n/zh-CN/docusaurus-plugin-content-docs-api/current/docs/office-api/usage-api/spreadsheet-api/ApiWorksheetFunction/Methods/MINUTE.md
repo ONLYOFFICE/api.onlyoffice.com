@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回分钟数，0 到 59 的数字。
+此示例演示如何返回分钟数，一个从 0 到 59 的数字。
 
 ```javascript editor-xlsx
-// How to get a minute from a time in a spreadsheet.
+// How to get a minute from a time.
 
-// Use a function to get minutes from a time object in a spreadsheet.
+// Use a function to get minutes from a time object.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -35,4 +35,5 @@ let func = Api.WorksheetFunction;
 let ans = func.MINUTE("4:25 pm"); 
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

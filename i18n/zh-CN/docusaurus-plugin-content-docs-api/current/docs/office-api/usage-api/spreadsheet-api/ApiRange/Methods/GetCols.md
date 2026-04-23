@@ -22,14 +22,15 @@ expression.GetCols(nCol);
 
 ## 示例
 
-获取表示电子表格中指定范围中列的 Range 对象。
+此示例演示如何获取表示指定范围中的列的 Range 对象。
 
 ```javascript editor-xlsx
-// How to get columns from a range in a spreadsheet.
+// How to get columns from a range.
 
-// Get a range, get its first two columns and fill them with a color in a spreadsheet.
+// Get a range, get its first two columns and fill them with a color.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
 range.GetCols(2).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
+
 ```

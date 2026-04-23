@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-勾选文档中的复选框。
+此示例选中复选框。
 
 ```javascript editor-forms
 // How to check a form.
 
-// Set checked for a checkbox form in a document.
+// Check a checkbox.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

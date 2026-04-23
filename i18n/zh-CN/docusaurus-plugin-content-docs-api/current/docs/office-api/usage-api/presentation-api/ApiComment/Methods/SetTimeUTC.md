@@ -22,7 +22,7 @@ expression.SetTimeUTC(nTimeStamp);
 
 ## 示例
 
-在演示文稿中设置批注的 UTC 时间。
+此示例演示如何设置批注的 UTC 时间。
 
 ```javascript editor-pptx
 // How to change a creation time of a comment in UTC format.
@@ -50,4 +50,5 @@ const timeUTC = arrComments[0].GetTimeUTC();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's time (UTC): " + timeUTC);
+
 ```

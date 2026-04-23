@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中文本的斜体属性。
+此示例获取文本斜体属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is italic or not in a spreadsheet.
+// How to find out whether a text is italic or not.
 
-// Get a text italic property as a boolean value in a spreadsheet.
+// Get a text italic property as a boolean value.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

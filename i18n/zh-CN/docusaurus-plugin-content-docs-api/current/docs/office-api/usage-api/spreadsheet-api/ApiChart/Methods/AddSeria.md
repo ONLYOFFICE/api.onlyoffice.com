@@ -24,12 +24,12 @@ expression.AddSeria(sNameRange, sValuesRange, sXValuesRange);
 
 ## 示例
 
-在电子表格中向图表添加新系列。
+此示例向图表添加新系列。
 
 ```javascript editor-xlsx
-// How to add a new series to create a chart in a spreadsheet.
+// How to add a new series to create a chart.
 
-// Add a new series to update a chart in a spreadsheet.
+// Add a new series to update a chart.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

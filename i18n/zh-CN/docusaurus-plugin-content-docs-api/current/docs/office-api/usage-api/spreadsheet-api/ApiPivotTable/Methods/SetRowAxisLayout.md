@@ -23,12 +23,12 @@ expression.SetRowAxisLayout(type, compact);
 
 ## 示例
 
-在电子表格中设置数据透视表的行轴布局。
+此示例展示如何设置数据透视表的行轴布局。
 
 ```javascript editor-xlsx
-// How to set row axis layout of a table in a spreadsheet.
+// How to set row axis layout of a table.
 
-// Create a pivot table, add data to it then set its row axis layout in a spreadsheet.
+// Create a pivot table, add data to it then set its row axis layout.
 
 let worksheet = Api.GetActiveSheet();
 

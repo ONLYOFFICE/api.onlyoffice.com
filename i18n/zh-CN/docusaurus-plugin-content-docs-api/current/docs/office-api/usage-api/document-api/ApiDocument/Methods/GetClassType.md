@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档对象的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-docx
-// How can I get the class type of a document?
+// How get a class type of ApiDocument.
 
-// Get the class type of a document and display it in the document.
+// Retrieve class type of a created document object and display it.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

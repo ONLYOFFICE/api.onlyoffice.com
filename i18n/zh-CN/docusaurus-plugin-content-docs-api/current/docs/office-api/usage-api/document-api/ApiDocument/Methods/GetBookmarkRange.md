@@ -22,12 +22,12 @@ expression.GetBookmarkRange(sName);
 
 ## 示例
 
-获取文档中的书签范围。
+此示例展示如何获取书签范围。
 
 ```javascript editor-docx
-// Get a range with a bookmark with specific name in a document.
+// Get a range with a bookmark with specific name.
 
-// How to retrieve a range bookmarked and set it bold in a document.
+// How to retrieve a range bookmarked and set it bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

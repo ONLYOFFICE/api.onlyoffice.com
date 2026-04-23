@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-在文档中向表格添加新列。
+此示例向表格添加新列。
 
 ```javascript editor-docx
-// How to insert a column to the table in a document.
+// How to insert a column to the table.
 
 // Get a table cell from the row and add it as a column.
 

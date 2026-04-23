@@ -37,7 +37,7 @@ sidebar_label: Windows
 
 结果如下：
 
-![调试](/assets/images/desktop/debugging.png#gh-light-mode-only)![调试](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
+![调试](/assets/images/desktop/debugging.png)
 
 ## 运行应用程序 {#running-the-application}
 

@@ -2,16 +2,32 @@
 
 设置表格说明。
 
-继承自 [ApiTablePr.SetTableDescription](../../ApiTablePr/Methods/SetTableDescription.md)。
+## 语法
+
+```javascript
+expression.SetTableDescription(sDescr);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sDescr | 必需 | string |  | 要设置的表格说明。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-在文档中设置表格描述。
+此示例设置表格说明。
 
 ```javascript editor-docx
 // How to display the table description in the document.
 
-// Get the table description from the table properties in a document.
+// Get the table description from the table properties.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

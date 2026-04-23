@@ -20,10 +20,10 @@ expression.Copy();
 
 ## 示例
 
-复制文档中的当前图形对象。
+此示例复制当前图形对象。
 
 ```javascript editor-docx
-// How to create a duplicate of a drawing in a document.
+// How to create a duplicate of a drawing.
 
 // Add two similar shapes into the document.
 

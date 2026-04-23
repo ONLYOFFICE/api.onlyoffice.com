@@ -20,12 +20,12 @@ expression.AddColumnBreak();
 
 ## 示例
 
-在文档中向当前位置添加分栏符并从新列开始下一个元素。
+此示例在当前位置添加分栏符，并从新栏开始下一个元素。
 
 ```javascript editor-docx
-// How to add a column break between the text of paragraph in a document.
+// How to add a column break between the text of paragraph.
 
-// Split paragraph with a coulumn break in a document.
+// Split paragraph with a coulumn break.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

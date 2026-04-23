@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置文档中容器的背景颜色。
+此示例展示如何设置容器的背景颜色。
 
 ```javascript editor-docx
-// How can I set background color using an inline content control in a document?
-
-// Set background color for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
@@ -37,4 +33,5 @@ run.AddText("This is an inline text content control with a transparent blue back
 inlineLvlSdt.AddElement(run, 0);
 inlineLvlSdt.SetBackgroundColor(Api.RGBA(0, 0, 255, 40));
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
+
 ```

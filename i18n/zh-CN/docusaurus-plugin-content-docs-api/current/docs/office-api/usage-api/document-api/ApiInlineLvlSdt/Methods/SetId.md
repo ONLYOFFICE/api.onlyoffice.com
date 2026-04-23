@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置文档中容器的 ID。
+此示例展示如何设置容器的 ID。
 
 ```javascript editor-docx
-// How do I set id in a document?
-
-// Set id using an inline content control object in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

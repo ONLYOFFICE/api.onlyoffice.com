@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-为表单设置背景颜色。
+此示例为表单设置背景颜色。
 
 ```javascript editor-docx
-// Apply an RGB background color to the text form element.
+// Applies an RGB background color to the text form element.
 
 // How to change background color of the text form.
 

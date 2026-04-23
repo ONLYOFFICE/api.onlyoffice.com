@@ -22,7 +22,7 @@ expression.AddColorScale(ColorScaleType);
 
 ## 示例
 
-向范围添加色阶条件格式。
+此示例向区域添加色阶条件格式。
 
 ```javascript editor-xlsx
 // How to add color scale conditional formatting rules to highlight cells with gradient colors.
@@ -46,4 +46,5 @@ let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 
 formatConditions.AddColorScale(3);
+
 ```

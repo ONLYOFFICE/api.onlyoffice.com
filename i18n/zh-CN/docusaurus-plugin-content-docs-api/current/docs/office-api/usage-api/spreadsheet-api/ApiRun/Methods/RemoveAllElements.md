@@ -1,6 +1,6 @@
 # RemoveAllElements
 
-从当前文本块中移除所有元素。
+从当前运行中移除所有元素。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.RemoveAllElements();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从电子表格中的 run 移除所有元素。
+此示例从运行中移除所有元素。
 
 ```javascript editor-xlsx
-// How to remove all text elements in a spreadsheet.
+// How to remove all text elements.
 
-// Create a text run object, add a text to it and clear its content in a spreadsheet.
+// Create a text run object, add a text to it and clear its content.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

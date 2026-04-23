@@ -20,13 +20,9 @@ number
 
 ## 示例
 
-获取文档页数并在文本字段中显示。
+此示例获取文档页数并在文本字段中显示。
 
 ```javascript editor-pdf
-// How can I get the pages count using a document in a PDF document?
-
-// Get the pages count for a document in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);

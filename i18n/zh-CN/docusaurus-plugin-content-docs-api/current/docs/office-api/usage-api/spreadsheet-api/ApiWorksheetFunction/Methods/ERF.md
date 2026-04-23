@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回在指定上下限之间积分的误差函数。
+此示例演示如何返回在指定上下界之间积分的误差函数。
 
 ```javascript editor-xlsx
-// How to get an error function in a spreadsheet.
+// How to get an error function.
 
-// Use function to get an error function set between upper and lower limits in a spreadsheet.
+// Use function to get an error function set between upper and lower limits.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

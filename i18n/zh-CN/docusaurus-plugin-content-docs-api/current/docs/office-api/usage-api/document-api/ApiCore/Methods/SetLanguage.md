@@ -22,13 +22,9 @@ expression.SetLanguage(sLanguage);
 
 ## 示例
 
-使用文档中的核心属性设置当前文档的语言。
+此示例演示如何使用 ApiCore 设置当前文档的语言。
 
 ```javascript editor-docx
-// How can I set language using a core properties in a document?
-
-// Set language for a core properties in a document.
-
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetLanguage("en-US");
@@ -36,4 +32,5 @@ core.SetLanguage("en-US");
 const language = core.GetLanguage();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Language: " + language);
+
 ```

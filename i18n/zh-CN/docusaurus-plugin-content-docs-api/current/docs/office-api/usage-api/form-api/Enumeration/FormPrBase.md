@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -17,9 +17,10 @@ Object
 | tag | string | 表单标记。 |
 | tip | string | 表单提示文本。 |
 
+
 ## 示例
 
-创建具有通用表单属性的文本表单。
+此示例创建具有通用表单属性的文本表单。
 
 ```javascript editor-forms
 // How to create a text form using its base properties.
@@ -33,4 +34,5 @@ let formPrBase = {
 	"placeholder": "First name"
 };
 let textForm = Api.CreateTextForm(formPrBase);
+
 ```

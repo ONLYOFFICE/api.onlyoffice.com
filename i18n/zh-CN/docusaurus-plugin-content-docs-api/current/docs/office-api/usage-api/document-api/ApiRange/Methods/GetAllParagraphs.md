@@ -20,10 +20,10 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-获取表示文档中指定范围内所有段落的段落集合。
+此示例展示如何获取表示指定范围中所有段落的段落集合。
 
 ```javascript editor-docx
-// How to get all paragraphs in a document.
+// How to get all paragraphs.
 
 // Retrieve all paragraphs from the document and make the first one bold.
 

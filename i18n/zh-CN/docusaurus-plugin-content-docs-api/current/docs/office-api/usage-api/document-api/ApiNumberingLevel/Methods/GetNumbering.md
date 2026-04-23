@@ -20,12 +20,12 @@ expression.GetNumbering();
 
 ## 示例
 
-获取文档中的编号定义。
+此示例展示如何获取编号定义。
 
 ```javascript editor-docx
-// How to retrieve the numbering in a document.
+// How to retrieve the numbering.
 
-// Get the numbering of the level in a document.
+// Get the numbering of the level.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

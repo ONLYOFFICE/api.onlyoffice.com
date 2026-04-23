@@ -20,13 +20,9 @@ expression.CreateRichParaPr();
 
 ## 示例
 
-如何在 PDF 文档中创建段落属性并将其设置给富文本段落。
+如何创建段落属性并将其设置为富文本段落。
 
 ```javascript editor-pdf
-// How to create the rich para pr in a PDF document?
-
-// Create the rich para pr using the PDF document API.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

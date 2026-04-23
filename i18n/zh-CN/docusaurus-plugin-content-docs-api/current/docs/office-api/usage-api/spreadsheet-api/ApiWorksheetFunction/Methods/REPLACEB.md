@@ -25,12 +25,12 @@ string
 
 ## 示例
 
-在电子表格中根据指定的字符数和起始位置用新的字符集替换一组字符，适用于使用双字节字符集 (DBCS) 的语言。
+此示例演示如何根据指定的字符数和起始位置用新的字符集替换一组字符，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
 
 ```javascript editor-xlsx
-// How to replace a substring with another one using starting index and length in a spreadsheet.
+// How to replace a substring with another one using starting index and length.
 
-// Use a function to replace one part of a text with another one indicating charachters count and index in a spreadsheet.
+// Use a function to replace one part of a text with another one indicating charachters count and index.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -21,13 +21,9 @@ expression.GetCustomXmlParts();
 
 ## 示例
 
-获取自定义 XML 管理器，添加新的 XML 部件，并通过 ID 检索。
+此示例展示如何获取自定义 XML 管理器、添加新的 XML 部件并通过其 ID 检索它。
 
 ```javascript editor-docx
-// How can I get custom xml parts using a document in a document?
-
-// Get custom xml parts for a document in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = "<content><text>Example XML</text></content>";

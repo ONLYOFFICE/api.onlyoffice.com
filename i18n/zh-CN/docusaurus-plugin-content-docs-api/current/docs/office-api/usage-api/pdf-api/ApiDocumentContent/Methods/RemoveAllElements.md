@@ -21,7 +21,7 @@ boolean
 
 ## 示例
 
-从 PDF 文档中的形状移除所有元素。
+此示例演示如何从形状中删除所有元素。
 
 ```javascript editor-pdf
 // How to remove all elements from the page shape.
@@ -36,7 +36,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 paragraph.AddText("This is just a sample paragraph.");
 docContent.RemoveAllElements();
@@ -44,4 +44,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 docContent.Push(paragraph);
 page.AddObject(shape);
+
 ```

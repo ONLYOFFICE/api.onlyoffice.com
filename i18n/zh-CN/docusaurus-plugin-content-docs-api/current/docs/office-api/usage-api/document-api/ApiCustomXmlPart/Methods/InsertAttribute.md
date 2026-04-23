@@ -24,13 +24,9 @@ boolean
 
 ## 示例
 
-向文档中的自定义 XML 节点插入属性。
+此示例演示如何将属性插入自定义 XML 节点。
 
 ```javascript editor-docx
-// How to insert the attribute for a custom XML part in a document?
-
-// Insert the attribute and display the result in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'></content>");

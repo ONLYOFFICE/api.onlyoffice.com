@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-获取演示文稿中的父对象。
+此示例演示如何获取父对象。
 
 ```javascript editor-pptx
 // How to get a parent of a slide shape.
@@ -44,4 +44,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
+
 ```

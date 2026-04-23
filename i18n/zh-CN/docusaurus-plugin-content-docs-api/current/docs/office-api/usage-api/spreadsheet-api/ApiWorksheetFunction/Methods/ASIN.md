@@ -22,10 +22,10 @@ number
 
 ## 示例
 
-在电子表格中返回数字的反正弦值，以弧度表示，范围从 -Pi/2 到 Pi/2。
+此示例演示如何返回数字的反正弦，以弧度表示，范围从 -Pi/2 到 Pi/2。
 
 ```javascript editor-xlsx
-// How to get an arcsine of a number in radians in a spreadsheet.
+// How to get an arcsine of a number in radians.
 
 // Use function to get an arcsine of a number and display it in the worksheet.
 

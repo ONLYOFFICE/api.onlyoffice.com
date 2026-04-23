@@ -23,7 +23,7 @@ number
 
 ## 示例
 
-在电子表格中基于索引号从值列表中选择要执行的值或操作。
+此示例演示如何根据索引号从值列表中选择要执行的值或操作。
 
 ```javascript editor-xlsx
 // How to choose a value or action to perform from a list of values, based on an index number.

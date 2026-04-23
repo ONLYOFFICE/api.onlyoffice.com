@@ -27,7 +27,7 @@ JSON[]
 
 ## 示例
 
-在演示文稿中将当前演示文稿对象的幻灯片转换为 JSON 对象。
+此示例演示如何将当前 ApiPresentation 对象中的幻灯片转换为 JSON 对象。
 
 ```javascript editor-pptx
 // How to convert slides to JSON objects.
@@ -54,4 +54,5 @@ slide.AddObject(drawing);
 const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
+
 ```

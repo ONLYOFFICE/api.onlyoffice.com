@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ONLYOFFICE Document Builder 可安装在多种平台上，用于生成、编辑和转换 Office 及 PDF 文档。
 
-:::info
+:::warning
 
 ONLYOFFICE Document Builder 的免费版本会在所有生成的文档上添加水印。要去除此限制并使用全部功能，需要商业许可证。
 

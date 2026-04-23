@@ -20,7 +20,7 @@ expression.GetIconSet();
 
 ## 示例
 
-获取电子表格中条件格式的图标集类型。
+此示例演示如何从条件格式获取图标集类型。
 
 ```javascript editor-xlsx
 // How to retrieve the current icon set type used in conditional formatting.
@@ -42,4 +42,5 @@ iconCondition.SetIconSet("xl3TrafficLights1");
 
 let iconSet = iconCondition.GetIconSet();
 worksheet.GetRange("B1").SetValue("Current icon set: " + iconSet);
+
 ```

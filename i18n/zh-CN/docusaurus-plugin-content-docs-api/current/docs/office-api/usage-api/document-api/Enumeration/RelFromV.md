@@ -15,9 +15,10 @@
 - "line"
 - "paragraph"
 
+
 ## 示例
 
-为绘图对象设置垂直对齐方式。
+此示例为绘图对象设置垂直对齐方式。
 
 ```javascript editor-docx
 // How to align a drawing to the center.

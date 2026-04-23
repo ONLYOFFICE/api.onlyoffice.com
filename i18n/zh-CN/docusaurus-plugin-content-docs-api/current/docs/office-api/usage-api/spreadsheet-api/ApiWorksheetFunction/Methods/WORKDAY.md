@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定工作日数之前或之后的日期序列号。
+此示例演示如何返回指定工作日数之前或之后的日期的序列号。
 
 ```javascript editor-xlsx
-// How to return the serial number of the date adding some workdays in a spreadsheet.
+// How to return the serial number of the date adding some workdays.
 
-// Use a function to calculate the serial number of the date in a spreadsheet.
+// Use a function to calculate the serial number of the date.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,4 +37,5 @@ let func = Api.WorksheetFunction;
 let ans = func.WORKDAY("12/7/1981", 56); 
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

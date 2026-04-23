@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-指定在使用分页视图呈现文档时，当前段落的内容在文档的新页面开头呈现。
+此示例指定在使用分页视图呈现文档时，当前段落的内容呈现在文档新页的开头。
 
 ```javascript editor-docx
 // How to set a page break before the current paragraph.

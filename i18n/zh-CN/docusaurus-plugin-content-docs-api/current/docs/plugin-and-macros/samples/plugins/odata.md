@@ -10,7 +10,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/odata) 下载此插件，并根据以下指南完成安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/odata) 下载此插件，并根据以下指南完成安装：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用
 
@@ -114,8 +114,8 @@ GitHub 仓库：[odata](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/
 - button
 - init
 - onTranslate
-- [callCommand](../../interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](../../interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象
+- [callCommand](../../plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](../../plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象
 
 ## 支持
 

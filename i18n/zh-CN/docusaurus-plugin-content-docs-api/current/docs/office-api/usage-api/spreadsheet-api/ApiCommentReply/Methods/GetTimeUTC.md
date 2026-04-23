@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取电子表格中批注回复创建的 UTC 格式时间戳。
+此示例演示如何获取 UTC 格式的批注回复创建时间戳。
 
 ```javascript editor-xlsx
-// How to get a time in UTC when a reply was created in a spreadsheet.
+// How to get a time in UTC when a reply was created.
 
 // Add a comment reply creation timestamp UTC to a range of the worksheet.
 

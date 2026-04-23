@@ -110,7 +110,7 @@ Choose your environment:
 3. Browse to your `hello-world-plugin` folder.
 4. Click **OK**.
 
-[Detailed Desktop installation guide](../../tutorials/installing/onlyoffice-desktop-editors.md)
+[Detailed Desktop installation guide](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)
 
 ### For ONLYOFFICE Docs (on-premises)
 
@@ -120,7 +120,7 @@ Choose your environment:
 2. Restart the Document Server.
 3. Refresh your browser.
 
-[Detailed Docs installation guide](../../tutorials/installing/onlyoffice-docs-on-premises.md)
+[Detailed Docs installation guide](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)
 
 ## Step 4: Test your plugin
 
@@ -181,9 +181,9 @@ function insertFormattedText() {
 
 **Learn more:**
 
-- [Plugin structure and configuration](../../structure/configuration/configuration.md)
-- [Complete API reference](../../interacting-with-editors/overview/overview.md)
-- [UI customization options](../../customization/toolbar.md)
+- [Plugin structure and configuration](../../plugins/fundamentals/configuration/config-json.md)
+- [Complete API reference](../../plugins/interacting-with-editors/overview/overview.md)
+- [UI customization options](../../plugins/customization/toolbar.md)
 
 **Explore examples:**
 

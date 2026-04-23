@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回 x 的对数正态分布，其中 ln(x) 以指定参数正态分布。
+此示例演示如何返回 x 的对数正态分布，其中 ln(x) 按指定参数呈正态分布。
 
 ```javascript editor-xlsx
-// How to get the lognormal distribution of x in a spreadsheet.
+// How to get the lognormal distribution of x.
 
-// Use a function to return the lognormal distribution in a spreadsheet.
+// Use a function to return the lognormal distribution.
 
 const worksheet = Api.GetActiveSheet();
 

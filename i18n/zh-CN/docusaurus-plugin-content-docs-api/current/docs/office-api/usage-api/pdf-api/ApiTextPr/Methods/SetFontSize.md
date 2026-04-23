@@ -1,6 +1,6 @@
 # SetFontSize
 
-设置当前文本块字符的字体大小。
+设置当前文本运行字符的字体大小。
 
 ## 语法
 
@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在 PDF 文档中为文本 run 的字符设置字体大小。
+此示例设置文本运行字符的字体大小。
 
 ```javascript editor-pdf
-// How to change a text font size in a PDF document.
+// How to change a text font size.
 
-// Get the text properties of the run and set its font size in a PDF document.
+// Get the text properties of the run and set its font size.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -46,4 +46,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font size set to 30 points using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
+
 ```

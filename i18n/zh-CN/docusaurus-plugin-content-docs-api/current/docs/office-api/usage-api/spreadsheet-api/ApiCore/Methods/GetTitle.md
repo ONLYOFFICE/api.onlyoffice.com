@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的标题。
+此示例演示如何获取当前工作簿的标题。
 
 ```javascript editor-xlsx
-// How do I get the title in a spreadsheet?
-
-// Get the title using a core properties object in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -44,4 +40,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Title: " + title);
+
 ```

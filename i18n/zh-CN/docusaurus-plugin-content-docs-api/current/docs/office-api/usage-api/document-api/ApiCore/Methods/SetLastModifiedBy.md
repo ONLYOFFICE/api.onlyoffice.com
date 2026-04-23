@@ -22,13 +22,9 @@ expression.SetLastModifiedBy(sLastModifiedBy);
 
 ## 示例
 
-设置文档中最后修改当前文档的用户名称。
+此示例演示如何设置最后修改当前文档的用户名称。
 
 ```javascript editor-docx
-// How can I set last modified by using a core properties in a document?
-
-// Set last modified by for a core properties in a document.
-
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -36,4 +32,5 @@ core.SetLastModifiedBy("Mark Pottato");
 const lastModifiedBy = core.GetLastModifiedBy();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
+
 ```

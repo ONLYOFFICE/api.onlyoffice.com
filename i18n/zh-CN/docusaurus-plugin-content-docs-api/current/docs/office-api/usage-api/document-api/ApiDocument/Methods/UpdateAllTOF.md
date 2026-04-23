@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-更新当前文档中的所有图表目录。
+此示例更新当前文档中的所有图表目录。
 
 ```javascript editor-docx
-// How to update all table of figures in a document.
+// How to update all table of figures.
 
 // Edit document content, add drawings and update the table of figures.
 

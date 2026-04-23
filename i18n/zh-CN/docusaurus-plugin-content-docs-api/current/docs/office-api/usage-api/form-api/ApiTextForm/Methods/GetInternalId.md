@@ -2,11 +2,25 @@
 
 返回当前表单的内部 ID。
 
-继承自 [ApiFormBase.GetInternalId](../../ApiFormBase/Methods/GetInternalId.md)。
+## 语法
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中表单的内部 ID。
+此示例展示如何获取表单的内部 ID。
 
 ```javascript editor-forms
 // How to get an internal id of a text form.
@@ -21,4 +35,5 @@ let internalId = textForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);
+
 ```

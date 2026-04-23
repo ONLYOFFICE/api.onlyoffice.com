@@ -17,9 +17,10 @@
 - "nul"
 - "percent"
 
+
 ## 示例
 
-将表格单元格的宽度设置为 100 磅（2000 缇）。
+此示例将表格单元格的宽度设置为 100 磅（2000 缇）。
 
 ```javascript editor-docx
 // How to change a table cell width using twips.

@@ -1,6 +1,6 @@
 # SetTextFill
 
-设置当前文本块的文本填充。
+设置当前文本运行的文本填充。
 
 ## 语法
 
@@ -22,12 +22,12 @@ expression.SetTextFill(oApiFill);
 
 ## 示例
 
-为文档中的艺术字文本设置文本填充。
+在此示例中，艺术字文本具有文本填充。
 
 ```javascript editor-docx
-// How to color a text object in a document.
+// How to color a text object.
 
-// Create a text run object, add color to it using solid fill in a document.
+// Create a text run object, add color to it using solid fill.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

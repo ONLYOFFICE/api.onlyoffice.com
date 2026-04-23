@@ -16,9 +16,7 @@
 
 编辑后关闭编辑器时，**文档管理器**中的文件不变。
 
-:::note
-**文档编辑服务**无法将数据发送到**文档存储服务**。
-:::
+>**文档编辑服务**无法将数据发送到**文档存储服务**。
 
  检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#document-save-examples)实现。
 

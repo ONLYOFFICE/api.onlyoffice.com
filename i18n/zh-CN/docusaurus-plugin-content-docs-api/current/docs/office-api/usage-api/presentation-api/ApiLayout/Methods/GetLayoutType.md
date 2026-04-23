@@ -20,13 +20,9 @@ expression.GetLayoutType();
 
 ## 示例
 
-返回演示文稿中版式的类型。
+此示例返回布局的类型。
 
 ```javascript editor-pptx
-// How to get the layout type for a layout in a presentation?
-
-// Get the layout type and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
@@ -45,4 +41,5 @@ paragraph.AddText(
 		.map(layout => layout.GetLayoutType())
 		.join(', ')
 );
+
 ```

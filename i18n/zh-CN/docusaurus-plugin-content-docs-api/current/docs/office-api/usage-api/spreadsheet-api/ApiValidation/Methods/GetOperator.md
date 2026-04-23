@@ -20,12 +20,12 @@ expression.GetOperator();
 
 ## 示例
 
-获取电子表格中的数据验证运算符。
+此示例获取数据验证运算符。
 
 ```javascript editor-xlsx
-// How to retrieve the validation operator in a spreadsheet.
+// How to retrieve the validation operator.
 
-// Get the operator using the validation API in a spreadsheet.
+// Get the operator.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -33,4 +33,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let operator = validation.GetOperator();
 worksheet.GetRange("B1").SetValue("Operator: " + operator);
+
 ```

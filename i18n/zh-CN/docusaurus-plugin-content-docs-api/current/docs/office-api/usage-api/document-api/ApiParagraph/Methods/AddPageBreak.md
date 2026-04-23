@@ -20,12 +20,12 @@ expression.AddPageBreak();
 
 ## 示例
 
-添加分页符并从下一页开始下一个元素。
+此示例添加分页符，并从下一页开始下一个元素。
 
 ```javascript editor-docx
 // How to add a page break to the text.
 
-// Add a break between the text of a paragraph in a document.
+// Add a break between the text of a paragraph. 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

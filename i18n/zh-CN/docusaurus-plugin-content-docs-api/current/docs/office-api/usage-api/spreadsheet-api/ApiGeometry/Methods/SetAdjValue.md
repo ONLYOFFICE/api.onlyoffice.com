@@ -23,13 +23,10 @@ expression.SetAdjValue(sName, nValue);
 
 ## 示例
 
-创建带有参考线和连接点的可调节自定义几何图形。在单元格中显示调整值并将几何图形应用于形状。
+创建带有参考线和连接点的可调整自定义几何图形。
 
 ```javascript editor-xlsx
-// How can I set adj value using a geometry in a spreadsheet?
-
-// Set adj value for a geometry in a spreadsheet.
-
+// Displays adjustment value in a cell and applies geometry to shape.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

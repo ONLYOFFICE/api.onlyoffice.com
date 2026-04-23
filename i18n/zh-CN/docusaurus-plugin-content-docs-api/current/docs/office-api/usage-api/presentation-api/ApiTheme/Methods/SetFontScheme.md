@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-为当前演示文稿主题设置字体方案。
+此示例为当前演示文稿主题设置字体方案。
 
 ```javascript editor-pptx
-// How to get a theme and set a new font scheme in a presentation.
+// How to get a theme and set a new font scheme.
 
 // Create a new font scheme and apply it to the slide theme.
 
@@ -49,4 +49,5 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph with a new font scheme set.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
+
 ```

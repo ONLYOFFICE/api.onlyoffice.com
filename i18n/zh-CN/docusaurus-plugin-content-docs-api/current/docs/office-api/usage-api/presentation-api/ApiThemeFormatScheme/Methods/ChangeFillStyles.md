@@ -22,7 +22,7 @@ expression.ChangeFillStyles(arrFill);
 
 ## 示例
 
-为当前主题格式方案设置填充样式。
+此示例为当前主题格式方案设置填充样式。
 
 ```javascript editor-pptx
 // How to change fill styles of a format scheme.
@@ -67,4 +67,5 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
+
 ```

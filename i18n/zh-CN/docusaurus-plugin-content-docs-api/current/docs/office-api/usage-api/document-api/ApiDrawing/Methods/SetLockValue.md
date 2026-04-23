@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为文档中当前绘图对象的指定锁定类型设置锁定值。
+此示例设置当前绘图的指定锁定类型的锁定值。
 
 ```javascript editor-docx
-// How to set the lock value to "noSelect" of the drawing in a document.
+// How to set the lock value to "noSelect" of the drawing.
 
-// Create a drawing and lock it in a document.
+// Create a drawing and lock it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-创建跳转到当前工作簿中另一个位置或打开存储在硬盘、网络服务器或互联网上的文档的快捷方式。
+此示例演示如何创建跳转到当前工作簿中其他位置或打开存储在硬盘、网络服务器或互联网上的文档的快捷方式。
 
 ```javascript editor-xlsx
-// How to create a hyperlink in a spreadsheet.
+// How to create a hyperlink.
 
-// Use a function to add url to the text in a spreadsheet.
+// Use a function to add url to the text.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

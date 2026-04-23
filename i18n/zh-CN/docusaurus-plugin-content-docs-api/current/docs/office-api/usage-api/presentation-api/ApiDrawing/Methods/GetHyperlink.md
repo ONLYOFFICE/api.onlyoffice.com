@@ -20,13 +20,9 @@ expression.GetHyperlink();
 
 ## 示例
 
-返回演示文稿中当前绘图对象的超链接。
+此示例返回当前绘图对象的超链接。
 
 ```javascript editor-pptx
-// How to get the hyperlink for a drawing object in a presentation?
-
-// Get the hyperlink and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,4 +45,5 @@ if (retrievedHyperlink) {
   paragraph.AddText('No hyperlink found.');
 }
 slide.AddObject(shape);
+
 ```

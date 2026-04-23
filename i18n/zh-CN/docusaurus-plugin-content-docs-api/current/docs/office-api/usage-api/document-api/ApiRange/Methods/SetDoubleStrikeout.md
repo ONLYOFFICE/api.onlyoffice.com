@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-指定在文档中当前范围的内容以每个字符上显示两条水平线的方式显示。
+此示例指定当前范围的内容显示时，行上显示的每个字符都有两条水平线穿过。
 
 ```javascript editor-docx
-// How to strikethrough a text with two lines in a document.
+// How to strikethrough a text with two lines.
 
-// Create a text run object, double cross out it in a document.
+// Create a text run object, double cross out it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

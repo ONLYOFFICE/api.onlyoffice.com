@@ -21,7 +21,7 @@ expression.GetTextPr();
 
 ## 示例
 
-获取文档中表单的文本属性。
+此示例展示如何从表单获取文本属性。
 
 ```javascript editor-forms
 // How to get a text properties of a text form.

@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在演示文稿中将毫米转换为像素。
+此示例展示如何将毫米转换为像素。
 
 ```javascript editor-pptx
-// How can I convert millimeters to pixels in a presentation?
-
-// Convert millimeters to pixels in a presentation.
-
 const millimeters = 100;
 const pixels = Api.MillimetersToPixels(millimeters);
 
@@ -43,4 +39,5 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

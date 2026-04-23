@@ -22,12 +22,12 @@ expression.SetFontSize(FontSize);
 
 ## 示例
 
-在文档中为文本范围的字符设置字体大小。
+此示例为文本范围的字符设置字体大小。
 
 ```javascript editor-docx
-// How to change the range text font size in a document.
+// How to change the range text font size.
 
-// Get a range, resize its font in a document.
+// Get a range, resize its font.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

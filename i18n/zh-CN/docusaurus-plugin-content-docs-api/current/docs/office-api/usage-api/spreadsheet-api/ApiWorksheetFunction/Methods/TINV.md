@@ -23,15 +23,17 @@ number
 
 ## 示例
 
-在电子表格中返回学生 t 分布的双尾逆函数。
+此示例演示如何返回学生 t 分布的双尾反函数。
 
 ```javascript editor-xlsx
-// How to create a serial number from the two-tailed inverse in a spreadsheet.
+// How to create a serial number from the two-tailed inverse.
 
-// Use a function to get two-tailed inverse of the Student's t-distribution in a spreadsheet.
+// Use a function to get two-tailed inverse of the Student's t-distribution.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.TINV(0.5, 10);
 worksheet.GetRange("B2").SetValue(result);
+
+
 ```

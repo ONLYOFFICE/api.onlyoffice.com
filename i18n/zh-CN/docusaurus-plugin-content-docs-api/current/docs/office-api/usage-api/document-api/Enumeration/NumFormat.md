@@ -37,6 +37,7 @@
 - "##0.0E+0"
 - "@"
 
+
 ## 示例
 
 将 "0.00" 数字格式设置到图表数据点。
@@ -47,4 +48,5 @@
 // Set the chart data point to the "0.00" numeric format.
 
 chart.SetDataPointNumFormat("0.00", 0, 1, true);
+
 ```

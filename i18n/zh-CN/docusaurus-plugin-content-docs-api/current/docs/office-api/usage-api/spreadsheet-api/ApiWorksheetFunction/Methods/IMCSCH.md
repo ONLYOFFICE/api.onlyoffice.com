@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的双曲余割值。
+此示例演示如何返回复数的双曲余割。
 
 ```javascript editor-xlsx
-// How to get the hyperbolic cosecant in a spreadsheet.
+// How to get the hyperbolic cosecant.
 
-// Use a function to get the hyperbolic cosecant of a complex number in a spreadsheet.
+// Use a function to get the hyperbolic cosecant of a complex number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

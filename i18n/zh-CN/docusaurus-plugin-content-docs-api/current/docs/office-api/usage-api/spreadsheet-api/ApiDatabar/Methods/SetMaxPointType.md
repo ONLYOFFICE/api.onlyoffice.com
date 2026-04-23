@@ -22,10 +22,10 @@ expression.SetMaxPointType(type);
 
 ## 示例
 
-设置数据条条件格式规则的最大点类型。
+此示例演示如何设置数据条条件格式规则的最大点类型。
 
 ```javascript editor-xlsx
-// How to change the type of the maximum condition value in a spreadsheet.
+// How to change the type of the maximum condition value.
 
 // Set the maximum point type of a data bar conditional formatting rule.
 
@@ -50,4 +50,5 @@ dataBar.SetMaxPointType("xlConditionValuePercent");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMaxPointType());
+
 ```

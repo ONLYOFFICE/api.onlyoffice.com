@@ -20,12 +20,12 @@ expression.GetHiddenFields();
 
 ## 示例
 
-获取电子表格中数据透视表的隐藏字段。
+此示例展示如何获取数据透视表的隐藏字段。
 
 ```javascript editor-xlsx
-// How to get a hidden filds of a table in a spreadsheet.
+// How to get a hidden filds of a table.
 
-// Create a pivot table, add data to it then get its invisible fields in a spreadsheet.
+// Create a pivot table, add data to it then get its invisible fields.
 
 let worksheet = Api.GetActiveSheet();
 

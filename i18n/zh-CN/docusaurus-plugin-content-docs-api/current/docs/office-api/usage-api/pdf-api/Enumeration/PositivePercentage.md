@@ -6,9 +6,11 @@
 
 number
 
+
+
 ## 示例
 
-将渐变停止位置设置为 100%。
+此示例将渐变停止位置设置为 100%。
 
 ```javascript editor-pdf
 // How to create a gradient stop using positive percentage.

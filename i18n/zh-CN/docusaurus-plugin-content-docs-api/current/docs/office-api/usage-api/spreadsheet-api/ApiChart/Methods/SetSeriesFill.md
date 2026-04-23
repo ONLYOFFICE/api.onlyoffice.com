@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在电子表格中为指定的图表系列设置填充。
+此示例设置指定图表系列的填充。
 
 ```javascript editor-xlsx
-// How to color chart series in a spreadsheet.
+// How to color chart series.
 
-// Add background solid fill color for a chart seria in a spreadsheet.
+// Add background solid fill color for a chart seria.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

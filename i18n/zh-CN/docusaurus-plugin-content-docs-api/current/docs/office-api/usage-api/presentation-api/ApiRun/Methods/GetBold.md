@@ -2,16 +2,30 @@
 
 从当前文本属性获取粗体属性。
 
-继承自 [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md)。
+## 语法
+
+```javascript
+expression.GetBold();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-检查演示文稿中的文本是否为粗体。
+此示例演示如何确定文本是否为粗体。
 
 ```javascript editor-pptx
-// How to know whether a text is set to bold or not in a presentation.
+// How to know whether a text is set to bold or not.
 
-// Get the text properties of the run and find whether it is bold or not in a presentation.
+// Get the text properties of the run and find whether it is bold or not.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,4 +51,5 @@ paragraph = Api.CreateParagraph();
 const bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
+
 ```

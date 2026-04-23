@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回范围内的行数。
+此示例演示如何返回区域中的行数。
 
 ```javascript editor-xlsx
-// How to count number of rows in a spreadsheet.
+// How to count number of rows.
 
-// Use a function to count number of rows in a spreadsheet.
+// Use a function to count number of rows.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

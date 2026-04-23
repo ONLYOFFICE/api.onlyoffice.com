@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 部件的 ID。
+此示例演示如何获取自定义 XML 部件的 ID。
 
 ```javascript editor-xlsx
-// How to get the ID of an XML part in a spreadsheet.
+// How to get the ID of an XML part.
 
-// Get the id and display the result in a spreadsheet.
+// Get an XML part ID.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

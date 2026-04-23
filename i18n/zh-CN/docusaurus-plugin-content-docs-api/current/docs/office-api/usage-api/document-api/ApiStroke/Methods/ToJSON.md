@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-将文档中的笔触对象转换为 JSON 对象。
+此示例将 ApiStroke 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the stroke object in a document.
+// How to get a JSON from the stroke object.
 
 // Convert the stroke to json and add it to the document.
 

@@ -22,10 +22,10 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-在演示文稿中设置用户 ID。
+此示例演示如何设置用户 ID。
 
 ```javascript editor-pptx
-// How to change an author's user ID of a comment in a presentation.
+// How to change an author's user ID of a comment.
 
 // Get all comments from the presentation and change its first one's user ID.
 
@@ -51,4 +51,5 @@ const userId = comment.GetUserId();
 const paragraph = shape.GetDocContent().GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The ID of the user who commented on this presentation is " + userId);
+
 ```

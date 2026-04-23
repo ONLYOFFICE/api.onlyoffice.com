@@ -1,6 +1,6 @@
 # GetParentParagraph
 
-返回当前文本块的父段落。
+返回当前运行的父段落。
 
 ## 语法
 
@@ -20,13 +20,9 @@ expression.GetParentParagraph();
 
 ## 示例
 
-获取 PDF 文档中富文本 run 对象的父富文本段落并为其设置对齐方式属性。
+此示例获取富文本运行对象的父富文本段落并为其设置对齐属性。
 
 ```javascript editor-pdf
-// How do I get the parent paragraph in a PDF document?
-
-// Get the parent paragraph using a rich text run object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

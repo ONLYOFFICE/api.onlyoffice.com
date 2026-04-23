@@ -22,13 +22,9 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在 PDF 文档中为文本字符设置斜体属性。
+此示例为文本字符设置斜体属性。
 
 ```javascript editor-pdf
-// How can I set italic using a paragraph in a PDF document?
-
-// Set italic for a paragraph in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,4 +37,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to italicized letters.');
 paragraph.SetItalic(true);
 page.AddObject(shape);
+
 ```

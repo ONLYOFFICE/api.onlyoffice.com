@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中水平翻转绘图对象。
+此示例展示如何水平翻转绘图。
 
 ```javascript editor-pptx
-// How to set the horizontal flip property of the shape in a presentation.
+// How to set the horizontal flip property of the shape.
 
-// Create a drawing and flip it horizontally in a presentation.
+// Create a drawing and flip it horizontally.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,4 +43,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped horizontally: " + flip);
 slide.AddObject(drawing);
+
 ```

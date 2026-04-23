@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的以 10 为底的对数。
+此示例演示如何返回复数的以 10 为底的对数。
 
 ```javascript editor-xlsx
-// How to get the logarithm of base 10 of a comlex numbers in a spreadsheet.
+// How to get the logarithm of base 10 of a comlex numbers.
 
-// Use a function to get the base 10 logarithm in a spreadsheet.
+// Use a function to get the base 10 logarithm.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

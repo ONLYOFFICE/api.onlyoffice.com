@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-在文档中为范围设置文本属性。
+此示例为范围设置文本属性。
 
 ```javascript editor-docx
-// How to get text property from a paragraph and apply it for a range in a document.
+// How to get text property from a paragraph and apply it for a range.
 
-// Get a range, add properties like font style to it in a document.
+// Get a range, add properties like font style to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

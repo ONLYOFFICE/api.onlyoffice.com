@@ -20,12 +20,12 @@ expression.GetAllUsers();
 
 ## 示例
 
-获取电子表格中受保护范围的所有用户。
+此示例获取受保护区域的所有用户。
 
 ```javascript editor-xlsx
-// How to get an array of users of a protected range in a spreadsheet.
+// How to get an array of users of a protected range.
 
-// Get an active sheet, add protected range to it and diplay its first user in a spreadsheet.
+// Get an active sheet, add protected range to it and diplay its first user. 
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

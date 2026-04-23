@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取电子表格中唯一值条件格式规则的类型。
+此示例演示如何获取唯一值条件格式规则的类型。
 
 ```javascript editor-xlsx
 // How to retrieve the formatting rule type from unique values conditional formatting.
 
-// Get the type of the unique values rule in a spreadsheet.
+// Get the type of the unique values rule.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -41,4 +41,5 @@ let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 let type = uniqueValuesCondition.GetType();
 worksheet.GetRange("B1").SetValue("Rule type: " + type);
+
 ```

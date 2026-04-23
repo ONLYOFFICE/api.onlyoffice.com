@@ -17,7 +17,7 @@ Searches for and replaces text in the document when it is reopened.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/searchAndReplaceOnStart) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/searchAndReplaceOnStart) and install it following the [desktop](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -62,10 +62,10 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 ## Methods and events
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onDocumentContentReady](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)
-- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/SearchAndReplace.md)")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onDocumentContentReady](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onDocumentContentReady.md)
+- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## Support
 

@@ -20,13 +20,9 @@ expression.GetInteractiveSequences();
 
 ## 示例
 
-从演示文稿中的时间线获取所有交互式动画序列。
+此示例从时间线获取所有交互式动画序列。
 
 ```javascript editor-pptx
-// How do I get the interactive sequences in a presentation?
-
-// Get the interactive sequences using a timeline object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -69,4 +65,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Interactive sequences count: ' + sequences.length);
 slide.AddObject(infoShape);
+
 ```

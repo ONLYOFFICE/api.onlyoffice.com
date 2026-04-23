@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据透视表的总计名称。
+此示例展示如何获取数据透视表的总计名称。
 
 ```javascript editor-xlsx
-// How to get a grand total name of a table in a spreadsheet.
+// How to get a grand total name of a table.
 
-// Create a pivot table, add data to it then get its grand total name in a spreadsheet.
+// Create a pivot table, add data to it then get its grand total name.
 
 let worksheet = Api.GetActiveSheet();
 

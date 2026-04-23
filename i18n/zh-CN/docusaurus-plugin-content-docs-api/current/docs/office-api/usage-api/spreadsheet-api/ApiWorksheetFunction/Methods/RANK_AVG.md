@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字在数字列表中的排名。如果多个值具有相同的排名，则返回平均排名。
+此示例演示如何返回数字在数字列表中的排名：其相对于列表中其他值的大小。如果多个值具有相同的排名，则返回平均排名。
 
 ```javascript editor-xlsx
-// How to estimate a rank of a number from the list in a spreadsheet.
+// How to estimate a rank of a number from the list.
 
-// Use a function to estimate rank of the a number from the list in a spreadsheet.
+// Use a function to estimate rank of the a number from the list.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -49,4 +49,5 @@ let func = Api.WorksheetFunction;
 let ans = func.RANK_AVG(number, range, order);
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

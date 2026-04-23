@@ -22,12 +22,12 @@ expression.SetValue(value);
 
 ## 示例
 
-在电子表格中设置图标条件的值。
+此示例演示如何设置图标条件的值。
 
 ```javascript editor-xlsx
-// How to modify the threshold value for an icon set criterion in a spreadsheet.
+// How to modify the threshold value for an icon set criterion.
 
-// Set the value used for criterion threshold comparison in a spreadsheet.
+// Set the value used for criterion threshold comparison.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,4 +46,5 @@ worksheet.GetRange("B1").SetValue("Before: Default threshold values");
 
 criteria[1].SetValue("80");
 worksheet.GetRange("B2").SetValue("After: Second threshold set to 80");
+
 ```

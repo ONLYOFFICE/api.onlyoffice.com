@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取角度的余割值。
+此示例演示如何获取角的余割。
 
 ```javascript editor-xlsx
-// How to return cosecant in a spreadsheet.
+// How to return cosecant.
 
-// Use function to get the cosecant of an angle in a spreadsheet.
+// Use function to get the cosecant of an angle.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

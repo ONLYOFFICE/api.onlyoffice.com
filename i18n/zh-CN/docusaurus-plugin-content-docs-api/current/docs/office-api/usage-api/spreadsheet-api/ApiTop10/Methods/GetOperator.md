@@ -2,11 +2,25 @@
 
 返回格式条件运算符。
 
-继承自 [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md)。
+## 语法
+
+```javascript
+expression.GetOperator();
+```
+
+`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
 
 ## 示例
 
-获取条件格式规则的运算符。
+此示例获取条件格式规则的运算符。
 
 ```javascript editor-xlsx
 // How to retrieve the operator from conditional formatting rules.
@@ -33,4 +47,5 @@ let operator = condition1.GetOperator();
 
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
+
 ```

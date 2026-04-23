@@ -2,16 +2,30 @@
 
 返回当前段落的段前间距值。
 
-继承自 [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md)。
+## 语法
+
+```javascript
+expression.GetSpacingBefore();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
 
 ## 示例
 
-获取 PDF 文档中当前段落的段前间距值。
+此示例展示如何获取当前段落的段前间距值。
 
 ```javascript editor-pdf
-// How to get the size of a spacing before a text from a paragraph in a PDF document.
+// How to get the size of a spacing before a text from a paragraph.
 
-// Return a property of the spacing size before a paragraph in a PDF document.
+// Return a property of the spacing size before a paragraph.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -24,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is an example of setting a space before a paragraph. ");
 paragraph.AddText("The second paragraph will have an offset of one inch from the top. ");
@@ -40,4 +54,5 @@ const spacingBefore = paraPr.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
+
 ```

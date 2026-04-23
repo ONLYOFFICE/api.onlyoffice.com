@@ -20,13 +20,9 @@ expression.GetType();
 
 ## 示例
 
-获取演示文稿中不同场景下的选区类型。
+此示例展示如何在不同场景下获取选择的类型。
 
 ```javascript editor-pptx
-// How can I get the type using a selection in a presentation?
-
-// Get the type for a selection in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -65,4 +61,5 @@ const outDoc = outShape.GetDocContent();
 const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(text);
 slide.AddObject(outShape);
+
 ```

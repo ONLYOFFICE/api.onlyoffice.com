@@ -2,14 +2,28 @@
 
 返回当前文档中的元素数量。
 
-继承自 [ApiDocumentContent.GetElementsCount](../../ApiDocumentContent/Methods/GetElementsCount.md)。
+## 语法
+
+```javascript
+expression.GetElementsCount();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
 
 ## 示例
 
-获取文档中当前文档内容的元素数量。
+此示例展示如何获取当前文档内容中的元素数量。
 
 ```javascript editor-docx
-// How to get elements count and push it to the paragraph in a document.
+// How to get elements count and push it to the paragraph.
 
 // Count the number of elements in the document.
 

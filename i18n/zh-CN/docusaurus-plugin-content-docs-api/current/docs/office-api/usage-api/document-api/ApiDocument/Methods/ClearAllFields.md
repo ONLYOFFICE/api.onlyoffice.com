@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-清除文档中的所有表单。
+此示例清除文档中的所有表单。
 
 ```javascript editor-docx
 // How to remove all answers from all forms.

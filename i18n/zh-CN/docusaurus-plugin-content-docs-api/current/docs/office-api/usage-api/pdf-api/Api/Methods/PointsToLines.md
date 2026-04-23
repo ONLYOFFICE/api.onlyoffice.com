@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在 PDF 文档中将磅转换为行。
+此示例展示如何将磅转换为行。
 
 ```javascript editor-pdf
-// How to convert points to lines in a PDF document?
-
-// Convert points to lines using the PDF document API.
-
 const points = 100;
 const lines = Api.PointsToLines(points);
 
@@ -42,4 +38,5 @@ paragraph.AddText(points + ' points are equal to ' + lines + ' lines.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
+
 ```

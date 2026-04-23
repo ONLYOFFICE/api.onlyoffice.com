@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-获取电子表格中范围内的单元格数量。
+此示例演示如何获取范围中的单元格数量。
 
 ```javascript editor-xlsx
 // How to find out how many cells a range has.

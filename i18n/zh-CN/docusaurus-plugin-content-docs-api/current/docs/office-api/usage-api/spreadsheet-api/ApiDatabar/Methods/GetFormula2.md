@@ -2,11 +2,25 @@
 
 返回当前条件格式规则使用的第二个公式。
 
-继承自 [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md)。
+## 语法
+
+```javascript
+expression.GetFormula2();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取条件格式规则的第二个公式。
+此示例获取条件格式规则的第二个公式。
 
 ```javascript editor-xlsx
 // How to retrieve the second formula from conditional formatting rules.
@@ -36,4 +50,5 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
+
 ```

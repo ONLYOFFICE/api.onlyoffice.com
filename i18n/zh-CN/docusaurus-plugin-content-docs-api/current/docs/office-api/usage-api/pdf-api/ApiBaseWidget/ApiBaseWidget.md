@@ -2,6 +2,7 @@
 
 表示 ApiBaseWidget 类。
 
+
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -11,7 +12,7 @@
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取控件边框颜色。 |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [WidgetBorderStyle](../Enumeration/WidgetBorderStyle.md) | 获取控件边框样式。 |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [WidgetBorderWidth](../Enumeration/WidgetBorderWidth.md) | 获取控件边框宽度。 |
-| [GetClassType](./Methods/GetClassType.md) | "baseWidget" | 返回 ApiBaseWidget 类的类型。 |
+| [GetClassType](./Methods/GetClassType.md) | "page" | 返回 ApiBaseWidget 类的类型。 |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | 获取控件位置。 |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | 设置字段矩形。 |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取控件文本颜色。 |

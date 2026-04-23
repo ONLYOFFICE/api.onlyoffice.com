@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-在文档中将段落对象转换为 JSON 对象。
+此示例将 ApiParagraph 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the inline text control in a document.
+// How to get a JSON from the inline text control.
 
-// Convert the inline text control to json and add it to the paragraph in a document.
+// Convert the inline text control to json and add it to the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

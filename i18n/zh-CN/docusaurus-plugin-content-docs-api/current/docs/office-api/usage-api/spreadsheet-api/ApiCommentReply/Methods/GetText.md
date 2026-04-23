@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取电子表格中的批注回复文本。
+此示例展示如何获取批注回复文本。
 
 ```javascript editor-xlsx
-// How to get a raw text of a reply in a spreadsheet.
+// How to get a raw text of a reply.
 
 // Display a reply text to a range of the worksheet.
 

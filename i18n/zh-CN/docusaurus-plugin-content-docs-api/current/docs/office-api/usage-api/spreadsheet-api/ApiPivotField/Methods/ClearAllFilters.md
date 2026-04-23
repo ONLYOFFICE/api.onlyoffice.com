@@ -20,12 +20,12 @@ expression.ClearAllFilters();
 
 ## 示例
 
-清除电子表格中透视字段的所有筛选器。
+此示例展示如何从透视字段清除所有筛选器。
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field filters in a spreadsheet.
+// How to remove previously applied pivot field filters.
 
-// Create a pivot table, add data to it then delete all filters from a custom field in a spreadsheet.
+// Create a pivot table, add data to it then delete all filters from a custom field.
 
 let worksheet = Api.GetActiveSheet();
 

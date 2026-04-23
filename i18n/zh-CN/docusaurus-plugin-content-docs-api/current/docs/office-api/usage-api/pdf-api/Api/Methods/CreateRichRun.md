@@ -20,13 +20,9 @@ expression.CreateRichRun();
 
 ## 示例
 
-如何在 PDF 文档中创建富文本 run 并将其添加到富文本段落。
+如何创建富文本运行并将其添加到富文本段落。
 
 ```javascript editor-pdf
-// How to create the rich run in a PDF document?
-
-// Create the rich run using the PDF document API.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

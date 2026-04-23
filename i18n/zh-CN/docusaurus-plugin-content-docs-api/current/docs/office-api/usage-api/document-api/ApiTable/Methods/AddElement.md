@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-使用单元格中的位置添加段落。
+此示例使用在单元格中的位置添加段落。
 
 ```javascript editor-docx
 // How to add text to the cell.

@@ -1,6 +1,6 @@
 # GetContent
 
-返回可以插入段落或文本块的形状内部内容。
+返回可以插入段落或文本运行的形状内部内容。
 
 ## 语法
 
@@ -20,10 +20,10 @@ expression.GetContent();
 
 ## 示例
 
-获取演示文稿中可以插入段落或文本 run 的形状内部内容。
+此示例展示如何获取可以插入段落或文本运行的形状内部内容。
 
 ```javascript editor-pptx
-// How to get a content of a shape in a presentation.
+// How to get a content of a shape.
 
 // Retrieve a slide content and insert a paragraph to it.
 
@@ -45,4 +45,5 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
+
 ```

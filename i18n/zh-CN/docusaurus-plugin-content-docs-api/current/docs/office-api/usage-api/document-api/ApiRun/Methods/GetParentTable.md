@@ -1,6 +1,6 @@
 # GetParentTable
 
-返回包含当前文本块的表格。
+返回包含当前运行的表格。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetParentTable();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含 run 的表格。
+此示例展示如何获取包含运行的表格。
 
 ```javascript editor-docx
-// Get a parent table of the text in a document.
+// Get a parent table of the text.
 
-// How to remove the row of the table that contains a text run in a document.
+// How to remove the row of the table that contains a text run.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

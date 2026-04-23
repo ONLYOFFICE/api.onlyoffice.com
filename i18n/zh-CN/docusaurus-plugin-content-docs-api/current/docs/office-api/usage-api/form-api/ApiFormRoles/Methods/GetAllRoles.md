@@ -20,13 +20,9 @@ string[]
 
 ## 示例
 
-获取表单文档中按填写顺序排列的所有角色列表。
+此示例展示如何按填写顺序获取所有角色的列表。
 
 ```javascript editor-forms
-// How can I get all roles using a form roles in a form document?
-
-// Get all roles for a form roles in a form document.
-
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -39,4 +35,5 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
     orderIndex++;
 });
+
 ```

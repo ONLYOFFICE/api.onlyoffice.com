@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取演示文稿中自定义 XML 部件的 XML 内容。
+此示例演示如何获取自定义 XML 部件的 XML 内容。
 
 ```javascript editor-pptx
-// How to get the XML content of an XML part in a presentation.
+// How to get the XML content of an XML part.
 
-// Get XML content using the custom XML part API in a presentation.
+// Get XML content.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

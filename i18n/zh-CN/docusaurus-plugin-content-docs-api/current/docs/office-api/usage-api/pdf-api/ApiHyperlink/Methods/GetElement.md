@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-使用 PDF 文档中指定的位置获取超链接元素。
+此示例展示如何使用指定的位置获取超链接元素。
 
 ```javascript editor-pdf
-// How to get the element of the hyperlink knowing its index in a PDF document.
+// How to get the element of the hyperlink knowing its index.
 
-// Add a hyperlink to the paragraph and get its element in a PDF document.
+// Add a hyperlink to the paragraph and get its element.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

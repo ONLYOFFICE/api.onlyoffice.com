@@ -27,7 +27,7 @@ boolean
 
 ## 示例
 
-设置将显示在表格单元格顶部的边框。
+此示例设置将显示在表格单元格顶部的边框。
 
 ```javascript editor-docx
 // How to add border to the top of the cell.

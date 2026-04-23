@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为方形注释设置矩形差异。
+此示例为方形注释设置矩形差异。
 
 ```javascript editor-pdf
-// How can I set rect diff using a square annotation in a PDF document?
-
-// Set rect diff for a square annotation in a PDF document.
-
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

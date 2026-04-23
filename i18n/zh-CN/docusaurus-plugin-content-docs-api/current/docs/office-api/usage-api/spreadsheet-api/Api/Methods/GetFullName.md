@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取电子表格中当前打开文件的完整名称。
+此示例演示如何获取当前打开文件的完整名称。
 
 ```javascript editor-xlsx
-// How to get a full name of the file in a spreadsheet.
+// How to get a full name of the file.
 
 // Insert a full name of the file into a cell.
 

@@ -29,12 +29,12 @@ boolean
 
 ## 示例
 
-指定在文档中具有相同段落边框设置的一组段落下方显示的边框。
+此示例指定在具有相同段落边框设置的一组段落下方显示的边框。
 
 ```javascript editor-docx
-// Add the bottom border to the paragraph in a document.
+// Add the bottom border to the paragraph.
 
-// Get the first paragraph and set its border in a document.
+// Get the first paragraph and set its border.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

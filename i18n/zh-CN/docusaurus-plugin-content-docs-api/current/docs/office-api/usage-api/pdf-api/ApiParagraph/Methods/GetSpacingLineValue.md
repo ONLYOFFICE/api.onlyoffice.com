@@ -2,16 +2,30 @@
 
 返回段落行距值。
 
-继承自 [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacingLineValue.md)。
+## 语法
+
+```javascript
+expression.GetSpacingLineValue();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
 
 ## 示例
 
-获取 PDF 文档中的段落行距值。
+此示例展示如何获取段落行距值。
 
 ```javascript editor-pdf
-// / How to get the spacing line value between sentences of a paragraph in a PDF document.
+/// How to get the spacing line value between sentences of a paragraph.
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value in a PDF document.
+// Create a paragraph, set the spacing line between the sentences and retrieve the value.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -24,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingLine(3 * 240, "auto");
@@ -37,4 +51,5 @@ const spacingLineValue = paraPr.GetSpacingLineValue();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line value : " + spacingLineValue);
 docContent.Push(paragraph);
+
 ```

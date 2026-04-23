@@ -20,12 +20,12 @@ expression.Remove();
 
 ## 示例
 
-移除电子表格中的透视字段。
+此示例展示如何删除透视字段。
 
 ```javascript editor-xlsx
-// How to delete a pivot field in a spreadsheet.
+// How to delete a pivot field.
 
-// Create a pivot table, add data to it then remove a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then remove a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

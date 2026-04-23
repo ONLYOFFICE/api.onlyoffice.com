@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-检查文档中的内联内容控件是否为复选框。
+此示例展示如何检查内联内容控件是否为复选框。
 
 ```javascript editor-docx
-// How do I is check box in a document?
-
-// Is check box using an inline content control object in a document.
-
 let doc = Api.GetDocument();
 let inlineControl = doc.AddCheckBoxContentControl();
 let isCheckBox = inlineControl.IsCheckBox();

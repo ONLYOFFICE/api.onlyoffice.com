@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取文档中的批注文本。
+此示例展示如何获取批注文本。
 
 ```javascript editor-docx
-// How to get a raw text of a comment in a document.
+// How to get a raw text of a comment.
 
 // Get all comments from the presentation and the first one's text.
 

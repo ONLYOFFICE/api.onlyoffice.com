@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据字段的值。
+此示例展示如何获取数据字段的值。
 
 ```javascript editor-xlsx
-// How to use a table element value in a spreadsheet.
+// How to use a table element value.
 
-// Create a pivot table, add data to it then display a custom data field's value in a spreadsheet.
+// Create a pivot table, add data to it then display a custom data field's value.
 
 let worksheet = Api.GetActiveSheet();
 

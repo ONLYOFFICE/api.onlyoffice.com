@@ -22,12 +22,13 @@ expression.detachEvent(eventName);
 
 ## 示例
 
-在演示文稿中取消订阅超链接点击事件。
+此示例演示如何取消订阅超链接点击事件。
 
 ```javascript editor-pptx
-// How to detach an event on hyperlink click in a presentation.
+// How to detach an event on hyperlink click.
 
-// Unsubscribe from the hyperlink click event in a presentation.
+// Unsubscribe from the hyperlink click event.
 
 Api.detachEvent("asc_onHyperlinkClick");
+
 ```

@@ -1,6 +1,6 @@
 # SetSmallCaps
 
-指定文本块中的所有小写字母仅格式化显示为比指定字体大小
+指定文本运行中的所有小写字母仅格式化显示为比指定字体大小
 小两磅的大写字母。
 
 ## 语法
@@ -15,7 +15,7 @@ expression.SetSmallCaps(isSmallCaps);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isSmallCaps | 必需 | boolean |  | 指定当前文本块的内容是否显示为小两磅的大写字母。 |
+| isSmallCaps | 必需 | boolean |  | 指定当前运行的内容是否显示为小两磅的大写字母。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-指定文本 run 中的所有小写字母字符仅以比指定字体大小小两磅的对应大写字母格式显示。
+此示例指定文本运行中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。
 
 ```javascript editor-xlsx
-// How to make text uncapitalized in a spreadsheet.
+// How to make text uncapitalized.
 
-// Make all characters of a text as a small letter in a spreadsheet.
+// Make all characters of a text as a small letter.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

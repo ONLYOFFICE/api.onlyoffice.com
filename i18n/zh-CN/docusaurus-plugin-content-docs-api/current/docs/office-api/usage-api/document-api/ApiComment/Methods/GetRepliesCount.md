@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取文档中批注回复的数量。
+此示例展示如何获取批注回复的数量。
 
 ```javascript editor-docx
-// How to get a number of replies a comment has in a document.
+// How to get a number of replies a comment has.
 
 // Get all comments from the presentation and the first one's number of replies.
 

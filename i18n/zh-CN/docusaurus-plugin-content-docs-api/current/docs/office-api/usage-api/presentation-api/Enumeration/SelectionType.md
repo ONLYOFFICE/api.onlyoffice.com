@@ -13,14 +13,12 @@
 - "slides"
 - "text"
 
+
 ## 示例
 
-获取当前选择的类型。
+此示例获取当前选择的类型。
 
 ```javascript editor-pptx
-// Use the GetType method to retrieve the selection type.
-
-// The returned value is a string representing the selection type.
-
 const selectionType = Api.GetSelection().GetType();
+
 ```

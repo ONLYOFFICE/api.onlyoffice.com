@@ -20,12 +20,12 @@ expression.GetIndRight();
 
 ## 示例
 
-获取文档中的段落右侧缩进。
+此示例展示如何获取段落右侧缩进。
 
 ```javascript editor-docx
 // Get the right indentation of the paragraph and show it in the document.
 
-// How to know the number of inches of the right indentation in a document.
+// How to know the number of inches of the right indentation.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

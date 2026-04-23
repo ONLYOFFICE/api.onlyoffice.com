@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-获取演示文稿中当前幻灯片的索引。
+此示例演示如何获取当前幻灯片的索引。
 
 ```javascript editor-pptx
 // How to find out a position index of a current slide.
@@ -41,4 +41,5 @@ const paragraph = docContent.GetElement(0);
 const currentSlideIndex = presentation.GetCurSlideIndex();
 paragraph.AddText("Current Slide Index = " + currentSlideIndex);
 slide.AddObject(shape);
+
 ```

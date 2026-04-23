@@ -22,12 +22,12 @@ expression.SetTableRowPr(tableRowPr);
 
 ## 示例
 
-设置文档中当前样式的表格行属性。
+此示例展示如何设置当前样式的表格行属性。
 
 ```javascript editor-docx
-// How to create table row properties for style and set its height in a document.
+// How to create table row properties for style and set its height.
 
-// Update table row properties in the style in a document.
+// Update table row properties in the style.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

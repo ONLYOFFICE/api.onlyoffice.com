@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-使用文档中指定的位置获取段落元素。
+此示例展示如何使用指定的位置获取段落元素。
 
 ```javascript editor-docx
-// How to get the second element of the paragraph in a document.
+// How to get the second element of the paragraph.
 
-// Get the word from paragraph using its index and make it bold in a document.
+// Get the word from paragraph using its index and make it bold.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

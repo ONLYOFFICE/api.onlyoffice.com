@@ -2,16 +2,30 @@
 
 返回当前段落的段后间距值。
 
-继承自 [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md)。
+## 语法
+
+```javascript
+expression.GetSpacingAfter();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
 
 ## 示例
 
-获取演示文稿中当前段落的段后间距值。
+此示例展示如何获取当前段落的段后间距值。
 
 ```javascript editor-pptx
-// How to get the size of a spacing after a text from a paragraph in a presentation.
+// How to get the size of a spacing after a text from a paragraph.
 
-// Return a property of the spacing size after a paragraph in a presentation.
+// Return a property of the spacing size after a paragraph.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

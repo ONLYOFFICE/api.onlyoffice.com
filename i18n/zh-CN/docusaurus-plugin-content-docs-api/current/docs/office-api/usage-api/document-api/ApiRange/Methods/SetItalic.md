@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在文档中为文本字符设置斜体属性。
+此示例为文本字符设置斜体属性。
 
 ```javascript editor-docx
-// How to make a range text italic in a document.
+// How to make a range text italic.
 
-// Create a range, change its properties by making it italic in a document.
+// Create a range, change its properties by making it italic.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

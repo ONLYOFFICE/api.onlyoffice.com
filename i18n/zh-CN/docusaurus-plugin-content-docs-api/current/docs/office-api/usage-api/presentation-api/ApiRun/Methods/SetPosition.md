@@ -1,6 +1,6 @@
 # SetPosition
 
-指定此文本块的文本相对于周围非定位文本的默认
+指定此运行的文本相对于周围非定位文本的默认
 基线升高或降低的量。
 
 ## 语法
@@ -9,7 +9,7 @@
 expression.SetPosition(nPosition);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在演示文稿中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
+此示例指定此运行的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-pptx
-// How to change inline position of the text in a presentation.
+// How to change inline position of the text.
 
-// Create a new text run and make its position lower or higher in a presentation.
+// Create a new text run and make its position lower or higher.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,5 @@ run.AddText("This is a text run with the text lowered 16 half-points.");
 paragraph.AddElement(run);
 run.SetPosition(-16);
 slide.AddObject(shape);
+
 ```

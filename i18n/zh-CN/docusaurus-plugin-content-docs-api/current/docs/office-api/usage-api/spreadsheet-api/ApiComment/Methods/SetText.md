@@ -22,12 +22,12 @@ expression.SetText(text);
 
 ## 示例
 
-在电子表格中设置批注文本。
+此示例设置批注文本。
 
 ```javascript editor-xlsx
-// How to change a comment text in a spreadsheet.
+// How to change a comment text.
 
-// Replace a comment text with a new text in a spreadsheet.
+// Replace a comment text with a new text.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

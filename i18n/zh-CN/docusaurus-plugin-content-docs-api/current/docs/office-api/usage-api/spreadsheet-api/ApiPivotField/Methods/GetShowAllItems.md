@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中透视字段的所有项。
+此示例展示如何获取透视字段的所有项。
 
 ```javascript editor-xlsx
-// How to get a pivot field's all items in a spreadsheet.
+// How to get a pivot field's all items.
 
-// Create a pivot table, add data to it then get all items of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get all items of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

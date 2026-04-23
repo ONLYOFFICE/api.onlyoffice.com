@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除包含该单元格的行。
+此示例删除包含该单元格的行。
 
 ```javascript editor-docx
 // How to delete the row with Cell 1.
 
-// Get the first cell and remove its rowd.
+// Get the first cell and remove its rowd. 
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

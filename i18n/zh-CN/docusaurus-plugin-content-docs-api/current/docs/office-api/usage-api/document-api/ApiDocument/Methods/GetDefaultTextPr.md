@@ -20,12 +20,12 @@ expression.GetDefaultTextPr();
 
 ## 示例
 
-获取文档中当前文档内文本块的默认属性集。
+此示例展示如何获取当前文档中文本域的默认属性集。
 
 ```javascript editor-docx
 // How to get default text properties of a document.
 
-// Update the default text properties of the text elements in a document.
+// Update the default text properties of the text elements.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

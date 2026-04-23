@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-检查表单边框宽度是否被遵循。
+此示例检查是否遵守表单边框宽度。
 
 ```javascript editor-forms
-// How to find out whether the borders of the image are respected in a document.
+// How to find out whether the borders of the image are respected.
 
 // Find out whether the borders of the picture form in this document are respected when scaling the image.
 

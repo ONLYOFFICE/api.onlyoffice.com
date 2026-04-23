@@ -23,10 +23,10 @@ string
 
 ## 示例
 
-在电子表格中使用货币格式 $#.## 将数字转换为文本。
+此示例演示如何使用货币格式 $#.## 将数字转换为文本。
 
 ```javascript editor-xlsx
-// How to convert a number to text in a spreadsheet.
+// How to convert a number to text.
 
 // Use function to get text from a number using dollar format.
 

@@ -22,12 +22,12 @@ expression.GetRow(nPos);
 
 ## 示例
 
-通过索引获取文档中的行。
+此示例展示如何通过索引获取行。
 
 ```javascript editor-docx
-// How to get a second row from the table in a document.
+// How to get a second row from the table.
 
-// Add a row from the another one in a document.
+// Add a row from the another one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

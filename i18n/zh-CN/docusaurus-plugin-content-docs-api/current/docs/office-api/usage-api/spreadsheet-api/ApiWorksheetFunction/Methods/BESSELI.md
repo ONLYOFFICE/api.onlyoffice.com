@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回修正贝塞尔函数 In(x)。
+此示例演示如何返回修正贝塞尔函数 In(x)。
 
 ```javascript editor-xlsx
-// How to get a resutl from Bessel function In(x) in a spreadsheet.
+// How to get a resutl from Bessel function In(x).
 
-// Use function to get the modified Bessel function In(x) in a spreadsheet.
+// Use function to get the modified Bessel function In(x).
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

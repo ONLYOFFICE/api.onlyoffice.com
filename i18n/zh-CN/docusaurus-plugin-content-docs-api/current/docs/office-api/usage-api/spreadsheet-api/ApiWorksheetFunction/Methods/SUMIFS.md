@@ -26,10 +26,10 @@ number
 
 ## 示例
 
-在电子表格中将满足一组给定条件的指定单元格相加。
+此示例演示如何将由给定条件或标准集指定的单元格相加。
 
 ```javascript editor-xlsx
-// How to sum up all elements under conditions in a spreadsheet.
+// How to sum up all elements under conditions.
 
 // Use a function to estimate a sum from the cells by a given condition.
 

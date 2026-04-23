@@ -22,12 +22,12 @@ expression.SetSource(source);
 
 ## 示例
 
-在电子表格中设置数据透视表的数据源。
+此示例展示如何设置数据透视表的源。
 
 ```javascript editor-xlsx
-// How to set source of a table in a spreadsheet.
+// How to set source of a table.
 
-// Create a pivot table, add data to it then set its source in a spreadsheet.
+// Create a pivot table, add data to it then set its source.
 
 let worksheet = Api.GetActiveSheet();
 

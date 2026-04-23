@@ -22,13 +22,10 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充颜色。在电子表格中创建矩形并为其应用红色填充。
+为形状设置纯色填充。
 
 ```javascript editor-xlsx
-// How can I set fill using a shape in a spreadsheet?
-
-// Set fill for a shape in a spreadsheet.
-
+// Creates a rectangle and applies a red fill to it.
 let worksheet = Api.GetActiveSheet();
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("rect", 60 * 36000, 40 * 36000, Api.CreateNoFill(), stroke, 3, 0, 2, 2);
@@ -36,4 +33,5 @@ worksheet.GetRange("A1").SetValue("Original shape with no fill");
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 worksheet.GetRange("A2").SetValue("Fill changed to red");
+
 ```

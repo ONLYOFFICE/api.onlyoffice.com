@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定在文档中用于布局表格内容的算法。
+此示例指定将用于在文档中布局表格内容的算法。
 
 ```javascript editor-docx
-// How to set the table layout in a document.
+// How to set the table layout.
 
-// Create a table and make its layout fixed in a document.
+// Create a table and make its layout fixed.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

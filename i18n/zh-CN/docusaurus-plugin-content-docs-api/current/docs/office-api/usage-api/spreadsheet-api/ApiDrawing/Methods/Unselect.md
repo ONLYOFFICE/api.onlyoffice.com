@@ -20,12 +20,13 @@ boolean
 
 ## 示例
 
-在电子表格中取消选中当前图形对象。
+此示例取消选择当前图形对象。
 
 ```javascript editor-xlsx
 // How to unselect drawing objects on the worksheet.
 
-// Create three shapes, select all of them, then unselect the second shape in a spreadsheet.
+// Create three shapes, select all of them,
+// then unselect the second shape.
 
 let worksheet = Api.GetActiveSheet();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -41,4 +42,5 @@ drawing1.Select(true);
 drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
+
 ```

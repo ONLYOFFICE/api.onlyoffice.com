@@ -20,7 +20,7 @@ expression.GetWidth();
 
 ## 示例
 
-获取形状的宽度并将其插入演示文稿。
+此示例获取形状的宽度并将其插入演示文稿。
 
 ```javascript editor-pptx
 // How to find a shape's width and display it on the slide.
@@ -41,4 +41,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing width: " + width);
 slide.AddObject(shape);
+
 ```

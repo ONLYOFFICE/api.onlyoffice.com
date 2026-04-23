@@ -20,13 +20,10 @@ expression.GetFill();
 
 ## 示例
 
-获取笔触的填充颜色。在电子表格中创建具有彩色边框的形状并获取其填充属性。
+获取描边的填充颜色。
 
 ```javascript editor-xlsx
-// How can I get the fill using a stroke in a spreadsheet?
-
-// Get the fill for a stroke in a spreadsheet.
-
+// Creates a shape with a colored border and retrieves its fill properties.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 let stroke = Api.CreateStroke(2 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
@@ -38,4 +35,5 @@ if (strokeObj) {
         worksheet.GetRange("A1").SetValue("Stroke fill type: " + strokeFill.GetType());
     }
 }
+
 ```

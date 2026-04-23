@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在演示文稿中设置动画效果的触发类型。
+此示例为动画效果设置触发类型。
 
 ```javascript editor-pptx
-// How to set trigger type for an animation effect in a presentation?
-
-// Set trigger type and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -60,4 +56,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New trigger type: ' + newTriggerType);
 slide.AddObject(infoShape);
+
 ```

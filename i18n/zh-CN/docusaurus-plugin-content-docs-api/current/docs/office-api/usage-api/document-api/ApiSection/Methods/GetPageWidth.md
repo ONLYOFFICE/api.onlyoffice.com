@@ -20,7 +20,7 @@ expression.GetPageWidth();
 
 ## 示例
 
-获取文档中的页面宽度。
+此示例展示如何获取页面宽度。
 
 ```javascript editor-docx
 // How to get the page width.

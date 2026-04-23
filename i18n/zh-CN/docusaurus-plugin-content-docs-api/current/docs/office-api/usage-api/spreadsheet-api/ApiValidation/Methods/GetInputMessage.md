@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中的输入消息文本。
+此示例获取输入消息文本。
 
 ```javascript editor-xlsx
-// How to retrieve the validation input message in a spreadsheet.
+// How to retrieve the validation input message.
 
-// Get the input message using the validation API in a spreadsheet.
+// Get the input message.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,4 +34,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetInputMessage("Enter a number greater than 10");
 let inputMessage = validation.GetInputMessage();
 worksheet.GetRange("B1").SetValue("Input message: " + inputMessage);
+
 ```

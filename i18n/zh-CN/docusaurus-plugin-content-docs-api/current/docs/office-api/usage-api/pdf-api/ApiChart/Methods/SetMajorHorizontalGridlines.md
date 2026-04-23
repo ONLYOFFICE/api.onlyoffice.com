@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中设置图表的主要水平网格线。
+如何设置图表的主水平网格线。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its major gridlines in a PDF document.
-
-// Use chart to set major horizontal gridlines in a PDF document.
+// Create a chart, set its properties and its major gridlines.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMajorHorizontalGridlines(stroke);
 page.AddObject(chart);
+
 ```

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将数字舍入到指定的位数。
+此示例演示如何将数字舍入到指定的位数。
 
 ```javascript editor-xlsx
-// How to round a number in a spreadsheet.
+// How to round a number.
 
-// Use a function to round a number to indicated number of digits in a spreadsheet.
+// Use a function to round a number to indicated number of digits.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

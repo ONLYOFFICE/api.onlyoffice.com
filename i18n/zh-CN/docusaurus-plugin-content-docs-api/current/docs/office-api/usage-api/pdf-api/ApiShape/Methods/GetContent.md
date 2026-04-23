@@ -1,6 +1,6 @@
 # GetContent
 
-返回可以插入段落或文本块的形状内部内容。
+返回可以插入段落或文本运行的形状内部内容。
 
 ## 语法
 
@@ -20,12 +20,10 @@ expression.GetContent();
 
 ## 示例
 
-如何获取 PDF 文档中形状的内容。
+如何获取形状的内容。
 
 ```javascript editor-pdf
-// Retrieve a shape content and insert a paragraph to it in a PDF document.
-
-// Use shape to get the content in a PDF document.
+// Retrieve a shape content and insert a paragraph to it.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

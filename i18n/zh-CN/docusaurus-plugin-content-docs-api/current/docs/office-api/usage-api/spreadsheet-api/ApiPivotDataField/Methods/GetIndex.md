@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中数据字段的索引。
+此示例展示如何获取数据字段的索引。
 
 ```javascript editor-xlsx
-// How to get a table element index in a spreadsheet.
+// How to get a table element index.
 
-// Create a pivot table, add data to it then display a custom data field's index in a spreadsheet.
+// Create a pivot table, add data to it then display a custom data field's index.
 
 let worksheet = Api.GetActiveSheet();
 

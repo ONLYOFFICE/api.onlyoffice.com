@@ -23,7 +23,7 @@ expression.FormatAsTable(sRange);
 
 ## 示例
 
-将工作表中选定的单元格范围格式化为表格。
+此示例将工作表中选定的单元格区域格式化为表格。
 
 ```javascript editor-xlsx
 // How to format a range as a table.
@@ -32,4 +32,5 @@ expression.FormatAsTable(sRange);
 
 let worksheet = Api.GetActiveSheet();
 worksheet.FormatAsTable("A1:E10");
+
 ```

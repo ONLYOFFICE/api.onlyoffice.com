@@ -20,10 +20,10 @@ expression.GetReferenceStyle();
 
 ## 示例
 
-获取电子表格中的引用样式。
+此示例获取引用样式。
 
 ```javascript editor-xlsx
-// Get style of a reference in a spreadsheet.
+// Get style of a reference.
 
 // Insert a reference style into the cell.
 

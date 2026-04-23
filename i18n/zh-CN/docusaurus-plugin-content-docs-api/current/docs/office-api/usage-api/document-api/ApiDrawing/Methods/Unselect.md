@@ -20,12 +20,13 @@ boolean
 
 ## 示例
 
-取消选择文档中的当前图形对象。
+此示例取消选择当前图形对象。
 
 ```javascript editor-docx
-// How to unselect drawing objects with the cursor in a document.
+// How to unselect drawing objects with the cursor.
 
-// Create three shapes, select all of them, then unselect the second shape in a document.
+// Create three shapes, select all of them,
+// then unselect the second shape.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -54,4 +55,6 @@ drawing1.Select(true);
 drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
+
+
 ```

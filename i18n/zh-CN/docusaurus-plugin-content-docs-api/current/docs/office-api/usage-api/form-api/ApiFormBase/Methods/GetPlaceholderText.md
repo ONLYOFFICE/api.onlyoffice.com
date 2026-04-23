@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-获取文档中表单的占位符文本。
+此示例展示如何获取表单的占位符文本。
 
 ```javascript editor-forms
 // How to get the placeholder text of a text form.
@@ -36,4 +36,5 @@ let placeholderText = textForm.GetPlaceholderText();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Placeholder text: " + placeholderText);
 doc.Push(paragraph);
+
 ```

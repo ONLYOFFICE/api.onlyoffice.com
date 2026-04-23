@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-指定从页面顶部边缘到页眉顶部边缘的距离。
+此示例指定从页面顶边到页眉顶边的距离。
 
 ```javascript editor-docx
-// How to set header distance of the section in a document.
+// How to set header distance of the section.
 
 // Specify the distance between the page end and the header.
 

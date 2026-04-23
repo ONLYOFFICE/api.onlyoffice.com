@@ -22,13 +22,9 @@ expression.SetBold(isBold);
 
 ## 示例
 
-为电子表格中形状内段落的所有文本设置粗体格式。
+此示例展示如何为形状内段落中的所有文本设置粗体格式。
 
 ```javascript editor-xlsx
-// How can I set bold using a paragraph in a spreadsheet?
-
-// Set bold for a paragraph in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 110));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -47,4 +43,5 @@ paragraph.SetBold(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not bold.');
 content.Push(paragraph2);
+
 ```

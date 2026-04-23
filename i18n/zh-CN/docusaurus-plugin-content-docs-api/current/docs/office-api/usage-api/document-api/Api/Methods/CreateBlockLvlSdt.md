@@ -20,12 +20,12 @@ expression.CreateBlockLvlSdt();
 
 ## 示例
 
-向文档添加块级容器。
+此示例展示如何向文档添加块级容器。
 
 ```javascript editor-docx
 // How to create a block text content control, add a text to it, and add this container to the document.
 
-// Create a block level container and add it to the document class.
+// Creates a block level container and adds it to the ApiDocument class.
 
 let doc = Api.GetDocument();
 var blockLvlSdt = Api.CreateBlockLvlSdt();

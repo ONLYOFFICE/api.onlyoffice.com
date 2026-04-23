@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加 oRun。
+此示例向段落添加一个 oRun。
 
 ```javascript editor-docx
-// How to insert text to the paragraph in a document.
+// How to insert text to the paragraph.
 
-// Get the last paragraph and make it bold in a document.
+// Get the last paragraph and make it bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ expression.GetConditionalTableStyle(sType);
 
 ## 示例
 
-获取一组格式属性，这些属性将有条件地应用于文档中与 sType 参数指定的要求匹配的表格部分。
+此示例展示如何获取一组格式属性，这些属性将有条件地应用于符合 sType 参数中指定要求的表格部分。
 
 ```javascript editor-docx
-// How to find out a style that will be applied to the table elements whish satisfy the condition in a document.
+// How to find out a style that will be applied to the table elements whish satisfy the condition.
 
-// Retrieve a conditional table style in a document.
+// Retrieve a conditional table style.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

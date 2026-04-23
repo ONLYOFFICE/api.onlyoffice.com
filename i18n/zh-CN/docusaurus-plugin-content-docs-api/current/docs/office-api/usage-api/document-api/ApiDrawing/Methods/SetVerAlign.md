@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-指定文档中浮动对象的垂直对齐方式。
+此示例指定浮动对象的垂直对齐方式。
 
 ```javascript editor-docx
-// How to set the vertical alignment of the drawing in a document.
+// How to set the vertical alignment of the drawing.
 
 // Move the shape to the top of the page.
 

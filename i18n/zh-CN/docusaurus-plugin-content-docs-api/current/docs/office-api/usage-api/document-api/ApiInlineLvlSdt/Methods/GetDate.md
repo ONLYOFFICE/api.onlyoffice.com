@@ -22,13 +22,9 @@ undefined \| Date
 
 ## 示例
 
-获取文档中日期选择器内容控件的日期。
+此示例演示如何从日期选择器内容控件中检索日期。
 
 ```javascript editor-docx
-// How can I get the date using an inline content control in a document?
-
-// Get the date for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();
 contentControl.SetDateFormat("yyyy-mm-dd");

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-从演示文稿中的当前图表移除指定的系列。
+此示例展示如何从当前图表中删除指定的系列。
 
 ```javascript editor-pptx
-// How to delete a chart seria indicating its index in a presentation.
+// How to delete a chart seria indicating its index.
 
-// Create a chart then delete a seria from it in a presentation.
+// Create a chart then delete a seria from it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,4 +44,5 @@ chart.SetTitle("The Estimated Costs series was removed from the current chart.")
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 slide.AddObject(chart);
+
 ```

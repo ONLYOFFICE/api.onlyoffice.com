@@ -2,11 +2,25 @@
 
 返回当条件格式规则计算结果为 true 时应用于单元格的数字格式。
 
-继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
+## 语法
+
+```javascript
+expression.GetNumberFormat();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取条件格式规则的数字格式。
+此示例获取条件格式规则的数字格式。
 
 ```javascript editor-xlsx
 // How to retrieve number formatting from conditional formatting rules.
@@ -34,4 +48,5 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
+
 ```

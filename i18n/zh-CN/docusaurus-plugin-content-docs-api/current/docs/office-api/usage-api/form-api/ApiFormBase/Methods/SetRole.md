@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-为文档中的表单元素设置角色。
+此示例展示如何为表单元素设置角色。
 
 ```javascript editor-forms
-// How can I set role using a form base in a document?
-
-// Set role for a form base in a document.
-
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -54,4 +50,5 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
+
 ```

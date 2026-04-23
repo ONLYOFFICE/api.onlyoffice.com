@@ -18,7 +18,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 企业版和社区版（文档 + 工作区）中默认提供。
 
-你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/typograf) 下载该插件，并根据以下指南进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)或[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+你也可以从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/zh/typograf) 下载该插件，并根据以下指南进行安装：[桌面版](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)或[云端版](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -130,12 +130,12 @@ GitHub 仓库：[typograf](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteText.md)
-- [executeMethod ("ReplaceTextSmart")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetVersion")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteText.md)
+- [executeMethod ("ReplaceTextSmart")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/ReplaceTextSmart.md)
+- [Asc.scope](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## 支持
 

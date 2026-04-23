@@ -20,12 +20,10 @@ expression.CreateTableCellPr();
 
 ## 示例
 
-在文档中创建并使用表格单元格属性。
+此示例展示如何创建和使用表格单元格属性。
 
 ```javascript editor-docx
 // How to create the table cell properties and set it to table style.
-
-// Create the table cell pr using the document API.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

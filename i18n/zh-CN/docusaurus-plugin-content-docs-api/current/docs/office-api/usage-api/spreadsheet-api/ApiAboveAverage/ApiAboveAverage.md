@@ -1,6 +1,6 @@
 # ApiAboveAverage
 
-ApiAboveAverage 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
+表示 ApiAboveAverage 类。
 
 ## 属性
 

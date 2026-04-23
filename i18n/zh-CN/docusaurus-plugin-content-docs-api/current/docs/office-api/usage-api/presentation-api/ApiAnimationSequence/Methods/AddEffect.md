@@ -24,13 +24,9 @@ expression.AddEffect(drawing, effectType, trigger);
 
 ## 示例
 
-在演示文稿中向序列添加动画效果。
+此示例向序列添加动画效果。
 
 ```javascript editor-pptx
-// How to add the effect for an animation sequence in a presentation?
-
-// Add the effect and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -66,4 +62,5 @@ paragraph.AddText('Added effect: ' + effect.GetEffectType());
 paragraph.AddLineBreak();
 paragraph.AddText('Duration: ' + effect.GetDuration() + 'ms');
 slide.AddObject(infoShape);
+
 ```

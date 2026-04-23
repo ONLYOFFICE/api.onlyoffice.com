@@ -25,10 +25,10 @@ expression.SetShd(sType, r, g, b);
 
 ## 示例
 
-指定在演示文稿中应用于表格范围的底纹。
+此示例指定应应用于表格范围的底纹。
 
 ```javascript editor-pptx
-// How to add a shading to the table background in a presentation.
+// How to add a shading to the table background.
 
 // Create a table, set its shading color and add it to the slide.
 
@@ -38,4 +38,5 @@ const table = Api.CreateTable(2, 4);
 table.SetShd("clear", Api.HexColor('#FF6F3D'));
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

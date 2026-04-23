@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查 PDF 文档中的文本是否为斜体。
+此示例演示如何确定文本是否为斜体。
 
 ```javascript editor-pdf
-// How to know whether a text is set to italic or not in a PDF document.
+// How to know whether a text is set to italic or not.
 
-// Get the text properties of the run and find whether it is italic or not in a PDF document.
+// Get the text properties of the run and find whether it is italic or not.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -50,4 +50,5 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
+
 ```

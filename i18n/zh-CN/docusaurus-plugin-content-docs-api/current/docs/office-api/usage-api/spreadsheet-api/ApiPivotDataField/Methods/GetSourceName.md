@@ -2,16 +2,30 @@
 
 返回数据透视表字段的源名称。
 
-继承自 [ApiPivotField.GetSourceName](../../ApiPivotField/Methods/GetSourceName.md)。
+## 语法
+
+```javascript
+expression.GetSourceName();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取电子表格中透视字段的源名称。
+此示例展示如何获取透视字段的源名称。
 
 ```javascript editor-xlsx
-// How to get a pivot field's source name in a spreadsheet.
+// How to get a pivot field's source name.
 
-// Create a pivot table, add data to it then get source name of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get source name of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

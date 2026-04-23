@@ -33,7 +33,7 @@ expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWi
 
 ## 示例
 
-在电子表格中使用指定参数向工作表添加艺术字对象。
+此示例使用指定的参数向工作表添加艺术字对象。
 
 ```javascript editor-xlsx
 // How to add a word art to the worksheet specifying its properties, color, size, etc.

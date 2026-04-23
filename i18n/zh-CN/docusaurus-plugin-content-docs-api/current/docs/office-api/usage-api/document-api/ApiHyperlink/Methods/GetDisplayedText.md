@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的超链接显示文本。
+此示例展示如何获取超链接显示文本。
 
 ```javascript editor-docx
 // How to show the display text of the hyperlink in the document.
 
-// Add a hyperlink to the paragraph and get its visible text in a document.
+// Add a hyperlink to the paragraph and get its visible text.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

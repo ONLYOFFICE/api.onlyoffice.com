@@ -22,12 +22,12 @@ expression.SetErrorTitle(ErrorTitle);
 
 ## 示例
 
-在电子表格中设置错误消息标题。
+此示例设置错误消息标题。
 
 ```javascript editor-xlsx
-// How to set the validation error title in a spreadsheet.
+// How to set the validation error title.
 
-// Set error title for a validation in a spreadsheet.
+// Set the error title.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -36,4 +36,5 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetErrorTitle("Invalid Input");
 validation.SetShowError(true);
 worksheet.GetRange("B1").SetValue("Error title has been set");
+
 ```

@@ -22,13 +22,9 @@ expression.SetRevision(sRevision);
 
 ## 示例
 
-在电子表格中设置工作簿的修订版本。
+此示例演示如何设置工作簿的修订版本。
 
 ```javascript editor-xlsx
-// How to set revision for a core properties in a spreadsheet?
-
-// Set revision and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -46,4 +42,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Revision: " + revision);
+
 ```

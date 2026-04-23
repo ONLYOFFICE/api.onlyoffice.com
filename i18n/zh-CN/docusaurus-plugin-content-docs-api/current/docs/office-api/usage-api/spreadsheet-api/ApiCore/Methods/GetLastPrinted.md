@@ -20,13 +20,9 @@ Date
 
 ## 示例
 
-获取电子表格中当前工作簿的最后打印日期。
+此示例演示如何获取当前工作簿最后打印的日期。
 
 ```javascript editor-xlsx
-// How to get last printed for a core properties in a spreadsheet?
-
-// Get last printed and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -44,4 +40,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
+
 ```

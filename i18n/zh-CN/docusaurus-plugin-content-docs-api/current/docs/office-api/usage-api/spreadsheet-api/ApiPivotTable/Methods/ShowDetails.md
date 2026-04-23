@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-显示电子表格中数据透视表的详细信息。
+此示例展示如何显示数据透视表的详细信息。
 
 ```javascript editor-xlsx
-// How to display details of a field using its position in a spreadsheet.
+// How to display details of a field using its position.
 
-// Create a pivot table, add data to it then get and show its fiels details in a spreadsheet.
+// Create a pivot table, add data to it then get and show its fiels details.
 
 let worksheet = Api.GetActiveSheet();
 

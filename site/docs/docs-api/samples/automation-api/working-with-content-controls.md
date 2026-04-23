@@ -19,7 +19,7 @@ Click a content control type badge to insert it into the document. Use the **Lis
 
 ## How it works
 
-1. When the user opens a document, the [GetAllContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetAllContentControls.md) method is executed to get the total count of content controls:
+1. When the user opens a document, the [GetAllContentControls](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetAllContentControls.md) method is executed to get the total count of content controls:
 
     ``` ts
     connector.executeMethod("GetAllContentControls", null, (data) => {
@@ -29,11 +29,11 @@ Click a content control type badge to insert it into the document. Use the **Lis
 
 2. When the user clicks a type badge, the corresponding method is called depending on the type:
 
-    - [AddContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControl.md) — for plain text (block or inline)
-    - [AddContentControlDatePicker](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlDatePicker.md) — for date pickers
-    - [AddContentControlPicture](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlPicture.md) — for pictures
-    - [AddContentControlList](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlList.md) — for combobox or dropdown list
-    - [AddContentControlCheckBox](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlCheckBox.md) — for checkboxes
+    - [AddContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControl.md) — for plain text (block or inline)
+    - [AddContentControlDatePicker](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControlDatePicker.md) — for date pickers
+    - [AddContentControlPicture](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControlPicture.md) — for pictures
+    - [AddContentControlList](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControlList.md) — for combobox or dropdown list
+    - [AddContentControlCheckBox](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControlCheckBox.md) — for checkboxes
 
     ``` ts
     // Example: adding a block content control
@@ -46,7 +46,7 @@ Click a content control type badge to insert it into the document. Use the **Lis
     ]);
     ```
 
-3. When a content control receives focus, the [onFocusContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onFocusContentControl.md) event fires and the [GetCurrentContentControlPr](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetCurrentContentControlPr.md) method retrieves its properties (Id, Tag, Lock, Appearance, Color). When it loses focus, the [onBlurContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onBlurContentControl.md) event hides the panel:
+3. When a content control receives focus, the [onFocusContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onFocusContentControl.md) event fires and the [GetCurrentContentControlPr](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetCurrentContentControlPr.md) method retrieves its properties (Id, Tag, Lock, Appearance, Color). When it loses focus, the [onBlurContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onBlurContentControl.md) event hides the panel:
 
     ``` ts
     connector.attachEvent("onFocusContentControl", (control) => {
@@ -89,7 +89,7 @@ Click a content control type badge to insert it into the document. Use the **Lis
     });
     ```
 
-5. When the user clicks **Remove**, the [RemoveContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RemoveContentControl.md) method removes the currently selected content control:
+5. When the user clicks **Remove**, the [RemoveContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/RemoveContentControl.md) method removes the currently selected content control:
 
     ``` ts
     connector.executeMethod("RemoveContentControl", [selectedId]);

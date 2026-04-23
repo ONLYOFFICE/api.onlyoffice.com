@@ -14,7 +14,7 @@ expression.SetBold(isBold);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBold | 必需 | boolean |  | 指定文本块的内容显示为粗体。 |
+| isBold | 必需 | boolean |  | 指定运行的内容显示为粗体。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-在文档中为文本字符设置粗体属性。
+此示例为文本字符设置粗体属性。
 
 ```javascript editor-docx
-// How to make a text bold in a document.
+// How to make a text bold.
 
-// Get a font object of characters and make it bold in a document.
+// Get a font object of characters and make it bold.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

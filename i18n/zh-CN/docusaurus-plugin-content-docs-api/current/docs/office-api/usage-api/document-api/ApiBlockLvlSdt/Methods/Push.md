@@ -22,12 +22,14 @@ boolean
 
 ## 示例
 
-推入段落以将其实际添加到文档中的容器。
+此示例推送段落以将其实际添加到容器。
 
 ```javascript editor-docx
-// Create a block content control and pushes a paragraph to it in a document.
+// Creates a block content control and pushes a paragraph to it.
 
-// Create the paragraph object, add a text to it, and push it to the block container in a document.
+// How to add a document element (paragraph, table, or block content control) to the ApiBlockLvlSdt object.
+
+// Creates the ApiParagraph object, adds a text to it, and pushes it to the block container.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-获取并显示演示文稿中的单击换片设置。
+此示例获取单击时前进设置并显示。
 
 ```javascript editor-pptx
-// How do I get the advance on click in a presentation?
-
-// Get the advance on click using a slide show transition object.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -49,4 +45,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Click: ' + advanceOnClick);
 slide.AddObject(shape);
+
 ```

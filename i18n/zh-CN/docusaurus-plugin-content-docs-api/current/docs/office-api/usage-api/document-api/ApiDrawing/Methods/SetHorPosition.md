@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置文档中浮动对象水平定位的绝对度量值。
+此示例设置浮动对象水平定位的绝对测量值。
 
 ```javascript editor-docx
-// How to set the horizontal position property of the shape in a document.
+// How to set the horizontal position property of the shape.
 
-// Create a drawing, add text to it and set its horizontal position in a document.
+// Create a drawing, add text to it and set its horizontal position.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

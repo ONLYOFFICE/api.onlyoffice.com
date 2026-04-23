@@ -2,11 +2,27 @@
 
 设置基于文本的条件格式规则的文本运算符。
 
-继承自 [ApiFormatCondition.SetTextOperator](../../ApiFormatCondition/Methods/SetTextOperator.md)。
+## 语法
+
+```javascript
+expression.SetTextOperator(TextOperator);
+```
+
+`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| TextOperator | 必需 | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | 文本运算符："xlContains"、"xlDoesNotContain"、"xlBeginsWith"、"xlEndsWith"。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-设置基于文本的条件格式规则的文本运算符。
+此示例设置基于文本的条件格式规则的文本运算符。
 
 ```javascript editor-xlsx
 // How to change text operators in text-based conditional formatting rules.
@@ -36,4 +52,5 @@ condition1.SetTextOperator("xlBeginsWith");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetTextOperator() || "None");
+
 ```

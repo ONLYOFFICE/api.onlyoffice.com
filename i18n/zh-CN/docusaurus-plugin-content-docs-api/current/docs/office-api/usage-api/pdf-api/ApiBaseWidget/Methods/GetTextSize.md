@@ -21,13 +21,9 @@ expression.GetTextSize();
 
 ## 示例
 
-获取字段控件并显示其在 PDF 文档中的文本大小。
+此示例获取字段控件并显示其文本大小。
 
 ```javascript editor-pdf
-// How can I get the text size using a widget in a PDF document?
-
-// Get the text size for a widget in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -40,4 +36,6 @@ widgets.forEach(function(widget) {
 });
 let textSize = widgets[0].GetTextSize();
 textField.SetValue('Text size is: ' + textSize);
+
+
 ```

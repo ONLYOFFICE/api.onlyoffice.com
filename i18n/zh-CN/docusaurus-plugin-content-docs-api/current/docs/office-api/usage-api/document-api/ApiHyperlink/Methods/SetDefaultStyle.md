@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-设置文档中的默认超链接样式。
+此示例设置默认超链接样式。
 
 ```javascript editor-docx
-// How to set the default style to the hyperlink in a document.
+// How to set the default style to the hyperlink.
 
-// Create a hyperlink and apply the default properties to it in a document.
+// Create a hyperlink and apply the default properties to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

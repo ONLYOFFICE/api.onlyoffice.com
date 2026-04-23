@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中为表格设置样式。
+此示例为表格设置样式。
 
 ```javascript editor-docx
-// How to set style of the table in a document.
+// How to set style of the table.
 
-// Set style and display the result in a document.
+// Create a bordered table.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

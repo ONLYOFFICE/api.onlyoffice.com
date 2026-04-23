@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-在演示文稿中创建标识符为 'dk1' 的方案颜色。
+此示例展示如何使用 'dk1' 标识符创建方案颜色。
 
 ```javascript editor-pptx
-// How to create a new scheme color in a presentation.
+// How to create a new scheme color.
 
-// Add a scheme color to create a solid fill in a presentation.
+// Add a scheme color to create a solid fill.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,4 +39,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("curvedUpArrow", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
+
 ```

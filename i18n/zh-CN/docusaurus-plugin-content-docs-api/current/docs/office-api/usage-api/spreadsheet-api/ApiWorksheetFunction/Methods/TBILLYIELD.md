@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回国库券的收益率。
+此示例演示如何返回国库券的收益率。
 
 ```javascript editor-xlsx
-// How to return the yield for a Treasury bill in a spreadsheet.
+// How to return the yield for a Treasury bill.
 
-// Use a function to calculate a Treasury bill yield in a spreadsheet.
+// Use a function to calculate a Treasury bill yield.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

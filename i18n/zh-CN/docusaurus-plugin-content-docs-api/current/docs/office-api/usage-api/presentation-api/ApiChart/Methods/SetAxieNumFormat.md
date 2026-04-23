@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-为轴值设置指定的数字格式。
+此示例将指定的数字格式设置为坐标轴值。
 
 ```javascript editor-pptx
 // How to change a numeric format of left axis lables.
@@ -46,4 +46,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

@@ -8,9 +8,7 @@ sidebar_position: -14
 
 <img alt="Inline editors" src="/assets/images/editor/inlineEditors.png" width="720px" />
 
-:::note
-从5.5版本开始支持同时使用多个编辑器。
-:::
+> 从5.5版本开始支持同时使用多个编辑器。
 
 1. 创建一个空的 `.html` 文件。
 

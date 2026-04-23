@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除幻灯片的背景。
+此示例清除幻灯片的背景。
 
 ```javascript editor-pptx
-// How to remove a background from a layout in a presentation.
+// How to remove a background from a layout.
 
-// Clear background from a layout object in a presentation.
+// Clear background from a layout object.
 
 const presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,5 @@ slide = Api.CreateSlide();
 presentation.AddSlide(slide);
 layout.ClearBackground();
 slide.FollowLayoutBackground();
+
 ```

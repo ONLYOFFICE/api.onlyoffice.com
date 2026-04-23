@@ -20,7 +20,7 @@ expression.GetColorScaleCriteria();
 
 ## 示例
 
-获取电子表格中的色阶条件集合。
+此示例演示如何获取色阶条件集合。
 
 ```javascript editor-xlsx
 // How to access and display color scale criteria information.
@@ -45,4 +45,5 @@ let criteria = colorScale.GetColorScaleCriteria();
 
 worksheet.GetRange("C1").SetValue("Criteria Count:");
 worksheet.GetRange("C2").SetValue(criteria ? criteria.length : 0);
+
 ```

@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取文档的类别。
+此示例演示如何使用 ApiCore 获取文档的类别。
 
 ```javascript editor-docx
-// How do I get the category in a document?
-
-// Get the category using a core properties object in a document.
-
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCategory("Examples");
@@ -34,4 +30,5 @@ core.SetCategory("Examples");
 const category = core.GetCategory();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Category: " + category);
+
 ```

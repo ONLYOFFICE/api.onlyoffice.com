@@ -11,15 +11,19 @@
 - 'xlA1'
 - 'xlR1C1'
 
+
 ## 示例
 
-获取引用样式。
+此示例获取引用样式。
 
 ```javascript editor-xlsx
-// Retrieve the reference style and display it in the worksheet.
+// How to retrieve a reference style and display it in the worksheet.
 
-// The reference style value is written to cell A1.
+// Get a reference style.
 
+builder.CreateFile("xlsx");
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());
+builder.SaveFile("xlsx", "ReferenceStyle.xlsx");
+builder.CloseFile();
 ```

@@ -24,10 +24,10 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## 示例
 
-创建图像并将其粘贴到文档中。
+此示例创建一个图像并将其粘贴到文档中。
 
 ```javascript editor-pptx
-// How to create an image object using an url and specifying its width and height in a presentation.
+// How to create an image object using a url and specifying its width and height.
 
 // Create an image and insert it to the slide.
 
@@ -39,4 +39,5 @@ const shape = Api.CreateImage(
 	60 * 36000, 60 * 36000
 );
 slide.AddObject(shape);
+
 ```

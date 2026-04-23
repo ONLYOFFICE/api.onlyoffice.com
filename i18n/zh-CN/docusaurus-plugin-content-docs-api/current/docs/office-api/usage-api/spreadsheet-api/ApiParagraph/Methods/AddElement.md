@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-向电子表格中的段落添加 run。
+此示例向段落添加一个 Run。
 
 ```javascript editor-xlsx
-// How to add text to the paragraph in a spreadsheet.
+// How to add text to the paragraph.
 
-// Get the paragraph from the shape and change its text in a spreadsheet.
+// Get the paragraph from the shape and change its text.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

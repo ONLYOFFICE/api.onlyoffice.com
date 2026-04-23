@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取电子表格中工作簿的类别（使用核心属性）。
+此示例演示如何使用 ApiCore 获取工作簿的类别。
 
 ```javascript editor-xlsx
-// How to get the category for a core properties in a spreadsheet?
-
-// Get the category and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -44,4 +40,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Category: " + category);
+
 ```

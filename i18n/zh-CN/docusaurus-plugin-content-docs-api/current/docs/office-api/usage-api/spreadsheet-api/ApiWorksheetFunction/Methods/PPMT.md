@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中基于定期、固定付款和固定利率返回给定投资的本金支付。
+此示例演示如何根据定期固定付款和固定利率返回给定投资的本金付款。
 
 ```javascript editor-xlsx
-// How to return the payment on the principal for a given investment in a spreadsheet.
+// How to return the payment on the principal for a given investment.
 
-// Use a function to calculate the payment on the principal for a given investment based on parameters in a spreadsheet.
+// Use a function to calculate the payment on the principal for a given investment based on parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

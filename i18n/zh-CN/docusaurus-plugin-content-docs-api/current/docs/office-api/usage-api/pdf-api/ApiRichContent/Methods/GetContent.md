@@ -22,13 +22,9 @@ expression.GetContent(getCopies);
 
 ## 示例
 
-获取 PDF 文档中富文本内容的所有元素。
+此示例从富文本内容获取所有元素。
 
 ```javascript editor-pdf
-// How do I get the content in a PDF document?
-
-// Get the content using a rich content object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

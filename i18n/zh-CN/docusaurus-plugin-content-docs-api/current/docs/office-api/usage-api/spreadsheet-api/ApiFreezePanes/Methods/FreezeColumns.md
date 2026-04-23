@@ -22,12 +22,12 @@ expression.FreezeColumns(count);
 
 ## 示例
 
-在电子表格中冻结第一列。
+此示例冻结第一列。
 
 ```javascript editor-xlsx
-// How to freeze columns using their indices in a spreadsheet.
+// How to freeze columns using their indices.
 
-// Get freeze panes and freeze a column using its index in a spreadsheet.
+// Get freeze panes and freeze a column using its index.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

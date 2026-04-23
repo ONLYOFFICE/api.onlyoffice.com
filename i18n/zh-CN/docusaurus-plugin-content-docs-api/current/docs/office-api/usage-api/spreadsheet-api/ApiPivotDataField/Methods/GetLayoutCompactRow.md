@@ -2,16 +2,30 @@
 
 返回指定数据透视表字段是否紧凑的设置。
 
-继承自 [ApiPivotField.GetLayoutCompactRow](../../ApiPivotField/Methods/GetLayoutCompactRow.md)。
+## 语法
+
+```javascript
+expression.GetLayoutCompactRow();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-获取电子表格中透视字段的紧凑行布局。
+此示例展示如何获取透视字段的布局紧凑行。
 
 ```javascript editor-xlsx
-// How to get a compact row layout of a pivot field in a spreadsheet.
+// How to get a compact row layout of a pivot field.
 
-// Create a pivot table, add data to it then get a layout compact row of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get a layout compact row of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

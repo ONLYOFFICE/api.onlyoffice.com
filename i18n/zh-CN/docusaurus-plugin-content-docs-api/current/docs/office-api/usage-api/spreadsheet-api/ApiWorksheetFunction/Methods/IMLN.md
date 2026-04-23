@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的自然对数。
+此示例演示如何返回复数的自然对数。
 
 ```javascript editor-xlsx
-// How to get the natural logarithm of a comlex numbers in a spreadsheet.
+// How to get the natural logarithm of a comlex numbers.
 
-// Use a function to get the natural logarithm in a spreadsheet.
+// Use a function to get the natural logarithm.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

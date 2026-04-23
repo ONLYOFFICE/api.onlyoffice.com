@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中图表系列对象的类类型。
+此示例获取 ApiChartSeries 类的类型并将其插入文档中。
 
 ```javascript editor-docx
-// How can I get the class type of a chart series in a document?
+// How get a class type of ApiChartSeries.
 
-// Get the class type of a chart series and display it in the document.
+// Retrieve class type of ApiChartSeries object and insert it to the slide.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

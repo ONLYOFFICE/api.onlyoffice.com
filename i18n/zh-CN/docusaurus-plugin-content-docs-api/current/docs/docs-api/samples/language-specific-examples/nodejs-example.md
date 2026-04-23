@@ -5,7 +5,7 @@ sidebar_position: -11
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Node.js 集成
+# NodeJS 示例
 
 ## 概述
 

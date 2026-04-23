@@ -20,7 +20,7 @@ string[]
 
 ## 示例
 
-获取文档中组合框的列表值。
+此示例展示如何从组合框获取列表值。
 
 ```javascript editor-docx
 // How to get list values of a combobox form.

@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建表格副本。
+此示例创建表格的副本。
 
 ```javascript editor-docx
-// How to create identical table in a document.
+// How to create identical table.
 
-// Get a table object and create a copy of it in a document.
+// Get a table object and create a copy of it.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

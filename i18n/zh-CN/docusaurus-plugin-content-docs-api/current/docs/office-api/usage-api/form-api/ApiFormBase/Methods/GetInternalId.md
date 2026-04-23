@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-获取文档中表单的内部 ID。
+此示例展示如何获取表单的内部 ID。
 
 ```javascript editor-forms
 // How to get an internal id of a text form.
@@ -35,4 +35,5 @@ let internalId = textForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);
+
 ```

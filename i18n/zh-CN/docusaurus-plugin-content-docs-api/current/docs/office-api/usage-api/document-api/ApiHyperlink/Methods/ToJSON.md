@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-将文档中的超链接对象转换为 JSON 对象。
+此示例将 ApiHyperlink 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the hyperlink in a document.
+// How to get a JSON from the hyperlink.
 
-// Convert the hyperlink to json and add it to the paragraph in a document.
+// Convert the hyperlink to json and add it to the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

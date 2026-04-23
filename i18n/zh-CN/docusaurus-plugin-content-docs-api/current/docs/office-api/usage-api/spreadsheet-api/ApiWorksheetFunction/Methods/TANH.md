@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的双曲正切值。
+此示例演示如何返回数字的双曲正切。
 
 ```javascript editor-xlsx
-// How to return the hyperbolic tangent of a number in a spreadsheet.
+// How to return the hyperbolic tangent of a number.
 
-// Use a function to calculate angle's hyperbolic tangent in a spreadsheet.
+// Use a function to calculate angle's hyperbolic tangent.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

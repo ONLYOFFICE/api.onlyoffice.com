@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -13,9 +13,10 @@ Object
 | keepSelectedTextInForm | boolean | 指定当前选定的文本是否应保存为插入表单的内容。 |
 | placeholderFromSelection | boolean | 指定当前选定的文本是否应保存为插入表单的占位符。 |
 
+
 ## 示例
 
-在选定文本上方插入具有指定文本框属性的文本框。
+此示例在选定文本上方插入具有指定文本框属性的文本框。
 
 ```javascript editor-forms
 // How to create a text form with its properties and insert it into the ApiDocument object.
@@ -36,4 +37,5 @@ let textFormInsertPr = {
 	"keepSelectedTextInForm": false
 };
 doc.InsertTextForm(textFormInsertPr);
+
 ```

@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中添加文本字段并设置长文本滚动属性。
+此示例添加文本字段并为其设置滚动长文本属性。
 
 ```javascript editor-pdf
-// How to set scroll long text for a text field in a PDF document?
-
-// Set scroll long text and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -36,4 +32,5 @@ page.AddObject(textField);
 
 textField.SetScrollLongText(true);
 textField.SetValue('Scroll long text property is: ' + textField.IsScrollLongText());
+
 ```

@@ -14,9 +14,10 @@
 - "xlUnderlineStyleSingle"
 - "xlUnderlineStyleSingleAccounting"
 
+
 ## 示例
 
-指定对字体应用单下划线。
+此示例指定对字体应用单下划线。
 
 ```javascript editor-xlsx
 // How to underline a text font.

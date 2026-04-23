@@ -32,7 +32,7 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 ## 示例
 
-在电子表格中从工作表的选定数据范围创建指定类型的图表。
+此示例从工作表的选定数据区域创建指定类型的图表。
 
 ```javascript editor-xlsx
 // How to add chart to the worksheet.

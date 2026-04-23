@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回一个文本字符串在另一个文本字符串中的起始位置。此函数区分大小写。
+此示例演示如何返回一个文本字符串在另一个文本字符串中的起始位置。此函数区分大小写。
 
 ```javascript editor-xlsx
-// How to get an index of a substring from a string in a spreadsheet.
+// How to get an index of a substring from a string.
 
-// Use function to find out a starting position of a substring containing in another text in a spreadsheet.
+// Use function to find out a starting position of a substring containing in another text.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

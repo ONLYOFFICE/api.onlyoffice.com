@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-获取文档中包含段落的内容控件。
+此示例展示如何获取包含段落的内容控件。
 
 ```javascript editor-docx
-// How to get the parent control of the paragraph in a document.
+// How to get the parent control of the paragraph.
 
-// Make bold the parent element in a document.
+// Make bold the parent element.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

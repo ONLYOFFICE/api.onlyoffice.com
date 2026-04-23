@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取文档中的上一行。
+此示例展示如何获取上一行。
 
 ```javascript editor-docx
-// Get the previous row from the current row in a document.
+// Get the previous row from the current row.
 
-// Display the second and the first row in a document.
+// Display the second and the first row.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

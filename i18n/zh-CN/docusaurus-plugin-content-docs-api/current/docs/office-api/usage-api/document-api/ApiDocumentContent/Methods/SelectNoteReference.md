@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中选择脚注/尾注引用。
+此示例展示如何在文档中选择脚注/尾注引用。
 
 ```javascript editor-docx
 // How to add footnote to the document.
 
-// How to select footnote reference and increate its font size in a document.
+// How to select footnote reference and increate its font size.
 
 let doc = Api.GetDocument();
 let footnote = doc.AddFootnote();
@@ -35,4 +35,5 @@ paragraph.AddText("Footnote text");
 footnote.SelectNoteReference();
 
 doc.GetRangeBySelect().SetFontSize(48);
+
 ```

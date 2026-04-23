@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中设置图表的次要垂直网格线。
+如何设置图表的次垂直网格线。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its minor gridlines in a PDF document.
-
-// Set minor vertical gridlines for a chart in a PDF document.
+// Create a chart, set its properties and its minor gridlines.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 10000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMinorVerticalGridlines(stroke);
 page.AddObject(chart);
+
 ```

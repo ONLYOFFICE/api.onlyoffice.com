@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中使用现有数据计算预测的指数增长。
+此示例演示如何使用现有数据计算预测的指数增长。
 
 ```javascript editor-xlsx
-// How to calculate predicted exponential growth by using existing data in a spreadsheet.
+// How to calculate predicted exponential growth by using existing data.
 
-// Use a function to calculate predicted exponential growth in a spreadsheet.
+// Use a function to calculate predicted exponential growth.
 
 const worksheet = Api.GetActiveSheet();
 

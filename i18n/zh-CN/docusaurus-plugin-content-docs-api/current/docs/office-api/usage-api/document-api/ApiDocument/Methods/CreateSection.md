@@ -22,12 +22,12 @@ expression.CreateSection(oParagraph);
 
 ## 示例
 
-创建在指定段落处结束的新文档节。
+此示例创建一个在指定段落处结束的新文档节。
 
 ```javascript editor-docx
-// How to create a section indicating its size, margins, etc in a document.
+// How to create a section indicating its size, margins, etc.
 
-// Create a paragraph under the section in a document.
+// Create a paragraph under the section.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

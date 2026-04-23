@@ -24,10 +24,10 @@ number
 
 ## 示例
 
-在电子表格中查找符合给定条件的单元格的平均值（算术平均数）。
+此示例演示如何计算由给定条件或标准指定的单元格的平均值（算术平均数）。
 
 ```javascript editor-xlsx
-// How to find an average (arithmetic mean) using condition in a spreadsheet.
+// How to find an average (arithmetic mean) using condition.
 
 // Use function to get an average of the cells if the condition is met.
 

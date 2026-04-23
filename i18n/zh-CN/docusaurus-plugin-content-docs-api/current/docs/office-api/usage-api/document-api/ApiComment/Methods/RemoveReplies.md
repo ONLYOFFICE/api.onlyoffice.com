@@ -24,10 +24,10 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 ## 示例
 
-删除文档中指定的批注回复。
+此示例删除指定的批注回复。
 
 ```javascript editor-docx
-// How to delete specified comment reply in a document.
+// How to delete specified comment reply.
 
 // Get all comments from the presentation and remove a reply from the first one's.
 

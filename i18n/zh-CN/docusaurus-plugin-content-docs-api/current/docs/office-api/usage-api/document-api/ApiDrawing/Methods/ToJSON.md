@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-将文档中的绘图对象转换为 JSON 对象。
+此示例将 ApiDrawing 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON object from the drawing in a document.
+// How to get a JSON object from the drawing.
 
-// Convert the shape to json and add it to the paragraph in a document.
+// Convert the shape to json and add it to the paragraph.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

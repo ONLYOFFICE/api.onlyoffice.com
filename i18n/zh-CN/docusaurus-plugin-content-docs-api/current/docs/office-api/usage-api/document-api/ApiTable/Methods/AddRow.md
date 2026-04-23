@@ -23,12 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## 示例
 
-在文档中向表格添加新行。
+此示例向表格添加新行。
 
 ```javascript editor-docx
-// How to add row to the table in a document.
+// How to add row to the table.
 
-// Get row cell and add it as row.
+// Get row cell and add it as row. 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

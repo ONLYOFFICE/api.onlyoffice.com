@@ -20,15 +20,16 @@ number
 
 ## 示例
 
-获取文档中的当前页面索引。
+此示例展示如何获取当前页面索引。
 
 ```javascript editor-docx
 // How to know the order index of the current page.
 
-// Get current page number using the document API in a document.
+// Get current page number.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("The current page index is: " + doc.GetCurrentPage());
 doc.Push(paragraph);
+
 ```

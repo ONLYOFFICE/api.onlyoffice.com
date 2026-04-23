@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取文档中所有书签名称的数组。
+此示例展示如何获取文档中所有书签名称的数组。
 
 ```javascript editor-docx
 // Get the list with all bookmark names and print them in the document.
 
-// Add bookmarks to the ranges and display their names in a document.
+// Add bookmarks to the ranges and display their names.
 
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 

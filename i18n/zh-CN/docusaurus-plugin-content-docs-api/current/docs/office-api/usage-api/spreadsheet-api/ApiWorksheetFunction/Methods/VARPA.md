@@ -22,12 +22,13 @@ number
 
 ## 示例
 
-在电子表格中基于整个总体计算方差，包括逻辑值和文本。文本和 false 逻辑值为 0；true 逻辑值为 1。
+此示例演示如何根据整个总体计算方差，包括逻辑值和文本。文本和 false 逻辑值的值为 0；true 逻辑值的值为 1。
 
 ```javascript editor-xlsx
-// How to estimate variance based on the entire population considering logical values and text in a spreadsheet.
+// How to estimate variance based on the entire population considering logical values and text.
 
-// Use a function to estimate variance based on population not ignoring logical values and text in a spreadsheet.
+// Use a function to estimate variance based on population not ignoring logical values and text.
+
 
 let worksheet = Api.GetActiveSheet();
 

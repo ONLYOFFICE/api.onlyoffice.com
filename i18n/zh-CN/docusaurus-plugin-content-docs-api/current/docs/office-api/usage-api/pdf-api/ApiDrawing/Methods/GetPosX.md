@@ -20,12 +20,10 @@ expression.GetPosX();
 
 ## 示例
 
-如何在 PDF 文档中获取并显示绘图对象的 X 位置。
+如何获取并显示绘图的 X 坐标位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and get its X position.
-
-// Get the pos x using a drawing object object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

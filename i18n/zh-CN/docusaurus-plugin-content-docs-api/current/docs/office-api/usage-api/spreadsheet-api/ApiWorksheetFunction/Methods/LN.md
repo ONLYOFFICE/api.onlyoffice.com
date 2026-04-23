@@ -22,14 +22,15 @@ number
 
 ## 示例
 
-在电子表格中返回数字的自然对数。
+此示例演示如何返回数字的自然对数。
 
 ```javascript editor-xlsx
-// How to get the natural logarithm in a spreadsheet.
+// How to get the natural logarithm.
 
-// Use a function to return a natural logarithm in a spreadsheet.
+// Use a function to return a natural logarithm.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LN(23));
+
 ```

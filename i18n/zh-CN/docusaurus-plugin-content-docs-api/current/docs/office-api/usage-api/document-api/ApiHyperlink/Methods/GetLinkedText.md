@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的超链接地址。
+此示例展示如何获取超链接地址。
 
 ```javascript editor-docx
-// How to get the raw link of the hyperlink in a document.
+// How to get the raw link of the hyperlink.
 
-// Add a hyperlink to the paragraph and show its address as a text in a document.
+// Add a hyperlink to the paragraph and show its address as a text.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

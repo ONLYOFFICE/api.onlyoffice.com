@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为图表图例设置填充。
+此示例设置图表图例的填充。
 
 ```javascript editor-xlsx
-// How to fill the chart legend with the solid fill in a spreadsheet.
+// How to fill the chart legend with the solid fill.
 
-// Color the legend of the chart in a spreadsheet.
+// Color the legend of the chart.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定均值和标准差的正态累积分布的逆函数。
+此示例演示如何返回指定平均值和标准差的正态累积分布的反函数。
 
 ```javascript editor-xlsx
-// How to calculate the inverse of the normal cumulative distribution in a spreadsheet.
+// How to calculate the inverse of the normal cumulative distribution.
 
-// Use a function to get the inverse of the normal cumulative distribution with a mean and standard deviation in a spreadsheet.
+// Use a function to get the inverse of the normal cumulative distribution with a mean and standard deviation.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -42,4 +42,5 @@ let func = Api.WorksheetFunction;
 let ans = func.NORMSDIST(value);
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

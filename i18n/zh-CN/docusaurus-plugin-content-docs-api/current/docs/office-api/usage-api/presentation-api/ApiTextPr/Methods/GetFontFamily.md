@@ -21,12 +21,12 @@ string
 
 ## 示例
 
-获取演示文稿中的文本字体系列。
+此示例演示如何确定文本字体系列。
 
 ```javascript editor-pptx
-// How to know font name of a text run in a presentation.
+// How to know font name of a text run.
 
-// Get the text properties of the run and display its font family in a presentation.
+// Get the text properties of the run and display its font family.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,4 +53,5 @@ paragraph = Api.CreateParagraph();
 const fontFamily = textPr.GetFontFamily();
 paragraph.AddText("Font family: " + fontFamily);
 docContent.Push(paragraph);
+
 ```

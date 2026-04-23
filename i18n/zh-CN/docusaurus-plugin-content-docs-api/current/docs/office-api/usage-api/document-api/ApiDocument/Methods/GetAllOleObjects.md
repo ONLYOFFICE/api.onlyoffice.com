@@ -2,16 +2,30 @@
 
 从文档内容返回 OLE 对象集合。
 
-继承自 [ApiDocumentContent.GetAllOleObjects](../../ApiDocumentContent/Methods/GetAllOleObjects.md)。
+## 语法
+
+```javascript
+expression.GetAllOleObjects();
+```
+
+`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md)[]
 
 ## 示例
 
-从文档内容中获取 OLE 对象集合。
+此示例展示如何从文档内容获取 OLE 对象集合。
 
 ```javascript editor-docx
 // Get all OLE objects added to the document.
 
-// How to retrieve all OLE objects and display the application ID of the first one in a document.
+// How to retrieve all OLE objects and display the application ID of the first one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -34,4 +48,5 @@ let appId = oleObjects[0].GetApplicationId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 doc.Push(paragraph);
+
 ```

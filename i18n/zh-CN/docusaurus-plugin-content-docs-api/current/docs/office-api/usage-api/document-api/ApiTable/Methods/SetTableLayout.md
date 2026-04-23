@@ -2,16 +2,32 @@
 
 指定将用于在文档中布局当前表格内容的算法。
 
-继承自 [ApiTablePr.SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md)。
+## 语法
+
+```javascript
+expression.SetTableLayout(sType);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sType | 必需 | "autofit" \| "fixed" |  | 文档中表格布局的类型。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-指定在文档中用于布局表格内容的算法。
+此示例指定将用于在文档中布局表格内容的算法。
 
 ```javascript editor-docx
-// How to set the table layout in a document.
+// How to set the table layout.
 
-// Create a table and make its layout fixed in a document.
+// Create a table and make its layout fixed.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

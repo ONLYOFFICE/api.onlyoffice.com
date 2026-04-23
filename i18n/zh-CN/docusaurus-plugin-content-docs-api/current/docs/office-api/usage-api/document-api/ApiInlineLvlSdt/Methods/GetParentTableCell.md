@@ -20,12 +20,12 @@ expression.GetParentTableCell();
 
 ## 示例
 
-获取包含当前内容控件的表格单元格。
+此示例展示如何获取包含当前内容控件的表格单元格。
 
 ```javascript editor-docx
-// How to display the parent table of the inline text control in a document.
+// How to display the parent table of the inline text control.
 
-// Update the parent table of inline content control in a document.
+// Update the parent table of inline content control.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -11,9 +11,10 @@
 - "xlNo"
 - "xlYes"
 
+
 ## 示例
 
-指定第一行包含标题信息。
+此示例指定第一行包含标题信息。
 
 ```javascript editor-xlsx
 // How to specify a sorting header for a range.

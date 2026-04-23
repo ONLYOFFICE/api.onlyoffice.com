@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为当前 OLE 对象设置数据。
+此示例设置当前 OLE 对象的数据。
 
 ```javascript editor-pptx
-// Set data to an OLE object in a presentation.
+// Set data to an OLE object.
 
-// How to insert an url address to the OLE object in a presentation.
+// How to insert a url address to the OLE object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,4 +42,5 @@ oleObject.SetSize(200 * 36000, 130 * 36000);
 oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
+
 ```

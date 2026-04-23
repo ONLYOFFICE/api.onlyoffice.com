@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-将文档中不同类型的颜色对象转换为 JSON 字符串。
+此示例展示如何将不同类型的 ApiColor 对象转换为 JSON 字符串。
 
 ```javascript editor-docx
-// The color object can be created from a hex value or a theme color.
-
-// Convert each color type to a JSON string and display the result.
-
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -52,4 +48,5 @@ paragraph.AddLineBreak();
 paragraph.AddLineBreak();
 const autoColor = Api.AutoColor();
 paragraph.AddText('Auto JSON:\n' + autoColor.ToJSON());
+
 ```

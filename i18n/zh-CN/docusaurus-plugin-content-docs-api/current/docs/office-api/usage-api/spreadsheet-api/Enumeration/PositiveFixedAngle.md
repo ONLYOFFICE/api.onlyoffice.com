@@ -6,9 +6,11 @@
 
 number
 
+
+
 ## 示例
 
-将渐变方向角度设置为 90 度。
+此示例将渐变方向角度设置为 90 度。
 
 ```javascript editor-xlsx
 // How to create a gradient fill using positive fixed angle.

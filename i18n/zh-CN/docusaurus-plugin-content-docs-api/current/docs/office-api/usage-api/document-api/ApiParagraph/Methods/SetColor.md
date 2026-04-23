@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-在文档中为当前段落设置文本颜色。
+此示例为当前段落设置文本颜色。
 
 ```javascript editor-docx
-// Color the paragraph text with orange in a document.
+// Color the paragraph text with orange.
 
-// Get the first paragraph and make its font color orange in a document.
+// Get the first paragraph and make its font color orange.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
@@ -39,4 +39,5 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText('This text is in same orange color, but created using HexColor method.');
 secondParagraph.SetColor(color);
 doc.Push(secondParagraph);
+
 ```

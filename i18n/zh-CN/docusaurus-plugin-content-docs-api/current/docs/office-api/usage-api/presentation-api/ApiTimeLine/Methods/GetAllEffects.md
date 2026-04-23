@@ -20,13 +20,9 @@ expression.GetAllEffects();
 
 ## 示例
 
-从演示文稿中的时间线获取所有动画效果。
+此示例从时间线获取所有动画效果。
 
 ```javascript editor-pptx
-// How do I get all effects in a presentation?
-
-// Get all effects using a timeline object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -69,4 +65,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Total effects on slide: ' + allEffects.length);
 slide.AddObject(infoShape);
+
 ```

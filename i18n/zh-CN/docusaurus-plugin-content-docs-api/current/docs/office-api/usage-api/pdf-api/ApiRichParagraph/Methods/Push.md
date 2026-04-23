@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-向 PDF 文档中的富文本段落推入新元素。
+此示例向富文本段落推入新元素。
 
 ```javascript editor-pdf
-// How do I push in a PDF document?
-
-// Push using a rich paragraph object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

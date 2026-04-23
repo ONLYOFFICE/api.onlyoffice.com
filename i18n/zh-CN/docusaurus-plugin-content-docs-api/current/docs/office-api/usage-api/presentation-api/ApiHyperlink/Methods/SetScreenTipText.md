@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在演示文稿中设置超链接的屏幕提示文本。
+此示例设置超链接的屏幕提示文本。
 
 ```javascript editor-pptx
-// How to set screen tip text for a hyperlink in a presentation?
-
-// Set screen tip text and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,4 +44,5 @@ infoParagraph.AddText('Shape hyperlink screen tip: ' + hyperlink.GetScreenTipTex
 const docContent = shape.GetContent();
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
+
 ```

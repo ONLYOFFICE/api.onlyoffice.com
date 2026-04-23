@@ -2,11 +2,25 @@
 
 返回当前条件格式规则使用的第一个公式。
 
-继承自 [ApiFormatCondition.GetFormula1](../../ApiFormatCondition/Methods/GetFormula1.md)。
+## 语法
+
+```javascript
+expression.GetFormula1();
+```
+
+`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取条件格式规则的第一个公式。
+此示例获取条件格式规则的第一个公式。
 
 ```javascript editor-xlsx
 // How to retrieve the first formula from conditional formatting rules.
@@ -33,4 +47,5 @@ let formula1 = condition1.GetFormula1();
 
 worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
+
 ```

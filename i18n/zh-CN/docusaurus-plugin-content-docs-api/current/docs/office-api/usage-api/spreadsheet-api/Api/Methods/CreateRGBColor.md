@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## 示例
 
-在电子表格中通过设置红、绿、蓝颜色分量的适当值来创建 RGB 颜色。
+此示例创建 RGB 颜色，设置红色、绿色和蓝色分量的适当值。
 
 ```javascript editor-xlsx
-// How to create an RGB color in a spreadsheet.
+// How to create an RGB color.
 
-// Use RGB (R-red, G-green, B-blue) values to create colors in a spreadsheet.
+// Use RGB (R-red, G-green, B-blue) values to create colors.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

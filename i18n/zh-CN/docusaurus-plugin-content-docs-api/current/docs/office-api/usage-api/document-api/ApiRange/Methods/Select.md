@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中将选区设置为指定范围。
+此示例将选区设置为指定范围。
 
 ```javascript editor-docx
-// How to select a range with a cursor in a document.
+// How to select a range with a cursor.
 
-// Get range of the paragraph and select it in a document.
+// Get range of the paragraph and select it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

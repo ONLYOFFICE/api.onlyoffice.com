@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-在电子表格中返回每个会计期间资产的按比例线性折旧。
+此示例演示如何返回资产在每个会计期间的按比例直线折旧。
 
 ```javascript editor-xlsx
 // How to get a prorated linear depreciation of an asset for each accounting period and display it in the worksheet.
 
-// Get a function that gets prorated linear depreciation of an asset for each accounting period in a spreadsheet.
+// Get a function that gets prorated linear depreciation of an asset for each accounting period.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

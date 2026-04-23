@@ -22,12 +22,14 @@ number
 
 ## 示例
 
-在电子表格中返回引用中的工作表数。
+此示例演示如何返回引用中的工作表数量。
 
 ```javascript editor-xlsx
-// The SHEETS function counts all sheets in the current workbook.
+// How to count sheets.
 
-// Add additional sheets and return their total count.
+// Use a function to get how many sheets are present in the worksheet.
+
+// Add more sheets
 
 Api.AddSheet("Sheet2")
 Api.AddSheet("Sheet3")

@@ -2,16 +2,30 @@
 
 从当前文本属性获取删除线属性。
 
-继承自 [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)。
+## 语法
+
+```javascript
+expression.GetStrikeout();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-获取电子表格中文本的删除线属性。
+此示例使用其属性获取文本删除线。
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out or not in a spreadsheet.
+// How to find out whether a text is stroke out or not.
 
-// Get cross out property of a text in a spreadsheet.
+// Get cross out property of a text.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-在电子表格中使用 XPath 获取自定义 XML 节点的子节点。
+此示例演示如何使用 XPath 获取自定义 XML 节点的子节点。
 
 ```javascript editor-xlsx
-// How to retrieve child nodes from custom XML node elements using XPath in a spreadsheet.
+// How to retrieve child nodes from custom XML node elements using XPath.
 
-// Get book nodes from library in a spreadsheet.
+// Get book nodes from library.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

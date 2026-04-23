@@ -1,17 +1,33 @@
 # SetTextFill
 
-设置当前文本块的文本填充。
+设置当前文本运行的文本填充。
 
-继承自 [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md)。
+## 语法
+
+```javascript
+expression.SetTextFill(oApiFill);
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充文本颜色的颜色或图案。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-为文档中的艺术字文本设置文本填充。
+在此示例中，艺术字文本具有文本填充。
 
 ```javascript editor-docx
-// How to color a text object in a document.
+// How to color a text object.
 
-// Create a text run object, add color to it using solid fill in a document.
+// Create a text run object, add color to it using solid fill.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

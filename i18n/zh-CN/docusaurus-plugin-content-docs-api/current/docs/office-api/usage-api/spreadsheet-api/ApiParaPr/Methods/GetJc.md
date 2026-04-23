@@ -20,10 +20,10 @@ expression.GetJc();
 
 ## 示例
 
-获取电子表格中段落内容的对齐方式。
+此示例展示如何获取段落内容对齐方式。
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph in a spreadsheet.
+// How to know the justification type of a paragraph.
 
 // Create a paragraph set justification type, get it and display in the worksheet.
 

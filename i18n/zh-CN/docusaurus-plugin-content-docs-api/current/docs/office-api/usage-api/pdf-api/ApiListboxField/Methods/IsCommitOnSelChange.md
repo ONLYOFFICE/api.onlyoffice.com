@@ -2,17 +2,27 @@
 
 检查字段是否可在选择更改时提交。
 
-继承自 [ApiBaseListField.IsCommitOnSelChange](../../ApiBaseListField/Methods/IsCommitOnSelChange.md)。
+## 语法
+
+```javascript
+expression.IsCommitOnSelChange();
+```
+
+`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取选择更改时提交属性。
+此示例从带有选项列表的字段获取选择更改时提交属性。
 
 ```javascript editor-pdf
-// How can I is commit on sel change using a list field in a PDF document?
-
-// Is commit on sel change for a list field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

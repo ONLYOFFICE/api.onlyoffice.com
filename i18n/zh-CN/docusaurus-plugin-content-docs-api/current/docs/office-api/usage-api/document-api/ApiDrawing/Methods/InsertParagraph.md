@@ -24,12 +24,12 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## 示例
 
-在文档中的指定位置插入段落。
+此示例在指定位置插入段落。
 
 ```javascript editor-docx
-// How to insert the paragraph into the drawing in a document.
+// How to insert the paragraph into the drawing.
 
-// Create a rectangle and then add a paragraph to it in a document.
+// Create a rectangle and then add a paragraph to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

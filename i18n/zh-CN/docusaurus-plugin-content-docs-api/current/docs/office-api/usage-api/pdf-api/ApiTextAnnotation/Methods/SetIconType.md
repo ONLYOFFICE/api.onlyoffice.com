@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为文本注释设置新的图标类型。
+此示例为文本注释设置新的图标类型。
 
 ```javascript editor-pdf
-// How to set icon type for a text annotation in a PDF document?
-
-// Set icon type and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 let oldIcon = textAnnot.GetIconType();

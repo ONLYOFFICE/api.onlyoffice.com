@@ -22,12 +22,12 @@ expression.SetTextPr(textPr);
 
 ## 示例
 
-将文本设置应用于文档中的指定样式。
+此示例将文本设置应用于指定的样式。
 
 ```javascript editor-docx
-// Create a paragraph, add a text to it, and set the font size and bold property to this text in a document.
+// Creates a paragraph, adds a text to it, and sets the font size and bold property to this text.
 
-// Specify the text properties object and apply its settings to the style object in a document.
+// Specifies the ApiTextPr object and applies its settings to the ApiStyle object.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");

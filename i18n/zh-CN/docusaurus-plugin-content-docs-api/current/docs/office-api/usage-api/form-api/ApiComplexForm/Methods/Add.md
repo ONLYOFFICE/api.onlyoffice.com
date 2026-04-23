@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-创建包含多个元素的复杂表单，包括文本输入表单和静态文本。
+此示例创建包含多个元素的复合表单，包括文本输入表单和静态文本。
 
 ```javascript editor-forms
-// A complex form combines multiple elements such as text inputs and static text.
-
-// Add using a complex form object.
-
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Email", "placeholder": "Start to fill complex form"});
 complexForm.Add(Api.CreateTextForm());

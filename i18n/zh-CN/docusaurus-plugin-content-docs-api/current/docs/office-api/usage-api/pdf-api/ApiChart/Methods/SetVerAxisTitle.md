@@ -24,12 +24,10 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为图表的垂直轴设置标题。
+为图表的垂直轴添加标题。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and name its vertical axis title in a PDF document.
-
-// Set ver axis title using a chart object in a PDF document.
+// Create a chart, set its properties and name its vertical axis title.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,4 +49,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

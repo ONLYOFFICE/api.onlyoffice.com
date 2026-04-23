@@ -20,12 +20,12 @@ expression.GetPivotTable();
 
 ## 示例
 
-获取电子表格中当前范围的数据透视表。
+此示例演示如何获取当前范围的数据透视表。
 
 ```javascript editor-xlsx
 // How to get a pivot table of a cell.
 
-// Get a range, get its pivot table and add some data fields to it in a spreadsheet.
+// Get a range, get its pivot table and add some data fields to it.
 
 let worksheet = Api.GetActiveSheet();
 

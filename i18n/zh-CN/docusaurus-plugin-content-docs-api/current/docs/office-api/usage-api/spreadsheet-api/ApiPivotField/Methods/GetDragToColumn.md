@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中透视字段的拖动到列属性。
+此示例展示如何获取透视字段的拖动到列。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to column in a spreadsheet.
+// How to get a pivot field drag to column.
 
-// Create a pivot table, add data to it then get a drag to column of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get a drag to column of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

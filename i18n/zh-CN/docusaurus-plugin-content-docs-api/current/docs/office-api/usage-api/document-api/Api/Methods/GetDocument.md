@@ -20,12 +20,16 @@ expression.GetDocument();
 
 ## 示例
 
-获取文档中的当前文档。
+此示例展示如何获取当前文档。
 
 ```javascript editor-docx
-// Return the current document object and add a paragraph to it.
+// Returns the current document object and adds a paragraph to it.
 
-// Create the paragraph object, add a text to it, and insert this object into the document object.
+// How to add a paragraph to the current document.
+
+// Creates the ApiParagraph object, adds a text to it, and inserts this object into the ApiDocument object.
+
+// How to get the current document to work with it.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

@@ -28,8 +28,6 @@ boolean
 ```javascript editor-pdf
 // Create table and set its cell left border.
 
-// Use table cell to set cell border left.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,4 +38,5 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 cell.SetCellBorderLeft(2, fill);
 
 page.AddObject(table);
+
 ```

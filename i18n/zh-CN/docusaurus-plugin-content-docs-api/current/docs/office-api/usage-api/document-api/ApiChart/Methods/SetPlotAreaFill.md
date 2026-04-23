@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表绘图区域的填充。
+此示例设置图表绘图区域的填充。
 
 ```javascript editor-docx
-// How to set a background color for the plot area in a document.
+// How to set a background color for the plot area.
 
-// Create a chart, set its properties and its plot area color in a document.
+// Create a chart, set its properties and its plot area color.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

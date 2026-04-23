@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-获取文档中给定绝对页面上的表格集合。
+此示例展示如何获取给定绝对页面上的表格集合。
 
 ```javascript editor-docx
 // How to add the drawing to the document.
@@ -42,4 +42,5 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddPageBreak();
 doc.Push(paragraph);
 doc.AddDrawingToPage(drawing, 1, 50 * 36000, 50 * 36000);
+
 ```

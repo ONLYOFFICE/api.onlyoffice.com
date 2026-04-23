@@ -22,7 +22,7 @@ expression.GetCols(sRange);
 
 ## 示例
 
-获取表示电子表格中列范围上所有单元格的单元格范围对象。
+此示例展示如何获取表示列区域中所有单元格的 ApiRange 对象。
 
 ```javascript editor-xlsx
 // How to get all column cells.

@@ -20,13 +20,9 @@ Object
 
 ## 示例
 
-获取演示文稿中形状填充颜色的 RGB 分量。
+此示例展示如何获取形状填充颜色的 RGB 分量。
 
 ```javascript editor-pptx
-// How do I get the r g b in a presentation?
-
-// Get the r g b using a color object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,4 +41,5 @@ run.SetFontSize(30);
 run.AddText('RGB: ' + rgb.r + ', ' + rgb.g + ', ' + rgb.b);
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

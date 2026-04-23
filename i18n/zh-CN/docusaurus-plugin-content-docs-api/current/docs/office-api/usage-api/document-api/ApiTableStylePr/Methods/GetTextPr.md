@@ -1,6 +1,6 @@
 # GetTextPr
 
-返回将应用于表格中符合条件格式类型的所有文本块的文本属性集。
+返回将应用于表格中符合条件格式类型的所有文本运行的文本运行属性集。
 
 ## 语法
 
@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取将应用于表格中与条件格式类型匹配的所有文本 run 的文本 run 属性集。
+此示例展示如何获取将应用于表格中符合条件格式类型的所有文本运行的文本运行属性集。
 
 ```javascript editor-docx
-// How to get text properties of the table style and make it bold in a document.
+// How to get text properties of the table style and make it bold.
 
-// Make the table text bold in a document.
+// Make the table text bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

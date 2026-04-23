@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-在文档中使用数据绑定将自定义 XML 的数据加载到内联内容控件。
+此示例演示如何使用数据绑定将数据从自定义 XML 加载到内联内容控件中。
 
 ```javascript editor-docx
-// How can I update from xml mapping using an inline content control in a document?
-
-// Update from xml mapping for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

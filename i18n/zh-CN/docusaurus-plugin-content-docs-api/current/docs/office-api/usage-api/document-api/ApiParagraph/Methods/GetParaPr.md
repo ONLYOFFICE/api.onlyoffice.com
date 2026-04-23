@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取文档中的段落属性。
+此示例展示如何获取段落属性。
 
 ```javascript editor-docx
-// How to set the spacing line, justification and other properties of the text in a document.
+// How to set the spacing line, justification and other properties of the text.
 
-// Create a paragraph, add its text and properties in a document.
+// Create a paragraph, add its text and properties.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

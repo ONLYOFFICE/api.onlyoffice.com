@@ -22,7 +22,7 @@ expression.Insert(shift);
 
 ## 示例
 
-向工作表或宏表中插入一个单元格或单元格范围，并移动其他单元格以腾出空间。
+此示例将单元格或单元格范围插入工作表或宏表，并移动其他单元格以腾出空间。
 
 ```javascript editor-xlsx
 // How to insert a range or a cell into a worksheet.
@@ -36,4 +36,5 @@ worksheet.GetRange("D4").SetValue("3");
 worksheet.GetRange("C5").SetValue("5");
 let range = worksheet.GetRange("C4");
 range.Insert("down");
+
 ```

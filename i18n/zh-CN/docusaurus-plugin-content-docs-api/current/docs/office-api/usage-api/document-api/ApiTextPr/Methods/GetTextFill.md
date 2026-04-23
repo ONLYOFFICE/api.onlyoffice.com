@@ -20,13 +20,9 @@ expression.GetTextFill();
 
 ## 示例
 
-获取文档中文本属性的文本填充。
+此示例展示如何获取文本属性的文本填充。
 
 ```javascript editor-docx
-// How do I get the text fill in a document?
-
-// Get the text fill using a text properties object in a document.
-
 const doc = Api.GetDocument();
 
 const textPr = Api.CreateTextPr();
@@ -46,4 +42,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("rect", 130 * 36000, 30 * 36000, textArtFill, stroke);
 drawing.GetDocContent().GetElement(0).AddText('This is a rectangle with the same fill as the WordArt text.');
 paragraph.AddDrawing(drawing);
+
 ```

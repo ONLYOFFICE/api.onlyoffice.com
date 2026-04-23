@@ -25,12 +25,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为数据点设置颜色。
+如何为数据点着色。
 
 ```javascript editor-pdf
-// Create a chart then color its data points in a PDF document.
-
-// Set data point fill using a chart object in a PDF document.
+// Create a chart then color its data points.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +47,5 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 page.AddObject(chart);
+
 ```

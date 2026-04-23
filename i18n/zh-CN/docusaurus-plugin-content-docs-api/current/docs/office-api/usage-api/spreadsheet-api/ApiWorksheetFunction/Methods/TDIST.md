@@ -24,15 +24,17 @@ number
 
 ## 示例
 
-在电子表格中返回学生 t 分布。
+此示例演示如何返回学生 t 分布。
 
 ```javascript editor-xlsx
-// How to calculate a Student's t-distribution in a spreadsheet.
+// How to calculate a Student's t-distribution.
 
-// Use a function to estimate a Student's t-distribution in a spreadsheet.
+// Use a function to estimate a Student's t-distribution.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.TDIST(1.5, 10, 1);
 worksheet.GetRange("B2").SetValue(ans);
+
+
 ```

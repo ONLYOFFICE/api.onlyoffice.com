@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的符号：正数为 1，零为 0，负数为 -1。
+此示例演示如何返回数字的符号：如果数字为正数则返回 1，如果数字为零则返回 0，如果数字为负数则返回 -1。
 
 ```javascript editor-xlsx
-// How to find out whether a number is positive or negative in a spreadsheet.
+// How to find out whether a number is positive or negative.
 
-// Use a function to get a sign of a number in a spreadsheet.
+// Use a function to get a sign of a number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

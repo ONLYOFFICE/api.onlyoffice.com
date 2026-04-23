@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中批注对象的类类型。
+此示例获取类类型并将其插入到表格中。
 
 ```javascript editor-xlsx
-// How can I get the class type of a comment in a spreadsheet?
+// How to get a comment class type.
 
-// Get the class type of a comment and display it in the spreadsheet.
+// Get an comment class type to show it in the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

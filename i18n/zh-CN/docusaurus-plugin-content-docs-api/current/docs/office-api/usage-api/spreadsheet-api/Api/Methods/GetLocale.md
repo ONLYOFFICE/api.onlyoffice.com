@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-获取电子表格中的当前区域设置 ID。
+此示例演示如何获取当前区域设置 ID。
 
 ```javascript editor-xlsx
-// How to set and get current locale ID in a spreadsheet.
+// How to set and get current locale ID.
 
 // Get region ID and insert information into the cell.
 

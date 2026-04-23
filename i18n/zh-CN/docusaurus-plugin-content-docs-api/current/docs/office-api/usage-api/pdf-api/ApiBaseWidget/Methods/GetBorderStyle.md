@@ -20,13 +20,9 @@ expression.GetBorderStyle();
 
 ## 示例
 
-获取并显示 PDF 文档中字段控件的边框样式。
+此示例获取字段控件的边框样式并显示。
 
 ```javascript editor-pdf
-// How can I get the border style using a widget in a PDF document?
-
-// Get the border style for a widget in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

@@ -2,16 +2,30 @@
 
 从当前文本属性获取双删除线属性。
 
-继承自 [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md)。
+## 语法
+
+```javascript
+expression.GetDoubleStrikeout();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-检查演示文稿中的文本是否有双删除线。
+此示例演示如何确定文本是否有双删除线。
 
 ```javascript editor-pptx
-// How to know whether a text is crossed with two horizontal lines in a presentation.
+// How to know whether a text is crossed with two horizontal lines.
 
-// Get the text properties of the run and find whether it has a double strikethrough in a presentation.
+// Get the text properties of the run and find whether it has a double strikethrough.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,4 +51,5 @@ paragraph = Api.CreateParagraph();
 const doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
+
 ```

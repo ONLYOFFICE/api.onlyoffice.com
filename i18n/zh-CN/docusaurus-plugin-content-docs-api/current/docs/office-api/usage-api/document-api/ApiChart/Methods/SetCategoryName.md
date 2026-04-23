@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为文档中的图表设置类别名称。
+此示例为图表设置类别名称。
 
 ```javascript editor-docx
-// How to rename category of the chart in a document.
+// How to rename category of the chart.
 
-// Create a chart and set a name for its first category in a document.
+// Create a chart and set a name for its first category.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

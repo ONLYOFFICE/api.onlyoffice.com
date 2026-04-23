@@ -23,10 +23,10 @@ JSON
 
 ## 示例
 
-在演示文稿中将版式对象转换为 JSON 对象。
+此示例将 ApiLayout 对象转换为 JSON 对象。
 
 ```javascript editor-pptx
-// How to convert a layout object to a JSON object in a presentation.
+// How to convert a layout object to a JSON object.
 
 // Get a slide layout object from a slide and convert to JSON.
 
@@ -52,4 +52,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 layoutFromJSON.AddObject(shape);
 slide.ApplyLayout(layoutFromJSON);
+
 ```

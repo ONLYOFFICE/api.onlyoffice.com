@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取文档中批注回复的文本。
+此示例展示如何获取批注回复文本。
 
 ```javascript editor-docx
-// How to get a raw text of a comment reply in a document.
+// How to get a raw text of a comment reply.
 
 // Get all comments from the presentation, get the first one's reply and return its text.
 

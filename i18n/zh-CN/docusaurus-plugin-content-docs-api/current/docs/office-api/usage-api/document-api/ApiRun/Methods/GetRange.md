@@ -1,6 +1,6 @@
 # GetRange
 
-返回表示指定文本块中所包含文档部分的 Range 对象。
+返回表示指定运行中所包含文档部分的 Range 对象。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetRange(Start, End);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定 run 所包含的文档部分的 Range 对象。
+此示例展示如何获取表示指定运行中所包含文档部分的 Range 对象。
 
 ```javascript editor-docx
-// Get a range using position index and make it bold in a document.
+// Get a range using position index and make it bold.
 
-// How to get the range where the run is located in a document.
+// How to get the range where the run is located.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

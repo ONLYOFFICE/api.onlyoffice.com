@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-删除电子表格中的字符对象。
+此示例删除 ApiCharacters 对象。
 
 ```javascript editor-xlsx
-// How to delete characters from an array in a spreadsheet.
+// How to delete characters from an array.
 
-// Delete and display the result in a spreadsheet.
+// Remove all characters.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

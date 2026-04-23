@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取 PDF 文档中的段落属性。
+此示例展示如何获取段落属性。
 
 ```javascript editor-pdf
-// How to get a paragraph properties and set its spacing size in a PDF document.
+// How to get a paragraph properties and set its spacing size.
 
-// Change paragraph properties in a PDF document.
+// Change paragraph properties.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingAfter(1440);
@@ -50,4 +50,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(paragraph);
 page.AddObject(shape);
+
 ```

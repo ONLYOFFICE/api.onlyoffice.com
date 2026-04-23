@@ -20,12 +20,10 @@ boolean
 
 ## 示例
 
-检查文档内容是否为尾注。
+此示例检查 ApiDocumentContent 是否为尾注。
 
 ```javascript editor-docx
 // How to add endnote to the document.
-
-// Use document content to is endnote.
 
 let doc = Api.GetDocument();
 let endnote = doc.AddEndnote();
@@ -39,4 +37,5 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
+
 ```

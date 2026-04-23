@@ -1,6 +1,6 @@
 # SetCaps
 
-指定文本块中的任何小写字符仅格式化显示为其对应的大写字母。
+指定文本运行中的任何小写字符仅格式化显示为其对应的大写字母。
 
 ## 语法
 
@@ -14,7 +14,7 @@ expression.SetCaps(isCaps);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isCaps | 必需 | boolean |  | 指定当前文本块的内容显示为大写。 |
+| isCaps | 必需 | boolean |  | 指定当前运行的内容显示为大写。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定文本 run 中的所有小写字符仅以其对应的大写字母格式显示。
+此示例指定文本运行中的任何小写字符仅格式化显示为其对应的大写字母。
 
 ```javascript editor-pptx
-// How to make a text capitalized in a presentation.
+// How to make a text capitalized.
 
-// Get the text properties of the run and set its letters uppercase in a presentation.
+// Get the text properties of the run and set its letters uppercase.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,4 +48,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape set to capital letters using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

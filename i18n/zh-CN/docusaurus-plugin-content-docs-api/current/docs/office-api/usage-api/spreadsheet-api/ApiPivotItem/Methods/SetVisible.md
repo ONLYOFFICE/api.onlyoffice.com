@@ -23,12 +23,12 @@ expression.SetVisible(visible);
 
 ## 示例
 
-在电子表格中设置透视项的可见性。
+此示例演示如何设置数据透视项的可见性。
 
 ```javascript editor-xlsx
-// How to show/hide pivot items using SetVisible method and Visible property in a spreadsheet.
+// How to show/hide pivot items using SetVisible method and Visible property.
 
-// Create a pivot table, add data to it then demonstrate setting visibility of pivot items in a spreadsheet.
+// Create a pivot table, add data to it then demonstrate setting visibility of pivot items.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -78,4 +78,5 @@ for (let i = 0; i < regionItems.length; i += 1) {
     let status = isVisible ? 'Visible' : 'Hidden';
     pivotWorksheet.GetRangeByNumber(8 + i, 1).SetValue(regionItems[i].GetName() + ': ' + status);
 }
+
 ```

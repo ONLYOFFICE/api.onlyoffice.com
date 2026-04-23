@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中使用指数平滑 (ETS) 算法的 AAA 版本基于现有（历史）值计算或预测未来值。
+此示例演示如何使用 AAA 版本的指数平滑 (ETS) 算法根据现有（历史）值计算或预测未来值。
 
 ```javascript editor-xlsx
-// How to calculate or predict a future value based on existing (historical) values in a spreadsheet.
+// How to calculate or predict a future value based on existing (historical) values.
 
-// Use an AAA version of the Exponential Smoothing (ETS) algorithm to calculate or predict a future value based on existing values in a spreadsheet.
+// Use an AAA version of the Exponential Smoothing (ETS) algorithm to calculate or predict a future value based on existing values.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

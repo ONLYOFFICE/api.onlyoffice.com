@@ -20,12 +20,12 @@ expression.GetColor();
 
 ## 示例
 
-获取文档中文本的颜色属性。
+此示例获取文本的颜色属性。
 
 ```javascript editor-docx
-// How to get a text color and apply it to the paragraph in a document.
+// How to get a text color and apply it to the paragraph.
 
-// Retrieve color properties of the text in a document.
+// Retrieve color properties of the text.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

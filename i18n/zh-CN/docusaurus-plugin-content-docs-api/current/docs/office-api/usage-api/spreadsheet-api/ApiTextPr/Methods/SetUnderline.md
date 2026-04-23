@@ -1,6 +1,6 @@
 # SetUnderline
 
-指定文本块的内容显示时在字符正下方有一条线
+指定运行的内容显示时在字符正下方有一条线
 （小于行中字符上下的所有间距）。
 
 ## 语法
@@ -15,7 +15,7 @@ expression.SetUnderline(isUnderline);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isUnderline | 必需 | boolean |  | 指定当前文本块的内容显示为带下划线。 |
+| isUnderline | 必需 | boolean |  | 指定当前运行的内容显示为带下划线。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-指定在电子表格中当前 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
+此示例指定当前运行的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。
 
 ```javascript editor-xlsx
-// How to underline a text in a spreadsheet.
+// How to underline a text.
 
-// Set underline and display the result in a spreadsheet.
+// Add text underline.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

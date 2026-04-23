@@ -20,12 +20,12 @@ expression.GetAllShapes();
 
 ## 示例
 
-从文档中的文档内容获取形状对象集合。
+此示例展示如何从文档内容获取形状对象集合。
 
 ```javascript editor-docx
 // Get all shapes added to the document.
 
-// How to retrieve all shapes and fill with color the second one in a document.
+// How to retrieve all shapes and fill with color the second one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

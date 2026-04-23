@@ -23,13 +23,9 @@ boolean
 
 ## 示例
 
-在演示文稿中向文档添加字符串自定义属性。
+此示例演示如何向文档添加字符串自定义属性。
 
 ```javascript editor-pptx
-// Custom properties support string, boolean, number, and date value types.
-
-// Add for a custom properties in a presentation.
-
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 
@@ -68,4 +64,5 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirth Date: " + birthDate.toDateString() + " (" + typeof birthDate + ")");
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
+
 ```

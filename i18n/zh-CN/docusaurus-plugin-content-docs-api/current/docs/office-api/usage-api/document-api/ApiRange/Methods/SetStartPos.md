@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置给定范围对象的起始位置。
+此示例设置给定范围对象的起始位置。
 
 ```javascript editor-docx
-// How to change the starting index of the range in a document.
+// How to change the starting index of the range.
 
-// Resize the range by setting new start position in a document.
+// Resize the range by setting new start position.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

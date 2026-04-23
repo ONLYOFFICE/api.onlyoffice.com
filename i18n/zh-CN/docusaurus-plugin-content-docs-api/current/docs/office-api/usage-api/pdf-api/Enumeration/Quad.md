@@ -12,7 +12,7 @@
 
 ## 类型
 
-[pt](../Enumeration/pt.md)[]
+对象
 
 ## 属性
 

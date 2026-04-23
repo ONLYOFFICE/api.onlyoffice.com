@@ -2,16 +2,30 @@
 
 从当前文本属性获取高亮属性。
 
-继承自 [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md)。
+## 语法
+
+```javascript
+expression.GetHighlight();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-检查演示文稿中的文本是否有突出显示。
+此示例演示如何确定文本是否突出显示。
 
 ```javascript editor-pptx
-// How to know whether a highlight set to the text in a presentation.
+// How to know whether a highlight set to the text.
 
-// Get the text properties of the run and find whether it is highlighted or not in a presentation.
+// Get the text properties of the run and find whether it is highlighted or not.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,4 +51,5 @@ paragraph = Api.CreateParagraph();
 const highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 docContent.Push(paragraph);
+
 ```

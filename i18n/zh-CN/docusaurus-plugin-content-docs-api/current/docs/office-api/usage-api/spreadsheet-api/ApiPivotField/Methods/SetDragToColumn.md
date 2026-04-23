@@ -22,12 +22,12 @@ expression.SetDragToColumn(flag);
 
 ## 示例
 
-在电子表格中设置透视字段的拖动到列属性。
+此示例展示如何设置透视字段的拖动到列。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to column in a spreadsheet.
+// How to rename a pivot field drag to column.
 
-// Create a pivot table, add data to it then set drag to column of a specified pivot using boolean value in a spreadsheet.
+// Create a pivot table, add data to it then set drag to column of a specified pivot using boolean value.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-设置文档中当前形状的文本内边距。
+此示例设置当前形状的文本内边距。
 
 ```javascript editor-docx
-// How to update paddings of the drawing in a document.
+// How to update paddings of the drawing.
 
-// Create a shape and set its paddings in a document.
+// Create a shape and set its paddings.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

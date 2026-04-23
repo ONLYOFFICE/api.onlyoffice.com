@@ -23,13 +23,9 @@ boolean
 
 ## 示例
 
-设置文档中绘图对象的名称。
+此示例展示如何设置绘图的名称。
 
 ```javascript editor-docx
-// How to set name for a drawing object in a document?
-
-// Set name and display the result in a document.
-
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -47,4 +43,5 @@ const nameRun = Api.CreateRun();
 nameRun.AddText(drawing.GetName());
 nameRun.SetBold(true);
 shapeParagraph.AddElement(nameRun);
+
 ```

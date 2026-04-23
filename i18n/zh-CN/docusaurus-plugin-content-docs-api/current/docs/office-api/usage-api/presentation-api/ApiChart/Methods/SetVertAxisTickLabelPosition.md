@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定垂直轴的刻度标签位置。
+此示例指定纵轴刻度标签的位置。
 
 ```javascript editor-pptx
-// How to change a position of tick label in a presentation.
+// How to change a position of tick label.
 
-// Create a chart, set its properties and its vertical axis tick label position in a presentation.
+// Create a chart, set its properties and its vertical axis tick label position.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

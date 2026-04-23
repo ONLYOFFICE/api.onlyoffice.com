@@ -25,12 +25,14 @@ boolean
 
 ## 示例
 
-在电子表格中为指定图表系列中的标记设置填充。
+此示例设置指定图表系列中标记的填充。
 
 ```javascript editor-xlsx
-// Create the "scatter" chart and apply an RGB color to its markers in a spreadsheet.
+// Create the "scatter" chart and apply an RGB color to its markers.
 
-// Apply an RGB fill to the chart markers using a fill object.
+// How to use the ApiFill object as a color of the chart markers.
+
+// How to fill the markers of the ApiChart object.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

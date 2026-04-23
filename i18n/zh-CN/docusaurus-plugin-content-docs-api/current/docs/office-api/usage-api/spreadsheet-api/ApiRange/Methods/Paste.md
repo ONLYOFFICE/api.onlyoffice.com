@@ -22,12 +22,12 @@ expression.Paste(rangeFrom);
 
 ## 示例
 
-在电子表格中将 Range 对象粘贴到指定范围。
+此示例将 Range 对象粘贴到指定范围。
 
 ```javascript editor-xlsx
-// How to get a range and paste it into another one in a spreadsheet.
+// How to get a range and paste it into another one.
 
-// Create a range and add it to another one in a spreadsheet.
+// Create a range and add it to another one.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B4").SetValue("1");

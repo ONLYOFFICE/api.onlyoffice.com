@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-在电子表格中使用双倍余额递减法或指定的其他方法返回任何指定期间（包括部分期间）的资产折旧。
+此示例演示如何使用双倍余额递减法或指定的其他方法返回资产在任何指定期间（包括部分期间）的折旧。
 
 ```javascript editor-xlsx
-// How to estimate depreciation of an asset for any specified period in a spreadsheet.
+// How to estimate depreciation of an asset for any specified period.
 
-// Use a depreciation of an asset for any specified period including partial periods in a spreadsheet.
+// Use a depreciation of an asset for any specified period including partial periods.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -25,7 +25,7 @@ string
 
 ## 示例
 
-将文档转换为 HTML。
+此示例将文档转换为 HTML。
 
 ```javascript editor-docx
 // How to get an HTML from the document content.

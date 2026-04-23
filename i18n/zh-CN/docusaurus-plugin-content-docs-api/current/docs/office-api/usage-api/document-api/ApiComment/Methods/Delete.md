@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-从文档中删除批注。
+此示例从文档中删除批注。
 
 ```javascript editor-docx
-// How to remove a comment in a document.
+// How to remove a comment.
 
 // Get all comments from the presentation and remove the first one.
 

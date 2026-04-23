@@ -20,12 +20,12 @@ expression.Last();
 
 ## 示例
 
-获取文档中的最后一个文档元素。
+此示例展示如何获取文档的最后一个元素。
 
 ```javascript editor-docx
 // How to bold the final element of the document.
 
-// Find the last paragraph and update its text properties in a document.
+// Find the last paragraph and update its text properties.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

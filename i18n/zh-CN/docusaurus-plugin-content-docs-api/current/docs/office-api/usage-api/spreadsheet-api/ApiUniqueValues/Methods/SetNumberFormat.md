@@ -2,11 +2,27 @@
 
 设置当条件格式规则计算结果为 true 时应用于单元格的数字格式。
 
-继承自 [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md)。
+## 语法
+
+```javascript
+expression.SetNumberFormat(NumberFormat);
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| NumberFormat | 必需 | string |  | 数字格式代码（例如 "General"、"#,##0.00" 等） |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-设置条件格式规则的数字格式。
+此示例设置条件格式规则的数字格式。
 
 ```javascript editor-xlsx
 // How to apply number formatting to conditional formatting rules.
@@ -36,4 +52,5 @@ condition1.SetNumberFormat("$#,##0.00");
 
 worksheet.GetRange("C4").SetValue("New format:");
 worksheet.GetRange("C5").SetValue(condition1.GetNumberFormat());
+
 ```

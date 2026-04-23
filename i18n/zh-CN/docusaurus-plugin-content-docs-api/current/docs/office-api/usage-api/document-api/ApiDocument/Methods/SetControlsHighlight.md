@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-为文档中的内容控件设置突出显示。
+此示例为文档中的内容控件设置高亮显示。
 
 ```javascript editor-docx
-// How to highlight thw controls with rose color in a document.
+// How to highlight thw controls with rose color.
 
 // Add elements to the document and color their background.
 
@@ -34,4 +34,5 @@ let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
 doc.AddElement(0, blockLvlSdt);
 doc.SetControlsHighlight(Api.HexColor('#FF6F3D'));
+
 ```

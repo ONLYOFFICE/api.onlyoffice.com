@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表标题的填充。
+此示例设置图表标题的填充。
 
 ```javascript editor-docx
-// How to color a chart title in a document.
+// How to color a chart title.
 
-// Create a chart, set its properties and its title color in a document.
+// Create a chart, set its properties and its title color.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

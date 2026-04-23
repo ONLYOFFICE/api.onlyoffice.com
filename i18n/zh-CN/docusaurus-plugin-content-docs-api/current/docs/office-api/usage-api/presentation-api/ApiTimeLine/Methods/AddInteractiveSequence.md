@@ -22,13 +22,9 @@ expression.AddInteractiveSequence(drawing);
 
 ## 示例
 
-在演示文稿中创建交互式动画序列。
+此示例创建交互式动画序列。
 
 ```javascript editor-pptx
-// How can I add the interactive sequence using a timeline in a presentation?
-
-// Add the interactive sequence for a timeline in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -71,4 +67,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Click the green button to spin the star!');
 slide.AddObject(infoShape);
+
 ```

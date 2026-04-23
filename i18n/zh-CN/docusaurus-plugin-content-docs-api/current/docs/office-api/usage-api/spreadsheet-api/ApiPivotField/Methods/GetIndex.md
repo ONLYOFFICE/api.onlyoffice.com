@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中透视字段的索引。
+此示例展示如何获取透视字段的索引。
 
 ```javascript editor-xlsx
-// How to get a pivot field's index in a spreadsheet.
+// How to get a pivot field's index.
 
-// Create a pivot table, add data to it then get an index of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get an index of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

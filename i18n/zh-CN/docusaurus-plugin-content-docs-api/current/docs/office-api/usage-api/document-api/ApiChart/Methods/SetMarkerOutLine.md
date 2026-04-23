@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-设置文档中指定图表系列中标记的轮廓。
+此示例设置指定图表系列中标记的轮廓。
 
 ```javascript editor-docx
-// How to set an outline to the marker in a document.
+// How to set an outline to the marker.
 
-// Create a chart, set its properties and its marker outline in a document.
+// Create a chart, set its properties and its marker outline.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

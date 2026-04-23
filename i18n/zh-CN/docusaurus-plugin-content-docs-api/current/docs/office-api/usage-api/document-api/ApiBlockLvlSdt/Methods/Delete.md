@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-删除文档中的内容控件及其内容。
+此示例删除内容控件及其内容。
 
 ```javascript editor-docx
-// Create the block-level content control object in the current document, add a text to it, and delete it and its content from the document.
+// Creates the ApiBlockLvlSdt object in the current document, adds a text to it, and deletes it and its content from the document.
 
-// How to delete the block level container from the document class.
+// How to delete the block level container from the ApiDocument class.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

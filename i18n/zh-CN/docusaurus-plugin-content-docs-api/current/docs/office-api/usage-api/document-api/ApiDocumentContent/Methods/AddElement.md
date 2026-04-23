@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-在文档内容中添加段落。
+此示例在文档内容中添加段落。
 
 ```javascript editor-docx
 // How to add elements to the document content.

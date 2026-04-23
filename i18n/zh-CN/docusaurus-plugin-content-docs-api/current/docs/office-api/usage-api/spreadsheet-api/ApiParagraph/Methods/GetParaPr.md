@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取电子表格中的段落属性。
+此示例展示如何获取段落属性。
 
 ```javascript editor-xlsx
-// How to get properites of a paragraph and set the spacing in a spreadsheet.
+// How to get properites of a paragraph and set the spacing.
 
-// Get the paragraph properites, change them, add a text and add the paragraph to the shape content in a spreadsheet.
+// Get the paragraph properites, change them, add a text and add the paragraph to the shape content.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

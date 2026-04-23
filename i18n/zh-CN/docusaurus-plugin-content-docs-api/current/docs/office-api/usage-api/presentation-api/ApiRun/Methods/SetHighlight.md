@@ -1,6 +1,6 @@
 # SetHighlight
 
-指定作为背景应用于当前文本块内容的高亮颜色。
+指定作为背景应用于当前运行内容的高亮颜色。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetHighlight(sColor);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-指定在演示文稿中作为背景应用于 run 内容的突出显示颜色。
+此示例指定作为背景应用于运行内容的高亮颜色。
 
 ```javascript editor-pptx
-// How to set highlight to the text run in a presentation.
+// How to set highlight to the text run.
 
-// Create a new text run and highlight it in a presentation.
+// Create a new text run and highlight it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,5 @@ run.AddText("This is a text run with the text highlighted with light gray color.
 paragraph.AddElement(run);
 run.SetHighlight("lightGray");
 slide.AddObject(shape);
+
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的内联文本内容控件设置字符串标注。
+此示例为内联文本内容控件设置字符串标签。
 
 ```javascript editor-docx
-// How to set label for the inline content control in a document.
+// How to set label for the inline content control.
 
-// Display the label set for inline text element in a document.
+// Display the label set for inline text element.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

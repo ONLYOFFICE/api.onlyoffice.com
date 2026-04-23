@@ -2,14 +2,30 @@
 
 指定在使用分页视图呈现文档时，尽可能将当前段落的内容至少部分地与下一段落呈现在同一页上。
 
-继承自 [ApiParaPr.SetKeepNext](../../ApiParaPr/Methods/SetKeepNext.md)。
+## 语法
+
+```javascript
+expression.SetKeepNext(isKeepNext);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isKeepNext | 必需 | boolean |  | true 值启用将段落各行与下一段落保持在同一页上的选项。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-指定在使用分页视图呈现文档时，尽可能将段落的内容至少部分地与下一段落呈现在同一页上。
+此示例指定在使用分页视图呈现文档时，尽可能将段落的内容至少部分地与下一段落呈现在同一页上。
 
 ```javascript editor-docx
-// How to partly keep lines of the paragraph content in a document.
+// How to partly keep lines of the paragraph content.
 
 // How to try to keep all lines of the paragraph on the same page.
 

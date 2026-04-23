@@ -21,12 +21,12 @@ number
 
 ## 示例
 
-获取电子表格中透视字段的位置。
+此示例展示如何获取透视字段的位置。
 
 ```javascript editor-xlsx
-// How to get a pivot field position in a spreadsheet.
+// How to get a pivot field position.
 
-// Create a pivot table, add data to it then get the position of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get the position of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

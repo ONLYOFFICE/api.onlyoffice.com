@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取电子表格中指定字体的字体名称属性。
+此示例演示如何获取指定字体的名称属性。
 
 ```javascript editor-xlsx
-// How to determine a font name in a spreadsheet.
+// How to determine a font name.
 
-// Apply a font to the characters then get its name and add it in the range in a spreadsheet.
+// Apply a font to the characters then get its name and add it in the range.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

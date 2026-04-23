@@ -24,10 +24,10 @@ boolean
 
 ## 示例
 
-用字符串数组中的相应文本替换选区中的每个段落（或单元格中的文本）。
+此示例将选择中的每个段落（或单元格中的文本）替换为字符串数组中的相应文本。
 
 ```javascript editor-xlsx
-// Replace string values of the selected range with a new values in a spreadsheet.
+// Replace string values of the selected range with a new values.
 
 // Replace cell string values with a new ones.
 

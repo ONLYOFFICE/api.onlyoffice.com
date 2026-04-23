@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中文本的大写属性。
+此示例使用其属性获取文本大小写。
 
 ```javascript editor-xlsx
-// How to find out whether a text is capitalized or not in a spreadsheet.
+// How to find out whether a text is capitalized or not.
 
-// Get a text capitalized property in a spreadsheet.
+// Get a text capitalized property.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

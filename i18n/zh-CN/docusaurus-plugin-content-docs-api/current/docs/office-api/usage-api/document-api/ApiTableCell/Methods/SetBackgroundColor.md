@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-为表格单元格设置背景颜色。
+此示例设置表格单元格的背景颜色。
 
 ```javascript editor-docx
 // How to color the cell.
@@ -38,4 +38,5 @@ table.SetStyle(tableStyle);
 let cell = table.GetRow(0).GetCell(0);
 cell.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
+
 ```

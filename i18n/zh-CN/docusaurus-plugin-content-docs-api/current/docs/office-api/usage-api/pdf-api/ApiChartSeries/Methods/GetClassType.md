@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中图表系列的类类型。
+此示例获取 ApiChartSeries 类的类型并将其插入到 PDF 文档中。
 
 ```javascript editor-pdf
-// How to identify the class type of a chart series in a PDF document?
+// How get a class type of ApiChartSeries.
 
-// Obtain the class type identifier of a chart series object in a PDF document.
+// Retrieve class type of ApiChartSeries object and insert it to the page.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,4 +51,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

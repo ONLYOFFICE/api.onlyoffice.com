@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中色阶条件的索引。
+此示例演示如何获取色阶条件的索引。
 
 ```javascript editor-xlsx
-// How to determine which threshold a criterion represents in a spreadsheet.
+// How to determine which threshold a criterion represents.
 
-// Get the index of a color scale criterion in a spreadsheet.
+// Get the index of a color scale criterion.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,4 +51,5 @@ if (criteria && criteria.length > 0) {
         worksheet.GetRange("C4").SetValue(criteria[1].GetIndex());
     }
 }
+
 ```

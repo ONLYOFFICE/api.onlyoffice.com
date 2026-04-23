@@ -22,7 +22,7 @@ expression.GetRows(nRow);
 
 ## 示例
 
-获取表示电子表格中指定范围中行的 Range 对象。
+此示例演示如何获取表示指定范围中的行的 Range 对象。
 
 ```javascript editor-xlsx
 // How to get a cell rows of a range.

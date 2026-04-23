@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在文档中设置当前段落的段后间距。
+此示例设置当前段落的段后间距。
 
 ```javascript editor-docx
-// How to set the size of a spacing after a text from a paragraph properties in a document.
+// How to set the size of a spacing after a text from a paragraph properties.
 
-// Change the size property of a spacing after a paragraph in a document.
+// Change the size property of a spacing after a paragraph.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

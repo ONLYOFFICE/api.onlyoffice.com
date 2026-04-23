@@ -25,13 +25,10 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。在幻灯片上的单条路径中演示不同的曲线类型。
+使用各种贝塞尔和弧线命令创建复杂的曲线形状。
 
 ```javascript editor-pptx
-// How can I arc to using a geometry path in a presentation?
-
-// Arc to for a geometry path in a presentation.
-
+// Demonstrates different curve types in a single path on a slide.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

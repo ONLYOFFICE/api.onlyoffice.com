@@ -22,7 +22,7 @@ expression.SetLayoutForm(type);
 
 ## 示例
 
-在电子表格中设置透视字段的布局形式。
+此示例展示如何设置透视字段的布局形式。
 
 ```javascript editor-xlsx
 // How to change a pivot field layout form.

@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取文档中批注创建的当前时区格式时间戳。
+此示例展示如何获取批注创建时间戳（当前时区格式）。
 
 ```javascript editor-docx
-// How to know when a comment was added in a document.
+// How to know when a comment was added.
 
 // Get all comments from the presentation and the first one's time of creation.
 

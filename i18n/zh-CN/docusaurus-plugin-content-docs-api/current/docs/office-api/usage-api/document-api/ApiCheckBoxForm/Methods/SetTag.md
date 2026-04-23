@@ -2,17 +2,29 @@
 
 为当前表单设置标签属性。
 
-继承自 [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md)。
+## 语法
+
+```javascript
+expression.SetTag(tag);
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| tag | 必需 | string |  | 将添加到当前容器的标签。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-设置文档中表单元素的标签。
+此示例展示如何设置表单元素的标签。
 
 ```javascript editor-docx
-// How to set tag for a form base?
-
-// Set tag and display the result in a document.
-
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -34,4 +46,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
+
 ```

@@ -22,12 +22,12 @@ expression.SetVisible(isVisible);
 
 ## 示例
 
-在电子表格中设置工作表可见性的状态。
+此示例设置工作表的可见性状态。
 
 ```javascript editor-xlsx
-// How to set visibility of the sheet in a spreadsheet.
+// How to set visibility of the sheet.
 
-// Make a sheet visible or not in a spreadsheet.
+// Make a sheet visible or not.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetVisible(true);

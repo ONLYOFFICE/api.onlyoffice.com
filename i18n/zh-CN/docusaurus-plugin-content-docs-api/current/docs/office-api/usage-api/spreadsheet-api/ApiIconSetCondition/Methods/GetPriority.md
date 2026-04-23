@@ -2,11 +2,25 @@
 
 返回条件格式规则的优先级值。
 
-继承自 [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md)。
+## 语法
+
+```javascript
+expression.GetPriority();
+```
+
+`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+number
 
 ## 示例
 
-获取条件格式规则的优先级。
+此示例获取条件格式规则的优先级。
 
 ```javascript editor-xlsx
 // How to retrieve the priority value from conditional formatting rules.
@@ -33,4 +47,5 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
+
 ```

@@ -23,7 +23,7 @@ expression.GetCells(row, col);
 
 ## 示例
 
-获取表示电子表格中工作表上所有单元格的单元格范围。
+此示例展示如何获取表示工作表上所有单元格的 ApiRange。
 
 ```javascript editor-xlsx
 // How to get all cells.

@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在文档中设置书签文本。
+此示例展示如何设置书签文本。
 
 ```javascript editor-docx
-// How to set a text to a bookmark in a document.
+// How to set a text to a bookmark.
 
 // Get a bookmark from the document by its name then set its text.
 
@@ -39,4 +39,5 @@ let oldText = bookmark.GetText();
 bookmark.SetText("New bookmark text");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark text changed from: '" + oldText + "' to: '" + bookmark.GetText() + "'");
+
 ```

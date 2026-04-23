@@ -11,9 +11,10 @@
 - "nil"
 - "clear"
 
+
 ## 示例
 
-为表格添加绿色阴影。
+此示例为表格添加绿色阴影。
 
 ```javascript editor-pdf
 // How to change a table shadow type.

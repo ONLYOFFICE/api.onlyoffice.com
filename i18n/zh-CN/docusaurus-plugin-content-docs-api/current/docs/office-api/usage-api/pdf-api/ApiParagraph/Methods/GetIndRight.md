@@ -2,14 +2,28 @@
 
 返回段落右侧缩进。
 
-继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
+## 语法
+
+```javascript
+expression.GetIndRight();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
 
 ## 示例
 
-获取 PDF 文档中的段落右侧缩进。
+此示例展示如何获取段落右侧缩进。
 
 ```javascript editor-pdf
-// How to return a right side identation of a paragraph property in a PDF document.
+// How to return a right side identation of a paragraph property.
 
 // Return a right side indentation of a text property from the page.
 
@@ -24,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndRight(2880);
@@ -39,4 +53,5 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
+
 ```

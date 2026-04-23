@@ -2,16 +2,30 @@
 
 返回表格说明。
 
-继承自 [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTableDescription.md)。
+## 语法
+
+```javascript
+expression.GetTableDescription();
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中的表格描述。
+此示例展示如何获取表格说明。
 
 ```javascript editor-docx
 // How to get the table description and display it in the document.
 
-// Add text showing the description of the table in a document.
+// Add text showing the description of the table.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

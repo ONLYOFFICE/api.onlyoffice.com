@@ -16,4 +16,4 @@ expression.GetClassType();
 
 ## 返回值
 
-"smartArt"
+"group"

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-设置文档中表格内当前表格行的高度。
+此示例设置表格中当前表格行的高度。
 
 ```javascript editor-docx
-// Resize the height of the row in a document.
+// Resize the height of the row.
 
-// How to set a minimum row height of the table in a document.
+// How to set a minimum row height of the table.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

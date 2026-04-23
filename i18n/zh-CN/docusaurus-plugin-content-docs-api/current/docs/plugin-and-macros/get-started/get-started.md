@@ -48,10 +48,10 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 写作辅助（[检查拼写](../samples/custom-ai-tools/document-editor/check-spelling.md) — AI 驱动的拼写检查）
-- 智能样式（[更改文本样式](../samples/custom-ai-tools/document-editor/change-text-style.md) — AI 驱动的文本样式调整）
-- 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI 驱动的演示文稿设计）
-- 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI 驱动的公式解释）
+- 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/check-spelling) — AI 驱动的拼写检查）
+- 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/change-text-style) — AI 驱动的文本样式调整）
+- 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide) — AI 驱动的演示文稿设计）
+- 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explain-formula) — AI 驱动的公式解释）
 
 **开发概况：**
 
@@ -101,7 +101,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 **API 方法调用失败：**
 
 - 确认您的 ONLYOFFICE 版本支持该方法
-- 在 [API 参考](../interacting-with-editors/overview/overview.md)中检查方法语法
+- 在 [API 参考](../plugins/interacting-with-editors/overview/overview.md)中检查方法语法
 - 确认编辑器类型兼容性
 
 ### 宏问题
@@ -131,7 +131,7 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 - **[交互式 Playground](playground.md)** — 无需安装即可测试代码
 - **[UI 组件库](https://onlyoffice.github.io/storybook/static/)** — 预构建组件
 - **[插件模板](https://github.com/ONLYOFFICE/sdkjs-plugins)** — 起始项目
-- **[浏览器开发者工具](../tutorials/debugging/for-web-editors.md)** — 调试指南
+- **[浏览器开发者工具](../plugins/development-workflow/debugging/browser-devtools-guide.md)** — 调试指南
 
 ### 示例代码
 
@@ -141,8 +141,8 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 ### 文档
 
-- **[API 参考](../interacting-with-editors/overview/overview.md)** — 完整 API 文档
-- **[插件结构](../structure/configuration/configuration.md)** — 配置指南
+- **[API 参考](../plugins/interacting-with-editors/overview/overview.md)** — 完整 API 文档
+- **[插件结构](../plugins/fundamentals/configuration/config-json.md)** — 配置指南
 - **[宏指南](../macros/writing-macros.md)** — 宏开发
 - **[AI 集成](../ai/ai-plugin.md)** — AI 插件配置
 - **[常见问题](../more-information/faq.md)** — 常见问题解答
@@ -159,7 +159,6 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 **开始构建：**
 
 - [快速入门指南](quick-start/hello-world-macro.md)
-- [插件教程](../structure/getting-started.md)
 - [宏教程](../macros/getting-started.md)
 - [AI 集成](../ai/ai-plugin.md)
 
@@ -170,6 +169,6 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **深入学习：**
 
-- [API 参考](../interacting-with-editors/overview/overview.md)
-- [最佳实践](../tutorials/developing/for-web-editors.md)
-- [发布指南](../tutorials/publishing.md)
+- [API 参考](../plugins/interacting-with-editors/overview/overview.md)
+- [最佳实践](../plugins/development-workflow/developing/for-web-editors.md)
+- [发布指南](../plugins/development-workflow/publishing/preparing-for-release.md)

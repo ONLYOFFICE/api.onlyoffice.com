@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置段落行距。
+此示例设置段落行距。
 
 ```javascript editor-pdf
-// How to set the size of a spacing line from a paragraph properties in a PDF document.
+// How to set the size of a spacing line from a paragraph properties.
 
-// Change a spacing line size property of a paragraph properties in a PDF document.
+// Change a spacing line size property of a paragraph properties.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,7 +43,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingLine(3 * 240, "auto");
@@ -53,4 +53,5 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 page.AddObject(shape);
+
 ```

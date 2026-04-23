@@ -46,11 +46,7 @@ builder.SaveFile("docx", "example.docx");
 builder.CloseFile();
 ```
 
-实际上，在上面的示例中，创建的文本文档将有两个段落，因为空文本文档默认会创建第一个段落，即新的空文本文档始终至少包含一个段落。
-
-:::tip
-您可以使用 *oDocument.GetElement(0)* 方法访问第一个段落来更改它，将 `const oParagraph = Api.CreateParagraph()` 替换为 `const oParagraph = oDocument.GetElement(0)`，并且不需要 `oDocument.Push(oParagraph)`。
-:::
+实际上，在上面的示例中，创建的文本文档将有两个段落，因为空文本文档默认会创建第一个段落，即新的空文本文档始终至少包含一个段落。您可以使用 *Api.GetElement(0)* 方法访问第一个段落来更改它，这样上面代码的第 4 行将如下所示：*oParagraph = oDocument.GetElement(0)*，并且不需要第 7 行（*oDocument.Push(oParagraph);*）。
 
 ## 打开现有的文本文档
 

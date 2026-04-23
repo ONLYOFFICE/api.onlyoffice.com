@@ -196,9 +196,10 @@
 - "wedgeRectCallout"
 - "wedgeRoundRectCallout"
 
+
 ## 示例
 
-使用 'diamond' 预设创建形状。
+此示例使用 'diamond' 预设创建形状。
 
 ```javascript editor-xlsx
 // How to change a shape type of a drawing.

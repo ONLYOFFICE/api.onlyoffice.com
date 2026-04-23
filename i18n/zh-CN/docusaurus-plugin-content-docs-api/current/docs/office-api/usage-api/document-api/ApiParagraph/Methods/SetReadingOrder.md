@@ -26,16 +26,13 @@ expression.SetReadingOrder(readingOrder);
 
 ## 示例
 
-在文档中设置指定段落的文本阅读方向。
+此示例展示如何设置指定段落中文本的阅读顺序。
 
 ```javascript editor-docx
-// How do I set reading order in a document?
-
-// Set reading order using a paragraph object in a document.
-
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText('Hello! مرحبا! 你好!');
 doc.Push(paragraph);
 paragraph.SetReadingOrder('rtl');
+
 ```

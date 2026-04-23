@@ -22,12 +22,12 @@ expression.InsertInContentControl(nType);
 
 ## 示例
 
-在文档中用内容控件包装当前表格对象。
+此示例用内容控件包装当前表格对象。
 
 ```javascript editor-docx
-// How to add the table to the block level control in a document.
+// How to add the table to the block level control.
 
-// Create a table and then insert it to the another content control in a document.
+// Create a table and then insert it to the another content control.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

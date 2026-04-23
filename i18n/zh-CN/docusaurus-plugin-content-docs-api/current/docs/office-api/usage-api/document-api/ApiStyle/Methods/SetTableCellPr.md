@@ -22,7 +22,7 @@ expression.SetTableCellPr(tableCellPr);
 
 ## 示例
 
-设置样式的表格单元格属性。
+此示例展示如何设置和获取样式的表格单元格属性。
 
 ```javascript editor-docx
 // How to create table cell properties for style and add shading to it.

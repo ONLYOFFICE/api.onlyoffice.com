@@ -22,13 +22,9 @@ Quads[]
 
 ## 示例
 
-在页面中搜索某个单词并为其添加高亮。
+此示例在页面中搜索某个词并为其添加高亮。
 
 ```javascript editor-pdf
-// How do I search in a PDF document?
-
-// Search using a page object.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let quads = page.Search({text: "Lorem", matchCase: false, wholeWords: false});

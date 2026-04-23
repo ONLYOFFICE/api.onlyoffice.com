@@ -22,12 +22,12 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入演示文稿。
+此示例获取 ApiChart 类的第一个系列并将其类型插入演示文稿。
 
 ```javascript editor-pptx
-// How to get a seria from a chart using its index in a presentation.
+// How to get a seria from a chart using its index.
 
-// Get the series for a chart in a presentation.
+// Find a chart seria.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,4 +55,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

@@ -23,13 +23,9 @@ boolean
 
 ## 示例
 
-在电子表格中为绘图对象设置名称。
+此示例展示如何为绘图对象设置名称。
 
 ```javascript editor-xlsx
-// How to set name for a drawing object in a spreadsheet?
-
-// Set name and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(80, 120, 160));
@@ -48,4 +44,5 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Name: ' + drawing.GetName());
 
 worksheet.GetRange('A1').SetValue('Drawing name was set to: ' + drawing.GetName());
+
 ```

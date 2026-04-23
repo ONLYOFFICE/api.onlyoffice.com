@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回起始日期之前或之后指定月数的日期序列号。
+此示例演示如何返回在开始日期之前或之后指定月数的日期的序列号。
 
 ```javascript editor-xlsx
-// How to get a date some months before or after the start date in a spreadsheet.
+// How to get a date some months before or after the start date.
 
-// Use function to get the serial number of the date indicated number of months before or after the start date in a spreadsheet.
+// Use function to get the serial number of the date indicated number of months before or after the start date.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,4 +36,5 @@ let func = Api.WorksheetFunction;
 let ans = func.EDATE("3/16/2018", 7); 
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

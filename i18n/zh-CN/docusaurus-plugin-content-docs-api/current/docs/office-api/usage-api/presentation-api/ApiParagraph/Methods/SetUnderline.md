@@ -23,13 +23,9 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-对段落文本应用下划线格式。
+此示例对段落文本应用下划线格式。
 
 ```javascript editor-pptx
-// How do I set underline in a presentation?
-
-// Set underline using a paragraph object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,4 +39,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text underlined with a single line.');
 paragraph.SetUnderline(true);
 slide.AddObject(shape);
+
 ```

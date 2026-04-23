@@ -25,15 +25,17 @@ number
 
 ## 示例
 
-在电子表格中返回 Gamma 分布。
+此示例演示如何返回伽玛分布。
 
 ```javascript editor-xlsx
-// How to calculate the gamma distribution in a spreadsheet.
+// How to calculate the gamma distribution.
 
-// Use a function to get the result from a gamma distribution in a spreadsheet.
+// Use a function to get the result from a gamma distribution.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.GAMMADIST(10, 9, 2, false);
 worksheet.GetRange("B2").SetValue(ans);
+
+
 ```

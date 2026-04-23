@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中的超链接地址。
+此示例设置超链接地址。
 
 ```javascript editor-docx
-// How to change the link address of the hyperlink object in a document.
+// How to change the link address of the hyperlink object.
 
-// Set link of the hyperlink in a document.
+// Set link of the hyperlink.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

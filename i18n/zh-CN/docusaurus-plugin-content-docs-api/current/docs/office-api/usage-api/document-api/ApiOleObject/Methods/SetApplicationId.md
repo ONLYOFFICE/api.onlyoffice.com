@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中当前 OLE 对象的应用程序 ID。
+此示例设置当前 OLE 对象的应用程序 ID。
 
 ```javascript editor-docx
-// How to set application ID of the OLE object in a document.
+// How to set application ID of the OLE object.
 
-// Update the application ID of the OLE object in a document.
+// Update the application ID of the OLE object.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(
@@ -39,4 +39,5 @@ let oleObject = Api.CreateOleObject(
 let paragraph = doc.GetElement(0);
 paragraph.AddDrawing(oleObject);
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
+
 ```

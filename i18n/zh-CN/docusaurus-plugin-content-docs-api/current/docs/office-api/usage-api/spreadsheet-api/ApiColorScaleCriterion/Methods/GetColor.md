@@ -20,12 +20,12 @@ expression.GetColor();
 
 ## 示例
 
-获取电子表格中色阶条件的颜色。
+此示例演示如何获取色阶条件的颜色。
 
 ```javascript editor-xlsx
-// How to retrieve the color of a color scale criterion in a spreadsheet.
+// How to retrieve the color of a color scale criterion.
 
-// Get the color of a color scale criterion in a spreadsheet.
+// Get the color of a color scale criterion.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Has Color:");
     worksheet.GetRange("C2").SetValue(criterionColor ? "Yes" : "No");
 }
+
 ```

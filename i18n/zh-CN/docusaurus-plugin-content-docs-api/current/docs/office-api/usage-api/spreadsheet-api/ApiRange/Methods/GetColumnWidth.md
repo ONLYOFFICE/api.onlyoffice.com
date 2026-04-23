@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-获取电子表格中的列宽值。
+此示例演示如何获取列宽值。
 
 ```javascript editor-xlsx
-// How to get width of a range column in a spreadsheet.
+// How to get width of a range column.
 
 // Get a range, get its column width and show it in the worksheet.
 

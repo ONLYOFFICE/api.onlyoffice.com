@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中数据透视表的表格样式行标题。
+此示例展示如何获取数据透视表的表格样式行标题。
 
 ```javascript editor-xlsx
-// How to get table style raw headers in a spreadsheet.
+// How to get table style raw headers.
 
-// Create a pivot table, add data to it then get its table style raw headers in a spreadsheet.
+// Create a pivot table, add data to it then get its table style raw headers.
 
 let worksheet = Api.GetActiveSheet();
 

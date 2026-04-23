@@ -20,12 +20,12 @@ expression.GetScaleFlag();
 
 ## 示例
 
-获取文档中图片表单的当前缩放条件。
+此示例展示如何获取图片表单的当前缩放条件。
 
 ```javascript editor-forms
-// How to enable a picture scaling in a document.
+// How to enable a picture scaling.
 
-// Set picture scale flag to true in a document.
+// Set picture scale flag to true.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

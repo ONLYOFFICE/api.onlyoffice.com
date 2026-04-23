@@ -20,13 +20,10 @@ number
 
 ## 示例
 
-分析页面上云形路径属性。在文本形状中显示全面的路径信息。
+分析页面上云形状的路径属性。
 
 ```javascript editor-pdf
-// How to get the path count for a geometry in a PDF document?
-
-// Get the path count and display the result in a PDF document.
-
+// Displays comprehensive path information in a text shape.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

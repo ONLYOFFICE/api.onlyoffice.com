@@ -20,12 +20,12 @@ expression.Last();
 
 ## 示例
 
-获取文档中段落的最后一个非空元素。
+此示例展示如何获取段落中非空的最后一个元素。
 
 ```javascript editor-docx
-// How to get the last paragraph in a document.
+// How to get the last paragraph.
 
-// Get the last paragraph and make it bold in a document.
+// Get the last paragraph and make it bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

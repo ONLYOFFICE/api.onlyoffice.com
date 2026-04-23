@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取 PDF 文档中超链接的屏幕提示文本。
+此示例展示如何获取超链接的屏幕提示文本。
 
 ```javascript editor-pdf
-// How to show the screen tip text of the hyperlink in a PDF document.
+// How to show the screen tip text of the hyperlink.
 
-// Set and display the hyperlink tip text appearing on the screen in a PDF document.
+// Set and display the hyperlink tip text appearing on the screen.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

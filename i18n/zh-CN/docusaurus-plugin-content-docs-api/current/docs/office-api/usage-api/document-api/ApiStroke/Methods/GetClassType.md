@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中笔触返回的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-docx
-// How do I check what type a stroke object is in a document?
+// How to get a class type of ApiStroke.
 
-// Retrieve and output the class type string for a stroke in a document.
+// Retrieve class type of ApiStroke object and insert it to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,15 +22,12 @@ expression.SetReadingOrder(direction);
 
 ## 示例
 
-设置电子表格中单元格范围内文本的阅读顺序。
+此示例演示如何设置单元格范围中文本的阅读顺序。
 
 ```javascript editor-xlsx
-// How to set reading order for a cell range?
-
-// Set reading order and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B2").SetValue("Hello, أهلاً, 你好");
 const range = worksheet.GetRange("A1:C3");
 range.SetReadingOrder('rtl');
+
 ```

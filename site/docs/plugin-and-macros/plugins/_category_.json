@@ -1,0 +1,9 @@
+{
+  "position": 2,
+  "collapsed": false,
+  "label": "Plugins",
+  "link": {
+    "type": "doc",
+    "id": "docs/plugin-and-macros/plugins/fundamentals/getting-started/what-is-a-plugin"
+  }
+}

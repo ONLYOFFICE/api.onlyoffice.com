@@ -29,10 +29,10 @@ string
 
 ## 示例
 
-获取文档中的书签文本。
+此示例展示如何获取书签文本。
 
 ```javascript editor-docx
-// How to add a bookmark and then display its content's text in a document.
+// How to add a bookmark and then display its content's text.
 
 // Show a bookmark text in the document.
 
@@ -44,4 +44,5 @@ range1.AddBookmark("BookmarkName")
 let bookmark = doc.GetBookmark("BookmarkName")
 paragraph.AddLineBreak()
 paragraph.AddText("Bookmark text is: " + bookmark.GetText())
+
 ```

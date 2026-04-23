@@ -20,12 +20,12 @@ expression.GetMaster();
 
 ## 示例
 
-获取演示文稿中主题的幻灯片母版。
+此示例演示如何获取主题的幻灯片母版。
 
 ```javascript editor-pptx
-// How to get a master from a theme in a presentation.
+// How to get a master from a theme.
 
-// Get a theme master and display its class type in a presentation.
+// Get a theme master and display its class type.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,4 +46,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
+
 ```

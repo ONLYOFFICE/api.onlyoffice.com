@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-将指定的版式应用于幻灯片。版式必须在幻灯片母版中。
+此示例将指定版式应用于幻灯片。版式必须位于幻灯片母版中。
 
 ```javascript editor-pptx
 // How to apply a layout to the slide.
@@ -35,4 +35,5 @@ const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
 const layout = master.GetLayout(4);
 slide.ApplyLayout(layout);
+
 ```

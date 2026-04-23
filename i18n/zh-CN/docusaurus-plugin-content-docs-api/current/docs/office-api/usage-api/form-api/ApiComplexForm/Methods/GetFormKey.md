@@ -2,11 +2,25 @@
 
 返回当前表单的键。
 
-继承自 [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md)。
+## 语法
+
+```javascript
+expression.GetFormKey();
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中的表单键。
+此示例展示如何获取表单键。
 
 ```javascript editor-forms
 // How get a key of a comboBox form.

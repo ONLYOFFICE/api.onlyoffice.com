@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中当前行的文本属性。
+此示例设置当前行的文本属性。
 
 ```javascript editor-docx
-// Make the row text bold in a document.
+// Make the row text bold.
 
-// How to apply new text properties to the table row in a document.
+// How to apply new text properties to the table row.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在演示文稿中将动画效果移动到不同位置。
+此示例将动画效果移动到不同位置。
 
 ```javascript editor-pptx
-// How do I move to in a presentation?
-
-// Move to using an animation effect object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -81,4 +77,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('First effect moved to position 2');
 slide.AddObject(infoShape);
+
 ```

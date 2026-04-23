@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取数字的余切值。
+此示例演示如何获取数字的余切。
 
 ```javascript editor-xlsx
-// How to find a cotangent in a spreadsheet.
+// How to find a cotangent.
 
-// Use function to get the cotangent of an angle in a spreadsheet.
+// Use function to get the cotangent of an angle.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

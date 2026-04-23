@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回表示值数据类型的整数：数字 = 1；文本 = 2；逻辑值 = 4；错误值 = 16；数组 = 64；复合数据 = 128。
+此示例演示如何返回表示值的数据类型的整数：数字 = 1；文本 = 2；逻辑值 = 4；错误值 = 16；数组 = 64；复合数据 = 128。
 
 ```javascript editor-xlsx
-// How to get an integer representing the data type of a value in a spreadsheet.
+// How to get an integer representing the data type of a value.
 
-// Use a function to return the data type of a value in a spreadsheet.
+// Use a function to return the data type of a value.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

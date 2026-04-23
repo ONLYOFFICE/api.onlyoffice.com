@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回角度的正切值。
+此示例演示如何返回角的正切。
 
 ```javascript editor-xlsx
-// How to return a tangent of an angle in a spreadsheet.
+// How to return a tangent of an angle.
 
-// Use a function to calculate angle's tangent in a spreadsheet.
+// Use a function to calculate angle's tangent.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

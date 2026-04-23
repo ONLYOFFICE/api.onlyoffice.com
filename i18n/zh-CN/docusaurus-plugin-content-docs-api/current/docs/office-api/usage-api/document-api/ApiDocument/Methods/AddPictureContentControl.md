@@ -23,13 +23,9 @@ expression.AddPictureContentControl(width, height);
 
 ## 示例
 
-在文档中添加图片内容控件。
+此示例展示如何向文档添加图片内容控件：
 
 ```javascript editor-docx
-// How can I add the picture content control using a document in a document?
-
-// Add the picture content control for a document in a document.
-
 let doc = Api.GetDocument();
 doc.AddPictureContentControl();
 ```

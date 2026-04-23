@@ -20,13 +20,9 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-返回文档内容中的当前段落。
+此示例返回文档内容中的当前段落。
 
 ```javascript editor-pdf
-// How to get current paragraph for a document content?
-
-// Get current paragraph and display the result in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -48,4 +44,5 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 page.AddObject(shape);
+
 ```

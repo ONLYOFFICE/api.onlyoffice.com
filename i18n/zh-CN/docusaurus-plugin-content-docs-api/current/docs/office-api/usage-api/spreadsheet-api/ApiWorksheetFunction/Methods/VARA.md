@@ -22,12 +22,13 @@ number
 
 ## 示例
 
-在电子表格中基于样本估计方差，包括逻辑值和文本。文本和 false 逻辑值为 0；true 逻辑值为 1。
+此示例演示如何根据样本估算方差，包括逻辑值和文本。文本和 false 逻辑值的值为 0；true 逻辑值的值为 1。
 
 ```javascript editor-xlsx
-// How to estimate variance based on a sample considering logical and text data types in a spreadsheet.
+// How to estimate variance based on a sample considering logical and text data types.
 
-// Use a function to estimate variance not ignoring logical and text values in a spreadsheet.
+// Use a function to estimate variance not ignoring logical and text values.
+
 
 let worksheet = Api.GetActiveSheet();
 

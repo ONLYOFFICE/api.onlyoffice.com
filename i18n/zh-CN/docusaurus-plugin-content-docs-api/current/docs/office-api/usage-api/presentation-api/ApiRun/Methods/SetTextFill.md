@@ -1,17 +1,33 @@
 # SetTextFill
 
-设置当前文本块的文本填充。
+设置当前文本运行的文本填充。
 
-继承自 [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md)。
+## 语法
+
+```javascript
+expression.SetTextFill(oApiFill);
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充文本颜色的颜色或图案。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-在演示文稿中为当前文本 run 设置文本填充。
+此示例设置当前文本运行的文本填充。
 
 ```javascript editor-pptx
-// How to change a font color in a presentation.
+// How to change a font color.
 
-// Get the text properties of the run and color its font in a presentation.
+// Get the text properties of the run and color its font.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -33,4 +49,5 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the black text fill set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

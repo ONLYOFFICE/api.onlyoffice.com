@@ -3,11 +3,27 @@
 指定在父表格（或表格行）中所有表格单元格的单元格内容底部范围与边框之间
 保留的空间量。
 
-继承自 [ApiTablePr.SetTableCellMarginBottom](../../ApiTablePr/Methods/SetTableCellMarginBottom.md)。
+## 语法
+
+```javascript
+expression.SetTableCellMarginBottom(nValue);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格底部范围下方的空间量值，以磅的二十分之一（1/1440 英寸）为单位。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-指定单元格内容底部边缘与父表格中所有表格单元格边框之间保留的间距。
+此示例指定在父表格中所有表格单元格的单元格内容底部范围与边框之间保留的空间量。
 
 ```javascript editor-docx
 // How to add margin to the bottom of the cell.

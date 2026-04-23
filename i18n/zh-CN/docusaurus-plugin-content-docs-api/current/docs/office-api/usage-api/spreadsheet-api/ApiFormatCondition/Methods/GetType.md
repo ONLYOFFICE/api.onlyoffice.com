@@ -20,7 +20,7 @@ expression.GetType();
 
 ## 示例
 
-获取条件格式规则的类型。
+此示例获取条件格式规则的类型。
 
 ```javascript editor-xlsx
 // How to retrieve the type of existing conditional formatting rules.
@@ -47,4 +47,5 @@ let ruleType = condition1.GetType();
 
 worksheet.GetRange("C1").SetValue("Rule type:");
 worksheet.GetRange("C2").SetValue(ruleType);
+
 ```

@@ -22,15 +22,16 @@ expression.SetLeftMargin(nPoints);
 
 ## 示例
 
-在电子表格中设置工作表的左边距。
+此示例设置工作表的左边距。
 
 ```javascript editor-xlsx
-// How to set margin of the left side in a spreadsheet.
+// How to set margin of the left side.
 
-// Resize the left margin of the sheet in a spreadsheet.
+// Resize the left margin of the sheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetLeftMargin(20.8);
 let leftMargin = worksheet.GetLeftMargin();
 worksheet.GetRange("A1").SetValue("Left margin: " + leftMargin + " mm");
+
 ```

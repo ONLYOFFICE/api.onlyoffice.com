@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-设置文档中形状边界框的大小。
+此示例设置形状边界框的大小。
 
 ```javascript editor-docx
-// How to resize the drawing in a document.
+// How to resize the drawing.
 
-// Set the height and the width of the shape in a document.
+// Set the height and the width of the shape. 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

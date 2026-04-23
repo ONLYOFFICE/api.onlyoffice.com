@@ -1,6 +1,6 @@
 # GetParentParagraph
 
-返回当前文本块的父段落。
+返回当前运行的父段落。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetParentParagraph();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,13 +20,9 @@ expression.GetParentParagraph();
 
 ## 示例
 
-获取文档中 run 的父段落以进行进一步操作。
+此示例展示如何获取运行的父段落以进行进一步操作。
 
 ```javascript editor-docx
-// How to get the parent paragraph for a text run in a document?
-
-// Get the parent paragraph and display the result in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is paragraph with example run: ");

@@ -22,14 +22,15 @@ string
 
 ## 示例
 
-在电子表格中将文本字符串中的所有字母转换为小写。
+此示例演示如何将文本字符串中的所有字母转换为小写。
 
 ```javascript editor-xlsx
-// How to make all characters uncapitalized in a spreadsheet.
+// How to make all characters uncapitalized.
 
-// Use a function to make a text string to lowercase in a spreadsheet.
+// Use a function to make a text string to lowercase.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LOWER("Day"));
+
 ```

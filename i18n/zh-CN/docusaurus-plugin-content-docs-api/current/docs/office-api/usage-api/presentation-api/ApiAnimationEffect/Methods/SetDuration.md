@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在演示文稿中设置动画效果的持续时间。
+此示例设置动画效果的持续时间。
 
 ```javascript editor-pptx
-// How do I set duration in a presentation?
-
-// Set duration using an animation effect object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -60,4 +56,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New duration: ' + duration + 'ms (2 seconds)');
 slide.AddObject(infoShape);
+
 ```

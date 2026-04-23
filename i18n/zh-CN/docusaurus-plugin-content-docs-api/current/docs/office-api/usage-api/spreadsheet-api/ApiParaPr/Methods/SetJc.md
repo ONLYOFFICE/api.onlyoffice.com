@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置电子表格中段落内容的对齐方式。
+此示例设置段落内容对齐方式。
 
 ```javascript editor-xlsx
-// How to center a paragraph text in a spreadsheet.
+// How to center a paragraph text.
 
-// Get a paragraph from the shape's content then add a text specifying its justification type in a spreadsheet.
+// Get a paragraph from the shape's content then add a text specifying its justification type.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

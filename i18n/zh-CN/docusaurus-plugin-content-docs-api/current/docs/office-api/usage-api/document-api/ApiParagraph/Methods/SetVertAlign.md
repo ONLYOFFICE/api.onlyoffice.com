@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-在文档中创建两个段落，一个垂直对齐方式为 "subscript"（下标），另一个为 "superscript"（上标）。
+此示例创建两个段落。一个使用「下标」垂直对齐，另一个使用「上标」垂直对齐。
 
 ```javascript editor-docx
-// How to change a vertical alignment of a text run in a document.
+// How to change a vertical alignment of a text run.
 
-// Create a new text run and make it subscript, baseline or superscript in a document.
+// Create a new text run and make it subscript, baseline or superscript.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

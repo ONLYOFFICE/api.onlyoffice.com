@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-锁定图片表单的纵横比。
+此示例锁定图片表单的宽高比。
 
 ```javascript editor-forms
 // How to lock an aspect ratio of the picture form in this document.

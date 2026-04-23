@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回一系列定期现金流的内部收益率，同时考虑投资成本和现金再投资的利息。
+此示例演示如何返回一系列定期现金流的内部收益率，同时考虑投资成本和现金再投资的利息。
 
 ```javascript editor-xlsx
-// How to get the internal rate of return for a series of periodic cash flows in a spreadsheet.
+// How to get the internal rate of return for a series of periodic cash flows.
 
-// Use a function to calculate the internal rate of return in a spreadsheet.
+// Use a function to calculate the internal rate of return.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

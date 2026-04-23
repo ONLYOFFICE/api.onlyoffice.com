@@ -22,12 +22,12 @@ expression.GetSheet(nameOrIndex);
 
 ## 示例
 
-获取表示电子表格中工作表的对象。
+此示例演示如何获取表示工作表的对象。
 
 ```javascript editor-xlsx
-// How to get a sheet knowing its name in a spreadsheet.
+// How to get a sheet knowing its name.
 
-// Find and get a sheet object by its name in a spreadsheet.
+// Find and get a sheet object by its name.
 
 let worksheet = Api.GetSheet("Sheet1");
 worksheet.GetRange("A1").SetValue("This is a sample text on 'Sheet1'.");

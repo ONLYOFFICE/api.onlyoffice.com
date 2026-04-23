@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为所有图表系列设置 x 轴值。仅用于文档中的散点图。
+此示例将 x 轴值设置为所有图表系列。仅用于散点图。
 
 ```javascript editor-docx
-// How to add values to horizontal axis for all series of scatter charts in a document.
+// How to add values to horizontal axis for all series of scatter charts.
 
-// Fill all x-axis values of scattered charts series in a document.
+// Fill all x-axis values of scattered charts series.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

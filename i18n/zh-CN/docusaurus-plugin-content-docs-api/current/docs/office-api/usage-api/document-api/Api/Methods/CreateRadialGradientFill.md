@@ -22,12 +22,14 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## 示例
 
-在文档中创建径向渐变填充。
+此示例展示如何创建径向渐变填充。
 
 ```javascript editor-docx
-// Create the fill object which represents a radial gradient fill and apply it to the created shape in a document.
+// Creates the ApiFill object which represents a radial gradient fill and applies it to the created shape.
 
-// Create a radial gradient fill from an array of the gradient color stops and use it as a background for the shape class in a document.
+// How to create a radial gradient fill and apply it to the object using the selected radial gradient as the object background.
+
+// Creates a radial gradient fill from an array of the gradient color stops and uses it as a background for the ApiShape class.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

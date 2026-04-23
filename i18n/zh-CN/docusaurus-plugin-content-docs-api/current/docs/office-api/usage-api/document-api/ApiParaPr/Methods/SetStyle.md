@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中为段落设置样式。
+此示例为段落设置样式。
 
 ```javascript editor-docx
-// Set the style of the paragraph to "Heading 6" in a document.
+// Set the style of the paragraph to "Heading 6".
 
-// Create a text in a paragraph styled with the 'Heading 6' style in a document.
+// Create a text in a paragraph styled with the 'Heading 6' style.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");

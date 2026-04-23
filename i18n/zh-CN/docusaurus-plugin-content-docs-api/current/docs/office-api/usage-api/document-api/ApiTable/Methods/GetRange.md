@@ -23,10 +23,10 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定表格所包含的文档部分的 Range 对象。
+此示例展示如何获取表示指定表格中所包含文档部分的 Range 对象。
 
 ```javascript editor-docx
-// How to get a range object using an address in a document.
+// How to get a range object using an address.
 
 // Update a rabge knowing its cell address.
 

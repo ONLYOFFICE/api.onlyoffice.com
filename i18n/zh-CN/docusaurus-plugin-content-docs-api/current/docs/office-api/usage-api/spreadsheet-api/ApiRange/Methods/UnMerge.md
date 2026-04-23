@@ -20,7 +20,7 @@ expression.UnMerge();
 
 ## 示例
 
-将选定的合并单元格范围拆分为单个单元格。
+此示例将选定的合并单元格范围拆分为单个单元格。
 
 ```javascript editor-xlsx
 // How to unmerge a range of cells.
@@ -30,4 +30,5 @@ expression.UnMerge();
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A3:E8").Merge(true);
 worksheet.GetRange("A5:E5").UnMerge();
+
 ```

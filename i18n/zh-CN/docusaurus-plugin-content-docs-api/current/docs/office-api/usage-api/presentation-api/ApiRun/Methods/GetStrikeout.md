@@ -2,16 +2,30 @@
 
 从当前文本属性获取删除线属性。
 
-继承自 [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)。
+## 语法
+
+```javascript
+expression.GetStrikeout();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-检查演示文稿中的文本是否有单线删除线。
+此示例演示如何确定文本是否有单线删除线。
 
 ```javascript editor-pptx
-// How to know whether a text is crossed with one horizontal line in a presentation.
+// How to know whether a text is crossed with one horizontal line.
 
-// Get the text properties of the run and find whether it is strikethrough or not in a presentation.
+// Get the text properties of the run and find whether it is strikethrough or not.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,4 +51,5 @@ paragraph = Api.CreateParagraph();
 const strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
+
 ```

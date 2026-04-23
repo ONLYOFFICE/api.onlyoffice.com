@@ -23,7 +23,7 @@ expression.SetCellBorderTop(fSize, oApiFill);
 
 ## 示例
 
-设置表格单元格顶部显示的边框。
+此示例设置应在表格单元格顶部显示的边框。
 
 ```javascript editor-pptx
 // How to set cell top border with its fill color.
@@ -41,4 +41,5 @@ cell.SetCellBorderTop(2, fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

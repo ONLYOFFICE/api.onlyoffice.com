@@ -24,13 +24,9 @@ expression.GetSpeed();
 
 ## 示例
 
-获取并显示演示文稿中的切换速度。
+此示例获取过渡速度并显示。
 
 ```javascript editor-pptx
-// How do I get the speed in a presentation?
-
-// Get the speed using a slide show transition object.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,4 +48,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Speed is ' + transitionSpeed);
 slide.AddObject(shape);
+
 ```

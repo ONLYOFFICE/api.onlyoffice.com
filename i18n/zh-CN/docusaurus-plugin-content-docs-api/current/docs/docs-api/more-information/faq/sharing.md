@@ -228,9 +228,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您需要将 *document.permission.edit*、 *document.permission.review* 和 *document.permission.fillForms* 参数设置为 **false**，这样用户将无法编辑、查看文档或更改其中的表单字段。如果您还想禁用文档的评论功能，请将 *comment* 参数也设置为 **false** （但现有评论将可供查看）。
 
-:::tip
-如果您禁用所有的编辑权限，我们建议您也将 *document.permissions.chat* 设置为 **false**，这样有权访问该文档的用户就不会向文档嵌入聊天发送垃圾邮件。
-:::
+> 如果您禁用所有的编辑权限，我们建议您也将 *document.permissions.chat* 设置为 **false**，这样有权访问该文档的用户就不会向文档嵌入聊天发送垃圾邮件。
 
 这种情况下的配置将如下所示：
 
@@ -302,9 +300,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 *document.info.sharingSettings.permissions* 也是一个字符串参数，它显示了与定义用户对当前文档的访问权限的规则集对应的访问权限的名称。
 
-:::note
-请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 *document.permission.edit*、*document.permission.review*、*document.permission.fillForms* 设置为 **false**; 或 **只下载** ：将所有 *document.permission* 参数设置为 **false** 并且仅 *document.permission.download* 参数设置为 **true**等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限中...**窗口中。
-:::
+> 请注意，最初没有任何预定义的文档访问规则集。如果您使用 **ONLYOFFICE 社区服务器**，将使用和显示几个访问权限规则（**完全访问**、**只读**、**拒绝访问**）。如果您设置自己的 **文档存储服务**，您将必须定义自己的一组规则及其名称（例如，**只读访问**：将参数 *document.permission.edit*、*document.permission.review*、*document.permission.fillForms* 设置为 **false**; 或 **只下载** ：将所有 *document.permission* 参数设置为 **false** 并且仅 *document.permission.download* 参数设置为 **true**等），并将它们发送到**文档编辑服务**，以便用户可以访问文档，并且这些设置显示在文档**访问权限中...**窗口中。
 
 *sharingSettings* 配置可能如下所示：
 
@@ -350,6 +346,4 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-:::tip
-不要忘记将 *editorConfig.mode* 设置为 **edit**，否则任何评论功能都将被禁用。
-:::
+> 不要忘记将 *editorConfig.mode* 设置为 **edit**，否则任何评论功能都将被禁用。

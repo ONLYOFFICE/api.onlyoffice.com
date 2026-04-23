@@ -20,13 +20,10 @@ boolean
 
 ## 示例
 
-从预设星形中获取几何图形信息。显示预设类型并检查几何图形是否为自定义。
+从预设星形获取几何信息。
 
 ```javascript editor-docx
-// How do I is custom in a document?
-
-// Is custom using a geometry object in a document.
-
+// Displays the preset type and checks if the geometry is custom.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

@@ -11,9 +11,10 @@
 - "xlLandscape"
 - "xlPortrait"
 
+
 ## 示例
 
-将页面方向设置为纵向。
+此示例将页面方向设置为纵向。
 
 ```javascript editor-xlsx
 // How to change an orientation of a page.

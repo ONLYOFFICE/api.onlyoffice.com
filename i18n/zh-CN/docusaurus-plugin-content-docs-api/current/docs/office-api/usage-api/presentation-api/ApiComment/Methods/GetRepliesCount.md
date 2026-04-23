@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取演示文稿中批注的回复数量。
+此示例演示如何获取批注的回复数量。
 
 ```javascript editor-pptx
-// How to get a number of replies a comment has in a presentation.
+// How to get a number of replies a comment has.
 
 // Get all comments from the presentation and the first one's number of replies.
 
@@ -50,4 +50,5 @@ for (let i = 0; i < repliesCount; i++) {
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment replies count: " + arrComments[0].GetRepliesCount());
+
 ```

@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在电子表格中通过指定的位置删除元素。
+此示例使用指定的位置移除元素。
 
 ```javascript editor-xlsx
-// How to delete a paragraph element knowing its index in a spreadsheet.
+// How to delete a paragraph element knowing its index.
 
-// Change the content of a shape by removing elements in a spreadsheet.
+// Change the content of a shape by removing elements.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -23,7 +23,7 @@ string[][]
 
 ## 示例
 
-获取电子表格中的邮件合并数据。
+此示例演示如何获取邮件合并数据。
 
 ```javascript editor-xlsx
 // Get mail merge data from the worksheet.

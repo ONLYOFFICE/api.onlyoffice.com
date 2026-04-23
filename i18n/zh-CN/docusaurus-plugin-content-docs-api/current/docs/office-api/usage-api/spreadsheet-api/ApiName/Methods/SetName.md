@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在电子表格中设置表示对象名称的字符串值。
+此示例设置表示对象名称的字符串值。
 
 ```javascript editor-xlsx
-// How to rename an object in a spreadsheet.
+// How to rename an object.
 
 // Set a new name for an object and display it in the worksheet.
 

@@ -23,12 +23,12 @@ expression.SetCellMarginBottom(nValue);
 
 ## 示例
 
-指定表格中特定单元格内容底部边缘与边框之间应保留的间距。
+此示例演示如何指定表格中特定单元格的单元格内容底部与边框之间应保留的空间量。
 
 ```javascript editor-pptx
 // How to set the cell bottom margin for the current table cell.
 
-// Specify the bottom margin value for the table cell object.
+// Specify the bottom margin value for the ApiTableCell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,4 +44,5 @@ cell.SetCellMarginBottom(600);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

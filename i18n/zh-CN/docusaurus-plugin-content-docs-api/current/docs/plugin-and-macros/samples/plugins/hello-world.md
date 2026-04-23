@@ -12,7 +12,7 @@
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) 下载此插件，并按照 [桌面](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md) 或[云端](../../tutorials/installing/onlyoffice-cloud.md)的安装说明进行安装。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld) 下载此插件，并按照 [桌面](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md) 或[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)的安装说明进行安装。
 
 ## 使用
 
@@ -80,11 +80,11 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 
 ## 方法和事件
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.recalculate](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [callCommand](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [Asc.scope](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.recalculate](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## 支持
 

@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置字段为只读。
+此示例设置字段为只读。
 
 ```javascript editor-pdf
-// How can I set read only using a base field in a PDF document?
-
-// Set read only for a base field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

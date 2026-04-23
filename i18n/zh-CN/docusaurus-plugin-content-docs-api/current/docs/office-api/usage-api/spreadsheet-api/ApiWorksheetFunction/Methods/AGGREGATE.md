@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回列表或数据库中的聚合值。
+此示例演示如何返回列表或数据库中的聚合值。
 
 ```javascript editor-xlsx
 // How to get an aggregate of a numbers and display it in the worksheet.
 
-// Get a function that gets an aggregate from a list of numbers in a spreadsheet.
+// Get a function that gets an aggregate from a list of numbers.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

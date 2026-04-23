@@ -20,10 +20,10 @@ String \| null
 
 ## 示例
 
-获取电子表格中批注的引用文本。
+此示例展示如何获取批注的引用文本。
 
 ```javascript editor-xlsx
-// How to get a comment quote in a spreadsheet.
+// How to get a comment quote.
 
 // Add a comment to the range and display its quote text in the worksheet.
 

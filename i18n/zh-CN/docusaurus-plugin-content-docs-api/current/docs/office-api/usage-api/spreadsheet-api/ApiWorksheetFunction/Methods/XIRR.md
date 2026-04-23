@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回一系列现金流时间表的内部收益率。
+此示例演示如何返回现金流计划的内部收益率。
 
 ```javascript editor-xlsx
-// How to return the internal rate of return in a spreadsheet.
+// How to return the internal rate of return.
 
-// Use a function to return the internal rate of return in a spreadsheet.
+// Use a function to return the internal rate of return.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

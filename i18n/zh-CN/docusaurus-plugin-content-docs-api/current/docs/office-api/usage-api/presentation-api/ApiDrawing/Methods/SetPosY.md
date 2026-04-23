@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置绘图对象在幻灯片上的 y 位置。
+此示例设置绘图在幻灯片上的 Y 坐标位置。
 
 ```javascript editor-pptx
-// How can I set pos y using a drawing object in a presentation?
-
-// Set pos y for a drawing object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,4 +40,5 @@ shape.SetPosY(Api.MillimetersToEmus(60));
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Y position was changed to 60 mm.');
+
 ```

@@ -22,10 +22,10 @@ expression.SetInCellDropdown(InCellDropdown);
 
 ## 示例
 
-在电子表格中设置是否显示下拉列表。
+此示例设置是否显示下拉列表。
 
 ```javascript editor-xlsx
-// How to show or hide the validation dropdown list in a spreadsheet.
+// How to show or hide the validation dropdown list.
 
 // Set the InCellDropdown setting.
 
@@ -35,4 +35,5 @@ let validation = range.GetValidation();
 validation.Add("xlValidateList", null, null, "Apple,Banana,Cherry");
 validation.SetInCellDropdown(true);
 worksheet.GetRange("B1").SetValue("Dropdown is enabled for A1");
+
 ```

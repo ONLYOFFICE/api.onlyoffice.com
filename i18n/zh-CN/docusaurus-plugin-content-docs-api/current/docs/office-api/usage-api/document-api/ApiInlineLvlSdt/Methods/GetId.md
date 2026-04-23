@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取文档中容器的 ID。
+此示例展示如何获取容器的 ID。
 
 ```javascript editor-docx
-// How do I get the id in a document?
-
-// Get the id using an inline content control object in a document.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();

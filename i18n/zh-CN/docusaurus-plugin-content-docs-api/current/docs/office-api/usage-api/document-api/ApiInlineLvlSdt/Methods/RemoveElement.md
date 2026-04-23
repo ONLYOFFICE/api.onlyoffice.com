@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-通过指定的位置从文档中的内联文本内容控件中删除元素。
+此示例使用指定位置从内联文本内容控件中删除元素。
 
 ```javascript editor-docx
-// How to remove an element from the inline text control in a document.
+// How to remove an element from the inline text control.
 
-// Delete the element using its position index from the inline text control in a document.
+// Delete the element using its position index from the inline text control.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

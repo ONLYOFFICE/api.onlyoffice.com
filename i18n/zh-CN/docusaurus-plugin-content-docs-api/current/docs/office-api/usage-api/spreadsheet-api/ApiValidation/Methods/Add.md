@@ -26,7 +26,7 @@ expression.Add(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## 示例
 
-向单元格范围添加数据验证规则。
+此示例向单元格范围添加数据验证规则。
 
 ```javascript editor-xlsx
 // How to apply data validation to a range of cells.
@@ -40,4 +40,5 @@ range.SetValue("10");
 const validation = worksheet.GetRange("A2").GetValidation();
 validation.Add("xlValidateDecimal", "xlValidAlertWarning", "xlGreater", "12");
 worksheet.GetRange("A4").SetValue("Data Validation is now applied for A2 only");
+
 ```

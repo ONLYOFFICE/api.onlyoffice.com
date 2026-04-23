@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-指定当前文本范围中的所有小写字母字符仅以比指定字体大小小两磅的对应大写字母格式显示。
+此示例指定当前文本范围中的所有小写字母字符仅格式化显示为其对应的大写字母字符，这些大写字母比为此文本指定的实际字体大小小两磅。
 
 ```javascript editor-docx
-// How to make range text characters uncapitalized in a document.
+// How to make range text characters uncapitalized.
 
-// Get a range text, update its style by making its letters uncapitalized in a document.
+// Get a range text, update its style by making its letters uncapitalized.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

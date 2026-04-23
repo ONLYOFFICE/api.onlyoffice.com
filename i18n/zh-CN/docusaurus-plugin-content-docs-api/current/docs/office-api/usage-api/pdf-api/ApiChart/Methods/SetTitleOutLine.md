@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为图表标题设置轮廓。
+如何为图表标题添加轮廓。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title outline in a PDF document.
-
-// Set title out line for a chart in a PDF document.
+// Create a chart, set its properties and its title outline.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,4 +45,5 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 page.AddObject(chart);
+
 ```

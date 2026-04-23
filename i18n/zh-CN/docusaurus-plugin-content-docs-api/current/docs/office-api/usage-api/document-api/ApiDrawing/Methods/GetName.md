@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取文档中绘图对象的名称。
+此示例展示如何获取绘图的名称。
 
 ```javascript editor-docx
-// How to get the name for a drawing object in a document?
-
-// Get the name and display the result in a document.
-
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -40,4 +36,5 @@ const shapeName = drawing.GetName();
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Drawing name: ' + shapeName);
 doc.Push(paragraph2);
+
 ```

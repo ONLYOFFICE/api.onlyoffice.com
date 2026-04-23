@@ -20,7 +20,7 @@ expression.Delete();
 
 ## 示例
 
-从单元格范围删除数据验证规则。
+此示例从单元格范围删除数据验证规则。
 
 ```javascript editor-xlsx
 // How to remove data validation from a range of cells.

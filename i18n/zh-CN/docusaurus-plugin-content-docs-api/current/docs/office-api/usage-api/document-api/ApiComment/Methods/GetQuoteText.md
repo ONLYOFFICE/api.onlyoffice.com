@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取文档中批注的引用文本。
+此示例展示如何获取批注的引用文本。
 
 ```javascript editor-docx
-// How to retrieve a quote text from a comment in a document.
+// How to retrieve a quote text from a comment.
 
 // Get all comments from the presentation and the first one's quote text.
 

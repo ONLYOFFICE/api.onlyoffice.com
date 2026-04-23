@@ -1,6 +1,6 @@
 # AddTabStop
 
-向当前文本块添加制表位。
+向当前运行添加制表位。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddTabStop();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在电子表格中向 run 添加制表位。
+此示例向运行添加制表位。
 
 ```javascript editor-xlsx
-// How to add a tab to a sentence in a spreadsheet.
+// How to add a tab to a sentence.
 
-// Break two lines of a text run with a tab in a spreadsheet.
+// Break two lines of a text run with a tab. 
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

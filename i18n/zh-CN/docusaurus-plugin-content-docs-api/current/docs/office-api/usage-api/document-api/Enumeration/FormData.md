@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -21,6 +21,7 @@ Object
 | type | [FormSpecificType](../Enumeration/FormSpecificType.md) | 表单类型。 |
 | value | string \| boolean | 当前字段值。 |
 
+
 ## 示例
 
 指定可用于创建表单的表单数据。
@@ -35,4 +36,5 @@ let formData = {
 	value: "OnlyOffice",
 	type: "text"
 };
+
 ```

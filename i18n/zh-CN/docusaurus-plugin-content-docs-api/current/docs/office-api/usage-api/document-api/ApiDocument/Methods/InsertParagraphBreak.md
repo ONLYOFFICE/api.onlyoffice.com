@@ -20,13 +20,12 @@ boolean
 
 ## 示例
 
-在文档中当前光标位置输入段落。
+此示例展示如何在当前光标位置输入段落。
 
 ```javascript editor-docx
-// How to add a paragraph at the cursor position in a document.
+// How to add a paragraph at the cursor position.
 
-// Add text and create a new paragraph in a document.
-
+// Add text and create a new paragraph.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("This is the first paragraph.");

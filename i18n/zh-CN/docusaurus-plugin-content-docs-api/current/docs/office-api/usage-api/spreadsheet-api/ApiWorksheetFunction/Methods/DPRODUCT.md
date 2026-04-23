@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中将数据库中与指定条件匹配的记录字段（列）中的值相乘。
+此示例演示如何将数据库中与指定条件匹配的记录字段（列）中的值相乘。
 
 ```javascript editor-xlsx
-// How to multiply the values under condition in a spreadsheet.
+// How to multiply the values under condition.
 
-// Use function to multiply the values from columns if they satisfy a condition in a spreadsheet.
+// Use function to multiply the values from columns if they satisfy a condition.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

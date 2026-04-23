@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-从文档中的自定义 XML 部件中删除 XML 元素。
+此示例演示如何从自定义 XML 部件删除 XML 元素。
 
 ```javascript editor-docx
-// How do I delete the element in a document?
-
-// Delete the element using a custom XML part object in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example'><text>example_text</text><firstNode>text inside first node</firstNode></content>");

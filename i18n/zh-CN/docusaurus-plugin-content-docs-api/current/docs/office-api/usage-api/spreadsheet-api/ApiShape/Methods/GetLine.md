@@ -20,13 +20,10 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。创建带笔触的形状，获取并显示笔触详细信息。
+从形状获取轮廓属性并显示详细信息。
 
 ```javascript editor-xlsx
-// How to get the line for a shape in a spreadsheet?
-
-// Get the line and display the result in a spreadsheet.
-
+// Creates a shape with a stroke, retrieves it and shows stroke details.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 let stroke = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(200, 100, 0)));
@@ -44,4 +41,5 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     worksheet.GetRange("A" + row++).SetValue("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
+
 ```

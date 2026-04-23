@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取演示文稿中批注创建的时间。
+此示例演示如何获取批注创建时间。
 
 ```javascript editor-pptx
-// How to know when a comment was added in a presentation.
+// How to know when a comment was added.
 
 // Get all comments from the presentation and the first one's time of creation.
 
@@ -47,4 +47,5 @@ const time = arrComments[0].GetTime();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's time: " + time);
+
 ```

@@ -21,7 +21,7 @@ expression.GetWrapperShape();
 
 ## 示例
 
-获取文档中放置表单的形状，以控制固定大小表单框架的位置和大小。
+此示例展示如何获取放置表单的形状，用于控制固定大小表单框架的位置和大小。
 
 ```javascript editor-forms
 // Get wrapper shape of the text form.

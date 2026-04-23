@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-为轴值设置指定的数字格式。
+此示例将指定的数字格式设置为坐标轴值。
 
 ```javascript editor-xlsx
 // How to format numbers of the axis.

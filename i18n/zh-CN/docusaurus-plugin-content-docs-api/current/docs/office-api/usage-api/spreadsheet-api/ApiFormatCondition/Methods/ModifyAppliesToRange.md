@@ -22,7 +22,7 @@ expression.ModifyAppliesToRange(Range);
 
 ## 示例
 
-修改条件格式规则应用的范围。
+此示例修改条件格式规则应用的区域。
 
 ```javascript editor-xlsx
 // How to change the cell range for existing conditional formatting rules.
@@ -55,4 +55,5 @@ condition1.ModifyAppliesToRange(newRange);
 
 worksheet.GetRange("D1").SetValue("Modified range:");
 worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
+
 ```

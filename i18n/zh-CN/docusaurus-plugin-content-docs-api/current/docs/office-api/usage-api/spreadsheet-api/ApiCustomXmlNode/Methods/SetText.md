@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中设置自定义 XML 节点的文本内容。
+此示例演示如何设置自定义 XML 节点的文本内容。
 
 ```javascript editor-xlsx
-// How to update text content in custom XML node elements in a spreadsheet.
+// How to update text content in custom XML node elements.
 
-// Set text for message node in a spreadsheet.
+// Set text for message node.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

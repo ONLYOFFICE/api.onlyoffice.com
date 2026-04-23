@@ -20,12 +20,10 @@ expression.CreateTableRowPr();
 
 ## 示例
 
-在文档中创建并使用表格行属性。
+此示例展示如何创建和使用表格行属性。
 
 ```javascript editor-docx
-// How to create table row properties and set it to table style in a document.
-
-// Create the table row pr in a document.
+// How to create table row properties and set it to table style.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

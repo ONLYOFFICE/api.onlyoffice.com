@@ -20,10 +20,10 @@ number
 
 ## 示例
 
-获取文档中当前段落的元素数量。
+此示例展示如何获取当前段落中的元素数量。
 
 ```javascript editor-docx
-// How to get the number of elements of the paragraph in a document.
+// How to get the number of elements of the paragraph.
 
 // Count words of the paragraph and print it in the document.
 

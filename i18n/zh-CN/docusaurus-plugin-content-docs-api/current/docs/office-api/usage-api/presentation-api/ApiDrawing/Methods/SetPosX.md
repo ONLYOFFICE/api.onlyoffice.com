@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置绘图对象在幻灯片上的 x 位置。
+此示例设置绘图在幻灯片上的 X 坐标位置。
 
 ```javascript editor-pptx
-// How can I set pos x using a drawing object in a presentation?
-
-// Set pos x for a drawing object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,4 +40,5 @@ shape.SetPosX(Api.MillimetersToEmus(50));
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('X position was changed to 50 mm.');
+
 ```

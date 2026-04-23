@@ -2,11 +2,25 @@
 
 返回当前表单的类型。
 
-继承自 [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md)。
+## 语法
+
+```javascript
+expression.GetFormType();
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[FormType](../../Enumeration/FormType.md)
 
 ## 示例
 
-获取文档中表单的类型。
+此示例展示如何获取表单的类型。
 
 ```javascript editor-docx
 // How to know the type of a text form.

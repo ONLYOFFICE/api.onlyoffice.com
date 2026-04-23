@@ -1,6 +1,6 @@
 # AddColumnBreak
 
-在当前文本块位置添加分栏符，并从新栏开始下一个元素。
+在当前运行位置添加分栏符，并从新栏开始下一个元素。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddColumnBreak();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中向 run 位置添加分栏符并从新列开始下一个元素。
+此示例在运行位置添加分栏符，并从新栏开始下一个元素。
 
 ```javascript editor-docx
-// How to add a column break between the text in a document.
+// How to add a column break between the text.
 
-// Add text to the text run and separate it with a column break in a document.
+// Add text to the text run and separate it with a column break.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

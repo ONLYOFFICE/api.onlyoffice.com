@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在演示文稿中将 EMU（英制公制单位）转换为磅。
+此示例展示如何将 EMU（英制度量单位）转换为磅。
 
 ```javascript editor-pptx
-// How do I convert emus to points in a presentation?
-
-// Convert emus to points and display the result in a presentation.
-
 const emus = 100;
 const points = Api.EmusToPoints(emus);
 
@@ -43,4 +39,5 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

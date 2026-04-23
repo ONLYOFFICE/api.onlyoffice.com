@@ -22,12 +22,12 @@ expression.InsertInContentControl(nType);
 
 ## 示例
 
-在文档中用富文本内容控件包裹图形对象。
+此示例用富文本内容控件包装图形对象。
 
 ```javascript editor-docx
-// How to add the drawing to the paragraph in a document.
+// How to add the drawing to the paragraph.
 
-// Create a rectangle and then insert it to the another content control in a document.
+// Create a rectangle and then insert it to the another content control.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

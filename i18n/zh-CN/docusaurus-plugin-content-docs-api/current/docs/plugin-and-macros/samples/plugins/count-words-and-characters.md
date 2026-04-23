@@ -24,7 +24,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 该插件在 ONLYOFFICE 企业版和社区版（文档或协作空间）中默认提供。
 
-你也可以从 [ONLYOFFICE 插件目录](https://www.onlyoffice.com/app-directory/zh/wordscounter)下载此插件，并按照以下说明完成安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+你也可以从 [ONLYOFFICE 插件目录](https://www.onlyoffice.com/app-directory/zh/wordscounter)下载此插件，并按照以下说明完成安装：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 

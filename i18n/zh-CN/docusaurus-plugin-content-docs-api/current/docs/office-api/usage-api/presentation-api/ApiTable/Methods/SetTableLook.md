@@ -33,12 +33,12 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 ## 示例
 
-在演示文稿中设置表格外观。
+此示例演示如何设置表格外观。
 
 ```javascript editor-pptx
-// How to set a table look with options in a presentation.
+// How to set a table look with options.
 
-// Create the table object and set its look in a presentation.
+// Create the ApiTable object and set its look.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,4 +46,5 @@ const table = Api.CreateTable(2, 4);
 table.SetTableLook(true, false, false, false, false, true);
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

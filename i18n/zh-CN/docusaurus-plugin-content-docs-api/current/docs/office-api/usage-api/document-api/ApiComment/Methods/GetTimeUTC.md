@@ -20,10 +20,10 @@ Number
 
 ## 示例
 
-获取文档中批注创建的 UTC 格式时间戳。
+此示例展示如何获取批注创建时间戳（UTC 格式）。
 
 ```javascript editor-docx
-// How to know when a comment was added in a document.
+// How to know when a comment was added.
 
 // Get all comments from the presentation and the first one's time of creation in UTC format.
 

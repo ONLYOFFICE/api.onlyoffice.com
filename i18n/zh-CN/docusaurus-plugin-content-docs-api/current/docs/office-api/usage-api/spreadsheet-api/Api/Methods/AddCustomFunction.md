@@ -29,12 +29,14 @@ expression.AddCustomFunction(fCustom);
 
 ## 示例
 
-在电子表格中计算自定义函数结果。
+此示例计算自定义函数结果。
 
 ```javascript editor-xlsx
-// A custom function can perform calculations not available in standard functions.
+// How to add custom function.
 
-// Add cell values using a custom function.
+// How to use custom function.
+
+// How to add cell values using custom function.
 
 /**
  * Function that returns the argument

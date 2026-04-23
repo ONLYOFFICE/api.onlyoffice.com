@@ -20,13 +20,10 @@ expression.AddPath();
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
+创建自定义三角形并将其添加到工作表。
 
 ```javascript editor-xlsx
-// How can I add the path using a geometry in a spreadsheet?
-
-// Add the path for a geometry in a spreadsheet.
-
+// Applies custom geometry to a shape with specific fill and stroke.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

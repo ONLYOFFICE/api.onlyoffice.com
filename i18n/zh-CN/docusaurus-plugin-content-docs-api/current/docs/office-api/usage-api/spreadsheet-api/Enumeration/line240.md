@@ -6,9 +6,11 @@
 
 number
 
+
+
 ## 示例
 
-将段落行距设置为 1 行。
+此示例将段落行距设置为 1 行。
 
 ```javascript editor-xlsx
 // How to change a spacing of a line.

@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中获取两个期间之间贷款支付的累计本金。
+此示例演示如何获取两个期间之间贷款支付的累计本金。
 
 ```javascript editor-xlsx
-// How to return the cumulative principal paid on a loan between two periods in a spreadsheet.
+// How to return the cumulative principal paid on a loan between two periods.
 
-// Use function to get the cumulative principal paid on a loan between two periods in a spreadsheet.
+// Use function to get the cumulative principal paid on a loan between two periods.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,13 +22,9 @@ expression.SetLastModifiedBy(sLastModifiedBy);
 
 ## 示例
 
-在电子表格中设置最后修改当前工作簿的用户名称。
+此示例演示如何设置最后修改当前工作簿的用户名称。
 
 ```javascript editor-xlsx
-// How can I set last modified by using a core properties in a spreadsheet?
-
-// Set last modified by for a core properties in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -46,4 +42,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
+
 ```

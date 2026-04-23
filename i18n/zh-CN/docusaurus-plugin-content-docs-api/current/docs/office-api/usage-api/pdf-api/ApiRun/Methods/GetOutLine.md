@@ -2,16 +2,30 @@
 
 从当前文本属性获取文本轮廓。
 
-继承自 [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md)。
+## 语法
+
+```javascript
+expression.GetOutLine();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiStroke](../../ApiStroke/ApiStroke.md)
 
 ## 示例
 
-检查 PDF 文档中的文本是否有轮廓。
+此示例演示如何确定文本是否有轮廓。
 
 ```javascript editor-pdf
-// How to know whether an outline is set to the text in a PDF document.
+// How to know whether an outline is set to the text.
 
-// Get the text properties of the run and find whether it is outlined or not in a PDF document.
+// Get the text properties of the run and find whether it is outlined or not.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -21,7 +35,7 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -38,4 +52,5 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
+
 ```

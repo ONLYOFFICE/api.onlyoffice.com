@@ -2,16 +2,30 @@
 
 返回当前段落的段前间距值。
 
-继承自 [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md)。
+## 语法
+
+```javascript
+expression.GetSpacingBefore();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
 
 ## 示例
 
-获取演示文稿中当前段落的段前间距值。
+此示例展示如何获取当前段落的段前间距值。
 
 ```javascript editor-pptx
-// How to get the size of a spacing before a text from a paragraph in a presentation.
+// How to get the size of a spacing before a text from a paragraph.
 
-// Return a property of the spacing size before a paragraph in a presentation.
+// Return a property of the spacing size before a paragraph.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +55,5 @@ const spacingBefore = paraPr.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
+
 ```

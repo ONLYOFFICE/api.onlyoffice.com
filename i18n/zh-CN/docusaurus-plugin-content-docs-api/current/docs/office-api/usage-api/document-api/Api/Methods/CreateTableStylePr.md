@@ -22,12 +22,12 @@ expression.CreateTableStylePr(sType);
 
 ## 示例
 
-在文档中创建并使用条件表格样式属性。
+此示例展示如何创建和使用条件表格样式属性。
 
 ```javascript editor-docx
-// How to create a style that will be applied to the table elements whish satisfy the condition in a document.
+// How to create a style that will be applied to the table elements whish satisfy the condition.
 
-// Create a conditional table style properties in a document.
+// Create a conditional table style properties.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

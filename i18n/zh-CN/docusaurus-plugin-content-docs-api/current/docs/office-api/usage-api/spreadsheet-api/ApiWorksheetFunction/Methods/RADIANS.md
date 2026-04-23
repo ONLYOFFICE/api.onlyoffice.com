@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将度转换为弧度。
+此示例演示如何将度转换为弧度。
 
 ```javascript editor-xlsx
-// How to get radians from degree in a spreadsheet.
+// How to get radians from degree.
 
-// Use a function to convert degrees to radians in a spreadsheet.
+// Use a function to convert degrees to radians.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

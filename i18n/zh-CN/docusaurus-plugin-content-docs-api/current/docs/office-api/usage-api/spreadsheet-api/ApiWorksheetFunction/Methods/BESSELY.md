@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回修正贝塞尔函数 Yn(x)。
+此示例演示如何返回修正贝塞尔函数 Yn(x)。
 
 ```javascript editor-xlsx
-// How to get a result from Bessel function Yn(x) in a spreadsheet.
+// How to get a result from Bessel function Yn(x).
 
-// Use function to get the Bessel function Yn(x) in a spreadsheet.
+// Use function to get the Bessel function Yn(x).
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

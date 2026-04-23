@@ -2,14 +2,28 @@
 
 返回表格标题（题注）。
 
-继承自 [ApiTablePr.GetTableTitle](../../ApiTablePr/Methods/GetTableTitle.md)。
+## 语法
+
+```javascript
+expression.GetTableTitle();
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中的表格标题。
+此示例展示如何获取表格标题。
 
 ```javascript editor-docx
-// How to get the table title in a document.
+// How to get the table title.
 
 // Display the title of the table in the document.
 

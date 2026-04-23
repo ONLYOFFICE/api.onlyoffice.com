@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-获取文档中的当前单词。
+此示例展示如何获取当前单词。
 
 ```javascript editor-docx
-// How to get a word where the cursor is set in a document.
+// How to get a word where the cursor is set.
 
-// Display the parts of the word before or after the cursor in a document.
+// Display the parts of the word before or after the cursor.
 
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);
@@ -48,4 +48,6 @@ doc.Push(para2);
 para2 = Api.CreateParagraph();
 para2.AddText("The part of the word before cursor is " + doc.GetCurrentWord("before"));
 doc.Push(para2);
+
+
 ```

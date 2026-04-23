@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-推入 run 以将其实际添加到文档中的容器。
+此示例推送文本运行以将其实际添加到容器。
 
 ```javascript editor-docx
-// How to insert the text into the inline content control in a document.
+// How to insert the text into the inline content control.
 
-// Add the text run to the inline text element in a document.
+// Add the text run to the inline text element.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

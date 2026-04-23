@@ -2,6 +2,7 @@
 
 表示 ApiInlineLvlSdt 类。
 
+
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -22,7 +23,7 @@
 | [GetDate](./Methods/GetDate.md) | undefined \| Date | 从日期选择器内容控件中检索所选日期值并将其作为 Date 对象返回。如果内容控件不是日期选择器，则抛出错误。 |
 | [GetDropdownList](./Methods/GetDropdownList.md) | [ApiContentControlList](../ApiContentControlList/ApiContentControlList.md) | 返回组合框/下拉列表内容控件的值列表。 |
 | [GetElement](./Methods/GetElement.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | 使用指定位置返回当前内联文本内容控件的元素。 |
-| [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前内联文本内容控件中的元素数量。文本内容控件默认创建时包含一个文本块，因此即使未添加任何元素，此方法也会返回值「1」。 |
+| [GetElementsCount](./Methods/GetElementsCount.md) | number | 返回当前内联文本内容控件中的元素数量。文本内容控件默认创建时包含一个文本运行，因此即使未添加任何元素，此方法也会返回值「1」。 |
 | [GetId](./Methods/GetId.md) | string | 返回当前内容控件的唯一 ID。 |
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前内容控件的内部 ID。 |
 | [GetLabel](./Methods/GetLabel.md) | number | 返回当前容器的标签属性。 |

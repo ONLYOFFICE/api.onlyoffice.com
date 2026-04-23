@@ -2,16 +2,30 @@
 
 返回段落行距值。
 
-继承自 [ApiParaPr.GetSpacingLineValue](../../ApiParaPr/Methods/GetSpacingLineValue.md)。
+## 语法
+
+```javascript
+expression.GetSpacingLineValue();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) \| undefined
 
 ## 示例
 
-获取演示文稿中的段落行距值。
+此示例展示如何获取段落行距值。
 
 ```javascript editor-pptx
-// / How to get the spacing line value between sentences of a paragraph in a presentation.
+/// How to get the spacing line value between sentences of a paragraph.
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value in a presentation.
+// Create a paragraph, set the spacing line between the sentences and retrieve the value.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,4 +52,5 @@ const spacingLineValue = paraPr.GetSpacingLineValue();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line value : " + spacingLineValue);
 docContent.Push(paragraph);
+
 ```

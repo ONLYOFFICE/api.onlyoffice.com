@@ -23,13 +23,9 @@ string \| null
 
 ## 示例
 
-获取文档中自定义 XML 部件的版本属性值。
+此示例从自定义 XML 部件检索版本属性的值。
 
 ```javascript editor-docx
-// How do I get the attribute in a document?
-
-// Get the attribute using a custom XML part object in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

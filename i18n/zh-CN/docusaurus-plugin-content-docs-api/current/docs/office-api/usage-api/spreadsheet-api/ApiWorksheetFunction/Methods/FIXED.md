@@ -24,12 +24,12 @@ string
 
 ## 示例
 
-在电子表格中将数字四舍五入到指定的小数位数，并以带或不带逗号的文本形式返回结果。
+此示例演示如何将数字舍入到指定的小数位数，并以带或不带逗号的文本形式返回结果。
 
 ```javascript editor-xlsx
-// How to round a number with parameters in a spreadsheet.
+// How to round a number with parameters.
 
-// Use function to round a number with specified decimal points in a spreadsheet.
+// Use function to round a number with specified decimal points.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

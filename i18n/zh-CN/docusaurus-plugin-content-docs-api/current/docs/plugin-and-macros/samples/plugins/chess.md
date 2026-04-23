@@ -14,7 +14,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装
 
-从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) 下载此插件，并根据以下说明进行安装：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、或 [云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/chess) 下载此插件，并根据以下说明进行安装：[桌面版](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)、或 [云端版](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -165,16 +165,16 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 - button
 - init
 - onExternalMouseUp
-- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/EditOleObject.md)
-- [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
-- [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
-- [info.height](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)
-- [info.imgSrc](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
-- [info.mmToPx](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
-- [info.objectId](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#objectId)
-- [info.resize](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#resize)
-- [info.width](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#width)
+- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
+- [info.data](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#data)
+- [info.guid](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#guid)
+- [info.height](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#height)
+- [info.imgSrc](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#imgSrc)
+- [info.mmToPx](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#mmToPx)
+- [info.objectId](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#objectId)
+- [info.resize](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#resize)
+- [info.width](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#width)
 
 ## 支持
 

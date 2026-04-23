@@ -22,12 +22,12 @@ expression.Cut(destination);
 
 ## 示例
 
-在电子表格中将范围剪切到剪贴板。
+此示例将范围剪切到剪贴板。
 
 ```javascript editor-xlsx
-// How to cut a range in a spreadsheet.
+// How to cut a range.
 
-// Get a range, set some value for it and cut it to the clipboard in a spreadsheet.
+// Get a range, set some value for it and cut it to the clipboard.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

@@ -22,12 +22,12 @@ expression.SetTablePr(tablePr);
 
 ## 示例
 
-设置文档中样式的表格属性。
+此示例展示如何设置样式的表格属性。
 
 ```javascript editor-docx
 // How to create table properties for style and set its cells margins.
 
-// Update table properties in the style in a document.
+// Update table properties in the style.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

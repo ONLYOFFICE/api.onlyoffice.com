@@ -11,9 +11,10 @@
 - "xlWhole"
 - "xlPart"
 
+
 ## 示例
 
-指定在区域中搜索完整文本匹配。
+此示例指定在区域中搜索完整文本匹配。
 
 ```javascript editor-xlsx
 // How to indicate how the text should be searched.
@@ -29,4 +30,5 @@ let searchRange = range.Find({
 	SearchDirection: "xlNext",
 	MatchCase: true
 });
+
 ```

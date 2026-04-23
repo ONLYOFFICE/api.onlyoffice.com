@@ -25,7 +25,7 @@ expression.CreateThemeFormatScheme(arrFill, arrBgFill, arrLine, sName);
 
 ## 示例
 
-在演示文稿中创建新的主题格式方案。
+此示例演示如何创建新的主题格式方案。
 
 ```javascript editor-pptx
 // How to change theme format of the theme.
@@ -55,4 +55,5 @@ const formatScheme = Api.CreateThemeFormatScheme([fill1, fill2, fill3], [bgFill1
 const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");
 const theme = Api.CreateTheme("New theme", master, clrScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
+
 ```

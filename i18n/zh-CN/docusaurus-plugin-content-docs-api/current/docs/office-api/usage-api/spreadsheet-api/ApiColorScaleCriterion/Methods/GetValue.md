@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取电子表格中色阶条件的值。
+此示例演示如何获取色阶条件的值。
 
 ```javascript editor-xlsx
-// How to retrieve the value of a color scale criterion in a spreadsheet.
+// How to retrieve the value of a color scale criterion.
 
-// Get the value of a color scale criterion in a spreadsheet.
+// Get the value of a color scale criterion.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,4 +48,5 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Criterion Value:");
     worksheet.GetRange("C2").SetValue(criterionValue || "No value");
 }
+
 ```

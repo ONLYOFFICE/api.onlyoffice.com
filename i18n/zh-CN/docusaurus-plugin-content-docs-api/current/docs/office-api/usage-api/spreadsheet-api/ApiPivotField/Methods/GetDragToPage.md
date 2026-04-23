@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-获取电子表格中透视字段的拖动到页属性。
+此示例展示如何获取透视字段的拖动到页。
 
 ```javascript editor-xlsx
 // How to get a pivot field drag to page.

@@ -20,13 +20,9 @@ expression.GetIconType();
 
 ## 示例
 
-获取 PDF 文档中文本注释的图标类型。
+此示例获取文本注释的图标类型。
 
 ```javascript editor-pdf
-// How to get the icon type for a text annotation in a PDF document?
-
-// Get the icon type and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 textAnnot.SetContents("Annot contents");

@@ -22,7 +22,7 @@ expression.SetTableCellPr(oTableCellPr);
 
 ## 示例
 
-创建并设置将应用于表格中与条件格式类型匹配的所有单元格的表格单元格属性。
+此示例展示如何创建和设置将应用于表格中符合条件格式类型的所有单元格的表格单元格属性。
 
 ```javascript editor-docx
 // How to set the table cell properties to table style.

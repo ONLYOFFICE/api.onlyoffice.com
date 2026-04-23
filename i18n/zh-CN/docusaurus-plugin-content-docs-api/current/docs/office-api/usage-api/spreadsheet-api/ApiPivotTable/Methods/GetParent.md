@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取电子表格中数据透视表的父对象。
+此示例展示如何获取数据透视表的父级。
 
 ```javascript editor-xlsx
-// How to get table parent and show its name in a spreadsheet.
+// How to get table parent and show its name.
 
-// Create a pivot table, add data to it then get its parent in a spreadsheet.
+// Create a pivot table, add data to it then get its parent.
 
 let worksheet = Api.GetActiveSheet();
 

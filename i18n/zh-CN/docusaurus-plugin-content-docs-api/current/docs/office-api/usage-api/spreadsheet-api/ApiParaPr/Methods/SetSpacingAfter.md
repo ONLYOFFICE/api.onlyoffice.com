@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-设置电子表格中当前段落之后的间距。
+此示例设置当前段落的段后间距。
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points in a spreadsheet.
+// How to add the spacing after the paragraphs using points.
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text in a spreadsheet.
+// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

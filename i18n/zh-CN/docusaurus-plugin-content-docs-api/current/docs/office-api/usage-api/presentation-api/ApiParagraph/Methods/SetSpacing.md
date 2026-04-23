@@ -22,13 +22,9 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在演示文稿中设置以磅的二十分之一为单位的文本间距。
+此示例设置以二十分之一磅为单位测量的文本间距。
 
 ```javascript editor-pptx
-// How do I set spacing in a presentation?
-
-// Set spacing using a paragraph object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,4 +38,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text spacing set to 5 points.');
 paragraph.SetSpacing(60);
 slide.AddObject(shape);
+
 ```

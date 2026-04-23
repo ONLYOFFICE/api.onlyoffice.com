@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在 PDF 文档中将毫米转换为像素。
+此示例展示如何将毫米转换为像素。
 
 ```javascript editor-pdf
-// How to convert millimeters to pixels in a PDF document?
-
-// Convert millimeters to pixels using the PDF document API.
-
 const millimeters = 100;
 const pixels = Api.MillimetersToPixels(millimeters);
 
@@ -42,4 +38,5 @@ paragraph.AddText(millimeters + ' millimeters are equal to ' + pixels + ' pixels
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
+
 ```

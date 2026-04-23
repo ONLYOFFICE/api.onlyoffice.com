@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-指定表格单元格内文本内容的垂直对齐方式。
+此示例指定表格单元格中文本内容的垂直对齐方式。
 
 ```javascript editor-docx
 // Set text vertical alignment to the cell.

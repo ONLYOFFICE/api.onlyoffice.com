@@ -20,12 +20,10 @@ boolean
 
 ## 示例
 
-检查文档内容是否为脚注。
+此示例检查 ApiDocumentContent 是否为脚注。
 
 ```javascript editor-docx
 // How to add footnote to the document.
-
-// Is footnote using a document content object.
 
 let doc = Api.GetDocument();
 let footnote = doc.AddFootnote();
@@ -39,4 +37,5 @@ doc.Push(paragraph);
 paragraph.AddText("Footnote " + isFootnote);
 paragraph.AddLineBreak();
 paragraph.AddText("Endnote " + isEndnote);
+
 ```

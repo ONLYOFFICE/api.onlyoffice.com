@@ -25,12 +25,12 @@ void
 
 ## 示例
 
-清除活动筛选并在电子表格的自动筛选范围中显示所有行。
+此示例清除活动筛选并显示自动筛选范围内的所有行。
 
 ```javascript editor-xlsx
-// How to temporarily show all data while keeping the filter drop-downs in a spreadsheet.
+// How to temporarily show all data while keeping the filter drop-downs.
 
-// Remove filter criteria using ApiAutoFilter.ShowAllData() in a spreadsheet.
+// Remove filter criteria using ApiAutoFilter.ShowAllData().
 
 let worksheet = Api.GetActiveSheet();
 
@@ -56,4 +56,5 @@ autoFilter.ShowAllData();
 worksheet.GetRange("C4").SetValue("ShowAllData() called.");
 worksheet.GetRange("C5").SetValue("Filter drop-down remains on header.");
 worksheet.GetRange("C6").SetValue("All rows in the AutoFilter range are visible.");
+
 ```

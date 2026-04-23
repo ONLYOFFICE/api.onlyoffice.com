@@ -21,12 +21,12 @@ expression.GetCustomXmlParts();
 
 ## 示例
 
-获取自定义 XML 管理器，添加新的 XML 部件，并通过 ID 检索。
+此示例展示如何获取自定义 XML 管理器、添加新的 XML 部件并通过其 ID 检索它。
 
 ```javascript editor-pptx
 // How to get custom XML parts from the presentation.
 
-// Get the custom XML parts manager in a presentation.
+// Get the custom XML parts manager.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

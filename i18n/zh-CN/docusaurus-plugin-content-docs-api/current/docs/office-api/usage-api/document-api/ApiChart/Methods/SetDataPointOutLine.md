@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-设置文档中数据点的轮廓。
+此示例展示如何设置数据点的轮廓。
 
 ```javascript editor-docx
 // How to set a numeric format of the data points.

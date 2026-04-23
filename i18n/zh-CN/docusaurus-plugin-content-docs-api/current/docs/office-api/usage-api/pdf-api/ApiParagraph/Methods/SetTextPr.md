@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置段落文本属性。
+此示例设置段落文本属性。
 
 ```javascript editor-pdf
-// How to set text pr for a paragraph in a PDF document?
-
-// Set text pr and display the result in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,4 +41,5 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 paragraph.SetTextPr(textPr);
 page.AddObject(shape);
+
 ```

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的双阶乘。
+此示例演示如何返回数字的双阶乘。
 
 ```javascript editor-xlsx
-// How to calculate a double factorial in a spreadsheet.
+// How to calculate a double factorial.
 
-// Use function to calculate the double factorial of a number in a spreadsheet.
+// Use function to calculate the double factorial of a number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

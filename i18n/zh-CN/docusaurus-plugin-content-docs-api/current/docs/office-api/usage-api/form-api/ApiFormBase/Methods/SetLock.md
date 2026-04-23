@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-指定当前表单是否应被锁定。
+此示例指定当前表单是否应被锁定。
 
 ```javascript editor-forms
 // How to lock a form.
@@ -38,4 +38,5 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
+
 ```

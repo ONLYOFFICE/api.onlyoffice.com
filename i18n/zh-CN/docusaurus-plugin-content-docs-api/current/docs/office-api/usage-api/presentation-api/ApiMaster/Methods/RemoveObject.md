@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-从当前幻灯片母版移除对象（图像、形状或图表）。
+此示例从当前幻灯片母版中删除对象（图像、形状或图表）。
 
 ```javascript editor-pptx
-// How to delete an object from a master in a presentation.
+// How to delete an object from a master.
 
 // Delete an object from a slide master indicating its podition index.
 
@@ -54,4 +54,5 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The second cube was removed from this master.");
+
 ```

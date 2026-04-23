@@ -18,9 +18,10 @@
 - "complexForm"
 - "dateForm"
 
+
 ## 示例
 
-返回当前表单的类型。
+此示例返回当前表单的类型。
 
 ```javascript editor-docx
 // How to get a form type.

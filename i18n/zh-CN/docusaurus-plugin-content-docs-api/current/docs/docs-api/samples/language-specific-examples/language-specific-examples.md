@@ -1,6 +1,5 @@
 ---
 sidebar_position: -5
-sidebar_label: Docs API 集成
 ---
 
 # 特定语言示例

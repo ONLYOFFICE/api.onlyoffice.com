@@ -20,13 +20,10 @@ expression.GetPreset();
 
 ## 示例
 
-从演示文稿页面上的星形获取几何图形信息。在文本形状中显示预设类型和自定义状态。
+从演示文稿页面上的星形形状获取几何信息。
 
 ```javascript editor-pdf
-// How can I get the preset using a geometry in a PDF document?
-
-// Get the preset for a geometry in a PDF document.
-
+// Displays preset type and custom status in a text shape.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

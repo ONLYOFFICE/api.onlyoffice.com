@@ -2,17 +2,27 @@
 
 从当前标记批注获取四边形。
 
-继承自 [ApiBaseMarkupAnnotation.GetQuads](../../ApiBaseMarkupAnnotation/Methods/GetQuads.md)。
+## 语法
+
+```javascript
+expression.GetQuads();
+```
+
+`expression` - 表示 [ApiRedactAnnotation](../ApiRedactAnnotation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[Quad](../../Enumeration/Quad.md)[]
 
 ## 示例
 
-获取 PDF 文档中标记注释的四边形。
+此示例获取标记注释的四边形。
 
 ```javascript editor-pdf
-// How do I get the quads in a PDF document?
-
-// Get the quads using a markup annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

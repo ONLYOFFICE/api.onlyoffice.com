@@ -17,7 +17,7 @@ Inserts custom fields into the document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_add) and install it following the [desktop](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -104,11 +104,11 @@ Repository on GitHub: [example_customfields_add](https://github.com/ONLYOFFICE/s
 
 ## Methods and events
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- executeMethod ("[AddContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControl.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[AddContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControl.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## Support
 

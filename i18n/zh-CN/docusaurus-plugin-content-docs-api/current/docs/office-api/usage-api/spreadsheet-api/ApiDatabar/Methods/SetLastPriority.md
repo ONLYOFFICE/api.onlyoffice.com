@@ -2,11 +2,25 @@
 
 设置当前条件格式规则的计算顺序，使其在工作表上的所有其他规则之后计算。
 
-继承自 [ApiFormatCondition.SetLastPriority](../../ApiFormatCondition/Methods/SetLastPriority.md)。
+## 语法
+
+```javascript
+expression.SetLastPriority();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-将条件格式规则设置为最低优先级。
+此示例将条件格式规则设置为最低优先级。
 
 ```javascript editor-xlsx
 // How to change the priority order of conditional formatting rules.
@@ -41,4 +55,5 @@ condition1.SetLastPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
+
 ```

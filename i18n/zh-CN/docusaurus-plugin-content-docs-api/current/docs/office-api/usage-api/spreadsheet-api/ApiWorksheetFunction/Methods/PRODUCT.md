@@ -22,14 +22,15 @@ number
 
 ## 示例
 
-在电子表格中将所有作为参数给出的数字相乘。
+此示例演示如何将作为参数给出的所有数字相乘。
 
 ```javascript editor-xlsx
-// How to return the result after multiplication in a spreadsheet.
+// How to return the result after multiplication.
 
-// Use a function to multiply a list of numbers in a spreadsheet.
+// Use a function to multiply a list of numbers.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.PRODUCT(65, 34, 165, 6, 9, 54));
+
 ```

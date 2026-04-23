@@ -12,12 +12,13 @@
 - "Equation"
 - "Figure"
 
+
 ## 示例
 
-使用 "Table" 题注标签添加交叉引用。
+此示例添加指向包含表格标题的页面的交叉引用。
 
 ```javascript editor-docx
-// Add a reference to the page with a caption.
+// How to add reference to the page with caption.
 
 // Use caption to create a cross-reference.
 

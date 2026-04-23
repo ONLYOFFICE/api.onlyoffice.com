@@ -20,13 +20,10 @@ expression.GetFill();
 
 ## 示例
 
-获取笔触的填充颜色。在文档中创建带有彩色边框的形状并获取其填充属性。
+获取描边的填充颜色。
 
 ```javascript editor-docx
-// How do I get the fill in a document?
-
-// Get the fill using a stroke object in a document.
-
+// Creates a shape with a colored border and retrieves its fill properties.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -41,4 +38,5 @@ if (strokeObj) {
         paragraph.AddText("Stroke fill type: " + strokeFill.GetType());
     }
 }
+
 ```

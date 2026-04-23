@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的以 10 为底的对数。
+此示例演示如何返回数字的以 10 为底的对数。
 
 ```javascript editor-xlsx
-// How to get the logarithm to the base 10 in a spreadsheet.
+// How to get the logarithm to the base 10.
 
-// Use a function to return the logarithm with the base-10 in a spreadsheet.
+// Use a function to return the logarithm with the base-10.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

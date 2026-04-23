@@ -20,13 +20,9 @@ expression.GetContent();
 
 ## 示例
 
-获取 PDF 文档中自由文本注释的富文本内容。
+此示例获取自由文本注释的富文本内容。
 
 ```javascript editor-pdf
-// How do I get the content in a PDF document?
-
-// Get the content using a free text annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

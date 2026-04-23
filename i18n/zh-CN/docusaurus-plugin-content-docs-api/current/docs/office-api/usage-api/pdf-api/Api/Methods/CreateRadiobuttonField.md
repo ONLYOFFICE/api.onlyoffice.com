@@ -25,10 +25,6 @@ expression.CreateRadiobuttonField(aRect);
 如何创建单选按钮字段并添加到文档。
 
 ```javascript editor-pdf
-// How do I create the radiobutton field in a PDF document?
-
-// Create the radiobutton field and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

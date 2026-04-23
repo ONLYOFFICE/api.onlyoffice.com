@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中指定构成此表格样式的每个表格行带区的行数。
+此示例指定此表格样式中每个表格行带包含的行数。
 
 ```javascript editor-docx
-// How to set row band size in a document.
+// How to set row band size.
 
-// How to style a row band size in a document.
+// How to style a row band size.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();

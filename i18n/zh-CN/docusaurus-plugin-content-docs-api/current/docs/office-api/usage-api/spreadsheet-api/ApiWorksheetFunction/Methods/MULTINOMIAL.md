@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字之和的阶乘与阶乘之积的比率。
+此示例演示如何返回数字总和的阶乘与阶乘乘积的比率。
 
 ```javascript editor-xlsx
-// How to get a result from the ratio of the factorial of a sum of numbers to the product of factorials in a spreadsheet.
+// How to get a result from the ratio of the factorial of a sum of numbers to the product of factorials.
 
-// Use a function to find the ratio of the factorial of a sum of numbers to the product of factorials in a spreadsheet.
+// Use a function to find the ratio of the factorial of a sum of numbers to the product of factorials.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

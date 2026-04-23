@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中基于样本估计标准差（忽略样本中的逻辑值和文本）。
+此示例演示如何根据样本估算标准差（忽略样本中的逻辑值和文本）。
 
 ```javascript editor-xlsx
-// How to calculate the standard deviation based on a sample in a spreadsheet.
+// How to calculate the standard deviation based on a sample.
 
-// Use a function to get the standard deviation in a spreadsheet.
+// Use a function to get the standard deviation.
 
 const worksheet = Api.GetActiveSheet();
 

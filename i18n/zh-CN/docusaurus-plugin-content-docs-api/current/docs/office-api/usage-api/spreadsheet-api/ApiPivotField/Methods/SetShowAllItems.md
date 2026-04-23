@@ -22,12 +22,12 @@ expression.SetShowAllItems(show);
 
 ## 示例
 
-在电子表格中设置透视字段的显示所有项。
+此示例展示如何设置透视字段的显示所有项。
 
 ```javascript editor-xlsx
-// How to change a pivot field show all items value in a spreadsheet.
+// How to change a pivot field show all items value.
 
-// Create a pivot table, add data to it then set show all items of a specified pivot in a spreadsheet.
+// Create a pivot table, add data to it then set show all items of a specified pivot.
 
 let worksheet = Api.GetActiveSheet();
 

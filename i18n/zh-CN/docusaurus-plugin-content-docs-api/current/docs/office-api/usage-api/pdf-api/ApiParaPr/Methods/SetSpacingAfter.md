@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置当前段落的段后间距。
+此示例设置当前段落的段后间距。
 
 ```javascript editor-pdf
-// How to set the size of a spacing after a text from a paragraph properties in a PDF document.
+// How to set the size of a spacing after a text from a paragraph properties.
 
-// Change the size property of a spacing after a paragraph in a PDF document.
+// Change the size property of a spacing after a paragraph.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,7 +42,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingAfter(1440);
@@ -54,4 +54,5 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(secondParagraph);
 page.AddObject(shape);
+
 ```

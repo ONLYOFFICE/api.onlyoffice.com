@@ -27,14 +27,15 @@ number
 
 ## 示例
 
-在电子表格中返回定期付息证券的年久期。
+此示例演示如何返回定期付息证券的年久期。
 
 ```javascript editor-xlsx
-// How to get an annual duration of a security with periodic interest payments in a spreadsheet.
+// How to get an annual duration of a security with periodic interest payments.
 
-// Use function to find an annual duration of a security in a spreadsheet.
+// Use function to find an annual duration of a security.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DURATION("1/10/2018", "6/15/2019", 0.08, 0.09, 4, 1));
+
 ```

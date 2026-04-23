@@ -22,12 +22,12 @@ expression.GetRow(nIndex);
 
 ## 示例
 
-通过索引获取演示文稿中的行。
+此示例展示如何通过索引获取行。
 
 ```javascript editor-pptx
-// How to get a row object from the table in a presentation.
+// How to get a row object from the table.
 
-// Create a table, add rows and columns, then get its row by index in a presentation.
+// Create a table, add rows and columns, then get its row by index.
 
 const presentation = Api.GetPresentation();
 
@@ -43,4 +43,5 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

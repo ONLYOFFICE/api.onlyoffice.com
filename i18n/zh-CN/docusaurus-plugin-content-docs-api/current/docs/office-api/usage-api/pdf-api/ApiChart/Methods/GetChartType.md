@@ -20,13 +20,9 @@ expression.GetChartType();
 
 ## 示例
 
-如何获取 PDF 文档中图表的图表类型。
+如何获取图表的图表类型。
 
 ```javascript editor-pdf
-// How to get the chart type for a chart in a PDF document?
-
-// Get the chart type and display the result in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,4 +40,5 @@ const chartType = chart.GetChartType();
 chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 page.AddObject(chart);
+
 ```

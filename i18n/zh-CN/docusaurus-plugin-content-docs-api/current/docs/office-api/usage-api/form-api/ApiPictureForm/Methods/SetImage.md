@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-为当前图片表单设置图像。
+此示例为当前图片表单设置图像。
 
 ```javascript editor-forms
 // How to set image of the picture form.

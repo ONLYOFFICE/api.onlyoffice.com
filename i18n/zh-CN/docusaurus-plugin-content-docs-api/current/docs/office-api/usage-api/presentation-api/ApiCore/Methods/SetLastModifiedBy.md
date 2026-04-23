@@ -22,13 +22,9 @@ expression.SetLastModifiedBy(sLastModifiedBy);
 
 ## 示例
 
-在演示文稿中设置和获取最后修改当前演示文稿的用户名称。
+此示例演示如何设置和获取最后修改当前演示文稿的用户名称。
 
 ```javascript editor-pptx
-// How can I set last modified by using a core properties in a presentation?
-
-// Set last modified by for a core properties in a presentation.
-
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -44,4 +40,5 @@ paragraph.AddText("Last modified by: " + lastModifiedBy);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

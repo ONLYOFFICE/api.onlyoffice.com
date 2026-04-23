@@ -22,13 +22,9 @@ expression.SetCreated(oCreated);
 
 ## 示例
 
-设置文档中当前文档的创建日期。
+此示例演示如何设置当前文档的创建日期。
 
 ```javascript editor-docx
-// How do I set created in a document?
-
-// Set created using a core properties object in a document.
-
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCreated(new Date('20 January 2000'));
@@ -36,4 +32,5 @@ core.SetCreated(new Date('20 January 2000'));
 const createdDate = core.GetCreated().toDateString();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Created: " + createdDate);
+
 ```

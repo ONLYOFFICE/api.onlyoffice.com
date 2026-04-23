@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-向当前演示文稿幻灯片添加对象（图像、形状或图表）。
+此示例向当前演示文稿幻灯片添加对象（图像、形状或图表）。
 
 ```javascript editor-pptx
 // How to add an element to the slide.
 
-// Create a chart and add it to the slide object.
+// Create a chart and add it to the ApiSlide object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

@@ -1,6 +1,6 @@
 # Copy
 
-创建当前文本块的副本。
+创建当前运行的副本。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.Copy();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建 run 的副本。
+此示例创建运行的副本。
 
 ```javascript editor-docx
-// How to create a duplicate of the text in a document.
+// How to create a duplicate of the text.
 
-// Create a copy of the run and insert it to the paragraph in a document.
+// Create a copy of the run and insert it to the paragraph. 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

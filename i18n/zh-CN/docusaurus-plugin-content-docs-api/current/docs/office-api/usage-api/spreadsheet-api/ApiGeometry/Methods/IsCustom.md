@@ -20,13 +20,10 @@ boolean
 
 ## 示例
 
-从电子表格中的星形获取几何图形信息。在单元格中显示预设类型和自定义状态。
+从电子表格中的星形中检索几何信息。
 
 ```javascript editor-xlsx
-// How do I is custom in a spreadsheet?
-
-// Is custom using a geometry object in a spreadsheet.
-
+// Displays preset type and custom status in cells.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));

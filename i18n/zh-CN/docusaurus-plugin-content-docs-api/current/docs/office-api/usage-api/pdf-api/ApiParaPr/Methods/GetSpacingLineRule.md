@@ -20,12 +20,12 @@ expression.GetSpacingLineRule();
 
 ## 示例
 
-获取 PDF 文档中的段落行距规则。
+此示例展示如何获取段落行距规则。
 
 ```javascript editor-pdf
-// How to get the size of a spacing line rule of a text from a paragraph in a PDF document.
+// How to get the size of a spacing line rule of a text from a paragraph.
 
-// Return a spacing line rule property of a paragraph in a PDF document.
+// Return a spacing line rule property of a paragraph.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingLine(3 * 240, "auto");
@@ -51,4 +51,5 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
+
 ```

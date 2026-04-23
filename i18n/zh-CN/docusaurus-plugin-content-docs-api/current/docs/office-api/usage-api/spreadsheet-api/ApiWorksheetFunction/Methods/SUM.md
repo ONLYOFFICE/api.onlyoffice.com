@@ -22,10 +22,10 @@ number
 
 ## 示例
 
-在电子表格中将单元格范围内的所有数字相加。
+此示例演示如何将单元格区域中的所有数字相加。
 
 ```javascript editor-xlsx
-// How to sum up all values from the list in a spreadsheet.
+// How to sum up all values from the list.
 
 // Use a function to estimate a sum from the cells.
 

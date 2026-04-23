@@ -20,12 +20,11 @@ string
 
 ## 示例
 
-创建一个包含三个单选按钮的表单，并为每个单选按钮指定选项名称。通过为每个单选按钮设置相同的单选组键将单选按钮分组在一起。单选组键显示在文档末尾。
+此示例展示如何创建包含三个单选按钮的表单并为每个单选按钮指定选项名称。
 
 ```javascript editor-docx
-// How to get the choice name for a checkbox form?
-
-// Get the choice name and display the result in a document.
+// The radio buttons are grouped together by setting the same radio group key for each radio button.
+// The radio group key is displayed at the end of the document.
 
 let doc = Api.GetDocument();
 

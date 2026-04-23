@@ -22,7 +22,7 @@ expression.Merge(isAcross);
 
 ## 示例
 
-将选定的单元格范围合并为单个单元格或单元格行。
+此示例将选定的单元格范围合并为单个单元格或单元格行。
 
 ```javascript editor-xlsx
 // How to get a range using cell addresses and merge them into one.

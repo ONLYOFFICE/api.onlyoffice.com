@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回标准正态分布（均值为零，标准差为一）。
+此示例演示如何返回标准正态分布（平均值为零，标准差为一）。
 
 ```javascript editor-xlsx
-// How to calculate the standard normal distribution in a spreadsheet.
+// How to calculate the standard normal distribution.
 
-// Use a function to get the standard normal distribution with a mean = 0 and standard deviation = 1 in a spreadsheet.
+// Use a function to get the standard normal distribution with a mean = 0 and standard deviation = 1.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

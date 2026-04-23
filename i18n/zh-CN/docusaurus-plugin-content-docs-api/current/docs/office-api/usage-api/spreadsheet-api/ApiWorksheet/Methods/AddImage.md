@@ -28,7 +28,7 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 ## 示例
 
-在电子表格中使用指定参数向工作表添加图像。
+此示例使用指定的参数向工作表添加图像。
 
 ```javascript editor-xlsx
 // How to add an image to the worksheet specifying its url and size.
@@ -37,4 +37,5 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddImage("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", 60 * 36000, 35 * 36000, 0, 2 * 36000, 0, 3 * 36000);
+
 ```

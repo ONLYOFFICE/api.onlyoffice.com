@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中主题字体方案的类类型。
+此示例获取类类型并将其粘贴到演示文稿中。
 
 ```javascript editor-pptx
-// How to identify the class type of a theme font scheme in a presentation?
+// How to get a class type of ApiThemeFontScheme.
 
-// Obtain the class type identifier of a theme font scheme object in a presentation.
+// Retrieve class type of ApiThemeFontScheme object and insert it to the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + sType);
 slide.AddObject(shape);
+
 ```

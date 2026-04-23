@@ -2,16 +2,30 @@
 
 从当前文本属性获取斜体属性。
 
-继承自 [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md)。
+## 语法
+
+```javascript
+expression.GetItalic();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-获取电子表格中文本的斜体属性。
+此示例获取文本斜体属性。
 
 ```javascript editor-xlsx
-// How to find out whether a text is italic or not in a spreadsheet.
+// How to find out whether a text is italic or not.
 
-// Get a text italic property as a boolean value in a spreadsheet.
+// Get a text italic property as a boolean value.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

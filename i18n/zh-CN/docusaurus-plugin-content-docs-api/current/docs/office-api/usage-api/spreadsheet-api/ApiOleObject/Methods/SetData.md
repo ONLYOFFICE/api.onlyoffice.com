@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在电子表格中为当前 OLE 对象设置数据。
+此示例设置当前 OLE 对象的数据。
 
 ```javascript editor-xlsx
-// How to change content of OLE object in a spreadsheet.
+// How to change content of OLE object.
 
 // Add Ole object, set its data and display it in the worksheet.
 
@@ -38,4 +38,5 @@ let oleObject = worksheet.AddOleObject(
 	0, 2 * 36000, 4, 3 * 36000
 );
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
+
 ```

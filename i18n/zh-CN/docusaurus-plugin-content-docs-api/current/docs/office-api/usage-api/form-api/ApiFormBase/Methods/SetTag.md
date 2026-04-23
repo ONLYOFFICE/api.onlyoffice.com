@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置文档中表单元素的标签。
+此示例展示如何设置表单元素的标签。
 
 ```javascript editor-forms
-// How to set tag for a form base?
-
-// Set tag and display the result in a document.
-
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -50,4 +46,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
+
 ```

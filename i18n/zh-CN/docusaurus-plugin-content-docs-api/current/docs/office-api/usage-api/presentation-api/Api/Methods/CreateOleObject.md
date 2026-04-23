@@ -26,13 +26,13 @@ expression.CreateOleObject(sImageSrc, nWidth, nHeight, sData, sAppId);
 
 ## 示例
 
-创建 OLE 对象并将其插入到幻灯片中。
+此示例创建 OLE 对象并将其插入幻灯片。
 
 ```javascript editor-pptx
-// How to create an Ole object in a presentation.
+// How to create an Ole object.
 
 // Add an Ole object to the slide.
-
+ 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +46,5 @@ const oleObject = Api.CreateOleObject(
 oleObject.SetSize(200 * 36000, 130 * 36000);
 oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
+
 ```

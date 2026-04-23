@@ -8,7 +8,7 @@
 expression.SetSpacing(nSpacing);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在文档中设置以磅的二十分之一为单位的文本间距。
+此示例设置以二十分之一磅为单位测量的文本间距。
 
 ```javascript editor-docx
-// How to resize spacing between words in a text run in a document.
+// How to resize spacing between words in a text run.
 
-// Create a new text run and set its spacing size (point * 20) in a document.
+// Create a new text run and set its spacing size (point * 20).
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

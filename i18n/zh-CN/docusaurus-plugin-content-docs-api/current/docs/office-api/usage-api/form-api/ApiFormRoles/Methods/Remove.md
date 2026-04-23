@@ -23,13 +23,9 @@ boolean
 
 ## 示例
 
-在表单文档中移除角色。
+此示例展示如何移除角色。
 
 ```javascript editor-forms
-// How to remove for a form roles?
-
-// Remove and display the result in a form document.
-
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");

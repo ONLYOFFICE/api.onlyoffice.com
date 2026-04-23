@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 - 带有代码的 JS 文件，
 - 带有配置的 JSON 文件。
 
-有关插件结构的更多信息可以在[这里](../../../plugin-and-macros/structure/configuration/configuration.md)找到。
+有关插件结构的更多信息可以在[这里](../../../plugin-and-macros/plugins/fundamentals/configuration/config-json.md)找到。
 
 让我们看一下配置：
 
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
-所有配置参数都在[文档](../../../plugin-and-macros/structure/configuration/configuration.md)中有描述。
+所有配置参数都在[文档](../../../plugin-and-macros/plugins/fundamentals/configuration/config-json.md)中有描述。
 
 配置文件准备好后，创建带有以下内容的插件代码文件：
 
@@ -83,11 +83,9 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-从上面的代码可以看出，所有文件都将使用一个密码加密——*\{my-super-long-password\}*。[OnEncryption](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/OnEncryption.md)、[StartAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md)、[EndAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md) 方法可以在**插件和宏 API 文档**中找到。
+从上面的代码可以看出，所有文件都将使用一个密码加密——*\{my-super-long-password\}*。[OnEncryption](../../../plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/OnEncryption.md)、[StartAction](../../../plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/StartAction.md)、[EndAction](../../../plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/EndAction.md) 方法可以在**插件和宏 API 文档**中找到。
 
-:::note
-请注意，*OnEncryption* 方法的 *encryptData* 和 *decryptData* 类型与本地文件无关。
-:::
+> 请注意，*OnEncryption* 方法的 *encryptData* 和 *decryptData* 类型与本地文件无关。
 
 ## 步骤 2：为应用创建 UI 插件
 
@@ -138,7 +136,7 @@ window.Asc.plugin.init = function init(obj) {
 
 有了它，我们将在主应用页面上获得一个名为**Encryption**的新选项卡：
 
-![Encryption enabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption enabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
+![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
 
 通过勾选复选框启用加密：
 
@@ -189,7 +187,7 @@ window.addEventListener("load", () => {
 
 重要的是，您要使用插件 GUID 作为文件夹名称。
 
-详细说明可以在[这里](../../../plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md)找到。
+详细说明可以在[这里](../../../plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)找到。
 
 ## 步骤 4：使用加密插件
 

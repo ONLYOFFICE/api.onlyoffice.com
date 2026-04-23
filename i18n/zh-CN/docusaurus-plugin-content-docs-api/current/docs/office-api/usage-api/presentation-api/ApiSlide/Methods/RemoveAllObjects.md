@@ -20,7 +20,7 @@ expression.RemoveAllObjects();
 
 ## 示例
 
-从当前幻灯片移除所有对象。
+此示例从当前幻灯片中移除所有对象。
 
 ```javascript editor-pptx
 // How to remove all elements from the slide.
@@ -49,4 +49,5 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("All objects were removed from this slide before adding this shape.");
 slide.AddObject(shape);
+
 ```

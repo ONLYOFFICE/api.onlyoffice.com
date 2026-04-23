@@ -20,13 +20,10 @@ number
 
 ## 示例
 
-分析演示文稿幻灯片上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+分析演示文稿幻灯片上星形形状的路径命令。
 
 ```javascript editor-pptx
-// How do I get the command count in a presentation?
-
-// Get the command count using a geometry path object in a presentation.
-
+// Shows command count and first command details in a text shape.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

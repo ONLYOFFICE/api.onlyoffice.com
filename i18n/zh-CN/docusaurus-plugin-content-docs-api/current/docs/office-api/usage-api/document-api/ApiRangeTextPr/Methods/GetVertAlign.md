@@ -2,16 +2,30 @@
 
 从当前文本属性获取垂直对齐类型。
 
-继承自 [ApiTextPr.GetVertAlign](../../ApiTextPr/Methods/GetVertAlign.md)。
+## 语法
+
+```javascript
+expression.GetVertAlign();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中文本的垂直对齐方式。
+此示例展示如何查明文本的垂直对齐方式。
 
 ```javascript editor-docx
-// How to know whether a text is subscript, superscript or baseline in a document.
+// How to know whether a text is subscript, superscript or baseline.
 
-// Get the text properties of the run and find its vertical alignment in a document.
+// Get the text properties of the run and find its vertical alignment.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

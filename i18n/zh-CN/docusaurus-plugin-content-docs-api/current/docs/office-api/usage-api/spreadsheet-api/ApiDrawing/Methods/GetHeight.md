@@ -20,10 +20,10 @@ expression.GetHeight();
 
 ## 示例
 
-获取电子表格中绘图对象的高度。
+此示例展示如何获取绘图的高度。
 
 ```javascript editor-xlsx
-// How to know a height of a drawing in a spreadsheet.
+// How to know a height of a drawing.
 
 // Get a drawing's height and display it in the worksheet.
 

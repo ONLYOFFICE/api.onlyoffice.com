@@ -15,10 +15,10 @@ expression.SetDistances(nLeft, nTop, nRight, nBottom);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象左侧与后续文本块之间的距离，以英制单位测量。 |
-| nTop | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象顶侧与前面文本块之间的距离，以英制单位测量。 |
-| nRight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象右侧与后续文本块之间的距离，以英制单位测量。 |
-| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象底侧与后续文本块之间的距离，以英制单位测量。 |
+| nLeft | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象左侧与后续文本运行之间的距离，以英制单位测量。 |
+| nTop | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象顶侧与前面文本运行之间的距离，以英制单位测量。 |
+| nRight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象右侧与后续文本运行之间的距离，以英制单位测量。 |
+| nBottom | 必需 | [EMU](../../Enumeration/EMU.md) |  | 当前对象底侧与后续文本运行之间的距离，以英制单位测量。 |
 
 ## 返回值
 
@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-指定文档中绘图对象边缘与后续文本之间保持的最小距离。
+此示例指定将在绘图对象的边缘和任何后续文本之间保持的最小距离。
 
 ```javascript editor-docx
-// How to create drawings and set the distance between them in a document.
+// How to create drawings and set the distance between them.
 
-// Create a rectangle, square and set the minimum distance between them in a document.
+// Create a rectangle, square and set the minimum distance between them.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

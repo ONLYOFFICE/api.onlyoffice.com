@@ -8,7 +8,7 @@
 expression.ToJSON(bWriteStyles);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,7 +22,7 @@ JSON
 
 ## 示例
 
-在文档中将文本 run 对象转换为 JSON 对象。
+此示例将 ApiRun 对象转换为 JSON 对象。
 
 ```javascript editor-docx
 // How to convert a slide object to a JSON object.

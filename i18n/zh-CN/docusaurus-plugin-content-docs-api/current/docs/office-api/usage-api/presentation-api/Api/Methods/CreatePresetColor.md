@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## 示例
 
-在演示文稿中创建用于创建渐变光圈的颜色选择。
+此示例创建用于创建渐变停止点的颜色选择。
 
 ```javascript editor-pptx
-// How to create a preset color in a presentation.
+// How to create a preset color.
 
-// Add a preset color as a gradient stop in a presentation.
+// Add a preset color as a gradient stop.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
+
 ```

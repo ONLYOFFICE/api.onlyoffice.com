@@ -22,12 +22,12 @@ expression.CreateGroup(drawings);
 
 ## 示例
 
-在演示文稿中创建组。
+此示例演示如何创建组。
 
 ```javascript editor-pptx
-// How to create a group of drawings in a presentation.
+// How to create a group of drawings.
 
-// Group the specified list of shapes in a presentation.
+// Group the specified list of shapes.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,5 @@ shape1.SetPosition(608400, 1267200);
 shape2.SetPosition(3100000, 1867200);
 let group = Api.CreateGroup([shape1, shape2]);
 slide.AddObject(group);
+
 ```

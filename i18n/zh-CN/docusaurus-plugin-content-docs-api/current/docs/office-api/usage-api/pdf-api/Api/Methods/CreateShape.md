@@ -26,12 +26,10 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## 示例
 
-如何在 PDF 文档中添加新的流程图形状。
+如何添加新的流程图形状。
 
 ```javascript editor-pdf
-// Add a new shape indicating its properties in a PDF document.
-
-// Create the shape in a PDF document.
+// Add a new shape indicating its properties.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,10 +22,10 @@ expression.SetSolved(bSolved);
 
 ## 示例
 
-在电子表格中将批注标记为已解决。
+此示例将批注标记为已解决。
 
 ```javascript editor-xlsx
-// How to resolve a comment in a spreadsheet.
+// How to resolve a comment.
 
 // Resolve a comment, then show its status in the worksheet.
 

@@ -1,6 +1,6 @@
 # SetOutLine
 
-设置当前文本块的文本轮廓。
+设置当前文本运行的文本轮廓。
 
 ## 语法
 
@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## 示例
 
-为文档中的艺术字文本设置文本轮廓。
+在此示例中，艺术字文本具有文本轮廓。
 
 ```javascript editor-docx
-// How to set an outline to the text in a document.
+// How to set an outline to the text.
 
-// Create a text run object, change its property by outlining it with a color in a document.
+// Create a text run object, change its property by outlining it with a color.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

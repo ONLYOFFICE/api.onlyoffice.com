@@ -26,13 +26,9 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置数字格式。
+此示例获取文本字段并为其设置数字格式。
 
 ```javascript editor-pdf
-// How can I set number format using a text field in a PDF document?
-
-// Set number format for a text field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -40,4 +36,5 @@ page.AddObject(textField);
 
 textField.SetNumberFormat(0, "us", "black-minus", "$", true);
 textField.SetValue('-1000.50');
+
 ```

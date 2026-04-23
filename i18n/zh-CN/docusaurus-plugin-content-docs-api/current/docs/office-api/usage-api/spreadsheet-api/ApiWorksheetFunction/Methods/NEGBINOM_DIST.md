@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回负二项分布，即在最后一次成功之前出现指定数量失败的概率，具有指定的成功概率。
+此示例演示如何返回负二项分布，即在最后一次成功之前出现指定失败次数的概率，成功概率为指定值。
 
 ```javascript editor-xlsx
-// How to return the negative binomial distribution in a spreadsheet.
+// How to return the negative binomial distribution.
 
-// Use a function to get the probability of the specified number of failures before the last success (negative binomial distribution) in a spreadsheet.
+// Use a function to get the probability of the specified number of failures before the last success (negative binomial distribution).
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

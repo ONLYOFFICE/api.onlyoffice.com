@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -16,9 +16,10 @@ Object
 | maxCharacters | number | 文本字段中的最大字符数。 |
 | multiLine | boolean | 指定当前固定大小的文本字段是否为多行。 |
 
+
 ## 示例
 
-创建具有特定文本表单属性的文本表单。
+此示例创建具有特定文本表单属性的文本表单。
 
 ```javascript editor-forms
 // How to create a text form with adding base properties like max characters limit, cell width, etc. to it.
@@ -33,4 +34,5 @@ let textFormPrBase = {
 	"autoFit": false
 };
 let textForm = Api.CreateTextForm(textFormPrBase);
+
 ```

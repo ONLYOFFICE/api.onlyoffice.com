@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取水印类型并将其粘贴到文档中。
+此示例获取水印类型并将其粘贴到文档中。
 
 ```javascript editor-docx
-// How to get type of the watermark in a document.
+// How to get type of the watermark.
 
-// Display the name of the watermark style in a document.
+// Display the name of the watermark style.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

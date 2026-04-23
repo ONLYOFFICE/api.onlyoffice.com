@@ -14,7 +14,7 @@
 
 在 ONLYOFFICE 编辑器的云端、本地部署和桌面版本中默认可用。
 
-你可以按照以下说明卸载插件：[桌面版](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](../../tutorials/installing/onlyoffice-docs-on-premises.md)、[云端版](../../tutorials/installing/onlyoffice-cloud.md)。
+你可以按照以下说明卸载插件：[桌面版](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)、[云端版](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 插件 GUID：`{07FD8DFA-DFE0-4089-AL24-0730933CC80A}`。
 
@@ -183,16 +183,16 @@ GitHub 仓库：[photoeditor](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## 方法和事件
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
-- [callCommand](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
-- [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)
-- [executeMethod ("GerVersion")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetVersion.md)
-- [executeMethod ("PutImageDataToSelection")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PutImageDataToSelection.md)
-- [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
-- [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
-- [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onTranslate](/docs/plugin-and-macros/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
+- [callCommand](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#callcommand)
+- [executeMethod ("GetImageDataFromSelection")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetImageDataFromSelection.md)
+- [executeMethod ("GerVersion")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetVersion.md)
+- [executeMethod ("PutImageDataToSelection")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PutImageDataToSelection.md)
+- [resizeWindow](/docs/plugin-and-macros/plugins/customization/windows-and-panels.md#interacting-with-a-window)
+- [Asc.scope](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
+- [info.editorType](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 
 ## 支持
 

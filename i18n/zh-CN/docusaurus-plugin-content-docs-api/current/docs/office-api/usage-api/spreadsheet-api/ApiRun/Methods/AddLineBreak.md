@@ -1,6 +1,6 @@
 # AddLineBreak
 
-在当前文本块位置添加换行符，并从新行开始下一个元素。
+在当前运行位置添加换行符，并从新行开始下一个元素。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddLineBreak();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在电子表格中向 run 位置添加换行符并从新行开始下一个元素。
+此示例在运行位置添加换行符，并从新行开始下一个元素。
 
 ```javascript editor-xlsx
-// How to start a sentence on a new line in a spreadsheet.
+// How to start a sentence on a new line.
 
-// Break two lines of a text run with a line in a spreadsheet.
+// Break two lines of a text run with a line. 
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

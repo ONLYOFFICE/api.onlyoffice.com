@@ -20,13 +20,9 @@ number
 
 ## 示例
 
-获取文档中统一颜色的 RGB 值（预设颜色继承自统一颜色）。
+此示例展示如何获取 ApiUniColor 的 RGB 值（ApiPresetColor 继承自 ApiUniColor）。
 
 ```javascript editor-docx
-// How to get the r g b for an uni color in a document?
-
-// Get the r g b and display the result in a document.
-
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 
@@ -51,4 +47,5 @@ text += '\nG: ' + rgb.G;
 text += '\nB: ' + rgb.B;
 paragraph.AddText(text);
 doc.Push(paragraph);
+
 ```

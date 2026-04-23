@@ -22,16 +22,13 @@ expression.HexColor(hexString);
 
 ## 示例
 
-在电子表格中创建十六进制颜色并将其用作形状填充。
+此示例展示如何创建十六进制颜色并将其用作形状填充。
 
 ```javascript editor-xlsx
-// How do I hex color in a spreadsheet?
-
-// Hex color and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const color = Api.HexColor('#DECADE');
 const fill = Api.CreateSolidFill(color);
 const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+
 ```

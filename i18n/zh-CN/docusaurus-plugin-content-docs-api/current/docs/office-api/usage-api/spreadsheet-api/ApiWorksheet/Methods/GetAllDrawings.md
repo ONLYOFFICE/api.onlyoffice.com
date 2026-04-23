@@ -20,12 +20,12 @@ expression.GetAllDrawings();
 
 ## 示例
 
-在电子表格中获取工作表中的所有绘图对象。
+此示例展示如何从工作表获取所有绘图。
 
 ```javascript editor-xlsx
-// How to get all drawings in a spreadsheet.
+// How to get all drawings.
 
-// Get all drawings as an array in a spreadsheet.
+// Get all drawings as an array.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

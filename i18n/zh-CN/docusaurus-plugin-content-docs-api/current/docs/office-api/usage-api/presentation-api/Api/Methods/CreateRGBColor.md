@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## 示例
 
-在演示文稿中为渐变光圈创建 RGB 颜色。
+此示例演示如何为渐变停止点创建 RGB 颜色。
 
 ```javascript editor-pptx
-// How to create a RGB color for a gradient stop in a presentation.
+// How to create a RGB color for a gradient stop.
 
-// Add an RGB color as a stop for a gradient in a presentation.
+// Add an RGB color as a stop for a gradient.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,4 +43,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
+
 ```

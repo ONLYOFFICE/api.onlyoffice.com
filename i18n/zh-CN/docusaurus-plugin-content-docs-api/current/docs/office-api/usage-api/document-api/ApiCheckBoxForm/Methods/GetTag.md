@@ -2,17 +2,27 @@
 
 返回当前表单的标签属性。
 
-继承自 [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md)。
+## 语法
+
+```javascript
+expression.GetTag();
+```
+
+`expression` - 表示 [ApiCheckBoxForm](../ApiCheckBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中表单元素的标签。
+此示例展示如何获取表单元素的标签。
 
 ```javascript editor-docx
-// How to get the tag for a form base?
-
-// Get the tag and display the result in a document.
-
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -34,4 +44,5 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
+
 ```

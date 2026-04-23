@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-在文档中使用指定的字体系列设置所有 4 个字体槽。
+此示例使用指定的字体系列设置所有 4 个字体槽。
 
 ```javascript editor-docx
-// How to change the text font family in a document.
+// How to change the text font family.
 
-// Create a text run object and set the "Comic Sans MS" font faminy to it in a document.
+// Create a text run object and set the "Comic Sans MS" font faminy to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

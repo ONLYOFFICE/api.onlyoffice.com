@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-在文档中设置表单数据。
+此示例展示如何向表单设置数据。
 
 ```javascript editor-forms
 // How to set forms data in the document.
@@ -40,4 +40,5 @@ doc.SetFormsData([
     {key: "BestCompany", value: true},
     {key: "CompanyName", value: "OnlyOffice"}
 ]);
+
 ```

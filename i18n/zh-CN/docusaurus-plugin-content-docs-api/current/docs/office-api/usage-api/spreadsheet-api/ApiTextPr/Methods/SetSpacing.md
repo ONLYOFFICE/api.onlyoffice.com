@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在电子表格中设置以磅的二十分之一为单位的文本间距。
+此示例设置以二十分之一磅为单位测量的文本间距。
 
 ```javascript editor-xlsx
-// How to set space size of a text in a spreadsheet.
+// How to set space size of a text.
 
-// Change spacing size using the text properties API in a spreadsheet.
+// Change spacing size.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -2,7 +2,7 @@
 sidebar_position: -5
 ---
 
-# PHP 集成
+# PHP 示例
 
 ## 概述
 

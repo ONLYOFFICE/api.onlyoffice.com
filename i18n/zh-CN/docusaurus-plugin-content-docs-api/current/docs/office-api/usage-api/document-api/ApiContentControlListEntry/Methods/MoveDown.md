@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-在文档中将下拉列表或组合框内容控件中的项目向下移动一个位置，使其位于原来紧随其后的项目之后。
+此示例将下拉列表或组合框内容控件中的项目向下移动一项，使其位于原本跟随它的项目之后。
 
 ```javascript editor-docx
-// How to move down for a content control list entry in a document?
-
-// Move down and display the result in a document.
-
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);
 let contentControlList = cc.GetDropdownList();
@@ -34,4 +30,5 @@ let listItem = contentControlList.GetItem(0);
 listItem.MoveDown();
 let paragraph = doc.GetElement(0);
 paragraph.Push(cc);
+
 ```

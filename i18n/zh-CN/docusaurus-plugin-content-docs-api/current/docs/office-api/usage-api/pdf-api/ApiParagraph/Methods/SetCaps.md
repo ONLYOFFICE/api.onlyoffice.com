@@ -22,13 +22,9 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-在 PDF 文档中将段落中的所有字符设置为以大写字母显示。
+此示例将段落中的所有字符设置为大写显示。
 
 ```javascript editor-pdf
-// How to set caps for a paragraph in a PDF document?
-
-// Set caps and display the result in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,4 +37,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to capitalized letters.');
 paragraph.SetCaps(true);
 page.AddObject(shape);
+
 ```

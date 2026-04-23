@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将数字向零方向向下舍入。
+此示例演示如何将数字向下舍入，向零方向。
 
 ```javascript editor-xlsx
-// How to round a number down in a spreadsheet.
+// How to round a number down.
 
-// Use a function to round a number towards zero in a spreadsheet.
+// Use a function to round a number towards zero.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

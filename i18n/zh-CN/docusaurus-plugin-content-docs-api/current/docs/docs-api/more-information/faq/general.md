@@ -51,9 +51,7 @@ ONLYOFFICE 文档使用 [Node.js 配置模块](https://www.npmjs.com/package/con
 
 所有主要设置都存储在 *default.json* 文件中，其中一些设置被 *production.json* 文件中的设置添加或覆盖，任何用户/开发人员设置被 *local.json* 配置文件中的设置覆盖。
 
-:::note
-如果您更改 *default.json* 或 *production.json* 文件中的参数，所有更改将在 ONLYOFFICE 文档更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 ONLYOFFICE 文档）。
-:::
+> 如果您更改 *default.json* 或 *production.json* 文件中的参数，所有更改将在 ONLYOFFICE 文档更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 ONLYOFFICE 文档）。
 
 因此，我们强烈建议您**不要**更改 *default.json* 或 *production.json* 文件中的参数，而是使用 *local.json* 配置文件。此文件必须与 *default.json* 文件在同一文件夹中创建，并且**必须保留**必要参数的**整个对象结构**。
 

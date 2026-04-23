@@ -20,13 +20,9 @@ number
 
 ## 示例
 
-获取并显示演示文稿中的切换持续时间。
+此示例获取过渡持续时间并显示。
 
 ```javascript editor-pptx
-// How to get the duration for a slide show transition?
-
-// Get the duration and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -48,4 +44,5 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Duration: ' + duration + ' ms');
 slide.AddObject(shape);
+
 ```

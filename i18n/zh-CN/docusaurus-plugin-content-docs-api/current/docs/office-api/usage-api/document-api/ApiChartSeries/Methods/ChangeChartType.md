@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更改图表类的第一个系列的类型并将新类型插入到文档中。
+此示例更改 ApiChart 类第一个系列的类型并将新类型插入文档中。
 
 ```javascript editor-docx
-// How to change a chart type in a document.
+// How to change a chart type.
 
-// Change a chart type to the "area" type in a document.
+// Change a chart type to the "area" type.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

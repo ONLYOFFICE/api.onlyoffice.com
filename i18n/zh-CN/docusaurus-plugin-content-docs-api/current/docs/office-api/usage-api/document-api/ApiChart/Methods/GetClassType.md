@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中图表返回的类类型。
+此示例获取 ApiChart 类的类型并将其插入文档中。
 
 ```javascript editor-docx
-// How do I check what type a chart object is in a document?
+// How to get a ApiChart class type name.
 
-// Retrieve and output the class type string for a chart in a document.
+// Create a chart and then display its class type.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

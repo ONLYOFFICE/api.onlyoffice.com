@@ -27,13 +27,10 @@ expression.CubicBezTo(x1, y1, x2, y2, x3, y3);
 
 ## 示例
 
-使用不同的贝塞尔和弧线命令创建复杂的曲线形状。在电子表格中的单条路径中组合多种曲线类型。
+使用不同的贝塞尔曲线和弧命令创建复杂的曲线形状。
 
 ```javascript editor-xlsx
-// How can I cubic bez to using a geometry path in a spreadsheet?
-
-// Cubic bez to for a geometry path in a spreadsheet.
-
+// Combines multiple curve types in a single path.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置按钮控件的行为类型。
+此示例设置按钮控件的行为类型。
 
 ```javascript editor-pdf
-// How do I set behavior in a PDF document?
-
-// Set behavior using a button widget object in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

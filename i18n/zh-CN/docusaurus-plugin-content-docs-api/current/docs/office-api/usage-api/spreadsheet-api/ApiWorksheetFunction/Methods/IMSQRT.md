@@ -22,14 +22,15 @@ number
 
 ## 示例
 
-在电子表格中返回复数的平方根。
+此示例演示如何返回复数的平方根。
 
 ```javascript editor-xlsx
-// How to get the square root in a spreadsheet.
+// How to get the square root.
 
-// Use a function to get the square root of a complex number in a spreadsheet.
+// Use a function to get the square root of a complex number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.IMSQRT("-2+2.5i"));
+
 ```

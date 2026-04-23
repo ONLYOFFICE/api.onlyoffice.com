@@ -24,12 +24,12 @@ expression.SetBorders(bordersIndex, lineStyle, oColor);
 
 ## 示例
 
-使用指定的参数为单元格设置边框。
+此示例使用指定的参数设置单元格的边框。
 
 ```javascript editor-xlsx
 // How to set the thick bottom border to a cell.
 
-// Get a range and set its border specifying its side, type and color in a spreadsheet.
+// Get a range and set its border specifying its side, type and color.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);

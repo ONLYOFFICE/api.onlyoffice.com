@@ -22,9 +22,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-:::note
-默认值在 `default.json` 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 `default.json` 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档**升级到新版本时都会恢复默认值，并且所有更改都将丢失。
-:::
+> 默认值在 `default.json` 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。请不要直接编辑 `default.json` 文件的内容。每次重新启动 Docker 容器或将 **ONLYOFFICE 文档**升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 
 重新启动服务以使配置更改生效：
 
@@ -80,7 +78,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | wopi.refreshLockInterval       | string           | "10m"                                                                                                                                                                 | 通过将文件自动过期定时器重置为 30 分钟，定义刷新文件锁定的间隔时间（以分钟为单位）。                                                                                                                |
 | wopi.dummy                     | object           |                                                                                                                                                                       | 定义压力测试的虚拟处理程序的属性。                                                                                                                                                                                     |
 | wopi.dummy.enable              | boolean          | false                                                                                                                                                                 | 定义是否启用虚拟处理程序。                                                                                                                                                                                                |
-| wopi.dummy.<br/>sampleFilePath | string           | ""                                                                                                                                                                    | 定义示例文件的虚拟路径。                                                                                                                                                                                                           |
+| wopi.dummy.<br/>sampleFilePath | string           | ""              
 
 ```mdx-code-block
 </APITable>

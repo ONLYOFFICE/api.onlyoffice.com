@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-检查文档中的文本是否设置了双删除线属性。
+此示例查明文本是否设置了双删除线属性。
 
 ```javascript editor-docx
-// How to know whether a text is crossed by two horizontal lines in a document.
+// How to know whether a text is crossed by two horizontal lines.
 
 // Retrieve text properties of the form to find out whether it is double stroke out.
 

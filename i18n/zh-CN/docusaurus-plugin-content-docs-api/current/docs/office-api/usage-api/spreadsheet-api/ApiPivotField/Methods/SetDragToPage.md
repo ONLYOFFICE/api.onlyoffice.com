@@ -22,7 +22,7 @@ expression.SetDragToPage(flag);
 
 ## 示例
 
-在电子表格中设置透视字段的拖动到页属性。
+此示例展示如何设置透视字段的拖动到页。
 
 ```javascript editor-xlsx
 // How to rename a pivot field drag to page.

@@ -12,7 +12,7 @@
 
 ## 安装方式
 
-从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) 下载此插件，并按照以下说明完成安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)、或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) 下载此插件，并按照以下说明完成安装：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)、或[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## 使用方法
 
@@ -109,16 +109,16 @@ GitHub 仓库：[example_extended_comments](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 方法和事件
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onAddComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onAddComment.md)
-- [onChangeCommentData](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onChangeCommentData.md)
-- [onRemoveComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onRemoveComment.md)
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onAddComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onAddComment.md)
+- [onChangeCommentData](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onRemoveComment.md)
 - executeMethod ("[AddComment](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
-- executeMethod ("[ChangeComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/ChangeComment.md)")
-- executeMethod ("[GetAllComments](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetAllComments.md)")
-- executeMethod ("[MoveToComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveToComment.md)")
-- executeMethod ("[RemoveComments](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RemoveComments.md)")
+- executeMethod ("[ChangeComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/RemoveComments.md)")
 
 ## 支持
 

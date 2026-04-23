@@ -20,12 +20,12 @@ expression.GetAllImages();
 
 ## 示例
 
-在电子表格中获取工作表中的所有图像。
+此示例展示如何从工作表获取所有图像。
 
 ```javascript editor-xlsx
-// How to get all images in a spreadsheet.
+// How to get all images.
 
-// Get all images as an array in a spreadsheet.
+// Get all images as an array.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddImage("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", 60 * 36000, 35 * 36000, 0, 2 * 36000, 0, 3 * 36000);

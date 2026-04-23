@@ -1,9 +1,9 @@
 # SetVertAlign
 
-指定将应用于当前文本块内容相对于文本块默认外观的对齐方式：
--**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+指定将应用于当前运行内容相对于文本运行默认外观的对齐方式：
+-**"baseline"** - 当前文本运行中的字符将按默认文本基线对齐。
+-**"subscript"** - 当前文本运行中的字符将对齐到默认文本基线下方。
+-**"superscript"** - 当前文本运行中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -11,7 +11,7 @@
 expression.SetVertAlign(sType);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在 PDF 文档中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+此示例指定将应用于当前运行内容相对于文本运行默认外观的对齐方式。
 
 ```javascript editor-pdf
-// How to change a vertical alignment of a text run in a PDF document.
+// How to change a vertical alignment of a text run.
 
-// Create a new text run and make it subscript, baseline or superscript in a PDF document.
+// Create a new text run and make it subscript, baseline or superscript.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,7 +40,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 
 let run = Api.CreateRun();
@@ -62,4 +62,5 @@ run.SetVertAlign("superscript");
 run.AddText("This is a text run with the text aligned above the baseline vertically.");
 paragraph.AddElement(run);
 page.AddObject(shape);
+
 ```

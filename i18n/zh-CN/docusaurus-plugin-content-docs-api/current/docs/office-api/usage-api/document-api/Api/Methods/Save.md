@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-保存对指定文档的更改。
+此示例保存对指定文档的更改。
 
 ```javascript editor-docx
-// Add a text to the first paragraph of the document and save these changes.
+// Adds a text to the first paragraph of the document and saves these changes.
 
-// How to save changes made to the paragraph object in a document.
+// How to save changes made to the ApiParagraph object.
 
 let paragraph = Api.GetDocument().GetElement(0);
 paragraph.AddText("This sample text is saved to the document.");

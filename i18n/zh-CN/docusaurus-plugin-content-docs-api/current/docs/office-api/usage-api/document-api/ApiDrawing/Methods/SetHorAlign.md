@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定文档中浮动对象的水平对齐方式。
+此示例指定浮动对象的水平对齐方式。
 
 ```javascript editor-docx
 // How to set the drawing to the center of the page.
 
-// Create a drawing and align it horizontaly to the center in a document.
+// Create a drawing and align it horizontaly to the center.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

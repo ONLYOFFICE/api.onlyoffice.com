@@ -22,13 +22,9 @@ expression.SetContentStatus(sStatus);
 
 ## 示例
 
-在电子表格中使用核心属性设置当前工作簿的内容状态。
+此示例演示如何使用 ApiCore 设置当前工作簿的内容状态。
 
 ```javascript editor-xlsx
-// How to set content status for a core properties in a spreadsheet?
-
-// Set content status and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 core.SetContentStatus("Final");
@@ -45,4 +41,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
+
 ```

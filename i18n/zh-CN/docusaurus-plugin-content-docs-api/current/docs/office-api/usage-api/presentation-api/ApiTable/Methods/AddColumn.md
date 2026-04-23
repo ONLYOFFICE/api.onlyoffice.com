@@ -23,12 +23,12 @@ expression.AddColumn(oCell, isBefore);
 
 ## 示例
 
-在演示文稿中向表格添加新列。
+此示例向表格添加新列。
 
 ```javascript editor-pptx
-// How to insert a column to the table in a presentation.
+// How to insert a column to the table.
 
-// Create a 2x4 table, set its position and then insert a column to it in a presentation.
+// Create a 2x4 table, set its position and then insert a column to it.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(300 * 36000, 190 * 36000);
@@ -47,4 +47,5 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

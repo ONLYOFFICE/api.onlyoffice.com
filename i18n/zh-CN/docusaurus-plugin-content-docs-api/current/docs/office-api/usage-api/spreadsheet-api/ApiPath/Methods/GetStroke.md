@@ -20,13 +20,10 @@ boolean
 
 ## 示例
 
-分析云形路径属性并在单元格中显示。显示路径数量、尺寸、笔触和填充信息。
+分析云形状路径属性并在单元格中显示它们。
 
 ```javascript editor-xlsx
-// How can I get the stroke using a geometry path in a spreadsheet?
-
-// Get the stroke for a geometry path in a spreadsheet.
-
+// Shows path count, dimensions, stroke and fill information.
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

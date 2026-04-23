@@ -22,12 +22,12 @@ expression.CreateGroup(drawings);
 
 ## 示例
 
-在文档中创建一组绘图对象。
+此示例展示如何创建绘图对象组。
 
 ```javascript editor-docx
-// Create two "rect" shapes in the current document and group them.
+// Creates two "rect" shapes in the current document and groups them.
 
-// How to create the group object from an array of drawings in a document.
+// How to create the ApiGroup object from an array of drawings.
 
 let doc = Api.GetDocument();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -22,10 +22,10 @@ JSON
 
 ## 示例
 
-将文档中的样式对象转换为 JSON 对象。
+此示例将 ApiStyle 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the style object in a document.
+// How to get a JSON from the style object.
 
 // Convert the style to json and add it to the document.
 

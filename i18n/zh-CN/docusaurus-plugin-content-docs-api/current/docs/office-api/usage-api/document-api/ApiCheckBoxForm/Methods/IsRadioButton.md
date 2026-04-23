@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-检查文档中当前复选框是否为单选按钮。
+此示例检查当前复选框是否为单选按钮。
 
 ```javascript editor-docx
 // How to know whether the checkbox form is radio button.

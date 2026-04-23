@@ -22,10 +22,10 @@ JSON
 
 ## 示例
 
-在文档中将文本属性对象转换为 JSON 对象。
+此示例将 ApiTextPr 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the text properties in a document.
+// How to get a JSON from the text properties.
 
 // Convert the text properties to json and add it to the document.
 

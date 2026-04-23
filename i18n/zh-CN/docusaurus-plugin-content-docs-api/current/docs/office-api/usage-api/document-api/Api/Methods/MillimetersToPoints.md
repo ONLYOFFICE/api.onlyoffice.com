@@ -22,13 +22,9 @@ number
 
 ## 示例
 
-在文档中将毫米转换为磅。
+此示例展示如何将毫米转换为磅。
 
 ```javascript editor-docx
-// How do I convert millimeters to points in a document?
-
-// Convert millimeters to points and display the result in a document.
-
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();
 
@@ -36,4 +32,5 @@ const millimeters = 100;
 const points = Api.MillimetersToPoints(millimeters);
 paragraph.AddText(millimeters + ' millimeters are equal to ' + points + ' points.');
 doc.Push(paragraph);
+
 ```

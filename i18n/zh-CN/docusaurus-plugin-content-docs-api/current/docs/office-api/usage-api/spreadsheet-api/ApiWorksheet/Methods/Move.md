@@ -23,12 +23,12 @@ expression.Move(before, after);
 
 ## 示例
 
-在电子表格中将工作表移动到工作簿中的其他位置。
+此示例将工作表移动到工作簿中的另一个位置。
 
 ```javascript editor-xlsx
-// How to change an order of the sheet in a spreadsheet.
+// How to change an order of the sheet.
 
-// Move for a worksheet in a spreadsheet.
+// Move a sheet.
 
 let sheet1 = Api.GetActiveSheet();
 Api.AddSheet("Sheet2");

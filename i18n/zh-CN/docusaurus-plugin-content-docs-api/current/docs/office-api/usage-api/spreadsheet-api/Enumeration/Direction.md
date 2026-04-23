@@ -13,9 +13,10 @@
 - "xlToRight"
 - "xlToLeft"
 
+
 ## 示例
 
-获取表示指定区域左端的 Range 对象。
+此示例展示如何获取表示指定区域左端的 Range 对象。
 
 ```javascript editor-xlsx
 // How to set a direction of the range.
@@ -24,4 +25,5 @@
 
 const color = Api.CreateColorFromRGB(255, 224, 204);
 worksheet.GetRange("C4:D5").End("xlToLeft").SetFillColor(color);
+
 ```

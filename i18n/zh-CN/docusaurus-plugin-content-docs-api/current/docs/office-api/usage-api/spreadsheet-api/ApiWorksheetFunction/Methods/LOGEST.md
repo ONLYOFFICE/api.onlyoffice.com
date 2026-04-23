@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回描述与已知数据点匹配的指数曲线的统计信息。
+此示例演示如何返回描述与已知数据点匹配的指数曲线的统计信息。
 
 ```javascript editor-xlsx
-// How to get the statistics of exponential curve matching the data points in a spreadsheet.
+// How to get the statistics of exponential curve matching the data points.
 
-// Use a function to return the statistics of exponential curve matching the data points in a spreadsheet.
+// Use a function to return the statistics of exponential curve matching the data points.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -58,4 +58,5 @@ let ans = func.LOGEST(yRange, xRange, constant, stats);
 
 //print answer
 worksheet.GetRange("D1").SetValue(ans);
+
 ```

@@ -22,12 +22,12 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-在文档中为当前范围设置样式。
+此示例为当前范围设置样式。
 
 ```javascript editor-docx
-// How to style a text of the range in a document.
+// How to style a text of the range.
 
-// Get a range, apply "Heading 2" style to it in a document.
+// Get a range, apply "Heading 2" style to it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -1,6 +1,6 @@
 # GetContent
 
-返回可以插入段落或文本块的形状内部内容。
+返回可以插入段落或文本运行的形状内部内容。
 
 ## 语法
 
@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-获取电子表格中可以插入段落或文本 run 的形状内部内容。
+此示例展示如何获取可以插入段落或文本运行的形状内部内容。
 
 ```javascript editor-xlsx
-// How to get content of shape in a spreadsheet.
+// How to get content of ApiShape.
 
-// Get content of shape, remove all its elements and add a new paragraph to it in a spreadsheet.
+// Get content of ApiShape, remove all its elements and add a new paragraph to it.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

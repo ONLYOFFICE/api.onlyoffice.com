@@ -22,7 +22,7 @@ expression.GetCell(nPos);
 
 ## 示例
 
-通过位置获取演示文稿中行的单元格。
+此示例演示如何按行中的位置获取单元格。
 
 ```javascript editor-pptx
 // How to return a cell using its row index.
@@ -42,4 +42,5 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

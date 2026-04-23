@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的书签名称。
+此示例展示如何获取书签名称。
 
 ```javascript editor-docx
-// How to add a bookmark indicating its name and then display it in a document.
+// How to add a bookmark indicating its name and then display it.
 
-// Show current bookmark name in a document.
+// Show current bookmark name.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -35,4 +35,5 @@ range.AddBookmark("BookmarkName");
 let bookmark = doc.GetBookmark("BookmarkName");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark with name: " + bookmark.GetName());
+
 ```

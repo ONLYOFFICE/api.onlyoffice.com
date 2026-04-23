@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回与错误值匹配的数字。
+此示例演示如何返回与错误值匹配的数字。
 
 ```javascript editor-xlsx
-// How to get the error type code from the value in a spreadsheet.
+// How to get the error type code from the value.
 
-// Use function to get an error type in a spreadsheet.
+// Use function to get a error type.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
@@ -35,4 +35,5 @@ let nonPositiveNum = 0;
 let logResult = func.LOG(nonPositiveNum);
 worksheet.GetRange("B3").SetValue(logResult);
 worksheet.GetRange("C3").SetValue(func.ERROR_TYPE(logResult));
+
 ```

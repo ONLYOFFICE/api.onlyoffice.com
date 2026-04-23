@@ -8,13 +8,13 @@
 expression.SetItalic(isItalic);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isItalic | 必需 | boolean |  | 指定当前文本块的内容显示为斜体。 |
+| isItalic | 必需 | boolean |  | 指定当前运行的内容显示为斜体。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在文档中为文本字符设置斜体属性。
+此示例为文本字符设置斜体属性。
 
 ```javascript editor-docx
-// How to make text run italic in a document.
+// How to make text run italic.
 
-// Create a new text run and make its style italic in a document.
+// Create a new text run and make its style italic.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

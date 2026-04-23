@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在文档中用邮件合并数据替换文档内容。
+此示例展示如何用邮件合并数据替换文档内容。
 
 ```javascript editor-docx
-// Start the mail merge process and replace the resulting document content with the mail merge template document.
+// Starts the mail merge process and replaces the resulting document content with the mail merge template document.
 
 // How to replace the main document content with another document content.
 

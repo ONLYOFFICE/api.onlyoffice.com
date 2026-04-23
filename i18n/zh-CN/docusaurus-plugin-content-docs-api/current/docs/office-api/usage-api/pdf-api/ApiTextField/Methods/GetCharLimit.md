@@ -21,13 +21,9 @@ number
 
 ## 示例
 
-获取文本字段并显示其在 PDF 文档中的字符限制属性。
+此示例获取文本字段并显示字符限制属性。
 
 ```javascript editor-pdf
-// How can I get the char limit using a text field in a PDF document?
-
-// Get the char limit for a text field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -35,4 +31,5 @@ page.AddObject(textField);
 
 textField.SetCharLimit(20);
 textField.SetValue('Char limit is: ' + textField.GetCharLimit());
+
 ```

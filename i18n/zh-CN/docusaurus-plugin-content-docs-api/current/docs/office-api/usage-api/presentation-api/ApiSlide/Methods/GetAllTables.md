@@ -20,13 +20,9 @@ expression.GetAllTables();
 
 ## 示例
 
-获取幻灯片中所有表格的数组。
+此示例展示如何获取幻灯片中所有表格的数组。
 
 ```javascript editor-pptx
-// How can I get all tables using a slide in a presentation?
-
-// Get all tables for a slide in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -50,4 +46,5 @@ slide.AddObject(shape);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Number of tables on slide: " + slide.GetAllTables().length);
+
 ```

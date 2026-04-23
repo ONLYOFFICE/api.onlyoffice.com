@@ -24,13 +24,9 @@ boolean
 
 ## 示例
 
-设置文档中内容控件中图像的大小。
+此示例展示如何设置内容控件中图像的大小。
 
 ```javascript editor-docx
-// How can I set picture size using an inline content control in a document?
-
-// Set picture size for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let inlineControl = doc.AddPictureContentControl();
 inlineControl.SetPictureSize(50 * 36000, 70 * 36000);

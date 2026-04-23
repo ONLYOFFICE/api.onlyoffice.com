@@ -2,16 +2,30 @@
 
 返回具有当前文本属性的文本是否显示为比实际字体大小小两磅的大写字母。
 
-继承自 [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)。
+## 语法
+
+```javascript
+expression.GetSmallCaps();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-检查当前表单是否为小型大写字母。
+此示例查明当前表单是否未大写。
 
 ```javascript editor-docx
-// How to find out whether a text is ucapitalized or not in a document.
+// How to find out whether a text is ucapitalized or not.
 
-// Get the property of the text that shows whether a text is in lowercase in a document.
+// Get the property of the text that shows whether a text is in lowercase.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

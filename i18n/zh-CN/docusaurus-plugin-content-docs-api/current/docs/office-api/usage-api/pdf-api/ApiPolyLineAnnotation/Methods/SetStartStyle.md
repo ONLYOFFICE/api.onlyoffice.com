@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为折线注释设置线条起始样式。
+此示例为折线注释设置线条起点样式。
 
 ```javascript editor-pdf
-// How do I set start style in a PDF document?
-
-// Set start style using a polyline annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polylineAnnot = Api.CreatePolyLineAnnot([40, 5, 160, 110], vertices);

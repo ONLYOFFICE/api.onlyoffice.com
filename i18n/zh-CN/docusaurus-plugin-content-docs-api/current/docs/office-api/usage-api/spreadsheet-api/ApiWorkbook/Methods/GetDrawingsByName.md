@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## 示例
 
-从电子表格中的工作簿获取具有指定名称的所有绘图对象。
+此示例展示如何从工作簿中获取具有指定名称的所有绘图对象。
 
 ```javascript editor-xlsx
-// Get drawings by their names in a spreadsheet.
+// Get drawings by their names.
 
-// How to retrieve drawings by their names and rotate them in a spreadsheet.
+// How to retrieve drawings by their names and rotate them.
 
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
@@ -47,4 +47,5 @@ const drawings = workbook.GetDrawingsByName(["MyShape1", "MyShape2"]);
 for (let i = 0; i < drawings.length; i++) {
 	drawings[i].SetRotation(45);
 }
+
 ```

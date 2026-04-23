@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取数字的双曲余弦值。
+此示例演示如何获取数字的双曲余弦。
 
 ```javascript editor-xlsx
-// How to find a hyperbolic cosine in a spreadsheet.
+// How to find a hyperbolic cosine.
 
-// Use function to get the hyperbolic cosine of an angle in a spreadsheet.
+// Use function to get the hyperbolic cosine of an angle.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ expression.GetShd();
 
 ## 示例
 
-获取文档中应用于段落内容的底纹。
+此示例展示如何获取应用于段落内容的底纹。
 
 ```javascript editor-docx
-// How to get the shading type of the paragraph in a document.
+// How to get the shading type of the paragraph.
 
-// Get the paragraph shading and fill the drawing with it in a document.
+// Get the paragraph shading and fill the drawing with it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -43,4 +43,5 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText('Shade: ');
 paragraph.AddDrawing(drawing);
 doc.Push(paragraph);
+
 ```

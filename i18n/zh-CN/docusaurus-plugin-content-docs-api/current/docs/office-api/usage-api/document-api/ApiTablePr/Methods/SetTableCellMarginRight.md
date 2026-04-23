@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-指定单元格内容右侧边缘与父表格中所有表格单元格右边框之间保留的间距。
+此示例指定在父表格中所有表格单元格的单元格内容右侧范围与右边框之间保留的空间量。
 
 ```javascript editor-docx
 // How to add margin to the right of the cell.

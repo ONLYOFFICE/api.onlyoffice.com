@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-在电子表格中获取 Fisher 变换。
+此示例演示如何获取 Fisher 变换。
 
 ```javascript editor-xlsx
 // How to get a Fisher transformation.
@@ -33,4 +33,7 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.FISHER(0.56);
 worksheet.GetRange("B2").SetValue(ans);
+
+
+
 ```

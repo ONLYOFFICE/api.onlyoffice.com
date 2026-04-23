@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-为表单设置键。
+此示例为表单设置键。
 
 ```javascript editor-docx
 // Change the key of the text form.

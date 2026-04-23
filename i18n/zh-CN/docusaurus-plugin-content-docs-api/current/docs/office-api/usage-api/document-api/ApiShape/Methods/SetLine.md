@@ -22,13 +22,10 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。在文档中创建矩形并将其轮廓更改为粗蓝线。
+为形状设置轮廓属性。
 
 ```javascript editor-docx
-// How do I set line in a document?
-
-// Set line using a shape object in a document.
-
+// Creates a rectangle and changes its outline to a thick blue line.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -41,4 +38,5 @@ paragraph.AddLineBreak();
 let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
 shape.SetLine(newStroke);
 paragraph.AddText("Border changed to 3pt blue line");
+
 ```

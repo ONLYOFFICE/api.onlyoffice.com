@@ -22,12 +22,12 @@ expression.RemoveField(identifier);
 
 ## 示例
 
-在电子表格中使用名称从表格中移除字段。
+此示例展示如何使用名称从表格中删除字段。
 
 ```javascript editor-xlsx
-// How to delete specified fields from a table in a spreadsheet.
+// How to delete specified fields from a table.
 
-// Create a pivot table, add data to it then remove a field from it in a spreadsheet.
+// Create a pivot table, add data to it then remove a field from it.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue('Region');
@@ -64,4 +64,5 @@ Api.GetActiveSheet().GetRange('F4').SetValue('Region field will be cleared soon'
 setTimeout(function () {
 	pivotTable.RemoveField('Region');
 }, 5000);
+
 ```

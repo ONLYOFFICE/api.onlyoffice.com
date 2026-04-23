@@ -23,13 +23,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中添加文本字段并设置梳状属性。
+此示例添加文本字段并为其设置梳状格式。
 
 ```javascript editor-pdf
-// How can I set comb using a text field in a PDF document?
-
-// Set comb for a text field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -38,4 +34,5 @@ page.AddObject(textField);
 textField.SetCharLimit(12);
 textField.SetComb(true);
 textField.SetValue('Comb is: ' + textField.IsComb());
+
 ```

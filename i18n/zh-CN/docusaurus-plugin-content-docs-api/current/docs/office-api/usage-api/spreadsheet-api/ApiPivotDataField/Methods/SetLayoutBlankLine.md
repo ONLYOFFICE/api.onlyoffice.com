@@ -2,16 +2,32 @@
 
 设置指定是否在每个项目后插入空白行的设置。
 
-继承自 [ApiPivotField.SetLayoutBlankLine](../../ApiPivotField/Methods/SetLayoutBlankLine.md)。
+## 语法
+
+```javascript
+expression.SetLayoutBlankLine(insert);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| insert | 必需 | boolean |  | 指定是否在每个项目后插入空白行。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-在电子表格中设置透视字段的布局空白行。
+此示例展示如何设置透视字段的布局空白行。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout blank line in a spreadsheet.
+// How to change a pivot field layout blank line.
 
-// Create a pivot table, add data to it then set layout blank line of a specified pivot in a spreadsheet.
+// Create a pivot table, add data to it then set layout blank line of a specified pivot.
 
 let worksheet = Api.GetActiveSheet();
 

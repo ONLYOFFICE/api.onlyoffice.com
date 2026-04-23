@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-向文档中的内容控件添加文本。
+此示例向内容控件添加文本。
 
 ```javascript editor-docx
-// How to add text run to the inline text element in a document.
+// How to add text run to the inline text element.
 
-// Add text to the inline control indicating the starting index in a document.
+// Add text to the inline control indicating the starting index.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

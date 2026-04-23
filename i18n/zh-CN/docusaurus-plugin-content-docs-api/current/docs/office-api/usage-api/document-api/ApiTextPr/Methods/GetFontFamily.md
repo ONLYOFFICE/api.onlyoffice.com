@@ -21,7 +21,7 @@ string
 
 ## 示例
 
-获取文档中文本的字体系列。
+此示例展示如何获取文本的字体系列。
 
 ```javascript editor-docx
 // How to know the font name of the form.

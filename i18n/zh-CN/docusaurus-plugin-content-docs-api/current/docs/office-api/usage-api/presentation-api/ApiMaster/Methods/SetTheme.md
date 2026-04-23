@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-为幻灯片母版设置主题。设置主题对象的副本。
+此示例为幻灯片母版设置主题。设置主题对象的副本。
 
 ```javascript editor-pptx
 // How to set a theme of a slide master.
@@ -77,4 +77,5 @@ chart.SetSeriesFill(fill, 1, false);
 
 slide.RemoveAllObjects();
 slide.AddObject(chart);
+
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中前 10 条件的百分比模式。
+此示例演示如何获取前 10 项条件的百分比模式。
 
 ```javascript editor-xlsx
-// How to check if the condition uses percentage values instead of count values in a spreadsheet.
+// How to check if the condition uses percentage values instead of count values.
 
-// Get the percentage mode setting for the top 10 rule in a spreadsheet.
+// Get the percentage mode setting for the top 10 rule.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -41,4 +41,5 @@ let top10Condition = formatConditions.AddTop10();
 
 let isPercent = top10Condition.GetPercent();
 worksheet.GetRange("B1").SetValue("Percentage mode: " + isPercent);
+
 ```

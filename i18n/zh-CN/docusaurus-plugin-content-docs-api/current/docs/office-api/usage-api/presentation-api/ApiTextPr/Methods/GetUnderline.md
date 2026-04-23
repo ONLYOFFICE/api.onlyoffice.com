@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查演示文稿中的文本是否有下划线。
+此示例展示如何查明文本是否带下划线。
 
 ```javascript editor-pptx
-// How to know whether a text is underlined or not in a presentation.
+// How to know whether a text is underlined or not.
 
-// Get the text properties of the run and find whether it is underlined or not in a presentation.
+// Get the text properties of the run and find whether it is underlined or not.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,5 @@ paragraph = Api.CreateParagraph();
 const underline = textPr.GetUnderline();
 paragraph.AddText("Underline property: " + underline);
 docContent.Push(paragraph);
+
 ```

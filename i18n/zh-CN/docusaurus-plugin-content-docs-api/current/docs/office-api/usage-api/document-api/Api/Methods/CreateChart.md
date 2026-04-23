@@ -29,12 +29,12 @@ expression.CreateChart(chartType, series, seriesNames, catNames, width, height, 
 
 ## 示例
 
-创建图表并将其粘贴到文档中。
+此示例展示如何创建图表并将其粘贴到文档中。
 
 ```javascript editor-docx
-// Create a "bar3D" chart, add it to the paragraph class, and fill its series with the created solid fills in a document.
+// Creates a "bar3D" chart, adds it to the ApiParagraph class, and fills its series with the created solid fills.
 
-// How to create the chart object and add it to the first paragraph of the document.
+// How to create the ApiChart object and add it to the first paragraph of the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

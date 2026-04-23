@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-获取节的起始页码。
+此示例获取节的起始页码索引。
 
 ```javascript editor-docx
 // How to get the start page number for the current section.

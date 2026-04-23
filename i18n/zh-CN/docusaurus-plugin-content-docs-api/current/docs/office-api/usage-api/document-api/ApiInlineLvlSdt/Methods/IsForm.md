@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查内容控件是否为表单。
+此示例检查内容控件是否为表单。
 
 ```javascript editor-docx
 // How to know whether the inline text control is a form or not.
 
-// Check whether the inline text control is a fomrm and display it in a document.
+// Check whether the inline text control is a fomrm and display it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

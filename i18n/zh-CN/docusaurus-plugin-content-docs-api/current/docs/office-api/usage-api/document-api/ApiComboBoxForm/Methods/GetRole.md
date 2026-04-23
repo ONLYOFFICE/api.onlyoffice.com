@@ -2,17 +2,27 @@
 
 返回当前表单的角色。
 
-继承自 [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md)。
+## 语法
+
+```javascript
+expression.GetRole();
+```
+
+`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取表单元素的角色。
+此示例展示如何获取表单元素的角色。
 
 ```javascript editor-docx
-// How can I get the role using a form base in a document?
-
-// Get the role for a form base in a document.
-
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -38,4 +48,5 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
+
 ```

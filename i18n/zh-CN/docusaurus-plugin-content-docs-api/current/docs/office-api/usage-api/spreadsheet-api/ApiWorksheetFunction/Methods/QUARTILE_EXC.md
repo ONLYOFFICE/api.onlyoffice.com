@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回数据集的四分位数，基于 0..1（不含端点）的百分位值。
+此示例演示如何根据 0 到 1（不含端点）的百分位数值返回数据集的四分位数。
 
 ```javascript editor-xlsx
-// How to get the exclusive quartile of a data set in a spreadsheet.
+// How to get the exclusive quartile of a data set.
 
-// Use a function to calculate an exclusive fourth part of a data set in a spreadsheet.
+// Use a function to calculate an exclusive fourth part of a data set.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为单元格设置值。
+此示例设置单元格的值。
 
 ```javascript editor-xlsx
 // How to add underline to the cell value.
 
-// Get a range and add underline its text in a spreadsheet.
+// Get a range and add underline its text.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue("2");

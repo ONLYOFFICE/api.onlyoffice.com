@@ -20,13 +20,9 @@ expression.Last();
 
 ## 示例
 
-获取 PDF 文档中段落的最后一个元素。
+此示例展示如何获取段落的最后一个元素。
 
 ```javascript editor-pdf
-// How do I last in a PDF document?
-
-// Last using a paragraph object in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -49,4 +45,5 @@ paragraph.Push(run2);
 const lastElement = paragraph.Last();
 lastElement.SetBold(true);
 page.AddObject(shape);
+
 ```

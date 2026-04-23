@@ -22,13 +22,10 @@ boolean
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
+创建自定义三角形并将其添加到工作表。
 
 ```javascript editor-xlsx
-// How do I set geometry in a spreadsheet?
-
-// Set geometry using a shape object in a spreadsheet.
-
+// Applies custom geometry to a shape with specific fill and stroke.
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

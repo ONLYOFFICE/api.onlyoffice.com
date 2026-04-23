@@ -1,6 +1,6 @@
 # AddText
 
-向当前文本块添加文本。
+向当前运行添加一些文本。
 
 ## 语法
 
@@ -8,13 +8,13 @@
 expression.AddText(text);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| text | 必需 | string |  | 要添加到当前文本块的文本。 |
+| text | 必需 | string |  | 将添加到当前运行的文本。 |
 
 ## 返回值
 
@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在演示文稿中向 run 添加文本。
+此示例向运行添加一些文本。
 
 ```javascript editor-pptx
-// How to add a text to a text run object in a presentation.
+// How to add a text to a text run object.
 
 // How to add a text to the slide.
 
@@ -45,4 +45,5 @@ run.SetFontSize(30);
 run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

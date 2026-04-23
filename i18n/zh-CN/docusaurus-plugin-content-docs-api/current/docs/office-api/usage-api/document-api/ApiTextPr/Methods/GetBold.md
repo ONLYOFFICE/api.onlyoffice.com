@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-将当前表单转换为内联表单。
+此示例将当前表单转换为内联表单。
 
 ```javascript editor-docx
-// How to find out whether a text is bold or not in a document.
+// How to find out whether a text is bold or not.
 
-// Get the bold property of the text in a document.
+// Get the bold property of the text.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

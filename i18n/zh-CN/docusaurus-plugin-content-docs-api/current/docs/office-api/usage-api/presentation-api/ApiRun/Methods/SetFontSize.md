@@ -1,6 +1,6 @@
 # SetFontSize
 
-设置当前文本块字符的字体大小。
+设置当前文本运行字符的字体大小。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetFontSize(nSize);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在演示文稿中为当前文本 run 的字符设置字体大小。
+此示例设置当前文本运行字符的字体大小。
 
 ```javascript editor-pptx
-// How to set font size to the text run in a presentation.
+// How to set font size to the text run.
 
-// Create a new text run and change resize its font in a presentation.
+// Create a new text run and change resize its font.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,5 @@ run.SetFontSize(50);
 run.AddText("This is a text run with the font size set to 25 points (50 half-points).");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

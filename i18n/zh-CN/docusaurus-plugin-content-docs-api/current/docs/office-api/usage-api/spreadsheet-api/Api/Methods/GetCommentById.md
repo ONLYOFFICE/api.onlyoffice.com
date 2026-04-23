@@ -22,12 +22,12 @@ expression.GetCommentById(sId);
 
 ## 示例
 
-通过 ID 获取电子表格中当前文档的批注。
+此示例演示如何根据 ID 从当前文档获取批注。
 
 ```javascript editor-xlsx
-// How to get specific comment by its ID in a spreadsheet.
+// How to get specific comment by its ID.
 
-// Find a comment by its ID in a spreadsheet.
+// Find a comment by its ID.
 
 let comment = Api.AddComment("Comment", "Bob");
 let id = comment.GetId();

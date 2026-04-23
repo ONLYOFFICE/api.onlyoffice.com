@@ -2,16 +2,30 @@
 
 返回指定是否显示无数据项的设置。
 
-继承自 [ApiPivotField.GetShowAllItems](../../ApiPivotField/Methods/GetShowAllItems.md)。
+## 语法
+
+```javascript
+expression.GetShowAllItems();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-获取电子表格中透视字段的所有项。
+此示例展示如何获取透视字段的所有项。
 
 ```javascript editor-xlsx
-// How to get a pivot field's all items in a spreadsheet.
+// How to get a pivot field's all items.
 
-// Create a pivot table, add data to it then get all items of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get all items of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

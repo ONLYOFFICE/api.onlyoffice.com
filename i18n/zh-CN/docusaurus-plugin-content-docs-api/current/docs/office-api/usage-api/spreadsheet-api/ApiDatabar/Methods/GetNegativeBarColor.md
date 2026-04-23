@@ -20,10 +20,10 @@ expression.GetNegativeBarColor();
 
 ## 示例
 
-从数据条条件格式规则获取负值条形颜色。
+此示例演示如何从数据条条件格式规则获取负值条颜色。
 
 ```javascript editor-xlsx
-// How to retrieve the color of negative value bars in a spreadsheet.
+// How to retrieve the color of negative value bars.
 
 // Get the negative bar color of a data bar conditional formatting rule.
 
@@ -45,4 +45,5 @@ let negativeColor = dataBar.GetNegativeBarColor();
 
 worksheet.GetRange("C1").SetValue("Negative Color:");
 worksheet.GetRange("C2").SetValue(negativeColor ? "Set" : "None");
+
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定水平轴方向。
+此示例指定横轴的方向。
 
 ```javascript editor-pptx
-// How to set an orientation of horizontal axis in a presentation.
+// How to set an orientation of horizontal axis.
 
-// Create a chart, set its properties and its horizontal axis orientation in a presentation.
+// Create a chart, set its properties and its horizontal axis orientation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

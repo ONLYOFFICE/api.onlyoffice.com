@@ -20,7 +20,7 @@ expression.AddPagesCount();
 
 ## 示例
 
-将当前文档的总页数插入段落。
+此示例将当前文档的总页数插入到段落中。
 
 ```javascript editor-docx
 // How to add the number of pages to the text.

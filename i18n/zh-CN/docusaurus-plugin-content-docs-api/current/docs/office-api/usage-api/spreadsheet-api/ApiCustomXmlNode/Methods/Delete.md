@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除电子表格中的自定义 XML 节点。
+此示例演示如何删除自定义 XML 节点。
 
 ```javascript editor-xlsx
 // How to remove custom XML node elements from the document.
 
-// Delete and display the result in a spreadsheet.
+// Delete first item node.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

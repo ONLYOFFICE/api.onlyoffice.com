@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-获取演示文稿的循环播放直到停止设置。
+此示例展示如何获取演示文稿的循环播放直到停止设置。
 
 ```javascript editor-pptx
-// How can I get the loop until stopped using a presentation in a presentation?
-
-// Get the loop until stopped for a presentation in a presentation.
-
 const presentation = Api.GetPresentation();
 presentation.SetLoopUntilStopped(true);
 
@@ -42,4 +38,5 @@ const paragraph = content.GetElement(0);
 const isLooping = presentation.GetLoopUntilStopped();
 paragraph.AddText("Loop until stopped: " + isLooping);
 slide.AddObject(shape);
+
 ```

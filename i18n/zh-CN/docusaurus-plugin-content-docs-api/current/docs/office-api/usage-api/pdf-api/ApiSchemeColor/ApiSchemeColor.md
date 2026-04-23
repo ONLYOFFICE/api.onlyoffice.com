@@ -1,6 +1,7 @@
 # ApiSchemeColor
 
-ApiSchemeColor 是 [ApiUniColor](../ApiUniColor/ApiUniColor.md) 的子类。
+表示 ApiSchemeColor 类。
+
 
 ## 方法
 

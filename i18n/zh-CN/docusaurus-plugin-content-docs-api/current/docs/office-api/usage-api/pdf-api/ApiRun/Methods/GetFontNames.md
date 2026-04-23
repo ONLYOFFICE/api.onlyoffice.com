@@ -1,6 +1,6 @@
 # GetFontNames
 
-返回当前文本块中所有元素的所有字体名称。
+返回当前运行中所有元素的所有字体名称。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetFontNames();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取 PDF 文档中 run 内所有元素的所有字体名称。
+此示例展示如何获取运行中所有元素的所有字体名称。
 
 ```javascript editor-pdf
-// How to get all font names used in the text in a PDF document.
+// How to get all font names used in the text.
 
-// Retrieve text run font names and display them in the page.
+// Retrieve ApiRun font names and display them in the page.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -57,4 +57,5 @@ for (let i = 0; i < fontNames.length; i++) {
 }
 docContent.Push(paragraph);
 page.AddObject(shape);
+
 ```

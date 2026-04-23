@@ -2,17 +2,29 @@
 
 删除表单及其内容。如果 keepContent 为 true，则不删除内容。
 
-继承自 [ApiFormBase.Delete](../../ApiFormBase/Methods/Delete.md)。
+## 语法
+
+```javascript
+expression.Delete(keepContent);
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| keepContent | 必需 | boolean |  | 指定是否删除内容。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-删除文档中的复选框表单。
+此示例展示如何删除复选框表单。
 
 ```javascript editor-docx
-// How can I delete using a form base in a document?
-
-// Delete for a form base in a document.
-
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({
 	'key': 'Marital status',

@@ -25,8 +25,6 @@ expression.RecognizeContent();
 ```javascript editor-pdf
 // Get recognized drawing on a page and select it.
 
-// Use page to recognize content.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

@@ -2,16 +2,30 @@
 
 返回表示所有分类汇总的对象。
 
-继承自 [ApiPivotField.GetSubtotals](../../ApiPivotField/Methods/GetSubtotals.md)。
+## 语法
+
+```javascript
+expression.GetSubtotals();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md)
 
 ## 示例
 
-获取电子表格中透视字段的小计。
+此示例展示如何获取透视字段的分类汇总。
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotals in a spreadsheet.
+// How to get a pivot field's subtotals.
 
-// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array in a spreadsheet.
+// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array.
 
 let worksheet = Api.GetActiveSheet();
 

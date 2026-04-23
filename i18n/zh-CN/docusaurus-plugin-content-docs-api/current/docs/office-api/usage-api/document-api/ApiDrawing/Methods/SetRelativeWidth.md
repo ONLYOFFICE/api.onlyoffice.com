@@ -23,13 +23,12 @@ boolean
 
 ## 示例
 
-相对于页面尺寸的形状相对宽度调整。
+此示例演示相对于页面尺寸的形状宽度调整。
 
 ```javascript editor-docx
 // How to set shape width and height as percentages of the page.
 
 // Create a responsive rectangle that scales with page size.
-
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 250, 0));

@@ -1,6 +1,6 @@
 # ClearContent
 
-清除当前文本块中的内容。
+清除当前运行中的内容。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.ClearContent();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中 run 的内容。
+此示例清除运行中的内容。
 
 ```javascript editor-docx
-// How to delete a text from the run object in a document.
+// How to delete a text from the run object.
 
-// Remove the text from the run in a document.
+// Remove the text from the run. 
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

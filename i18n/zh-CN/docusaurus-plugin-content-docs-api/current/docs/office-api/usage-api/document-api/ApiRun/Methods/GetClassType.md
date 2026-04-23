@@ -8,7 +8,7 @@
 expression.GetClassType();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中文本 run 的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-docx
-// How to identify the class type of a text run in a document?
+// How to get a class type of ApiRun.
 
-// Obtain the class type identifier of a text run object in a document.
+// Retrieve class type of ApiRun object and insert it to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中用段落替换当前表格。
+此示例用段落替换当前表格。
 
 ```javascript editor-docx
-// How to replace table with a paragraph in a document.
+// How to replace table with a paragraph.
 
-// Create paragraph and put it instead of the table in a document.
+// Create paragraph and put it instead of the table.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(3, 3);

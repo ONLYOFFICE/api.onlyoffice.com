@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为文档中图表的系列设置名称。
+此示例为图表的系列设置名称。
 
 ```javascript editor-docx
-// How to rename a chart seria in a document.
+// How to rename a chart seria.
 
-// Create a chart, set its properties and its series names in a document.
+// Create a chart, set its properties and its series names.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

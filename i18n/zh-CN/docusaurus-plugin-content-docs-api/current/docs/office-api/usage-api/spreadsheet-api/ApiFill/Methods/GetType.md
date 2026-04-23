@@ -20,13 +20,10 @@ expression.GetType();
 
 ## 示例
 
-获取并显示填充类型。在电子表格中创建具有不同填充类型的形状并显示其类型。
+获取填充类型并显示。
 
 ```javascript editor-xlsx
-// How do I get the type in a spreadsheet?
-
-// Get the type using a fill object in a spreadsheet.
-
+// Creates shapes with different fill types and shows their types.
 let worksheet = Api.GetActiveSheet();
 
 // Solid fill
@@ -49,4 +46,5 @@ let noFill = Api.CreateNoFill();
 let shape3 = worksheet.AddShape("rect", 50 * 36000, 30 * 36000, noFill, stroke, 3, 0, 2, 2);
 let fill3 = shape3.GetFill();
 worksheet.GetRange("A3").SetValue("No fill type: " + fill3.GetType());
+
 ```

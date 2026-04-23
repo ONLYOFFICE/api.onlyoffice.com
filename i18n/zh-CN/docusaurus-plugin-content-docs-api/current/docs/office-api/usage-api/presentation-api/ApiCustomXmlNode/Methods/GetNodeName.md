@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取演示文稿中当前 XML 节点的名称。
+此示例演示如何检索当前 XML 节点的名称。
 
 ```javascript editor-pptx
-// How do I get the node name in a presentation?
-
-// Get the node name using a custom XML node object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,4 +42,5 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Node name: ' + nodeName);
+
 ```

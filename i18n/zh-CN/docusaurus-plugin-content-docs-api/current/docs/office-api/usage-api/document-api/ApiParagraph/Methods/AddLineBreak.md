@@ -20,12 +20,12 @@ expression.AddLineBreak();
 
 ## 示例
 
-在文档中向当前位置添加换行符并从新行开始下一个元素。
+此示例在当前位置添加换行符，并从新行开始下一个元素。
 
 ```javascript editor-docx
-// How to split the text of the paragraph in a document.
+// How to split the text of the paragraph.
 
-// Add a line break to the text in a document.
+// Add a line break to the text.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

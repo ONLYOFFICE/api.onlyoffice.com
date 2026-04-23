@@ -2,16 +2,32 @@
 
 设置指定是否在每行重复项目标签的设置。
 
-继承自 [ApiPivotField.SetRepeatLabels](../../ApiPivotField/Methods/SetRepeatLabels.md)。
+## 语法
+
+```javascript
+expression.SetRepeatLabels(repeat);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| repeat | 必需 | boolean |  | 指定是否在每行重复项目标签。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-在电子表格中设置透视字段的重复标签。
+此示例展示如何设置透视字段的重复标签。
 
 ```javascript editor-xlsx
-// How to change a pivot field repeated labels in a spreadsheet.
+// How to change a pivot field repeated labels.
 
-// Create a pivot table, add data to it then add repeat labels of a specified pivot in a spreadsheet.
+// Create a pivot table, add data to it then add repeat labels of a specified pivot.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为散点图的所有系列向水平轴添加值。
+如何为散点图的所有系列向水平轴添加值。
 
 ```javascript editor-pdf
-// Fill all x-axis values of scattered charts series in a PDF document.
-
-// Use chart to set x values in a PDF document.
+// Fill all x-axis values of scattered charts series.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,4 +47,5 @@ stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255,
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
+
 ```

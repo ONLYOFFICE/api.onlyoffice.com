@@ -20,13 +20,9 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中动画序列对象的类类型。
+此示例获取 ApiAnimationSequence 对象的类类型。
 
 ```javascript editor-pptx
-// How can I get the class type of an animation sequence in a presentation?
-
-// Get the class type of an animation sequence and display it in the presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const timeLine = slide.GetTimeLine();
@@ -44,4 +40,5 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(shape);
+
 ```

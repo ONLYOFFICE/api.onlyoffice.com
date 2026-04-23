@@ -22,7 +22,7 @@ number
 
 ## 示例
 
-在电子表格中获取 Fisher 变换的逆函数：若 y = FISHER(x)，则 FISHERINV(y) = x。
+此示例演示如何获取 Fisher 变换的反函数：如果 y = FISHER(x)，则 FISHERINV(y) = x。
 
 ```javascript editor-xlsx
 // How to get an inverse of the Fisher transformation.
@@ -33,4 +33,7 @@ let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.FISHERINV(0.56);
 worksheet.GetRange("B2").SetValue(ans);
+
+
+
 ```

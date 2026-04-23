@@ -20,12 +20,12 @@ expression.GetMailMergeTemplateDocContent();
 
 ## 示例
 
-获取邮件合并模板并将其数据粘贴到文档中。
+此示例获取邮件合并模板并将其数据粘贴到文档中。
 
 ```javascript editor-docx
-// Wrap the text runs in the mail merge fields and return the mail merge template document.
+// Wraps the text runs in the mail merge fields and returns the mail merge template document.
 
-// Return the document content object whith represents the mail merge template document.
+// Returns the ApiDocumentContent object whith represents the mail merge template document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

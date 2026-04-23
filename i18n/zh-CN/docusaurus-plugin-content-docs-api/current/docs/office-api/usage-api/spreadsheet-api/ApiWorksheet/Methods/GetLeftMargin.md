@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中工作表的左边距。
+此示例展示如何获取工作表的左边距。
 
 ```javascript editor-xlsx
-// How to get margin of the sheet's left side in a spreadsheet.
+// How to get margin of the sheet's left side.
 
-// Get the size of the left margin of the sheet in a spreadsheet.
+// Get the size of the left margin of the sheet.
 
 let worksheet = Api.GetActiveSheet();
 let leftMargin = worksheet.GetLeftMargin();

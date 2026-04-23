@@ -6,7 +6,7 @@ The plugins section allows you to connect the special add-ons to your ONLYOFFICE
 
 **type:** `string[]`
 
-Defines the array of plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file. The plugins will automatically start when the editor opens and run one-by-one in the specified order.
+Defines the array of the identifiers (as entered in [config.json](../../../../plugin-and-macros/plugins/fundamentals/configuration/config-json.md#guid)) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -61,7 +61,7 @@ Defines the parameters which will be set for a specific plugin. The plugin must 
 
 **type:** `string[]`
 
-Defines the array of absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
+Defines the array of absolute URLs to the plugin configuration files ([config.json](../../../../plugin-and-macros/plugins/fundamentals/configuration/config-json.md)).
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 

@@ -20,10 +20,10 @@ JSON
 
 ## 示例
 
-将文档中的表格行属性对象转换为 JSON 对象。
+此示例将 ApiTableRowPr 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the table row properties in a document.
+// How to get a JSON from the table row properties.
 
 // Convert the table row properties to json and add it to the document.
 

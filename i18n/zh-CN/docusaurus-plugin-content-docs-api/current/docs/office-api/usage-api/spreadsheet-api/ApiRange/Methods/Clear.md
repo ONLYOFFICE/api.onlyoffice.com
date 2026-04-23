@@ -20,12 +20,12 @@ expression.Clear();
 
 ## 示例
 
-清除电子表格中的范围。
+此示例清除范围。
 
 ```javascript editor-xlsx
-// How to clear a content of a range in a spreadsheet.
+// How to clear a content of a range.
 
-// Get a range and remove everything from it in a spreadsheet.
+// Get a range and remove everything from it.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:B1");

@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中更改绘图对象的 Y 位置。
+如何更改绘图的 Y 坐标位置。
 
 ```javascript editor-pdf
 // Get a shape object from a page and move by Y axis.
-
-// Set pos y for a drawing object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

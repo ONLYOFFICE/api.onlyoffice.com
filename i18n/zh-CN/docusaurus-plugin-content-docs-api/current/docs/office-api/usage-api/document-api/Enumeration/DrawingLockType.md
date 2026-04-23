@@ -24,9 +24,10 @@
 - "noCrop"
 - "txBox"
 
+
 ## 示例
 
-获取绘图对象指定锁定类型的锁定值。
+此示例展示如何获取绘图对象指定锁定类型的锁定值。
 
 ```javascript editor-docx
 // How to get a lock value of the drawing.

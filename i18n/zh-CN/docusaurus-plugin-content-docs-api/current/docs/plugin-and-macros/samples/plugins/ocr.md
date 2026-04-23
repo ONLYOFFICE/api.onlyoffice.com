@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在 ONLYOFFICE 编辑器的云端、本地部署和桌面版本中默认提供。
 
-可根据以下说明将其移除：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)、[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+可根据以下说明将其移除：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)、[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 插件 GUID：`{440EBF13-9B19-4BD8-8621-05200E58140B}`
 
@@ -194,8 +194,8 @@ GitHub 仓库：[ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/ma
 - button
 - init
 - onTranslate
-- [resizeWindow](../../customization/windows-and-panels.md#interacting-with-a-window)
-- [info.recalculate](../../interacting-with-editors/overview/how-to-call-commands.md#recalculate)
+- [resizeWindow](../../plugins/customization/windows-and-panels.md#interacting-with-a-window)
+- [info.recalculate](../../plugins/interacting-with-editors/overview/how-to-call-commands.md#recalculate)
 
 ## 支持
 

@@ -2,16 +2,32 @@
 
 设置布局分类汇总位置。
 
-继承自 [ApiPivotField.SetLayoutSubtotalLocation](../../ApiPivotField/Methods/SetLayoutSubtotalLocation.md)。
+## 语法
+
+```javascript
+expression.SetLayoutSubtotalLocation(type);
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| type | 必需 | [LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md) |  | 布局分类汇总位置。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-在电子表格中设置透视字段的布局小计位置。
+此示例展示如何设置透视字段的布局分类汇总位置。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout subtotal location in a spreadsheet.
+// How to change a pivot field layout subtotal location.
 
-// Create a pivot table, add data to it then set layout subtotal location of a specified pivot in a spreadsheet.
+// Create a pivot table, add data to it then set layout subtotal location of a specified pivot.
 
 let worksheet = Api.GetActiveSheet();
 

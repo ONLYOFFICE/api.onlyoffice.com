@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-向当前幻灯片母版添加对象（图像、形状或图表）。
+此示例向当前幻灯片母版添加对象（图像、形状或图表）。
 
 ```javascript editor-pptx
 // Create a shape and add it to the presentation master.
@@ -40,4 +40,5 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 master.AddObject(shape);
+
 ```

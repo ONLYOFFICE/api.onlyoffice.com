@@ -20,10 +20,10 @@ expression.GetStyle();
 
 ## 示例
 
-检查文档中的文本是否设置了属性。
+此示例查明文本是否设置了属性。
 
 ```javascript editor-docx
-// How to know whether a text's style is changed or not in a document.
+// How to know whether a text's style is changed or not.
 
 // Retrieve text properties of the form and display its style name.
 

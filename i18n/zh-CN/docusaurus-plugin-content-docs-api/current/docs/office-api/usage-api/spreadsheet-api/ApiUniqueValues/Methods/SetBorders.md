@@ -2,11 +2,29 @@
 
 设置条件格式规则的边框样式。
 
-继承自 [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md)。
+## 语法
+
+```javascript
+expression.SetBorders(bordersIndex, lineStyle, oColor);
+```
+
+`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bordersIndex | 必需 | [BordersIndex](../../Enumeration/BordersIndex.md) |  | 指定单元格边框位置。 |
+| lineStyle | 必需 | [LineStyle](../../Enumeration/LineStyle.md) |  | 指定用于形成单元格边框的线条样式。 |
+| oColor | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 指定要设置给单元格边框的颜色的颜色对象。 |
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-为条件格式规则设置边框。
+此示例设置条件格式规则的边框。
 
 ```javascript editor-xlsx
 // How to apply border formatting to conditional formatting rules.
@@ -35,4 +53,5 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
+
 ```

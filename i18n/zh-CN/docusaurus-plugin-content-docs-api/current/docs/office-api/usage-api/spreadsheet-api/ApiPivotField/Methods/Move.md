@@ -23,12 +23,12 @@ expression.Move(type, index);
 
 ## 示例
 
-在电子表格中移动透视字段。
+此示例展示如何移动透视字段。
 
 ```javascript editor-xlsx
-// How to change the position a pivot field in a spreadsheet.
+// How to change the position a pivot field.
 
-// Create a pivot table, add data to it then move a specified pivot field by columns in a spreadsheet.
+// Create a pivot table, add data to it then move a specified pivot field by columns.
 
 let worksheet = Api.GetActiveSheet();
 

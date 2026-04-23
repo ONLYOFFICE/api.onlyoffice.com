@@ -22,10 +22,10 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-在演示文稿中为段落设置 "lightGray" 突出显示颜色。
+此示例为段落设置「浅灰色」高亮颜色。
 
 ```javascript editor-pptx
-// How to create a paragraph and highlight it with color in a presentation.
+// How to create a paragraph and highlight it with color.
 
 // Set a light gray highlight color to a paragraph and insert it to the slide shape.
 
@@ -46,4 +46,5 @@ paragraph.AddText("This is just a sample text. ");
 paragraph.SetHighlight("lightGray");
 docContent.Push(paragraph);
 slide.AddObject(shape);
+
 ```

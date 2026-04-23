@@ -22,12 +22,12 @@ expression.SetCatFormula(sRange);
 
 ## 示例
 
-在电子表格中为当前图表设置包含类别值的范围。
+此示例设置当前图表的类别值范围。
 
 ```javascript editor-xlsx
-// How to apply range category formula for the chart.
+// How to apply range category formula for the chart. 
 
-// Set category formula for the chart by sheet number and range.
+// Set category formula for the chart by sheet number and range. 
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中文本的粗体属性。
+此示例使用其属性获取文本粗体。
 
 ```javascript editor-xlsx
-// How to find out whether a text is bold or not in a spreadsheet.
+// How to find out whether a text is bold or not.
 
-// Get a text bold property in a spreadsheet.
+// Get a text bold property.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

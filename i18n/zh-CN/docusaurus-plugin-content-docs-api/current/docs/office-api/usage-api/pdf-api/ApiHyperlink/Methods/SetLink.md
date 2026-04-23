@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置超链接地址。
+此示例设置超链接地址。
 
 ```javascript editor-pdf
-// How to change the link address of the hyperlink object in a PDF document.
+// How to change the link address of the hyperlink object.
 
-// Set link of the hyperlink in a PDF document.
+// Set link of the hyperlink.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,4 +45,5 @@ run.AddText("ONLYOFFICE Document Builder");
 paragraph.AddElement(run);
 let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
 hyperlink.SetLink("https://api.onlyoffice.com/");
+
 ```

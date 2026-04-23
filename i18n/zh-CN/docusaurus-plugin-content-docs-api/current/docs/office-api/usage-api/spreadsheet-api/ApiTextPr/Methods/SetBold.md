@@ -14,7 +14,7 @@ expression.SetBold(isBold);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isBold | 必需 | boolean |  | 指定文本块的内容显示为粗体。 |
+| isBold | 必需 | boolean |  | 指定运行的内容显示为粗体。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-在电子表格中为文本字符设置粗体属性。
+此示例为文本字符设置粗体属性。
 
 ```javascript editor-xlsx
-// How to make text bold in a spreadsheet.
+// How to make text bold.
 
-// Set bold property of a text in a spreadsheet.
+// Set bold property of a text.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

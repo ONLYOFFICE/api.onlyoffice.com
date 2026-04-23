@@ -20,13 +20,9 @@ number
 
 ## 示例
 
-获取演示文稿中动画效果的延迟时间。
+此示例获取动画效果的延迟时间。
 
 ```javascript editor-pptx
-// How do I get the delay in a presentation?
-
-// Get the delay using an animation effect object in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -56,4 +52,5 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Delay: ' + delay + 'ms');
 slide.AddObject(infoShape);
+
 ```

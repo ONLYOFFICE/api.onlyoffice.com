@@ -20,12 +20,12 @@ expression.GetRangeBySelect();
 
 ## 示例
 
-通过文档中的选区获取范围对象。
+此示例展示如何通过选区获取 Range 对象。
 
 ```javascript editor-docx
 // How to get the range selected on the document.
 
-// Select a range and make it bold in a document.
+// Select a range and make it bold.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

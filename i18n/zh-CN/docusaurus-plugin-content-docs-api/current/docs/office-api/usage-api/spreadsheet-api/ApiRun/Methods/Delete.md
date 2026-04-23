@@ -1,6 +1,6 @@
 # Delete
 
-删除当前文本块。
+删除当前运行。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.Delete();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除 run。
+此示例删除运行。
 
 ```javascript editor-xlsx
-// How to delete a text run object in a spreadsheet.
+// How to delete a text run object.
 
-// Create the text run object, add it into the paragraph and remove it from it in a spreadsheet.
+// Create the ApiRun object, add it into the paragraph and remove it from it.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

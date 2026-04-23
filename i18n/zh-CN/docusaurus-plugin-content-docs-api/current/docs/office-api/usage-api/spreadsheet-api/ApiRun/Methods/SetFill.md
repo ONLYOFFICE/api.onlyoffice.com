@@ -1,6 +1,6 @@
 # SetFill
 
-设置当前文本块的文本颜色。
+设置当前文本运行的文本颜色。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetFill(oApiFill);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,10 +22,10 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-在电子表格中为当前文本 run 设置文本颜色。
+此示例设置当前文本运行的文本颜色。
 
 ```javascript editor-xlsx
-// How to color a text object in a spreadsheet.
+// How to color a text object.
 
 // Create a text run object, add a color to it using RGB format.
 

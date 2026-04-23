@@ -20,12 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-在 PDF 文档中创建文本属性并使用。
+此示例演示如何创建文本属性并使用它。
 
 ```javascript editor-pdf
-// How to change text style, size and font in a PDF document.
+// How to change text style, size and font.
 
-// Change text properties using the editor API in a PDF document.
+// Change text properties.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 docContent.RemoveAllElements();
 const textPr = Api.CreateTextPr();
 textPr.SetFontSize(50);
@@ -48,4 +48,5 @@ run.SetTextPr(textPr);
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 page.AddObject(shape);
+
 ```

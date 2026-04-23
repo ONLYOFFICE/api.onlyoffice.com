@@ -1,6 +1,6 @@
 # SetLanguage
 
-指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在处理此文本运行内容时将用于检查拼写和语法（如果请求）的语言。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetLanguage(sLangId);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-指定在演示文稿中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
+此示例指定在处理此文本运行内容时将用于检查拼写和语法（如果请求）的语言。
 
 ```javascript editor-pptx
-// How to change language of the text for grammar check in a presentation.
+// How to change language of the text for grammar check.
 
-// Create a new text run and change its language in a presentation.
+// Create a new text run and change its language.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,4 +45,5 @@ run.AddText("This is a text run with the text language set to English (Canada)."
 paragraph.AddElement(run);
 run.SetLanguage("en-CA");
 slide.AddObject(shape);
+
 ```

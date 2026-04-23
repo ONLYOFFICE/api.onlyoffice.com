@@ -20,14 +20,15 @@ boolean
 
 ## 示例
 
-获取电子表格中指定工作表网格线是否必须打印的页面 PrintGridlines 属性。
+此示例展示如何获取页面 PrintGridlines 属性，该属性指定是否必须打印工作表网格线。
 
 ```javascript editor-xlsx
-// How to find out whether sheet gridlines should be printed or not in a spreadsheet.
+// How to find out whether sheet gridlines should be printed or not.
 
-// Get a boolean value representing whether to print gridlines or not in a spreadsheet.
+// Get a boolean value representing whether to print gridlines or not.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintGridlines(true);
 worksheet.GetRange("A1").SetValue("Gridlines of cells will be printed on this page: " + worksheet.GetPrintGridlines());
+
 ```

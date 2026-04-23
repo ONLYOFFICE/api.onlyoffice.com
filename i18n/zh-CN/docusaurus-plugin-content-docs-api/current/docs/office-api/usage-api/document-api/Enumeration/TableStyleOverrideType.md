@@ -35,9 +35,10 @@
 - "bandedRowEven"
 - "wholeTable"
 
+
 ## 示例
 
-将创建的样式（设置阴影）应用于表格的左上角单元格。
+此示例将创建的样式（设置阴影）应用于表格的左上角单元格。
 
 ```javascript editor-docx
 // How to change a style of the specific part of the table.

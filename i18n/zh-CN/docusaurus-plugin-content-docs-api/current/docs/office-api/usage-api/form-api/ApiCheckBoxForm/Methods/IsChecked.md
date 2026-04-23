@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-获取文档中复选框的状态。
+此示例展示如何获取复选框的状态。
 
 ```javascript editor-forms
 // How to know whether the checkbox form is checked.

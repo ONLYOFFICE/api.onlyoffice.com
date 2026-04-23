@@ -85,15 +85,12 @@
 - "pathUp"
 - "pathDown"
 
+
 ## 示例
 
-为形状添加进入淡入动画。
+此示例为形状添加进入淡入动画。
 
 ```javascript editor-pptx
-// Set the animation effect type and trigger for a presentation shape.
-
-// The shape will have an entrance fade effect triggered on click.
-
 let oPresentation = Api.GetPresentation();
 let oSlide = oPresentation.GetSlideByIndex(0);
 let oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
@@ -104,4 +101,5 @@ oSlide.AddObject(oShape);
 let oTimeLine = oSlide.GetTimeLine();
 let oMainSequence = oTimeLine.GetMainSequence();
 oMainSequence.AddEffect(oShape, 'entranceFade', 'onclick');
+
 ```

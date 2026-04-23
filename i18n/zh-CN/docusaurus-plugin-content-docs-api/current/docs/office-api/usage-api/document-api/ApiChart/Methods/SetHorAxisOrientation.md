@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中的水平轴方向。
+此示例指定横轴的方向。
 
 ```javascript editor-docx
-// How to change an axis orientation in a document.
+// How to change an axis orientation.
 
-// Create a chart and set its horizontal axis orientation in a document.
+// Create a chart and set its horizontal axis orientation.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

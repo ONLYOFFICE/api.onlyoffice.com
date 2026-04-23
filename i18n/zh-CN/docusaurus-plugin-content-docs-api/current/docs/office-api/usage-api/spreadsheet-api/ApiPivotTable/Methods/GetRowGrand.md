@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中数据透视表的行总计。
+此示例展示如何获取数据透视表的行总计。
 
 ```javascript editor-xlsx
-// How to get table row grand in a spreadsheet.
+// How to get table row grand.
 
-// Create a pivot table, add data to it then get its row grand in a spreadsheet.
+// Create a pivot table, add data to it then get its row grand.
 
 let worksheet = Api.GetActiveSheet();
 

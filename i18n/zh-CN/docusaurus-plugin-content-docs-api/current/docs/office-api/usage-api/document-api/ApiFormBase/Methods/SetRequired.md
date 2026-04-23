@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-指定当前表单是否应为必填。
+此示例指定当前表单是否应为必填项。
 
 ```javascript editor-docx
 // How to make a text form required.

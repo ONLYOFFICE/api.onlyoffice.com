@@ -20,16 +20,17 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中单元格范围的类类型。
+此示例获取类类型并将其插入到表格中。
 
 ```javascript editor-xlsx
-// How to identify the class type of a cell range?
+// How to get a class type of ApiRange.
 
-// Obtain the class type identifier of a cell range object.
+// Get a class type of ApiRange and display it in the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
 range.SetValue("This is just a sample text in the cell A1.");
 let classType = range.GetClassType();
 worksheet.GetRange('A3').SetValue("Class type: " + classType);
+
 ```

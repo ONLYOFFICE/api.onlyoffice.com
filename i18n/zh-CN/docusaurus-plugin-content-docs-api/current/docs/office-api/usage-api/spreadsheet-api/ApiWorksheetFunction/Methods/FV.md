@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中基于定期、固定付款和固定利率返回投资的未来值。
+此示例演示如何根据定期固定付款和固定利率返回投资的未来值。
 
 ```javascript editor-xlsx
-// How to get the future value of an investment in a spreadsheet.
+// How to get the future value of an investment.
 
-// Use a function to get future value of an investment based on different parameters in a spreadsheet.
+// Use a function to get future value of an investment based on different parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

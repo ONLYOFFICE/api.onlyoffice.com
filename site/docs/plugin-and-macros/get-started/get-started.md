@@ -101,7 +101,7 @@ Answer these questions to find your ideal path:
 **API methods fail:**
 
 - Ensure your ONLYOFFICE version supports the method
-- Check method syntax in the [API reference](../interacting-with-editors/overview/overview.md)
+- Check method syntax in the [API reference](../plugins/interacting-with-editors/overview/overview.md)
 - Verify editor type compatibility
 
 ### Macro issues
@@ -131,7 +131,7 @@ Answer these questions to find your ideal path:
 - **[Interactive playground](playground.md)** — Test code without installation
 - **[UI component library](https://onlyoffice.github.io/storybook/static/)** — Pre-built components
 - **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** — Starter projects
-- **[Browser DevTools](../tutorials/debugging/for-web-editors.md)** — Debugging guide
+- **[Browser DevTools](../plugins/development-workflow/debugging/browser-devtools-guide.md)** — Debugging guide
 
 ### Sample code
 
@@ -141,8 +141,8 @@ Answer these questions to find your ideal path:
 
 ### Documentation
 
-- **[API reference](../interacting-with-editors/overview/overview.md)** — Complete API documentation
-- **[Plugin structure](../structure/configuration/configuration.md)** — Configuration guide
+- **[API reference](../plugins/interacting-with-editors/overview/overview.md)** — Complete API documentation
+- **[Plugin structure](../plugins/fundamentals/configuration/config-json.md)** — Configuration guide
 - **[Macro guide](../macros/writing-macros.md)** — Macro development
 - **[AI integration](../ai/ai-plugin.md)** — AI plugin setup
 - **[FAQ](../more-information/faq.md)** — Frequently asked questions
@@ -159,7 +159,6 @@ Answer these questions to find your ideal path:
 **Start building:**
 
 - [Quick start guides](quick-start/hello-world-macro.md)
-- [Plugin tutorial](../structure/getting-started.md)
 - [Macro tutorial](../macros/getting-started.md)
 - [AI integration](../ai/ai-plugin.md)
 
@@ -170,6 +169,6 @@ Answer these questions to find your ideal path:
 
 **Learn more:**
 
-- [API reference](../interacting-with-editors/overview/overview.md)
-- [Best practices](../tutorials/developing/for-web-editors.md)
-- [Publishing guide](../tutorials/publishing.md)
+- [API reference](../plugins/interacting-with-editors/overview/overview.md)
+- [Best practices](../plugins/development-workflow/developing/for-web-editors.md)
+- [Publishing guide](../plugins/development-workflow/publishing/preparing-for-release.md)

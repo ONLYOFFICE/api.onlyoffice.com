@@ -23,10 +23,10 @@ expression.Intersect(Range1, Range2);
 
 ## 示例
 
-获取表示电子表格中两个或多个范围的矩形交集的单元格范围对象。
+此示例演示如何获取表示两个或多个范围的矩形交集的 ApiRange 对象。
 
 ```javascript editor-xlsx
-// How to find intersection of two ranges and highlight it in a spreadsheet.
+// How to find intersection of two ranges and highlight it.
 
 // Find common cells of two ranges and fill them with a color.
 

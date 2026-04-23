@@ -30,8 +30,7 @@ namespace Sample
     {
         public static void Main(string[] args)
         {
-            // Specify the path to the Document Builder work directory
-            string workDirectory = "C:\\document-builder";
+            string workDirectory = Constants.BUILDER_DIR;
             string resultPath = "../../../result.docx";
 
             // 在路径中添加 Docbuilder 的 dll 文件

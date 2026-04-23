@@ -2,11 +2,25 @@
 
 删除当前格式条件。
 
-继承自 [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md)。
+## 语法
+
+```javascript
+expression.Delete();
+```
+
+`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
 
 ## 示例
 
-删除条件格式规则。
+此示例删除条件格式规则。
 
 ```javascript editor-xlsx
 // How to remove specific conditional formatting rules from a range.
@@ -36,4 +50,5 @@ condition1.Delete();
 
 worksheet.GetRange("D1").SetValue("Rules after deletion:");
 worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
+
 ```

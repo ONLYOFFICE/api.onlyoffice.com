@@ -20,10 +20,10 @@ expression.CreateParagraph();
 
 ## 示例
 
-在演示文稿中创建新段落并将其插入形状。
+此示例创建新段落并将其插入形状。
 
 ```javascript editor-pptx
-// How to add a text in a presentation.
+// How to add a text.
 
 // Insert text to the paragraph and add it to the slide.
 
@@ -42,4 +42,5 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
+
 ```

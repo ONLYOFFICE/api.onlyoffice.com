@@ -2,11 +2,27 @@
 
 设置当前表单的提示文本。
 
-继承自 [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md)。
+## 语法
+
+```javascript
+expression.SetTipText(sText);
+```
+
+`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sText | 必需 | string |  | 提示文本。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-为表单设置提示文本。
+此示例为表单设置提示文本。
 
 ```javascript editor-docx
 // Add text as a tip of the form.

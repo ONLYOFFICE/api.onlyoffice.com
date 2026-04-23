@@ -20,12 +20,12 @@ expression.GetHeight();
 
 ## 示例
 
-获取文档中绘图对象的高度。
+此示例展示如何获取绘图的高度。
 
 ```javascript editor-docx
-// How to print the height of the drawing in a document.
+// How to print the height of the drawing.
 
-// Create a rectangle and then show its height in mm in a document.
+// Create a rectangle and then show its height in mm.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

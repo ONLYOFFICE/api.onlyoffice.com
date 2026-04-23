@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为自由文本注释设置标注。
+此示例为自由文本注释设置标注。
 
 ```javascript editor-pdf
-// How can I set callout using a free text annotation in a PDF document?
-
-// Set callout for a free text annotation in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-指定文档中图表的水平轴标题。
+此示例指定图表横轴标题。
 
 ```javascript editor-docx
-// How to change a position of a horizontal axis title in a document.
+// How to change a position of a horizontal axis title.
 
-// Create a chart and move its horizontal axis title in a document.
+// Create a chart and move its horizontal axis title.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

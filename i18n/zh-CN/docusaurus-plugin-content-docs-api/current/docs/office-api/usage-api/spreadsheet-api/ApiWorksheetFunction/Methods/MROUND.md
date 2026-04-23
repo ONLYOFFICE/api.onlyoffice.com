@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回舍入到所需倍数的数字。
+此示例演示如何返回舍入到所需倍数的数字。
 
 ```javascript editor-xlsx
-// How to round the number in a spreadsheet.
+// How to round the number.
 
-// Use a function to round the number in a spreadsheet.
+// Use a function to round the number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

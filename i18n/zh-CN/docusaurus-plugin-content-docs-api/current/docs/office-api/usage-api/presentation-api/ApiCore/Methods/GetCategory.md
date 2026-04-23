@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取演示文稿中演示文稿的类别（使用核心属性）。
+此示例演示如何使用 ApiCore 获取演示文稿的类别。
 
 ```javascript editor-pptx
-// How can I get the category using a core properties in a presentation?
-
-// Get the category for a core properties in a presentation.
-
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
@@ -44,4 +40,5 @@ paragraph.AddText("Category: " + category);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

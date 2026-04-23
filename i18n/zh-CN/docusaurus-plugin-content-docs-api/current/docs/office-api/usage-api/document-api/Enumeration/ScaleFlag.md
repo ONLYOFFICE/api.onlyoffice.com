@@ -13,9 +13,10 @@
 - "tooBig"
 - "tooSmall"
 
+
 ## 示例
 
-设置当前图片表单过大时的缩放条件。
+此示例设置当前图片表单过大时的缩放条件。
 
 ```javascript editor-docx
 // How to set a scale flag for picture form.

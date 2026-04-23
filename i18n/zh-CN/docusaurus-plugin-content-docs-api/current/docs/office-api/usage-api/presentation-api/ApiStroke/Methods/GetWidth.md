@@ -20,13 +20,10 @@ expression.GetWidth();
 
 ## 示例
 
-获取笔触的宽度（EMU）。在演示文稿中创建具有不同边框宽度的形状并显示其宽度。
+获取描边宽度（以 EMU 为单位）。
 
 ```javascript editor-pptx
-// How do I get the width in a presentation?
-
-// Get the width using a stroke object in a presentation.
-
+// Creates shapes with different border widths and displays their widths.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -60,4 +57,5 @@ let content3 = shape3.GetDocContent();
 let para3 = content3.GetElement(0);
 let width3 = shape3.GetLine().GetWidth();
 para3.AddText("5pt: " + width3 + " EMU");
+
 ```

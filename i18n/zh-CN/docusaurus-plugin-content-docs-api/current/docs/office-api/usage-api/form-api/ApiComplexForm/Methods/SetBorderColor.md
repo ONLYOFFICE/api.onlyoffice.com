@@ -2,14 +2,30 @@
 
 设置当前表单的边框颜色。
 
-继承自 [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md)。
+## 语法
+
+```javascript
+expression.SetBorderColor(color);
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 可选 | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | 边框颜色。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-为表单设置边框颜色。
+此示例为表单设置边框颜色。
 
 ```javascript editor-forms
-// Apply an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
 
 // Define the border color of the date form.
 

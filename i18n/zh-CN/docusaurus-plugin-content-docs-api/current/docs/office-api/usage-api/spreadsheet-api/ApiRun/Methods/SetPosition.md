@@ -1,6 +1,6 @@
 # SetPosition
 
-指定此文本块的文本相对于周围非定位文本的默认
+指定此运行的文本相对于周围非定位文本的默认
 基线升高或降低的量。
 
 ## 语法
@@ -9,7 +9,7 @@
 expression.SetPosition(nPosition);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在电子表格中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
+此示例指定此运行的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-xlsx
-// How to set an inline position of a text in a spreadsheet.
+// How to set an inline position of a text.
 
-// Create a text run object, specify its position to move down or up in a spreadsheet.
+// Create a text run object, specify its position to move down or up.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

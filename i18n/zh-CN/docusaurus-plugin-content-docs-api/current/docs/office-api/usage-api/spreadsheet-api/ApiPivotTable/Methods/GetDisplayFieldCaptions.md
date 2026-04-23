@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中数据透视表的显示字段标题。
+此示例展示如何获取数据透视表的显示字段标题。
 
 ```javascript editor-xlsx
-// How to get pivot table display field captions in a spreadsheet.
+// How to get pivot table display field captions.
 
-// Create a pivot table, add data to it then get its display field captions in a spreadsheet.
+// Create a pivot table, add data to it then get its display field captions.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,4 +61,5 @@ pivotTable.AddFields({
 let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A9').SetValue('Display field captions');
 pivotWorksheet.GetRange('B9').SetValue(pivotTable.GetDisplayFieldCaptions());
+
 ```

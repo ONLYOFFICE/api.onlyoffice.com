@@ -20,10 +20,10 @@ expression.GetFontSize();
 
 ## 示例
 
-获取电子表格中文本的字体大小。
+此示例获取文本字体大小。
 
 ```javascript editor-xlsx
-// How to find out a text font size in a spreadsheet.
+// How to find out a text font size.
 
 // Get a text font size and display it in the worksheet.
 

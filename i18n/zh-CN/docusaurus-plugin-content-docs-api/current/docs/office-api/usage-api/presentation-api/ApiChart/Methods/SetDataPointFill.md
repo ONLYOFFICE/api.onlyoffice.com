@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为数据点设置填充。
+此示例展示如何设置数据点的填充。
 
 ```javascript editor-pptx
-// How to color a data point in a presentation.
+// How to color a data point.
 
-// Create a chart then color its data points in a presentation.
+// Create a chart then color its data points.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,5 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 slide.AddObject(chart);
+
 ```

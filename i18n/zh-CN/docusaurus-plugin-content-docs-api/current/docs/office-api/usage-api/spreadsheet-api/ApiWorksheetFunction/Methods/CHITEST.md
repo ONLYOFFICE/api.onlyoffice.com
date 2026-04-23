@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回独立性检验：统计量的卡方分布值和相应的自由度。
+此示例演示如何返回独立性检验：统计量的卡方分布值和相应的自由度。
 
 ```javascript editor-xlsx
-// How to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom in a spreadsheet.
+// How to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
 
-// Use function to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom in a spreadsheet.
+// Use function to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -13,9 +13,10 @@
 - "run"
 - "numbering"
 
+
 ## 示例
 
-将默认文档段落样式分配给 'oNormalStyle' 变量。
+此示例将默认文档段落样式分配给 'oNormalStyle' 变量。
 
 ```javascript editor-docx
 // How to get a default style of the paragraph from the document.

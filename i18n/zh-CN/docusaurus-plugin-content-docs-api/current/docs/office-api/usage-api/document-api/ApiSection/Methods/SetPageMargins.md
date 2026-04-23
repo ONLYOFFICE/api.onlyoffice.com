@@ -25,7 +25,7 @@ boolean
 
 ## 示例
 
-指定此节中所有页面的页边距。
+此示例指定此节中所有页面的页边距。
 
 ```javascript editor-docx
 // How to set page margins.

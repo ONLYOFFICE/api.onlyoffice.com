@@ -2,16 +2,30 @@
 
 从当前文本属性获取文本间距，以磅的二十分之一为单位。
 
-继承自 [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md)。
+## 语法
+
+```javascript
+expression.GetSpacing();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md)
 
 ## 示例
 
-获取当前表单间距值。
+此示例查明当前表单的间距值。
 
 ```javascript editor-docx
-// How to find out th text spacing in a document.
+// How to find out th text spacing.
 
-// Get the property of the text that shows the size of spacing in a document.
+// Get the property of the text that shows the size of spacing.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

@@ -20,13 +20,9 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中多边形注释的类类型。
+此示例获取多边形注释的类类型。
 
 ```javascript editor-pdf
-// How to identify the class type of a polygon annotation in a PDF document?
-
-// Obtain the class type identifier of a polygon annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polygonAnnot = Api.CreatePolygonAnnot([40, 5, 160, 110], vertices);

@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-从文档中的范围获取文本属性。
+此示例从范围获取文本属性。
 
 ```javascript editor-docx
-// How to make italic the text of the range in a document.
+// How to make italic the text of the range.
 
-// Get a range and update its text style in a document.
+// Get a range and update its text style.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,4 +46,5 @@ range2.SetTextPr(textPr);
 let newParagraph = Api.CreateParagraph();
 newParagraph.AddText("This text is in italic as per the modified text properties.");
 doc.Push(newParagraph);
+
 ```

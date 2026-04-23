@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取复选框表单的标签文本。
+此示例从复选框表单获取标签文本。
 
 ```javascript editor-forms
 // How to retrieve a label from the checkbox form.
 
-// Get the label text from the checkbox in a document.
+// Get the label text from the checkbox.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Select if you agree to terms", "required": true, "key" : "Terms agreement"});

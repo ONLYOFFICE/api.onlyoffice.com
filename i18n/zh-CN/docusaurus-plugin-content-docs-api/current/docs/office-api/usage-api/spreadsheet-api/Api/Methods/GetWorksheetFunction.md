@@ -20,7 +20,7 @@ expression.GetWorksheetFunction();
 
 ## 示例
 
-在电子表格中使用工作表函数对象来使用内置函数。
+此示例演示如何使用工作表函数对象使用内置函数。
 
 ```javascript editor-xlsx
 // How to use system functions in a spreadsheets.

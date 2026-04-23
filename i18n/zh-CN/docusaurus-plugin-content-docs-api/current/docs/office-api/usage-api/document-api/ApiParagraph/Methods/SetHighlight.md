@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-在文档中为段落设置 "lightGray" 突出显示颜色。
+此示例为段落设置「浅灰色」高亮颜色。
 
 ```javascript editor-docx
-// How to set highlight to the text in a document.
+// How to set highlight to the text.
 
-// Create a new paragraph and highlight it in a document.
+// Create a new paragraph and highlight it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

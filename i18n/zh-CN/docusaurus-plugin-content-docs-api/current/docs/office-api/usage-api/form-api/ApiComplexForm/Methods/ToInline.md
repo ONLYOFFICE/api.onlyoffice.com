@@ -3,11 +3,25 @@
 将当前表单转换为内联表单。
 *图片表单无法转换为内联表单，它始终是固定大小的对象。*
 
-继承自 [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md)。
+## 语法
+
+```javascript
+expression.ToInline();
+```
+
+`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-将表单转换为内联表单。
+此示例将表单转换为内联表单。
 
 ```javascript editor-forms
 // How to make the form inline.

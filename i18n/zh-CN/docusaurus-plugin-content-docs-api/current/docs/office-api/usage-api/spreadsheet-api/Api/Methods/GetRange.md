@@ -22,10 +22,10 @@ expression.GetRange(sRange);
 
 ## 示例
 
-通过范围引用获取电子表格中的单元格范围对象。
+此示例演示如何根据范围引用获取 ApiRange 对象。
 
 ```javascript editor-xlsx
-// How to get a range object using an address in a spreadsheet.
+// How to get a range object using an address.
 
 // Update a rabge knowing its cell address.
 

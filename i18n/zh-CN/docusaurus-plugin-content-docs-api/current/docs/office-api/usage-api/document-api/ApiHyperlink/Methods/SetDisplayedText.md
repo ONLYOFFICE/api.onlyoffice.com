@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中的超链接显示文本。
+此示例设置超链接显示文本。
 
 ```javascript editor-docx
-// How to specify the hyperlink text that is displayed in a document.
+// How to specify the hyperlink text that is displayed.
 
-// Set the visible text of the link in a document.
+// Set the visible text of the link.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

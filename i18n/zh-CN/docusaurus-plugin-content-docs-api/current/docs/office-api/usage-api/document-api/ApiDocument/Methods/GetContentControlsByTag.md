@@ -22,12 +22,12 @@ expression.GetContentControlsByTag(sTag);
 
 ## 示例
 
-获取文档中具有指定标签名称的所有内容控件列表。
+此示例展示如何获取文档中具有指定标签名称的所有内容控件列表。
 
 ```javascript editor-docx
-// Retrieve each content control with the specified tag in a document.
+// Retrieve each content control with the specified tag.
 
-// Get the first content control with the tag and set its alias in a document.
+// Get the first content control with the tag and set its alias.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

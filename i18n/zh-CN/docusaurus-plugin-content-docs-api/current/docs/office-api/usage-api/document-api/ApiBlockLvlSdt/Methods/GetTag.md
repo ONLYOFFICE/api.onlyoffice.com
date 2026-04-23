@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中容器的标签属性。
+此示例演示如何获取容器的标记属性。
 
 ```javascript editor-docx
-// Create a block content control, set a tag to it, and return this tag to insert it into the second paragraph of the document.
+// Creates a block content control, sets a tag to it, and returns this tag to insert it into the second paragraph of the document.
 
-// How to get a tag from the block-level content control object in a document.
+// How to get a tag from the ApiBlockLvlSdt object.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

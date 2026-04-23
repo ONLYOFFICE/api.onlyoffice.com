@@ -1,17 +1,33 @@
 # SetOutLine
 
-设置当前文本块的文本轮廓。
+设置当前文本运行的文本轮廓。
 
-继承自 [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md)。
+## 语法
+
+```javascript
+expression.SetOutLine(oStroke);
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建文本轮廓的笔画。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-在电子表格中为当前文本 run 设置文本轮廓。
+此示例设置当前文本运行的文本轮廓
 
 ```javascript editor-xlsx
-// How to outline a text with a stroke in a spreadsheet.
+// How to outline a text with a stroke.
 
-// Add text ouline using colored stroke in a spreadsheet.
+// Add text ouline using colored stroke.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

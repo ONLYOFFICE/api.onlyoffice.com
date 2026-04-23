@@ -1,6 +1,6 @@
 # SetColor
 
-设置当前文本块的文本颜色。
+设置当前文本运行的文本颜色。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetColor(color);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-以 RGB 格式为当前文本 run 设置文本颜色。
+此示例以 RGB 格式设置当前文本运行的文本颜色。
 
 ```javascript editor-pptx
-// How to change text color in a presentation.
+// How to change text color.
 
-// Create a new text run and change its font color in a presentation.
+// Create a new text run and change its font color.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,4 +49,5 @@ run.AddText('This is a text run with the font color set to light blue.');
 paragraph.AddElement(run);
 run.SetColor(Api.HexColor('#aad3ff'));
 slide.AddObject(shape);
+
 ```

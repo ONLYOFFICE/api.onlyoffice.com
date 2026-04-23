@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中返回到期付息证券的年收益率。
+此示例演示如何返回到期付息证券的年收益率。
 
 ```javascript editor-xlsx
-// How to return annual yield of a security in a spreadsheet.
+// How to return annual yield of a security.
 
-// Use a function to get a security annual yield in a spreadsheet.
+// Use a function to get a security annual yield.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

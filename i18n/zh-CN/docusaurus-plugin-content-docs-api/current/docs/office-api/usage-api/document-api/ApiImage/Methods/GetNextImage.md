@@ -20,12 +20,12 @@ expression.GetNextImage();
 
 ## 示例
 
-获取文档中的下一个内联图像（如果存在）。
+此示例展示如何获取下一个内联图像（如果存在）。
 
 ```javascript editor-docx
-// How to add the next drawing to the paragraph in a document.
+// How to add the next drawing to the paragraph.
 
-// Get the next drawing and add it separated with a line break in a document.
+// Get the next drawing and add it separated with a line break.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -47,4 +47,5 @@ let nextImage = image1.GetNextImage();
 let copyImage = nextImage.Copy();
 paragraph.AddLineBreak();
 paragraph.AddDrawing(copyImage);
+
 ```

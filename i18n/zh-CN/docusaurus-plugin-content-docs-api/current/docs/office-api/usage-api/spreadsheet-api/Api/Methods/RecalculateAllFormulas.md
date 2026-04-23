@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-重新计算活动工作簿中的所有公式。
+此示例重新计算活动工作簿中的所有公式。
 
 ```javascript editor-xlsx
 // How to recalculate all formulas in a worksheet.

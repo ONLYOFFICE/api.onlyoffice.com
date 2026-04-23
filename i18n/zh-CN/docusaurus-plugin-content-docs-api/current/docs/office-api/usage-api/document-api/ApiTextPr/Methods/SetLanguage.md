@@ -1,6 +1,6 @@
 # SetLanguage
 
-指定在处理文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在处理文本运行内容时将用于检查拼写和语法（如果请求）的语言。
 
 ## 语法
 
@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-指定在文档中处理文本 run 内容时用于检查拼写和语法（如果需要）的语言。
+此示例指定在处理文本运行内容时将用于检查拼写和语法（如果请求）的语言。
 
 ```javascript editor-docx
-// How to set a language to the text for grammar checking in a document.
+// How to set a language to the text for grammar checking.
 
-// Create a text run object, change its language to English for grammar check in a document.
+// Create a text run object, change its language to English for grammar check.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中仅显示图标而不显示单元格值。
+此示例演示如何仅显示图标而不显示单元格值。
 
 ```javascript editor-xlsx
 // How to configure icon set to hide cell values and show only icons.
 
-// Set the icon set rule to display only icons in a spreadsheet.
+// Set the icon set rule to display only icons.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,4 +43,5 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Shows icons and values");
 iconCondition.SetShowIconOnly(true);
 worksheet.GetRange("B2").SetValue("After: Shows icons only");
+
 ```

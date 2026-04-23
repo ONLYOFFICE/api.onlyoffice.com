@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将光标移到文档中内容控件的外部。
+此示例演示如何将光标移动到内容控件外部。
 
 ```javascript editor-docx
-// Create a block content control, add a text to it, and move a cursor outside the container in a document.
+// Creates a block content control, adds a text to it, and moves a cursor outside the container.
 
-// How to move a cursor outside the block-level content control object in a document.
+// How to move a cursor outside the ApiBlockLvlSdt object.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

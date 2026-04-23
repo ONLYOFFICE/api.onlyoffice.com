@@ -69,7 +69,7 @@ func.call = async function (params) {
 };
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetElement.md), [GetStyle](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetElement.md), [GetStyle](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

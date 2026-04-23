@@ -23,12 +23,12 @@ expression.GetRangeByNumber(nRow, nCol);
 
 ## 示例
 
-使用行/列坐标获取表示电子表格中工作表选定范围的对象。
+此示例展示如何使用行/列坐标获取表示工作表选定区域的对象进行单元格选择。
 
 ```javascript editor-xlsx
-// How to get a range using its coordinates in a spreadsheet.
+// How to get a range using its coordinates.
 
-// Get range by number and set its value in a spreadsheet.
+// Get range by number and set its value.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRangeByNumber(1, 2).SetValue("42");

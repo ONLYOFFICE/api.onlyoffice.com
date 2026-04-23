@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回一系列现金流时间表的净现值。
+此示例演示如何返回现金流计划的净现值。
 
 ```javascript editor-xlsx
-// How to return the net present value for a schedule of cash flows in a spreadsheet.
+// How to return the net present value for a schedule of cash flows.
 
-// Use a function to return the net present value in a spreadsheet.
+// Use a function to return the net present value.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

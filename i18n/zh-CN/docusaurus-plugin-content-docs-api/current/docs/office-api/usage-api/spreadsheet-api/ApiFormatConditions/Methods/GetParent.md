@@ -20,7 +20,7 @@ expression.GetParent();
 
 ## 示例
 
-获取条件格式规则的父范围。
+此示例获取条件格式规则的父区域。
 
 ```javascript editor-xlsx
 // How to get the range that contains conditional formatting rules.
@@ -45,4 +45,5 @@ formatConditions.AddDatabar();
 let parentRange = formatConditions.GetParent();
 
 worksheet.GetRange("B1").SetValue("Parent: " + parentRange.GetAddress());
+
 ```

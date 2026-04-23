@@ -26,9 +26,10 @@
 - "lightGray"
 - "none"
 
+
 ## 示例
 
-将段落突出显示设置为绿色。
+此示例将段落突出显示设置为绿色。
 
 ```javascript editor-pptx
 // How to change a highlight color to green.

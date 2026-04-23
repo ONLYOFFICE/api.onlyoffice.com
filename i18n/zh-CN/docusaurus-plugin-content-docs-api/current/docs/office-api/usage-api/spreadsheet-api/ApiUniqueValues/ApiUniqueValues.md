@@ -1,6 +1,6 @@
 # ApiUniqueValues
 
-ApiUniqueValues 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md) 的子类。
+表示 ApiUniqueValues 类。
 
 ## 属性
 

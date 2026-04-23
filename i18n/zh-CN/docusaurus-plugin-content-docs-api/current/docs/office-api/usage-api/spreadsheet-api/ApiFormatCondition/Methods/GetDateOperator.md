@@ -20,7 +20,7 @@ expression.GetDateOperator();
 
 ## 示例
 
-从时间段条件格式规则获取日期运算符。
+此示例从时间段条件格式规则获取日期运算符。
 
 ```javascript editor-xlsx
 // How to retrieve date operators from time period conditional formatting rules.
@@ -47,4 +47,5 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
+
 ```

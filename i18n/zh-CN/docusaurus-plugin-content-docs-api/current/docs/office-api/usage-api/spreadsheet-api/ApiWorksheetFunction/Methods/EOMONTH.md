@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定月数之前或之后的月份最后一天的序列号。
+此示例演示如何返回指定月数之前或之后某月最后一天的序列号。
 
 ```javascript editor-xlsx
-// How to get a date of the last day of the month before or after specified months in a spreadsheet.
+// How to get a date of the last day of the month before or after specified months.
 
-// Use function to get the serial number of the last day of the month before or after the specified number of months in a spreadsheet.
+// Use function to get the serial number of the last day of the month before or after the specified number of months.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,4 +36,5 @@ let func = Api.WorksheetFunction;
 let ans = func.EOMONTH("3/16/2018", 10); 
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

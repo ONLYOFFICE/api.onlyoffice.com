@@ -22,13 +22,9 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-对段落文本应用删除线格式。
+此示例对段落文本应用删除线格式。
 
 ```javascript editor-pptx
-// How can I set strikeout using a paragraph in a presentation?
-
-// Set strikeout for a paragraph in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,4 +38,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text struck out with a single line.');
 paragraph.SetStrikeout(true);
 slide.AddObject(shape);
+
 ```

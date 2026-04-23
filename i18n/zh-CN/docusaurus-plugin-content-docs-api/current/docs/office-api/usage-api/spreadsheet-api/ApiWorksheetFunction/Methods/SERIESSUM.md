@@ -25,10 +25,10 @@ number
 
 ## 示例
 
-在电子表格中基于公式返回幂级数之和。
+此示例演示如何根据公式返回幂级数的和。
 
 ```javascript editor-xlsx
-// How to calculate the sum of a power series in a spreadsheet.
+// How to calculate the sum of a power series.
 
 // Use a function to sum up a power series using a formula.
 

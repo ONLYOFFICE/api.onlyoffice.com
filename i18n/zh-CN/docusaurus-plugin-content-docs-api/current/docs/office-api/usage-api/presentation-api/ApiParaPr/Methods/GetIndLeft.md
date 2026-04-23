@@ -20,10 +20,10 @@ expression.GetIndLeft();
 
 ## 示例
 
-获取演示文稿中的段落左侧缩进。
+此示例展示如何获取段落左侧缩进。
 
 ```javascript editor-pptx
-// How to return a left side identation of a paragraph property in a presentation.
+// How to return a left side identation of a paragraph property.
 
 // Return a left side indentation of a text property from the slide.
 
@@ -53,4 +53,5 @@ const indLeft = paraPr.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
+
 ```

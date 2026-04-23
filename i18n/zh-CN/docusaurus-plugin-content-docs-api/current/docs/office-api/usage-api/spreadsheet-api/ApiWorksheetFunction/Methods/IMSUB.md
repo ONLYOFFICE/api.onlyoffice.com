@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回以 x + yi 或 x + yj 形式表示的两个复数之差。
+此示例演示如何返回以 x + yi 或 x + yj 形式表示的两个复数的差。
 
 ```javascript editor-xlsx
-// How to substract two complex numbers in a spreadsheet.
+// How to substract two complex numbers.
 
-// Use a function to get the difference of two complex number in a spreadsheet.
+// Use a function to get the difference of two complex number.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

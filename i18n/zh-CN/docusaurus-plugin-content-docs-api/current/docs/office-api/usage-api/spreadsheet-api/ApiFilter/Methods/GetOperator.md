@@ -20,12 +20,12 @@ expression.GetOperator();
 
 ## 示例
 
-读取电子表格中筛选器使用的运算符。
+此示例读取筛选使用的运算符。
 
 ```javascript editor-xlsx
-// How to detect the type of filter (values, custom AND/OR, dynamic, top10, etc.) in a spreadsheet.
+// How to detect the type of filter (values, custom AND/OR, dynamic, top10, etc.).
 
-// Use ApiFilter.GetOperator() to identify the filter operator in a spreadsheet.
+// Use ApiFilter.GetOperator() to identify the filter operator.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,4 +51,5 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Filter operator:");
     worksheet.GetRange("D1").SetValue(filter.GetOperator());   // or filter.Operator
 }
+
 ```

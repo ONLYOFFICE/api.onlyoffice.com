@@ -23,7 +23,7 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-合并一组单元格。
+此示例合并单元格数组。
 
 ```javascript editor-docx
 // How to merge cells of the table into one.

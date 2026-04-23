@@ -1,6 +1,6 @@
 # SetVerticalTextAlign
 
-设置可以插入段落或文本块的形状内容的垂直对齐方式。
+设置可以插入段落或文本运行的形状内容的垂直对齐方式。
 
 ## 语法
 
@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中设置形状内容的垂直对齐方式。
+如何设置形状内容的垂直对齐方式。
 
 ```javascript editor-pdf
-// Adjust vertical alignment of the text inside the shape in a PDF document.
-
-// Use shape to set vertical text align in a PDF document.
+// Adjust vertical alignment of the text inside the shape.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

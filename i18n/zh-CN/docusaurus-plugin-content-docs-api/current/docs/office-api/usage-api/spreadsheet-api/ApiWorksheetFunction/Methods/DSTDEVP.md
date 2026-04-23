@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中基于所选数据库条目的整个总体计算标准差。
+此示例演示如何根据所选数据库条目的整个总体计算标准差。
 
 ```javascript editor-xlsx
-// How to estimate the standard deviation based on an entire population in a spreadsheet.
+// How to estimate the standard deviation based on an entire population.
 
-// Use function to estimate the standard deviation based on the entire population from a range in a spreadsheet.
+// Use function to estimate the standard deviation based on the entire population from a range.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中指定图表图例位置。
+此示例指定图表图例位置。
 
 ```javascript editor-xlsx
-// Change the positions of the chart legend in a spreadsheet.
+// Change the positions of the chart legend.
 
-// How to set right the chart legend in a spreadsheet.
+// How to set right the chart legend.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

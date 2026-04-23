@@ -20,13 +20,10 @@ expression.GetType();
 
 ## 示例
 
-获取并显示填充类型。在演示文稿中创建具有不同填充类型的形状并显示其类型。
+获取填充类型并显示。
 
 ```javascript editor-pptx
-// How can I get the type using a fill in a presentation?
-
-// Get the type for a fill in a presentation.
-
+// Creates shapes with different fill types and shows their types.
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 
@@ -62,4 +59,5 @@ let content3 = shape3.GetDocContent();
 let para3 = content3.GetElement(0);
 let fill3 = shape3.GetFill();
 para3.AddText("No fill: " + fill3.GetType());
+
 ```

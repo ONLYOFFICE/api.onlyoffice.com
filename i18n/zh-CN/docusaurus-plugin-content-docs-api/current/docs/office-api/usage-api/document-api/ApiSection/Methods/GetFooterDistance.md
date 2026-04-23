@@ -20,10 +20,10 @@ expression.GetFooterDistance();
 
 ## 示例
 
-设置页脚距离，然后在文档中读取它。
+此示例设置页脚距离然后读取它。
 
 ```javascript editor-docx
-// How to get footer distance of the section in a document.
+// How to get footer distance of the section.
 
 // Retrieve the current distance between the end of the page and the footer.
 

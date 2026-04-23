@@ -4,7 +4,7 @@
 
 ## 类型
 
-[Point](../Enumeration/Point.md)[]
+对象
 
 ## 属性
 

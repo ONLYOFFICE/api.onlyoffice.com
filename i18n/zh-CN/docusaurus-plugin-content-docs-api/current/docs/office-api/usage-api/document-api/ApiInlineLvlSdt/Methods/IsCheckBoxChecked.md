@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-检查文档中复选框内容控件的状态。
+此示例展示如何检查复选框内容控件的状态。
 
 ```javascript editor-docx
-// How can I is check box checked using an inline content control in a document?
-
-// Is check box checked for an inline content control in a document.
-
 let doc = Api.GetDocument();
 let checkBox = doc.AddCheckBoxContentControl();
 let paragraph = Api.CreateParagraph();

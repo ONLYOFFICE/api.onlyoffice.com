@@ -22,12 +22,12 @@ expression.Paste(destination);
 
 ## 示例
 
-在电子表格中从剪贴板粘贴数据。
+此示例展示如何从剪贴板粘贴数据。
 
 ```javascript editor-xlsx
-// How to paste a copied or cut data from the clipboard in a spreadsheet.
+// How to paste a copied or cut data from the clipboard.
 
-// Paste to the worksheet using the worksheet API in a spreadsheet.
+// Paste to the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.Paste();

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回有效年利率。
+此示例演示如何返回有效年利率。
 
 ```javascript editor-xlsx
-// How to get an effective annual interest rate in a spreadsheet.
+// How to get an effective annual interest rate.
 
-// Use function to get effective annual interest rate in a spreadsheet.
+// Use function to get effective annual interest rate.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

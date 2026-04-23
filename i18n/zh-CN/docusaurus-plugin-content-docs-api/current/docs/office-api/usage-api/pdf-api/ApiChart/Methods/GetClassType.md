@@ -20,12 +20,10 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中图表返回的类类型。
+如何获取 ApiChart 的类类型。
 
 ```javascript editor-pdf
-// How do I check what type a chart object is in a PDF document?
-
-// Retrieve and output the class type string for a chart in a PDF document.
+// Retrieve class type of ApiChart object and insert it to the page.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +46,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中复选框字段的切换为关闭属性。
+此示例获取复选框字段的切换为关闭属性。
 
 ```javascript editor-pdf
-// How can I is toggle to off using a checkbox field in a PDF document?
-
-// Is toggle to off for a checkbox field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

@@ -21,13 +21,9 @@ expression.GetCore();
 
 ## 示例
 
-使用核心属性管理电子表格中的电子表格元数据。
+此示例演示如何使用 ApiCore 管理电子表格元数据。
 
 ```javascript editor-xlsx
-// How to get the core in a spreadsheet?
-
-// Get the core using the spreadsheet API.
-
 const worksheet = Api.GetActiveSheet();
 
 const core = Api.GetCore();
@@ -90,4 +86,5 @@ paragraph.AddText("Revision: " + revision + "\n");
 paragraph.AddText("Subject: " + subject + "\n");
 paragraph.AddText("Title: " + title + "\n");
 paragraph.AddText("Version: " + version);
+
 ```

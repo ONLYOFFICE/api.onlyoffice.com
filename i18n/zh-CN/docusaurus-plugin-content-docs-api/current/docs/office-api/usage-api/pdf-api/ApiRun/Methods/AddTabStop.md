@@ -1,6 +1,6 @@
 # AddTabStop
 
-向当前文本块添加制表位。
+向当前运行添加制表位。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.AddTabStop();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中向 run 添加制表位。
+此示例向运行添加制表位。
 
 ```javascript editor-pdf
-// How to add a tab after a string in a text run in a PDF document.
+// How to add a tab after a string in a text run.
 
-// How to split a text with a tab in a PDF document.
+// How to split a text with a tab.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.SetFontSize(30);
@@ -46,4 +46,5 @@ run.AddTabStop();
 run.AddText("This is the text which starts after the tab stops.");
 paragraph.AddElement(run);
 page.AddObject(shape);
+
 ```

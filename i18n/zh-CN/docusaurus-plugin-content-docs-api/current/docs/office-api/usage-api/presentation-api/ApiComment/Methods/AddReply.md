@@ -25,10 +25,10 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## 示例
 
-在演示文稿中向批注添加回复。
+此示例演示如何向批注添加回复。
 
 ```javascript editor-pptx
-// How to reply to the comment in a presentation.
+// How to reply to the comment.
 
 // Get all comments from the presentation and reply to the first one.
 
@@ -60,4 +60,5 @@ paragraph.AddText("First comment and its reply are aligned to the top left corne
 paragraph.AddText("Comment from John Doe is aligned to the bottom right corner of the shape." + "\n");
 paragraph.AddLineBreak();
 paragraph.AddText("Comment's reply text: " + reply.GetText());
+
 ```

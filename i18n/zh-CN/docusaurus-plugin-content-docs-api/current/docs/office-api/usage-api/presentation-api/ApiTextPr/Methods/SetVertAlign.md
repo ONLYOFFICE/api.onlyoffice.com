@@ -1,9 +1,9 @@
 # SetVertAlign
 
-指定将应用于文本块内容相对于文本块默认外观的对齐方式：
--**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+指定将应用于运行内容相对于运行文本默认外观的对齐方式：
+-**"baseline"** - 当前文本运行中的字符将按默认文本基线对齐。
+-**"subscript"** - 当前文本运行中的字符将对齐到默认文本基线下方。
+-**"superscript"** - 当前文本运行中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在演示文稿中相对于 run 文本默认外观应用于 run 内容的对齐方式。
+此示例指定将相对于文本运行的默认外观应用于运行内容的对齐方式。
 
 ```javascript editor-pptx
-// How to set a vertical alignment of the text in a presentation.
+// How to set a vertical alignment of the text.
 
-// Get the text properties of the run and make it superscript, subscript, etc in a presentation.
+// Get the text properties of the run and make it superscript, subscript, etc.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,4 +51,5 @@ paragraph.SetJc("left");
 run.AddText("This is a text inside the shape with vertical alignment set to 'superscript'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
+
 ```

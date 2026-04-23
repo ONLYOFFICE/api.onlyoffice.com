@@ -22,13 +22,9 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-对段落文本应用双删除线格式。
+此示例对段落文本应用双删除线格式。
 
 ```javascript editor-pdf
-// How to set double strikeout for a paragraph in a PDF document?
-
-// Set double strikeout and display the result in a PDF document.
-
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,4 +37,5 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text struck out with two lines.');
 paragraph.SetDoubleStrikeout(true);
 page.AddObject(shape);
+
 ```

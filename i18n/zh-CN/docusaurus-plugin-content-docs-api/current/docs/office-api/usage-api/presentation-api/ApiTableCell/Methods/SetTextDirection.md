@@ -22,12 +22,12 @@ expression.SetTextDirection(sType);
 
 ## 示例
 
-指定当前表格单元格的文本流方向。
+此示例指定当前表格单元格的文本流动方向。
 
 ```javascript editor-pptx
 // How to set text direction of the table cell.
 
-// Create a table and set the text direction for the table cell object.
+// Create a table and set the text direction for the ApiTableCell object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,4 +44,5 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

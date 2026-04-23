@@ -22,12 +22,12 @@ expression.SetDragToRow(flag);
 
 ## 示例
 
-在电子表格中设置透视字段的拖动到行属性。
+此示例展示如何设置透视字段的拖动到行。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to row in a spreadsheet.
+// How to rename a pivot field drag to row.
 
-// Create a pivot table, add data to it then set drag to row of a specified pivot in a spreadsheet.
+// Create a pivot table, add data to it then set drag to row of a specified pivot.
 
 let worksheet = Api.GetActiveSheet();
 

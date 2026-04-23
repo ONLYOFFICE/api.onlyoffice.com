@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取文档中当前表格条件样式的类型。
+此示例展示如何获取当前表格条件样式的类型。
 
 ```javascript editor-docx
 // How to get the table style type and display it in the document.
 
-// Retrieve the type of the style in a document.
+// Retrieve the type of the style.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

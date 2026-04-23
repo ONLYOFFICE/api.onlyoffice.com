@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中的给定编号级别定义中，指定父编号级别使用的编号起始值。
+此示例指定在给定编号级别定义中父编号级别使用的编号起始值。
 
 ```javascript editor-docx
-// How to set the bullet numbering to the paragraph in a document.
+// How to set the bullet numbering to the paragraph.
 
-// Reset the numbering of the bulleted text in a document.
+// Reset the numbering of the bulleted text.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

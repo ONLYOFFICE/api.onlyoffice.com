@@ -20,13 +20,10 @@ string \| null
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+分析 PDF 文档页面上星形形状的路径命令。
 
 ```javascript editor-pdf
-// How do I get the y in a PDF document?
-
-// Get the y using a path command object in a PDF document.
-
+// Shows command count and first command details in a text shape.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

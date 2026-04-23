@@ -20,10 +20,10 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含该表格的表格。
+此示例展示如何获取包含表格的表格。
 
 ```javascript editor-docx
-// How to get the parent table and delete its row in a document.
+// How to get the parent table and delete its row.
 
 // Retrieve the parent table, get its cell and remove the row of it.
 

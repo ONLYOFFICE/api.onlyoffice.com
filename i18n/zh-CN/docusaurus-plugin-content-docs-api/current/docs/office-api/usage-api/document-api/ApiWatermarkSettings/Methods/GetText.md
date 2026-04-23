@@ -20,7 +20,7 @@ string \| null
 
 ## 示例
 
-获取水印文本并将其粘贴到文档中。
+此示例获取水印文本并将其粘贴到文档中。
 
 ```javascript editor-docx
 // How to retrieve the text from the watermark and display it in the document.

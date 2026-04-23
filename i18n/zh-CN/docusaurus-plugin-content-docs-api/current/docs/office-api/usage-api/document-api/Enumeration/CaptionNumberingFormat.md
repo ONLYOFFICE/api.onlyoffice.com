@@ -19,9 +19,10 @@
 - "roman"
 - "Arabic"
 
+
 ## 示例
 
-向段落添加具有阿拉伯数字编号格式的题注。
+此示例向段落添加具有阿拉伯数字编号格式的题注。
 
 ```javascript editor-docx
 // How to add a caption to the paragraph specifying numbering format.

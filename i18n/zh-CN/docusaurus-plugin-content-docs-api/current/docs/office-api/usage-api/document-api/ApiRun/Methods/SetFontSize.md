@@ -1,6 +1,6 @@
 # SetFontSize
 
-设置当前文本块字符的字体大小。
+设置当前文本运行字符的字体大小。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.SetFontSize(nSize);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在文档中为当前文本 run 的字符设置字体大小。
+此示例设置当前文本运行字符的字体大小。
 
 ```javascript editor-docx
-// How to set font size to the text run in a document.
+// How to set font size to the text run.
 
-// Create a new text run and change resize its font in a document.
+// Create a new text run and change resize its font.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

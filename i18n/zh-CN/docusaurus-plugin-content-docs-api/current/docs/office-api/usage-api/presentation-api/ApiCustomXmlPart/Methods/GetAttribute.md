@@ -23,12 +23,12 @@ string \| null
 
 ## 示例
 
-从演示文稿中自定义 XML 部件的根元素获取属性。
+此示例演示如何从自定义 XML 部件的根元素获取属性。
 
 ```javascript editor-pptx
-// How to get an attribute from an XML part element in a presentation.
+// How to get an attribute from an XML part element.
 
-// Get an XML attribute using the custom XML part API in a presentation.
+// Get an XML attribute.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

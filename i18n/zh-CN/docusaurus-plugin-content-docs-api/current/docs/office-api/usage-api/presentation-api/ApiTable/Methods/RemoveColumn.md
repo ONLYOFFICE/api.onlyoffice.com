@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-移除包含指定单元格的表格列。
+此示例删除包含指定单元格的表格列。
 
 ```javascript editor-pptx
-// How to delete a column from the table in a presentation.
+// How to delete a column from the table.
 
 // Create a table, create cells and remove the whole column by its cell.
 
@@ -44,4 +44,5 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

@@ -22,7 +22,7 @@ expression.GetCell(nPos);
 
 ## 示例
 
-通过位置获取文档中的单元格。
+此示例展示如何通过位置获取单元格。
 
 ```javascript editor-docx
 // How to get cell from the table.

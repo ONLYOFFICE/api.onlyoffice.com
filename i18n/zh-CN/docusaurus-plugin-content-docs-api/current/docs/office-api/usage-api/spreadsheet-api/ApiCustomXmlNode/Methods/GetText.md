@@ -21,12 +21,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 节点的文本内容。
+此示例演示如何获取自定义 XML 节点的文本内容。
 
 ```javascript editor-xlsx
-// How to retrieve text content from custom XML node elements in a spreadsheet.
+// How to retrieve text content from custom XML node elements.
 
-// Get text from message node in a spreadsheet.
+// Get text from message node.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

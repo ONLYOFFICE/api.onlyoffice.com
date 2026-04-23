@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中从以均值和标准差表征的分布中返回标准化值。
+此示例演示如何从以平均值和标准差为特征的分布中返回标准化值。
 
 ```javascript editor-xlsx
-// How to calculate the normalised value from a distribution in a spreadsheet.
+// How to calculate the normalised value from a distribution.
 
-// Use a function to get the normalised value from a distribution by different parameters in a spreadsheet.
+// Use a function to get the normalised value from a distribution by different parameters.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -49,4 +49,5 @@ let func = Api.WorksheetFunction;
 let ans = func.STANDARDIZE(x, mean, stdDev);
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

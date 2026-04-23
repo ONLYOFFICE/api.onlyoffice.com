@@ -26,13 +26,9 @@ expression.SetReadingOrder(readingOrder);
 
 ## 示例
 
-在 PDF 文档中为富文本段落设置从右到左方向。
+此示例为富文本段落设置从右到左方向。
 
 ```javascript editor-pdf
-// How do I set reading order in a PDF document?
-
-// Set reading order using a rich paragraph object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

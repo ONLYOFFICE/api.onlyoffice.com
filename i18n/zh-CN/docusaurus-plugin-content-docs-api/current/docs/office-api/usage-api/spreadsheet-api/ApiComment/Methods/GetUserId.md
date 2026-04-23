@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-获取电子表格中批注作者的用户 ID。
+此示例展示如何获取批注作者的用户 ID。
 
 ```javascript editor-xlsx
-// How to get a comment author's user ID in a spreadsheet.
+// How to get a comment author's user ID.
 
 // Add a comment author's ID to a range of the worksheet.
 

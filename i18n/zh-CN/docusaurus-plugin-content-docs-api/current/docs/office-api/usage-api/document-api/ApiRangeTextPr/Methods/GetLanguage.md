@@ -2,16 +2,30 @@
 
 从当前文本属性获取语言。
 
-继承自 [ApiTextPr.GetLanguage](../../ApiTextPr/Methods/GetLanguage.md)。
+## 语法
+
+```javascript
+expression.GetLanguage();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string
 
 ## 示例
 
-获取文档中的文本语言。
+此示例展示如何查明文本语言。
 
 ```javascript editor-docx
-// Get the language of the text properties in a document.
+// Get the language of the text properties.
 
-// How to know the text language property in a document.
+// How to know the text language property.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

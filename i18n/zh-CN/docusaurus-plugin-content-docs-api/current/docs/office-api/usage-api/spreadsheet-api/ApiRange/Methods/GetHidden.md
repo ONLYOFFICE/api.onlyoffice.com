@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-获取电子表格中的值隐藏属性。
+此示例演示如何获取值隐藏属性。
 
 ```javascript editor-xlsx
-// How to find out hidden property from a range in a spreadsheet.
+// How to find out hidden property from a range.
 
 // Get a range, get its cell hiding property and show it in the worksheet.
 

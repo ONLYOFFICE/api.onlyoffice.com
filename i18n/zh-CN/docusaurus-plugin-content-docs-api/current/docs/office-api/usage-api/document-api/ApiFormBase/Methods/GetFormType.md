@@ -20,7 +20,7 @@ expression.GetFormType();
 
 ## 示例
 
-获取文档中表单的类型。
+此示例展示如何获取表单的类型。
 
 ```javascript editor-docx
 // How to know the type of a text form.

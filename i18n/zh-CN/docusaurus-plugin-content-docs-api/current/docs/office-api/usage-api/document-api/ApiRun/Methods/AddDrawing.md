@@ -1,6 +1,6 @@
 # AddDrawing
 
-向当前文本块添加图形对象（图像、形状或图表）。
+向当前文本运行添加图形对象（图像、形状或图表）。
 
 ## 语法
 
@@ -8,13 +8,13 @@
 expression.AddDrawing(oDrawing);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oDrawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 要添加到当前文本块的对象。 |
+| oDrawing | 必需 | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | 将添加到当前运行的对象。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中向 run 添加图表。
+此示例向运行添加图表。
 
 ```javascript editor-docx
-// How to add a drawing into the text in a document.
+// How to add a drawing into the text.
 
-// Insert a drawing to the text run in a document.
+// Insert a drawing to the text run.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中垂直翻转绘图对象。
+此示例垂直翻转绘图。
 
 ```javascript editor-docx
-// How to set the vertical flip property of the shape in a document.
+// How to set the vertical flip property of the shape.
 
-// Create a drawing, add text to it and flip it vertically in a document.
+// Create a drawing, add text to it and flip it vertically.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

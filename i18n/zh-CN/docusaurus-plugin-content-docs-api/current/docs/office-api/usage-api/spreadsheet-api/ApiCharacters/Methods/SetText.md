@@ -22,12 +22,12 @@ expression.SetText(Text);
 
 ## 示例
 
-在电子表格中为指定字符设置文本。
+此示例设置指定字符的文本。
 
 ```javascript editor-xlsx
-// Update characters collection by setting a new text in a spreadsheet.
+// Update characters collection by setting a new text.
 
-// Set text for the characters of the range in a spreadsheet.
+// Set text for the characters of the range.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

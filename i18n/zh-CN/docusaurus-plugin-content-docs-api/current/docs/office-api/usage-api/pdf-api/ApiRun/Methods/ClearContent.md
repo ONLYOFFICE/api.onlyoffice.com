@@ -1,6 +1,6 @@
 # ClearContent
 
-清除当前文本块中的内容。
+清除当前运行中的内容。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.ClearContent();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-清除 PDF 文档中 run 的内容。
+此示例清除运行中的内容。
 
 ```javascript editor-pdf
-// How to delete content from the text run in a PDF document.
+// How to delete content from the text run.
 
 // Remove text from the page.
 
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.SetFontSize(30);
@@ -50,4 +50,5 @@ run.AddText("The text in the previous paragraph cannot be seen, as it has been c
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 page.AddObject(shape);
+
 ```

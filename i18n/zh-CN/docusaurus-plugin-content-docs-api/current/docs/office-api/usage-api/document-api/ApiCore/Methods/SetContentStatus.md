@@ -22,13 +22,9 @@ expression.SetContentStatus(sStatus);
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的内容状态。
+此示例演示如何使用 ApiCore 获取当前文档的内容状态。
 
 ```javascript editor-docx
-// How do I set content status in a document?
-
-// Set content status using a core properties object in a document.
-
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetContentStatus("Final");
@@ -36,4 +32,5 @@ core.SetContentStatus("Final");
 const contentStatus = core.GetContentStatus();
 const paragraph = doc.GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
+
 ```

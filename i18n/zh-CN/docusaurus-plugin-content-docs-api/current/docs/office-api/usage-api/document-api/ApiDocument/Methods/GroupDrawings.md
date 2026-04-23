@@ -22,12 +22,12 @@ expression.GroupDrawings(aDrawings);
 
 ## 示例
 
-在文档中创建一组绘图对象。
+此示例展示如何在文档中创建图形组。
 
 ```javascript editor-docx
-// How to group the shapes in a document.
+// How to group the shapes.
 
-// Create two shapes, update their properties and group them in a document.
+// Create two shapes, update their properties and group them.
 
 let doc = Api.GetDocument();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));

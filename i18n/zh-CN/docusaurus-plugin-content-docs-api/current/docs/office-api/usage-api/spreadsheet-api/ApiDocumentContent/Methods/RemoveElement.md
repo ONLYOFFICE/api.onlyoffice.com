@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-在电子表格中通过指定的位置删除元素。
+此示例使用指定的位置移除元素。
 
 ```javascript editor-xlsx
 // How to remove an element from a document knowing its position in the document content.

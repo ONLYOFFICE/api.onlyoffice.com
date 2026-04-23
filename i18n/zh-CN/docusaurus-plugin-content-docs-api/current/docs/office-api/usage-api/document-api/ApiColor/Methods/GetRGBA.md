@@ -20,13 +20,9 @@ Object
 
 ## 示例
 
-获取文档中颜色的 RGBA 分量。
+此示例展示如何获取颜色的 RGBA 分量。
 
 ```javascript editor-docx
-// How to get the r g b a for a color in a document?
-
-// Get the r g b an and display the result in a document.
-
 const doc = Api.GetDocument();
 
 const themeColor = Api.ThemeColor('accent1');
@@ -45,4 +41,5 @@ paragraph.AddLineBreak();
 paragraph.AddText('RGBA of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b + ', ' + hexColorRGB.a);
 paragraph.AddLineBreak();
 paragraph.AddText('RGBA for theme colors and auto color are always opaque black; actual color depends on the document theme.');
+
 ```

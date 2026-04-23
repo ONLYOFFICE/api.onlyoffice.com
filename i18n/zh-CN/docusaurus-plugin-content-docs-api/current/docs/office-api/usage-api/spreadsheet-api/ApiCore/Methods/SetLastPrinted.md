@@ -22,13 +22,9 @@ expression.SetLastPrinted(oLastPrinted);
 
 ## 示例
 
-在电子表格中设置工作簿的最后打印日期。
+此示例演示如何设置工作簿最后打印的日期。
 
 ```javascript editor-xlsx
-// How do I set last printed in a spreadsheet?
-
-// Set last printed using a core properties object in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -46,4 +42,5 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
+
 ```

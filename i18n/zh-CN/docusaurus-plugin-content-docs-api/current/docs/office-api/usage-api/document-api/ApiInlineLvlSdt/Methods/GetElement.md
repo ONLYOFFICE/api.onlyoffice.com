@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-通过文档中指定的位置获取内联文本内容控件的元素。
+此示例展示如何使用指定位置获取内联文本内容控件的元素。
 
 ```javascript editor-docx
-// Get the element of the inline text control, make it bold in a document.
+// Get the element of the inline text control, make it bold.
 
-// How to get the n^th element of the inline control in a document.
+// How to get the n^th element of the inline control.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

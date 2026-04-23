@@ -22,12 +22,12 @@ expression.SetFontColor(oColor);
 
 ## 示例
 
-为单元格范围设置文本颜色。
+此示例设置单元格范围的文本颜色。
 
 ```javascript editor-xlsx
 // How to color a cell text.
 
-// Get a range and apply an RGB color to its text color in a spreadsheet.
+// Get a range and apply an RGB color to its text color.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetFontColor(Api.CreateColorFromRGB(255, 111, 61));

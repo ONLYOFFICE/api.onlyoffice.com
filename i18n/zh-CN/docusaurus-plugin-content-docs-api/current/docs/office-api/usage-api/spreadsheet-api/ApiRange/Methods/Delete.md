@@ -22,7 +22,7 @@ expression.Delete(shift);
 
 ## 示例
 
-删除电子表格中的 Range 对象。
+此示例删除 Range 对象。
 
 ```javascript editor-xlsx
 // How to remove a range from the worksheet.

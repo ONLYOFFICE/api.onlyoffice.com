@@ -20,10 +20,10 @@ expression.GetJc();
 
 ## 示例
 
-获取 PDF 文档中的段落内容对齐方式。
+此示例展示如何获取段落内容对齐方式。
 
 ```javascript editor-pdf
-// How to set a justification of a paragraph property in a PDF document.
+// How to set a justification of a paragraph property.
 
 // Change a justification type of a text property from the page.
 
@@ -38,7 +38,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetJc("center");
@@ -52,4 +52,5 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
+
 ```

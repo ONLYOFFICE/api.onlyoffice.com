@@ -2,16 +2,30 @@
 
 返回段落行距规则。
 
-继承自 [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md)。
+## 语法
+
+```javascript
+expression.GetSpacingLineRule();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+"auto" \| "atLeast" \| "exact" \| undefined
 
 ## 示例
 
-获取演示文稿中的段落行距规则。
+此示例展示如何获取段落行距规则。
 
 ```javascript editor-pptx
-// How to get the size of a spacing line rule of a text from a paragraph in a presentation.
+// How to get the size of a spacing line rule of a text from a paragraph.
 
-// Return a spacing line rule property of a paragraph in a presentation.
+// Return a spacing line rule property of a paragraph.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,4 +52,5 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
+
 ```

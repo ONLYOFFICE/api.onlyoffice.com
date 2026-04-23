@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除幻灯片母版背景。
+此示例清除幻灯片母版背景。
 
 ```javascript editor-pptx
-// How to remove a background from a master in a presentation.
+// How to remove a background from a master.
 
-// Clear background from a master object in a presentation.
+// Clear background from a master object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,4 +39,5 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 master.AddObject(shape);
+
 ```

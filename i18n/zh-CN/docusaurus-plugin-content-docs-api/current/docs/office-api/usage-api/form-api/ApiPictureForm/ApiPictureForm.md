@@ -1,6 +1,7 @@
 # ApiPictureForm
 
-ApiPictureForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
+表示 ApiPictureForm 类。
+
 
 ## 方法
 

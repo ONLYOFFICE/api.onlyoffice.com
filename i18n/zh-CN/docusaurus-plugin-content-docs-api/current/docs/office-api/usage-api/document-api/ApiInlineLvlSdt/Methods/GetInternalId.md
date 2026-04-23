@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取文档中内联级别内容控件的内部 ID。
+此示例展示如何获取内联级别内容控件的内部 ID。
 
 ```javascript editor-docx
-// How to get the internal id for an inline content control in a document?
-
-// Get the internal id and display the result in a document.
-
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);
 
@@ -41,4 +37,5 @@ let internalId = inlineLvlSdt.GetInternalId();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal Id: " + internalId);
 doc.Push(paragraph);
+
 ```

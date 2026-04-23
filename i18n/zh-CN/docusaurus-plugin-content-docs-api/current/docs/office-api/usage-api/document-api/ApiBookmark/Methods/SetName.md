@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-在文档中设置书签名称。
+此示例展示如何设置书签名称。
 
 ```javascript editor-docx
-// How to rename a bookmark in a document.
+// How to rename a bookmark.
 
 // Get a bookmark from the document by its name then set a new name to it.
 
@@ -39,4 +39,5 @@ let oldName = bookmark.GetName();
 bookmark.SetName("Bookmark_B");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark name changed from: '" + oldName + "' to: '" + bookmark.GetName() + "'");
+
 ```

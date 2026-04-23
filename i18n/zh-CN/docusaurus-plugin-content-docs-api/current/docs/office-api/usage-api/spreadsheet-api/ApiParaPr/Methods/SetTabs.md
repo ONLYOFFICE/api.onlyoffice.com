@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置一系列自定义制表位，用于电子表格中段落中的任何制表符。
+此示例设置将用于段落中任何制表符的自定义制表位序列。
 
 ```javascript editor-xlsx
-// How to change sizes of tabs between paragraphs in a spreadsheet.
+// How to change sizes of tabs between paragraphs.
 
-// Customize all kind of tabs indicating sizes in a spreadsheet.
+// Customize all kind of tabs indicating sizes.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

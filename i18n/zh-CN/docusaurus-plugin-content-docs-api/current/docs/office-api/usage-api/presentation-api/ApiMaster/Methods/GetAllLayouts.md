@@ -20,13 +20,9 @@ expression.GetAllLayouts();
 
 ## 示例
 
-获取演示文稿中指定幻灯片母版的所有版式。
+此示例演示如何获取指定幻灯片母版的所有版式。
 
 ```javascript editor-pptx
-// How to get all layouts for a slide master?
-
-// Get all layouts and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
@@ -50,4 +46,5 @@ const layouts = master.GetAllLayouts();
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Number of master slide layouts: ' + layouts.length);
+
 ```

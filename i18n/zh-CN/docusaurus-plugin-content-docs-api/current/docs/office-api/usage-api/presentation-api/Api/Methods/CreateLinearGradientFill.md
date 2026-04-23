@@ -23,12 +23,12 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 
 ## 示例
 
-在演示文稿中创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。
+此示例创建线性渐变填充，使用选定的线性渐变作为对象背景应用于对象。
 
 ```javascript editor-pptx
-// How to create a linear gradient fill to set it as a drawing background in a presentation.
+// How to create a linear gradient fill to set it as a drawing background.
 
-// Change a drawing background using gradient fill in a presentation.
+// Change a drawing background using gradient fill.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,4 +41,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
+
 ```

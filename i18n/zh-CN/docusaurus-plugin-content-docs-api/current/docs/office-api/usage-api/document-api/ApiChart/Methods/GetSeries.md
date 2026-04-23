@@ -22,7 +22,7 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入到文档中。
+此示例获取 ApiChart 类的第一个系列并将其类型插入文档中。
 
 ```javascript editor-docx
 // How to get first series from the chart and show its type in the document.

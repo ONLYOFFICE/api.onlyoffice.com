@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回投资增长的等效利率。
+此示例演示如何返回投资增长的等效利率。
 
 ```javascript editor-xlsx
-// How to get an investment growth interest rate in a spreadsheet.
+// How to get an investment growth interest rate.
 
-// Use a function to an equivalent interest rate for the increase of an investment in a spreadsheet.
+// Use a function to an equivalent interest rate for the increase of an investment.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

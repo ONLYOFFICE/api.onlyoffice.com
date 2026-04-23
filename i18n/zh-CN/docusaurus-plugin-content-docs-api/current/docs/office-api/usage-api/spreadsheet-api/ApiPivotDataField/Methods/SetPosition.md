@@ -22,12 +22,12 @@ expression.SetPosition(position);
 
 ## 示例
 
-在电子表格中设置数据字段的位置。
+此示例展示如何为数据字段设置位置。
 
 ```javascript editor-xlsx
-// How to change a position of a table element in a spreadsheet.
+// How to change a position of a table element.
 
-// Create a pivot table, add data to it then move a custom data field chnaging its position in a spreadsheet.
+// Create a pivot table, add data to it then move a custom data field chnaging its position.
 
 let worksheet = Api.GetActiveSheet();
 

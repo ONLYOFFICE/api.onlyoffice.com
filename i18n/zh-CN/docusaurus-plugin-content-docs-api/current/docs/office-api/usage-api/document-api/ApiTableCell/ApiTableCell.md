@@ -1,6 +1,7 @@
 # ApiTableCell
 
-ApiTableCell 是 [ApiTableCellPr](../ApiTableCellPr/ApiTableCellPr.md) 的子类。
+表示 ApiTableCell 类。
+
 
 ## 方法
 

@@ -24,12 +24,12 @@ string
 
 ## 示例
 
-在电子表格中从指定字符串的任意位置开始提取字符，适用于使用双字节字符集 (DBCS) 的语言。
+此示例演示如何从指定字符串的任意位置开始提取字符，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
 
 ```javascript editor-xlsx
-// How to get an array of characters from the specified position in a spreadsheet.
+// How to get an array of characters from the specified position.
 
-// Use a function to get an array of characters from the string in a spreadsheet.
+// Use a function to get an array of characters from the string.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

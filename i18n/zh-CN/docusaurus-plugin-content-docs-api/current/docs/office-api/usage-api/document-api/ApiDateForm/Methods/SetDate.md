@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-为文档中的日期表单设置日期。
+此示例展示如何为日期表单设置日期。
 
 ```javascript editor-docx
-// How to set date for a date form?
-
-// Set date and display the result in a document.
-
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);

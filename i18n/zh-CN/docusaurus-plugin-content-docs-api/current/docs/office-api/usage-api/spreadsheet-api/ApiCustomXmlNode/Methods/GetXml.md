@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 节点的 XML 字符串表示。
+此示例演示如何获取自定义 XML 节点的 XML 字符串表示。
 
 ```javascript editor-xlsx
 // How to retrieve XML string representation from custom XML node elements.
 
-// Get XML string from book node in a spreadsheet.
+// Get XML string from book node.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

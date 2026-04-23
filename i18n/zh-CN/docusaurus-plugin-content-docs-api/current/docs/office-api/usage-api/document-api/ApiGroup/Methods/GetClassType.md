@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中组对象的类类型。
+此示例获取类类型并将其插入到文档中。
 
 ```javascript editor-docx
-// How can I get the class type of a group in a document?
+// How to get a class type of ApiGroup.
 
-// Get the class type of a group and display it in the document.
+// Retrieve class type of ApiGroup object and insert it to the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,4 +49,5 @@ let docContent2 = shape2.GetContent();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent2.AddElement(0, paragraph);
+
 ```

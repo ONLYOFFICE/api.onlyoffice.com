@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中工作表可见性的状态。
+此示例展示如何获取工作表的可见性状态。
 
 ```javascript editor-xlsx
 // How to get visibility of the worksheet.
 
-// Find out whether a sheet is visible or not and display it in the sheet in a spreadsheet.
+// Find out whether a sheet is visible or not and display it in the sheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetVisible(true);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-从电子表格中的 OLE 对象获取字符串数据。
+此示例展示如何从 OLE 对象获取字符串数据。
 
 ```javascript editor-xlsx
-// How to get OLE object content as a string in a spreadsheet.
+// How to get ApiOleObject content as a string.
 
-// Get OLE object data and display it in the worksheet.
+// Get ApiOleObject data and display it in the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -37,4 +37,5 @@ let oleObject = worksheet.AddOleObject(
 );
 let data = oleObject.GetData();
 worksheet.GetRange('A1').SetValue('The OLE object data: ' + data);
+
 ```

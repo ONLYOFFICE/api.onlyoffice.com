@@ -20,10 +20,10 @@ expression.GetDirection();
 
 ## 示例
 
-从数据条条件格式规则获取方向设置。
+此示例演示如何从数据条条件格式规则获取方向设置。
 
 ```javascript editor-xlsx
-// How to check the reading order direction of a data bar in a spreadsheet.
+// How to check the reading order direction of a data bar.
 
 // Get the direction setting of a data bar conditional formatting rule.
 
@@ -45,4 +45,5 @@ let direction = dataBar.GetDirection();
 
 worksheet.GetRange("C1").SetValue("Direction:");
 worksheet.GetRange("C2").SetValue(direction);
+
 ```

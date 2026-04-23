@@ -23,12 +23,12 @@ expression.GetAllTablesOnPage(nPage);
 
 ## 示例
 
-获取文档中给定绝对页面上的表格集合。
+此示例展示如何获取给定绝对页面上的表格集合。
 
 ```javascript editor-docx
 // Get all tables added to the page.
 
-// How to retrieve all tables and add delete its first row in a document.
+// How to retrieve all tables and add delete its first row.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

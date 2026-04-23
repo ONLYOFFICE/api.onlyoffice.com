@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取文档中的上一个段落。
+此示例展示如何获取上一个段落。
 
 ```javascript editor-docx
-// How to get the previous paragraph in a document.
+// How to get the previous paragraph.
 
-// Get the paragraph, its previous one and make it bold in a document.
+// Get the paragraph, its previous one and make it bold.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

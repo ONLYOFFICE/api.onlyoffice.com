@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-删除文档中的当前 XML 节点。
+此示例演示如何删除当前 XML 节点。
 
 ```javascript editor-docx
-// How can I delete using a custom XML node in a document?
-
-// Delete for a custom XML node in a document.
-
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add('<content><text>First</text><text>Second</text></content>');

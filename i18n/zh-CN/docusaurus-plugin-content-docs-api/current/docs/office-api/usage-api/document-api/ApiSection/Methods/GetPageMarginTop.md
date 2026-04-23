@@ -20,12 +20,10 @@ expression.GetPageMarginTop();
 
 ## 示例
 
-指定此节中所有页面的页边距并返回。
+此示例指定此节中所有页面的页边距并返回它们。
 
 ```javascript editor-docx
 // How to get top page margin.
-
-// Get the page margin top using a section object.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

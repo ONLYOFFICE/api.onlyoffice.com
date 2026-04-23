@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中基于 360 天年（十二个 30 天月）返回两个日期之间的天数。
+此示例演示如何根据 360 天的年份（十二个 30 天的月份）返回两个日期之间的天数。
 
 ```javascript editor-xlsx
-// How to get number of days between two dates using 360-day year in a spreadsheet.
+// How to get number of days between two dates using 360-day year.
 
-// Use function to get days count between two dates on a 360-day year in a spreadsheet.
+// Use function to get days count between two dates on a 360-day year.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,4 +37,5 @@ let func = Api.WorksheetFunction;
 let ans = func.DAYS360("3/31/2018", "4/30/2019", false); 
 
 worksheet.GetRange("C1").SetValue(ans);
+
 ```

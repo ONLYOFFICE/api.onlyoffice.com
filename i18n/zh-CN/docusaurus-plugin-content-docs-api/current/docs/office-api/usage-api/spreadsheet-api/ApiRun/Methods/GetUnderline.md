@@ -2,16 +2,30 @@
 
 从当前文本属性获取下划线属性。
 
-继承自 [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md)。
+## 语法
+
+```javascript
+expression.GetUnderline();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-获取电子表格中文本的下划线属性。
+此示例使用其属性获取文本下划线。
 
 ```javascript editor-xlsx
-// How to find out whether a text is underlined or not in a spreadsheet.
+// How to find out whether a text is underlined or not.
 
-// Get underlined property of a text run object in a spreadsheet.
+// Get underlined property of a text run object.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

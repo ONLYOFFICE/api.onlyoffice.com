@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在电子表格中为数据点设置填充。
+此示例演示如何设置数据点的填充。
 
 ```javascript editor-xlsx
-// Set the fill to the data point in the specified chart series in a spreadsheet.
+// Sets the fill to the data point in the specified chart series.
 
-// How to set data point fill filling it with a solid color in a spreadsheet.
+// How to set data point fill filling it with a solid color.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -22,10 +22,10 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-在电子表格中设置批注回复作者名称。
+此示例设置批注回复作者的姓名。
 
 ```javascript editor-xlsx
-// How to add author's name to the reply in a spreadsheet.
+// How to add author's name to the reply.
 
 // Add a reply to the comment and set author name, then show author name in the worksheet.
 

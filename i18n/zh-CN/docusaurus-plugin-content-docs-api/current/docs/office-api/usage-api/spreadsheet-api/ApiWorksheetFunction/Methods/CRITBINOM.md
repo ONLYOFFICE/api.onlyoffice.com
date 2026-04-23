@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回累积二项分布大于或等于准则值的最小值。
+此示例演示如何返回累积二项分布大于或等于标准值的最小值。
 
 ```javascript editor-xlsx
-// How to return the minimum value for which the cumulative binomial distribution >= criterion value in a spreadsheet.
+// How to return the minimum value for which the cumulative binomial distribution >= criterion value.
 
-// Use function to the minimum value for which the cumulative binomial distribution >= criterion value in a spreadsheet.
+// Use function to the minimum value for which the cumulative binomial distribution >= criterion value.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

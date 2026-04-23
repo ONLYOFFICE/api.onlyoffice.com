@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -14,9 +14,10 @@ Object
 | editable | boolean | 指定组合框文本是否可以编辑。 |
 | items | (string \| string[])[] | 组合框项目。此数组由字符串或两个字符串的数组组成，其中第一个字符串是显示值，第二个是其含义。如果数组由单个字符串组成，则显示值与其含义相同。示例：["First", ["Second", "2"], ["Third", "3"], "Fourth"]。 |
 
+
 ## 示例
 
-创建具有特定组合框表单属性的组合框表单。
+此示例创建具有特定组合框表单属性的组合框表单。
 
 ```javascript editor-forms
 // How to create a combo box form with its base properties.
@@ -29,4 +30,5 @@ let comboBoxFormPrBase = {
 	"items": ["Latvia", "USA", "UK"]
 };
 let comboBoxForm = Api.CreateComboBoxForm(comboBoxFormPrBase);
+
 ```

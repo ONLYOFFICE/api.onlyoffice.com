@@ -22,13 +22,9 @@ expression.EmusToMillimeters(emu);
 
 ## 示例
 
-在演示文稿中将 EMU 转换为毫米。
+此示例展示如何将 EMU 转换为毫米。
 
 ```javascript editor-pptx
-// How to convert emus to millimeters in a presentation?
-
-// Convert emus to millimeters using the presentation API.
-
 const emus = 780000;
 const millimeters = Api.EmusToMillimeters(emus);
 
@@ -43,4 +39,5 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

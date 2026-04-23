@@ -20,13 +20,9 @@ expression.GetRectDiff();
 
 ## 示例
 
-获取 PDF 文档中自由文本注释的矩形差异。
+此示例获取自由文本注释的矩形差异。
 
 ```javascript editor-pdf
-// How do I get the rect diff in a PDF document?
-
-// Get the rect diff using a free text annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

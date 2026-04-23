@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-设置文档中单选按钮的单选组键。
+此示例为单选按钮设置单选按钮组的键。
 
 ```javascript editor-forms
 // How to add a radio group to the form.

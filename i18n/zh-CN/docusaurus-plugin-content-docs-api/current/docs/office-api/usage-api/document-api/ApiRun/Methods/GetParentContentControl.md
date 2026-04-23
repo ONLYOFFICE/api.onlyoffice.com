@@ -1,6 +1,6 @@
 # GetParentContentControl
 
-返回包含当前文本块的内容控件。
+返回包含当前运行的内容控件。
 
 ## 语法
 
@@ -8,7 +8,7 @@
 expression.GetParentContentControl();
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-获取文档中包含 run 的内容控件。
+此示例展示如何获取包含运行的内容控件。
 
 ```javascript editor-docx
-// How to get an element that is a parent of the text in a document.
+// How to get an element that is a parent of the text.
 
-// Get the parent content control of the text in a document.
+// Get the parent content control of the text.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

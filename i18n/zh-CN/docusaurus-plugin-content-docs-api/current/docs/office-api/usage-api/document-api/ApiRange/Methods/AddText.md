@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中向指定位置添加文本。
+此示例在指定位置添加文本。
 
 ```javascript editor-docx
-// How to add raw text to the range in a document.
+// How to add raw text to the range.
 
-// Change content of the range by adding a text in a document.
+// Change content of the range by adding a text.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

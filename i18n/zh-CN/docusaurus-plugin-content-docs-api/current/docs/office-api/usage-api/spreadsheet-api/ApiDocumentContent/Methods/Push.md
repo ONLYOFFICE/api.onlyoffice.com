@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-推入 5 个段落以将其实际添加到文档内容。
+此示例推送 5 个段落以将其实际添加到文档内容中。
 
 ```javascript editor-xlsx
 // How to insert paragraphs into a document.

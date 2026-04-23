@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-设置文档中绘图对象的水平翻转。
+此示例展示如何为绘图设置水平翻转。
 
 ```javascript editor-docx
-// How to set flip h for a drawing object in a document?
-
-// Set flip h and display the result in a document.
-
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -44,4 +40,5 @@ paragraph.AddDrawing(flippedDrawing);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('The right arrow shape above is flipped horizontally.');
 doc.Push(paragraph2);
+
 ```

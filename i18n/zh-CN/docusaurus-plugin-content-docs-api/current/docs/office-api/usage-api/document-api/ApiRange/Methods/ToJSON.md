@@ -23,10 +23,10 @@ JSON
 
 ## 示例
 
-将范围对象转换为 JSON 对象。
+此示例将 ApiRange 对象转换为 JSON 对象。
 
 ```javascript editor-docx
-// How to get a JSON from the range in a document.
+// How to get a JSON from the range.
 
 // Convert the range content to json and add it to the document.
 

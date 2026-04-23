@@ -2,14 +2,28 @@
 
 返回段落左侧缩进。
 
-继承自 [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md)。
+## 语法
+
+```javascript
+expression.GetIndLeft();
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[twips](../../Enumeration/twips.md) \| undefined
 
 ## 示例
 
-获取演示文稿中的段落左侧缩进。
+此示例展示如何获取段落左侧缩进。
 
 ```javascript editor-pptx
-// How to return a left side identation of a paragraph property in a presentation.
+// How to return a left side identation of a paragraph property.
 
 // Return a left side indentation of a text property from the slide.
 
@@ -39,4 +53,5 @@ const indLeft = paraPr.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
+
 ```

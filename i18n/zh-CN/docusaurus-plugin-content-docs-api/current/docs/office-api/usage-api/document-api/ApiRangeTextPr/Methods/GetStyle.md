@@ -2,14 +2,28 @@
 
 获取当前文本属性的样式。
 
-继承自 [ApiTextPr.GetStyle](../../ApiTextPr/Methods/GetStyle.md)。
+## 语法
+
+```javascript
+expression.GetStyle();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiStyle](../../ApiStyle/ApiStyle.md)
 
 ## 示例
 
-检查文档中的文本是否设置了属性。
+此示例查明文本是否设置了属性。
 
 ```javascript editor-docx
-// How to know whether a text's style is changed or not in a document.
+// How to know whether a text's style is changed or not.
 
 // Retrieve text properties of the form and display its style name.
 

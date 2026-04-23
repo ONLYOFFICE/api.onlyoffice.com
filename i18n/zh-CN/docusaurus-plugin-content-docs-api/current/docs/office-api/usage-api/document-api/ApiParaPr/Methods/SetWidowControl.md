@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-指定在显示时是否将当前段落的单行通过移至下一页的方式显示在与其余内容不同的页面上。
+此示例指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。
 
 ```javascript editor-docx
-// Set the window control of the paragraph in a document.
+// Set the window control of the paragraph.
 
 // Make the last line to be displayed on the next page, by setting widow control method set to 'true'.
 

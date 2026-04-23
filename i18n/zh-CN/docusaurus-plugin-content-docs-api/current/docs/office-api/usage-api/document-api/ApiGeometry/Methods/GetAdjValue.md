@@ -22,13 +22,10 @@ number \| null
 
 ## 示例
 
-创建具有可调参数和参考线的形状。在文档中为自定义几何图形设置文本矩形和连接点。
+创建具有可调整参数和参考线的形状。
 
 ```javascript editor-docx
-// How can I get the adj value using a geometry in a document?
-
-// Get the adj value for a geometry in a document.
-
+// Sets up text rectangle and connection points for the custom geometry.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();

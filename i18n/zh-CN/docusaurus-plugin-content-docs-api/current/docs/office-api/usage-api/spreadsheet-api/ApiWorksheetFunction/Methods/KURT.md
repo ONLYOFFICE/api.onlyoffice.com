@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数据集的峰度。
+此示例演示如何返回数据集的峰度。
 
 ```javascript editor-xlsx
-// How to know a data set kurtosis in a spreadsheet.
+// How to know a data set kurtosis.
 
-// Use a function to find out kurtosis of a data set in a spreadsheet.
+// Use a function to find out kurtosis of a data set.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

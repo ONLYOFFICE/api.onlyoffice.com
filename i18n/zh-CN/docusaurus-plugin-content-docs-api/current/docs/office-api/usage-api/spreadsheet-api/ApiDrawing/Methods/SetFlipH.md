@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中水平翻转绘图对象。
+此示例展示如何水平翻转绘图。
 
 ```javascript editor-xlsx
-// How to set the horizontal flip property of the shape in a spreadsheet.
+// How to set the horizontal flip property of the shape.
 
-// Create a drawing and flip it horizontally in a spreadsheet.
+// Create a drawing and flip it horizontally.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -37,4 +37,5 @@ drawing.SetFlipH(true);
 let flip = drawing.GetFlipH();
 worksheet.SetColumnWidth(0, 30);
 worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
+
 ```

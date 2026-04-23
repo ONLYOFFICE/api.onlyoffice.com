@@ -22,13 +22,9 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-对电子表格中形状内段落的所有文本应用删除线格式。
+此示例展示如何对形状内段落中的所有文本应用删除线格式。
 
 ```javascript editor-xlsx
-// How to set strikeout for a paragraph in a spreadsheet?
-
-// Set strikeout and display the result in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 110, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -47,4 +43,5 @@ paragraph.SetStrikeout(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has no strikeout.');
 content.Push(paragraph2);
+
 ```

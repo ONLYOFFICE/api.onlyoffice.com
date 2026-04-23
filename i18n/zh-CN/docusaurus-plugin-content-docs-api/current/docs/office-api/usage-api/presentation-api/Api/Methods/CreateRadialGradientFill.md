@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## 示例
 
-在演示文稿中创建径向渐变填充。
+此示例展示如何创建径向渐变填充。
 
 ```javascript editor-pptx
-// How to create a radial gradient fill in a presentation.
+// How to create a radial gradient fill.
 
-// Add a radial gradient fill in a presentation.
+// Add a radial gradient fill.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,4 +40,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
+
 ```

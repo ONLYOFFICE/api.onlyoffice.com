@@ -22,12 +22,12 @@ expression.GetByNamespace(namespace);
 
 ## 示例
 
-通过命名空间获取演示文稿中的自定义 XML 部件。
+此示例演示如何根据命名空间获取自定义 XML 部件。
 
 ```javascript editor-pptx
-// How to retrieve custom XML parts using their namespace in a presentation.
+// How to retrieve custom XML parts using their namespace.
 
-// Get XML parts by namespace in a presentation.
+// Get XML parts by namespace.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

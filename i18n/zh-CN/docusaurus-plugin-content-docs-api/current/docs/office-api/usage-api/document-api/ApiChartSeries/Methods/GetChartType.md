@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入到文档中。
+此示例获取 ApiChart 类的第一个系列并将其类型插入文档中。
 
 ```javascript editor-docx
 // How to get a chart type and show it on the slide.
 
-// Change a chart type to the "area" type in a document.
+// Change a chart type to the "area" type.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

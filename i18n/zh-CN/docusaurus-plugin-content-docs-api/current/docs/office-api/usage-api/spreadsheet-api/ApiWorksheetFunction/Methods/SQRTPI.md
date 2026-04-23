@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回 (数字 * pi) 的平方根。
+此示例演示如何返回（数字 * pi）的平方根。
 
 ```javascript editor-xlsx
-// How to calculate the square root of a number multiplied by aa constant Pi in a spreadsheet.
+// How to calculate the square root of a number multiplied by aa constant Pi.
 
-// Use a function to get the square root of (number * pi) in a spreadsheet.
+// Use a function to get the square root of (number * pi).
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

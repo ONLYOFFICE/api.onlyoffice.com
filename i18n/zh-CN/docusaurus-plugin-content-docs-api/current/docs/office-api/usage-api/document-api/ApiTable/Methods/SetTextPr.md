@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中将文本设置应用于表格的全部内容。
+此示例将文本设置应用于表格的全部内容。
 
 ```javascript editor-docx
-// How to create a text properties and apply it to the table in a document.
+// How to create a text properties and apply it to the table.
 
-// Create a table and make its text bold and bigger in a document.
+// Create a table and make its text bold and bigger.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

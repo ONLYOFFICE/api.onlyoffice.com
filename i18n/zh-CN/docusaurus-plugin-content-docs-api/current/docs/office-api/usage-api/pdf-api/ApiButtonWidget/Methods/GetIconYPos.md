@@ -20,13 +20,9 @@ expression.GetIconYPos();
 
 ## 示例
 
-从 PDF 文档中带有图像的字段获取图标 Y 位置。
+此示例从带图像的字段获取图标 Y 坐标位置。
 
 ```javascript editor-pdf
-// How can I get the icon y pos using a button widget in a PDF document?
-
-// Get the icon y pos for a button widget in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

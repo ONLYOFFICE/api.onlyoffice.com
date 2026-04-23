@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将给定基数的数字文本表示转换为十进制数。
+此示例演示如何将给定基数中数字的文本表示形式转换为十进制数。
 
 ```javascript editor-xlsx
-// How to get a decimal value from a text in a spreadsheet.
+// How to get a decimal value from a text.
 
-// Use function to convert a text value to decimal using base in a spreadsheet.
+// Use function to convert a text value to decimal using base.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

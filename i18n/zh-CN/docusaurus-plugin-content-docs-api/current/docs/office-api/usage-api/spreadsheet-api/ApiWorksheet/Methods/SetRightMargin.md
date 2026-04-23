@@ -22,15 +22,16 @@ expression.SetRightMargin(nPoints);
 
 ## 示例
 
-在电子表格中设置工作表的右边距。
+此示例设置工作表的右边距。
 
 ```javascript editor-xlsx
-// How to set margin of the right side in a spreadsheet.
+// How to set margin of the right side.
 
-// Resize the right margin of the sheet in a spreadsheet.
+// Resize the right margin of the sheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRightMargin(20.8);
 let rightMargin = worksheet.GetRightMargin();
 worksheet.GetRange("A1").SetValue("Right margin: " + rightMargin + " mm");
+
 ```

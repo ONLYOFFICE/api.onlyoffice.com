@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-指定文档中的图表标题。
+此示例指定图表标题。
 
 ```javascript editor-docx
-// How to rename a chart in a document.
+// How to rename a chart.
 
-// Create a chart, set its properties and its title in a document.
+// Create a chart, set its properties and its title.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

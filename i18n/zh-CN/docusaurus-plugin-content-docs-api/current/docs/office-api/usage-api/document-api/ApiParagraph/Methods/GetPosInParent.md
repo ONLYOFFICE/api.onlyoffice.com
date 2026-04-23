@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中段落在其父元素中的位置。
+此示例展示如何获取段落在其父元素中的位置。
 
 ```javascript editor-docx
-// How to get the position of the paragraph in the control that contains it in a document.
+// How to get the position of the paragraph in the control that contains it.
 
-// Get the paragraph position inside the parent control in a document.
+// Get the paragraph position inside the parent control.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

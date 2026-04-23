@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回一组数据值内部部分的均值。
+此示例演示如何返回一组数据值内部部分的平均值。
 
 ```javascript editor-xlsx
-// How to delete the mean of the data values interior portion in a spreadsheet.
+// How to delete the mean of the data values interior portion.
 
-// Use a function to remove the mean from the interior portion of a set of data values in a spreadsheet.
+// Use a function to remove the mean from the interior portion of a set of data values.
 
 let worksheet = Api.GetActiveSheet();
 let argumentsArr = [1, 2, 3, 4];
@@ -45,4 +45,5 @@ let data = worksheet.GetRange("A1:A4");
 let func = Api.WorksheetFunction;
 let result = func.TRIMMEAN(data, 0.6);
 worksheet.GetRange("B1").SetValue(result);
+
 ```

@@ -2,16 +2,30 @@
 
 返回指定是否可以将指定字段拖动到列位置的设置。
 
-继承自 [ApiPivotField.GetDragToColumn](../../ApiPivotField/Methods/GetDragToColumn.md)。
+## 语法
+
+```javascript
+expression.GetDragToColumn();
+```
+
+`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
 
 ## 示例
 
-获取电子表格中透视字段的拖动到列属性。
+此示例展示如何获取透视字段的拖动到列。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to column in a spreadsheet.
+// How to get a pivot field drag to column.
 
-// Create a pivot table, add data to it then get a drag to column of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get a drag to column of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

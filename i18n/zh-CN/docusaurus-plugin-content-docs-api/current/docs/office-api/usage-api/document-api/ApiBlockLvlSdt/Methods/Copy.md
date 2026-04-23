@@ -20,12 +20,14 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建块级内容控件的副本。
+此示例创建块级内容控件的副本。
 
 ```javascript editor-docx
-// Create a block content control in the current document, copy it, and add a copy to the same document.
+// Creates a block content control in the current document, copies it, and adds a copy to the same document.
 
-// Create a block level container in the document class, add a text to it, and copy it into the same document.
+// How to create a copy of the ApiBlockLvlSdt object.
+
+// Creates a block level container in the ApiDocument class, adds a text to it, and copies it into the same document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

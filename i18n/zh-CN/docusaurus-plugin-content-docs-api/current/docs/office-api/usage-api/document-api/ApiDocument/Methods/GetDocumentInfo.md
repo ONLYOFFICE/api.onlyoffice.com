@@ -31,7 +31,7 @@ object
 
 ## 示例
 
-获取以对象形式表示的文档信息，并将应用程序名称粘贴到文档的最后一个段落中。
+此示例展示如何获取以对象形式表示的文档信息，并将应用程序名称粘贴到最后一个段落中。
 
 ```javascript editor-docx
 // How to get information such as application with which the document was created.

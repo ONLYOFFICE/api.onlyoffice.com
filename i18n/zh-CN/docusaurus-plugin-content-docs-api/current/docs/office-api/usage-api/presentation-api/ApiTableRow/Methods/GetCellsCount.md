@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-获取行中的单元格数量。
+此示例获取行中的单元格数量。
 
 ```javascript editor-pptx
 // How to return a number of cells from the row.
@@ -41,4 +41,5 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
+
 ```

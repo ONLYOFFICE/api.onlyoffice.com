@@ -20,13 +20,10 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。创建带笔触的形状，获取并显示笔触详细信息。
+从形状获取轮廓属性并显示详细信息。
 
 ```javascript editor-pdf
-// How do I get the line in a PDF document?
-
-// Get the line using a shape object in a PDF document.
-
+// Creates a shape with a stroke, retrieves it and shows stroke details.
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -51,4 +48,5 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
+
 ```

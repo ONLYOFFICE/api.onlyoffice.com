@@ -1,9 +1,9 @@
 # SetVertAlign
 
-指定将应用于当前文本块内容相对于文本块默认外观的对齐方式：
--**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。
--**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。
--**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。
+指定将应用于当前运行内容相对于文本运行默认外观的对齐方式：
+-**"baseline"** - 当前文本运行中的字符将按默认文本基线对齐。
+-**"subscript"** - 当前文本运行中的字符将对齐到默认文本基线下方。
+-**"superscript"** - 当前文本运行中的字符将对齐到默认文本基线上方。
 
 ## 语法
 
@@ -11,7 +11,7 @@
 expression.SetVertAlign(sType);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在文档中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+此示例指定将应用于当前运行内容相对于文本运行默认外观的对齐方式。
 
 ```javascript editor-docx
-// How to change a vertical alignment of a text run in a document.
+// How to change a vertical alignment of a text run.
 
-// Create a new text run and make it subscript, baseline or superscript in a document.
+// Create a new text run and make it subscript, baseline or superscript.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

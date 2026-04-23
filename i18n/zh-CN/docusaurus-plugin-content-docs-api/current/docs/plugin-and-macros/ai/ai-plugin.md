@@ -20,7 +20,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 从 9.0.4 版本开始，AI 插件已添加到带有 ONLYOFFICE 品牌标识的服务器和桌面发行版中。
 
-如果需要手动添加该插件，请从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en/ai) 下载插件，并按照 [桌面版](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署版](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md) 或 [云版](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) 的安装说明进行安装。
+如果需要手动添加该插件，请从 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en/ai) 下载插件，并按照 [桌面版](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署版](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md) 或 [云版](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) 的安装说明进行安装。
 
 插件的 guid 是 `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`。
 

@@ -20,13 +20,9 @@ expression.GetCustomProperties();
 
 ## 示例
 
-在文档中使用自定义属性配置自定义属性。
+此示例演示如何使用 ApiCustomProperties 在文档中配置自定义属性。
 
 ```javascript editor-docx
-// How can I get custom properties using a document in a document?
-
-// Get custom properties for a document in a document.
-
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();
 
@@ -45,4 +41,5 @@ paragraph.AddText("Custom String Property: " + stringValue);
 paragraph.AddText("\nCustom Number Property: " + numberValue);
 paragraph.AddText("\nCustom Date Property: " + dateValue.toDateString());
 paragraph.AddText("\nCustom Boolean Property: " + boolValue);
+
 ```

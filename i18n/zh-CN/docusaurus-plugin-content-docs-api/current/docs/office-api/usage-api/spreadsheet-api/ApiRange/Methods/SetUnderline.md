@@ -22,12 +22,12 @@ expression.SetUnderline(undelineType);
 
 ## 示例
 
-指定当前单元格的内容显示时在字符正下方添加下划线。
+此示例指定当前单元格的内容显示时字符正下方有一条线。
 
 ```javascript editor-xlsx
 // How to add underline to the cell value.
 
-// Get a range and add underline to its text in a spreadsheet.
+// Get a range and add underline to its text.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The text underlined with a single line");

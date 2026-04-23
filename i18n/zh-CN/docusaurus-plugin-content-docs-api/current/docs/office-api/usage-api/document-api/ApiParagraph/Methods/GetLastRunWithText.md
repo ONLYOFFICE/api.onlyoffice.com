@@ -20,12 +20,12 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-获取文档中段落内最后一个包含文本的 Run。
+此示例展示如何获取段落中最后一个包含文本的 Run。
 
 ```javascript editor-docx
 // Get the final text run of the paragraph and show it in the document.
 
-// How to get the paragraph last text element in a document.
+// How to get the paragraph last text element.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

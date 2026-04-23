@@ -22,12 +22,12 @@ expression.CreateSolidFill(color);
 
 ## 示例
 
-在演示文稿中创建纯色填充。
+此示例展示如何创建纯色填充。
 
 ```javascript editor-pptx
-// How to color a background in a presentation.
+// How to color a background.
 
-// Add solid fill color as a shape background in a presentation.
+// Add solid fill color as a shape background.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,4 +39,5 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
+
 ```

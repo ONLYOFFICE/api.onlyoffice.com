@@ -8,13 +8,13 @@
 expression.SetFontFamily(sFontFamily);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFontFamily | 必需 | string |  | 用于当前文本块的字体系列。 |
+| sFontFamily | 必需 | string |  | 用于当前文本运行的字体系列。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-在电子表格中使用指定的字体系列设置所有 4 个字体槽。
+此示例使用指定的字体系列设置所有 4 个字体槽。
 
 ```javascript editor-xlsx
-// How to change the text font family in a spreadsheet.
+// How to change the text font family.
 
-// Create a text run object and set the "Comic Sans MS" font faminy to it in a spreadsheet.
+// Create a text run object and set the "Comic Sans MS" font faminy to it.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

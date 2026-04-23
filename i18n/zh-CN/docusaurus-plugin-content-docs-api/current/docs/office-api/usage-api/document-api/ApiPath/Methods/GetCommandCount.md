@@ -20,13 +20,10 @@ number
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+分析星形的路径命令。
 
 ```javascript editor-docx
-// How can I get the command count using a geometry path in a document?
-
-// Get the command count for a geometry path in a document.
-
+// Retrieves information about the first command including type and coordinates.
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

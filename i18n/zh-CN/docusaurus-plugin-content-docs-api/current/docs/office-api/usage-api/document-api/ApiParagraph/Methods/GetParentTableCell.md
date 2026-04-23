@@ -20,7 +20,7 @@ expression.GetParentTableCell();
 
 ## 示例
 
-获取文档中包含当前段落的表格单元格。
+此示例展示如何获取包含当前段落的表格单元格。
 
 ```javascript editor-docx
 // How to get the parent table cell of the paragraph.

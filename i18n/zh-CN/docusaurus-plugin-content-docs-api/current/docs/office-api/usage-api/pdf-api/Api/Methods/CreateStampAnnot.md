@@ -25,15 +25,12 @@ expression.CreateStampAnnot(rect, type, author, creationDate);
 
 ## 示例
 
-创建图章注释并将其添加到页面。
+此示例创建图章注释并将其添加到页面。
 
 ```javascript editor-pdf
-// How can I create the stamp annot in a PDF document?
-
-// Create the stamp annot in a PDF document.
-
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([40, 40, 100, 100], 'SB_Approved');
 let page = doc.GetPage(0);
 page.AddObject(stampAnnot);
+
 ```

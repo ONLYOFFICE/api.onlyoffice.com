@@ -1,6 +1,6 @@
 # AddText
 
-向当前文本块添加文本。
+向当前运行添加一些文本。
 
 ## 语法
 
@@ -8,13 +8,13 @@
 expression.AddText(text);
 ```
 
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+`expression` - 表示 [ApiRun](../ApiRun.md) 类的变量。
 
 ## 参数
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| text | 必需 | string |  | 要添加到当前文本块的文本。 |
+| text | 必需 | string |  | 将添加到当前运行的文本。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中向 run 添加文本。
+此示例向运行添加一些文本。
 
 ```javascript editor-xlsx
-// How to add a text to the run in a spreadsheet.
+// How to add a text to the run.
 
-// Get a paragraph and add a text to it in a spreadsheet.
+// Get a paragraph and add a text to it.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

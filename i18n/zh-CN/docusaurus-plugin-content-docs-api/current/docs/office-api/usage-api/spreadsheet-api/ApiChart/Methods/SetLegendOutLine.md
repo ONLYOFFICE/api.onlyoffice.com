@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为图表图例设置轮廓。
+此示例设置图表图例的轮廓。
 
 ```javascript editor-xlsx
-// How to change the outline of the chart legend using a stoke in a spreadsheet.
+// How to change the outline of the chart legend using a stoke.
 
-// Outline the chart legend creating a solid stroke in a spreadsheet.
+// Outline the chart legend creating a solid stroke.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

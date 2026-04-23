@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表图例的填充。
+此示例设置图表图例的填充。
 
 ```javascript editor-docx
-// How to color a chart legend in a document.
+// How to color a chart legend.
 
-// Create a chart and set a solid fill to its legend in a document.
+// Create a chart and set a solid fill to its legend.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-指定此文档中当前节的首页是否具有不同的页眉和页脚。
+此示例指定此文档中当前节的第一页是否具有不同的页眉和页脚。
 
 ```javascript editor-docx
 // How to make a page a title one.

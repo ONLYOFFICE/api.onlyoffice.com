@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取电子表格中绘图对象的名称。
+此示例展示如何获取绘图对象的名称。
 
 ```javascript editor-xlsx
-// How can I get the name using a drawing object in a spreadsheet?
-
-// Get the name for a drawing object in a spreadsheet.
-
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.HexColor('#5B9BD5'));
@@ -41,4 +37,5 @@ const drawing = worksheet.AddShape(
 drawing.SetName('MyRectangle');
 const drawingName = drawing.GetName();
 worksheet.GetRange('A1').SetValue('Drawing name: ' + drawingName);
+
 ```

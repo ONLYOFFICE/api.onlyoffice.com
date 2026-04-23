@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中透视项的可见性状态。
+此示例演示如何获取数据透视项的可见性状态。
 
 ```javascript editor-xlsx
-// How to check which pivot items are currently visible or hidden in a spreadsheet.
+// How to check which pivot items are currently visible or hidden.
 
-// Create a pivot table, add data to it then get the visibility of specified pivot items in a spreadsheet.
+// Create a pivot table, add data to it then get the visibility of specified pivot items.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,4 +65,5 @@ for (let i = 0; i < regionItems.length; i += 1) {
     let status = isVisible ? 'Visible' : 'Hidden';
     pivotWorksheet.GetRangeByNumber(8 + i, 1).SetValue(regionItems[i].GetName() + ': ' + status);
 }
+
 ```

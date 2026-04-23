@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回基于总体的分布偏度：分布围绕其均值的不对称程度的表征。
+此示例演示如何根据总体返回分布的偏度：描述分布围绕其平均值的不对称程度。
 
 ```javascript editor-xlsx
-// How to calaculate the skewness of a distribution based on a population in a spreadsheet.
+// How to calaculate the skewness of a distribution based on a population.
 
-// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean in a spreadsheet.
+// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean.
 
 const worksheet = Api.GetActiveSheet();
 

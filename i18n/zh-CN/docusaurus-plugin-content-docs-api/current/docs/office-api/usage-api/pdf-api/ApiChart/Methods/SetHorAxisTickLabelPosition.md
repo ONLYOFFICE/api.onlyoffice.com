@@ -22,12 +22,10 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中更改刻度标签的位置。
+如何更改刻度标签的位置。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis tick label position in a PDF document.
-
-// Use chart to set hor axis tick label position in a PDF document.
+// Create a chart, set its properties and its horizontal axis tick label position.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,4 +46,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
+
 ```

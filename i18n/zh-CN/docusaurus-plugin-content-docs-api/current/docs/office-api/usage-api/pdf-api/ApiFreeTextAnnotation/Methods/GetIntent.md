@@ -20,13 +20,9 @@ expression.GetIntent();
 
 ## 示例
 
-获取 PDF 文档中自由文本注释的意图。
+此示例获取自由文本注释的意图。
 
 ```javascript editor-pdf
-// How do I get the intent in a PDF document?
-
-// Get the intent using a free text annotation object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

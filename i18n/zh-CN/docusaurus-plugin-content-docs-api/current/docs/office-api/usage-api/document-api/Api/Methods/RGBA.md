@@ -25,13 +25,9 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-在文档中创建 RGBA 颜色并将其用作内容控件背景颜色。
+此示例展示如何创建 RGBA 颜色并将其用作内容控件的背景颜色
 
 ```javascript editor-docx
-// How to r g b an in a document?
-
-// R g b an using the document API.
-
 const doc = Api.GetDocument();
 
 const run = Api.CreateRun();
@@ -49,4 +45,5 @@ drawing.SetWrappingStyle('behind');
 const paragraph = doc.GetElement(0);
 paragraph.AddDrawing(drawing);
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
+
 ```

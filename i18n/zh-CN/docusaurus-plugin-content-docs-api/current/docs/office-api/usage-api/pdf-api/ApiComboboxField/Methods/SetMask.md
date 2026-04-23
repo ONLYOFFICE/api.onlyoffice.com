@@ -22,13 +22,9 @@ boolean
 
 ## 示例
 
-在 PDF 文档中获取文本字段并为其设置输入文本的掩码。
+此示例获取文本字段并为其设置输入文本的掩码。
 
 ```javascript editor-pdf
-// How can I set mask using a combobox field in a PDF document?
-
-// Set mask for a combobox field in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -36,4 +32,5 @@ page.AddObject(comboboxField);
 
 comboboxField.SetMask("(999)999-9999");
 comboboxField.SetValue("(123)456-7890");
+
 ```

@@ -22,12 +22,12 @@ expression.GetBookmark(sBookmarkName);
 
 ## 示例
 
-获取文档中的书签。
+此示例展示如何获取文档中的书签。
 
 ```javascript editor-docx
-// Get a bookmark added by its name in a document.
+// Get a bookmark added by its name.
 
-// How to retrieve a bookmark and display its name in a document.
+// How to retrieve a bookmark and display its name.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -37,4 +37,5 @@ range1.AddBookmark("Bookmark_ex");
 let bookmark = doc.GetBookmark("Bookmark_ex");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark with name '" + bookmark.GetName() + "' surrounds text: " + bookmark.GetText());
+
 ```

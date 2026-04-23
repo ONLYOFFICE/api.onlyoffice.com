@@ -25,12 +25,12 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## 示例
 
-在电子表格中向批注添加回复。
+此示例向批注添加回复。
 
 ```javascript editor-xlsx
-// The comment is added to cell A1 containing a numeric value.
+// How to reply to a comment.
 
-// Retrieve the reply text with the specified author name and user id and display it in cell B3.
+// Add a commnet reply indicating an author and id.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

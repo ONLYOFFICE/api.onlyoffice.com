@@ -20,7 +20,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 安装方式
 
-从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice-telegram) 下载该插件，并根据以下指南完成安装：[桌面端](../../tutorials/installing/onlyoffice-desktop-editors.md)、[本地部署](../../tutorials/installing/onlyoffice-docs-on-premises.md)或[云端](../../tutorials/installing/onlyoffice-cloud.md)。
+从 [GitHub](https://github.com/ONLYOFFICE/onlyoffice-telegram) 下载该插件，并根据以下指南完成安装：[桌面端](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md)、[本地部署](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md)或[云端](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 ## ## 使用方法
 

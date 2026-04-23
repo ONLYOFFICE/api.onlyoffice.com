@@ -20,13 +20,9 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中列表框字段的多选属性。
+此示例从列表框字段获取多选属性。
 
 ```javascript editor-pdf
-// How to is multiple selection for a listbox field in a PDF document?
-
-// Is multiple selection and display the result in a PDF document.
-
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let listboxField = Api.CreateListboxField([10, 10, 160, 100]);

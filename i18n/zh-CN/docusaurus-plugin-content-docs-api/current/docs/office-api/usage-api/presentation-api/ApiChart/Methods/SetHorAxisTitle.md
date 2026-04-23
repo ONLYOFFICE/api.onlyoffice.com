@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定图表水平轴标题。
+此示例指定图表横轴标题。
 
 ```javascript editor-pptx
-// Title the chart's horizontal axis in a presentation.
+// Title the chart's horizontal axis.
 
-// Create a chart, set its properties and name its horizontal axis in a presentation.
+// Create a chart, set its properties and name its horizontal axis.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,4 +52,5 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
+
 ```

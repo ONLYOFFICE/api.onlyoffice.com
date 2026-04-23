@@ -1,6 +1,7 @@
 # ApiRichParagraph
 
-ApiRichParagraph 是 [ApiRichParaPr](../ApiRichParaPr/ApiRichParaPr.md) 的子类。
+表示 ApiRichParagraph 类。
+
 
 ## 方法
 

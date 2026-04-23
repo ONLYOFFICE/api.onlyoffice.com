@@ -29,12 +29,12 @@ string
 
 ## 示例
 
-从文档中的指定范围获取文本。
+此示例展示如何从指定范围获取文本。
 
 ```javascript editor-docx
-// How to get a raw text from the characters in a document.
+// How to get a raw text from the characters.
 
-// Retrieve a text from the character collection in a document.
+// Retrieve a text from the character collection.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

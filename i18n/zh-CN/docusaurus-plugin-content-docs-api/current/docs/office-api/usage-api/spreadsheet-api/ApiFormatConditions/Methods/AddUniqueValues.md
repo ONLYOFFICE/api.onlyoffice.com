@@ -20,7 +20,7 @@ expression.AddUniqueValues();
 
 ## 示例
 
-向范围添加唯一值条件格式。
+此示例向区域添加唯一值条件格式。
 
 ```javascript editor-xlsx
 // How to add unique values conditional formatting rules to highlight unique or duplicate values.
@@ -44,4 +44,5 @@ let formatConditions = dataRange.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 uniqueValuesCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
+
 ```

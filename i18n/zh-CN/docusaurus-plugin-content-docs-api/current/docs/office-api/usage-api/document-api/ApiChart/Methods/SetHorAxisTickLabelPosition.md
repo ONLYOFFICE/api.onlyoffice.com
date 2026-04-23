@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中水平轴的刻度标签位置。
+此示例指定横轴刻度标签的位置。
 
 ```javascript editor-docx
-// How to change a position of a horizontal axis tick label in a document.
+// How to change a position of a horizontal axis tick label.
 
-// Create a chart and move its horizontal axis tick label in a document.
+// Create a chart and move its horizontal axis tick label.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

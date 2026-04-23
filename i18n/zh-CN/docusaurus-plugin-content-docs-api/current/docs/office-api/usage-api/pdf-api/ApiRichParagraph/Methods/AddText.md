@@ -22,13 +22,9 @@ expression.AddText(text);
 
 ## 示例
 
-在 PDF 文档中向富文本段落添加文本。
+此示例向富文本段落添加一些文本。
 
 ```javascript editor-pdf
-// How do I add the text in a PDF document?
-
-// Add the text using a rich paragraph object in a PDF document.
-
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

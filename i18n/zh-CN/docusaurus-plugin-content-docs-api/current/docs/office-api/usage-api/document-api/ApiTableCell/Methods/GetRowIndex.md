@@ -20,7 +20,7 @@ number
 
 ## 示例
 
-获取文档中行的索引。
+此示例展示如何获取行的索引。
 
 ```javascript editor-docx
 // How to get row index of the table cell.

@@ -26,9 +26,7 @@ boolean
 如何为当前表格单元格设置左边距。
 
 ```javascript editor-pdf
-// Specify the left margin value for the table cell object.
-
-// Set cell margin left using a table cell object.
+// Specify the left margin value for the ApiTableCell object.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,4 +41,5 @@ content.Push(paragraph);
 cell.SetCellMarginLeft(720);
 
 page.AddObject(table);
+
 ```

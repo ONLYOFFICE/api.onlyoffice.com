@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-将文本设置应用于单元格的全部内容。
+此示例将文本设置应用于单元格的整个内容。
 
 ```javascript editor-docx
 // Set text properties to the table cell.

@@ -16,7 +16,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 此插件默认内置于 ONLYOFFICE 云端、私有部署和桌面版编辑器中。
 
-你也可以按照以下安装说明移除它：[桌面版安装教程](../../tutorials/installing/onlyoffice-desktop-editors.md), [私有部署安装教程](../../tutorials/installing/onlyoffice-docs-on-premises.md), [云端安装教程](../../tutorials/installing/onlyoffice-cloud.md)。
+你也可以按照以下安装说明移除它：[桌面版安装教程](../../plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [私有部署安装教程](../../plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), [云端安装教程](../../plugins/development-workflow/installing-and-testing/cloud-saas-installation.md)。
 
 插件指南： `{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}`。
 
@@ -175,8 +175,8 @@ GitHub 仓库地址：[highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 - init
 - onExternalMouseUp
 - onTranslate
-- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteHtml.md)
-- [resizeWindow](/docs/plugin-and-macros/customization/windows-and-panels.md#interacting-with-a-window)
+- [executeMethod ("PasteHtml")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
+- [resizeWindow](/docs/plugin-and-macros/plugins/customization/windows-and-panels.md#interacting-with-a-window)
 
 ## 支持
 

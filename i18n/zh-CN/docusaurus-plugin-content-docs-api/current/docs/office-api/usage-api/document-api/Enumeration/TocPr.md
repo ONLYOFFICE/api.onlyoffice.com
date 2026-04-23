@@ -4,7 +4,7 @@
 
 ## 类型
 
-Object
+对象
 
 ## 属性
 
@@ -17,9 +17,10 @@ Object
 | ShowPageNums | boolean | 指定是否在目录中显示页码。 |
 | TocStyle | [TocStyle](../Enumeration/TocStyle.md) | 目录样式类型。 |
 
+
 ## 示例
 
-向文档添加具有指定属性的目录。
+此示例向文档添加具有指定属性的目录。
 
 ```javascript editor-docx
 // How to create a table of contents properties.
@@ -37,4 +38,5 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
+
 ```

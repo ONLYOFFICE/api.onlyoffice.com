@@ -21,7 +21,7 @@ number
 
 ## 示例
 
-获取文档中当前文档的页数。
+此示例展示如何获取当前文档的页数。
 
 ```javascript editor-docx
 // How to count the number of pages in the document.

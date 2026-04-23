@@ -2,16 +2,32 @@
 
 设置段落首行缩进。
 
-继承自 [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md)。
+## 语法
+
+```javascript
+expression.SetIndFirstLine(nValue);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 段落首行缩进值，以磅的二十分之一（1/1440 英寸）为单位。 |
+
+## 返回值
+
+boolean
 
 ## 示例
 
-在 PDF 文档中设置段落首行缩进。
+此示例设置段落首行缩进。
 
 ```javascript editor-pdf
-// How to set a size of the first line indentation using a paragraph properties in a PDF document.
+// How to set a size of the first line indentation using a paragraph properties.
 
-// Create a paragraph setting its first line indentation in a PDF document.
+// Create a paragraph setting its first line indentation.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -23,7 +39,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetContent();
+const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndFirstLine(1440);
@@ -33,4 +49,5 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
+
 ```

@@ -22,12 +22,12 @@ expression.GetColumnFields(field);
 
 ## 示例
 
-清除电子表格中的数据透视表。
+此示例展示如何清除数据透视表。
 
 ```javascript editor-xlsx
-// How to remove all elements from a pivot table in a spreadsheet.
+// How to remove all elements from a pivot table.
 
-// Create a pivot table, add data to it then delete all its content in a spreadsheet.
+// Create a pivot table, add data to it then delete all its content.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,4 +68,5 @@ for (let i = 0; i < pivotFields.length; i += 1) {
     let cell = pivotWorksheet.GetRangeByNumber(8 + i, 1);
     cell.SetValue(pivotFields[i].GetName());
 }
+
 ```

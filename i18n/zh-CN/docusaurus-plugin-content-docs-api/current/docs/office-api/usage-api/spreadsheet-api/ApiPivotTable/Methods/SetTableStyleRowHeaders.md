@@ -22,12 +22,12 @@ expression.SetTableStyleRowHeaders(show);
 
 ## 示例
 
-在电子表格中设置数据透视表的表格样式行标题。
+此示例展示如何设置数据透视表的表格样式行标题。
 
 ```javascript editor-xlsx
-// How to set table style row headers of a table in a spreadsheet.
+// How to set table style row headers of a table.
 
-// Create a pivot table, add data to it then set its table style row headers in a spreadsheet.
+// Create a pivot table, add data to it then set its table style row headers.
 
 let worksheet = Api.GetActiveSheet();
 

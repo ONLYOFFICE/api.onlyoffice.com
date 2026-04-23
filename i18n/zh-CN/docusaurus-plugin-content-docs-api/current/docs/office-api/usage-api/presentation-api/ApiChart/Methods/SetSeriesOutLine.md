@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为指定的图表系列设置轮廓。
+此示例设置指定图表系列的轮廓。
 
 ```javascript editor-pptx
-// How to outline a chart seria in a presentation.
+// How to outline a chart seria.
 
-// Create a chart, set its properties and its series outline in a presentation.
+// Create a chart, set its properties and its series outline.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,4 +50,5 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 slide.AddObject(chart);
+
 ```

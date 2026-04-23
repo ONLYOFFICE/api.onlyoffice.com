@@ -20,13 +20,9 @@ string
 
 ## 示例
 
-获取控件数据，如同其在文档中映射的 XML 中被填充一样。
+此示例展示如何获取控件数据，就像它在映射的 XML 中填充一样
 
 ```javascript editor-docx
-// How to get the data for xml mapping for an inline content control in a document?
-
-// Get the data for xml mapping and display the result in a document.
-
 let doc = Api.GetDocument();
 let contentControl = Api.CreateInlineLvlSdt();
 contentControl.AddText("This is an inline content control.");
@@ -37,4 +33,5 @@ let data = contentControl.GetDataForXmlMapping();
 paragraph = Api.CreateParagraph();
 paragraph.AddText(data);
 doc.Push(paragraph);
+
 ```

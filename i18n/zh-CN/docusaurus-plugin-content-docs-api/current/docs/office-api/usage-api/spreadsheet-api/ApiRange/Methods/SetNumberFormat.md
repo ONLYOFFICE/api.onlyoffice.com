@@ -22,7 +22,7 @@ expression.SetNumberFormat(sFormat);
 
 ## 示例
 
-指定单元格中的数字应作为数字、货币、日期、时间等还是纯文本处理。
+此示例指定单元格中的数字应视为数字、货币、日期、时间等还是仅作为文本。
 
 ```javascript editor-xlsx
 // How to set number format of cells.

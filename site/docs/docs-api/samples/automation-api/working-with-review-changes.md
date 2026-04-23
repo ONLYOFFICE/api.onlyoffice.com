@@ -37,7 +37,7 @@ The document opens in **Track Changes** mode. Your code calls `connector.execute
    });
    ```
 
-2. When the user clicks the **Accept / Reject** buttons in the custom interface, the [AcceptReviewChanges](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RejectReviewChanges.md) methods are executed to accept / reject the selected change in the editor:
+2. When the user clicks the **Accept / Reject** buttons in the custom interface, the [AcceptReviewChanges](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) methods are executed to accept / reject the selected change in the editor:
 
    ``` ts
    document.getElementById("accept").addEventListener("click", () => {
@@ -48,7 +48,7 @@ The document opens in **Track Changes** mode. Your code calls `connector.execute
    });
    ```
 
-3. When the user clicks the **Prev / Next** buttons in the custom interface, the [MoveToNextReviewChange](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveToNextReviewChange.md) method is executed to navigate between review changes:
+3. When the user clicks the **Prev / Next** buttons in the custom interface, the [MoveToNextReviewChange](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) method is executed to navigate between review changes:
 
    ``` ts
    document.getElementById("prev").addEventListener("click", () => {

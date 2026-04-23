@@ -21,12 +21,12 @@ expression.GetOrientation();
 
 ## 示例
 
-获取电子表格中透视字段的方向。
+此示例展示如何获取透视字段的方向。
 
 ```javascript editor-xlsx
-// How to get a pivot field orientation in a spreadsheet.
+// How to get a pivot field orientation.
 
-// Create a pivot table, add data to it then get an orientation of a specified pivot field in a spreadsheet.
+// Create a pivot table, add data to it then get an orientation of a specified pivot field.
 
 let worksheet = Api.GetActiveSheet();
 

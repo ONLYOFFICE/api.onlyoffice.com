@@ -20,13 +20,9 @@ expression.GetBodyShape();
 
 ## 示例
 
-获取演示文稿中备注页的正文形状。
+此示例展示如何从备注页获取正文形状。
 
 ```javascript editor-pptx
-// How to get the body shape for a notes page?
-
-// Get the body shape and display the result in a presentation.
-
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const notesPage = slide.GetNotesPage();
@@ -52,4 +48,5 @@ paragraph.AddText(message);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
+
 ```

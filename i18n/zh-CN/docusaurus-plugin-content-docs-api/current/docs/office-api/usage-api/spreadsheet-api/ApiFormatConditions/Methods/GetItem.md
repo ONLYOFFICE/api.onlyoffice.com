@@ -22,7 +22,7 @@ expression.GetItem(index);
 
 ## 示例
 
-通过索引获取特定的条件格式规则。
+此示例按索引获取特定的条件格式规则。
 
 ```javascript editor-xlsx
 // How to get individual conditional formatting rules from a collection.
@@ -47,4 +47,5 @@ formatConditions.AddDatabar();
 let firstRule = formatConditions.GetItem(1);
 
 worksheet.GetRange("B1").SetValue("Rule found: " + (firstRule !== null));
+
 ```

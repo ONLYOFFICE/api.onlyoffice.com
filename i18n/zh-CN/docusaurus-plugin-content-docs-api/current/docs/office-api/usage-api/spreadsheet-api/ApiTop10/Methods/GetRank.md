@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中前 10 条件的排名值。
+此示例演示如何获取前 10 项条件的排名值。
 
 ```javascript editor-xlsx
-// How to retrieve the number of top or bottom values to highlight in the condition in a spreadsheet.
+// How to retrieve the number of top or bottom values to highlight in the condition.
 
-// Get the rank value for the top 10 rule in a spreadsheet.
+// Get the rank value for the top 10 rule.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -41,4 +41,5 @@ let top10Condition = formatConditions.AddTop10();
 
 let rank = top10Condition.GetRank();
 worksheet.GetRange("B1").SetValue("Current rank: " + rank);
+
 ```

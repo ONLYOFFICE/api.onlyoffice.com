@@ -17,7 +17,7 @@ Pastes, edits, and removes comments and replies (with user data) in a document.
 
 ## Installation
 
-Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) and install it following the [desktop](/docs/plugin-and-macros/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugin-and-macros/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments) and install it following the [desktop](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugin-and-macros/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 ## Usage
 
@@ -114,16 +114,16 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 ## Methods and events
 
-- [button](/docs/plugin-and-macros/customization/buttons.md)
-- [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- [onAddComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onAddComment.md)
-- [onChangeCommentData](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onChangeCommentData.md)
-- [onRemoveComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onRemoveComment.md)
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onAddComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onAddComment.md)
+- [onChangeCommentData](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onChangeCommentData.md)
+- [onRemoveComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Events/onRemoveComment.md)
 - executeMethod ("[AddComment](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/AddComment.md)")
-- executeMethod ("[ChangeComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/ChangeComment.md)")
-- executeMethod ("[GetAllComments](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetAllComments.md)")
-- executeMethod ("[MoveToComment](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveToComment.md)")
-- executeMethod ("[RemoveComments](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RemoveComments.md)")
+- executeMethod ("[ChangeComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/ChangeComment.md)")
+- executeMethod ("[GetAllComments](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/GetAllComments.md)")
+- executeMethod ("[MoveToComment](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/MoveToComment.md)")
+- executeMethod ("[RemoveComments](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/RemoveComments.md)")
 
 ## Support
 
