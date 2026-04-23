@@ -1,6 +1,5 @@
 import { ControlProps, JsonSchema, rankWith, RankedTester, uiTypeIs, and, schemaMatches } from '@jsonforms/core'
 import { withJsonFormsControlProps, JsonFormsDispatch } from '@jsonforms/react'
-import { useMemo, useState } from 'react'
 import { Tooltip } from '../utils/Tooltip'
 import styles from '../../styles.module.css'
 
@@ -34,23 +33,17 @@ function variantLabel(v: JsonSchema, idx: number): string {
     return v.title || (v.type as string) || `Option ${idx + 1}`
 }
 
+const ONEOF_UISCHEMA = { type: 'Control', scope: '#', label: false } as any
+
 function OneOfControlRenderer(props: ControlProps) {
     const { id, label, data, path, schema, description, enabled, handleChange, renderers, cells } = props
     const variants = (schema.oneOf ?? []) as JsonSchema[]
-    const detected = useMemo(() => detectVariant(data, variants), [data, variants])
-    const [selected, setSelected] = useState(detected)
-
+    const selected = detectVariant(data, variants)
     const active = variants[selected] ?? variants[0]
 
     const onSelect = (idx: number) => {
-        setSelected(idx)
-        const v = variants[idx]
-        if (detectVariant(data, variants) !== idx) {
-            handleChange(path, defaultForType(v.type as string))
-        }
+        handleChange(path, defaultForType(variants[idx].type as string))
     }
-
-    const variantSchema: JsonSchema = { ...active, title: schema.title, description: schema.description }
 
     return (
         <div className={styles.field}>
@@ -75,8 +68,8 @@ function OneOfControlRenderer(props: ControlProps) {
                 ))}
             </div>
             <JsonFormsDispatch
-                schema={variantSchema}
-                uischema={{ type: 'Control', scope: '#', label: false } as any}
+                schema={active}
+                uischema={ONEOF_UISCHEMA}
                 path={path}
                 renderers={renderers}
                 cells={cells}
