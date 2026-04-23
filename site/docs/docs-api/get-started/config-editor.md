@@ -9,7 +9,7 @@ import { ConfigEditorCardsRow } from '@site/src/components/ConfigEditorCard'
 
 The Config Editor is an interactive tool for configuring ONLYOFFICE Docs API initialization parameters. Use it to visually build and test a configuration object and preview the result in a live embedded editor.
 
-### Features
+## Features
 
 - **Visual editor**. Configure all initialization parameters through a structured form.
 - **JSON editor**. Directly edit or copy the raw configuration JSON.
