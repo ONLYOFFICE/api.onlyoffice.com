@@ -1,5 +1,6 @@
 import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core'
 import { withJsonFormsArrayControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react'
+import { memo } from 'react'
 import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from '../layouts/depth'
 import styles from '../../styles.module.css'
@@ -18,7 +19,7 @@ function defaultForSchema(s: JsonSchema | undefined): unknown {
     }
 }
 
-function ArrayControlRenderer(props: ArrayControlProps) {
+const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayControlProps) {
     const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props
     const ctx = useJsonForms()
     const rootSchema = ctx.core?.schema as JsonSchema | undefined
@@ -89,7 +90,7 @@ function ArrayControlRenderer(props: ArrayControlProps) {
             )}
         </Section>
     )
-}
+}, (prev, next) => prev.path === next.path && prev.data === next.data && prev.enabled === next.enabled)
 
 export const arrayControlTester = rankWith(4, or(isObjectArrayControl, isPrimitiveArrayControl))
 export const ArrayControl = withJsonFormsArrayControlProps(ArrayControlRenderer)
