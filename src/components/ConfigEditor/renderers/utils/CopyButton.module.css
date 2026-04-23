@@ -23,8 +23,9 @@
 }
 
 .button:focus-visible {
-    outline: 2px solid var(--ifm-color-primary);
-    outline-offset: 2px;
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: var(--ce-focus-ring);
 }
 
 .button:active {

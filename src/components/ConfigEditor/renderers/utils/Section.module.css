@@ -21,6 +21,12 @@
     background: none;
 }
 
+.summary:focus-visible {
+    outline: none;
+    box-shadow: var(--ce-focus-ring);
+    border-radius: var(--ce-radius-sm);
+}
+
 .summary::-webkit-details-marker { display: none; }
 
 .chevron {

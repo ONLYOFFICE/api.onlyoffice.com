@@ -25,6 +25,9 @@
   /* Transitions */
   --ce-transition-fast: 150ms ease;
   --ce-transition-base: 200ms ease;
+
+  /* Focus */
+  --ce-focus-ring: 0 0 0 3px color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
 }
 
 .container {
@@ -207,14 +210,8 @@
 .field select:focus {
     outline: none;
     border-color: var(--ifm-color-primary);
+    box-shadow: var(--ce-focus-ring);
     background: var(--ifm-background-surface-color);
-}
-
-.field input[type='text']:focus-visible,
-.field input[type='number']:focus-visible,
-.field select:focus-visible {
-    outline: 2px solid var(--ifm-color-primary);
-    outline-offset: 2px;
 }
 
 .field input[type='text']:disabled,
@@ -235,8 +232,8 @@
 }
 
 .field input[type='checkbox']:focus-visible {
-    outline: 2px solid var(--ifm-color-primary);
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: var(--ce-focus-ring);
 }
 
 .field input[type='checkbox']:disabled {
@@ -270,8 +267,8 @@
 }
 
 .field [role='radiogroup'] input[type='radio']:focus-visible {
-    outline: 2px solid var(--ifm-color-primary);
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: var(--ce-focus-ring);
 }
 
 .arrayItem {
@@ -332,8 +329,9 @@
 .arrayItem button:focus-visible,
 .content > button:focus-visible,
 .section button:focus-visible {
-    outline: 2px solid var(--ifm-color-primary);
-    outline-offset: 2px;
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: var(--ce-focus-ring);
 }
 
 /* Button variants */
