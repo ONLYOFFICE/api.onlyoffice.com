@@ -1,6 +1,6 @@
 import { isObjectControl, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core'
 import { withJsonFormsControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react'
-import { memo, useMemo } from 'react'
+import { memo } from 'react'
 import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from './depth'
 import { sortObjectKeys } from '../utils/fieldSort'
@@ -69,24 +69,20 @@ const ChildDispatch = memo(({ childSchema, control, childPath, renderers, cells 
 ))
 ChildDispatch.displayName = 'ChildDispatch'
 
-function ObjectRendererInner(props: any) {
+const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
     const { schema, path, label, renderers, cells } = props
     const ctx = useJsonForms()
     const rootSchema = ctx.core?.schema as JsonSchema | undefined
 
     const s = schema as JsonSchema
     const properties = s.properties ?? {}
-
-    const children = useMemo(
-        () => resolveChildren(properties, path, rootSchema),
-        [properties, path, rootSchema],
-    )
+    const children = resolveChildren(properties, path, rootSchema)
 
     const depth = depthOfPath(path)
     const lastKey = path ? path.split('.').pop() || '' : ''
     const title = label || s.title || titleFromKey(lastKey) || 'Root'
 
-    const body = children.map(child => (
+    const body = children.map((child: ResolvedChild) => (
         <ChildDispatch key={child.childPath} {...child} renderers={renderers} cells={cells} />
     ))
 
@@ -96,12 +92,12 @@ function ObjectRendererInner(props: any) {
         <Section
             title={title}
             depth={depth}
-            description={s['x-shortDescription']}
+            description={(s as any)['x-shortDescription']}
         >
             {body}
         </Section>
     )
-}
+}, (prev, next) => prev.path === next.path)
 
 export const objectRendererTester = rankWith(2, isObjectControl)
 export const ObjectRenderer = withJsonFormsControlProps(ObjectRendererInner)
