@@ -32,19 +32,19 @@
 
 .content {
     width: 240px;
-    background: var(--ifm-tooltip-background-color, #333);
-    color: var(--ifm-tooltip-color, #fff);
+    background: var(--ifm-tooltip-background-color);
+    color: var(--ifm-tooltip-color);
     font-size: 12px;
     font-weight: 400;
     border-radius: 6px;
     padding: 7px 10px;
     line-height: 1.45;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--ifm-global-shadow-md);
     white-space: normal;
     animation-duration: 150ms;
     will-change: transform, opacity;
 }
 
 .arrow {
-    fill: var(--ifm-tooltip-background-color, #333);
+    fill: var(--ifm-tooltip-background-color);
 }

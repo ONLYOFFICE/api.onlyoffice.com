@@ -69,7 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--ifm-global-shadow-lw);
     margin-top: auto;
 }
 
@@ -80,12 +80,12 @@
 .runButton:focus-visible {
     outline: 3px solid white;
     outline-offset: 2px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2),
+    box-shadow: var(--ifm-global-shadow-md),
                 0 0 0 5px var(--ifm-color-primary);
 }
 
 .runButton:active {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .tabs {

@@ -50,8 +50,8 @@ const DOCUMENT_TYPE_CONFIG: Record<EditorType, DocumentConfig> = {
 const withFreshKey = (config: Record<string, any>): Record<string, any> => ({
     ...config,
     document: {
-        ...config?.document,
-        key: '0' + Math.random(),
+        ...(config?.document ?? {}),
+        key: crypto.randomUUID(),
     },
 })
 
