@@ -114,10 +114,11 @@ function CardsRow({ cards, searchParams }: {
 }
 
 function resolveEditorCards(cards: CardDef[], urlBase: string, paramName: string): ResolvedCard[] {
+  const imageSuffix = urlBase === 'config-playground' ? 'config-playground' : 'playground';
   return cards.map(({ type, name, description }) => ({
     type, name, description,
-    image: require(`@site/static/assets/images/editor/${type}-playground.png`).default + '#gh-light-mode-only',
-    imageDark: require(`@site/static/assets/images/editor/${type}-playground.dark.png`).default + '#gh-dark-mode-only',
+    image: require(`@site/static/assets/images/editor/${type}-${imageSuffix}.png`).default + '#gh-light-mode-only',
+    imageDark: require(`@site/static/assets/images/editor/${type}-${imageSuffix}.dark.png`).default + '#gh-dark-mode-only',
     url: `pathname:///${urlBase}/?${paramName}=${type}`,
   }));
 }
