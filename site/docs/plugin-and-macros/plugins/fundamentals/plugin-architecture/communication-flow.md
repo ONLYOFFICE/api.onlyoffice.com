@@ -30,9 +30,9 @@ The editor notifies the plugin by calling functions you attach to `window.Asc.pl
 
 ```javascript
 // Called when the plugin panel opens
-window.Asc.plugin.init = function (data) {
-  // data contains initialization payload
-  console.log("Plugin ready, editor type:", data.editorType);
+window.Asc.plugin.init = function () {
+  // Plugin is ready; editor type available via window.Asc.plugin.info.editorType
+  console.log("Plugin ready, editor type:", window.Asc.plugin.info.editorType);
 };
 
 // Called when a config.json button is clicked
@@ -40,9 +40,11 @@ window.Asc.plugin.button = function (id) {
   // id 0 = first button, id -1 = window closed
 };
 
-// Called when the user changes selection in the editor
-window.Asc.plugin.attachEditorEvent("onSelectionChanged", function (selection) {
-  document.getElementById("preview").textContent = selection.text || "";
+// Called when the cursor position changes in the editor
+window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", function () {
+  window.Asc.plugin.executeMethod("GetSelectedText", [{}], function (text) {
+    document.getElementById("preview").textContent = text || "";
+  });
 });
 ```
 
@@ -71,13 +73,15 @@ Data from the editor to the plugin follows this path:
 Editor Event → API Callback → Plugin Handler → UI Update
 ```
 
-Example — updating the UI when selection changes:
+Example — updating the UI when cursor position changes:
 
 ```javascript
-window.Asc.plugin.attachEditorEvent("onSelectionChanged", function (selection) {
-  if (selection && selection.text) {
-    document.getElementById("preview").textContent = selection.text;
-  }
+window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", function () {
+  window.Asc.plugin.executeMethod("GetSelectedText", [{}], function (text) {
+    if (text) {
+      document.getElementById("preview").textContent = text;
+    }
+  });
 });
 ```
 
@@ -102,11 +106,11 @@ Key lifecycle and interaction events:
 
 | Event / callback | When it fires |
 |---|---|
-| `window.Asc.plugin.init(data)` | Plugin panel is opened |
+| `window.Asc.plugin.init()` | Plugin panel is opened |
 | `window.Asc.plugin.button(id)` | A config.json button is clicked |
-| `window.Asc.plugin.onExternalMouseDown` | User clicks outside the plugin panel |
-| `attachEditorEvent("onSelectionChanged", fn)` | Selection changes in the editor |
-| `window.Asc.plugin.onDocumentContentReady` | Document finishes loading |
+| `window.Asc.plugin.onExternalMouseUp` | User releases the mouse button outside the plugin panel |
+| `attachEditorEvent("onTargetPositionChanged", fn)` | Cursor position changes in the editor |
+| `attachEditorEvent("onDocumentContentReady", fn)` | Document finishes loading |
 | `window.Asc.plugin.onDestroy` | Plugin is closed or destroyed |
 
 ## Error handling

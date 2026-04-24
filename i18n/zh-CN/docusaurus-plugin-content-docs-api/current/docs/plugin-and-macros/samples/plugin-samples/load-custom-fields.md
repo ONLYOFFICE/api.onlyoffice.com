@@ -102,11 +102,11 @@ GitHub 仓库：[example_customfields_load](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 方法和事件
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("GetAllContentControls")
-- executeMethod ("InsertAndReplaceContentControls")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## 支持
 

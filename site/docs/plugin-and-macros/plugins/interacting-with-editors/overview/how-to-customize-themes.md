@@ -73,7 +73,6 @@ function onThemeChanged(theme) {
 
 // Attach the event handler
 window.Asc.plugin.onThemeChanged = onThemeChanged;
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
 ```
 
 ### Applying CSS for different themes
@@ -98,7 +97,6 @@ function onThemeChanged(theme) {
 }
 
 window.Asc.plugin.onThemeChanged = onThemeChanged;
-window.Asc.plugin.attachEvent("onThemeChanged", onThemeChanged);
 ```
 
 Then define your CSS rules:

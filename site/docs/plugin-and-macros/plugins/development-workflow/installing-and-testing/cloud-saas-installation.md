@@ -29,7 +29,7 @@ You can add a plugin to the **Cloud service** as an **extension** for Google Chr
 The `onlyoffice.github.io/store/plugin-dev/extension` folder is the extension you will load into the browser.
 
 :::note
-When adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en), the **Title** and **Summary** are filled in automatically from the `name` and `description` fields in `manifest.json`. They cannot be changed later in the store.
+When adding an extension to [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en), the **Title** and **Summary** are filled in automatically with the **name** and **description** parameters from the `manifest.json` file. You cannot change them later in the store.
 :::
 
 ## Step 2. Uploading the extension to the browser

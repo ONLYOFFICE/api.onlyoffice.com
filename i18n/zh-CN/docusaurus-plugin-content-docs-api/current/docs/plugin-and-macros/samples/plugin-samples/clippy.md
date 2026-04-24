@@ -88,8 +88,8 @@ GitHub 仓库：[clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 ## 方法与事件
 
-- button
-- init
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
 
 ## 支持
 

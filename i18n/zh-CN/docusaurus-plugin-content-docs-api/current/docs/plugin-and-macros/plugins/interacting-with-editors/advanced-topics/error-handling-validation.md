@@ -8,12 +8,11 @@ Robust plugins handle editor method failures and validate inputs before sending 
 
 ## Handling method callback errors
 
-Most `executeMethod` callbacks receive an error parameter. Always check it:
+`executeMethod` callbacks receive the return value as their only argument. Check for `null` or `undefined` to detect failures:
 
 ```javascript
-window.Asc.plugin.executeMethod("GetSelectedText", [], function (result, error) {
-  if (error) {
-    console.error("Method failed:", error);
+window.Asc.plugin.executeMethod("GetSelectedText", [], function (result) {
+  if (result === null || result === undefined) {
     showUserMessage("Could not read selection. Please try again.");
     return;
   }
@@ -31,7 +30,12 @@ function insertRows(count) {
     showError("Row count must be between 1 and 100.");
     return;
   }
-  window.Asc.plugin.executeMethod("InsertTable", [{ Rows: count, Cols: 3 }]);
+  Asc.scope.rows = count;
+  window.Asc.plugin.callCommand(function () {
+    var oDoc = Api.GetDocument();
+    var oTable = Api.CreateTable(3, Asc.scope.rows);
+    oDoc.InsertContent([oTable]);
+  }, false);
 }
 ```
 

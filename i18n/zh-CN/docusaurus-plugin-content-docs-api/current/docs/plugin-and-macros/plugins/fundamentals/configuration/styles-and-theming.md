@@ -201,7 +201,7 @@ textarea.form-control {
 **CSS 参数**:
 
 ``` css
-input[type='checkbox '].form-control {
+input[type='checkbox'].form-control {
     height: auto;
     margin: 0;
 }

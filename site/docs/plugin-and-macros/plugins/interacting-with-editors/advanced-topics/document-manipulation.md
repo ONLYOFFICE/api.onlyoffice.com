@@ -16,26 +16,32 @@ window.Asc.plugin.executeMethod("PasteText", ["Hello, world!"]);
 window.Asc.plugin.executeMethod("PasteHtml", ["<p>Hello, <b>world</b>!</p>"]);
 ```
 
-## Get document information
-
-```javascript
-window.Asc.plugin.executeMethod("GetDocumentInfo", [], function (info) {
-  console.log("Doc info:", info);
-});
-```
-
 ## Insert a table
 
+Tables are inserted using `callCommand` with the Office JS API:
+
 ```javascript
-window.Asc.plugin.executeMethod("InsertTable", [{ Rows: 3, Cols: 4 }]);
+window.Asc.plugin.callCommand(function () {
+  var oDoc = Api.GetDocument();
+  var oTable = Api.CreateTable(3, 4);
+  oDoc.InsertContent([oTable]);
+}, false);
 ```
 
 ## Insert an image from URL
 
+Images are inserted using `callCommand` with the Office JS API:
+
 ```javascript
-window.Asc.plugin.executeMethod("InsertImage", {
-  src: "https://example.com/image.png",
-});
+Asc.scope.imageUrl = "https://example.com/image.png";
+
+window.Asc.plugin.callCommand(function () {
+  var oDoc = Api.GetDocument();
+  var oParagraph = Api.CreateParagraph();
+  var oImage = Api.CreateImage(Asc.scope.imageUrl, 100 * 36000, 60 * 36000);
+  oParagraph.AddDrawing(oImage);
+  oDoc.InsertContent([oParagraph]);
+}, false);
 ```
 
 ## Working with content controls

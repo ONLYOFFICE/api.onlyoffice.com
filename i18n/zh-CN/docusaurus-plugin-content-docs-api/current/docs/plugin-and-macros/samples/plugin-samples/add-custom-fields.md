@@ -97,11 +97,11 @@ GitHub 仓库：[**example_customfields_add**](https://github.com/ONLYOFFICE/sdk
 
 ## 方法和事件
 
-- button
-- init
-- onMethodReturn
-- executeMethod ("AddContentControl")
-- executeMethod ("InsertAndReplaceContentControls")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onMethodReturn](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/how-to-call-methods.md)
+- executeMethod ("[AddContentControl](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/AddContentControl.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## 支持
 

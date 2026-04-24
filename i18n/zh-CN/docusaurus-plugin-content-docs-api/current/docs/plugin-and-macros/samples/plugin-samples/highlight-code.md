@@ -169,12 +169,12 @@ GitHub 仓库地址：[highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 }
 ```
 
-## Methods and events
-  方法和事件
-- button
-- init
-- onExternalMouseUp
-- onTranslate
+## 方法和事件
+
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
+- [onTranslate](/docs/plugin-and-macros/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 - [executeMethod ("PasteHtml")](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/PasteHtml.md)
 - [resizeWindow](/docs/plugin-and-macros/plugins/customization/windows-and-panels.md#interacting-with-a-window)
 

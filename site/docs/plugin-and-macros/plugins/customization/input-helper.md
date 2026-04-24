@@ -5,7 +5,7 @@ description: Learn how to create and use input helpers in ONLYOFFICE plugins.
 
 # Input helper
 
-Plugins can create its own window that appears and disappears when you type text. Its location is tied to the cursor.
+Plugins can create their own windows that appear and disappear when you type text. Their location is tied to the cursor.
 
 ![Input helper](/assets/images/plugins/input-helper.png)
 

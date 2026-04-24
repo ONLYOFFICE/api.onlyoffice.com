@@ -37,7 +37,7 @@ sidebar_position: -6
        ],
      };
 
-     this.executeMethod("AddContextMenuItem", [items]);
+     window.Asc.plugin.executeMethod("AddContextMenuItem", [items]);
    });
    ```
 
@@ -114,7 +114,7 @@ sidebar_position: -6
        ],
      };
 
-     this.executeMethod("AddContextMenuItem", [items]);
+     window.Asc.plugin.executeMethod("AddContextMenuItem", [items]);
    });
    ```
 
@@ -145,7 +145,7 @@ Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
     ],
   };
 
-  this.executeMethod("UpdateContextMenuItem", [items]);
+  window.Asc.plugin.executeMethod("UpdateContextMenuItem", [items]);
 });
 ```
 

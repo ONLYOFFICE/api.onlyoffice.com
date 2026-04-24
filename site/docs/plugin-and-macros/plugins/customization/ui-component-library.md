@@ -26,23 +26,32 @@ Create right-click context menus within your plugin interface.
 
 **Example:**
 
+```html
+<!-- Custom context menu within the plugin HTML -->
+<ul id="ctx-menu" class="ctx-menu" style="display:none; position:absolute">
+  <li data-action="copy">Copy</li>
+  <li data-action="paste">Paste</li>
+  <li class="separator"></li>
+  <li data-action="delete">Delete</li>
+</ul>
+```
+
 ```javascript
-window.Asc.plugin.contextMenuShow({
-  items: [
-    { id: "copy", text: "Copy", icon: "copy.png" },
-    { id: "paste", text: "Paste", icon: "paste.png" },
-    { separator: true },
-    { id: "delete", text: "Delete", icon: "delete.png" },
-  ],
-  x: 100,
-  y: 150,
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+  var menu = document.getElementById("ctx-menu");
+  menu.style.left = e.clientX + "px";
+  menu.style.top = e.clientY + "px";
+  menu.style.display = "block";
 });
 
-window.Asc.plugin.onContextMenuClick = function (id) {
-  if (id === "copy") {
-    // Handle copy action
+document.getElementById("ctx-menu").addEventListener("click", function (e) {
+  var action = e.target.dataset.action;
+  document.getElementById("ctx-menu").style.display = "none";
+  if (action === "copy") {
+    // handle copy
   }
-};
+});
 ```
 
 ### Toolbar buttons
@@ -331,7 +340,11 @@ document.querySelectorAll(".content-btn").forEach((btn) => {
 
 function insertContent(type) {
   if (type === "table") {
-    window.Asc.plugin.executeMethod("InsertTable", [3, 3]);
+    window.Asc.plugin.callCommand(function () {
+      var oDoc = Api.GetDocument();
+      var oTable = Api.CreateTable(3, 3);
+      oDoc.InsertContent([oTable]);
+    }, false);
   } else if (type === "image") {
     // Handle image insertion
   } else if (type === "list") {
@@ -342,20 +355,11 @@ function insertContent(type) {
 }
 ```
 
-## Using the component library
-
-### Installation
-
-The component library is available through the ONLYOFFICE plugin SDK:
-
-```html
-<script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
-<script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js"></script>
-```
+## Plugin SDK setup
 
 ### Basic setup
 
-Include the UI library in your plugin's `index.html`:
+Include the ONLYOFFICE plugin SDK in your plugin's `index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -363,16 +367,11 @@ Include the UI library in your plugin's `index.html`:
   <head>
     <meta charset="UTF-8" />
     <title>My Plugin</title>
-    <link
-      rel="stylesheet"
-      href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.css"
-    />
-    <script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
-    <script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Your plugin UI here -->
+    <script src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
     <script src="code.js"></script>
   </body>
 </html>
@@ -380,21 +379,15 @@ Include the UI library in your plugin's `index.html`:
 
 ### Theme support
 
-The component library automatically adapts to ONLYOFFICE themes:
+Apply ONLYOFFICE editor themes to your plugin UI using `onThemeChangedBase`. See [Styles and theming](../fundamentals/configuration/styles-and-theming.md) for the full pattern.
 
 ```javascript
-window.Asc.plugin.onThemeChanged = function (theme) {
-  // Apply theme-specific styles
-  document.body.classList.toggle("dark-mode", theme.type === "dark");
+window.Asc.plugin.onThemeChangedBase = function (theme) {
+  // onThemeChangedBase injects editor CSS variables into the plugin iframe
+};
 
-  // Update component colors
-  if (theme.type === "dark") {
-    document.documentElement.style.setProperty("--bg-color", "#1e1e1e");
-    document.documentElement.style.setProperty("--text-color", "#e0e0e0");
-  } else {
-    document.documentElement.style.setProperty("--bg-color", "#ffffff");
-    document.documentElement.style.setProperty("--text-color", "#333333");
-  }
+window.Asc.plugin.onThemeChanged = function (theme) {
+  window.Asc.plugin.onThemeChangedBase(theme);
 };
 ```
 

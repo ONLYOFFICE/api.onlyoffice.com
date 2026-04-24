@@ -201,7 +201,7 @@ Adds a checkbox input to your plugin.
 **CSS parameters**:
 
 ``` css
-input[type='checkbox '].form-control {
+input[type='checkbox'].form-control {
     height: auto;
     margin: 0;
 }

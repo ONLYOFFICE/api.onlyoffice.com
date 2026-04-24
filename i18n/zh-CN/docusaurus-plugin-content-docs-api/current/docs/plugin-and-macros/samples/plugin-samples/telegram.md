@@ -101,9 +101,9 @@ GitHub 仓库地址：[telegram](https://github.com/ONLYOFFICE/onlyoffice.github
 
 ## 方法和事件
 
-- button
-- init
-- onExternalMouseUp
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onExternalMouseUp](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 
 ## 支持
 

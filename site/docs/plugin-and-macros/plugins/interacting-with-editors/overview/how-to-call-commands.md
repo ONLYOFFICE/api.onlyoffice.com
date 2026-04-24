@@ -102,28 +102,12 @@ See the available *window.Asc.plugin.info* object parameters below to find out
 ``` ts
 window.Asc.plugin.button = (id) => {
   const info = window.Asc.plugin.info;
+  const method = (info.objectId === undefined) ? "asc_addOleObject" : "asc_editOleObject";
 
-  if (info.objectId === undefined) {
-    const method = "asc_addOleObject";
-  } else {
-    const method = "asc_editOleObject";
-  }
-
-  if (info.width) {
-    continue;
-  } else {
+  if (!info.width) {
     info.width = 70;
   }
-
-  if (info.height) {
-    continue;
-  } else {
-    info.height = 70;
-  }
-
-  if (info.height) {
-    continue;
-  } else {
+  if (!info.height) {
     info.height = 70;
   }
 
@@ -131,8 +115,12 @@ window.Asc.plugin.button = (id) => {
   info.heightPix = Math.trunc(info.mmToPx * info.height);
   info.imgSrc = window.g_board.getResult(info.widthPix, info.heightPix).image;
   info.data = window.g_board.getData();
-  const code = `Api.${method}(${JSON.stringify(info)});`
-  window.Asc.plugin.callCommand("close", code);
+
+  Asc.scope.method = method;
+  Asc.scope.info = info;
+  window.Asc.plugin.callCommand(function () {
+    Api[Asc.scope.method](Asc.scope.info);
+  }, true);
 }
 ```
 
@@ -140,13 +128,14 @@ window.Asc.plugin.button = (id) => {
 
 ``` ts
 function createScriptFromArray(aSelected) {
+  let sScript = "";
   if (aSelected.length !== 0) {
     switch (window.Asc.plugin.info.editorType) {
       case "word": {
-        let sScript = "var oDocument = Api.GetDocument();";
-        sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
-        sScript = `${sScript}\nvar oParagraph, oRun, arrInsertResult = [], oImage;`;
-        sScript = `${sScript}\noDocument.InsertContent(arrInsertResult);`;
+        sScript = "var oDocument = Api.GetDocument();";
+        sScript += "\noDocument.CreateNewHistoryPoint();";
+        sScript += "\nvar oParagraph, oRun, arrInsertResult = [], oImage;";
+        sScript += "\noDocument.InsertContent(arrInsertResult);";
         break;
       }
     }
@@ -167,13 +156,14 @@ window.Asc.plugin.init = () => {
 
 ``` ts
 window.Asc.plugin.init = () => {
-  let sScript = "var oDocument = Api.GetDocument();";
-  sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
-  sScript = `${sScript}\noParagraph = Api.CreateParagraph();`;
-  sScript = `${sScript}\noParagraph.AddText('Hello word!');`;
-  sScript = `${sScript}\noDocument.InsertContent([oParagraph]);`;
   window.Asc.plugin.info.recalculate = true;
-  window.Asc.plugin.callCommand("close", sScript);
+  window.Asc.plugin.callCommand(function () {
+    var oDocument = Api.GetDocument();
+    oDocument.CreateNewHistoryPoint();
+    var oParagraph = Api.CreateParagraph();
+    oParagraph.AddText("Hello world!");
+    oDocument.InsertContent([oParagraph]);
+  }, true);
 };
 ```
 

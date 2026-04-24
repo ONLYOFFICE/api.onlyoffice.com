@@ -14,14 +14,6 @@ window.Asc.plugin.executeMethod("GetSelectedText", [{ Numbering: false, Math: fa
 });
 ```
 
-## Get selection as HTML
-
-```javascript
-window.Asc.plugin.executeMethod("GetSelectedText", [{ Numbering: false, Math: false, ReturnContentAs: "html" }], function (result) {
-  console.log("Selection HTML:", result);
-});
-```
-
 ## Replace selected text
 
 ```javascript

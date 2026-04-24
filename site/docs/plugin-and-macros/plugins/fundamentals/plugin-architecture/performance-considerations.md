@@ -46,17 +46,17 @@ heights.forEach(function (h, i) {
 
 ## Debounce frequent events
 
-`onSelectionChanged` and similar editor events can fire many times per second. Debounce any expensive handler:
+`onTargetPositionChanged` and similar editor events can fire many times per second. Debounce any expensive handler:
 
 ```javascript
 var debounceTimer;
 
-window.Asc.plugin.onSelectionChanged = function (selection) {
+window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", function () {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(function () {
-    updatePreview(selection);
+    updatePreview();
   }, 150);
-};
+});
 ```
 
 ## Memory management

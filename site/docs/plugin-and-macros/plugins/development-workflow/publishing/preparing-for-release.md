@@ -110,7 +110,7 @@ window.Asc.plugin.button = function(id) {
   if (id === 0) {
     window.Asc.plugin.callCommand(function() { /* apply changes */ });
   } else {
-    window.Asc.plugin.executeMethod("CloseWindow");
+    window.Asc.plugin.executeCommand("close", "");
   }
 };
 ```

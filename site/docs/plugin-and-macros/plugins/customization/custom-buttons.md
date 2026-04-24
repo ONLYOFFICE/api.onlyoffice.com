@@ -11,7 +11,7 @@ To process [buttons](../fundamentals/configuration/config-json.md#variationsbutt
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | id | `number` | Defines the button index in the [buttons](../fundamentals/configuration/config-json.md#variationsbuttons) array of the *config.json* file. If `id == -1`, then the plugin considers that the **Close** window cross button has been clicked or its operation has been somehow interrupted. |
-| windowId | `number` | Defines an index of the button from the modal window. |
+| windowId | `number` | Defines the ID of the secondary window whose button was clicked. Used when a plugin has multiple windows open. |
 
 ## Example
 

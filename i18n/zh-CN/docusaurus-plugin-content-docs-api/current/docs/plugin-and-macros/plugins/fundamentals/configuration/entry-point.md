@@ -17,7 +17,7 @@ sidebar_position: -4
         <script type="text/javascript" src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js"></script>
         <script type="text/javascript" src="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js"></script>
         <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
-        <script type="text/javascript" src="plugin.js"></script>
+        <script type="text/javascript" src="code.js"></script>
     </head>
     <body style="width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;">
         <div id="plugin name" style="margin: 0; padding: 0;"></div>

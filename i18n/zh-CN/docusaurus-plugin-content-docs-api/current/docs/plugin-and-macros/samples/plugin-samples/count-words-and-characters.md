@@ -133,10 +133,10 @@ GitHub 上的仓库：[字数统计](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## 方法和事件
 
-- button
-- init
-- onTargetPositionChanged
-- onTranslate
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onTargetPositionChanged](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)
+- [onTranslate](/docs/plugin-and-macros/plugins/fundamentals/configuration/localization.md#applying-translations-to-plugin)
 
 ## 支持
 

@@ -28,14 +28,14 @@ sidebar_position: -2
 
 ``` ts
 window.Asc.plugin.init = function init() {
-  this.callCommand(() => {
-    const oDocument = Api.GetDocument()
-    const oParagraph = Api.CreateParagraph()
-    oParagraph.AddText("Hello world!")
-    oDocument.InsertContent([oParagraph])
-  }, true)
-}
-window.Asc.plugin.button = function button(id) {}
+  window.Asc.plugin.callCommand(() => {
+    const oDocument = Api.GetDocument();
+    const oParagraph = Api.CreateParagraph();
+    oParagraph.AddText("Hello world!");
+    oDocument.InsertContent([oParagraph]);
+  }, true);
+};
+window.Asc.plugin.button = function button(id) {};
 ```
 
 当插件对象初始化时（window.Asc.plugin.init = function () \{...\}），编辑器会创建一个包含 Hello World 文字的段落，并使用 [Office JavaScript API](../../../../office-api/get-started/overview.md) 创建包含该文本的文档（通过 window.Asc.plugin.callCommand 方法，即 this.callCommand(function() \{...\}) 实现）。

@@ -12,19 +12,11 @@ Browser DevTools are essential for debugging ONLYOFFICE plugins. This guide cove
 
 ### In ONLYOFFICE Desktop Editors
 
-**Windows/Linux:**
-```
-Press: Ctrl+Shift+Alt+F12
-```
+Desktop Editors must be launched with the `--ascdesktop-support-debug-info` flag to enable DevTools access. See the [debug mode guides](/docs/desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) for platform-specific launch instructions.
 
-**macOS:**
-```
-Press: Cmd+Option+Shift+F12
-```
-
-**Alternative method:**
-1. Right-click anywhere in the plugin
-2. Select "Inspect Element" or "Inspect"
+Once Desktop Editors is running in debug mode:
+1. Right-click inside the plugin panel.
+2. Select **Inspect Element** to open DevTools for that plugin iframe.
 
 ### In ONLYOFFICE web editors
 

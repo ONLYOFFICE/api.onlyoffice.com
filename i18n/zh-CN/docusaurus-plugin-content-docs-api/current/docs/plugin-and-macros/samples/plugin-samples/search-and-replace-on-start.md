@@ -55,10 +55,10 @@ GitHub 仓库：[示例：查找替换](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 方法和事件
 
-- button
-- init
-- onDocumentContentReady
-- executeMethod ("SearchAndReplace")
+- [button](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
+- [onDocumentContentReady](/docs/plugin-and-macros/plugins/interacting-with-editors/form-api/Events/onDocumentContentReady.md)
+- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/plugins/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
 
 ## 支持
 

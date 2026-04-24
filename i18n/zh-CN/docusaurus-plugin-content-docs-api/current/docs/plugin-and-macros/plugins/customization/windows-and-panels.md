@@ -34,10 +34,10 @@ sidebar_position: -3
 
    ```ts
    function getFullUrl(name) {
-     const location = window.location
-     const start = location.pathname.lastIndexOf("/") + 1
-     const file = location.pathname.slice(start)
-     return location.href.replace(file, name)
+     const location = window.location;
+     const start = location.pathname.lastIndexOf("/") + 1;
+     const file = location.pathname.slice(start);
+     return location.href.replace(file, name);
    }
 
    const variation = {
@@ -58,7 +58,7 @@ sidebar_position: -3
          },
        },
      ],
-   }
+   };
    ```
 
 2. 在插件代码文件中定义一个新的插件窗口 / 面板：
@@ -84,7 +84,7 @@ sidebar_position: -3
 **示例**:
 
 ```ts
-newWindow.show(variation)
+newWindow.show(variation);
 ```
 
 你也可以使用 *window.Asc.plugin.executeMethod* 的 **ShowWindow** 方法。
@@ -119,7 +119,7 @@ const variation = {
     },
   ],
 }
-window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation])
+window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", variation]);
 ```
 
 ## 激活窗口 {#activating-a-window}
@@ -137,7 +137,7 @@ window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B
 **示例**:
 
 ```ts
-window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"])
+window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}"]);
 ```
 
 ## 与窗口进行交互 {#interacting-with-a-window}
@@ -159,7 +159,7 @@ window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-48
 **示例**:
 
 ```ts
-window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 ### MouseUpWindow
@@ -179,7 +179,7 @@ window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4
 **示例**:
 
 ```ts
-window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40])
+window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 70, 40]);
 ```
 
 ### ResizeWindow
@@ -200,7 +200,7 @@ window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-484
 **示例**:
 
 ```ts
-window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392])
+window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", 392, 392, 392]);
 ```
 
 ### resizeWindow
@@ -224,8 +224,8 @@ window.Asc.plugin.executeMethod("ResizeWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 
 ```ts
 window.Asc.plugin.init = () => {
-  this.resizeWindow(392, 147, 392, 147, 392, 147)
-}
+  window.Asc.plugin.resizeWindow(392, 147, 392, 147, 392, 147);
+};
 ```
 
 ### command
@@ -244,7 +244,7 @@ window.Asc.plugin.init = () => {
 **示例**:
 
 ```ts
-newWindow.command("messageName", "data")
+newWindow.command("messageName", "data");
 ```
 
 ### sendToPlugin
@@ -263,7 +263,7 @@ newWindow.command("messageName", "data")
 **示例**:
 
 ```ts
-Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
+Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```
 
 ### SendToWindow
@@ -283,7 +283,7 @@ Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"})
 **示例**:
 
 ```ts
-window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}])
+window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}", "onWindowMessage", {config: oConfig}]);
 ```
 
 ### attachEvent
@@ -303,8 +303,8 @@ window.Asc.plugin.executeMethod("SendToWindow", ["iframe_asc.{BE5CBF95-C0AD-4842
 
 ```ts
 Asc.plugin.attachEvent("messageName", (message) => {
-  console.log(message)
-})
+  console.log(message);
+});
 ```
 
 ## 关闭窗口 {#closing-a-window}
@@ -324,14 +324,14 @@ Asc.plugin.attachEvent("messageName", (message) => {
 ```ts
 window.Asc.plugin.button = (id, windowId) => {
   if (!modalWindow) {
-    return
+    return;
   }
 
   if (windowId) {
     switch (id) {
     default:
-      window.Asc.plugin.executeMethod("CloseWindow", [windowId])
+      window.Asc.plugin.executeMethod("CloseWindow", [windowId]);
     }
   }
-}
+};
 ```
