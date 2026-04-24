@@ -18,7 +18,6 @@ const PLAYGROUNDS = [
   { type: 'slide', name: 'Presentation API', description: 'Use the presentation editor to design and present slideshows.' },
   { type: 'form', name: 'Form API', description: 'Interact with the form editor to create and manage forms.' },
   { type: 'pdf', name: 'PDF API', description: 'Use the PDF editor to create, edit, and annotate PDF documents.' },
-  { type: 'builder', name: 'Builder API', description: 'Interact with Document Builder for working with text documents, spreadsheets, presentations, and forms.', url: 'pathname:///playground/?editor=word&testType=builder' },
 ];
 
 type Props = ComponentProps<'div'> & {
@@ -71,7 +70,7 @@ const DOCSPACE_PLAYGROUNDS = [
   { type: 'system', name: 'System', description: 'Use the system mode to call SDK methods without a visible frame.' },
 ];
 
-type CardDef = { type: string; name: string; description: string; url?: string }
+type CardDef = { type: string; name: string; description: string }
 type ResolvedCard = { type: string; name: string; description: string; image: string; imageDark: string; url: string }
 
 function CardsRow({ cards, searchParams }: {
@@ -115,11 +114,11 @@ function CardsRow({ cards, searchParams }: {
 }
 
 function resolveEditorCards(cards: CardDef[], urlBase: string, paramName: string): ResolvedCard[] {
-  return cards.map(({ type, name, description, url }) => ({
+  return cards.map(({ type, name, description }) => ({
     type, name, description,
     image: require(`@site/static/assets/images/editor/${type}-playground.png`).default + '#gh-light-mode-only',
     imageDark: require(`@site/static/assets/images/editor/${type}-playground.dark.png`).default + '#gh-dark-mode-only',
-    url: url ?? `pathname:///${urlBase}/?${paramName}=${type}`,
+    url: `pathname:///${urlBase}/?${paramName}=${type}`,
   }));
 }
 
