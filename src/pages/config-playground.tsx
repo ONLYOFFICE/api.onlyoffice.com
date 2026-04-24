@@ -34,10 +34,10 @@ const DOCUMENT_TYPE_CONFIG: Record<EditorType, DocumentConfig> = {
         title: 'Example Presentation.pptx',
     },
     form: {
-        fileType: 'oform',
-        docType: 'word',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.oform',
-        title: 'Example Form.oform',
+        fileType: 'pdf',
+        docType: 'pdf',
+        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
+        title: 'Example Form.pdf',
     },
     pdf: {
         fileType: 'pdf',
