@@ -1,5 +1,58 @@
 # Change log
 
+## 8.4.0
+
+### New features
+
+#### Playground
+
+* Added Config Playground for the Docs API with interactive JSON Forms editor, live document preview, and split-pane layout
+
+#### Docs API
+
+* Added new entry-point page for the DocsAPI.DocEditor class
+
+### Improvements
+
+#### Docs API
+
+* Rewrote over 25 integration guides for improved integrator clarity, including how-it-works, saving-file, co-editing, document-history, security, JWT signature samples, and more
+* Renamed Advanced parameters to Configuration overview and connected with DocEditor and Config pages
+* Added cross-links to the DocEditor page from methods, preload, and installation pages
+* Updated images for the commenting page
+
+#### Office API
+
+* Updated office-js-api documentation
+
+#### Plugins and macros
+
+* Removed broken PDF API method links from plugin changelog
+
+#### Playground
+
+* Unified playground card components into a single shared module
+* Removed redundant Builder card from playground cards
+
+#### Localization
+
+* Added Chinese translation for the Config Playground page
+
+### Fixes
+
+#### Playground
+
+* Fixed Config Playground styling: improved color tokens, tooltips, focus indicators, section spacing, and SEO metadata
+* Fixed Config Playground performance: optimized rendering with memoization, lazy serialization, and debounced updates
+* Fixed Config Playground UI: consolidated action buttons into floating panel, corrected heading hierarchy, and hidden Ask AI button
+* Fixed playground document key generation to use crypto.randomUUID
+
+#### Docs API
+
+* Fixed Try page PDF using blank instead of demo document
+* Fixed opening-file and saving-file overview step lists
+* Fixed action-link semicolon consistency
+
 ## 8.3.1
 
 ### Fixes
