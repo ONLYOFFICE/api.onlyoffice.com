@@ -31,9 +31,10 @@
 }
 
 .content {
+    z-index: 100;
     width: 240px;
-    background: var(--ifm-tooltip-background-color);
-    color: var(--ifm-tooltip-color);
+    background: var(--ifm-color-emphasis-800);
+    color: var(--ifm-color-emphasis-100);
     font-size: 12px;
     font-weight: 400;
     border-radius: 6px;
@@ -46,5 +47,5 @@
 }
 
 .arrow {
-    fill: var(--ifm-tooltip-background-color);
+    fill: var(--ifm-color-emphasis-800);
 }
