@@ -294,6 +294,7 @@ const config = {
     onDownloadAs,
     onError,
     onInfo,
+    onMakeActionLink,
     onMetaChange,
     onOutdatedVersion,
     onPluginsReady,
