@@ -93,6 +93,7 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
             title={title}
             depth={depth}
             description={(s as any)['x-shortDescription']}
+            defaultOpen={depth <= 1}
         >
             {body}
         </Section>

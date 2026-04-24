@@ -50,7 +50,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
     }
 
     return (
-        <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={(schema as JsonSchema).description}>
+        <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={(schema as JsonSchema).description} defaultOpen={depth < 1}>
             {items.map((_, index) => {
                 const itemPath = composePaths(path, `${index}`)
                 return (
