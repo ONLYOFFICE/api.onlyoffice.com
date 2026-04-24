@@ -47,7 +47,7 @@ regardless of which scopes the MCP client originally requested.
 The MCP server acts as an OAuth proxy to address these limitations by using the DocSpace API to create an OAuth application and then using the client details to authenticate the MCP server-client connection.
 
 To create a DocSpace OAuth application, follow the steps in the [DocSpace
-OAuth application creation guide][DocSpace API: Creating OAuth Application].
+OAuth application creation guide](/docspace/api-backend/get-started/authentication/oauth2/creating-oauth-app/).
 When configuring the application, ensure the following settings are properly
 configured:
 
