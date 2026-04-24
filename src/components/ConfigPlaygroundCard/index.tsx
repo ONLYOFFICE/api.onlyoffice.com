@@ -3,52 +3,24 @@ import Link from '@docusaurus/Link'
 import Heading from '@theme/Heading'
 
 const CONFIG_PLAYGROUND_CARDS = [
-    {
-        name: 'Text document',
-        image: require('@site/static/assets/images/editor/word-playground.png').default + '#gh-light-mode-only',
-        imageDark: require('@site/static/assets/images/editor/word-playground.dark.png').default + '#gh-dark-mode-only',
-        url: 'pathname:///config-playground/?documentType=word',
-        description: 'Configure the text document editor for creating and editing .docx files.',
-    },
-    {
-        name: 'Spreadsheet',
-        image: require('@site/static/assets/images/editor/cell-playground.png').default + '#gh-light-mode-only',
-        imageDark: require('@site/static/assets/images/editor/cell-playground.dark.png').default + '#gh-dark-mode-only',
-        url: 'pathname:///config-playground/?documentType=cell',
-        description: 'Configure the spreadsheet editor for data analysis and management.',
-    },
-    {
-        name: 'Presentation',
-        image: require('@site/static/assets/images/editor/slide-playground.png').default + '#gh-light-mode-only',
-        imageDark: require('@site/static/assets/images/editor/slide-playground.dark.png').default + '#gh-dark-mode-only',
-        url: 'pathname:///config-playground/?documentType=slide',
-        description: 'Configure the presentation editor for designing and delivering slideshows.',
-    },
-    {
-        name: 'Form',
-        image: require('@site/static/assets/images/editor/form-playground.png').default + '#gh-light-mode-only',
-        imageDark: require('@site/static/assets/images/editor/form-playground.dark.png').default + '#gh-dark-mode-only',
-        url: 'pathname:///config-playground/?documentType=form',
-        description: 'Configure the form editor for creating and managing fillable forms.',
-    },
-    {
-        name: 'PDF',
-        image: require('@site/static/assets/images/editor/pdf-playground.png').default + '#gh-light-mode-only',
-        imageDark: require('@site/static/assets/images/editor/pdf-playground.dark.png').default + '#gh-dark-mode-only',
-        url: 'pathname:///config-playground/?documentType=pdf',
-        description: 'Configure the PDF editor for viewing, editing, and annotating PDF documents.',
-    },
+    { type: 'word', name: 'Text document', description: 'Configure the text document editor for creating and editing .docx files.' },
+    { type: 'cell', name: 'Spreadsheet', description: 'Configure the spreadsheet editor for data analysis and management.' },
+    { type: 'slide', name: 'Presentation', description: 'Configure the presentation editor for designing and delivering slideshows.' },
+    { type: 'form', name: 'Form', description: 'Configure the form editor for creating and managing fillable forms.' },
+    { type: 'pdf', name: 'PDF', description: 'Configure the PDF editor for viewing, editing, and annotating PDF documents.' },
 ]
 
 type CardProps = {
+    type: string
     name: string
-    image: string
-    imageDark: string
-    url: string
     description: string
 }
 
-function ConfigPlaygroundCard({ name, image, imageDark, url, description }: CardProps) {
+function ConfigPlaygroundCard({ type, name, description }: CardProps) {
+    const image = require(`@site/static/assets/images/editor/${type}-playground.png`).default + '#gh-light-mode-only'
+    const imageDark = require(`@site/static/assets/images/editor/${type}-playground.dark.png`).default + '#gh-dark-mode-only'
+    const url = `pathname:///config-playground/?documentType=${type}`
+
     return (
         <div className="col col--6 margin-bottom--lg">
             <div className="card">
@@ -78,7 +50,7 @@ export function ConfigPlaygroundCardsRow(): ReactNode {
     return (
         <div className="row">
             {CONFIG_PLAYGROUND_CARDS.map((card) => (
-                <ConfigPlaygroundCard key={card.name} {...card} />
+                <ConfigPlaygroundCard key={card.type} {...card} />
             ))}
         </div>
     )
