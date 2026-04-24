@@ -4,7 +4,7 @@ import Head from "@docusaurus/Head";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import { EditorPreview, EditorPreviewRef } from "@site/src/components/EditorPreview";
 import { SplitPane } from "@site/src/components/SplitPane";
-import styles from './config-editor.module.css';
+import styles from './config-playground.module.css';
 import { useCallback, useMemo, useRef } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { useLocation } from "react-router-dom";
@@ -55,7 +55,7 @@ const withFreshKey = (config: Record<string, any>): Record<string, any> => ({
     },
 })
 
-const ConfigEditorInner = (props: { docConfig: DocumentConfig }) => {
+const ConfigPlaygroundInner = (props: { docConfig: DocumentConfig }) => {
     const {
         siteConfig: { customFields },
     } = useDocusaurusContext()
@@ -123,7 +123,7 @@ const ConfigEditorInner = (props: { docConfig: DocumentConfig }) => {
     )
 }
 
-const ConfigEditorRoute = () => {
+const ConfigPlaygroundRoute = () => {
     const location = useLocation()
 
     const { documentType } = getSearchParams<{
@@ -134,16 +134,16 @@ const ConfigEditorRoute = () => {
     return (
         <ColorModeProvider>
             <Head>
-                <title>Configuration Editor | ONLYOFFICE</title>
+                <title>Configuration Playground | ONLYOFFICE</title>
                 <meta name="description" content="An interactive tool for configuring ONLYOFFICE Docs API initialization parameters — visually build, edit, and preview configuration objects in a live embedded editor." />
-                <meta property="og:title" content="Configuration Editor | ONLYOFFICE" />
+                <meta property="og:title" content="Configuration Playground | ONLYOFFICE" />
                 <meta property="og:description" content="An interactive tool for configuring ONLYOFFICE Docs API initialization parameters — visually build, edit, and preview configuration objects in a live embedded editor." />
             </Head>
             <BrowserOnly fallback={null}>
-                {() => <ConfigEditorInner docConfig={docConfig}/>}
+                {() => <ConfigPlaygroundInner docConfig={docConfig}/>}
             </BrowserOnly>
         </ColorModeProvider>
     )
 }
 
-export default ConfigEditorRoute
+export default ConfigPlaygroundRoute
