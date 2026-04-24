@@ -2,12 +2,12 @@
     margin: 0;
     background: none;
     border-bottom: 1px solid var(--ifm-color-emphasis-300);
-    padding: var(--ce-space-4) 0;
+    padding: var(--ce-space-2) 0;
 }
 
 /* Nested sections: tighter spacing */
 .section .section {
-    padding: var(--ce-space-2) 0;
+    padding: var(--ce-space-1) 0;
 }
 
 .summary {
@@ -17,7 +17,7 @@
     align-items: center;
     gap: var(--ce-space-3);
     user-select: none;
-    padding: 0;
+    padding: var(--ce-space-1) 0;
     background: none;
 }
 
