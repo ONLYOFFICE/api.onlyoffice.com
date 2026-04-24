@@ -3,7 +3,7 @@ sidebar_position: -4
 hide_table_of_contents: true
 ---
 
-import { ConfigPlaygroundCardsRow } from '@site/src/components/ConfigPlaygroundCard'
+import { ConfigPlaygroundCardsRow } from '@site/src/components/PlaygroundCard'
 
 # Config Playground
 

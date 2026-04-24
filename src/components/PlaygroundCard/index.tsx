@@ -12,49 +12,13 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 
-const Playgrounds = [
-  {
-    name: 'Text document API',
-    image: require('@site/static/assets/images/editor/word-playground.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/editor/word-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/?editor=word',
-    description: 'Engage with the text document editor to create and manipulate text files.',
-  },
-  {
-    name: 'Spreadsheet API',
-    image: require('@site/static/assets/images/editor/cell-playground.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/editor/cell-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/?editor=cell',
-    description: 'Access the spreadsheet editor for data analysis and management tasks.',
-  },
-  {
-    name: 'Presentation API',
-    image: require('@site/static/assets/images/editor/slide-playground.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/editor/slide-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/?editor=slide',
-    description: 'Use the presentation editor to design and present slideshows.',
-  },
-  {
-    name: 'Form API',
-    image: require('@site/static/assets/images/editor/form-playground.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/editor/form-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/?editor=form',
-    description: 'Interact with the form editor to create and manage forms.',
-  },
-  {
-    name: 'PDF API',
-    image: require('@site/static/assets/images/editor/pdf-playground.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/editor/pdf-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/?editor=pdf',
-    description: 'Use the PDF editor to create, edit, and annotate PDF documents.',
-  },
-  {
-    name: 'Builder API',
-    image: require('@site/static/assets/images/editor/builder-playground.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/editor/builder-playground.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///playground/?editor=word&testType=builder',
-    description: 'Interact with Document Builder for working with text documents, spreadsheets, presentations, and forms.',
-  },
+const PLAYGROUNDS = [
+  { type: 'word', name: 'Text document API', description: 'Engage with the text document editor to create and manipulate text files.' },
+  { type: 'cell', name: 'Spreadsheet API', description: 'Access the spreadsheet editor for data analysis and management tasks.' },
+  { type: 'slide', name: 'Presentation API', description: 'Use the presentation editor to design and present slideshows.' },
+  { type: 'form', name: 'Form API', description: 'Interact with the form editor to create and manage forms.' },
+  { type: 'pdf', name: 'PDF API', description: 'Use the PDF editor to create, edit, and annotate PDF documents.' },
+  { type: 'builder', name: 'Builder API', description: 'Interact with Document Builder for working with text documents, spreadsheets, presentations, and forms.', url: 'pathname:///playground/?editor=word&testType=builder' },
 ];
 
 type Props = ComponentProps<'div'> & {
@@ -90,97 +54,96 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
   );
 }
 
-const DocSpacePlaygrounds = [
-  {
-    name: 'Manager',
-    image: require('@site/static/assets/images/docspace/manager-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/manager-mode.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///docspace-playground/?mode=manager',
-    description: 'Explore the document manager to work with rooms, folders, and documents within DocSpace.',
-  },
-  {
-    name: 'Editor',
-    image: require('@site/static/assets/images/docspace/editor-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/editor-mode.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///docspace-playground/?mode=editor',
-    description: 'Open and edit documents directly in the embedded DocSpace editor.',
-  },
-  {
-    name: 'Viewer',
-    image: require('@site/static/assets/images/docspace/viewer-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/viewer-mode.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///docspace-playground/?mode=viewer',
-    description: 'View documents in a read-only embedded viewer.',
-  },
-  {
-    name: 'Room selector',
-    image: require('@site/static/assets/images/docspace/room-selector-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/room-selector-mode.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///docspace-playground/?mode=room-selector',
-    description: 'Embed a room selector to let users pick a DocSpace room.',
-  },
-  {
-    name: 'File selector',
-    image: require('@site/static/assets/images/docspace/file-selector-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/file-selector-mode.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///docspace-playground/?mode=file-selector',
-    description: 'Embed a file selector to let users pick files from DocSpace.',
-  },
-  {
-    name: 'System',
-    image: require('@site/static/assets/images/docspace/system-mode.png').default + '#gh-light-mode-only',
-    imageDark: require('@site/static/assets/images/docspace/system-mode.dark.png').default + '#gh-dark-mode-only',
-    url: 'pathname:///docspace-playground/?mode=system',
-    description: 'Use the system mode to call SDK methods without a visible frame.',
-  },
+const CONFIG_PLAYGROUNDS = [
+  { type: 'word', name: 'Text document', description: 'Configure the text document editor for creating and editing .docx files.' },
+  { type: 'cell', name: 'Spreadsheet', description: 'Configure the spreadsheet editor for data analysis and management.' },
+  { type: 'slide', name: 'Presentation', description: 'Configure the presentation editor for designing and delivering slideshows.' },
+  { type: 'form', name: 'Form', description: 'Configure the form editor for creating and managing fillable forms.' },
+  { type: 'pdf', name: 'PDF', description: 'Configure the PDF editor for viewing, editing, and annotating PDF documents.' },
 ];
 
-export function DocSpacePlaygroundCardsRow(): ReactNode {
+const DOCSPACE_PLAYGROUNDS = [
+  { type: 'manager', name: 'Manager', description: 'Explore the document manager to work with rooms, folders, and documents within DocSpace.' },
+  { type: 'editor', name: 'Editor', description: 'Open and edit documents directly in the embedded DocSpace editor.' },
+  { type: 'viewer', name: 'Viewer', description: 'View documents in a read-only embedded viewer.' },
+  { type: 'room-selector', name: 'Room selector', description: 'Embed a room selector to let users pick a DocSpace room.' },
+  { type: 'file-selector', name: 'File selector', description: 'Embed a file selector to let users pick files from DocSpace.' },
+  { type: 'system', name: 'System', description: 'Use the system mode to call SDK methods without a visible frame.' },
+];
+
+type CardDef = { type: string; name: string; description: string; url?: string }
+type ResolvedCard = { type: string; name: string; description: string; image: string; imageDark: string; url: string }
+
+function CardsRow({ cards, searchParams }: {
+  cards: ResolvedCard[]
+  searchParams?: { [parameter: string]: string }[]
+}) {
   return (
     <div className="row">
-      {DocSpacePlaygrounds.map((playground) => (
-        <PlaygroundCard key={playground.name} {...playground} />
-      ))}
+      {cards.map(({ type, name, description, image, imageDark, url: baseUrl }) => {
+        let url = baseUrl;
+
+        if (searchParams && searchParams.length > 0) {
+          const extra = searchParams
+            .filter(p => {
+              const key = Object.keys(p)[0];
+              return !url.includes(key);
+            })
+            .map(p => {
+              const key = Object.keys(p)[0];
+              return `${key}=${p[key]}`;
+            });
+
+          if (extra.length > 0) {
+            url += (url.includes('?') ? '&' : '?') + extra.join('&');
+          }
+        }
+
+        return (
+          <PlaygroundCard
+            key={type}
+            name={name}
+            description={description}
+            image={image}
+            imageDark={imageDark}
+            url={url}
+          />
+        );
+      })}
     </div>
   );
 }
 
+function resolveEditorCards(cards: CardDef[], urlBase: string, paramName: string): ResolvedCard[] {
+  return cards.map(({ type, name, description, url }) => ({
+    type, name, description,
+    image: require(`@site/static/assets/images/editor/${type}-playground.png`).default + '#gh-light-mode-only',
+    imageDark: require(`@site/static/assets/images/editor/${type}-playground.dark.png`).default + '#gh-dark-mode-only',
+    url: url ?? `pathname:///${urlBase}/?${paramName}=${type}`,
+  }));
+}
+
+function resolveDocspaceCards(cards: CardDef[]): ResolvedCard[] {
+  return cards.map(({ type, name, description }) => ({
+    type, name, description,
+    image: require(`@site/static/assets/images/docspace/${type}-mode.png`).default + '#gh-light-mode-only',
+    imageDark: require(`@site/static/assets/images/docspace/${type}-mode.dark.png`).default + '#gh-dark-mode-only',
+    url: `pathname:///docspace-playground/?mode=${type}`,
+  }));
+}
+
+export function ConfigPlaygroundCardsRow(): ReactNode {
+  return <CardsRow cards={resolveEditorCards(CONFIG_PLAYGROUNDS, 'config-playground', 'documentType')} />;
+}
+
+export function DocSpacePlaygroundCardsRow(): ReactNode {
+  return <CardsRow cards={resolveDocspaceCards(DOCSPACE_PLAYGROUNDS)} />;
+}
+
 interface PlaygroundCardsRowProps {
-  searchParams?: {
-    [parameter: string]: string
-  }[]
-};
+  searchParams?: { [parameter: string]: string }[]
+}
 
 export function PlaygroundCardsRow({ searchParams }: PlaygroundCardsRowProps): ReactNode {
-  const updatedPlaygrounds = Playgrounds.map(playground => {
-    const newPlayground = { ...playground };
-    
-    if (searchParams?.length > 0) {
-      const stringifiedSearchParams = searchParams
-        .filter(parameter => {
-          const key = Object.keys(parameter)[0];
-          return !newPlayground.url.includes(key);
-        })
-        .map(parameter => {
-          const key = Object.keys(parameter)[0];
-          return `${key}=${parameter[key]}`;
-        });
-
-      if (stringifiedSearchParams.length > 0) {
-        newPlayground.url += 
-          (newPlayground.url.includes("?") ? "&" : "?") + 
-          stringifiedSearchParams.join("&");
-      }
-    }
-
-    return newPlayground;
-  });
-
-  return (
-    <div className="row">
-      {updatedPlaygrounds.map((playground) => (
-        <PlaygroundCard key={playground.name} {...playground} />
-      ))}
-    </div>
-  );
+  return <CardsRow cards={resolveEditorCards(PLAYGROUNDS, 'playground', 'editor')} searchParams={searchParams} />;
 }
