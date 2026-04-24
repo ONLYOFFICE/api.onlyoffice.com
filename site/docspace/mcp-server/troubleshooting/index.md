@@ -1,7 +1,7 @@
 ---
 sidebar_label: Troubleshooting
 sidebar_position: 1
-title: DocSpace MCP server troubleshooting docs
+title: DocSpace MCP server troubleshooting
 ---
 
 This documentation helps you to diagnose and fix potential issues when configuring and interacting with the DocSpace MCP server. These issues cover:

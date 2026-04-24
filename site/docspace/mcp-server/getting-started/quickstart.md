@@ -16,7 +16,7 @@ This guide will help you achieve the following:
 
 ### Step 1: Connect to MCP client
 
-[MCP clients](clients.md) like ChatGPT, Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace workspace and tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and connects to a local MCP server. You can also [access via a remote server](installation.md#public-instance).
+[MCP clients](clients.md) like Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace workspace and tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and connects to a local MCP server. You can also [access via a remote server](installation.md#public-instance).
 
 :::note
 Ensure Docker is installed on your system.
@@ -24,11 +24,11 @@ Ensure Docker is installed on your system.
 
 To connect Claude Desktop to your local MCP server:
 
-1. Open Claude Desktop;
-2. Navigate to **Settings**
-3. Navigate to **Developer**
-4. Click **Edit config**
-5. Open the configuration file (`config.json`) in a text editor
+1. Open Claude Desktop.
+2. Navigate to **Settings**.
+3. Navigate to **Developer**.
+4. Click **Edit config**.
+5. Open the configuration file (`config.json`) in a text editor.
 6. Add a new record to the `mcpServers` section:
    ```json
    {
@@ -72,7 +72,7 @@ It's important to quit and not just close the Claude Desktop window as quitting 
     Our newly configured MCP server (**onlyoffice-docspace**) is now enabled.
 
 <ThemedImage
-  alt="This image confirms a successful client-DocSpace mcp server connection"
+  alt="This image confirms a successful client-DocSpace MCP server connection"
   sources={{
     light: require('../../../../static/img/confirm-connection.light.png').default,
     dark: require('../../../../static/img/confirm-connection.dark.png').default,
@@ -87,7 +87,7 @@ Now we have our connection, let us interact with DocSpace via Claude:
 1. Let's create a new room. Claude requests permission to create this room.
 
 <ThemedImage
-  alt="This image confirms a successful client-DocSpace mcp server connection"
+  alt="This image shows the command to create a room"
   sources={{
     light: require('../../../../static/img/create-new-room.light.png').default,
     dark: require('../../../../static/img/create-new-room.dark.png').default,
@@ -98,7 +98,7 @@ Now we have our connection, let us interact with DocSpace via Claude:
     You can confirm this new room in your DocSpace account.
 
 <ThemedImage
-  alt="This image confirms a successful client-DocSpace mcp server connection"
+  alt="This image confirms the room was successfully created"
   sources={{
     light: require('../../../../static/img/confirm-room-on-docspace.light.png').default,
     dark: require('../../../../static/img/confirm-room-on-docspace.dark.png').default,
@@ -109,7 +109,7 @@ Now we have our connection, let us interact with DocSpace via Claude:
 2. Now, create a new document in this room.
 
 <ThemedImage
-  alt="This image confirms a successful client-DocSpace mcp server connection"
+  alt="This image shows the command for creating a new document"
   sources={{
     light: require('../../../../static/img/create-new-doc.light.png').default,
     dark: require('../../../../static/img/create-new-doc.dark.png').default,
@@ -120,7 +120,7 @@ Now we have our connection, let us interact with DocSpace via Claude:
        Confirm the new document was created.
 
 <ThemedImage
-  alt="This image confirms a successful client-DocSpace mcp server connection"
+  alt="This image confirms the document was created"
   sources={{
     light: require('../../../../static/img/confirm-new-doc.light.png').default,
     dark: require('../../../../static/img/confirm-new-doc.dark.png').default,
@@ -131,7 +131,7 @@ Now we have our connection, let us interact with DocSpace via Claude:
       You can confirm the existence of this new document in the new room in your DocSpace.
   
 <ThemedImage
-  alt="This image confirms a successful client-DocSpace mcp server connection"
+  alt="This image shows the new document visible inside the new room in DocSpace"
   sources={{
     light: require('../../../../static/img/confirm-new-doc-in-new-room.light.png').default,
     dark: require('../../../../static/img/confirm-new-doc-in-new-room.dark.png').default,

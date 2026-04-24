@@ -25,7 +25,7 @@ You need to onboard all four efficiently without introducing security gaps or gr
 
 ## Before you proceed
 
-- Ensure to [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
+- Make sure you [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
 
 :::note
 Every AI MCP client sends a confirmation message to deny or confirm every action after you issue a prompt. This confirmation message differs from client to client — Le Chat uses `Always allow`, `Decline` or `Continue`.

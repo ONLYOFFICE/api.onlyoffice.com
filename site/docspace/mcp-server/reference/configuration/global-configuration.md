@@ -1,4 +1,8 @@
-# Global configuration
+---
+sidebar_label: Global configuration
+sidebar_position: 2
+title: Global configuration
+---
 
 This document describes all available configuration options for the DocSpace MCP server provided through environment variables, and organized by their functional area.
 

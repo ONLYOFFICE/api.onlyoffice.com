@@ -29,7 +29,7 @@ With the Meridian Corp website redesign project officially complete and signed o
 
 ## Before you proceed
 
-- Ensure to [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
+- Make sure you [connect your DocSpace MCP server to your MCP client of choice](../getting-started/clients.md).
 
 ### Step 1: Conduct a Full Access Audit
 

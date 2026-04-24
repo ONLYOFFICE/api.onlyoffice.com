@@ -19,13 +19,14 @@ The DocSpace MCP server allows you to connect numerous MCP clients, offering fle
 
 ## Before you start
 
-- Ensure [Docker](https://www.docker.com/) is installed on your system.
-- Take note of these environment variables for configuring your local DocSpace server:
+Take note of these environment variables used when configuring the DocSpace MCP server:
 
-    - `DOCSPACE_BASE_URL` — the URL of your DocSpace instance (e.g., `https://portal.onlyoffice.com`).
-    - `DOCSPACE_API_KEY` — your personal API key generated in DocSpace settings → **Developer Tools** → **API Keys**.
+- `DOCSPACE_BASE_URL` — the URL of your DocSpace instance (e.g., `https://portal.onlyoffice.com`).
+- `DOCSPACE_API_KEY` — your personal API key generated in DocSpace settings → **Developer Tools** → **API Keys**.
 
-**Ensure your API key is valid**. 
+**Ensure your API key is valid**.
+
+For local (command-based) connections, [Docker](https://www.docker.com/) must also be installed on your system.
 
 ## Connect to ONLYOFFICE Desktop Editors
 

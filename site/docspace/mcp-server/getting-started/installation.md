@@ -34,7 +34,7 @@ You can configure your local machine to interact with the DocSpace MCP server us
 Before proceeding, ensure to set these environment variables:
 
 - `DOCSPACE_BASE_URL` - the URL of your DocSpace instance (e.g. https://portal.onlyoffice.com).
-- `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings -> **Developer Tools** -> **API keys**.
+- `DOCSPACE_API_KEY` - your personal API key generated in DocSpace settings → **Developer Tools** → **API keys**.
 
 ### Install with Docker image
 

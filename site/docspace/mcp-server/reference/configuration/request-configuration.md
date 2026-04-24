@@ -1,4 +1,8 @@
-# Request configuration
+---
+sidebar_label: Request configuration
+sidebar_position: 3
+title: Request configuration
+---
 
 This document lists and describes the variables used to configure the DocSpace MCP server behavior at the request level using query parameters and custom header.
 

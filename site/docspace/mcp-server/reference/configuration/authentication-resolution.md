@@ -1,4 +1,8 @@
-# Authentication resolution
+---
+sidebar_label: Authentication resolution
+sidebar_position: 4
+title: Authentication resolution
+---
 
 This document describes how the DocSpace MCP server resolves authentication
 methods based on transport configuration and available authentication options.
