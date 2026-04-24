@@ -40,11 +40,11 @@
 
 定义嵌入式查看器工具栏的位置，可以是 **top** 或 **bottom**。
 
-**示例**: "top"
+**示例**: `"top"`
 
 ![Embedded](/assets/images/editor/embedded.png)
 
-## Example
+## 示例
 
 ``` ts
 const config = {

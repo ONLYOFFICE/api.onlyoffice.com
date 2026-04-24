@@ -22,8 +22,12 @@ sidebar_label: White label
 
 定义拼写检查器设置是否显示拼写检查器设置在所有编辑器中可用。
 
-:::请注意
+:::note
 `features` 对象的其他字段可用于标准品牌，并在[此处](customization-standard-branding.md#features)中描述。只有 `features.spellcheck.change` 字段需要额外付款。
+:::
+
+:::note
+自 9.0.4 版起已弃用。
 :::
 
 **示例**: `true`
@@ -147,7 +151,7 @@ const header = {
 
 ### layout.header.user
 
-`Type: boolean`
+`类型: boolean`
 
 定义编辑器标题栏中带有用户头像/姓名首字母的图标是否显示或隐藏。默认值为 **true**。
 

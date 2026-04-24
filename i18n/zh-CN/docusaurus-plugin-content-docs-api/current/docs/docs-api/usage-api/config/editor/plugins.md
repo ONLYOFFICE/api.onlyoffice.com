@@ -77,7 +77,7 @@
 
 **示例**: `https://example.com/plugins/`
 
-![插件](/assets/images/editor/plugins.png)
+![插件](/assets/images/editor/plugins.png#gh-light-mode-only)![插件](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
 ## 示例
 

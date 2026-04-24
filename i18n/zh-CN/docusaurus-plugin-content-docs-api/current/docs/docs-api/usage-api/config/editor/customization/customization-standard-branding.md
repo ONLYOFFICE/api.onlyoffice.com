@@ -9,7 +9,7 @@ sidebar_label: Standard branding
 
 在此页面上，您将找到 ONLYOFFICE 文档开发者版的[白标定制](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)可用的自定义参数。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
 
-:::请注意，
+:::note
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
 :::
 
@@ -52,7 +52,7 @@ const anonymous = {
 
 定义**自动保存**菜单选项是启用还是禁用。如果设置为 **false**，则只能选择 **Strict** 共同编辑模式，因为 **Fast** 在没有自动保存的情况下不起作用。默认值为 **true**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.autosave* 参数发送的任何值。
 :::
 
@@ -101,7 +101,7 @@ const close = {
 
 定义编辑器标题中按钮的工具提示文本或移动编辑器中的菜单项文本以及 Web 编辑器的 **File** 菜单中的按钮的工具提示文本。
 
-:::请注意，
+:::note
 仅当设置了 [onRequestClose](../../events.md#onrequestclose) 事件时，该参数才可用。如果未声明该事件且未指定 *close* 参数，则不会显示关闭按钮。
 
 请注意，此参数也适用于移动编辑器。
@@ -149,7 +149,7 @@ const close = {
 
 定义显示的顶部工具栏类型是完整的 (**false**) 还是紧凑的 (**true**)。默认值为 **false**。从 8.3 版开始，此设置也适用于查看器。*查看*模式的默认值为 **true**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.compactToolbar* 参数发送的任何值。
 :::
 
@@ -171,7 +171,7 @@ const close = {
 
 包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
-:::请注意，
+:::note
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 :::
 
@@ -296,7 +296,7 @@ const features = {
 
 定义是否在 pdf 表单中禁用角色设置。如果该参数等于 **false**，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。默认值为 **true**。
 
-:::请注意，
+:::note
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 :::
 
@@ -316,7 +316,7 @@ const features = {
 
 定义在加载编辑器时拼写检查器是自动打开还是关闭。此参数仅适用于文档编辑器和演示文稿编辑器。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改*拼写检查*设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.features.spellcheck* 参数发送的任何值。
 :::
 
@@ -382,7 +382,7 @@ const features = {
 
 默认值为 **false**。
 
-:::请注意，
+:::note
 此参数也适用于移动编辑器。
 :::
 
@@ -412,7 +412,7 @@ const features = {
 
 在**文档编辑服务**中保存文档时（例如单击**保存**按钮等），将文件强制保存请求添加到 [callback handler](../../../callback-handler.md#forcesavetype)。默认值为 **false**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.forcesave* 参数发送的任何值。
 :::
 
@@ -432,7 +432,7 @@ const features = {
 
 定义**打开文件位置**菜单按钮和右上角按钮的设置。
 
-:::请注意，
+:::note
 请注意，此参数也适用于移动编辑器。
 :::
 
@@ -490,7 +490,7 @@ const goback = {
 
 定义**帮助**菜单按钮是显示还是隐藏。默认值为 **true**。
 
-:::请注意，
+:::note
 请注意，此参数也适用于移动编辑器。
 :::
 
@@ -504,7 +504,7 @@ const goback = {
 
 定义注释面板在首次加载时是显示还是隐藏。默认值为 **false**。此参数仅适用于演示文稿编辑器。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.hideNotes* 参数发送的任何值。
 :::
 
@@ -518,7 +518,7 @@ const goback = {
 
 定义第一次加载时是否显示或隐藏右侧菜单。默认值为 **true**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.hideRightMenu* 参数发送的任何值。
 :::
 
@@ -548,7 +548,7 @@ const goback = {
 
 更改编辑器标题左上角的图像文件。推荐的图像高度为 20 像素。
 
-:::请注意，
+:::note
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
 
 请注意，此参数也适用于移动编辑器。
@@ -643,7 +643,7 @@ const logo = {
 
 默认值为 **warn**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.macrosMode* 参数发送的任何值。
 
 请注意，此参数也适用于移动编辑器。
@@ -657,7 +657,7 @@ const logo = {
 
 定义在评论中提及后描述事件的提示。如果为 **true**，则提示表示用户将收到通知并访问文档。如果为 **false**，则提示表示用户将仅收到提及通知。默认值为 **true**。
 
-:::请注意，
+:::note
 如果设置了 [onRequestSendNotify](../../events.md#onrequestsendnotify) 事件 ，它将仅可用于评论。
 :::
 
@@ -671,7 +671,7 @@ const logo = {
 
 定义移动文档编辑器设置。
 
-:::请注意，
+:::note
 此参数仅适用于移动编辑器。
 :::
 
@@ -715,7 +715,7 @@ const mobile = {
 
 定义移动文档编辑器在启动时是否以查看/编辑模式打开。默认值为 **true**。
 
-:::请注意，
+:::note
 请注意，此参数仅适用于移动编辑器。
 :::
 :::danger[Deprecated]
@@ -748,7 +748,7 @@ const mobile = {
 
 包含有关审阅模式的信息。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.review.hoverMode* 和 *editorConfig.customization.review.reviewDisplay* 参数发送的任何值。
 
 [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 *review* 参数。
@@ -828,7 +828,7 @@ const review = {
 
 查看器的默认值是 **original**, 编辑器的默认值是 **markup**。                                                       
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.reviewDisplay* 参数发送的任何值。
 :::
 :::danger[Deprecated]
@@ -879,7 +879,7 @@ const review = {
 
 定义在加载编辑器时拼写检查器是自动打开还是关闭。拼写检查器仅适用于文档编辑器和演示文稿编辑器。默认值为 **true**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.spellcheck* 参数发送的任何值。
 :::
 :::danger[Deprecated]
@@ -933,11 +933,11 @@ const review = {
 
 定义文档标题在顶部工具栏上是可见的 (**false**) 还是隐藏的 (**true**)。默认值为 **false**。
 
-:::请注意，
+:::note
 当 [compactHeader](#compactheader) 参数设置为 **true** 时使用此设置。
 :::
 
-:::请注意
+:::note
 从 9.0.3 版本开始，该参数适用于移动端编辑器。
 :::
 
@@ -982,11 +982,11 @@ const review = {
 
 除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx)。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.uiTheme* 参数发送的任何值。
 :::
 
-:::请注意，
+:::note
 从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：**theme-light**、**theme-dark**、**default-light**、**default-dark**。
 :::
 
@@ -1004,7 +1004,7 @@ const review = {
 
 默认值为厘米 (**cm**)。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.unit* 参数发送的任何值。
 :::
 
@@ -1024,7 +1024,7 @@ const review = {
 
 定义以百分比测量的文档显示缩放值。可以取大于 **0**的值。对于文本文档和演示文稿，可以将此参数设置为 **-1** （使文档适合页面选项）或 **-2** （使文档页面宽度适合编辑器页面）。默认值为 **100**。
 
-:::请注意，
+:::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.zoom* 参数发送的任何值。
 :::
 
