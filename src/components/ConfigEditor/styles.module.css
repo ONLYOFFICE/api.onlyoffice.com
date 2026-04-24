@@ -226,7 +226,7 @@
     margin: 0;
     width: 1rem;
     height: 1rem;
-    accent-color: var(--ifm-color-primary);
+    accent-color: var(--ifm-color-info);
     cursor: pointer;
     flex-shrink: 0;
 }
@@ -263,7 +263,7 @@
 }
 
 .field [role='radiogroup'] input[type='radio'] {
-    accent-color: var(--ifm-color-primary);
+    accent-color: var(--ifm-color-info);
 }
 
 .field [role='radiogroup'] input[type='radio']:focus-visible {
