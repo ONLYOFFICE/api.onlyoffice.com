@@ -8,7 +8,7 @@
     background: transparent;
     border: none;
     border-radius: 50%;
-    color: var(--ifm-color-primary);
+    color: var(--ifm-color-info);
     cursor: help;
     user-select: none;
     flex-shrink: 0;
@@ -16,7 +16,7 @@
 }
 
 .icon:hover {
-    color: var(--ifm-color-primary-dark);
+    color: var(--ifm-color-info-dark);
 }
 
 .icon:focus-visible {

@@ -25,7 +25,7 @@ export function Tooltip({ text }: { text: string }) {
                             strokeWidth="1.5"
                         />
                         <path
-                            d="M8 7v4M8 5v.5"
+                            d="M8 7.5v3.5M8 4.5v.5"
                             stroke="currentColor"
                             strokeWidth="1.5"
                             strokeLinecap="round"
