@@ -59,4 +59,3 @@ See [config.json explained](../configuration/config-json.md) for the full refere
 
 - [Plugin lifecycle](plugin-lifecycle.md) — understand how the editor loads and communicates with your plugin
 - [Development environment setup](development-environment-setup.md) — get your tools ready
-- [Your first plugin](your-first-plugin.md) — build and run a working plugin in minutes

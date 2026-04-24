@@ -185,8 +185,8 @@ GitHub 仓库地址：[speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## 方法和事件
 
-- buttons
-- init
+- [buttons](/docs/plugin-and-macros/plugins/customization/custom-buttons.md)
+- [init](/docs/plugin-and-macros/plugins/interacting-with-editors/overview/#how-it-works)
 
 ## 支持
 

@@ -28,7 +28,7 @@ This page describes the recommended setup for plugin development.
    └── code.js
    ```
 
-3. Follow the [config.json reference](../configuration/config-json.md) to register your plugin, then see [Your first plugin](your-first-plugin.md) for a complete walkthrough.
+3. Follow the [config.json reference](../configuration/config-json.md) to register your plugin.
 
 ## Local dev server (optional)
 

@@ -51,7 +51,7 @@ This function adds any text content to the specified or the current slide. Use t
     examples: [
       {
         prompt:
-          "add [anything] or write [anything] or create text about [anything]'",
+          "add [anything] or write [anything] or create text about [anything]",
         arguments: {
           text: "[generated or specified content]",
           textType: "body",

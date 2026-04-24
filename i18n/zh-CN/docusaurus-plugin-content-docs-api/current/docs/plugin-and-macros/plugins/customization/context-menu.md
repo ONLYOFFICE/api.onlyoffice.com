@@ -25,7 +25,7 @@ sidebar_position: -6
    **示例**:
 
    ``` ts
-   Asc.plugin.attachEvent("onContextMenuShow", (options) => {
+   Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
      const items = {
        guid: window.Asc.plugin.guid,
        items: [
@@ -102,7 +102,7 @@ sidebar_position: -6
    **示例**:
 
    ``` ts
-   Asc.plugin.attachEvent("onContextMenuShow", (options) => {
+   Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
      const items = {
        guid: window.Asc.plugin.guid,
        items: [
@@ -133,7 +133,7 @@ sidebar_position: -6
 **示例**:
 
 ``` ts
-Asc.plugin.attachEvent("onContextMenuShow", (options) => {
+Asc.plugin.attachEditorEvent("onContextMenuShow", (options) => {
   const items = {
     guid: window.Asc.plugin.guid,
     items: [

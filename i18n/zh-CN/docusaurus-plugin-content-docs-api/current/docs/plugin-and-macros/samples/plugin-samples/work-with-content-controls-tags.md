@@ -21,7 +21,7 @@
 
 ## 插件结构
 
-GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags)。
+GitHub 仓库：[example_work_with_content_controls_tags](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags)。
 
 1. *config.json*、*index.html* 和 *code.js*  
 

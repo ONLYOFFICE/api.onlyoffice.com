@@ -2,7 +2,9 @@
 
 Connects the Telegram application for instant messaging within the ONLYOFFICE editors.
 
-> The plugin has no access to the camera and microphone, so you will be unable to record voice and video messages. Also, it does not work in the incognito mode.
+:::note
+The plugin has no access to the camera and microphone, so you will be unable to record voice and video messages. Also, it does not work in the incognito mode.
+:::
 
 **Plugin type:** visual, non-system.
 

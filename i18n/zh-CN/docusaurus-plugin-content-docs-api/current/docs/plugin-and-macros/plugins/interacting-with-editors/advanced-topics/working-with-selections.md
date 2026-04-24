@@ -39,7 +39,7 @@ window.Asc.plugin.executeMethod("PasteHtml", ["<b>Bold replacement</b>"]);
 React to the user changing their selection:
 
 ```javascript
-window.Asc.plugin.attachEvent("onChangeContentControl", function () {
+window.Asc.plugin.attachEditorEvent("onChangeContentControl", function () {
   // Selection or content changed
 });
 ```

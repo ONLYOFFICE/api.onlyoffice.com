@@ -120,7 +120,7 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
       "store": {
         "background": {
           "light": "#444444",
-          "dark": "#444444;"
+          "dark": "#444444"
         },
         "screenshots": [
           "resources/store/screenshots/screen_1.png",

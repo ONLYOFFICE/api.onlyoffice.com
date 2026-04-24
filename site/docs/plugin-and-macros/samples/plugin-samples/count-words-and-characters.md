@@ -2,11 +2,13 @@
 
 Counts paragraphs, words, and characters with or without spaces in the selected part of the document.
 
-> The following elements are not included in the word count:
->
-> - footnotes/endnotes;
-> - numbers from numbered lists;
-> - page numbers.
+:::note
+The following elements are not included in the word count:
+
+- footnotes/endnotes;
+- numbers from numbered lists;
+- page numbers.
+:::
 
 **Plugin type:** visual, non-system.
 

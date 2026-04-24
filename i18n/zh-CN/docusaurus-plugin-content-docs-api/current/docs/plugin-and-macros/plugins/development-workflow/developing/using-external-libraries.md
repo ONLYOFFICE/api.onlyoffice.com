@@ -139,6 +139,6 @@ import throttle from 'lodash/throttle';
 
 ## Additional resources
 
-- [Plugin structure](../../fundamentals/configuration/config-json.md)
+- [config.json reference](../../fundamentals/configuration/config-json.md)
 - [For web editors](./for-web-editors.md)
 - [Plugin examples](https://github.com/ONLYOFFICE/sdkjs-plugins)

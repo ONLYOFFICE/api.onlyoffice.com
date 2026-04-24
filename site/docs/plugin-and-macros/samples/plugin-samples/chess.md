@@ -120,7 +120,7 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
       "store": {
         "background": {
           "light": "#444444",
-          "dark": "#444444;"
+          "dark": "#444444"
         },
         "screenshots": [
           "resources/store/screenshots/screen_1.png",

@@ -16,13 +16,19 @@ To process [buttons](../fundamentals/configuration/config-json.md#variationsbutt
 ## Example
 
 ``` ts
-Asc.plugin.button = (id, windowId) => {
-  if (!windowId) {
+window.Asc.plugin.button = function (id) {
+  if (id === -1) {
+    // The Close button was clicked or the plugin was interrupted.
+    window.Asc.plugin.executeCommand("close", "");
     return;
   }
-
-  if (windowId === newWindow.id) {
-    console.log("Plugin button");
+  // id corresponds to the button index in config.json variations.buttons.
+  if (id === 0) {
+    window.Asc.plugin.callCommand(function () {
+      var oDocument = Api.GetDocument();
+      // ...
+    }, true);
   }
+  window.Asc.plugin.executeCommand("close", "");
 };
 ```

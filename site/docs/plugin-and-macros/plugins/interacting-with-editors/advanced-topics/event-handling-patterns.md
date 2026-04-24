@@ -9,7 +9,7 @@ The plugin–editor communication model is event-driven. This page covers patter
 ## Basic event attachment
 
 ```javascript
-window.Asc.plugin.attachEvent("onDocumentContentReady", function () {
+window.Asc.plugin.attachEditorEvent("onDocumentContentReady", function () {
   console.log("Document is ready");
 });
 ```
@@ -23,7 +23,7 @@ function onceReady() {
   window.Asc.plugin.detachEvent("onDocumentContentReady", onceReady);
   // do work
 }
-window.Asc.plugin.attachEvent("onDocumentContentReady", onceReady);
+window.Asc.plugin.attachEditorEvent("onDocumentContentReady", onceReady);
 ```
 
 ## Debouncing frequent events
@@ -33,7 +33,7 @@ Some events (like selection change) fire rapidly. Debounce to avoid excessive pr
 ```javascript
 let debounceTimer;
 
-window.Asc.plugin.attachEvent("onChangeContentControl", function () {
+window.Asc.plugin.attachEditorEvent("onChangeContentControl", function () {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
     updatePluginUI();

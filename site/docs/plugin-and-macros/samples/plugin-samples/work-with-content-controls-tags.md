@@ -21,7 +21,7 @@ Download this plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins/t
 
 ## Plugin structure
 
-Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example\_work\_with\_content\_controls\_tags](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags).
+Repository on GitHub: [example_work_with_content_controls_tags](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_work_with_content_controls_tags).
 
 1. *config.json*, *index.html*, and *code.js*
    
