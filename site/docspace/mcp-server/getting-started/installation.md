@@ -157,7 +157,7 @@ The public instance provides access to all available tools by default. Tool sele
 
 ## Tool Configuration
 
-The public instance provides access to all available DocSpace tools by default. Tool selection can be customized using the following options:
+Tool selection can be customized using the following options:
 
 - **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/configuration/tools-resolution.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
 

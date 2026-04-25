@@ -59,7 +59,7 @@ Comma-separated list of tools to explicitly enable.
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
 
@@ -70,7 +70,7 @@ Comma-separated list of tools to explicitly disable.
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 | **Transports** | all |
 

@@ -155,7 +155,7 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
         - Replace `your-instance.onlyoffice.com` with your actual DocSpace domain
 7. Click "Add".
 8. Click "Connect" next to the newly added connector.
-9. Complete the OAuth authentication process:
+9. If you chose OAuth, complete the authentication process:
     - Sign in to your DocSpace account by entering your email and password and clicking "Sign In".
     - If you have more than one account associated with the entered email, choose one of them.
     - Allow the MCP Remote Server to access the specified data in your DocSpace account.

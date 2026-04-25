@@ -88,8 +88,9 @@ instead of static credentials.
 ### Dynamic Client Registration
 An OAuth 2.0 extension (RFC 7591) that allows an MCP client to register itself
 with an authorization server at runtime, without needing a pre-configured client
-ID and secret. The DocSpace MCP Server supports this so that MCP clients can
-onboard to OAuth automatically.
+ID and secret. The DocSpace authorization server does not natively support this,
+so the DocSpace MCP Server emulates it by exposing a registration endpoint that
+returns pre-configured or user-provided credentials to MCP clients.
 
 ### SSE (Server-Sent Events)
 A web standard for servers to push a stream of events to a client over a single

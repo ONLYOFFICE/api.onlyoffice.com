@@ -218,13 +218,13 @@ Use this format if your MCP client supports `.mcpb` bundle files natively (e.g.,
 1. Download the latest release:
 
    ```sh
-   VERSION=3.1.0 curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.mcpb
+   VERSION=3.1.0 curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
    ```
 
    To download a specific version:
 
    ```sh
-   VERSION=<version> curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.mcpb
+   VERSION=<version> curl --location --output docspace-mcp.mcpb https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.mcpb
    ```
 
 2. Use the downloaded `.mcpb` file in an application that supports MCP bundles.
@@ -236,13 +236,13 @@ Use this format if you prefer to run the server as a standard Node.js process.
 1. Download the latest release:
 
    ```sh
-   VERSION=3.1.0 curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.tgz
+   VERSION=3.1.0 curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
    ```
 
    To download a specific version:
 
    ```sh
-   VERSION=<version> curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/v$VERSION/download/onlyoffice-docspace-mcp-$VERSION.tgz
+   VERSION=<version> curl --location --output docspace-mcp.tgz https://github.com/ONLYOFFICE/docspace-mcp/releases/download/v$VERSION/onlyoffice-docspace-mcp-$VERSION.tgz
    ```
 
 2. Extract the downloaded archive:

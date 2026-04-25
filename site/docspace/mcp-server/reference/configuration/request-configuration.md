@@ -50,7 +50,7 @@ Comma-separated list of tools to explicitly enable. Available tools depend on th
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 
 #### disabled_tools
@@ -60,7 +60,7 @@ Comma-separated list of tools to explicitly disable. Available tools depend on t
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 
 ### API Options
@@ -116,7 +116,7 @@ Comma-separated list of tools to explicitly enable. Available tools depend on th
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 
 #### X-Mcp-Disabled-Tools
@@ -126,7 +126,7 @@ Comma-separated list of tools to explicitly disable. Available tools depend on t
 | | |
 |---|---|
 | **Type** | comma-separated list |
-| **Example** | `get_file,get_all_people` |
+| **Example** | `get_file_info,get_all_people` |
 | **Attributes** | trimmable, case-insensitive |
 
 ### Sample custom tool selection

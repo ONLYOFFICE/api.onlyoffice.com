@@ -4,8 +4,6 @@ sidebar_position: 1
 title: Getting started with the DocSpace MCP server
 ---
 
-import ThemedImage from '@theme/ThemedImage';
-
 Connect the [DocSpace MCP server](index.md) to Claude Desktop and start interacting with your DocSpace through natural language.
 
 ## Step 1: Connect to MCP client
@@ -63,16 +61,9 @@ It's important to quit and not just close the Claude Desktop window as quitting 
 1. Open Claude Desktop.
 2. Click **+** > **Connectors** on the chat bar.
 
-    Our newly configured MCP server (**onlyoffice-docspace**) is now enabled.
+   Our newly configured MCP server (**onlyoffice-docspace**) is now enabled.
 
-<ThemedImage
-  alt="This image confirms a successful client-DocSpace MCP server connection"
-  sources={{
-    light: require('../../../../static/img/confirm-connection.light.png').default,
-    dark: require('../../../../static/img/confirm-connection.dark.png').default,
-  }}
-  style={{display: 'block', margin: '0 auto', width: '600px'}}
-/>
+![This image confirms a successful client-DocSpace MCP server connection](/img/confirm-connection.light.png#gh-light-mode-only)![This image confirms a successful client-DocSpace MCP server connection](/img/confirm-connection.dark.png#gh-dark-mode-only)
 
 ## Step 3: Interact with your DocSpace using the newly connected client
 
@@ -80,58 +71,23 @@ Now we have our connection, let us interact with DocSpace via Claude:
 
 1. Let's create a new room. Claude requests permission to create this room.
 
-<ThemedImage
-  alt="This image shows the command to create a room"
-  sources={{
-    light: require('../../../../static/img/create-new-room.light.png').default,
-    dark: require('../../../../static/img/create-new-room.dark.png').default,
-  }}
-  style={{display: 'block', margin: '0 auto', width: '600px'}}
-/>
-  
-    You can confirm this new room in your DocSpace account.
+![This image shows the command to create a room](/img/create-new-room.light.png#gh-light-mode-only)![This image shows the command to create a room](/img/create-new-room.dark.png#gh-dark-mode-only)
 
-<ThemedImage
-  alt="This image confirms the room was successfully created"
-  sources={{
-    light: require('../../../../static/img/confirm-room-on-docspace.light.png').default,
-    dark: require('../../../../static/img/confirm-room-on-docspace.dark.png').default,
-  }}
-  style={{display: 'block', margin: '0 auto', width: '600px'}}
-/>
+   You can confirm this new room in your DocSpace account.
+
+![This image confirms the room was successfully created](/img/confirm-room-on-docspace.light.png#gh-light-mode-only)![This image confirms the room was successfully created](/img/confirm-room-on-docspace.dark.png#gh-dark-mode-only)
 
 2. Now, create a new document in this room.
 
-<ThemedImage
-  alt="This image shows the command for creating a new document"
-  sources={{
-    light: require('../../../../static/img/create-new-doc.light.png').default,
-    dark: require('../../../../static/img/create-new-doc.dark.png').default,
-  }}
-  style={{display: 'block', margin: '0 auto', width: '600px'}}
-/>
+![This image shows the command for creating a new document](/img/create-new-doc.light.png#gh-light-mode-only)![This image shows the command for creating a new document](/img/create-new-doc.dark.png#gh-dark-mode-only)
 
-       Confirm the new document was created.
+   Confirm the new document was created.
 
-<ThemedImage
-  alt="This image confirms the document was created"
-  sources={{
-    light: require('../../../../static/img/confirm-new-doc.light.png').default,
-    dark: require('../../../../static/img/confirm-new-doc.dark.png').default,
-  }}
-  style={{display: 'block', margin: '0 auto', width: '600px'}}
-/>
+![This image confirms the document was created](/img/confirm-new-doc.light.png#gh-light-mode-only)![This image confirms the document was created](/img/confirm-new-doc.dark.png#gh-dark-mode-only)
 
-      You can confirm the existence of this new document in the new room in your DocSpace.
-  
-<ThemedImage
-  alt="This image shows the new document visible inside the new room in DocSpace"
-  sources={{
-    light: require('../../../../static/img/confirm-new-doc-in-new-room.light.png').default,
-    dark: require('../../../../static/img/confirm-new-doc-in-new-room.dark.png').default,
-  }}
-  style={{display: 'block', margin: '0 auto', width: '600px'}}
-/>  
+   You can confirm the existence of this new document in the new room in your DocSpace.
+
+![This image shows the new document visible inside the new room in DocSpace](/img/confirm-new-doc-in-new-room.light.png#gh-light-mode-only)![This image shows the new document visible inside the new room in DocSpace](/img/confirm-new-doc-in-new-room.dark.png#gh-dark-mode-only)
 
 ## Next steps
 
