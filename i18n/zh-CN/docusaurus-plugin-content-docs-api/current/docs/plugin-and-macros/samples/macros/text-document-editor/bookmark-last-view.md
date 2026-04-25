@@ -35,7 +35,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取当前可见页面](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentVisiblePages.md)，[跳转至指定页面](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GoToPage.md)，[获取当前段落](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentParagraph.md)，[获取所有书签名称](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md)，[删除书签](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)，[获取范围](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md)，[添加书签](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetCurrentVisiblePages](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentVisiblePages.md), [GoToPage](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GoToPage.md), [GetCurrentParagraph](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentParagraph.md), [GetAllBookmarksNames](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [DeleteBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md), [GetRange](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../../office-api/usage-api/text-document-api/ApiRange/Methods/AddBookmark.md)
 
 ## 结果
 

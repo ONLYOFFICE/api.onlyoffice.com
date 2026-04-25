@@ -117,7 +117,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有段落](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md)，[获取文本内容](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md)，[创建段落](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md)，[添加文本](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)，[推送内容](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [Push](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md)
 
 ## 结果
 

@@ -28,7 +28,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有书签名称](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md)，[获取书签对象](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md)，[获取书签文本](/docs/office-api/usage-api/text-document-api/ApiBookmark/Methods/GetText.md)，[删除书签](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllBookmarksNames](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [GetBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiBookmark/Methods/GetText.md), [DeleteBookmark](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/DeleteBookmark.md)
 
 ## 结果
 

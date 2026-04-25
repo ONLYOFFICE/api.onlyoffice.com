@@ -18,7 +18,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有表单](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)，[获取表单类型](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)，[获取表单键值](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey.md)，[设置占位文本](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetPlaceholderText.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey.md), [SetPlaceholderText](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetPlaceholderText.md)
 
 ## 结果
 

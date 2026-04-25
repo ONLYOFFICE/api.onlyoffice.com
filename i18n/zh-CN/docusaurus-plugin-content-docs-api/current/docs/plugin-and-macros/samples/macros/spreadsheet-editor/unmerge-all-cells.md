@@ -31,7 +31,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取当前工作表](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md)，[获取已使用范围](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md)，[取消合并单元格](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md)，[获取范围](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [UnMerge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)
 
 ## 参考 Microsoft VBA 宏代码
 
