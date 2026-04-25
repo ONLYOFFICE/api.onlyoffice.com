@@ -1,10 +1,10 @@
-import * as TooltipPrimitive from '@radix-ui/react-tooltip'
+import * as Popover from '@radix-ui/react-popover'
 import styles from './Tooltip.module.css'
 
 export function Tooltip({ text }: { text: string }) {
     return (
-        <TooltipPrimitive.Root>
-            <TooltipPrimitive.Trigger asChild>
+        <Popover.Root>
+            <Popover.Trigger asChild>
                 <button
                     type="button"
                     className={styles.icon}
@@ -32,13 +32,13 @@ export function Tooltip({ text }: { text: string }) {
                         />
                     </svg>
                 </button>
-            </TooltipPrimitive.Trigger>
-            <TooltipPrimitive.Portal>
-                <TooltipPrimitive.Content className={styles.content} sideOffset={6}>
+            </Popover.Trigger>
+            <Popover.Portal>
+                <Popover.Content className={styles.content} side="right" sideOffset={6}>
                     {text}
-                    <TooltipPrimitive.Arrow className={styles.arrow} />
-                </TooltipPrimitive.Content>
-            </TooltipPrimitive.Portal>
-        </TooltipPrimitive.Root>
+                    <Popover.Arrow className={styles.arrow} />
+                </Popover.Content>
+            </Popover.Portal>
+        </Popover.Root>
     )
 }

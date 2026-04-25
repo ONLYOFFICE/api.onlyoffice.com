@@ -1,5 +1,4 @@
 import styles from './styles.module.css'
-import { Provider as TooltipProvider } from "@radix-ui/react-tooltip";
 import PlayIcon from '@site/static/icons/icon-play.svg';
 import * as Tabs from "@radix-ui/react-tabs";
 import { renderers } from "./renderers";
@@ -102,8 +101,7 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
     }, [])
 
     return (
-        <TooltipProvider delayDuration={200}>
-            <div className={styles.container}>
+        <div className={styles.container}>
                 <Tabs.Root value={tab} onValueChange={handleTabChange} className={styles.tabs}>
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
@@ -147,7 +145,6 @@ export function ConfigEditor({ defaultConfig, onApply, excludePaths }: ConfigEdi
                         </Tabs.Content>
                     </div>
                 </Tabs.Root>
-            </div>
-        </TooltipProvider>
+        </div>
     )
 }
