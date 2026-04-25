@@ -13,23 +13,11 @@ export function Tooltip({ text }: { text: string }) {
                     <svg
                         width="16"
                         height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
+                        viewBox="2 2 16 16"
+                        fill="currentColor"
                         aria-hidden="true"
                     >
-                        <circle
-                            cx="8"
-                            cy="8"
-                            r="7"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                        />
-                        <path
-                            d="M8 7.5v3.5M8 4.5v.5"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                        />
+                        <path d="M10 2.5a7.5 7.5 0 1 1 0 15 7.5 7.5 0 0 1 0-15m0 1a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13m.1 5.51a.5.5 0 0 1 .4.49v3h1a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1h1V10h-1a.5.5 0 0 1 0-1H10zM10 6.5A.75.75 0 1 1 10 8a.75.75 0 0 1 0-1.5" />
                     </svg>
                 </button>
             </Popover.Trigger>
