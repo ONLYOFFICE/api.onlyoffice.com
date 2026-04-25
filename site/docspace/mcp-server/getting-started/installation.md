@@ -7,12 +7,10 @@ title: Installing the DocSpace MCP server
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Before interacting and building with the DocSpace MCP server, you need to access this server. DocSpace offers two ways to do this:
+Before interacting with the DocSpace MCP server, you need to install or connect to it. DocSpace offers two ways to do this:
 
 - [Access via a local machine](#access-via-a-local-docspace-mcp-server)
 - [Access via a remote server](#access-via-the-remote-docspace-mcp-server)
-
-This page provides a step-by-step approach to installing the MCP server using these methods.
 
 ## Before you start
 
@@ -27,7 +25,7 @@ This page provides a step-by-step approach to installing the MCP server using th
 You can configure your local machine to interact with the DocSpace MCP server using:
 
 - [Docker image](#install-with-docker-image)
-- [Docker MCP toolkit](#install-with-docker-mcp-toolkit)
+- [Docker MCP Toolkit](#install-with-docker-mcp-toolkit)
 - [MCP bundle](#install-with-mcp-bundle)
 - [Node.js application](#install-via-nodejs-application)
 
@@ -71,13 +69,13 @@ Insert the following block into the `mcpServers` section of your `.json` configu
 | `onlyoffice/docspace-mcp` | Docker image name to run |
 
 
-### Install with Docker MCP toolkit
+### Install with Docker MCP Toolkit
 
 Using the [Docker MCP Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/toolkit/) requires [Docker Desktop](https://docs.docker.com/desktop/) to be installed on your
 system and the Docker MCP Toolkit to be enabled. 
 
 :::note
-The Docker MCP toolkit is currently a beta feature and is only available to specific user segments, subscription tiers, or by invitation.
+The Docker MCP Toolkit is currently a beta feature and is only available to specific user segments, subscription tiers, or by invitation.
 :::
 
 1. Follow [this guide](../distribution/distribution-combined.md#build-with-docker-mcp-toolkit) to install the server through the Docker Desktop interface.
@@ -161,7 +159,7 @@ The public instance provides access to all available tools by default. Tool sele
 
 The public instance provides access to all available DocSpace tools by default. Tool selection can be customized using the following options:
 
-- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/tools.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
+- **MCP Client Interface**: (Preferred) Most MCP clients provide a built-in interface for [enabling or disabling specific tools](../reference/configuration/tools-resolution.md#enable-a-tool-from-not-specified-toolset). Use this method when your client supports it.
 
 - **Query Parameters or Custom Headers**: For clients without a tool configuration interface, you can [customize tool availability by passing parameters in the connection URL or via custom HTTP headers](../reference/configuration/request-configuration.md#enabled_tools).
 

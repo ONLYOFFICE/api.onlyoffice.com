@@ -6,15 +6,9 @@ title: Getting started with the DocSpace MCP server
 
 import ThemedImage from '@theme/ThemedImage';
 
-This guide will demonstrate how the [DocSpace MCP server](index.md) works with MCP clients like Claude Desktop, and how to establish this connection to enable seamless exchange of information between ONLYOFFICE DocSpace and AI models.
+Connect the [DocSpace MCP server](index.md) to Claude Desktop and start interacting with your DocSpace through natural language.
 
-This guide will help you achieve the following:
-
-- [Connect Claude Desktop to the DocSpace MCP server](#step-1-connect-to-mcp-client)
-- [Confirm the MCP server-client connection](#step-2-confirm-the-connection)
-- [Interact with DocSpace using the MCP client](#step-3-interact-with-your-docspace-using-the-newly-connected-client)
-
-### Step 1: Connect to MCP client
+## Step 1: Connect to MCP client
 
 [MCP clients](clients.md) like Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace workspace and tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and connects to a local MCP server. You can also [access via a remote server](installation.md#public-instance).
 
@@ -64,7 +58,7 @@ Where:
 It's important to quit and not just close the Claude Desktop window as quitting and restarting the app reloads the `config.json` configuration with the new `mcpServers` entry.
 :::
 
-### Step 2: Confirm the connection
+## Step 2: Confirm the connection
 
 1. Open Claude Desktop.
 2. Click **+** > **Connectors** on the chat bar.
@@ -80,7 +74,7 @@ It's important to quit and not just close the Claude Desktop window as quitting 
   style={{display: 'block', margin: '0 auto', width: '600px'}}
 />
 
-### Step 3: Interact with your DocSpace using the newly connected client
+## Step 3: Interact with your DocSpace using the newly connected client
 
 Now we have our connection, let us interact with DocSpace via Claude:
 

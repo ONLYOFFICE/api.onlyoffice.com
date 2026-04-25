@@ -4,13 +4,7 @@ sidebar_position: 2
 title: Global configuration
 ---
 
-This document describes all available configuration options for the DocSpace MCP server provided through environment variables, and organized by their functional area.
-
-- [MCP options](#mcp-options): controls the behavior of the DocSpace MCP server. 
-- [API options](#api-options): configures the behavior of API requests
-- [OAuth options](#oauth-options): controls the behavior of the OAuth server
-- [Server options](#server-options): configures the behavior of the HTTP server. 
-- [Request options](#request-options): configures the behavior of incoming requests. 
+All available configuration options for the DocSpace MCP server provided through environment variables, organized by their functional area.
 
 ## MCP Options
 

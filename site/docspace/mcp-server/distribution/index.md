@@ -4,7 +4,7 @@ sidebar_position: 1
 title: Distribution overview
 ---
 
-This document provides an overview of available formats and their corresponding distribution sources for the DocSpace MCP server.
+The DocSpace MCP server is available in several formats from different distribution sources.
 
 ## Available Formats
 

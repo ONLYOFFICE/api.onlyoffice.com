@@ -4,7 +4,7 @@ sidebar_label: Cursor
 title: Troubleshooting issues with Cursor client
 ---
 
-This page explains some errors when connecting the DocSpace MCP server to the Cursor client via the local MCP server.
+The following issues can occur when connecting the DocSpace MCP server to the Cursor client via the local MCP server.
 
 ## Docker image fails to pull
 

@@ -4,7 +4,7 @@ sidebar_position: 3
 title: Authentication with the DocSpace MCP Server
 ---
 
-Before the DocSpace MCP server was introduced, the DocSpace authorization server had limitations that prevented MCP clients from using the OAuth flow due to how it handles dynamic client registration and scope handling.
+The DocSpace MCP server acts as an OAuth proxy between MCP clients and the DocSpace authorization server, handling compatibility gaps in dynamic client registration and scope handling automatically.
 
 ## Dynamic Client Registration
 

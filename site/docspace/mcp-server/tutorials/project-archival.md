@@ -43,15 +43,14 @@ Show me everyone who currently has access to the "Meridian Corp — Website Rede
 
 The AI calls `get_room_security_info` and returns the full member list. Review it carefully and categorize each person into `keep` and `remove` groups:
 
-- **Internal team members** (keep until archiving is complete)
+- **Team members moving to other projects** (remove now — no longer working on this project)
 - **Client stakeholders / external reviewers** (remove now — project is over)
-- **Contractors / freelancers** (remove now)
 - **Room admins** (keep until final archive step)
 
 For this scenario, you find:
-- **Sam Rivera** (Developer)  — **remove**
-- **Yuki Tanaka** (Content Writer), "freelance.content@studio.com" (Editor) — **remove**
-- **Aisha Okafor** (Content Writer), "freelance.content@studio.com" (Editor) — **remove**
+- **Sam Rivera** (Developer) — **remove** (reassigned to another project)
+- **Yuki Tanaka** (Content Writer) — **remove** (reassigned to another project)
+- **Aisha Okafor** (Content Writer) — **remove** (reassigned to another project)
 - **Marcus Webb** (Client Success Manager) — **keep for now**
 
 ### Step 2: Remove External Access
@@ -61,7 +60,7 @@ Revoke access for all external parties.
 **Try this prompt:**
 
 ```
-Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they're all freelance contractors hired for this job. Marcus Webb is an internal team member and still retains access.
+Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they've been reassigned to other projects. Marcus Webb still needs access during the archival process.
 ```
 
 The AI calls `set_room_security` with removal instructions for the specified users.
@@ -72,7 +71,7 @@ The AI calls `set_room_security` with removal instructions for the specified use
 Show me the updated access list for "Meridian Corp — Website Redesign".
 ```
 
-Confirm that the freelancers no longer have access. This is a critical security step as external parties should never retain access to internal rooms after project completion.
+Confirm that the reassigned team members no longer have access. This is a critical security step — team members should not retain access to rooms for projects they are no longer working on.
 
 ### Step 3: Audit the Room Contents
 

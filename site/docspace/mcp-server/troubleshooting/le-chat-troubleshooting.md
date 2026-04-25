@@ -4,7 +4,7 @@ sidebar_position: 6
 title: Troubleshooting issues with Le Chat MCP client
 ---
 
-This page explains some errors when connecting the DocSpace MCP server to the Le Chat client.
+The following issues can occur when connecting the DocSpace MCP server to the Le Chat client.
 
 ## The "Custom MCP Connector" option is not available
 

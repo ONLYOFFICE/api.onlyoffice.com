@@ -7,13 +7,7 @@ sidebar_position: 4
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This page explains and demonstrates the various ways users can get the MCP server:
-
-- [Build from source](#build-the-mcp-server-from-source)
-- [Pull from Docker Hub](#pull-from-docker-hub)
-- [Build with Docker MCP toolkit](#build-with-docker-mcp-toolkit)
-- [Build with npm registry](#build-with-npm-registry)
-- [Download the GitHub release](#download-the-github-release)
+The DocSpace MCP server can be obtained in several ways depending on your environment and requirements.
 
 ## Choosing a distribution method
 
@@ -22,8 +16,8 @@ Before choosing a distribution method, consult the following table:
 | **I want to**                                | **Recommended method**         |
 |----------------------------------------------|--------------------------------|
 | Get started quickly with minimal setup       | Docker Hub, npm Registry       |
-| Run in an isolated, reproducible environment | Docker Hub, Docker MCP toolkit |
-| Use a GUI to manage everything               | Docker MCP toolkit             |
+| Run in an isolated, reproducible environment | Docker Hub, Docker MCP Toolkit |
+| Use a GUI to manage everything               | Docker MCP Toolkit             |
 | Install a specific version offline           | GitHub releases                |
 | Customize or contribute to the server        | Build from source              |
 
@@ -151,7 +145,7 @@ This method is ideal for developers who want a consistent, isolated runtime envi
    docker run --interactive --rm onlyoffice/docspace-mcp
    ```
 
-## Build with Docker MCP toolkit
+## Build with Docker MCP Toolkit
 
 This method works best for non-technical users or users who prefer a graphical interface over the command line. Before proceeding, ensure you have:
 

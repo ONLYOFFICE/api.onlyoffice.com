@@ -4,7 +4,7 @@ sidebar_label: VS Code
 title: Resolving issues with VS Code client
 ---
 
-This page describes some errors when creating a DocSpace MCP server — VS Code client connection and solutions to fix these errors.
+The following issues can occur when connecting the DocSpace MCP server to VS Code.
 
 ## The MCP server does not appear in the list
 

@@ -4,7 +4,7 @@ sidebar_label: ONLYOFFICE Desktop Editors
 title: Resolving errors with the ONLYOFFICE Desktop Editors
 ---
 
-This doc contains issues you might encounter when connecting the ONLYOFFICE Desktop Editors to the DocSpace MCP server, their causes, and their solutions.
+The following issues can occur when connecting the ONLYOFFICE Desktop Editors to the DocSpace MCP server.
 
 ## Docker is not found or not running
 

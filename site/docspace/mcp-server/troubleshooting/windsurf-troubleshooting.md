@@ -4,7 +4,7 @@ sidebar_position: 8
 title: Troubleshooting issues with Windsurf MCP client
 ---
 
-This page explains some errors when connecting the DocSpace MCP server to the Windsurf client.
+The following issues can occur when connecting the DocSpace MCP server to the Windsurf client.
 
 ## The MCP server does not appear in Windsurf after saving the configuration
 

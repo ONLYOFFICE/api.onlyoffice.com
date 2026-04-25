@@ -108,8 +108,7 @@ export const DocSpaceFeatures: Features = {
       link: 'plugins-sdk/get-started',
       description: (
         <>
-          Create your plugins and add them
-          to the DocSpace portal.
+          Create your plugins and add them to the DocSpace portal.
         </>
       ),
       icon: <PluginIcon/>,

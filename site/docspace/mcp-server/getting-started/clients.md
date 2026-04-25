@@ -137,7 +137,7 @@ Connect to the locally running MCP server using Claude's Local MCP servers.
    ```
 7. Save the file.
 
-## Connect to Claude web
+## Connect to Claude Web
 
 1. Open Claude Web in your web browser.
 2. Navigate to Settings.

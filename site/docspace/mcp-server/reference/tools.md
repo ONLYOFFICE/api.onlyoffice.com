@@ -4,13 +4,7 @@ sidebar_position: 7
 title: Tools
 ---
 
-This document describes how the DocSpace MCP server implements the Tools concept from the MCP specification and the following:
-
-- [Toolsets](#toolsets)
-- [Regular tools](#regular-tools)
-- [Meta tools](#meta-tools)
-- [Resolving tools](#resolving-tools)
-- [Examples of tools in action](#examples)
+The DocSpace MCP server implements the Tools concept from the MCP specification.
 
 ## Toolsets
 

@@ -4,7 +4,7 @@ sidebar_position: 2
 title: Common issues
 ---
 
-This doc contains common issues you might encounter when connecting to or using the DocSpace MCP server, their causes, and their solutions.
+The following issues can occur with any MCP client when connecting to or using the DocSpace MCP server.
 
 ## Parsing errors
 

@@ -4,19 +4,7 @@ sidebar_position: 5
 title: Tools resolution
 ---
 
-This document describes how the DocSpace MCP server resolves which tools are
-available based on toolset configuration and enabled/disabled tool options.
-
-## Contents
-
-- [Visualization](#visualization)
-  - [Global Configuration](#global-configuration)
-  - [Request Configuration](#request-configuration)
-- [Examples](#examples)
-  - [Enable a Tool From Not Specified Toolset](#enable-a-tool-from-not-specified-toolset)
-  - [Disable a Tool From Specified Toolset](#disable-a-tool-from-specified-toolset)
-  - [Manually Specify Tools to Be Available](#manually-specify-tools-to-be-available)
-- [References](#references)
+The DocSpace MCP server resolves which tools are available based on toolset configuration and enabled/disabled tool options.
 
 ## Visualization
 

@@ -4,17 +4,7 @@ sidebar_position: 4
 title: Authentication resolution
 ---
 
-This document describes how the DocSpace MCP server resolves authentication
-methods based on transport configuration and available authentication options.
-
-## Contents
-
-- [Visualization](#visualization)
-  - [Global Configuration](#global-configuration)
-    - [stdio Transport](#stdio-transport)
-    - [HTTP-like Transport](#http-like-transport)
-  - [Request Configuration](#request-configuration)
-- [References](#references)
+The DocSpace MCP server resolves authentication methods based on transport configuration and available authentication options.
 
 ## Visualization
 
