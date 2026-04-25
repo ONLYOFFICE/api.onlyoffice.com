@@ -64,8 +64,8 @@ Insert the following block into the `mcpServers` section of your `.json` configu
 |--------|-------------|
 | `docker` | The executable to run |
 | `run` | Command to create and start a container |
-| `rm` | Automatically remove the container when it exits |
-| `env` | Flag to pass environment variables |
+| `--rm` | Automatically remove the container when it exits |
+| `--env` | Flag to pass environment variables |
 | `onlyoffice/docspace-mcp` | Docker image name to run |
 
 

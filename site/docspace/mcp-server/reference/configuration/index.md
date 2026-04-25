@@ -3,6 +3,7 @@ sidebar_label: Overview
 sidebar_position: 1
 title: Configuration
 ---
+
 import DocCardList from '@theme/DocCardList';
 
 This section contains the configuration references and examples of how to use these configurations with the DocSpace MCP server.

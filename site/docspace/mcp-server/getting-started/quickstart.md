@@ -8,7 +8,7 @@ Connect the [DocSpace MCP server](index.md) to Claude Desktop and start interact
 
 ## Step 1: Connect to MCP client
 
-[MCP clients](clients.md) like Claude, VSCode, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace workspace and tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and connects to a local MCP server. You can also [access via a remote server](installation.md#public-instance).
+[MCP clients](clients.md) like Claude, VS Code, and Windsurf act as a bridge to the DocSpace MCP server, enabling LLMs to access and use DocSpace workspace and tools, thus improving the overall capabilities of DocSpace. This guide uses the Claude Desktop client and connects to a local MCP server. You can also [access via a remote server](installation.md#public-instance).
 
 :::note
 Ensure Docker is installed on your system.
