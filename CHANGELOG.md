@@ -4,15 +4,29 @@
 
 ### New features
 
+#### DocSpace
+
+* Added MCP server documentation section with getting started guides, client connection instructions, tutorials, use cases, troubleshooting, distribution guides, configuration reference, tools reference, and glossary
+* Added MCP server homepage card and sidebar navigation
+
 #### Playground
 
 * Added Config Playground for the Docs API with interactive JSON Forms editor, live document preview, and split-pane layout
+* Added screenshots for Config Playground cards
 
 #### Docs API
 
 * Added new entry-point page for the DocsAPI.DocEditor class
 
 ### Improvements
+
+#### Playground
+
+* Merged Config Playground into unified playground page
+* Renamed toolbar labels for clarity (Preview→Mode, Document→File, Connector→Automation API)
+* Replaced tooltip with popover for click-based interaction in Config Playground
+* Unified playground card components into a single shared module
+* Removed redundant Builder card from playground cards
 
 #### Docs API
 
@@ -29,14 +43,21 @@
 
 * Removed broken PDF API method links from plugin changelog
 
-#### Playground
+#### DocSpace
 
-* Unified playground card components into a single shared module
-* Removed redundant Builder card from playground cards
+* Consolidated MCP server distribution into a combined page
+* Revised MCP server tutorial titles for clarity
+* Refactored MCP server connection instructions
 
 #### Localization
 
 * Added Chinese translation for the Config Playground page
+* Synced zh-CN config pages with English source
+* Fixed Chinese localization for macro code snippets and paths
+
+#### Common
+
+* Consolidated Window type augmentations into global.d.ts
 
 ### Fixes
 
@@ -46,12 +67,25 @@
 * Fixed Config Playground performance: optimized rendering with memoization, lazy serialization, and debounced updates
 * Fixed Config Playground UI: consolidated action buttons into floating panel, corrected heading hierarchy, and hidden Ask AI button
 * Fixed playground document key generation to use crypto.randomUUID
+* Fixed File dropdown to show Sample before Blank
+* Fixed Config Playground to use PDF format for form document type
+* Fixed Config Playground info icon style and color
 
 #### Docs API
 
 * Fixed Try page PDF using blank instead of demo document
 * Fixed opening-file and saving-file overview step lists
 * Fixed action-link semicolon consistency
+* Added missing onMakeActionLink event to complete config example
+* Sorted word file extensions alphabetically
+
+#### DocSpace
+
+* Fixed grammar, punctuation, and broken links across MCP server docs
+* Fixed sidebar labels and configuration category structure in MCP server docs
+* Fixed capitalization issues in MCP server documentation
+* Fixed broken links in MCP server use-cases sections
+* Fixed troubleshooting pages order
 
 ## 8.3.1
 
