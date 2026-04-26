@@ -4,12 +4,6 @@ import { EditorPreview, type EditorPreviewRef } from "@site/src/components/Edito
 import { getFullUrl } from "@site/src/utils/url";
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
-declare global {
-    interface Window {
-        connector: any
-    }
-}
-
 export const PlaygroundPreview = () => {
     const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext()
 

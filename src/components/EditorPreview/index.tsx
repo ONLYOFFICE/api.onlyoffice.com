@@ -1,13 +1,6 @@
 import { useCallback, useEffect, useImperativeHandle, useRef, type Ref } from "react"
 import styles from './styles.module.css'
 
-declare global {
-    interface Window {
-        DocsAPI: any
-        docEditor: any
-    }
-}
-
 export interface EditorPreviewRef {
     initEditor: (config: Record<string, any>) => Promise<void>
 }
