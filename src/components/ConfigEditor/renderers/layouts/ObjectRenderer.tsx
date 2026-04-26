@@ -58,16 +58,17 @@ function resolveChildren(
     return result
 }
 
-const ChildDispatch = memo(({ childSchema, control, childPath, renderers, cells }: ResolvedChild & { renderers: any; cells: any }) => (
-    <JsonFormsDispatch
-        schema={childSchema}
-        uischema={control}
-        path={childPath}
-        renderers={renderers}
-        cells={cells}
-    />
-))
-ChildDispatch.displayName = 'ChildDispatch'
+const ChildDispatch = memo(function ChildDispatch({ childSchema, control, childPath, renderers, cells }: ResolvedChild & { renderers: any; cells: any }) {
+    return (
+        <JsonFormsDispatch
+            schema={childSchema}
+            uischema={control}
+            path={childPath}
+            renderers={renderers}
+            cells={cells}
+        />
+    )
+})
 
 const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
     const { schema, path, label, renderers, cells } = props
