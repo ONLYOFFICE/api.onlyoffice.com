@@ -207,11 +207,11 @@ export const PlaygroundToolbar = () => {
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
-                                <Select.Item value="blank" className={styles.SelectOption}>
-                                    <Select.ItemText>Blank</Select.ItemText>
-                                </Select.Item>
                                 <Select.Item value="sample" className={styles.SelectOption}>
                                     <Select.ItemText>Sample</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="blank" className={styles.SelectOption}>
+                                    <Select.ItemText>Blank</Select.ItemText>
                                 </Select.Item>
                             </Select.Viewport>
                         </Select.Content>
