@@ -151,7 +151,7 @@ export const PlaygroundToolbar = () => {
                                     <Select.ItemText>Config</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="connector" className={styles.SelectOption}>
-                                    <Select.ItemText>Connector</Select.ItemText>
+                                    <Select.ItemText>Automation API</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="office-js-api" className={styles.SelectOption}>
                                     <Select.ItemText>Office JS API</Select.ItemText>
