@@ -1,51 +1,43 @@
-import { EditorType } from "@site/src/components/Playground/root/PlaygroundRootContext";
+import type { EditorType, PreviewType, DocumentType } from "@site/src/components/Playground/root/PlaygroundRootContext";
 import { ColorModeProvider } from "@docusaurus/theme-common/internal";
 import Head from "@docusaurus/Head";
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import { EditorPreview, EditorPreviewRef } from "@site/src/components/EditorPreview";
 import { SplitPane } from "@site/src/components/SplitPane";
 import styles from './config-playground.module.css';
-import { useCallback, useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { useColorMode } from "@docusaurus/theme-common";
 import { useLocation } from "react-router-dom";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { getSearchParams } from "@site/src/utils/url";
 import { ConfigEditor } from "@site/src/components/ConfigEditor";
+import { ConfigPlaygroundToolbar, STORAGE_KEY } from "@site/src/components/ConfigEditor/toolbar/ConfigPlaygroundToolbar";
 
 type DocumentConfig = { fileType: string; docType: string; url: string; title: string }
 
-const DOCUMENT_TYPE_CONFIG: Record<EditorType, DocumentConfig> = {
-    word: {
-        fileType: 'docx',
-        docType: 'word',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx',
-        title: 'Example Document Title.docx',
-    },
-    cell: {
-        fileType: 'xlsx',
-        docType: 'cell',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx',
-        title: 'Example Spreadsheet.xlsx',
-    },
-    slide: {
-        fileType: 'pptx',
-        docType: 'slide',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx',
-        title: 'Example Presentation.pptx',
-    },
-    form: {
-        fileType: 'pdf',
-        docType: 'pdf',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
-        title: 'Example Form.pdf',
-    },
-    pdf: {
-        fileType: 'pdf',
-        docType: 'pdf',
-        url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf',
-        title: 'Example PDF.pdf',
-    },
-} as const
+const BLANK_CONFIGS: Record<EditorType, DocumentConfig> = {
+    word: { fileType: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx', title: 'Example Document Title.docx' },
+    cell: { fileType: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/new.xlsx', title: 'Example Spreadsheet.xlsx' },
+    slide: { fileType: 'pptx', docType: 'slide', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pptx', title: 'Example Presentation.pptx' },
+    form: { fileType: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pdf', title: 'Example Form.pdf' },
+    pdf: { fileType: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/blank.pdf', title: 'Example PDF.pdf' },
+}
+
+const SAMPLE_CONFIGS: Record<EditorType, DocumentConfig> = {
+    word: { fileType: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx', title: 'Example Document Title.docx' },
+    cell: { fileType: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.xlsx', title: 'Example Spreadsheet.xlsx' },
+    slide: { fileType: 'pptx', docType: 'slide', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pptx', title: 'Example Presentation.pptx' },
+    form: { fileType: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf', title: 'Example Form.pdf' },
+    pdf: { fileType: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.pdf', title: 'Example PDF.pdf' },
+}
+
+function loadServerConfig(): { url?: string; secret?: string } | null {
+    try {
+        const stored = localStorage.getItem(STORAGE_KEY)
+        if (stored) return JSON.parse(stored)
+    } catch {}
+    return null
+}
 
 const withFreshKey = (config: Record<string, any>): Record<string, any> => ({
     ...config,
@@ -55,27 +47,38 @@ const withFreshKey = (config: Record<string, any>): Record<string, any> => ({
     },
 })
 
-const ConfigPlaygroundInner = (props: { docConfig: DocumentConfig }) => {
+const ConfigPlaygroundInner = ({ initialEditorType }: { initialEditorType: EditorType }) => {
     const {
         siteConfig: { customFields },
     } = useDocusaurusContext()
 
-    const documentServerUrl = customFields.documentServer as string
-    const documentServerSecret = customFields.documentServerSecret as string
-    const { colorMode } = useColorMode()
+    const defaultDocumentServerUrl = customFields?.documentServer as string
+    const defaultDocumentServerSecret = customFields?.documentServerSecret as string
+    const { colorMode, setColorMode } = useColorMode()
+
+    const [savedConfig] = useState(loadServerConfig)
+
+    const [editorType, setEditorType] = useState<EditorType>(initialEditorType)
+    const [previewType, setPreviewType] = useState<PreviewType>('desktop')
+    const [documentType, setDocumentType] = useState<DocumentType>('sample')
+    const [documentServerUrl, setDocumentServerUrl] = useState(savedConfig?.url || defaultDocumentServerUrl)
+    const [documentServerSecret, setDocumentServerSecret] = useState(savedConfig?.secret || defaultDocumentServerSecret)
+
     const editorRef = useRef<EditorPreviewRef>(null)
     const latestConfigRef = useRef<Record<string, any> | null>(null)
 
+    const docConfig = (documentType === 'sample' ? SAMPLE_CONFIGS : BLANK_CONFIGS)[editorType]
+
     const defaultConfig = useMemo<Record<string, unknown>>(() => ({
-        documentType: props.docConfig.docType,
-        type: 'desktop',
+        documentType: docConfig.docType,
+        type: previewType,
         width: '100%',
         height: '100%',
         document: {
-            fileType: props.docConfig.fileType,
+            fileType: docConfig.fileType,
             key: 'demo-document-key',
-            title: props.docConfig.title,
-            url: props.docConfig.url,
+            title: docConfig.title,
+            url: docConfig.url,
         },
         editorConfig: {
             callbackUrl: documentServerUrl + 'dummyCallback',
@@ -86,7 +89,7 @@ const ConfigPlaygroundInner = (props: { docConfig: DocumentConfig }) => {
             },
             lang: 'en',
         },
-    }), [documentServerUrl, colorMode, props.docConfig])
+    }), [documentServerUrl, colorMode, docConfig, previewType])
 
     const handleApply = useCallback((config: Record<string, unknown>) => {
         const c = withFreshKey(config)
@@ -100,8 +103,28 @@ const ConfigPlaygroundInner = (props: { docConfig: DocumentConfig }) => {
         }
     }, [])
 
+    const handleServerConfigChange = useCallback((url: string, secret: string) => {
+        setDocumentServerUrl(url)
+        setDocumentServerSecret(secret)
+    }, [])
+
     return (
         <div className={styles.container}>
+            <ConfigPlaygroundToolbar
+                editorType={editorType}
+                previewType={previewType}
+                documentType={documentType}
+                theme={colorMode}
+                documentServerUrl={documentServerUrl}
+                documentServerSecret={documentServerSecret}
+                defaultDocumentServerUrl={defaultDocumentServerUrl}
+                defaultDocumentServerSecret={defaultDocumentServerSecret}
+                onEditorTypeChange={setEditorType}
+                onPreviewTypeChange={setPreviewType}
+                onDocumentTypeChange={setDocumentType}
+                onThemeChange={setColorMode}
+                onServerConfigChange={handleServerConfigChange}
+            />
             <SplitPane
                 first={
                     <ConfigEditor
@@ -129,7 +152,6 @@ const ConfigPlaygroundRoute = () => {
     const { documentType } = getSearchParams<{
         documentType: EditorType
     }>(location.search, { documentType: { paramName: 'documentType', defaultValue: 'word' } })
-    const docConfig = DOCUMENT_TYPE_CONFIG[documentType] ?? DOCUMENT_TYPE_CONFIG.word
 
     return (
         <ColorModeProvider>
@@ -140,7 +162,7 @@ const ConfigPlaygroundRoute = () => {
                 <meta property="og:description" content="An interactive tool for configuring ONLYOFFICE Docs API initialization parameters — visually build, edit, and preview configuration objects in a live embedded editor." />
             </Head>
             <BrowserOnly fallback={null}>
-                {() => <ConfigPlaygroundInner docConfig={docConfig}/>}
+                {() => <ConfigPlaygroundInner initialEditorType={documentType ?? 'word'}/>}
             </BrowserOnly>
         </ColorModeProvider>
     )
