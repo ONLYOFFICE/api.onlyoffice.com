@@ -1,4 +1,4 @@
-import {Playground} from "../components/Playground";
+import {Playground, usePlaygroundRootContext} from "../components/Playground";
 import styles from './playground.module.css';
 import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import {useLocation} from "react-router-dom";
@@ -12,6 +12,21 @@ import { SplitPane } from "@site/src/components/SplitPane";
 const PlaygroundLazyEditor = lazy(() =>
     import('../components/Playground').then(m => ({ default: m.Playground.Editor })),
 )
+
+const PlaygroundContent = () => {
+    const { scriptType } = usePlaygroundRootContext()
+
+    if (scriptType === 'config') {
+        return <Playground.ConfigMode />
+    }
+
+    return (
+        <SplitPane
+            first={<Suspense><PlaygroundLazyEditor /></Suspense>}
+            second={<Playground.Preview/>}
+        />
+    )
+}
 
 const PlaygroundRoute = () => {
     const location = useLocation();
@@ -51,10 +66,7 @@ const PlaygroundRoute = () => {
                     <div className={styles.playgroundContainer}>
                         <Playground.Root templateUrl={emptyTemplateUrl !== undefined ? null : templateUrl} {...props}>
                             <Playground.Toolbar/>
-                            <SplitPane
-                                first={<Suspense><PlaygroundLazyEditor /></Suspense>}
-                                second={<Playground.Preview/>}
-                            />
+                            <PlaygroundContent />
                         </Playground.Root>
                     </div>
                 )}

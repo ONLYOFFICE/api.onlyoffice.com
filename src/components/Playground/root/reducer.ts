@@ -21,11 +21,15 @@ export type PlaygroundAction =
     | { type: 'SET_DOCUMENT_TYPE'; payload: DocumentType }
     | { type: 'SET_SERVER_CONFIG'; payload: { documentServerUrl: string; documentServerSecret: string } }
 
+function isCodeScriptType(t: ScriptType): t is Exclude<ScriptType, 'config'> {
+    return t !== 'config'
+}
+
 export function playgroundReducer(state: PlaygroundState, action: PlaygroundAction): PlaygroundState {
     switch (action.type) {
         case 'SET_EDITOR_TYPE': {
             if (action.payload === state.editorType) return state
-            const scriptValue = action.replace
+            const scriptValue = action.replace && isCodeScriptType(state.scriptType)
                 ? getDefaultScript(action.payload, state.previewType, state.scriptType)
                 : state.scriptValue
             return {
@@ -37,13 +41,19 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
         }
         case 'SET_SCRIPT_TYPE': {
             if (action.payload === state.scriptType) return state
-            const scriptValue = state.isScriptModified
+            if (!isCodeScriptType(action.payload)) {
+                return {...state, scriptType: action.payload}
+            }
+            const scriptValue = state.isScriptModified && isCodeScriptType(state.scriptType)
                 ? state.scriptValue
                 : getDefaultScript(state.editorType, state.previewType, action.payload)
             return {...state, scriptType: action.payload, scriptValue}
         }
         case 'SET_PREVIEW_TYPE': {
             if (action.payload === state.previewType) return state
+            if (!isCodeScriptType(state.scriptType)) {
+                return {...state, previewType: action.payload}
+            }
             const scriptValue = state.isScriptModified
                 ? state.scriptValue
                 : getDefaultScript(state.editorType, action.payload, state.scriptType)
@@ -51,12 +61,14 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
         }
         case 'SET_SCRIPT_VALUE':
             return {...state, scriptValue: action.payload, isScriptModified: true}
-        case 'RESET_SCRIPT':
+        case 'RESET_SCRIPT': {
+            if (!isCodeScriptType(state.scriptType)) return state
             return {
                 ...state,
                 scriptValue: getDefaultScript(state.editorType, state.previewType, state.scriptType),
                 isScriptModified: false,
             }
+        }
         case 'SET_DOCUMENT_TYPE':
             return {...state, documentType: action.payload}
         case 'SET_SERVER_CONFIG':

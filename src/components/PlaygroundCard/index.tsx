@@ -113,12 +113,12 @@ function CardsRow({ cards, searchParams }: {
   );
 }
 
-function resolveEditorCards(cards: CardDef[], urlBase: string, paramName: string): ResolvedCard[] {
-  const imageSuffix = urlBase === 'config-playground' ? 'config-playground' : 'playground';
+function resolveEditorCards(cards: CardDef[], urlBase: string, paramName: string, imageSuffix?: string): ResolvedCard[] {
+  const suffix = imageSuffix ?? 'playground';
   return cards.map(({ type, name, description }) => ({
     type, name, description,
-    image: require(`@site/static/assets/images/editor/${type}-${imageSuffix}.png`).default + '#gh-light-mode-only',
-    imageDark: require(`@site/static/assets/images/editor/${type}-${imageSuffix}.dark.png`).default + '#gh-dark-mode-only',
+    image: require(`@site/static/assets/images/editor/${type}-${suffix}.png`).default + '#gh-light-mode-only',
+    imageDark: require(`@site/static/assets/images/editor/${type}-${suffix}.dark.png`).default + '#gh-dark-mode-only',
     url: `pathname:///${urlBase}/?${paramName}=${type}`,
   }));
 }
@@ -133,7 +133,7 @@ function resolveDocspaceCards(cards: CardDef[]): ResolvedCard[] {
 }
 
 export function ConfigPlaygroundCardsRow(): ReactNode {
-  return <CardsRow cards={resolveEditorCards(CONFIG_PLAYGROUNDS, 'config-playground', 'documentType')} />;
+  return <CardsRow cards={resolveEditorCards(CONFIG_PLAYGROUNDS, 'playground', 'editor', 'config-playground')} searchParams={[{ testType: 'config' }]} />;
 }
 
 export function DocSpacePlaygroundCardsRow(): ReactNode {

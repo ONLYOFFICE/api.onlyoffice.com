@@ -40,7 +40,7 @@ export const PlaygroundRoot = ({
     documentServerUrl: documentServerUrlProp,
     documentServerSecret: documentServerSecretProp,
     templateUrl,
-    documentType: documentTypeProp = 'blank',
+    documentType: documentTypeProp = 'sample',
     ...props
 }: PlaygroundRootProps) => {
     const { colorMode, setColorMode } = useColorMode()
@@ -55,7 +55,7 @@ export const PlaygroundRoot = ({
         editorType,
         previewType,
         scriptType,
-        scriptValue: initialScriptProp ?? getDefaultScript(editorType, previewType, scriptType),
+        scriptValue: initialScriptProp ?? (scriptType !== 'config' ? getDefaultScript(editorType, previewType, scriptType) : ''),
         isScriptModified: false,
         documentType: documentTypeProp,
         documentServerUrl: savedConfig?.url || defaultDocumentServerUrl,
