@@ -108,7 +108,7 @@ export function ConfigPlaygroundToolbar({
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Preview:</div>
+                <div className={styles.Label}>Mode:</div>
                 <Select.Root value={previewType} onValueChange={v => onPreviewTypeChange(v as PreviewType)}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
@@ -135,7 +135,7 @@ export function ConfigPlaygroundToolbar({
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Document:</div>
+                <div className={styles.Label}>File:</div>
                 <Select.Root value={documentType} onValueChange={v => onDocumentTypeChange(v as DocumentType)}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />

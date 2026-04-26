@@ -166,7 +166,7 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Preview:</div>
+                <div className={styles.Label}>Mode:</div>
                 <Select.Root value={previewType} onValueChange={handlePreviewTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
@@ -193,7 +193,7 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Document:</div>
+                <div className={styles.Label}>File:</div>
                 <Select.Root value={documentType} onValueChange={handleDocumentTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
