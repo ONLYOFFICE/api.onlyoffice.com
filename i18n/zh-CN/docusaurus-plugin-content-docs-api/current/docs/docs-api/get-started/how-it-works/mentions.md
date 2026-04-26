@@ -4,7 +4,7 @@ sidebar_position: -17
 
 # 提及用户
 
-以下图示和步骤解释了ONLYOFFICE文档中提及功能的工作原理。
+以下图示和步骤解释了ONLYOFFICE 文档中提及功能的工作原理。
 
 <img alt="Create mentions" src="/assets/images/editor/mentions-create.png" width="720px" />
 

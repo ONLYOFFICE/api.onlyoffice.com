@@ -4,7 +4,7 @@ sidebar_position: -5
 
 # 将表单嵌入网页
 
-ONLYOFFICE文档支持 PDF 表单——带有可填写字段（如文本输入框、复选框和下拉列表）的 PDF 文件。PDF 表单有两种使用模式：
+ONLYOFFICE 文档支持 PDF 表单——带有可填写字段（如文本输入框、复选框和下拉列表）的 PDF 文件。PDF 表单有两种使用模式：
 
 - **编辑** — 设计表单模板：添加、删除和配置表单字段。需要将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `true`。
 - **填写** — 在已完成的表单中输入数据。需要将 [`permissions.fillForms`](../../usage-api/config/document/permissions.md#fillforms) 设置为 `true`，并将 [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) 设置为 `false`。
@@ -17,7 +17,7 @@ PDF 表单从 7.0 版本起可用。从 8.0 版本开始，OFORM 格式已被弃
 当您的文档服务器启用了 JWT 验证（默认配置）时，每个 `config` 必须使用匹配的 [`token`](./security.md) 进行签名。请使用您的文档服务器的 JWT 密钥进行签名。有关设置说明和代码示例，请参阅[签名](../../additional-api/signature/signature.md)部分。
 :::
 
-在以下 HTML 示例中，请将 `documentserver` 替换为安装 ONLYOFFICE文档的服务器地址。
+在以下 HTML 示例中，请将 `documentserver` 替换为安装 ONLYOFFICE 文档的服务器地址。
 
 ## 编辑表单
 

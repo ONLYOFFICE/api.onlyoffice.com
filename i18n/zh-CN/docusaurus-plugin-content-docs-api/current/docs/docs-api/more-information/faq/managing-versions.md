@@ -138,4 +138,4 @@ const data = {
 
 ## 为什么强制保存文档后，文档历史记录中未显示新版本？ {#why-is-a-new-version-not-shown-in-the-document-history-after-i-forcefully-save-a-document}
 
-ONLYOFFICE文档突出显示从当前文档会话开始时所做的更改，而不是从文档版本开始时所作的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。因此您无法在文档历史记录中看到使用[强制保存选项](../../get-started/how-it-works/saving-file.md#force-saving)创建的文档版本。
+ONLYOFFICE 文档突出显示从当前文档会话开始时所做的更改，而不是从文档版本开始时所作的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。因此您无法在文档历史记录中看到使用[强制保存选项](../../get-started/how-it-works/saving-file.md#force-saving)创建的文档版本。

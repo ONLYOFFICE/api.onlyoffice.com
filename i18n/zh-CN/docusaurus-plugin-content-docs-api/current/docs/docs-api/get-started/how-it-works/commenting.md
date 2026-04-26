@@ -4,7 +4,7 @@ sidebar_position: -10
 
 # 评论
 
-ONLYOFFICE文档支持内嵌评论——用户可以对文档的特定部分添加评论、进行回复，以及编辑或删除评论。所有评论都会保存在文档中，并对打开该文档的其他用户可见。
+ONLYOFFICE 文档支持内嵌评论——用户可以对文档的特定部分添加评论、进行回复，以及编辑或删除评论。所有评论都会保存在文档中，并对打开该文档的其他用户可见。
 
 ![评论](/assets/images/editor/comment.png#gh-light-mode-only)![评论](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 

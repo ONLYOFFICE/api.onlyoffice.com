@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Strapi 集成
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-strapi) 能让用户借助ONLYOFFICE文档，在[Strapi](https://strapi.io/)中编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-strapi) 能让用户借助ONLYOFFICE 文档，在[Strapi](https://strapi.io/)中编辑办公文档。
 
 ## 功能特性
 
@@ -13,15 +13,15 @@ sidebar_custom_props:
 - 支持查看的文档格式如下：CSV、DJVU、DOC、DOCM、DOCX、DOT、DOTM、DOTX、EPUB、FB2、FODP、FODS、FODT、HTM、HTML、MHT、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PDF、POT、POTM、POTX、PPS、PPSM、PPSX、PPT、PPTM、PPTX、RTF、TXT、XLS、XLSM、XLSX、XLT、XLTM、XLTX、XML、XPS。
 - 该插件会在文档库中为办公文档添加一个新的**在ONLYOFFICE中编辑**菜单项，支持多个用户实时协作，并将更改保存回Strapi。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要部署一个ONLYOFFICE文档（文档服务器）实例，确保Strapi和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Strapi发送POST请求。
+您需要部署一个ONLYOFFICE 文档（文档服务器）实例，确保Strapi和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Strapi发送POST请求。
 
-安装ONLYOFFICE文档实例的最简单方法是使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)。
+安装ONLYOFFICE 文档实例的最简单方法是使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)。
 
 ## 安装Strapi ONLYOFFICE集成插件
 
-要在Strapi中使用ONLYOFFICE文档，请按以下步骤操作：
+要在Strapi中使用ONLYOFFICE 文档，请按以下步骤操作：
 
 1. 修改Strapi中间件文件：*strapi/config/middlewares.js*。
 
@@ -66,8 +66,8 @@ sidebar_custom_props:
 
 您可以通过Strapi的**控制面板->设置->全局设置->ONLYOFFICE**来配置ONLYOFFICE应用。在设置页面，输入：
 
-- **文档服务器地址**。已安装的ONLYOFFICE文档的URL。
-- **文档服务器JWT密钥**。从7.2版本起，JWT默认开启，并自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障系统安全和数据完整。在Strapi设置页面指定自己的密钥，在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，设置相同密钥并启用验证。
+- **文档服务器地址**。已安装的ONLYOFFICE 文档的URL。
+- **文档服务器JWT密钥**。从7.2版本起，JWT默认开启，并自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障系统安全和数据完整。在Strapi设置页面指定自己的密钥，在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，设置相同密钥并启用验证。
 
 ## 使用Strapi ONLYOFFICE集成插件
 

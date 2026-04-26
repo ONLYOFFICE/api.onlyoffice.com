@@ -4,7 +4,7 @@ sidebar_position: -20
 
 # 协同编辑
 
-以下图示和步骤解释了在ONLYOFFICE文档中如何协同编辑文档。
+以下图示和步骤解释了在ONLYOFFICE 文档中如何协同编辑文档。
 
 ![Co-editing scheme](/assets/images/editor/coedit.jpg)
 

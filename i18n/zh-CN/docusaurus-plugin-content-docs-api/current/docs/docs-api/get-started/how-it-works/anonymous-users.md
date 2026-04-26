@@ -4,7 +4,7 @@ sidebar_position: -11
 
 # 匿名用户
 
-以下参考图和步骤解释了在ONLYOFFICE文档中为匿名用户设置名称的过程。
+以下参考图和步骤解释了在ONLYOFFICE 文档中为匿名用户设置名称的过程。
 
 <img alt="Anonymous" src="/assets/images/editor/anonymous-user.png" width="720px" />
 

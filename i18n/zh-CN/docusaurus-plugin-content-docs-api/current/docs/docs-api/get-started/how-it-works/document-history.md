@@ -4,9 +4,9 @@ sidebar_position: -19
 
 # 文档历史记录
 
-**文档编辑器**可以显示文本文档、电子表格、演示文稿和PDF的版本历史记录。版本数据本身由**文档存储服务**存储——每次编辑会话结束后，ONLYOFFICE文档会返回变更信息，集成商将其与文档一起保存。然后，**文档编辑器**在侧面板中将此历史记录显示为版本列表，用户可以选择任何版本进行预览。
+**文档编辑器**可以显示文本文档、电子表格、演示文稿和PDF的版本历史记录。版本数据本身由**文档存储服务**存储——每次编辑会话结束后，ONLYOFFICE 文档会返回变更信息，集成商将其与文档一起保存。然后，**文档编辑器**在侧面板中将此历史记录显示为版本列表，用户可以选择任何版本进行预览。
 
-以下图表和步骤解释了在ONLYOFFICE文档中查看文档历史记录的工作方式。
+以下图表和步骤解释了在ONLYOFFICE 文档中查看文档历史记录的工作方式。
 
 ![文档历史](/assets/images/editor/viewing-history.svg)
 
@@ -159,7 +159,7 @@ sidebar_position: -19
 
 ## 突出显示更改 {#highlighting-changes}
 
-如果文档版本是使用**文档编辑器**创建的，则在查看历史记录时可以突出显示该版本中的各个更改。要启用此功能，**文档存储服务**必须保存ONLYOFFICE文档在[保存](./saving-file.md)每次编辑会话时返回的额外数据。
+如果文档版本是使用**文档编辑器**创建的，则在查看历史记录时可以突出显示该版本中的各个更改。要启用此功能，**文档存储服务**必须保存ONLYOFFICE 文档在[保存](./saving-file.md)每次编辑会话时返回的额外数据。
 
 :::note
 当服务器版本更新时，**文档编辑器**不会使用`changes`数据来突出显示历史记录中的更改。它只会在`changesurl`参数中返回已更改的文档。
@@ -200,7 +200,7 @@ sidebar_position: -19
   其中`changes`和`serverVersion`是保存文档后从[历史记录对象](../../usage-api/callback-handler.md#history)返回的值。
 
   :::note
-  ONLYOFFICE文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
+  ONLYOFFICE 文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
   :::
 
 - [changesurl](../../usage-api/callback-handler.md#changesurl)——包含编辑数据的zip文件的绝对URL，用于突出显示特定版本的更改。保存此文件，并在调用[setHistoryData](../../usage-api/methods.md#sethistorydata)时将其地址作为`changesUrl`参数传递。还必须在`previous.url`中包含前一个文档版本的链接。
@@ -224,7 +224,7 @@ sidebar_position: -19
   ```
 
   :::warning
-  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了ONLYOFFICE文档的服务器名称。为了正常运行，必须允许跨源HTTP请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些可以在云控制台的**实例**部分找到。
+  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了ONLYOFFICE 文档的服务器名称。为了正常运行，必须允许跨源HTTP请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些可以在云控制台的**实例**部分找到。
   :::
 
   ![变更目录](/assets/images/editor/changesurl.png)

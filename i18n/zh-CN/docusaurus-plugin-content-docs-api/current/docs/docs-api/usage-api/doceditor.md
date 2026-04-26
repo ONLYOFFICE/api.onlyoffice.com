@@ -4,17 +4,17 @@ sidebar_position: -6
 
 # DocEditor
 
-`DocsAPI.DocEditor` 是 ONLYOFFICE文档 API 的主类。它是创建、配置和管理嵌入网页的文档编辑器的入口点。
+`DocsAPI.DocEditor` 是 ONLYOFFICE 文档 API 的主类。它是创建、配置和管理嵌入网页的文档编辑器的入口点。
 
 ## DocsAPI
 
-`DocsAPI` 是由 ONLYOFFICE文档 [API 脚本](../get-started/installation/self-hosted.md)提供的全局命名空间：
+`DocsAPI` 是由 ONLYOFFICE 文档 [API 脚本](../get-started/installation/self-hosted.md)提供的全局命名空间：
 
 ```html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
 ```
 
-其中 `documentserver` 是安装了 ONLYOFFICE文档 的服务器名称。
+其中 `documentserver` 是安装了 ONLYOFFICE 文档 的服务器名称。
 
 脚本加载后，`DocsAPI` 对象将在 `window` 上可用，并公开 `DocEditor` 构造函数。
 
@@ -89,7 +89,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-将 `example.com` 替换为您的**文档存储服务**的主机地址。[`callbackUrl`](./config/editor/editor.md#callbackurl) 是您服务器上的端点，ONLYOFFICE文档 会向该端点发送文档状态更新和已保存的文件。请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分，了解有关 ONLYOFFICE文档 服务客户端-服务器交互的更多信息。
+将 `example.com` 替换为您的**文档存储服务**的主机地址。[`callbackUrl`](./config/editor/editor.md#callbackurl) 是您服务器上的端点，ONLYOFFICE 文档 会向该端点发送文档状态更新和已保存的文件。请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分，了解有关 ONLYOFFICE 文档 服务客户端-服务器交互的更多信息。
 
 有关包含所有可用部分和参数的完整配置结构，请参阅[配置概述](./advanced-parameters.md)。
 

@@ -60,5 +60,5 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 :::note
 请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**.
 
-此类是一项附加功能，默认情况下不包含在ONLYOFFICE文档开发者版中，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
+此类是一项附加功能，默认情况下不包含在ONLYOFFICE 文档开发者版中，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
 :::
