@@ -8,7 +8,7 @@ The config base section allows you to change the platform type used, document di
 
 ## documentType
 
-`Type: string`
+**type:** `string`
 
 Defines the document type to be opened:
 
@@ -26,15 +26,15 @@ Defines the document type to be opened:
 
 ## height
 
-`Type: string`
+**type:** `string` | **default:** `"100%"`
 
-Defines the document height (**100%** by default) in the browser window.
+Defines the document height in the browser window.
 
-**Example**: `"100%"`
+**Example**: `"550px"`
 
 ## token
 
-`Type: string`
+**type:** `string`
 
 Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/browser.md).
 
@@ -42,7 +42,7 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 ## type
 
-`Type: string`
+**type:** `string` | **default:** `"desktop"`
 
 Defines the platform type used to access the document. Can be:
 
@@ -50,26 +50,24 @@ Defines the platform type used to access the document. Can be:
 - **mobile** - optimized to access the document from a tablet or a smartphone;
 - **embedded** - specifically formed to be easily embedded into a web page.
 
-The default value is **desktop**.
-
-**Example**: `"desktop"`
+**Example**: `"mobile"`
 
 ## width
 
-`Type: string`
+**type:** `string` | **default:** `"100%"`
 
-Defines the document width (**100%** by default) in the browser window.
+Defines the document width in the browser window.
 
-**Example**: `"100%"`
+**Example**: `"800px"`
 
 ## Example
 
 ``` ts
 const config = {
   documentType: "word",
-  type: "desktop",
+  type: "mobile",
   height: "550px",
-  width: "100%",
+  width: "800px",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
 };
 
