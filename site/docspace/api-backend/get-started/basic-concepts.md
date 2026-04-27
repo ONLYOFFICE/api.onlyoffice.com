@@ -18,7 +18,7 @@ The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/
 
 Before getting started with ONLYOFFICE DocSpace, here are some terms to get familiar with: 
 
-- **Portal:** A secure, web-based gateway that provides a gateway for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources. 
+- **Portal:** A secure, web-based gateway that provides an interface for you to access, interact and use ONLYOFFICE DocSpace. This portal enables you to create and manage rooms, users, files, API keys, AI agents, and other DocSpace resources. 
 - **Rooms:** Rooms offer a space for users to create, edit, and work on files independently or collaboratively. DocSpace offers [different types of rooms](https://api.onlyoffice.com/docspace/api-backend/usage-api/create-room/) (Collaboration, Public, Custom, Form filling, Virtual data, and AI rooms) based on your specific needs.
 - **Users:** People with access to your DocSpace portal. Users are split between the owner, and other [members with different access levels](https://helpcenter.onlyoffice.com/docspace/administration/docspace-inviting-users.aspx) on who can access the documents and files in DocSpace. Other user types include the admin and guests.
 
@@ -41,7 +41,7 @@ ONLYOFFICE offers these ways to access and use DocSpace:
 
 Authenticate your account using API keys, OAuth, or any of the other [authentication methods](authentication/authentication.md) available on ONLYOFFICE DocSpace. This quickstart uses API keys. Follow these steps on [how to create and use API keys](./authentication/api-keys.md#how-to-create-api-keys) for your request.
 
-### Step 3: Create a Public room
+### Step 3: Create a room
 
 This sample request creates a **Public Room** titled **Graduation Planning**.
 
