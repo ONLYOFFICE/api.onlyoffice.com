@@ -69,7 +69,6 @@ export function PlaygroundConfigMode() {
                 <ConfigEditor
                     defaultConfig={defaultConfig}
                     onApply={handleApply}
-                    excludePaths={['events', 'document.options']}
                 />
             }
             second={

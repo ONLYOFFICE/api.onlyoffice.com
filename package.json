@@ -5,8 +5,9 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "generate-samples": "node .github/scripts/generate-samples-data.js",
-    "start": "npm run generate-samples && docusaurus start",
-    "build": "npm run generate-samples && docusaurus build",
+    "generate-schema": "npx ts-json-schema-generator --path scripts/config.d.ts --type Config --tsconfig tsconfig.json -o src/data/config-schema.json && node .github/scripts/postprocess-schema.js src/data/config-schema.json",
+    "start": "npm run generate-samples && npm run generate-schema && docusaurus start",
+    "build": "npm run generate-samples && npm run generate-schema && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
