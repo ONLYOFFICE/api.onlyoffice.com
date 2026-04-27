@@ -14,7 +14,7 @@ Defines the type of the file for the source viewed or edited document. Must be l
 
 `Type: true`
 
-Defines if the PDF file is a PDF form or a standard PDF file. The default value is **true**.
+Defines if the PDF file is a PDF form or a standard PDF file.
 
 If this parameter is not specified, then the [internal checking of PDF files](../../../get-started/how-it-works/checking-pdf-forms.md) is started.
 
@@ -86,15 +86,15 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 ``` ts
 const config = {
   document: {
-    fileType: "xlsx",
+    fileType: "pdf",
     isForm: true,
     key: "Khirz6zTPdfd7",
     referenceData: {
       fileKey: "BCFA2CED",
       instanceId: "https://example.com",
     },
-    title: "Example Title",
-    url: "https://example.com/url-to-example-document.xlsx",
+    title: "Example Title.pdf",
+    url: "https://example.com/url-to-example-document.pdf",
   },
 };
 

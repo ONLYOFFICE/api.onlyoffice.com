@@ -14,7 +14,7 @@
 
 `类型：true`
 
-定义该 PDF 文件是 PDF 表单还是标准 PDF 文件。默认值为 **true**。
+定义该 PDF 文件是 PDF 表单还是标准 PDF 文件。
 
 如果未指定此参数，则会启动[对 PDF 文件的内部检查](../../../get-started/how-it-works/checking-pdf-forms.md)。
 
@@ -86,15 +86,15 @@
 ``` ts
 const config = {
   document: {
-    fileType: "xlsx",
+    fileType: "pdf",
     isForm: true,
     key: "Khirz6zTPdfd7",
     referenceData: {
       fileKey: "BCFA2CED",
       instanceId: "https://example.com",
     },
-    title: "Example Title",
-    url: "https://example.com/url-to-example-document.xlsx",
+    title: "Example Title.pdf",
+    url: "https://example.com/url-to-example-document.pdf",
   },
 };
 
