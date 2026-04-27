@@ -453,7 +453,7 @@ Where the **example.com** is the name of the server where **document manager** a
 
 The function called when the user is trying to insert an image by clicking the *Image from Storage* button.
 
-The type of image insertion is specified in parameter `data.c`.
+The type of image insertion is specified in the `data.c` parameter.
 
 To insert an image into the file you must call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters. If the method is not declared the *Image from Storage* button will not be displayed.
 
@@ -746,8 +746,6 @@ Where the `changes` is the `changes` from [the history object](../callback-handl
 
 Where the `serverVersion` is the `serverVersion` from [the history object](../callback-handler.md#history) returned after saving the document.
 
-Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
-
 ## onRequestSaveAs
 
 The function called when the user is trying to save file by clicking *Save Copy as...* button. The title of the document, its type and the absolute URL to the document to be downloaded are sent in the `data` parameter. If the method is not declared the *Save Copy as...* button will not be displayed.
@@ -778,7 +776,7 @@ The function called when the user is trying to select a document for comparing, 
 
 The type of document selection is specified in the `data.c` parameter.
 
-To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method.
+To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 

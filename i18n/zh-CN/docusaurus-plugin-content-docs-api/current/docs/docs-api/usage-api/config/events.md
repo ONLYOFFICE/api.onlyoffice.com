@@ -453,7 +453,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。
 
-文档选择的类型在 `data.c` 参数中指定。
+图像插入的类型在 `data.c` 参数中指定。
 
 要将图像插入文件，您必须使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则不会显示*从存储中获取图像*按钮。
 
@@ -746,8 +746,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 其中 `serverVersion` 是保存文档后返回的[历史对象](../callback-handler.md#history)中的 `serverVersion`。
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
-
 ## onRequestSaveAs
 
 当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 `data` 参数中发送。如果未声明该方法，将不会显示*另存为...*按钮。
@@ -778,7 +776,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 文档选择类型在 `data.c` 参数中指定。
 
-要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。
+要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
