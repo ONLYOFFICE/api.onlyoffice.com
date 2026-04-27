@@ -55,7 +55,7 @@ For active team projects, a Collaboration Room is typically the right choice.
 
 **Enter this prompt into your MCP client:**
 
-```
+```text
 What room types are available in DocSpace?
 ```
 
@@ -67,7 +67,7 @@ Now that you know which room type you want, create the room.
 
 **Try this prompt:**
 
-```
+```text
 Create a new collaboration room called "Meridian Corp — Website Redesign".
 ```
 
@@ -75,7 +75,7 @@ The AI will call `create_room` and return the new room's details including its I
 
 **Confirm the room was created by asking**:
 
-```
+```text
 Get the details of the room named "Meridian Corp — Website Redesign".
 ```
 
@@ -87,7 +87,7 @@ A well-organized folder hierarchy makes it easy for team members to quickly find
 
 **Try this prompt:**
 
-```
+```text
 Create the following folders inside the "Meridian Corp — Website Redesign" room:
 - "01 — Briefs & Requirements"
 - "02 — Design Assets"
@@ -97,7 +97,7 @@ Create the following folders inside the "Meridian Corp — Website Redesign" roo
 
 The AI will call `create_folder` multiple times in sequence. Once done, verify the structure:
 
-```
+```text
 Show me the contents of the "Meridian Corp — Website Redesign" room.
 ```
 
@@ -116,7 +116,7 @@ Before you can invite anyone, you need to know who's available in your DocSpace 
 
 **Try this prompt:**
 
-```
+```text
 List everyone in the DocSpace portal.
 ```
 
@@ -132,7 +132,7 @@ Before inviting people, check what access levels are available so you can assign
 
 **Try this prompt:**
 
-```
+```text
 What access levels can I assign when inviting users to a room?
 ```
 
@@ -149,7 +149,7 @@ Now send the invitations, with permissions attached.
 
 **Try this prompt:**
 
-```
+```text
 Invite the following people to the "Meridian Corp — Website Redesign" room:
 - Alex Chen as an Editor
 - Priya Nair as an Editor
@@ -160,7 +160,7 @@ The AI calls `set_room_security` with the appropriate access levels for each use
 
 **Verify the invitations worked:**
 
-```
+```text
 Who currently has access to the "Meridian Corp — Website Redesign" room and what are their roles?
 ```
 

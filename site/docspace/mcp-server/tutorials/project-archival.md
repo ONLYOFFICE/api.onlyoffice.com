@@ -37,7 +37,7 @@ Before deleting or changing anything, it's important to get a complete picture o
 
 **Try this prompt:**
 
-```
+```text
 Show me everyone who currently has access to the "Meridian Corp — Website Redesign" room, including their roles and email addresses if available.
 ```
 
@@ -59,7 +59,7 @@ Revoke access for all external parties.
 
 **Try this prompt:**
 
-```
+```text
 Remove Sam Rivera, Yuki Tanaka, and Aisha Okafor from the "Meridian Corp — Website Redesign" room as they've been reassigned to other projects. Marcus Webb still needs access during the archival process.
 ```
 
@@ -67,7 +67,7 @@ The AI calls `set_room_security` with removal instructions for the specified use
 
 **Verify access was revoked:**
 
-```
+```text
 Show me the updated access list for "Meridian Corp — Website Redesign".
 ```
 
@@ -79,7 +79,7 @@ Now inspect the contents of the room to decide what stays and what should be del
 
 **Try this prompt:**
 
-```
+```text
 Show me the complete contents of all folders in the "Meridian Corp — Website Redesign" room.
 ```
 
@@ -96,7 +96,7 @@ Inspect the Drafts folder to confirm what can safely be deleted.
 
 **Try this prompt:**
 
-```
+```text
 List all files in the "03 — Drafts & Work in Progress" folder with their details.
 ```
 
@@ -104,7 +104,7 @@ For each file, check the details (creation date, last modified, file name) to co
 
 **Try this prompt for any file to confirm relevance:**
 
-```
+```text
 Download and read the contents of "old-brief-draft.docx". Is there anything in it not covered by the final version in the deliverables folder?
 ```
 
@@ -116,19 +116,19 @@ Once you're confident about what to delete:
 
 **Try this prompt:**
 
-```
+```text
 Delete all files in the "03 — Drafts & Work in Progress" folder.
 ```
 
 If you want to be more selective:
 
-```
+```text
 Delete "old-brief-draft.docx" and "wireframe-sketch-v1.png" from the "03 — Drafts & Work in Progress" folder.
 ```
 
 After deleting the files, you can also remove the now-empty folder:
 
-```
+```text
 Delete the "03 — Drafts & Work in Progress" folder.
 ```
 
@@ -141,7 +141,7 @@ Before archiving, perform a final check to confirm the room is in the state you 
 
 **Try this prompt:**
 
-```
+```text
 Give me a final summary of the "Meridian Corp — Website Redesign" room — who has access, what folders exist, and what's in each folder.
 ```
 
@@ -158,7 +158,7 @@ Now close the room from active use.
 
 **Try this prompt:**
 
-```
+```text
 Archive the "Meridian Corp — Website Redesign" room.
 ```
 

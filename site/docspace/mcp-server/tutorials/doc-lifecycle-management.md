@@ -36,7 +36,7 @@ You have the first draft of the product marketing copy. You'll upload it to the 
 
 **Try this prompt:**
 
-```
+```text
 Upload the file "launch-brief-v1.docx" to the "03 — Drafts & Work in Progress" folder in the "Meridian Corp — Website Redesign" room.
 ```
 
@@ -44,7 +44,7 @@ Upload the file "launch-brief-v1.docx" to the "03 — Drafts & Work in Progress"
 
 Once uploaded, verify it landed in the right place:
 
-```
+```text
 Show me the contents of the "03 — Drafts & Work in Progress" folder.
 ```
 
@@ -54,7 +54,7 @@ Confirm the file's details — its ID, creation timestamp, file size, and type.
 
 **Try this prompt:**
 
-```
+```text
 Get the file information for "launch-brief-v1.docx".
 ```
 
@@ -68,7 +68,7 @@ One of the most powerful capabilities of the DocSpace MCP server is allowing an 
 
 **Try this prompt:**
 
-```
+```text
 Download and read the contents of "launch-brief-v1.docx". Summarize the key sections and note any ideas for improvement.
 ```
 
@@ -86,13 +86,13 @@ After incorporating feedback, you have a second draft ready. Upload it alongside
 
 **Try this prompt:**
 
-```
+```text
 Upload "launch-brief-v2.docx" to the "03 — Drafts & Work in Progress" folder.
 ```
 
 Alternatively, if you want to update the existing file record rather than add a new one:
 
-```
+```text
 Update the file "launch-brief-v1.docx" with the revised version "launch-brief-v2.docx".
 ```
 
@@ -106,7 +106,7 @@ This uses `update_file` to replace the file content while preserving the same fi
 
 With both versions available, compare them:
 
-```
+```text
 Download and compare "launch-brief-v1.docx" and "launch-brief-v2.docx". What changed between the two versions?
 ```
 
@@ -118,7 +118,7 @@ The brief has been approved by the client. Move it from the Drafts folder to the
 
 **Try this prompt:**
 
-```
+```text
 Move "launch-brief-v2.docx" from "03 — Drafts & Work in Progress" to "04 — Final Deliverables" in the "Meridian Corp — Website Redesign" room.
 ```
 
@@ -126,7 +126,7 @@ The AI calls `move_batch_items` with the file ID and destination folder ID.
 
 **If you want to keep a copy in Drafts** as a reference:
 
-```
+```text
 Copy "launch-brief-v2.docx" from "03 — Drafts & Work in Progress" to "04 — Final Deliverables".
 ```
 
@@ -142,7 +142,7 @@ Now that the approved version is in Final Deliverables, delete the first draft t
 
 **Try this prompt:**
 
-```
+```text
 Delete "launch-brief-v1.docx" from the "03 — Drafts & Work in Progress" folder.
 ```
 
@@ -150,7 +150,7 @@ The AI calls `delete_file`. Before proceeding, the AI might ask you to confirm s
 
 **Final verification:**
 
-```
+```text
 Show me the contents of both the "03 — Drafts & Work in Progress" and "04 — Final Deliverables" folders.
 ```
 

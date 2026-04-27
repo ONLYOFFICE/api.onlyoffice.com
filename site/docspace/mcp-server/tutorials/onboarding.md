@@ -35,7 +35,7 @@ Every AI MCP client sends a confirmation message to deny or confirm every action
 
 Before inviting anyone, get a clear picture of what rooms currently exist in your DocSpace.
 
-```
+```text
 Show me the Rooms folder — I want to see all existing rooms.
 ```
 
@@ -47,7 +47,7 @@ The AI calls `get_rooms_folder` and returns the top-level rooms directory. You s
 
 If the list is long, you can ask for details on specific rooms:
 
-```
+```text
 Get the details of the "Engineering — Core Platform" room.
 ```
 
@@ -57,7 +57,7 @@ Before adding new team members, it's good practice to audit who already has acce
 
 **Try this prompt to know who has access for each room:**
 
-```
+```text
 Who has access to the "insert room name" room right now?
 ```
 
@@ -65,7 +65,7 @@ Each call to `get_room_security_info` returns the full member list with roles. N
 
 If you spot a former contractor/employee still listed in any of these rooms, you can remove them in this step:
 
-```
+```text
 Remove user "freelancer@example.com" from the "Engineering — Core Platform" room.
 ```
 
@@ -75,7 +75,7 @@ Find the new employees in your DocSpace portal.
 
 **Try this prompt:**
 
-```
+```text
 List all people in the DocSpace portal and tell me which ones were recently added.
 ```
 
@@ -109,19 +109,19 @@ Now send all the invitations. You can do this room by room:
 
 **Prompt for Engineering room:**
 
-```
+```text
 Invite Sam Rivera to "Engineering — Core Platform" room as an Editor.
 ```
 
 **Prompt for Content room:**
 
-```
+```text
 Invite Yuki Tanaka and Aisha Okafor to the "Content & Marketing Hub" room as Editors. Also invite Marcus Webb as a Viewer.
 ```
 
 **Prompt for Client Success room:**
 
-```
+```text
 Invite Marcus Webb to the "Client Success — Shared Resources" room as an Editor.
 ```
 
@@ -132,7 +132,7 @@ Each call uses `set_room_security` under the hood. The AI resolves the usernames
 
 Run a final audit on all three rooms to confirm everything is correct with this prompt:
 
-```
+```text
 Summarize who has access to each of these rooms and their roles: "Engineering — Core Platform", "Content & Marketing Hub", and "Client Success — Shared Resources".
 ```
 
@@ -146,6 +146,6 @@ The AI will call `get_room_security_info` for each room and return a consolidate
 
 If you find any issues, correct them immediately. For example, this prompt changes the access level for Marcus Webb:
 
-```
+```text
 Change Marcus Webb's role in "Content & Marketing Hub" from Editor to Viewer.
 ```
