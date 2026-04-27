@@ -60,6 +60,24 @@ Defines the document width in the browser window.
 
 **Example**: `"800px"`
 
+## document
+
+**type:** `object`
+
+The document section. See the [document](document/document.md) page for available parameters.
+
+## editorConfig
+
+**type:** `object`
+
+The editor config section. See the [editorConfig](editor/editor.md) page for available parameters.
+
+## events
+
+**type:** `object`
+
+The events section. See the [events](events.md) page for available parameters.
+
 ## Example
 
 ``` ts
@@ -69,6 +87,15 @@ const config = {
   height: "550px",
   width: "800px",
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU",
+  document: {
+    // ...
+  },
+  editorConfig: {
+    // ...
+  },
+  events: {
+    // ...
+  },
 };
 
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
