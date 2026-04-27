@@ -3,7 +3,7 @@ import { withJsonFormsControlProps, JsonFormsDispatch, useJsonForms } from '@jso
 import { memo } from 'react'
 import { Section } from '../utils/Section'
 import { depthOfPath, titleFromKey } from './depth'
-import { sortObjectKeys } from '../utils/fieldSort'
+import { sortObjectKeys, isComplexType } from '../utils/fieldSort'
 
 function isRenderable(schema: JsonSchema): boolean {
     return !!(
@@ -83,11 +83,25 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
     const lastKey = path ? path.split('.').pop() || '' : ''
     const title = label || s.title || titleFromKey(lastKey) || 'Root'
 
-    const body = children.map((child: ResolvedChild) => (
+    const renderChild = (child: ResolvedChild) => (
         <ChildDispatch key={child.childPath} {...child} renderers={renderers} cells={cells} />
-    ))
+    )
 
-    if (!path) return <div>{body}</div>
+    if (!path) {
+        const configFields = children.filter((c) => !isComplexType(c.childSchema))
+        const sectionFields = children.filter((c) => isComplexType(c.childSchema))
+
+        return (
+            <div>
+                {configFields.length > 0 && (
+                    <Section title="Config" depth={1} defaultOpen>
+                        {configFields.map(renderChild)}
+                    </Section>
+                )}
+                {sectionFields.map(renderChild)}
+            </div>
+        )
+    }
 
     return (
         <Section
@@ -96,7 +110,7 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
             description={(s as any)['x-shortDescription']}
             defaultOpen={depth <= 1}
         >
-            {body}
+            {children.map(renderChild)}
         </Section>
     )
 }, (prev, next) => prev.path === next.path)

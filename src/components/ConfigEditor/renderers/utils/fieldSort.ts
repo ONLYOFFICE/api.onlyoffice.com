@@ -24,7 +24,7 @@ function isPrimitiveType(schema: JsonSchema): boolean {
     )
 }
 
-function isComplexType(schema: JsonSchema): boolean {
+export function isComplexType(schema: JsonSchema): boolean {
     return (
         schema.type === 'object' ||
         schema.type === 'array' ||
