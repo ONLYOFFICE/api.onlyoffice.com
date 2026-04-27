@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Quick Start
@@ -71,9 +71,11 @@ Below is a basic working example you can save and serve to verify your setup:
 
 This example uses the `initManager` mode. Configuration options may change depending on the type of embedding mode. For a full breakdown, see [Comparison of embedding modes]().
 
->**Note:**
->
-> If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5000`) in your DocSpace settings under the **JavaScript SDK** tab.
+:::tip
+
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5000`) in your DocSpace settings under the **JavaScript SDK** tab.
+
+:::
 
 ## Using the npm package
 
@@ -116,7 +118,7 @@ Next, replace the contents of `src/App.jsx` with the following:
 
 ```jsx
 import { useEffect } from "react";
-import  SDK  from "@onlyoffice/docspace-sdk-js";
+import SDK from "@onlyoffice/docspace-sdk-js";
 
 export default function App() {
   useEffect(() => {
@@ -130,12 +132,7 @@ export default function App() {
     });
   }, []);
 
-return (
-  <div
-    id="ds-frame"
-    style={{ width: "100%", height: "100%" }}
-  />
-);
+  return <div id="ds-frame" style={{ width: "100%", height: "100%" }} />;
 }
 ```
 
