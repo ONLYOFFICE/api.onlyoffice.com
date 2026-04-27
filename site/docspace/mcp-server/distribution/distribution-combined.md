@@ -40,26 +40,31 @@ This method is ideal for developers who want to customize or contribute to the p
 <TabItem value="docker-image" label="Docker image">
 
 1. Clone the repository from the ONLYOFFICE Git server:
+
 ```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
+
 ```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
+
 ```sh
    cd docspace-mcp
 ```
 
 3. Build the Docker image:
+
 ```sh
    docker build --tag onlyoffice/docspace-mcp .
 ```
 
 4. Run the Docker container:
+
 ```sh
    docker run --interactive --rm onlyoffice/docspace-mcp
 ```
@@ -68,26 +73,31 @@ This method is ideal for developers who want to customize or contribute to the p
 <TabItem value="nodejs-app" label="Node.js app">
 
 1. Clone the repository from the ONLYOFFICE Git server:
+
 ```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
+
 ```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
+
 ```sh
    cd docspace-mcp
 ```
 
 3. Build the Node.js application:
+
 ```sh
    pnpm build-app
 ```
 
 4. Run the Node.js application:
+
 ```sh
    ./bin/onlyoffice-docspace-mcp
 ```
@@ -96,21 +106,25 @@ This method is ideal for developers who want to customize or contribute to the p
 <TabItem value="mcp-bundle" label="MCP bundle">
 
 1. Clone the repository from the ONLYOFFICE Git server:
+
 ```sh
    git clone git@git.onlyoffice.com:ONLYOFFICE/docspace-mcp.git
 ```
 
    Alternatively, clone from the GitHub mirror:
+
 ```sh
    git clone git@github.com:ONLYOFFICE/docspace-mcp.git
 ```
 
 2. Navigate to the project directory:
+
 ```sh
    cd docspace-mcp
 ```
 
 3. Build the MCP bundle:
+
 ```sh
    pnpm build-mcpb
 ```
