@@ -202,7 +202,7 @@ Passphrase for the PKCS#12 keystore file
 
 ### FileConverter.converter.inputLimits
 
-**type:** `array of objects`
+**type:** `object[]`
 
 Defines limits for input files.
 

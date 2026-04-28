@@ -14,7 +14,7 @@ Defines the IP addresses that are allowed for direct requests.
 
 ### externalRequest.directIfIn.allowList
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines a list of the IP addresses that are trusted for the direct requests.
 

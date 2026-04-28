@@ -66,7 +66,7 @@ Defines the OpenPGP encryption settings.
 
 #### openpgpjs.encrypt.passwords
 
-**type:** `array of strings` | **default:** `["verysecretstring"]`
+**type:** `string[]` | **default:** `["verysecretstring"]`
 
 Defines a password which is used for the OpenPGP encryption.
 
@@ -78,7 +78,7 @@ Defines the OpenPGP decryption settings.
 
 #### openpgpjs.decrypt.passwords
 
-**type:** `array of strings` | **default:** `["verysecretstring"]`
+**type:** `string[]` | **default:** `["verysecretstring"]`
 
 Defines a password which is used for the OpenPGP decryption.
 
@@ -90,11 +90,7 @@ These parameters define the secret key configuration.
 
 **type:** `object`
 
-Defines the parameters of a secret key to generate a token in the client-side browser requests to ONLYOFFICE Docs:
-
-- **string** - the secret key, **type**: string, **example**: "secret";
-
-- **file** - the PEM file where the secret is stored, **type**: string, **example**: "".
+Defines the parameters of a secret key to generate a token in the client-side browser requests to ONLYOFFICE Docs.
 
 #### services.CoAuthoring.secret.browser.string
 
@@ -112,11 +108,7 @@ Path to a file containing the secret value. Loaded once and cached. Leave empty 
 
 **type:** `object`
 
-Defines the parameters of a secret key to generate a token in the incoming HTTP requests with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**:
-
-- **string** - the secret key, **type**: string, **example**: "secret";
-
-- **file** - the PEM file where the secret is stored, **type**: string, **example**: "".
+Defines the parameters of a secret key to generate a token in the incoming HTTP requests with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**.
 
 #### services.CoAuthoring.secret.inbox.string
 
@@ -134,11 +126,7 @@ Path to a file containing the secret value. Loaded once and cached. Leave empty 
 
 **type:** `object`
 
-Defines the parameters of a secret key to generate a token in the outgoing HTTP requests to the `callbackUrl` address by **document editing service**:
-
-- **string** - the secret key, **type**: string, **example**: "secret";
-
-- **file** - the PEM file where the secret is stored, **type**: string, **example**: "".
+Defines the parameters of a secret key to generate a token in the outgoing HTTP requests to the `callbackUrl` address by **document editing service**.
 
 #### services.CoAuthoring.secret.outbox.string
 
@@ -156,11 +144,7 @@ Path to a file containing the secret value. Loaded once and cached. Leave empty 
 
 **type:** `object`
 
-Defines the parameters of a secret key to generate the session token:
-
-- **string** - the secret key, **type**: string, **example**: "secret";
-
-- **file** - the PEM file where the secret is stored, **type**: string, **example**: "".
+Defines the parameters of a secret key to generate the session token.
 
 #### services.CoAuthoring.secret.session.string
 

@@ -45,7 +45,7 @@ Defines whether the *licenseExpirationWarning* notification is enabled. Each not
 
 ### notification.rules.licenseExpirationWarning.transportType
 
-**type:** `array of strings` | **default:** `["email"]`
+**type:** `string[]` | **default:** `["email"]`
 
 Defines the way of sending the *licenseExpirationWarning* notification. Currently, only the *email* type is available.
 
@@ -93,7 +93,7 @@ Defines whether the *licenseExpirationError* notification is enabled. Each notif
 
 ### notification.rules.licenseExpirationError.transportType
 
-**type:** `array of strings` | **default:** `["email"]`
+**type:** `string[]` | **default:** `["email"]`
 
 Defines the way of sending the *licenseExpirationError* notification. Currently, only the *email* type is available.
 
@@ -141,7 +141,7 @@ Defines whether the *licenseLimitEdit* notification is enabled. Each notificatio
 
 ### notification.rules.licenseLimitEdit.transportType
 
-**type:** `array of strings` | **default:** `["email"]`
+**type:** `string[]` | **default:** `["email"]`
 
 Defines the way of sending the *licenseLimitEdit* notification. Currently, only the *email* type is available.
 
@@ -189,7 +189,7 @@ Defines whether the *licenseLimitLiveViewer* notification is enabled. Each notif
 
 ### notification.rules.licenseLimitLiveViewer.transportType
 
-**type:** `array of strings` | **default:** `["email"]`
+**type:** `string[]` | **default:** `["email"]`
 
 Defines the way of sending the *licenseLimitLiveViewer* notification. Currently, only the *email* type is available.
 

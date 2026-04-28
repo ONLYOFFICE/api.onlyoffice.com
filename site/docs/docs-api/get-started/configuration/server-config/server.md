@@ -44,7 +44,7 @@ Defines a path to the "onlyoffice-docs-formats" file.
 
 ## services.CoAuthoring.server.downloadFileAllowExt
 
-**type:** `array of strings` | **default:** `["pdf","xlsx"]`
+**type:** `string[]` | **default:** `["pdf","xlsx"]`
 
 Defines extensions which are allowed to be downloaded via the downloadFile handler.
 

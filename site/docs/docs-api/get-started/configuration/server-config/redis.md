@@ -26,7 +26,7 @@ Defines if the connection to the server will be delayed until the first command 
 
 ## services.CoAuthoring.redis.iooptionsClusterNodes
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines a list of nodes of the cluster you want to connect to that can be passed directly to the [ioredis cluster](https://github.com/redis/ioredis#cluster) library
 to connect to the redis cluster. This setting has the priority over the *iooptions* parameter for connecting to the single redis.

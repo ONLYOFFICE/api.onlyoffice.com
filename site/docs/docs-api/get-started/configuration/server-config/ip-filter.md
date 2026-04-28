@@ -8,7 +8,7 @@ These parameters define the IP filter configuration.
 
 ## services.CoAuthoring.ipfilter.rules
 
-**type:** `array of objects` | **default:** `[{"address":"*","allowed":true}]`
+**type:** `object[]` | **default:** `[{"address":"*","allowed":true}]`
 
 Defines the IP filter rules that contain the following parameters:
 

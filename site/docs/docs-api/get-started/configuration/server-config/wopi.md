@@ -68,13 +68,13 @@ Defines a path to the favicon for the diagram editor.
 
 ## wopi.fileInfoBlockList
 
-**type:** `array of strings` | **default:** `["FileUrl"]`
+**type:** `string[]` | **default:** `["FileUrl"]`
 
 Defines a list of WOPI file information parameters that are blocked when sending this array to the browser. However, these parameters are available on the server.
 
 ## wopi.pdfView
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be viewed in the PDF editor.
 
@@ -84,7 +84,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.pdfEdit
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be edited in the PDF editor.
 
@@ -94,7 +94,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.forms
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the form file types.
 
@@ -104,7 +104,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.wordView
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be viewed in the document editor.
 
@@ -114,7 +114,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.wordEdit
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be edited in the document editor.
 
@@ -124,7 +124,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.cellView
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be viewed in the spreadsheet editor.
 
@@ -134,7 +134,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.cellEdit
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be edited in the spreadsheet editor.
 
@@ -144,7 +144,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.slideView
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be viewed in the presentation editor.
 
@@ -154,7 +154,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.slideEdit
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be edited in the presentation editor.
 
@@ -164,7 +164,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.diagramView
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be viewed in the diagram editor.
 
@@ -174,7 +174,7 @@ The value of this parameter is stored in the *onlyoffice-docs-formats.json* file
 
 ## wopi.diagramEdit
 
-**type:** `array of strings` | **default:** `[]`
+**type:** `string[]` | **default:** `[]`
 
 Defines the file types that can be edited in the diagram editor.
 

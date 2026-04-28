@@ -26,7 +26,7 @@ Supports routing AI requests via proxy.
 
 ## aiSettings.allowedCorsOrigins
 
-**type:** `array of strings` | **default:** `["https://onlyoffice.github.io","https://onlyoffice-plugins.github.io"]`
+**type:** `string[]` | **default:** `["https://onlyoffice.github.io","https://onlyoffice-plugins.github.io"]`
 
 Defines which external websites are permitted to make cross-origin requests to the server.
 
@@ -50,7 +50,7 @@ Custom AI service providers configuration
 
 ## aiSettings.models
 
-**type:** `array of objects` | **default:** `[]`
+**type:** `object[]` | **default:** `[]`
 
 Defines AI models, e.g., gemini-1.5-pro-latest, llama3.2:latest, etc.
 
