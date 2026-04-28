@@ -82,7 +82,7 @@ const config = {
   },
   documentType: "word",
   editorConfig: {
-    callbackUrl: "https://example.com/url-to-callback.ashx",
+    callbackUrl: "https://example.com/url-to-callback",
   },
 };
 

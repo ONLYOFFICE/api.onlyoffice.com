@@ -95,7 +95,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -122,7 +122,7 @@ ng version
    将以下行替换为您自己的数据：
 
    - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
+   - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 TypeScript 文件将创建 *AppComponent* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
 
@@ -168,7 +168,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -193,7 +193,7 @@ ng version
    将以下行替换为您自己的数据：
 
    - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-   - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
+   - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 TypeScript 文件将创建 *AppComponent* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
 

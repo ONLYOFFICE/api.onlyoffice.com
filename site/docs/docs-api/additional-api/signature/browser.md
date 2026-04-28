@@ -42,7 +42,7 @@ Starting from version 7.1, the parameter list to be signed will be strictly regu
     "url": "https://example.com/url-to-example-document.docx"
   },
   "editorConfig": {
-    "callbackUrl": "https://example.com/url-to-callback.ashx",
+    "callbackUrl": "https://example.com/url-to-callback",
     "mode": "edit"
   }
 }
@@ -116,7 +116,7 @@ The `payload` for the JWT token in the JSON format must have the same structure 
       "url": "https://example.com/url-to-example-document.docx"
     },
     "editorConfig": {
-      "callbackUrl": "https://example.com/url-to-callback.ashx",
+      "callbackUrl": "https://example.com/url-to-callback",
       "mode": "edit"
     }
   }

@@ -38,7 +38,7 @@ To install ONLYOFFICE Docs in the cloud:
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
    };
 

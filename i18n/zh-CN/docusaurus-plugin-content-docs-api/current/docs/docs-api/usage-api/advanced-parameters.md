@@ -78,12 +78,12 @@ const config = {
   documentType: "word",
   editorConfig: {
     actionLink: ACTION_DATA,
-    callbackUrl: "https://example.com/url-to-callback.ashx",
+    callbackUrl: "https://example.com/url-to-callback",
     coEditing: {
       mode: "fast",
       change: true,
     },
-    createUrl: "https://example.com/url-to-create-document/",
+    createUrl: "https://example.com/url-to-create-document",
     customization: {
       about: true,
       anonymous: {

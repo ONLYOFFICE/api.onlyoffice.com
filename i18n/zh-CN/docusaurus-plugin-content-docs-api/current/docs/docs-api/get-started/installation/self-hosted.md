@@ -44,7 +44,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
    };
 

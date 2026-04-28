@@ -849,7 +849,7 @@ interface EditorConfigNormal extends EditorConfigBase {
      * - Instead of this parameter, you can use the `onRequestCreateNew` event.  
      *
      * @forType `desktop` | `mobile`
-     * @example "https://example.com/url-to-create-document/"
+     * @example "https://example.com/url-to-create-document"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#createurl
      */
     createUrl?: string;
@@ -872,7 +872,7 @@ interface EditorConfigNormal extends EditorConfigBase {
      * - Url for connection between sdk and portal.
      *
      * @forType `desktop` | `mobile`
-     * @example "https://example.com/url-to-callback.ashx"
+     * @example "https://example.com/url-to-callback"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#callbackurl
      */
     callbackUrl: string;
@@ -2972,7 +2972,7 @@ interface EventsNormal extends EventsBase {
      *     },
      *     documentType: "word",
      *     editorConfig: {
-     *       callbackUrl: "https://example.com/url-to-callback.ashx",
+     *       callbackUrl: "https://example.com/url-to-callback",
      *     },
      *     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
      *   })

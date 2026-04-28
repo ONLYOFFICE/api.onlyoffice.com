@@ -10,7 +10,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ],
@@ -24,7 +24,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -40,7 +40,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "F89d8069ba2b",
             "name": "Kate Cage"
@@ -58,7 +58,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -77,7 +77,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -101,7 +101,7 @@
           }
         },
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -120,7 +120,7 @@
           }
         },
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -138,7 +138,7 @@
           }
         },
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -156,7 +156,7 @@
           }
         },
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -179,7 +179,7 @@
           }
         },
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -208,7 +208,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "customer": {
               "address": "My City, 123a-45",
@@ -261,7 +261,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -277,7 +277,7 @@
         },
         "documentType": "word",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -293,7 +293,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ],
@@ -307,7 +307,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -323,7 +323,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "F89d8069ba2b",
             "name": "Kate Cage"
@@ -341,7 +341,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -360,7 +360,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -384,7 +384,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ],
@@ -402,7 +402,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -420,7 +420,7 @@
           }
         },
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -449,7 +449,7 @@
         },
         "documentType": "pdf",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "customer": {
               "address": "My City, 123a-45",
@@ -490,7 +490,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ],
@@ -504,7 +504,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -520,7 +520,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "F89d8069ba2b",
             "name": "Kate Cage"
@@ -538,7 +538,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -557,7 +557,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -582,7 +582,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -602,7 +602,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "F89d8069ba2b",
             "name": "Kate Cage"
@@ -624,7 +624,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -653,7 +653,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "customer": {
               "address": "My City, 123a-45",
@@ -695,7 +695,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -711,7 +711,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -727,7 +727,7 @@
         },
         "documentType": "cell",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -743,7 +743,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ],
@@ -757,7 +757,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -773,7 +773,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "user": {
             "id": "F89d8069ba2b",
             "name": "Kate Cage"
@@ -791,7 +791,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -810,7 +810,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "autosave": false
           },
@@ -835,7 +835,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "mode": "edit"
         }
       }
@@ -864,7 +864,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx",
+          "callbackUrl": "https://example.com/url-to-callback",
           "customization": {
             "customer": {
               "address": "My City, 123a-45",
@@ -906,7 +906,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -922,7 +922,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]
@@ -938,7 +938,7 @@
         },
         "documentType": "slide",
         "editorConfig": {
-          "callbackUrl": "https://example.com/url-to-callback.ashx"
+          "callbackUrl": "https://example.com/url-to-callback"
         }
       }
     ]

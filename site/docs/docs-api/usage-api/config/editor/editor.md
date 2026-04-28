@@ -16,7 +16,7 @@ Specifies the data received from the **document editing service** using the [onM
 
 Specifies absolute URL to the **document storage service** (which [must be implemented](../../callback-handler.md) by the software integrators who use ONLYOFFICE Docs on their own server).
 
-**Example**: `https://example.com/url-to-callback.ashx`
+**Example**: `https://example.com/url-to-callback`
 
 ## coEditing
 
@@ -63,7 +63,7 @@ Defines if the co-editing mode can be changed in the editor interface or not.
 
 Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button. Instead of this field, you can use the [onRequestCreateNew](../events.md#onrequestcreatenew) event.
 
-**Example**: `https://example.com/url-to-create-document/`
+**Example**: `https://example.com/url-to-create-document`
 
 ![Create URL](/assets/images/editor/create.png)
 
@@ -287,12 +287,12 @@ const config = {
   // ...
   editorConfig: {
     actionLink: "ACTION_DATA",
-    callbackUrl: "https://example.com/url-to-callback.ashx",
+    callbackUrl: "https://example.com/url-to-callback",
     coEditing: {
       mode: "fast",
       change: true,
     },
-    createUrl: "https://example.com/url-to-create-document/",
+    createUrl: "https://example.com/url-to-create-document",
     lang: "en",
     mode: "edit",
     recent: [
