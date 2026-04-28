@@ -189,7 +189,7 @@ Plugin variations, or subplugins, that are created inside the origin plugin. Mor
 
 ### variations.buttons
 
-`Type: array of Button`
+`Type: Button[]`
 
 The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
 
@@ -304,7 +304,7 @@ Translations for the description field. The object keys are the two letter langu
 
 ### variations.EditorsSupport
 
-`Type: array of editorType`
+`Type: editorType[]`
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**). The default value is **[]**.
 
@@ -333,7 +333,7 @@ The editors which the plugin is available for:
 
 ### variations.events
 
-`Type: array of EventType`
+`Type: EventType[]`
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method instead, which does not require this parameter.
@@ -537,7 +537,7 @@ Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for 
 
 ### variations.size
 
-`Type: array of number`
+`Type: number[]`
 
 Plugin window size measured in pixels. This parameter is only used when *type == "window"*.
 
