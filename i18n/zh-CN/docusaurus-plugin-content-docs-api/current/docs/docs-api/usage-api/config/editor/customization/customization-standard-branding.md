@@ -50,10 +50,10 @@ const anonymous = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义**自动保存**菜单选项是启用还是禁用。如果设置为 **false**，则只能选择 **Strict** 共同编辑模式，因为 **Fast** 在没有自动保存的情况下不起作用。
+定义**自动保存**菜单选项是启用还是禁用。如果设置为 `false`，则只能选择 **Strict** 共同编辑模式，因为 **Fast** 在没有自动保存的情况下不起作用。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.autosave* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.autosave` 参数发送的任何值。
 :::
 
 **示例**: `true`
@@ -102,7 +102,7 @@ const close = {
 定义编辑器标题中按钮的工具提示文本或移动编辑器中的菜单项文本以及 Web 编辑器的 **File** 菜单中的按钮的工具提示文本。
 
 :::note
-仅当设置了 [onRequestClose](../../events.md#onrequestclose) 事件时，该参数才可用。如果未声明该事件且未指定 *close* 参数，则不会显示关闭按钮。
+仅当设置了 [onRequestClose](../../events.md#onrequestclose) 事件时，该参数才可用。如果未声明该事件且未指定 `close` 参数，则不会显示关闭按钮。
 
 请注意，此参数也适用于移动编辑器。
 :::
@@ -137,7 +137,7 @@ const close = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义附加操作按钮是显示在编辑器窗口标题的上部靠近徽标 (**false**) 还是显示在工具栏 (**true**) 中，使标题更紧凑。
+定义附加操作按钮是显示在编辑器窗口标题的上部靠近徽标 (`false`) 还是显示在工具栏 (`true`) 中，使标题更紧凑。
 
 **示例**: `false`
 
@@ -145,12 +145,12 @@ const close = {
 
 ## compactToolbar
 
-**类型：** `boolean`
+**类型：** `boolean` | **默认值：** `false`
 
-定义显示的顶部工具栏类型是完整的 (**false**) 还是紧凑的 (**true**)。默认值为 **false**。从 8.3 版开始，此设置也适用于查看器。*查看*模式的默认值为 **true**。
+定义显示的顶部工具栏类型是完整的 (`false`) 还是紧凑的 (`true`)。从 8.3 版开始，此设置也适用于查看器。`view` 模式的默认值为 `true`。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.compactToolbar* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.compactToolbar` 参数发送的任何值。
 :::
 
 **示例**: `false`
@@ -210,7 +210,7 @@ const customer = {
 
 **类型：** `string`
 
-图片 logo 的路径（这个文件没有特别推荐，但是如果是透明背景的 *.png* 格式会更好）。图片必须具有以下尺寸：432x70.
+图片 logo 的路径（这个文件没有特别推荐，但是如果是透明背景的 `.png` 格式会更好）。图片必须具有以下尺寸：432x70.
 
 **示例**: `https://example.com/logo-big.png`
 
@@ -218,7 +218,7 @@ const customer = {
 
 **类型：** `string`
 
-深色主题图像徽标的路径（此文件没有特别建议，但如果是透明背景的 *.png* 格式会更好）。图片必须具有以下尺寸：432x70.
+深色主题图像徽标的路径（此文件没有特别建议，但如果是透明背景的 `.png` 格式会更好）。图片必须具有以下尺寸：432x70.
 
 **示例**: `https://example.com/dark-logo-big.png`
 
@@ -294,7 +294,7 @@ const features = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义是否在 pdf 表单中禁用角色设置。如果该参数等于 **false**，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
+定义是否在 pdf 表单中禁用角色设置。如果该参数等于 `false`，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
 
 :::note
 此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
@@ -317,7 +317,7 @@ const features = {
 定义在加载编辑器时拼写检查器是自动打开还是关闭。此参数仅适用于文档编辑器和演示文稿编辑器。
 
 :::note
-如果在编辑器界面中更改*拼写检查*设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.features.spellcheck* 参数发送的任何值。
+如果在编辑器界面中更改 `spellcheck` 设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.features.spellcheck` 参数发送的任何值。
 :::
 
 **示例**: `true`
@@ -411,7 +411,7 @@ const features = {
 在**文档编辑服务**中保存文档时（例如单击**保存**按钮等），将文件强制保存请求添加到 [callback handler](../../../callback-handler.md#forcesavetype)。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.forcesave* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.forcesave` 参数发送的任何值。
 :::
 
 **示例**: `false`
@@ -420,7 +420,7 @@ const features = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义在简体中文界面中使用西文字号（**true**）还是中文字号（**false**）。
+定义在简体中文界面中使用西文字号（`true`）还是中文字号（`false`）。
 
 **示例**: `false`
 
@@ -450,7 +450,7 @@ const goback = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-单击**打开文件位置**按钮时，在新浏览器选项卡/窗口（如果值设置为 **true**）或当前选项卡（如果值设置为 **false** ）中打开网站。
+单击**打开文件位置**按钮时，在新浏览器选项卡/窗口（如果值设置为 `true`）或当前选项卡（如果值设置为 `false`）中打开网站。
 
 **示例**: `true`
 
@@ -470,7 +470,7 @@ const goback = {
 
 **类型：** `string`
 
-**打开文件位置**菜单按钮和右上角按钮显示的文本（也就是说，不是*转到文档*）。
+**打开文件位置**菜单按钮和右上角按钮显示的文本（也就是说，不是**转到文档**）。
 
 **示例**: `"打开文件位置"`
 
@@ -503,7 +503,7 @@ const goback = {
 定义注释面板在首次加载时是显示还是隐藏。此参数仅适用于演示文稿编辑器。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.hideNotes* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.hideNotes` 参数发送的任何值。
 :::
 
 **示例**: `false`
@@ -517,7 +517,7 @@ const goback = {
 定义第一次加载时是否显示或隐藏右侧菜单。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.hideRightMenu* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.hideRightMenu` 参数发送的任何值。
 :::
 
 **示例**: `true`
@@ -526,7 +526,7 @@ const goback = {
 
 **类型：** `boolean`
 
-定义编辑器标尺是显示还是隐藏。此参数可用于文档和演示文稿编辑器。文档编辑器的默认值为 **false**，演示文稿的默认值为 **true**。
+定义编辑器标尺是显示还是隐藏。此参数可用于文档和演示文稿编辑器。文档编辑器的默认值为 `false`，演示文稿的默认值为 `true`。
 
 **示例**: `false`
 
@@ -606,7 +606,7 @@ const logo = {
 
 **类型：** `string`
 
-当有人单击徽标图像时将使用的绝对 URL（可用于访问您的网站等）。保留为空字符串或 *null* 以使徽标不可点击。
+当有人单击徽标图像时将使用的绝对 URL（可用于访问您的网站等）。保留为空字符串或 `null` 以使徽标不可点击。
 
 **示例**: `https://example.com`
 
@@ -640,7 +640,7 @@ const logo = {
 - **warn** - 对运行宏发出警告并请求运行它们的权限。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.macrosMode* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.macrosMode` 参数发送的任何值。
 
 请注意，此参数也适用于移动编辑器。
 :::
@@ -651,7 +651,7 @@ const logo = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义在评论中提及后描述事件的提示。如果为 **true**，则提示表示用户将收到通知并访问文档。如果为 **false**，则提示表示用户将仅收到提及通知。
+定义在评论中提及后描述事件的提示。如果为 `true`，则提示表示用户将收到通知并访问文档。如果为 `false`，则提示表示用户将仅收到提及通知。
 
 :::note
 如果设置了 [onRequestSendNotify](../../events.md#onrequestsendnotify) 事件 ，它将仅可用于评论。
@@ -745,9 +745,9 @@ const mobile = {
 包含有关审阅模式的信息。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.review.hoverMode* 和 *editorConfig.customization.review.reviewDisplay* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.review.hoverMode` 和 `editorConfig.customization.review.reviewDisplay` 参数发送的任何值。
 
-[showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 *review* 参数。
+[showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) 参数自 7.0 版起已弃用。请改用 `review` 参数。
 :::
 
 **示例**:
@@ -776,15 +776,15 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义审阅显示模式：通过将鼠标悬停在更改上来在工具提示中显示审阅（**true**），或通过单击更改来在气球中显示审阅（**false**）。
+定义审阅显示模式：通过将鼠标悬停在更改上来在工具提示中显示审阅（`true`），或通过单击更改来在气球中显示审阅（`false`）。
 
 **示例**: `false`
 
 ### review.reviewDisplay
 
-**类型：** `string` | **默认值：** `"original"`
+**类型：** `string`
 
-定义文档编辑器的审阅显示模式。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 **markup** 或 **simple** 时才能进行编辑。如果选择 **original** 或 **final**，编辑器将自动切换到仅查看模式。可以采用以下值：
+定义文档编辑器的审阅显示模式。查看器的默认值是 **original**，编辑器的默认值是 **markup**。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 **markup** 或 **simple** 时才能进行编辑。如果选择 **original** 或 **final**，编辑器将自动切换到仅查看模式。可以采用以下值：
 
 - **markup** - 显示文档，并突出显示建议的更改；
 - **simple** - 显示文档并突出显示建议的更改，但气球已关闭；
@@ -805,7 +805,7 @@ const review = {
 
 **类型：** `boolean`
 
-无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义是否以审阅编辑模式 (**true**) 打开文档 (**false**) （审阅模式仅针对当前用户更改）。如果参数 *未定义*，则使用 *document.permissions.review* 值（对于所有文档用户）。
+无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义是否以审阅编辑模式 (`true`) 打开文档 (`false`) （审阅模式仅针对当前用户更改）。如果参数 `undefined`，则使用 `document.permissions.review` 值（对于所有文档用户）。
 
 **示例**: `true`
 
@@ -820,10 +820,10 @@ const review = {
 - **final** - 显示文档并应用所有建议的更改；
 - **original** - 显示原始文档，没有建议的更改。
 
-查看器的默认值是 **original**, 编辑器的默认值是 **markup**。                                                       
+查看器的默认值是 **original**，编辑器的默认值是 **markup**。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.reviewDisplay* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.reviewDisplay` 参数发送的任何值。
 :::
 :::danger[Deprecated]
 自 7.0 版起已弃用。请改用 [review.reviewDisplay](#reviewreviewdisplay) 参数。
@@ -863,7 +863,7 @@ const review = {
 
 **类型：** `string`
 
-从版本 8.3 开始，定义演示文稿编辑器中幻灯片的背景颜色。可以以 HEX、RGB 或 RGBA 格式表示。例如，*#ff0000*、*rgb(255, 0, 0)*、*rgba(255, 0, 0, 0.5)*。
+从版本 8.3 开始，定义演示文稿编辑器中幻灯片的背景颜色。可以以 HEX、RGB 或 RGBA 格式表示。例如，`#ff0000`、`rgb(255, 0, 0)`、`rgba(255, 0, 0, 0.5)`。
 
 **示例**: `"#000000"`
 
@@ -874,7 +874,7 @@ const review = {
 定义在加载编辑器时拼写检查器是自动打开还是关闭。拼写检查器仅适用于文档编辑器和演示文稿编辑器。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.spellcheck* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.spellcheck` 参数发送的任何值。
 :::
 :::danger[Deprecated]
 自 7.1 版起已弃用。请改用 [features.spellcheck](#featuresspellcheck) 参数。
@@ -886,7 +886,7 @@ const review = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-从版本 8.3 开始，定义**完成并提交**按钮设置。如果此参数是布尔值，则指定**完成并提交**按钮将在顶部工具栏上显示还是隐藏。按钮仅适用于*pdf*格式。
+从版本 8.3 开始，定义**完成并提交**按钮设置。如果此参数是布尔值，则指定**完成并提交**按钮将在顶部工具栏上显示还是隐藏。按钮仅适用于 `pdf` 格式。
 
 **示例**: `true`
 
@@ -897,7 +897,7 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义顶部工具栏上是否显示或隐藏 **Complete & Submit** 按钮。按钮仅适用于 *pdf* 格式。
+定义顶部工具栏上是否显示或隐藏 **Complete & Submit** 按钮。按钮仅适用于 `pdf` 格式。
 
 **示例**: `true`
 
@@ -925,10 +925,10 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义文档标题在顶部工具栏上是可见的 (**false**) 还是隐藏的 (**true**)。
+定义文档标题在顶部工具栏上是可见的 (`false`) 还是隐藏的 (`true`)。
 
 :::note
-当 [compactHeader](#compactheader) 参数设置为 **true** 时使用此设置。
+当 [compactHeader](#compactheader) 参数设置为 `true` 时使用此设置。
 :::
 
 :::note
@@ -943,7 +943,7 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义顶部工具栏选项卡是清晰显示 (**false**) 还是仅突出显示以查看选择了哪个 (**true**)。
+定义顶部工具栏选项卡是清晰显示 (`false`) 还是仅突出显示以查看选择了哪个 (`true`)。
 
 :::danger[Deprecated]
 自版本 8.2 起已弃用，请使用 [editorConfig.customization.features.tabStyle](#featurestabstyle) 参数（设置为 **line**）和 [editorConfig.customization.features.tabBackground](#featurestabbackground) 参数（等于 **toolbar**）。
@@ -955,7 +955,7 @@ const review = {
 
 **类型：** `boolean`
 
-无论 [document.permissions.review](../../document/permissions.md#review) 参数如何， 定义是(**true**)否(**false**)以审阅编辑模式打开文档（仅针对当前用户更改审阅模式）。如果参数是 *未定义*，则使用 *document.permissions.review* 值（对于所有文档用户）。
+无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义是（`true`）否（`false`）以审阅编辑模式打开文档（仅针对当前用户更改审阅模式）。如果参数是 `undefined`，则使用 `document.permissions.review` 值（对于所有文档用户）。
 
 :::danger[Deprecated]
 自 7.0 版起已弃用。请改用 [review.trackChanges](#reviewtrackchanges) 参数。
@@ -977,7 +977,7 @@ const review = {
 除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx)。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.uiTheme* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.uiTheme` 参数发送的任何值。
 :::
 
 :::note
@@ -997,7 +997,7 @@ const review = {
 - **inch** - 英寸。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.unit* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.unit` 参数发送的任何值。
 :::
 
 **示例**: `"cm"`
@@ -1017,7 +1017,7 @@ const review = {
 定义以百分比测量的文档显示缩放值。可以取大于 **0**的值。对于文本文档和演示文稿，可以将此参数设置为 **-1** （使文档适合页面选项）或 **-2** （使文档页面宽度适合编辑器页面）。
 
 :::note
-如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 *editorConfig.customization.zoom* 参数发送的任何值。
+如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.zoom` 参数发送的任何值。
 :::
 
 **示例**: `100`

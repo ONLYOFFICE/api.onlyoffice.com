@@ -50,10 +50,10 @@ A postfix added to the user name.
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the **Autosave** menu option is enabled or disabled. If set to **false**, only **Strict** co-editing mode can be selected, as **Fast** does not work without autosave.
+Defines if the **Autosave** menu option is enabled or disabled. If set to `false`, only **Strict** co-editing mode can be selected, as **Fast** does not work without autosave.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.autosave* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.autosave` parameter.
 :::
 
 **Example**: `true`
@@ -102,7 +102,7 @@ Defines if the cross button to close the editor is displayed or hidden.
 Defines the tooltip text for a button in the editor header or the menu item text in the mobile editors and in the **File** menu of the web editors.
 
 :::note
-It will only be available if the [onRequestClose](../../events.md#onrequestclose) event is set. If the event is not declared and the *close* parameter is not specified, the cross button will not be displayed.
+It will only be available if the [onRequestClose](../../events.md#onrequestclose) event is set. If the event is not declared and the `close` parameter is not specified, the cross button will not be displayed.
 
 This parameter is also available for the mobile editors.
 :::
@@ -137,7 +137,7 @@ Defines if the **Comments** menu button is displayed or hidden. Please note that
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (**false**) or in the toolbar (**true**) making the header more compact.
+Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (`false`) or in the toolbar (`true`) making the header more compact.
 
 **Example**: `false`
 
@@ -145,12 +145,12 @@ Defines if the additional action buttons are displayed in the upper part of the 
 
 ## compactToolbar
 
-**type:** `boolean`
+**type:** `boolean` | **default:** `false`
 
-Defines if the top toolbar type displayed is full (**false**) or compact (**true**). The default value is **false**. Starting from version 8.3, this setting is also available for the viewer. The default value for the *view* mode is **true**.
+Defines if the top toolbar type displayed is full (`false`) or compact (`true`). Starting from version 8.3, this setting is also available for the viewer. The default value for the `view` mode is `true`.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.compactToolbar* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.compactToolbar` parameter.
 :::
 
 **Example**: `false`
@@ -210,7 +210,7 @@ Some additional information about the company or person you want the others to k
 
 **type:** `string`
 
-The path to the image logo (there are no special recommendations for this file, but it would be better if it was in the *.png* format with transparent background). The image must have the following size: 432x70.
+The path to the image logo (there are no special recommendations for this file, but it would be better if it was in the `.png` format with transparent background). The image must have the following size: 432x70.
 
 **Example**: `"https://example.com/logo-big.png"`
 
@@ -218,7 +218,7 @@ The path to the image logo (there are no special recommendations for this file, 
 
 **type:** `string`
 
-The path to the image logo for the dark theme (there are no special recommendations for this file, but it would be better if it was in *.png* format with transparent background). The image must have the following size: 432x70.
+The path to the image logo for the dark theme (there are no special recommendations for this file, but it would be better if it was in `.png` format with transparent background). The image must have the following size: 432x70.
 
 **Example**: `"https://example.com/dark-logo-big.png"`
 
@@ -294,7 +294,7 @@ Defines if the tooltips about new editor features will be displayed or hidden on
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the role settings will be disabled in the pdf forms or not. If the parameter is equal to **false**, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
+Defines if the role settings will be disabled in the pdf forms or not. If the parameter is equal to `false`, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
 
 :::note
 This parameter is available for editing only for ONLYOFFICE Docs Developer.
@@ -317,7 +317,7 @@ Defines if the spell checker is automatically switched on or off when the editor
 Defines if the spell checker is automatically switched on or off when the editor is loaded. This parameter will only be available for the document editor and the presentation editor.
 
 :::note
-In case *spellcheck* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.features.spellcheck* parameter.
+In case `spellcheck` setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.features.spellcheck` parameter.
 :::
 
 **Example**: `true`
@@ -411,7 +411,7 @@ Shows or hides the **Feedback & Support** menu button.
 Adds the request for the file force saving to the [callback handler](../../../callback-handler.md#forcesavetype) when saving the document within the **document editing service** (e.g. clicking the **Save** button, etc.).
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.forcesave* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.forcesave` parameter.
 :::
 
 **Example**: `false`
@@ -420,7 +420,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the Western (**true**) or Chinese (**false**) font size is used in the Chinese (Simplified) UI.
+Defines if the Western (`true`) or Chinese (`false`) font size is used in the Chinese (Simplified) UI.
 
 **Example**: `false`
 
@@ -450,7 +450,7 @@ const goback = {
 
 **type:** `boolean` | **default:** `true`
 
-Opens the website in the new browser tab/window (if the value is set to **true**) or the current tab (if the value is set to **false**) when the **Open file location** button is clicked.
+Opens the website in the new browser tab/window (if the value is set to `true`) or the current tab (if the value is set to `false`) when the **Open file location** button is clicked.
 
 **Example**: `true`
 
@@ -470,7 +470,7 @@ Starting from version 8.1, please use the [close](#close) parameter instead.
 
 **type:** `string`
 
-The text which will be displayed for the **Open file location** menu button and upper right corner button (i.e. instead of *Go to Documents*).
+The text which will be displayed for the **Open file location** menu button and upper right corner button (i.e. instead of **Go to Documents**).
 
 **Example**: `"Open file location"`
 
@@ -503,7 +503,7 @@ This parameter is also available for the mobile editors.
 Defines if the note panel is displayed or hidden on first loading. This parameter is available for the presentation editor only.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.hideNotes* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.hideNotes` parameter.
 :::
 
 **Example**: `false`
@@ -517,7 +517,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 Defines if the right menu is displayed or hidden on first loading.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.hideRightMenu* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.hideRightMenu` parameter.
 :::
 
 **Example**: `true`
@@ -526,7 +526,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **type:** `boolean`
 
-Defines if the editor rulers are displayed or hidden. This parameter is available for the document and presentation editors. The default value is **false** for the document editor and **true** for presentations.
+Defines if the editor rulers are displayed or hidden. This parameter is available for the document and presentation editors. The default value is `false` for the document editor and `true` for presentations.
 
 **Example**: `false`
 
@@ -606,7 +606,7 @@ Starting from version 7.0, please use the [logo.image](#logoimage) field instead
 
 **type:** `string`
 
-The absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.). Leave as an empty string or *null* to make the logo not clickable.
+The absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.). Leave as an empty string or `null` to make the logo not clickable.
 
 **Example**: `"https://example.com"`
 
@@ -624,8 +624,8 @@ Shows or hides the logo.
 
 Defines if document macros will be automatically run when the editor opens.
 
-- **Before version 9.0.3**: the **false** value disables the automatic startup of macros and hides the [macros settings](#macrosmode) from the user.
-- **Since version 9.0.3**: the **false** value completely disables macros — they cannot be run, added, or edited. The **Macros** button is also hidden from the **View** tab.
+- **Before version 9.0.3**: the `false` value disables the automatic startup of macros and hides the [macros settings](#macrosmode) from the user.
+- **Since version 9.0.3**: the `false` value completely disables macros — they cannot be run, added, or edited. The **Macros** button is also hidden from the **View** tab.
 
 **Example**: `true`
 
@@ -640,7 +640,7 @@ Defines the macros run mode when autostart is enabled. Can take the following va
 - **enable** - run all macros automatically.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.macrosMode* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.
 
 This parameter is also available for the mobile editors.
 :::
@@ -651,7 +651,7 @@ This parameter is also available for the mobile editors.
 
 **type:** `boolean` | **default:** `true`
 
-Defines the hint that describes the event after mentions in a comment. If **true**, a hint indicates that the user will receive a notification and access to the document. If **false**, a hint indicates that the user will receive only a notification of the mention.
+Defines the hint that describes the event after mentions in a comment. If `true`, a hint indicates that the user will receive a notification and access to the document. If `false`, a hint indicates that the user will receive only a notification of the mention.
 
 :::note
 It will only be available for the comments if the [onRequestSendNotify](../../events.md#onrequestsendnotify) event is set.
@@ -745,9 +745,9 @@ Defines the pointer mode (**select** or **hand**) when the presentation editor i
 Contains the information about the review mode.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.review\.hoverMode* and the *editorConfig.customization.review\.reviewDisplay* parameters.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.review.hoverMode` and the `editorConfig.customization.review.reviewDisplay` parameters.
 
-The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) parameters are deprecated since version 7.0. Please use the *review* parameter instead.
+The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [trackChanges](#trackchanges) parameters are deprecated since version 7.0. Please use the `review` parameter instead.
 :::
 
 **Example**:
@@ -776,15 +776,15 @@ Defines if the **Display mode** button is displayed or hidden on the **Collabora
 
 **type:** `boolean` | **default:** `false`
 
-Defines the review display mode: show reviews in tooltips by hovering the changes (**true**) or in balloons by clicking the changes (**false**).
+Defines the review display mode: show reviews in tooltips by hovering the changes (`true`) or in balloons by clicking the changes (`false`).
 
 **Example**: `false`
 
 ### review.reviewDisplay
 
-**type:** `string` | **default:** `"original"`
+**type:** `string`
 
-Defines the review display mode for the document editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when **markup** or **simple** is selected. If **original** or **final** is selected, the editor automatically switches to view-only mode. Can take the following values:
+Defines the review display mode for the document editor. The default value is **original** for viewer and **markup** for editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when **markup** or **simple** is selected. If **original** or **final** is selected, the editor automatically switches to view-only mode. Can take the following values:
 
 - **markup** - the document is displayed with proposed changes highlighted;
 - **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
@@ -805,7 +805,7 @@ Defines if the review changes panel is automatically displayed or hidden when th
 
 **type:** `boolean`
 
-Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
+Defines if the document is opened in the review editing mode (`true`) or not (`false`) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
 
 **Example**: `true`
 
@@ -820,10 +820,10 @@ Defines the review editing mode in the document editor. This parameter can take 
 - **final** - the document is displayed with all the proposed changes applied;
 - **original** - the original document is displayed without the proposed changes.
 
-The default value is **original** for viewer and **markup** for editor.                                                                   
+The default value is **original** for viewer and **markup** for editor.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.reviewDisplay* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.reviewDisplay` parameter.
 :::
 :::danger[Deprecated]
 Starting from version 7.0, please use the [review.reviewDisplay](#reviewreviewdisplay) parameter instead.
@@ -863,7 +863,7 @@ Starting from version 8.3, defines if the vertical scroll is automatically displ
 
 **type:** `string`
 
-Starting from version 8.3, defines the background color for the slide show in the presentation editor. Can be represented in the HEX, RGB, or RGBA formats. For example, *#ff0000*, *rgb(255, 0, 0)*, *rgba(255, 0, 0, 0.5)*.
+Starting from version 8.3, defines the background color for the slide show in the presentation editor. Can be represented in the HEX, RGB, or RGBA formats. For example, `#ff0000`, `rgb(255, 0, 0)`, `rgba(255, 0, 0, 0.5)`.
 
 **Example**: `"#000000"`
 
@@ -874,7 +874,7 @@ Starting from version 8.3, defines the background color for the slide show in th
 Defines if the spell checker is automatically switched on or off when the editor is loaded. Spell checker will only be available for the document editor and the presentation editor.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.spellcheck* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.spellcheck` parameter.
 :::
 :::danger[Deprecated]
 Starting from version 7.1, please use the [features.spellcheck](#featuresspellcheck) parameter instead.
@@ -886,7 +886,7 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **type:** `object | boolean` | **default:** `true`
 
-Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format.
+Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the `pdf` format.
 
 **Example**: `true`
 
@@ -897,7 +897,7 @@ Starting from version 8.3, defines the **Complete & Submit** button settings. If
 
 **type:** `boolean` | **default:** `true`
 
-Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the *pdf* format.
+Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the `pdf` format.
 
 **Example**: `true`
 
@@ -925,10 +925,10 @@ Defines whether the **Suggest a Feature** menu button will be displayed or hidde
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the document title is visible on the top toolbar (**false**) or hidden (**true**).
+Defines if the document title is visible on the top toolbar (`false`) or hidden (`true`).
 
 :::note
-This setting is used when the [compactHeader](#compactheader) parameter is set to **true**.
+This setting is used when the [compactHeader](#compactheader) parameter is set to `true`.
 :::
 
 :::note
@@ -943,7 +943,7 @@ Starting from version 9.0.3, this parameter is also available for the mobile edi
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the top toolbar tabs are distinctly displayed (**false**) or only highlighted to see which one is selected (**true**).
+Defines if the top toolbar tabs are distinctly displayed (`false`) or only highlighted to see which one is selected (`true`).
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to **line** and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to **toolbar**.
@@ -955,7 +955,7 @@ Starting from version 8.2, please use the [editorConfig.customization.features.t
 
 **type:** `boolean`
 
-Defines if the document is opened in the review editing mode (**true**) or not (**false**) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is *undefined*, the *document.permissions.review* value is used (for all the document users).
+Defines if the document is opened in the review editing mode (`true`) or not (`false`) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
 
 :::danger[Deprecated]
 Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
@@ -977,7 +977,7 @@ The first option has higher priority.
 Apart from the available editor themes, the user can also customize their own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx) for the application interface.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.uiTheme* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.uiTheme` parameter.
 :::
 
 :::note
@@ -997,7 +997,7 @@ Defines the measurement units used on the ruler and in dialog boxes. Can take th
 - **inch** - inches.
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.unit* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.unit` parameter.
 :::
 
 **Example**: `"cm"`
@@ -1017,7 +1017,7 @@ Starting from version 8.3, defines the HEX color for the default heading styles 
 Defines the document display zoom value measured in percent. Can take values larger than **0**. For text documents and presentations it is possible to set this parameter to **-1** (fitting the document to page option) or to **-2** (fitting the document page width to the editor page).
 
 :::note
-In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.customization.zoom* parameter.
+In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.zoom` parameter.
 :::
 
 **Example**: `100`
