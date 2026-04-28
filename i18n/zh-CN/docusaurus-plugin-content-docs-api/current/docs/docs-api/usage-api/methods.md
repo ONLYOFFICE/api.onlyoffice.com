@@ -85,7 +85,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | --------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | c               | string           | 必填 | 从事件中定义一种图像插入类型。可以是：*add*, *change*, *fill*, *watermark*, *slide*. 默认值为"*添加*"。                                                                                                                                         |
 | fileType        | string           | 必填 | 定义要插入文件的图像类型。 可以是：*bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*。自 7.0 版起已弃用，请改用 *images.fileType* 参数。                                                                                  |
-| images          | array of objects | 必填 | 定义要插入的图像数组。                                                                                                                                                                                                                                      |
+| images          | object[] | 必填 | 定义要插入的图像数组。                                                                                                                                                                                                                                      |
 | images.fileType | string           | 必填 | 定义要插入文件的图像类型。可以是：*bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*, *tif*, *tiff*.                                                                                                                                                     |
 | images.url      | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。                                                                                                              |
 | token           | string           | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
@@ -502,7 +502,7 @@ refreshFile({
 
 | 参数                   | 类型            | 是否必填 | 描述                                                             |
 | --------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
-| sharingSettings             | 对象数组 | 非必填的 | 定义允许与其他用户共享文档的设置。 |
+| sharingSettings             | object[] | 非必填的 | 定义允许与其他用户共享文档的设置。 |
 | sharingSettings.permissions | string          | 非必填的 | 定义具有上述名称的用户的访问权限。             |
 | sharingSettings.user        | string          | 非必填的 | 定义将与之共享文档的用户的名称。    |
 

@@ -73,11 +73,11 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.fill | array of integers \| string | optional | Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
 | watermark.height | integer | optional | Defines the watermark height measured in millimeters. |
 | watermark.margins | array of integers | optional | Defines the text margins measured in millimeters in the watermark shape. |
-| watermark.paragraphs | array of objects | optional | Defines the array with paragraphs from the current watermark with their properties. |
+| watermark.paragraphs | object[] | optional | Defines the array with paragraphs from the current watermark with their properties. |
 | watermark.paragraphs.align | integer | optional | Defines the horizontal text align in the current paragraph: **0** - right, **1** - left, **2** - center, **3** - justify. |
 | watermark.paragraphs.fill | array of integers | optional | Defines the paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted. |
 | watermark.paragraphs.linespacing | integer | optional | Defines the text linespacing in the current paragraph. |
-| watermark.paragraphs.runs | array of objects | optional | Defines the array with runs from the current paragraph with their properties. |
+| watermark.paragraphs.runs | object[] | optional | Defines the array with runs from the current paragraph with their properties. |
 | watermark.paragraphs.runs.bold | boolean | optional | Defines if the current text is displayed bold or not. |
 | watermark.paragraphs.runs.fill | array of integers | optional | Defines the text highlight in the RGB format. The empty array \[] means that the text is not highlighted. |
 | watermark.paragraphs.runs.font-family | string | optional | Defines the text font family. |

@@ -85,7 +85,7 @@ Where **example.com** is the name of the server where **document manager** and *
 | --------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | c               | string           | required | Defines a type of image insertion from the event. Can be: *add*, *change*, *fill*, *watermark*, *slide*. The default value is "*add*".                                                                                                                           |
 | fileType        | string           | required | Defines a type of the image to be inserted into the file. Can be: *bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*. Deprecated since version 7.0, please use the *images.fileType* parameter instead.                                                                   |
-| images          | array of objects | required | Defines an array of images to be inserted.                                                                                                                                                                                                                       |
+| images          | object[] | required | Defines an array of images to be inserted.                                                                                                                                                                                                                       |
 | images.fileType | string           | required | Defines a type of the image to be inserted into the file. Can be: *bmp*, *gif*, *jpe*, *jpeg*, *jpg*, *png*, *tif*, *tiff*.                                                                                                                                      |
 | images.url      | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links.                                                                                                              |
 | token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#insertimage).                                                                                                                             |
@@ -502,7 +502,7 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
 
 | Parameter                   | Type            | Presence | Description                                                             |
 | --------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
-| sharingSettings             | array of object | optional | Defines the settings which allow sharing the document with other users. |
+| sharingSettings             | object[] | optional | Defines the settings which allow sharing the document with other users. |
 | sharingSettings.permissions | string          | optional | Defines the access rights for the user with the name above.             |
 | sharingSettings.user        | string          | optional | Defines the name of the user with whom the document will be shared.     |
 

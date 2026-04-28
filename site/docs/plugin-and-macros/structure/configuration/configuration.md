@@ -129,7 +129,7 @@ Specifies whether the plugin is included in the server or desktop builds branded
 
 ## variations
 
-`Type: array of object`
+`Type: object[]`
 
 Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
 
@@ -371,7 +371,7 @@ URL to the plugin icon image file. This URL allows setting your own rules for th
 
 ### variations.icons2
 
-`Type: array of object`
+`Type: object[]`
 
 :::danger[Deprecated]
 Please use the [variations.icons](#variationsicons) parameter instead.

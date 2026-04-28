@@ -101,7 +101,7 @@ Defines the editor opening mode. Can be either `"view"` to open the document for
 
 ## recent
 
-**type:** `array of object`
+**type:** `object[]`
 
 Defines the presence or absence of the documents in the **Open Recent...** menu option.
 
@@ -159,7 +159,7 @@ Starting from version 8.2, this parameter also defines the default measurement u
 
 ## templates
 
-**type:** `array of object`
+**type:** `object[]`
 
 Defines the presence or absence of the templates in the **Create New...** menu option.
 

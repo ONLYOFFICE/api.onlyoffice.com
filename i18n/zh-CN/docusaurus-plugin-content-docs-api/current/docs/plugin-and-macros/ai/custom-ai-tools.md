@@ -76,7 +76,7 @@ AI 代理将运行 `commentText` 函数，并在文档中插入相关评论。
 | --- | --- | --- | --- |
 | name | string | `"commentText"` | 函数名称。 |
 | parameters | object | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }` | 描述函数期望从 AI 获得的参数的对象。 |
-| examples | 对象数组 | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | 供 AI 参考的正确函数调用示例。 |
+| examples | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | 供 AI 参考的正确函数调用示例。 |
 | description | string | `"Adds a comment or footnote to explain or annotate the selected text."` | 向 AI 说明该函数用途的描述。 |
 
 这些参数供 AI 使用。`RegisteredFunction()` 对象在 [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) 文件中定义。

@@ -76,7 +76,7 @@ To add a new function, the `RegisteredFunction` object is used, which adds metad
 | ----------- | ---------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | name        | string           | `"commentText"`                                                                                  | The function name.                                                               |
 | parameters  | object           | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }`           | An object describing the parameters the function expects from the AI.            |
-| examples    | array of objects | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | The examples of correct function calls for the AI.                               |
+| examples    | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | The examples of correct function calls for the AI.                               |
 | description | string           | `"Adds a comment or footnote to explain or annotate the selected text."`                         | The function description which explains to the AI what the function is used for. |
 
 These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) file.

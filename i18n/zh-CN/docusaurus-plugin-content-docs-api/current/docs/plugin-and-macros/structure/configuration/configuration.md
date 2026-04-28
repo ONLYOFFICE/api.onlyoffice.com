@@ -129,7 +129,7 @@ sidebar_position: -5
 
 ## variations
 
-`类型： array of object`
+`类型： object[]`
 
 插件变体（或子插件），是在原始插件内部创建的子模块。详见[此处](variations.md)。
 
@@ -371,7 +371,7 @@ sidebar_position: -5
 
 ### variations.icons2
 
-`类型： array of object`
+`类型： object[]`
 
 :::danger[已废弃]
 请改用 [variations.icons](#variationsicons) 参数。
