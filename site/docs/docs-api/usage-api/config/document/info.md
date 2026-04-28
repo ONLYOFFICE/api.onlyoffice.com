@@ -4,7 +4,7 @@ The document info section allows to change additional parameters for the documen
 
 ## author
 
-`Type: string`
+**type:** `string`
 
 Defines the name of the document author/creator.
 
@@ -16,7 +16,7 @@ Starting from version 5.4, please use [owner](#owner) instead.
 
 ## created
 
-`Type: string`
+**type:** `string`
 
 Defines the document creation date.
 
@@ -28,7 +28,7 @@ Starting from version 5.4, please use [uploaded](#uploaded) instead.
 
 ## favorite
 
-`Type: boolean`
+**type:** `boolean`
 
 Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is *undefined* or *null*, the *Favorite* icon is not displayed at the editor window header.
 
@@ -38,7 +38,7 @@ Defines the highlighting state of the *Favorite* icon. When the user clicks the 
 
 ## folder
 
-`Type: string`
+**type:** `string`
 
 Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).
 
@@ -46,7 +46,7 @@ Defines the folder where the document is stored (can be empty in case the docume
 
 ## owner
 
-`Type: string`
+**type:** `string`
 
 Defines the name of the document owner/creator.
 
@@ -54,7 +54,7 @@ Defines the name of the document owner/creator.
 
 ## sharingSettings
 
-`Type: array of object`
+**type:** `array of object`
 
 Displays the information about the settings which allow to share the document with other users.
 
@@ -71,7 +71,7 @@ Displays the information about the settings which allow to share the document wi
 
 ### sharingSettings.isLink
 
-`Type: boolean`
+**type:** `boolean`
 
 Changes the user icon to the link icon.
 
@@ -79,7 +79,7 @@ Changes the user icon to the link icon.
 
 ### sharingSettings.permissions
 
-`Type: string`
+**type:** `string`
 
 The access rights for the user with the name above. Can be **Full Access**, **Read Only** or **Deny Access**.
 
@@ -87,7 +87,7 @@ The access rights for the user with the name above. Can be **Full Access**, **Re
 
 ### sharingSettings.user
 
-`Type: string`
+**type:** `string`
 
 The name of the user the document will be shared with.
 
@@ -97,7 +97,7 @@ The name of the user the document will be shared with.
 
 ## uploaded
 
-`Type: string`
+**type:** `string`
 
 Defines the document uploading date.
 

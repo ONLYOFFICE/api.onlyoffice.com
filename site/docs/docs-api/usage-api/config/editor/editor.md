@@ -4,7 +4,7 @@ The editorConfig section allows to change the parameters pertaining to the edito
 
 ## actionLink
 
-`Type: object`
+**type:** `object`
 
 Specifies the data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in *data.actionLink* parameter, which contains the information about the action in the document that will be scrolled to.
 
@@ -12,7 +12,7 @@ Specifies the data received from the **document editing service** using the [onM
 
 ## callbackUrl
 
-`Type: string` | **required**
+**type:** `string` | **required**
 
 Specifies absolute URL to the **document storage service** (which [must be implemented](../../callback-handler.md) by the software integrators who use ONLYOFFICE Docs on their own server).
 
@@ -20,7 +20,7 @@ Specifies absolute URL to the **document storage service** (which [must be imple
 
 ## coEditing
 
-`Type: object`
+**type:** `object`
 
 Defines the co-editing mode (*Fast* or *Strict*) and the possibility to change it.
 
@@ -37,9 +37,9 @@ This parameter is used to apply the [co-editing](../../../get-started/how-it-wor
 
 ### coEditing.mode
 
-`Type: string`
+**type:** `string` | **default:** `"fast"`
 
-The co-editing mode (*fast* or *strict*). The default value is **fast**.
+The co-editing mode (*fast* or *strict*).
 
 :::note
 In case *mode* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.coEditing.mode* parameter.
@@ -49,9 +49,9 @@ In case *mode* setting is changed in the editor interface, it will be stored in 
 
 ### coEditing.change
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the co-editing mode can be changed in the editor interface or not. The default value is **true**.
+Defines if the co-editing mode can be changed in the editor interface or not.
 
 **Example**: `true`
 
@@ -59,7 +59,7 @@ Defines if the co-editing mode can be changed in the editor interface or not. Th
 
 ## createUrl
 
-`Type: string`
+**type:** `string`
 
 Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button. Instead of this field, you can use the [onRequestCreateNew](../events.md#onrequestcreatenew) event.
 
@@ -69,9 +69,9 @@ Defines the absolute URL of the document where it will be created and available 
 
 ## lang
 
-`Type: string`
+**type:** `string` | **default:** `"en"`
 
-Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (**de**, **ru**, **it**, etc.) language codes. The default value is **"en"**.
+Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (**de**, **ru**, **it**, etc.) language codes.
 
 :::note
 To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four letter language codes - **pt-PT** or **zh-TW**, respectively. The two letter **pt** language code sets Portuguese (Brazil) and the **zh** code specifies Chinese (People's Republic of China).
@@ -81,9 +81,9 @@ To translate the editor interface into Portuguese (Portugal) or Chinese (Traditi
 
 ## location
 
-`Type: string`
+**type:** `string` | **default:** `""`
 
-Defines the default measurement units. Specify **us** or **ca** to set inches. The default value is **""**.
+Defines the default measurement units. Specify **us** or **ca** to set inches.
 
 :::note
 When **us** or **ca** values are set, the default measurement units are inches.
@@ -96,15 +96,15 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 ## mode
 
-`Type: string`
+**type:** `string` | **default:** `"edit"`
 
-Defines the editor opening mode. Can be either **view** to open the document for viewing, or **edit** to open the document in the editing mode allowing to apply changes to the document data. The default value is **"edit"**.
+Defines the editor opening mode. Can be either **view** to open the document for viewing, or **edit** to open the document in the editing mode allowing to apply changes to the document data.
 
 **Example**: `"edit"`
 
 ## recent
 
-`Type: array of object`
+**type:** `array of object`
 
 Defines the presence or absence of the documents in the **Open Recent...** menu option.
 
@@ -122,7 +122,7 @@ Defines the presence or absence of the documents in the **Open Recent...** menu 
 
 ### recent.folder
 
-`Type: string`
+**type:** `string`
 
 The folder where the document is stored (can be empty in case the document is stored in the root folder).
 
@@ -130,7 +130,7 @@ The folder where the document is stored (can be empty in case the document is st
 
 ### recent.title
 
-`Type: string`
+**type:** `string`
 
 The document title that will be displayed in the **Open Recent...** menu option.
 
@@ -138,7 +138,7 @@ The document title that will be displayed in the **Open Recent...** menu option.
 
 ### recent.url
 
-`Type: string`
+**type:** `string`
 
 The absolute URL to the document where it is stored.
 
@@ -148,7 +148,7 @@ The absolute URL to the document where it is stored.
 
 ## region
 
-`Type: string`
+**type:** `string`
 
 Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. For the default value the *lang* parameter is taken, or, if no regional setting corresponding to the *lang* value is available, **en-US** is used.
 
@@ -158,7 +158,7 @@ Starting from version 8.2, this parameter also defines the default measurement u
 
 ## templates
 
-`Type: array of object`
+**type:** `array of object`
 
 Defines the presence or absence of the templates in the **Create New\...** menu option.
 
@@ -176,7 +176,7 @@ Defines the presence or absence of the templates in the **Create New\...** menu 
 
 ### templates.image
 
-`Type: string`
+**type:** `string`
 
 The absolute URL to the image for template.
 
@@ -184,7 +184,7 @@ The absolute URL to the image for template.
 
 ### templates.title
 
-`Type: string`
+**type:** `string`
 
 The template title that will be displayed in the **Create New\...** menu option.
 
@@ -192,7 +192,7 @@ The template title that will be displayed in the **Create New\...** menu option.
 
 ### templates.url
 
-`Type: string`
+**type:** `string`
 
 The absolute URL to the document where it will be created and available after creation.
 
@@ -202,7 +202,7 @@ The absolute URL to the document where it will be created and available after cr
 
 ## user
 
-`Type: object`
+**type:** `object`
 
 Defines the user currently viewing or editing the document.
 
@@ -225,7 +225,7 @@ If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event
 
 ### user.firstname
 
-`Type: string`
+**type:** `string`
 
 The first name of the user.
 
@@ -237,7 +237,7 @@ Starting from version 4.2, please use the [user.name](#username) parameter inste
 
 ### user.group
 
-`Type: string`
+**type:** `string`
 
 The group (or several groups separated with commas) the user belongs to.
 
@@ -245,7 +245,7 @@ The group (or several groups separated with commas) the user belongs to.
 
 ### user.id
 
-`Type: string`
+**type:** `string`
 
 The identification of the user. The length is limited to 128 symbols. This information is stored and used to distinguish co-authors, indicate the [author](../../callback-handler.md#users) of the last changes when saving and highlighting history (in the list of [changes](../../callback-handler.md#changeshistory)), and count users with access for a license based on the number of users. We recommend using some unique anonymized hash. Do not use sensitive data, like name or email for this field.
 
@@ -253,7 +253,7 @@ The identification of the user. The length is limited to 128 symbols. This infor
 
 ### user.image
 
-`Type: string`
+**type:** `string`
 
 The path to the user's avatar.
 
@@ -261,7 +261,7 @@ The path to the user's avatar.
 
 ### user.lastname
 
-`Type: string`
+**type:** `string`
 
 The last name of the user.
 
@@ -273,7 +273,7 @@ Starting from version 4.2, please use the [user.name](#username) parameter inste
 
 ### user.name
 
-`Type: string`
+**type:** `string`
 
 The full name of the user. The length is limited to 128 symbols. Used since version 4.2.
 

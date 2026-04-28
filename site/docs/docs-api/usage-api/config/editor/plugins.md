@@ -4,7 +4,7 @@ The plugins section allows to connect the special add-ons to your ONLYOFFICE Doc
 
 ## autostart
 
-`Type: array of string`
+**type:** `array of string`
 
 Defines the array of the identifiers (as entered in [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid)) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.
 
@@ -12,7 +12,7 @@ Defines the array of the identifiers (as entered in [config.json](../../../../pl
 
 ## options
 
-`Type: object`
+**type:** `object`
 
 Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the **SetPluginsOptions** method of the [Automation API](../../automation-api/automation-api.md) to pass the *options* object to the plugin.
 
@@ -27,7 +27,7 @@ Defines an object which allows configuring plugins from an external source. The 
 
 ### options.all
 
-`Type: object`
+**type:** `object`
 
 Defines the parameters which will be set for all plugins.
 
@@ -43,7 +43,7 @@ Defines the parameters which will be set for all plugins.
 
 ### options.pluginGuid
 
-`Type: object`
+**type:** `object`
 
 Defines the parameters which will be set for a specific plugin. The plugin must be specified with the plugin GUID of the *asc.\{UUID\}* type.
 
@@ -59,7 +59,7 @@ Defines the parameters which will be set for a specific plugin. The plugin must 
 
 ## pluginsData
 
-`Type: array of string`
+**type:** `array of string`
 
 Defines the array of absolute URLs to the plugin configuration files ([config.json](../../../../plugin-and-macros/structure/configuration/configuration.md)).
 
@@ -67,7 +67,7 @@ Defines the array of absolute URLs to the plugin configuration files ([config.js
 
 ## url
 
-`Type: string`
+**type:** `string`
 
 Defines the absolute URL to the directory where the plugins are stored.
 

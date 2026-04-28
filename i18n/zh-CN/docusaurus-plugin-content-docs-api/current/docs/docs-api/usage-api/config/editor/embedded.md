@@ -4,7 +4,7 @@
 
 ## embedUrl
 
-`类型：string`
+**类型：** `string`
 
 定义文档的绝对 URL，作为嵌入网页的文档的源文件。
 
@@ -12,7 +12,7 @@
 
 ## fullscreenUrl
 
-`类型：string`
+**类型：** `string`
 
 定义将以全屏模式打开的文档的绝对 URL。
 
@@ -20,7 +20,7 @@
 
 ## saveUrl
 
-`类型：string`
+**类型：** `string`
 
 定义允许将文档保存到用户个人计算机上的绝对 URL。
 
@@ -28,7 +28,7 @@
 
 ## shareUrl
 
-`类型：string`
+**类型：** `string`
 
 定义允许其他用户共享此文档的绝对 URL。
 
@@ -36,7 +36,7 @@
 
 ## toolbarDocked
 
-`类型：string`
+**类型：** `string`
 
 定义嵌入式查看器工具栏的位置，可以是 **top** 或 **bottom**。
 

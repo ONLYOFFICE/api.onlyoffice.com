@@ -4,7 +4,7 @@ The embedded section is for the **embedded** document type only (see the [config
 
 ## embedUrl
 
-`Type: string`
+**type:** `string`
 
 Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
 
@@ -12,7 +12,7 @@ Defines the absolute URL to the document serving as a source file for the docume
 
 ## fullscreenUrl
 
-`Type: string`
+**type:** `string`
 
 Defines the absolute URL to the document which will open in full screen mode.
 
@@ -20,7 +20,7 @@ Defines the absolute URL to the document which will open in full screen mode.
 
 ## saveUrl
 
-`Type: string`
+**type:** `string`
 
 Defines the absolute URL that will allow the document to be saved onto the user personal computer.
 
@@ -28,7 +28,7 @@ Defines the absolute URL that will allow the document to be saved onto the user 
 
 ## shareUrl
 
-`Type: string`
+**type:** `string`
 
 Defines the absolute URL that will allow other users to share this document.
 
@@ -36,7 +36,7 @@ Defines the absolute URL that will allow other users to share this document.
 
 ## toolbarDocked
 
-`Type: string`
+**type:** `string`
 
 Defines the place for the embedded viewer toolbar, can be either **top** or **bottom**.
 
