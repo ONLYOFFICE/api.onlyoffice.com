@@ -22,7 +22,7 @@ Specifies absolute URL to the **document storage service** (which [must be imple
 
 **type:** `object`
 
-Defines the co-editing mode (*Fast* or *Strict*) and the possibility to change it.
+Defines the co-editing mode and the possibility to change it.
 
 This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
 
@@ -39,7 +39,7 @@ This parameter is used to apply the [co-editing](../../../get-started/how-it-wor
 
 **type:** `string` | **default:** `"fast"`
 
-The co-editing mode (*fast* or *strict*).
+The co-editing mode. Can be `"fast"` or `"strict"`.
 
 :::note
 In case `mode` setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.coEditing.mode` parameter.
@@ -71,10 +71,10 @@ Defines the absolute URL of the document where it will be created and available 
 
 **type:** `string` | **default:** `"en"`
 
-Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (**de**, **ru**, **it**, etc.) language codes.
+Defines the editor interface language (if some other languages other than English are present). Is set using the two-letter (`de`, `ru`, `it`, etc.) language codes.
 
 :::note
-To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four letter language codes - **pt-PT** or **zh-TW**, respectively. The two letter **pt** language code sets Portuguese (Brazil) and the **zh** code specifies Chinese (People's Republic of China).
+To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four-letter language codes - `pt-PT` or `zh-TW`, respectively. The two-letter `pt` language code sets Portuguese (Brazil) and the `zh` code specifies Chinese (People's Republic of China).
 :::
 
 **Example**: `"en"`
@@ -83,11 +83,8 @@ To translate the editor interface into Portuguese (Portugal) or Chinese (Traditi
 
 **type:** `string` | **default:** `""`
 
-Defines the default measurement units. Specify **us** or **ca** to set inches.
+Defines the default measurement units. Specify `"us"` or `"ca"` to set inches.
 
-:::note
-When **us** or **ca** values are set, the default measurement units are inches.
-:::
 :::danger[Deprecated]
 Starting from version 8.2, please use the [region](#region) parameter instead.
 :::
@@ -98,7 +95,7 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 **type:** `string` | **default:** `"edit"`
 
-Defines the editor opening mode. Can be either **view** to open the document for viewing, or **edit** to open the document in the editing mode allowing to apply changes to the document data.
+Defines the editor opening mode. Can be either `"view"` to open the document for viewing, or `"edit"` to open the document in the editing mode allowing to apply changes to the document data.
 
 **Example**: `"edit"`
 
@@ -150,7 +147,7 @@ The absolute URL to the document where it is stored.
 
 **type:** `string` | **default:** `"en-US"`
 
-Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes.
+Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four-letter (`en-US`, `fr-FR`, etc.) language codes.
 
 :::note
 If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `"en-US"` is used.
@@ -251,7 +248,7 @@ The group (or several groups separated with commas) the user belongs to.
 
 **type:** `string`
 
-The identification of the user. The length is limited to 128 symbols. This information is stored and used to distinguish co-authors, indicate the [author](../../callback-handler.md#users) of the last changes when saving and highlighting history (in the list of [changes](../../callback-handler.md#changeshistory)), and count users with access for a license based on the number of users. We recommend using some unique anonymized hash. Do not use sensitive data, like name or email for this field.
+The identification of the user. The length is limited to 128 symbols. This information is stored and used to distinguish co-authors, indicate the [author](../../callback-handler.md#users) of the last changes when saving and highlighting history (in the list of [changes](../../callback-handler.md#history)), and count users with access for a license based on the number of users. We recommend using some unique anonymized hash. Do not use sensitive data, like name or email for this field.
 
 **Example**: `"78e1e841"`
 
