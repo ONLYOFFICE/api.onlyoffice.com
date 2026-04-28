@@ -661,9 +661,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击 *重命名...* 按钮重命名文件时调用的函数。
 
-:::note
-在 6.0 版之前，*重命名...* 按钮仅在 [document.permissions.rename](./document/permissions.md#rename) 设置为 `true` 时可用。
-:::
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -693,7 +690,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
 
 :::note
-*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。在 5.5 版之前，仅当 [document.permissions.changeHistory](./document/permissions.md#changehistory) 设置为 `true` 时，*恢复* 按钮才可用。
+*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。
 :::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)

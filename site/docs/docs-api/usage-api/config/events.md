@@ -661,9 +661,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the user is trying to rename the file by clicking the *Rename...* button.
 
-:::note
-Until version 6.0 the *Rename...* button is only available if the [document.permissions.rename](./document/permissions.md#rename) is set to `true`.
-:::
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -693,7 +690,7 @@ The document version number is sent in the `data.version` parameter if it is cal
 When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again. If the method is not declared the *Restore* button will not be displayed.
 
 :::note
-The *Restore* button is displayed for the previous document versions only and hidden for the current one. Until version 5.5 the *Restore* button is only available if the [document.permissions.changeHistory](./document/permissions.md#changehistory) is set to `true`.
+The *Restore* button is displayed for the previous document versions only and hidden for the current one.
 :::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
