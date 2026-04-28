@@ -224,18 +224,6 @@ If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event
 }
 ```
 
-### user.firstname
-
-**type:** `string`
-
-The first name of the user.
-
-:::danger[Deprecated]
-Starting from version 4.2, please use the [user.name](#username) parameter instead.
-:::
-
-**Example**: `"John"`
-
 ### user.group
 
 **type:** `string`
@@ -259,18 +247,6 @@ The identification of the user. The length is limited to 128 symbols. This infor
 The path to the user's avatar.
 
 **Example**: `https://example.com/url-to-user-avatar.png`
-
-### user.lastname
-
-**type:** `string`
-
-The last name of the user.
-
-:::danger[Deprecated]
-Starting from version 4.2, please use the [user.name](#username) parameter instead.
-:::
-
-**Example**: `"Smith"`
 
 ### user.name
 

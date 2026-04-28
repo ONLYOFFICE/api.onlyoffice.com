@@ -254,7 +254,7 @@ The list of changes of ONLYOFFICE Docs API.
 - The `document.info.created` field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
 - The `document.info.author` field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
 - The [events.onReady](../usage-api/config/events.md#onready) event is removed.
-- The *firstname* and *lastname* fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object is removed.
+- The `firstname` and `lastname` fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object are removed.
 - Added the [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) event.
 - Added the [events.onRequestInsertImage](../usage-api/config/events.md#onrequestinsertimage) event.
 - Added the [insertImage](../usage-api/methods.md#insertimage) method.
@@ -331,7 +331,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 4.2
 
-- The [firstname](../usage-api/config/editor/editor.md#user) and [lastname](../usage-api/config/editor/editor.md#user) fields is deprecated, please use the [name](../usage-api/config/editor/editor.md#user) field instead.
+- The `firstname` and `lastname` fields are deprecated, please use the [name](../usage-api/config/editor/editor.md#username) field instead.
 - Added the possibility to specify the values for the [editorConfig.customization.chat](../usage-api/config/editor/customization/customization-standard-branding.md#chat) and [editorConfig.customization.comments](../usage-api/config/editor/customization/customization-standard-branding.md#comments) in the Open Source version.
 - Added the [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) field.
 - Added the [editorConfig.customization.zoom](../usage-api/config/editor/customization/customization-standard-branding.md#zoom) field.

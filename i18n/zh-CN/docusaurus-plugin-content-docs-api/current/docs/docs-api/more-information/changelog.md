@@ -254,7 +254,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - `document.info.created` 字段已弃用，请改用 [document.info.uploaded](../usage-api/config/document/info.md#uploaded) 字段。
 - `document.info.author` 字段已弃用，请改用 [document.info.owner](../usage-api/config/document/info.md#owner) 字段。
 - [events.onReady](../usage-api/config/events.md#onready) 事件被移除。
-- [editorConfig.user](../usage-api/config/editor/editor.md#user) 对象中的 *firstname* 和 *lastname* 字段被删除。
+- [editorConfig.user](../usage-api/config/editor/editor.md#user) 对象中的 `firstname` 和 `lastname` 字段被删除。
 - 添加了 [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) 事件。
 - 添加了 [events.onRequestInsertImage](../usage-api/config/events.md#onrequestinsertimage) 事件。
 - 添加了 [insertImage](../usage-api/methods.md#insertimage) 方法。
@@ -331,7 +331,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 ## 版本 4.2
 
-- [firstname](../usage-api/config/editor/editor.md#user) 和 [lastname](../usage-api/config/editor/editor.md#user) 字段已弃用，请改用 [name](../usage-api/config/editor/editor.md#user) 字段。
+- `firstname` 和 `lastname` 字段已弃用，请改用 [name](../usage-api/config/editor/editor.md#username) 字段。
 - 添加了在开源版本中为 [editorConfig.customization.chat](../usage-api/config/editor/customization/customization-standard-branding.md#chat) 和 [editorConfig.customization.comments](../usage-api/config/editor/customization/customization-standard-branding.md#comments) 指定值的可能性。
 - 添加了 [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) 字段。
 - 添加了 [editorConfig.customization.zoom](../usage-api/config/editor/customization/customization-standard-branding.md#zoom) 字段。
