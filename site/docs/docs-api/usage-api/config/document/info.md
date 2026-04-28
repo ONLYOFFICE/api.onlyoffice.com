@@ -2,30 +2,6 @@
 
 The document info section allows you to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
 
-## author
-
-**type:** `string`
-
-Defines the name of the document author/creator.
-
-:::danger[Deprecated]
-Starting from version 5.4, please use [owner](#owner) instead.
-:::
-
-**Example**: `"John Smith"`
-
-## created
-
-**type:** `string`
-
-Defines the document creation date.
-
-:::danger[Deprecated]
-Starting from version 5.4, please use [uploaded](#uploaded) instead.
-:::
-
-**Example**: `"2010-07-07 3:46 PM"`
-
 ## favorite
 
 **type:** `boolean`
