@@ -95,6 +95,7 @@
 
 ``` ts
 const config = {
+  // ...
   document: {
     fileType: "pdf",
     isForm: true,

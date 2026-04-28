@@ -524,7 +524,9 @@ const view = {
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       about: true,
       features: {

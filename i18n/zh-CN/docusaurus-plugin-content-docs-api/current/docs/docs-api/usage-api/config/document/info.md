@@ -85,7 +85,9 @@
 
 ``` ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       favorite: false,
       folder: "Example Files",

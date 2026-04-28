@@ -1028,7 +1028,9 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       anonymous: {
         request: true,

@@ -1028,7 +1028,9 @@ const review = {
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       anonymous: {
         request: true,

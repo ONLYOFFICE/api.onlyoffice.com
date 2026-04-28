@@ -48,7 +48,9 @@
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     embedded: {
       embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
       fullscreenUrl: "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",

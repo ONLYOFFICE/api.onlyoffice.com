@@ -83,7 +83,9 @@
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     plugins: {
       autostart: [
         "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",

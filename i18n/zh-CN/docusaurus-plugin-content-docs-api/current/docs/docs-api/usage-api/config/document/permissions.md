@@ -204,7 +204,9 @@ const config = {
 
 ``` ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: true,
       comment: true,

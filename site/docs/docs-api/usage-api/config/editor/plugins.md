@@ -83,7 +83,9 @@ Starting from version 4.3, please use the absolute URLs in [pluginsData](#plugin
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     plugins: {
       autostart: [
         "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",

@@ -48,7 +48,9 @@ Defines the place for the embedded viewer toolbar, can be either **top** or **bo
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     embedded: {
       embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
       fullscreenUrl: "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",

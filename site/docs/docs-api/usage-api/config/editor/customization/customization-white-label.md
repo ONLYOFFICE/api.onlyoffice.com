@@ -524,7 +524,9 @@ Starting from version 7.1, please use the [layout.toolbar](#layouttoolbar) param
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       about: true,
       features: {

@@ -85,7 +85,9 @@ Defines the document uploading date.
 
 ``` ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       favorite: false,
       folder: "Example Files",

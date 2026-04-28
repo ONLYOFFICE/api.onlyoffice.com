@@ -95,6 +95,7 @@ The document permission section. See the [permissions](permissions.md) page for 
 
 ``` ts
 const config = {
+  // ...
   document: {
     fileType: "pdf",
     isForm: true,

@@ -204,7 +204,9 @@ The `["Group1", ""]` means that the information about users from Group1 and user
 
 ``` ts
 const config = {
+  // ...
   document: {
+    // ...
     permissions: {
       chat: true,
       comment: true,

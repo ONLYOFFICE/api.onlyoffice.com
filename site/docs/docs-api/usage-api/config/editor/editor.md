@@ -283,6 +283,7 @@ The full name of the user. The length is limited to 128 symbols. Used since vers
 
 ``` ts
 const config = {
+  // ...
   editorConfig: {
     actionLink: "ACTION_DATA",
     callbackUrl: "https://example.com/url-to-callback.ashx",
@@ -314,6 +315,7 @@ const config = {
       image: "https://example.com/url-to-user-avatar.png",
       name: "John Smith",
     },
+    // ...
   },
 };
 
