@@ -254,6 +254,24 @@ The full name of the user. The length is limited to 128 symbols.
 
 **Example**: `"John Smith"`
 
+## customization
+
+**type:** `object`
+
+The editor customization section. See the [standard branding](customization/customization-standard-branding.md) and [white label](customization/customization-white-label.md) pages for available parameters.
+
+## embedded
+
+**type:** `object`
+
+The embedded mode configuration section. See the [embedded](embedded.md) page for available parameters.
+
+## plugins
+
+**type:** `object`
+
+The plugins configuration section. See the [plugins](plugins.md) page for available parameters.
+
 ## Example
 
 ``` ts
@@ -290,7 +308,15 @@ const config = {
       image: "https://example.com/url-to-user-avatar.png",
       name: "John Smith",
     },
-    // ...
+    customization: {
+      // ...
+    },
+    embedded: {
+      // ...
+    },
+    plugins: {
+      // ...
+    },
   },
 };
 
