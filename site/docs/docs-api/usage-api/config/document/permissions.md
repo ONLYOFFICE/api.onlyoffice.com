@@ -30,7 +30,7 @@ In case `edit` is set to `true` and `comment` is also set to `true`, the user wi
 
 Defines the [groups](../editor/editor.md#user) whose comments the user can edit, remove and/or view.
 
-The `[""]` value means that the user can edit/remove/view comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors). If the value is `[]`, the user cannot edit/remove/view comments made by any group. If the `edit`, `remove` and `view` parameters are `""` or not specified, then the user can view/edit/remove comments made by any user.
+The `[""]` value means that the user can edit/remove/view comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors). If the value is `[]`, the user cannot edit/remove/view comments made by any group. If the `commentGroups.edit`, `commentGroups.remove` and `commentGroups.view` parameters are not specified, then the user can view/edit/remove comments made by any user.
 
 **Example**:
 
@@ -38,7 +38,7 @@ The `[""]` value means that the user can edit/remove/view comments made by someo
 const config = {
   edit: ["Group2", ""],
   remove: [""],
-  view: "",
+  view: [""],
 }
 ```
 
