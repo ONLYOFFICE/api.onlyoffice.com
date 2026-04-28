@@ -76,7 +76,7 @@ The user can remove comments made by other users.
 
 The user can view comments made by other users.
 
-**Example**: `""`
+**Example**: `[""]`
 
 ## copy
 
@@ -236,7 +236,7 @@ const config = {
       commentGroups: {
         edit: ["Group2", ""],
         remove: [""],
-        view: "",
+        view: [""],
       },
       deleteCommentAuthorOnly: false,
       download: true,

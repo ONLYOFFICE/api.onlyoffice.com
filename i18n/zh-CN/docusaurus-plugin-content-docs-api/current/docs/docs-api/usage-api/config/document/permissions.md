@@ -76,7 +76,7 @@ const config = {
 
 用户可以查看其他用户发表的评论。
 
-**示例**: `""`
+**示例**: `[""]`
 
 ## 复制 {#copy}
 
@@ -236,7 +236,7 @@ const config = {
       commentGroups: {
         edit: ["Group2", ""],
         remove: [""],
-        view: "",
+        view: [""],
       },
       deleteCommentAuthorOnly: false,
       download: true,
