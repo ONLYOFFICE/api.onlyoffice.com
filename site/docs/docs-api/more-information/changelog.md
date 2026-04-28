@@ -253,7 +253,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.region](../usage-api/config/editor/editor.md#region) field.
 - The `document.info.created` field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
 - The `document.info.author` field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
-- The [events.onReady](../usage-api/config/events.md#onready) event is removed.
+- The `events.onReady` event is removed.
 - The `firstname` and `lastname` fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object are removed.
 - Added the [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) event.
 - Added the [events.onRequestInsertImage](../usage-api/config/events.md#onrequestinsertimage) event.
@@ -299,7 +299,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added the [document.permissions.modifyFilter](../usage-api/config/document/permissions.md#modifyfilter) field.
 - Added conversion for macro-enabled document, document template and flat document [formats](../additional-api/conversion-api/conversion-tables.md).
-- The [events.onReady](../usage-api/config/events.md#onready) event is deprecated, please use the [events.onAppReady](../usage-api/config/events.md#onappready) events instead.
+- The `events.onReady` event is deprecated, please use the [events.onAppReady](../usage-api/config/events.md#onappready) event instead.
 - Added the [events.onDocumentReady](../usage-api/config/events.md#ondocumentready) event.
 - Added the [editorConfig.plugins.autostart](../usage-api/config/editor/plugins.md#autostart) field.
 - Added the [events.onWarning](../usage-api/config/events.md#onwarning) event.

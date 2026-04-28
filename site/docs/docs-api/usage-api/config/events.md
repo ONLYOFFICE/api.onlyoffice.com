@@ -241,14 +241,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-## onReady
-
-The function called when the application is loaded into the browser.
-
-:::danger[Deprecated]
-Starting from version 5.0, please use [onAppReady](#onappready) instead.
-:::
-
 ## onRequestClose
 
 The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.

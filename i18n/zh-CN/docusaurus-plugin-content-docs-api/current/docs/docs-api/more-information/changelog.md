@@ -253,7 +253,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.region](../usage-api/config/editor/editor.md#region) 字段。
 - `document.info.created` 字段已弃用，请改用 [document.info.uploaded](../usage-api/config/document/info.md#uploaded) 字段。
 - `document.info.author` 字段已弃用，请改用 [document.info.owner](../usage-api/config/document/info.md#owner) 字段。
-- [events.onReady](../usage-api/config/events.md#onready) 事件被移除。
+- `events.onReady` 事件被移除。
 - [editorConfig.user](../usage-api/config/editor/editor.md#user) 对象中的 `firstname` 和 `lastname` 字段被删除。
 - 添加了 [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) 事件。
 - 添加了 [events.onRequestInsertImage](../usage-api/config/events.md#onrequestinsertimage) 事件。
@@ -299,7 +299,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - 添加了 [document.permissions.modifyFilter](../usage-api/config/document/permissions.md#modifyfilter) 字段。
 - 添加了启用宏的文档、文档模板和平面文档 [格式](../additional-api/conversion-api/conversion-tables.md) 的转换。
-- [events.onReady](../usage-api/config/events.md#onready) 事件已弃用，请改用 [events.onAppReady](../usage-api/config/events.md#onappready) 事件。
+- `events.onReady` 事件已弃用，请改用 [events.onAppReady](../usage-api/config/events.md#onappready) 事件。
 - 添加了 [events.onDocumentReady](../usage-api/config/events.md#ondocumentready) 事件。
 - 添加了 [editorConfig.plugins.autostart](../usage-api/config/editor/plugins.md#autostart) 字段。
 - 添加了 [events.onWarning](../usage-api/config/events.md#onwarning) 事件。

@@ -241,14 +241,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-## onReady
-
-当应用程序加载到浏览器中时调用的函数。
-
-:::danger[Deprecated]
-自 5.0 版起已弃用，请改用 [onAppReady](#onappready)
-:::
-
 ## onRequestClose
 
 当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。如果未声明该方法，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
