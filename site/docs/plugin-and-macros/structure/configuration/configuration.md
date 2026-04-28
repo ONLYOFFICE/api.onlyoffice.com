@@ -525,7 +525,7 @@ Specifies where the plugin will be placed (on the right or left panel).
 
 ### variations.screens
 
-`Type: array of string`
+`Type: string[]`
 
 :::danger[Deprecated]
 Please use the [variations.store.screenshots](#variationsstorescreenshots) parameter instead.
@@ -603,7 +603,7 @@ The background color used for the dark theme plugin icon.
 
 ### variations.store.categories
 
-`Type: array of string`
+`Type: string[]`
 
 Plugin categories in **ONLYOFFICE Plugin Marketplace**:
 
@@ -664,7 +664,7 @@ The path to the scalable plugin icons for the dark theme. Name the icon files of
 
 ### variations.store.screenshots
 
-`Type: array of string`
+`Type: string[]`
 
 Images that are used for the plugin description in the **ONLYOFFICE Plugin Marketplace**.
 

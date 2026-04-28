@@ -20,7 +20,7 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 | --------- | ---------------- | -------- | --------------------------------------------------------------------------------- |
 | c         | string           | required | Defines the command type.                                                         |
 | key       | string           | required | Defines the document identifier used to unambiguously identify the document file. |
-| users     | array of strings | required | Defines the list of the user identifiers.                                         |
+| users     | string[] | required | Defines the list of the user identifiers.                                         |
 
 ## Response example
 

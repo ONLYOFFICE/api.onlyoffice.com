@@ -4,7 +4,7 @@
 
 ## autostart
 
-**类型：** `array of string`
+**类型：** `string[]`
 
 定义插件的标识符数组（在 [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid)) 中输入），它将在编辑器打开时自动启动，并且插件将依次运行。
 
@@ -59,7 +59,7 @@
 
 ## pluginsData
 
-**类型：** `array of string`
+**类型：** `string[]`
 
 定义插件配置文件 ([config.json](../../../../plugin-and-macros/structure/configuration/configuration.md))的绝对 URL 数组。
 

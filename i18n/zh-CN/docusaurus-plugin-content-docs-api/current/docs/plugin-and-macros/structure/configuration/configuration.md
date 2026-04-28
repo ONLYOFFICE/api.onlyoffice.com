@@ -525,7 +525,7 @@ sidebar_position: -5
 
 ### variations.screens
 
-`类型： array of string`
+`类型： string[]`
 
 :::danger[已废弃]
 请改用 [variations.store.screenshots](#variationsstorescreenshots) 参数。
@@ -603,7 +603,7 @@ sidebar_position: -5
 
 ### variations.store.categories
 
-`类型： array of string`
+`类型： string[]`
 
 **ONLYOFFICE 插件市场**中的插件分类：
 
@@ -664,7 +664,7 @@ sidebar_position: -5
 
 ### variations.store.screenshots
 
-`类型： array of string`
+`类型： string[]`
 
 用于 **ONLYOFFICE 插件市场**插件描述的图片。
 

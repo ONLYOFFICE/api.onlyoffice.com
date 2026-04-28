@@ -71,7 +71,7 @@ This function changes the background of a specified slide. Supports solid colors
 | slideNumber    | number           | 2                        | The slide number to change the background.                       |
 | backgroundType | string           | "solid"                  | The background type can be "solid" or "gradient".                |
 | color          | string           | "#FF5733"                | The hexadecimal color code for the solid background.             |
-| gradientColors | array of strings | \["#FF0000", "#0000FF"\] | An array of hexadecimal color codes for the gradient background. |
+| gradientColors | string[] | \["#FF0000", "#0000FF"\] | An array of hexadecimal color codes for the gradient background. |
 
 ## Function execution {#function-execution}
 

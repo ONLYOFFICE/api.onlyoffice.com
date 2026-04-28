@@ -70,7 +70,7 @@ let func = new RegisteredFunction({
 | Name        | Type             | Example                | Description                                                                               |
 | ----------- | ---------------- | ---------------------- | ----------------------------------------------------------------------------------------- |
 | range       | string           | "A1:D10"               | The cell range for pivot table data. If omitted, the active or selected range is used.    |
-| columns     | array of strings | ["Column1", "Column2"] | An array of column names used for pivot rows (categorical/grouping).                      |
+| columns     | string[] | ["Column1", "Column2"] | An array of column names used for pivot rows (categorical/grouping).                      |
 | valueColumn | string           | "Column3"              | The column name used for pivot values (numeric/aggregate).                                |
 
 ## Function execution {#function-execution}
