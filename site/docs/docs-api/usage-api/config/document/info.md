@@ -30,7 +30,7 @@ Starting from version 5.4, please use [uploaded](#uploaded) instead.
 
 **type:** `boolean`
 
-Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is *undefined* or *null*, the *Favorite* icon is not displayed at the editor window header.
+Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is `undefined` or `null`, the *Favorite* icon is not displayed at the editor window header.
 
 **Example**: `true`
 
@@ -56,7 +56,7 @@ Defines the name of the document owner/creator.
 
 **type:** `array of object`
 
-Displays the information about the settings which allow to share the document with other users.
+Displays the information about the settings which allow sharing the document with other users.
 
 **Example**:
 
@@ -121,8 +121,7 @@ const config = {
         },
       ],
       uploaded: "2010-07-07 3:46 PM",
-    }
-    ,
+    },
   },
 };
 

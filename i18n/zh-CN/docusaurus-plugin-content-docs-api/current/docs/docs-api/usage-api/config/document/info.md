@@ -30,7 +30,7 @@
 
 **类型：** `boolean`
 
-定义*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange)事件。如果参数为*undefined*或*null*，则*收藏*图标不会显示在编辑器窗口标题处。
+定义*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange)事件。如果参数为`undefined`或`null`，则*收藏*图标不会显示在编辑器窗口标题处。
 
 **示例**: `true`
 
@@ -121,8 +121,7 @@ const config = {
         },
       ],
       uploaded: "2010-07-07 3:46 PM",
-    }
-    ,
+    },
   },
 };
 
