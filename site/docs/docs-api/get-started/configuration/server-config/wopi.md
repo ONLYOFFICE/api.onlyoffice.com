@@ -34,7 +34,7 @@ Specifies the discovery zone advertised by the document server. For SharePoint i
 
 **type:** `boolean` | **default:** `false`
 
-Adds the Authorization: Bearer <token> header to WOPI requests. Optional by specification, but may be needed for older SharePoint integrations.
+Adds the `Authorization: Bearer <token>` header to WOPI requests. Optional by specification, but may be needed for older SharePoint integrations.
 
 ## wopi.favIconUrlWord
 
