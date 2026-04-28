@@ -54,7 +54,7 @@ Defines the name of the document owner/creator.
 
 ## sharingSettings
 
-**type:** `array of object`
+**type:** `object[]`
 
 Displays the information about the settings which allow sharing the document with other users.
 

@@ -54,7 +54,7 @@
 
 ## sharingSettings
 
-**类型：** `array of object`
+**类型：** `object[]`
 
 显示有关允许与其他用户共享文档的设置的信息。
 
