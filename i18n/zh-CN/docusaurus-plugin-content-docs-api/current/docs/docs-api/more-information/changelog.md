@@ -213,7 +213,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.customization.macrosMode](../usage-api/config/editor/customization/customization-standard-branding.md#macrosmode) 字段。
 - 添加了 [events.onRequestCreateNew](../usage-api/config/events.md#onrequestcreatenew) 事件。
 - 添加了 [document.permissions.copy](../usage-api/config/document/permissions.md#copy) 字段。
-- The [document.permissions.rename](../usage-api/config/document/permissions.md#rename) 字段已弃用，请添加 [events.onRequestRename](../usage-api/config/events.md#onrequestrename) 字段。
+- The `document.permissions.rename` 字段已弃用，请添加 [events.onRequestRename](../usage-api/config/events.md#onrequestrename) 字段。
 
 ## 版本 5.5
 
@@ -223,7 +223,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) 事件。
 - 添加了 [setRevisedFile](../usage-api/methods.md#setrevisedfile) 方法。
 - [methods](../additional-api/signature/browser.md#methods) 参数中的Token。
-- [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) 字段已弃用，请添加 [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) 字段。
+- `document.permissions.changeHistory` 字段已弃用，请添加 [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) 字段。
 - 添加了 [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) 字段。
 - 添加了 [events.onRequestSharingSettings](../usage-api/config/events.md#onrequestsharingsettings) 事件。
 - 添加了 [editorConfig.customization.unit](../usage-api/config/editor/customization/customization-standard-branding.md#unit) 字段。
@@ -238,8 +238,8 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 5.4
 
 - 添加了 [editorConfig.region](../usage-api/config/editor/editor.md#region) 字段。
-- [document.info.created](../usage-api/config/document/info.md#created) 字段已弃用，请改用 [document.info.uploaded](../usage-api/config/document/info.md#uploaded) 字段。
-- [document.info.author](../usage-api/config/document/info.md#author) 字段已弃用，请改用 [document.info.owner](../usage-api/config/document/info.md#owner) 字段。
+- `document.info.created` 字段已弃用，请改用 [document.info.uploaded](../usage-api/config/document/info.md#uploaded) 字段。
+- `document.info.author` 字段已弃用，请改用 [document.info.owner](../usage-api/config/document/info.md#owner) 字段。
 - [events.onReady](../usage-api/config/events.md#onready) 事件被移除。
 - [editorConfig.user](../usage-api/config/editor/editor.md#user) 对象中的 *firstname* 和 *lastname* 字段被删除。
 - 添加了 [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) 事件。
@@ -297,9 +297,9 @@ ONLYOFFICE 文档 API 的更改列表。
 - 更改了 [showMessage](../usage-api/methods.md#showmessage) 方法。
 - 添加了转换到 [odp](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) 格式的功能。
 - 添加了 [document.permissions.comment](../usage-api/config/document/permissions.md#comment) 字段。
-- 添加了 [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) 字段。
+- 添加了 `document.permissions.changeHistory` 字段。
 - 添加了 [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) 事件。
-- 添加了 [document.permissions.rename](../usage-api/config/document/permissions.md#rename) 字段。
+- 添加了 `document.permissions.rename` 字段。
 - 添加了 [events.onRequestRename](../usage-api/config/events.md#onrequestrename) 事件。
 - 添加了 [meta](../additional-api/command-service/meta.md) 命令。
 - 添加了 [events.onMetaChange](../usage-api/config/events.md#onmetachange) 事件。

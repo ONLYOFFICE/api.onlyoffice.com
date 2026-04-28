@@ -222,7 +222,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.macrosMode](../usage-api/config/editor/customization/customization-standard-branding.md#macrosmode) field.
 - Added the [events.onRequestCreateNew](../usage-api/config/events.md#onrequestcreatenew) event.
 - Added the [document.permissions.copy](../usage-api/config/document/permissions.md#copy) field.
-- The [document.permissions.rename](../usage-api/config/document/permissions.md#rename) field is deprecated, please add the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) field instead.
+- The `document.permissions.rename` field is deprecated, please add the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) field instead.
 
 ## Version 5.5
 
@@ -232,7 +232,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) event.
 - Added the [setRevisedFile](../usage-api/methods.md#setrevisedfile) method.
 - Token in [methods](../additional-api/signature/browser.md#methods) parameters.
-- The [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) field is deprecated, please add the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) field instead.
+- The `document.permissions.changeHistory` field is deprecated, please add the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) field instead.
 - Added the [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field.
 - Added the [events.onRequestSharingSettings](../usage-api/config/events.md#onrequestsharingsettings) event.
 - Added the [editorConfig.customization.unit](../usage-api/config/editor/customization/customization-standard-branding.md#unit) field.
@@ -247,8 +247,8 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.4
 
 - Added the [editorConfig.region](../usage-api/config/editor/editor.md#region) field.
-- The [document.info.created](../usage-api/config/document/info.md#created) field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
-- The [document.info.author](../usage-api/config/document/info.md#author) field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
+- The `document.info.created` field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
+- The `document.info.author` field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
 - The [events.onReady](../usage-api/config/events.md#onready) event is removed.
 - The *firstname* and *lastname* fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object is removed.
 - Added the [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) event.
@@ -306,9 +306,9 @@ The list of changes of ONLYOFFICE Docs API.
 - Changed the [showMessage](../usage-api/methods.md#showmessage) method.
 - Added conversion to [odp](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format.
 - Added the [document.permissions.comment](../usage-api/config/document/permissions.md#comment) field.
-- Added the [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) field.
+- Added the `document.permissions.changeHistory` field.
 - Added the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) event.
-- Added the [document.permissions.rename](../usage-api/config/document/permissions.md#rename) field.
+- Added the `document.permissions.rename` field.
 - Added the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) event.
 - Added the [meta](../additional-api/command-service/meta.md) command.
 - Added the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
