@@ -2465,7 +2465,7 @@ interface EventsNormal extends EventsBase {
      * 
      * @note When the function is called, you must call the `refreshHistory` method to initialize version history again. If this method is not declared, the **Restore** button will not be displayed.
      *
-     * @note The Restore button is displayed for the previous document versions only and hidden for the current one. Until version 5.5, the Restore button is only available if the `document.permissions.changeHistory` is set to true.
+     * @note The Restore button is displayed for the previous document versions only and hidden for the current one.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2585,7 +2585,6 @@ interface EventsNormal extends EventsBase {
      * The function called when the user is trying to rename the file by clicking the **Rename... button**.
      *
      * @param event
-     * @note Until version 6.0, the **Rename... button** is only available if the `document.permissions.rename` is set to `true`.
      *
      * @forType `desktop` | `mobile`
      * @example
