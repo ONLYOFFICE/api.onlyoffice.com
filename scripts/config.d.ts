@@ -759,16 +759,16 @@ interface DocumentNormal extends DocumentBase {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/
      */
     permissions?: DocumentPermissions;
-}
 
-interface DocumentEmbedded extends DocumentBase {
     /**
      * Defines if the PDF file is a PDF form or a standard PDF file.
-     * @forType `embedded`
+     * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#isform
      */
     isForm?: boolean,
 }
+
+interface DocumentEmbedded extends DocumentBase {}
 
 
 interface EditorConfigBase {
