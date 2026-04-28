@@ -22,9 +22,7 @@ Specifies absolute URL to the **document storage service** (which [must be imple
 
 **type:** `object`
 
-Defines the co-editing mode and the possibility to change it.
-
-This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
+Defines the co-editing mode and the possibility to change it. This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
 
 **Example**:
 
@@ -252,7 +250,7 @@ The path to the user's avatar.
 
 **type:** `string`
 
-The full name of the user. The length is limited to 128 symbols. Used since version 4.2.
+The full name of the user. The length is limited to 128 symbols.
 
 **Example**: `"John Smith"`
 
