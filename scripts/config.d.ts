@@ -765,7 +765,6 @@ interface DocumentEmbedded extends DocumentBase {
     /**
      * Defines if the PDF file is a PDF form or a standard PDF file.
      * @forType `embedded`
-     * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#isform
      */
     isForm?: boolean,
