@@ -71,7 +71,7 @@ Defines the absolute URL of the document where it will be created and available 
 
 **type:** `string` | **default:** `"en"`
 
-Defines the editor interface language (if some other languages other than English are present). Is set using the two-letter (`de`, `ru`, `it`, etc.) language codes.
+Defines the editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
 
 :::note
 To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four-letter language codes - `pt-PT` or `zh-TW`, respectively. The two-letter `pt` language code sets Portuguese (Brazil) and the `zh` code specifies Chinese (People's Republic of China).
@@ -95,7 +95,7 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 **type:** `string` | **default:** `"edit"`
 
-Defines the editor opening mode. Can be either `"view"` to open the document for viewing, or `"edit"` to open the document in the editing mode allowing to apply changes to the document data.
+Defines the editor opening mode. Can be either `"view"` to open the document for viewing, or `"edit"` to open the document in the editing mode allowing you to apply changes to the document data.
 
 **Example**: `"edit"`
 
@@ -141,7 +141,7 @@ The absolute URL to the document where it is stored.
 
 **Example**: `https://example.com/exampledocument1.docx`
 
-![Recent documents](/assets/images/editor/recent.png) 
+![Recent documents](/assets/images/editor/recent.png)
 
 ## region
 
@@ -153,7 +153,7 @@ Defines the default display format for currency and date and time (in the **Spre
 If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `"en-US"` is used.
 :::
 
-Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](../editor/customization/customization-standard-branding.md#unit) parameter.
+Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](./customization/customization-standard-branding.md#unit) parameter.
 
 **Example**: `"en-US"`
 
