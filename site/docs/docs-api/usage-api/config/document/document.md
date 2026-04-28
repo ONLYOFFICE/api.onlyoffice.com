@@ -79,6 +79,18 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 
 **Example**: `"https://example.com/url-to-example-document.docx"`
 
+## info
+
+**type:** `object`
+
+The document info section. See the [info](info.md) page for available parameters.
+
+## permissions
+
+**type:** `object`
+
+The document permission section. See the [permissions](permissions.md) page for available parameters.
+
 ## Example
 
 ``` ts
@@ -93,6 +105,12 @@ const config = {
     },
     title: "Example Title.pdf",
     url: "https://example.com/url-to-example-document.pdf",
+    info: {
+      // ...
+    },
+    permissions: {
+      // ...
+    },
   },
 };
 

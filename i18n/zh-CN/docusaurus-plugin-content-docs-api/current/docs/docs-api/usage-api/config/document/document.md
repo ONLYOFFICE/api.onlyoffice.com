@@ -79,6 +79,18 @@
 
 **示例**: `"https://example.com/url-to-example-document.docx"`
 
+## info
+
+**类型：** `object`
+
+文档信息部分。有关可用参数，请参阅 [info](info.md) 页面。
+
+## permissions
+
+**类型：** `object`
+
+文档权限部分。有关可用参数，请参阅 [permissions](permissions.md) 页面。
+
 ## 示例
 
 ``` ts
@@ -93,6 +105,12 @@ const config = {
     },
     title: "Example Title.pdf",
     url: "https://example.com/url-to-example-document.pdf",
+    info: {
+      // ...
+    },
+    permissions: {
+      // ...
+    },
   },
 };
 
