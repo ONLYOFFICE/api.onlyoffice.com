@@ -740,7 +740,7 @@ interface DocumentNormal extends DocumentBase {
         uploaded?: string;
 
         /**
-         * Displays the information about the settings which allow to share the document with other users.
+         * Displays the information about the settings which allow sharing the document with other users.
          */
         sharingSettings?: SharingSetting[];
 
