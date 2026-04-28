@@ -6,7 +6,7 @@ The editorConfig section allows you to change the parameters pertaining to the e
 
 **type:** `object`
 
-Specifies the data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in *data.actionLink* parameter, which contains the information about the action in the document that will be scrolled to.
+Specifies the data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
 
 **Example**: `ACTION_DATA`
 
@@ -42,7 +42,7 @@ This parameter is used to apply the [co-editing](../../../get-started/how-it-wor
 The co-editing mode (*fast* or *strict*).
 
 :::note
-In case *mode* setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the *editorConfig.coEditing.mode* parameter.
+In case `mode` setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.coEditing.mode` parameter.
 :::
 
 **Example**: `"fast"`
@@ -148,9 +148,13 @@ The absolute URL to the document where it is stored.
 
 ## region
 
-**type:** `string`
+**type:** `string` | **default:** `"en-US"`
 
-Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes. For the default value the *lang* parameter is taken, or, if no regional setting corresponding to the *lang* value is available, **en-US** is used.
+Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four letter (**en-US**, **fr-FR**, etc.) language codes.
+
+:::note
+If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `"en-US"` is used.
+:::
 
 Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](../editor/customization/customization-standard-branding.md#unit) parameter.
 
@@ -160,7 +164,7 @@ Starting from version 8.2, this parameter also defines the default measurement u
 
 **type:** `array of object`
 
-Defines the presence or absence of the templates in the **Create New\...** menu option.
+Defines the presence or absence of the templates in the **Create New...** menu option.
 
 **Example**:
 
@@ -186,7 +190,7 @@ The absolute URL to the image for template.
 
 **type:** `string`
 
-The template title that will be displayed in the **Create New\...** menu option.
+The template title that will be displayed in the **Create New...** menu option.
 
 **Example**: `"exampletemplate1.docx"`
 
@@ -207,9 +211,9 @@ The absolute URL to the document where it will be created and available after cr
 Defines the user currently viewing or editing the document.
 
 :::note
-The request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, *"data:image/png,base64,\*\*\*\*\*"*.
+The request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, `"data:image/png;base64,*****"`.
 
-If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event and send an avatar using the [setUsers](../../methods.md#setusers) method, the *user.image* field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
+If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event and send an avatar using the [setUsers](../../methods.md#setusers) method, the `user.image` field in the initialization config is not required. We especially don't recommend to specify this parameter if the avatar is sent in the base64 format and the initialization config is signed with JWT. In this case, the token will be too long.
 :::
 
 **Example**:
