@@ -2,18 +2,6 @@
 
 文档权限部分允许更改要编辑和下载的文档的权限。
 
-## changeHistory
-
-**类型：** `boolean` | **默认值：** `false`
-
-允许在使用 [onRequestRestore](../events.md#onrequestrestore) 事件时显示*恢复*按钮。
-
-:::danger[Deprecated]
-自 5.5 版起已弃用，请改为添加 [onRequestRestore](../events.md#onrequestrestore) 字段。
-:::
-
-**示例**: `true`
-
 ## 聊天 {#chat}
 
 **类型：** `boolean` | **默认值：** `true`
@@ -175,18 +163,6 @@ const config = {
 **示例**: `true`
 
 ![保护文档](/assets/images/editor/protect.png#gh-light-mode-only)![保护文档](/assets/images/editor/protect.dark.png#gh-dark-mode-only)
-
-## 重命名 {#rename}
-
-**类型：** `boolean` | **默认值：** `false`
-
-允许在使用 [onRequestRename](../events.md#onrequestrename) 事件时显示 *重命名...* 按钮。
-
-:::danger[Deprecated]
-自 6.0 版起已弃用，请改为添加 [onRequestRename](../events.md#onrequestrename) 字段。
-:::
-
-**示例**: `true`
 
 ## 审阅 {#review}
 

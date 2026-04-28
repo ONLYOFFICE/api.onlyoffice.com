@@ -2,18 +2,6 @@
 
 The document permission section allows you to change the permission for the document to be edited and downloaded or not.
 
-## changeHistory
-
-**type:** `boolean` | **default:** `false`
-
-Defines if the *Restore* button is displayed when using the [onRequestRestore](../events.md#onrequestrestore) event.
-
-:::danger[Deprecated]
-Starting from version 5.5, please use the [onRequestRestore](../events.md#onrequestrestore) event instead.
-:::
-
-**Example**: `true`
-
 ## chat
 
 **type:** `boolean` | **default:** `true`
@@ -175,18 +163,6 @@ Defines if the **Protection** tab on the toolbar and the **Protect** button in t
 **Example**: `true`
 
 ![Protect document](/assets/images/editor/protect.png#gh-light-mode-only)![Protect document](/assets/images/editor/protect.dark.png#gh-dark-mode-only)
-
-## rename
-
-**type:** `boolean` | **default:** `false`
-
-Defines if the *Rename...* button is displayed when using the [onRequestRename](../events.md#onrequestrename) event.
-
-:::danger[Deprecated]
-Starting from version 6.0, please use the [onRequestRename](../events.md#onrequestrename) event instead.
-:::
-
-**Example**: `true`
 
 ## review
 
