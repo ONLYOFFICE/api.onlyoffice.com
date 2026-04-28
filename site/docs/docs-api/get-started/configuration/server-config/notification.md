@@ -26,200 +26,200 @@ Notifications with the following event types and content are sent:
 
 ## notification.rules
 
-`Type: object`
+**type:** `object`
 
 Defines the rules of notification settings for four notification types:
 *licenseExpirationWarning*, *licenseExpirationError*, *licenseLimitEdit*, *licenseLimitLiveViewer*.
 
 ### notification.rules.licenseExpirationWarning
 
-`Type: object`
+**type:** `object`
 
 Defines the rules for the *licenseExpirationWarning* notification settings.
 
 ### notification.rules.licenseExpirationWarning.enable
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines whether the *licenseExpirationWarning* notification is enabled. Each notification type must be enabled separately.
 
 ### notification.rules.licenseExpirationWarning.transportType
 
-`Type: array of strings`   `Default: ["email"]`
+**type:** `array of strings` | **default:** `["email"]`
 
 Defines the way of sending the *licenseExpirationWarning* notification. Currently, only the *email* type is available.
 
 ### notification.rules.licenseExpirationWarning.template
 
-`Type: object`
+**type:** `object`
 
 Defines a template of the *licenseExpirationWarning* notification title and body.
 
 ### notification.rules.licenseExpirationWarning.template.title
 
-`Type: string`   `Default: "%s Docs license expiration warning"`
+**type:** `string` | **default:** `"%s Docs license expiration warning"`
 
 Defines a template of the *licenseExpirationWarning* notification title.
 
 ### notification.rules.licenseExpirationWarning.template.body
 
-`Type: string`
+**type:** `string`
 
 Defines a template of the *licenseExpirationWarning* notification body.
 
 ### notification.rules.licenseExpirationWarning.policies
 
-`Type: object`
+**type:** `object`
 
 Defines the *licenseExpirationWarning* notification sending policy.
 
 ### notification.rules.licenseExpirationWarning.policies.repeatInterval
 
-`Type: string`   `Default: "1d"`
+**type:** `string` | **default:** `"1d"`
 
 Defines the time when the *licenseExpirationWarning* notification will be sent (not more often than the specified period).
 
 ### notification.rules.licenseExpirationError
 
-`Type: object`
+**type:** `object`
 
 Defines the rules for the *licenseExpirationError* notification settings.
 
 ### notification.rules.licenseExpirationError.enable
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines whether the *licenseExpirationError* notification is enabled. Each notification type must be enabled separately.
 
 ### notification.rules.licenseExpirationError.transportType
 
-`Type: array of strings`   `Default: ["email"]`
+**type:** `array of strings` | **default:** `["email"]`
 
 Defines the way of sending the *licenseExpirationError* notification. Currently, only the *email* type is available.
 
 ### notification.rules.licenseExpirationError.template
 
-`Type: object`
+**type:** `object`
 
 Defines a template of the *licenseExpirationError* notification title and body.
 
 ### notification.rules.licenseExpirationError.template.title
 
-`Type: string`   `Default: "%s Docs license expiration warning"`
+**type:** `string` | **default:** `"%s Docs license expiration warning"`
 
 Defines a template of the *licenseExpirationError* notification title.
 
 ### notification.rules.licenseExpirationError.template.body
 
-`Type: string`
+**type:** `string`
 
 Defines a template of the *licenseExpirationError* notification body.
 
 ### notification.rules.licenseExpirationError.policies
 
-`Type: object`
+**type:** `object`
 
 Defines the *licenseExpirationError* notification sending policy.
 
 ### notification.rules.licenseExpirationError.policies.repeatInterval
 
-`Type: string`   `Default: "1d"`
+**type:** `string` | **default:** `"1d"`
 
 Defines the time when the *licenseExpirationError* notification will be sent (not more often than the specified period).
 
 ### notification.rules.licenseLimitEdit
 
-`Type: object`
+**type:** `object`
 
 Defines the rules for the *licenseLimitEdit* notification settings.
 
 ### notification.rules.licenseLimitEdit.enable
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines whether the *licenseLimitEdit* notification is enabled. Each notification type must be enabled separately.
 
 ### notification.rules.licenseLimitEdit.transportType
 
-`Type: array of strings`   `Default: ["email"]`
+**type:** `array of strings` | **default:** `["email"]`
 
 Defines the way of sending the *licenseLimitEdit* notification. Currently, only the *email* type is available.
 
 ### notification.rules.licenseLimitEdit.template
 
-`Type: object`
+**type:** `object`
 
 Defines a template of the *licenseLimitEdit* notification title and body.
 
 ### notification.rules.licenseLimitEdit.template.title
 
-`Type: string`   `Default: "%s Docs license %s limit warning"`
+**type:** `string` | **default:** `"%s Docs license %s limit warning"`
 
 Defines a template of the *licenseLimitEdit* notification title.
 
 ### notification.rules.licenseLimitEdit.template.body
 
-`Type: string`
+**type:** `string`
 
 Defines a template of the *licenseLimitEdit* notification body.
 
 ### notification.rules.licenseLimitEdit.policies
 
-`Type: object`
+**type:** `object`
 
 Defines the *licenseLimitEdit* notification sending policy.
 
 ### notification.rules.licenseLimitEdit.policies.repeatInterval
 
-`Type: string`   `Default: "1h"`
+**type:** `string` | **default:** `"1h"`
 
 Defines the time when the *licenseLimitEdit* notification will be sent (not more often than the specified period).
 
 ### notification.rules.licenseLimitLiveViewer
 
-`Type: object`
+**type:** `object`
 
 Defines the rules for the *licenseLimitLiveViewer* notification settings.
 
 ### notification.rules.licenseLimitLiveViewer.enable
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines whether the *licenseLimitLiveViewer* notification is enabled. Each notification type must be enabled separately.
 
 ### notification.rules.licenseLimitLiveViewer.transportType
 
-`Type: array of strings`   `Default: ["email"]`
+**type:** `array of strings` | **default:** `["email"]`
 
 Defines the way of sending the *licenseLimitLiveViewer* notification. Currently, only the *email* type is available.
 
 ### notification.rules.licenseLimitLiveViewer.template
 
-`Type: object`
+**type:** `object`
 
 Defines a template of the *licenseLimitLiveViewer* notification title and body.
 
 ### notification.rules.licenseLimitLiveViewer.template.title
 
-`Type: string`   `Default: "%s Docs license %s limit warning"`
+**type:** `string` | **default:** `"%s Docs license %s limit warning"`
 
 Defines a template of the *licenseLimitLiveViewer* notification title.
 
 ### notification.rules.licenseLimitLiveViewer.template.body
 
-`Type: string`
+**type:** `string`
 
 Defines a template of the *licenseLimitLiveViewer* notification body.
 
 ### notification.rules.licenseLimitLiveViewer.policies
 
-`Type: object`
+**type:** `object`
 
 Defines the *licenseLimitLiveViewer* notification sending policy.
 
 ### notification.rules.licenseLimitLiveViewer.policies.repeatInterval
 
-`Type: string`   `Default: "1h"`
+**type:** `string` | **default:** `"1h"`
 
 Defines the time when the *licenseLimitLiveViewer* notification will be sent (not more often than the specified period).
 

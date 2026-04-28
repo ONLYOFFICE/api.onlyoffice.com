@@ -8,19 +8,19 @@ These parameters define the server configuration.
 
 ## services.CoAuthoring.server.assemblyFormatAsOrigin
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if the assembled file is saved in its original format or not.
 
 ## services.CoAuthoring.server.callbackRequestTimeout
 
-`Type: object`
+**type:** `object`
 
 Defines the timeout properties for callback requesting.
 
 ### services.CoAuthoring.server.callbackRequestTimeout.connectionAndInactivity
 
-`Type: string`   `Default: "10m"`
+**type:** `string` | **default:** `"10m"`
 
 Defines a period which specifies two timeouts:
 
@@ -32,79 +32,79 @@ This parameter is sent to the **npm** module.
 
 ### services.CoAuthoring.server.callbackRequestTimeout.wholeCycle
 
-`Type: string`   `Default: "10m"`
+**type:** `string` | **default:** `"10m"`
 
 Defines the whole request cycle timeout.
 
 ## services.CoAuthoring.server.documentFormatsFile
 
-`Type: string`   `Default: "../../document-formats/onlyoffice-docs-formats.json"`
+**type:** `string` | **default:** `"../../document-formats/onlyoffice-docs-formats.json"`
 
 Defines a path to the "onlyoffice-docs-formats" file.
 
 ## services.CoAuthoring.server.downloadFileAllowExt
 
-`Type: array of strings`   `Default: ["pdf","xlsx"]`
+**type:** `array of strings` | **default:** `["pdf","xlsx"]`
 
 Defines extensions which are allowed to be downloaded via the downloadFile handler.
 
 ## services.CoAuthoring.server.edit_singleton
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines if the singleton can be edited or not.
 
 ## services.CoAuthoring.server.editorDataStorage
 
-`Type: string`   `Default: "editorDataMemory"`
+**type:** `string` | **default:** `"editorDataMemory"`
 
 Defines the editor data storage. The possible values: *"editorDataRedis"*, *""*.
 
 ## services.CoAuthoring.server.editorStatStorage
 
-`Type: string`   `Default: ""`
+**type:** `string` | **default:** `""`
 
 Defines the editor data storage for license calculation and statistics (local memory or redis). The possible values are *"editorDataMemory"*, *"editorDataRedis"*, or *""*. The default *""* value means that the value of the *editorDataStorage* parameter will be used. This parameter is primarily used for a sharded cluster.
 
 ## services.CoAuthoring.server.forceSaveUsingButtonWithoutChanges
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines whether a file without any changes can be forcesaved by clicking the **Save** button.
 
 ## services.CoAuthoring.server.forgottenfiles
 
-`Type: string`   `Default: "forgotten"`
+**type:** `string` | **default:** `"forgotten"`
 
 Defines a folder name where all the forgotten files are stored.
 
 ## services.CoAuthoring.server.forgottenfilesname
 
-`Type: string`   `Default: "output"`
+**type:** `string` | **default:** `"output"`
 
 Defines a forgotten file name.
 
 ## services.CoAuthoring.server.healthcheckfilepath
 
-`Type: string`   `Default: "../public/healthcheck.docx"`
+**type:** `string` | **default:** `"../public/healthcheck.docx"`
 
 Defines a path where the health check requests will be sent.
 
 ## services.CoAuthoring.server.isAnonymousSupport
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if the anonymous users have access to the editor or live viewer or not.
 
 ## services.CoAuthoring.server.limits_image_download_timeout
 
-`Type: object`
+**type:** `object`
 
 Defines the timeout properties for downloading images.
 
 ### services.CoAuthoring.server.limits_image_download_timeout.connectionAndInactivity
 
-`Type: string`   `Default: "2m"`
+**type:** `string` | **default:** `"2m"`
 
 Defines a period which specifies two timeouts:
 
@@ -116,67 +116,67 @@ This parameter is sent to the **npm** module.
 
 ### services.CoAuthoring.server.limits_image_download_timeout.wholeCycle
 
-`Type: string`   `Default: "2m"`
+**type:** `string` | **default:** `"2m"`
 
 Defines the whole request cycle - a period from the download start to the full download.
 
 ## services.CoAuthoring.server.limits_image_size
 
-`Type: integer`   `Default: 26214400`
+**type:** `integer` | **default:** `26214400`
 
 Defines a maximum size for all the images uploaded in each process (measured in bytes).
 
 ## services.CoAuthoring.server.limits_tempfile_upload
 
-`Type: integer`   `Default: 104857600`
+**type:** `integer` | **default:** `104857600`
 
 Defines a maximum size for all the uploaded temporary files used by each process (measured in bytes).
 
 ## services.CoAuthoring.server.maxRequestChanges
 
-`Type: integer`   `Default: 20000`
+**type:** `integer` | **default:** `20000`
 
 Defines a maximum size of the request changes.
 
 ## services.CoAuthoring.server.mode
 
-`Type: string`   `Default: "development"`
+**type:** `string` | **default:** `"development"`
 
 Defines the server mode.
 
 ## services.CoAuthoring.server.newFileTemplate
 
-`Type: string`   `Default: "../../document-templates/new"`
+**type:** `string` | **default:** `"../../document-templates/new"`
 
 Defines a path to the "new" file template if a file of 0 bytes was received from the link for opening.
 
 ## services.CoAuthoring.server.openProtectedFile
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if the password-protected files can be opened or not.
 
 ## services.CoAuthoring.server.port
 
-`Type: integer`   `Default: 8000`
+**type:** `integer` | **default:** `8000`
 
 Defines the server port.
 
 ## services.CoAuthoring.server.savetimeoutdelay
 
-`Type: integer`   `Default: 5000`
+**type:** `integer` | **default:** `5000`
 
 Defines the conversion start delay time (measured in milliseconds) after the edited file is closed.
 
 ## services.CoAuthoring.server.tokenRequiredParams
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if the [required token parameters](https://api.onlyoffice.com/docs/docs-api/additional-api/signature/browser/#opening-file) will be validated. This is required for security. For example, the conversion token will not be used to open a document.
 
 ## services.CoAuthoring.server.workerpercpu
 
-`Type: integer`   `Default: 1`
+**type:** `integer` | **default:** `1`
 
 Defines a number of worker threads per CPU.
 

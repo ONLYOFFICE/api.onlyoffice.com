@@ -8,7 +8,7 @@ These parameters define the IP filter configuration.
 
 ## services.CoAuthoring.ipfilter.rules
 
-`Type: array of objects`   `Default: [{"address":"*","allowed":true}]`
+**type:** `array of objects` | **default:** `[{"address":"*","allowed":true}]`
 
 Defines the IP filter rules that contain the following parameters:
 
@@ -18,13 +18,13 @@ Defines the IP filter rules that contain the following parameters:
 
 ## services.CoAuthoring.ipfilter.useforrequest
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines if the IP filter is used for the request or not.
 
 ## services.CoAuthoring.ipfilter.errorcode
 
-`Type: integer`   `Default: 403`
+**type:** `integer` | **default:** `403`
 
 Defines an error code for the IP filter.
 

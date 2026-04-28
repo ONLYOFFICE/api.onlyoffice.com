@@ -6,7 +6,7 @@ sidebar_position: 16
 
 ## bottleneck.getChanges
 
-`Type: object`
+**type:** `object`
 
 Defines the [constructor options](https://github.com/SGrondin/bottleneck#constructor) to generate limiters for throttling the database requests.
 

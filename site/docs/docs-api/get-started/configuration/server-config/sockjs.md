@@ -8,19 +8,19 @@ These parameters define the SockJs configuration.
 
 ## services.CoAuthoring.sockjs.disable_cors
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if CORS will be disabled or not. The `true` value prevents the **Access-Control-Allow-Origin** header vulnerability.
 
 ## services.CoAuthoring.sockjs.sockjs_url
 
-`Type: string`   `Default: ""`
+**type:** `string` | **default:** `""`
 
 Defines a path to the `sockjs.min.js` file.
 
 ## services.CoAuthoring.sockjs.websocket
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if the WebSocket protocol is enabled or not.
 

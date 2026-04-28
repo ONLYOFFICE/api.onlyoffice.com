@@ -8,43 +8,43 @@ These parameters define the Admin Panel properties. For more details on using Ad
 
 ## adminPanel.passwordValidation
 
-`Type: object`
+**type:** `object`
 
 Password validation requirements using custom format types
 
 ### adminPanel.passwordValidation.minLength
 
-`Type: string`
+**type:** `string`
 
 be at least 8 characters long
 
 ### adminPanel.passwordValidation.hasDigit
 
-`Type: string`
+**type:** `string`
 
 contain at least one digit
 
 ### adminPanel.passwordValidation.hasUppercase
 
-`Type: string`
+**type:** `string`
 
 contain at least one uppercase letter
 
 ### adminPanel.passwordValidation.hasSpecialChar
 
-`Type: string`
+**type:** `string`
 
 contain at least one special character
 
 ### adminPanel.passwordValidation.allowedCharactersOnly
 
-`Type: string`
+**type:** `string`
 
 contain only uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and special characters (e.g., ! @ # $ % & *)
 
 ## adminPanel.passwordHash
 
-`Type: string`   `Default: ""`
+**type:** `string` | **default:** `""`
 
 Defines a password hash used to protect a password with the PBKDF2-SHA256 algorithm.
 
@@ -54,7 +54,7 @@ The value of this parameter is stored in the *runtime.json* file. E.g., for the 
 
 ## adminPanel.port
 
-`Type: integer`   `Default: 9000`
+**type:** `integer` | **default:** `9000`
 
 Defines the port on which the Admin Panel service is running.
 
