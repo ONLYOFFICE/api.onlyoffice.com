@@ -198,6 +198,8 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [document.permissions.reviewGroups](../usage-api/config/document/permissions.md#reviewgroups) field.
 - Added conversion to [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) formats.
 - Added conversion from [xml](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
+- Removed the deprecated `document.info.author` parameter.
+- Removed the deprecated `document.info.created` parameter.
 
 ## Version 6.2
 
@@ -212,6 +214,8 @@ The list of changes of ONLYOFFICE Docs API.
 - The *text*, *spreadsheet* and *presentation* values for [documentType](../usage-api/config/config.md#documenttype) parameter is deprecated, please use *word*, *cell* and *slide* values instead.
 - Added the *group* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
 - Added conversion from [fb2](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
+- Removed the deprecated `document.permissions.changeHistory` parameter.
+- Removed the deprecated `document.permissions.rename` parameter.
 
 ## Version 6.0
 

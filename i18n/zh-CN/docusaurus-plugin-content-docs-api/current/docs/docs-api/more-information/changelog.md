@@ -198,6 +198,8 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [document.permissions.reviewGroups](../usage-api/config/document/permissions.md#reviewgroups) 字段。
 - 添加了转换为 [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式的功能。
 - 添加了从 [xml](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式转换的功能。
+- 移除了已弃用的 `document.info.author` 参数。
+- 移除了已弃用的 `document.info.created` 参数。
 
 ## 版本 6.2
 
@@ -212,6 +214,8 @@ ONLYOFFICE 文档 API 的更改列表。
 - [documentType](../usage-api/config/config.md#documenttype) 参数的 *text*, *spreadsheet* 和 *presentation* 值已弃用，请改用 *word*, *cell* 和 *slide* 值。
 - 将 *group* 字段添加到 [editorConfig.user](../usage-api/config/editor/editor.md#user)。
 - 添加了从 [fb2](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式的转换的功能。
+- 移除了已弃用的 `document.permissions.changeHistory` 参数。
+- 移除了已弃用的 `document.permissions.rename` 参数。
 
 ## 版本 6.0
 
