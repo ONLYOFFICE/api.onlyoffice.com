@@ -1,6 +1,6 @@
 # Info
 
-The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
+The document info section allows you to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
 
 ## author
 

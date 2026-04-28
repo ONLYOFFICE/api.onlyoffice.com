@@ -1,6 +1,6 @@
 # Editor
 
-The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.
+The editorConfig section allows you to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.
 
 ## actionLink
 
