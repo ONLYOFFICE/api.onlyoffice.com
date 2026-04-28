@@ -70,16 +70,16 @@ import APITable from '@site/src/components/APITable/APITable';
 | url | string | required | 定义要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。 |
 | watermark | object | optional | 定义一个 JSON 对象，其中包含水印的[属性](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md)，在转换过程中将其插入到 pdf 和图像文件中。 |
 | watermark.align | integer | optional | 定义水印形状中的垂直文本对齐方式：**0** - 底部、**1** - 中心、**4** - 顶部。 |
-| watermark.fill | array of integers \| string | optional | 以 RGB 格式定义水印填充颜色，或图像的 URL（base64 支持：*data:image/png;...*）。空数组 \[] 表示水印没有填充。 |
+| watermark.fill | integer[] \| string | optional | 以 RGB 格式定义水印填充颜色，或图像的 URL（base64 支持：*data:image/png;...*）。空数组 \[] 表示水印没有填充。 |
 | watermark.height | integer | optional | 定义以毫米为单位测量的水印高度。 |
-| watermark.margins | array of integers | optional | 定义水印形状中的文本边距（以毫米为单位）。 |
+| watermark.margins | integer[] | optional | 定义水印形状中的文本边距（以毫米为单位）。 |
 | watermark.paragraphs | object[] | optional | 使用当前水印中的段落及其属性定义数组。 |
 | watermark.paragraphs.align | integer | optional | 定义当前段落中的水平文本对齐方式：**0** - 右、**1** - 左、**2** - 居中、**3** - 两端对齐。 |
-| watermark.paragraphs.fill | array of integers | optional | 以 RGB 格式定义段落突出显示。空数组 \[] 表示该段落不突出显示。 |
+| watermark.paragraphs.fill | integer[] | optional | 以 RGB 格式定义段落突出显示。空数组 \[] 表示该段落不突出显示。 |
 | watermark.paragraphs.linespacing | integer | optional | 定义当前段落中的文本行间距。 |
 | watermark.paragraphs.runs | object[] | optional | 定义包含当前段落中的 runs 及其属性的数组。 |
 | watermark.paragraphs.runs.bold | boolean | optional | 定义当前文本是否显示为粗体。 |
-| watermark.paragraphs.runs.fill | array of integers | optional | 以 RGB 格式定义文本突出显示。空数组 \[] 表示文本不突出显示。 |
+| watermark.paragraphs.runs.fill | integer[] | optional | 以 RGB 格式定义文本突出显示。空数组 \[] 表示文本不突出显示。 |
 | watermark.paragraphs.runs.font-family | string | optional | 定义文本字体系列。 |
 | watermark.paragraphs.runs.font-size | string | optional | 定义以磅 (pt) 为单位测量的文本字体大小。 |
 | watermark.paragraphs.runs.italic | boolean | optional | 定义当前文本是否显示为斜体。 |
@@ -87,7 +87,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.paragraphs.runs.text | string | optional | 定义 run 文本。 |
 | watermark.paragraphs.runs.underline | boolean | optional | 定义当前文本是否显示下划线。 |
 | watermark.rotate | integer | optional | 定义水印旋转角度（以度为单位）。 |
-| watermark.stroke | array of integers | optional | 以 RGB 格式定义水印描边颜色。空数组 \[] 表示水印笔划没有填充。 |
+| watermark.stroke | integer[] | optional | 以 RGB 格式定义水印描边颜色。空数组 \[] 表示水印笔划没有填充。 |
 | watermark.stroke-width | integer | optional | 定义以毫米为单位测量的水印描边宽度。 |
 | watermark.transparent | float | optional | 定义水印透明度。 |
 | watermark.type | string | optional | 定义指定当前水印的预设形状几何形状的[形状类型](../../../office-api/usage-api/text-document-api/Enumeration/ShapeType.md)。 |

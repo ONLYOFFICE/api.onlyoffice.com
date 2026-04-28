@@ -70,16 +70,16 @@ import APITable from '@site/src/components/APITable/APITable';
 | url | string | required | Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 | watermark | object | optional | Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
 | watermark.align | integer | optional | Defines the vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
-| watermark.fill | array of integers \| string | optional | Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
+| watermark.fill | integer[] \| string | optional | Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
 | watermark.height | integer | optional | Defines the watermark height measured in millimeters. |
-| watermark.margins | array of integers | optional | Defines the text margins measured in millimeters in the watermark shape. |
+| watermark.margins | integer[] | optional | Defines the text margins measured in millimeters in the watermark shape. |
 | watermark.paragraphs | object[] | optional | Defines the array with paragraphs from the current watermark with their properties. |
 | watermark.paragraphs.align | integer | optional | Defines the horizontal text align in the current paragraph: **0** - right, **1** - left, **2** - center, **3** - justify. |
-| watermark.paragraphs.fill | array of integers | optional | Defines the paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted. |
+| watermark.paragraphs.fill | integer[] | optional | Defines the paragraph highlight in the RGB format. The empty array \[] means that the paragraph is not highlighted. |
 | watermark.paragraphs.linespacing | integer | optional | Defines the text linespacing in the current paragraph. |
 | watermark.paragraphs.runs | object[] | optional | Defines the array with runs from the current paragraph with their properties. |
 | watermark.paragraphs.runs.bold | boolean | optional | Defines if the current text is displayed bold or not. |
-| watermark.paragraphs.runs.fill | array of integers | optional | Defines the text highlight in the RGB format. The empty array \[] means that the text is not highlighted. |
+| watermark.paragraphs.runs.fill | integer[] | optional | Defines the text highlight in the RGB format. The empty array \[] means that the text is not highlighted. |
 | watermark.paragraphs.runs.font-family | string | optional | Defines the text font family. |
 | watermark.paragraphs.runs.font-size | string | optional | Defines the text font size measured in points (pt). |
 | watermark.paragraphs.runs.italic | boolean | optional | Defines if the current text is displayed italic or not. |
@@ -87,7 +87,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.paragraphs.runs.text | string | optional | Defines the run text. |
 | watermark.paragraphs.runs.underline | boolean | optional | Defines if the current text is displayed underlined or not. |
 | watermark.rotate | integer | optional | Defines the watermark rotation angle measured in degrees. |
-| watermark.stroke | array of integers | optional | Defines the watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill. |
+| watermark.stroke | integer[] | optional | Defines the watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill. |
 | watermark.stroke-width | integer | optional | Defines the watermark stroke width measured in millimeters. |
 | watermark.transparent | float | optional | Defines the watermark transparency degree. |
 | watermark.type | string | optional | Defines the [shape type](../../../office-api/usage-api/text-document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
