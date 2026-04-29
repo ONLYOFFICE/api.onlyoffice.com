@@ -322,7 +322,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 4.3
 
 - Added the [destroyEditor](../usage-api/methods.md#destroyeditor) method.
-- Removed the [editorConfig.plugins.url](../usage-api/config/editor/plugins.md#url) field from the plugin connection pattern.
+- Removed the `editorConfig.plugins.url` field from the plugin connection pattern.
 - Added the [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) field.
 - Added the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) field.
 - Added the [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) field.

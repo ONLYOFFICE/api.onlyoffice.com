@@ -65,18 +65,6 @@ Defines the array of absolute URLs to the plugin configuration files ([config.js
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
-## url
-
-**type:** `string`
-
-Defines the absolute URL to the directory where the plugins are stored.
-
-:::danger[Deprecated]
-Starting from version 4.3, please use the absolute URLs in [pluginsData](#pluginsdata) field instead.
-:::
-
-**Example**: `https://example.com/plugins/`
-
 ![Plugins](/assets/images/editor/plugins.png#gh-light-mode-only)![Plugins](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
 ## Example
@@ -101,7 +89,6 @@ const config = {
       pluginsData: [
         "https://example.com/plugins/chess-plugin/config.json",
       ],
-      url: "https://example.com/plugins/",
     },
   },
 };

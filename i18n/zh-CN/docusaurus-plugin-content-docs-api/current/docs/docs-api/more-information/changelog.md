@@ -322,7 +322,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 4.3
 
 - 添加了 [destroyEditor](../usage-api/methods.md#destroyeditor) 方法。
-- 从插件连接模式中删除了 [editorConfig.plugins.url](../usage-api/config/editor/plugins.md#url) 方法。
+- 从插件连接模式中删除了 `editorConfig.plugins.url` 方法。
 - 添加了 [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) 方法。
 - 添加了 [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 方法。
 - 添加了 [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) 方法。

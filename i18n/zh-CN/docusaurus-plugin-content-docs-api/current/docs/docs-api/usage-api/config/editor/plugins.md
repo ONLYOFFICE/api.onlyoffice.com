@@ -65,18 +65,6 @@
 
 **示例**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
-## url
-
-**类型：** `string`
-
-定义存储插件的目录的绝对 URL。
-
-:::danger[Deprecated]
-自 4.3 版起已弃用，请在 [pluginsData](#pluginsdata) 字段中使用绝对 URL。
-:::
-
-**示例**: `https://example.com/plugins/`
-
 ![插件](/assets/images/editor/plugins.png#gh-light-mode-only)![插件](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
 ## 示例
@@ -101,7 +89,6 @@ const config = {
       pluginsData: [
         "https://example.com/plugins/chess-plugin/config.json",
       ],
-      url: "https://example.com/plugins/",
     },
   },
 };
