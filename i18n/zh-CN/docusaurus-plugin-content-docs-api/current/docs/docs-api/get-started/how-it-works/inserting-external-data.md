@@ -113,7 +113,6 @@ sidebar_position: -6
    });
    ```
 
-   其中`example.com`是安装了**文档管理器**和**文档存储服务**的服务器名称。有关ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](./how-it-works.md)部分。
 
 ## 使用外部链接
 
@@ -142,7 +141,6 @@ sidebar_position: -6
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中`example.com`是安装了**文档管理器**和**文档存储服务**的服务器名称。有关ONLYOFFICE 文档服务客户端-服务器交互的更多信息，请参阅[工作原理](./how-it-works.md)部分。
 
 2. 在初始化配置中指定[`onRequestReferenceSource`](../../usage-api/config/events.md#onrequestreferencesource)事件处理程序，以显示*更改源*按钮。当用户点击*更改源*更改外部链接时，此事件将触发。如果未声明该事件，*更改源*按钮将不会显示。
 

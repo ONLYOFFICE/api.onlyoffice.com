@@ -79,7 +79,6 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 | Parameter       | Type             | Presence | Description                                                                                                                                                                                                                                                      |
 | --------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -259,7 +258,6 @@ Send the link to the document for viewing the version history. This method must 
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 If after editing and saving the document the *changesurl* link to the file with changes data is returned, download the file by this link and send the file URL in the *changesUrl* parameter. The absolute URL address of the document previous version must be sent in the *previous.url* parameter.
 
@@ -279,7 +277,6 @@ If after editing and saving the document the *changesurl* link to the file with 
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Send an error message explaining why the document version cannot be displayed:
 
@@ -316,7 +313,6 @@ Insert recipient data for mail merge into the file. This method must be called a
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                         |
 | --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -350,7 +346,6 @@ Please note that this method is executed only when the user has permissions to t
   });
   ```
 
-Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Show an error message explaining if any error occurred:
 
@@ -392,7 +387,6 @@ Please note that this method is executed only when the user has permissions to t
   });
   ```
 
-Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 Show an error message explaining if any error occurred:
 
@@ -425,7 +419,6 @@ Select a document for comparing, combining, or inserting text. This method must 
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                             |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -447,7 +440,6 @@ Insert recipient data for mail merge into the file. This method must be called a
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                         |
 | --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -472,7 +464,6 @@ This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyo
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 | Parameter | Type   | Presence | Description                                                                                                                                                                             |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -530,7 +521,6 @@ Set a list of users to mention in the comments, grant the access rights to edit 
   });
   ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 | Parameter   | Type             | Presence | Description                                                                                                                                                                                               |
 | ----------- | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

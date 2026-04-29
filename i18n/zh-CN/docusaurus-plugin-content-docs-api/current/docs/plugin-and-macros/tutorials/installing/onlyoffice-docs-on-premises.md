@@ -102,7 +102,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了文档管理器和文档存储服务，以及放置插件的服务器的名称。请参阅[工作原理](../../../docs-api/get-started/how-it-works/how-it-works.md)部分，以了解有关 ONLYOFFICE 文档客户端与服务器交互的更多信息。
 
 `https://example.com/plugin1/config.json` 是插件的路径。
 

@@ -113,7 +113,6 @@ The figure and steps below explain how data from one spreadsheet is inserted int
    });
    ```
 
-   Where `example.com` is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section for more on ONLYOFFICE Docs service client-server interactions.
 
 ## Working with external links
 
@@ -142,7 +141,6 @@ The figure and steps below explain how data from one spreadsheet is inserted int
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where `example.com` is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section for more on ONLYOFFICE Docs service client-server interactions.
 
 2. Specify the [`onRequestReferenceSource`](../../usage-api/config/events.md#onrequestreferencesource) event handler in the initialization config for the *Change source* button to appear. When the user clicks *Change source* to change an external link, this event fires. If the event is not declared, the *Change source* button will not appear.
 

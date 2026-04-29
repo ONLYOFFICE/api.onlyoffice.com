@@ -126,7 +126,6 @@ This example shows a basic request to convert a *docx* file to *pdf* format.
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Converting password-protected docx to pdf
 
@@ -144,7 +143,6 @@ This example shows how to convert a password-protected *docx* file to *pdf* form
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Converting docx to pdf form
 
@@ -164,7 +162,6 @@ This example shows how to convert a *docx* file to a fillable *pdf* form using t
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Converting docx to pdf with watermark
 
@@ -215,7 +212,6 @@ This example shows how to convert a *docx* file to *pdf* format with a watermark
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Generating png thumbnail from docx
 
@@ -237,7 +233,6 @@ This example shows how to generate a *png* thumbnail from a *docx* file using th
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Converting spreadsheet to pdf
 
@@ -273,7 +268,6 @@ This example shows how to convert a spreadsheet file to *pdf* format using the *
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.xlsx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ### Converting docx to pdf with JWT
 
@@ -285,4 +279,3 @@ This example shows how to convert a *docx* file to *pdf* format using a JSON Web
 }
 ```
 
-Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](../../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

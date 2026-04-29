@@ -51,7 +51,6 @@ To install it on your local server:
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](/docs/docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
    From now the [`docEditor`](/docs/docs-api/usage-api/doceditor.md) object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
 
