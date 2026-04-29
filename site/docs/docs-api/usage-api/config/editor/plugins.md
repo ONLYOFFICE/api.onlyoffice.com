@@ -14,7 +14,7 @@ Defines the array of the identifiers (as entered in [config.json](../../../../pl
 
 **type:** `object`
 
-Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the **SetPluginsOptions** method of the [Automation API](../../automation-api/automation-api.md) to pass the *options* object to the plugin.
+Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass the `options` object to the plugin.
 
 **Example**:
 
@@ -45,7 +45,7 @@ Defines the parameters which will be set for all plugins.
 
 **type:** `object`
 
-Defines the parameters which will be set for a specific plugin. The plugin must be specified with the plugin GUID of the *asc.\{UUID\}* type.
+Defines the parameters which will be set for a specific plugin. The plugin must be specified with the plugin GUID of the `asc.{UUID}` type.
 
 **Example**:
 
@@ -61,7 +61,7 @@ Defines the parameters which will be set for a specific plugin. The plugin must 
 
 **type:** `string[]`
 
-Defines the array of absolute URLs to the plugin configuration files ([config.json](../../../../plugin-and-macros/structure/configuration/configuration.md)).
+Defines the array of absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 

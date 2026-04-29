@@ -14,7 +14,7 @@
 
 **类型：** `object`
 
-定义一个允许从外部源配置插件的对象。可以为所有插件或特定插件设置设置。例如，此对象可用于将授权令牌传递给插件。您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 **SetPluginsOptions** 方法将 *options* 对象传递给插件。
+定义一个允许从外部源配置插件的对象。可以为所有插件或特定插件设置设置。例如，此对象可用于将授权令牌传递给插件。您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) 方法将 `options` 对象传递给插件。
 
 **示例**:
 
@@ -45,7 +45,7 @@
 
 **类型：** `object`
 
-定义将为特定插件设置的参数。必须使用 *asc.\{UUID\}* 类型的插件 GUID 指定插件。
+定义将为特定插件设置的参数。必须使用 `asc.{UUID}` 类型的插件 GUID 指定插件。
 
 **示例**:
 
@@ -61,7 +61,7 @@
 
 **类型：** `string[]`
 
-定义插件配置文件 ([config.json](../../../../plugin-and-macros/structure/configuration/configuration.md))的绝对 URL 数组。
+定义插件 [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) 文件的绝对 URL 数组。
 
 **示例**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
