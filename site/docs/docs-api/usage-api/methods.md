@@ -45,7 +45,7 @@ Deny editing. This method can be called when you want to make the document editi
 
 ## destroyEditor
 
-Destroy `docEditor` object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.
+Destroy `docEditor` object. This method can be called when you want to reinit document editor with other configurations.
 
   ``` ts
   docEditor.destroyEditor();

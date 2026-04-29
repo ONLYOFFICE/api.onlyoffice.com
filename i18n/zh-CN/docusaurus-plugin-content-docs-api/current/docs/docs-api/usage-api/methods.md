@@ -45,7 +45,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## destroyEditor
 
-销毁 `docEditor` 对象。当您想使用其他配置重新启动文档编辑器时，可以调用此方法。从 4.3 版开始使用。
+销毁 `docEditor` 对象。当您想使用其他配置重新启动文档编辑器时，可以调用此方法。
 
   ``` ts
   docEditor.destroyEditor();
