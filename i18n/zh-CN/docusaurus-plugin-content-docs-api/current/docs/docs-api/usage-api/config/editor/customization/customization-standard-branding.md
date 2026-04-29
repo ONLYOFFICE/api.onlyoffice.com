@@ -306,7 +306,7 @@ const features = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义在加载编辑器时拼写检查器是自动打开还是关闭。如果此参数为布尔值，则将其设置为初始拼写检查值，并且不会隐藏拼写检查设置。
+定义在加载编辑器时拼写检查器是自动打开还是关闭。可以是布尔值或对象。如果设置为 `true` 或 `false`，该值将用作初始拼写检查状态，且不会隐藏该设置。
 
 **示例**: `true`
 
@@ -326,7 +326,7 @@ const features = {
 
 **类型：** `object | string` | **默认值：** `"header"`
 
-定义顶部工具栏选项卡的背景。如果此参数是字符串值（`"header"` 或 `"toolbar"`），则将其设置为初始选项卡背景值，并且不会隐藏选项卡背景设置。
+定义顶部工具栏选项卡的背景。可以是字符串或对象。如果设置为 `"header"` 或 `"toolbar"`，该值将用作初始选项卡背景，且不会隐藏该设置。
 
 **示例**: `"header"`
 
@@ -334,7 +334,7 @@ const features = {
 
 **类型：** `string` | **默认值：** `"header"`
 
-定义顶部工具栏选项卡的背景是否与标题背景（`"header"`）或工具栏背景（`"toolbar"`）匹配。首次打开编辑器时使用此值。
+定义顶部工具栏选项卡的背景。如果设置为 `"header"`，选项卡背景与标题背景匹配。如果设置为 `"toolbar"`，选项卡背景与工具栏背景匹配。首次打开编辑器时使用此值。
 
 **示例**: `"header"`
 
@@ -352,7 +352,7 @@ const features = {
 
 **类型：** `object | string` | **默认值：** `"fill"`
 
-定义顶部工具栏选项卡的样式。如果此参数是字符串值（`"fill"` 或 `"line"`），则将其设置为初始选项卡样式值，并且选项卡样式设置不会被隐藏。
+定义顶部工具栏选项卡的样式。可以是字符串或对象。如果设置为 `"fill"` 或 `"line"`，该值将用作初始选项卡样式，且不会隐藏该设置。
 
 **示例**: `"fill"`
 
@@ -360,7 +360,7 @@ const features = {
 
 **类型：** `string` | **默认值：** `"fill"`
 
-定义顶部工具栏选项卡是否清晰显示（`"fill"`）或仅突出显示以查看选择了哪个选项卡（`"line"`）。此值在编辑器首次打开时使用。
+定义顶部工具栏选项卡的样式。如果设置为 `"fill"`，选项卡清晰显示。如果设置为 `"line"`，选项卡仅突出显示以查看选择了哪个。此值在编辑器首次打开时使用。
 
 **示例**: `"fill"`
 
@@ -378,7 +378,7 @@ const features = {
 
 **类型：** `boolean | object` | **默认值：** `false`
 
-定义**反馈和支持**菜单按钮的设置。可以是布尔值（仅显示或隐藏**反馈和支持**菜单按钮）或对象。
+定义**反馈和支持**菜单按钮的设置。可以是布尔值或对象。如果设置为 `true`，按钮显示。如果设置为 `false`，按钮隐藏。如果设置为对象，使用 `url` 和 `visible` 属性来配置按钮。
 
 :::note
 此参数也适用于移动编辑器。
@@ -606,7 +606,7 @@ const logo = {
 
 **类型：** `string`
 
-当有人单击徽标图像时将使用的绝对 URL（可用于访问您的网站等）。保留为空字符串或 `null` 以使徽标不可点击。
+单击徽标图像时打开的绝对 URL。设置为空字符串或 `null` 以使徽标不可点击。
 
 **示例**: `https://example.com`
 
@@ -732,7 +732,7 @@ const mobile = {
 
 **类型：** `string` | **默认值：** `"select"`
 
-定义在查看器中加载演示文稿编辑器时的指针模式（`"select"` 或 `"hand"`）。
+定义在查看器中加载演示文稿编辑器时的指针模式。如果设置为 `"select"`，使用选择模式。如果设置为 `"hand"`，使用手形模式。
 
 **示例**: `"select"`
 
@@ -805,7 +805,7 @@ const review = {
 
 **类型：** `boolean`
 
-无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义文档是否以审阅编辑模式打开（审阅模式仅针对当前用户更改）。如果设置为 `true`，启用审阅模式。如果设置为 `false`，禁用审阅模式。如果参数为 `undefined`，则使用 `document.permissions.review` 值（对于所有文档用户）。
+定义是否为当前用户启用审阅编辑模式。此参数会覆盖 [document.permissions.review](../../document/permissions.md#review)。如果设置为 `true`，启用审阅模式。如果设置为 `false`，禁用审阅模式。如果为 `undefined`，则使用 `document.permissions.review` 值。
 
 **示例**: `true`
 
@@ -886,7 +886,7 @@ const review = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-从版本 8.3 开始，定义**完成并提交**按钮设置。如果此参数是布尔值，则指定**完成并提交**按钮将在顶部工具栏上显示还是隐藏。按钮仅适用于 `pdf` 格式。
+从版本 8.3 开始，定义**完成并提交**按钮设置。可以是布尔值或对象。如果设置为 `true`，按钮显示。如果设置为 `false`，按钮隐藏。如果设置为对象，使用 `visible` 和 `resultMessage` 属性来配置按钮。该按钮仅适用于 `pdf` 格式。
 
 **示例**: `true`
 
@@ -907,11 +907,11 @@ const review = {
 
 定义表单提交后显示的消息。可用的值如下：
 
-- **""** - 不显示消息；
-- **null / undefined** - 显示默认消息；
-- **"text"** - 显示用户指定的任何文本。
+- `""` - 不显示消息；
+- `null` / `undefined` - 显示默认消息；
+- `"自定义文本"` - 显示自定义消息。
 
-**示例**: `"text"`
+**示例**: `"Form submitted successfully"`
 
 ## suggestFeature
 
@@ -955,7 +955,7 @@ const review = {
 
 **类型：** `boolean`
 
-无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义是（`true`）否（`false`）以审阅编辑模式打开文档（仅针对当前用户更改审阅模式）。如果参数是 `undefined`，则使用 `document.permissions.review` 值（对于所有文档用户）。
+定义是否为当前用户启用审阅编辑模式。此参数会覆盖 [document.permissions.review](../../document/permissions.md#review)。如果设置为 `true`，启用审阅模式。如果设置为 `false`，禁用审阅模式。如果为 `undefined`，则使用 `document.permissions.review` 值。
 
 :::danger[Deprecated]
 自 7.0 版起已弃用。请改用 [review.trackChanges](#reviewtrackchanges) 参数。
@@ -969,8 +969,8 @@ const review = {
 
  定义编辑器主题设置。可以通过两种方式设置：
 
-- **theme id** - 用户通过其 id 设置主题参数（**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**, **theme-white**, **theme-night**）；
-- **default theme** - 将设置默认的深色或浅色主题值（**default-dark**，**default-light**）。默认的浅色主题是 **theme-classic-light**。
+- **theme id** - 用户通过其 id 设置主题参数：`"theme-light"`、`"theme-classic-light"`、`"theme-dark"`、`"theme-contrast-dark"`、`"theme-white"`、`"theme-night"`；
+- **default theme** - 将设置默认的深色或浅色主题值：`"default-dark"`、`"default-light"`。默认的浅色主题是 `"theme-classic-light"`。
 
 第一个选项具有更高的优先级。
 
@@ -981,7 +981,7 @@ const review = {
 :::
 
 :::note
-从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：**theme-light**、**theme-dark**、**default-light**、**default-dark**。
+从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：`"theme-light"`、`"theme-dark"`、`"default-light"`、`"default-dark"`。
 :::
 
 **示例**: `"theme-dark"`
@@ -1115,7 +1115,7 @@ const config = {
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
-        resultMessage: "text",
+        resultMessage: "Form submitted successfully",
       },
       suggestFeature: true,
       toolbarHideFileName: false,

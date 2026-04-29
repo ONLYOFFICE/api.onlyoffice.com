@@ -306,7 +306,7 @@ This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onl
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines if the spell checker is automatically switched on or off when the editor is loaded. If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
+Defines if the spell checker is automatically switched on or off when the editor is loaded. Can be a boolean or an object. If set to `true` or `false`, the value is used as the initial spell checker state and the setting will not be hidden.
 
 **Example**: `true`
 
@@ -326,7 +326,7 @@ In case `spellcheck` setting is changed in the editor interface, it will be stor
 
 **type:** `object | string` | **default:** `"header"`
 
-Defines the background of the top toolbar tabs. If this parameter is a string value (`"header"` or `"toolbar"`), then it is set as the initial tab background value and the tab background setting will not be hidden.
+Defines the background of the top toolbar tabs. Can be a string or an object. If set to `"header"` or `"toolbar"`, the value is used as the initial tab background and the setting will not be hidden.
 
 **Example**: `"header"`
 
@@ -334,7 +334,7 @@ Defines the background of the top toolbar tabs. If this parameter is a string va
 
 **type:** `string` | **default:** `"header"`
 
-Defines if the background of the top toolbar tabs matches the header background (`"header"`) or the toolbar background (`"toolbar"`). This value is used when the editor is first opened.
+Defines the background of the top toolbar tabs. If set to `"header"`, the tab background matches the header. If set to `"toolbar"`, the tab background matches the toolbar. This value is used when the editor is first opened.
 
 **Example**: `"header"`
 
@@ -352,7 +352,7 @@ Defines if the tab background setting will be displayed in the **File -> Advance
 
 **type:** `object | string` | **default:** `"fill"`
 
-Defines the style of the top toolbar tabs. If this parameter is a string value (`"fill"` or `"line"`), then it is set as the initial tab style value and the tab style setting will not be hidden.
+Defines the style of the top toolbar tabs. Can be a string or an object. If set to `"fill"` or `"line"`, the value is used as the initial tab style and the setting will not be hidden.
 
 **Example**: `"fill"`
 
@@ -360,7 +360,7 @@ Defines the style of the top toolbar tabs. If this parameter is a string value (
 
 **type:** `string` | **default:** `"fill"`
 
-Defines if the top toolbar tabs are distinctly displayed (`"fill"`) or only highlighted to see which one is selected (`"line"`). This value is used when the editor is first opened.
+Defines the style of the top toolbar tabs. If set to `"fill"`, the tabs are distinctly displayed. If set to `"line"`, the tabs are only highlighted to see which one is selected. This value is used when the editor is first opened.
 
 **Example**: `"fill"`
 
@@ -378,7 +378,7 @@ Defines if the tab style setting will be displayed in the **File -> Advanced set
 
 **type:** `boolean | object` | **default:** `false`
 
-Defines settings for the **Feedback & Support** menu button. Can be either boolean (simply displays or hides the **Feedback & Support** menu button) or object.
+Defines settings for the **Feedback & Support** menu button. Can be a boolean or an object. If set to `true`, the button is displayed. If set to `false`, the button is hidden. If set to an object, use the `url` and `visible` properties to configure the button.
 
 :::note
 This parameter is also available for the mobile editors.
@@ -606,7 +606,7 @@ Starting from version 7.0, please use the [logo.image](#logoimage) field instead
 
 **type:** `string`
 
-The absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.). Leave as an empty string or `null` to make the logo not clickable.
+The absolute URL to open when the logo image is clicked. Leave as an empty string or `null` to make the logo not clickable.
 
 **Example**: `"https://example.com"`
 
@@ -732,7 +732,7 @@ Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md
 
 **type:** `string` | **default:** `"select"`
 
-Defines the pointer mode (`"select"` or `"hand"`) when the presentation editor is loaded in the viewer.
+Defines the pointer mode when the presentation editor is loaded in the viewer. If set to `"select"`, the selection mode is used. If set to `"hand"`, the hand mode is used.
 
 **Example**: `"select"`
 
@@ -805,7 +805,7 @@ Defines if the review changes panel is automatically displayed or hidden when th
 
 **type:** `boolean`
 
-Defines if the document is opened in the review editing mode regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
+Defines if the review editing mode is enabled for the current user. This parameter overrides [document.permissions.review](../../document/permissions.md#review). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If `undefined`, the `document.permissions.review` value is applied instead.
 
 **Example**: `true`
 
@@ -886,7 +886,7 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **type:** `object | boolean` | **default:** `true`
 
-Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. The button will only be available for the `pdf` format.
+Starting from version 8.3, defines the **Complete & Submit** button settings. Can be a boolean or an object. If set to `true`, the button is displayed. If set to `false`, the button is hidden. If set to an object, use the `visible` and `resultMessage` properties to configure the button. The button will only be available for the `pdf` format.
 
 **Example**: `true`
 
@@ -907,11 +907,11 @@ Defines whether the **Complete & Submit** button will be displayed or hidden on 
 
 Defines a message displayed after forms are submitted. The following values are available:
 
-- **""** - the message will not be displayed;
-- **null / undefined** - the default message will be displayed;
-- **"text"** - any text that the user specifies will be displayed.
+- `""` - the message will not be displayed;
+- `null` / `undefined` - the default message will be displayed;
+- `"your text"` - a custom message will be displayed.
 
-**Example**: `"text"`
+**Example**: `"Form submitted successfully"`
 
 ## suggestFeature
 
@@ -955,7 +955,7 @@ Starting from version 8.2, please use the [editorConfig.customization.features.t
 
 **type:** `boolean`
 
-Defines if the document is opened in the review editing mode regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
+Defines if the review editing mode is enabled for the current user. This parameter overrides [document.permissions.review](../../document/permissions.md#review). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If `undefined`, the `document.permissions.review` value is applied instead.
 
 :::danger[Deprecated]
 Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
@@ -969,8 +969,8 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 Defines the editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id (**theme-light**, **theme-classic-light**, **theme-dark**, **theme-contrast-dark**, **theme-white**, **theme-night**);
-- **default theme** - the default dark or light theme value will be set (**default-dark**, **default-light**). The default light theme is **theme-classic-light**.
+- **theme id** - the user sets the theme parameter by its id: `"theme-light"`, `"theme-classic-light"`, `"theme-dark"`, `"theme-contrast-dark"`, `"theme-white"`, `"theme-night"`;
+- **default theme** - the default dark or light theme value will be set: `"default-dark"`, `"default-light"`. The default light theme is `"theme-classic-light"`.
 
 The first option has higher priority.
 
@@ -981,7 +981,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 :::
 
 :::note
-Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: **theme-light**, **theme-dark**, **default-light**, **default-dark**.
+Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: `"theme-light"`, `"theme-dark"`, `"default-light"`, `"default-dark"`.
 :::
 
 **Example**: `"theme-dark"`
@@ -1115,7 +1115,7 @@ const config = {
       slidePlayerBackground: "#000000",
       submitForm: {
         visible: true,
-        resultMessage: "text",
+        resultMessage: "Form submitted successfully",
       },
       suggestFeature: true,
       toolbarHideFileName: false,
