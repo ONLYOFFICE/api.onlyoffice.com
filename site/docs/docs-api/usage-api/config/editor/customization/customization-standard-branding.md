@@ -24,9 +24,11 @@ Adds a request for the anonymous name.
 ``` ts
 const anonymous = {
   request: true,
-  label: "Guest",
+  label: "Elizabeth",
 }
 ```
+
+![Anonymous](/assets/images/editor/anonymous.png)
 
 ### anonymous.request
 
@@ -42,9 +44,7 @@ Defines if the request is sent or not.
 
 A postfix added to the user name.
 
-**Example**: `"Guest"`
-
-![Anonymous](/assets/images/editor/anonymous.png)
+**Example**: `"Elizabeth"`
 
 ## autosave
 
@@ -115,7 +115,7 @@ This parameter is also available for the mobile editors.
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the user can edit and delete only his comments.
+Defines if the user can edit and delete only their comments.
 
 :::danger[Deprecated]
 Starting from version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) fields instead.
@@ -161,7 +161,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **type:** `boolean` | **default:** `false`
 
-Defines the use of functionality only compatible with the OOXML format. For example, do not use comments on the entire document.
+Defines the use of functionality only compatible with the OOXML format. For example, commenting on the entire document is disabled.
 
 **Example**: `false`
 
@@ -526,7 +526,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **type:** `boolean`
 
-Defines if the editor rulers are displayed or hidden. This parameter is available for the document and presentation editors. The default value is `false` for the document editor and `true` for presentations.
+Defines if the editor rulers are displayed or hidden. This parameter is available for the document and presentation editors. The default value is `false` for the document editor and `true` for the presentation editor.
 
 **Example**: `false`
 
@@ -886,7 +886,7 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **type:** `object | boolean` | **default:** `true`
 
-Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the `pdf` format.
+Starting from version 8.3, defines the **Complete & Submit** button settings. If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. The button will only be available for the `pdf` format.
 
 **Example**: `true`
 
@@ -897,7 +897,7 @@ Starting from version 8.3, defines the **Complete & Submit** button settings. If
 
 **type:** `boolean` | **default:** `true`
 
-Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. Button will only be available for the `pdf` format.
+Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. The button will only be available for the `pdf` format.
 
 **Example**: `true`
 
@@ -1034,7 +1034,7 @@ const config = {
     customization: {
       anonymous: {
         request: true,
-        label: "Guest",
+        label: "Elizabeth",
       },
       autosave: true,
       close: {

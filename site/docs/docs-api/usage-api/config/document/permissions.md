@@ -78,7 +78,7 @@ Defines if the content can be copied to the clipboard or not. In case the parame
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the user can delete only his/her comments.
+Defines if the user can delete only their comments.
 
 **Example**: `true`
 
@@ -106,7 +106,7 @@ Defines if the document can be edited or only viewed. In case the editing permis
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the user can edit only his/her comments.
+Defines if the user can edit only their comments.
 
 **Example**: `true`
 
@@ -171,7 +171,7 @@ Defines if the **Protection** tab on the toolbar and the **Protect** button in t
 Defines if the document can be reviewed or not. In case the reviewing permission is set to `true` the document **status bar** will contain the **Review** menu option; the document review will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
 
 :::note
-In case `edit` is set to `true` and `review` is also set to `true`, the user will be able to edit the document, accept/reject the changes made and switch to the review mode him/herself. In case `edit` is set to `true` and `review` is set to `false`, the user will be able to edit only. In case `edit` is set to `false` and `review` is set to `true`, the document will be available in review mode only.
+In case `edit` is set to `true` and `review` is also set to `true`, the user will be able to edit the document, accept/reject the changes made and switch to the review mode themselves. In case `edit` is set to `true` and `review` is set to `false`, the user will be able to edit only. In case `edit` is set to `false` and `review` is set to `true`, the document will be available in review mode only.
 :::
 
 **Example**: `true`

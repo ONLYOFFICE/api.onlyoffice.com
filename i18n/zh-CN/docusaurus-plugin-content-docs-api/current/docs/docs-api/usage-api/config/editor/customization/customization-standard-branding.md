@@ -24,9 +24,11 @@ sidebar_label: Standard branding
 ``` ts
 const anonymous = {
   request: true,
-  label: "Guest",
+  label: "Elizabeth",
 }
 ```
+
+![匿名](/assets/images/editor/anonymous.png)
 
 ### anonymous.request
 
@@ -42,9 +44,7 @@ const anonymous = {
 
 添加到用户名的后缀。
 
-**示例**: `"Guest"`
-
-![匿名](/assets/images/editor/anonymous.png)
+**示例**: `"Elizabeth"`
 
 ## 自动保存 {#autosave}
 
@@ -115,7 +115,7 @@ const close = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义用户是否只能编辑和删除他的评论。
+定义用户是否只能编辑和删除自己的评论。
 
 :::danger[Deprecated]
 自 6.3 版起已弃用，请改用 [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) 和 [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) 字段。
@@ -161,7 +161,7 @@ const close = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义仅与 OOXML 格式兼容的功能的使用。例如，不要对整个文档使用注释。
+定义仅与 OOXML 格式兼容的功能的使用。例如，禁用对整个文档的注释。
 
 **示例**: `false`
 
@@ -526,7 +526,7 @@ const goback = {
 
 **类型：** `boolean`
 
-定义编辑器标尺是显示还是隐藏。此参数可用于文档和演示文稿编辑器。文档编辑器的默认值为 `false`，演示文稿的默认值为 `true`。
+定义编辑器标尺是显示还是隐藏。此参数可用于文档和演示文稿编辑器。文档编辑器的默认值为 `false`，演示文稿编辑器的默认值为 `true`。
 
 **示例**: `false`
 
@@ -1034,7 +1034,7 @@ const config = {
     customization: {
       anonymous: {
         request: true,
-        label: "Guest",
+        label: "Elizabeth",
       },
       autosave: true,
       close: {
