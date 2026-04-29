@@ -30,9 +30,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   docEditor.denyEditingRights(message);
   ```
 
+**Parameters:**
+
 | 参数 | 类型   | 是否必填 | 描述                           |
 | --------- | ------ | -------- | ------------------------------------- |
 | message   | string | 非必填的 | 定义对话的文本消息。 |
+
+**Example:**
+
+  ``` ts
+  const message = "The document cannot be edited.";
+  docEditor.denyEditingRights(message);
+  ```
 
 ## destroyEditor
 
@@ -50,6 +59,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
   docEditor.downloadAs(format);
   ```
 
+**Parameters:**
+
 | 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format    | string | 非必填的 | 定义下载文件的格式。您可以在[转换表](../additional-api/conversion-api/conversion-tables.md)中找到所有可能的格式。但是您不能下载 `bmp`, `gif`, `jpg`, `png` 等图像格式的文件。 如果未定义该参数，则根据文件类型以OOXML格式下载文件。 |
@@ -57,6 +68,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 :::note
 请注意从 `djvu`, `pdf`, `xps` 格式的转换不可用。将下载原始格式。
 :::
+
+**Example:**
+
+  ``` ts
+  const format = "pdf";
+  docEditor.downloadAs(format);
+  ```
 
 ## insertImage
 
@@ -172,10 +190,10 @@ docEditor.refreshFile({
         version: 1,
       },
       {
-        changes,
+        changes: changes,
         created: "2010-07-07 3:46 PM",
         key: "Khirz6zTPdfd7",
-        serverVersion,
+        serverVersion: serverVersion,
         user: {
           id: "78e1e841",
           name: "John Smith",
@@ -228,9 +246,18 @@ docEditor.refreshFile({
   docEditor.setActionLink(link);
   ```
 
+**Parameters:**
+
 | 参数 | 类型   | 是否必填 | 描述                                                                       |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------- |
 | link      | string | 必填 | 定义允许滚动到文档中书签位置的链接。 |
+
+**Example:**
+
+  ``` ts
+  const link = "https://example.com/editor?bookmark=bookmark_ABC123";
+  docEditor.setActionLink(link);
+  ```
 
 ## setFavorite
 
@@ -240,9 +267,18 @@ docEditor.refreshFile({
   docEditor.setFavorite(favorite);
   ```
 
+**Parameters:**
+
 | 参数 | 类型    | 是否必填 | 描述                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
 | favorite  | boolean | 必填 | 定义*收藏夹*图标是否突出显示 (**true**) 或不突出显示 (**false**)。 |
+
+**Example:**
+
+  ``` ts
+  const favorite = true;
+  docEditor.setFavorite(favorite);
+  ```
 
 ## setHistoryData
 
@@ -547,9 +583,18 @@ docEditor.refreshFile({
   docEditor.showMessage(message);
   ```
 
+**Parameters:**
+
 | 参数 | 类型   | 是否必填 | 描述               |
 | --------- | ------ | -------- | ------------------------- |
 | message   | string | 必填 | 定义消息文本。 |
+
+**Example:**
+
+  ``` ts
+  const message = "Changes have been saved successfully.";
+  docEditor.showMessage(message);
+  ```
 
 :::note
 请注意，嵌入式平台[类型](./config/config.md#type)不支持显示带有消息的工具提示。

@@ -30,9 +30,18 @@ Deny editing. This method can be called when you want to make the document editi
   docEditor.denyEditingRights(message);
   ```
 
+**Parameters:**
+
 | Parameter | Type   | Presence | Description                           |
 | --------- | ------ | -------- | ------------------------------------- |
 | message   | string | optional | Defines the text messages for dialog. |
+
+**Example:**
+
+  ``` ts
+  const message = "The document cannot be edited.";
+  docEditor.denyEditingRights(message);
+  ```
 
 ## destroyEditor
 
@@ -50,6 +59,8 @@ Download the edited file. This method can be called only when the [onDownloadAs]
   docEditor.downloadAs(format);
   ```
 
+**Parameters:**
+
 | Parameter | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                         |
 | --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | format    | string | optional | Defines the format in which a file will be downloaded. All the possible formats you can find in the [conversion tables](../additional-api/conversion-api/conversion-tables.md). But you cannot download a file in the image formats such as `bmp`, `gif`, `jpg`, `png`. If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type. |
@@ -57,6 +68,13 @@ Download the edited file. This method can be called only when the [onDownloadAs]
 :::note
 Please note that conversion from the `djvu`, `pdf`, `xps` formats are not available. The original format will be downloaded.
 :::
+
+**Example:**
+
+  ``` ts
+  const format = "pdf";
+  docEditor.downloadAs(format);
+  ```
 
 ## insertImage
 
@@ -172,10 +190,10 @@ If after editing and saving the document the `history` with the object changes a
         version: 1,
       },
       {
-        changes,
+        changes: changes,
         created: "2010-07-07 3:46 PM",
         key: "Khirz6zTPdfd7",
-        serverVersion,
+        serverVersion: serverVersion,
         user: {
           id: "78e1e841",
           name: "John Smith",
@@ -228,9 +246,18 @@ Set the link to the document which contains a bookmark. This method must be call
   docEditor.setActionLink(link);
   ```
 
+**Parameters:**
+
 | Parameter | Type   | Presence | Description                                                                       |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------- |
 | link      | string | required | Defines the link which allows scrolling to the bookmark position in the document. |
+
+**Example:**
+
+  ``` ts
+  const link = "https://example.com/editor?bookmark=bookmark_ABC123";
+  docEditor.setActionLink(link);
+  ```
 
 ## setFavorite
 
@@ -240,9 +267,18 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
   docEditor.setFavorite(favorite);
   ```
 
+**Parameters:**
+
 | Parameter | Type    | Presence | Description                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
 | favorite  | boolean | required | Defines if the *Favorite* icon is highlighted (**true**) or not (**false**). |
+
+**Example:**
+
+  ``` ts
+  const favorite = true;
+  docEditor.setFavorite(favorite);
+  ```
 
 ## setHistoryData
 
@@ -547,9 +583,18 @@ Display a tooltip with a message. This method can be called only after the [onAp
   docEditor.showMessage(message);
   ```
 
+**Parameters:**
+
 | Parameter | Type   | Presence | Description               |
 | --------- | ------ | -------- | ------------------------- |
 | message   | string | required | Defines the message text. |
+
+**Example:**
+
+  ``` ts
+  const message = "Changes have been saved successfully.";
+  docEditor.showMessage(message);
+  ```
 
 :::note
 Please note that displaying a tooltip with a message is not supported in the embedded platform [type](./config/config.md#type).
