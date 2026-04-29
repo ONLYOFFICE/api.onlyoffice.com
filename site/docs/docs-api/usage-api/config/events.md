@@ -835,10 +835,6 @@ The message and the list of emails is sent in the `data` parameter. The comment 
 
 The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
 
-:::note
-In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
-:::
-
 **Example**:
 
 ``` ts

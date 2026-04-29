@@ -835,10 +835,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
 
-:::note
-在 5.4 版本中，只有在设置了 [onRequestUsers](#onrequestusers) 事件时才能使用 **onRequestSendNotify** 事件。从 5.5 版开始，**onRequestSendNotify** 和 **onRequestUsers** 之间没有这种依赖关系两者都可以独立设置。
-:::
-
 **示例**:
 
 ``` ts
