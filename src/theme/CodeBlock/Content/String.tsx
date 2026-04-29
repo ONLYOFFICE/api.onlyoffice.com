@@ -12,7 +12,7 @@ import * as Tabs from '@radix-ui/react-tabs';
 
 import OnlyOfficeEditor from '@site/src/components/BrowserWindow/OnlyofficeEditor';
 import {EditorType} from "@site/src/components/Playground/root/PlaygroundRootContext";
-import styles from './String.module.css'
+import styles from './String.module.css';
 
 function useCodeBlockMetadata(props: Props): CodeBlockMetadata {
   const {prism} = useThemeConfig();
