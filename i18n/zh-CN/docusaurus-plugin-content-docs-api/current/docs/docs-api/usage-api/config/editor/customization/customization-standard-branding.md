@@ -172,7 +172,7 @@ const close = {
 包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
 :::note
-此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 
 **示例**:
@@ -297,7 +297,7 @@ const features = {
 定义是否在 pdf 表单中禁用角色设置。如果该参数等于 `false`，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
 
 :::note
-此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 
 **示例**: `true`
@@ -547,7 +547,7 @@ const goback = {
 更改编辑器标题左上角的图像文件。推荐的图像高度为 20 像素。
 
 :::note
-此参数仅适用于 ONLYOFFICE 文档开发者版的编辑。
+此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 
 请注意，此参数也适用于移动编辑器。
 :::

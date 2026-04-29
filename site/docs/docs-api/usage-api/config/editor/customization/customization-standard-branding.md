@@ -7,7 +7,7 @@ sidebar_label: Standard branding
 
 The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
 
-Most customization parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available for editing only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
+Most customization parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
 
 :::note
 Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uitheme).
@@ -172,7 +172,7 @@ Defines the use of functionality only compatible with the OOXML format. For exam
 Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
 
 :::note
-This parameter is available for editing only for ONLYOFFICE Docs Developer.
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 **Example**:
@@ -297,7 +297,7 @@ Defines if the tooltips about new editor features will be displayed or hidden on
 Defines if the role settings will be disabled in the pdf forms or not. If the parameter is equal to `false`, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
 
 :::note
-This parameter is available for editing only for ONLYOFFICE Docs Developer.
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 **Example**: `true`
@@ -547,7 +547,7 @@ Defines the mode of embedding editors into the web page. The `"embed"` value dis
 Changes the image file at the top left corner of the editor header. The recommended image height is 20 pixels.
 
 :::note
-This parameter is available for editing only for ONLYOFFICE Docs Developer.
+This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 
 This parameter is also available for the mobile editors.
 :::
