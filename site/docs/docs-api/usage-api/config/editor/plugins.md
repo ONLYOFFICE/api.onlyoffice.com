@@ -6,7 +6,7 @@ The plugins section allows you to connect the special add-ons to your ONLYOFFICE
 
 **type:** `string[]`
 
-Defines the array of the identifiers (as entered in [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid)) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.
+Defines the array of plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file. The plugins will automatically start when the editor opens and run one-by-one in the specified order.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 

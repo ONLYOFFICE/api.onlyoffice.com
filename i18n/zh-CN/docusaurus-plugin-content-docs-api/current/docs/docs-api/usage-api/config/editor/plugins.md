@@ -6,7 +6,7 @@
 
 **类型：** `string[]`
 
-定义插件的标识符数组（在 [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid)) 中输入），它将在编辑器打开时自动启动，并且插件将依次运行。
+定义来自 [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) 文件的插件标识符数组。插件将在编辑器打开时自动启动，并按指定顺序依次运行。
 
 **示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
