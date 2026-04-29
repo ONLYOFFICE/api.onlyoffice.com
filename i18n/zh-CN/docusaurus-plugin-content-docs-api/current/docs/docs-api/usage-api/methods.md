@@ -249,11 +249,11 @@ docEditor.insertImage({
 
 其中 `serverVersion` 是保存文档后返回的[历史对象](./callback-handler.md#history)中的 `serverVersion`。
 
-显示错误消息，解释为什么无法显示版本历史记录。
+如果无法显示版本历史记录，请发送错误消息：
 
   ``` ts
   docEditor.refreshHistory({
-    error: "Exception",
+    error: "Version history is not available.",
   })
   ```
 
@@ -361,11 +361,11 @@ docEditor.insertImage({
   });
   ```
 
-发送错误消息，说明文档版本无法显示的原因:
+如果无法显示文档版本，请发送错误消息：
 
   ``` ts
   docEditor.setHistoryData({
-    error: "Exception",
+    error: "Document version data is not available.",
     version: 2,
   });
   ```
@@ -420,7 +420,7 @@ docEditor.insertImage({
 | options.fileType      | string | 非必填的 | 定义用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | options.key           | string | 非必填的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。 文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | options.path          | string | 必填 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| options.referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数）,<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** -  唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| options.referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同。 |
 | options.token         | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencedata)的形式定义添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | options.url           | string | 必填 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
@@ -440,11 +440,11 @@ docEditor.insertImage({
   });
   ```
 
-显示错误消息，说明是否有错误发生：
+如果发生错误，请发送错误消息：
 
   ``` ts
   docEditor.setReferenceData({
-    error: "Exception",
+    error: "File data is not available.",
   });
   ```
 
@@ -468,7 +468,7 @@ docEditor.insertImage({
 | options.fileType      | string | 非必填的 | 定义用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | options.key           | string | 非必填的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | options.path          | string | 必填 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| options.referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - 唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| options.referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同。 |
 | options.token         | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setreferencesource)形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | options.url           | string | 必填 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
@@ -488,11 +488,11 @@ docEditor.insertImage({
   });
   ```
 
-显示一条错误消息，解释是否发生任何错误：
+如果发生错误，请发送错误消息：
 
   ``` ts
   docEditor.setReferenceSource({
-    error: "Exception",
+    error: "Reference source is not available.",
   });
   ```
 
