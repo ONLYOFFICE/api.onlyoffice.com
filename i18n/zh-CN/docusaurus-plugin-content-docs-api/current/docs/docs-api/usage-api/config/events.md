@@ -321,7 +321,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
 
 :::note
-此事件仅适用于ONLYOFFICE 文档企业版和ONLYOFFICE 文档开发者版。
+此事件仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 :::danger[Deprecated]
 自版本 7.5 起已弃用，请改用 [onRequestSelectDocument](#onrequestselectdocument)。

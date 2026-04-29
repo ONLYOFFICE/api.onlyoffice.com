@@ -15,7 +15,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Create the [connector](./automation-api/connector-class.md) to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
 :::note
-This method is available only for ONLYOFFICE Docs Developer.
+This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
   ``` ts
@@ -329,7 +329,7 @@ Where **example.com** is the name of the server where **document manager** and *
 Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
 :::note
-This method is available only for ONLYOFFICE Docs Developer.
+This method is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 :::note
@@ -461,7 +461,7 @@ Where **example.com** is the name of the server where **document manager** and *
 Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) event. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
 
 :::note
-This method is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
+This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
   ``` ts
