@@ -6,7 +6,7 @@ sidebar_label: White label
 
 The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
 
-On this page you will find the customization parameters available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
+On this page you will find the customization parameters available only for the extended white label license of [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api). To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
 
 ## about
 
@@ -14,7 +14,7 @@ On this page you will find the customization parameters available only for the [
 
 Defines if the **About** menu button is displayed or hidden.
 
-**Example**: ``true``
+**Example**: `true`
 
 ## features.spellcheck.change
 
@@ -67,7 +67,7 @@ The font size.
 
 **type:** `object`
 
-Defines the parameters that the user can use to hide the interface elements but not to disable features completely (for example, if this functionality is available from other elements such as context menu, or via hotkeys).
+Defines the parameters that the user can use to hide the interface elements but not to disable features completely. The hidden features are still available from other elements such as the context menu or via hotkeys.
 
 **Example**:
 
@@ -145,7 +145,7 @@ Defines if a button for switching editor modes will be displayed in the header o
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the **Save** button in the editor header is displayed or hidden. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **false**.
+Defines if the **Save** button in the editor header is displayed or hidden. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to `false`.
 
 **Example**: `true`
 
@@ -169,7 +169,7 @@ Defines if the button with the editing users is displayed or hidden.
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the left menu settings. If this parameter is a boolean value, then it specifies whether the left menu will be displayed or hidden.
+Defines the left menu settings. Can be a boolean or an object. If set to `true`, the left menu is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
 
 **Example**:
 
@@ -209,7 +209,7 @@ Defines if the **Spellcheck** button is displayed or hidden. This parameter will
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden.
+Defines the right menu settings. Can be a boolean or an object. If set to `true`, the right menu is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
 
 **Example**:
 
@@ -231,7 +231,7 @@ Defines the initial value of the right panel visibility - displayed or hidden. I
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the status bar settings. If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden.
+Defines the status bar settings. Can be a boolean or an object. If set to `true`, the status bar is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
 
 **Example**:
 
@@ -271,7 +271,7 @@ Defines if a button for choosing the text language is displayed or hidden. This 
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the toolbar settings. If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
+Defines the toolbar settings. Can be a boolean or an object. If set to `true`, the toolbar is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual tabs.
 
 **Example**:
 
@@ -303,7 +303,7 @@ const toolbar = {
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **Collaboration** tab settings. If this parameter is a boolean value, then it specifies whether the **Collaboration** tab will be displayed or hidden.
+Defines the **Collaboration** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
 
 **Example**:
 
@@ -333,7 +333,7 @@ Defines if the **Draw** tab is displayed or hidden.
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **File** tab settings. If this parameter is a boolean value, then it specifies whether the **File** tab will be displayed or hidden.
+Defines the **File** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
 
 **Example**:
 
@@ -390,7 +390,7 @@ Defines the **Home** tab settings. This tab cannot be hidden.
 
 **type:** `boolean`
 
-Defines if the button for choosing the mail merge base is displayed or hidden. This parameter is deprecated, please use the *toolbar.collaboration.mailmerge* parameter instead.
+Defines if the button for choosing the mail merge base is displayed or hidden. This parameter is deprecated, please use the `toolbar.collaboration.mailmerge` parameter instead.
 
 **Example**: `true`
 
@@ -430,7 +430,7 @@ Defines if the **References** tab is displayed or hidden. This parameter will on
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the **Save** button on the toolbar is displayed or hidden. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **true**.
+Defines if the **Save** button on the toolbar is displayed or hidden. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to `true`.
 
 **Example**: `true`
 
@@ -438,7 +438,7 @@ Defines if the **Save** button on the toolbar is displayed or hidden. Please not
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **View** tab settings. If this parameter is a boolean value, then it specifies whether the **View** tab will be displayed or hidden.
+Defines the **View** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
 
 **Example**:
 
@@ -474,7 +474,7 @@ Starting from version 7.1, please use the [layout.leftMenu](#layoutleftmenu) par
 
 Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
 
-**Example**: `https://example.com/loader-logo.png`
+**Example**: `"https://example.com/loader-logo.png"`
 
 ## loaderName
 

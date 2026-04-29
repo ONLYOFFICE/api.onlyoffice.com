@@ -6,7 +6,7 @@ sidebar_label: White label
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
-在此页面上，您将找到仅适用于 ONLYOFFICE 文档开发者版的[扩展白标许可证](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
+在此页面上，您将找到仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)扩展白标许可证的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
 
 ## 关于
 
@@ -67,7 +67,7 @@ const font = {
 
 **类型：** `object`
 
-定义用户可用于隐藏界面元素但不完全禁用功能的参数（例如，如果此功能可从其他元素（如关联菜单）或通过热键获得）。
+定义用户可用于隐藏界面元素但不完全禁用功能的参数。隐藏的功能仍可通过上下文菜单或快捷键访问。
 
 **示例**:
 
@@ -145,7 +145,7 @@ const header = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义编辑器标题中的**保存**按钮是显示还是隐藏。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 **false** 时，将使用此设置。
+定义编辑器标题中的**保存**按钮是显示还是隐藏。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 `false` 时，将使用此设置。
 
 **示例**: `true`
 
@@ -169,7 +169,7 @@ const header = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义左侧菜单设置。如果此参数是布尔值，则它指定左侧菜单是显示还是隐藏。
+定义左侧菜单设置。可以是布尔值或对象。如果设置为 `true`，左侧菜单显示。如果设置为 `false`，左侧菜单隐藏。如果设置为对象，使用以下属性配置各个元素。
 
 **示例**:
 
@@ -209,7 +209,7 @@ const leftMenu = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义右侧菜单设置。 如果此参数为布尔值，则指定是否显示或隐藏右侧菜单。
+定义右侧菜单设置。可以是布尔值或对象。如果设置为 `true`，右侧菜单显示。如果设置为 `false`，右侧菜单隐藏。如果设置为对象，使用以下属性配置各个元素。
 
 **示例**:
 
@@ -231,7 +231,7 @@ const rightMenu = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义状态栏设置。如果此参数是布尔值，则指定是显示还是隐藏状态栏。
+定义状态栏设置。可以是布尔值或对象。如果设置为 `true`，状态栏显示。如果设置为 `false`，状态栏隐藏。如果设置为对象，使用以下属性配置各个元素。
 
 **示例**:
 
@@ -271,7 +271,7 @@ const statusBar = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义工具栏设置。如果此参数是布尔值，则指定是显示还是隐藏工具栏。
+定义工具栏设置。可以是布尔值或对象。如果设置为 `true`，工具栏显示。如果设置为 `false`，工具栏隐藏。如果设置为对象，使用以下属性配置各个选项卡。
 
 **示例**:
 
@@ -303,7 +303,7 @@ const toolbar = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义 **Collaboration** 选项卡设置。如果此参数是布尔值，则指定是否显示或隐藏 **Collaboration** 选项卡。
+定义 **Collaboration** 选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。
 
 **示例**:
 
@@ -333,7 +333,7 @@ const collaboration = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义**文件**选项卡设置。如果此参数是布尔值，则指定是显示还是隐藏**文件**选项卡。
+定义**文件**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。
 
 **示例**:
 
@@ -390,7 +390,7 @@ const file = {
 
 **类型：** `boolean`
 
-定义是否显示或隐藏用于选择邮件合并基础的按钮。此参数已弃用，请改用 *toolbar.collaboration.mailmerge* 参数。
+定义是否显示或隐藏用于选择邮件合并基础的按钮。此参数已弃用，请改用 `toolbar.collaboration.mailmerge` 参数。
 
 **示例**: `true`
 
@@ -430,7 +430,7 @@ const file = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义工具栏上的**保存**按钮是显示还是隐藏。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 **true**时，将使用此设置。
+定义工具栏上的**保存**按钮是显示还是隐藏。请注意，当 [compactHeader](customization-standard-branding.md#compactheader) 参数设置为 `true` 时，将使用此设置。
 
 **示例**: `true`
 
@@ -438,7 +438,7 @@ const file = {
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义**视图**选项卡设置。如果此参数是布尔值，则指定是显示还是隐藏**视图**选项卡。
+定义**视图**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。
 
 **示例**:
 
@@ -474,7 +474,7 @@ const view = {
 
 定义加载文档时将显示的图像徽标的路径（对于此文件没有特别的建议，但最好使用透明背景的.png格式）。当在编辑器中显示时，图像将按比例调整到160像素的高度。
 
-**示例**: `https://example.com/loader-logo.png`
+**示例**: `"https://example.com/loader-logo.png"`
 
 ## loaderName
 
