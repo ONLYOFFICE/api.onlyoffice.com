@@ -87,7 +87,7 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 
 where `ONLYOFFICE_API_KEY` is the API key.
 
-## Security best practices
+## Security best practices when using API keys
 
 Here are some recommendations to follow when using API keys:
 
