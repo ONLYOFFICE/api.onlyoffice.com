@@ -298,7 +298,7 @@ docEditor.insertImage({
 
 | 参数 | 类型    | 是否必填 | 描述                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
-| favorite  | boolean | 必填 | 定义*收藏夹*图标是否突出显示 (**true**) 或不突出显示 (**false**)。 |
+| favorite  | boolean | 必填 | 如果为 `true`，则突出显示*收藏夹*图标。 |
 
 **Example:**
 
@@ -372,7 +372,11 @@ docEditor.insertImage({
 
 ## setMailMergeRecipients
 
-将邮件合并的收件人数据插入文件中。此方法必须在 [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedSpreadsheet](#setrequestedspreadsheet)。
+将邮件合并的收件人数据插入文件中。此方法必须在 [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) 事件之后调用。
+
+:::danger[Deprecated]
+自版本 7.5 起已弃用，请改用 [setRequestedSpreadsheet](#setrequestedspreadsheet)。
+:::
 
   ``` ts
   docEditor.setMailMergeRecipients(options);
@@ -554,7 +558,11 @@ docEditor.insertImage({
 
 ## setRevisedFile
 
-选择一个文档进行比较。此方法必须在 [onRequestCompareFile](./config/events.md#onrequestcomparefile) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedDocument](#setrequesteddocument)。
+选择一个文档进行比较。此方法必须在 [onRequestCompareFile](./config/events.md#onrequestcomparefile) 事件之后调用。
+
+:::danger[Deprecated]
+自版本 7.5 起已弃用，请改用 [setRequestedDocument](#setrequesteddocument)。
+:::
 
 :::note
 此方法仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。

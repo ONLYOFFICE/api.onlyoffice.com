@@ -298,7 +298,7 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
 
 | Parameter | Type    | Presence | Description                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
-| favorite  | boolean | required | Defines if the *Favorite* icon is highlighted (**true**) or not (**false**). |
+| favorite  | boolean | required | If `true`, the *Favorite* icon is highlighted. |
 
 **Example:**
 
@@ -372,7 +372,11 @@ If the document version cannot be displayed, send an error message:
 
 ## setMailMergeRecipients
 
-Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) event. Deprecated since version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
+Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) event.
+
+:::danger[Deprecated]
+Starting from version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
+:::
 
   ``` ts
   docEditor.setMailMergeRecipients(options);
@@ -554,7 +558,11 @@ Insert recipient data for mail merge into the file. This method must be called a
 
 ## setRevisedFile
 
-Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) event. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
+Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) event.
+
+:::danger[Deprecated]
+Starting from version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
+:::
 
 :::note
 This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
