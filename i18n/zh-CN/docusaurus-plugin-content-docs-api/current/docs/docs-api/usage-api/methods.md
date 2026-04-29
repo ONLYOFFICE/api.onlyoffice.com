@@ -81,6 +81,24 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 将图像插入文件中。从版本 7.0 开始，此方法允许用户插入多个图像。`images` 数组用于执行此操作。此方法必须在 [onRequestInsertImage](./config/events.md#onrequestinsertimage) 事件之后调用。
 
   ``` ts
+  docEditor.insertImage(options);
+  ```
+
+**Parameters:**
+
+| 参数                    | 类型             | 是否必填 | 描述                                                                                                                                                                                                                                                                     |
+| ----------------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c               | string           | 必填 | 从事件中定义一种图像插入类型。可以是：`add`, `change`, `fill`, `watermark`, `slide`。默认值为 `"add"`。                                                                                                                                         |
+| options.fileType        | string           | 必填 | 定义要插入文件的图像类型。 可以是：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`。自 7.0 版起已弃用，请改用 `options.images.fileType` 参数。                                                                                  |
+| options.images          | object[] | 必填 | 定义要插入的图像数组。                                                                                                                                                                                                                                      |
+| options.images.fileType | string           | 必填 | 定义要插入文件的图像类型。可以是：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`。                                                                                                                                                     |
+| options.images.url      | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。                                                                                                              |
+| options.token           | string           | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
+| options.url             | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。自 7.0 版起已弃用，请改用 `options.images.url` 参数。 |
+
+**Example:**
+
+  ``` ts
   docEditor.insertImage({
     c: "add",
     images: [
@@ -96,17 +114,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA",
   });
   ```
-
-
-| 参数       | 类型             | 是否必填 | 描述                                                                                                                                                                                                                                                                     |
-| --------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c               | string           | 必填 | 从事件中定义一种图像插入类型。可以是：`add`, `change`, `fill`, `watermark`, `slide`。默认值为 `"add"`。                                                                                                                                         |
-| fileType        | string           | 必填 | 定义要插入文件的图像类型。 可以是：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`。自 7.0 版起已弃用，请改用 `images.fileType` 参数。                                                                                  |
-| images          | object[] | 必填 | 定义要插入的图像数组。                                                                                                                                                                                                                                      |
-| images.fileType | string           | 必填 | 定义要插入文件的图像类型。可以是：`bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`。                                                                                                                                                     |
-| images.url      | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。                                                                                                              |
-| token           | string           | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#insertimage) 形式添加到参数的加密签名。                                                                                                                                |
-| url             | string           | 必填 | 定义存储源图像的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md) 否则会出现错误。自 7.0 版起已弃用，请改用 `images.url` 参数。 |
 
 :::note
 在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
@@ -128,25 +135,59 @@ docEditor.insertImage({
 
 此方法必须采用当前文件版本的编辑器初始化配置。配置必须包含用于签署 [open a file](../additional-api/signature/browser.md#opening-file) 进行编辑的请求的所有参数。以下参数无法在配置中更改：[documentType](./config/config.md#documenttype)、[type](./config/config.md#type)、[events](./config/events.md)。
 
-``` ts
-docEditor.refreshFile({
-  document: {
-    fileType: "docx",
-    key: "Khirz6zTPdfd7",
-    title: "Example Document Title.docx",
-    url: "https://example.com/url-to-example-document.docx",
-  },
-  documentType: "word",
-  editorConfig: {
-    callbackUrl: "https://example.com/url-to-callback",
-  },
-  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-});
-```
+  ``` ts
+  docEditor.refreshFile(config);
+  ```
+
+**Parameters:**
+
+| Parameter | Type   | Presence | Description                                                                          |
+| --------- | ------ | -------- | ------------------------------------------------------------------------------------ |
+| config    | object | 必填 | 当前文件版本的编辑器初始化[配置](./config/config.md)。 |
+
+**Example:**
+
+  ``` ts
+  docEditor.refreshFile({
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
+  });
+  ```
 
 ## refreshHistory
 
 显示文档版本历史。此方法必须在 [onRequestHistory](./config/events.md#onrequesthistory) 事件之后调用。
+
+  ``` ts
+  docEditor.refreshHistory(options);
+  ```
+
+**Parameters:**
+
+| 参数                         | 类型    | 是否必填 | 描述                                                                                                                                       |
+| ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.currentVersion        | integer | 必填 | 定义当前文档版本号。                                                                                                      |
+| options.error                 | string  | 非必填的 | 定义错误消息文本。                                                                                                                   |
+| options.history               | array   | 必填 | 使用文档版本定义数组。                                                                                                    |
+| options.history.changes       | object  | 非必填的 | 定义保存文档后返回的 [历史对象](./callback-handler.md#history) 的 `changes`。                      |
+| options.history.created       | string  | 必填 | 定义文档版本创建日期。                                                                                                       |
+| options.history.key           | string  | 必填 | 定义服务用来识别文档的唯一文档标识符。                                                             |
+| options.history.serverVersion | integer | 非必填的 | 定义当前服务器版本号。 如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
+| options.history.user          | object  | 非必填的 | 定义作为文档版本作者的用户。                                                                                      |
+| options.history.user.id       | string  | 非必填的 | 定义作为文档版本作者的用户的标识符。                                                                    |
+| options.history.user.name     | string  | 非必填的 | 定义作为文档版本作者的用户的名称                                                                          |
+| options.history.version       | integer | 必填 | 定义文档版本号。                                                                                                              |
+
+**Example:**
 
   ``` ts
   docEditor.refreshHistory({
@@ -216,20 +257,6 @@ docEditor.refreshFile({
   })
   ```
 
-| 参数             | 类型    | 是否必填 | 描述                                                                                                                                       |
-| --------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| currentVersion        | integer | 必填 | 定义当前文档版本号。                                                                                                      |
-| error                 | string  | 非必填的 | 定义错误消息文本。                                                                                                                   |
-| history               | array   | 必填 | 使用文档版本定义数组。                                                                                                    |
-| history.changes       | object  | 非必填的 | 定义保存文档后返回的 [历史对象](./callback-handler.md#history) 的 `changes`。                      |
-| history.created       | string  | 必填 | 定义文档版本创建日期。                                                                                                       |
-| history.key           | string  | 必填 | 定义服务用来识别文档的唯一文档标识符。                                                             |
-| history.serverVersion | integer | 非必填的 | 定义当前服务器版本号。 如果发送 `changes` 参数，则还需要发送 `serverVersion` 参数。 |
-| history.user          | object  | 非必填的 | 定义作为文档版本作者的用户。                                                                                      |
-| history.user.id       | string  | 非必填的 | 定义作为文档版本作者的用户的标识符。                                                                    |
-| history.user.name     | string  | 非必填的 | 定义作为文档版本作者的用户的名称                                                                          |
-| history.version       | integer | 必填 | 定义文档版本号。                                                                                                              |
-
 ## requestClose
 
  请求关闭编辑器。建议在 [destroyEditor](#destroyeditor) 方法之前调用该方法来检查编辑器中是否有一些未保存的数据。如果存在未保存的数据，则会显示对话框询问用户是否要继续编辑或关闭编辑器，丢失所有未保存的数据。如果选择*关闭*选项，则将调用 [onRequestClose](./config/events.md#onrequestclose) 事件。
@@ -285,6 +312,28 @@ docEditor.refreshFile({
 发送文档链接以查看版本历史。此方法必须在 [onRequestHistoryData](./config/events.md#onrequesthistorydata) 事件之后调用。
 
   ``` ts
+  docEditor.setHistoryData(options);
+  ```
+
+**Parameters:**
+
+| 参数                     | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                 |
+| ------------------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.changesUrl        | string  | 非必填的 | 定义带有文档更改数据的文件的url地址，可以通过 `changesurl` 链接从保存文档后返回的 [JSON对象](./callback-handler.md#changesurl) 中下载。文件请求使用由 ONLYOFFICE 文档检查的令牌进行签名。            |
+| options.error             | string  | 非必填的 | 定义错误消息文本。                                                                                                                                                                                                                                                                                             |
+| options.fileType          | string  | 非必填的 | 定义使用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                    |
+| options.key               | string  | 必填 | 定义文档标识符，用于明确标识文档文件。                                                                                                                                                                                                                                           |
+| options.previous          | object  | 非必填的 | 如果在保存文档后返回 `changesUrl` 地址，则定义上一版本文档的对象。                                                                                                                                                                                                  |
+| options.previous.fileType | string  | 非必填的 | 定义使用 `options.previous.url` 参数指定的文档的扩展。                                                                                                                                                                                                                                           |
+| options.previous.key      | string  | 必填 | 定义文档先前版本的文档标识符。                                                                                                                                                                                                                                                    |
+| options.previous.url      | string  | 必填 | 定义上一版本文档的 url 地址。                                                                                                                                                                                                                                                            |
+| options.token             | string  | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#sethistorydata)形式添加到参数的加密签名。                                                                                                                                                                        |
+| options.url               | string  | 必填 | 定义当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 `url` 链接下载。使用本地链接时请务必添加[令牌](../get-started/how-it-works/how-it-works.md)。否则会出现错误。 |
+| options.version           | integer | 必填 | 定义文档版本号。                                                                                                                                                                                                                                                                                        |
+
+**Example:**
+
+  ``` ts
   docEditor.setHistoryData({
     fileType: "docx",
     key: "Khirz6zTPdfd7",
@@ -293,7 +342,6 @@ docEditor.refreshFile({
     version: 2,
   });
   ```
-
 
 如果在编辑和保存文档后，返回到包含更改数据的文件的 `changesurl` 链接，请通过此链接下载文件，并在 `changesUrl` 参数中发送文件URL。文档上一版本的绝对 URL 地址必须在 `previous.url` 参数中发送。
 
@@ -313,7 +361,6 @@ docEditor.refreshFile({
   });
   ```
 
-
 发送错误消息，说明文档版本无法显示的原因:
 
   ``` ts
@@ -323,23 +370,23 @@ docEditor.refreshFile({
   });
   ```
 
-| 参数         | 类型    | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                 |
-| ----------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| changesUrl        | string  | 非必填的 | 定义带有文档更改数据的文件的url地址，可以通过 `changesurl` 链接从保存文档后返回的 [JSON对象](./callback-handler.md#changesurl) 中下载。文件请求使用由 ONLYOFFICE 文档检查的令牌进行签名。            |
-| error             | string  | 非必填的 | 定义错误消息文本。                                                                                                                                                                                                                                                                                             |
-| fileType          | string  | 非必填的 | 定义使用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                    |
-| key               | string  | 必填 | 定义文档标识符，用于明确标识文档文件。                                                                                                                                                                                                                                           |
-| previous          | object  | 非必填的 | 如果在保存文档后返回 `changesUrl` 地址，则定义上一版本文档的对象。                                                                                                                                                                                                  |
-| previous.fileType | string  | 非必填的 | 定义使用 `previous.url` 参数指定的文档的扩展。                                                                                                                                                                                                                                           |
-| previous.key      | string  | 必填 | 定义文档先前版本的文档标识符。                                                                                                                                                                                                                                                    |
-| previous.url      | string  | 必填 | 定义上一版本文档的 url 地址。                                                                                                                                                                                                                                                            |
-| token             | string  | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#sethistorydata)形式添加到参数的加密签名。                                                                                                                                                                        |
-| url               | string  | 必填 | 定义当前文档版本的 url 地址。可以从保存文档后返回的 [JSON](./callback-handler.md#url) 对象中的 `url` 链接下载。使用本地链接时请务必添加[令牌](../get-started/how-it-works/how-it-works.md)。否则会出现错误。 |
-| version           | integer | 必填 | 定义文档版本号。                                                                                                                                                                                                                                                                                        |
-
 ## setMailMergeRecipients
 
 将邮件合并的收件人数据插入文件中。此方法必须在 [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedSpreadsheet](#setrequestedspreadsheet)。
+
+  ``` ts
+  docEditor.setMailMergeRecipients(options);
+  ```
+
+**Parameters:**
+
+| 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                        |
+| ---------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.fileType | string | 必填 | 定义文件中邮件合并的电子表格类型。可以是：`csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`。                                                    |
+| options.token    | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setmailmergerecipients)形式添加到参数的加密签名。                                         |
+| options.url      | string | 必填 | 定义存储源数据的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+
+**Example:**
 
   ``` ts
   docEditor.setMailMergeRecipients({
@@ -348,13 +395,6 @@ docEditor.refreshFile({
     url: "https://example.com/url-to-example-recipients.xlsx",
   });
   ```
-
-
-| 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                        |
-| --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fileType  | string | 必填 | 定义文件中邮件合并的电子表格类型。可以是：`csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`。                                                    |
-| token     | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setmailmergerecipients)形式添加到参数的加密签名。                                         |
-| url       | string | 必填 | 定义存储源数据的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
 
 ## setReferenceData
 
@@ -369,6 +409,24 @@ docEditor.refreshFile({
 :::
 
   ``` ts
+  docEditor.setReferenceData(options);
+  ```
+
+**Parameters:**
+
+| 参数                  | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.error         | string | 非必填的 | 定义错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| options.fileType      | string | 非必填的 | 定义用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| options.key           | string | 非必填的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。 文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| options.path          | string | 必填 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| options.referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数）,<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** -  唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| options.token         | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencedata)的形式定义添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| options.url           | string | 必填 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+**Example:**
+
+  ``` ts
   docEditor.setReferenceData({
     fileType: "xlsx",
     key: "Khirz6zTPdfd7",
@@ -382,7 +440,6 @@ docEditor.refreshFile({
   });
   ```
 
-
 显示错误消息，说明是否有错误发生：
 
   ``` ts
@@ -390,16 +447,6 @@ docEditor.refreshFile({
     error: "Exception",
   });
   ```
-
-| 参数     | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| error         | string | 非必填的 | 定义错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| fileType      | string | 非必填的 | 定义用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| key           | string | 非必填的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。 文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| path          | string | 必填 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceData](./config/events.md#onrequestreferencedata) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数）,<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** -  唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setreferencedata)的形式定义添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| url           | string | 必填 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## setReferenceSource
 
@@ -410,6 +457,24 @@ docEditor.refreshFile({
 :::
 
   ``` ts
+  docEditor.setReferenceSource(options);
+  ```
+
+**Parameters:**
+
+| 参数                  | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.error         | string | 非必填的 | 定义错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| options.fileType      | string | 非必填的 | 定义用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| options.key           | string | 非必填的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| options.path          | string | 必填 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| options.referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - 唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| options.token         | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setreferencesource)形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| options.url           | string | 必填 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+**Example:**
+
+  ``` ts
   docEditor.setReferenceSource({
     fileType: "xlsx",
     key: "Khirz6zTPdfd7",
@@ -423,7 +488,6 @@ docEditor.refreshFile({
   });
   ```
 
-
 显示一条错误消息，解释是否发生任何错误：
 
   ``` ts
@@ -432,19 +496,24 @@ docEditor.refreshFile({
   });
   ```
 
-| 参数     | 类型   | 是否必填 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| error         | string | 非必填的 | 定义错误消息文本。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| fileType      | string | 非必填的 | 定义用 `url` 参数指定的文档的扩展名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| key           | string | 非必填的 | 定义服务用于从共同编辑会话获取数据的唯一文档标识符。如果发送已知密钥，将从缓存中获取文档。每次编辑并保存文档时，都必须重新生成密钥。文档 url 可以用作 `key`，但不能包含特殊字符，且长度限制为 128 个符号。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| path          | string | 必填 | 定义公式编辑器的文件名或相对路径。它用于在执行 [onRequestReferenceSource](./config/events.md#onrequestreferencesource) 事件时识别文件。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| referenceData | object | 非必填的 | 定义由集成商生成的对象，用于唯一标识其系统中的文件。此数据必须与 [document.referenceData](./config/document/document.md#referencedata) 配置参数中的相同：<br/><br/>**fileKey** - 服务用来获取文件链接的唯一文档标识符。在编辑和保存文档时不得更改它（即它不等于 [document.key](./config/document/document.md#key) 参数),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - 唯一的系统标识符。 如果数据是从一个系统上的文件复制的，然后插入到另一个系统上的文件中，那么通过链接粘贴将不可用，并且上下文菜单中将没有相应的按钮，<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setreferencesource)形式添加到参数的加密签名。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| url           | string | 必填 | 定义下载当前文件的 URL 地址。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-
 ## setRequestedDocument
 
 选择用于比较、合并或插入文本的文档。该方法可以在 [onRequestSelectDocument](./config/events.md#onrequestselectdocument) 事件之后调用。
+
+  ``` ts
+  docEditor.setRequestedDocument(options);
+  ```
+
+**Parameters:**
+
+| 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
+| ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| options.c        | string | 必填 | 定义从事件中选择的文档类型。 可以是：`compare`、`combine`、`insert-text`。默认值为 `"compare"`。                                                                   |
+| options.fileType | string | 必填 | 您定义要选择的文档的类型。可以是：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                       |
+| options.token    | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequesteddocument)的形式定义添加到参数的加密签名。                                             |
+| options.url      | string | 必填 | 定义存储源文档的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+
+**Example:**
 
   ``` ts
   docEditor.setRequestedDocument({
@@ -455,17 +524,24 @@ docEditor.refreshFile({
   });
   ```
 
-
-| 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
-| --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| c         | string | 必填 | 定义从事件中选择的文档类型。 可以是：`compare`、`combine`、`insert-text`。默认值为 `"compare"`。                                                                   |
-| fileType  | string | 必填 | 您定义要选择的文档的类型。可以是：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                       |
-| token     | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequesteddocument)的形式定义添加到参数的加密签名。                                             |
-| url       | string | 必填 | 定义存储源文档的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
-
 ## setRequestedSpreadsheet
 
 将邮件合并的收件人数据插入到文件中。必须在 [onRequestSelectSpreadsheet](./config/events.md#onrequestselectspreadsheet) 事件之后调用此方法。
+
+  ``` ts
+  docEditor.setRequestedSpreadsheet(options);
+  ```
+
+**Parameters:**
+
+| 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                        |
+| ---------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c        | string | 必填 | 定义从事件中选择的电子表格类型。 可以是 `mailmerge`。                                                                                                                        |
+| options.fileType | string | 必填 | 定义文件中邮件合并的电子表格类型。可以是：`csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`。                                                     |
+| options.token    | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequestedspreadsheet)的形式定义添加到参数的加密签名。                                        |
+| options.url      | string | 必填 | 定义存储源数据的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)令牌。否则会出现错误。 |
+
+**Example:**
 
   ``` ts
   docEditor.setRequestedSpreadsheet({
@@ -476,14 +552,6 @@ docEditor.refreshFile({
   });
   ```
 
-
-| 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                        |
-| --------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c         | string | 必填 | 定义从事件中选择的电子表格类型。 可以是 `mailmerge`。                                                                                                                        |
-| fileType  | string | 必填 | 定义文件中邮件合并的电子表格类型。可以是：`csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`。                                                     |
-| token     | string | 非必填的 | 以[令牌](../additional-api/signature/browser.md#setrequestedspreadsheet)的形式定义添加到参数的加密签名。                                        |
-| url       | string | 必填 | 定义存储源数据的绝对 URL。 使用本地链接时，请务必添加[令牌](../get-started/how-it-works/security.md)令牌。否则会出现错误。 |
-
 ## setRevisedFile
 
 选择一个文档进行比较。此方法必须在 [onRequestCompareFile](./config/events.md#onrequestcomparefile) 事件之后调用。自版本 7.5 起已弃用，请改用 [setRequestedDocument](#setrequesteddocument)。
@@ -493,6 +561,20 @@ docEditor.refreshFile({
 :::
 
   ``` ts
+  docEditor.setRevisedFile(options);
+  ```
+
+**Parameters:**
+
+| 参数             | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
+| ---------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| options.fileType | string | 必填 | 定义要比较的文档类型。可以是：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                          |
+| options.token    | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setrevisedfile)形式添加到参数的加密签名。                                                   |
+| options.url      | string | 必填 | 定义存储源文档的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
+
+**Example:**
+
+  ``` ts
   docEditor.setRevisedFile({
     fileType: "docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
@@ -500,16 +582,23 @@ docEditor.refreshFile({
   });
   ```
 
-
-| 参数 | 类型   | 是否必填 | 描述                                                                                                                                                                                            |
-| --------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| fileType  | string | 必填 | 定义要比较的文档类型。可以是：`doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`。                                                          |
-| token     | string | 非必填的 | 定义以[令牌](../additional-api/signature/browser.md#setrevisedfile)形式添加到参数的加密签名。                                                   |
-| url       | string | 必填 | 定义存储源文档的绝对 URL。使用本地链接时请务必添加[令牌](../get-started/how-it-works/security.md)。否则会出现错误。 |
-
 ## setSharingSettings
 
 更新有关允许与其他用户共享文档的设置的 [信息](./config/document/info.md#sharingsettings)。该方法可以在 [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) 事件之后调用。
+
+  ``` ts
+  docEditor.setSharingSettings(options);
+  ```
+
+**Parameters:**
+
+| 参数                                | 类型            | 是否必填 | 描述                                                             |
+| ----------------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
+| options.sharingSettings             | object[] | 非必填的 | 定义允许与其他用户共享文档的设置。 |
+| options.sharingSettings.permissions | string          | 非必填的 | 定义具有上述名称的用户的访问权限。             |
+| options.sharingSettings.user        | string          | 非必填的 | 定义将与之共享文档的用户的名称。    |
+
+**Example:**
 
   ``` ts
   docEditor.setSharingSettings({
@@ -527,15 +616,26 @@ docEditor.refreshFile({
   });
   ```
 
-| 参数                   | 类型            | 是否必填 | 描述                                                             |
-| --------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
-| sharingSettings             | object[] | 非必填的 | 定义允许与其他用户共享文档的设置。 |
-| sharingSettings.permissions | string          | 非必填的 | 定义具有上述名称的用户的访问权限。             |
-| sharingSettings.user        | string          | 非必填的 | 定义将与之共享文档的用户的名称。    |
-
 ## setUsers
 
 设置用户列表、用来在评论中提及、授予编辑特定工作表范围的访问权限，或设置用户头像。此方法必须在 [onRequestUsers](./config/events.md#onrequestusers) 事件之后调用。
+
+  ``` ts
+  docEditor.setUsers(options);
+  ```
+
+**Parameters:**
+
+| 参数                | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
+| ------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c           | string           | 必填 | 定义 [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型。它可以采用以下值之一 - `mention`, `protect` 或 `info`。默认值为 `mention`。|
+| options.users       | string[] | 非必填的 | 定义用户列表。                                                                                                                                                                                   |
+| options.users.email | string           | 非必填的 | 定义用户的电子邮件地址。 当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
+| options.users.id    | string           | 非必填的 | 定义用户的身份。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |
+| options.users.image | string           | 非必填的 | 定义用户头像的路径。 当 `c` 参数为 `info` 时，此字段是必需的。                                                                                                                  |
+| options.users.name  | string           | 非必填的 | 定义用户的全名。                                                                                                                                                                               |
+
+**Example:**
 
   ``` ts
   docEditor.setUsers({
@@ -557,18 +657,8 @@ docEditor.refreshFile({
   });
   ```
 
-
-| 参数   | 类型             | 是否必填 | 描述                                                                                                                                                                                                      |
-| ----------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c           | string           | 必填 | 定义 [onRequestUsers](./config/events.md#onrequestusers) 事件的操作类型。它可以采用以下值之一 - `mention`, `protect` 或 `info`。默认值为 `mention`。|
-| users       | string[] | 非必填的 | 定义用户列表。                                                                                                                                                                                   |
-| users.email | string           | 非必填的 | 定义用户的电子邮件地址。 当 `c` 参数为 `mention` 时，此字段是必需的。                                                                                                              |
-| users.id    | string           | 非必填的 | 定义用户的身份。当 `c` 参数为 `protect` 时，此字段是必需的。                                                                                                              |
-| users.image | string           | 非必填的 | 定义用户头像的路径。 当 `c` 参数为 `info` 时，此字段是必需的。                                                                                                                  |
-| users.name  | string           | 非必填的 | 定义用户的全名。                                                                                                                                                                               |
-
 :::note
-请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png,base64,\*\*\*\*\*"*。
+请注意，对用户头像的请求是未经授权发送的，因为头像 URL 被插入到编辑器框架的 HTML 中。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，*"data:image/png;base64,\*\*\*\*\*"*。
 :::
 
 :::note

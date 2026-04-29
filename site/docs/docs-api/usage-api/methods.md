@@ -81,6 +81,24 @@ Please note that conversion from the `djvu`, `pdf`, `xps` formats are not availa
 Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The `images` array is used to do it. This method must be called after the [onRequestInsertImage](./config/events.md#onrequestinsertimage) event.
 
   ``` ts
+  docEditor.insertImage(options);
+  ```
+
+**Parameters:**
+
+| Parameter               | Type             | Presence | Description                                                                                                                                                                                                                                                      |
+| ----------------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c               | string           | required | Defines a type of image insertion from the event. Can be: `add`, `change`, `fill`, `watermark`, `slide`. The default value is `"add"`.                                                                                                                           |
+| options.fileType        | string           | required | Defines a type of the image to be inserted into the file. Can be: `bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`. Deprecated since version 7.0, please use the `options.images.fileType` parameter instead.                                                           |
+| options.images          | object[]         | required | Defines an array of images to be inserted.                                                                                                                                                                                                                       |
+| options.images.fileType | string           | required | Defines a type of the image to be inserted into the file. Can be: `bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`.                                                                                                                                      |
+| options.images.url      | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links.                                                                                                              |
+| options.token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#insertimage).                                                                                                                             |
+| options.url             | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. Deprecated since version 7.0, please use the `options.images.url` parameter instead. |
+
+**Example:**
+
+  ``` ts
   docEditor.insertImage({
     c: "add",
     images: [
@@ -96,17 +114,6 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiYWRkIiwiaW1hZ2VzIjpbeyJmaWxlVHlwZSI6InBuZyIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtaW1hZ2UxLnBuZyJ9LHsiZmlsZVR5cGUiOiJwbmciLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWltYWdlMi5wbmcifV19.JfSa__qPeY3MjUgdkJDjdfJWBgvCmEdLfFzjd3WgeUA",
   });
   ```
-
-
-| Parameter       | Type             | Presence | Description                                                                                                                                                                                                                                                      |
-| --------------- | ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c               | string           | required | Defines a type of image insertion from the event. Can be: `add`, `change`, `fill`, `watermark`, `slide`. The default value is `"add"`.                                                                                                                           |
-| fileType        | string           | required | Defines a type of the image to be inserted into the file. Can be: `bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`. Deprecated since version 7.0, please use the `images.fileType` parameter instead.                                                                   |
-| images          | object[] | required | Defines an array of images to be inserted.                                                                                                                                                                                                                       |
-| images.fileType | string           | required | Defines a type of the image to be inserted into the file. Can be: `bmp`, `gif`, `jpe`, `jpeg`, `jpg`, `png`, `tif`, `tiff`.                                                                                                                                      |
-| images.url      | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links.                                                                                                              |
-| token           | string           | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#insertimage).                                                                                                                             |
-| url             | string           | required | Defines an absolute URL where the source image is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. Deprecated since version 7.0, please use the `images.url` parameter instead. |
 
 :::note
 Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
@@ -128,25 +135,59 @@ Updates the file version without reloading the editor. This method must be calle
 
 This method must take the editor initialization configuration for the current file version. The configuration must contain all the parameters used for signing a request to [open a file](../additional-api/signature/browser.md#opening-file) for editing. The following parameters cannot be changed in the config: [documentType](./config/config.md#documenttype), [type](./config/config.md#type), [events](./config/events.md).
 
-``` ts
-docEditor.refreshFile({
-  document: {
-    fileType: "docx",
-    key: "Khirz6zTPdfd7",
-    title: "Example Document Title.docx",
-    url: "https://example.com/url-to-example-document.docx",
-  },
-  documentType: "word",
-  editorConfig: {
-    callbackUrl: "https://example.com/url-to-callback",
-  },
-  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
-});
-```
+  ``` ts
+  docEditor.refreshFile(config);
+  ```
+
+**Parameters:**
+
+| Parameter | Type   | Presence | Description                                                                          |
+| --------- | ------ | -------- | ------------------------------------------------------------------------------------ |
+| config    | object | required | The editor initialization [configuration](./config/config.md) for the current file version. |
+
+**Example:**
+
+  ``` ts
+  docEditor.refreshFile({
+    document: {
+      fileType: "docx",
+      key: "Khirz6zTPdfd7",
+      title: "Example Document Title.docx",
+      url: "https://example.com/url-to-example-document.docx",
+    },
+    documentType: "word",
+    editorConfig: {
+      callbackUrl: "https://example.com/url-to-callback",
+    },
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
+  });
+  ```
 
 ## refreshHistory
 
 Show the document version history. This method must be called after the [onRequestHistory](./config/events.md#onrequesthistory) event.
+
+  ``` ts
+  docEditor.refreshHistory(options);
+  ```
+
+**Parameters:**
+
+| Parameter                     | Type    | Presence | Description                                                                                                                                       |
+| ----------------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.currentVersion        | integer | required | Defines the current document version number.                                                                                                      |
+| options.error                 | string  | optional | Defines the error message text.                                                                                                                   |
+| options.history               | array   | required | Defines the array with the document versions.                                                                                                     |
+| options.history.changes       | object  | optional | Defines the `changes` from [the history object](./callback-handler.md#history) returned after saving the document.                                |
+| options.history.created       | string  | required | Defines the document version creation date.                                                                                                       |
+| options.history.key           | string  | required | Defines the unique document identifier used by the service to recognize the document.                                                             |
+| options.history.serverVersion | integer | optional | Defines the current server version number. If the `changes` parameter is sent, then the `serverVersion` parameter is required to be sent as well. |
+| options.history.user          | object  | optional | Defines the user who is the author of the document version.                                                                                       |
+| options.history.user.id       | string  | optional | Defines the identifier of the user who is the author of the document version.                                                                     |
+| options.history.user.name     | string  | optional | Defines the name of the user who is the author of the document version.                                                                           |
+| options.history.version       | integer | required | Defines the document version number.                                                                                                              |
+
+**Example:**
 
   ``` ts
   docEditor.refreshHistory({
@@ -216,20 +257,6 @@ Show an error message explaining why the version history cannot be displayed:
   })
   ```
 
-| Parameter             | Type    | Presence | Description                                                                                                                                       |
-| --------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| currentVersion        | integer | required | Defines the current document version number.                                                                                                      |
-| error                 | string  | optional | Defines the error message text.                                                                                                                   |
-| history               | array   | required | Defines the array with the document versions.                                                                                                     |
-| history.changes       | object  | optional | Defines the `changes` from [the history object](./callback-handler.md#history) returned after saving the document.                                |
-| history.created       | string  | required | Defines the document version creation date.                                                                                                       |
-| history.key           | string  | required | Defines the unique document identifier used by the service to recognize the document.                                                             |
-| history.serverVersion | integer | optional | Defines the current server version number. If the `changes` parameter is sent, then the `serverVersion` parameter is required to be sent as well. |
-| history.user          | object  | optional | Defines the user who is the author of the document version.                                                                                       |
-| history.user.id       | string  | optional | Defines the identifier of the user who is the author of the document version.                                                                     |
-| history.user.name     | string  | optional | Defines the name of the user who is the author of the document version.                                                                           |
-| history.version       | integer | required | Defines the document version number.                                                                                                              |
-
 ## requestClose
 
 Request to close the editor. It is recommended to call this method before the [destroyEditor](#destroyeditor) method to check if there is some unsaved data in the editor or not. If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. If the *Close* option will be chosen, then the [onRequestClose](./config/events.md#onrequestclose) event will be called.
@@ -285,6 +312,28 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
 Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](./config/events.md#onrequesthistorydata) event.
 
   ``` ts
+  docEditor.setHistoryData(options);
+  ```
+
+**Parameters:**
+
+| Parameter                 | Type    | Presence | Description                                                                                                                                                                                                                                                                                                      |
+| ------------------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.changesUrl        | string  | optional | Defines the url address of the file with the document changes data, which can be downloaded by the `changesurl` link from [the JSON object](./callback-handler.md#changesurl) returned after saving the document. The request for file is signed with a token which is checked by the ONLYOFFICE Docs.           |
+| options.error             | string  | optional | Defines the error message text.                                                                                                                                                                                                                                                                                  |
+| options.fileType          | string  | optional | Defines an extension of the document specified with the `url` parameter.                                                                                                                                                                                                                                         |
+| options.key               | string  | required | Defines the document identifier used to unambiguously identify the document file.                                                                                                                                                                                                                                |
+| options.previous          | object  | optional | Defines the object of the previous version of the document if `changesUrl` address was returned after saving the document.                                                                                                                                                                                       |
+| options.previous.fileType | string  | optional | Defines an extension of the document specified with the `options.previous.url` parameter.                                                                                                                                                                                                                        |
+| options.previous.key      | string  | required | Defines the document identifier of the previous version of the document.                                                                                                                                                                                                                                         |
+| options.previous.url      | string  | required | Defines the url address of the previous version of the document.                                                                                                                                                                                                                                                 |
+| options.token             | string  | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#sethistorydata).                                                                                                                                                                          |
+| options.url               | string  | required | Defines the url address of the current document version. Can be downloaded by the `url` link from [the JSON object](./callback-handler.md#url) returned after saving the document. Be sure to add a [token](../get-started/how-it-works/how-it-works.md) when using local links. Otherwise, an error will occur. |
+| options.version           | integer | required | Defines the document version number.                                                                                                                                                                                                                                                                             |
+
+**Example:**
+
+  ``` ts
   docEditor.setHistoryData({
     fileType: "docx",
     key: "Khirz6zTPdfd7",
@@ -293,7 +342,6 @@ Send the link to the document for viewing the version history. This method must 
     version: 2,
   });
   ```
-
 
 If after editing and saving the document the `changesurl` link to the file with changes data is returned, download the file by this link and send the file URL in the `changesUrl` parameter. The absolute URL address of the document previous version must be sent in the `previous.url` parameter.
 
@@ -313,7 +361,6 @@ If after editing and saving the document the `changesurl` link to the file with 
   });
   ```
 
-
 Send an error message explaining why the document version cannot be displayed:
 
   ``` ts
@@ -323,23 +370,23 @@ Send an error message explaining why the document version cannot be displayed:
   });
   ```
 
-| Parameter         | Type    | Presence | Description                                                                                                                                                                                                                                                                                                      |
-| ----------------- | ------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| changesUrl        | string  | optional | Defines the url address of the file with the document changes data, which can be downloaded by the `changesurl` link from [the JSON object](./callback-handler.md#changesurl) returned after saving the document. The request for file is signed with a token which is checked by the ONLYOFFICE Docs.           |
-| error             | string  | optional | Defines the error message text.                                                                                                                                                                                                                                                                                  |
-| fileType          | string  | optional | Defines an extension of the document specified with the `url` parameter.                                                                                                                                                                                                                                         |
-| key               | string  | required | Defines the document identifier used to unambiguously identify the document file.                                                                                                                                                                                                                                |
-| previous          | object  | optional | Defines the object of the previous version of the document if `changesUrl` address was returned after saving the document.                                                                                                                                                                                       |
-| previous.fileType | string  | optional | Defines an extension of the document specified with the `previous.url` parameter.                                                                                                                                                                                                                                |
-| previous.key      | string  | required | Defines the document identifier of the previous version of the document.                                                                                                                                                                                                                                         |
-| previous.url      | string  | required | Defines the url address of the previous version of the document.                                                                                                                                                                                                                                                 |
-| token             | string  | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#sethistorydata).                                                                                                                                                                          |
-| url               | string  | required | Defines the url address of the current document version. Can be downloaded by the `url` link from [the JSON object](./callback-handler.md#url) returned after saving the document. Be sure to add a [token](../get-started/how-it-works/how-it-works.md) when using local links. Otherwise, an error will occur. |
-| version           | integer | required | Defines the document version number.                                                                                                                                                                                                                                                                             |
-
 ## setMailMergeRecipients
 
 Insert recipient data for mail merge into the file. This method must be called after the [onRequestMailMergeRecipients](./config/events.md#onrequestmailmergerecipients) event. Deprecated since version 7.5, please use [setRequestedSpreadsheet](#setrequestedspreadsheet) instead.
+
+  ``` ts
+  docEditor.setMailMergeRecipients(options);
+  ```
+
+**Parameters:**
+
+| Parameter        | Type   | Presence | Description                                                                                                                                                                         |
+| ---------------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.fileType | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: `csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`.                                      |
+| options.token    | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setmailmergerecipients).                                     |
+| options.url      | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
+
+**Example:**
 
   ``` ts
   docEditor.setMailMergeRecipients({
@@ -348,13 +395,6 @@ Insert recipient data for mail merge into the file. This method must be called a
     url: "https://example.com/url-to-example-recipients.xlsx",
   });
   ```
-
-
-| Parameter | Type   | Presence | Description                                                                                                                                                                         |
-| --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fileType  | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: `csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`.                                      |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setmailmergerecipients).                                     |
-| url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
 
 ## setReferenceData
 
@@ -369,6 +409,24 @@ Please note that this method is executed only when the user has permissions to t
 :::
 
   ``` ts
+  docEditor.setReferenceData(options);
+  ```
+
+**Parameters:**
+
+| Parameter             | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.error         | string | optional | Defines the error message text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| options.fileType      | string | optional | Defines an extension of the document specified with the `url` parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| options.key           | string | optional | Defines the unique document identifier used by the service to take the data from the co-editing session. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the `key` but without the special characters and the length is limited to 128 symbol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| options.path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| options.referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/document/document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/document/document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| options.token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setreferencedata).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| options.url           | string | required | Defines the URL address to download the current file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
+**Example:**
+
+  ``` ts
   docEditor.setReferenceData({
     fileType: "xlsx",
     key: "Khirz6zTPdfd7",
@@ -382,7 +440,6 @@ Please note that this method is executed only when the user has permissions to t
   });
   ```
 
-
 Show an error message explaining if any error occurred:
 
   ``` ts
@@ -390,16 +447,6 @@ Show an error message explaining if any error occurred:
     error: "Exception",
   });
   ```
-
-| Parameter     | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| error         | string | optional | Defines the error message text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| fileType      | string | optional | Defines an extension of the document specified with the `url` parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| key           | string | optional | Defines the unique document identifier used by the service to take the data from the co-editing session. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the `key` but without the special characters and the length is limited to 128 symbol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/document/document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/document/document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setreferencedata).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| url           | string | required | Defines the URL address to download the current file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ## setReferenceSource
 
@@ -410,6 +457,24 @@ Please note that this method is executed only when the user has permissions to t
 :::
 
   ``` ts
+  docEditor.setReferenceSource(options);
+  ```
+
+**Parameters:**
+
+| Parameter             | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.error         | string | optional | Defines the error message text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| options.fileType      | string | optional | Defines an extension of the document specified with the `url` parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| options.key           | string | optional | Defines the unique document identifier used by the service to take the data from the co-editing session. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the `key` but without the special characters and the length is limited to 128 symbol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| options.path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceSource](./config/events.md#onrequestreferencesource) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| options.referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/document/document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/document/document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
+| options.token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setreferencesource).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| options.url           | string | required | Defines the URL address to download the current file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
+**Example:**
+
+  ``` ts
   docEditor.setReferenceSource({
     fileType: "xlsx",
     key: "Khirz6zTPdfd7",
@@ -423,7 +488,6 @@ Please note that this method is executed only when the user has permissions to t
   });
   ```
 
-
 Show an error message explaining if any error occurred:
 
   ``` ts
@@ -432,19 +496,24 @@ Show an error message explaining if any error occurred:
   });
   ```
 
-| Parameter     | Type   | Presence | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------- | ------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| error         | string | optional | Defines the error message text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| fileType      | string | optional | Defines an extension of the document specified with the `url` parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| key           | string | optional | Defines the unique document identifier used by the service to take the data from the co-editing session. In case the known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the `key` but without the special characters and the length is limited to 128 symbol.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| path          | string | required | Defines the file name or relative path for the formula editor. It is used to identify a file when the [onRequestReferenceSource](./config/events.md#onrequestreferencesource) event is executed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| referenceData | object | optional | Defines an object that is generated by the integrator to uniquely identify a file in its system. This data must be the same as in the [document.referenceData](./config/document/document.md#referencedata) config parameter:<br/><br/>**fileKey** - the unique document identifier used by the service to get a link to the file. It must not be changed when the document is edited and saved (i.e. it is not equal to the [document.key](./config/document/document.md#key) parameter),<br/>**type**: string,<br/>**example**: "BCFA2CED";<br/><br/>**instanceId** - the unique system identifier. If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu,<br/>**type**: string,<br/>**example**: `https://example.com`. |
-| token         | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setreferencesource).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| url           | string | required | Defines the URL address to download the current file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-
 ## setRequestedDocument
 
 Select a document for comparing, combining, or inserting text. This method must be called after the [onRequestSelectDocument](./config/events.md#onrequestselectdocument) event.
+
+  ``` ts
+  docEditor.setRequestedDocument(options);
+  ```
+
+**Parameters:**
+
+| Parameter        | Type   | Presence | Description                                                                                                                                                                             |
+| ---------------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c        | string | required | Defines a type of document selection from the event. Can be: `compare`, `combine`, or `insert-text`. The default value is `"compare"`.                                                    |
+| options.fileType | string | required | Defines a type of the document to be selected. Can be: `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`.                                        |
+| options.token    | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequesteddocument).                                           |
+| options.url      | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
+
+**Example:**
 
   ``` ts
   docEditor.setRequestedDocument({
@@ -455,17 +524,24 @@ Select a document for comparing, combining, or inserting text. This method must 
   });
   ```
 
-
-| Parameter | Type   | Presence | Description                                                                                                                                                                             |
-| --------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c         | string | required | Defines a type of document selection from the event. Can be: `compare`, `combine`, or `insert-text`. The default value is `"compare"`.                                                    |
-| fileType  | string | required | Defines a type of the document to be selected. Can be: `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`.                                        |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequesteddocument).                                           |
-| url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-
 ## setRequestedSpreadsheet
 
 Insert recipient data for mail merge into the file. This method must be called after the [onRequestSelectSpreadsheet](./config/events.md#onrequestselectspreadsheet) event.
+
+  ``` ts
+  docEditor.setRequestedSpreadsheet(options);
+  ```
+
+**Parameters:**
+
+| Parameter        | Type   | Presence | Description                                                                                                                                                                         |
+| ---------------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c        | string | required | Defines a type of spreadsheet selection from the event. Can be `mailmerge`.                                                                                                         |
+| options.fileType | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: `csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`.                                      |
+| options.token    | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequestedspreadsheet).                                    |
+| options.url      | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
+
+**Example:**
 
   ``` ts
   docEditor.setRequestedSpreadsheet({
@@ -476,14 +552,6 @@ Insert recipient data for mail merge into the file. This method must be called a
   });
   ```
 
-
-| Parameter | Type   | Presence | Description                                                                                                                                                                         |
-| --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c         | string | required | Defines a type of spreadsheet selection from the event. Can be `mailmerge`.                                                                                                         |
-| fileType  | string | required | Defines the type of spreadsheet for mail merge in the file. Can be: `csv`, `fods`, `ods`, `ots`, `xls`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`.                                      |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrequestedspreadsheet).                                    |
-| url       | string | required | Defines the absolute URL where the source data is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-
 ## setRevisedFile
 
 Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) event. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
@@ -493,6 +561,20 @@ This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyo
 :::
 
   ``` ts
+  docEditor.setRevisedFile(options);
+  ```
+
+**Parameters:**
+
+| Parameter        | Type   | Presence | Description                                                                                                                                                                             |
+| ---------------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.fileType | string | required | Defines the type of document for comparing. Can be: `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`.                                           |
+| options.token    | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrevisedfile).                                                 |
+| options.url      | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
+
+**Example:**
+
+  ``` ts
   docEditor.setRevisedFile({
     fileType: "docx",
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6ImRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.t8660n_GmxJIppxcwkr_mUxmXYtE8cg-jF2cTLMtuk8",
@@ -500,16 +582,23 @@ This method is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyo
   });
   ```
 
-
-| Parameter | Type   | Presence | Description                                                                                                                                                                             |
-| --------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fileType  | string | required | Defines the type of document for comparing. Can be: `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fodt`, `odt`, `ott`, `rtf`, `wps`.                                           |
-| token     | string | optional | Defines the encrypted signature added to the parameter in the form of a [token](../additional-api/signature/browser.md#setrevisedfile).                                                 |
-| url       | string | required | Defines the absolute URL where the source document is stored. Be sure to add a [token](../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-
 ## setSharingSettings
 
 Update the [information](./config/document/info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) event.
+
+  ``` ts
+  docEditor.setSharingSettings(options);
+  ```
+
+**Parameters:**
+
+| Parameter                           | Type            | Presence | Description                                                             |
+| ----------------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
+| options.sharingSettings             | object[] | optional | Defines the settings which allow sharing the document with other users. |
+| options.sharingSettings.permissions | string          | optional | Defines the access rights for the user with the name above.             |
+| options.sharingSettings.user        | string          | optional | Defines the name of the user with whom the document will be shared.     |
+
+**Example:**
 
   ``` ts
   docEditor.setSharingSettings({
@@ -527,15 +616,26 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
   });
   ```
 
-| Parameter                   | Type            | Presence | Description                                                             |
-| --------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
-| sharingSettings             | object[] | optional | Defines the settings which allow sharing the document with other users. |
-| sharingSettings.permissions | string          | optional | Defines the access rights for the user with the name above.             |
-| sharingSettings.user        | string          | optional | Defines the name of the user with whom the document will be shared.     |
-
 ## setUsers
 
 Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) event.
+
+  ``` ts
+  docEditor.setUsers(options);
+  ```
+
+**Parameters:**
+
+| Parameter           | Type             | Presence | Description                                                                                                                                                                                               |
+| ------------------- | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options.c           | string           | required | Defines the operation type from the [onRequestUsers](./config/events.md#onrequestusers) event. It can take one of the following values - `mention`, `protect`, or `info`. The default value is `mention`. |
+| options.users       | string[] | optional | Defines the list of the users.                                                                                                                                                                            |
+| options.users.email | string           | optional | Defines the email address of the user. This field is required when the `c` parameter is `mention`.                                                                                                        |
+| options.users.id    | string           | optional | Defines the identification of the user. This field is required when the `c` parameter is `protect`.                                                                                                       |
+| options.users.image | string           | optional | Defines the path to the user's avatar. This field is required when the `c` parameter is `info`.                                                                                                           |
+| options.users.name  | string           | optional | Defines the full name of the user.                                                                                                                                                                        |
+
+**Example:**
 
   ``` ts
   docEditor.setUsers({
@@ -557,18 +657,8 @@ Set a list of users to mention in the comments, grant the access rights to edit 
   });
   ```
 
-
-| Parameter   | Type             | Presence | Description                                                                                                                                                                                               |
-| ----------- | ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| c           | string           | required | Defines the operation type from the [onRequestUsers](./config/events.md#onrequestusers) event. It can take one of the following values - `mention`, `protect`, or `info`. The default value is `mention`. |
-| users       | string[] | optional | Defines the list of the users.                                                                                                                                                                            |
-| users.email | string           | optional | Defines the email address of the user. This field is required when the `c` parameter is `mention`.                                                                                                        |
-| users.id    | string           | optional | Defines the identification of the user. This field is required when the `c` parameter is `protect`.                                                                                                       |
-| users.image | string           | optional | Defines the path to the user's avatar. This field is required when the `c` parameter is `info`.                                                                                                           |
-| users.name  | string           | optional | Defines the full name of the user.                                                                                                                                                                        |
-
 :::note
-Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, *"data:image/png,base64,\*\*\*\*\*"*.
+Please note that the request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. Moreover, the CORS problem may occur. In this case, use the avatar in the base64 format. For example, *"data:image/png;base64,\*\*\*\*\*"*.
 :::
 
 :::note
