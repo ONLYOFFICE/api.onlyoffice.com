@@ -14,6 +14,7 @@ function onAppReady() {
 }
 
 const config = {
+  // ...
   events: {
     onAppReady,
   },
@@ -34,6 +35,7 @@ function onCollaborativeChanges() {
 }
 
 const config = {
+  // ...
   events: {
     onCollaborativeChanges,
   },
@@ -54,6 +56,7 @@ function onDocumentReady() {
 }
 
 const config = {
+  // ...
   events: {
     onDocumentReady,
   },
@@ -84,6 +87,7 @@ function onDocumentStateChange(event) {
 }
 
 const config = {
+  // ...
   events: {
     onDocumentStateChange,
   },
@@ -113,6 +117,7 @@ function onDownloadAs(event) {
 }
 
 const config = {
+  // ...
   events: {
     onDownloadAs,
   },
@@ -140,6 +145,7 @@ function onError(event) {
 }
 
 const config = {
+  // ...
   events: {
     onError,
   },
@@ -166,6 +172,7 @@ function onInfo(event) {
 }
 
 const config = {
+  // ...
   events: {
     onInfo,
   },
@@ -198,6 +205,7 @@ function onMakeActionLink(event) {
 }
 
 const config = {
+  // ...
   events: {
     onMakeActionLink,
   },
@@ -228,6 +236,7 @@ function onMetaChange(event) {
 }
 
 const config = {
+  // ...
   events: {
     onMetaChange,
   },
@@ -252,6 +261,7 @@ function onOutdatedVersion() {
 }
 
 const config = {
+  // ...
   events: {
     onOutdatedVersion,
   },
@@ -272,6 +282,7 @@ function onPluginsReady() {
 }
 
 const config = {
+  // ...
   events: {
     onPluginsReady,
   },
@@ -296,6 +307,7 @@ function onRequestClose() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestClose,
   },
@@ -327,6 +339,7 @@ function onRequestCreateNew() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestCreateNew,
   },
@@ -356,6 +369,7 @@ function onRequestEditRights() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestEditRights,
   },
@@ -405,6 +419,7 @@ function onRequestHistory() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestHistory,
   },
@@ -431,6 +446,7 @@ function onRequestHistoryClose() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestHistoryClose,
   },
@@ -474,6 +490,7 @@ function onRequestHistoryData(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestHistoryData,
   },
@@ -521,6 +538,7 @@ function onRequestInsertImage(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestInsertImage,
   },
@@ -566,6 +584,7 @@ function onRequestOpen(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestOpen,
   },
@@ -622,6 +641,7 @@ function onRequestReferenceData(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestReferenceData,
   },
@@ -670,6 +690,7 @@ function onRequestReferenceSource(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestReferenceSource,
   },
@@ -707,6 +728,7 @@ function onRequestRefreshFile() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestRefreshFile,
   },
@@ -737,6 +759,7 @@ function onRequestRename(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestRename,
   },
@@ -801,6 +824,7 @@ function onRequestRestore(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestRestore,
   },
@@ -837,6 +861,7 @@ function onRequestSaveAs(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSaveAs,
   },
@@ -874,6 +899,7 @@ function onRequestSelectDocument(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSelectDocument,
   },
@@ -911,6 +937,7 @@ function onRequestSelectSpreadsheet(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSelectSpreadsheet,
   },
@@ -945,6 +972,7 @@ function onRequestSendNotify(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSendNotify,
   },
@@ -981,6 +1009,7 @@ function onRequestSharingSettings() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSharingSettings,
   },
@@ -1003,6 +1032,7 @@ function onRequestStartFilling() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestStartFilling,
   },
@@ -1055,6 +1085,7 @@ function onRequestUsers(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestUsers,
   },
@@ -1075,6 +1106,7 @@ function onSubmit(event) {
 }
 
 const config = {
+  // ...
   events: {
     onSubmit,
   },
@@ -1099,6 +1131,7 @@ function onUserActionRequired() {
 }
 
 const config = {
+  // ...
   events: {
     onUserActionRequired,
   },
@@ -1126,6 +1159,7 @@ function onWarning(event) {
 }
 
 const config = {
+  // ...
   events: {
     onWarning,
   },
