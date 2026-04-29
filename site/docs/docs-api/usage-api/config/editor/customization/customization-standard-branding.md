@@ -7,7 +7,7 @@ sidebar_label: Standard branding
 
 The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
 
-On this page you will find the customization parameters available for the [standard branding](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
+Most customization parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available for editing only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
 
 :::note
 Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uitheme).
@@ -137,7 +137,7 @@ Defines if the **Comments** menu button is displayed or hidden. Please note that
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (`false`) or in the toolbar (`true`) making the header more compact.
+Defines where the additional action buttons are displayed. If set to `false`, the buttons are in the upper part of the editor window header next to the logo. If set to `true`, the buttons are in the toolbar, making the header more compact.
 
 **Example**: `false`
 
@@ -147,7 +147,7 @@ Defines if the additional action buttons are displayed in the upper part of the 
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the top toolbar type displayed is full (`false`) or compact (`true`). Starting from version 8.3, this setting is also available for the viewer. The default value for the `view` mode is `true`.
+Defines the top toolbar type. If set to `false`, the full toolbar is displayed. If set to `true`, the compact toolbar is displayed. Starting from version 8.3, this setting is also available for the viewer. The default value for the `view` mode is `true`.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.compactToolbar` parameter.
@@ -326,7 +326,7 @@ In case `spellcheck` setting is changed in the editor interface, it will be stor
 
 **type:** `object | string` | **default:** `"header"`
 
-Defines the background of the top toolbar tabs. If this parameter is a string value (**header** or **toolbar**), then it is set as the initial tab background value and the tab background setting will not be hidden.
+Defines the background of the top toolbar tabs. If this parameter is a string value (`"header"` or `"toolbar"`), then it is set as the initial tab background value and the tab background setting will not be hidden.
 
 **Example**: `"header"`
 
@@ -334,7 +334,7 @@ Defines the background of the top toolbar tabs. If this parameter is a string va
 
 **type:** `string` | **default:** `"header"`
 
-Defines if the background of the top toolbar tabs matches the header background (**header**) or the toolbar background (**toolbar**). This value is used when the editor is first opened.
+Defines if the background of the top toolbar tabs matches the header background (`"header"`) or the toolbar background (`"toolbar"`). This value is used when the editor is first opened.
 
 **Example**: `"header"`
 
@@ -352,7 +352,7 @@ Defines if the tab background setting will be displayed in the **File -> Advance
 
 **type:** `object | string` | **default:** `"fill"`
 
-Defines the style of the top toolbar tabs. If this parameter is a string value (**fill** or **line**), then it is set as the initial tab style value and the tab style setting will not be hidden.
+Defines the style of the top toolbar tabs. If this parameter is a string value (`"fill"` or `"line"`), then it is set as the initial tab style value and the tab style setting will not be hidden.
 
 **Example**: `"fill"`
 
@@ -360,7 +360,7 @@ Defines the style of the top toolbar tabs. If this parameter is a string value (
 
 **type:** `string` | **default:** `"fill"`
 
-Defines if the top toolbar tabs are distinctly displayed (**fill**) or only highlighted to see which one is selected (**line**). This value is used when the editor is first opened.
+Defines if the top toolbar tabs are distinctly displayed (`"fill"`) or only highlighted to see which one is selected (`"line"`). This value is used when the editor is first opened.
 
 **Example**: `"fill"`
 
@@ -420,7 +420,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the Western (`true`) or Chinese (`false`) font size is used in the Chinese (Simplified) UI.
+Defines the font size used in the Chinese (Simplified) UI. If set to `true`, the Western font size is used. If set to `false`, the Chinese font size is used.
 
 **Example**: `false`
 
@@ -536,7 +536,7 @@ Defines if the editor rulers are displayed or hidden. This parameter is availabl
 
 **type:** `string`
 
-Defines the mode of embedding editors into the web page. The **embed** value disables scrolling to the editor frame when it is loaded as the focus is not captured.
+Defines the mode of embedding editors into the web page. The `"embed"` value disables scrolling to the editor frame when it is loaded as the focus is not captured.
 
 **Example**: `"embed"`
 
@@ -570,7 +570,7 @@ const logo = {
 
 **type:** `string`
 
-Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 300x20.
+Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `"embedded"` document type). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/logo.png"`
 
@@ -594,7 +594,7 @@ Path to the image file used for the light header (for example, in the Gray theme
 
 **type:** `string`
 
-Path to the image file used to show in the embedded mode (see the [config](../../config.md#type) section to find out how to define the **embedded** document type). The image must have the following size: 248x40.
+Path to the image file used to show in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `"embedded"` document type). The image must have the following size: 248x40.
 
 :::danger[Deprecated]
 Starting from version 7.0, please use the [logo.image](#logoimage) field instead.
@@ -635,9 +635,9 @@ Defines if document macros will be automatically run when the editor opens.
 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
-- **disable** - don't run macros at all;
-- **warn** - warn about macros and ask permission to run them;
-- **enable** - run all macros automatically.
+- `"disable"` - don't run macros at all;
+- `"warn"` - warn about macros and ask permission to run them;
+- `"enable"` - run all macros automatically.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.
@@ -732,7 +732,7 @@ Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md
 
 **type:** `string` | **default:** `"select"`
 
-Defines the pointer mode (**select** or **hand**) when the presentation editor is loaded in the viewer.
+Defines the pointer mode (`"select"` or `"hand"`) when the presentation editor is loaded in the viewer.
 
 **Example**: `"select"`
 
@@ -776,7 +776,7 @@ Defines if the **Display mode** button is displayed or hidden on the **Collabora
 
 **type:** `boolean` | **default:** `false`
 
-Defines the review display mode: show reviews in tooltips by hovering the changes (`true`) or in balloons by clicking the changes (`false`).
+Defines the review display mode. If set to `true`, reviews are shown in tooltips by hovering the changes. If set to `false`, reviews are shown in balloons by clicking the changes.
 
 **Example**: `false`
 
@@ -784,12 +784,12 @@ Defines the review display mode: show reviews in tooltips by hovering the change
 
 **type:** `string`
 
-Defines the review display mode for the document editor. The default value is **original** for viewer and **markup** for editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when **markup** or **simple** is selected. If **original** or **final** is selected, the editor automatically switches to view-only mode. Can take the following values:
+Defines the review display mode for the document editor. The default value is `"original"` for viewer and `"markup"` for editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when `"markup"` or `"simple"` is selected. If `"original"` or `"final"` is selected, the editor automatically switches to view-only mode. Can take the following values:
 
-- **markup** - the document is displayed with proposed changes highlighted;
-- **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-- **final** - the document is displayed with all the proposed changes applied;
-- **original** - the original document is displayed without the proposed changes.
+- `"markup"` - the document is displayed with proposed changes highlighted;
+- `"simple"` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+- `"final"` - the document is displayed with all the proposed changes applied;
+- `"original"` - the original document is displayed without the proposed changes.
 
 **Example**: `"original"`
 
@@ -805,7 +805,7 @@ Defines if the review changes panel is automatically displayed or hidden when th
 
 **type:** `boolean`
 
-Defines if the document is opened in the review editing mode (`true`) or not (`false`) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
+Defines if the document is opened in the review editing mode regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
 
 **Example**: `true`
 
@@ -815,12 +815,12 @@ Defines if the document is opened in the review editing mode (`true`) or not (`f
 
 Defines the review editing mode in the document editor. This parameter can take the following values:
 
-- **markup** - the document is displayed with proposed changes highlighted;
-- **simple** - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-- **final** - the document is displayed with all the proposed changes applied;
-- **original** - the original document is displayed without the proposed changes.
+- `"markup"` - the document is displayed with proposed changes highlighted;
+- `"simple"` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+- `"final"` - the document is displayed with all the proposed changes applied;
+- `"original"` - the original document is displayed without the proposed changes.
 
-The default value is **original** for viewer and **markup** for editor.
+The default value is `"original"` for viewer and `"markup"` for editor.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.reviewDisplay` parameter.
@@ -925,7 +925,7 @@ Defines whether the **Suggest a Feature** menu button will be displayed or hidde
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the document title is visible on the top toolbar (`false`) or hidden (`true`).
+Defines if the document title is hidden on the top toolbar. If set to `false`, the title is visible. If set to `true`, the title is hidden.
 
 :::note
 This setting is used when the [compactHeader](#compactheader) parameter is set to `true`.
@@ -943,10 +943,10 @@ Starting from version 9.0.3, this parameter is also available for the mobile edi
 
 **type:** `boolean` | **default:** `false`
 
-Defines if the top toolbar tabs are distinctly displayed (`false`) or only highlighted to see which one is selected (`true`).
+Defines the top toolbar tabs display style. If set to `false`, the tabs are distinctly displayed. If set to `true`, the tabs are only highlighted to see which one is selected.
 
 :::danger[Deprecated]
-Starting from version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to **line** and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to **toolbar**.
+Starting from version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to `"line"` and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to `"toolbar"`.
 :::
 
 **Example**: `false`
@@ -955,7 +955,7 @@ Starting from version 8.2, please use the [editorConfig.customization.features.t
 
 **type:** `boolean`
 
-Defines if the document is opened in the review editing mode (`true`) or not (`false`) regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
+Defines if the document is opened in the review editing mode regardless of the [document.permissions.review](../../document/permissions.md#review) parameter (the review mode is changed only for the current user). If set to `true`, the review mode is enabled. If set to `false`, it is disabled. If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
 
 :::danger[Deprecated]
 Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchanges) parameter instead.
@@ -992,9 +992,9 @@ Starting from version 9.1, this parameter is also available for the mobile edito
 
 Defines the measurement units used on the ruler and in dialog boxes. Can take the following values:
 
-- **cm** - centimeters;
-- **pt** - points;
-- **inch** - inches.
+- `"cm"` - centimeters;
+- `"pt"` - points;
+- `"inch"` - inches.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.unit` parameter.
@@ -1014,7 +1014,7 @@ Starting from version 8.3, defines the HEX color for the default heading styles 
 
 **type:** `integer` | **default:** `100`
 
-Defines the document display zoom value measured in percent. Can take values larger than **0**. For text documents and presentations it is possible to set this parameter to **-1** (fitting the document to page option) or to **-2** (fitting the document page width to the editor page).
+Defines the document display zoom value measured in percent. Can take values larger than `0`. For text documents and presentations it is possible to set this parameter to `-1` (fitting the document to page option) or to `-2` (fitting the document page width to the editor page).
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.zoom` parameter.

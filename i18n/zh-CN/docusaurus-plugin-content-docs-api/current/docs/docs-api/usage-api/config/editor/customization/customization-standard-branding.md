@@ -7,7 +7,7 @@ sidebar_label: Standard branding
 
 自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
 
-在此页面上，您将找到 ONLYOFFICE 文档开发者版的[白标定制](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)可用的自定义参数。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
+本页面上的大多数自定义参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
 
 :::note
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
@@ -137,7 +137,7 @@ const close = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义附加操作按钮是显示在编辑器窗口标题的上部靠近徽标 (`false`) 还是显示在工具栏 (`true`) 中，使标题更紧凑。
+定义附加操作按钮的显示位置。如果设置为 `false`，按钮显示在编辑器窗口标题的上部靠近徽标处。如果设置为 `true`，按钮显示在工具栏中，使标题更紧凑。
 
 **示例**: `false`
 
@@ -147,7 +147,7 @@ const close = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义显示的顶部工具栏类型是完整的 (`false`) 还是紧凑的 (`true`)。从 8.3 版开始，此设置也适用于查看器。`view` 模式的默认值为 `true`。
+定义顶部工具栏类型。如果设置为 `false`，显示完整工具栏。如果设置为 `true`，显示紧凑工具栏。从 8.3 版开始，此设置也适用于查看器。`view` 模式的默认值为 `true`。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.compactToolbar` 参数发送的任何值。
@@ -326,7 +326,7 @@ const features = {
 
 **类型：** `object | string` | **默认值：** `"header"`
 
-定义顶部工具栏选项卡的背景。如果此参数是字符串值（**header** 或 **toolbar**），则将其设置为初始选项卡背景值，并且不会隐藏选项卡背景设置。
+定义顶部工具栏选项卡的背景。如果此参数是字符串值（`"header"` 或 `"toolbar"`），则将其设置为初始选项卡背景值，并且不会隐藏选项卡背景设置。
 
 **示例**: `"header"`
 
@@ -334,7 +334,7 @@ const features = {
 
 **类型：** `string` | **默认值：** `"header"`
 
-定义顶部工具栏选项卡的背景是否与标题背景（**header**）或工具栏背景（**toolbar**）匹配。首次打开编辑器时使用此值。
+定义顶部工具栏选项卡的背景是否与标题背景（`"header"`）或工具栏背景（`"toolbar"`）匹配。首次打开编辑器时使用此值。
 
 **示例**: `"header"`
 
@@ -352,7 +352,7 @@ const features = {
 
 **类型：** `object | string` | **默认值：** `"fill"`
 
-定义顶部工具栏选项卡的样式。如果此参数是字符串值（**fill** 或 **line**），则将其设置为初始选项卡样式值，并且选项卡样式设置不会被隐藏。
+定义顶部工具栏选项卡的样式。如果此参数是字符串值（`"fill"` 或 `"line"`），则将其设置为初始选项卡样式值，并且选项卡样式设置不会被隐藏。
 
 **示例**: `"fill"`
 
@@ -360,7 +360,7 @@ const features = {
 
 **类型：** `string` | **默认值：** `"fill"`
 
-定义顶部工具栏选项卡是否清晰显示（**fill**）或仅突出显示以查看选择了哪个选项卡（**line**）。此值在编辑器首次打开时使用。
+定义顶部工具栏选项卡是否清晰显示（`"fill"`）或仅突出显示以查看选择了哪个选项卡（`"line"`）。此值在编辑器首次打开时使用。
 
 **示例**: `"fill"`
 
@@ -420,7 +420,7 @@ const features = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义在简体中文界面中使用西文字号（`true`）还是中文字号（`false`）。
+定义简体中文界面中使用的字号。如果设置为 `true`，使用西文字号。如果设置为 `false`，使用中文字号。
 
 **示例**: `false`
 
@@ -536,7 +536,7 @@ const goback = {
 
 **类型：** `string`
 
-定义将编辑器嵌入网页的模式。**embed** 值禁止在加载编辑器框架时滚动到编辑器框架，因为焦点未被捕获。
+定义将编辑器嵌入网页的模式。`"embed"` 值禁止在加载编辑器框架时滚动到编辑器框架，因为焦点未被捕获。
 
 **示例**: `"embed"`
 
@@ -635,9 +635,9 @@ const logo = {
 
 定义启用自动开始时的宏运行模式。可以取以下值：
 
-- **disable** - 不自动运行所有宏；
-- **enable** - 自动运行所有宏；
-- **warn** - 对运行宏发出警告并请求运行它们的权限。
+- `"disable"` - 不自动运行所有宏；
+- `"enable"` - 自动运行所有宏；
+- `"warn"` - 对运行宏发出警告并请求运行它们的权限。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.macrosMode` 参数发送的任何值。
@@ -732,7 +732,7 @@ const mobile = {
 
 **类型：** `string` | **默认值：** `"select"`
 
-定义在查看器中加载演示文稿编辑器时的指针模式（**select** 或 **hand**）。
+定义在查看器中加载演示文稿编辑器时的指针模式（`"select"` 或 `"hand"`）。
 
 **示例**: `"select"`
 
@@ -776,7 +776,7 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义审阅显示模式：通过将鼠标悬停在更改上来在工具提示中显示审阅（`true`），或通过单击更改来在气球中显示审阅（`false`）。
+定义审阅显示模式。如果设置为 `true`，通过将鼠标悬停在更改上在工具提示中显示审阅。如果设置为 `false`，通过单击更改在气球中显示审阅。
 
 **示例**: `false`
 
@@ -784,12 +784,12 @@ const review = {
 
 **类型：** `string`
 
-定义文档编辑器的审阅显示模式。查看器的默认值是 **original**，编辑器的默认值是 **markup**。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 **markup** 或 **simple** 时才能进行编辑。如果选择 **original** 或 **final**，编辑器将自动切换到仅查看模式。可以采用以下值：
+定义文档编辑器的审阅显示模式。查看器的默认值是 `"original"`，编辑器的默认值是 `"markup"`。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 `"markup"` 或 `"simple"` 时才能进行编辑。如果选择 `"original"` 或 `"final"`，编辑器将自动切换到仅查看模式。可以采用以下值：
 
-- **markup** - 显示文档，并突出显示建议的更改；
-- **simple** - 显示文档并突出显示建议的更改，但气球已关闭；
-- **final** - 显示文档并应用了所有建议的更改；
-- **original** - 显示原始文档，没有建议的更改。
+- `"markup"` - 显示文档，并突出显示建议的更改；
+- `"simple"` - 显示文档并突出显示建议的更改，但气球已关闭；
+- `"final"` - 显示文档并应用了所有建议的更改；
+- `"original"` - 显示原始文档，没有建议的更改。
 
 **示例**: `"original"`
 
@@ -805,7 +805,7 @@ const review = {
 
 **类型：** `boolean`
 
-无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义是否以审阅编辑模式 (`true`) 打开文档 (`false`) （审阅模式仅针对当前用户更改）。如果参数 `undefined`，则使用 `document.permissions.review` 值（对于所有文档用户）。
+无论 [document.permissions.review](../../document/permissions.md#review) 参数如何，定义文档是否以审阅编辑模式打开（审阅模式仅针对当前用户更改）。如果设置为 `true`，启用审阅模式。如果设置为 `false`，禁用审阅模式。如果参数为 `undefined`，则使用 `document.permissions.review` 值（对于所有文档用户）。
 
 **示例**: `true`
 
@@ -815,12 +815,12 @@ const review = {
  
  定义文档编辑器中的审阅编辑模式。此参数可以采用以下值：
 
-- **markup** - 显示文档并突出显示建议的更改；
-- **simple** - 显示文档并突出显示建议的更改，但气球已关闭；
-- **final** - 显示文档并应用所有建议的更改；
-- **original** - 显示原始文档，没有建议的更改。
+- `"markup"` - 显示文档并突出显示建议的更改；
+- `"simple"` - 显示文档并突出显示建议的更改，但气球已关闭；
+- `"final"` - 显示文档并应用所有建议的更改；
+- `"original"` - 显示原始文档，没有建议的更改。
 
-查看器的默认值是 **original**，编辑器的默认值是 **markup**。
+查看器的默认值是 `"original"`，编辑器的默认值是 `"markup"`。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.reviewDisplay` 参数发送的任何值。
@@ -925,7 +925,7 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义文档标题在顶部工具栏上是可见的 (`false`) 还是隐藏的 (`true`)。
+定义文档标题是否在顶部工具栏上隐藏。如果设置为 `false`，标题可见。如果设置为 `true`，标题隐藏。
 
 :::note
 当 [compactHeader](#compactheader) 参数设置为 `true` 时使用此设置。
@@ -943,10 +943,10 @@ const review = {
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义顶部工具栏选项卡是清晰显示 (`false`) 还是仅突出显示以查看选择了哪个 (`true`)。
+定义顶部工具栏选项卡的显示样式。如果设置为 `false`，选项卡清晰显示。如果设置为 `true`，选项卡仅突出显示以查看选择了哪个。
 
 :::danger[Deprecated]
-自版本 8.2 起已弃用，请使用 [editorConfig.customization.features.tabStyle](#featurestabstyle) 参数（设置为 **line**）和 [editorConfig.customization.features.tabBackground](#featurestabbackground) 参数（等于 **toolbar**）。
+自版本 8.2 起已弃用，请使用 [editorConfig.customization.features.tabStyle](#featurestabstyle) 参数（设置为 `"line"`）和 [editorConfig.customization.features.tabBackground](#featurestabbackground) 参数（等于 `"toolbar"`）。
 :::
 
 **示例**: `false`
@@ -992,9 +992,9 @@ const review = {
 
 定义标尺和对话框中使用的测量单位。可以取以下值：
 
-- **cm** - 厘米;
-- **pt** - 点;
-- **inch** - 英寸。
+- `"cm"` - 厘米;
+- `"pt"` - 点;
+- `"inch"` - 英寸。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.unit` 参数发送的任何值。
@@ -1014,7 +1014,7 @@ const review = {
 
 **类型：** `integer` | **默认值：** `100`
 
-定义以百分比测量的文档显示缩放值。可以取大于 **0**的值。对于文本文档和演示文稿，可以将此参数设置为 **-1** （使文档适合页面选项）或 **-2** （使文档页面宽度适合编辑器页面）。
+定义以百分比测量的文档显示缩放值。可以取大于 `0` 的值。对于文本文档和演示文稿，可以将此参数设置为 `-1`（使文档适合页面选项）或 `-2`（使文档页面宽度适合编辑器页面）。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.zoom` 参数发送的任何值。
