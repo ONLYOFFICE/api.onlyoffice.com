@@ -915,9 +915,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
 
-Starting from version 7.4, the operation type can be specified in the `data.c` parameter. It can take two values - `mention` or `protect`. Prior to version 7.4, only the mention operation was available with this event.
-
-Starting from version 8.0, the `info` operation type is added to set the avatars for the users with the ids specified in the `data.id` parameter.
+The operation type can be specified in the `data.c` parameter. It can take the following values: `"mention"`, `"protect"`, or `"info"`. The `"info"` operation type is used to set the avatars for the users with the ids specified in the `data.id` parameter.
 
 To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If the `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 

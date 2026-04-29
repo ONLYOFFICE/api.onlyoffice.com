@@ -915,9 +915,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。
 
-从7.4版本开始，可以在 `data.c` 参数中指定操作类型。它可以采用两个值 - `mention` 或 `protect`。在版本 7.4 之前，此事件仅支持mention操作。
-
-从8.0版本开始，新增 `info` 操作类型，为 `data.id` 参数中指定id的用户设置头像。
+可以在 `data.c` 参数中指定操作类型。它可以取以下值：`"mention"`、`"protect"` 或 `"info"`。`"info"` 操作类型用于为 `data.id` 参数中指定 id 的用户设置头像。
 
 要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
