@@ -356,7 +356,7 @@ The function called when the user is trying to switch the document from the view
 This event is required when [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, so that the user can switch to the editing mode.
 :::
 
-![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
+![onRequestEditRights](/assets/images/editor/onRequestEditRights.png#gh-light-mode-only)![onRequestEditRights](/assets/images/editor/onRequestEditRights.dark.png#gh-dark-mode-only)
 ![Edit PDF button](/assets/images/editor/edit-pdf.png#gh-light-mode-only)
 ![Edit PDF button](/assets/images/editor/edit-pdf.dark.png#gh-dark-mode-only)
 
@@ -569,7 +569,7 @@ To open the editor with the external file referenced by the `path` or `reference
 | event.data.referenceData | object | The unique file data.          |
 | event.data.windowName    | string | The new browser tab name.      |
 
-<img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
+![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -610,9 +610,9 @@ To refresh data by a link to a file which is specified with the event parameters
 To send the data to the `setReferenceData` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` or `link` parameters are used.
 :::
 
-<img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
+![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
-<img alt="Update values" src="/assets/images/editor/update-values.png" width="400px" />
+![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
 This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function. The URL of the source spreadsheet which is used in the `IMPORTRANGE` parameters is passed to the `onRequestReferenceData` event in the `event.data.link` parameter.
 
@@ -664,7 +664,7 @@ When the button is clicked, you must call the [setReferenceSource](../methods.md
 To send the data to the `setReferenceSource` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` parameter is used.
 :::
 
-<img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
+![Change source](/assets/images/editor/change-source.png#gh-light-mode-only)![Change source](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -918,7 +918,7 @@ The function called when the user is trying to select recipients data by clickin
 
 To select recipient data, you must call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters. If the method is not declared, the *Mail merge* button will become faded and unclickable.
 
-![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
+![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png#gh-light-mode-only)![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.dark.png#gh-dark-mode-only)
 
 **Example**:
 
@@ -1049,9 +1049,9 @@ The function called when the user can select other users to mention in the comme
 
 To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If the `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 
-<img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
+![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
-<img alt="Protect range" src="/assets/images/editor/protect-range.png" width="292px" />
+![Protect range](/assets/images/editor/protect-range.png#gh-light-mode-only)![Protect range](/assets/images/editor/protect-range.dark.png#gh-dark-mode-only)
 
 **Example**:
 
