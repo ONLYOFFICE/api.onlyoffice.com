@@ -15,7 +15,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Create the [connector](./automation-api/connector-class.md) to interact with text documents, spreadsheets, presentations, PDFs, and fillable forms from the outside.
 
 :::note
-This parameter is available for editing only for ONLYOFFICE Docs Developer.
+This method is available only for ONLYOFFICE Docs Developer.
 :::
 
   ``` ts
@@ -44,7 +44,7 @@ Destroy *docEditor* object. This method can be called when you want to reinit do
 
 ## downloadAs
 
-Download the edited file. This method can be called only when the existence of the [onDownloadAs](./config/events.md#ondownloadas) events. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
+Download the edited file. This method can be called only when the [onDownloadAs](./config/events.md#ondownloadas) event is declared. **Document editing service** asynchronously creates a document and triggers the **onDownloadAs** event with a link in parameter.
 
   ``` ts
   docEditor.downloadAs(format);
@@ -60,7 +60,7 @@ Please note that conversion from the *djvu*, *pdf*, *xps* formats are not availa
 
 ## insertImage
 
-Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The *images* array is used to do it. This method must be called after the [onRequestInsertImage](./config/events.md#onrequestinsertimage) events.
+Insert an image into the file. Starting from version 7.0, this method allows a user to insert several images. The *images* array is used to do it. This method must be called after the [onRequestInsertImage](./config/events.md#onrequestinsertimage) event.
 
   ``` ts
   docEditor.insertImage({
@@ -129,7 +129,7 @@ docEditor.refreshFile({
 
 ## refreshHistory
 
-Show the document version history. This method must be called after the [onRequestHistory](./config/events.md#onrequesthistory) events.
+Show the document version history. This method must be called after the [onRequestHistory](./config/events.md#onrequesthistory) event.
 
   ``` ts
   docEditor.refreshHistory({
@@ -243,11 +243,11 @@ Change the *Favorite* icon state. This method must be called after the [onMetaCh
 
 | Parameter | Type    | Presence | Description                                                                  |
 | --------- | ------- | -------- | ---------------------------------------------------------------------------- |
-| favorite  | boolean | true     | Defines if the *Favorite* icon is highlighted (**true**) or not (**false**). |
+| favorite  | boolean | required | Defines if the *Favorite* icon is highlighted (**true**) or not (**false**). |
 
 ## setHistoryData
 
-Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](./config/events.md#onrequesthistorydata) events.
+Send the link to the document for viewing the version history. This method must be called after the [onRequestHistoryData](./config/events.md#onrequesthistorydata) event.
 
   ``` ts
   docEditor.setHistoryData({
@@ -329,7 +329,7 @@ Where **example.com** is the name of the server where **document manager** and *
 Refresh data by a link to a file which is specified with the *referenceData*, *path*, or *link* parameters. This method must be called after the [onRequestReferenceData](./config/events.md#onrequestreferencedata) event.
 
 :::note
-This parameter is available for editing only for ONLYOFFICE Docs Developer.
+This method is available only for ONLYOFFICE Docs Developer.
 :::
 
 :::note
@@ -458,10 +458,10 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ## setRevisedFile
 
-Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) events. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
+Select a document for comparing. This method must be called after the [onRequestCompareFile](./config/events.md#onrequestcomparefile) event. Deprecated since version 7.5, please use [setRequestedDocument](#setrequesteddocument) instead.
 
 :::note
-This parameter is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
+This method is available only for ONLYOFFICE Docs Enterprise and ONLYOFFICE Docs Developer.
 :::
 
   ``` ts
@@ -482,7 +482,7 @@ Where **example.com** is the name of the server where **document manager** and *
 
 ## setSharingSettings
 
-Update the [information](./config/document/info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) events.
+Update the [information](./config/document/info.md#sharingsettings) about the settings which allow to share the document with other users. This method can be called after the [onRequestSharingSettings](./config/events.md#onrequestsharingsettings) event.
 
   ``` ts
   docEditor.setSharingSettings({
@@ -508,7 +508,7 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
 
 ## setUsers
 
-Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) events.
+Set a list of users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. This method must be called after the [onRequestUsers](./config/events.md#onrequestusers) event.
 
   ``` ts
   docEditor.setUsers({
@@ -551,7 +551,7 @@ Please note that if you are subscribed to the *onRequestUsers* event and send an
 
 ## showMessage
 
-Display a tooltip with a message. This method can be called only after the [onAppReady](./config/events.md#onappready) events.
+Display a tooltip with a message. This method can be called only after the [onAppReady](./config/events.md#onappready) event.
 
   ``` ts
   docEditor.showMessage(message);
