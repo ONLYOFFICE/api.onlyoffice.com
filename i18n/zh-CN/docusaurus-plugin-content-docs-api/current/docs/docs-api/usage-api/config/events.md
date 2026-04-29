@@ -130,7 +130,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onInfo
 
-应用程序打开文件时调用的函数。模式在 `data.mode` 参数中发送。可以 `view` 或 `edit`。
+应用程序打开文件时调用的函数。模式在 `data.mode` 参数中发送。可以是 `"view"` 或 `"edit"`。
 
 **示例**:
 
@@ -299,7 +299,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 `view` 或 `fillForms` 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
 
 :::note
-当 [editorConfig](./editor/editor.md#mode) `mode` 参数设置为 `view` 并且 `permission` 为 `edit` 文档([文档权限](./document/permissions.md#edit))设置为 `true` 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
+当 [editorConfig.mode](./editor/editor.md#mode) 设置为 `"view"` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true` 时，此事件是必需的，以便用户可以切换到编辑模式。
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)

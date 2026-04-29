@@ -130,7 +130,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onInfo
 
-The function called when the application opened the file. The mode is sent in the `data.mode` parameter. Can be `view` or `edit`.
+The function called when the application opened the file. The mode is sent in the `data.mode` parameter. Can be `"view"` or `"edit"`.
 
 **Example**:
 
@@ -299,7 +299,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. This event also fires when the user clicks the *Edit PDF* button in the forms that are open in the `view` or `fillForms` mode. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Edit current file* and *Edit PDF* buttons will not be displayed.
 
 :::note
-**onRequestEditRights** parameter is obligatory when the [editorConfig](./editor/editor.md#mode) `mode` parameter is set to `view` and the `permission` to `edit` the document ([document permissions](./document/permissions.md#edit)) is set to `true` so that the user could switch to the editing mode.
+This event is required when [editorConfig.mode](./editor/editor.md#mode) is set to `"view"` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, so that the user can switch to the editing mode.
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
