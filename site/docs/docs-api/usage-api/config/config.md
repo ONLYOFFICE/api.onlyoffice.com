@@ -42,7 +42,7 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 ## type
 
-**type:** `string` | **default:** `"desktop"`
+**type:** `"desktop" | "mobile" | "embedded"` | **default:** `"desktop"`
 
 Defines the platform type used to access the document. Can be:
 
