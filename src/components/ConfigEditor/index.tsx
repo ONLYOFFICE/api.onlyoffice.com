@@ -9,7 +9,6 @@ import { useColorMode } from "@docusaurus/theme-common";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import { CopyButton } from "./renderers/utils/CopyButton";
-import { useDebounce } from "@site/src/hooks/useDebounce";
 
 interface ConfigEditorProps {
     defaultConfig: Record<string, unknown>
@@ -34,7 +33,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const [formData, setFormData] = useState<Record<string, unknown>>(defaultConfig)
     const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2))
     const [tab, setTab] = useState<'form' | 'json'>('form')
-    const debouncedJsonText = useDebounce(jsonText, 300)
+    const tabRef = useRef(tab)
     const jsonDirtyRef = useRef(false)
     const jsonTextRef = useRef(jsonText)
     jsonTextRef.current = jsonText
@@ -52,23 +51,20 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
         onApplyRef.current(defaultConfig)
     }, [defaultConfig])
 
-    // Sync debounced JSON to form data (only when editing JSON tab)
-    useEffect(() => {
-        if (tab !== 'json') return
-        try {
-            const parsed = JSON.parse(debouncedJsonText)
-            setFormData(parsed)
-        } catch {
-            // invalid JSON — keep current formData
-        }
-    }, [debouncedJsonText, tab])
-
-    // Serialize form data to JSON only when switching to JSON tab
+    // Sync data when switching tabs
     const handleTabChange = useCallback((value: string) => {
         if (value === 'json' && jsonDirtyRef.current) {
             setJsonText(JSON.stringify(formDataRef.current, null, 2))
             jsonDirtyRef.current = false
         }
+        if (value === 'form') {
+            try {
+                setFormData(JSON.parse(jsonTextRef.current))
+            } catch {
+                // invalid JSON — keep current formData
+            }
+        }
+        tabRef.current = value as 'form' | 'json'
         setTab(value as 'form' | 'json')
     }, [])
 
