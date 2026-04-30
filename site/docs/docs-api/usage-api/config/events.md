@@ -162,7 +162,7 @@ The function called when the application opened the file.
 
 | Parameter       | Type   | Description                                   |
 | --------------- | ------ | --------------------------------------------- |
-| event.data.mode | string | The editor mode. Can be `"view"` or `"edit"`. |
+| event.data.mode | string | The editor mode. Can be `view` or `edit`. |
 
 **Example**:
 
@@ -353,7 +353,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. This event also fires when the user clicks the *Edit PDF* button in the forms that are open in the `view` or `fillForms` mode. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Edit current file* and *Edit PDF* buttons will not be displayed.
 
 :::note
-This event is required when [editorConfig.mode](./editor/editor.md#mode) is set to `"view"` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, so that the user can switch to the editing mode.
+This event is required when [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, so that the user can switch to the editing mode.
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
@@ -510,7 +510,7 @@ The function called when the user is trying to insert an image by clicking the *
 
 | Parameter    | Type   | Description                                                                                           |
 | ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
-| event.data.c | string | The type of image insertion. Can be: `"add"`, `"change"`, `"fill"`, `"watermark"`, or `"slide"`. |
+| event.data.c | string | The type of image insertion. Can be: `add`, `change`, `fill`, `watermark`, or `slide`. |
 
 To insert an image into the file you must call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters. If the method is not declared the *Image from Storage* button will not be displayed.
 
@@ -875,7 +875,7 @@ The function called when the user is trying to select a document for comparing, 
 
 | Parameter    | Type   | Description                                                                          |
 | ------------ | ------ | ------------------------------------------------------------------------------------ |
-| event.data.c | string | The type of document selection. Can be: `"compare"`, `"combine"`, or `"insert-text"`. |
+| event.data.c | string | The type of document selection. Can be: `compare`, `combine`, or `insert-text`. |
 
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
 
@@ -914,7 +914,7 @@ The function called when the user is trying to select recipients data by clickin
 
 | Parameter    | Type   | Description                                                       |
 | ------------ | ------ | ----------------------------------------------------------------- |
-| event.data.c | string | The type of spreadsheet selection. Can be: `"mailmerge"`.         |
+| event.data.c | string | The type of spreadsheet selection. Can be: `mailmerge`.           |
 
 To select recipient data, you must call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters. If the method is not declared, the *Mail merge* button will become faded and unclickable.
 
@@ -1044,8 +1044,8 @@ The function called when the user can select other users to mention in the comme
 
 | Parameter    | Type     | Description                                                                                                       |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| event.data.c | string   | The operation type. Can be: `"mention"`, `"protect"`, or `"info"`.                                                |
-| event.data.id | string[] | The list of user IDs. Used with the `"info"` operation type to set the avatars for the specified users. |
+| event.data.c | string   | The operation type. Can be: `mention`, `protect`, or `info`.                                                |
+| event.data.id | string[] | The list of user IDs. Used with the `info` operation type to set the avatars for the specified users. |
 
 To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If the `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 

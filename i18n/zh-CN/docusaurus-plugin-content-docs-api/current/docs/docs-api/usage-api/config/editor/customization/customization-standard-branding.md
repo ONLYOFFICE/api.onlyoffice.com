@@ -326,7 +326,7 @@ const features = {
 
 **类型：** `object | string` | **默认值：** `"header"`
 
-定义顶部工具栏选项卡的背景。可以是字符串或对象。如果设置为 `"header"` 或 `"toolbar"`，该值将用作初始选项卡背景，且不会隐藏该设置。
+定义顶部工具栏选项卡的背景。可以是字符串或对象。如果设置为 `header` 或 `toolbar`，该值将用作初始选项卡背景，且不会隐藏该设置。
 
 **示例**: `"header"`
 
@@ -334,7 +334,7 @@ const features = {
 
 **类型：** `string` | **默认值：** `"header"`
 
-定义顶部工具栏选项卡的背景。如果设置为 `"header"`，选项卡背景与标题背景匹配。如果设置为 `"toolbar"`，选项卡背景与工具栏背景匹配。首次打开编辑器时使用此值。
+定义顶部工具栏选项卡的背景。如果设置为 `header`，选项卡背景与标题背景匹配。如果设置为 `toolbar`，选项卡背景与工具栏背景匹配。首次打开编辑器时使用此值。
 
 **示例**: `"header"`
 
@@ -352,7 +352,7 @@ const features = {
 
 **类型：** `object | string` | **默认值：** `"fill"`
 
-定义顶部工具栏选项卡的样式。可以是字符串或对象。如果设置为 `"fill"` 或 `"line"`，该值将用作初始选项卡样式，且不会隐藏该设置。
+定义顶部工具栏选项卡的样式。可以是字符串或对象。如果设置为 `fill` 或 `line`，该值将用作初始选项卡样式，且不会隐藏该设置。
 
 **示例**: `"fill"`
 
@@ -360,7 +360,7 @@ const features = {
 
 **类型：** `string` | **默认值：** `"fill"`
 
-定义顶部工具栏选项卡的样式。如果设置为 `"fill"`，选项卡清晰显示。如果设置为 `"line"`，选项卡仅突出显示以查看选择了哪个。此值在编辑器首次打开时使用。
+定义顶部工具栏选项卡的样式。如果设置为 `fill`，选项卡清晰显示。如果设置为 `line`，选项卡仅突出显示以查看选择了哪个。此值在编辑器首次打开时使用。
 
 **示例**: `"fill"`
 
@@ -536,7 +536,7 @@ const goback = {
 
 **类型：** `string`
 
-定义将编辑器嵌入网页的模式。`"embed"` 值禁止在加载编辑器框架时滚动到编辑器框架，因为焦点未被捕获。
+定义将编辑器嵌入网页的模式。`embed` 值禁止在加载编辑器框架时滚动到编辑器框架，因为焦点未被捕获。
 
 **示例**: `"embed"`
 
@@ -635,9 +635,9 @@ const logo = {
 
 定义启用自动开始时的宏运行模式。可以取以下值：
 
-- `"disable"` - 不自动运行所有宏；
-- `"enable"` - 自动运行所有宏；
-- `"warn"` - 对运行宏发出警告并请求运行它们的权限。
+- `disable` - 不自动运行所有宏；
+- `enable` - 自动运行所有宏；
+- `warn` - 对运行宏发出警告并请求运行它们的权限。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.macrosMode` 参数发送的任何值。
@@ -732,7 +732,7 @@ const mobile = {
 
 **类型：** `string` | **默认值：** `"select"`
 
-定义在查看器中加载演示文稿编辑器时的指针模式。如果设置为 `"select"`，使用选择模式。如果设置为 `"hand"`，使用手形模式。
+定义在查看器中加载演示文稿编辑器时的指针模式。如果设置为 `select`，使用选择模式。如果设置为 `hand`，使用手形模式。
 
 **示例**: `"select"`
 
@@ -784,12 +784,12 @@ const review = {
 
 **类型：** `string`
 
-定义文档编辑器的审阅显示模式。查看器的默认值是 `"original"`，编辑器的默认值是 `"markup"`。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 `"markup"` 或 `"simple"` 时才能进行编辑。如果选择 `"original"` 或 `"final"`，编辑器将自动切换到仅查看模式。可以采用以下值：
+定义文档编辑器的审阅显示模式。查看器的默认值是 `original`，编辑器的默认值是 `markup`。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 `markup` 或 `simple` 时才能进行编辑。如果选择 `original` 或 `final`，编辑器将自动切换到仅查看模式。可以采用以下值：
 
-- `"markup"` - 显示文档，并突出显示建议的更改；
-- `"simple"` - 显示文档并突出显示建议的更改，但气球已关闭；
-- `"final"` - 显示文档并应用了所有建议的更改；
-- `"original"` - 显示原始文档，没有建议的更改。
+- `markup` - 显示文档，并突出显示建议的更改；
+- `simple` - 显示文档并突出显示建议的更改，但气球已关闭；
+- `final` - 显示文档并应用了所有建议的更改；
+- `original` - 显示原始文档，没有建议的更改。
 
 **示例**: `"original"`
 
@@ -815,12 +815,12 @@ const review = {
  
  定义文档编辑器中的审阅编辑模式。此参数可以采用以下值：
 
-- `"markup"` - 显示文档并突出显示建议的更改；
-- `"simple"` - 显示文档并突出显示建议的更改，但气球已关闭；
-- `"final"` - 显示文档并应用所有建议的更改；
-- `"original"` - 显示原始文档，没有建议的更改。
+- `markup` - 显示文档并突出显示建议的更改；
+- `simple` - 显示文档并突出显示建议的更改，但气球已关闭；
+- `final` - 显示文档并应用所有建议的更改；
+- `original` - 显示原始文档，没有建议的更改。
 
-查看器的默认值是 `"original"`，编辑器的默认值是 `"markup"`。
+查看器的默认值是 `original`，编辑器的默认值是 `markup`。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.reviewDisplay` 参数发送的任何值。
@@ -946,7 +946,7 @@ const review = {
 定义顶部工具栏选项卡的显示样式。如果设置为 `false`，选项卡清晰显示。如果设置为 `true`，选项卡仅突出显示以查看选择了哪个。
 
 :::danger[Deprecated]
-自版本 8.2 起已弃用，请使用 [editorConfig.customization.features.tabStyle](#featurestabstyle) 参数（设置为 `"line"`）和 [editorConfig.customization.features.tabBackground](#featurestabbackground) 参数（等于 `"toolbar"`）。
+自版本 8.2 起已弃用，请使用 [editorConfig.customization.features.tabStyle](#featurestabstyle) 参数（设置为 `line`）和 [editorConfig.customization.features.tabBackground](#featurestabbackground) 参数（等于 `toolbar`）。
 :::
 
 **示例**: `false`
@@ -969,8 +969,8 @@ const review = {
 
  定义编辑器主题设置。可以通过两种方式设置：
 
-- **theme id** - 用户通过其 id 设置主题参数：`"theme-light"`、`"theme-classic-light"`、`"theme-dark"`、`"theme-contrast-dark"`、`"theme-white"`、`"theme-night"`；
-- **default theme** - 将设置默认的深色或浅色主题值：`"default-dark"`、`"default-light"`。默认的浅色主题是 `"theme-classic-light"`。
+- **theme id** - 用户通过其 id 设置主题参数：`theme-light`、`theme-classic-light`、`theme-dark`、`theme-contrast-dark`、`theme-white`、`theme-night`；
+- **default theme** - 将设置默认的深色或浅色主题值：`default-dark`、`default-light`。默认的浅色主题是 `theme-classic-light`。
 
 第一个选项具有更高的优先级。
 
@@ -981,7 +981,7 @@ const review = {
 :::
 
 :::note
-从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：`"theme-light"`、`"theme-dark"`、`"default-light"`、`"default-dark"`。
+从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：`theme-light`、`theme-dark`、`default-light`、`default-dark`。
 :::
 
 **示例**: `"theme-dark"`
@@ -992,9 +992,9 @@ const review = {
 
 定义标尺和对话框中使用的测量单位。可以取以下值：
 
-- `"cm"` - 厘米;
-- `"pt"` - 点;
-- `"inch"` - 英寸。
+- `cm` - 厘米;
+- `pt` - 点;
+- `inch` - 英寸。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.unit` 参数发送的任何值。

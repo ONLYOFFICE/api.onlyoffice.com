@@ -14,7 +14,7 @@
 
 **类型：** `boolean` | **默认值：** the value of the [edit](#edit) parameter
 
-定义是否可以评论文档。如果评论权限设置为 `true`，文档**侧栏**将包含**评论**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，文档注释将仅对文档编辑器可用。
+定义是否可以评论文档。如果评论权限设置为 `true`，文档**侧栏**将包含**评论**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 `edit`，文档注释将仅对文档编辑器可用。
 
 :::note
 如果 `edit` 设置为 `true` 并且 `comment` 也设置为 `true`，用户将能够编辑文档和评论。如果 `edit` 设置为 `true`，`comment` 设置为 `false`，用户将只能编辑，相应的评论功能将只能查看，评论的添加和编辑将不可用。如果 `edit` 设置为 `false` 并且 `comment` 设置为 `true`，该文档将仅用于评论。如果 `edit` 设置为 `false`，`review` 设置为 `false`，`comment` 设置为 `true`，则不考虑 `fillForms` 值并且无法填写表单。
@@ -96,7 +96,7 @@ const config = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义文档是可以编辑还是只能查看。如果编辑权限设置为 `true`, **文件**菜单将包含**编辑文档**菜单选项；请注意，如果编辑权限设置为 `false`，文档将在查看器中打开，即使 [mode](../editor/editor.md#mode) 参数设置为 **edit**，您也**无法**将其切换到编辑器。
+定义文档是可以编辑还是只能查看。如果编辑权限设置为 `true`, **文件**菜单将包含**编辑文档**菜单选项；请注意，如果编辑权限设置为 `false`，文档将在查看器中打开，即使 [mode](../editor/editor.md#mode) 参数设置为 `edit`，您也**无法**将其切换到编辑器。
 
 **示例**: `true`
 
@@ -114,7 +114,7 @@ const config = {
 
 **类型：** `boolean` | **默认值：** the value of the [edit](#edit) or the [review](#review) parameter
 
-定义是否可以填写表单。仅当[mode](../editor/editor.md#mode)参数设置为 **edit**时，文档编辑器和 pdf编辑器才可以填写表单。
+定义是否可以填写表单。仅当[mode](../editor/editor.md#mode)参数设置为 `edit` 时，文档编辑器和 pdf编辑器才可以填写表单。
 
 :::note
 如果 `edit` 设置为 `true` 或 `review` 设置为 `true`，则不考虑 `fillForms` 值并且可以填写表单。如果 `edit` 设置为 `false` 并且 `review` 设置为 `false` 并且 `fillForms` 也设置为 `true`，用户只能填写文档中的表单。如果 `edit` 设置为 `false` 并且 `review` 设置为 `false` 而且 `fillForms` 设置为 `true`，不考虑 `comment` 值并且评论不可用。仅填写表单模式目前仅适用于**文档**和 **pdf** 编辑器。
@@ -128,7 +128,7 @@ const config = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义是否可以更改内容控制设置。 如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，内容控制修改将仅可用于文档编辑器。
+定义是否可以更改内容控制设置。 如果 [mode](../editor/editor.md#mode) 参数设置为 `edit`，内容控制修改将仅可用于文档编辑器。
 
 **示例**: `true`
 
@@ -136,7 +136,7 @@ const config = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义过滤器是否可以全局应用（`true`）影响所有其他用户，或本地应用（`false`），即仅适用于当前用户。如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，则过滤器修改仅可用于电子表格编辑器。
+定义过滤器是否可以全局应用（`true`）影响所有其他用户，或本地应用（`false`），即仅适用于当前用户。如果 [mode](../editor/editor.md#mode) 参数设置为 `edit`，则过滤器修改仅可用于电子表格编辑器。
 
 :::note
 如果文档由具有完全访问权限的用户编辑，则该用户应用的过滤器将对所有其他用户可见，而不管他们的本地设置如何。
@@ -168,7 +168,7 @@ const config = {
 
 **类型：** `boolean` | **默认值：** the value of the [edit](#edit) parameter
 
-定义是否可以查看文档。如果审阅权限设置为 `true`，文档**状态栏**将包含**审阅**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 **edit**，文档审阅将仅对文档编辑器可用。
+定义是否可以查看文档。如果审阅权限设置为 `true`，文档**状态栏**将包含**审阅**菜单选项；如果 [mode](../editor/editor.md#mode) 参数设置为 `edit`，文档审阅将仅对文档编辑器可用。
 
 :::note
 如果 `edit` 设置为 `true` 并且 `review` 也设置为 `true`，用户将能够编辑文档，接受/拒绝所做的更改并切换到自己的审阅模式。如果 `edit` 设置为 `true` 并且 `review` 设置为 `false`，用户将只能进行编辑。如果 `edit` 设置为 `false` 并且 `review` 设置为 `true`，文档将仅在审阅模式下可用。

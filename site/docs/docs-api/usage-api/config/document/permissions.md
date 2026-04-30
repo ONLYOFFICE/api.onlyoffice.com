@@ -14,7 +14,7 @@ Defines if the chat functionality is enabled in the document or not. In case the
 
 **type:** `boolean` | **default:** the value of the [edit](#edit) parameter
 
-Defines if the document can be commented or not. In case the commenting permission is set to `true` the document **sidebar** will contain the **Comment** menu option; the document commenting will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
+Defines if the document can be commented or not. In case the commenting permission is set to `true` the document **sidebar** will contain the **Comment** menu option; the document commenting will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
 :::note
 In case `edit` is set to `true` and `comment` is also set to `true`, the user will be able to edit the document and comment. In case `edit` is set to `true` and `comment` is set to `false`, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. In case `edit` is set to `false` and `comment` is set to `true`, the document will be available for commenting only. In case `edit` is set to `false` and `review` is set to `false` and `comment` is set to `true` the `fillForms` value is not considered and filling the forms is not available.
@@ -96,7 +96,7 @@ Defines if the document can be downloaded or only viewed or edited online. In ca
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the document can be edited or only viewed. In case the editing permission is set to `true` the **File** menu will contain the **Edit Document** menu option; please note that if the editing permission is set to `false` the document will be opened in viewer and you will **not** be able to switch it to the editor even if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
+Defines if the document can be edited or only viewed. In case the editing permission is set to `true` the **File** menu will contain the **Edit Document** menu option; please note that if the editing permission is set to `false` the document will be opened in viewer and you will **not** be able to switch it to the editor even if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
 **Example**: `true`
 
@@ -114,7 +114,7 @@ Defines if the user can edit only their comments.
 
 **type:** `boolean` | **default:** the value of the [edit](#edit) or the [review](#review) parameter
 
-Defines if the forms can be filled. Filling in forms will only be available for the document and pdf editors if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
+Defines if the forms can be filled. Filling in forms will only be available for the document and pdf editors if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
 :::note
 In case `edit` is set to `true` or `review` is set to `true`, the `fillForms` value is not considered and the form filling is possible. In case `edit` is set to `false` and `review` is set to `false` and `fillForms` is also set to `true`, the user can only fill forms in the document. In case `edit` is set to `false` and `review` is set to `false` and `fillForms` is set to `true` the `comment` value is not considered and the commenting is not available. The form filling only mode is currently available for the **document** and **pdf** editors only.
@@ -128,7 +128,7 @@ In case `edit` is set to `true` or `review` is set to `true`, the `fillForms` va
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the content control settings can be changed. Content control modification will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
+Defines if the content control settings can be changed. Content control modification will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
 **Example**: `true`
 
@@ -136,7 +136,7 @@ Defines if the content control settings can be changed. Content control modifica
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the filter can be applied globally (`true`) affecting all the other users, or locally (`false`), i.e. for the current user only. Filter modification will only be available for the spreadsheet editor if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
+Defines if the filter can be applied globally (`true`) affecting all the other users, or locally (`false`), i.e. for the current user only. Filter modification will only be available for the spreadsheet editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
 :::note
 In case the document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.
@@ -168,7 +168,7 @@ Defines if the **Protection** tab on the toolbar and the **Protect** button in t
 
 **type:** `boolean` | **default:** the value of the [edit](#edit) parameter
 
-Defines if the document can be reviewed or not. In case the reviewing permission is set to `true` the document **status bar** will contain the **Review** menu option; the document review will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to **edit**.
+Defines if the document can be reviewed or not. In case the reviewing permission is set to `true` the document **status bar** will contain the **Review** menu option; the document review will only be available for the document editor if the [mode](../editor/editor.md#mode) parameter is set to `edit`.
 
 :::note
 In case `edit` is set to `true` and `review` is also set to `true`, the user will be able to edit the document, accept/reject the changes made and switch to the review mode themselves. In case `edit` is set to `true` and `review` is set to `false`, the user will be able to edit only. In case `edit` is set to `false` and `review` is set to `true`, the document will be available in review mode only.

@@ -14,7 +14,7 @@ Defines the type of the file for the source viewed or edited document. Must be l
 
 **type:** `boolean`
 
-Defines if the PDF file is a PDF form or a standard PDF file. Applies when `fileType` is `"pdf"`. If this parameter is not specified, then the [internal checking of PDF files](../../../get-started/how-it-works/checking-pdf-forms.md) is started.
+Defines if the PDF file is a PDF form or a standard PDF file. Applies when `fileType` is `pdf`. If this parameter is not specified, then the [internal checking of PDF files](../../../get-started/how-it-works/checking-pdf-forms.md) is started.
 
 **Example**: `true`
 
@@ -27,7 +27,7 @@ Defines the unique document identifier used by the service to recognize the docu
 :::note
 The key must be unique for all independent services connected to the same document server. Otherwise, the service may open someone else's file from the editor cache. If multiple third-party integrators are connected to the same document server, they must also provide a unique key.
  
-The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maximal key length is **128** characters.
+The key characters can be used: `0-9`, `a-z`, `A-Z`, `-.\_=`. The maximal key length is **128** characters.
 :::
 
 **Example**: `"Khirz6zTPdfd7"`

@@ -8,18 +8,18 @@ The config base section allows you to change the platform type used, document di
 
 ## documentType
 
-**type:** `string`
+**type:** `"word" | "cell" | "slide" | "pdf" | "diagram"`
 
 Defines the document type to be opened:
 
-- **word** - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
-- **cell** - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
-- **slide** - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
-- **pdf** - portable document format (*.djvu, .oxps, .pdf, .xps*);
-- **diagram** - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
+- `word` - text document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
+- `cell` - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
+- `slide` - presentation (*.dps, .dpt, .fodp, .key, .odg, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .sxi*);
+- `pdf` - portable document format (*.djvu, .oxps, .pdf, .xps*);
+- `diagram` - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
 :::note
-**text**, **spreadsheet** and **presentation** values are deprecated since version 6.1. Please use new values instead.
+`text`, `spreadsheet`, and `presentation` values are deprecated since version 6.1. Please use new values instead.
 :::
 
 **Example**: `"cell"`
@@ -46,9 +46,9 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 Defines the platform type used to access the document. Can be:
 
-- **desktop** - optimized to access the document from a desktop or laptop computer;
-- **mobile** - optimized to access the document from a tablet or a smartphone;
-- **embedded** - specifically formed to be easily embedded into a web page.
+- `desktop` - optimized to access the document from a desktop or laptop computer;
+- `mobile` - optimized to access the document from a tablet or a smartphone;
+- `embedded` - specifically formed to be easily embedded into a web page.
 
 **Example**: `"mobile"`
 

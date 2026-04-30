@@ -1,6 +1,6 @@
 # Embedded
 
-The embedded section is for the `"embedded"` document type only (see the [config](../config.md#type) section to find out how to define the `"embedded"` document type). It allows you to change the settings which define the behavior of the buttons in the embedded mode.
+The embedded section is for the `embedded` document type only (see the [config](../config.md#type) section to find out how to define the `embedded` document type). It allows you to change the settings which define the behavior of the buttons in the embedded mode.
 
 ## embedUrl
 
@@ -38,7 +38,7 @@ Defines the absolute URL that will allow other users to share this document.
 
 **type:** `string`
 
-Defines the place for the embedded viewer toolbar. If set to `"top"`, the toolbar is at the top. If set to `"bottom"`, the toolbar is at the bottom.
+Defines the place for the embedded viewer toolbar. If set to `top`, the toolbar is at the top. If set to `bottom`, the toolbar is at the bottom.
 
 **Example**: `"top"`
 

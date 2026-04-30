@@ -37,7 +37,7 @@ Defines the co-editing mode and the possibility to change it. This parameter is 
 
 **type:** `string` | **default:** `"fast"`
 
-The co-editing mode. Can be `"fast"` or `"strict"`.
+The co-editing mode. Can be `fast` or `strict`.
 
 :::note
 In case `mode` setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.coEditing.mode` parameter.
@@ -81,7 +81,7 @@ To translate the editor interface into Portuguese (Portugal) or Chinese (Traditi
 
 **type:** `string` | **default:** `""`
 
-Defines the default measurement units. Specify `"us"` or `"ca"` to set inches.
+Defines the default measurement units. Specify `us` or `ca` to set inches.
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [region](#region) parameter instead.
@@ -93,7 +93,7 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 **type:** `string` | **default:** `"edit"`
 
-Defines the editor opening mode. Can be either `"view"` to open the document for viewing, or `"edit"` to open the document in the editing mode allowing you to apply changes to the document data.
+Defines the editor opening mode. Can be either `view` to open the document for viewing, or `edit` to open the document in the editing mode allowing you to apply changes to the document data.
 
 **Example**: `"edit"`
 
@@ -148,7 +148,7 @@ The absolute URL to the document where it is stored.
 Defines the default display format for currency and date and time (in the **Spreadsheet Editor** only). Is set using the four-letter (`en-US`, `fr-FR`, etc.) language codes.
 
 :::note
-If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `"en-US"` is used.
+If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `en-US` is used.
 :::
 
 Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](./customization/customization-standard-branding.md#unit) parameter.

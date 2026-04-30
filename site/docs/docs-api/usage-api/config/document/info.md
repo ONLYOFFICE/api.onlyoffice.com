@@ -57,7 +57,7 @@ Changes the user icon to the link icon.
 
 **type:** `string`
 
-The access rights for the user with the name above. Can be **Full Access**, **Read Only** or **Deny Access**.
+The access rights for the user with the name above. Can be `Full Access`, `Read Only`, or `Deny Access`.
 
 **Example**: `"Full Access"`
 

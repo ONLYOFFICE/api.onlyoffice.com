@@ -162,7 +162,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数            | 类型   | 描述                                       |
 | --------------- | ------ | ------------------------------------------ |
-| event.data.mode | string | 编辑器模式。可以是 `"view"` 或 `"edit"`。  |
+| event.data.mode | string | 编辑器模式。可以是 `view` 或 `edit`。  |
 
 **示例**:
 
@@ -353,7 +353,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 `view` 或 `fillForms` 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
 
 :::note
-当 [editorConfig.mode](./editor/editor.md#mode) 设置为 `"view"` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true` 时，此事件是必需的，以便用户可以切换到编辑模式。
+当 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true` 时，此事件是必需的，以便用户可以切换到编辑模式。
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
@@ -510,7 +510,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数         | 类型   | 描述                                                                                    |
 | ------------ | ------ | --------------------------------------------------------------------------------------- |
-| event.data.c | string | 图像插入的类型。可以是：`"add"`、`"change"`、`"fill"`、`"watermark"` 或 `"slide"`。 |
+| event.data.c | string | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
 
 要将图像插入文件，您必须使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则不会显示*从存储中获取图像*按钮。
 
@@ -875,7 +875,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数         | 类型   | 描述                                                                    |
 | ------------ | ------ | ----------------------------------------------------------------------- |
-| event.data.c | string | 文档选择类型。可以是：`"compare"`、`"combine"` 或 `"insert-text"`。 |
+| event.data.c | string | 文档选择类型。可以是：`compare`、`combine` 或 `insert-text`。 |
 
 要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
 
@@ -914,7 +914,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数         | 类型   | 描述                                              |
 | ------------ | ------ | ------------------------------------------------- |
-| event.data.c | string | 电子表格选择的类型。可以是：`"mailmerge"`。   |
+| event.data.c | string | 电子表格选择的类型。可以是：`mailmerge`。   |
 
 要选择收件人数据，您必须调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则*邮件合并*按钮将变淡且无法单击。
 
@@ -1044,8 +1044,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数          | 类型     | 描述                                                                                   |
 | ------------- | -------- | -------------------------------------------------------------------------------------- |
-| event.data.c  | string   | 操作类型。可以是：`"mention"`、`"protect"` 或 `"info"`。                           |
-| event.data.id | string[] | 用户 ID 列表。与 `"info"` 操作类型一起使用，为指定用户设置头像。 |
+| event.data.c  | string   | 操作类型。可以是：`mention`、`protect` 或 `info`。                           |
+| event.data.id | string[] | 用户 ID 列表。与 `info` 操作类型一起使用，为指定用户设置头像。 |
 
 要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 

@@ -326,7 +326,7 @@ In case `spellcheck` setting is changed in the editor interface, it will be stor
 
 **type:** `object | string` | **default:** `"header"`
 
-Defines the background of the top toolbar tabs. Can be a string or an object. If set to `"header"` or `"toolbar"`, the value is used as the initial tab background and the setting will not be hidden.
+Defines the background of the top toolbar tabs. Can be a string or an object. If set to `header` or `toolbar`, the value is used as the initial tab background and the setting will not be hidden.
 
 **Example**: `"header"`
 
@@ -334,7 +334,7 @@ Defines the background of the top toolbar tabs. Can be a string or an object. If
 
 **type:** `string` | **default:** `"header"`
 
-Defines the background of the top toolbar tabs. If set to `"header"`, the tab background matches the header. If set to `"toolbar"`, the tab background matches the toolbar. This value is used when the editor is first opened.
+Defines the background of the top toolbar tabs. If set to `header`, the tab background matches the header. If set to `toolbar`, the tab background matches the toolbar. This value is used when the editor is first opened.
 
 **Example**: `"header"`
 
@@ -352,7 +352,7 @@ Defines if the tab background setting will be displayed in the **File -> Advance
 
 **type:** `object | string` | **default:** `"fill"`
 
-Defines the style of the top toolbar tabs. Can be a string or an object. If set to `"fill"` or `"line"`, the value is used as the initial tab style and the setting will not be hidden.
+Defines the style of the top toolbar tabs. Can be a string or an object. If set to `fill` or `line`, the value is used as the initial tab style and the setting will not be hidden.
 
 **Example**: `"fill"`
 
@@ -360,7 +360,7 @@ Defines the style of the top toolbar tabs. Can be a string or an object. If set 
 
 **type:** `string` | **default:** `"fill"`
 
-Defines the style of the top toolbar tabs. If set to `"fill"`, the tabs are distinctly displayed. If set to `"line"`, the tabs are only highlighted to see which one is selected. This value is used when the editor is first opened.
+Defines the style of the top toolbar tabs. If set to `fill`, the tabs are distinctly displayed. If set to `line`, the tabs are only highlighted to see which one is selected. This value is used when the editor is first opened.
 
 **Example**: `"fill"`
 
@@ -536,7 +536,7 @@ Defines if the editor rulers are displayed or hidden. This parameter is availabl
 
 **type:** `string`
 
-Defines the mode of embedding editors into the web page. The `"embed"` value disables scrolling to the editor frame when it is loaded as the focus is not captured.
+Defines the mode of embedding editors into the web page. The `embed` value disables scrolling to the editor frame when it is loaded as the focus is not captured.
 
 **Example**: `"embed"`
 
@@ -570,7 +570,7 @@ const logo = {
 
 **type:** `string`
 
-Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `"embedded"` document type). The image must have the following size: 300x20.
+Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `embedded` document type). The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/logo.png"`
 
@@ -594,7 +594,7 @@ Path to the image file used for the light header (for example, in the Gray theme
 
 **type:** `string`
 
-Path to the image file used to show in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `"embedded"` document type). The image must have the following size: 248x40.
+Path to the image file used to show in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `embedded` document type). The image must have the following size: 248x40.
 
 :::danger[Deprecated]
 Starting from version 7.0, please use the [logo.image](#logoimage) field instead.
@@ -635,9 +635,9 @@ Defines if document macros will be automatically run when the editor opens.
 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
-- `"disable"` - don't run macros at all;
-- `"warn"` - warn about macros and ask permission to run them;
-- `"enable"` - run all macros automatically.
+- `disable` - don't run macros at all;
+- `warn` - warn about macros and ask permission to run them;
+- `enable` - run all macros automatically.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.
@@ -732,7 +732,7 @@ Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md
 
 **type:** `string` | **default:** `"select"`
 
-Defines the pointer mode when the presentation editor is loaded in the viewer. If set to `"select"`, the selection mode is used. If set to `"hand"`, the hand mode is used.
+Defines the pointer mode when the presentation editor is loaded in the viewer. If set to `select`, the selection mode is used. If set to `hand`, the hand mode is used.
 
 **Example**: `"select"`
 
@@ -784,12 +784,12 @@ Defines the review display mode. If set to `true`, reviews are shown in tooltips
 
 **type:** `string`
 
-Defines the review display mode for the document editor. The default value is `"original"` for viewer and `"markup"` for editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when `"markup"` or `"simple"` is selected. If `"original"` or `"final"` is selected, the editor automatically switches to view-only mode. Can take the following values:
+Defines the review display mode for the document editor. The default value is `original` for viewer and `markup` for editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when `markup` or `simple` is selected. If `original` or `final` is selected, the editor automatically switches to view-only mode. Can take the following values:
 
-- `"markup"` - the document is displayed with proposed changes highlighted;
-- `"simple"` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-- `"final"` - the document is displayed with all the proposed changes applied;
-- `"original"` - the original document is displayed without the proposed changes.
+- `markup` - the document is displayed with proposed changes highlighted;
+- `simple` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+- `final` - the document is displayed with all the proposed changes applied;
+- `original` - the original document is displayed without the proposed changes.
 
 **Example**: `"original"`
 
@@ -815,12 +815,12 @@ Defines if the review editing mode is enabled for the current user. This paramet
 
 Defines the review editing mode in the document editor. This parameter can take the following values:
 
-- `"markup"` - the document is displayed with proposed changes highlighted;
-- `"simple"` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
-- `"final"` - the document is displayed with all the proposed changes applied;
-- `"original"` - the original document is displayed without the proposed changes.
+- `markup` - the document is displayed with proposed changes highlighted;
+- `simple` - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+- `final` - the document is displayed with all the proposed changes applied;
+- `original` - the original document is displayed without the proposed changes.
 
-The default value is `"original"` for viewer and `"markup"` for editor.
+The default value is `original` for viewer and `markup` for editor.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.reviewDisplay` parameter.
@@ -946,7 +946,7 @@ Starting from version 9.0.3, this parameter is also available for the mobile edi
 Defines the top toolbar tabs display style. If set to `false`, the tabs are distinctly displayed. If set to `true`, the tabs are only highlighted to see which one is selected.
 
 :::danger[Deprecated]
-Starting from version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to `"line"` and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to `"toolbar"`.
+Starting from version 8.2, please use the [editorConfig.customization.features.tabStyle](#featurestabstyle) parameter which is set to `line` and the [editorConfig.customization.features.tabBackground](#featurestabbackground) parameter which is equal to `toolbar`.
 :::
 
 **Example**: `false`
@@ -969,8 +969,8 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 Defines the editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id: `"theme-light"`, `"theme-classic-light"`, `"theme-dark"`, `"theme-contrast-dark"`, `"theme-white"`, `"theme-night"`;
-- **default theme** - the default dark or light theme value will be set: `"default-dark"`, `"default-light"`. The default light theme is `"theme-classic-light"`.
+- **theme id** - the user sets the theme parameter by its id: `theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-white`, `theme-night`;
+- **default theme** - the default dark or light theme value will be set: `default-dark`, `default-light`. The default light theme is `theme-classic-light`.
 
 The first option has higher priority.
 
@@ -981,7 +981,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 :::
 
 :::note
-Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: `"theme-light"`, `"theme-dark"`, `"default-light"`, `"default-dark"`.
+Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: `theme-light`, `theme-dark`, `default-light`, `default-dark`.
 :::
 
 **Example**: `"theme-dark"`
@@ -992,9 +992,9 @@ Starting from version 9.1, this parameter is also available for the mobile edito
 
 Defines the measurement units used on the ruler and in dialog boxes. Can take the following values:
 
-- `"cm"` - centimeters;
-- `"pt"` - points;
-- `"inch"` - inches.
+- `cm` - centimeters;
+- `pt` - points;
+- `inch` - inches.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.unit` parameter.
