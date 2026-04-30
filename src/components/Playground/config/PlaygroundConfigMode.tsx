@@ -32,8 +32,6 @@ export function PlaygroundConfigMode() {
     const defaultConfig = useMemo<Record<string, unknown>>(() => ({
         documentType: fileConfig.docType,
         type: previewType,
-        width: '100%',
-        height: '100%',
         document: {
             fileType: fileConfig.ext,
             key: 'demo-document-key',
