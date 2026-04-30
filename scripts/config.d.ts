@@ -3026,7 +3026,7 @@ interface BaseConfig {
 
     /**
      * Defines the document width in the browser window.
-     * Can be set to any CSS-compatible size value: a percentage of the parent container (e.g., `100%`) or an absolute value in pixels (e.g., `800px`).
+     * Can be set to any CSS-compatible size value, e.g., `100%`, `800px`, `calc(100% - 240px)`, and others.
      * @default "100%"
      * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/#width
@@ -3035,7 +3035,7 @@ interface BaseConfig {
 
     /**
      * Defines the document height in the browser window.
-     * Can be set to any CSS-compatible size value: a percentage of the parent container (e.g., `100%`) or an absolute value in pixels (e.g., `550px`).
+     * Can be set to any CSS-compatible size value, e.g., `100%`, `550px`, `calc(100vh - 48px)`, and others.
      * @default "100%"
      * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/#height

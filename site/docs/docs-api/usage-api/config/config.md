@@ -28,7 +28,7 @@ Defines the document type to be opened:
 
 **type:** `string` | **default:** `"100%"`
 
-Defines the document height in the browser window. Can be set to any CSS-compatible size value: a percentage of the parent container (e.g., `100%`) or an absolute value in pixels (e.g., `550px`).
+Defines the document height in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `550px`, `calc(100vh - 48px)`, and others.
 
 **Example**: `"550px"`
 
@@ -56,7 +56,7 @@ Defines the platform type used to access the document. Can be:
 
 **type:** `string` | **default:** `"100%"`
 
-Defines the document width in the browser window. Can be set to any CSS-compatible size value: a percentage of the parent container (e.g., `100%`) or an absolute value in pixels (e.g., `800px`).
+Defines the document width in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `800px`, `calc(100% - 240px)`, and others.
 
 **Example**: `"800px"`
 
