@@ -31,7 +31,7 @@ const PlaygroundContent = () => {
 const PlaygroundRoute = () => {
     const location = useLocation();
 
-    const { templateUrl, emptyTemplateUrl, ...props } = getSearchParams<{
+    const { templateUrl, ...props } = getSearchParams<{
         editorType: EditorType
         scriptType: ScriptType
         previewType: PreviewType
@@ -39,7 +39,6 @@ const PlaygroundRoute = () => {
         documentServerUrl: string
         documentServerSecret: string
         templateUrl: string
-        emptyTemplateUrl?: string // note: because you can't use "boolean"
         documentType: DocumentType
     }>(location.search, {
         editorType: 'editor',
@@ -49,7 +48,6 @@ const PlaygroundRoute = () => {
         documentServerUrl: 'documentServerUrl',
         documentServerSecret: 'documentServerSecret',
         templateUrl: 'templateUrl',
-        emptyTemplateUrl: 'emptyTemplateUrl',
         documentType: 'document'
     });
 
@@ -64,7 +62,7 @@ const PlaygroundRoute = () => {
             <BrowserOnly>
                 {() => (
                     <div className={styles.playgroundContainer}>
-                        <Playground.Root templateUrl={emptyTemplateUrl !== undefined ? null : templateUrl} {...props}>
+                        <Playground.Root templateUrl={templateUrl} {...props}>
                             <Playground.Toolbar/>
                             <PlaygroundContent />
                         </Playground.Root>

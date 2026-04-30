@@ -11,7 +11,7 @@ import CodeBlockLayout from '@theme/CodeBlock/Layout';
 import * as Tabs from '@radix-ui/react-tabs';
 
 import OnlyOfficeEditor from '@site/src/components/BrowserWindow/OnlyofficeEditor';
-import {EditorType} from "@site/src/components/Playground/root/PlaygroundRootContext";
+import {EditorType} from '@site/src/components/Playground/root/PlaygroundRootContext';
 import styles from './String.module.css';
 
 function useCodeBlockMetadata(props: Props): CodeBlockMetadata {
@@ -77,8 +77,6 @@ export default function CodeBlockString({
 
     if (templateUrl) {
       params.set('templateUrl', templateUrl);
-    } else {
-      params.set('emptyTemplateUrl', '');
     }
 
     window.open(`/playground/?${params}`, '_blank');
