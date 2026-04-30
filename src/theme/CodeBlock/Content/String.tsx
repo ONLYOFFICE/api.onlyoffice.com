@@ -55,23 +55,30 @@ export default function CodeBlockString({
   });
   const wordWrap = useCodeWordWrap();
 
-  const editorWord = metastring && metastring.includes("editor-docx") && "docx";
-  const editorCell = metastring && metastring.includes("editor-xlsx") && "xlsx";
-  const editorSlide = metastring && metastring.includes("editor-pptx") && "pptx";
-  const editorPdf = metastring && /editor-(?:pdf|forms)/.test(metastring) && "pdf";
-  const isForm = metastring && metastring.includes("editor-forms");
-  const editorType = editorWord || editorCell || editorSlide || editorPdf;
+  let editorType: string | false = false;
+  let isForm = false;
+  let zoom: number | undefined;
+  let templateUrl: string | undefined;
 
-  let res = metastring ? metastring.match(/zoom=(\d+)\s*/) : null;
-  const zoom = res ? Number(res[1]) : undefined;
+  if (metastring) {
+    const editorWord = metastring.includes("editor-docx") && "docx";
+    const editorCell = metastring.includes("editor-xlsx") && "xlsx";
+    const editorSlide = metastring.includes("editor-pptx") && "pptx";
+    const editorPdf = /editor-(?:pdf|forms)/.test(metastring) && "pdf";
+    isForm = metastring.includes("editor-forms");
+    editorType = editorWord || editorCell || editorSlide || editorPdf;
 
-  res = metastring ? metastring.match(/templateUrl=([^\s]+)/) : null;
-  const templateUrl = res ? res[1] : undefined;
+    let res = metastring.match(/zoom=(\d+)\s*/);
+    zoom = res ? Number(res[1]) : undefined;
+
+    res = metastring.match(/templateUrl=([^\s]+)/);
+    templateUrl = res ? res[1] : undefined;
+  }
 
   const handlePlaygroundClick = () => {
     const params = new URLSearchParams({
       code: metadata.code,
-      editor: isForm ? 'form' : (editorType.length ? EDITOR_TYPE_MAP[editorType] : null),
+      editor: isForm ? 'form' : EDITOR_TYPE_MAP[editorType as string],
       testType: 'office-js-api',
     });
 
