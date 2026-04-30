@@ -24,32 +24,38 @@ interface ResolvedChild {
     control: ControlElement
 }
 
+function resolveProperty(raw: JsonSchema, rootSchema: JsonSchema | undefined): JsonSchema {
+    if (raw.$ref && rootSchema) {
+        const resolved = resolveSchema(rootSchema, raw.$ref, rootSchema) as JsonSchema
+        return {
+            ...resolved,
+            description: raw.description ?? resolved.description,
+            title: raw.title ?? resolved.title,
+        }
+    }
+    return raw
+}
+
 function resolveChildren(
     properties: Record<string, JsonSchema>,
     path: string,
     rootSchema: JsonSchema | undefined,
 ): ResolvedChild[] {
-    const sorted = sortObjectKeys(Object.keys(properties), path, properties)
+    const keys = Object.keys(properties)
+    const resolved: Record<string, JsonSchema> = {}
+    for (const key of keys) {
+        resolved[key] = resolveProperty(properties[key] as JsonSchema, rootSchema)
+    }
+
+    const sorted = sortObjectKeys(keys, path, resolved)
     const result: ResolvedChild[] = []
 
     for (const key of sorted) {
-        const childPath = path ? composePaths(path, key) : key
-        const rawChild = properties[key] as JsonSchema
-        let childSchema: JsonSchema = rawChild
-
-        if (rawChild.$ref && rootSchema) {
-            const resolved = resolveSchema(rootSchema, rawChild.$ref, rootSchema) as JsonSchema
-            childSchema = {
-                ...resolved,
-                description: rawChild.description ?? resolved.description,
-                title: rawChild.title ?? resolved.title,
-            }
-        }
-
+        const childSchema = resolved[key]
         if (!isRenderable(childSchema)) continue
 
         result.push({
-            childPath,
+            childPath: path ? composePaths(path, key) : key,
             childSchema,
             control: { type: 'Control', scope: '#', label: childSchema.title || titleFromKey(key) },
         })
