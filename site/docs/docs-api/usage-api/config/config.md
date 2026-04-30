@@ -18,8 +18,12 @@ Defines the document type to be opened:
 - `pdf` - portable document format (*.djvu, .oxps, .pdf, .xps*);
 - `diagram` - diagram document (*.vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx*).
 
-:::note
-`text`, `spreadsheet`, and `presentation` values are deprecated since version 6.1. Please use new values instead.
+:::info
+If omitted, the document type is automatically inferred from the [`document.fileType`](document/document.md#filetype) value. If both `documentType` and `document.fileType` are omitted, an error will occur.
+:::
+
+:::danger[Deprecated]
+`text`, `spreadsheet`, and `presentation` values are deprecated since version 6.1. Please use `word`, `cell`, `slide`, `pdf`, or `diagram` instead.
 :::
 
 **Example**: `"cell"`

@@ -14,6 +14,10 @@
 - `djvu`, `oxps`, `pdf`, `xps` — 用于可移植文档格式;
 - `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — 用于图表文档.
 
+:::info
+如果省略，文件类型将根据 [`documentType`](../config.md#documenttype) 值自动推断。如果同时省略 `fileType` 和 `documentType`，将会出现错误。
+:::
+
 **示例**: `"docx"`
 
 ## isForm

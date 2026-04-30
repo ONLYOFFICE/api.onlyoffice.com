@@ -14,6 +14,10 @@ Defines the type of the file for the source viewed or edited document. Must be l
 - `djvu`, `oxps`, `pdf`, `xps` — for portable document format;
 - `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — for diagrams.
 
+:::info
+If omitted, the file type is automatically inferred from the [`documentType`](../config.md#documenttype) value. If both `fileType` and `documentType` are omitted, an error will occur.
+:::
+
 **Example**: `"docx"`
 
 ## isForm
