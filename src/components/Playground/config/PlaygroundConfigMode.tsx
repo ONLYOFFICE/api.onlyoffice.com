@@ -5,14 +5,6 @@ import { EditorPreview, type EditorPreviewRef } from "@site/src/components/Edito
 import { SplitPane } from "@site/src/components/SplitPane"
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts"
 
-const withFreshKey = (config: Record<string, any>): Record<string, any> => ({
-    ...config,
-    document: {
-        ...(config?.document ?? {}),
-        key: crypto.randomUUID(),
-    },
-})
-
 export function PlaygroundConfigMode() {
     const {
         editorType,
@@ -34,7 +26,7 @@ export function PlaygroundConfigMode() {
         type: previewType,
         document: {
             fileType: fileConfig.ext,
-            key: 'demo-document-key',
+            key: `demo-document-key-${crypto.randomUUID().slice(0, 8)}`,
             title: `Example Document Title.${fileConfig.ext}`,
             url: fileConfig.url,
         },
@@ -50,9 +42,8 @@ export function PlaygroundConfigMode() {
     }), [documentServerUrl, theme, fileConfig, previewType])
 
     const handleApply = useCallback((config: Record<string, unknown>) => {
-        const c = withFreshKey(config)
-        latestConfigRef.current = c
-        editorRef.current?.initEditor(c)
+        latestConfigRef.current = config
+        editorRef.current?.initEditor(config)
     }, [])
 
     const handlePreviewReady = useCallback(() => {
