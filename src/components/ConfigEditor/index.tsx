@@ -34,7 +34,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2))
     const [tab, setTab] = useState<'form' | 'json'>('form')
     const tabRef = useRef(tab)
-    const jsonDirtyRef = useRef(false)
+    const updateTabRef = useRef(false)
     const jsonTextRef = useRef(jsonText)
     jsonTextRef.current = jsonText
 
@@ -47,22 +47,23 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     useEffect(() => {
         setFormData(defaultConfig)
         setJsonText(JSON.stringify(defaultConfig, null, 2))
-        jsonDirtyRef.current = false
+        updateTabRef.current = false
         onApplyRef.current(defaultConfig)
     }, [defaultConfig])
 
     // Sync data when switching tabs
     const handleTabChange = useCallback((value: string) => {
-        if (value === 'json' && jsonDirtyRef.current) {
-            setJsonText(JSON.stringify(formDataRef.current, null, 2))
-            jsonDirtyRef.current = false
-        }
-        if (value === 'form') {
-            try {
-                setFormData(JSON.parse(jsonTextRef.current))
-            } catch {
-                // invalid JSON — keep current formData
+        if (updateTabRef.current) {
+            if (value === 'json') {
+                setJsonText(JSON.stringify(formDataRef.current, null, 2))
+            } else if (value === 'form') {
+                try {
+                    setFormData(JSON.parse(jsonTextRef.current))
+                } catch {
+                    // invalid JSON — keep current formData
+                }
             }
+            updateTabRef.current = false
         }
         tabRef.current = value as 'form' | 'json'
         setTab(value as 'form' | 'json')
@@ -71,11 +72,12 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         const updated = data ?? {}
         setFormData(updated)
-        jsonDirtyRef.current = true
+        updateTabRef.current = true
     }, [])
 
     const handleJsonChange = useCallback((value: string | undefined) => {
         setJsonText(value ?? '')
+        updateTabRef.current = true
     }, [])
 
     const handleRun = useCallback(() => {
@@ -83,10 +85,10 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     }, [])
 
     const getCopyText = useCallback(() => {
-        if (jsonDirtyRef.current) {
-            return JSON.stringify(formDataRef.current, null, 2)
+        if (tabRef.current === 'json') {
+            return jsonTextRef.current
         }
-        return jsonTextRef.current
+        return JSON.stringify(formDataRef.current, null, 2)
     }, [])
 
     return (
