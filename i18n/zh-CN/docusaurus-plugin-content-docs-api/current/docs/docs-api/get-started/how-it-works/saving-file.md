@@ -15,7 +15,7 @@ sidebar_position: -21
 5. **文档编辑服务**使用 [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) 通知**文档存储服务**编辑已完成，并以 [`url`](../../usage-api/callback-handler.md#url) 参数返回修改后文档的链接。
 
    :::note
-   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status) 选择 `callbackUrl`。从 4.4 到 5.5 版本，使用最后一个加入共同编辑会话的用户的 `callbackUrl`。在 4.4 版本之前，使用第一个打开文件进行编辑的用户的 `callbackUrl`。
+   从 5.5 版本开始，根据请求的 [status](../../usage-api/callback-handler.md#status*) 选择 `callbackUrl`。从 4.4 到 5.5 版本，使用最后一个加入共同编辑会话的用户的 `callbackUrl`。在 4.4 版本之前，使用第一个打开文件进行编辑的用户的 `callbackUrl`。
    :::
 
 6. **文档存储服务**从**文档编辑服务**下载包含所有已保存更改的文档文件并将其存储。

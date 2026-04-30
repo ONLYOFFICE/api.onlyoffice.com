@@ -15,7 +15,7 @@ The figure and steps below explain how a document is saved in ONLYOFFICE Docs.
 5. The **document editing service** informs the **document storage service** that editing is complete using the [`callbackUrl`](../../usage-api/config/editor/editor.md#callbackurl) and returns the link to the modified document as the [`url`](../../usage-api/callback-handler.md#url) parameter.
 
    :::note
-   Since version 5.5, `callbackUrl` is selected based on the [status](../../usage-api/callback-handler.md#status) of the request. From version 4.4 to version 5.5, the `callbackUrl` from the last user who joined the co-editing session is used. Prior to version 4.4, the `callbackUrl` from the user who first opened the file for editing is used.
+   Since version 5.5, `callbackUrl` is selected based on the [status](../../usage-api/callback-handler.md#status*) of the request. From version 4.4 to version 5.5, the `callbackUrl` from the last user who joined the co-editing session is used. Prior to version 4.4, the `callbackUrl` from the user who first opened the file for editing is used.
    :::
 
 6. The **document storage service** downloads the document file with all the saved changes from the **document editing service** and stores it.
