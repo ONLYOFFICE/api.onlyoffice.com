@@ -248,6 +248,10 @@
     line-height: 1.5;
 }
 
+.unset input[type='checkbox'] + span {
+    opacity: 0.5;
+}
+
 .field [role='radiogroup'] {
     display: flex;
     flex-wrap: wrap;
