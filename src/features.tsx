@@ -106,7 +106,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'Embed SDK',
-      link: 'javascript-sdk/get-started',
+      link: 'javascript-sdk/overview/overview',
       description: (
         <>
           Connect DocSpace as a frame to{" "}
