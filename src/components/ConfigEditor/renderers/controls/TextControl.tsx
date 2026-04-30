@@ -5,6 +5,7 @@ import styles from '../../styles.module.css'
 
 function TextControlRenderer({ id, label, data, path, schema, description, required, enabled, handleChange }: ControlProps) {
     const type = schema.type === 'integer' || schema.type === 'number' ? 'number' : 'text'
+    const isUnset = data === undefined || data === null
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const raw = e.target.value
@@ -24,7 +25,7 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
     return (
         <div className={styles.field}>
             {label && (
-                <label htmlFor={id} className={styles.label}>
+                <label htmlFor={id} className={`${styles.label}${isUnset ? ` ${styles.unset}` : ''}`}>
                     <span>
                         {label}
                         {required && <span className={styles.required}> *</span>}

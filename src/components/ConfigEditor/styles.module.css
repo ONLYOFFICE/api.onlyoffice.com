@@ -248,7 +248,7 @@
     line-height: 1.5;
 }
 
-.unset input[type='checkbox'] + span {
+.unset span {
     opacity: 0.5;
 }
 

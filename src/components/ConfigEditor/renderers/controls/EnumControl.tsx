@@ -6,6 +6,7 @@ import styles from '../../styles.module.css'
 function EnumControlRenderer({ id, label, data, path, schema, description, required, enabled, handleChange }: ControlProps) {
     const options: any[] = schema.enum ?? []
     const isNumeric = schema.type === 'number' || schema.type === 'integer'
+    const isUnset = data === undefined || data === null
 
     const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const raw = e.target.value
@@ -16,7 +17,7 @@ function EnumControlRenderer({ id, label, data, path, schema, description, requi
     return (
         <div className={styles.field}>
             {label && (
-                <label htmlFor={id} className={styles.label}>
+                <label htmlFor={id} className={`${styles.label}${isUnset ? ` ${styles.unset}` : ''}`}>
                     <span>
                         {label}
                         {required && <span className={styles.required}> *</span>}
