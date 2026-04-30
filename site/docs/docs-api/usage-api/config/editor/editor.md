@@ -16,7 +16,7 @@ Specifies the data received from the **document editing service** using the [onM
 
 Specifies absolute URL to the **document storage service** (which [must be implemented](../../callback-handler.md) by the software integrators who use ONLYOFFICE Docs on their own server).
 
-**Example**: `https://example.com/url-to-callback`
+**Example**: `"https://example.com/url-to-callback"`
 
 ## coEditing
 
@@ -61,7 +61,7 @@ Defines if the co-editing mode can be changed in the editor interface or not.
 
 Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button. Instead of this field, you can use the [onRequestCreateNew](../events.md#onrequestcreatenew) event.
 
-**Example**: `https://example.com/url-to-create-document`
+**Example**: `"https://example.com/url-to-create-document"`
 
 ![Create URL](/assets/images/editor/create.png)
 
@@ -137,7 +137,7 @@ The document title that will be displayed in the **Open Recent...** menu option.
 
 The absolute URL to the document where it is stored.
 
-**Example**: `https://example.com/exampledocument1.docx`
+**Example**: `"https://example.com/exampledocument1.docx"`
 
 ![Recent documents](/assets/images/editor/recent.png)
 
@@ -179,7 +179,7 @@ Defines the presence or absence of the templates in the **Create New...** menu o
 
 The absolute URL to the image for template.
 
-**Example**: `https://example.com/exampletemplate1.png`
+**Example**: `"https://example.com/exampletemplate1.png"`
 
 ### templates.title
 
@@ -195,7 +195,7 @@ The template title that will be displayed in the **Create New...** menu option.
 
 The absolute URL to the document where it will be created and available after creation.
 
-**Example**: `https://example.com/url-to-create-template1`
+**Example**: `"https://example.com/url-to-create-template1"`
 
 ![Templates](/assets/images/editor/templates.png)
 
@@ -244,7 +244,7 @@ The identification of the user. The length is limited to 128 symbols. This infor
 
 The path to the user's avatar.
 
-**Example**: `https://example.com/url-to-user-avatar.png`
+**Example**: `"https://example.com/url-to-user-avatar.png"`
 
 ### user.name
 

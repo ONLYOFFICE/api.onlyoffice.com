@@ -212,7 +212,7 @@ const customer = {
 
 图片 logo 的路径（这个文件没有特别推荐，但是如果是透明背景的 `.png` 格式会更好）。图片必须具有以下尺寸：432x70.
 
-**示例**: `https://example.com/logo-big.png`
+**示例**: `"https://example.com/logo-big.png"`
 
 ### customer.logoDark
 
@@ -220,7 +220,7 @@ const customer = {
 
 深色主题图像徽标的路径（此文件没有特别建议，但如果是透明背景的 `.png` 格式会更好）。图片必须具有以下尺寸：432x70.
 
-**示例**: `https://example.com/dark-logo-big.png`
+**示例**: `"https://example.com/dark-logo-big.png"`
 
 ### customer.mail
 
@@ -228,7 +228,7 @@ const customer = {
 
 授予编辑者或编辑者作者访问权限的公司或个人的电子邮件地址。
 
-**示例**: `john@example.com`
+**示例**: `"john@example.com"`
 
 ### customer.name
 
@@ -394,7 +394,7 @@ const features = {
 
 单击**反馈和支持**菜单按钮时将打开的网站绝对URL。
 
-**示例**: `https://example.com`
+**示例**: `"https://example.com"`
 
 ### feedback.visible
 
@@ -480,7 +480,7 @@ const goback = {
 
 单击**打开文件位置**菜单按钮时将打开的网站绝对 URL。
 
-**示例**: `https://example.com`
+**示例**: `"https://example.com"`
 
 ## 帮助 {#help}
 
@@ -572,7 +572,7 @@ const logo = {
 
 用于在通用工作模式（即所有编辑器的查看和编辑模式）或嵌入模式（请参阅[配置](../../config.md#type)部分以了解如何定义**嵌入**文档类型）中显示的图像文件的路径。图片必须具有以下尺寸：300x20.
 
-**示例**: `https://example.com/logo.png`
+**示例**: `"https://example.com/logo.png"`
 
 ### logo.imageDark
 
@@ -580,7 +580,7 @@ const logo = {
 
 用于深色标题的图像文件的路径（例如，在深色主题中或带有彩色标题的主题中）。图像必须具有以下尺寸：300x20。
 
-**示例**: `https://example.com/dark-logo.png`
+**示例**: `"https://example.com/dark-logo.png"`
 
 ### logo.imageLight
 
@@ -588,7 +588,7 @@ const logo = {
 
 用于浅色标题的图像文件的路径（例如，在灰色主题中）。图像必须具有以下尺寸：300x20。
 
-**示例**: `https://example.com/light-logo.png`
+**示例**: `"https://example.com/light-logo.png"`
 
 ### logo.imageEmbedded
 
@@ -600,7 +600,7 @@ const logo = {
 自 7.0 版起已弃用，请改用*图像*字段。
 :::
 
-**示例**: `https://example.com/logo_em.png`
+**示例**: `"https://example.com/logo_em.png"`
 
 ### logo.url
 
@@ -608,7 +608,7 @@ const logo = {
 
 单击徽标图像时打开的绝对 URL。设置为空字符串或 `null` 以使徽标不可点击。
 
-**示例**: `https://example.com`
+**示例**: `"https://example.com"`
 
 ### logo.visible
 
