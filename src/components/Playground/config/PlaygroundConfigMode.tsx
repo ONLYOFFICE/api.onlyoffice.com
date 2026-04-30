@@ -42,7 +42,6 @@ export function PlaygroundConfigMode() {
         },
         editorConfig: {
             callbackUrl: documentServerUrl + 'dummyCallback',
-            user: { id: 'userID', name: 'Developer' },
             customization: {
                 uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
                 features: { featuresTips: false },
