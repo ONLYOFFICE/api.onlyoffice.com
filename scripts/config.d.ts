@@ -1,10 +1,5 @@
 // Types
-type DocumentType =
-    | "word"
-    | "cell"
-    | "slide"
-    | "pdf"
-    | "diagram"
+type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
 
 type FileType =
     | "csv" 
