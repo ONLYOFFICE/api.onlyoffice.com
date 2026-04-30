@@ -41,6 +41,7 @@ export function PlaygroundConfigMode() {
         editorConfig: {
             callbackUrl: documentServerUrl + 'dummyCallback',
             customization: {
+                anonymous: { request: false },
                 uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
                 features: { featuresTips: false },
             },
