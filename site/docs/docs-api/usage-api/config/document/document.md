@@ -6,7 +6,13 @@ The document section allows you to change all the parameters pertaining to the d
 
 **type:** `string`
 
-Defines the type of the file for the source viewed or edited document. Must be lowercase. The following file types are available: *.csv, .djvu, .doc, .docm, .docx, .dot, .dotm, .dotx, .dps, .dpt, .epub, .et, .ett, .fb2, .fodp, .fods, .fodt, .hml, .htm, .html, .hwp, .hwpx, .key, .md, .mht, .mhtml, .numbers, .odg, .odp, .ods, .odt, .otp, .ots, .ott, .oxps, .pages, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .stw, .sxc, .sxi, .sxw, .txt, .vsdm, .vsdx, .vssm, .vssx, .vstm, .vstx, .wps, .wpt, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps*.
+Defines the type of the file for the source viewed or edited document. Must be lowercase. The available values depend on the [documentType](../config.md#documenttype):
+
+- `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — for text documents;
+- `csv`, `et`, `ett`, `fods`, `numbers`, `ods`, `ots`, `sxc`, `xls`, `xlsb`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`, `xml` — for spreadsheets;
+- `dps`, `dpt`, `fodp`, `key`, `odg`, `odp`, `otp`, `pot`, `potm`, `potx`, `pps`, `ppsm`, `ppsx`, `ppt`, `pptm`, `pptx`, `sxi` — for presentations;
+- `djvu`, `oxps`, `pdf`, `xps` — for portable document format;
+- `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — for diagrams.
 
 **Example**: `"docx"`
 

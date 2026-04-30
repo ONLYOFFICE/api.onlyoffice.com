@@ -6,7 +6,13 @@
 
 **类型：** `string`
 
-定义查看或编辑的源文档的文件类型。必须是小写。以下文件类型可用：*.csv、.djvu、.doc、.docm、.docx、.dot、.dotm、.dotx、.dps、.dpt、.epub、.et、.ett、.fb2、.fodp、.fods、.fodt、.hml、.htm、.html、.hwp、.hwpx、.key、.md、.mht、.mhtml、.numbers、.odg、.odp、.ods、.odt、.otp、.ots、.ott、.oxps、.pages、.pdf、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx、.rtf、.stw、.sxc、.sxi、.sxw、.txt、.vsdm、.vsdx、.vssm、.vssx、.vstm、.vstx、.wps、.wpt、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml、.xps*。
+定义查看或编辑的源文档的文件类型。必须是小写。可用值取决于 [documentType](../config.md#documenttype)：
+
+- `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — 用于文本文档;
+- `csv`, `et`, `ett`, `fods`, `numbers`, `ods`, `ots`, `sxc`, `xls`, `xlsb`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`, `xml` — 用于电子表格;
+- `dps`, `dpt`, `fodp`, `key`, `odg`, `odp`, `otp`, `pot`, `potm`, `potx`, `pps`, `ppsm`, `ppsx`, `ppt`, `pptm`, `pptx`, `sxi` — 用于演示文稿;
+- `djvu`, `oxps`, `pdf`, `xps` — 用于可移植文档格式;
+- `vsdm`, `vsdx`, `vssm`, `vssx`, `vstm`, `vstx` — 用于图表文档.
 
 **示例**: `"docx"`
 
