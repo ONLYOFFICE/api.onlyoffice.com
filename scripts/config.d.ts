@@ -85,14 +85,13 @@ type DiagramFileType =
 
 type FileType = WordFileType | CellFileType | SlideFileType | PdfFileType | DiagramFileType
 
-type EditorTheme = 
-    "theme-light" 
-    | "theme-classic-light" 
-    | "theme-dark" 
-    | "theme-contrast-dark" 
-    | "theme-white" 
+type EditorTheme =
+    "theme-light"
+    | "theme-classic-light"
+    | "theme-dark"
+    | "theme-contrast-dark"
+    | "theme-white"
     | "theme-night"
-
 
 // Events props
 interface DocumentStateChangeEvent {
@@ -333,7 +332,6 @@ interface RequestReferenceSourceEvent {
     };
 };
 
-
 // Interfaces for arrays
 interface SharingSetting {
     /**
@@ -429,7 +427,7 @@ interface DocumentPermissions {
     /**
      * Defines if the filter can applied globally (`true`) affecting all the other users, or locally (`false`), i.e. for the current user only.
      * - Filter modification will only be available for the spreadsheet editor if the `mode` parameter is set to `edit`.
-     * 
+     *
      * @cases
      * - If document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.
      *
@@ -437,7 +435,6 @@ interface DocumentPermissions {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#modifyfilter
      */
     modifyFilter?: boolean;
-
 
     /**
      * Defines if the content control settings can be changed.
@@ -451,13 +448,13 @@ interface DocumentPermissions {
     /**
      * Defines if the forms can be filled.
      * - Filling in forms will only be available for the document and pdf editors if the mode parameter is set to `edit`.
-     * 
+     *
      * @cases
      * - If `edit` is set to "true" or `review` is set to "true", the `fillForms` value is not considered and the form filling is possible.
      * - If `edit` is set to "false" and `review` is set to "false" and `fillForms` is also set to "true", the user can only fill forms in the document.
      * - If `edit` is set to "false" and `review` is set to "false" and `fillForms` is set to "true" the `comments` value is not considered and the commenting is not available.
      * - The form filling only mode is currently available for Document Editor only.
-     * 
+     *
      * @defaultValue Coincides with the value of the `edit` or the `review` parameter.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#fillforms
      */
@@ -465,10 +462,10 @@ interface DocumentPermissions {
 
     /**
      * Defines if the content can be copied to the clipboard or not.
-     * 
+     *
      * @cases
      * - `false` → pasting the content will be available within the current document editor only.
-     * 
+     *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#copy
      */
@@ -544,15 +541,15 @@ interface DocumentPermissions {
      * - `["Group1", ""]` → users from **Group1** and users without any group are displayed.
      * - `[]` → no user information is displayed at all.
      * - `""` → information about **all users** is displayed.
-     * 
+     *
      * @example ["Group1", ""]
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#userinfogroups
      */
     userInfoGroups?: string[] | "";
 
     /**
-     * Defines if the **Protection** tab on the toolbar and the **Protect** button 
-     * in the left menu are displayed **(true)** or hidden **(false)**. 
+     * Defines if the **Protection** tab on the toolbar and the **Protect** button
+     * in the left menu are displayed **(true)** or hidden **(false)**.
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#protect
      */
@@ -625,7 +622,7 @@ interface DocumentTemplate {
 interface ReferenceData {
     /**
      * The unique document identifier used by the service to get a link to the file.
-     * 
+     *
      * @note It must not be changed when the document is edited and saved (i.e. it is not equal to the document.key parameter).
      * @example "BCFA2CED"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#referencedatafilekey
@@ -633,8 +630,8 @@ interface ReferenceData {
     fileKey?: string;
 
     /**
-     * The unique system identifier. 
-     * 
+     * The unique system identifier.
+     *
      * @note If the data was copied from a file on one system, and inserted into a file on another, then pasting by link will not be available and there will be no corresponding button in the context menu.
      * @example "https://example.com"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#referencedatainstanceid
@@ -753,7 +750,7 @@ interface DocumentNormal extends DocumentBase {
         sharingSettings?: SharingSetting[];
 
         /**
-         * Defines the highlighting state of the Favorite icon. 
+         * Defines the highlighting state of the Favorite icon.
          * When the user clicks the icon, the onMetaChange event is called.
          * @note If the parameter is undefined, the Favorite icon is not displayed at the editor window header.
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#favorite
@@ -778,7 +775,6 @@ interface DocumentNormal extends DocumentBase {
 
 interface DocumentEmbedded extends DocumentBase {}
 
-
 interface EditorConfigBase {
     // TODO: Not in the documentation
     /**
@@ -800,7 +796,7 @@ interface EditorConfigNormal extends EditorConfigBase {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#actionlink
      */
     actionLink?: ActionLink;
-    
+
     /**
      * Defines the editor opening mode.
      *
@@ -816,10 +812,10 @@ interface EditorConfigNormal extends EditorConfigBase {
 
     /**
      * Defines the editor interface language.
-     * 
-     * @note Use two-letter language codes (e.g., `de`, `ru`, `it`).  
+     *
+     * @note Use two-letter language codes (e.g., `de`, `ru`, `it`).
      * @note To translate the interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan), use four-letter codes (`pt-PT`, `zh-TW`). The code `pt` sets Portuguese (Brazil), and `zh` sets Chinese (People's Republic of China).
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @default "en"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#lang
@@ -827,10 +823,10 @@ interface EditorConfigNormal extends EditorConfigBase {
     lang?: string;
 
     /**
-     * Defines the default measurement units.  
-     * 
-     * @note Use `us` or `ca` to set inches.  
-     * 
+     * Defines the default measurement units.
+     *
+     * @note Use `us` or `ca` to set inches.
+     *
      * @forType `desktop` | `mobile`
      * @default ""
      * @example "us"
@@ -852,9 +848,9 @@ interface EditorConfigNormal extends EditorConfigBase {
     canBackToFolder:boolean;
 
     /**
-     * Defines the absolute URL of the document where it will be created and available after creation.  
-     * - If not specified, the **Create** button will not be displayed.  
-     * - Instead of this parameter, you can use the `onRequestCreateNew` event.  
+     * Defines the absolute URL of the document where it will be created and available after creation.
+     * - If not specified, the **Create** button will not be displayed.
+     * - Instead of this parameter, you can use the `onRequestCreateNew` event.
      *
      * @forType `desktop` | `mobile`
      * @example "https://example.com/url-to-create-document"
@@ -875,8 +871,8 @@ interface EditorConfigNormal extends EditorConfigBase {
     fileChoiceUrl?: string;
 
     /**
-     * Specifies the absolute URL to the **document storage service**.  
-     * - This service must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.  
+     * Specifies the absolute URL to the **document storage service**.
+     * - This service must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
      * - Url for connection between sdk and portal.
      *
      * @forType `desktop` | `mobile`
@@ -897,40 +893,39 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     saveAsUrl?: string;
 
-    
     /**
-     * Defines the default display format for **currency**, **date**, and **time** (in the **Spreadsheet Editor** only).  
+     * Defines the default display format for **currency**, **date**, and **time** (in the **Spreadsheet Editor** only).
      * - Is set using the four letter (en-US, fr-FR, etc.) language codes.
-     * 
-     * @note Starting from version **8.2**, this parameter also defines the default measurement units **in all editor types**. For the `...-US` or `...-CA` regions, inches are used unless another value is specified in `editorConfig.customization.unit`.  
+     *
+     * @note Starting from version **8.2**, this parameter also defines the default measurement units **in all editor types**. For the `...-US` or `...-CA` regions, inches are used unless another value is specified in `editorConfig.customization.unit`.
      *
      * @forType `desktop` | `mobile`
-     * @defaultValue 
-     * - If not specified, the value of the `lang` parameter is used.  
-     * - If no regional setting corresponds to the `lang` value, `"en-US"` is applied by default.  
+     * @defaultValue
+     * - If not specified, the value of the `lang` parameter is used.
+     * - If no regional setting corresponds to the `lang` value, `"en-US"` is applied by default.
      * @example "en-US"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#region
      */
     region?: string;
 
     /**
-     * Defines the **user** currently viewing or editing the document.  
+     * Defines the **user** currently viewing or editing the document.
      *
-     * @note The request to the user's avatar is sent **without authorization**, because the avatar URL is inserted into the HTML of the editor frame. A **CORS** issue may occur. In this case, use the avatar in the **base64** format (e.g. `"data:image/png;base64,*****"`).  
-     * @note If you are subscribed to the `onRequestUsers` event and send an avatar via the `setUsers` method, the `user.image` field in the initialization config is not required. It is **not recommended** to specify this parameter if the avatar is in base64 format and the initialization config is signed with JWT, since the token will become too long.  
+     * @note The request to the user's avatar is sent **without authorization**, because the avatar URL is inserted into the HTML of the editor frame. A **CORS** issue may occur. In this case, use the avatar in the **base64** format (e.g. `"data:image/png;base64,*****"`).
+     * @note If you are subscribed to the `onRequestUsers` event and send an avatar via the `setUsers` method, the `user.image` field in the initialization config is not required. It is **not recommended** to specify this parameter if the avatar is in base64 format and the initialization config is signed with JWT, since the token will become too long.
      *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#user
      */
     user?: {
         /**
-         * The identification of the user.  
-         * This information is stored and used to:  
-         * - distinguish co-authors,  
-         * - indicate the author of the last changes when saving and highlighting history (in the list of changes),  
-         * - count users with access for a license (based on the number of users).  
+         * The identification of the user.
+         * This information is stored and used to:
+         * - distinguish co-authors,
+         * - indicate the author of the last changes when saving and highlighting history (in the list of changes),
+         * - count users with access for a license (based on the number of users).
          *
-         * @note It is recommended to use a **unique anonymized hash**. Do not use sensitive data such as real name or email.  
+         * @note It is recommended to use a **unique anonymized hash**. Do not use sensitive data such as real name or email.
          *
          * @maxLength 128
          * @example "78e1e841"
@@ -939,7 +934,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         id?: string;
 
         /**
-         * The full name of the user.  
+         * The full name of the user.
          *
          * @maxLength 128
          * @example "John Smith"
@@ -965,7 +960,7 @@ interface EditorConfigNormal extends EditorConfigBase {
 
         // TODO: Not in the documentation
         /**
-         * Defines the roles assigned to the user.  
+         * Defines the roles assigned to the user.
          * - Used for **PDF forms**, fill form with `Role1`.
          *
          * @example ["Role1"]
@@ -983,7 +978,7 @@ interface EditorConfigNormal extends EditorConfigBase {
 
     /**
      * Defines the presence or absence of the templates in the **Create New...** menu option.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#templates
      */
@@ -991,19 +986,19 @@ interface EditorConfigNormal extends EditorConfigBase {
 
     customization?: {
         /**
-         * Changes the image file at the top left corner of the editor header.  
-         * The recommended image height is **20 pixels**.  
+         * Changes the image file at the top left corner of the editor header.
+         * The recommended image height is **20 pixels**.
          *
-         * @note This parameter is available for editing only for **ONLYOFFICE Docs Developer**.  
-         * @note This parameter is also available for the **mobile editors**.  
+         * @note This parameter is available for editing only for **ONLYOFFICE Docs Developer**.
+         * @note This parameter is also available for the **mobile editors**.
          *
          * @forType `desktop` | `mobile`
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logo
          */
         logo?: {
             /**
-             * Path to the image file used to show in the common work mode (view and edit modes for all editors) or in the embedded mode.  
-             * The image must have the following size: **172x40**.  
+             * Path to the image file used to show in the common work mode (view and edit modes for all editors) or in the embedded mode.
+             * The image must have the following size: **172x40**.
              *
              * @example "https://example.com/logo.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimage
@@ -1012,7 +1007,7 @@ interface EditorConfigNormal extends EditorConfigBase {
 
             /**
              * Path to the image file used for the dark header (for example, in a dark theme or in a theme with a colored header).
-             * The image must have the following size: **172x40**.  
+             * The image must have the following size: **172x40**.
              *
              * @example "https://example.com/dark-logo.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimagedark
@@ -1020,8 +1015,8 @@ interface EditorConfigNormal extends EditorConfigBase {
             imageDark?: string;
 
             /**
-             * Path to the image file used for the **light header** (for example, in the Gray theme).  
-             * The image must have the following size: **172x40**.  
+             * Path to the image file used for the **light header** (for example, in the Gray theme).
+             * The image must have the following size: **172x40**.
              *
              * @example "https://example.com/light-logo.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimagelight
@@ -1029,8 +1024,8 @@ interface EditorConfigNormal extends EditorConfigBase {
             imageLight?: string;
 
             /**
-             * Path to the image file used to show in the **embedded mode**.  
-             * The image must have the following size: **248x40**.  
+             * Path to the image file used to show in the **embedded mode**.
+             * The image must have the following size: **248x40**.
              *
              * @deprecated Starting from version 7.0, use the `logo.image` field instead.
              * @example "https://example.com/logo_em.png"
@@ -1039,9 +1034,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             imageEmbedded?: string;
 
             /**
-             * The absolute URL which will be used when someone clicks the logo image.  
-             * Can be used to go to your website, etc.  
-             * Leave as an empty string or `null` to make the logo not clickable.  
+             * The absolute URL which will be used when someone clicks the logo image.
+             * Can be used to go to your website, etc.
+             * Leave as an empty string or `null` to make the logo not clickable.
              *
              * @example "https://example.com"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logourl
@@ -1113,9 +1108,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             info?: string;
 
             /**
-             * The path to the image logo.  
-             * - No special recommendations for this file, but it is recommended to use **.png** format with a transparent background.  
-             * - The image must have the following size: **432x70**.  
+             * The path to the image logo.
+             * - No special recommendations for this file, but it is recommended to use **.png** format with a transparent background.
+             * - The image must have the following size: **432x70**.
              *
              * @example "https://example.com/logo-big.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#customerlogo
@@ -1123,9 +1118,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             logo?: string;
 
             /**
-             * The path to the image logo for the **dark theme**.  
-             * - No special recommendations for this file, but it is recommended to use **.png** format with a transparent background.  
-             * - The image must have the following size: **432x70**.  
+             * The path to the image logo for the **dark theme**.
+             * - No special recommendations for this file, but it is recommended to use **.png** format with a transparent background.
+             * - The image must have the following size: **432x70**.
              *
              * @example "https://example.com/dark-logo-big.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#customerlogodark
@@ -1142,8 +1137,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         about?: boolean;
 
         /**
-         * Defines settings for the **Feedback & Support** menu button.  
-         * - Can be either **boolean** (simply displays or hides the button) or **object** (to configure settings).  
+         * Defines settings for the **Feedback & Support** menu button.
+         * - Can be either **boolean** (simply displays or hides the button) or **object** (to configure settings).
          *
          * @note This parameter is also available for the **mobile editors**.
          * @default false
@@ -1224,7 +1219,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             /**
              * Defines the tooltip text for the cross button in the editor header or the menu item text in the mobile editors and in the **File** menu of the web editors.
              *
-             * @note It will only be available if the `onRequestClose` event is set. If the event is not declared and the `close` parameter is not specified, the cross button will not be displayed.  
+             * @note It will only be available if the `onRequestClose` event is set. If the event is not declared and the `close` parameter is not specified, the cross button will not be displayed.
              * @note This parameter is also available for the mobile editors.
              *
              * @example "Close file"
@@ -1300,7 +1295,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             reviewDisplay?: "markup" | "simple" | "final" | "original";
 
             /**
-             * Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. 
+             * Defines if the review changes panel is automatically displayed or hidden when the editor is loaded.
              *
              * @default false
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#reviewshowreviewchanges
@@ -1308,7 +1303,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             showReviewChanges?: boolean;
 
             /**
-             * Defines if the document is opened in the review editing mode (`true`) or not (`false`) regardless of the `document.permissions.review` parameter.  
+             * Defines if the document is opened in the review editing mode (`true`) or not (`false`) regardless of the `document.permissions.review` parameter.
              * If `undefined`, the `document.permissions.review` value is used for all document users.
              *
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#reviewtrackchanges
@@ -1322,7 +1317,7 @@ interface EditorConfigNormal extends EditorConfigBase {
          */
         layout?: {
             /**
-             * Defines the **toolbar** settings. 
+             * Defines the **toolbar** settings.
              * If this parameter is a **boolean** value, then it specifies whether the **toolbar** will be displayed or hidden.
              *
              * @default true
@@ -1330,7 +1325,7 @@ interface EditorConfigNormal extends EditorConfigBase {
              */
             toolbar?: {
                 /**
-                 * Defines the **File** tab settings. 
+                 * Defines the **File** tab settings.
                  * If this parameter is a **boolean** value, then it specifies whether the **File** tab will be displayed or hidden.
                  *
                  * @default true
@@ -1376,8 +1371,8 @@ interface EditorConfigNormal extends EditorConfigBase {
                  */
                 home?: {
                     /**
-                     * Defines if the button for choosing the mail merge base is displayed or hidden. 
-                     * 
+                     * Defines if the button for choosing the mail merge base is displayed or hidden.
+                     *
                      * @deprecated Please use the `toolbar.collaboration.mailmerge` parameter instead.
                      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarhomemailmerge
                      */
@@ -1386,7 +1381,7 @@ interface EditorConfigNormal extends EditorConfigBase {
 
                 // TODO: Not in the documentation
                 /**
-                 * Defines the **Insert** tab settings.  
+                 * Defines the **Insert** tab settings.
                  * If this parameter is a **boolean** value, then it specifies whether the **Insert** tab will be displayed or hidden.
                  */
                 insert?: {
@@ -1402,8 +1397,8 @@ interface EditorConfigNormal extends EditorConfigBase {
                 } | boolean;
 
                 /**
-                 * Defines if the **Layout** tab is displayed or hidden. 
-                 * This parameter will only be available for the **Document Editor** and the **Spreadsheet Editor**. 
+                 * Defines if the **Layout** tab is displayed or hidden.
+                 * This parameter will only be available for the **Document Editor** and the **Spreadsheet Editor**.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarlayout
@@ -1417,8 +1412,8 @@ interface EditorConfigNormal extends EditorConfigBase {
                 } | boolean;
 
                 /**
-                 * Defines if the **References** tab is displayed or hidden. 
-                 * This parameter will only be available for the **Document Editor**. 
+                 * Defines if the **References** tab is displayed or hidden.
+                 * This parameter will only be available for the **Document Editor**.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarreferences
@@ -1426,8 +1421,8 @@ interface EditorConfigNormal extends EditorConfigBase {
                 references?: boolean;
 
                 /**
-                 * Defines the **Collaboration** tab settings. 
-                 * If this parameter is a **boolean** value, then it specifies whether the **Collaboration** tab will be displayed or hidden. 
+                 * Defines the **Collaboration** tab settings.
+                 * If this parameter is a **boolean** value, then it specifies whether the **Collaboration** tab will be displayed or hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarcollaboration
@@ -1467,15 +1462,15 @@ interface EditorConfigNormal extends EditorConfigBase {
                 plugins?: boolean;
 
                 /**
-                 * Defines the **View** tab settings. 
-                 * If this parameter is a **boolean** value, then it specifies whether the **View** tab will be displayed or hidden. 
+                 * Defines the **View** tab settings.
+                 * If this parameter is a **boolean** value, then it specifies whether the **View** tab will be displayed or hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarview
                  */
                 view?: {
                     /**
-                     * Defines if the **Navigation** button is displayed or hidden. 
+                     * Defines if the **Navigation** button is displayed or hidden.
                      * The default value is `true`. This parameter will only be available for the **Document Editor**.
                      *
                      * @default true
@@ -1485,7 +1480,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 } | boolean;
 
                 /**
-                 * Defines if the **Save** button on the toolbar is displayed or hidden. 
+                 * Defines if the **Save** button on the toolbar is displayed or hidden.
                  * @note Please note that this setting is used when the `compactHeader` parameter is set to `true`.
                  *
                  * @default true
@@ -1509,7 +1504,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 editMode?: boolean;
 
                 /**
-                 * Defines if the **Save** button in the editor header is displayed or hidden. 
+                 * Defines if the **Save** button in the editor header is displayed or hidden.
                  * @note Please note that this setting is used when the `compactHeader` parameter is set to `false`.
                  *
                  * @default true
@@ -1518,7 +1513,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 save?: boolean;
 
                 /**
-                 * Defines if the icon with the user's avatar/initials in the editor header is displayed or hidden. 
+                 * Defines if the icon with the user's avatar/initials in the editor header is displayed or hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutheaderuser
@@ -1535,16 +1530,16 @@ interface EditorConfigNormal extends EditorConfigBase {
             };
 
             /**
-             * Defines the **left menu** settings. 
-             * If this parameter is a **boolean** value, then it specifies whether the **left menu** will be displayed or hidden. 
+             * Defines the **left menu** settings.
+             * If this parameter is a **boolean** value, then it specifies whether the **left menu** will be displayed or hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutleftmenu
              */
             leftMenu?: {
                 /**
-                 * Defines the initial value of the left panel visibility - displayed or hidden. 
-                 * It is used for the **Left panel** menu option on the **View** tab. 
+                 * Defines the initial value of the left panel visibility - displayed or hidden.
+                 * It is used for the **Left panel** menu option on the **View** tab.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutleftmenumode
@@ -1552,7 +1547,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 mode?: boolean;
 
                 /**
-                 * Defines if the **Navigation** button is displayed or hidden. 
+                 * Defines if the **Navigation** button is displayed or hidden.
                  * This parameter will only be available for the **Document Editor**.
                  *
                  * @default true
@@ -1561,7 +1556,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 navigation?: boolean;
 
                 /**
-                 * Defines if the **Spellcheck** button is displayed or hidden. 
+                 * Defines if the **Spellcheck** button is displayed or hidden.
                  * This parameter will only be available for the **Spreadsheet Editor**.
                  *
                  * @default true
@@ -1571,16 +1566,16 @@ interface EditorConfigNormal extends EditorConfigBase {
             } | boolean;
 
             /**
-             * Defines the **right menu** settings. 
-             * If this parameter is a **boolean** value, then it specifies whether the **right menu** will be displayed or hidden. 
+             * Defines the **right menu** settings.
+             * If this parameter is a **boolean** value, then it specifies whether the **right menu** will be displayed or hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutrightmenu
              */
             rightMenu?: {
                 /**
-                 * Defines the initial value of the right panel visibility - displayed or hidden. 
-                 * It is used for the **Right panel** menu option on the **View** tab. 
+                 * Defines the initial value of the right panel visibility - displayed or hidden.
+                 * It is used for the **Right panel** menu option on the **View** tab.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutrightmenumode
@@ -1589,15 +1584,15 @@ interface EditorConfigNormal extends EditorConfigBase {
             } | boolean;
 
             /**
-             * Defines the **status bar** settings. 
-             * If this parameter is a **boolean** value, then it specifies whether the status bar will be displayed or hidden. 
+             * Defines the **status bar** settings.
+             * If this parameter is a **boolean** value, then it specifies whether the status bar will be displayed or hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutstatusbar
              */
             statusBar?: {
                 /**
-                 * Defines if an **action status** is displayed or hidden. 
+                 * Defines if an **action status** is displayed or hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutstatusbaractionstatus
@@ -1605,7 +1600,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 actionStatus?: boolean;
 
                 /**
-                 * Defines if a button for choosing the **document language** is displayed or hidden. 
+                 * Defines if a button for choosing the **document language** is displayed or hidden.
                  * This parameter will only be available for the **Document Editor** and the **Presentation Editor**.
                  *
                  * @default true
@@ -1614,7 +1609,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 docLang?: boolean;
 
                 /**
-                 * Defines if a button for choosing the **text language** is displayed or hidden. 
+                 * Defines if a button for choosing the **text language** is displayed or hidden.
                  * This parameter will only be available for the **Document Editor** and the **Presentation Editor**.
                  *
                  * @default true
@@ -1652,9 +1647,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             } | boolean;
 
             /**
-             * Defines if the **role settings** will be disabled in the **PDF forms** or not.  
-             * If the parameter is equal to `false`, then the **role manager** is hidden and viewing the form on behalf of a specific role is disabled.  
-             * In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.  
+             * Defines if the **role settings** will be disabled in the **PDF forms** or not.
+             * If the parameter is equal to `false`, then the **role manager** is hidden and viewing the form on behalf of a specific role is disabled.
+             * In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
              *
              * @note This parameter is available for editing **only** for `ONLYOFFICE Docs Developer`.
              *
@@ -1664,18 +1659,18 @@ interface EditorConfigNormal extends EditorConfigBase {
             roles?: boolean;
 
             /**
-             * Defines the style of the **top toolbar tabs**.  
-             * If this parameter is a string value (`fill` or `line`), then it is set as the **initial tab style value**  
-             * and the tab style setting will not be hidden.  
+             * Defines the style of the **top toolbar tabs**.
+             * If this parameter is a string value (`fill` or `line`), then it is set as the **initial tab style value**
+             * and the tab style setting will not be hidden.
              *
              * @default "fill"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#featurestabstyle
              */
             tabStyle?: {
                 /**
-                 * Defines if the top toolbar tabs are distinctly displayed (`fill`) or  
-                 * only highlighted to see which one is selected (`line`).  
-                 * The default value is `"fill"`.  
+                 * Defines if the top toolbar tabs are distinctly displayed (`fill`) or
+                 * only highlighted to see which one is selected (`line`).
+                 * The default value is `"fill"`.
                  * This value is used when the editor is first opened.
                  *
                  * @default "fill"
@@ -1684,27 +1679,27 @@ interface EditorConfigNormal extends EditorConfigBase {
                 mode?: "fill" | "line";
 
                 /**
-                 * Defines if the **tab style setting** will be displayed in  
-                 * the `File -> Advanced settings` or not.  
+                 * Defines if the **tab style setting** will be displayed in
+                 * the `File -> Advanced settings` or not.
                  * This setting is available in **all editor types**.
                  *
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#featurestabstylechange
                  */
                 change?: boolean;
-            } | "fill" | "line";        
-            
+            } | "fill" | "line";
+
             /**
-             * Defines the **background of the top toolbar tabs**.  
-             * If this parameter is a string value (`header` or `toolbar`), then it is set as the  
-             * **initial tab background value** and the tab background setting will not be hidden.  
+             * Defines the **background of the top toolbar tabs**.
+             * If this parameter is a string value (`header` or `toolbar`), then it is set as the
+             * **initial tab background value** and the tab background setting will not be hidden.
              *
              * @default "header"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#featurestabbackground
              */
             tabBackground?: {
                 /**
-                 * Defines if the background of the top toolbar tabs matches the **header background** (`header`)  
-                 * or the **toolbar background** (`toolbar`).  
+                 * Defines if the background of the top toolbar tabs matches the **header background** (`header`)
+                 * or the **toolbar background** (`toolbar`).
                  * This value is used when the editor is first opened.
                  *
                  * @default "header"
@@ -1713,15 +1708,15 @@ interface EditorConfigNormal extends EditorConfigBase {
                 mode?: string;
 
                 /**
-                 * Defines if the **tab background setting** will be displayed in  
-                 * the `File -> Advanced settings` or not.  
+                 * Defines if the **tab background setting** will be displayed in
+                 * the `File -> Advanced settings` or not.
                  * This setting is available in **all editor types**.
                  *
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#featurestabbackgroundchange
                  */
                 change?: boolean;
-            } | "header" | "toolbar";   
-            
+            } | "header" | "toolbar";
+
             /**
              * Defines if the tooltips about new editor features will be displayed or hidden on first loading.
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#featuresfeaturestips
@@ -1750,7 +1745,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         }
 
         /**
-         * Defines if the **Chat menu button** is displayed or hidden.  
+         * Defines if the **Chat menu button** is displayed or hidden.
          * @note Please note that in case you hide the **Chat** button, the corresponding chat functionality will also be disabled
          *
          * @deprecated Starting from version 7.1, please use the `document.permissions.chat` parameter instead.
@@ -1761,7 +1756,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         chat?: boolean;
 
         /**
-         * Defines if the **Comments menu button** is displayed or hidden.  
+         * Defines if the **Comments menu button** is displayed or hidden.
          * @note Please note that in case you hide the **Comments** button, the corresponding commenting functionality will be available for viewing only, adding and editing comments will be unavailable.
          *
          * @default true
@@ -1770,8 +1765,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         comments?: boolean;
 
         /**
-         * Defines the **document display zoom value** measured in percent.  
-         * Can take values larger than `0`. 
+         * Defines the **document display zoom value** measured in percent.
+         * Can take values larger than `0`.
          * For text documents and presentations it is possible to set this parameter to `-1` (fitting the document to page option) or to `-2` (fitting the document page width to the editor page).
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.zoom` parameter.
@@ -1782,7 +1777,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         zoom?: number;
 
         /**
-         * Defines if the **top toolbar type** displayed is full (`false`) or compact (`true`).  
+         * Defines if the **top toolbar type** displayed is full (`false`) or compact (`true`).
          * Starting from version 8.3, this setting is also available for the viewer. The default value for the view mode is `true`.
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.compactToolbar` parameter.
@@ -1793,7 +1788,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         compactToolbar?: boolean;
 
         /**
-         * Defines if the **left menu panel** is displayed or hidden.  
+         * Defines if the **left menu panel** is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.leftMenu` parameter instead.
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#leftmenu
@@ -1801,7 +1796,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         leftMenu?: boolean;
 
         /**
-         * Defines if the **right menu panel** is displayed or hidden.  
+         * Defines if the **right menu panel** is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.rightMenu` parameter instead.
          *
@@ -1811,7 +1806,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         rightMenu?: boolean;
 
         /**
-         * Defines if the **right menu** is displayed or hidden on first loading.  
+         * Defines if the **right menu** is displayed or hidden on first loading.
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.hideRightMenu` parameter.
          *
@@ -1821,7 +1816,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         hideRightMenu?: boolean;
 
         /**
-         * Defines if the **top toolbar** is displayed or hidden.  
+         * Defines if the **top toolbar** is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.toolbar` parameter instead.
          *
@@ -1831,7 +1826,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         toolbar?: boolean;
 
         /**
-         * Defines if the **status bar** is displayed or hidden.  
+         * Defines if the **status bar** is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.statusBar` parameter instead.
          *
@@ -1840,8 +1835,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         statusBar?: boolean;
 
         /**
-         * Defines if the **Autosave menu option** is enabled or disabled.  
-         * If set to `false`, only **Strict** co-editing mode can be selected, as **Fast** does not work without autosave.  
+         * Defines if the **Autosave menu option** is enabled or disabled.
+         * If set to `false`, only **Strict** co-editing mode can be selected, as **Fast** does not work without autosave.
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.autosave` parameter.
          *
          * @default true
@@ -1850,7 +1845,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         autosave?: boolean;
 
         /**
-         * Adds the request for the **file force saving** to the callback handler when saving the document within the **document editing service** (e.g., clicking the **Save** button, etc.).  
+         * Adds the request for the **file force saving** to the callback handler when saving the document within the **document editing service** (e.g., clicking the **Save** button, etc.).
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.forcesave` parameter.
          *
          * @default false
@@ -1859,7 +1854,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         forcesave?: boolean;
 
         /**
-         * Defines if the user can **edit and delete only his comments**.  
+         * Defines if the user can **edit and delete only his comments**.
          *
          * @deprecated Starting from version 6.3, please use the `document.permissions.editCommentAuthorOnly` and `document.permissions.deleteCommentAuthorOnly` fields instead.
          *
@@ -1869,7 +1864,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         commentAuthorOnly?: boolean;
 
         /**
-         * Defines if the **review changes panel** is automatically displayed or hidden when the editor is loaded.  
+         * Defines if the **review changes panel** is automatically displayed or hidden when the editor is loaded.
          *
          * @deprecated Starting from version 7.0, please use the `review.showReviewChanges` parameter instead.
          *
@@ -1879,7 +1874,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         showReviewChanges?: boolean;
 
         /**
-         * Defines if the **Help menu button** is displayed or hidden.  
+         * Defines if the **Help menu button** is displayed or hidden.
          *
          * @note This parameter is also available for the mobile editors.
          *
@@ -1909,8 +1904,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         toolbarNoTabs?: boolean;
 
         /**
-         * Defines if the document title is visible on the top toolbar (`false`) or hidden (`true`).  
-         * @note This setting is used when the `compactHeader` parameter is set to `true`.  
+         * Defines if the document title is visible on the top toolbar (`false`) or hidden (`true`).
+         * @note This setting is used when the `compactHeader` parameter is set to `true`.
          * @note Starting from version 9.0.3, this parameter is also available for the mobile editors.
          *
          * @default false
@@ -1918,8 +1913,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         toolbarHideFileName?: boolean;
 
         /**
-         * Defines the review editing mode in the document editor.  
-         * 
+         * Defines the review editing mode in the document editor.
+         *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.reviewDisplay` parameter.
          * @deprecated Starting from version 7.0, please use the `review.reviewDisplay` parameter instead.
          *
@@ -1930,9 +1925,9 @@ interface EditorConfigNormal extends EditorConfigBase {
         reviewDisplay?: "markup" | "simple" | "final" | "original";
 
         /**
-         * Defines if the **spell checker** is automatically switched on or off when the editor is loaded.  
+         * Defines if the **spell checker** is automatically switched on or off when the editor is loaded.
          * Spell checker will only be available for the **document editor** and the **presentation editor**.
-         * 
+         *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.spellcheck` parameter.
          * @deprecated Starting from version 7.1, please use the `features.spellcheck` parameter instead.
          *
@@ -1942,7 +1937,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         spellcheck: boolean;
 
         /**
-         * Defines the use of functionality only compatible with the **OOXML format**.  
+         * Defines the use of functionality only compatible with the **OOXML format**.
          * For example, do not use comments on the entire document.
          *
          * @default false
@@ -1951,7 +1946,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         compatibleFeatures?: boolean;
 
         /**
-         * Defines the **measurement units** used on the ruler and in dialog boxes.  
+         * Defines the **measurement units** used on the ruler and in dialog boxes.
          * Can take the following values:
          * - `cm` - centimeters;
          * - `pt` - points;
@@ -1965,8 +1960,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         unit?: "cm" | "pt" | "inch";
 
         /**
-         * Defines the **hint** that describes the event after mentions in a comment.  
-         * - If `true`, a hint indicates that the user will receive a notification and access to the document.  
+         * Defines the **hint** that describes the event after mentions in a comment.
+         * - If `true`, a hint indicates that the user will receive a notification and access to the document.
          * - If `false`, a hint indicates that the user will receive only a notification of the mention.
          *
          * @note It will only be available for the comments if the `onRequestSendNotify` event is set.
@@ -1977,9 +1972,9 @@ interface EditorConfigNormal extends EditorConfigBase {
         mentionShare?: boolean;
 
         /**
-         * Defines if **document macros** will be automatically run when the editor opens.  
+         * Defines if **document macros** will be automatically run when the editor opens.
          *
-         * @note Before version 9.0.3: the `false` value disables the automatic startup of macros and hides the macros settings from the user.  
+         * @note Before version 9.0.3: the `false` value disables the automatic startup of macros and hides the macros settings from the user.
          * @note Since version 9.0.3: the `false` value completely disables macros — they cannot be run, added, or edited. The Macros button is also hidden from the View tab.
          *
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#macros
@@ -1995,13 +1990,13 @@ interface EditorConfigNormal extends EditorConfigBase {
         plugins?: boolean;
 
         /**
-         * Defines the **macros run mode** when autostart is enabled.  
-         * Can take the following values:  
-         * - `disable` - don't run macros at all;  
-         * - `warn` - warn about macros and ask permission to run them;  
+         * Defines the **macros run mode** when autostart is enabled.
+         * Can take the following values:
+         * - `disable` - don't run macros at all;
+         * - `warn` - warn about macros and ask permission to run them;
          * - `enable` - run all macros automatically.
          *
-         * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.  
+         * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.
          * This parameter is also available for the mobile editors.
          *
          * @default "warn"
@@ -2010,8 +2005,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         macrosMode?: "disable" | "warn" | "enable";
 
         /**
-         * Defines if the document is opened in the **review editing mode** (`true`) or not (`false`)  
-         * regardless of the `document.permissions.review` parameter (the review mode is changed only for the current user).  
+         * Defines if the document is opened in the **review editing mode** (`true`) or not (`false`)
+         * regardless of the `document.permissions.review` parameter (the review mode is changed only for the current user).
          * If the parameter is `undefined`, the `document.permissions.review` value is used (for all the document users).
          *
          * @deprecated Starting from version 7.0, please use the `review.trackChanges` parameter instead.
@@ -2021,7 +2016,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         trackChanges?: boolean;
 
         /**
-         * Defines if the **editor rulers** are displayed or hidden.  
+         * Defines if the **editor rulers** are displayed or hidden.
          * This parameter is available for the **Document Editor** and **Presentation Editor**.
          *
          * @defaultValue `false` for the document editor, `true` for presentations.
@@ -2030,7 +2025,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         hideRulers?: boolean;
 
         /**
-         * Defines if the **note panel** is displayed or hidden on first loading.  
+         * Defines if the **note panel** is displayed or hidden on first loading.
          * This parameter is available for the **Presentation Editor only**.
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.hideNotes` parameter.
@@ -2041,10 +2036,10 @@ interface EditorConfigNormal extends EditorConfigBase {
         /**
          * Defines the **editor theme settings**. It can be set in two ways:
          * - **theme id** - the user sets the theme parameter by its id (`theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-white`, `theme-night`);
-         * - **default theme** - the default dark or light theme value will be set (`default-dark`, `default-light`).  
+         * - **default theme** - the default dark or light theme value will be set (`default-dark`, `default-light`).
          *   The default light theme is `theme-classic-light`. The first option has higher priority.
          *
-         * @note Apart from the available editor themes, the user can also customize their own color themes for the application interface.  
+         * @note Apart from the available editor themes, the user can also customize their own color themes for the application interface.
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.uiTheme` parameter.
          *
          * @example "theme-dark"
@@ -2053,7 +2048,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         uiTheme?: EditorTheme | "default-dark" | "default-light";
 
         /**
-         * Defines the **mode of embedding editors into the web page**.  
+         * Defines the **mode of embedding editors into the web page**.
          * - The `embed` value disables scrolling to the editor frame when it is loaded, as the focus is not captured.
          *
          * @example "embed"
@@ -2108,9 +2103,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             disableForceDesktop?: boolean;
         };
         /**
-         * Defines the **Complete & Submit** button settings.  
-         * Starting from version 8.3. 
-         * If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar.  
+         * Defines the **Complete & Submit** button settings.
+         * Starting from version 8.3.
+         * If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar.
          * Button will only be available for the **PDF** format.
          *
          * @default true
@@ -2118,7 +2113,7 @@ interface EditorConfigNormal extends EditorConfigBase {
          */
         submitForm?: {
             /**
-             * Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar.  
+             * Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar.
              * Button will only be available for the **PDF** format.
              *
              * @default true
@@ -2127,7 +2122,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             visible?: boolean;
 
             /**
-             * Defines a message displayed after forms are submitted.  
+             * Defines a message displayed after forms are submitted.
              * The following values are available:
              * - `""` - the message will not be displayed;
              * - `null` / `undefined` - the default message will be displayed;
@@ -2148,7 +2143,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         forceWesternFontSize?: boolean;
 
         /**
-         * Defines the background color for the slide show in the **Presentation Editor**.  
+         * Defines the background color for the slide show in the **Presentation Editor**.
          * Can be represented in the HEX, RGB, or RGBA formats. For example, `#ff0000`, `rgb(255, 0, 0)`, `rgba(255, 0, 0, 0.5)`.
          * Starting from version 8.3,
          *
@@ -2203,7 +2198,7 @@ interface EditorConfigNormal extends EditorConfigBase {
     };
 
     /**
-     * Defines the **co-editing mode** (Fast or Strict) and the possibility to change it.  
+     * Defines the **co-editing mode** (Fast or Strict) and the possibility to change it.
      * This parameter is used to apply the co-editing and viewing modes.
      *
      * @forType `desktop` | `mobile`
@@ -2212,7 +2207,7 @@ interface EditorConfigNormal extends EditorConfigBase {
     coEditing?: {
         /**
          * The co-editing mode.
-         * If `fast` and `customization.autosave` = false → set `customization.autosave` = true.  
+         * If `fast` and `customization.autosave` = false → set `customization.autosave` = true.
          * @note In case **mode** setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.coEditing.mode` parameter.
          *
          * @default 'fast'
@@ -2232,12 +2227,12 @@ interface EditorConfigNormal extends EditorConfigBase {
     /**
      * The **plugins** section allows to connect the special add-ons to your ONLYOFFICE Docs installation
      * which will help you add additional features to document editors.
-     * 
+     *
      * @forType `desktop` | `mobile`
      */
     plugins?: {
         /**
-         * Defines the array of the identifiers (as entered in `config.json`) for the plugins,  
+         * Defines the array of the identifiers (as entered in `config.json`) for the plugins,
          * which will automatically start when the editor opens, and the order the plugins will run one-by-one.
          *
          * @example ["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]
@@ -2246,9 +2241,9 @@ interface EditorConfigNormal extends EditorConfigBase {
         autostart?: string[];
 
         /**
-         * Defines an object which allows configuring plugins from an external source.  
-         * The settings can be set for all plugins or for a specific plugin.  
-         * For example, this object can be used to pass an authorization token to the plugin.  
+         * Defines an object which allows configuring plugins from an external source.
+         * The settings can be set for all plugins or for a specific plugin.
+         * For example, this object can be used to pass an authorization token to the plugin.
          * You can also use the `SetPluginsOptions` method of the Automation API to pass the options object to the plugin.
          *
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#options
@@ -2263,7 +2258,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             all?: object;
 
             /**
-             * Defines the parameters which will be set for a specific plugin.  
+             * Defines the parameters which will be set for a specific plugin.
              * The plugin must be specified with the plugin GUID of the `asc.{UUID}` type.
              *
              * @example { "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}": { "keyYoutube": "valueYoutube" } }
@@ -2281,7 +2276,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         pluginsData?: string[];
 
         /**
-         * Defines the absolute URL to the directory where the plugins are stored.  
+         * Defines the absolute URL to the directory where the plugins are stored.
          *
          * @deprecated Since version 4.3. Please use the absolute URLs in `pluginsData` field instead.
          * @example "https://example.com/plugins/"
@@ -2297,7 +2292,7 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     wopi?: {
         /**
-         * Defines the maximum filename length for the rename.  
+         * Defines the maximum filename length for the rename.
          *
          * @default 250
          */
@@ -2311,14 +2306,14 @@ interface EditorConfigEmbedded extends EditorConfigBase {
      * Defines the action for application autostart.
      * - For documents: `"document"`.
      * - For presentations: default is `"player"`.
-     * 
+     *
      * @forType `embedded`
      */
     autostart?: "document" | "player";
 
     /**
      * Settings for embedding the editor.
-     * 
+     *
      * @forType `embedded`
      */
     embedded?: {
@@ -2331,7 +2326,6 @@ interface EditorConfigEmbedded extends EditorConfigBase {
     };
 }
 
-
 interface EventsBase {
     /**
      * The function called when the application is fully loaded into the browser.
@@ -2343,7 +2337,7 @@ interface EventsBase {
 
     /**
      * The function called when the document is loaded into the document editor.
-     * 
+     *
      * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#ondocumentready
      */
@@ -2371,7 +2365,7 @@ interface EventsBase {
 interface EventsNormal extends EventsBase {
     /**
      * The function called when the document is modified.
-     * 
+     *
      * @param event
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#ondocumentstatechange
@@ -2383,9 +2377,9 @@ interface EventsNormal extends EventsBase {
      * This event also fires when the user clicks the **Edit PDF** button in forms that are open in the view or **fillForms** mode.
      * If the method is not declared, the **Edit current file** and **Edit PDF** buttons will not be displayed.
      *
-     * @note When the function is called, the editor must be initialized again, in editing mode. 
+     * @note When the function is called, the editor must be initialized again, in editing mode.
      * @note This parameter is obligatory when the `editorConfig.mode` parameter is set to `view` and the permission to edit the document (`document.permissions`) is `true`.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequesteditrights
      */
@@ -2394,9 +2388,9 @@ interface EventsNormal extends EventsBase {
     /**
      * The function called when the user is trying to show the document **version history** by clicking the **Version History** button.
      *
-     * @note To show the document version history you must call the `refreshHistory` method.  
+     * @note To show the document version history you must call the `refreshHistory` method.
      * @note If this method and the `onRequestHistoryData` method are not declared, the **Version History** button will not be displayed.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @example
      * ```
@@ -2428,15 +2422,14 @@ interface EventsNormal extends EventsBase {
      *   })
      * }
      * ```
-     * 
+     *
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequesthistory
      */
     onRequestHistory?: () => void;
 
-
     /**
      * The function called when the user is trying to click a specific document version in the **document version history**.
-     * 
+     *
      * @param event
      * @note To show the changes corresponding to the specific document version, you must call the `setHistoryData` method. When calling this method, the `token` must be added to validate the parameters. If this method and the `onRequestHistory` method are not declared, the **Version History** button will not be displayed.
      *
@@ -2460,17 +2453,16 @@ interface EventsNormal extends EventsBase {
      *   })
      * }
      * ```
-     * 
+     *
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequesthistorydata
      */
     onRequestHistoryData?: (event: RequestHistoryDataEvent) => void;
-
 
     /**
      * The function called when the user is trying to **restore the file version** by clicking the Restore button in the version history.
      *
      * @param event
-     * 
+     *
      * @note When the function is called, you must call the `refreshHistory` method to initialize version history again. If this method is not declared, the **Restore** button will not be displayed.
      *
      * @note The Restore button is displayed for the previous document versions only and hidden for the current one.
@@ -2510,7 +2502,7 @@ interface EventsNormal extends EventsBase {
      *   })
      * }
      * ```
-     * 
+     *
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequestrestore
      */
     onRequestRestore?: (event: RequestRestoreEvent) => void;
@@ -2519,7 +2511,7 @@ interface EventsNormal extends EventsBase {
      * The function called when the user is trying to go back to the document from viewing the **document version history** by clicking the Close History button.
      *
      * @note When the function is called, the editor must be initialized again, in editing mode. If this method is not declared, the **Close History** button will not be displayed.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequesthistoryclose
      */
@@ -2535,20 +2527,20 @@ interface EventsNormal extends EventsBase {
     onInfo?: (event: InfoEvent) => void;
 
     /**
-     * The function called after the error is shown, when the document is opened for editing with the **old document.key value**.  
-     * This key was used to edit the previous document version and was successfully saved.  
+     * The function called after the error is shown, when the document is opened for editing with the **old document.key value**.
+     * This key was used to edit the previous document version and was successfully saved.
      * When this event is called, the editor must be reinitialized with a new `document.key`.
      *
      * @deprecated Starting from version 8.3, please use `onRequestRefreshFile` instead.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onoutdatedversion
      */
     onOutdatedVersion?: () => void;
 
     /**
-     * The function called with the **absolute URL** to the edited file when the `downloadAs` method is being called.  
-     * 
+     * The function called with the **absolute URL** to the edited file when the `downloadAs` method is being called.
+     *
      * @param event
      * @forType `desktop` | `mobile`
      * @example
@@ -2564,8 +2556,8 @@ interface EventsNormal extends EventsBase {
     onDownloadAs?: (event: DownloadAsEvent) => void;
 
     /**
-     * The function called when the user is trying to **save file** by clicking **Save Copy as...** button.  
-     * 
+     * The function called when the user is trying to **save file** by clicking **Save Copy as...** button.
+     *
      * @param event
      * @note If the method is not declared, the **Save Copy as...** button will not be displayed.
      *
@@ -2587,7 +2579,7 @@ interface EventsNormal extends EventsBase {
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#oncollaborativechanges
      */
-    onCollaborativeChanges?: () => void;        
+    onCollaborativeChanges?: () => void;
 
     /**
      * The function called when the user is trying to rename the file by clicking the **Rename... button**.
@@ -2647,7 +2639,7 @@ interface EventsNormal extends EventsBase {
      * The function called when the user is trying to **get a link for opening the document** which contains a bookmark, scrolling to the bookmark position.
      *
      * @param event
-     * @note To set the bookmark link, you must call the `setActionLink` method. The bookmark data is received in the `data` parameter and must be then used in the configuration as the value for the `editorConfig.actionLink` parameter. 
+     * @note To set the bookmark link, you must call the `setActionLink` method. The bookmark data is received in the `data` parameter and must be then used in the configuration as the value for the `editorConfig.actionLink` parameter.
      * @note If the method is not declared, the **Get Link** button will not be displayed.
      *
      * @forType `desktop` | `mobile`
@@ -2705,7 +2697,7 @@ interface EventsNormal extends EventsBase {
      * @param event
      * @note The list of users to be mentioned should be completed by the `setUsers` method.
      * @note In version 5.4, `onRequestSendNotify` event can only be used if `onRequestUsers` event is set. Starting from version 5.5, there is no such dependency between `onRequestSendNotify` and `onRequestUsers` - both can be set independently.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @example
      * ```
@@ -2719,13 +2711,12 @@ interface EventsNormal extends EventsBase {
      */
     onRequestSendNotify?: (event: RequestSendNotifyEvent) => void;
 
-
     /**
      * The function called when the user is trying to insert an image by clicking the **Image from Storage** button.
      *
      * @param event
      * @note To insert an image into the file, you must call the `insertImage` method with the specified command. When calling this method, the `token` must be added to validate the parameters. If the method is not declared, the Image from Storage button will not be displayed.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @example
      * ```
@@ -2755,7 +2746,7 @@ interface EventsNormal extends EventsBase {
      *
      * @note This event is available only for **ONLYOFFICE Docs Enterprise** and **ONLYOFFICE Docs Developer**.
      * @deprecated Starting from version 7.5, please use `onRequestSelectDocument` instead.
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequestcomparefile
      */
@@ -2856,7 +2847,6 @@ interface EventsNormal extends EventsBase {
      */
     onRequestOpen?: (event: RequestOpenEvent) => void;
 
-
     /**
      * The function called when the user is trying to select a document for comparing, combining, or inserting text.
      *
@@ -2883,7 +2873,7 @@ interface EventsNormal extends EventsBase {
      * The function called when the user is trying to select recipients data by clicking the `Mail merge` button.
      *
      * @param event
-     * @note To select recipient data, you must call the `setRequestedSpreadsheet` method. When calling this method, the token must be added to validate the parameters. 
+     * @note To select recipient data, you must call the `setRequestedSpreadsheet` method. When calling this method, the token must be added to validate the parameters.
      * @note If the method is not declared, the `Mail merge` button will become faded and unclickable.
      *
      * @forType `desktop` | `mobile`
@@ -2907,7 +2897,7 @@ interface EventsNormal extends EventsBase {
      *
      * @param event
      *
-     * @note When the button is clicked, you must call the `setReferenceSource` method to change a source of the external data. When calling this method, the token must be added to validate the parameters. 
+     * @note When the button is clicked, you must call the `setReferenceSource` method to change a source of the external data. When calling this method, the token must be added to validate the parameters.
      * @note To send the data to the `setReferenceSource` method, it is recommended to search for the file by the referenceData parameter first. If there is no such a field or a file cannot be found, then the path parameter is used.
      * @note If the event is not declared, the Change source button will not be displayed.
      *
@@ -2947,7 +2937,7 @@ interface EventsNormal extends EventsBase {
      *
      * @note If the event is not declared, the **Start filling** button will not be displayed.
      * @note When the user clicks the **Start filling** button, the `startFilling` method is called to lock PDF editing (only PDF viewing becomes available).
-     * 
+     *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequeststartfilling
      */
@@ -3025,7 +3015,6 @@ interface EventsEmbedded extends EventsBase {
     onBack?: () => void;
 }
 
-
 interface BaseConfig {
     /**
      * Defines the platform type used to access the document.
@@ -3053,7 +3042,7 @@ interface BaseConfig {
      */
     height?: string;
 
-    /** 
+    /**
      * Defines the document type to be opened.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/#documenttype
      * @forType `desktop` | `mobile` | `embedded`
@@ -3081,10 +3070,10 @@ export interface ConfigNormal extends BaseConfig {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/
      */
     editorConfig?: EditorConfigNormal;
-    
+
     /**
      * The events section allows to change all the functions pertaining to the events.
-     * 
+     *
      * @example
      * ```ts
      * function onAppReady() {
@@ -3123,10 +3112,10 @@ export interface ConfigEmbedded extends BaseConfig {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/
      */
     editorConfig?: EditorConfigEmbedded;
-    
+
     /**
      * The events section allows to change all the functions pertaining to the events.
-     * 
+     *
      * @example
      * ```ts
      * function onAppReady() {
@@ -3161,7 +3150,7 @@ export interface Config extends ConfigNormal {
 
     /**
      * The events section allows to change all the functions pertaining to the events.
-     * 
+     *
      * @example
      * ```ts
      * function onAppReady() {
