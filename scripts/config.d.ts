@@ -1,6 +1,8 @@
 // Types
 type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
 
+type PlatformType = "desktop" | "mobile" | "embedded"
+
 type FileType =
     | "csv" 
     | "djvu" 
@@ -3020,7 +3022,7 @@ interface BaseConfig {
      * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/#type
      */
-    type?: "desktop" | "mobile" | "embedded";
+    type?: PlatformType;
 
     /**
      * Defines the document width in the browser window.
