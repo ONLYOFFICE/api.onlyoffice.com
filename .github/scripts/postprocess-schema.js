@@ -119,7 +119,7 @@ function collapseAnyOf(node) {
       const extra = stringConsts.map((v) => v.const);
       replace(node, {
         type: def.type || "string",
-        enum: [...def.enum, ...extra],
+        enum: [...new Set([...def.enum, ...extra])],
       });
       return;
     }
@@ -134,7 +134,7 @@ function collapseAnyOf(node) {
       if (!def?.enum) return;
       merged.push(...def.enum);
     }
-    replace(node, { type: "string", enum: merged });
+    replace(node, { type: "string", enum: [...new Set(merged)] });
     return;
   }
 }
