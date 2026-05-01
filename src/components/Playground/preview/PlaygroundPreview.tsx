@@ -63,7 +63,7 @@ export const PlaygroundPreview = () => {
         return {
             document: {
                 fileType: fileConfig.ext,
-                key: crypto.randomUUID(),
+                key: `demo-document-key-${crypto.randomUUID().slice(0, 8)}`,
                 title: `Example Document Title.${fileConfig.ext}`,
                 url: templateUrl ?? fileConfig.url,
             },
@@ -71,23 +71,16 @@ export const PlaygroundPreview = () => {
             type: previewType,
             editorConfig: {
                 callbackUrl: documentServerUrl + 'dummyCallback',
-                user: {
-                    id: 'userID',
-                    name: 'Developer',
-                },
                 customization: {
+                    anonymous: { request: false },
                     uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
                     mobile: {
                         disableForceDesktop: true,
                     },
-                    features: {
-                        featuresTips: false,
-                    },
+                    features: { featuresTips: false },
                 },
                 lang: 'en',
             },
-            height: '100%',
-            width: '100%',
             events: {
                 onDocumentReady: () => {
                     try {
