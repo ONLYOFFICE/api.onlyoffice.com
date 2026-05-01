@@ -3,7 +3,7 @@ import CopyIcon from '@site/static/icons/copy.svg';
 import styles from './CopyButton.module.css';
 
 interface CopyButtonProps {
-    getText: () => string;
+    getText: () => string | Promise<string>;
 }
 
 export function CopyButton({ getText }: CopyButtonProps) {
@@ -11,7 +11,7 @@ export function CopyButton({ getText }: CopyButtonProps) {
 
     const handleClick = async () => {
         try {
-            await navigator.clipboard.writeText(getText());
+            await navigator.clipboard.writeText(await getText());
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         } catch {

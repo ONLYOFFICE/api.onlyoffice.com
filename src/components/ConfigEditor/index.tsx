@@ -9,6 +9,7 @@ import { useColorMode } from "@docusaurus/theme-common";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import { CopyButton } from "./renderers/utils/CopyButton";
+import { flushPendingInput } from "./renderers/controls/TextControl";
 
 interface ConfigEditorProps {
     defaultConfig: Record<string, unknown>;
@@ -30,7 +31,8 @@ const MONACO_OPTIONS = {
 export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const { colorMode } = useColorMode();
 
-    const [formData, setFormData] = useState<Record<string, unknown>>(defaultConfig);
+    const formDataRef = useRef(defaultConfig);
+    const pendingAction = useRef<(() => void) | null>(null);
     const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2));
     const [tab, setTab] = useState<'form' | 'json'>('form');
     const tabRef = useRef(tab);
@@ -41,38 +43,65 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const onApplyRef = useRef(onApply);
     onApplyRef.current = onApply;
 
-    const formDataRef = useRef(formData);
-    formDataRef.current = formData;
+    const [formKey, setFormKey] = useState(0);
 
     useEffect(() => {
-        setFormData(defaultConfig);
+        formDataRef.current = defaultConfig;
         setJsonText(JSON.stringify(defaultConfig, null, 2));
         updateTabRef.current = false;
+        setFormKey((k) => k + 1);
         onApplyRef.current(defaultConfig);
     }, [defaultConfig]);
 
-    // Sync data when switching tabs
-    const handleTabChange = useCallback((value: string) => {
-        if (updateTabRef.current) {
-            if (value === 'json') {
-                setJsonText(JSON.stringify(formDataRef.current, null, 2));
-            } else if (value === 'form') {
-                try {
-                    setFormData(JSON.parse(jsonTextRef.current));
-                } catch {
-                    // invalid JSON — keep current formData
-                }
-            }
-            updateTabRef.current = false;
-        }
-        tabRef.current = value as 'form' | 'json';
-        setTab(value as 'form' | 'json');
+    const applyConfig = useCallback(() => {
+        onApplyRef.current(formDataRef.current);
     }, []);
 
+    const serializeConfig = useCallback(() => {
+        return JSON.stringify(formDataRef.current, null, 2);
+    }, []);
+
+    const syncJson = useCallback(() => {
+        setJsonText(serializeConfig());
+    }, [serializeConfig]);
+
+    // Sync data when switching tabs
+    const handleTabChange = useCallback((value: string) => {
+        if (tabRef.current === value) return;
+        if (value === 'json') {
+            if (flushPendingInput()) {
+                tabRef.current = 'json';
+                pendingAction.current = () => {
+                    syncJson();
+                    updateTabRef.current = false;
+                    setTab('json');
+                };
+                return;
+            }
+            if (updateTabRef.current) {
+                syncJson();
+            }
+        } else if (value === 'form' && updateTabRef.current) {
+            try {
+                formDataRef.current = JSON.parse(jsonTextRef.current);
+                setFormKey((k) => k + 1);
+            } catch {
+                // invalid JSON — keep current formData
+            }
+        }
+        updateTabRef.current = false;
+        tabRef.current = value as 'form' | 'json';
+        setTab(value as 'form' | 'json');
+    }, [syncJson]);
+
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
-        const updated = data ?? {};
-        setFormData(updated);
+        formDataRef.current = data ?? {};
         updateTabRef.current = true;
+        if (pendingAction.current) {
+            const action = pendingAction.current;
+            pendingAction.current = null;
+            action();
+        }
     }, []);
 
     const handleJsonChange = useCallback((value: string | undefined) => {
@@ -81,15 +110,24 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     }, []);
 
     const handleRun = useCallback(() => {
-        onApplyRef.current(formDataRef.current);
-    }, []);
+        if (flushPendingInput()) {
+            pendingAction.current = applyConfig;
+        } else {
+            applyConfig();
+        }
+    }, [applyConfig]);
 
-    const getCopyText = useCallback(() => {
+    const getCopyText = useCallback((): string | Promise<string> => {
         if (tabRef.current === 'json') {
             return jsonTextRef.current;
         }
-        return JSON.stringify(formDataRef.current, null, 2);
-    }, []);
+        if (flushPendingInput()) {
+            return new Promise((resolve) => {
+                pendingAction.current = () => resolve(serializeConfig());
+            });
+        }
+        return serializeConfig();
+    }, [serializeConfig]);
 
     return (
         <div className={styles.container}>
@@ -114,9 +152,10 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                         <Tabs.Content value="form" className={styles.content} forceMount>
                             <div className={styles.formEditorContent}>
                                 <JsonForms
+                                    key={formKey}
                                     schema={schema as any}
                                     uischema={ROOT_UISCHEMA}
-                                    data={formData}
+                                    data={formDataRef.current}
                                     renderers={renderers}
                                     onChange={handleFormChange}
                                     validationMode="NoValidation"
