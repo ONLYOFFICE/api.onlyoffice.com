@@ -74,9 +74,6 @@ export const PlaygroundPreview = () => {
                 customization: {
                     anonymous: { request: false },
                     uiTheme: theme === 'dark' ? 'default-dark' : 'default-light',
-                    mobile: {
-                        disableForceDesktop: true,
-                    },
                     features: { featuresTips: false },
                 },
                 lang: 'en',
