@@ -1,27 +1,27 @@
-import * as Tabs from '@radix-ui/react-tabs'
-import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels'
-import { type ReactNode } from 'react'
-import { useSyncExternalStore } from 'react'
-import styles from './styles.module.css'
+import * as Tabs from '@radix-ui/react-tabs';
+import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
+import { type ReactNode } from 'react';
+import { useSyncExternalStore } from 'react';
+import styles from './styles.module.css';
 
 function useIsMobile(query = '(max-width: 767px)') {
     return useSyncExternalStore(
         (callback) => {
-            const matchMedia = window.matchMedia(query)
-            matchMedia.addEventListener('change', callback)
-            return () => matchMedia.removeEventListener('change', callback)
+            const matchMedia = window.matchMedia(query);
+            matchMedia.addEventListener('change', callback);
+            return () => matchMedia.removeEventListener('change', callback);
         },
         () => window.matchMedia(query).matches,
         () => false,
-    )
+    );
 }
 
 interface SplitPaneProps {
-    first: ReactNode
-    second: ReactNode
-    firstLabel?: string
-    secondLabel?: string
-    defaultSize?: number
+    first: ReactNode;
+    second: ReactNode;
+    firstLabel?: string;
+    secondLabel?: string;
+    defaultSize?: number;
 }
 
 export const SplitPane = ({
@@ -31,7 +31,7 @@ export const SplitPane = ({
     secondLabel = 'Preview',
     defaultSize = 40,
 }: SplitPaneProps) => {
-    const isMobile = useIsMobile()
+    const isMobile = useIsMobile();
 
     if (isMobile) {
         return (
@@ -51,7 +51,7 @@ export const SplitPane = ({
                     {second}
                 </Tabs.Content>
             </Tabs.Root>
-        )
+        );
     }
 
     return (
@@ -85,5 +85,5 @@ export const SplitPane = ({
                 {second}
             </Panel>
         </PanelGroup>
-    )
-}
+    );
+};

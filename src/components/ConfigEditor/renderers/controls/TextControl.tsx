@@ -1,26 +1,26 @@
-import { ControlProps, isIntegerControl, isNumberControl, isStringControl, not, isEnumControl, and, or, rankWith } from '@jsonforms/core'
-import { withJsonFormsControlProps } from '@jsonforms/react'
-import { Tooltip } from '../utils/Tooltip'
-import styles from '../../styles.module.css'
+import { ControlProps, isIntegerControl, isNumberControl, isStringControl, not, isEnumControl, and, or, rankWith } from '@jsonforms/core';
+import { withJsonFormsControlProps } from '@jsonforms/react';
+import { Tooltip } from '../utils/Tooltip';
+import styles from '../../styles.module.css';
 
 function TextControlRenderer({ id, label, data, path, schema, description, required, enabled, handleChange }: ControlProps) {
-    const type = schema.type === 'integer' || schema.type === 'number' ? 'number' : 'text'
-    const isUnset = data === undefined || data === null
+    const type = schema.type === 'integer' || schema.type === 'number' ? 'number' : 'text';
+    const isUnset = data === undefined || data === null;
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const raw = e.target.value
+        const raw = e.target.value;
         if (raw === '') {
-            handleChange(path, undefined)
-            return
+            handleChange(path, undefined);
+            return;
         }
         if (schema.type === 'integer') {
-            handleChange(path, parseInt(raw, 10))
+            handleChange(path, parseInt(raw, 10));
         } else if (schema.type === 'number') {
-            handleChange(path, parseFloat(raw))
+            handleChange(path, parseFloat(raw));
         } else {
-            handleChange(path, raw)
+            handleChange(path, raw);
         }
-    }
+    };
 
     return (
         <div className={styles.field}>
@@ -47,6 +47,6 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
 export const textControlTester = rankWith(3, and(
     or(isStringControl, isNumberControl, isIntegerControl),
     not(isEnumControl),
-))
+));
 
-export const TextControl = withJsonFormsControlProps(TextControlRenderer)
+export const TextControl = withJsonFormsControlProps(TextControlRenderer);

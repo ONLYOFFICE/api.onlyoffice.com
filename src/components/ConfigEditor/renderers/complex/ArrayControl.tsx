@@ -1,52 +1,52 @@
-import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core'
-import { withJsonFormsArrayControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react'
-import { memo } from 'react'
-import { Section } from '../utils/Section'
-import { depthOfPath, titleFromKey } from '../layouts/depth'
-import styles from '../../styles.module.css'
+import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core';
+import { withJsonFormsArrayControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react';
+import { memo } from 'react';
+import { Section } from '../utils/Section';
+import { depthOfPath, titleFromKey } from '../layouts/depth';
+import styles from '../../styles.module.css';
 
-const ITEM_UISCHEMA: ControlElement = { type: 'Control', scope: '#', label: false }
+const ITEM_UISCHEMA: ControlElement = { type: 'Control', scope: '#', label: false };
 
 function defaultForSchema(s: JsonSchema | undefined): unknown {
-    if (!s) return undefined
+    if (!s) return undefined;
     switch (s.type) {
-        case 'array': return []
-        case 'string': return ''
-        case 'number': case 'integer': return 0
-        case 'boolean': return false
-        case 'object': return {}
-        default: return undefined
+        case 'array': return [];
+        case 'string': return '';
+        case 'number': case 'integer': return 0;
+        case 'boolean': return false;
+        case 'object': return {};
+        default: return undefined;
     }
 }
 
 const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayControlProps) {
-    const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props
-    const ctx = useJsonForms()
-    const rootSchema = ctx.core?.schema as JsonSchema | undefined
+    const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props;
+    const ctx = useJsonForms();
+    const rootSchema = ctx.core?.schema as JsonSchema | undefined;
 
-    const rawItemSchema = (schema as JsonSchema).items as JsonSchema | undefined
-    let itemSchema: JsonSchema = rawItemSchema ?? {}
+    const rawItemSchema = (schema as JsonSchema).items as JsonSchema | undefined;
+    let itemSchema: JsonSchema = rawItemSchema ?? {};
 
     if (rawItemSchema?.$ref && rootSchema) {
-        itemSchema = resolveSchema(rootSchema, rawItemSchema.$ref, rootSchema) as JsonSchema
+        itemSchema = resolveSchema(rootSchema, rawItemSchema.$ref, rootSchema) as JsonSchema;
     }
 
-    const items: unknown[] = Array.isArray(data) ? data : []
-    const depth = depthOfPath(path)
+    const items: unknown[] = Array.isArray(data) ? data : [];
+    const depth = depthOfPath(path);
 
     // Determine effective item schema
-    const firstItem = items[0]
-    let effectiveItemSchema: JsonSchema = itemSchema
-    
+    const firstItem = items[0];
+    let effectiveItemSchema: JsonSchema = itemSchema;
+
     // If we have data, infer type from first item
     if (firstItem !== undefined) {
-        const itemType = typeof firstItem
+        const itemType = typeof firstItem;
         if (itemType === 'string' || itemType === 'number' || itemType === 'boolean') {
-            effectiveItemSchema = { type: itemType as JsonSchema['type'] }
+            effectiveItemSchema = { type: itemType as JsonSchema['type'] };
         }
     } else if (!itemSchema.type && !itemSchema.properties && !itemSchema.items) {
         // If no data and no clear schema, default to string
-        effectiveItemSchema = { type: 'string' }
+        effectiveItemSchema = { type: 'string' };
     }
 
     return (
@@ -90,7 +90,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
             )}
         </Section>
     )
-}, (prev, next) => prev.path === next.path && prev.data === next.data && prev.enabled === next.enabled)
+}, (prev, next) => prev.path === next.path && prev.data === next.data && prev.enabled === next.enabled);
 
-export const arrayControlTester = rankWith(4, or(isObjectArrayControl, isPrimitiveArrayControl))
-export const ArrayControl = withJsonFormsArrayControlProps(ArrayControlRenderer)
+export const arrayControlTester = rankWith(4, or(isObjectArrayControl, isPrimitiveArrayControl));
+export const ArrayControl = withJsonFormsArrayControlProps(ArrayControlRenderer);

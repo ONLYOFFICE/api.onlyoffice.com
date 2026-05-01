@@ -1,21 +1,21 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 import PlayIcon from '@site/static/icons/icon-play.svg';
 import * as Tabs from "@radix-ui/react-tabs";
 import { renderers } from "./renderers";
-import schema from '@site/src/data/config-schema.json'
+import schema from '@site/src/data/config-schema.json';
 import { UISchemaElement } from "@jsonforms/core";
-import { JsonForms } from '@jsonforms/react'
+import { JsonForms } from '@jsonforms/react';
 import { useColorMode } from "@docusaurus/theme-common";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import { CopyButton } from "./renderers/utils/CopyButton";
 
 interface ConfigEditorProps {
-    defaultConfig: Record<string, unknown>
-    onApply: (config: Record<string, unknown>) => void
+    defaultConfig: Record<string, unknown>;
+    onApply: (config: Record<string, unknown>) => void;
 }
 
-const ROOT_UISCHEMA: UISchemaElement = { type: 'Control', scope: '#' } as any
+const ROOT_UISCHEMA: UISchemaElement = { type: 'Control', scope: '#' } as any;
 
 const MONACO_OPTIONS = {
     minimap: { enabled: false },
@@ -25,71 +25,71 @@ const MONACO_OPTIONS = {
     renderLineHighlight: 'all' as const,
     automaticLayout: true,
     fixedOverflowWidgets: true,
-}
+};
 
 export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
-    const { colorMode } = useColorMode()
+    const { colorMode } = useColorMode();
 
-    const [formData, setFormData] = useState<Record<string, unknown>>(defaultConfig)
-    const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2))
-    const [tab, setTab] = useState<'form' | 'json'>('form')
-    const tabRef = useRef(tab)
-    const updateTabRef = useRef(false)
-    const jsonTextRef = useRef(jsonText)
-    jsonTextRef.current = jsonText
+    const [formData, setFormData] = useState<Record<string, unknown>>(defaultConfig);
+    const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2));
+    const [tab, setTab] = useState<'form' | 'json'>('form');
+    const tabRef = useRef(tab);
+    const updateTabRef = useRef(false);
+    const jsonTextRef = useRef(jsonText);
+    jsonTextRef.current = jsonText;
 
-    const onApplyRef = useRef(onApply)
-    onApplyRef.current = onApply
+    const onApplyRef = useRef(onApply);
+    onApplyRef.current = onApply;
 
-    const formDataRef = useRef(formData)
-    formDataRef.current = formData
+    const formDataRef = useRef(formData);
+    formDataRef.current = formData;
 
     useEffect(() => {
-        setFormData(defaultConfig)
-        setJsonText(JSON.stringify(defaultConfig, null, 2))
-        updateTabRef.current = false
-        onApplyRef.current(defaultConfig)
-    }, [defaultConfig])
+        setFormData(defaultConfig);
+        setJsonText(JSON.stringify(defaultConfig, null, 2));
+        updateTabRef.current = false;
+        onApplyRef.current(defaultConfig);
+    }, [defaultConfig]);
 
     // Sync data when switching tabs
     const handleTabChange = useCallback((value: string) => {
         if (updateTabRef.current) {
             if (value === 'json') {
-                setJsonText(JSON.stringify(formDataRef.current, null, 2))
+                setJsonText(JSON.stringify(formDataRef.current, null, 2));
             } else if (value === 'form') {
                 try {
-                    setFormData(JSON.parse(jsonTextRef.current))
+                    setFormData(JSON.parse(jsonTextRef.current));
                 } catch {
                     // invalid JSON — keep current formData
                 }
             }
-            updateTabRef.current = false
+            updateTabRef.current = false;
         }
-        tabRef.current = value as 'form' | 'json'
-        setTab(value as 'form' | 'json')
-    }, [])
+        tabRef.current = value as 'form' | 'json';
+        setTab(value as 'form' | 'json');
+    }, []);
 
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
-        const updated = data ?? {}
-        setFormData(updated)
-        updateTabRef.current = true
-    }, [])
+        const updated = data ?? {};
+        setFormData(updated);
+        updateTabRef.current = true;
+    }, []);
 
     const handleJsonChange = useCallback((value: string | undefined) => {
-        setJsonText(value ?? '')
-        updateTabRef.current = true
-    }, [])
+        setJsonText(value ?? '');
+        updateTabRef.current = true;
+    }, []);
 
     const handleRun = useCallback(() => {
-        onApplyRef.current(formDataRef.current)
-    }, [])
+        onApplyRef.current(formDataRef.current);
+    }, []);
 
     const getCopyText = useCallback(() => {
         if (tabRef.current === 'json') {
-            return jsonTextRef.current
+            return jsonTextRef.current;
         }
-        return JSON.stringify(formDataRef.current, null, 2)
-    }, [])
+        return JSON.stringify(formDataRef.current, null, 2);
+    }, []);
 
     return (
         <div className={styles.container}>

@@ -5,27 +5,27 @@ import { getFullUrl } from "@site/src/utils/url";
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext()
+    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext();
 
-    const editorRef = useRef<EditorPreviewRef>(null)
-    const initialScriptExecutedRef = useRef(!hasInitialScript)
-    const isApiReadyRef = useRef(false)
+    const editorRef = useRef<EditorPreviewRef>(null);
+    const initialScriptExecutedRef = useRef(!hasInitialScript);
+    const isApiReadyRef = useRef(false);
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
-            console.log('Please wait for editor to load...')
-            return
+            console.log('Please wait for editor to load...');
+            return;
         }
 
         try {
             switch (type) {
                 case 'office-js-api':
-                    window.connector.callCommand(new Function(code))
-                    break
+                    window.connector.callCommand(new Function(code));
+                    break;
                 case 'connector':
                     const connectorFn = new Function('connector', code);
                     connectorFn(window.connector);
-                    break
+                    break;
                 case 'plugin': {
                     window.connector.executeMethod('SetPluginsOptions', [
                         {
@@ -33,8 +33,8 @@ export const PlaygroundPreview = () => {
                                 codeExecute: code,
                             },
                         },
-                    ])
-                    break
+                    ]);
+                    break;
                 }
                 case 'builder': {
                     var removeMethod = {
@@ -49,16 +49,16 @@ export const PlaygroundPreview = () => {
                     break;
                 }
                 default:
-                    break
+                    break;
             }
         } catch (error) {
-            console.error('Error executing code:', error)
+            console.error('Error executing code:', error);
         }
-    }, [editorType])
+    }, [editorType]);
 
     const buildConfig = useCallback(() => {
-        const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS
-        const fileConfig = configs[editorType] || configs.word
+        const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
+        const fileConfig = configs[editorType] || configs.word;
 
         return {
             document: {
@@ -106,48 +106,48 @@ export const PlaygroundPreview = () => {
                         );
 
                         if (!initialScriptExecutedRef.current) {
-                            initialScriptExecutedRef.current = true
-                            executeCode(scriptValue, scriptType)
+                            initialScriptExecutedRef.current = true;
+                            executeCode(scriptValue, scriptType);
                         }
                     } catch (error) {
-                        console.error('Failed to initialize connector:', error)
+                        console.error('Failed to initialize connector:', error);
                     }
                 }
             }
         }
-    }, [editorType, theme, previewType, documentServerUrl, templateUrl, documentType, executeCode, scriptValue, scriptType])
+    }, [editorType, theme, previewType, documentServerUrl, templateUrl, documentType, executeCode, scriptValue, scriptType]);
 
     const initEditorWithConfig = useCallback(() => {
-        if (!isApiReadyRef.current || !editorRef.current) return
-        const config = buildConfig()
-        editorRef.current.initEditor(config)
-    }, [buildConfig])
+        if (!isApiReadyRef.current || !editorRef.current) return;
+        const config = buildConfig();
+        editorRef.current.initEditor(config);
+    }, [buildConfig]);
 
     const handleApiReady = useCallback(() => {
-        isApiReadyRef.current = true
-        initEditorWithConfig()
-    }, [initEditorWithConfig])
+        isApiReadyRef.current = true;
+        initEditorWithConfig();
+    }, [initEditorWithConfig]);
 
     useEffect(() => {
-        initEditorWithConfig()
-    }, [theme, previewType, editorType, initEditorWithConfig])
+        initEditorWithConfig();
+    }, [theme, previewType, editorType, initEditorWithConfig]);
 
     useEffect(() => {
         const handleRefresh = () => {
             if (window.connector && !!scriptValue.length) {
-                executeCode(scriptValue, scriptType)
+                executeCode(scriptValue, scriptType);
             }
-        }
+        };
 
-        window.addEventListener('playground-run', handleRefresh)
+        window.addEventListener('playground-run', handleRefresh);
 
-        return () => window.removeEventListener('playground-run', handleRefresh)
-    }, [scriptValue, scriptType, executeCode])
+        return () => window.removeEventListener('playground-run', handleRefresh);
+    }, [scriptValue, scriptType, executeCode]);
 
     return <EditorPreview
         ref={editorRef}
         documentServerUrl={documentServerUrl}
         documentServerSecret={documentServerSecret}
         onReady={handleApiReady}
-    />
+    />;
 }

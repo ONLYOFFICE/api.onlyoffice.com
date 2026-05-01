@@ -1,5 +1,5 @@
-import * as Popover from '@radix-ui/react-popover'
-import styles from './Tooltip.module.css'
+import * as Popover from '@radix-ui/react-popover';
+import styles from './Tooltip.module.css';
 
 export function Tooltip({ text }: { text: string }) {
     return (

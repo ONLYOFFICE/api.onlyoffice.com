@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import MonacoEditor, {OnMount} from '@monaco-editor/react'
+import MonacoEditor, {OnMount} from '@monaco-editor/react';
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundEditor.module.css';
 import {getFullUrl} from "@site/src/utils/url";
@@ -8,35 +8,35 @@ import PlayIcon from '@site/static/icons/icon-play.svg';
 import {useCallback} from "react";
 
 export const PlaygroundEditor = () => {
-    const {scriptValue, theme, editorType, scriptType, dispatch} = usePlaygroundRootContext()
+    const {scriptValue, theme, editorType, scriptType, dispatch} = usePlaygroundRootContext();
 
     const onChange = useCallback((newValue: string | undefined) => {
         if (newValue !== undefined) {
-            dispatch({type: 'SET_SCRIPT_VALUE', payload: newValue})
+            dispatch({type: 'SET_SCRIPT_VALUE', payload: newValue});
         }
-    }, [dispatch])
+    }, [dispatch]);
 
-    const apiUrl = getFullUrl(`/libs/${editorType}/api.js`)
+    const apiUrl = getFullUrl(`/libs/${editorType}/api.js`);
 
     const onMount: OnMount = (_, monaco) => {
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Failed to fetch ${apiUrl}: ${response.status}`)
+                    throw new Error(`Failed to fetch ${apiUrl}: ${response.status}`);
                 }
-                return response.text()
+                return response.text();
             })
             .then(libSource => {
-                monaco.languages.typescript.javascriptDefaults.addExtraLib(libSource)
+                monaco.languages.typescript.javascriptDefaults.addExtraLib(libSource);
             })
             .catch(error => {
-                console.error('Failed to load API library:', error)
-            })
-    }
+                console.error('Failed to load API library:', error);
+            });
+    };
 
     const handleRun = () => {
-        window.dispatchEvent(new Event('playground-run'))
-    }
+        window.dispatchEvent(new Event('playground-run'));
+    };
 
     return (
         <div className={styles.editorContainer}>

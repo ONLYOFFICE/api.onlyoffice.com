@@ -1,4 +1,4 @@
-import { JsonSchema } from '@jsonforms/core'
+import { JsonSchema } from '@jsonforms/core';
 
 enum FieldTypeCategory {
     PRIMITIVE = 100,
@@ -12,16 +12,16 @@ const ROOT_FIELD_ORDER: Record<string, number> = {
     'width': 3,
     'height': 4,
     'token': 5,
-}
+};
 
 function isPrimitiveType(schema: JsonSchema): boolean {
-    const type = schema.type
+    const type = schema.type;
     return (
         type === 'string' ||
         type === 'number' ||
         type === 'integer' ||
         type === 'boolean'
-    )
+    );
 }
 
 export function isComplexType(schema: JsonSchema): boolean {
@@ -39,14 +39,14 @@ export function isComplexType(schema: JsonSchema): boolean {
 
 function getFieldTypeCategory(schema: JsonSchema): FieldTypeCategory {
     if (isPrimitiveType(schema)) {
-        return FieldTypeCategory.PRIMITIVE
+        return FieldTypeCategory.PRIMITIVE;
     }
 
     if (isComplexType(schema)) {
-        return FieldTypeCategory.COMPLEX
+        return FieldTypeCategory.COMPLEX;
     }
 
-    return FieldTypeCategory.UNKNOWN
+    return FieldTypeCategory.UNKNOWN;
 }
 
 function getSortOrder(
@@ -55,9 +55,9 @@ function getSortOrder(
     schema?: JsonSchema
 ): number {
     if (!path) {
-        const customOrder = ROOT_FIELD_ORDER[fieldName]
+        const customOrder = ROOT_FIELD_ORDER[fieldName];
         if (customOrder !== undefined) {
-            return customOrder
+            return customOrder;
         }
     }
 
@@ -74,16 +74,16 @@ export function sortObjectKeys(
     properties?: Record<string, JsonSchema>
 ): string[] {
     return [...keys].sort((a, b) => {
-        const schemaA = properties?.[a]
-        const schemaB = properties?.[b]
+        const schemaA = properties?.[a];
+        const schemaB = properties?.[b];
 
-        const orderA = getSortOrder(a, path, schemaA)
-        const orderB = getSortOrder(b, path, schemaB)
+        const orderA = getSortOrder(a, path, schemaA);
+        const orderB = getSortOrder(b, path, schemaB);
 
         if (orderA !== orderB) {
-            return orderA - orderB
+            return orderA - orderB;
         }
 
-        return a.localeCompare(b)
-    })
+        return a.localeCompare(b);
+    });
 }

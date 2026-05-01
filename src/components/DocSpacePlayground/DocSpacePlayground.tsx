@@ -1,56 +1,56 @@
-'use client'
+'use client';
 
-import {useState, useEffect, useRef, useCallback, lazy, Suspense} from 'react'
-import * as Select from '@radix-ui/react-select'
-import * as Tabs from '@radix-ui/react-tabs'
-import {Panel, PanelGroup, PanelResizeHandle} from 'react-resizable-panels'
-import {useColorMode} from '@docusaurus/theme-common'
-import {type DocSpaceMode, DEFAULT_SCRIPTS, MODE_LABELS} from './codeSnippets'
-import {DocSpacePreview, type DocSpacePreviewHandle} from './DocSpacePreview'
-import styles from './DocSpacePlayground.module.css'
+import {useState, useEffect, useRef, useCallback, lazy, Suspense} from 'react';
+import * as Select from '@radix-ui/react-select';
+import * as Tabs from '@radix-ui/react-tabs';
+import {Panel, PanelGroup, PanelResizeHandle} from 'react-resizable-panels';
+import {useColorMode} from '@docusaurus/theme-common';
+import {type DocSpaceMode, DEFAULT_SCRIPTS, MODE_LABELS} from './codeSnippets';
+import {DocSpacePreview, type DocSpacePreviewHandle} from './DocSpacePreview';
+import styles from './DocSpacePlayground.module.css';
 
 const DocSpaceEditor = lazy(() =>
     import('./DocSpaceEditor').then(m => ({default: m.DocSpaceEditor}))
-)
+);
 
 interface DocSpacePlaygroundProps {
-    initialMode?: DocSpaceMode
+    initialMode?: DocSpaceMode;
 }
 
 export const DocSpacePlayground = ({initialMode = 'manager'}: DocSpacePlaygroundProps) => {
-    const [mode, setMode] = useState<DocSpaceMode>(initialMode)
-    const [script, setScript] = useState(DEFAULT_SCRIPTS[initialMode])
-    const {colorMode, setColorMode} = useColorMode()
-    const previewRef = useRef<DocSpacePreviewHandle>(null)
+    const [mode, setMode] = useState<DocSpaceMode>(initialMode);
+    const [script, setScript] = useState(DEFAULT_SCRIPTS[initialMode]);
+    const {colorMode, setColorMode} = useColorMode();
+    const previewRef = useRef<DocSpacePreviewHandle>(null);
 
     // Auto-run on initial mount
-    const hasRun = useRef(false)
+    const hasRun = useRef(false);
     useEffect(() => {
         if (!hasRun.current) {
-            hasRun.current = true
-            previewRef.current?.runScript(script)
+            hasRun.current = true;
+            previewRef.current?.runScript(script);
         }
-    }, [])
+    }, []);
 
     // Re-run script when theme changes
-    const prevTheme = useRef(colorMode)
+    const prevTheme = useRef(colorMode);
     useEffect(() => {
         if (prevTheme.current !== colorMode) {
-            prevTheme.current = colorMode
-            previewRef.current?.runScript(script)
+            prevTheme.current = colorMode;
+            previewRef.current?.runScript(script);
         }
-    }, [colorMode])
+    }, [colorMode]);
 
     const handleModeChange = useCallback((newMode: DocSpaceMode) => {
-        setMode(newMode)
-        const newScript = DEFAULT_SCRIPTS[newMode]
-        setScript(newScript)
-        previewRef.current?.runScript(newScript)
-    }, [])
+        setMode(newMode);
+        const newScript = DEFAULT_SCRIPTS[newMode];
+        setScript(newScript);
+        previewRef.current?.runScript(newScript);
+    }, []);
 
     const handleRun = useCallback(() => {
-        previewRef.current?.runScript(script)
-    }, [script])
+        previewRef.current?.runScript(script);
+    }, [script]);
 
     return (
         <div className={styles.container}>
@@ -72,16 +72,16 @@ export const DocSpacePlayground = ({initialMode = 'manager'}: DocSpacePlayground
                 theme={colorMode}
             />
         </div>
-    )
-}
+    );
+};
 
 // ── Toolbar ─────────────────────────────────────────────────────
 
 interface ToolbarProps {
-    mode: DocSpaceMode
-    onModeChange: (mode: DocSpaceMode) => void
-    theme: string
-    onThemeChange: (theme: 'light' | 'dark') => void
+    mode: DocSpaceMode;
+    onModeChange: (mode: DocSpaceMode) => void;
+    theme: string;
+    onThemeChange: (theme: 'light' | 'dark') => void;
 }
 
 const Toolbar = ({mode, onModeChange, theme, onThemeChange}: ToolbarProps) => (
@@ -133,21 +133,21 @@ const Toolbar = ({mode, onModeChange, theme, onThemeChange}: ToolbarProps) => (
             </Select.Root>
         </div>
     </div>
-)
+);
 
 // ── Content (split layout) ──────────────────────────────────────
 
 interface ContentProps {
-    script: string
-    onScriptChange: (value: string) => void
-    onRun: () => void
-    previewRef: React.RefObject<DocSpacePreviewHandle | null>
-    mode: DocSpaceMode
-    theme: 'light' | 'dark'
+    script: string;
+    onScriptChange: (value: string) => void;
+    onRun: () => void;
+    previewRef: React.RefObject<DocSpacePreviewHandle | null>;
+    mode: DocSpaceMode;
+    theme: 'light' | 'dark';
 }
 
 const Content = ({script, onScriptChange, onRun, previewRef, mode, theme}: ContentProps) => {
-    const isMobile = useIsMobile()
+    const isMobile = useIsMobile();
 
     if (isMobile) {
         return (
@@ -169,7 +169,7 @@ const Content = ({script, onScriptChange, onRun, previewRef, mode, theme}: Conte
                     <DocSpacePreview ref={previewRef} mode={mode} theme={theme} autoInit={false} className={styles.preview}/>
                 </Tabs.Content>
             </Tabs.Root>
-        )
+        );
     }
 
     return (
@@ -205,19 +205,19 @@ const Content = ({script, onScriptChange, onRun, previewRef, mode, theme}: Conte
                 <DocSpacePreview ref={previewRef} mode={mode} theme={theme} autoInit={false} className={styles.preview}/>
             </Panel>
         </PanelGroup>
-    )
-}
+    );
+};
 
 // ── Helpers ─────────────────────────────────────────────────────
 
 function useIsMobile(query = '(max-width: 767px)') {
-    const [matches, setMatches] = useState(false)
+    const [matches, setMatches] = useState(false);
     useEffect(() => {
-        const mql = window.matchMedia(query)
-        setMatches(mql.matches)
-        const handler = (e: MediaQueryListEvent) => setMatches(e.matches)
-        mql.addEventListener('change', handler)
-        return () => mql.removeEventListener('change', handler)
-    }, [query])
-    return matches
+        const mql = window.matchMedia(query);
+        setMatches(mql.matches);
+        const handler = (e: MediaQueryListEvent) => setMatches(e.matches);
+        mql.addEventListener('change', handler);
+        return () => mql.removeEventListener('change', handler);
+    }, [query]);
+    return matches;
 }

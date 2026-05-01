@@ -1,17 +1,17 @@
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 import type { FC, ReactNode } from "react";
-import GithubIcon from '@site/static/icons/github-icon.svg'
+import GithubIcon from '@site/static/icons/github-icon.svg';
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import Heading from "@theme/Heading";
 
 export namespace FeaturePageTemplate {
   export type Props = {
-    title: string
-    description: string | ReactNode
-    links: ReactNode[]
-    linkPrefix: string
-    items: FeaturesGrid.Item[]
-  }
+    title: string;
+    description: string | ReactNode;
+    links: ReactNode[];
+    linkPrefix: string;
+    items: FeaturesGrid.Item[];
+  };
 }
 
 export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({ title, description, linkPrefix, links, items}) => {
@@ -36,5 +36,5 @@ export const FeaturePageTemplate: FC<FeaturePageTemplate.Props> = ({ title, desc
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

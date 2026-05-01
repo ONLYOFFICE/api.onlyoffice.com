@@ -1,9 +1,9 @@
-import { useCallback, useMemo, useRef } from "react"
-import { usePlaygroundRootContext } from "../root/PlaygroundRootContext"
-import { ConfigEditor } from "@site/src/components/ConfigEditor"
-import { EditorPreview, type EditorPreviewRef } from "@site/src/components/EditorPreview"
-import { SplitPane } from "@site/src/components/SplitPane"
-import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts"
+import { useCallback, useMemo, useRef } from "react";
+import { usePlaygroundRootContext } from "../root/PlaygroundRootContext";
+import { ConfigEditor } from "@site/src/components/ConfigEditor";
+import { EditorPreview, type EditorPreviewRef } from "@site/src/components/EditorPreview";
+import { SplitPane } from "@site/src/components/SplitPane";
+import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export function PlaygroundConfigMode() {
     const {
@@ -15,11 +15,11 @@ export function PlaygroundConfigMode() {
         documentServerSecret,
     } = usePlaygroundRootContext()
 
-    const editorRef = useRef<EditorPreviewRef>(null)
-    const latestConfigRef = useRef<Record<string, any> | null>(null)
+    const editorRef = useRef<EditorPreviewRef>(null);
+    const latestConfigRef = useRef<Record<string, any> | null>(null);
 
-    const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS
-    const fileConfig = configs[editorType] || configs.word
+    const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
+    const fileConfig = configs[editorType] || configs.word;
 
     const defaultConfig = useMemo<Record<string, unknown>>(() => ({
         documentType: fileConfig.docType,
@@ -39,18 +39,18 @@ export function PlaygroundConfigMode() {
             },
             lang: 'en',
         },
-    }), [documentServerUrl, theme, fileConfig, previewType])
+    }), [documentServerUrl, theme, fileConfig, previewType]);
 
     const handleApply = useCallback((config: Record<string, unknown>) => {
-        latestConfigRef.current = config
-        editorRef.current?.initEditor(config)
-    }, [])
+        latestConfigRef.current = config;
+        editorRef.current?.initEditor(config);
+    }, []);
 
     const handlePreviewReady = useCallback(() => {
         if (latestConfigRef.current) {
-            editorRef.current?.initEditor(latestConfigRef.current)
+            editorRef.current?.initEditor(latestConfigRef.current);
         }
-    }, [])
+    }, []);
 
     return (
         <SplitPane
