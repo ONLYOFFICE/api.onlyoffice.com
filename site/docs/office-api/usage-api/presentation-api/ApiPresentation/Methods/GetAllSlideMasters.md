@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all slide masters from current presentation.
+Get all slide masters from current presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I get all slide masters in a presentation?
+
+// Get all slide masters using a presentation object.
+
 const presentation = Api.GetPresentation();
 const firstSlide = presentation.GetSlideByIndex(0);
 firstSlide.RemoveAllObjects();
@@ -43,5 +47,4 @@ firstSlide.AddObject(shape);
 
 const paragraph =  shape.GetContent().GetElement(0);
 paragraph.AddText('Total slide masters count: ' + mastersCount);
-
 ```

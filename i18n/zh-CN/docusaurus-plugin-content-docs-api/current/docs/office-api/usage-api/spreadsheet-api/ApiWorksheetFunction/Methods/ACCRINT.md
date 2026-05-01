@@ -29,12 +29,12 @@ number
 
 ## 示例
 
-此示例演示如何返回定期付息证券的应计利息。
+在电子表格中返回定期付息证券的应计利息。
 
 ```javascript editor-xlsx
-// How to get an accrued interest for a security that pays periodic interest.
+// How to get an accrued interest for a security that pays periodic interest in a spreadsheet.
 
-// Get a function that gets accrued interest for a security.
+// Get a function that gets accrued interest for a security in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

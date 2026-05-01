@@ -22,9 +22,13 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-此示例演示如何更新自定义 XML 节点中属性的值。
+更新文档中自定义 XML 节点的属性值。
 
 ```javascript editor-docx
+// How can I get the nodes using a custom XML part in a document?
+
+// Get the nodes for a custom XML part in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

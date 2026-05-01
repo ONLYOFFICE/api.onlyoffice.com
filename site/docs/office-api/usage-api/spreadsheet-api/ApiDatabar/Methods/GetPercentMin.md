@@ -20,10 +20,10 @@ number
 
 ## Example
 
-This example demonstrates getting the minimum percentage length from a data bar conditional formatting rule.
+Get the minimum percentage length from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to check the minimum length setting of a data bar.
+// How to check the minimum length setting of a data bar in a spreadsheet.
 
 // Get the minimum percentage length of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let percentMin = dataBar.GetPercentMin();
 
 worksheet.GetRange("C1").SetValue("Min Percent:");
 worksheet.GetRange("C2").SetValue(percentMin + "%");
-
 ```

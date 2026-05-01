@@ -25,9 +25,13 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-此示例展示如何创建 RGBA 颜色并将其用作形状填充。
+在演示文稿中创建 RGBA 颜色并将其用作形状填充。
 
 ```javascript editor-pptx
+// How do I r g b an in a presentation?
+
+// R g b an and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

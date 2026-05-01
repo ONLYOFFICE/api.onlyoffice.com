@@ -2,33 +2,16 @@
 
 设置当前表格中当前表格行的高度。
 
-## 语法
-
-```javascript
-expression.SetHeight(sHRule, nValue);
-```
-
-`expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sHRule | 必需 | "auto" \| "atLeast" |  | 将高度值应用于当前表格行或忽略它的规则。使用 &lt;code&gt;"atLeast"&lt;/code&gt; 值以启用 &lt;code&gt;SetHeight&lt;/code&gt; 方法。 |
-| nValue | 可选 | [twips](../../Enumeration/twips.md) |  | 当前表格行的高度，以点的二十分之一为单位（1/1440 英寸）。如果 &lt;code&gt;sHRule="auto"&lt;code&gt;，此值将被忽略。 |
-
-## 返回值
-
-boolean
+继承自 [ApiTableRowPr.SetHeight](../../ApiTableRowPr/Methods/SetHeight.md)。
 
 ## 示例
 
-此示例设置表格中当前表格行的高度。
+设置文档中表格内当前表格行的高度。
 
 ```javascript editor-docx
-// Resize the height of the row.
+// Resize the height of the row in a document.
 
-// How to set a minimum row height of the table.
+// How to set a minimum row height of the table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

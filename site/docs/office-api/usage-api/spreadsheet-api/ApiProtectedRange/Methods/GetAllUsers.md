@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all users of a protected range.
+Get all users of a protected range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an array of users of a protected range.
+// How to get an array of users of a protected range in a spreadsheet.
 
-// Get an active sheet, add protected range to it and diplay its first user. 
+// Get an active sheet, add protected range to it and diplay its first user in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

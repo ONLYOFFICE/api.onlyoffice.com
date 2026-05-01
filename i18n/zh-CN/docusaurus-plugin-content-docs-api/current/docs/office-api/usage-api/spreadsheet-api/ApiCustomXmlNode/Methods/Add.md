@@ -22,12 +22,12 @@ expression.Add(nodeName);
 
 ## 示例
 
-此示例演示如何创建新子节点并将其作为当前 XML 节点的子节点插入。
+在电子表格中创建新子节点并将其作为当前 XML 节点的子节点插入。
 
 ```javascript editor-xlsx
-// How to add a child node to an XML node.
+// How to add a child node to an XML node in a spreadsheet.
 
-// Add a new child node.
+// Add a new child node using the custom XML node API in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

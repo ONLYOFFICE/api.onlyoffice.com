@@ -2,30 +2,14 @@
 
 Sets the border color to the current form.
 
-## Syntax
-
-```javascript
-expression.SetBorderColor(color);
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Optional | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | The border color. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
 ## Example
 
-This example sets the border color to the form.
+Set the border color to the form.
 
 ```javascript editor-forms
-// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+// Apply an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
 
 // Define the border color of the date form.
 

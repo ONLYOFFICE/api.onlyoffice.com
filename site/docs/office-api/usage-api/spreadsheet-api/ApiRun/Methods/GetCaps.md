@@ -2,30 +2,16 @@
 
 Returns whether the text with the current text properties are capitalized.
 
-## Syntax
-
-```javascript
-expression.GetCaps();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md).
 
 ## Example
 
-This example gets a text capitalization using its property.
+Get a text capitalization using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is capitalized or not.
+// How to find out whether a text is capitalized or not in a spreadsheet.
 
-// Get a text capitalized property.
+// Get a text capitalized property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

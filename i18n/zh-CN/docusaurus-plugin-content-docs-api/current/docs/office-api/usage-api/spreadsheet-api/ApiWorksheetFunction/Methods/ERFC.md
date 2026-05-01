@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回在指定下界和无穷大之间积分的补余误差函数。
+在电子表格中返回在指定下限和无穷大之间积分的互补误差函数。
 
 ```javascript editor-xlsx
-// How to get the complementary error function (from lower limit and infinity).
+// How to get the complementary error function (from lower limit and infinity) in a spreadsheet.
 
-// Use function to get a complementary error function set between the specified lower limit and infinity.
+// Use function to get a complementary error function set between the specified lower limit and infinity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

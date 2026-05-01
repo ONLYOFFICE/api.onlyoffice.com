@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # Mattermost 集成
 
-该[应用](https://github.com/ONLYOFFICE/onlyoffice-mattermost)允许用户借助ONLYOFFICE文档在[Mattermost](https://mattermost.com/)中编辑办公文档。
+该[应用](https://github.com/ONLYOFFICE/onlyoffice-mattermost)允许用户借助ONLYOFFICE 文档在[Mattermost](https://mattermost.com/)中编辑办公文档。
 
 ## 功能特性
 
@@ -13,17 +13,17 @@ sidebar_custom_props:
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 该应用会在文档库中为办公文档创建一个新的**在ONLYOFFICE中打开**菜单项。这使得多个用户能够实时协作，并将更改保存回Mattermost。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要有一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Mattermost和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Mattermost发送POST请求。
+您需要有一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Mattermost和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Mattermost发送POST请求。
 
-ONLYOFFICE文档和Mattermost可以安装在不同的计算机上，也可以安装在同一台机器上。如果使用同一台机器，需要为ONLYOFFICE文档设置一个自定义端口。
+ONLYOFFICE 文档和Mattermost可以安装在不同的计算机上，也可以安装在同一台机器上。如果使用同一台机器，需要为ONLYOFFICE 文档设置一个自定义端口。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装 Mattermost ONLYOFFICE 应用
 
-要在Mattermost中使用ONLYOFFICE文档，请按照以下步骤操作：
+要在Mattermost中使用ONLYOFFICE 文档，请按照以下步骤操作：
 
 1. 安装Node.js。[查看说明](https://github.com/nodesource/distributions#installation-instructions)
 2. 安装Go。[查看说明](https://go.dev/doc/install)
@@ -52,21 +52,21 @@ ONLYOFFICE文档和Mattermost可以安装在不同的计算机上，也可以安
 
 作为Mattermost管理员，通过**系统控制台**配置该应用。进入**应用市场**，找到**ONLYOFFICE**应用，然后点击**配置**。
 
-- **ONLYOFFICE文档地址**：要连接ONLYOFFICE文档，请输入以下地址：
+- **ONLYOFFICE 文档地址**：要连接ONLYOFFICE 文档，请输入以下地址：
 
   ``` sh
   https://<documentserver>:<port>/
   ```
 
-  其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称，**port**是其端口号。该地址必须能被用户浏览器和Mattermost服务器访问。Mattermost服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址可以在云控制台的**实例**部分找到。
+  其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称，**port**是其端口号。该地址必须能被用户浏览器和Mattermost服务器访问。Mattermost服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些地址可以在云控制台的**实例**部分找到。
 
-- **文档服务器JWT密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在应用配置中指定您自己的密钥。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+- **文档服务器JWT密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在应用配置中指定您自己的密钥。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
-- **JWT标头**：如果启用了JWT保护，由于Mattermost安全策略会阻止外部的**Authorization**标头，因此需要指定一个自定义标头名称。该标头也应在ONLYOFFICE文档的签名设置中指定。有关签名的更多信息，请参见[此处](../../additional-api/signature/signature.md)。
+- **JWT标头**：如果启用了JWT保护，由于Mattermost安全策略会阻止外部的**Authorization**标头，因此需要指定一个自定义标头名称。该标头也应在ONLYOFFICE 文档的签名设置中指定。有关签名的更多信息，请参见[此处](../../additional-api/signature/signature.md)。
 
-- **JWT前缀**：指定ONLYOFFICE文档的前缀。
+- **JWT前缀**：指定ONLYOFFICE 文档的前缀。
 
-您还可以通过勾选相应复选框，连接到ONLYOFFICE文档的公共测试服务器（有效期一个月）。
+您还可以通过勾选相应复选框，连接到ONLYOFFICE 文档的公共测试服务器（有效期一个月）。
 
 ## 使用 Mattermost ONLYOFFICE 应用
 

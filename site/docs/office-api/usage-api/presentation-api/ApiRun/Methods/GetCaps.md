@@ -2,30 +2,16 @@
 
 Returns whether the text with the current text properties are capitalized.
 
-## Syntax
-
-```javascript
-expression.GetCaps();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md).
 
 ## Example
 
-This example shows how to find out whether a text is capitalized.
+Find out whether a text is capitalized in a presentation.
 
 ```javascript editor-pptx
-// How to know whether the text letters are uppercase or not.
+// How to know whether the text letters are uppercase or not in a presentation.
 
-// Get the text properties of the run and find whether it is capitalized or not.
+// Get the text properties of the run and find whether it is capitalized or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +37,4 @@ paragraph = Api.CreateParagraph();
 const caps = textPr.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 docContent.Push(paragraph);
-
 ```

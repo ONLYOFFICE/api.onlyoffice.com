@@ -22,12 +22,12 @@ expression.SetColumnGrand(show);
 
 ## 示例
 
-此示例展示如何获取列总计。
+获取电子表格中的列总计。
 
 ```javascript editor-xlsx
-// How to select a column grand of a table.
+// How to select a column grand of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then get its column grand.
+// Create a pivot table, add data to it then get its column grand in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

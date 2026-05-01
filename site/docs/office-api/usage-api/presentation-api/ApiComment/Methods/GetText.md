@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get text of a comment.
+Get text of a comment in a presentation.
 
 ```javascript editor-pptx
-// How to get a raw text of a comment.
+// How to get a raw text of a comment in a presentation.
 
 // Get all comments from the presentation and the first one's text.
 
@@ -47,5 +47,4 @@ const text = arrComments[0].GetText();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's text: " + text);
-
 ```

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a chart type of a chart.
+How to get a chart type of a chart in a PDF document.
 
 ```javascript editor-pdf
+// How to get the chart type for a chart in a PDF document?
+
+// Get the chart type and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ const chartType = chart.GetChartType();
 chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 page.AddObject(chart);
-
 ```

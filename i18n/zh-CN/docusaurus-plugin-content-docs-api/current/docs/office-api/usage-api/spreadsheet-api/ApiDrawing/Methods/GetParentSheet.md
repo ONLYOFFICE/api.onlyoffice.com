@@ -20,10 +20,10 @@ expression.GetParentSheet();
 
 ## 示例
 
-此示例演示如何获取绘图的父工作表。
+演示获取电子表格中绘图对象的父工作表。
 
 ```javascript editor-xlsx
-// How to know a parent sheet of a shape.
+// How to know a parent sheet of a shape in a spreadsheet.
 
 // Get a shape's parent sheet and display it in the worksheet.
 

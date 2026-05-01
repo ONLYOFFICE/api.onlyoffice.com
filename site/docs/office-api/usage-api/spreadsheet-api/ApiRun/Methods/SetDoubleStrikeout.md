@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
+Specify that the contents of the current run are displayed with two horizontal lines through each character displayed on the line in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to strikethrough a text with two lines.
+// How to strikethrough a text with two lines in a spreadsheet.
 
-// Create a text run object, double cross out it.
+// Create a text run object, double cross out it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

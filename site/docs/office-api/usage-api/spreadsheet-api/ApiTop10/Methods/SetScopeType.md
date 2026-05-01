@@ -2,27 +2,11 @@
 
 Sets the scope type for the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.SetScopeType(ScopeType);
-```
-
-`expression` - A variable that represents a [ApiTop10](../ApiTop10.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| ScopeType | Required | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | The scope type: "xlSelectionScope", "xlDataFieldScope", or "xlFieldsScope". |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md).
 
 ## Example
 
-This example sets the scope type of a conditional formatting rule.
+Set the scope type of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to change the scope type of conditional formatting rules.
@@ -52,5 +36,4 @@ condition1.SetScopeType("xlDataFieldScope");
 
 worksheet.GetRange("C4").SetValue("New scope:");
 worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
-
 ```

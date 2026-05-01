@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查文本字段是否为具有相同单元格宽度的字符梳。
+检查文本字段是否为具有相同单元格宽度的字符梳。
 
 ```javascript editor-forms
 // How to know whether the first text form from this document is comb.

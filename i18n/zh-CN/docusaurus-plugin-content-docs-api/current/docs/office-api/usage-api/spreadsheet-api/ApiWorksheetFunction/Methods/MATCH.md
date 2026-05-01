@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回区域中按指定顺序与指定值匹配的项目的相对位置。
+在电子表格中按指定顺序返回范围内与指定值匹配的项的相对位置。
 
 ```javascript editor-xlsx
-// How to get an index of an element that matches a condition.
+// How to get an index of an element that matches a condition in a spreadsheet.
 
-// Use a function to find an item in a range.
+// Use a function to find an item in a range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

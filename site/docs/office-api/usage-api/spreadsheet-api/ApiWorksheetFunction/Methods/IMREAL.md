@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the real coefficient of a complex number.
+Return the real coefficient of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the real coefficient.
+// How to get the real coefficient in a spreadsheet.
 
-// Use a function to get the real coefficient of a complex number.
+// Use a function to get the real coefficient of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

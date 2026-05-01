@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example removes an element using the position specified.
+Remove an element using the position specified in a PDF document.
 
 ```javascript editor-pdf
-// How to remove an element from the paragraph using its position index.
+// How to remove an element from the paragraph using its position index in a PDF document.
 
-// Delete an element from the paragraph.
+// Delete an element from the paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -70,5 +70,4 @@ paragraph.AddElement(run);
 paragraph.RemoveElement(3);
 
 page.AddObject(shape);
-
 ```

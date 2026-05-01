@@ -2,29 +2,17 @@
 
 Sets field toggle to off prop.
 
-## Syntax
-
-```javascript
-expression.SetToggleToOff(bToggle);
-```
-
-`expression` - A variable that represents a [ApiRadiobuttonField](../ApiRadiobuttonField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bToggle | Required | boolean |  | can toggle to off |
-
-## Returns
-
-boolean
+Inherited from [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md).
 
 ## Example
 
-This example sets toggle to off property for checkbox field.
+Set toggle to off property for checkbox field in a PDF document.
 
 ```javascript editor-pdf
+// How can I set toggle to off using a checkbox field in a PDF document?
+
+// Set toggle to off for a checkbox field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

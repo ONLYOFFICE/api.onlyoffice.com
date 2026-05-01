@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example copies rich paragraph.
+Copy rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How can I copy using a rich paragraph in a PDF document?
+
+// Copy for a rich paragraph in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

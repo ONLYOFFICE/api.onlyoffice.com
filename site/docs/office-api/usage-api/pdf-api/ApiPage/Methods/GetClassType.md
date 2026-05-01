@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets page object class type and displays it in text field.
+Find out the class type of a page object.
 
 ```javascript editor-pdf
+// How can I get the class type of a page?
+
+// Get the class type of a page and display it in the PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);

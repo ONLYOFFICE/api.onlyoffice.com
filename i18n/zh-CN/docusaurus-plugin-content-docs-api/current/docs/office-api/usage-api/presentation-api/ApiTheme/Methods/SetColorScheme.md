@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例为当前演示文稿主题设置配色方案。
+为当前演示文稿主题设置配色方案。
 
 ```javascript editor-pptx
-// How to get a theme and set a new color scheme.
+// How to get a theme and set a new color scheme in a presentation.
 
 // Create a new color scheme and apply it to the slide theme.
 
@@ -55,5 +55,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

@@ -20,9 +20,13 @@ expression.GetDropdownList();
 
 ## 示例
 
-此示例从内容控件中检索下拉列表。
+获取文档中内容控件的下拉列表。
 
 ```javascript editor-docx
+// How do I get the dropdown list in a document?
+
+// Get the dropdown list using an inline content control object in a document.
+
 let doc = Api.GetDocument();
 let cc = Api.CreateDropDownListContentControl([{display: 'one', value: '1'}, {display: 'two', value: '2'}], 1);
 let paragraph = Api.CreateParagraph();

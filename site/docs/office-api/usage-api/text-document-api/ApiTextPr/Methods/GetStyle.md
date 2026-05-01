@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example finds out whether a text has the properties set.
+Find out whether a text has the properties set in a document.
 
 ```javascript editor-docx
-// How to know whether a text's style is changed or not.
+// How to know whether a text's style is changed or not in a document.
 
 // Retrieve text properties of the form and display its style name.
 

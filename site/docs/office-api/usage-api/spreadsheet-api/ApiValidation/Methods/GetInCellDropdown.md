@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example gets whether a dropdown list is displayed.
+Get whether a dropdown list is displayed in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check if validation displays a dropdown list.
+// How to check if validation displays a dropdown list in a spreadsheet.
 
 // Get the InCellDropdown setting.
 
@@ -33,5 +33,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateList", null, null, "Apple,Banana,Cherry");
 let hasDropdown = validation.GetInCellDropdown();
 worksheet.GetRange("B1").SetValue("Has dropdown: " + hasDropdown);
-
 ```

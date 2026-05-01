@@ -20,10 +20,12 @@ expression.GetPageMarginLeft();
 
 ## 示例
 
-此示例指定此节中所有页面的页边距并返回它们。
+指定此节中所有页面的页边距并返回。
 
 ```javascript editor-docx
 // How to get left page margin.
+
+// Use section to get the page margin left.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例添加文本字段并为其设置字符限制。
+在 PDF 文档中添加文本字段并设置字符限制。
 
 ```javascript editor-pdf
+// How to set char limit for a text field in a PDF document?
+
+// Set char limit and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -33,5 +37,4 @@ page.AddObject(textField);
 
 textField.SetCharLimit(20);
 textField.SetValue('Char limit is: ' + textField.GetCharLimit());
-
 ```

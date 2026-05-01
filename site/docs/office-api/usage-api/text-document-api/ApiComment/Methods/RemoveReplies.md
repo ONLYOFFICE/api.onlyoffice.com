@@ -24,10 +24,10 @@ expression.RemoveReplies(nPos, nCount, bRemoveAll);
 
 ## Example
 
-This example removes the specified comment replies.
+Remove the specified comment replies in a document.
 
 ```javascript editor-docx
-// How to delete specified comment reply.
+// How to delete specified comment reply in a document.
 
 // Get all comments from the presentation and remove a reply from the first one's.
 

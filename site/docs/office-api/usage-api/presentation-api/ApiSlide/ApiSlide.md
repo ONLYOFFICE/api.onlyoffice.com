@@ -2,7 +2,6 @@
 
 Represents the ApiSlide class.
 
-
 ## Methods
 
 | Method | Returns | Description |

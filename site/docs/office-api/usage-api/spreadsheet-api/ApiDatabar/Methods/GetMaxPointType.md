@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the maximum point type from a data bar conditional formatting rule.
+Get the maximum point type from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to check the type of the maximum condition value.
+// How to check the type of the maximum condition value in a spreadsheet.
 
 // Get the maximum point type of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let maxPointType = dataBar.GetMaxPointType();
 
 worksheet.GetRange("C1").SetValue("Max Point Type:");
 worksheet.GetRange("C2").SetValue(maxPointType);
-
 ```

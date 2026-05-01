@@ -22,9 +22,13 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example sets all characters in the paragraph to display as capitals.
+Set all characters in the paragraph to display as capitals in a PDF document.
 
 ```javascript editor-pdf
+// How to set caps for a paragraph in a PDF document?
+
+// Set caps and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to capitalized letters.');
 paragraph.SetCaps(true);
 page.AddObject(shape);
-
 ```

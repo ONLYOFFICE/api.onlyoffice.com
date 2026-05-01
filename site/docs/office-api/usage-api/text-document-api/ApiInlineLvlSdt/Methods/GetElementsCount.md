@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the inline text content control.
+Get a number of elements in the inline text content control in a document.
 
 ```javascript editor-docx
-// How to get the number of elements of the inline control.
+// How to get the number of elements of the inline control in a document.
 
-// Create an inline text content control and show its elements count.
+// Create an inline text content control and show its elements count in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

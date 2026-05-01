@@ -2,25 +2,11 @@
 
 检查当前表单是否为固定大小。
 
-## 语法
-
-```javascript
-expression.IsFixed();
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md)。
 
 ## 示例
 
-此示例检查当前表单是否为固定大小。
+检查当前表单是否为固定大小。
 
 ```javascript editor-docx
 // How to know whether a text form is fixed or not.

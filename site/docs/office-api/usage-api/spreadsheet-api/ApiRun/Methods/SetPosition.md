@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## Example
 
-This example specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
+Specify an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set an inline position of a text.
+// How to set an inline position of a text in a spreadsheet.
 
-// Create a text run object, specify its position to move down or up.
+// Create a text run object, specify its position to move down or up in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

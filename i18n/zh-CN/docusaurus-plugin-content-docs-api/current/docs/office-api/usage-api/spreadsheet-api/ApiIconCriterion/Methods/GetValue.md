@@ -20,12 +20,12 @@ string \| number \| null
 
 ## 示例
 
-此示例演示如何获取图标条件的值。
+获取电子表格中图标条件的值。
 
 ```javascript editor-xlsx
-// How to retrieve the threshold value from an icon set criterion.
+// How to retrieve the threshold value from an icon set criterion in a spreadsheet.
 
-// Get the value used for criterion threshold comparison.
+// Get the value used for criterion threshold comparison in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let secondCriterion = criteria[1];
 let criterionValue = secondCriterion.GetValue();
 
 worksheet.GetRange("B1").SetValue("Second criterion value: " + criterionValue);
-
 ```

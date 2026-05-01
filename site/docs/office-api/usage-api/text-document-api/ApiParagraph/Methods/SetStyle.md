@@ -3,32 +3,16 @@
 The paragraph style base method.
 💡 This method is not used by itself, as it only forms the basis for the [ApiParagraph#SetStyle](../../ApiParagraph/Methods/SetStyle.md) method which sets the selected or created style for the paragraph.
 
-## Syntax
-
-```javascript
-expression.SetStyle(oStyle);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStyle | Required | [ApiStyle](../../ApiStyle/ApiStyle.md) |  | The style of the paragraph to be set. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetStyle](../../ApiParaPr/Methods/SetStyle.md).
 
 ## Example
 
-This example sets a style for the paragraph.
+Set a style for the paragraph in a document.
 
 ```javascript editor-docx
-// Set the style of the paragraph to "Heading 6".
+// Set the style of the paragraph to "Heading 6" in a document.
 
-// Create a text in a paragraph styled with the 'Heading 6' style.
+// Create a text in a paragraph styled with the 'Heading 6' style in a document.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");

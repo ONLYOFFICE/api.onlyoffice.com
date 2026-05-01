@@ -2,30 +2,16 @@
 
 Gets the highlight property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetHighlight();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTextPr.GetHighlight](../../ApiTextPr/Methods/GetHighlight.md).
 
 ## Example
 
-This example shows how to find out whether a text is highlighted.
+Find out whether a text is highlighted in a PDF document.
 
 ```javascript editor-pdf
-// How to know whether a highlight set to the text.
+// How to know whether a highlight set to the text in a PDF document.
 
-// Get the text properties of the run and find whether it is highlighted or not.
+// Get the text properties of the run and find whether it is highlighted or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const highlight = textPr.GetHighlight();
 paragraph.AddText("Highlight property: " + highlight);
 docContent.Push(paragraph);
-
 ```

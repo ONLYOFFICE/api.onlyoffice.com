@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-This example adds a caption paragraph after the current table.
+Add a caption paragraph after the current table in a document.
 
 ```javascript editor-docx
-// How to add caption to the table.
+// How to add caption to the table in a document.
 
-// Add text as a table caption specifying its properties.
+// Add text as a table caption specifying its properties in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

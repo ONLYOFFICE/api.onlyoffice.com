@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert lines to points.
+Convert lines to points in a PDF document.
 
 ```javascript editor-pdf
+// How can I convert lines to points in a PDF document?
+
+// Convert lines to points in a PDF document.
+
 const lines = 100;
 const points = Api.LinesToPoints(lines);
 
@@ -38,5 +42,4 @@ paragraph.AddText(lines + ' lines are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

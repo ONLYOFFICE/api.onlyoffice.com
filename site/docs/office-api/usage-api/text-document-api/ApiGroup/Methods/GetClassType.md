@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Find out the class type of a group object in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiGroup.
+// How can I get the class type of a group in a document?
 
-// Retrieve class type of ApiGroup object and insert it to the document.
+// Get the class type of a group and display it in the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -49,5 +49,4 @@ let docContent2 = shape2.GetContent();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent2.AddElement(0, paragraph);
-
 ```

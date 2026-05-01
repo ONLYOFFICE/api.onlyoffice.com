@@ -24,9 +24,13 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 ## 示例
 
-此示例为复选框字段组添加选项。
+在 PDF 文档中为复选框字段组添加选项。
 
 ```javascript editor-pdf
+// How do I add the option in a PDF document?
+
+// Add the option using a checkbox field object in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

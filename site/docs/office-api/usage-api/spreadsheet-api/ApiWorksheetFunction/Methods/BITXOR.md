@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a bitwise "XOR" of two numbers.
+Return a bitwise "XOR" of two numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from XOR operation.
+// How to get a result from XOR operation in a spreadsheet.
 
-// Use function to calculate bitwise "XOR" operation.
+// Use function to calculate bitwise "XOR" operation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

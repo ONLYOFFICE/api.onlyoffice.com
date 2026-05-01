@@ -2,25 +2,11 @@
 
 Returns the current form key.
 
-## Syntax
-
-```javascript
-expression.GetFormKey();
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md).
 
 ## Example
 
-This example shows how to get the form key.
+Get the form key in a document.
 
 ```javascript editor-forms
 // How get a key of a comboBox form.

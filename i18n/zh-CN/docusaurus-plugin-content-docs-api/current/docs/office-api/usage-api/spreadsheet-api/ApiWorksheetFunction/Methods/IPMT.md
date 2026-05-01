@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-此示例演示如何根据定期固定付款和固定利率返回投资在给定期间的利息付款。
+在电子表格中基于定期、固定付款和固定利率返回投资给定期间的利息支付。
 
 ```javascript editor-xlsx
-// How to calculate the interest payment for a given period for an investment.
+// How to calculate the interest payment for a given period for an investment in a spreadsheet.
 
-// Use a function to get the interest payment.
+// Use a function to get the interest payment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

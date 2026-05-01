@@ -2,25 +2,11 @@
 
 Returns the current page which is displayed for the page field (valid only for page fields).
 
-## Syntax
-
-```javascript
-expression.GetCurrentPage();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string \| number
+Inherited from [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md).
 
 ## Example
 
-This example shows how to get a current page of a pivot field.
+Get a current page of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a pivot field current page.

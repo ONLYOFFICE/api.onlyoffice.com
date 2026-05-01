@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to move the cursor to the end of the document.
+Move the cursor to the end of the document in a document.
 
 ```javascript editor-docx
+// How to move cursor to end for a document?
+
+// Move cursor to end and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This is the first paragraph.');
@@ -33,5 +37,4 @@ doc.Push(paragraph2);
 
 doc.MoveCursorToEnd();
 doc.EnterText(' Cursor was moved to the end.');
-
 ```

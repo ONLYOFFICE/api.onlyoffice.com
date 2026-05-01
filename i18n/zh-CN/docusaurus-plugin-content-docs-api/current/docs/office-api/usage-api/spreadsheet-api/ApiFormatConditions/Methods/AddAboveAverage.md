@@ -20,7 +20,7 @@ expression.AddAboveAverage();
 
 ## 示例
 
-此示例向区域添加高于平均值条件格式。
+向范围添加高于平均值条件格式。
 
 ```javascript editor-xlsx
 // How to add above average conditional formatting rules to highlight cells.
@@ -46,5 +46,4 @@ let aboveAverageCondition = formatConditions.AddAboveAverage();
 if (aboveAverageCondition) {
     aboveAverageCondition.SetFillColor(Api.CreateColorFromRGB(144, 238, 144));
 }
-
 ```

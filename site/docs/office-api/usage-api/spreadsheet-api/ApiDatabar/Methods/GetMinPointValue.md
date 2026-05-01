@@ -20,10 +20,10 @@ string \| number \| null
 
 ## Example
 
-This example demonstrates getting the minimum point value from a data bar conditional formatting rule.
+Get the minimum point value from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to retrieve the value of the minimum condition.
+// How to retrieve the value of the minimum condition in a spreadsheet.
 
 // Get the minimum point value of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let minPointValue = dataBar.GetMinPointValue();
 
 worksheet.GetRange("C1").SetValue("Min Point Value:");
 worksheet.GetRange("C2").SetValue(minPointValue || "Auto");
-
 ```

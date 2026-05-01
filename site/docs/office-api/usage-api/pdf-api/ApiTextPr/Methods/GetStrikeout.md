@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to find out whether a text is strikethrough with one line.
+Find out whether a text is strikethrough with one line in a PDF document.
 
 ```javascript editor-pdf
-// How to know whether a text is crossed with one horizontal line.
+// How to know whether a text is crossed with one horizontal line in a PDF document.
 
-// Get the text properties of the run and find whether it is strikethrough or not.
+// Get the text properties of the run and find whether it is strikethrough or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +50,4 @@ paragraph = Api.CreateParagraph();
 const strikeout = textPr.GetStrikeout();
 paragraph.AddText("Strikeout property: " + strikeout);
 docContent.Push(paragraph);
-
 ```

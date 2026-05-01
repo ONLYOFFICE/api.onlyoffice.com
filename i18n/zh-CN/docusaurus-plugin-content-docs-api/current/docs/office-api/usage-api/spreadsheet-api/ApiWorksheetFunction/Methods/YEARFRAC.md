@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回表示开始日期和结束日期之间完整天数的年份分数。
+在电子表格中返回表示起始日期和结束日期之间完整天数的年份分数。
 
 ```javascript editor-xlsx
-// How to return the year fraction.
+// How to return the year fraction in a spreadsheet.
 
-// Use a function to calculate a year fraction.
+// Use a function to calculate a year fraction in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,5 +37,4 @@ let func = Api.WorksheetFunction;
 let ans = func.YEARFRAC("12/7/1981", "11/5/2018");
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

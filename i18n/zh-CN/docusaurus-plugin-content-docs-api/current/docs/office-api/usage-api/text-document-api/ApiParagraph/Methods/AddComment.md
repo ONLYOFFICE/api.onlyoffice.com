@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-此示例向段落添加一个批注。
+在文档中向段落添加批注。
 
 ```javascript editor-docx
-// How to add a comment with an author to the paragraph.
+// How to add a comment with an author to the paragraph in a document.
 
-// Comment a paragraph.
+// Add the comment and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

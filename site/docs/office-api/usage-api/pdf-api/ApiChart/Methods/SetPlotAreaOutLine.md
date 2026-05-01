@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set an outline color for the plot area.
+How to set an outline color for the plot area in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its plot area outline.
+// Create a chart, set its properties and its plot area outline in a PDF document.
+
+// Use chart to set plot area out line in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +46,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetPlotAreaOutLine(stroke);
 page.AddObject(chart);
-
 ```

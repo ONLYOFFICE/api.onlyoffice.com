@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的内容状态。
+在演示文稿中使用核心属性设置和获取当前演示文稿的内容状态。
 
 ```javascript editor-pptx
+// How to get the content status for a core properties in a presentation?
+
+// Get the content status and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetContentStatus("Final");
@@ -38,5 +42,4 @@ paragraph.AddText("Content Status: " + contentStatus);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的反正切。
+在电子表格中返回数字的反正切值。
 
 ```javascript editor-xlsx
-// How to get an arctangent of a number.
+// How to get an arctangent of a number in a spreadsheet.
 
-// Use function to get an arctangent of a number.
+// Use function to get an arctangent of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

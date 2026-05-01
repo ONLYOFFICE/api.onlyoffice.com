@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Sets the outline properties to a shape.
+Set the outline properties to a shape. Creates a rectangle and change its outline to a thick blue line in a PDF document.
 
 ```javascript editor-pdf
-// Creates a rectangle and changes its outline to a thick blue line.
+// How to set line for a shape in a PDF document?
+
+// Set line and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -40,5 +43,4 @@ let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBCol
 shape.SetLine(newStroke);
 paragraph.AddLineBreak();
 paragraph.AddText("Border changed to 3pt blue line");
-
 ```

@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## Example
 
-This example adds a comment to the inline content control.
+Add a comment to the inline content control in a document.
 
 ```javascript editor-docx
-// How to comment an inline text element.
+// How to comment an inline text element in a document.
 
-// Add comment to the text.
+// Add the comment and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

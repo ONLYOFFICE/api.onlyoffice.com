@@ -2,37 +2,16 @@
 
 Specifies the border which will be displayed at the right side of the page around the specified paragraph.
 
-## Syntax
-
-```javascript
-expression.SetRightBorder(sType, nSize, nSpace, r, g, b);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [BorderType](../../Enumeration/BorderType.md) |  | The border style. |
-| nSize | Required | [pt_8](../../Enumeration/pt_8.md) |  | The width of the current right border measured in eighths of a point. |
-| nSpace | Required | [pt](../../Enumeration/pt.md) |  | The spacing offset to the right of the paragraph measured in points used to place this border. |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetRightBorder](../../ApiParaPr/Methods/SetRightBorder.md).
 
 ## Example
 
-This example specifies the border which will be displayed at the right side of the page around the specified paragraph.
+Specify the border which will be displayed at the right side of the page around the specified paragraph.
 
 ```javascript editor-docx
-// How to add border to the right side of the paragraph.
+// How to add border to the right side of the paragraph in a document.
 
-// Add right single border.
+// Add right single border using the paragraph properties API in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

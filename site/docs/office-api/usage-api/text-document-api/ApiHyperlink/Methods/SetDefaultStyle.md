@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example sets the default hyperlink style.
+Set the default hyperlink style in a document.
 
 ```javascript editor-docx
-// How to set the default style to the hyperlink.
+// How to set the default style to the hyperlink in a document.
 
-// Create a hyperlink and apply the default properties to it.
+// Create a hyperlink and apply the default properties to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

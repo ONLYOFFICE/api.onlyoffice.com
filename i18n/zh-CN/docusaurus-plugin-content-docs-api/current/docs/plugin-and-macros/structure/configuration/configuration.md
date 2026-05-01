@@ -129,7 +129,7 @@ sidebar_position: -5
 
 ## variations
 
-`类型： array of object`
+`类型： object[]`
 
 插件变体（或子插件），是在原始插件内部创建的子模块。详见[此处](variations.md)。
 
@@ -189,7 +189,7 @@ sidebar_position: -5
 
 ### variations.buttons
 
-`类型： array of Button`
+`类型： Button[]`
 
 插件界面中使用的可换肤按钮列表。该参数仅适用于插件窗口和面板类型的插件，即当 [type](#variationstype) 参数为 *window*、*panel* 或 *panelRight* 时使用。
 
@@ -304,7 +304,7 @@ sidebar_position: -5
 
 ### variations.EditorsSupport
 
-`类型： array of editorType`
+`类型： editorType[]`
 
 插件可用的编辑器（**word**、**cell**、**slide** 或 **pdf**）。默认值为 **[]**。
 
@@ -333,7 +333,7 @@ sidebar_position: -5
 
 ### variations.events
 
-`类型： array of EventType`
+`类型： EventType[]`
 
 :::danger[已废弃]
 从版本 8.2 开始，请改用 [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) 方法，该方法不需要此参数。
@@ -371,7 +371,7 @@ sidebar_position: -5
 
 ### variations.icons2
 
-`类型： array of object`
+`类型： object[]`
 
 :::danger[已废弃]
 请改用 [variations.icons](#variationsicons) 参数。
@@ -525,7 +525,7 @@ sidebar_position: -5
 
 ### variations.screens
 
-`类型： array of string`
+`类型： string[]`
 
 :::danger[已废弃]
 请改用 [variations.store.screenshots](#variationsstorescreenshots) 参数。
@@ -537,7 +537,7 @@ sidebar_position: -5
 
 ### variations.size
 
-`类型： array of number`
+`类型： number[]`
 
 插件窗口尺寸，单位为像素。仅在 *type == "window"* 时使用。
 
@@ -603,7 +603,7 @@ sidebar_position: -5
 
 ### variations.store.categories
 
-`类型： array of string`
+`类型： string[]`
 
 **ONLYOFFICE 插件市场**中的插件分类：
 
@@ -664,7 +664,7 @@ sidebar_position: -5
 
 ### variations.store.screenshots
 
-`类型： array of string`
+`类型： string[]`
 
 用于 **ONLYOFFICE 插件市场**插件描述的图片。
 

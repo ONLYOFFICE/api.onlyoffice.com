@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | annotation | TextAnnotation | 被点击的批注。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onClickAnnotation", (data) => {
     console.log("event: onClickAnnotation");
@@ -17,4 +19,3 @@ window.Asc.plugin.attachEditorEvent("onClickAnnotation", (data) => {
     }
 });
 ```
-

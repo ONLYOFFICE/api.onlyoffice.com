@@ -22,7 +22,7 @@ expression.Duplicate(nPos);
 
 ## Example
 
-This example creates a duplicate of the specified slide object, adds the new slide to the slides collection.
+Create a duplicate of the specified slide object, add the new slide to the slides collection.
 
 ```javascript editor-pptx
 // How to create a duplicate slide.
@@ -37,5 +37,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 const duplicateSlide = slide.Duplicate(1);
-
 ```

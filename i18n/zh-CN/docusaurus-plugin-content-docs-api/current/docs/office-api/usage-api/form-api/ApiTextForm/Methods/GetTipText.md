@@ -2,25 +2,11 @@
 
 返回当前表单的提示文本。
 
-## 语法
-
-```javascript
-expression.GetTipText();
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiFormBase.GetTipText](../../ApiFormBase/Methods/GetTipText.md)。
 
 ## 示例
 
-此示例展示如何获取表单的提示文本。
+获取文档中表单的提示文本。
 
 ```javascript editor-forms
 // Get a comboBox form tip text and show it in the document.

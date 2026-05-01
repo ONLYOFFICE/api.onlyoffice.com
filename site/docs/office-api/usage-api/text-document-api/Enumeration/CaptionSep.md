@@ -19,10 +19,9 @@ Enumeration
 - "longDash"
 - "dash"
 
-
 ## Example
 
-This example add a caption with a hyphen as a numbering separator to the paragraph.
+Add a caption with a hyphen as a numbering separator to the paragraph.
 
 ```javascript editor-docx
 // How to create a caption indicating the type of a numbering separator.

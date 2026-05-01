@@ -22,9 +22,13 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-此示例展示如何为形状内段落中的所有文本设置斜体格式。
+为电子表格中形状内段落的所有文本设置斜体格式。
 
 ```javascript editor-xlsx
+// How can I set italic using a paragraph in a spreadsheet?
+
+// Set italic for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(170, 110, 130));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetItalic(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not italic.');
 content.Push(paragraph2);
-
 ```

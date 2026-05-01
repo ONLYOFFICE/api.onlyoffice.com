@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -12,10 +12,9 @@
 | ---- | ---- | ----------- |
 | radio | boolean | 指定当前复选框是否为单选按钮。在这种情况下，key 参数被视为单选按钮组的标识符。 |
 
-
 ## 示例
 
-此示例创建具有特定复选框表单属性的复选框表单。
+创建具有特定复选框表单属性的复选框表单。
 
 ```javascript editor-forms
 // How to create a checkbox form with its base properties.

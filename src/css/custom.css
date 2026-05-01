@@ -463,6 +463,14 @@ html[data-theme='dark'] .DocSearch-SidepanelButton.floating:hover {
   color: #b5cea8;
 }
 
+/* Boolean token color (not styled by vsLight/vsDark themes) */
+[data-theme='light'] .prism-code .token.boolean {
+  color: rgb(0, 0, 255);
+}
+[data-theme='dark'] .prism-code .token.boolean {
+  color: rgb(86, 156, 214);
+}
+
 /* TypeScript/JavaScript function token color */
 [data-theme='light'] .prism-code.language-ts .token.function,
 [data-theme='light'] .prism-code.language-typescript .token.function,

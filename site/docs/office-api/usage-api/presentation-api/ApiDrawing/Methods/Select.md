@@ -22,14 +22,12 @@ boolean
 
 ## Example
 
-This example selects the current graphic object.
+Select the current graphic object in a presentation.
 
 ```javascript editor-pptx
 // How to select drawing objects of the slide.
 
-// Create three shapes, select the first one,
-// then select the second shape with isReplace=true (replacing the selection),
-// and finally select the third shape without isReplace parameter (adding to selection).
+// Create three shapes, select the first one, then select the second shape with isReplace=true (replacing the selection), and finally select the third shape without isReplace parameter (adding to selection) in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +49,4 @@ drawing3.SetPosition(8000000, 0);
 drawing1.Select(true);
 drawing2.Select(true);
 drawing3.Select();
-
 ```

@@ -22,9 +22,13 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-This example shows how to set italic formatting for all text in a paragraph inside a shape.
+Set italic formatting for all text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set italic using a paragraph in a spreadsheet?
+
+// Set italic for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(170, 110, 130));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetItalic(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not italic.');
 content.Push(paragraph2);
-
 ```

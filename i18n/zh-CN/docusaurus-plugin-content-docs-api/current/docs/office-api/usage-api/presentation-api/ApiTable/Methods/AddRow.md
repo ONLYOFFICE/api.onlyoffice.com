@@ -23,12 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## 示例
 
-此示例向表格添加新行。
+在演示文稿中向表格添加新行。
 
 ```javascript editor-pptx
-// How to insert a row to the table.
+// How to insert a row to the table in a presentation.
 
-// Create a 2x4 table, set its position and then insert a row to it.
+// Create a 2x4 table, set its position and then insert a row to it in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -44,5 +44,4 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

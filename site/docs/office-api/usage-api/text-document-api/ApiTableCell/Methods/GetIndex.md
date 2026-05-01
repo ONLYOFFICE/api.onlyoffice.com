@@ -20,7 +20,7 @@ Number
 
 ## Example
 
-This example shows how to get the cell index.
+Get the cell index in a document.
 
 ```javascript editor-docx
 // How to get position index of the cell.

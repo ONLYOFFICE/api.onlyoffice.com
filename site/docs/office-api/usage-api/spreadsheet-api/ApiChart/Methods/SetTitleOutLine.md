@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the chart title.
+Set the outline to the chart title in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to outline a chart title.
+// How to outline a chart title in a spreadsheet.
 
-// Add a stroke for the chart title outline.
+// Add a stroke for the chart title outline in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

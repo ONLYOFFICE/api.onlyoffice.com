@@ -2,7 +2,6 @@
 
 Represents the ApiInlineLvlSdt class.
 
-
 ## Methods
 
 | Method | Returns | Description |

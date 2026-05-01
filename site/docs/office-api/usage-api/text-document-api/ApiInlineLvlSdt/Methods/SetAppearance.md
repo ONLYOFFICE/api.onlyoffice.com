@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example adds a content control and changes its appearance.
+Add a content control and change its appearance in a document.
 
 ```javascript editor-docx
+// How can I set appearance using an inline content control in a document?
+
+// Set appearance for an inline content control in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let contentControl = Api.CreateInlineLvlSdt();

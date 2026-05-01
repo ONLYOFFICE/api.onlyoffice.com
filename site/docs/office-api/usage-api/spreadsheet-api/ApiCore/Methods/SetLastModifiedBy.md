@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the name of the last user who modified the current workbook.
+Set the name of the last user who modified the current workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set last modified by using a core properties in a spreadsheet?
+
+// Set last modified by for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
-
 ```

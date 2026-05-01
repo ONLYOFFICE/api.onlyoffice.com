@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-此示例演示如何从文本中删除所有不可打印的字符。
+在电子表格中从文本中移除所有不可打印的字符。
 
 ```javascript editor-xlsx
-// How to remove all the nonprintable characters from the text.
+// How to remove all the nonprintable characters from the text in a spreadsheet.
 
-// Use function to clean all nonprintable characters.
+// Use function to clean all nonprintable characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

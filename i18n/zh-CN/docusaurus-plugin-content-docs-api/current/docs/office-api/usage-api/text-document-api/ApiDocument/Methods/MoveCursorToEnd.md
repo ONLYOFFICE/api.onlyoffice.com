@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何将光标移动到文档末尾。
+在文档中将光标移动到文档末尾。
 
 ```javascript editor-docx
+// How to move cursor to end for a document?
+
+// Move cursor to end and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This is the first paragraph.');
@@ -33,5 +37,4 @@ doc.Push(paragraph2);
 
 doc.MoveCursorToEnd();
 doc.EnterText(' Cursor was moved to the end.');
-
 ```

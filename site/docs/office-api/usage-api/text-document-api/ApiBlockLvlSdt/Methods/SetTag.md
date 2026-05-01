@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to set a tag attribute for a container.
+Set a tag attribute for a container in a document.
 
 ```javascript editor-docx
-// Creates a block content control and sets a tag to it.
+// Create a block content control and set a tag to it in a document.
 
-// How to add a tag to the ApiBlockLvlSdt object.
+// How to add a tag to the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

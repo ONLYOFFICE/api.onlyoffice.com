@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the next cell.
+Get the next cell in a document.
 
 ```javascript editor-docx
 // How to get next cell.

@@ -14,10 +14,9 @@ Enumeration
 - "clockwise90"
 - "counterclockwise90"
 
-
 ## Example
 
-In this example sets the direction of the watermark within the document.
+Set the direction of the watermark within the document.
 
 ```javascript editor-docx
 // How to set a watermark direction.

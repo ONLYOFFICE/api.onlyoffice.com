@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example shows how to delete the specified object from the parent slide master if it exists.
+Delete the specified object from the parent slide master if it exists in a presentation.
 
 ```javascript editor-pptx
-// How to delete a layout.
+// How to delete a layout in a presentation.
 
 // Remove a layout from a presentation master.
 
@@ -50,5 +50,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

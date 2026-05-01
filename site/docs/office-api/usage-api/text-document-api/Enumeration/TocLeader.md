@@ -16,10 +16,9 @@ Enumeration
 - "underline"
 - "none"
 
-
 ## Example
 
-This example adds a table of contents with the dot leader to the document.
+Add a table of contents with the dot leader to the document.
 
 ```javascript editor-docx
 // How to create a table of contents properties indicating its leader type.
@@ -38,5 +37,4 @@ let tocPr = {
 	"TocStyle": "standard"
 };
 doc.AddTableOfContents(tocPr);
-
 ```

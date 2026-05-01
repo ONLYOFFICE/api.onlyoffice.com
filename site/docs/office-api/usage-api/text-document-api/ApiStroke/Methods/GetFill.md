@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill color of a stroke.
+Get the fill color of a stroke. Creates a shape with a colored border and retrieve its fill properties in a document.
 
 ```javascript editor-docx
-// Creates a shape with a colored border and retrieves its fill properties.
+// How do I get the fill in a document?
+
+// Get the fill using a stroke object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -38,5 +41,4 @@ if (strokeObj) {
         paragraph.AddText("Stroke fill type: " + strokeFill.GetType());
     }
 }
-
 ```

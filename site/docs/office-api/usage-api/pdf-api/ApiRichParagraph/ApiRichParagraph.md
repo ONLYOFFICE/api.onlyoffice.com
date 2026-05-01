@@ -1,7 +1,6 @@
 # ApiRichParagraph
 
-Represents the ApiRichParagraph class.
-
+ApiRichParagraph is a subclass of [ApiRichParaPr](../ApiRichParaPr/ApiRichParaPr.md).
 
 ## Methods
 

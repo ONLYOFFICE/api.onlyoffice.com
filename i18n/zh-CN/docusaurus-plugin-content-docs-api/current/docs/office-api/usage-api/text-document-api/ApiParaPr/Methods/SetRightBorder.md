@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-此示例指定将在指定段落周围的页面右侧显示的边框。
+指定在指定段落周围页面右侧显示的边框。
 
 ```javascript editor-docx
-// How to add border to the right side of the paragraph.
+// How to add border to the right side of the paragraph in a document.
 
-// Add right single border.
+// Add right single border using the paragraph properties API in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

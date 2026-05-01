@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例展示如何在日期表单中设置日期语言。
+设置文档中日期表单的日期语言。
 
 ```javascript editor-docx
 // Change the language of the date form.

@@ -20,9 +20,13 @@ expression.GetFormRoles();
 
 ## 示例
 
-此示例展示如何获取角色管理器。
+获取表单文档中的角色管理器。
 
 ```javascript editor-forms
+// How can I get the form roles using a document in a form document?
+
+// Get the form roles for a document in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -32,5 +36,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddText(role);
     paragraph.AddLineBreak();
 });
-
 ```

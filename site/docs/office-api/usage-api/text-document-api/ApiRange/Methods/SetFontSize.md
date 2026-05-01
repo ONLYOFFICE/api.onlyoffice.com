@@ -22,12 +22,12 @@ expression.SetFontSize(FontSize);
 
 ## Example
 
-This example sets the font size to the characters of the text Range.
+Set the font size to the characters of the text Range in a document.
 
 ```javascript editor-docx
-// How to change the range text font size.
+// How to change the range text font size in a document.
 
-// Get a range, resize its font.
+// Get a range, resize its font in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

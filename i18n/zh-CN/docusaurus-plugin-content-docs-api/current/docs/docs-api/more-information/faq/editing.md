@@ -11,14 +11,14 @@ sidebar_position: -5
   ``` ts
   const config = {
     editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback.ashx",
+      callbackUrl: "https://example.com/url-to-callback",
     },
   };
 
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-这里的 `https://example.com/url-to-callback.ashx` 是特殊处理程序的地址，它可以处理来自**文档编辑服务**的响应和带有*错误的响应：0* 状态代码。此处理程序可以用您选择的编程语言编写。
+这里的 `https://example.com/url-to-callback` 是特殊处理程序的地址，它可以处理来自**文档编辑服务**的响应和带有*错误的响应：0* 状态代码。此处理程序可以用您选择的编程语言编写。
 
 所有可以发送到回调处理程序的参数及其描述都可以在[这个页面](../../usage-api/callback-handler.md)找到。
 

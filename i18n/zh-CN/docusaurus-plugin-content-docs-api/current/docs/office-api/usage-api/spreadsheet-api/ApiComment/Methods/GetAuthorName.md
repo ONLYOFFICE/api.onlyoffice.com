@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取批注作者的姓名。
+获取电子表格中的批注作者名称。
 
 ```javascript editor-xlsx
-// How to remove a comment from a range.
+// How to remove a comment from a range in a spreadsheet.
 
-// Get a range, add a comment to it and then remove it.
+// Get a range, add a comment to it and then remove it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

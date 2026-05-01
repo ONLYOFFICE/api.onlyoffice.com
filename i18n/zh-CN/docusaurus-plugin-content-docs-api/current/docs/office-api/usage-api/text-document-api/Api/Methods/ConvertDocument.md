@@ -26,14 +26,12 @@ string
 
 ## 示例
 
-此示例展示如何获取 Markdown 格式的文档并将结果粘贴到文档中。
+以 Markdown 格式获取文档并将结果粘贴到文档中。
 
 ```javascript editor-docx
-// This example shows how to convert a document to Markdown format and insert the result into the document.
+// Convert a document to Markdown format and insert the result into the document.
 
-// Adds a text with different heading levels to the document, converts it to Markdown, and pastes it back into the document.
-
-// How to convert a document with different heading levels and bold text to Markdown.
+// Add a text with different heading levels to the document, convert it to Markdown, and paste it back into the document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

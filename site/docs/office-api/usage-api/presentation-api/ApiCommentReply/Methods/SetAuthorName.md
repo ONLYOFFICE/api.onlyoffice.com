@@ -22,10 +22,10 @@ expression.SetAuthorName(sAuthorName);
 
 ## Example
 
-This example shows how to set an author to a comment reply.
+Set an author to a comment reply in a presentation.
 
 ```javascript editor-pptx
-// How to change a comment's reply author name.
+// How to change a comment's reply author name in a presentation.
 
 // Get all comments from the presentation and set an author to the first one's reply.
 
@@ -51,5 +51,4 @@ reply.SetAuthorName("New Author Name");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply author: " + reply.GetAuthorName());
-
 ```

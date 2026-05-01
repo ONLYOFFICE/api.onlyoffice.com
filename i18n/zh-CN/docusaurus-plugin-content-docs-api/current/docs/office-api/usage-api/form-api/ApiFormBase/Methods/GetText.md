@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何从表单中获取文本。
+获取文档中表单的文本。
 
 ```javascript editor-forms
 // How to get a raw text of a text form.

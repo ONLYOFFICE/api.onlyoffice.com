@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets a theme to the slide master. Sets a copy of the theme object.
+Set a theme to the slide master. Sets a copy of the theme object.
 
 ```javascript editor-pptx
 // How to set a theme of a slide master.
@@ -77,5 +77,4 @@ chart.SetSeriesFill(fill, 1, false);
 
 slide.RemoveAllObjects();
 slide.AddObject(chart);
-
 ```

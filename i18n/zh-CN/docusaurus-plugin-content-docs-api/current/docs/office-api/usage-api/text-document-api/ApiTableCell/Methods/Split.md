@@ -23,12 +23,12 @@ expression.Split(nRow, nCol);
 
 ## 示例
 
-此示例将单元格拆分为指定数量的行和列。
+将单元格拆分为指定数量的行和列。
 
 ```javascript editor-docx
 // Split the first cell into two.
 
-// How to divide the cell.
+// Split for a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

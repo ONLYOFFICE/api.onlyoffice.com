@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-This example sets the paragraph line spacing.
+Set the paragraph line spacing in a PDF document.
 
 ```javascript editor-pdf
-// How to set the size of a spacing line from a paragraph properties.
+// How to set the size of a spacing line from a paragraph properties in a PDF document.
 
-// Change a spacing line size property of a paragraph properties.
+// Change a spacing line size property of a paragraph properties in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -53,5 +53,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 page.AddObject(shape);
-
 ```

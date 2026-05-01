@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何将实数和虚数系数转换为复数。
+在电子表格中将实部和虚部系数转换为复数。
 
 ```javascript editor-xlsx
-// How to create a complex number using coefficients.
+// How to create a complex number using coefficients in a spreadsheet.
 
-// Use function to convert real and imaginary coefficients into a complex number.
+// Use function to convert real and imaginary coefficients into a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

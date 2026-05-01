@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-此示例在主文档的指定位置插入分隔符。
+在主文档的指定位置插入分隔符。
 
 ```javascript editor-docx
-// How to add some space from the drawing.
+// How to add some space from the drawing in a document.
 
 // Insert a drawing and text into document and add a break to them.
 

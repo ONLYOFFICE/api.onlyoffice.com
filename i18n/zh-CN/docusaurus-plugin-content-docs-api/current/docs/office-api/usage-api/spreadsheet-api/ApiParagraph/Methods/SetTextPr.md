@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何对形状内段落中的所有文本应用文本属性。
+将文本属性应用于电子表格中形状内段落的所有文本。
 
 ```javascript editor-xlsx
+// How can I set text pr using a paragraph in a spreadsheet?
+
+// Set text pr for a paragraph in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 140, 130));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -48,5 +52,4 @@ paragraph.SetTextPr(textPr);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has default properties.');
 content.Push(paragraph2);
-
 ```

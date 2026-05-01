@@ -2,32 +2,16 @@
 
 Sets the text label displayed in the subtotal column or row heading in the specified pivot table report.
 
-## Syntax
-
-```javascript
-expression.SetSubtotalName(caption);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| caption | Required | string |  | The text label displayed in the subtotal column or row heading. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetSubtotalName](../../ApiPivotField/Methods/SetSubtotalName.md).
 
 ## Example
 
-This example shows how to set a subtotal name of a pivot field.
+Set a subtotal name of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotal name.
+// How to change a pivot field subtotal name in a spreadsheet.
 
-// Create a pivot table, add data to it then set subtotal name of a specified pivot.
+// Create a pivot table, add data to it then set subtotal name of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

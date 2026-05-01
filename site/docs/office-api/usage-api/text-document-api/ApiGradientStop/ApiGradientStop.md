@@ -2,7 +2,6 @@
 
 Represents the ApiGradientStop class.
 
-
 ## Methods
 
 | Method | Returns | Description |

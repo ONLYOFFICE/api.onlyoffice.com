@@ -23,10 +23,10 @@ boolean
 
 ## 示例
 
-此示例将指定范围的 X 轴值设置到指定系列。仅用于散点图。
+在电子表格中将指定范围的 x 轴值设置到指定系列。仅用于散点图。
 
 ```javascript editor-xlsx
-// How to add values to the horizontal axis of series for scatter charts from the indicated range using addresses.
+// How to add values to the horizontal axis of series for scatter charts from the indicated range using addresses in a spreadsheet.
 
 // Fill seria's x-axis of scatter charts with values from the worksheet cells.
 

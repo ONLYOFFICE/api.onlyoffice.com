@@ -121,7 +121,7 @@ Sample payload:
 **Request:**
 
 ``` bash
-curl -X POST "https://example.com/url-to-callback.ashx" \
+curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImtleSI6IktoaXJ6NnpUUGRmZDciLCJzdGF0dXMiOjR9fQ.MfVoGT-aYuPJfjQAaxwBv7-CqBylDae2AF9K5TpLf-E" \
   -d '{

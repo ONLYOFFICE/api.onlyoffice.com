@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example removes a content control and its content.
+Remove a content control and its content in a document.
 
 ```javascript editor-docx
-// How to delete inline text element.
+// How to delete inline text element in a document.
 
-// Add inline content control and then clear its content.
+// Add inline content control and then clear its content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

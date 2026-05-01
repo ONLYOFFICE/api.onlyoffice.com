@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the font size of the text.
+Get the font size of the text in a document.
 
 ```javascript editor-docx
 // How to know the font size of the form.

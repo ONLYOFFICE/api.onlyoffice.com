@@ -1,0 +1,31 @@
+# SetPosX
+
+Sets the x position of the drawing on the slide.
+
+Inherited from [ApiDrawing.SetPosX](../../ApiDrawing/Methods/SetPosX.md).
+
+## Example
+
+Set the x position of the drawing on the slide.
+
+```javascript editor-pptx
+// How can I set pos x using a drawing object in a presentation?
+
+// Set pos x for a drawing object in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const fill = Api.CreateSolidFill(Api.HexColor('#F0D9B5'));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('rect', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100), fill, stroke);
+shape.SetPosition(0, 0);
+slide.AddObject(shape);
+
+shape.SetPosX(Api.MillimetersToEmus(50));
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText('X position was changed to 50 mm.');
+```

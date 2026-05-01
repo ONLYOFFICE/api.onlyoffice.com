@@ -2,32 +2,16 @@
 
 设置在指定数据透视表报表的分类汇总列或行标题中显示的文本标签。
 
-## 语法
-
-```javascript
-expression.SetSubtotalName(caption);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| caption | 必需 | string |  | 在分类汇总列或行标题中显示的文本标签。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetSubtotalName](../../ApiPivotField/Methods/SetSubtotalName.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的分类汇总名称。
+在电子表格中设置透视字段的小计名称。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotal name.
+// How to change a pivot field subtotal name in a spreadsheet.
 
-// Create a pivot table, add data to it then set subtotal name of a specified pivot.
+// Create a pivot table, add data to it then set subtotal name of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

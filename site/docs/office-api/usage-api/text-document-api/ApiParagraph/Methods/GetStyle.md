@@ -2,30 +2,16 @@
 
 Returns the paragraph style method.
 
-## Syntax
-
-```javascript
-expression.GetStyle();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+Inherited from [ApiParaPr.GetStyle](../../ApiParaPr/Methods/GetStyle.md).
 
 ## Example
 
-This example shows how to get the paragraph style.
+Get the paragraph style in a document.
 
 ```javascript editor-docx
-// How to get the style of the paragraph.
+// How to get the style of the paragraph in a document.
 
-// Get the paragraph style and display its name.
+// Get the paragraph style and display its name in a document.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");

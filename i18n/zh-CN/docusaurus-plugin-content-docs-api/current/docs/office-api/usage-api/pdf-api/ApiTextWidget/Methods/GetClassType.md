@@ -16,13 +16,17 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"textWidget"
 
 ## 示例
 
-此示例获取文本控件并显示其类型。
+检查 PDF 文档中文本控件返回的类类型。
 
 ```javascript editor-pdf
+// How do I check what type a text widget object is in a PDF document?
+
+// Retrieve and output the class type string for a text widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

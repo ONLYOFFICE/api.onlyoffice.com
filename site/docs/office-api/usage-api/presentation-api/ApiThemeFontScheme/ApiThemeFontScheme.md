@@ -2,7 +2,6 @@
 
 Represents the ApiThemeFontScheme class.
 
-
 ## Methods
 
 | Method | Returns | Description |

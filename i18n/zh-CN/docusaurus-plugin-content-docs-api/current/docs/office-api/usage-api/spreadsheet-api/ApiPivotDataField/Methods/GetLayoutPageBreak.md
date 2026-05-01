@@ -2,25 +2,11 @@
 
 返回指定是否在每个字段后插入分页符的设置。
 
-## 语法
-
-```javascript
-expression.GetLayoutPageBreak();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局分页符。
+获取电子表格中透视字段的布局分页符。
 
 ```javascript editor-xlsx
 // How to get a layout page break of a pivot field.

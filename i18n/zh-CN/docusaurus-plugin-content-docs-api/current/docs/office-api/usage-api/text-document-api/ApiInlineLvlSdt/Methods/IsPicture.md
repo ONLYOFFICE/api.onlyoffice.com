@@ -21,9 +21,13 @@ boolean
 
 ## 示例
 
-此示例展示如何检查内容控件是否为图片。
+检查文档中的内容控件是否为图片。
 
 ```javascript editor-docx
+// How to is picture for an inline content control in a document?
+
+// Is picture and display the result in a document.
+
 let doc = Api.GetDocument();
 let inlineControl = doc.AddPictureContentControl();
 let isPicture = inlineControl.IsPicture();

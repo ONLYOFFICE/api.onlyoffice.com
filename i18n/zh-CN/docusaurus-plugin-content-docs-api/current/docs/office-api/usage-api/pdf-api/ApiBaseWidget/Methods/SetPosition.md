@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例创建新字段并为其控件设置新位置。
+在 PDF 文档中创建新字段并为其控件设置新位置。
 
 ```javascript editor-pdf
+// How can I set position using a widget in a PDF document?
+
+// Set position for a widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

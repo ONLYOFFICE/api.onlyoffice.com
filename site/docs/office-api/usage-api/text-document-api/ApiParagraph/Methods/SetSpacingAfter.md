@@ -4,33 +4,16 @@ Sets the spacing after the current paragraph. If the value of the isAfterAuto pa
 any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it 
 will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingAfter(nAfter, isAfterAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAfter | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing after the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isAfterAuto | Optional | boolean | false | The true value disables the spacing after the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Set the spacing after the current paragraph in a document.
 
 ```javascript editor-docx
-// How to set the size of a spacing after a text from a paragraph properties.
+// How to set the size of a spacing after a text from a paragraph properties in a document.
 
-// Change the size property of a spacing after a paragraph.
+// Change the size property of a spacing after a paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

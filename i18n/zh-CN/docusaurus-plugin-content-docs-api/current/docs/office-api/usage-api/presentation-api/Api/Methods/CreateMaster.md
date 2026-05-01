@@ -22,7 +22,7 @@ expression.CreateMaster(oTheme);
 
 ## 示例
 
-此示例演示如何创建幻灯片母版。
+在演示文稿中创建幻灯片母版。
 
 ```javascript editor-pptx
 // How to add master to the slide.
@@ -50,5 +50,4 @@ paragraph.AddText("Number of masters after adding new master: " + countAfter);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

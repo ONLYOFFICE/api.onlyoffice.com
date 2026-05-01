@@ -2,27 +2,11 @@
 
 Specifies the default table cell spacing (the spacing between adjacent cells and the edges of the table).
 
-## Syntax
-
-```javascript
-expression.SetCellSpacing(nValue);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | Spacing value measured in twentieths of a point (1/1440 of an inch). &lt;code&gt;"Null"&lt;/code&gt; means that no spacing will be applied. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetCellSpacing](../../ApiTablePr/Methods/SetCellSpacing.md).
 
 ## Example
 
-This example specifies the default table cell spacing.
+Specify the default table cell spacing.
 
 ```javascript editor-docx
 // How to set the size of the cell spacing.

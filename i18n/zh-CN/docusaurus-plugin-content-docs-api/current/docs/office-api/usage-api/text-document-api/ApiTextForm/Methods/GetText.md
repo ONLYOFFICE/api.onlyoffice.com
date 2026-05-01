@@ -2,25 +2,11 @@
 
 返回当前表单中的文本。
 
-## 语法
-
-```javascript
-expression.GetText();
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md)。
 
 ## 示例
 
-此示例展示如何从表单中获取文本。
+获取文档中表单的文本。
 
 ```javascript editor-docx
 // How to get a raw text of a text form.

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a paragraph copy.
+Create a paragraph copy in a PDF document.
 
 ```javascript editor-pdf
-// How to add a duplicate paragraph.
+// How to add a duplicate paragraph in a PDF document.
 
-// Copy a paragraph and add it to the shape.
+// Copy a paragraph and add it to the shape in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,5 +45,4 @@ docContent.Push(paragraph);
 const copyParagraph = paragraph.Copy();
 docContent.Push(copyParagraph);
 page.AddObject(shape);
-
 ```

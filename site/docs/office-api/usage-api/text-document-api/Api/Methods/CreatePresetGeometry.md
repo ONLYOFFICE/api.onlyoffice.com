@@ -22,9 +22,13 @@ expression.CreatePresetGeometry(sPreset);
 
 ## Example
 
-This example demonstrates creating a preset geometry.
+Create a preset geometry in a document.
 
 ```javascript editor-docx
+// How to create the preset geometry in a document?
+
+// Create the preset geometry using the document API.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -41,5 +45,4 @@ paragraph.AddText("Is custom: " + presetGeometry.IsCustom());
 paragraph.AddLineBreak();
 paragraph.AddDrawing(shape);
 paragraph.AddLineBreak();
-
 ```

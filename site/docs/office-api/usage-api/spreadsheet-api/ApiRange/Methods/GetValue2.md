@@ -20,7 +20,7 @@ string \| string[][]
 
 ## Example
 
-This example shows how to get the value without format of the specified range.
+Get the value without format of the specified range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a cell raw value.

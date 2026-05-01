@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置自定义 XML 节点的值。
+在电子表格中设置自定义 XML 节点的值。
 
 ```javascript editor-xlsx
+// How to set node value for a custom XML node in a spreadsheet?
+
+// Set node value and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -40,5 +44,4 @@ const bookNode = xml.GetNodes('/bookstore/book')[0];
 bookNode.SetNodeValue('<book>Updated content</book>');
 worksheet.GetRange('A1').SetValue('XML after update:');
 worksheet.GetRange('B1').SetValue(xml.GetXml());
-
 ```

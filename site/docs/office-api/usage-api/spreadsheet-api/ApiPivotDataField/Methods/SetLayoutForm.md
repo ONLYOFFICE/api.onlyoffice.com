@@ -2,27 +2,11 @@
 
 Sets the way the specified pivot table items appear — in table format or in outline format.
 
-## Syntax
-
-```javascript
-expression.SetLayoutForm(type);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [PivotLayoutType](../../Enumeration/PivotLayoutType.md) |  | The layout type of the pivot table report. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutForm](../../ApiPivotField/Methods/SetLayoutForm.md).
 
 ## Example
 
-This example shows how to set a layout form of a pivot field.
+Set a layout form of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to change a pivot field layout form.

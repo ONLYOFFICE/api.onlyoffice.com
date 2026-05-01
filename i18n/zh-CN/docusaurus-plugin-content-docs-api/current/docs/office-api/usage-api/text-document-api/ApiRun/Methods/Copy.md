@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建文本块的副本。
+在文档中创建 run 的副本。
 
 ```javascript editor-docx
-// How to create a duplicate of the text.
+// How to create a duplicate of the text in a document.
 
-// Create a copy of the run and insert it to the paragraph. 
+// Create a copy of the run and insert it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

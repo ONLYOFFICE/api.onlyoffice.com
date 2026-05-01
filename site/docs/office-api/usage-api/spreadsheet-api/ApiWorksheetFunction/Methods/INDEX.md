@@ -25,12 +25,12 @@ number \| string
 
 ## Example
 
-This example shows how to return an index of a complex numbers.
+Return an index of a complex numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an index of a complex numbers.
+// How to get an index of a complex numbers in a spreadsheet.
 
-// Use a function to get the index.
+// Use a function to get the index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

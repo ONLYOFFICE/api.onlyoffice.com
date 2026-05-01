@@ -23,7 +23,7 @@ number \| string \| boolean
 
 ## Example
 
-This example shows how to check if there is an error in the formula in the first argument. The function returns the result of the formula if there is no error, or the value specified in the second argument if there is one.
+Check if there is an error in the formula in the first argument. The function returns the result of the formula if there is no error, or the value specified in the second argument if there is one.
 
 ```javascript editor-xlsx
 // How to check a formula.

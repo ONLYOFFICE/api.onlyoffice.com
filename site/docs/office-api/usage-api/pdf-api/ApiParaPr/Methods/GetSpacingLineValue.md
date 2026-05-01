@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph line spacing value.
+Get the paragraph line spacing value in a PDF document.
 
 ```javascript editor-pdf
-/// How to get the spacing line value between sentences of a paragraph.
+// / How to get the spacing line value between sentences of a paragraph in a PDF document.
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value.
+// Create a paragraph, set the spacing line between the sentences and retrieve the value in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,5 +51,4 @@ const spacingLineValue = paraPr.GetSpacingLineValue();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line value : " + spacingLineValue);
 docContent.Push(paragraph);
-
 ```

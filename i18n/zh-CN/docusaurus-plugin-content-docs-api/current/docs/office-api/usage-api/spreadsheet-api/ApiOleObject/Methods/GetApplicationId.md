@@ -20,10 +20,10 @@ string
 
 ## 示例
 
-此示例展示如何从 OLE 对象获取应用程序 ID。
+从电子表格中的 OLE 对象获取应用程序 ID。
 
 ```javascript editor-xlsx
-// How to retrieve application id of OLE object.
+// How to retrieve application id of OLE object in a spreadsheet.
 
 // Add Ole object and display its application id in the worksheet.
 
@@ -37,5 +37,4 @@ let oleObject = worksheet.AddOleObject(
 );
 let appId = oleObject.GetApplicationId();
 worksheet.GetRange('A1').SetValue('The OLE object application ID: ' + appId);
-
 ```

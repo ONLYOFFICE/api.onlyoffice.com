@@ -2,28 +2,14 @@
 
 Returns a number of elements in the current document.
 
-## Syntax
-
-```javascript
-expression.GetElementsCount();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-number
+Inherited from [ApiDocumentContent.GetElementsCount](../../ApiDocumentContent/Methods/GetElementsCount.md).
 
 ## Example
 
-This example shows how to get a number of elements in the current document content.
+Get a number of elements in the current document content in a document.
 
 ```javascript editor-docx
-// How to get elements count and push it to the paragraph.
+// How to get elements count and push it to the paragraph in a document.
 
 // Count the number of elements in the document.
 

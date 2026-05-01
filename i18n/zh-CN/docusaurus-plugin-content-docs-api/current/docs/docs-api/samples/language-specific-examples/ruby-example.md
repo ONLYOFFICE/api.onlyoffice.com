@@ -6,7 +6,7 @@ sidebar_position: -4
 
 ## 概述
 
-本示例将帮助您把ONLYOFFICE文档集成到用Ruby编写的Web应用程序中。
+本示例将帮助您把ONLYOFFICE 文档集成到用Ruby编写的Web应用程序中。
 
 :::caution
 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
@@ -18,8 +18,8 @@ sidebar_position: -4
 
 - 由于无需授权，存储不受未经授权访问的保护。
 - 由于参数是由代码根据预先安排的脚本生成的，因此不会对链接中的参数替换进行检查。
-- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE文档的请求。
-- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE文档进行交互。
+- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE 文档的请求。
+- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE 文档进行交互。
 
 ## 步骤1.安装先决条件并运行带有编辑器的网站
 
@@ -49,9 +49,9 @@ make compose-prod
 
 ### 选项2.在本地计算机上
 
-下载并安装ONLYOFFICE文档（打包为文档服务器）：
+下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
 查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_ruby_example)、[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_ruby_example)或[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_ruby_example)上安装它。
 
@@ -78,9 +78,9 @@ make server-prod
 
 ## 步骤2.检查可访问性
 
-如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE文档。
+如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE 文档。
 
-同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
+同时确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
 
 ## 步骤3.配置Ruby示例 {#step-3-configure-the-ruby-example}
 

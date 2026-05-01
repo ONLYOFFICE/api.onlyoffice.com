@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example adds a paragraph to the container.
+Add a paragraph to the container in a document.
 
 ```javascript editor-docx
-// Creates a block content control and adds a paragraph with a text to it.
+// Create a block content control and add a paragraph with a text to it in a document.
 
-// How to add the ApiParagraph object to the first position of the ApiBlockLvlSdt object.
+// How to add the paragraph object to the first position of the block-level content control object in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

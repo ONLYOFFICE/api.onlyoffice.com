@@ -2,7 +2,6 @@
 
 Represents the ApiFill class.
 
-
 ## Methods
 
 | Method | Returns | Description |

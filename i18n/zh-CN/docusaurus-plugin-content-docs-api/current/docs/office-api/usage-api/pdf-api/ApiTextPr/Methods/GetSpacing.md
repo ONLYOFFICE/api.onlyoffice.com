@@ -20,12 +20,12 @@ expression.GetSpacing();
 
 ## 示例
 
-此示例演示如何确定文本的间距大小。
+获取 PDF 文档中的文本间距大小。
 
 ```javascript editor-pdf
-// How to know a text spacing.
+// How to know a text spacing in a PDF document.
 
-// Get the text properties of the run and display its spacing size.
+// Get the text properties of the run and display its spacing size in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +50,4 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set name of a pivot table.
+Set name of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set name of a table.
+// How to set name of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set its name.
+// Create a pivot table, add data to it then set its name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

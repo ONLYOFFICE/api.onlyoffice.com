@@ -20,12 +20,12 @@ JSON
 
 ## Example
 
-This example converts the ApiFill object into the JSON object.
+Convert the fill object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON object from the fill object.
+// How to get a JSON object from the fill object in a document.
 
-// Convert the radial gradient fill to json and add it to the paragraph.
+// Convert the radial gradient fill to json and add it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

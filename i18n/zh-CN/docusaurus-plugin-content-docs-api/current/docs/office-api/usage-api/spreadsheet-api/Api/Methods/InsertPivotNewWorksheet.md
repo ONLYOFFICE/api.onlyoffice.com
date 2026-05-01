@@ -23,7 +23,7 @@ expression.InsertPivotNewWorksheet(dataRef, newSheetName);
 
 ## 示例
 
-此示例演示如何在新工作表上插入数据透视表。
+在电子表格中的新工作表上插入数据透视表。
 
 ```javascript editor-xlsx
 // How to insert a pivot table into a range of a new worksheet using references.
@@ -41,5 +41,4 @@ worksheet.GetRange('C3').SetValue(35.2);
 
 let dataRef = Api.GetRange("'Sheet1'!$B$1:$C$3");
 let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
-
 ```

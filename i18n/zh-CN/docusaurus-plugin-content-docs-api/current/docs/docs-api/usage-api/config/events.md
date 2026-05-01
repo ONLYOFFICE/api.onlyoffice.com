@@ -14,6 +14,7 @@ function onAppReady() {
 }
 
 const config = {
+  // ...
   events: {
     onAppReady,
   },
@@ -34,6 +35,7 @@ function onCollaborativeChanges() {
 }
 
 const config = {
+  // ...
   events: {
     onCollaborativeChanges,
   },
@@ -54,6 +56,7 @@ function onDocumentReady() {
 }
 
 const config = {
+  // ...
   events: {
     onDocumentReady,
   },
@@ -64,7 +67,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onDocumentStateChange
 
-修改文档时调用的函数。使用以下参数调用它：`{"data": true}` --适用于当前用户正在编辑文档时。使用以下参数调用它：`{"data": false}` --适用于当前用户的更改发送到 **文档编辑服务**时。
+修改文档时调用的函数。
+
+**参数**：
+
+| 参数       | 类型    | 描述                                                                                           |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------- |
+| event.data | boolean | 当前用户正在编辑文档时为 `true`，当前用户的更改发送到**文档编辑服务**时为 `false`。 |
 
 **示例**:
 
@@ -78,6 +87,7 @@ function onDocumentStateChange(event) {
 }
 
 const config = {
+  // ...
   events: {
     onDocumentStateChange,
   },
@@ -88,7 +98,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onDownloadAs
 
-调用 [downloadAs](../methods.md#downloadas) 方法时使用已编辑文件的绝对 URL 调用的函数。要下载的文档的绝对 URL 及其类型在 `data` 参数中发送。
+调用 [downloadAs](../methods.md#downloadas) 方法时使用已编辑文件的绝对 URL 调用的函数。
+
+**参数**：
+
+| 参数                | 类型   | 描述                         |
+| ------------------- | ------ | ---------------------------- |
+| event.data.fileType | string | 下载文档的文件类型。         |
+| event.data.url      | string | 要下载的文档的绝对 URL。     |
 
 **示例**:
 
@@ -100,6 +117,7 @@ function onDownloadAs(event) {
 }
 
 const config = {
+  // ...
   events: {
     onDownloadAs,
   },
@@ -110,7 +128,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onError
 
-发生错误或其他特定事件时调用的函数。错误消息在 `data` 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+发生错误或其他特定事件时调用的函数。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+
+**参数**：
+
+| 参数                         | 类型   | 描述         |
+| ---------------------------- | ------ | ------------ |
+| event.data.errorCode         | number | 错误代码。   |
+| event.data.errorDescription  | string | 错误描述。   |
 
 **示例**:
 
@@ -120,6 +145,7 @@ function onError(event) {
 }
 
 const config = {
+  // ...
   events: {
     onError,
   },
@@ -130,7 +156,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onInfo
 
-应用程序打开文件时调用的函数。模式在 `data.mode` 参数中发送。可以 `view` 或 `edit`。
+应用程序打开文件时调用的函数。
+
+**参数**：
+
+| 参数            | 类型   | 描述                                       |
+| --------------- | ------ | ------------------------------------------ |
+| event.data.mode | string | 编辑器模式。可以是 `view` 或 `edit`。  |
 
 **示例**:
 
@@ -140,6 +172,7 @@ function onInfo(event) {
 }
 
 const config = {
+  // ...
   events: {
     onInfo,
   },
@@ -152,7 +185,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。
 
-要设置书签链接，您必须调用 [setActionLink](../methods.md#setactionlink) 方法。书签数据在 `data` 参数中接收，然后必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。如果未声明该方法，则不会显示*获取链接*按钮。
+要设置书签链接，您必须调用 [setActionLink](../methods.md#setactionlink) 方法。如果未声明该方法，则不会显示*获取链接*按钮。
+
+**参数**：
+
+| 参数       | 类型   | 描述                                                                                                               |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| event.data | object | 书签数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
@@ -166,6 +205,7 @@ function onMakeActionLink(event) {
 }
 
 const config = {
+  // ...
   events: {
     onMakeActionLink,
   },
@@ -178,7 +218,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 通过 [meta](../../additional-api/command-service/meta.md) 命令更改文档的元信息时调用的函数。
 
-文档的名称在 `data.title` 参数中发送。*收藏* 图标高亮状态在 `data.favorite` 参数中发送。
+**参数**：
+
+| 参数                | 类型    | 描述                     |
+| ------------------- | ------- | ------------------------ |
+| event.data.title    | string  | 文档的名称。             |
+| event.data.favorite | boolean | *收藏*图标高亮状态。     |
 
 当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)如果未声明该方法，则*收藏*图标不会更改。
 
@@ -191,6 +236,7 @@ function onMetaChange(event) {
 }
 
 const config = {
+  // ...
   events: {
     onMetaChange,
   },
@@ -215,6 +261,7 @@ function onOutdatedVersion() {
 }
 
 const config = {
+  // ...
   events: {
     onOutdatedVersion,
   },
@@ -230,9 +277,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onPluginsReady() {}
+function onPluginsReady() {
+  console.log("All plugins are loaded");
+}
 
 const config = {
+  // ...
   events: {
     onPluginsReady,
   },
@@ -240,14 +290,6 @@ const config = {
 
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
-
-## onReady
-
-当应用程序加载到浏览器中时调用的函数。
-
-:::danger[Deprecated]
-自 5.0 版起已弃用，请改用 [onAppReady](#onappready)
-:::
 
 ## onRequestClose
 
@@ -265,6 +307,7 @@ function onRequestClose() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestClose,
   },
@@ -278,7 +321,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户尝试通过单击*存储中的文档*按钮来选择要进行比较的文档时调用的函数。
 
 :::note
-此事件仅适用于ONLYOFFICE文档企业版和ONLYOFFICE文档开发者版。
+此事件仅适用于 [ONLYOFFICE 文档企业版](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api)和 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 :::danger[Deprecated]
 自版本 7.5 起已弃用，请改用 [onRequestSelectDocument](#onrequestselectdocument)。
@@ -291,9 +334,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onRequestCreateNew() {}
+function onRequestCreateNew() {
+  console.log("Create new document");
+}
 
 const config = {
+  // ...
   events: {
     onRequestCreateNew,
   },
@@ -307,7 +353,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 `view` 或 `fillForms` 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
 
 :::note
-当 [editorConfig](./editor/editor.md#mode) `mode` 参数设置为 `view` 并且 `permission` 为 `edit` 文档([文档权限](./document/permissions.md#edit))设置为 `true` 时，**onRequestEditRights** 参数是强制性的，以便用户可以切换到编辑模式。
+当 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true` 时，此事件是必需的，以便用户可以切换到编辑模式。
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
@@ -323,6 +369,7 @@ function onRequestEditRights() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestEditRights,
   },
@@ -372,6 +419,7 @@ function onRequestHistory() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestHistory,
   },
@@ -398,6 +446,7 @@ function onRequestHistoryClose() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestHistoryClose,
   },
@@ -410,7 +459,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。
 
-文档版本号在 `data` 参数中发送。
+**参数**：
+
+| 参数       | 类型    | 描述           |
+| ---------- | ------- | -------------- |
+| event.data | integer | 文档版本号。   |
 
 要显示与特定文档版本相对应的更改，您必须调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加token来验证参数。如果该方法和 [onRequestHistory](#onrequesthistory) 方法未声明，则不会显示版本历史记录按钮。
 
@@ -437,6 +490,7 @@ function onRequestHistoryData(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestHistoryData,
   },
@@ -447,13 +501,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 其中 `changesUrl` 是 [JSON 对象](../callback-handler.md#changesurl) 中的 `changesUrl`。
 
- 其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
-
+ 
 ## onRequestInsertImage
 
 当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。
 
-文档选择的类型在 `data.c` 参数中指定。
+**参数**：
+
+| 参数         | 类型   | 描述                                                                                    |
+| ------------ | ------ | --------------------------------------------------------------------------------------- |
+| event.data.c | string | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
 
 要将图像插入文件，您必须使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则不会显示*从存储中获取图像*按钮。
 
@@ -480,6 +537,7 @@ function onRequestInsertImage(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestInsertImage,
   },
@@ -488,7 +546,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestMailMergeRecipients
 
@@ -504,7 +561,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，您必须通过调用带有 `path` 和 `windowName` 参数的方法 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open), 来传递指向此选项卡的链接。
 
-具有唯一文件数据、文件路径和新浏览器选项卡名称的对象将在 `data` 参数中发送。
+**参数**：
+
+| 参数                     | 类型   | 描述                   |
+| ------------------------ | ------ | ---------------------- |
+| event.data.path          | string | 文件路径。             |
+| event.data.referenceData | object | 唯一文件数据。         |
+| event.data.windowName    | string | 新浏览器选项卡名称。   |
 
 <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
 
@@ -519,6 +582,7 @@ function onRequestOpen(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestOpen,
   },
@@ -527,13 +591,18 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestReferenceData
 
 当用户尝试通过单击 *数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。
 
-含有来自源文件的唯一文件数据、文件路径或名称以及文件 URL 的对象在 `data` 参数中发送。
+**参数**：
+
+| 参数                     | 类型   | 描述                             |
+| ------------------------ | ------ | -------------------------------- |
+| event.data.referenceData | object | 来自源文件的唯一文件数据。       |
+| event.data.path          | string | 文件路径或名称。                 |
+| event.data.link          | string | 文件 URL。                       |
 
 要通过事件参数指定的文件链接刷新数据，您必须调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。 如果未声明该事件，则不会显示*粘贴链接*和*更新值*按钮。
 
@@ -569,6 +638,7 @@ function onRequestReferenceData(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestReferenceData,
   },
@@ -581,7 +651,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。
 
-具有唯一文件数据和文件路径或名称的对象在 `data` 参数中发送。
+**参数**：
+
+| 参数                     | 类型   | 描述             |
+| ------------------------ | ------ | ---------------- |
+| event.data.referenceData | object | 唯一文件数据。   |
+| event.data.path          | string | 文件路径或名称。 |
 
 单击该按钮时，必须调用 [setReferenceSource](../methods.md#setreferencesource) 方法来更改外部数据的来源。调用该方法时，必须添加token来验证参数。如果未声明事件，则不会显示*更改源*按钮。
 
@@ -612,6 +687,7 @@ function onRequestReferenceSource(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestReferenceSource,
   },
@@ -642,13 +718,14 @@ function onRequestRefreshFile() {
     },
     documentType: "word",
     editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback.ashx",
+      callbackUrl: "https://example.com/url-to-callback",
     },
     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.vbezS2aM8Xf8qFzIAsO-jrIsi7VLxjRYkIkwh5jLTJU",
   });
 }
 
 const config = {
+  // ...
   events: {
     onRequestRefreshFile,
   },
@@ -661,9 +738,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击 *重命名...* 按钮重命名文件时调用的函数。
 
-:::note
-在 6.0 版之前，*重命名...* 按钮仅在 [document.permissions.rename](./document/permissions.md#rename) 设置为 `true` 时可用。
-:::
+**参数**：
+
+| 参数       | 类型   | 描述             |
+| ---------- | ------ | ---------------- |
+| event.data | string | 新文档标题。     |
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -673,9 +752,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ``` ts
 function onRequestRename(event) {
   const title = event.data;
+  console.log(`The user is trying to rename the file to: ${title}`);
 }
 
 const config = {
+  // ...
   events: {
     onRequestRename,
   },
@@ -688,12 +769,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。
 
-如果从历史记录中调用文档版本，则文档版本号将在 `data.version` 参数中发送。此外，如果从[历史对象](../callback-handler.md#history)调用文档更改，则文档链接在 `data.url` 参数中发送。此链接指定的文档类型在 `data.fileType` 参数中发送。
+**参数**：
+
+| 参数                | 类型    | 描述                                                                                   |
+| ------------------- | ------- | -------------------------------------------------------------------------------------- |
+| event.data.version  | integer | 文档版本号。                                                                           |
+| event.data.url      | string  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
+| event.data.fileType | string  | 由 `url` 链接指定的文档类型。                                                          |
 
 调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
 
 :::note
-*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。在 5.5 版之前，仅当 [document.permissions.changeHistory](./document/permissions.md#changehistory) 设置为 `true` 时，*恢复* 按钮才可用。
+*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。
 :::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
@@ -734,6 +821,7 @@ function onRequestRestore(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestRestore,
   },
@@ -746,11 +834,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 其中 `serverVersion` 是保存文档后返回的[历史对象](../callback-handler.md#history)中的 `serverVersion`。
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
-
 ## onRequestSaveAs
 
-当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。文档的标题、其类型和要下载的文档的绝对 URL 在 `data` 参数中发送。如果未声明该方法，将不会显示*另存为...*按钮。
+当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。如果未声明该方法，将不会显示*另存为...*按钮。
+
+**参数**：
+
+| 参数                | 类型   | 描述                         |
+| ------------------- | ------ | ---------------------------- |
+| event.data.fileType | string | 文档类型。                   |
+| event.data.title    | string | 文档标题。                   |
+| event.data.url      | string | 要下载的文档的绝对 URL。     |
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
@@ -764,6 +858,7 @@ function onRequestSaveAs(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSaveAs,
   },
@@ -776,9 +871,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户尝试选择文档以进行比较、合并或插入文本时，将调用该函数。
 
-文档选择类型在 `data.c` 参数中指定。
+**参数**：
 
-要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。
+| 参数         | 类型   | 描述                                                                    |
+| ------------ | ------ | ----------------------------------------------------------------------- |
+| event.data.c | string | 文档选择类型。可以是：`compare`、`combine` 或 `insert-text`。 |
+
+要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
@@ -797,6 +896,7 @@ function onRequestSelectDocument(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSelectDocument,
   },
@@ -805,13 +905,16 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSelectSpreadsheet
 
 当用户尝试通过单击“邮件合并”按钮选择收件人数据时调用的函数。
 
-电子表格选择的类型在 `data.c` 参数中指定。
+**参数**：
+
+| 参数         | 类型   | 描述                                              |
+| ------------ | ------ | ------------------------------------------------- |
+| event.data.c | string | 电子表格选择的类型。可以是：`mailmerge`。   |
 
 要选择收件人数据，您必须调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则*邮件合并*按钮将变淡且无法单击。
 
@@ -830,6 +933,7 @@ function onRequestSelectSpreadsheet(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSelectSpreadsheet,
   },
@@ -838,19 +942,20 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了**文档管理器**和**文档存储服务**的服务器的名称。有关 ONLYOFFICE 文档服务客户端交互的更多信息，请参阅[工作原理](../../get-started/how-it-works/how-it-works.md)部分。
 
 ## onRequestSendNotify
 
 当评论中提到用户时调用的函数。
 
-消息和电子邮件列表在 `data` 参数中发送。注释数据在 `data.actionLink` 参数中接收，然后必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。
+**参数**：
+
+| 参数                    | 类型     | 描述                                                                                                                   |
+| ----------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| event.data.actionLink   | object   | 注释数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| event.data.message      | string   | 消息文本。                                                                                                             |
+| event.data.emails       | string[] | 电子邮件列表。                                                                                                         |
 
 要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
-
-:::note
-在 5.4 版本中，只有在设置了 [onRequestUsers](#onrequestusers) 事件时才能使用 **onRequestSendNotify** 事件。从 5.5 版开始，**onRequestSendNotify** 和 **onRequestUsers** 之间没有这种依赖关系两者都可以独立设置。
-:::
 
 **示例**:
 
@@ -862,6 +967,7 @@ function onRequestSendNotify(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSendNotify,
   },
@@ -898,6 +1004,7 @@ function onRequestSharingSettings() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestSharingSettings,
   },
@@ -920,6 +1027,7 @@ function onRequestStartFilling() {
 }
 
 const config = {
+  // ...
   events: {
     onRequestStartFilling,
   },
@@ -932,9 +1040,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。
 
-从7.4版本开始，可以在 `data.c` 参数中指定操作类型。它可以采用两个值 - `mention` 或 `protect`。在版本 7.4 之前，此事件仅支持mention操作。
+**参数**：
 
-从8.0版本开始，新增 `info` 操作类型，为 `data.id` 参数中指定id的用户设置头像。
+| 参数          | 类型     | 描述                                                                                   |
+| ------------- | -------- | -------------------------------------------------------------------------------------- |
+| event.data.c  | string   | 操作类型。可以是：`mention`、`protect` 或 `info`。                           |
+| event.data.id | string[] | 用户 ID 列表。与 `info` 操作类型一起使用，为指定用户设置头像。 |
 
 要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
@@ -969,6 +1080,7 @@ function onRequestUsers(event) {
 }
 
 const config = {
+  // ...
   events: {
     onRequestUsers,
   },
@@ -989,6 +1101,7 @@ function onSubmit(event) {
 }
 
 const config = {
+  // ...
   events: {
     onSubmit,
   },
@@ -1013,6 +1126,7 @@ function onUserActionRequired() {
 }
 
 const config = {
+  // ...
   events: {
     onUserActionRequired,
   },
@@ -1023,7 +1137,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onWarning
 
-发生警告时调用的函数。警告消息在 `data` 参数中发送。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+发生警告时调用的函数。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+
+**参数**：
+
+| 参数                           | 类型   | 描述         |
+| ------------------------------ | ------ | ------------ |
+| event.data.warningCode         | number | 警告代码。   |
+| event.data.warningDescription  | string | 警告描述。   |
 
 **示例**:
 
@@ -1033,6 +1154,7 @@ function onWarning(event) {
 }
 
 const config = {
+  // ...
   events: {
     onWarning,
   },

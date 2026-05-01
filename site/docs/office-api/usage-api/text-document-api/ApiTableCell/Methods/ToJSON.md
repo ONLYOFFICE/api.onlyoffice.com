@@ -2,25 +2,11 @@
 
 Converts the ApiTableCellPr object into the JSON object.
 
-## Syntax
-
-```javascript
-expression.ToJSON();
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-JSON
+Inherited from [ApiTableCellPr.ToJSON](../../ApiTableCellPr/Methods/ToJSON.md).
 
 ## Example
 
-This example converts the ApiTableCellPr object into the JSON object.
+Convert the table cell properties object into the JSON object.
 
 ```javascript editor-docx
 // How to get a JSON from the table cell object.

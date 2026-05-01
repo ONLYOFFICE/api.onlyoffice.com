@@ -2,29 +2,17 @@
 
 设置字段的切换为关闭属性。
 
-## 语法
-
-```javascript
-expression.SetToggleToOff(bToggle);
-```
-
-`expression` - 表示 [ApiRadiobuttonField](../ApiRadiobuttonField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bToggle | 必需 | boolean |  | 可切换为关闭 |
-
-## 返回值
-
-boolean
+继承自 [ApiCheckboxField.SetToggleToOff](../../ApiCheckboxField/Methods/SetToggleToOff.md)。
 
 ## 示例
 
-此示例为复选框字段设置切换为关闭属性。
+在 PDF 文档中为复选框字段设置切换为关闭属性。
 
 ```javascript editor-pdf
+// How can I set toggle to off using a checkbox field in a PDF document?
+
+// Set toggle to off for a checkbox field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

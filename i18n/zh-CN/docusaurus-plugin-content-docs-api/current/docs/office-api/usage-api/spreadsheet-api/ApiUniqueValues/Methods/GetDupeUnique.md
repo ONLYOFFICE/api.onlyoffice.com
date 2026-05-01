@@ -20,12 +20,12 @@ expression.GetDupeUnique();
 
 ## 示例
 
-此示例演示如何从唯一值条件格式规则获取重复/唯一值设置。
+从唯一值条件格式规则中获取重复/唯一值设置。
 
 ```javascript editor-xlsx
-// How to check whether rule highlights unique or duplicate values.
+// How to check whether rule highlights unique or duplicate values in a spreadsheet.
 
-// Get the duplicate/unique setting from unique values rule.
+// Get the duplicate/unique setting from unique values rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

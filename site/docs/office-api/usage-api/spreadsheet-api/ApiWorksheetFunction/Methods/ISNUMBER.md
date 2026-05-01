@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is a number, and returns true or false.
+Check whether a value is a number, and return true or false in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to check if the cell contains a number.
 
-// Use a function to check whether a range data is a numerical value.
+// Use a function to check whether a range data is a numerical value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

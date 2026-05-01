@@ -2,30 +2,16 @@
 
 从当前文本属性获取粗体属性。
 
-## 语法
-
-```javascript
-expression.GetBold();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否为粗体。
+检查 PDF 文档中的文本是否为粗体。
 
 ```javascript editor-pdf
-// How to know whether a text is set to bold or not.
+// How to know whether a text is set to bold or not in a PDF document.
 
-// Get the text properties of the run and find whether it is bold or not.
+// Get the text properties of the run and find whether it is bold or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
-
 ```

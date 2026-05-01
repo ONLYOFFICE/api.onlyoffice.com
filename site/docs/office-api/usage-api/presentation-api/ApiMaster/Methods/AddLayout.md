@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example adds a layout to the specified slide master.
+Add a layout to the specified slide master.
 
 ```javascript editor-pptx
 // Create a layout and add it to the slide master.
@@ -52,5 +52,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after adding new layout: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -22,10 +22,10 @@ JSON
 
 ## 示例
 
-此示例将表格对象转换为 JSON 对象。
+在演示文稿中将表格对象转换为 JSON 对象。
 
 ```javascript editor-pptx
-// How to get JSON object from the table.
+// How to get JSON object from the table in a presentation.
 
 // Get a slide by its index, convert its table to JSON and create another one from the JSON.
 
@@ -45,5 +45,4 @@ const paragraph = Api.CreateParagraph();
 paragraph.AddText("Class type = " + type);
 content.Push(paragraph);
 slide.AddObject(tableFromJSON);
-
 ```

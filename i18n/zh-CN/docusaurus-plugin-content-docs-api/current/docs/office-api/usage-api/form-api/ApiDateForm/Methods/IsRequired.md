@@ -2,25 +2,11 @@
 
 检查当前表单是否为必填项。
 
-## 语法
-
-```javascript
-expression.IsRequired();
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.IsRequired](../../ApiFormBase/Methods/IsRequired.md)。
 
 ## 示例
 
-此示例检查当前表单是否为必填项。
+检查当前表单是否为必填。
 
 ```javascript editor-forms
 // How to know whether a text form is required or not.

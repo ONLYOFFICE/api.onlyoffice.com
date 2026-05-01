@@ -2,32 +2,16 @@
 
 Sets the layout subtotal location.
 
-## Syntax
-
-```javascript
-expression.SetLayoutSubtotalLocation(type);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md) |  | The layout subtotal location. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutSubtotalLocation](../../ApiPivotField/Methods/SetLayoutSubtotalLocation.md).
 
 ## Example
 
-This example shows how to set a layout subtotal location of a pivot field.
+Set a layout subtotal location of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout subtotal location.
+// How to change a pivot field layout subtotal location in a spreadsheet.
 
-// Create a pivot table, add data to it then set layout subtotal location of a specified pivot.
+// Create a pivot table, add data to it then set layout subtotal location of a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ string \| number \| null
 
 ## Example
 
-This example shows how to get the value of an icon criterion.
+Get the value of an icon criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the threshold value from an icon set criterion.
+// How to retrieve the threshold value from an icon set criterion in a spreadsheet.
 
-// Get the value used for criterion threshold comparison.
+// Get the value used for criterion threshold comparison in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let secondCriterion = criteria[1];
 let criterionValue = secondCriterion.GetValue();
 
 worksheet.GetRange("B1").SetValue("Second criterion value: " + criterionValue);
-
 ```

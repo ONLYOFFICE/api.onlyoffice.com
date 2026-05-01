@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the placeholder text from the content control.
+Get the placeholder text from the content control in a document.
 
 ```javascript editor-docx
-// How to display the placeholder text of the inline text control.
+// How to display the placeholder text of the inline text control in a document.
 
-// Get the inline content control and show its placeholder text.
+// Get the inline content control and show its placeholder text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

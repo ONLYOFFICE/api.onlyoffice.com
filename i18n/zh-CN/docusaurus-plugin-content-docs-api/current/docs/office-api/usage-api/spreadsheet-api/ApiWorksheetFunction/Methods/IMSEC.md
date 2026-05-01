@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的正割。
+在电子表格中返回复数的正割值。
 
 ```javascript editor-xlsx
-// How to get the secant.
+// How to get the secant in a spreadsheet.
 
-// Use a function to get the secant of a complex number.
+// Use a function to get the secant of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

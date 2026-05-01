@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | ids | string[] | 已获得焦点的内容控件 ID 数组。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onShowContentControlTrack", (ids) => {
     console.log("event: onShowContentControlTrack");
@@ -16,4 +18,3 @@ window.Asc.plugin.attachEditorEvent("onShowContentControlTrack", (ids) => {
     }
 });
 ```
-

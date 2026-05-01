@@ -24,10 +24,12 @@ boolean
 
 ## Example
 
-How to color a chart seria.
+How to color a chart seria in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series background.
+// Create a chart, set its properties and its series background in a PDF document.
+
+// Set series fill using a chart object in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +46,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

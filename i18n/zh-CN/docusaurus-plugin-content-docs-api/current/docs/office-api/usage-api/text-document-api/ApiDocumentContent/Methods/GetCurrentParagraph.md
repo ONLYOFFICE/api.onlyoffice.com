@@ -20,9 +20,13 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-此示例展示如何从文档内容获取当前段落。
+从文档中的文档内容获取当前段落。
 
 ```javascript editor-docx
+// How do I get current paragraph in a document?
+
+// Get current paragraph using a document content object.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -40,5 +44,4 @@ docContent.Push(newParagraph);
 
 const currentParagraph = docContent.GetCurrentParagraph();
 currentParagraph.AddText("(Current paragraph detected!)");
-
 ```

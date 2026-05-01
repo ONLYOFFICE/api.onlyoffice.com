@@ -22,9 +22,13 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example shows how to apply double strikeout formatting to a paragraph inside a shape.
+Apply double strikeout formatting to a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set double strikeout in a spreadsheet?
+
+// Set double strikeout using a paragraph object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(150, 110, 90));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetDoubleStrikeout(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has no strikeout.');
 content.Push(paragraph2);
-
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例删除范围中的所有内容。
+在文档中删除范围的所有内容。
 
 ```javascript editor-docx
-// How to clear the content of the range.
+// How to clear the content of the range in a document.
 
-// Delete the text from the content.
+// Delete the text from the content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

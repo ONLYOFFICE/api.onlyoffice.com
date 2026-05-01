@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to return the true logical value.
+Return the true logical value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a true value.
+// How to get a true value in a spreadsheet.
 
-// Use a function to return true value.
+// Use a function to return true value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,5 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.XOR(logical1, logical2); //Works on XOR gate logic
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

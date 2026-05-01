@@ -23,7 +23,7 @@ boolean
 
 ## 示例
 
-此示例向 PDF 文档添加段落。
+向 PDF 文档添加段落。
 
 ```javascript editor-pdf
 // How to create an element, add it to a shape and insert the shape to the page.
@@ -45,5 +45,4 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 docContent.AddElement(paragraph);
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

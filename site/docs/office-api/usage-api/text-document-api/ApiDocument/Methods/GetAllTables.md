@@ -2,25 +2,11 @@
 
 Returns an array of all tables from the current document content.
 
-## Syntax
-
-```javascript
-expression.GetAllTables();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiTable](../../ApiTable/ApiTable.md)[]
+Inherited from [ApiDocumentContent.GetAllTables](../../ApiDocumentContent/Methods/GetAllTables.md).
 
 ## Example
 
-This example showh how to get an array of all tables from the document content.
+Get an array of all tables from the document content.
 
 ```javascript editor-docx
 // Get all tables added to the document.

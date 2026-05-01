@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies if the text field should be miltiline.
+Specify if the text field should be miltiline in a document.
 
 ```javascript editor-forms
 // How to set the first text form from this document multiline.

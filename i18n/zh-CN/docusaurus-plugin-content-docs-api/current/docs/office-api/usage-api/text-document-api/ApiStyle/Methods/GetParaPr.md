@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-此示例展示如何获取当前样式的段落属性。
+获取文档中当前样式的段落属性。
 
 ```javascript editor-docx
-// How to get properties of the paragraph.
+// How to get properties of the paragraph in a document.
 
-// Display the table properties from the default paragraph style.
+// Display the table properties from the default paragraph style in a document.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");

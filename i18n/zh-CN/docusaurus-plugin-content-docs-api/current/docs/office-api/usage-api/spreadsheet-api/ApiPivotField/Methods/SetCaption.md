@@ -22,12 +22,12 @@ expression.SetCaption(caption);
 
 ## 示例
 
-此示例展示如何设置透视字段标题。
+在电子表格中设置透视字段的标题。
 
 ```javascript editor-xlsx
-// How to rename a pivot field caption.
+// How to rename a pivot field caption in a spreadsheet.
 
-// Create a pivot table, add data to it then rename a specified pivot field's caption.
+// Create a pivot table, add data to it then rename a specified pivot field's caption in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

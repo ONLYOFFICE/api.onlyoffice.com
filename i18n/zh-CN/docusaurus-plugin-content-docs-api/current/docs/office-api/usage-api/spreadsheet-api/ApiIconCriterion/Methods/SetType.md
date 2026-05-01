@@ -22,9 +22,13 @@ expression.SetType(type);
 
 ## 示例
 
-此示例展示如何为图标条件设置条件值类型。
+在电子表格中设置图标条件的条件值类型。
 
 ```javascript editor-xlsx
+// How to set type for an icon criterion in a spreadsheet?
+
+// Set type and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Metrics');
 worksheet.GetRange('A2').SetValue(90);
@@ -40,5 +44,4 @@ const secondCriterion = criteria[1];
 worksheet.GetRange('B1').SetValue('Type before: ' + secondCriterion.GetType());
 secondCriterion.SetType('xlConditionValueNumber');
 worksheet.GetRange('B2').SetValue('Type after: ' + secondCriterion.GetType());
-
 ```

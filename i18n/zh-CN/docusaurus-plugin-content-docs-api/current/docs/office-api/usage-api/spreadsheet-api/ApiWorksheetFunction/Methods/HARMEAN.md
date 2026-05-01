@@ -22,17 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何返回正数数据集的调和平均值：倒数的算术平均值的倒数。
+在电子表格中返回正数数据集的调和平均数：倒数的算术平均数的倒数。
 
 ```javascript editor-xlsx
-// How to calculate the harmonic mean of a data set of positive numbers.
+// How to calculate the harmonic mean of a data set of positive numbers in a spreadsheet.
 
-// Use a function to calculate harmonic mean.
+// Use a function to calculate harmonic mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.HARMEAN(28, 16, 878, 800, 1650, 2000);
 worksheet.GetRange("B2").SetValue(ans);
-
-
 ```

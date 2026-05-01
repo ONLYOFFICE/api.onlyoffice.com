@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to estimate the standard deviation based on a sample from the selected database entries.
+Estimate the standard deviation based on a sample from the selected database entries in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the standard deviation based on a sample.
+// How to calculate the standard deviation based on a sample in a spreadsheet.
 
-// Use function to estimate the standard deviation based on a range sample.
+// Use function to estimate the standard deviation based on a range sample in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

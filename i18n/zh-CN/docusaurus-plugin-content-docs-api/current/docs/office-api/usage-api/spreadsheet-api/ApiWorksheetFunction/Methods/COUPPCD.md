@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回结算日之前的上一个付息日。
+在电子表格中返回结算日期之前的上一个息票日期。
 
 ```javascript editor-xlsx
-// How to return the previous coupon date before the settlement date.
+// How to return the previous coupon date before the settlement date in a spreadsheet.
 
-// Use function to get the previous coupon date.
+// Use function to get the previous coupon date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,9 +22,13 @@ expression.GetByNamespace(namespace);
 
 ## Example
 
-This example shows how to retrieve custom XML parts by their namespace.
+Retrieve custom XML parts by their namespace in a document.
 
 ```javascript editor-docx
+// How to get the by namespace for a custom XML parts in a document?
+
+// Get the by namespace and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = "<content xmlns='http://example.com'><text>Example XML</text></content>";

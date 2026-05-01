@@ -2,32 +2,16 @@
 
 Sets the text fill to the current text run.
 
-## Syntax
-
-```javascript
-expression.SetTextFill(oApiFill);
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oApiFill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The color or pattern used to fill the text color. |
-
-## Returns
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md).
 
 ## Example
 
-This example sets the text fill to the current text run.
+Set the text fill to the current text run in a PDF document.
 
 ```javascript editor-pdf
-// How to change a font color.
+// How to change a font color in a PDF document.
 
-// Get the text properties of the run and color its font.
+// Get the text properties of the run and color its font in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +32,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the black text fill set using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

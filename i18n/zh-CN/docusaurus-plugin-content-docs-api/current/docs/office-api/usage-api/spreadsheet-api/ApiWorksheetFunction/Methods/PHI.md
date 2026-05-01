@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回标准正态分布密度函数的值。
+在电子表格中返回标准正态分布密度函数的值。
 
 ```javascript editor-xlsx
-// How to return the value of the density function.
+// How to return the value of the density function in a spreadsheet.
 
-// Use a function to claculate the value of the density function.
+// Use a function to claculate the value of the density function in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -40,5 +40,4 @@ let func = Api.WorksheetFunction;
 let ans = func.PHI(number);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

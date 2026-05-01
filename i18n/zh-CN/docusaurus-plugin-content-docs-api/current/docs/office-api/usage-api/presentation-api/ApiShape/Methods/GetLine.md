@@ -20,10 +20,13 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。
+从形状获取轮廓属性并显示详细信息。创建带笔触的形状，获取并显示笔触详细信息。
 
 ```javascript editor-pptx
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// How to get the line for a shape in a presentation?
+
+// Get the line and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -48,5 +51,4 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```

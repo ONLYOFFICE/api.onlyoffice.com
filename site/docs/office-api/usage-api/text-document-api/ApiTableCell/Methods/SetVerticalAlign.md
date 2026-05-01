@@ -2,27 +2,11 @@
 
 Specifies the vertical alignment for the text contents within the current table cell.
 
-## Syntax
-
-```javascript
-expression.SetVerticalAlign(sType);
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "top" \| "center" \| "bottom" |  | The available types of the vertical alignment for the text contents of the current table cell. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableCellPr.SetVerticalAlign](../../ApiTableCellPr/Methods/SetVerticalAlign.md).
 
 ## Example
 
-This example specifies the vertical alignment for the text contents within the table cell.
+Specify the vertical alignment for the text contents within the table cell.
 
 ```javascript editor-docx
 // Set text vertical alignment to the cell.

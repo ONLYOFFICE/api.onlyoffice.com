@@ -20,14 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-此示例展示如何创建和使用文本属性。
+在文档中创建文本属性并使用。
 
 ```javascript editor-docx
-// Creates the empty text properties object and sets the bold property, font size, capitalized letters, color, and font family to it.
+// Create the empty text properties object and set the bold property, font size, capitalized letters, color, and font family to it in a document.
 
-// How to create the ApiTextPr object and apply it to the Text Art object.
-
-// Creates a Text Art object using the specified text properties.
+// Create a Text Art object using the specified text properties in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

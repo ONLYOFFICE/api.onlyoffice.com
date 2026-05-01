@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example marks a comment as solved.
+Marks a comment as solved in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to resolve a comment.
+// How to resolve a comment in a spreadsheet.
 
 // Resolve a comment, then show its status in the worksheet.
 

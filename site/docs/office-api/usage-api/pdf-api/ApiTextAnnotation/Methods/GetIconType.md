@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets icon type of text annotation.
+Get icon type of text annotation in a PDF document.
 
 ```javascript editor-pdf
+// How to get the icon type for a text annotation in a PDF document?
+
+// Get the icon type and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 textAnnot.SetContents("Annot contents");

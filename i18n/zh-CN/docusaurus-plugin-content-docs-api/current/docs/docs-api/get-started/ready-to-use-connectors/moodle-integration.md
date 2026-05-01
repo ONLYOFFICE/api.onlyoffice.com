@@ -11,19 +11,19 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="JudgGPQo1nQ"/>
 ```
 
-这个[插件](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor)允许用户使用ONLYOFFICE文档在[Moodle](https://moodle.org/)平台上编辑办公文档。
+这个[插件](https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor)允许用户使用ONLYOFFICE 文档在[Moodle](https://moodle.org/)平台上编辑办公文档。
 
 ## 功能特点
 
 - 目前，可编辑的文档格式包括：DOCX、XLSX、PPTX、PDF。
 - 仅支持查看的格式有：TXT、CSV。
-- 该插件会在所需课程页面上创建一个新的**ONLYOFFICE文档**活动，作为其中一种编辑模式。这使得多个用户可以实时协作，并将所做的更改保存回Moodle平台。
+- 该插件会在所需课程页面上创建一个新的**ONLYOFFICE 文档**活动，作为其中一种编辑模式。这使得多个用户可以实时协作，并将所做的更改保存回Moodle平台。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要有一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Moodle和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Moodle发送POST请求。
+您需要有一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Moodle和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Moodle发送POST请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是安装ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是安装ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装Moodle ONLYOFFICE集成插件
 
@@ -37,15 +37,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 插件安装完成后，会打开插件设置页面。或者，您也可以在**插件概览**页面上找到已安装的插件，然后点击**设置**。
 
-- 在**文档编辑服务地址**字段中输入安装了ONLYOFFICE文档的服务器名称：
+- 在**文档编辑服务地址**字段中输入安装了ONLYOFFICE 文档的服务器名称：
 
   ``` sh
   https://<documentserver>/
   ```
 
-  其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被用户浏览器和Moodle服务器访问。Moodle服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+  其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被用户浏览器和Moodle服务器访问。Moodle服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
-- 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Moodle的**设置**页面指定您自己的**文档服务器密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+- 从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Moodle的**设置**页面指定您自己的**文档服务器密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 使用Moodle ONLYOFFICE集成插件
 
@@ -54,7 +54,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 1. 打开所需的课程页面。
 2. 使用右上角的切换器激活**编辑模式**。
 3. 点击**添加活动或资源**。
-4. 在弹出窗口中选择**ONLYOFFICE文档**活动。
+4. 在弹出窗口中选择**ONLYOFFICE 文档**活动。
 5. 输入活动名称，从电脑上传或拖放所需文档，然后点击**保存并显示**按钮。
 
 管理员和教师可以在**文档权限**部分选择是否允许从ONLYOFFICE编辑器内下载或打印文档。

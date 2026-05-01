@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置段落 ID。
+在文档中设置段落 ID。
 
 ```javascript editor-docx
+// How to set para id for a paragraph in a document?
+
+// Set para id and display the result in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText('This paragraph will have a custom ID.');
@@ -40,5 +44,4 @@ const retrievedId = paragraph.GetParaId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Retrieved paragraph ID: ' + retrievedId);
 doc.Push(paragraph);
-
 ```

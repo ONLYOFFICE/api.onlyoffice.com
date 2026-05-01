@@ -22,12 +22,12 @@ expression.CreateColorByName(sPresetColor);
 
 ## Example
 
-This example creates a color selecting it from one of the available color presets.
+Create a color selecting it from one of the available color presets in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to use a color from the preset.
+// How to use a color from the preset in a spreadsheet.
 
-// Find a color by name and use it to change font color
+// Find a color by name and use it to change font color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let color = Api.CreateColorByName("peachPuff");

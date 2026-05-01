@@ -20,9 +20,13 @@ expression.GetAll();
 
 ## 示例
 
-此示例演示如何检索文档中的所有自定义 XML 部件并显示它们。
+获取文档中的所有自定义 XML 部件并显示。
 
 ```javascript editor-docx
+// How do I get all in a document?
+
+// Get all using a custom XML parts object in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText1 = '<products><item><name>Laptop</name><price>999</price></item></products>';

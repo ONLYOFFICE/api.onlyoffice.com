@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets rect diff to circle annotation.
+Set rect diff to circle annotation in a PDF document.
 
 ```javascript editor-pdf
+// How can I set rect diff using a circle annotation in a PDF document?
+
+// Set rect diff for a circle annotation in a PDF document.
+
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

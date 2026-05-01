@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example gets whether the input message is displayed.
+Get whether the input message is displayed in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check if validation shows an input message.
+// How to check if validation shows an input message in a spreadsheet.
 
-// Get the ShowInput setting.
+// Get the ShowInput setting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,5 +34,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetShowInput(true);
 let showInput = validation.GetShowInput();
 worksheet.GetRange("B1").SetValue("Show input: " + showInput);
-
 ```

@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example shows how to get the text from the form.
+Get the text from the form in a document.
 
 ```javascript editor-forms
 // How to get a raw text of a text form.

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the background color to all cells in the table row.
+Set the background color to all cells in the table row.
 
 ```javascript editor-docx
-// Color the row background.
+// Color the row background in a document.
 
-// How to set the rose color as a row background.
+// How to set the rose color as a row background in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
@@ -38,5 +38,4 @@ table.SetStyle(tableStyle);
 let tableRow = table.GetRow(1);
 tableRow.SetBackgroundColor(Api.HexColor('#FF6F3D'));
 doc.Push(table);
-
 ```

@@ -20,12 +20,12 @@ string \| null
 
 ## Example
 
-This example reads the second criteria of a filter.
+Read the second criteria of a filter in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to inspect the additional condition of an AutoFilter column.
+// How to inspect the additional condition of an AutoFilter column in a spreadsheet.
 
-// Use ApiFilter.GetCriteria2() to get the second filter criterion.
+// Use ApiFilter.GetCriteria2() to get the second filter criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Criteria2 (second condition):");
     worksheet.GetRange("D1").SetValue(filter.GetCriteria2());
 }
-
 ```

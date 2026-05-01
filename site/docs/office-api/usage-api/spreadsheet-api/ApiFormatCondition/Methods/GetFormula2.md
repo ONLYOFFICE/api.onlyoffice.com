@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example gets the second formula of a conditional formatting rule.
+Get the second formula of a conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve the second formula from conditional formatting rules.
@@ -50,5 +50,4 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
-
 ```

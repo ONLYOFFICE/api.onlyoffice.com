@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the minor tick mark for the vertical axis.
+Specify the minor tick mark for the vertical axis in a document.
 
 ```javascript editor-docx
-// How to set a minor tick mark using predefined symbols.
+// How to set a minor tick mark using predefined symbols in a document.
 
-// Create a chart, set its properties and minor tick mark for vertical axis.
+// Create a chart, set its properties and minor tick mark for vertical axis in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

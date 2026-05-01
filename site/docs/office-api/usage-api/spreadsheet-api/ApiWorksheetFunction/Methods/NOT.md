@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to сheck if the specified logical value is true or false. The function returns true if the argument is false and false if the argument is true.
+Сheck if the specified logical value is true or false. The function returns true if the argument is false and false if the argument is true in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to negate a boolean value.
+// How to negate a boolean value in a spreadsheet.
 
-// Use a function to get the opposite of the boolean value.
+// Use a function to get the opposite of the boolean value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,5 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.NOT(condition);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

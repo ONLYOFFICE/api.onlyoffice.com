@@ -23,9 +23,13 @@ expression.MillimetersToEmus(mm);
 
 ## Example
 
-This example shows how to convert millimeters to emus.
+Convert millimeters to emus in a PDF document.
 
 ```javascript editor-pdf
+// How can I convert millimeters to emus in a PDF document?
+
+// Convert millimeters to emus in a PDF document.
+
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);
 
@@ -39,5 +43,4 @@ paragraph.AddText(millimeters + ' millimeters are equal to ' + emus + ' emus (va
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes path commands of a star shape and displays command details.
+Analyzes path commands of a star shape and display command details. Shows total command count and first command information in cells.
 
 ```javascript editor-xlsx
-// Shows total command count and first command information in cells.
+// How can I get the command count using a geometry path in a spreadsheet?
+
+// Get the command count for a geometry path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

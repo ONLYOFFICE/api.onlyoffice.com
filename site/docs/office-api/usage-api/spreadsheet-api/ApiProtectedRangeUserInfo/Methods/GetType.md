@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets type of a protected range user.
+Get type of a protected range user in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a user info of a protected range and show its type.
+// How to get an user info of a protected range and show its type in a spreadsheet.
 
-// Get a user type of a protected range and add it to the worksheet.
+// Get an user type of a protected range and add it to the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");

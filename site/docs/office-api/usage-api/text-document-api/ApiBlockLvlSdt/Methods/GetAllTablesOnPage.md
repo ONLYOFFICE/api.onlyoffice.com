@@ -24,9 +24,13 @@ expression.GetAllTablesOnPage(page);
 
 ## Example
 
-This example shows how to get a collection of tables on a given absolute page.
+Get a collection of tables on a given absolute page in a document.
 
 ```javascript editor-docx
+// How can I get all tables on page using a block-level content control in a document?
+
+// Get all tables on page for a block-level content control in a document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

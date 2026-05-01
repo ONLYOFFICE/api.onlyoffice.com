@@ -22,12 +22,12 @@ expression.CreateCheckBoxForm(formPr);
 
 ## 示例
 
-此示例创建两个单选按钮和一个复选框。
+在表单文档中创建两个单选按钮和复选框。
 
 ```javascript editor-forms
 // How to create a radiobutton or a checkbox form and add it to the paragraph.
 
-// Add two radiobuttons and the checkbox to the ApiDocument object.
+// Add two radiobuttons and the checkbox to the document object.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -63,5 +63,4 @@ checkBoxForm = Api.CreateCheckBoxForm({
 });
 paragraph.AddElement(checkBoxForm);
 paragraph.AddText(" Single");
-
 ```

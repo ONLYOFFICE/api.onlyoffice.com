@@ -2,25 +2,11 @@
 
 返回为页字段显示的当前页面（仅对页字段有效）。
 
-## 语法
-
-```javascript
-expression.GetCurrentPage();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string \| number
+继承自 [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的当前页。
+获取电子表格中透视字段的当前页。
 
 ```javascript editor-xlsx
 // How to get a pivot field current page.

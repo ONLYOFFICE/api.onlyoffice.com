@@ -22,12 +22,12 @@ expression.GetParagraph(nPos);
 
 ## 示例
 
-此示例展示如何从范围中的所有段落获取一个段落。
+从文档范围中的所有段落中获取段落。
 
 ```javascript editor-docx
-// Get a paragraph using its index position.
+// Get a paragraph using its index position in a document.
 
-// Make bold the second paragraph of the range.
+// Make bold the second paragraph of the range in a document.
 
 let doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+获取日期表单对象的类类型。
 
 ```javascript editor-forms
-// How to get a class type of ApiDateForm.
+// How can I get the class type of a date form?
 
-// Retrieve class type of ApiDateForm object and insert it to the slide.
+// Get the class type of a date form and display it in the document.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});

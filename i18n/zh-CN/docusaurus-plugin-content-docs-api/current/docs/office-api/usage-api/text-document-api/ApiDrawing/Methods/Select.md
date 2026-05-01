@@ -22,14 +22,12 @@ boolean
 
 ## 示例
 
-此示例选择当前图形对象。
+选择文档中的当前图形对象。
 
 ```javascript editor-docx
-// How to select drawing objects with the cursor.
+// How to select drawing objects with the cursor in a document.
 
-// Create three shapes, select the first one,
-// then select the second shape with isReplace=true (replacing the selection),
-// and finally select the third shape without isReplace parameter (adding to selection).
+// Create three shapes, select the first one, then select the second shape with isReplace=true (replacing the selection), and finally select the third shape without isReplace parameter (adding to selection) in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

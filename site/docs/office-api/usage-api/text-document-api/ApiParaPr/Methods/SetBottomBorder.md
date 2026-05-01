@@ -29,12 +29,12 @@ boolean
 
 ## Example
 
-This example specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings.
+Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings in a document.
 
 ```javascript editor-docx
-// Add the bottom border to the paragraph.
+// Add the bottom border to the paragraph in a document.
 
-// Get the first paragraph and set its border.
+// Get the first paragraph and set its border in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

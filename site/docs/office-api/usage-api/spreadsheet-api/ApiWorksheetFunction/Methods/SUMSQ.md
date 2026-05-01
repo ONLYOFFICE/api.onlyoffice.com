@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the sum of the squares of the arguments.
+Return the sum of the squares of the arguments in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the sum of the squares.
+// How to calculate the sum of the squares in a spreadsheet.
 
-// Use a function to estimate the sum of the squares.
+// Use a function to estimate the sum of the squares in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

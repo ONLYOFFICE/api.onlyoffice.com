@@ -8,6 +8,8 @@ The function called to show which content control has been changed.
 | --------- | ------------- | ----------- |
 | control | [Event_ContentControl](../Enumeration/Event_ContentControl.md) | Defines the content control that has been changed. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeContentControl", (control) => {
     console.log("event: onChangeContentControl");
@@ -19,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onChangeContentControl", (control) => {
     console.log("Appearance: " + control.Appearance);
 });
 ```
-

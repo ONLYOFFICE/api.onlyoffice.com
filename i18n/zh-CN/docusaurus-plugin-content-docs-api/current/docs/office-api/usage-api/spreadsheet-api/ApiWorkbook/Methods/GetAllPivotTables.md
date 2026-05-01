@@ -20,9 +20,13 @@ expression.GetAllPivotTables();
 
 ## 示例
 
-此示例展示如何从工作簿获取数据透视表。
+从电子表格中的工作簿获取数据透视表。
 
 ```javascript editor-xlsx
+// How to get all pivot tables for a workbook in a spreadsheet?
+
+// Get all pivot tables and display the result in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();
 
@@ -41,5 +45,4 @@ Api.InsertPivotNewWorksheet(dataRef);
 workbook.GetAllPivotTables().forEach(function (pivot) {
 	pivot.AddDataField('Price');
 });
-
 ```

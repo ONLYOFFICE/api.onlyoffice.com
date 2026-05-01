@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-This example sets the text spacing measured in twentieths of a point.
+Set the text spacing measured in twentieths of a point in a document.
 
 ```javascript editor-docx
-// How to specify the spacing value of paragraph.
+// How to specify the spacing value of paragraph in a document.
 
-// Indicate the paragraph text space.
+// Indicate the paragraph text space in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

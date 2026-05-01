@@ -13,10 +13,9 @@ Enumeration
 - "none"
 - "out"
 
-
 ## Example
 
-This example specifies the "cross" major tick mark type for the vertical axis.
+Specify the "cross" major tick mark type for the vertical axis.
 
 ```javascript editor-docx
 // How to set major tick label symbol for the chart.

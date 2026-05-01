@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all tables from the slide layout.
+Get an array with all tables from the slide layout.
 
 ```javascript editor-pptx
+// How to get all tables for a layout in a presentation?
+
+// Get all tables and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -54,5 +58,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide layout: " + layout.GetAllTables().length);
 paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().length);
-
 ```

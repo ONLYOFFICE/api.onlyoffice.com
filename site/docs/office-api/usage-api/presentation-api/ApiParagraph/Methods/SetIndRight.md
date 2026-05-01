@@ -2,32 +2,16 @@
 
 Sets the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndRight(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph right side indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md).
 
 ## Example
 
-This example sets the paragraph right side indentation.
+Set the paragraph right side indentation in a presentation.
 
 ```javascript editor-pptx
-// How to set a right side indentation using a paragraph properties.
+// How to set a right side indentation using a paragraph properties in a presentation.
 
-// Create a paragraph setting its right side indentation property.
+// Create a paragraph setting its right side indentation property in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +33,4 @@ paragraph.AddText("This offset is set by the paragraph style. No paragraph inlin
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 slide.AddObject(shape);
-
 ```

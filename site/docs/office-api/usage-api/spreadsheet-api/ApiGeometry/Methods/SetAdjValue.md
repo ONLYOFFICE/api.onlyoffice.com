@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates adjustable custom geometry with guides and connection points.
+Create adjustable custom geometry with guides and connection points. Displays adjustment value in a cell and apply geometry to shape.
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How can I set adj value using a geometry in a spreadsheet?
+
+// Set adj value for a geometry in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all the OLE objects from the slide master.
+Get an array with all the OLE objects from the slide master.
 
 ```javascript editor-pptx
 // How to get all OLE objects from the master of presentation.
@@ -54,5 +54,4 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 master.AddObject(drawing);
-
 ```

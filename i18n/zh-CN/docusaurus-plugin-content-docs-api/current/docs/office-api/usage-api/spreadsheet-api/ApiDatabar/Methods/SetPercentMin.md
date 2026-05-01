@@ -22,10 +22,10 @@ expression.SetPercentMin(percent);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的最小百分比长度。
+设置数据条条件格式规则的最小百分比长度。
 
 ```javascript editor-xlsx
-// How to change the minimum length setting of a data bar.
+// How to change the minimum length setting of a data bar in a spreadsheet.
 
 // Set the minimum percentage length of a data bar conditional formatting rule.
 
@@ -50,5 +50,4 @@ dataBar.SetPercentMin(10);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetPercentMin() + "%");
-
 ```

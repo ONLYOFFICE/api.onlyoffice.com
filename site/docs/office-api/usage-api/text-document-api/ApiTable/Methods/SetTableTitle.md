@@ -2,32 +2,16 @@
 
 Sets the table title (caption).
 
-## Syntax
-
-```javascript
-expression.SetTableTitle(sTitle);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sTitle | Required | string |  | The table title to be set. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableTitle](../../ApiTablePr/Methods/SetTableTitle.md).
 
 ## Example
 
-This example sets the table title.
+Set the table title in a document.
 
 ```javascript editor-docx
-// How to rename the table title.
+// How to rename the table title in a document.
 
-// Create a table and indicate its title.
+// Create a table and indicate its title in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

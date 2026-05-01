@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert EMUs (english metric units) to points.
+Convert EMUs (english metric units) to points in a presentation.
 
 ```javascript editor-pptx
+// How do I convert emus to points in a presentation?
+
+// Convert emus to points and display the result in a presentation.
+
 const emus = 100;
 const points = Api.EmusToPoints(emus);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

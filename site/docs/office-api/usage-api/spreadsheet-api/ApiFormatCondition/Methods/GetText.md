@@ -20,7 +20,7 @@ string
 
 ## Example
 
-This example gets the text value from a text-based conditional formatting rule.
+Get the text value from a text-based conditional formatting rule.
 
 ```javascript editor-xlsx
 // How to retrieve text values from text-based conditional formatting rules.
@@ -47,5 +47,4 @@ let textValue = condition1.GetText();
 
 worksheet.GetRange("C1").SetValue("Text value:");
 worksheet.GetRange("C2").SetValue(textValue);
-
 ```

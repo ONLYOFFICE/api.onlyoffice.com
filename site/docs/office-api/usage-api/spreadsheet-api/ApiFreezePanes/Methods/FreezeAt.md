@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example freezes the specified range in top-and-left-most pane of the worksheet.
+Freeze the specified range in top-and-left-most pane of the worksheet.
 
 ```javascript editor-xlsx
-// How to freeze a specified range of panes.
+// How to freeze a specified range of panes in a spreadsheet.
 
-// Get freeze panes and freeze the specified part.
+// Get freeze panes and freeze the specified part in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

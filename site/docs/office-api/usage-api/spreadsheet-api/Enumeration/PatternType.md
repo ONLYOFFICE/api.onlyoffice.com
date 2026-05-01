@@ -63,10 +63,9 @@ Enumeration
 - "weave"
 - "zigZag"
 
-
 ## Example
 
-This example sets the picture position measured in percent inside the current form.
+Set the picture position measured in percent inside the current form.
 
 ```javascript editor-xlsx
 // How to create a pattern fill indicating its pattern type.
@@ -78,5 +77,4 @@ let fill = Api.CreatePatternFill(
 	Api.RGB(0, 225, 0),
 	Api.RGB(255, 0, 0)
 );
-
 ```

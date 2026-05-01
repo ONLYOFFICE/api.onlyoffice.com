@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回分布的偏度：描述分布围绕其平均值的不对称程度。
+在电子表格中返回分布的偏度：分布围绕其均值的不对称程度的表征。
 
 ```javascript editor-xlsx
-// How to calaculate the skewness of a distribution.
+// How to calaculate the skewness of a distribution in a spreadsheet.
 
-// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean.
+// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -42,5 +42,4 @@ let func = Api.WorksheetFunction;
 let ans = func.SKEW(1, 0, 0, 0, 0, 1, 0, 0, 2, 3, 4, 5, 6, 8, 10, 12);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

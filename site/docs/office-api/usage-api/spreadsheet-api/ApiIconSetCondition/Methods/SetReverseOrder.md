@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to reverse the icon order display.
+Reverse the icon order display in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to change the display order of icons in icon set formatting.
 
-// Reverse the order in which icons are displayed.
+// Reverse the order in which icons are displayed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Normal icon order");
 iconCondition.SetReverseOrder(true);
 worksheet.GetRange("B2").SetValue("After: Reversed icon order");
-
 ```

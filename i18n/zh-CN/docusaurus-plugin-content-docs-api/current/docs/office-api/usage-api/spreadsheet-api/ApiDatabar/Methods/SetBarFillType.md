@@ -22,10 +22,10 @@ expression.SetBarFillType(fillType);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的填充类型。
+设置数据条条件格式规则的条形填充类型。
 
 ```javascript editor-xlsx
-// How to change the fill type setting of a data bar.
+// How to change the fill type setting of a data bar in a spreadsheet.
 
 // Set the bar fill type of a data bar conditional formatting rule.
 
@@ -50,5 +50,4 @@ dataBar.SetBarFillType("xlDataBarFillSolid");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetBarFillType());
-
 ```

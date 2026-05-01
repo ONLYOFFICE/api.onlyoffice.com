@@ -21,7 +21,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties from the form.
+Get the text properties from the form in a document.
 
 ```javascript editor-docx
 // How to get a text properties of a text form.

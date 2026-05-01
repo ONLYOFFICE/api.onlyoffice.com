@@ -2,6 +2,10 @@
 
 The content control properties.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -18,11 +22,6 @@ The content control properties.
 | Shd | Object | The background shading properties. |
 | Shd.Color | [Color](../Enumeration/Color.md) | The shading color in RGBA format. |
 | Tag | string | A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code. |
-## Type
-
-Object
-
-
 
 ## Example
 

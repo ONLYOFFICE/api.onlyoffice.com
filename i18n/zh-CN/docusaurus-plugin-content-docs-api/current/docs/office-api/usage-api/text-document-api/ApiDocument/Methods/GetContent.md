@@ -2,27 +2,11 @@
 
 从当前 ApiDocumentContent 对象返回文档元素数组。
 
-## 语法
-
-```javascript
-expression.GetContent(bGetCopies);
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bGetCopies | 必需 | boolean |  | 指定是否返回文档元素的副本。 |
-
-## 返回值
-
-[DocumentElement](../../Enumeration/DocumentElement.md)[]
+继承自 [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md)。
 
 ## 示例
 
-此示例展示如何从文档内容获取文档元素数组。
+从文档中的文档内容获取文档元素数组。
 
 ```javascript editor-docx
 // Retrieve each document element.

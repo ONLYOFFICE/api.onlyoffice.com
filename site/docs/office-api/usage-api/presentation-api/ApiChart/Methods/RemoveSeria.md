@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to remove the specified series from the current chart.
+Remove the specified series from the current chart in a presentation.
 
 ```javascript editor-pptx
-// How to delete a chart seria indicating its index.
+// How to delete a chart seria indicating its index in a presentation.
 
-// Create a chart then delete a seria from it.
+// Create a chart then delete a seria from it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ chart.SetTitle("The Estimated Costs series was removed from the current chart.")
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 slide.AddObject(chart);
-
 ```

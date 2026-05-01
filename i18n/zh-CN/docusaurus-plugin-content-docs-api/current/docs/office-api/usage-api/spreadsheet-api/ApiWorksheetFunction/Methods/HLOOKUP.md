@@ -25,12 +25,12 @@ number \| string
 
 ## 示例
 
-此示例演示如何在表或值数组的首行中查找值，并从指定行返回同一列中的值。
+在电子表格中在表格或值数组的第一行中查找值，并从指定行返回同一列中的值。
 
 ```javascript editor-xlsx
-// How to find a value from the row of a table.
+// How to find a value from the row of a table in a spreadsheet.
 
-// Use a function to look up a value from a table or an array and return found value.
+// Use a function to look up a value from a table or an array and return found value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

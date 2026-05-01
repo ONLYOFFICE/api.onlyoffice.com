@@ -3,32 +3,16 @@
 设置表示字段在指定数据透视表报表中
 位置的透视字段方向值。
 
-## 语法
-
-```javascript
-expression.SetOrientation(type);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 透视字段方向类型。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的方向。
+在电子表格中设置透视字段的方向。
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation.
+// How to change a pivot field orientation in a spreadsheet.
 
-// Create a pivot table, add data to it then change an orientation a specified pivot.
+// Create a pivot table, add data to it then change an orientation a specified pivot in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

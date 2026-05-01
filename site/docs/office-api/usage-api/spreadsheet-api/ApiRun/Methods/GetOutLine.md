@@ -2,30 +2,16 @@
 
 Gets the text outline from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetOutLine();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiStroke](../../ApiStroke/ApiStroke.md)
+Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
 ## Example
 
-This example gets an outline property of a text.
+Get an outline property of a text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is outlined or not.
+// How to find out whether a text is outlined or not in a spreadsheet.
 
-// Get a text outline property type, for example as a stroke.
+// Get a text outline property type, for example as a stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

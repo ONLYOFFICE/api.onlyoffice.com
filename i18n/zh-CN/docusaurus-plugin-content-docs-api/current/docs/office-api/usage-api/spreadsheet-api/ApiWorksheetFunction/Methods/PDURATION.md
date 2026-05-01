@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回投资达到指定值所需的期数。
+在电子表格中返回投资达到指定值所需的期数。
 
 ```javascript editor-xlsx
-// How to get periods required to get a value of an investment.
+// How to get periods required to get a value of an investment in a spreadsheet.
 
-// Use a function to get the number of periods required by an investment to reach a specified value.
+// Use a function to get the number of periods required by an investment to reach a specified value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

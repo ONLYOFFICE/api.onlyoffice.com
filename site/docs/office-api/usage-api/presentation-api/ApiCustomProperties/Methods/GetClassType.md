@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to get the class type of ApiCustomProperties.
+Check the class type returned by a custom properties in a presentation.
 
 ```javascript editor-pptx
+// How do I check what type a custom properties object is in a presentation?
+
+// Retrieve and output the class type string for a custom properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 const classType = customProps.GetClassType();
@@ -36,5 +40,4 @@ slide.AddObject(shape);
 
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
-
 ```

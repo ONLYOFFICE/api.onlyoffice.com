@@ -2,32 +2,16 @@
 
 Specifies the algorithm which will be used to lay out the contents of the current table within the document.
 
-## Syntax
-
-```javascript
-expression.SetTableLayout(sType);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "autofit" \| "fixed" |  | The type of the table layout in the document. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableLayout](../../ApiTablePr/Methods/SetTableLayout.md).
 
 ## Example
 
-This example specifies the algorithm which will be used to lay out the contents of the table within the document.
+Specify the algorithm which will be used to lay out the contents of the table within the document.
 
 ```javascript editor-docx
-// How to set the table layout.
+// How to set the table layout in a document.
 
-// Create a table and make its layout fixed.
+// Create a table and make its layout fixed in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes cloud shape path properties on a page.
+Analyzes cloud shape path properties on a page. Displays comprehensive path information in a text shape.
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How can I get the fill using a geometry path in a PDF document?
+
+// Get the fill for a geometry path in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all chart objects from the current presentation.
+Get all chart objects from the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How can I get all charts using a presentation in a presentation?
+
+// Get all charts for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,5 +52,4 @@ const chartsCount = presentation.GetAllCharts().length;
 paragraph.AddText('Charts: ' + chartsCount);
 label.SetPosition(36000, 170 * 36000);
 slide.AddObject(label);
-
 ```

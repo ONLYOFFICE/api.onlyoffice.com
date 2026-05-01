@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the chart legend.
+Set the outline to the chart legend in a presentation.
 
 ```javascript editor-pptx
-// How to outline a chart legend.
+// How to outline a chart legend in a presentation.
 
-// Create a chart, set its properties and its legend's outline.
+// Create a chart, set its properties and its legend's outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetLegendOutLine(stroke);
 slide.AddObject(chart);
-
 ```

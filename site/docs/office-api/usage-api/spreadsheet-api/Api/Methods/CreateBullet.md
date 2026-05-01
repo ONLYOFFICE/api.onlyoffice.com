@@ -22,12 +22,12 @@ expression.CreateBullet(sSymbol);
 
 ## Example
 
-This example creates a bullet for a paragraph.
+Create a bullet for a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// Add paragraph with a custom bullet.
+// Add paragraph with a custom bullet in a spreadsheet.
 
-// How to create a custom bullet for a paragraph.
+// How to create a custom bullet for a paragraph in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

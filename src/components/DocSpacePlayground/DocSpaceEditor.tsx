@@ -1,21 +1,21 @@
-'use client'
+'use client';
 
-import {useCallback} from 'react'
-import MonacoEditor from '@monaco-editor/react'
-import PlayIcon from '@site/static/icons/icon-play.svg'
-import styles from './DocSpacePlayground.module.css'
+import {useCallback} from 'react';
+import MonacoEditor from '@monaco-editor/react';
+import PlayIcon from '@site/static/icons/icon-play.svg';
+import styles from './DocSpacePlayground.module.css';
 
 interface DocSpaceEditorProps {
-    value: string
-    onChange: (value: string) => void
-    onRun: () => void
-    theme: string
+    value: string;
+    onChange: (value: string) => void;
+    onRun: () => void;
+    theme: string;
 }
 
 export const DocSpaceEditor = ({value, onChange, onRun, theme}: DocSpaceEditorProps) => {
     const handleChange = useCallback((newValue: string | undefined) => {
-        if (newValue !== undefined) onChange(newValue)
-    }, [onChange])
+        if (newValue !== undefined) onChange(newValue);
+    }, [onChange]);
 
     return (
         <div className={styles.editorContainer}>
@@ -38,5 +38,5 @@ export const DocSpaceEditor = ({value, onChange, onRun, theme}: DocSpaceEditorPr
                 }}
             />
         </div>
-    )
-}
+    );
+};

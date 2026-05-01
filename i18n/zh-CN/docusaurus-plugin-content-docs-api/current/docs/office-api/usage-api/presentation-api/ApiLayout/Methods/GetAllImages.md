@@ -20,7 +20,7 @@ expression.GetAllImages();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片版式中所有图像对象的数组。
+获取演示文稿中幻灯片版式的所有图像对象数组。
 
 ```javascript editor-pptx
 // How to get all images from the layout of presentation.
@@ -52,5 +52,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc('left');
 paragraph.AddText('Class type = ' + type);
 slide.AddObject(shape);
-
 ```

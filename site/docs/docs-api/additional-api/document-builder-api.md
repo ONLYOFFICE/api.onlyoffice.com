@@ -4,7 +4,9 @@ import APITable from '@site/src/components/APITable/APITable';
 
 For the interaction with the **web document builder service** the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the `https://documentserver/docbuilder` address where `documentserver` is the name of the server with the ONLYOFFICE Docs installed.
 
-Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL QueryString with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
+:::tip
+Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the query string with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
+:::
 
 ## Request parameters and their description
 

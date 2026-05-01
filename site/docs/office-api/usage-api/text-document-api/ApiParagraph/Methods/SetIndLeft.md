@@ -2,32 +2,16 @@
 
 Sets the paragraph left side indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndLeft(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph left side indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndLeft](../../ApiParaPr/Methods/SetIndLeft.md).
 
 ## Example
 
-This example sets the paragraph left side indentation.
+Set the paragraph left side indentation in a document.
 
 ```javascript editor-docx
-// How to set the indentation for the paragraph left side.
+// How to set the indentation for the paragraph left side in a document.
 
-// Create a new paragraph and set its left side indentation.
+// Create a new paragraph and set its left side indentation in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

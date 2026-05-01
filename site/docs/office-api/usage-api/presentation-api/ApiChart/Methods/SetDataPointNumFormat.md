@@ -25,7 +25,7 @@ boolean
 
 ## Example
 
-This example sets "0.00" numeric format for chart.
+Set "0.00" numeric format for chart.
 
 ```javascript editor-pptx
 // How to change a number format of a data point.
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

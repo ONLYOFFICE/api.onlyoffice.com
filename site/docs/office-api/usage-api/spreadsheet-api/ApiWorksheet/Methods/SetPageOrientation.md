@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the page orientation.
+Set the page orientation.
 
 ```javascript editor-xlsx
 // How to change a page orientation.

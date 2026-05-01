@@ -20,12 +20,12 @@ expression.GetSelectedShapes();
 
 ## 示例
 
-此示例展示如何从工作表中获取选中的形状。
+在电子表格中获取工作表中的选定形状。
 
 ```javascript editor-xlsx
-// How to get seletectd shapes.
+// How to get seletectd shapes in a spreadsheet.
 
-// Get selected shapes as an array.
+// Get selected shapes as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -50,5 +50,4 @@ if (shapes[0]) {
 	paragraph.AddText("aligning it vertically by the bottom.");
 	content.Push(paragraph);
 }
-
 ```

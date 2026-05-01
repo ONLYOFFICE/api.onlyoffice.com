@@ -2,30 +2,16 @@
 
 Gets the text spacing from the current text properties measured in twentieths of a point.
 
-## Syntax
-
-```javascript
-expression.GetSpacing();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
 ## Example
 
-This example shows how to find out a text is spacing size.
+Find out a text is spacing size in a PDF document.
 
 ```javascript editor-pdf
-// How to know a text spacing.
+// How to know a text spacing in a PDF document.
 
-// Get the text properties of the run and display its spacing size.
+// Get the text properties of the run and display its spacing size in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```

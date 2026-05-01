@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回以 x + yi 或 x + yj 形式表示的两个复数的和。
+在电子表格中返回以 x + yi 或 x + yj 形式表示的两个复数之和。
 
 ```javascript editor-xlsx
-// How to add two complex numbers.
+// How to add two complex numbers in a spreadsheet.
 
-// Use a function to get the sum of two complex number.
+// Use a function to get the sum of two complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

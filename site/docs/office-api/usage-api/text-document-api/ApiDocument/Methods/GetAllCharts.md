@@ -2,30 +2,16 @@
 
 Returns a collection of chart objects from the document content.
 
-## Syntax
-
-```javascript
-expression.GetAllCharts();
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiChart](../../ApiChart/ApiChart.md)[]
+Inherited from [ApiDocumentContent.GetAllCharts](../../ApiDocumentContent/Methods/GetAllCharts.md).
 
 ## Example
 
-This example shows how to get a collection of chart objects from the document content.
+Get a collection of chart objects from the document content in a document.
 
 ```javascript editor-docx
 // Get all charts from the document.
 
-// How to retrieve all charts and set horizontal gridlines to the first one.
+// How to retrieve all charts and set horizontal gridlines to the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

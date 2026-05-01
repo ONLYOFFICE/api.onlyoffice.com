@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例向单元格范围添加新名称。
+为单元格范围添加新名称。
 
 ```javascript editor-xlsx
 // How to name a range of cells.
 
-// Name a range according its purpose.
+// Name a range according its purpose in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

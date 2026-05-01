@@ -14,10 +14,9 @@
 - "clockwise90"
 - "counterclockwise90"
 
-
 ## 示例
 
-此示例设置文档中水印的方向。
+设置文档中水印的方向。
 
 ```javascript editor-docx
 // How to set a watermark direction.

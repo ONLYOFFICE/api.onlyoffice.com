@@ -2,30 +2,16 @@
 
 返回段落样式方法。
 
-## 语法
-
-```javascript
-expression.GetStyle();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+继承自 [ApiParaPr.GetStyle](../../ApiParaPr/Methods/GetStyle.md)。
 
 ## 示例
 
-此示例展示如何获取段落样式。
+获取文档中的段落样式。
 
 ```javascript editor-docx
-// How to get the style of the paragraph.
+// How to get the style of the paragraph in a document.
 
-// Get the paragraph style and display its name.
+// Get the paragraph style and display its name in a document.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");

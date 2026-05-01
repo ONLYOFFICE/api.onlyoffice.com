@@ -20,9 +20,13 @@ expression.GetParentContentControl();
 
 ## 示例
 
-此示例展示如何获取包含内容控件的内容控件。
+获取文档中包含该内容控件的内容控件。
 
 ```javascript editor-docx
+// How to get the parent content control for a block-level content control in a document?
+
+// Get the parent content control and display the result in a document.
+
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a parent block text content control.");
@@ -31,5 +35,4 @@ let innerSdt = Api.CreateBlockLvlSdt();
 innerSdt.GetContent().GetElement(0).AddText("This is a block text content control added in another content control.");
 blockLvlSdt.AddElement(innerSdt, 0);
 innerSdt.GetParentContentControl().SetAlias("Parent content control");
-
 ```

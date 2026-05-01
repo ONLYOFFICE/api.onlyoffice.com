@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Get the paragraph contents justification in a PDF document.
 
 ```javascript editor-pdf
-// How to set a justification of a paragraph property.
+// How to set a justification of a paragraph property in a PDF document.
 
 // Change a justification type of a text property from the page.
 
@@ -52,5 +52,4 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
-
 ```

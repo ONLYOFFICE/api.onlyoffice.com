@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例检查当前表单是否为必填项。
+检查当前表单是否为必填。
 
 ```javascript editor-forms
 // How to know whether a text form is required or not.

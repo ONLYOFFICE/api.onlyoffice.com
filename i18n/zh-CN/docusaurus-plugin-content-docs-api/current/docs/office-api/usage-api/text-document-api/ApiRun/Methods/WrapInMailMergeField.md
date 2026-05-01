@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例将文本块包装在邮件合并域中。
+在文档中用邮件合并字段包装 run。
 
 ```javascript editor-docx
-// How to create a run wrapped in 'Mail Merge Field'.
+// How to create a run wrapped in 'Mail Merge Field' in a document.
 
-// Add a text run to the mail merge field.
+// Add a text run to the mail merge field in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

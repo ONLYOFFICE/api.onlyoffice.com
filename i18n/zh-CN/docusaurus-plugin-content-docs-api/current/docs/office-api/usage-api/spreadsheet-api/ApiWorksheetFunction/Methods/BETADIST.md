@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回 beta 概率分布函数。
+在电子表格中返回 Beta 概率分布函数。
 
 ```javascript editor-xlsx
-// How to get a result from beta probability distribution function.
+// How to get a result from beta probability distribution function in a spreadsheet.
 
-// Use function to get the beta probability distribution function.
+// Use function to get the beta probability distribution function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

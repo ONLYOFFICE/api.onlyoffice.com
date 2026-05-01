@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+在文档中设置以磅的二十分之一为单位的文本间距。
 
 ```javascript editor-docx
-// How to set the text spacing size.
+// How to set the text spacing size in a document.
 
-// Create a text run object, update its spacing.
+// Create a text run object, update its spacing in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

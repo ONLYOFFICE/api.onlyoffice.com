@@ -20,9 +20,13 @@ Date
 
 ## Example
 
-This example demonstrates how to get the creation date of a workbook using the ApiCore.
+Get the creation date of a workbook using the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I get the created using a core properties in a spreadsheet?
+
+// Get the created for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Created: " + createdDate);
-
 ```

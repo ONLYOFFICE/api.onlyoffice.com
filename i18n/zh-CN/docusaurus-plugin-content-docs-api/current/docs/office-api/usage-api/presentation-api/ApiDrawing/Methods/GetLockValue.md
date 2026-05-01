@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例获取形状的锁定值并将其插入演示文稿。
+获取形状的锁定值并将其插入演示文稿。
 
 ```javascript editor-pptx
 // How to get a slide shape's lock value and display it in the slide.
@@ -45,5 +45,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 slide.AddObject(shape);
-
 ```

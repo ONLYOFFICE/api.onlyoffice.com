@@ -11,7 +11,7 @@ Invariants:
 
 ## Type
 
-Object
+[pt](../Enumeration/pt.md)[]
 
 ## Properties
 

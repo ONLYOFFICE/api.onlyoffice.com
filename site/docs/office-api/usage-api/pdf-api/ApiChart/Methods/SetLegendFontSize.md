@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to resize a font of a chart legend.
+How to resize a font of a chart legend in a PDF document.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's font size.
+// Create a chart, set its properties and its legend's font size in a PDF document.
+
+// Use chart to set legend font size in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

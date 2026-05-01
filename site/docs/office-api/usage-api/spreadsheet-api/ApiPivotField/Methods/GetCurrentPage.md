@@ -20,7 +20,7 @@ string \| number
 
 ## Example
 
-This example shows how to get a current page of a pivot field.
+Get a current page of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a pivot field current page.

@@ -21,7 +21,6 @@ Object
 | type | [FormSpecificType](../Enumeration/FormSpecificType.md) | The form type. |
 | value | string \| boolean | The current field value. |
 
-
 ## Example
 
 Specify the form data that can be used to create the form.
@@ -36,5 +35,4 @@ let formData = {
 	value: "OnlyOffice",
 	type: "text"
 };
-
 ```

@@ -2,7 +2,6 @@
 
 Represents the ApiTableCell class.
 
-
 ## Methods
 
 | Method | Returns | Description |

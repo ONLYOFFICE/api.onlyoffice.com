@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example merges the selected cell range into a single cell or a cell row.
+Merge the selected cell range into a single cell or a cell row.
 
 ```javascript editor-xlsx
 // How to get a range using cell addresses and merge them into one.

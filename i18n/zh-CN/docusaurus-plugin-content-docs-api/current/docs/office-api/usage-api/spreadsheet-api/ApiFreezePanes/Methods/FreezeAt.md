@@ -22,12 +22,12 @@ expression.FreezeAt(frozenRange);
 
 ## 示例
 
-此示例在工作表的最上方和最左侧窗格中冻结指定范围。
+在工作表最左上方的窗格中冻结指定范围。
 
 ```javascript editor-xlsx
-// How to freeze a specified range of panes.
+// How to freeze a specified range of panes in a spreadsheet.
 
-// Get freeze panes and freeze the specified part.
+// Get freeze panes and freeze the specified part in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

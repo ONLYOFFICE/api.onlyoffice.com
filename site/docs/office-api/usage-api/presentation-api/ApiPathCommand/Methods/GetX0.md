@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve in a presentation.
+Extracts control points from a cubic bezier curve in a presentation. Displays all control point coordinates in a text shape.
 
 ```javascript editor-pptx
-// Displays all control point coordinates in a text shape.
+// How to get the x0 for a path command in a presentation?
+
+// Get the x0 and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-从三次贝塞尔曲线命令中提取控制点。
+从三次贝塞尔曲线命令提取控制点。在电子表格单元格中显示所有贝塞尔控制点坐标。
 
 ```javascript editor-xlsx
-// Displays all bezier control points coordinates in spreadsheet cells.
+// How to get the y1 for a path command in a spreadsheet?
+
+// Get the y1 and display the result in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

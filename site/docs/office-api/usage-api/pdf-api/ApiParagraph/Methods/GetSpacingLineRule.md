@@ -2,30 +2,16 @@
 
 Returns the paragraph line spacing rule.
 
-## Syntax
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"auto" \| "atLeast" \| "exact" \| undefined
+Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md).
 
 ## Example
 
-This example shows how to get the paragraph line spacing rule.
+Get the paragraph line spacing rule in a PDF document.
 
 ```javascript editor-pdf
-// How to get the size of a spacing line rule of a text from a paragraph.
+// How to get the size of a spacing line rule of a text from a paragraph in a PDF document.
 
-// Return a spacing line rule property of a paragraph.
+// Return a spacing line rule property of a paragraph in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,5 +37,4 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
-
 ```

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all shapes from the current presentation.
+Get all shapes from the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How to get all shapes for a presentation?
+
+// Get all shapes and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -52,5 +56,4 @@ const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const shapesCount = presentation.GetAllShapes().length;
 paragraph.AddText('Shapes: ' + shapesCount);
-
 ```

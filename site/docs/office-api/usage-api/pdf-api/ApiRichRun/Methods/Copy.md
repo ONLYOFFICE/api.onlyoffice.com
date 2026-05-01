@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example copies rich run object and adds it to parent rich paragraph.
+Copy rich run object and add it to parent rich paragraph in a PDF document.
 
 ```javascript editor-pdf
+// How do I copy in a PDF document?
+
+// Copy using a rich text run object in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies font size for the labels of the vertical axis.
+Specify font size for the labels of the vertical axis in a presentation.
 
 ```javascript editor-pptx
-// How to resize a font size of the vertical axis labels.
+// How to resize a font size of the vertical axis labels in a presentation.
 
-// Create a chart then change a font size of axis labels.
+// Create a chart then change a font size of axis labels in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

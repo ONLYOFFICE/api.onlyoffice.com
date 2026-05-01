@@ -2,27 +2,11 @@
 
 设置指定是否在每个字段后插入分页符的设置。
 
-## 语法
-
-```javascript
-expression.SetLayoutPageBreak(insert);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| insert | 必需 | boolean |  | 指定是否在每个字段后插入分页符。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetLayoutPageBreak](../../ApiPivotField/Methods/SetLayoutPageBreak.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的布局分页符。
+在电子表格中设置透视字段的布局分页符。
 
 ```javascript editor-xlsx
 // How to change a pivot field layout page break.

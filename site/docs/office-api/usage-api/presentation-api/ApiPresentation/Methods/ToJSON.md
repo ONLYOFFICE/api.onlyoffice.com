@@ -22,7 +22,7 @@ JSON
 
 ## Example
 
-This example shows how to convert the ApiPresentation object into the JSON object.
+Convert the presentation object into the JSON object in a presentation.
 
 ```javascript editor-pptx
 // How to convert the presentation object to JSON objects.
@@ -45,5 +45,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
-
 ```

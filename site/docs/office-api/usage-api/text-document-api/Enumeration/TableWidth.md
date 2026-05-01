@@ -17,10 +17,9 @@ Enumeration
 - "nul"
 - "percent"
 
-
 ## Example
 
-This example sets the width of the table cell equal to 100 points (2000 twips).
+Set the width of the table cell equal to 100 points (2000 twips).
 
 ```javascript editor-docx
 // How to change a table cell width using twips.

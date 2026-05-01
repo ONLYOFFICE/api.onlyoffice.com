@@ -22,7 +22,7 @@ expression.GetMaster(nPos);
 
 ## Example
 
-This example shows how to get a slide master by its position in the presentation.
+Get a slide master by its position in the presentation.
 
 ```javascript editor-pptx
 // How to get a slide master from the presentation.
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
-
 ```

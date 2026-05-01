@@ -20,10 +20,13 @@ boolean
 
 ## Example
 
-Gets geometry information from a star shape on a pdf document page.
+Get geometry information from a star shape on a pdf document page. Displays preset type and custom status in a text shape.
 
 ```javascript editor-pdf
-// Displays preset type and custom status in a text shape.
+// How do I is custom in a PDF document?
+
+// Is custom using a geometry object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

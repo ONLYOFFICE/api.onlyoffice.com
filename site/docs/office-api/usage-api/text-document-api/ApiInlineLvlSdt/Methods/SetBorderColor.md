@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the border color for the container.
+Set the border color for the container in a document.
 
 ```javascript editor-docx
+// How to set border color for an inline content control in a document?
+
+// Set border color and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let inlineLvlSdt = Api.CreateInlineLvlSdt();
@@ -33,5 +37,4 @@ run.AddText("This is an inline text content control with blue border.");
 inlineLvlSdt.AddElement(run, 0);
 inlineLvlSdt.SetBorderColor(Api.HexColor('#0000FF'));
 paragraph.AddInlineLvlSdt(inlineLvlSdt);
-
 ```

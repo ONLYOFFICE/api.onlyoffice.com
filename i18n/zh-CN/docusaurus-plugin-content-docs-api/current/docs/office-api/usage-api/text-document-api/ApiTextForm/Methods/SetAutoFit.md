@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例指定文本字段内容是否应自动适应。
+指定文档中文本字段内容是否应自动适应。
 
 ```javascript editor-docx
 // How to make the first text form from this document autofit.

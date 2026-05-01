@@ -13,7 +13,6 @@
 - "cell"
 - null
 
-
 ## 示例
 
 将 "column" 冻结窗格类型设置到当前工作表。
@@ -25,5 +24,4 @@
 
 const freezePaneType = "column";
 Api.SetFreezePanesType(freezePaneType);
-
 ```

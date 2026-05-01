@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example deletes the paragraph.
+Delete the paragraph in a presentation.
 
 ```javascript editor-pptx
 // How to remove a paragraph from the slide.
 
-// Delete a text.
+// Delete and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph. The first paragraph was removed from the shape content.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

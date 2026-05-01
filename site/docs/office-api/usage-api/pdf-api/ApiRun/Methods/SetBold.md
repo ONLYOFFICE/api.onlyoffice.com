@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## Example
 
-This example sets the bold property to the text character.
+Set the bold property to the text character in a PDF document.
 
 ```javascript editor-pdf
-// How to make a text bold.
+// How to make a text bold in a PDF document.
 
-// Create a new text run and set it bold.
+// Create a new text run and set it bold in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +48,4 @@ run.SetBold(true);
 run.AddText("This is a text run with the font set to bold.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

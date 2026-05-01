@@ -10,13 +10,12 @@ Highlights predefined keywords in text document.
 
 ```ts
 (function () {
-    let keywords = ["justo", "test", "lacus", "et"];
-
+    let keywords = ["lorem", "ipsum", "dummy", "many"];
     let doc = Api.GetDocument();
 
     for (let i = 0; i < keywords.length; i++) {
-        let searchResults = doc.Search(keywords[i], 0);
-        for (let j = 0; j < searchResults.length; j++) {
+        let searchResults = doc.Search(keywords[i], false);
+        for (let j = searchResults.length - 1; j >= 0; j--) {
             searchResults[j].SetHighlight("lightGray");
         }
     }
@@ -29,4 +28,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Met
 
 ## Result
 
-![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predifined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)
+![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)

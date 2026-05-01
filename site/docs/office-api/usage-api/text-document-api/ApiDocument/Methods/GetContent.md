@@ -2,27 +2,11 @@
 
 Returns an array of document elements from the current ApiDocumentContent object.
 
-## Syntax
-
-```javascript
-expression.GetContent(bGetCopies);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bGetCopies | Required | boolean |  | Specifies if the copies of the document elements will be returned or not. |
-
-## Returns
-
-[DocumentElement](../../Enumeration/DocumentElement.md)[]
+Inherited from [ApiDocumentContent.GetContent](../../ApiDocumentContent/Methods/GetContent.md).
 
 ## Example
 
-This example shows how to get an array of document elements from the document content.
+Get an array of document elements from the document content in a document.
 
 ```javascript editor-docx
 // Retrieve each document element.

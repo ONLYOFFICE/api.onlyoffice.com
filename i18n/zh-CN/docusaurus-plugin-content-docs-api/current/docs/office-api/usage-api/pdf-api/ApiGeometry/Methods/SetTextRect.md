@@ -25,10 +25,13 @@ boolean
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调整几何图形。
+为 PDF 文档创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How to set text rect for a geometry in a PDF document?
+
+// Set text rect and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

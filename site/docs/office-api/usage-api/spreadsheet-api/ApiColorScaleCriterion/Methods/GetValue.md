@@ -20,12 +20,12 @@ string \| null
 
 ## Example
 
-This example demonstrates getting the value of color scale criterion.
+Get the value of color scale criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the value of a color scale criterion.
+// How to retrieve the value of a color scale criterion in a spreadsheet.
 
-// Get the value of a color scale criterion.
+// Get the value of a color scale criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,5 +48,4 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Criterion Value:");
     worksheet.GetRange("C2").SetValue(criterionValue || "No value");
 }
-
 ```

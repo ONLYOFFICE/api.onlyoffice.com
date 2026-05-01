@@ -22,9 +22,13 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置文档的类别。
+使用文档中的核心属性设置文档的类别。
 
 ```javascript editor-docx
+// How can I set category using a core properties in a document?
+
+// Set category for a core properties in a document.
+
 const doc = Api.GetDocument();
 const core = doc.GetCore();
 core.SetCategory("Examples");
@@ -32,5 +36,4 @@ core.SetCategory("Examples");
 const category = core.GetCategory();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Category: " + category);
-
 ```

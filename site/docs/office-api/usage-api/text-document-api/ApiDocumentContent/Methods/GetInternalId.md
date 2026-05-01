@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the internal ID of a document content.
+Get the internal ID of a document content in a document.
 
 ```javascript editor-docx
+// How to get the internal id for a document content?
+
+// Get the internal id and display the result in a document.
+
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);
 
@@ -36,5 +40,4 @@ const internalId = docContent.GetInternalId();
 
 const shapeParagraph = docContent.GetElement(0);
 shapeParagraph.AddText('Document content internal ID: ' + internalId);
-
 ```

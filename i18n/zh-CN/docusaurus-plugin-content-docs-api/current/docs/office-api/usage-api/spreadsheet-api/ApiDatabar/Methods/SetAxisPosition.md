@@ -22,10 +22,10 @@ expression.SetAxisPosition(position);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的轴位置。
+设置数据条条件格式规则的轴位置。
 
 ```javascript editor-xlsx
-// How to change the axis position setting of a data bar.
+// How to change the axis position setting of a data bar in a spreadsheet.
 
 // Set the axis position of a data bar conditional formatting rule.
 
@@ -50,5 +50,4 @@ dataBar.SetAxisPosition("xlDataBarAxisMidpoint");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetAxisPosition());
-
 ```

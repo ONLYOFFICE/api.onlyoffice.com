@@ -24,12 +24,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example replaces the image with a new one.
+Replace the image with a new one in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to replace an image to another one.
+// How to replace an image to another one in a spreadsheet.
 
-// Replace an image from one to another using their urls.
+// Replace an image from one to another using their urls in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let drawing = worksheet.AddImage(
@@ -41,5 +41,4 @@ worksheet.ReplaceCurrentImage(
 	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
 	60 * 36000, 60 * 36000
 );
-
 ```

@@ -25,6 +25,8 @@ How to delete a page drawing.
 ```javascript editor-pdf
 // Get a page drawing and delete it.
 
+// Delete using a drawing object object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

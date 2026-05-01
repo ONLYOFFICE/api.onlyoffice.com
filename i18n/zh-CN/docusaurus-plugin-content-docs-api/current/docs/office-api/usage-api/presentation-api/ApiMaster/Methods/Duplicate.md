@@ -22,12 +22,12 @@ expression.Duplicate(nPos);
 
 ## 示例
 
-此示例创建指定幻灯片母版对象的副本，并将新幻灯片母版添加到幻灯片母版集合。
+创建指定幻灯片母版对象的副本，将新幻灯片母版添加到幻灯片母版集合。
 
 ```javascript editor-pptx
 // How to create a duplicate of a slide master.
 
-// Add a duplicate master.
+// Duplicate and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after duplicating: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

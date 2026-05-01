@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取文档中编号的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiNumbering.
+// How to identify the class type of a numbering in a document?
 
-// Retrieve class type of ApiNumbering object and insert it to the document.
+// Obtain the class type identifier of a numbering object in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

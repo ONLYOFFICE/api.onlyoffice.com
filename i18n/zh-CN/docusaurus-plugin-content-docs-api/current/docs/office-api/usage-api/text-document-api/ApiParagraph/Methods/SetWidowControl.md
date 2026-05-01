@@ -2,30 +2,14 @@
 
 指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。
 
-## 语法
-
-```javascript
-expression.SetWidowControl(isWidowControl);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isWidowControl | 必需 | boolean |  | true 值表示在显示时，通过将当前段落的单独一行移动到下一页，使其与其余内容显示在不同的页面上。 |
-
-## 返回值
-
-boolean
+继承自 [ApiParaPr.SetWidowControl](../../ApiParaPr/Methods/SetWidowControl.md)。
 
 ## 示例
 
-此示例指定在显示时是否通过将当前段落的单独一行移动到下一页来使其与其余内容显示在不同的页面上。
+指定在显示时是否将当前段落的单行通过移至下一页的方式显示在与其余内容不同的页面上。
 
 ```javascript editor-docx
-// Set the window control of the paragraph.
+// Set the window control of the paragraph in a document.
 
 // Make the last line to be displayed on the next page, by setting widow control method set to 'true'.
 

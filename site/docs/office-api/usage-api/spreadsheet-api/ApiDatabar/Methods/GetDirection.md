@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the direction setting from a data bar conditional formatting rule.
+Get the direction setting from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to check the reading order direction of a data bar.
+// How to check the reading order direction of a data bar in a spreadsheet.
 
 // Get the direction setting of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let direction = dataBar.GetDirection();
 
 worksheet.GetRange("C1").SetValue("Direction:");
 worksheet.GetRange("C2").SetValue(direction);
-
 ```

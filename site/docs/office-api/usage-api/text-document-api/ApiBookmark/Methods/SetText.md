@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example shows how to set bookmark text.
+Set bookmark text in a document.
 
 ```javascript editor-docx
-// How to set a text to a bookmark.
+// How to set a text to a bookmark in a document.
 
 // Get a bookmark from the document by its name then set its text.
 
@@ -39,5 +39,4 @@ let oldText = bookmark.GetText();
 bookmark.SetText("New bookmark text");
 paragraph.AddLineBreak();
 paragraph.AddText("Bookmark text changed from: '" + oldText + "' to: '" + bookmark.GetText() + "'");
-
 ```

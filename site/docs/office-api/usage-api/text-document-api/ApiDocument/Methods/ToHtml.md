@@ -25,7 +25,7 @@ string
 
 ## Example
 
-This example converts a document to HTML.
+Convert a document to HTML.
 
 ```javascript editor-docx
 // How to get an HTML from the document content.

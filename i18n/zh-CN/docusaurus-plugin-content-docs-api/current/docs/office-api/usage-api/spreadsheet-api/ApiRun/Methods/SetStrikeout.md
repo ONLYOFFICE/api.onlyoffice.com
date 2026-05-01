@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定当前文本块的内容显示为中间有一条水平线穿过。
+指定在电子表格中当前 run 的内容以通过行中心的单条水平线显示。
 
 ```javascript editor-xlsx
-// How to strike out a text with one line.
+// How to strike out a text with one line in a spreadsheet.
 
-// Create a text run object, cross out it.
+// Create a text run object, cross out it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

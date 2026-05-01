@@ -199,10 +199,9 @@
 - "yellow"
 - "yellowGreen"
 
-
 ## 示例
 
-此示例使用 'lightYellow' 颜色预设创建主题颜色。
+使用 'lightYellow' 颜色预设创建主题颜色。
 
 ```javascript editor-docx
 // How to create a preset color.

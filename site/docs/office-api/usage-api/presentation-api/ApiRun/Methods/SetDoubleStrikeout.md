@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed with two horizontal lines through each character displayed on the line.
+Specify that the contents of the current run are displayed with two horizontal lines through each character displayed on the line in a presentation.
 
 ```javascript editor-pptx
-// How to strike out a text with two lines.
+// How to strike out a text with two lines in a presentation.
 
-// Create a new text run and set double strikeout to it.
+// Create a new text run and set double strikeout to it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ run.SetDoubleStrikeout(true);
 run.AddText("This is a text run with the text struck out with two lines.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

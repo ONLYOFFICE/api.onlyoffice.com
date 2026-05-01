@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a table that contains the current content control.
+Get a table that contains the current content control in a document.
 
 ```javascript editor-docx
+// How can I get the parent table using a block-level content control in a document?
+
+// Get the parent table for a block-level content control in a document.
+
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));

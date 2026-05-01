@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example gets a start page index of section.
+Get a start page index of section.
 
 ```javascript editor-docx
 // How to get the start page number for the current section.

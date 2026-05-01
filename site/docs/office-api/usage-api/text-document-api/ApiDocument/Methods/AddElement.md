@@ -2,28 +2,11 @@
 
 Adds a paragraph or a table or a blockLvl content control using its position in the document content.
 
-## Syntax
-
-```javascript
-expression.AddElement(nPos, oElement);
-```
-
-`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | The position where the current element will be added. |
-| oElement | Required | [DocumentElement](../../Enumeration/DocumentElement.md) |  | The document element which will be added at the current position. |
-
-## Returns
-
-boolean
+Inherited from [ApiDocumentContent.AddElement](../../ApiDocumentContent/Methods/AddElement.md).
 
 ## Example
 
-This example adds a paragraph in document content.
+Add a paragraph in document content.
 
 ```javascript editor-docx
 // How to add elements to the document content.

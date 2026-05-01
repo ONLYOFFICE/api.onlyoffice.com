@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## 示例
 
-此示例创建径向渐变填充，使用选定的径向渐变作为对象背景应用于对象。
+在电子表格中创建径向渐变填充，使用所选径向渐变作为对象背景应用于对象。
 
 ```javascript editor-xlsx
-// How to set a radial gradient background for a shape.
+// How to set a radial gradient background for a shape in a spreadsheet.
 
-// Add a shape with a radial gradient color.
+// Add a shape with a radial gradient color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

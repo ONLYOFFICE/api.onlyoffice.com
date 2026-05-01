@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## Example
 
-This example creates a color selecting it from one of the available color presets.
+Create a color selecting it from one of the available color presets in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a color from a preset.
+// How to get a color from a preset in a spreadsheet.
 
-// Color a shape background using a color from a preset. 
+// Color a shape background using a color from a preset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let presetColor = Api.CreatePresetColor("peachPuff");

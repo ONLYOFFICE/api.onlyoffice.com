@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the chart series.
+Set the specified numeric format to the chart series.
 
 ```javascript editor-docx
 // How to set the "0.00" numeric format to the chart seria.

@@ -23,12 +23,12 @@ string
 
 ## Example
 
-This example shows how create a shortcut that jumps to another location in the current workbook, or opens a document stored on your hard drive, a network server, or on the Internet.
+Create a shortcut that jumps to another location in the current workbook, or opens a document stored on your hard drive, a network server, or on the Internet.
 
 ```javascript editor-xlsx
-// How to create a hyperlink.
+// How to create a hyperlink in a spreadsheet.
 
-// Use a function to add url to the text.
+// Use a function to add url to the text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

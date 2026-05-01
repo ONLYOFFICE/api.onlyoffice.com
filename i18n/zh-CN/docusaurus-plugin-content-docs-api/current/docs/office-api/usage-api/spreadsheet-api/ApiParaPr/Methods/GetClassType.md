@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+检查电子表格中段落属性返回的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiParaPr.
+// How do I check what type a paragraph properties object is in a spreadsheet?
 
-// Get a class type of ApiParaPr and display it in the worksheet.
+// Retrieve and output the class type string for a paragraph properties in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

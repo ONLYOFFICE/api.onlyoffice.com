@@ -3,25 +3,11 @@
 Converts the current form to an inline form.
 *Picture form can't be converted to an inline form, it's always a fixed size object.*
 
-## Syntax
-
-```javascript
-expression.ToInline();
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md).
 
 ## Example
 
-This example converts the form to an inline form.
+Convert the form to an inline form.
 
 ```javascript editor-forms
 // How to make the form inline.

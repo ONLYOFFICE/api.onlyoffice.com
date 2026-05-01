@@ -2,30 +2,16 @@
 
 Returns an object that represents all subtotals.
 
-## Syntax
-
-```javascript
-expression.GetSubtotals();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[PivotFieldSubtotals](../../Enumeration/PivotFieldSubtotals.md)
+Inherited from [ApiPivotField.GetSubtotals](../../ApiPivotField/Methods/GetSubtotals.md).
 
 ## Example
 
-This example shows how to get subtotals of a pivot field.
+Get subtotals of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotals.
+// How to get a pivot field's subtotals in a spreadsheet.
 
-// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array.
+// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

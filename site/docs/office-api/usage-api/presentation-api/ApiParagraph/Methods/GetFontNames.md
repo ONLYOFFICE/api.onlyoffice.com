@@ -20,9 +20,13 @@ string[]
 
 ## Example
 
-This example shows how to get all font names from all elements inside the paragraph.
+Get all font names from all elements inside the paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I get the font names in a presentation?
+
+// Get the font names using a paragraph object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,5 +53,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Fonts: ' + fonts.join(', '));
 docContent.Push(paragraph2);
 slide.AddObject(shape);
-
 ```

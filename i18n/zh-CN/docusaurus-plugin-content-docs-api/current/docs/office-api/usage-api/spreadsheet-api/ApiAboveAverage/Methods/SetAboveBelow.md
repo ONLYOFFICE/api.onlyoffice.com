@@ -22,10 +22,10 @@ expression.SetAboveBelow(aboveBelow);
 
 ## 示例
 
-此示例演示如何设置规则查找高于或低于平均值的值。
+在电子表格中设置规则是查找高于还是低于平均值的值。
 
 ```javascript editor-xlsx
-// How to switch between above average and below average conditions.
+// How to switch between above average and below average conditions in a spreadsheet.
 
 // Toggle between above and below average conditional formatting.
 
@@ -51,5 +51,4 @@ condition.SetAboveBelow(false);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetAboveBelow() ? "Above" : "Below");
-
 ```

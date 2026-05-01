@@ -27,10 +27,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curve using cubic bezier, quadratic bezier and arc commands.
+Create a complex curve using cubic bezier, quadratic bezier and arc commands. Demonstrates different types of curve drawing methods in a document.
 
 ```javascript editor-docx
-// Demonstrates different types of curve drawing methods.
+// How to cubic bez to for a geometry path in a document?
+
+// Cubic bez to and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();

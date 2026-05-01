@@ -22,13 +22,16 @@ expression.HexColor(hexString);
 
 ## 示例
 
-此示例展示如何创建十六进制颜色并将其用作字体颜色。
+在文档中创建十六进制颜色并将其用作字体颜色。
 
 ```javascript editor-docx
+// How do I hex color in a document?
+
+// Hex color and display the result in a document.
+
 const doc = Api.GetDocument();
 const color = Api.HexColor('#DECADE');
 const paragraph = doc.GetElement(0);
 paragraph.AddText('This text is in hex color.');
 paragraph.SetColor(color);
-
 ```

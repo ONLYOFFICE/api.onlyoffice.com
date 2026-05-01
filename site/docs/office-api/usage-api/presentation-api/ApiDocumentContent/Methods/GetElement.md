@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get element.
+Get element in a presentation.
 
 ```javascript editor-pptx
 // How to get an element from the content of a slide shape.
 
-// Find an element from the shape using its index.
+// Find an element from the shape using its index in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ oParagraph.SetBullet(oBullet);
 oParagraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(oParagraph);
 slide.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example adds a line break to the run position and starts the next element from a new line.
+Add a line break to the run position and start the next element from a new line in a document.
 
 ```javascript editor-docx
-// How to start a sentence on a new line.
+// How to start a sentence on a new line in a document.
 
-// Break two lines of a text run with a line. 
+// Break two lines of a text run with a line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

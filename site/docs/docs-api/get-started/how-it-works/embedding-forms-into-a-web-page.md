@@ -4,220 +4,131 @@ sidebar_position: -5
 
 # Embedding forms into a web page
 
-Starting from version 7.0, ONLYOFFICE Docs offers the possibility to create, edit and collaborate on online forms, fill them out, and save forms as PDF.
+ONLYOFFICE Docs supports PDF forms — PDF files with fillable fields such as text inputs, checkboxes, and dropdowns. A PDF form has two usage modes:
 
-ONLYOFFICE forms are available in the PDF format which is intended for creating form templates from blank or any existing DOCX file and used for filling out the ready forms.
-
-:::note
-Starting from version 8.0, the OFORM format is deprecated. To fill out the ready forms, only the PDF format is used.
-
-Starting from version 8.1, the DOCXF format is deprecated. To create and edit forms, only the PDF format is used.
-:::
-
-These instructions help you add an online form to your website, making it available for saving as PDF and filling in.
+- **Editing** — designing the form template: adding, removing, and configuring form fields. Requires [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) set to `true`.
+- **Filling** — entering data into a ready form. Requires [`permissions.fillForms`](../../usage-api/config/document/permissions.md#fillforms) set to `true` and [`permissions.edit`](../../usage-api/config/document/permissions.md#edit) set to `false`.
 
 :::note
-These instructions will only work when JWT is disabled. Starting from version 7.2, JWT is enabled by default, so you need to disable it. More information about token can be found [here](../../additional-api/signature/signature.md).
+PDF forms are available starting from version 7.0. Starting from version 8.0, the OFORM format is deprecated — only PDF is used for filling. Starting from version 8.1, the DOCXF format is deprecated — only PDF is used for creating and editing forms.
 :::
+
+:::caution
+When JWT validation is enabled on your document server (the default configuration), each `config` must be signed with a matching [`token`](./security.md). Sign with your document server's JWT secret. See the [Signature](../../additional-api/signature/signature.md) section for setup instructions and code examples.
+:::
+
+In the HTML examples below, replace `documentserver` with the address of the server where ONLYOFFICE Docs is installed.
 
 ## Editing forms
 
-### How to open PDF form for editing from website
+To open a PDF form for editing, set `documentType` to `"pdf"` and `permissions.edit` to `true`. Provide a [`key`](../../usage-api/config/document/document.md#key) so that multiple users can co-edit the form template simultaneously:
 
-To open an online form in the PDF format for editing from your website, follow the steps below:
+``` ts
+const config = {
+  document: {
+    fileType: "pdf",
+    key: "form-template-key",
+    permissions: {
+      edit: true,
+    },
+    title: "Form Template.pdf",
+    url: "https://example.com/url-to-example-form.pdf",
+  },
+  documentType: "pdf",
+};
 
-1. Find and open the *index.html* file of your ONLYOFFICE Docs.
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
 
-2. Connect it to the ONLYOFFICE Docs API by specifying the path to the API JavaScript file:
-
-   ``` html
-   <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-   ```
-
-3. Add the *button* element to open the PDF form:
-
-   ``` html
-   <button onclick="open_form_template()">Open Form Template</button>
-   ```
-
-4. Add the *div* element where the editor will be opened:
-
-   ``` html
-   <div id="placeholder"></div>
-   ```
-
-5. Add the script to close the editor in case it is open:
-
-   ``` ts
-   if (this.docEditor) {
-     this.docEditor.destroyEditor()
-   }
-   ```
-
-6. Create the full URL address to the PDF form you need to open:
-
-   ``` ts
-   const url = "https://example.com/url-to-example-form.pdf"
-   ```
-
-7. Create the key to identify the file for co-editing:
-
-   ``` ts
-   const key = `${filename}.pdf`
-   ```
-
-8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
-
-   ``` ts
-   const config = {
-     document: {
-       fileType: "pdf",
-       key,
-       permissions: {
-         edit: true,
-       },
-       title: "Form Template",
-       url: url
-     },
-     documentType: "pdf",
-   };
-
-   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-The full code fragment looks like this:
+The complete HTML page:
 
 ``` html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-<button onclick="open_form_template()">Open Form Template</button>
+<button onclick="openFormTemplate()">Open Form Template</button>
 <div id="placeholder"></div>
 <script>
-    function open_form_template() {
-        if (this.docEditor) {
-            this.docEditor.destroyEditor()
+    let docEditor;
+
+    function openFormTemplate() {
+        if (docEditor) {
+            docEditor.destroyEditor();
         }
-        const url = "https://example.com/url-to-example-form.pdf";
-        const key = filename + ".pdf";
+
         const config = {
-         "document": {
-               "fileType": "pdf",
-               "key": key,
-               "permissions": {
-                  "edit": true
-               },
-               "title": "Form Template",
-               "url": url
-         },
-         "documentType": "pdf"
+            "document": {
+                "fileType": "pdf",
+                "key": "form-template-key",
+                "permissions": {
+                    "edit": true
+                },
+                "title": "Form Template.pdf",
+                "url": "https://example.com/url-to-example-form.pdf"
+            },
+            "documentType": "pdf"
         };
-        this.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```
 
-Once done, the PDF form can be opened for editing. After editing this file, you can fill out the ready forms. To do so, click the **Start filling** button.
+After editing, click **Start filling** to switch the form to filling mode.
 
 ![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png)
 
 ## Filling forms
 
-### How to open PDF form for filling from website
+To open a PDF form for filling, set `permissions.edit` to `false` and `permissions.fillForms` to `true`. Omit the [`key`](../../usage-api/config/document/document.md#key) parameter — the editor will generate a random key for each session, so every user fills out an independent copy without affecting others:
 
-To make an online form in the PDF format available for filling in, follow the steps below:
+``` ts
+const config = {
+  document: {
+    fileType: "pdf",
+    permissions: {
+      edit: false,
+      fillForms: true,
+    },
+    title: "Form.pdf",
+    url: "https://example.com/url-to-example-form.pdf",
+  },
+  documentType: "pdf",
+};
 
-1. Find and open the *index.html* file of your ONLYOFFICE Docs.
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
 
-2. Connect it to the ONLYOFFICE Docs API by specifying the path to the API JavaScript file:
-
-   ``` html
-   <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-   ```
-
-3. Add the *button* element to open the PDF form:
-
-   ``` html
-   <button onclick="open_form()">Open Form</button>
-   ```
-
-4. Add the *div* element where the editor will be opened:
-
-   ``` html
-   <div id="placeholder"></div>
-   ```
-
-5. Add the script to close the editor in case it is open:
-
-   ``` ts
-   if (this.docEditor) {
-     this.docEditor.destroyEditor()
-   }
-   ```
-
-6. Create the full URL address to the PDF form you need to open:
-
-   ``` ts
-   const url = "https://example.com/url-to-example-form.pdf"
-   ```
-
-7. Create the key to identify the file:
-
-   ``` ts
-   const key = `${filename}.pdf`
-   ```
-
-   :::note
-   The *key* field is not passed to the configuration of the editors. This field will be automatically generated as a random number. This allows making all sessions of opening the form independent. So, collaboration on the PDF form is disabled. That's why anyone can open the form and fill it out without disturbing others.
-   :::
-
-8. Add the script initializing the Document Editor with the configuration for the document you want to open and open the editor in the placeholder element:
-
-   ``` ts
-   const config = {
-      document: {
-         fileType: "pdf",
-         permissions: {
-            edit: false,
-            fillForms: true,
-         },
-         title: "Form",
-         url: url
-      },
-      documentType: "pdf",
-   };
-
-   this.docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-The full code fragment looks like this:
+The complete HTML page:
 
 ``` html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
-<button onclick="open_form()">Open Form</button>
+<button onclick="openForm()">Open Form</button>
 <div id="placeholder"></div>
 <script>
-    function open_form() {
-        if (this.docEditor) {
-            this.docEditor.destroyEditor()
+    let docEditor;
+
+    function openForm() {
+        if (docEditor) {
+            docEditor.destroyEditor();
         }
-        const url = "https://example.com/url-to-example-form.pdf";
-        const key = filename + ".pdf";
+
         const config = {
-         "document": {
-               "fileType": "pdf",
-               "permissions": {
-                  "edit": false,
-                  "fillForms": true
-               },
-               "title": "Form",
-               "url": url
-         },
-         "documentType": "pdf"
+            "document": {
+                "fileType": "pdf",
+                "permissions": {
+                    "edit": false,
+                    "fillForms": true
+                },
+                "title": "Form.pdf",
+                "url": "https://example.com/url-to-example-form.pdf"
+            },
+            "documentType": "pdf"
         };
-        this.docEditor = new DocsAPI.DocEditor("placeholder", config);
+
+        docEditor = new DocsAPI.DocEditor("placeholder", config);
     }
 </script>
 ```
 
-Once done, the PDF form can be opened for filling. After filling in all the required fields, you can submit your data. To do so, click the **Complete & Submit** button.
+After filling in all required fields, click **Complete & Submit** to submit the data.
 
 ![Embed pdf form](/assets/images/editor/embed-pdf.png)

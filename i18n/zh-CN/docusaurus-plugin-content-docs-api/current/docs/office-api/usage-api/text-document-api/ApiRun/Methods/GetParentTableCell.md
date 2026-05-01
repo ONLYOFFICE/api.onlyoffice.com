@@ -20,7 +20,7 @@ expression.GetParentTableCell();
 
 ## 示例
 
-此示例展示如何获取包含文本块的表格单元格。
+获取文档中包含 run 的表格单元格。
 
 ```javascript editor-docx
 // Get a parent table cell of the text.

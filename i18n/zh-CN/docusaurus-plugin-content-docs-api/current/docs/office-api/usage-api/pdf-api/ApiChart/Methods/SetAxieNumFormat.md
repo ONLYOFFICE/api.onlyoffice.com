@@ -28,6 +28,8 @@ boolean
 ```javascript editor-pdf
 // Create a chart then set its axis number format.
 
+// Set axie num format using a chart object.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -43,5 +45,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

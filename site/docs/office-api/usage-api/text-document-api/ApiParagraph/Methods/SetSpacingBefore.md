@@ -4,33 +4,16 @@ Sets the spacing before the current paragraph. If the value of the isBeforeAuto 
 any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then 
 it will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingBefore(nBefore, isBeforeAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nBefore | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing before the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isBeforeAuto | Optional | boolean | false | The true value disables the spacing before the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md).
 
 ## Example
 
-This example sets the spacing before the current paragraph.
+Set the spacing before the current paragraph in a document.
 
 ```javascript editor-docx
-// How to set the size of a spacing before a text from a paragraph properties.
+// How to set the size of a spacing before a text from a paragraph properties in a document.
 
-// Change the size property of a spacing before a paragraph.
+// Change the size property of a spacing before a paragraph in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

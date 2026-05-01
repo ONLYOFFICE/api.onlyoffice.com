@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the internal ID of a block-level container
+Get the internal ID of a block-level container in a document.
 
 ```javascript editor-docx
+// How to get the internal id for a block-level content control in a document?
+
+// Get the internal id and display the result in a document.
+
 const doc = Api.GetDocument();
 const blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
@@ -32,5 +36,4 @@ const internalId = blockLvlSdt.GetInternalId();
 const paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal ID: " + internalId);
 doc.Push(paragraph);
-
 ```

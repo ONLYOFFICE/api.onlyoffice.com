@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何从日期表单获取日期格式。
+获取文档中日期表单的日期格式。
 
 ```javascript editor-docx
 // How to get a date form format.

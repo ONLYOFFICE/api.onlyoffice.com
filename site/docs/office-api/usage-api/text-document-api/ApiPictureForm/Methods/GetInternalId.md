@@ -2,25 +2,11 @@
 
 Returns an internal id of the current form.
 
-## Syntax
-
-```javascript
-expression.GetInternalId();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetInternalId](../../ApiFormBase/Methods/GetInternalId.md).
 
 ## Example
 
-This example shows how to get the internal id of a form.
+Get the internal id of a form in a document.
 
 ```javascript editor-docx
 // How to get an internal id of a text form.
@@ -35,5 +21,4 @@ let internalId = textForm.GetInternalId();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Internal id: " + internalId);
 doc.Push(paragraph);
-
 ```

@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例展示如何获取绘图的旋转角度。
+获取文档中绘图对象的旋转角度。
 
 ```javascript editor-docx
+// How do I get the rotation in a document?
+
+// Get the rotation using a drawing object object in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example gets the count of conditional formatting rules in a range.
+Get the count of conditional formatting rules in a range.
 
 ```javascript editor-xlsx
 // How to get the number of conditional formatting rules applied to cells.
@@ -43,5 +43,4 @@ let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddDatabar();
 
 worksheet.GetRange("B1").SetValue("Count: " + formatConditions.GetCount());
-
 ```

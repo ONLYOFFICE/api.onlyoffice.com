@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何重命名图表类别。
+如何在 PDF 文档中重命名图表类别。
 
 ```javascript editor-pdf
-// Create a chart then name its category.
+// Create a chart then name its category in a PDF document.
+
+// Set category name for a chart in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +46,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

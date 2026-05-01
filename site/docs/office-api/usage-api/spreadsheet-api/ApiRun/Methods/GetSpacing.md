@@ -2,30 +2,16 @@
 
 Gets the text spacing from the current text properties measured in twentieths of a point.
 
-## Syntax
-
-```javascript
-expression.GetSpacing();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
 ## Example
 
-This example gets a text spacing using its property.
+Get a text spacing using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out space size of a text.
+// How to find out space size of a text in a spreadsheet.
 
-// Get spacing size.
+// Get the spacing for a text properties in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

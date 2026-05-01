@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a class type of ApiShape.
+Check the class type returned by a shape in a PDF document.
 
 ```javascript editor-pdf
-// Retrieve class type of ApiShape object and insert it to the page.
+// How do I check what type a shape object is in a PDF document?
+
+// Retrieve and output the class type string for a shape in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

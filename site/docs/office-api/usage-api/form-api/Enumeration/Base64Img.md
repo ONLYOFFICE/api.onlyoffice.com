@@ -5,4 +5,3 @@ The Base64 image string.
 ## Type
 
 string
-

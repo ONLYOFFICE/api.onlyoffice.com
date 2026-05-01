@@ -2,30 +2,14 @@
 
 设置当前表单的背景颜色。
 
-## 语法
-
-```javascript
-expression.SetBackgroundColor(color);
-```
-
-`expression` - 表示 [ApiDateForm](../ApiDateForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 可选 | [ApiColor](../../ApiColor/ApiColor.md) |  | 背景颜色。 |
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.SetBackgroundColor](../../ApiFormBase/Methods/SetBackgroundColor.md)。
 
 ## 示例
 
-此示例为表单设置背景颜色。
+为表单设置背景颜色。
 
 ```javascript editor-docx
-// Applies an RGB background color to the text form element.
+// Apply an RGB background color to the text form element.
 
 // How to change background color of the text form.
 

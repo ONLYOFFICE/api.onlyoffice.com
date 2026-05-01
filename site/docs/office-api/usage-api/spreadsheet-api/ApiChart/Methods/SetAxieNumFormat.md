@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the axis values.
+Set the specified numeric format to the axis values.
 
 ```javascript editor-xlsx
 // How to format numbers of the axis.

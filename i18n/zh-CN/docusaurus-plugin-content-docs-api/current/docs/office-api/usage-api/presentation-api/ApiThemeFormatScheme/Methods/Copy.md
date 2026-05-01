@@ -20,7 +20,7 @@ expression.Copy();
 
 ## 示例
 
-此示例创建当前主题格式方案的副本。
+创建当前主题格式方案的副本。
 
 ```javascript editor-pptx
 // How to create a copy of a format scheme.
@@ -67,5 +67,4 @@ const copyFormatScheme = formatScheme.Copy();
 copyFormatScheme.ChangeBgFillStyles([newBgFill1, newBgFill2, newBgFill3]);
 const theme2 = Api.CreateTheme("Theme 2", master, colorScheme, copyFormatScheme, fontScheme);
 slide.ApplyTheme(theme2);
-
 ```

@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## Example
 
-This example shows how to create a RGB color for gradient stop.
+Create a RGB color for gradient stop in a presentation.
 
 ```javascript editor-pptx
-// How to create a RGB color for a gradient stop.
+// How to create a RGB color for a gradient stop in a presentation.
 
-// Add an RGB color as a stop for a gradient.
+// Add an RGB color as a stop for a gradient in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
-
 ```

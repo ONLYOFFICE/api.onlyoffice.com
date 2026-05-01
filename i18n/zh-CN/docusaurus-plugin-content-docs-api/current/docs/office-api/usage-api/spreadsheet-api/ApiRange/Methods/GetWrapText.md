@@ -20,7 +20,7 @@ boolean
 
 ## 示例
 
-此示例演示如何获取有关单元格自动换行样式的信息。
+获取电子表格中单元格自动换行样式的信息。
 
 ```javascript editor-xlsx
 // How to get a cell value wrapping type.
@@ -32,5 +32,4 @@ let range = worksheet.GetRange("A1");
 range.SetValue("This is the text wrapped to fit the cell size.");
 range.SetWrap(true);
 worksheet.GetRange("A3").SetValue("The text in the cell A1 is wrapped: " + range.GetWrapText());
-
 ```

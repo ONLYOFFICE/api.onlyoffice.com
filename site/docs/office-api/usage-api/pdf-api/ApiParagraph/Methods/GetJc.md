@@ -2,28 +2,14 @@
 
 Returns the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.GetJc();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"left" \| "right" \| "both" \| "center" \| undefined
+Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Get the paragraph contents justification in a PDF document.
 
 ```javascript editor-pdf
-// How to set a justification of a paragraph property.
+// How to set a justification of a paragraph property in a PDF document.
 
 // Change a justification type of a text property from the page.
 
@@ -52,5 +38,4 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
-
 ```

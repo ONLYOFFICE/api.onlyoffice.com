@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the inverse hyperbolic tangent.
+Return the inverse hyperbolic tangent in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get return the inverse hyperbolic tangent.
+// How to get return the inverse hyperbolic tangent in a spreadsheet.
 
-// Use function to get an inverse hyperbolic tangent.
+// Use function to get an inverse hyperbolic tangent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

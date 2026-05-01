@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-此示例展示如何获取下一节。
+获取文档中的下一个节。
 
 ```javascript editor-docx
-// How to get the next section after the current one.
+// How to get the next section after the current one in a document.
 
-// Update the margins of the next section.
+// Update the margins of the next section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

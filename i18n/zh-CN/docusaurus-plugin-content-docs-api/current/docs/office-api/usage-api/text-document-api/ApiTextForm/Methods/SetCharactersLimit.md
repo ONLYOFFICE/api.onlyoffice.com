@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例设置文本字段的字符数限制。
+设置文档中文本字段的字符限制。
 
 ```javascript editor-docx
 // How to specify the characters limit of the text form.

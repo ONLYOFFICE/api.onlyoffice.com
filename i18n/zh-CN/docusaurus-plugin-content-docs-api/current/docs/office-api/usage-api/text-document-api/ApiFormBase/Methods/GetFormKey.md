@@ -20,7 +20,7 @@ string
 
 ## 示例
 
-此示例展示如何获取表单键。
+获取文档中的表单键。
 
 ```javascript editor-docx
 // How get a key of a comboBox form.

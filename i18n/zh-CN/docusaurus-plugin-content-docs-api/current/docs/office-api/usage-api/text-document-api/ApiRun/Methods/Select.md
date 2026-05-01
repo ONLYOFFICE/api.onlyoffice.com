@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例选择当前文本块。
+在文档中选中当前 run。
 
 ```javascript editor-docx
-// How to select a text with a cursor.
+// How to select a text with a cursor in a document.
 
-// Select a run.
+// Select and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -2,32 +2,16 @@
 
 Sets the paragraph first line indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndFirstLine(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph first line indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md).
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Set the paragraph first line indentation in a presentation.
 
 ```javascript editor-pptx
-// How to set a size of the first line indentation using a paragraph properties.
+// How to set a size of the first line indentation using a paragraph properties in a presentation.
 
-// Create a paragraph setting its first line indentation.
+// Create a paragraph setting its first line indentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +34,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 slide.AddObject(shape);
-
 ```

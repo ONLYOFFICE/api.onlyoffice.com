@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的标识符。
+在演示文稿中使用核心属性设置和获取当前演示文稿的标识符。
 
 ```javascript editor-pptx
+// How to get the identifier for a core properties in a presentation?
+
+// Get the identifier and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetIdentifier("#ID42");
@@ -38,5 +42,4 @@ paragraph.AddText("Identifier: " + identifier);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

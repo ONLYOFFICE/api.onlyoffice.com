@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example shows how to set an attribute value on a custom XML node.
+Set an attribute value on a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set attributes on custom XML node elements.
+// How to set attributes on custom XML node elements in a spreadsheet.
 
-// Set attributes on product node.
+// Set attributes on product node in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

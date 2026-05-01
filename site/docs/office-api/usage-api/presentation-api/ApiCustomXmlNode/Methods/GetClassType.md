@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of a custom XML node and display it.
+Find out the class type of a custom XML node object in a presentation.
 
 ```javascript editor-pptx
-// How to get the class type of an XML node.
+// How can I get the class type of a custom XML node in a presentation?
 
-// Get the class type.
+// Get the class type of a custom XML node and display it in the presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

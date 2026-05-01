@@ -20,7 +20,7 @@ expression.GetAllCharts();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片母版中所有图表对象的数组。
+获取幻灯片母版中所有图表对象的数组。
 
 ```javascript editor-pptx
 // How to get all charts from the master of presentation.
@@ -53,5 +53,4 @@ slide.RemoveAllObjects();
 const aCharts = master.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 aCharts[0].SetMinorHorizontalGridlines(stroke);
-
 ```

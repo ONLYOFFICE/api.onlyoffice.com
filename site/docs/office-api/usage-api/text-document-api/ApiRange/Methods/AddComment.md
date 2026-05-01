@@ -24,12 +24,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## Example
 
-This example adds a comment to the range.
+Add a comment to the range in a document.
 
 ```javascript editor-docx
 // How to comment a range of document.
 
-// Insert a comment into the 'ONLYOFFICE' range and add an author to it.
+// Insert a comment into the 'ONLYOFFICE' range and add an author to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

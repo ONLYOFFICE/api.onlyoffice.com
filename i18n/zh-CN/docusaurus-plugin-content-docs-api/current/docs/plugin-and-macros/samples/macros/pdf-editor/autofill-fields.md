@@ -26,7 +26,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有表单](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)，[获取表单类型](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)，[获取提示文本](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md)，[获取文本](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md)，[设置文本](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
 
 ## 结果
 

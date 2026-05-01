@@ -2,17 +2,16 @@
 
 批注对象。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | Data | [CommentData](../Enumeration/CommentData.md) | 包含批注数据的对象。 |
 | Id | string | 批注 ID。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

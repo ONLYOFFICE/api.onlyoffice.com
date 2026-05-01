@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例设置当前文本块的文本属性。
+在 PDF 文档中为当前 run 设置文本属性。
 
 ```javascript editor-pdf
-// How to create the new text properties and apply it to the text run.
+// How to create the new text properties and apply it to the text run in a PDF document.
 
-// Create a new text run and set its properties like font size, color, etc.
+// Create a new text run and set its properties like font size, color, etc in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +48,4 @@ textPr.SetBold(true);
 run.SetTextPr(textPr);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

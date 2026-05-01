@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-从三次贝塞尔曲线命令中检索控制点和终点。
+从三次贝塞尔曲线命令中获取控制点和端点。在文档中显示贝塞尔曲线的所有控制点坐标。
 
 ```javascript editor-docx
-// Displays all control points coordinates of the bezier curve.
+// How can I get the x1 using a path command in a document?
+
+// Get the x1 for a path command in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let customGeometry = Api.CreateCustomGeometry();

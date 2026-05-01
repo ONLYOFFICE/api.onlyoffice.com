@@ -20,12 +20,12 @@ expression.Save();
 
 ## 示例
 
-此示例保存对指定文档的更改。
+保存对指定文档的更改。
 
 ```javascript editor-pptx
-// How to save all changes.
+// How to save all changes in a presentation.
 
-// Add new elements like paragraphs, shapes and etc. to the slide and save all changes. 
+// Add new elements like paragraphs, shapes and etc. to the slide and save all changes.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ paragraph.AddText("This shape with paragraph in it is saved to the document.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
 Api.Save();
-
 ```

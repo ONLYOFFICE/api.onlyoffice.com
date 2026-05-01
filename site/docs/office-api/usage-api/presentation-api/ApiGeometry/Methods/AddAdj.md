@@ -23,10 +23,13 @@ boolean
 
 ## Example
 
-Creates adjustable geometry with guides and connection points for a presentation.
+Create adjustable geometry with guides and connection points for a presentation. Displays adjustment value and apply custom geometry to shape.
 
 ```javascript editor-pptx
-// Displays adjustment value and applies custom geometry to shape.
+// How to add the adj for a geometry in a presentation?
+
+// Add the adj and display the result in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

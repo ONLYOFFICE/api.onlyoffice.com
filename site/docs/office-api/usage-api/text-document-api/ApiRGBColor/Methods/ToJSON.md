@@ -20,10 +20,10 @@ JSON
 
 ## Example
 
-This example converts the ApiRGBColor object into the JSON object.
+Convert the RGB color object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the color object.
+// How to get a JSON from the color object in a document.
 
 // Convert the RGB color object to json and add it to the document.
 

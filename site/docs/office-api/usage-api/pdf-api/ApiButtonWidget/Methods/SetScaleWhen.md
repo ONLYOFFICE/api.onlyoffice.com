@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets button widget scale when type.
+Set button widget scale when type in a PDF document.
 
 ```javascript editor-pdf
+// How to set scale when for a button widget in a PDF document?
+
+// Set scale when and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

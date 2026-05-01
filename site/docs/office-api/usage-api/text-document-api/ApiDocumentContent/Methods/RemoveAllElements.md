@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example removes all the elements from the current document or from the current document content.
+Remove all the elements from the current document or from the current document content.
 
 ```javascript editor-docx
 // Clear entire document.

@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example moves the cursor to the start of the specified page in the document.
+Move the cursor to the start of the specified page in the document.
 
 ```javascript editor-docx
 // How to navigate to a specific page in the document.
@@ -42,5 +42,4 @@ oPage3.GetParaPr().SetPageBreakBefore(true);
 doc.Push(oPage3);
 doc.GoToPage(1);
 doc.EnterText("The cursor was moved to page 2.");
-
 ```

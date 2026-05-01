@@ -23,10 +23,10 @@ JSON
 
 ## Example
 
-This example converts the table object into the JSON object.
+Convert the table object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the table object.
+// How to get a JSON from the table object in a document.
 
 // Convert the table to json and add it to the document.
 

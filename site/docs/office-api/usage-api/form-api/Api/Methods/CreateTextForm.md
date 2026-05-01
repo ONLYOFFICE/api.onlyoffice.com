@@ -22,12 +22,12 @@ expression.CreateTextForm(formPr);
 
 ## Example
 
-This example creates a text form with the common and specific text form properties.
+Create a text form and add it to the document paragraph.
 
 ```javascript editor-forms
-// How to create a text form and add it to the paragraph.
+// Set text form properties and add the form to the document.
 
-// Add a text form to the ApiDocument object, set its properties like characters limit, etc.
+// Add a text form to the document object, set its properties like characters limit, etc.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({
@@ -43,5 +43,4 @@ let textForm = Api.CreateTextForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
-
 ```

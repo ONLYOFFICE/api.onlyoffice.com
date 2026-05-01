@@ -27,12 +27,12 @@ boolean
 
 ## Example
 
-This example sets the border which will be displayed at the bottom of the table.
+Set the border which will be displayed at the bottom of the table in a document.
 
 ```javascript editor-docx
-// How to find out a style that will be applied to the table elements whish satisfy the condition.
+// How to find out a style that will be applied to the table elements whish satisfy the condition in a document.
 
-// Retrieve a conditional table style.
+// Retrieve a conditional table style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -3,33 +3,16 @@
 Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.
 -**Warning**: The lengths of aPos array and aVal array -**MUST BE** equal to each other.
 
-## Syntax
-
-```javascript
-expression.SetTabs(aPos, aVal);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins measured in twentieths of a point (1/1440 of an inch). |
-| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab stop and the alignment which will be applied to text entered at the current custom tab stop. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetTabs](../../ApiParaPr/Methods/SetTabs.md).
 
 ## Example
 
-This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
+Set a sequence of custom tab stops which will be used for any tab characters in the paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change sizes of tabs between paragraphs.
+// How to change sizes of tabs between paragraphs in a spreadsheet.
 
-// Customize all kind of tabs indicating sizes.
+// Customize all kind of tabs indicating sizes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

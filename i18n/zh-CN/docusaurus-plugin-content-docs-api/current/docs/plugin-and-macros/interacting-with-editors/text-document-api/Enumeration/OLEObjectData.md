@@ -2,6 +2,10 @@
 
 OLE 对象数据。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -15,11 +19,6 @@ OLE 对象数据。
 | ParaDrawingId | string | 包含当前 OLE 对象的绘图对象的标识符。 |
 | Width | number | OLE 对象的宽度，以毫米为单位。 |
 | WidthPix | number | OLE 对象图像的宽度，以像素为单位。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

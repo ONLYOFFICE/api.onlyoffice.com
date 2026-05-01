@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the creator of the current presentation using the ApiCore.
+Set and get the creator of the current presentation using the core properties in a presentation.
 
 ```javascript editor-pptx
+// How do I set creator in a presentation?
+
+// Set creator using a core properties object in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreator("John Smith");
@@ -40,5 +44,4 @@ paragraph.AddText("Creator: " + creator);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

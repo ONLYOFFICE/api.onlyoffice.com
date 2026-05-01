@@ -23,12 +23,12 @@ expression.SetLanguage(sLangId);
 
 ## Example
 
-This example specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run.
+Specify the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run in a presentation.
 
 ```javascript editor-pptx
-// How to change language of the text for grammar check.
+// How to change language of the text for grammar check in a presentation.
 
-// Create a new text run and change its language.
+// Create a new text run and change its language in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ run.AddText("This is a text run with the text language set to English (Canada)."
 paragraph.AddElement(run);
 run.SetLanguage("en-CA");
 slide.AddObject(shape);
-
 ```

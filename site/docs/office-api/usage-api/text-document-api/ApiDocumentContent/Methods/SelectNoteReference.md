@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example show how to select footnote/endnote reference in the document.
+Select footnote/endnote reference in the document.
 
 ```javascript editor-docx
 // How to add footnote to the document.
 
-// How to select footnote reference and increate its font size.
+// How to select footnote reference and increate its font size in a document.
 
 let doc = Api.GetDocument();
 let footnote = doc.AddFootnote();
@@ -35,5 +35,4 @@ paragraph.AddText("Footnote text");
 footnote.SelectNoteReference();
 
 doc.GetRangeBySelect().SetFontSize(48);
-
 ```

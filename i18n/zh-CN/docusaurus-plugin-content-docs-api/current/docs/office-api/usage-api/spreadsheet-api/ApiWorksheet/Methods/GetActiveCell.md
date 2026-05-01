@@ -20,7 +20,7 @@ expression.GetActiveCell();
 
 ## 示例
 
-此示例展示如何获取表示活动单元格的对象。
+获取表示电子表格中活动单元格的对象。
 
 ```javascript editor-xlsx
 // How to get selected active cell.

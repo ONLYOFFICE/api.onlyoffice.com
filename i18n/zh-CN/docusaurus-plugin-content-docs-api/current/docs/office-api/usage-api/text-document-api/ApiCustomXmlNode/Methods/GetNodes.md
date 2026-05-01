@@ -22,9 +22,13 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-此示例演示如何根据特定 XPath 获取节点并显示其值。
+根据特定 XPath 获取节点并在文档中显示其值。
 
 ```javascript editor-docx
+// How to get the nodes for a custom XML node in a document?
+
+// Get the nodes and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

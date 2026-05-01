@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the node name of a custom XML node.
+Get the node name of a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve node names from custom XML node elements.
+// How to retrieve node names from custom XML node elements in a spreadsheet.
 
-// Get node name from item element.
+// Get node name from item element in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

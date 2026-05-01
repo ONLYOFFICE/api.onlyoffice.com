@@ -22,12 +22,12 @@ expression.CreateBullet(sSymbol);
 
 ## Example
 
-This example show how to create a bullet.
+Create a bullet in a presentation.
 
 ```javascript editor-pptx
-// How to add a bullet to the paragraph.
+// How to add a bullet to the paragraph in a presentation.
 
-// Add bulleted paragraph.
+// Create the bullet for an editor in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ const bullet = Api.CreateBullet("-");
 paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 slide.AddObject(shape);
-
 ```

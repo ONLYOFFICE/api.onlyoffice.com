@@ -2,7 +2,6 @@
 
 表示 Api 类。
 
-
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -11,13 +10,11 @@
 | [AddOleObject](./AddOleObject.md) | 无 | 在当前文档位置添加 OLE 对象。 |
 | [ChangeComment](./ChangeComment.md) | boolean | 更改指定的批注。 |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | 无 | 向协作聊天发送消息。 |
-| [ConvertDocument](./ConvertDocument.md) | string | 将文档转换为 Markdown 或 HTML 文本。 |
 | [EditOleObject](./EditOleObject.md) | 无 | 编辑文档中的 OLE 对象。 |
 | [EndAction](./EndAction.md) | 无 | 指定长时间操作的结束操作。 |
 | [FocusEditor](./FocusEditor.md) | 无 | 将焦点返回到编辑器。 |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | 返回文档中的所有批注。 |
 | [GetCustomFunctions](./GetCustomFunctions.md) | string | 返回本地自定义函数库。 |
-| [GetDocumentLang](./GetDocumentLang.md) | string | 返回文档语言。 |
 | [GetFileToDownload](./GetFileToDownload.md) | string | 以指定格式返回要下载的当前文件。 |
 | [GetFontList](./GetFontList.md) | [FontInfo](../Enumeration/FontInfo.md)[] | 返回字体列表。 |
 | [GetImageDataFromSelection](./GetImageDataFromSelection.md) | [ImageData](../Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。如果没有选择图形，该方法将返回一个白色矩形。 |

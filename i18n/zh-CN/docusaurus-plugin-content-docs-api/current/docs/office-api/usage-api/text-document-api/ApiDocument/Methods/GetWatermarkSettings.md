@@ -20,12 +20,12 @@ expression.GetWatermarkSettings();
 
 ## 示例
 
-此示例设置水印参数并将其应用于文档。
+设置水印参数并将其应用于文档。
 
 ```javascript editor-docx
-// How to get watermark settings and update them.
+// How to get watermark settings and update them in a document.
 
-// Set text and type for the watermark.
+// Set text and type for the watermark in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

@@ -22,10 +22,10 @@ expression.SetText(sText);
 
 ## Example
 
-This example sets the comment reply text.
+Set the comment reply text in a document.
 
 ```javascript editor-docx
-// How to change a text of a comment reply.
+// How to change a text of a comment reply in a document.
 
 // Get all comments from the presentation and set its first one's reply text.
 

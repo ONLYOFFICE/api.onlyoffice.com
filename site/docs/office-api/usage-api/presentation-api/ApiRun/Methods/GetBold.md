@@ -2,30 +2,16 @@
 
 Gets the bold property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetBold();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
 ## Example
 
-This example shows how to find out whether a text is bold.
+Find out whether a text is bold in a presentation.
 
 ```javascript editor-pptx
-// How to know whether a text is set to bold or not.
+// How to know whether a text is set to bold or not in a presentation.
 
-// Get the text properties of the run and find whether it is bold or not.
+// Get the text properties of the run and find whether it is bold or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +37,4 @@ paragraph = Api.CreateParagraph();
 const bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
-
 ```

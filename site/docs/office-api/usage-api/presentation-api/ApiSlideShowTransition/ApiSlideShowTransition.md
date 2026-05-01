@@ -2,7 +2,6 @@
 
 Represents the ApiSlideShowTransition class.
 
-
 ## Methods
 
 | Method | Returns | Description |

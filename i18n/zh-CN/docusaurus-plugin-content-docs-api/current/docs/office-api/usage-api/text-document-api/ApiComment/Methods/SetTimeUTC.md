@@ -22,7 +22,7 @@ expression.SetTimeUTC(nTimeStamp);
 
 ## 示例
 
-此示例设置批注创建时间戳（UTC 格式）。
+设置批注创建的 UTC 格式时间戳。
 
 ```javascript editor-docx
 // How to change a creation time of a comment in UTC format.

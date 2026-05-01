@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes path commands of a star shape and displays command details.
+Analyzes path commands of a star shape and display command details. Shows total command count and first command information in cells.
 
 ```javascript editor-xlsx
-// Shows total command count and first command information in cells.
+// How can I get the x using a path command in a spreadsheet?
+
+// Get the x for a path command in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

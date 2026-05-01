@@ -22,10 +22,10 @@ boolean
 
 ## 示例
 
-此示例删除包含指定单元格的表格行。
+移除包含指定单元格的表格行。
 
 ```javascript editor-pptx
-// How to delete a row from the table.
+// How to delete a row from the table in a presentation.
 
 // Create a table, create cells and remove the whole row by its cell.
 
@@ -45,5 +45,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

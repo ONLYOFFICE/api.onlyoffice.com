@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets regular expression from text widget and displays it.
+Get regular expression from text widget and display it in a PDF document.
 
 ```javascript editor-pdf
+// How can I get the regular exp using a text widget in a PDF document?
+
+// Get the regular exp for a text widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

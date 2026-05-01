@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the range angle.
+Get the range angle in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find out cell orientation of a range.

@@ -20,9 +20,13 @@ expression.GetTimeLine();
 
 ## 示例
 
-此示例从幻灯片获取动画时间线并添加动画效果。
+从幻灯片获取动画时间线并添加动画效果。
 
 ```javascript editor-pptx
+// How do I get the time line in a presentation?
+
+// Get the time line using a slide object.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -50,5 +54,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Animation added: fade effect');
 slide.AddObject(infoShape);
-
 ```

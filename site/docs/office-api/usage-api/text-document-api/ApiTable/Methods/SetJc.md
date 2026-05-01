@@ -2,32 +2,16 @@
 
 Specifies the alignment of the current table with respect to the text margins in the current section.
 
-## Syntax
-
-```javascript
-expression.SetJc(sJcType);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJcType | Required | "left" \| "right" \| "center" |  | The alignment type used for the current table placement. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetJc](../../ApiTablePr/Methods/SetJc.md).
 
 ## Example
 
-This example specifies the alignment of the table with respect to the text margins in the current section.
+Specify the alignment of the table with respect to the text margins in the current section in a document.
 
 ```javascript editor-docx
-// How to set justification of the paragraph content.
+// How to set justification of the paragraph content in a document.
 
-// Change the justification of the paragraph.
+// Change the justification of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

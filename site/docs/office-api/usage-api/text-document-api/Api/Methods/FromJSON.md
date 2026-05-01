@@ -22,10 +22,10 @@ object
 
 ## Example
 
-This example transforms a paragraph into JSON and then restores it from JSON.
+Transforms a paragraph into JSON and then restores it from JSON.
 
 ```javascript editor-docx
-// Creates a paragraph, converts it to the JSON object, and then converts it back to the ApiParagraph object.
+// Create a paragraph, convert it to the JSON object, and then converts it back to the paragraph object in a document.
 
 // How to convert the specified JSON object into the Document Builder object of the corresponding type.
 

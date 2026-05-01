@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the value hiding property.
+Set the value hiding property in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to hide cells from a range.

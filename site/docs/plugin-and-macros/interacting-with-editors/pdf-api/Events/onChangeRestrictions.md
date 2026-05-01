@@ -8,6 +8,8 @@ The function called when the restrictions in the editor are changed.
 | --------- | ------------- | ----------- |
 | value | number | The restrictions value. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {
     if (value == 0) {
@@ -15,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {
     }
 });
 ```
-

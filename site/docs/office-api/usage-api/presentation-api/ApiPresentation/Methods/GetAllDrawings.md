@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all the drawing objects from the current presentation
+Get all the drawing objects from the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How to get all drawings for a presentation?
+
+// Get all drawings and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const slideMaster = presentation.GetMaster(0);
@@ -75,5 +79,4 @@ paragraph.AddText('Drawings: ' + drawings.length);
 label.SetPosition(0, 144 * 36000);
 slide.AddObject(label);
 label.Select();
-
 ```

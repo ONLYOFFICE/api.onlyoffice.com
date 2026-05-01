@@ -6,6 +6,8 @@ The function called when the document is completely loaded.
 
 This event has no parameters.
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onDocumentContentReady", () => {
     let oProperties = {
@@ -19,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onDocumentContentReady", () => {
     });
 });
 ```
-

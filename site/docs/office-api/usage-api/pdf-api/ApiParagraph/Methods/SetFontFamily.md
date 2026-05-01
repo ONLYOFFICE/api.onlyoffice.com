@@ -22,9 +22,13 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-This example sets all 4 font slots with the specified font family.
+Set all 4 font slots with the specified font family in a PDF document.
 
 ```javascript editor-pdf
+// How do I set font family in a PDF document?
+
+// Set font family using a paragraph object in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the font family set to 'Consolas'.");
 paragraph.SetFontFamily('Consolas');
 page.AddObject(shape);
-
 ```

@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the integer portion of a division.
+Return the integer portion of a division in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the integer part from the result of division.
+// How to get the integer part from the result of division in a spreadsheet.
 
-// Use a function to integer part from division.
+// Use a function to integer part from division in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

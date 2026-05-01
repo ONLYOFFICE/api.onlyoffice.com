@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+检查范围返回的类类型。
 
 ```javascript editor-docx
-// How to get a class type of ApiRange.
+// How do I check what type a range object is?
 
-// Retrieve class type of ApiRange object and insert it to the document.
+// Retrieve and output the class type string for a range.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

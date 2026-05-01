@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to convert an octal number to binary.
+Convert an octal number to binary in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a binary number form an octal.
 
-// Use a function to convert an octal number to binary.
+// Use a function to convert an octal number to binary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

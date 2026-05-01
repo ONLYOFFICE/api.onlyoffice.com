@@ -20,10 +20,10 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example freezes first column and get pastes a freezed range address into the table.
+Freeze first column and get pastes a freezed range address into the table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get freezed panes.
+// How to get freezed panes in a spreadsheet.
 
 // Get all freezed panes, its location and show it on the worksheet.
 

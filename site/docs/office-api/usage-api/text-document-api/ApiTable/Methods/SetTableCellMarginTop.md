@@ -3,27 +3,11 @@
 Specifies an amount of space which will be left between the top extent of the cell contents and the top border
 of all table cells within the parent table (or table row).
 
-## Syntax
-
-```javascript
-expression.SetTableCellMarginTop(nValue);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space above the top extent of the cell measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetTableCellMarginTop](../../ApiTablePr/Methods/SetTableCellMarginTop.md).
 
 ## Example
 
-This example specifies an amount of space which will be left between the top extent of the cell contents and the top border of all table cells within the parent table.
+Specify an amount of space which will be left between the top extent of the cell contents and the top border of all table cells within the parent table.
 
 ```javascript editor-docx
 // How to add margin to the top of the cell.

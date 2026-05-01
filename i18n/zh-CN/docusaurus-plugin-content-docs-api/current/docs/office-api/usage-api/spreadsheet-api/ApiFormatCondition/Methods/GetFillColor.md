@@ -20,7 +20,7 @@ expression.GetFillColor();
 
 ## 示例
 
-此示例从条件格式规则获取背景颜色。
+从条件格式规则获取背景颜色。
 
 ```javascript editor-xlsx
 // How to retrieve background colors from conditional formatting rules.
@@ -48,5 +48,4 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```

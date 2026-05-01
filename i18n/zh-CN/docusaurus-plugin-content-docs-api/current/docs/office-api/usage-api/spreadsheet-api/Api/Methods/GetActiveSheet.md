@@ -20,12 +20,12 @@ expression.GetActiveSheet();
 
 ## 示例
 
-此示例演示如何获取表示活动工作表的对象。
+获取表示电子表格中活动工作表的对象。
 
 ```javascript editor-xlsx
-// How to get an active sheet object.
+// How to get an active sheet object in a spreadsheet.
 
-// Get worksheet.
+// Get active sheet for an editor in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue("2");

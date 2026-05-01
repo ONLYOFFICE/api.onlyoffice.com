@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the string of keywords of the workbook using the ApiCore.
+Set the string of keywords of the workbook using the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I set keywords using a core properties in a spreadsheet?
+
+// Set keywords for a core properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```

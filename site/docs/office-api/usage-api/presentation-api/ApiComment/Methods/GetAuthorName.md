@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get an author of a comment.
+Get an author of a comment in a presentation.
 
 ```javascript editor-pptx
-// How to find out a comment's author.
+// How to find out a comment's author in a presentation.
 
 // Get all comments from the presentation and display the first one's author name.
 
@@ -47,5 +47,4 @@ const authorName = arrComments[0].GetAuthorName();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's author: " + authorName);
-
 ```

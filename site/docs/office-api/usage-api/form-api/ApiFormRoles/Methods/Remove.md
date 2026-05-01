@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to remove role.
+Remove role in a form document.
 
 ```javascript editor-forms
+// How to remove for a form roles?
+
+// Remove and display the result in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");

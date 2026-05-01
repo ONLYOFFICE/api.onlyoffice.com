@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Retrieve the class type of a section in a document.
 
 ```javascript editor-docx
-// How to get a class type of ApiSection.
+// How to identify the class type of a section in a document?
 
-// Retrieve class type of ApiSection object and insert it to the document.
+// Obtain the class type identifier of a section object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

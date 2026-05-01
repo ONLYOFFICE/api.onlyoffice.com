@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例展示如何将光标移到内联内容控件外部。
+将光标移到文档中内联内容控件的外部。
 
 ```javascript editor-docx
 // How to move the cursor out of the form.
 
-// Move the cursor out of the inline text control.
+// Move the cursor out of the inline text control in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

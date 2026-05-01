@@ -2,7 +2,6 @@
 
 Represents the ApiTimeLine class.
 
-
 ## Methods
 
 | Method | Returns | Description |

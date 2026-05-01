@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example spicifies tick label position for the horizontal axis.
+Spicifies tick label position for the horizontal axis in a document.
 
 ```javascript editor-docx
-// How to change a position of a horizontal axis tick label.
+// How to change a position of a horizontal axis tick label in a document.
 
-// Create a chart and move its horizontal axis tick label.
+// Create a chart and move its horizontal axis tick label in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

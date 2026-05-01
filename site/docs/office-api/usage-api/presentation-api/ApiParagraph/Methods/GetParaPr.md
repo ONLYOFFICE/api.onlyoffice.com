@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph properties.
+Get the paragraph properties in a presentation.
 
 ```javascript editor-pptx
-// How to get a paragraph properties and set its spacing size.
+// How to get a paragraph properties and set its spacing size in a presentation.
 
-// Change paragraph properties.
+// Change paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

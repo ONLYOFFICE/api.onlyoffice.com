@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get the label attribute for the container.
+Get the label attribute for the container in a document.
 
 ```javascript editor-docx
 // How to display the label of the inline text control in the document.
 
-// Set the label of the inline text element and print it.
+// Set the label of the inline text element and print it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

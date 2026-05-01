@@ -2,30 +2,16 @@
 
 Gets the underline property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetUnderline();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetUnderline](../../ApiTextPr/Methods/GetUnderline.md).
 
 ## Example
 
-This example gets a text underline using its property.
+Get a text underline using its property in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is underlined or not.
+// How to find out whether a text is underlined or not in a spreadsheet.
 
-// Get underlined property of a text run object.
+// Get underlined property of a text run object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

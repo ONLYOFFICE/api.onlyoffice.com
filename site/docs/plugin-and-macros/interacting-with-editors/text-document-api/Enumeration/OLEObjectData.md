@@ -2,6 +2,10 @@
 
 The OLE object data.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -15,11 +19,6 @@ The OLE object data.
 | ParaDrawingId | string | An identifier of the drawing object containing the current OLE object. |
 | Width | number | The OLE object width measured in millimeters. |
 | WidthPix | number | The OLE object image width in pixels. |
-## Type
-
-Object
-
-
 
 ## Example
 

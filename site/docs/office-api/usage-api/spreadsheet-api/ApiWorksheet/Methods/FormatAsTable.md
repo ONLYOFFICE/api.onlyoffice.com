@@ -23,7 +23,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example formats the selected range of cells from the sheet as a table.
+Format the selected range of cells from the sheet as a table.
 
 ```javascript editor-xlsx
 // How to format a range as a table.
@@ -32,5 +32,4 @@ This example formats the selected range of cells from the sheet as a table.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.FormatAsTable("A1:E10");
-
 ```

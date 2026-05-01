@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object for a Slide that is currently visible.
+Get an object for a Slide that is currently visible in a presentation.
 
 ```javascript editor-pptx
+// How can I get current visible slide using a presentation in a presentation?
+
+// Get current visible slide for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentVisibleSlide();
 
@@ -37,5 +41,4 @@ if (slide) {
 	const paragraph = docContent.GetElement(0);
 	paragraph.AddText('This slide is currently visible');
 }
-
 ```

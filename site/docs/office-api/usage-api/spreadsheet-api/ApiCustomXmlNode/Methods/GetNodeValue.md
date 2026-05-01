@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the value of a custom XML node.
+Get the value of a custom XML node in a spreadsheet.
 
 ```javascript editor-xlsx
+// How to get the node value for a custom XML node in a spreadsheet?
+
+// Get the node value and display the result in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -37,5 +41,4 @@ const xml = xmlManager.Add(xmlString);
 const animalNode = xml.GetNodes('/zoo/animal')[0];
 const nodeValue = animalNode.GetNodeValue();
 worksheet.GetRange('A1').SetValue('Node value: ' + nodeValue);
-
 ```

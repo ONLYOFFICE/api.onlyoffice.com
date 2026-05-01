@@ -20,9 +20,13 @@ string \| null
 
 ## Example
 
-This example shows how to get the chart title text.
+Get the chart title text in a presentation.
 
 ```javascript editor-pptx
+// How do I get the title in a presentation?
+
+// Get the title using a chart object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -52,5 +56,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Chart Title: ' + chartTitle);
 slide.AddObject(shape);
-
 ```

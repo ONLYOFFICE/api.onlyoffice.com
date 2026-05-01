@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the name of a drawing object.
+Get the name of a drawing object in a spreadsheet.
 
 ```javascript editor-xlsx
+// How can I get the name using a drawing object in a spreadsheet?
+
+// Get the name for a drawing object in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.HexColor('#5B9BD5'));
@@ -37,5 +41,4 @@ const drawing = worksheet.AddShape(
 drawing.SetName('MyRectangle');
 const drawingName = drawing.GetName();
 worksheet.GetRange('A1').SetValue('Drawing name: ' + drawingName);
-
 ```

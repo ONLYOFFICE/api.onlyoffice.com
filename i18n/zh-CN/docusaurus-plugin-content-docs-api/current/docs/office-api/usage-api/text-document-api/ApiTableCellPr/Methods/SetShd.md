@@ -26,7 +26,7 @@ boolean
 
 ## 示例
 
-此示例指定应用于表格单元格内容的底纹。
+指定应用于表格单元格内容的底纹。
 
 ```javascript editor-docx
 // Create a 3x3 table and add an orange shading to cell #1.

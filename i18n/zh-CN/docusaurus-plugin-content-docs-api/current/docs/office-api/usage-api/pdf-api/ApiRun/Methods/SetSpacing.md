@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+在 PDF 文档中设置以磅的二十分之一为单位的文本间距。
 
 ```javascript editor-pdf
-// How to resize spacing between words in a text run.
+// How to resize spacing between words in a text run in a PDF document.
 
-// Create a new text run and set its spacing size (point * 20).
+// Create a new text run and set its spacing size (point * 20) in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +48,4 @@ run.SetSpacing(80);
 run.AddText("This is a text run with the text spacing set to 4 points (20 twentieths of a point).");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

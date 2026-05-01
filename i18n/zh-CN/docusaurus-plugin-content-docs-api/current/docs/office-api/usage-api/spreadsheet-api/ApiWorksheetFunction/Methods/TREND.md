@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何使用最小二乘法返回与已知数据点匹配的线性趋势中的数字。
+在电子表格中使用最小二乘法返回与已知数据点匹配的线性趋势中的数字。
 
 ```javascript editor-xlsx
-// How to get numbers in a linear trend using the least squares method.
+// How to get numbers in a linear trend using the least squares method in a spreadsheet.
 
-// Use a function to find a linear trend using data points by the least squares method.
+// Use a function to find a linear trend using data points by the least squares method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

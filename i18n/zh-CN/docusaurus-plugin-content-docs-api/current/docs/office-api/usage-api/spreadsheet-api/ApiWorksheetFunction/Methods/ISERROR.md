@@ -22,17 +22,16 @@ boolean
 
 ## 示例
 
-此示例演示如何检查值是否为错误，并返回 true 或 false。
+在电子表格中检查值是否为错误，并返回 true 或 false。
 
 ```javascript editor-xlsx
 // How to check if the cell contains an error.
 
-// Use a function to check whether the value is error or not.
+// Use a function to check whether the value is error or not in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("B3").SetValue("#N/A")
 let result = func.ISERR("B3");
 worksheet.GetRange("C3").SetValue(result)
-
 ```

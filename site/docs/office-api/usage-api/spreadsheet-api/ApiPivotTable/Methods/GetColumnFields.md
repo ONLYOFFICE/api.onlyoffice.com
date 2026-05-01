@@ -22,12 +22,12 @@ expression.GetColumnFields(field);
 
 ## Example
 
-This example shows how to clear a pivot table.
+Clear a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove all elements from a pivot table.
+// How to remove all elements from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then delete all its content.
+// Create a pivot table, add data to it then delete all its content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,5 +68,4 @@ for (let i = 0; i < pivotFields.length; i += 1) {
     let cell = pivotWorksheet.GetRangeByNumber(8 + i, 1);
     cell.SetValue(pivotFields[i].GetName());
 }
-
 ```

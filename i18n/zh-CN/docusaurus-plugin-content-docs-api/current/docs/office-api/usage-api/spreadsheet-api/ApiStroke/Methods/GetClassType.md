@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+获取电子表格中笔触的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiStroke.
+// How to identify the class type of a stroke in a spreadsheet?
 
-// Get a class type of ApiStroke and display it in the worksheet.
+// Obtain the class type identifier of a stroke object in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

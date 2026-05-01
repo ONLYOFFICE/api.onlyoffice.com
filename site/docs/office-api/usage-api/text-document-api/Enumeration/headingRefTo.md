@@ -21,10 +21,9 @@ Enumeration
 - "fullCtxHeadingNum"
 - "aboveBelow"
 
-
 ## Example
 
-This example adds a cross-reference to the page containing a heading.
+Add a cross-reference to the page containing a heading.
 
 ```javascript editor-docx
 // How to create a reference to the paragraph with a heading.

@@ -20,10 +20,10 @@ boolean
 
 ## 示例
 
-此示例从文本块中移除所有元素。
+从演示文稿中的 run 移除所有元素。
 
 ```javascript editor-pptx
-// How to remove all elements from the text run object.
+// How to remove all elements from the text run object in a presentation.
 
 // Delete text from the slide.
 
@@ -44,5 +44,4 @@ run.RemoveAllElements();
 run.AddText("All elements from this run were removed before adding this text.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

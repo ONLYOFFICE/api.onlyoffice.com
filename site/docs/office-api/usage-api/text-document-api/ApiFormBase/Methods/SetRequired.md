@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies if the current form should be required.
+Specify if the current form should be required.
 
 ```javascript editor-docx
 // How to make a text form required.

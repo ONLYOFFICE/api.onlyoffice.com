@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例在文本块位置添加分栏符，并从新栏开始下一个元素。
+在文档中向 run 位置添加分栏符并从新列开始下一个元素。
 
 ```javascript editor-docx
-// How to add a column break between the text.
+// How to add a column break between the text in a document.
 
-// Add text to the text run and separate it with a column break.
+// Add text to the text run and separate it with a column break in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

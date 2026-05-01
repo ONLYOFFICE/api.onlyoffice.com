@@ -16,7 +16,7 @@ hide_table_of_contents: true
     let backgroundColor = Api.CreateRGBColor(0, 150, 255);
     let colorFill = Api.CreateSolidFill(backgroundColor);
 
-    // 从图片创建斑点填充
+    // 从图片创建图片填充
     let imageUrl = "https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png";
     let imageFill = Api.CreateBlipFill(imageUrl, "stretch");
     

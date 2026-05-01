@@ -18,10 +18,9 @@ Enumeration
 - "complexForm"
 - "dateForm"
 
-
 ## Example
 
-This example returns a type of the current form.
+Return the type of the current form.
 
 ```javascript editor-docx
 // How to get a form type.

@@ -74,7 +74,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
            },
            documentType: "word",
            editorConfig: {
-             callbackUrl: "https://example.com/url-to-callback.ashx",
+             callbackUrl: "https://example.com/url-to-callback",
            },
          }}
          events_onDocumentReady={onDocumentReady}
@@ -88,7 +88,7 @@ This procedure creates a [basic React application](https://github.com/facebook/c
 
    - `http://documentserver/` - replace with the URL of your server. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
+   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
 
    This JavaScript file will create the *App* component containing the ONLYOFFICE Docs editor configured with basic features.
 

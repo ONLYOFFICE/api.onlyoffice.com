@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the vertical alignment to the table.
+Set the vertical alignment to the table in a document.
 
 ```javascript editor-docx
 // How to indicate the vertical alignment of the table cell.
 
-// Align the content of the table as bottom.
+// Align the content of the table as bottom in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

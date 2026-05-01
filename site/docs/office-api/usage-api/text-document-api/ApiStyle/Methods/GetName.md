@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get a name of the current style.
+Get a name of the current style in a document.
 
 ```javascript editor-docx
-// How to get name of the table style.
+// How to get name of the table style in a document.
 
-// Display the table style name.
+// Display the table style name in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

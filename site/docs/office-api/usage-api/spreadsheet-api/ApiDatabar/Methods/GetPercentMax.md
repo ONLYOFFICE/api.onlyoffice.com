@@ -20,10 +20,10 @@ number
 
 ## Example
 
-This example demonstrates getting the maximum percentage length from a data bar conditional formatting rule.
+Get the maximum percentage length from a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to check the maximum length setting of a data bar.
+// How to check the maximum length setting of a data bar in a spreadsheet.
 
 // Get the maximum percentage length of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let percentMax = dataBar.GetPercentMax();
 
 worksheet.GetRange("C1").SetValue("Max Percent:");
 worksheet.GetRange("C2").SetValue(percentMax + "%");
-
 ```

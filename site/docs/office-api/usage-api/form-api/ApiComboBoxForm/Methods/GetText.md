@@ -2,25 +2,11 @@
 
 Returns the text from the current form.
 
-## Syntax
-
-```javascript
-expression.GetText();
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetText](../../ApiFormBase/Methods/GetText.md).
 
 ## Example
 
-This example shows how to get the text from the form.
+Get the text from the form in a document.
 
 ```javascript editor-forms
 // How to get a raw text of a text form.

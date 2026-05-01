@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the size of the shape bounding box.
+Set the size of the shape bounding box in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the size of the drawing.
+// How to change the size of the drawing in a spreadsheet.
 
-// Resize a drawing by setting its width and height.
+// Resize a drawing by setting its width and height in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

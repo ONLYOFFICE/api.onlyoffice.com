@@ -2,29 +2,17 @@
 
 Removes option from list options.
 
-## Syntax
-
-```javascript
-expression.RemoveOption(nPos);
-```
-
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | pos to remove option |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseListField.RemoveOption](../../ApiBaseListField/Methods/RemoveOption.md).
 
 ## Example
 
-This example removes option from field with list of options.
+Remove option from field with list of options in a PDF document.
 
 ```javascript editor-pdf
+// How can I remove the option using a list field in a PDF document?
+
+// Remove the option for a list field in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

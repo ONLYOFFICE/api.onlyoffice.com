@@ -24,10 +24,10 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 ## 示例
 
-此示例向表格添加新列。
+在文档中向表格添加新列（多列）。
 
 ```javascript editor-docx
-// How to insert columns to the table.
+// How to insert columns to the table in a document.
 
 // Get a table cell and insert two new columns after it.
 

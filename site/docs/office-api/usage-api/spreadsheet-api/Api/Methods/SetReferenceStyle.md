@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets reference style.
+Set reference style in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a style of a reference.
+// How to set a style of a reference in a spreadsheet.
 
-// Set reference style using ID.
+// Set reference style using ID in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 Api.SetReferenceStyle("xlR1C1");

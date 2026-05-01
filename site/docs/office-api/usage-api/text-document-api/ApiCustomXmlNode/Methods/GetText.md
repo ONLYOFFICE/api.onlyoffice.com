@@ -21,9 +21,13 @@ string
 
 ## Example
 
-This example shows how to get the text content of a custom XML node and its children.
+Get the text content of a custom XML node and its children in a document.
 
 ```javascript editor-docx
+// How to get the text for a custom XML node in a document?
+
+// Get the text and display the result in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

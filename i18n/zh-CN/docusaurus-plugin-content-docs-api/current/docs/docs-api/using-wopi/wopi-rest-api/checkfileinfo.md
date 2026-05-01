@@ -181,3 +181,17 @@ import APITable from '@site/src/components/APITable/APITable';
 ```mdx-code-block
 </APITable>
 ```
+
+## Collabora 属性
+
+```mdx-code-block
+<APITable>
+```
+
+| 名称               | 类型    | 示例 | 描述                                             |
+|--------------------|---------|---------|------------------------------------------------------|
+| UserCanOnlyComment | boolean | true    | 指定用户是否只能向文档添加评论。 |
+
+```mdx-code-block
+</APITable>
+```

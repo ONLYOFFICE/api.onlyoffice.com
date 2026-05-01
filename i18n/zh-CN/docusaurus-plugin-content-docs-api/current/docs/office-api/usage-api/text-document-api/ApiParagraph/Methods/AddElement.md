@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向段落添加一个 Run。
+在文档中向段落添加 Run。
 
 ```javascript editor-docx
-// How to add an element to the paragraph.
+// How to add an element to the paragraph in a document.
 
-// Create a text run and insert it to the paragraph.
+// Create a text run and insert it to the paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

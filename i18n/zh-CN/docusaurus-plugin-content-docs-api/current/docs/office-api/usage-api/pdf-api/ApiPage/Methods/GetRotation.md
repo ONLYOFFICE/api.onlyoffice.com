@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例获取文档中第一页的旋转角度并在文本字段中显示。
+获取文档中第一页的旋转角度并在文本字段中显示。
 
 ```javascript editor-pdf
+// How to get the rotation for a page?
+
+// Get the rotation and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);

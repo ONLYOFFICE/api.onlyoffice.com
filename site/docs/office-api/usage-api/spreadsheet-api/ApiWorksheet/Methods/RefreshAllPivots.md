@@ -20,10 +20,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to refresh all pivot tables.
+Refresh all pivot tables in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to refresh field values of all pivot tables.
+// How to refresh field values of all pivot tables in a spreadsheet.
 
 // Refresh pivot tables from the worksheet.
 
@@ -46,5 +46,4 @@ worksheet.GetAllPivotTables().forEach(function (pivot) {
 });
 
 worksheet.RefreshAllPivots();
-
 ```

@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example removes a table row with the specified cell.
+Remove a table row with the specified cell.
 
 ```javascript editor-docx
-// How to remove the row from the table.
+// How to remove the row from the table in a document.
 
 // Create a table, get one of its cells and delete the row.
 

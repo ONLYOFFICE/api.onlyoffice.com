@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example sets the cell properties to the current cell.
+Set the cell properties to the current cell.
 
 ```javascript editor-docx
 // How to add properties to the cell.

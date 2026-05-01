@@ -2,30 +2,16 @@
 
 Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
 
-## Syntax
-
-```javascript
-expression.GetSmallCaps();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md).
 
 ## Example
 
-This example shows how to find out whether a text is uncapitalized.
+Find out whether a text is uncapitalized in a PDF document.
 
 ```javascript editor-pdf
-// How to know whether the text letters are lowercase or not.
+// How to know whether the text letters are lowercase or not in a PDF document.
 
-// Get the text properties of the run and find whether it is uncapitalized or not.
+// Get the text properties of the run and find whether it is uncapitalized or not in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
-
 ```

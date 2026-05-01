@@ -22,12 +22,12 @@ number \| null
 
 ## 示例
 
-此示例展示如何使用名称从数据透视表获取数据。
+在电子表格中使用名称从数据透视表获取数据。
 
 ```javascript editor-xlsx
-// How to get a field data from a pivot table.
+// How to get a field data from a pivot table in a spreadsheet.
 
-// Create a pivot table, add data to it then get some data from it.
+// Create a pivot table, add data to it then get some data from it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

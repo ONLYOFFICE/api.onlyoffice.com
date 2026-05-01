@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the specified chart series.
+Set the outline to the specified chart series in a document.
 
 ```javascript editor-docx
-// How to outline a chart seria.
+// How to outline a chart seria in a document.
 
-// Create a chart, set its properties and its series outline.
+// Create a chart, set its properties and its series outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

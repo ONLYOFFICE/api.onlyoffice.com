@@ -20,9 +20,13 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-此示例返回文档内容中所有段落的数组。
+返回文档内容中所有段落的数组。
 
 ```javascript editor-pdf
+// How can I get all paragraphs using a document content in a PDF document?
+
+// Get all paragraphs for a document content in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -46,5 +50,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
 docContent.Push(infoParagraph);
 page.AddObject(shape);
-
 ```

@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the paragraph text properties.
+Set the paragraph text properties in a PDF document.
 
 ```javascript editor-pdf
+// How to set text pr for a paragraph in a PDF document?
+
+// Set text pr and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,5 +45,4 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 paragraph.SetTextPr(textPr);
 page.AddObject(shape);
-
 ```

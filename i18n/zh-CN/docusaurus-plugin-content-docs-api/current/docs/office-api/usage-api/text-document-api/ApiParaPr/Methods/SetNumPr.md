@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例指定当前段落引用当前文档中的编号定义实例。
+指定当前段落引用当前文档中的编号定义实例。
 
 ```javascript editor-docx
-// How to add numbering to the paragraph.
+// How to add numbering to the paragraph in a document.
 
-// Make the paragraph bulleted.
+// Make the paragraph bulleted in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

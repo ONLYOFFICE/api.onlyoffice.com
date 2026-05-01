@@ -22,12 +22,12 @@ expression.SetWrap(isWrap);
 
 ## 示例
 
-此示例指定单元格中的文字是否必须换行以适应单元格大小。
+指定单元格中的文字是否必须自动换行以适应单元格大小。
 
 ```javascript editor-xlsx
 // How to wrapp a text in the cell.
 
-// Get a range and make its content wrapped.
+// Get a range and make its content wrapped in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

@@ -20,10 +20,10 @@ number
 
 ## Example
 
-This example shows how to return the current date in the MM/dd/yy format.
+Return the current date in the MM/dd/yy format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a current date.
+// How to get a current date in a spreadsheet.
 
 // Use a function to get current date in MM/dd/yy format.
 

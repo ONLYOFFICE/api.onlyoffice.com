@@ -16,4 +16,4 @@ Playground 是一个交互式平台，用户无需注册和安装即可探索和
 - **多平台**：可在桌面、移动或嵌入式平台上进行测试。
 - **自定义**：方便切换主题和界面语言。
 
-<PlaygroundCardsRow searchParams={[{testType: "connector"}, {document: "sample"}]}/>
+<PlaygroundCardsRow searchParams={[{testType: "connector"}]}/>

@@ -2,30 +2,16 @@
 
 Returns the table description.
 
-## Syntax
-
-```javascript
-expression.GetTableDescription();
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTableDescription.md).
 
 ## Example
 
-This example shows how to get the table description.
+Get the table description in a document.
 
 ```javascript editor-docx
 // How to get the table description and display it in the document.
 
-// Add text showing the description of the table.
+// Add text showing the description of the table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

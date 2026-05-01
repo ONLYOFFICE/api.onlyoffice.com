@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何从自定义 XML 部件删除属性。
+从文档中的自定义 XML 部件中删除属性。
 
 ```javascript editor-docx
+// How can I delete the attribute using a custom XML part in a document?
+
+// Delete the attribute for a custom XML part in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xml = xmlManager.Add("<content xmlns='http://example' version='1.0'></content>");

@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example gets the start position of a given range object.
+Get the start position of a given range object in a document.
 
 ```javascript editor-docx
-// Get the start index of the range and display it.
+// Get the start index of the range and display it in a document.
 
-// Retrieve a range of the paragraph and show its first position.
+// Retrieve a range of the paragraph and show its first position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

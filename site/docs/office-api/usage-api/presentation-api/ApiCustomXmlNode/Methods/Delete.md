@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to delete a custom XML node.
+Delete a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How to delete a custom XML node.
+// How to delete a custom XML node in a presentation.
 
-// Delete an XML node.
+// Delete and display the result in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

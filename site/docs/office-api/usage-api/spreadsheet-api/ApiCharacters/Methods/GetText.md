@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the text of the specified range of characters.
+Get the text of the specified range of characters in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a raw text from the characters.
+// How to get a raw text from the characters in a spreadsheet.
 
-// Retrieve a text from the character collection.
+// Retrieve a text from the character collection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

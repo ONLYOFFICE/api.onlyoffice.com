@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回反双曲正切。
+在电子表格中返回反双曲正切值。
 
 ```javascript editor-xlsx
-// How to get return the inverse hyperbolic tangent.
+// How to get return the inverse hyperbolic tangent in a spreadsheet.
 
-// Use function to get an inverse hyperbolic tangent.
+// Use function to get an inverse hyperbolic tangent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

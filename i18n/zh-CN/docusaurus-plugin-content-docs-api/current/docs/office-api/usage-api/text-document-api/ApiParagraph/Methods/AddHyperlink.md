@@ -24,12 +24,12 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 ## 示例
 
-此示例向段落添加一个超链接。
+在文档中向段落添加超链接。
 
 ```javascript editor-docx
-// How to create a hyperlink and add it to the paragraph.
+// How to create a hyperlink and add it to the paragraph in a document.
 
-// Add a paragraph hyperlink.
+// Add a paragraph hyperlink in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

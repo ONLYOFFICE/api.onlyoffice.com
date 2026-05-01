@@ -11,10 +11,9 @@ Enumeration
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [ComboBoxFormPrBase](../Enumeration/ComboBoxFormPrBase.md)
 
-
 ## Example
 
-This example creates a combo box form with the common and specific combo box form properties.
+Create a combo box form with the common and specific combo box form properties.
 
 ```javascript editor-forms
 // How to create a combo box form with its properties.
@@ -31,5 +30,4 @@ let comboBoxFormPr = {
 	"items": ["Latvia", "USA", "UK"]
 };
 let comboBoxForm = Api.CreateComboBoxForm(comboBoxFormPr);
-
 ```

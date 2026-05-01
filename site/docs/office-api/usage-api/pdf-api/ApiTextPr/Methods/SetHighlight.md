@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-This example specifies a highlighting color which is added to the text properties and applied as a background to the contents of the run.
+Specify a highlighting color which is added to the text properties and applied as a background to the contents of the run in a PDF document.
 
 ```javascript editor-pdf
-// How to highlight a text with a color.
+// How to highlight a text with a color in a PDF document.
 
-// Get the text properties of the run and highlight it.
+// Get the text properties of the run and highlight it in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the text highlighted with light gray color using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

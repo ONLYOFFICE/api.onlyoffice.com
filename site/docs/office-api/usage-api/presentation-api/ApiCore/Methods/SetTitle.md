@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the title of the current presentation.
+Set and get the title of the current presentation in a presentation.
 
 ```javascript editor-pptx
+// How to set title for a core properties in a presentation?
+
+// Set title and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetTitle("My Presentation Title");
@@ -40,5 +44,4 @@ paragraph.AddText("Title: " + title);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

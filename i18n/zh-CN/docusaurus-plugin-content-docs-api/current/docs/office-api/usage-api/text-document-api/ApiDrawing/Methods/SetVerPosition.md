@@ -24,7 +24,7 @@ boolean
 
 ## 示例
 
-此示例设置浮动对象垂直定位的绝对测量值。
+设置文档中浮动对象垂直定位的绝对度量值。
 
 ```javascript editor-docx
 // How to set the vertical position at page in points.

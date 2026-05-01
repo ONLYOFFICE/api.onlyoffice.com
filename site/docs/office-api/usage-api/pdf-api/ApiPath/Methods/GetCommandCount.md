@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Analyzes path commands of a star shape on a pdf document page. Shows command count and first command details in a text shape.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// How to get the command count for a geometry path in a PDF document?
+
+// Get the command count and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

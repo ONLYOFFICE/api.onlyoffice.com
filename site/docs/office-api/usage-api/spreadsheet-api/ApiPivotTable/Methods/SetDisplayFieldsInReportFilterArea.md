@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set display fields in report filter area value of a table.
+Set display fields in report filter area value of a table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a display fields in report filter area of a table.
+// How to set a display fields in report filter area of a table in a spreadsheet.
 
-// Create a pivot table, add data to it then set a display fields in report filter area.
+// Create a pivot table, add data to it then set a display fields in report filter area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

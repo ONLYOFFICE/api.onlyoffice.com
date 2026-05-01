@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the bar color of a data bar conditional formatting rule.
+Set the bar color of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the bar color of a data bar.
+// How to change the bar color of a data bar in a spreadsheet.
 
 // Set the bar color of a data bar conditional formatting rule.
 
@@ -51,5 +51,4 @@ dataBar.SetBarColor(barColor);
 
 worksheet.GetRange("C3").SetValue("After Color:");
 worksheet.GetRange("C4").SetValue(dataBar.GetBarColor() ? "Set" : "None");
-
 ```

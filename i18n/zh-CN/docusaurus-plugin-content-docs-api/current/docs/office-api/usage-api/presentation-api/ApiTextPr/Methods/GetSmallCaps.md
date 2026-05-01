@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何确定文本是否未大写。
+检查演示文稿中的文本是否为小型大写字母。
 
 ```javascript editor-pptx
-// How to know whether the text letters are lowercase or not.
+// How to know whether the text letters are lowercase or not in a presentation.
 
-// Get the text properties of the run and find whether it is uncapitalized or not.
+// Get the text properties of the run and find whether it is uncapitalized or not in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
-
 ```

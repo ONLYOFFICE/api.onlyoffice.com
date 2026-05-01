@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the timestamp of the comment reply creation in the current time zone format.
+Set the timestamp of the comment reply creation in the current time zone format.
 
 ```javascript editor-xlsx
-// How to change a time when a reply was created.
+// How to change a time when a reply was created in a spreadsheet.
 
 // Add a reply then update its creation time and show it in the worksheet.
 

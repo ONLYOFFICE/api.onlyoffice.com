@@ -2,27 +2,11 @@
 
 Specifies if the current form should be required.
 
-## Syntax
-
-```javascript
-expression.SetRequired(bRequired);
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRequired | Required | boolean |  | Defines if the current form is required (true) or not (false). |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetRequired](../../ApiFormBase/Methods/SetRequired.md).
 
 ## Example
 
-This example specifies if the current form should be required.
+Specify if the current form should be required.
 
 ```javascript editor-docx
 // How to make a text form required.

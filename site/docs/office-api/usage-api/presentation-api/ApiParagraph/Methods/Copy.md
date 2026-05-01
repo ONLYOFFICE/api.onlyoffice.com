@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a paragraph copy.
+Create a paragraph copy in a presentation.
 
 ```javascript editor-pptx
-// How to add a duplicate paragraph.
+// How to add a duplicate paragraph in a presentation.
 
-// Copy a paragraph and add it to the shape.
+// Copy a paragraph and add it to the shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ docContent.Push(paragraph);
 const copyParagraph = paragraph.Copy();
 docContent.Push(copyParagraph);
 slide.AddObject(shape);
-
 ```

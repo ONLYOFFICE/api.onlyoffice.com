@@ -27,7 +27,7 @@ boolean
 
 ## Example
 
-This example shows how to get a collection of tables on a given absolute page.
+Get a collection of tables on a given absolute page in a document.
 
 ```javascript editor-docx
 // How to add the drawing to the document.
@@ -43,5 +43,4 @@ let paragraph = Api.CreateParagraph();
 paragraph.AddPageBreak();
 doc.Push(paragraph);
 doc.AddDrawingToPage(drawing, 1, 50 * 36000, 50 * 36000);
-
 ```

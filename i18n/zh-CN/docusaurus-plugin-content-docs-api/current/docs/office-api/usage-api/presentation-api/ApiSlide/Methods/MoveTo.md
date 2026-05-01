@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例将当前幻灯片移动到同一集合中的指定位置。
+将当前幻灯片移动到同一集合中的特定位置。
 
 ```javascript editor-pptx
 // How to move a slide to the position index.
@@ -37,5 +37,4 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
 slide.MoveTo(0);
-
 ```

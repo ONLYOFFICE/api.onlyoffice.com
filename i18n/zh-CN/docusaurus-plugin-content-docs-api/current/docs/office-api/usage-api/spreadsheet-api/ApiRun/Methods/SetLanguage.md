@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+指定在电子表格中处理此文本 run 内容时用于检查拼写和语法（如果需要）的语言。
 
 ```javascript editor-xlsx
-// How to set a language to the text for grammar checking.
+// How to set a language to the text for grammar checking in a spreadsheet.
 
-// Create a text run object, change its language to English for grammar check.
+// Create a text run object, change its language to English for grammar check in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example shows how to make search and replace.
+Make search and replace in a document.
 
 ```javascript editor-docx
-// How to search for a specific word and replace it with another one.
+// How to search for a specific word and replace it with another one in a document.
 
-// Search the first string and replace it with the second one.
+// Search the first string and replace it with the second one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

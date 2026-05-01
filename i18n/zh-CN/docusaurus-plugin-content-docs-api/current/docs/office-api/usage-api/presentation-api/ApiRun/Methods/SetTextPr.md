@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-此示例设置当前文本块的文本属性。
+在演示文稿中为当前 run 设置文本属性。
 
 ```javascript editor-pptx
-// How to create the new text properties and apply it to the text run.
+// How to create the new text properties and apply it to the text run in a presentation.
 
-// Create a new text run and set its properties like font size, color, etc.
+// Create a new text run and set its properties like font size, color, etc in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ textPr.SetBold(true);
 run.SetTextPr(textPr);
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

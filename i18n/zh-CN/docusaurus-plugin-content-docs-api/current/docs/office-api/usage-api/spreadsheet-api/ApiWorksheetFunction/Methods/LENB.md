@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何分析指定的字符串并返回其包含的字符数，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
+在电子表格中分析指定的字符串并返回其包含的字符数，适用于使用双字节字符集 (DBCS) 的语言。
 
 ```javascript editor-xlsx
-// How to analyse the specified string and get its length.
+// How to analyse the specified string and get its length in a spreadsheet.
 
-// Use a function to analyse a string, get length of a string and its intended language.
+// Use a function to analyse a string, get length of a string and its intended language in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

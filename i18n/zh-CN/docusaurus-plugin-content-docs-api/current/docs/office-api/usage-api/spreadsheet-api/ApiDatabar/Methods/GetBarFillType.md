@@ -20,10 +20,10 @@ expression.GetBarFillType();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取填充类型。
+从数据条条件格式规则获取条形填充类型。
 
 ```javascript editor-xlsx
-// How to check the fill type setting of a data bar.
+// How to check the fill type setting of a data bar in a spreadsheet.
 
 // Get the bar fill type of a data bar conditional formatting rule.
 
@@ -45,5 +45,4 @@ let fillType = dataBar.GetBarFillType();
 
 worksheet.GetRange("C1").SetValue("Fill Type:");
 worksheet.GetRange("C2").SetValue(fillType);
-
 ```

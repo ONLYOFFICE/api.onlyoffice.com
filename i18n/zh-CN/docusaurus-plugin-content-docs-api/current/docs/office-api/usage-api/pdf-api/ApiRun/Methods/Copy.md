@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建文本块的副本。
+在 PDF 文档中创建 run 的副本。
 
 ```javascript editor-pdf
-// How to copy a text run object and insert it to the paragraph.
+// How to copy a text run object and insert it to the paragraph in a PDF document.
 
-// Create a duplicate of a text.
+// Create a duplicate of a text in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +44,4 @@ paragraph.AddElement(run);
 const copyRun = run.Copy();
 paragraph.AddElement(copyRun);
 page.AddObject(shape);
-
 ```

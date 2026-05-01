@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"textWidget"
 
 ## Example
 
-This example gets text widget and displays it's type.
+Check the class type returned by a text widget in a PDF document.
 
 ```javascript editor-pdf
+// How do I check what type a text widget object is in a PDF document?
+
+// Retrieve and output the class type string for a text widget in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

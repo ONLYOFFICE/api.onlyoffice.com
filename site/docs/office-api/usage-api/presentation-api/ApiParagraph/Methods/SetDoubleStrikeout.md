@@ -22,9 +22,13 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example applies double strikeout formatting to paragraph text.
+Apply double strikeout formatting to paragraph text.
 
 ```javascript editor-pptx
+// How can I set double strikeout using a paragraph in a presentation?
+
+// Set double strikeout for a paragraph in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text struck out with two lines.');
 paragraph.SetDoubleStrikeout(true);
 slide.AddObject(shape);
-
 ```

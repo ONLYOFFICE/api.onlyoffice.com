@@ -20,12 +20,12 @@ expression.GetAllComments();
 
 ## 示例
 
-此示例展示如何获取当前文档中的所有批注。
+获取文档中当前文档的所有批注。
 
 ```javascript editor-docx
 // Get all comments added to the document.
 
-// How to retrieve all comments and display the class type of the first one.
+// How to retrieve all comments and display the class type of the first one in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

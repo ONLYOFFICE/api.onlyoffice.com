@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例选择当前段落。
+在演示文稿中选中当前段落。
 
 ```javascript editor-pptx
+// How to select for a paragraph in a presentation?
+
+// Select and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,5 +41,4 @@ paragraph.AddText('This paragraph will be selected.');
 slide.AddObject(shape);
 
 paragraph.Select();
-
 ```

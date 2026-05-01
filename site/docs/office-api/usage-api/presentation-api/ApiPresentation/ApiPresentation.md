@@ -2,7 +2,6 @@
 
 Represents the ApiPresentation class.
 
-
 ## Methods
 
 | Method | Returns | Description |

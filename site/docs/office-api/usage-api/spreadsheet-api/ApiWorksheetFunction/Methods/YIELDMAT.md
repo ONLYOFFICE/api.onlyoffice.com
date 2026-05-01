@@ -27,12 +27,12 @@ number
 
 ## Example
 
-This example shows how to return the annual yield of a security that pays interest at maturity.
+Return the annual yield of a security that pays interest at maturity in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return annual yield of a security.
+// How to return annual yield of a security in a spreadsheet.
 
-// Use a function to get a security annual yield.
+// Use a function to get a security annual yield in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

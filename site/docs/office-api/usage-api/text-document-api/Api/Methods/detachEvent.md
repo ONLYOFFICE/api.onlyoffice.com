@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to unsubscribe from the hyperlink click event.
+Unsubscribe from the hyperlink click event in a document.
 
 ```javascript editor-docx
-// How to detach from the "asc_onHyperlinkClick" event.
+// How to detach from the "asc_onHyperlinkClick" event in a document.
 
-// Unsubscribes from the "asc_onHyperlinkClick" event.
+// Unsubscribes from the "asc_onHyperlinkClick" event in a document.
 
 Api.detachEvent("asc_onHyperlinkClick");
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Check the class type returned by a range.
 
 ```javascript editor-docx
-// How to get a class type of ApiRange.
+// How do I check what type a range object is?
 
-// Retrieve class type of ApiRange object and insert it to the document.
+// Retrieve and output the class type string for a range.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

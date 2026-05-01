@@ -2,7 +2,6 @@
 
 Represents the ApiProtectedRange class.
 
-
 ## Methods
 
 | Method | Returns | Description |

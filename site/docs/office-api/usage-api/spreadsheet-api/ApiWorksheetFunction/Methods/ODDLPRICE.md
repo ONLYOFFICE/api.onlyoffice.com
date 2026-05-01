@@ -29,12 +29,12 @@ number
 
 ## Example
 
-This example shows how to return the price per $100 face value of a security with an odd last period.
+Return the price per $100 face value of a security with an odd last period in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the price per $100 face value of a security.
+// How to get the price per $100 face value of a security in a spreadsheet.
 
-// Use a function to return the price per $100 face value of a security.
+// Use a function to return the price per $100 face value of a security in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

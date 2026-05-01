@@ -22,12 +22,12 @@ string
 
 ## Example
 
-This example shows how to return the character specified by the code number from your computer's character set.
+Return the character specified by the code number from your computer's character set in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the character specified by the code number from your computer's character set.
+// How to return the character specified by the code number from your computer's character set in a spreadsheet.
 
-// Use function to return the character specified by the code number from your computer's character set.
+// Use function to return the character specified by the code number from your computer's character set in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

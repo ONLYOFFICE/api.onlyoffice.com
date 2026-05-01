@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve command.
+Extracts control points from a cubic bezier curve command. Displays all bezier control points coordinates in spreadsheet cells.
 
 ```javascript editor-xlsx
-// Displays all bezier control points coordinates in spreadsheet cells.
+// How do I get the x2 in a spreadsheet?
+
+// Get the x2 using a path command object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

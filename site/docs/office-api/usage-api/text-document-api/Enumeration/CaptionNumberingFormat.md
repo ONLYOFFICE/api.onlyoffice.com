@@ -19,10 +19,9 @@ Enumeration
 - "roman"
 - "Arabic"
 
-
 ## Example
 
-This example add a caption with the Arabic numbering format to the paragraph.
+Add a caption with the Arabic numbering format to the paragraph.
 
 ```javascript editor-docx
 // How to add a caption to the paragraph specifying numbering format.

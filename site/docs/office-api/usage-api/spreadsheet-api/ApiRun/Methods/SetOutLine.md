@@ -2,32 +2,16 @@
 
 Sets the text outline to the current text run.
 
-## Syntax
-
-```javascript
-expression.SetOutLine(oStroke);
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the text outline. |
-
-## Returns
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
 
 ## Example
 
-This example sets the text outline to the current text run
+Set the text outline to the current text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to outline a text with a stroke.
+// How to outline a text with a stroke in a spreadsheet.
 
-// Add text ouline using colored stroke.
+// Add text ouline using colored stroke in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

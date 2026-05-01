@@ -22,12 +22,12 @@ expression.Copy(destination);
 
 ## 示例
 
-此示例将范围复制到指定范围。
+在电子表格中将范围复制到指定范围。
 
 ```javascript editor-xlsx
-// How to create identical range.
+// How to create identical range in a spreadsheet.
 
-// Get a range and create a copy of it.
+// Get a range and create a copy of it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

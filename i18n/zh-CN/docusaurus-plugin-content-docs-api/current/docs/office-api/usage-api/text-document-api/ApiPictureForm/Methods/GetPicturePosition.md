@@ -20,10 +20,10 @@ expression.GetPicturePosition();
 
 ## 示例
 
-此示例展示如何获取当前表单中图片的位置。
+获取文档中当前表单内的图片位置。
 
 ```javascript editor-docx
-// How to get a picture position.
+// How to get a picture position in a document.
 
 // Get the image position in the picture form and display it in the document.
 

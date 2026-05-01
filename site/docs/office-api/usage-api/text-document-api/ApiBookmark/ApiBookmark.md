@@ -2,7 +2,6 @@
 
 Represents the ApiBookmark class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -8,6 +8,8 @@
 | --------- | ------------- | ----------- |
 | comment | [Event_comment](../Enumeration/Event_comment.md) | 定义包含批注数据的批注对象。 |
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeCommentData", (comment) => {
     console.log("event: onChangeCommentData");
@@ -19,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onChangeCommentData", (comment) => {
     console.log("QuoteText: " + comment.Data.QuoteText);
 });
 ```
-

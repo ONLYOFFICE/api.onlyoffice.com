@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to remove a field from a table using a name.
+Remove a field from a table using a name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete specified fields from a table.
+// How to delete specified fields from a table in a spreadsheet.
 
-// Create a pivot table, add data to it then remove a field from it.
+// Create a pivot table, add data to it then remove a field from it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue('Region');
@@ -64,5 +64,4 @@ Api.GetActiveSheet().GetRange('F4').SetValue('Region field will be cleared soon'
 setTimeout(function () {
 	pivotTable.RemoveField('Region');
 }, 5000);
-
 ```

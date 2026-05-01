@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何检查形状填充中使用的颜色是否为主题颜色。
+检查电子表格中形状填充使用的颜色是否为主题颜色。
 
 ```javascript editor-xlsx
+// How can I is theme color using a color in a spreadsheet?
+
+// Is theme color for a color in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const hexColor = Api.HexColor('#FF0000');
 const themeColor = Api.ThemeColor('accent1');
@@ -33,5 +37,4 @@ const shape = worksheet.AddShape("flowChartMagneticTape", 120 * 36000, 70 * 3600
 
 worksheet.GetRange("A12").SetValue("Is hexColor a theme color? " + hexColor.IsThemeColor());
 worksheet.GetRange("A14").SetValue("Is themeColor a theme color? " + themeColor.IsThemeColor());
-
 ```

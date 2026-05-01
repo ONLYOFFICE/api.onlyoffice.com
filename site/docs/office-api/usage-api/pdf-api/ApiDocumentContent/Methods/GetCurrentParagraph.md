@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the current paragraph from the document content.
+Return the current paragraph from the document content.
 
 ```javascript editor-pdf
+// How to get current paragraph for a document content?
+
+// Get current paragraph and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,5 +48,4 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 page.AddObject(shape);
-
 ```

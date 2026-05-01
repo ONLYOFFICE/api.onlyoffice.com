@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-This example sets all 4 font slots with the specified font family.
+Set all 4 font slots with the specified font family in a PDF document.
 
 ```javascript editor-pdf
-// How to change a text font family.
+// How to change a text font family in a PDF document.
 
-// Get the text properties of the run and set its font family.
+// Get the text properties of the run and set its font family in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font family set to 'Comic Sans MS' using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

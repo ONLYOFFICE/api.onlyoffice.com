@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties of the run.
+Get the text properties of the run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the text properties.
+// How to change the text properties in a spreadsheet.
 
-// Create a text object, set its font size, justification, etc.
+// Create a text object, set its font size, justification, etc in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -2,30 +2,14 @@
 
 Sets the background color to the current form.
 
-## Syntax
-
-```javascript
-expression.SetBackgroundColor(color);
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetBackgroundColor](../../ApiFormBase/Methods/SetBackgroundColor.md).
 
 ## Example
 
-This example sets the background color to the form.
+Set the background color to the form.
 
 ```javascript editor-docx
-// Applies an RGB background color to the text form element.
+// Apply an RGB background color to the text form element.
 
 // How to change background color of the text form.
 

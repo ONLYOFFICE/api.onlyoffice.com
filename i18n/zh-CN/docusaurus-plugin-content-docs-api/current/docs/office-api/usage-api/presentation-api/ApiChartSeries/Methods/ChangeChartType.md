@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例更改 ApiChart 类第一个系列的类型并将新类型插入演示文稿。
+更改图表类的第一个系列的类型并将新类型插入演示文稿。
 
 ```javascript editor-pptx
-// How to change a chart type.
+// How to change a chart type in a presentation.
 
-// Change a chart type to the "area" type.
+// Change a chart type to the "area" type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,5 +58,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

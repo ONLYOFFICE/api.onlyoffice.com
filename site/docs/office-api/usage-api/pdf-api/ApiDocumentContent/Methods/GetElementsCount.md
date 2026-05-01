@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example gets elements count and inserts this value into the pdf document.
+Get elements count and insert this value into the pdf document.
 
 ```javascript editor-pdf
 // How to get a number of elements a page shape contains.
@@ -42,5 +42,4 @@ paragraph.AddText("Number of elements inside the shape: " + docContent.GetElemen
 paragraph.AddLineBreak();
 paragraph.AddText("Line breaks are NOT counted into the number of elements.");
 page.AddObject(shape);
-
 ```

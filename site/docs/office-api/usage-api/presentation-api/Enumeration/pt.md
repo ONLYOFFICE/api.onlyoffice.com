@@ -6,11 +6,9 @@ A point.
 
 number
 
-
-
 ## Example
 
-In this example the paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge.
+Set a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge.
 
 ```javascript editor-pptx
 // How to set a bottom border indicating weight points and color.

@@ -2,27 +2,11 @@
 
 Specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
 
-## Syntax
-
-```javascript
-expression.SetCellMarginRight(nValue);
-```
-
-`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space to the right extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin will be used, otherwise the table cell right margin will be overridden with the specified value for the current cell. |
-
-## Returns
-
-boolean
+Inherited from [ApiTableCellPr.SetCellMarginRight](../../ApiTableCellPr/Methods/SetCellMarginRight.md).
 
 ## Example
 
-This example specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
+Specify an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
 
 ```javascript editor-docx
 // How to add margin to the right of the cell.

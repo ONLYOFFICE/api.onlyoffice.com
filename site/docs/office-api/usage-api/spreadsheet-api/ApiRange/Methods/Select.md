@@ -20,10 +20,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example selects the current range.
+Select the current range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to select a range.
+// How to select a range in a spreadsheet.
 
 // Select a range and get a selection from the worksheet.
 

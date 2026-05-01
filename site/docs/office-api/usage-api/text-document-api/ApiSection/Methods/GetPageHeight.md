@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the page height.
+Get the page height in a document.
 
 ```javascript editor-docx
 // How to get the page height.

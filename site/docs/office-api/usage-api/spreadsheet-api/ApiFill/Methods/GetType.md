@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill type and displays it.
+Get the fill type and display it. Creates shapes with different fill types and show their types in a spreadsheet.
 
 ```javascript editor-xlsx
-// Creates shapes with different fill types and shows their types.
+// How do I get the type in a spreadsheet?
+
+// Get the type using a fill object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 
 // Solid fill
@@ -46,5 +49,4 @@ let noFill = Api.CreateNoFill();
 let shape3 = worksheet.AddShape("rect", 50 * 36000, 30 * 36000, noFill, stroke, 3, 0, 2, 2);
 let fill3 = shape3.GetFill();
 worksheet.GetRange("A3").SetValue("No fill type: " + fill3.GetType());
-
 ```

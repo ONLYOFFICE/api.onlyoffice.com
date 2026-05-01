@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例展示如何更改角色的颜色。
+更改表单文档中角色的颜色。
 
 ```javascript editor-forms
+// How to set role color for a form roles?
+
+// Set role color and display the result in a form document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -35,5 +39,4 @@ doc.InsertTextForm({
 	role: "Customer",
 	placeholder: "Enter your name"
 });
-
 ```

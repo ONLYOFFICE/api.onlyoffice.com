@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a content of the ApiTableCell object.
+How to get a content of the table cell object.
 
 ```javascript editor-pdf
-// Return the ApiDocumentContent object from the table cell.
+// Return the document content object from the table cell.
+
+// Get the content using a table cell object.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,5 +39,4 @@ paragraph.AddText("This is a sample text in the cell.");
 content.Push(paragraph);
 
 page.AddObject(table);
-
 ```

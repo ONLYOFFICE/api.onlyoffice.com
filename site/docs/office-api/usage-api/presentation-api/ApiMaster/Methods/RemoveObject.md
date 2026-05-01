@@ -23,10 +23,10 @@ boolean
 
 ## Example
 
-This example removes objects (image, shape or chart) from the current slide master.
+Remove objects (image, shape or chart) from the current slide master.
 
 ```javascript editor-pptx
-// How to delete an object from a master.
+// How to delete an object from a master in a presentation.
 
 // Delete an object from a slide master indicating its podition index.
 
@@ -54,5 +54,4 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The second cube was removed from this master.");
-
 ```

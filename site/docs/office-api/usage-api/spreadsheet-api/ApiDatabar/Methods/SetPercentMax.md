@@ -22,10 +22,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the maximum percentage length of a data bar conditional formatting rule.
+Set the maximum percentage length of a data bar conditional formatting rule.
 
 ```javascript editor-xlsx
-// How to change the maximum length setting of a data bar.
+// How to change the maximum length setting of a data bar in a spreadsheet.
 
 // Set the maximum percentage length of a data bar conditional formatting rule.
 
@@ -50,5 +50,4 @@ dataBar.SetPercentMax(80);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetPercentMax() + "%");
-
 ```

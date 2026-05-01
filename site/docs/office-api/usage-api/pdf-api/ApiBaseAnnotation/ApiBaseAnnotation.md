@@ -2,7 +2,6 @@
 
 Represents the ApiBaseAnnotation class.
 
-
 ## Methods
 
 | Method | Returns | Description |

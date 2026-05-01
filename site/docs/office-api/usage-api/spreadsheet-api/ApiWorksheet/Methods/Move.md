@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example moves the sheet to another location in the workbook.
+Move the sheet to another location in the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change an order of the sheet.
+// How to change an order of the sheet in a spreadsheet.
 
-// Move a sheet.
+// Move for a worksheet in a spreadsheet.
 
 let sheet1 = Api.GetActiveSheet();
 Api.AddSheet("Sheet2");

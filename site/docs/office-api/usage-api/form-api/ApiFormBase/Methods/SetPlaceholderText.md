@@ -23,7 +23,7 @@ boolean
 
 ## Example
 
-This example sets the placeholder text to the form.
+Set the placeholder text to the form.
 
 ```javascript editor-forms
 // Add text as a placeholder of the form.

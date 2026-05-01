@@ -17,7 +17,6 @@ Enumeration
 - 3
 - 4
 
-
 ## Example
 
 ```javascript

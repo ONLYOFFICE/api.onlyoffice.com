@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## 示例
 
-此示例展示如何创建用于不同类型渐变的渐变光圈。
+在 PDF 文档中创建用于不同类型渐变的渐变光圈。
 
 ```javascript editor-pdf
-// How to add a gradient stop for gradient.
+// How to add a gradient stop for gradient in a PDF document.
 
-// Create a stop for a gradient.
+// Create a stop for a gradient in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,5 +40,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

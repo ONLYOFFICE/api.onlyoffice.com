@@ -22,7 +22,7 @@ boolean
 
 ## 示例
 
-此示例将光标移动到文档中指定页面的开头。
+将光标移动到文档中指定页面的开头。
 
 ```javascript editor-docx
 // How to navigate to a specific page in the document.
@@ -42,5 +42,4 @@ oPage3.GetParaPr().SetPageBreakBefore(true);
 doc.Push(oPage3);
 doc.GoToPage(1);
 doc.EnterText("The cursor was moved to page 2.");
-
 ```

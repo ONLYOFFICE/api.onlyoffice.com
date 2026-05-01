@@ -20,10 +20,10 @@ string
 
 ## Example
 
-This example shows how to get the full name of the currently opened file.
+Get the full name of the currently opened file in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a full name of the file.
+// How to get a full name of the file in a spreadsheet.
 
 // Insert a full name of the file into a cell.
 

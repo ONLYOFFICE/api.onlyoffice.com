@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects.
+Return the number of permutations for a given number of objects (with repetitions) that can be selected from the total objects in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the number of permutations for a given number of objects with duplicates.
+// How to return the number of permutations for a given number of objects with duplicates in a spreadsheet.
 
-// Use a function to claculate the number of permutations including duplicates.
+// Use a function to claculate the number of permutations including duplicates in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let func = Api.WorksheetFunction;
 let ans = func.PERMUTATIONA(number, number_chosen);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

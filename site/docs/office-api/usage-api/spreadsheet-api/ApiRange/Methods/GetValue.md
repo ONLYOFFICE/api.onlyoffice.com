@@ -20,7 +20,7 @@ string \| string[][]
 
 ## Example
 
-This example shows how to get a value of the specified range.
+Get a value of the specified range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to get a cell value.

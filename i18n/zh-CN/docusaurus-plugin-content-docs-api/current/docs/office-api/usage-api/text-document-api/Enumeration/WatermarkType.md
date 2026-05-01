@@ -12,10 +12,9 @@
 - "text"
 - "image"
 
-
 ## 示例
 
-此示例设置文档中水印的类型。
+设置文档中水印的类型。
 
 ```javascript editor-docx
 // How to set a watermark type.

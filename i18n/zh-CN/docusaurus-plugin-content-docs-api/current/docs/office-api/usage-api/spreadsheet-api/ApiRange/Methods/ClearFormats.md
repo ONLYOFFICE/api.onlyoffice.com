@@ -20,7 +20,7 @@ expression.ClearFormats();
 
 ## 示例
 
-此示例清除范围中的所有格式。
+清除范围中的所有格式。
 
 ```javascript editor-xlsx
 // How to clear formatting for a range.
@@ -33,5 +33,4 @@ worksheet.GetRange("A1:A2").SetBold(true);
 let range = worksheet.GetRange("A1");
 range.ClearFormats();
 worksheet.GetRange("A3").SetValue("Result is bold format cleared for A1 cell.");
-
 ```

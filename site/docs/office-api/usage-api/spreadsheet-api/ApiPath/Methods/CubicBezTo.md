@@ -27,10 +27,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curve shape using different bezier and arc commands.
+Create a complex curve shape using different bezier and arc commands. Combines multiple curve types in a single path in a spreadsheet.
 
 ```javascript editor-xlsx
-// Combines multiple curve types in a single path.
+// How can I cubic bez to using a geometry path in a spreadsheet?
+
+// Cubic bez to for a geometry path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

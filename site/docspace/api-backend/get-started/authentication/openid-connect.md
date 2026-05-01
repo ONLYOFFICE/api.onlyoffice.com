@@ -55,9 +55,9 @@ The response contains the following fields.
 | Name  | Type             | Example                                | Description                                                   |
 | ----- | ---------------- | -------------------------------------- | ------------------------------------------------------------- |
 | sub   | string           | "66faa6e4-f133-11ea-b126-00ffeec8b4ef" | The unique user identifier.                                   |
-| aud   | array of strings | ["\{\{docspace_address\}\}"]              | The intended recipients of the token (the API base URL).      |
+| aud   | string[] | ["\{\{docspace_address\}\}"]              | The intended recipients of the token (the API base URL).      |
 | nbf   | integer          | 1745499926                             | A Unix timestamp before which the token must not be accepted. |
-| scope | array of strings | ["openid"]                             | An array of scopes granted to the token.                      |
+| scope | string[] | ["openid"]                             | An array of scopes granted to the token.                      |
 | iss   | string           | "\{\{docspace_address\}\}/oauth2"          | The URL of the authorization server that issued the token.    |
 | exp   | integer          | 1745503526                             | A Unix timestamp indicating when the token expires.           |
 | iat   | integer          | 1745499926                             | A Unix timestamp indicating when the token was issued.        |

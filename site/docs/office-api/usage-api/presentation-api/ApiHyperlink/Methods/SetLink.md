@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the hyperlink address.
+Set the hyperlink address in a presentation.
 
 ```javascript editor-pptx
+// How to set link for a hyperlink in a presentation?
+
+// Set link and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -55,5 +59,4 @@ infoParagraph.AddText('Shape hyperlink updated link: ' + hyperlink.GetLinkedText
 
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

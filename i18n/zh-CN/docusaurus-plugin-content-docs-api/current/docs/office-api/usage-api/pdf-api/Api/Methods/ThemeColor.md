@@ -22,9 +22,13 @@ expression.ThemeColor(name);
 
 ## 示例
 
-此示例展示如何创建主题颜色并将其用作形状填充。
+在 PDF 文档中创建主题颜色并将其用作形状填充。
 
 ```javascript editor-pdf
+// How do I theme color in a PDF document?
+
+// Theme color and display the result in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -34,5 +38,4 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
-
 ```

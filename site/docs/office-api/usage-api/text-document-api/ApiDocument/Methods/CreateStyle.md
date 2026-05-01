@@ -23,12 +23,12 @@ expression.CreateStyle(sStyleName, sType);
 
 ## Example
 
-This example creates a new style with the "Heading 1" type and "paragraph" name.
+Create a new style with the "Heading 1" type and "paragraph" name in a document.
 
 ```javascript editor-docx
-// How to create a paragraph and set its style as a heading.
+// How to create a paragraph and set its style as a heading in a document.
 
-// Set style of the paragraph.
+// Set style of the paragraph in a document.
 
 let doc = Api.GetDocument();
 let heading1Style = doc.CreateStyle("Heading 1", "paragraph");

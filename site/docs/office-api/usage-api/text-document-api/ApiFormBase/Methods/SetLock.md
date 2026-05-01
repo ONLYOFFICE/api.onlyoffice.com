@@ -22,7 +22,7 @@ boolean
 
 ## Example
 
-This example specifies if the current form should be locked.
+Specify if the current form should be locked.
 
 ```javascript editor-docx
 // How to lock a form.
@@ -38,5 +38,4 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```

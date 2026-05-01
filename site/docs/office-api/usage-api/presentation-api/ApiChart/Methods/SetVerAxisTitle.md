@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example specifies the chart vertical axis title.
+Specify the chart vertical axis title in a presentation.
 
 ```javascript editor-pptx
-// Title the chart's vertical axis.
+// Title the chart's vertical axis in a presentation.
 
-// Create a chart, set its properties and name its vertical axis title.
+// Create a chart, set its properties and name its vertical axis title in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the width of a stroke in EMU.
+Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a PDF document.
 
 ```javascript editor-pdf
-// Creates shapes with different border widths and displays their widths.
+// How can I get the width using a stroke in a PDF document?
+
+// Get the width for a stroke in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -58,5 +61,4 @@ let content3 = shape3.GetContent();
 let para3 = content3.GetElement(0);
 let width3 = shape3.GetLine().GetWidth();
 para3.AddText("5pt: " + width3 + " EMU");
-
 ```

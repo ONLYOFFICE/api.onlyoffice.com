@@ -8,6 +8,8 @@ The function called when the content control receives focus and its track appear
 | --------- | ------------- | ----------- |
 | ids | string[] | An array of content control IDs that have received focus. |
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onShowContentControlTrack", (ids) => {
     console.log("event: onShowContentControlTrack");
@@ -16,4 +18,3 @@ window.Asc.plugin.attachEditorEvent("onShowContentControlTrack", (ids) => {
     }
 });
 ```
-

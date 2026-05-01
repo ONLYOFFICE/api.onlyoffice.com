@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of a custom XML node and display it.
+Find out the class type of a custom XML node object in a document.
 
 ```javascript editor-docx
+// How can I get the class type of a custom XML node in a document?
+
+// Get the class type of a custom XML node and display it in the document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

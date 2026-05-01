@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-此示例检查绘图是否垂直翻转。
+检查文档中绘图对象是否垂直翻转。
 
 ```javascript editor-docx
-// How to get the vertical flip property of the shape.
+// How to get the vertical flip property of the shape in a document.
 
-// Create a drawing, add text to it, and read its vertical flip value.
+// Create a drawing, add text to it, and read its vertical flip value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -38,5 +38,4 @@ let flip = drawing.GetFlipV();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Drawing is flipped vertically: " + flip);
 doc.AddElement(0, paragraph);
-
 ```

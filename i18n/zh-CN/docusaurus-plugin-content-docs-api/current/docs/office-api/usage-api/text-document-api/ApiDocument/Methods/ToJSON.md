@@ -27,7 +27,7 @@ JSON
 
 ## 示例
 
-此示例将 ApiDocument 对象转换为 JSON 对象。
+将文档对象转换为 JSON 对象。
 
 ```javascript editor-docx
 // How to get a JSON object from the document content.

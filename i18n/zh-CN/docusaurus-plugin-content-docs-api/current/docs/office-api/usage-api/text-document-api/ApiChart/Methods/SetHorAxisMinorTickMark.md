@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定横轴的次刻度线。
+指定文档中水平轴的次要刻度线。
 
 ```javascript editor-docx
-// How to change a tickmark of a minor horizontal axis.
+// How to change a tickmark of a minor horizontal axis in a document.
 
-// Create a chart and set its minor horizontal axis tickmark as a out symbol.
+// Create a chart and set its minor horizontal axis tickmark as an out symbol in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return statistics that describe an exponential curve matching known data points.
+Return statistics that describe an exponential curve matching known data points in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the statistics of exponential curve matching the data points.
+// How to get the statistics of exponential curve matching the data points in a spreadsheet.
 
-// Use a function to return the statistics of exponential curve matching the data points.
+// Use a function to return the statistics of exponential curve matching the data points in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -58,5 +58,4 @@ let ans = func.LOGEST(yRange, xRange, constant, stats);
 
 //print answer
 worksheet.GetRange("D1").SetValue(ans);
-
 ```

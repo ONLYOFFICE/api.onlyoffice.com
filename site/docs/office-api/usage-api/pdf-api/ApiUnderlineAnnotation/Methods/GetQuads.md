@@ -2,27 +2,17 @@
 
 Gets quads from current markup annotation.
 
-## Syntax
-
-```javascript
-expression.GetQuads();
-```
-
-`expression` - A variable that represents a [ApiUnderlineAnnotation](../ApiUnderlineAnnotation.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[Quad](../../Enumeration/Quad.md)[]
+Inherited from [ApiBaseMarkupAnnotation.GetQuads](../../ApiBaseMarkupAnnotation/Methods/GetQuads.md).
 
 ## Example
 
-This example gets quads of markup annotation.
+Get quads of markup annotation in a PDF document.
 
 ```javascript editor-pdf
+// How do I get the quads in a PDF document?
+
+// Get the quads using a markup annotation object in a PDF document.
+
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

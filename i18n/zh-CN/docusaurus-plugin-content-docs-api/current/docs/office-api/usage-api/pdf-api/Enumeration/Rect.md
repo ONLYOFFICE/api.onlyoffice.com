@@ -8,7 +8,7 @@
 
 ## 类型
 
-对象
+[pt](../Enumeration/pt.md)[]
 
 ## 属性
 

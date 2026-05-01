@@ -3,33 +3,16 @@
 Sets the preferred width to the current table.
 💡 Tables are created with the [ApiTable#SetWidth](../../ApiTable/Methods/SetWidth.md) method properties set by default, which always override the [ApiTablePr#SetWidth](../../ApiTablePr/Methods/SetWidth.md) method properties. That is why there is no use to try and apply [ApiTablePr#SetWidth](../../ApiTablePr/Methods/SetWidth.md). We recommend you to use the  [ApiTablePr#SetWidth](../../ApiTablePr/Methods/SetWidth.md) method instead.
 
-## Syntax
-
-```javascript
-expression.SetWidth(sType, nValue);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [TableWidth](../../Enumeration/TableWidth.md) |  | Type of the width value from one of the available width values types. |
-| nValue | Optional | number |  | The table width value measured in positive integers. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetWidth](../../ApiTablePr/Methods/SetWidth.md).
 
 ## Example
 
-This example sets the preferred width to the table.
+Set the preferred width to the table in a document.
 
 ```javascript editor-docx
-// How to change the width of the table.
+// How to change the width of the table in a document.
 
-// Set the table width in percentage.
+// Set the table width in percentage in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -2,28 +2,14 @@
 
 Converts the ApiTableRowPr object into the JSON object.
 
-## Syntax
-
-```javascript
-expression.ToJSON();
-```
-
-`expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-JSON
+Inherited from [ApiTableRowPr.ToJSON](../../ApiTableRowPr/Methods/ToJSON.md).
 
 ## Example
 
-This example converts the ApiTableRowPr object into the JSON object.
+Convert the table row properties object into the JSON object in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the table row properties.
+// How to get a JSON from the table row properties in a document.
 
 // Convert the table row properties to json and add it to the document.
 

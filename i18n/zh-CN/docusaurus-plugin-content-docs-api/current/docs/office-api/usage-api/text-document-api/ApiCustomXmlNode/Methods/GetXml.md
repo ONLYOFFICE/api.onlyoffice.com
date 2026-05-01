@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取自定义 XML 节点的 XML 内容。
+获取文档中自定义 XML 节点的 XML 内容。
 
 ```javascript editor-docx
+// How can I get the xml using a custom XML node in a document?
+
+// Get the xml for a custom XML node in a document.
+
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();
 let xmlText = `

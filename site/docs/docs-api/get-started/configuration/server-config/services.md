@@ -8,7 +8,7 @@ These parameters define the settings for the Document Server services.
 
 ## services.CoAuthoring
 
-`Type: object`
+**type:** `object`
 
 Defines the settings for the co-authoring editing session.
 

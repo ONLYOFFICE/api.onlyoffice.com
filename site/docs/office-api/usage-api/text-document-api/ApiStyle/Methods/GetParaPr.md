@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how ot get the paragraph properties of the current style.
+Get the paragraph properties of the current style in a document.
 
 ```javascript editor-docx
-// How to get properties of the paragraph.
+// How to get properties of the paragraph in a document.
 
-// Display the table properties from the default paragraph style.
+// Display the table properties from the default paragraph style in a document.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");

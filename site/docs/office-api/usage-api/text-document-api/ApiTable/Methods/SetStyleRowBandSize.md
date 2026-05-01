@@ -2,32 +2,16 @@
 
 Specifies a number of rows which will comprise each table row band for this table style.
 
-## Syntax
-
-```javascript
-expression.SetStyleRowBandSize(nCount);
-```
-
-`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCount | Required | number |  | The number of rows measured in positive integers. |
-
-## Returns
-
-boolean
+Inherited from [ApiTablePr.SetStyleRowBandSize](../../ApiTablePr/Methods/SetStyleRowBandSize.md).
 
 ## Example
 
-This example specifies a number of rows which will comprise each table row band for this table style.
+Specify a number of rows which will comprise each table row band for this table style in a document.
 
 ```javascript editor-docx
-// How to set row band size.
+// How to set row band size in a document.
 
-// How to style a row band size.
+// How to style a row band size in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();

@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定此文本块的文本相对于周围非定位文本的默认基线升高或降低的量。
+指定在文档中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
 
 ```javascript editor-docx
-// How to set an inline position of a text.
+// How to set an inline position of a text in a document.
 
-// Create a text run object, specify its position to move down or up.
+// Create a text run object, specify its position to move down or up in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle1 = doc.CreateStyle("My New Run Style 1", "run");

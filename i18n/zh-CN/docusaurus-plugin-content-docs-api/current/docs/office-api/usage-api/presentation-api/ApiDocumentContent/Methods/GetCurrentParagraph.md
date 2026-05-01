@@ -20,9 +20,13 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-此示例返回文档内容中的当前段落。
+返回文档内容中的当前段落。
 
 ```javascript editor-pptx
+// How can I get current paragraph using a document content in a presentation?
+
+// Get current paragraph for a document content in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 slide.AddObject(shape);
-
 ```

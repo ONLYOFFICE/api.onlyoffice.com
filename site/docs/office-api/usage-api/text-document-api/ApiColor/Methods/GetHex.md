@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the hex representation of the color.
+Get the hex representation of the color in a document.
 
 ```javascript editor-docx
+// How to get the hex for a color in a document?
+
+// Get the hex and display the result in a document.
+
 const doc = Api.GetDocument();
 
 const themeColor = Api.ThemeColor('accent1');
@@ -41,5 +45,4 @@ paragraph.AddLineBreak();
 paragraph.AddText('Hex of rgbaColor: ' + rgbaColorHex);
 paragraph.AddLineBreak();
 paragraph.AddText('Hex for theme colors and auto color are always opaque black; actual color depends on the document theme.');
-
 ```

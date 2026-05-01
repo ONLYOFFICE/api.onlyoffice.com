@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a tab stop to the paragraph.
+Add a tab stop to the paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to add a tab after a sentence in a paragraph.
+// How to add a tab after a sentence in a paragraph in a presentation.
 
-// How to split a text string with a tab.
+// How to split a text string with a tab in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("This is the text which starts after the tab stops.");
 slide.AddObject(shape);
-
 ```

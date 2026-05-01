@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the icon set type from conditional formatting.
+Get the icon set type from conditional formatting in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to retrieve the current icon set type used in conditional formatting.
@@ -42,5 +42,4 @@ iconCondition.SetIconSet("xl3TrafficLights1");
 
 let iconSet = iconCondition.GetIconSet();
 worksheet.GetRange("B1").SetValue("Current icon set: " + iconSet);
-
 ```

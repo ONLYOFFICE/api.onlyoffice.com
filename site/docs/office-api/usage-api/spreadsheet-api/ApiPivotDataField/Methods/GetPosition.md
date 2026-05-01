@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get a position of a data field.
+Get a position of a data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a table element position.
+// How to get a table element position in a spreadsheet.
 
-// Create a pivot table, add data to it then display a custom data field's position.
+// Create a pivot table, add data to it then display a custom data field's position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,10 +20,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Create a custom triangle shape and add it to the worksheet. Applies custom geometry to a shape with specific fill and stroke.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How can I close using a geometry path in a spreadsheet?
+
+// Close for a geometry path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

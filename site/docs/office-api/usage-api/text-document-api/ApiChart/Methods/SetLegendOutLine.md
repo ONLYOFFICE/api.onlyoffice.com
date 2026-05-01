@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the chart legend.
+Set the outline to the chart legend in a document.
 
 ```javascript editor-docx
-// How to ouline a chart legend.
+// How to ouline a chart legend in a document.
 
-// Create a chart and set ouline of its legend with a stroke.
+// Create a chart and set ouline of its legend with a stroke in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

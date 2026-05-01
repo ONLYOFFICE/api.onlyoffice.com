@@ -2,32 +2,16 @@
 
 使用指定的位置移除元素。
 
-## 语法
-
-```javascript
-expression.RemoveElement(nPos);
-```
-
-`expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 元素在文档中或其他元素内部的编号（位置）。 |
-
-## 返回值
-
-boolean
+继承自 [ApiDocumentContent.RemoveElement](../../ApiDocumentContent/Methods/RemoveElement.md)。
 
 ## 示例
 
-此示例使用指定的位置移除元素。
+在文档中使用指定位置移除元素。
 
 ```javascript editor-docx
-// Remove the element using its index.
+// Remove the element using its index in a document.
 
-// Delete document item.
+// Remove the element for a document content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

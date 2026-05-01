@@ -3,27 +3,11 @@
 Sets the placeholder text to the current form.
 *Can't be set to checkbox or radio button.*
 
-## Syntax
-
-```javascript
-expression.SetPlaceholderText(sText);
-```
-
-`expression` - A variable that represents a [ApiCheckBoxForm](../ApiCheckBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | Required | string |  | The text that will be set to the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetPlaceholderText](../../ApiFormBase/Methods/SetPlaceholderText.md).
 
 ## Example
 
-This example sets the placeholder text to the form.
+Set the placeholder text to the form.
 
 ```javascript editor-docx
 // Add text as a placeholder of the form.

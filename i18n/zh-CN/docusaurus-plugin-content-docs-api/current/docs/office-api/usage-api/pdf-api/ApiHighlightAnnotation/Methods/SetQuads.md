@@ -2,29 +2,17 @@
 
 设置当前标记批注的四边形。
 
-## 语法
-
-```javascript
-expression.SetQuads(quads);
-```
-
-`expression` - 表示 [ApiHighlightAnnotation](../ApiHighlightAnnotation.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| quads | 必需 | [Quad](../../Enumeration/Quad.md)[] |  | 未提供描述。 |
-
-## 返回值
-
-boolean
+继承自 [ApiBaseMarkupAnnotation.SetQuads](../../ApiBaseMarkupAnnotation/Methods/SetQuads.md)。
 
 ## 示例
 
-此示例为标记注释设置四边形。
+在 PDF 文档中为标记注释设置四边形。
 
 ```javascript editor-pdf
+// How do I set quads in a PDF document?
+
+// Set quads using a markup annotation object in a PDF document.
+
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 markupAnnot.SetQuads([[85, 73, 226, 73, 85, 87, 226, 87]]);

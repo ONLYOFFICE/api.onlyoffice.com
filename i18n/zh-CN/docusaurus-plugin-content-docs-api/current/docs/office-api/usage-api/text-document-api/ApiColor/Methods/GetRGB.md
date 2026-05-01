@@ -20,9 +20,13 @@ Object
 
 ## 示例
 
-此示例展示如何获取颜色的 RGB 分量。
+获取文档中颜色的 RGB 分量。
 
 ```javascript editor-docx
+// How can I get the r g b using a color in a document?
+
+// Get the r g b for a color in a document.
+
 const doc = Api.GetDocument();
 
 const themeColor = Api.ThemeColor('accent1');
@@ -41,5 +45,4 @@ paragraph.AddLineBreak();
 paragraph.AddText('RGB of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b);
 paragraph.AddLineBreak();
 paragraph.AddText('RGB for theme colors and auto color are always opaque black; actual color depends on the document theme.');
-
 ```

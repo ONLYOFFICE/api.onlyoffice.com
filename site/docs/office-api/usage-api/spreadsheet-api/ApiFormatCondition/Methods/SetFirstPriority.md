@@ -20,7 +20,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets a conditional formatting rule as first priority.
+Set a conditional formatting rule as first priority.
 
 ```javascript editor-xlsx
 // How to change the priority order of conditional formatting rules.
@@ -55,5 +55,4 @@ condition2.SetFirstPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
-
 ```

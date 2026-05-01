@@ -22,9 +22,13 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+在 PDF 文档中设置以磅的二十分之一为单位的文本间距。
 
 ```javascript editor-pdf
+// How can I set spacing using a paragraph in a PDF document?
+
+// Set spacing for a paragraph in a PDF document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text spacing set to 5 points.');
 paragraph.SetSpacing(60);
 page.AddObject(shape);
-
 ```

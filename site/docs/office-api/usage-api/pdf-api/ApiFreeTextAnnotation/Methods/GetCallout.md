@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets callout of freeText annotation.
+Get callout of freeText annotation in a PDF document.
 
 ```javascript editor-pdf
+// How to get the callout for a free text annotation in a PDF document?
+
+// Get the callout and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

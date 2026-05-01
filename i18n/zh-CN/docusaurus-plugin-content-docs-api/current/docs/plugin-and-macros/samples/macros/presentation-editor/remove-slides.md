@@ -49,7 +49,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取演示文稿](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md)，[获取所有幻灯片](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md)，[按占位符类型获取图形](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType.md)，[获取文档内容](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md)，[删除幻灯片](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md)
 
 ## 结果
 

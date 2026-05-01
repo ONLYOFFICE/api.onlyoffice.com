@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns an array of all paragraphs from the document content.
+Return an array of all paragraphs from the document content.
 
 ```javascript editor-pptx
+// How can I get all paragraphs using a document content in a presentation?
+
+// Get all paragraphs for a document content in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -47,5 +51,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

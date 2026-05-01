@@ -20,9 +20,13 @@ expression.GetMainSequence();
 
 ## 示例
 
-此示例从时间线获取主动画序列。
+从演示文稿中的时间线获取主动画序列。
 
 ```javascript editor-pptx
+// How can I get the main sequence using a timeline in a presentation?
+
+// Get the main sequence for a timeline in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Effects in sequence: ' + mainSequence.GetCount());
 slide.AddObject(infoShape);
-
 ```

@@ -20,10 +20,10 @@ boolean
 
 ## Example
 
-This example clears the content from the run.
+Clear the content from the run in a PDF document.
 
 ```javascript editor-pdf
-// How to delete content from the text run.
+// How to delete content from the text run in a PDF document.
 
 // Remove text from the page.
 
@@ -50,5 +50,4 @@ run.AddText("The text in the previous paragraph cannot be seen, as it has been c
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

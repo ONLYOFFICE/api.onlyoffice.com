@@ -4,7 +4,7 @@
 
 ## 类型
 
-对象
+Object
 
 ## 属性
 
@@ -18,10 +18,9 @@
 | ShowPageNums | boolean | 指定是否在图表目录中显示页码。 |
 | TofStyle | [TofStyle](../Enumeration/TofStyle.md) | 图表目录样式类型。 |
 
-
 ## 示例
 
-此示例向文档添加具有指定属性的图表目录。
+向文档添加具有指定属性的图表目录。
 
 ```javascript editor-docx
 // How to create a table of figures properties.
@@ -38,5 +37,4 @@ let tofPr = {
 	"TofStyle": "distinctive"
 };
 doc.AddTableOfFigures(tofPr);
-
 ```

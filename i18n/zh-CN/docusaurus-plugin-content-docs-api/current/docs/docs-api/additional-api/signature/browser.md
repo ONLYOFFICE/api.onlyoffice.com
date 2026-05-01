@@ -42,7 +42,7 @@ JSON 格式的 JWT 令牌的 payload 必须与 [config](../../usage-api/advanced
     "url": "https://example.com/url-to-example-document.docx"
   },
   "editorConfig": {
-    "callbackUrl": "https://example.com/url-to-callback.ashx",
+    "callbackUrl": "https://example.com/url-to-callback",
     "mode": "edit"
   }
 }
@@ -116,7 +116,7 @@ JWT 令牌的 payload（JSON 格式）必须与 [config](../../usage-api/advance
       "url": "https://example.com/url-to-example-document.docx"
     },
     "editorConfig": {
-      "callbackUrl": "https://example.com/url-to-callback.ashx",
+      "callbackUrl": "https://example.com/url-to-callback",
       "mode": "edit"
     }
   }

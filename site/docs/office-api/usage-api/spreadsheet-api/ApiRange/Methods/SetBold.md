@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the bold property to the text characters in the current cell or cell range.
+Set the bold property to the text characters in the current cell or cell range.
 
 ```javascript editor-xlsx
-// How to change the font style properties of a range making it bold.
+// How to change the font style properties of a range making it bold in a spreadsheet.
 
-// Make characters of the ApiRange object bold.
+// Make characters of the cell range object bold.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Bold text");

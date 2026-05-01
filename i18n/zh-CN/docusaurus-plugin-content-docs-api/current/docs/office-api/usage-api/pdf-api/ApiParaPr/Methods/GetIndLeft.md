@@ -20,10 +20,10 @@ expression.GetIndLeft();
 
 ## 示例
 
-此示例展示如何获取段落左侧缩进。
+获取 PDF 文档中的段落左侧缩进。
 
 ```javascript editor-pdf
-// How to return a left side identation of a paragraph property.
+// How to return a left side identation of a paragraph property in a PDF document.
 
 // Return a left side indentation of a text property from the page.
 
@@ -52,5 +52,4 @@ const indLeft = paraPr.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
-
 ```

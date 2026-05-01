@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置绘图的旋转角度。
+设置文档中绘图对象的旋转角度。
 
 ```javascript editor-docx
+// How to set rotation for a drawing object in a document?
+
+// Set rotation and display the result in a document.
+
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

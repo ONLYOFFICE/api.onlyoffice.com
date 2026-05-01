@@ -20,7 +20,7 @@ number
 
 ## Example
 
-This example shows how to get the cells count in the range.
+Get the cells count in the range in a spreadsheet.
 
 ```javascript editor-xlsx
 // How to find out how many cells a range has.

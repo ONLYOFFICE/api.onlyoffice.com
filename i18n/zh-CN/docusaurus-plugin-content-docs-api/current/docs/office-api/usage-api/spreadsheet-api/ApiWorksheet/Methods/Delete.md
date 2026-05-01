@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-此示例删除工作表。
+删除工作表。
 
 ```javascript editor-xlsx
-// How to delete sheets.
+// How to delete sheets in a spreadsheet.
 
-// Remove a worksheet.
+// Delete and display the result in a spreadsheet.
 
 Api.AddSheet("New sheet");
 let sheet = Api.GetActiveSheet();

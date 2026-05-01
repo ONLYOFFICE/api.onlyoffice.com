@@ -22,7 +22,7 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies the vertical alignment for text within the current table cell.
+Specify the vertical alignment for text within the current table cell.
 
 ```javascript editor-pptx
 // How to set the cell text vertical alignment.
@@ -44,5 +44,4 @@ cell.SetVerticalAlign("bottom");
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

@@ -26,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to return an interest rate for a fully invested security.
+Return an interest rate for a fully invested security in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate an interest rate for a fully invested security.
+// How to calculate an interest rate for a fully invested security in a spreadsheet.
 
-// Use a function to get a fully invested security's interest rate.
+// Use a function to get a fully invested security's interest rate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

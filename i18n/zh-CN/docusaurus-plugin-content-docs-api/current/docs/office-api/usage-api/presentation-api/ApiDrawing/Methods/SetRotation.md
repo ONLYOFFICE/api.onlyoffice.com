@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置绘图的旋转角度。
+在演示文稿中为绘图对象设置旋转角度。
 
 ```javascript editor-pptx
+// How to set rotation for a drawing object in a presentation?
+
+// Set rotation and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
 slide.AddObject(shape);
-
 ```

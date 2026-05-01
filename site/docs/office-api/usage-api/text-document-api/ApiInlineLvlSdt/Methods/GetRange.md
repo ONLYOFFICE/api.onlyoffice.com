@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## Example
 
-This example shows how to get a Range object that represents the part of the document contained in the specified content control.
+Get a Range object that represents the part of the document contained in the specified content control in a document.
 
 ```javascript editor-docx
-// How to get range of the inline text control.
+// How to get range of the inline text control in a document.
 
-// Get the range where the inline content control is located.
+// Get the range where the inline content control is located in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

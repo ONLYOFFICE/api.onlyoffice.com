@@ -22,10 +22,10 @@ boolean
 
 ## Example
 
-This example adds some text to the run.
+Add some text to the run in a PDF document.
 
 ```javascript editor-pdf
-// How to add a text to a text run object.
+// How to add a text to a text run object in a PDF document.
 
 // How to add a text to the page.
 
@@ -44,5 +44,4 @@ run.SetFontSize(30);
 run.AddText("This is just a sample text. Nothing special.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

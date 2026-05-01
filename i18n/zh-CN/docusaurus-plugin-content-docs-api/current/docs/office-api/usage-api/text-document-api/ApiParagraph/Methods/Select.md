@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例选择段落。
+在文档中选中段落。
 
 ```javascript editor-docx
-// How to select the paragraph.
+// How to select the paragraph in a document.
 
-// Select a paragraph with a cursor.
+// Select a paragraph with a cursor in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## Example
 
-This example sets the text color to the current text run.
+Set the text color to the current text run in a PDF document.
 
 ```javascript editor-pdf
-// How to set solid fill to the text.
+// How to set solid fill to the text in a PDF document.
 
-// Create a new text run and set its font color.
+// Create a new text run and set its font color in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,5 +49,4 @@ run.SetFill(runFill);
 run.AddText("This is a text run with the font color set to black.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -1,6 +1,6 @@
 # ApiTop10
 
-Represents the ApiTop10 class.
+ApiTop10 is a subclass of [ApiFormatCondition](../ApiFormatCondition/ApiFormatCondition.md).
 
 ## Properties
 

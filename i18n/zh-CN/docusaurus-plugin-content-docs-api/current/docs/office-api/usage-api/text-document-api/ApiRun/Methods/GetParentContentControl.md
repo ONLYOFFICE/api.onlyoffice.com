@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-此示例展示如何获取包含文本块的内容控件。
+获取文档中包含 run 的内容控件。
 
 ```javascript editor-docx
-// How to get an element that is a parent of the text.
+// How to get an element that is a parent of the text in a document.
 
-// Get the parent content control of the text.
+// Get the parent content control of the text in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

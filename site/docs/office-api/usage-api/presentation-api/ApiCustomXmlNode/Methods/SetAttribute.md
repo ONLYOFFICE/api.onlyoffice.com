@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example shows how to set an attribute value on a custom XML node.
+Set an attribute value on a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How to set an attribute on an XML node.
+// How to set an attribute on an XML node in a presentation.
 
-// Set an XML node attribute.
+// Set an XML node attribute in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

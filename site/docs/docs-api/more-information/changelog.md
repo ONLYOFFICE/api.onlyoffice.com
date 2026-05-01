@@ -198,6 +198,8 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [document.permissions.reviewGroups](../usage-api/config/document/permissions.md#reviewgroups) field.
 - Added conversion to [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) formats.
 - Added conversion from [xml](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
+- Removed the deprecated `document.info.author` parameter.
+- Removed the deprecated `document.info.created` parameter.
 
 ## Version 6.2
 
@@ -212,6 +214,8 @@ The list of changes of ONLYOFFICE Docs API.
 - The *text*, *spreadsheet* and *presentation* values for [documentType](../usage-api/config/config.md#documenttype) parameter is deprecated, please use *word*, *cell* and *slide* values instead.
 - Added the *group* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
 - Added conversion from [fb2](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) format.
+- Removed the deprecated `document.permissions.changeHistory` parameter.
+- Removed the deprecated `document.permissions.rename` parameter.
 
 ## Version 6.0
 
@@ -222,7 +226,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.customization.macrosMode](../usage-api/config/editor/customization/customization-standard-branding.md#macrosmode) field.
 - Added the [events.onRequestCreateNew](../usage-api/config/events.md#onrequestcreatenew) event.
 - Added the [document.permissions.copy](../usage-api/config/document/permissions.md#copy) field.
-- The [document.permissions.rename](../usage-api/config/document/permissions.md#rename) field is deprecated, please add the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) field instead.
+- The `document.permissions.rename` field is deprecated, please add the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) field instead.
 
 ## Version 5.5
 
@@ -232,7 +236,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) event.
 - Added the [setRevisedFile](../usage-api/methods.md#setrevisedfile) method.
 - Token in [methods](../additional-api/signature/browser.md#methods) parameters.
-- The [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) field is deprecated, please add the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) field instead.
+- The `document.permissions.changeHistory` field is deprecated, please add the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) field instead.
 - Added the [editorConfig.customization.goback.requestClose](../usage-api/config/editor/customization/customization-standard-branding.md#goback) field.
 - Added the [events.onRequestSharingSettings](../usage-api/config/events.md#onrequestsharingsettings) event.
 - Added the [editorConfig.customization.unit](../usage-api/config/editor/customization/customization-standard-branding.md#unit) field.
@@ -247,10 +251,10 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 5.4
 
 - Added the [editorConfig.region](../usage-api/config/editor/editor.md#region) field.
-- The [document.info.created](../usage-api/config/document/info.md#created) field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
-- The [document.info.author](../usage-api/config/document/info.md#author) field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
-- The [events.onReady](../usage-api/config/events.md#onready) event is removed.
-- The *firstname* and *lastname* fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object is removed.
+- The `document.info.created` field is deprecated, please use the [document.info.uploaded](../usage-api/config/document/info.md#uploaded) field instead.
+- The `document.info.author` field is deprecated, please use the [document.info.owner](../usage-api/config/document/info.md#owner) field instead.
+- The `events.onReady` event is removed.
+- The `firstname` and `lastname` fields in the [editorConfig.user](../usage-api/config/editor/editor.md#user) object are removed.
 - Added the [events.onRequestSaveAs](../usage-api/config/events.md#onrequestsaveas) event.
 - Added the [events.onRequestInsertImage](../usage-api/config/events.md#onrequestinsertimage) event.
 - Added the [insertImage](../usage-api/methods.md#insertimage) method.
@@ -295,7 +299,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added the [document.permissions.modifyFilter](../usage-api/config/document/permissions.md#modifyfilter) field.
 - Added conversion for macro-enabled document, document template and flat document [formats](../additional-api/conversion-api/conversion-tables.md).
-- The [events.onReady](../usage-api/config/events.md#onready) event is deprecated, please use the [events.onAppReady](../usage-api/config/events.md#onappready) events instead.
+- The `events.onReady` event is deprecated, please use the [events.onAppReady](../usage-api/config/events.md#onappready) event instead.
 - Added the [events.onDocumentReady](../usage-api/config/events.md#ondocumentready) event.
 - Added the [editorConfig.plugins.autostart](../usage-api/config/editor/plugins.md#autostart) field.
 - Added the [events.onWarning](../usage-api/config/events.md#onwarning) event.
@@ -306,9 +310,9 @@ The list of changes of ONLYOFFICE Docs API.
 - Changed the [showMessage](../usage-api/methods.md#showmessage) method.
 - Added conversion to [odp](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) format.
 - Added the [document.permissions.comment](../usage-api/config/document/permissions.md#comment) field.
-- Added the [document.permissions.changeHistory](../usage-api/config/document/permissions.md#changehistory) field.
+- Added the `document.permissions.changeHistory` field.
 - Added the [events.onRequestRestore](../usage-api/config/events.md#onrequestrestore) event.
-- Added the [document.permissions.rename](../usage-api/config/document/permissions.md#rename) field.
+- Added the `document.permissions.rename` field.
 - Added the [events.onRequestRename](../usage-api/config/events.md#onrequestrename) event.
 - Added the [meta](../additional-api/command-service/meta.md) command.
 - Added the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
@@ -318,7 +322,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 4.3
 
 - Added the [destroyEditor](../usage-api/methods.md#destroyeditor) method.
-- Removed the [editorConfig.plugins.url](../usage-api/config/editor/plugins.md#url) field from the plugin connection pattern.
+- Removed the `editorConfig.plugins.url` field from the plugin connection pattern.
 - Added the [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) field.
 - Added the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) field.
 - Added the [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) field.
@@ -327,7 +331,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 4.2
 
-- The [firstname](../usage-api/config/editor/editor.md#user) and [lastname](../usage-api/config/editor/editor.md#user) fields is deprecated, please use the [name](../usage-api/config/editor/editor.md#user) field instead.
+- The `firstname` and `lastname` fields are deprecated, please use the [name](../usage-api/config/editor/editor.md#username) field instead.
 - Added the possibility to specify the values for the [editorConfig.customization.chat](../usage-api/config/editor/customization/customization-standard-branding.md#chat) and [editorConfig.customization.comments](../usage-api/config/editor/customization/customization-standard-branding.md#comments) in the Open Source version.
 - Added the [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) field.
 - Added the [editorConfig.customization.zoom](../usage-api/config/editor/customization/customization-standard-branding.md#zoom) field.

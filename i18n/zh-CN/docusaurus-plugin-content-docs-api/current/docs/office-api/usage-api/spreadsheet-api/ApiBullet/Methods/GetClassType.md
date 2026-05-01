@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取 ApiBullet 类的类型并将其插入到表格中。
+检查电子表格中项目符号返回的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of a bullet and show it in the sheet.
+// How do I check what type a bullet object is in a spreadsheet?
 
-// Get a class type of an object.
+// Retrieve and output the class type string for a bullet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

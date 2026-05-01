@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取文本块的文本属性。
+获取 PDF 文档中 run 的文本属性。
 
 ```javascript editor-pdf
-// How to get the text properties of the current ApiRun object and change its font size.
+// How to get the text properties of the current text run object and change its font size in a PDF document.
 
-// Resize a font of a text run.
+// Resize a font of a text run in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +44,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font size set to 15 points using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -1,36 +1,12 @@
 # Info
 
-The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
-
-## author
-
-`Type: string`
-
-Defines the name of the document author/creator.
-
-:::danger[Deprecated]
-Starting from version 5.4, please use [owner](#owner) instead.
-:::
-
-**Example**: `"John Smith"`
-
-## created
-
-`Type: string`
-
-Defines the document creation date.
-
-:::danger[Deprecated]
-Starting from version 5.4, please use [uploaded](#uploaded) instead.
-:::
-
-**Example**: `"2010-07-07 3:46 PM"`
+The document info section allows you to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
 
 ## favorite
 
-`Type: boolean`
+**type:** `boolean`
 
-Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is *undefined* or *null*, the *Favorite* icon is not displayed at the editor window header.
+Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is `undefined` or `null`, the *Favorite* icon is not displayed at the editor window header.
 
 **Example**: `true`
 
@@ -38,7 +14,7 @@ Defines the highlighting state of the *Favorite* icon. When the user clicks the 
 
 ## folder
 
-`Type: string`
+**type:** `string`
 
 Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).
 
@@ -46,7 +22,7 @@ Defines the folder where the document is stored (can be empty in case the docume
 
 ## owner
 
-`Type: string`
+**type:** `string`
 
 Defines the name of the document owner/creator.
 
@@ -54,9 +30,9 @@ Defines the name of the document owner/creator.
 
 ## sharingSettings
 
-`Type: array of object`
+**type:** `object[]`
 
-Displays the information about the settings which allow to share the document with other users.
+Displays the information about the settings which allow sharing the document with other users.
 
 **Example**:
 
@@ -71,7 +47,7 @@ Displays the information about the settings which allow to share the document wi
 
 ### sharingSettings.isLink
 
-`Type: boolean`
+**type:** `boolean`
 
 Changes the user icon to the link icon.
 
@@ -79,15 +55,15 @@ Changes the user icon to the link icon.
 
 ### sharingSettings.permissions
 
-`Type: string`
+**type:** `string`
 
-The access rights for the user with the name above. Can be **Full Access**, **Read Only** or **Deny Access**.
+The access rights for the user with the name above. Can be `Full Access`, `Read Only`, or `Deny Access`.
 
 **Example**: `"Full Access"`
 
 ### sharingSettings.user
 
-`Type: string`
+**type:** `string`
 
 The name of the user the document will be shared with.
 
@@ -97,7 +73,7 @@ The name of the user the document will be shared with.
 
 ## uploaded
 
-`Type: string`
+**type:** `string`
 
 Defines the document uploading date.
 
@@ -109,7 +85,9 @@ Defines the document uploading date.
 
 ``` ts
 const config = {
+  // ...
   document: {
+    // ...
     info: {
       favorite: false,
       folder: "Example Files",
@@ -121,8 +99,7 @@ const config = {
         },
       ],
       uploaded: "2010-07-07 3:46 PM",
-    }
-    ,
+    },
   },
 };
 

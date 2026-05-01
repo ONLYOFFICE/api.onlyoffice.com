@@ -23,12 +23,12 @@ expression.attachEvent(eventName, callback);
 
 ## 示例
 
-此示例演示如何订阅「onWorksheetChange」事件。
+在电子表格中订阅"onWorksheetChange"事件。
 
 ```javascript editor-xlsx
-// Attach an event.
+// Attach an event in a spreadsheet.
 
-// How to start event handling.
+// How to start event handling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

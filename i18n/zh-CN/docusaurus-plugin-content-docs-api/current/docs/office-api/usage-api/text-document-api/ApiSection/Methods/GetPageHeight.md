@@ -20,7 +20,7 @@ expression.GetPageHeight();
 
 ## 示例
 
-此示例展示如何获取页面高度。
+获取文档中的页面高度。
 
 ```javascript editor-docx
 // How to get the page height.

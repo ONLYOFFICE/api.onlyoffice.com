@@ -2,6 +2,10 @@
 
 The plugin object.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -10,11 +14,6 @@ The plugin object.
 | guid | string | The plugin identifier. It must be of the *asc.&#123;UUID&#125;* type. |
 | obj | object | The [config](../../../../../docs/plugin-and-macros/structure/configuration/configuration.md) of the installed plugin. The version is taken from the config and compared with the current one to check for updates. |
 | url | string | The URL to plugin config. |
-## Type
-
-Object
-
-
 
 ## Example
 

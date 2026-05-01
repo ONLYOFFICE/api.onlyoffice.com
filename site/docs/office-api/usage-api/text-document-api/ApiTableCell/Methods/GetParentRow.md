@@ -20,7 +20,7 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a parent row of the cell.
+Get a parent row of the cell in a document.
 
 ```javascript editor-docx
 // How to get parent row of the cell.

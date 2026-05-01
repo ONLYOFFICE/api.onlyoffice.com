@@ -2,7 +2,6 @@
 
 Represents the ApiBlockLvlSdt class.
 
-
 ## Methods
 
 | Method | Returns | Description |

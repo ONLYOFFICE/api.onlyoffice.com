@@ -15,7 +15,6 @@ Enumeration
 - "beforeCursor"
 - "afterCursor"
 
-
 ## Example
 
 ```javascript

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取文本注释的类类型。
+获取 PDF 文档中文本注释对象的类类型。
 
 ```javascript editor-pdf
+// How can I get the class type of a text annotation in a PDF document?
+
+// Get the class type of a text annotation and display it in the PDF.
+
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 let classType = textAnnot.GetClassType();

@@ -20,13 +20,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to update a pivot table.
+Update a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to update a table.
+// How to update a table in a spreadsheet.
 
-// Create a pivot table, add data to it then update it. 
- 
+// Create a pivot table, add data to it then update it in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');

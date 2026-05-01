@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the major tick mark "cross" for the horizontal axis.
+Specify the major tick mark "cross" for the horizontal axis in a document.
 
 ```javascript editor-docx
-// How to change a tickmark of a major horizontal axis.
+// How to change a tickmark of a major horizontal axis in a document.
 
-// Create a chart and set its major horizontal axis tickmark as a cross symbol.
+// Create a chart and set its major horizontal axis tickmark as a cross symbol in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

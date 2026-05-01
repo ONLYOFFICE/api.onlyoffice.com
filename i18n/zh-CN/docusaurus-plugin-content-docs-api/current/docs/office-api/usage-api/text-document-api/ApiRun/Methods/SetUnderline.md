@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例指定当前文本块的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。
+指定在文档中当前 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
 
 ```javascript editor-docx
-// How to create a new text and underline it.
+// How to create a new text and underline it in a document.
 
-// Create a new text run and underline it.
+// Create a new text run and underline it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -1,7 +1,6 @@
 # ApiRun
 
-表示 ApiRun 类。
-
+ApiRun 是 [ApiTextPr](../ApiTextPr/ApiTextPr.md) 的子类。
 
 ## 方法
 

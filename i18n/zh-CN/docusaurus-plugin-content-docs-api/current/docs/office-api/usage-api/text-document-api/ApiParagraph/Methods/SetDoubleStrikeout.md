@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例指定此段落的内容显示为每个字符都有两条水平线穿过。
+指定在文档中此段落的内容以每个字符上显示两条水平线的方式显示。
 
 ```javascript editor-docx
-// How to strike out a text with two lines.
+// How to strike out a text with two lines in a document.
 
-// Create a new paragraph and set double strikeout to it.
+// Create a new paragraph and set double strikeout to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

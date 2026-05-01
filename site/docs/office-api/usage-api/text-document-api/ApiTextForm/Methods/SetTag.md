@@ -2,29 +2,17 @@
 
 Sets the tag attribute to the current form.
 
-## Syntax
-
-```javascript
-expression.SetTag(tag);
-```
-
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| tag | Required | string |  | The tag which will be added to the current container. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md).
 
 ## Example
 
-This example shows how to set the tag of a form element.
+Set the tag of a form element in a document.
 
 ```javascript editor-docx
+// How to set tag for a form base?
+
+// Set tag and display the result in a document.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -46,5 +34,4 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```
