@@ -8,6 +8,7 @@ interface PendingInput {
     inputEl: HTMLInputElement;
     path: string;
     schemaType: string | undefined;
+    data: unknown;
     handleChange: (path: string, value: unknown) => void;
 }
 
@@ -15,18 +16,21 @@ let pending: PendingInput | null = null;
 
 export function flushPendingInput(): boolean {
     if (!pending) return false;
-    const { inputEl, path, schemaType, handleChange } = pending;
+    const { inputEl, path, schemaType, data, handleChange } = pending;
     const raw = inputEl.value;
     pending = null;
+    let value: unknown;
     if (raw === '') {
-        handleChange(path, undefined);
+        value = undefined;
     } else if (schemaType === 'integer') {
-        handleChange(path, parseInt(raw, 10));
+        value = parseInt(raw, 10);
     } else if (schemaType === 'number') {
-        handleChange(path, parseFloat(raw));
+        value = parseFloat(raw);
     } else {
-        handleChange(path, raw);
+        value = raw;
     }
+    if (value === data) return false;
+    handleChange(path, value);
     return true;
 }
 
@@ -36,7 +40,7 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onFocus = () => {
-        pending = { inputEl: inputRef.current!, path, schemaType: schema.type as string, handleChange };
+        pending = { inputEl: inputRef.current!, path, schemaType: schema.type as string, data, handleChange };
     };
 
     const onBlur = () => {
