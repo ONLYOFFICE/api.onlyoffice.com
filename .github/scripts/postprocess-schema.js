@@ -124,6 +124,19 @@ function collapseAnyOf(node) {
       return;
     }
   }
+
+  // all $refs pointing to string enums → merge into single flat enum
+  if (refs.length > 1 && refs.length === variants.length) {
+    const merged = [];
+    for (const ref of refs) {
+      const refName = ref.$ref.replace("#/definitions/", "");
+      const def = schema.definitions?.[refName];
+      if (!def?.enum) return;
+      merged.push(...def.enum);
+    }
+    replace(node, { type: "string", enum: merged });
+    return;
+  }
 }
 
 /** Replace all own properties of `target` with those of `source`, removing anyOf. */
