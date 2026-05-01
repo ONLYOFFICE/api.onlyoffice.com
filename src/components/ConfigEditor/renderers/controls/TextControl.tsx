@@ -12,25 +12,34 @@ interface PendingInput {
     handleChange: (path: string, value: unknown) => void;
 }
 
-let pending: PendingInput | null = null;
+let current: PendingInput | null = null;
+const deferred: Map<string, { value: unknown; handleChange: (path: string, value: unknown) => void }> = new Map();
+
+function parseInput(inputEl: HTMLInputElement, schemaType: string | undefined): unknown {
+    const raw = inputEl.value;
+    if (raw === '') return undefined;
+    if (schemaType === 'integer') return parseInt(raw, 10);
+    if (schemaType === 'number') return parseFloat(raw);
+    return raw;
+}
+
+function saveCurrent() {
+    if (!current) return;
+    const { inputEl, path, schemaType, data, handleChange } = current;
+    const value = parseInput(inputEl, schemaType);
+    current = null;
+    if (value !== data) {
+        deferred.set(path, { value, handleChange });
+    }
+}
 
 export function flushPendingInput(): boolean {
-    if (!pending) return false;
-    const { inputEl, path, schemaType, data, handleChange } = pending;
-    const raw = inputEl.value;
-    pending = null;
-    let value: unknown;
-    if (raw === '') {
-        value = undefined;
-    } else if (schemaType === 'integer') {
-        value = parseInt(raw, 10);
-    } else if (schemaType === 'number') {
-        value = parseFloat(raw);
-    } else {
-        value = raw;
+    saveCurrent();
+    if (deferred.size === 0) return false;
+    for (const [path, { value, handleChange }] of deferred) {
+        handleChange(path, value);
     }
-    if (value === data) return false;
-    handleChange(path, value);
+    deferred.clear();
     return true;
 }
 
@@ -40,11 +49,8 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onFocus = () => {
-        pending = { inputEl: inputRef.current!, path, schemaType: schema.type as string, data, handleChange };
-    };
-
-    const onBlur = () => {
-        flushPendingInput();
+        saveCurrent();
+        current = { inputEl: inputRef.current!, path, schemaType: schema.type as string, data, handleChange };
     };
 
     return (
@@ -64,7 +70,6 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
                 type={type}
                 defaultValue={data ?? ''}
                 onFocus={onFocus}
-                onBlur={onBlur}
                 disabled={!enabled}
             />
         </div>
