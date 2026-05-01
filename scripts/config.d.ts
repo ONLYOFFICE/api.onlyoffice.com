@@ -786,7 +786,7 @@ interface EditorConfigBase {
     /**
      * @forType `desktop` | `mobile` | `embedded`
      */
-    customerId?: any;
+    customerId?: string;
 }
 
 interface EditorConfigNormal extends EditorConfigBase {
