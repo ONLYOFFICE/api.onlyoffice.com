@@ -79,7 +79,7 @@ export const EditorPreview = ({
                 destroyEditor();
                 containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>';
 
-                const finalConfig = { ...config };
+                const finalConfig = structuredClone(config);
 
                 if (documentServerSecret?.length) {
                     const { events: _, ...configForJWT } = finalConfig;
