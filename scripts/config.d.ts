@@ -776,122 +776,17 @@ interface DocumentNormal extends DocumentBase {
 interface DocumentEmbedded extends DocumentBase {}
 
 interface EditorConfigBase {
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile` | `embedded`
-     */
-    licenseUrl?: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile` | `embedded`
-     */
-    customerId?: string;
-}
-
-interface EditorConfigNormal extends EditorConfigBase {
-    /**
-     * Specifies the data received from the **document editing service** using the `onMakeActionLink` event or the `onRequestSendNotify` event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
-     * @forType `desktop` | `mobile`
-     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#actionlink
-     */
-    actionLink?: ActionLink;
-
-    /**
-     * Defines the editor opening mode.
-     *
-     * @cases
-     * - `view` → open the document for viewing.
-     * - `edit` → open the document in the editing mode allowing to apply changes to the document data.
-     *
-     * @forType `desktop` | `mobile`
-     * @default "edit"
-     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#mode
-     */
-    mode?: "edit" | "view",
-
     /**
      * Defines the editor interface language.
      *
      * @note Use two-letter language codes (e.g., `de`, `ru`, `it`).
      * @note To translate the interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan), use four-letter codes (`pt-PT`, `zh-TW`). The code `pt` sets Portuguese (Brazil), and `zh` sets Chinese (People's Republic of China).
      *
-     * @forType `desktop` | `mobile`
+     * @forType `desktop` | `mobile` | `embedded`
      * @default "en"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#lang
      */
     lang?: string;
-
-    /**
-     * Defines the default measurement units.
-     *
-     * @note Use `us` or `ca` to set inches.
-     *
-     * @forType `desktop` | `mobile`
-     * @default ""
-     * @example "us"
-     * @deprecated Starting from version 8.2, use the `region` parameter instead.
-     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#location
-     */
-    location?: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    canCoAuthoring?: boolean;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    canBackToFolder:boolean;
-
-    /**
-     * Defines the absolute URL of the document where it will be created and available after creation.
-     * - If not specified, the **Create** button will not be displayed.
-     * - Instead of this parameter, you can use the `onRequestCreateNew` event.
-     *
-     * @forType `desktop` | `mobile`
-     * @example "https://example.com/url-to-create-document"
-     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#createurl
-     */
-    createUrl?: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    sharingSettingsUrl?: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    fileChoiceUrl?: string;
-
-    /**
-     * Specifies the absolute URL to the **document storage service**.
-     * - This service must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
-     * - Url for connection between sdk and portal.
-     *
-     * @forType `desktop` | `mobile`
-     * @example "https://example.com/url-to-callback"
-     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#callbackurl
-     */
-    callbackUrl: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    mergeFolderUrl?: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    saveAsUrl?: string;
 
     /**
      * Defines the default display format for **currency**, **date**, and **time** (in the **Spreadsheet Editor** only).
@@ -899,7 +794,7 @@ interface EditorConfigNormal extends EditorConfigBase {
      *
      * @note Starting from version **8.2**, this parameter also defines the default measurement units **in all editor types**. For the `...-US` or `...-CA` regions, inches are used unless another value is specified in `editorConfig.customization.unit`.
      *
-     * @forType `desktop` | `mobile`
+     * @forType `desktop` | `mobile` | `embedded`
      * @defaultValue
      * - If not specified, the value of the `lang` parameter is used.
      * - If no regional setting corresponds to the `lang` value, `"en-US"` is applied by default.
@@ -909,12 +804,36 @@ interface EditorConfigNormal extends EditorConfigBase {
     region?: string;
 
     /**
+     * Defines the editor opening mode.
+     *
+     * @cases
+     * - `view` → open the document for viewing.
+     * - `edit` → open the document in the editing mode allowing to apply changes to the document data.
+     *
+     * @forType `desktop` | `mobile` | `embedded`
+     * @default "edit"
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#mode
+     */
+    mode?: "edit" | "view",
+
+    /**
+     * Specifies the absolute URL to the **document storage service**.
+     * - This service must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
+     * - Url for connection between sdk and portal.
+     *
+     * @forType `desktop` | `mobile` | `embedded`
+     * @example "https://example.com/url-to-callback"
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#callbackurl
+     */
+    callbackUrl: string;
+
+    /**
      * Defines the **user** currently viewing or editing the document.
      *
      * @note The request to the user's avatar is sent **without authorization**, because the avatar URL is inserted into the HTML of the editor frame. A **CORS** issue may occur. In this case, use the avatar in the **base64** format (e.g. `"data:image/png;base64,*****"`).
      * @note If you are subscribed to the `onRequestUsers` event and send an avatar via the `setUsers` method, the `user.image` field in the initialization config is not required. It is **not recommended** to specify this parameter if the avatar is in base64 format and the initialization config is signed with JWT, since the token will become too long.
      *
-     * @forType `desktop` | `mobile`
+     * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#user
      */
     user?: {
@@ -967,6 +886,89 @@ interface EditorConfigNormal extends EditorConfigBase {
          */
         roles?: string[];
     };
+
+    // TODO: Not in the documentation
+    /**
+     * The **wopi** section is used only for WOPI.
+     * @forType `desktop` | `mobile` | `embedded`
+     */
+    wopi?: {
+        /**
+         * Defines the maximum filename length for the rename.
+         *
+         * @default 250
+         */
+        FileNameMaxLength?: number;
+    };
+}
+
+interface EditorConfigNormal extends EditorConfigBase {
+    /**
+     * Specifies the data received from the **document editing service** using the `onMakeActionLink` event or the `onRequestSendNotify` event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
+     * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#actionlink
+     */
+    actionLink?: ActionLink;
+
+    /**
+     * Defines the default measurement units.
+     *
+     * @note Use `us` or `ca` to set inches.
+     *
+     * @forType `desktop` | `mobile`
+     * @default ""
+     * @example "us"
+     * @deprecated Starting from version 8.2, use the `region` parameter instead.
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#location
+     */
+    location?: string;
+
+    // TODO: Not in the documentation
+    /**
+     * @forType `desktop` | `mobile`
+     */
+    canCoAuthoring?: boolean;
+
+    // TODO: Not in the documentation
+    /**
+     * @forType `desktop` | `mobile`
+     */
+    canBackToFolder:boolean;
+
+    /**
+     * Defines the absolute URL of the document where it will be created and available after creation.
+     * - If not specified, the **Create** button will not be displayed.
+     * - Instead of this parameter, you can use the `onRequestCreateNew` event.
+     *
+     * @forType `desktop` | `mobile`
+     * @example "https://example.com/url-to-create-document"
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#createurl
+     */
+    createUrl?: string;
+
+    // TODO: Not in the documentation
+    /**
+     * @forType `desktop` | `mobile`
+     */
+    sharingSettingsUrl?: string;
+
+    // TODO: Not in the documentation
+    /**
+     * @forType `desktop` | `mobile`
+     */
+    fileChoiceUrl?: string;
+
+    // TODO: Not in the documentation
+    /**
+     * @forType `desktop` | `mobile`
+     */
+    mergeFolderUrl?: string;
+
+    // TODO: Not in the documentation
+    /**
+     * @forType `desktop` | `mobile`
+     */
+    saveAsUrl?: string;
 
     /**
      * Defines the presence or absence of the documents in the **Open Recent...** menu option.
@@ -2283,20 +2285,6 @@ interface EditorConfigNormal extends EditorConfigBase {
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#url
          */
         url?: string;
-    };
-
-    // TODO: Not in the documentation
-    /**
-     * The **wopi** section is used only for WOPI.
-     * @forType `desktop` | `mobile`
-     */
-    wopi?: {
-        /**
-         * Defines the maximum filename length for the rename.
-         *
-         * @default 250
-         */
-        FileNameMaxLength?: number;
     };
 }
 
