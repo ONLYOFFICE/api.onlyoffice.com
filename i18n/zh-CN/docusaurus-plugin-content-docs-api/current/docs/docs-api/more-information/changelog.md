@@ -145,9 +145,9 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) 参数部分。
 - 在转换请求中添加了 [documentLayout](../additional-api/conversion-api/request.md#documentLayout) 参数。
 - 在转换请求中添加了 [documentRenderer](../additional-api/conversion-api/request.md#documentRenderer) 参数。
-- 添加了从 [pdf/xps/oxps](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式到 *docx* 的转换。
+- 添加了从 [pdf/xps/oxps](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式到 *docx* 的转换。
 - 添加了 [document.permissions.userInfoGroups](../usage-api/config/document/permissions.md#userinfogroups) 参数。
-- 添加了从 [djvu](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式到 *pdf* 的转换。
+- 添加了从 [djvu](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式到 *pdf* 的转换。
 - 添加了对 [ppsm、ppsx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) 格式的转换。
 
 ## 版本 7.0
@@ -196,8 +196,8 @@ ONLYOFFICE 文档 API 的更改列表。
 - 将 *data.favorite* 参数添加到 [events.onMetaChange](../usage-api/config/events.md#onmetachange) 事件。
 - 添加了 [document.info.favorite](../usage-api/config/document/info.md#favorite) 字段。
 - 添加了 [document.permissions.reviewGroups](../usage-api/config/document/permissions.md#reviewgroups) 字段。
-- 添加了转换为 [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式的功能。
-- 添加了从 [xml](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式转换的功能。
+- 添加了转换为 [epub, fb2, html](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的功能。
+- 添加了从 [xml](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式转换的功能。
 - 移除了已弃用的 `document.info.author` 参数。
 - 移除了已弃用的 `document.info.created` 参数。
 
@@ -213,7 +213,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - [documentType](../usage-api/config/config.md#documenttype) 参数的 *text*, *spreadsheet* 和 *presentation* 值已弃用，请改用 *word*, *cell* 和 *slide* 值。
 - 将 *group* 字段添加到 [editorConfig.user](../usage-api/config/editor/editor.md#user)。
-- 添加了从 [fb2](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式的转换的功能。
+- 添加了从 [fb2](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的转换的功能。
 - 移除了已弃用的 `document.permissions.changeHistory` 参数。
 - 移除了已弃用的 `document.permissions.rename` 参数。
 
@@ -232,7 +232,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - [转换服务](../additional-api/conversion-api/request.md) 地址 `https://documentserver/ConvertService.ashx` 已替换为 `https://documentserver/converter`。
 - 添加了 [editorConfig.customization.spellcheck](../usage-api/config/editor/customization/customization-standard-branding.md#spellcheck) 字段。
-- 添加了转换到 [pdfa](../additional-api/conversion-api/conversion-tables.md#text-document-file-formats) 格式的功能。
+- 添加了转换到 [pdfa](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的功能。
 - 添加了 [events.onRequestCompareFile](../usage-api/config/events.md#onrequestcomparefile) 事件。
 - 添加了 [setRevisedFile](../usage-api/methods.md#setrevisedfile) 方法。
 - [methods](../additional-api/signature/browser.md#methods) 参数中的Token。
