@@ -1,6 +1,6 @@
 ---
 description: Embed a chess board as an OLE object in the editor.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
 # Chess

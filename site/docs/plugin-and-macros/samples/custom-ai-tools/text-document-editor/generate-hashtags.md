@@ -1,6 +1,6 @@
 ---
 description: Generate hashtags from selected text.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Generate hashtags

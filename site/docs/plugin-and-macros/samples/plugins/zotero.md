@@ -1,6 +1,6 @@
 ---
 description: Add references and citations from a Zotero library.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
 # Zotero

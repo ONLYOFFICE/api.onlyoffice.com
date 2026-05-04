@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a custom header with formatted text.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Create custom header

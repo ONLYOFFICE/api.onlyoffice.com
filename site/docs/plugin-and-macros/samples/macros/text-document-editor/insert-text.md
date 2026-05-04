@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Insert text at the current cursor position.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Insert text

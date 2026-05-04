@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Calculate the estimated reading time of a document.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Calculate time to read

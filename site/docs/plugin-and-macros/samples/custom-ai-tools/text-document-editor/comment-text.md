@@ -1,6 +1,6 @@
 ---
 description: Add a comment to the selected text.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Comment text

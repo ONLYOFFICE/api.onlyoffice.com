@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Generate hyperlinks from URLs found in text.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Generate hyperlinks

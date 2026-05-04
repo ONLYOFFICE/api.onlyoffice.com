@@ -1,6 +1,6 @@
 ---
 description: Insert a formatted list into a document.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Insert list

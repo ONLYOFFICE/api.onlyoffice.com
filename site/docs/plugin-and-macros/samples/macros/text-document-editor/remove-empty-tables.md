@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Remove all empty tables from a document.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Remove empty tables

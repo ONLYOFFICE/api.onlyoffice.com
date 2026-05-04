@@ -1,6 +1,6 @@
 ---
 description: Provide input suggestions from a dictionary while typing.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
 # Autocomplete

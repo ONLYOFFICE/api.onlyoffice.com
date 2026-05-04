@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Search for a keyword in document comments.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Search for keyword in comments

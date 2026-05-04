@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Bookmark the last viewed position in a document.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Bookmark last view

@@ -1,6 +1,6 @@
 ---
 description: Rewrite selected text with AI assistance.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Rewrite text

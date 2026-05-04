@@ -1,6 +1,6 @@
 ---
 description: Generate a description for images in a document.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Describe image

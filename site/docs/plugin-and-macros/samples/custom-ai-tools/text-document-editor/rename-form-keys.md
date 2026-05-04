@@ -1,6 +1,6 @@
 ---
 description: Rename form field keys in a document.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Rename form keys

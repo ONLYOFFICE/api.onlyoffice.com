@@ -1,6 +1,6 @@
 ---
 description: Insert a new page into a document.
-tags: ["Docs", "Plugins", "AI Tools", "Text documents"]
+tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
 # Insert page

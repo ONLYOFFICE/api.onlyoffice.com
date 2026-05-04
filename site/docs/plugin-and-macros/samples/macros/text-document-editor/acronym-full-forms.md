@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Expand acronyms to their full forms in a document.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Acronym full forms

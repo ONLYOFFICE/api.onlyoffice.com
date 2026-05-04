@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Reset text formatting to default properties.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Reset text properties

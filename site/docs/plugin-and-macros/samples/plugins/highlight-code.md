@@ -1,6 +1,6 @@
 ---
 description: Apply syntax highlighting to code snippets.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
 # Highlight code

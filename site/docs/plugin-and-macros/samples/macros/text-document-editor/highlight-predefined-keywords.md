@@ -1,12 +1,12 @@
 ---
 hide_table_of_contents: true
 description: Highlight predefined keywords in a document.
-tags: ["Docs", "Macros", "Text documents"]
+tags: ["Docs", "Macros", "Documents"]
 ---
 
 # Highlight predefined keywords
 
-Highlights predefined keywords in text document.
+Highlights predefined keywords in document.
 
 ```ts
 (function () {
