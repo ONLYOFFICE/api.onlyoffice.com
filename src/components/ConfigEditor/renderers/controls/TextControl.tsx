@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ControlProps, isIntegerControl, isNumberControl, isStringControl, not, isEnumControl, and, or, rankWith } from '@jsonforms/core';
 import { withJsonFormsControlProps } from '@jsonforms/react';
 import { Tooltip } from '../utils/Tooltip';
@@ -45,12 +45,16 @@ export function flushPendingInput(): boolean {
 
 function TextControlRenderer({ id, label, data, path, schema, description, required, enabled, handleChange }: ControlProps) {
     const type = schema.type === 'integer' || schema.type === 'number' ? 'number' : 'text';
-    const isUnset = data === undefined || data === null;
+    const [isUnset, setIsUnset] = useState(data === undefined || data === null);
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onFocus = () => {
         saveCurrent();
         current = { inputEl: inputRef.current!, path, schemaType: schema.type as string, data, handleChange };
+    };
+
+    const onBlur = () => {
+        setIsUnset(inputRef.current?.value === '');
     };
 
     return (
@@ -70,6 +74,7 @@ function TextControlRenderer({ id, label, data, path, schema, description, requi
                 type={type}
                 defaultValue={data ?? ''}
                 onFocus={onFocus}
+                onBlur={onBlur}
                 disabled={!enabled}
             />
         </div>
