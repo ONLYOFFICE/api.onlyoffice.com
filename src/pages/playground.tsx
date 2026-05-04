@@ -2,7 +2,7 @@ import {Playground, usePlaygroundRootContext} from "../components/Playground";
 import styles from './playground.module.css';
 import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import {useLocation} from "react-router-dom";
-import {EditorType, PreviewType, ScriptType, DocumentType} from "@site/src/components/Playground/root/PlaygroundRootContext";
+import {EditorType, ModeType, ScriptType, FileType} from "@site/src/components/Playground/root/PlaygroundRootContext";
 import Head from '@docusaurus/Head';
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import {getSearchParams} from "@site/src/utils/url";
@@ -34,21 +34,21 @@ const PlaygroundRoute = () => {
     const { templateUrl, ...props } = getSearchParams<{
         editorType: EditorType
         scriptType: ScriptType
-        previewType: PreviewType
+        modeType: ModeType
         initialScript: string
         documentServerUrl: string
         documentServerSecret: string
         templateUrl: string
-        documentType: DocumentType
+        fileType: FileType
     }>(location.search, {
         editorType: 'editor',
         scriptType: 'script',
-        previewType: 'preview',
+        modeType: 'mode',
         initialScript: 'code',
         documentServerUrl: 'documentServerUrl',
         documentServerSecret: 'documentServerSecret',
         templateUrl: 'templateUrl',
-        documentType: 'document'
+        fileType: 'file'
     });
 
     return (

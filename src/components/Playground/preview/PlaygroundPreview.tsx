@@ -5,7 +5,7 @@ import { getFullUrl } from "@site/src/utils/url";
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, previewType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, documentType } = usePlaygroundRootContext();
+    const { theme, scriptValue, modeType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, fileType } = usePlaygroundRootContext();
 
     const editorRef = useRef<EditorPreviewRef>(null);
     const initialScriptExecutedRef = useRef(!hasInitialScript);
@@ -57,7 +57,7 @@ export const PlaygroundPreview = () => {
     }, [editorType]);
 
     const buildConfig = useCallback(() => {
-        const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
+        const configs = fileType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
         const fileConfig = configs[editorType] || configs.word;
 
         return {
@@ -67,8 +67,8 @@ export const PlaygroundPreview = () => {
                 title: `Example Document Title.${fileConfig.ext}`,
                 url: templateUrl ?? fileConfig.url,
             },
-            documentType: fileConfig.docType,
-            type: previewType,
+            fileType: fileConfig.docType,
+            type: modeType,
             editorConfig: {
                 callbackUrl: documentServerUrl + 'dummyCallback',
                 customization: {
@@ -105,7 +105,7 @@ export const PlaygroundPreview = () => {
                 }
             }
         }
-    }, [editorType, theme, previewType, documentServerUrl, templateUrl, documentType, executeCode, scriptValue, scriptType]);
+    }, [editorType, theme, modeType, documentServerUrl, templateUrl, fileType, executeCode, scriptValue, scriptType]);
 
     const initEditorWithConfig = useCallback(() => {
         if (!isApiReadyRef.current || !editorRef.current) return;
@@ -120,7 +120,7 @@ export const PlaygroundPreview = () => {
 
     useEffect(() => {
         initEditorWithConfig();
-    }, [theme, previewType, editorType, initEditorWithConfig]);
+    }, [theme, modeType, editorType, initEditorWithConfig]);
 
     useEffect(() => {
         const handleRefresh = () => {

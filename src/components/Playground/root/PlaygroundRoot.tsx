@@ -1,8 +1,8 @@
 import {
-    DocumentType,
+    FileType,
     EditorType,
     PlaygroundRootContext,
-    PreviewType,
+    ModeType,
     ScriptType
 } from "./PlaygroundRootContext";
 import { ComponentProps, useMemo, useReducer } from "react";
@@ -23,24 +23,24 @@ function loadServerConfig(): { url?: string; secret?: string } | null {
 
 export type PlaygroundRootProps = ComponentProps<'div'> & {
     editorType?: EditorType
-    previewType?: PreviewType
+    modeType?: ModeType
     scriptType?: ScriptType
     initialScript?: string
     documentServerUrl?: string
     documentServerSecret?: string
     templateUrl?: string | null
-    documentType?: DocumentType
+    fileType?: FileType
 }
 
 export const PlaygroundRoot = ({
     editorType = 'word',
-    previewType = 'desktop',
+    modeType = 'desktop',
     scriptType = 'connector',
     initialScript: initialScriptProp,
     documentServerUrl: documentServerUrlProp,
     documentServerSecret: documentServerSecretProp,
     templateUrl,
-    documentType: documentTypeProp = 'sample',
+    fileType: fileTypeProp = 'sample',
     ...props
 }: PlaygroundRootProps) => {
     const { colorMode, setColorMode } = useColorMode();
@@ -53,11 +53,11 @@ export const PlaygroundRoot = ({
 
     const [state, dispatch] = useReducer(playgroundReducer, {
         editorType,
-        previewType,
+        modeType,
         scriptType,
-        scriptValue: initialScriptProp ?? (scriptType !== 'config' ? getDefaultScript(editorType, previewType, scriptType) : ''),
+        scriptValue: initialScriptProp ?? (scriptType !== 'config' ? getDefaultScript(editorType, modeType, scriptType) : ''),
         isScriptModified: false,
-        documentType: documentTypeProp,
+        fileType: fileTypeProp,
         documentServerUrl: savedConfig?.url || defaultDocumentServerUrl,
         documentServerSecret: savedConfig?.secret || defaultDocumentServerSecret,
     } satisfies PlaygroundState);

@@ -1,4 +1,4 @@
-import type { EditorType, PreviewType } from "./root/PlaygroundRootContext";
+import type { EditorType, ModeType } from "./root/PlaygroundRootContext";
 
 type FileConfig = { ext: string; docType: EditorType; url: string };
 
@@ -9,7 +9,7 @@ type Template = {
     builder: string;
 };
 
-type Script = Record<PreviewType, Template>;
+type Script = Record<ModeType, Template>;
 
 const PLUGIN_HEADER =
     'var Editor = {\n\
@@ -262,8 +262,8 @@ const DEFAULT_SCRIPTS: Record<EditorType, Script> = {
 
 export function getDefaultScript(
     editorType: EditorType,
-    previewType: PreviewType,
+    modeType: ModeType,
     scriptType: keyof Template
 ): string {
-    return DEFAULT_SCRIPTS[editorType][previewType][scriptType];
+    return DEFAULT_SCRIPTS[editorType][modeType][scriptType];
 }
