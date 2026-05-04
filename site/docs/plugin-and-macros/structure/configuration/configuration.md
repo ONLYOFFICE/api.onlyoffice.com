@@ -314,7 +314,7 @@ The editors which the plugin is available for (**word**, **cell**, **slide**, or
 
 The editors which the plugin is available for:
 
-- `word` - text document editor,
+- `word` - document editor,
 - `cell` - spreadsheet editor,
 - `slide` - presentation editor,
 - `pdf` - pdf editor.
