@@ -75,9 +75,9 @@ The unique system identifier. If the data was copied from a file on one system, 
 
 ## title
 
-**type:** `string` | **required**
+**type:** `string`
 
-Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters.
+Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters. If not specified or empty, defaults to `"Unnamed.{fileType}"` (e.g. `"Unnamed.docx"`).
 
 **Example**: `"Example Document Title.docx"`
 

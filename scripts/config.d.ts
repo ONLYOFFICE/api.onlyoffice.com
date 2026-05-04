@@ -662,7 +662,7 @@ interface DocumentBase {
      * @example "Example Document Title.docx"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#title
      */
-    title: string;
+    title?: string;
 
     /**
      * Defines the absolute URL where the source viewed or edited document is stored.
