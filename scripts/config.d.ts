@@ -694,12 +694,6 @@ interface DocumentBase {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#key
      */
     key: string;
-
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile` | `embedded`
-     */
-    vkey?: string;
 }
 
 interface DocumentNormal extends DocumentBase {
