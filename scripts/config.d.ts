@@ -2303,6 +2303,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
      * Settings for embedding the editor.
      *
      * @forType `embedded`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/
      */
     embedded?: {
         /**
