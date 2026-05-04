@@ -1,5 +1,14 @@
 # Change log
 
+## 8.4.1
+
+### Fixes
+
+#### Playground
+
+* Fixed editor re-initialization when script value changes in playground
+* Fixed prompt before replacing modified script on script type change
+
 ## 8.4.0
 
 ### New features

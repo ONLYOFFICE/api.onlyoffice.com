@@ -15,7 +15,7 @@ export interface PlaygroundState {
 export type PlaygroundAction =
     | { type: 'SET_EDITOR_TYPE'; payload: EditorType; replace?: boolean }
     | { type: 'SET_PREVIEW_TYPE'; payload: PreviewType }
-    | { type: 'SET_SCRIPT_TYPE'; payload: ScriptType }
+    | { type: 'SET_SCRIPT_TYPE'; payload: ScriptType; replace?: boolean }
     | { type: 'SET_SCRIPT_VALUE'; payload: string }
     | { type: 'RESET_SCRIPT' }
     | { type: 'SET_DOCUMENT_TYPE'; payload: DocumentType }
@@ -44,10 +44,15 @@ export function playgroundReducer(state: PlaygroundState, action: PlaygroundActi
             if (!isCodeScriptType(action.payload)) {
                 return {...state, scriptType: action.payload};
             }
-            const scriptValue = state.isScriptModified && isCodeScriptType(state.scriptType)
-                ? state.scriptValue
-                : getDefaultScript(state.editorType, state.previewType, action.payload);
-            return {...state, scriptType: action.payload, scriptValue};
+            const scriptValue = action.replace || !(state.isScriptModified && isCodeScriptType(state.scriptType))
+                ? getDefaultScript(state.editorType, state.previewType, action.payload)
+                : state.scriptValue;
+            return {
+                ...state,
+                scriptType: action.payload,
+                scriptValue,
+                isScriptModified: action.replace ? false : state.isScriptModified,
+            };
         }
         case 'SET_PREVIEW_TYPE': {
             if (action.payload === state.previewType) return state;
