@@ -929,11 +929,6 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     canCoAuthoring?: boolean;
 
-    // TODO: Not in the documentation
-    /**
-     * @forType `desktop` | `mobile`
-     */
-    canBackToFolder:boolean;
 
     /**
      * Defines the absolute URL of the document where it will be created and available after creation.
