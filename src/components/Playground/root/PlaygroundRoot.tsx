@@ -5,7 +5,7 @@ import {
     ModeType,
     ScriptType
 } from "./PlaygroundRootContext";
-import { ComponentProps, useMemo, useReducer } from "react";
+import { ComponentProps, useEffect, useMemo, useReducer } from "react";
 import { getDefaultScript } from "@site/src/components/Playground/defaultScripts";
 import {useColorMode} from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -61,6 +61,15 @@ export const PlaygroundRoot = ({
         documentServerUrl: savedConfig?.url || defaultDocumentServerUrl,
         documentServerSecret: savedConfig?.secret || defaultDocumentServerSecret,
     } satisfies PlaygroundState);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        params.set('editor', state.editorType);
+        params.set('script', state.scriptType);
+        params.set('mode', state.modeType);
+        params.set('file', state.fileType);
+        history.replaceState(null, '', `?${params}`);
+    }, [state.editorType, state.scriptType, state.modeType, state.fileType]);
 
     const contextValue = useMemo<PlaygroundRootContext>(() => ({
         ...state,
