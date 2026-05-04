@@ -79,12 +79,14 @@ export const EditorPreview = ({
                 destroyEditor();
                 containerRef.current.innerHTML = '<div id="placeholder" style="width:100%;height:100%;"></div>';
 
-                const finalConfig = structuredClone(config);
+                const { events, ...cloneableConfig } = config;
+                const finalConfig = structuredClone(cloneableConfig);
 
                 if (documentServerSecret?.length) {
-                    const { events: _, ...configForJWT } = finalConfig;
-                    finalConfig.token = await createJWT(configForJWT);
+                    finalConfig.token = await createJWT(finalConfig);
                 }
+
+                finalConfig.events = events;
 
                 if (config.type === 'mobile') {
                     const observer = new MutationObserver(() => {
