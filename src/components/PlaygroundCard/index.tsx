@@ -13,7 +13,7 @@ import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 
 const PLAYGROUNDS = [
-  { type: 'word', name: 'Text document API', description: 'Engage with the text document editor to create and manipulate text files.' },
+  { type: 'word', name: 'Document API', description: 'Engage with the document editor to create and manipulate text files.' },
   { type: 'cell', name: 'Spreadsheet API', description: 'Access the spreadsheet editor for data analysis and management tasks.' },
   { type: 'slide', name: 'Presentation API', description: 'Use the presentation editor to design and present slideshows.' },
   { type: 'form', name: 'Form API', description: 'Interact with the form editor to create and manage forms.' },
@@ -54,7 +54,7 @@ function PlaygroundCard({name, image, imageDark, url, description}: Props) {
 }
 
 const CONFIG_PLAYGROUNDS = [
-  { type: 'word', name: 'Text document', description: 'Configure the text document editor for creating and editing .docx files.' },
+  { type: 'word', name: 'Document', description: 'Configure the document editor for creating and editing .docx files.' },
   { type: 'cell', name: 'Spreadsheet', description: 'Configure the spreadsheet editor for data analysis and management.' },
   { type: 'slide', name: 'Presentation', description: 'Configure the presentation editor for designing and delivering slideshows.' },
   { type: 'form', name: 'Form', description: 'Configure the form editor for creating and managing fillable forms.' },
