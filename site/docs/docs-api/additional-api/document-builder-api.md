@@ -26,7 +26,7 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 </APITable>
 ```
 
-The `.js` script file is a JavaScript file that uses the [Office JavaScript API](../../office-api/get-started/overview.md) to generate output document files (text documents, spreadsheets, or presentations). It uses `builder.CreateFile()` to create a document, the Office API classes to manipulate content, `builder.SaveFile()` to specify the output format and name, and `builder.CloseFile()` to finalize. You can find more information about the script file syntax [here](../../document-builder/using-cli/script-file.md). Once document generation is complete, the response with the absolute URL to the resulting file will be returned (see below).
+The `.js` script file is a JavaScript file that uses the [Office JavaScript API](../../office-api/get-started/overview.md) to generate output document files (documents, spreadsheets, or presentations). It uses `builder.CreateFile()` to create a document, the Office API classes to manipulate content, `builder.SaveFile()` to specify the output format and name, and `builder.CloseFile()` to finalize. You can find more information about the script file syntax [here](../../document-builder/using-cli/script-file.md). Once document generation is complete, the response with the absolute URL to the resulting file will be returned (see below).
 
 :::note
 The `.js` script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.

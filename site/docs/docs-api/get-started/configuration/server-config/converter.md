@@ -210,7 +210,7 @@ Defines limits for input files.
 
 **type:** `string`
 
-Defines the OOXML file types for which the limits are specified (text documents/spreadsheets/presentations). This does not include other objects, like images.
+Defines the OOXML file types for which the limits are specified (documents/spreadsheets/presentations). This does not include other objects, like images.
 
 ### FileConverter.converter.inputLimits.zip
 
@@ -228,7 +228,7 @@ Defines the name template for files which sizes are counted.
 
 **type:** `string` | **default:** `"50MB"/"300MB"/"50MB"`
 
-Defines the total uncompressed file size for text documents/spreadsheets/presentations.
+Defines the total uncompressed file size for documents/spreadsheets/presentations.
 
 ### FileConverter.converter.args
 

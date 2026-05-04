@@ -4,7 +4,7 @@ sidebar_position: -19
 
 # Document history
 
-The **document editor** can display a version history for text documents, spreadsheets, presentations, and PDFs. The version data itself is stored by the **document storage service** — after each editing session, ONLYOFFICE Docs returns change information that the integrator saves alongside the document. The **document editor** then shows this history as a version list in a side panel, where the user can select any version to preview it.
+The **document editor** can display a version history for documents, spreadsheets, presentations, and PDFs. The version data itself is stored by the **document storage service** — after each editing session, ONLYOFFICE Docs returns change information that the integrator saves alongside the document. The **document editor** then shows this history as a version list in a side panel, where the user can select any version to preview it.
 
 The figure and steps below explain how document history viewing works in ONLYOFFICE Docs.
 

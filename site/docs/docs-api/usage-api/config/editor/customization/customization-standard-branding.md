@@ -1014,7 +1014,7 @@ Starting from version 8.3, defines the HEX color for the default heading styles 
 
 **type:** `integer` | **default:** `100`
 
-Defines the document display zoom value measured in percent. Can take values larger than `0`. For text documents and presentations it is possible to set this parameter to `-1` (fitting the document to page option) or to `-2` (fitting the document page width to the editor page).
+Defines the document display zoom value measured in percent. Can take values larger than `0`. For documents and presentations it is possible to set this parameter to `-1` (fitting the document to page option) or to `-2` (fitting the document page width to the editor page).
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.zoom` parameter.

@@ -20,7 +20,7 @@ The server side includes:
 - **Document storage service** - the server service that stores all documents available to users with the appropriate access rights. The **document editing service** downloads a document from here using the [`url`](../../usage-api/config/document/document.md#url) supplied in the editor [`config`](../../usage-api/config/config.md).
 - **Document editing service** - the server service that allows users to view and edit documents (provided that the user has the appropriate rights). The **document editor** is the user-facing interface for the **document editing service**.
 - **Document command service** - the server service used to manage documents in the **document editing service**: force-save, disconnect users, request document status, update metadata, or manage forgotten files.
-- **Document conversion service** - the server service that converts document files between supported formats for editing or downloading, including the editors' native formats: `.docx` for text documents, `.xlsx` for spreadsheets, `.pptx` for presentations, and `.pdf` for PDFs.
+- **Document conversion service** - the server service that converts document files between supported formats for editing or downloading, including the editors' native formats: `.docx` for documents, `.xlsx` for spreadsheets, `.pptx` for presentations, and `.pdf` for PDFs.
 - **Document builder service** - the server service that allows you to build a document easily without running a document editor.
 
 :::note
