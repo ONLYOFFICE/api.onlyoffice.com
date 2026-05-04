@@ -6,7 +6,7 @@ sidebar_position: -4
 
 在云端[注册](./login-and-logout.md)后，您就可以开始处理存储在那里的文档了。
 
-将 ONLYOFFICE 桌面编辑器连接到您的云，使您能够在没有持续互联网连接的情况下编辑文本文档、电子表格和演示文稿，并轻松切换到在线模式进行实时协同编辑（如果您的云已集成[ONLYOFFICE Docs](../../../docs-api/get-started/basic-concepts.md)）。
+将 ONLYOFFICE 桌面编辑器连接到您的云，使您能够在没有持续互联网连接的情况下编辑文本文档、电子表格、演示文稿、PDF 和可填写表单，并轻松切换到在线模式进行实时协同编辑（如果您的云已集成[ONLYOFFICE Docs](../../../docs-api/get-started/basic-concepts.md)）。
 
 此外，使用 ONLYOFFICE 桌面编辑器，您不再受浏览器资源的限制。这意味着您可以：
 
