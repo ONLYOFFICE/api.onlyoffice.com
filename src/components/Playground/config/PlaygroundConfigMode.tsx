@@ -22,7 +22,7 @@ export function PlaygroundConfigMode() {
     const fileConfig = configs[editorType] || configs.word;
 
     const defaultConfig = useMemo<Record<string, unknown>>(() => ({
-        fileType: fileConfig.docType,
+        documentType: fileConfig.docType,
         type: modeType,
         document: {
             fileType: fileConfig.ext,

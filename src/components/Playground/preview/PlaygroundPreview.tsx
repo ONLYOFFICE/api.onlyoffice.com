@@ -67,7 +67,7 @@ export const PlaygroundPreview = () => {
                 title: `Example Document Title.${fileConfig.ext}`,
                 url: templateUrl ?? fileConfig.url,
             },
-            fileType: fileConfig.docType,
+            documentType: fileConfig.docType,
             type: modeType,
             editorConfig: {
                 callbackUrl: documentServerUrl + 'dummyCallback',
