@@ -2305,11 +2305,44 @@ interface EditorConfigEmbedded extends EditorConfigBase {
      * @forType `embedded`
      */
     embedded?: {
-        // TODO: Not in the documentation
+        /**
+         * Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
+         *
+         * @example "https://example.com/embedded?doc=exampledocument1.docx"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#embedurl
+         */
         embedUrl?: string;
+
+        /**
+         * Defines the absolute URL to the document which will open in full screen mode.
+         *
+         * @example "https://example.com/embedded?doc=exampledocument1.docx#fullscreen"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#fullscreenurl
+         */
         fullscreenUrl?: string;
+
+        /**
+         * Defines the absolute URL that will allow the document to be saved onto the user personal computer.
+         *
+         * @example "https://example.com/download?doc=exampledocument1.docx"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#saveurl
+         */
         saveUrl?: string;
+
+        /**
+         * Defines the absolute URL that will allow other users to share this document.
+         *
+         * @example "https://example.com/view?doc=exampledocument1.docx"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#shareurl
+         */
         shareUrl?: string;
+
+        /**
+         * Defines the place for the embedded viewer toolbar. If set to `top`, the toolbar is at the top. If set to `bottom`, the toolbar is at the bottom.
+         *
+         * @example "top"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#toolbardocked
+         */
         toolbarDocked?: "top" | "bottom";
     };
 }
