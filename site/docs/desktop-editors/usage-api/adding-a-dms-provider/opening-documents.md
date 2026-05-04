@@ -6,7 +6,7 @@ sidebar_position: -4
 
 After [registering](./login-and-logout.md) in the cloud, you can start working on documents stored there.
 
-Connecting ONLYOFFICE Desktop Editors to your cloud allows you to edit text documents, spreadsheets, and presentations without having a constant Internet connection and easily switch to the online mode for real-time co-editing (in case [ONLYOFFICE Docs](../../../docs-api/get-started/basic-concepts.md) is integrated with your cloud).
+Connecting ONLYOFFICE Desktop Editors to your cloud allows you to edit documents, spreadsheets, and presentations without having a constant Internet connection and easily switch to the online mode for real-time co-editing (in case [ONLYOFFICE Docs](../../../docs-api/get-started/basic-concepts.md) is integrated with your cloud).
 
 Besides, using ONLYOFFICE Desktop Editors you are no longer limited by your browser resources. It means you can:
 
