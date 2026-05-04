@@ -8,11 +8,11 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with footer containing date and company name. Used for standard document formatting: memos, reports, letters, and templates. Placed in the footer where current date is shown on one side and organization name on the other. This helps with document identification and simplifies versioning:
 
-- activate footer for all document pages ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiSection/GetFooter](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/GetFooter.md));
-- add two text blocks with different alignment ([ApiDocumentContent/AddElement](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/AddElement.md), [Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md));
-- configure left alignment for company name and right alignment for date ([ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md));
-- set standard font size 10-11 pt matching main document ([ApiRun/SetFontSize](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetFontSize.md), [ApiRun/SetFontFamily](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetFontFamily.md));
-- optionally add horizontal line above footer for visual separation ([Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md)).
+- activate footer for all document pages ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiSection/GetFooter](/docs/office-api/usage-api/document-api/ApiSection/Methods/GetFooter.md));
+- add two text blocks with different alignment ([ApiDocumentContent/AddElement](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/AddElement.md), [Api/CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md));
+- configure left alignment for company name and right alignment for date ([ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md));
+- set standard font size 10-11 pt matching main document ([ApiRun/SetFontSize](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetFontSize.md), [ApiRun/SetFontFamily](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetFontFamily.md));
+- optionally add horizontal line above footer for visual separation ([Api/CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

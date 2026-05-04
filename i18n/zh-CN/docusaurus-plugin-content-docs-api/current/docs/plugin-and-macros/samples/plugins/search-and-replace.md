@@ -101,7 +101,7 @@ GitHub 仓库：[示例：查找并替换](https://github.com/ONLYOFFICE/sdkjs-p
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SearchAndReplace.md)")
+- executeMethod ("[SearchAndReplace](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/SearchAndReplace.md)")
 
 ## 支持
 

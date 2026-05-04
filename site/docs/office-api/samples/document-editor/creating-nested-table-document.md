@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with nested tables (table within a table) for displaying hierarchical data:
 
-- create a main table with general information ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md));
-- insert a nested table within a cell of the main table ([ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md));
-- format both tables with different styles and borders ([ApiTable](/docs/office-api/usage-api/text-document-api/ApiTable/ApiTable.md), [ApiTableRow](/docs/office-api/usage-api/text-document-api/ApiTableRow/ApiTableRow.md));
-- populate tables with hierarchical data such as orders with item details ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md)).
+- create a main table with general information ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md));
+- insert a nested table within a cell of the main table ([ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md));
+- format both tables with different styles and borders ([ApiTable](/docs/office-api/usage-api/document-api/ApiTable/ApiTable.md), [ApiTableRow](/docs/office-api/usage-api/document-api/ApiTableRow/ApiTableRow.md));
+- populate tables with hierarchical data such as orders with item details ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

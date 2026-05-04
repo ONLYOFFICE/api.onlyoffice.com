@@ -24,7 +24,7 @@ Sets all date form formats to USA one.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](/docs/office-api/usage-api/text-document-api/ApiDateForm/Methods/SetFormat.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/document-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](/docs/office-api/usage-api/document-api/ApiDateForm/Methods/SetFormat.md)
 
 ## Result
 

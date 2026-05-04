@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with formulas or variables styled differently from the main text:
 
-- create paragraphs with mixed text formatting for technical documentation ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md));
-- apply italic formatting to variables and mathematical symbols ([ApiRun/SetItalic](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetItalic.md));
-- use monospace font for result values and code-like elements ([ApiRun/SetFontFamily](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetFontFamily.md)).
+- create paragraphs with mixed text formatting for technical documentation ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md));
+- apply italic formatting to variables and mathematical symbols ([ApiRun/SetItalic](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetItalic.md));
+- use monospace font for result values and code-like elements ([ApiRun/SetFontFamily](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetFontFamily.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document that demonstrates copying and applying formatting styles from one paragraph to other paragraphs:
 
-- create a reference paragraph with specific formatting ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
-- read the style from the reference paragraph ([ApiParaPr/GetStyle](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/GetStyle.md), [ApiStyle](/docs/office-api/usage-api/text-document-api/ApiStyle/ApiStyle.md));
-- apply the same style to multiple target paragraphs ([ApiParaPr/SetStyle](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetStyle.md)).
+- create a reference paragraph with specific formatting ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md));
+- read the style from the reference paragraph ([ApiParaPr/GetStyle](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/GetStyle.md), [ApiStyle](/docs/office-api/usage-api/document-api/ApiStyle/ApiStyle.md));
+- apply the same style to multiple target paragraphs ([ApiParaPr/SetStyle](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetStyle.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

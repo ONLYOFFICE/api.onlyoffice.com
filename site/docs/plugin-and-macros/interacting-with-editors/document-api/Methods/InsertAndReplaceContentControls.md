@@ -1,6 +1,6 @@
 # InsertAndReplaceContentControls
 
-Inserts the content control containing data. The data is specified by the JS code for [Document](../../../../../docs/office-api/usage-api/text-document-api/text-document-api.md), or by a link to the shared document.
+Inserts the content control containing data. The data is specified by the JS code for [Document](../../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document.
 
 ## Syntax
 

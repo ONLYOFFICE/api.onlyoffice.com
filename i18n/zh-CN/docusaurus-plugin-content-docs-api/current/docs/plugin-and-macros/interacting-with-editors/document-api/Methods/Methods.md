@@ -54,7 +54,7 @@
 | [GetVBAMacros](./GetVBAMacros.md) | string \| null | 返回文档中的所有 VBA 宏。 |
 | [GetVersion](./GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./InputText.md) | 无 | 向文档中插入文本。 |
-| [InsertAndReplaceContentControls](./InsertAndReplaceContentControls.md) | [ContentControlProperties](../Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。数据由 [Document](../../../../../docs/office-api/usage-api/text-document-api/text-document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。 |
+| [InsertAndReplaceContentControls](./InsertAndReplaceContentControls.md) | [ContentControlProperties](../Enumeration/ContentControlProperties.md)[] | 插入包含数据的内容控件。数据由 [Document](../../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。 |
 | [InsertOleObject](./InsertOleObject.md) | 无 | 在当前文档位置插入 OLE 对象。 |
 | [InstallPlugin](./InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
 | [IsEditingOFormMode](./IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |

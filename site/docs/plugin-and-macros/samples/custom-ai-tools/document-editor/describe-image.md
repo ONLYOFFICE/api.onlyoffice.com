@@ -144,15 +144,15 @@ let func = new RegisteredFunction({
   return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetImageDataFromSelection.md)  
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [GetSelectedDrawings](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetSelectedDrawings.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [GetImageDataFromSelection](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetImageDataFromSelection.md)  
 
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/describe-image.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/describe-image.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/describe-image.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/describe-image.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

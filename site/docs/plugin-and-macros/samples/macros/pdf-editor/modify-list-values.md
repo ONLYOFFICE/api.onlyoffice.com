@@ -31,7 +31,7 @@ Deletes certain list values from all combo boxes that contain a specific key.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey.md), [GetListValues](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetListValues.md), [SetListValues](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetListValues.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey.md), [GetListValues](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetListValues.md), [SetListValues](/docs/office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetListValues.md)
 
 ## Result
 

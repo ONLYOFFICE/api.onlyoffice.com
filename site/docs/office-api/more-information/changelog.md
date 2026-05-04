@@ -53,56 +53,56 @@ The list of changes for Office JavaScript API.
 
 ### Color methods
 
-- Added the [Api/AutoColor](../usage-api/text-document-api/Api/Methods/AutoColor.md) method to Document API.
-- Added the [Api/RGB](../usage-api/text-document-api/Api/Methods/RGB.md) method to Document API.
-- Added the [Api/RGBA](../usage-api/text-document-api/Api/Methods/RGBA.md) method to Document API.
-- Added the [Api/HexColor](../usage-api/text-document-api/Api/Methods/HexColor.md) method to Document API.
-- Added the [Api/ThemeColor](../usage-api/text-document-api/Api/Methods/ThemeColor.md) method to Document API.
+- Added the [Api/AutoColor](../usage-api/document-api/Api/Methods/AutoColor.md) method to Document API.
+- Added the [Api/RGB](../usage-api/document-api/Api/Methods/RGB.md) method to Document API.
+- Added the [Api/RGBA](../usage-api/document-api/Api/Methods/RGBA.md) method to Document API.
+- Added the [Api/HexColor](../usage-api/document-api/Api/Methods/HexColor.md) method to Document API.
+- Added the [Api/ThemeColor](../usage-api/document-api/Api/Methods/ThemeColor.md) method to Document API.
 
-- Added the [ApiColor/GetClassType](../usage-api/text-document-api/ApiColor/Methods/GetClassType.md) method to Document API.
-- Added the [ApiColor/IsAutoColor](../usage-api/text-document-api/ApiColor/Methods/IsAutoColor.md) method to Document API.
-- Added the [ApiColor/IsThemeColor](../usage-api/text-document-api/ApiColor/Methods/IsThemeColor.md) method to Document API.
-- Added the [ApiColor/GetRGB](../usage-api/text-document-api/ApiColor/Methods/GetRGB.md) method to Document API.
-- Added the [ApiColor/GetRGBA](../usage-api/text-document-api/ApiColor/Methods/GetRGBA.md) method to Document API.
-- Added the [ApiColor/GetHex](../usage-api/text-document-api/ApiColor/Methods/GetHex.md) method to Document API.
+- Added the [ApiColor/GetClassType](../usage-api/document-api/ApiColor/Methods/GetClassType.md) method to Document API.
+- Added the [ApiColor/IsAutoColor](../usage-api/document-api/ApiColor/Methods/IsAutoColor.md) method to Document API.
+- Added the [ApiColor/IsThemeColor](../usage-api/document-api/ApiColor/Methods/IsThemeColor.md) method to Document API.
+- Added the [ApiColor/GetRGB](../usage-api/document-api/ApiColor/Methods/GetRGB.md) method to Document API.
+- Added the [ApiColor/GetRGBA](../usage-api/document-api/ApiColor/Methods/GetRGBA.md) method to Document API.
+- Added the [ApiColor/GetHex](../usage-api/document-api/ApiColor/Methods/GetHex.md) method to Document API.
 
-- Updated the [ApiRange/SetColor](../usage-api/text-document-api/ApiRange/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiRange/SetShd](../usage-api/text-document-api/ApiRange/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiDocument/SetFormsHighlight](../usage-api/text-document-api/ApiDocument/Methods/SetFormsHighlight.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiDocument/SetControlsHighlight](../usage-api/text-document-api/ApiDocument/Methods/SetControlsHighlight.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiParagraph/SetColor](../usage-api/text-document-api/ApiParagraph/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiRun/SetColor](../usage-api/text-document-api/ApiRun/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiRun/SetShd](../usage-api/text-document-api/ApiRun/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiTable/SetBackgroundColor](../usage-api/text-document-api/ApiTable/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiTableRow/SetBackgroundColor](../usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiTableCell/SetBackgroundColor](../usage-api/text-document-api/ApiTableCell/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
-- Added the [ApiTableCell/GetBackgroundColor](../usage-api/text-document-api/ApiTableCell/Methods/GetBackgroundColor.md) method to Document API.
-- Updated the [ApiTableCell/SetColumnBackgroundColor](../usage-api/text-document-api/ApiTableCell/Methods/SetColumnBackgroundColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiTextPr/SetColor](../usage-api/text-document-api/ApiTextPr/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiTextPr/GetColor](../usage-api/text-document-api/ApiTextPr/Methods/GetColor.md) method in Document API.
-- Updated the [ApiTextPr/SetShd](../usage-api/text-document-api/ApiTextPr/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiTextPr/GetShd](../usage-api/text-document-api/ApiTextPr/Methods/GetShd.md) method in Document API.
-- Updated the [ApiParaPr/SetShd](../usage-api/text-document-api/ApiParaPr/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiParaPr/GetShd](../usage-api/text-document-api/ApiParaPr/Methods/GetShd.md) method in Document API.
-- Updated the [ApiInlineLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBorderColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiInlineLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method in Document API.
-- Updated the [ApiInlineLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
-- Updated the [ApiInlineLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBackgroundColor.md) method in Document API.
-- Updated the [ApiFormBase/SetBorderColor](../usage-api/text-document-api/ApiFormBase/Methods/SetBorderColor.md) method in Document API to accept `ApiColor` instances.
-- Added the [ApiFormBase/GetBorderColor](../usage-api/text-document-api/ApiFormBase/Methods/GetBorderColor.md) method to Document API.
-- Updated the [ApiFormBase/SetBackgroundColor](../usage-api/text-document-api/ApiFormBase/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
-- Added the [ApiFormBase/GetBackgroundColor](../usage-api/text-document-api/ApiFormBase/Methods/GetBackgroundColor.md) method to Document API.
-- Updated the [Api/CreateSolidFill](../usage-api/text-document-api/Api/Methods/CreateSolidFill.md) method in Document API to accept `ApiColor` instances.
-- Updated the [Api/CreatePatternFill](../usage-api/text-document-api/Api/Methods/CreatePatternFill.md) method in Document API to accept `ApiColor` instances.
-- Updated the [Api/CreateGradientStop](../usage-api/text-document-api/Api/Methods/CreateGradientStop.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiRange/SetColor](../usage-api/document-api/ApiRange/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiRange/SetShd](../usage-api/document-api/ApiRange/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiDocument/SetFormsHighlight](../usage-api/document-api/ApiDocument/Methods/SetFormsHighlight.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiDocument/SetControlsHighlight](../usage-api/document-api/ApiDocument/Methods/SetControlsHighlight.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiParagraph/SetColor](../usage-api/document-api/ApiParagraph/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiRun/SetColor](../usage-api/document-api/ApiRun/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiRun/SetShd](../usage-api/document-api/ApiRun/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiTable/SetBackgroundColor](../usage-api/document-api/ApiTable/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiTableRow/SetBackgroundColor](../usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiTableCell/SetBackgroundColor](../usage-api/document-api/ApiTableCell/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
+- Added the [ApiTableCell/GetBackgroundColor](../usage-api/document-api/ApiTableCell/Methods/GetBackgroundColor.md) method to Document API.
+- Updated the [ApiTableCell/SetColumnBackgroundColor](../usage-api/document-api/ApiTableCell/Methods/SetColumnBackgroundColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiTextPr/SetColor](../usage-api/document-api/ApiTextPr/Methods/SetColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiTextPr/GetColor](../usage-api/document-api/ApiTextPr/Methods/GetColor.md) method in Document API.
+- Updated the [ApiTextPr/SetShd](../usage-api/document-api/ApiTextPr/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiTextPr/GetShd](../usage-api/document-api/ApiTextPr/Methods/GetShd.md) method in Document API.
+- Updated the [ApiParaPr/SetShd](../usage-api/document-api/ApiParaPr/Methods/SetShd.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiParaPr/GetShd](../usage-api/document-api/ApiParaPr/Methods/GetShd.md) method in Document API.
+- Updated the [ApiInlineLvlSdt/SetBorderColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetBorderColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiInlineLvlSdt/GetBorderColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method in Document API.
+- Updated the [ApiInlineLvlSdt/SetBackgroundColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
+- Updated the [ApiInlineLvlSdt/GetBackgroundColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetBackgroundColor.md) method in Document API.
+- Updated the [ApiFormBase/SetBorderColor](../usage-api/document-api/ApiFormBase/Methods/SetBorderColor.md) method in Document API to accept `ApiColor` instances.
+- Added the [ApiFormBase/GetBorderColor](../usage-api/document-api/ApiFormBase/Methods/GetBorderColor.md) method to Document API.
+- Updated the [ApiFormBase/SetBackgroundColor](../usage-api/document-api/ApiFormBase/Methods/SetBackgroundColor.md) method in Document API to accept `ApiColor` instances.
+- Added the [ApiFormBase/GetBackgroundColor](../usage-api/document-api/ApiFormBase/Methods/GetBackgroundColor.md) method to Document API.
+- Updated the [Api/CreateSolidFill](../usage-api/document-api/Api/Methods/CreateSolidFill.md) method in Document API to accept `ApiColor` instances.
+- Updated the [Api/CreatePatternFill](../usage-api/document-api/Api/Methods/CreatePatternFill.md) method in Document API to accept `ApiColor` instances.
+- Updated the [Api/CreateGradientStop](../usage-api/document-api/Api/Methods/CreateGradientStop.md) method in Document API to accept `ApiColor` instances.
 - Updated the [Api/CreateThemeColorScheme](../usage-api/presentation-api/Api/Methods/CreateThemeColorScheme.md) method in Presentation API.
 
 ### Footnote/endnote methods
 
-- Added the [ApiDocument/GetCurrentFootEndnote](../usage-api/text-document-api/ApiDocument/Methods/GetCurrentFootEndnote.md) method to Document API.
-- Added the [ApiDocumentContent/IsFootnote](../usage-api/text-document-api/ApiDocumentContent/Methods/IsFootnote.md) method to Document API.
-- Added the [ApiDocumentContent/IsEndnote](../usage-api/text-document-api/ApiDocumentContent/Methods/IsEndnote.md) method to Document API.
-- Added the [ApiDocumentContent/SelectNoteReference](../usage-api/text-document-api/ApiDocumentContent/Methods/SelectNoteReference.md) method to Document API.
+- Added the [ApiDocument/GetCurrentFootEndnote](../usage-api/document-api/ApiDocument/Methods/GetCurrentFootEndnote.md) method to Document API.
+- Added the [ApiDocumentContent/IsFootnote](../usage-api/document-api/ApiDocumentContent/Methods/IsFootnote.md) method to Document API.
+- Added the [ApiDocumentContent/IsEndnote](../usage-api/document-api/ApiDocumentContent/Methods/IsEndnote.md) method to Document API.
+- Added the [ApiDocumentContent/SelectNoteReference](../usage-api/document-api/ApiDocumentContent/Methods/SelectNoteReference.md) method to Document API.
 
 ### Transition methods
 
@@ -130,14 +130,14 @@ The list of changes for Office JavaScript API.
 
 ### Fill and Stroke methods
 
-- Added the [ApiShape/SetFill](../usage-api/text-document-api/ApiShape/Methods/SetFill.md) method to the Document API.
-- Added the [ApiShape/GetFill](../usage-api/text-document-api/ApiShape/Methods/GetFill.md) method to the Document API.
-- Added the [ApiShape/SetLine](../usage-api/text-document-api/ApiShape/Methods/SetLine.md) method to the Document API.
-- Added the [ApiShape/GetLine](../usage-api/text-document-api/ApiShape/Methods/GetLine.md) method to the Document API.
-- Added the [ApiFill/GetType](../usage-api/text-document-api/ApiFill/Methods/GetType.md) method to the Document API.
-- Added the [ApiStroke/GetWidth](../usage-api/text-document-api/ApiStroke/Methods/GetWidth.md) method to the Document API.
-- Added the [ApiStroke/GetFill](../usage-api/text-document-api/ApiStroke/Methods/GetFill.md) method to the Document API.
-- Added the [ApiStroke/GetDashType](../usage-api/text-document-api/ApiStroke/Methods/GetDashType.md) method to the Document API.
+- Added the [ApiShape/SetFill](../usage-api/document-api/ApiShape/Methods/SetFill.md) method to the Document API.
+- Added the [ApiShape/GetFill](../usage-api/document-api/ApiShape/Methods/GetFill.md) method to the Document API.
+- Added the [ApiShape/SetLine](../usage-api/document-api/ApiShape/Methods/SetLine.md) method to the Document API.
+- Added the [ApiShape/GetLine](../usage-api/document-api/ApiShape/Methods/GetLine.md) method to the Document API.
+- Added the [ApiFill/GetType](../usage-api/document-api/ApiFill/Methods/GetType.md) method to the Document API.
+- Added the [ApiStroke/GetWidth](../usage-api/document-api/ApiStroke/Methods/GetWidth.md) method to the Document API.
+- Added the [ApiStroke/GetFill](../usage-api/document-api/ApiStroke/Methods/GetFill.md) method to the Document API.
+- Added the [ApiStroke/GetDashType](../usage-api/document-api/ApiStroke/Methods/GetDashType.md) method to the Document API.
 
 - Added the [ApiShape/SetFill](../usage-api/spreadsheet-api/ApiShape/Methods/SetFill.md) method to the Spreadsheet API.
 - Added the [ApiShape/GetFill](../usage-api/spreadsheet-api/ApiShape/Methods/GetFill.md) method to the Spreadsheet API.
@@ -189,28 +189,28 @@ The list of changes for Office JavaScript API.
 
 - Added the [ApiFormBase/SetLock](../usage-api/form-api/ApiFormBase/Methods/SetLock.md) method to the Form API.
 - Added the [ApiFormBase/GetLock](../usage-api/form-api/ApiFormBase/Methods/GetLock.md) method to the Form API.
-- Added the [ApiFormBase/SetLock](../usage-api/text-document-api/ApiFormBase/Methods/SetLock.md) method to the Document API.
-- Added the [ApiFormBase/GetLock](../usage-api/text-document-api/ApiFormBase/Methods/GetLock.md) method to the Document API.
+- Added the [ApiFormBase/SetLock](../usage-api/document-api/ApiFormBase/Methods/SetLock.md) method to the Document API.
+- Added the [ApiFormBase/GetLock](../usage-api/document-api/ApiFormBase/Methods/GetLock.md) method to the Document API.
 
 ### Changed methods
 
-- Updated the [Api/CreateStroke](../usage-api/text-document-api/Api/Methods/CreateStroke.md) method in Document API - added `sDash` parameter.
+- Updated the [Api/CreateStroke](../usage-api/document-api/Api/Methods/CreateStroke.md) method in Document API - added `sDash` parameter.
 - Updated the [Api/CreateStroke](../usage-api/spreadsheet-api/Api/Methods/CreateStroke.md) method in Spreadsheet API - added `sDash` parameter.
 - Updated the [Api/CreateStroke](../usage-api/presentation-api/Api/Methods/CreateStroke.md) method in Presentation API - added `sDash` parameter.
-- Updated the [ApiDrawing/Select](../usage-api/text-document-api/ApiDrawing/Methods/Select.md) method in Document API - added `isReplace` parameter.
+- Updated the [ApiDrawing/Select](../usage-api/document-api/ApiDrawing/Methods/Select.md) method in Document API - added `isReplace` parameter.
 - Updated the [ApiDrawing/Select](../usage-api/spreadsheet-api/ApiDrawing/Methods/Select.md) method in Spreadsheet API - added `isReplace` parameter.
 - Updated the [ApiDrawing/Select](../usage-api/presentation-api/ApiDrawing/Methods/Select.md) method in Presentation API - added `isReplace` parameter.
-- Updated the [ApiDrawing/SetHorPosition](../usage-api/text-document-api/ApiDrawing/Methods/SetHorPosition.md) method in Document API - added `bPercent` parameter.
-- Updated the [ApiDrawing/SetVerPosition](../usage-api/text-document-api/ApiDrawing/Methods/SetVerPosition.md) method in Document API - added `bPercent` parameter.
+- Updated the [ApiDrawing/SetHorPosition](../usage-api/document-api/ApiDrawing/Methods/SetHorPosition.md) method in Document API - added `bPercent` parameter.
+- Updated the [ApiDrawing/SetVerPosition](../usage-api/document-api/ApiDrawing/Methods/SetVerPosition.md) method in Document API - added `bPercent` parameter.
 
 ### Drawing methods
 
-- Added the [ApiDocument/GetDrawingsByName](../usage-api/text-document-api/ApiDocument/Methods/GetDrawingsByName.md) method to the Document API.
-- Added the [ApiDrawing/GetFlipH](../usage-api/text-document-api/ApiDrawing/Methods/GetFlipH.md) method to the Document API.
-- Added the [ApiDrawing/GetFlipV](../usage-api/text-document-api/ApiDrawing/Methods/GetFlipV.md) method to the Document API.
-- Added the [ApiDrawing/Unselect](../usage-api/text-document-api/ApiDrawing/Methods/Unselect.md) method to the Document API.
-- Added the [ApiDrawing/SetRelativeHeight](../usage-api/text-document-api/ApiDrawing/Methods/SetRelativeHeight.md) method to the Document API.
-- Added the [ApiDrawing/SetRelativeWidth](../usage-api/text-document-api/ApiDrawing/Methods/SetRelativeWidth.md) method to the Document API.
+- Added the [ApiDocument/GetDrawingsByName](../usage-api/document-api/ApiDocument/Methods/GetDrawingsByName.md) method to the Document API.
+- Added the [ApiDrawing/GetFlipH](../usage-api/document-api/ApiDrawing/Methods/GetFlipH.md) method to the Document API.
+- Added the [ApiDrawing/GetFlipV](../usage-api/document-api/ApiDrawing/Methods/GetFlipV.md) method to the Document API.
+- Added the [ApiDrawing/Unselect](../usage-api/document-api/ApiDrawing/Methods/Unselect.md) method to the Document API.
+- Added the [ApiDrawing/SetRelativeHeight](../usage-api/document-api/ApiDrawing/Methods/SetRelativeHeight.md) method to the Document API.
+- Added the [ApiDrawing/SetRelativeWidth](../usage-api/document-api/ApiDrawing/Methods/SetRelativeWidth.md) method to the Document API.
 
 - Added the [ApiWorkbook/GetDrawingsByName](../usage-api/spreadsheet-api/ApiWorkbook/Methods/GetDrawingsByName.md) method to the Spreadsheet API.
 - Added the [ApiDrawing/GetFlipH](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetFlipH.md) method to the Spreadsheet API.
@@ -235,7 +235,7 @@ The list of changes for Office JavaScript API.
 
 ### ApiChart methods
 
-- Added the [ApiChart/GetTitle](../usage-api/text-document-api/ApiChart/Methods/GetTitle.md) method to the Document API.
+- Added the [ApiChart/GetTitle](../usage-api/document-api/ApiChart/Methods/GetTitle.md) method to the Document API.
 - Added the [ApiChart/GetTitle](../usage-api/spreadsheet-api/ApiChart/Methods/GetTitle.md) method to the Spreadsheet API.
 - Added the [ApiChart/GetTitle](../usage-api/presentation-api/ApiChart/Methods/GetTitle.md) method to the Presentation API.
 
@@ -1122,8 +1122,8 @@ The list of changes for Office JavaScript API.
 
 - Added the [ApiCheckBoxForm/GetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Form API.
 - Added the [ApiCheckBoxForm/SetLabel](../usage-api/form-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Form API.
-- Added the [ApiCheckBoxForm/GetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Document API.
-- Added the [ApiCheckBoxForm/SetLabel](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Document API.
+- Added the [ApiCheckBoxForm/GetLabel](../usage-api/document-api/ApiCheckBoxForm/Methods/GetLabel.md) method to the Document API.
+- Added the [ApiCheckBoxForm/SetLabel](../usage-api/document-api/ApiCheckBoxForm/Methods/SetLabel.md) method to the Document API.
 
 ### Form methods
 
@@ -1141,20 +1141,20 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPictureForm/GetInternalId](../usage-api/form-api/ApiPictureForm/Methods/GetInternalId.md) method to the Form API.
 - Added the [ApiTextForm/Delete](../usage-api/form-api/ApiTextForm/Methods/Delete.md) method to the Form API.
 - Added the [ApiTextForm/GetInternalId](../usage-api/form-api/ApiTextForm/Methods/GetInternalId.md) method to the Form API.
-- Added the [ApiCheckBoxForm/Delete](../usage-api/text-document-api/ApiCheckBoxForm/Methods/Delete.md) method to the Document API.
-- Added the [ApiCheckBoxForm/GetInternalId](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiComboBoxForm/Delete](../usage-api/text-document-api/ApiComboBoxForm/Methods/Delete.md) method to the Document API.
-- Added the [ApiComboBoxForm/GetInternalId](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiComplexForm/Delete](../usage-api/text-document-api/ApiComplexForm/Methods/Delete.md) method to the Document API.
-- Added the [ApiComplexForm/GetInternalId](../usage-api/text-document-api/ApiComplexForm/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiDateForm/Delete](../usage-api/text-document-api/ApiDateForm/Methods/Delete.md) method to the Document API.
-- Added the [ApiDateForm/GetInternalId](../usage-api/text-document-api/ApiDateForm/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiFormBase/Delete](../usage-api/text-document-api/ApiFormBase/Methods/Delete.md) method to the Document API.
-- Added the [ApiFormBase/GetInternalId](../usage-api/text-document-api/ApiFormBase/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiPictureForm/Delete](../usage-api/text-document-api/ApiPictureForm/Methods/Delete.md) method to the Document API.
-- Added the [ApiPictureForm/GetInternalId](../usage-api/text-document-api/ApiPictureForm/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiTextForm/Delete](../usage-api/text-document-api/ApiTextForm/Methods/Delete.md) method to the Document API.
-- Added the [ApiTextForm/GetInternalId](../usage-api/text-document-api/ApiTextForm/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiCheckBoxForm/Delete](../usage-api/document-api/ApiCheckBoxForm/Methods/Delete.md) method to the Document API.
+- Added the [ApiCheckBoxForm/GetInternalId](../usage-api/document-api/ApiCheckBoxForm/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiComboBoxForm/Delete](../usage-api/document-api/ApiComboBoxForm/Methods/Delete.md) method to the Document API.
+- Added the [ApiComboBoxForm/GetInternalId](../usage-api/document-api/ApiComboBoxForm/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiComplexForm/Delete](../usage-api/document-api/ApiComplexForm/Methods/Delete.md) method to the Document API.
+- Added the [ApiComplexForm/GetInternalId](../usage-api/document-api/ApiComplexForm/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiDateForm/Delete](../usage-api/document-api/ApiDateForm/Methods/Delete.md) method to the Document API.
+- Added the [ApiDateForm/GetInternalId](../usage-api/document-api/ApiDateForm/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiFormBase/Delete](../usage-api/document-api/ApiFormBase/Methods/Delete.md) method to the Document API.
+- Added the [ApiFormBase/GetInternalId](../usage-api/document-api/ApiFormBase/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiPictureForm/Delete](../usage-api/document-api/ApiPictureForm/Methods/Delete.md) method to the Document API.
+- Added the [ApiPictureForm/GetInternalId](../usage-api/document-api/ApiPictureForm/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiTextForm/Delete](../usage-api/document-api/ApiTextForm/Methods/Delete.md) method to the Document API.
+- Added the [ApiTextForm/GetInternalId](../usage-api/document-api/ApiTextForm/Methods/GetInternalId.md) method to the Document API.
 
 ### Paragraph methods
 
@@ -1196,9 +1196,9 @@ The list of changes for Office JavaScript API.
 - Added the [ApiParagraph/SetTextPr](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetTextPr.md) method to the Spreadsheet API.
 - Added the [ApiParagraph/SetUnderline](../usage-api/spreadsheet-api/ApiParagraph/Methods/SetUnderline.md) method to the Spreadsheet API.
 - Added the [ApiParagraph/ToJSON](../usage-api/spreadsheet-api/ApiParagraph/Methods/ToJSON.md) method to the Spreadsheet API.
-- Added the [ApiParagraph/GetInternalId](../usage-api/text-document-api/ApiParagraph/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiParagraph/GetParaId](../usage-api/text-document-api/ApiParagraph/Methods/GetParaId.md) method to the Document API.
-- Added the [ApiParagraph/SetParaId](../usage-api/text-document-api/ApiParagraph/Methods/SetParaId.md) method to the Document API.
+- Added the [ApiParagraph/GetInternalId](../usage-api/document-api/ApiParagraph/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiParagraph/GetParaId](../usage-api/document-api/ApiParagraph/Methods/GetParaId.md) method to the Document API.
+- Added the [ApiParagraph/SetParaId](../usage-api/document-api/ApiParagraph/Methods/SetParaId.md) method to the Document API.
 
 ### Presentation methods
 
@@ -1220,17 +1220,17 @@ The list of changes for Office JavaScript API.
 
 ### Document methods
 
-- Added the [Api/EmusToMillimeters](../usage-api/text-document-api/Api/Methods/EmusToMillimeters.md) method to the Document API.
-- Added the [Api/MillimetersToEmus](../usage-api/text-document-api/Api/Methods/MillimetersToEmus.md) method to the Document API.
-- Added the [ApiDocument/EnterText](../usage-api/text-document-api/ApiDocument/Methods/EnterText.md) method to the Document API.
-- Added the [ApiDocument/InsertParagraphBreak](../usage-api/text-document-api/ApiDocument/Methods/InsertParagraphBreak.md) method to the Document API.
-- Added the [ApiDocument/MoveCursorDown](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorDown.md) method to the Document API.
-- Added the [ApiDocument/MoveCursorLeft](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorLeft.md) method to the Document API.
-- Added the [ApiDocument/MoveCursorRight](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorRight.md) method to the Document API.
-- Added the [ApiDocument/MoveCursorUp](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorUp.md) method to the Document API.
-- Added the [ApiTable/GetInternalId](../usage-api/text-document-api/ApiTable/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiTableCell/GetInternalId](../usage-api/text-document-api/ApiTableCell/Methods/GetInternalId.md) method to the Document API.
-- Added the [ApiTableRow/GetInternalId](../usage-api/text-document-api/ApiTableRow/Methods/GetInternalId.md) method to the Document API.
+- Added the [Api/EmusToMillimeters](../usage-api/document-api/Api/Methods/EmusToMillimeters.md) method to the Document API.
+- Added the [Api/MillimetersToEmus](../usage-api/document-api/Api/Methods/MillimetersToEmus.md) method to the Document API.
+- Added the [ApiDocument/EnterText](../usage-api/document-api/ApiDocument/Methods/EnterText.md) method to the Document API.
+- Added the [ApiDocument/InsertParagraphBreak](../usage-api/document-api/ApiDocument/Methods/InsertParagraphBreak.md) method to the Document API.
+- Added the [ApiDocument/MoveCursorDown](../usage-api/document-api/ApiDocument/Methods/MoveCursorDown.md) method to the Document API.
+- Added the [ApiDocument/MoveCursorLeft](../usage-api/document-api/ApiDocument/Methods/MoveCursorLeft.md) method to the Document API.
+- Added the [ApiDocument/MoveCursorRight](../usage-api/document-api/ApiDocument/Methods/MoveCursorRight.md) method to the Document API.
+- Added the [ApiDocument/MoveCursorUp](../usage-api/document-api/ApiDocument/Methods/MoveCursorUp.md) method to the Document API.
+- Added the [ApiTable/GetInternalId](../usage-api/document-api/ApiTable/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiTableCell/GetInternalId](../usage-api/document-api/ApiTableCell/Methods/GetInternalId.md) method to the Document API.
+- Added the [ApiTableRow/GetInternalId](../usage-api/document-api/ApiTableRow/Methods/GetInternalId.md) method to the Document API.
 
 ## Version 9.1
 
@@ -1478,23 +1478,23 @@ The list of changes for Office JavaScript API.
 
 ### Geometry methods
 
-- Added the [Api/CreateCustomGeometry](../usage-api/text-document-api/Api/Methods/CreateCustomGeometry.md) method to the Document API.
-- Added the [Api/CreatePresetGeometry](../usage-api/text-document-api/Api/Methods/CreatePresetGeometry.md) method to the Document API.
-- Added the [ApiGeometry](../usage-api/text-document-api/ApiGeometry/ApiGeometry.md) class to the Document API.
-- Added the [ApiGeometry/AddAdj](../usage-api/text-document-api/ApiGeometry/Methods/AddAdj.md) method to the Document API.
-- Added the [ApiGeometry/AddConnectionPoint](../usage-api/text-document-api/ApiGeometry/Methods/AddConnectionPoint.md) method to the Document API.
-- Added the [ApiGeometry/AddGuide](../usage-api/text-document-api/ApiGeometry/Methods/AddGuide.md) method to the Document API.
-- Added the [ApiGeometry/AddPath](../usage-api/text-document-api/ApiGeometry/Methods/AddPath.md) method to the Document API.
-- Added the [ApiGeometry/GetAdjValue](../usage-api/text-document-api/ApiGeometry/Methods/GetAdjValue.md) method to the Document API.
-- Added the [ApiGeometry/GetPath](../usage-api/text-document-api/ApiGeometry/Methods/GetPath.md) method to the Document API.
-- Added the [ApiGeometry/GetPathCount](../usage-api/text-document-api/ApiGeometry/Methods/GetPathCount.md) method to the Document API.
-- Added the [ApiGeometry/GetPaths](../usage-api/text-document-api/ApiGeometry/Methods/GetPaths.md) method to the Document API.
-- Added the [ApiGeometry/GetPreset](../usage-api/text-document-api/ApiGeometry/Methods/GetPreset.md) method to the Document API.
-- Added the [ApiGeometry/IsCustom](../usage-api/text-document-api/ApiGeometry/Methods/IsCustom.md) method to the Document API.
-- Added the [ApiGeometry/SetAdjValue](../usage-api/text-document-api/ApiGeometry/Methods/SetAdjValue.md) method to the Document API.
-- Added the [ApiGeometry/SetTextRect](../usage-api/text-document-api/ApiGeometry/Methods/SetTextRect.md) method to the Document API.
-- Added the [ApiShape/GetGeometry](../usage-api/text-document-api/ApiShape/Methods/GetGeometry.md) method to the Document API.
-- Added the [ApiShape/SetGeometry](../usage-api/text-document-api/ApiShape/Methods/SetGeometry.md) method to the Document API.
+- Added the [Api/CreateCustomGeometry](../usage-api/document-api/Api/Methods/CreateCustomGeometry.md) method to the Document API.
+- Added the [Api/CreatePresetGeometry](../usage-api/document-api/Api/Methods/CreatePresetGeometry.md) method to the Document API.
+- Added the [ApiGeometry](../usage-api/document-api/ApiGeometry/ApiGeometry.md) class to the Document API.
+- Added the [ApiGeometry/AddAdj](../usage-api/document-api/ApiGeometry/Methods/AddAdj.md) method to the Document API.
+- Added the [ApiGeometry/AddConnectionPoint](../usage-api/document-api/ApiGeometry/Methods/AddConnectionPoint.md) method to the Document API.
+- Added the [ApiGeometry/AddGuide](../usage-api/document-api/ApiGeometry/Methods/AddGuide.md) method to the Document API.
+- Added the [ApiGeometry/AddPath](../usage-api/document-api/ApiGeometry/Methods/AddPath.md) method to the Document API.
+- Added the [ApiGeometry/GetAdjValue](../usage-api/document-api/ApiGeometry/Methods/GetAdjValue.md) method to the Document API.
+- Added the [ApiGeometry/GetPath](../usage-api/document-api/ApiGeometry/Methods/GetPath.md) method to the Document API.
+- Added the [ApiGeometry/GetPathCount](../usage-api/document-api/ApiGeometry/Methods/GetPathCount.md) method to the Document API.
+- Added the [ApiGeometry/GetPaths](../usage-api/document-api/ApiGeometry/Methods/GetPaths.md) method to the Document API.
+- Added the [ApiGeometry/GetPreset](../usage-api/document-api/ApiGeometry/Methods/GetPreset.md) method to the Document API.
+- Added the [ApiGeometry/IsCustom](../usage-api/document-api/ApiGeometry/Methods/IsCustom.md) method to the Document API.
+- Added the [ApiGeometry/SetAdjValue](../usage-api/document-api/ApiGeometry/Methods/SetAdjValue.md) method to the Document API.
+- Added the [ApiGeometry/SetTextRect](../usage-api/document-api/ApiGeometry/Methods/SetTextRect.md) method to the Document API.
+- Added the [ApiShape/GetGeometry](../usage-api/document-api/ApiShape/Methods/GetGeometry.md) method to the Document API.
+- Added the [ApiShape/SetGeometry](../usage-api/document-api/ApiShape/Methods/SetGeometry.md) method to the Document API.
 - Added the [Api/CreateCustomGeometry](../usage-api/spreadsheet-api/Api/Methods/CreateCustomGeometry.md) method to the Spreadsheet API.
 - Added the [Api/CreatePresetGeometry](../usage-api/spreadsheet-api/Api/Methods/CreatePresetGeometry.md) method to the Spreadsheet API.
 - Added the [ApiGeometry](../usage-api/spreadsheet-api/ApiGeometry/ApiGeometry.md) class to the Spreadsheet API.
@@ -1529,32 +1529,32 @@ The list of changes for Office JavaScript API.
 - Added the [ApiGeometry/SetTextRect](../usage-api/presentation-api/ApiGeometry/Methods/SetTextRect.md) method to the Presentation API.
 - Added the [ApiShape/GetGeometry](../usage-api/presentation-api/ApiShape/Methods/GetGeometry.md) method to the Presentation API.
 - Added the [ApiShape/SetGeometry](../usage-api/presentation-api/ApiShape/Methods/SetGeometry.md) method to the Presentation API.
-- Added the [GeometryFormulaType](../usage-api/text-document-api/Enumeration/GeometryFormulaType.md) type to the simple type definitions.
+- Added the [GeometryFormulaType](../usage-api/document-api/Enumeration/GeometryFormulaType.md) type to the simple type definitions.
 
 ### Path methods
 
-- Added the [ApiPath](../usage-api/text-document-api/ApiPath/ApiPath.md) class to the Document API.
-- Added the [ApiPath/ArcTo](../usage-api/text-document-api/ApiPath/Methods/ArcTo.md) method to the Document API.
-- Added the [ApiPath/CubicBezTo](../usage-api/text-document-api/ApiPath/Methods/CubicBezTo.md) method to the Document API.
-- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/Close.md) method to the Document API.
-- Added the [ApiPath/GetCommand](../usage-api/text-document-api/ApiPath/Methods/GetCommand.md) method to the Document API.
-- Added the [ApiPath/GetCommandCount](../usage-api/text-document-api/ApiPath/Methods/GetCommandCount.md) method to the Document API.
-- Added the [ApiPath/GetCommands](../usage-api/text-document-api/ApiPath/Methods/GetCommands.md) method to the Document API.
-- Added the [ApiPath/GetFill](../usage-api/text-document-api/ApiPath/Methods/GetFill.md) method to the Document API.
-- Added the [ApiPath/GetHeight](../usage-api/text-document-api/ApiPath/Methods/GetHeight.md) method to the Document API.
-- Added the [ApiPath/GetStroke](../usage-api/text-document-api/ApiPath/Methods/GetStroke.md) method to the Document API.
-- Added the [ApiPath/GetWidth](../usage-api/text-document-api/ApiPath/Methods/GetWidth.md) method to the Document API.
-- Added the [ApiPath/LineTo](../usage-api/text-document-api/ApiPath/Methods/LineTo.md) method to the Document API.
-- Added the [ApiPath/MoveTo](../usage-api/text-document-api/ApiPath/Methods/MoveTo.md) method to the Document API.
-- Added the [ApiPath/QuadBezTo](../usage-api/text-document-api/ApiPath/Methods/QuadBezTo.md) method to the Document API.
-- Added the [ApiPath/SetFill](../usage-api/text-document-api/ApiPath/Methods/SetFill.md) method to the Document API.
-- Added the [ApiPath/SetHeight](../usage-api/text-document-api/ApiPath/Methods/SetHeight.md) method to the Document API.
-- Added the [ApiPath/SetStroke](../usage-api/text-document-api/ApiPath/Methods/SetStroke.md) method to the Document API.
-- Added the [ApiPath/SetWidth](../usage-api/text-document-api/ApiPath/Methods/SetWidth.md) method to the Document API.
+- Added the [ApiPath](../usage-api/document-api/ApiPath/ApiPath.md) class to the Document API.
+- Added the [ApiPath/ArcTo](../usage-api/document-api/ApiPath/Methods/ArcTo.md) method to the Document API.
+- Added the [ApiPath/CubicBezTo](../usage-api/document-api/ApiPath/Methods/CubicBezTo.md) method to the Document API.
+- Added the [ApiPath/Close](../usage-api/document-api/ApiPath/Methods/Close.md) method to the Document API.
+- Added the [ApiPath/GetCommand](../usage-api/document-api/ApiPath/Methods/GetCommand.md) method to the Document API.
+- Added the [ApiPath/GetCommandCount](../usage-api/document-api/ApiPath/Methods/GetCommandCount.md) method to the Document API.
+- Added the [ApiPath/GetCommands](../usage-api/document-api/ApiPath/Methods/GetCommands.md) method to the Document API.
+- Added the [ApiPath/GetFill](../usage-api/document-api/ApiPath/Methods/GetFill.md) method to the Document API.
+- Added the [ApiPath/GetHeight](../usage-api/document-api/ApiPath/Methods/GetHeight.md) method to the Document API.
+- Added the [ApiPath/GetStroke](../usage-api/document-api/ApiPath/Methods/GetStroke.md) method to the Document API.
+- Added the [ApiPath/GetWidth](../usage-api/document-api/ApiPath/Methods/GetWidth.md) method to the Document API.
+- Added the [ApiPath/LineTo](../usage-api/document-api/ApiPath/Methods/LineTo.md) method to the Document API.
+- Added the [ApiPath/MoveTo](../usage-api/document-api/ApiPath/Methods/MoveTo.md) method to the Document API.
+- Added the [ApiPath/QuadBezTo](../usage-api/document-api/ApiPath/Methods/QuadBezTo.md) method to the Document API.
+- Added the [ApiPath/SetFill](../usage-api/document-api/ApiPath/Methods/SetFill.md) method to the Document API.
+- Added the [ApiPath/SetHeight](../usage-api/document-api/ApiPath/Methods/SetHeight.md) method to the Document API.
+- Added the [ApiPath/SetStroke](../usage-api/document-api/ApiPath/Methods/SetStroke.md) method to the Document API.
+- Added the [ApiPath/SetWidth](../usage-api/document-api/ApiPath/Methods/SetWidth.md) method to the Document API.
 - Added the [ApiPath](../usage-api/spreadsheet-api/ApiPath/ApiPath.md) class to the Spreadsheet API.
 - Added the [ApiPath/ArcTo](../usage-api/spreadsheet-api/ApiPath/Methods/ArcTo.md) method to the Spreadsheet API.
 - Added the [ApiPath/CubicBezTo](../usage-api/spreadsheet-api/ApiPath/Methods/CubicBezTo.md) method to the Spreadsheet API.
-- Added the [ApiPath/Close](../usage-api/text-document-api/ApiPath/Methods/Close.md) method to the Spreadsheet API.
+- Added the [ApiPath/Close](../usage-api/document-api/ApiPath/Methods/Close.md) method to the Spreadsheet API.
 - Added the [ApiPath/GetCommand](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommand.md) method to the Spreadsheet API.
 - Added the [ApiPath/GetCommandCount](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommandCount.md) method to the Spreadsheet API.
 - Added the [ApiPath/GetCommands](../usage-api/spreadsheet-api/ApiPath/Methods/GetCommands.md) method to the Spreadsheet API.
@@ -1587,24 +1587,24 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPath/SetHeight](../usage-api/presentation-api/ApiPath/Methods/SetHeight.md) method to the Presentation API.
 - Added the [ApiPath/SetStroke](../usage-api/presentation-api/ApiPath/Methods/SetStroke.md) method to the Presentation API.
 - Added the [ApiPath/SetWidth](../usage-api/presentation-api/ApiPath/Methods/SetWidth.md) method to the Presentation API.
-- Added the [PathFillType](../usage-api/text-document-api/Enumeration/PathFillType.md) type to the simple type definitions.
+- Added the [PathFillType](../usage-api/document-api/Enumeration/PathFillType.md) type to the simple type definitions.
 
 ### Path command methods
 
-- Added the [ApiPathCommand](../usage-api/text-document-api/ApiPathCommand/ApiPathCommand.md) class to the Document API.
-- Added the [ApiPathCommand/GetType](../usage-api/text-document-api/ApiPathCommand/Methods/GetType.md) method to the Document API.
-- Added the [ApiPathCommand/GetX](../usage-api/text-document-api/ApiPathCommand/Methods/GetX.md) method to the Document API.
-- Added the [ApiPathCommand/GetY](../usage-api/text-document-api/ApiPathCommand/Methods/GetY.md) method to the Document API.
-- Added the [ApiPathCommand/GetX0](../usage-api/text-document-api/ApiPathCommand/Methods/GetX0.md) method to the Document API.
-- Added the [ApiPathCommand/GetY0](../usage-api/text-document-api/ApiPathCommand/Methods/GetY0.md) method to the Document API.
-- Added the [ApiPathCommand/GetX1](../usage-api/text-document-api/ApiPathCommand/Methods/GetX1.md) method to the Document API.
-- Added the [ApiPathCommand/GetY1](../usage-api/text-document-api/ApiPathCommand/Methods/GetY1.md) method to the Document API.
-- Added the [ApiPathCommand/GetX2](../usage-api/text-document-api/ApiPathCommand/Methods/GetX2.md) method to the Document API.
-- Added the [ApiPathCommand/GetY2](../usage-api/text-document-api/ApiPathCommand/Methods/GetY2.md) method to the Document API.
-- Added the [ApiPathCommand/GetWR](../usage-api/text-document-api/ApiPathCommand/Methods/GetWR.md) method to the Document API.
-- Added the [ApiPathCommand/GetHR](../usage-api/text-document-api/ApiPathCommand/Methods/GetHR.md) method to the Presentation API.
-- Added the [ApiPathCommand/GetStartAngle](../usage-api/text-document-api/ApiPathCommand/Methods/GetStartAngle.md) method to the Document API.
-- Added the [ApiPathCommand/GetSweepAngle](../usage-api/text-document-api/ApiPathCommand/Methods/GetSweepAngle.md) method to the Document API.
+- Added the [ApiPathCommand](../usage-api/document-api/ApiPathCommand/ApiPathCommand.md) class to the Document API.
+- Added the [ApiPathCommand/GetType](../usage-api/document-api/ApiPathCommand/Methods/GetType.md) method to the Document API.
+- Added the [ApiPathCommand/GetX](../usage-api/document-api/ApiPathCommand/Methods/GetX.md) method to the Document API.
+- Added the [ApiPathCommand/GetY](../usage-api/document-api/ApiPathCommand/Methods/GetY.md) method to the Document API.
+- Added the [ApiPathCommand/GetX0](../usage-api/document-api/ApiPathCommand/Methods/GetX0.md) method to the Document API.
+- Added the [ApiPathCommand/GetY0](../usage-api/document-api/ApiPathCommand/Methods/GetY0.md) method to the Document API.
+- Added the [ApiPathCommand/GetX1](../usage-api/document-api/ApiPathCommand/Methods/GetX1.md) method to the Document API.
+- Added the [ApiPathCommand/GetY1](../usage-api/document-api/ApiPathCommand/Methods/GetY1.md) method to the Document API.
+- Added the [ApiPathCommand/GetX2](../usage-api/document-api/ApiPathCommand/Methods/GetX2.md) method to the Document API.
+- Added the [ApiPathCommand/GetY2](../usage-api/document-api/ApiPathCommand/Methods/GetY2.md) method to the Document API.
+- Added the [ApiPathCommand/GetWR](../usage-api/document-api/ApiPathCommand/Methods/GetWR.md) method to the Document API.
+- Added the [ApiPathCommand/GetHR](../usage-api/document-api/ApiPathCommand/Methods/GetHR.md) method to the Presentation API.
+- Added the [ApiPathCommand/GetStartAngle](../usage-api/document-api/ApiPathCommand/Methods/GetStartAngle.md) method to the Document API.
+- Added the [ApiPathCommand/GetSweepAngle](../usage-api/document-api/ApiPathCommand/Methods/GetSweepAngle.md) method to the Document API.
 - Added the [ApiPathCommand](../usage-api/spreadsheet-api/ApiPathCommand/ApiPathCommand.md) class to the Spreadsheet API.
 - Added the [ApiPathCommand/GetType](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetType.md) method to the Spreadsheet API.
 - Added the [ApiPathCommand/GetX](../usage-api/spreadsheet-api/ApiPathCommand/Methods/GetX.md) method to the Spreadsheet API.
@@ -1633,7 +1633,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiPathCommand/GetHR](../usage-api/presentation-api/ApiPathCommand/Methods/GetHR.md) method to the Presentation API.
 - Added the [ApiPathCommand/GetStartAngle](../usage-api/presentation-api/ApiPathCommand/Methods/GetStartAngle.md) method to the Presentation API.
 - Added the [ApiPathCommand/GetSweepAngle](../usage-api/presentation-api/ApiPathCommand/Methods/GetSweepAngle.md) method to the Presentation API.
-- Added the [PathCommandType](../usage-api/text-document-api/Enumeration/PathCommandType.md) type to the simple type definitions.
+- Added the [PathCommandType](../usage-api/document-api/Enumeration/PathCommandType.md) type to the simple type definitions.
 
 ### Custom XML methods
 
@@ -1720,24 +1720,24 @@ The list of changes for Office JavaScript API.
 
 ### Conversion methods
 
-- Added the [Api/CentimetersToPoints](../usage-api/text-document-api/Api/Methods/CentimetersToPoints.md) method to the Document API.
-- Added the [Api/EmusToPoints](../usage-api/text-document-api/Api/Methods/EmusToPoints.md) method to the Document API.
-- Added the [Api/InchesToPoints](../usage-api/text-document-api/Api/Methods/InchesToPoints.md) method to the Document API.
-- Added the [Api/LinesToPoints](../usage-api/text-document-api/Api/Methods/LinesToPoints.md) method to the Document API.
-- Added the [Api/MillimetersToPixels](../usage-api/text-document-api/Api/Methods/MillimetersToPixels.md) method to the Document API.
-- Added the [Api/MillimetersToPoints](../usage-api/text-document-api/Api/Methods/MillimetersToPoints.md) method to the Document API.
-- Added the [Api/PicasToPoints](../usage-api/text-document-api/Api/Methods/PicasToPoints.md) method to the Document API.
-- Added the [Api/PixelsToEmus](../usage-api/text-document-api/Api/Methods/PixelsToEmus.md) method to the Document API.
-- Added the [Api/PixelsToPoints](../usage-api/text-document-api/Api/Methods/PixelsToPoints.md) method to the Document API.
-- Added the [Api/PointsToCentimeters](../usage-api/text-document-api/Api/Methods/PointsToCentimeters.md) method to the Document API.
-- Added the [Api/PointsToEmus](../usage-api/text-document-api/Api/Methods/PointsToEmus.md) method to the Document API.
-- Added the [Api/PointsToInches](../usage-api/text-document-api/Api/Methods/PointsToInches.md) method to the Document API.
-- Added the [Api/PointsToLines](../usage-api/text-document-api/Api/Methods/PointsToLines.md) method to the Document API.
-- Added the [Api/PointsToMillimeters](../usage-api/text-document-api/Api/Methods/PointsToMillimeters.md) method to the Document API.
-- Added the [Api/PointsToPicas](../usage-api/text-document-api/Api/Methods/PointsToPicas.md) method to the Document API.
-- Added the [Api/PointsToPixels](../usage-api/text-document-api/Api/Methods/PointsToPixels.md) method to the Document API.
-- Added the [Api/PointsToTwips](../usage-api/text-document-api/Api/Methods/PointsToTwips.md) method to the Document API.
-- Added the [Api/TwipsToPoints](../usage-api/text-document-api/Api/Methods/TwipsToPoints.md) method to the Document API.
+- Added the [Api/CentimetersToPoints](../usage-api/document-api/Api/Methods/CentimetersToPoints.md) method to the Document API.
+- Added the [Api/EmusToPoints](../usage-api/document-api/Api/Methods/EmusToPoints.md) method to the Document API.
+- Added the [Api/InchesToPoints](../usage-api/document-api/Api/Methods/InchesToPoints.md) method to the Document API.
+- Added the [Api/LinesToPoints](../usage-api/document-api/Api/Methods/LinesToPoints.md) method to the Document API.
+- Added the [Api/MillimetersToPixels](../usage-api/document-api/Api/Methods/MillimetersToPixels.md) method to the Document API.
+- Added the [Api/MillimetersToPoints](../usage-api/document-api/Api/Methods/MillimetersToPoints.md) method to the Document API.
+- Added the [Api/PicasToPoints](../usage-api/document-api/Api/Methods/PicasToPoints.md) method to the Document API.
+- Added the [Api/PixelsToEmus](../usage-api/document-api/Api/Methods/PixelsToEmus.md) method to the Document API.
+- Added the [Api/PixelsToPoints](../usage-api/document-api/Api/Methods/PixelsToPoints.md) method to the Document API.
+- Added the [Api/PointsToCentimeters](../usage-api/document-api/Api/Methods/PointsToCentimeters.md) method to the Document API.
+- Added the [Api/PointsToEmus](../usage-api/document-api/Api/Methods/PointsToEmus.md) method to the Document API.
+- Added the [Api/PointsToInches](../usage-api/document-api/Api/Methods/PointsToInches.md) method to the Document API.
+- Added the [Api/PointsToLines](../usage-api/document-api/Api/Methods/PointsToLines.md) method to the Document API.
+- Added the [Api/PointsToMillimeters](../usage-api/document-api/Api/Methods/PointsToMillimeters.md) method to the Document API.
+- Added the [Api/PointsToPicas](../usage-api/document-api/Api/Methods/PointsToPicas.md) method to the Document API.
+- Added the [Api/PointsToPixels](../usage-api/document-api/Api/Methods/PointsToPixels.md) method to the Document API.
+- Added the [Api/PointsToTwips](../usage-api/document-api/Api/Methods/PointsToTwips.md) method to the Document API.
+- Added the [Api/TwipsToPoints](../usage-api/document-api/Api/Methods/TwipsToPoints.md) method to the Document API.
 - Added the [Api/CentimetersToPoints](../usage-api/spreadsheet-api/Api/Methods/CentimetersToPoints.md) method to the Spreadsheet API.
 - Added the [Api/EmusToPoints](../usage-api/spreadsheet-api/Api/Methods/EmusToPoints.md) method to the Spreadsheet API.
 - Added the [Api/InchesToPoints](../usage-api/spreadsheet-api/Api/Methods/InchesToPoints.md) method to the Spreadsheet API.
@@ -1777,31 +1777,31 @@ The list of changes for Office JavaScript API.
 
 ### Methods for managing properties
 
-- Added the [Api/CreateParaPr](../usage-api/text-document-api/Api/Methods/CreateParaPr.md) method to the Document API.
-- Added the [Api/CreateTableCellPr](../usage-api/text-document-api/Api/Methods/CreateTableCellPr.md) method to the Document API.
-- Added the [Api/CreateTablePr](../usage-api/text-document-api/Api/Methods/CreateTablePr.md) method to the Document API.
-- Added the [Api/CreateTableRowPr](../usage-api/text-document-api/Api/Methods/CreateTableRowPr.md) method to the Document API.
-- Added the [Api/CreateTableStylePr](../usage-api/text-document-api/Api/Methods/CreateTableStylePr.md) method to the Document API.
-- Added the [ApiStyle/SetConditionalTableStyle](../usage-api/text-document-api/ApiStyle/Methods/SetConditionalTableStyle.md) method to the Document API.
-- Added the [ApiStyle/SetParaPr](../usage-api/text-document-api/ApiStyle/Methods/SetParaPr.md) method to the Document API.
-- Added the [ApiStyle/SetTableCellPr](../usage-api/text-document-api/ApiStyle/Methods/SetTableCellPr.md) method to the Document API.
-- Added the [ApiStyle/SetTablePr](../usage-api/text-document-api/ApiStyle/Methods/SetTablePr.md) method to the Document API.
-- Added the [ApiStyle/SetTableRowPr](../usage-api/text-document-api/ApiStyle/Methods/SetTableRowPr.md) method to the Document API.
-- Added the [ApiStyle/SetTextPr](../usage-api/text-document-api/ApiStyle/Methods/SetTextPr.md) method to the Document API.
-- Added the [ApiTableStylePr/SetParaPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetParaPr.md) method to the Document API.
-- Added the [ApiTableStylePr/SetTableCellPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTableCellPr.md) method to the Document API.
-- Added the [ApiTableStylePr/SetTablePr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTablePr.md) method to the Document API.
-- Added the [ApiTableStylePr/SetTableRowPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTableRowPr.md) method to the Document API.
-- Added the [ApiTableStylePr/SetTextPr](../usage-api/text-document-api/ApiTableStylePr/Methods/SetTextPr.md) method to the Document API.
+- Added the [Api/CreateParaPr](../usage-api/document-api/Api/Methods/CreateParaPr.md) method to the Document API.
+- Added the [Api/CreateTableCellPr](../usage-api/document-api/Api/Methods/CreateTableCellPr.md) method to the Document API.
+- Added the [Api/CreateTablePr](../usage-api/document-api/Api/Methods/CreateTablePr.md) method to the Document API.
+- Added the [Api/CreateTableRowPr](../usage-api/document-api/Api/Methods/CreateTableRowPr.md) method to the Document API.
+- Added the [Api/CreateTableStylePr](../usage-api/document-api/Api/Methods/CreateTableStylePr.md) method to the Document API.
+- Added the [ApiStyle/SetConditionalTableStyle](../usage-api/document-api/ApiStyle/Methods/SetConditionalTableStyle.md) method to the Document API.
+- Added the [ApiStyle/SetParaPr](../usage-api/document-api/ApiStyle/Methods/SetParaPr.md) method to the Document API.
+- Added the [ApiStyle/SetTableCellPr](../usage-api/document-api/ApiStyle/Methods/SetTableCellPr.md) method to the Document API.
+- Added the [ApiStyle/SetTablePr](../usage-api/document-api/ApiStyle/Methods/SetTablePr.md) method to the Document API.
+- Added the [ApiStyle/SetTableRowPr](../usage-api/document-api/ApiStyle/Methods/SetTableRowPr.md) method to the Document API.
+- Added the [ApiStyle/SetTextPr](../usage-api/document-api/ApiStyle/Methods/SetTextPr.md) method to the Document API.
+- Added the [ApiTableStylePr/SetParaPr](../usage-api/document-api/ApiTableStylePr/Methods/SetParaPr.md) method to the Document API.
+- Added the [ApiTableStylePr/SetTableCellPr](../usage-api/document-api/ApiTableStylePr/Methods/SetTableCellPr.md) method to the Document API.
+- Added the [ApiTableStylePr/SetTablePr](../usage-api/document-api/ApiTableStylePr/Methods/SetTablePr.md) method to the Document API.
+- Added the [ApiTableStylePr/SetTableRowPr](../usage-api/document-api/ApiTableStylePr/Methods/SetTableRowPr.md) method to the Document API.
+- Added the [ApiTableStylePr/SetTextPr](../usage-api/document-api/ApiTableStylePr/Methods/SetTextPr.md) method to the Document API.
 
 ### Section methods
 
-- Added the [ApiSection/GetFooterDistance](../usage-api/text-document-api/ApiSection/Methods/GetFooterDistance.md) method to the Document API.
-- Added the [ApiSection/GetHeaderDistance](../usage-api/text-document-api/ApiSection/Methods/GetHeaderDistance.md) method to the Document API.
-- Added the [ApiSection/GetPageMarginBottom](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginBottom.md) method to the Document API.
-- Added the [ApiSection/GetPageMarginLeft](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginLeft.md) method to the Document API.
-- Added the [ApiSection/GetPageMarginRight](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginRight.md) method to the Document API.
-- Added the [ApiSection/GetPageMarginTop](../usage-api/text-document-api/ApiSection/Methods/GetPageMarginTop.md) method to the Document API.
+- Added the [ApiSection/GetFooterDistance](../usage-api/document-api/ApiSection/Methods/GetFooterDistance.md) method to the Document API.
+- Added the [ApiSection/GetHeaderDistance](../usage-api/document-api/ApiSection/Methods/GetHeaderDistance.md) method to the Document API.
+- Added the [ApiSection/GetPageMarginBottom](../usage-api/document-api/ApiSection/Methods/GetPageMarginBottom.md) method to the Document API.
+- Added the [ApiSection/GetPageMarginLeft](../usage-api/document-api/ApiSection/Methods/GetPageMarginLeft.md) method to the Document API.
+- Added the [ApiSection/GetPageMarginRight](../usage-api/document-api/ApiSection/Methods/GetPageMarginRight.md) method to the Document API.
+- Added the [ApiSection/GetPageMarginTop](../usage-api/document-api/ApiSection/Methods/GetPageMarginTop.md) method to the Document API.
 
 ### Workbook methods
 
@@ -1860,138 +1860,138 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [ApiDocument/GetDocumentVisitor](../usage-api/text-document-api/ApiDocument/Methods/GetDocumentVisitor.md) method to the Document API.
-- Added the [ApiDocument/GoToPage](../usage-api/text-document-api/ApiDocument/Methods/GoToPage.md) method to the Document API.
-- Added the [ApiDocumentContent/GetDocumentVisitor](../usage-api/text-document-api/ApiDocumentContent/Methods/GetDocumentVisitor.md) method to the Document API.
-- Added the [ApiParagraph/SetReadingOrder](../usage-api/text-document-api/ApiParagraph/Methods/SetReadingOrder.md) method to the Document API.
+- Added the [ApiDocument/GetDocumentVisitor](../usage-api/document-api/ApiDocument/Methods/GetDocumentVisitor.md) method to the Document API.
+- Added the [ApiDocument/GoToPage](../usage-api/document-api/ApiDocument/Methods/GoToPage.md) method to the Document API.
+- Added the [ApiDocumentContent/GetDocumentVisitor](../usage-api/document-api/ApiDocumentContent/Methods/GetDocumentVisitor.md) method to the Document API.
+- Added the [ApiParagraph/SetReadingOrder](../usage-api/document-api/ApiParagraph/Methods/SetReadingOrder.md) method to the Document API.
 - Added the [ApiDrawing/Select](../usage-api/spreadsheet-api/ApiDrawing/Methods/Select.md) method to the Spreadsheet API.
 - Added the [ApiTheme/GetClassType](../usage-api/spreadsheet-api/ApiTheme/Methods/GetClassType.md) method to the Spreadsheet API.
 - Added the [ApiTheme/GetName](../usage-api/spreadsheet-api/ApiTheme/Methods/GetName.md) method to the Spreadsheet API.
 - Added the [ApiFormBase/GetPlaceholderText](../usage-api/form-api/ApiFormBase/Methods/GetPlaceholderText.md) method to Form API.
-- Added the [ReadingOrder](../usage-api/text-document-api/Enumeration/ReadingOrder.md) type to the simple type definitions.
+- Added the [ReadingOrder](../usage-api/document-api/Enumeration/ReadingOrder.md) type to the simple type definitions.
 - Added the [XlPivotFilterType](../usage-api/spreadsheet-api/Enumeration/XlPivotFilterType.md) type to the simple type definitions.
 
 ## Version 9.0
 
 ### Content control methods
 
-- Added the [Api/CreateCheckBoxContentControl](../usage-api/text-document-api/Api/Methods/CreateCheckBoxContentControl.md) method to Document API.
-- Added the [Api/CreateComboBoxContentControl](../usage-api/text-document-api/Api/Methods/CreateComboBoxContentControl.md) method to Document API.
-- Added the [Api/CreateDatePickerContentControl](../usage-api/text-document-api/Api/Methods/CreateDatePickerContentControl.md) method to Document API.
-- Added the [Api/CreateDropDownListContentControl](../usage-api/text-document-api/Api/Methods/CreateDropDownListContentControl.md) method to Document API.
-- Added the [Api/CreatePictureContentControl](../usage-api/text-document-api/Api/Methods/CreatePictureContentControl.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetAppearance](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetAppearance.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetBackgroundColor.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetBorderColor.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDataBinding.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetDataForXmlMapping](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDataForXmlMapping.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetId.md) method to Document API.
-- Added the [ApiBlockLvlSdt/IsPicture](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/IsPicture.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetAppearance](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetAppearance.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetDataBinding](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetDataBinding.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetId.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetPicture](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetPicture.md) method to Document API.
-- Added the [ApiBlockLvlSdt/UpdateFromXmlMapping](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/UpdateFromXmlMapping.md) method to Document API.
-- Added the [ApiDocument/AddCheckBoxContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddCheckBoxContentControl.md) method to Document API.
-- Added the [ApiDocument/AddComboBoxContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddComboBoxContentControl.md) method to Document API.
-- Added the [ApiDocument/AddDatePickerContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddDatePickerContentControl.md) method to Document API.
-- Added the [ApiDocument/AddDropDownListContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddDropDownListContentControl.md) method to Document API.
-- Added the [ApiDocument/AddPictureContentControl](../usage-api/text-document-api/ApiDocument/Methods/AddPictureContentControl.md) method to Document API.
-- Added the [ApiDocumentContent/GetCurrentContentControl](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentContentControl.md) method to Document API.
-- Added the [ApiInlineLvlSdt/AddListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/AddListItem.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBackgroundColor.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetDataBinding](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataBinding.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetDataForXmlMapping](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDataForXmlMapping.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetDate](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDate.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetId.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsCheckBox](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsCheckBox.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsCheckBoxChecked](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsCheckBoxChecked.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsComboBox](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsComboBox.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsDatePicker](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDatePicker.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsDropDownList](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsDropDownList.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsPicture](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsPicture.md) method to Document API.
-- Added the [ApiInlineLvlSdt/RemoveListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/RemoveListItem.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetBackgroundColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetBorderColor](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetCheckBoxChecked](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetCheckBoxChecked.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetDate](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetDate.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetDateFormat](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetDateFormat.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetPicture](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetPicture.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetPictureSize](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetPictureSize.md) method to Document API.
-- Added the [ApiInlineLvlSdt/Select](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/Select.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SelectListItem](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SelectListItem.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetDataBinding](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetDataBinding.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetId.md) method to Document API.
-- Added the [ApiInlineLvlSdt/UpdateFromXmlMapping](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/UpdateFromXmlMapping.md) method to Document API.
-- Added the [ContentControlCheckBoxPr](../usage-api/text-document-api/Enumeration/ContentControlCheckBoxPr.md) type to the simple type definitions.
-- Added the [ContentControlDatePr](../usage-api/text-document-api/Enumeration/ContentControlDatePr.md) type to the simple type definitions.
-- Added the [ContentControlListItem](../usage-api/text-document-api/Enumeration/ContentControlListItem.md) type to the simple type definitions.
+- Added the [Api/CreateCheckBoxContentControl](../usage-api/document-api/Api/Methods/CreateCheckBoxContentControl.md) method to Document API.
+- Added the [Api/CreateComboBoxContentControl](../usage-api/document-api/Api/Methods/CreateComboBoxContentControl.md) method to Document API.
+- Added the [Api/CreateDatePickerContentControl](../usage-api/document-api/Api/Methods/CreateDatePickerContentControl.md) method to Document API.
+- Added the [Api/CreateDropDownListContentControl](../usage-api/document-api/Api/Methods/CreateDropDownListContentControl.md) method to Document API.
+- Added the [Api/CreatePictureContentControl](../usage-api/document-api/Api/Methods/CreatePictureContentControl.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetAppearance](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetAppearance.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetBackgroundColor](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetBackgroundColor.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetBorderColor](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetBorderColor.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetDataBinding](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetDataBinding.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetDataForXmlMapping](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetDataForXmlMapping.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetId](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetId.md) method to Document API.
+- Added the [ApiBlockLvlSdt/IsPicture](../usage-api/document-api/ApiBlockLvlSdt/Methods/IsPicture.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetAppearance](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetAppearance.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetBackgroundColor](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetBorderColor](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetDataBinding](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetDataBinding.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetId](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetId.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetPicture](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetPicture.md) method to Document API.
+- Added the [ApiBlockLvlSdt/UpdateFromXmlMapping](../usage-api/document-api/ApiBlockLvlSdt/Methods/UpdateFromXmlMapping.md) method to Document API.
+- Added the [ApiDocument/AddCheckBoxContentControl](../usage-api/document-api/ApiDocument/Methods/AddCheckBoxContentControl.md) method to Document API.
+- Added the [ApiDocument/AddComboBoxContentControl](../usage-api/document-api/ApiDocument/Methods/AddComboBoxContentControl.md) method to Document API.
+- Added the [ApiDocument/AddDatePickerContentControl](../usage-api/document-api/ApiDocument/Methods/AddDatePickerContentControl.md) method to Document API.
+- Added the [ApiDocument/AddDropDownListContentControl](../usage-api/document-api/ApiDocument/Methods/AddDropDownListContentControl.md) method to Document API.
+- Added the [ApiDocument/AddPictureContentControl](../usage-api/document-api/ApiDocument/Methods/AddPictureContentControl.md) method to Document API.
+- Added the [ApiDocumentContent/GetCurrentContentControl](../usage-api/document-api/ApiDocumentContent/Methods/GetCurrentContentControl.md) method to Document API.
+- Added the [ApiInlineLvlSdt/AddListItem](../usage-api/document-api/ApiInlineLvlSdt/Methods/AddListItem.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetBackgroundColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetBackgroundColor.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetBorderColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetBorderColor.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetDataBinding](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetDataBinding.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetDataForXmlMapping](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetDataForXmlMapping.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetDate](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetDate.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetId](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetId.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsCheckBox](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsCheckBox.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsCheckBoxChecked](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsCheckBoxChecked.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsComboBox](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsComboBox.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsDatePicker](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsDatePicker.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsDropDownList](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsDropDownList.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsPicture](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsPicture.md) method to Document API.
+- Added the [ApiInlineLvlSdt/RemoveListItem](../usage-api/document-api/ApiInlineLvlSdt/Methods/RemoveListItem.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetBackgroundColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetBorderColor](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetCheckBoxChecked](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetCheckBoxChecked.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetDate](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetDate.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetDateFormat](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetDateFormat.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetPicture](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetPicture.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetPictureSize](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetPictureSize.md) method to Document API.
+- Added the [ApiInlineLvlSdt/Select](../usage-api/document-api/ApiInlineLvlSdt/Methods/Select.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SelectListItem](../usage-api/document-api/ApiInlineLvlSdt/Methods/SelectListItem.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetDataBinding](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetDataBinding.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetId](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetId.md) method to Document API.
+- Added the [ApiInlineLvlSdt/UpdateFromXmlMapping](../usage-api/document-api/ApiInlineLvlSdt/Methods/UpdateFromXmlMapping.md) method to Document API.
+- Added the [ContentControlCheckBoxPr](../usage-api/document-api/Enumeration/ContentControlCheckBoxPr.md) type to the simple type definitions.
+- Added the [ContentControlDatePr](../usage-api/document-api/Enumeration/ContentControlDatePr.md) type to the simple type definitions.
+- Added the [ContentControlListItem](../usage-api/document-api/Enumeration/ContentControlListItem.md) type to the simple type definitions.
 
 ### Custom XML methods
 
-- Added the [ApiCustomXmlNode](../usage-api/text-document-api/ApiCustomXmlNode/ApiCustomXmlNode.md) class to Document API.
-- Added the [ApiCustomXmlNode/Add](../usage-api/text-document-api/ApiCustomXmlNode/Methods/Add.md) method to Document API.
-- Added the [ApiCustomXmlNode/Delete](../usage-api/text-document-api/ApiCustomXmlNode/Methods/Delete.md) method to Document API.
-- Added the [ApiCustomXmlNode/DeleteAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/DeleteAttribute.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetAttribute.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetAttributes](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetAttributes.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetClassType](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetNodeName](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetNodeName.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetNodes](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetNodes.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetNodeValue](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetNodeValue.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetParent](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetParent.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetText](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetText.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetXml](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetXml.md) method to Document API.
-- Added the [ApiCustomXmlNode/GetXPath](../usage-api/text-document-api/ApiCustomXmlNode/Methods/GetXPath.md) method to Document API.
-- Added the [ApiCustomXmlNode/SetAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetAttribute.md) method to Document API.
-- Added the [ApiCustomXmlNode/SetNodeValue](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetNodeValue.md) method to Document API.
-- Added the [ApiCustomXmlNode/SetText](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetText.md) method to Document API.
-- Added the [ApiCustomXmlNode/SetXml](../usage-api/text-document-api/ApiCustomXmlNode/Methods/SetXml.md) method to Document API.
-- Added the [ApiCustomXmlNode/UpdateAttribute](../usage-api/text-document-api/ApiCustomXmlNode/Methods/UpdateAttribute.md) method to Document API.
-- Added the [ApiCustomXmlPart](../usage-api/text-document-api/ApiCustomXmlPart/ApiCustomXmlPart.md) class to Document API.
-- Added the [ApiCustomXmlPart/Delete](../usage-api/text-document-api/ApiCustomXmlPart/Methods/Delete.md) method to Document API.
-- Added the [ApiCustomXmlPart/DeleteAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/DeleteAttribute.md) method to Document API.
-- Added the [ApiCustomXmlPart/DeleteElement](../usage-api/text-document-api/ApiCustomXmlPart/Methods/DeleteElement.md) method to Document API.
-- Added the [ApiCustomXmlPart/GetAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetAttribute.md) method to Document API.
-- Added the [ApiCustomXmlPart/GetClassType](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCustomXmlPart/GetId](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetId.md) method to Document API.
-- Added the [ApiCustomXmlPart/GetNodes](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetNodes.md) method to Document API.
-- Added the [ApiCustomXmlPart/GetXml](../usage-api/text-document-api/ApiCustomXmlPart/Methods/GetXml.md) method to Document API.
-- Added the [ApiCustomXmlPart/InsertAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/InsertAttribute.md) method to Document API.
-- Added the [ApiCustomXmlPart/InsertElement](../usage-api/text-document-api/ApiCustomXmlPart/Methods/InsertElement.md) method to Document API.
-- Added the [ApiCustomXmlPart/UpdateAttribute](../usage-api/text-document-api/ApiCustomXmlPart/Methods/UpdateAttribute.md) method to Document API.
-- Added the [ApiCustomXmlPart/UpdateElement](../usage-api/text-document-api/ApiCustomXmlPart/Methods/UpdateElement.md) method to Document API.
-- Added the [ApiCustomXmlParts](../usage-api/text-document-api/ApiCustomXmlParts/ApiCustomXmlParts.md) class to Document API.
-- Added the [ApiCustomXmlParts/Add](../usage-api/text-document-api/ApiCustomXmlParts/Methods/Add.md) method to Document API.
-- Added the [ApiCustomXmlParts/GetAll](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetAll.md) method to Document API.
-- Added the [ApiCustomXmlParts/GetById](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetById.md) method to Document API.
-- Added the [ApiCustomXmlParts/GetByNamespace](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetByNamespace.md) method to Document API.
-- Added the [ApiCustomXmlParts/GetClassType](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCustomXmlParts/GetCount](../usage-api/text-document-api/ApiCustomXmlParts/Methods/GetCount.md) method to Document API.
-- Added the [ApiDocument/GetCustomXmlParts](../usage-api/text-document-api/ApiDocument/Methods/GetCustomXmlParts.md) method to Document API.
-- Added the [CustomXmlNodeAttribute](../usage-api/text-document-api/Enumeration/CustomXmlNodeAttribute.md) type to the simple type definitions.
-- Added the [XmlMapping](../usage-api/text-document-api/Enumeration/XmlMapping.md) type to the simple type definitions.
+- Added the [ApiCustomXmlNode](../usage-api/document-api/ApiCustomXmlNode/ApiCustomXmlNode.md) class to Document API.
+- Added the [ApiCustomXmlNode/Add](../usage-api/document-api/ApiCustomXmlNode/Methods/Add.md) method to Document API.
+- Added the [ApiCustomXmlNode/Delete](../usage-api/document-api/ApiCustomXmlNode/Methods/Delete.md) method to Document API.
+- Added the [ApiCustomXmlNode/DeleteAttribute](../usage-api/document-api/ApiCustomXmlNode/Methods/DeleteAttribute.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetAttribute](../usage-api/document-api/ApiCustomXmlNode/Methods/GetAttribute.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetAttributes](../usage-api/document-api/ApiCustomXmlNode/Methods/GetAttributes.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetClassType](../usage-api/document-api/ApiCustomXmlNode/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetNodeName](../usage-api/document-api/ApiCustomXmlNode/Methods/GetNodeName.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetNodes](../usage-api/document-api/ApiCustomXmlNode/Methods/GetNodes.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetNodeValue](../usage-api/document-api/ApiCustomXmlNode/Methods/GetNodeValue.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetParent](../usage-api/document-api/ApiCustomXmlNode/Methods/GetParent.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetText](../usage-api/document-api/ApiCustomXmlNode/Methods/GetText.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetXml](../usage-api/document-api/ApiCustomXmlNode/Methods/GetXml.md) method to Document API.
+- Added the [ApiCustomXmlNode/GetXPath](../usage-api/document-api/ApiCustomXmlNode/Methods/GetXPath.md) method to Document API.
+- Added the [ApiCustomXmlNode/SetAttribute](../usage-api/document-api/ApiCustomXmlNode/Methods/SetAttribute.md) method to Document API.
+- Added the [ApiCustomXmlNode/SetNodeValue](../usage-api/document-api/ApiCustomXmlNode/Methods/SetNodeValue.md) method to Document API.
+- Added the [ApiCustomXmlNode/SetText](../usage-api/document-api/ApiCustomXmlNode/Methods/SetText.md) method to Document API.
+- Added the [ApiCustomXmlNode/SetXml](../usage-api/document-api/ApiCustomXmlNode/Methods/SetXml.md) method to Document API.
+- Added the [ApiCustomXmlNode/UpdateAttribute](../usage-api/document-api/ApiCustomXmlNode/Methods/UpdateAttribute.md) method to Document API.
+- Added the [ApiCustomXmlPart](../usage-api/document-api/ApiCustomXmlPart/ApiCustomXmlPart.md) class to Document API.
+- Added the [ApiCustomXmlPart/Delete](../usage-api/document-api/ApiCustomXmlPart/Methods/Delete.md) method to Document API.
+- Added the [ApiCustomXmlPart/DeleteAttribute](../usage-api/document-api/ApiCustomXmlPart/Methods/DeleteAttribute.md) method to Document API.
+- Added the [ApiCustomXmlPart/DeleteElement](../usage-api/document-api/ApiCustomXmlPart/Methods/DeleteElement.md) method to Document API.
+- Added the [ApiCustomXmlPart/GetAttribute](../usage-api/document-api/ApiCustomXmlPart/Methods/GetAttribute.md) method to Document API.
+- Added the [ApiCustomXmlPart/GetClassType](../usage-api/document-api/ApiCustomXmlPart/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCustomXmlPart/GetId](../usage-api/document-api/ApiCustomXmlPart/Methods/GetId.md) method to Document API.
+- Added the [ApiCustomXmlPart/GetNodes](../usage-api/document-api/ApiCustomXmlPart/Methods/GetNodes.md) method to Document API.
+- Added the [ApiCustomXmlPart/GetXml](../usage-api/document-api/ApiCustomXmlPart/Methods/GetXml.md) method to Document API.
+- Added the [ApiCustomXmlPart/InsertAttribute](../usage-api/document-api/ApiCustomXmlPart/Methods/InsertAttribute.md) method to Document API.
+- Added the [ApiCustomXmlPart/InsertElement](../usage-api/document-api/ApiCustomXmlPart/Methods/InsertElement.md) method to Document API.
+- Added the [ApiCustomXmlPart/UpdateAttribute](../usage-api/document-api/ApiCustomXmlPart/Methods/UpdateAttribute.md) method to Document API.
+- Added the [ApiCustomXmlPart/UpdateElement](../usage-api/document-api/ApiCustomXmlPart/Methods/UpdateElement.md) method to Document API.
+- Added the [ApiCustomXmlParts](../usage-api/document-api/ApiCustomXmlParts/ApiCustomXmlParts.md) class to Document API.
+- Added the [ApiCustomXmlParts/Add](../usage-api/document-api/ApiCustomXmlParts/Methods/Add.md) method to Document API.
+- Added the [ApiCustomXmlParts/GetAll](../usage-api/document-api/ApiCustomXmlParts/Methods/GetAll.md) method to Document API.
+- Added the [ApiCustomXmlParts/GetById](../usage-api/document-api/ApiCustomXmlParts/Methods/GetById.md) method to Document API.
+- Added the [ApiCustomXmlParts/GetByNamespace](../usage-api/document-api/ApiCustomXmlParts/Methods/GetByNamespace.md) method to Document API.
+- Added the [ApiCustomXmlParts/GetClassType](../usage-api/document-api/ApiCustomXmlParts/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCustomXmlParts/GetCount](../usage-api/document-api/ApiCustomXmlParts/Methods/GetCount.md) method to Document API.
+- Added the [ApiDocument/GetCustomXmlParts](../usage-api/document-api/ApiDocument/Methods/GetCustomXmlParts.md) method to Document API.
+- Added the [CustomXmlNodeAttribute](../usage-api/document-api/Enumeration/CustomXmlNodeAttribute.md) type to the simple type definitions.
+- Added the [XmlMapping](../usage-api/document-api/Enumeration/XmlMapping.md) type to the simple type definitions.
 
 ### Form methods
 
-- Added the [ApiCheckBoxForm/GetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetChoiceName.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetChoiceName](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChoiceName.md) method to Document API.
-- Added the [ApiComplexForm/Add](../usage-api/text-document-api/ApiComplexForm/Methods/Add.md) method to Document API.
-- Added the [ApiComplexForm/ClearContent](../usage-api/text-document-api/ApiComplexForm/Methods/ClearContent.md) method to Document API.
-- Added the [ApiComplexForm/GetSubForms](../usage-api/text-document-api/ApiComplexForm/Methods/GetSubForms.md) method to Document API.
-- Added the [ApiDateForm/GetDate](../usage-api/text-document-api/ApiDateForm/Methods/GetDate.md) method to Document API.
-- Added the [ApiDateForm/SetDate](../usage-api/text-document-api/ApiDateForm/Methods/SetDate.md) method to Document API.
-- Added the [ApiDocument/GetFormsByKey](../usage-api/text-document-api/ApiDocument/Methods/GetFormsByKey.md) method to Document API.
-- Added the [ApiDocument/GetFormsByRole](../usage-api/text-document-api/ApiDocument/Methods/GetFormsByRole.md) method to Document API.
-- Added the [ApiDocument/GetFormKeysByRole](../usage-api/text-document-api/ApiDocument/Methods/GetFormKeysByRole.md) method to Document API.
-- Added the [ApiDocument/GetFormValueByKey](../usage-api/text-document-api/ApiDocument/Methods/GetFormValueByKey.md) method to Document API.
-- Added the [ApiFormBase/GetRole](../usage-api/text-document-api/ApiFormBase/Methods/GetRole.md) method to Document API.
-- Added the [ApiFormBase/GetTag](../usage-api/text-document-api/ApiFormBase/Methods/GetTag.md) method to Document API.
-- Added the [ApiFormBase/SetRole](../usage-api/text-document-api/ApiFormBase/Methods/SetRole.md) method to Document API.
-- Added the [ApiFormBase/SetTag](../usage-api/text-document-api/ApiFormBase/Methods/SetTag.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetChoiceName](../usage-api/document-api/ApiCheckBoxForm/Methods/GetChoiceName.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetChoiceName](../usage-api/document-api/ApiCheckBoxForm/Methods/SetChoiceName.md) method to Document API.
+- Added the [ApiComplexForm/Add](../usage-api/document-api/ApiComplexForm/Methods/Add.md) method to Document API.
+- Added the [ApiComplexForm/ClearContent](../usage-api/document-api/ApiComplexForm/Methods/ClearContent.md) method to Document API.
+- Added the [ApiComplexForm/GetSubForms](../usage-api/document-api/ApiComplexForm/Methods/GetSubForms.md) method to Document API.
+- Added the [ApiDateForm/GetDate](../usage-api/document-api/ApiDateForm/Methods/GetDate.md) method to Document API.
+- Added the [ApiDateForm/SetDate](../usage-api/document-api/ApiDateForm/Methods/SetDate.md) method to Document API.
+- Added the [ApiDocument/GetFormsByKey](../usage-api/document-api/ApiDocument/Methods/GetFormsByKey.md) method to Document API.
+- Added the [ApiDocument/GetFormsByRole](../usage-api/document-api/ApiDocument/Methods/GetFormsByRole.md) method to Document API.
+- Added the [ApiDocument/GetFormKeysByRole](../usage-api/document-api/ApiDocument/Methods/GetFormKeysByRole.md) method to Document API.
+- Added the [ApiDocument/GetFormValueByKey](../usage-api/document-api/ApiDocument/Methods/GetFormValueByKey.md) method to Document API.
+- Added the [ApiFormBase/GetRole](../usage-api/document-api/ApiFormBase/Methods/GetRole.md) method to Document API.
+- Added the [ApiFormBase/GetTag](../usage-api/document-api/ApiFormBase/Methods/GetTag.md) method to Document API.
+- Added the [ApiFormBase/SetRole](../usage-api/document-api/ApiFormBase/Methods/SetRole.md) method to Document API.
+- Added the [ApiFormBase/SetTag](../usage-api/document-api/ApiFormBase/Methods/SetTag.md) method to Document API.
 - Added the [Api/CreateComplexForm](../usage-api/form-api/Api/Methods/CreateComplexForm.md) method to Form API.
 - Added the [ApiDocument/GetFormRoles](../usage-api/form-api/ApiDocument/Methods/GetFormRoles.md) method to Form API.
 - Added the [ApiFormRoles](../usage-api/form-api/ApiFormRoles/ApiFormRoles.md) class to Form API.
@@ -2010,11 +2010,11 @@ The list of changes for Office JavaScript API.
 
 ### Custom properties methods
 
-- Added the [ApiCustomProperties](../usage-api/text-document-api/ApiCustomProperties/ApiCustomProperties.md) class to Document API.
-- Added the [ApiDocument/GetCustomProperties](../usage-api/text-document-api/ApiDocument/Methods/GetCustomProperties.md) method to Document API.
-- Added the [ApiCustomProperties/Add](../usage-api/text-document-api/ApiCustomProperties/Methods/Add.md) method to Document API.
-- Added the [ApiCustomProperties/GetClassType](../usage-api/text-document-api/ApiCustomProperties/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCustomProperties/Get](../usage-api/text-document-api/ApiCustomProperties/Methods/Get.md) method to Document API.
+- Added the [ApiCustomProperties](../usage-api/document-api/ApiCustomProperties/ApiCustomProperties.md) class to Document API.
+- Added the [ApiDocument/GetCustomProperties](../usage-api/document-api/ApiDocument/Methods/GetCustomProperties.md) method to Document API.
+- Added the [ApiCustomProperties/Add](../usage-api/document-api/ApiCustomProperties/Methods/Add.md) method to Document API.
+- Added the [ApiCustomProperties/GetClassType](../usage-api/document-api/ApiCustomProperties/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCustomProperties/Get](../usage-api/document-api/ApiCustomProperties/Methods/Get.md) method to Document API.
 - Added the [Api/GetCustomProperties](../usage-api/spreadsheet-api/Api/Methods/GetCustomProperties.md) method to Spreadsheet API.
 - Added the [ApiCustomProperties](../usage-api/spreadsheet-api/ApiCustomProperties/ApiCustomProperties.md) class to Spreadsheet API.
 - Added the [ApiCustomProperties/Add](../usage-api/spreadsheet-api/ApiCustomProperties/Methods/Add.md) method to Spreadsheet API.
@@ -2028,39 +2028,39 @@ The list of changes for Office JavaScript API.
 
 ### Core methods
 
-- Added the [ApiCore](../usage-api/text-document-api/ApiCore/ApiCore.md) class to Document API.
-- Added the [ApiCore/GetCategory](../usage-api/text-document-api/ApiCore/Methods/GetCategory.md) method to Document API.
-- Added the [ApiCore/GetClassType](../usage-api/text-document-api/ApiCore/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCore/GetContentStatus](../usage-api/text-document-api/ApiCore/Methods/GetContentStatus.md) method to Document API.
-- Added the [ApiCore/GetCreated](../usage-api/text-document-api/ApiCore/Methods/GetCreated.md) method to Document API.
-- Added the [ApiCore/GetCreator](../usage-api/text-document-api/ApiCore/Methods/GetCreator.md) method to Document API.
-- Added the [ApiCore/GetDescription](../usage-api/text-document-api/ApiCore/Methods/GetDescription.md) method to Document API.
-- Added the [ApiCore/GetIdentifier](../usage-api/text-document-api/ApiCore/Methods/GetIdentifier.md) method to Document API.
-- Added the [ApiCore/GetKeywords](../usage-api/text-document-api/ApiCore/Methods/GetKeywords.md) method to Document API.
-- Added the [ApiCore/GetLanguage](../usage-api/text-document-api/ApiCore/Methods/GetLanguage.md) method to Document API.
-- Added the [ApiCore/GetLastModifiedBy](../usage-api/text-document-api/ApiCore/Methods/GetLastModifiedBy.md) method to Document API.
-- Added the [ApiCore/GetLastPrinted](../usage-api/text-document-api/ApiCore/Methods/GetLastPrinted.md) method to Document API.
-- Added the [ApiCore/GetModified](../usage-api/text-document-api/ApiCore/Methods/GetModified.md) method to Document API.
-- Added the [ApiCore/GetRevision](../usage-api/text-document-api/ApiCore/Methods/GetRevision.md) method to Document API.
-- Added the [ApiCore/GetSubject](../usage-api/text-document-api/ApiCore/Methods/GetSubject.md) method to Document API.
-- Added the [ApiCore/GetTitle](../usage-api/text-document-api/ApiCore/Methods/GetTitle.md) method to Document API.
-- Added the [ApiCore/GetVersion](../usage-api/text-document-api/ApiCore/Methods/GetVersion.md) method to Document API.
-- Added the [ApiCore/SetCategory](../usage-api/text-document-api/ApiCore/Methods/SetCategory.md) method to Document API.
-- Added the [ApiCore/SetContentStatus](../usage-api/text-document-api/ApiCore/Methods/SetContentStatus.md) method to Document API.
-- Added the [ApiCore/SetCreated](../usage-api/text-document-api/ApiCore/Methods/SetCreated.md) method to Document API.
-- Added the [ApiCore/SetCreator](../usage-api/text-document-api/ApiCore/Methods/SetCreator.md) method to Document API.
-- Added the [ApiCore/SetDescription](../usage-api/text-document-api/ApiCore/Methods/SetDescription.md) method to Document API.
-- Added the [ApiCore/SetIdentifier](../usage-api/text-document-api/ApiCore/Methods/SetIdentifier.md) method to Document API.
-- Added the [ApiCore/SetKeywords](../usage-api/text-document-api/ApiCore/Methods/SetKeywords.md) method to Document API.
-- Added the [ApiCore/SetLanguage](../usage-api/text-document-api/ApiCore/Methods/SetLanguage.md) method to Document API.
-- Added the [ApiCore/SetLastModifiedBy](../usage-api/text-document-api/ApiCore/Methods/SetLastModifiedBy.md) method to Document API.
-- Added the [ApiCore/SetLastPrinted](../usage-api/text-document-api/ApiCore/Methods/SetLastPrinted.md) method to Document API.
-- Added the [ApiCore/SetModified](../usage-api/text-document-api/ApiCore/Methods/SetModified.md) method to Document API.
-- Added the [ApiCore/SetRevision](../usage-api/text-document-api/ApiCore/Methods/SetRevision.md) method to Document API.
-- Added the [ApiCore/SetSubject](../usage-api/text-document-api/ApiCore/Methods/SetSubject.md) method to Document API.
-- Added the [ApiCore/SetTitle](../usage-api/text-document-api/ApiCore/Methods/SetTitle.md) method to Document API.
-- Added the [ApiCore/SetVersion](../usage-api/text-document-api/ApiCore/Methods/SetVersion.md) method to Document API.
-- Added the [ApiDocument/GetCore](../usage-api/text-document-api/ApiDocument/Methods/GetCore.md) method to Document API.
+- Added the [ApiCore](../usage-api/document-api/ApiCore/ApiCore.md) class to Document API.
+- Added the [ApiCore/GetCategory](../usage-api/document-api/ApiCore/Methods/GetCategory.md) method to Document API.
+- Added the [ApiCore/GetClassType](../usage-api/document-api/ApiCore/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCore/GetContentStatus](../usage-api/document-api/ApiCore/Methods/GetContentStatus.md) method to Document API.
+- Added the [ApiCore/GetCreated](../usage-api/document-api/ApiCore/Methods/GetCreated.md) method to Document API.
+- Added the [ApiCore/GetCreator](../usage-api/document-api/ApiCore/Methods/GetCreator.md) method to Document API.
+- Added the [ApiCore/GetDescription](../usage-api/document-api/ApiCore/Methods/GetDescription.md) method to Document API.
+- Added the [ApiCore/GetIdentifier](../usage-api/document-api/ApiCore/Methods/GetIdentifier.md) method to Document API.
+- Added the [ApiCore/GetKeywords](../usage-api/document-api/ApiCore/Methods/GetKeywords.md) method to Document API.
+- Added the [ApiCore/GetLanguage](../usage-api/document-api/ApiCore/Methods/GetLanguage.md) method to Document API.
+- Added the [ApiCore/GetLastModifiedBy](../usage-api/document-api/ApiCore/Methods/GetLastModifiedBy.md) method to Document API.
+- Added the [ApiCore/GetLastPrinted](../usage-api/document-api/ApiCore/Methods/GetLastPrinted.md) method to Document API.
+- Added the [ApiCore/GetModified](../usage-api/document-api/ApiCore/Methods/GetModified.md) method to Document API.
+- Added the [ApiCore/GetRevision](../usage-api/document-api/ApiCore/Methods/GetRevision.md) method to Document API.
+- Added the [ApiCore/GetSubject](../usage-api/document-api/ApiCore/Methods/GetSubject.md) method to Document API.
+- Added the [ApiCore/GetTitle](../usage-api/document-api/ApiCore/Methods/GetTitle.md) method to Document API.
+- Added the [ApiCore/GetVersion](../usage-api/document-api/ApiCore/Methods/GetVersion.md) method to Document API.
+- Added the [ApiCore/SetCategory](../usage-api/document-api/ApiCore/Methods/SetCategory.md) method to Document API.
+- Added the [ApiCore/SetContentStatus](../usage-api/document-api/ApiCore/Methods/SetContentStatus.md) method to Document API.
+- Added the [ApiCore/SetCreated](../usage-api/document-api/ApiCore/Methods/SetCreated.md) method to Document API.
+- Added the [ApiCore/SetCreator](../usage-api/document-api/ApiCore/Methods/SetCreator.md) method to Document API.
+- Added the [ApiCore/SetDescription](../usage-api/document-api/ApiCore/Methods/SetDescription.md) method to Document API.
+- Added the [ApiCore/SetIdentifier](../usage-api/document-api/ApiCore/Methods/SetIdentifier.md) method to Document API.
+- Added the [ApiCore/SetKeywords](../usage-api/document-api/ApiCore/Methods/SetKeywords.md) method to Document API.
+- Added the [ApiCore/SetLanguage](../usage-api/document-api/ApiCore/Methods/SetLanguage.md) method to Document API.
+- Added the [ApiCore/SetLastModifiedBy](../usage-api/document-api/ApiCore/Methods/SetLastModifiedBy.md) method to Document API.
+- Added the [ApiCore/SetLastPrinted](../usage-api/document-api/ApiCore/Methods/SetLastPrinted.md) method to Document API.
+- Added the [ApiCore/SetModified](../usage-api/document-api/ApiCore/Methods/SetModified.md) method to Document API.
+- Added the [ApiCore/SetRevision](../usage-api/document-api/ApiCore/Methods/SetRevision.md) method to Document API.
+- Added the [ApiCore/SetSubject](../usage-api/document-api/ApiCore/Methods/SetSubject.md) method to Document API.
+- Added the [ApiCore/SetTitle](../usage-api/document-api/ApiCore/Methods/SetTitle.md) method to Document API.
+- Added the [ApiCore/SetVersion](../usage-api/document-api/ApiCore/Methods/SetVersion.md) method to Document API.
+- Added the [ApiDocument/GetCore](../usage-api/document-api/ApiDocument/Methods/GetCore.md) method to Document API.
 - Added the [Api/GetCore](../usage-api/spreadsheet-api/Api/Methods/GetCore.md) method to Spreadsheet API.
 - Added the [ApiCore](../usage-api/spreadsheet-api/ApiCore/ApiCore.md) class to Spreadsheet API.
 - Added the [ApiCore/GetCategory](../usage-api/spreadsheet-api/ApiCore/Methods/GetCategory.md) method to Spreadsheet API.
@@ -2130,28 +2130,28 @@ The list of changes for Office JavaScript API.
 
 ### Range methods
 
-- Added the [ApiRange/AddField](../usage-api/text-document-api/ApiRange/Methods/AddField.md) method to Document API.
-- Added the [ApiRange/MoveCursorToPos](../usage-api/text-document-api/ApiRange/Methods/MoveCursorToPos.md) method to Document API.
+- Added the [ApiRange/AddField](../usage-api/document-api/ApiRange/Methods/AddField.md) method to Document API.
+- Added the [ApiRange/MoveCursorToPos](../usage-api/document-api/ApiRange/Methods/MoveCursorToPos.md) method to Document API.
 - Added the [ApiRange/GetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/GetFormulaArray.md) method to Spreadsheet API.
 - Added the [ApiRange/SetFormulaArray](../usage-api/spreadsheet-api/ApiRange/Methods/SetFormulaArray.md) method to Spreadsheet API.
 
 ### Document methods
 
-- Added the [ApiDocument/GetInternalId](../usage-api/text-document-api/ApiDocument/Methods/GetInternalId.md) method to Document API.
-- Added the [ApiDocument/InsertBlankPage](../usage-api/text-document-api/ApiDocument/Methods/InsertBlankPage.md) method to Document API.
-- Added the [ApiDocument/MoveCursorToEnd](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToEnd.md) method to Document API.
-- Added the [ApiDocument/MoveCursorToStart](../usage-api/text-document-api/ApiDocument/Methods/MoveCursorToStart.md) method to Document API.
-- Added the [ApiDocument/SetAssistantTrackRevisions](../usage-api/text-document-api/ApiDocument/Methods/SetAssistantTrackRevisions.md) method to Document API.
-- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to Document API.
-- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to Document API.
-- Added the [ApiDocumentContent/GetInternalId](../usage-api/text-document-api/ApiDocumentContent/Methods/GetInternalId.md) method to Document API.
+- Added the [ApiDocument/GetInternalId](../usage-api/document-api/ApiDocument/Methods/GetInternalId.md) method to Document API.
+- Added the [ApiDocument/InsertBlankPage](../usage-api/document-api/ApiDocument/Methods/InsertBlankPage.md) method to Document API.
+- Added the [ApiDocument/MoveCursorToEnd](../usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md) method to Document API.
+- Added the [ApiDocument/MoveCursorToStart](../usage-api/document-api/ApiDocument/Methods/MoveCursorToStart.md) method to Document API.
+- Added the [ApiDocument/SetAssistantTrackRevisions](../usage-api/document-api/ApiDocument/Methods/SetAssistantTrackRevisions.md) method to Document API.
+- Added the [ApiDocumentContent/GetCurrentParagraph](../usage-api/document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md) method to Document API.
+- Added the [ApiDocumentContent/GetCurrentRun](../usage-api/document-api/ApiDocumentContent/Methods/GetCurrentRun.md) method to Document API.
+- Added the [ApiDocumentContent/GetInternalId](../usage-api/document-api/ApiDocumentContent/Methods/GetInternalId.md) method to Document API.
 - Added the [ApiDocumentContent/GetInternalId](../usage-api/spreadsheet-api/ApiDocumentContent/Methods/GetInternalId.md) method to Spreadsheet API.
 - Added the [ApiDocumentContent/GetInternalId](../usage-api/presentation-api/ApiDocumentContent/Methods/GetInternalId.md) method to Presentation API.
 
 ### Drawing methods
 
-- Added the [ApiDrawing/GetRotation](../usage-api/text-document-api/ApiDrawing/Methods/GetRotation.md) method to Document API.
-- Added the [ApiDrawing/SetRotation](../usage-api/text-document-api/ApiDrawing/Methods/SetRotation.md) method to Document API.
+- Added the [ApiDrawing/GetRotation](../usage-api/document-api/ApiDrawing/Methods/GetRotation.md) method to Document API.
+- Added the [ApiDrawing/SetRotation](../usage-api/document-api/ApiDrawing/Methods/SetRotation.md) method to Document API.
 - Added the [ApiDrawing/GetRotation](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetRotation.md) method to Spreadsheet API.
 - Added the [ApiDrawing/SetRotation](../usage-api/spreadsheet-api/ApiDrawing/Methods/SetRotation.md) method to Spreadsheet API.
 - Added the [ApiDrawing/GetRotation](../usage-api/presentation-api/ApiDrawing/Methods/GetRotation.md) method to Presentation API.
@@ -2159,7 +2159,7 @@ The list of changes for Office JavaScript API.
 
 ### Comment methods
 
-- Added the [ApiDocument/ShowComment](../usage-api/text-document-api/ApiDocument/Methods/ShowComment.md) method to Document API.
+- Added the [ApiDocument/ShowComment](../usage-api/document-api/ApiDocument/Methods/ShowComment.md) method to Document API.
 - Added the [ApiComment/GetPosition](../usage-api/presentation-api/ApiComment/Methods/GetPosition.md) method to Presentation API.
 - Added the [ApiComment/SetPosition](../usage-api/presentation-api/ApiComment/Methods/SetPosition.md) method to Presentation API.
 - Added the *posX* and *posY* parameters to the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method of Presentation API.
@@ -2192,37 +2192,37 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [Api/GetByInternalId](../usage-api/text-document-api/Api/Methods/GetByInternalId.md) method to Document API.
-- Added the [ApiRun/GetParentParagraph](../usage-api/text-document-api/ApiRun/Methods/GetParentParagraph.md) method to Document API.
-- Added the [ApiTablePr/SetTableBorderAll](../usage-api/text-document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Document API.
-- Added the *fontSlot* parameter to the [ApiTextPr/GetFontFamily](../usage-api/text-document-api/ApiTextPr/Methods/GetFontFamily.md) method of Document API.
+- Added the [Api/GetByInternalId](../usage-api/document-api/Api/Methods/GetByInternalId.md) method to Document API.
+- Added the [ApiRun/GetParentParagraph](../usage-api/document-api/ApiRun/Methods/GetParentParagraph.md) method to Document API.
+- Added the [ApiTablePr/SetTableBorderAll](../usage-api/document-api/ApiTablePr/Methods/SetTableBorderAll.md) method to Document API.
+- Added the *fontSlot* parameter to the [ApiTextPr/GetFontFamily](../usage-api/document-api/ApiTextPr/Methods/GetFontFamily.md) method of Document API.
 - Added the [ApiParagraph/Select](../usage-api/presentation-api/ApiParagraph/Methods/Select.md) method to Presentation API.
 - Added the [ApiSlide/AddComment](../usage-api/presentation-api/ApiSlide/Methods/AddComment.md) method to Presentation API.
-- Added the [Base64Img](../usage-api/text-document-api/Enumeration/Base64Img.md) type to the simple type definitions.
+- Added the [Base64Img](../usage-api/document-api/Enumeration/Base64Img.md) type to the simple type definitions.
 
 
 ## Version 8.3
 
 ### Bookmark methods
 
-- Added the [ApiBookmark](../usage-api/text-document-api/ApiBookmark/ApiBookmark.md) class to Document API.
-- Added the [ApiBookmark/Delete](../usage-api/text-document-api/ApiBookmark/Methods/Delete.md) method to Document API.
-- Added the [ApiBookmark/GetName](../usage-api/text-document-api/ApiBookmark/Methods/GetName.md) method to Document API.
-- Added the [ApiBookmark/GetRange](../usage-api/text-document-api/ApiBookmark/Methods/GetRange.md) method to Document API.
-- Added the [ApiBookmark/GetText](../usage-api/text-document-api/ApiBookmark/Methods/GetText.md) method to Document API.
-- Added the [ApiBookmark/GoTo](../usage-api/text-document-api/ApiBookmark/Methods/GoTo.md) method to Document API.
-- Added the [ApiBookmark/Select](../usage-api/text-document-api/ApiBookmark/Methods/Select.md) method to Document API.
-- Added the [ApiBookmark/SetName](../usage-api/text-document-api/ApiBookmark/Methods/SetName.md) method to Document API.
-- Added the [ApiBookmark/SetText](../usage-api/text-document-api/ApiBookmark/Methods/SetText.md) method to Document API.
-- Added the [ApiDocument/GetBookmark](../usage-api/text-document-api/ApiDocument/Methods/GetBookmark.md) method to Document API.
+- Added the [ApiBookmark](../usage-api/document-api/ApiBookmark/ApiBookmark.md) class to Document API.
+- Added the [ApiBookmark/Delete](../usage-api/document-api/ApiBookmark/Methods/Delete.md) method to Document API.
+- Added the [ApiBookmark/GetName](../usage-api/document-api/ApiBookmark/Methods/GetName.md) method to Document API.
+- Added the [ApiBookmark/GetRange](../usage-api/document-api/ApiBookmark/Methods/GetRange.md) method to Document API.
+- Added the [ApiBookmark/GetText](../usage-api/document-api/ApiBookmark/Methods/GetText.md) method to Document API.
+- Added the [ApiBookmark/GoTo](../usage-api/document-api/ApiBookmark/Methods/GoTo.md) method to Document API.
+- Added the [ApiBookmark/Select](../usage-api/document-api/ApiBookmark/Methods/Select.md) method to Document API.
+- Added the [ApiBookmark/SetName](../usage-api/document-api/ApiBookmark/Methods/SetName.md) method to Document API.
+- Added the [ApiBookmark/SetText](../usage-api/document-api/ApiBookmark/Methods/SetText.md) method to Document API.
+- Added the [ApiDocument/GetBookmark](../usage-api/document-api/ApiDocument/Methods/GetBookmark.md) method to Document API.
 
 ### Group methods
 
-- Added the [Api/CreateGroup](../usage-api/text-document-api/Api/Methods/CreateGroup.md) method to Document API.
-- Added the [ApiDocument/GroupDrawings](../usage-api/text-document-api/ApiDocument/Methods/GroupDrawings.md) method to Document API.
-- Added the [ApiGroup](../usage-api/text-document-api/ApiGroup/ApiGroup.md) class to Document API.
-- Added the [ApiGroup/GetClassType](../usage-api/text-document-api/ApiGroup/Methods/GetClassType.md) method to Document API.
-- Added the [ApiGroup/Ungroup](../usage-api/text-document-api/ApiGroup/Methods/Ungroup.md) method to Document API.
+- Added the [Api/CreateGroup](../usage-api/document-api/Api/Methods/CreateGroup.md) method to Document API.
+- Added the [ApiDocument/GroupDrawings](../usage-api/document-api/ApiDocument/Methods/GroupDrawings.md) method to Document API.
+- Added the [ApiGroup](../usage-api/document-api/ApiGroup/ApiGroup.md) class to Document API.
+- Added the [ApiGroup/GetClassType](../usage-api/document-api/ApiGroup/Methods/GetClassType.md) method to Document API.
+- Added the [ApiGroup/Ungroup](../usage-api/document-api/ApiGroup/Methods/Ungroup.md) method to Document API.
 - Added the [ApiDrawing/GetParentSheet](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetParentSheet.md) method to Spreadsheet API.
 - Added the [Api/CreateGroup](../usage-api/presentation-api/Api/Methods/CreateGroup.md) method to Presentation API.
 - Added the [ApiGroup](../usage-api/presentation-api/ApiGroup/ApiGroup.md) class to Presentation API.
@@ -2230,25 +2230,25 @@ The list of changes for Office JavaScript API.
 - Added the [ApiLayout/GroupDrawings](../usage-api/presentation-api/ApiLayout/Methods/GroupDrawings.md) method to Presentation API.
 - Added the [ApiMaster/GroupDrawings](../usage-api/presentation-api/ApiMaster/Methods/GroupDrawings.md) method to Presentation API.
 - Added the [ApiSlide/GroupDrawings](../usage-api/presentation-api/ApiSlide/Methods/GroupDrawings.md) method to Presentation API.
-- Added the [Drawing](../usage-api/text-document-api/Enumeration/Drawing.md) type to the simple type definitions.
-- Added the [DrawingForGroup](../usage-api/text-document-api/Enumeration/DrawingForGroup.md) type to the simple type definitions.
+- Added the [Drawing](../usage-api/document-api/Enumeration/Drawing.md) type to the simple type definitions.
+- Added the [DrawingForGroup](../usage-api/document-api/Enumeration/DrawingForGroup.md) type to the simple type definitions.
 
 ### Content control methods
 
-- Added the [ApiBlockLvlSdt/Copy](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetInternalId](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetInternalId.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetInternalId](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetInternalId.md) method to Document API.
+- Added the [ApiBlockLvlSdt/Copy](../usage-api/document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetInternalId](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetInternalId.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetInternalId](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetInternalId.md) method to Document API.
 
 ### Document methods
 
-- Added the [ApiDocument/GetCurrentPage](../usage-api/text-document-api/ApiDocument/Methods/GetCurrentPage.md) method to Document API.
-- Added the [ApiDocument/GetCurrentVisiblePages](../usage-api/text-document-api/ApiDocument/Methods/GetCurrentVisiblePages.md) method to Document API.
-- Added the [ApiDocumentContent/GetText](../usage-api/text-document-api/ApiDocumentContent/Methods/GetText.md) method to Document API.
+- Added the [ApiDocument/GetCurrentPage](../usage-api/document-api/ApiDocument/Methods/GetCurrentPage.md) method to Document API.
+- Added the [ApiDocument/GetCurrentVisiblePages](../usage-api/document-api/ApiDocument/Methods/GetCurrentVisiblePages.md) method to Document API.
+- Added the [ApiDocumentContent/GetText](../usage-api/document-api/ApiDocumentContent/Methods/GetText.md) method to Document API.
 
 ### Section methods
 
-- Added the [ApiSection/GetStartPageNumber](../usage-api/text-document-api/ApiSection/Methods/GetStartPageNumber.md) method to Document API.
-- Added the [ApiSection/SetStartPageNumber](../usage-api/text-document-api/ApiSection/Methods/SetStartPageNumber.md) method to Document API.
+- Added the [ApiSection/GetStartPageNumber](../usage-api/document-api/ApiSection/Methods/GetStartPageNumber.md) method to Document API.
+- Added the [ApiSection/SetStartPageNumber](../usage-api/document-api/ApiSection/Methods/SetStartPageNumber.md) method to Document API.
 
 ### Autofilter methods
 
@@ -2274,8 +2274,8 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [ApiNumberingLevel/LinkWithStyle](../usage-api/text-document-api/ApiNumberingLevel/Methods/LinkWithStyle.md) method to Document API.
-- Moved the [GetContent](../usage-api/text-document-api/ApiDrawing/Methods/GetContent.md) method of Document API from the *ApiShape* class to the *ApiDrawing* class.
+- Added the [ApiNumberingLevel/LinkWithStyle](../usage-api/document-api/ApiNumberingLevel/Methods/LinkWithStyle.md) method to Document API.
+- Moved the [GetContent](../usage-api/document-api/ApiDrawing/Methods/GetContent.md) method of Document API from the *ApiShape* class to the *ApiDrawing* class.
 - Added the [ApiLayout/GetName](../usage-api/presentation-api/ApiLayout/Methods/GetName.md) method to Presentation API.
 - Added the *keepPosition* parameter to the [ApiFormBase/ToFixed](../usage-api/form-api/ApiFormBase/Methods/ToFixed.md) method of Form API.
 - Added the [PivotTableFieldOptions](../usage-api/spreadsheet-api/Enumeration/PivotTableFieldOptions.md) type to the simple type definitions.
@@ -2285,24 +2285,24 @@ The list of changes for Office JavaScript API.
 
 ### Range methods
 
-- Added the [ApiRange/GetEndPage](../usage-api/text-document-api/ApiRange/Methods/GetEndPage.md) method to Document API.
-- Added the [ApiRange/GetStartPage](../usage-api/text-document-api/ApiRange/Methods/GetStartPage.md) method to Document API.
-- Added the [ApiRange/GetEndPos](../usage-api/text-document-api/ApiRange/Methods/GetEndPos.md) method to Document API.
-- Added the [ApiRange/GetStartPos](../usage-api/text-document-api/ApiRange/Methods/GetStartPos.md) method to Document API.
-- Added the [ApiRange/GetTextPr](../usage-api/text-document-api/ApiRange/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiRange/SetEndPos](../usage-api/text-document-api/ApiRange/Methods/SetEndPos.md) method to Document API.
-- Added the [ApiRange/SetStartPos](../usage-api/text-document-api/ApiRange/Methods/SetStartPos.md) method to Document API.
+- Added the [ApiRange/GetEndPage](../usage-api/document-api/ApiRange/Methods/GetEndPage.md) method to Document API.
+- Added the [ApiRange/GetStartPage](../usage-api/document-api/ApiRange/Methods/GetStartPage.md) method to Document API.
+- Added the [ApiRange/GetEndPos](../usage-api/document-api/ApiRange/Methods/GetEndPos.md) method to Document API.
+- Added the [ApiRange/GetStartPos](../usage-api/document-api/ApiRange/Methods/GetStartPos.md) method to Document API.
+- Added the [ApiRange/GetTextPr](../usage-api/document-api/ApiRange/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiRange/SetEndPos](../usage-api/document-api/ApiRange/Methods/SetEndPos.md) method to Document API.
+- Added the [ApiRange/SetStartPos](../usage-api/document-api/ApiRange/Methods/SetStartPos.md) method to Document API.
 
 ### Document methods
 
-- Added the [ApiDocument/AddComment](../usage-api/text-document-api/ApiDocument/Methods/AddComment.md) method to Document API.
-- Added the [ApiDocument/AddMathEquation](../usage-api/text-document-api/ApiDocument/Methods/AddMathEquation.md) method to Document API.
-- Added the [ApiDocument/GetCurrentSentence](../usage-api/text-document-api/ApiDocument/Methods/GetCurrentSentence.md) method to Document API.
-- Added the [ApiDocument/GetCurrentWord](../usage-api/text-document-api/ApiDocument/Methods/GetCurrentWord.md) method to Document API.
-- Added the [ApiDocument/ReplaceCurrentSentence](../usage-api/text-document-api/ApiDocument/Methods/ReplaceCurrentSentence.md) method to Document API.
-- Added the [ApiDocument/ReplaceCurrentWord](../usage-api/text-document-api/ApiDocument/Methods/ReplaceCurrentWord.md) method to Document API.
-- Added the [ApiDocument/SelectCurrentWord](../usage-api/text-document-api/ApiDocument/Methods/SelectCurrentWord.md) method to Document API.
-- Added the [ApiDocument/UpdateAllFields](../usage-api/text-document-api/ApiDocument/Methods/UpdateAllFields.md) method to Document API.
+- Added the [ApiDocument/AddComment](../usage-api/document-api/ApiDocument/Methods/AddComment.md) method to Document API.
+- Added the [ApiDocument/AddMathEquation](../usage-api/document-api/ApiDocument/Methods/AddMathEquation.md) method to Document API.
+- Added the [ApiDocument/GetCurrentSentence](../usage-api/document-api/ApiDocument/Methods/GetCurrentSentence.md) method to Document API.
+- Added the [ApiDocument/GetCurrentWord](../usage-api/document-api/ApiDocument/Methods/GetCurrentWord.md) method to Document API.
+- Added the [ApiDocument/ReplaceCurrentSentence](../usage-api/document-api/ApiDocument/Methods/ReplaceCurrentSentence.md) method to Document API.
+- Added the [ApiDocument/ReplaceCurrentWord](../usage-api/document-api/ApiDocument/Methods/ReplaceCurrentWord.md) method to Document API.
+- Added the [ApiDocument/SelectCurrentWord](../usage-api/document-api/ApiDocument/Methods/SelectCurrentWord.md) method to Document API.
+- Added the [ApiDocument/UpdateAllFields](../usage-api/document-api/ApiDocument/Methods/UpdateAllFields.md) method to Document API.
 
 ### Pivot tables methods
 
@@ -2512,11 +2512,11 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [ApiBlockLvlSdt/Copy](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Document API.
-- Added the [ApiParaPr/GetOutlineLvl](../usage-api/text-document-api/ApiParaPr/Methods/GetOutlineLvl.md) method to Document API.
-- Added the [ApiParaPr/SetOutlineLvl](../usage-api/text-document-api/ApiParaPr/Methods/SetOutlineLvl.md) method to Document API.
-- Added the [ApiRun/MoveCursorToPos](../usage-api/text-document-api/ApiRun/Methods/MoveCursorToPos.md) method to Document API.
-- Added the [ApiSection/GetType](../usage-api/text-document-api/ApiSection/Methods/GetType.md) method to Document API.
+- Added the [ApiBlockLvlSdt/Copy](../usage-api/document-api/ApiBlockLvlSdt/Methods/Copy.md) method to Document API.
+- Added the [ApiParaPr/GetOutlineLvl](../usage-api/document-api/ApiParaPr/Methods/GetOutlineLvl.md) method to Document API.
+- Added the [ApiParaPr/SetOutlineLvl](../usage-api/document-api/ApiParaPr/Methods/SetOutlineLvl.md) method to Document API.
+- Added the [ApiRun/MoveCursorToPos](../usage-api/document-api/ApiRun/Methods/MoveCursorToPos.md) method to Document API.
+- Added the [ApiSection/GetType](../usage-api/document-api/ApiSection/Methods/GetType.md) method to Document API.
 - Added the [Api/AddCustomFunctionLibrary](../usage-api/spreadsheet-api/Api/Methods/AddCustomFunctionLibrary.md) method to Spreadsheet API.
 - Added the [ApiParaPr/GetOutlineLvl](../usage-api/spreadsheet-api/ApiParaPr/Methods/GetOutlineLvl.md) method to Spreadsheet API.
 - Added the [ApiParaPr/SetOutlineLvl](../usage-api/spreadsheet-api/ApiParaPr/Methods/SetOutlineLvl.md) method to Spreadsheet API.
@@ -2524,7 +2524,7 @@ The list of changes for Office JavaScript API.
 - Added the [ApiParaPr/GetOutlineLvl](../usage-api/presentation-api/ApiParaPr/Methods/GetOutlineLvl.md) method to Presentation API.
 - Added the [ApiParaPr/SetOutlineLvl](../usage-api/presentation-api/ApiParaPr/Methods/SetOutlineLvl.md) method to Presentation API.
 - Added the *tag* property to the [FormPrBase](../usage-api/form-api/Enumeration/FormPrBase.md) object.
-- Added the *ReviewedElement* property to the [ReviewReportRecord](../usage-api/text-document-api/Enumeration/ReviewReportRecord.md) object.
+- Added the *ReviewedElement* property to the [ReviewReportRecord](../usage-api/document-api/Enumeration/ReviewReportRecord.md) object.
 - Added the [DeleteShiftDirection](../usage-api/spreadsheet-api/Enumeration/DeleteShiftDirection.md) type to the simple type definitions.
 - Added the [Drawing](../usage-api/presentation-api/Enumeration/Drawing.md) type to the simple type definitions.
 
@@ -2532,57 +2532,57 @@ The list of changes for Office JavaScript API.
 
 ### Date form methods
 
-- Added the [ApiDateForm](../usage-api/text-document-api/ApiDateForm/ApiDateForm.md) class to Document API.
+- Added the [ApiDateForm](../usage-api/document-api/ApiDateForm/ApiDateForm.md) class to Document API.
 - Added the [Api/CreateDateForm](../usage-api/form-api/Api/Methods/CreateDateForm.md) method to Form API.
-- Added the [ApiDateForm/Clear](../usage-api/text-document-api/ApiDateForm/Methods/Clear.md) method to Document API.
-- Added the [ApiDateForm/Copy](../usage-api/text-document-api/ApiDateForm/Methods/Copy.md) method to Document API.
-- Added the [ApiDateForm/GetClassType](../usage-api/text-document-api/ApiDateForm/Methods/GetClassType.md) method to Document API.
-- Added the [ApiDateForm/GetFormat](../usage-api/text-document-api/ApiDateForm/Methods/GetFormat.md) method to Document API.
-- Added the [ApiDateForm/GetFormKey](../usage-api/text-document-api/ApiDateForm/Methods/GetFormKey.md) method to Document API.
-- Added the [ApiDateForm/GetFormType](../usage-api/text-document-api/ApiDateForm/Methods/GetFormType.md) method to Document API.
-- Added the [ApiDateForm/GetLanguage](../usage-api/text-document-api/ApiDateForm/Methods/GetLanguage.md) method to Document API.
-- Added the [ApiDateForm/GetText](../usage-api/text-document-api/ApiDateForm/Methods/GetText.md) method to Document API.
-- Added the [ApiDateForm/GetTextPr](../usage-api/text-document-api/ApiDateForm/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiDateForm/GetTime](../usage-api/text-document-api/ApiDateForm/Methods/GetTime.md) method to Document API.
-- Added the [ApiDateForm/GetTipText](../usage-api/text-document-api/ApiDateForm/Methods/GetTipText.md) method to Document API.
-- Added the [ApiDateForm/GetWrapperShape](../usage-api/text-document-api/ApiDateForm/Methods/GetWrapperShape.md) method to Document API.
-- Added the [ApiDateForm/IsFixed](../usage-api/text-document-api/ApiDateForm/Methods/IsFixed.md) method to Document API.
-- Added the [ApiDateForm/IsRequired](../usage-api/text-document-api/ApiDateForm/Methods/IsRequired.md) method to Document API.
-- Added the [ApiDateForm/MoveCursorOutside](../usage-api/text-document-api/ApiDateForm/Methods/MoveCursorOutside.md) method to Document API.
-- Added the [ApiDateForm/SetBackgroundColor](../usage-api/text-document-api/ApiDateForm/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiDateForm/SetBorderColor](../usage-api/text-document-api/ApiDateForm/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiDateForm/SetFormat](../usage-api/text-document-api/ApiDateForm/Methods/SetFormat.md) method to Document API.
-- Added the [ApiDateForm/SetFormKey](../usage-api/text-document-api/ApiDateForm/Methods/SetFormKey.md) method to Document API.
-- Added the [ApiDateForm/SetLanguage](../usage-api/text-document-api/ApiDateForm/Methods/SetLanguage.md) method to Document API.
-- Added the [ApiDateForm/SetPlaceholderText](../usage-api/text-document-api/ApiDateForm/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiDateForm/SetRequired](../usage-api/text-document-api/ApiDateForm/Methods/SetRequired.md) method to Document API.
-- Added the [ApiDateForm/SetTextPr](../usage-api/text-document-api/ApiDateForm/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiDateForm/SetTime](../usage-api/text-document-api/ApiDateForm/Methods/SetTime.md) method to Document API.
-- Added the [ApiDateForm/SetTipText](../usage-api/text-document-api/ApiDateForm/Methods/SetTipText.md) method to Document API.
-- Added the [ApiDateForm/ToFixed](../usage-api/text-document-api/ApiDateForm/Methods/ToFixed.md) method to Document API.
-- Added the [ApiDateForm/ToInline](../usage-api/text-document-api/ApiDateForm/Methods/ToInline.md) method to Document API.
+- Added the [ApiDateForm/Clear](../usage-api/document-api/ApiDateForm/Methods/Clear.md) method to Document API.
+- Added the [ApiDateForm/Copy](../usage-api/document-api/ApiDateForm/Methods/Copy.md) method to Document API.
+- Added the [ApiDateForm/GetClassType](../usage-api/document-api/ApiDateForm/Methods/GetClassType.md) method to Document API.
+- Added the [ApiDateForm/GetFormat](../usage-api/document-api/ApiDateForm/Methods/GetFormat.md) method to Document API.
+- Added the [ApiDateForm/GetFormKey](../usage-api/document-api/ApiDateForm/Methods/GetFormKey.md) method to Document API.
+- Added the [ApiDateForm/GetFormType](../usage-api/document-api/ApiDateForm/Methods/GetFormType.md) method to Document API.
+- Added the [ApiDateForm/GetLanguage](../usage-api/document-api/ApiDateForm/Methods/GetLanguage.md) method to Document API.
+- Added the [ApiDateForm/GetText](../usage-api/document-api/ApiDateForm/Methods/GetText.md) method to Document API.
+- Added the [ApiDateForm/GetTextPr](../usage-api/document-api/ApiDateForm/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiDateForm/GetTime](../usage-api/document-api/ApiDateForm/Methods/GetTime.md) method to Document API.
+- Added the [ApiDateForm/GetTipText](../usage-api/document-api/ApiDateForm/Methods/GetTipText.md) method to Document API.
+- Added the [ApiDateForm/GetWrapperShape](../usage-api/document-api/ApiDateForm/Methods/GetWrapperShape.md) method to Document API.
+- Added the [ApiDateForm/IsFixed](../usage-api/document-api/ApiDateForm/Methods/IsFixed.md) method to Document API.
+- Added the [ApiDateForm/IsRequired](../usage-api/document-api/ApiDateForm/Methods/IsRequired.md) method to Document API.
+- Added the [ApiDateForm/MoveCursorOutside](../usage-api/document-api/ApiDateForm/Methods/MoveCursorOutside.md) method to Document API.
+- Added the [ApiDateForm/SetBackgroundColor](../usage-api/document-api/ApiDateForm/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiDateForm/SetBorderColor](../usage-api/document-api/ApiDateForm/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiDateForm/SetFormat](../usage-api/document-api/ApiDateForm/Methods/SetFormat.md) method to Document API.
+- Added the [ApiDateForm/SetFormKey](../usage-api/document-api/ApiDateForm/Methods/SetFormKey.md) method to Document API.
+- Added the [ApiDateForm/SetLanguage](../usage-api/document-api/ApiDateForm/Methods/SetLanguage.md) method to Document API.
+- Added the [ApiDateForm/SetPlaceholderText](../usage-api/document-api/ApiDateForm/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiDateForm/SetRequired](../usage-api/document-api/ApiDateForm/Methods/SetRequired.md) method to Document API.
+- Added the [ApiDateForm/SetTextPr](../usage-api/document-api/ApiDateForm/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiDateForm/SetTime](../usage-api/document-api/ApiDateForm/Methods/SetTime.md) method to Document API.
+- Added the [ApiDateForm/SetTipText](../usage-api/document-api/ApiDateForm/Methods/SetTipText.md) method to Document API.
+- Added the [ApiDateForm/ToFixed](../usage-api/document-api/ApiDateForm/Methods/ToFixed.md) method to Document API.
+- Added the [ApiDateForm/ToInline](../usage-api/document-api/ApiDateForm/Methods/ToInline.md) method to Document API.
 - Added the [DateFormPr](../usage-api/form-api/Enumeration/DateFormPr.md) type to the simple type definitions.
 - Added the [DateFormPrBase](../usage-api/form-api/Enumeration/DateFormPrBase.md) type to the simple type definitions.
 
 ### Methods for setting text properties
 
-- Added the [ApiTextPr/GetBold](../usage-api/text-document-api/ApiTextPr/Methods/GetBold.md) method to Document API.
-- Added the [ApiTextPr/GetCaps](../usage-api/text-document-api/ApiTextPr/Methods/GetCaps.md) method to Document API.
-- Added the [ApiTextPr/GetColor](../usage-api/text-document-api/ApiTextPr/Methods/GetColor.md) method to Document API.
-- Added the [ApiTextPr/GetDoubleStrikeout](../usage-api/text-document-api/ApiTextPr/Methods/GetDoubleStrikeout.md) method to Document API.
-- Added the [ApiTextPr/GetFontFamily](../usage-api/text-document-api/ApiTextPr/Methods/GetFontFamily.md) method to Document API.
-- Added the [ApiTextPr/GetFontSize](../usage-api/text-document-api/ApiTextPr/Methods/GetFontSize.md) method to Document API.
-- Added the [ApiTextPr/GetHighlight](../usage-api/text-document-api/ApiTextPr/Methods/GetHighlight.md) method to Document API.
-- Added the [ApiTextPr/GetItalic](../usage-api/text-document-api/ApiTextPr/Methods/GetItalic.md) method to Document API.
-- Added the [ApiTextPr/GetLanguage](../usage-api/text-document-api/ApiTextPr/Methods/GetLanguage.md) method to Document API.
-- Added the [ApiTextPr/GetPosition](../usage-api/text-document-api/ApiTextPr/Methods/GetPosition.md) method to Document API.
-- Added the [ApiTextPr/GetShd](../usage-api/text-document-api/ApiTextPr/Methods/GetShd.md) method to Document API.
-- Added the [ApiTextPr/GetSmallCaps](../usage-api/text-document-api/ApiTextPr/Methods/GetSmallCaps.md) method to Document API.
-- Added the [ApiTextPr/GetSpacing](../usage-api/text-document-api/ApiTextPr/Methods/GetSpacing.md) method to Document API.
-- Added the [ApiTextPr/GetStrikeout](../usage-api/text-document-api/ApiTextPr/Methods/GetStrikeout.md) method to Document API.
-- Added the [ApiTextPr/GetStyle](../usage-api/text-document-api/ApiTextPr/Methods/GetStyle.md) method to Document API.
-- Added the [ApiTextPr/GetUnderline](../usage-api/text-document-api/ApiTextPr/Methods/GetUnderline.md) method to Document API.
-- Added the [ApiTextPr/GetVertAlign](../usage-api/text-document-api/ApiTextPr/Methods/GetVertAlign.md) method to Document API.
+- Added the [ApiTextPr/GetBold](../usage-api/document-api/ApiTextPr/Methods/GetBold.md) method to Document API.
+- Added the [ApiTextPr/GetCaps](../usage-api/document-api/ApiTextPr/Methods/GetCaps.md) method to Document API.
+- Added the [ApiTextPr/GetColor](../usage-api/document-api/ApiTextPr/Methods/GetColor.md) method to Document API.
+- Added the [ApiTextPr/GetDoubleStrikeout](../usage-api/document-api/ApiTextPr/Methods/GetDoubleStrikeout.md) method to Document API.
+- Added the [ApiTextPr/GetFontFamily](../usage-api/document-api/ApiTextPr/Methods/GetFontFamily.md) method to Document API.
+- Added the [ApiTextPr/GetFontSize](../usage-api/document-api/ApiTextPr/Methods/GetFontSize.md) method to Document API.
+- Added the [ApiTextPr/GetHighlight](../usage-api/document-api/ApiTextPr/Methods/GetHighlight.md) method to Document API.
+- Added the [ApiTextPr/GetItalic](../usage-api/document-api/ApiTextPr/Methods/GetItalic.md) method to Document API.
+- Added the [ApiTextPr/GetLanguage](../usage-api/document-api/ApiTextPr/Methods/GetLanguage.md) method to Document API.
+- Added the [ApiTextPr/GetPosition](../usage-api/document-api/ApiTextPr/Methods/GetPosition.md) method to Document API.
+- Added the [ApiTextPr/GetShd](../usage-api/document-api/ApiTextPr/Methods/GetShd.md) method to Document API.
+- Added the [ApiTextPr/GetSmallCaps](../usage-api/document-api/ApiTextPr/Methods/GetSmallCaps.md) method to Document API.
+- Added the [ApiTextPr/GetSpacing](../usage-api/document-api/ApiTextPr/Methods/GetSpacing.md) method to Document API.
+- Added the [ApiTextPr/GetStrikeout](../usage-api/document-api/ApiTextPr/Methods/GetStrikeout.md) method to Document API.
+- Added the [ApiTextPr/GetStyle](../usage-api/document-api/ApiTextPr/Methods/GetStyle.md) method to Document API.
+- Added the [ApiTextPr/GetUnderline](../usage-api/document-api/ApiTextPr/Methods/GetUnderline.md) method to Document API.
+- Added the [ApiTextPr/GetVertAlign](../usage-api/document-api/ApiTextPr/Methods/GetVertAlign.md) method to Document API.
 - Added the [ApiTextPr/GetBold](../usage-api/spreadsheet-api/ApiTextPr/Methods/GetBold.md) method to Spreadsheet API.
 - Added the [ApiTextPr/GetCaps](../usage-api/spreadsheet-api/ApiTextPr/Methods/GetCaps.md) method to Spreadsheet API.
 - Added the [ApiTextPr/GetDoubleStrikeout](../usage-api/spreadsheet-api/ApiTextPr/Methods/GetDoubleStrikeout.md) method to Spreadsheet API.
@@ -3068,9 +3068,9 @@ The list of changes for Office JavaScript API.
 
 ### Methods for moving a cursor
 
-- Added the [ApiBlockLvlSdt/MoveCursorOutside](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/MoveCursorOutside.md) method to Document API.
-- Added the [ApiFormBase/MoveCursorOutside](../usage-api/text-document-api/ApiFormBase/Methods/MoveCursorOutside.md) method to Document API.
-- Added the [ApiInlineLvlSdt/MoveCursorOutside](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/MoveCursorOutside.md) method to Document API.
+- Added the [ApiBlockLvlSdt/MoveCursorOutside](../usage-api/document-api/ApiBlockLvlSdt/Methods/MoveCursorOutside.md) method to Document API.
+- Added the [ApiFormBase/MoveCursorOutside](../usage-api/document-api/ApiFormBase/Methods/MoveCursorOutside.md) method to Document API.
+- Added the [ApiInlineLvlSdt/MoveCursorOutside](../usage-api/document-api/ApiInlineLvlSdt/Methods/MoveCursorOutside.md) method to Document API.
 
 ### Custom function methods
 
@@ -3080,18 +3080,18 @@ The list of changes for Office JavaScript API.
 
 ### RGB color methods
 
-- Added the [ApiUniColor/GetRGB](../usage-api/text-document-api/ApiUniColor/Methods/GetRGB.md) method to Document API.
+- Added the [ApiUniColor/GetRGB](../usage-api/document-api/ApiUniColor/Methods/GetRGB.md) method to Document API.
 - Added the [ApiColor/GetRGB](../usage-api/spreadsheet-api/ApiColor/Methods/GetRGB.md) method to Spreadsheet API.
 
 ### Chart series methods
 
-- Added the [ApiChart/GetAllSeries](../usage-api/text-document-api/ApiChart/Methods/GetAllSeries.md) method to Document API.
-- Added the [ApiChart/GetChartType](../usage-api/text-document-api/ApiChart/Methods/GetChartType.md) method to Document API.
-- Added the [ApiChart/GetSeries](../usage-api/text-document-api/ApiChart/Methods/GetSeries.md) method to Document API.
-- Added the [ApiChartSeries](../usage-api/text-document-api/ApiChartSeries/ApiChartSeries.md) class to Document API.
-- Added the [ApiChartSeries/ChangeChartType](../usage-api/text-document-api/ApiChartSeries/Methods/ChangeChartType.md) method to Document API.
-- Added the [ApiChartSeries/GetChartType](../usage-api/text-document-api/ApiChartSeries/Methods/GetChartType.md) method to Document API.
-- Added the [ApiChartSeries/GetClassType](../usage-api/text-document-api/ApiChartSeries/Methods/GetClassType.md) method to Document API.
+- Added the [ApiChart/GetAllSeries](../usage-api/document-api/ApiChart/Methods/GetAllSeries.md) method to Document API.
+- Added the [ApiChart/GetChartType](../usage-api/document-api/ApiChart/Methods/GetChartType.md) method to Document API.
+- Added the [ApiChart/GetSeries](../usage-api/document-api/ApiChart/Methods/GetSeries.md) method to Document API.
+- Added the [ApiChartSeries](../usage-api/document-api/ApiChartSeries/ApiChartSeries.md) class to Document API.
+- Added the [ApiChartSeries/ChangeChartType](../usage-api/document-api/ApiChartSeries/Methods/ChangeChartType.md) method to Document API.
+- Added the [ApiChartSeries/GetChartType](../usage-api/document-api/ApiChartSeries/Methods/GetChartType.md) method to Document API.
+- Added the [ApiChartSeries/GetClassType](../usage-api/document-api/ApiChartSeries/Methods/GetClassType.md) method to Document API.
 - Added the [ApiChart/GetAllSeries](../usage-api/spreadsheet-api/ApiChart/Methods/GetAllSeries.md) method to Spreadsheet API.
 - Added the [ApiChart/GetChartType](../usage-api/spreadsheet-api/ApiChart/Methods/GetChartType.md) method to Spreadsheet API.
 - Added the [ApiChart/GetSeries](../usage-api/spreadsheet-api/ApiChart/Methods/GetSeries.md) method to Spreadsheet API.
@@ -3105,15 +3105,15 @@ The list of changes for Office JavaScript API.
 - Added the [ApiChartSeries/ChangeChartType](../usage-api/presentation-api/ApiChartSeries/Methods/ChangeChartType.md) method to Presentation API.
 - Added the [ApiChartSeries/GetChartType](../usage-api/presentation-api/ApiChartSeries/Methods/GetChartType.md) method to Presentation API.
 - Added the [ApiChartSeries/GetClassType](../usage-api/presentation-api/ApiChartSeries/Methods/GetClassType.md) method to Presentation API.
-- Added the *"comboBarLine"*, *"comboBarLineSecondary"*, *"comboCustom"*, and *"unknown"* available values for the [ChartType](../usage-api/text-document-api/Enumeration/ChartType.md) definition.
+- Added the *"comboBarLine"*, *"comboBarLineSecondary"*, *"comboCustom"*, and *"unknown"* available values for the [ChartType](../usage-api/document-api/Enumeration/ChartType.md) definition.
 
 ### Other methods
 
-- Added the [ApiDocument/GetDocumentInfo](../usage-api/text-document-api/ApiDocument/Methods/GetDocumentInfo.md) method to Document API.
+- Added the [ApiDocument/GetDocumentInfo](../usage-api/document-api/ApiDocument/Methods/GetDocumentInfo.md) method to Document API.
 - Added the [Api/GetDocumentInfo](../usage-api/spreadsheet-api/Api/Methods/GetDocumentInfo.md) method to Spreadsheet API.
 - Added the [ApiPresentation/GetDocumentInfo](../usage-api/presentation-api/ApiPresentation/Methods/GetDocumentInfo.md) method to Presentation API.
-- Added the [DrawingLockType](../usage-api/text-document-api/Enumeration/DrawingLockType.md) type to the simple type definitions.
-- Added the *nWidth* and *nHeight* parameters to the [ApiPictureForm/SetImage](../usage-api/text-document-api/ApiPictureForm/Methods/SetImage.md) method of Document API.
+- Added the [DrawingLockType](../usage-api/document-api/Enumeration/DrawingLockType.md) type to the simple type definitions.
+- Added the *nWidth* and *nHeight* parameters to the [ApiPictureForm/SetImage](../usage-api/document-api/ApiPictureForm/Methods/SetImage.md) method of Document API.
 - Removed the *ApiTable/GetNext* method from Document API.
 - Removed the *ApiTable/GetPrevious* method from Document API.
 - Removed the *ApiTable/Select* method from Presentation API.
@@ -3122,8 +3122,8 @@ The list of changes for Office JavaScript API.
 
 ### Form methods
 
-- Added the [ApiDocument/GetFormsData](../usage-api/text-document-api/ApiDocument/Methods/GetFormsData.md) method to Document API.
-- Added the [ApiDocument/SetFormsData](../usage-api/text-document-api/ApiDocument/Methods/SetFormsData.md) method to Document API.
+- Added the [ApiDocument/GetFormsData](../usage-api/document-api/ApiDocument/Methods/GetFormsData.md) method to Document API.
+- Added the [ApiDocument/SetFormsData](../usage-api/document-api/ApiDocument/Methods/SetFormsData.md) method to Document API.
 
 ### Freeze panes methods
 
@@ -3141,14 +3141,14 @@ The list of changes for Office JavaScript API.
 
 ### Comment methods
 
-- Added the *sUserId* parameter to the [Api/AddComment](../usage-api/text-document-api/Api/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiBlockLvlSdt/AddComment](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiDocument/AddComment](../usage-api/text-document-api/ApiDocument/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiInlineLvlSdt/AddComment](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiParagraph/AddComment](../usage-api/text-document-api/ApiParagraph/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiRange/AddComment](../usage-api/text-document-api/ApiRange/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiRun/AddComment](../usage-api/text-document-api/ApiRun/Methods/AddComment.md) method of Document API.
-- Added the *sUserId* parameter to the [ApiTable/AddComment](../usage-api/text-document-api/ApiTable/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [Api/AddComment](../usage-api/document-api/Api/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiBlockLvlSdt/AddComment](../usage-api/document-api/ApiBlockLvlSdt/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiDocument/AddComment](../usage-api/document-api/ApiDocument/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiInlineLvlSdt/AddComment](../usage-api/document-api/ApiInlineLvlSdt/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiParagraph/AddComment](../usage-api/document-api/ApiParagraph/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiRange/AddComment](../usage-api/document-api/ApiRange/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiRun/AddComment](../usage-api/document-api/ApiRun/Methods/AddComment.md) method of Document API.
+- Added the *sUserId* parameter to the [ApiTable/AddComment](../usage-api/document-api/ApiTable/Methods/AddComment.md) method of Document API.
 - Added the [Api/GetAllComments](../usage-api/spreadsheet-api/Api/Methods/GetAllComments.md) method to Spreadsheet API.
 - Added the [ApiComment/AddReply](../usage-api/presentation-api/ApiComment/Methods/AddReply.md) method to Presentation API.
 - Added the [ApiComment/Delete](../usage-api/presentation-api/ApiComment/Methods/Delete.md) method to Presentation API.
@@ -3171,8 +3171,8 @@ The list of changes for Office JavaScript API.
 
 ### Section methods
 
-- Added the [ApiSection/GetPageHeight](../usage-api/text-document-api/ApiSection/Methods/GetPageHeight.md) method to Document API.
-- Added the [ApiSection/GetPageWidth](../usage-api/text-document-api/ApiSection/Methods/GetPageWidth.md) method to Document API.
+- Added the [ApiSection/GetPageHeight](../usage-api/document-api/ApiSection/Methods/GetPageHeight.md) method to Document API.
+- Added the [ApiSection/GetPageWidth](../usage-api/document-api/ApiSection/Methods/GetPageWidth.md) method to Document API.
 
 ### Simple types
 
@@ -3183,59 +3183,59 @@ The list of changes for Office JavaScript API.
 ### Other methods
 
 - Removed the *ApiBlockLvlSdt/SetBackgroundColor* method from Document API.
-- Added the [ApiDocument/AddDrawingToPage](../usage-api/text-document-api/ApiDocument/Methods/AddDrawingToPage.md) method to Document API.
+- Added the [ApiDocument/AddDrawingToPage](../usage-api/document-api/ApiDocument/Methods/AddDrawingToPage.md) method to Document API.
 - Added the *bWithotPaddings* parameter to the [ApiWorksheet/SetColumnWidth](../usage-api/spreadsheet-api/ApiWorksheet/Methods/SetColumnWidth.md) method of Spreadsheet API.
 
 ## Version 7.5
 
 ### Methods of combo box / dropdown list content control
 
-- Added the [ApiBlockLvlSdt/GetDropdownList](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetDropdownList.md) method to Document API.
-- Added the [ApiContentControlList](../usage-api/text-document-api/ApiContentControlList/ApiContentControlList.md) class to Document API.
-- Added the [ApiContentControlList/Add](../usage-api/text-document-api/ApiContentControlList/Methods/Add.md) method to Document API.
-- Added the [ApiContentControlList/Clear](../usage-api/text-document-api/ApiContentControlList/Methods/Clear.md) method to Document API.
-- Added the [ApiContentControlList/GetAllItems](../usage-api/text-document-api/ApiContentControlList/Methods/GetAllItems.md) method to Document API.
-- Added the [ApiContentControlList/GetClassType](../usage-api/text-document-api/ApiContentControlList/Methods/GetClassType.md) method to Document API.
-- Added the [ApiContentControlList/GetElementsCount](../usage-api/text-document-api/ApiContentControlList/Methods/GetElementsCount.md) method to Document API.
-- Added the [ApiContentControlList/GetItem](../usage-api/text-document-api/ApiContentControlList/Methods/GetItem.md) method to Document API.
-- Added the [ApiContentControlList/GetParent](../usage-api/text-document-api/ApiContentControlList/Methods/GetParent.md) method to Document API.
-- Added the [ApiContentControlListEntry](../usage-api/text-document-api/ApiContentControlListEntry/ApiContentControlListEntry.md) class to Document API.
-- Added the [ApiContentControlListEntry/Delete](../usage-api/text-document-api/ApiContentControlListEntry/Methods/Delete.md) method to Document API.
-- Added the [ApiContentControlListEntry/GetClassType](../usage-api/text-document-api/ApiContentControlListEntry/Methods/GetClassType.md) method to Document API.
-- Added the [ApiContentControlListEntry/GetIndex](../usage-api/text-document-api/ApiContentControlListEntry/Methods/GetIndex.md) method to Document API.
-- Added the [ApiContentControlListEntry/GetParent](../usage-api/text-document-api/ApiContentControlListEntry/Methods/GetParent.md) method to Document API.
-- Added the [ApiContentControlListEntry/GetText](../usage-api/text-document-api/ApiContentControlListEntry/Methods/GetText.md) method to Document API.
-- Added the [ApiContentControlListEntry/GetValue](../usage-api/text-document-api/ApiContentControlListEntry/Methods/GetValue.md) method to Document API.
-- Added the [ApiContentControlListEntry/MoveDown](../usage-api/text-document-api/ApiContentControlListEntry/Methods/MoveDown.md) method to Document API.
-- Added the [ApiContentControlListEntry/MoveUp](../usage-api/text-document-api/ApiContentControlListEntry/Methods/MoveUp.md) method to Document API.
-- Added the [ApiContentControlListEntry/Select](../usage-api/text-document-api/ApiContentControlListEntry/Methods/Select.md) method to Document API.
-- Added the [ApiContentControlListEntry/SetIndex](../usage-api/text-document-api/ApiContentControlListEntry/Methods/SetIndex.md) method to Document API.
-- Added the [ApiContentControlListEntry/SetText](../usage-api/text-document-api/ApiContentControlListEntry/Methods/SetText.md) method to Document API.
-- Added the [ApiContentControlListEntry/SetValue](../usage-api/text-document-api/ApiContentControlListEntry/Methods/SetValue.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetDropdownList](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetDropdownList.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetDropdownList](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetDropdownList.md) method to Document API.
+- Added the [ApiContentControlList](../usage-api/document-api/ApiContentControlList/ApiContentControlList.md) class to Document API.
+- Added the [ApiContentControlList/Add](../usage-api/document-api/ApiContentControlList/Methods/Add.md) method to Document API.
+- Added the [ApiContentControlList/Clear](../usage-api/document-api/ApiContentControlList/Methods/Clear.md) method to Document API.
+- Added the [ApiContentControlList/GetAllItems](../usage-api/document-api/ApiContentControlList/Methods/GetAllItems.md) method to Document API.
+- Added the [ApiContentControlList/GetClassType](../usage-api/document-api/ApiContentControlList/Methods/GetClassType.md) method to Document API.
+- Added the [ApiContentControlList/GetElementsCount](../usage-api/document-api/ApiContentControlList/Methods/GetElementsCount.md) method to Document API.
+- Added the [ApiContentControlList/GetItem](../usage-api/document-api/ApiContentControlList/Methods/GetItem.md) method to Document API.
+- Added the [ApiContentControlList/GetParent](../usage-api/document-api/ApiContentControlList/Methods/GetParent.md) method to Document API.
+- Added the [ApiContentControlListEntry](../usage-api/document-api/ApiContentControlListEntry/ApiContentControlListEntry.md) class to Document API.
+- Added the [ApiContentControlListEntry/Delete](../usage-api/document-api/ApiContentControlListEntry/Methods/Delete.md) method to Document API.
+- Added the [ApiContentControlListEntry/GetClassType](../usage-api/document-api/ApiContentControlListEntry/Methods/GetClassType.md) method to Document API.
+- Added the [ApiContentControlListEntry/GetIndex](../usage-api/document-api/ApiContentControlListEntry/Methods/GetIndex.md) method to Document API.
+- Added the [ApiContentControlListEntry/GetParent](../usage-api/document-api/ApiContentControlListEntry/Methods/GetParent.md) method to Document API.
+- Added the [ApiContentControlListEntry/GetText](../usage-api/document-api/ApiContentControlListEntry/Methods/GetText.md) method to Document API.
+- Added the [ApiContentControlListEntry/GetValue](../usage-api/document-api/ApiContentControlListEntry/Methods/GetValue.md) method to Document API.
+- Added the [ApiContentControlListEntry/MoveDown](../usage-api/document-api/ApiContentControlListEntry/Methods/MoveDown.md) method to Document API.
+- Added the [ApiContentControlListEntry/MoveUp](../usage-api/document-api/ApiContentControlListEntry/Methods/MoveUp.md) method to Document API.
+- Added the [ApiContentControlListEntry/Select](../usage-api/document-api/ApiContentControlListEntry/Methods/Select.md) method to Document API.
+- Added the [ApiContentControlListEntry/SetIndex](../usage-api/document-api/ApiContentControlListEntry/Methods/SetIndex.md) method to Document API.
+- Added the [ApiContentControlListEntry/SetText](../usage-api/document-api/ApiContentControlListEntry/Methods/SetText.md) method to Document API.
+- Added the [ApiContentControlListEntry/SetValue](../usage-api/document-api/ApiContentControlListEntry/Methods/SetValue.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetDropdownList](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetDropdownList.md) method to Document API.
 
 ### Watermark methods
 
-- Added the [ApiDocument/GetWatermarkSettings](../usage-api/text-document-api/ApiDocument/Methods/GetWatermarkSettings.md) method to Document API.
-- Added the [ApiDocument/RemoveWatermark](../usage-api/text-document-api/ApiDocument/Methods/RemoveWatermark.md) method to Document API.
-- Added the [ApiDocument/SetWatermarkSettings](../usage-api/text-document-api/ApiDocument/Methods/SetWatermarkSettings.md) method to Document API.
-- Added the [ApiWatermarkSettings](../usage-api/text-document-api/ApiWatermarkSettings/ApiWatermarkSettings.md) class to Document API.
-- Added the [ApiWatermarkSettings/GetClassType](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetClassType.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetDirection](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetDirection.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetImageHeight](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetImageHeight.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetImageURL](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetImageURL.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetImageWidth](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetImageWidth.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetOpacity](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetOpacity.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetText](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetText.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetTextPr](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiWatermarkSettings/GetType](../usage-api/text-document-api/ApiWatermarkSettings/Methods/GetType.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetDirection](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetDirection.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetImageSize](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetImageSize.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetImageURL](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetImageURL.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetOpacity](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetOpacity.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetText](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetText.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetTextPr](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiWatermarkSettings/SetType](../usage-api/text-document-api/ApiWatermarkSettings/Methods/SetType.md) method to Document API.
+- Added the [ApiDocument/GetWatermarkSettings](../usage-api/document-api/ApiDocument/Methods/GetWatermarkSettings.md) method to Document API.
+- Added the [ApiDocument/RemoveWatermark](../usage-api/document-api/ApiDocument/Methods/RemoveWatermark.md) method to Document API.
+- Added the [ApiDocument/SetWatermarkSettings](../usage-api/document-api/ApiDocument/Methods/SetWatermarkSettings.md) method to Document API.
+- Added the [ApiWatermarkSettings](../usage-api/document-api/ApiWatermarkSettings/ApiWatermarkSettings.md) class to Document API.
+- Added the [ApiWatermarkSettings/GetClassType](../usage-api/document-api/ApiWatermarkSettings/Methods/GetClassType.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetDirection](../usage-api/document-api/ApiWatermarkSettings/Methods/GetDirection.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetImageHeight](../usage-api/document-api/ApiWatermarkSettings/Methods/GetImageHeight.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetImageURL](../usage-api/document-api/ApiWatermarkSettings/Methods/GetImageURL.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetImageWidth](../usage-api/document-api/ApiWatermarkSettings/Methods/GetImageWidth.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetOpacity](../usage-api/document-api/ApiWatermarkSettings/Methods/GetOpacity.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetText](../usage-api/document-api/ApiWatermarkSettings/Methods/GetText.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetTextPr](../usage-api/document-api/ApiWatermarkSettings/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiWatermarkSettings/GetType](../usage-api/document-api/ApiWatermarkSettings/Methods/GetType.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetDirection](../usage-api/document-api/ApiWatermarkSettings/Methods/SetDirection.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetImageSize](../usage-api/document-api/ApiWatermarkSettings/Methods/SetImageSize.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetImageURL](../usage-api/document-api/ApiWatermarkSettings/Methods/SetImageURL.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetOpacity](../usage-api/document-api/ApiWatermarkSettings/Methods/SetOpacity.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetText](../usage-api/document-api/ApiWatermarkSettings/Methods/SetText.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetTextPr](../usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiWatermarkSettings/SetType](../usage-api/document-api/ApiWatermarkSettings/Methods/SetType.md) method to Document API.
 
 ### Simple types
 
@@ -3295,16 +3295,16 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [ApiComment/GetId](../usage-api/text-document-api/ApiComment/Methods/GetId.md) method to Document API.
-- Added the [ApiDocument/GetAllStyles](../usage-api/text-document-api/ApiDocument/Methods/GetAllStyles.md) method to Document API.
-- Added the [ApiParagraph/GetSection](../usage-api/text-document-api/ApiParagraph/Methods/GetSection.md) method to Document API.
-- Added the resulting string display properties to the [ApiParagraph/GetText](../usage-api/text-document-api/ApiParagraph/Methods/GetText.md) method to Document API.
-- Added the [ApiParagraph/SetSection](../usage-api/text-document-api/ApiParagraph/Methods/SetSection.md) method to Document API.
-- Added the resulting string display properties to the [ApiRange/GetText](../usage-api/text-document-api/ApiRange/Methods/GetText.md) method to Document API.
-- Added the [ApiRun/GetText](../usage-api/text-document-api/ApiRun/Methods/GetText.md) method to Document API.
-- Added the [ApiTable/AddCaption](../usage-api/text-document-api/ApiTable/Methods/AddCaption.md) method to Document API.
-- Added the [ApiBlockLvlSdt/AddCaption](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/AddCaption.md) method to Document API.
-- Added the [Api/GetFullName](../usage-api/text-document-api/Api/Methods/GetFullName.md) method to Document API.
+- Added the [ApiComment/GetId](../usage-api/document-api/ApiComment/Methods/GetId.md) method to Document API.
+- Added the [ApiDocument/GetAllStyles](../usage-api/document-api/ApiDocument/Methods/GetAllStyles.md) method to Document API.
+- Added the [ApiParagraph/GetSection](../usage-api/document-api/ApiParagraph/Methods/GetSection.md) method to Document API.
+- Added the resulting string display properties to the [ApiParagraph/GetText](../usage-api/document-api/ApiParagraph/Methods/GetText.md) method to Document API.
+- Added the [ApiParagraph/SetSection](../usage-api/document-api/ApiParagraph/Methods/SetSection.md) method to Document API.
+- Added the resulting string display properties to the [ApiRange/GetText](../usage-api/document-api/ApiRange/Methods/GetText.md) method to Document API.
+- Added the [ApiRun/GetText](../usage-api/document-api/ApiRun/Methods/GetText.md) method to Document API.
+- Added the [ApiTable/AddCaption](../usage-api/document-api/ApiTable/Methods/AddCaption.md) method to Document API.
+- Added the [ApiBlockLvlSdt/AddCaption](../usage-api/document-api/ApiBlockLvlSdt/Methods/AddCaption.md) method to Document API.
+- Added the [Api/GetFullName](../usage-api/document-api/Api/Methods/GetFullName.md) method to Document API.
 - Added the [Api/GetFullName](../usage-api/spreadsheet-api/Api/Methods/GetFullName.md) method to Spreadsheet API.
 - Added the [ApiRange/GetNumberFormat](../usage-api/spreadsheet-api/ApiRange/Methods/GetNumberFormat.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/Move](../usage-api/spreadsheet-api/ApiWorksheet/Methods/Move.md) method to Spreadsheet API.
@@ -3314,62 +3314,62 @@ The list of changes for Office JavaScript API.
 
 ### Comment methods
 
-- Added the [ApiBlockLvlSdt/AddComment](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/AddComment.md) method to Document API.
-- Added the [ApiComment](../usage-api/text-document-api/ApiComment/ApiComment.md) class to Document API.
-- Added the [ApiComment/AddReply](../usage-api/text-document-api/ApiComment/Methods/AddReply.md) method to Document API.
-- Added the [ApiComment/Delete](../usage-api/text-document-api/ApiComment/Methods/Delete.md) method to Document API.
-- Added the [ApiComment/GetAuthorName](../usage-api/text-document-api/ApiComment/Methods/GetAuthorName.md) method to Document API.
-- Added the [ApiComment/GetClassType](../usage-api/text-document-api/ApiComment/Methods/GetClassType.md) method to Document API.
-- Added the [ApiComment/GetQuoteText](../usage-api/text-document-api/ApiComment/Methods/GetQuoteText.md) method to Document API.
-- Added the [ApiComment/GetRepliesCount](../usage-api/text-document-api/ApiComment/Methods/GetRepliesCount.md) method to Document API.
-- Added the [ApiComment/GetReply](../usage-api/text-document-api/ApiComment/Methods/GetReply.md) method to Document API.
-- Added the [ApiComment/GetText](../usage-api/text-document-api/ApiComment/Methods/GetText.md) method to Document API.
-- Added the [ApiComment/GetTime](../usage-api/text-document-api/ApiComment/Methods/GetTime.md) method to Document API.
-- Added the [ApiComment/GetTimeUTC](../usage-api/text-document-api/ApiComment/Methods/GetTimeUTC.md) method to Document API.
-- Added the [ApiComment/GetUserId](../usage-api/text-document-api/ApiComment/Methods/GetUserId.md) method to Document API.
-- Added the [ApiComment/IsSolved](../usage-api/text-document-api/ApiComment/Methods/IsSolved.md) method to Document API.
-- Added the [ApiComment/RemoveReplies](../usage-api/text-document-api/ApiComment/Methods/RemoveReplies.md) method to Document API.
-- Added the [ApiComment/SetAuthorName](../usage-api/text-document-api/ApiComment/Methods/SetAuthorName.md) method to Document API.
-- Added the [ApiComment/SetSolved](../usage-api/text-document-api/ApiComment/Methods/SetSolved.md) method to Document API.
-- Added the [ApiComment/SetText](../usage-api/text-document-api/ApiComment/Methods/SetText.md) method to Document API.
-- Added the [ApiComment/SetTime](../usage-api/text-document-api/ApiComment/Methods/SetTime.md) method to Document API.
-- Added the [ApiComment/SetTimeUTC](../usage-api/text-document-api/ApiComment/Methods/SetTimeUTC.md) method to Document API.
-- Added the [ApiComment/SetUserId](../usage-api/text-document-api/ApiComment/Methods/SetUserId.md) method to Document API.
-- Added the [ApiCommentReply](../usage-api/text-document-api/ApiCommentReply/ApiCommentReply.md) class to Document API.
-- Added the [ApiCommentReply/GetAuthorName](../usage-api/text-document-api/ApiCommentReply/Methods/GetAuthorName.md) method to Document API.
-- Added the [ApiCommentReply/GetClassType](../usage-api/text-document-api/ApiCommentReply/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCommentReply/GetText](../usage-api/text-document-api/ApiCommentReply/Methods/GetText.md) method to Document API.
-- Added the [ApiCommentReply/GetUserId](../usage-api/text-document-api/ApiCommentReply/Methods/GetUserId.md) method to Document API.
-- Added the [ApiCommentReply/SetAuthorName](../usage-api/text-document-api/ApiCommentReply/Methods/SetAuthorName.md) method to Document API.
-- Added the [ApiCommentReply/SetText](../usage-api/text-document-api/ApiCommentReply/Methods/SetText.md) method to Document API.
-- Added the [ApiCommentReply/SetUserId](../usage-api/text-document-api/ApiCommentReply/Methods/SetUserId.md) method to Document API.
-- Added the [ApiDocument/GetAllComments](../usage-api/text-document-api/ApiDocument/Methods/GetAllComments.md) method to Document API.
-- Added the [ApiDocument/GetCommentById](../usage-api/text-document-api/ApiDocument/Methods/GetCommentById.md) method to Document API.
-- Added the [ApiInlineLvlSdt/AddComment](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/AddComment.md) method to Document API.
-- Added the [ApiRange/AddComment](../usage-api/text-document-api/ApiRange/Methods/AddComment.md) method to Document API.
-- Added the [ApiRun/AddComment](../usage-api/text-document-api/ApiRun/Methods/AddComment.md) method to Document API.
-- Added the [ApiTable/AddComment](../usage-api/text-document-api/ApiTable/Methods/AddComment.md) method to Document API.
+- Added the [ApiBlockLvlSdt/AddComment](../usage-api/document-api/ApiBlockLvlSdt/Methods/AddComment.md) method to Document API.
+- Added the [ApiComment](../usage-api/document-api/ApiComment/ApiComment.md) class to Document API.
+- Added the [ApiComment/AddReply](../usage-api/document-api/ApiComment/Methods/AddReply.md) method to Document API.
+- Added the [ApiComment/Delete](../usage-api/document-api/ApiComment/Methods/Delete.md) method to Document API.
+- Added the [ApiComment/GetAuthorName](../usage-api/document-api/ApiComment/Methods/GetAuthorName.md) method to Document API.
+- Added the [ApiComment/GetClassType](../usage-api/document-api/ApiComment/Methods/GetClassType.md) method to Document API.
+- Added the [ApiComment/GetQuoteText](../usage-api/document-api/ApiComment/Methods/GetQuoteText.md) method to Document API.
+- Added the [ApiComment/GetRepliesCount](../usage-api/document-api/ApiComment/Methods/GetRepliesCount.md) method to Document API.
+- Added the [ApiComment/GetReply](../usage-api/document-api/ApiComment/Methods/GetReply.md) method to Document API.
+- Added the [ApiComment/GetText](../usage-api/document-api/ApiComment/Methods/GetText.md) method to Document API.
+- Added the [ApiComment/GetTime](../usage-api/document-api/ApiComment/Methods/GetTime.md) method to Document API.
+- Added the [ApiComment/GetTimeUTC](../usage-api/document-api/ApiComment/Methods/GetTimeUTC.md) method to Document API.
+- Added the [ApiComment/GetUserId](../usage-api/document-api/ApiComment/Methods/GetUserId.md) method to Document API.
+- Added the [ApiComment/IsSolved](../usage-api/document-api/ApiComment/Methods/IsSolved.md) method to Document API.
+- Added the [ApiComment/RemoveReplies](../usage-api/document-api/ApiComment/Methods/RemoveReplies.md) method to Document API.
+- Added the [ApiComment/SetAuthorName](../usage-api/document-api/ApiComment/Methods/SetAuthorName.md) method to Document API.
+- Added the [ApiComment/SetSolved](../usage-api/document-api/ApiComment/Methods/SetSolved.md) method to Document API.
+- Added the [ApiComment/SetText](../usage-api/document-api/ApiComment/Methods/SetText.md) method to Document API.
+- Added the [ApiComment/SetTime](../usage-api/document-api/ApiComment/Methods/SetTime.md) method to Document API.
+- Added the [ApiComment/SetTimeUTC](../usage-api/document-api/ApiComment/Methods/SetTimeUTC.md) method to Document API.
+- Added the [ApiComment/SetUserId](../usage-api/document-api/ApiComment/Methods/SetUserId.md) method to Document API.
+- Added the [ApiCommentReply](../usage-api/document-api/ApiCommentReply/ApiCommentReply.md) class to Document API.
+- Added the [ApiCommentReply/GetAuthorName](../usage-api/document-api/ApiCommentReply/Methods/GetAuthorName.md) method to Document API.
+- Added the [ApiCommentReply/GetClassType](../usage-api/document-api/ApiCommentReply/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCommentReply/GetText](../usage-api/document-api/ApiCommentReply/Methods/GetText.md) method to Document API.
+- Added the [ApiCommentReply/GetUserId](../usage-api/document-api/ApiCommentReply/Methods/GetUserId.md) method to Document API.
+- Added the [ApiCommentReply/SetAuthorName](../usage-api/document-api/ApiCommentReply/Methods/SetAuthorName.md) method to Document API.
+- Added the [ApiCommentReply/SetText](../usage-api/document-api/ApiCommentReply/Methods/SetText.md) method to Document API.
+- Added the [ApiCommentReply/SetUserId](../usage-api/document-api/ApiCommentReply/Methods/SetUserId.md) method to Document API.
+- Added the [ApiDocument/GetAllComments](../usage-api/document-api/ApiDocument/Methods/GetAllComments.md) method to Document API.
+- Added the [ApiDocument/GetCommentById](../usage-api/document-api/ApiDocument/Methods/GetCommentById.md) method to Document API.
+- Added the [ApiInlineLvlSdt/AddComment](../usage-api/document-api/ApiInlineLvlSdt/Methods/AddComment.md) method to Document API.
+- Added the [ApiRange/AddComment](../usage-api/document-api/ApiRange/Methods/AddComment.md) method to Document API.
+- Added the [ApiRun/AddComment](../usage-api/document-api/ApiRun/Methods/AddComment.md) method to Document API.
+- Added the [ApiTable/AddComment](../usage-api/document-api/ApiTable/Methods/AddComment.md) method to Document API.
 - Added the [Api/GetComments](../usage-api/spreadsheet-api/Api/Methods/GetComments.md) method to Spreadsheet API.
 
 ### Table of contents/figures methods
 
-- Added the [ApiDocument/AddTableOfContents](../usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md) method to Document API.
-- Added the [ApiDocument/AddTableOfFigures](../usage-api/text-document-api/ApiDocument/Methods/AddTableOfFigures.md) method to Document API.
-- Added the [ApiParagraph/AddCaption](../usage-api/text-document-api/ApiParagraph/Methods/AddCaption.md) method to Document API.
+- Added the [ApiDocument/AddTableOfContents](../usage-api/document-api/ApiDocument/Methods/AddTableOfContents.md) method to Document API.
+- Added the [ApiDocument/AddTableOfFigures](../usage-api/document-api/ApiDocument/Methods/AddTableOfFigures.md) method to Document API.
+- Added the [ApiParagraph/AddCaption](../usage-api/document-api/ApiParagraph/Methods/AddCaption.md) method to Document API.
 
 ### Other methods
 
-- Added the [ApiDocument/GetPageCount](../usage-api/text-document-api/ApiDocument/Methods/GetPageCount.md) method to Document API.
-- Added the [ApiDocument/GetStatistics](../usage-api/text-document-api/ApiDocument/Methods/GetStatistics.md) method to Document API.
-- Added the [ApiDocument/SetControlsHighlight](../usage-api/text-document-api/ApiDocument/Methods/SetControlsHighlight.md) method to Document API.
-- Added the [ApiRange/GetRange](../usage-api/text-document-api/ApiRange/Methods/GetRange.md) method to Document API.
+- Added the [ApiDocument/GetPageCount](../usage-api/document-api/ApiDocument/Methods/GetPageCount.md) method to Document API.
+- Added the [ApiDocument/GetStatistics](../usage-api/document-api/ApiDocument/Methods/GetStatistics.md) method to Document API.
+- Added the [ApiDocument/SetControlsHighlight](../usage-api/document-api/ApiDocument/Methods/SetControlsHighlight.md) method to Document API.
+- Added the [ApiRange/GetRange](../usage-api/document-api/ApiRange/Methods/GetRange.md) method to Document API.
 
 ## Version 7.2
 
 ### Events
 
-- Added the [Api/attachEvent](../usage-api/text-document-api/Api/Methods/attachEvent.md) method to Document API.
-- Added the [Api/detachEvent](../usage-api/text-document-api/Api/Methods/detachEvent.md) method to Document API.
+- Added the [Api/attachEvent](../usage-api/document-api/Api/Methods/attachEvent.md) method to Document API.
+- Added the [Api/detachEvent](../usage-api/document-api/Api/Methods/detachEvent.md) method to Document API.
 - Added the [Api/attachEvent](../usage-api/spreadsheet-api/Api/Methods/attachEvent.md) method to Spreadsheet API.
 - Added the [Api/detachEvent](../usage-api/spreadsheet-api/Api/Methods/detachEvent.md) method to Spreadsheet API.
 - Added the [Api/attachEvent](../usage-api/presentation-api/Api/Methods/attachEvent.md) method to Presentation API.
@@ -3377,43 +3377,43 @@ The list of changes for Office JavaScript API.
 
 ### Form methods
 
-- Added the [ApiComplexForm](../usage-api/text-document-api/ApiComplexForm/ApiComplexForm.md) class to Document API.
-- Added the [ApiDocument/GetTagsOfAllContentControls](../usage-api/text-document-api/ApiDocument/Methods/GetTagsOfAllContentControls.md) method to Document API.
-- Added the [ApiDocument/GetTagsOfAllForms](../usage-api/text-document-api/ApiDocument/Methods/GetTagsOfAllForms.md) method to Document API.
-- Added the [ApiDocument/GetContentControlsByTag](../usage-api/text-document-api/ApiDocument/Methods/GetContentControlsByTag.md) method to Document API.
-- Added the [ApiDocument/GetFormsByTag](../usage-api/text-document-api/ApiDocument/Methods/GetFormsByTag.md) method to Document API.
+- Added the [ApiComplexForm](../usage-api/document-api/ApiComplexForm/ApiComplexForm.md) class to Document API.
+- Added the [ApiDocument/GetTagsOfAllContentControls](../usage-api/document-api/ApiDocument/Methods/GetTagsOfAllContentControls.md) method to Document API.
+- Added the [ApiDocument/GetTagsOfAllForms](../usage-api/document-api/ApiDocument/Methods/GetTagsOfAllForms.md) method to Document API.
+- Added the [ApiDocument/GetContentControlsByTag](../usage-api/document-api/ApiDocument/Methods/GetContentControlsByTag.md) method to Document API.
+- Added the [ApiDocument/GetFormsByTag](../usage-api/document-api/ApiDocument/Methods/GetFormsByTag.md) method to Document API.
 
 ### Methods for converting to/from JSON
 
-- Added the [Api/FromJSON](../usage-api/text-document-api/Api/Methods/FromJSON.md) method to Document API.
-- Added the [ApiBlockLvlSdt/ToJSON](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/ToJSON.md) method to Document API.
-- Added the [ApiDocument/ToJSON](../usage-api/text-document-api/ApiDocument/Methods/ToJSON.md) method to Document API.
-- Added the [ApiDocumentContent/ToJSON](../usage-api/text-document-api/ApiDocumentContent/Methods/ToJSON.md) method to Document API.
-- Added the [ApiDrawing/ToJSON](../usage-api/text-document-api/ApiDrawing/Methods/ToJSON.md) method to Document API.
-- Added the [ApiFill/ToJSON](../usage-api/text-document-api/ApiFill/Methods/ToJSON.md) method to Document API.
-- Added the [ApiGradientStop/ToJSON](../usage-api/text-document-api/ApiGradientStop/Methods/ToJSON.md) method to Document API.
-- Added the [ApiHyperlink/ToJSON](../usage-api/text-document-api/ApiHyperlink/Methods/ToJSON.md) method to Document API.
-- Added the [ApiInlineLvlSdt/ToJSON](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/ToJSON.md) method to Document API.
-- Added the [ApiNumbering/ToJSON](../usage-api/text-document-api/ApiNumbering/Methods/ToJSON.md) method to Document API.
-- Added the [ApiParagraph/ToJSON](../usage-api/text-document-api/ApiParagraph/Methods/ToJSON.md) method to Document API.
-- Added the [ApiParaPr/ToJSON](../usage-api/text-document-api/ApiParaPr/Methods/ToJSON.md) method to Document API.
-- Added the [ApiPresetColor/ToJSON](../usage-api/text-document-api/ApiPresetColor/Methods/ToJSON.md) method to Document API.
-- Added the [ApiRange/ToJSON](../usage-api/text-document-api/ApiRange/Methods/ToJSON.md) method to Document API.
-- Added the [ApiRGBColor/ToJSON](../usage-api/text-document-api/ApiRGBColor/Methods/ToJSON.md) method to Document API.
-- Added the [ApiRun/ToJSON](../usage-api/text-document-api/ApiRun/Methods/ToJSON.md) method to Document API.
-- Added the [ApiSchemeColor/ToJSON](../usage-api/text-document-api/ApiSchemeColor/Methods/ToJSON.md) method to Document API.
-- Added the [ApiSection/ToJSON](../usage-api/text-document-api/ApiSection/Methods/ToJSON.md) method to Document API.
-- Added the [ApiStroke/ToJSON](../usage-api/text-document-api/ApiStroke/Methods/ToJSON.md) method to Document API.
-- Added the [ApiStyle/ToJSON](../usage-api/text-document-api/ApiStyle/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTable/ToJSON](../usage-api/text-document-api/ApiTable/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTableCell/ToJSON](../usage-api/text-document-api/ApiTableCell/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTableCellPr/ToJSON](../usage-api/text-document-api/ApiTableCellPr/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTablePr/ToJSON](../usage-api/text-document-api/ApiTablePr/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTableRow/ToJSON](../usage-api/text-document-api/ApiTableRow/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTableRowPr/ToJSON](../usage-api/text-document-api/ApiTableRowPr/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTableStylePr/ToJSON](../usage-api/text-document-api/ApiTableStylePr/Methods/ToJSON.md) method to Document API.
-- Added the [ApiTextPr/ToJSON](../usage-api/text-document-api/ApiTextPr/Methods/ToJSON.md) method to Document API.
-- Added the [ApiUniColor/ToJSON](../usage-api/text-document-api/ApiUniColor/Methods/ToJSON.md) method to Document API.
+- Added the [Api/FromJSON](../usage-api/document-api/Api/Methods/FromJSON.md) method to Document API.
+- Added the [ApiBlockLvlSdt/ToJSON](../usage-api/document-api/ApiBlockLvlSdt/Methods/ToJSON.md) method to Document API.
+- Added the [ApiDocument/ToJSON](../usage-api/document-api/ApiDocument/Methods/ToJSON.md) method to Document API.
+- Added the [ApiDocumentContent/ToJSON](../usage-api/document-api/ApiDocumentContent/Methods/ToJSON.md) method to Document API.
+- Added the [ApiDrawing/ToJSON](../usage-api/document-api/ApiDrawing/Methods/ToJSON.md) method to Document API.
+- Added the [ApiFill/ToJSON](../usage-api/document-api/ApiFill/Methods/ToJSON.md) method to Document API.
+- Added the [ApiGradientStop/ToJSON](../usage-api/document-api/ApiGradientStop/Methods/ToJSON.md) method to Document API.
+- Added the [ApiHyperlink/ToJSON](../usage-api/document-api/ApiHyperlink/Methods/ToJSON.md) method to Document API.
+- Added the [ApiInlineLvlSdt/ToJSON](../usage-api/document-api/ApiInlineLvlSdt/Methods/ToJSON.md) method to Document API.
+- Added the [ApiNumbering/ToJSON](../usage-api/document-api/ApiNumbering/Methods/ToJSON.md) method to Document API.
+- Added the [ApiParagraph/ToJSON](../usage-api/document-api/ApiParagraph/Methods/ToJSON.md) method to Document API.
+- Added the [ApiParaPr/ToJSON](../usage-api/document-api/ApiParaPr/Methods/ToJSON.md) method to Document API.
+- Added the [ApiPresetColor/ToJSON](../usage-api/document-api/ApiPresetColor/Methods/ToJSON.md) method to Document API.
+- Added the [ApiRange/ToJSON](../usage-api/document-api/ApiRange/Methods/ToJSON.md) method to Document API.
+- Added the [ApiRGBColor/ToJSON](../usage-api/document-api/ApiRGBColor/Methods/ToJSON.md) method to Document API.
+- Added the [ApiRun/ToJSON](../usage-api/document-api/ApiRun/Methods/ToJSON.md) method to Document API.
+- Added the [ApiSchemeColor/ToJSON](../usage-api/document-api/ApiSchemeColor/Methods/ToJSON.md) method to Document API.
+- Added the [ApiSection/ToJSON](../usage-api/document-api/ApiSection/Methods/ToJSON.md) method to Document API.
+- Added the [ApiStroke/ToJSON](../usage-api/document-api/ApiStroke/Methods/ToJSON.md) method to Document API.
+- Added the [ApiStyle/ToJSON](../usage-api/document-api/ApiStyle/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTable/ToJSON](../usage-api/document-api/ApiTable/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTableCell/ToJSON](../usage-api/document-api/ApiTableCell/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTableCellPr/ToJSON](../usage-api/document-api/ApiTableCellPr/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTablePr/ToJSON](../usage-api/document-api/ApiTablePr/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTableRow/ToJSON](../usage-api/document-api/ApiTableRow/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTableRowPr/ToJSON](../usage-api/document-api/ApiTableRowPr/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTableStylePr/ToJSON](../usage-api/document-api/ApiTableStylePr/Methods/ToJSON.md) method to Document API.
+- Added the [ApiTextPr/ToJSON](../usage-api/document-api/ApiTextPr/Methods/ToJSON.md) method to Document API.
+- Added the [ApiUniColor/ToJSON](../usage-api/document-api/ApiUniColor/Methods/ToJSON.md) method to Document API.
 - Added the [Api/FromJSON](../usage-api/presentation-api/Api/Methods/FromJSON.md) method to Presentation API.
 - Added the [ApiDrawing/ToJSON](../usage-api/presentation-api/ApiDrawing/Methods/ToJSON.md) method to Presentation API.
 - Added the [ApiLayout/ToJSON](../usage-api/presentation-api/ApiLayout/Methods/ToJSON.md) method to Presentation API.
@@ -3428,43 +3428,43 @@ The list of changes for Office JavaScript API.
 
 ### Word Art methods
 
-- Added the [Api/CreateWordArt](../usage-api/text-document-api/Api/Methods/CreateWordArt.md) method to Document API.
+- Added the [Api/CreateWordArt](../usage-api/document-api/Api/Methods/CreateWordArt.md) method to Document API.
 - Added the [ApiWorksheet/AddWordArt](../usage-api/spreadsheet-api/ApiWorksheet/Methods/AddWordArt.md) method to Spreadsheet API.
 - Added the [Api/CreateWordArt](../usage-api/presentation-api/Api/Methods/CreateWordArt.md) method to Presentation API.
 
 ### Table of contents/figures methods
 
-- Added the [ApiDocument/UpdateAllTOC](../usage-api/text-document-api/ApiDocument/Methods/UpdateAllTOC.md) method to Document API.
-- Added the [ApiDocument/UpdateAllTOF](../usage-api/text-document-api/ApiDocument/Methods/UpdateAllTOF.md) method to Document API.
+- Added the [ApiDocument/UpdateAllTOC](../usage-api/document-api/ApiDocument/Methods/UpdateAllTOC.md) method to Document API.
+- Added the [ApiDocument/UpdateAllTOF](../usage-api/document-api/ApiDocument/Methods/UpdateAllTOF.md) method to Document API.
 
 ### Footnote/endnote methods
 
-- Added the [ApiDocument/AddEndnote](../usage-api/text-document-api/ApiDocument/Methods/AddEndnote.md) method to Document API.
-- Added the [ApiDocument/AddFootnote](../usage-api/text-document-api/ApiDocument/Methods/AddFootnote.md) method to Document API.
+- Added the [ApiDocument/AddEndnote](../usage-api/document-api/ApiDocument/Methods/AddEndnote.md) method to Document API.
+- Added the [ApiDocument/AddFootnote](../usage-api/document-api/ApiDocument/Methods/AddFootnote.md) method to Document API.
 
 ### Chart methods
 
-- Added the [ApiChart/ApplyChartStyle](../usage-api/text-document-api/ApiChart/Methods/ApplyChartStyle.md) method to Document API.
-- Added the [ApiChart/RemoveSeria](../usage-api/text-document-api/ApiChart/Methods/RemoveSeria.md) method to Document API.
-- Added the [ApiChart/SetAxieNumFormat](../usage-api/text-document-api/ApiChart/Methods/SetAxieNumFormat.md) method to Document API.
-- Added the [ApiChart/SetCategoryName](../usage-api/text-document-api/ApiChart/Methods/SetCategoryName.md) method to Document API.
-- Added the [ApiChart/SetDataPointFill](../usage-api/text-document-api/ApiChart/Methods/SetDataPointFill.md) method to Document API.
-- Added the [ApiChart/SetDataPointNumFormat](../usage-api/text-document-api/ApiChart/Methods/SetDataPointNumFormat.md) method to Document API.
-- Added the [ApiChart/SetDataPointOutLine](../usage-api/text-document-api/ApiChart/Methods/SetDataPointOutLine.md) method to Document API.
-- Added the [ApiChart/SetLegendFill](../usage-api/text-document-api/ApiChart/Methods/SetLegendFill.md) method to Document API.
-- Added the [ApiChart/SetLegendOutLine](../usage-api/text-document-api/ApiChart/Methods/SetLegendOutLine.md) method to Document API.
-- Added the [ApiChart/SetMarkerFill](../usage-api/text-document-api/ApiChart/Methods/SetMarkerFill.md) method to Document API.
-- Added the [ApiChart/SetMarkerOutLine](../usage-api/text-document-api/ApiChart/Methods/SetMarkerOutLine.md) method to Document API.
-- Added the [ApiChart/SetPlotAreaFill](../usage-api/text-document-api/ApiChart/Methods/SetPlotAreaFill.md) method to Document API.
-- Added the [ApiChart/SetPlotAreaOutLine](../usage-api/text-document-api/ApiChart/Methods/SetPlotAreaOutLine.md) method to Document API.
-- Added the [ApiChart/SetSeriaName](../usage-api/text-document-api/ApiChart/Methods/SetSeriaName.md) method to Document API.
-- Added the [ApiChart/SetSeriaNumFormat](../usage-api/text-document-api/ApiChart/Methods/SetSeriaNumFormat.md) method to Document API.
-- Added the [ApiChart/SetSeriaValues](../usage-api/text-document-api/ApiChart/Methods/SetSeriaValues.md) method to Document API.
-- Added the [ApiChart/SetSeriesFill](../usage-api/text-document-api/ApiChart/Methods/SetSeriesFill.md) method to Document API.
-- Added the [ApiChart/SetSeriesOutLine](../usage-api/text-document-api/ApiChart/Methods/SetSeriesOutLine.md) method to Document API.
-- Added the [ApiChart/SetTitleFill](../usage-api/text-document-api/ApiChart/Methods/SetTitleFill.md) method to Document API.
-- Added the [ApiChart/SetTitleOutLine](../usage-api/text-document-api/ApiChart/Methods/SetTitleOutLine.md) method to Document API.
-- Added the [ApiChart/SetXValues](../usage-api/text-document-api/ApiChart/Methods/SetXValues.md) method to Document API.
+- Added the [ApiChart/ApplyChartStyle](../usage-api/document-api/ApiChart/Methods/ApplyChartStyle.md) method to Document API.
+- Added the [ApiChart/RemoveSeria](../usage-api/document-api/ApiChart/Methods/RemoveSeria.md) method to Document API.
+- Added the [ApiChart/SetAxieNumFormat](../usage-api/document-api/ApiChart/Methods/SetAxieNumFormat.md) method to Document API.
+- Added the [ApiChart/SetCategoryName](../usage-api/document-api/ApiChart/Methods/SetCategoryName.md) method to Document API.
+- Added the [ApiChart/SetDataPointFill](../usage-api/document-api/ApiChart/Methods/SetDataPointFill.md) method to Document API.
+- Added the [ApiChart/SetDataPointNumFormat](../usage-api/document-api/ApiChart/Methods/SetDataPointNumFormat.md) method to Document API.
+- Added the [ApiChart/SetDataPointOutLine](../usage-api/document-api/ApiChart/Methods/SetDataPointOutLine.md) method to Document API.
+- Added the [ApiChart/SetLegendFill](../usage-api/document-api/ApiChart/Methods/SetLegendFill.md) method to Document API.
+- Added the [ApiChart/SetLegendOutLine](../usage-api/document-api/ApiChart/Methods/SetLegendOutLine.md) method to Document API.
+- Added the [ApiChart/SetMarkerFill](../usage-api/document-api/ApiChart/Methods/SetMarkerFill.md) method to Document API.
+- Added the [ApiChart/SetMarkerOutLine](../usage-api/document-api/ApiChart/Methods/SetMarkerOutLine.md) method to Document API.
+- Added the [ApiChart/SetPlotAreaFill](../usage-api/document-api/ApiChart/Methods/SetPlotAreaFill.md) method to Document API.
+- Added the [ApiChart/SetPlotAreaOutLine](../usage-api/document-api/ApiChart/Methods/SetPlotAreaOutLine.md) method to Document API.
+- Added the [ApiChart/SetSeriaName](../usage-api/document-api/ApiChart/Methods/SetSeriaName.md) method to Document API.
+- Added the [ApiChart/SetSeriaNumFormat](../usage-api/document-api/ApiChart/Methods/SetSeriaNumFormat.md) method to Document API.
+- Added the [ApiChart/SetSeriaValues](../usage-api/document-api/ApiChart/Methods/SetSeriaValues.md) method to Document API.
+- Added the [ApiChart/SetSeriesFill](../usage-api/document-api/ApiChart/Methods/SetSeriesFill.md) method to Document API.
+- Added the [ApiChart/SetSeriesOutLine](../usage-api/document-api/ApiChart/Methods/SetSeriesOutLine.md) method to Document API.
+- Added the [ApiChart/SetTitleFill](../usage-api/document-api/ApiChart/Methods/SetTitleFill.md) method to Document API.
+- Added the [ApiChart/SetTitleOutLine](../usage-api/document-api/ApiChart/Methods/SetTitleOutLine.md) method to Document API.
+- Added the [ApiChart/SetXValues](../usage-api/document-api/ApiChart/Methods/SetXValues.md) method to Document API.
 - Added the [ApiChart/AddSeria](../usage-api/spreadsheet-api/ApiChart/Methods/AddSeria.md) method to Spreadsheet API.
 - Added the [ApiChart/RemoveSeria](../usage-api/spreadsheet-api/ApiChart/Methods/RemoveSeria.md) method to Spreadsheet API.
 - Added the [ApiChart/SetAxieNumFormat](../usage-api/spreadsheet-api/ApiChart/Methods/SetAxieNumFormat.md) method to Spreadsheet API.
@@ -3508,17 +3508,17 @@ The list of changes for Office JavaScript API.
 
 ### Drawing methods
 
-- Added the [ApiDocument/GetSelectedDrawings](../usage-api/text-document-api/ApiDocument/Methods/GetSelectedDrawings.md) method to Document API.
-- Added the [ApiDocument/ReplaceDrawing](../usage-api/text-document-api/ApiDocument/Methods/ReplaceDrawing.md) method to Document API.
-- Added the [ApiDocumentContent/GetAllCharts](../usage-api/text-document-api/ApiDocumentContent/Methods/GetAllCharts.md) method to Document API.
-- Added the [ApiDocumentContent/GetAllDrawingObjects](../usage-api/text-document-api/ApiDocumentContent/Methods/GetAllDrawingObjects.md) method to Document API.
-- Added the [ApiDocumentContent/GetAllImages](../usage-api/text-document-api/ApiDocumentContent/Methods/GetAllImages.md) method to Document API.
-- Added the [ApiDocumentContent/GetAllShapes](../usage-api/text-document-api/ApiDocumentContent/Methods/GetAllShapes.md) method to Document API.
-- Added the [ApiDrawing/GetHeight](../usage-api/text-document-api/ApiDrawing/Methods/GetHeight.md) method to Document API.
-- Added the [ApiDrawing/GetLockValue](../usage-api/text-document-api/ApiDrawing/Methods/GetLockValue.md) method to Document API.
-- Added the [ApiDrawing/GetWidth](../usage-api/text-document-api/ApiDrawing/Methods/GetWidth.md) method to Document API.
-- Added the [ApiDrawing/SetDrawingPrFromDrawing](../usage-api/text-document-api/ApiDrawing/Methods/SetDrawingPrFromDrawing.md) method to Document API.
-- Added the [ApiDrawing/SetLockValue](../usage-api/text-document-api/ApiDrawing/Methods/SetLockValue.md) method to Document API.
+- Added the [ApiDocument/GetSelectedDrawings](../usage-api/document-api/ApiDocument/Methods/GetSelectedDrawings.md) method to Document API.
+- Added the [ApiDocument/ReplaceDrawing](../usage-api/document-api/ApiDocument/Methods/ReplaceDrawing.md) method to Document API.
+- Added the [ApiDocumentContent/GetAllCharts](../usage-api/document-api/ApiDocumentContent/Methods/GetAllCharts.md) method to Document API.
+- Added the [ApiDocumentContent/GetAllDrawingObjects](../usage-api/document-api/ApiDocumentContent/Methods/GetAllDrawingObjects.md) method to Document API.
+- Added the [ApiDocumentContent/GetAllImages](../usage-api/document-api/ApiDocumentContent/Methods/GetAllImages.md) method to Document API.
+- Added the [ApiDocumentContent/GetAllShapes](../usage-api/document-api/ApiDocumentContent/Methods/GetAllShapes.md) method to Document API.
+- Added the [ApiDrawing/GetHeight](../usage-api/document-api/ApiDrawing/Methods/GetHeight.md) method to Document API.
+- Added the [ApiDrawing/GetLockValue](../usage-api/document-api/ApiDrawing/Methods/GetLockValue.md) method to Document API.
+- Added the [ApiDrawing/GetWidth](../usage-api/document-api/ApiDrawing/Methods/GetWidth.md) method to Document API.
+- Added the [ApiDrawing/SetDrawingPrFromDrawing](../usage-api/document-api/ApiDrawing/Methods/SetDrawingPrFromDrawing.md) method to Document API.
+- Added the [ApiDrawing/SetLockValue](../usage-api/document-api/ApiDrawing/Methods/SetLockValue.md) method to Document API.
 - Added the [ApiDrawing/GetHeight](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetHeight.md) method to Spreadsheet API.
 - Added the [ApiDrawing/GetLockValue](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetLockValue.md) method to Spreadsheet API.
 - Added the [ApiDrawing/GetWidth](../usage-api/spreadsheet-api/ApiDrawing/Methods/GetWidth.md) method to Spreadsheet API.
@@ -3530,16 +3530,16 @@ The list of changes for Office JavaScript API.
 
 ### OLE object methods
 
-- Added the [ApiOleObject](../usage-api/text-document-api/ApiOleObject/ApiOleObject.md) class to Document API.
-- Added the [Api/CreateOleObject](../usage-api/text-document-api/Api/Methods/CreateOleObject.md) method to Document API.
-- Added the [ApiDocument/GetAllOleObjects](../usage-api/text-document-api/ApiDocument/Methods/GetAllOleObjects.md) method to Document API.
-- Added the [ApiDocumentContent/GetAllOleObjects](../usage-api/text-document-api/ApiDocumentContent/Methods/GetAllOleObjects.md) method to Document API.
-- Added the [ApiOleObject/GetApplicationId](../usage-api/text-document-api/ApiOleObject/Methods/GetApplicationId.md) method to Document API.
-- Added the [ApiOleObject/GetClassType](../usage-api/text-document-api/ApiOleObject/Methods/GetClassType.md) method to Document API.
-- Added the [ApiOleObject/GetData](../usage-api/text-document-api/ApiOleObject/Methods/GetData.md) method to Document API.
-- Added the [ApiOleObject/SetApplicationId](../usage-api/text-document-api/ApiOleObject/Methods/SetApplicationId.md) method to Document API.
-- Added the [ApiOleObject/SetData](../usage-api/text-document-api/ApiOleObject/Methods/SetData.md) method to Document API.
-- Added the [ApiParagraph/GetAllOleObjects](../usage-api/text-document-api/ApiParagraph/Methods/GetAllOleObjects.md) method to Document API.
+- Added the [ApiOleObject](../usage-api/document-api/ApiOleObject/ApiOleObject.md) class to Document API.
+- Added the [Api/CreateOleObject](../usage-api/document-api/Api/Methods/CreateOleObject.md) method to Document API.
+- Added the [ApiDocument/GetAllOleObjects](../usage-api/document-api/ApiDocument/Methods/GetAllOleObjects.md) method to Document API.
+- Added the [ApiDocumentContent/GetAllOleObjects](../usage-api/document-api/ApiDocumentContent/Methods/GetAllOleObjects.md) method to Document API.
+- Added the [ApiOleObject/GetApplicationId](../usage-api/document-api/ApiOleObject/Methods/GetApplicationId.md) method to Document API.
+- Added the [ApiOleObject/GetClassType](../usage-api/document-api/ApiOleObject/Methods/GetClassType.md) method to Document API.
+- Added the [ApiOleObject/GetData](../usage-api/document-api/ApiOleObject/Methods/GetData.md) method to Document API.
+- Added the [ApiOleObject/SetApplicationId](../usage-api/document-api/ApiOleObject/Methods/SetApplicationId.md) method to Document API.
+- Added the [ApiOleObject/SetData](../usage-api/document-api/ApiOleObject/Methods/SetData.md) method to Document API.
+- Added the [ApiParagraph/GetAllOleObjects](../usage-api/document-api/ApiParagraph/Methods/GetAllOleObjects.md) method to Document API.
 - Added the [ApiOleObject](../usage-api/spreadsheet-api/ApiOleObject/ApiOleObject.md) class to Spreadsheet API.
 - Added the [ApiWorksheet/AddOleObject](../usage-api/spreadsheet-api/ApiWorksheet/Methods/AddOleObject.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetAllOleObjects](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetAllOleObjects.md) method to Spreadsheet API.
@@ -3561,22 +3561,22 @@ The list of changes for Office JavaScript API.
 
 ### Table methods
 
-- Added the [ApiTable/GetPosInParent](../usage-api/text-document-api/ApiTable/Methods/GetPosInParent.md) method to Document API.
-- Added the [ApiTable/GetTableDescription](../usage-api/text-document-api/ApiTable/Methods/GetTableDescription.md) method to Document API.
-- Added the [ApiTable/GetTableTitle](../usage-api/text-document-api/ApiTable/Methods/GetTableTitle.md) method to Document API.
-- Added the [ApiTable/ReplaceByElement](../usage-api/text-document-api/ApiTable/Methods/ReplaceByElement.md) method to Document API.
-- Added the [ApiTable/SetTableDescription](../usage-api/text-document-api/ApiTable/Methods/SetTableDescription.md) method to Document API.
-- Added the [ApiTable/SetTableTitle](../usage-api/text-document-api/ApiTable/Methods/SetTableTitle.md) method to Document API.
-- Added the [ApiTablePr/GetTableDescription](../usage-api/text-document-api/ApiTablePr/Methods/GetTableDescription.md) method to Document API.
-- Added the [ApiTablePr/GetTableTitle](../usage-api/text-document-api/ApiTablePr/Methods/GetTableTitle.md) method to Document API.
-- Added the [ApiTablePr/SetTableDescription](../usage-api/text-document-api/ApiTablePr/Methods/SetTableDescription.md) method to Document API.
-- Added the [ApiTablePr/SetTableTitle](../usage-api/text-document-api/ApiTablePr/Methods/SetTableTitle.md) method to Document API.
+- Added the [ApiTable/GetPosInParent](../usage-api/document-api/ApiTable/Methods/GetPosInParent.md) method to Document API.
+- Added the [ApiTable/GetTableDescription](../usage-api/document-api/ApiTable/Methods/GetTableDescription.md) method to Document API.
+- Added the [ApiTable/GetTableTitle](../usage-api/document-api/ApiTable/Methods/GetTableTitle.md) method to Document API.
+- Added the [ApiTable/ReplaceByElement](../usage-api/document-api/ApiTable/Methods/ReplaceByElement.md) method to Document API.
+- Added the [ApiTable/SetTableDescription](../usage-api/document-api/ApiTable/Methods/SetTableDescription.md) method to Document API.
+- Added the [ApiTable/SetTableTitle](../usage-api/document-api/ApiTable/Methods/SetTableTitle.md) method to Document API.
+- Added the [ApiTablePr/GetTableDescription](../usage-api/document-api/ApiTablePr/Methods/GetTableDescription.md) method to Document API.
+- Added the [ApiTablePr/GetTableTitle](../usage-api/document-api/ApiTablePr/Methods/GetTableTitle.md) method to Document API.
+- Added the [ApiTablePr/SetTableDescription](../usage-api/document-api/ApiTablePr/Methods/SetTableDescription.md) method to Document API.
+- Added the [ApiTablePr/SetTableTitle](../usage-api/document-api/ApiTablePr/Methods/SetTableTitle.md) method to Document API.
 
 ### Run methods
 
-- Added the [ApiRun/GetFontNames](../usage-api/text-document-api/ApiRun/Methods/GetFontNames.md) method to Document API.
-- Added the [ApiRun/SetOutLine](../usage-api/text-document-api/ApiRun/Methods/SetOutLine.md) method to Document API.
-- Added the [ApiRun/SetTextFill](../usage-api/text-document-api/ApiRun/Methods/SetTextFill.md) method to Document API.
+- Added the [ApiRun/GetFontNames](../usage-api/document-api/ApiRun/Methods/GetFontNames.md) method to Document API.
+- Added the [ApiRun/SetOutLine](../usage-api/document-api/ApiRun/Methods/SetOutLine.md) method to Document API.
+- Added the [ApiRun/SetTextFill](../usage-api/document-api/ApiRun/Methods/SetTextFill.md) method to Document API.
 - Added the [ApiRun/GetFontNames](../usage-api/spreadsheet-api/ApiRun/Methods/GetFontNames.md) method to Spreadsheet API.
 - Added the [ApiRun/SetOutLine](../usage-api/spreadsheet-api/ApiRun/Methods/SetOutLine.md) method to Spreadsheet API.
 - Added the [ApiRun/SetTextFill](../usage-api/spreadsheet-api/ApiRun/Methods/SetTextFill.md) method to Spreadsheet API.
@@ -3586,8 +3586,8 @@ The list of changes for Office JavaScript API.
 
 ### Methods for setting text properties
 
-- Added the [ApiTextPr/SetOutLine](../usage-api/text-document-api/ApiTextPr/Methods/SetOutLine.md) method to Document API.
-- Added the [ApiTextPr/SetTextFill](../usage-api/text-document-api/ApiTextPr/Methods/SetTextFill.md) method to Document API.
+- Added the [ApiTextPr/SetOutLine](../usage-api/document-api/ApiTextPr/Methods/SetOutLine.md) method to Document API.
+- Added the [ApiTextPr/SetTextFill](../usage-api/document-api/ApiTextPr/Methods/SetTextFill.md) method to Document API.
 - Added the [ApiTextPr/SetOutLine](../usage-api/spreadsheet-api/ApiTextPr/Methods/SetOutLine.md) method to Spreadsheet API.
 - Added the [ApiTextPr/SetTextFill](../usage-api/spreadsheet-api/ApiTextPr/Methods/SetTextFill.md) method to Spreadsheet API.
 - Added the [ApiTextPr/SetHighlight](../usage-api/presentation-api/ApiTextPr/Methods/SetHighlight.md) method to Presentation API.
@@ -3596,15 +3596,15 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the [Api/CreateTextPr](../usage-api/text-document-api/Api/Methods/CreateTextPr.md) method to Document API.
-- Added the [ApiBlockLvlSdt/GetPosInParent](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetPosInParent.md) method to Document API.
-- Added the [ApiBlockLvlSdt/ReplaceByElement](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/ReplaceByElement.md) method to Document API.
-- Added the [ApiDocument/GetContent](../usage-api/text-document-api/ApiDocument/Methods/GetContent.md) method to Document API.
-- Added the [ApiDocument/ReplaceCurrentImage](../usage-api/text-document-api/ApiDocument/Methods/ReplaceCurrentImage.md) method to Document API.
-- Added the [ApiDocumentContent/GetContent](../usage-api/text-document-api/ApiDocumentContent/Methods/GetContent.md) method to Document API.
-- Added the [ApiParagraph/GetFontNames](../usage-api/text-document-api/ApiParagraph/Methods/GetFontNames.md) method to Document API.
-- Added the [ApiParagraph/GetPosInParent](../usage-api/text-document-api/ApiParagraph/Methods/GetPosInParent.md) method to Document API.
-- Added the [ApiParagraph/ReplaceByElement](../usage-api/text-document-api/ApiParagraph/Methods/ReplaceByElement.md) method to Document API.
+- Added the [Api/CreateTextPr](../usage-api/document-api/Api/Methods/CreateTextPr.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetPosInParent](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetPosInParent.md) method to Document API.
+- Added the [ApiBlockLvlSdt/ReplaceByElement](../usage-api/document-api/ApiBlockLvlSdt/Methods/ReplaceByElement.md) method to Document API.
+- Added the [ApiDocument/GetContent](../usage-api/document-api/ApiDocument/Methods/GetContent.md) method to Document API.
+- Added the [ApiDocument/ReplaceCurrentImage](../usage-api/document-api/ApiDocument/Methods/ReplaceCurrentImage.md) method to Document API.
+- Added the [ApiDocumentContent/GetContent](../usage-api/document-api/ApiDocumentContent/Methods/GetContent.md) method to Document API.
+- Added the [ApiParagraph/GetFontNames](../usage-api/document-api/ApiParagraph/Methods/GetFontNames.md) method to Document API.
+- Added the [ApiParagraph/GetPosInParent](../usage-api/document-api/ApiParagraph/Methods/GetPosInParent.md) method to Document API.
+- Added the [ApiParagraph/ReplaceByElement](../usage-api/document-api/ApiParagraph/Methods/ReplaceByElement.md) method to Document API.
 - Added the [Api/CreateTextPr](../usage-api/spreadsheet-api/Api/Methods/CreateTextPr.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetAllCharts](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetAllCharts.md) method to Spreadsheet API.
 - Added the [ApiWorksheet/GetAllDrawings](../usage-api/spreadsheet-api/ApiWorksheet/Methods/GetAllDrawings.md) method to Spreadsheet API.
@@ -3624,176 +3624,176 @@ The list of changes for Office JavaScript API.
 - Added the [Api/CreateComboBoxForm](../usage-api/form-api/Api/Methods/CreateComboBoxForm.md) method to Form API.
 - Added the [Api/CreatePictureForm](../usage-api/form-api/Api/Methods/CreatePictureForm.md) method to Form API.
 - Added the [Api/CreateTextForm](../usage-api/form-api/Api/Methods/CreateTextForm.md) method to Form API.
-- Added the [ApiBlockLvlSdt/GetPlaceholderText](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetPlaceholderText.md) method to Document API.
-- Added the [ApiBlockLvlSdt/SetPlaceholderText](../usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiCheckBoxForm](../usage-api/text-document-api/ApiCheckBoxForm/ApiCheckBoxForm.md) class to Document API.
-- Added the [ApiCheckBoxForm/Clear](../usage-api/text-document-api/ApiCheckBoxForm/Methods/Clear.md) method to Document API.
-- Added the [ApiCheckBoxForm/Copy](../usage-api/text-document-api/ApiCheckBoxForm/Methods/Copy.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetClassType](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetClassType.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetFormKey](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetFormKey.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetFormType](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetFormType.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetRadioGroup](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetRadioGroup.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetText](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetText.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetTextPr](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetTipText](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetTipText.md) method to Document API.
-- Added the [ApiCheckBoxForm/GetWrapperShape](../usage-api/text-document-api/ApiCheckBoxForm/Methods/GetWrapperShape.md) method to Document API.
-- Added the [ApiCheckBoxForm/IsChecked](../usage-api/text-document-api/ApiCheckBoxForm/Methods/IsChecked.md) method to Document API.
-- Added the [ApiCheckBoxForm/IsFixed](../usage-api/text-document-api/ApiCheckBoxForm/Methods/IsFixed.md) method to Document API.
-- Added the [ApiCheckBoxForm/IsRadioButton](../usage-api/text-document-api/ApiCheckBoxForm/Methods/IsRadioButton.md) method to Document API.
-- Added the [ApiCheckBoxForm/IsRequired](../usage-api/text-document-api/ApiCheckBoxForm/Methods/IsRequired.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetBackgroundColor](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetBorderColor](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetChecked](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChecked.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetFormKey](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetFormKey.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetPlaceholderText](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetRadioGroup](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetRadioGroup.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetRequired](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetRequired.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetTextPr](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiCheckBoxForm/SetTipText](../usage-api/text-document-api/ApiCheckBoxForm/Methods/SetTipText.md) method to Document API.
-- Added the [ApiCheckBoxForm/ToFixed](../usage-api/text-document-api/ApiCheckBoxForm/Methods/ToFixed.md) method to Document API.
-- Added the [ApiCheckBoxForm/ToInline](../usage-api/text-document-api/ApiCheckBoxForm/Methods/ToInline.md) method to Document API.
-- Added the [ApiComboBoxForm](../usage-api/text-document-api/ApiComboBoxForm/ApiComboBoxForm.md) class to Document API.
-- Added the [ApiComboBoxForm/Clear](../usage-api/text-document-api/ApiComboBoxForm/Methods/Clear.md) method to Document API.
-- Added the [ApiComboBoxForm/Copy](../usage-api/text-document-api/ApiComboBoxForm/Methods/Copy.md) method to Document API.
-- Added the [ApiComboBoxForm/GetClassType](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetClassType.md) method to Document API.
-- Added the [ApiComboBoxForm/GetFormKey](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetFormKey.md) method to Document API.
-- Added the [ApiComboBoxForm/GetFormType](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetFormType.md) method to Document API.
-- Added the [ApiComboBoxForm/GetListValues](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetListValues.md) method to Document API.
-- Added the [ApiComboBoxForm/GetText](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetText.md) method to Document API.
-- Added the [ApiComboBoxForm/GetTextPr](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiComboBoxForm/GetTipText](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetTipText.md) method to Document API.
-- Added the [ApiComboBoxForm/GetWrapperShape](../usage-api/text-document-api/ApiComboBoxForm/Methods/GetWrapperShape.md) method to Document API.
-- Added the [ApiComboBoxForm/IsEditable](../usage-api/text-document-api/ApiComboBoxForm/Methods/IsEditable.md) method to Document API.
-- Added the [ApiComboBoxForm/IsFixed](../usage-api/text-document-api/ApiComboBoxForm/Methods/IsFixed.md) method to Document API.
-- Added the [ApiComboBoxForm/IsRequired](../usage-api/text-document-api/ApiComboBoxForm/Methods/IsRequired.md) method to Document API.
-- Added the [ApiComboBoxForm/SelectListValue](../usage-api/text-document-api/ApiComboBoxForm/Methods/SelectListValue.md) method to Document API.
-- Added the [ApiComboBoxForm/SetBackgroundColor](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiComboBoxForm/SetBorderColor](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiComboBoxForm/SetFormKey](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetFormKey.md) method to Document API.
-- Added the [ApiComboBoxForm/SetListValues](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetListValues.md) method to Document API.
-- Added the [ApiComboBoxForm/SetPlaceholderText](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiComboBoxForm/SetRequired](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetRequired.md) method to Document API.
-- Added the [ApiComboBoxForm/SetText](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetText.md) method to Document API.
-- Added the [ApiComboBoxForm/SetTextPr](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiComboBoxForm/SetTipText](../usage-api/text-document-api/ApiComboBoxForm/Methods/SetTipText.md) method to Document API.
-- Added the [ApiComboBoxForm/ToFixed](../usage-api/text-document-api/ApiComboBoxForm/Methods/ToFixed.md) method to Document API.
-- Added the [ApiComboBoxForm/ToInline](../usage-api/text-document-api/ApiComboBoxForm/Methods/ToInline.md) method to Document API.
-- Added the [ApiDocument/ClearAllFields](../usage-api/text-document-api/ApiDocument/Methods/ClearAllFields.md) method to Document API.
-- Added the [ApiDocument/GetAllForms](../usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md) method to Document API.
-- Added the [ApiDocument/SetFormsHighlight](../usage-api/text-document-api/ApiDocument/Methods/SetFormsHighlight.md) method to Document API.
-- Added the [ApiFormBase](../usage-api/text-document-api/ApiFormBase/ApiFormBase.md) class to Document API.
-- Added the [ApiFormBase/Clear](../usage-api/text-document-api/ApiFormBase/Methods/Clear.md) method to Document API.
-- Added the [ApiFormBase/Copy](../usage-api/text-document-api/ApiFormBase/Methods/Copy.md) method to Document API.
-- Added the [ApiFormBase/GetClassType](../usage-api/text-document-api/ApiFormBase/Methods/GetClassType.md) method to Document API.
-- Added the [ApiFormBase/GetFormKey](../usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md) method to Document API.
-- Added the [ApiFormBase/GetFormType](../usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md) method to Document API.
-- Added the [ApiFormBase/GetText](../usage-api/text-document-api/ApiFormBase/Methods/GetText.md) method to Document API.
-- Added the [ApiFormBase/GetTextPr](../usage-api/text-document-api/ApiFormBase/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiFormBase/GetTipText](../usage-api/text-document-api/ApiFormBase/Methods/GetTipText.md) method to Document API.
-- Added the [ApiFormBase/GetWrapperShape](../usage-api/text-document-api/ApiFormBase/Methods/GetWrapperShape.md) method to Document API.
-- Added the [ApiFormBase/IsFixed](../usage-api/text-document-api/ApiFormBase/Methods/IsFixed.md) method to Document API.
-- Added the [ApiFormBase/IsRequired](../usage-api/text-document-api/ApiFormBase/Methods/IsRequired.md) method to Document API.
-- Added the [ApiFormBase/SetBackgroundColor](../usage-api/text-document-api/ApiFormBase/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiFormBase/SetBorderColor](../usage-api/text-document-api/ApiFormBase/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiFormBase/SetFormKey](../usage-api/text-document-api/ApiFormBase/Methods/SetFormKey.md) method to Document API.
-- Added the [ApiFormBase/SetPlaceholderText](../usage-api/text-document-api/ApiFormBase/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiFormBase/SetRequired](../usage-api/text-document-api/ApiFormBase/Methods/SetRequired.md) method to Document API.
-- Added the [ApiFormBase/SetTextPr](../usage-api/text-document-api/ApiFormBase/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiFormBase/SetTipText](../usage-api/text-document-api/ApiFormBase/Methods/SetTipText.md) method to Document API.
-- Added the [ApiFormBase/ToFixed](../usage-api/text-document-api/ApiFormBase/Methods/ToFixed.md) method to Document API.
-- Added the [ApiFormBase/ToInline](../usage-api/text-document-api/ApiFormBase/Methods/ToInline.md) method to Document API.
-- Added the [ApiInlineLvlSdt/GetPlaceholderText](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetPlaceholderText.md) method to Document API.
-- Added the [ApiInlineLvlSdt/IsForm](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/IsForm.md) method to Document API.
-- Added the [ApiInlineLvlSdt/SetPlaceholderText](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiPictureForm](../usage-api/text-document-api/ApiPictureForm/ApiPictureForm.md) class to Document API.
-- Added the [ApiPictureForm/Clear](../usage-api/text-document-api/ApiPictureForm/Methods/Clear.md) method to Document API.
-- Added the [ApiPictureForm/Copy](../usage-api/text-document-api/ApiPictureForm/Methods/Copy.md) method to Document API.
-- Added the [ApiPictureForm/GetClassType](../usage-api/text-document-api/ApiPictureForm/Methods/GetClassType.md) method to Document API.
-- Added the [ApiPictureForm/GetFormKey](../usage-api/text-document-api/ApiPictureForm/Methods/GetFormKey.md) method to Document API.
-- Added the [ApiPictureForm/GetFormType](../usage-api/text-document-api/ApiPictureForm/Methods/GetFormType.md) method to Document API.
-- Added the [ApiPictureForm/GetImage](../usage-api/text-document-api/ApiPictureForm/Methods/GetImage.md) method to Document API.
-- Added the [ApiPictureForm/GetPicturePosition](../usage-api/text-document-api/ApiPictureForm/Methods/GetPicturePosition.md) method to Document API.
-- Added the [ApiPictureForm/GetScaleFlag](../usage-api/text-document-api/ApiPictureForm/Methods/GetScaleFlag.md) method to Document API.
-- Added the [ApiPictureForm/GetText](../usage-api/text-document-api/ApiPictureForm/Methods/GetText.md) method to Document API.
-- Added the [ApiPictureForm/GetTextPr](../usage-api/text-document-api/ApiPictureForm/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiPictureForm/GetTipText](../usage-api/text-document-api/ApiPictureForm/Methods/GetTipText.md) method to Document API.
-- Added the [ApiPictureForm/GetWrapperShape](../usage-api/text-document-api/ApiPictureForm/Methods/GetWrapperShape.md) method to Document API.
-- Added the [ApiPictureForm/IsFixed](../usage-api/text-document-api/ApiPictureForm/Methods/IsFixed.md) method to Document API.
-- Added the [ApiPictureForm/IsLockAspectRatio](../usage-api/text-document-api/ApiPictureForm/Methods/IsLockAspectRatio.md) method to Document API.
-- Added the [ApiPictureForm/IsRequired](../usage-api/text-document-api/ApiPictureForm/Methods/IsRequired.md) method to Document API.
-- Added the [ApiPictureForm/IsRespectBorders](../usage-api/text-document-api/ApiPictureForm/Methods/IsRespectBorders.md) method to Document API.
-- Added the [ApiPictureForm/SetBackgroundColor](../usage-api/text-document-api/ApiPictureForm/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiPictureForm/SetBorderColor](../usage-api/text-document-api/ApiPictureForm/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiPictureForm/SetFormKey](../usage-api/text-document-api/ApiPictureForm/Methods/SetFormKey.md) method to Document API.
-- Added the [ApiPictureForm/SetImage](../usage-api/text-document-api/ApiPictureForm/Methods/SetImage.md) method to Document API.
-- Added the [ApiPictureForm/SetLockAspectRatio](../usage-api/text-document-api/ApiPictureForm/Methods/SetLockAspectRatio.md) method to Document API.
-- Added the [ApiPictureForm/SetPicturePosition](../usage-api/text-document-api/ApiPictureForm/Methods/SetPicturePosition.md) method to Document API.
-- Added the [ApiPictureForm/SetPlaceholderText](../usage-api/text-document-api/ApiPictureForm/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiPictureForm/SetRequired](../usage-api/text-document-api/ApiPictureForm/Methods/SetRequired.md) method to Document API.
-- Added the [ApiPictureForm/SetRespectBorders](../usage-api/text-document-api/ApiPictureForm/Methods/SetRespectBorders.md) method to Document API.
-- Added the [ApiPictureForm/SetScaleFlag](../usage-api/text-document-api/ApiPictureForm/Methods/SetScaleFlag.md) method to Document API.
-- Added the [ApiPictureForm/SetTextPr](../usage-api/text-document-api/ApiPictureForm/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiPictureForm/SetTipText](../usage-api/text-document-api/ApiPictureForm/Methods/SetTipText.md) method to Document API.
-- Added the [ApiPictureForm/ToFixed](../usage-api/text-document-api/ApiPictureForm/Methods/ToFixed.md) method to Document API.
-- Added the [ApiPictureForm/ToInline](../usage-api/text-document-api/ApiPictureForm/Methods/ToInline.md) method to Document API.
-- Added the [ApiTextForm](../usage-api/text-document-api/ApiTextForm/ApiTextForm.md) class to Document API.
-- Added the [ApiTextForm/Clear](../usage-api/text-document-api/ApiTextForm/Methods/Clear.md) method to Document API.
-- Added the [ApiTextForm/Copy](../usage-api/text-document-api/ApiTextForm/Methods/Copy.md) method to Document API.
-- Added the [ApiTextForm/GetCharactersLimit](../usage-api/text-document-api/ApiTextForm/Methods/GetCharactersLimit.md) method to Document API.
-- Added the [ApiTextForm/GetClassType](../usage-api/text-document-api/ApiTextForm/Methods/GetClassType.md) method to Document API.
-- Added the [ApiTextForm/GetFormKey](../usage-api/text-document-api/ApiTextForm/Methods/GetFormKey.md) method to Document API.
-- Added the [ApiTextForm/GetFormType](../usage-api/text-document-api/ApiTextForm/Methods/GetFormType.md) method to Document API.
-- Added the [ApiTextForm/GetText](../usage-api/text-document-api/ApiTextForm/Methods/GetText.md) method to Document API.
-- Added the [ApiTextForm/GetTextPr](../usage-api/text-document-api/ApiTextForm/Methods/GetTextPr.md) method to Document API.
-- Added the [ApiTextForm/GetTipText](../usage-api/text-document-api/ApiTextForm/Methods/GetTipText.md) method to Document API.
-- Added the [ApiTextForm/GetWrapperShape](../usage-api/text-document-api/ApiTextForm/Methods/GetWrapperShape.md) method to Document API.
-- Added the [ApiTextForm/IsAutoFit](../usage-api/text-document-api/ApiTextForm/Methods/IsAutoFit.md) method to Document API.
-- Added the [ApiTextForm/IsComb](../usage-api/text-document-api/ApiTextForm/Methods/IsComb.md) method to Document API.
-- Added the [ApiTextForm/IsFixed](../usage-api/text-document-api/ApiTextForm/Methods/IsFixed.md) method to Document API.
-- Added the [ApiTextForm/IsMultiline](../usage-api/text-document-api/ApiTextForm/Methods/IsMultiline.md) method to Document API.
-- Added the [ApiTextForm/IsRequired](../usage-api/text-document-api/ApiTextForm/Methods/IsRequired.md) method to Document API.
-- Added the [ApiTextForm/SetAutoFit](../usage-api/text-document-api/ApiTextForm/Methods/SetAutoFit.md) method to Document API.
-- Added the [ApiTextForm/SetBackgroundColor](../usage-api/text-document-api/ApiTextForm/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiTextForm/SetBorderColor](../usage-api/text-document-api/ApiTextForm/Methods/SetBorderColor.md) method to Document API.
-- Added the [ApiTextForm/SetCellWidth](../usage-api/text-document-api/ApiTextForm/Methods/SetCellWidth.md) method to Document API.
-- Added the [ApiTextForm/SetCharactersLimit](../usage-api/text-document-api/ApiTextForm/Methods/SetCharactersLimit.md) method to Document API.
-- Added the [ApiTextForm/SetComb](../usage-api/text-document-api/ApiTextForm/Methods/SetComb.md) method to Document API.
-- Added the [ApiTextForm/SetFormKey](../usage-api/text-document-api/ApiTextForm/Methods/SetFormKey.md) method to Document API.
-- Added the [ApiTextForm/SetMultiline](../usage-api/text-document-api/ApiTextForm/Methods/SetMultiline.md) method to Document API.
-- Added the [ApiTextForm/SetPlaceholderText](../usage-api/text-document-api/ApiTextForm/Methods/SetPlaceholderText.md) method to Document API.
-- Added the [ApiTextForm/SetRequired](../usage-api/text-document-api/ApiTextForm/Methods/SetRequired.md) method to Document API.
-- Added the [ApiTextForm/SetText](../usage-api/text-document-api/ApiTextForm/Methods/SetText.md) method to Document API.
-- Added the [ApiTextForm/SetTextPr](../usage-api/text-document-api/ApiTextForm/Methods/SetTextPr.md) method to Document API.
-- Added the [ApiTextForm/SetTipText](../usage-api/text-document-api/ApiTextForm/Methods/SetTipText.md) method to Document API.
-- Added the [ApiTextForm/ToFixed](../usage-api/text-document-api/ApiTextForm/Methods/ToFixed.md) method to Document API.
-- Added the [ApiTextForm/ToInline](../usage-api/text-document-api/ApiTextForm/Methods/ToInline.md) method to Document API.
+- Added the [ApiBlockLvlSdt/GetPlaceholderText](../usage-api/document-api/ApiBlockLvlSdt/Methods/GetPlaceholderText.md) method to Document API.
+- Added the [ApiBlockLvlSdt/SetPlaceholderText](../usage-api/document-api/ApiBlockLvlSdt/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiCheckBoxForm](../usage-api/document-api/ApiCheckBoxForm/ApiCheckBoxForm.md) class to Document API.
+- Added the [ApiCheckBoxForm/Clear](../usage-api/document-api/ApiCheckBoxForm/Methods/Clear.md) method to Document API.
+- Added the [ApiCheckBoxForm/Copy](../usage-api/document-api/ApiCheckBoxForm/Methods/Copy.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetClassType](../usage-api/document-api/ApiCheckBoxForm/Methods/GetClassType.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetFormKey](../usage-api/document-api/ApiCheckBoxForm/Methods/GetFormKey.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetFormType](../usage-api/document-api/ApiCheckBoxForm/Methods/GetFormType.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetRadioGroup](../usage-api/document-api/ApiCheckBoxForm/Methods/GetRadioGroup.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetText](../usage-api/document-api/ApiCheckBoxForm/Methods/GetText.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetTextPr](../usage-api/document-api/ApiCheckBoxForm/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetTipText](../usage-api/document-api/ApiCheckBoxForm/Methods/GetTipText.md) method to Document API.
+- Added the [ApiCheckBoxForm/GetWrapperShape](../usage-api/document-api/ApiCheckBoxForm/Methods/GetWrapperShape.md) method to Document API.
+- Added the [ApiCheckBoxForm/IsChecked](../usage-api/document-api/ApiCheckBoxForm/Methods/IsChecked.md) method to Document API.
+- Added the [ApiCheckBoxForm/IsFixed](../usage-api/document-api/ApiCheckBoxForm/Methods/IsFixed.md) method to Document API.
+- Added the [ApiCheckBoxForm/IsRadioButton](../usage-api/document-api/ApiCheckBoxForm/Methods/IsRadioButton.md) method to Document API.
+- Added the [ApiCheckBoxForm/IsRequired](../usage-api/document-api/ApiCheckBoxForm/Methods/IsRequired.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetBackgroundColor](../usage-api/document-api/ApiCheckBoxForm/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetBorderColor](../usage-api/document-api/ApiCheckBoxForm/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetChecked](../usage-api/document-api/ApiCheckBoxForm/Methods/SetChecked.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetFormKey](../usage-api/document-api/ApiCheckBoxForm/Methods/SetFormKey.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetPlaceholderText](../usage-api/document-api/ApiCheckBoxForm/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetRadioGroup](../usage-api/document-api/ApiCheckBoxForm/Methods/SetRadioGroup.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetRequired](../usage-api/document-api/ApiCheckBoxForm/Methods/SetRequired.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetTextPr](../usage-api/document-api/ApiCheckBoxForm/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiCheckBoxForm/SetTipText](../usage-api/document-api/ApiCheckBoxForm/Methods/SetTipText.md) method to Document API.
+- Added the [ApiCheckBoxForm/ToFixed](../usage-api/document-api/ApiCheckBoxForm/Methods/ToFixed.md) method to Document API.
+- Added the [ApiCheckBoxForm/ToInline](../usage-api/document-api/ApiCheckBoxForm/Methods/ToInline.md) method to Document API.
+- Added the [ApiComboBoxForm](../usage-api/document-api/ApiComboBoxForm/ApiComboBoxForm.md) class to Document API.
+- Added the [ApiComboBoxForm/Clear](../usage-api/document-api/ApiComboBoxForm/Methods/Clear.md) method to Document API.
+- Added the [ApiComboBoxForm/Copy](../usage-api/document-api/ApiComboBoxForm/Methods/Copy.md) method to Document API.
+- Added the [ApiComboBoxForm/GetClassType](../usage-api/document-api/ApiComboBoxForm/Methods/GetClassType.md) method to Document API.
+- Added the [ApiComboBoxForm/GetFormKey](../usage-api/document-api/ApiComboBoxForm/Methods/GetFormKey.md) method to Document API.
+- Added the [ApiComboBoxForm/GetFormType](../usage-api/document-api/ApiComboBoxForm/Methods/GetFormType.md) method to Document API.
+- Added the [ApiComboBoxForm/GetListValues](../usage-api/document-api/ApiComboBoxForm/Methods/GetListValues.md) method to Document API.
+- Added the [ApiComboBoxForm/GetText](../usage-api/document-api/ApiComboBoxForm/Methods/GetText.md) method to Document API.
+- Added the [ApiComboBoxForm/GetTextPr](../usage-api/document-api/ApiComboBoxForm/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiComboBoxForm/GetTipText](../usage-api/document-api/ApiComboBoxForm/Methods/GetTipText.md) method to Document API.
+- Added the [ApiComboBoxForm/GetWrapperShape](../usage-api/document-api/ApiComboBoxForm/Methods/GetWrapperShape.md) method to Document API.
+- Added the [ApiComboBoxForm/IsEditable](../usage-api/document-api/ApiComboBoxForm/Methods/IsEditable.md) method to Document API.
+- Added the [ApiComboBoxForm/IsFixed](../usage-api/document-api/ApiComboBoxForm/Methods/IsFixed.md) method to Document API.
+- Added the [ApiComboBoxForm/IsRequired](../usage-api/document-api/ApiComboBoxForm/Methods/IsRequired.md) method to Document API.
+- Added the [ApiComboBoxForm/SelectListValue](../usage-api/document-api/ApiComboBoxForm/Methods/SelectListValue.md) method to Document API.
+- Added the [ApiComboBoxForm/SetBackgroundColor](../usage-api/document-api/ApiComboBoxForm/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiComboBoxForm/SetBorderColor](../usage-api/document-api/ApiComboBoxForm/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiComboBoxForm/SetFormKey](../usage-api/document-api/ApiComboBoxForm/Methods/SetFormKey.md) method to Document API.
+- Added the [ApiComboBoxForm/SetListValues](../usage-api/document-api/ApiComboBoxForm/Methods/SetListValues.md) method to Document API.
+- Added the [ApiComboBoxForm/SetPlaceholderText](../usage-api/document-api/ApiComboBoxForm/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiComboBoxForm/SetRequired](../usage-api/document-api/ApiComboBoxForm/Methods/SetRequired.md) method to Document API.
+- Added the [ApiComboBoxForm/SetText](../usage-api/document-api/ApiComboBoxForm/Methods/SetText.md) method to Document API.
+- Added the [ApiComboBoxForm/SetTextPr](../usage-api/document-api/ApiComboBoxForm/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiComboBoxForm/SetTipText](../usage-api/document-api/ApiComboBoxForm/Methods/SetTipText.md) method to Document API.
+- Added the [ApiComboBoxForm/ToFixed](../usage-api/document-api/ApiComboBoxForm/Methods/ToFixed.md) method to Document API.
+- Added the [ApiComboBoxForm/ToInline](../usage-api/document-api/ApiComboBoxForm/Methods/ToInline.md) method to Document API.
+- Added the [ApiDocument/ClearAllFields](../usage-api/document-api/ApiDocument/Methods/ClearAllFields.md) method to Document API.
+- Added the [ApiDocument/GetAllForms](../usage-api/document-api/ApiDocument/Methods/GetAllForms.md) method to Document API.
+- Added the [ApiDocument/SetFormsHighlight](../usage-api/document-api/ApiDocument/Methods/SetFormsHighlight.md) method to Document API.
+- Added the [ApiFormBase](../usage-api/document-api/ApiFormBase/ApiFormBase.md) class to Document API.
+- Added the [ApiFormBase/Clear](../usage-api/document-api/ApiFormBase/Methods/Clear.md) method to Document API.
+- Added the [ApiFormBase/Copy](../usage-api/document-api/ApiFormBase/Methods/Copy.md) method to Document API.
+- Added the [ApiFormBase/GetClassType](../usage-api/document-api/ApiFormBase/Methods/GetClassType.md) method to Document API.
+- Added the [ApiFormBase/GetFormKey](../usage-api/document-api/ApiFormBase/Methods/GetFormKey.md) method to Document API.
+- Added the [ApiFormBase/GetFormType](../usage-api/document-api/ApiFormBase/Methods/GetFormType.md) method to Document API.
+- Added the [ApiFormBase/GetText](../usage-api/document-api/ApiFormBase/Methods/GetText.md) method to Document API.
+- Added the [ApiFormBase/GetTextPr](../usage-api/document-api/ApiFormBase/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiFormBase/GetTipText](../usage-api/document-api/ApiFormBase/Methods/GetTipText.md) method to Document API.
+- Added the [ApiFormBase/GetWrapperShape](../usage-api/document-api/ApiFormBase/Methods/GetWrapperShape.md) method to Document API.
+- Added the [ApiFormBase/IsFixed](../usage-api/document-api/ApiFormBase/Methods/IsFixed.md) method to Document API.
+- Added the [ApiFormBase/IsRequired](../usage-api/document-api/ApiFormBase/Methods/IsRequired.md) method to Document API.
+- Added the [ApiFormBase/SetBackgroundColor](../usage-api/document-api/ApiFormBase/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiFormBase/SetBorderColor](../usage-api/document-api/ApiFormBase/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiFormBase/SetFormKey](../usage-api/document-api/ApiFormBase/Methods/SetFormKey.md) method to Document API.
+- Added the [ApiFormBase/SetPlaceholderText](../usage-api/document-api/ApiFormBase/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiFormBase/SetRequired](../usage-api/document-api/ApiFormBase/Methods/SetRequired.md) method to Document API.
+- Added the [ApiFormBase/SetTextPr](../usage-api/document-api/ApiFormBase/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiFormBase/SetTipText](../usage-api/document-api/ApiFormBase/Methods/SetTipText.md) method to Document API.
+- Added the [ApiFormBase/ToFixed](../usage-api/document-api/ApiFormBase/Methods/ToFixed.md) method to Document API.
+- Added the [ApiFormBase/ToInline](../usage-api/document-api/ApiFormBase/Methods/ToInline.md) method to Document API.
+- Added the [ApiInlineLvlSdt/GetPlaceholderText](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetPlaceholderText.md) method to Document API.
+- Added the [ApiInlineLvlSdt/IsForm](../usage-api/document-api/ApiInlineLvlSdt/Methods/IsForm.md) method to Document API.
+- Added the [ApiInlineLvlSdt/SetPlaceholderText](../usage-api/document-api/ApiInlineLvlSdt/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiPictureForm](../usage-api/document-api/ApiPictureForm/ApiPictureForm.md) class to Document API.
+- Added the [ApiPictureForm/Clear](../usage-api/document-api/ApiPictureForm/Methods/Clear.md) method to Document API.
+- Added the [ApiPictureForm/Copy](../usage-api/document-api/ApiPictureForm/Methods/Copy.md) method to Document API.
+- Added the [ApiPictureForm/GetClassType](../usage-api/document-api/ApiPictureForm/Methods/GetClassType.md) method to Document API.
+- Added the [ApiPictureForm/GetFormKey](../usage-api/document-api/ApiPictureForm/Methods/GetFormKey.md) method to Document API.
+- Added the [ApiPictureForm/GetFormType](../usage-api/document-api/ApiPictureForm/Methods/GetFormType.md) method to Document API.
+- Added the [ApiPictureForm/GetImage](../usage-api/document-api/ApiPictureForm/Methods/GetImage.md) method to Document API.
+- Added the [ApiPictureForm/GetPicturePosition](../usage-api/document-api/ApiPictureForm/Methods/GetPicturePosition.md) method to Document API.
+- Added the [ApiPictureForm/GetScaleFlag](../usage-api/document-api/ApiPictureForm/Methods/GetScaleFlag.md) method to Document API.
+- Added the [ApiPictureForm/GetText](../usage-api/document-api/ApiPictureForm/Methods/GetText.md) method to Document API.
+- Added the [ApiPictureForm/GetTextPr](../usage-api/document-api/ApiPictureForm/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiPictureForm/GetTipText](../usage-api/document-api/ApiPictureForm/Methods/GetTipText.md) method to Document API.
+- Added the [ApiPictureForm/GetWrapperShape](../usage-api/document-api/ApiPictureForm/Methods/GetWrapperShape.md) method to Document API.
+- Added the [ApiPictureForm/IsFixed](../usage-api/document-api/ApiPictureForm/Methods/IsFixed.md) method to Document API.
+- Added the [ApiPictureForm/IsLockAspectRatio](../usage-api/document-api/ApiPictureForm/Methods/IsLockAspectRatio.md) method to Document API.
+- Added the [ApiPictureForm/IsRequired](../usage-api/document-api/ApiPictureForm/Methods/IsRequired.md) method to Document API.
+- Added the [ApiPictureForm/IsRespectBorders](../usage-api/document-api/ApiPictureForm/Methods/IsRespectBorders.md) method to Document API.
+- Added the [ApiPictureForm/SetBackgroundColor](../usage-api/document-api/ApiPictureForm/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiPictureForm/SetBorderColor](../usage-api/document-api/ApiPictureForm/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiPictureForm/SetFormKey](../usage-api/document-api/ApiPictureForm/Methods/SetFormKey.md) method to Document API.
+- Added the [ApiPictureForm/SetImage](../usage-api/document-api/ApiPictureForm/Methods/SetImage.md) method to Document API.
+- Added the [ApiPictureForm/SetLockAspectRatio](../usage-api/document-api/ApiPictureForm/Methods/SetLockAspectRatio.md) method to Document API.
+- Added the [ApiPictureForm/SetPicturePosition](../usage-api/document-api/ApiPictureForm/Methods/SetPicturePosition.md) method to Document API.
+- Added the [ApiPictureForm/SetPlaceholderText](../usage-api/document-api/ApiPictureForm/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiPictureForm/SetRequired](../usage-api/document-api/ApiPictureForm/Methods/SetRequired.md) method to Document API.
+- Added the [ApiPictureForm/SetRespectBorders](../usage-api/document-api/ApiPictureForm/Methods/SetRespectBorders.md) method to Document API.
+- Added the [ApiPictureForm/SetScaleFlag](../usage-api/document-api/ApiPictureForm/Methods/SetScaleFlag.md) method to Document API.
+- Added the [ApiPictureForm/SetTextPr](../usage-api/document-api/ApiPictureForm/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiPictureForm/SetTipText](../usage-api/document-api/ApiPictureForm/Methods/SetTipText.md) method to Document API.
+- Added the [ApiPictureForm/ToFixed](../usage-api/document-api/ApiPictureForm/Methods/ToFixed.md) method to Document API.
+- Added the [ApiPictureForm/ToInline](../usage-api/document-api/ApiPictureForm/Methods/ToInline.md) method to Document API.
+- Added the [ApiTextForm](../usage-api/document-api/ApiTextForm/ApiTextForm.md) class to Document API.
+- Added the [ApiTextForm/Clear](../usage-api/document-api/ApiTextForm/Methods/Clear.md) method to Document API.
+- Added the [ApiTextForm/Copy](../usage-api/document-api/ApiTextForm/Methods/Copy.md) method to Document API.
+- Added the [ApiTextForm/GetCharactersLimit](../usage-api/document-api/ApiTextForm/Methods/GetCharactersLimit.md) method to Document API.
+- Added the [ApiTextForm/GetClassType](../usage-api/document-api/ApiTextForm/Methods/GetClassType.md) method to Document API.
+- Added the [ApiTextForm/GetFormKey](../usage-api/document-api/ApiTextForm/Methods/GetFormKey.md) method to Document API.
+- Added the [ApiTextForm/GetFormType](../usage-api/document-api/ApiTextForm/Methods/GetFormType.md) method to Document API.
+- Added the [ApiTextForm/GetText](../usage-api/document-api/ApiTextForm/Methods/GetText.md) method to Document API.
+- Added the [ApiTextForm/GetTextPr](../usage-api/document-api/ApiTextForm/Methods/GetTextPr.md) method to Document API.
+- Added the [ApiTextForm/GetTipText](../usage-api/document-api/ApiTextForm/Methods/GetTipText.md) method to Document API.
+- Added the [ApiTextForm/GetWrapperShape](../usage-api/document-api/ApiTextForm/Methods/GetWrapperShape.md) method to Document API.
+- Added the [ApiTextForm/IsAutoFit](../usage-api/document-api/ApiTextForm/Methods/IsAutoFit.md) method to Document API.
+- Added the [ApiTextForm/IsComb](../usage-api/document-api/ApiTextForm/Methods/IsComb.md) method to Document API.
+- Added the [ApiTextForm/IsFixed](../usage-api/document-api/ApiTextForm/Methods/IsFixed.md) method to Document API.
+- Added the [ApiTextForm/IsMultiline](../usage-api/document-api/ApiTextForm/Methods/IsMultiline.md) method to Document API.
+- Added the [ApiTextForm/IsRequired](../usage-api/document-api/ApiTextForm/Methods/IsRequired.md) method to Document API.
+- Added the [ApiTextForm/SetAutoFit](../usage-api/document-api/ApiTextForm/Methods/SetAutoFit.md) method to Document API.
+- Added the [ApiTextForm/SetBackgroundColor](../usage-api/document-api/ApiTextForm/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiTextForm/SetBorderColor](../usage-api/document-api/ApiTextForm/Methods/SetBorderColor.md) method to Document API.
+- Added the [ApiTextForm/SetCellWidth](../usage-api/document-api/ApiTextForm/Methods/SetCellWidth.md) method to Document API.
+- Added the [ApiTextForm/SetCharactersLimit](../usage-api/document-api/ApiTextForm/Methods/SetCharactersLimit.md) method to Document API.
+- Added the [ApiTextForm/SetComb](../usage-api/document-api/ApiTextForm/Methods/SetComb.md) method to Document API.
+- Added the [ApiTextForm/SetFormKey](../usage-api/document-api/ApiTextForm/Methods/SetFormKey.md) method to Document API.
+- Added the [ApiTextForm/SetMultiline](../usage-api/document-api/ApiTextForm/Methods/SetMultiline.md) method to Document API.
+- Added the [ApiTextForm/SetPlaceholderText](../usage-api/document-api/ApiTextForm/Methods/SetPlaceholderText.md) method to Document API.
+- Added the [ApiTextForm/SetRequired](../usage-api/document-api/ApiTextForm/Methods/SetRequired.md) method to Document API.
+- Added the [ApiTextForm/SetText](../usage-api/document-api/ApiTextForm/Methods/SetText.md) method to Document API.
+- Added the [ApiTextForm/SetTextPr](../usage-api/document-api/ApiTextForm/Methods/SetTextPr.md) method to Document API.
+- Added the [ApiTextForm/SetTipText](../usage-api/document-api/ApiTextForm/Methods/SetTipText.md) method to Document API.
+- Added the [ApiTextForm/ToFixed](../usage-api/document-api/ApiTextForm/Methods/ToFixed.md) method to Document API.
+- Added the [ApiTextForm/ToInline](../usage-api/document-api/ApiTextForm/Methods/ToInline.md) method to Document API.
 
 ### Cross-reference methods
 
-- Added the [ApiDocument/GetAllBookmarksNames](../usage-api/text-document-api/ApiDocument/Methods/GetAllBookmarksNames.md) method to Document API.
-- Added the [ApiDocument/GetAllCaptionParagraphs](../usage-api/text-document-api/ApiDocument/Methods/GetAllCaptionParagraphs.md) method to Document API.
-- Added the [ApiDocument/GetAllHeadingParagraphs](../usage-api/text-document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md) method to Document API.
-- Added the [ApiDocument/GetAllNumberedParagraphs](../usage-api/text-document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md) method to Document API.
-- Added the [ApiDocument/GetEndNotesFirstParagraphs](../usage-api/text-document-api/ApiDocument/Methods/GetEndNotesFirstParagraphs.md) method to Document API.
-- Added the [ApiDocument/GetFootnotesFirstParagraphs](../usage-api/text-document-api/ApiDocument/Methods/GetFootnotesFirstParagraphs.md) method to Document API.
-- Added the [ApiParagraph/AddBookmarkCrossRef](../usage-api/text-document-api/ApiParagraph/Methods/AddBookmarkCrossRef.md) method to Document API.
-- Added the [ApiParagraph/AddCaptionCrossRef](../usage-api/text-document-api/ApiParagraph/Methods/AddCaptionCrossRef.md) method to Document API.
-- Added the [ApiParagraph/AddEndnoteCrossRef](../usage-api/text-document-api/ApiParagraph/Methods/AddEndnoteCrossRef.md) method to Document API.
-- Added the [ApiParagraph/AddFootnoteCrossRef](../usage-api/text-document-api/ApiParagraph/Methods/AddFootnoteCrossRef.md) method to Document API.
-- Added the [ApiParagraph/AddHeadingCrossRef](../usage-api/text-document-api/ApiParagraph/Methods/AddHeadingCrossRef.md) method to Document API.
-- Added the [ApiParagraph/AddNumberedCrossRef](../usage-api/text-document-api/ApiParagraph/Methods/AddNumberedCrossRef.md) method to Document API.
+- Added the [ApiDocument/GetAllBookmarksNames](../usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames.md) method to Document API.
+- Added the [ApiDocument/GetAllCaptionParagraphs](../usage-api/document-api/ApiDocument/Methods/GetAllCaptionParagraphs.md) method to Document API.
+- Added the [ApiDocument/GetAllHeadingParagraphs](../usage-api/document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md) method to Document API.
+- Added the [ApiDocument/GetAllNumberedParagraphs](../usage-api/document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md) method to Document API.
+- Added the [ApiDocument/GetEndNotesFirstParagraphs](../usage-api/document-api/ApiDocument/Methods/GetEndNotesFirstParagraphs.md) method to Document API.
+- Added the [ApiDocument/GetFootnotesFirstParagraphs](../usage-api/document-api/ApiDocument/Methods/GetFootnotesFirstParagraphs.md) method to Document API.
+- Added the [ApiParagraph/AddBookmarkCrossRef](../usage-api/document-api/ApiParagraph/Methods/AddBookmarkCrossRef.md) method to Document API.
+- Added the [ApiParagraph/AddCaptionCrossRef](../usage-api/document-api/ApiParagraph/Methods/AddCaptionCrossRef.md) method to Document API.
+- Added the [ApiParagraph/AddEndnoteCrossRef](../usage-api/document-api/ApiParagraph/Methods/AddEndnoteCrossRef.md) method to Document API.
+- Added the [ApiParagraph/AddFootnoteCrossRef](../usage-api/document-api/ApiParagraph/Methods/AddFootnoteCrossRef.md) method to Document API.
+- Added the [ApiParagraph/AddHeadingCrossRef](../usage-api/document-api/ApiParagraph/Methods/AddHeadingCrossRef.md) method to Document API.
+- Added the [ApiParagraph/AddNumberedCrossRef](../usage-api/document-api/ApiParagraph/Methods/AddNumberedCrossRef.md) method to Document API.
 
 ### Review methods
 
-- Added the [ApiDocument/AcceptAllRevisionChanges](../usage-api/text-document-api/ApiDocument/Methods/AcceptAllRevisionChanges.md) method to Document API.
-- Added the [ApiDocument/RejectAllRevisionChanges](../usage-api/text-document-api/ApiDocument/Methods/RejectAllRevisionChanges.md) method to Document API.
+- Added the [ApiDocument/AcceptAllRevisionChanges](../usage-api/document-api/ApiDocument/Methods/AcceptAllRevisionChanges.md) method to Document API.
+- Added the [ApiDocument/RejectAllRevisionChanges](../usage-api/document-api/ApiDocument/Methods/RejectAllRevisionChanges.md) method to Document API.
 
 ### Table background methods
 
-- Added the [ApiTable/SetBackgroundColor](../usage-api/text-document-api/ApiTable/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiTableCell/SetBackgroundColor](../usage-api/text-document-api/ApiTableCell/Methods/SetBackgroundColor.md) method to Document API.
-- Added the [ApiTableCell/SetColumnBackgroundColor](../usage-api/text-document-api/ApiTableCell/Methods/SetColumnBackgroundColor.md) method to Document API.
-- Added the [ApiTableRow/SetBackgroundColor](../usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiTable/SetBackgroundColor](../usage-api/document-api/ApiTable/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiTableCell/SetBackgroundColor](../usage-api/document-api/ApiTableCell/Methods/SetBackgroundColor.md) method to Document API.
+- Added the [ApiTableCell/SetColumnBackgroundColor](../usage-api/document-api/ApiTableCell/Methods/SetColumnBackgroundColor.md) method to Document API.
+- Added the [ApiTableRow/SetBackgroundColor](../usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md) method to Document API.
 
 ### Areas methods
 
@@ -3940,15 +3940,15 @@ The list of changes for Office JavaScript API.
 
 ### Other methods
 
-- Added the *sParaTab* and *sParaNewLine* parameters to the [Api/ReplaceTextSmart](../usage-api/text-document-api/Api/Methods/ReplaceTextSmart.md) method of Document API.
-- Added the [ApiInlineLvlSdt/GetParentParagraph](../usage-api/text-document-api/ApiInlineLvlSdt/Methods/GetParentParagraph.md) method to Document API.
+- Added the *sParaTab* and *sParaNewLine* parameters to the [Api/ReplaceTextSmart](../usage-api/document-api/Api/Methods/ReplaceTextSmart.md) method of Document API.
+- Added the [ApiInlineLvlSdt/GetParentParagraph](../usage-api/document-api/ApiInlineLvlSdt/Methods/GetParentParagraph.md) method to Document API.
 - Removed the *ApiShape/GetDocContent* method from Spreadsheet API.
 
 ## Version 7.0
 
-- Added the [Api/ConvertDocument](../usage-api/text-document-api/Api/Methods/ConvertDocument.md) method to Document API.
-- Added the [ApiDocument/ToHtml](../usage-api/text-document-api/ApiDocument/Methods/ToHtml.md) method to Document API.
-- Added the [ApiDocument/ToMarkdown](../usage-api/text-document-api/ApiDocument/Methods/ToMarkdown.md) method to Document API.
+- Added the [Api/ConvertDocument](../usage-api/document-api/Api/Methods/ConvertDocument.md) method to Document API.
+- Added the [ApiDocument/ToHtml](../usage-api/document-api/ApiDocument/Methods/ToHtml.md) method to Document API.
+- Added the [ApiDocument/ToMarkdown](../usage-api/document-api/ApiDocument/Methods/ToMarkdown.md) method to Document API.
 - Added the [SortOrientation](../usage-api/spreadsheet-api/Enumeration/SortOrientation.md) simple type.
 - Added the [SortHeader](../usage-api/spreadsheet-api/Enumeration/SortHeader.md) simple type.
 - Added the [SortOrder](../usage-api/spreadsheet-api/Enumeration/SortOrder.md) simple type.
@@ -3958,16 +3958,16 @@ The list of changes for Office JavaScript API.
 
 ## Version 6.4
 
-- Changed the return value of the [Api/CreateRange](../usage-api/text-document-api/Api/Methods/CreateRange.md) method of Document API.
+- Changed the return value of the [Api/CreateRange](../usage-api/document-api/Api/Methods/CreateRange.md) method of Document API.
 - Removed the *Api/GetFirstRunInArray* method from Document API.
 - Removed the *Api/GetLastRunInArray* method from Document API.
-- Added parameters to the [ApiChart/SetLegendFontSize](../usage-api/text-document-api/ApiChart/Methods/SetLegendFontSize.md) method of Document API.
-- Added parameters to the [ApiDocument/GetElement](../usage-api/text-document-api/ApiDocument/Methods/GetElement.md) method of Document API.
-- Added the return value to the [ApiDocument/Push](../usage-api/text-document-api/ApiDocument/Methods/Push.md) method of Document API.
-- Added parameters to the [ApiDocumentContent/GetElement](../usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md) method of Document API.
-- Added the return value to the [ApiDocumentContent/Push](../usage-api/text-document-api/ApiDocumentContent/Methods/Push.md) method of Document API.
-- Removed parameters from the [ApiRange/Select](../usage-api/text-document-api/ApiRange/Methods/Select.md) method of Document API.
-- Added the *oCell* parameter to the [ApiTable/AddElement](../usage-api/text-document-api/ApiTable/Methods/AddElement.md) method of Document API.
+- Added parameters to the [ApiChart/SetLegendFontSize](../usage-api/document-api/ApiChart/Methods/SetLegendFontSize.md) method of Document API.
+- Added parameters to the [ApiDocument/GetElement](../usage-api/document-api/ApiDocument/Methods/GetElement.md) method of Document API.
+- Added the return value to the [ApiDocument/Push](../usage-api/document-api/ApiDocument/Methods/Push.md) method of Document API.
+- Added parameters to the [ApiDocumentContent/GetElement](../usage-api/document-api/ApiDocumentContent/Methods/GetElement.md) method of Document API.
+- Added the return value to the [ApiDocumentContent/Push](../usage-api/document-api/ApiDocumentContent/Methods/Push.md) method of Document API.
+- Removed parameters from the [ApiRange/Select](../usage-api/document-api/ApiRange/Methods/Select.md) method of Document API.
+- Added the *oCell* parameter to the [ApiTable/AddElement](../usage-api/document-api/ApiTable/Methods/AddElement.md) method of Document API.
 - Added parameters to the [Api/GetRange](../usage-api/spreadsheet-api/Api/Methods/GetRange.md) method of Spreadsheet API.
 - Added the [ApiComment/GetClassType](../usage-api/spreadsheet-api/ApiComment/Methods/GetClassType.md) method to Spreadsheet API.
 - Removed the *ApiDocument/Last* method from Spreadsheet and Presentation API.

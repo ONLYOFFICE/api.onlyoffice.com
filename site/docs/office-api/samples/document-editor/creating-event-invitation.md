@@ -8,12 +8,12 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a custom-sized event invitation document with specific page dimensions and content:
 
-- set custom page size (210 × 99 mm) for invitation format ([ApiSection](/docs/office-api/usage-api/text-document-api/ApiSection/ApiSection.md));
-- configure page orientation and margins ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md));
-- add centered title and event details ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md), [ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md));
-- apply custom text formatting and styles ([ApiTextPr](/docs/office-api/usage-api/text-document-api/ApiTextPr/ApiTextPr.md), [ApiStyle](/docs/office-api/usage-api/text-document-api/ApiStyle/ApiStyle.md));
-- insert contact information and RSVP details ([ApiParaPr](/docs/office-api/usage-api/text-document-api/ApiParaPr/ApiParaPr.md));
-- add decorative borders around the entire invitation content ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md)).
+- set custom page size (210 × 99 mm) for invitation format ([ApiSection](/docs/office-api/usage-api/document-api/ApiSection/ApiSection.md));
+- configure page orientation and margins ([ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md));
+- add centered title and event details ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md), [ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md));
+- apply custom text formatting and styles ([ApiTextPr](/docs/office-api/usage-api/document-api/ApiTextPr/ApiTextPr.md), [ApiStyle](/docs/office-api/usage-api/document-api/ApiStyle/ApiStyle.md));
+- insert contact information and RSVP details ([ApiParaPr](/docs/office-api/usage-api/document-api/ApiParaPr/ApiParaPr.md));
+- add decorative borders around the entire invitation content ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md)).
 
 ```ts editor-docx zoom=60
 const doc = Api.GetDocument();

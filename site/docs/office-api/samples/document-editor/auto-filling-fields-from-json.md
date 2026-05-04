@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document template with content controls and demonstrate how to automatically populate them with data from a JSON object:
 
-- create a document template with tagged content controls ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
-- retrieve all content controls from the document ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md));
-- match JSON keys with content control tags and populate values ([ApiBlockLvlSdt/GetTag](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetTag.md), [ApiBlockLvlSdt/AddText](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/AddText.md)).
+- create a document template with tagged content controls ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
+- retrieve all content controls from the document ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md));
+- match JSON keys with content control tags and populate values ([ApiBlockLvlSdt/GetTag](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetTag.md), [ApiBlockLvlSdt/AddText](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/AddText.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

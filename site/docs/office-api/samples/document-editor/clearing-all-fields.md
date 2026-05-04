@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with filled content controls and demonstrate how to clear all field values to reset the template:
 
-- create a document template with various filled content controls ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
-- retrieve all content controls from the document ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md));
-- clear field values while preserving structure ([ApiBlockLvlSdt/RemoveAllElements](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/RemoveAllElements.md)).
+- create a document template with various filled content controls ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
+- retrieve all content controls from the document ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md));
+- clear field values while preserving structure ([ApiBlockLvlSdt/RemoveAllElements](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/RemoveAllElements.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

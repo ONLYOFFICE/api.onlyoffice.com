@@ -30,8 +30,8 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 一键格式化（[重置文本属性](../samples/macros/text-document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
-- 批量操作（[删除空表格](../samples/macros/text-document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
+- 一键格式化（[重置文本属性](../samples/macros/document-editor/reset-text-properties.md) — 快速将文本重置为默认格式）
+- 批量操作（[删除空表格](../samples/macros/document-editor/remove-empty-tables.md) — 删除整个文档中的所有空表格）
 - 自定义计算（[加权平均值](../samples/macros/spreadsheet-editor/weighted-average-function.md) — 计算所选范围的加权平均值）
 - 文档清理（[删除空段落](../samples/macros/presentation-editor/remove-empty-paragraphs.md) — 删除整个演示文稿中所有不必要的空段落）
 
@@ -48,8 +48,8 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 写作辅助（[检查拼写](../samples/custom-ai-tools/text-document-editor/check-spelling.md) — AI 驱动的拼写检查）
-- 智能样式（[更改文本样式](../samples/custom-ai-tools/text-document-editor/change-text-style.md) — AI 驱动的文本样式调整）
+- 写作辅助（[检查拼写](../samples/custom-ai-tools/document-editor/check-spelling.md) — AI 驱动的拼写检查）
+- 智能样式（[更改文本样式](../samples/custom-ai-tools/document-editor/change-text-style.md) — AI 驱动的文本样式调整）
 - 自动生成形状（[添加形状](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI 驱动的演示文稿设计）
 - 数据洞察（[解释公式](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI 驱动的公式解释）
 

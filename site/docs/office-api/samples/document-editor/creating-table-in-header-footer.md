@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a table in the footer that displays repeating company information on every page:
 
-- create a footer section ([ApiSection/GetFooter](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/GetFooter.md));
-- create a borderless table with company information ([Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [ApiTablePr](/docs/office-api/usage-api/text-document-api/ApiTablePr/ApiTablePr.md));
-- populate table cells with address, license, and contact details ([ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md)).
+- create a footer section ([ApiSection/GetFooter](/docs/office-api/usage-api/document-api/ApiSection/Methods/GetFooter.md));
+- create a borderless table with company information ([Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [ApiTablePr](/docs/office-api/usage-api/document-api/ApiTablePr/ApiTablePr.md));
+- populate table cells with address, license, and contact details ([ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

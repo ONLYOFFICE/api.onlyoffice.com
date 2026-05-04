@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with various content controls and demonstrate how to find specific fields by their tags and retrieve their values:
 
-- create a document template with tagged content controls ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
-- search for specific content controls by tag ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md), [ApiBlockLvlSdt/GetTag](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetTag.md));
-- retrieve and process field values based on type ([ApiDocumentContent/GetText](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetText.md)).
+- create a document template with tagged content controls ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
+- search for specific content controls by tag ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md), [ApiBlockLvlSdt/GetTag](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetTag.md));
+- retrieve and process field values based on type ([ApiDocumentContent/GetText](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetText.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

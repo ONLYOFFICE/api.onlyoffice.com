@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a table containing nested headers and merged cells. This structure is commonly used in analytical reports, plans, revenue tables, and activity reports where headers need to be grouped by periods, regions, categories, etc. The top cells are merged horizontally to span multiple subcategories:
 
-- create an empty document with a table ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
-- merge cells horizontally to create nested header structure ([ApiTable/MergeCells](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/MergeCells.md))
-- apply custom styling to header rows ([ApiTableRow](/docs/office-api/usage-api/text-document-api/ApiTableRow/ApiTableRow.md), [ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md))
+- create an empty document with a table ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md))
+- merge cells horizontally to create nested header structure ([ApiTable/MergeCells](/docs/office-api/usage-api/document-api/ApiTable/Methods/MergeCells.md))
+- apply custom styling to header rows ([ApiTableRow](/docs/office-api/usage-api/document-api/ApiTableRow/ApiTableRow.md), [ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md))
 - populate the table with data organized under the nested headers.
 
 ```ts editor-docx zoom=60

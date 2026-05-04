@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 创建包含图片和文本输入的基本表单：
 
-- 创建新文档，向第一段添加文本并设置为标题样式（[ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md)、[ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md)）；
+- 创建新文档，向第一段添加文本并设置为标题样式（[ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md)、[ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md)）；
 - 创建图片表单和文本表单，并将表单添加到文档中（[Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md)、[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)）。
 
 :::tip

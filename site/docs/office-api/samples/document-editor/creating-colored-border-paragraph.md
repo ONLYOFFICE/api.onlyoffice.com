@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a paragraph that has a decorative colored bottom border:
 
-- add a paragraph with text content ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md));
-- configure paragraph formatting with bottom border styling ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md), [ApiParaPr](/docs/office-api/usage-api/text-document-api/ApiParaPr/ApiParaPr.md));
-- set border properties including color, thickness, and spacing ([ApiParaPr/SetBottomBorder](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetBottomBorder.md), [ApiParaPr/SetSpacingAfter](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetSpacingAfter.md)).
+- add a paragraph with text content ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md));
+- configure paragraph formatting with bottom border styling ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md), [ApiParaPr](/docs/office-api/usage-api/document-api/ApiParaPr/ApiParaPr.md));
+- set border properties including color, thickness, and spacing ([ApiParaPr/SetBottomBorder](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetBottomBorder.md), [ApiParaPr/SetSpacingAfter](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetSpacingAfter.md)).
 
 This technique is commonly used for visual separation of sections, highlighting important phrases, or creating accents in documents such as annotations, headers, or signatures.
 

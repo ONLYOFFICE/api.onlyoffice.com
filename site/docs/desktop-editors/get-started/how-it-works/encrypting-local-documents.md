@@ -83,7 +83,7 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
+As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
 
 :::note
 The *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.

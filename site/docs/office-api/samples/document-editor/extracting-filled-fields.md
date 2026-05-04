@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with various content controls (form fields) and demonstrate how to extract all filled values with their tags:
 
-- create content controls with different types and tags ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md), [ApiInlineLvlSdt](/docs/office-api/usage-api/text-document-api/ApiInlineLvlSdt/ApiInlineLvlSdt.md));
-- retrieve all content controls from the document ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md));
-- extract tag and value pairs from each control ([ApiBlockLvlSdt/GetTag](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/GetTag.md), [ApiDocumentContent/GetText](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetText.md)).
+- create content controls with different types and tags ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md), [ApiInlineLvlSdt](/docs/office-api/usage-api/document-api/ApiInlineLvlSdt/ApiInlineLvlSdt.md));
+- retrieve all content controls from the document ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md));
+- extract tag and value pairs from each control ([ApiBlockLvlSdt/GetTag](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/GetTag.md), [ApiDocumentContent/GetText](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetText.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

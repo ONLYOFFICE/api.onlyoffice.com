@@ -8,12 +8,12 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a quote paragraph that has special visual formatting for highlighting quoted text or excerpts. The quote paragraph features increased left indent, light gray background, and italic styling for better visual distinction from regular text:
 
-- insert paragraph with quoted phrase or text excerpt ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md), [ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md));
-- configure visual formatting with increased left indent (40pt) ([ApiParaPr/SetIndLeft](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetIndLeft.md));
-- apply light gray background color for visual separation ([ApiParaPr/SetShd](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetShd.md));
-- set justified text alignment for professional appearance ([ApiParaPr/SetJc](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetJc.md));
-- add spacing before and after quote for better readability ([ApiParaPr/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetSpacingBefore.md), [ApiParaPr/SetSpacingAfter](/docs/office-api/usage-api/text-document-api/ApiParaPr/Methods/SetSpacingAfter.md));
-- apply italic text style for emphasis ([ApiTextPr/SetItalic](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetItalic.md)).
+- insert paragraph with quoted phrase or text excerpt ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md), [ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md));
+- configure visual formatting with increased left indent (40pt) ([ApiParaPr/SetIndLeft](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetIndLeft.md));
+- apply light gray background color for visual separation ([ApiParaPr/SetShd](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetShd.md));
+- set justified text alignment for professional appearance ([ApiParaPr/SetJc](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetJc.md));
+- add spacing before and after quote for better readability ([ApiParaPr/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetSpacingBefore.md), [ApiParaPr/SetSpacingAfter](/docs/office-api/usage-api/document-api/ApiParaPr/Methods/SetSpacingAfter.md));
+- apply italic text style for emphasis ([ApiTextPr/SetItalic](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic.md)).
 
 ```ts editor-docx zoom=60
 const doc = Api.GetDocument();

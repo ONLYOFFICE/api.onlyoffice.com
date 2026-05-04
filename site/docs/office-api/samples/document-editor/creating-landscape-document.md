@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with landscape page orientation for displaying wide tables, charts, or content that requires more horizontal space:
 
-- create a new section with landscape orientation ([Api/GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [ApiDocument/CreateSection](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateSection.md), [ApiSection/SetPageSize](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageSize.md))
-- create a wide table with multiple columns ([Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [ApiTable/SetWidth](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetWidth.md))
-- style the table with headers and data formatting ([ApiDocument/CreateStyle](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateStyle.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md))
-- optionally return to portrait orientation for subsequent content ([ApiDocument/CreateSection](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateSection.md))
+- create a new section with landscape orientation ([Api/GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [ApiDocument/CreateSection](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateSection.md), [ApiSection/SetPageSize](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageSize.md))
+- create a wide table with multiple columns ([Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [ApiTable/SetWidth](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetWidth.md))
+- style the table with headers and data formatting ([ApiDocument/CreateStyle](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateStyle.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md))
+- optionally return to portrait orientation for subsequent content ([ApiDocument/CreateSection](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateSection.md))
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

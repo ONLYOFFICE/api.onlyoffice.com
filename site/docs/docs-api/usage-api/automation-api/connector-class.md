@@ -129,7 +129,7 @@ connector.addToolbarMenuItem({
 
 The function called to add an event listener, a function that will be called whenever the specified event is delivered to the target. The list of all the available events is the same as for the plugins:
 
-- [Document events](../../../plugin-and-macros/interacting-with-editors/text-document-api/Events/Events.md)
+- [Document events](../../../plugin-and-macros/interacting-with-editors/document-api/Events/Events.md)
 - [Spreadsheet events](../../../plugin-and-macros/interacting-with-editors/spreadsheet-api/Events/Events.md)
 - [Presentation events](../../../plugin-and-macros/interacting-with-editors/presentation-api/Events/Events.md)
 - [PDF events](../../../plugin-and-macros/interacting-with-editors/pdf-api/Events/Events.md)
@@ -237,7 +237,7 @@ connector.disconnect();
 
 The function called to execute certain editor methods using the connector. The full list of these methods is the same as for the plugins:
 
-- [Document methods](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/Methods.md)
+- [Document methods](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/Methods.md)
 - [Spreadsheet methods](../../../plugin-and-macros/interacting-with-editors/spreadsheet-api/Methods/Methods.md)
 - [Presentation methods](../../../plugin-and-macros/interacting-with-editors/presentation-api/Methods/Methods.md)
 - [PDF methods](../../../plugin-and-macros/interacting-with-editors/pdf-api/Methods/Methods.md)

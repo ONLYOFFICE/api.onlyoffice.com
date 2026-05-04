@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with sample content and demonstrate how to extract all text content as a string or array of paragraphs:
 
-- create a document with multiple paragraphs containing sample text ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md));
-- extract the document content using JSON serialization ([ApiDocument/ToJSON](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/ToJSON.md));
-- parse the JSON structure to retrieve text from all paragraphs ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md)).
+- create a document with multiple paragraphs containing sample text ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md));
+- extract the document content using JSON serialization ([ApiDocument/ToJSON](/docs/office-api/usage-api/document-api/ApiDocument/Methods/ToJSON.md));
+- parse the JSON structure to retrieve text from all paragraphs ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

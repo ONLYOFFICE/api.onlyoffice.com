@@ -17,7 +17,7 @@ expression.GetTextPr();
 
 ## 返回值
 
-[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
+[ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md)
 
 ## 示例
 

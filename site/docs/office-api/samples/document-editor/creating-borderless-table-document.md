@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a borderless table for structured information display:
 
-- create an empty document with a borderless table ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
-- remove table borders to create a clean, text-like appearance ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTableCell/SetCellBorderTop](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/SetCellBorderTop.md))
-- configure column alignment and formatting for labels and values ([ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md))
-- populate the table with company information in a structured format ([ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)).
+- create an empty document with a borderless table ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md))
+- remove table borders to create a clean, text-like appearance ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTableCell/SetCellBorderTop](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/SetCellBorderTop.md))
+- configure column alignment and formatting for labels and values ([ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md))
+- populate the table with company information in a structured format ([ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

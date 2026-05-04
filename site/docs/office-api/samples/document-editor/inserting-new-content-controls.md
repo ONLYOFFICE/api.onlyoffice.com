@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document template and demonstrate how to dynamically insert new content controls at different positions:
 
-- create a basic document template with existing content controls ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
-- insert new content controls at specific positions ([ApiDocument/AddElement](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/AddElement.md), [ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md));
-- configure new controls with tags and placeholder text ([ApiBlockLvlSdt/SetTag](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetTag.md), [ApiBlockLvlSdt/SetPlaceholderText](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetPlaceholderText.md)).
+- create a basic document template with existing content controls ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
+- insert new content controls at specific positions ([ApiDocument/AddElement](/docs/office-api/usage-api/document-api/ApiDocument/Methods/AddElement.md), [ApiDocument/Push](/docs/office-api/usage-api/document-api/ApiDocument/Methods/Push.md));
+- configure new controls with tags and placeholder text ([ApiBlockLvlSdt/SetTag](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/SetTag.md), [ApiBlockLvlSdt/SetPlaceholderText](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/SetPlaceholderText.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a multi-level nested list that combines numbered and bulleted items:
 
-- create multilevel numbering for different list levels ([ApiDocument/CreateNumbering](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateNumbering.md), [ApiNumbering/GetLevel](/docs/office-api/usage-api/text-document-api/ApiNumbering/Methods/GetLevel.md));
-- configure different list types and indentation for each level ([ApiNumberingLevel/SetTemplateType](/docs/office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/SetTemplateType.md), [ApiNumberingLevel/GetParaPr](/docs/office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/GetParaPr.md));
-- apply proper spacing and formatting for nested structure ([ApiParagraph/SetNumbering](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetNumbering.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingBefore.md)).
+- create multilevel numbering for different list levels ([ApiDocument/CreateNumbering](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateNumbering.md), [ApiNumbering/GetLevel](/docs/office-api/usage-api/document-api/ApiNumbering/Methods/GetLevel.md));
+- configure different list types and indentation for each level ([ApiNumberingLevel/SetTemplateType](/docs/office-api/usage-api/document-api/ApiNumberingLevel/Methods/SetTemplateType.md), [ApiNumberingLevel/GetParaPr](/docs/office-api/usage-api/document-api/ApiNumberingLevel/Methods/GetParaPr.md));
+- apply proper spacing and formatting for nested structure ([ApiParagraph/SetNumbering](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetNumbering.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingBefore.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

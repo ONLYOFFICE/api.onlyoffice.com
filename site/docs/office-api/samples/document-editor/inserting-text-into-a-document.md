@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with formatted text using different methods:
 
-- add text to paragraphs with various formatting options ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md));
-- insert line breaks within paragraphs to create multi-line content ([ApiParagraph/AddLineBreak](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddLineBreak.md));
-- apply text formatting including bold, italic, font size, and color ([ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md)).
+- add text to paragraphs with various formatting options ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md));
+- insert line breaks within paragraphs to create multi-line content ([ApiParagraph/AddLineBreak](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddLineBreak.md));
+- apply text formatting including bold, italic, font size, and color ([ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md)).
 
 ``` ts editor-docx
 let doc = Api.GetDocument();

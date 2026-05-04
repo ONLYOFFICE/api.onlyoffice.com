@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a product catalog table containing images and product information:
 
-- create a table with four columns for image, name, price, and description ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md));
-- insert images into table cells with proper sizing and alignment ([ApiDrawing](/docs/office-api/usage-api/text-document-api/ApiDrawing/ApiDrawing.md), [ApiParagraph/AddDrawing](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddDrawing.md));
-- format product information with different text styles ([ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
-- style the table for better readability and professional appearance ([ApiTableCellPr](/docs/office-api/usage-api/text-document-api/ApiTableCellPr/ApiTableCellPr.md)).
+- create a table with four columns for image, name, price, and description ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md));
+- insert images into table cells with proper sizing and alignment ([ApiDrawing](/docs/office-api/usage-api/document-api/ApiDrawing/ApiDrawing.md), [ApiParagraph/AddDrawing](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddDrawing.md));
+- format product information with different text styles ([ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md), [ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md));
+- style the table for better readability and professional appearance ([ApiTableCellPr](/docs/office-api/usage-api/document-api/ApiTableCellPr/ApiTableCellPr.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

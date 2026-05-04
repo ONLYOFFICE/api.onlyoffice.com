@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with special Unicode symbols commonly used in legal, scientific, and financial documents:
 
-- insert Unicode symbols like copyright (©), trademark (™), registered trademark (®), and other special characters ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md));
-- format symbols with different styles including bold, italic, and color ([ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md));
-- demonstrate practical usage in trademark notices, copyright statements, and technical documentation ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md)).
+- insert Unicode symbols like copyright (©), trademark (™), registered trademark (®), and other special characters ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md));
+- format symbols with different styles including bold, italic, and color ([ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md));
+- demonstrate practical usage in trademark notices, copyright statements, and technical documentation ([ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md)).
 
 ``` ts editor-docx
 let doc = Api.GetDocument();

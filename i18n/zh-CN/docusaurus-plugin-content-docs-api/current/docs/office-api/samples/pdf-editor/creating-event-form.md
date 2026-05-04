@@ -6,8 +6,8 @@ hide_table_of_contents: true
 
 构建带有渐变背景的样式化活动注册表单：
 
-- 设置自定义页面尺寸和无边距（[ApiSection/SetPageSize](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageSize.md)、[ApiSection/SetPageMargins](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageMargins.md)）；
-- 创建渐变背景形状（[Api/CreateGradientStop](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateGradientStop.md)、[Api/CreateLinearGradientFill](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateLinearGradientFill.md)、[Api/CreateShape](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateShape.md)）；
+- 设置自定义页面尺寸和无边距（[ApiSection/SetPageSize](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageSize.md)、[ApiSection/SetPageMargins](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageMargins.md)）；
+- 创建渐变背景形状（[Api/CreateGradientStop](/docs/office-api/usage-api/document-api/Api/Methods/CreateGradientStop.md)、[Api/CreateLinearGradientFill](/docs/office-api/usage-api/document-api/Api/Methods/CreateLinearGradientFill.md)、[Api/CreateShape](/docs/office-api/usage-api/document-api/Api/Methods/CreateShape.md)）；
 - 添加参会者信息文本字段（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)）；
 - 添加照片上传字段（[Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md)）；
 - 添加同意复选框（[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)）。

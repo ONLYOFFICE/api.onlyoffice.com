@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with styled note blocks that highlight important information using left border formatting:
 
-- create paragraphs with custom left border styling ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
-- apply left border formatting with custom color and width ([ApiParagraph/SetLeftBorder](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetLeftBorder.md));
-- configure text indentation and spacing for note blocks ([ApiParagraph/SetIndLeft](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetIndLeft.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingBefore.md), [ApiParagraph/SetSpacingAfter](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingAfter.md));
-- apply custom text color to note content ([ApiRun/SetColor](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetColor.md)).
+- create paragraphs with custom left border styling ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md));
+- apply left border formatting with custom color and width ([ApiParagraph/SetLeftBorder](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetLeftBorder.md));
+- configure text indentation and spacing for note blocks ([ApiParagraph/SetIndLeft](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetIndLeft.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingBefore.md), [ApiParagraph/SetSpacingAfter](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingAfter.md));
+- apply custom text color to note content ([ApiRun/SetColor](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetColor.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

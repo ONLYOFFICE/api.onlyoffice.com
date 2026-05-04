@@ -50,7 +50,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用的方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有表格](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllTables.md)，[获取单元格内容](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md)，[获取所有段落](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetAllParagraphs.md)，[获取文本内容](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md)，[获取表格行数](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetRowsCount.md)，[获取表格行](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetRow.md)，[获取单元格数量](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/GetCellsCount.md)，[获取单元格](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md)，[删除表格](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/Delete.md)
+使用的方法：[获取文档](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md)，[获取所有表格](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllTables.md)，[获取单元格内容](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md)，[获取所有段落](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetAllParagraphs.md)，[获取文本内容](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md)，[获取表格行数](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetRowsCount.md)，[获取表格行](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetRow.md)，[获取单元格数量](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/GetCellsCount.md)，[获取单元格](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md)，[删除表格](/docs/office-api/usage-api/document-api/ApiTable/Methods/Delete.md)
 
 ## 结果
 

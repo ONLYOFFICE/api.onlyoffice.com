@@ -139,15 +139,15 @@ let func = new RegisteredFunction({
   return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/GetText.md), [GetCurrentWord](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentWord.md), [SelectCurrentWord](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/SelectCurrentWord.md), [CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [MoveCursorToEnd](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/MoveCursorToEnd.md), [StartAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [EndAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](/docs/office-api/usage-api/document-api/ApiRange/Methods/GetText.md), [GetCurrentWord](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentWord.md), [SelectCurrentWord](/docs/office-api/usage-api/document-api/ApiDocument/Methods/SelectCurrentWord.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [Push](/docs/office-api/usage-api/document-api/ApiDocument/Methods/Push.md), [MoveCursorToEnd](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md), [StartAction](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md), [EndAction](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/generate-hashtags.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/generate-hashtags.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/generate-hashtags.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/generate-hashtags.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

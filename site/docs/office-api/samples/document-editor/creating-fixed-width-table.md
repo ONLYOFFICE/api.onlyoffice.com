@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a table that has fixed column widths for predictable document structure:
 
-- create an empty document with a table ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
-- set fixed column widths to ensure consistent layout ([ApiTable/SetTableLayout](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableLayout.md), [ApiTableRow/SetHeight](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetHeight.md))
-- format table headers with bold styling ([ApiParagraph/SetBold](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md), [ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md))
+- create an empty document with a table ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md))
+- set fixed column widths to ensure consistent layout ([ApiTable/SetTableLayout](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableLayout.md), [ApiTableRow/SetHeight](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/SetHeight.md))
+- format table headers with bold styling ([ApiParagraph/SetBold](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md))
 - populate the table with structured data for contracts, legal forms, or technical specifications.
 
 ```ts editor-docx zoom=60

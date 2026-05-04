@@ -8,8 +8,8 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with colored highlighting inside sentences for visual emphasis:
 
-- create paragraphs with normal text ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md));
-- apply background color highlighting to specific text fragments ([ApiRun/SetHighlight](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetHighlight.md));
+- create paragraphs with normal text ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md));
+- apply background color highlighting to specific text fragments ([ApiRun/SetHighlight](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetHighlight.md));
 - combine highlighted and normal text within the same paragraph for visual emphasis on key phrases.
 
 ``` ts editor-docx

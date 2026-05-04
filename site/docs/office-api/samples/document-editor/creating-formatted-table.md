@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a formatted table containing employee data with styled headers and center-aligned content:
 
-- create a table with headers and data rows ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
-- apply formatting to table headers with bold text and center alignment ([ApiTableRow](/docs/office-api/usage-api/text-document-api/ApiTableRow/ApiTableRow.md), [ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md))
-- populate table cells with employee information and center-align all content ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md))
+- create a table with headers and data rows ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md))
+- apply formatting to table headers with bold text and center alignment ([ApiTableRow](/docs/office-api/usage-api/document-api/ApiTableRow/ApiTableRow.md), [ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md))
+- populate table cells with employee information and center-align all content ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md))
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

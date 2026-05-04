@@ -32,4 +32,4 @@ builderJS.SaveFile("docx", "CommentsReport.docx");
 builderJS.CloseFile();
 ```
 
-For more information, see [ApiDocument.GetCommentsReport](../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCommentsReport.md) and [ApiDocument.GetReviewReport](../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md).
+For more information, see [ApiDocument.GetCommentsReport](../../office-api/usage-api/document-api/ApiDocument/Methods/GetCommentsReport.md) and [ApiDocument.GetReviewReport](../../office-api/usage-api/document-api/ApiDocument/Methods/GetReviewReport.md).

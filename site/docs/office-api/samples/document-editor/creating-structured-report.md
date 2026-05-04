@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with structured sections, specific formatting, alignment, and page breaks:
 
-- create sections with different text formatting and alignment ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md))
-- apply text alignment and spacing ([ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [ApiParagraph/SetSpacingAfter](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingAfter.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingBefore.md))
-- insert page breaks and apply heading styles ([ApiRun/AddPageBreak](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddPageBreak.md), [ApiParagraph/SetStyle](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetStyle.md))
+- create sections with different text formatting and alignment ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md))
+- apply text alignment and spacing ([ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [ApiParagraph/SetSpacingAfter](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingAfter.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingBefore.md))
+- insert page breaks and apply heading styles ([ApiRun/AddPageBreak](/docs/office-api/usage-api/document-api/ApiRun/Methods/AddPageBreak.md), [ApiParagraph/SetStyle](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md))
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

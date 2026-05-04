@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a bulleted task list for enumerating tasks, steps, or requirements:
 
-- create an abstract multilevel numbering with bullet type ([ApiDocument/CreateNumbering](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateNumbering.md), [ApiNumbering](/docs/office-api/usage-api/text-document-api/ApiNumbering/ApiNumbering.md));
-- apply numbering to paragraphs and configure spacing ([ApiParagraph/SetNumbering](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetNumbering.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingBefore.md));
-- format list items with proper indentation and contextual spacing ([ApiParagraph/SetContextualSpacing](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetContextualSpacing.md)).
+- create an abstract multilevel numbering with bullet type ([ApiDocument/CreateNumbering](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateNumbering.md), [ApiNumbering](/docs/office-api/usage-api/document-api/ApiNumbering/ApiNumbering.md));
+- apply numbering to paragraphs and configure spacing ([ApiParagraph/SetNumbering](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetNumbering.md), [ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingBefore.md));
+- format list items with proper indentation and contextual spacing ([ApiParagraph/SetContextualSpacing](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetContextualSpacing.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

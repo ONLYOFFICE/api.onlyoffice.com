@@ -174,15 +174,15 @@ func.call = async function (params) {
   return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiWatermarkSettings/Methods/GetText.md), [GetCurrentParagraph](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md), [GetRangeBySelect](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetTextPr](/docs/office-api/usage-api/text-document-api/ApiWatermarkSettings/Methods/GetTextPr.md), [CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/AddText.md), [SetTextPr](/docs/office-api/usage-api/text-document-api/ApiWatermarkSettings/Methods/SetTextPr.md), [InsertParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/InsertParagraph.md), [AddText(Range)](/docs/office-api/usage-api/text-document-api/ApiRange/Methods/AddText.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetText](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetText.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md), [GetRangeBySelect](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetElement](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetElement.md), [GetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetTextPr.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/document-api/ApiRun/Methods/AddText.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr.md), [InsertParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [AddText(Range)](/docs/office-api/usage-api/document-api/ApiRange/Methods/AddText.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/smart-headline-generator.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/smart-headline-generator.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/smart-headline-generator.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/smart-headline-generator.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

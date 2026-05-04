@@ -14,7 +14,7 @@ Defines the array of plugin identifiers from the [config.json](../../../../plugi
 
 **type:** `object`
 
-Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass the `options` object to the plugin.
+Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass the `options` object to the plugin.
 
 **Example**:
 

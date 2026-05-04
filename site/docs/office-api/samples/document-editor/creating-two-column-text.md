@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with text arranged in two columns. This layout is commonly used in instructions, brochures, articles, and official publications to present text compactly on one page, improving readability and visual balance.
 
-- set up page layout with two columns ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiSection](/docs/office-api/usage-api/text-document-api/ApiSection/ApiSection.md));
-- configure column width and spacing automatically or manually ([ApiSection/SetEqualColumns](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetEqualColumns.md));
-- add text content that flows automatically between columns ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md), [ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md));
-- apply additional formatting like indents, headings, and styling ([ApiParaPr](/docs/office-api/usage-api/text-document-api/ApiParaPr/ApiParaPr.md), [ApiTextPr](/docs/office-api/usage-api/text-document-api/ApiTextPr/ApiTextPr.md)).
+- set up page layout with two columns ([ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md), [ApiSection](/docs/office-api/usage-api/document-api/ApiSection/ApiSection.md));
+- configure column width and spacing automatically or manually ([ApiSection/SetEqualColumns](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetEqualColumns.md));
+- add text content that flows automatically between columns ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md), [ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md));
+- apply additional formatting like indents, headings, and styling ([ApiParaPr](/docs/office-api/usage-api/document-api/ApiParaPr/ApiParaPr.md), [ApiTextPr](/docs/office-api/usage-api/document-api/ApiTextPr/ApiTextPr.md)).
 
 ```ts editor-docx zoom=60
 const doc = Api.GetDocument();

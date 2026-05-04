@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with highlighted key terms using bold formatting and color styling:
 
-- define text content and specify key terms to highlight ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md));
-- search for terms within the text and apply formatting ([ApiRun](/docs/office-api/usage-api/text-document-api/ApiRun/ApiRun.md), [ApiRun/SetBold](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetBold.md), [ApiRun/SetColor](/docs/office-api/usage-api/text-document-api/ApiRun/Methods/SetColor.md));
-- create styled text runs for highlighted terms while keeping normal formatting for other text ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md)).
+- define text content and specify key terms to highlight ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md));
+- search for terms within the text and apply formatting ([ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md), [ApiRun/SetBold](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetBold.md), [ApiRun/SetColor](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetColor.md));
+- create styled text runs for highlighted terms while keeping normal formatting for other text ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

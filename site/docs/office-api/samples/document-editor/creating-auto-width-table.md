@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a table that automatically adjusts column widths based on content:
 
-- create a table without fixed column widths ([Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md));
-- add header row with bold centered text ([ApiTableRow](/docs/office-api/usage-api/text-document-api/ApiTableRow/ApiTableRow.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
-- populate table with variable-length content that demonstrates auto-width behavior ([ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md));
-- apply table formatting with borders and alignment ([ApiTable](/docs/office-api/usage-api/text-document-api/ApiTable/ApiTable.md)).
+- create a table without fixed column widths ([Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md));
+- add header row with bold centered text ([ApiTableRow](/docs/office-api/usage-api/document-api/ApiTableRow/ApiTableRow.md), [ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md));
+- populate table with variable-length content that demonstrates auto-width behavior ([ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md));
+- apply table formatting with borders and alignment ([ApiTable](/docs/office-api/usage-api/document-api/ApiTable/ApiTable.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

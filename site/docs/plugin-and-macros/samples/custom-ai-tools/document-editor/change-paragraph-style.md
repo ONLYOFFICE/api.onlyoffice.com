@@ -69,15 +69,15 @@ func.call = async function (params) {
 };
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetElement.md), [GetStyle](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetElement](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetElement.md), [GetStyle](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetStyle.md), [SetStyle](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetStyle.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/change-paragraph-style.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/change-paragraph-style.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/change-paragraph-style.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/change-paragraph-style.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

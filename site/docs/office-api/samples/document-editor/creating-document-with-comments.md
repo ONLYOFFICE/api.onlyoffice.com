@@ -8,8 +8,8 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with comments added to paragraphs and specific text fragments for review, approval, and collaborative discussion:
 
-- create a document with sample content ([Api/GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md));
-- add comments to entire paragraphs and specific text fragments ([Api/AddComment](/docs/office-api/usage-api/text-document-api/Api/Methods/AddComment.md));
+- create a document with sample content ([Api/GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md));
+- add comments to entire paragraphs and specific text fragments ([Api/AddComment](/docs/office-api/usage-api/document-api/Api/Methods/AddComment.md));
 - specify comment text and author information for each comment;
 - demonstrate multiple comments from different reviewers on various document sections.
 

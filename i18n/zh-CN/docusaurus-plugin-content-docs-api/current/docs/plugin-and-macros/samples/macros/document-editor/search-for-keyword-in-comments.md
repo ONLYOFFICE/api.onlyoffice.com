@@ -38,7 +38,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllComments](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllComments.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiComment/Methods/GetText.md), [SetSolved](../../../../office-api/usage-api/text-document-api/ApiComment/Methods/SetSolved.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllComments](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllComments.md), [GetText](../../../../office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [SetSolved](../../../../office-api/usage-api/document-api/ApiComment/Methods/SetSolved.md)
 
 ## 结果
 

@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 - 为每个问题创建单选按钮选项（[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[ApiCheckBoxForm/SetRadioGroup](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetRadioGroup.md)）；
 - 将单选按钮按问题分组以实现单选（[ApiCheckBoxForm/SetRadioGroup](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetRadioGroup.md)）；
-- 在问题之间添加间距（[ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingBefore.md)）。
+- 在问题之间添加间距（[ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingBefore.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

@@ -11,8 +11,8 @@ ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [ClearContent](./Methods/ClearContent.md) | boolean | 清除当前复合表单的所有内容，将其重置为占位符状态。 |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | 复制当前表单（如果存在形状，则连同形状一起复制）。 |
 | [Delete](./Methods/Delete.md) | boolean | 删除表单及其内容。如果 keepContent 为 true，则不删除内容。 |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../text-document-api/ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../text-document-api/ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | 返回当前表单的背景颜色。 |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | 返回当前表单的边框颜色。 |
 | [GetClassType](./Methods/GetClassType.md) | "form" | 返回 ApiComplexForm 类的类型。 |
 | [GetFormKey](./Methods/GetFormKey.md) | string | 返回当前表单的键。 |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | 返回当前表单的类型。 |
@@ -23,9 +23,9 @@ ApiComplexForm 是 [ApiFormBase](../ApiFormBase/ApiFormBase.md) 的子类。
 | [GetSubForms](./Methods/GetSubForms.md) | [ApiForm](../Enumeration/ApiForm.md)[] | 返回子表单的有序列表。 |
 | [GetTag](./Methods/GetTag.md) | string | 返回当前表单的标签属性。 |
 | [GetText](./Methods/GetText.md) | string | 返回当前表单中的文本。 |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../text-document-api/ApiTextPr/ApiTextPr.md) | 返回当前表单的文本属性。*如果该表单类型支持则使用* |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../document-api/ApiTextPr/ApiTextPr.md) | 返回当前表单的文本属性。*如果该表单类型支持则使用* |
 | [GetTipText](./Methods/GetTipText.md) | string | 返回当前表单的提示文本。 |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../text-document-api/ApiShape/ApiShape.md) | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。对于内联表单将返回 null 值。 |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../document-api/ApiShape/ApiShape.md) | 返回放置表单的形状，用于控制固定大小表单框架的位置和大小。对于内联表单将返回 null 值。 |
 | [IsFixed](./Methods/IsFixed.md) | boolean | 检查当前表单是否为固定大小。 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查当前表单是否为必填项。 |
 | [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | 将光标放置在当前表单之前/之后。 |

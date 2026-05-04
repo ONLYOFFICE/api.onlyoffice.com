@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a table populated from JSON data array:
 
-- create an empty document with a table based on JSON structure ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
-- format table headers with bold text and center alignment ([ApiTableRow](/docs/office-api/usage-api/text-document-api/ApiTableRow/ApiTableRow.md), [ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md))
-- populate table cells with JSON object values ([ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md))
-- apply consistent styling and cell padding ([ApiTableCellPr](/docs/office-api/usage-api/text-document-api/ApiTableCellPr/ApiTableCellPr.md)).
+- create an empty document with a table based on JSON structure ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md))
+- format table headers with bold text and center alignment ([ApiTableRow](/docs/office-api/usage-api/document-api/ApiTableRow/ApiTableRow.md), [ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md))
+- populate table cells with JSON object values ([ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md))
+- apply consistent styling and cell padding ([ApiTableCellPr](/docs/office-api/usage-api/document-api/ApiTableCellPr/ApiTableCellPr.md)).
 
 This example demonstrates how to automatically generate tables from structured data, useful for reports, employee lists, orders, courses, products, and other typical data structures.
 

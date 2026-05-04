@@ -40,7 +40,7 @@ Marks comments containing a specific keyword as solved in a document.
 })();
 ```
 
-Methods Used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllComments](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllComments.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiComment/Methods/GetText.md), [SetSolved](/docs/office-api/usage-api/text-document-api/ApiComment/Methods/SetSolved.md)
+Methods Used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllComments](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllComments.md), [GetText](/docs/office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [SetSolved](/docs/office-api/usage-api/document-api/ApiComment/Methods/SetSolved.md)
 
 ## Result
 

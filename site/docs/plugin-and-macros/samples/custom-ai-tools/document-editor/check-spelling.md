@@ -179,15 +179,15 @@ let func = new RegisteredFunction({
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetCurrentParagraph](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetCurrentParagraph.md), [Select](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/Select.md), [GetText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetText.md), [IsTrackRevisions](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/IsTrackRevisions.md), [SetTrackRevisions](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/SetTrackRevisions.md), [ReplaceTextSmart](/docs/office-api/usage-api/text-document-api/Api/Methods/ReplaceTextSmart.md), [SetAssistantTrackRevisions](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/SetAssistantTrackRevisions.md), [EndAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md), [StartAction](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph.md), [Select](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/Select.md), [GetText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [IsTrackRevisions](/docs/office-api/usage-api/document-api/ApiDocument/Methods/IsTrackRevisions.md), [SetTrackRevisions](/docs/office-api/usage-api/document-api/ApiDocument/Methods/SetTrackRevisions.md), [ReplaceTextSmart](/docs/office-api/usage-api/document-api/Api/Methods/ReplaceTextSmart.md), [SetAssistantTrackRevisions](/docs/office-api/usage-api/document-api/ApiDocument/Methods/SetAssistantTrackRevisions.md), [EndAction](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md), [StartAction](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/check-spelling.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/check-spelling.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/check-spelling.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/check-spelling.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

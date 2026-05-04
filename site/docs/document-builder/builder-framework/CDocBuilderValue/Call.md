@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Call
 
-Calls the specified Document Builder method. See the [Document API](/docs/office-api/usage-api/text-document-api/text-document-api.md), [Spreadsheet API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](/docs/office-api/usage-api/presentation-api/presentation-api.md), or [Form API](/docs/office-api/usage-api/form-api/form-api.md) sections for more information which methods are available for various document types.
+Calls the specified Document Builder method. See the [Document API](/docs/office-api/usage-api/document-api/document-api.md), [Spreadsheet API](/docs/office-api/usage-api/spreadsheet-api/spreadsheet-api.md), [Presentation API](/docs/office-api/usage-api/presentation-api/presentation-api.md), or [Form API](/docs/office-api/usage-api/form-api/form-api.md) sections for more information which methods are available for various document types.
 
 :::note
 - This method is not available for **JS**. Call methods directly.

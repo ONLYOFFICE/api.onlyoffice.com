@@ -7,9 +7,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with content controls and demonstrate how to validate and identify unfilled required fields:
 
-- create a document template with various content controls ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
-- scan all content controls to identify empty fields ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md));
-- validate field content and highlight unfilled controls ([ApiDocumentContent/GetText](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetText.md), [ApiBlockLvlSdt/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiBlockLvlSdt/Methods/SetBackgroundColor.md)).
+- create a document template with various content controls ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiBlockLvlSdt](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/ApiBlockLvlSdt.md));
+- scan all content controls to identify empty fields ([ApiDocument/GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md));
+- validate field content and highlight unfilled controls ([ApiDocumentContent/GetText](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetText.md), [ApiBlockLvlSdt/SetBackgroundColor](/docs/office-api/usage-api/document-api/ApiBlockLvlSdt/Methods/SetBackgroundColor.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

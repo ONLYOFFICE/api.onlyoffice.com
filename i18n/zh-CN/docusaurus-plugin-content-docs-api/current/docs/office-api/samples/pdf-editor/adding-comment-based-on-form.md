@@ -8,7 +8,7 @@ hide_table_of_contents: true
 
 - 创建带有单选按钮选项的调查表单（[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[ApiCheckBoxForm/SetRadioGroup](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetRadioGroup.md)）；
 - 检测特定选项是否被选中（[ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md)）；
-- 自动添加批注以标记需要审核的选择（[Api/AddComment](/docs/office-api/usage-api/text-document-api/Api/Methods/AddComment.md)）。
+- 自动添加批注以标记需要审核的选择（[Api/AddComment](/docs/office-api/usage-api/document-api/Api/Methods/AddComment.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

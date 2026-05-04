@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a professional sales report document with a table containing merged cells and proper formatting:
 
-- create an empty document with a table ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md))
-- merge cells horizontally for header and total rows ([ApiTableRow/MergeCells](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/MergeCells.md))
-- apply different text alignment and styling ([ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md), [ApiParagraph/SetBold](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetBold.md))
-- populate the table with sales data ([ApiTableCell](/docs/office-api/usage-api/text-document-api/ApiTableCell/ApiTableCell.md)).
+- create an empty document with a table ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md))
+- merge cells horizontally for header and total rows ([ApiTableRow/MergeCells](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/MergeCells.md))
+- apply different text alignment and styling ([ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [ApiParagraph/SetBold](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md))
+- populate the table with sales data ([ApiTableCell](/docs/office-api/usage-api/document-api/ApiTableCell/ApiTableCell.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

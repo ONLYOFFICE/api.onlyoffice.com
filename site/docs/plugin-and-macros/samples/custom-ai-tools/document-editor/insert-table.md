@@ -98,15 +98,15 @@ func.call = async function(params) {
 return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [MoveCursorToStart](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/MoveCursorToStart.md), [MoveCursorToEnd](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/MoveCursorToEnd.md), [CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [InsertContent](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md), [SetWidth](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetWidth.md), [SetStyle](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetStyle.md), [GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [GetElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetElement.md), [GetTextPr](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/GetTextPr.md), [SetBold](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetBold.md), [SetTextPr](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetTextPr.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [MoveCursorToStart](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToStart.md), [MoveCursorToEnd](/docs/office-api/usage-api/document-api/ApiDocument/Methods/MoveCursorToEnd.md), [CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [InsertContent](/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md), [SetWidth](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetWidth.md), [SetStyle](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetStyle.md), [GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetElement](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetElement.md), [GetTextPr](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetTextPr.md), [SetBold](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetTextPr.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 
 <video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/insert-table.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/insert-table.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>
 <video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/text-document-editor/insert-table.dark.webm" type="video/webm" />
+  <source src="/assets/images/plugins/functions-video/document-editor/insert-table.dark.webm" type="video/webm" />
   Your browser does not support HTML5 video.
 </video>

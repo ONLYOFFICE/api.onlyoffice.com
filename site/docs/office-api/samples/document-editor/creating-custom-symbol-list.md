@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a custom symbol list using non-standard characters instead of typical bullet points:
 
-- create bullet numbering with custom symbols using template types ([ApiDocument/CreateNumbering](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateNumbering.md), [ApiNumberingLevel/SetTemplateType](/docs/office-api/usage-api/text-document-api/ApiNumberingLevel/Methods/SetTemplateType.md));
-- apply numbering to paragraphs with proper spacing ([ApiParagraph/SetNumbering](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetNumbering.md), [ApiParagraph/SetSpacingAfter](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingAfter.md));
-- format list items with contextual spacing and alignment ([ApiParagraph/SetContextualSpacing](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetContextualSpacing.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md)).
+- create bullet numbering with custom symbols using template types ([ApiDocument/CreateNumbering](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateNumbering.md), [ApiNumberingLevel/SetTemplateType](/docs/office-api/usage-api/document-api/ApiNumberingLevel/Methods/SetTemplateType.md));
+- apply numbering to paragraphs with proper spacing ([ApiParagraph/SetNumbering](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetNumbering.md), [ApiParagraph/SetSpacingAfter](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingAfter.md));
+- format list items with contextual spacing and alignment ([ApiParagraph/SetContextualSpacing](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetContextualSpacing.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md)).
 
 ```ts editor-docx
 let doc = Api.GetDocument();

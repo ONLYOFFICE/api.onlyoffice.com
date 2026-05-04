@@ -8,11 +8,11 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a professional header containing a company logo and organization name. The header is activated for all pages and includes properly positioned branding elements for official documents, reports, and corporate communications:
 
-- activate headers and footers for all pages ([ApiSection/GetHeader](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/GetHeader.md));
-- insert company logo image in the header ([ApiParagraph/AddDrawing](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddDrawing.md));
-- add organization name text with center alignment ([ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md));
-- apply bold formatting with 14 pt font size for professional appearance ([ApiTextPr/SetBold](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetBold.md), [ApiTextPr/SetFontSize](/docs/office-api/usage-api/text-document-api/ApiTextPr/Methods/SetFontSize.md));
-- ensure consistent branding across all document pages ([ApiSection/GetHeader](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/GetHeader.md)).
+- activate headers and footers for all pages ([ApiSection/GetHeader](/docs/office-api/usage-api/document-api/ApiSection/Methods/GetHeader.md));
+- insert company logo image in the header ([ApiParagraph/AddDrawing](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddDrawing.md));
+- add organization name text with center alignment ([ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md));
+- apply bold formatting with 14 pt font size for professional appearance ([ApiTextPr/SetBold](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [ApiTextPr/SetFontSize](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize.md));
+- ensure consistent branding across all document pages ([ApiSection/GetHeader](/docs/office-api/usage-api/document-api/ApiSection/Methods/GetHeader.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

@@ -14,8 +14,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md),
-[AddTableOfContents](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/AddTableOfContents.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md),
+[AddTableOfContents](../../../../office-api/usage-api/document-api/ApiDocument/Methods/AddTableOfContents.md)
 
 ## 参考 Microsoft VBA 宏代码
 

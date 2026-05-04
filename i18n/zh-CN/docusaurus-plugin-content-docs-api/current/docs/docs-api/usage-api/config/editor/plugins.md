@@ -14,7 +14,7 @@
 
 **类型：** `object`
 
-定义一个允许从外部源配置插件的对象。可以为所有插件或特定插件设置设置。例如，此对象可用于将授权令牌传递给插件。您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) 方法将 `options` 对象传递给插件。
+定义一个允许从外部源配置插件的对象。可以为所有插件或特定插件设置设置。例如，此对象可用于将授权令牌传递给插件。您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) 方法将 `options` 对象传递给插件。
 
 **示例**:
 

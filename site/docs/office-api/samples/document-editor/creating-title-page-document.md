@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "Documents"]
 
 Create a document with a formatted title page featuring centered text and proper spacing:
 
-- create a title page with centered alignment and custom spacing ([Api](/docs/office-api/usage-api/text-document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md));
-- format the title with large font size and top margin ([ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetJc.md));
-- add author and date information with proper spacing ([ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/SetSpacingBefore.md));
-- insert a page break to separate title page from content ([ApiParagraph/AddPageBreak](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddPageBreak.md)).
+- create a title page with centered alignment and custom spacing ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md));
+- format the title with large font size and top margin ([ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md), [ApiParagraph/SetJc](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md));
+- add author and date information with proper spacing ([ApiParagraph/SetSpacingBefore](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetSpacingBefore.md));
+- insert a page break to separate title page from content ([ApiParagraph/AddPageBreak](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddPageBreak.md)).
 
 ```ts editor-docx zoom=60
 let doc = Api.GetDocument();

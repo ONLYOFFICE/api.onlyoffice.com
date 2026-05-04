@@ -107,8 +107,8 @@ Repository on GitHub: [example_customfields_add](https://github.com/ONLYOFFICE/s
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- executeMethod ("[AddContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddContentControl.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
+- executeMethod ("[AddContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControl.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## Support
 

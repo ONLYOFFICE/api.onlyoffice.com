@@ -16,4 +16,4 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiColor](../../../text-document-api/ApiColor/ApiColor.md)
+[ApiColor](../../../document-api/ApiColor/ApiColor.md)
