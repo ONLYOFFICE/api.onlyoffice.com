@@ -42,7 +42,7 @@ const PlaygroundRoute = () => {
         documentType: DocumentType
     }>(location.search, {
         editorType: 'editor',
-        scriptType: 'testType',
+        scriptType: 'script',
         previewType: 'preview',
         initialScript: 'code',
         documentServerUrl: 'documentServerUrl',

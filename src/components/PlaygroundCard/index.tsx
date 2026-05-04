@@ -133,7 +133,7 @@ function resolveDocspaceCards(cards: CardDef[]): ResolvedCard[] {
 }
 
 export function ConfigPlaygroundCardsRow(): ReactNode {
-  return <CardsRow cards={resolveEditorCards(CONFIG_PLAYGROUNDS, 'playground', 'editor', 'config-playground')} searchParams={[{ testType: 'config' }]} />;
+  return <CardsRow cards={resolveEditorCards(CONFIG_PLAYGROUNDS, 'playground', 'editor', 'config-playground')} searchParams={[{ script: 'config' }]} />;
 }
 
 export function DocSpacePlaygroundCardsRow(): ReactNode {
