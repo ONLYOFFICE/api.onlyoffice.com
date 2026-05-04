@@ -13,7 +13,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
 
 | Class | Description |
 | ----- | ----------- |
-| [CDocBuilder](CDocBuilder/CDocBuilder.md) | Base class used by ONLYOFFICE Document Builder for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated. |
+| [CDocBuilder](CDocBuilder/CDocBuilder.md) | Base class used by ONLYOFFICE Document Builder for the document file (document, spreadsheet, presentation, form document, PDF) to be generated. |
 | [CDocBuilderContext](CDocBuilderContext/CDocBuilderContext.md) | Class used by ONLYOFFICE Document Builder for getting JS context for working. |
 | [CDocBuilderContextScope](CDocBuilderContextScope/CDocBuilderContextScope.md) | Stack-allocated class which sets the execution context for all operations executed within a local scope. |
 | [CDocBuilderValue](CDocBuilderValue/CDocBuilderValue.md) | Class used by ONLYOFFICE Document Builder for getting the results of called JS commands. It represents a wrapper for a JS object. |
