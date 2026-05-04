@@ -37,7 +37,7 @@ export const DocsFeatures: Features = {
       link: 'office-api/get-started/overview',
       description: (
         <>
-          Use our JavaScript library to build plugins, macros, and scripts across all document types: text documents, spreadsheets, presentations, and forms.
+          Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.
         </>
       ),
       icon: <OfficeApiIcon/>,
