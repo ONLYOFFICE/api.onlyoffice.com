@@ -21,10 +21,10 @@ sidebar_position: -5
 使用 **ONLYOFFICE Document Builder** 可以通过以下代码构建一个包含居中"Center"文本的单段落的最简单示例文本文档：
 
 ``` ts
-// create a text document file in the .docx format with ONLYOFFICE Document Builder
+// create a document file in the .docx format with ONLYOFFICE Document Builder
 builder.CreateFile("docx");
 
-// create a new 'oDocument' variable and get the created text document contents
+// create a new 'oDocument' variable and get the created document contents
 const oDocument = Api.GetDocument();
 
 // create a new paragraph
@@ -39,10 +39,10 @@ oParagraph.AddText("Center");
 // push the created paragraph contents with the 'Center' word to the document
 oDocument.Push(oParagraph);
 
-// save the resulting text document as a file in the .docx format with the 'example.docx' name
+// save the resulting document as a file in the .docx format with the 'example.docx' name
 builder.SaveFile("docx", "example.docx");
 
-// close the text document file and finish work with ONLYOFFICE Document Builder
+// close the document file and finish work with ONLYOFFICE Document Builder
 builder.CloseFile();
 ```
 
@@ -57,10 +57,10 @@ builder.CloseFile();
 如果您想编辑已存在的文本文档，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。文档按以下方式打开：
 
 ``` ts
-// use a path or URL to an existing 'mydocument.docx' text document file to open it with ONLYOFFICE Document Builder
+// use a path or URL to an existing 'mydocument.docx' document file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/mydocument.docx");
 
-// create a new 'oDocument' variable and get the opened text document contents
+// create a new 'oDocument' variable and get the opened document contents
 const oDocument = Api.GetDocument();
 
 // get the contents of the document first paragraph
@@ -72,10 +72,10 @@ oParagraph.SetJc("center");
 // add a text containing a single 'Center' word to the paragraph
 oParagraph.AddText("Center");
 
-// save the resulting text document as a file in the .docx format with a new 'example.docx' name
+// save the resulting document as a file in the .docx format with a new 'example.docx' name
 builder.SaveFile("docx", "example.docx");
 
-// close the text document file and finish work with ONLYOFFICE Document Builder
+// close the document file and finish work with ONLYOFFICE Document Builder
 builder.CloseFile();
 ```
 

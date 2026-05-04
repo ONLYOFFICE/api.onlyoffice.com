@@ -2275,7 +2275,7 @@ The list of changes for Office JavaScript API.
 ### Other methods
 
 - Added the [ApiNumberingLevel/LinkWithStyle](../usage-api/text-document-api/ApiNumberingLevel/Methods/LinkWithStyle.md) method to Document API.
-- Moved the [GetContent](../usage-api/text-document-api/ApiDrawing/Methods/GetContent.md) method of Text document from the *ApiShape* class to the *ApiDrawing* class.
+- Moved the [GetContent](../usage-api/text-document-api/ApiDrawing/Methods/GetContent.md) method of Document API from the *ApiShape* class to the *ApiDrawing* class.
 - Added the [ApiLayout/GetName](../usage-api/presentation-api/ApiLayout/Methods/GetName.md) method to Presentation API.
 - Added the *keepPosition* parameter to the [ApiFormBase/ToFixed](../usage-api/form-api/ApiFormBase/Methods/ToFixed.md) method of Form API.
 - Added the [PivotTableFieldOptions](../usage-api/spreadsheet-api/Enumeration/PivotTableFieldOptions.md) type to the simple type definitions.
