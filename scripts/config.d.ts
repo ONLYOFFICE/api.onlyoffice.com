@@ -929,7 +929,6 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     canCoAuthoring?: boolean;
 
-
     /**
      * Defines the absolute URL of the document where it will be created and available after creation.
      * - If not specified, the **Create** button will not be displayed.
