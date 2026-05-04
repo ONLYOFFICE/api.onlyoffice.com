@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a multi-level list with numbered and bulleted items.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating nested list

@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a formal document with multi-column layout and charts.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating formal document

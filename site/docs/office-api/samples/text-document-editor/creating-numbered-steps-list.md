@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a numbered list for step-by-step instructions.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating a numbered steps list

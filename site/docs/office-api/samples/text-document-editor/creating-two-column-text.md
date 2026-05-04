@@ -1,10 +1,10 @@
 ---
 hide_table_of_contents: true
 description: Create a two-column text layout in a document.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
-# Creating two-column text document
+# Creating two-column document
 
 Create a document with text arranged in two columns. This layout is commonly used in instructions, brochures, articles, and official publications to present text compactly on one page, improving readability and visual balance.
 

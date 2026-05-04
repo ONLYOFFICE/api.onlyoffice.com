@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a paragraph with a colored bottom border.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating colored border paragraph

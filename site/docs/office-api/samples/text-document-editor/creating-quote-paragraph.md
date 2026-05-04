@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a styled quote block with indent and background.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating quote paragraph

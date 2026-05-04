@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Auto-populate content control fields from JSON data.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 # Auto-filling fields from JSON
 

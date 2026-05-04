@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a table with styled headers and alternating row colors.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating table document

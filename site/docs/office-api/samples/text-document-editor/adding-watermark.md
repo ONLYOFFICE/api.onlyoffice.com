@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add an image watermark with custom opacity and direction.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Adding image watermark

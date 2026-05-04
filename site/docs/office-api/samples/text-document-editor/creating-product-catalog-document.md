@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a product catalog table with images and details.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating product catalog document

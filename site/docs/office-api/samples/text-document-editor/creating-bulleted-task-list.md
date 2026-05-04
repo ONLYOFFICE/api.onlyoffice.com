@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a bulleted list for task enumeration.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating a bulleted task list

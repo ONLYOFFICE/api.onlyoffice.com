@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a structured report with sections and page breaks.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating structured report

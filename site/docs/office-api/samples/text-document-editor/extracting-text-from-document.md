@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Extract all text from a document as a string or array.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 # Extracting text from document
 

@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Add review comments to paragraphs and text fragments.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating document with comments

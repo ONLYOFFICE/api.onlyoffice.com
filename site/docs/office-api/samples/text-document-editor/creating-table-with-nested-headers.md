@@ -1,7 +1,7 @@
 ---
 hide_table_of_contents: true
 description: Create a table with merged header cells for grouped data.
-tags: ["Docs", "Office API", "Text documents"]
+tags: ["Docs", "Office API", "Documents"]
 ---
 
 # Creating table with nested headers
