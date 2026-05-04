@@ -151,7 +151,7 @@
 
 #### Docs API
 
-* Fixed text document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
+* Fixed Document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
 
 #### Common
 
@@ -258,7 +258,7 @@
 * New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
 * Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
 * Added Working with content controls sample for Automation API
-* Added links to all editor methods (text document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
+* Added links to all editor methods (document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
 
 #### Office API
 
