@@ -8,10 +8,10 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.3
 
-- Added the [SelectAddinField](../interacting-with-editors/text-document-api/Methods/SelectAddinField.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
-- Added the [RemoveAddinField](../interacting-with-editors/text-document-api/Methods/RemoveAddinField.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
-- Added the [GetCurrentAddinField](../interacting-with-editors/text-document-api/Methods/GetCurrentAddinField.md) method for Text document Api.
-- Added the [IsFormSigned](../interacting-with-editors/text-document-api/Methods/IsFormSigned.md) method for Text document Api.
+- Added the [SelectAddinField](../interacting-with-editors/text-document-api/Methods/SelectAddinField.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the [RemoveAddinField](../interacting-with-editors/text-document-api/Methods/RemoveAddinField.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the [GetCurrentAddinField](../interacting-with-editors/text-document-api/Methods/GetCurrentAddinField.md) method for Document Api.
+- Added the [IsFormSigned](../interacting-with-editors/text-document-api/Methods/IsFormSigned.md) method for Document Api.
 - Added the [CoAuthoringChatSendMessage](../interacting-with-editors/pdf-api/Methods/CoAuthoringChatSendMessage.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
 - Added the [EndAction](../interacting-with-editors/pdf-api/Methods/EndAction.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
 - Added the [FocusEditor](../interacting-with-editors/pdf-api/Methods/FocusEditor.md) method to *window\.Asc.plugin.executeMethod* for PDF Api.
@@ -44,13 +44,13 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 
 ## Version 9.2
 
-- Added the [AnnotateParagraph](../interacting-with-editors/text-document-api/Methods/AnnotateParagraph.md) method for Text document Api.
-- Added the [RemoveAnnotationRange](../interacting-with-editors/text-document-api/Methods/RemoveAnnotationRange.md) method for Text document Api.
-- Added the [SelectAnnotationRange](../interacting-with-editors/text-document-api/Methods/SelectAnnotationRange.md) method for Text document Api.
-- Added the [onBlurAnnotation](../interacting-with-editors/text-document-api/Events/onBlurAnnotation.md) event for Text document Api.
-- Added the [onClickAnnotation](../interacting-with-editors/text-document-api/Events/onClickAnnotation.md) event for Text document Api.
-- Added the [onFocusAnnotation](../interacting-with-editors/text-document-api/Events/onFocusAnnotation.md) event for Text document Api.
-- Added the [onParagraphText](../interacting-with-editors/text-document-api/Events/onParagraphText.md) event for Text document Api.
+- Added the [AnnotateParagraph](../interacting-with-editors/text-document-api/Methods/AnnotateParagraph.md) method for Document Api.
+- Added the [RemoveAnnotationRange](../interacting-with-editors/text-document-api/Methods/RemoveAnnotationRange.md) method for Document Api.
+- Added the [SelectAnnotationRange](../interacting-with-editors/text-document-api/Methods/SelectAnnotationRange.md) method for Document Api.
+- Added the [onBlurAnnotation](../interacting-with-editors/text-document-api/Events/onBlurAnnotation.md) event for Document Api.
+- Added the [onClickAnnotation](../interacting-with-editors/text-document-api/Events/onClickAnnotation.md) event for Document Api.
+- Added the [onFocusAnnotation](../interacting-with-editors/text-document-api/Events/onFocusAnnotation.md) event for Document Api.
+- Added the [onParagraphText](../interacting-with-editors/text-document-api/Events/onParagraphText.md) event for Document Api.
 - Updated [Adding plugins through the plugin manager for all users](../tutorials/installing/onlyoffice-docs-on-premises.md) instruction according Help center info.
 
 ## Version 9.1
@@ -65,7 +65,7 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 - Added the ability to [automatically convert](../macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin) VBA code into ONLYOFFICE macros using AI plugin.
 - Added the ability to [automatically generate](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE macros using AI plugin.
 - Added the ability to add custom [buttons to content controls](../customization/content-control-buttons.md) using a plugin.
-- Added the [GetCurrentBookmark](../interacting-with-editors/text-document-api/Methods/GetCurrentBookmark.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
+- Added the [GetCurrentBookmark](../interacting-with-editors/text-document-api/Methods/GetCurrentBookmark.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
 - Added the [GoToSlide](../interacting-with-editors/presentation-api/Methods/GoToSlide.md) method to *window\.Asc.plugin.executeMethod* for Presentation Api.
 - Added the [ContentControlListElement](../interacting-with-editors/text-document-api/Enumeration/ContentControlListElement.md) enumeration.
 
@@ -79,10 +79,10 @@ The list of changes for ONLYOFFICE Plugins and Macros API.
 ## Version 8.2
 
 - Added the [onSubmitForm](../interacting-with-editors/form-api/Events/onSubmitForm.md) event.
-- Added the [CanRedo](../interacting-with-editors/text-document-api/Methods/CanRedo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
-- Added the [CanUndo](../interacting-with-editors/text-document-api/Methods/CanUndo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
-- Added the [Redo](../interacting-with-editors/text-document-api/Methods/Redo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
-- Added the [Undo](../interacting-with-editors/text-document-api/Methods/Undo.md) method to *window\.Asc.plugin.executeMethod* for Text document Api.
+- Added the [CanRedo](../interacting-with-editors/text-document-api/Methods/CanRedo.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the [CanUndo](../interacting-with-editors/text-document-api/Methods/CanUndo.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the [Redo](../interacting-with-editors/text-document-api/Methods/Redo.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the [Undo](../interacting-with-editors/text-document-api/Methods/Undo.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
 
 ## Version 8.1
 

@@ -42,10 +42,10 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 ## 版本 8.2
 
 - 添加了表单提事件。
-- 向 Text document API 中的 *window.Asc.plugin.executeMethod* 添加了判断是否可以重做方法。
-- 向 Text document API 中的 *window.Asc.plugin.executeMethod* 添加了判断是否可以撤销方法。
-- 向 Text document API 中的 *window.Asc.plugin.executeMethod* 添加了执行重做操作方法。
-- 向 Text document API 中的 *window.Asc.plugin.executeMethod* 添加了执行撤销操作方法。
+- 向 Document API 中的 *window.Asc.plugin.executeMethod* 添加了判断是否可以重做方法。
+- 向 Document API 中的 *window.Asc.plugin.executeMethod* 添加了判断是否可以撤销方法。
+- 向 Document API 中的 *window.Asc.plugin.executeMethod* 添加了执行重做操作方法。
+- 向 Document API 中的 *window.Asc.plugin.executeMethod* 添加了执行撤销操作方法。
 
 ## 版本 8.1
 
