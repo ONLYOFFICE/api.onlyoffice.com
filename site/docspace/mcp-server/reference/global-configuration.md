@@ -1,6 +1,6 @@
 ---
 sidebar_label: Global configuration
-sidebar_position: 2
+sidebar_position: 8
 title: Global configuration
 ---
 

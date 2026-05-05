@@ -1,6 +1,6 @@
 ---
 sidebar_label: Request configuration
-sidebar_position: 3
+sidebar_position: 9
 title: Request configuration
 ---
 
