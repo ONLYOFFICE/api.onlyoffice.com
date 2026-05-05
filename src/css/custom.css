@@ -119,6 +119,21 @@
   height: auto !important;
 }
 
+.theme-announcement-bar .close svg {
+  width: 10px;
+  height: 10px;
+  stroke-width: 1.5;
+}
+
+html[data-theme='dark'] .theme-announcement-bar {
+  background-color: var(--ifm-background-surface-color) !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+html[data-theme='dark'] .theme-announcement-bar .close {
+  color: var(--ifm-font-color-base);
+}
+
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
 [data-theme='dark'] img[src$='#gh-light-mode-only'] {
   display: none;
