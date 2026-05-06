@@ -10,6 +10,10 @@ export const PlaygroundPreview = () => {
     const editorRef = useRef<EditorPreviewRef>(null);
     const initialScriptExecutedRef = useRef(!hasInitialScript);
     const isApiReadyRef = useRef(false);
+    const scriptValueRef = useRef(scriptValue);
+    scriptValueRef.current = scriptValue;
+    const scriptTypeRef = useRef(scriptType);
+    scriptTypeRef.current = scriptType;
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
@@ -97,7 +101,7 @@ export const PlaygroundPreview = () => {
 
                         if (!initialScriptExecutedRef.current) {
                             initialScriptExecutedRef.current = true;
-                            executeCode(scriptValue, scriptType);
+                            executeCode(scriptValueRef.current, scriptTypeRef.current);
                         }
                     } catch (error) {
                         console.error('Failed to initialize connector:', error);
@@ -105,7 +109,7 @@ export const PlaygroundPreview = () => {
                 }
             }
         }
-    }, [editorType, theme, modeType, documentServerUrl, templateUrl, fileType, executeCode, scriptValue, scriptType]);
+    }, [editorType, theme, modeType, documentServerUrl, templateUrl, fileType, executeCode]);
 
     const initEditorWithConfig = useCallback(() => {
         if (!isApiReadyRef.current || !editorRef.current) return;

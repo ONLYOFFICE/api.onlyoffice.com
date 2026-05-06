@@ -18,6 +18,7 @@ export const PlaygroundToolbar = () => {
 
     const [dialogOpen, setDialogOpen] = useState(false);
     const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null);
+    const [pendingScriptType, setPendingScriptType] = useState<ScriptType | null>(null);
 
     const [settingsOpen, setSettingsOpen] = useState(false);
     const [serverUrl, setServerUrl] = useState(documentServerUrl);
@@ -67,26 +68,40 @@ export const PlaygroundToolbar = () => {
         if (pendingEditorType) {
             dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType, replace: true });
             setPendingEditorType(null);
+        } else if (pendingScriptType) {
+            dispatch({ type: 'SET_SCRIPT_TYPE', payload: pendingScriptType, replace: true });
+            setPendingScriptType(null);
         }
         setDialogOpen(false);
-    }, [pendingEditorType, scriptType, dispatch]);
+    }, [pendingEditorType, pendingScriptType, dispatch]);
 
     const handleKeepScript = useCallback(() => {
         if (pendingEditorType) {
             dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType });
             setPendingEditorType(null);
+        } else if (pendingScriptType) {
+            dispatch({ type: 'SET_SCRIPT_TYPE', payload: pendingScriptType });
+            setPendingScriptType(null);
         }
         setDialogOpen(false);
-    }, [pendingEditorType, dispatch]);
+    }, [pendingEditorType, pendingScriptType, dispatch]);
 
     const handleCancelChange = () => {
         setPendingEditorType(null);
+        setPendingScriptType(null);
         setDialogOpen(false);
     };
 
     const handleScriptTypeChange = useCallback((value: string) => {
-        dispatch({ type: 'SET_SCRIPT_TYPE', payload: value as ScriptType });
-    }, [dispatch]);
+        const newScriptType = value as ScriptType;
+
+        if (isScriptModified && scriptType !== 'config' && newScriptType !== 'config') {
+            setPendingScriptType(newScriptType);
+            setDialogOpen(true);
+        } else {
+            dispatch({ type: 'SET_SCRIPT_TYPE', payload: newScriptType, replace: true });
+        }
+    }, [isScriptModified, scriptType, dispatch]);
 
     const handleModeTypeChange = useCallback((value: string) => {
         dispatch({ type: 'SET_MODE_TYPE', payload: value as ModeType });
@@ -264,8 +279,7 @@ export const PlaygroundToolbar = () => {
                             Script Modified
                         </AlertDialog.Title>
                         <AlertDialog.Description className={styles.DialogDescription}>
-                            You have modified the script. Do you want to replace it with the default
-                            script for the new editor type?
+                            You have modified the script. Do you want to replace it with the default script?
                         </AlertDialog.Description>
                         <div className={styles.DialogActions}>
                             <AlertDialog.Action asChild>
