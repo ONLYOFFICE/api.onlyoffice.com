@@ -7,7 +7,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 A speech recognition software that allows you to recognize and translate spoken speech into text.
 
-![Speech to text](/assets/images/docspace/speech-to-text.png)
+![Speech to text](/assets/images/docspace/speech-to-text.png#gh-light-mode-only)![Speech to text](/assets/images/docspace/speech-to-text.dark.png#gh-dark-mode-only)
 
 ## Installation
 
