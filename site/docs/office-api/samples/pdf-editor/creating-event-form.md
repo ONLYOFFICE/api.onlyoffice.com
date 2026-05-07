@@ -8,8 +8,8 @@ tags: ["Docs", "Office API", "PDF"]
 
 Build a styled event registration form with gradient background:
 
-- set custom page size with no margins ([ApiSection/SetPageSize](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageSize.md), [ApiSection/SetPageMargins](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageMargins.md));
-- create gradient background shape ([Api/CreateGradientStop](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateGradientStop.md), [Api/CreateLinearGradientFill](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateLinearGradientFill.md), [Api/CreateShape](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateShape.md));
+- set custom page size with no margins ([ApiSection/SetPageSize](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageSize.md), [ApiSection/SetPageMargins](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageMargins.md));
+- create gradient background shape ([Api/CreateGradientStop](/docs/office-api/usage-api/document-api/Api/Methods/CreateGradientStop.md), [Api/CreateLinearGradientFill](/docs/office-api/usage-api/document-api/Api/Methods/CreateLinearGradientFill.md), [Api/CreateShape](/docs/office-api/usage-api/document-api/Api/Methods/CreateShape.md));
 - add text fields for attendee information ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md));
 - add photo upload field ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md));
 - add consent checkbox ([Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)).

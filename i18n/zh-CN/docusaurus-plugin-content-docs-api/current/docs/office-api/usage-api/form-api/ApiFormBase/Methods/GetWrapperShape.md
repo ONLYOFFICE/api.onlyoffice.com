@@ -17,7 +17,7 @@ expression.GetWrapperShape();
 
 ## 返回值
 
-[ApiShape](../../../text-document-api/ApiShape/ApiShape.md)
+[ApiShape](../../../document-api/ApiShape/ApiShape.md)
 
 ## 示例
 

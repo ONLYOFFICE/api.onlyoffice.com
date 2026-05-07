@@ -32,4 +32,4 @@ builderJS.SaveFile("docx", "CommentsReport.docx");
 builderJS.CloseFile();
 ```
 
-有关更多信息，请参阅 [ApiDocument.GetCommentsReport](../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetCommentsReport.md) 和 [ApiDocument.GetReviewReport](../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md)。
+有关更多信息，请参阅 [ApiDocument.GetCommentsReport](../../office-api/usage-api/document-api/ApiDocument/Methods/GetCommentsReport.md) 和 [ApiDocument.GetReviewReport](../../office-api/usage-api/document-api/ApiDocument/Methods/GetReviewReport.md)。

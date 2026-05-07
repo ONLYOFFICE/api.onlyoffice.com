@@ -7,7 +7,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 A tool for creating diagrams, flowcharts, intelligence maps, business layouts, entity relationships, program blocks, and more.
 
-![Draw.io](/assets/images/docspace/drawio.png)
+![Draw.io](/assets/images/docspace/drawio.png#gh-light-mode-only)![Draw.io](/assets/images/docspace/drawio.dark.png#gh-dark-mode-only)
 
 ## Installation
 

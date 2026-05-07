@@ -33,7 +33,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有表单](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)，[获取表单类型](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)，[获取表单键](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)，[获取文本](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md)，[设置字符限制](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit.md)，[设置必填项](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetRequired.md)，[设置占位文本](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetPlaceholderText.md)，[设置梳状输入](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetCharactersLimit](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit.md), [SetRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetRequired.md), [SetPlaceholderText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetPlaceholderText.md), [SetComb](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md)
 
 ## 结果
 

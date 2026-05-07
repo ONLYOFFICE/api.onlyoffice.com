@@ -1,5 +1,5 @@
-export { PlaygroundContent as Content } from './content/PlaygroundContent'
-export { PlaygroundEditor as Editor } from './editor/PlaygroundEditor'
-export { PlaygroundPreview as Preview } from './preview/PlaygroundPreview'
-export { PlaygroundRoot as Root } from './root/PlaygroundRoot'
-export { PlaygroundToolbar as Toolbar } from './toolbar/PlaygroundToolbar'
+export { PlaygroundEditor as Editor } from './editor/PlaygroundEditor';
+export { PlaygroundPreview as Preview } from './preview/PlaygroundPreview';
+export { PlaygroundConfigMode as ConfigMode } from './config/PlaygroundConfigMode';
+export { PlaygroundRoot as Root } from './root/PlaygroundRoot';
+export { PlaygroundToolbar as Toolbar } from './toolbar/PlaygroundToolbar';

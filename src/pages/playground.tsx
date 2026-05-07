@@ -1,35 +1,54 @@
-import {Playground} from "../components/Playground";
+import {Playground, usePlaygroundRootContext} from "../components/Playground";
 import styles from './playground.module.css';
 import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import {useLocation} from "react-router-dom";
-import {EditorType, PreviewType, ScriptType, DocumentType} from "@site/src/components/Playground/root/PlaygroundRootContext";
+import {EditorType, ModeType, ScriptType, FileType} from "@site/src/components/Playground/root/PlaygroundRootContext";
 import Head from '@docusaurus/Head';
 import BrowserOnly from "@docusaurus/BrowserOnly";
 import {getSearchParams} from "@site/src/utils/url";
+import { lazy, Suspense } from "react";
+import { SplitPane } from "@site/src/components/SplitPane";
+
+const PlaygroundLazyEditor = lazy(() =>
+    import('../components/Playground').then(m => ({ default: m.Playground.Editor })),
+)
+
+const PlaygroundContent = () => {
+    const { scriptType } = usePlaygroundRootContext()
+
+    if (scriptType === 'config') {
+        return <Playground.ConfigMode />
+    }
+
+    return (
+        <SplitPane
+            first={<Suspense><PlaygroundLazyEditor /></Suspense>}
+            second={<Playground.Preview/>}
+        />
+    )
+}
 
 const PlaygroundRoute = () => {
     const location = useLocation();
 
-    const { templateUrl, emptyTemplateUrl, ...props } = getSearchParams<{
+    const { templateUrl, ...props } = getSearchParams<{
         editorType: EditorType
         scriptType: ScriptType
-        previewType: PreviewType
+        modeType: ModeType
         initialScript: string
         documentServerUrl: string
         documentServerSecret: string
         templateUrl: string
-        emptyTemplateUrl?: string // note: because you can't use "boolean"
-        documentType: DocumentType
+        fileType: FileType
     }>(location.search, {
         editorType: 'editor',
-        scriptType: 'testType',
-        previewType: 'preview',
+        scriptType: 'script',
+        modeType: 'mode',
         initialScript: 'code',
         documentServerUrl: 'documentServerUrl',
         documentServerSecret: 'documentServerSecret',
         templateUrl: 'templateUrl',
-        emptyTemplateUrl: 'emptyTemplateUrl',
-        documentType: 'document'
+        fileType: 'file'
     });
 
     return (
@@ -43,9 +62,9 @@ const PlaygroundRoute = () => {
             <BrowserOnly>
                 {() => (
                     <div className={styles.playgroundContainer}>
-                        <Playground.Root templateUrl={emptyTemplateUrl !== undefined ? null : templateUrl} {...props}>
+                        <Playground.Root templateUrl={templateUrl} {...props}>
                             <Playground.Toolbar/>
-                            <Playground.Content/>
+                            <PlaygroundContent />
                         </Playground.Root>
                     </div>
                 )}

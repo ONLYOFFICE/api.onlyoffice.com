@@ -7,8 +7,8 @@ hide_table_of_contents: true
 重置所有已填写的表单字段，将表单恢复到初始状态，以便重新使用、取消输入或快速清除：
 
 - 创建包含各种字段类型和默认值的表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
-- 实现表单清除功能（[ApiDocument/GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md)、[ApiTextForm/SetText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md)、[ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChecked.md)）；
-- 将字段恢复到默认状态（[ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md)、[ApiComboBoxForm/SetText](/docs/office-api/usage-api/text-document-api/ApiComboBoxForm/Methods/SetText.md)）。
+- 实现表单清除功能（[ApiDocument/GetAllForms](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md)、[ApiTextForm/SetText](/docs/office-api/usage-api/document-api/ApiTextForm/Methods/SetText.md)、[ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/document-api/ApiCheckBoxForm/Methods/SetChecked.md)）；
+- 将字段恢复到默认状态（[ApiFormBase/GetFormType](/docs/office-api/usage-api/document-api/ApiFormBase/Methods/GetFormType.md)、[ApiComboBoxForm/SetText](/docs/office-api/usage-api/document-api/ApiComboBoxForm/Methods/SetText.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

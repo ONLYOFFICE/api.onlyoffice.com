@@ -7,9 +7,9 @@ hide_table_of_contents: true
 创建带有文档跟踪功能的入职清单表单：
 
 - 为员工信息创建文本字段（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
-- 创建用于跟踪已签署文档的复选框表格（[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md)）；
-- 使用自定义边框样式化表格（[ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md)、[ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md)、[ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md)、[ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md)）；
-- 使用实用函数实现一致的表单创建（[ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md)、[ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md)）。
+- 创建用于跟踪已签署文档的复选框表格（[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md)）；
+- 使用自定义边框样式化表格（[ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md)、[ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderBottom.md)、[ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderLeft.md)、[ApiTable/SetTableBorderRight](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderRight.md)）；
+- 使用实用函数实现一致的表单创建（[ApiTable/GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md)、[ApiTableCell/GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

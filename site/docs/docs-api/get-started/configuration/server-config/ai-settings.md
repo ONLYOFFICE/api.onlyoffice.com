@@ -8,49 +8,49 @@ These parameters define the AI plugin properties.
 
 ## aiSettings.version
 
-`Type: integer`   `Default: 3`
+**type:** `integer` | **default:** `3`
 
 Defines the version of the AI SDK.
 
 ## aiSettings.timeout
 
-`Type: string`   `Default: "5m"`
+**type:** `string` | **default:** `"5m"`
 
 Defines an AI proxy timeout (measured in minutes).
 
 ## aiSettings.proxy
 
-`Type: string`   `Default: ""`
+**type:** `string` | **default:** `""`
 
 Supports routing AI requests via proxy.
 
 ## aiSettings.allowedCorsOrigins
 
-`Type: array of strings`   `Default: ["https://onlyoffice.github.io","https://onlyoffice-plugins.github.io"]`
+**type:** `string[]` | **default:** `["https://onlyoffice.github.io","https://onlyoffice-plugins.github.io"]`
 
 Defines which external websites are permitted to make cross-origin requests to the server.
 
 ## aiSettings.actions
 
-`Type: object`
+**type:** `object`
 
 Defines actions performed by AI, e.g., Chat, Summarization, Translation, TextAnalyze, ImageGeneration, OCR, Vision.
 
 ## aiSettings.providers
 
-`Type: object`
+**type:** `object`
 
 Defines AI providers, e.g., OpenAI, Google Gemini, Anthropic, etc.
 
 ## aiSettings.customProviders
 
-`Type: object`
+**type:** `object`
 
 Custom AI service providers configuration
 
 ## aiSettings.models
 
-`Type: array of objects`   `Default: []`
+**type:** `object[]` | **default:** `[]`
 
 Defines AI models, e.g., gemini-1.5-pro-latest, llama3.2:latest, etc.
 

@@ -9,8 +9,8 @@ tags: ["Docs", "Office API", "PDF"]
 Create forms automatically from simple JSON objects where field types and structure are determined automatically based on data context and values:
 
 - analyze JSON data and determine appropriate field types ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- generate form fields with intelligent type detection ([ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [ApiParagraph/AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md));
-- create labels and initial values from JSON structure ([Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)).
+- generate form fields with intelligent type detection ([ApiDocument/Push](/docs/office-api/usage-api/document-api/ApiDocument/Methods/Push.md), [ApiParagraph/AddElement](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddElement.md));
+- create labels and initial values from JSON structure ([Api/CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

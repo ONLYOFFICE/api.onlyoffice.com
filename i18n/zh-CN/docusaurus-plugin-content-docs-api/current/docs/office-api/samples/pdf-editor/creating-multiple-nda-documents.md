@@ -6,9 +6,9 @@ hide_table_of_contents: true
 
 在一个文件中生成多个个性化的保密协议（NDA）文档，为不同用户创建独立的部分：
 
-- 创建具有 A4 页面大小和自定义边距的文档（[ApiDocument/CreateSection](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateSection.md)、[ApiSection/SetPageSize](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageSize.md)、[ApiSection/SetPageMargins](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageMargins.md)）；
+- 创建具有 A4 页面大小和自定义边距的文档（[ApiDocument/CreateSection](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateSection.md)、[ApiSection/SetPageSize](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageSize.md)、[ApiSection/SetPageMargins](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageMargins.md)）；
 - 创建预填充用户特定数据的内联文本表单字段（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)）；
-- 添加手动签名行并使用分页符分隔每个保密协议（[ApiParagraph/AddPageBreak](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddPageBreak.md)）。
+- 添加手动签名行并使用分页符分隔每个保密协议（[ApiParagraph/AddPageBreak](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddPageBreak.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

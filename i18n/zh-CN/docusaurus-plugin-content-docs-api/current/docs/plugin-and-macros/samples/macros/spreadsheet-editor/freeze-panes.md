@@ -23,7 +23,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetFreezePanes](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetFreezePanes.md), [Unfreeze](/docs/office-api/usage-api/spreadsheet-api/ApiFreezePanes/Methods/Unfreeze.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Select](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md), [FreezeAt](/docs/office-api/usage-api/spreadsheet-api/ApiFreezePanes/Methods/FreezeAt.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetFreezePanes](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetFreezePanes.md), [Unfreeze](../../../../office-api/usage-api/spreadsheet-api/ApiFreezePanes/Methods/Unfreeze.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md), [FreezeAt](../../../../office-api/usage-api/spreadsheet-api/ApiFreezePanes/Methods/FreezeAt.md)
 
 ## 参考 Microsoft VBA 宏代码
 

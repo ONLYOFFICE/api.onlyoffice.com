@@ -6,10 +6,10 @@ hide_table_of_contents: true
 
 创建包含公司详情和订单项目的采购订单模板：
 
-- 为订单信息创建基于表格的布局（[Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md)、[ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md)、[ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md)）；
+- 为订单信息创建基于表格的布局（[Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md)、[ApiTable/GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md)、[ApiTableCell/GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md)）；
 - 添加用于上传公司标志的图片表单（[Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md)）；
 - 为可编辑字段添加文本表单（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)）；
-- 设置表头和边框样式（[ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md)、[ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md)）。
+- 设置表头和边框样式（[ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md)、[ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

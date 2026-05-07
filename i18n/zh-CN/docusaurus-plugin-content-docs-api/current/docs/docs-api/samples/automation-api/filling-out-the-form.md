@@ -17,7 +17,7 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
 
 ## 它是如何运作的
 
-1. 当用户打开表单文档时，将执行 [GetAllContentControls](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetAllContentControls.md) 方法以从文档中收集所有内容控件。之后，执行 [GetFormValue](/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) 方法来获取内容控件的值，并将其显示在自定义界面中：
+1. 当用户打开表单文档时，将执行 [GetAllContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetAllContentControls.md) 方法以从文档中收集所有内容控件。之后，执行 [GetFormValue](/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) 方法来获取内容控件的值，并将其显示在自定义界面中：
 
     ``` ts
     let contentControls = [];
@@ -56,7 +56,7 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
     };
     ```
 
-3. 当用户编辑表单值时，会触发 [onChangeContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Events/onChangeContentControl.md) 事件，然后执行 [GetFormValue](/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) 方法以获取更新的表单值并将其显示在自定义界面中：
+3. 当用户编辑表单值时，会触发 [onChangeContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onChangeContentControl.md) 事件，然后执行 [GetFormValue](/docs/plugin-and-macros/interacting-with-editors/form-api/Methods/GetFormValue.md) 方法以获取更新的表单值并将其显示在自定义界面中：
 
     ``` ts
     const onDocumentReady = () => {
@@ -74,7 +74,7 @@ import { FormExternalToolbar } from '@site/src/components/BrowserWindow';
     ```
 
 :::note
-请注意，该连接器仅适用于 **ONLYOFFICE文档开发者版本**.
+请注意，该连接器仅适用于 **ONLYOFFICE 文档开发者版本**.
 
-此类是一项附加功能，在 ONLYOFFICE文档开发者版中并非默认提供，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
+此类是一项附加功能，在 ONLYOFFICE 文档开发者版中并非默认提供，需要额外付费。 如果您有任何疑问，请通过 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)联系我们的销售团队。
 :::

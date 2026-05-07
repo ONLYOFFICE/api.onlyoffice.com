@@ -1,6 +1,6 @@
 ---
 description: Embed a chess board as an OLE object in the editor.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
 # Chess
@@ -170,8 +170,8 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
-- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddOleObject.md)
-- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/EditOleObject.md)
+- [executeMethod ("AddOleObject")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddOleObject.md)
+- [executeMethod ("EditOleObject")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/EditOleObject.md)
 - [info.data](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#data)
 - [info.guid](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#guid)
 - [info.height](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#height)

@@ -61,7 +61,7 @@ ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-v
                    },
                    documentType: "word",
                    editorConfig: {
-                       callbackUrl: "https://example.com/url-to-callback.ashx"
+                       callbackUrl: "https://example.com/url-to-callback"
                    }
                }
            }
@@ -94,7 +94,7 @@ ONLYOFFICE 文档 Vue.js[组件](https://github.com/ONLYOFFICE/document-editor-v
 
    - `http://documentserver/` - 替换为您的服务器的 URL；您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
    - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-   - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
+   - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
 5. 使用 Vue 开发服务器测试应用程序：
 

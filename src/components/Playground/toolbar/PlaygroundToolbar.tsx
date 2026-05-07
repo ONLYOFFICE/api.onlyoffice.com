@@ -1,104 +1,119 @@
-'use client'
+'use client';
 
 import * as AlertDialog from "@radix-ui/react-alert-dialog";
 import * as Select from "@radix-ui/react-select";
 
-import * as React from 'react'
+import * as React from 'react';
 import { useCallback, useRef, useState } from "react";
-import { EditorType, PreviewType, ScriptType, DocumentType, usePlaygroundRootContext } from '../root/PlaygroundRootContext'
-import styles from './PlaygroundToolbar.module.css'
+import { EditorType, ModeType, ScriptType, FileType, usePlaygroundRootContext } from '../root/PlaygroundRootContext';
+import styles from './PlaygroundToolbar.module.css';
 
-const STORAGE_KEY = 'playground_server_config'
+const STORAGE_KEY = 'playground_server_config';
 
 const normalizeServerUrl = (url: string): string =>
-    url.endsWith('/') ? url : `${url}/`
+    url.endsWith('/') ? url : `${url}/`;
 
 export const PlaygroundToolbar = () => {
-    const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch, documentServerUrl, documentServerSecret, defaultDocumentServerUrl, defaultDocumentServerSecret } = usePlaygroundRootContext()
+    const { editorType, modeType, scriptType, fileType, isScriptModified, theme, setTheme, dispatch, documentServerUrl, documentServerSecret, defaultDocumentServerUrl, defaultDocumentServerSecret } = usePlaygroundRootContext();
 
-    const [dialogOpen, setDialogOpen] = useState(false)
-    const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null)
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null);
+    const [pendingScriptType, setPendingScriptType] = useState<ScriptType | null>(null);
 
-    const [settingsOpen, setSettingsOpen] = useState(false)
-    const [serverUrl, setServerUrl] = useState(documentServerUrl)
-    const [serverSecret, setServerSecret] = useState(documentServerSecret)
-    const secretInputRef = useRef<HTMLInputElement>(null)
+    const [settingsOpen, setSettingsOpen] = useState(false);
+    const [serverUrl, setServerUrl] = useState(documentServerUrl);
+    const [serverSecret, setServerSecret] = useState(documentServerSecret);
+    const secretInputRef = useRef<HTMLInputElement>(null);
 
-    const isCustomServer = documentServerUrl !== defaultDocumentServerUrl || documentServerSecret !== defaultDocumentServerSecret
+    const isCustomServer = documentServerUrl !== defaultDocumentServerUrl || documentServerSecret !== defaultDocumentServerSecret;
 
     const handleOpenSettings = useCallback(() => {
-        setServerUrl(documentServerUrl)
-        setServerSecret(documentServerSecret)
-        setSettingsOpen(true)
-    }, [documentServerUrl, documentServerSecret])
+        setServerUrl(documentServerUrl);
+        setServerSecret(documentServerSecret);
+        setSettingsOpen(true);
+    }, [documentServerUrl, documentServerSecret]);
 
     const handleSaveSettings = useCallback(() => {
-        const trimmedUrl = serverUrl.trim()
-        const url = trimmedUrl ? normalizeServerUrl(trimmedUrl) : defaultDocumentServerUrl
-        const secret = serverSecret.trim() || defaultDocumentServerSecret
-        dispatch({ type: 'SET_SERVER_CONFIG', payload: { documentServerUrl: url, documentServerSecret: secret } })
+        const trimmedUrl = serverUrl.trim();
+        const url = trimmedUrl ? normalizeServerUrl(trimmedUrl) : defaultDocumentServerUrl;
+        const secret = serverSecret.trim() || defaultDocumentServerSecret;
+        dispatch({ type: 'SET_SERVER_CONFIG', payload: { documentServerUrl: url, documentServerSecret: secret } });
         try {
             if (url !== defaultDocumentServerUrl || secret !== defaultDocumentServerSecret) {
-                localStorage.setItem(STORAGE_KEY, JSON.stringify({ url, secret }))
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({ url, secret }));
             } else {
-                localStorage.removeItem(STORAGE_KEY)
+                localStorage.removeItem(STORAGE_KEY);
             }
         } catch {}
-        setSettingsOpen(false)
-    }, [serverUrl, serverSecret, defaultDocumentServerUrl, defaultDocumentServerSecret, dispatch])
+        setSettingsOpen(false);
+    }, [serverUrl, serverSecret, defaultDocumentServerUrl, defaultDocumentServerSecret, dispatch]);
 
     const handleResetSettings = useCallback(() => {
-        setServerUrl(defaultDocumentServerUrl)
-        setServerSecret(defaultDocumentServerSecret)
-    }, [defaultDocumentServerUrl, defaultDocumentServerSecret])
+        setServerUrl(defaultDocumentServerUrl);
+        setServerSecret(defaultDocumentServerSecret);
+    }, [defaultDocumentServerUrl, defaultDocumentServerSecret]);
 
     const handleEditorTypeChange = useCallback((value: string) => {
-        const newEditorType = value as EditorType
+        const newEditorType = value as EditorType;
 
-        if (isScriptModified) {
-            setPendingEditorType(newEditorType)
-            setDialogOpen(true)
+        if (isScriptModified && scriptType !== 'config') {
+            setPendingEditorType(newEditorType);
+            setDialogOpen(true);
         } else {
-            dispatch({ type: 'SET_EDITOR_TYPE', payload: newEditorType, replace: true })
+            dispatch({ type: 'SET_EDITOR_TYPE', payload: newEditorType, replace: true });
         }
-    }, [isScriptModified, scriptType, dispatch])
+    }, [isScriptModified, scriptType, dispatch]);
 
     const handleConfirmChange = useCallback(() => {
         if (pendingEditorType) {
-            dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType, replace: true })
-            setPendingEditorType(null)
+            dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType, replace: true });
+            setPendingEditorType(null);
+        } else if (pendingScriptType) {
+            dispatch({ type: 'SET_SCRIPT_TYPE', payload: pendingScriptType, replace: true });
+            setPendingScriptType(null);
         }
-        setDialogOpen(false)
-    }, [pendingEditorType, scriptType, dispatch])
+        setDialogOpen(false);
+    }, [pendingEditorType, pendingScriptType, dispatch]);
 
     const handleKeepScript = useCallback(() => {
         if (pendingEditorType) {
-            dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType })
-            setPendingEditorType(null)
+            dispatch({ type: 'SET_EDITOR_TYPE', payload: pendingEditorType });
+            setPendingEditorType(null);
+        } else if (pendingScriptType) {
+            dispatch({ type: 'SET_SCRIPT_TYPE', payload: pendingScriptType });
+            setPendingScriptType(null);
         }
-        setDialogOpen(false)
-    }, [pendingEditorType, dispatch])
+        setDialogOpen(false);
+    }, [pendingEditorType, pendingScriptType, dispatch]);
 
     const handleCancelChange = () => {
-        setPendingEditorType(null)
-        setDialogOpen(false)
-    }
+        setPendingEditorType(null);
+        setPendingScriptType(null);
+        setDialogOpen(false);
+    };
 
     const handleScriptTypeChange = useCallback((value: string) => {
-        dispatch({ type: 'SET_SCRIPT_TYPE', payload: value as ScriptType })
-    }, [dispatch])
+        const newScriptType = value as ScriptType;
 
-    const handlePreviewTypeChange = useCallback((value: string) => {
-        dispatch({ type: 'SET_PREVIEW_TYPE', payload: value as PreviewType })
-    }, [dispatch])
+        if (isScriptModified && scriptType !== 'config' && newScriptType !== 'config') {
+            setPendingScriptType(newScriptType);
+            setDialogOpen(true);
+        } else {
+            dispatch({ type: 'SET_SCRIPT_TYPE', payload: newScriptType, replace: true });
+        }
+    }, [isScriptModified, scriptType, dispatch]);
 
-    const handleDocumentTypeChange = useCallback((value: string) => {
-        dispatch({ type: 'SET_DOCUMENT_TYPE', payload: value as DocumentType })
-    }, [dispatch])
+    const handleModeTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_MODE_TYPE', payload: value as ModeType });
+    }, [dispatch]);
+
+    const handleFileTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_FILE_TYPE', payload: value as FileType });
+    }, [dispatch]);
 
     const handleThemeChange = useCallback((value: string) => {
-        setTheme(value as 'light' | 'dark')
-    }, [setTheme])
+        setTheme(value as 'light' | 'dark');
+    }, [setTheme]);
 
     return (
         <div className={styles.Toolbar}>
@@ -115,7 +130,7 @@ export const PlaygroundToolbar = () => {
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="word" className={styles.SelectOption}>
-                                    <Select.ItemText>Text Document</Select.ItemText>
+                                    <Select.ItemText>Document</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="cell" className={styles.SelectOption}>
                                     <Select.ItemText>Spreadsheet</Select.ItemText>
@@ -147,11 +162,14 @@ export const PlaygroundToolbar = () => {
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
-                                <Select.Item value="office-js-api" className={styles.SelectOption}>
-                                    <Select.ItemText>Office JS API</Select.ItemText>
+                                <Select.Item value="config" className={styles.SelectOption}>
+                                    <Select.ItemText>Config</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="connector" className={styles.SelectOption}>
-                                    <Select.ItemText>Connector</Select.ItemText>
+                                    <Select.ItemText>Automation API</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="office-js-api" className={styles.SelectOption}>
+                                    <Select.ItemText>Office JS API</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="plugin" className={styles.SelectOption}>
                                     <Select.ItemText>Plugin</Select.ItemText>
@@ -166,8 +184,8 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Preview:</div>
-                <Select.Root value={previewType} onValueChange={handlePreviewTypeChange}>
+                <div className={styles.Label}>Mode:</div>
+                <Select.Root value={modeType} onValueChange={handleModeTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                         <Select.Icon asChild>
@@ -193,8 +211,8 @@ export const PlaygroundToolbar = () => {
             </div>
 
             <div className={styles.ToolbarGroup}>
-                <div className={styles.Label}>Document:</div>
-                <Select.Root value={documentType} onValueChange={handleDocumentTypeChange}>
+                <div className={styles.Label}>File:</div>
+                <Select.Root value={fileType} onValueChange={handleFileTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                         <Select.Icon asChild>
@@ -204,11 +222,11 @@ export const PlaygroundToolbar = () => {
                     <Select.Portal>
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
-                                <Select.Item value="blank" className={styles.SelectOption}>
-                                    <Select.ItemText>Blank</Select.ItemText>
-                                </Select.Item>
                                 <Select.Item value="sample" className={styles.SelectOption}>
                                     <Select.ItemText>Sample</Select.ItemText>
+                                </Select.Item>
+                                <Select.Item value="blank" className={styles.SelectOption}>
+                                    <Select.ItemText>Blank</Select.ItemText>
                                 </Select.Item>
                             </Select.Viewport>
                         </Select.Content>
@@ -261,8 +279,7 @@ export const PlaygroundToolbar = () => {
                             Script Modified
                         </AlertDialog.Title>
                         <AlertDialog.Description className={styles.DialogDescription}>
-                            You have modified the script. Do you want to replace it with the default
-                            script for the new editor type?
+                            You have modified the script. Do you want to replace it with the default script?
                         </AlertDialog.Description>
                         <div className={styles.DialogActions}>
                             <AlertDialog.Action asChild>

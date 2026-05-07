@@ -11,14 +11,14 @@ The **document editing service** informs the **document storage service** about 
   ``` ts
   const config = {
     editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback.ashx",
+      callbackUrl: "https://example.com/url-to-callback",
     },
   };
 
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-Here the `https://example.com/url-to-callback.ashx` is the address of the special handler which can process the response from the **document editing service** and response with the *"error": 0* status code. This handler can be written in the programming language of your choice.
+Here the `https://example.com/url-to-callback` is the address of the special handler which can process the response from the **document editing service** and response with the *"error": 0* status code. This handler can be written in the programming language of your choice.
 
 All the parameters which can be sent to the callback handler and their description can be found at [this page](../../usage-api/callback-handler.md).
 

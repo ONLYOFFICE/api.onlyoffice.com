@@ -129,7 +129,7 @@ Specifies whether the plugin is included in the server or desktop builds branded
 
 ## variations
 
-`Type: array of object`
+`Type: object[]`
 
 Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
 
@@ -189,7 +189,7 @@ Plugin variations, or subplugins, that are created inside the origin plugin. Mor
 
 ### variations.buttons
 
-`Type: array of Button`
+`Type: Button[]`
 
 The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
 
@@ -304,7 +304,7 @@ Translations for the description field. The object keys are the two letter langu
 
 ### variations.EditorsSupport
 
-`Type: array of editorType`
+`Type: editorType[]`
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**). The default value is **[]**.
 
@@ -314,7 +314,7 @@ The editors which the plugin is available for (**word**, **cell**, **slide**, or
 
 The editors which the plugin is available for:
 
-- `word` - text document editor,
+- `word` - document editor,
 - `cell` - spreadsheet editor,
 - `slide` - presentation editor,
 - `pdf` - pdf editor.
@@ -333,7 +333,7 @@ The editors which the plugin is available for:
 
 ### variations.events
 
-`Type: array of EventType`
+`Type: EventType[]`
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method instead, which does not require this parameter.
@@ -371,7 +371,7 @@ URL to the plugin icon image file. This URL allows setting your own rules for th
 
 ### variations.icons2
 
-`Type: array of object`
+`Type: object[]`
 
 :::danger[Deprecated]
 Please use the [variations.icons](#variationsicons) parameter instead.
@@ -525,7 +525,7 @@ Specifies where the plugin will be placed (on the right or left panel).
 
 ### variations.screens
 
-`Type: array of string`
+`Type: string[]`
 
 :::danger[Deprecated]
 Please use the [variations.store.screenshots](#variationsstorescreenshots) parameter instead.
@@ -537,7 +537,7 @@ Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for 
 
 ### variations.size
 
-`Type: array of number`
+`Type: number[]`
 
 Plugin window size measured in pixels. This parameter is only used when *type == "window"*.
 
@@ -603,7 +603,7 @@ The background color used for the dark theme plugin icon.
 
 ### variations.store.categories
 
-`Type: array of string`
+`Type: string[]`
 
 Plugin categories in **ONLYOFFICE Plugin Marketplace**:
 
@@ -664,7 +664,7 @@ The path to the scalable plugin icons for the dark theme. Name the icon files of
 
 ### variations.store.screenshots
 
-`Type: array of string`
+`Type: string[]`
 
 Images that are used for the plugin description in the **ONLYOFFICE Plugin Marketplace**.
 

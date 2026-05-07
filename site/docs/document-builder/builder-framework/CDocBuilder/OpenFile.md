@@ -90,7 +90,7 @@ Opens the document file which will be edited and saved afterwards.
         import docbuilder
 
         builder = docbuilder.CDocBuilder()
-        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
+        builder.OpenFile("document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>")
         ```
     </TabItem>
     <TabItem value="cpp" label="C++">
@@ -98,7 +98,7 @@ Opens the document file which will be edited and saved afterwards.
         std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
         CDocBuilder::Initialize(sWorkDirectory.c_str());
         CDocBuilder oBuilder;
-        oBuilder.OpenFile(L"text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        oBuilder.OpenFile(L"document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
         CDocBuilder::Dispose();
         ```
     </TabItem>
@@ -108,7 +108,7 @@ Opens the document file which will be edited and saved afterwards.
         IONLYOFFICEDocBuilder* oBuilder = NULL;
         CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
         VARIANT_BOOL b;
-        oBuilder->OpenFile(_bstr_t("text-document.csv"), _bstr_t("<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>"), &b);
+        oBuilder->OpenFile(_bstr_t("document.csv"), _bstr_t("<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>"), &b);
         oBuilder->Dispose();
         ```
     </TabItem>
@@ -116,7 +116,7 @@ Opens the document file which will be edited and saved afterwards.
         ```java
         CDocBuilder.initialize("");
         CDocBuilder builder = new CDocBuilder();
-        builder.openFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        builder.openFile("document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
         CDocBuilder.dispose();
         ```
     </TabItem>
@@ -125,13 +125,13 @@ Opens the document file which will be edited and saved afterwards.
         string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
         CDocBuilder.Initialize(workDirectory);
         CDocBuilder oBuilder = new CDocBuilder();
-        oBuilder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        oBuilder.OpenFile("document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
         CDocBuilder.Destroy();
         ```
     </TabItem>
     <TabItem value="js" label="JS">
         ```js
-        builder.OpenFile("text-document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
+        builder.OpenFile("document.csv", "<m_nCsvTxtEncoding>46</m_nCsvTxtEncoding><m_nCsvDelimiter>4</m_nCsvDelimiter>");
         builder.SaveFile("xlsx", "result.xlsx");
         builder.CloseFile();
         ```

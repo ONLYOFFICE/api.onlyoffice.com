@@ -11,7 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="5rN7CksWE-w"/>
 ```
 
-该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) 可让用户借助ONLYOFFICE文档在[SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration)中编辑办公文档。
+该[解决方案](https://github.com/ONLYOFFICE/onlyoffice-sharepoint) 可让用户借助ONLYOFFICE 文档在[SharePoint](https://www.microsoft.com/en-us/microsoft-365/sharepoint/collaboration)中编辑办公文档。
 
 ## 功能特性
 
@@ -19,15 +19,15 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 仅支持查看的文档格式如下：PDF、DJVU、TXT、CSV、ODT、ODS、ODP、DOC、XLS、PPT、PPS、EPUB、RTF、HTML、HTM、MHT、XPS。
 - 该插件会在Office文档的文件上下文菜单和功能区中新增一个**在ONLYOFFICE中编辑**的菜单项。这支持多个用户实时协作，并将更改保存回SharePoint。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从SharePoint和任何终端客户端解析并连接。如果无法满足此要求，请参考官方[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向SharePoint发送POST请求。
+您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从SharePoint和任何终端客户端解析并连接。如果无法满足此要求，请参考官方[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向SharePoint发送POST请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装ONLYOFFICE SharePoint集成解决方案
 
-要在SharePoint中使用ONLYOFFICE文档，必须执行以下步骤：
+要在SharePoint中使用ONLYOFFICE 文档，必须执行以下步骤：
 
 1. 点击**开始**，指向**所有程序**，选择**管理工具**，然后点击**服务**。确保**SharePoint管理**服务已启动。
 
@@ -69,21 +69,21 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 配置SharePoint ONLYOFFICE集成解决方案
 
-在SharePoint中，打开包含管理设置的 */\_layouts/15/Onlyoffice/Settings.aspx*页面。输入以下地址来连接ONLYOFFICE文档：
+在SharePoint中，打开包含管理设置的 */\_layouts/15/Onlyoffice/Settings.aspx*页面。输入以下地址来连接ONLYOFFICE 文档：
 
 ``` sh
 https://<documentserver>/
 ```
 
-其中，**文档服务器地址**是安装了**ONLYOFFICE文档**的服务器名称，该地址必须能被用户浏览器和SharePoint服务器访问。SharePoint服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+其中，**文档服务器地址**是安装了**ONLYOFFICE 文档**的服务器名称，该地址必须能被用户浏览器和SharePoint服务器访问。SharePoint服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
 
 :::note
-请注意，如果您使用SharePoint设置了子网站，为确保功能正常，您需要为每个子网站额外配置ONLYOFFICE文档连接。进入每个子网站的设置，在相应字段中输入ONLYOFFICE文档地址。
+请注意，如果您使用SharePoint设置了子网站，为确保功能正常，您需要为每个子网站额外配置ONLYOFFICE 文档连接。进入每个子网站的设置，在相应字段中输入ONLYOFFICE 文档地址。
 :::
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在SharePoint管理设置中指定您自己的**密钥**。在ONLYOFFICE文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在SharePoint管理设置中指定您自己的**密钥**。在ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
-如果启用了JWT保护，由于SharePoint安全策略会阻止外部的**Authorization**标头，因此需要指定一个自定义标头名称。该标头也应在ONLYOFFICE文档的签名设置中指定。有关签名的更多信息，请参见[这里](../../additional-api/signature/signature.md)。
+如果启用了JWT保护，由于SharePoint安全策略会阻止外部的**Authorization**标头，因此需要指定一个自定义标头名称。该标头也应在ONLYOFFICE 文档的签名设置中指定。有关签名的更多信息，请参见[这里](../../additional-api/signature/signature.md)。
 
 ## 编译ONLYOFFICE SharePoint集成解决方案
 
@@ -113,9 +113,9 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
 3. SharePoint准备一个包含以下属性的JSON对象：
 
-   - **url**-ONLYOFFICE文档用于下载文档的URL；
-   - **callbackUrl**-ONLYOFFICE文档用于通知文档编辑状态的URL；
-   - **DocumentServerHost**-客户端需要回复给ONLYOFFICE文档的URL（可在设置页面设置）；
+   - **url**-ONLYOFFICE 文档用于下载文档的URL；
+   - **callbackUrl**-ONLYOFFICE 文档用于通知文档编辑状态的URL；
+   - **DocumentServerHost**-客户端需要回复给ONLYOFFICE 文档的URL（可在设置页面设置）；
    - **Key**-来自SharePoint的文件标识符；
    - **FileName**-文档标题（名称）；
    - **CurrentUserId**-用户标识；
@@ -123,13 +123,13 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
 4. SharePoint构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。
 
-5. 客户端浏览器向ONLYOFFICE文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给ONLYOFFICE文档。
+5. 客户端浏览器向ONLYOFFICE 文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给ONLYOFFICE 文档。
 
-6. 然后，ONLYOFFICE文档从SharePoint下载文档，用户开始编辑。
+6. 然后，ONLYOFFICE 文档从SharePoint下载文档，用户开始编辑。
 
 7. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-8. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE文档会向*callbackUrl*发送POST请求，告知SharePoint ONLYOFFICE解决方案客户端已完成文档编辑并关闭了它。
+8. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档会向*callbackUrl*发送POST请求，告知SharePoint ONLYOFFICE解决方案客户端已完成文档编辑并关闭了它。
 
 9. SharePoint下载文档的新版本，替换旧版本。
 

@@ -27,7 +27,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
    `https://documentserver/web-apps/apps/api/documents/api.js` 是 API JavaScript 文件的默认访问路径。
 
    :::info
-   自 8.1 版本起，建议在 URL *QueryString* 中添加包含 *key* 值的 [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) 参数。例如：*?shardkey=Khirz6zTPdfd7*。此参数支持请求负载均衡。
+   自 8.1 版本起，建议在查询字符串中添加包含 `key` 值的 [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) 参数。例如：`?shardkey=Khirz6zTPdfd7`。此参数支持请求负载均衡。
 
    从 9.0 版本开始，您可以在打开文档前，将静态资源（HTML、CSS、JS、字体）[预加载](/docs/docs-api/get-started/configuration/preload.md)到浏览器缓存中，从而加快首次加载文档编辑器的速度。
    :::
@@ -44,7 +44,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
    };
 
@@ -53,7 +53,7 @@ ONLYOFFICE 文档支持在 Windows、Linux 和 Docker 环境部署。
 
    **example.com** 指代部署了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。关于服务端与客户端的交互机制，请参阅[工作原理](/docs/docs-api/get-started/how-it-works/how-it-works.md)章节。
 
-   此后，*docEditor* 对象即可调用**文档编辑器**[方法](/docs/docs-api/usage-api/methods.md)。
+   此后，[`docEditor`](/docs/docs-api/usage-api/doceditor.md) 对象即可调用**文档编辑器**[方法](/docs/docs-api/usage-api/methods.md)。
 
    以上配置包含确保 ONLYOFFICE 文档正常启动的所有必要参数。
 

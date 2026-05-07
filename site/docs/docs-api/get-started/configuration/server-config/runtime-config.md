@@ -8,31 +8,31 @@ These parameters define the `runtime.json` dynamic config file properties. This 
 
 ## runtimeConfig.filePath
 
-`Type: string`   `Default: ""`
+**type:** `string` | **default:** `""`
 
 Defines a path to the `runtime.json` dynamic config file. By default, the `/var/www/onlyoffice/Data/runtime.json` path is used.
 
 ## runtimeConfig.cache
 
-`Type: object`
+**type:** `object`
 
 Defines the `runtime.json` cache options.
 
 ### runtimeConfig.cache.stdTTL
 
-`Type: integer`   `Default: 300`
+**type:** `integer` | **default:** `300`
 
 Defines the TTL (time to live) for every generated cache element (measured in seconds).
 
 ### runtimeConfig.cache.checkperiod
 
-`Type: integer`   `Default: 60`
+**type:** `integer` | **default:** `60`
 
 Defines the period used for the automatic delete check interval (measured in seconds).
 
 ### runtimeConfig.cache.useClones
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines if the cached variables will be cloned or not. If `true`, a copy of the cached variable will be created. If `false`, only the reference will be saved.
 

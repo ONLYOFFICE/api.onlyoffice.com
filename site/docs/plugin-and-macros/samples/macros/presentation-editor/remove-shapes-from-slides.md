@@ -9,18 +9,26 @@ tags: ["Docs", "Macros", "Presentations"]
 Removes shapes from slides in a presentation.
 
 ``` ts
-(function()
-{
+(function () {
   let presentation = Api.GetPresentation();
-  for (let i = 0; i < 10; i++) {
+  let slidesCount = presentation.GetSlidesCount();
+  for (let i = 0; i < slidesCount; i++) {
     let slide = presentation.GetSlideByIndex(i);
-    let shapes  = slide.GetAllShapes();
-    shapes[0].Delete();
+    if (!slide) continue;
+    let shapes = slide.GetAllShapes();
+    for (let j = shapes.length - 1; j >= 0; j--) {
+      let shape = shapes[j];
+      let placeholder = shape.GetPlaceholder();
+      // Skip placeholders
+      if (placeholder === null) {
+        shape.Delete();
+      }
+    }
   }
 })();
 ```
 
-Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md)
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [Delete](/docs/office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md), [GetPlaceholder](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetPlaceholder.md)
 
 ## Result
 

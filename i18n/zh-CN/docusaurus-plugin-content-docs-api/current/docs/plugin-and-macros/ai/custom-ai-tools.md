@@ -76,7 +76,7 @@ AI 代理将运行 `commentText` 函数，并在文档中插入相关评论。
 | --- | --- | --- | --- |
 | name | string | `"commentText"` | 函数名称。 |
 | parameters | object | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }` | 描述函数期望从 AI 获得的参数的对象。 |
-| examples | 对象数组 | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | 供 AI 参考的正确函数调用示例。 |
+| examples | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | 供 AI 参考的正确函数调用示例。 |
 | description | string | `"Adds a comment or footnote to explain or annotate the selected text."` | 向 AI 说明该函数用途的描述。 |
 
 这些参数供 AI 使用。`RegisteredFunction()` 对象在 [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) 文件中定义。
@@ -260,7 +260,7 @@ AI 代理将运行 `commentText` 函数，并在文档中插入相关评论。
 ```
 
 :::note
-为了确保在请求执行后可以回滚整个更改块，我们在 `commentText` 函数中使用了 [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) 和 [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) 方法。
+为了确保在请求执行后可以回滚整个更改块，我们在 `commentText` 函数中使用了 [StartAction](../interacting-with-editors/document-api/Methods/StartAction.md) 和 [EndAction](../interacting-with-editors/document-api/Methods/EndAction.md) 方法。
 :::
 
 AI 代理功能随着当今数字世界的需求不断发展。通过创建适合特定使用场景的自定义 AI 工具来扩展其功能吧。

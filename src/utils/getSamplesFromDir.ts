@@ -19,7 +19,7 @@ function toItems(data: typeof docsSamplesData, category: string, defaultTags?: S
   return data.map((doc) => {
     const tagVariants: Record<string, SamplesGrid.Tag['variant']> = {
       'Docs': 'blue',
-      'Text documents': 'purple',
+      'Documents': 'purple',
       'Spreadsheets': 'green',
       'Presentations': 'purple',
       'PDF': 'pink',

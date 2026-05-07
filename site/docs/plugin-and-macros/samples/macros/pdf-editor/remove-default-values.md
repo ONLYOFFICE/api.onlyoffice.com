@@ -22,7 +22,7 @@ Automatically removes a specific default value from all text fields in the entir
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [Clear](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/Clear.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [Clear](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/Clear.md)
 
 ## Result
 

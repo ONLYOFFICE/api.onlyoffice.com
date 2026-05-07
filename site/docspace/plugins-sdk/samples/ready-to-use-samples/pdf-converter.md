@@ -7,7 +7,7 @@ tags: ["DocSpace", "Plugins", "Ready-to-use"]
 
 A tool for converting documents, spreadsheets, presentations, and forms to PDF.
 
-![PDF converter](/assets/images/docspace/pdf-converter.png)
+![PDF converter](/assets/images/docspace/pdf-converter.png#gh-light-mode-only)![PDF converter](/assets/images/docspace/pdf-converter.dark.png#gh-dark-mode-only)
 
 ## Installation
 

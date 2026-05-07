@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "PDF"]
 
 Creates a customer feedback form with rating tables:
 
-- create bordered tables for rating scale layout ([Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md));
+- create bordered tables for rating scale layout ([Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderRight.md));
 - add radio button options for each satisfaction level ([Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [ApiCheckBoxForm/SetRadioGroup](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetRadioGroup.md));
-- style table headers with background color ([ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md)).
+- style table headers with background color ([ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

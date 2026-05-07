@@ -1,6 +1,6 @@
 ---
 description: Fix typography and grammar issues in text.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
 # Typograf
@@ -135,10 +135,10 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onExternalMouseUp](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onExternalMouseUp.md)
 - [onTranslate](/docs/plugin-and-macros/structure/localization.md#applying-translations-to-plugin)
-- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetSelectedText.md)
-- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/GetVersion.md)
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- [executeMethod ("ReplaceTextSmart")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ReplaceTextSmart.md)
+- [executeMethod ("GetSelectedText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetSelectedText.md)
+- [executeMethod ("GetVersion")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetVersion.md)
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteText.md)
+- [executeMethod ("ReplaceTextSmart")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/ReplaceTextSmart.md)
 - [Asc.scope](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object
 - [info.editorType](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#editorType)
 

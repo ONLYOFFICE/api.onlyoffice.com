@@ -6,7 +6,7 @@ sidebar_position: -3
 
 ## 概述
 
-这是一个使用 PHP 和 [Laravel 框架](https://laravel.com/docs/11.x/installation#meet-laravel)编写的示例应用，集成了 ONLYOFFICE文档。
+这是一个使用 PHP 和 [Laravel 框架](https://laravel.com/docs/11.x/installation#meet-laravel)编写的示例应用，集成了 ONLYOFFICE 文档。
 
 :::caution
 该示例应用仅用于测试和演示编辑器功能，**请勿**在未修改代码的情况下直接用于生产环境。如需启用测试示例，务必在上线前将其禁用。

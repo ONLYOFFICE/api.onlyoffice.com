@@ -4,43 +4,44 @@ sidebar_label: iOS
 
 # iOS 设备上的移动集成
 
-本节将以iOS移动演示示例为例，演示如何通过 [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) 集成 ONLYOFFICE 编辑器。示例代码已发布于 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios)。
+可以使用 [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) 组件将**文档编辑器**嵌入到 iOS 应用程序中。完整的演示项目已发布于 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios)。
 
 ## 基于 ONLYOFFICE 测试样本的集成
 
-本示例演示如何将 ONLYOFFICE 移动编辑器与[测试或 DMS 样本](../../../samples/language-specific-examples/language-specific-examples.md)集成。
+本示例展示如何将 ONLYOFFICE 移动编辑器与[测试或 DMS 样本](../../../samples/language-specific-examples/language-specific-examples.md)集成。
 
 ![iOS 测试样本集成示意图](/assets/images/editor/ios-test-sample.png)
 
 ### 打开 ONLYOFFICE 编辑器
 
-1. 下载并安装ONLYOFFICE文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/zh/developer-edition.aspx)。
+1. 下载并安装ONLYOFFICE 文档[企业版](https://www.onlyoffice.com/zh/docs-enterprise.aspx)或[开发者版](https://www.onlyoffice.com/zh/developer-edition.aspx)。
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 
-3. 使用 [Xcode](https://developer.apple.com/xcode/) 打开 *EditorWebViewDemo.xcodeproj* 项目，修改代码以适应您的DMS系统
+3. 使用 [Xcode](https://developer.apple.com/xcode/) 打开 `EditorWebViewDemo.xcodeproj` 项目，修改代码以适应您的DMS系统。
 
-4. 在 *Info.plist* 文件中设置 **DocumentServerURL** 属性值为 ONLYOFFICE 文档的 Web 接口地址：
+4. 在 `EditorWebViewDemo.xcconfig` 配置文件中设置 `DOCUMENT_SERVER_EXAMPLE_URL` 属性值为 ONLYOFFICE 文档示例页面的地址：
 
-   ``` xml
-   <dict>
-       <key>DocumentServerURL</key>
-       <string>https://documentserver/</string>
-   </dict>
+   ```
+   DOCUMENT_SERVER_EXAMPLE_URL = documentserver
    ```
 
-   其中 **documentserver** 为安装 ONLYOFFICE 文档的服务器名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   其中 `documentserver` 为安装 ONLYOFFICE 文档的服务器名称。
 
-   若未指定 **DocumentServerURL** 将出现错误提示：
+   :::tip
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。这些信息可以在云控制台的**实例**部分找到。
+   :::
+
+   若已指定 `DOCUMENT_SERVER_EXAMPLE_URL`，则加载 DMS 主页。否则将出现错误提示：
 
    ``` swift
    private func load() {
-       if documentServerUrlString.isEmpty {
-           showAlert(title: "Error", message: "You must specify the document server address, the \"DocumentServerURL\" value in the Info.plist file.")
+       if Env.documentServerExampleUrl.replacingOccurrences(of: "https://", with: "").isEmpty {
+           showAlert(title: "Error", message: "You must specify the document server example page address for \"DOCUMENT_SERVER_EXAMPLE_URL\" value in configuration file.")
            return
        }
 
-       guard let url = URL(string: documentServerUrlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
+       guard let url = URL(string: Env.documentServerExampleUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
            return
        }
 
@@ -52,7 +53,7 @@ sidebar_label: iOS
 
    <img alt="iOS managing" src="/assets/images/editor/ios-managing.png" width="260px" />
 
-5. 使用 **DocumentServerViewController** 控制器在 iOS 设备上正确打开编辑器。在该控制器中，定义一个通过 WKWebView 组件打开文档的函数。在该控制器中，定义一个通过 WKWebView 组件打开文档的函数。首先，请求一个绝对 URL 并检查其是否包含 *"/editor?"* 字符串。如果包含，则在链接中添加一个额外的查询参数（移动平台类型）：
+5. 使用 `DocumentServerViewController` 控制器在 iOS 设备上正确打开编辑器。在该控制器中，定义一个通过 WKWebView 组件打开文档的函数。首先，请求一个绝对 URL 并检查其是否包含 `"/editor?"` 字符串。如果包含，则在链接中添加一个额外的查询参数（移动平台类型）：
 
    ``` swift
    private var openDocumentMarker = "/editor?"
@@ -86,11 +87,11 @@ sidebar_label: iOS
    }
    ```
 
-6. 在 **DocumentServerViewController** 控制器中，创建文档管理系统主页上可用的导航操作。例如，在我们的测试示例中，这些操作通过界面元素**重新加载**、**返回**和**前进**按钮来实现。
+6. 在 `DocumentServerViewController` 控制器中，创建文档管理系统主页上可用的导航操作。例如，在我们的测试示例中，这些操作通过界面元素**重新加载**、**返回**和**前进**按钮来实现。
 
 7. 为了便于与编辑器进行交互，定义 **Activity Indicator** 和 **Progress View** UI 组件。
 
-   **DocumentServerViewController** 的完整代码可以在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift)找到。
+   `DocumentServerViewController` 的完整代码可以在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift)找到。
 
    <img alt="Activity indicator" src="/assets/images/editor/activity-indicator.png" width="260px" />
 
@@ -98,16 +99,24 @@ sidebar_label: iOS
 
    <img alt="Buttons" src="/assets/images/editor/buttons.png" width="260px" />
 
-8. 要在移动设备上通过 WKWebView 组件显示 ONLYOFFICE 编辑器并开始处理文档，请在 **DocumentServerEditorViewController** 控制器中设置 WKWebView 并布局，如下所示：
+8. 要在移动设备上通过 WKWebView 组件显示 ONLYOFFICE 编辑器并开始处理文档，请在 `DocumentServerEditorViewController` 控制器中设置 WKWebView 并布局，如下所示：
 
    ``` swift
-   private func configureView() {
+   private lazy var webViewConfiguration: WKWebViewConfiguration = {
        let preferences = WKPreferences()
-       let configuration = WKWebViewConfiguration()
+       let dropSharedWorkersScript = WKUserScript(
+           source: "delete window.SharedWorker;",
+           injectionTime: WKUserScriptInjectionTime.atDocumentStart,
+           forMainFrameOnly: false
+       )
        preferences.javaScriptEnabled = true
-       configuration.preferences = preferences
+       $0.userContentController.addUserScript(dropSharedWorkersScript)
+       $0.preferences = preferences
+       return $0
+   }(WKWebViewConfiguration())
 
-       webView = WKWebView(frame: .zero, configuration: configuration)
+   private func configureView() {
+       webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
 
        view.addSubview(webView)
        webView.translatesAutoresizingMaskIntoConstraints = false
@@ -126,15 +135,13 @@ sidebar_label: iOS
 
 9. 在 Xcode 工具栏中，选择一个构建方案和一个运行应用程序的设备。之后，选择**产品 -> 运行**，或点击项目工具栏中的**运行**按钮来构建并运行你的代码。
 
-10. 在应用程序的主页面上，选择 **Using DocumentServer** 选项，以演示将 ONLYOFFICE 移动网页编辑器与 ONLYOFFICE 测试或 DMS 示例集成的示例。
+10. 在应用程序的主页面上，选择 **Using DocumentServer** 选项，以展示将 ONLYOFFICE 移动网页编辑器与 ONLYOFFICE 测试或 DMS 示例集成的示例。
 
 ### 关闭 ONLYOFFICE 编辑器
 
-使用 **DocumentServerEditorViewController** 控制器退出编辑器。例如，在当前测试示例中，创建了**返回**按钮以导航到上一个页面：
+使用 `DocumentServerEditorViewController` 控制器退出编辑器。当用户导航回 DMS 主页 URL 时，控制器会拦截导航并返回到上一个页面：
 
 ``` swift
-private let goBackUrl = Bundle.main.object(forInfoDictionaryKey: "DocumentServerURL") as? String ?? ""
-
 func webView(_ webView: WKWebView,
     decidePolicyFor navigationAction: WKNavigationAction,
     decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
@@ -143,8 +150,8 @@ func webView(_ webView: WKWebView,
         decisionHandler(.cancel)
         return
     }
-        
-    if urlString == goBackUrl {
+
+    if urlString == Env.documentServerExampleUrl {
         decisionHandler(.cancel)
         navigationController?.popViewController(animated: true)
     } else {
@@ -155,11 +162,11 @@ func webView(_ webView: WKWebView,
 
 <img alt="Go back" src="/assets/images/editor/exit-button.png" width="260px" />
 
-**DocumentServerEditorViewController** 的完整代码可以在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift)找到。
+`DocumentServerEditorViewController` 的完整代码可以在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift)找到。
 
 ## 基于 ONLYOFFICE 文档 API 的集成
 
-此示例展示了如何使用 WKWebView 打开 ONLYOFFICE 编辑器，并通过 [API 文档](../../basic-concepts.md)和[配置示例](../../try-docs/try-docs.md)中描述的编辑器配置来实现。
+此示例展示如何使用 WKWebView 打开 ONLYOFFICE 编辑器，并通过 [API 文档](../../basic-concepts.md)和[配置示例](../../try-docs/try-docs.md)中描述的编辑器配置来实现。
 
 ![通过 api 的 iOS 集成](/assets/images/editor/ios-api-config.png)
 
@@ -169,11 +176,11 @@ func webView(_ webView: WKWebView,
 
 2. 从 [GitHub](https://github.com/ONLYOFFICE/editors-webview-ios) 下载 iOS 移动演示示例。
 
-3. 使用 [Xcode](https://developer.apple.com/xcode/) 打开 *EditorWebViewDemo.xcodeproj* 项目，修改代码以适应您的 DMS 系统
+3. 使用 [Xcode](https://developer.apple.com/xcode/) 打开 `EditorWebViewDemo.xcodeproj` 项目，修改代码以适应您的 DMS 系统。
 
-4. 创建一个空的 *html* 文件。演示项目中的 [editor.html](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/Resources/editor.html) 资源被用作模板。
+4. 创建一个空的 `.html` 文件。演示项目中的 [editor.html](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/Resources/editor.html) 资源被用作模板。
 
-5. 添加如下所示的 *div* 元素：
+5. 添加如下所示的 `<div>` 元素：
 
    ``` html
    <div id="placeholder"></div>
@@ -185,31 +192,50 @@ func webView(_ webView: WKWebView,
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   其中 **documentserver** 是安装了 ONLYOFFICE 文档的服务器的名称。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器的名称。
 
-7. 添加初始化 **Document Editor** 的脚本，用于 *div* 元素，并配置您要打开的文档：
+   :::tip
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。这些信息可以在云控制台的**实例**部分找到。
+   :::
 
-   ``` ts
-   const config = {
-     {external_config},
-     type: "mobile",
-     events: {
-       onAppReady,
-       onDocumentReady,
-       onDownloadAs,
-       onError,
-       onInfo,
-       onRequestClose,
-       onRequestInsertImage,
-       onRequestUsers,
-       onWarning,
-     },
-   };
+7. 添加初始化**文档编辑器**的脚本，用于 `<div>` 元素，并配置您要打开的文档。定义通过 `window.webkit.messageHandlers` 将事件转发到原生代码的事件处理函数，并将它们传递给编辑器配置：
 
-   window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+   ``` html
+   <script type="text/javascript">
+
+       var handler = window.webkit.messageHandlers;
+
+       var onAppReady = function() {
+           handler.onAppReady.postMessage({});
+       };
+
+       var onDownloadAs = function(event) {
+           handler.onDownloadAs.postMessage({fileType: event.data.fileType, url: event.data.url});
+       };
+
+       // ... other event handlers ...
+
+       window.docEditor = new DocsAPI.DocEditor("placeholder",
+           {
+               {external_config},
+               "type": "mobile",
+               "events": {
+                   "onAppReady": onAppReady,
+                   "onDocumentReady": onDocumentReady,
+                   "onDownloadAs": onDownloadAs,
+                   "onError": onError,
+                   "onInfo": onInfo,
+                   "onRequestClose": onRequestClose,
+                   "onRequestInsertImage": onRequestInsertImage,
+                   "onRequestUsers": onRequestUsers,
+                   "onWarning": onWarning,
+               }
+           });
+
+   </script>
    ```
 
-8. 要开始在移动设备上处理文档，请通过 WKWebView 组件显示 ONLYOFFICE 编辑器。为此，指定 **EditorViewController** 控制器。请求 *editor.html* file, 文件的 URL，获取其内容，并将 *"\{external\_config\}"* 参数替换为 *samples.plist* 文件中的配置，其中所有示例配置均根据 [API 文档 Try 页面](../../try-docs/try-docs.md)进行分类：
+8. 要开始在移动设备上处理文档，请通过 WKWebView 组件显示 ONLYOFFICE 编辑器。为此，指定 `EditorViewController` 控制器。请求 `editor.html` 文件的 URL，获取其内容，将占位符值替换为 `samples.plist` 文件中的实际配置（其中所有示例配置均根据 [API 文档 Try 页面](../../try-docs/try-docs.md)进行分类），使用 JWT 令牌签名配置，并注入文档服务器 URL：
 
    ``` swift
    private func load() {
@@ -225,18 +251,33 @@ func webView(_ webView: WKWebView,
            print(error)
        }
 
-       html = html.replacingOccurrences(of: "{external_config}", with: config ?? "")
+       var config = config?
+           .replacingOccurrences(of: "{KEY}", with: UUID().uuidString)
+           .replacingOccurrences(of: "{DOC_URL_PATH}", with: Env.documentServerFilesUrl)
+           .replacingOccurrences(of: "{CALLBACK_URL}", with: Env.editorCallbackUrl)
+           .toDictionary() ?? [:]
+
+       config["token"] = JWT.encode(claims: config, algorithm: .hs256(Env.documentServerJwtSecret.data(using: .utf8)!))
+
+       let jsonString = (config.jsonString(prettify: true) ?? "")
+           .dropLast()
+           .dropFirst()
+
+       html = html
+           .replacingOccurrences(of: "{document_server_url}", with: Env.documentServerUrl)
+           .replacingOccurrences(of: "{external_config}", with: jsonString)
+
        webView.loadHTMLString(html, baseURL: nil)
    }
    ```
 
    <img alt="Editor samples" src="/assets/images/editor/editor-samples.png" width="260px" />
 
-   **EditorViewController** 完整代码可在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift)找到。
+   `EditorViewController` 完整代码可在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift)找到。
 
 9. 在 Xcode 工具栏中，选择一个构建方案和一个运行应用程序的设备。然后，选择**产品 -> 运行**，或点击项目工具栏中的**运行**按钮来构建并运行你的代码。
 
-10. 在应用程序的主屏幕上，选择**使用 API 配置**选项，以演示如何使用 API 文档和配置示例中描述的编辑器配置来打开 ONLYOFFICE 移动网页编辑器。
+10. 在应用程序的主屏幕上，选择**使用 API 配置**选项，以展示如何使用 API 文档和配置示例中描述的编辑器配置来打开 ONLYOFFICE 移动网页编辑器。
 
 11. 在下一页中，选择一个配置示例，以在 WKWebView 组件中打开生成的 HTML。
 
@@ -244,7 +285,7 @@ func webView(_ webView: WKWebView,
 
 要处理文档（打开、下载、插入图片、提及其他用户等），请使用 API 文档及其事件和方法：
 
-1. 为了跟踪事件并调用适当的方法，通过 **EditorEventsHandler** 控制器在原生代码中处理 ONLYOFFICE 编辑器的[事件](../../../usage-api/config/events.md)，然后将它们委托给 **EditorViewController**：
+1. 为了跟踪事件并调用适当的方法，通过 `EditorEventsHandler` 控制器在原生代码中处理 ONLYOFFICE 编辑器的[事件](../../../usage-api/config/events.md)，然后将它们委托给 `EditorViewController`：
 
    ``` swift
    var delegate: EditorEventsDelegate?
@@ -275,7 +316,7 @@ func webView(_ webView: WKWebView,
    }
    ```
 
-   让我们以 [onDownloadAs](../../../usage-api/config/events.md#ondownloadas) 事件为例。在 WKWebView 配置期间，通过调用 *configuration.userContentController.add(self, name: messageName)* 将一个对象注册为特定消息的处理程序。获取事件参数（文件类型和 URL），并将事件处理委托给 **EditorViewController**：
+   以 [onDownloadAs](../../../usage-api/config/events.md#ondownloadas) 事件为例。在 WKWebView 配置期间，通过调用 `configuration.userContentController.add(self, name: messageName)` 将一个对象注册为特定消息的处理程序。获取事件参数（文件类型和 URL），并将事件处理委托给 `EditorViewController`：
 
    ``` swift
    func onDownloadAs(fileType: String, url: String) {
@@ -283,7 +324,7 @@ func webView(_ webView: WKWebView,
    }
    ```
 
-2. 定义 **callMethod** 函数以从原生代码调用 [API 方法](../../../usage-api/methods.md)。该函数可以接受字符串、布尔值或对象作为参数。它将方法名称及其参数添加到 JavaScript 代码字符串中，然后使用 *evaluateJavaScript* 方法在 WKWebView 组件中执行 JavaScript：
+2. 定义 `callMethod` 函数以从原生代码调用 [API 方法](../../../usage-api/methods.md)。该函数可以接受字符串、布尔值或对象作为参数。它将方法名称及其参数添加到 JavaScript 代码字符串中，然后使用 `evaluateJavaScript` 方法在 WKWebView 组件中执行 JavaScript：
 
    ``` swift
    private func callMethod(function: String, arg: Bool) {
@@ -309,9 +350,9 @@ func webView(_ webView: WKWebView,
    }
    ```
 
-    **EditorEventsHandler** 完整代码可在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorEventsHandler.swift)找到。
+   `EditorEventsHandler` 完整代码可在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorEventsHandler.swift)找到。
 
-3. 要显示下载和打印文档的结果，可以使用 **PreviewController** 控制器。该控制器基于 **QLPreviewController**。通过文档的 URL 下载文档，并将 *dataSource* 和 *delegate* 属性设置为 **QLPreviewController**：
+3. 要显示下载和打印文档的结果，可以使用 `PreviewController` 控制器。该控制器基于 `QLPreviewController`。通过文档的 URL 下载文档，并将 `dataSource` 和 `delegate` 属性设置为 `QLPreviewController`：
 
    ``` swift
    func present(url: URL, in parent: UIViewController, complation: @escaping (() -> Void)) {
@@ -338,4 +379,4 @@ func webView(_ webView: WKWebView,
    }
    ```
 
-   **PreviewController** 完整代码可在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/PreviewController.swift)找到。
+   `PreviewController` 完整代码可在[此处](https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/PreviewController.swift)找到。

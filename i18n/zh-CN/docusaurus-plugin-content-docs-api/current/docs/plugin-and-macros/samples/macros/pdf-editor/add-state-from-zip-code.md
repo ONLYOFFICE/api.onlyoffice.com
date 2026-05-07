@@ -11,13 +11,13 @@ hide_table_of_contents: true
 {
     let doc = Api.GetDocument();
     let allForms = doc.GetAllForms();
-    //California Zip Codes regex
+    //加利福尼亚州邮政编码正则表达式
     let zipRegex = /^9[0-5][0-9]{3}$/;
     
     allForms.forEach(form => {
         if(form.GetFormKey() == "ZipCode") {
             let input = form.GetText();
-            //If the zip code is Californian, add the "State" label with the text form indicating "CA"
+            //如果输入的是加利福尼亚州邮政编码，则添加"State"标签及预填"CA"的文本表单
             if(zipRegex.test(input)) {
                 let stateForm = allForms.find(item => item.GetFormKey() === "State");
                 if(stateForm == null) {
@@ -38,7 +38,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/text-document-api/ApiFormBase/Methods/GetText.md), [CreateTextForm](../../../../office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [SetText](../../../../office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md),, [CreateParagraph](../../../../office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [AddTabStop](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddTabStop.md), [AddText](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md), [InsertContent](../../../../office-api/usage-api/text-document-api/ApiDocument/Methods/InsertContent.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetText.md), [CreateTextForm](../../../../office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [SetText](../../../../office-api/usage-api/document-api/ApiTextForm/Methods/SetText.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddTabStop](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddTabStop.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddElement.md), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md)
 
 ## 结果
 

@@ -57,7 +57,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文件](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有表单](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)，[获取表单键值](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)，[获取文本内容](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md)，[设置文本内容](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
 
 ## 结果
 

@@ -8,55 +8,55 @@ These parameters define the ActiveMQ message broker configuration.
 
 ## activemq.connectOptions
 
-`Type: object`
+**type:** `object`
 
 Defines the [ActiveMQ connect options](https://github.com/amqp/rhea#connectoptions).
 
 ### activemq.connectOptions.port
 
-`Type: integer`   `Default: 5672`
+**type:** `integer` | **default:** `5672`
 
 Defines a port of the server to which the ActiveMQ container is connected.
 
 ### activemq.connectOptions.host
 
-`Type: string`   `Default: "localhost"`
+**type:** `string` | **default:** `"localhost"`
 
 Defines a host (host name or IP address) of the server to which the ActiveMQ container is connected.
 
 ### activemq.connectOptions.reconnect
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines if the ActiveMQ module will automatically attempt to reconnect if disconnected (**true**) or not (**false**).
 
 ## activemq.queueconverttask
 
-`Type: string`   `Default: "ds.converttask"`
+**type:** `string` | **default:** `"ds.converttask"`
 
 Defines a queue of tasks.
 
 ## activemq.queueconvertresponse
 
-`Type: string`   `Default: "ds.convertresponse"`
+**type:** `string` | **default:** `"ds.convertresponse"`
 
 Defines a queue of responses.
 
 ## activemq.queueconvertdead
 
-`Type: string`   `Default: "ActiveMQ.DLQ"`
+**type:** `string` | **default:** `"ActiveMQ.DLQ"`
 
 Defines a dead letter queue.
 
 ## activemq.queuedelayed
 
-`Type: string`   `Default: "ds.delayed"`
+**type:** `string` | **default:** `"ds.delayed"`
 
 Defines the delayed queue.
 
 ## activemq.topicpubsub
 
-`Type: string`   `Default: "ds.pubsub"`
+**type:** `string` | **default:** `"ds.pubsub"`
 
 Defines the Publisher Subscriber topic.
 

@@ -8,20 +8,20 @@ These parameters define the license configuration.
 
 ## license.license_file
 
-`Type: string`   `Default: ""`
+**type:** `string` | **default:** `""`
 
 Defines a path to the license file.
 
 ## license.warning_limit_percents
 
-`Type: integer`   `Default: 70`
+**type:** `integer` | **default:** `70`
 
 Defines a percent range of the [connections and connections_view](https://api.onlyoffice.com/docs/docs-api/additional-api/command-service/license/)
 limitations, exceeding which a license limit warning appears in logs.
 
 ## license.packageType
 
-`Type: integer`   `Default: 0`
+**type:** `integer` | **default:** `0`
 
 Defines the license package type: 2 - Developer Edition.
 
@@ -31,7 +31,7 @@ This parameter is set at the time of version build. You do not have to manually 
 
 ## license.warning_license_expiration
 
-`Type: string`   `Default: "30d"`
+**type:** `string` | **default:** `"30d"`
 
 Defines the time before the license expires when a warning message is sent.
 

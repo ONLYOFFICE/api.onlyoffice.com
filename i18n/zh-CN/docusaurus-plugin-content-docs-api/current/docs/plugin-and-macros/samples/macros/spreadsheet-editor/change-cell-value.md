@@ -23,7 +23,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取当前工作表](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md)，[获取单元格范围](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)，[选中单元格](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md)，[设置单元格值](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 参考 Microsoft VBA 宏代码
 

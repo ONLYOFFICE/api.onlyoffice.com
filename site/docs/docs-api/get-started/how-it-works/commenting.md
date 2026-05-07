@@ -4,19 +4,17 @@ sidebar_position: -10
 
 # Commenting
 
-The **Comment option** allows you to leave comments on the specific words, phrases, sentences and other document parts, edit and remove these comments. All the comments will be saved and shown to other document users.
+ONLYOFFICE Docs supports inline comments — users can leave comments on specific parts of a document, reply to them, and edit or delete them. All comments are persisted in the document and visible to other users who open it.
 
 ![Comment](/assets/images/editor/comment.png#gh-light-mode-only)![Comment](/assets/images/editor/comment.dark.png#gh-dark-mode-only)
 
 ## Comment access rights
 
-In order to enable the comment option, the [comment](../../usage-api/config/document/permissions.md#comment) parameter in the permissions section of the document initialization must be set to **true**. The document **side bar** will contain the **Comment** menu option.
+To enable commenting, set the [`comment`](../../usage-api/config/document/permissions.md#comment) parameter in the permissions section of the document initialization to `true`. The document sidebar will then include the **Comment** menu option.
 
-In case the *edit* parameter is set to **true** and the *comment* parameter is also set to **true**, the user will be able to edit the document and comment.
+When both `edit` and `comment` are `true`, the user can edit the document and leave comments. When `edit` is `false` and `comment` is `true`, the document opens in commenting-only mode.
 
 ![Commenting](/assets/images/editor/commenting.png#gh-light-mode-only)![Commenting](/assets/images/editor/commenting.dark.png#gh-dark-mode-only)
-
-In case the *edit* parameter is set to **false** and the *comment* parameter is set to **true**, the document will be available for commenting only.
 
 ``` ts
 const config = {
@@ -32,12 +30,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-The document commenting will only be available for the document editor if the [mode](../../usage-api/config/editor/editor.md#mode) parameter is set to **edit**.
+Commenting is only available when the [`mode`](../../usage-api/config/editor/editor.md#mode) parameter is set to `edit`.
 :::
 
-## Differentiation of commenting rights by authors
+## Restricting comment editing by author
 
-1. If you want to allow editing comments only by their authors, set the [editCommentAuthorOnly](../../usage-api/config/document/permissions.md#editcommentauthoronly) parameter in the permissions section of the editor initialization to **true**.
+1. To allow users to edit only their own comments, set [`editCommentAuthorOnly`](../../usage-api/config/document/permissions.md#editcommentauthoronly) to `true`:
 
    ``` ts
    const config = {
@@ -51,7 +49,7 @@ The document commenting will only be available for the document editor if the [m
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-2. If you want to allow deleting comments only by their authors, set the [deleteCommentAuthorOnly](../../usage-api/config/document/permissions.md#deletecommentauthoronly) parameter in the permissions section of the editor initialization to **true**.
+2. To allow users to delete only their own comments, set [`deleteCommentAuthorOnly`](../../usage-api/config/document/permissions.md#deletecommentauthoronly) to `true`:
 
    ``` ts
    const config = {
@@ -65,33 +63,28 @@ The document commenting will only be available for the document editor if the [m
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-## Differentiation of commenting rights by groups
+## Restricting comment access by group
 
-1. Specify the group (or several groups separated with commas) the user belongs to by adding the field *group* to the [user](../../usage-api/config/editor/editor.md#user) parameter in the editorConfig section.
+1. Assign the user to one or more groups (comma-separated) via the `group` field of the [`user`](../../usage-api/config/editor/editor.md#user) parameter in the editorConfig section:
 
-    ``` ts
-    const config = {
-      editorConfig: {
-        user: [{
-          id: "78e1e841",
-          name: "John Smith",
-          group: "Group1,Group2",
-        },
-        {
-          id: "78e1e841",
-          name: "John Smith",
-          group: "Group1,Group2",
-        }],
-      },
-    };
+   ``` ts
+   const config = {
+     editorConfig: {
+       user: {
+         id: "78e1e841",
+         name: "John Smith",
+         group: "Group1,Group2",
+       },
+     },
+   };
 
-    const docEditor = new DocsAPI.DocEditor("placeholder", config);
-    ```
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
+   ```
 
-2. Specify the access rights using the [commentGroups](../../usage-api/config/document/permissions.md#commentgroups) parameter in the permissions section of the editor initialization.
+2. Define which groups' comments the user can view, edit, or remove using the [`commentGroups`](../../usage-api/config/document/permissions.md#commentgroups) parameter in the permissions section:
 
    :::note
-   If the **commentGroups** parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled. Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+   Once `commentGroups` is specified, the default access rights to view, edit, and remove all comments are disabled. If the current user does not belong to any group, they can edit, remove, and view comments from all groups.
    :::
 
    ``` ts
@@ -110,13 +103,13 @@ The document commenting will only be available for the document editor if the [m
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   - *"edit": \["Group2", ""]* means that the user can edit comments made by users from *Group2* and users who do not belong to any of the groups (for example, the document that is commented in third-party editors).
-   - *"remove": \[""]* means that the user can remove comments made by someone who belongs to none of these groups (for example, the document that is commented in third-party editors).
-   - *"view": ""* means that the user can view comments made by any user.
+   - `"edit": ["Group2", ""]` — the user can edit comments made by users from `Group2` and by users who do not belong to any group (for example, comments added in third-party editors).
+   - `"remove": [""]` — the user can remove comments made by users who do not belong to any group (for example, comments added in third-party editors).
+   - `"view": ""` — the user can view comments made by any user.
 
 ## Threaded comments in spreadsheets
 
-To display ONLYOFFICE spreadsheet comments in other editors correctly, all the comments are saved in two formats - original and threaded:
+To ensure ONLYOFFICE spreadsheet comments display correctly in other editors, all comments are stored in two formats — original and threaded:
 
 1. The **original comment format** looks as follows:
 
@@ -131,9 +124,9 @@ To display ONLYOFFICE spreadsheet comments in other editors correctly, all the c
 
    ![Threaded comments](/assets/images/editor/comments-threaded.png#gh-light-mode-only)![Threaded comments](/assets/images/editor/comments-threaded.dark.png#gh-dark-mode-only)
 
-2. To convert the original comments format into the **threaded comments**, the *"$\{author\}:\n"* string is deleted if the comment starts with it.
+2. To convert original comments into the **threaded format**, the `${author}:\n` prefix is stripped if the comment starts with it.
 
-The file in the editors opens as follows:
+When opening a file:
 
-- If there are threaded comments in the file, they are used when opening.
-- If there are comments in the original ONLYOFFICE format only, they are converted into threaded comments.
+- If threaded comments are present, they are used directly.
+- If only original-format comments exist, they are converted into threaded comments.

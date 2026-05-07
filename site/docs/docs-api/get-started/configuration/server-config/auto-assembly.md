@@ -8,19 +8,19 @@ These parameters define the automatic forcesaving configuration.
 
 ## services.CoAuthoring.autoAssembly.step
 
-`Type: string`   `Default: "1m"`
+**type:** `string` | **default:** `"1m"`
 
 Defines the delay in minutes between the intervals.
 
 ## services.CoAuthoring.autoAssembly.enable
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines if the automatic forcesaving is enabled or not.
 
 ## services.CoAuthoring.autoAssembly.interval
 
-`Type: string`   `Default: "5m"`
+**type:** `string` | **default:** `"5m"`
 
 Defines the interval time in minutes for initiating the automatic forcesaving.
 

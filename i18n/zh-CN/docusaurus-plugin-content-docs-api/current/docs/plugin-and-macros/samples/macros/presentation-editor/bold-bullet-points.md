@@ -38,7 +38,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取演示文稿](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md)，[获取所有幻灯片](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md)，[获取所有形状](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md)，[获取文本内容](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md)，[获取左缩进](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md)，[获取元素数量](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetElementsCount.md)，[移除所有元素](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md)，[添加文本](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md)，[设置加粗](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetIndLeft](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), [GetElementsCount](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/GetElementsCount.md), [RemoveAllElements](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
 
 ## 结果
 

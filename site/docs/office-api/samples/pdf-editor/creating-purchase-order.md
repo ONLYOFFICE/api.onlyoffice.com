@@ -8,10 +8,10 @@ tags: ["Docs", "Office API", "PDF"]
 
 Creates a purchase order template with company details and line items:
 
-- create a table-based layout for order information ([Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md));
+- create a table-based layout for order information ([Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [ApiTable/GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md));
 - add a picture form for company logo upload ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md));
 - add text forms for editable fields ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md));
-- style table headers and borders ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md)).
+- style table headers and borders ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

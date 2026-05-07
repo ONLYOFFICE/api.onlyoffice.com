@@ -119,6 +119,21 @@
   height: auto !important;
 }
 
+.theme-announcement-bar .close svg {
+  width: 10px;
+  height: 10px;
+  stroke-width: 1.5;
+}
+
+html[data-theme='dark'] .theme-announcement-bar {
+  background-color: var(--ifm-background-surface-color) !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+html[data-theme='dark'] .theme-announcement-bar .close {
+  color: var(--ifm-font-color-base);
+}
+
 [data-theme='light'] img[src$='#gh-dark-mode-only'],
 [data-theme='dark'] img[src$='#gh-light-mode-only'] {
   display: none;
@@ -461,6 +476,14 @@ html[data-theme='dark'] .DocSearch-SidepanelButton.floating:hover {
 }
 [data-theme='dark'] .prism-code.language-css .token.plain {
   color: #b5cea8;
+}
+
+/* Boolean token color (not styled by vsLight/vsDark themes) */
+[data-theme='light'] .prism-code .token.boolean {
+  color: rgb(0, 0, 255);
+}
+[data-theme='dark'] .prism-code .token.boolean {
+  color: rgb(86, 156, 214);
 }
 
 /* TypeScript/JavaScript function token color */

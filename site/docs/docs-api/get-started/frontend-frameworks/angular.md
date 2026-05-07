@@ -95,7 +95,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -122,7 +122,7 @@ ng version
    Replace the following lines with your own data:
 
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
+   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -168,7 +168,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -193,7 +193,7 @@ ng version
    Replace the following lines with your own data:
 
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
+   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
 

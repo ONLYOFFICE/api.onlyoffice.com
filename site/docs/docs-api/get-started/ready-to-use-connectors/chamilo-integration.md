@@ -113,7 +113,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 1. To create a new file, teachers can open the documents folder and click the **Create new** ONLYOFFICE icon.
 
-2. The user is redirected to the file creation page where they need to enter the file name and format (text document, spreadsheet, or presentation). The browser calls the */plugin/onlyoffice/create.php* method. It adds a copy of an empty file to the course folder.
+2. The user is redirected to the file creation page where they need to enter the file name and format (document, spreadsheet, or presentation). The browser calls the */plugin/onlyoffice/create.php* method. It adds a copy of an empty file to the course folder.
 
 3. To open an existing file, the user chooses the **Open with ONLYOFFICE** icon next to the normal edit icon.
 

@@ -8,7 +8,7 @@ This parameter defines the properties of the custom color themes.
 
 ## services.CoAuthoring.themes.uri
 
-`Type: string`   `Default: "/web-apps/apps/common/main/resources/themes"`
+**type:** `string` | **default:** `"/web-apps/apps/common/main/resources/themes"`
 
 Defines a path to the folder where all the *json* files with the custom color themes are stored.
 

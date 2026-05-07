@@ -87,141 +87,137 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
 
 ## 用于生成签名的代码示例 {#code-samples-for-signature-generation}
 
-下面是为初始化设置和请求生成签名的示例。它们取自不同编程语言的[测试范例](../../samples/language-specific-examples/language-specific-examples.md)。我们建议您在项目中使用此代码来生成签名。
+下面是为初始化设置和请求生成签名的示例。所有示例均使用 HMAC-SHA256 算法，并包含所需的库和导入。它们基于不同编程语言的[测试范例](../../samples/language-specific-examples/language-specific-examples.md)。我们建议您在项目中使用此代码来生成签名。
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
       ``` ts
-      import config from "config"
+      // npm install jsonwebtoken
+      import jwt from "jsonwebtoken"
 
-      const configServer = config.get("server")
-      const cfgSignatureSecretExpiresIn = configServer.get("token.expiresIn")
-      const cfgSignatureSecret = configServer.get("token.secret")
-      const cfgSignatureSecretAlgorithmRequest = configServer.get("token.algorithmRequest")
-      documentService.getToken = function getToken(data) {
-        const options = {algorithm: cfgSignatureSecretAlgorithmRequest,
-          expiresIn: cfgSignatureSecretExpiresIn}
-        return jwt.sign(data, cfgSignatureSecret, options)
+      function jwtEncode(payload, secret) {
+        return jwt.sign(payload, secret, {algorithm: "HS256"})
       }
       ```
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
       ``` javascript
-      (async () => {
-          config.token = await createJWT(config, "JWT_SECRET");
-      })();
+      async function createJWT(payload, secret) {
+        const header = {
+          typ: "JWT",
+          alg: "HS256",
+        }
 
-      async function createJWT(json, secret) {
-          if (!secret) return null;
-          let header = {
-              typ: "JWT",
-              alg: "HS256"
-          }
+        function base64UrlEncode(str) {
+          return btoa(str)
+            .replace(/\+/g, "-")
+            .replace(/\//g, "_")
+            .replace(/=/g, "")
+        }
 
-          let base64EncodeURL = function(str) {
-              return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
-          }
+        const encodedHeader = base64UrlEncode(JSON.stringify(header))
+        const encodedPayload = base64UrlEncode(JSON.stringify(payload))
 
-          let encodedHeader = base64EncodeURL(JSON.stringify(header));
-          let encodedPayload = base64EncodeURL(JSON.stringify(json));
-          let encoder = new TextEncoder();
-          let algorithm = { name: "HMAC", hash: "SHA-256" };
-          let key = await crypto.subtle.importKey("raw", encoder.encode(secret), algorithm, false, ["sign", "verify"]);
-          let buf = encoder.encode(encodedHeader + "." + encodedPayload);
-          let sign = await crypto.subtle.sign(algorithm.name, key, buf);
-          let hash = base64EncodeURL(String.fromCharCode(...new Uint8Array(sign)));
-          return encodedHeader + "." + encodedPayload + "." + hash;
+        const encoder = new TextEncoder()
+        const algorithm = {name: "HMAC", hash: "SHA-256"}
+        const key = await crypto.subtle.importKey(
+          "raw",
+          encoder.encode(secret),
+          algorithm,
+          false,
+          ["sign"]
+        )
+
+        const data = encoder.encode(`${encodedHeader}.${encodedPayload}`)
+        const signature = await crypto.subtle.sign(algorithm.name, key, data)
+        const encodedSignature = base64UrlEncode(
+          String.fromCharCode(...new Uint8Array(signature))
+        )
+
+        return `${encodedHeader}.${encodedPayload}.${encodedSignature}`
       }
       ```
   </TabItem>
   <TabItem value="csharp" label="C#">
       ``` cs
-      public static class JwtManager
+      // NuGet: Install-Package JWT
+      using JWT;
+      using JWT.Algorithms;
+      using JWT.Serializers;
+
+      public static string JwtEncode(
+          IDictionary<string, object> payload,
+          string secret)
       {
-          private static readonly string Secret;
-          public static readonly bool Enabled;
-
-          static JwtManager()
-          {
-              Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
-              Enabled = !string.IsNullOrEmpty(Secret);
-          }
-
-          public static string Encode(IDictionary<string, object> payload)
-          {
-              var encoder = new JwtEncoder(new HMACSHA256Algorithm(),
-                                              new JsonNetSerializer(),
-                                              new JwtBase64UrlEncoder());
-              return encoder.Encode(payload, Secret);
-          }
+          var encoder = new JwtEncoder(
+              new HMACSHA256Algorithm(),
+              new JsonNetSerializer(),
+              new JwtBase64UrlEncoder());
+          return encoder.Encode(payload, secret);
       }
       ```
   </TabItem>
   <TabItem value="java" label="Java">
       ``` java
-      public static String CreateToken(Map<String, Object> payloadClaims)
-      {
-          try
-          {
-              String secret = ConfigManager.GetProperty("files.docservice.secret");
-              Signer signer = HMACSigner.newSHA256Signer(secret);
-              JWT jwt = new JWT();
-              for (String key : payloadClaims.keySet())
-              {
-                  jwt.addClaim(key, payloadClaims.get(key));
-              }
-              return JWT.getEncoder().encode(jwt, signer);
+      // Maven: io.fusionauth:fusionauth-jwt
+      import io.fusionauth.jwt.Signer;
+      import io.fusionauth.jwt.hmac.HMACSigner;
+      import io.fusionauth.jwt.domain.JWT;
+
+      public static String jwtEncode(
+              Map<String, Object> payload,
+              String secret) {
+          Signer signer = HMACSigner.newSHA256Signer(secret);
+          JWT jwt = new JWT();
+          for (String key : payload.keySet()) {
+              jwt.addClaim(key, payload.get(key));
           }
-          catch (Exception e)
-          {
-              return "";
-          }
+          return JWT.getEncoder().encode(jwt, signer);
       }
       ```
   </TabItem>
   <TabItem value="php" label="PHP">
       ``` php
-      <?php
-      function jwtEncode($payload) {
-          return \Firebase\JWT\JWT::encode($payload, $GLOBALS["DOC_SERV_JWT_SECRET"], "HS256");
+      // composer require firebase/php-jwt
+      use Firebase\JWT\JWT;
+
+      function jwtEncode($payload, $secret) {
+          return JWT::encode($payload, $secret, "HS256");
       }
-      ?>
       ```
   </TabItem>
   <TabItem value="python" label="Python">
       ``` py
-      def encode(payload):
-          return jwt.encode(payload, config.DOC_SERV_JWT_SECRET, algorithm='HS256')
+      # pip install PyJWT
+      import jwt
+
+      def jwt_encode(payload, secret):
+          return jwt.encode(payload, secret, algorithm="HS256")
       ```
   </TabItem>
   <TabItem value="ruby" label="Ruby">
       ``` rb
-      @jwt_secret = Rails.configuration.jwtSecret
+      # gem install jwt
+      require "jwt"
 
-      class << self
-          def encode(payload)
-              return JWT.encode payload, @jwt_secret, 'HS256'
-          end
+      def jwt_encode(payload, secret)
+        JWT.encode(payload, secret, "HS256")
       end
       ```
   </TabItem>
   <TabItem value="go" label="Go">
       ``` go
-      type onlyofficeJwtManager struct {
-          key []byte
-      }
+      // go get github.com/golang-jwt/jwt/v5
+      import (
+          "github.com/golang-jwt/jwt/v5"
+      )
 
-      func (j onlyofficeJwtManager) Sign(payload interface {
-          Valid() error
-      }) (string, error) {
-          token := jwt.NewWithClaims(jwt.SigningMethodHS256, payload)
-          ss, err := token.SignedString(j.key)
-
-          if err != nil {
-              return "", errors.New("could not generate a new jwt")
-          }
-
-          return ss, nil
+      func jwtEncode(
+          claims jwt.MapClaims,
+          secret []byte,
+      ) (string, error) {
+          token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+          return token.SignedString(secret)
       }
       ```
   </TabItem>

@@ -17,7 +17,7 @@ hide_table_of_contents: true
     let pictureFormsKey = ''; // 输入要调整的图片表单键值，留空则调整所有图片尺寸
     let pictureWidth = 2; // 输入目标宽度（单位：厘米）
     let pictureHeight = 2; // 输入目标高度（单位：厘米）
-    let aspectRatio = 0; // 可选：可输入宽高比（宽度/高度），默认 0 则直接使用原来的宽高值
+    let aspectRatio = 0; // 可选：可输入宽高比（宽度/高度），默认 0 则直接使用宽度和高度值
 
     let doc = Api.GetDocument();
     let forms = doc.GetAllForms();
@@ -37,7 +37,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取文档](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md)，[获取所有表单](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md)，[获取表单类型](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md)，[获取表单键值](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md)，[获取图片](/docs/office-api/usage-api/form-api/ApiPictureForm/Methods/GetImage.md)，[设置图片](/docs/office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/GetImage.md), [SetImage](../../../../office-api/usage-api/form-api/ApiPictureForm/Methods/SetImage.md)
 
 ## 结果
 

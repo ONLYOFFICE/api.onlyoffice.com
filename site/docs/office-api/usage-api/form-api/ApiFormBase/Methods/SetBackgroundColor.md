@@ -14,7 +14,7 @@ expression.SetBackgroundColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Optional | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | The background color. |
+| color | Optional | [ApiColor](../../../document-api/ApiColor/ApiColor.md) |  | The background color. |
 
 ## Returns
 

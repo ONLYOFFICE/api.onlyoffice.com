@@ -111,7 +111,7 @@ curl -X POST "https://documentserver/docbuilder" \
 **Request:**
 
 ``` bash
-curl -X POST "https://example.com/url-to-callback.ashx" \
+curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"

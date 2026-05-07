@@ -53,7 +53,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法：[获取当前工作表](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md)，[获取已使用范围](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md)，[创建RGB颜色](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md)，[获取行数](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRows.md)，[获取列数](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md)，[按编号获取范围](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md)，[获取范围值](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md)，[设置填充颜色](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRows.md), [GetCols](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
 
 ## 结果
 

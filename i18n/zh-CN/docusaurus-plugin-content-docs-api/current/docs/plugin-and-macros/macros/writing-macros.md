@@ -92,7 +92,7 @@ sidebar_position: -5
 
 ## 订阅事件
 
-要订阅指定事件并在事件触发时调用回调函数，请使用 [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) 方法。
+要订阅指定事件并在事件触发时调用回调函数，请使用 [attachEvent](../../office-api/usage-api/document-api/Api/Methods/attachEvent.md) 方法。
 
 例如，要在文档中点击超链接时订阅事件，可以使用以下代码：
 

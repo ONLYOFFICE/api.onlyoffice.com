@@ -1,5 +1,164 @@
 # Change log
 
+## 8.5.0
+
+### New features
+
+#### Playground
+
+* Added auto-generated JSON schema from TypeScript types for Config Editor
+* Added tri-state toggle (unset/true/false) and dimmed labels for unset controls in Config Editor
+* Added Config section grouping for root-level primitive fields
+
+### Improvements
+
+#### Docs API
+
+* Rewrote config reference pages with standardized formatting, backtick identifiers, and improved examples across document, editor, customization, permissions, embedded, plugins, and events sections
+* Improved usage API method documentation with parameter headers, examples, and error descriptions
+* Removed deprecated parameters: changeHistory, rename, author, created, onReady, user.firstname, user.lastname, plugins.url
+* Standardized array type notation to TypeName[] format across all config pages
+* Added missing document, editorConfig, and events sections to config overview page
+* Updated images for the events page
+* Documented removal of deprecated params in changelog entries for v6.1 and v6.3
+
+#### Playground
+
+* Unified form/JSON dirty tracking with bidirectional sync on tab switch
+* Improved config schema types with per-document-type FileType unions and PlatformType alias
+* Cleaned up playground editor config defaults and reduced re-renders
+
+#### Common
+
+* Added boolean token color to code syntax highlighting
+
+### Fixes
+
+#### Docs API
+
+* Added missing autostart, isLink, and hml properties to config documentation
+* Removed hardcoded permission values from sharingSettings.permissions
+* Fixed broken anchors, links, and incorrect examples across config reference pages
+* Corrected isForm type, commentGroups.view example, and grammar inconsistencies
+* Removed .ashx extension and trailing slash from example URLs
+* Fixed MCP documentation formatting issues
+
+#### Playground
+
+* Fixed JSON editor changes not syncing to config on Run
+* Fixed editor re-initialization and script replacement prompts
+* Fixed enum deduplication and fileType grouping by documentType
+* Fixed button style scoping and ArrayControl schema resolution
+* Fixed anonymous mode, dark mode compatibility, and PDF form document names
+
+#### Localization
+
+* Fixed zh-CN product name spacing and synced translations for config pages
+
+## 8.4.1
+
+### Fixes
+
+#### Playground
+
+* Fixed editor re-initialization when script value changes in playground
+* Fixed prompt before replacing modified script on script type change
+
+## 8.4.0
+
+### New features
+
+#### DocSpace
+
+* Added MCP server documentation section with getting started guides, client connection instructions, tutorials, use cases, troubleshooting, distribution guides, configuration reference, tools reference, and glossary
+* Added MCP server homepage card and sidebar navigation
+
+#### Playground
+
+* Added Config Playground for the Docs API with interactive JSON Forms editor, live document preview, and split-pane layout
+* Added screenshots for Config Playground cards
+
+#### Docs API
+
+* Added new entry-point page for the DocsAPI.DocEditor class
+
+### Improvements
+
+#### Playground
+
+* Merged Config Playground into unified playground page
+* Renamed toolbar labels for clarity (Preview→Mode, Document→File, Connector→Automation API)
+* Replaced tooltip with popover for click-based interaction in Config Playground
+* Unified playground card components into a single shared module
+* Removed redundant Builder card from playground cards
+
+#### Docs API
+
+* Rewrote over 25 integration guides for improved integrator clarity, including how-it-works, saving-file, co-editing, document-history, security, JWT signature samples, and more
+* Renamed Advanced parameters to Configuration overview and connected with DocEditor and Config pages
+* Added cross-links to the DocEditor page from methods, preload, and installation pages
+* Updated images for the commenting page
+
+#### Office API
+
+* Updated office-js-api documentation
+
+#### Plugins and macros
+
+* Removed broken PDF API method links from plugin changelog
+
+#### DocSpace
+
+* Consolidated MCP server distribution into a combined page
+* Revised MCP server tutorial titles for clarity
+* Refactored MCP server connection instructions
+
+#### Localization
+
+* Added Chinese translation for the Config Playground page
+* Synced zh-CN config pages with English source
+* Fixed Chinese localization for macro code snippets and paths
+
+#### Common
+
+* Consolidated Window type augmentations into global.d.ts
+
+### Fixes
+
+#### Playground
+
+* Fixed Config Playground styling: improved color tokens, tooltips, focus indicators, section spacing, and SEO metadata
+* Fixed Config Playground performance: optimized rendering with memoization, lazy serialization, and debounced updates
+* Fixed Config Playground UI: consolidated action buttons into floating panel, corrected heading hierarchy, and hidden Ask AI button
+* Fixed playground document key generation to use crypto.randomUUID
+* Fixed File dropdown to show Sample before Blank
+* Fixed Config Playground to use PDF format for form document type
+* Fixed Config Playground info icon style and color
+
+#### Docs API
+
+* Fixed Try page PDF using blank instead of demo document
+* Fixed opening-file and saving-file overview step lists
+* Fixed action-link semicolon consistency
+* Added missing onMakeActionLink event to complete config example
+* Sorted word file extensions alphabetically
+
+#### DocSpace
+
+* Fixed grammar, punctuation, and broken links across MCP server docs
+* Fixed sidebar labels and configuration category structure in MCP server docs
+* Fixed capitalization issues in MCP server documentation
+* Fixed broken links in MCP server use-cases sections
+* Fixed troubleshooting pages order
+
+## 8.3.1
+
+### Fixes
+
+#### Docs API
+
+* Fixed Try page documents not opening due to placeholder URLs overriding actual document URLs in editor configuration
+
 ## 8.3.0
 
 ### New features
@@ -56,7 +215,7 @@
 
 #### Docs API
 
-* Fixed text document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
+* Fixed Document API overview: wrong method prefix, fragile line refs, stray "spreadsheet"
 
 #### Common
 
@@ -163,7 +322,7 @@
 * New configuration sections include ActiveMQ, RabbitMQ, Redis, AI settings, security, token, storage, WOPI integration, and more
 * Restructured Automation API documentation into a dedicated section with separate pages for Connector class and Connector window methods
 * Added Working with content controls sample for Automation API
-* Added links to all editor methods (text document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
+* Added links to all editor methods (document, spreadsheet, presentation, PDF, form) in the connector executeMethod section
 
 #### Office API
 
