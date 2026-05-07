@@ -631,7 +631,7 @@ Defines if document macros will be automatically run when the editor opens.
 
 ## macrosMode
 
-**type:** `string` | **default:** `"warn"`
+**type:** `"disable" | "warn" | "enable"` | **default:** `"warn"`
 
 Defines the macros run mode when autostart is enabled. Can take the following values:
 
@@ -730,7 +730,7 @@ Defines if [plugins](../../../../../plugin-and-macros/get-started/get-started.md
 
 ## pointerMode
 
-**type:** `string` | **default:** `"select"`
+**type:** `"select" | "hand"` | **default:** `"select"`
 
 Defines the pointer mode when the presentation editor is loaded in the viewer. If set to `select`, the selection mode is used. If set to `hand`, the hand mode is used.
 
@@ -782,7 +782,7 @@ Defines the review display mode. If set to `true`, reviews are shown in tooltips
 
 ### review.reviewDisplay
 
-**type:** `string`
+**type:** `"markup" | "simple" | "final" | "original"`
 
 Defines the review display mode for the document editor. The default value is `original` for viewer and `markup` for editor. This setting works in any [mode](../../editor/editor.md#mode), but editing is only possible when `markup` or `simple` is selected. If `original` or `final` is selected, the editor automatically switches to view-only mode. Can take the following values:
 
@@ -811,7 +811,7 @@ Defines if the review editing mode is enabled for the current user. This paramet
 
 ## reviewDisplay
 
-**type:** `string`
+**type:** `"markup" | "simple" | "final" | "original"`
 
 Defines the review editing mode in the document editor. This parameter can take the following values:
 
@@ -988,7 +988,7 @@ Starting from version 9.1, this parameter is also available for the mobile edito
 
 ## unit
 
-**type:** `string` | **default:** `"cm"`
+**type:** `"cm" | "pt" | "inch"` | **default:** `"cm"`
 
 Defines the measurement units used on the ruler and in dialog boxes. Can take the following values:
 

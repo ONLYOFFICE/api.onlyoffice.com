@@ -631,7 +631,7 @@ const logo = {
 
 ## macrosMode
 
-**类型：** `string` | **默认值：** `"warn"`
+**类型：** `"disable" | "warn" | "enable"` | **默认值：** `"warn"`
 
 定义启用自动开始时的宏运行模式。可以取以下值：
 
@@ -730,7 +730,7 @@ const mobile = {
 
 ## pointerMode
 
-**类型：** `string` | **默认值：** `"select"`
+**类型：** `"select" | "hand"` | **默认值：** `"select"`
 
 定义在查看器中加载演示文稿编辑器时的指针模式。如果设置为 `select`，使用选择模式。如果设置为 `hand`，使用手形模式。
 
@@ -782,7 +782,7 @@ const review = {
 
 ### review.reviewDisplay
 
-**类型：** `string`
+**类型：** `"markup" | "simple" | "final" | "original"`
 
 定义文档编辑器的审阅显示模式。查看器的默认值是 `original`，编辑器的默认值是 `markup`。此设置适用于任何[模式](../../editor/editor.md#mode)，但仅在选择 `markup` 或 `simple` 时才能进行编辑。如果选择 `original` 或 `final`，编辑器将自动切换到仅查看模式。可以采用以下值：
 
@@ -811,7 +811,7 @@ const review = {
 
 ## reviewDisplay
 
-**类型：** `string`
+**类型：** `"markup" | "simple" | "final" | "original"`
  
  定义文档编辑器中的审阅编辑模式。此参数可以采用以下值：
 
@@ -988,7 +988,7 @@ const review = {
 
 ## 单元 {#unit}
 
-**类型：** `string` | **默认值：** `"cm"`
+**类型：** `"cm" | "pt" | "inch"` | **默认值：** `"cm"`
 
 定义标尺和对话框中使用的测量单位。可以取以下值：
 
