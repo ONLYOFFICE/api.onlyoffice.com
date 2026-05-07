@@ -85,6 +85,54 @@ type DiagramFileType =
 
 type FileType = WordFileType | CellFileType | SlideFileType | PdfFileType | DiagramFileType
 
+type Lang =
+    | "ar"
+    | "az"
+    | "be"
+    | "bg"
+    | "ca"
+    | "cs"
+    | "da"
+    | "de"
+    | "el"
+    | "en"
+    | "es"
+    | "eu"
+    | "fi"
+    | "fr"
+    | "gl"
+    | "he"
+    | "hr"
+    | "hu"
+    | "hy"
+    | "id"
+    | "it"
+    | "ja"
+    | "ko"
+    | "lo"
+    | "lv"
+    | "ms"
+    | "nl"
+    | "no"
+    | "pl"
+    | "pt"
+    | "pt-PT"
+    | "ro"
+    | "ru"
+    | "si"
+    | "sk"
+    | "sl"
+    | "sq"
+    | "sr"
+    | "sr-Cyrl"
+    | "sv"
+    | "tr"
+    | "uk"
+    | "ur"
+    | "vi"
+    | "zh"
+    | "zh-TW"
+
 type EditorTheme =
     "theme-light"
     | "theme-classic-light"
@@ -780,7 +828,7 @@ interface EditorConfigBase {
      * @default "en"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#lang
      */
-    lang?: string;
+    lang?: Lang;
 
     /**
      * Defines the default display format for **currency**, **date**, and **time** (in the **Spreadsheet Editor** only).

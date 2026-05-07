@@ -91,6 +91,60 @@ Defines the editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) 
 To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (these languages were added in version 7.2), you need to use the four-letter language codes - `pt-PT` or `zh-TW`, respectively. The two-letter `pt` language code sets Portuguese (Brazil) and the `zh` code specifies Chinese (People's Republic of China).
 :::
 
+<details>
+<summary>Supported language codes</summary>
+
+| Code | Language |
+| ---- | -------- |
+| `ar` | Arabic |
+| `az` | Azerbaijani |
+| `be` | Belarusian |
+| `bg` | Bulgarian |
+| `ca` | Catalan |
+| `cs` | Czech |
+| `da` | Danish |
+| `de` | German |
+| `el` | Greek |
+| `en` | English |
+| `es` | Spanish |
+| `eu` | Basque |
+| `fi` | Finnish |
+| `fr` | French |
+| `gl` | Galician |
+| `he` | Hebrew |
+| `hr` | Croatian |
+| `hu` | Hungarian |
+| `hy` | Armenian |
+| `id` | Indonesian |
+| `it` | Italian |
+| `ja` | Japanese |
+| `ko` | Korean |
+| `lo` | Lao |
+| `lv` | Latvian |
+| `ms` | Malay |
+| `nl` | Dutch |
+| `no` | Norwegian |
+| `pl` | Polish |
+| `pt` | Portuguese (Brazil) |
+| `pt-PT` | Portuguese (Portugal) |
+| `ro` | Romanian |
+| `ru` | Russian |
+| `si` | Sinhala |
+| `sk` | Slovak |
+| `sl` | Slovenian |
+| `sq` | Albanian |
+| `sr` | Serbian (Latin) |
+| `sr-Cyrl` | Serbian (Cyrillic) |
+| `sv` | Swedish |
+| `tr` | Turkish |
+| `uk` | Ukrainian |
+| `ur` | Urdu |
+| `vi` | Vietnamese |
+| `zh` | Chinese (Simplified) |
+| `zh-TW` | Chinese (Traditional) |
+
+</details>
+
 **Example**: `"en"`
 
 ## location
