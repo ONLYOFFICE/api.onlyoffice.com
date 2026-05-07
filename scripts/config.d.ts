@@ -346,7 +346,7 @@ interface SharingSetting {
      * @example "Full Access"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#sharingsettingspermissions
      */
-    permissions?: "Full Access" | "Read Only" | "Deny Access";
+    permissions?: string;
 
     /**
      * Changes the user icon to the link icon.

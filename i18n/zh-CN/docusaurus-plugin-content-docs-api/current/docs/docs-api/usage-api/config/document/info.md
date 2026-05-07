@@ -57,7 +57,7 @@
 
 **类型：** `string`
 
-具有上述名称的用户的访问权限。可以是 `Full Access`、`Read Only` 或 `Deny Access`
+具有上述名称的用户的访问权限。
 
 **示例**: `"Full Access"`
 
