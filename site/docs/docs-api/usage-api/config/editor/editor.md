@@ -195,6 +195,18 @@ Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsavea
 
 **Example**: `"https://example.com/url-to-save-folder"`
 
+## sharingSettingsUrl
+
+**type:** `string`
+
+Defines the absolute URL to the document sharing settings page.
+
+:::danger[Deprecated]
+Instead of this parameter, use the [onRequestSharingSettings](../events.md#onrequestsharingsettings) event.
+:::
+
+**Example**: `"https://example.com/url-to-sharing-settings"`
+
 ## templates
 
 **type:** `object[]`

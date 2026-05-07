@@ -934,9 +934,12 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     createUrl?: string;
 
-    // TODO: Not in the documentation
     /**
+     * Defines the absolute URL to the document sharing settings page.
+     *
+     * @deprecated Use the `onRequestSharingSettings` event instead.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#sharingsettingsurl
      */
     sharingSettingsUrl?: string;
 
