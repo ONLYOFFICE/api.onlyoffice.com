@@ -308,7 +308,7 @@
 }
 
 /* Base button styles for array controls and sections */
-.arrayItem button,
+.arrayItemHeader button,
 .content > button,
 .section button {
     background: transparent;
@@ -322,7 +322,7 @@
     transition: all var(--ce-transition-base);
 }
 
-.arrayItem button:hover,
+.arrayItemHeader button:hover,
 .content > button:hover,
 .section button:hover {
     background: var(--ifm-color-emphasis-100);
@@ -330,7 +330,7 @@
     color: var(--ifm-color-emphasis-900);
 }
 
-.arrayItem button:focus-visible,
+.arrayItemHeader button:focus-visible,
 .content > button:focus-visible,
 .section button:focus-visible {
     outline: none;
@@ -339,7 +339,7 @@
 }
 
 /* Button variants */
-.arrayItem button[data-variant='primary'],
+.arrayItemHeader button[data-variant='primary'],
 .content > button[data-variant='primary'],
 .section button[data-variant='primary'] {
     background: var(--ifm-color-primary);
@@ -347,7 +347,7 @@
     border-color: var(--ifm-color-primary);
 }
 
-.arrayItem button[data-variant='primary']:hover,
+.arrayItemHeader button[data-variant='primary']:hover,
 .content > button[data-variant='primary']:hover,
 .section button[data-variant='primary']:hover {
     background: var(--ifm-color-primary-dark);
@@ -356,14 +356,14 @@
     box-shadow: var(--ifm-global-shadow-lw);
 }
 
-.arrayItem button[data-variant='danger'],
+.arrayItemHeader button[data-variant='danger'],
 .content > button[data-variant='danger'],
 .section button[data-variant='danger'] {
     color: var(--ifm-color-danger);
     border-color: var(--ifm-color-danger-light);
 }
 
-.arrayItem button[data-variant='danger']:hover,
+.arrayItemHeader button[data-variant='danger']:hover,
 .content > button[data-variant='danger']:hover,
 .section button[data-variant='danger']:hover {
     background: var(--ifm-color-danger-lightest);

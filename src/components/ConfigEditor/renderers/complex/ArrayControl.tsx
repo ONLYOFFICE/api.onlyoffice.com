@@ -1,5 +1,5 @@
-import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths, resolveSchema } from '@jsonforms/core';
-import { withJsonFormsArrayControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react';
+import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths } from '@jsonforms/core';
+import { withJsonFormsArrayControlProps, JsonFormsDispatch } from '@jsonforms/react';
 import { memo } from 'react';
 import { Section } from '../utils/Section';
 import { depthOfPath, titleFromKey } from '../layouts/depth';
@@ -21,32 +21,25 @@ function defaultForSchema(s: JsonSchema | undefined): unknown {
 
 const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayControlProps) {
     const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props;
-    const ctx = useJsonForms();
-    const rootSchema = ctx.core?.schema as JsonSchema | undefined;
 
-    const rawItemSchema = (schema as JsonSchema).items as JsonSchema | undefined;
-    let itemSchema: JsonSchema = rawItemSchema ?? {};
-
-    if (rawItemSchema?.$ref && rootSchema) {
-        itemSchema = resolveSchema(rootSchema, rawItemSchema.$ref, rootSchema) as JsonSchema;
-    }
+    // mapStateToArrayControlProps already resolves schema.items (including $ref),
+    // so schema here is the item schema, not the array schema
+    let itemSchema: JsonSchema = (schema as JsonSchema) ?? {};
 
     const items: unknown[] = Array.isArray(data) ? data : [];
     const depth = depthOfPath(path);
 
-    // Determine effective item schema
-    const firstItem = items[0];
-    let effectiveItemSchema: JsonSchema = itemSchema;
-
-    // If we have data, infer type from first item
-    if (firstItem !== undefined) {
-        const itemType = typeof firstItem;
-        if (itemType === 'string' || itemType === 'number' || itemType === 'boolean') {
-            effectiveItemSchema = { type: itemType as JsonSchema['type'] };
+    // If schema is empty, infer type from data
+    if (!itemSchema.type && !itemSchema.properties && !itemSchema.items) {
+        const firstItem = items[0];
+        if (firstItem !== undefined) {
+            const itemType = typeof firstItem;
+            if (itemType === 'string' || itemType === 'number' || itemType === 'boolean') {
+                itemSchema = { type: itemType as JsonSchema['type'] };
+            }
+        } else {
+            itemSchema = { type: 'string' };
         }
-    } else if (!itemSchema.type && !itemSchema.properties && !itemSchema.items) {
-        // If no data and no clear schema, default to string
-        effectiveItemSchema = { type: 'string' };
     }
 
     return (
@@ -69,7 +62,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
                             )}
                         </div>
                         <JsonFormsDispatch
-                            schema={effectiveItemSchema}
+                            schema={itemSchema}
                             uischema={ITEM_UISCHEMA}
                             path={itemPath}
                             renderers={renderers}
@@ -81,7 +74,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
             {enabled && (
                 <button
                     type="button"
-                    onClick={() => addItem(path, defaultForSchema(effectiveItemSchema))()}
+                    onClick={() => addItem(path, defaultForSchema(itemSchema))()}
                     data-variant="primary"
                     aria-label="Add new item"
                 >
