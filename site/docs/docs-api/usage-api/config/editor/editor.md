@@ -161,7 +161,7 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 ## mode
 
-**type:** `string` | **default:** `"edit"`
+**type:** `"edit" | "view"` | **default:** `"edit"`
 
 Defines the editor opening mode. Can be either `view` to open the document for viewing, or `edit` to open the document in the editing mode allowing you to apply changes to the document data.
 
