@@ -10,7 +10,7 @@ const SOURCES = [
   { dir: 'site/docs/macros/samples', routeBase: 'docs/macros/samples', output: 'docs-macros-samples.json' },
   // docs-builder-samples.json is maintained manually
   // AI - Docs
-  { dir: 'site/docs/ai/samples/custom-ai-tools', routeBase: 'docs/ai/samples/custom-ai-tools', output: 'docs-ai-samples.json' },
+  { dir: 'site/docs/ai/samples', routeBase: 'docs/ai/samples', output: 'docs-ai-samples.json' },
   // AI - DocSpace
   { dir: 'site/docspace/mcp-server/use-cases', routeBase: 'docspace/mcp-server/use-cases', output: 'docspace-ai-samples.json' },
   // Docs - Connectors

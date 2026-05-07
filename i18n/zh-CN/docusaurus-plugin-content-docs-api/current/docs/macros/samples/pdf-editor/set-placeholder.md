@@ -1,0 +1,26 @@
+---
+hide_table_of_contents: true
+---
+
+# 设置占位文本
+
+为所有包含特定键值的组合框设置指定的占位文本。
+
+```ts
+(function () {
+    let key = "MyKey";
+    let placeholderText = "Placeholder";
+    let doc = Api.GetDocument();
+
+    doc.GetAllForms()
+        .filter(field => field.GetFormType() === "comboBoxForm" && field.GetFormKey() === key)
+        .forEach(field => field.SetPlaceholderText(placeholderText));
+})();
+```
+
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey), [SetPlaceholderText](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetPlaceholderText)
+
+## 结果
+
+![设置占位文本](/assets/images/plugins/set-placeholder.png#gh-light-mode-only)
+![设置占位文本](/assets/images/plugins/set-placeholder.dark.png#gh-dark-mode-only)

@@ -1,0 +1,23 @@
+---
+hide_table_of_contents: true
+---
+
+# 插入文本
+
+在文档当前光标位置插入文本。
+
+``` ts
+(function()
+{
+    let doc = Api.GetDocument();
+    let paragraph = Api.CreateParagraph();
+    paragraph.AddText("Hello world!");
+    doc.InsertContent([paragraph]);
+})();
+```
+
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent)
+
+## 结果
+
+![Insert text](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Insert text](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)

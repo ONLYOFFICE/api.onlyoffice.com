@@ -1,0 +1,29 @@
+---
+hide_table_of_contents: true
+---
+
+# 自动生成书签
+
+自动为文档中的所有标题段落生成书签，并使用标题文本作为书签名称。
+
+```ts
+(function () {
+    let doc = Api.GetDocument();
+    let headingParagraphs = doc.GetAllHeadingParagraphs();
+    let bookmarkCounter = 1;
+
+    headingParagraphs.forEach((paragraph, index) => {
+        let headingText = paragraph.GetText().replace(/\s+/g, "_");
+        let bookmarkName = `Bookmark_${headingText}_${bookmarkCounter}`;
+        let range = paragraph.GetRange();
+        range.AddBookmark(bookmarkName);
+        bookmarkCounter++;
+    });
+})();
+```
+
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllHeadingParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllHeadingParagraphs), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange), [AddBookmark](../../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark)
+
+## 结果
+
+![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.png#gh-light-mode-only)![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.dark.png#gh-dark-mode-only)

@@ -46,4 +46,4 @@ All [Office JavaScript API](../../../office-api/get-started/overview) features a
 
 *window.Asc.plugin.button* is a required stub that handles clicks on any buttons defined in the plugin's [config.json](../../fundamentals/configuration/config-json.md#variationsbuttons). The main variation of this plugin has no buttons, so the handler is empty.
 
-More existing open source plugin examples can be found [here](../../samples/plugins/hello-world.md).
+More existing open source plugin examples can be found [here](../../samples/hello-world.md).

@@ -46,4 +46,4 @@ window.Asc.plugin.button = function button(id) {};
 
 唯一的确定按钮（window.Asc.plugin.button = function (id) \{...\}）用于创建文本并结束插件操作。
 
-更多现有的开源插件示例可在[此处](/docs/plugins/samples/plugins/hello-world)查看。
+更多现有的开源插件示例可在[此处](/docs/plugins/samples/hello-world)查看。

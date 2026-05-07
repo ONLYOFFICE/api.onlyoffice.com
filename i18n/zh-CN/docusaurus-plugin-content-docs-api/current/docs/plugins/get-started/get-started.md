@@ -12,9 +12,9 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 嵌入外部内容（[YouTube](/docs/plugins/samples/plugins/youtube)、媒体库）
-- 第三方集成（[Translator](/docs/plugins/samples/plugins/translator)、[Zotero](/docs/plugins/samples/plugins/zotero)、CRM 系统）
-- 高级处理（[OCR](/docs/plugins/samples/plugins/ocr)、图像处理、数据可视化）
+- 嵌入外部内容（[YouTube](/docs/plugins/samples/youtube)、媒体库）
+- 第三方集成（[Translator](/docs/plugins/samples/translator)、[Zotero](/docs/plugins/samples/zotero)、CRM 系统）
+- 高级处理（[OCR](/docs/plugins/samples/ocr)、图像处理、数据可视化）
 - 自定义工作流（表单构建器、审批系统、模板）
 
 **开发概况：**
@@ -30,10 +30,10 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 一键格式化（[重置文本属性](/docs/macros/samples/macros/document-editor/reset-text-properties) — 快速将文本重置为默认格式）
-- 批量操作（[删除空表格](/docs/macros/samples/macros/document-editor/remove-empty-tables) — 删除整个文档中的所有空表格）
-- 自定义计算（[加权平均值](/docs/macros/samples/macros/spreadsheet-editor/weighted-average-function) — 计算所选范围的加权平均值）
-- 文档清理（[删除空段落](/docs/macros/samples/macros/presentation-editor/remove-empty-paragraphs) — 删除整个演示文稿中所有不必要的空段落）
+- 一键格式化（[重置文本属性](/docs/macros/samples/document-editor/reset-text-properties) — 快速将文本重置为默认格式）
+- 批量操作（[删除空表格](/docs/macros/samples/document-editor/remove-empty-tables) — 删除整个文档中的所有空表格）
+- 自定义计算（[加权平均值](/docs/macros/samples/spreadsheet-editor/weighted-average-function) — 计算所选范围的加权平均值）
+- 文档清理（[删除空段落](/docs/macros/samples/presentation-editor/remove-empty-paragraphs) — 删除整个演示文稿中所有不必要的空段落）
 
 **开发概况：**
 
@@ -48,10 +48,10 @@ ONLYOFFICE 支持三种扩展编辑器功能的方式：**插件**、**宏**和*
 
 **适用场景：**
 
-- 写作辅助（[检查拼写](/docs/ai/samples/custom-ai-tools/document-editor/check-spelling) — AI 驱动的拼写检查）
-- 智能样式（[更改文本样式](/docs/ai/samples/custom-ai-tools/document-editor/change-text-style) — AI 驱动的文本样式调整）
-- 自动生成形状（[添加形状](/docs/ai/samples/custom-ai-tools/presentation-editor/add-shape-to-slide) — AI 驱动的演示文稿设计）
-- 数据洞察（[解释公式](/docs/ai/samples/custom-ai-tools/spreadsheet-editor/explain-formula) — AI 驱动的公式解释）
+- 写作辅助（[检查拼写](/docs/ai/samples/document-editor/check-spelling) — AI 驱动的拼写检查）
+- 智能样式（[更改文本样式](/docs/ai/samples/document-editor/change-text-style) — AI 驱动的文本样式调整）
+- 自动生成形状（[添加形状](/docs/ai/samples/presentation-editor/add-shape-to-slide) — AI 驱动的演示文稿设计）
+- 数据洞察（[解释公式](/docs/ai/samples/spreadsheet-editor/explain-formula) — AI 驱动的公式解释）
 
 **开发概况：**
 

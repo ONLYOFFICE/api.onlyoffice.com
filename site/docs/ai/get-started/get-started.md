@@ -12,9 +12,9 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
 
-- Embedding external content ([YouTube](/docs/plugins/samples/plugins/youtube.md), media galleries)
-- Third-party integrations ([Translator](/docs/plugins/samples/plugins/translator.md), [Zotero](/docs/plugins/samples/plugins/zotero.md), CRM systems)
-- Advanced processing ([OCR](/docs/plugins/samples/plugins/ocr.md), image manipulation, data visualization)
+- Embedding external content ([YouTube](/docs/plugins/samples/youtube.md), media galleries)
+- Third-party integrations ([Translator](/docs/plugins/samples/translator.md), [Zotero](/docs/plugins/samples/zotero.md), CRM systems)
+- Advanced processing ([OCR](/docs/plugins/samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
@@ -30,10 +30,10 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 
 **Perfect for:**
 
-- One-click formatting ([Reset text properties](/docs/macros/samples/macros/document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
-- Batch operations ([Remove empty tables](/docs/macros/samples/macros/document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
-- Custom calculations ([Find weighted average](/docs/macros/samples/macros/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
-- Document cleanup ([Remove empty paragraphs](/docs/macros/samples/macros/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
+- One-click formatting ([Reset text properties](/docs/macros/samples/document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
+- Batch operations ([Remove empty tables](/docs/macros/samples/document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
+- Custom calculations ([Find weighted average](/docs/macros/samples/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
+- Document cleanup ([Remove empty paragraphs](/docs/macros/samples/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
 
 **Development profile:**
 
@@ -48,10 +48,10 @@ Custom tools enhanced with AI capabilities for next-generation document workflow
 
 **Perfect for:**
 
-- Writing assistance ([Check spelling](/docs/ai/samples/custom-ai-tools/document-editor/check-spelling.md) — AI-powered spell checking)
-- Smart styling ([Change text style](/docs/ai/samples/custom-ai-tools/document-editor/change-text-style.md) — AI-powered text styling)
-- Automatic shape generation ([Add shape](/docs/ai/samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
-- Data insights ([Explain formula](/docs/ai/samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
+- Writing assistance ([Check spelling](/docs/ai/samples/document-editor/check-spelling.md) — AI-powered spell checking)
+- Smart styling ([Change text style](/docs/ai/samples/document-editor/change-text-style.md) — AI-powered text styling)
+- Automatic shape generation ([Add shape](/docs/ai/samples/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
+- Data insights ([Explain formula](/docs/ai/samples/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
 
 **Development profile:**
 

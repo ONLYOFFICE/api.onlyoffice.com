@@ -26,7 +26,7 @@ ONLYOFFICE 插件与宏 API 的变更列表。
 
 - 添加了使用**宏**插件为电子表格添加[异步自定义函数](/docs/macros/macros/adding-custom-functions#asynchronous-functions)的功能。
 - 添加了使用 AI 插件将 VBA 代码[自动转换](/docs/macros/macros/converting-vba-macros#automatic-conversion-using-ai-plugin)为 ONLYOFFICE 宏的功能。
-- 添加了使用 AI 插件[自动生成](../macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE 宏的功能。
+- 添加了使用 AI 插件[自动生成](/docs/macros/macros/writing-macros.md#generating-macros-using-ai-plugin) ONLYOFFICE 宏的功能。
 - 添加了使用插件为内容控件添加自定义[按钮](../plugins/customization/content-control-buttons.md)的功能。
 - 为文本文档 API 的 window.Asc.plugin.executeMethod 添加了[获取当前书签](../plugins/interacting-with-editors/document-api/Methods/GetCurrentBookmark.md)方法。
 - 为演示文稿 API 的 window.Asc.plugin.executeMethod 添加了[前往幻灯片页面](../plugins/interacting-with-editors/presentation-api/Methods/GoToSlide.md)方法。

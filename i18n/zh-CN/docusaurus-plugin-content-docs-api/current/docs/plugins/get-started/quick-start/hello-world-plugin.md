@@ -187,8 +187,8 @@ function insertFormattedText() {
 
 **浏览示例：**
 
-- [YouTube 插件](/docs/plugins/samples/plugins/youtube) — 嵌入视频
-- [Translator 插件](/docs/plugins/samples/plugins/translator) — 多语言支持
+- [YouTube 插件](/docs/plugins/samples/youtube) — 嵌入视频
+- [Translator 插件](/docs/plugins/samples/translator) — 多语言支持
 - [更多示例](/samples/?doctype=docs&text=plugin)
 
 **需要帮助？**

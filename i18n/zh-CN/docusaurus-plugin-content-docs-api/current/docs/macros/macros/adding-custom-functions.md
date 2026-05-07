@@ -41,7 +41,7 @@ sidebar_position: -4
 
 ![函数使用示例](/assets/images/plugins/add.png#gh-light-mode-only)![函数使用示例](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
-您可以在[此处](/docs/macros/samples/macros/spreadsheet-editor/weighted-average-function)找到自定义函数的示例。
+您可以在[此处](/docs/macros/samples/spreadsheet-editor/weighted-average-function)找到自定义函数的示例。
 
 ## 访问单元格地址 {#accessing-cell-addresses}
 
@@ -120,4 +120,4 @@ sidebar_position: -4
 })();
 ```
 
-您可以在[此处](../samples/macros/spreadsheet-editor/calculate-world-bank-indicator.md)找到异步自定义函数的示例。
+您可以在[此处](../samples/spreadsheet-editor/calculate-world-bank-indicator.md)找到异步自定义函数的示例。

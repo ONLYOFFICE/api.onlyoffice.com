@@ -1,0 +1,43 @@
+---
+hide_table_of_contents: true
+---
+
+# 书签标记最后浏览位置
+
+在第一个可见页面添加书签以保存当前阅读位置，并替换该页面的已有书签。
+
+```ts
+(function () {
+    let doc = Api.GetDocument();
+    let visiblePages = doc.GetCurrentVisiblePages();
+
+    if (!visiblePages || visiblePages.length === 0) {
+        console.log("No visible pages found.");
+        return;
+    }
+
+    let targetPageIndex = visiblePages[0];
+    doc.GoToPage(targetPageIndex);
+    let targetParagraph = doc.GetCurrentParagraph();
+
+    if (!targetParagraph) {
+        console.log("Could not get paragraph on page index: " + targetPageIndex);
+        return;
+    }
+    let bookmarkName = "CurrentBookmarkForPage" + (targetPageIndex + 1);
+    let existingBookmarks = doc.GetAllBookmarksNames();
+    if (existingBookmarks && existingBookmarks.indexOf(bookmarkName) !== -1) {
+        doc.DeleteBookmark(bookmarkName);
+        console.log("Removed existing bookmark: " + bookmarkName);
+    }
+    let range = targetParagraph.GetRange();
+    range.AddBookmark(bookmarkName);
+})();
+```
+
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetCurrentVisiblePages](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentVisiblePages), [GoToPage](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GoToPage), [GetCurrentParagraph](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetCurrentParagraph), [GetAllBookmarksNames](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames), [DeleteBookmark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange), [AddBookmark](../../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark)
+
+## 结果
+
+![书签标记最后浏览位置](/assets/images/plugins/bookmark-last-view-macro.png#gh-light-mode-only)
+![书签标记最后浏览位置](/assets/images/plugins/bookmark-last-view-macro.dark.png#gh-dark-mode-only)

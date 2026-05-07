@@ -10,7 +10,7 @@ sidebar_position: -2
 
 系统插件不会显示在编辑器界面中，它随服务器启动（或桌面编辑器启动）在后台运行，且不会干扰其他插件，使它们能同时工作。此类插件无需用户手动启动。与后台插件不同，系统插件无法被禁用。
 
-**示例**: [Settings](../../../samples/plugins/settings)、[Search and replace on start](../../../samples/plugins/search-and-replace-on-start)
+**示例**: [Settings](../../../samples/settings)、[Search and replace on start](../../../samples/search-and-replace-on-start)
 
 ## background
 
@@ -33,7 +33,7 @@ sidebar_position: -2
 
 ![Plugin window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Plugin window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-**示例**: [Highlight code](../../../samples/plugins/highlight-code)、[Photo editor](../../../samples/plugins/photo-editor)、[OCR](../../../samples/plugins/ocr)
+**示例**: [Highlight code](../../../samples/highlight-code)、[Photo editor](../../../samples/photo-editor)、[OCR](../../../samples/ocr)
 
 ## panel
 
@@ -41,7 +41,7 @@ sidebar_position: -2
 
 ![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
-**示例**: [Translator](../../../samples/plugins/translator)、[Thesaurus](../../../samples/plugins/thesaurus)、[Zotero](../../../samples/plugins/zotero)
+**示例**: [Translator](../../../samples/translator)、[Thesaurus](../../../samples/thesaurus)、[Zotero](../../../samples/zotero)
 
 ## panelRight
 
@@ -49,7 +49,7 @@ sidebar_position: -2
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
-**示例**: [Translator](../../../samples/plugins/translator)、[Thesaurus](../../../samples/plugins/thesaurus)、[Zotero](../../../samples/plugins/zotero)
+**示例**: [Translator](../../../samples/translator)、[Thesaurus](../../../samples/thesaurus)、[Zotero](../../../samples/zotero)
 
 ## unvisible
 
@@ -57,7 +57,7 @@ sidebar_position: -2
 
 ![Invisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Invisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 
-**示例**: [Hello world](../../../samples/plugins/hello-world)、[Speech](../../../samples/plugins/speech)
+**示例**: [Hello world](../../../samples/hello-world)、[Speech](../../../samples/speech)
 
 :::note
 任何类型的插件在运行过程中都可以创建窗口和选项卡。

@@ -10,7 +10,7 @@ The plugin type is specified with the [type](./config-json.md#variationstype) pa
 
 The system plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with other plugins, so that they can work simultaneously. You don't need to run such plugins. And unlike background plugins, they cannot be disabled.
 
-**Samples**: [Settings](../../../samples/plugins/settings), [Search and replace on start](../../../samples/plugins/search-and-replace-on-start)
+**Samples**: [Settings](../../../samples/settings), [Search and replace on start](../../../samples/search-and-replace-on-start)
 
 ## background
 
@@ -33,7 +33,7 @@ The plugin operates as a standalone window upon launch.
 
 ![Plugin window](/assets/images/plugins/plugin-window.png#gh-light-mode-only)![Plugin window](/assets/images/plugins/plugin-window.dark.png#gh-dark-mode-only)
 
-**Samples**: [Highlight code](../../../samples/plugins/highlight-code), [Photo editor](../../../samples/plugins/photo-editor), [OCR](../../../samples/plugins/ocr)
+**Samples**: [Highlight code](../../../samples/highlight-code), [Photo editor](../../../samples/photo-editor), [OCR](../../../samples/ocr)
 
 ## panel
 
@@ -41,7 +41,7 @@ The plugin is opened in the left-side panel. You can run multiple panel plugins 
 
 ![Plugin left panel](/assets/images/plugins/plugin-left-panel.png#gh-light-mode-only)![Plugin left panel](/assets/images/plugins/plugin-left-panel.dark.png#gh-dark-mode-only)
 
-**Samples**: [Translator](../../../samples/plugins/translator), [Thesaurus](../../../samples/plugins/thesaurus), [Zotero](../../../samples/plugins/zotero)
+**Samples**: [Translator](../../../samples/translator), [Thesaurus](../../../samples/thesaurus), [Zotero](../../../samples/zotero)
 
 ## panelRight
 
@@ -49,7 +49,7 @@ The plugin is opened in the right-side panel. You can run multiple panel plugins
 
 ![Plugin right panel](/assets/images/plugins/plugin-right-panel.png#gh-light-mode-only)![Plugin right panel](/assets/images/plugins/plugin-right-panel.dark.png#gh-dark-mode-only)
 
-**Samples**: [Translator](../../../samples/plugins/translator), [Thesaurus](../../../samples/plugins/thesaurus), [Zotero](../../../samples/plugins/zotero)
+**Samples**: [Translator](../../../samples/translator), [Thesaurus](../../../samples/thesaurus), [Zotero](../../../samples/zotero)
 
 ## unvisible
 
@@ -57,7 +57,7 @@ The plugin does not display any windows or panels upon launch but can create the
 
 ![Invisible plugin](/assets/images/plugins/invisible-plugin.png#gh-light-mode-only)![Invisible plugin](/assets/images/plugins/invisible-plugin.dark.png#gh-dark-mode-only)
 
-**Samples**: [Hello world](../../../samples/plugins/hello-world), [Speech](../../../samples/plugins/speech)
+**Samples**: [Hello world](../../../samples/hello-world), [Speech](../../../samples/speech)
 
 :::note
 A plugin of any type can create windows and tabs during its work.
