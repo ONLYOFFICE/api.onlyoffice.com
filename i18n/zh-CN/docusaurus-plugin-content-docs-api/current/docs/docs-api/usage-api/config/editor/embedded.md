@@ -2,6 +2,14 @@
 
 嵌入部分仅适用于 `embedded` 文档类型（请参阅[配置](../config.md#type)部分以了解如何定义 `embedded` 文档类型）。它允许更改定义嵌入模式中按钮行为的设置。
 
+## autostart
+
+**类型：** `"document" | "player"` | **默认值：** `"player"`
+
+定义嵌入式演示文稿是否自动开始幻灯片放映。
+
+**示例**: `"document"`
+
 ## embedUrl
 
 **类型：** `string`
@@ -52,6 +60,7 @@ const config = {
   editorConfig: {
     // ...
     embedded: {
+      autostart: "document",
       embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
       fullscreenUrl: "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
       saveUrl: "https://example.com/download?doc=exampledocument1.docx",

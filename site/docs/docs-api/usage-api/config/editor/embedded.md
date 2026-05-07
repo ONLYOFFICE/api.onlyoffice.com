@@ -2,6 +2,14 @@
 
 The embedded section is for the `embedded` document type only (see the [config](../config.md#type) section to find out how to define the `embedded` document type). It allows you to change the settings which define the behavior of the buttons in the embedded mode.
 
+## autostart
+
+**type:** `"document" | "player"` | **default:** `"player"`
+
+Defines whether the embedded presentation starts the slideshow automatically.
+
+**Example**: `"document"`
+
 ## embedUrl
 
 **type:** `string`
@@ -52,6 +60,7 @@ const config = {
   editorConfig: {
     // ...
     embedded: {
+      autostart: "document",
       embedUrl: "https://example.com/embedded?doc=exampledocument1.docx",
       fullscreenUrl: "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
       saveUrl: "https://example.com/download?doc=exampledocument1.docx",

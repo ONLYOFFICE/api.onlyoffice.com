@@ -318,6 +318,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onMetaChange](../usage-api/config/events.md#onmetachange) 事件。
 - 添加了 [最后一个加入共同编辑的用户](../usage-api/callback-handler.md) 对 *callbackUrl* 的使用。
 - 添加了 [editorConfig.location](../usage-api/config/editor/editor.md#location) 字段。
+- 添加了 [editorConfig.embedded.autostart](../usage-api/config/editor/embedded.md#autostart) 字段。
 
 ## 版本 4.3
 

@@ -2277,16 +2277,6 @@ interface EditorConfigNormal extends EditorConfigBase {
 }
 
 interface EditorConfigEmbedded extends EditorConfigBase {
-    // TODO: Not in the documentation
-    /**
-     * Defines the action for application autostart.
-     * - For documents: `"document"`.
-     * - For presentations: default is `"player"`.
-     *
-     * @forType `embedded`
-     */
-    autostart?: "document" | "player";
-
     /**
      * Settings for embedding the editor.
      *
@@ -2294,6 +2284,14 @@ interface EditorConfigEmbedded extends EditorConfigBase {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/
      */
     embedded?: {
+        /**
+         * Defines whether the embedded presentation starts the slideshow automatically.
+         *
+         * @default "player"
+         * @example "document"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#autostart
+         */
+        autostart?: "document" | "player";
         /**
          * Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
          *

@@ -318,6 +318,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
 - Changed the use of *callbackUrl* from the [last user](../usage-api/callback-handler.md) who joined the co-editing.
 - Added the [editorConfig.location](../usage-api/config/editor/editor.md#location) field.
+- Added the [editorConfig.embedded.autostart](../usage-api/config/editor/embedded.md#autostart) field.
 
 ## Version 4.3
 
