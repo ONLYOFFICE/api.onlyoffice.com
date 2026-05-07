@@ -8,7 +8,38 @@ The editorConfig section allows you to change the parameters pertaining to the e
 
 Specifies the data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
 
-**Example**: `ACTION_DATA`
+**Example**:
+
+``` ts
+{
+  action: {
+    type: "bookmark",
+    data: "bookmark_name",
+  },
+}
+```
+
+### actionLink.action
+
+**type:** `object`
+
+The action object that defines what to scroll to in the document.
+
+### actionLink.action.type
+
+**type:** `"bookmark" | "comment"`
+
+The type of action in the document.
+
+**Example**: `"bookmark"`
+
+### actionLink.action.data
+
+**type:** `string`
+
+The data associated with the action: the bookmark name or the comment ID.
+
+**Example**: `"bookmark_name"`
 
 ## callbackUrl
 
@@ -434,7 +465,12 @@ The plugins configuration section. See the [plugins](plugins.md) page for availa
 const config = {
   // ...
   editorConfig: {
-    actionLink: "ACTION_DATA",
+    actionLink: {
+      action: {
+        type: "bookmark",
+        data: "bookmark_name",
+      },
+    },
     callbackUrl: "https://example.com/url-to-callback",
     coEditing: {
       mode: "fast",

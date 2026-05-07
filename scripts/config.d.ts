@@ -732,15 +732,23 @@ interface ReferenceData {
 };
 
 interface ActionLink {
-    // TODO: Not in the documentation
+    /**
+     * The action object that defines what to scroll to in the document.
+     *
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#actionlinkaction
+     */
     action?: {
         /**
-         * The type of action.
+         * The type of action in the document.
+         *
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#actionlinkactiontype
          */
         type?: "bookmark" | "comment";
 
         /**
-         * The data associated with the action.
+         * The data associated with the action: the bookmark name or the comment ID.
+         *
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#actionlinkactiondata
          */
         data?: string;
     }
