@@ -307,10 +307,9 @@
     color: var(--ifm-color-emphasis-800);
 }
 
-/* Base button styles for array controls and sections */
+/* Base button styles for array controls */
 .arrayItemHeader button,
-.content > button,
-.section button {
+.actionButton {
     background: transparent;
     border: 1.5px solid var(--ifm-color-emphasis-300);
     border-radius: var(--ce-radius-md);
@@ -323,16 +322,14 @@
 }
 
 .arrayItemHeader button:hover,
-.content > button:hover,
-.section button:hover {
+.actionButton:hover {
     background: var(--ifm-color-emphasis-100);
     border-color: var(--ifm-color-emphasis-400);
     color: var(--ifm-color-emphasis-900);
 }
 
 .arrayItemHeader button:focus-visible,
-.content > button:focus-visible,
-.section button:focus-visible {
+.actionButton:focus-visible {
     outline: none;
     border-color: var(--ifm-color-primary);
     box-shadow: var(--ce-focus-ring);
@@ -340,16 +337,14 @@
 
 /* Button variants */
 .arrayItemHeader button[data-variant='primary'],
-.content > button[data-variant='primary'],
-.section button[data-variant='primary'] {
+.actionButton[data-variant='primary'] {
     background: var(--ifm-color-primary);
     color: white;
     border-color: var(--ifm-color-primary);
 }
 
 .arrayItemHeader button[data-variant='primary']:hover,
-.content > button[data-variant='primary']:hover,
-.section button[data-variant='primary']:hover {
+.actionButton[data-variant='primary']:hover {
     background: var(--ifm-color-primary-dark);
     border-color: var(--ifm-color-primary-dark);
     color: white;
@@ -357,15 +352,13 @@
 }
 
 .arrayItemHeader button[data-variant='danger'],
-.content > button[data-variant='danger'],
-.section button[data-variant='danger'] {
+.actionButton[data-variant='danger'] {
     color: var(--ifm-color-danger);
     border-color: var(--ifm-color-danger-light);
 }
 
 .arrayItemHeader button[data-variant='danger']:hover,
-.content > button[data-variant='danger']:hover,
-.section button[data-variant='danger']:hover {
+.actionButton[data-variant='danger']:hover {
     background: var(--ifm-color-danger-lightest);
     border-color: var(--ifm-color-danger);
     color: var(--ifm-color-danger-dark);

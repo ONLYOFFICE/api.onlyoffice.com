@@ -74,6 +74,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
             {enabled && (
                 <button
                     type="button"
+                    className={styles.actionButton}
                     onClick={() => addItem(path, defaultForSchema(itemSchema))()}
                     data-variant="primary"
                     aria-label="Add new item"

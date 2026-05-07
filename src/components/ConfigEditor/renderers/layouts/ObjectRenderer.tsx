@@ -109,6 +109,11 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
         )
     }
 
+    // label: false means the caller already provides the wrapper (e.g. array items)
+    if (props.uischema?.label === false) {
+        return <>{children.map(renderChild)}</>;
+    }
+
     return (
         <Section
             title={title}
