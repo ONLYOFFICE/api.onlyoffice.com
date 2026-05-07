@@ -61,3 +61,4 @@ You can also create and manage OAuth clients on your portal from the **Developer
    ![Support and legal info](/assets/images/docspace/support-and-legal-info.png#gh-light-mode-only)![Support and legal info](/assets/images/docspace/support-and-legal-info.dark.png#gh-dark-mode-only)
 
 When all settings are specified, click **Save**. A new application will appear in the application list.
+

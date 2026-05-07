@@ -4,11 +4,11 @@ sidebar_position: -2
 
 # Authorization flow
 
-When the user goes to the authorization link, four scenarios are possible.
+When a user clicks the authorization link, it follows any of these four scenarios: 
 
 ## Scenario 1. User authorization
 
-If the user is not yet authorized on the portal, an authorization form opens. The user must enter their email and password and click the **Sign in** button. If the authorization is successful, they will be redirected to the pages described in scenarios 2 and 3.
+For unauthorized users on the portal, the authorization link opens into an authorization form for these users to enter their email and password and **Sign in**. On successful authorization, they will be redirected to the pages described in scenarios 2 and 3.
 
 <img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />
 
@@ -20,7 +20,7 @@ If the user has more than one portal with the entered personal data, they will b
 
 ## Scenario 3. Consent page
 
-If the user is already authorized on the portal, they will be redirected to a consent page where all the application abilities will be listed and the URLs to the privacy policy and terms of service will be displayed. Also there will be the possibility to change the user profile.
+Authorized users are redirected to a consent page that lists all the application abilities while displaying the URLs to the privacy policy and terms of service. This page also provides the possibility to change the user profile. 
 
 Click **Allow** or **Deny** to finish the authorization flow.
 
@@ -28,7 +28,7 @@ Click **Allow** or **Deny** to finish the authorization flow.
 
 ## Scenario 4. Error page
 
-If the authorization link contains non-existent [client_id](auth-button.md#client_id) and [redirect_uri](auth-button.md#redirect_uri), the user will be redirected to the DocSpace error page.
+If the authorization link contains non-existent [client_id](auth-button.md#client_id) and [redirect_uri](auth-button.md#redirect_uri), it redirects the user to the DocSpace error page.
 
 <img alt="Error page" src="/assets/images/docspace/error-page.png#gh-light-mode-only" width="400px" /><img alt="Error page" src="/assets/images/docspace/error-page.dark.png#gh-dark-mode-only" width="400px" />
 
