@@ -235,6 +235,56 @@ If `lang` is defined and a matching regional setting exists, the default value i
 
 Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](./customization/customization-standard-branding.md#unit) parameter.
 
+<details>
+<summary>Supported regional settings</summary>
+
+| Code | Region |
+| ---- | ------ |
+| `ar-EG` | Arabic (Egypt) |
+| `ar-SA` | Arabic (Saudi Arabia) |
+| `az-Latn-AZ` | Azerbaijani (Latin, Azerbaijan) |
+| `bg-BG` | Bulgarian (Bulgaria) |
+| `cs-CZ` | Czech (Czech Republic) |
+| `da-DK` | Danish (Denmark) |
+| `de-AT` | German (Austria) |
+| `de-CH` | German (Switzerland) |
+| `de-DE` | German (Germany) |
+| `el-GR` | Greek (Greece) |
+| `en-AU` | English (Australia) |
+| `en-GB` | English (United Kingdom) |
+| `en-ID` | English (Indonesia) |
+| `en-US` | English (United States) |
+| `es-ES` | Spanish (Spain) |
+| `es-MX` | Spanish (Mexico) |
+| `fi-FI` | Finnish (Finland) |
+| `fr-CH` | French (Switzerland) |
+| `fr-FR` | French (France) |
+| `hu-HU` | Hungarian (Hungary) |
+| `id-ID` | Indonesian (Indonesia) |
+| `it-CH` | Italian (Switzerland) |
+| `it-IT` | Italian (Italy) |
+| `ja-JP` | Japanese (Japan) |
+| `ko-KR` | Korean (Korea) |
+| `lv-LV` | Latvian (Latvia) |
+| `nl-NL` | Dutch (Netherlands) |
+| `pl-PL` | Polish (Poland) |
+| `pt-BR` | Portuguese (Brazil) |
+| `pt-PT` | Portuguese (Portugal) |
+| `ru-RU` | Russian (Russia) |
+| `sk-SK` | Slovak (Slovakia) |
+| `sl-SI` | Slovenian (Slovenia) |
+| `sr-Cyrl-RS` | Serbian (Cyrillic, Serbia) |
+| `sr-Latn-RS` | Serbian (Latin, Serbia) |
+| `sv-FI` | Swedish (Finland) |
+| `sv-SE` | Swedish (Sweden) |
+| `tr-TR` | Turkish (Turkey) |
+| `uk-UA` | Ukrainian (Ukraine) |
+| `vi-VN` | Vietnamese (Vietnam) |
+| `zh-CN` | Chinese (Simplified) |
+| `zh-TW` | Chinese (Traditional) |
+
+</details>
+
 **Example**: `"en-US"`
 
 ## saveAsUrl

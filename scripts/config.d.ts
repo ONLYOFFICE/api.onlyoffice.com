@@ -133,6 +133,50 @@ type Lang =
     | "zh"
     | "zh-TW"
 
+type Region =
+    | "ar-EG"
+    | "ar-SA"
+    | "az-Latn-AZ"
+    | "bg-BG"
+    | "cs-CZ"
+    | "da-DK"
+    | "de-AT"
+    | "de-CH"
+    | "de-DE"
+    | "el-GR"
+    | "en-AU"
+    | "en-GB"
+    | "en-ID"
+    | "en-US"
+    | "es-ES"
+    | "es-MX"
+    | "fi-FI"
+    | "fr-CH"
+    | "fr-FR"
+    | "hu-HU"
+    | "id-ID"
+    | "it-CH"
+    | "it-IT"
+    | "ja-JP"
+    | "ko-KR"
+    | "lv-LV"
+    | "nl-NL"
+    | "pl-PL"
+    | "pt-BR"
+    | "pt-PT"
+    | "ru-RU"
+    | "sk-SK"
+    | "sl-SI"
+    | "sr-Cyrl-RS"
+    | "sr-Latn-RS"
+    | "sv-FI"
+    | "sv-SE"
+    | "tr-TR"
+    | "uk-UA"
+    | "vi-VN"
+    | "zh-CN"
+    | "zh-TW"
+
 type EditorTheme =
     "theme-light"
     | "theme-classic-light"
@@ -843,7 +887,7 @@ interface EditorConfigBase {
      * @example "en-US"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#region
      */
-    region?: string;
+    region?: Region;
 
     /**
      * Defines the editor opening mode.
