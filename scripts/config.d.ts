@@ -951,15 +951,21 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     fileChoiceUrl?: string;
 
-    // TODO: Not in the documentation
     /**
+     * Defines the absolute URL to the folder for saving the mail merge result.
+     *
+     * @deprecated Use the `onRequestSaveAs` event instead.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#mergefolderurl
      */
     mergeFolderUrl?: string;
 
-    // TODO: Not in the documentation
     /**
+     * Defines the absolute URL to the folder for saving files.
+     *
+     * @deprecated Use the `onRequestSaveAs` event instead.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#saveasurl
      */
     saveAsUrl?: string;
 

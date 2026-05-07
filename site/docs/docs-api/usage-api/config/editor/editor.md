@@ -113,6 +113,18 @@ Defines the editor opening mode. Can be either `view` to open the document for v
 
 **Example**: `"edit"`
 
+## mergeFolderUrl
+
+**type:** `string`
+
+Defines the absolute URL to the folder for saving the mail merge result.
+
+:::danger[Deprecated]
+Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsaveas) event.
+:::
+
+**Example**: `"https://example.com/url-to-merge-folder"`
+
 ## recent
 
 **type:** `object[]`
@@ -170,6 +182,18 @@ If `lang` is defined and a matching regional setting exists, the default value i
 Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the [editorConfig.customization.unit](./customization/customization-standard-branding.md#unit) parameter.
 
 **Example**: `"en-US"`
+
+## saveAsUrl
+
+**type:** `string`
+
+Defines the absolute URL to the folder for saving files.
+
+:::danger[Deprecated]
+Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsaveas) event.
+:::
+
+**Example**: `"https://example.com/url-to-save-folder"`
 
 ## templates
 
