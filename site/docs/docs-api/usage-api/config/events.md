@@ -512,7 +512,11 @@ The function called when the user is trying to insert an image by clicking the *
 | ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
 | event.data.c | string | The type of image insertion. Can be: `add`, `change`, `fill`, `watermark`, or `slide`. |
 
-To insert an image into the file you must call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters. If the method is not declared the *Image from Storage* button will not be displayed.
+:::note
+If this event is not declared, the *Image from Storage* button will not be displayed.
+:::
+
+To insert an image into the file, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 

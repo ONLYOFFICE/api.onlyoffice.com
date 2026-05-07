@@ -512,7 +512,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ------------ | ------ | --------------------------------------------------------------------------------------- |
 | event.data.c | string | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
 
-要将图像插入文件，您必须使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则不会显示*从存储中获取图像*按钮。
+:::note
+如果未声明此事件，则不会显示*从存储中获取图像*按钮。
+:::
+
+要将图像插入文件，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
