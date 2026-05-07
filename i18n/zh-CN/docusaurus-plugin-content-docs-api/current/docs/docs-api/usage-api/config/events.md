@@ -185,13 +185,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。
 
-要设置书签链接，您必须调用 [setActionLink](../methods.md#setactionlink) 方法。如果未声明该方法，则不会显示*获取链接*按钮。
+:::note
+如果未声明此事件，则不会显示*获取链接*按钮。
+:::
+
+要设置书签链接，请调用 [setActionLink](../methods.md#setactionlink) 方法。
 
 **参数**：
 
-| 参数       | 类型   | 描述                                                                                                               |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
-| event.data | object | 书签数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| 参数                    | 类型   | 描述                                                                                                               |
+| ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| event.data              | object | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| event.data.action       | object | 定义文档中要滚动到的操作对象。 |
+| event.data.action.type  | string | 操作类型：`"bookmark"` 或 `"comment"`。 |
+| event.data.action.data  | string | 与操作关联的数据：书签名称或评论 ID。 |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 

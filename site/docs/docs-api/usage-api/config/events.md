@@ -185,13 +185,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
 
-To set the bookmark link, you must call the [setActionLink](../methods.md#setactionlink) method. If the method is not declared the *Get Link* button will not be displayed.
+:::note
+If this event is not declared, the *Get Link* button will not be displayed.
+:::
+
+To set the bookmark link, call the [setActionLink](../methods.md#setactionlink) method.
 
 **Parameters**:
 
-| Parameter  | Type   | Description                                                                                                                                   |
-| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| event.data | object | The bookmark data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
+| Parameter           | Type   | Description                                                                                                                                   |
+| ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| event.data          | object | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
+| event.data.action   | object | The action object that defines what to scroll to in the document. |
+| event.data.action.type | string | The type of action: `"bookmark"` or `"comment"`. |
+| event.data.action.data | string | The data associated with the action: the bookmark name or the comment ID. |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
