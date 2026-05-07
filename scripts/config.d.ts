@@ -940,9 +940,14 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     sharingSettingsUrl?: string;
 
-    // TODO: Not in the documentation
     /**
+     * Defines the URL of the file selection dialog for inserting images, selecting documents
+     * for comparison, or choosing mail merge data sources. The URL can contain `{documentType}`
+     * and `{fileExt}` placeholders.
+     *
+     * @deprecated Use the `onRequestInsertImage`, `onRequestSelectDocument`, or `onRequestSelectSpreadsheet` events instead.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#filechoiceurl
      */
     fileChoiceUrl?: string;
 

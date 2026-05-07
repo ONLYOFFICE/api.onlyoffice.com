@@ -65,6 +65,22 @@ Defines the absolute URL of the document where it will be created and available 
 
 ![Create URL](/assets/images/editor/create.png)
 
+## fileChoiceUrl
+
+**type:** `string`
+
+Defines the URL of the file selection dialog opened in an iframe for inserting images, selecting documents for comparison, or choosing mail merge data sources. The URL can contain the `{documentType}` and `{fileExt}` placeholders, which will be replaced with the appropriate values (e.g., `ImagesOnly`, `DocumentsOnly`).
+
+:::note
+The `{documentType}` placeholder is required for the *Image from Storage* and *Document from Storage* buttons to appear.
+:::
+
+:::danger[Deprecated]
+Instead of this parameter, use the [onRequestInsertImage](../events.md#onrequestinsertimage), [onRequestSelectDocument](../events.md#onrequestselectdocument), or [onRequestSelectSpreadsheet](../events.md#onrequestselectspreadsheet) events.
+:::
+
+**Example**: `"https://example.com/filechoice?type={documentType}"`
+
 ## lang
 
 **type:** `string` | **default:** `"en"`
