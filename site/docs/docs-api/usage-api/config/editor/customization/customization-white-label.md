@@ -26,7 +26,7 @@ Defines if the spell checker setting will be displayed or not. Spell checker set
 Other fields of the `features` object are available for the standard branding and are described [here](customization-standard-branding.md#features). Only the `features.spellcheck.change` field requires additional payment.
 :::
 
-:::note
+:::danger[Deprecated]
 Deprecated since version 9.0.4.
 :::
 
@@ -390,7 +390,11 @@ Defines the **Home** tab settings. This tab cannot be hidden.
 
 **type:** `boolean`
 
-Defines if the button for choosing the mail merge base is displayed or hidden. This parameter is deprecated, please use the `toolbar.collaboration.mailmerge` parameter instead.
+Defines if the button for choosing the mail merge base is displayed or hidden.
+
+:::danger[Deprecated]
+Please use the [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmailmerge) parameter instead.
+:::
 
 **Example**: `true`
 

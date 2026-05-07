@@ -1743,9 +1743,12 @@ interface EditorConfigNormal extends EditorConfigBase {
                  */
                 mode?: boolean;
 
-                // TODO: Not in the documentation
                 /**
-                 * Hide or show feature in **Document Editor**, **Presentation Editor**, **Spreadsheet Editor**
+                 * Defines if the spell checker setting will be displayed or not.
+                 * This setting is available in all editor types.
+                 *
+                 * @deprecated Deprecated since version 9.0.4.
+                 * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#featuresspellcheckchange
                  */
                 change?: boolean
             } | boolean;

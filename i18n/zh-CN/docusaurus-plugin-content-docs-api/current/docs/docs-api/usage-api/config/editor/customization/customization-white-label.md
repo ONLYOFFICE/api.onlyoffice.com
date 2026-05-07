@@ -26,7 +26,7 @@ sidebar_label: White label
 `features` 对象的其他字段可用于标准品牌，并在[此处](customization-standard-branding.md#features)中描述。只有 `features.spellcheck.change` 字段需要额外付款。
 :::
 
-:::note
+:::danger[已弃用]
 自 9.0.4 版起已弃用。
 :::
 
@@ -390,7 +390,11 @@ const file = {
 
 **类型：** `boolean`
 
-定义是否显示或隐藏用于选择邮件合并基础的按钮。此参数已弃用，请改用 `toolbar.collaboration.mailmerge` 参数。
+定义是否显示或隐藏用于选择邮件合并基础的按钮。
+
+:::danger[已弃用]
+请改用 [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmailmerge) 参数。
+:::
 
 **示例**: `true`
 
