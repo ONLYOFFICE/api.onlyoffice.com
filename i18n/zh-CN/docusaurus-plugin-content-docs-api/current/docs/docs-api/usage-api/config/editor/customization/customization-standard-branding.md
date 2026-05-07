@@ -324,7 +324,7 @@ const features = {
 
 ### features.tabBackground
 
-**类型：** `object | string` | **默认值：** `"header"`
+**类型：** `object | "header" | "toolbar"` | **默认值：** `"header"`
 
 定义顶部工具栏选项卡的背景。可以是字符串或对象。如果设置为 `header` 或 `toolbar`，该值将用作初始选项卡背景，且不会隐藏该设置。
 
@@ -332,7 +332,7 @@ const features = {
 
 ### features.tabBackground.mode
 
-**类型：** `string` | **默认值：** `"header"`
+**类型：** `"header" | "toolbar"` | **默认值：** `"header"`
 
 定义顶部工具栏选项卡的背景。如果设置为 `header`，选项卡背景与标题背景匹配。如果设置为 `toolbar`，选项卡背景与工具栏背景匹配。首次打开编辑器时使用此值。
 
@@ -350,7 +350,7 @@ const features = {
 
 ### features.tabStyle
 
-**类型：** `object | string` | **默认值：** `"fill"`
+**类型：** `object | "fill" | "line"` | **默认值：** `"fill"`
 
 定义顶部工具栏选项卡的样式。可以是字符串或对象。如果设置为 `fill` 或 `line`，该值将用作初始选项卡样式，且不会隐藏该设置。
 
@@ -358,7 +358,7 @@ const features = {
 
 ### features.tabStyle.mode
 
-**类型：** `string` | **默认值：** `"fill"`
+**类型：** `"fill" | "line"` | **默认值：** `"fill"`
 
 定义顶部工具栏选项卡的样式。如果设置为 `fill`，选项卡清晰显示。如果设置为 `line`，选项卡仅突出显示以查看选择了哪个。此值在编辑器首次打开时使用。
 

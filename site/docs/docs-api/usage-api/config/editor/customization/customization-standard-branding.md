@@ -324,7 +324,7 @@ In case `spellcheck` setting is changed in the editor interface, it will be stor
 
 ### features.tabBackground
 
-**type:** `object | string` | **default:** `"header"`
+**type:** `object | "header" | "toolbar"` | **default:** `"header"`
 
 Defines the background of the top toolbar tabs. Can be a string or an object. If set to `header` or `toolbar`, the value is used as the initial tab background and the setting will not be hidden.
 
@@ -332,7 +332,7 @@ Defines the background of the top toolbar tabs. Can be a string or an object. If
 
 ### features.tabBackground.mode
 
-**type:** `string` | **default:** `"header"`
+**type:** `"header" | "toolbar"` | **default:** `"header"`
 
 Defines the background of the top toolbar tabs. If set to `header`, the tab background matches the header. If set to `toolbar`, the tab background matches the toolbar. This value is used when the editor is first opened.
 
@@ -350,7 +350,7 @@ Defines if the tab background setting will be displayed in the **File -> Advance
 
 ### features.tabStyle
 
-**type:** `object | string` | **default:** `"fill"`
+**type:** `object | "fill" | "line"` | **default:** `"fill"`
 
 Defines the style of the top toolbar tabs. Can be a string or an object. If set to `fill` or `line`, the value is used as the initial tab style and the setting will not be hidden.
 
@@ -358,7 +358,7 @@ Defines the style of the top toolbar tabs. Can be a string or an object. If set 
 
 ### features.tabStyle.mode
 
-**type:** `string` | **default:** `"fill"`
+**type:** `"fill" | "line"` | **default:** `"fill"`
 
 Defines the style of the top toolbar tabs. If set to `fill`, the tabs are distinctly displayed. If set to `line`, the tabs are only highlighted to see which one is selected. This value is used when the editor is first opened.
 

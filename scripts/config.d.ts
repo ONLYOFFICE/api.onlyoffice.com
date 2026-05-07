@@ -1809,7 +1809,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                  * @default "header"
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#featurestabbackgroundmode
                  */
-                mode?: string;
+                mode?: "header" | "toolbar";
 
                 /**
                  * Defines if the **tab background setting** will be displayed in
