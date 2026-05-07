@@ -288,7 +288,13 @@ const toolbar = {
     settings: true,
   },
   home: {},
-  layout: true,
+  insert: {
+    file: true,
+    field: true,
+  },
+  layout: {
+    pagecolor: true,
+  },
   plugins: true,
   protect: true,
   references: true,
@@ -398,11 +404,56 @@ Please use the [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmail
 
 **Example**: `true`
 
-### layout.toolbar.layout
+### layout.toolbar.insert
+
+**type:** `object | boolean` | **default:** `true`
+
+Defines the **Insert** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements. This parameter will only be available for the document editor.
+
+**Example**:
+
+``` ts
+const insert = {
+  file: true,
+  field: true,
+}
+```
+
+### layout.toolbar.insert.field
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the **Layout** tab is displayed or hidden. This parameter will only be available for the document editor and the spreadsheet editor.
+Defines if the **Field** button is displayed or hidden. This parameter will only be available for the document editor.
+
+**Example**: `true`
+
+### layout.toolbar.insert.file
+
+**type:** `boolean` | **default:** `true`
+
+Defines if the **Text from File** button is displayed or hidden. This parameter will only be available for the document editor.
+
+**Example**: `true`
+
+### layout.toolbar.layout
+
+**type:** `object | boolean` | **default:** `true`
+
+Defines the **Layout** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements. This parameter will only be available for the document editor and the spreadsheet editor.
+
+**Example**:
+
+``` ts
+const layout = {
+  pagecolor: true,
+}
+```
+
+### layout.toolbar.layout.pagecolor
+
+**type:** `boolean` | **default:** `true`
+
+Defines if the **Page Color** button is displayed or hidden. This parameter will only be available for the document editor.
 
 **Example**: `true`
 

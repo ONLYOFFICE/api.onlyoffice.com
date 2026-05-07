@@ -40,6 +40,8 @@ The list of changes of ONLYOFFICE Docs API.
 - The [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) parameter is now available for the viewer.
 - Added the [editorConfig.customization.pointerMode](../usage-api/config/editor/customization/customization-standard-branding.md#pointermode) parameter.
+- The [editorConfig.customization.layout.toolbar.insert](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsert) parameter can now be used as an object with the [file](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfile) and [field](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfield) fields.
+- The [editorConfig.customization.layout.toolbar.layout](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayout) parameter can now be used as an object with the [pagecolor](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayoutpagecolor) field.
 
 ## Version 8.2
 

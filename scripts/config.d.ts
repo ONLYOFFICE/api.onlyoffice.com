@@ -1483,34 +1483,51 @@ interface EditorConfigNormal extends EditorConfigBase {
                     mailmerge?: boolean;
                 };
 
-                // TODO: Not in the documentation
                 /**
                  * Defines the **Insert** tab settings.
                  * If this parameter is a **boolean** value, then it specifies whether the **Insert** tab will be displayed or hidden.
+                 * If set to an object, use the properties below to configure individual elements.
+                 * This parameter will only be available for the **Document Editor**.
+                 *
+                 * @default true
+                 * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarinsert
                  */
                 insert?: {
                     /**
-                     * Text from file button in **Document Editor**.
-                     */
-                    file?: boolean;
-
-                    /**
-                     * Field button in **Document Editor**.
+                     * Defines if the **Field** button is displayed or hidden.
+                     * This parameter will only be available for the **Document Editor**.
+                     *
+                     * @default true
+                     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarinsertfield
                      */
                     field?: boolean;
+
+                    /**
+                     * Defines if the **Text from File** button is displayed or hidden.
+                     * This parameter will only be available for the **Document Editor**.
+                     *
+                     * @default true
+                     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarinsertfile
+                     */
+                    file?: boolean;
                 } | boolean;
 
                 /**
-                 * Defines if the **Layout** tab is displayed or hidden.
+                 * Defines the **Layout** tab settings.
+                 * If this parameter is a **boolean** value, then it specifies whether the **Layout** tab will be displayed or hidden.
+                 * If set to an object, use the properties below to configure individual elements.
                  * This parameter will only be available for the **Document Editor** and the **Spreadsheet Editor**.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarlayout
                  */
                 layout?: {
-                    // TODO: Not in the documentation
                     /**
-                     * Page color button in **Document Editor**.
+                     * Defines if the **Page Color** button is displayed or hidden.
+                     * This parameter will only be available for the **Document Editor**.
+                     *
+                     * @default true
+                     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarlayoutpagecolor
                      */
                     pagecolor?: boolean
                 } | boolean;

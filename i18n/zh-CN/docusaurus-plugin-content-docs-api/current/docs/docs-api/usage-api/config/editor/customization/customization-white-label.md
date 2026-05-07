@@ -288,7 +288,13 @@ const toolbar = {
     settings: true,
   },
   home: {},
-  layout: true,
+  insert: {
+    file: true,
+    field: true,
+  },
+  layout: {
+    pagecolor: true,
+  },
   plugins: true,
   protect: true,
   references: true,
@@ -398,11 +404,56 @@ const file = {
 
 **示例**: `true`
 
-### layout.toolbar.layout
+### layout.toolbar.insert
+
+**类型：** `object | boolean` | **默认值：** `true`
+
+定义**插入**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。此参数仅适用于文档编辑器。
+
+**示例**:
+
+``` ts
+const insert = {
+  file: true,
+  field: true,
+}
+```
+
+### layout.toolbar.insert.field
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义**布局**选项卡是显示还是隐藏。此参数仅适用于文档编辑器和电子表格编辑器。
+定义**域**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
+
+**示例**: `true`
+
+### layout.toolbar.insert.file
+
+**类型：** `boolean` | **默认值：** `true`
+
+定义**来自文件的文本**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
+
+**示例**: `true`
+
+### layout.toolbar.layout
+
+**类型：** `object | boolean` | **默认值：** `true`
+
+定义**布局**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。此参数仅适用于文档编辑器和电子表格编辑器。
+
+**示例**:
+
+``` ts
+const layout = {
+  pagecolor: true,
+}
+```
+
+### layout.toolbar.layout.pagecolor
+
+**类型：** `boolean` | **默认值：** `true`
+
+定义**页面颜色**按钮是显示还是隐藏。此参数仅适用于文档编辑器。
 
 **示例**: `true`
 

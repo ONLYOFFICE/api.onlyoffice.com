@@ -40,6 +40,8 @@ ONLYOFFICE 文档 API 的更改列表。
 - [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) 参数现在可以用作对象。
 - [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) 参数现在可用于查看器。
 - 添加了 [editorConfig.customization.pointerMode](../usage-api/config/editor/customization/customization-standard-branding.md#pointermode) 参数。
+- [editorConfig.customization.layout.toolbar.insert](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsert) 参数现在可以用作带有 [file](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfile) 和 [field](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfield) 字段的对象。
+- [editorConfig.customization.layout.toolbar.layout](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayout) 参数现在可以用作带有 [pagecolor](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayoutpagecolor) 字段的对象。
 
 ## 版本 8.2
 
