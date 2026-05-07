@@ -110,7 +110,17 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     }, []);
 
     const handleRun = useCallback(() => {
-        if (flushPendingInput()) {
+        if (tabRef.current === 'json') {
+            if (updateTabRef.current) {
+                try {
+                    formDataRef.current = JSON.parse(jsonTextRef.current);
+                    updateTabRef.current = false;
+                } catch {
+                    // invalid JSON — keep current formData
+                }
+            }
+            applyConfig();
+        } else if (flushPendingInput()) {
             pendingAction.current = applyConfig;
         } else {
             applyConfig();
