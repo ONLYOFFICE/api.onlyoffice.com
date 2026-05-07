@@ -39,6 +39,7 @@
 ``` ts
 [
   {
+    isLink: false,
     permissions: "Full Access",
     user: "John Smith",
   },
@@ -94,6 +95,7 @@ const config = {
       owner: "John Smith",
       sharingSettings: [
         {
+          isLink: false,
           permissions: "Full Access",
           user: "John Smith",
         },
