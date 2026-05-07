@@ -58,7 +58,7 @@ The function called to show a modal window inside the editor.
 
 | Name     | Type   | Description                                                                                                                                            |
 | -------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| settings | object | The modal window parameters that are the same for plugin [variations](../../../plugin-and-macros/structure/configuration/configuration.md#variations). |
+| settings | object | The modal window parameters that are the same for plugin [variations](../../../plugins/fundamentals/configuration/config-json.md#variations). |
 
 ### Example
 

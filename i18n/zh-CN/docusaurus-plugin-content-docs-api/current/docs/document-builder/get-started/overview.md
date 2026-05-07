@@ -6,7 +6,7 @@ sidebar_position: -3
 
 **ONLYOFFICE Document Builder** 是一款跨平台的 Office 和 PDF 开发工具包（SDK），用于在服务器、移动或桌面应用程序中创建、编辑和转换 Office Open XML（DOCX、XLSX、PPTX）和 PDF 文件。
 
-它无需运行完整编辑器即可生成文档，通过模板或数据库集成实现内容创建自动化。这款工具包轻量且功能强大，可通过其 [JavaScript API](../../../docs/office-api/get-started/overview.md) 与文档管理系统、客户关系管理系统（CRMs）及其他应用程序无缝集成。
+它无需运行完整编辑器即可生成文档，通过模板或数据库集成实现内容创建自动化。这款工具包轻量且功能强大，可通过其 [JavaScript API](/docs/office-api/get-started/overview) 与文档管理系统、客户关系管理系统（CRMs）及其他应用程序无缝集成。
 
 ## 如何使用
 

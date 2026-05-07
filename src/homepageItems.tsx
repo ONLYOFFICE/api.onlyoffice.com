@@ -51,7 +51,7 @@ export const Samples: Samples = {
         'Custom range selection',
         'AI-powered automation',
       ],
-      viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/',
+      viewLink:'/docs/ai/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/',
       tags: [
         { label: 'Docs', variant: 'blue' },
         { label: 'Plugins', variant: 'blue' },

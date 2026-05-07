@@ -724,7 +724,7 @@ const mobile = {
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义[插件](../../../../../plugin-and-macros/get-started/get-started.md) 是否将启动并可用。
+定义[插件](/docs/plugins/get-started/) 是否将启动并可用。
 
 **示例**: `true`
 

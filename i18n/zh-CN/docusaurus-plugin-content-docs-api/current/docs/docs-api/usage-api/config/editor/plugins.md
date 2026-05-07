@@ -6,7 +6,7 @@
 
 **类型：** `string[]`
 
-定义来自 [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) 文件的插件标识符数组。插件将在编辑器打开时自动启动，并按指定顺序依次运行。
+定义来自 [config.json](/docs/plugins/fundamentals/configuration/config-json#guid) 文件的插件标识符数组。插件将在编辑器打开时自动启动，并按指定顺序依次运行。
 
 **示例**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,7 @@
 
 **类型：** `object`
 
-定义一个允许从外部源配置插件的对象。可以为所有插件或特定插件设置设置。例如，此对象可用于将授权令牌传递给插件。您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) 方法将 `options` 对象传递给插件。
+定义一个允许从外部源配置插件的对象。可以为所有插件或特定插件设置设置。例如，此对象可用于将授权令牌传递给插件。您还可以使用 [Automation API](../../automation-api/automation-api.md) 的 [`SetPluginsOptions`](../../../../plugins/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) 方法将 `options` 对象传递给插件。
 
 **示例**:
 
@@ -61,7 +61,7 @@
 
 **类型：** `string[]`
 
-定义插件 [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) 文件的绝对 URL 数组。
+定义插件 [config.json](/docs/plugins/fundamentals/configuration/config-json) 文件的绝对 URL 数组。
 
 **示例**: `["https://example.com/plugins/chess-plugin/config.json"]`
 

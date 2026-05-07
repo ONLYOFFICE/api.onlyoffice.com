@@ -44,7 +44,7 @@ export const DocsFeatures: Features = {
     },
     {
       title: 'Plugins and macros',
-      link: 'plugin-and-macros/get-started',
+      link: 'plugins/get-started',
       description: (
         <>
           Extend the ONLYOFFICE Docs{" "}

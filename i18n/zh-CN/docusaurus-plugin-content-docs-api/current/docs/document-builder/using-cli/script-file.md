@@ -13,7 +13,7 @@ sidebar_position: 1
    builderJS.CreateFile("docx");
    ```
 
-2. **构建文档内容**，使用 [Office API](../../office-api/get-started/overview.md)。
+2. **构建文档内容**，使用 [Office API](/docs/office-api/get-started/overview)。
 
    ```js
    const oDocument = Api.GetDocument();

@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # 添加插件
 
-**ONLYOFFICE 桌面编辑器** 允许开发者通过插件添加与 OOXML 格式无直接关联的特定功能。您可以使用 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en) 中的现成插件，也可以参考我们的 [插件和宏 API 文档](../../plugin-and-macros/structure/getting-started.md) 创建自己的插件。
+**ONLYOFFICE 桌面编辑器** 允许开发者通过插件添加与 OOXML 格式无直接关联的特定功能。您可以使用 [ONLYOFFICE 应用目录](https://www.onlyoffice.com/app-directory/en) 中的现成插件，也可以参考我们的 [插件和宏 API 文档](/docs/plugins/fundamentals/getting-started/what-is-a-plugin) 创建自己的插件。
 
 添加插件有两种方式：通过插件管理器和通过插件文件夹。
 
@@ -29,7 +29,7 @@ import TabItem from '@theme/TabItem';
 
 如果您想添加自己的插件，即使处于离线状态，也可以手动进行：
 
-1. 将插件文件夹中的所有 [插件文件](../../plugin-and-macros/structure/configuration/configuration.md) 打包成 **zip** 归档文件，并将其扩展名改为 *.plugin*（所有插件文件和子文件夹必须位于归档文件的根目录）。
+1. 将插件文件夹中的所有 [插件文件](/docs/plugins/fundamentals/configuration/config-json) 打包成 **zip** 归档文件，并将其扩展名改为 *.plugin*（所有插件文件和子文件夹必须位于归档文件的根目录）。
 
    :::note
    如果您从 [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins) 下载插件，请先解压插件文件夹，然后仅归档其中的元素。

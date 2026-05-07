@@ -24,3 +24,9 @@ yarn-error.log*
 
 # IDE's
 /.idea
+
+# Lock files
+package-lock.json
+
+# Local Claude settings
+.claude/settings.local.json

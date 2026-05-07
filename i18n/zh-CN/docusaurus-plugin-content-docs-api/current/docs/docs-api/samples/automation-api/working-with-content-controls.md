@@ -17,7 +17,7 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
 
 ## 它是如何运作的
 
-1. 当用户打开文档时，将执行 [GetAllContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetAllContentControls.md) 方法来获取内容控件的总数：
+1. 当用户打开文档时，将执行 [GetAllContentControls](/docs/plugins/interacting-with-editors/document-api/Methods/GetAllContentControls.md) 方法来获取内容控件的总数：
 
     ``` ts
     connector.executeMethod("GetAllContentControls", null, (data) => {
@@ -27,11 +27,11 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
 
 2. 当用户点击类型标签时，将根据类型调用相应的方法：
 
-    - [AddContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControl.md) — 用于纯文本（块或内联）
-    - [AddContentControlDatePicker](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlDatePicker.md) — 用于日期选择器
-    - [AddContentControlPicture](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlPicture.md) — 用于图片
-    - [AddContentControlList](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlList.md) — 用于组合框或下拉列表
-    - [AddContentControlCheckBox](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddContentControlCheckBox.md) — 用于复选框
+    - [AddContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControl.md) — 用于纯文本（块或内联）
+    - [AddContentControlDatePicker](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlDatePicker.md) — 用于日期选择器
+    - [AddContentControlPicture](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlPicture.md) — 用于图片
+    - [AddContentControlList](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlList.md) — 用于组合框或下拉列表
+    - [AddContentControlCheckBox](/docs/plugins/interacting-with-editors/document-api/Methods/AddContentControlCheckBox.md) — 用于复选框
 
     ``` ts
     // 示例：添加块内容控件
@@ -44,7 +44,7 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
     ]);
     ```
 
-3. 当内容控件获得焦点时，将触发 [onFocusContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onFocusContentControl.md) 事件，并执行 [GetCurrentContentControlPr](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/GetCurrentContentControlPr.md) 方法获取其属性（Id、Tag、Lock、Appearance、Color）。当失去焦点时，[onBlurContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Events/onBlurContentControl.md) 事件隐藏面板：
+3. 当内容控件获得焦点时，将触发 [onFocusContentControl](/docs/plugins/interacting-with-editors/document-api/Events/onFocusContentControl.md) 事件，并执行 [GetCurrentContentControlPr](/docs/plugins/interacting-with-editors/document-api/Methods/GetCurrentContentControlPr.md) 方法获取其属性（Id、Tag、Lock、Appearance、Color）。当失去焦点时，[onBlurContentControl](/docs/plugins/interacting-with-editors/document-api/Events/onBlurContentControl.md) 事件隐藏面板：
 
     ``` ts
     connector.attachEvent("onFocusContentControl", (control) => {
@@ -87,7 +87,7 @@ import { ContentControlsExternalToolbar } from '@site/src/components/BrowserWind
     });
     ```
 
-5. 当用户点击 **Remove** 时，将执行 [RemoveContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RemoveContentControl.md) 方法删除当前选中的内容控件：
+5. 当用户点击 **Remove** 时，将执行 [RemoveContentControl](/docs/plugins/interacting-with-editors/document-api/Methods/RemoveContentControl.md) 方法删除当前选中的内容控件：
 
     ``` ts
     connector.executeMethod("RemoveContentControl", [selectedId]);

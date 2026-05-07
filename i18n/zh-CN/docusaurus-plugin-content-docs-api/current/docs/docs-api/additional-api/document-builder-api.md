@@ -26,7 +26,7 @@ import APITable from '@site/src/components/APITable/APITable';
 </APITable>
 ```
 
-`.js` 脚本文件是一个 JavaScript 文件，使用 [Office JavaScript API](../../office-api/get-started/overview.md) 来生成输出文档文件（文本文档、电子表格或演示文稿）。它使用 `builder.CreateFile()` 创建文档，使用 Office API 类来操作内容，使用 `builder.SaveFile()` 指定输出格式和名称，使用 `builder.CloseFile()` 完成文档处理。您可以在[此处](../../document-builder/using-cli/script-file.md)找到有关脚本文件语法的更多信息。一旦文档生成完成，将返回带有结果文件绝对 URL 的响应（见下文）。
+`.js` 脚本文件是一个 JavaScript 文件，使用 [Office JavaScript API](/docs/office-api/get-started/overview) 来生成输出文档文件（文本文档、电子表格或演示文稿）。它使用 `builder.CreateFile()` 创建文档，使用 Office API 类来操作内容，使用 `builder.SaveFile()` 指定输出格式和名称，使用 `builder.CloseFile()` 完成文档处理。您可以在[此处](../../document-builder/using-cli/script-file.md)找到有关脚本文件语法的更多信息。一旦文档生成完成，将返回带有结果文件绝对 URL 的响应（见下文）。
 
 :::note
 `.js` 脚本文件可以包含多个输出文件作为结果。文件生成完成后，它们的 URL 将在请求响应中返回。

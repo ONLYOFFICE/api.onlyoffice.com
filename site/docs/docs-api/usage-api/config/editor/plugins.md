@@ -6,7 +6,7 @@ The plugins section allows you to connect the special add-ons to your ONLYOFFICE
 
 **type:** `string[]`
 
-Defines the array of plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file. The plugins will automatically start when the editor opens and run one-by-one in the specified order.
+Defines the array of plugin identifiers from the [config.json](../../../../plugins/fundamentals/configuration/config-json.md#guid) file. The plugins will automatically start when the editor opens and run one-by-one in the specified order.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,7 @@ Defines the array of plugin identifiers from the [config.json](../../../../plugi
 
 **type:** `object`
 
-Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass the `options` object to the plugin.
+Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the [`SetPluginsOptions`](../../../../plugins/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass the `options` object to the plugin.
 
 **Example**:
 
@@ -61,7 +61,7 @@ Defines the parameters which will be set for a specific plugin. The plugin must 
 
 **type:** `string[]`
 
-Defines the array of absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
+Defines the array of absolute URLs to the plugin [config.json](../../../../plugins/fundamentals/configuration/config-json.md) files.
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
