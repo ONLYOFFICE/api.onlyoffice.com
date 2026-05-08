@@ -145,9 +145,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
                         <Tabs.Trigger value="json">JSON</Tabs.Trigger>
-                    </Tabs.List>
-                    <div className={styles.contentArea}>
-                        <div className={styles.floatingActions}>
+                        <div className={styles.headerActions}>
                             <CopyButton getText={getCopyText} />
                             <button
                                 onClick={handleRun}
@@ -159,6 +157,8 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                                 <PlayIcon fill='currentColor' aria-hidden="true"/>
                             </button>
                         </div>
+                    </Tabs.List>
+                    <div className={styles.contentArea}>
                         <Tabs.Content value="form" className={styles.content} forceMount>
                             <div className={styles.formEditorContent}>
                                 <JsonForms

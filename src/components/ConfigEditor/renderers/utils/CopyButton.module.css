@@ -1,25 +1,21 @@
 .button {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 1.75rem;
+    width: 1.75rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--ce-space-2);
-    background: var(--ifm-background-surface-color);
+    background: transparent;
     border: 1.5px solid var(--ifm-color-emphasis-300);
-    border-radius: var(--ifm-global-radius);
+    border-radius: var(--ce-radius-sm);
     cursor: pointer;
-    color: var(--ifm-color-emphasis-800);
-    font-size: var(--ce-text-sm);
-    font-weight: 500;
+    color: var(--ifm-color-emphasis-600);
     transition: all var(--ce-transition-base);
-    box-shadow: var(--ifm-global-shadow-lw);
 }
 
 .button:hover {
     background: var(--ifm-color-emphasis-100);
     border-color: var(--ifm-color-emphasis-400);
-    box-shadow: var(--ifm-global-shadow-lw);
+    color: var(--ifm-color-emphasis-900);
 }
 
 .button:focus-visible {
@@ -29,7 +25,7 @@
 }
 
 .button:active {
-    box-shadow: var(--ifm-global-shadow-lw);
+    background: var(--ifm-color-emphasis-200);
 }
 
 .button[data-copied='true'] {
@@ -39,7 +35,7 @@
 }
 
 .button svg {
-    width: 1rem;
-    height: 1rem;
+    width: 0.875rem;
+    height: 0.875rem;
     flex-shrink: 0;
 }
