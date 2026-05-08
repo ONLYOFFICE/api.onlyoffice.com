@@ -41,7 +41,7 @@ sidebar_label: White label
 **示例**:
 
 ``` ts
-const font = {
+{
   name: "Arial",
   size: "11px",
 }
@@ -72,7 +72,7 @@ const font = {
 **示例**:
 
 ``` ts
-const layout = {
+{
   header: {
     editMode: true,
     save: true,
@@ -125,7 +125,7 @@ const layout = {
 **示例**:
 
 ``` ts
-const header = {
+{
   editMode: true,
   save: true,
   user: true,
@@ -174,7 +174,7 @@ const header = {
 **示例**:
 
 ``` ts
-const leftMenu = {
+{
   mode: true,
   navigation: true,
   spellcheck: true,
@@ -214,7 +214,7 @@ const leftMenu = {
 **示例**:
 
 ``` ts
-const rightMenu = {
+{
   mode: true,
 }
 ```
@@ -236,7 +236,7 @@ const rightMenu = {
 **示例**:
 
 ``` ts
-const statusBar = {
+{
   actionStatus: true,
   docLang: true,
   textLang: true,
@@ -276,7 +276,7 @@ const statusBar = {
 **示例**:
 
 ``` ts
-const toolbar = {
+{
   collaboration: {
     mailmerge: true,
   },
@@ -314,7 +314,7 @@ const toolbar = {
 **示例**:
 
 ``` ts
-const collaboration = {
+{
   mailmerge: true,
 }
 ```
@@ -344,7 +344,7 @@ const collaboration = {
 **示例**:
 
 ``` ts
-const file = {
+{
   close: true,
   info: true,
   save: true,
@@ -413,7 +413,7 @@ const file = {
 **示例**:
 
 ``` ts
-const insert = {
+{
   file: true,
   field: true,
 }
@@ -444,7 +444,7 @@ const insert = {
 **示例**:
 
 ``` ts
-const layout = {
+{
   pagecolor: true,
 }
 ```
@@ -498,7 +498,7 @@ const layout = {
 **示例**:
 
 ``` ts
-const view = {
+{
   navigation: true,
 }
 ```

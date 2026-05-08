@@ -22,7 +22,7 @@ sidebar_label: Standard branding
 **示例**:
 
 ``` ts
-const anonymous = {
+{
   request: true,
   label: "Elizabeth",
 }
@@ -81,7 +81,7 @@ const anonymous = {
  **示例**:
 
 ``` ts
-const close = {
+{
   visible: true,
   text: "Close file",
 }
@@ -178,7 +178,7 @@ const close = {
 **示例**:
 
 ``` ts
-const customer = {
+{
   address: "My City, 123a-45",
   info: "Some additional information",
   logo: "https://example.com/logo-big.png",
@@ -265,7 +265,7 @@ const customer = {
 **示例**:
 
 ``` ts
-const features = {
+{
   featuresTips: true,
   roles: true,
   spellcheck: {
@@ -384,7 +384,14 @@ const features = {
 此参数也适用于移动编辑器。
 :::
 
-**示例**: `true`
+**示例**:
+
+``` ts
+{
+  url: "https://example.com",
+  visible: true,
+}
+```
 
 ![反馈](/assets/images/editor/feedback.png)
 
@@ -437,7 +444,7 @@ const features = {
 **示例**:
 
 ``` ts
-const goback = {
+{
   blank: true,
   text: "Open file location",
   url: "https://example.com",
@@ -555,7 +562,7 @@ const goback = {
 **示例**:
 
 ``` ts
-const logo = {
+{
   image: "https://example.com/logo.png",
   imageDark: "https://example.com/dark-logo.png",
   imageLight: "https://example.com/light-logo.png",
@@ -674,7 +681,7 @@ const logo = {
 **示例**:
 
 ``` ts
-const mobile = {
+{
   forceView: true,
   info: false,
   standardView: false,
@@ -753,7 +760,7 @@ const mobile = {
 **示例**:
 
 ``` ts
-const review = {
+{
   hideReviewDisplay: false,
   showReviewChanges: false,
   reviewDisplay: "original",
@@ -888,7 +895,14 @@ const review = {
 
 从版本 8.3 开始，定义**完成并提交**按钮设置。可以是布尔值或对象。如果设置为 `true`，按钮显示。如果设置为 `false`，按钮隐藏。如果设置为对象，使用 `visible` 和 `resultMessage` 属性来配置按钮。该按钮仅适用于 `pdf` 格式。
 
-**示例**: `true`
+**示例**:
+
+``` ts
+{
+  visible: true,
+  resultMessage: "Form submitted successfully",
+}
+```
 
 ![提交按钮](/assets/images/editor/submitForm.png)
 ![提交按钮](/assets/images/editor/submitForm-message.png)

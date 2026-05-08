@@ -22,7 +22,7 @@ Adds a request for the anonymous name.
 **Example**:
 
 ``` ts
-const anonymous = {
+{
   request: true,
   label: "Elizabeth",
 }
@@ -81,7 +81,7 @@ Defines settings for the cross button to close the editor.
 **Example**:
 
 ``` ts
-const close = {
+{
   visible: true,
   text: "Close file",
 }
@@ -178,7 +178,7 @@ This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onl
 **Example**:
 
 ``` ts
-const customer = {
+{
   address: "My City, 123a-45",
   info: "Some additional information",
   logo: "https://example.com/logo-big.png",
@@ -265,7 +265,7 @@ Defines the parameters that the user can disable or customize if possible.
 **Example**:
 
 ``` ts
-const features = {
+{
   featuresTips: true,
   roles: true,
   spellcheck: {
@@ -384,7 +384,14 @@ Defines settings for the **Feedback & Support** menu button. Can be a boolean or
 This parameter is also available for the mobile editors.
 :::
 
-**Example**: `true`
+**Example**:
+
+``` ts
+{
+  url: "https://example.com",
+  visible: true,
+}
+```
 
 ![Feedback](/assets/images/editor/feedback.png)
 
@@ -437,7 +444,7 @@ This parameter is also available for the mobile editors.
 **Example**:
 
 ``` ts
-const goback = {
+{
   blank: true,
   text: "Open file location",
   url: "https://example.com",
@@ -555,7 +562,7 @@ This parameter is also available for the mobile editors.
 **Example**:
 
 ``` ts
-const logo = {
+{
   image: "https://example.com/logo.png",
   imageDark: "https://example.com/dark-logo.png",
   imageLight: "https://example.com/light-logo.png",
@@ -674,7 +681,7 @@ This parameter is also available for the mobile editors.
 **Example**:
 
 ``` ts
-const mobile = {
+{
   forceView: true,
   info: false,
   standardView: false,
@@ -753,7 +760,7 @@ The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [t
 **Example**:
 
 ``` ts
-const review = {
+{
   hideReviewDisplay: false,
   showReviewChanges: false,
   reviewDisplay: "original",
@@ -888,7 +895,14 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 Starting from version 8.3, defines the **Complete & Submit** button settings. Can be a boolean or an object. If set to `true`, the button is displayed. If set to `false`, the button is hidden. If set to an object, use the `visible` and `resultMessage` properties to configure the button. The button will only be available for the `pdf` format.
 
-**Example**: `true`
+**Example**:
+
+``` ts
+{
+  visible: true,
+  resultMessage: "Form submitted successfully",
+}
+```
 
 ![Submit button](/assets/images/editor/submitForm.png)
 ![Submit button](/assets/images/editor/submitForm-message.png)

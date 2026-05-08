@@ -41,7 +41,7 @@ Defines the font for the interface elements (buttons, tabs, etc.).
 **Example**:
 
 ``` ts
-const font = {
+{
   name: "Arial",
   size: "11px",
 }
@@ -72,7 +72,7 @@ Defines the parameters that the user can use to hide the interface elements but 
 **Example**:
 
 ``` ts
-const layout = {
+{
   header: {
     editMode: true,
     save: true,
@@ -125,7 +125,7 @@ Defines the editor header settings.
 **Example**:
 
 ``` ts
-const header = {
+{
   editMode: true,
   save: true,
   user: true,
@@ -174,7 +174,7 @@ Defines the left menu settings. Can be a boolean or an object. If set to `true`,
 **Example**:
 
 ``` ts
-const leftMenu = {
+{
   mode: true,
   navigation: true,
   spellcheck: true,
@@ -214,7 +214,7 @@ Defines the right menu settings. Can be a boolean or an object. If set to `true`
 **Example**:
 
 ``` ts
-const rightMenu = {
+{
   mode: true,
 }
 ```
@@ -236,7 +236,7 @@ Defines the status bar settings. Can be a boolean or an object. If set to `true`
 **Example**:
 
 ``` ts
-const statusBar = {
+{
   actionStatus: true,
   docLang: true,
   textLang: true,
@@ -276,7 +276,7 @@ Defines the toolbar settings. Can be a boolean or an object. If set to `true`, t
 **Example**:
 
 ``` ts
-const toolbar = {
+{
   collaboration: {
     mailmerge: true,
   },
@@ -314,7 +314,7 @@ Defines the **Collaboration** tab settings. Can be a boolean or an object. If se
 **Example**:
 
 ``` ts
-const collaboration = {
+{
   mailmerge: true,
 }
 ```
@@ -344,7 +344,7 @@ Defines the **File** tab settings. Can be a boolean or an object. If set to `tru
 **Example**:
 
 ``` ts
-const file = {
+{
   close: true,
   info: true,
   save: true,
@@ -413,7 +413,7 @@ Defines the **Insert** tab settings. Can be a boolean or an object. If set to `t
 **Example**:
 
 ``` ts
-const insert = {
+{
   file: true,
   field: true,
 }
@@ -444,7 +444,7 @@ Defines the **Layout** tab settings. Can be a boolean or an object. If set to `t
 **Example**:
 
 ``` ts
-const layout = {
+{
   pagecolor: true,
 }
 ```
@@ -498,7 +498,7 @@ Defines the **View** tab settings. Can be a boolean or an object. If set to `tru
 **Example**:
 
 ``` ts
-const view = {
+{
   navigation: true,
 }
 ```
