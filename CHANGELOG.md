@@ -21,12 +21,20 @@
 * Added missing document, editorConfig, and events sections to config overview page
 * Updated images for the events page
 * Documented removal of deprecated params in changelog entries for v6.1 and v6.3
+* Used literal union types for mode, macrosMode, pointerMode, reviewDisplay, unit, tabStyle, and tabBackground config parameters
+* Added supported language codes to lang parameter and regional settings to region parameter
+* Documented actionLink sub-properties and insert/layout toolbar sub-properties in white label config
+* Improved onMakeActionLink event documentation and extracted onRequestInsertImage undeclared note into callout
+* Used danger admonitions for deprecated mailmerge and spellcheck.change events
 
 #### Playground
 
 * Unified form/JSON dirty tracking with bidirectional sync on tab switch
 * Improved config schema types with per-document-type FileType unions and PlatformType alias
 * Cleaned up playground editor config defaults and reduced re-renders
+* Moved Run and Copy buttons from floating overlay to config editor header tab bar
+* Added Reset button to config editor header tab bar
+* Added toggleable sections for optional object and array properties in Config Editor
 
 #### Common
 
@@ -42,6 +50,7 @@
 * Corrected isForm type, commentGroups.view example, and grammar inconsistencies
 * Removed .ashx extension and trailing slash from example URLs
 * Fixed MCP documentation formatting issues
+* Added deprecated fileChoiceUrl, mergeFolderUrl, saveAsUrl, and sharingSettingsUrl parameters to editor config documentation
 
 #### Playground
 
@@ -50,6 +59,7 @@
 * Fixed enum deduplication and fileType grouping by documentType
 * Fixed button style scoping and ArrayControl schema resolution
 * Fixed anonymous mode, dark mode compatibility, and PDF form document names
+* Fixed config editor section content padding and removed short descriptions from object section headers
 
 #### Localization
 
