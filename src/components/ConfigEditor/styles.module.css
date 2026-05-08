@@ -81,6 +81,12 @@
     background: var(--ifm-color-emphasis-200);
 }
 
+.headerButton[data-copied='true'] {
+    background: var(--ifm-color-success-lightest);
+    border-color: var(--ifm-color-success);
+    color: var(--ifm-color-success-dark);
+}
+
 .headerButton svg {
     width: 0.875rem;
     height: 0.875rem;

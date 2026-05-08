@@ -1,6 +1,7 @@
 import styles from './styles.module.css';
 import PlayIcon from '@site/static/icons/icon-play.svg';
 import ResetIcon from '@site/static/icons/icon-reset.svg';
+import CopyIcon from '@site/static/icons/copy.svg';
 import * as Tabs from "@radix-ui/react-tabs";
 import { renderers } from "./renderers";
 import schema from '@site/src/data/config-schema.json';
@@ -9,7 +10,6 @@ import { JsonForms } from '@jsonforms/react';
 import { useColorMode } from "@docusaurus/theme-common";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
-import { CopyButton } from "./renderers/utils/CopyButton";
 import { flushPendingInput } from "./renderers/controls/TextControl";
 
 interface ConfigEditorProps {
@@ -45,6 +45,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     onApplyRef.current = onApply;
 
     const [formKey, setFormKey] = useState(0);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         formDataRef.current = defaultConfig;
@@ -147,6 +148,16 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
         return serializeConfig();
     }, [serializeConfig]);
 
+    const handleCopy = useCallback(async () => {
+        try {
+            await navigator.clipboard.writeText(await getCopyText());
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch {
+            // clipboard write failed
+        }
+    }, [getCopyText]);
+
     return (
         <div className={styles.container}>
                 <Tabs.Root value={tab} onValueChange={handleTabChange} className={styles.tabs}>
@@ -163,7 +174,16 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                             >
                                 <ResetIcon aria-hidden="true"/>
                             </button>
-                            <CopyButton getText={getCopyText} />
+                            <button
+                                onClick={handleCopy}
+                                className={styles.headerButton}
+                                aria-label={copied ? 'Copied to clipboard' : 'Copy to clipboard'}
+                                title={copied ? 'Copied!' : 'Copy to clipboard'}
+                                type="button"
+                                data-copied={copied}
+                            >
+                                <CopyIcon aria-hidden="true"/>
+                            </button>
                             <button
                                 onClick={handleRun}
                                 className={styles.runButton}
