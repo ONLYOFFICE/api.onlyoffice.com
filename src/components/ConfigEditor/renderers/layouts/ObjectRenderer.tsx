@@ -144,7 +144,6 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
         <Section
             title={title}
             depth={depth}
-            description={(s as any)['x-shortDescription']}
             defaultOpen={depth <= 1}
             toggled={toggled}
             onToggle={onToggle}
