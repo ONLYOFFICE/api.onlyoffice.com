@@ -77,13 +77,14 @@ function collapseAnyOf(node) {
   );
   const refs = variants.filter((v) => "$ref" in v);
 
-  // object | boolean → keep object
+  // object | boolean → keep object, mark as also accepting boolean
   if (
     objects.length > 0 &&
     booleans.length > 0 &&
     objects.length + booleans.length === variants.length
   ) {
     replace(node, objects[0]);
+    node["x-alsoBoolean"] = true;
     return;
   }
 

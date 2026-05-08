@@ -1,4 +1,4 @@
-import { ReactNode, createElement } from 'react';
+import { ReactNode, createElement, useRef, useEffect, useCallback } from 'react';
 import styles from './Section.module.css';
 
 interface SectionProps {
@@ -6,15 +6,39 @@ interface SectionProps {
     depth: number;
     description?: string;
     defaultOpen?: boolean;
+    /** true = checked (object set), false = unchecked (false), undefined = indeterminate (unset) */
+    toggled?: boolean;
+    onToggle?: () => void;
     children: ReactNode;
 }
 
-export function Section({ title, depth, description, defaultOpen = true, children }: SectionProps) {
+export function Section({ title, depth, description, defaultOpen = true, toggled, onToggle, children }: SectionProps) {
     const level = Math.min(Math.max(depth, 1), 6);
     const headingTag = `h${level}`;
+    const toggleRef = useRef<HTMLInputElement>(null);
+
+    const toggleable = onToggle !== undefined;
+    const isUnset = toggleable && toggled === undefined;
+
+    useEffect(() => {
+        if (toggleRef.current) {
+            toggleRef.current.indeterminate = isUnset;
+        }
+    }, [isUnset]);
+
+    const handleToggleClick = useCallback((e: React.MouseEvent) => {
+        e.stopPropagation();
+    }, []);
+
+    const handleToggleChange = useCallback(() => {
+        onToggle?.();
+    }, [onToggle]);
 
     return (
-        <details className={styles.section} open={defaultOpen}>
+        <details
+            className={styles.section}
+            open={defaultOpen}
+        >
             <summary className={styles.summary}>
                 <svg
                     className={styles.chevron}
@@ -32,7 +56,18 @@ export function Section({ title, depth, description, defaultOpen = true, childre
                         strokeLinejoin="round"
                     />
                 </svg>
-                {createElement(headingTag, { className: styles.heading }, title)}
+                {toggleable && (
+                    <input
+                        ref={toggleRef}
+                        type="checkbox"
+                        className={styles.toggle}
+                        checked={toggled === true}
+                        aria-label={`Toggle ${title}`}
+                        onClick={handleToggleClick}
+                        onChange={handleToggleChange}
+                    />
+                )}
+                {createElement(headingTag, { className: `${styles.heading}${isUnset ? ` ${styles.unset}` : ''}` }, title)}
                 {description && <span className={styles.descriptionInline}>{description}</span>}
             </summary>
             {children}
