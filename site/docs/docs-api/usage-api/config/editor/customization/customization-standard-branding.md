@@ -969,10 +969,12 @@ Starting from version 7.0, please use the [review.trackChanges](#reviewtrackchan
 
 Defines the editor theme settings. It can be set in two ways:
 
-- **theme id** - the user sets the theme parameter by its id: `theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-white`, `theme-night`;
-- **default theme** - the default dark or light theme value will be set: `default-dark`, `default-light`. The default light theme is `theme-classic-light`.
+- **theme id** - the user sets the theme parameter by its id: `theme-system`, `theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-gray`, `theme-white`, `theme-night`;
+- **default theme** - the default dark or light theme value will be set: `default-dark`, `default-light`. The default light theme is `theme-white`, the default dark theme is `theme-night`.
 
-The first option has higher priority.
+If a specific theme id is set, it takes priority over the `default-dark` and `default-light` values.
+
+The `theme-system` value matches the OS color scheme preference (light or dark).
 
 Apart from the available editor themes, the user can also customize their own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx) for the application interface.
 
@@ -981,7 +983,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 :::
 
 :::note
-Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: `theme-light`, `theme-dark`, `default-light`, `default-dark`.
+Starting from version 9.1, this parameter is also available for the mobile editors. The following themes are currently supported: `theme-light`, `theme-dark`, `theme-system`, `default-light`, `default-dark`.
 :::
 
 **Example**: `"theme-dark"`
