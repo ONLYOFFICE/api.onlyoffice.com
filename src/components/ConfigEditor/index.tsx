@@ -1,5 +1,6 @@
 import styles from './styles.module.css';
 import PlayIcon from '@site/static/icons/icon-play.svg';
+import ResetIcon from '@site/static/icons/icon-reset.svg';
 import * as Tabs from "@radix-ui/react-tabs";
 import { renderers } from "./renderers";
 import schema from '@site/src/data/config-schema.json';
@@ -127,6 +128,13 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
         }
     }, [applyConfig]);
 
+    const handleReset = useCallback(() => {
+        formDataRef.current = defaultConfig;
+        setJsonText(JSON.stringify(defaultConfig, null, 2));
+        updateTabRef.current = false;
+        setFormKey((k) => k + 1);
+    }, [defaultConfig]);
+
     const getCopyText = useCallback((): string | Promise<string> => {
         if (tabRef.current === 'json') {
             return jsonTextRef.current;
@@ -146,6 +154,15 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
                         <Tabs.Trigger value="json">JSON</Tabs.Trigger>
                         <div className={styles.headerActions}>
+                            <button
+                                onClick={handleReset}
+                                className={styles.headerButton}
+                                aria-label="Reset to default configuration"
+                                title="Reset to default configuration"
+                                type="button"
+                            >
+                                <ResetIcon aria-hidden="true"/>
+                            </button>
                             <CopyButton getText={getCopyText} />
                             <button
                                 onClick={handleRun}

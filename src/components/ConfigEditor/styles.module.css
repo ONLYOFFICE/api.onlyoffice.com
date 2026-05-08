@@ -51,6 +51,42 @@
     margin-left: auto;
 }
 
+.headerButton {
+    height: 1.75rem;
+    width: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ce-radius-sm);
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-600);
+    transition: all var(--ce-transition-base);
+}
+
+.headerButton:hover {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-400);
+    color: var(--ifm-color-emphasis-900);
+}
+
+.headerButton:focus-visible {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: var(--ce-focus-ring);
+}
+
+.headerButton:active {
+    background: var(--ifm-color-emphasis-200);
+}
+
+.headerButton svg {
+    width: 0.875rem;
+    height: 0.875rem;
+    flex-shrink: 0;
+}
+
 .runButton {
     height: 1.75rem;
     width: 1.75rem;
