@@ -70,7 +70,9 @@ export function Section({ title, depth, description, defaultOpen = true, toggled
                 {createElement(headingTag, { className: `${styles.heading}${isUnset ? ` ${styles.unset}` : ''}` }, title)}
                 {description && <span className={styles.descriptionInline}>{description}</span>}
             </summary>
-            {children}
+            <div className={styles.sectionContent}>
+                {children}
+            </div>
         </details>
     )
 }

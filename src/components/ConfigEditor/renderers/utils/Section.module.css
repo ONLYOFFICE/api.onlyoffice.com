@@ -77,6 +77,10 @@
     box-shadow: var(--ce-focus-ring);
 }
 
+.sectionContent {
+    padding-left: calc(16px + var(--ce-space-3));
+}
+
 .unset {
     opacity: 0.5;
 }
