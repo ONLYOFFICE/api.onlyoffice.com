@@ -3277,6 +3277,9 @@ export interface ConfigEmbedded extends BaseConfig {
     events?: EventsEmbedded;
 }
 
+/**
+ * The main configuration object used to open the document editor.
+ */
 export interface Config extends ConfigNormal {
     /**
      * The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).

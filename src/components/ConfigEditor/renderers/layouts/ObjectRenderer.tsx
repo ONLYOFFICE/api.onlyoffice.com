@@ -126,7 +126,7 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
         return (
             <div>
                 {configFields.length > 0 && (
-                    <Section title="Config" depth={1} defaultOpen>
+                    <Section title="Config" description={s.description} depth={1} defaultOpen>
                         {configFields.map(renderChild)}
                     </Section>
                 )}
