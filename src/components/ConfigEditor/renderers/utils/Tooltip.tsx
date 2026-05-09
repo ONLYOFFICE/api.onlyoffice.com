@@ -1,6 +1,15 @@
 import * as Popover from '@radix-ui/react-popover';
 import styles from './Tooltip.module.css';
 
+function formatDescription(text: string): string {
+    return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/`(.+?)`/g, '<code>$1</code>');
+}
+
 export function Tooltip({ text }: { text: string }) {
     return (
         <Popover.Root>
@@ -23,7 +32,7 @@ export function Tooltip({ text }: { text: string }) {
             </Popover.Trigger>
             <Popover.Portal>
                 <Popover.Content className={styles.content} side="right" sideOffset={6}>
-                    {text}
+                    <span dangerouslySetInnerHTML={{ __html: formatDescription(text) }} />
                     <Popover.Arrow className={styles.arrow} />
                 </Popover.Content>
             </Popover.Portal>
