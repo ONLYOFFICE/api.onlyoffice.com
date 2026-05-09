@@ -1,4 +1,5 @@
 import { ReactNode, createElement, useRef, useEffect, useCallback } from 'react';
+import { Tooltip } from './Tooltip';
 import styles from './Section.module.css';
 
 interface SectionProps {
@@ -68,7 +69,7 @@ export function Section({ title, depth, description, defaultOpen = true, toggled
                     />
                 )}
                 {createElement(headingTag, { className: `${styles.heading}${isUnset ? ` ${styles.unset}` : ''}` }, title)}
-                {description && <span className={styles.descriptionInline}>{description}</span>}
+                {description && <Tooltip text={description} />}
             </summary>
             <div className={styles.sectionContent}>
                 {children}

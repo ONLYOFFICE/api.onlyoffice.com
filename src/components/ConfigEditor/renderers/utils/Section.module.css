@@ -56,12 +56,6 @@
     color: var(--ifm-color-emphasis-900);
 }
 
-.descriptionInline {
-    color: var(--ifm-color-emphasis-700);
-    font-weight: 400;
-    font-size: var(--ce-text-sm);
-}
-
 /* Toggleable sections */
 .toggle {
     margin: 0;
