@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # Config
 
-The config base section allows you to change the platform type used, document display size (width and height), type of the document opened, and the encrypted signature token.
+The config base section defines the top-level parameters for initializing the document editor (document type, platform type, display size, token, etc.).
 
 ## documentType
 

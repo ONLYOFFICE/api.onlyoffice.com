@@ -3278,7 +3278,7 @@ export interface ConfigEmbedded extends BaseConfig {
 }
 
 /**
- * The main configuration object used to open the document editor.
+ * The config base section defines the top-level parameters for initializing the document editor (document type, platform type, display size, token, etc.).
  */
 export interface Config extends ConfigNormal {
     /**

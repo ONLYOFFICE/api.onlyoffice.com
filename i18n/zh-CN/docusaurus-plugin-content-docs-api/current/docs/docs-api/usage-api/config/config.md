@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # 配置
 
-config base 部分允许更改使用的平台类型、文档显示大小（宽度和高度）、打开文档的类型和加密签名令牌。
+config base 部分定义了初始化文档编辑器的顶级参数（文档类型、平台类型、显示大小、令牌等）。
 
 ## documentType
 
