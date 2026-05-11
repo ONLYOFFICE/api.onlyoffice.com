@@ -12,10 +12,10 @@ OpenID Connect implementation in DocSpace includes:
 
 1. [OAuth 2.0 authorization code flow](oauth2/authorization-flow.md);
 2. access token and refresh token handling;
-3. JWT token decoding;
-4. user profile fetching via OpenID Connect UserInfo endpoint.
+3. [JWT decoding](#jwt-decoding);
+4. [fetching user profile via OpenID Connect UserInfo endpoint](#userinfo-endpoint).
 
-The Node.js and Python examples demonstrating how to implement OAuth 2.0 authentication with OpenID Connect using DocSpace can be found [here](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2).
+[This repo](https://github.com/ONLYOFFICE/docspace-samples/tree/develop/oauth2) contains Node.js and Python examples demonstrating how to implement OAuth 2.0 authentication with OpenID Connect using DocSpace.
 
 ## Authentication flow
 
@@ -29,17 +29,19 @@ app.route("/authenticate").get((req, res) => {
 });
 ```
 
-For more information on authorization URL parameters, see the [Auth button](oauth2/auth-button.md) guide.
+See the [Auth button](oauth2/auth-button.md) guide for more information on the [authorization URL parameters](oauth2/auth-button.md#components-of-the-authorization-link) used in the above request.  
+
+## JWT decoding
 
 To obtain a signed JSON Web Token containing the user's ID along with some metadata, request the `openid` [scope](oauth2/creating-oauth-app.md#access-scopes) during the authentication flow.
 
 The application decodes the JWT token to extract user information.
 
-## UserInfo Endpoint
+## Accessing user info with UserInfo Endpoint
 
 To access additional user information, use the standardized [UserInfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo). This endpoint returns a JSON object with the user's identity information.
 
-This is done by making a GET request to the UserInfo endpoint with the access token:
+This is done by making a GET request to the UserInfo endpoint with the access token received after successful authentication:
 
 ``` ts
 const userResponse = await axios.get(

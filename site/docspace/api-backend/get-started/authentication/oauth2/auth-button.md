@@ -16,27 +16,29 @@ With your OAuth app configured, you can now embed the Auth button on your websit
 
 3. Copy the **Authorize link** and assign it to the authorization button. 
 
+## Components of the authorization link
+
 The authorization link contains the following parameters:
 
-## response_type
+### response_type
 
 The type of the server response after authenticating the user and redirecting them to [redirect_uri](#redirect_uri). Currently, the *code* value is supported.
 
 Example: code
 
-## client_id
+### client_id
 
 The ID of the client that will be used for authorization.
 
 Example: 695d37b7-18aa-4033-91b4-09690178e99a
 
-## redirect_uri
+### redirect_uri
 
 The URL where the user will be redirected after successful or unsuccessful authentication.
 
 Example: `https://redirect-url.com`
 
-## scope
+### scope
 
 All the possibilities of the current application to work with the DocSpace portal.
 
@@ -49,19 +51,19 @@ const encodingScopes = encodeURI(scopesString || "")
 
 Example: files:write%20accounts:write%20files:read%20openid%20rooms:read%20accounts.self:read%20accounts:read%20accounts.self:write%20rooms:write
 
-## state
+### state
 
 The random string to solve the CSRF vulnerability problem. This parameter with the *code* value will be added to [redirect_uri](#redirect_uri). This parameter is optional, but we recommend to specify it for security purposes.
 
 Example: OENBaHXhZStQ9eDVIq1NlHu6luruKqJtCp6RhgOFXAeAp4YWoUHtOkGYCPtW7l8T-qtZaoUnmvtHZuJbb3d-wgYtHOKhd-nqisoeiO91u-Z9fsnhtiO318JmihPflIpV
 
-## code_challenge_method
+### code_challenge_method
 
 The method to encode the code verifier. Two parameters are supported: **plain** and **S256** (preferred). This parameter is used only when the authentication method is not specified (none) and the public client (PKCE) is allowed.
 
 Example: S256
 
-## code_challenge
+### code_challenge
 
 The encoded code verifier. To get it, use the **crypto-js** npm package and the following code:
 
