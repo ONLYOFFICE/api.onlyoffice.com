@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # Using the Auth button
 
-With your OAuth app configured, you can now use embed the Auth button on your website to authenticate DocSpace.
+With your OAuth app configured, you can now embed the Auth button on your website to authenticate DocSpace.
 
 1. To preview an auth button in your application, click ![More icon](/assets/images/docspace/more-icon.png#gh-light-mode-only)![More icon](/assets/images/docspace/more-icon.dark.png#gh-dark-mode-only) to open the context menu and choose **Auth button**.
 

@@ -8,7 +8,7 @@ When a user clicks the authorization link, it follows any of these four scenario
 
 ## Scenario 1. User authorization
 
-For unauthorized users on the portal, the authorization link opens into an authorization form for these users to enter their email and password and **Sign in**. On successful authorization, they will be redirected to the pages described in scenarios 2 and 3.
+For users not yet authorized on the portal, the authorization link opens into an authorization form to enter their email and password and **Sign in**. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
 
 <img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />
 

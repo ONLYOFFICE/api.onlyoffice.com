@@ -18,7 +18,7 @@ To edit the application settings:
 
    ![Edit button](/assets/images/docspace/edit-button.png#gh-light-mode-only)![Edit button](/assets/images/docspace/edit-button.dark.png#gh-dark-mode-only)
 
-Edit the desired app parameter (**App name**, **App icon**, **Description**, or **Authentication method**) and click **Save**
+Edit the desired app parameter (**App name**, **App icon**, **Description**, or **Authentication method**) and click **Save**.
 
 ![Editing app](/assets/images/docspace/editing-app.png#gh-light-mode-only)![Editing app](/assets/images/docspace/editing-app.dark.png#gh-dark-mode-only)
 

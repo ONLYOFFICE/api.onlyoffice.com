@@ -7,7 +7,7 @@ import TabItem from '@theme/TabItem';
 
 # Personal access tokens
 
-The user needs to perform several easy steps to pass authentication:
+Follow these steps to generate a PAT and use it to authorize your DocSpace account:
 
 1. Send POST request, containing the `userName` and `password` parameters to the [api/2.0/authentication](../../../../docspace/api-backend/usage-api/authenticate-me.api.mdx) address:
 
@@ -25,7 +25,7 @@ The user needs to perform several easy steps to pass authentication:
         }
         ```
 
-        > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+        > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address. For security purposes, store your username and password in `env` variables and reference them in the request.  
       </TabItem>
       <TabItem value="response" label="Response">
         ``` http
@@ -44,7 +44,7 @@ The user needs to perform several easy steps to pass authentication:
       </TabItem>
     </Tabs>
 
-2. In case authentication is successful, a token and its lifetime will be received.
+2. If authentication is successful, you will receive an API response containing a token with its lifetime.
 
 3. Use this token every time you call API methods inserting it to the `Authorization` HTTP header:
 
@@ -133,4 +133,4 @@ The user needs to perform several easy steps to pass authentication:
   </TabItem>
 </Tabs>
 
-> Please note, that you have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+> Please note, that you have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively. 

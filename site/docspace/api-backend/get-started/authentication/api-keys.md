@@ -15,7 +15,7 @@ API methods for working with API keys are detailed [in this section](../../../..
 
 ## How to create API keys
 
-The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user API key, send POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/create-api-key.api.mdx) address:
+The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user API key, send a POST request containing the `name`, `permissions`, and `expiresInDays` parameters to the [api/2.0/keys](../../../../docspace/api-backend/usage-api/create-api-key.api.mdx) endpoint:
 
 <Tabs>
   <TabItem value="request" label="Request">
@@ -87,9 +87,9 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
 
 where `ONLYOFFICE_API_KEY` is the API key.
 
-## Security best practices when using API keys
+## Recommendations for using API keys
 
-Here are some recommendations to follow when using API keys:
+Here are some best practices to follow when using API keys:
 
 - **Regular audits:** Perform regular audits of your API keys. This enables you to delete or revoke any keys no longer in use. 
 - **Keep API keys secret:** Always treat your API keys as passwords. Since API keys perform actions on your behalf when interacting with the API, avoid hardcoding them directly into your programs. As your application scales, consider using a dedicated secrets management service, such as [HashiCorp Vault](https://www.vaultproject.io/), [AWS Secrets Manager](https://aws.amazon.com/ru/secrets-manager/), or [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault). These tools offer secure storage, encryption, access control, and auditing capabilities. In containerized environments, solutions like [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) (with encryption enabled) can further enhance security. Additionally, ensure that secrets are loaded into memory at runtime and are never exposed in logs or code repositories.
