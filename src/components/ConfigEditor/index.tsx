@@ -6,6 +6,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import { renderers } from "./renderers";
 import schema from '@site/src/data/config-schema.json';
 import { UISchemaElement } from "@jsonforms/core";
+
 import { JsonForms } from '@jsonforms/react';
 import { useColorMode } from "@docusaurus/theme-common";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -29,17 +30,61 @@ const MONACO_OPTIONS = {
     fixedOverflowWidgets: true,
 };
 
+function serializeAsCode(data: Record<string, unknown>): string {
+    const { events, ...rest } = data;
+    const json = JSON.stringify(rest, null, 2);
+
+    if (!events) return `const config = ${json};`;
+
+    const eventEntries: string[] = [];
+    Object.keys(events as Record<string, unknown>).forEach((name) => {
+        const body = (events as Record<string, unknown>)[name];
+        if (typeof body === 'string' && body.length > 0) {
+            eventEntries.push(`    "${name}": function(event) {\n      ${body}\n    }`);
+        }
+    });
+
+    const eventsBody = eventEntries.length === 0
+        ? '{}'
+        : `{\n${eventEntries.join(',\n')}\n  }`;
+    const obj = json.slice(0, -2) + `,\n  "events": ${eventsBody}\n}`;
+
+    return `const config = ${obj};`;
+}
+
+function parseCode(code: string): Record<string, unknown> | null {
+    try {
+        const match = code.match(/(?:const|let|var)\s+(\w+)\s*=/);
+        const parsed = match
+            ? new Function(code + '\nreturn ' + match[1])() as Record<string, unknown>
+            : new Function('return (' + code + ')')() as Record<string, unknown>;
+        if (parsed.events) {
+            const events = parsed.events as Record<string, unknown>;
+            Object.keys(events).forEach((name) => {
+                if (typeof events[name] === 'function') {
+                    const src = (events[name] as Function).toString();
+                    const bodyMatch = src.match(/\{([\s\S]*)\}\s*$/);
+                    events[name] = bodyMatch ? bodyMatch[1].trim() : '';
+                }
+            });
+        }
+        return parsed;
+    } catch {
+        return null;
+    }
+}
+
 export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const { colorMode } = useColorMode();
 
     const formDataRef = useRef(defaultConfig);
     const pendingAction = useRef<(() => void) | null>(null);
-    const [jsonText, setJsonText] = useState(() => JSON.stringify(defaultConfig, null, 2));
-    const [tab, setTab] = useState<'form' | 'json'>('form');
+    const [codeText, setCodeText] = useState(() => JSON.stringify(defaultConfig, null, 2));
+    const [tab, setTab] = useState<'form' | 'code'>('form');
     const tabRef = useRef(tab);
     const updateTabRef = useRef(false);
-    const jsonTextRef = useRef(jsonText);
-    jsonTextRef.current = jsonText;
+    const codeTextRef = useRef(codeText);
+    codeTextRef.current = codeText;
 
     const onApplyRef = useRef(onApply);
     onApplyRef.current = onApply;
@@ -49,52 +94,64 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
 
     useEffect(() => {
         formDataRef.current = defaultConfig;
-        setJsonText(JSON.stringify(defaultConfig, null, 2));
+        setCodeText(JSON.stringify(defaultConfig, null, 2));
         updateTabRef.current = false;
         setFormKey((k) => k + 1);
         onApplyRef.current(defaultConfig);
     }, [defaultConfig]);
 
     const applyConfig = useCallback(() => {
-        onApplyRef.current(formDataRef.current);
+        const config = { ...formDataRef.current };
+        if (config.events) {
+            const events: Record<string, Function> = {};
+            let hasEvents = false;
+            const src = config.events as Record<string, unknown>;
+            Object.keys(src).forEach((name) => {
+                if (typeof src[name] === 'string' && (src[name] as string).length > 0) {
+                    events[name] = new Function('event', src[name] as string);
+                    hasEvents = true;
+                }
+            });
+            config.events = hasEvents ? events : undefined;
+        }
+        onApplyRef.current(config);
     }, []);
 
     const serializeConfig = useCallback(() => {
-        return JSON.stringify(formDataRef.current, null, 2);
+        return serializeAsCode(formDataRef.current);
     }, []);
 
-    const syncJson = useCallback(() => {
-        setJsonText(serializeConfig());
+    const syncCode = useCallback(() => {
+        setCodeText(serializeConfig());
     }, [serializeConfig]);
 
     // Sync data when switching tabs
     const handleTabChange = useCallback((value: string) => {
         if (tabRef.current === value) return;
-        if (value === 'json') {
+        if (value === 'code') {
             if (flushPendingInput()) {
-                tabRef.current = 'json';
+                tabRef.current = 'code';
                 pendingAction.current = () => {
-                    syncJson();
+                    syncCode();
                     updateTabRef.current = false;
-                    setTab('json');
+                    setTab('code');
                 };
                 return;
             }
             if (updateTabRef.current) {
-                syncJson();
+                syncCode();
             }
         } else if (value === 'form' && updateTabRef.current) {
-            try {
-                formDataRef.current = JSON.parse(jsonTextRef.current);
+            const parsed = parseCode(codeTextRef.current);
+            if (parsed) {
+                formDataRef.current = parsed;
                 setFormKey((k) => k + 1);
-            } catch {
-                // invalid JSON — keep current formData
             }
         }
         updateTabRef.current = false;
-        tabRef.current = value as 'form' | 'json';
-        setTab(value as 'form' | 'json');
-    }, [syncJson]);
+        tabRef.current = value as 'form' | 'code';
+        setTab(value as 'form' | 'code');
+    }, [syncCode]);
 
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         formDataRef.current = data ?? {};
@@ -106,20 +163,19 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
         }
     }, []);
 
-    const handleJsonChange = useCallback((value: string | undefined) => {
-        setJsonText(value ?? '');
+    const handleCodeChange = useCallback((value: string | undefined) => {
+        setCodeText(value ?? '');
         updateTabRef.current = true;
     }, []);
 
     const handleRun = useCallback(() => {
-        if (tabRef.current === 'json') {
+        if (tabRef.current === 'code') {
             if (updateTabRef.current) {
-                try {
-                    formDataRef.current = JSON.parse(jsonTextRef.current);
-                    updateTabRef.current = false;
-                } catch {
-                    // invalid JSON — keep current formData
+                const parsed = parseCode(codeTextRef.current);
+                if (parsed) {
+                    formDataRef.current = parsed;
                 }
+                updateTabRef.current = false;
             }
             applyConfig();
         } else if (flushPendingInput()) {
@@ -131,14 +187,14 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
 
     const handleReset = useCallback(() => {
         formDataRef.current = defaultConfig;
-        setJsonText(JSON.stringify(defaultConfig, null, 2));
+        setCodeText(JSON.stringify(defaultConfig, null, 2));
         updateTabRef.current = false;
         setFormKey((k) => k + 1);
     }, [defaultConfig]);
 
     const getCopyText = useCallback((): string | Promise<string> => {
-        if (tabRef.current === 'json') {
-            return jsonTextRef.current;
+        if (tabRef.current === 'code') {
+            return codeTextRef.current;
         }
         if (flushPendingInput()) {
             return new Promise((resolve) => {
@@ -163,7 +219,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                 <Tabs.Root value={tab} onValueChange={handleTabChange} className={styles.tabs}>
                     <Tabs.List className={styles.list}>
                         <Tabs.Trigger value="form">Form</Tabs.Trigger>
-                        <Tabs.Trigger value="json">JSON</Tabs.Trigger>
+                        <Tabs.Trigger value="code">Code</Tabs.Trigger>
                         <div className={styles.headerActions}>
                             <button
                                 onClick={handleReset}
@@ -209,12 +265,12 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                                 />
                             </div>
                         </Tabs.Content>
-                        <Tabs.Content value='json' className={styles.content} forceMount>
+                        <Tabs.Content value='code' className={styles.content} forceMount>
                             <div className={styles.monacoContainer}>
                                 <MonacoEditor
-                                    language="json"
-                                    value={jsonText}
-                                    onChange={handleJsonChange}
+                                    language="javascript"
+                                    value={codeText}
+                                    onChange={handleCodeChange}
                                     theme={colorMode === 'dark' ? 'vs-dark' : 'vs-light'}
                                     options={MONACO_OPTIONS}
                                 />
