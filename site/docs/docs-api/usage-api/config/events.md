@@ -527,19 +527,17 @@ Where the `changesUrl` is the `changesUrl` from [the JSON object](../callback-ha
 
 ## onRequestInsertImage
 
-The function called when the user is trying to insert an image by clicking the *Image from Storage* button.
-
-**Parameters**:
-
-| Parameter    | Type   | Description                                                                                           |
-| ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
-| event.data.c | `string` | The type of image insertion. Can be: `add`, `change`, `fill`, `watermark`, or `slide`. |
+The function called when the user is trying to insert an image by clicking the *Image from Storage* button. To insert an image, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
 
 :::note
 If this event is not declared, the *Image from Storage* button will not be displayed.
 :::
 
-To insert an image into the file, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
+**Parameters**:
+
+| Parameter    | Type   | Description                                                                                           |
+| ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
+| event.data.c | `"add"` \| `"change"` \| `"fill"` \| `"watermark"` \| `"slide"` | The type of image insertion. |
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
@@ -584,16 +582,18 @@ Starting from version 7.5, please use [onRequestSelectSpreadsheet](#onrequestsel
 
 ## onRequestOpen
 
-The function called when the user is trying to open an external link by clicking the *Open source* button. If the method is not declared, this button will not be displayed.
+The function called when the user is trying to open an external link by clicking the *Open source* button. To open the editor with the external file referenced by the `path` or `referenceData` parameters in a new tab, pass a link to this tab by calling the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method with the `path` and `windowName` parameters.
 
-To open the editor with the external file referenced by the `path` or `referenceData` parameters in a new tab, you must pass a link to this tab by calling the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method with the `path` and `windowName` parameters.
+:::note
+If this event is not declared, the *Open source* button will not be displayed.
+:::
 
 **Parameters**:
 
 | Parameter                | Type   | Description                    |
 | ------------------------ | ------ | ------------------------------ |
 | event.data.path          | `string` | The file path.                 |
-| event.data.referenceData | `object` | The unique file data.          |
+| event.data.referenceData | `object` | The unique file data from the source file.          |
 | event.data.windowName    | `string` | The new browser tab name.      |
 
 ![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
@@ -621,7 +621,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceData
 
-The function called when the user is trying to refresh data inserted from the external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab.
+The function called when the user is trying to refresh data inserted from the external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab. To refresh data, call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function.
+
+:::note
+- If this event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
+- To send the data to the `setReferenceData` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` or `link` parameters are used.
+:::
+
+![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
+
+![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
 **Parameters**:
 
@@ -629,19 +638,7 @@ The function called when the user is trying to refresh data inserted from the ex
 | ------------------------ | ------ | ------------------------------------------- |
 | event.data.referenceData | `object` | The unique file data from the source file.  |
 | event.data.path          | `string` | The file path or name.                      |
-| event.data.link          | `string` | The file URL.                               |
-
-To refresh data by a link to a file which is specified with the event parameters, you must call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. If the event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
-
-:::note
-To send the data to the `setReferenceData` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` or `link` parameters are used.
-:::
-
-![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
-
-![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
-
-This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function. The URL of the source spreadsheet which is used in the `IMPORTRANGE` parameters is passed to the `onRequestReferenceData` event in the `event.data.link` parameter.
+| event.data.link          | `string` | The URL of the external file.               |
 
 **Example**:
 
@@ -676,20 +673,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceSource
 
-The function called when the user is trying to change a source of the external data by clicking the *Change source* button.
+The function called when the user is trying to change a source of the external data by clicking the *Change source* button. To change the source, call the [setReferenceSource](../methods.md#setreferencesource) method. When calling this method, the `token` must be added to validate the parameters.
+
+:::note
+- If this event is not declared, the *Change source* button will not be displayed.
+- To send the data to the `setReferenceSource` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` parameter is used.
+:::
 
 **Parameters**:
 
 | Parameter                | Type   | Description              |
 | ------------------------ | ------ | ------------------------ |
-| event.data.referenceData | `object` | The unique file data.    |
+| event.data.referenceData | `object` | The unique file data from the source file.    |
 | event.data.path          | `string` | The file path or name.   |
-
-When the button is clicked, you must call the [setReferenceSource](../methods.md#setreferencesource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
-
-:::note
-To send the data to the `setReferenceSource` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` parameter is used.
-:::
 
 ![Change source](/assets/images/editor/change-source.png#gh-light-mode-only)![Change source](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
@@ -765,6 +761,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the user is trying to rename the file by clicking the *Rename...* button.
 
+:::note
+If this event is not declared, the *Rename...* button will not be displayed.
+:::
+
 **Parameters**:
 
 | Parameter  | Type   | Description             |
@@ -794,7 +794,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestRestore
 
-The function called when the user is trying to restore the file version by clicking the *Restore* button in the version history.
+The function called when the user is trying to restore the file version by clicking the *Restore* button in the version history. When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again.
+
+:::note
+If this event is not declared, the *Restore* button will not be displayed. The *Restore* button is displayed for the previous document versions only and hidden for the current one.
+:::
 
 **Parameters**:
 
@@ -803,12 +807,6 @@ The function called when the user is trying to restore the file version by click
 | event.data.version  | `number` | The document version number.                                                                                                  |
 | event.data.url      | `string`  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
 | event.data.fileType | `string`  | The type of the document specified with the `url` link.                                                                       |
-
-When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again. If the method is not declared the *Restore* button will not be displayed.
-
-:::note
-The *Restore* button is displayed for the previous document versions only and hidden for the current one.
-:::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
@@ -863,7 +861,11 @@ Where the `serverVersion` is the `serverVersion` from [the history object](../ca
 
 ## onRequestSaveAs
 
-The function called when the user is trying to save file by clicking *Save Copy as...* button. If the method is not declared the *Save Copy as...* button will not be displayed.
+The function called when the user is trying to save a file by clicking the *Save Copy as...* button.
+
+:::note
+If this event is not declared, the *Save Copy as...* button will not be displayed.
+:::
 
 **Parameters**:
 
@@ -896,15 +898,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectDocument
 
-The function called when the user is trying to select a document for comparing, combining, or inserting text.
+The function called when the user is trying to select a document for comparing, combining, or inserting text. To select a document, call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
 
 **Parameters**:
 
 | Parameter    | Type   | Description                                                                          |
 | ------------ | ------ | ------------------------------------------------------------------------------------ |
-| event.data.c | `string` | The type of document selection. Can be: `compare`, `combine`, or `insert-text`. |
-
-To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
+| event.data.c | `"compare"` \| `"combine"` \| `"insert-text"` | The type of document selection. |
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
@@ -935,15 +935,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectSpreadsheet
 
-The function called when the user is trying to select recipients data by clicking the *Mail merge* button.
+The function called when the user is trying to select recipients data by clicking the *Mail merge* button. To select recipient data, call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters.
 
 **Parameters**:
 
 | Parameter    | Type   | Description                                                       |
 | ------------ | ------ | ----------------------------------------------------------------- |
-| event.data.c | `string` | The type of spreadsheet selection. Can be: `mailmerge`.           |
-
-To select recipient data, you must call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters. If the method is not declared, the *Mail merge* button will become faded and unclickable.
+| event.data.c | `"mailmerge"` | The type of spreadsheet selection. |
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png#gh-light-mode-only)![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.dark.png#gh-dark-mode-only)
 

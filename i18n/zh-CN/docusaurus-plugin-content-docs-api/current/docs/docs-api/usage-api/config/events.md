@@ -527,19 +527,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
  
 ## onRequestInsertImage
 
-当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。
-
-**参数**：
-
-| 参数         | 类型   | 描述                                                                                    |
-| ------------ | ------ | --------------------------------------------------------------------------------------- |
-| event.data.c | `string` | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
+当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。要插入图像，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
 
 :::note
 如果未声明此事件，则不会显示*从存储中获取图像*按钮。
 :::
 
-要将图像插入文件，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
+**参数**：
+
+| 参数         | 类型   | 描述                                                                                    |
+| ------------ | ------ | --------------------------------------------------------------------------------------- |
+| event.data.c | `"add"` \| `"change"` \| `"fill"` \| `"watermark"` \| `"slide"` | 图像插入的类型。 |
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
@@ -584,16 +582,18 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestOpen
 
-当用户尝试通过单击*打开源*按钮打开外部链接时调用的函数。如果未声明该方法，则不会显示此按钮。
+当用户尝试通过单击*打开源*按钮打开外部链接时调用的函数。要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，请通过调用带有 `path` 和 `windowName` 参数的 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) 方法来传递指向此选项卡的链接。
 
-要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，您必须通过调用带有 `path` 和 `windowName` 参数的方法 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open), 来传递指向此选项卡的链接。
+:::note
+如果未声明此事件，则不会显示*打开源*按钮。
+:::
 
 **参数**：
 
 | 参数                     | 类型   | 描述                   |
 | ------------------------ | ------ | ---------------------- |
 | event.data.path          | `string` | 文件路径。             |
-| event.data.referenceData | `object` | 唯一文件数据。         |
+| event.data.referenceData | `object` | 来自源文件的唯一文件数据。         |
 | event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
 <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
@@ -621,7 +621,16 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceData
 
-当用户尝试通过单击 *数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。
+当用户尝试通过单击*数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。要刷新数据，请调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) 函数时，也会触发此事件。
+
+:::note
+- 如果未声明此事件，则不会显示*粘贴链接*和*更新值*按钮。
+- 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
+:::
+
+<img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
+
+<img alt="Update values" src="/assets/images/editor/update-values.png" width="400px" />
 
 **参数**：
 
@@ -629,19 +638,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ------------------------ | ------ | -------------------------------- |
 | event.data.referenceData | `object` | 来自源文件的唯一文件数据。       |
 | event.data.path          | `string` | 文件路径或名称。                 |
-| event.data.link          | `string` | 文件 URL。                       |
-
-要通过事件参数指定的文件链接刷新数据，您必须调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。 如果未声明该事件，则不会显示*粘贴链接*和*更新值*按钮。
-
-:::note
-要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
-:::
-
-<img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
-
-<img alt="Update values" src="/assets/images/editor/update-values.png" width="400px" />
-
-当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) 函数时，也会触发此事件。 `IMPORTRANGE` 参数中使用的源电子表格的 URL 被传递给 `event.data.link` 参数中的 `onRequestReferenceData` 事件。
+| event.data.link          | `string` | 外部文件的 URL。                 |
 
 **示例**:
 
@@ -676,20 +673,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceSource
 
-当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。
+当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。要更改来源，请调用 [setReferenceSource](../methods.md#setreferencesource) 方法。调用该方法时，必须添加 `token` 来验证参数。
+
+:::note
+- 如果未声明此事件，则不会显示*更改源*按钮。
+- 要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
+:::
 
 **参数**：
 
 | 参数                     | 类型   | 描述             |
 | ------------------------ | ------ | ---------------- |
-| event.data.referenceData | `object` | 唯一文件数据。   |
+| event.data.referenceData | `object` | 来自源文件的唯一文件数据。   |
 | event.data.path          | `string` | 文件路径或名称。 |
-
-单击该按钮时，必须调用 [setReferenceSource](../methods.md#setreferencesource) 方法来更改外部数据的来源。调用该方法时，必须添加token来验证参数。如果未声明事件，则不会显示*更改源*按钮。
-
-:::note
-要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
-:::
 
 <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
 
@@ -765,6 +761,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击 *重命名...* 按钮重命名文件时调用的函数。
 
+:::note
+如果未声明此事件，则不会显示*重命名...*按钮。
+:::
+
 **参数**：
 
 | 参数       | 类型   | 描述             |
@@ -794,7 +794,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestRestore
 
-当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。
+当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。
+
+:::note
+如果未声明此事件，则不会显示*恢复*按钮。*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。
+:::
 
 **参数**：
 
@@ -803,12 +807,6 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | event.data.version  | `number` | 文档版本号。                                                                           |
 | event.data.url      | `string`  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
 | event.data.fileType | `string`  | 由 `url` 链接指定的文档类型。                                                          |
-
-调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
-
-:::note
-*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。
-:::
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
@@ -863,7 +861,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSaveAs
 
-当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。如果未声明该方法，将不会显示*另存为...*按钮。
+当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。
+
+:::note
+如果未声明此事件，则不会显示*另存为...*按钮。
+:::
 
 **参数**：
 
@@ -896,15 +898,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectDocument
 
-当用户尝试选择文档以进行比较、合并或插入文本时，将调用该函数。
+当用户尝试选择文档以进行比较、合并或插入文本时，将调用该函数。要选择文档，请调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
 
 **参数**：
 
 | 参数         | 类型   | 描述                                                                    |
 | ------------ | ------ | ----------------------------------------------------------------------- |
-| event.data.c | `string` | 文档选择类型。可以是：`compare`、`combine` 或 `insert-text`。 |
-
-要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
+| event.data.c | `"compare"` \| `"combine"` \| `"insert-text"` | 文档选择类型。 |
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
@@ -935,15 +935,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectSpreadsheet
 
-当用户尝试通过单击“邮件合并”按钮选择收件人数据时调用的函数。
+当用户尝试通过单击”邮件合并”按钮选择收件人数据时调用的函数。要选择收件人数据，请调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。
 
 **参数**：
 
 | 参数         | 类型   | 描述                                              |
 | ------------ | ------ | ------------------------------------------------- |
-| event.data.c | `string` | 电子表格选择的类型。可以是：`mailmerge`。   |
-
-要选择收件人数据，您必须调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则*邮件合并*按钮将变淡且无法单击。
+| event.data.c | `”mailmerge”` | 电子表格选择的类型。 |
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
 

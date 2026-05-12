@@ -210,19 +210,17 @@ interface RequestHistoryDataEvent {
 interface RequestRestoreEvent {
     data?: {
         /**
-         * The type of the document specified with the link.
+         * The document version number.
          */
-        fileType?: FileType;
+        version?: number;
         /**
-         * The document link from the history object.
-         * @note If it is called for the document changes from the history object.
+         * The document link from the history object. Sent if called for the document changes.
          */
         url?: string;
         /**
-         * The document version number.
-         * @note If it is called for the document version from the history.
+         * The type of the document specified with the `url` link.
          */
-        version?: number;
+        fileType?: FileType;
     };
 };
 
@@ -295,7 +293,7 @@ interface RequestSaveAsEvent {
 
 interface RequestRenameEvent {
     /**
-     * The new title of the document.
+     * The new document title.
      */
     data?: string;
 };
@@ -361,7 +359,7 @@ interface RequestInsertImageEvent {
         /**
          * The type of image insertion.
          */
-        c?: string;
+        c?: "add" | "change" | "fill" | "watermark" | "slide";
     };
 };
 
@@ -385,7 +383,7 @@ interface RequestReferenceDataEvent {
 interface RequestOpenEvent {
     data?: {
         /**
-         * The file path or name of the external file.
+         * The file path.
          */
         path?: string;
         /**
@@ -393,7 +391,7 @@ interface RequestOpenEvent {
          */
         referenceData?: ReferenceData;
         /**
-         * The name of the new browser tab.
+         * The new browser tab name.
          */
         windowName?: string;
     };
@@ -402,9 +400,9 @@ interface RequestOpenEvent {
 interface RequestSelectDocumentEvent {
     data?: {
         /**
-         * The type of document selection (e.g., "compare", "combine", "insert").
+         * The type of document selection.
          */
-        c?: string;
+        c?: "compare" | "combine" | "insert-text";
     };
 };
 
@@ -413,7 +411,7 @@ interface RequestSelectSpreadsheetEvent {
         /**
          * The type of spreadsheet selection.
          */
-        c?: string;
+        c?: "mailmerge";
     };
 };
 
@@ -2611,13 +2609,10 @@ interface EventsNormal extends EventsBase {
     onRequestHistoryData?: (event: RequestHistoryDataEvent) => void;
 
     /**
-     * The function called when the user is trying to **restore the file version** by clicking the Restore button in the version history.
+     * The function called when the user is trying to restore the file version by clicking the *Restore* button in the version history. When the function is called, you must call the `refreshHistory` method to initialize version history again.
      *
      * @param event
-     *
-     * @note When the function is called, you must call the `refreshHistory` method to initialize version history again. If this method is not declared, the **Restore** button will not be displayed.
-     *
-     * @note The Restore button is displayed for the previous document versions only and hidden for the current one.
+     * @note If this event is not declared, the *Restore* button will not be displayed. The *Restore* button is displayed for the previous document versions only and hidden for the current one.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2708,10 +2703,10 @@ interface EventsNormal extends EventsBase {
     onDownloadAs?: (event: DownloadAsEvent) => void;
 
     /**
-     * The function called when the user is trying to **save file** by clicking **Save Copy as...** button.
+     * The function called when the user is trying to save a file by clicking the *Save Copy as...* button.
      *
      * @param event
-     * @note If the method is not declared, the **Save Copy as...** button will not be displayed.
+     * @note If this event is not declared, the *Save Copy as...* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2734,7 +2729,9 @@ interface EventsNormal extends EventsBase {
     onCollaborativeChanges?: () => void;
 
     /**
-     * The function called when the user is trying to rename the file by clicking the **Rename... button**.
+     * The function called when the user is trying to rename the file by clicking the *Rename...* button.
+     *
+     * @note If this event is not declared, the *Rename...* button will not be displayed.
      *
      * @param event
      *
@@ -2863,10 +2860,10 @@ interface EventsNormal extends EventsBase {
     onRequestSendNotify?: (event: RequestSendNotifyEvent) => void;
 
     /**
-     * The function called when the user is trying to insert an image by clicking the **Image from Storage** button.
+     * The function called when the user is trying to insert an image by clicking the *Image from Storage* button. To insert an image, call the `insertImage` method with the specified command. When calling this method, the `token` must be added to validate the parameters.
      *
      * @param event
-     * @note To insert an image into the file, you must call the `insertImage` method with the specified command. When calling this method, the `token` must be added to validate the parameters. If the method is not declared, the Image from Storage button will not be displayed.
+     * @note If this event is not declared, the *Image from Storage* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2942,10 +2939,10 @@ interface EventsNormal extends EventsBase {
     onRequestCreateNew?: () => void;
 
     /**
-     * The function called when the user is trying to refresh data inserted from an external file by clicking the **Update values** button in the **External links** dialog box of the **Data** tab.
+     * The function called when the user is trying to refresh data inserted from an external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab. To refresh data, call the `setReferenceData` method. When calling this method, the `token` must be added to validate the parameters. This event also fires when the user runs the `IMPORTRANGE` function.
      *
      * @param event
-     * @note To refresh data, you must call the `setReferenceData` method. The token must be added to validate the parameters. If this event is not declared, the **Paste link** and **Update values** buttons will not be displayed. This event also fires when the user runs the `IMPORTRANGE` function.
+     * @note If this event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
      * @note To send the data to the `setReferenceData` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` or `link` parameters are used.
      *
      * @forType `desktop` | `mobile`
@@ -2974,12 +2971,10 @@ interface EventsNormal extends EventsBase {
     onRequestReferenceData?: (event: RequestReferenceDataEvent) => void;
 
     /**
-     * The function called when the user is trying to open an external link by clicking the **Open source** button.
+     * The function called when the user is trying to open an external link by clicking the *Open source* button. To open the editor with the external file referenced by the `path` or `referenceData` parameters in a new tab, pass a link to this tab by calling the `window.open` method with the `path` and `windowName` parameters.
      *
      * @param event
-     *
-     * @note If the method is not declared, the Open source button will not be displayed.
-     * @note To open the editor with the external file referenced by the `path` or `referenceData` parameters in a new tab, you must pass a link to this tab by calling the `window.open` method with the `path` and `windowName` parameters.
+     * @note If this event is not declared, the *Open source* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2999,10 +2994,9 @@ interface EventsNormal extends EventsBase {
     onRequestOpen?: (event: RequestOpenEvent) => void;
 
     /**
-     * The function called when the user is trying to select a document for comparing, combining, or inserting text.
+     * The function called when the user is trying to select a document for comparing, combining, or inserting text. To select a document, call the `setRequestedDocument` method. When calling this method, the `token` must be added to validate the parameters.
      *
      * @param event
-     * @note To select a document for comparing, combining, or inserting text, you must call the `setRequestedDocument` method.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -3025,7 +3019,6 @@ interface EventsNormal extends EventsBase {
      *
      * @param event
      * @note To select recipient data, you must call the `setRequestedSpreadsheet` method. When calling this method, the token must be added to validate the parameters.
-     * @note If the method is not declared, the `Mail merge` button will become faded and unclickable.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -3044,13 +3037,20 @@ interface EventsNormal extends EventsBase {
     onRequestSelectSpreadsheet?: (event: RequestSelectSpreadsheetEvent) => void;
 
     /**
-     * The function called when the user is trying to change a source of the external data by clicking the **Change source** button.
+     * The function called when the user is trying to select recipients data by clicking the *Mail merge* button.
+     *
+     * @deprecated Starting from version 7.5, please use `onRequestSelectSpreadsheet` instead.
+     * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequestmailmergerecipients
+     */
+    onRequestMailMergeRecipients?: () => void;
+
+    /**
+     * The function called when the user is trying to change a source of the external data by clicking the *Change source* button. To change the source, call the `setReferenceSource` method. When calling this method, the `token` must be added to validate the parameters.
      *
      * @param event
-     *
-     * @note When the button is clicked, you must call the `setReferenceSource` method to change a source of the external data. When calling this method, the token must be added to validate the parameters.
-     * @note To send the data to the `setReferenceSource` method, it is recommended to search for the file by the referenceData parameter first. If there is no such a field or a file cannot be found, then the path parameter is used.
-     * @note If the event is not declared, the Change source button will not be displayed.
+     * @note If this event is not declared, the *Change source* button will not be displayed.
+     * @note To send the data to the `setReferenceSource` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` parameter is used.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -3106,7 +3106,7 @@ interface EventsNormal extends EventsBase {
      * - When the editor is opened with a key that was already used to successfully save a file.
      * - When the editor reconnects to the server after losing the connection and interrupting the editing session.
      *
-     * @note In these cases, the `refreshFile` method is called and the file version is updated without reloading the editor.
+     * In these cases, the `refreshFile` method is called and the file version is updated without reloading the editor.
      *
      * @forType `desktop` | `mobile`
      * @example
