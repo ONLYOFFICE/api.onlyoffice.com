@@ -227,10 +227,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型    | 描述                     |
 | ------------------- | ------- | ------------------------ |
-| event.data.title    | `string`  | 文档的名称。             |
+| event.data.title    | `string`  | 文档标题。               |
 | event.data.favorite | `boolean` | *收藏*图标高亮状态。     |
 
-当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)如果未声明该方法，则*收藏*图标不会更改。
+:::note
+当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)。如果未声明该方法，则*收藏*图标不会更改。
+:::
 
 **示例**:
 
@@ -252,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onOutdatedVersion
 
-显示 [错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时，该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 `document.key` 重新初始化编辑器。
+显示 [错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时。该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 `document.key` 重新初始化编辑器。
 
 :::danger[Deprecated]
 自 8.3 版起已弃用，请改用 [onRequestRefreshFile](#onrequestrefreshfile)。
@@ -298,7 +300,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestClose
 
-当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。如果未声明该方法，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
+当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。
+
+:::note
+如果未声明此事件，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
+:::
 
 **示例**:
 
@@ -334,7 +340,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCreateNew
 
-当用户试图通过单击*新建*按钮来创建文档时调用的函数。此方法用于代替 [createUrl](./editor/editor.md#createurl) 字段。如果未声明该方法且未指定 `createUrl`，则不会显示*新建*按钮。
+当用户试图通过单击*新建*按钮来创建新文档时调用的函数。
+
+:::note
+此事件用于代替 [createUrl](./editor/editor.md#createurl) 字段。如果未声明此事件且未指定 `createUrl`，则不会显示*新建*按钮。
+:::
 
 **示例**:
 
@@ -355,10 +365,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestEditRights
 
-当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 `view` 或 `fillForms` 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
+当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。调用该函数时，必须在编辑模式下再次初始化编辑器。
 
 :::note
-当 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true` 时，此事件是必需的，以便用户可以切换到编辑模式。
+如果 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true`，则必须声明此事件才能显示*编辑当前文件*按钮。
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
@@ -385,9 +395,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistory
 
-当用户试图通过单击*版本历史*按钮来显示文档版本历史时调用的函数。
+当用户试图通过单击*版本历史*按钮来显示文档版本历史时调用的函数。要显示文档版本历史记录，请调用 [refreshHistory](../methods.md#refreshhistory) 方法。
 
-要显示文档版本历史记录，您必须调用 [refreshHistory](../methods.md#refreshhistory) 方法。如果未声明该方法和 [onRequestHistoryData](#onrequesthistorydata) 方法，则不会显示*版本历史*按钮。
+:::note
+如果未声明此事件和 [onRequestHistoryData](#onrequesthistorydata) 事件，则不会显示*版本历史*按钮。
+:::
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
@@ -439,7 +451,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistoryClose
 
-当用户试图通过单击*关闭历史记录*按钮查看文档版本历史记录返回文档时调用的函数。调用该函数时，编辑器必须再次初始化，处于编辑模式。如果未声明该方法，则不会显示*关闭历史记录*按钮。
+当用户试图通过单击*关闭历史记录*按钮查看文档版本历史记录返回文档时调用的函数。调用该函数时，编辑器必须再次初始化，处于编辑模式。
+
+:::note
+如果未声明此事件，则不会显示*关闭历史记录*按钮。
+:::
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
@@ -462,15 +478,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistoryData
 
-当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。
+当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。要显示更改，请调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加 token 来验证参数。
+
+:::note
+如果未声明此事件和 [onRequestHistory](#onrequesthistory) 事件，则不会显示*版本历史*按钮。
+:::
 
 **参数**：
 
 | 参数       | 类型    | 描述           |
 | ---------- | ------- | -------------- |
 | event.data | `number` | 文档版本号。   |
-
-要显示与特定文档版本相对应的更改，您必须调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加token来验证参数。如果该方法和 [onRequestHistory](#onrequesthistory) 方法未声明，则不会显示版本历史记录按钮。
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 

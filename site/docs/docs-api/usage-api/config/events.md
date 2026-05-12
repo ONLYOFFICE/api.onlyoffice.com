@@ -227,10 +227,12 @@ The function called when the meta information of the document is changed via the
 
 | Parameter           | Type    | Description                                   |
 | ------------------- | ------- | --------------------------------------------- |
-| event.data.title    | `string`  | The name of the document.                     |
+| event.data.title    | `string`  | The document title.                           |
 | event.data.favorite | `boolean` | The *Favorite* icon highlighting state.       |
 
+:::note
 When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
+:::
 
 **Example**:
 
@@ -252,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onOutdatedVersion
 
-The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new `document.key`.
+The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value. This key was used to edit the previous document version and was successfully saved. When this event is called, the editor must be reinitialized with a new `document.key`.
 
 :::danger[Deprecated]
 Starting from version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
@@ -298,7 +300,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestClose
 
-The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.
+The function called when the user is trying to end the work with the editor and close it by clicking the cross button.
+
+:::note
+If this event is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.
+:::
 
 **Example**:
 
@@ -323,7 +329,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCompareFile
 
-The function called when the user is trying to select document for comparing by clicking the *Document from Storage* button.
+The function called when the user is trying to select a document for comparing by clicking the *Document from Storage* button.
 
 :::note
 This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
@@ -334,7 +340,11 @@ Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselect
 
 ## onRequestCreateNew
 
-The function called when the user is trying to create document by clicking the *Create New* button. This method is used instead of the [createUrl](./editor/editor.md#createurl) field. If the method is not declared and the `createUrl` is not specified the *Create New* button will not be displayed.
+The function called when the user is trying to create a new document by clicking the *Create New* button.
+
+:::note
+This event is used instead of the [createUrl](./editor/editor.md#createurl) field. If this event is not declared and `createUrl` is not specified, the *Create New* button will not be displayed.
+:::
 
 **Example**:
 
@@ -355,10 +365,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestEditRights
 
-The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. This event also fires when the user clicks the *Edit PDF* button in the forms that are open in the `view` or `fillForms` mode. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Edit current file* and *Edit PDF* buttons will not be displayed.
+The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. When the function is called, the editor must be initialized again, in editing mode.
 
 :::note
-This event is required when [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, so that the user can switch to the editing mode.
+If [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, this event must be declared for the *Edit current file* button to be displayed.
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png#gh-light-mode-only)![onRequestEditRights](/assets/images/editor/onRequestEditRights.dark.png#gh-dark-mode-only)
@@ -385,9 +395,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistory
 
-The function called when the user is trying to show the document version history by clicking the *Version History* button.
+The function called when the user is trying to show the document version history by clicking the *Version History* button. To show the document version history, call the [refreshHistory](../methods.md#refreshhistory) method.
 
-To show the document version history you must call the [refreshHistory](../methods.md#refreshhistory) method. If the method and the [onRequestHistoryData](#onrequesthistorydata) method are not declared the *Version History* button will not be displayed.
+:::note
+If this event and the [onRequestHistoryData](#onrequesthistorydata) event are not declared, the *Version History* button will not be displayed.
+:::
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
@@ -439,7 +451,11 @@ Where the `serverVersion` is the `serverVersion` from [the history object](../ca
 
 ## onRequestHistoryClose
 
-The function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Close History* button will not be displayed.
+The function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode.
+
+:::note
+If this event is not declared, the *Close History* button will not be displayed.
+:::
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
@@ -462,15 +478,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistoryData
 
-The function called when the user is trying to click the specific document version in the document version history.
+The function called when the user is trying to click a specific document version in the document version history. To show the changes, call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters.
+
+:::note
+If this event and the [onRequestHistory](#onrequesthistory) event are not declared, the *Version History* button will not be displayed.
+:::
 
 **Parameters**:
 
 | Parameter  | Type    | Description                  |
 | ---------- | ------- | ---------------------------- |
 | event.data | `number` | The document version number. |
-
-To show the changes corresponding to the specific document version you must call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onrequesthistory) method are not declared the *Version History* button will not be displayed.
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 

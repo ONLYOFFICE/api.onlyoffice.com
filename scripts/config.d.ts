@@ -303,11 +303,11 @@ interface RequestRenameEvent {
 interface MetaChangeEvent {
     data?: {
         /**
-         * The name/title of the document.
+         * The document title.
          */
         title?: string;
         /**
-         * The Favorite icon highlighting state.
+         * The *Favorite* icon highlighting state.
          */
         favorite?: boolean;
     };
@@ -2508,6 +2508,14 @@ interface EventsBase {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onwarning
      */
     onWarning?: (event: WarningEvent) => void;
+
+    /**
+     * The function called when all plugins are loaded and can be used.
+     *
+     * @forType `desktop` | `mobile` | `embedded`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onpluginsready
+     */
+    onPluginsReady?: () => void;
 }
 
 interface EventsNormal extends EventsBase {
@@ -2521,12 +2529,9 @@ interface EventsNormal extends EventsBase {
     onDocumentStateChange?: (event: DocumentStateChangeEvent) => void;
 
     /**
-     * The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the **Edit current file** button.
-     * This event also fires when the user clicks the **Edit PDF** button in forms that are open in the view or **fillForms** mode.
-     * If the method is not declared, the **Edit current file** and **Edit PDF** buttons will not be displayed.
+     * The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. When the function is called, the editor must be initialized again, in editing mode.
      *
-     * @note When the function is called, the editor must be initialized again, in editing mode.
-     * @note This parameter is obligatory when the `editorConfig.mode` parameter is set to `view` and the permission to edit the document (`document.permissions`) is `true`.
+     * @note If `editorConfig.mode` is set to `view` and `document.permissions.edit` is set to `true`, this event must be declared for the *Edit current file* button to be displayed.
      *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequesteditrights
@@ -2534,10 +2539,9 @@ interface EventsNormal extends EventsBase {
     onRequestEditRights?: () => void;
 
     /**
-     * The function called when the user is trying to show the document **version history** by clicking the **Version History** button.
+     * The function called when the user is trying to show the document version history by clicking the *Version History* button. To show the document version history, call the `refreshHistory` method.
      *
-     * @note To show the document version history you must call the `refreshHistory` method.
-     * @note If this method and the `onRequestHistoryData` method are not declared, the **Version History** button will not be displayed.
+     * @note If this event and the `onRequestHistoryData` event are not declared, the *Version History* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2576,10 +2580,10 @@ interface EventsNormal extends EventsBase {
     onRequestHistory?: () => void;
 
     /**
-     * The function called when the user is trying to click a specific document version in the **document version history**.
+     * The function called when the user is trying to click a specific document version in the document version history. To show the changes, call the `setHistoryData` method. When calling this method, the `token` must be added to validate the parameters.
      *
      * @param event
-     * @note To show the changes corresponding to the specific document version, you must call the `setHistoryData` method. When calling this method, the `token` must be added to validate the parameters. If this method and the `onRequestHistory` method are not declared, the **Version History** button will not be displayed.
+     * @note If this event and the `onRequestHistory` event are not declared, the *Version History* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2656,9 +2660,9 @@ interface EventsNormal extends EventsBase {
     onRequestRestore?: (event: RequestRestoreEvent) => void;
 
     /**
-     * The function called when the user is trying to go back to the document from viewing the **document version history** by clicking the Close History button.
+     * The function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode.
      *
-     * @note When the function is called, the editor must be initialized again, in editing mode. If this method is not declared, the **Close History** button will not be displayed.
+     * @note If this event is not declared, the *Close History* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequesthistoryclose
@@ -2675,7 +2679,7 @@ interface EventsNormal extends EventsBase {
     onInfo?: (event: InfoEvent) => void;
 
     /**
-     * The function called after the error is shown, when the document is opened for editing with the **old document.key value**.
+     * The function called after the error is shown, when the document is opened for editing with the old `document.key` value.
      * This key was used to edit the previous document version and was successfully saved.
      * When this event is called, the editor must be reinitialized with a new `document.key`.
      *
@@ -2746,10 +2750,10 @@ interface EventsNormal extends EventsBase {
     onRequestRename?: (event: RequestRenameEvent) => void;
 
     /**
-     * The function called when the **meta information of the document** is changed via the `meta` command.
+     * The function called when the meta information of the document is changed via the `meta` command.
      *
      * @param event
-     * @note When the user clicks the Favorite icon, the `setFavorite` method is called to update the information about the Favorite icon highlighting state. If the method is not declared, the Favorite icon will not be changed.
+     * @note When the user clicks the *Favorite* icon, the `setFavorite` method is called to update the information about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2764,9 +2768,9 @@ interface EventsNormal extends EventsBase {
     onMetaChange?: (event: MetaChangeEvent) => void;
 
     /**
-     * The function called when the user is trying to **end the work with the editor and close it** by clicking the cross button.
+     * The function called when the user is trying to end the work with the editor and close it by clicking the cross button.
      *
-     * @note If the method is not declared, the `editorConfig.customization.close` parameter will not be available, and the cross button will not be displayed.
+     * @note If this event is not declared, the `editorConfig.customization.close` parameter will not be available, and the cross button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2889,7 +2893,7 @@ interface EventsNormal extends EventsBase {
     onRequestInsertImage?: (event: RequestInsertImageEvent) => void;
 
     /**
-     * The function called when the user is trying to **select a document for comparing** by clicking the Document from Storage button.
+     * The function called when the user is trying to select a document for comparing by clicking the *Document from Storage* button.
      *
      * @note This event is available only for **ONLYOFFICE Docs Enterprise** and **ONLYOFFICE Docs Developer**.
      * @deprecated Starting from version 7.5, please use `onRequestSelectDocument` instead.
@@ -2928,9 +2932,9 @@ interface EventsNormal extends EventsBase {
     onRequestSharingSettings?: () => void;
 
     /**
-     * The function called when the user is trying to create a new document by clicking the **Create New** button.
+     * The function called when the user is trying to create a new document by clicking the *Create New* button.
      *
-     * @note This method is used instead of the `createUrl` field. If this method is not declared and `createUrl` is not specified, the Create New button will not be displayed.
+     * @note This event is used instead of the `createUrl` field. If this event is not declared and `createUrl` is not specified, the *Create New* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequestcreatenew
