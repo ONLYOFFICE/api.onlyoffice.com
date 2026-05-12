@@ -9,57 +9,33 @@ tags: ["Docs", "Macros", "Documents"]
 Automatically sorts table rows alphabetically or numerically based on the selected column.
 
 :::tip
-Please select the entire column by which you want the table to be sorted (alphabetically or numerically).
+Please select the entire column by which you want the table to be sorted.
 The macro will only work correctly if the whole column is selected.
 :::
 
 ```ts
 (function() {
-    let isFirstRowIncluded = true;  // Set to false to exclude the first row (headers) from sorting
+    let isFirstRowIncluded = false;  // Set to true to include the header row in sorting
 
     let doc = Api.GetDocument();
     let pageIndex = doc.GetCurrentPage();
     let tables = doc.GetAllTablesOnPage(pageIndex);
 
-    // Get the range of the user's selection in the document
     let selectedRange = doc.GetRangeBySelect();
     let selectedStart = selectedRange.GetStartPos();
     let selectedEnd = selectedRange.GetEndPos();
- 
-    // Helper function: Extract the prefix of a string to determine if it's numeric, alphabetic, or other
-    function extractPrefix(s) {
-        let numberMatch = s.match(/^(-?\d+)/); // Extract leading number from string
-        if (numberMatch) {
-            return { type: 'number', value: parseInt(numberMatch[0]) };
-        }
-        let alphaMatch = s.match(/^([a-zA-Z]+)/); // Extract leading letters from string
-        if (alphaMatch) {
-            return { type: 'alpha', value: alphaMatch[0] };
-        }
-        return { type: 'other', value: s };
-    }
 
-    // Helper function: Compare two strings based on their extracted prefixes
-    function compareStrings(a, b) {
-        let prefixA = extractPrefix(a);
-        let prefixB = extractPrefix(b);
-    
-        if (prefixA.type === 'number' && prefixB.type === 'number') {
-            if (prefixA.value !== prefixB.value) return prefixA.value - prefixB.value;
-            return a.length - b.length;
+    // Compares two cell values: numerically if both are numbers, alphabetically otherwise
+    function compareCells(a, b) {
+        let numA = parseFloat(a);
+        let numB = parseFloat(b);
+        if (!isNaN(numA) && !isNaN(numB)) {
+            return numA - numB;
         }
-    
-        if (prefixA.type === 'number') return -1;
-        if (prefixB.type === 'number') return 1;
-    
-        if (prefixA.type === 'alpha' && prefixB.type === 'alpha') {
-            return prefixA.value.localeCompare(prefixB.value);
-        }
-    
         return a.localeCompare(b);
     }
 
-    // Helper function: Sort table rows by values in a specific column, starting from a given row index
+    // Collects and sorts rows by the specified column
     function sortRowsByColumn(table, colIndex, startRow) {
         let rowsArr = [];
         let rowNum = table.GetRowsCount();
@@ -70,25 +46,27 @@ The macro will only work correctly if the whole column is selected.
             rowsArr.push({ row, cellVal });
         }
         
-        rowsArr.sort((a, b) => compareStrings(a.cellVal, b.cellVal));
-
+        rowsArr.sort((a, b) => compareCells(a.cellVal, b.cellVal));
         return rowsArr.map(item => item.row);
     }
 
-    // Helper function: Find the index of the selected column based on the selection's start position
+    // Finds the index of the column that contains the selection start position
     function findSelectedColIndex(table, selectedStart) {
+        let rowNum = table.GetRowsCount();
         let colNum = table.GetRow(0).GetCellsCount();
-        for (let colIndex = 0; colIndex < colNum; colIndex++) {
-            let cell = table.GetCell(0, colIndex);
-            let cellRange = cell.GetContent().GetRange().GetStartPos();
-            if (cellRange == selectedStart) {
-                return colIndex;
+        for (let rowIndex = 0; rowIndex < rowNum; rowIndex++) {
+            for (let colIndex = 0; colIndex < colNum; colIndex++) {
+                let cell = table.GetCell(rowIndex, colIndex);
+                let cellStart = cell.GetContent().GetRange().GetStartPos();
+                let cellEnd = cell.GetContent().GetRange().GetEndPos();
+                if (selectedStart >= cellStart && selectedStart <= cellEnd) {
+                    return colIndex;
+                }
             }
         }
         return -1;
     }
 
-    // Loop through all tables on the current page to find the one that contains the selected column, then sort its rows
     for (let i = 0; i < tables.length; i++) {
         let table = tables[i];
         let rowNum = table.GetRowsCount();
@@ -96,25 +74,21 @@ The macro will only work correctly if the whole column is selected.
         let tableStart = table.GetCell(0, 0).GetContent().GetRange().GetStartPos();
         let tableEnd = table.GetCell(rowNum - 1, colNum - 1).GetContent().GetRange().GetEndPos();
 
-        // Check if the selection is inside this table
         if (selectedStart >= tableStart && selectedEnd <= tableEnd) {
             let selectedColIndex = findSelectedColIndex(table, selectedStart);
 
             if (selectedColIndex !== -1) {
                 let startRow = isFirstRowIncluded ? 0 : 1;
-
                 let sortedRowsArr = sortRowsByColumn(table, selectedColIndex, startRow);
-
                 let rowToRemove = isFirstRowIncluded ? 0 : 1;
                 
-                // Rebuild the table by adding sorted rows and removing the old ones
-                for (let i = 0; i < sortedRowsArr.length; i++) {
-                    let sortedRow = sortedRowsArr[i];
+                for (let k = 0; k < sortedRowsArr.length; k++) {
+                    let sortedRow = sortedRowsArr[k];
                     let newRow = table.AddRow();
 
                     for (let j = 0; j < colNum; j++) {
-                        let sortedRowCellText = sortedRow.GetCell(j).GetContent().GetText().trim();
-                        newRow.GetCell(j).GetContent().GetElement(0).AddText(sortedRowCellText);
+                        let text = sortedRow.GetCell(j).GetContent().GetText().trim();
+                        newRow.GetCell(j).GetContent().GetElement(0).AddText(text);
                     }
                     table.GetRow(rowToRemove).Remove();
                 }
