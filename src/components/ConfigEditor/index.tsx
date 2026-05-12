@@ -135,6 +135,14 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
         setCodeText(serializeConfig());
     }, [serializeConfig]);
 
+    const syncForm = useCallback(() => {
+        const parsed = parseCode(codeTextRef.current);
+        if (parsed) {
+            formDataRef.current = parsed;
+            setFormKey((k) => k + 1);
+        }
+    }, []);
+
     // Sync data when switching tabs
     const handleTabChange = useCallback((value: string) => {
         if (tabRef.current === value) return;
@@ -152,16 +160,12 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
                 syncCode();
             }
         } else if (value === 'form' && updateTabRef.current) {
-            const parsed = parseCode(codeTextRef.current);
-            if (parsed) {
-                formDataRef.current = parsed;
-                setFormKey((k) => k + 1);
-            }
+            syncForm();
         }
         updateTabRef.current = false;
         tabRef.current = value as 'form' | 'code';
         setTab(value as 'form' | 'code');
-    }, [syncCode]);
+    }, [syncCode, syncForm]);
 
     const handleFormChange = useCallback(({ data }: { data: Record<string, unknown> }) => {
         formDataRef.current = data ?? {};
@@ -181,10 +185,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
     const handleRun = useCallback(() => {
         if (tabRef.current === 'code') {
             if (updateTabRef.current) {
-                const parsed = parseCode(codeTextRef.current);
-                if (parsed) {
-                    formDataRef.current = parsed;
-                }
+                syncForm();
                 updateTabRef.current = false;
             }
             applyConfig();
@@ -193,7 +194,7 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
         } else {
             applyConfig();
         }
-    }, [applyConfig]);
+    }, [applyConfig, syncForm]);
 
     const handleReset = useCallback(() => {
         formDataRef.current = defaultConfig;
