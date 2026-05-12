@@ -312,17 +312,13 @@ interface MetaChangeEvent {
 };
 
 interface RequestUsersEvent {
-    /**
-     * @note Starting from version 7.4, the operation type can be specified in the `data.c` parameter. It can take two values: `mention` or `protect`. Prior to version 7.4, only the `mention` operation was available.
-     * @note Starting from version 8.0, the `info` operation type is added to set avatars for the users with the ids specified in the `data.id` parameter.
-     */
     data?: {
         /**
          * The operation type.
          */
         c?: "mention" | "protect" | "info";
         /**
-         * The user id's associated with the operation.
+         * The list of user IDs associated with the operation.
          */
         id?: string[];
     };
@@ -331,7 +327,7 @@ interface RequestUsersEvent {
 interface RequestSendNotifyEvent {
     data?: {
         /**
-         * The comment/action link data.
+         * The comment data. Must be used in the configuration as the value for the `editorConfig.actionLink` parameter.
          */
         actionLink?: ActionLink;
         /**
@@ -2804,10 +2800,9 @@ interface EventsNormal extends EventsBase {
     onMakeActionLink?: (event: MakeActionLinkEvent) => void;
 
     /**
-     * The function called when the user can **select other users to mention in comments**, grant access rights to edit specific sheet ranges, or set the user avatars.
+     * The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. To set a list of users, you must call the `setUsers` method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
      *
      * @param event
-     * @note To set a list of users, you must call the `setUsers` method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2840,11 +2835,9 @@ interface EventsNormal extends EventsBase {
     onRequestUsers?: (event: RequestUsersEvent) => void;
 
     /**
-     * The function called when the user is **mentioned in a comment**.
+     * The function called when the user is mentioned in a comment. The list of users to be mentioned should be completed by the `setUsers` method.
      *
      * @param event
-     * @note The list of users to be mentioned should be completed by the `setUsers` method.
-     * @note In version 5.4, `onRequestSendNotify` event can only be used if `onRequestUsers` event is set. Starting from version 5.5, there is no such dependency between `onRequestSendNotify` and `onRequestUsers` - both can be set independently.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -2901,9 +2894,9 @@ interface EventsNormal extends EventsBase {
     onRequestCompareFile?: () => void;
 
     /**
-     * The function called when the user is trying to manage document access rights by clicking the **Change access rights** button.
+     * The function called when the user is trying to manage document access rights by clicking the *Change access rights* button. When the access rights are changed, you must call the `setSharingSettings` method to update the settings.
      *
-     * @note When the access rights are changed, you must call the `setSharingSettings` method to update the settings. If this method is not declared, the Change access rights button will not be displayed.
+     * @note If this event is not declared, the *Change access rights* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
@@ -3084,10 +3077,9 @@ interface EventsNormal extends EventsBase {
     onSaveDocument?: () => void;
 
     /**
-     * The function called when the user is trying to start filling out ready forms by clicking the **Start filling** button in PDF editing mode.
+     * The function called when the user is trying to start filling out ready forms by clicking the *Start filling* button in PDF editing mode. When the user clicks the *Start filling* button, the `startFilling` method is called to lock PDF editing (only PDF viewing becomes available).
      *
-     * @note If the event is not declared, the **Start filling** button will not be displayed.
-     * @note When the user clicks the **Start filling** button, the `startFilling` method is called to lock PDF editing (only PDF viewing becomes available).
+     * @note If this event is not declared, the *Start filling* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequeststartfilling
@@ -3095,7 +3087,7 @@ interface EventsNormal extends EventsBase {
     onRequestStartFilling?: () => void;
 
     /**
-     * The function called when the force saving request of the 3 `forcesavetype` is successfully performed, i.e., when the **Complete & Submit** button is clicked and the form is submitted.
+     * The function called when the force saving request of the `3` `forcesavetype` is successfully performed, i.e., when the *Complete & Submit* button is clicked and the form is submitted.
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onsubmit
      */

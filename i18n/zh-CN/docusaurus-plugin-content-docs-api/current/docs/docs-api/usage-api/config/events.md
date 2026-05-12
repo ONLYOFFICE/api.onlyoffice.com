@@ -970,17 +970,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSendNotify
 
-当评论中提到用户时调用的函数。
+当评论中提到用户时调用的函数。要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
 
 **参数**：
 
 | 参数                    | 类型     | 描述                                                                                                                   |
 | ----------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
 | event.data.actionLink   | `object`   | 注释数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
-| event.data.message      | `string`   | 消息文本。                                                                                                             |
-| event.data.emails       | `string[]` | 电子邮件列表。                                                                                                         |
-
-要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
+| event.data.message      | `string`   | 评论消息。                                                                                                             |
+| event.data.emails       | `string[]` | 要通知的用户电子邮件列表。                                                                                             |
 
 **示例**:
 
@@ -1003,9 +1001,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSharingSettings
 
-当用户试图通过单击*更改访问权限*按钮来管理文档访问权限时调用的函数
+当用户试图通过单击*更改访问权限*按钮来管理文档访问权限时调用的函数。当访问权限发生变化时，您必须调用 [setSharingSettings](../methods.md#setsharingsettings) 方法来更新有关允许与其他用户共享文档的设置的[信息](./document/info.md#sharingsettings)。
 
-当访问权限发生变化时，您必须调用 [setSharingSettings](../methods.md#setsharingsettings) 方法来更新有关允许与其他用户共享文档的设置的 [信息](./document/info.md#sharingsettings)。如果未声明该方法，则不会显示*更改访问权限*按钮。
+:::note
+如果未声明此事件，则不会显示*更改访问权限*按钮。
+:::
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
@@ -1040,9 +1040,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-当用户尝试通过单击 pdf 编辑模式下的*开始填写*按钮开始填写准备好的表单时调用的函数。如果未声明事件，则不会显示此按钮。
+当用户尝试通过单击 PDF 编辑模式下的*开始填写*按钮开始填写准备好的表单时调用的函数。当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 PDF 编辑（仅可查看 PDF）。
 
-当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 pdf 编辑（仅可查看 pdf）。
+:::note
+如果未声明此事件，则不会显示*开始填写*按钮。
+:::
 
 **示例**:
 
@@ -1063,16 +1065,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。
+当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的操作类型采用不同的用户列表。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
 **参数**：
 
 | 参数          | 类型     | 描述                                                                                   |
 | ------------- | -------- | -------------------------------------------------------------------------------------- |
-| event.data.c  | `string`   | 操作类型。可以是：`mention`、`protect` 或 `info`。                           |
-| event.data.id | `string[]` | 用户 ID 列表。与 `info` 操作类型一起使用，为指定用户设置头像。 |
-
-要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
+| event.data.c  | `"mention"` \| `"protect"` \| `"info"` | 操作类型。                           |
+| event.data.id | `string[]` | 与操作关联的用户 ID 列表。 |
 
 <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
 
@@ -1121,7 +1121,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onSubmit(event) {
+function onSubmit() {
   console.log("The form was submitted.");
 }
 

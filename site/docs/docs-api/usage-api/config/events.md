@@ -970,17 +970,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSendNotify
 
-The function called when the user is mentioned in a comment.
+The function called when the user is mentioned in a comment. The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
 
 **Parameters**:
 
 | Parameter               | Type     | Description                                                                                                                                       |
 | ----------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | event.data.actionLink   | `object`   | The comment data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter.       |
-| event.data.message      | `string`   | The message text.                                                                                                                                 |
-| event.data.emails       | `string[]` | The list of emails.                                                                                                                               |
-
-The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
+| event.data.message      | `string`   | The message of the comment.                                                                                                                       |
+| event.data.emails       | `string[]` | The list of user emails to be notified.                                                                                                           |
 
 **Example**:
 
@@ -1003,9 +1001,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSharingSettings
 
-The function called when the user is trying to manage document access rights by clicking *Change access rights* button.
+The function called when the user is trying to manage document access rights by clicking the *Change access rights* button. When the access rights are changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/info.md#sharingsettings) about the settings which allow to share the document with other users.
 
-When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
+:::note
+If this event is not declared, the *Change access rights* button will not be displayed.
+:::
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
@@ -1040,9 +1040,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-The function called when the user is trying to start filling out the ready forms by clicking the *Start filling* button in the pdf editing mode. If the event is not declared, this button will not be displayed.
+The function called when the user is trying to start filling out ready forms by clicking the *Start filling* button in PDF editing mode. When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock PDF editing (only PDF viewing becomes available).
 
-When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock the pdf editing (only pdf viewing becomes available).
+:::note
+If this event is not declared, the *Start filling* button will not be displayed.
+:::
 
 **Example**:
 
@@ -1063,16 +1065,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
+The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 
 **Parameters**:
 
 | Parameter    | Type     | Description                                                                                                       |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| event.data.c | `string`   | The operation type. Can be: `mention`, `protect`, or `info`.                                                |
-| event.data.id | `string[]` | The list of user IDs. Used with the `info` operation type to set the avatars for the specified users. |
-
-To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If the `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
+| event.data.c | `"mention"` \| `"protect"` \| `"info"` | The operation type.                                                |
+| event.data.id | `string[]` | The list of user IDs associated with the operation. |
 
 ![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
@@ -1121,7 +1121,7 @@ The function called when the force saving request of the `3` [forcesavetype](../
 **Example**:
 
 ``` ts
-function onSubmit(event) {
+function onSubmit() {
   console.log("The form was submitted.");
 }
 
