@@ -1,6 +1,6 @@
 ﻿# 编辑器
 
-editorConfig 部分允许更改与编辑器界面有关的参数：打开模式（查看器或编辑器）、界面语言、附加按钮等。
+editorConfig 部分定义了编辑器界面参数。
 
 ## actionLink
 

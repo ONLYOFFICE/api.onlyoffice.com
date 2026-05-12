@@ -1,6 +1,12 @@
 // Types
 type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
 
+/**
+ * The platform type used to access the document.
+ * - `desktop` - optimized to access the document from a desktop or laptop computer.
+ * - `mobile` - optimized to access the document from a tablet or a smartphone.
+ * - `embedded` - specifically formed to be easily embedded into a web page.
+ */
 type PlatformType = "desktop" | "mobile" | "embedded"
 
 type WordFileType =
@@ -860,7 +866,7 @@ interface DocumentNormal extends DocumentBase {
     permissions?: DocumentPermissions;
 
     /**
-     * Defines if the PDF file is a PDF form or a standard PDF file.
+     * Defines if the PDF file is a PDF form or a standard PDF file. Applies when `fileType` is `pdf`. If this parameter is not specified, then the internal checking of PDF files is started.
      * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#isform
      */
@@ -3190,31 +3196,31 @@ interface BaseConfig {
      * @forType `desktop` | `mobile` | `embedded`
      */
     documentType?: DocumentType;
+
+    /**
+     * Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a token.
+     * @example "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
+     * @forType `desktop` | `mobile` | `embedded`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/#token
+     */
+    token?: string;
 }
 
 export interface ConfigNormal extends BaseConfig {
     /**
-     * Defines the encrypted signature added to the ONLYOFFICE Docs config in the form of a token.
-     * @example "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"
-     * @forType `desktop` | `mobile`
-     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/#token
-     */
-    token?: string;
-
-    /**
-     * The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).
+     * The document section defines the document parameters.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/
      */
     document?: DocumentNormal;
 
     /**
-     * The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.
+     * The editorConfig section defines the editor interface parameters.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/
      */
     editorConfig?: EditorConfigNormal;
 
     /**
-     * The events section allows to change all the functions pertaining to the events.
+     * The events section defines the callback functions for editor events.
      *
      * @example
      * ```ts
@@ -3244,19 +3250,19 @@ export interface ConfigEmbedded extends BaseConfig {
     type?: 'embedded';
 
     /**
-     * The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).
+     * The document section defines the document parameters.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/
      */
     document?: DocumentEmbedded;
 
     /**
-     * The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.
+     * The editorConfig section defines the editor interface parameters.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/
      */
     editorConfig?: EditorConfigEmbedded;
 
     /**
-     * The events section allows to change all the functions pertaining to the events.
+     * The events section defines the callback functions for editor events.
      *
      * @example
      * ```ts
@@ -3278,23 +3284,24 @@ export interface ConfigEmbedded extends BaseConfig {
 }
 
 /**
- * The config base section defines the top-level parameters for initializing the document editor (document type, platform type, display size, token, etc.).
+ * The config base section defines the top-level parameters for initializing the document editor.
+ * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/
  */
 export interface Config extends ConfigNormal {
     /**
-     * The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).
+     * The document section defines the document parameters.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/
      */
     document?: DocumentNormal & DocumentEmbedded;
 
     /**
-     * The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.
+     * The editorConfig section defines the editor interface parameters.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/
      */
     editorConfig?: EditorConfigNormal & EditorConfigEmbedded;
 
     /**
-     * The events section allows to change all the functions pertaining to the events.
+     * The events section defines the callback functions for editor events.
      *
      * @example
      * ```ts

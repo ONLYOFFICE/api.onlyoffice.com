@@ -1,6 +1,6 @@
 # Events
 
-The events section allows you to change all the functions pertaining to the events.
+The events section defines the callback functions for editor events.
 
 ## onAppReady
 

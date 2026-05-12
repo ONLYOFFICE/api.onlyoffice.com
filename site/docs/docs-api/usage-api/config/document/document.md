@@ -1,6 +1,6 @@
 # Document
 
-The document section allows you to change all the parameters pertaining to the document (title, url, file type, etc.).
+The document section defines the document parameters.
 
 ## fileType
 
