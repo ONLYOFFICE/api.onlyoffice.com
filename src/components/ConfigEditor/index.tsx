@@ -30,6 +30,13 @@ const MONACO_OPTIONS = {
     fixedOverflowWidgets: true,
 };
 
+const eventSchemas: Record<string, any> =
+    (schema as any).properties?.events?.properties ?? {};
+
+function hasEventParam(name: string): boolean {
+    return eventSchemas[name]?.['x-hasEventParam'] === true;
+}
+
 function serializeAsCode(data: Record<string, unknown>): string {
     const { events, ...rest } = data;
     const json = JSON.stringify(rest, null, 2);
@@ -40,7 +47,8 @@ function serializeAsCode(data: Record<string, unknown>): string {
     Object.keys(events as Record<string, unknown>).forEach((name) => {
         const body = (events as Record<string, unknown>)[name];
         if (typeof body === 'string' && body.length > 0) {
-            eventEntries.push(`    "${name}": function(event) {\n      ${body}\n    }`);
+            const params = hasEventParam(name) ? 'event' : '';
+            eventEntries.push(`    "${name}": function(${params}) {\n      ${body}\n    }`);
         }
     });
 
@@ -108,7 +116,9 @@ export function ConfigEditor({ defaultConfig, onApply }: ConfigEditorProps) {
             const src = config.events as Record<string, unknown>;
             Object.keys(src).forEach((name) => {
                 if (typeof src[name] === 'string' && (src[name] as string).length > 0) {
-                    events[name] = new Function('event', src[name] as string);
+                    events[name] = hasEventParam(name)
+                        ? new Function('event', src[name] as string)
+                        : new Function(src[name] as string);
                     hasEvents = true;
                 }
             });
