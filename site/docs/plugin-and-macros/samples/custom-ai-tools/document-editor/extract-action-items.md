@@ -60,10 +60,10 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name   | Type   | Example     | Description                                                                                                                 |     |
-| ------ | ------ | ----------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
-| scope  | string | "selection" | Whether to extract action items from the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |     |
-| format | string | "bullet"    | How to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet').                                   |     |
+| Name   | Type   | Example     | Description                                                                                                                 |
+| ------ | ------ | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| scope  | string | "selection" | Whether to extract action items from the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |
+| format | string | "bullet"    | How to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet').                                   |
 
 ## Function execution {#function-execution}
 
