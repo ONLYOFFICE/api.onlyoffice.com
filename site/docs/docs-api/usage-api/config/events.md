@@ -73,7 +73,7 @@ The function called when the document is modified.
 
 | Parameter  | Type    | Description                                                                                                              |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| event.data | boolean | `true` when the current user is editing the document, `false` when the changes are sent to the **document editing service**. |
+| event.data | `boolean` | `true` when the current user is editing the document, `false` when the changes are sent to the **document editing service**. |
 
 **Example**:
 
@@ -104,8 +104,8 @@ The function called with the absolute URL to the edited file when the [downloadA
 
 | Parameter           | Type   | Description                                        |
 | ------------------- | ------ | -------------------------------------------------- |
-| event.data.fileType | string | The file type of the downloaded document.          |
-| event.data.url      | string | The absolute URL to the document to be downloaded. |
+| event.data.fileType | `string` | The [file type](document/document.md#filetype) of the downloaded document. |
+| event.data.url      | `string` | The absolute URL to the document to be downloaded. |
 
 **Example**:
 
@@ -128,14 +128,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onError
 
-The function called when an error or some other specific event occurs. A list of error codes can be found [here](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).
+The function called when an error or some other specific event occurs.
 
 **Parameters**:
 
 | Parameter                    | Type   | Description              |
 | ---------------------------- | ------ | ------------------------ |
-| event.data.errorCode         | number | The error code.          |
-| event.data.errorDescription  | string | The error description.   |
+| event.data.errorCode         | `number` | The [error code](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).          |
+| event.data.errorDescription  | `string` | The error description.   |
 
 **Example**:
 
@@ -160,9 +160,9 @@ The function called when the application opened the file.
 
 **Parameters**:
 
-| Parameter       | Type   | Description                                   |
-| --------------- | ------ | --------------------------------------------- |
-| event.data.mode | string | The editor mode. Can be `view` or `edit`. |
+| Parameter       | Type                 | Description      |
+| --------------- | -------------------- | ---------------- |
+| event.data.mode | `"view"` \| `"edit"` | The file opening mode. |
 
 **Example**:
 
@@ -183,22 +183,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onMakeActionLink
 
-The function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
+The function called when the user is trying to get a link for opening the document which contains a bookmark, scrolling to the bookmark position. To set the bookmark link, call the [setActionLink](../methods.md#setactionlink) method.
 
 :::note
 If this event is not declared, the *Get Link* button will not be displayed.
 :::
 
-To set the bookmark link, call the [setActionLink](../methods.md#setactionlink) method.
-
 **Parameters**:
 
 | Parameter           | Type   | Description                                                                                                                                   |
 | ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| event.data          | object | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
-| event.data.action   | object | The action object that defines what to scroll to in the document. |
-| event.data.action.type | string | The type of action: `"bookmark"` or `"comment"`. |
-| event.data.action.data | string | The data associated with the action: the bookmark name or the comment ID. |
+| event.data          | `object` | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
+| event.data.action   | `object` | The action object that defines what to scroll to in the document. |
+| event.data.action.type | `string` | The type of action: `"bookmark"` or `"comment"`. |
+| event.data.action.data | `string` | The data associated with the action: the bookmark name or the comment ID. |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
@@ -229,8 +227,8 @@ The function called when the meta information of the document is changed via the
 
 | Parameter           | Type    | Description                                   |
 | ------------------- | ------- | --------------------------------------------- |
-| event.data.title    | string  | The name of the document.                     |
-| event.data.favorite | boolean | The *Favorite* icon highlighting state.       |
+| event.data.title    | `string`  | The name of the document.                     |
+| event.data.favorite | `boolean` | The *Favorite* icon highlighting state.       |
 
 When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
 
@@ -470,7 +468,7 @@ The function called when the user is trying to click the specific document versi
 
 | Parameter  | Type    | Description                  |
 | ---------- | ------- | ---------------------------- |
-| event.data | integer | The document version number. |
+| event.data | `number` | The document version number. |
 
 To show the changes corresponding to the specific document version you must call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onrequesthistory) method are not declared the *Version History* button will not be displayed.
 
@@ -517,7 +515,7 @@ The function called when the user is trying to insert an image by clicking the *
 
 | Parameter    | Type   | Description                                                                                           |
 | ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
-| event.data.c | string | The type of image insertion. Can be: `add`, `change`, `fill`, `watermark`, or `slide`. |
+| event.data.c | `string` | The type of image insertion. Can be: `add`, `change`, `fill`, `watermark`, or `slide`. |
 
 :::note
 If this event is not declared, the *Image from Storage* button will not be displayed.
@@ -576,9 +574,9 @@ To open the editor with the external file referenced by the `path` or `reference
 
 | Parameter                | Type   | Description                    |
 | ------------------------ | ------ | ------------------------------ |
-| event.data.path          | string | The file path.                 |
-| event.data.referenceData | object | The unique file data.          |
-| event.data.windowName    | string | The new browser tab name.      |
+| event.data.path          | `string` | The file path.                 |
+| event.data.referenceData | `object` | The unique file data.          |
+| event.data.windowName    | `string` | The new browser tab name.      |
 
 ![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
@@ -611,9 +609,9 @@ The function called when the user is trying to refresh data inserted from the ex
 
 | Parameter                | Type   | Description                                 |
 | ------------------------ | ------ | ------------------------------------------- |
-| event.data.referenceData | object | The unique file data from the source file.  |
-| event.data.path          | string | The file path or name.                      |
-| event.data.link          | string | The file URL.                               |
+| event.data.referenceData | `object` | The unique file data from the source file.  |
+| event.data.path          | `string` | The file path or name.                      |
+| event.data.link          | `string` | The file URL.                               |
 
 To refresh data by a link to a file which is specified with the event parameters, you must call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. If the event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
 
@@ -666,8 +664,8 @@ The function called when the user is trying to change a source of the external d
 
 | Parameter                | Type   | Description              |
 | ------------------------ | ------ | ------------------------ |
-| event.data.referenceData | object | The unique file data.    |
-| event.data.path          | string | The file path or name.   |
+| event.data.referenceData | `object` | The unique file data.    |
+| event.data.path          | `string` | The file path or name.   |
 
 When the button is clicked, you must call the [setReferenceSource](../methods.md#setreferencesource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
 
@@ -753,7 +751,7 @@ The function called when the user is trying to rename the file by clicking the *
 
 | Parameter  | Type   | Description             |
 | ---------- | ------ | ----------------------- |
-| event.data | string | The new document title. |
+| event.data | `string` | The new document title. |
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -784,9 +782,9 @@ The function called when the user is trying to restore the file version by click
 
 | Parameter           | Type    | Description                                                                                                                   |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| event.data.version  | integer | The document version number.                                                                                                  |
-| event.data.url      | string  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
-| event.data.fileType | string  | The type of the document specified with the `url` link.                                                                       |
+| event.data.version  | `number` | The document version number.                                                                                                  |
+| event.data.url      | `string`  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
+| event.data.fileType | `string`  | The type of the document specified with the `url` link.                                                                       |
 
 When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again. If the method is not declared the *Restore* button will not be displayed.
 
@@ -853,9 +851,9 @@ The function called when the user is trying to save file by clicking *Save Copy 
 
 | Parameter           | Type   | Description                                        |
 | ------------------- | ------ | -------------------------------------------------- |
-| event.data.fileType | string | The document type.                                 |
-| event.data.title    | string | The title of the document.                         |
-| event.data.url      | string | The absolute URL to the document to be downloaded. |
+| event.data.fileType | `string` | The document type.                                 |
+| event.data.title    | `string` | The title of the document.                         |
+| event.data.url      | `string` | The absolute URL to the document to be downloaded. |
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
@@ -886,7 +884,7 @@ The function called when the user is trying to select a document for comparing, 
 
 | Parameter    | Type   | Description                                                                          |
 | ------------ | ------ | ------------------------------------------------------------------------------------ |
-| event.data.c | string | The type of document selection. Can be: `compare`, `combine`, or `insert-text`. |
+| event.data.c | `string` | The type of document selection. Can be: `compare`, `combine`, or `insert-text`. |
 
 To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
 
@@ -925,7 +923,7 @@ The function called when the user is trying to select recipients data by clickin
 
 | Parameter    | Type   | Description                                                       |
 | ------------ | ------ | ----------------------------------------------------------------- |
-| event.data.c | string | The type of spreadsheet selection. Can be: `mailmerge`.           |
+| event.data.c | `string` | The type of spreadsheet selection. Can be: `mailmerge`.           |
 
 To select recipient data, you must call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters. If the method is not declared, the *Mail merge* button will become faded and unclickable.
 
@@ -962,9 +960,9 @@ The function called when the user is mentioned in a comment.
 
 | Parameter               | Type     | Description                                                                                                                                       |
 | ----------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| event.data.actionLink   | object   | The comment data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter.       |
-| event.data.message      | string   | The message text.                                                                                                                                 |
-| event.data.emails       | string[] | The list of emails.                                                                                                                               |
+| event.data.actionLink   | `object`   | The comment data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter.       |
+| event.data.message      | `string`   | The message text.                                                                                                                                 |
+| event.data.emails       | `string[]` | The list of emails.                                                                                                                               |
 
 The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
 
@@ -1055,8 +1053,8 @@ The function called when the user can select other users to mention in the comme
 
 | Parameter    | Type     | Description                                                                                                       |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| event.data.c | string   | The operation type. Can be: `mention`, `protect`, or `info`.                                                |
-| event.data.id | string[] | The list of user IDs. Used with the `info` operation type to set the avatars for the specified users. |
+| event.data.c | `string`   | The operation type. Can be: `mention`, `protect`, or `info`.                                                |
+| event.data.id | `string[]` | The list of user IDs. Used with the `info` operation type to set the avatars for the specified users. |
 
 To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If the `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 
@@ -1148,14 +1146,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onWarning
 
-The function called when a warning occurs. A list of error codes can be found [here](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).
+The function called when a warning occurs.
 
 **Parameters**:
 
 | Parameter                      | Type   | Description                |
 | ------------------------------ | ------ | -------------------------- |
-| event.data.warningCode         | number | The warning code.          |
-| event.data.warningDescription  | string | The warning description.   |
+| event.data.warningCode         | `number` | The [warning code](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).          |
+| event.data.warningDescription  | `string` | The warning description.   |
 
 **Example**:
 

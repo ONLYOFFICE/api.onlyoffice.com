@@ -73,7 +73,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数       | 类型    | 描述                                                                                           |
 | ---------- | ------- | ---------------------------------------------------------------------------------------------- |
-| event.data | boolean | 当前用户正在编辑文档时为 `true`，当前用户的更改发送到**文档编辑服务**时为 `false`。 |
+| event.data | `boolean` | 当前用户正在编辑文档时为 `true`，当前用户的更改发送到**文档编辑服务**时为 `false`。 |
 
 **示例**:
 
@@ -104,8 +104,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型   | 描述                         |
 | ------------------- | ------ | ---------------------------- |
-| event.data.fileType | string | 下载文档的文件类型。         |
-| event.data.url      | string | 要下载的文档的绝对 URL。     |
+| event.data.fileType | `string` | 下载文档的[文件类型](document/document.md#filetype)。 |
+| event.data.url      | `string` | 要下载的文档的绝对 URL。     |
 
 **示例**:
 
@@ -128,14 +128,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onError
 
-发生错误或其他特定事件时调用的函数。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+发生错误或其他特定事件时调用的函数。
 
 **参数**：
 
 | 参数                         | 类型   | 描述         |
 | ---------------------------- | ------ | ------------ |
-| event.data.errorCode         | number | 错误代码。   |
-| event.data.errorDescription  | string | 错误描述。   |
+| event.data.errorCode         | `number` | [错误代码](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)。   |
+| event.data.errorDescription  | `string` | 错误描述。   |
 
 **示例**:
 
@@ -160,9 +160,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **参数**：
 
-| 参数            | 类型   | 描述                                       |
-| --------------- | ------ | ------------------------------------------ |
-| event.data.mode | string | 编辑器模式。可以是 `view` 或 `edit`。  |
+| 参数            | 类型                 | 描述         |
+| --------------- | -------------------- | ------------ |
+| event.data.mode | `"view"` \| `"edit"` | 文件打开模式。 |
 
 **示例**:
 
@@ -183,22 +183,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onMakeActionLink
 
-当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。
+当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。要设置书签链接，请调用 [setActionLink](../methods.md#setactionlink) 方法。
 
 :::note
 如果未声明此事件，则不会显示*获取链接*按钮。
 :::
 
-要设置书签链接，请调用 [setActionLink](../methods.md#setactionlink) 方法。
-
 **参数**：
 
 | 参数                    | 类型   | 描述                                                                                                               |
 | ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
-| event.data              | object | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
-| event.data.action       | object | 定义文档中要滚动到的操作对象。 |
-| event.data.action.type  | string | 操作类型：`"bookmark"` 或 `"comment"`。 |
-| event.data.action.data  | string | 与操作关联的数据：书签名称或评论 ID。 |
+| event.data              | `object` | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| event.data.action       | `object` | 定义文档中要滚动到的操作对象。 |
+| event.data.action.type  | `string` | 操作类型：`"bookmark"` 或 `"comment"`。 |
+| event.data.action.data  | `string` | 与操作关联的数据：书签名称或评论 ID。 |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
@@ -229,8 +227,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型    | 描述                     |
 | ------------------- | ------- | ------------------------ |
-| event.data.title    | string  | 文档的名称。             |
-| event.data.favorite | boolean | *收藏*图标高亮状态。     |
+| event.data.title    | `string`  | 文档的名称。             |
+| event.data.favorite | `boolean` | *收藏*图标高亮状态。     |
 
 当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)如果未声明该方法，则*收藏*图标不会更改。
 
@@ -470,7 +468,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数       | 类型    | 描述           |
 | ---------- | ------- | -------------- |
-| event.data | integer | 文档版本号。   |
+| event.data | `number` | 文档版本号。   |
 
 要显示与特定文档版本相对应的更改，您必须调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加token来验证参数。如果该方法和 [onRequestHistory](#onrequesthistory) 方法未声明，则不会显示版本历史记录按钮。
 
@@ -517,7 +515,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数         | 类型   | 描述                                                                                    |
 | ------------ | ------ | --------------------------------------------------------------------------------------- |
-| event.data.c | string | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
+| event.data.c | `string` | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
 
 :::note
 如果未声明此事件，则不会显示*从存储中获取图像*按钮。
@@ -576,9 +574,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                     | 类型   | 描述                   |
 | ------------------------ | ------ | ---------------------- |
-| event.data.path          | string | 文件路径。             |
-| event.data.referenceData | object | 唯一文件数据。         |
-| event.data.windowName    | string | 新浏览器选项卡名称。   |
+| event.data.path          | `string` | 文件路径。             |
+| event.data.referenceData | `object` | 唯一文件数据。         |
+| event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
 <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
 
@@ -611,9 +609,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                     | 类型   | 描述                             |
 | ------------------------ | ------ | -------------------------------- |
-| event.data.referenceData | object | 来自源文件的唯一文件数据。       |
-| event.data.path          | string | 文件路径或名称。                 |
-| event.data.link          | string | 文件 URL。                       |
+| event.data.referenceData | `object` | 来自源文件的唯一文件数据。       |
+| event.data.path          | `string` | 文件路径或名称。                 |
+| event.data.link          | `string` | 文件 URL。                       |
 
 要通过事件参数指定的文件链接刷新数据，您必须调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。 如果未声明该事件，则不会显示*粘贴链接*和*更新值*按钮。
 
@@ -666,8 +664,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                     | 类型   | 描述             |
 | ------------------------ | ------ | ---------------- |
-| event.data.referenceData | object | 唯一文件数据。   |
-| event.data.path          | string | 文件路径或名称。 |
+| event.data.referenceData | `object` | 唯一文件数据。   |
+| event.data.path          | `string` | 文件路径或名称。 |
 
 单击该按钮时，必须调用 [setReferenceSource](../methods.md#setreferencesource) 方法来更改外部数据的来源。调用该方法时，必须添加token来验证参数。如果未声明事件，则不会显示*更改源*按钮。
 
@@ -753,7 +751,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数       | 类型   | 描述             |
 | ---------- | ------ | ---------------- |
-| event.data | string | 新文档标题。     |
+| event.data | `string` | 新文档标题。     |
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -784,9 +782,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型    | 描述                                                                                   |
 | ------------------- | ------- | -------------------------------------------------------------------------------------- |
-| event.data.version  | integer | 文档版本号。                                                                           |
-| event.data.url      | string  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
-| event.data.fileType | string  | 由 `url` 链接指定的文档类型。                                                          |
+| event.data.version  | `number` | 文档版本号。                                                                           |
+| event.data.url      | `string`  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
+| event.data.fileType | `string`  | 由 `url` 链接指定的文档类型。                                                          |
 
 调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
 
@@ -853,9 +851,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型   | 描述                         |
 | ------------------- | ------ | ---------------------------- |
-| event.data.fileType | string | 文档类型。                   |
-| event.data.title    | string | 文档标题。                   |
-| event.data.url      | string | 要下载的文档的绝对 URL。     |
+| event.data.fileType | `string` | 文档类型。                   |
+| event.data.title    | `string` | 文档标题。                   |
+| event.data.url      | `string` | 要下载的文档的绝对 URL。     |
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
@@ -886,7 +884,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数         | 类型   | 描述                                                                    |
 | ------------ | ------ | ----------------------------------------------------------------------- |
-| event.data.c | string | 文档选择类型。可以是：`compare`、`combine` 或 `insert-text`。 |
+| event.data.c | `string` | 文档选择类型。可以是：`compare`、`combine` 或 `insert-text`。 |
 
 要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
 
@@ -925,7 +923,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数         | 类型   | 描述                                              |
 | ------------ | ------ | ------------------------------------------------- |
-| event.data.c | string | 电子表格选择的类型。可以是：`mailmerge`。   |
+| event.data.c | `string` | 电子表格选择的类型。可以是：`mailmerge`。   |
 
 要选择收件人数据，您必须调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则*邮件合并*按钮将变淡且无法单击。
 
@@ -962,9 +960,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                    | 类型     | 描述                                                                                                                   |
 | ----------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| event.data.actionLink   | object   | 注释数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
-| event.data.message      | string   | 消息文本。                                                                                                             |
-| event.data.emails       | string[] | 电子邮件列表。                                                                                                         |
+| event.data.actionLink   | `object`   | 注释数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| event.data.message      | `string`   | 消息文本。                                                                                                             |
+| event.data.emails       | `string[]` | 电子邮件列表。                                                                                                         |
 
 要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
 
@@ -1055,8 +1053,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数          | 类型     | 描述                                                                                   |
 | ------------- | -------- | -------------------------------------------------------------------------------------- |
-| event.data.c  | string   | 操作类型。可以是：`mention`、`protect` 或 `info`。                           |
-| event.data.id | string[] | 用户 ID 列表。与 `info` 操作类型一起使用，为指定用户设置头像。 |
+| event.data.c  | `string`   | 操作类型。可以是：`mention`、`protect` 或 `info`。                           |
+| event.data.id | `string[]` | 用户 ID 列表。与 `info` 操作类型一起使用，为指定用户设置头像。 |
 
 要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
@@ -1148,14 +1146,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onWarning
 
-发生警告时调用的函数。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+发生警告时调用的函数。
 
 **参数**：
 
 | 参数                           | 类型   | 描述         |
 | ------------------------------ | ------ | ------------ |
-| event.data.warningCode         | number | 警告代码。   |
-| event.data.warningDescription  | string | 警告描述。   |
+| event.data.warningCode         | `number` | [警告代码](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)。   |
+| event.data.warningDescription  | `string` | 警告描述。   |
 
 **示例**:
 

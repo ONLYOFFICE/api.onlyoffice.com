@@ -257,7 +257,7 @@ interface WarningEvent {
 interface InfoEvent {
     data?: {
         /**
-         * The mode in which the file is opened.
+         * The file opening mode.
          */
         mode?: "view" | "edit";
     };
@@ -266,7 +266,7 @@ interface InfoEvent {
 interface DownloadAsEvent {
     data?: {
         /**
-         * The type of the file being downloaded.
+         * The file type of the downloaded document.
          */
         fileType?: FileType;
         /**
@@ -2476,7 +2476,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
 
 interface EventsBase {
     /**
-     * The function called when the application is fully loaded into the browser.
+     * The function called when the application is loaded into the browser.
      *
      * @forType `desktop` | `mobile` | `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onappready
@@ -2492,7 +2492,7 @@ interface EventsBase {
     onDocumentReady?: () => void;
 
     /**
-     * The function called when an **error** or some other specific event occurs.
+     * The function called when an error or some other specific event occurs.
      *
      * @param event
      * @forType `desktop` | `mobile` | `embedded`
@@ -2501,7 +2501,7 @@ interface EventsBase {
     onError?: (event: ErrorEvent) => void;
 
     /**
-     * The function called when a **warning** occurs.
+     * The function called when a warning occurs.
      *
      * @param event
      * @forType `desktop` | `mobile` | `embedded`
@@ -2666,7 +2666,7 @@ interface EventsNormal extends EventsBase {
     onRequestHistoryClose?: () => void;
 
     /**
-     * The function called when the application **opened the file**.
+     * The function called when the application opened the file.
      *
      * @param event
      * @forType `desktop` | `mobile`
@@ -2687,7 +2687,7 @@ interface EventsNormal extends EventsBase {
     onOutdatedVersion?: () => void;
 
     /**
-     * The function called with the **absolute URL** to the edited file when the `downloadAs` method is being called.
+     * The function called with the absolute URL to the edited file when the `downloadAs` method is being called.
      *
      * @param event
      * @forType `desktop` | `mobile`
@@ -2723,7 +2723,7 @@ interface EventsNormal extends EventsBase {
     onRequestSaveAs?: (event: RequestSaveAsEvent) => void;
 
     /**
-     * The function called when the document is co-edited by the other user in the strict co-editing mode.
+     * The function called when the document is co-edited by another user in the `strict` co-editing mode.
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#oncollaborativechanges
      */
@@ -2784,11 +2784,10 @@ interface EventsNormal extends EventsBase {
     onRequestClose?: () => void;
 
     /**
-     * The function called when the user is trying to **get a link for opening the document** which contains a bookmark, scrolling to the bookmark position.
+     * The function called when the user is trying to get a link for opening the document which contains a bookmark, scrolling to the bookmark position. To set the bookmark link, call the `setActionLink` method.
      *
      * @param event
-     * @note To set the bookmark link, you must call the `setActionLink` method. The bookmark data is received in the `data` parameter and must be then used in the configuration as the value for the `editorConfig.actionLink` parameter.
-     * @note If the method is not declared, the **Get Link** button will not be displayed.
+     * @note If this event is not declared, the *Get Link* button will not be displayed.
      *
      * @forType `desktop` | `mobile`
      * @example
