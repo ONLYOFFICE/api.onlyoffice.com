@@ -76,8 +76,17 @@ const ChildDispatch = memo(function ChildDispatch({ childSchema, control, childP
     )
 })
 
+function isToggleable(schema: JsonSchema): boolean {
+    return (
+        schema.type === 'object' &&
+        !!(schema as any)['x-alsoBoolean'] &&
+        !!schema.properties &&
+        Object.keys(schema.properties).length > 0
+    )
+}
+
 const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
-    const { schema, path, label, renderers, cells } = props;
+    const { schema, path, label, data, handleChange, renderers, cells } = props;
     const ctx = useJsonForms();
     const rootSchema = ctx.core?.schema as JsonSchema | undefined;
 
@@ -88,6 +97,23 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
     const depth = depthOfPath(path);
     const lastKey = path ? path.split('.').pop() || '' : '';
     const title = label || s.title || titleFromKey(lastKey) || 'Root';
+
+    const canBeFalse = isToggleable(s);
+    // Three states: true (object data exists), false (data === false), undefined (unset)
+    const toggled = path
+        ? (data === false ? false : (data == null ? undefined : true))
+        : undefined;
+    const onToggle = path
+        ? () => {
+            if (data == null) {
+                handleChange(path, {});
+            } else if (typeof data === 'object') {
+                handleChange(path, canBeFalse ? false : undefined);
+            } else {
+                handleChange(path, undefined);
+            }
+        }
+        : undefined;
 
     const renderChild = (child: ResolvedChild) => (
         <ChildDispatch key={child.childPath} {...child} renderers={renderers} cells={cells} />
@@ -100,7 +126,7 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
         return (
             <div>
                 {configFields.length > 0 && (
-                    <Section title="Config" depth={1} defaultOpen>
+                    <Section title="Config" description={s.description} depth={1} defaultOpen>
                         {configFields.map(renderChild)}
                     </Section>
                 )}
@@ -109,17 +135,24 @@ const ObjectRendererInner = memo(function ObjectRendererInner(props: any) {
         )
     }
 
+    // label: false means the caller already provides the wrapper (e.g. array items)
+    if (props.uischema?.label === false) {
+        return <>{children.map(renderChild)}</>;
+    }
+
     return (
         <Section
             title={title}
+            description={s.description}
             depth={depth}
-            description={(s as any)['x-shortDescription']}
             defaultOpen={depth <= 1}
+            toggled={toggled}
+            onToggle={onToggle}
         >
             {children.map(renderChild)}
         </Section>
     )
-}, (prev, next) => prev.path === next.path);
+}, (prev, next) => prev.path === next.path && prev.data === next.data);
 
 export const objectRendererTester = rankWith(2, isObjectControl);
 export const ObjectRenderer = withJsonFormsControlProps(ObjectRendererInner);

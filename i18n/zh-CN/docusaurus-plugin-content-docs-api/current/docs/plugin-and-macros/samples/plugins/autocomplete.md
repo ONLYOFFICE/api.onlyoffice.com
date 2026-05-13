@@ -91,7 +91,7 @@ GitHub 仓库： [自动完成](https://github.com/ONLYOFFICE/onlyoffice.github.
 - onInputHelperClear
 - onInputHelperInput
 - [createInputHelper](/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
+- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/InputText.md)
 - [getInputHelper](/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
 - [InputHelper.createWindow](/docs/plugin-and-macros/customization/input-helper.md#createwindow)
 - [InputHelper.getItems](/docs/plugin-and-macros/customization/input-helper.md#getitems)

@@ -27,7 +27,7 @@ Imports hyperlinks between different worksheets in the spreadsheet.
   worksheetA.GetRange("A2").SetValue("title2");
   worksheetA.GetRange("A3").SetValue("title2");
   worksheetA.GetRange("B1").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/spreadsheet-api/");
-  worksheetA.GetRange("B2").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/text-document-api/");
+  worksheetA.GetRange("B2").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/document-api/");
   worksheetA.GetRange("B3").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/presentation-api/");
   worksheetA.GetRange("A1:B3").Select();
 

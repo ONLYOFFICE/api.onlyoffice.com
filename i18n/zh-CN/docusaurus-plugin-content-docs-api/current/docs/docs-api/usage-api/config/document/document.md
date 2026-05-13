@@ -1,6 +1,6 @@
 ﻿# 文档
 
-文档部分允许更改与文档有关的所有参数（标题、url、文件类型等）。
+文档部分定义了文档参数。
 
 ## fileType
 
@@ -75,9 +75,9 @@
 
 ## title
 
-**类型：** `string` | **此参数是必需的**
+**类型：** `string`
 
-为查看或编辑的文档定义所需的文件名，该文件名也将在下载文档时用作文件名。长度限制为 128 个字符。
+为查看或编辑的文档定义所需的文件名，该文件名也将在下载文档时用作文件名。长度限制为 128 个字符。如果未指定或为空，则默认为 `"Unnamed.{fileType}"`（例如 `"Unnamed.docx"`）。
 
 **示例**: `"Example Document Title.docx"`
 
@@ -93,13 +93,13 @@
 
 **类型：** `object`
 
-文档信息部分。有关可用参数，请参阅 [info](info.md) 页面。
+[info](info.md) 部分定义文档信息参数。
 
 ## permissions
 
 **类型：** `object`
 
-文档权限部分。有关可用参数，请参阅 [permissions](permissions.md) 页面。
+[permissions](permissions.md) 部分定义文档权限参数。
 
 ## 示例
 

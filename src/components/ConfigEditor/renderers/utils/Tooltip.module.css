@@ -46,6 +46,13 @@
     will-change: transform, opacity;
 }
 
+.content code {
+    background: var(--ifm-color-emphasis-700);
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: inherit;
+}
+
 .arrow {
     fill: var(--ifm-color-emphasis-800);
 }

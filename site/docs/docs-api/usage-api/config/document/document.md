@@ -1,6 +1,6 @@
 # Document
 
-The document section allows you to change all the parameters pertaining to the document (title, url, file type, etc.).
+The document section defines the document parameters.
 
 ## fileType
 
@@ -8,7 +8,7 @@ The document section allows you to change all the parameters pertaining to the d
 
 Defines the type of the file for the source viewed or edited document. Must be lowercase. The available values depend on the [documentType](../config.md#documenttype):
 
-- `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — for text documents;
+- `doc`, `docm`, `docx`, `dot`, `dotm`, `dotx`, `epub`, `fb2`, `fodt`, `hml`, `htm`, `html`, `hwp`, `hwpx`, `md`, `mht`, `mhtml`, `odt`, `ott`, `pages`, `rtf`, `stw`, `sxw`, `txt`, `wps`, `wpt`, `xml` — for documents;
 - `csv`, `et`, `ett`, `fods`, `numbers`, `ods`, `ots`, `sxc`, `xls`, `xlsb`, `xlsm`, `xlsx`, `xlt`, `xltm`, `xltx`, `xml` — for spreadsheets;
 - `dps`, `dpt`, `fodp`, `key`, `odg`, `odp`, `otp`, `pot`, `potm`, `potx`, `pps`, `ppsm`, `ppsx`, `ppt`, `pptm`, `pptx`, `sxi` — for presentations;
 - `djvu`, `oxps`, `pdf`, `xps` — for portable document format;
@@ -75,9 +75,9 @@ The unique system identifier. If the data was copied from a file on one system, 
 
 ## title
 
-**type:** `string` | **required**
+**type:** `string`
 
-Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters.
+Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters. If not specified or empty, defaults to `"Unnamed.{fileType}"` (e.g. `"Unnamed.docx"`).
 
 **Example**: `"Example Document Title.docx"`
 
@@ -93,13 +93,13 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 
 **type:** `object`
 
-The document info section. See the [info](info.md) page for available parameters.
+The [info](info.md) section defines the document info parameters.
 
 ## permissions
 
 **type:** `object`
 
-The document permission section. See the [permissions](permissions.md) page for available parameters.
+The [permissions](permissions.md) section defines the document permission parameters.
 
 ## Example
 

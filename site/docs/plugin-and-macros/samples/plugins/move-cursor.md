@@ -1,6 +1,6 @@
 ---
 description: Move the cursor to the document start or end.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
 # Move cursor
@@ -106,8 +106,8 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
-- executeMethod ("[MoveCursorToStart](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToStart.md)")
-- executeMethod ("[MoveCursorToEnd](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveCursorToEnd.md)")
+- executeMethod ("[MoveCursorToStart](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveCursorToStart.md)")
+- executeMethod ("[MoveCursorToEnd](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveCursorToEnd.md)")
 
 ## Support
 

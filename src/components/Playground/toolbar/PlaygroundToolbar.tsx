@@ -5,7 +5,7 @@ import * as Select from "@radix-ui/react-select";
 
 import * as React from 'react';
 import { useCallback, useRef, useState } from "react";
-import { EditorType, PreviewType, ScriptType, DocumentType, usePlaygroundRootContext } from '../root/PlaygroundRootContext';
+import { EditorType, ModeType, ScriptType, FileType, usePlaygroundRootContext } from '../root/PlaygroundRootContext';
 import styles from './PlaygroundToolbar.module.css';
 
 const STORAGE_KEY = 'playground_server_config';
@@ -14,7 +14,7 @@ const normalizeServerUrl = (url: string): string =>
     url.endsWith('/') ? url : `${url}/`;
 
 export const PlaygroundToolbar = () => {
-    const { editorType, previewType, scriptType, documentType, isScriptModified, theme, setTheme, dispatch, documentServerUrl, documentServerSecret, defaultDocumentServerUrl, defaultDocumentServerSecret } = usePlaygroundRootContext();
+    const { editorType, modeType, scriptType, fileType, isScriptModified, theme, setTheme, dispatch, documentServerUrl, documentServerSecret, defaultDocumentServerUrl, defaultDocumentServerSecret } = usePlaygroundRootContext();
 
     const [dialogOpen, setDialogOpen] = useState(false);
     const [pendingEditorType, setPendingEditorType] = useState<EditorType | null>(null);
@@ -103,12 +103,12 @@ export const PlaygroundToolbar = () => {
         }
     }, [isScriptModified, scriptType, dispatch]);
 
-    const handlePreviewTypeChange = useCallback((value: string) => {
-        dispatch({ type: 'SET_PREVIEW_TYPE', payload: value as PreviewType });
+    const handleModeTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_MODE_TYPE', payload: value as ModeType });
     }, [dispatch]);
 
-    const handleDocumentTypeChange = useCallback((value: string) => {
-        dispatch({ type: 'SET_DOCUMENT_TYPE', payload: value as DocumentType });
+    const handleFileTypeChange = useCallback((value: string) => {
+        dispatch({ type: 'SET_FILE_TYPE', payload: value as FileType });
     }, [dispatch]);
 
     const handleThemeChange = useCallback((value: string) => {
@@ -130,7 +130,7 @@ export const PlaygroundToolbar = () => {
                         <Select.Content className={styles.SelectContent} position='popper'>
                             <Select.Viewport className={styles.SelectPopup}>
                                 <Select.Item value="word" className={styles.SelectOption}>
-                                    <Select.ItemText>Text Document</Select.ItemText>
+                                    <Select.ItemText>Document</Select.ItemText>
                                 </Select.Item>
                                 <Select.Item value="cell" className={styles.SelectOption}>
                                     <Select.ItemText>Spreadsheet</Select.ItemText>
@@ -185,7 +185,7 @@ export const PlaygroundToolbar = () => {
 
             <div className={styles.ToolbarGroup}>
                 <div className={styles.Label}>Mode:</div>
-                <Select.Root value={previewType} onValueChange={handlePreviewTypeChange}>
+                <Select.Root value={modeType} onValueChange={handleModeTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                         <Select.Icon asChild>
@@ -212,7 +212,7 @@ export const PlaygroundToolbar = () => {
 
             <div className={styles.ToolbarGroup}>
                 <div className={styles.Label}>File:</div>
-                <Select.Root value={documentType} onValueChange={handleDocumentTypeChange}>
+                <Select.Root value={fileType} onValueChange={handleFileTypeChange}>
                     <Select.Trigger className={styles.SelectTrigger}>
                         <Select.Value />
                         <Select.Icon asChild>

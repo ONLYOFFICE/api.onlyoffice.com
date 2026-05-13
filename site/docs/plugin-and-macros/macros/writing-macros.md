@@ -92,7 +92,7 @@ If you want to speed up the process, starting from version 9.0, you can use the 
 
 ## Subscribing to events
 
-To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) method.
+To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](../../office-api/usage-api/document-api/Api/Methods/attachEvent.md) method.
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 

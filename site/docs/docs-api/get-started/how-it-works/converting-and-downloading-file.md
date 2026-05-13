@@ -6,7 +6,7 @@ sidebar_position: -13
 
 The **document conversion service** is part of ONLYOFFICE Docs. It converts document files between supported formats — either to prepare them for editing or to export them in a format the user needs.
 
-The **document editor** works with files in the editors' native formats: `.docx` for text documents, `.xlsx` for spreadsheets, `.pptx` for presentations, or `.pdf` for PDFs.
+The **document editor** works with files in the editors' native formats: `.docx` for documents, `.xlsx` for spreadsheets, `.pptx` for presentations, or `.pdf` for PDFs.
 
 ## Default behavior
 

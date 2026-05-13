@@ -11,8 +11,8 @@ ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 | [ClearContent](./Methods/ClearContent.md) | boolean | Clears all content from the current complex form, resetting it to its placeholder state. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
 | [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../text-document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../text-document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiComplexForm class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
@@ -23,9 +23,9 @@ ApiComplexForm is a subclass of [ApiFormBase](../ApiFormBase/ApiFormBase.md).
 | [GetSubForms](./Methods/GetSubForms.md) | [ApiForm](../Enumeration/ApiForm.md)[] | Returns an ordered list of subforms. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |
 | [GetText](./Methods/GetText.md) | string | Returns the text from the current form. |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../text-document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form. *Used if possible for this type of form* |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form. *Used if possible for this type of form* |
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../text-document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. The null value will be returned for the inline forms. |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. The null value will be returned for the inline forms. |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if the current form is required. |
 | [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | Places a cursor before/after the current form. |

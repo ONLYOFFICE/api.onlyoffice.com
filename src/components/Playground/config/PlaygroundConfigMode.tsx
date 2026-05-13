@@ -8,8 +8,8 @@ import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 export function PlaygroundConfigMode() {
     const {
         editorType,
-        previewType,
-        documentType,
+        modeType,
+        fileType,
         theme,
         documentServerUrl,
         documentServerSecret,
@@ -18,12 +18,12 @@ export function PlaygroundConfigMode() {
     const editorRef = useRef<EditorPreviewRef>(null);
     const latestConfigRef = useRef<Record<string, any> | null>(null);
 
-    const configs = documentType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
+    const configs = fileType === 'sample' ? SAMPLE_FILE_CONFIGS : FILE_CONFIGS;
     const fileConfig = configs[editorType] || configs.word;
 
     const defaultConfig = useMemo<Record<string, unknown>>(() => ({
         documentType: fileConfig.docType,
-        type: previewType,
+        type: modeType,
         document: {
             fileType: fileConfig.ext,
             key: `demo-document-key-${crypto.randomUUID().slice(0, 8)}`,
@@ -39,7 +39,7 @@ export function PlaygroundConfigMode() {
             },
             lang: 'en',
         },
-    }), [documentServerUrl, theme, fileConfig, previewType]);
+    }), [documentServerUrl, theme, fileConfig, modeType]);
 
     const handleApply = useCallback((config: Record<string, unknown>) => {
         latestConfigRef.current = config;

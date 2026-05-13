@@ -1,6 +1,6 @@
 ---
 description: Get a list of content control tags in a document.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
 # Work with content controls tags
@@ -114,9 +114,9 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
-- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/PasteText.md)
-- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/SelectContentControl.md)")
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- [executeMethod ("PasteText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/PasteText.md)
+- executeMethod ("[SelectContentControl](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/SelectContentControl.md)")
 
 ## Support
 

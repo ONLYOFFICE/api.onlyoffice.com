@@ -8,9 +8,9 @@ tags: ["Docs", "Office API", "PDF"]
 
 Generate multiple personalized NDA documents in one file with individual sections for different users:
 
-- create a document with A4 page size and custom margins ([ApiDocument/CreateSection](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/CreateSection.md), [ApiSection/SetPageSize](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageSize.md), [ApiSection/SetPageMargins](/docs/office-api/usage-api/text-document-api/ApiSection/Methods/SetPageMargins.md));
+- create a document with A4 page size and custom margins ([ApiDocument/CreateSection](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateSection.md), [ApiSection/SetPageSize](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageSize.md), [ApiSection/SetPageMargins](/docs/office-api/usage-api/document-api/ApiSection/Methods/SetPageMargins.md));
 - create inline text form fields prefilled with user-specific data ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md));
-- add manual signature lines and separate each NDA with page breaks ([ApiParagraph/AddPageBreak](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddPageBreak.md)).
+- add manual signature lines and separate each NDA with page breaks ([ApiParagraph/AddPageBreak](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddPageBreak.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

@@ -15,7 +15,7 @@ expression.SetTextPr(textPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| textPr | Required | [ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md) |  | The text properties that will be set to the current form. |
+| textPr | Required | [ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md) |  | The text properties that will be set to the current form. |
 
 ## Returns
 

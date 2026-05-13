@@ -8,7 +8,7 @@ To open a document in view-only mode, set [`editorConfig.mode`](../../usage-api/
 
 ## Live viewer vs common viewer
 
-ONLYOFFICE Docs supports two viewing modes for text documents, spreadsheets, presentations, and PDFs:
+ONLYOFFICE Docs supports two viewing modes for documents, spreadsheets, presentations, and PDFs:
 
 - **Live viewer** — shows real-time changes from other users who are editing the document, including their cursors. This is the default mode.
 - **Common viewer** — shows a static snapshot of the document. The user does not see other users' edits until the page is reloaded.

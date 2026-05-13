@@ -1,6 +1,6 @@
 # CDocBuilder
 
-Base class used by ONLYOFFICE Document Builder for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
+Base class used by ONLYOFFICE Document Builder for the document file (document, spreadsheet, presentation, form document, PDF) to be generated.
 
 ## Syntax
 
@@ -18,7 +18,7 @@ class CDocBuilder
 | [Dispose](Dispose.md)                                       | Unloads the ONLYOFFICE Document Builder from the application memory when it is no longer needed. *(not used in .Net)*                      |
 | [Destroy](Destroy.md)                                       | Unloads the ONLYOFFICE Document Builder from the application memory when it is no longer needed. *(.Net only)*                             |
 | [Execute](Execute.md)                                       | Executes the command and returns the [CDocBuilderValue](../CDocBuilderValue/CDocBuilderValue.md). *(COM only)*                             |
-| [ExecuteCommand](ExecuteCommand.md)                         | Executes the command which will be used to create the document file (text document, spreadsheet, presentation, form document, PDF).        |
+| [ExecuteCommand](ExecuteCommand.md)                         | Executes the command which will be used to create the document file (document, spreadsheet, presentation, form document, PDF).        |
 | [GetContext](GetContext.md)                                 | Returns the current JS context.                                                                                                            |
 | [GetVersion](GetVersion.md)                                 | Returns the ONLYOFFICE Document Builder engine version. *(not used in COM)*                                                                |
 | [Initialize](Initialize.md)                                 | Initializes the ONLYOFFICE Document Builder as a library for the application to be able to work with it.                                   |

@@ -81,18 +81,18 @@
     "title": "Creating commercial offer",
     "description": "Generates a personalized commercial offer in DOCX format with client-specific products, services, and timelines.",
     "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_commercial_offer",
-    "tags": ["Docs", "Builder", "Text documents", "C++", ".Net", "Python", "Java"]
+    "tags": ["Docs", "Builder", "Documents", "C++", ".Net", "Python", "Java"]
   },
   {
     "title": "Creating employee training plan",
     "description": "Generates a structured DOCX training plan with learning goals, deadlines, and resources for each employee.",
     "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_development_plan",
-    "tags": ["Docs", "Builder", "Text documents", "C++", ".Net", "Python", "Java"]
+    "tags": ["Docs", "Builder", "Documents", "C++", ".Net", "Python", "Java"]
   },
   {
     "title": "Creating annual business report",
     "description": "Generates a DOCX annual report with financial performance, key achievements, and strategic highlights based on external data.",
     "path": "https://github.com/ONLYOFFICE/document-builder-samples/tree/master/python/creating_annual_report",
-    "tags": ["Docs", "Builder", "Text documents", "C++", ".Net", "Python", "Java"]
+    "tags": ["Docs", "Builder", "Documents", "C++", ".Net", "Python", "Java"]
   }
 ]

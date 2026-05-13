@@ -1,6 +1,6 @@
 # ApiDocument
 
-ApiDocument is a subclass of [ApiDocumentContent](../../text-document-api/ApiDocumentContent/ApiDocumentContent.md).
+ApiDocument is a subclass of [ApiDocumentContent](../../document-api/ApiDocumentContent/ApiDocumentContent.md).
 
 ## Methods
 

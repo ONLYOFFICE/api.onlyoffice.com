@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ControlProps, isIntegerControl, isNumberControl, isStringControl, not, isEnumControl, and, or, rankWith } from '@jsonforms/core';
 import { withJsonFormsControlProps } from '@jsonforms/react';
 import { Tooltip } from '../utils/Tooltip';
@@ -8,39 +8,53 @@ interface PendingInput {
     inputEl: HTMLInputElement;
     path: string;
     schemaType: string | undefined;
+    data: unknown;
     handleChange: (path: string, value: unknown) => void;
 }
 
-let pending: PendingInput | null = null;
+let current: PendingInput | null = null;
+const deferred: Map<string, { value: unknown; handleChange: (path: string, value: unknown) => void }> = new Map();
+
+function parseInput(inputEl: HTMLInputElement, schemaType: string | undefined): unknown {
+    const raw = inputEl.value;
+    if (raw === '') return undefined;
+    if (schemaType === 'integer') return parseInt(raw, 10);
+    if (schemaType === 'number') return parseFloat(raw);
+    return raw;
+}
+
+function saveCurrent() {
+    if (!current) return;
+    const { inputEl, path, schemaType, data, handleChange } = current;
+    const value = parseInput(inputEl, schemaType);
+    current = null;
+    if (value !== data) {
+        deferred.set(path, { value, handleChange });
+    }
+}
 
 export function flushPendingInput(): boolean {
-    if (!pending) return false;
-    const { inputEl, path, schemaType, handleChange } = pending;
-    const raw = inputEl.value;
-    pending = null;
-    if (raw === '') {
-        handleChange(path, undefined);
-    } else if (schemaType === 'integer') {
-        handleChange(path, parseInt(raw, 10));
-    } else if (schemaType === 'number') {
-        handleChange(path, parseFloat(raw));
-    } else {
-        handleChange(path, raw);
+    saveCurrent();
+    if (deferred.size === 0) return false;
+    for (const [path, { value, handleChange }] of deferred) {
+        handleChange(path, value);
     }
+    deferred.clear();
     return true;
 }
 
 function TextControlRenderer({ id, label, data, path, schema, description, required, enabled, handleChange }: ControlProps) {
     const type = schema.type === 'integer' || schema.type === 'number' ? 'number' : 'text';
-    const isUnset = data === undefined || data === null;
+    const [isUnset, setIsUnset] = useState(data === undefined || data === null);
     const inputRef = useRef<HTMLInputElement>(null);
 
     const onFocus = () => {
-        pending = { inputEl: inputRef.current!, path, schemaType: schema.type as string, handleChange };
+        saveCurrent();
+        current = { inputEl: inputRef.current!, path, schemaType: schema.type as string, data, handleChange };
     };
 
     const onBlur = () => {
-        flushPendingInput();
+        setIsUnset(inputRef.current?.value === '');
     };
 
     return (

@@ -8,7 +8,7 @@ tags: ["Docs", "Office API", "PDF"]
 
 Create a basic form with the image and text inputs:
 
-- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](/docs/office-api/usage-api/text-document-api/ApiDocument/ApiDocument.md), [ApiParagraph](/docs/office-api/usage-api/text-document-api/ApiParagraph/ApiParagraph.md));
+- create a new document, add text to the first paragraph and style it as heading ([ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md), [ApiParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/ApiParagraph.md));
 - create an image form and a text form, and add the form to the document ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
 :::tip

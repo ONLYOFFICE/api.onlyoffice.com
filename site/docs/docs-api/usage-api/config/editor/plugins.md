@@ -1,12 +1,12 @@
 # Plugins
 
-The plugins section allows you to connect the special add-ons to your ONLYOFFICE Docs installation which will help you add additional features to document editors.
+The plugins section defines the runtime plugin parameters.
 
 ## autostart
 
 **type:** `string[]`
 
-Defines the array of plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file. The plugins will automatically start when the editor opens and run one-by-one in the specified order.
+Defines the plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,11 @@ Defines the array of plugin identifiers from the [config.json](../../../../plugi
 
 **type:** `object`
 
-Defines an object which allows configuring plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this object can be used to pass an authorization token to the plugin. You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass the `options` object to the plugin.
+Defines the external configuration settings for plugins. Settings can target all plugins or a specific plugin — for example, passing an authorization token.
+
+:::note
+You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass this object to the plugin.
+:::
 
 **Example**:
 
@@ -29,7 +33,7 @@ Defines an object which allows configuring plugins from an external source. The 
 
 **type:** `object`
 
-Defines the parameters which will be set for all plugins.
+Defines the parameters applied to all plugins.
 
 **Example**:
 
@@ -45,7 +49,7 @@ Defines the parameters which will be set for all plugins.
 
 **type:** `object`
 
-Defines the parameters which will be set for a specific plugin. The plugin must be specified with the plugin GUID of the `asc.{UUID}` type.
+Defines the parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
 
 **Example**:
 
@@ -61,7 +65,7 @@ Defines the parameters which will be set for a specific plugin. The plugin must 
 
 **type:** `string[]`
 
-Defines the array of absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
+Defines the absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 

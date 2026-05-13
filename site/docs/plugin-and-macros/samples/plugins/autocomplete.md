@@ -1,6 +1,6 @@
 ---
 description: Provide input suggestions from a dictionary while typing.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents", "Spreadsheets", "Presentations"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
 # Autocomplete
@@ -96,7 +96,7 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 - [onInputHelperClear](/docs/plugin-and-macros/customization/input-helper.md)
 - [onInputHelperInput](/docs/plugin-and-macros/customization/input-helper.md)
 - [createInputHelper](/docs/plugin-and-macros/customization/input-helper.md#creating-an-input-helper)
-- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InputText.md)
+- [executeMethod ("InputText")](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/InputText.md)
 - [getInputHelper](/docs/plugin-and-macros/customization/input-helper.md#getting-an-input-helper)
 - [InputHelper.createWindow](/docs/plugin-and-macros/customization/input-helper.md#createwindow)
 - [InputHelper.getItems](/docs/plugin-and-macros/customization/input-helper.md#getitems)

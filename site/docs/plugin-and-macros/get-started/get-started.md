@@ -30,8 +30,8 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 
 **Perfect for:**
 
-- One-click formatting ([Reset text properties](../samples/macros/text-document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
-- Batch operations ([Remove empty tables](../samples/macros/text-document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
+- One-click formatting ([Reset text properties](../samples/macros/document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
+- Batch operations ([Remove empty tables](../samples/macros/document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
 - Custom calculations ([Find weighted average](../samples/macros/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
 - Document cleanup ([Remove empty paragraphs](../samples/macros/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
 
@@ -48,8 +48,8 @@ Custom tools enhanced with AI capabilities for next-generation document workflow
 
 **Perfect for:**
 
-- Writing assistance ([Check spelling](../samples/custom-ai-tools/text-document-editor/check-spelling.md) — AI-powered spell checking)
-- Smart styling ([Change text style](../samples/custom-ai-tools/text-document-editor/change-text-style.md) — AI-powered text styling)
+- Writing assistance ([Check spelling](../samples/custom-ai-tools/document-editor/check-spelling.md) — AI-powered spell checking)
+- Smart styling ([Change text style](../samples/custom-ai-tools/document-editor/change-text-style.md) — AI-powered text styling)
 - Automatic shape generation ([Add shape](../samples/custom-ai-tools/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
 - Data insights ([Explain formula](../samples/custom-ai-tools/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
 

@@ -38,7 +38,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormsData](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetFormsData.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [IsRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/IsRequired.md), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [SetBorderColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBorderColor.md), [SetBackgroundColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBackgroundColor.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormsData](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetFormsData.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [IsRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/IsRequired.md), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [SetBorderColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBorderColor.md), [SetBackgroundColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBackgroundColor.md)
 
 ## 结果
 

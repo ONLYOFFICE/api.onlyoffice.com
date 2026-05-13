@@ -23,7 +23,7 @@ Automatically **bolds** the first word of each bullet point that contains a colo
                 let indLeft = paragraph.GetIndLeft();
                 if (indLeft !== 0) {
                     let text = paragraph.GetText();
-                   let match = text.match(/^(\s*\S+\s*[:–\-])/);
+                    let match = text.match(/^(\s*\S+\s*[:–\-])/);
                     if (match) {
                         let boldTextStr = match[1];
                         let restText = text.substring(boldTextStr.length);
@@ -40,7 +40,7 @@ Automatically **bolds** the first word of each bullet point that contains a colo
 })();
 ```
 
-Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetIndLeft](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), [GetElementsCount](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetElementsCount.md), [RemoveAllElements](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetIndLeft](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), GetText, [RemoveAllElements](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
 
 ## Result
 

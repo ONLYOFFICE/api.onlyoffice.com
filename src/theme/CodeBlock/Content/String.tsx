@@ -79,7 +79,7 @@ export default function CodeBlockString({
     const params = new URLSearchParams({
       code: metadata.code,
       editor: isForm ? 'form' : EDITOR_TYPE_MAP[editorType as string],
-      testType: 'office-js-api',
+      script: 'office-js-api',
     });
 
     if (templateUrl) {

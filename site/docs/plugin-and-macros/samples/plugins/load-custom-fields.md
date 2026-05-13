@@ -1,6 +1,6 @@
 ---
 description: Load custom fields with questions and dropdowns.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
 # Load custom fields
@@ -112,8 +112,8 @@ Repository on GitHub: [example_customfields_load](https://github.com/ONLYOFFICE/
 - [button](/docs/plugin-and-macros/customization/buttons.md)
 - [init](/docs/plugin-and-macros/interacting-with-editors/overview/#how-it-works)
 - [onMethodReturn](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-methods.md)
-- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllContentControls.md)")
-- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/InsertAndReplaceContentControls.md)")
+- executeMethod ("[GetAllContentControls](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllContentControls.md)")
+- executeMethod ("[InsertAndReplaceContentControls](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/InsertAndReplaceContentControls.md)")
 
 ## Support
 

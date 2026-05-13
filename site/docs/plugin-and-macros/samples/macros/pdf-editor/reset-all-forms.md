@@ -19,7 +19,7 @@ Clears all fields if necessary, for example after printing the document.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [Clear](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/Clear.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [Clear](/docs/office-api/usage-api/document-api/ApiFormBase/Methods/Clear.md)
 
 ## Result
 

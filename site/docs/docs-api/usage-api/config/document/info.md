@@ -1,6 +1,6 @@
 # Info
 
-The document info section allows you to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).
+The info section defines the document info parameters.
 
 ## favorite
 
@@ -16,7 +16,7 @@ Defines the highlighting state of the *Favorite* icon. When the user clicks the 
 
 **type:** `string`
 
-Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).
+Defines the folder where the document is stored. Can be empty if the document is in the root folder.
 
 **Example**: `"Example Files"`
 
@@ -39,6 +39,7 @@ Displays the information about the settings which allow sharing the document wit
 ``` ts
 [
   {
+    isLink: false,
     permissions: "Full Access",
     user: "John Smith",
   },
@@ -57,7 +58,7 @@ Changes the user icon to the link icon.
 
 **type:** `string`
 
-The access rights for the user with the name above. Can be `Full Access`, `Read Only`, or `Deny Access`.
+The access rights for the user with the name above.
 
 **Example**: `"Full Access"`
 
@@ -94,6 +95,7 @@ const config = {
       owner: "John Smith",
       sharingSettings: [
         {
+          isLink: false,
           permissions: "Full Access",
           user: "John Smith",
         },

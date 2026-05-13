@@ -260,7 +260,7 @@ AI 代理将运行 `commentText` 函数，并在文档中插入相关评论。
 ```
 
 :::note
-为了确保在请求执行后可以回滚整个更改块，我们在 `commentText` 函数中使用了 [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) 和 [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) 方法。
+为了确保在请求执行后可以回滚整个更改块，我们在 `commentText` 函数中使用了 [StartAction](../interacting-with-editors/document-api/Methods/StartAction.md) 和 [EndAction](../interacting-with-editors/document-api/Methods/EndAction.md) 方法。
 :::
 
 AI 代理功能随着当今数字世界的需求不断发展。通过创建适合特定使用场景的自定义 AI 工具来扩展其功能吧。

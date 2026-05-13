@@ -68,7 +68,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | title | string | optional | Defines the converted file name. |
 | token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../signature/request/token-in-body.md#convert-document). |
 | url | string | required | Defines the absolute URL to the document to be converted. Be sure to add a [token](../../get-started/how-it-works/security.md) when using local links. Otherwise, an error will occur. |
-| watermark | object | optional | Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/text-document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
+| watermark | object | optional | Defines a JSON object containing the [properties](../../../plugin-and-macros/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md) of a watermark which is inserted into the pdf and image files during conversion. |
 | watermark.align | integer | optional | Defines the vertical text align in the watermark shape: **0** - bottom, **1** - center, **4** - top. |
 | watermark.fill | integer[] \| string | optional | Defines the watermark fill color in the RGB format, or the URL to image (base64 support: *data:image/png;...*). The empty array \[] means that the watermark has no fill. |
 | watermark.height | integer | optional | Defines the watermark height measured in millimeters. |
@@ -90,7 +90,7 @@ import APITable from '@site/src/components/APITable/APITable';
 | watermark.stroke | integer[] | optional | Defines the watermark stroke color in the RGB format. The empty array \[] means that the watermark stroke has no fill. |
 | watermark.stroke-width | integer | optional | Defines the watermark stroke width measured in millimeters. |
 | watermark.transparent | float | optional | Defines the watermark transparency degree. |
-| watermark.type | string | optional | Defines the [shape type](../../../office-api/usage-api/text-document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
+| watermark.type | string | optional | Defines the [shape type](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
 | watermark.width | integer | optional | Defines the watermark width measured in millimeters. |
 
 ```mdx-code-block

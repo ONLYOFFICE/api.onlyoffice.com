@@ -1,6 +1,6 @@
 ﻿# 文档信息
 
-文档信息部分允许更改文档的其他参数（文档所有者、存储文档的文件夹、上传日期、共享设置）。
+info 部分定义文档信息参数。
 
 ## 收藏 {#favorite}
 
@@ -16,7 +16,7 @@
 
 **类型：** `string`
 
-定义存储文档的文件夹（如果文档存储在根文件夹中，则可以为空）。
+定义存储文档的文件夹。如果文档位于根文件夹中，可以为空。
 
 **示例**: `"Example Files"`
 
@@ -39,6 +39,7 @@
 ``` ts
 [
   {
+    isLink: false,
     permissions: "Full Access",
     user: "John Smith",
   },
@@ -57,7 +58,7 @@
 
 **类型：** `string`
 
-具有上述名称的用户的访问权限。可以是 `Full Access`、`Read Only` 或 `Deny Access`
+具有上述名称的用户的访问权限。
 
 **示例**: `"Full Access"`
 
@@ -94,6 +95,7 @@ const config = {
       owner: "John Smith",
       sharingSettings: [
         {
+          isLink: false,
           permissions: "Full Access",
           user: "John Smith",
         },

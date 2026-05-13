@@ -17,7 +17,7 @@ This method doesn't have any parameters.
 
 ## Returns
 
-[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
+[ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md)
 
 ## Example
 

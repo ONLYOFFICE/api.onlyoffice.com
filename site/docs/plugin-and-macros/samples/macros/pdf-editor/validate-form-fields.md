@@ -40,7 +40,7 @@ Highlights empty or unrequired text fields in a document with desired colors.
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/text-document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormsData](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsData.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [IsRequired](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/IsRequired.md), [GetTipText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [SetBorderColor](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetBorderColor.md), [SetBackgroundColor](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetBackgroundColor.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormsData](/docs/office-api/usage-api/form-api/ApiDocument/Methods/GetFormsData.md), [GetFormType](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](/docs/office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [IsRequired](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/IsRequired.md), [GetTipText](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [SetBorderColor](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetBorderColor.md), [SetBackgroundColor](/docs/office-api/usage-api/form-api/ApiTextForm/Methods/SetBackgroundColor.md)
 
 ## Result
 

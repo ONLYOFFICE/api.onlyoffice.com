@@ -1,6 +1,6 @@
 ---
 description: Insert template fields for invoice information.
-tags: ["Docs", "Plugins", "Ready-to-use", "Text documents"]
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
 # Invoices

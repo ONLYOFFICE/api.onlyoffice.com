@@ -15,7 +15,7 @@ expression.SetTextPr(textPr);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| textPr | 必需 | [ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md) |  | 将设置到当前表单的文本属性。 |
+| textPr | 必需 | [ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md) |  | 将设置到当前表单的文本属性。 |
 
 ## 返回值
 

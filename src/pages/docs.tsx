@@ -10,7 +10,7 @@ const templateProps: FeaturePageTemplate.Props = {
   description: (
     <>
       ONLYOFFICE Docs is a collaborative office suite that includes editors for
-      text documents, spreadsheets, presentations, fillable forms, and PDFs.
+      documents, spreadsheets, presentations, fillable forms, and PDFs.
     </>
   ),
   links: [

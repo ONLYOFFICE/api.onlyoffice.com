@@ -17,7 +17,7 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
 
 ## 它是如何运作的
 
-1. 文档就绪时，通过 `connector.callCommand` 使用 [GetReviewReport](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetReviewReport.md) 获取评审更改的总数，并显示在计数器中：
+1. 文档就绪时，通过 `connector.callCommand` 使用 [GetReviewReport](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetReviewReport.md) 获取评审更改的总数，并显示在计数器中：
 
    ``` ts
    connector.callCommand(() => {
@@ -35,7 +35,7 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
    });
    ```
 
-2. 当用户单击自定义界面中的 **接受/拒绝** 按钮时，将执行 [AcceptReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RejectReviewChanges.md) 方法来接受/拒绝编辑器中的选定更改：
+2. 当用户单击自定义界面中的 **接受/拒绝** 按钮时，将执行 [AcceptReviewChanges](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AcceptReviewChanges.md) / [RejectReviewChanges](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RejectReviewChanges.md) 方法来接受/拒绝编辑器中的选定更改：
 
    ``` ts
    document.getElementById("accept").addEventListener("click", () => {
@@ -46,7 +46,7 @@ import { ReviewChangesExternalToolbar } from '@site/src/components/BrowserWindow
    });
    ```
 
-3. 当用户单击自定义界面中的 **上一个/下一个** 按钮时，将执行 [MoveToNextReviewChange](/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/MoveToNextReviewChange.md) 方法，在评审更改之间导航：
+3. 当用户单击自定义界面中的 **上一个/下一个** 按钮时，将执行 [MoveToNextReviewChange](/docs/plugin-and-macros/interacting-with-editors/document-api/Methods/MoveToNextReviewChange.md) 方法，在评审更改之间导航：
 
    ``` ts
    document.getElementById("prev").addEventListener("click", () => {
