@@ -783,7 +783,7 @@ interface ActionLink {
 
 interface DocumentBase {
     /**
-     * Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded.
+     * Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters. If not specified or empty, defaults to `"Unnamed.{fileType}"` (e.g. `"Unnamed.docx"`).
      * @forType `desktop` | `mobile` | `embedded`
      * @maxLength 128
      * @example "Example Document Title.docx"
@@ -801,7 +801,9 @@ interface DocumentBase {
     url: string;
 
     /**
-     * Defines the type of the file for the source viewed or edited document.
+     * Defines the type of the file for the source viewed or edited document. Must be lowercase.
+     *
+     * @note If omitted, the file type is automatically inferred from the `documentType` value. If both `fileType` and `documentType` are omitted, an error will occur.
      * @forType `desktop` | `mobile` | `embedded`
      * @example "docx"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#filetype
@@ -809,9 +811,7 @@ interface DocumentBase {
     fileType?: FileType;
 
     /**
-     * Defines the unique document identifier used by the service to recognize the document.
-     * - Every time the document is edited and saved, the key must be generated anew.
-     * - In case the known key is sent, the document will be taken from the cache.
+     * Defines the unique document identifier used by the service to recognize the document. If a known key is sent, the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew.
      *
      * @forType `desktop` | `mobile` | `embedded`
      * @note The key must be unique for all independent services connected to the same document server. Otherwise, the service may open someone else's file from the editor cache. If multiple third-party integrators are connected to the same document server, they must also provide a unique key.
@@ -838,7 +838,7 @@ interface DocumentNormal extends DocumentBase {
     referenceData?: ReferenceData;
 
     /**
-     * The document info section allows to change additional parameters for the document.
+     * The info section defines the document info parameters.
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/
      */
@@ -880,7 +880,7 @@ interface DocumentNormal extends DocumentBase {
     };
 
     /**
-     * The document permission section allows to change the permission for the document to be edited and downloaded or not.
+     * The permissions section defines the document permission parameters.
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/
      */

@@ -93,13 +93,13 @@ Defines the absolute URL where the source viewed or edited document is stored. B
 
 **type:** `object`
 
-The document info section. See the [info](info.md) page for available parameters.
+The [info](info.md) section defines the document info parameters.
 
 ## permissions
 
 **type:** `object`
 
-The document permission section. See the [permissions](permissions.md) page for available parameters.
+The [permissions](permissions.md) section defines the document permission parameters.
 
 ## Example
 

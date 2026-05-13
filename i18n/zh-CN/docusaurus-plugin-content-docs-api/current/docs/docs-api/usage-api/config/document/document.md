@@ -93,13 +93,13 @@
 
 **类型：** `object`
 
-文档信息部分。有关可用参数，请参阅 [info](info.md) 页面。
+[info](info.md) 部分定义文档信息参数。
 
 ## permissions
 
 **类型：** `object`
 
-文档权限部分。有关可用参数，请参阅 [permissions](permissions.md) 页面。
+[permissions](permissions.md) 部分定义文档权限参数。
 
 ## 示例
 
