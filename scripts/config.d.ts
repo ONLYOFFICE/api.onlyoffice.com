@@ -1,4 +1,6 @@
 // Types
+
+/** Defines the document type to open. */
 type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
 
 /**
@@ -9,6 +11,7 @@ type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
  */
 type PlatformType = "desktop" | "mobile" | "embedded"
 
+/** Supported file types for document files. */
 type WordFileType =
     | "doc"
     | "docm"
@@ -38,6 +41,7 @@ type WordFileType =
     | "wpt"
     | "xml"
 
+/** Supported file types for spreadsheet files. */
 type CellFileType =
     | "csv"
     | "et"
@@ -56,6 +60,7 @@ type CellFileType =
     | "xltx"
     | "xml"
 
+/** Supported file types for presentation files. */
 type SlideFileType =
     | "dps"
     | "dpt"
@@ -75,12 +80,14 @@ type SlideFileType =
     | "pptx"
     | "sxi"
 
+/** Supported file types for portable document format files. */
 type PdfFileType =
     | "djvu"
     | "oxps"
     | "pdf"
     | "xps"
 
+/** Supported file types for diagram files. */
 type DiagramFileType =
     | "vsdm"
     | "vsdx"
@@ -89,8 +96,10 @@ type DiagramFileType =
     | "vstm"
     | "vstx"
 
+/** All supported file types. */
 type FileType = WordFileType | CellFileType | SlideFileType | PdfFileType | DiagramFileType
 
+/** Supported editor interface language codes. */
 type Lang =
     | "ar"
     | "az"
@@ -139,6 +148,7 @@ type Lang =
     | "zh"
     | "zh-TW"
 
+/** Supported regional setting codes for currency, date, and time formatting. */
 type Region =
     | "ar-EG"
     | "ar-SA"
@@ -183,6 +193,7 @@ type Region =
     | "zh-CN"
     | "zh-TW"
 
+/** Available editor theme identifiers. */
 type EditorTheme =
     "theme-light"
     | "theme-classic-light"
@@ -191,7 +202,9 @@ type EditorTheme =
     | "theme-white"
     | "theme-night"
 
-// Events props
+// Event parameter interfaces
+
+/** Event data for the `onDocumentStateChange` event. */
 interface DocumentStateChangeEvent {
     /**
      * `true` — the current user is editing the document.
@@ -200,6 +213,7 @@ interface DocumentStateChangeEvent {
     data?: boolean;
 };
 
+/** Event data for the `onRequestHistoryData` event. */
 interface RequestHistoryDataEvent {
     /**
      * The document version number.
@@ -207,6 +221,7 @@ interface RequestHistoryDataEvent {
     data?: number;
 };
 
+/** Event data for the `onRequestRestore` event. */
 interface RequestRestoreEvent {
     data?: {
         /**
@@ -224,6 +239,7 @@ interface RequestRestoreEvent {
     };
 };
 
+/** Event data for the `onError` event. */
 interface ErrorEvent {
     data?: {
         /**
@@ -238,6 +254,7 @@ interface ErrorEvent {
     };
 };
 
+/** Event data for the `onWarning` event. */
 interface WarningEvent {
     data?: {
         /**
@@ -252,6 +269,7 @@ interface WarningEvent {
     };
 };
 
+/** Event data for the `onInfo` event. */
 interface InfoEvent {
     data?: {
         /**
@@ -261,6 +279,7 @@ interface InfoEvent {
     };
 };
 
+/** Event data for the `onDownloadAs` event. */
 interface DownloadAsEvent {
     data?: {
         /**
@@ -274,6 +293,7 @@ interface DownloadAsEvent {
     };
 };
 
+/** Event data for the `onRequestSaveAs` event. */
 interface RequestSaveAsEvent {
     data?: {
         /**
@@ -291,6 +311,7 @@ interface RequestSaveAsEvent {
     };
 };
 
+/** Event data for the `onRequestRename` event. */
 interface RequestRenameEvent {
     /**
      * The new document title.
@@ -298,6 +319,7 @@ interface RequestRenameEvent {
     data?: string;
 };
 
+/** Event data for the `onMetaChange` event. */
 interface MetaChangeEvent {
     data?: {
         /**
@@ -311,6 +333,7 @@ interface MetaChangeEvent {
     };
 };
 
+/** Event data for the `onRequestUsers` event. */
 interface RequestUsersEvent {
     data?: {
         /**
@@ -324,6 +347,7 @@ interface RequestUsersEvent {
     };
 };
 
+/** Event data for the `onRequestSendNotify` event. */
 interface RequestSendNotifyEvent {
     data?: {
         /**
@@ -341,6 +365,7 @@ interface RequestSendNotifyEvent {
     };
 };
 
+/** Event data for the `onMakeActionLink` event. */
 interface MakeActionLinkEvent {
     data?: {
         /**
@@ -350,6 +375,7 @@ interface MakeActionLinkEvent {
     };
 };
 
+/** Event data for the `onRequestInsertImage` event. */
 interface RequestInsertImageEvent {
     data?: {
         /**
@@ -359,6 +385,7 @@ interface RequestInsertImageEvent {
     };
 };
 
+/** Event data for the `onRequestReferenceData` event. */
 interface RequestReferenceDataEvent {
     data?: {
         /**
@@ -376,6 +403,7 @@ interface RequestReferenceDataEvent {
     };
 };
 
+/** Event data for the `onRequestOpen` event. */
 interface RequestOpenEvent {
     data?: {
         /**
@@ -393,6 +421,7 @@ interface RequestOpenEvent {
     };
 };
 
+/** Event data for the `onRequestSelectDocument` event. */
 interface RequestSelectDocumentEvent {
     data?: {
         /**
@@ -402,6 +431,7 @@ interface RequestSelectDocumentEvent {
     };
 };
 
+/** Event data for the `onRequestSelectSpreadsheet` event. */
 interface RequestSelectSpreadsheetEvent {
     data?: {
         /**
@@ -411,6 +441,7 @@ interface RequestSelectSpreadsheetEvent {
     };
 };
 
+/** Event data for the `onRequestReferenceSource` event. */
 interface RequestReferenceSourceEvent {
     data?: {
         /**
@@ -424,6 +455,7 @@ interface RequestReferenceSourceEvent {
     };
 };
 
+/** Event data for the `onRequestFillingStatus` event. */
 interface RequestFillingStatusEvent {
     /**
      * The role name for which the filling status is requested.
@@ -431,6 +463,7 @@ interface RequestFillingStatusEvent {
     data?: string;
 };
 
+/** Event data for the `onSaveDocument` event. */
 interface SaveDocumentEvent {
     /**
      * The document file data in binary format.
@@ -438,6 +471,7 @@ interface SaveDocumentEvent {
     data?: ArrayBuffer;
 };
 
+/** Event data for the `onRequestStartFilling` event. */
 interface RequestStartFillingEvent {
     /**
      * The list of roles available in the PDF form.
@@ -454,7 +488,7 @@ interface RequestStartFillingEvent {
     }[];
 };
 
-// Interfaces for arrays
+/** Defines a sharing settings entry for the document info. */
 interface SharingSetting {
     /**
      * The name of the user the document will be shared with.
@@ -479,6 +513,7 @@ interface SharingSetting {
     isLink?: boolean;
 }
 
+/** The permissions section defines the document permission parameters. */
 interface DocumentPermissions {
     /**
      * Defines if the document can be edited or only viewed. In case the editing permission is set to `true` the **File** menu will contain the **Edit Document** menu option; please note that if the editing permission is set to `false` the document will be opened in viewer and you will not be able to switch it to the editor even if the `mode` parameter is set to `edit`.
@@ -693,6 +728,7 @@ interface DocumentTemplate {
     url?: string;
 }
 
+/** Defines an object that uniquely identifies a file in the integrator's system. */
 interface ReferenceData {
     /**
      * The unique document identifier used by the service to get a link to the file.
@@ -713,6 +749,7 @@ interface ReferenceData {
     instanceId?: string;
 };
 
+/** Defines the action link data for scrolling to a bookmark or comment in the document. */
 interface ActionLink {
     /**
      * The action object that defines what to scroll to in the document.
@@ -736,6 +773,7 @@ interface ActionLink {
     }
 };
 
+/** Base document parameters shared by all editor types. */
 interface DocumentBase {
     /**
      * Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters. If not specified or empty, defaults to `"Unnamed.{fileType}"` (e.g. `"Unnamed.docx"`).
@@ -778,6 +816,7 @@ interface DocumentBase {
     key: string;
 }
 
+/** Document parameters for desktop and mobile editor types. */
 interface DocumentNormal extends DocumentBase {
     // TODO: Not in the documentation
     /**
@@ -851,8 +890,10 @@ interface DocumentNormal extends DocumentBase {
     isForm?: boolean,
 }
 
+/** Document parameters for the embedded editor type. */
 interface DocumentEmbedded extends DocumentBase {}
 
+/** Base editor config parameters shared by all editor types. */
 interface EditorConfigBase {
     /**
      * Defines the editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
@@ -974,6 +1015,7 @@ interface EditorConfigBase {
     };
 }
 
+/** Editor config parameters for desktop and mobile editor types. */
 interface EditorConfigNormal extends EditorConfigBase {
     /**
      * Specifies the data received from the **document editing service** using the `onMakeActionLink` event or the `onRequestSendNotify` event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
@@ -2392,6 +2434,7 @@ interface EditorConfigNormal extends EditorConfigBase {
     };
 }
 
+/** Editor config parameters for the embedded editor type. */
 interface EditorConfigEmbedded extends EditorConfigBase {
     /**
      * The embedded section defines the embedded mode parameters.
@@ -2452,6 +2495,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
     };
 }
 
+/** Base event callbacks shared by all editor types. */
 interface EventsBase {
     /**
      * The function called when the application is loaded into the browser.
@@ -2496,6 +2540,7 @@ interface EventsBase {
     onPluginsReady?: () => void;
 }
 
+/** Event callbacks for desktop and mobile editor types. */
 interface EventsNormal extends EventsBase {
     /**
      * The function called when the document is modified.
@@ -3133,8 +3178,10 @@ interface EventsNormal extends EventsBase {
     onStartFilling?: () => void;
 }
 
+/** Event callbacks for the embedded editor type. */
 interface EventsEmbedded extends EventsBase {}
 
+/** Base configuration shared by all editor types. */
 interface BaseConfig {
     /**
      * Defines the platform type used to access the document.
@@ -3297,6 +3344,7 @@ export interface Config extends ConfigNormal {
 // Methods
 // https://api.onlyoffice.com/docs/docs-api/usage-api/methods/
 
+/** Parameters for the `insertImage` method. */
 interface InsertImageOptions {
     /**
      * Defines a type of image insertion from the event.
@@ -3340,6 +3388,7 @@ interface InsertImageOptions {
     url?: string;
 }
 
+/** Parameters for the `refreshHistory` method. */
 interface RefreshHistoryOptions {
     /**
      * Defines the current document version number.
@@ -3390,6 +3439,7 @@ interface RefreshHistoryOptions {
     }[];
 }
 
+/** Parameters for the `setHistoryData` method. */
 interface SetHistoryDataOptions {
     /**
      * Defines the URL address of the file with the document changes data.
@@ -3436,6 +3486,7 @@ interface SetHistoryDataOptions {
     version: number;
 }
 
+/** Parameters for the `setReferenceData` and `setReferenceSource` methods. */
 interface SetReferenceDataOptions {
     /**
      * Defines the error message text.
@@ -3473,6 +3524,7 @@ interface SetReferenceDataOptions {
     url: string;
 }
 
+/** Parameters for the `setRequestedDocument` method. */
 interface SetRequestedDocumentOptions {
     /**
      * Defines a type of document selection from the event.
@@ -3497,6 +3549,7 @@ interface SetRequestedDocumentOptions {
     url: string;
 }
 
+/** Parameters for the `setRequestedSpreadsheet` method. */
 interface SetRequestedSpreadsheetOptions {
     /**
      * Defines a type of spreadsheet selection from the event.
@@ -3519,6 +3572,7 @@ interface SetRequestedSpreadsheetOptions {
     url: string;
 }
 
+/** Parameters for the `setUsers` method. */
 interface SetUsersOptions {
     /**
      * Defines the operation type from the `onRequestUsers` event.
@@ -3538,6 +3592,7 @@ interface SetUsersOptions {
     }[];
 }
 
+/** Parameters for the `setSharingSettings` method. */
 interface SetSharingSettingsOptions {
     /**
      * Defines the settings which allow sharing the document with other users.
