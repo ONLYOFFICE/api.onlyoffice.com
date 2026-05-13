@@ -603,6 +603,7 @@ docEditor.insertImage({
 | 参数                                | 类型            | 是否必填 | 描述                                                             |
 | ----------------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
 | options.sharingSettings             | `object[]` | 非必填的 | 定义允许与其他用户共享文档的设置。 |
+| options.sharingSettings.isLink      | `boolean` | 非必填的 | 将用户图标更改为链接图标。                     |
 | options.sharingSettings.permissions | `string` | 非必填的 | 定义具有上述名称的用户的访问权限。             |
 | options.sharingSettings.user        | `string` | 非必填的 | 定义将与之共享文档的用户的名称。    |
 

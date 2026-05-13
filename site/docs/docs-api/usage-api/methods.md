@@ -603,6 +603,7 @@ Update the [information](./config/document/info.md#sharingsettings) about the se
 | Parameter                           | Type            | Presence | Description                                                             |
 | ----------------------------------- | --------------- | -------- | ----------------------------------------------------------------------- |
 | options.sharingSettings             | `object[]` | optional | Defines the settings which allow sharing the document with other users. |
+| options.sharingSettings.isLink      | `boolean` | optional | Changes the user icon to the link icon.                                 |
 | options.sharingSettings.permissions | `string` | optional | Defines the access rights for the user with the name above.             |
 | options.sharingSettings.user        | `string` | optional | Defines the name of the user with whom the document will be shared.     |
 
