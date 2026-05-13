@@ -503,9 +503,6 @@ interface DocumentPermissions {
      */
     download?: boolean;
 
-    // TODO: Not in the documentation
-    reader?: boolean;
-
     /**
      * Defines if the document can be reviewed or not.
      *
