@@ -19,7 +19,7 @@ export const DocsFeatures: Features = {
   linkPrefix: 'docs',
   button: {
     text: "Try Docs Playground",
-    href: "/docs/docs-api/get-started/playground/",
+    href: "/playground/?script=config",
   },
   items: [
     {
@@ -80,7 +80,7 @@ export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
   button: {
     text: "Try DocSpace Playground",
-    href: "/docspace/javascript-sdk/get-started/playground/",
+    href: "/docspace-playground/",
   },
   items: [
     {
