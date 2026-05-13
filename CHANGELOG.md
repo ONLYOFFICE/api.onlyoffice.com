@@ -9,6 +9,7 @@
 * Added auto-generated JSON schema from TypeScript types for Config Editor
 * Added tri-state toggle (unset/true/false) and dimmed labels for unset controls in Config Editor
 * Added Config section grouping for root-level primitive fields
+* Added event handler checkboxes to Config Editor
 
 ### Improvements
 
@@ -51,6 +52,9 @@
 * Removed .ashx extension and trailing slash from example URLs
 * Fixed MCP documentation formatting issues
 * Added deprecated fileChoiceUrl, mergeFolderUrl, saveAsUrl, and sharingSettingsUrl parameters to editor config documentation
+* Restructured event sections with consistent description flow, typed parameters, and improved cross-references
+* Simplified config section descriptions and updated JSDoc comments
+* Cleaned up code examples in customization docs
 
 #### Playground
 
@@ -60,6 +64,16 @@
 * Fixed button style scoping and ArrayControl schema resolution
 * Fixed anonymous mode, dark mode compatibility, and PDF form document names
 * Fixed config editor section content padding and removed short descriptions from object section headers
+* Fixed form state sync when applying config from code tab
+* Fixed event handler function signatures in Config Editor
+* Replaced inline descriptions with tooltips in config editor section headers
+* Fixed bold and code formatting in config editor tooltips
+
+#### Plugins and macros
+
+* Updated macro code samples and synced Chinese localization
+* Fixed method links and table formatting in custom AI tool samples
+* Removed trailing slash before anchor in Asc.scope object link
 
 #### Localization
 
