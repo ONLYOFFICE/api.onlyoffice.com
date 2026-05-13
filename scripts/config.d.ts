@@ -1000,16 +1000,18 @@ interface EditorConfigBase {
         roles?: string[];
     };
 
-    // TODO: Not in the documentation
     /**
-     * The **wopi** section is used only for WOPI.
+     * The WOPI configuration section. Used only when the editor is integrated via [WOPI](https://api.onlyoffice.com/docs/docs-api/using-wopi/).
      * @forType `desktop` | `mobile` | `embedded`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#wopi
      */
     wopi?: {
         /**
-         * Defines the maximum filename length for the rename.
+         * The maximum length for file names that the WOPI host supports, excluding the file extension.
+         * Corresponds to the [FileNameMaxLength](https://api.onlyoffice.com/docs/docs-api/using-wopi/wopi-rest-api/checkfileinfo/#FileNameMaxLength) property from CheckFileInfo.
          *
          * @default 250
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#wopifilenamemaxlength
          */
         FileNameMaxLength?: number;
     };

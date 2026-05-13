@@ -184,6 +184,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - 增加了打开 [oxps](../usage-api/config/config.md#documenttype) 格式的功能。
 - 增加了对 [WOPI 协议](../using-wopi/overview.md) 的支持。
+- 添加了 [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) 部分。
 - 将 *simple* 值添加到 [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 参数中。
 - 添加了保存在电子表格文件中的 [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) 线程评论。
 - 添加了 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 字段。

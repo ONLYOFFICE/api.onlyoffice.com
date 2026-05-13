@@ -184,6 +184,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added opening for [oxps](../usage-api/config/config.md#documenttype) format.
 - Added support for [WOPI protocol](../using-wopi/overview.md).
+- Added the [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) section.
 - Added the *simple* value to the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) parameter.
 - Added the [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
 - Added the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) field.
