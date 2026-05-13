@@ -3145,14 +3145,7 @@ interface EventsNormal extends EventsBase {
     onStartFilling?: () => void;
 }
 
-interface EventsEmbedded extends EventsBase {
-    // TODO: Not in the documentation
-    /**
-     * The function called when the user navigates back to the folder.
-     * @forType `embedded`
-     */
-    onBack?: () => void;
-}
+interface EventsEmbedded extends EventsBase {}
 
 interface BaseConfig {
     /**
