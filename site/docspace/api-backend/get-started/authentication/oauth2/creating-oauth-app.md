@@ -20,7 +20,7 @@ You can also create and manage OAuth clients on your portal from the **Developer
 
 5. Specify the following settings to configure the behavior of your OAuth app. These settings are grouped into **Basic info**, **Access scopes**, and **Support and legal info**.
 
-## Basic Info
+## Basic info
 
 - **App name (Required):** The application name that will be displayed on all consent screens and in the app list.
 - **Website URL (Required):** The URL to the home page of the application website.
@@ -32,14 +32,14 @@ You can also create and manage OAuth clients on your portal from the **Developer
    PKCE is not a form of client authentication, and PKCE is not a replacement for a client secret or other client authentication. PKCE is recommended even if a client is using a client secret or other form of [client authentication](https://oauth.net/2/client-authentication/) like [private_key_jwt](https://oauth.net/private-key-jwt/). 
 
    Because PKCE is not a replacement for client authentication, it does not allow treating a public client as a confidential client.
-- **Redirects URL (Required):** The URLs where the user will be redirected after successfully passing the consent screen. Enter the address and click **+**. You can specify several URLs by clicking the **+** icon. For example, to add test and production versions.
+- **Redirects URLs (Required):** The URLs where the user will be redirected after successfully passing the consent screen. Enter the address and click **+**. You can specify several URLs by clicking the **+** icon. For example, to add test and production versions.
 - **Allowed origins (Required):** The URLs of sources that will be able to make requests to the DocSpace API without CORS blocking. Enter the address and click **+**. You can also specify several URLs by clicking **+**.
 
 ![Basic info](/assets/images/docspace/basic-info.png#gh-light-mode-only)![Plus icon](/assets/images/docspace/basic-info.dark.png#gh-dark-mode-only)
         
-## Access Scopes
+## Access scopes
 
-This parameter defines the capabilities of a third-party application in relation to Docspace API. Scopes are used to limit your app's access to all user-related data, and they'll let you specify exactly what kind of access you need.
+This parameter defines the capabilities of a third-party application in relation to DocSpace API. Scopes are used to limit your app's access to all user-related data, and they'll let you specify exactly what kind of access you need.
 
 | Scope           | Read                                                              | Write                                                                                 |     
 ------------------|-------------------------------------------------------------------|-----------------------------------------------------|                              

@@ -4,21 +4,21 @@ sidebar_position: -2
 
 # Authorization flow
 
-When a user clicks the authorization link, it follows any of these four scenarios: 
+When a user clicks the authorization link, any of these four scenarios occur: 
 
-## Scenario 1. User authorization
+## Scenario 1: User authorization
 
-For users not yet authorized on the portal, the authorization link opens into an authorization form to enter their email and password and **Sign in**. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
+For users not yet authorized on the portal, the authorization link opens into an authorization form to enter their email and password and sign in. On successful authorization, they are redirected to the pages described in scenarios 2 and 3.
 
 <img alt="Authorization flow" src="/assets/images/docspace/authorization-flow.png" width="400px" />
 
-## Scenario 2. Portal selection
+## Scenario 2: Portal selection
 
 If the user has more than one portal with the entered personal data, they will be redirected to the page for choosing the necessary one.
 
 <img alt="Choose portal" src="/assets/images/docspace/choose-portal.png" width="400px" />
 
-## Scenario 3. Consent page
+## Scenario 3: Consent page
 
 Authorized users are redirected to a consent page that lists all the application abilities while displaying the URLs to the privacy policy and terms of service. This page also provides the possibility to change the user profile. 
 
@@ -26,7 +26,7 @@ Click **Allow** or **Deny** to finish the authorization flow.
 
 <img alt="Consent page" src="/assets/images/docspace/consent-page.png#gh-light-mode-only" width="400px" /><img alt="Consent page" src="/assets/images/docspace/consent-page.dark.png#gh-dark-mode-only" width="400px" />
 
-## Scenario 4. Error page
+## Scenario 4: Error page
 
 If the authorization link contains non-existent [client_id](auth-button.md#client_id) and [redirect_uri](auth-button.md#redirect_uri), it redirects the user to the DocSpace error page.
 

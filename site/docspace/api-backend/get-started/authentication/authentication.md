@@ -24,4 +24,4 @@ Interacting with the DocSpace API requires authentication, and ONLYOFFICE DocSpa
 
 ## Personal access tokens
 
-In this method, a [Personal access token (PAT)](personal-access-tokens.md) bounds to a single user account and allows scripts, tools, and integrations to authenticate as a specific user. This method is simple to set up and works well for personal automation or server-side applications running on behalf of a single user.
+In this method, a [Personal access token (PAT)](personal-access-tokens.md) binds to a single user account and allows scripts, tools, and integrations to authenticate as a specific user. This method is simple to set up and works well for personal automation or server-side applications running on behalf of a single user.
