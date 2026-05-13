@@ -4,9 +4,11 @@ sidebar_label: White label
 
 # Customization - White label
 
-The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
+The customization section defines the editor customization parameters.
 
-On this page you will find the customization parameters available only for the extended white label license of [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api). To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
+:::info
+The parameters on this page are available only for the extended white label license of [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api). To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
+:::
 
 ## about
 
@@ -20,7 +22,7 @@ Defines if the **About** menu button is displayed or hidden.
 
 **type:** `boolean`
 
-Defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types.
+Defines if the spell checker setting will be displayed or not. This setting is available in all editor types.
 
 :::note
 Other fields of the `features` object are available for the standard branding and are described [here](customization-standard-branding.md#features). Only the `features.spellcheck.change` field requires additional payment.
@@ -169,7 +171,7 @@ Defines if the button with the editing users is displayed or hidden.
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the left menu settings. Can be a boolean or an object. If set to `true`, the left menu is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
+Defines the left menu settings. If set to `false`, the left menu is hidden.
 
 **Example**:
 
@@ -209,7 +211,7 @@ Defines if the **Spellcheck** button is displayed or hidden. This parameter will
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the right menu settings. Can be a boolean or an object. If set to `true`, the right menu is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
+Defines the right menu settings. If set to `false`, the right menu is hidden.
 
 **Example**:
 
@@ -231,7 +233,7 @@ Defines the initial value of the right panel visibility - displayed or hidden. I
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the status bar settings. Can be a boolean or an object. If set to `true`, the status bar is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
+Defines the status bar settings. If set to `false`, the status bar is hidden.
 
 **Example**:
 
@@ -271,7 +273,7 @@ Defines if a button for choosing the text language is displayed or hidden. This 
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the toolbar settings. Can be a boolean or an object. If set to `true`, the toolbar is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual tabs.
+Defines the toolbar settings. If set to `false`, the toolbar is hidden.
 
 **Example**:
 
@@ -309,7 +311,7 @@ Defines the toolbar settings. Can be a boolean or an object. If set to `true`, t
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **Collaboration** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
+Defines the **Collaboration** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
@@ -339,7 +341,7 @@ Defines if the **Draw** tab is displayed or hidden.
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **File** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
+Defines the **File** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
@@ -408,7 +410,7 @@ Please use the [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmail
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **Insert** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements. This parameter will only be available for the document editor.
+Defines the **Insert** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the document editor.
 
 **Example**:
 
@@ -439,7 +441,7 @@ Defines if the **Text from File** button is displayed or hidden. This parameter 
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **Layout** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements. This parameter will only be available for the document editor and the spreadsheet editor.
+Defines the **Layout** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the document editor and the spreadsheet editor.
 
 **Example**:
 
@@ -493,7 +495,7 @@ Defines if the **Save** button on the toolbar is displayed or hidden. Please not
 
 **type:** `object | boolean` | **default:** `true`
 
-Defines the **View** tab settings. Can be a boolean or an object. If set to `true`, the tab is displayed. If set to `false`, it is hidden. If set to an object, use the properties below to configure individual elements.
+Defines the **View** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
@@ -527,7 +529,11 @@ Starting from version 7.1, please use the [layout.leftMenu](#layoutleftmenu) par
 
 **type:** `string`
 
-Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
+Defines the path to the image logo displayed while the document is being loaded. The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
+
+:::note
+There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
+:::
 
 **Example**: `"https://example.com/loader-logo.png"`
 
@@ -535,7 +541,7 @@ Defines the path to the image logo which will be displayed while the document is
 
 **type:** `string`
 
-Defines the text which will be displayed while the document is being loaded.
+Defines the text displayed while the document is being loaded.
 
 **Example**: `"The document is loading, please wait..."`
 

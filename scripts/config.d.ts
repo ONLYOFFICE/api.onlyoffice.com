@@ -1415,28 +1415,26 @@ interface EditorConfigNormal extends EditorConfigBase {
         };
 
         /**
-         * Defines the parameters that the user can use to hide the interface elements but not to disable features completely (for example, if this functionality is available from other elements such as context menu, or via hotkeys).
+         * Defines the parameters that the user can use to hide the interface elements but not to disable features completely. The hidden features are still available from other elements such as the context menu or via hotkeys.
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layout
          */
         layout?: {
             /**
-             * Defines the **toolbar** settings.
-             * If this parameter is a **boolean** value, then it specifies whether the **toolbar** will be displayed or hidden.
+             * Defines the toolbar settings. If set to `false`, the toolbar is hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbar
              */
             toolbar?: {
                 /**
-                 * Defines the **File** tab settings.
-                 * If this parameter is a **boolean** value, then it specifies whether the **File** tab will be displayed or hidden.
+                 * Defines the **File** tab settings. If set to `false`, the tab is hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarfile
                  */
                 file?: {
                     /**
-                     * Defines if the **Close** menu option is displayed or hidden.
+                     * Defines if the **Close menu** option is displayed or hidden.
                      *
                      * @default true
                      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarfileclose
@@ -1483,10 +1481,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 };
 
                 /**
-                 * Defines the **Insert** tab settings.
-                 * If this parameter is a **boolean** value, then it specifies whether the **Insert** tab will be displayed or hidden.
-                 * If set to an object, use the properties below to configure individual elements.
-                 * This parameter will only be available for the **Document Editor**.
+                 * Defines the **Insert** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the **Document Editor**.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarinsert
@@ -1512,10 +1507,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 } | boolean;
 
                 /**
-                 * Defines the **Layout** tab settings.
-                 * If this parameter is a **boolean** value, then it specifies whether the **Layout** tab will be displayed or hidden.
-                 * If set to an object, use the properties below to configure individual elements.
-                 * This parameter will only be available for the **Document Editor** and the **Spreadsheet Editor**.
+                 * Defines the **Layout** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the **Document Editor** and the **Spreadsheet Editor**.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarlayout
@@ -1541,8 +1533,7 @@ interface EditorConfigNormal extends EditorConfigBase {
                 references?: boolean;
 
                 /**
-                 * Defines the **Collaboration** tab settings.
-                 * If this parameter is a **boolean** value, then it specifies whether the **Collaboration** tab will be displayed or hidden.
+                 * Defines the **Collaboration** tab settings. If set to `false`, the tab is hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarcollaboration
@@ -1582,16 +1573,14 @@ interface EditorConfigNormal extends EditorConfigBase {
                 plugins?: boolean;
 
                 /**
-                 * Defines the **View** tab settings.
-                 * If this parameter is a **boolean** value, then it specifies whether the **View** tab will be displayed or hidden.
+                 * Defines the **View** tab settings. If set to `false`, the tab is hidden.
                  *
                  * @default true
                  * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarview
                  */
                 view?: {
                     /**
-                     * Defines if the **Navigation** button is displayed or hidden.
-                     * The default value is `true`. This parameter will only be available for the **Document Editor**.
+                     * Defines if the **Navigation** button is displayed or hidden. This parameter will only be available for the **Document Editor**.
                      *
                      * @default true
                      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layouttoolbarviewnavigation
@@ -1610,7 +1599,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             } | boolean;
 
             /**
-             * Defines the editor **header** settings.
+             * Defines the editor header settings.
              *
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutheader
              */
@@ -1650,8 +1639,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             };
 
             /**
-             * Defines the **left menu** settings.
-             * If this parameter is a **boolean** value, then it specifies whether the **left menu** will be displayed or hidden.
+             * Defines the left menu settings. If set to `false`, the left menu is hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutleftmenu
@@ -1686,8 +1674,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             } | boolean;
 
             /**
-             * Defines the **right menu** settings.
-             * If this parameter is a **boolean** value, then it specifies whether the **right menu** will be displayed or hidden.
+             * Defines the right menu settings. If set to `false`, the right menu is hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutrightmenu
@@ -1704,8 +1691,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             } | boolean;
 
             /**
-             * Defines the **status bar** settings.
-             * If this parameter is a **boolean** value, then it specifies whether the status bar will be displayed or hidden.
+             * Defines the status bar settings. If set to `false`, the status bar is hidden.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#layoutstatusbar
@@ -1745,8 +1731,7 @@ interface EditorConfigNormal extends EditorConfigBase {
          */
         features?: {
             /**
-             * Defines if the **spell checker** is automatically switched on or off when the editor is loaded.
-             * If this parameter is a **boolean** value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
+             * Defines if the spell checker is automatically switched on or off when the editor is loaded. If set to a boolean, it is used as the initial value and the spell checker setting will not be hidden.
              * @default true
              */
             spellcheck?: {
@@ -1860,12 +1845,31 @@ interface EditorConfigNormal extends EditorConfigBase {
              */
             name?: string;
 
-            /** The font size.
+            /**
+             * The font size.
+             *
              * @example "11px"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#fontsize
              */
             size?: string;
         }
+
+        /**
+         * Defines the path to the image logo displayed while the document is being loaded. The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
+         *
+         * @note There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
+         * @example "https://example.com/loader-logo.png"
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#loaderlogo
+         */
+        loaderLogo?: string;
+
+        /**
+         * Defines the text displayed while the document is being loaded.
+         *
+         * @example "The document is loading, please wait..."
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#loadername
+         */
+        loaderName?: string;
 
         /**
          * Defines if the **Chat menu button** is displayed or hidden.
@@ -1911,15 +1915,16 @@ interface EditorConfigNormal extends EditorConfigBase {
         compactToolbar?: boolean;
 
         /**
-         * Defines if the **left menu panel** is displayed or hidden.
+         * Defines if the left menu panel is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.leftMenu` parameter instead.
+         * @default true
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#leftmenu
          */
         leftMenu?: boolean;
 
         /**
-         * Defines if the **right menu panel** is displayed or hidden.
+         * Defines if the right menu panel is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.rightMenu` parameter instead.
          *
@@ -1939,7 +1944,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         hideRightMenu?: boolean;
 
         /**
-         * Defines if the **top toolbar** is displayed or hidden.
+         * Defines if the top toolbar is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.toolbar` parameter instead.
          *
@@ -1949,11 +1954,12 @@ interface EditorConfigNormal extends EditorConfigBase {
         toolbar?: boolean;
 
         /**
-         * Defines if the **status bar** is displayed or hidden.
+         * Defines if the status bar is displayed or hidden.
          *
          * @deprecated Starting from version 7.1, please use the `layout.statusBar` parameter instead.
          *
          * @default true
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-white-label/#statusbar
          */
         statusBar?: boolean;
 

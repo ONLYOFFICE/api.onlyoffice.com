@@ -4,9 +4,11 @@ sidebar_label: White label
 
 # 定制 - 白标定制
 
-自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
+customization 部分定义编辑器自定义参数。
 
-在此页面上，您将找到仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)扩展白标许可证的定制参数。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
+:::info
+此页面上的参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)的扩展白标许可证。要索取报价，请联系我们的销售团队 [sales@onlyoffice.com](mailto:sales@onlyoffice.com)。
+:::
 
 ## 关于
 
@@ -20,7 +22,7 @@ sidebar_label: White label
 
 **类型：** `boolean`
 
-定义拼写检查器设置是否显示拼写检查器设置在所有编辑器中可用。
+定义拼写检查器设置是否显示。此设置在所有编辑器类型中可用。
 
 :::note
 `features` 对象的其他字段可用于标准品牌，并在[此处](customization-standard-branding.md#features)中描述。只有 `features.spellcheck.change` 字段需要额外付款。
@@ -169,7 +171,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义左侧菜单设置。可以是布尔值或对象。如果设置为 `true`，左侧菜单显示。如果设置为 `false`，左侧菜单隐藏。如果设置为对象，使用以下属性配置各个元素。
+定义左侧菜单设置。如果设置为 `false`，左侧菜单将被隐藏。
 
 **示例**:
 
@@ -209,7 +211,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义右侧菜单设置。可以是布尔值或对象。如果设置为 `true`，右侧菜单显示。如果设置为 `false`，右侧菜单隐藏。如果设置为对象，使用以下属性配置各个元素。
+定义右侧菜单设置。如果设置为 `false`，右侧菜单将被隐藏。
 
 **示例**:
 
@@ -231,7 +233,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义状态栏设置。可以是布尔值或对象。如果设置为 `true`，状态栏显示。如果设置为 `false`，状态栏隐藏。如果设置为对象，使用以下属性配置各个元素。
+定义状态栏设置。如果设置为 `false`，状态栏将被隐藏。
 
 **示例**:
 
@@ -271,7 +273,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义工具栏设置。可以是布尔值或对象。如果设置为 `true`，工具栏显示。如果设置为 `false`，工具栏隐藏。如果设置为对象，使用以下属性配置各个选项卡。
+定义工具栏设置。如果设置为 `false`，工具栏将被隐藏。
 
 **示例**:
 
@@ -309,7 +311,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义 **Collaboration** 选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。
+定义 **Collaboration** 选项卡设置。如果设置为 `false`，选项卡将被隐藏。
 
 **示例**:
 
@@ -339,7 +341,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义**文件**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。
+定义**文件**选项卡设置。如果设置为 `false`，选项卡将被隐藏。
 
 **示例**:
 
@@ -408,7 +410,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义**插入**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。此参数仅适用于文档编辑器。
+定义**插入**选项卡设置。如果设置为 `false`，选项卡将被隐藏。此参数仅适用于文档编辑器。
 
 **示例**:
 
@@ -439,7 +441,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义**布局**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。此参数仅适用于文档编辑器和电子表格编辑器。
+定义**布局**选项卡设置。如果设置为 `false`，选项卡将被隐藏。此参数仅适用于文档编辑器和电子表格编辑器。
 
 **示例**:
 
@@ -493,7 +495,7 @@ sidebar_label: White label
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-定义**视图**选项卡设置。可以是布尔值或对象。如果设置为 `true`，选项卡显示。如果设置为 `false`，选项卡隐藏。如果设置为对象，使用以下属性配置各个元素。
+定义**视图**选项卡设置。如果设置为 `false`，选项卡将被隐藏。
 
 **示例**:
 
@@ -518,7 +520,7 @@ sidebar_label: White label
 定义左侧菜单面板是显示还是隐藏。
 
 :::danger[Deprecated]
-自 7.1 版起已弃用。请使用布局。改为 [layout.leftMenu](#layoutleftmenu) 参数。
+自 7.1 版起已弃用，请改用 [layout.leftMenu](#layoutleftmenu) 参数。
 :::
 
 **示例**: `true`
@@ -527,7 +529,11 @@ sidebar_label: White label
 
 **类型：** `string`
 
-定义加载文档时将显示的图像徽标的路径（对于此文件没有特别的建议，但最好使用透明背景的.png格式）。当在编辑器中显示时，图像将按比例调整到160像素的高度。
+定义加载文档时显示的图像徽标的路径。当在编辑器中显示时，图像将按比例调整到 160 像素的高度。
+
+:::note
+对于此文件没有特别的建议，但最好使用透明背景的 .png 格式。
+:::
 
 **示例**: `"https://example.com/loader-logo.png"`
 
@@ -535,7 +541,7 @@ sidebar_label: White label
 
 **类型：** `string`
 
-定义加载文档时将显示的文本。
+定义加载文档时显示的文本。
 
 **示例**: `"正在加载文档，请稍候…"`
 
