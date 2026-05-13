@@ -211,7 +211,7 @@ export interface DocumentStateChangeEvent {
      * `false` — the current user's changes are sent to the **document editing service.**
      */
     data?: boolean;
-};
+}
 
 /** Event data for the `onRequestHistoryData` event. */
 export interface RequestHistoryDataEvent {
@@ -219,7 +219,7 @@ export interface RequestHistoryDataEvent {
      * The document version number.
      */
     data?: number;
-};
+}
 
 /** Event data for the `onRequestRestore` event. */
 export interface RequestRestoreEvent {
@@ -237,7 +237,7 @@ export interface RequestRestoreEvent {
          */
         fileType?: FileType;
     };
-};
+}
 
 /** Event data for the `onError` event. */
 export interface ErrorEvent {
@@ -252,7 +252,7 @@ export interface ErrorEvent {
          */
         errorDescription?: string;
     };
-};
+}
 
 /** Event data for the `onWarning` event. */
 export interface WarningEvent {
@@ -267,7 +267,7 @@ export interface WarningEvent {
          */
         warningDescription?: string;
     };
-};
+}
 
 /** Event data for the `onInfo` event. */
 export interface InfoEvent {
@@ -277,7 +277,7 @@ export interface InfoEvent {
          */
         mode?: "view" | "edit";
     };
-};
+}
 
 /** Event data for the `onDownloadAs` event. */
 export interface DownloadAsEvent {
@@ -291,7 +291,7 @@ export interface DownloadAsEvent {
          */
         url?: string;
     };
-};
+}
 
 /** Event data for the `onRequestSaveAs` event. */
 export interface RequestSaveAsEvent {
@@ -309,7 +309,7 @@ export interface RequestSaveAsEvent {
          */
         url?: string;
     };
-};
+}
 
 /** Event data for the `onRequestRename` event. */
 export interface RequestRenameEvent {
@@ -317,7 +317,7 @@ export interface RequestRenameEvent {
      * The new document title.
      */
     data?: string;
-};
+}
 
 /** Event data for the `onMetaChange` event. */
 export interface MetaChangeEvent {
@@ -331,7 +331,7 @@ export interface MetaChangeEvent {
          */
         favorite?: boolean;
     };
-};
+}
 
 /** Event data for the `onRequestUsers` event. */
 export interface RequestUsersEvent {
@@ -345,7 +345,7 @@ export interface RequestUsersEvent {
          */
         id?: string[];
     };
-};
+}
 
 /** Event data for the `onRequestSendNotify` event. */
 export interface RequestSendNotifyEvent {
@@ -363,7 +363,7 @@ export interface RequestSendNotifyEvent {
          */
         emails?: string[];
     };
-};
+}
 
 /** Event data for the `onMakeActionLink` event. */
 export interface MakeActionLinkEvent {
@@ -373,7 +373,7 @@ export interface MakeActionLinkEvent {
          */
         actionLink?: ActionLink;
     };
-};
+}
 
 /** Event data for the `onRequestInsertImage` event. */
 export interface RequestInsertImageEvent {
@@ -383,7 +383,7 @@ export interface RequestInsertImageEvent {
          */
         c?: "add" | "change" | "fill" | "watermark" | "slide";
     };
-};
+}
 
 /** Event data for the `onRequestReferenceData` event. */
 export interface RequestReferenceDataEvent {
@@ -401,7 +401,7 @@ export interface RequestReferenceDataEvent {
          */
         path?: string;
     };
-};
+}
 
 /** Event data for the `onRequestOpen` event. */
 export interface RequestOpenEvent {
@@ -419,7 +419,7 @@ export interface RequestOpenEvent {
          */
         windowName?: string;
     };
-};
+}
 
 /** Event data for the `onRequestSelectDocument` event. */
 export interface RequestSelectDocumentEvent {
@@ -429,7 +429,7 @@ export interface RequestSelectDocumentEvent {
          */
         c?: "compare" | "combine" | "insert-text";
     };
-};
+}
 
 /** Event data for the `onRequestSelectSpreadsheet` event. */
 export interface RequestSelectSpreadsheetEvent {
@@ -439,7 +439,7 @@ export interface RequestSelectSpreadsheetEvent {
          */
         c?: "mailmerge";
     };
-};
+}
 
 /** Event data for the `onRequestReferenceSource` event. */
 export interface RequestReferenceSourceEvent {
@@ -453,7 +453,7 @@ export interface RequestReferenceSourceEvent {
          */
         path?: string;
     };
-};
+}
 
 /** Event data for the `onRequestFillingStatus` event. */
 export interface RequestFillingStatusEvent {
@@ -461,7 +461,7 @@ export interface RequestFillingStatusEvent {
      * The role name for which the filling status is requested.
      */
     data?: string;
-};
+}
 
 /** Event data for the `onSaveDocument` event. */
 export interface SaveDocumentEvent {
@@ -469,7 +469,7 @@ export interface SaveDocumentEvent {
      * The document file data in binary format.
      */
     data?: ArrayBuffer;
-};
+}
 
 /** Event data for the `onRequestStartFilling` event. */
 export interface RequestStartFillingEvent {
@@ -486,7 +486,7 @@ export interface RequestStartFillingEvent {
          */
         color: string;
     }[];
-};
+}
 
 /** Defines a sharing settings entry for the document info. */
 export interface SharingSetting {
@@ -747,7 +747,7 @@ export interface ReferenceData {
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/#referencedatainstanceid
      */
     instanceId?: string;
-};
+}
 
 /** Defines the action link data for scrolling to a bookmark or comment in the document. */
 export interface ActionLink {
@@ -771,7 +771,7 @@ export interface ActionLink {
          */
         data?: string;
     }
-};
+}
 
 /** Base document parameters shared by all editor types. */
 export interface DocumentBase {
