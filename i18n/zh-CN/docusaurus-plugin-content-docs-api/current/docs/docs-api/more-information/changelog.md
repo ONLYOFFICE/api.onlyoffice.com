@@ -37,6 +37,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [refreshFile](../usage-api/methods.md#refreshfile) 方法。
 - 添加了 [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) 事件。
 - 添加了 [events.onStartFilling](../usage-api/config/events.md#onstartfilling) 事件。
+- 为 [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) 事件添加了 *roles* 参数。
 - 如果未为 [drop](../additional-api/command-service/drop.md) 命令指定 *users* 参数，则将禁止所有使用指定 *key* 编辑文档的用户编辑文档。
 - [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) 参数现在可以用作对象。
 - [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) 参数现在可用于查看器。

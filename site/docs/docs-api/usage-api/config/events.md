@@ -1046,10 +1046,21 @@ The function called when the user is trying to start filling out ready forms by 
 If this event is not declared, the *Start filling* button will not be displayed.
 :::
 
+**Parameters**:
+
+| Parameter        | Type     | Description        |
+| ---------------- | -------- | ------------------ |
+| event.data.name  | `string` | The role name.     |
+| event.data.color | `string` | The role color in hex format (e.g. `#FF0000`). |
+
+The `event.data` is an array of role objects.
+
 **Example**:
 
 ``` ts
-function onRequestStartFilling() {
+function onRequestStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
   docEditor.startFilling();
 }
 

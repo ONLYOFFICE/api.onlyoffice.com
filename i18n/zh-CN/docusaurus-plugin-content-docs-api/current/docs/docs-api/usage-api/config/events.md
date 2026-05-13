@@ -1046,10 +1046,21 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 如果未声明此事件，则不会显示*开始填写*按钮。
 :::
 
+**参数**:
+
+| 参数             | 类型     | 描述               |
+| ---------------- | -------- | ------------------ |
+| event.data.name  | `string` | 角色名称。          |
+| event.data.color | `string` | 十六进制格式的角色颜色（例如 `#FF0000`）。 |
+
+`event.data` 是角色对象的数组。
+
 **示例**:
 
 ``` ts
-function onRequestStartFilling() {
+function onRequestStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
   docEditor.startFilling();
 }
 

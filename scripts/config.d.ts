@@ -424,6 +424,22 @@ interface RequestReferenceSourceEvent {
     };
 };
 
+interface RequestStartFillingEvent {
+    /**
+     * The list of roles available in the PDF form.
+     */
+    data?: {
+        /**
+         * The role name.
+         */
+        name: string;
+        /**
+         * The role color in hex format (e.g. `#FF0000`).
+         */
+        color: string;
+    }[];
+};
+
 // Interfaces for arrays
 interface SharingSetting {
     /**
@@ -3080,7 +3096,7 @@ interface EventsNormal extends EventsBase {
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequeststartfilling
      */
-    onRequestStartFilling?: () => void;
+    onRequestStartFilling?: (event: RequestStartFillingEvent) => void;
 
     /**
      * The function called when the force saving request of the `3` `forcesavetype` is successfully performed, i.e., when the *Complete & Submit* button is clicked and the form is submitted.
