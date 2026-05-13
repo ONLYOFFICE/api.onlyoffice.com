@@ -44,51 +44,86 @@
     flex-direction: column;
 }
 
-.floatingActions {
-    position: absolute;
-    top: var(--ce-space-3);
-    right: var(--ce-space-3);
-    bottom: 1rem;
-    z-index: 2;
+.headerActions {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: var(--ce-space-2);
-    pointer-events: none;
+    margin-left: auto;
 }
 
-.floatingActions > * {
-    pointer-events: auto;
+.headerButton {
+    height: 1.75rem;
+    width: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ce-radius-sm);
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-600);
+    transition: all var(--ce-transition-base);
+}
+
+.headerButton:hover {
+    background: var(--ifm-color-emphasis-100);
+    border-color: var(--ifm-color-emphasis-400);
+    color: var(--ifm-color-emphasis-900);
+}
+
+.headerButton:focus-visible {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: var(--ce-focus-ring);
+}
+
+.headerButton:active {
+    background: var(--ifm-color-emphasis-200);
+}
+
+.headerButton[data-copied='true'] {
+    background: var(--ifm-color-success-lightest);
+    border-color: var(--ifm-color-success);
+    color: var(--ifm-color-success-dark);
+}
+
+.headerButton svg {
+    width: 0.875rem;
+    height: 0.875rem;
+    flex-shrink: 0;
 }
 
 .runButton {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 1.75rem;
+    width: 1.75rem;
     background: var(--ifm-color-primary);
     color: white;
     border: none;
-    border-radius: var(--ifm-global-radius);
+    border-radius: var(--ce-radius-sm);
     cursor: pointer;
-    transition: all var(--ifm-transition-fast) ease;
+    transition: all var(--ce-transition-fast);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--ifm-global-shadow-lw);
-    margin-top: auto;
 }
 
 .runButton:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.15);
 }
 
 .runButton:focus-visible {
-    outline: 3px solid white;
-    outline-offset: 2px;
-    box-shadow: var(--ifm-global-shadow-md),
-                0 0 0 5px var(--ifm-color-primary);
+    outline: none;
+    border-color: var(--ifm-color-primary);
+    box-shadow: var(--ce-focus-ring);
 }
 
 .runButton:active {
-    box-shadow: var(--ifm-global-shadow-lw);
+    filter: brightness(0.95);
+}
+
+.runButton svg {
+    width: 0.875rem;
+    height: 0.875rem;
 }
 
 .tabs {
@@ -105,7 +140,7 @@
         padding: 0 0.5rem;
         background: var(--ifm-background-surface-color);
 
-        button {
+        > button {
             background: transparent;
             border: none;
             padding: var(--ce-space-2) var(--ce-space-4);
@@ -120,18 +155,18 @@
             border-radius: var(--ce-radius-sm) var(--ce-radius-sm) 0 0;
         }
 
-        button:hover {
+        > button:hover {
             color: var(--ifm-color-emphasis-900);
             background: var(--ifm-color-emphasis-50);
         }
 
-        button:focus-visible {
+        > button:focus-visible {
             outline: 2px solid var(--ifm-color-primary);
             outline-offset: -2px;
             z-index: 1;
         }
 
-        button[data-state='active'] {
+        > button[data-state='active'] {
             color: var(--ifm-color-primary);
             border-bottom-color: var(--ifm-color-primary);
             font-weight: 600;

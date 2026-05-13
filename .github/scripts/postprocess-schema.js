@@ -28,7 +28,10 @@ walk(schema);
 removeDeprecated(schema);
 
 // Remove paths not renderable by JSON Forms
-removePaths(schema, ["events", "document.options"]);
+removePaths(schema, ["document.options"]);
+
+// Transform event function properties into string-typed fields
+transformEvents(schema);
 
 // Clean up definitions no longer referenced
 cleanDefinitions(schema);
@@ -77,13 +80,14 @@ function collapseAnyOf(node) {
   );
   const refs = variants.filter((v) => "$ref" in v);
 
-  // object | boolean → keep object
+  // object | boolean → keep object, mark as also accepting boolean
   if (
     objects.length > 0 &&
     booleans.length > 0 &&
     objects.length + booleans.length === variants.length
   ) {
     replace(node, objects[0]);
+    node["x-alsoBoolean"] = true;
     return;
   }
 
@@ -184,6 +188,32 @@ function removePaths(schema, paths) {
       }
     }
   }
+}
+
+/**
+ * Transform event properties from function stubs into string-typed fields
+ * so JSON Forms can render them as toggleable event handlers.
+ */
+function transformEvents(schema) {
+  const events = schema.properties?.events;
+  if (!events?.properties) return;
+
+  for (const [name, prop] of Object.entries(events.properties)) {
+    const comment = prop.$comment || "";
+    const hasParam = /\(\s*event\s*:/.test(comment);
+    const desc = prop.description || "";
+
+    events.properties[name] = {
+      type: "string",
+      description: desc,
+      "x-event": true,
+      "x-hasEventParam": hasParam,
+    };
+  }
+
+  // Ensure the wrapper is a plain object
+  delete events.additionalProperties;
+  if (!events.type) events.type = "object";
 }
 
 /** Remove definitions that are no longer referenced anywhere in the schema. */

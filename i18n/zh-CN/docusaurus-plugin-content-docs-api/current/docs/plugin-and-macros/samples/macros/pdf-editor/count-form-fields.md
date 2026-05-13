@@ -51,7 +51,6 @@ hide_table_of_contents: true
         "- 复合字段: " + fieldTypes.complexForm + "\n" +
         "- 其他字段: " + fieldTypes.other;
 
-    // 如果希望将结果插入文档，可取消以下注释。
     let summaryParagraph = Api.CreateParagraph();
     summaryParagraph.AddText(result);
     summaryParagraph.SetFontSize(20);
@@ -62,7 +61,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [SetJc](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [Push](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Push.md), [Save](../../../../office-api/usage-api/document-api/Api/Methods/Save.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [SetJc](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [Push](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Push.md)
 
 ## 结果
 

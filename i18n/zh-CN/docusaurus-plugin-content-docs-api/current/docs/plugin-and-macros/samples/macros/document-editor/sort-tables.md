@@ -7,57 +7,33 @@ hide_table_of_contents: true
 根据选定列自动按字母或数字顺序对表格行进行排序。
 
 :::tip
-请选择作为排序依据的一整列（字母或数字排序）。
+请选择作为排序依据的一整列。
 只有完整选中列时，宏才能正确工作。
 :::
 
 ```ts
 (function() {
-    let isFirstRowIncluded = true;  // 将首行（标题）设为 false 可将其排除在排序外
+    let isFirstRowIncluded = false;  // 设置为 true 可将首行包含在排序中
 
     let doc = Api.GetDocument();
     let pageIndex = doc.GetCurrentPage();
     let tables = doc.GetAllTablesOnPage(pageIndex);
 
-    // 获取文档中用户选中的范围
     let selectedRange = doc.GetRangeBySelect();
     let selectedStart = selectedRange.GetStartPos();
     let selectedEnd = selectedRange.GetEndPos();
- 
-    // 辅助函数：提取字符串前缀判断是数字、字母还是其他
-    function extractPrefix(s) {
-        let numberMatch = s.match(/^(-?\d+)/); // 提取字符串开头的数字
-        if (numberMatch) {
-            return { type: 'number', value: parseInt(numberMatch[0]) };
-        }
-        let alphaMatch = s.match(/^([a-zA-Z]+)/); // 提取字符串开头的字母
-        if (alphaMatch) {
-            return { type: 'alpha', value: alphaMatch[0] };
-        }
-        return { type: 'other', value: s };
-    }
 
-    // 辅助函数：基于提取的前缀比较两个字符串
-    function compareStrings(a, b) {
-        let prefixA = extractPrefix(a);
-        let prefixB = extractPrefix(b);
-    
-        if (prefixA.type === 'number' && prefixB.type === 'number') {
-            if (prefixA.value !== prefixB.value) return prefixA.value - prefixB.value;
-            return a.length - b.length;
+    // 比较两个单元格值：如果都是数字则按数字排序，否则按字母排序
+    function compareCells(a, b) {
+        let numA = parseFloat(a);
+        let numB = parseFloat(b);
+        if (!isNaN(numA) && !isNaN(numB)) {
+            return numA - numB;
         }
-    
-        if (prefixA.type === 'number') return -1;
-        if (prefixB.type === 'number') return 1;
-    
-        if (prefixA.type === 'alpha' && prefixB.type === 'alpha') {
-            return prefixA.value.localeCompare(prefixB.value);
-        }
-    
         return a.localeCompare(b);
     }
 
-    // 辅助函数：按指定列的值从给定行开始排序表格行
+    // 按指定列收集并排序行
     function sortRowsByColumn(table, colIndex, startRow) {
         let rowsArr = [];
         let rowNum = table.GetRowsCount();
@@ -68,25 +44,27 @@ hide_table_of_contents: true
             rowsArr.push({ row, cellVal });
         }
         
-        rowsArr.sort((a, b) => compareStrings(a.cellVal, b.cellVal));
-
+        rowsArr.sort((a, b) => compareCells(a.cellVal, b.cellVal));
         return rowsArr.map(item => item.row);
     }
 
-    // 辅助函数：根据选中位置查找选中列的索引
+    // 查找包含选区起始位置的列索引
     function findSelectedColIndex(table, selectedStart) {
+        let rowNum = table.GetRowsCount();
         let colNum = table.GetRow(0).GetCellsCount();
-        for (let colIndex = 0; colIndex < colNum; colIndex++) {
-            let cell = table.GetCell(0, colIndex);
-            let cellRange = cell.GetContent().GetRange().GetStartPos();
-            if (cellRange == selectedStart) {
-                return colIndex;
+        for (let rowIndex = 0; rowIndex < rowNum; rowIndex++) {
+            for (let colIndex = 0; colIndex < colNum; colIndex++) {
+                let cell = table.GetCell(rowIndex, colIndex);
+                let cellStart = cell.GetContent().GetRange().GetStartPos();
+                let cellEnd = cell.GetContent().GetRange().GetEndPos();
+                if (selectedStart >= cellStart && selectedStart <= cellEnd) {
+                    return colIndex;
+                }
             }
         }
         return -1;
     }
 
-    // 遍历当前页所有表格，找到包含选中列的表格，对表格每行进行排序
     for (let i = 0; i < tables.length; i++) {
         let table = tables[i];
         let rowNum = table.GetRowsCount();
@@ -94,25 +72,21 @@ hide_table_of_contents: true
         let tableStart = table.GetCell(0, 0).GetContent().GetRange().GetStartPos();
         let tableEnd = table.GetCell(rowNum - 1, colNum - 1).GetContent().GetRange().GetEndPos();
 
-        // 检查选中范围是否在表格内
         if (selectedStart >= tableStart && selectedEnd <= tableEnd) {
             let selectedColIndex = findSelectedColIndex(table, selectedStart);
 
             if (selectedColIndex !== -1) {
                 let startRow = isFirstRowIncluded ? 0 : 1;
-
                 let sortedRowsArr = sortRowsByColumn(table, selectedColIndex, startRow);
-
                 let rowToRemove = isFirstRowIncluded ? 0 : 1;
                 
-                // 通过添加排序行和移除旧行重建表格
-                for (let i = 0; i < sortedRowsArr.length; i++) {
-                    let sortedRow = sortedRowsArr[i];
+                for (let k = 0; k < sortedRowsArr.length; k++) {
+                    let sortedRow = sortedRowsArr[k];
                     let newRow = table.AddRow();
 
                     for (let j = 0; j < colNum; j++) {
-                        let sortedRowCellText = sortedRow.GetCell(j).GetContent().GetText().trim();
-                        newRow.GetCell(j).GetContent().GetElement(0).AddText(sortedRowCellText);
+                        let text = sortedRow.GetCell(j).GetContent().GetText().trim();
+                        newRow.GetCell(j).GetContent().GetElement(0).AddText(text);
                     }
                     table.GetRow(rowToRemove).Remove();
                 }

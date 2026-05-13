@@ -1,6 +1,6 @@
 ﻿# 事件
 
-事件部分允许更改与事件有关的所有功能。
+事件部分定义了编辑器事件的回调函数。
 
 ## onAppReady
 
@@ -73,7 +73,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数       | 类型    | 描述                                                                                           |
 | ---------- | ------- | ---------------------------------------------------------------------------------------------- |
-| event.data | boolean | 当前用户正在编辑文档时为 `true`，当前用户的更改发送到**文档编辑服务**时为 `false`。 |
+| event.data | `boolean` | 当前用户正在编辑文档时为 `true`，当前用户的更改发送到**文档编辑服务**时为 `false`。 |
 
 **示例**:
 
@@ -104,8 +104,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型   | 描述                         |
 | ------------------- | ------ | ---------------------------- |
-| event.data.fileType | string | 下载文档的文件类型。         |
-| event.data.url      | string | 要下载的文档的绝对 URL。     |
+| event.data.fileType | `string` | 下载文档的[文件类型](document/document.md#filetype)。 |
+| event.data.url      | `string` | 要下载的文档的绝对 URL。     |
 
 **示例**:
 
@@ -128,14 +128,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onError
 
-发生错误或其他特定事件时调用的函数。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+发生错误或其他特定事件时调用的函数。
 
 **参数**：
 
 | 参数                         | 类型   | 描述         |
 | ---------------------------- | ------ | ------------ |
-| event.data.errorCode         | number | 错误代码。   |
-| event.data.errorDescription  | string | 错误描述。   |
+| event.data.errorCode         | `number` | [错误代码](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)。   |
+| event.data.errorDescription  | `string` | 错误描述。   |
 
 **示例**:
 
@@ -160,9 +160,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **参数**：
 
-| 参数            | 类型   | 描述                                       |
-| --------------- | ------ | ------------------------------------------ |
-| event.data.mode | string | 编辑器模式。可以是 `view` 或 `edit`。  |
+| 参数            | 类型                 | 描述         |
+| --------------- | -------------------- | ------------ |
+| event.data.mode | `"view"` \| `"edit"` | 文件打开模式。 |
 
 **示例**:
 
@@ -183,22 +183,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onMakeActionLink
 
-当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。
+当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。要设置书签链接，请调用 [setActionLink](../methods.md#setactionlink) 方法。
 
 :::note
 如果未声明此事件，则不会显示*获取链接*按钮。
 :::
 
-要设置书签链接，请调用 [setActionLink](../methods.md#setactionlink) 方法。
-
 **参数**：
 
 | 参数                    | 类型   | 描述                                                                                                               |
 | ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
-| event.data              | object | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
-| event.data.action       | object | 定义文档中要滚动到的操作对象。 |
-| event.data.action.type  | string | 操作类型：`"bookmark"` 或 `"comment"`。 |
-| event.data.action.data  | string | 与操作关联的数据：书签名称或评论 ID。 |
+| event.data              | `object` | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| event.data.action       | `object` | 定义文档中要滚动到的操作对象。 |
+| event.data.action.type  | `string` | 操作类型：`"bookmark"` 或 `"comment"`。 |
+| event.data.action.data  | `string` | 与操作关联的数据：书签名称或评论 ID。 |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
@@ -229,10 +227,12 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 | 参数                | 类型    | 描述                     |
 | ------------------- | ------- | ------------------------ |
-| event.data.title    | string  | 文档的名称。             |
-| event.data.favorite | boolean | *收藏*图标高亮状态。     |
+| event.data.title    | `string`  | 文档标题。               |
+| event.data.favorite | `boolean` | *收藏*图标高亮状态。     |
 
-当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)如果未声明该方法，则*收藏*图标不会更改。
+:::note
+当用户点击 *收藏* 图标时，调用 [setFavorite](../methods.md#setfavorite) 方法更新*收藏*图标高亮状态[信息](./document/info.md#favorite)。如果未声明该方法，则*收藏*图标不会更改。
+:::
 
 **示例**:
 
@@ -254,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onOutdatedVersion
 
-显示 [错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时，该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 `document.key` 重新初始化编辑器。
+显示 [错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed) 后调用的函数，当使用旧的 [document.key](./document/document.md#key) 值打开文档进行编辑时。该值用于编辑以前的文档版本并成功保存。调用此事件时，必须使用新的 `document.key` 重新初始化编辑器。
 
 :::danger[Deprecated]
 自 8.3 版起已弃用，请改用 [onRequestRefreshFile](#onrequestrefreshfile)。
@@ -300,7 +300,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestClose
 
-当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。如果未声明该方法，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
+当用户尝试结束编辑器工作并通过单击交叉按钮将其关闭时调用的函数。
+
+:::note
+如果未声明此事件，则 [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) 参数将不可用，并且不会显示关闭按钮。
+:::
 
 **示例**:
 
@@ -336,7 +340,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCreateNew
 
-当用户试图通过单击*新建*按钮来创建文档时调用的函数。此方法用于代替 [createUrl](./editor/editor.md#createurl) 字段。如果未声明该方法且未指定 `createUrl`，则不会显示*新建*按钮。
+当用户试图通过单击*新建*按钮来创建新文档时调用的函数。
+
+:::note
+此事件用于代替 [createUrl](./editor/editor.md#createurl) 字段。如果未声明此事件且未指定 `createUrl`，则不会显示*新建*按钮。
+:::
 
 **示例**:
 
@@ -357,10 +365,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestEditRights
 
-当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。当用户在 `view` 或 `fillForms` 模式下打开的表单中单击*编辑 PDF* 按钮时，也会触发此事件。调用该函数时，必须在编辑模式下再次初始化编辑器。如果未声明该方法，则不会显示*编辑当前文件*和*编辑 PDF* 按钮。
+当用户尝试通过单击*编辑当前文件*按钮将文档从查看模式切换到编辑模式时调用的函数。调用该函数时，必须在编辑模式下再次初始化编辑器。
 
 :::note
-当 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true` 时，此事件是必需的，以便用户可以切换到编辑模式。
+如果 [editorConfig.mode](./editor/editor.md#mode) 设置为 `view` 且 [document.permissions.edit](./document/permissions.md#edit) 设置为 `true`，则必须声明此事件才能显示*编辑当前文件*按钮。
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png)
@@ -385,11 +393,41 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onRequestFillingStatus
+
+在 PDF 表单填写模式下请求当前角色的填写状态时调用的函数。
+
+**参数**:
+
+| 参数       | 类型     | 描述                         |
+| ---------- | -------- | ---------------------------- |
+| event.data | `string` | 请求填写状态的角色名称。     |
+
+**示例**:
+
+``` ts
+function onRequestFillingStatus(event) {
+  const role = event.data;
+  console.log("Filling status requested for role:", role);
+}
+
+const config = {
+  // ...
+  events: {
+    onRequestFillingStatus,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onRequestHistory
 
-当用户试图通过单击*版本历史*按钮来显示文档版本历史时调用的函数。
+当用户试图通过单击*版本历史*按钮来显示文档版本历史时调用的函数。要显示文档版本历史记录，请调用 [refreshHistory](../methods.md#refreshhistory) 方法。
 
-要显示文档版本历史记录，您必须调用 [refreshHistory](../methods.md#refreshhistory) 方法。如果未声明该方法和 [onRequestHistoryData](#onrequesthistorydata) 方法，则不会显示*版本历史*按钮。
+:::note
+如果未声明此事件和 [onRequestHistoryData](#onrequesthistorydata) 事件，则不会显示*版本历史*按钮。
+:::
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
@@ -441,7 +479,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistoryClose
 
-当用户试图通过单击*关闭历史记录*按钮查看文档版本历史记录返回文档时调用的函数。调用该函数时，编辑器必须再次初始化，处于编辑模式。如果未声明该方法，则不会显示*关闭历史记录*按钮。
+当用户试图通过单击*关闭历史记录*按钮查看文档版本历史记录返回文档时调用的函数。调用该函数时，编辑器必须再次初始化，处于编辑模式。
+
+:::note
+如果未声明此事件，则不会显示*关闭历史记录*按钮。
+:::
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
@@ -464,15 +506,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistoryData
 
-当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。
+当用户尝试单击文档版本历史记录中的特定文档版本时调用的函数。要显示更改，请调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加 token 来验证参数。
+
+:::note
+如果未声明此事件和 [onRequestHistory](#onrequesthistory) 事件，则不会显示*版本历史*按钮。
+:::
 
 **参数**：
 
 | 参数       | 类型    | 描述           |
 | ---------- | ------- | -------------- |
-| event.data | integer | 文档版本号。   |
-
-要显示与特定文档版本相对应的更改，您必须调用 [setHistoryData](../methods.md#sethistorydata) 方法。调用该方法时，必须添加token来验证参数。如果该方法和 [onRequestHistory](#onrequesthistory) 方法未声明，则不会显示版本历史记录按钮。
+| event.data | `number` | 文档版本号。   |
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
@@ -511,19 +555,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
  
 ## onRequestInsertImage
 
-当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。
-
-**参数**：
-
-| 参数         | 类型   | 描述                                                                                    |
-| ------------ | ------ | --------------------------------------------------------------------------------------- |
-| event.data.c | string | 图像插入的类型。可以是：`add`、`change`、`fill`、`watermark` 或 `slide`。 |
+当用户尝试通过单击*从存储中获取图像*按钮插入图像时调用的函数。要插入图像，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
 
 :::note
 如果未声明此事件，则不会显示*从存储中获取图像*按钮。
 :::
 
-要将图像插入文件，请使用指定的命令调用 [insertImage](../methods.md#insertimage) 方法。调用此方法时，必须添加令牌以验证参数。
+**参数**：
+
+| 参数         | 类型   | 描述                                                                                    |
+| ------------ | ------ | --------------------------------------------------------------------------------------- |
+| event.data.c | `"add"` \| `"change"` \| `"fill"` \| `"watermark"` \| `"slide"` | 图像插入的类型。 |
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
@@ -568,17 +610,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestOpen
 
-当用户尝试通过单击*打开源*按钮打开外部链接时调用的函数。如果未声明该方法，则不会显示此按钮。
+当用户尝试通过单击*打开源*按钮打开外部链接时调用的函数。要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，请通过调用带有 `path` 和 `windowName` 参数的 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) 方法来传递指向此选项卡的链接。
 
-要在新选项卡中打开包含 `path` 或 `referenceData` 参数引用的外部文件的编辑器，您必须通过调用带有 `path` 和 `windowName` 参数的方法 [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open), 来传递指向此选项卡的链接。
+:::note
+如果未声明此事件，则不会显示*打开源*按钮。
+:::
 
 **参数**：
 
 | 参数                     | 类型   | 描述                   |
 | ------------------------ | ------ | ---------------------- |
-| event.data.path          | string | 文件路径。             |
-| event.data.referenceData | object | 唯一文件数据。         |
-| event.data.windowName    | string | 新浏览器选项卡名称。   |
+| event.data.path          | `string` | 文件路径。             |
+| event.data.referenceData | `object` | 来自源文件的唯一文件数据。         |
+| event.data.windowName    | `string` | 新浏览器选项卡名称。   |
 
 <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
 
@@ -605,27 +649,24 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceData
 
-当用户尝试通过单击 *数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。
-
-**参数**：
-
-| 参数                     | 类型   | 描述                             |
-| ------------------------ | ------ | -------------------------------- |
-| event.data.referenceData | object | 来自源文件的唯一文件数据。       |
-| event.data.path          | string | 文件路径或名称。                 |
-| event.data.link          | string | 文件 URL。                       |
-
-要通过事件参数指定的文件链接刷新数据，您必须调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。 如果未声明该事件，则不会显示*粘贴链接*和*更新值*按钮。
+当用户尝试通过单击*数据*选项卡的*外部链接*对话框中的*更新值*按钮来刷新从外部文件插入的数据时调用的函数。要刷新数据，请调用 [setReferenceData](../methods.md#setreferencedata) 方法。调用该方法时，必须添加 `token` 来验证参数。当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) 函数时，也会触发此事件。
 
 :::note
-要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
+- 如果未声明此事件，则不会显示*粘贴链接*和*更新值*按钮。
+- 要将数据发送给 `setReferenceData` 方法，建议先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 或 `link` 参数。
 :::
 
 <img alt="Paste link" src="/assets/images/editor/paste-link.png" width="400px" />
 
 <img alt="Update values" src="/assets/images/editor/update-values.png" width="400px" />
 
-当用户运行 [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) 函数时，也会触发此事件。 `IMPORTRANGE` 参数中使用的源电子表格的 URL 被传递给 `event.data.link` 参数中的 `onRequestReferenceData` 事件。
+**参数**：
+
+| 参数                     | 类型   | 描述                             |
+| ------------------------ | ------ | -------------------------------- |
+| event.data.referenceData | `object` | 来自源文件的唯一文件数据。       |
+| event.data.path          | `string` | 文件路径或名称。                 |
+| event.data.link          | `string` | 外部文件的 URL。                 |
 
 **示例**:
 
@@ -660,20 +701,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceSource
 
-当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。
+当用户尝试通过单击*更改源*按钮更改外部数据源时调用的函数。要更改来源，请调用 [setReferenceSource](../methods.md#setreferencesource) 方法。调用该方法时，必须添加 `token` 来验证参数。
+
+:::note
+- 如果未声明此事件，则不会显示*更改源*按钮。
+- 要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
+:::
 
 **参数**：
 
 | 参数                     | 类型   | 描述             |
 | ------------------------ | ------ | ---------------- |
-| event.data.referenceData | object | 唯一文件数据。   |
-| event.data.path          | string | 文件路径或名称。 |
-
-单击该按钮时，必须调用 [setReferenceSource](../methods.md#setreferencesource) 方法来更改外部数据的来源。调用该方法时，必须添加token来验证参数。如果未声明事件，则不会显示*更改源*按钮。
-
-:::note
-要将数据发送到 `setReferenceSource` 方法，建议首先通过 `referenceData` 参数搜索文件。如果没有这样的字段或找不到文件，则使用 `path` 参数。
-:::
+| event.data.referenceData | `object` | 来自源文件的唯一文件数据。   |
+| event.data.path          | `string` | 文件路径或名称。 |
 
 <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
 
@@ -749,11 +789,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 当用户试图通过单击 *重命名...* 按钮重命名文件时调用的函数。
 
+:::note
+如果未声明此事件，则不会显示*重命名...*按钮。
+:::
+
 **参数**：
 
 | 参数       | 类型   | 描述             |
 | ---------- | ------ | ---------------- |
-| event.data | string | 新文档标题。     |
+| event.data | `string` | 新文档标题。     |
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -778,21 +822,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestRestore
 
-当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。
+当用户尝试通过单击版本历史记录中的*恢复*按钮来恢复文件版本时调用的函数。调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。
+
+:::note
+如果未声明此事件，则不会显示*恢复*按钮。*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。
+:::
 
 **参数**：
 
 | 参数                | 类型    | 描述                                                                                   |
 | ------------------- | ------- | -------------------------------------------------------------------------------------- |
-| event.data.version  | integer | 文档版本号。                                                                           |
-| event.data.url      | string  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
-| event.data.fileType | string  | 由 `url` 链接指定的文档类型。                                                          |
-
-调用该函数时，必须调用 [refreshHistory](../methods.md#refreshhistory) 方法再次初始化版本历史记录。如果未声明该方法，则不会显示*恢复*按钮。
-
-:::note
-*恢复*按钮仅对以前的文档版本显示，对当前版本隐藏。
-:::
+| event.data.version  | `number` | 文档版本号。                                                                           |
+| event.data.url      | `string`  | 来自[历史对象](../callback-handler.md#history)的文档链接。在调用文档更改时发送。        |
+| event.data.fileType | `string`  | 由 `url` 链接指定的文档类型。                                                          |
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
@@ -847,15 +889,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSaveAs
 
-当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。如果未声明该方法，将不会显示*另存为...*按钮。
+当用户试图通过单击*另存为...*按钮来保存文件时调用的函数。
+
+:::note
+如果未声明此事件，则不会显示*另存为...*按钮。
+:::
 
 **参数**：
 
 | 参数                | 类型   | 描述                         |
 | ------------------- | ------ | ---------------------------- |
-| event.data.fileType | string | 文档类型。                   |
-| event.data.title    | string | 文档标题。                   |
-| event.data.url      | string | 要下载的文档的绝对 URL。     |
+| event.data.fileType | `string` | 文档类型。                   |
+| event.data.title    | `string` | 文档标题。                   |
+| event.data.url      | `string` | 要下载的文档的绝对 URL。     |
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
@@ -880,15 +926,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectDocument
 
-当用户尝试选择文档以进行比较、合并或插入文本时，将调用该函数。
+当用户尝试选择文档以进行比较、合并或插入文本时，将调用该函数。要选择文档，请调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
 
 **参数**：
 
 | 参数         | 类型   | 描述                                                                    |
 | ------------ | ------ | ----------------------------------------------------------------------- |
-| event.data.c | string | 文档选择类型。可以是：`compare`、`combine` 或 `insert-text`。 |
-
-要选择文档以进行比较、合并或插入文本，您必须调用 [setRequestedDocument](../methods.md#setrequesteddocument) 方法。调用此方法时，必须添加令牌以验证参数。
+| event.data.c | `"compare"` \| `"combine"` \| `"insert-text"` | 文档选择类型。 |
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
@@ -919,15 +963,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectSpreadsheet
 
-当用户尝试通过单击“邮件合并”按钮选择收件人数据时调用的函数。
+当用户尝试通过单击”邮件合并”按钮选择收件人数据时调用的函数。要选择收件人数据，请调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。
 
 **参数**：
 
 | 参数         | 类型   | 描述                                              |
 | ------------ | ------ | ------------------------------------------------- |
-| event.data.c | string | 电子表格选择的类型。可以是：`mailmerge`。   |
-
-要选择收件人数据，您必须调用 [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) 方法。调用此方法时，必须添加令牌以验证参数。如果未声明该方法，则*邮件合并*按钮将变淡且无法单击。
+| event.data.c | `”mailmerge”` | 电子表格选择的类型。 |
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png)
 
@@ -956,17 +998,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSendNotify
 
-当评论中提到用户时调用的函数。
+当评论中提到用户时调用的函数。要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
 
 **参数**：
 
 | 参数                    | 类型     | 描述                                                                                                                   |
 | ----------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| event.data.actionLink   | object   | 注释数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
-| event.data.message      | string   | 消息文本。                                                                                                             |
-| event.data.emails       | string[] | 电子邮件列表。                                                                                                         |
-
-要提及的用户列表应通过 [setUsers](../methods.md#setusers) 方法完成。
+| event.data.actionLink   | `object`   | 注释数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
+| event.data.message      | `string`   | 评论消息。                                                                                                             |
+| event.data.emails       | `string[]` | 要通知的用户电子邮件列表。                                                                                             |
 
 **示例**:
 
@@ -989,9 +1029,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSharingSettings
 
-当用户试图通过单击*更改访问权限*按钮来管理文档访问权限时调用的函数
+当用户试图通过单击*更改访问权限*按钮来管理文档访问权限时调用的函数。当访问权限发生变化时，您必须调用 [setSharingSettings](../methods.md#setsharingsettings) 方法来更新有关允许与其他用户共享文档的设置的[信息](./document/info.md#sharingsettings)。
 
-当访问权限发生变化时，您必须调用 [setSharingSettings](../methods.md#setsharingsettings) 方法来更新有关允许与其他用户共享文档的设置的 [信息](./document/info.md#sharingsettings)。如果未声明该方法，则不会显示*更改访问权限*按钮。
+:::note
+如果未声明此事件，则不会显示*更改访问权限*按钮。
+:::
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
@@ -1026,14 +1068,27 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-当用户尝试通过单击 pdf 编辑模式下的*开始填写*按钮开始填写准备好的表单时调用的函数。如果未声明事件，则不会显示此按钮。
+当用户尝试通过单击 PDF 编辑模式下的*开始填写*按钮开始填写准备好的表单时调用的函数。当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 PDF 编辑（仅可查看 PDF）。
 
-当用户单击*开始填写*按钮时，将调用 [startFilling](../methods.md#startfilling) 方法来锁定 pdf 编辑（仅可查看 pdf）。
+:::note
+如果未声明此事件，则不会显示*开始填写*按钮。
+:::
+
+**参数**:
+
+| 参数             | 类型     | 描述               |
+| ---------------- | -------- | ------------------ |
+| event.data.name  | `string` | 角色名称。          |
+| event.data.color | `string` | 十六进制格式的角色颜色（例如 `#FF0000`）。 |
+
+`event.data` 是角色对象的数组。
 
 **示例**:
 
 ``` ts
-function onRequestStartFilling() {
+function onRequestStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
   docEditor.startFilling();
 }
 
@@ -1049,16 +1104,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。
+当用户可以选择其他用户在评论中提及、授予编辑特定工作表范围的访问权限或设置用户头像时调用的函数。要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的操作类型采用不同的用户列表。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
 
 **参数**：
 
 | 参数          | 类型     | 描述                                                                                   |
 | ------------- | -------- | -------------------------------------------------------------------------------------- |
-| event.data.c  | string   | 操作类型。可以是：`mention`、`protect` 或 `info`。                           |
-| event.data.id | string[] | 用户 ID 列表。与 `info` 操作类型一起使用，为指定用户设置头像。 |
-
-要设置用户列表，您必须调用 [setUsers](../methods.md#setusers) 方法，该方法可以根据指定的情况采用不同的用户列表 操作类型。当执行相应的操作时，每个 `c` 类型都会调用一次 `onRequestUsers` 事件。如果使用空列表调用 `setUsers`，则 `onRequestUsers` 事件将再次触发。
+| event.data.c  | `"mention"` \| `"protect"` \| `"info"` | 操作类型。                           |
+| event.data.id | `string[]` | 与操作关联的用户 ID 列表。 |
 
 <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
 
@@ -1100,6 +1153,55 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onSaveDocument
+
+将文档保存为二进制数据时调用的函数。
+
+**参数**:
+
+| 参数       | 类型          | 描述                       |
+| ---------- | ------------- | -------------------------- |
+| event.data | `ArrayBuffer` | 二进制格式的文档文件数据。 |
+
+**示例**:
+
+``` ts
+function onSaveDocument(event) {
+  const buffer = event.data;
+  console.log("Document binary size:", buffer.byteLength);
+}
+
+const config = {
+  // ...
+  events: {
+    onSaveDocument,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+## onStartFilling
+
+调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
+
+**Example**:
+
+``` ts
+function onStartFilling() {
+  console.log("The PDF form is ready for filling.");
+}
+
+const config = {
+  // ...
+  events: {
+    onStartFilling,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onSubmit
 
 `3` [forcesavetype](../callback-handler.md#forcesavetype) 的强制保存请求成功执行时调用的函数，即点击*完成并提交*按钮并提交表单时调用的函数。
@@ -1107,7 +1209,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 **示例**:
 
 ``` ts
-function onSubmit(event) {
+function onSubmit() {
   console.log("The form was submitted.");
 }
 
@@ -1148,14 +1250,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onWarning
 
-发生警告时调用的函数。可以在[此处](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)找到错误代码列表。
+发生警告时调用的函数。
 
 **参数**：
 
 | 参数                           | 类型   | 描述         |
 | ------------------------------ | ------ | ------------ |
-| event.data.warningCode         | number | 警告代码。   |
-| event.data.warningDescription  | string | 警告描述。   |
+| event.data.warningCode         | `number` | [警告代码](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js)。   |
+| event.data.warningDescription  | `string` | 警告描述。   |
 
 **示例**:
 

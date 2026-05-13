@@ -56,8 +56,25 @@
     color: var(--ifm-color-emphasis-900);
 }
 
-.descriptionInline {
-    color: var(--ifm-color-emphasis-700);
-    font-weight: 400;
-    font-size: var(--ce-text-sm);
+/* Toggleable sections */
+.toggle {
+    margin: 0;
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--ifm-color-info);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.toggle:focus-visible {
+    outline: none;
+    box-shadow: var(--ce-focus-ring);
+}
+
+.sectionContent {
+    padding-left: calc(16px + var(--ce-space-3));
+}
+
+.unset {
+    opacity: 0.5;
 }

@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # Config
 
-The config base section allows you to change the platform type used, document display size (width and height), type of the document opened, and the encrypted signature token.
+The config base section defines the top-level parameters for initializing the document editor.
 
 ## documentType
 
@@ -68,19 +68,19 @@ Defines the document width in the browser window. Can be set to any CSS-compatib
 
 **type:** `object`
 
-The document section. See the [document](document/document.md) page for available parameters.
+The [document](document/document.md) section defines the document parameters.
 
 ## editorConfig
 
 **type:** `object`
 
-The editor config section. See the [editorConfig](editor/editor.md) page for available parameters.
+The [editorConfig](editor/editor.md) section defines the editor interface parameters.
 
 ## events
 
 **type:** `object`
 
-The events section. See the [events](events.md) page for available parameters.
+The [events](events.md) section defines the callback functions for editor events.
 
 ## Example
 

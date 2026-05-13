@@ -1,6 +1,6 @@
 # Events
 
-The events section allows you to change all the functions pertaining to the events.
+The events section defines the callback functions for editor events.
 
 ## onAppReady
 
@@ -73,7 +73,7 @@ The function called when the document is modified.
 
 | Parameter  | Type    | Description                                                                                                              |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
-| event.data | boolean | `true` when the current user is editing the document, `false` when the changes are sent to the **document editing service**. |
+| event.data | `boolean` | `true` when the current user is editing the document, `false` when the changes are sent to the **document editing service**. |
 
 **Example**:
 
@@ -104,8 +104,8 @@ The function called with the absolute URL to the edited file when the [downloadA
 
 | Parameter           | Type   | Description                                        |
 | ------------------- | ------ | -------------------------------------------------- |
-| event.data.fileType | string | The file type of the downloaded document.          |
-| event.data.url      | string | The absolute URL to the document to be downloaded. |
+| event.data.fileType | `string` | The [file type](document/document.md#filetype) of the downloaded document. |
+| event.data.url      | `string` | The absolute URL to the document to be downloaded. |
 
 **Example**:
 
@@ -128,14 +128,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onError
 
-The function called when an error or some other specific event occurs. A list of error codes can be found [here](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).
+The function called when an error or some other specific event occurs.
 
 **Parameters**:
 
 | Parameter                    | Type   | Description              |
 | ---------------------------- | ------ | ------------------------ |
-| event.data.errorCode         | number | The error code.          |
-| event.data.errorDescription  | string | The error description.   |
+| event.data.errorCode         | `number` | The [error code](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).          |
+| event.data.errorDescription  | `string` | The error description.   |
 
 **Example**:
 
@@ -160,9 +160,9 @@ The function called when the application opened the file.
 
 **Parameters**:
 
-| Parameter       | Type   | Description                                   |
-| --------------- | ------ | --------------------------------------------- |
-| event.data.mode | string | The editor mode. Can be `view` or `edit`. |
+| Parameter       | Type                 | Description      |
+| --------------- | -------------------- | ---------------- |
+| event.data.mode | `"view"` \| `"edit"` | The file opening mode. |
 
 **Example**:
 
@@ -183,22 +183,20 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onMakeActionLink
 
-The function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
+The function called when the user is trying to get a link for opening the document which contains a bookmark, scrolling to the bookmark position. To set the bookmark link, call the [setActionLink](../methods.md#setactionlink) method.
 
 :::note
 If this event is not declared, the *Get Link* button will not be displayed.
 :::
 
-To set the bookmark link, call the [setActionLink](../methods.md#setactionlink) method.
-
 **Parameters**:
 
 | Parameter           | Type   | Description                                                                                                                                   |
 | ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| event.data          | object | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
-| event.data.action   | object | The action object that defines what to scroll to in the document. |
-| event.data.action.type | string | The type of action: `"bookmark"` or `"comment"`. |
-| event.data.action.data | string | The data associated with the action: the bookmark name or the comment ID. |
+| event.data          | `object` | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
+| event.data.action   | `object` | The action object that defines what to scroll to in the document. |
+| event.data.action.type | `string` | The type of action: `"bookmark"` or `"comment"`. |
+| event.data.action.data | `string` | The data associated with the action: the bookmark name or the comment ID. |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
@@ -229,10 +227,12 @@ The function called when the meta information of the document is changed via the
 
 | Parameter           | Type    | Description                                   |
 | ------------------- | ------- | --------------------------------------------- |
-| event.data.title    | string  | The name of the document.                     |
-| event.data.favorite | boolean | The *Favorite* icon highlighting state.       |
+| event.data.title    | `string`  | The document title.                           |
+| event.data.favorite | `boolean` | The *Favorite* icon highlighting state.       |
 
+:::note
 When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfavorite) method is called to update the [information](./document/info.md#favorite) about the *Favorite* icon highlighting state. If the method is not declared, the *Favorite* icon will not be changed.
+:::
 
 **Example**:
 
@@ -254,7 +254,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onOutdatedVersion
 
-The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new `document.key`.
+The function called after the [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) is shown, when the document is opened for editing with the old [document.key](./document/document.md#key) value. This key was used to edit the previous document version and was successfully saved. When this event is called, the editor must be reinitialized with a new `document.key`.
 
 :::danger[Deprecated]
 Starting from version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfile) instead.
@@ -300,7 +300,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestClose
 
-The function called when the user is trying to end the work with the editor and close it by clicking the cross button. If the method is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.
+The function called when the user is trying to end the work with the editor and close it by clicking the cross button.
+
+:::note
+If this event is not declared, the [editorConfig.customization.close](./editor/customization/customization-standard-branding.md#close) parameter will not be available, and the cross button will not be displayed.
+:::
 
 **Example**:
 
@@ -325,7 +329,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestCompareFile
 
-The function called when the user is trying to select document for comparing by clicking the *Document from Storage* button.
+The function called when the user is trying to select a document for comparing by clicking the *Document from Storage* button.
 
 :::note
 This event is available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
@@ -336,7 +340,11 @@ Starting from version 7.5, please use [onRequestSelectDocument](#onrequestselect
 
 ## onRequestCreateNew
 
-The function called when the user is trying to create document by clicking the *Create New* button. This method is used instead of the [createUrl](./editor/editor.md#createurl) field. If the method is not declared and the `createUrl` is not specified the *Create New* button will not be displayed.
+The function called when the user is trying to create a new document by clicking the *Create New* button.
+
+:::note
+This event is used instead of the [createUrl](./editor/editor.md#createurl) field. If this event is not declared and `createUrl` is not specified, the *Create New* button will not be displayed.
+:::
 
 **Example**:
 
@@ -357,10 +365,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestEditRights
 
-The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. This event also fires when the user clicks the *Edit PDF* button in the forms that are open in the `view` or `fillForms` mode. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Edit current file* and *Edit PDF* buttons will not be displayed.
+The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the *Edit current file* button. When the function is called, the editor must be initialized again, in editing mode.
 
 :::note
-This event is required when [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, so that the user can switch to the editing mode.
+If [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.permissions.edit](./document/permissions.md#edit) is set to `true`, this event must be declared for the *Edit current file* button to be displayed.
 :::
 
 ![onRequestEditRights](/assets/images/editor/onRequestEditRights.png#gh-light-mode-only)![onRequestEditRights](/assets/images/editor/onRequestEditRights.dark.png#gh-dark-mode-only)
@@ -385,11 +393,41 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onRequestFillingStatus
+
+The function called to request the filling status for the current role in PDF form filling mode.
+
+**Parameters**:
+
+| Parameter  | Type     | Description                                          |
+| ---------- | -------- | ---------------------------------------------------- |
+| event.data | `string` | The role name for which the filling status is requested. |
+
+**Example**:
+
+``` ts
+function onRequestFillingStatus(event) {
+  const role = event.data;
+  console.log("Filling status requested for role:", role);
+}
+
+const config = {
+  // ...
+  events: {
+    onRequestFillingStatus,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onRequestHistory
 
-The function called when the user is trying to show the document version history by clicking the *Version History* button.
+The function called when the user is trying to show the document version history by clicking the *Version History* button. To show the document version history, call the [refreshHistory](../methods.md#refreshhistory) method.
 
-To show the document version history you must call the [refreshHistory](../methods.md#refreshhistory) method. If the method and the [onRequestHistoryData](#onrequesthistorydata) method are not declared the *Version History* button will not be displayed.
+:::note
+If this event and the [onRequestHistoryData](#onrequesthistorydata) event are not declared, the *Version History* button will not be displayed.
+:::
 
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.png#gh-light-mode-only" width="282px" />
 <img alt="onRequestHistory" src="/assets/images/editor/onRequestHistory.dark.png#gh-dark-mode-only" width="282px" />
@@ -441,7 +479,11 @@ Where the `serverVersion` is the `serverVersion` from [the history object](../ca
 
 ## onRequestHistoryClose
 
-The function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the *Close History* button will not be displayed.
+The function called when the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button. When the function is called, the editor must be initialized again, in editing mode.
+
+:::note
+If this event is not declared, the *Close History* button will not be displayed.
+:::
 
 ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
@@ -464,15 +506,17 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestHistoryData
 
-The function called when the user is trying to click the specific document version in the document version history.
+The function called when the user is trying to click a specific document version in the document version history. To show the changes, call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters.
+
+:::note
+If this event and the [onRequestHistory](#onrequesthistory) event are not declared, the *Version History* button will not be displayed.
+:::
 
 **Parameters**:
 
 | Parameter  | Type    | Description                  |
 | ---------- | ------- | ---------------------------- |
-| event.data | integer | The document version number. |
-
-To show the changes corresponding to the specific document version you must call the [setHistoryData](../methods.md#sethistorydata) method. When calling this method, the token must be added to validate the parameters. If the method and the [onRequestHistory](#onrequesthistory) method are not declared the *Version History* button will not be displayed.
+| event.data | `number` | The document version number. |
 
 ![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.png#gh-light-mode-only)![onRequestHistoryData](/assets/images/editor/onRequestHistoryData.dark.png#gh-dark-mode-only)
 
@@ -511,19 +555,17 @@ Where the `changesUrl` is the `changesUrl` from [the JSON object](../callback-ha
 
 ## onRequestInsertImage
 
-The function called when the user is trying to insert an image by clicking the *Image from Storage* button.
-
-**Parameters**:
-
-| Parameter    | Type   | Description                                                                                           |
-| ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
-| event.data.c | string | The type of image insertion. Can be: `add`, `change`, `fill`, `watermark`, or `slide`. |
+The function called when the user is trying to insert an image by clicking the *Image from Storage* button. To insert an image, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
 
 :::note
 If this event is not declared, the *Image from Storage* button will not be displayed.
 :::
 
-To insert an image into the file, call the [insertImage](../methods.md#insertimage) method with the specified command. When calling this method, the token must be added to validate the parameters.
+**Parameters**:
+
+| Parameter    | Type   | Description                                                                                           |
+| ------------ | ------ | ----------------------------------------------------------------------------------------------------- |
+| event.data.c | `"add"` \| `"change"` \| `"fill"` \| `"watermark"` \| `"slide"` | The type of image insertion. |
 
 ![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.png#gh-light-mode-only)![onRequestInsertImage](/assets/images/editor/onRequestInsertImage.dark.png#gh-dark-mode-only)
 
@@ -568,17 +610,19 @@ Starting from version 7.5, please use [onRequestSelectSpreadsheet](#onrequestsel
 
 ## onRequestOpen
 
-The function called when the user is trying to open an external link by clicking the *Open source* button. If the method is not declared, this button will not be displayed.
+The function called when the user is trying to open an external link by clicking the *Open source* button. To open the editor with the external file referenced by the `path` or `referenceData` parameters in a new tab, pass a link to this tab by calling the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method with the `path` and `windowName` parameters.
 
-To open the editor with the external file referenced by the `path` or `referenceData` parameters in a new tab, you must pass a link to this tab by calling the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method with the `path` and `windowName` parameters.
+:::note
+If this event is not declared, the *Open source* button will not be displayed.
+:::
 
 **Parameters**:
 
 | Parameter                | Type   | Description                    |
 | ------------------------ | ------ | ------------------------------ |
-| event.data.path          | string | The file path.                 |
-| event.data.referenceData | object | The unique file data.          |
-| event.data.windowName    | string | The new browser tab name.      |
+| event.data.path          | `string` | The file path.                 |
+| event.data.referenceData | `object` | The unique file data from the source file.          |
+| event.data.windowName    | `string` | The new browser tab name.      |
 
 ![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
@@ -605,27 +649,24 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceData
 
-The function called when the user is trying to refresh data inserted from the external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab.
-
-**Parameters**:
-
-| Parameter                | Type   | Description                                 |
-| ------------------------ | ------ | ------------------------------------------- |
-| event.data.referenceData | object | The unique file data from the source file.  |
-| event.data.path          | string | The file path or name.                      |
-| event.data.link          | string | The file URL.                               |
-
-To refresh data by a link to a file which is specified with the event parameters, you must call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. If the event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
+The function called when the user is trying to refresh data inserted from the external file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab. To refresh data, call the [setReferenceData](../methods.md#setreferencedata) method. When calling this method, the `token` must be added to validate the parameters. This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function.
 
 :::note
-To send the data to the `setReferenceData` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` or `link` parameters are used.
+- If this event is not declared, the *Paste link* and *Update values* buttons will not be displayed.
+- To send the data to the `setReferenceData` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` or `link` parameters are used.
 :::
 
 ![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
 ![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
-This event also fires when the user runs the [IMPORTRANGE](https://helpcenter.onlyoffice.com/onlyoffice-editors/onlyoffice-spreadsheet-editor/Functions/importrange.aspx?from=api) function. The URL of the source spreadsheet which is used in the `IMPORTRANGE` parameters is passed to the `onRequestReferenceData` event in the `event.data.link` parameter.
+**Parameters**:
+
+| Parameter                | Type   | Description                                 |
+| ------------------------ | ------ | ------------------------------------------- |
+| event.data.referenceData | `object` | The unique file data from the source file.  |
+| event.data.path          | `string` | The file path or name.                      |
+| event.data.link          | `string` | The URL of the external file.               |
 
 **Example**:
 
@@ -660,20 +701,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestReferenceSource
 
-The function called when the user is trying to change a source of the external data by clicking the *Change source* button.
+The function called when the user is trying to change a source of the external data by clicking the *Change source* button. To change the source, call the [setReferenceSource](../methods.md#setreferencesource) method. When calling this method, the `token` must be added to validate the parameters.
+
+:::note
+- If this event is not declared, the *Change source* button will not be displayed.
+- To send the data to the `setReferenceSource` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` parameter is used.
+:::
 
 **Parameters**:
 
 | Parameter                | Type   | Description              |
 | ------------------------ | ------ | ------------------------ |
-| event.data.referenceData | object | The unique file data.    |
-| event.data.path          | string | The file path or name.   |
-
-When the button is clicked, you must call the [setReferenceSource](../methods.md#setreferencesource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
-
-:::note
-To send the data to the `setReferenceSource` method, it is recommended to search for the file by the `referenceData` parameter first. If there is no such a field or a file cannot be found, then the `path` parameter is used.
-:::
+| event.data.referenceData | `object` | The unique file data from the source file.    |
+| event.data.path          | `string` | The file path or name.   |
 
 ![Change source](/assets/images/editor/change-source.png#gh-light-mode-only)![Change source](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
@@ -749,11 +789,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the user is trying to rename the file by clicking the *Rename...* button.
 
+:::note
+If this event is not declared, the *Rename...* button will not be displayed.
+:::
+
 **Parameters**:
 
 | Parameter  | Type   | Description             |
 | ---------- | ------ | ----------------------- |
-| event.data | string | The new document title. |
+| event.data | `string` | The new document title. |
 
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />   
 <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
@@ -778,21 +822,19 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestRestore
 
-The function called when the user is trying to restore the file version by clicking the *Restore* button in the version history.
+The function called when the user is trying to restore the file version by clicking the *Restore* button in the version history. When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again.
+
+:::note
+If this event is not declared, the *Restore* button will not be displayed. The *Restore* button is displayed for the previous document versions only and hidden for the current one.
+:::
 
 **Parameters**:
 
 | Parameter           | Type    | Description                                                                                                                   |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| event.data.version  | integer | The document version number.                                                                                                  |
-| event.data.url      | string  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
-| event.data.fileType | string  | The type of the document specified with the `url` link.                                                                       |
-
-When the function is called, you must call the [refreshHistory](../methods.md#refreshhistory) method to initialize version history again. If the method is not declared the *Restore* button will not be displayed.
-
-:::note
-The *Restore* button is displayed for the previous document versions only and hidden for the current one.
-:::
+| event.data.version  | `number` | The document version number.                                                                                                  |
+| event.data.url      | `string`  | The document link from the [history object](../callback-handler.md#history). Sent if called for the document changes.         |
+| event.data.fileType | `string`  | The type of the document specified with the `url` link.                                                                       |
 
 ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
@@ -847,15 +889,19 @@ Where the `serverVersion` is the `serverVersion` from [the history object](../ca
 
 ## onRequestSaveAs
 
-The function called when the user is trying to save file by clicking *Save Copy as...* button. If the method is not declared the *Save Copy as...* button will not be displayed.
+The function called when the user is trying to save a file by clicking the *Save Copy as...* button.
+
+:::note
+If this event is not declared, the *Save Copy as...* button will not be displayed.
+:::
 
 **Parameters**:
 
 | Parameter           | Type   | Description                                        |
 | ------------------- | ------ | -------------------------------------------------- |
-| event.data.fileType | string | The document type.                                 |
-| event.data.title    | string | The title of the document.                         |
-| event.data.url      | string | The absolute URL to the document to be downloaded. |
+| event.data.fileType | `string` | The document type.                                 |
+| event.data.title    | `string` | The title of the document.                         |
+| event.data.url      | `string` | The absolute URL to the document to be downloaded. |
 
 ![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.png#gh-light-mode-only)![onRequestSaveAs](/assets/images/editor/onRequestSaveAs.dark.png#gh-dark-mode-only)
 
@@ -880,15 +926,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectDocument
 
-The function called when the user is trying to select a document for comparing, combining, or inserting text.
+The function called when the user is trying to select a document for comparing, combining, or inserting text. To select a document, call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
 
 **Parameters**:
 
 | Parameter    | Type   | Description                                                                          |
 | ------------ | ------ | ------------------------------------------------------------------------------------ |
-| event.data.c | string | The type of document selection. Can be: `compare`, `combine`, or `insert-text`. |
-
-To select a document for comparing, combining, or inserting text, you must call the [setRequestedDocument](../methods.md#setrequesteddocument) method. When calling this method, the token must be added to validate the parameters.
+| event.data.c | `"compare"` \| `"combine"` \| `"insert-text"` | The type of document selection. |
 
 ![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.png#gh-light-mode-only)![onRequestSelectDocument](/assets/images/editor/onRequestSelectDocument.dark.png#gh-dark-mode-only)
 
@@ -919,15 +963,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSelectSpreadsheet
 
-The function called when the user is trying to select recipients data by clicking the *Mail merge* button.
+The function called when the user is trying to select recipients data by clicking the *Mail merge* button. To select recipient data, call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters.
 
 **Parameters**:
 
 | Parameter    | Type   | Description                                                       |
 | ------------ | ------ | ----------------------------------------------------------------- |
-| event.data.c | string | The type of spreadsheet selection. Can be: `mailmerge`.           |
-
-To select recipient data, you must call the [setRequestedSpreadsheet](../methods.md#setrequestedspreadsheet) method. When calling this method, the token must be added to validate the parameters. If the method is not declared, the *Mail merge* button will become faded and unclickable.
+| event.data.c | `"mailmerge"` | The type of spreadsheet selection. |
 
 ![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.png#gh-light-mode-only)![onRequestSelectSpreadsheet](/assets/images/editor/onRequestMailMergeRecipients.dark.png#gh-dark-mode-only)
 
@@ -956,17 +998,15 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSendNotify
 
-The function called when the user is mentioned in a comment.
+The function called when the user is mentioned in a comment. The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
 
 **Parameters**:
 
 | Parameter               | Type     | Description                                                                                                                                       |
 | ----------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| event.data.actionLink   | object   | The comment data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter.       |
-| event.data.message      | string   | The message text.                                                                                                                                 |
-| event.data.emails       | string[] | The list of emails.                                                                                                                               |
-
-The list of users to be mentioned should be completed by the [setUsers](../methods.md#setusers) method.
+| event.data.actionLink   | `object`   | The comment data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter.       |
+| event.data.message      | `string`   | The message of the comment.                                                                                                                       |
+| event.data.emails       | `string[]` | The list of user emails to be notified.                                                                                                           |
 
 **Example**:
 
@@ -989,9 +1029,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestSharingSettings
 
-The function called when the user is trying to manage document access rights by clicking *Change access rights* button.
+The function called when the user is trying to manage document access rights by clicking the *Change access rights* button. When the access rights are changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/info.md#sharingsettings) about the settings which allow to share the document with other users.
 
-When the access rights is changed, you must call the [setSharingSettings](../methods.md#setsharingsettings) method to update the [information](./document/info.md#sharingsettings) about the settings which allow to share the document with other users. If the method is not declared the *Change access rights* button will not be displayed.
+:::note
+If this event is not declared, the *Change access rights* button will not be displayed.
+:::
 
 ![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.png#gh-light-mode-only)![onRequestSharingSettings](/assets/images/editor/onRequestSharingSettings.dark.png#gh-dark-mode-only)
 
@@ -1026,14 +1068,27 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestStartFilling
 
-The function called when the user is trying to start filling out the ready forms by clicking the *Start filling* button in the pdf editing mode. If the event is not declared, this button will not be displayed.
+The function called when the user is trying to start filling out ready forms by clicking the *Start filling* button in PDF editing mode. When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock PDF editing (only PDF viewing becomes available).
 
-When the user clicks the *Start filling* button, the [startFilling](../methods.md#startfilling) method is called to lock the pdf editing (only pdf viewing becomes available).
+:::note
+If this event is not declared, the *Start filling* button will not be displayed.
+:::
+
+**Parameters**:
+
+| Parameter        | Type     | Description        |
+| ---------------- | -------- | ------------------ |
+| event.data.name  | `string` | The role name.     |
+| event.data.color | `string` | The role color in hex format (e.g. `#FF0000`). |
+
+The `event.data` is an array of role objects.
 
 **Example**:
 
 ``` ts
-function onRequestStartFilling() {
+function onRequestStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
   docEditor.startFilling();
 }
 
@@ -1049,16 +1104,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onRequestUsers
 
-The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars.
+The function called when the user can select other users to mention in the comments, grant the access rights to edit the specific sheet ranges, or set the user avatars. To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
 
 **Parameters**:
 
 | Parameter    | Type     | Description                                                                                                       |
 | ------------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| event.data.c | string   | The operation type. Can be: `mention`, `protect`, or `info`.                                                |
-| event.data.id | string[] | The list of user IDs. Used with the `info` operation type to set the avatars for the specified users. |
-
-To set a list of users, you must call the [setUsers](../methods.md#setusers) method which can take different lists of users depending on the specified operation type. The `onRequestUsers` event is called once for each `c` type when the corresponding operation is performed. If the `setUsers` is called with an empty list, then the `onRequestUsers` event will fire again.
+| event.data.c | `"mention"` \| `"protect"` \| `"info"` | The operation type.                                                |
+| event.data.id | `string[]` | The list of user IDs associated with the operation. |
 
 ![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
@@ -1100,6 +1153,55 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onSaveDocument
+
+The function called to save the document as binary data.
+
+**Parameters**:
+
+| Parameter  | Type          | Description                              |
+| ---------- | ------------- | ---------------------------------------- |
+| event.data | `ArrayBuffer` | The document file data in binary format. |
+
+**Example**:
+
+``` ts
+function onSaveDocument(event) {
+  const buffer = event.data;
+  console.log("Document binary size:", buffer.byteLength);
+}
+
+const config = {
+  // ...
+  events: {
+    onSaveDocument,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
+## onStartFilling
+
+The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
+
+**Example**:
+
+``` ts
+function onStartFilling() {
+  console.log("The PDF form is ready for filling.");
+}
+
+const config = {
+  // ...
+  events: {
+    onStartFilling,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onSubmit
 
 The function called when the force saving request of the `3` [forcesavetype](../callback-handler.md#forcesavetype) is successfully performed, i.e. when the *Complete & Submit* button is clicked and the form is submitted.
@@ -1107,7 +1209,7 @@ The function called when the force saving request of the `3` [forcesavetype](../
 **Example**:
 
 ``` ts
-function onSubmit(event) {
+function onSubmit() {
   console.log("The form was submitted.");
 }
 
@@ -1148,14 +1250,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## onWarning
 
-The function called when a warning occurs. A list of error codes can be found [here](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).
+The function called when a warning occurs.
 
 **Parameters**:
 
 | Parameter                      | Type   | Description                |
 | ------------------------------ | ------ | -------------------------- |
-| event.data.warningCode         | number | The warning code.          |
-| event.data.warningDescription  | string | The warning description.   |
+| event.data.warningCode         | `number` | The [warning code](https://github.com/ONLYOFFICE/sdkjs/blob/master/common/errorCodes.js).          |
+| event.data.warningDescription  | `string` | The warning description.   |
 
 **Example**:
 

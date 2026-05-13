@@ -60,10 +60,10 @@ let func = new RegisteredFunction({
 
 ### Parameters
 
-| Name   | Type   | Example     | Description                                                                                                                 |     |
-| ------ | ------ | ----------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
-| scope  | string | "selection" | Whether to extract action items from the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |     |
-| format | string | "bullet"    | How to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet').                                   |     |
+| Name   | Type   | Example     | Description                                                                                                                 |
+| ------ | ------ | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| scope  | string | "selection" | Whether to extract action items from the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |
+| format | string | "bullet"    | How to format the extracted items - as 'bullet' or 'numbered' list (default is 'bullet').                                   |
 
 ## Function execution {#function-execution}
 
@@ -213,7 +213,7 @@ func.call = async function (params) {
   return func;
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetText](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetText.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md), [GetRangeBySelect](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [CreateNumbering](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateNumbering.md), [GetLevel](/docs/office-api/usage-api/document-api/ApiNumbering/Methods/GetLevel.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/document-api/ApiRun/Methods/AddText.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr.md), [SetNumbering](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetNumbering.md), [SetContextualSpacing](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetContextualSpacing.md), [InsertParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [InsertContent](/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md),  [Delete](/docs/office-api/usage-api/document-api/ApiRun/Methods/Delete.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetText](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetText.md), [GetCurrentParagraph](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetCurrentParagraph.md), [GetRangeBySelect](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [CreateNumbering](/docs/office-api/usage-api/document-api/ApiDocument/Methods/CreateNumbering.md), [GetLevel](/docs/office-api/usage-api/document-api/ApiNumbering/Methods/GetLevel.md), [CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [GetTextPr](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetTextPr.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetTextPr.md), [SetNumbering](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetNumbering.md), [SetContextualSpacing](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/SetContextualSpacing.md), [InsertParagraph](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [InsertContent](/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md), [Delete](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/Delete.md), [Asc.scope object](/docs/plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object)
 
 ## Result
 

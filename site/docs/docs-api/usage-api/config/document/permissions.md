@@ -1,6 +1,6 @@
 # Permissions
 
-The document permission section allows you to change the permission for the document to be edited and downloaded or not.
+The permissions section defines the document permission parameters.
 
 ## chat
 

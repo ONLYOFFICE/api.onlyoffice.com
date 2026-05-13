@@ -36,10 +36,18 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) 事件。
 - 添加了 [refreshFile](../usage-api/methods.md#refreshfile) 方法。
 - 添加了 [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) 事件。
+- 添加了 [events.onStartFilling](../usage-api/config/events.md#onstartfilling) 事件。
+- 为 [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) 事件添加了 *roles* 参数。
+- 添加了 [events.onRequestFillingStatus](../usage-api/config/events.md#onrequestfillingstatus) 事件。
+- 添加了 [editorConfig.customization.startFillingForm](../usage-api/config/editor/customization/customization-standard-branding.md#startfillingform) 参数。
+- 为 [editorConfig.user](../usage-api/config/editor/editor.md#user) 添加了 *roles* 字段。
+- 添加了 [editorConfig.customization.mobile.disableForceDesktop](../usage-api/config/editor/customization/customization-standard-branding.md#mobiledisableforcedesktop) 参数。
 - 如果未为 [drop](../additional-api/command-service/drop.md) 命令指定 *users* 参数，则将禁止所有使用指定 *key* 编辑文档的用户编辑文档。
 - [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) 参数现在可以用作对象。
 - [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) 参数现在可用于查看器。
 - 添加了 [editorConfig.customization.pointerMode](../usage-api/config/editor/customization/customization-standard-branding.md#pointermode) 参数。
+- [editorConfig.customization.layout.toolbar.insert](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsert) 参数现在可以用作带有 [file](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfile) 和 [field](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfield) 字段的对象。
+- [editorConfig.customization.layout.toolbar.layout](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayout) 参数现在可以用作带有 [pagecolor](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayoutpagecolor) 字段的对象。
 
 ## 版本 8.2
 
@@ -64,6 +72,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 向 WOPI 主机页面的 *form* 元素添加了 [docs\_api\_config](../using-wopi/host-page.md#parameters) 参数。
 - 向转换请求添加了 [pdf](../additional-api/conversion-api/request.md#pdf) 字段。
 - 添加了 [events.onSubmit](../usage-api/config/events.md#onsubmit) 事件。
+- 添加了 [events.onSaveDocument](../usage-api/config/events.md#onsavedocument) 事件。
 - 将 *roles* 字段添加到 [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) 参数。
 - 发送时将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到 URL 查询字符串请求到文档命令服务、文档转换服务或文档生成器服务。
 - 向 *Automation API* 添加了 [addContextMenuItem](../usage-api/automation-api/connector-class.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/connector-class.md#addtoolbarmenuitem) 和 [updateContextMenuItem](../usage-api/automation-api/connector-class.md#updatecontextmenuitem) 方法。
@@ -176,6 +185,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - 增加了打开 [oxps](../usage-api/config/config.md#documenttype) 格式的功能。
 - 增加了对 [WOPI 协议](../using-wopi/overview.md) 的支持。
+- 添加了 [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) 部分。
 - 将 *simple* 值添加到 [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 参数中。
 - 添加了保存在电子表格文件中的 [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) 线程评论。
 - 添加了 [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 字段。
@@ -213,6 +223,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - [documentType](../usage-api/config/config.md#documenttype) 参数的 *text*, *spreadsheet* 和 *presentation* 值已弃用，请改用 *word*, *cell* 和 *slide* 值。
 - 将 *group* 字段添加到 [editorConfig.user](../usage-api/config/editor/editor.md#user)。
+- 添加了 [editorConfig.customization.reviewPermissions](../usage-api/config/editor/customization/customization-standard-branding.md#reviewpermissions) 参数。
 - 添加了从 [fb2](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的转换的功能。
 - 移除了已弃用的 `document.permissions.changeHistory` 参数。
 - 移除了已弃用的 `document.permissions.rename` 参数。

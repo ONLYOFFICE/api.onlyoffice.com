@@ -1,6 +1,6 @@
-import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths } from '@jsonforms/core';
-import { withJsonFormsArrayControlProps, JsonFormsDispatch } from '@jsonforms/react';
-import { memo } from 'react';
+import { ArrayControlProps, isObjectArrayControl, isPrimitiveArrayControl, or, rankWith, ControlElement, JsonSchema, composePaths, update } from '@jsonforms/core';
+import { withJsonFormsArrayControlProps, JsonFormsDispatch, useJsonForms } from '@jsonforms/react';
+import { memo, useCallback } from 'react';
 import { Section } from '../utils/Section';
 import { depthOfPath, titleFromKey } from '../layouts/depth';
 import styles from '../../styles.module.css';
@@ -20,7 +20,8 @@ function defaultForSchema(s: JsonSchema | undefined): unknown {
 }
 
 const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayControlProps) {
-    const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props;
+    const { label, path, schema, description, data, addItem, removeItems, enabled, renderers, cells } = props;
+    const ctx = useJsonForms();
 
     // mapStateToArrayControlProps already resolves schema.items (including $ref),
     // so schema here is the item schema, not the array schema
@@ -28,6 +29,11 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
 
     const items: unknown[] = Array.isArray(data) ? data : [];
     const depth = depthOfPath(path);
+
+    const toggled = data == null ? undefined : true;
+    const onToggle = useCallback(() => {
+        ctx.dispatch!(update(path, () => data == null ? [] : undefined));
+    }, [ctx.dispatch, path, data]);
 
     // If schema is empty, infer type from data
     if (!itemSchema.type && !itemSchema.properties && !itemSchema.items) {
@@ -43,7 +49,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
     }
 
     return (
-        <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={(schema as JsonSchema).description} defaultOpen={depth < 1}>
+        <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={description} defaultOpen={depth < 1} toggled={toggled} onToggle={onToggle}>
             {items.map((_, index) => {
                 const itemPath = composePaths(path, `${index}`)
                 return (

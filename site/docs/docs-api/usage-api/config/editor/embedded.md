@@ -1,12 +1,16 @@
 # Embedded
 
-The embedded section is for the `embedded` document type only (see the [config](../config.md#type) section to find out how to define the `embedded` document type). It allows you to change the settings which define the behavior of the buttons in the embedded mode.
+The embedded section defines the embedded mode parameters.
+
+:::note
+This section is for the `embedded` document type only. See the [config](../config.md#type) section to find out how to define the `embedded` document type.
+:::
 
 ## autostart
 
 **type:** `"document" | "player"` | **default:** `"player"`
 
-Defines whether the embedded presentation starts the slideshow automatically.
+Defines the start mode for the embedded viewer. In `player` mode, the slideshow starts automatically.
 
 **Example**: `"document"`
 
@@ -14,7 +18,7 @@ Defines whether the embedded presentation starts the slideshow automatically.
 
 **type:** `string`
 
-Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
+Defines the absolute URL to the source file for the embedded document.
 
 **Example**: `"https://example.com/embedded?doc=exampledocument1.docx"`
 
@@ -22,7 +26,7 @@ Defines the absolute URL to the document serving as a source file for the docume
 
 **type:** `string`
 
-Defines the absolute URL to the document which will open in full screen mode.
+Defines the absolute URL of the document to open in full screen mode.
 
 **Example**: `"https://example.com/embedded?doc=exampledocument1.docx#fullscreen"`
 
@@ -30,7 +34,7 @@ Defines the absolute URL to the document which will open in full screen mode.
 
 **type:** `string`
 
-Defines the absolute URL that will allow the document to be saved onto the user personal computer.
+Defines the absolute URL for saving the document to the user's local computer.
 
 **Example**: `"https://example.com/download?doc=exampledocument1.docx"`
 
@@ -38,17 +42,17 @@ Defines the absolute URL that will allow the document to be saved onto the user 
 
 **type:** `string`
 
-Defines the absolute URL that will allow other users to share this document.
+Defines the absolute URL for sharing the document with other users.
 
 **Example**: `"https://example.com/view?doc=exampledocument1.docx"`
 
 ## toolbarDocked
 
-**type:** `string`
+**type:** `"top" | "bottom"` | **default:** `"top"`
 
-Defines the place for the embedded viewer toolbar. If set to `top`, the toolbar is at the top. If set to `bottom`, the toolbar is at the bottom.
+Defines the position of the embedded viewer toolbar.
 
-**Example**: `"top"`
+**Example**: `"bottom"`
 
 ![Embedded](/assets/images/editor/embedded.png)
 

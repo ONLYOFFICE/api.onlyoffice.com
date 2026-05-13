@@ -5,9 +5,11 @@ sidebar_label: Standard branding
 
 # Customization - Standard branding
 
-The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
+The customization section defines the editor customization parameters.
 
-Most customization parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) to find out what additional customization options are available.
+:::info
+Most parameters on this page are available for all ONLYOFFICE Docs editions, including the open-source community version. Some parameters are available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) and are marked accordingly. If you have an extended white label license, please visit the [White label page](customization-white-label.md) for additional customization options.
+:::
 
 :::note
 Only the following parameters are available for the mobile editors: [close](#close), [feedback](#feedback), [goback](#goback), [help](#help), [logo](#logo), [macrosMode](#macrosmode), [mobile](#mobile), [toolbarHideFileName](#toolbarhidefilename), [uiTheme](#uitheme).
@@ -22,7 +24,7 @@ Adds a request for the anonymous name.
 **Example**:
 
 ``` ts
-const anonymous = {
+{
   request: true,
   label: "Elizabeth",
 }
@@ -81,7 +83,7 @@ Defines settings for the cross button to close the editor.
 **Example**:
 
 ``` ts
-const close = {
+{
   visible: true,
   text: "Close file",
 }
@@ -99,12 +101,10 @@ Defines if the cross button to close the editor is displayed or hidden.
 
 **type:** `string`
 
-Defines the tooltip text for a button in the editor header or the menu item text in the mobile editors and in the **File** menu of the web editors.
+Defines the tooltip text for the cross button in the editor header or the menu item text in the mobile editors and in the **File** menu of the web editors.
 
 :::note
 It will only be available if the [onRequestClose](../../events.md#onrequestclose) event is set. If the event is not declared and the `close` parameter is not specified, the cross button will not be displayed.
-
-This parameter is also available for the mobile editors.
 :::
 
 **Example**: `"Close file"`
@@ -137,7 +137,7 @@ Defines if the **Comments** menu button is displayed or hidden. Please note that
 
 **type:** `boolean` | **default:** `false`
 
-Defines where the additional action buttons are displayed. If set to `false`, the buttons are in the upper part of the editor window header next to the logo. If set to `true`, the buttons are in the toolbar, making the header more compact.
+Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (`false`) or in the toolbar (`true`), making the header more compact.
 
 **Example**: `false`
 
@@ -147,7 +147,7 @@ Defines where the additional action buttons are displayed. If set to `false`, th
 
 **type:** `boolean` | **default:** `false`
 
-Defines the top toolbar type. If set to `false`, the full toolbar is displayed. If set to `true`, the compact toolbar is displayed. Starting from version 8.3, this setting is also available for the viewer. The default value for the `view` mode is `true`.
+Defines the top toolbar type. If set to `false`, the full toolbar is displayed. If set to `true`, the compact toolbar is displayed. The default value for the `view` mode is `true`.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.compactToolbar` parameter.
@@ -171,14 +171,14 @@ Defines the use of functionality only compatible with the OOXML format. For exam
 
 Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
 
-:::note
+:::info
 This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 **Example**:
 
 ``` ts
-const customer = {
+{
   address: "My City, 123a-45",
   info: "Some additional information",
   logo: "https://example.com/logo-big.png",
@@ -210,7 +210,11 @@ Some additional information about the company or person you want the others to k
 
 **type:** `string`
 
-The path to the image logo (there are no special recommendations for this file, but it would be better if it was in the `.png` format with transparent background). The image must have the following size: 432x70.
+The path to the image logo. The image must have the following size: 432x70.
+
+:::note
+There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
+:::
 
 **Example**: `"https://example.com/logo-big.png"`
 
@@ -218,7 +222,11 @@ The path to the image logo (there are no special recommendations for this file, 
 
 **type:** `string`
 
-The path to the image logo for the dark theme (there are no special recommendations for this file, but it would be better if it was in `.png` format with transparent background). The image must have the following size: 432x70.
+The path to the image logo for the dark theme. The image must have the following size: 432x70.
+
+:::note
+There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
+:::
 
 **Example**: `"https://example.com/dark-logo-big.png"`
 
@@ -265,7 +273,7 @@ Defines the parameters that the user can disable or customize if possible.
 **Example**:
 
 ``` ts
-const features = {
+{
   featuresTips: true,
   roles: true,
   spellcheck: {
@@ -296,7 +304,7 @@ Defines if the tooltips about new editor features will be displayed or hidden on
 
 Defines if the role settings will be disabled in the pdf forms or not. If the parameter is equal to `false`, then the role manager is hidden and viewing the form on behalf of a specific role is disabled. In this case, the **Manage Roles** and **View Form** buttons on the **Forms** tab and a drop-down list for setting the field role in the right panel will not be displayed.
 
-:::note
+:::info
 This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
@@ -378,13 +386,16 @@ Defines if the tab style setting will be displayed in the **File -> Advanced set
 
 **type:** `boolean | object` | **default:** `false`
 
-Defines settings for the **Feedback & Support** menu button. Can be a boolean or an object. If set to `true`, the button is displayed. If set to `false`, the button is hidden. If set to an object, use the `url` and `visible` properties to configure the button.
+Defines settings for the **Feedback & Support** menu button. If set to `false`, the button is hidden.
 
-:::note
-This parameter is also available for the mobile editors.
-:::
+**Example**:
 
-**Example**: `true`
+``` ts
+{
+  url: "https://example.com",
+  visible: true,
+}
+```
 
 ![Feedback](/assets/images/editor/feedback.png)
 
@@ -392,13 +403,13 @@ This parameter is also available for the mobile editors.
 
 **type:** `string`
 
-The absolute URL to the website address which will be opened when clicking the **Feedback & Support** menu button.
+The absolute URL to the website which will be opened when clicking the **Feedback & Support** menu button.
 
 **Example**: `"https://example.com"`
 
 ### feedback.visible
 
-**type:** `boolean`
+**type:** `boolean` | **default:** `false`
 
 Shows or hides the **Feedback & Support** menu button.
 
@@ -430,14 +441,10 @@ Defines the font size used in the Chinese (Simplified) UI. If set to `true`, the
 
 Defines settings for the **Open file location** menu button and upper right corner button.
 
-:::note
-This parameter is also available for the mobile editors.
-:::
-
 **Example**:
 
 ``` ts
-const goback = {
+{
   blank: true,
   text: "Open file location",
   url: "https://example.com",
@@ -487,10 +494,6 @@ The absolute URL to the website address which will be opened when clicking the *
 **type:** `boolean` | **default:** `true`
 
 Defines if the **Help** menu button is displayed or hidden.
-
-:::note
-This parameter is also available for the mobile editors.
-:::
 
 **Example**: `true`
 
@@ -546,16 +549,14 @@ Defines the mode of embedding editors into the web page. The `embed` value disab
 
 Changes the image file at the top left corner of the editor header. The recommended image height is 20 pixels.
 
-:::note
+:::info
 This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
-
-This parameter is also available for the mobile editors.
 :::
 
 **Example**:
 
 ``` ts
-const logo = {
+{
   image: "https://example.com/logo.png",
   imageDark: "https://example.com/dark-logo.png",
   imageLight: "https://example.com/light-logo.png",
@@ -570,7 +571,7 @@ const logo = {
 
 **type:** `string`
 
-Path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the [config](../../config.md#type) section to find out how to define the `embedded` document type). The image must have the following size: 300x20.
+Path to the image file used to show in the common work mode (view and edit modes for all editors) or in the embedded mode. The image must have the following size: 300x20.
 
 **Example**: `"https://example.com/logo.png"`
 
@@ -641,8 +642,6 @@ Defines the macros run mode when autostart is enabled. Can take the following va
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.
-
-This parameter is also available for the mobile editors.
 :::
 
 **Example**: `"warn"`
@@ -667,14 +666,10 @@ It will only be available for the comments if the [onRequestSendNotify](../../ev
 
 Defines the mobile document editor settings.
 
-:::note
-This parameter is also available for the mobile editors.
-:::
-
 **Example**:
 
 ``` ts
-const mobile = {
+{
   forceView: true,
   info: false,
   standardView: false,
@@ -705,15 +700,20 @@ Defines whether the editor will be opened in **Standard view** instead of **Mobi
 
 **Example**: `false`
 
+### mobile.disableForceDesktop
+
+**type:** `boolean` | **default:** `false`
+
+Defines whether to hide the UI option to switch the editor to the **Desktop** type on mobile devices.
+
+**Example**: `false`
+
 ## mobileForceView
 
 **type:** `boolean` | **default:** `true`
 
 Defines if the mobile document editor is opened in the view/edit mode on launch.
 
-:::note
-This parameter is also available for the mobile editors.
-:::
 :::danger[Deprecated]
 Starting from version 8.2, please use the [mobile](#mobile) parameter instead.
 :::
@@ -753,7 +753,7 @@ The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [t
 **Example**:
 
 ``` ts
-const review = {
+{
   hideReviewDisplay: false,
   showReviewChanges: false,
   reviewDisplay: "original",
@@ -809,6 +809,30 @@ Defines if the review editing mode is enabled for the current user. This paramet
 
 **Example**: `true`
 
+## reviewPermissions
+
+**type:** `object`
+
+Defines which [groups](../editor.md#user) can accept/reject review changes made by other groups. Each key is a group name, and the value is an array of group names whose review changes that group can manage. The `""` value in the array means changes made by users who don't belong to any group.
+
+This parameter is used together with the [user.group](../editor.md#user) field and the [document.permissions.reviewGroups](../../document/permissions.md#reviewgroups) parameter.
+
+**Example**:
+
+``` ts
+{
+  "Group1": ["Group2"],
+  "Group2": ["Group1", "Group2"],
+  "Group3": [""],
+}
+```
+
+In this example:
+
+- users from *Group1* can accept/reject review changes made by users from *Group2*;
+- users from *Group2* can accept/reject review changes made by users from *Group1* and *Group2*;
+- users from *Group3* can accept/reject review changes made by users who don't belong to any group.
+
 ## reviewDisplay
 
 **type:** `"markup" | "simple" | "final" | "original"`
@@ -835,7 +859,7 @@ Starting from version 7.0, please use the [review.reviewDisplay](#reviewreviewdi
 
 **type:** `boolean` | **default:** `true`
 
-Starting from version 8.3, defines if the horizontal scroll is automatically displayed or hidden when the spreadsheet editor is loaded.
+Defines if the horizontal scroll is automatically displayed or hidden when the spreadsheet editor is loaded.
 
 **Example**: `true`
 
@@ -855,7 +879,7 @@ Starting from version 7.0, please use the [review.showReviewChanges](#reviewshow
 
 **type:** `boolean` | **default:** `true`
 
-Starting from version 8.3, defines if the vertical scroll is automatically displayed or hidden when the spreadsheet editor is loaded.
+Defines if the vertical scroll is automatically displayed or hidden when the spreadsheet editor is loaded.
 
 **Example**: `true`
 
@@ -863,7 +887,7 @@ Starting from version 8.3, defines if the vertical scroll is automatically displ
 
 **type:** `string`
 
-Starting from version 8.3, defines the background color for the slide show in the presentation editor. Can be represented in the HEX, RGB, or RGBA formats. For example, `#ff0000`, `rgb(255, 0, 0)`, `rgba(255, 0, 0, 0.5)`.
+Defines the background color for the slide show in the presentation editor. Can be represented in the HEX, RGB, or RGBA formats. For example, `#ff0000`, `rgb(255, 0, 0)`, `rgba(255, 0, 0, 0.5)`.
 
 **Example**: `"#000000"`
 
@@ -882,13 +906,42 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **Example**: `true`
 
+## startFillingForm
+
+**type:** `object`
+
+Defines the *Start filling* button settings in PDF form editing mode.
+
+**Example**:
+
+``` ts
+{
+  text: "Share & collect",
+}
+```
+
+### startFillingForm.text
+
+**type:** `string` | **default:** `"Start filling"`
+
+Defines the caption of the *Start filling* button in PDF form editing mode.
+
+**Example**: `"Share & collect"`
+
 ## submitForm
 
 **type:** `object | boolean` | **default:** `true`
 
-Starting from version 8.3, defines the **Complete & Submit** button settings. Can be a boolean or an object. If set to `true`, the button is displayed. If set to `false`, the button is hidden. If set to an object, use the `visible` and `resultMessage` properties to configure the button. The button will only be available for the `pdf` format.
+Defines the **Complete & Submit** button settings. If set to `false`, the button is hidden. The button will only be available for the `pdf` format.
 
-**Example**: `true`
+**Example**:
+
+``` ts
+{
+  visible: true,
+  resultMessage: "Form submitted successfully",
+}
+```
 
 ![Submit button](/assets/images/editor/submitForm.png)
 ![Submit button](/assets/images/editor/submitForm-message.png)
@@ -929,10 +982,6 @@ Defines if the document title is hidden on the top toolbar. If set to `false`, t
 
 :::note
 This setting is used when the [compactHeader](#compactheader) parameter is set to `true`.
-:::
-
-:::note
-Starting from version 9.0.3, this parameter is also available for the mobile editors.
 :::
 
 **Example**: `false`
@@ -980,10 +1029,6 @@ Apart from the available editor themes, the user can also customize their own [c
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.uiTheme` parameter.
 :::
 
-:::note
-Starting from version 9.1, this parameter is also available for the mobile editors. Supported themes: `theme-light`, `theme-dark`, `default-light`, `default-dark`.
-:::
-
 **Example**: `"theme-dark"`
 
 ## unit
@@ -1006,7 +1051,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 **type:** `string`
 
-Starting from version 8.3, defines the HEX color for the default heading styles in the document editor.
+Defines the HEX color for the default heading styles in the document editor.
 
 **Example**: `"#00ff00"`
 

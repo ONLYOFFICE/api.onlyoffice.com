@@ -36,10 +36,18 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
+- Added the [events.onStartFilling](../usage-api/config/events.md#onstartfilling) event.
+- Added the *roles* parameter to the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
+- Added the [events.onRequestFillingStatus](../usage-api/config/events.md#onrequestfillingstatus) event.
+- Added the [editorConfig.customization.startFillingForm](../usage-api/config/editor/customization/customization-standard-branding.md#startfillingform) parameter.
+- Added the *roles* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
+- Added the [editorConfig.customization.mobile.disableForceDesktop](../usage-api/config/editor/customization/customization-standard-branding.md#mobiledisableforcedesktop) parameter.
 - The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../additional-api/command-service/drop.md) command.
 - The [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) parameter is now available for the viewer.
 - Added the [editorConfig.customization.pointerMode](../usage-api/config/editor/customization/customization-standard-branding.md#pointermode) parameter.
+- The [editorConfig.customization.layout.toolbar.insert](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsert) parameter can now be used as an object with the [file](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfile) and [field](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarinsertfield) fields.
+- The [editorConfig.customization.layout.toolbar.layout](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayout) parameter can now be used as an object with the [pagecolor](../usage-api/config/editor/customization/customization-white-label.md#layouttoolbarlayoutpagecolor) field.
 
 ## Version 8.2
 
@@ -64,6 +72,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [docs\_api\_config](../using-wopi/host-page.md#parameters) parameter to the *form* element of the WOPI host page.
 - Added the [pdf](../additional-api/conversion-api/request.md#pdf) field to the conversion request.
 - Added the [events.onSubmit](../usage-api/config/events.md#onsubmit) event.
+- Added the [events.onSaveDocument](../usage-api/config/events.md#onsavedocument) event.
 - Added the *roles* field to the [editorConfig.customization.features](../usage-api/config/editor/customization/customization-standard-branding.md#features) parameter.
 - Added the [shardkey](../get-started/configuration/shard-key.md) parameter to the URL query string when sending requests to the ONLYOFFICE Docs API, document command service, document conversion service, or document builder service.
 - Added the [addContextMenuItem](../usage-api/automation-api/connector-class.md#addcontextmenuitem), [addToolbarMenuItem](../usage-api/automation-api/connector-class.md#addtoolbarmenuitem) and [updateContextMenuItem](../usage-api/automation-api/connector-class.md#updatecontextmenuitem) methods to the *Automation API*.
@@ -176,6 +185,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added opening for [oxps](../usage-api/config/config.md#documenttype) format.
 - Added support for [WOPI protocol](../using-wopi/overview.md).
+- Added the [editorConfig.wopi](../usage-api/config/editor/editor.md#wopi) section.
 - Added the *simple* value to the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) parameter.
 - Added the [threaded comments](../get-started/how-it-works/commenting.md#threaded-comments-in-spreadsheets) saving in the spreadsheet files.
 - Added the [editorConfig.customization.uiTheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) field.
@@ -213,6 +223,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - The *text*, *spreadsheet* and *presentation* values for [documentType](../usage-api/config/config.md#documenttype) parameter is deprecated, please use *word*, *cell* and *slide* values instead.
 - Added the *group* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
+- Added the [editorConfig.customization.reviewPermissions](../usage-api/config/editor/customization/customization-standard-branding.md#reviewpermissions) parameter.
 - Added conversion from [fb2](../additional-api/conversion-api/conversion-tables.md#document-file-formats) format.
 - Removed the deprecated `document.permissions.changeHistory` parameter.
 - Removed the deprecated `document.permissions.rename` parameter.
