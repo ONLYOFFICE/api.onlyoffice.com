@@ -1114,6 +1114,27 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onStartFilling
+
+The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
+
+**Example**:
+
+``` ts
+function onStartFilling() {
+  console.log("The PDF form is ready for filling.");
+}
+
+const config = {
+  // ...
+  events: {
+    onStartFilling,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onSubmit
 
 The function called when the force saving request of the `3` [forcesavetype](../callback-handler.md#forcesavetype) is successfully performed, i.e. when the *Complete & Submit* button is clicked and the form is submitted.

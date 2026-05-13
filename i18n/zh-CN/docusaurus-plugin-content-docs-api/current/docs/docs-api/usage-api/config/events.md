@@ -1114,6 +1114,27 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onStartFilling
+
+调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
+
+**Example**:
+
+``` ts
+function onStartFilling() {
+  console.log("The PDF form is ready for filling.");
+}
+
+const config = {
+  // ...
+  events: {
+    onStartFilling,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onSubmit
 
 `3` [forcesavetype](../callback-handler.md#forcesavetype) 的强制保存请求成功执行时调用的函数，即点击*完成并提交*按钮并提交表单时调用的函数。

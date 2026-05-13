@@ -3137,10 +3137,10 @@ interface EventsNormal extends EventsBase {
      */
     onRequestFillingStatus?: () => void;
 
-    // TODO: Not in the documentation
     /**
-     * The function called when the user can start filling the PDF form.
+     * The function called when the PDF form is ready for filling, i.e. after the {@link DocEditor.startFilling startFilling} method is called and the form preparation is complete.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onstartfilling
      */
     onStartFilling?: () => void;
 }

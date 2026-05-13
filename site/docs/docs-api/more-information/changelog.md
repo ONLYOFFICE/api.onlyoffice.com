@@ -36,6 +36,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [events.onUserActionRequired](../usage-api/config/events.md#onuseractionrequired) event.
 - Added the [refreshFile](../usage-api/methods.md#refreshfile) method.
 - Added the [events.onRequestRefreshFile](../usage-api/config/events.md#onrequestrefreshfile) event.
+- Added the [events.onStartFilling](../usage-api/config/events.md#onstartfilling) event.
 - The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../additional-api/command-service/drop.md) command.
 - The [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) parameter is now available for the viewer.
