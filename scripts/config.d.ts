@@ -1,7 +1,7 @@
 // Types
 
 /** Defines the document type to open. */
-type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
+export type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
 
 /**
  * The platform type used to access the document.
@@ -9,10 +9,10 @@ type DocumentType = "word" | "cell" | "slide" | "pdf" | "diagram"
  * - `mobile` - optimized to access the document from a tablet or a smartphone.
  * - `embedded` - specifically formed to be easily embedded into a web page.
  */
-type PlatformType = "desktop" | "mobile" | "embedded"
+export type PlatformType = "desktop" | "mobile" | "embedded"
 
 /** Supported file types for document files. */
-type WordFileType =
+export type WordFileType =
     | "doc"
     | "docm"
     | "docx"
@@ -42,7 +42,7 @@ type WordFileType =
     | "xml"
 
 /** Supported file types for spreadsheet files. */
-type CellFileType =
+export type CellFileType =
     | "csv"
     | "et"
     | "ett"
@@ -61,7 +61,7 @@ type CellFileType =
     | "xml"
 
 /** Supported file types for presentation files. */
-type SlideFileType =
+export type SlideFileType =
     | "dps"
     | "dpt"
     | "fodp"
@@ -81,14 +81,14 @@ type SlideFileType =
     | "sxi"
 
 /** Supported file types for portable document format files. */
-type PdfFileType =
+export type PdfFileType =
     | "djvu"
     | "oxps"
     | "pdf"
     | "xps"
 
 /** Supported file types for diagram files. */
-type DiagramFileType =
+export type DiagramFileType =
     | "vsdm"
     | "vsdx"
     | "vssm"
@@ -97,10 +97,10 @@ type DiagramFileType =
     | "vstx"
 
 /** All supported file types. */
-type FileType = WordFileType | CellFileType | SlideFileType | PdfFileType | DiagramFileType
+export type FileType = WordFileType | CellFileType | SlideFileType | PdfFileType | DiagramFileType
 
 /** Supported editor interface language codes. */
-type Lang =
+export type Lang =
     | "ar"
     | "az"
     | "be"
@@ -149,7 +149,7 @@ type Lang =
     | "zh-TW"
 
 /** Supported regional setting codes for currency, date, and time formatting. */
-type Region =
+export type Region =
     | "ar-EG"
     | "ar-SA"
     | "az-Latn-AZ"
@@ -194,7 +194,7 @@ type Region =
     | "zh-TW"
 
 /** Available editor theme identifiers. */
-type EditorTheme =
+export type EditorTheme =
     "theme-light"
     | "theme-classic-light"
     | "theme-dark"
@@ -205,7 +205,7 @@ type EditorTheme =
 // Event parameter interfaces
 
 /** Event data for the `onDocumentStateChange` event. */
-interface DocumentStateChangeEvent {
+export interface DocumentStateChangeEvent {
     /**
      * `true` — the current user is editing the document.
      * `false` — the current user's changes are sent to the **document editing service.**
@@ -214,7 +214,7 @@ interface DocumentStateChangeEvent {
 };
 
 /** Event data for the `onRequestHistoryData` event. */
-interface RequestHistoryDataEvent {
+export interface RequestHistoryDataEvent {
     /**
      * The document version number.
      */
@@ -222,7 +222,7 @@ interface RequestHistoryDataEvent {
 };
 
 /** Event data for the `onRequestRestore` event. */
-interface RequestRestoreEvent {
+export interface RequestRestoreEvent {
     data?: {
         /**
          * The document version number.
@@ -240,7 +240,7 @@ interface RequestRestoreEvent {
 };
 
 /** Event data for the `onError` event. */
-interface ErrorEvent {
+export interface ErrorEvent {
     data?: {
         /**
          * The error code.
@@ -255,7 +255,7 @@ interface ErrorEvent {
 };
 
 /** Event data for the `onWarning` event. */
-interface WarningEvent {
+export interface WarningEvent {
     data?: {
         /**
          * The warning code.
@@ -270,7 +270,7 @@ interface WarningEvent {
 };
 
 /** Event data for the `onInfo` event. */
-interface InfoEvent {
+export interface InfoEvent {
     data?: {
         /**
          * The file opening mode.
@@ -280,7 +280,7 @@ interface InfoEvent {
 };
 
 /** Event data for the `onDownloadAs` event. */
-interface DownloadAsEvent {
+export interface DownloadAsEvent {
     data?: {
         /**
          * The file type of the downloaded document.
@@ -294,7 +294,7 @@ interface DownloadAsEvent {
 };
 
 /** Event data for the `onRequestSaveAs` event. */
-interface RequestSaveAsEvent {
+export interface RequestSaveAsEvent {
     data?: {
         /**
          * The type of the document.
@@ -312,7 +312,7 @@ interface RequestSaveAsEvent {
 };
 
 /** Event data for the `onRequestRename` event. */
-interface RequestRenameEvent {
+export interface RequestRenameEvent {
     /**
      * The new document title.
      */
@@ -320,7 +320,7 @@ interface RequestRenameEvent {
 };
 
 /** Event data for the `onMetaChange` event. */
-interface MetaChangeEvent {
+export interface MetaChangeEvent {
     data?: {
         /**
          * The document title.
@@ -334,7 +334,7 @@ interface MetaChangeEvent {
 };
 
 /** Event data for the `onRequestUsers` event. */
-interface RequestUsersEvent {
+export interface RequestUsersEvent {
     data?: {
         /**
          * The operation type.
@@ -348,7 +348,7 @@ interface RequestUsersEvent {
 };
 
 /** Event data for the `onRequestSendNotify` event. */
-interface RequestSendNotifyEvent {
+export interface RequestSendNotifyEvent {
     data?: {
         /**
          * The comment data. Must be used in the configuration as the value for the `editorConfig.actionLink` parameter.
@@ -366,7 +366,7 @@ interface RequestSendNotifyEvent {
 };
 
 /** Event data for the `onMakeActionLink` event. */
-interface MakeActionLinkEvent {
+export interface MakeActionLinkEvent {
     data?: {
         /**
          * The Action link data.
@@ -376,7 +376,7 @@ interface MakeActionLinkEvent {
 };
 
 /** Event data for the `onRequestInsertImage` event. */
-interface RequestInsertImageEvent {
+export interface RequestInsertImageEvent {
     data?: {
         /**
          * The type of image insertion.
@@ -386,7 +386,7 @@ interface RequestInsertImageEvent {
 };
 
 /** Event data for the `onRequestReferenceData` event. */
-interface RequestReferenceDataEvent {
+export interface RequestReferenceDataEvent {
     data?: {
         /**
          * The URL of the external file.
@@ -404,7 +404,7 @@ interface RequestReferenceDataEvent {
 };
 
 /** Event data for the `onRequestOpen` event. */
-interface RequestOpenEvent {
+export interface RequestOpenEvent {
     data?: {
         /**
          * The file path.
@@ -422,7 +422,7 @@ interface RequestOpenEvent {
 };
 
 /** Event data for the `onRequestSelectDocument` event. */
-interface RequestSelectDocumentEvent {
+export interface RequestSelectDocumentEvent {
     data?: {
         /**
          * The type of document selection.
@@ -432,7 +432,7 @@ interface RequestSelectDocumentEvent {
 };
 
 /** Event data for the `onRequestSelectSpreadsheet` event. */
-interface RequestSelectSpreadsheetEvent {
+export interface RequestSelectSpreadsheetEvent {
     data?: {
         /**
          * The type of spreadsheet selection.
@@ -442,7 +442,7 @@ interface RequestSelectSpreadsheetEvent {
 };
 
 /** Event data for the `onRequestReferenceSource` event. */
-interface RequestReferenceSourceEvent {
+export interface RequestReferenceSourceEvent {
     data?: {
         /**
          * The unique file data from the source file.
@@ -456,7 +456,7 @@ interface RequestReferenceSourceEvent {
 };
 
 /** Event data for the `onRequestFillingStatus` event. */
-interface RequestFillingStatusEvent {
+export interface RequestFillingStatusEvent {
     /**
      * The role name for which the filling status is requested.
      */
@@ -464,7 +464,7 @@ interface RequestFillingStatusEvent {
 };
 
 /** Event data for the `onSaveDocument` event. */
-interface SaveDocumentEvent {
+export interface SaveDocumentEvent {
     /**
      * The document file data in binary format.
      */
@@ -472,7 +472,7 @@ interface SaveDocumentEvent {
 };
 
 /** Event data for the `onRequestStartFilling` event. */
-interface RequestStartFillingEvent {
+export interface RequestStartFillingEvent {
     /**
      * The list of roles available in the PDF form.
      */
@@ -489,7 +489,7 @@ interface RequestStartFillingEvent {
 };
 
 /** Defines a sharing settings entry for the document info. */
-interface SharingSetting {
+export interface SharingSetting {
     /**
      * The name of the user the document will be shared with.
      * @example "John Smith"
@@ -514,7 +514,7 @@ interface SharingSetting {
 }
 
 /** The permissions section defines the document permission parameters. */
-interface DocumentPermissions {
+export interface DocumentPermissions {
     /**
      * Defines if the document can be edited or only viewed. In case the editing permission is set to `true` the **File** menu will contain the **Edit Document** menu option; please note that if the editing permission is set to `false` the document will be opened in viewer and you will not be able to switch it to the editor even if the `mode` parameter is set to `edit`.
      *
@@ -673,7 +673,7 @@ interface DocumentPermissions {
 /**
  * Defines a document entry in the **Open Recent...** menu option.
  */
-interface RecentDocument {
+export interface RecentDocument {
     /**
      * The document title that will be displayed in the **Open Recent...** menu option.
      *
@@ -702,7 +702,7 @@ interface RecentDocument {
 /**
  * Defines a template entry in the **Create New...** menu option.
  */
-interface DocumentTemplate {
+export interface DocumentTemplate {
     /**
      * The template title that will be displayed in the **Create New...** menu option.
      *
@@ -729,7 +729,7 @@ interface DocumentTemplate {
 }
 
 /** Defines an object that uniquely identifies a file in the integrator's system. */
-interface ReferenceData {
+export interface ReferenceData {
     /**
      * The unique document identifier used by the service to get a link to the file.
      *
@@ -750,7 +750,7 @@ interface ReferenceData {
 };
 
 /** Defines the action link data for scrolling to a bookmark or comment in the document. */
-interface ActionLink {
+export interface ActionLink {
     /**
      * The action object that defines what to scroll to in the document.
      *
@@ -774,7 +774,7 @@ interface ActionLink {
 };
 
 /** Base document parameters shared by all editor types. */
-interface DocumentBase {
+export interface DocumentBase {
     /**
      * Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded. The length is limited to 128 characters. If not specified or empty, defaults to `"Unnamed.{fileType}"` (e.g. `"Unnamed.docx"`).
      * @forType `desktop` | `mobile` | `embedded`
@@ -817,7 +817,7 @@ interface DocumentBase {
 }
 
 /** Document parameters for desktop and mobile editor types. */
-interface DocumentNormal extends DocumentBase {
+export interface DocumentNormal extends DocumentBase {
     // TODO: Not in the documentation
     /**
      * @forType `desktop` | `mobile`
@@ -891,10 +891,10 @@ interface DocumentNormal extends DocumentBase {
 }
 
 /** Document parameters for the embedded editor type. */
-interface DocumentEmbedded extends DocumentBase {}
+export interface DocumentEmbedded extends DocumentBase {}
 
 /** Base editor config parameters shared by all editor types. */
-interface EditorConfigBase {
+export interface EditorConfigBase {
     /**
      * Defines the editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
      *
@@ -1016,7 +1016,7 @@ interface EditorConfigBase {
 }
 
 /** Editor config parameters for desktop and mobile editor types. */
-interface EditorConfigNormal extends EditorConfigBase {
+export interface EditorConfigNormal extends EditorConfigBase {
     /**
      * Specifies the data received from the **document editing service** using the `onMakeActionLink` event or the `onRequestSendNotify` event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
      * @forType `desktop` | `mobile`
@@ -2435,7 +2435,7 @@ interface EditorConfigNormal extends EditorConfigBase {
 }
 
 /** Editor config parameters for the embedded editor type. */
-interface EditorConfigEmbedded extends EditorConfigBase {
+export interface EditorConfigEmbedded extends EditorConfigBase {
     /**
      * The embedded section defines the embedded mode parameters.
      *
@@ -2496,7 +2496,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
 }
 
 /** Base event callbacks shared by all editor types. */
-interface EventsBase {
+export interface EventsBase {
     /**
      * The function called when the application is loaded into the browser.
      *
@@ -2541,7 +2541,7 @@ interface EventsBase {
 }
 
 /** Event callbacks for desktop and mobile editor types. */
-interface EventsNormal extends EventsBase {
+export interface EventsNormal extends EventsBase {
     /**
      * The function called when the document is modified.
      *
@@ -3179,10 +3179,10 @@ interface EventsNormal extends EventsBase {
 }
 
 /** Event callbacks for the embedded editor type. */
-interface EventsEmbedded extends EventsBase {}
+export interface EventsEmbedded extends EventsBase {}
 
 /** Base configuration shared by all editor types. */
-interface BaseConfig {
+export interface BaseConfig {
     /**
      * Defines the platform type used to access the document.
      * @default "desktop"
@@ -3345,7 +3345,7 @@ export interface Config extends ConfigNormal {
 // https://api.onlyoffice.com/docs/docs-api/usage-api/methods/
 
 /** Parameters for the `insertImage` method. */
-interface InsertImageOptions {
+export interface InsertImageOptions {
     /**
      * Defines a type of image insertion from the event.
      *
@@ -3389,7 +3389,7 @@ interface InsertImageOptions {
 }
 
 /** Parameters for the `refreshHistory` method. */
-interface RefreshHistoryOptions {
+export interface RefreshHistoryOptions {
     /**
      * Defines the current document version number.
      */
@@ -3440,7 +3440,7 @@ interface RefreshHistoryOptions {
 }
 
 /** Parameters for the `setHistoryData` method. */
-interface SetHistoryDataOptions {
+export interface SetHistoryDataOptions {
     /**
      * Defines the URL address of the file with the document changes data.
      */
@@ -3487,7 +3487,7 @@ interface SetHistoryDataOptions {
 }
 
 /** Parameters for the `setReferenceData` and `setReferenceSource` methods. */
-interface SetReferenceDataOptions {
+export interface SetReferenceDataOptions {
     /**
      * Defines the error message text.
      */
@@ -3525,7 +3525,7 @@ interface SetReferenceDataOptions {
 }
 
 /** Parameters for the `setRequestedDocument` method. */
-interface SetRequestedDocumentOptions {
+export interface SetRequestedDocumentOptions {
     /**
      * Defines a type of document selection from the event.
      *
@@ -3550,7 +3550,7 @@ interface SetRequestedDocumentOptions {
 }
 
 /** Parameters for the `setRequestedSpreadsheet` method. */
-interface SetRequestedSpreadsheetOptions {
+export interface SetRequestedSpreadsheetOptions {
     /**
      * Defines a type of spreadsheet selection from the event.
      */
@@ -3573,7 +3573,7 @@ interface SetRequestedSpreadsheetOptions {
 }
 
 /** Parameters for the `setUsers` method. */
-interface SetUsersOptions {
+export interface SetUsersOptions {
     /**
      * Defines the operation type from the `onRequestUsers` event.
      *
@@ -3593,7 +3593,7 @@ interface SetUsersOptions {
 }
 
 /** Parameters for the `setSharingSettings` method. */
-interface SetSharingSettingsOptions {
+export interface SetSharingSettingsOptions {
     /**
      * Defines the settings which allow sharing the document with other users.
      */
