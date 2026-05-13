@@ -5,9 +5,11 @@ sidebar_label: Standard branding
 
 # 定制 - 标准品牌
 
-自定义部分允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改是否出现附加按钮、链接、更改徽标和编辑器所有者详细信息。
+customization 部分定义编辑器自定义参数。
 
-本页面上的大多数自定义参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)以了解可用的其他自定义选项。
+:::info
+本页面上的大多数参数适用于所有 ONLYOFFICE 文档版本，包括开源社区版。部分参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)，并已相应标注。如果您拥有扩展的白标许可证，请访问[白标页面](customization-white-label.md)了解其他自定义选项。
+:::
 
 :::note
 只有以下参数可用于移动编辑器：[close](#close)、[feedback](#feedback)、[goback](#goback)、[help](#help)、[logo](#logo)、[宏模式](#macrosmode)、[mobile](#mobile)、[toolbarHideFileName](#toolbarhidefilename)、[uiTheme](#uitheme)。
@@ -99,12 +101,10 @@ sidebar_label: Standard branding
 
 **类型：** `string`
 
-定义编辑器标题中按钮的工具提示文本或移动编辑器中的菜单项文本以及 Web 编辑器的 **File** 菜单中的按钮的工具提示文本。
+定义编辑器标题中关闭按钮的工具提示文本或移动编辑器中的菜单项文本以及 Web 编辑器的 **File** 菜单中的按钮的工具提示文本。
 
 :::note
 仅当设置了 [onRequestClose](../../events.md#onrequestclose) 事件时，该参数才可用。如果未声明该事件且未指定 `close` 参数，则不会显示关闭按钮。
-
-请注意，此参数也适用于移动编辑器。
 :::
 
 **示例**: `"关闭文件"`
@@ -137,7 +137,7 @@ sidebar_label: Standard branding
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义附加操作按钮的显示位置。如果设置为 `false`，按钮显示在编辑器窗口标题的上部靠近徽标处。如果设置为 `true`，按钮显示在工具栏中，使标题更紧凑。
+定义附加操作按钮是显示在编辑器窗口标题的上部靠近徽标处（`false`）还是在工具栏中（`true`），使标题更紧凑。
 
 **示例**: `false`
 
@@ -147,7 +147,7 @@ sidebar_label: Standard branding
 
 **类型：** `boolean` | **默认值：** `false`
 
-定义顶部工具栏类型。如果设置为 `false`，显示完整工具栏。如果设置为 `true`，显示紧凑工具栏。从 8.3 版开始，此设置也适用于查看器。`view` 模式的默认值为 `true`。
+定义顶部工具栏类型。如果设置为 `false`，显示完整工具栏。如果设置为 `true`，显示紧凑工具栏。`view` 模式的默认值为 `true`。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.compactToolbar` 参数发送的任何值。
@@ -171,7 +171,7 @@ sidebar_label: Standard branding
 
 包含将在编辑器**关于**部分中显示的信息，并对所有编辑器用户可见。
 
-:::note
+:::info
 此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 
@@ -210,7 +210,11 @@ sidebar_label: Standard branding
 
 **类型：** `string`
 
-图片 logo 的路径（这个文件没有特别推荐，但是如果是透明背景的 `.png` 格式会更好）。图片必须具有以下尺寸：432x70.
+图片 logo 的路径。图片必须具有以下尺寸：432x70.
+
+:::note
+这个文件没有特别推荐，但是如果是透明背景的 `.png` 格式会更好。
+:::
 
 **示例**: `"https://example.com/logo-big.png"`
 
@@ -218,7 +222,11 @@ sidebar_label: Standard branding
 
 **类型：** `string`
 
-深色主题图像徽标的路径（此文件没有特别建议，但如果是透明背景的 `.png` 格式会更好）。图片必须具有以下尺寸：432x70.
+深色主题图像徽标的路径。图片必须具有以下尺寸：432x70.
+
+:::note
+此文件没有特别建议，但如果是透明背景的 `.png` 格式会更好。
+:::
 
 **示例**: `"https://example.com/dark-logo-big.png"`
 
@@ -296,7 +304,7 @@ sidebar_label: Standard branding
 
 定义是否在 pdf 表单中禁用角色设置。如果该参数等于 `false`，则隐藏角色管理器，并禁用代表特定角色查看表单。在这种情况下，**表单**选项卡上的**管理角色**和**查看表单**按钮以及右侧面板中用于设置字段角色的下拉列表将不会显示。
 
-:::note
+:::info
 此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
 :::
 
@@ -378,11 +386,8 @@ sidebar_label: Standard branding
 
 **类型：** `boolean | object` | **默认值：** `false`
 
-定义**反馈和支持**菜单按钮的设置。可以是布尔值或对象。如果设置为 `true`，按钮显示。如果设置为 `false`，按钮隐藏。如果设置为对象，使用 `url` 和 `visible` 属性来配置按钮。
+定义**反馈和支持**菜单按钮的设置。如果设置为 `false`，按钮隐藏。
 
-:::note
-此参数也适用于移动编辑器。
-:::
 
 **示例**:
 
@@ -405,7 +410,7 @@ sidebar_label: Standard branding
 
 ### feedback.visible
 
-**类型：** `boolean`
+**类型：** `boolean` | **默认值：** `false`
 
 显示或隐藏**反馈和支持**菜单按钮。
 
@@ -437,9 +442,7 @@ sidebar_label: Standard branding
 
 定义**打开文件位置**菜单按钮和右上角按钮的设置。
 
-:::note
-请注意，此参数也适用于移动编辑器。
-:::
+
 
 **示例**:
 
@@ -495,9 +498,7 @@ sidebar_label: Standard branding
 
 定义**帮助**菜单按钮是显示还是隐藏。
 
-:::note
-请注意，此参数也适用于移动编辑器。
-:::
+
 
 **示例**: `true`
 
@@ -553,10 +554,8 @@ sidebar_label: Standard branding
 
 更改编辑器标题左上角的图像文件。推荐的图像高度为 20 像素。
 
-:::note
+:::info
 此参数仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
-
-请注意，此参数也适用于移动编辑器。
 :::
 
 **示例**:
@@ -577,7 +576,7 @@ sidebar_label: Standard branding
 
 **类型：** `string`
 
-用于在通用工作模式（即所有编辑器的查看和编辑模式）或嵌入模式（请参阅[配置](../../config.md#type)部分以了解如何定义**嵌入**文档类型）中显示的图像文件的路径。图片必须具有以下尺寸：300x20.
+用于在通用工作模式（所有编辑器的查看和编辑模式）或嵌入模式中显示的图像文件的路径。图片必须具有以下尺寸：300x20.
 
 **示例**: `"https://example.com/logo.png"`
 
@@ -604,7 +603,7 @@ sidebar_label: Standard branding
 用于以嵌入模式显示的图像文件的路径（请参阅[配置](../../config.md#type)部分以了解如何定义**嵌入**文档类型）。图片必须具有以下尺寸：248x40。
 
 :::danger[Deprecated]
-自 7.0 版起已弃用，请改用*图像*字段。
+自 7.0 版起已弃用，请改用 [logo.image](#logoimage) 字段。
 :::
 
 **示例**: `"https://example.com/logo_em.png"`
@@ -642,14 +641,12 @@ sidebar_label: Standard branding
 
 定义启用自动开始时的宏运行模式。可以取以下值：
 
-- `disable` - 不自动运行所有宏；
-- `enable` - 自动运行所有宏；
-- `warn` - 对运行宏发出警告并请求运行它们的权限。
+- `disable` - 不运行宏；
+- `warn` - 警告宏并请求运行它们的权限；
+- `enable` - 自动运行所有宏。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.macrosMode` 参数发送的任何值。
-
-请注意，此参数也适用于移动编辑器。
 :::
 
 **示例**: `"warn"`
@@ -674,9 +671,6 @@ sidebar_label: Standard branding
 
 定义移动文档编辑器设置。
 
-:::note
-此参数仅适用于移动编辑器。
-:::
 
 **示例**:
 
@@ -718,9 +712,6 @@ sidebar_label: Standard branding
 
 定义移动文档编辑器在启动时是否以查看/编辑模式打开。
 
-:::note
-请注意，此参数仅适用于移动编辑器。
-:::
 :::danger[Deprecated]
 自版本 8.2 起已弃用。请改用 [mobile](#mobile) 参数。
 :::
@@ -842,7 +833,7 @@ sidebar_label: Standard branding
 
 **类型：** `boolean` | **默认值：** `true`
 
-从 8.3 版本开始，定义在加载电子表格编辑器时是否自动显示或隐藏水平滚动条。
+定义在加载电子表格编辑器时是否自动显示或隐藏水平滚动条。
 
 **示例**: `true`
 
@@ -862,7 +853,7 @@ sidebar_label: Standard branding
 
 **类型：** `boolean` | **默认值：** `true`
 
-从 8.3 版本开始，定义在加载电子表格编辑器时是否自动显示或隐藏垂直滚动条。
+定义在加载电子表格编辑器时是否自动显示或隐藏垂直滚动条。
 
 **示例**: `true` 
 
@@ -870,7 +861,7 @@ sidebar_label: Standard branding
 
 **类型：** `string`
 
-从版本 8.3 开始，定义演示文稿编辑器中幻灯片的背景颜色。可以以 HEX、RGB 或 RGBA 格式表示。例如，`#ff0000`、`rgb(255, 0, 0)`、`rgba(255, 0, 0, 0.5)`。
+定义演示文稿编辑器中幻灯片的背景颜色。可以以 HEX、RGB 或 RGBA 格式表示。例如，`#ff0000`、`rgb(255, 0, 0)`、`rgba(255, 0, 0, 0.5)`。
 
 **示例**: `"#000000"`
 
@@ -893,7 +884,7 @@ sidebar_label: Standard branding
 
 **类型：** `object | boolean` | **默认值：** `true`
 
-从版本 8.3 开始，定义**完成并提交**按钮设置。可以是布尔值或对象。如果设置为 `true`，按钮显示。如果设置为 `false`，按钮隐藏。如果设置为对象，使用 `visible` 和 `resultMessage` 属性来配置按钮。该按钮仅适用于 `pdf` 格式。
+定义**完成并提交**按钮设置。如果设置为 `false`，按钮隐藏。该按钮仅适用于 `pdf` 格式。
 
 **示例**:
 
@@ -945,9 +936,6 @@ sidebar_label: Standard branding
 当 [compactHeader](#compactheader) 参数设置为 `true` 时使用此设置。
 :::
 
-:::note
-从 9.0.3 版本开始，该参数适用于移动端编辑器。
-:::
 
 **示例**: `false`
 
@@ -994,9 +982,7 @@ sidebar_label: Standard branding
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.uiTheme` 参数发送的任何值。
 :::
 
-:::note
-从 9.1 版本开始，该参数也适用于移动端编辑器。支持的主题：`theme-light`、`theme-dark`、`default-light`、`default-dark`。
-:::
+
 
 **示例**: `"theme-dark"`
 
@@ -1020,7 +1006,7 @@ sidebar_label: Standard branding
 
 **类型：** `string`
 
-从版本 8.3 开始，定义文档编辑器中默认标题样式的十六进制颜色。
+定义文档编辑器中默认标题样式的十六进制颜色。
 
 **示例**: `"#00ff00"`
 

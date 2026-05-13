@@ -1093,7 +1093,7 @@ interface EditorConfigNormal extends EditorConfigBase {
          * The recommended image height is **20 pixels**.
          *
          * @note This parameter is available for editing only for **ONLYOFFICE Docs Developer**.
-         * @note This parameter is also available for the **mobile editors**.
+
          *
          * @forType `desktop` | `mobile`
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logo
@@ -1101,7 +1101,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         logo?: {
             /**
              * Path to the image file used to show in the common work mode (view and edit modes for all editors) or in the embedded mode.
-             * The image must have the following size: **172x40**.
+             * The image must have the following size: 300x20.
              *
              * @example "https://example.com/logo.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimage
@@ -1110,7 +1110,7 @@ interface EditorConfigNormal extends EditorConfigBase {
 
             /**
              * Path to the image file used for the dark header (for example, in a dark theme or in a theme with a colored header).
-             * The image must have the following size: **172x40**.
+             * The image must have the following size: 300x20.
              *
              * @example "https://example.com/dark-logo.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimagedark
@@ -1118,8 +1118,8 @@ interface EditorConfigNormal extends EditorConfigBase {
             imageDark?: string;
 
             /**
-             * Path to the image file used for the **light header** (for example, in the Gray theme).
-             * The image must have the following size: **172x40**.
+             * Path to the image file used for the light header (for example, in the Gray theme).
+             * The image must have the following size: 300x20.
              *
              * @example "https://example.com/light-logo.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimagelight
@@ -1127,19 +1127,16 @@ interface EditorConfigNormal extends EditorConfigBase {
             imageLight?: string;
 
             /**
-             * Path to the image file used to show in the **embedded mode**.
-             * The image must have the following size: **248x40**.
+             * Path to the image file used to show in the embedded mode. The image must have the following size: 248x40.
              *
-             * @deprecated Starting from version 7.0, use the `logo.image` field instead.
+             * @deprecated Starting from version 7.0, please use the `logo.image` field instead.
              * @example "https://example.com/logo_em.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logoimageembedded
              */
             imageEmbedded?: string;
 
             /**
-             * The absolute URL which will be used when someone clicks the logo image.
-             * Can be used to go to your website, etc.
-             * Leave as an empty string or `null` to make the logo not clickable.
+             * The absolute URL to open when the logo image is clicked. Leave as an empty string or `null` to make the logo not clickable.
              *
              * @example "https://example.com"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#logourl
@@ -1156,7 +1153,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         };
 
         /**
-         * Contains the information which will be displayed in the editor **About** section and is visible to all editor users.
+         * Contains the information which will be displayed in the editor **About** section and visible to all the editor users.
          *
          * @note This parameter is available for editing only for **ONLYOFFICE Docs Developer**.
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#customer
@@ -1211,9 +1208,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             info?: string;
 
             /**
-             * The path to the image logo.
-             * - No special recommendations for this file, but it is recommended to use **.png** format with a transparent background.
-             * - The image must have the following size: **432x70**.
+             * The path to the image logo. The image must have the following size: 432x70.
+             *
+             * @note There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
              *
              * @example "https://example.com/logo-big.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#customerlogo
@@ -1221,9 +1218,9 @@ interface EditorConfigNormal extends EditorConfigBase {
             logo?: string;
 
             /**
-             * The path to the image logo for the **dark theme**.
-             * - No special recommendations for this file, but it is recommended to use **.png** format with a transparent background.
-             * - The image must have the following size: **432x70**.
+             * The path to the image logo for the dark theme. The image must have the following size: 432x70.
+             *
+             * @note There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
              *
              * @example "https://example.com/dark-logo-big.png"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#customerlogodark
@@ -1240,10 +1237,9 @@ interface EditorConfigNormal extends EditorConfigBase {
         about?: boolean;
 
         /**
-         * Defines settings for the **Feedback & Support** menu button.
-         * - Can be either **boolean** (simply displays or hides the button) or **object** (to configure settings).
+         * Defines settings for the **Feedback & Support** menu button. If set to `false`, the button is hidden.
          *
-         * @note This parameter is also available for the **mobile editors**.
+
          * @default false
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#feedback
          */
@@ -1266,14 +1262,14 @@ interface EditorConfigNormal extends EditorConfigBase {
         } | boolean;
 
         /**
-         * Defines settings for the **Open file location** menu button and the upper right corner button.
+         * Defines settings for the **Open file location** menu button and upper right corner button.
          *
-         * @note This parameter is also available for the **mobile editors**.
+
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#goback
          */
         goback?: {
             /**
-             * Opens the website in a new browser tab/window (if `true`) or the current tab (if `false`) when the **Open file location** button is clicked.
+             * Opens the website in the new browser tab/window (if the value is set to `true`) or the current tab (if the value is set to `false`) when the **Open file location** button is clicked.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#gobackblank
@@ -1289,7 +1285,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             requestClose?: boolean;
 
             /**
-             * The text which will be displayed for the **Open file location** menu button and upper right corner button (i.e. instead of Go to Documents).
+             * The text which will be displayed for the **Open file location** menu button and upper right corner button (i.e. instead of **Go to Documents**).
              *
              * @example "Open file location"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#gobacktext
@@ -1323,7 +1319,7 @@ interface EditorConfigNormal extends EditorConfigBase {
              * Defines the tooltip text for the cross button in the editor header or the menu item text in the mobile editors and in the **File** menu of the web editors.
              *
              * @note It will only be available if the `onRequestClose` event is set. If the event is not declared and the `close` parameter is not specified, the cross button will not be displayed.
-             * @note This parameter is also available for the mobile editors.
+    
              *
              * @example "Close file"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#closetext
@@ -1375,7 +1371,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             hideReviewDisplay?: boolean;
 
             /**
-             * Defines the review display mode: show reviews in tooltips by hovering the changes (`true`) or in balloons by clicking the changes (`false`).
+             * Defines the review display mode. If set to `true`, reviews are shown in tooltips by hovering the changes. If set to `false`, reviews are shown in balloons by clicking the changes.
              *
              * @default false
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#reviewhovermode
@@ -1383,14 +1379,12 @@ interface EditorConfigNormal extends EditorConfigBase {
             hoverMode?: boolean;
 
             /**
-             * Defines the review editing mode which will be used when the document is opened for viewing.
-             * It will only be available for the document editor if mode is set to **view**. Can take the following values:
+             * Defines the review display mode for the document editor. The default value is `original` for viewer and `markup` for editor. This setting works in any mode, but editing is only possible when `markup` or `simple` is selected. If `original` or `final` is selected, the editor automatically switches to view-only mode.
              *
-             * @cases
-             * - `markup` → the document is displayed with proposed changes highlighted.
-             * - `simple` → the document is displayed with proposed changes highlighted, but the balloons are turned off.
-             * - `final` → the document is displayed with all the proposed changes applied.
-             * - `original` → the original document is displayed without the proposed changes.
+             * - `markup` — the document is displayed with proposed changes highlighted.
+             * - `simple` — the document is displayed with proposed changes highlighted, but the balloons are turned off.
+             * - `final` — the document is displayed with all the proposed changes applied.
+             * - `original` — the original document is displayed without the proposed changes.
              *
              * @default "original"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#reviewreviewdisplay
@@ -1904,12 +1898,11 @@ interface EditorConfigNormal extends EditorConfigBase {
         zoom?: number;
 
         /**
-         * Defines if the **top toolbar type** displayed is full (`false`) or compact (`true`).
-         * Starting from version 8.3, this setting is also available for the viewer. The default value for the view mode is `true`.
+         * Defines the top toolbar type. If set to `false`, the full toolbar is displayed. If set to `true`, the compact toolbar is displayed. The default value for the `view` mode is `true`.
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.compactToolbar` parameter.
          *
-         * @defaultValue Normal mode — false. View mode — true.
+         * @default false
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#compacttoolbar
          */
         compactToolbar?: boolean;
@@ -1983,7 +1976,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         forcesave?: boolean;
 
         /**
-         * Defines if the user can **edit and delete only his comments**.
+         * Defines if the user can edit and delete only their comments.
          *
          * @deprecated Starting from version 6.3, please use the `document.permissions.editCommentAuthorOnly` and `document.permissions.deleteCommentAuthorOnly` fields instead.
          *
@@ -2005,7 +1998,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         /**
          * Defines if the **Help menu button** is displayed or hidden.
          *
-         * @note This parameter is also available for the mobile editors.
+
          *
          * @default true
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#help
@@ -2033,9 +2026,8 @@ interface EditorConfigNormal extends EditorConfigBase {
         toolbarNoTabs?: boolean;
 
         /**
-         * Defines if the document title is visible on the top toolbar (`false`) or hidden (`true`).
+         * Defines if the document title is hidden on the top toolbar. If set to `false`, the title is visible. If set to `true`, the title is hidden.
          * @note This setting is used when the `compactHeader` parameter is set to `true`.
-         * @note Starting from version 9.0.3, this parameter is also available for the mobile editors.
          *
          * @default false
          */
@@ -2054,8 +2046,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         reviewDisplay?: "markup" | "simple" | "final" | "original";
 
         /**
-         * Defines if the **spell checker** is automatically switched on or off when the editor is loaded.
-         * Spell checker will only be available for the **document editor** and the **presentation editor**.
+         * Defines if the spell checker is automatically switched on or off when the editor is loaded. Spell checker will only be available for the document editor and the presentation editor.
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.spellcheck` parameter.
          * @deprecated Starting from version 7.1, please use the `features.spellcheck` parameter instead.
@@ -2126,7 +2117,6 @@ interface EditorConfigNormal extends EditorConfigBase {
          * - `enable` - run all macros automatically.
          *
          * @note In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.macrosMode` parameter.
-         * This parameter is also available for the mobile editors.
          *
          * @default "warn"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#macrosmode
@@ -2177,8 +2167,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         uiTheme?: EditorTheme | "default-dark" | "default-light";
 
         /**
-         * Defines the **mode of embedding editors into the web page**.
-         * - The `embed` value disables scrolling to the editor frame when it is loaded, as the focus is not captured.
+         * Defines the mode of embedding editors into the web page. The `embed` value disables scrolling to the editor frame when it is loaded as the focus is not captured.
          *
          * @example "embed"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#integrationmode
@@ -2186,7 +2175,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         integrationMode?: string;
 
         /**
-         * Defines the **pointer mode** (`select` or `hand`) when the presentation editor is loaded in the viewer.
+         * Defines the pointer mode when the presentation editor is loaded in the viewer. If set to `select`, the selection mode is used. If set to `hand`, the hand mode is used.
          *
          * @default "select"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#pointermode
@@ -2194,14 +2183,14 @@ interface EditorConfigNormal extends EditorConfigBase {
         pointerMode?: "select" | "hand";
 
         /**
-         * Defines the **mobile document editor settings**.
+         * Defines the mobile document editor settings.
          *
-         * @note This parameter is also available for the mobile editors.
+
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#mobile
          */
         mobile?: {
             /**
-             * Defines whether the **view mode** is enabled on launch in the mobile document editor.
+             * Defines whether the view mode is enabled on launch in the mobile document editor.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#mobileforceview
@@ -2231,19 +2220,26 @@ interface EditorConfigNormal extends EditorConfigBase {
              */
             disableForceDesktop?: boolean;
         };
+
         /**
-         * Defines the **Complete & Submit** button settings.
-         * Starting from version 8.3.
-         * If this parameter is a boolean value, then it specifies whether the **Complete & Submit** button will be displayed or hidden on the top toolbar.
-         * Button will only be available for the **PDF** format.
+         * Defines if the mobile document editor is opened in the view/edit mode on launch.
+         *
+
+         * @deprecated Starting from version 8.2, please use the `mobile` parameter instead.
+         * @default true
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#mobileforceview
+         */
+        mobileForceView?: boolean;
+
+        /**
+         * Defines the **Complete & Submit** button settings. If set to `false`, the button is hidden. The button will only be available for the `pdf` format.
          *
          * @default true
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#submitform
          */
         submitForm?: {
             /**
-             * Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar.
-             * Button will only be available for the **PDF** format.
+             * Defines whether the **Complete & Submit** button will be displayed or hidden on the top toolbar. The button will only be available for the `pdf` format.
              *
              * @default true
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#submitformvisible
@@ -2255,16 +2251,16 @@ interface EditorConfigNormal extends EditorConfigBase {
              * The following values are available:
              * - `""` - the message will not be displayed;
              * - `null` / `undefined` - the default message will be displayed;
-             * - `"text"` - any text that the user specifies will be displayed.
+             * - `"your text"` - a custom message will be displayed.
              *
-             * @example "text"
+             * @example "Form submitted successfully"
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#submitformresultmessage
              */
-            resultMessage?: "text" | "" | null | undefined;
+            resultMessage?: string | null;
         } | boolean;
 
         /**
-         * Defines if the **Western** (`true`) or **Chinese** (`false`) font size is used in the Chinese (Simplified) UI.
+         * Defines the font size used in the Chinese (Simplified) UI. If set to `true`, the Western font size is used. If set to `false`, the Chinese font size is used.
          *
          * @default false
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#forcewesternfontsize
@@ -2272,9 +2268,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         forceWesternFontSize?: boolean;
 
         /**
-         * Defines the background color for the slide show in the **Presentation Editor**.
-         * Can be represented in the HEX, RGB, or RGBA formats. For example, `#ff0000`, `rgb(255, 0, 0)`, `rgba(255, 0, 0, 0.5)`.
-         * Starting from version 8.3,
+         * Defines the background color for the slide show in the presentation editor. Can be represented in the HEX, RGB, or RGBA formats. For example, `#ff0000`, `rgb(255, 0, 0)`, `rgba(255, 0, 0, 0.5)`.
          *
          * @default "#000000"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#slideplayerbackground
@@ -2283,7 +2277,6 @@ interface EditorConfigNormal extends EditorConfigBase {
 
         /**
          * Defines the HEX color for the default heading styles in the document editor.
-         * Starting from version 8.3
          *
          * @default "#00ff00"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#wordheadingscolor
@@ -2291,8 +2284,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         wordHeadingsColor?: string;
 
         /**
-         * Defines if the **vertical scroll** is automatically displayed or hidden when the **Spreadsheet Editor** is loaded.
-         * Starting from version 8.3
+         * Defines if the vertical scroll is automatically displayed or hidden when the spreadsheet editor is loaded.
          *
          * @default true
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#showverticalscroll
@@ -2300,8 +2292,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         showVerticalScroll?: boolean;
 
         /**
-         * Defines if the **horizontal scroll** is automatically displayed or hidden when the **Spreadsheet Editor** is loaded.
-         * Starting from version 8.3
+         * Defines if the horizontal scroll is automatically displayed or hidden when the spreadsheet editor is loaded.
          *
          * @default true
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#showhorizontalscroll
