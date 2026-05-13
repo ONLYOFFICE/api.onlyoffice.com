@@ -874,6 +874,28 @@ Starting from version 7.1, please use the [features.spellcheck](#featuresspellch
 
 **Example**: `true`
 
+## startFillingForm
+
+**type:** `object`
+
+Defines the *Start filling* button settings in PDF form editing mode.
+
+**Example**:
+
+``` ts
+{
+  text: "Share & collect",
+}
+```
+
+### startFillingForm.text
+
+**type:** `string` | **default:** `"Start filling"`
+
+Defines the caption of the *Start filling* button in PDF form editing mode.
+
+**Example**: `"Share & collect"`
+
 ## submitForm
 
 **type:** `object | boolean` | **default:** `true`

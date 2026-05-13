@@ -2329,11 +2329,15 @@ interface EditorConfigNormal extends EditorConfigBase {
          */
         showHorizontalScroll?: boolean;
 
-        // TODO: Not in the documentation
+        /**
+         * Defines the *Start filling* button settings in PDF form editing mode.
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#startfillingform
+         */
         startFillingForm?: {
             /**
-             * Caption of the start filling button, used for **PDF Forms**
-             * @default "Share & collect"
+             * Defines the caption of the *Start filling* button in PDF form editing mode.
+             * @default "Start filling"
+             * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#startfillingformtext
              */
             text?: string;
         }

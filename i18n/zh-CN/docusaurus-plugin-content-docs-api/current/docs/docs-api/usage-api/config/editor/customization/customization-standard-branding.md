@@ -880,6 +880,28 @@ customization 部分定义编辑器自定义参数。
 
 **示例**: `true`
 
+## startFillingForm
+
+**类型：** `object`
+
+定义 PDF 表单编辑模式下*开始填写*按钮的设置。
+
+**示例**:
+
+``` ts
+{
+  text: "Share & collect",
+}
+```
+
+### startFillingForm.text
+
+**类型：** `string` | **默认值：** `"Start filling"`
+
+定义 PDF 表单编辑模式下*开始填写*按钮的标题。
+
+**示例**: `"Share & collect"`
+
 ## submitForm
 
 **类型：** `object | boolean` | **默认值：** `true`
