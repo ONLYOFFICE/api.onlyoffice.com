@@ -486,13 +486,13 @@ The [plugins](plugins.md) section defines the runtime plugin parameters.
 
 **type:** `object`
 
-The WOPI configuration section. Used only when the editor is integrated via [WOPI](../../using-wopi/wopi-overview.md).
+The WOPI configuration section. Used only when the editor is integrated via [WOPI](../../../using-wopi/overview.md).
 
 ### wopi.FileNameMaxLength
 
 **type:** `integer` | **default:** `250`
 
-The maximum length for file names that the WOPI host supports, excluding the file extension. Corresponds to the [FileNameMaxLength](../../using-wopi/wopi-rest-api/checkfileinfo.md#FileNameMaxLength) property from CheckFileInfo.
+The maximum length for file names that the WOPI host supports, excluding the file extension. Corresponds to the [FileNameMaxLength](../../../using-wopi/wopi-rest-api/checkfileinfo.md#FileNameMaxLength) property from CheckFileInfo.
 
 **Example**: `20`
 

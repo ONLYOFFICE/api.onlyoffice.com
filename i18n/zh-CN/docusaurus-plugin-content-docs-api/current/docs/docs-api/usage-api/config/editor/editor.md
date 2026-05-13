@@ -486,13 +486,13 @@ customization 部分定义编辑器自定义参数：[标准品牌](customizatio
 
 **类型：** `object`
 
-WOPI 配置部分。仅在编辑器通过 [WOPI](../../using-wopi/wopi-overview.md) 集成时使用。
+WOPI 配置部分。仅在编辑器通过 [WOPI](../../../using-wopi/overview.md) 集成时使用。
 
 ### wopi.FileNameMaxLength
 
 **类型：** `integer` | **默认值：** `250`
 
-WOPI 主机支持的文件名最大长度，不包括文件扩展名。对应 CheckFileInfo 中的 [FileNameMaxLength](../../using-wopi/wopi-rest-api/checkfileinfo.md#FileNameMaxLength) 属性。
+WOPI 主机支持的文件名最大长度，不包括文件扩展名。对应 CheckFileInfo 中的 [FileNameMaxLength](../../../using-wopi/wopi-rest-api/checkfileinfo.md#FileNameMaxLength) 属性。
 
 **示例**: `20`
 

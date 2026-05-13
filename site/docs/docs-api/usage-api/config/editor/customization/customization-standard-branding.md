@@ -813,9 +813,9 @@ Defines if the review editing mode is enabled for the current user. This paramet
 
 **type:** `object`
 
-Defines which [groups](../../editor.md#user) can accept/reject review changes made by other groups. Each key is a group name, and the value is an array of group names whose review changes that group can manage. The `""` value in the array means changes made by users who don't belong to any group.
+Defines which [groups](../editor.md#user) can accept/reject review changes made by other groups. Each key is a group name, and the value is an array of group names whose review changes that group can manage. The `""` value in the array means changes made by users who don't belong to any group.
 
-This parameter is used together with the [user.group](../../editor.md#user) field and the [document.permissions.reviewGroups](../../document/permissions.md#reviewgroups) parameter.
+This parameter is used together with the [user.group](../editor.md#user) field and the [document.permissions.reviewGroups](../../document/permissions.md#reviewgroups) parameter.
 
 **Example**:
 
