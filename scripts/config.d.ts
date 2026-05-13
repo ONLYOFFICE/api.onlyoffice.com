@@ -472,6 +472,8 @@ interface SharingSetting {
 
     /**
      * Changes the user icon to the link icon.
+     *
+     * @example false
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#sharingsettingsislink
      */
     isLink?: boolean;
@@ -851,7 +853,7 @@ interface DocumentNormal extends DocumentBase {
         owner?: string;
 
         /**
-         * Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).
+         * Defines the folder where the document is stored. Can be empty if the document is in the root folder.
          * @example "Example Files"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#folder
          */
@@ -867,13 +869,15 @@ interface DocumentNormal extends DocumentBase {
 
         /**
          * Displays the information about the settings which allow sharing the document with other users.
+         *
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#sharingsettings
          */
         sharingSettings?: SharingSetting[];
 
         /**
-         * Defines the highlighting state of the Favorite icon.
-         * When the user clicks the icon, the onMetaChange event is called.
-         * @note If the parameter is undefined, the Favorite icon is not displayed at the editor window header.
+         * Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the `onMetaChange` event is called.
+         *
+         * @note If the parameter is `undefined` or `null`, the *Favorite* icon is not displayed at the editor window header.
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/info/#favorite
          */
         favorite?: boolean;

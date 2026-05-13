@@ -16,7 +16,7 @@ Defines the highlighting state of the *Favorite* icon. When the user clicks the 
 
 **type:** `string`
 
-Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).
+Defines the folder where the document is stored. Can be empty if the document is in the root folder.
 
 **Example**: `"Example Files"`
 
