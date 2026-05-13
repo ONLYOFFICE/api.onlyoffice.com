@@ -481,13 +481,7 @@ interface SharingSetting {
 
 interface DocumentPermissions {
     /**
-     * Defines if the document can be edited or only viewed.
-     *
-     * @note If the editing permission is set to `false` the document will be opened in viewer and you will not be able to switch it to the editor even if the `mode` parameter is set to `edit`.
-     *
-     * @cases
-     * - `true` → document is editable, **Edit Document** option available.
-     * - `false` → document is opened in viewer only, cannot switch to `edit`.
+     * Defines if the document can be edited or only viewed. In case the editing permission is set to `true` the **File** menu will contain the **Edit Document** menu option; please note that if the editing permission is set to `false` the document will be opened in viewer and you will not be able to switch it to the editor even if the `mode` parameter is set to `edit`.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#edit
@@ -495,10 +489,7 @@ interface DocumentPermissions {
     edit?: boolean;
 
     /**
-     * Defines if the document can be downloaded or only viewed or edited online.
-     *
-     * @cases
-     * - `false` → the **Download as...** menu option will be absent from the File menu.
+     * Defines if the document can be downloaded or only viewed or edited online. In case the downloading permission is set to `false` the **Download as...** menu option will be absent from the **File** menu.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#download
@@ -506,24 +497,17 @@ interface DocumentPermissions {
     download?: boolean;
 
     /**
-     * Defines if the document can be reviewed or not.
+     * Defines if the document can be reviewed or not. In case the reviewing permission is set to `true` the document status bar will contain the **Review** menu option; the document review will only be available for the document editor if the `mode` parameter is set to `edit`.
      *
-     * @cases
-     * - `true` → the document status bar will contain the **Review** menu option; document review is available only if the `mode` parameter is set to `edit`.
-     * - If `edit` is `true` and `review` is `true` → the user can edit the document, accept/reject changes, and switch to review mode.
-     * - If `edit` is `true` and `review` is `false` → the user can edit only.
-     * - If `edit` is `false` and `review` is `true` → the document is available in review mode only.
+     * @note In case `edit` is set to `true` and `review` is also set to `true`, the user will be able to edit the document, accept/reject the changes made and switch to the review mode themselves. In case `edit` is set to `true` and `review` is set to `false`, the user will be able to edit only. In case `edit` is set to `false` and `review` is set to `true`, the document will be available in review mode only.
      *
-     * @defaultValue Coincides with the value of the `edit` parameter.
+     * @default the value of the `edit` parameter
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#review
      */
     review?: boolean;
 
     /**
-     * Defines if the document can be printed or not.
-     *
-     * @cases
-     * - `false` → the **Print** menu option will be absent from the File menu.
+     * Defines if the document can be printed or not. In case the printing permission is set to `false` the **Print** menu option will be absent from the **File** menu.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#print
@@ -531,26 +515,19 @@ interface DocumentPermissions {
     print?: boolean;
 
     /**
-     * Defines if the document can be commented or not.
+     * Defines if the document can be commented or not. In case the commenting permission is set to `true` the document **sidebar** will contain the **Comment** menu option; the document commenting will only be available for the document editor if the `mode` parameter is set to `edit`.
      *
-     * @cases
-     * - `true` → the document side bar will contain the **Comment** menu option; document commenting is available only if the `mode` parameter is set to `edit`.
-     * - If `edit` is `true` and `comment` is `true` → the user will be able to edit the document and comment.
-     * - If `edit` is `true` and `comment` is `false` → the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.
-     * - If `edit` is `false` and `comment` is `true` → the document will be available for commenting only.
-     * - If `edit` is `false`, `review` is `false`, and `comment` is `true` → the `fillForms` value is not considered and filling the forms is not available.
+     * @note In case `edit` is set to `true` and `comment` is also set to `true`, the user will be able to edit the document and comment. In case `edit` is set to `true` and `comment` is set to `false`, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. In case `edit` is set to `false` and `comment` is set to `true`, the document will be available for commenting only. In case `edit` is set to `false` and `review` is set to `false` and `comment` is set to `true` the `fillForms` value is not considered and filling the forms is not available.
      *
-     * @defaultValue Coincides with the value of the `edit` parameter.
+     * @default the value of the `edit` parameter
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#comment
      */
     comment?: boolean;
 
     /**
-     * Defines if the filter can applied globally (`true`) affecting all the other users, or locally (`false`), i.e. for the current user only.
-     * - Filter modification will only be available for the spreadsheet editor if the `mode` parameter is set to `edit`.
+     * Defines if the filter can be applied globally (`true`) affecting all the other users, or locally (`false`), i.e. for the current user only. Filter modification will only be available for the spreadsheet editor if the `mode` parameter is set to `edit`.
      *
-     * @cases
-     * - If document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.
+     * @note In case the document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#modifyfilter
@@ -558,8 +535,7 @@ interface DocumentPermissions {
     modifyFilter?: boolean;
 
     /**
-     * Defines if the content control settings can be changed.
-     * - Content control modification will only be available for the document editor if the `mode` parameter is set to `edit`.
+     * Defines if the content control settings can be changed. Content control modification will only be available for the document editor if the `mode` parameter is set to `edit`.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#modifycontentcontrol
@@ -567,25 +543,17 @@ interface DocumentPermissions {
     modifyContentControl?: boolean;
 
     /**
-     * Defines if the forms can be filled.
-     * - Filling in forms will only be available for the document and pdf editors if the mode parameter is set to `edit`.
+     * Defines if the forms can be filled. Filling in forms will only be available for the document and pdf editors if the `mode` parameter is set to `edit`.
      *
-     * @cases
-     * - If `edit` is set to "true" or `review` is set to "true", the `fillForms` value is not considered and the form filling is possible.
-     * - If `edit` is set to "false" and `review` is set to "false" and `fillForms` is also set to "true", the user can only fill forms in the document.
-     * - If `edit` is set to "false" and `review` is set to "false" and `fillForms` is set to "true" the `comments` value is not considered and the commenting is not available.
-     * - The form filling only mode is currently available for Document Editor only.
+     * @note In case `edit` is set to `true` or `review` is set to `true`, the `fillForms` value is not considered and the form filling is possible. In case `edit` is set to `false` and `review` is set to `false` and `fillForms` is also set to `true`, the user can only fill forms in the document. In case `edit` is set to `false` and `review` is set to `false` and `fillForms` is set to `true` the `comment` value is not considered and the commenting is not available. The form filling only mode is currently available for the document and pdf editors only.
      *
-     * @defaultValue Coincides with the value of the `edit` or the `review` parameter.
+     * @default the value of the `edit` or the `review` parameter
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#fillforms
      */
     fillForms?: boolean;
 
     /**
-     * Defines if the content can be copied to the clipboard or not.
-     *
-     * @cases
-     * - `false` → pasting the content will be available within the current document editor only.
+     * Defines if the content can be copied to the clipboard or not. In case the parameter is set to `false`, pasting the content will be available within the current document editor only.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#copy
@@ -593,26 +561,21 @@ interface DocumentPermissions {
     copy?: boolean;
 
     /**
-     * Defines if the user can edit only his/her comments.
+     * Defines if the user can edit only their comments.
      * @default false
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#editcommentauthoronly
      */
     editCommentAuthorOnly?: boolean;
 
     /**
-     * Defines if the user can delete only his/her comments.
+     * Defines if the user can delete only their comments.
      * @default false
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#deletecommentauthoronly
      */
     deleteCommentAuthorOnly?: boolean;
 
     /**
-     * Defines the groups whose changes the user can accept/reject.
-     *
-     * @cases
-     * - `[""]` → the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
-     * - `[]` → the user cannot review changes made by any group.
-     * - `""` or not specified → the user can review changes made by any user.
+     * Defines the groups whose changes the user can accept/reject. The `[""]` value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors). If the value is `[]`, the user cannot review changes made by any group. If the value is `""` or not specified, then the user can review changes made by any user.
      *
      * @example ["Group1", "Group2", ""]
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#reviewgroups
@@ -620,12 +583,7 @@ interface DocumentPermissions {
     reviewGroups?: string[];
 
     /**
-     * Defines the groups whose comments the user can edit, remove and/or view.
-     *
-     * @cases
-     * - `[""]` → the user can edit/remove/view comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
-     * - `[]` → the user cannot edit/remove/view comments made by any group.
-     * - If the `edit`, `remove` and `view` parameters are `""` or not specified → the user can view/edit/remove comments made by any user.
+     * Defines the groups whose comments the user can edit, remove and/or view. The `[""]` value means that the user can edit/remove/view comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors). If the value is `[]`, the user cannot edit/remove/view comments made by any group. If the `commentGroups.edit`, `commentGroups.remove` and `commentGroups.view` parameters are not specified, then the user can view/edit/remove comments made by any user.
      *
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#commentgroups
      */
@@ -653,15 +611,7 @@ interface DocumentPermissions {
     };
 
     /**
-     * Defines the groups of users whose information is displayed in the editors.
-     * - Usernames are displayed in the list of editing users in the editor header.
-     * - While typing, user cursors and tooltips with their names are displayed.
-     * - When locking objects in the strict co-editing mode, usernames are shown.
-     *
-     * @cases
-     * - `["Group1", ""]` → users from **Group1** and users without any group are displayed.
-     * - `[]` → no user information is displayed at all.
-     * - `""` → information about **all users** is displayed.
+     * Defines the groups of users whose information is displayed in the editors: the usernames are displayed in the list of the editing users in the editor header; when typing text, the user cursors and tooltips with their names are displayed; when locking objects in the strict co-editing mode, the usernames are displayed. The `["Group1", ""]` means that the information about users from Group1 and users who don't belong to any group is displayed. The `[]` means that no user information is displayed at all. The `undefined` or `""` values mean that the information about all users is displayed.
      *
      * @example ["Group1", ""]
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#userinfogroups
@@ -677,10 +627,7 @@ interface DocumentPermissions {
     protect?: boolean;
 
     /**
-     * Defines if the chat functionality is enabled in the document or not.
-     *
-     * @cases
-     * - `true` → the **Chat** menu button will be displayed.
+     * Defines if the chat functionality is enabled in the document or not. In case the chat permission is set to `true`, the **Chat** menu button will be displayed.
      *
      * @default true
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/document/permissions/#chat
