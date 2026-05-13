@@ -4,6 +4,19 @@
 
 ### New features
 
+#### Docs API
+
+* Added DocEditor class with typed method signatures to TypeScript definition file
+* Added mobile.disableForceDesktop customization parameter
+* Added editorConfig.wopi section documentation
+* Added user.roles parameter for PDF form filling
+* Added reviewPermissions customization parameter
+* Added startFillingForm customization parameter
+* Added onSaveDocument event documentation
+* Added onRequestFillingStatus event documentation
+* Added onStartFilling event documentation
+* Added roles parameter to onRequestStartFilling event
+
 #### Playground
 
 * Added auto-generated JSON schema from TypeScript types for Config Editor
@@ -27,6 +40,9 @@
 * Documented actionLink sub-properties and insert/layout toolbar sub-properties in white label config
 * Improved onMakeActionLink event documentation and extracted onRequestInsertImage undeclared note into callout
 * Used danger admonitions for deprecated mailmerge and spellcheck.change events
+* Rewrote editor, embedded, plugins, and white label config parameter descriptions for clarity
+* Added JSDoc descriptions to all types and interfaces in TypeScript definition file
+* Removed dead permissions.reader, canCoAuthoring, and embedded onBack event properties from config type definitions
 
 #### Playground
 
@@ -55,6 +71,10 @@
 * Restructured event sections with consistent description flow, typed parameters, and improved cross-references
 * Simplified config section descriptions and updated JSDoc comments
 * Cleaned up code examples in customization docs
+* Used backtick formatting for types in methods parameter tables
+* Used info admonitions for licensing notes in methods page
+* Synced config descriptions across TypeScript definitions, docs, and zh-CN translations
+* Added interface-level JSDoc to RecentDocument and DocumentTemplate types
 
 #### Playground
 
@@ -68,6 +88,12 @@
 * Fixed event handler function signatures in Config Editor
 * Replaced inline descriptions with tooltips in config editor section headers
 * Fixed bold and code formatting in config editor tooltips
+* Fixed tooltip display for array-type properties in Config Editor
+* Added italic markdown support in Config Editor tooltips
+
+#### Homepage
+
+* Linked home page Try buttons directly to playgrounds
 
 #### Plugins and macros
 
