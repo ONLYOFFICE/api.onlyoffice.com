@@ -972,7 +972,7 @@ Defines the editor theme settings. It can be set in two ways:
 - **theme id** - the user sets the theme parameter by its id: `theme-system`, `theme-light`, `theme-classic-light`, `theme-dark`, `theme-contrast-dark`, `theme-gray`, `theme-white`, `theme-night`;
 - **default theme** - the default dark or light theme value will be set: `default-dark`, `default-light`. The default light theme is `theme-white`, the default dark theme is `theme-night`.
 
-If a specific theme id is set, it takes priority over the `default-dark` and `default-light` values.
+When the editor is opened, the theme is applied in the following priority order: the theme last selected by the user in the editor takes the highest priority, then the `uiTheme` parameter from the configuration, and the default theme is applied if neither is set.
 
 The `theme-system` value matches the OS color scheme preference (light or dark).
 
