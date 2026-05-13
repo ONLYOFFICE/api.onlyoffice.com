@@ -1125,6 +1125,34 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onSaveDocument
+
+将文档保存为二进制数据时调用的函数。
+
+**参数**:
+
+| 参数       | 类型          | 描述                       |
+| ---------- | ------------- | -------------------------- |
+| event.data | `ArrayBuffer` | 二进制格式的文档文件数据。 |
+
+**示例**:
+
+``` ts
+function onSaveDocument(event) {
+  const buffer = event.data;
+  console.log("Document binary size:", buffer.byteLength);
+}
+
+const config = {
+  // ...
+  events: {
+    onSaveDocument,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onStartFilling
 
 调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。

@@ -424,6 +424,13 @@ interface RequestReferenceSourceEvent {
     };
 };
 
+interface SaveDocumentEvent {
+    /**
+     * The document file data in binary format.
+     */
+    data?: ArrayBuffer;
+};
+
 interface RequestStartFillingEvent {
     /**
      * The list of roles available in the PDF form.
@@ -3081,12 +3088,12 @@ interface EventsNormal extends EventsBase {
      */
     onRequestReferenceSource?: (event: RequestReferenceSourceEvent) => void;
 
-    // TODO: Not in the documentation
     /**
-     * The function called when save document from binary.
+     * The function called to save the document as binary data.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onsavedocument
      */
-    onSaveDocument?: () => void;
+    onSaveDocument?: (event: SaveDocumentEvent) => void;
 
     /**
      * The function called when the user is trying to start filling out ready forms by clicking the *Start filling* button in PDF editing mode. When the user clicks the *Start filling* button, the `startFilling` method is called to lock PDF editing (only PDF viewing becomes available).

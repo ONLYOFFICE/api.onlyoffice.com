@@ -1125,6 +1125,34 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onSaveDocument
+
+The function called to save the document as binary data.
+
+**Parameters**:
+
+| Parameter  | Type          | Description                              |
+| ---------- | ------------- | ---------------------------------------- |
+| event.data | `ArrayBuffer` | The document file data in binary format. |
+
+**Example**:
+
+``` ts
+function onSaveDocument(event) {
+  const buffer = event.data;
+  console.log("Document binary size:", buffer.byteLength);
+}
+
+const config = {
+  // ...
+  events: {
+    onSaveDocument,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onStartFilling
 
 The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
