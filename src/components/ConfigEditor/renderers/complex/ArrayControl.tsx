@@ -20,7 +20,7 @@ function defaultForSchema(s: JsonSchema | undefined): unknown {
 }
 
 const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayControlProps) {
-    const { label, path, schema, data, addItem, removeItems, enabled, renderers, cells } = props;
+    const { label, path, schema, description, data, addItem, removeItems, enabled, renderers, cells } = props;
     const ctx = useJsonForms();
 
     // mapStateToArrayControlProps already resolves schema.items (including $ref),
@@ -49,7 +49,7 @@ const ArrayControlRenderer = memo(function ArrayControlRenderer(props: ArrayCont
     }
 
     return (
-        <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={(schema as JsonSchema).description} defaultOpen={depth < 1} toggled={toggled} onToggle={onToggle}>
+        <Section title={label || titleFromKey(path.split('.').pop() || '') || 'Items'} depth={depth + 1} description={description} defaultOpen={depth < 1} toggled={toggled} onToggle={onToggle}>
             {items.map((_, index) => {
                 const itemPath = composePaths(path, `${index}`)
                 return (
