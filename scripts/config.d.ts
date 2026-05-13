@@ -635,6 +635,9 @@ interface DocumentPermissions {
     chat?: boolean;
 }
 
+/**
+ * Defines a document entry in the **Open Recent...** menu option.
+ */
 interface RecentDocument {
     /**
      * The document title that will be displayed in the **Open Recent...** menu option.
@@ -661,6 +664,9 @@ interface RecentDocument {
     folder?: string;
 }
 
+/**
+ * Defines a template entry in the **Create New...** menu option.
+ */
 interface DocumentTemplate {
     /**
      * The template title that will be displayed in the **Create New...** menu option.
