@@ -2240,10 +2240,10 @@ interface EditorConfigNormal extends EditorConfigBase {
              */
             standardView?: boolean;
 
-            //TODO: Not in the documentation
             /**
-             * Hide or show UI option to switch editor in **Desktop** type.
+             * Defines whether to hide the UI option to switch the editor to the **Desktop** type on mobile devices.
              * @default false
+             * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#mobiledisableforcedesktop
              */
             disableForceDesktop?: boolean;
         };

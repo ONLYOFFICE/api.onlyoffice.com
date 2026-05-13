@@ -700,6 +700,14 @@ Defines whether the editor will be opened in **Standard view** instead of **Mobi
 
 **Example**: `false`
 
+### mobile.disableForceDesktop
+
+**type:** `boolean` | **default:** `false`
+
+Defines whether to hide the UI option to switch the editor to the **Desktop** type on mobile devices.
+
+**Example**: `false`
+
 ## mobileForceView
 
 **type:** `boolean` | **default:** `true`

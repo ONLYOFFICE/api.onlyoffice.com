@@ -706,6 +706,14 @@ customization 部分定义编辑器自定义参数。
 
 **示例**: `false`
 
+### mobile.disableForceDesktop
+
+**类型：** `boolean` | **默认值：** `false`
+
+定义是否隐藏在移动设备上将编辑器切换为**桌面**类型的 UI 选项。
+
+**示例**: `false`
+
 ## mobileForceView
 
 **类型：** `boolean` | **默认值：** `true`
