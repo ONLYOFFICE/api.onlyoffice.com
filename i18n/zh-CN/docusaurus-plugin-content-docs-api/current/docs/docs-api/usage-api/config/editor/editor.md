@@ -411,7 +411,8 @@ editorConfig 部分定义了编辑器界面参数。
   "group": "Group1,Group2",
   "id": "78e1e841",
   "image": "https://example.com/url-to-user-avatar.png",
-  "name": "John Smith"
+  "name": "John Smith",
+  "roles": ["Role1"]
 }
 ```
 
@@ -454,6 +455,14 @@ editorConfig 部分定义了编辑器界面参数。
 用户的全名。长度限制为 128 个符号。
 
 **示例**: `"John Smith"`
+
+### user.roles
+
+**类型：** `string[]`
+
+定义分配给用户的 PDF 表单填写角色。数组中的第一个角色用于确定用户可以填写哪些表单字段。
+
+**示例**: `["Role1"]`
 
 ## customization
 

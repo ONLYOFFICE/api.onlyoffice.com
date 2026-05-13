@@ -411,7 +411,8 @@ If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event
   "group": "Group1,Group2",
   "id": "78e1e841",
   "image": "https://example.com/url-to-user-avatar.png",
-  "name": "John Smith"
+  "name": "John Smith",
+  "roles": ["Role1"]
 }
 ```
 
@@ -454,6 +455,14 @@ The path to the user's avatar.
 The full name of the user. The length is limited to 128 symbols.
 
 **Example**: `"John Smith"`
+
+### user.roles
+
+**type:** `string[]`
+
+Defines the roles assigned to the user for PDF form filling. The first role in the array is used to determine which form fields the user can fill.
+
+**Example**: `["Role1"]`
 
 ## customization
 

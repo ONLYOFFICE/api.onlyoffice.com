@@ -993,12 +993,12 @@ interface EditorConfigBase {
          */
         image?: string;
 
-        // TODO: Not in the documentation
         /**
-         * Defines the roles assigned to the user.
-         * - Used for **PDF forms**, fill form with `Role1`.
+         * Defines the roles assigned to the user for PDF form filling.
+         * The first role in the array is used to determine which form fields the user can fill.
          *
          * @example ["Role1"]
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#userroles
          */
         roles?: string[];
     };

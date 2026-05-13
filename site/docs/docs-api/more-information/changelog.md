@@ -40,6 +40,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the *roles* parameter to the [events.onRequestStartFilling](../usage-api/config/events.md#onrequeststartfilling) event.
 - Added the [events.onRequestFillingStatus](../usage-api/config/events.md#onrequestfillingstatus) event.
 - Added the [editorConfig.customization.startFillingForm](../usage-api/config/editor/customization/customization-standard-branding.md#startfillingform) parameter.
+- Added the *roles* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
 - The document editing will be prohibited for all users editing the document with the specified *key*, if the *users* parameter is not specified for the [drop](../additional-api/command-service/drop.md) command.
 - The [editorConfig.customization.submitForm](../usage-api/config/editor/customization/customization-standard-branding.md#submitform) parameter can now be used as an object.
 - The [editorConfig.customization.compactToolbar](../usage-api/config/editor/customization/customization-standard-branding.md#compacttoolbar) parameter is now available for the viewer.
