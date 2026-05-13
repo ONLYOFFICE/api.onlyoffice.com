@@ -393,6 +393,34 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onRequestFillingStatus
+
+在 PDF 表单填写模式下请求当前角色的填写状态时调用的函数。
+
+**参数**:
+
+| 参数       | 类型     | 描述                         |
+| ---------- | -------- | ---------------------------- |
+| event.data | `string` | 请求填写状态的角色名称。     |
+
+**示例**:
+
+``` ts
+function onRequestFillingStatus(event) {
+  const role = event.data;
+  console.log("Filling status requested for role:", role);
+}
+
+const config = {
+  // ...
+  events: {
+    onRequestFillingStatus,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onRequestHistory
 
 当用户试图通过单击*版本历史*按钮来显示文档版本历史时调用的函数。要显示文档版本历史记录，请调用 [refreshHistory](../methods.md#refreshhistory) 方法。

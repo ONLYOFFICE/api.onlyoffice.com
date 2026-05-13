@@ -424,6 +424,13 @@ interface RequestReferenceSourceEvent {
     };
 };
 
+interface RequestFillingStatusEvent {
+    /**
+     * The role name for which the filling status is requested.
+     */
+    data?: string;
+};
+
 interface SaveDocumentEvent {
     /**
      * The document file data in binary format.
@@ -3153,12 +3160,12 @@ interface EventsNormal extends EventsBase {
      */
     onUserActionRequired?: () => void;
 
-    // TODO: Not in the documentation
     /**
      * The function called to request the filling status for the current role in PDF form filling mode.
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/events/#onrequestfillingstatus
      */
-    onRequestFillingStatus?: () => void;
+    onRequestFillingStatus?: (event: RequestFillingStatusEvent) => void;
 
     /**
      * The function called when the PDF form is ready for filling, i.e. after the {@link DocEditor.startFilling startFilling} method is called and the form preparation is complete.

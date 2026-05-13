@@ -393,6 +393,34 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
+## onRequestFillingStatus
+
+The function called to request the filling status for the current role in PDF form filling mode.
+
+**Parameters**:
+
+| Parameter  | Type     | Description                                          |
+| ---------- | -------- | ---------------------------------------------------- |
+| event.data | `string` | The role name for which the filling status is requested. |
+
+**Example**:
+
+``` ts
+function onRequestFillingStatus(event) {
+  const role = event.data;
+  console.log("Filling status requested for role:", role);
+}
+
+const config = {
+  // ...
+  events: {
+    onRequestFillingStatus,
+  },
+};
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
+```
+
 ## onRequestHistory
 
 The function called when the user is trying to show the document version history by clicking the *Version History* button. To show the document version history, call the [refreshHistory](../methods.md#refreshhistory) method.
