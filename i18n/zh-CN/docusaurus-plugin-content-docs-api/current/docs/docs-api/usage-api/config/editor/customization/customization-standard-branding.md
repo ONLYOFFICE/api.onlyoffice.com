@@ -807,6 +807,30 @@ customization 部分定义编辑器自定义参数。
 
 **示例**: `true`
 
+## reviewPermissions
+
+**类型：** `object`
+
+定义哪些[组](../../editor.md#user)可以接受/拒绝其他组所做的审阅更改。每个键是一个组名，值是该组可以管理其审阅更改的组名数组。数组中的 `""` 值表示不属于任何组的用户所做的更改。
+
+此参数与 [user.group](../../editor.md#user) 字段和 [document.permissions.reviewGroups](../../document/permissions.md#reviewgroups) 参数一起使用。
+
+**示例**:
+
+``` ts
+{
+  "Group1": ["Group2"],
+  "Group2": ["Group1", "Group2"],
+  "Group3": [""],
+}
+```
+
+在此示例中：
+
+- *Group1* 的用户可以接受/拒绝 *Group2* 用户所做的审阅更改；
+- *Group2* 的用户可以接受/拒绝 *Group1* 和 *Group2* 用户所做的审阅更改；
+- *Group3* 的用户可以接受/拒绝不属于任何组的用户所做的审阅更改。
+
 ## reviewDisplay
 
 **类型：** `"markup" | "simple" | "final" | "original"`

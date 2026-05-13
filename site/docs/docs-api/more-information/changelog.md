@@ -220,6 +220,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - The *text*, *spreadsheet* and *presentation* values for [documentType](../usage-api/config/config.md#documenttype) parameter is deprecated, please use *word*, *cell* and *slide* values instead.
 - Added the *group* field to the [editorConfig.user](../usage-api/config/editor/editor.md#user).
+- Added the [editorConfig.customization.reviewPermissions](../usage-api/config/editor/customization/customization-standard-branding.md#reviewpermissions) parameter.
 - Added conversion from [fb2](../additional-api/conversion-api/conversion-tables.md#document-file-formats) format.
 - Removed the deprecated `document.permissions.changeHistory` parameter.
 - Removed the deprecated `document.permissions.rename` parameter.

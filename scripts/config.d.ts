@@ -1357,8 +1357,12 @@ interface EditorConfigNormal extends EditorConfigBase {
             text?: string;
         };
 
-        // TODO: Not in the documentation
-        reviewPermissions:object;
+        /**
+         * Defines which groups can accept/reject review changes made by other groups.
+         * Each key is a group name, and the value is an array of group names whose review changes that group can manage.
+         * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/customization-standard-branding/#reviewpermissions
+         */
+        reviewPermissions?: {[group: string]: string[]};
 
         /**
          * Adds a request for the anonymous name.

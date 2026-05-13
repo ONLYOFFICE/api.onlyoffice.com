@@ -220,6 +220,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - [documentType](../usage-api/config/config.md#documenttype) 参数的 *text*, *spreadsheet* 和 *presentation* 值已弃用，请改用 *word*, *cell* 和 *slide* 值。
 - 将 *group* 字段添加到 [editorConfig.user](../usage-api/config/editor/editor.md#user)。
+- 添加了 [editorConfig.customization.reviewPermissions](../usage-api/config/editor/customization/customization-standard-branding.md#reviewpermissions) 参数。
 - 添加了从 [fb2](../additional-api/conversion-api/conversion-tables.md#document-file-formats) 格式的转换的功能。
 - 移除了已弃用的 `document.permissions.changeHistory` 参数。
 - 移除了已弃用的 `document.permissions.rename` 参数。
