@@ -1,6 +1,10 @@
 ﻿# 嵌入式
 
-嵌入部分仅适用于 `embedded` 文档类型（请参阅[配置](../config.md#type)部分以了解如何定义 `embedded` 文档类型）。它允许更改定义嵌入模式中按钮行为的设置。
+embedded 部分定义嵌入模式参数。
+
+:::note
+此部分仅适用于 `embedded` 文档类型。请参阅[配置](../config.md#type)部分以了解如何定义 `embedded` 文档类型。
+:::
 
 ## autostart
 

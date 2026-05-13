@@ -1,6 +1,10 @@
 # Embedded
 
-The embedded section is for the `embedded` document type only (see the [config](../config.md#type) section to find out how to define the `embedded` document type). It allows you to change the settings which define the behavior of the buttons in the embedded mode.
+The embedded section defines the embedded mode parameters.
+
+:::note
+This section is for the `embedded` document type only. See the [config](../config.md#type) section to find out how to define the `embedded` document type.
+:::
 
 ## autostart
 

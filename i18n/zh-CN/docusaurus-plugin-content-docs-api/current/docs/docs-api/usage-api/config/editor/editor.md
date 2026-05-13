@@ -45,7 +45,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string` | **必填**
 
-指定**文档存储服务**的绝对 URL（[必须](../../callback-handler.md)由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施）。
+指定**文档存储服务**的绝对 URL。此服务[必须](../../callback-handler.md)由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施。
 
 **示例**: `"https://example.com/url-to-callback"`
 
@@ -66,12 +66,12 @@ editorConfig 部分定义了编辑器界面参数。
 
 ### coEditing.mode
 
-**类型：** `string` | **默认值：** `"fast"`
+**类型：** `"fast" | "strict"` | **默认值：** `"fast"`
 
-共同编辑模式，可以是 `fast` 或 `strict`。
+共同编辑模式。
 
 :::note
-如果在编辑器界面中更改 `mode` 设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.coEditing.mode` 参数发送的任何值。
+如果在编辑器界面中更改 `mode` 设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.coEditing.mode` 参数发送的任何值。`fast` 模式需要启用自动保存，因此如果 `customization.autosave` 设置为 `false`，它将被强制设为 `true`。
 :::
 
 **示例**: `"fast"`
@@ -90,7 +90,11 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-定义将在其中创建并在创建后可用的文档的绝对 URL。如果未指定，将没有创建按钮。您可以使用 [onRequestCreateNew](../events.md#onrequestcreatenew) 事件代替此字段。
+定义将在其中创建并在创建后可用的文档的绝对 URL。
+
+:::note
+如果未指定，**创建**按钮将不会显示。您可以使用 [onRequestCreateNew](../events.md#onrequestcreatenew) 事件代替此参数。
+:::
 
 **示例**: `"https://example.com/url-to-create-document"`
 
@@ -119,7 +123,7 @@ editorConfig 部分定义了编辑器界面参数。
 定义编辑器界面语言。使用两个字母（`de`、`ru`、`it`等）语言代码。
 
 :::note
-要将编辑器界面翻译为葡萄牙语（葡萄牙）或中文（繁体，台湾）（这些语言是在7.2版中添加的），您需要分别使用四个字母的语言代码-`pt-PT`或`zh-TW`。两个字母`pt`语言代码设置葡萄牙语（巴西），`zh`代码指定汉语（中华人民共和国）。
+要将编辑器界面翻译为葡萄牙语（葡萄牙）或中文（繁体，台湾）（在7.2版中添加），请使用四个字母的语言代码 `pt-PT` 或 `zh-TW`。两个字母 `pt` 语言代码设置葡萄牙语（巴西），`zh` 代码指定汉语（中华人民共和国）。
 :::
 
 <details>
@@ -188,15 +192,15 @@ editorConfig 部分定义了编辑器界面参数。
 自 8.2 版起已弃用，请改用[地区](#region)参数。
 :::
 
-**示例**: `""`
+**示例**: `"us"`
 
 ## 模式 {#mode}
 
 **类型：** `"edit" | "view"` | **默认值：** `"edit"`
 
-定义编辑器打开模式。可以是 `view` 以打开文档进行查看，也可以是 `edit` 以在编辑模式下打开文档，从而允许对文档数据进行更改。
+定义编辑器打开模式。
 
-**示例**: `"edit"`
+**示例**: `"view"`
 
 ## mergeFolderUrl
 
@@ -232,7 +236,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-存储文档的文件夹（如果文档存储在根文件夹中，可以为空）。
+存储文档的文件夹。如果文档位于根文件夹中，可以为空。
 
 **示例**: `"Example Files"`
 
@@ -258,13 +262,15 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string` | **默认值：** `"en-US"`
 
-定义货币和日期和时间的默认显示格式（仅在 **电子表格编辑器** 中）。使用四个字母（`en-US`、`fr-FR`等）语言代码设置。
+定义货币、日期和时间的默认显示格式（仅在**电子表格编辑器**中）。使用四个字母（`en-US`、`fr-FR`等）语言代码设置。
 
 :::note
 如果定义了 `lang` 且存在匹配的区域设置，则默认值取自 `lang` 参数。否则，使用 `en-US`。
 :::
 
+:::info
 从 8.2 版开始，此参数还定义所有编辑器类型中的默认测量单位。对于 **...-US** 或 **...-CA** 地区，如果 [editorConfig.customization.unit](./customization/customization-standard-branding.md#unit) 参数中未指定其他值，则默认使用英寸。
+:::
 
 <details>
 <summary>支持的区域设置</summary>
@@ -393,9 +399,9 @@ editorConfig 部分定义了编辑器界面参数。
 定义当前查看或编辑文档的用户。
 
 :::note
-因为头像 URL 被插入到编辑器框架的 HTML 中，对用户头像的请求是未经授权发送的。此外，还可能出现CORS问题。在这种情况下，请使用base64格式的头像。例如，`"data:image/png;base64,*****"`。
+因为头像 URL 被插入到编辑器框架的 HTML 中，对用户头像的请求是未经授权发送的。可能会出现 CORS 问题。在这种情况下，请使用 base64 格式的头像（例如 `"data:image/png;base64,*****"`）。
 
-请注意，如果您订阅了 [onRequestUsers](../events.md#onrequestusers) 事件并使用 [setUsers](../../methods.md#setusers) 方法，初始化配置中的 `user.image` 字段不是必需的。如果头像以base64格式发送且初始化配置使用JWT签名，我们特别不建议指定此参数。在这种情况下，令牌就会太长。
+如果您订阅了 [onRequestUsers](../events.md#onrequestusers) 事件并通过 [setUsers](../../methods.md#setusers) 方法发送头像，初始化配置中的 `user.image` 字段不是必需的。如果头像以 base64 格式发送且初始化配置使用 JWT 签名，不建议指定此参数，因为令牌会太长。
 :::
 
 **示例**:
@@ -413,7 +419,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-用户所属的组（或用逗号分隔的多个组）。
+用户所属的组（或用逗号分隔的多个组）。可用于 `customization.reviewPermissions`、`permissions.reviewGroups` 或 `permissions.commentGroups`。
 
 **示例**: `"Group1,Group2"`
 
@@ -421,7 +427,15 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-用户的标识。长度限制为 128 个符号。此信息被存储并用于区分共同作者，在保存和突出显示历史记录（在[更改](../../callback-handler.md#history)列表中）时指出最后更改的[作者](../../callback-handler.md#users)，并根据用户数量计算有权访问许可证的用户。我们建议使用一些唯一的匿名哈希。不要在此字段中使用敏感数据，例如姓名或电子邮件。
+用户的标识。长度限制为 128 个符号。此信息被存储并用于：
+
+- 区分共同作者，
+- 在保存和突出显示历史记录（在[更改](../../callback-handler.md#history)列表中）时指出最后更改的[作者](../../callback-handler.md#users)，
+- 根据用户数量计算有权访问许可证的用户。
+
+:::note
+建议使用唯一的匿名哈希。不要使用敏感数据，例如真实姓名或电子邮件。
+:::
 
 **示例**: `"78e1e841"`
 
@@ -445,19 +459,19 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `object`
 
-编辑器自定义配置部分。有关可用参数，请参阅[标准品牌](customization/customization-standard-branding.md)和[白标](customization/customization-white-label.md)页面。
+customization 部分定义编辑器自定义参数：[标准品牌](customization/customization-standard-branding.md)和[白标](customization/customization-white-label.md)。
 
 ## embedded
 
 **类型：** `object`
 
-嵌入模式配置部分。有关可用参数，请参阅[嵌入](embedded.md)页面。
+[embedded](embedded.md) 部分定义嵌入模式参数。
 
 ## plugins
 
 **类型：** `object`
 
-插件配置部分。有关可用参数，请参阅[插件](plugins.md)页面。
+[plugins](plugins.md) 部分定义运行时插件参数。
 
 ## 示例
 

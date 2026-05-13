@@ -677,7 +677,7 @@ interface RecentDocument {
     url?: string;
 
     /**
-     * The folder where the document is stored (can be empty if the document is in the root folder).
+     * The folder where the document is stored. Can be empty if the document is in the root folder.
      *
      * @example "Example Files"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#recentfolder
@@ -871,10 +871,9 @@ interface DocumentEmbedded extends DocumentBase {}
 
 interface EditorConfigBase {
     /**
-     * Defines the editor interface language.
+     * Defines the editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
      *
-     * @note Use two-letter language codes (e.g., `de`, `ru`, `it`).
-     * @note To translate the interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan), use four-letter codes (`pt-PT`, `zh-TW`). The code `pt` sets Portuguese (Brazil), and `zh` sets Chinese (People's Republic of China).
+     * @note To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (added in version 7.2), use the four-letter language codes `pt-PT` or `zh-TW`, respectively. The two-letter `pt` language code sets Portuguese (Brazil) and the `zh` code specifies Chinese (People's Republic of China).
      *
      * @forType `desktop` | `mobile` | `embedded`
      * @default "en"
@@ -883,15 +882,13 @@ interface EditorConfigBase {
     lang?: Lang;
 
     /**
-     * Defines the default display format for **currency**, **date**, and **time** (in the **Spreadsheet Editor** only).
-     * - Is set using the four letter (en-US, fr-FR, etc.) language codes.
+     * Defines the default display format for currency, date, and time (in the **Spreadsheet Editor** only). Is set using the four-letter (`en-US`, `fr-FR`, etc.) language codes.
      *
-     * @note Starting from version **8.2**, this parameter also defines the default measurement units **in all editor types**. For the `...-US` or `...-CA` regions, inches are used unless another value is specified in `editorConfig.customization.unit`.
+     * @note If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `en-US` is used.
+     * @note Starting from version 8.2, this parameter also defines the default measurement units in all editor types. For the **...-US** or **...-CA** regions, inches are used by default if other values are not specified in the `editorConfig.customization.unit` parameter.
      *
      * @forType `desktop` | `mobile` | `embedded`
-     * @defaultValue
-     * - If not specified, the value of the `lang` parameter is used.
-     * - If no regional setting corresponds to the `lang` value, `"en-US"` is applied by default.
+     * @default "en-US"
      * @example "en-US"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#region
      */
@@ -900,20 +897,15 @@ interface EditorConfigBase {
     /**
      * Defines the editor opening mode.
      *
-     * @cases
-     * - `view` → open the document for viewing.
-     * - `edit` → open the document in the editing mode allowing to apply changes to the document data.
-     *
      * @forType `desktop` | `mobile` | `embedded`
      * @default "edit"
+     * @example "view"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#mode
      */
     mode?: "edit" | "view",
 
     /**
-     * Specifies the absolute URL to the **document storage service**.
-     * - This service must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
-     * - Url for connection between sdk and portal.
+     * Specifies the absolute URL to the **document storage service**. This service must be implemented by the software integrators who use ONLYOFFICE Docs on their own server.
      *
      * @forType `desktop` | `mobile` | `embedded`
      * @example "https://example.com/url-to-callback"
@@ -922,7 +914,7 @@ interface EditorConfigBase {
     callbackUrl: string;
 
     /**
-     * Defines the **user** currently viewing or editing the document.
+     * Defines the user currently viewing or editing the document.
      *
      * @note The request to the user's avatar is sent **without authorization**, because the avatar URL is inserted into the HTML of the editor frame. A **CORS** issue may occur. In this case, use the avatar in the **base64** format (e.g. `"data:image/png;base64,*****"`).
      * @note If you are subscribed to the `onRequestUsers` event and send an avatar via the `setUsers` method, the `user.image` field in the initialization config is not required. It is **not recommended** to specify this parameter if the avatar is in base64 format and the initialization config is signed with JWT, since the token will become too long.
@@ -1005,14 +997,12 @@ interface EditorConfigNormal extends EditorConfigBase {
     actionLink?: ActionLink;
 
     /**
-     * Defines the default measurement units.
-     *
-     * @note Use `us` or `ca` to set inches.
+     * Defines the default measurement units. Specify `us` or `ca` to set inches.
      *
      * @forType `desktop` | `mobile`
      * @default ""
      * @example "us"
-     * @deprecated Starting from version 8.2, use the `region` parameter instead.
+     * @deprecated Starting from version 8.2, please use the `region` parameter instead.
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#location
      */
     location?: string;
@@ -1025,8 +1015,8 @@ interface EditorConfigNormal extends EditorConfigBase {
 
     /**
      * Defines the absolute URL of the document where it will be created and available after creation.
-     * - If not specified, the **Create** button will not be displayed.
-     * - Instead of this parameter, you can use the `onRequestCreateNew` event.
+     *
+     * @note If not specified, the **Create** button will not be displayed. Instead of this parameter, you can use the `onRequestCreateNew` event.
      *
      * @forType `desktop` | `mobile`
      * @example "https://example.com/url-to-create-document"
@@ -1037,19 +1027,20 @@ interface EditorConfigNormal extends EditorConfigBase {
     /**
      * Defines the absolute URL to the document sharing settings page.
      *
-     * @deprecated Use the `onRequestSharingSettings` event instead.
+     * @deprecated Instead of this parameter, use the `onRequestSharingSettings` event.
      * @forType `desktop` | `mobile`
+     * @example "https://example.com/url-to-sharing-settings"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#sharingsettingsurl
      */
     sharingSettingsUrl?: string;
 
     /**
-     * Defines the URL of the file selection dialog for inserting images, selecting documents
-     * for comparison, or choosing mail merge data sources. The URL can contain `{documentType}`
-     * and `{fileExt}` placeholders.
+     * Defines the URL of the file selection dialog opened in an iframe for inserting images, selecting documents for comparison, or choosing mail merge data sources. The URL can contain the `{documentType}` and `{fileExt}` placeholders, which will be replaced with the appropriate values (e.g., `ImagesOnly`, `DocumentsOnly`).
      *
+     * @note The `{documentType}` placeholder is required for the *Image from Storage* and *Document from Storage* buttons to appear.
      * @deprecated Use the `onRequestInsertImage`, `onRequestSelectDocument`, or `onRequestSelectSpreadsheet` events instead.
      * @forType `desktop` | `mobile`
+     * @example "https://example.com/filechoice?type={documentType}"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#filechoiceurl
      */
     fileChoiceUrl?: string;
@@ -1057,8 +1048,9 @@ interface EditorConfigNormal extends EditorConfigBase {
     /**
      * Defines the absolute URL to the folder for saving the mail merge result.
      *
-     * @deprecated Use the `onRequestSaveAs` event instead.
+     * @deprecated Instead of this parameter, use the `onRequestSaveAs` event.
      * @forType `desktop` | `mobile`
+     * @example "https://example.com/url-to-merge-folder"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#mergefolderurl
      */
     mergeFolderUrl?: string;
@@ -1066,8 +1058,9 @@ interface EditorConfigNormal extends EditorConfigBase {
     /**
      * Defines the absolute URL to the folder for saving files.
      *
-     * @deprecated Use the `onRequestSaveAs` event instead.
+     * @deprecated Instead of this parameter, use the `onRequestSaveAs` event.
      * @forType `desktop` | `mobile`
+     * @example "https://example.com/url-to-save-folder"
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/editor/#saveasurl
      */
     saveAsUrl?: string;
@@ -1088,6 +1081,12 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     templates?: DocumentTemplate[];
 
+    /**
+     * The customization section defines the editor customization parameters.
+     *
+     * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/customization/
+     */
     customization?: {
         /**
          * Changes the image file at the top left corner of the editor header.
@@ -2322,8 +2321,7 @@ interface EditorConfigNormal extends EditorConfigBase {
     };
 
     /**
-     * Defines the **co-editing mode** (Fast or Strict) and the possibility to change it.
-     * This parameter is used to apply the co-editing and viewing modes.
+     * Defines the co-editing mode and the possibility to change it. This parameter is used to apply the co-editing and viewing modes.
      *
      * @forType `desktop` | `mobile`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#coediting
@@ -2331,10 +2329,10 @@ interface EditorConfigNormal extends EditorConfigBase {
     coEditing?: {
         /**
          * The co-editing mode.
-         * If `fast` and `customization.autosave` = false → set `customization.autosave` = true.
-         * @note In case **mode** setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.coEditing.mode` parameter.
          *
-         * @default 'fast'
+         * @note In case `mode` setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.coEditing.mode` parameter. The `fast` mode requires autosave to be enabled, so `customization.autosave` will be forced to `true` if it is set to `false`.
+         *
+         * @default "fast"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#coeditingmode
          */
         mode?: 'fast' | 'strict';
@@ -2342,17 +2340,17 @@ interface EditorConfigNormal extends EditorConfigBase {
         /**
          * Defines if the co-editing mode can be changed in the editor interface or not.
          *
-         * @defaultValue `true` - for editor, `false` - for viewer
+         * @default true
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/#coeditingchange
          */
         change?: boolean;
     };
 
     /**
-     * The **plugins** section allows to connect the special add-ons to your ONLYOFFICE Docs installation
-     * which will help you add additional features to document editors.
+     * The plugins section defines the runtime plugin parameters.
      *
      * @forType `desktop` | `mobile`
+     * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/
      */
     plugins?: {
         /**
@@ -2412,8 +2410,9 @@ interface EditorConfigNormal extends EditorConfigBase {
 
 interface EditorConfigEmbedded extends EditorConfigBase {
     /**
-     * Settings for embedding the editor.
+     * The embedded section defines the embedded mode parameters.
      *
+     * @note This section is for the `embedded` document type only.
      * @forType `embedded`
      * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/
      */
