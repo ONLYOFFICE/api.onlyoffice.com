@@ -10,7 +10,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `"document" | "player"` | **默认值：** `"player"`
 
-定义嵌入式演示文稿是否自动开始幻灯片放映。
+定义嵌入式查看器的启动模式。在 `player` 模式下，幻灯片放映会自动开始。
 
 **示例**: `"document"`
 
@@ -18,7 +18,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义文档的绝对 URL，作为嵌入网页的文档的源文件。
+定义嵌入文档的源文件的绝对 URL。
 
 **示例**: `"https://example.com/embedded?doc=exampledocument1.docx"`
 
@@ -26,7 +26,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义将以全屏模式打开的文档的绝对 URL。
+定义以全屏模式打开文档的绝对 URL。
 
 **示例**: `"https://example.com/embedded?doc=exampledocument1.docx#fullscreen"`
 
@@ -34,7 +34,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义允许将文档保存到用户个人计算机上的绝对 URL。
+定义将文档保存到用户本地计算机的绝对 URL。
 
 **示例**: `"https://example.com/download?doc=exampledocument1.docx"`
 
@@ -42,17 +42,17 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义允许其他用户共享此文档的绝对 URL。
+定义与其他用户共享文档的绝对 URL。
 
 **示例**: `"https://example.com/view?doc=exampledocument1.docx"`
 
 ## toolbarDocked
 
-**类型：** `string`
+**类型：** `"top" | "bottom"` | **默认值：** `"top"`
 
-定义嵌入式查看器工具栏的位置。如果设置为 `top`，工具栏在顶部。如果设置为 `bottom`，工具栏在底部。
+定义嵌入式查看器工具栏的位置。
 
-**示例**: `"top"`
+**示例**: `"bottom"`
 
 ![Embedded](/assets/images/editor/embedded.png)
 

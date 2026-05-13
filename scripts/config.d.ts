@@ -2418,7 +2418,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
      */
     embedded?: {
         /**
-         * Defines whether the embedded presentation starts the slideshow automatically.
+         * Defines the start mode for the embedded viewer. In `player` mode, the slideshow starts automatically.
          *
          * @default "player"
          * @example "document"
@@ -2426,7 +2426,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
          */
         autostart?: "document" | "player";
         /**
-         * Defines the absolute URL to the document serving as a source file for the document embedded into the web page.
+         * Defines the absolute URL to the source file for the embedded document.
          *
          * @example "https://example.com/embedded?doc=exampledocument1.docx"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#embedurl
@@ -2434,7 +2434,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
         embedUrl?: string;
 
         /**
-         * Defines the absolute URL to the document which will open in full screen mode.
+         * Defines the absolute URL of the document to open in full screen mode.
          *
          * @example "https://example.com/embedded?doc=exampledocument1.docx#fullscreen"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#fullscreenurl
@@ -2442,7 +2442,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
         fullscreenUrl?: string;
 
         /**
-         * Defines the absolute URL that will allow the document to be saved onto the user personal computer.
+         * Defines the absolute URL for saving the document to the user's local computer.
          *
          * @example "https://example.com/download?doc=exampledocument1.docx"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#saveurl
@@ -2450,7 +2450,7 @@ interface EditorConfigEmbedded extends EditorConfigBase {
         saveUrl?: string;
 
         /**
-         * Defines the absolute URL that will allow other users to share this document.
+         * Defines the absolute URL for sharing the document with other users.
          *
          * @example "https://example.com/view?doc=exampledocument1.docx"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#shareurl
@@ -2458,9 +2458,10 @@ interface EditorConfigEmbedded extends EditorConfigBase {
         shareUrl?: string;
 
         /**
-         * Defines the place for the embedded viewer toolbar. If set to `top`, the toolbar is at the top. If set to `bottom`, the toolbar is at the bottom.
+         * Defines the position of the embedded viewer toolbar.
          *
-         * @example "top"
+         * @default "top"
+         * @example "bottom"
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/embedded/#toolbardocked
          */
         toolbarDocked?: "top" | "bottom";
