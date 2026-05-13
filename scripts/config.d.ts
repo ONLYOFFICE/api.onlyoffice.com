@@ -2354,8 +2354,8 @@ interface EditorConfigNormal extends EditorConfigBase {
      */
     plugins?: {
         /**
-         * Defines the array of the identifiers (as entered in `config.json`) for the plugins,
-         * which will automatically start when the editor opens, and the order the plugins will run one-by-one.
+         * Defines the plugin identifiers from the `config.json` file that automatically start when the editor opens.
+         * The plugins run sequentially in the listed order.
          *
          * @example ["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#autostart
@@ -2363,16 +2363,16 @@ interface EditorConfigNormal extends EditorConfigBase {
         autostart?: string[];
 
         /**
-         * Defines an object which allows configuring plugins from an external source.
-         * The settings can be set for all plugins or for a specific plugin.
-         * For example, this object can be used to pass an authorization token to the plugin.
-         * You can also use the `SetPluginsOptions` method of the Automation API to pass the options object to the plugin.
+         * Defines the external configuration settings for plugins.
+         * Settings can target all plugins or a specific plugin — for example, passing an authorization token.
+         *
+         * @note You can also use the `SetPluginsOptions` method of the Automation API to pass this object to the plugin.
          *
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#options
          */
         options?: {
             /**
-             * Defines the parameters which will be set for all plugins.
+             * Defines the parameters applied to all plugins.
              *
              * @example { "keyAll": "valueAll" }
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#options
@@ -2380,8 +2380,7 @@ interface EditorConfigNormal extends EditorConfigBase {
             all?: object;
 
             /**
-             * Defines the parameters which will be set for a specific plugin.
-             * The plugin must be specified with the plugin GUID of the `asc.{UUID}` type.
+             * Defines the parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
              *
              * @example { "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}": { "keyYoutube": "valueYoutube" } }
              * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#optionspluginguid
@@ -2390,7 +2389,7 @@ interface EditorConfigNormal extends EditorConfigBase {
         };
 
         /**
-         * Defines the array of absolute URLs to the plugin configuration files (`config.json`).
+         * Defines the absolute URLs to the plugin `config.json` files.
          *
          * @example ["helloworld/config.json", "chess/config.json"]
          * @see https://api.onlyoffice.com/docs/docs-api/usage-api/config/editor/plugins/#pluginsdata
