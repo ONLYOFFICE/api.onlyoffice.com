@@ -983,7 +983,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 :::
 
 :::note
-Starting from version 9.1, this parameter is also available for the mobile editors. The following themes are currently supported: `theme-light`, `theme-dark`, `theme-system`, `default-light`, `default-dark`.
+For the mobile editors, only the following themes are currently supported: `theme-light`, `theme-dark`, `theme-system`, `default-light`, `default-dark`.
 :::
 
 **Example**: `"theme-dark"`

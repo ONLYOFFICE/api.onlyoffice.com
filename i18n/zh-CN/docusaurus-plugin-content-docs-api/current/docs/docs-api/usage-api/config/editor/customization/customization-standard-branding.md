@@ -983,7 +983,7 @@ const review = {
 :::
 
 :::note
-从 9.1 版本开始，该参数也适用于移动端编辑器。目前支持以下主题：`theme-light`、`theme-dark`、`theme-system`、`default-light`、`default-dark`。
+移动端编辑器仅支持以下主题：`theme-light`、`theme-dark`、`theme-system`、`default-light`、`default-dark`。
 :::
 
 **示例**: `"theme-dark"`
