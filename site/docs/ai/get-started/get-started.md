@@ -1,4 +1,4 @@
-﻿# Getting started
+# Getting started
 
 ONLYOFFICE supports three ways to extend editor functionality: **plugins**, **macros**, and **custom AI tools**. This page helps you choose the right approach and get started.
 
@@ -12,9 +12,9 @@ Build sophisticated integrations that feel native to ONLYOFFICE.
 
 **Perfect for:**
 
-- Embedding external content ([YouTube](/docs/plugins/samples/youtube.md), media galleries)
-- Third-party integrations ([Translator](/docs/plugins/samples/translator.md), [Zotero](/docs/plugins/samples/zotero.md), CRM systems)
-- Advanced processing ([OCR](/docs/plugins/samples/ocr.md), image manipulation, data visualization)
+- Embedding external content ([YouTube](../../plugins/samples/youtube.md), media galleries)
+- Third-party integrations ([Translator](../../plugins/samples/translator.md), [Zotero](../../plugins/samples/zotero.md), CRM systems)
+- Advanced processing ([OCR](../../plugins/samples/ocr.md), image manipulation, data visualization)
 - Custom workflows (form builders, approval systems, templates)
 
 **Development profile:**
@@ -30,10 +30,10 @@ Lightweight JavaScript that runs directly in documents — no installation neede
 
 **Perfect for:**
 
-- One-click formatting ([Reset text properties](/docs/macros/samples/document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
-- Batch operations ([Remove empty tables](/docs/macros/samples/document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
-- Custom calculations ([Find weighted average](/docs/macros/samples/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
-- Document cleanup ([Remove empty paragraphs](/docs/macros/samples/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
+- One-click formatting ([Reset text properties](../../macros/samples/document-editor/reset-text-properties.md) — quickly reset your text to default formatting)
+- Batch operations ([Remove empty tables](../../macros/samples/document-editor/remove-empty-tables.md) — remove all empty tables across the entire document)
+- Custom calculations ([Find weighted average](../../macros/samples/spreadsheet-editor/weighted-average-function.md) — calculate a weighted average on the selected range)
+- Document cleanup ([Remove empty paragraphs](../../macros/samples/presentation-editor/remove-empty-paragraphs.md) — remove all unnecessary blank paragraphs across the entire presentation)
 
 **Development profile:**
 
@@ -48,10 +48,10 @@ Custom tools enhanced with AI capabilities for next-generation document workflow
 
 **Perfect for:**
 
-- Writing assistance ([Check spelling](/docs/ai/samples/document-editor/check-spelling.md) — AI-powered spell checking)
-- Smart styling ([Change text style](/docs/ai/samples/document-editor/change-text-style.md) — AI-powered text styling)
-- Automatic shape generation ([Add shape](/docs/ai/samples/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
-- Data insights ([Explain formula](/docs/ai/samples/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
+- Writing assistance ([Check spelling](../samples/document-editor/check-spelling.md) — AI-powered spell checking)
+- Smart styling ([Change text style](../samples/document-editor/change-text-style.md) — AI-powered text styling)
+- Automatic shape generation ([Add shape](../samples/presentation-editor/add-shape-to-slide.md) — AI-powered presentation design)
+- Data insights ([Explain formula](../samples/spreadsheet-editor/explain-formula.md) — AI-powered formula explanations)
 
 **Development profile:**
 
@@ -101,7 +101,7 @@ Answer these questions to find your ideal path:
 **API methods fail:**
 
 - Ensure your ONLYOFFICE version supports the method
-- Check method syntax in the [API reference](/docs/plugins/interacting-with-editors/overview/overview.md)
+- Check method syntax in the [API reference](../../plugins/interacting-with-editors/overview/overview.md)
 - Verify editor type compatibility
 
 ### Macro issues
@@ -131,7 +131,7 @@ Answer these questions to find your ideal path:
 - **[Interactive playground](playground.md)** — Test code without installation
 - **[UI component library](https://onlyoffice.github.io/storybook/static/)** — Pre-built components
 - **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** — Starter projects
-- **[Browser DevTools](/docs/plugins/development-workflow/debugging/browser-devtools-guide.md)** — Debugging guide
+- **[Browser DevTools](../../plugins/development-workflow/debugging/browser-devtools-guide.md)** — Debugging guide
 
 ### Sample code
 
@@ -141,9 +141,9 @@ Answer these questions to find your ideal path:
 
 ### Documentation
 
-- **[API reference](/docs/plugins/interacting-with-editors/overview/overview.md)** — Complete API documentation
-- **[Plugin structure](/docs/plugins/fundamentals/configuration/config-json.md)** — Configuration guide
-- **[Macro guide](/docs/macros/macros/writing-macros.md)** — Macro development
+- **[API reference](../../plugins/interacting-with-editors/overview/overview.md)** — Complete API documentation
+- **[Plugin structure](../../plugins/fundamentals/configuration/config-json.md)** — Configuration guide
+- **[Macro guide](../../macros/macros/writing-macros.md)** — Macro development
 - **[AI integration](../ai/ai-plugin.md)** — AI plugin setup
 - **[FAQ](../more-information/faq.md)** — Frequently asked questions
 
@@ -159,8 +159,8 @@ Answer these questions to find your ideal path:
 **Start building:**
 
 - [Quick start guides](quick-start/comment-text-ai-tool.md)
-- [Plugin tutorial](/docs/plugins/fundamentals/getting-started/what-is-a-plugin.md)
-- [Macro tutorial](/docs/macros/macros/getting-started.md)
+- [Plugin tutorial](../../plugins/fundamentals/getting-started/what-is-a-plugin.md)
+- [Macro tutorial](../../macros/macros/getting-started.md)
 - [AI integration](../ai/ai-plugin.md)
 
 **Experiment:**
@@ -170,6 +170,6 @@ Answer these questions to find your ideal path:
 
 **Learn more:**
 
-- [API reference](/docs/plugins/interacting-with-editors/overview/overview.md)
-- [Best practices](/docs/plugins/development-workflow/developing/for-web-editors.md)
-- [Publishing guide](/docs/plugins/development-workflow/publishing/marketplace-submission.md)
+- [API reference](../../plugins/interacting-with-editors/overview/overview.md)
+- [Best practices](../../plugins/development-workflow/developing/for-web-editors.md)
+- [Publishing guide](../../plugins/development-workflow/publishing/marketplace-submission.md)

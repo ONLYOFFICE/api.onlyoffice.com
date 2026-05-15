@@ -72,12 +72,14 @@ To add a new function, the `RegisteredFunction` object is used, which adds metad
 
 #### Parameters {#parameters}
 
-| Name        | Type             | Example                                                                                          | Description                                                                      |
-| ----------- | ---------------- | ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| name        | string           | `"commentText"`                                                                                  | The function name.                                                               |
-| parameters  | object           | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }`           | An object describing the parameters the function expects from the AI.            |
-| examples    | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | The examples of correct function calls for the AI.                               |
-| description | string           | `"Adds a comment or footnote to explain or annotate the selected text."`                         | The function description which explains to the AI what the function is used for. |
+| Name        | Type     | Example                                                                                          | Description                                                                       |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| name        | string   | `"commentText"`                                                                                  | The function name.                                                                |
+| text        | string   | `"Add Comment to Text"`                                                                          | Human-readable name displayed in the AI plugin UI.                                |
+| description | string   | `"Adds a comment or footnote to explain or annotate the selected text."`                         | The function description which explains to the AI what the function is used for. |
+| parameters  | object   | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }`           | An object describing the parameters the function expects from the AI.             |
+| examples    | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | The examples of correct function calls for the AI.                                |
+| returns     | object   | `{ type: "object", properties: { isApply: { type: "boolean" } }, required: ["isApply"] }`        | Describes what the function returns to the AI model (optional).                   |
 
 These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) file.
 
@@ -92,6 +94,7 @@ The full function flow is shown below, with inline comments explaining each step
   // to decide when and how to call this tool.
   let func = new RegisteredFunction({
     name: "commentText",
+    text: "Add Comment to Text",
     description:
       "Adds a comment or footnote to explain or annotate the selected text. If no text is selected, works with the current paragraph.",
     parameters: {
@@ -260,7 +263,7 @@ The full function flow is shown below, with inline comments explaining each step
 ```
 
 :::note
-To ensure the entire block of changes can be rolled back after the request is executed, we use [StartAction](/docs/plugins/interacting-with-editors/document-api/Methods/StartAction.md) and [EndAction](/docs/plugins/interacting-with-editors/document-api/Methods/EndAction.md) methods across the `commentText` function.
+To ensure the entire block of changes can be rolled back after the request is executed, we use [StartAction](../../plugins/interacting-with-editors/document-api/Methods/StartAction.md) and [EndAction](../../plugins/interacting-with-editors/document-api/Methods/EndAction.md) methods across the `commentText` function.
 :::
 
 The AI agent functionality continues to evolve alongside the needs of today's digital world. Extend its capabilities by creating your own custom tools, tailored to your specific use cases.
