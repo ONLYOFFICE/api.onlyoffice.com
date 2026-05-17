@@ -19,7 +19,7 @@ window.AscDesktopEditor.execCommand("portal:uitheme", editorTheme);
 
 第一种方式具有更高的优先级。
 
-除了现有的编辑器主题外，用户还可以为应用程序界面自定义自己的 [颜色主题](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx)。
+除了现有的编辑器主题外，用户还可以为应用程序界面自定义自己的 [颜色主题](../customizing-themes.md)。
 
 类型：字符串
 

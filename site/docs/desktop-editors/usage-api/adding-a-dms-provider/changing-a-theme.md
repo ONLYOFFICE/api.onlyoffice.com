@@ -19,7 +19,7 @@ Defines the editor theme settings. It can be set in two ways:
 
 The first option has higher priority.
 
-Apart from the available editor themes, the user can also customize their own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx) for the application interface.
+Apart from the available editor themes, the user can also customize their own [color themes](../customizing-themes.md) for the application interface.
 
 Type: string
 

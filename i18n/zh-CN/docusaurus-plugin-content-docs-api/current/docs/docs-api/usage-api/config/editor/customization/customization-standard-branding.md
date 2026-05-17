@@ -1030,7 +1030,7 @@ customization 部分定义编辑器自定义参数。
 
 第一个选项具有更高的优先级。
 
-除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx)。
+除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](../../../../../get-started/how-it-works/customizing-themes.md)。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.uiTheme` 参数发送的任何值。
