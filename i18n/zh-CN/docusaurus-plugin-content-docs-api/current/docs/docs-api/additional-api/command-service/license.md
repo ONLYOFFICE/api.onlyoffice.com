@@ -12,7 +12,7 @@
 
 ## 参数
 
-| 名称 | 类型   | 是否必填 | 描述               |
+| 参数 | 类型   | 是否必填 | 描述               |
 | ---- | ------ | -------- | ------------------------- |
 | c    | string | 必填 | 定义命令类型。 |
 
@@ -84,14 +84,18 @@ import APITable from '@site/src/components/APITable/APITable';
 | license.users_view_count | integer          | 非必填 | 定义实时查看器的用户数。                                                                                                                                                                                                                     |
 | license.users_expire     | integer          | 非必填 | 定义用户许可证在多少天后过期。                                                                                                                                                                                                     |
 | server                   | object           | 必填 | 定义服务器的相关信息。                                                                                                                                                                                                                                  |
-| server.resultType        | integer          | 必填 | 定义许可证状态：<br /><br />**1** - 出现错误，<br /><br />**2** - 许可证已过期，<br /><br />**3** - 许可证仍有效，<br /><br />**6** - 试用许可证已过期。                                                           |
-| server.packageType       | integer          | 必填 | 定义产品版本：<br /><br />**0** - 开源产品，<br /><br />**1** - ONLYOFFICE 文档企业版，<br /><br />**2** - ONLYOFFICE 文档开发者版。                                                                                                 |
+| server.resultType        | integer          | 必填 | 定义许可证状态：`1` - 出现错误，`2` - 许可证已过期，`3` - 许可证仍有效，`6` - 试用许可证已过期。                                                                                                                                  |
+| server.packageType       | integer          | 必填 | 定义产品版本：`0` - 开源产品，`1` - ONLYOFFICE 文档企业版，`2` - ONLYOFFICE 文档开发者版。                                                                                                                                          |
 | server.buildDate         | string           | 必填 | 定义构建日期。                                                                                                                                                                                                                                               |
 | server.buildVersion      | string           | 非必填 | 定义构建版本。                                                                                                                                                                                                                                           |
 | server.buildNumber       | integer          | 必填 | 定义构建编号。                                                                                                                                                                                                                                           |
 | quota                    | object           | 必填 | 定义用户配额值。                                                                                                                                                                                                                                        |
-| quota.users              | object[] | 必填 | 定义用户许可证的用户配额，其中：<br /><br />**userid** - 打开编辑器的用户 ID，<br /><br />**expire** - 该用户的许可证过期日期。                                                                                   |
-| quota.users_view         | object[] | 必填 | 定义实时查看器的用户配额，其中：<br /><br />**userid** - 打开编辑器的用户 ID，<br /><br />**expire** - 该用户的查看权限过期日期。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| quota.users              | object[] | 必填 | 定义用户许可证的用户配额。                                                                                                                                                                                                                               |
+| quota.users.userid       | string           | 必填 | 定义打开编辑器的用户 ID。                                                                                                                                                                                                                                |
+| quota.users.expire       | string           | 必填 | 定义该用户的许可证过期日期。                                                                                                                                                                                                                             |
+| quota.users_view         | object[] | 必填 | 定义实时查看器的用户配额。                                                                                                                                                                                                                               |
+| quota.users_view.userid  | string           | 必填 | 定义打开文档进行查看的用户 ID。                                                                                                                                                                                                                          |
+| quota.users_view.expire  | string           | 必填 | 定义该用户的查看权限过期日期。                                                                                                                                                                                                                           |
 
 ```mdx-code-block
 </APITable>
