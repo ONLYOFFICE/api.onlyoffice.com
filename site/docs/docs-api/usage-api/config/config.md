@@ -10,7 +10,7 @@ The config base section defines the top-level parameters for initializing the do
 
 **type:** `"word" | "cell" | "slide" | "pdf" | "diagram"`
 
-Defines the document type to be opened:
+The document type to be opened:
 
 - `word` - document (*.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fb2, .fodt, .hml, .htm, .html, .hwp, .hwpx, .md, .mht, .mhtml, .odt, .ott, .pages, .rtf, .stw, .sxw, .txt, .wps, .wpt, .xml*);
 - `cell` - spreadsheet (*.csv, .et, .ett, .fods, .numbers, .ods, .ots, .sxc, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml*);
@@ -32,7 +32,7 @@ If omitted, the document type is automatically inferred from the [`document.file
 
 **type:** `string` | **default:** `"100%"`
 
-Defines the document height in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `550px`, `calc(100vh - 48px)`, and others.
+The document height in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `550px`, `calc(100vh - 48px)`, and others.
 
 **Example**: `"550px"`
 
@@ -40,7 +40,7 @@ Defines the document height in the browser window. Can be set to any CSS-compati
 
 **type:** `string`
 
-Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/browser.md).
+The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/browser.md).
 
 **Example**: `"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU"`
 
@@ -48,7 +48,7 @@ Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the f
 
 **type:** `"desktop" | "mobile" | "embedded"` | **default:** `"desktop"`
 
-Defines the platform type used to access the document. Can be:
+The platform type used to access the document:
 
 - `desktop` - optimized to access the document from a desktop or laptop computer;
 - `mobile` - optimized to access the document from a tablet or a smartphone;
@@ -60,7 +60,7 @@ Defines the platform type used to access the document. Can be:
 
 **type:** `string` | **default:** `"100%"`
 
-Defines the document width in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `800px`, `calc(100% - 240px)`, and others.
+The document width in the browser window. Can be set to any CSS-compatible size value, e.g., `100%`, `800px`, `calc(100% - 240px)`, and others.
 
 **Example**: `"800px"`
 
