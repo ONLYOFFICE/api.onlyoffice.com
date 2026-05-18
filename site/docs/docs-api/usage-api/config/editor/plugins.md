@@ -6,7 +6,7 @@ The plugins section defines the runtime plugin parameters.
 
 **type:** `string[]`
 
-Defines the plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
+The plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,7 @@ Defines the plugin identifiers from the [config.json](../../../../plugin-and-mac
 
 **type:** `object`
 
-Defines the external configuration settings for plugins. Settings can target all plugins or a specific plugin — for example, passing an authorization token.
+The external configuration settings for plugins. Settings can target all plugins or a specific plugin — for example, passing an authorization token.
 
 :::note
 You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass this object to the plugin.
@@ -33,7 +33,7 @@ You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interac
 
 **type:** `object`
 
-Defines the parameters applied to all plugins.
+The parameters applied to all plugins.
 
 **Example**:
 
@@ -49,7 +49,7 @@ Defines the parameters applied to all plugins.
 
 **type:** `object`
 
-Defines the parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
+The parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
 
 **Example**:
 
@@ -65,7 +65,7 @@ Defines the parameters for a specific plugin, identified by its GUID in the `asc
 
 **type:** `string[]`
 
-Defines the absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
+The absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
