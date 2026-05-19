@@ -10,7 +10,7 @@ sidebar_position: -3
 JSON 响应格式从 4.3 版开始提供。
 :::
 
-## 响应参数及其描述
+## 响应参数
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
@@ -20,11 +20,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Parameter | Type | Example | Description |
 | --------- | ---- | ------- | ----------- |
-| endConvert | boolean | `true` | 定义转换是否完成。 |
-| error | integer | `-3` | 定义转换期间发生的错误。可以在[此处](./error-codes.md)找到可能的错误代码。 |
-| fileType | string | `pdf` | 定义转换文件的扩展名。 |
-| fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | 定义到已转换文档的链接。仅当 `endConvert` 参数设置为 `true` 时才会接收到此参数。 |
-| percent | integer | `100` | 定义文件转换的百分比。如果 `endConvert` 参数设置为 `true`，则 `percent` 等于 `100`。 |
+| endConvert | boolean | `true` | 转换是否完成。 |
+| error | integer | `-3` | 转换期间发生的错误。可以在[此处](./error-codes.md)找到可能的错误代码。 |
+| fileType | string | `pdf` | 转换文件的扩展名。 |
+| fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | 到已转换文档的链接。仅当 `endConvert` 参数设置为 `true` 时才会接收到此参数。 |
+| percent | integer | `100` | 文件转换的百分比。如果 `endConvert` 参数设置为 `true`，则 `percent` 等于 `100`。 |
 
 ```mdx-code-block
 </APITable>

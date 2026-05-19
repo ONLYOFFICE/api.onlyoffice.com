@@ -10,7 +10,7 @@ The request result is returned in XML format. To receive a response in JSON form
 JSON response format is available from version 4.3.
 :::
 
-## Response parameters and their description
+## Response parameters
 
 ```mdx-code-block
 import APITable from '@site/src/components/APITable/APITable';
@@ -20,11 +20,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Parameter | Type | Example | Description |
 | --------- | ---- | ------- | ----------- |
-| endConvert | boolean | `true` | Defines if the conversion is completed or not. |
-| error | integer | `-3` | Defines an error that occurred during the conversion. Possible error codes can be found [here](./error-codes.md). |
-| fileType | string | `pdf` | Defines an extension of the converted file. |
-| fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | Defines the link to the converted document. This parameter will be received only when the `endConvert` parameter is set to `true`. |
-| percent | integer | `100` | Defines the percentage of the file conversion. If the `endConvert` parameter is set to `true`, the `percent` is equal to `100`. |
+| endConvert | boolean | `true` | Whether the conversion is completed or not. |
+| error | integer | `-3` | An error that occurred during the conversion. Possible error codes can be found [here](./error-codes.md). |
+| fileType | string | `pdf` | An extension of the converted file. |
+| fileUrl | string | `https://documentserver/url-to-converted-document.pdf` | The link to the converted document. This parameter will be received only when the `endConvert` parameter is set to `true`. |
+| percent | integer | `100` | The percentage of the file conversion. If the `endConvert` parameter is set to `true`, the `percent` is equal to `100`. |
 
 ```mdx-code-block
 </APITable>

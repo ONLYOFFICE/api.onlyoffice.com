@@ -2,12 +2,12 @@
 
 Starting from version 5.2, it is possible to use the token in body parameters with ONLYOFFICE Docs. To enable it, set the [services.CoAuthoring.token.inbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-inbox-inBody) and [services.CoAuthoring.token.outbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-outbox-inBody) in configuration file to `true`.
 
-## Parameters
+## Configuration parameters
 
 | Parameter                                | Type    | Example | Description                                                        |
 | ---------------------------------------- | ------- | ------- | ------------------------------------------------------------------ |
-| services.CoAuthoring.token.inbox.inBody  | boolean | false   | Defines if a token is enabled in the incoming request body or not. |
-| services.CoAuthoring.token.outbox.inBody | boolean | false   | Defines if a token is enabled in the outgoing request body or not. |
+| services.CoAuthoring.token.inbox.inBody  | boolean | false   | Whether a token is enabled in the incoming request body or not. |
+| services.CoAuthoring.token.outbox.inBody | boolean | false   | Whether a token is enabled in the outgoing request body or not. |
 
 The `payload` for the JSON Web Token contains the request body parameters.
 

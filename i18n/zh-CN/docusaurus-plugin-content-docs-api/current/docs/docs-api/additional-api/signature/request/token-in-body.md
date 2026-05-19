@@ -2,12 +2,12 @@
 
 从 5.2 版本开始，可以在 ONLYOFFICE 文档的请求体参数中使用令牌。要启用它，请将配置文件中的 [services.CoAuthoring.token.inbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-inbox-inBody) 和 [services.CoAuthoring.token.outbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-outbox-inBody) 设置为 `true`。
 
-## 参数
+## 配置参数
 
 | 参数                                | 类型    | 示例 | 描述                                                        |
 | ---------------------------------------- | ------- | ------- | ------------------------------------------------------------------ |
-| services.CoAuthoring.token.inbox.inBody  | boolean | false   | 定义是否在传入请求体中启用令牌。 |
-| services.CoAuthoring.token.outbox.inBody | boolean | false   | 定义是否在传出请求体中启用令牌。 |
+| services.CoAuthoring.token.inbox.inBody  | boolean | false   | 是否在传入请求体中启用令牌。 |
+| services.CoAuthoring.token.outbox.inBody | boolean | false   | 是否在传出请求体中启用令牌。 |
 
 JSON Web 令牌的 `payload` 包含请求正文参数。
 
