@@ -14,7 +14,7 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter | Type             | Presence | Description                                                                       |
 | --------- | ---------------- | -------- | --------------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                                                                       |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------- |

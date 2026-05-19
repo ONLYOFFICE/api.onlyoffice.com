@@ -14,7 +14,7 @@ Updates the meta information of the document for all collaborative editors.
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter  | Type   | Presence | Description                                                                       |
 |------------|--------|----------|-----------------------------------------------------------------------------------|
@@ -32,7 +32,7 @@ Updates the meta information of the document for all collaborative editors.
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                                                                       |
 |-----------|---------|----------|-----------------------------------------------------------------------------------|

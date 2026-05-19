@@ -10,11 +10,11 @@ Requests the current version number of ONLYOFFICE Docs.
 }
 ```
 
-## Parameters
+## Request parameters
 
-| Name | Type   | Presence | Description               |
-| ---- | ------ | -------- | ------------------------- |
-| c    | string | required | The command type. |
+| Parameter | Type   | Presence | Description               |
+| --------- | ------ | -------- | ------------------------- |
+| c         | string | required | The command type. |
 
 ## Response example
 
@@ -25,7 +25,7 @@ Requests the current version number of ONLYOFFICE Docs.
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                          |
 | --------- | ------- | -------- | ------------------------------------ |

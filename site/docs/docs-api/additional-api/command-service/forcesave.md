@@ -12,7 +12,7 @@ Forcibly saves the document being edited without closing it. The document editin
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter | Type   | Presence | Description                                                                                                       |
 | --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ Forcibly saves the document being edited without closing it. The document editin
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                                                                       |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------- |

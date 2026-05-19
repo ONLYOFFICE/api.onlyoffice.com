@@ -11,7 +11,7 @@ Deletes a forgotten file.
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter | Type   | Presence | Description                                                                       |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Deletes a forgotten file.
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                                                                       |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------- |

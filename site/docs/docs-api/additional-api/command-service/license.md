@@ -10,7 +10,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter | Type   | Presence | Description               |
 |------|--------|----------|---------------------------|

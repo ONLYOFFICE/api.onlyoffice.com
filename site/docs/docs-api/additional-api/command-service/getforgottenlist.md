@@ -10,7 +10,7 @@ Requests a list of the forgotten files.
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter | Type   | Presence | Description               |
 | --------- | ------ | -------- | ------------------------- |
@@ -25,7 +25,7 @@ Requests a list of the forgotten files.
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                                                                                   |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------------------- |
