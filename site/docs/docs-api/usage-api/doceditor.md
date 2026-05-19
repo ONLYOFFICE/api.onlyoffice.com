@@ -30,9 +30,9 @@ To create an editor instance, call the `DocEditor` constructor with two argument
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-| Parameter   | Type   | Description                                                                                                                          |
-| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| placeholder | string | The `id` attribute of an existing HTML element where the editor will be rendered (e.g. `"placeholder"` for `<div id="placeholder">`). |
+| Parameter | Type   | Description                                                                                                                          |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| id        | string | The `id` attribute of an existing HTML element where the editor will be rendered (e.g. `"placeholder"` for `<div id="placeholder">`). |
 | config      | object | The [configuration object](./config/config.md) containing the document, editor, and event parameters.                                |
 
 ## Instance methods
