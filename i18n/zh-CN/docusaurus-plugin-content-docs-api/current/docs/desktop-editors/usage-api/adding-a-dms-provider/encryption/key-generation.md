@@ -37,9 +37,9 @@ typeof window.AscDesktopEditor.cloudCryptoCommand === "function";
    ```
     | 名称        | 类型   | 示例                          | 描述                                     |
     | ----------- | ------ | ----------------------------- | ---------------------------------------- |
-    | domain      | string | `"https://exampledomain.com"` | 定义云端名称和云端入口点。               |
-    | emailInput  | string | `"john@example.com"`          | 定义在登录页面上输入的用户电子邮件。     |
-    | pwdInput    | string | `"123456"`                    | 定义在登录页面上输入的密码。             |
+    | domain      | string | `"https://exampledomain.com"` | 云端名称和云端入口点。               |
+    | emailInput  | string | `"john@example.com"`          | 在登录页面上输入的用户电子邮件。     |
+    | pwdInput    | string | `"123456"`                    | 在登录页面上输入的密码。             |
 
    ```mdx-code-block
    </APITable>
@@ -75,9 +75,9 @@ typeof window.AscDesktopEditor.cloudCryptoCommand === "function";
 
    | 名称            | 类型   | 示例                                         | 描述                 |
    |-----------------|--------|----------------------------------------------|----------------------|
-   | cryptoEngineId  | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`   | 定义**加密**插件 ID。 |
-   | privateKeyEnc   | string | `"xxx"`                                       | 定义加密的私钥。     |
-   | publicKey       | string | `"yyy"`                                       | 定义公钥。           |
+   | cryptoEngineId  | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`   | **加密**插件 ID。 |
+   | privateKeyEnc   | string | `"xxx"`                                       | 加密的私钥。     |
+   | publicKey       | string | `"yyy"`                                       | 公钥。           |
 
    ```mdx-code-block
    </APITable>

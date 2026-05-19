@@ -28,10 +28,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Parameter   | Type    | Description                                                                                                                                                                             |
 |-------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| e           | object  | Defines the message parameters.                                                                                                                                                         |
+| e           | object  | The message parameters.                                                                                                                                                         |
 | e.type      | string  | Checks if the message type is *operation*. If not, then no messages are displayed to the user.                                                                                          |
-| e.opMessage | string  | Defines the message that will be displayed to the user.                                                                                                                                 |
-| e.opType    | integer | Defines the message by the operation type if the `opMessage` parameter is undefined. Set it to **0** to inform the user about file upload, or to **1** to inform about file encryption. |
+| e.opMessage | string  | The message that will be displayed to the user.                                                                                                                                 |
+| e.opType    | integer | The message by the operation type if the `opMessage` parameter is undefined. Set it to **0** to inform the user about file upload, or to **1** to inform about file encryption. |
 
 ```mdx-code-block
 </APITable>

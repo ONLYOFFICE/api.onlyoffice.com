@@ -16,7 +16,7 @@ window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) 
 
 ### type
 
-Defines the command type:
+The command type:
 
 - *encryptionKeys* - to save private and public keys to the parameters;
 
@@ -37,13 +37,13 @@ Type: string
 
 ### params
 
-Defines the parameters that are passed to the method.
+The parameters that are passed to the method.
 
 Type: string
 
 ### callback
 
-Defines the result that the method returns.
+The result that the method returns.
 
 Type: string
 

@@ -16,7 +16,7 @@ window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) 
 
 ### type
 
-定义命令类型：
+命令类型：
 
 - *encryptionKeys* - 将私钥和公钥保存到参数中；
 
@@ -37,13 +37,13 @@ window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) 
 
 ### params
 
-定义传递给该方法的参数。
+传递给该方法的参数。
 
 类型：字符串
 
 ### callback
 
-定义该方法返回的结果。
+该方法返回的结果。
 
 类型：字符串
 

@@ -14,8 +14,8 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称           | 类型   | 示例                                      | 描述                                                                 |
 | -------------- | ------ | ----------------------------------------- | -------------------------------------------------------------------- |
-| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` | 定义**加密**插件 ID。                                                |
-| filter         | string | `"*.docx *.xlsx *.pptx"`                   | 定义可加密的文档类型。目前，仅能加密 OOXML 格式，即 DOCX、XLSX 和 PPTX。 |
+| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"` | **加密**插件 ID。                                                |
+| filter         | string | `"*.docx *.xlsx *.pptx"`                   | 可加密的文档类型。目前，仅能加密 OOXML 格式，即 DOCX、XLSX 和 PPTX。 |
 
 ```mdx-code-block
 </APITable>
@@ -50,9 +50,9 @@ callback({
 
 | 名称           | 类型   | 示例                                              | 描述                                     |
 | -------------- | ------ | ------------------------------------------------- | ---------------------------------------- |
-| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`           | 定义**加密**插件 ID。                    |
-| file           | string | `"https://example.com/url-to-example-document.docx"` | 定义文档的绝对 URL。                     |
-| keys           | array  | `[{"userId":"78e1e841","publicKey":"yyy"}, ...]`     | 定义用户 ID 与相关公钥的配对。           |
+| cryptoEngineId | string | `"{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}"`           | **加密**插件 ID。                    |
+| file           | string | `"https://example.com/url-to-example-document.docx"` | 文档的绝对 URL。                     |
+| keys           | array  | `[{"userId":"78e1e841","publicKey":"yyy"}, ...]`     | 用户 ID 与相关公钥的配对。           |
 
 ```mdx-code-block
 </APITable>

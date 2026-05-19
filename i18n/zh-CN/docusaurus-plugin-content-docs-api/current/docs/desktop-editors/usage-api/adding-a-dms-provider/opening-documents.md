@@ -36,9 +36,9 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 | 参数     | 类型   | 示例                                               | 描述                                                                                                   |
 |----------|--------|----------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| url      | string | `https://example.com/url-to-example-document.docx` | 定义要打开的文档的绝对 URL。                                                                            |
-| type     | string | `"word"`                                           | 定义可定义的打开文档的类型：**word**（文字）、**cell**（表格）、**slide**（幻灯片）或 **pdf**（PDF）。             |
-| provider | string | `"onlyoffice"`                                     | 定义用于在 JavaScript 命令中引用桌面应用程序的提供者 ID（与[配置](./adding-a-dms-provider.md)中的相同）。 |
+| url      | string | `https://example.com/url-to-example-document.docx` | 要打开的文档的绝对 URL。                                                                            |
+| type     | string | `"word"`                                           | 可定义的打开文档的类型：**word**（文字）、**cell**（表格）、**slide**（幻灯片）或 **pdf**（PDF）。             |
+| provider | string | `"onlyoffice"`                                     | 用于在 JavaScript 命令中引用桌面应用程序的提供者 ID（与[配置](./adding-a-dms-provider.md)中的相同）。 |
 
 ```mdx-code-block
 </APITable>

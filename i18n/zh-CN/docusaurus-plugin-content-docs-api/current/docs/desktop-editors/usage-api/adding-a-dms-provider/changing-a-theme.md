@@ -12,7 +12,7 @@ window.AscDesktopEditor.execCommand("portal:uitheme", editorTheme);
 
 ## editorTheme
 
-定义编辑器主题设置。它可以通过两种方式进行设置：
+编辑器主题设置。它可以通过两种方式进行设置：
 
 - **主题 ID** - 用户通过主题的 ID 来设置主题参数（**theme-light**、**theme-classic-light**、**theme-dark**、**theme-contrast-dark**）；
 - **默认主题** - 将设置默认的深色或浅色主题值（**default-dark**、**default-light**）。默认的浅色主题是 **theme-classic-light**。

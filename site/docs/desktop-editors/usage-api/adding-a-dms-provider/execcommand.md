@@ -14,8 +14,8 @@ window.AscDesktopEditor.execCommand(command, parameters);
 
 | Name       | Type   | Description                                           |
 | ---------- | ------ | ----------------------------------------------------- |
-| command    | string | Defines a command that must be executed.              |
-| parameters | string | Defines the parameters that are passed to the method. |
+| command    | string | A command that must be executed.              |
+| parameters | string | The parameters that are passed to the method. |
 
 The following commands are available:
 
