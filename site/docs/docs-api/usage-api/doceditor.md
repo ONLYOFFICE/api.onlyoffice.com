@@ -93,6 +93,10 @@ Replace `example.com` with the host of your **document storage service**. The [`
 
 For the complete configuration structure with all available sections and parameters, see [Configuration overview](./advanced-parameters.md).
 
+:::tip[TypeScript support]
+Install [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) for full IntelliSense and type checking of the config object, `DocEditor` methods, and events. The package version tracks the ONLYOFFICE Docs version.
+:::
+
 :::caution
 When JWT validation is enabled on your document server (the default configuration), the `config` must include a matching [`token`](../get-started/how-it-works/security.md). Sign the config with your document server's JWT secret.
 :::

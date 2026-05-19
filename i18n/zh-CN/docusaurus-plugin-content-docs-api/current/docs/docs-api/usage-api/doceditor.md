@@ -93,6 +93,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 有关包含所有可用部分和参数的完整配置结构，请参阅[配置概述](./advanced-parameters.md)。
 
+:::tip[TypeScript 支持]
+安装 [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) 以获取配置对象、`DocEditor` 方法和事件的完整 IntelliSense 和类型检查。该包的版本号与 ONLYOFFICE 文档版本号保持一致。
+:::
+
 :::caution
 当您的文档服务器启用了 JWT 验证（默认配置）时，`config` 必须包含匹配的 [`token`](../get-started/how-it-works/security.md)。请使用您的文档服务器的 JWT 密钥对配置进行签名。
 :::
