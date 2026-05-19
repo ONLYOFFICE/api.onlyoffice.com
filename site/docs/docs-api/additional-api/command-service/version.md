@@ -14,7 +14,7 @@ Requests the current version number of ONLYOFFICE Docs.
 
 | Name | Type   | Presence | Description               |
 | ---- | ------ | -------- | ------------------------- |
-| c    | string | required | Defines the command type. |
+| c    | string | required | The command type. |
 
 ## Response example
 
@@ -29,5 +29,5 @@ Requests the current version number of ONLYOFFICE Docs.
 
 | Parameter | Type    | Presence | Description                          |
 | --------- | ------- | -------- | ------------------------------------ |
-| error     | integer | required | Defines an error code.               |
-| version   | string  | required | Defines the document server version. |
+| error     | integer | required | An error code.               |
+| version   | string  | required | The document server version. |

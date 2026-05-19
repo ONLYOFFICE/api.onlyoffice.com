@@ -15,8 +15,8 @@ Requests a forgotten file.
 
 | Parameter | Type   | Presence | Description                                                                       |
 | --------- | ------ | -------- | --------------------------------------------------------------------------------- |
-| c         | string | required | Defines the command type.                                                         |
-| key       | string | required | Defines the document identifier used to unambiguously identify the document file. |
+| c         | string | required | The command type.                                                         |
+| key       | string | required | The document identifier used to unambiguously identify the document file. |
 
 ## Response example
 
@@ -32,6 +32,6 @@ Requests a forgotten file.
 
 | Parameter | Type    | Presence | Description                                                                       |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------- |
-| error     | integer | required | Defines an error code.                                                            |
-| key       | string  | required | Defines the document identifier used to unambiguously identify the document file. |
-| url       | string  | required | Defines the URL to a forgotten file.                                              |
+| error     | integer | required | An error code.                                                            |
+| key       | string  | required | The document identifier used to unambiguously identify the document file. |
+| url       | string  | required | The URL to a forgotten file.                                              |

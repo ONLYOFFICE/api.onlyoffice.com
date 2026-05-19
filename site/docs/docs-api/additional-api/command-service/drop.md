@@ -18,9 +18,9 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 
 | Parameter | Type             | Presence | Description                                                                       |
 | --------- | ---------------- | -------- | --------------------------------------------------------------------------------- |
-| c         | string           | required | Defines the command type.                                                         |
-| key       | string           | required | Defines the document identifier used to unambiguously identify the document file. |
-| users     | string[] | required | Defines the list of the user identifiers.                                         |
+| c         | string           | required | The command type.                                                         |
+| key       | string           | required | The document identifier used to unambiguously identify the document file. |
+| users     | string[] | required | The list of the user identifiers.                                         |
 
 ## Response example
 
@@ -35,5 +35,5 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 
 | Parameter | Type    | Presence | Description                                                                       |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------- |
-| error     | integer | required | Defines an error code.                                                            |
-| key       | string  | required | Defines the document identifier used to unambiguously identify the document file. |
+| error     | integer | required | An error code.                                                            |
+| key       | string  | required | The document identifier used to unambiguously identify the document file. |
