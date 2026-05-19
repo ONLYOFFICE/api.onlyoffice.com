@@ -2,6 +2,10 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.4
+
+- Added the [plugin command logging](../usage-api/config/editor/plugins.md#plugin-command-logging) feature for enabling debug output of plugin commands in the browser console.
+
 ## Version 9.1
 
 - The document is opened in viewer mode with an error message if it cannot be [locked](../using-wopi/key-concepts.md#lock) in WOPI.

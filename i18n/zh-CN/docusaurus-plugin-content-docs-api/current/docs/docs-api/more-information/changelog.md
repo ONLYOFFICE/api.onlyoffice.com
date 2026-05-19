@@ -2,6 +2,10 @@
 
 ONLYOFFICE 文档 API 的更改列表。
 
+## 版本 9.4
+
+- 新增[插件命令日志](../usage-api/config/editor/plugins.md#plugin-command-logging)功能，用于在浏览器控制台中启用插件命令的调试输出。
+
 ## 版本 9.1
 
 - 如果文档无法在 WOPI 中被[锁定](../using-wopi/key-concepts.md#lock)，则文档将以查看器模式打开并显示错误消息。
