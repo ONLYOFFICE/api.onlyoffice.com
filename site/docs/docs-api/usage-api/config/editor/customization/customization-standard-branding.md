@@ -1023,7 +1023,7 @@ The editor theme settings. It can be set in two ways:
 
 The first option has higher priority.
 
-Apart from the available editor themes, the user can also customize their own [color themes](../../../../../get-started/how-it-works/customizing-themes.md) for the application interface.
+Apart from the available editor themes, the user can also customize their own [color themes](../../../../get-started/how-it-works/customizing-themes.md) for the application interface.
 
 :::note
 In case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the `editorConfig.customization.uiTheme` parameter.

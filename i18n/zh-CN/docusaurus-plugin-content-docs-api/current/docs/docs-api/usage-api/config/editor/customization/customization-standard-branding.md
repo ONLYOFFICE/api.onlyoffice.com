@@ -1030,7 +1030,7 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 第一个选项具有更高的优先级。
 
-除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](../../../../../get-started/how-it-works/customizing-themes.md)。
+除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的[颜色主题](../../../../get-started/how-it-works/customizing-themes.md)。
 
 :::note
 如果在编辑器界面中更改此设置，它将存储在浏览器本地存储中，并将覆盖作为 `editorConfig.customization.uiTheme` 参数发送的任何值。
