@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "generate-samples": "node .github/scripts/generate-samples-data.js",
-    "generate-schema": "npx ts-json-schema-generator --path scripts/config.d.ts --type Config --tsconfig tsconfig.json -o src/data/config-schema.json && node .github/scripts/postprocess-schema.js src/data/config-schema.json",
+    "generate-schema": "npx ts-json-schema-generator --path node_modules/@onlyoffice/doceditor-types/index.d.ts --type Config --tsconfig tsconfig.json -o src/data/config-schema.json && node .github/scripts/postprocess-schema.js src/data/config-schema.json",
     "start": "npm run generate-samples && npm run generate-schema && docusaurus start",
     "build": "npm run generate-samples && npm run generate-schema && docusaurus build",
     "swizzle": "docusaurus swizzle",
@@ -49,6 +49,7 @@
     "@docusaurus/module-type-aliases": "^3.10.1",
     "@docusaurus/tsconfig": "^3.10.1",
     "@docusaurus/types": "^3.10.1",
+    "@onlyoffice/doceditor-types": "^9.3.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.1.2",
     "@types/react-router-dom": "^5.3.3",
