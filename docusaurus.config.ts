@@ -182,7 +182,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     announcementBar: {
-      content: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/02/onlyoffice-docs-9-3"><b>ONLYOFFICE Docs 9.3 released</b></a>: enhanced PDF Editor and more signature options, multipage view for documents, Solver in sheets, GIF playback in presentation slideshow mode, AI-powered updates, and more.`,
+      content: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
 
       isCloseable: true,
     },
