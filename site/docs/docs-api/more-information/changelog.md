@@ -140,7 +140,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the document, spreadsheet and presentation editors.
 - Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
-- The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
+- The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#configuration-parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#configuration-parameters) parameter instead.
 
 ## Version 7.1
 
