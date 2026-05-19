@@ -26,7 +26,7 @@ button.icons = "/resources/check%scale%(default).png";
 
 `类型： function`
 
-定义按钮被点击时需要执行的操作。
+按钮被点击时需要执行的操作。
 
 ### 参数
 

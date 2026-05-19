@@ -20,7 +20,7 @@ sidebar_position: -6
 
    | 名称 | 类型 | 描述 |
    | ---- | ---- | ---- |
-   | options | [ContextMenuOptions](#contextmenuoptions) | 定义所选右键菜单项的信息。 |
+   | options | [ContextMenuOptions](#contextmenuoptions) | 所选右键菜单项的信息。 |
 
    **示例**:
 
@@ -43,7 +43,7 @@ sidebar_position: -6
 
    ### ContextMenuOptions
 
-   定义右键菜单选项。
+   右键菜单选项。
 
    `类型： object`
 

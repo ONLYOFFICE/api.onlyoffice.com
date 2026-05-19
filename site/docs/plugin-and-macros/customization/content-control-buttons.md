@@ -26,7 +26,7 @@ button.icons = "/resources/check%scale%(default).png";
 
 `Type: function`
 
-Defines the action to be performed when the button is clicked.
+The action to be performed when the button is clicked.
 
 ### Parameters
 
