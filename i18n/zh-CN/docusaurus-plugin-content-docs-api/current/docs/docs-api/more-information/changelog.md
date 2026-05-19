@@ -2,6 +2,19 @@
 
 ONLYOFFICE 文档 API 的更改列表。
 
+## 版本 9.4
+
+- 新增[插件命令日志](../usage-api/config/editor/plugins.md#plugin-command-logging)功能，用于在浏览器控制台中启用插件命令的调试输出。
+
+## 版本 9.1
+
+- 如果无法在 WOPI 中[锁定](../using-wopi/key-concepts.md#lock)文档，则文档将以查看模式打开并显示错误消息。
+- 在 *CheckFileInfo* WOPI 操作中新增 [UserCanOnlyComment](../using-wopi/wopi-rest-api/checkfileinfo.md#UserCanOnlyComment) 属性。
+- [editorConfig.customization.uitheme](../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数现已可用于移动编辑器。
+- 新增对 [hml](../usage-api/config/document/document.md#filetype) 格式的打开支持。
+- 新增将 [pptx](../additional-api/conversion-api/conversion-tables.md#presentation-file-formats) 格式转换为 *txt* 的功能。
+- 将 [editorConfig.customization.logo.image](../usage-api/config/editor/customization/customization-standard-branding.md#logoimage) 的尺寸要求更改为 300x20。
+
 ## 版本 9.0
 
 - 添加了 [editorConfig.customization.suggestFeature](../usage-api/config/editor/customization/customization-standard-branding.md#suggestfeature) 参数。
