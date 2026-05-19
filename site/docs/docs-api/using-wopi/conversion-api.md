@@ -12,7 +12,7 @@ In order to convert different file formats in the online office, the POST reques
 | ---------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | format           | string  | required | The output file format.                                                                                                                 |
 | PDFVer           | string  | optional | The pdf version for the respective type of PDF to be used for the output file (PDF/A-1b, PDF/A-2b, etc.).                               |
-| FullSheetPreview | bollean | optional | Specifies if the full sheet previews will be available or not.                                                                          |
+| FullSheetPreview | boolean | optional | Whether the full sheet previews will be available or not.                                                                          |
 | file             | object  | required | A file to convert in the payload.                                                                                                       |
 | lang             | string  | optional | The default format language. It is used for the date type cells. If the language is specified, it determines the display/output format. |
 | Password         | string  | optional | A password for the protected document. Available from version 8.2.                                                                      |
