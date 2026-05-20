@@ -1083,6 +1083,8 @@ If this event is not declared, the *Start filling* button will not be displayed.
 
 The `event.data` is an array of role objects.
 
+![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
+
 **Example**:
 
 ``` ts
