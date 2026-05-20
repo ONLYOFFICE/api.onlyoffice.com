@@ -30,7 +30,7 @@ Adds a request for the anonymous name.
 }
 ```
 
-![Anonymous](/assets/images/editor/anonymous.png)
+![Anonymous](/assets/images/editor/anonymous.png#gh-light-mode-only)![Anonymous](/assets/images/editor/anonymous.dark.png#gh-dark-mode-only)
 
 ### anonymous.request
 
@@ -397,7 +397,7 @@ Defines settings for the **Feedback & Support** menu button. If set to `false`, 
 }
 ```
 
-![Feedback](/assets/images/editor/feedback.png)
+![Feedback](/assets/images/editor/feedback.png#gh-light-mode-only)![Feedback](/assets/images/editor/feedback.dark.png#gh-dark-mode-only)
 
 ### feedback.url
 
@@ -658,7 +658,7 @@ It will only be available for the comments if the [onRequestSendNotify](../../ev
 
 **Example**: `true`
 
-<img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px" />
+![Mention share](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mention share](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)
 
 ## mobile
 
@@ -943,8 +943,8 @@ Defines the **Complete & Submit** button settings. If set to `false`, the button
 }
 ```
 
-![Submit button](/assets/images/editor/submitForm.png)
-![Submit button](/assets/images/editor/submitForm-message.png)
+![Submit button](/assets/images/editor/submitForm.png#gh-light-mode-only)![Submit button](/assets/images/editor/submitForm.dark.png#gh-dark-mode-only)
+![Submit button](/assets/images/editor/submitForm-message.png#gh-light-mode-only)![Submit button](/assets/images/editor/submitForm-message.dark.png#gh-dark-mode-only)
 
 ### submitForm.visible
 
