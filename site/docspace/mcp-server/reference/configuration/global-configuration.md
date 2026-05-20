@@ -6,7 +6,7 @@ title: Global configuration
 
 All available configuration options for the DocSpace MCP server provided through environment variables, organized by their functional area.
 
-## MCP Options
+## MCP options
 
 The following options are used to configure the behavior of the MCP server.
 
@@ -98,7 +98,7 @@ Interval for checking HTTP sessions for expiration in milliseconds. Set to `0` t
 | **Attributes** | trimmable |
 | **Transports** | `sse` `streamable-http` `http` |
 
-## API Options
+## API options
 
 The following options are used to configure the behavior for API requests.
 
@@ -693,7 +693,7 @@ Time window in milliseconds for the rate limit on the OAuth token endpoint (`/oa
 | **Attributes** | trimmable |
 | **Transports** | `sse`, `streamable-http`, `http` |
 
-## Request Options
+## Request options
 
 The following options are used to configure the behavior of incoming requests.
 
@@ -750,7 +750,7 @@ DOCSPACE_BASE_URL=https://your-instance.onlyoffice.com/
 DOCSPACE_API_KEY=sk-a499e...
 ```
 
-### stdio with Custom Tool Selection
+### stdio with Custom Tool selection
 
 This configuration uses the default stdio transport with API key
 authentication and restricts the available tools to a specific set. In this
