@@ -82,7 +82,7 @@ const config = {
 }
 ```
 
-## 颜色参数
+## 颜色参数 {#color-parameters}
 
 `colors` 对象支持以下参数。所有默认值对应内置浅色主题。
 
