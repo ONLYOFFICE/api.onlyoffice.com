@@ -46,6 +46,6 @@ The figure and steps below explain the comparison flow.
 
 3. After the comparison loads, the user can accept or reject changes using the corresponding buttons on the top toolbar.
 
-   ![Accept changes](/assets/images/editor/compare-documents.png)
+   ![Accept changes](/assets/images/editor/compare-documents.png#gh-light-mode-only)![Accept changes](/assets/images/editor/compare-documents.dark.png#gh-dark-mode-only)
 
 When the user is done reviewing, the document is [saved](./saving-file.md) with the accepted changes.
