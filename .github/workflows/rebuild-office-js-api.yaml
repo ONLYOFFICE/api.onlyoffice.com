@@ -103,7 +103,7 @@ jobs:
           repository: ONLYOFFICE/sdkjs-ext
           token: ${{ secrets.READ_PAT }}
           ref: ${{ github.ref_name }}
-          path: sdkjs
+          path: sdkjs-ext
 
       - name: Checkout sdkjs-ext repository (default)
         if: steps.checkout_sdkjs_ext.outcome == 'failure'
