@@ -12,9 +12,9 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 
 ## Request parameters
 
-| Parameter | Type   | Presence | Description               |
-|------|--------|----------|---------------------------|
-| c    | string | required | The command type. |
+| Parameter | Type   | Presence | Description       |
+| --------- | ------ | -------- | ----------------- |
+| c         | string | required | The command type. |
 
 ## Response example
 

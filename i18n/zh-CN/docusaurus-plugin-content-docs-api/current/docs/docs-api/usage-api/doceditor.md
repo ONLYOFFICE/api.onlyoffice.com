@@ -30,10 +30,10 @@ sidebar_position: -6
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-| 参数     | 类型   | 描述                                                                                                             |
-| -------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
-| id       | string | 编辑器将渲染到的现有 HTML 元素的 `id` 属性（例如，`"placeholder"` 对应 `<div id="placeholder">`）。              |
-| config      | object | 包含文档、编辑器和事件参数的[配置对象](./config/config.md)。                                                     |
+| 参数   | 类型   | 描述                                                                                                |
+| ------ | ------ | --------------------------------------------------------------------------------------------------- |
+| id     | string | 编辑器将渲染到的现有 HTML 元素的 `id` 属性（例如，`"placeholder"` 对应 `<div id="placeholder">`）。 |
+| config | object | 包含文档、编辑器和事件参数的[配置对象](./config/config.md)。                                        |
 
 ## 实例方法
 
