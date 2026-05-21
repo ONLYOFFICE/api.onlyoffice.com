@@ -84,7 +84,7 @@ The [events](events.md) section defines the callback functions for editor events
 
 ## Example
 
-``` ts
+```ts
 const config = {
   documentType: "word",
   type: "mobile",

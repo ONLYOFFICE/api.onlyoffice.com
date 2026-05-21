@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 To check if the desktop app supports encryption, call the following command:
 
-``` ts
+```ts
 typeof window.AscDesktopEditor.cloudCryptoCommand === "function";
 ```
 

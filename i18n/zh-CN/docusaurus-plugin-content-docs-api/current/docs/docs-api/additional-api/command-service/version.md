@@ -4,7 +4,7 @@
 
 ## 请求示例
 
-``` json
+```json
 {
   "c": "version"
 }
@@ -18,7 +18,7 @@
 
 ## 响应示例
 
-``` json
+```json
 {
   "error": 0,
   "version": "4.3.1.4"

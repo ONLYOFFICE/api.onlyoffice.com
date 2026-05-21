@@ -32,7 +32,7 @@ See the available command types below to find more about them.
 
 The JSON Web Token should be sent in the JSON object format to **document command service**. It is used to receive the status of the document with the key specified.
 
-``` json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
 }

@@ -57,7 +57,7 @@ GitHub 仓库地址：[highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 
 ## 配置
 
-``` json
+```json
 {
   "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}",
   "name": "Highlight code",

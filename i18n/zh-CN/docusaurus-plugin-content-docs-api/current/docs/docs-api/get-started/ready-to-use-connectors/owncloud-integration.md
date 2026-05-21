@@ -72,7 +72,7 @@ ownCloud管理员可以从内置的应用市场安装集成应用程序。为此
 
 在ownCloud中，打开包含**ONLYOFFICE**部分管理设置的*\~/settings/admin?sectionid=additional#onlyoffice*页面。输入以下地址来连接ONLYOFFICE 文档：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
@@ -94,7 +94,7 @@ https://<documentserver>/
 
 您可以使用以下occ命令检查与ONLYOFFICE 文档的连接：
 
-``` sh
+```sh
 occ onlyoffice:documentserver --check
 ```
 
@@ -109,7 +109,7 @@ occ onlyoffice:documentserver --check
 
 要注册应用程序，请使用以下代码行：
 
-``` json
+```json
 {
   "external_apps": [
     {

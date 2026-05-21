@@ -4,7 +4,7 @@ Requests a document status and the list of the identifiers of the users who open
 
 ## Request example
 
-``` json
+```json
 {
   "c": "info",
   "key": "Khirz6zTPdfd7",
@@ -22,7 +22,7 @@ Requests a document status and the list of the identifiers of the users who open
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7",

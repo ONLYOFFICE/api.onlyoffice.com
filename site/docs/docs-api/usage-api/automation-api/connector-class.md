@@ -32,7 +32,7 @@ The function called to add an item to the context menu. The process of working w
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
@@ -94,7 +94,7 @@ The function called to add an item to the toolbar menu. The process of working w
 
 #### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.addToolbarMenuItem({
   tabs: [
@@ -144,7 +144,7 @@ The function called to add an event listener, a function that will be called whe
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
@@ -167,7 +167,7 @@ This method is executed in its context isolated from other JavaScript data. If s
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.callCommand(() => {
   const oDocument = Api.GetDocument();
@@ -189,7 +189,7 @@ Please note that this method should only be called if you have disconnected the 
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.connect();
 ```
@@ -200,7 +200,7 @@ The function called to create the [connector modal window](./connector-window.md
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 ```
@@ -217,7 +217,7 @@ The function called to remove an event listener.
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.detachEvent("onChangeContentControl");
 ```
@@ -228,7 +228,7 @@ The function called to disconnect the connector from the editor.
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.disconnect();
 ```
@@ -253,7 +253,7 @@ The function called to execute certain editor methods using the connector. The f
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
@@ -272,7 +272,7 @@ The function called to update an item in the context menu with the specified ite
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const items = [
   {

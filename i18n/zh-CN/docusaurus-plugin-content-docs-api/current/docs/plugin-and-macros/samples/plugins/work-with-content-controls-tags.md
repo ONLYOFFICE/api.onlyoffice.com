@@ -35,7 +35,7 @@ GitHub 仓库：[https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example work with content controls tags",
   "guid": "asc.{C36DDFB5-08F0-4A68-B829-5FB1F7D49331}",

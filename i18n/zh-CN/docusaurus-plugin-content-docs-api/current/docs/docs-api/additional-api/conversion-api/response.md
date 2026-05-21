@@ -36,7 +36,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 在形成结果文件的链接时，使用与转换请求相同的服务器名称。
 
-``` xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <FileResult>
     <EndConvert>True</EndConvert>
@@ -50,7 +50,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 在形成结果文件的链接时，使用与转换请求相同的服务器名称。
 
-``` json
+```json
 {
   "endConvert": true,
   "fileType": "pdf",
@@ -99,7 +99,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 转换过程中发生错误时返回。
 
-``` json
+```json
 {
   "error": -3
 }

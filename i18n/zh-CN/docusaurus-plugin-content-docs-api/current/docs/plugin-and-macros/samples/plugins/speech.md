@@ -50,7 +50,7 @@ GitHub 仓库地址：[speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Speech",
   "nameLocale": {

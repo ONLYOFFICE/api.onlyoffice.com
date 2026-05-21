@@ -22,7 +22,7 @@ You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interac
 
 **Example**:
 
-``` json
+```json
 {
   "all": {},
   "pluginGuid": {}
@@ -37,7 +37,7 @@ The parameters applied to all plugins.
 
 **Example**:
 
-``` json
+```json
 {
   "all": {
     "keyAll": "valueAll"
@@ -53,7 +53,7 @@ The parameters for a specific plugin, identified by its GUID in the `asc.{UUID}`
 
 **Example**:
 
-``` json
+```json
 {
   "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}": {
     "keyYoutube": "valueYoutube"
@@ -75,19 +75,19 @@ The absolute URLs to the plugin [config.json](../../../../plugin-and-macros/stru
 
 To enable logging of plugin commands in the browser console, set the `asc_plugin_commands_log` key in the browser's local storage to `"true"`:
 
-``` js
+```js
 localStorage.setItem("asc_plugin_commands_log", "true");
 ```
 
 To disable logging, remove the key or set it to any other value:
 
-``` js
+```js
 localStorage.removeItem("asc_plugin_commands_log");
 ```
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

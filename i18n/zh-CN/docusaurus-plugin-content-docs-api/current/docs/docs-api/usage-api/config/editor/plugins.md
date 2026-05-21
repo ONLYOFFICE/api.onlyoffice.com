@@ -22,7 +22,7 @@ plugins 部分定义运行时插件参数。
 
 **示例**:
 
-``` json
+```json
 {
   "all": {},
   "pluginGuid": {}
@@ -37,7 +37,7 @@ plugins 部分定义运行时插件参数。
 
 **示例**:
 
-``` json
+```json
 {
   "all": {
     "keyAll": "valueAll"
@@ -53,7 +53,7 @@ plugins 部分定义运行时插件参数。
 
 **示例**:
 
-``` json
+```json
 {
   "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}": {
     "keyYoutube": "valueYoutube"
@@ -75,19 +75,19 @@ plugins 部分定义运行时插件参数。
 
 要在浏览器控制台中启用插件命令日志，请将浏览器本地存储中的 `asc_plugin_commands_log` 键设置为 `"true"`：
 
-``` js
+```js
 localStorage.setItem("asc_plugin_commands_log", "true");
 ```
 
 要禁用日志，请删除该键或将其设置为任意其他值：
 
-``` js
+```js
 localStorage.removeItem("asc_plugin_commands_log");
 ```
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

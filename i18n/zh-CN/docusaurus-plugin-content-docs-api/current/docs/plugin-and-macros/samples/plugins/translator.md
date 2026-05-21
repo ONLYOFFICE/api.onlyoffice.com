@@ -48,7 +48,7 @@ GitHub 仓库：[translator](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Translator",
   "nameLocale": {

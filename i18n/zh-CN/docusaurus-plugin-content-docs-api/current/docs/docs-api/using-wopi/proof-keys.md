@@ -19,7 +19,7 @@ sidebar_position: -6
 
 ## 示例
 
-``` json
+```json
 {
   "wopi": {
     "publicKey": "public key example",

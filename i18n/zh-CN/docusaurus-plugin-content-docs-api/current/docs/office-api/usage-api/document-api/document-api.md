@@ -20,7 +20,7 @@ sidebar_position: -5
 
 使用 **ONLYOFFICE Document Builder** 可以通过以下代码构建一个包含居中"Center"文本的单段落的最简单示例文本文档：
 
-``` ts
+```ts
 // create a document file in the .docx format with ONLYOFFICE Document Builder
 builder.CreateFile("docx");
 
@@ -56,7 +56,7 @@ builder.CloseFile();
 
 如果您想编辑已存在的文本文档，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。文档按以下方式打开：
 
-``` ts
+```ts
 // use a path or URL to an existing 'mydocument.docx' document file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/mydocument.docx");
 

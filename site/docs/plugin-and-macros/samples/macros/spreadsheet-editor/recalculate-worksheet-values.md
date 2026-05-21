@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Repeatedly recalculates worksheet cell values within one-second intervals.
 
-``` ts
+```ts
 (function ()
 {
     let timerId = setInterval(function(){

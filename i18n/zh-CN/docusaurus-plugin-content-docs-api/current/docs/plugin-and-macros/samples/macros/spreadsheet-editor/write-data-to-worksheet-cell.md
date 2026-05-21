@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将数据（*Hello world* 这个短语）写入工作表第 4 行第 3 列的单元格中。
 
-``` ts
+```ts
 (function()
 {
   Api.GetActiveSheet().GetRange("C4").SetValue("Hello world");

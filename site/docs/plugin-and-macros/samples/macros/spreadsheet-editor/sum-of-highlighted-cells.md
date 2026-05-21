@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Sums the answer of all highlighted cells in a spreadsheet.
 
-``` ts
+```ts
 (function () {
     let worksheet = Api.GetActiveSheet();
     let range1 = worksheet.GetRange("B1"); // Set your range for the color reference

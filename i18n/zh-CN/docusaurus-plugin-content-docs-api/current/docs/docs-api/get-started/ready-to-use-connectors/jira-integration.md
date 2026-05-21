@@ -44,7 +44,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在**管理应用程序**页面找到已上传的应用程序。点击**配置**，并输入安装了ONLYOFFICE 文档的服务器名称：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

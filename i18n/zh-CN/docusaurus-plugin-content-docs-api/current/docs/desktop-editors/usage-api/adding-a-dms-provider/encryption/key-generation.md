@@ -6,7 +6,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 要检查桌面应用是否支持加密，请调用以下命令：
 
-``` ts
+```ts
 typeof window.AscDesktopEditor.cloudCryptoCommand === "function";
 ```
 

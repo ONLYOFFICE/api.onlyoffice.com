@@ -12,7 +12,7 @@ Unmerges all the merged cells in the active worksheet.
 This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
 :::
 
-``` ts
+```ts
 (function(){
     // Get the active sheet
     var oWorksheet = Api.GetActiveSheet();

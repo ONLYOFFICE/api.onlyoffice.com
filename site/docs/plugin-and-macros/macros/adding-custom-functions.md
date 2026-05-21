@@ -66,7 +66,7 @@ The following properties are available:
 
 Example:
 
-``` ts
+```ts
 (function()
 {
   /**
@@ -104,7 +104,7 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 
 :::
 
-``` ts
+```ts
 (function()
 {
   /**

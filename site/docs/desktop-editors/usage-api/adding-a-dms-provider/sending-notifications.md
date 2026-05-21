@@ -6,13 +6,13 @@ sidebar_position: -7
 
 The desktop app can send text messages to be displayed to the user. To do so, declare the function:
 
-``` ts
+```ts
 window.onSystemMessage = function onSystemMessage(e) {};
 ```
 
 The `e` object has the following structure:
 
-``` json
+```json
 {
   "type": "operation",
   "opMessage": "Loading...",
@@ -39,7 +39,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## Example
 
-``` ts
+```ts
 window.onSystemMessage({type: "operation", opType: 1});
 ```
 
@@ -49,6 +49,6 @@ The desktop app can send notifications about file editing completion.
 
 Declare the following global function:
 
-``` ts
+```ts
 window.DesktopUpdateFile = function DesktopUpdateFile() {};
 ```

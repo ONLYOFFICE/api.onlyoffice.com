@@ -58,7 +58,7 @@ The position of the embedded viewer toolbar.
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 移除演示文稿中幻灯片上的形状。
 
-``` ts
+```ts
 (function () {
   let presentation = Api.GetPresentation();
   let slidesCount = presentation.GetSlidesCount();

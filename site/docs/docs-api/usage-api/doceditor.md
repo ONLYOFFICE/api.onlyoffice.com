@@ -26,7 +26,7 @@ You can [preload static resources](../get-started/configuration/preload.md) (HTM
 
 To create an editor instance, call the `DocEditor` constructor with two arguments — the `id` attribute of an existing HTML element where the editor will be rendered, and a [configuration object](./config/config.md):
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
@@ -39,7 +39,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The constructor returns a `docEditor` object. Use it to call [methods](./methods.md) that control the editor at runtime — download files, manage version history, update sharing settings, and more:
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 // later, when handling events or user actions:
@@ -53,7 +53,7 @@ See [Methods](./methods.md) for the full list.
 
 Events are functions passed in the `config.events` section. They allow the integrator to respond to editor actions — for example, when the document is ready, when the user requests to save, or when collaborative changes arrive:
 
-``` ts
+```ts
 const config = {
   events: {
     onAppReady() {
@@ -72,7 +72,7 @@ See [Events](./config/events.md) for the full list of available events.
 
 ## Minimal example
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",

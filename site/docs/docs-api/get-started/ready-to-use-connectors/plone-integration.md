@@ -33,7 +33,7 @@ To start using ONLYOFFICE Docs with Plone, the following steps must be performed
 
 You can also install the plugin via Docker:
 
-``` sh
+```sh
 docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 start
 ```
 
@@ -51,7 +51,7 @@ Starting from version 7.2, JWT is enabled by default and the secret key is gener
 
 Run this command to install the add-on from the local repository:
 
-``` sh
+```sh
 docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
 ```
 

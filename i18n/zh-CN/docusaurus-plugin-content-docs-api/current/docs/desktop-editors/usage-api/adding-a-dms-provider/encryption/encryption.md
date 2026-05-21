@@ -10,7 +10,7 @@ sidebar_position: -1
 
 声明 *cloudCryptoCommand* 函数来处理来自桌面应用的消息：
 
-``` ts
+```ts
 window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) {};
 ```
 

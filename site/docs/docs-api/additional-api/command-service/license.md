@@ -4,7 +4,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 
 ## Request example
 
-``` json
+```json
 {
   "c": "license"
 }
@@ -18,7 +18,7 @@ Requests the license from ONLYOFFICE Docs with information about the server and 
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "license": {

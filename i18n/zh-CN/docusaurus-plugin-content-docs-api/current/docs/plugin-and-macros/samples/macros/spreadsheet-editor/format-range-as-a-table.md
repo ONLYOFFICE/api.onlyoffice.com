@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将单元格范围 **A1:D10** 格式化为表格。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().FormatAsTable("A1:D10");

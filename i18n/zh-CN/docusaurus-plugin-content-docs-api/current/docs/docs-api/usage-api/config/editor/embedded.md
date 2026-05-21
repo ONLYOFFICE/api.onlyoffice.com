@@ -58,7 +58,7 @@ embedded 部分定义嵌入模式参数。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

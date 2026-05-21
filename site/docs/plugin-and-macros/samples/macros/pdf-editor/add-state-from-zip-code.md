@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "PDF"]
 
 Adds the "State" label and the text form prefilled with "CA" if the zip code of California is entered. It can be extended by using API to prefill "State" when entering the zip code.
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();

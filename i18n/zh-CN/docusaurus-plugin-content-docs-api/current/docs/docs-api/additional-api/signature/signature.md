@@ -56,7 +56,7 @@ ONLYOFFICE 文档[使用](../../get-started/how-it-works/security.md)令牌，�
 
 ## 示例 local.json 配置
 
-``` json
+```json
 {
   "services": {
     "CoAuthoring": {

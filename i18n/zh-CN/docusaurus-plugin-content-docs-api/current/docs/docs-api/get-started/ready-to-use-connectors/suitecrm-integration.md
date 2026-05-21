@@ -36,7 +36,7 @@ sidebar_custom_props:
 
 输入以下地址以连接ONLYOFFICE 文档：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

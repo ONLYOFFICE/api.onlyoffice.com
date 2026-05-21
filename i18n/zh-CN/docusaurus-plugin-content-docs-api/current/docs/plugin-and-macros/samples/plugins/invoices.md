@@ -28,7 +28,7 @@ GitHub 仓库地址：[invoices](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Invoices",
   "guid": "asc.{6B6715E5-A558-4F70-8058-40704CD659CF}",

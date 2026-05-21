@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 计算电子表格中所有高亮单元格的数值总和。
 
-``` ts
+```ts
 (function () {
     let worksheet = Api.GetActiveSheet();
     let range1 = worksheet.GetRange("B1"); // 设置用于颜色参考的单元格范围

@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Highlights duplicates in the selected area with different colors to recognize duplicated values quickly.
 
-``` ts
+```ts
 (function () 
 {
     // Background color of cells with non-repeating values

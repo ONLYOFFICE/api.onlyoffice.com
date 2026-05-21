@@ -10,7 +10,7 @@ Before you start working on documents stored within your cloud, you need to log 
 
 Use the [execCommand](./execcommand.md) method to display a cloud in the **Connected clouds** list. When the *portal:login* command is sent, the cloud is registered and listed on the **Connected clouds** page. Call the command on all the pages you can access after logging in to your cloud. Parameters are specified in the format of a string with the serialized *json* as follows:
 
-``` json
+```json
 {
   "displayName": "user name", 
   "email": "user@email.addr",
@@ -41,7 +41,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 #### Example
 
-``` ts
+```ts
 const params = {
   displayName: "John Smith",
   email: "john@example.com",
@@ -57,7 +57,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params));
 
 Use the [execCommand](./execcommand.md) method to remove a cloud from the **Connected clouds** list. When the *portal:logout* command is sent, the cloud will be removed from the list on the **Connected clouds** page. Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized *json* as follows:
 
-``` json
+```json
 {
   "domain": "domain name"
 }
@@ -77,7 +77,7 @@ Use the [execCommand](./execcommand.md) method to remove a cloud from the **Conn
 
 #### Example
 
-``` ts
+```ts
 window.AscDesktopEditor.execCommand("portal:logout", JSON.stringify({
   domain: "https://exampledomain.com",
 }));

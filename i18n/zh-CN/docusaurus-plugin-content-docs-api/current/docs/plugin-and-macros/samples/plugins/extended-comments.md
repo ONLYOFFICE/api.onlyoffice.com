@@ -38,7 +38,7 @@ GitHub 仓库：[example_extended_comments](https://github.com/ONLYOFFICE/sdkjs-
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Extended comments",
   "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}",

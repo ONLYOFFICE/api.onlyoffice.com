@@ -132,7 +132,7 @@ To update the context menu item, specify the **UpdateContextMenuItem** method.
 
 **Example**:
 
-``` ts
+```ts
 Asc.plugin.attachEvent("onContextMenuShow", (options) => {
   const items = {
     guid: window.Asc.plugin.guid,

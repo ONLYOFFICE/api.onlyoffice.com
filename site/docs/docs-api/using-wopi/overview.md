@@ -55,7 +55,7 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 ### Example
 
-``` json
+```json
 {
   "wopi": {
     "enable": true

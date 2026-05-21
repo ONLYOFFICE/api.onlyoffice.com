@@ -36,7 +36,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 When forming the link to the resulting file, the same server name is used to which the conversion request was made.
 
-``` xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <FileResult>
     <EndConvert>True</EndConvert>
@@ -50,7 +50,7 @@ When forming the link to the resulting file, the same server name is used to whi
 
 When forming the link to the resulting file, the same server name is used to which the conversion request was made.
 
-``` json
+```json
 {
   "endConvert": true,
   "fileType": "pdf",
@@ -99,7 +99,7 @@ Returned when an error occurs during the conversion.
 
 Returned when an error occurs during the conversion.
 
-``` json
+```json
 {
   "error": -3
 }

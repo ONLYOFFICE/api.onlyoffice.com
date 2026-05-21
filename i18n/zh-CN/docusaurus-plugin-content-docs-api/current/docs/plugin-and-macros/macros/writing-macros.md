@@ -52,7 +52,7 @@ sidebar_position: -5
 
 现在我们将其整合成完整的脚本代码：
 
-``` ts
+```ts
 (function()
 {
     let worksheet = Api.GetActiveSheet();
@@ -96,7 +96,7 @@ sidebar_position: -5
 
 例如，要在文档中点击超链接时订阅事件，可以使用以下代码：
 
-``` ts
+```ts
 Api.attachEvent("asc_onHyperlinkClick", () => {
   console.log("HYPERLINK!!!");
 })

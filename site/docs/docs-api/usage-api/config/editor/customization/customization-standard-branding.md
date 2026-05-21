@@ -23,7 +23,7 @@ Adds a request for the anonymous name.
 
 **Example**:
 
-``` ts
+```ts
 {
   request: true,
   label: "Elizabeth",
@@ -82,7 +82,7 @@ The settings for the cross button to close the editor.
 
 **Example**:
 
-``` ts
+```ts
 {
   visible: true,
   text: "Close file",
@@ -177,7 +177,7 @@ This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onl
 
 **Example**:
 
-``` ts
+```ts
 {
   address: "My City, 123a-45",
   info: "Some additional information",
@@ -272,7 +272,7 @@ The parameters that the user can disable or customize if possible.
 
 **Example**:
 
-``` ts
+```ts
 {
   featuresTips: true,
   roles: true,
@@ -390,7 +390,7 @@ The settings for the **Feedback & Support** menu button. If set to `false`, the 
 
 **Example**:
 
-``` ts
+```ts
 {
   url: "https://example.com",
   visible: true,
@@ -443,7 +443,7 @@ The settings for the **Open file location** menu button and upper right corner b
 
 **Example**:
 
-``` ts
+```ts
 {
   blank: true,
   text: "Open file location",
@@ -555,7 +555,7 @@ This parameter is available only for [ONLYOFFICE Docs Developer](https://www.onl
 
 **Example**:
 
-``` ts
+```ts
 {
   image: "https://example.com/logo.png",
   imageDark: "https://example.com/dark-logo.png",
@@ -668,7 +668,7 @@ The mobile document editor settings.
 
 **Example**:
 
-``` ts
+```ts
 {
   forceView: true,
   info: false,
@@ -752,7 +752,7 @@ The [showReviewChanges](#showreviewchanges), [reviewDisplay](#reviewdisplay), [t
 
 **Example**:
 
-``` ts
+```ts
 {
   hideReviewDisplay: false,
   showReviewChanges: false,
@@ -819,7 +819,7 @@ This parameter is used together with the [user.group](../editor.md#user) field a
 
 **Example**:
 
-``` ts
+```ts
 {
   "Group1": ["Group2"],
   "Group2": ["Group1", "Group2"],
@@ -914,7 +914,7 @@ The *Start filling* button settings in PDF form editing mode.
 
 **Example**:
 
-``` ts
+```ts
 {
   text: "Share & collect",
 }
@@ -936,7 +936,7 @@ The **Complete & Submit** button settings. If set to `false`, the button is hidd
 
 **Example**:
 
-``` ts
+```ts
 {
   visible: true,
   resultMessage: "Form submitted successfully",
@@ -1071,7 +1071,7 @@ In case this setting is changed in the editor interface, it will be stored in th
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

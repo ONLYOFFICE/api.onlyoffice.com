@@ -59,7 +59,7 @@ The request result is returned in JSON format.
 
 Below is a simple `.js` script that creates a document with "Hello World!" text:
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -80,7 +80,7 @@ In the examples below, `example.com` represents the server where your **document
 
 **Step 1.** Send the initial request with the `.js` script file URL:
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -91,7 +91,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "end": false
@@ -100,7 +100,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Step 2.** Poll using the returned `key` until `end` is `true`:
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -111,7 +111,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -123,7 +123,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### Synchronous request
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -134,7 +134,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -146,7 +146,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### Asynchronous request with token
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -156,7 +156,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "error": -8
 }
@@ -168,7 +168,7 @@ This example demonstrates the error response when the token is invalid. See the 
 
 ### Synchronous request with arguments
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -183,7 +183,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -197,7 +197,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 A `.js` script can generate multiple files. For example:
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -212,7 +212,7 @@ builder.SaveFile("xlsx", "spreadsheet1.xlsx");
 builder.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -223,7 +223,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -239,7 +239,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 You can compare two documents and generate a result file with tracked changes. The script uses [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) to open the second document for comparison:
 
-``` js
+```js
 builderJS.OpenFile("https://example.com/file1.docx");
 const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
 AscCommonWord.CompareDocuments(Api, file, null);
@@ -248,7 +248,7 @@ builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -259,7 +259,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "Khirz6zTPdfd7",
   "urls": {

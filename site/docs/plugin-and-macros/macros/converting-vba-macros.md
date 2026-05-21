@@ -44,7 +44,7 @@ End Sub
 
 You can paste this VBA code into the AI plugin converter. The plugin will return the following JavaScript macro:
 
-``` ts
+```ts
 (function(){
     // This code will unmerge all the merged cells in the active worksheet
     
@@ -104,7 +104,7 @@ The macro counts the sum of the values from the three cell ranges of the **A** c
 
 The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
 
-``` ts
+```ts
 (function()
 {
   for (let run = 1; run <= 3; run += 1) {

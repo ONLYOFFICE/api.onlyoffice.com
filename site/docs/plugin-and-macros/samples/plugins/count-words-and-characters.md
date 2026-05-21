@@ -47,7 +47,7 @@ Repository on GitHub: [wordscounter](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Config
 
-``` json
+```json
 {
   "name": "Word counter",
   "nameLocale": {

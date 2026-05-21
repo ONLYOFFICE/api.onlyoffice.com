@@ -22,7 +22,7 @@ Plugin group that is separated from other plugins in the **Plugins** tab. The fi
 
 **Example**:
 
-``` json
+```json
 {
   "name": "group name",
   "rank": 2
@@ -97,7 +97,7 @@ The translations for the text field. The object keys are the two letter language
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -135,7 +135,7 @@ Plugin variations, or subplugins, that are created inside the origin plugin. Mor
 
 **Example**:
 
-``` json
+```json
 [
   {
     "buttons": [
@@ -195,7 +195,7 @@ The list of skinnable plugin buttons used in the plugin interface. This paramete
 
 **Example**:
 
-``` json
+```json
 [
   {
     "text": "Cancel",
@@ -226,7 +226,7 @@ The skinnable plugin button used in the plugin interface (used for visual plugin
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -321,7 +321,7 @@ The editors which the plugin is available for:
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -351,7 +351,7 @@ Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -413,7 +413,7 @@ The data type selected in the editor and sent to the plugin:
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -551,7 +551,7 @@ Plugin display options in **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "background": {
     "light": "#F5F5F5",
@@ -574,7 +574,7 @@ Background colors used for plugin icons in **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "light": "#F5F5F5",
   "dark": "#444444"
@@ -627,7 +627,7 @@ Paths to the plugin icon image files used in the **ONLYOFFICE Plugin Marketplace
 
 **Example**:
 
-``` json
+```json
 {
   "light": "resources/store/icons",
   "dark": "resources/store/icons"
@@ -709,7 +709,7 @@ The plugin version.
 
 ## Example
 
-``` json
+```json
 {
   "baseUrl": "",
   "group": {

@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将单元格 A2 的字体设置为加粗。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("A2").SetBold(true);

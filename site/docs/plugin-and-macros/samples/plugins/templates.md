@@ -34,7 +34,7 @@ Repository on GitHub: [templates](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
 
 ## Config
 
-``` json
+```json
 {
   "name": "Document Templates",
   "guid": "asc.{94DF0B57-299D-4F68-AF6F-9A6BB53F3031}",

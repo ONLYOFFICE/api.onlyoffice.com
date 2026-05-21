@@ -22,7 +22,7 @@ In order to convert different file formats in the online office, the POST reques
 
 ### Sample of conversion request
 
-``` sh
+```sh
 curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.docx
 ```
 
@@ -30,7 +30,7 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 
 ### Sample of conversion request in the HTML format
 
-``` html
+```html
 <form action="https://documentserver/cool/convert-to/docx" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     <input type="submit" value="Convert to DOCX">
@@ -41,7 +41,7 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 
 ### Sample of conversion request with the *format* parameter
 
-``` sh
+```sh
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
@@ -49,7 +49,7 @@ where the **documentserver** is the name of the server with the ONLYOFFICE Docs 
 
 ### Sample of conversion request with the *format* parameter in the HTML format
 
-``` html
+```html
 <form action="https://documentserver/cool/convert-to" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     Format: <input type="text" name="format"><br/>

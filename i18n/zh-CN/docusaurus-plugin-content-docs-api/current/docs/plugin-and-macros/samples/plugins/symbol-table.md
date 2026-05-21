@@ -40,7 +40,7 @@ GitHub 仓库地址：[符号表](https://github.com/ONLYOFFICE/sdkjs-plugins/tr
   
 ## 配置
 
-``` json
+```json
 {
   "name": "Symbol Table",
   "nameLocale": {

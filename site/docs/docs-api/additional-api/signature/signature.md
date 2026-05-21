@@ -56,7 +56,7 @@ Restart the services for the config changes to take effect:
 
 ## Sample local.json configuration
 
-``` json
+```json
 {
   "services": {
     "CoAuthoring": {

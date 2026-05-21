@@ -115,7 +115,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了将 *docx* 文件转换为 *pdf* 格式的基本请求。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -132,7 +132,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *password* 参数将受密码保护的 *docx* 文件转换为 *pdf* 格式。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -150,7 +150,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *pdf.form* 参数将 *docx* 文件转换为可填写的 *pdf* 表单。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -170,7 +170,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *watermark* 参数将 *docx* 文件转换为带水印的 *pdf* 格式。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -221,7 +221,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *thumbnail* 参数从 *docx* 文件生成 *png* 缩略图。
 
-``` json
+```json
 {
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
@@ -243,7 +243,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *spreadsheetLayout* 参数将电子表格文件转换为 *pdf* 格式。
 
-``` json
+```json
 {
   "filetype": "xlsx",
   "key": "Khirz6zTPdfd7",
@@ -279,7 +279,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 JSON Web Token 进行身份验证，将 *docx* 文件转换为 *pdf* 格式。
 
-``` json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }

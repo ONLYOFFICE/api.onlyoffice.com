@@ -49,7 +49,7 @@ You can also install the app from Confluence administration panel:
 
 Find the uploaded **ONLYOFFICE Connector for Confluence** on the **Manage add-ons** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

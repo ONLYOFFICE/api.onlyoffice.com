@@ -4,7 +4,7 @@
 
 ## 请求示例
 
-``` json
+```json
 {
   "c": "getForgottenList"
 }
@@ -18,7 +18,7 @@
 
 ## 响应示例
 
-``` json
+```json
 {
   "error": 0,
   "keys": ["Khirz6zTPdfd7"]

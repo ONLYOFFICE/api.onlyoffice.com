@@ -244,7 +244,7 @@ sidebar_position: -20
 
 您可以使用 [editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting) 参数来更改协同编辑模式：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     coEditing: {

@@ -34,7 +34,7 @@ The `[""]` value means that the user can edit/remove/view comments made by someo
 
 **Example**:
 
-``` ts
+```ts
 const config = {
   edit: ["Group2", ""],
   remove: [""],
@@ -202,7 +202,7 @@ The `["Group1", ""]` means that the information about users from Group1 and user
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

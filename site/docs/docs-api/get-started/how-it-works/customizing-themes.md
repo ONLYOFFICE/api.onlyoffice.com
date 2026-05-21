@@ -13,7 +13,7 @@ You can create custom interface themes for ONLYOFFICE Docs by adding JSON config
 
 Create a `.json` file with the following structure:
 
-``` json
+```json
 {
   "name": "Amazing theme",
   "l10n": {
@@ -72,7 +72,7 @@ Once deployed, the theme will be available in the **View** tab > **Interface The
 
 To apply a custom theme through the editor initialization config, pass its `id` to the [`editorConfig.customization.uiTheme`](../../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) parameter:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -227,7 +227,7 @@ The `colors` object supports the following parameters. All default values corres
 
 ## Full example
 
-``` json
+```json
 {
   "name": "Amazing theme",
   "l10n": {

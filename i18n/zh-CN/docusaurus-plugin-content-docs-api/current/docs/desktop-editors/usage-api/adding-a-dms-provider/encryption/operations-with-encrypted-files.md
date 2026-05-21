@@ -23,7 +23,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 示例
 
-``` ts
+```ts
 window.AscDesktopEditor.cloudCryptoCommand("upload", {
   cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
   filter: "*.docx *.xlsx *.pptx",
@@ -32,7 +32,7 @@ window.AscDesktopEditor.cloudCryptoCommand("upload", {
 
 用户选择文件后，文件将被循环加密并传输到 *callback*：
 
-``` ts
+```ts
 callback({
   bytes: [],
   name: "Example Document Title.docx",
@@ -60,7 +60,7 @@ callback({
 
 ### 示例
 
-``` ts
+```ts
 window.AscDesktopEditor.cloudCryptoCommand("share", {
   cryptoEngineId: "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
   file: ["https://example.com/url-to-example-document.docx"],
@@ -73,7 +73,7 @@ window.AscDesktopEditor.cloudCryptoCommand("share", {
 
 文件由桌面应用上传并加密。文件的访问权限通过密钥传递给它。之后，它会被传输到 *callback*：
 
-``` ts
+```ts
 callback({
   bytes: [],
   isCrypto: true,

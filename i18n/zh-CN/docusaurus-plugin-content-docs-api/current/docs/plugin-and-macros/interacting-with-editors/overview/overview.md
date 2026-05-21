@@ -26,7 +26,7 @@ sidebar_position: -2
 
 以 helloworld.js 插件为例：
 
-``` ts
+```ts
 window.Asc.plugin.init = function init() {
   this.callCommand(() => {
     const oDocument = Api.GetDocument()

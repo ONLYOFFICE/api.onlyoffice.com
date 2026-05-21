@@ -132,7 +132,7 @@ sidebar_position: -6
 
 **示例**:
 
-``` ts
+```ts
 Asc.plugin.attachEvent("onContextMenuShow", (options) => {
   const items = {
     guid: window.Asc.plugin.guid,

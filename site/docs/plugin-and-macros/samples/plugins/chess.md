@@ -37,7 +37,7 @@ Repository on GitHub: [chess](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## Config
 
-``` json
+```json
 {
   "name": "Chess",
   "nameLocale": {

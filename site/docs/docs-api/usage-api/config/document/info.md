@@ -36,7 +36,7 @@ The information about the settings which allow sharing the document with other u
 
 **Example**:
 
-``` ts
+```ts
 [
   {
     isLink: false,
@@ -84,7 +84,7 @@ The document uploading date.
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

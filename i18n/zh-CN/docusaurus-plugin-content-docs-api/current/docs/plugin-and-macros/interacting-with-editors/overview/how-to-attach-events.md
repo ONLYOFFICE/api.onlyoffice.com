@@ -23,7 +23,7 @@ sidebar_position: -1
 
    ### 示例
 
-``` ts
+```ts
 Asc.plugin.attachEditorEvent("onAddComment", (data) => {
   console.log(data);
 });

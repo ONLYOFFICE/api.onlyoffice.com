@@ -16,7 +16,7 @@ sidebar_position: -3
 
 使用 **ONLYOFFICE Document Builder** 可以通过以下代码构建一个包含单个空白幻灯片的最简单示例演示文稿：
 
-``` ts
+```ts
 // create a presentation file in the .pptx format with ONLYOFFICE Document Builder
 builder.CreateFile("pptx");
 
@@ -40,7 +40,7 @@ builder.CloseFile();
 
 如果您想编辑已存在的演示文稿，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。演示文稿按以下方式打开：
 
-``` ts
+```ts
 // use a path or URL to an existing 'mypresentation.pptx' presentation file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/mypresentation.pptx");
 

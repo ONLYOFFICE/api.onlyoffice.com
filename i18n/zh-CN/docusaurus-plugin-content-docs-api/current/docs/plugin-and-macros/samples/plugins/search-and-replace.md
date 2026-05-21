@@ -29,7 +29,7 @@ GitHub 仓库：[示例：查找并替换](https://github.com/ONLYOFFICE/sdkjs-p
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example of search and replace",
   "guid": "asc.{5FF5F75F-2977-4B98-8D36-7C406D610B90}",

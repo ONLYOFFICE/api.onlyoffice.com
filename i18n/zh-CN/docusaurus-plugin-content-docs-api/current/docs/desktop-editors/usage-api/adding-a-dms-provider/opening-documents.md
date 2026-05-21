@@ -21,7 +21,7 @@ sidebar_position: -4
 
 **选项 2.** 使用 [execCommand](./execcommand.md) 方法的 *open:document* 命令。发送此命令后，文档将被打开。参数以带有序列化 *json* 的字符串格式指定，如下所示：
 
-``` json
+```json
 {
   "url": "文档的 URL",
   "type": "类型",
@@ -46,7 +46,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## 示例
 
-``` ts
+```ts
 const params = {
   url: "https://example.com/url-to-example-document.docx",
   type: "word",

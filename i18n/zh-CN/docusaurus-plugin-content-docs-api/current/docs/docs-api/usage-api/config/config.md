@@ -84,7 +84,7 @@ config base 部分定义了初始化文档编辑器的顶级参数。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   documentType: "word",
   type: "mobile",

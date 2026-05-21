@@ -32,7 +32,7 @@
 
 JSON Web令牌应以JSON对象格式发送到**文档命令服务**它用于接收具有指定键的文档的状态。
 
-``` json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
 }

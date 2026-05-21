@@ -18,7 +18,7 @@ sidebar_position: -15
 
 如果 `permissions.edit` 为 `false` 且 `permissions.review` 为 `true`，则文档仅可用于审阅。
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {

@@ -6,7 +6,7 @@ sidebar_position: -3
 
 Starting from version 7.5, you can change a theme of the desktop editor tab. To do this, use the *portal:uitheme* command of the [execCommand](./execcommand.md) method.
 
-``` ts
+```ts
 window.AscDesktopEditor.execCommand("portal:uitheme", editorTheme);
 ```
 
@@ -27,7 +27,7 @@ Example: "theme-dark"
 
 ## Example
 
-``` ts
+```ts
 window.AscDesktopEditor.execCommand("portal:uitheme", "theme-dark");
 ```
 

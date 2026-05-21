@@ -32,7 +32,7 @@ GitHub 仓库： [自动完成](https://github.com/ONLYOFFICE/onlyoffice.github.
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Autocomplete",
   "nameLocale": {

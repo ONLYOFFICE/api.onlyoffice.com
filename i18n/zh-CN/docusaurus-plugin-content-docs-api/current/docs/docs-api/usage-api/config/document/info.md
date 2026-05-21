@@ -36,7 +36,7 @@ info 部分定义文档信息参数。
 
 **示例**:
 
-``` ts
+```ts
 [
   {
     isLink: false,
@@ -84,7 +84,7 @@ info 部分定义文档信息参数。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

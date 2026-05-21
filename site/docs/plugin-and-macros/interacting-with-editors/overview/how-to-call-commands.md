@@ -33,7 +33,7 @@ This method doesn't return any data.
 
 ### Example
 
-``` ts
+```ts
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument();
   const oParagraph = Api.CreateParagraph();
@@ -52,7 +52,7 @@ The functions cannot be passed to the *callCommand* method using the *Asc.sco
 
 ### Example
 
-``` ts
+```ts
 Asc.scope.text = text;
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument();
@@ -95,7 +95,7 @@ See the available *window.Asc.plugin.info* object parameters below to find out m
 
 ### Example for the data, height, imgSrc, mmToPx, objectId and width parameters
 
-``` ts
+```ts
 window.Asc.plugin.button = (id) => {
   const info = window.Asc.plugin.info;
 
@@ -134,7 +134,7 @@ window.Asc.plugin.button = (id) => {
 
 ### Example for the editorType parameter
 
-``` ts
+```ts
 function createScriptFromArray(aSelected) {
   if (aSelected.length !== 0) {
     switch (window.Asc.plugin.info.editorType) {
@@ -153,7 +153,7 @@ function createScriptFromArray(aSelected) {
 
 ### Example for the guid parameter
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   const plugin_uuid = window.Asc.plugin.info.guid;
 };
@@ -161,7 +161,7 @@ window.Asc.plugin.init = () => {
 
 ### Example for the recalculate parameter
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   let sScript = "var oDocument = Api.GetDocument();";
   sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
@@ -175,7 +175,7 @@ window.Asc.plugin.init = () => {
 
 ### Example for the resize parameter
 
-``` ts
+```ts
 if (window.Asc.plugin.info.resize === true) {
   window.Asc.plugin.button(0);
 }

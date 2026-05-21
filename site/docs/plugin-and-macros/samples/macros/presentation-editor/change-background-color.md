@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Presentations"]
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.
 
-``` ts
+```ts
 (function()
 {
     let presentation = Api.GetPresentation(); 

@@ -12,7 +12,7 @@ Create a document with formatted text using different methods:
 - insert line breaks within paragraphs to create multi-line content ([ApiParagraph/AddLineBreak](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddLineBreak.md));
 - apply text formatting including bold, italic, font size, and color ([ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md)).
 
-``` ts editor-docx
+```ts editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

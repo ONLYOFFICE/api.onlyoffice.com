@@ -6,7 +6,7 @@ sidebar_position: -3
 
 初始化 [`DocEditor`](./doceditor.md) 后，您将获得可用于调用方法的对象。
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
@@ -118,7 +118,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 :::note
 在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：
 
-``` ts
+```ts
 docEditor.insertImage({
   c: "add",
   fileType: "png",

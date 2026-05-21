@@ -6,7 +6,7 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 
 ## Request example
 
-``` json
+```json
 {
   "c": "drop",
   "key": "Khirz6zTPdfd7",
@@ -24,7 +24,7 @@ Starting from version 8.3, if the *users* parameter is not specified, the docume
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7"

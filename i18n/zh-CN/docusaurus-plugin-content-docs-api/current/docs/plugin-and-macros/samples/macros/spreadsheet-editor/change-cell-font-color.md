@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将单元格 **B4** 的字体颜色设置为红色。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("B4").SetFontColor(Api.CreateColorFromRGB(255, 0, 0));

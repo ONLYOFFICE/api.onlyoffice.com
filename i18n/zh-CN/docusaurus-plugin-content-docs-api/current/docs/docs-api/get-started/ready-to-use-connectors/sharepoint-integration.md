@@ -71,7 +71,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在SharePoint中，打开包含管理设置的 */\_layouts/15/Onlyoffice/Settings.aspx*页面。输入以下地址来连接ONLYOFFICE 文档：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

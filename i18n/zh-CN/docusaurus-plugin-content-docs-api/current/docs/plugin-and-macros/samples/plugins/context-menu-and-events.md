@@ -29,7 +29,7 @@
 
 ## 配置
 
-``` json
+```json
 {
   "name": "ContextMenu and Events",
   "guid": "asc.{B617C899-03AA-476F-8D2C-1B7272489CBC}",
@@ -104,7 +104,7 @@
 
 ## index.html
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -120,7 +120,7 @@
 
 ## 插件代码
 
-``` ts
+```ts
 console.log("work")
 window.Asc.plugin.init = function init() {}
 window.Asc.plugin.button = function button(id) {

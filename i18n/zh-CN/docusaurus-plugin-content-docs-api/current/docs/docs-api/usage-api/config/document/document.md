@@ -50,7 +50,7 @@
 
 **示例**:
 
-``` json
+```json
 {
   "fileKey": "BCFA2CED",
   "instanceId": "https://example.com"
@@ -103,7 +103,7 @@
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

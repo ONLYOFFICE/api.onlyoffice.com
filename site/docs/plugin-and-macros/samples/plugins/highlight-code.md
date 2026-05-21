@@ -62,7 +62,7 @@ Repository on GitHub: [highlightcode](https://github.com/ONLYOFFICE/onlyoffice.g
 
 ## Config
 
-``` json
+```json
 {
   "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}",
   "name": "Highlight code",

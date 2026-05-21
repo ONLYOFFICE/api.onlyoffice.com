@@ -4,7 +4,7 @@ Updates the meta information of the document for all collaborative editors.
 
 ## Request example
 
-``` json
+```json
 {
   "c": "meta",
   "key": "Khirz6zTPdfd7",
@@ -25,7 +25,7 @@ Updates the meta information of the document for all collaborative editors.
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7"

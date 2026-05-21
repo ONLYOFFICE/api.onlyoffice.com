@@ -71,7 +71,7 @@ import TabItem from '@theme/TabItem';
 
 例如，对于 **扩展评论** 插件，*guid* 参数如下所示：
 
-``` json
+```json
 {
   "name": "Extended comments",
   "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}"

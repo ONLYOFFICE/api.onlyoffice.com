@@ -22,7 +22,7 @@ sidebar_position: -3
 
 ### 转换请求示例
 
-``` sh
+```sh
 curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.docx
 ```
 
@@ -30,7 +30,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 
 ### HTML 格式的转换请求示例
 
-``` html
+```html
 <form action="https://documentserver/cool/convert-to/docx" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     <input type="submit" value="Convert to DOCX">
@@ -41,7 +41,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 
 ### 带有*格式*参数的转换请求示例
 
-``` sh
+```sh
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
@@ -49,7 +49,7 @@ curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserv
 
 ### *格式*参数为 HTML 格式的转换请求示例
 
-``` html
+```html
 <form action="https://documentserver/cool/convert-to" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     Format: <input type="text" name="format"><br/>

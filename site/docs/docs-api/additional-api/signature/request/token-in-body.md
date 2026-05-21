@@ -34,7 +34,7 @@ These parameters must be encoded into the token so that the request looked like 
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ Sample parameters of request to convert the document:
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
   -d '{
@@ -85,7 +85,7 @@ Sample parameters of request to document builder service:
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -110,7 +110,7 @@ Sample parameters of request to "callbackUrl" address by document editing servic
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{

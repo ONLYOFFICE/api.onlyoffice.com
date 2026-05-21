@@ -66,7 +66,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### Example
 
-``` json
+```json
 {
   "provider": "onlyoffice",
   "name": "ONLYOFFICE",

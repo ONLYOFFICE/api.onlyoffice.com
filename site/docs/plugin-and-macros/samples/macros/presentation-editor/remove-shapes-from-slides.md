@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Presentations"]
 
 Removes shapes from slides in a presentation.
 
-``` ts
+```ts
 (function () {
   let presentation = Api.GetPresentation();
   let slidesCount = presentation.GetSlidesCount();

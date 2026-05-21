@@ -49,7 +49,7 @@ sidebar_position: -18
 
 要在书签位置打开文档，请将 `ACTION_DATA` 对象（最初从 [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) 事件接收到的）作为 [`editorConfig.actionLink`](../../usage-api/config/editor/editor.md#actionlink) 的值传入：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     actionLink: ACTION_DATA,

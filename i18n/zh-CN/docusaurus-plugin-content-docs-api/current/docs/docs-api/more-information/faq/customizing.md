@@ -30,7 +30,7 @@ sidebar_position: -7
 
 填写所有上述字段后，*定制*配置将如下所示：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -61,7 +61,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     lang: "de",
@@ -79,7 +79,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 默认情况下聊天和评论是被启用的。要禁用它们，请使用 *document.permissions.comment* 和 *document.permissions.chat* 参数，并在配置文件中将它们的值分别设置为 **false**:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -100,7 +100,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您可以显示完整的顶部工具栏或其紧凑版本。为了控制这一点，使用 *editorConfig.customization.compactToolbar* 参数。使用默认的 **false** 值，顶部工具栏将具有其通常的视图。如果要显示其紧凑型变体，则配置必须如下所示：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -118,7 +118,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 文档所有者和上传日期分别受 *document.info.owner* 和 *document.info.uploaded* 参数影响。您可以通过以下方式将这些设置从您的某个数据库传递到文档配置文件：
 
-``` ts
+```ts
 const config = {
   document: {
     info: {
@@ -181,7 +181,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 将插件放到文档编辑器可访问的文件夹中。
 - 通过以下方式更改配置文件：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {

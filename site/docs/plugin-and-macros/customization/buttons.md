@@ -15,7 +15,7 @@ To process [buttons](../structure/configuration/configuration.md#variationsbutto
 
 ## Example
 
-``` ts
+```ts
 Asc.plugin.button = (id, windowId) => {
   if (!windowId) {
     return;

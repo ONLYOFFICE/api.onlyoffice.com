@@ -244,7 +244,7 @@ There are two modes to collaborate on documents in real time — **Fast** and **
 
 You can change the co-editing mode using the [editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting) parameter:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     coEditing: {

@@ -23,7 +23,7 @@ PDF 表单从 7.0 版本起可用。从 8.0 版本开始，OFORM 格式已被弃
 
 若要打开 PDF 表单进行编辑，请将 `documentType` 设置为 `"pdf"`，并将 `permissions.edit` 设置为 `true`。提供 [`key`](../../usage-api/config/document/document.md#key) 以便多个用户可以同时协同编辑表单模板：
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "pdf",
@@ -42,7 +42,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 完整的 HTML 页面：
 
-``` html
+```html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
 <button onclick="openFormTemplate()">Open Form Template</button>
 <div id="placeholder"></div>
@@ -80,7 +80,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 若要打开 PDF 表单进行填写，请将 `permissions.edit` 设置为 `false`，并将 `permissions.fillForms` 设置为 `true`。省略 [`key`](../../usage-api/config/document/document.md#key) 参数——编辑器将为每个会话生成一个随机密钥，因此每个用户都可以独立填写副本，互不影响：
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "pdf",
@@ -99,7 +99,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 完整的 HTML 页面：
 
-``` html
+```html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
 <button onclick="openForm()">Open Form</button>
 <div id="placeholder"></div>

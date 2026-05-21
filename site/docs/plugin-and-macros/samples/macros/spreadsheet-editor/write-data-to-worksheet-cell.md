@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.
 
-``` ts
+```ts
 (function()
 {
   Api.GetActiveSheet().GetRange("C4").SetValue("Hello world");

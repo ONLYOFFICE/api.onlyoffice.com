@@ -27,13 +27,13 @@ sidebar_position: -2
 
 要开始使用自动化 API，请使用 [createConnector](../methods.md#createconnector) 方法创建连接器：
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 ```
 
 连接器提供执行编辑器命令、监听文档事件和与编辑器 UI 交互的方法：
 
-``` ts
+```ts
 // 监听文档事件
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log("Content changed:", obj);

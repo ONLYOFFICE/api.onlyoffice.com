@@ -59,7 +59,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 下面是一个简单的 `.js` 脚本，用于创建包含 "Hello World!" 文本的文档：
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -80,7 +80,7 @@ builder.CloseFile();
 
 **步骤 1.** 发送包含 `.js` 脚本文件 URL 的初始请求：
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -91,7 +91,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "end": false
@@ -100,7 +100,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **步骤 2.** 使用返回的 `key` 轮询，直到 `end` 为 `true`：
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -111,7 +111,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -123,7 +123,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### 同步请求
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -134,7 +134,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -146,7 +146,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### 带令牌的异步请求
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -156,7 +156,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "error": -8
 }
@@ -168,7 +168,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### 带参数的同步请求
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -183,7 +183,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -197,7 +197,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 一个 `.js` 脚本可以生成多个文件。例如：
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -212,7 +212,7 @@ builder.SaveFile("xlsx", "spreadsheet1.xlsx");
 builder.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -223,7 +223,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -239,7 +239,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 您可以比较两个文档并生成包含修订记录的结果文件。脚本使用 [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) 打开第二个文档进行比较：
 
-``` js
+```js
 builderJS.OpenFile("https://example.com/file1.docx");
 const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
 AscCommonWord.CompareDocuments(Api, file, null);
@@ -248,7 +248,7 @@ builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -259,7 +259,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "Khirz6zTPdfd7",
   "urls": {

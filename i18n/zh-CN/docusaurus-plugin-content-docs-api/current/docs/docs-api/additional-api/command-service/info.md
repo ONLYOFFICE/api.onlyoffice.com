@@ -4,7 +4,7 @@
 
 ## 请求示例
 
-``` json
+```json
 {
   "c": "info",
   "key": "Khirz6zTPdfd7",
@@ -22,7 +22,7 @@
 
 ## 响应示例
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7",

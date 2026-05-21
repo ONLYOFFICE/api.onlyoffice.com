@@ -115,7 +115,7 @@ In the tables below you can see possibility of conversion your documents into th
 
 This example shows a basic request to convert a *docx* file to *pdf* format.
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -131,7 +131,7 @@ This example shows a basic request to convert a *docx* file to *pdf* format.
 
 This example shows how to convert a password-protected *docx* file to *pdf* format using the *password* parameter.
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -148,7 +148,7 @@ This example shows how to convert a password-protected *docx* file to *pdf* form
 
 This example shows how to convert a *docx* file to a fillable *pdf* form using the *pdf.form* parameter.
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -167,7 +167,7 @@ This example shows how to convert a *docx* file to a fillable *pdf* form using t
 
 This example shows how to convert a *docx* file to *pdf* format with a watermark inserted using the *watermark* parameter.
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -217,7 +217,7 @@ This example shows how to convert a *docx* file to *pdf* format with a watermark
 
 This example shows how to generate a *png* thumbnail from a *docx* file using the *thumbnail* parameter.
 
-``` json
+```json
 {
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
@@ -238,7 +238,7 @@ This example shows how to generate a *png* thumbnail from a *docx* file using th
 
 This example shows how to convert a spreadsheet file to *pdf* format using the *spreadsheetLayout* parameter.
 
-``` json
+```json
 {
   "filetype": "xlsx",
   "key": "Khirz6zTPdfd7",
@@ -273,7 +273,7 @@ This example shows how to convert a spreadsheet file to *pdf* format using the *
 
 This example shows how to convert a *docx* file to *pdf* format using a JSON Web Token for authentication.
 
-``` json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }

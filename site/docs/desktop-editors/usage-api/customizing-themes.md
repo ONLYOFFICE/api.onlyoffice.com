@@ -13,7 +13,7 @@ You can create custom interface themes for ONLYOFFICE Desktop Editors by adding 
 
 Create a `.json` file with the following structure:
 
-``` json
+```json
 {
   "name": "Amazing theme",
   "l10n": {
@@ -62,6 +62,6 @@ After placing the file, restart the application. The theme will be available in 
 
 To apply a custom theme programmatically, use the `portal:uitheme` command of the [execCommand](./adding-a-dms-provider/execcommand.md) method:
 
-``` ts
+```ts
 window.AscDesktopEditor.execCommand("portal:uitheme", "theme-amazing");
 ```

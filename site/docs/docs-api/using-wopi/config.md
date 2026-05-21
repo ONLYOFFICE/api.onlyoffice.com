@@ -88,7 +88,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## Example
 
-``` json
+```json
 {
   "wopi": {
     "enable": false,

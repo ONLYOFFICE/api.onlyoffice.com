@@ -21,7 +21,7 @@ To open a document in a new window / tab correctly:
 
 **Option 2.** Use the *open:document* command of the [execCommand](./execcommand.md) method. When this command is sent, the document is opened. Parameters are specified in the format of a string with the serialized *json* as follows:
 
-``` json
+```json
 {
   "url": "url to document",
   "type": "type",
@@ -46,7 +46,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## Example
 
-``` ts
+```ts
 const params = {
   url: "https://example.com/url-to-example-document.docx",
   type: "word",

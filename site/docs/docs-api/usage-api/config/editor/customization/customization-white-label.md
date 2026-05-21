@@ -42,7 +42,7 @@ The font for the interface elements (buttons, tabs, etc.).
 
 **Example**:
 
-``` ts
+```ts
 {
   name: "Arial",
   size: "11px",
@@ -73,7 +73,7 @@ The parameters that the user can use to hide the interface elements but not to d
 
 **Example**:
 
-``` ts
+```ts
 {
   header: {
     editMode: true,
@@ -126,7 +126,7 @@ The editor header settings.
 
 **Example**:
 
-``` ts
+```ts
 {
   editMode: true,
   save: true,
@@ -175,7 +175,7 @@ The left menu settings. If set to `false`, the left menu is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   mode: true,
   navigation: true,
@@ -215,7 +215,7 @@ The right menu settings. If set to `false`, the right menu is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   mode: true,
 }
@@ -237,7 +237,7 @@ The status bar settings. If set to `false`, the status bar is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   actionStatus: true,
   docLang: true,
@@ -277,7 +277,7 @@ The toolbar settings. If set to `false`, the toolbar is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   collaboration: {
     mailmerge: true,
@@ -315,7 +315,7 @@ The **Collaboration** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   mailmerge: true,
 }
@@ -345,7 +345,7 @@ The **File** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   close: true,
   info: true,
@@ -414,7 +414,7 @@ The **Insert** tab settings. If set to `false`, the tab is hidden. This paramete
 
 **Example**:
 
-``` ts
+```ts
 {
   file: true,
   field: true,
@@ -445,7 +445,7 @@ The **Layout** tab settings. If set to `false`, the tab is hidden. This paramete
 
 **Example**:
 
-``` ts
+```ts
 {
   pagecolor: true,
 }
@@ -499,7 +499,7 @@ The **View** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
-``` ts
+```ts
 {
   navigation: true,
 }
@@ -583,7 +583,7 @@ Starting from version 7.1, please use the [layout.toolbar](#layouttoolbar) param
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

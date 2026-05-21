@@ -26,7 +26,7 @@ sidebar_position: -6
 
 要创建编辑器实例，请使用两个参数调用 `DocEditor` 构造函数——编辑器将渲染到的现有 HTML 元素的 `id` 属性，以及[配置对象](./config/config.md)：
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
@@ -39,7 +39,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 构造函数返回一个 `docEditor` 对象。使用它来调用在运行时控制编辑器的[方法](./methods.md)——下载文件、管理版本历史、更新共享设置等：
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 // 稍后，在处理事件或用户操作时：
@@ -53,7 +53,7 @@ docEditor.destroyEditor();
 
 事件是在 `config.events` 部分传递的函数。它们允许集成商响应编辑器操作——例如，当文档准备就绪时、当用户请求保存时或当协作更改到达时：
 
-``` ts
+```ts
 const config = {
   events: {
     onAppReady() {
@@ -72,7 +72,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 最小示例
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",

@@ -6,7 +6,7 @@ sidebar_position: -3
 
 After initializing [`DocEditor`](./doceditor.md) you will get the object that can be used to call the methods.
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
@@ -118,7 +118,7 @@ Insert an image into the file. Starting from version 7.0, this method allows a u
 :::note
 Prior to version 7.0, this method allowed to insert only one image and had the following parameters:
 
-``` ts
+```ts
 docEditor.insertImage({
   c: "add",
   fileType: "png",

@@ -34,7 +34,7 @@ permissions 部分定义文档权限参数。
 
 **示例**:
 
-``` ts
+```ts
 const config = {
   edit: ["Group2", ""],
   remove: [""],
@@ -202,7 +202,7 @@ const config = {
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

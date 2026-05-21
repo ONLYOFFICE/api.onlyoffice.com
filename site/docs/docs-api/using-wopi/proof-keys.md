@@ -19,7 +19,7 @@ The integrator must check that the request is received from ONLYOFFICE Docs. It 
 
 ## Example
 
-``` json
+```json
 {
   "wopi": {
     "publicKey": "public key example",

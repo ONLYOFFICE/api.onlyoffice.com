@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 如果输入的是加利福尼亚州的邮政编码，本插件会添加“州（State）”标签，并在文本表单中预填“CA（加利福尼亚州的简写）”。您也可以通过 API 扩展功能，实现根据邮政编码自动填写“州”。
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();

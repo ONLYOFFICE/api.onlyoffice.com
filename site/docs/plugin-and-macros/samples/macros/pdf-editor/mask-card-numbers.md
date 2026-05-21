@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "PDF"]
 
 Applies the mask to all forms with the specified form key to hide card numbers.
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();

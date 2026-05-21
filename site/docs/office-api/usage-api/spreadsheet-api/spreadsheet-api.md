@@ -18,7 +18,7 @@ The text that does not pertain to the cell values, can be grouped to *paragraphs
 
 The simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` ts
+```ts
 // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
 builder.CreateFile("xlsx");
 
@@ -45,7 +45,7 @@ builder.CloseFile();
 
 If you want to edit an already existing spreadsheet, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The spreadsheet is opened the following way:
 
-``` ts
+```ts
 // use a path or URL to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/myspreadsheet.xlsx");
 

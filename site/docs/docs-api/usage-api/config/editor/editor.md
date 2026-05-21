@@ -10,7 +10,7 @@ The data received from the **document editing service** using the [onMakeActionL
 
 **Example**:
 
-``` ts
+```ts
 {
   action: {
     type: "bookmark",
@@ -57,7 +57,7 @@ The co-editing mode and the possibility to change it. This parameter is used to 
 
 **Example**:
 
-``` json
+```json
 {
   "mode": "fast",
   "change": true
@@ -222,7 +222,7 @@ The presence or absence of the documents in the **Open Recent...** menu option.
 
 **Example**:
 
-``` json
+```json
 [
   {
     "folder": "Example Files",
@@ -356,7 +356,7 @@ The presence or absence of the templates in the **Create New...** menu option.
 
 **Example**:
 
-``` json
+```json
 [
   {
     "image": "https://example.com/exampletemplate1.png",
@@ -406,7 +406,7 @@ If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event
 
 **Example**:
 
-``` json
+```json
 {
   "group": "Group1,Group2",
   "id": "78e1e841",
@@ -498,7 +498,7 @@ The maximum length for file names that the WOPI host supports, excluding the fil
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

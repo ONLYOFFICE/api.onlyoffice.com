@@ -18,7 +18,7 @@ sidebar_position: -4
 
 使用 **ONLYOFFICE Document Builder** 可以通过以下代码构建一个最简单的示例电子表格，其中包含一个名为"sheet 1"的工作表，第一列宽度为 140 像素，A1 单元格的值设置为"New cell"：
 
-``` ts
+```ts
 // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
 builder.CreateFile("xlsx");
 
@@ -45,7 +45,7 @@ builder.CloseFile();
 
 如果您想编辑已存在的电子表格，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。电子表格按以下方式打开：
 
-``` ts
+```ts
 // use a path or URL to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/myspreadsheet.xlsx");
 

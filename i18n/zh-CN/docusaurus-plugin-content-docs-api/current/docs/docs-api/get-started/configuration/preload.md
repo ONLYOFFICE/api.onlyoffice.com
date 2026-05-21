@@ -12,7 +12,7 @@ sidebar_position: -2
 
 将 `?preload=placeholder` 参数附加到 `api.js` 的 URL 中：
 
-``` html
+```html
 <div id="placeholder"></div>
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js?preload=placeholder"></script>
 ```
@@ -29,7 +29,7 @@ sidebar_position: -2
 
 另一种方法是，您可以手动插入一个指向预加载页面的隐藏 `<iframe>`：
 
-``` html
+```html
 <iframe src="https://documentserver/web-apps/apps/api/documents/preload.html" style="display:none;"></iframe>
 ```
 

@@ -10,7 +10,7 @@ hide_table_of_contents: true
 此宏仅适用于 ONLYOFFICE 桌面版编辑器。
 :::
 
-``` ts
+```ts
 (function() 
 {
     function LoadFile() {

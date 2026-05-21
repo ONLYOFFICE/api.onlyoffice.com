@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 创建一个具有以下结构的 `.json` 文件：
 
-``` json
+```json
 {
   "name": "Amazing theme",
   "l10n": {
@@ -72,7 +72,7 @@ import TabItem from '@theme/TabItem';
 
 要通过编辑器初始化配置应用自定义主题，请将其 `id` 传递给 [`editorConfig.customization.uiTheme`](../../usage-api/config/editor/customization/customization-standard-branding.md#uitheme) 参数：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -227,7 +227,7 @@ const config = {
 
 ## 完整示例
 
-``` json
+```json
 {
   "name": "Amazing theme",
   "l10n": {

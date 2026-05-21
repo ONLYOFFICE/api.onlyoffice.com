@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Merges the selected cell range.
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("A1:B3").Merge(true);

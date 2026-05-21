@@ -10,7 +10,7 @@ hide_table_of_contents: true
 该宏由 VBA 代码通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
 :::
 
-``` ts
+```ts
 (function(){
     // 获取当前工作表
     var oWorksheet = Api.GetActiveSheet();

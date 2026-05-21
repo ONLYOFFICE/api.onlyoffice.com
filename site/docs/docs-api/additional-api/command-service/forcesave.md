@@ -4,7 +4,7 @@ Forcibly saves the document being edited without closing it. The document editin
 
 ## Request example
 
-``` json
+```json
 {
   "c": "forcesave",
   "key": "Khirz6zTPdfd7",
@@ -22,7 +22,7 @@ Forcibly saves the document being edited without closing it. The document editin
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7"

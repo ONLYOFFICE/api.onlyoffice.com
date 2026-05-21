@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 创建一个具有以下结构的 `.json` 文件：
 
-``` json
+```json
 {
   "name": "Amazing theme",
   "l10n": {
@@ -62,6 +62,6 @@ import TabItem from '@theme/TabItem';
 
 要以编程方式应用自定义主题，请使用 [execCommand](./adding-a-dms-provider/execcommand.md) 方法的 `portal:uitheme` 命令：
 
-``` ts
+```ts
 window.AscDesktopEditor.execCommand("portal:uitheme", "theme-amazing");
 ```

@@ -21,7 +21,7 @@ sidebar_position: 2
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
@@ -42,7 +42,7 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.dispatchEvent("messageName", {
@@ -62,7 +62,7 @@ testConnectorWindow.dispatchEvent("messageName", {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.show({
@@ -97,7 +97,7 @@ testConnectorWindow.show({
 
 #### 示例
 
-``` ts
+```ts
 window.Asc.plugin.attachEvent("messageName", (message) => {
   console.log(message);
 });
@@ -116,6 +116,6 @@ window.Asc.plugin.attachEvent("messageName", (message) => {
 
 #### 示例
 
-``` ts
+```ts
 window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```

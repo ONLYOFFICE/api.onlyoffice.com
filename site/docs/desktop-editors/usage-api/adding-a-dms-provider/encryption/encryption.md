@@ -10,7 +10,7 @@ Starting from version 5.6, ONLYOFFICE Desktop Editors offers support for Private
 
 Declare the *cloudCryptoCommand* function to process messages from the desktop app:
 
-``` ts
+```ts
 window.cloudCryptoCommand = function cloudCryptoCommand(type, params, callback) {};
 ```
 

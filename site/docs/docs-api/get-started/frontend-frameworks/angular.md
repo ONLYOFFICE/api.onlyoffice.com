@@ -46,7 +46,7 @@ This procedure creates a [basic Angular application](https://angular.io/guide/se
 
 The following steps depend on the Angular version you use. To check the installed version, run the following command:
 
-``` sh
+```sh
 ng version
 ```
 

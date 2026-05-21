@@ -34,7 +34,7 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ curl -X POST "https://documentserver/command" \
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
   -d '{
@@ -85,7 +85,7 @@ curl -X POST "https://documentserver/converter" \
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -110,7 +110,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{

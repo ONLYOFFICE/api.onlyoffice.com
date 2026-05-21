@@ -32,7 +32,7 @@ sidebar_position: 1
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
@@ -94,7 +94,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 #### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.addToolbarMenuItem({
   tabs: [
@@ -144,7 +144,7 @@ connector.addToolbarMenuItem({
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
@@ -167,7 +167,7 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.callCommand(() => {
   const oDocument = Api.GetDocument();
@@ -189,7 +189,7 @@ connector.callCommand(() => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.connect();
 ```
@@ -200,7 +200,7 @@ connector.connect();
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 ```
@@ -217,7 +217,7 @@ const testConnectorWindow = connector.createWindow();
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.detachEvent("onChangeContentControl");
 ```
@@ -228,7 +228,7 @@ connector.detachEvent("onChangeContentControl");
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.disconnect();
 ```
@@ -253,7 +253,7 @@ connector.disconnect();
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
@@ -272,7 +272,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const items = [
   {

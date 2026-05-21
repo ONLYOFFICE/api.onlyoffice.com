@@ -23,7 +23,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   request: true,
   label: "Elizabeth",
@@ -82,7 +82,7 @@ customization 部分定义编辑器自定义参数。
 
  **示例**:
 
-``` ts
+```ts
 {
   visible: true,
   text: "Close file",
@@ -177,7 +177,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   address: "My City, 123a-45",
   info: "Some additional information",
@@ -272,7 +272,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   featuresTips: true,
   roles: true,
@@ -391,7 +391,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   url: "https://example.com",
   visible: true,
@@ -446,7 +446,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   blank: true,
   text: "Open file location",
@@ -560,7 +560,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   image: "https://example.com/logo.png",
   imageDark: "https://example.com/dark-logo.png",
@@ -674,7 +674,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   forceView: true,
   info: false,
@@ -758,7 +758,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   hideReviewDisplay: false,
   showReviewChanges: false,
@@ -825,7 +825,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   "Group1": ["Group2"],
   "Group2": ["Group1", "Group2"],
@@ -920,7 +920,7 @@ PDF 表单编辑模式下*开始填写*按钮的设置。
 
 **示例**:
 
-``` ts
+```ts
 {
   text: "Share & collect",
 }
@@ -942,7 +942,7 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 **示例**:
 
-``` ts
+```ts
 {
   visible: true,
   resultMessage: "Form submitted successfully",
@@ -1080,7 +1080,7 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

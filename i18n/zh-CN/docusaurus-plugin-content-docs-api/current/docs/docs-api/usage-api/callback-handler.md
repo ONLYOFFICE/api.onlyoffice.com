@@ -85,7 +85,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 当两个用户共同编辑文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
-``` json
+```json
 {
   "actions": [
     {
@@ -103,7 +103,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 当用户更改文档并关闭编辑的文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
-``` json
+```json
 {
   "actions": [
     {
@@ -132,7 +132,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 当最后一个用户关闭编辑的无更改的文档时，文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
-``` json
+```json
 {
   "key": "Khirz6zTPdfd7",
   "status": 4
@@ -143,7 +143,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 接收到 [forcesave](../additional-api/command-service/forcesave.md) 命令后文档编辑服务发送到 `callbackUrl` 地址的 JSON 对象示例：
 
-``` json
+```json
 {
   "changesurl": "https://documentserver/url-to-changes.zip",
   "forcesavetype": 0,
@@ -161,7 +161,7 @@ import APITable from '@site/src/components/APITable/APITable';
 :::warning
 **文档存储服务**必须返回以下响应，否则**文档编辑器**将显示错误消息：
 
-``` json
+```json
 {
   "error": 0
 }

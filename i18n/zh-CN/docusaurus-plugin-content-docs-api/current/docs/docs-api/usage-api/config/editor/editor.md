@@ -10,7 +10,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   action: {
     type: "bookmark",
@@ -57,7 +57,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` json
+```json
 {
   "mode": "fast",
   "change": true
@@ -222,7 +222,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` json
+```json
 [
   {
     "folder": "Example Files",
@@ -356,7 +356,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` json
+```json
 [
   {
     "image": "https://example.com/exampletemplate1.png",
@@ -406,7 +406,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` json
+```json
 {
   "group": "Group1,Group2",
   "id": "78e1e841",
@@ -498,7 +498,7 @@ WOPI 主机支持的文件名最大长度，不包括文件扩展名。对应 Ch
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

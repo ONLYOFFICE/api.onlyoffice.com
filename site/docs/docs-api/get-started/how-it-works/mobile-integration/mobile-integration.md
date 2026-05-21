@@ -9,7 +9,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ONLYOFFICE Docs can run inside a native mobile application. The approach is to load the **document editor** in a WebView component ([WebView](https://developer.android.com/reference/android/webkit/WebView) on Android, [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) on iOS) — the same editor that runs in a desktop browser, but with the [`type`](../../../usage-api/config/config.md#type) parameter set to `"mobile"` so the UI is optimized for touch screens:
 
-``` ts
+```ts
 const config = {
   type: "mobile",
   // ...the rest of the editor config

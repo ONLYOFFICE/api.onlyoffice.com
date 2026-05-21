@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将单元格 **B3** 的背景颜色设置为蓝色。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("B3").SetFillColor(Api.CreateColorFromRGB(0, 0, 250));

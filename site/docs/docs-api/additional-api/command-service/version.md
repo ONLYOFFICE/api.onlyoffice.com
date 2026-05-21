@@ -4,7 +4,7 @@ Requests the current version number of ONLYOFFICE Docs.
 
 ## Request example
 
-``` json
+```json
 {
   "c": "version"
 }
@@ -18,7 +18,7 @@ Requests the current version number of ONLYOFFICE Docs.
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "version": "4.3.1.4"

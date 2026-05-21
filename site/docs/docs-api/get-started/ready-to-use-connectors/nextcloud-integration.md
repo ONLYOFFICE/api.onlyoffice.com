@@ -83,7 +83,7 @@ If the server with the Nextcloud installed does not have the Internet access, or
 
 In Nextcloud, open the *\~/settings/admin/onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
@@ -183,7 +183,7 @@ The following parameters must be added manually to the `config/config.php` file 
 
 You can check the connection to ONLYOFFICE Docs by using the following occ command:
 
-``` sh
+```sh
 occ onlyoffice:documentserver --check
 ```
 

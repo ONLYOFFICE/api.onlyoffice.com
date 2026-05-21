@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 设置 **B** 列的宽度。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().SetColumnWidth(1, 25);

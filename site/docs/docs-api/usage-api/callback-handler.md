@@ -85,7 +85,7 @@ It is received when the force saving request is performed. The `callbackUrl` dep
 
 Sample of JSON object sent to the `callbackUrl` address by document editing service when two users are co-editing the document:
 
-``` json
+```json
 {
   "actions": [
     {
@@ -103,7 +103,7 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
 
 Sample of JSON object sent to the `callbackUrl` address by document editing service when the user changed the document and closed it for editing:
 
-``` json
+```json
 {
   "actions": [
     {
@@ -132,7 +132,7 @@ The `history` object is only present when `status` is **2** or **3**. See the [r
 
 Sample of JSON object sent to the `callbackUrl` address by document editing service when the last user closed the document for editing without changes:
 
-``` json
+```json
 {
   "key": "Khirz6zTPdfd7",
   "status": 4
@@ -143,7 +143,7 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
 
 Sample of JSON object sent to the `callbackUrl` address by document editing service after the [forcesave](../additional-api/command-service/forcesave.md) command had been received:
 
-``` json
+```json
 {
   "changesurl": "https://documentserver/url-to-changes.zip",
   "forcesavetype": 0,
@@ -161,7 +161,7 @@ Sample of JSON object sent to the `callbackUrl` address by document editing serv
 :::warning
 The **document storage service** must return the following response, otherwise the **document editor** will display an error message:
 
-``` json
+```json
 {
   "error": 0
 }

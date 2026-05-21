@@ -55,7 +55,7 @@ import TabItem from '@theme/TabItem';
 
 ### 示例
 
-``` json
+```json
 {
   "wopi": {
     "enable": true

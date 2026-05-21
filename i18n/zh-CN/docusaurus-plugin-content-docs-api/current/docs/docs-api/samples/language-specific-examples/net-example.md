@@ -36,21 +36,21 @@ sidebar_position: -10
 
 对于 .Net (C#)：
 
-``` sh
+```sh
 curl --output DotNet.Csharp.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip
 unzip DotNet.Csharp.Example.zip
 ```
 
 对于 .Net (C# MVC)：
 
-``` sh
+```sh
 curl --output DotNet.Csharp.MVC.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip
 unzip DotNet.Csharp.MVC.Example.zip
 ```
 
 要将编辑器连接到您的网站，请在`settings.config`文件（对于MVC版本则是`web.appsettings.config`文件）中指定编辑器的安装路径和存储文件夹的路径：
 
-``` xml
+```xml
 <add key="storage-path" value=""/>
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
@@ -80,7 +80,7 @@ unzip DotNet.Csharp.MVC.Example.zip
 
 打开 `settings.config` 文件（或 MVC 版本的 `web.appsettings.config` 文件），并与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) 以启用 JWT：
 
-``` xml
+```xml
 <add key="files.docservice.secret" value="secret" />
 ```
 

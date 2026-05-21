@@ -4,7 +4,7 @@ Deletes a forgotten file.
 
 ## Request example
 
-``` json
+```json
 {
   "c": "deleteForgotten",
   "key": "Khirz6zTPdfd7"
@@ -20,7 +20,7 @@ Deletes a forgotten file.
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7"

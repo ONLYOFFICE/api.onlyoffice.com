@@ -12,7 +12,7 @@ Create a document with special Unicode symbols commonly used in legal, scientifi
 - format symbols with different styles including bold, italic, and color ([ApiRun](/docs/office-api/usage-api/document-api/ApiRun/ApiRun.md));
 - demonstrate practical usage in trademark notices, copyright statements, and technical documentation ([ApiDocument](/docs/office-api/usage-api/document-api/ApiDocument/ApiDocument.md)).
 
-``` ts editor-docx
+```ts editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

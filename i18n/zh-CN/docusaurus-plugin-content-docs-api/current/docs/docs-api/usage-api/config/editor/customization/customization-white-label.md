@@ -42,7 +42,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   name: "Arial",
   size: "11px",
@@ -73,7 +73,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   header: {
     editMode: true,
@@ -126,7 +126,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   editMode: true,
   save: true,
@@ -175,7 +175,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   mode: true,
   navigation: true,
@@ -215,7 +215,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   mode: true,
 }
@@ -237,7 +237,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   actionStatus: true,
   docLang: true,
@@ -277,7 +277,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   collaboration: {
     mailmerge: true,
@@ -315,7 +315,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   mailmerge: true,
 }
@@ -345,7 +345,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   close: true,
   info: true,
@@ -414,7 +414,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   file: true,
   field: true,
@@ -445,7 +445,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   pagecolor: true,
 }
@@ -499,7 +499,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   navigation: true,
 }
@@ -583,7 +583,7 @@ customization 部分定义编辑器自定义参数。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

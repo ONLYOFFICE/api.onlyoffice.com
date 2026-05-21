@@ -4,7 +4,7 @@ Requests a forgotten file.
 
 ## Request example
 
-``` json
+```json
 {
   "c": "getForgotten",
   "key": "Khirz6zTPdfd7"
@@ -20,7 +20,7 @@ Requests a forgotten file.
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7",
