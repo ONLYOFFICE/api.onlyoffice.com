@@ -145,7 +145,7 @@ Another way to build ONLYOFFICE module package for Alfresco is using **docker-co
 
 Use this command from project directory:
 
-``` sh
+```sh
 docker-compose up
 ```
 

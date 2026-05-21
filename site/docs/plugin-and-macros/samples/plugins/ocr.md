@@ -53,7 +53,7 @@ Repository on GitHub: [ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 
 ## Config
 
-``` json
+```json
 {
   "name": "OCR",
   "nameLocale": {

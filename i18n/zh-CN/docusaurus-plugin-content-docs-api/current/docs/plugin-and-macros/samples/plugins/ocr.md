@@ -48,7 +48,7 @@ GitHub 仓库：[ocr](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/ma
 
 ## 配置
 
-``` json
+```json
 {
   "name": "OCR",
   "nameLocale": {

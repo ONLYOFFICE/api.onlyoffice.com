@@ -46,13 +46,13 @@ You can also download this plugin from the [ONLYOFFICE App Directory](https://ww
 
 For CentOS users with SELinx enabled, after copying the src folder to sdkjs-plugins, plugins may not work due to the variable file security context. To restore the rights, use the following command:
 
-``` sh
+```sh
 sudo restorecon -Rv /var/www/onlyoffice/documentserver/sdkjs-plugins/
 ```
 
 After that restart the services:
 
-``` sh
+```sh
 sudo supervisorctl restart ds:docservice
 ```
 
@@ -72,7 +72,7 @@ Repository on GitHub: [zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## Config
 
-``` json
+```json
 {
   "name": "Zotero",
   "nameLocale": {

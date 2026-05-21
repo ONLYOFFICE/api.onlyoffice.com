@@ -60,7 +60,7 @@ GitHub 仓库：[ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/mas
 
 ## 配置文件
 
-``` json
+```json
 {
     "name" : "AI",
     "nameLocale": {

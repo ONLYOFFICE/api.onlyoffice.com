@@ -27,13 +27,13 @@ Explore interactive examples showing real-world use cases:
 
 To start using Automation API, create a connector using the [createConnector](../methods.md#createconnector) method:
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 ```
 
 The connector provides methods to execute editor commands, listen to document events, and interact with the editor UI:
 
-``` ts
+```ts
 // Listen to document events
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log("Content changed:", obj);

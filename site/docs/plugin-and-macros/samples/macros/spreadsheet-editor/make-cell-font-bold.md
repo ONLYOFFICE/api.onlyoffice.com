@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Sets the font of the cell **A2** to bold.
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("A2").SetBold(true);

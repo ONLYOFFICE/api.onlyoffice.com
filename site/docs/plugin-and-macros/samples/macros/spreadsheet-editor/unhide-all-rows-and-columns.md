@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Unhides all the rows and columns in the active spreadsheet.
 
-``` ts
+```ts
 (function()
 {
     let activeSheet = Api.ActiveSheet;

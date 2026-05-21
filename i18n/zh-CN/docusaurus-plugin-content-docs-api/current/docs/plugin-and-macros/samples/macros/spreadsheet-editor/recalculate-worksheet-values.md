@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 以一秒间隔重复重新计算工作表单元格的数值。
 
-``` ts
+```ts
 (function ()
 {
     let timerId = setInterval(function(){

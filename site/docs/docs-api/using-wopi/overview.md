@@ -51,11 +51,11 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 | Name        | Type    | Example | Description                                                        |
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
-| wopi.enable | boolean | true    | Defines if WOPI is enabled or not. The default value is **false**. |
+| wopi.enable | boolean | true    | Whether WOPI is enabled or not. The default value is **false**. |
 
 ### Example
 
-``` json
+```json
 {
   "wopi": {
     "enable": true

@@ -23,7 +23,7 @@ This method doesn't return any data.
 
 ### Example
 
-``` ts
+```ts
 Asc.plugin.attachEditorEvent("onAddComment", (data) => {
   console.log(data);
 });

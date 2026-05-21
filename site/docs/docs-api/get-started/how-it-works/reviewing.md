@@ -18,7 +18,7 @@ If `permissions.edit` is `true` and `permissions.review` is also `true`, the use
 
 If `permissions.edit` is `false` and `permissions.review` is `true`, the document is available for reviewing only.
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {

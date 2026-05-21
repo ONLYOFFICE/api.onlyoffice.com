@@ -16,7 +16,7 @@ When both `edit` and `comment` are `true`, the user can edit the document and le
 
 ![Commenting](/assets/images/editor/commenting.png#gh-light-mode-only)![Commenting](/assets/images/editor/commenting.dark.png#gh-dark-mode-only)
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {

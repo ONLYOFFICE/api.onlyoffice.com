@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Formats the range of cells **A1:D10** as a table.
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().FormatAsTable("A1:D10");

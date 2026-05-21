@@ -60,7 +60,7 @@ window.Asc.plugin.init = (text) => {
 | *guid*           | `string`  | 一个字符串值，指定插件标识符，必须是 *asc.\{UUID\}* 类型。       |
 | *w*              | `number`  | 一个数字，指定窗口宽度，单位为毫米。                             |
 | *h*              | `number`  | 一个数字，指定窗口高度，单位为毫米。                             |
-| *isKeyboardTake* | `boolean` | 定义键盘是否被捕获（**true**）或未捕获（**false**）。            |
+| *isKeyboardTake* | `boolean` | 键盘是否被捕获（**true**）或未捕获（**false**）。                |
 
 **返回值**：此方法不返回任何数据。
 
@@ -79,7 +79,7 @@ window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
 | 名称      | 类型      | 描述                                                             |
 |-----------|-----------|------------------------------------------------------------------|
 | *guid*    | `string`  | 一个字符串值，指定插件标识符，必须是 *asc.\{UUID\}* 类型。       |
-| *isclear* | `boolean` | 定义输入上下文是否会被清除（**true**）或不清除（**false**）。    |
+| *isclear* | `boolean` | 输入上下文是否会被清除（**true**）或不清除（**false**）。        |
 
 **返回值**：此方法不返回任何数据。
 
@@ -198,7 +198,7 @@ function getInputHelperSize() {
 
 | 名称    | 类型                      | 描述                                                                             |
 |---------|---------------------------|----------------------------------------------------------------------------------|
-| *items* | [InputHelperItem](#inputhelperitem)[] | 定义一个包含所有输入辅助条目的 [InputHelperItem](#inputhelperitem) 对象数组。    |
+| *items* | [InputHelperItem](#inputhelperitem)[] | 包含所有输入辅助条目的 [InputHelperItem](#inputhelperitem) 对象数组。            |
 
 **返回值**：此方法不返回任何值。
 
@@ -235,7 +235,7 @@ window.Asc.plugin.getInputHelper().show(sizes.w, sizes.h, true);
 |---------------------|-----------|--------------------------------------------------------|
 | *width*             | `number`  | 输入辅助窗口宽度，单位为毫米。                         |
 | *height*            | `number`  | 输入辅助窗口高度，单位为毫米。                         |
-| *isCaptureKeyboard* | `boolean` | 定义是否捕获键盘（**true**）或不捕获（**false**）。    |
+| *isCaptureKeyboard* | `boolean` | 是否捕获键盘（**true**）或不捕获（**false**）。        |
 
 **返回值**：此方法无返回值。
 
@@ -281,7 +281,7 @@ window.Asc.plugin.executeMethod("SelectContentControl", [window.Asc.plugin.curre
 
 ## InputHelperItem
 
-定义输入辅助项。
+输入辅助项。
 
 `Type: object`
 

@@ -4,30 +4,30 @@ Requests the current version number of ONLYOFFICE Docs.
 
 ## Request example
 
-``` json
+```json
 {
   "c": "version"
 }
 ```
 
-## Parameters
+## Request parameters
 
-| Name | Type   | Presence | Description               |
-| ---- | ------ | -------- | ------------------------- |
-| c    | string | required | Defines the command type. |
+| Parameter | Type   | Presence | Description               |
+| --------- | ------ | -------- | ------------------------- |
+| c         | string | required | The command type. |
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "version": "4.3.1.4"
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                          |
 | --------- | ------- | -------- | ------------------------------------ |
-| error     | integer | required | Defines an error code.               |
-| version   | string  | required | Defines the document server version. |
+| error     | integer | required | An error code.               |
+| version   | string  | required | The document server version. |

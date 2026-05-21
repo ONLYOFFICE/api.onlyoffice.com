@@ -31,7 +31,7 @@ Repository on GitHub: [settings](https://github.com/ONLYOFFICE/sdkjs-plugins/tre
 
 ## Config
 
-``` json
+```json
 {
   "name": "settings",
   "guid": "asc.{CF3A000F-C6B4-451D-AC0B-F3DDAB1880D2}",

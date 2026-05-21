@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 在表单文档中插入唯一 ID。
 
-``` ts
+```ts
 (function()
 {
     function generate () {

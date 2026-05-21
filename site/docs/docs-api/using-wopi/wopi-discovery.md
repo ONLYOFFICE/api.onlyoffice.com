@@ -45,7 +45,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### Example
 
-``` xml
+```xml
 <action name="edit" ext="docx" requires="locks,update"
     urlsrc="https://word-edit.officeapps.live.com/we/wordeditorframe.aspx?
 ui=en-us&amp;thm=1&amp;"/>
@@ -87,7 +87,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 Please pay attention to the *discovery.xml* structure of the Collabora connectors. They open the editor via the MIME-type which is included in the *app* element of the following structure:
 
-``` xml
+```xml
 <app name="application/msword">
     <action default="true" ext="" name="edit" urlsrc="http://159.89.20.129:9980/loleaflet/ba528af/loleaflet.html?"/>
 </app>
@@ -95,7 +95,7 @@ Please pay attention to the *discovery.xml* structure of the Collabora connector
 
 The *app* element like this:
 
-``` xml
+```xml
 <app name="Word" favIconUrl="http://localhost:8000/web-apps/apps/documenteditor/main/resources/img/favicon.ico">
 ```
 

@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Sets the width for the column **B**.
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().SetColumnWidth(1, 25);

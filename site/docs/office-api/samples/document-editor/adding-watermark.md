@@ -11,7 +11,7 @@ Create a document with an image watermark with custom settings:
 - create an empty page with a watermark ([Api](/docs/office-api/usage-api/document-api/Api/Api.md), [ApiDocument/InsertWatermark](/docs/office-api/usage-api/document-api/ApiDocument/Methods/InsertWatermark.md));
 - edit watermark sewatermarkSettingsttings, set an image, specify size, direction and opacity ([ApiWatermarkSettings](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/ApiWatermarkSettings.md));
 
-``` ts editor-docx zoom=60
+```ts editor-docx zoom=60
 let doc = Api.GetDocument();
 doc.InsertWatermark("Watermark", true);
 let watermarkSettings = doc.GetWatermarkSettings();

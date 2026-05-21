@@ -14,7 +14,7 @@ So the implementation of the document version history display should look like t
 
 1. The callback handler receives the data in the response from the **document editing service** with *status* **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
-``` ts
+```ts
 const data = {
   key: "2745492410",
   status: 2,

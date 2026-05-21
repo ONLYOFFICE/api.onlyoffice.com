@@ -16,7 +16,7 @@ ONLYOFFICE 文档支持内嵌评论——用户可以对文档的特定部分添
 
 ![评论](/assets/images/editor/commenting.png)
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {

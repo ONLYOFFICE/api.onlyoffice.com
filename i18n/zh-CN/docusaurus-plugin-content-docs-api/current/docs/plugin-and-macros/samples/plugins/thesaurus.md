@@ -46,7 +46,7 @@ GitHub 仓库：[thesaurus](https://github.com/ONLYOFFICE/onlyoffice.github.io/t
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Thesaurus",
   "nameLocale": {

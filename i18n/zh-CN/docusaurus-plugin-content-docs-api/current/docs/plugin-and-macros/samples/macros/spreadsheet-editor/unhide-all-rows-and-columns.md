@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 在当前表格中显示所有隐藏的行和列。
 
-``` ts
+```ts
 (function()
 {
     let activeSheet = Api.ActiveSheet;

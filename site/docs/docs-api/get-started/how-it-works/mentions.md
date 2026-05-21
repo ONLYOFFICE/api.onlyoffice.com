@@ -87,7 +87,7 @@ The figure and steps below explain how the mentions feature works in ONLYOFFICE 
 
 As with [action links](./action-link.md#opening-the-bookmark), pass the `actionLink` object received from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event as the value of [`editorConfig.actionLink`](../../usage-api/config/editor/editor.md#actionlink):
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     actionLink: ACTION_DATA,
@@ -105,7 +105,7 @@ If the document config already includes a [`document.info.sharingSettings`](../.
 
 ![Sharing settings](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![Sharing settings](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
-``` ts
+```ts
 docEditor.setSharingSettings({
   sharingSettings: [
     {

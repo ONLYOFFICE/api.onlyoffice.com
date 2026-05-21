@@ -6,7 +6,7 @@ The plugins section defines the runtime plugin parameters.
 
 **type:** `string[]`
 
-Defines the plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
+The plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file that automatically start when the editor opens. The plugins run sequentially in the listed order.
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
@@ -14,7 +14,7 @@ Defines the plugin identifiers from the [config.json](../../../../plugin-and-mac
 
 **type:** `object`
 
-Defines the external configuration settings for plugins. Settings can target all plugins or a specific plugin — for example, passing an authorization token.
+The external configuration settings for plugins. Settings can target all plugins or a specific plugin — for example, passing an authorization token.
 
 :::note
 You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interacting-with-editors/document-api/Methods/SetPluginsOptions.md) method of the [Automation API](../../automation-api/automation-api.md) to pass this object to the plugin.
@@ -22,7 +22,7 @@ You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interac
 
 **Example**:
 
-``` json
+```json
 {
   "all": {},
   "pluginGuid": {}
@@ -33,11 +33,11 @@ You can also use the [`SetPluginsOptions`](../../../../plugin-and-macros/interac
 
 **type:** `object`
 
-Defines the parameters applied to all plugins.
+The parameters applied to all plugins.
 
 **Example**:
 
-``` json
+```json
 {
   "all": {
     "keyAll": "valueAll"
@@ -49,11 +49,11 @@ Defines the parameters applied to all plugins.
 
 **type:** `object`
 
-Defines the parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
+The parameters for a specific plugin, identified by its GUID in the `asc.{UUID}` format.
 
 **Example**:
 
-``` json
+```json
 {
   "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}": {
     "keyYoutube": "valueYoutube"
@@ -65,15 +65,29 @@ Defines the parameters for a specific plugin, identified by its GUID in the `asc
 
 **type:** `string[]`
 
-Defines the absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
+The absolute URLs to the plugin [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md) files.
 
 **Example**: `["https://example.com/plugins/chess-plugin/config.json"]`
 
 ![Plugins](/assets/images/editor/plugins.png#gh-light-mode-only)![Plugins](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
+## Plugin command logging
+
+To enable logging of plugin commands in the browser console, set the `asc_plugin_commands_log` key in the browser's local storage to `"true"`:
+
+```js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+To disable logging, remove the key or set it to any other value:
+
+```js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

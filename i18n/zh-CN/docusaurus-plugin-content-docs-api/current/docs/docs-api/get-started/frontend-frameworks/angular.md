@@ -46,7 +46,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
 以下步骤取决于您使用的 Angular 版本。 要检查已安装的版本，请运行以下命令：
 
-``` sh
+```sh
 ng version
 ```
 

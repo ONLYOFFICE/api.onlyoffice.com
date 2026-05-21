@@ -20,7 +20,7 @@ A block content control can also contain the *paragraph*, *table* or another *bl
 
 The simplest example document with a single paragraph containing centered "Center" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` ts
+```ts
 // create a document file in the .docx format with ONLYOFFICE Document Builder
 builder.CreateFile("docx");
 
@@ -56,7 +56,7 @@ You can address the first paragraph to change it using the *oDocument.GetElement
 
 If you want to edit an already existing document, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a document editor in this case will be that you will not need this document editor. The document is opened the following way:
 
-``` ts
+```ts
 // use a path or URL to an existing 'mydocument.docx' document file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/mydocument.docx");
 

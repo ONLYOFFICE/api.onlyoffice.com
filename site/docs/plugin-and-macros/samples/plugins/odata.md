@@ -36,7 +36,7 @@ Repository on GitHub: [odata](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## Config
 
-``` json
+```json
 {
   "name": "OData Import",
   "nameLocale": {

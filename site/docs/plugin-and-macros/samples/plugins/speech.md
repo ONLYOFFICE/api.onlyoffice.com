@@ -55,7 +55,7 @@ Repository on GitHub: [speech](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## Config
 
-``` json
+```json
 {
   "name": "Speech",
   "nameLocale": {

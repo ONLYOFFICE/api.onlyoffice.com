@@ -22,7 +22,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "name": "group name",
   "rank": 2
@@ -97,7 +97,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -135,7 +135,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 [
   {
     "buttons": [
@@ -195,7 +195,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 [
   {
     "text": "Cancel",
@@ -226,7 +226,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -321,7 +321,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -351,7 +351,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -413,7 +413,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -551,7 +551,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "background": {
     "light": "#F5F5F5",
@@ -574,7 +574,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "light": "#F5F5F5",
   "dark": "#444444"
@@ -627,7 +627,7 @@ sidebar_position: -5
 
 **示例**:
 
-``` json
+```json
 {
   "light": "resources/store/icons",
   "dark": "resources/store/icons"
@@ -709,7 +709,7 @@ sidebar_position: -5
 
 ## Example
 
-``` json
+```json
 {
   "baseUrl": "",
   "group": {

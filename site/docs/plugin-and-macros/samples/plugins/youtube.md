@@ -47,7 +47,7 @@ Repository on GitHub: [youtube](https://github.com/ONLYOFFICE/onlyoffice.github.
 
 ## Config
 
-``` json
+```json
 {
   "name": "YouTube",
   "nameLocale": {

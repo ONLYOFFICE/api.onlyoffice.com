@@ -48,7 +48,7 @@ Repository on GitHub: [telegram](https://github.com/ONLYOFFICE/onlyoffice.github
 
 ## Config
 
-``` json
+```json
 {
   "name": "Telegram",
   "nameLocale": {

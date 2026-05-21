@@ -44,7 +44,7 @@ Repository on GitHub: [example_work_with_content_controls_navigation](https://gi
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example work with content controls navigation",
   "guid": "asc.{C36DDFB5-08F0-4A68-B829-5FB1F7D49728}",

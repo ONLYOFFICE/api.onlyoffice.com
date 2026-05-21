@@ -61,7 +61,7 @@ GitHub 仓库：[typograf](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Typograf",
   "nameLocale": {

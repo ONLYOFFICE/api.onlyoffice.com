@@ -23,7 +23,7 @@ The [configuration object](./config/config.md) passed to the [`DocsAPI.DocEditor
 
 The complete `config` with all available parameters:
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",

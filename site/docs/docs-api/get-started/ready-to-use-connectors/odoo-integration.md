@@ -69,7 +69,7 @@ ONLYOFFICE demo templates will only be added to the Odoo modules that are alread
 
 To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sidebar and click it. Specify the URL of the installed ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

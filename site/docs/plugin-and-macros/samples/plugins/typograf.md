@@ -66,7 +66,7 @@ Repository on GitHub: [typograf](https://github.com/ONLYOFFICE/onlyoffice.github
 
 ## Config
 
-``` json
+```json
 {
   "name": "Typograf",
   "nameLocale": {

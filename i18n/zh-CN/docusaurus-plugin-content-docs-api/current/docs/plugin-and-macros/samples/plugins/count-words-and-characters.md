@@ -42,7 +42,7 @@ GitHub 上的仓库：[字数统计](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Word counter",
   "nameLocale": {

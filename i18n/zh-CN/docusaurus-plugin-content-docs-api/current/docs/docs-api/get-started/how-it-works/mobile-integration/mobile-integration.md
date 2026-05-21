@@ -9,7 +9,7 @@ import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
 ONLYOFFICE 文档可以在原生移动应用程序中运行。方法是在 WebView 组件（Android 上为 [WebView](https://developer.android.com/reference/android/webkit/WebView)，iOS 上为 [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)）中加载**文档编辑器** — 与桌面浏览器中运行的编辑器相同，只是将 [`type`](../../../usage-api/config/config.md#type) 参数设置为 `"mobile"`，以便界面针对触摸屏进行优化：
 
-``` ts
+```ts
 const config = {
   type: "mobile",
   // ...编辑器配置的其余部分

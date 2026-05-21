@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Documents"]
 
 Inserts a unique id into a form document.
 
-``` ts
+```ts
 (function()
 {
     function generate () {

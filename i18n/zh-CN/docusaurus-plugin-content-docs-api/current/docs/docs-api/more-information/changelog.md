@@ -2,6 +2,10 @@
 
 ONLYOFFICE 文档 API 的更改列表。
 
+## 版本 9.4
+
+- 新增[插件命令日志](../usage-api/config/editor/plugins.md#plugin-command-logging)功能，用于在浏览器控制台中启用插件命令的调试输出。
+
 ## 版本 9.1
 
 - 如果文档无法在 WOPI 中被[锁定](../using-wopi/key-concepts.md#lock)，则文档将以查看器模式打开并显示错误消息。
@@ -140,7 +144,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 向许可证响应添加 [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) 和 [users\_view](../additional-api/command-service/license.md#quota.users_view)。
 - 在文本文档、电子表格和演示文稿编辑器中添加了 [实时查看器](../get-started/how-it-works/viewing.md) 模式。
 - 将 [embedview](../using-wopi/wopi-discovery.md#embedview) 操作添加到 wopi 发现中。
-- [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) 参数已弃用，请改用 [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) 参数。
+- [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#configuration-parameters) 参数已弃用，请改用 [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#configuration-parameters) 参数。
 
 ## 版本 7.1
 

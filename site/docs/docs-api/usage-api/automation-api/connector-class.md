@@ -25,14 +25,14 @@ The function called to add an item to the context menu. The process of working w
 | *id*       | string                                | The item ID.                                                                                                                                  |
 | *text*     | string                                | The item caption.                                                                                                                             |
 | *data*     | string                                | The item data (this data will be sent to the click event callback).                                                                           |
-| *disabled* | boolean                               | Specifies if the current item is disabled or not.                                                                                             |
+| *disabled* | boolean                               | Whether the current item is disabled or not.                                                                                             |
 | *icons*    | string                                | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
 | *onClick*  | function                              | The click event callback. Only available for the [addContextMenuItem](#addcontextmenuitem) method.                                            |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | An array containing the context menu items for the current item.                                                                              |
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
@@ -78,11 +78,11 @@ The function called to add an item to the toolbar menu. The process of working w
 | *text*           | string                                      | The item caption. If this field is "", the toolbar button is displayed only with an icon, without a caption.                                  |
 | *hint*           | string                                      | The item hint.                                                                                                                                |
 | *icons*          | string \| object                            | The item icons (see the plugins [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) documentation). |
-| *disabled*       | boolean                                     | Specifies whether the current item is locked.                                                                                                 |
-| *enableToggle*   | boolean                                     | Specifies whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.                    |
-| *lockInViewMode* | boolean                                     | Specifies whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.).      |
-| *separator*      | boolean                                     | Specifies whether a separator is used between the toolbar menu items.                                                                         |
-| *split*          | boolean                                     | Specifies whether the toolbar menu item is split into two parts and includes the drop-down menu.                                              |
+| *disabled*       | boolean                                     | Whether the current item is locked.                                                                                                 |
+| *enableToggle*   | boolean                                     | Whether the toolbar menu item (when *"split == false"*) or its top part (when *"split == true"*) can be toggled.                    |
+| *lockInViewMode* | boolean                                     | Whether the toolbar menu item is automatically locked in the view modes (when previewing, viewing forms, disconnecting, etc.).      |
+| *separator*      | boolean                                     | Whether a separator is used between the toolbar menu items.                                                                         |
+| *split*          | boolean                                     | Whether the toolbar menu item is split into two parts and includes the drop-down menu.                                              |
 | onClick          | function                                    | The click event callback.                                                                                                                     |
 | *items*          | ToolbarMenuItem[]                           | An array containing the context menu items for the current item.                                                                              |
 
@@ -94,7 +94,7 @@ The function called to add an item to the toolbar menu. The process of working w
 
 #### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.addToolbarMenuItem({
   tabs: [
@@ -144,7 +144,7 @@ The function called to add an event listener, a function that will be called whe
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
@@ -159,15 +159,15 @@ To call commands and send the data back to the editor, define the callCommand me
 
 | Name     | Type     | Description                                                                                                                                                                                                                                                                                                                                                            |
 | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| func     | function | Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax. |
+| func     | function | The command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors. The command must be compatible with [Office JavaScript API](../../../office-api/get-started/overview.md) syntax. |
 | callback | function | The result that the method returns. Only the js standard types are available (any objects will be replaced with undefined).                                                                                                                                                                                                                                            |
-| isNoCalc | boolean  | Defines whether the document will be recalculated or not. The *true* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The *false* value is used to recalculate the document after executing the function in the *func* parameter. The default value is *false*.                                   |
+| isNoCalc | boolean  | Whether the document will be recalculated or not. The *true* value will not recalculate the document (use it only when your edits surely will not require document recalculation). The *false* value is used to recalculate the document after executing the function in the *func* parameter. The default value is *false*.                                   |
 
 This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.callCommand(() => {
   const oDocument = Api.GetDocument();
@@ -189,7 +189,7 @@ Please note that this method should only be called if you have disconnected the 
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.connect();
 ```
@@ -200,7 +200,7 @@ The function called to create the [connector modal window](./connector-window.md
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 ```
@@ -217,7 +217,7 @@ The function called to remove an event listener.
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.detachEvent("onChangeContentControl");
 ```
@@ -228,7 +228,7 @@ The function called to disconnect the connector from the editor.
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.disconnect();
 ```
@@ -253,7 +253,7 @@ The function called to execute certain editor methods using the connector. The f
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
@@ -272,7 +272,7 @@ The function called to update an item in the context menu with the specified ite
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const items = [
   {

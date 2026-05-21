@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Unmerges the selected cell range.
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("C5:D10").UnMerge();

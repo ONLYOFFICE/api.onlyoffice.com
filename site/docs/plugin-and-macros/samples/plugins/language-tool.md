@@ -54,7 +54,7 @@ Repository on GitHub: [languagetool](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Config
 
-``` json
+```json
 {
   "name": "LanguageTool",
   "nameLocale": {

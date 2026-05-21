@@ -32,7 +32,7 @@ sidebar_custom_props:
 
 或者，您也可克隆主分支（后续同样要在WordPress管理后台激活插件）：
 
-``` sh
+```sh
 cd wp-content/plugins
 git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
 ```

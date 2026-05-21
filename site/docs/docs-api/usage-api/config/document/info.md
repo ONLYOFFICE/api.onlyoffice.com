@@ -6,7 +6,7 @@ The info section defines the document info parameters.
 
 **type:** `boolean`
 
-Defines the highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is `undefined` or `null`, the *Favorite* icon is not displayed at the editor window header.
+The highlighting state of the *Favorite* icon. When the user clicks the icon, the [onMetaChange](../events.md#onmetachange) event is called. If the parameter is `undefined` or `null`, the *Favorite* icon is not displayed at the editor window header.
 
 **Example**: `true`
 
@@ -16,7 +16,7 @@ Defines the highlighting state of the *Favorite* icon. When the user clicks the 
 
 **type:** `string`
 
-Defines the folder where the document is stored. Can be empty if the document is in the root folder.
+The folder where the document is stored. Can be empty if the document is in the root folder.
 
 **Example**: `"Example Files"`
 
@@ -24,7 +24,7 @@ Defines the folder where the document is stored. Can be empty if the document is
 
 **type:** `string`
 
-Defines the name of the document owner/creator.
+The name of the document owner/creator.
 
 **Example**: `"John Smith"`
 
@@ -32,11 +32,11 @@ Defines the name of the document owner/creator.
 
 **type:** `object[]`
 
-Displays the information about the settings which allow sharing the document with other users.
+The information about the settings which allow sharing the document with other users.
 
 **Example**:
 
-``` ts
+```ts
 [
   {
     isLink: false,
@@ -50,7 +50,7 @@ Displays the information about the settings which allow sharing the document wit
 
 **type:** `boolean`
 
-Changes the user icon to the link icon.
+Whether to replace the user icon with the link icon.
 
 **Example**: `false`
 
@@ -76,7 +76,7 @@ The name of the user the document will be shared with.
 
 **type:** `string`
 
-Defines the document uploading date.
+The document uploading date.
 
 **Example**: `"2010-07-07 3:46 PM"`
 
@@ -84,7 +84,7 @@ Defines the document uploading date.
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

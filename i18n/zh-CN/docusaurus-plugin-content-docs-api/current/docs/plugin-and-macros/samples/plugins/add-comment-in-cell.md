@@ -29,7 +29,7 @@ GitHub 仓库地址：[example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example add comment",
   "guid": "asc.{89643394-0F74-4297-9E0B-541A67F1E98C}",

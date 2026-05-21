@@ -8,7 +8,7 @@ import APITable from '@site/src/components/APITable/APITable';
 从 8.1 版开始，建议将 [shardkey](../get-started/configuration/shard-key.md) 参数添加到查询字符串中，其中包含 `key` 值。例如，`?shardkey=Khirz6zTPdfd7`。这允许您对请求进行负载平衡。
 :::
 
-## 请求参数及其说明
+## 请求参数
 
 ```mdx-code-block
 <APITable>
@@ -16,11 +16,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 参数      | 类型    | 是否必填       | 描述                                                                                                                                                                                                                                                                                                                                       |
 | --------- | ------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| argument  | object  | 非必填         | 定义要传递给创建的文档的参数。请参阅[支持的属性](../../document-builder/builder-framework/CDocBuilder/SetProperty.md#--argument)了解如何使用参数的详细信息。                                                                                                                                                                               |
-| async     | boolean | 非必填         | 定义对**文档生成器服务**的请求类型：异步与否。当设置为 `true` 时，响应立即形成并包含一个 `key`。然后您必须使用此 `key` 发送请求进行轮询，直到文档生成完成（当 `end` 变为 `true` 时）。默认值为 `false`。                                                                                                                                    |
-| key       | string  | 视情况而定     | 定义用于明确标识请求的请求标识符。key 在**文档生成器服务**端形成，并作为对第一个请求的响应返回。当使用异步请求时（`async` 参数设置为 `true`），key 不存在于第一个请求中，但必须存在于将在文档生成完成之前发送的所有后续请求中。使用同步请求时（`async` 参数设置为 `false`），不需要该参数。                                                  |
-| token     | string  | 配置要求       | 以[令牌](./signature/request/token-in-body.md#document-builder)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。                                                                                                                                                                                                     |
-| url       | string  | 必填           | 定义 `.js` 脚本文件的绝对 URL。                                                                                                                                                                                                                                                                                                            |
+| argument  | object  | 非必填         | 要传递给创建的文档的参数。请参阅[支持的属性](../../document-builder/builder-framework/CDocBuilder/SetProperty.md#--argument)了解如何使用参数的详细信息。                                                                                                                                                                               |
+| async     | boolean | 非必填         | 对**文档生成器服务**的请求类型：异步与否。当设置为 `true` 时，响应立即形成并包含一个 `key`。然后您必须使用此 `key` 发送请求进行轮询，直到文档生成完成（当 `end` 变为 `true` 时）。默认值为 `false`。                                                                                                                                    |
+| key       | string  | 视情况而定     | 用于明确标识请求的请求标识符。key 在**文档生成器服务**端形成，并作为对第一个请求的响应返回。当使用异步请求时（`async` 参数设置为 `true`），key 不存在于第一个请求中，但必须存在于将在文档生成完成之前发送的所有后续请求中。使用同步请求时（`async` 参数设置为 `false`），不需要该参数。                                                  |
+| token     | string  | 配置要求       | 以[令牌](./signature/request/token-in-body.md#document-builder)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。                                                                                                                                                                                                     |
+| url       | string  | 必填           |  `.js` 脚本文件的绝对 URL。                                                                                                                                                                                                                                                                                                            |
 
 ```mdx-code-block
 </APITable>
@@ -36,7 +36,7 @@ import APITable from '@site/src/components/APITable/APITable';
 在脚本中使用 `builder.OpenFile()` 时，必须提供文件的绝对 URL（例如 `https://example.com/document.docx`），而不是本地路径。文档服务器需要从可公开访问的位置下载文件。
 :::
 
-## 响应参数及其说明
+## 响应参数
 
 请求结果以 JSON 格式返回。
 
@@ -46,10 +46,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 参数      | 类型    | 示例                                            | 描述                                                                                                                                                                                                                                                 |
 | --------- | ------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| end       | boolean | `true`                                          | 定义文档生成是否完成。当值为 `false` 时，任务仍在处理中，响应中不包含 `urls` 参数。当值为 `true` 时，任务已完成，`urls` 参数将出现在响应中。                                                                                                         |
-| error     | integer | `-8`                                            | 定义文档生成过程中发生的错误。可能的错误代码可在[下方](#可能的错误代码及其描述)找到。                                                                                                                                                                 |
-| key       | string  | `af86C7e71Ca8`                                  | 定义文档生成任务的唯一标识符。如果请求中提供了 `key` 参数，则返回相同的值。如果在第一个异步请求中未提供 `key` 参数，则由**文档生成器服务**生成新的 key。请在所有后续轮询请求中使用此值。                                                              |
-| urls      | object  | `{"output.docx": "https://documentserver/..."}` | 定义包含生成的输出文件绝对 URL 的对象。对象键是 `.js` 脚本中指定的输出文件名。此参数仅在 `end` 值为 `true` 时存在。                                                                                                                                   |
+| end       | boolean | `true`                                          | 文档生成是否完成。当值为 `false` 时，任务仍在处理中，响应中不包含 `urls` 参数。当值为 `true` 时，任务已完成，`urls` 参数将出现在响应中。                                                                                                         |
+| error     | integer | `-8`                                            | 文档生成过程中发生的错误。可能的错误代码可在[下方](#可能的错误代码及其描述)找到。                                                                                                                                                                 |
+| key       | string  | `af86C7e71Ca8`                                  | 文档生成任务的唯一标识符。如果请求中提供了 `key` 参数，则返回相同的值。如果在第一个异步请求中未提供 `key` 参数，则由**文档生成器服务**生成新的 key。请在所有后续轮询请求中使用此值。                                                              |
+| urls      | object  | `{"output.docx": "https://documentserver/..."}` | 包含生成的输出文件绝对 URL 的对象。对象键是 `.js` 脚本中指定的输出文件名。此参数仅在 `end` 值为 `true` 时存在。                                                                                                                                   |
 
 ```mdx-code-block
 </APITable>
@@ -59,7 +59,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 下面是一个简单的 `.js` 脚本，用于创建包含 "Hello World!" 文本的文档：
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -80,7 +80,7 @@ builder.CloseFile();
 
 **步骤 1.** 发送包含 `.js` 脚本文件 URL 的初始请求：
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -91,7 +91,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "end": false
@@ -100,7 +100,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **步骤 2.** 使用返回的 `key` 轮询，直到 `end` 为 `true`：
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -111,7 +111,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -123,7 +123,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### 同步请求
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -134,7 +134,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -146,7 +146,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### 带令牌的异步请求
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -156,7 +156,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "error": -8
 }
@@ -168,7 +168,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### 带参数的同步请求
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -183,7 +183,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -197,7 +197,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 一个 `.js` 脚本可以生成多个文件。例如：
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -212,7 +212,7 @@ builder.SaveFile("xlsx", "spreadsheet1.xlsx");
 builder.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -223,7 +223,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -239,7 +239,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 您可以比较两个文档并生成包含修订记录的结果文件。脚本使用 [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) 打开第二个文档进行比较：
 
-``` js
+```js
 builderJS.OpenFile("https://example.com/file1.docx");
 const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
 AscCommonWord.CompareDocuments(Api, file, null);
@@ -248,7 +248,7 @@ builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -259,7 +259,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **响应：**
 
-``` json
+```json
 {
   "key": "Khirz6zTPdfd7",
   "urls": {

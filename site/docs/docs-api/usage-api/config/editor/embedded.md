@@ -10,7 +10,7 @@ This section is for the `embedded` document type only. See the [config](../confi
 
 **type:** `"document" | "player"` | **default:** `"player"`
 
-Defines the start mode for the embedded viewer. In `player` mode, the slideshow starts automatically.
+The start mode for the embedded viewer. In `player` mode, the slideshow starts automatically.
 
 **Example**: `"document"`
 
@@ -18,7 +18,7 @@ Defines the start mode for the embedded viewer. In `player` mode, the slideshow 
 
 **type:** `string`
 
-Defines the absolute URL to the source file for the embedded document.
+The absolute URL to the source file for the embedded document.
 
 **Example**: `"https://example.com/embedded?doc=exampledocument1.docx"`
 
@@ -26,7 +26,7 @@ Defines the absolute URL to the source file for the embedded document.
 
 **type:** `string`
 
-Defines the absolute URL of the document to open in full screen mode.
+The absolute URL of the document to open in full screen mode.
 
 **Example**: `"https://example.com/embedded?doc=exampledocument1.docx#fullscreen"`
 
@@ -34,7 +34,7 @@ Defines the absolute URL of the document to open in full screen mode.
 
 **type:** `string`
 
-Defines the absolute URL for saving the document to the user's local computer.
+The absolute URL for saving the document to the user's local computer.
 
 **Example**: `"https://example.com/download?doc=exampledocument1.docx"`
 
@@ -42,7 +42,7 @@ Defines the absolute URL for saving the document to the user's local computer.
 
 **type:** `string`
 
-Defines the absolute URL for sharing the document with other users.
+The absolute URL for sharing the document with other users.
 
 **Example**: `"https://example.com/view?doc=exampledocument1.docx"`
 
@@ -50,7 +50,7 @@ Defines the absolute URL for sharing the document with other users.
 
 **type:** `"top" | "bottom"` | **default:** `"top"`
 
-Defines the position of the embedded viewer toolbar.
+The position of the embedded viewer toolbar.
 
 **Example**: `"bottom"`
 
@@ -58,7 +58,7 @@ Defines the position of the embedded viewer toolbar.
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

@@ -87,7 +87,7 @@ sidebar_position: -17
 
 与[操作链接](./action-link.md#opening-the-bookmark)类似，将从 [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) 事件中获取的 `actionLink` 对象作为 [`editorConfig.actionLink`](../../usage-api/config/editor/editor.md#actionlink) 的值传递：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     actionLink: ACTION_DATA,
@@ -105,7 +105,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ![共享设置](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![共享设置](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
-``` ts
+```ts
 docEditor.setSharingSettings({
   sharingSettings: [
     {

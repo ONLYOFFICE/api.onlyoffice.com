@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 在选定区域中使用不同颜色高亮显示重复项，帮助快速识别重复值。
 
-``` ts
+```ts
 (function () 
 {
     // 非重复值单元格的背景色

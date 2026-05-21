@@ -1,5 +1,48 @@
 # Change log
 
+## 8.6.0
+
+### New features
+
+#### Docs API
+
+* Added custom theme customization guide
+
+#### Desktop
+
+* Added custom theme customization guide
+
+### Improvements
+
+#### Docs API
+
+* Removed "Defines"/"Specifies" prefix from parameter descriptions across config, editor, customization, document, methods, callback, connector, command service, additional API, and WOPI pages
+* Renamed "Parameters" headings to "Request/Response parameters" in command service and additional API pages
+* Redesigned API vs WOPI comparison table to feature-per-row format
+* Renamed DocEditor constructor parameter from `placeholder` to `id`
+* Improved license command response parameter table
+* Updated connector window class introduction and removed italic parameter names
+* Added `@onlyoffice/doceditor-types` package tip to DocEditor page
+
+#### Plugins and macros
+
+* Removed "Defines" prefix from plugin customization parameter descriptions
+
+#### Desktop
+
+* Removed "Defines" prefix from desktop editors usage API parameter descriptions
+
+#### Common
+
+* Replaced local config.d.ts with `@onlyoffice/doceditor-types` npm package
+
+### Fixes
+
+#### Docs API
+
+* Fixed WOPI config and conversion API page errors
+* Corrected broken relative links in editor config docs
+
 ## 8.5.0
 
 ### New features

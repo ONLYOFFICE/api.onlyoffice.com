@@ -66,7 +66,7 @@ sidebar_position: -4
 
 示例：
 
-``` ts
+```ts
 (function()
 {
   /**
@@ -104,7 +104,7 @@ sidebar_position: -4
 
 :::
 
-``` ts
+```ts
 (function()
 {
   /**

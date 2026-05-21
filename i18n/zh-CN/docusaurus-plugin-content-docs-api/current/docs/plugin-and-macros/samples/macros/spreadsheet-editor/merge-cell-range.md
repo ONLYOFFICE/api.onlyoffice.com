@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 合并选定的单元格区域。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("A1:B3").Merge(true);

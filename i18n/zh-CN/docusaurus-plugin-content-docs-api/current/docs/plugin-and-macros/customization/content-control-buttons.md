@@ -6,7 +6,7 @@ sidebar_position: -1
 
 从 9.0 版本开始，您可以使用 `Asc.ButtonContentControl` 类为内容控件添加自定义按钮：
 
-``` ts
+```ts
 let button = new Asc.ButtonContentControl();
 ```
 
@@ -18,7 +18,7 @@ let button = new Asc.ButtonContentControl();
 
 **示例**:
 
-``` ts
+```ts
 button.icons = "/resources/check%scale%(default).png";
 ```
 
@@ -26,7 +26,7 @@ button.icons = "/resources/check%scale%(default).png";
 
 `类型： function`
 
-定义按钮被点击时需要执行的操作。
+按钮被点击时需要执行的操作。
 
 ### 参数
 
@@ -36,7 +36,7 @@ button.icons = "/resources/check%scale%(default).png";
 
 **示例**:
 
-``` ts
+```ts
 button.attachOnClick((contentControlId) => {
   Asc.plugin.executeMethod("RemoveContentControl", [contentControlId]);
 });
@@ -44,7 +44,7 @@ button.attachOnClick((contentControlId) => {
 
 ## 示例
 
-``` ts
+```ts
 (function (window) {
   window.Asc.plugin.init = () => {
     let button = new Asc.ButtonContentControl();

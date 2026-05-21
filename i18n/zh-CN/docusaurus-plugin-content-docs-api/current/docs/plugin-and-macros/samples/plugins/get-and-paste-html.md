@@ -44,7 +44,7 @@ GitHub 仓库：[html](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/m
 
 ## 配置
 
-``` json
+```json
 {
   "name": "HTML",
   "nameLocale": {

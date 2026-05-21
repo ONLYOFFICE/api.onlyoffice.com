@@ -40,7 +40,7 @@ Repository on GitHub: [https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example work with content controls tags",
   "guid": "asc.{C36DDFB5-08F0-4A68-B829-5FB1F7D49331}",

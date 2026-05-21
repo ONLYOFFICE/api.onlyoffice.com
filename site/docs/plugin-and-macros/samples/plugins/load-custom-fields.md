@@ -40,7 +40,7 @@ Repository on GitHub: [example_customfields_load](https://github.com/ONLYOFFICE/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example loading custom fields",
   "guid": "asc.{E5A81B17-C871-4C4B-A90A-62D3A7EC0751}",

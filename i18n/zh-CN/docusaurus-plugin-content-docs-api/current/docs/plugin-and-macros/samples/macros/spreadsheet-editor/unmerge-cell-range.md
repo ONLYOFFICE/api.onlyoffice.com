@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 取消选定的单元格区域的合并操作。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("C5:D10").UnMerge();

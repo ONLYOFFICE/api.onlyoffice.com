@@ -42,7 +42,7 @@ Repository on GitHub: [clippy](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Clippy",
   "guid": "asc.{5C521CB8-FD20-4CA3-83D7-1EEB8F4DC759}",

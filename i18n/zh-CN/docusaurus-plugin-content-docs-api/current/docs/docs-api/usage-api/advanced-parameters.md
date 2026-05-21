@@ -23,7 +23,7 @@ sidebar_position: -5
 
 包含所有可用参数的完整 `config`：
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",

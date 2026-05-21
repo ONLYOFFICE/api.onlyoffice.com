@@ -143,7 +143,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在项目目录中使用以下命令：
 
-``` sh
+```sh
 docker-compose up
 ```
 

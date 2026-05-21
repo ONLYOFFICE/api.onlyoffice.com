@@ -33,7 +33,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 示例
 
-``` ts
+```ts
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument()
   const oParagraph = Api.CreateParagraph()
@@ -52,7 +52,7 @@ Asc.plugin.callCommand(() => {
 
 ### 示例
 
-``` ts
+```ts
 Asc.scope.text = text
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument()
@@ -95,7 +95,7 @@ Asc.plugin.callCommand(() => {
 
 ### 关于 data、height、imgSrc、mmToPx、objectId 和 width 参数的示例
 
-``` ts
+```ts
 window.Asc.plugin.button = (id) => {
   const info = window.Asc.plugin.info
 
@@ -134,7 +134,7 @@ window.Asc.plugin.button = (id) => {
 
 ### 编辑器类型参数示例
 
-``` ts
+```ts
 function createScriptFromArray(aSelected) {
   if (aSelected.length !== 0) {
     switch (window.Asc.plugin.info.editorType) {
@@ -153,7 +153,7 @@ function createScriptFromArray(aSelected) {
 
 ### 全局唯一标识符示例
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   const plugin_uuid = window.Asc.plugin.info.guid
 }
@@ -161,7 +161,7 @@ window.Asc.plugin.init = () => {
 
 ### 重新计算参数的示例
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   let sScript = "var oDocument = Api.GetDocument();"
   sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`
@@ -175,7 +175,7 @@ window.Asc.plugin.init = () => {
 
 ### 调整大小参数的示例
 
-``` ts
+```ts
 if (window.Asc.plugin.info.resize === true) {
   window.Asc.plugin.button(0)
 }

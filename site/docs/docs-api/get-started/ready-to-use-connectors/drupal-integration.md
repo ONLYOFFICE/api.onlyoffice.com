@@ -28,7 +28,7 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 Make sure to run:
 
-``` sh
+```sh
 composer require firebase/php-jwt:^6.0
 ```
 
@@ -44,13 +44,13 @@ There are two options to add the Drupal module.
 
 This is the recommended method. Enter the following command at the root of your Drupal site:
 
-``` sh
+```sh
 composer require onlyoffice/onlyoffice-drupal
 ```
 
 To apply the localization settings, run:
 
-``` sh
+```sh
 drush locale-check
 drush locale-update
 ```
@@ -92,7 +92,7 @@ After installation (by either method above), enable the module using one of the 
 
 In Drupal, open the *\~/config/system/onlyoffice-settings* page with administrative settings for **ONLYOFFICE** section. Or follow **Configuration → MEDIA → ONLYOFFICE Connector settings**. Enter the following address to connect ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

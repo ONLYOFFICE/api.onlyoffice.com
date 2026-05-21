@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Documents"]
 
 Inserts text into the document at the current cursor position.
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();

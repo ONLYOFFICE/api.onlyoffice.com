@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 为偶数索引的幻灯片设置蓝色背景，奇数索引的幻灯片设置图片背景。
 
-``` ts
+```ts
 (function()
 {
     let presentation = Api.GetPresentation(); 

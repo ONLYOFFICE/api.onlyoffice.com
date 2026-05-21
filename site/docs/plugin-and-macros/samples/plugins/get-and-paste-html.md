@@ -49,7 +49,7 @@ Repository on GitHub: [html](https://github.com/ONLYOFFICE/onlyoffice.github.io/
 
 ## Config
 
-``` json
+```json
 {
   "name": "HTML",
   "nameLocale": {

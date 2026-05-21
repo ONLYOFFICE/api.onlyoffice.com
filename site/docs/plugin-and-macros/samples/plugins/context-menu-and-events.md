@@ -34,7 +34,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## Config
 
-``` json
+```json
 {
   "name": "ContextMenu and Events",
   "guid": "asc.{B617C899-03AA-476F-8D2C-1B7272489CBC}",
@@ -109,7 +109,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## index.html
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -125,7 +125,7 @@ Copy the code below and save it in the *config.json*, *index.html*, and *code.js
 
 ## Plugin code
 
-``` ts
+```ts
 console.log("work")
 window.Asc.plugin.init = function init() {}
 window.Asc.plugin.button = function button(id) {
