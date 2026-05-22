@@ -35,7 +35,7 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和PDF的两种
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![显示其他用户的更改](/assets/images/editor/show-changes-from-other-users.png)
+   ![显示其他用户的更改](/assets/images/editor/show-changes-from-other-users.png#gh-light-mode-only)![显示其他用户的更改](/assets/images/editor/show-changes-from-other-users.dark.png#gh-dark-mode-only)
 
 2. `mode: "fast"` 且 `change: false` — 默认打开实时查看器。用户无法切换到通用查看器：
 
@@ -87,11 +87,11 @@ ONLYOFFICE 文档支持文本文档、电子表格、演示文稿和PDF的两种
 
 在实时查看器中，会显示其他用户的光标。通过 [`document.permissions.userInfoGroups`](../../usage-api/config/document/permissions.md#userinfogroups) 参数配置显示哪些用户的光标。
 
-![实时查看器中的用户光标](/assets/images/editor/live-viewer.png)
+![实时查看器中的用户光标](/assets/images/editor/live-viewer.png#gh-light-mode-only)![实时查看器中的用户光标](/assets/images/editor/live-viewer.dark.png#gh-dark-mode-only)
 
 在通用查看器中，文档显示为静态快照：
 
-![通用查看器](/assets/images/editor/viewer.png)
+![通用查看器](/assets/images/editor/viewer.png#gh-light-mode-only)![通用查看器](/assets/images/editor/viewer.dark.png#gh-dark-mode-only)
 
 在以下情况下，仅使用通用查看器：
 

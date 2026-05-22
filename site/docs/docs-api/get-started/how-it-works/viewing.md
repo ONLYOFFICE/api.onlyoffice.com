@@ -35,7 +35,7 @@ To control which viewing mode is used, configure the [`editorConfig.coEditing`](
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![Show changes from other users](/assets/images/editor/show-changes-from-other-users.png)
+   ![Show changes from other users](/assets/images/editor/show-changes-from-other-users.png#gh-light-mode-only)![Show changes from other users](/assets/images/editor/show-changes-from-other-users.dark.png#gh-dark-mode-only)
 
 2. `mode: "fast"` and `change: false` — the live viewer opens by default. The user cannot switch to the common viewer:
 
@@ -87,11 +87,11 @@ To control which viewing mode is used, configure the [`editorConfig.coEditing`](
 
 In the live viewer, the cursors of other users are displayed. Configure which users' cursors are visible with the [`document.permissions.userInfoGroups`](../../usage-api/config/document/permissions.md#userinfogroups) parameter.
 
-![Live viewer with user cursors](/assets/images/editor/live-viewer.png)
+![Live viewer with user cursors](/assets/images/editor/live-viewer.png#gh-light-mode-only)![Live viewer with user cursors](/assets/images/editor/live-viewer.dark.png#gh-dark-mode-only)
 
 In the common viewer, the document is displayed as a static snapshot:
 
-![Common viewer](/assets/images/editor/viewer.png)
+![Common viewer](/assets/images/editor/viewer.png#gh-light-mode-only)![Common viewer](/assets/images/editor/viewer.dark.png#gh-dark-mode-only)
 
 Only the common viewer is used in the following cases:
 
