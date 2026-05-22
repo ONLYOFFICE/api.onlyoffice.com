@@ -15,6 +15,7 @@
 | [AddContentControlList](./AddContentControlList.md) | 无 | 向文档添加空的内容控件列表。 |
 | [AddContentControlPicture](./AddContentControlPicture.md) | 无 | 向文档添加空的内容控件图片。 |
 | [AddOleObject](./AddOleObject.md) | 无 | 在当前文档位置添加 OLE 对象。 |
+| [AnnotateParagraph](./AnnotateParagraph.md) | 无 | 向指定的段落添加注解。 |
 | [CanRedo](./CanRedo.md) | boolean | 检查是否可以恢复用户上一次撤销的操作。 |
 | [CanUndo](./CanUndo.md) | boolean | 检查是否可以撤销用户的上一次操作。 |
 | [ChangeComment](./ChangeComment.md) | 无 | 更改指定的批注。 |
@@ -78,6 +79,7 @@
 | [Redo](./Redo.md) | 无 | 恢复用户上一次撤销的操作。 |
 | [RejectReviewChanges](./RejectReviewChanges.md) | 无 | 拒绝审阅修订。 |
 | [RemoveAddinField](./RemoveAddinField.md) | 无 | 删除指定的加载项字段。 |
+| [RemoveAnnotationRange](./RemoveAnnotationRange.md) | 无 | 从文档中移除特定的注解范围。 |
 | [RemoveComments](./RemoveComments.md) | 无 | 删除指定的批注。 |
 | [RemoveContentControl](./RemoveContentControl.md) | [ContentControlParentPr](../Enumeration/ContentControlParentPr.md) | 删除当前选定的内容控件，同时保留其所有内容。将删除鼠标光标当前所在位置的内容控件。 |
 | [RemoveContentControls](./RemoveContentControls.md) | 无 | 删除多个内容控件。 |
@@ -92,12 +94,14 @@
 | [SearchAndReplace](./SearchAndReplace.md) | 无 | 查找并替换文本。 |
 | [SearchNext](./SearchNext.md) | boolean | 从当前位置开始查找并选择下一个匹配的文本。 |
 | [SelectAddinField](./SelectAddinField.md) | 无 | 选择指定的加载项字段。 |
+| [SelectAnnotationRange](./SelectAnnotationRange.md) | 无 | 使用给定的注解在文档中选择文本。 |
 | [SelectContentControl](./SelectContentControl.md) | 无 | 选择指定的内容控件。 |
 | [SelectOleObject](./SelectOleObject.md) | 无 | 选择指定的 OLE 对象。 |
 | [SetDisplayModeInReview](./SetDisplayModeInReview.md) | 无 | 设置修订的显示模式。 |
 | [SetEditingRestrictions](./SetEditingRestrictions.md) | 无 | 设置文档编辑限制。 |
 | [SetFormValue](./SetFormValue.md) | 无 | 为指定的表单设置值。 |
 | [SetMacros](./SetMacros.md) | 无 | 为文档设置宏。 |
+| [SetParagraphHtml](./SetParagraphHtml.md) | 无 | 用从给定 HTML 字符串解析的内容替换指定段落的所有内容。 |
 | [SetPluginsOptions](./SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。 |
 | [SetProperties](./SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |

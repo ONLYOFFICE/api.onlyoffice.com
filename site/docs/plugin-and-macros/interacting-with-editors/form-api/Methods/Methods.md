@@ -29,6 +29,9 @@ Represents the Api class.
 | [GetVersion](./GetVersion.md) | string | Returns the editor version. |
 | [InputText](./InputText.md) | None | Inserts text into the document. |
 | [InstallPlugin](./InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
+| [IsEditingOFormMode](./IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |
+| [IsFillingFormMode](./IsFillingFormMode.md) | boolean | Checks if the document is in the filling form mode. |
+| [IsFillingOFormMode](./IsFillingOFormMode.md) | boolean | Checks if the document is in the filling OForm mode. |
 | [IsFormSigned](./IsFormSigned.md) | boolean | Checks whether the specified form has been digitally signed. |
 | [MouseMoveWindow](./MouseMoveWindow.md) | None | Sends an event to the plugin when the mouse button is moved inside the plugin iframe. |
 | [MouseUpWindow](./MouseUpWindow.md) | None | Sends an event to the plugin when the mouse button is released inside the plugin iframe. |

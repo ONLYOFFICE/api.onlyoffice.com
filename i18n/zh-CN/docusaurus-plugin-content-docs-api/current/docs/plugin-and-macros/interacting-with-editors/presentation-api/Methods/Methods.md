@@ -8,6 +8,7 @@
 | ------ | ------- | ----------- |
 | [AddComment](./AddComment.md) | string \| null | 向演示文稿添加批注。 |
 | [AddOleObject](./AddOleObject.md) | 无 | 在当前文档位置添加 OLE 对象。 |
+| [ApplyTheme](./ApplyTheme.md) | boolean | 通过索引或名称将主题应用于演示文稿。 |
 | [ChangeComment](./ChangeComment.md) | boolean | 更改指定的批注。 |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | 无 | 向协作聊天发送消息。 |
 | [EditOleObject](./EditOleObject.md) | 无 | 编辑文档中的 OLE 对象。 |
@@ -16,6 +17,7 @@
 | [FocusEditor](./FocusEditor.md) | 无 | 将焦点返回到编辑器。 |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | 返回文档中的所有批注。 |
 | [GetDocumentLang](./GetDocumentLang.md) | string | 返回文档语言。 |
+| [GetEditorThemes](./GetEditorThemes.md) | object[] | 返回可用编辑器主题的列表。 |
 | [GetFileToDownload](./GetFileToDownload.md) | string | 以指定格式返回要下载的当前文件。 |
 | [GetFontList](./GetFontList.md) | [FontInfo](../Enumeration/FontInfo.md)[] | 返回字体列表。 |
 | [GetImageDataFromSelection](./GetImageDataFromSelection.md) | [ImageData](../Enumeration/ImageData.md) | 返回所选图形中第一个图形的图像数据。如果没有选择图形，该方法将返回一个白色矩形。 |

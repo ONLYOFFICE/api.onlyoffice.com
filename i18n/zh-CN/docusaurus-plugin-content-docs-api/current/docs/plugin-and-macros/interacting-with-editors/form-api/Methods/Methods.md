@@ -29,6 +29,9 @@
 | [GetVersion](./GetVersion.md) | string | 返回编辑器版本。 |
 | [InputText](./InputText.md) | 无 | 向文档中插入文本。 |
 | [InstallPlugin](./InstallPlugin.md) | object | 使用指定的插件配置安装插件。 |
+| [IsEditingOFormMode](./IsEditingOFormMode.md) | boolean | 检查文档是否处于 OForm 编辑模式。 |
+| [IsFillingFormMode](./IsFillingFormMode.md) | boolean | 检查文档是否处于表单填写模式。 |
+| [IsFillingOFormMode](./IsFillingOFormMode.md) | boolean | 检查文档是否处于 OForm 填写模式。 |
 | [IsFormSigned](./IsFormSigned.md) | boolean | 检查指定的表单是否已进行数字签名。 |
 | [MouseMoveWindow](./MouseMoveWindow.md) | 无 | 当鼠标按钮在插件 iframe 内移动时向插件发送事件。 |
 | [MouseUpWindow](./MouseUpWindow.md) | 无 | 当鼠标按钮在插件 iframe 内释放时向插件发送事件。 |
