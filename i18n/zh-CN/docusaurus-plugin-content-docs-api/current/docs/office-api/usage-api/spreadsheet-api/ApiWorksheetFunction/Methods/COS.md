@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何获取角的余弦。
+计算电子表格中角度的余弦值。
 
 ```javascript editor-xlsx
-// How to find a cosine.
+// What is the cosine of a given angle in a spreadsheet?
 
-// Use function to get the cosine of an angle.
+// Find the ratio of a triangle's side using an angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

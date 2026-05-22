@@ -20,10 +20,12 @@ expression.GetAllDrawings();
 
 ## 示例
 
-如何获取页面上的绘图。
+从 PDF 的页面检索所有形状和图形。
 
 ```javascript editor-pdf
-// Get drawing on a page and select it.
+// How do I access all the drawings in a PDF?
+
+// List every visual element on the current page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

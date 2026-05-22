@@ -20,10 +20,13 @@ expression.GetCommands();
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。
+从电子表格中的自定义形状路径检索所有绘图命令。
 
 ```javascript editor-xlsx
-// Shows total command count and first command information in cells.
+// How do I access every step in a shape's drawing sequence at once in a spreadsheet?
+
+// Collect the full list of path instructions to inspect or process a shape's outline in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

@@ -2,32 +2,16 @@
 
 设置指定是否可以将指定字段拖动到行位置的设置。
 
-## 语法
-
-```javascript
-expression.SetDragToRow(flag);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | 必需 | boolean |  | 指定是否可以将指定字段拖动到行位置。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetDragToRow](../../ApiPivotField/Methods/SetDragToRow.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到行。
+允许或阻止透视字段被拖动到电子表格中的行区域。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to row.
+// How do I control whether a pivot field can be moved to the row section in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to row of a specified pivot.
+// Lock a pivot field's position to stop users from repositioning it as a row in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

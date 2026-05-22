@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置文本颜色。
+在 PDF 中为所有字段控件应用文本颜色。
 
 ```javascript editor-pdf
+// How do I set the text color for widgets in a PDF?
+
+// Change the text display color for widget content in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -37,5 +41,4 @@ let rgbColor = Api.RGB(255, 100, 0);
 widgets.forEach(function(widget) {
     widget.SetTextColor(rgbColor);
 });
-
 ```

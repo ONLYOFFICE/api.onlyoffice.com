@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-此示例演示如何返回由给定数值引用的 Unicode 字符。
+在电子表格中返回由给定数值引用的 Unicode 字符。
 
 ```javascript editor-xlsx
-// How to get a Unicode character.
+// The UNICHAR function converts numeric code points to their corresponding characters.
 
-// Use a function to return the Unicode character knowing its reference number.
+// Apply the function to obtain a character from its Unicode number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

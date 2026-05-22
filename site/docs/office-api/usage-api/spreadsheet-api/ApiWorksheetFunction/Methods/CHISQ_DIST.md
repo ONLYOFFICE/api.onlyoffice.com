@@ -16,7 +16,7 @@ expression.CHISQ_DIST(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value at which the distribution will be evaluated, a nonnegative number. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of degrees of freedom, a number between 1 and 10^10, excluding 10^10. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value that determines the form of the function. If this argument is equal to **true**, the cumulative distribution function is returned; if  it is equal to **false**, the probability density function is returned. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value that determines the form of the function. If this argument is equal to **true**, |
 
 ## Returns
 
@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the left-tailed probability of the chi-squared distribution.
+Get the cumulative percentage of results up to a specific point in a chi-squared distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the left-tailed probability of the chi-squared distribution.
+// Determine what portion of the distribution falls at or below a given value in a spreadsheet.
 
-// Use function to return the left-tailed probability of the chi-squared distribution.
+// Evaluate how likely it is to see results less than or equal to an observed chi-squared value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

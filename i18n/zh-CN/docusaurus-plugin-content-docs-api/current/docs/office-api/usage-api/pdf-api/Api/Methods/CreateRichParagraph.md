@@ -20,9 +20,13 @@ expression.CreateRichParagraph();
 
 ## 示例
 
-如何创建新的富文本段落并将其添加到富文本内容
+向 PDF 注释添加格式化文本段落。
 
 ```javascript editor-pdf
+// How do I insert multiple paragraphs with different formatting in a PDF?
+
+// Create a new paragraph and add it to a rich text annotation in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

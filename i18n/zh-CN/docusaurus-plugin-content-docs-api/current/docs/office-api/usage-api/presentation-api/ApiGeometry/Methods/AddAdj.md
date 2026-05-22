@@ -23,10 +23,13 @@ boolean
 
 ## 示例
 
-为演示文稿创建带有参考线和连接点的可调整几何图形。
+在演示文稿中创建带有参考线和连接点的可调整几何图形。
 
 ```javascript editor-pptx
-// Displays adjustment value and applies custom geometry to shape.
+// Adjustable parameters allow shapes to be customized without changing their geometry.
+
+// Add an adjustment parameter and apply the custom geometry to a shape.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

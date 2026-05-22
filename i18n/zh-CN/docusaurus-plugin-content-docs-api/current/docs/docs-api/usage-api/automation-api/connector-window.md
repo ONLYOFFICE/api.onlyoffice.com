@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 连接器窗口
 
-Connector window 是一个代表连接器窗口的类。要创建它，请使用 connector 对象的 [createWindow](./connector-class.md#createwindow) 方法。
+**ConnectorWindow** 类用于管理连接器在编辑器内创建的模态窗口。要创建它，请使用 connector 对象的 [createWindow](./connector-class.md#createwindow) 方法。
 
 您可以在下面找到此类可用的方法。
 
@@ -21,7 +21,7 @@ Connector window 是一个代表连接器窗口的类。要创建它，请使用
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
@@ -42,7 +42,7 @@ testConnectorWindow.attachEvent("onWindowMessage", (message) => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.dispatchEvent("messageName", {
@@ -62,7 +62,7 @@ testConnectorWindow.dispatchEvent("messageName", {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.show({
@@ -88,8 +88,8 @@ testConnectorWindow.show({
 
 | 名称     | 类型     | 描述         |
 | -------- | -------- | ------------------- |
-| *id*     | string   | 事件名称。     |
-| *action* | function | 事件侦听器。  |
+| id       | string   | 事件名称。     |
+| action   | function | 事件侦听器。  |
 
 #### 返回
 
@@ -97,7 +97,7 @@ testConnectorWindow.show({
 
 #### 示例
 
-``` ts
+```ts
 window.Asc.plugin.attachEvent("messageName", (message) => {
   console.log(message);
 });
@@ -116,6 +116,6 @@ window.Asc.plugin.attachEvent("messageName", (message) => {
 
 #### 示例
 
-``` ts
+```ts
 window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```

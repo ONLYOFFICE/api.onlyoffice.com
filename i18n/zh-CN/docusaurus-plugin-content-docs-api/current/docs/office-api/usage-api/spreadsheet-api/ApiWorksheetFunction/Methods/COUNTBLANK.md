@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何计算指定单元格区域中空单元格的数量。
+计算电子表格中范围内的空单元格。
 
 ```javascript editor-xlsx
-// How to find a number of empty cells.
+// What is the number of blank spaces in a selected area in a spreadsheet?
 
-// Use function to get empty cells count.
+// Identify unused cells to track unfilled entries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let numbersArr = [45, 6, 8];

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the drawing objects from the slide master.
+Retrieve all drawings from a slide master in a presentation.
 
 ```javascript editor-pptx
-// How to get all drawings from the master of presentation.
+// How do I find all drawing objects on a slide master in a presentation?
 
-// Get all drawings from the presentation as an array.
+// List every drawing in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,5 +42,4 @@ master.AddObject(drawing);
 const allDrawings = master.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("picture");
 allDrawings[0].SetPlaceholder(placeholder);
-
 ```

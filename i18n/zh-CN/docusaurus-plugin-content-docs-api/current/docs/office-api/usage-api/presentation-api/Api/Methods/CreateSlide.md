@@ -20,12 +20,12 @@ expression.CreateSlide();
 
 ## 示例
 
-此示例创建幻灯片并将其插入演示文稿。
+创建新幻灯片并将其添加到演示文稿。
 
 ```javascript editor-pptx
-// How to add a new slide.
+// How do I insert a slide with a custom background in a presentation?
 
-// Add new slides to the presentation.
+// Apply a gradient fill background to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
@@ -34,5 +34,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
-
 ```

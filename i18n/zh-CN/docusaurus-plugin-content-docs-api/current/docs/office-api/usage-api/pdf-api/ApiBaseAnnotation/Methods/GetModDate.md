@@ -20,13 +20,16 @@ number
 
 ## 示例
 
-此示例创建方形注释并获取其修改日期。
+检索 PDF 中注释的最后修改日期。
 
 ```javascript editor-pdf
+// When was an annotation last modified in a PDF?
+
+// Check the last update timestamp of an annotation in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 console.log(`Annotation mod date is: ${squareAnnot.GetModDate()}`);
-
 ```

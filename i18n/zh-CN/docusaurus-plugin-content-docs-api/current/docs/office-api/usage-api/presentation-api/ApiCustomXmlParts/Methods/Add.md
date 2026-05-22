@@ -22,12 +22,12 @@ expression.Add(xml);
 
 ## 示例
 
-此示例演示如何添加新的自定义 XML 部件然后访问它。
+在演示文稿中添加新的自定义 XML 部件并访问它。
 
 ```javascript editor-pptx
-// How to add a custom XML part to the presentation.
+// How do I create a new custom XML part in a presentation?
 
-// Add a new XML part.
+// Display the XML content of the added part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

@@ -22,12 +22,12 @@ expression.SetValue(value);
 
 ## 示例
 
-此示例演示如何设置色阶条件的值。
+为电子表格中的色阶规则点分配新的边界数值。
 
 ```javascript editor-xlsx
-// How to change the value of a color scale criterion.
+// How do I update the numeric threshold for a color scale rule point in a spreadsheet?
 
-// Set the value of a color scale criterion.
+// Adjust where a color scale gradient changes by overwriting the boundary number at one of its rule points in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,5 +53,4 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C3").SetValue("After:");
     worksheet.GetRange("C4").SetValue(criteria[1].GetValue() || "No value");
 }
-
 ```

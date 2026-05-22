@@ -20,9 +20,13 @@ expression.GetAllDrawings();
 
 ## 示例
 
-此示例演示如何获取当前演示文稿中的所有绘图对象
+收集演示文稿中的所有图像、形状、图表和嵌入对象。
 
 ```javascript editor-pptx
+// How do I find every drawing element across the entire presentation in a presentation?
+
+// Count and display all drawings from slides and masters in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const slideMaster = presentation.GetMaster(0);
@@ -75,5 +79,4 @@ paragraph.AddText('Drawings: ' + drawings.length);
 label.SetPosition(0, 144 * 36000);
 slide.AddObject(label);
 label.Select();
-
 ```

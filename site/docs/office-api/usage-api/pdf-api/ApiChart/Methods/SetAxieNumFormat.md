@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to change a numeric format of left axis Labels.
+Format the numbers on a chart axis in a PDF.
 
 ```javascript editor-pdf
-// Create a chart then set its axis number format.
+// How do I control how numbers appear on a chart's axis in a PDF?
+
+// Change the number format of axis labels in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,5 +45,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

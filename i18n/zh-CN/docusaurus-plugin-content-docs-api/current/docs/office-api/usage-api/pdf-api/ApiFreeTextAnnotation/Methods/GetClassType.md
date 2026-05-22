@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取自由文本注释的类类型。
+确定 PDF 中文本注释的类类型。
 
 ```javascript editor-pdf
+// How do I identify what category a text note belongs to in a PDF?
+
+// Get the classification of an annotation element in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

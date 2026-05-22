@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Draw a custom polygon outline on an existing shape by providing hand-crafted path data in a spreadsheet.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I replace a shape's outline with a custom drawn path in a spreadsheet?
+
+// Override the default form of a shape with a manually defined geometric path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

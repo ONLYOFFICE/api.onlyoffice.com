@@ -6,6 +6,16 @@ import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 // SITE_MODE is set in CI (testing/production), NODE_ENV works for local dev
 const isDev = process.env.SITE_MODE === 'testing' || process.env.NODE_ENV === 'development';
+const locale = process.env.DOCUSAURUS_CURRENT_LOCALE ?? 'en';
+
+function localize(translations: Record<string, string>): string {
+  return translations[locale] ?? translations.en;
+}
+
+const announcementBarContent = localize({
+  en: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE Docs 9.4 released</b></a>: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more.`,
+  'zh-CN': `<a target="_blank" href="https://www.onlyoffice.com/blog/zh-hans/2026/05/onlyoffice-docs-9-4"><b>ONLYOFFICE 文档 9.4 发布</b></a>：许可证更新、表格单元格支持深色模式、新的幻灯片主题与切换效果等更多功能。`,
+});
 
 let keyPath = '';
 function sidebarRecursive(item) {
@@ -51,7 +61,7 @@ const config: Config = {
     v4: {
       removeLegacyPostBuildHeadAttribute: true
     },
-    experimental_faster: {
+    faster: {
       mdxCrossCompilerCache: true,
       lightningCssMinimizer: true,
       ssgWorkerThreads: true,
@@ -182,8 +192,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     announcementBar: {
-      content: `<a target="_blank" href="https://www.onlyoffice.com/blog/2026/02/onlyoffice-docs-9-3"><b>ONLYOFFICE Docs 9.3 released</b></a>: enhanced PDF Editor and more signature options, multipage view for documents, Solver in sheets, GIF playback in presentation slideshow mode, AI-powered updates, and more.`,
-      textColor: '#091E42',
+      content: announcementBarContent,
       isCloseable: true,
     },
     navbar: {
@@ -264,10 +273,9 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'samples',
+          to: 'samples',
           label: 'Samples',
-          docsPluginId: 'api',
+          position: 'left',
         },
         {
           to: 'changelog',

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取富文本块对象的类类型。
+识别 PDF 中文本运行的类型类别。
 
 ```javascript editor-pdf
+// How do I determine what type of object a text run is in a PDF?
+
+// Check the classification of a text element in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

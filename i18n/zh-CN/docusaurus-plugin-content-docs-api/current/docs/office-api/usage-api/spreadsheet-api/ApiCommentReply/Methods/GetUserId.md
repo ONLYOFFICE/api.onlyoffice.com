@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取批注回复作者的用户 ID。
+读取在电子表格中编写批注回复的人员的帐户标识符。
 
 ```javascript editor-xlsx
-// How to get a reply author's user ID.
+// How do I look up the user ID tied to someone who replied to a comment in a spreadsheet?
 
-// Add a reply author's ID to a range of the worksheet.
+// Retrieve the unique user reference linked to a reply author in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例获取区域中条件格式规则的数量。
+计算电子表格中单元格范围上活动的格式规则数量。
 
 ```javascript editor-xlsx
-// How to get the number of conditional formatting rules applied to cells.
+// How do I find out the total number of highlighting rules set on a data range in a spreadsheet?
 
-// Get count of conditional formatting rules.
+// Check the quantity of color conditions assigned to cells to audit formatting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddDatabar();
 
 worksheet.GetRange("B1").SetValue("Count: " + formatConditions.GetCount());
-
 ```

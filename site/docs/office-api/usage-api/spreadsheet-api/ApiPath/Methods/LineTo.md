@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Draw a straight line from the current position to a new point in a custom shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I add a straight segment to a custom shape path in a spreadsheet?
+
+// Extend a shape outline by connecting the current drawing position to a target coordinate in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

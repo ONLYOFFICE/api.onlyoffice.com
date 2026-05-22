@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+识别 PDF 中配色方案对象的类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiSchemeColor.
+// What kind of object is a scheme color in a PDF?
 
-// Retrieve class type of ApiSchemeColor object and insert it to the page.
+// Determine the class name of a color scheme in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,11 +37,10 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const classType = schemeColor.GetClassType();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the type of data bar conditional formatting rule.
+Identify the kind of conditional formatting rule applied to a range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to identify the type of conditional formatting rule.
+// How do I tell what category of formatting rule is used on a data bar in a spreadsheet?
 
-// Get the type of the data bar conditional formatting rule.
+// Distinguish a data bar rule from other conditional formatting types in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let conditionType = dataBar.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```

@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example returns the absolute XPath of the current XML node.
+Get the full location path of an XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I find the path to an XML element in a presentation?
+
+// Retrieve the XPath address of an XML node in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XPath: ' + xPath);
-
 ```

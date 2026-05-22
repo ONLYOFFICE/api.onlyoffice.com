@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current cell content.
+Get the content object from a table cell.
 
 ```javascript editor-pptx
-// How to get a content of the ApiTableCell object.
+// Access the document content that the cell contains.
 
-// Return the ApiDocumentContent object from the table cell.
+// Retrieve the content object and add text to a table cell.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -40,5 +40,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

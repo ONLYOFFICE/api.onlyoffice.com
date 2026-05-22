@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the bond-equivalent yield for a treasury bill.
+Return the bond-equivalent yield for a treasury bill in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the bond-equivalent yield for a treasury bill.
+// Calculate the bond-equivalent yield for a treasury bill using the TBILLEQ function.
 
-// Use a function to calculate the bond-equivalent yield.
+// Returns the bond-equivalent yield value for the specified dates and discount rate.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

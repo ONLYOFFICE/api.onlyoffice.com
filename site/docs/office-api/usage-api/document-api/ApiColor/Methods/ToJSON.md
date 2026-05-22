@@ -1,0 +1,55 @@
+# ToJSON
+
+Converts the ApiColor object into the JSON object.
+
+## Syntax
+
+```javascript
+expression.ToJSON();
+```
+
+`expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
+## Example
+
+Serialize color objects of different types to JSON strings in a document.
+
+```javascript editor-docx
+// How do I export a color's full definition as a JSON string in a document?
+
+// Save or transfer color data by converting RGB, RGBA, hex, theme, and auto colors to JSON in a document.
+
+const doc = Api.GetDocument();
+const paragraph = doc.GetElement(0);
+
+const rgbColor = Api.RGB(64, 128, 192);
+paragraph.AddText('RGB JSON:\n' + rgbColor.ToJSON());
+paragraph.AddLineBreak();
+
+paragraph.AddLineBreak();
+const rgbaColor = Api.RGBA(100, 150, 200, 128);
+paragraph.AddText('RGBA JSON:\n' + rgbaColor.ToJSON());
+paragraph.AddLineBreak();
+
+paragraph.AddLineBreak();
+const hexColor = Api.HexColor('#2E86C1');
+paragraph.AddText('HEX JSON:\n' + hexColor.ToJSON());
+paragraph.AddLineBreak();
+
+paragraph.AddLineBreak();
+const themeColor = Api.ThemeColor('accent5');
+paragraph.AddText('Theme JSON:\n' + themeColor.ToJSON());
+paragraph.AddLineBreak();
+
+paragraph.AddLineBreak();
+const autoColor = Api.AutoColor();
+paragraph.AddText('Auto JSON:\n' + autoColor.ToJSON());
+```

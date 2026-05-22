@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-从形状获取填充属性并显示详细信息。
+读取应用于形状的填充并在电子表格的单元格中报告其类型。
 
 ```javascript editor-xlsx
-// Creates a shape with gradient fill, retrieves it and shows fill details.
+// How do I check what fill a shape is using in a spreadsheet?
+
+// Retrieve the color or gradient covering a shape and display the fill type on the sheet in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
 let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
@@ -34,5 +37,4 @@ let retrievedFill = shape.GetFill();
 if (retrievedFill) {
     worksheet.GetRange("A1").SetValue("Fill type: " + retrievedFill.GetType());
 }
-
 ```

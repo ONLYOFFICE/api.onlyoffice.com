@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何从以平均值和标准差为特征的分布中返回标准化值。
+从具有均值和标准差的分布计算标准化值。
 
 ```javascript editor-xlsx
-// How to calculate the normalised value from a distribution.
+// The STANDARDIZE function converts a value to a z-score using the distribution's mean and standard deviation.
 
-// Use a function to get the normalised value from a distribution by different parameters.
+// Get the normalized value and place it in cell C1.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -49,5 +49,4 @@ let func = Api.WorksheetFunction;
 let ans = func.STANDARDIZE(x, mean, stdDev);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

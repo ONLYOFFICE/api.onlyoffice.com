@@ -11,7 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="gl3gmhOKFk8"/>
 ```
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-chamilo)支持您在[Chamilo](https://chamilo.org/en/)中使用ONLYOFFICE文档直接编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-chamilo)支持您在[Chamilo](https://chamilo.org/en/)中使用ONLYOFFICE 文档直接编辑办公文档。
 
 ## 功能特性
 
@@ -19,13 +19,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 仅支持查看的文档格式如下：CSV、DJVU、DOC、EPUB、HTM、HTML、MHT、PDF、PPS、PPT、RTF、TXT、XLS、XPS。
 - 该插件会在文档库中为Office文档添加**使用ONLYOFFICE打开**菜单选项。这使多个用户能够实时协作，并将更改保存回Chamilo。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Chamilo和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Chamilo发送POST请求。
+您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Chamilo和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Chamilo发送POST请求。
 
-ONLYOFFICE文档和Chamilo可以安装在不同的计算机上，也可以安装在同一台机器上。如果您使用同一台机器，需要为文档服务器设置一个自定义端口，因为默认情况下ONLYOFFICE文档和Chamilo都使用80端口。
+ONLYOFFICE 文档和Chamilo可以安装在不同的计算机上，也可以安装在同一台机器上。如果您使用同一台机器，需要为文档服务器设置一个自定义端口，因为默认情况下ONLYOFFICE 文档和Chamilo都使用80端口。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE 文档实例的最简单方法。
 
 ## 下载更新版本的Chamilo ONLYOFFICE插件
 
@@ -70,7 +70,7 @@ ONLYOFFICE文档和Chamilo可以安装在不同的计算机上，也可以安装
 
 ## 安装Chamilo ONLYOFFICE插件
 
-要在Chamilo中使用ONLYOFFICE文档，请按照以下步骤操作：
+要在Chamilo中使用ONLYOFFICE 文档，请按照以下步骤操作：
 
 1. 进入Chamilo的**管理**界面，选择**插件**部分。
 
@@ -93,15 +93,15 @@ ONLYOFFICE文档和Chamilo可以安装在不同的计算机上，也可以安装
 
 ## 配置Chamilo ONLYOFFICE插件
 
-在**插件**页面中，找到ONLYOFFICE并点击**配置**。您会看到**设置**页面。启用该插件并指定ONLYOFFICE文档的地址：
+在**插件**页面中，找到ONLYOFFICE并点击**配置**。您会看到**设置**页面。启用该插件并指定ONLYOFFICE 文档的地址：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
-其中，**documentserver**是安装了**ONLYOFFICE文档**的服务器名称。该地址必须能被您的浏览器和Chamilo服务器访问。Chamilo服务器地址也必须能被**ONLYOFFICE文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/docs-registration.aspx?from=api)免费的ONLYOFFICE云服务，并使用其公共IP地址或公共DNS，可在云控制台的**实例**部分中找到。
+其中，**documentserver**是安装了**ONLYOFFICE 文档**的服务器名称。该地址必须能被您的浏览器和Chamilo服务器访问。Chamilo服务器地址也必须能被**ONLYOFFICE 文档**访问，以确保正常工作。您可以[注册](https://www.onlyoffice.com/docs-registration.aspx?from=api)免费的ONLYOFFICE云服务，并使用其公共IP地址或公共DNS，可在云控制台的**实例**部分中找到。
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Chamilo的**设置**页面指定您自己的**密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Chamilo的**设置**页面指定您自己的**密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 工作原理
 
@@ -117,24 +117,24 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API规范。
 
 4. 请求会被发送到*/plugin/onlyoffice/editor.php?docId="文档标识符"*。服务器会处理该请求，并生成具有以下属性的编辑器初始化配置：
 
-   - **url**：ONLYOFFICE文档用于下载文档的URL；
-   - **callbackUrl**：ONLYOFFICE文档用于通知文档编辑状态的URL；
-   - **documentServerUrl**：客户端需要回复给ONLYOFFICE文档的URL（可在管理设置页面设置）；
-   - **key**：用于指示ONLYOFFICE文档是否需要重新下载文档的etag。
+   - **url**：ONLYOFFICE 文档用于下载文档的URL；
+   - **callbackUrl**：ONLYOFFICE 文档用于通知文档编辑状态的URL；
+   - **documentServerUrl**：客户端需要回复给ONLYOFFICE 文档的URL（可在管理设置页面设置）；
+   - **key**：用于指示ONLYOFFICE 文档是否需要重新下载文档的etag。
 
 5. 服务器会返回一个包含打开编辑器脚本的页面。
 
 6. 浏览器打开此页面并加载编辑器。
 
-7. 浏览器向ONLYOFFICE文档发出请求，并将文档配置传递给它。
+7. 浏览器向ONLYOFFICE 文档发出请求，并将文档配置传递给它。
 
-8. ONLYOFFICE文档加载文档，用户开始编辑。
+8. ONLYOFFICE 文档加载文档，用户开始编辑。
 
-9. ONLYOFFICE文档向*callbackUrl*发送POST请求，通知Chamilo用户正在编辑文档。
+9. ONLYOFFICE 文档向*callbackUrl*发送POST请求，通知Chamilo用户正在编辑文档。
 
 10. 当所有用户都完成编辑后，他们关闭编辑器窗口。
 
-11. 在[10秒](../how-it-works/saving-file.md#save-delay)不活动后，ONLYOFFICE文档向*callbackUrl*发送POST请求，告知编辑已结束，并发送一个指向新文档版本的链接。
+11. 在[10秒](../how-it-works/saving-file.md#save-delay)不活动后，ONLYOFFICE 文档向*callbackUrl*发送POST请求，告知编辑已结束，并发送一个指向新文档版本的链接。
 
 12. Chamilo加载文档的新版本并覆盖原文件。
 

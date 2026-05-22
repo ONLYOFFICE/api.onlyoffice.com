@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the direction of the data displayed on the horizontal axis.
+Reverse the direction in which categories are plotted along the horizontal axis of a chart in a spreadsheet.
 
 ```javascript editor-xlsx
-// Set the orientation of the values on the horizontal axis.
+// How do I flip the left-to-right order of values on the horizontal axis of a chart in a spreadsheet?
 
-// How to change the direction of the values on the horizontal axis.
+// Mirror the horizontal axis so that chart categories run from right to left in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例展示如何获取形状内 ApiHyperlink 对象的类类型。
+读取电子表格中超链接对象的类类型。
 
 ```javascript editor-xlsx
+// How do I find out what type a hyperlink object is in a spreadsheet?
+
+// Confirm the category of a hyperlink by checking its type label in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Class type: ' + hyperlink.GetClassType());
-
 ```

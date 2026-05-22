@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiBullet 类的类型并将其插入到 PDF 文档中。
+识别 PDF 中项目符号的类类型。
 
 ```javascript editor-pdf
-// How get a class type of ApiBullet.
+// How do I determine what type a bullet object is in a PDF?
 
-// Retrieve class type of ApiBullet object and insert it to the page.
+// Find the object type identifier for a bullet in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +35,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const bullet = Api.CreateBullet("-");
 paragraph.SetBullet(bullet);
@@ -47,5 +47,4 @@ newParagraph.SetJc("left");
 newParagraph.AddText("Class Type = " + classType);
 docContent.Push(newParagraph);
 page.AddObject(shape);
-
 ```

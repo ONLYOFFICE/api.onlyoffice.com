@@ -22,12 +22,12 @@ expression.GroupDrawings(aDrawings);
 
 ## 示例
 
-此示例演示如何在版式上分组绘图。
+在演示文稿中将布局上的多个形状合并为一个组。
 
 ```javascript editor-pptx
-// How to group drawings.
+// How do I group shapes together on a layout in a presentation?
 
-// Create two shapes and group them.
+// Create two shapes and combine them into one grouped object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ shape2.SetPosition(608400, 1400000);
 layout.AddObject(shape1);
 layout.AddObject(shape2);
 layout.GroupDrawings([shape1, shape2]);
-
 ```

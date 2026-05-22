@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取删除线注释的类类型。
+检查 PDF 中应用于文本的标记类型。
 
 ```javascript editor-pdf
+// How do I find out what type of annotation mark has been used in a PDF?
+
+// Determine the kind of highlight or underline effect on text in a PDF.
+
 let doc = Api.GetDocument();
 let strikeoutAnnot = Api.CreateStrikeoutAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

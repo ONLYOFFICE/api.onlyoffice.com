@@ -20,12 +20,12 @@ expression.ClearTable();
 
 ## 示例
 
-此示例展示如何清除数据透视表。
+清除电子表格中数据透视表的所有字段和数据。
 
 ```javascript editor-xlsx
-// How to remove all elements from a pivot table.
+// How do I empty a pivot table without deleting it from the sheet in a spreadsheet?
 
-// Create a pivot table, add data to it then delete all its content.
+// Reset a pivot table to a blank state so it can be rebuilt from scratch in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -59,9 +59,5 @@ pivotTable.AddFields({
     columns: 'Style',
 });
 
-Api.GetActiveSheet().GetRange('F4').SetValue('This pivot table will be cleared soon');
-
-setTimeout(function () {
-    pivotTable.ClearTable();
-}, 5000);
+pivotTable.ClearTable();
 ```

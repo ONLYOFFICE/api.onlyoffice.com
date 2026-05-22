@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取超链接地址。
+检索 PDF 中包含超链接的文本。
 
 ```javascript editor-pdf
-// How to get the raw link of the hyperlink.
+// What text is associated with a hyperlink in a PDF?
 
-// Add a hyperlink to the paragraph and show its address as a text.
+// Display the actual text of a hyperlink in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

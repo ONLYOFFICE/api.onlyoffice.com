@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-此示例演示如何根据名称获取自定义属性的值。
+按名称检索演示文稿中的自定义属性值。
 
 ```javascript editor-pptx
+// How do I read a custom property from a presentation?
+
+// Access custom metadata and handle missing properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();
 
@@ -43,5 +47,4 @@ slide.AddObject(shape);
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```

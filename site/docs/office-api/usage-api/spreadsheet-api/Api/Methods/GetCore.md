@@ -21,9 +21,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to use ApiCore to manage spreadsheet metadata.
+Read and write built-in document properties such as author and title in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set or retrieve metadata like creator, subject, and keywords in a spreadsheet?
+
+// Store descriptive information about the document itself in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const core = Api.GetCore();
@@ -86,5 +90,4 @@ paragraph.AddText("Revision: " + revision + "\n");
 paragraph.AddText("Subject: " + subject + "\n");
 paragraph.AddText("Title: " + title + "\n");
 paragraph.AddText("Version: " + version);
-
 ```

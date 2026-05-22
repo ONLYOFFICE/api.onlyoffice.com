@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the text properties of the run.
+Read the text formatting properties of a run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the text properties.
+// How do I check what font size and style a text run is using in a spreadsheet?
 
-// Create a text object, set its font size, justification, etc.
+// Inspect the current formatting of a run before applying new styles in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

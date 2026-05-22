@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example sets a hyperlink for a shape and an image on a slide.
+Add clickable links to shapes and images in a presentation.
 
 ```javascript editor-pptx
+// How do I add a hyperlink to a shape or image in a presentation?
+
+// Attach a web link to a shape and a slide link to an image in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.AddSlide(Api.CreateSlide());
 
@@ -48,5 +52,4 @@ const urlHyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to Only
 const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link to the second slide');
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);
-
 ```

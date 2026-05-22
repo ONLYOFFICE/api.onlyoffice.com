@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes cloud shape path properties on a page.
+Extract all outline segments from a shape in a PDF.
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How do I retrieve every path that makes up a shape in a PDF?
+
+// Access all paths from a shape and review their details in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

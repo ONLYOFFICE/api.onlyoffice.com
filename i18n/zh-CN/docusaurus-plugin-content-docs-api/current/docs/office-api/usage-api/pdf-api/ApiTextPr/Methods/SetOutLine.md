@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## 示例
 
-此示例设置当前文本块的文本轮廓。
+在 PDF 中为文本添加边框。
 
 ```javascript editor-pdf
-// How to make a text outlined.
+// How do I create an outline effect on text in a PDF?
 
-// Get the text properties of the run and outline it with a stroke.
+// Draw a stroke around characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

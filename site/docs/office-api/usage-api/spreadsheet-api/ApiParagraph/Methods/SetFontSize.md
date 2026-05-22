@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example shows how to set the font size for all text in a paragraph inside a shape.
+Adjust the text size for all content in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I make text in a paragraph larger or smaller in a spreadsheet?
+
+// Control the visual weight of a paragraph by specifying an exact font size in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(120, 140, 100));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetFontSize(24);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has the default font size.');
 content.Push(paragraph2);
-
 ```

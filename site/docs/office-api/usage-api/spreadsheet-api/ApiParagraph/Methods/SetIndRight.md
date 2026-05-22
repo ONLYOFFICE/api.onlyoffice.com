@@ -2,32 +2,16 @@
 
 Sets the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.SetIndRight(nValue);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The paragraph right side indentation value measured in twentieths of a point (1/1440 of an inch). |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetIndRight](../../ApiParaPr/Methods/SetIndRight.md).
 
 ## Example
 
-This example sets the paragraph right side indentation.
+Push a paragraph away from the right edge inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the sentence's right side indentation of the paragraph.
+// How do I add a right margin to a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the right side indentation.
+// Shrink the paragraph's line width by pulling its right boundary inward in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

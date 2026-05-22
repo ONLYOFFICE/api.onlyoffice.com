@@ -1,7 +1,6 @@
 # ApiRichParagraph
 
-Represents the ApiRichParagraph class.
-
+ApiRichParagraph is a subclass of [ApiRichParaPr](../ApiRichParaPr/ApiRichParaPr.md).
 
 ## Methods
 
@@ -18,4 +17,4 @@ Represents the ApiRichParagraph class.
 | [Last](./Methods/Last.md) | [ApiRichRun](../ApiRichRun/ApiRichRun.md) | Returns the last element of the paragraph. |
 | [Push](./Methods/Push.md) | boolean | Adds an element to the current paragraph. |
 | [SetParaPr](./Methods/SetParaPr.md) | boolean | Sets the paragraph properties. |
-| [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiRichParagraph](../ApiRichParagraph/ApiRichParagraph.md) | Specifies the reading order for the current paragraph. Possible values are: **null** - use the standart direction parameter; **"ltr"** - left-to-right text direction; **"rtl"** - right-to-left text direction. |
+| [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiRichParagraph](../ApiRichParagraph/ApiRichParagraph.md) | Specifies the reading order for the current paragraph. |

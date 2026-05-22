@@ -20,10 +20,13 @@ expression.Close();
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。
+关闭自定义形状路径以在电子表格中形成完整的封闭轮廓。
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I seal the last point of a shape back to its starting point in a spreadsheet?
+
+// Connect the final drawing point to the first to produce a fully closed polygon in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

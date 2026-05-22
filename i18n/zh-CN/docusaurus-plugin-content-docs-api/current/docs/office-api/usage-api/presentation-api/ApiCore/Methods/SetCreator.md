@@ -22,9 +22,13 @@ expression.SetCreator(sCreator);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的创建者。
+设置和检索演示文稿的创建者。
 
 ```javascript editor-pptx
+// How do I set the creator of a presentation in a presentation?
+
+// Retrieve and display the creator as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreator("John Smith");
@@ -40,5 +44,4 @@ paragraph.AddText("Creator: " + creator);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

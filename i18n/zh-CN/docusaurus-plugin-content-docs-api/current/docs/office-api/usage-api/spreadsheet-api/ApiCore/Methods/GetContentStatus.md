@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取工作簿的内容状态。
+读取电子表格工作簿属性中存储的内容状态。
 
 ```javascript editor-xlsx
+// How do I check the current content status of a workbook in a spreadsheet?
+
+// Retrieve and display the publication or review status of a workbook in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 core.SetContentStatus("Final");
@@ -39,5 +43,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
-
 ```

@@ -1,3 +1,8 @@
+---
+description: Create a contract register spreadsheet from multiple files.
+tags: ["DocSpace", "MCP Server", "AI"]
+---
+
 # Create contract register spreadsheet
 
 This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an MCP-compatible client to create a contract register spreadsheet from multiple contract files stored in a DocSpace folder. This is useful when you have many contracts and want a single Excel table for tracking.
@@ -5,12 +10,12 @@ This example demonstrates how to use the ONLYOFFICE DocSpace MCP Server from an 
 ## Before you start
 
 Please make sure your MCP client is configured to use the DocSpace MCP Server so it can access your DocSpace portal and perform actions on your behalf.
-You need to follow the [Connecting clients](../connecting-clients/connecting-clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
+You need to follow the [Connecting clients](../getting-started/clients.md) guide to add the DocSpace MCP Server to your client configuration and provide the required credentials.
 
-If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../mcp-server.md) and choose one of the installation modes:
+If you are not sure which server option to use, start from the [DocSpace MCP Server overview](../getting-started/index.md) and choose one of the installation modes:
 
-- use the public [Remote Server](../installation/remote-server.md) if your client supports remote MCP servers;
-- run the [Local Server](../installation/local-server.md) if your client requires a locally hosted MCP server.
+- use the public [Remote Server](../getting-started/installation.md#access-via-the-remote-docspace-mcp-server) if your client supports remote MCP servers;
+- run the [Local Server](../getting-started/installation.md#access-via-a-local-docspace-mcp-server) if your client requires a locally hosted MCP server.
 
 ## Workflow steps
 

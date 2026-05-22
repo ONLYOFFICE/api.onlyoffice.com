@@ -22,9 +22,13 @@ expression.GetLayoutByType(sType);
 
 ## 示例
 
-此示例根据类型从幻灯片母版返回布局。
+按类型从幻灯片母版检索布局。
 
 ```javascript editor-pptx
+// The GetLayoutByType method finds the layout matching the specified type (e.g. 'title').
+
+// Display the layout class type in a shape on the slide or show an error message if not found.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ if (layout) {
   paragraph.AddText('Layout not found.');
 }
 slide.AddObject(shape);
-
 ```

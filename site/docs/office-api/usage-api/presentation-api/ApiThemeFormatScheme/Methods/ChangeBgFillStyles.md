@@ -14,7 +14,7 @@ expression.ChangeBgFillStyles(arrBgFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrBgFill | Required | [ApiFill](../../ApiFill/ApiFill.md)[] |  | The array of background fill styles must contain 3 elements - subtle, moderate and intense fills. If an array is empty or NoFill elements are in the array, it will be filled with the Api.CreateNoFill() elements. |
+| arrBgFill | Required | [ApiFill](../../ApiFill/ApiFill.md)[] |  | The array of background fill styles must contain 3 elements - subtle, moderate and intense fills. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the background fill styles to the current theme format scheme.
+Change the background fill styles in a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to change background fill styles of a format scheme.
+// How do I update the background fill styles of a format scheme in a presentation?
 
-// Get format scheme and update its background fill styles, adding pattern, solid and radial fills.
+// Get a format scheme and replace its background fill styles in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -67,5 +67,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

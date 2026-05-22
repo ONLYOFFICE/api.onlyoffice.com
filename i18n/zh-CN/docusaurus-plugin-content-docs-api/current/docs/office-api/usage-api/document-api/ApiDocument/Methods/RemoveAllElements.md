@@ -1,0 +1,29 @@
+# RemoveAllElements
+
+从当前文档或当前文档元素中移除所有元素。
+💡 当所有元素被移除时，会自动创建一个新的空段落。如果要向此段落添加内容，请使用 [ApiDocumentContent#GetElement](../../ApiDocumentContent/Methods/GetElement.md) 方法。
+
+继承自 [ApiDocumentContent.RemoveAllElements](../../ApiDocumentContent/Methods/RemoveAllElements.md)。
+
+## 示例
+
+清除文档中形状内容区域的所有元素。
+
+```javascript editor-docx
+// How do I delete every element inside a shape's content block in a document?
+
+// Reset a shape's interior to an empty state before inserting new content.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+let docContent = drawing.GetDocContent();
+docContent.RemoveAllElements();
+paragraph = Api.CreateParagraph();
+paragraph.SetJc("left");
+paragraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
+docContent.AddElement(0, paragraph);
+```

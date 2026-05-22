@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示时在行的中心有一条水平线。
+在 PDF 中为文本绘制删除线。
 
 ```javascript editor-pdf
-// How to strike out a text with one line.
+// How do I add strikethrough formatting to text in a PDF?
 
-// Get the text properties of the run and cross it out.
+// Cross out text with a horizontal line in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

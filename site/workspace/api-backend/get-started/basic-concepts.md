@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Basic concepts
 
 The ONLYOFFICE Workspace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.

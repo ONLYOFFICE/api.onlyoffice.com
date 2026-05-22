@@ -20,9 +20,13 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-此示例展示如何获取段落中最后一个包含文本的 Run。
+获取演示文稿中段落内最后一个包含文本的 Run。
 
 ```javascript editor-pptx
+// How do I access the final text element in a paragraph in a presentation?
+
+// Find the last text item in a paragraph and modify it in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ const lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(' [Last run]');
 lastRun.SetBold(true);
 slide.AddObject(shape);
-
 ```

@@ -2,6 +2,10 @@
 
 批注数据。
 
+## 类型
+
+Object
+
 ## 属性
 
 | 名称 | 类型 | 描述 |
@@ -12,11 +16,6 @@
 | Text | string | 批注文本。 |
 | Time | string | 批注发布的时间（以毫秒为单位）。 |
 | UserName | string | 批注作者。 |
-## 类型
-
-Object
-
-
 
 ## 示例
 

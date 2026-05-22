@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-获取描边的填充颜色。
+确定 PDF 中应用于边框的颜色或图案
 
 ```javascript editor-pdf
-// Creates a shape with a colored border and retrieves its fill properties.
+// What color is the border line filled with in a PDF?
+
+// Check and display the fill properties of a border in a PDF
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -32,7 +35,7 @@ let stroke = Api.CreateStroke(2 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(
 let shape = Api.CreateShape("rect", 100 * 36000, 50 * 36000, fill, stroke);
 shape.SetPosition(2000000, 1000000);
 page.AddObject(shape);
-let content = shape.GetDocContent();
+let content = shape.GetContent();
 let paragraph = content.GetElement(0);
 let strokeObj = shape.GetLine();
 if (strokeObj) {
@@ -41,5 +44,4 @@ if (strokeObj) {
         paragraph.AddText("Stroke fill type: " + strokeFill.GetType());
     }
 }
-
 ```

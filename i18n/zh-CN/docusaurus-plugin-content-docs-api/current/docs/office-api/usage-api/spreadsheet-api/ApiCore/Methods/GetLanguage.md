@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取当前工作簿的语言。
+读取电子表格工作簿元数据中存储的文档语言设置。
 
 ```javascript editor-xlsx
+// How do I find out what language is assigned to a workbook in a spreadsheet?
+
+// Check the language property to confirm the locale recorded for the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Language: " + language);
-
 ```

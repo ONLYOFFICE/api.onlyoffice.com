@@ -14,7 +14,7 @@ expression.STDEV(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the standard deviation will be calculated. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the standard deviation will be calculated. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to estimate standard deviation based on a sample (ignores logical values and text in the sample).
+Estimate the standard deviation of a sample.
 
 ```javascript editor-xlsx
-// How to calculate the standard deviation based on a sample.
+// The STDEV function calculates sample standard deviation while ignoring logical values and text.
 
-// Use a function to get the standard deviation.
+// Get the standard deviation of the sample values and place it in cell C1.
 
 const worksheet = Api.GetActiveSheet();
 

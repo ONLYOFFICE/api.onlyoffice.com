@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-获取描边的填充颜色。
+读取电子表格中应用于形状边框的填充颜色。
 
 ```javascript editor-xlsx
-// Creates a shape with a colored border and retrieves its fill properties.
+// How do I find out what color a border is filled with in a spreadsheet?
+
+// Inspect the color stored inside a border object in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 let stroke = Api.CreateStroke(2 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
@@ -35,5 +38,4 @@ if (strokeObj) {
         worksheet.GetRange("A1").SetValue("Stroke fill type: " + strokeFill.GetType());
     }
 }
-
 ```

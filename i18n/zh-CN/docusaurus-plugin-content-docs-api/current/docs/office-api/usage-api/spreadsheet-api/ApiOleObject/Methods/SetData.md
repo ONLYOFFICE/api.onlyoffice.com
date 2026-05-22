@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前 OLE 对象的数据。
+向电子表格中的嵌入对象写入新内容。
 
 ```javascript editor-xlsx
-// How to change content of OLE object.
+// How do I update the data stored in an embedded object in a spreadsheet?
 
-// Add Ole object, set its data and display it in the worksheet.
+// Replace the existing value inside an embedded object with fresh content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -38,5 +38,4 @@ let oleObject = worksheet.AddOleObject(
 	0, 2 * 36000, 4, 3 * 36000
 );
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
-
 ```

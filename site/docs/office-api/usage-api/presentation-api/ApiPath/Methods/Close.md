@@ -20,10 +20,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a slide.
+Close a shape path to complete a custom shape outline in a presentation.
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// How do I finish drawing a closed shape in a presentation?
+
+// Complete a custom geometry path by connecting the endpoints in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

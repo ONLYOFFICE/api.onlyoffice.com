@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+识别文档中图片表单字段的类别标签。
 
 ```javascript editor-forms
-// How to get a class type of ApiPictureForm.
+// How do I find out what category a picture form field belongs to in a document?
 
-// Retrieve class type of ApiPictureForm object and insert it to the document.
+// Confirm the kind of form element in use by reading its category label in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

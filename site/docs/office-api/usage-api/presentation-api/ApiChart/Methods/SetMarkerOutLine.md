@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the marker in the specified chart series.
+Add a border to data point markers in a chart in a presentation.
 
 ```javascript editor-pptx
-// How to set an outline to the marker.
+// How do I add an outline around the data point symbols in a chart in a presentation?
 
-// Create a chart, set its properties and its marker outline.
+// Apply different border colors and widths to markers in different data series in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
-
 ```

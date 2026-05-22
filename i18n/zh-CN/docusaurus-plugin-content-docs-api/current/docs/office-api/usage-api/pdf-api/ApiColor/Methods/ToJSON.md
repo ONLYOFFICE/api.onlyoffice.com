@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何将形状填充颜色转换为 JSON。
+在 PDF 中将颜色转换为 JSON 格式。
 
 ```javascript editor-pdf
+// How do I serialize a color object into JSON in a PDF?
+
+// Transform the color into a JSON string and display it in the document.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -39,5 +43,4 @@ run.SetFontSize(30);
 run.AddText('Color JSON:\n' + color.ToJSON());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

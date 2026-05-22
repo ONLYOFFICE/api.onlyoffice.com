@@ -2,12 +2,12 @@
 
 从 5.2 版本开始，可以在 ONLYOFFICE 文档的请求体参数中使用令牌。要启用它，请将配置文件中的 [services.CoAuthoring.token.inbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-inbox-inBody) 和 [services.CoAuthoring.token.outbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-outbox-inBody) 设置为 `true`。
 
-## 参数
+## 配置参数
 
 | 参数                                | 类型    | 示例 | 描述                                                        |
 | ---------------------------------------- | ------- | ------- | ------------------------------------------------------------------ |
-| services.CoAuthoring.token.inbox.inBody  | boolean | false   | 定义是否在传入请求体中启用令牌。 |
-| services.CoAuthoring.token.outbox.inBody | boolean | false   | 定义是否在传出请求体中启用令牌。 |
+| services.CoAuthoring.token.inbox.inBody  | boolean | false   | 是否在传入请求体中启用令牌。 |
+| services.CoAuthoring.token.outbox.inBody | boolean | false   | 是否在传出请求体中启用令牌。 |
 
 JSON Web 令牌的 `payload` 包含请求正文参数。
 
@@ -34,7 +34,7 @@ JSON Web 令牌的 `payload` 包含请求正文参数。
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ curl -X POST "https://documentserver/command" \
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
   -d '{
@@ -85,7 +85,7 @@ curl -X POST "https://documentserver/converter" \
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -110,8 +110,8 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Request:**
 
-``` bash
-curl -X POST "https://example.com/url-to-callback.ashx" \
+```bash
+curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"

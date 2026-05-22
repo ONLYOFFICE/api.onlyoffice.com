@@ -22,12 +22,12 @@ expression.SetSubtotalName(caption);
 
 ## 示例
 
-此示例展示如何设置透视字段的分类汇总名称。
+为电子表格中数据透视表字段的小计行分配自定义标签。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotal name.
+// How do I rename the subtotal row of a pivot field to something more descriptive in a spreadsheet?
 
-// Create a pivot table, add data to it then set subtotal name of a specified pivot.
+// Replace the default subtotal heading with a meaningful title for clearer reporting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

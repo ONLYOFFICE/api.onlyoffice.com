@@ -22,12 +22,12 @@ expression.SetTableStyleColumnHeaders(show);
 
 ## 示例
 
-此示例展示如何设置数据透视表的表格样式列标题。
+打开或关闭电子表格中数据透视表样式的列标题格式。
 
 ```javascript editor-xlsx
-// How to set table style column headers of a table.
+// How do I control whether column headers use special style formatting in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its table style column headers.
+// Remove or restore the distinct header appearance for pivot table columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

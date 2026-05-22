@@ -22,12 +22,12 @@ expression.SetName(name);
 
 ## 示例
 
-此示例展示如何设置数据透视表的名称。
+为电子表格中的数据透视表分配自定义名称。
 
 ```javascript editor-xlsx
-// How to set name of a table.
+// How do I rename a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its name.
+// Give a pivot table a recognizable label to identify it later in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

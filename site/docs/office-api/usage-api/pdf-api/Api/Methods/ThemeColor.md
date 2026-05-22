@@ -22,9 +22,13 @@ expression.ThemeColor(name);
 
 ## Example
 
-This example shows how to create a theme color and use it as a shape fill.
+Apply a color from the document's theme to a shape in a PDF.
 
 ```javascript editor-pdf
+// How do I use a theme color instead of a custom color in a PDF?
+
+// Fill a shape with an accent color from the theme in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -34,5 +38,4 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
-
 ```

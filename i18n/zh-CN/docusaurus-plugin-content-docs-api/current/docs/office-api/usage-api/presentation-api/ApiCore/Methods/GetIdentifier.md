@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的标识符。
+设置和查看演示文稿的唯一标识符。
 
 ```javascript editor-pptx
+// How do I retrieve the identifier for a presentation?
+
+// Read the ID code assigned to a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetIdentifier("#ID42");
@@ -38,5 +42,4 @@ paragraph.AddText("Identifier: " + identifier);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

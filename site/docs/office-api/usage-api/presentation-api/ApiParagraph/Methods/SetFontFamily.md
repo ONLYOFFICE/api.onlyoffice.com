@@ -22,9 +22,13 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-This example sets all 4 font slots with the specified font family.
+Change the font typeface for paragraph text in a presentation.
 
 ```javascript editor-pptx
+// How do I set the font family for a paragraph in a presentation?
+
+// Apply a specific font typeface to all text in a paragraph in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the font family set to 'Consolas'.");
 paragraph.SetFontFamily('Consolas');
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定当前文本块的内容显示为中间有一条水平线穿过。
+在演示文稿中显示带有中间水平线的文本。
 
 ```javascript editor-pptx
-// How to strike out a text run.
+// Apply strikeout formatting to indicate deleted or revised content.
 
-// Create a new text run and set cross it out.
+// Create a text run and apply strikeout formatting.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ run.SetStrikeout(true);
 run.AddText("This is a text run with the text struck out with a single line.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

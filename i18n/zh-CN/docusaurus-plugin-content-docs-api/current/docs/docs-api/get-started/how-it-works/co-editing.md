@@ -4,37 +4,41 @@ sidebar_position: -20
 
 # 协同编辑
 
-以下参考图和步骤解释了在ONLYOFFICE文档中为匿名用户设置名称的过程。
+以下图示和步骤解释了在ONLYOFFICE 文档中如何协同编辑文档。
 
-<img alt="Co-editing scheme" src="/assets/images/editor/coedit.jpg" width="720px" />
+![Co-editing scheme](/assets/images/editor/coedit.jpg)
 
-1. 用户1和用户2在**文档编辑器**中打开同一个文档，也就是说，在打开文件时使用了相同的[document.key](../../usage-api/config/document/document.md#key)。
-2. 用户1对打开的文档进行修改。
-3. **文档编辑器**将用户1所做的修改发送给**文档编辑服务**。
-4. **文档编辑服务**将用户1所做的修改发送给用户2的**文档编辑器**。
-5. 现在这些修改对用户2可见。
+1. **用户1**和**用户2**都在**文档编辑器**中打开同一个文档——即他们的配置包含相同的 [`document.key`](../../usage-api/config/document/document.md#key)。
+2. **用户1**对打开的文档进行修改。
+3. **文档编辑器**将**用户1**所做的修改发送给**文档编辑服务**。
+4. **文档编辑服务**将**用户1**所做的修改发送给**用户2**的**文档编辑器**。
+5. 现在这些修改对**用户2**可见。
 
 ![共同编辑](/assets/images/editor/coedit-view.png)
 
 ## 实际操作方法
 
-1. 创建一个空的*html*文件。
+1. 创建一个空的 `.html` 文件。
 
-2. 如下所示添加*div*元素。
+2. 如下所示添加 `<div>` 元素：
 
    ``` html
    <div id="placeholder"></div>
    ```
 
-3. 指定用于您网站的ONLYOFFICE文档链接以及JavaScriptAPI。
+3. 在页面上引入 ONLYOFFICE 文档 JavaScript API 脚本：
 
    ``` html
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。 您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+   其中 `documentserver` 是安装了 ONLYOFFICE 文档的服务器名称。`api.js` 脚本由**文档编辑服务**提供；它加载**文档编辑器**并将其连接到该服务。
 
-4. 为*div*元素添加初始化**文档编辑器**的脚本，并配置要打开的文档。使用本地链接时务必添加[令牌](../../additional-api/signature/signature.md)，否则会出现错误。
+   :::tip
+   还没有文档服务器？[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)免费的 ONLYOFFICE 文档云，并使用实例的公共 IP 地址或公共 DNS 名称作为 `documentserver`。您可以在云控制台的**实例**部分找到它们。
+   :::
+
+4. 添加初始化**文档编辑器**的脚本，配置要打开的文档：
 
    ``` ts
    const config = {
@@ -57,60 +61,43 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
+   将 `example.com` 替换为提供文档文件的主机，即您的**文档存储服务**。在这个最小示例中，本地 `.html` 文件充当**文档管理器**的角色——在实际集成中，管理器会为每个用户和文档动态构建此配置。如需快速测试，可以使用 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 作为 `url`。
 
-5. 在浏览器中打开您的*html*文件。
+   :::caution
+   当文档服务器启用 JWT 验证（默认配置）时，`config` 必须使用匹配的 [`token`](./security.md) 进行签名。上面的 `token` 与此确切配置匹配，但使用的是临时密钥签名——它不会在您的服务器上通过验证，并且在配置更改时（例如，将 `url` 切换为演示文档）必须重新生成。请使用您的文档服务器的 JWT 密钥进行签名。令牌不会绕过网络限制：如果 `url` 指向本地或私有地址，文档服务器仍然必须能够访问它。
+   :::
 
-6. 现在复制您上面创建的*html*文件。
+5. 在浏览器中打开您的 `.html` 文件。
 
-7. 在复制的*html*文件中更改初始化**文档编辑器**的脚本。
-
-   ``` ts
-   const config = {
-     document: {
-       fileType: "docx",
-       key: "Khirz6zTPdfd7",
-       title: "Example Document Title.docx",
-       url: "https://example.com/url-to-example-document.docx",
-     },
-     documentType: "word",
-     editorConfig: {
-       user: {
-         id: "F89d8069ba2b",
-         name: "Kate Cage",
-       },
-     },
-     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiRjg5ZDgwNjliYTJiIiwibmFtZSI6IkthdGUgQ2FnZSJ9fX0.rdmhKLzXwXXVTABioKy3R2-HGMBY5u4pbZ_TVhW2rJs",
-   };
-
-   const docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-
-8. 在浏览器中打开您复制并编辑后的*html*文件。
+6. 在第二个浏览器标签页中打开同一个 `.html` 文件。由于两个标签页使用相同的文档 `key`，**文档编辑服务**会将它们连接到同一个协同编辑会话——您现在正在与自己进行协同编辑。
 
 ## 协同编辑中使用密钥
 
-为了打开文档进行编辑，配置初始化时需要[*key*](../../usage-api/config/document/document.md#key)参数，该参数允许用户从编辑器缓存中重新打开文档。密钥是一个长度和字符数量有限的文本字段，由软件集成商生成，并定义了服务用于识别文档的唯一文档标识符。
+要打开文档进行编辑，编辑器配置需要 [`key`](../../usage-api/config/document/document.md#key) 参数——由集成商生成的唯一文档标识符。**文档编辑服务**使用此密钥来识别文档。`key` 是一个长度有限的文本字段。
 
 :::note
-密钥可使用的字符包括：**0-9**，**a-z**，**A-Z**，**-.\_=**。密钥的最大长度为128个字符。
+密钥可包含的字符为 `0-9`、`a-z`、`A-Z`、`-._=`。密钥的最大长度为 **128** 个字符。
 :::
 
-因此，用户在打开文档进行协同编辑时使用相同的密钥非常重要。**文档编辑服务**会识别尝试打开文档的其他用户（或[内联编辑器](./inline-editors.md)的其他标签页/编辑会话）的密钥，如果该密钥与文件的密钥匹配，则允许用户打开文件。如果密钥不同，则会打开一个与其他文件和文件版本无关的新文件。
+要使协同编辑生效，所有用户必须使用相同的 `key` 打开文档。当用户（或[内联编辑器](./inline-editors.md)的其他标签页/编辑会话）打开文档时，**文档编辑服务**会检查该 `key` 是否与现有的编辑会话匹配。如果匹配，用户将加入该会话。如果不匹配，则会启动一个新的独立编辑会话——与其他会话或文件版本无关。
 
-一旦发送了保存文件的请求（*status*值等于*2*）并且操作成功完成（响应值等于*\{"error":0\}*），则该密钥不能再用于打开文档进行编辑。此时加载编辑器会显示[错误信息](../../more-information/troubleshooting.md#the-file-version-has-been-changed)。不过，如果缓存中存在该文档，则可以使用该密钥从缓存中查看文档。
+一旦发送了保存请求（`status` 等于 `2`）并且操作成功完成（响应为 `{"error":0}`），则该密钥不能再用于打开文档进行编辑——尝试这样做将加载[错误信息](../../more-information/troubleshooting.md#the-file-version-has-been-changed)。不过，在缓存版本未过期的情况下，仍可以使用该密钥从缓存中查看文档。
 
-如果用户在编辑完成前保存文档（*status*值等于*6*），则密钥不能更改，否则协同编辑将停止。请注意，在强制保存操作后，对于刚刚进入当前编辑会话的新用户，密钥也不能更改。
+如果用户在编辑仍在进行时强制保存文档（`status` 等于 `6`），则密钥不能更改——否则协同编辑将停止。在 forcesave 之后，对于加入当前编辑会话的新用户，密钥也不能更改。
 
 ### 示例
 
-1. 添加使用*密钥1*初始化**文档编辑器**的脚本。此时密钥未知，并且指定了打开文件的URL。
+:::note
+在以下所有示例中，请将 `example.com` 替换为提供文档文件的主机，即您的**文档存储服务**。如需快速测试，可以使用 `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 作为 `url`。
+:::
 
-   使用本地链接务必添加[令牌](./security.md)，否则会出现错误。
+1. 添加使用 **key 1** 初始化**文档编辑器**的脚本。该密钥尚未被服务缓存，因此将使用 URL 下载文件。
 
    关闭**文档编辑器**。
+
+   :::caution
+   当启用 JWT 验证（默认配置）时，`config` 必须包含匹配的 [`token`](./security.md)。
+   :::
 
    ``` ts
    const config = {
@@ -127,9 +114,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-
-2. 添加使用相同的*密钥1*初始化**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开，因此不会使用新的URL。
+2. 添加使用相同的 **key 1** 初始化**文档编辑器**的脚本。该密钥已被缓存，因此新的 URL 将被忽略，文档将从缓存中重新打开。
 
    ``` ts
    const config = {
@@ -146,9 +131,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-
-3. 添加使用*密钥2*初始化另一个**文档编辑器**的脚本。此时密钥未知，并且指定了打开文件的URL。即使这个URL与第一种情况中的URL相同，它们也是两个独立的编辑会话。
+3. 添加使用 **key 2** 初始化另一个**文档编辑器**的脚本。该密钥尚未被缓存，因此将使用 URL 下载文件。即使这个 URL 与示例 1 中的 URL 相同，不同的密钥意味着两个独立的编辑会话。
 
    关闭**文档编辑器**。
 
@@ -167,11 +150,9 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
+4. 添加使用 **key 1** 初始化另一个**文档编辑器**的脚本。该密钥已被缓存，因此文档将从缓存中重新打开。因为该密钥与示例 2 匹配，所以文档将以协同编辑模式打开。
 
-4. 添加使用*密钥1*初始化另一个**文档编辑器**的脚本。由于密钥已知，文档将从编辑器缓存中重新打开。因为这个密钥与第二种情况中的密钥相同，所以文档将以协同编辑模式打开。
-
-   在不关闭文档的情况下获取当前文档状态。在编辑器初始化的自定义部分中，[强制文件](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave)参数可让您实现这一点。
+   在不关闭文档的情况下获取当前文档状态。在编辑器初始化的自定义部分中，[forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 参数可让您实现这一点。
 
    ``` ts
    const config = {
@@ -193,11 +174,9 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
+5. 添加初始化另一个**文档编辑器**的脚本。成功进行 [forcesave](./saving-file.md#force-saving) 后，加入当前编辑会话的新用户的密钥不会更改。因此，要加入与示例 2 和示例 4 中用户相同的协同编辑会话，必须使用 **key 1**。
 
-5. 添加初始化另一个**文档编辑器**的脚本。在成功进行[强制保存](./saving-file.md#force-saving)操作后，当前编辑会话的新用户的密钥不会更改。因此，要进入与第二种和第四种情况中的用户相同的协同编辑会话，必须使用*密钥1*。
-
-   关闭所有使用*密钥1**的三个编辑会话。所有更改都已成功保存。由于文档已保存，必须重新生成密钥。
+   关闭所有使用 **key 1** 的三个编辑会话。所有更改都已成功保存。由于文档已保存，集成商必须生成新的密钥。
 
    ``` ts
    const config = {
@@ -209,7 +188,7 @@ sidebar_position: -20
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.L53bCRlJyvIf-C7bcKYM2WMfmk4FeZIoeDaEpc5IxXA",
    };
@@ -217,9 +196,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-
-6. 添加初始化**文档编辑器**以查看所创建文档的脚本。可以使用*密钥1*。
+6. 添加初始化**文档编辑器**以查看已保存文档的脚本。旧的 **key 1** 仍可用于查看。
 
    ``` ts
    const config = {
@@ -239,9 +216,7 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-
-7. 添加初始化**文档编辑器**以编辑所创建文档的脚本。不能使用*密钥1*，因为在保存文件后该密钥已更改，此时会出现[错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed)。
+7. 添加初始化**文档编辑器**以编辑已保存文档的脚本。**Key 1** 不能再用于编辑——服务会返回[错误](../../more-information/troubleshooting.md#the-file-version-has-been-changed)，因为文档已使用该密钥保存过。
 
    关闭**文档编辑器**。
 
@@ -263,15 +238,13 @@ sidebar_position: -20
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   其中**example.com**是安装了**文档管理器**和**文档存储服务**的服务器名称。您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-
 ## 协同编辑模式 {#co-editing-modes}
 
-有两种实时协作处理文档的模式：**快速**模式和**严格**模式
+有两种实时协作处理文档的模式——**快速**模式和**严格**模式。
 
-您可以使用[editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting)参数来更改协同编辑模式：
+您可以使用 [editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting) 参数来更改协同编辑模式：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     coEditing: {
@@ -284,16 +257,16 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-### 自动模式
+### 快速模式
 
-默认使用**自动**模式，它定义了实时协同编辑。所有更改会自动保存，并且无法重做上一次撤销的操作。在这种模式下，当用户编辑文本时，会显示用户的光标以及带有他们名字的工具提示。
+**快速**模式为默认模式。所有更改会实时发送给其他用户——您可以在他们编辑文档时看到他们的光标和名称提示。更改会自动保存，且不支持重做操作。
 
-![自动模式](/assets/images/editor/fast-mode.png)
+![快速模式](/assets/images/editor/fast-mode.png)
 
-### 手动模式
+### 严格模式
 
-在手动模式下，您需要使用**保存**按钮来同步您和其他用户所做的更改。在您点击此按钮之前，其他用户所做的更改是隐藏的。当多个用户同时编辑一个文档时，编辑过的文本会用不同颜色的虚线标记。
+在**严格**模式下，每个用户在独立的会话中工作。其他用户的更改在您点击**保存**之前保持隐藏。当多个用户同时编辑时，他们的编辑区域会用不同颜色的虚线标记。
 
-当用户点击**保存**按钮保存更改时，其他用户会收到关于更新的提示。要接受这些更新并保存您自己的更改以便展示给其他用户，请点击顶部工具栏左上角的<img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" />按钮，更新的内容将被高亮显示。
+点击**保存**后，其他用户会收到更新通知。要接受更新并发送您自己的更改，请点击工具栏左上角的 <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> 按钮。接受的更新将被高亮显示。
 
-![手动](/assets/images/editor/strict-mode.png)
+![严格模式](/assets/images/editor/strict-mode.png)

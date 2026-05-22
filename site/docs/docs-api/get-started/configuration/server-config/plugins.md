@@ -8,13 +8,13 @@ These parameters define the plugins configuration.
 
 ## services.CoAuthoring.plugins.autostart
 
-`Type: string`   `Default: []`
+**type:** `string` | **default:** `[]`
 
 Defines a list of plugins that run automatically.
 
 ## services.CoAuthoring.plugins.uri
 
-`Type: string`   `Default: "/sdkjs-plugins"`
+**type:** `string` | **default:** `"/sdkjs-plugins"`
 
 Defines a path to the folder where all the plugins are stored.
 

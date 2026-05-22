@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取方形注释的类类型。
+识别 PDF 中方形框是哪种注释类型。
 
 ```javascript editor-pdf
+// How do I determine the annotation category of a square box in a PDF?
+
+// Learn the specific kind of square annotation used in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

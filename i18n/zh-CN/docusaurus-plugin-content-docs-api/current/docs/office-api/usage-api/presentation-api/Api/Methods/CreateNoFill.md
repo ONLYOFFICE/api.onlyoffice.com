@@ -20,12 +20,12 @@ expression.CreateNoFill();
 
 ## 示例
 
-此示例创建无填充并移除元素的填充。
+在演示文稿中从形状移除背景填充。
 
 ```javascript editor-pptx
-// How to remove background fill from the object.
+// How do I make an object transparent in a presentation?
 
-// Create no fill and apply it to the element.
+// Apply a transparent fill to a shape's outline in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,5 +39,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The stroke of this shape is transparent.");
 slide.AddObject(shape);
-
 ```

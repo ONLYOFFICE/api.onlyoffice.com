@@ -20,12 +20,12 @@ string \| string[] \| number \| [XlDynamicFilterCriteria](../../Enumeration/XlDy
 
 ## Example
 
-This example reads the first criteria of a filter.
+Retrieve the primary condition applied to a column filter to see what values pass through in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to inspect the main condition of an AutoFilter column.
+// How do I find out the main filtering condition set on a column in a spreadsheet?
 
-// Use ApiFilter.GetCriteria1() to get the first filter criterion.
+// Examine the first rule of an active column filter and display its value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +52,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Criteria1 (first condition):");
     worksheet.GetRange("D1").SetValue(criteria1);
 }
-
 ```

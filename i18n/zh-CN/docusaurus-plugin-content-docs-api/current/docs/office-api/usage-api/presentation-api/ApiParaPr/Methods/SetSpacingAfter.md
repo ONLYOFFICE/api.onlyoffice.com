@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置当前段落的段后间距。
+在演示文稿中为段落下方添加空间。
 
 ```javascript editor-pptx
-// How to set the size of a spacing after a text from a paragraph properties.
+// How do I set the distance between paragraphs in a presentation?
 
-// Change the size property of a spacing after a paragraph.
+// Configure the gap after a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(secondParagraph);
 slide.AddObject(shape);
-
 ```

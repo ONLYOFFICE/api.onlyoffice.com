@@ -22,19 +22,18 @@ expression.SetColumnWidth(nColumn, nWidth, bWithotPaddings);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置指定列的宽度。
+在电子表格中为一列或多列分配特定宽度。
 
 ```javascript editor-xlsx
-// How to set a column width.
+// How do I change the width of a column in a spreadsheet?
 
-// Resize column width.
+// Widen or narrow columns to control how much content fits in each cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 10);
 worksheet.SetColumnWidth(1, 20);
-
 ```

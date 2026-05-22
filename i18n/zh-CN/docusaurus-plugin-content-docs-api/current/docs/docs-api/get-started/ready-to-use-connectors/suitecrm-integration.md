@@ -5,7 +5,7 @@ sidebar_custom_props:
 
 # SuiteCRM 集成
 
-该[插件](https://github.com/ONLYOFFICE/onlyoffice-suitecrm)支持在[SuiteCRM](https://suitecrm.com/)中使用ONLYOFFICE文档编辑办公文档。
+该[插件](https://github.com/ONLYOFFICE/onlyoffice-suitecrm)支持在[SuiteCRM](https://suitecrm.com/)中使用ONLYOFFICE 文档编辑办公文档。
 
 ## 功能特性
 
@@ -14,17 +14,17 @@ sidebar_custom_props:
 - 借助该插件，用户可以编辑文本文档、电子表格和演示文稿，还能创建并填写数字表单。
 - 该插件会在文档库中为办公文档新增**在ONLYOFFICE中打开**菜单选项。这使得多个用户能够实时协作，并将更改保存回SuiteCRM。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要部署一个ONLYOFFICE文档（文档服务器）实例，确保SuiteCRM和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还需具备直接向SuiteCRM发送POST请求的能力。
+您需要部署一个ONLYOFFICE 文档（文档服务器）实例，确保SuiteCRM和所有终端客户端都能解析并连接到该实例。若无法实现连接，请参考官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还需具备直接向SuiteCRM发送POST请求的能力。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是安装ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是安装ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装SuiteCRM ONLYOFFICE集成插件
 
 可从[此处](https://github.com/ONLYOFFICE/onlyoffice-suitecrm/releases)获取ONLYOFFICE集成插件的最新编译包。
 
-要开始在SuiteCRM中使用ONLYOFFICE文档，请按照以下步骤操作：
+要开始在SuiteCRM中使用ONLYOFFICE 文档，请按照以下步骤操作：
 
 1. 打开SuiteCRM，依次点击**管理->管理工具->模块加载器**，上传ONLYOFFICE插件压缩包。
 2. 按下**安装**按钮来安装上传的模块。
@@ -34,15 +34,15 @@ sidebar_custom_props:
 
 安装后即可访问插件设置页面：**管理->ONLYOFFICE->ONLYOFFICE设置**。
 
-输入以下地址以连接ONLYOFFICE文档：
+输入以下地址以连接ONLYOFFICE 文档：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
-这里的**documentserver**指的是安装了**ONLYOFFICE文档**的服务器名称。该地址要确保用户浏览器和SuiteCRM服务器均可访问，同时，SuiteCRM服务器地址也需能被**ONLYOFFICE文档**访问，以保证系统正常运行。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些信息可以在云控制台的**实例**部分找到。
+这里的**documentserver**指的是安装了**ONLYOFFICE 文档**的服务器名称。该地址要确保用户浏览器和SuiteCRM服务器均可访问，同时，SuiteCRM服务器地址也需能被**ONLYOFFICE 文档**访问，以保证系统正常运行。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些信息可以在云控制台的**实例**部分找到。
 
-从7.2版本开始，JWT会默认开启，并自动生成一个密钥，用于限制对ONLYOFFICE文档的访问，以确保安全性和数据完整性。在SuiteCRM的**ONLYOFFICE设置**页面中指定您自己的**密钥**。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT会默认开启，并自动生成一个密钥，用于限制对ONLYOFFICE 文档的访问，以确保安全性和数据完整性。在SuiteCRM的**ONLYOFFICE设置**页面中指定您自己的**密钥**。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 使用SuiteCRM ONLYOFFICE集成插件
 

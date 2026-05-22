@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the visual properties for the minor vertical gridlines.
+Format the minor vertical gridlines in a chart in a presentation.
 
 ```javascript editor-pptx
-// How to set minor vertical gridlines of the chart.
+// How do I change the appearance of the secondary vertical lines in a chart in a presentation?
 
-// Create a chart, set its properties and its minor gridlines.
+// Apply a custom color and thickness to the minor vertical gridlines in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 10000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMinorVerticalGridlines(stroke);
 slide.AddObject(chart);
-
 ```

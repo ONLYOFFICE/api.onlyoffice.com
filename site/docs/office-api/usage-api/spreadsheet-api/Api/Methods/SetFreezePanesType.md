@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example freezes first column and get pastes a freezed range address into the table.
+Lock the first column in place so it stays visible while scrolling in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to freeze a column and get its address.
+// How do I freeze a column so it remains visible when navigating across many columns in a spreadsheet?
 
-// Insert address of freezed columns into a range.
+// Pin the leading column and record its address for reference in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

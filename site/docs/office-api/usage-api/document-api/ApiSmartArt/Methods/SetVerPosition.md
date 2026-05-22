@@ -1,0 +1,43 @@
+# SetVerPosition
+
+Sets the absolute measurement for the vertical positioning of the floating object.
+
+Inherited from [ApiDrawing.SetVerPosition](../../ApiDrawing/Methods/SetVerPosition.md).
+
+## Example
+
+Place a floating shape at an exact vertical position on the page in a document.
+
+```javascript editor-docx
+// How do I set the vertical position of a drawing in a document?
+
+// Offset a shape by a precise distance from the top of the page, or position it by percentage in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("This is a paragraph with a shape. ");
+paragraph.AddText("The text wraps the rectangular box that bounds the object. ");
+paragraph.AddText("The distance between the shape and the text (horizontally) is half an inch (457200 English measure units).");
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+let fill = Api.CreateRadialGradientFill([gs1, gs2]);
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 1908000, 1404000, fill, stroke);
+drawing.SetDistances(457200, 457200, 457200, 0);
+drawing.SetWrappingStyle("square");
+drawing.SetVerPosition("page", 914400);
+paragraph.AddDrawing(drawing);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("The shape is aligned to the top of the page, and outstands from the page top 1 inch.");
+doc.Push(paragraph);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("The next blue shape is aligned vertically by 50% relative to the page.");
+fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
+stroke = Api.CreateStroke(0, Api.CreateNoFill());
+drawing = Api.CreateShape("rect", 1908000, 1404000, fill, stroke);
+drawing.SetDistances(457200, 457200, 457200, 0);
+drawing.SetWrappingStyle("square");
+drawing.SetVerPosition("page", 50, true);
+paragraph.AddDrawing(drawing);
+doc.Push(paragraph);
+```

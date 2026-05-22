@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定复数的乘积。
+计算电子表格中多个复数的乘积。
 
 ```javascript editor-xlsx
-// How to get the result from multiplication of a complex number.
+// How do I multiply complex numbers together in a spreadsheet?
 
-// Use a function to get the result from the product.
+// Get the multiplication result of complex number operations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

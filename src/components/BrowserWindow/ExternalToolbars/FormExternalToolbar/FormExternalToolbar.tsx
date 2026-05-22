@@ -63,6 +63,7 @@ const FormExternalToolbar: React.FC = () => {
               externalScript={{
                 beforeDocumentReady: `
                   let contentControls = [];
+                  const settingFormIds = new Map();
                 `,
                 onDocumentReady: `
                   connector.executeMethod("GetAllContentControls", null, (data) => {
@@ -102,7 +103,12 @@ const FormExternalToolbar: React.FC = () => {
 
                   const setFormValue = (tag, value) => {
                     connector.executeMethod("GetFormsByTag", [tag], (forms) => {
-                      connector.executeMethod("SetFormValue", [forms[0]["InternalId"], value], null);
+                      const id = forms[0]["InternalId"];
+                      settingFormIds.set(id, (settingFormIds.get(id) || 0) + 1);
+                      connector.executeMethod("SetFormValue", [id, value], () => {
+                        settingFormIds.set(id, settingFormIds.get(id) - 1);
+                        onChangeContentControl({ InternalId: id, FormValue: value });
+                      });
                     });
                   };
 
@@ -170,18 +176,20 @@ const FormExternalToolbar: React.FC = () => {
                   const updateContent = (e) => {
                     const { id } = e.target;
                     const value = e.target.classList.contains("${styles["radio-input"]}") ? true : e.target.value;
-                    connector.executeMethod("SetFormValue", [id, value], null);
+                    settingFormIds.set(id, (settingFormIds.get(id) || 0) + 1);
+                    connector.executeMethod("SetFormValue", [id, value], () => {
+                      settingFormIds.set(id, settingFormIds.get(id) - 1);
+                    });
                   };
 
                   const onChangeContentControl = (e) => {
-                    connector.executeMethod("GetFormValue", [e["InternalId"]], (value) => {
-                      const element = document.getElementById(e["InternalId"]);
-                      if (element.classList.contains("${styles["radio-input"]}")) {
-                        element.checked = value;
-                      } else {
-                        element.value = value || "";
-                      }
-                    });
+                    if (settingFormIds.get(e["InternalId"])) return;
+                    const element = document.getElementById(e["InternalId"]);
+                    if (element.classList.contains("${styles["radio-input"]}")) {
+                      element.checked = !!e["FormValue"];
+                    } else {
+                      element.value = e["FormValue"] || "";
+                    }
                   };
 
                   const preparingArrayContentControls = (data) => {

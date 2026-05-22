@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回卡方分布的右尾概率。
+查找电子表格中卡方分布中超过某一点的结果百分比。
 
 ```javascript editor-xlsx
-// How to return the right-tailed probability of the chi-squared distribution.
+// Determine the upper tail probability for a chi-squared value and degrees of freedom in a spreadsheet.
 
-// Use function to return the right-tailed probability of the chi-squared distribution.
+// Use statistical testing to assess whether observed values are extreme or typical in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

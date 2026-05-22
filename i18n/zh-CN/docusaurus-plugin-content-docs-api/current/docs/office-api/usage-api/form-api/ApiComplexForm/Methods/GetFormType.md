@@ -2,30 +2,16 @@
 
 返回当前表单的类型。
 
-## 语法
-
-```javascript
-expression.GetFormType();
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[FormType](../../Enumeration/FormType.md)
+继承自 [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md)。
 
 ## 示例
 
-此示例展示如何获取表单的类型。
+读取文档中表单字段的类型。
 
 ```javascript editor-forms
-// How to know the type of a text form.
+// How do I get the type of a form field in a document?
 
-// Create a text form and diplay its type in the document.
+// Distinguish one form from another by printing its type identifier next to it.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

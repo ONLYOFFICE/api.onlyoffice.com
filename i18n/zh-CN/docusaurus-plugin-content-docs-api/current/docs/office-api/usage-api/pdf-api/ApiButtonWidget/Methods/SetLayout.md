@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置按钮控件的布局类型。
+在 PDF 文档中设置按钮控件的布局类型。
 
 ```javascript editor-pdf
+// Apply layout type such as 'iconTextV' to a button widget.
+
+// Display the set layout value using the widget label.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

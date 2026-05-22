@@ -20,10 +20,13 @@ expression.GetWidth();
 
 ## 示例
 
-获取描边宽度（以 EMU 为单位）。
+读取电子表格中形状的边框厚度。
 
 ```javascript editor-xlsx
-// Creates shapes with different border widths and displays their widths.
+// How do I find out how wide a shape border is in a spreadsheet?
+
+// Measure the exact border width and display it as a readable value in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 
@@ -44,5 +47,4 @@ let stroke3 = Api.CreateStroke(5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor
 let shape3 = worksheet.AddShape("rect", 40 * 36000, 25 * 36000, fill, stroke3, 3, 0, 2, 2);
 let width3 = shape3.GetLine().GetWidth();
 worksheet.GetRange("A3").SetValue("Border 3: " + width3 + " EMU (" + (width3 / 12700).toFixed(2) + " pt)");
-
 ```

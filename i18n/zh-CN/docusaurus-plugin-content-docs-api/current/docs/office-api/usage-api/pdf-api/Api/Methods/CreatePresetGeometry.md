@@ -22,9 +22,13 @@ expression.CreatePresetGeometry(sPreset);
 
 ## 示例
 
-此示例演示如何创建预设几何图形。
+在 PDF 中为对象应用内置形状几何图形。
 
 ```javascript editor-pdf
+// How do I use a predefined shape like a star or arrow in a PDF?
+
+// Assign a preset shape form to a drawing and display its properties in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -35,7 +39,7 @@ let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 150, 0)));
 let shape = Api.CreateShape("rect", 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetGeometry(presetGeometry);
 shape.SetPosition(1000000, 1000000);
-let docContent = shape.GetDocContent();
+let docContent = shape.GetContent();
 if (docContent)
 {
     let paragraph = docContent.GetElement(0);

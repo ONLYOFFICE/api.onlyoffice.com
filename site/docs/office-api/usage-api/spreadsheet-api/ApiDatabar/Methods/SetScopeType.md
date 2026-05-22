@@ -2,32 +2,16 @@
 
 Sets the scope type for the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.SetScopeType(ScopeType);
-```
-
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| ScopeType | Required | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | The scope type: "xlSelectionScope", "xlDataFieldScope", or "xlFieldsScope". |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md).
 
 ## Example
 
-This example sets the scope type of a conditional formatting rule.
+Define which portion of a table a formatting rule should apply to in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the scope type of conditional formatting rules.
+// How do I limit a conditional formatting rule to only certain columns or data fields in a spreadsheet?
 
-// Set conditional formatting rule scope type.
+// Narrow or expand the reach of a highlight rule across table sections in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetScopeType("xlDataFieldScope");
 
 worksheet.GetRange("C4").SetValue("New scope:");
 worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
-
 ```

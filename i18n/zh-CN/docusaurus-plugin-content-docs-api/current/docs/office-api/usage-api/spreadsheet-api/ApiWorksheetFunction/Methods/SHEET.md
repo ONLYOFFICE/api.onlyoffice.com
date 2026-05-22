@@ -22,16 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何返回引用工作表的工作表编号。
+在电子表格中返回引用工作表的工作表编号。
 
 ```javascript editor-xlsx
-// How to get a sheet number.
+// Retrieve the sheet number for a given sheet reference using the SHEET function.
 
-// Use a function to get a sheet index.
+// Apply the function to display the sheet index in a cell.
 
 const worksheet = Api.GetActiveSheet(); 
 let func = Api.WorksheetFunction;
 let result = func.SHEET("Sheet1");
 worksheet.GetRange("C3").SetValue(result);
-
 ```

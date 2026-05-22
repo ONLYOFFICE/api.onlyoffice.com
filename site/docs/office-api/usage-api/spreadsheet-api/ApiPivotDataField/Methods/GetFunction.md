@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a function of a data field.
+Read the summary function applied to a pivot table data field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a table element function.
+// How do I check which calculation method a data field uses in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's function.
+// Confirm whether a data field totals values by sum, count, or another method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

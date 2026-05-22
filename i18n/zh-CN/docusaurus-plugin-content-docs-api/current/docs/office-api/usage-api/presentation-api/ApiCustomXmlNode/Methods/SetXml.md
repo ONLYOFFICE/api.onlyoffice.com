@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置当前 XML 节点的 XML 内容。
+在演示文稿中设置当前 XML 节点的 XML 内容。
 
 ```javascript editor-pptx
+// Replace an XML node with different XML markup in a presentation.
+
+// Update a custom XML node with new structured content in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after SetXml:\n' + xml.GetXml());
-
 ```

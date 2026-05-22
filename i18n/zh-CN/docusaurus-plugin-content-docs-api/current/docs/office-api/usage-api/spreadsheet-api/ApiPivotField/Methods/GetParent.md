@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-此示例展示如何获取透视字段的父级。
+访问电子表格中拥有给定透视字段的数据透视表。
 
 ```javascript editor-xlsx
-// How to get a pivot field parent.
+// How do I get the pivot table a particular field belongs to in a spreadsheet?
 
-// Create a pivot table, add data to it then get a parent of a specified pivot field.
+// Navigate from a pivot field back to its parent table to perform further operations on the whole table.
 
 let worksheet = Api.GetActiveSheet();
 

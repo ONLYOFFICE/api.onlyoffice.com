@@ -22,12 +22,12 @@ expression.CreateGroup(drawings);
 
 ## Example
 
-This example show how to create a group.
+Group multiple shapes together in a presentation.
 
 ```javascript editor-pptx
-// How to create a group of drawings.
+// How do I combine shapes so they move as one unit in a presentation?
 
-// Group the specified list of shapes.
+// Bundle selected shapes into a single object for coordinated movement in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ shape1.SetPosition(608400, 1267200);
 shape2.SetPosition(3100000, 1867200);
 let group = Api.CreateGroup([shape1, shape2]);
 slide.AddObject(group);
-
 ```

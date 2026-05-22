@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the language of the current presentation using the ApiCore.
+Set and determine the language setting of a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I find the language used in a presentation?
+
+// Retrieve the language code defined for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLanguage("en-US");
@@ -38,5 +42,4 @@ paragraph.AddText("Language: " + language);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

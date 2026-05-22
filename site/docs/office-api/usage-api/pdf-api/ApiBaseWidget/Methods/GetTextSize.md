@@ -21,9 +21,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets field widget and displays it's text size.
+Get the text size of a field widget in a PDF.
 
 ```javascript editor-pdf
+// How do I retrieve the text size for a widget in a PDF?
+
+// Display the text size value for a widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -36,6 +40,4 @@ widgets.forEach(function(widget) {
 });
 let textSize = widgets[0].GetTextSize();
 textField.SetValue('Text size is: ' + textSize);
-
-
 ```

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Angular
 
 The ONLYOFFICE Docs Angular [component](https://github.com/ONLYOFFICE/document-editor-angular-workspace) integrates ONLYOFFICE Docs into [Angular](https://angularjs.org/) projects.
@@ -42,7 +46,7 @@ This procedure creates a [basic Angular application](https://angular.io/guide/se
 
 The following steps depend on the Angular version you use. To check the installed version, run the following command:
 
-``` sh
+```sh
 ng version
 ```
 
@@ -91,7 +95,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -118,7 +122,7 @@ ng version
    Replace the following lines with your own data:
 
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
+   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
 
@@ -140,7 +144,9 @@ ng version
 
 1. Open the *./src/app/app.component.ts* file in the *onlyoffice-angular-demo* project and define options in your consuming component:
 
-   > Please note that starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
+   :::note
+   Starting from Angular v17.0.0, the *app.module.ts* file is not added to the new projects by default. You must specify *DocumentEditorModule* in the *imports* property of the *Component* decorator and set *standalone* to *true*.
+   :::
 
    ``` ts
    import {Component} from "@angular/core";
@@ -162,7 +168,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -187,7 +193,7 @@ ng version
    Replace the following lines with your own data:
 
    - `https://example.com/url-to-example-document.docx` - replace with the URL to your file. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - replace with your callback URL (this is required for the saving functionality to work).
+   - `https://example.com/url-to-callback` - replace with your callback URL (this is required for the saving functionality to work).
 
    This TypeScript file will create the *AppComponent* component containing the ONLYOFFICE Docs editor configured with basic features.
 

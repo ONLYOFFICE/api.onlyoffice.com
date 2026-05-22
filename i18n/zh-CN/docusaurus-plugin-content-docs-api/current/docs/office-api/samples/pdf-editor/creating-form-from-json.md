@@ -7,8 +7,8 @@ hide_table_of_contents: true
 根据数据上下文和值自动确定字段类型和结构，从简单的JSON对象自动创建表单：
 
 - 分析JSON数据并确定适当的字段类型（[Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)、[Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md)、[Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md)）；
-- 通过智能类型检测生成表单字段（[ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md)、[ApiParagraph/AddElement](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddElement.md)）；
-- 从JSON结构创建标签和初始值（[Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md)、[ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md)）。
+- 通过智能类型检测生成表单字段（[ApiDocument/Push](/docs/office-api/usage-api/document-api/ApiDocument/Methods/Push.md)、[ApiParagraph/AddElement](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddElement.md)）；
+- 从JSON结构创建标签和初始值（[Api/CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md)、[ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md)）。
 
 ```ts editor-pdf zoom=60
 let doc = Api.GetDocument();

@@ -20,9 +20,13 @@ expression.GetAttributes();
 
 ## 示例
 
-此示例展示如何获取自定义 XML 节点的所有属性。
+检索附加到电子表格中 XML 节点的每个属性。
 
 ```javascript editor-xlsx
+// How do I list all attributes of a custom XML element in a spreadsheet?
+
+// Loop through the complete set of attributes on an embedded XML node and display them in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -42,5 +46,4 @@ for (let i = 0; i < attributes.length; i++) {
 	worksheet.GetRange('A' + (i + 2)).SetValue(attributes[i].name);
 	worksheet.GetRange('B' + (i + 2)).SetValue(attributes[i].value);
 }
-
 ```

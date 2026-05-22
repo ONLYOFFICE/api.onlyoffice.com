@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例从文本控件获取占位符并显示。
+从 PDF 中的表单字段检索占位符文本。
 
 ```javascript editor-pdf
+// How do I read the hint text in a form field in a PDF?
+
+// Access the placeholder message displayed in a text input in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

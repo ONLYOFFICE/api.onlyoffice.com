@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to display only icons without cell values.
+Hide cell values and show only the icons from an icon set rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to configure icon set to hide cell values and show only icons.
+// How do I make cells display just the icon without the underlying number in a spreadsheet?
 
-// Set the icon set rule to display only icons.
+// Let icons carry the full visual message by removing the numeric values from view.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ let iconCondition = formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Before: Shows icons and values");
 iconCondition.SetShowIconOnly(true);
 worksheet.GetRange("B2").SetValue("After: Shows icons only");
-
 ```

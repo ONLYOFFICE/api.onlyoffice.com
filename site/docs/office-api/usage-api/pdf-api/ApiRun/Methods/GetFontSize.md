@@ -2,30 +2,16 @@
 
 Gets the font size from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetFontSize();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[hps](../../Enumeration/hps.md)
+Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
 ## Example
 
-This example shows how to find out a text font size.
+Read the text size value from a PDF.
 
 ```javascript editor-pdf
-// How to know font size of a text run.
+// How do I check what font size is used for text in a PDF?
 
-// Get the text properties of the run and display its font size.
+// Retrieve the font size measurement from text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +21,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const fontSize = textPr.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 docContent.Push(paragraph);
-
 ```

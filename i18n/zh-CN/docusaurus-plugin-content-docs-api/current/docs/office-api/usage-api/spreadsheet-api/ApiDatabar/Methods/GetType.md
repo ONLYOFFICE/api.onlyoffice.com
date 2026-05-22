@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例演示如何获取数据条条件格式规则的类型。
+识别电子表格中应用于范围的条件格式规则类型。
 
 ```javascript editor-xlsx
-// How to identify the type of conditional formatting rule.
+// How do I tell what category of formatting rule is used on a data bar in a spreadsheet?
 
-// Get the type of the data bar conditional formatting rule.
+// Distinguish a data bar rule from other conditional formatting types in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let conditionType = dataBar.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```

@@ -22,12 +22,12 @@ expression.CreateSolidFill(color);
 
 ## 示例
 
-此示例创建纯色填充，使用选定的纯色作为对象背景应用于对象。
+在电子表格中用单一纯色作为形状的背景。
 
 ```javascript editor-xlsx
-// Create a solid fill to set a background color.
+// How do I fill a shape with one uniform color in a spreadsheet?
 
-// How to create a solid color to fill a shape.
+// Cover a shape's surface with a plain, unblended color to make it stand out in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let rgbColor = Api.RGB(255, 111, 61);

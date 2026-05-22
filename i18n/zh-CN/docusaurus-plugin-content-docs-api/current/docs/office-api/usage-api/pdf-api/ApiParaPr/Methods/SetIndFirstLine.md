@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置段落首行缩进。
+在 PDF 中缩进段落的第一行。
 
 ```javascript editor-pdf
-// How to set a size of the first line indentation using a paragraph properties.
+// How do I indent the first line of a paragraph in a PDF?
 
-// Create a paragraph setting its first line indentation.
+// Apply first-line indentation to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,7 +39,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndFirstLine(1440);
@@ -49,5 +49,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
-
 ```

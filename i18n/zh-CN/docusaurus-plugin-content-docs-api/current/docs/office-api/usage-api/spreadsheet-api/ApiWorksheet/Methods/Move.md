@@ -23,12 +23,12 @@ expression.Move(before, after);
 
 ## 示例
 
-此示例将工作表移动到工作簿中的另一个位置。
+在电子表格中通过将一个工作表移到另一个之前或之后来重新排序。
 
 ```javascript editor-xlsx
-// How to change an order of the sheet.
+// Change the tab position of a sheet relative to your other sheets in a spreadsheet?
 
-// Move a sheet.
+// Reorganize sheet sequence to group related data together in a spreadsheet.
 
 let sheet1 = Api.GetActiveSheet();
 Api.AddSheet("Sheet2");

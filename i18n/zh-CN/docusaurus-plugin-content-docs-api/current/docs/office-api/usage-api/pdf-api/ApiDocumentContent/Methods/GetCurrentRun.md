@@ -20,9 +20,13 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例返回文档内容中的当前文本块。
+访问 PDF 中形状内当前活动的文本段。
 
 ```javascript editor-pdf
+// How do I find the text segment being edited in a PDF?
+
+// Retrieve the most recent text portion that was added to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,5 +46,4 @@ if (currentRun) {
   currentRun.AddText(' (Current run detected!)');
 }
 page.AddObject(shape);
-
 ```

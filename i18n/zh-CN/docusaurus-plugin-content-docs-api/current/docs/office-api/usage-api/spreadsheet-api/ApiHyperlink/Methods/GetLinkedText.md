@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状内超链接的 URL。
+读取电子表格中超链接存储的 URL 地址。
 
 ```javascript editor-xlsx
+// How do I retrieve the destination address of a hyperlink in a spreadsheet?
+
+// Extract the web address that a hyperlink points to in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Linked text: ' + hyperlink.GetLinkedText());
-
 ```

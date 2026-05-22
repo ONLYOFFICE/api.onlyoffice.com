@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何将数字向上舍入到最接近的基数倍数。
+在电子表格中将数字向上舍入到最近的增量。
 
 ```javascript editor-xlsx
-// How to round a number up.
+// What is the next whole value above a decimal in a spreadsheet?
 
-// Use function to round a number up the nearest integer or to the nearest multiple of significance.
+// Force rounding upward to meet a specific interval in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

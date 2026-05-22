@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将 EMU（英制度量单位）转换为磅。
+在 PDF 中将 EMU 转换为磅。
 
 ```javascript editor-pdf
+// How do I convert emus to points for sizing in a PDF?
+
+// Translate emu values to point measurements and show the result in a PDF.
+
 const emus = 100;
 const points = Api.EmusToPoints(emus);
 
@@ -38,5 +42,4 @@ paragraph.AddText(emus + ' emus are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

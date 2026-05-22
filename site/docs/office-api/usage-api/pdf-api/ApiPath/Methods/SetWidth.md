@@ -22,10 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Set the horizontal size of a shape path in a PDF.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How wide should my custom shape be in a PDF?
+
+// Specify the left-to-right dimension of a drawn path in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

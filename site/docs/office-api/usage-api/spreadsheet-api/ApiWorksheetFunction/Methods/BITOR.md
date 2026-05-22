@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a bitwise "OR" of two numbers.
+Combine two numbers using bitwise OR in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from OR operation.
+// Which bits are set in either number in a spreadsheet?
 
-// Use function to calculate bitwise "OR" operation.
+// Merge binary values to include all active bits in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

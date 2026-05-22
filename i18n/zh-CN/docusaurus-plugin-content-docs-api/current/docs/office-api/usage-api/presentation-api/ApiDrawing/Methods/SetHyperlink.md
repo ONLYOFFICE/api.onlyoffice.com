@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例为幻灯片上的形状和图像设置超链接。
+在演示文稿中为形状和图像添加可点击的链接。
 
 ```javascript editor-pptx
+// How do I add a hyperlink to a shape or image in a presentation?
+
+// Attach a web link to a shape and a slide link to an image in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.AddSlide(Api.CreateSlide());
 
@@ -48,5 +52,4 @@ const urlHyperlink = Api.CreateHyperlink('https://onlyoffice.com', 'Link to Only
 const pageHyperlink = Api.CreateHyperlink('ppaction://hlinksldjumpslide1', 'Link to the second slide');
 shape.SetHyperlink(urlHyperlink);
 image.SetHyperlink(pageHyperlink);
-
 ```

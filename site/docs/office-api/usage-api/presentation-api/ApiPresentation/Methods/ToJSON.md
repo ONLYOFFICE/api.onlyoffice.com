@@ -22,12 +22,12 @@ JSON
 
 ## Example
 
-This example shows how to convert the ApiPresentation object into the JSON object.
+Convert an entire presentation to JSON format in a presentation.
 
 ```javascript editor-pptx
-// How to convert the presentation object to JSON objects.
+// How do I export a presentation to JSON in a presentation?
 
-// Get JSON representations of each slide from the presentation.
+// Serialize the presentation structure and recreate it from JSON in a presentation.
 
 const presentation = Api.GetPresentation();
 const json = presentation.ToJSON(true);
@@ -45,5 +45,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
-
 ```

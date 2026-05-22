@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a class type of ApiTableCell.
+Identify the type of a table cell in a PDF.
 
 ```javascript editor-pdf
-// Retrieve class type of ApiTableCell object and insert it to the page.
+// How can I determine the type classification of a cell in a PDF?
+
+// Retrieve the object type information for a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,5 +40,4 @@ paragraph.AddText("Class type: " + classType);
 content.Push(paragraph);
 
 page.AddObject(table);
-
 ```

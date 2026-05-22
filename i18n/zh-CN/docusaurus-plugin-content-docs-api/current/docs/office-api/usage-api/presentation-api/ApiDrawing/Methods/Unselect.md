@@ -20,13 +20,12 @@ boolean
 
 ## 示例
 
-此示例取消选择当前图形对象。
+取消选择演示文稿中的当前图形对象。
 
 ```javascript editor-pptx
-// How to unselect drawing objects of the slide.
+// Unselecting removes focus from a shape without deleting it.
 
-// Create three shapes, select all of them,
-// then unselect the second shape.
+// Create three shapes, select all of them, then unselect the second shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +48,4 @@ drawing1.Select(true);
 drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
-
 ```

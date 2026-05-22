@@ -2,32 +2,16 @@
 
 Sets the text outline to the current text run.
 
-## Syntax
-
-```javascript
-expression.SetOutLine(oStroke);
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | Required | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | The stroke used to create the text outline. |
-
-## Returns
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+Inherited from [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md).
 
 ## Example
 
-This example sets the text outline to the current text run.
+Add a border around text in a PDF.
 
 ```javascript editor-pdf
-// How to make a text outlined.
+// How do I create an outline effect on text in a PDF?
 
-// Get the text properties of the run and outline it with a stroke.
+// Draw a stroke around characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +21,7 @@ let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -48,5 +32,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

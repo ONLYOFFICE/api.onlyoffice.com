@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何确定文本是否有双删除线。
+从文本运行属性检索双删除线属性。
 
 ```javascript editor-pptx
-// How to know whether a text is crossed with two horizontal lines.
+// Create a shape with a text run and apply double strikeout formatting.
 
-// Get the text properties of the run and find whether it has a double strikethrough.
+// Get and display whether the text has double strikethrough.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
-
 ```

@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-此示例展示如何获取文本块的文本属性。
+读取电子表格中文本运行的文本格式属性。
 
 ```javascript editor-xlsx
-// How to change the text properties.
+// How do I check what font size and style a text run is using in a spreadsheet?
 
-// Create a text object, set its font size, justification, etc.
+// Inspect the current formatting of a run before applying new styles in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

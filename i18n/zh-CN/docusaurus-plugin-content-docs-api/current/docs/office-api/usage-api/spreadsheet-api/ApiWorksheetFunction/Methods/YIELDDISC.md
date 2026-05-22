@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回贴现证券的年收益率。例如，国库券。
+计算电子表格中折价证券（如国库券）的年收益率。
 
 ```javascript editor-xlsx
-// How to return an annual yield for a discounted security.
+// How do I find the annual yield for a discounted bond or Treasury bill in a spreadsheet?
 
-// Use a function to get an annual yield.
+// Determine the return rate for a discounted security sold at a price below par in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

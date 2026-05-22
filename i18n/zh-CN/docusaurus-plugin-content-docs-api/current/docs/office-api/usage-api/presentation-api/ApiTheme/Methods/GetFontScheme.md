@@ -20,12 +20,12 @@ expression.GetFontScheme();
 
 ## 示例
 
-此示例演示如何获取主题的字体方案。
+从演示文稿中的主题获取字体方案。
 
 ```javascript editor-pptx
-// How to get a font scheme from a theme.
+// How do I access the fonts defined in a presentation's theme?
 
-// Get a font scheme and display its class type.
+// Retrieve the font scheme and display its type information in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
-
 ```

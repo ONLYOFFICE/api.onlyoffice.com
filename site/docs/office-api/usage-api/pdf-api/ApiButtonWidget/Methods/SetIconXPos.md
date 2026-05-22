@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets field with image icon position X to 0.
+Set field image icon X position in a PDF document.
 
 ```javascript editor-pdf
+// Configure the horizontal position of an icon in an image field.
+
+// Apply the X position value to a button widget.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let imageField = Api.CreateImageField([10, 10, 100, 100]);

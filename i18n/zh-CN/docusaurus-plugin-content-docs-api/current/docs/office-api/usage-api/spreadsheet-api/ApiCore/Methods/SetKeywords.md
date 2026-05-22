@@ -22,9 +22,13 @@ expression.SetKeywords(sKeywords);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置工作簿的关键字字符串。
+向电子表格工作簿的文档属性添加可搜索的关键词。
 
 ```javascript editor-xlsx
+// How do I attach search tags to a workbook's metadata in a spreadsheet?
+
+// Tag the workbook with descriptive terms that make it easier to find in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```

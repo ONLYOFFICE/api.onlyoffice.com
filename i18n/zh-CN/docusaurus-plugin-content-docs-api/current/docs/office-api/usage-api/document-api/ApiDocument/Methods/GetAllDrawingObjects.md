@@ -1,0 +1,42 @@
+# GetAllDrawingObjects
+
+从文档内容返回绘图对象集合。
+
+继承自 [ApiDocumentContent.GetAllDrawingObjects](../../ApiDocumentContent/Methods/GetAllDrawingObjects.md)。
+
+## 示例
+
+检索文档内容中嵌入的所有绘图对象。
+
+```javascript editor-docx
+// How do I collect every drawing object from a content container in a document?
+
+// Change the fill color of the first drawing object found inside a shape in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
+paragraph.AddDrawing(shape);
+let chart = Api.CreateChart("bar3D", [
+	[200, 240, 280],
+	[250, 260, 280]
+], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 95 * 36000, 70 * 36000, 24);
+fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+chart.SetSeriesFill(fill, 0, false);
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+chart.SetSeriesFill(fill, 1, false);
+chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
+chart.SetHorAxisTitle("Year", 11);
+chart.SetLegendPos("bottom");
+chart.SetShowDataLabels(false, false, true, false);
+chart.SetTitle("Financial Overview", 13);
+paragraph = Api.CreateParagraph();
+paragraph.AddDrawing(chart);
+let docContent = shape.GetDocContent();
+docContent.AddElement(0, paragraph);
+let drawings = docContent.GetAllDrawingObjects();
+fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
+drawings[0].Fill(fill);
+```

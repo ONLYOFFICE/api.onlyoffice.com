@@ -25,10 +25,13 @@ expression.QuadBezTo(x1, y1, x2, y2);
 
 ## 示例
 
-使用不同的贝塞尔曲线和弧命令创建复杂的曲线形状。
+向电子表格中的自定义形状路径添加二次曲线段。
 
 ```javascript editor-xlsx
-// Combines multiple curve types in a single path.
+// How do I draw a smooth single-control-point curve on a shape in a spreadsheet?
+
+// Build a gently curved outline by guiding the path through one control point to an endpoint in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

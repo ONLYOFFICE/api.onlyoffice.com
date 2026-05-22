@@ -24,12 +24,12 @@ number \| string \| boolean
 
 ## 示例
 
-此示例演示如何检查是否满足条件，如果为 true 则返回一个值，如果为 false 则返回另一个值。
+根据条件在电子表格中为真或假返回不同的值。
 
 ```javascript editor-xlsx
-// How to check a condition.
+// How do I test a condition and display different results in a spreadsheet?
 
-// Use a function to use IF condition checker.
+// Execute conditional logic to display specific values when criteria are met in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

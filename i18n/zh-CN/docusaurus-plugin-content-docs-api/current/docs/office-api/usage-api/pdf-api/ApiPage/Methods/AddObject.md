@@ -22,12 +22,12 @@ expression.AddObject(object);
 
 ## 示例
 
-此示例向当前 PDF 页面添加对象（图像、形状或图表）。
+在 PDF 的页面上插入视觉元素。
 
 ```javascript editor-pdf
-// How to add an element to the page.
+// How do I add content to the page in a PDF?
 
-// Create a chart and add it to the ApiPage object.
+// Place a chart or shape on the current page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -49,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

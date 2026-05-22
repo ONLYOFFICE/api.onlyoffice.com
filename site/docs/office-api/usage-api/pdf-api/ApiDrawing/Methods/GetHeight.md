@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to find a shape's height and display it on the page.
+Find the vertical size of a shape in a PDF.
 
 ```javascript editor-pdf
-// Get a page shape's height.
+// How do I get the height of a drawn object in a PDF?
+
+// Measure the tall-to-short dimension of a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

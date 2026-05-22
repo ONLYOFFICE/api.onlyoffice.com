@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the name of the last user who modified the current workbook.
+Retrieve the name of the person who last edited the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out who made the most recent change to a workbook in a spreadsheet?
+
+// Look up the last editor's name recorded in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
-
 ```

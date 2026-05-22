@@ -20,9 +20,13 @@ expression.GetSlideShowTransition();
 
 ## 示例
 
-此示例从幻灯片获取幻灯片放映过渡效果。
+获取幻灯片的幻灯片放映切换效果。
 
 ```javascript editor-pptx
+// Retrieve the transition settings using GetSlideShowTransition after setting a transition.
+
+// Display the transition effect and speed on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -46,5 +50,4 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Effect: ' + transitionEffect + '\n');
 paragraph.AddText('Speed: ' + transitionSpeed);
 slide.AddObject(shape);
-
 ```

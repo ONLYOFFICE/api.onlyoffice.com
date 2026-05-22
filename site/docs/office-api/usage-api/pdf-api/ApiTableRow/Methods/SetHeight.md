@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set a height of the row.
+Set the height of a table row in a PDF.
 
 ```javascript editor-pdf
-// Create a table and change its rows height.
+// How do I make a row taller or shorter in a PDF?
+
+// Change the row dimensions to a specific measurement in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

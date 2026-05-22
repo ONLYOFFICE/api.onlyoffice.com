@@ -20,12 +20,12 @@ expression.GetAllCharts();
 
 ## 示例
 
-此示例展示如何从工作表获取所有图表。
+将工作表上的每个图表收集到电子表格的列表中。
 
 ```javascript editor-xlsx
-// How to get all charts.
+// How do I retrieve all charts at once to modify them together in a spreadsheet?
 
-// Get all charts as an array.
+// Loop through all existing charts and apply a uniform style change to each one.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

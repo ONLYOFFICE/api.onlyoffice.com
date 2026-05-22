@@ -20,9 +20,13 @@ string[]
 
 ## 示例
 
-此示例展示如何获取形状内段落中使用的所有字体名称。
+列出电子表格中形状内段落使用的每种字体。
 
 ```javascript editor-xlsx
+// How do I find out which fonts a paragraph is using in a spreadsheet?
+
+// Collect the font names from a styled paragraph and write them into a cell in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(140, 120, 160));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -40,5 +44,4 @@ paragraph.SetFontFamily('Consolas');
 
 const fontNames = paragraph.GetFontNames();
 worksheet.GetRange('A1').SetValue('Fonts used: ' + fontNames.join(', '));
-
 ```

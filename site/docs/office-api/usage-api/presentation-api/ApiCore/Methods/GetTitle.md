@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the title of the current presentation.
+Set and retrieve the title of a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I get the title of a presentation in a presentation?
+
+// Retrieve and display the title as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetTitle("My Presentation Title");
@@ -38,5 +42,4 @@ paragraph.AddText("Title: " + title);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

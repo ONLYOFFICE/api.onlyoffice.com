@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为多边形注释设置顶点。
+更改 PDF 中多边形标记的角点。
 
 ```javascript editor-pdf
+// How do I update the corner points of a polygon marking in a PDF?
+
+// Modify the coordinates that define a polygon marking in a PDF.
+
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polygonAnnot = Api.CreatePolygonAnnot([40, 5, 160, 110], vertices);

@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve command.
+Read the ending vertical coordinate of a cubic bezier curve segment in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays all bezier control points coordinates in spreadsheet cells.
+// How do I find the final Y point of a curve path command in a spreadsheet?
+
+// Confirm the destination height of a drawn curve by checking its last vertical point in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

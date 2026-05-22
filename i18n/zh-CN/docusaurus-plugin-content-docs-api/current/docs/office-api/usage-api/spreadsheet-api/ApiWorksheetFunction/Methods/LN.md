@@ -22,15 +22,14 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的自然对数。
+计算电子表格中数字的自然对数。
 
 ```javascript editor-xlsx
-// How to get the natural logarithm.
+// How do I find the natural logarithm (base e) of a value in a spreadsheet?
 
-// Use a function to return a natural logarithm.
+// Get the inverse exponential of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LN(23));
-
 ```

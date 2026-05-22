@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例创建方形注释并为其添加回复。
+在 PDF 中为注释添加回复。
 
 ```javascript editor-pdf
+// How can I reply to an annotation comment in a PDF?
+
+// Attach a text response to an existing annotation in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 squareAnnot.SetContents("Annot contents");
@@ -34,5 +38,4 @@ page.AddObject(squareAnnot);
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 textAnnot.SetContents("Annot reply");
 squareAnnot.AddReply(textAnnot);
-
 ```

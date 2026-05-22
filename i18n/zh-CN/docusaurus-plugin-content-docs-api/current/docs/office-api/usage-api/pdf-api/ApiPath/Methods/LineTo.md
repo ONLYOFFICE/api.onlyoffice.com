@@ -23,10 +23,13 @@ expression.LineTo(x, y);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。
+在 PDF 中形状路径内绘制直线。
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I connect points with lines in a PDF?
+
+// Add line segments to create custom shapes in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

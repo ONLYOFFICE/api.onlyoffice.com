@@ -51,17 +51,17 @@
 | [GetColumnRange](./Methods/GetColumnRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示数据透视表报表中列区域的 Range 对象。 |
 | [GetData](./Methods/GetData.md) | number \| null | 返回数据透视表中数据字段的值。 |
 | [GetDataBodyRange](./Methods/GetDataBodyRange.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回表示数据透视表中值区域的 Range 对象。 |
-| [GetDataFields](./Methods/GetDataFields.md) | [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md)[] \| [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md) \| null | 返回表示单个数据透视表数据字段或所有可见数据字段集合的集合。 |
+| [GetDataFields](./Methods/GetDataFields.md) | [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md)[] \| [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md) \| null | 返回表示单个数据透视表数据字段的集合 |
 | [GetDescription](./Methods/GetDescription.md) | string | 返回数据透视表描述。 |
 | [GetDisplayFieldCaptions](./Methods/GetDisplayFieldCaptions.md) | boolean | 返回指定是否显示行和列字段标题的设置。 |
 | [GetDisplayFieldsInReportFilterArea](./Methods/GetDisplayFieldsInReportFilterArea.md) | [PivotTableFilterAreaInfo](../Enumeration/PivotTableFilterAreaInfo.md) | 返回报表筛选区域设置中的数据透视表显示字段。 |
 | [GetGrandTotalName](./Methods/GetGrandTotalName.md) | string | 返回在指定数据透视表报表的总计列或行标题中显示的文本字符串标签。 |
 | [GetHiddenFields](./Methods/GetHiddenFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示数据透视表中所有隐藏字段的数组。 |
 | [GetName](./Methods/GetName.md) | string | 返回数据透视表名称。 |
-| [GetPageFields](./Methods/GetPageFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示单个数据透视表页字段或所有可见页字段集合的集合。 |
+| [GetPageFields](./Methods/GetPageFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回表示单个数据透视表页面字段的集合 |
 | [GetParent](./Methods/GetParent.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 返回当前数据透视表的父对象。 |
 | [GetPivotData](./Methods/GetPivotData.md) | [ApiRange](../ApiRange/ApiRange.md) | 返回包含数据透视表报表中数据项信息的 Range 对象。 |
-| [GetPivotFields](./Methods/GetPivotFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] \| [ApiPivotField](../ApiPivotField/ApiPivotField.md) \| [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md) \| null | 返回表示单个数据透视表字段或数据透视表报表中可见和隐藏字段集合的集合。 |
+| [GetPivotFields](./Methods/GetPivotFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] \| [ApiPivotField](../ApiPivotField/ApiPivotField.md) \| [ApiPivotDataField](../ApiPivotDataField/ApiPivotDataField.md) \| null | 返回表示单个数据透视表字段的集合 |
 | [GetRowFields](./Methods/GetRowFields.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md)[] | 返回当前在数据透视表中显示为行字段的集合。 |
 | [GetRowGrand](./Methods/GetRowGrand.md) | boolean | 返回数据透视表行的 **总计** 设置。 |
 | [GetRowRange](./Methods/GetRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示数据透视表报表中行区域的 Range 对象。 |

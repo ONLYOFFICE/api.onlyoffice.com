@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last run with text from a paragraph inside a shape.
+Find the last text portion in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I locate the final piece of text content within a paragraph in a spreadsheet?
+
+// Access the trailing text segment of a paragraph to read or display its content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 140, 120));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -46,5 +50,4 @@ paragraph.AddElement(run2);
 
 const lastRun = paragraph.GetLastRunWithText();
 worksheet.GetRange('A1').SetValue('Last run text: ' + lastRun.GetText());
-
 ```

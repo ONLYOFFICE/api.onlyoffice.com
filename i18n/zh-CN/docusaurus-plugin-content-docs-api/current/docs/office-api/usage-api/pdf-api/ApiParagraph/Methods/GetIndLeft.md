@@ -2,30 +2,16 @@
 
 返回段落左侧缩进。
 
-## 语法
-
-```javascript
-expression.GetIndLeft();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+继承自 [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md)。
 
 ## 示例
 
-此示例展示如何获取段落左侧缩进。
+从 PDF 中的段落检索左边距缩进值。
 
 ```javascript editor-pdf
-// How to return a left side identation of a paragraph property.
+// How do I get the left side indent measurement in a PDF?
 
-// Return a left side indentation of a text property from the page.
+// Obtain the left edge offset amount in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +24,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndLeft(2880);
@@ -52,5 +38,4 @@ const indLeft = paraPr.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
-
 ```

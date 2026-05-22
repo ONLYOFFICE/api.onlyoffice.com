@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the formula associated with an icon set condition.
+Read the formula tied to an icon set conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out whether an icon set condition uses a formula to determine its thresholds in a spreadsheet?
+
+// Check if a formula drives the icon set rule instead of a fixed value in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Month');
 worksheet.GetRange('B1').SetValue('Revenue');
@@ -46,5 +50,4 @@ if (formula) {
 	worksheet.GetRange('D1').SetValue('Icon set condition does not have a formula.');
 }
 worksheet.GetRange('D2').SetValue('Type: ' + iconCondition.GetType());
-
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to get visibility property of the slide.
+Get the visibility property of the slide in a presentation.
 
 ```javascript editor-pptx
-// How to find out whether a slide is visible or not.
+// Retrieve the visibility status using GetVisible after setting slide visibility.
 
-// Get a slide, set its visibility and show it in the slide.
+// Display the visibility status on a different slide.
 
 const presentation = Api.GetPresentation();
 let slide = Api.CreateSlide();
@@ -52,5 +52,4 @@ slide.AddObject(shape);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The first slide visibility: " + isVisible);
-
 ```

@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## Example
 
-This example shows how to crate a stroke.
+Add a colored border outline to a shape in a PDF.
 
 ```javascript editor-pdf
-// How to add a stroke to the shape.
+// How do I add a stroke to the edge of a shape in a PDF?
 
-// Add solid fill and stroke to the shape properties.
+// Apply a stroke with gradient fill to a shape's outline in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,5 +42,4 @@ const stroke = Api.CreateStroke(3 * 36000, fill1);
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
-
 ```

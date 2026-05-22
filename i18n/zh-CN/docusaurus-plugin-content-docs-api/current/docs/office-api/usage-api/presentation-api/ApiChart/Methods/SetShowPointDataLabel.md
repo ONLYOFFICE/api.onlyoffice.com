@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-此示例指定图表数据标签的显示选项。
+在演示文稿中为图表上的各个数据点显示自定义标签。
 
 ```javascript editor-pptx
-// How to show specific chart data labels with options.
+// Show the values and names of specific data points in a presentation.
 
-// Create a chart, set its properties and the visibility of its data labels options.
+// Configure which information appears as labels for chart data points in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

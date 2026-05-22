@@ -6,11 +6,9 @@ Half-points (2 half-points = 1 point).
 
 number
 
-
-
 ## Example
 
-This example sets the text font size to 22 half-points.
+Set the text font size to 22 half-points.
 
 ```javascript editor-pdf
 // How to resize a text using half-points.

@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。 |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 指定正值（升高文本）或负值（降低文本） |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-此示例指定此文本块的文本相对于周围非定位文本的默认基线升高或降低的量。
+调整 PDF 中的文本基线对齐。
 
 ```javascript editor-pdf
-// How to change inline position of the text.
+// How do I move text up or down relative to other text in a PDF?
 
-// Create a new text run and make its position lower or higher.
+// Raise or lower text positioning in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is a text run with the text raised 10 half-points.");
@@ -50,5 +50,4 @@ run.AddText("This is a text run with the text lowered 16 half-points.");
 paragraph.AddElement(run);
 run.SetPosition(-16);
 page.AddObject(shape);
-
 ```

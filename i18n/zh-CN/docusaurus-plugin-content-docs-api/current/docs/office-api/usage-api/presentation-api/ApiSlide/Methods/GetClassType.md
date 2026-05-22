@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+检查幻灯片返回的类类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiSlide.
+// Retrieve the class type using the GetClassType method and display in a shape.
 
-// Retrieve class type of ApiSlide object and insert it to the slide.
+// Output the class type string for the slide object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ const paragraph = docContent.GetElement(0);
 const classType = slide.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

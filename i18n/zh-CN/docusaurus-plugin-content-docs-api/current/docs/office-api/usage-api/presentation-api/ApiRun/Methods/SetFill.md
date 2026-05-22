@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-此示例设置当前文本块的文本颜色。
+在演示文稿中为文本应用填充颜色。
 
 ```javascript editor-pptx
-// How to set solid fill to the text.
+// What fill colors can be set for text in a presentation?
 
-// Create a new text run and set its font color.
+// Change the fill color of text runs in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ run.SetFill(runFill);
 run.AddText("This is a text run with the font color set to black.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

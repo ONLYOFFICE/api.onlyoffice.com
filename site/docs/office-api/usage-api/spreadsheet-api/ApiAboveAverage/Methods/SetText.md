@@ -2,32 +2,16 @@
 
 Sets the text value used in text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.SetText(Text);
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Text | Required | string |  | The text value to compare against. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetText](../../ApiFormatCondition/Methods/SetText.md).
 
 ## Example
 
-This example sets the text value for a text-based conditional formatting rule.
+Update the word or phrase that triggers a text-based formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change text values in text-based conditional formatting rules.
+// How do I change which text a conditional highlight rule looks for in a spreadsheet?
 
-// Set conditional formatting rule text value.
+// Replace the search string in a rule so different cell content gets highlighted in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetText("Grape");
 
 worksheet.GetRange("C4").SetValue("New text:");
 worksheet.GetRange("C5").SetValue(condition1.GetText());
-
 ```

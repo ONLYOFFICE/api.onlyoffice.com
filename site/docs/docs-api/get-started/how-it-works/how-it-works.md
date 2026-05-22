@@ -4,25 +4,25 @@ sidebar_position: -5
 
 # How it works
 
-The work with document files in ONLYOFFICE Docs is quite a simple process but it requires some understanding of what is going on when you click your document link to open it in the browser, save the document or upload it from your computer to the document server.
+For the end user, viewing, editing, and saving documents with ONLYOFFICE Docs is a simple process. For integrators, understanding what happens behind the scenes when a document is opened, saved, or uploaded helps when building and debugging an integration.
 
 ## User-document interaction
 
-The user-document interaction is done both at the client side and at the server side.
-
-Below the main notions used throughout the current documentation are explained.
+User-document interaction happens on both the client side and the server side, with some components being part of **ONLYOFFICE Docs** and others provided by the integrator. The main terms used throughout this documentation are explained below.
 
 The client side includes:
 
-- **Document manager** - the list of the documents displayed in the user browser where the user can select the necessary document and perform some actions with it (depending on the provided rights, the user can open the document to view it or edit, share the document with other users).
-- **Document editor** - the document viewing and editing interface with all the most known document editing features available, used as a medium between the user and the **document editing service**.
+- **Document manager** - the browser-based interface that displays the list of documents available to the user, where the user can select a document and perform actions with it (depending on the provided rights, the user can view, edit, or share it with other users). When a document is opened, the manager passes that document's [`key`](../../usage-api/config/document/document.md#key) and [`url`](../../usage-api/config/document/document.md#url) to the **document editor** in the editor [`config`](../../usage-api/config/config.md).
+- **Document editor** - the user interface for viewing and editing documents with common document editing features; it communicates with the **document editing service**.
 
 The server side includes:
 
-- **Document storage service** - the server service which stores all the documents available to the users with the appropriate access rights. It provides the document IDs and links to these documents to the **document manager** which the user sees in the browser.
-- **Document editing service** - the server service which allows to perform the document viewing and editing (in case the user has the appropriate rights to do that). The **document editor** interface is used to access all the **document editing service** features.
-- **Document command service** - the server service which allows to perfom additional commands with **document editing service**.
-- **Document conversion service** - the server service which allows to convert the document file into the appropriate Office Open XML format (*docx* for text documents, *xlsx* for spreadsheets and *pptx* for presentations) for their editing or downloading.
-- **Document builder service** - the server service which allows to build a document easily without the need to actually run a document processing editor.
+- **Document storage service** - the server service that stores all documents available to users with the appropriate access rights. The **document editing service** downloads a document from here using the [`url`](../../usage-api/config/document/document.md#url) supplied in the editor [`config`](../../usage-api/config/config.md).
+- **Document editing service** - the server service that allows users to view and edit documents (provided that the user has the appropriate rights). The **document editor** is the user-facing interface for the **document editing service**.
+- **Document command service** - the server service used to manage documents in the **document editing service**: force-save, disconnect users, request document status, update metadata, or manage forgotten files.
+- **Document conversion service** - the server service that converts document files between supported formats for editing or downloading, including the editors' native formats: `.docx` for documents, `.xlsx` for spreadsheets, `.pptx` for presentations, and `.pdf` for PDFs.
+- **Document builder service** - the server service that allows you to build a document easily without running a document editor.
 
-Please note, that ONLYOFFICE Docs includes the **document editor**, **document editing service**, **document command service**, **document conversion service** and **document builder service**. The **document manager** and **document storage service** are either included to ONLYOFFICE Workspace or must be implemented by the software integrators which use ONLYOFFICE Docs on their own server.
+:::note
+ONLYOFFICE Docs includes the **document editor**, **document editing service**, **document command service**, **document conversion service**, and **document builder service**. The **document manager** and **document storage service** must be provided by an integrator. This can be **ONLYOFFICE DocSpace**, your own implementation on your server, or the **Node.js test example** bundled with ONLYOFFICE Docs (intended for testing only — see the [Node.js example](../../samples/language-specific-examples/nodejs-example.md)).
+:::

@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将相对于文本块的默认外观应用于文本块内容的对齐方式。
+设置演示文稿中形状内文本的垂直对齐方式。
 
 ```javascript editor-pptx
-// How to set a vertical alignment of the text.
+// How do I apply superscript or subscript formatting to text in a presentation?
 
-// Get the text properties of the run and make it superscript, subscript, etc.
+// Get text properties and apply vertical alignment adjustments in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text inside the shape with vertical alignment set to 'superscript'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

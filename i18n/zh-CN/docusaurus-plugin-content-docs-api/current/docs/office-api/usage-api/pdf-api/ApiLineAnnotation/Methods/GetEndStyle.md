@@ -20,9 +20,13 @@ expression.GetEndStyle();
 
 ## 示例
 
-此示例获取线条注释的终点线条样式。
+检查 PDF 中线条的结束装饰类型。
 
 ```javascript editor-pdf
+// How do I find what arrow or marker is at the end of a line in a PDF?
+
+// Retrieve the line ending style of a line annotation in a PDF.
+
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 15, y: 15}, {x: 155, y: 30});
 let page = doc.GetPage(0);

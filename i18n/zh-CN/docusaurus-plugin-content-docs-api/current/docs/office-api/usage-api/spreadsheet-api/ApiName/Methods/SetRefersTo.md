@@ -14,20 +14,20 @@ expression.SetRefersTo(sRef);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRef | 必需 | string |  | 必须包含工作表名称的区域引用，后跟 ! 符号和单元格区域。示例："Sheet1!$A$1:$B$2"。 |
+| sRef | 必需 | string |  | 范围引用必须包含工作表名称，后跟 ! 号和单元格范围。 |
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置名称定义引用的公式。
+将电子表格中的命名范围指向特定公式。
 
 ```javascript editor-xlsx
-// How to add a name and refer it to the formula.
+// How do I make a named range refer to a formula instead of plain cells in a spreadsheet?
 
-// Create new ranges and a formula, refer a name to the formula then display it in the worksheet.
+// Reassign a range name so it targets a calculated expression in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

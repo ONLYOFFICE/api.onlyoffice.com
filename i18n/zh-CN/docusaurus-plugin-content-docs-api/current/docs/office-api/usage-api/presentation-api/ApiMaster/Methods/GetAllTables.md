@@ -20,9 +20,13 @@ expression.GetAllTables();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片母版中所有表格的数组。
+从演示文稿中的幻灯片母版检索所有表格。
 
 ```javascript editor-pptx
+// How do I find all tables on a slide master in a presentation?
+
+// List every table in a slide master in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -32,7 +36,7 @@ master.RemoveObject(0, master.GetAllDrawings().length);
 
 const layout = master.GetLayout(0);
 
-const table = Api.CreateTable(3, 2);
+const table = Api.CreateTable(2, 3);
 table.GetRow(0).GetCell(0).GetContent().GetCurrentParagraph().AddText('US');
 table.GetRow(0).GetCell(1).GetContent().GetCurrentParagraph().AddText('CH');
 table.GetRow(0).GetCell(2).GetContent().GetCurrentParagraph().AddText('Others');
@@ -55,5 +59,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide layout: " + layout.GetAllTables().length);
 paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().length);
-
 ```

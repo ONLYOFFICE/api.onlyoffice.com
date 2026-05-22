@@ -24,12 +24,12 @@ expression.GetRange(Range1, Range2);
 
 ## 示例
 
-此示例展示如何获取表示工作表选定区域的对象。
+通过输入地址在电子表格中选择单元格。
 
 ```javascript editor-xlsx
-// How to get a range using address.
+// Find and modify a specific block of cells using its coordinates in a spreadsheet?
 
-// Get range and set its horizontal alignment.
+// Reference any rectangular group to style all cells at once in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

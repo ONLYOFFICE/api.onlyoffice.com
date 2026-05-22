@@ -1,7 +1,6 @@
 # ApiRichParagraph
 
-表示 ApiRichParagraph 类。
-
+ApiRichParagraph 是 [ApiRichParaPr](../ApiRichParaPr/ApiRichParaPr.md) 的子类。
 
 ## 方法
 
@@ -18,4 +17,4 @@
 | [Last](./Methods/Last.md) | [ApiRichRun](../ApiRichRun/ApiRichRun.md) | 返回段落的最后一个元素。 |
 | [Push](./Methods/Push.md) | boolean | 向当前段落添加元素。 |
 | [SetParaPr](./Methods/SetParaPr.md) | boolean | 设置段落属性。 |
-| [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiRichParagraph](../ApiRichParagraph/ApiRichParagraph.md) | 指定当前段落的阅读顺序。可能的值有：**null** - 使用标准方向参数；**"ltr"** - 从左到右的文本方向；**"rtl"** - 从右到左的文本方向。 |
+| [SetReadingOrder](./Methods/SetReadingOrder.md) | [ApiRichParagraph](../ApiRichParagraph/ApiRichParagraph.md) | 指定当前段落的阅读顺序。 |

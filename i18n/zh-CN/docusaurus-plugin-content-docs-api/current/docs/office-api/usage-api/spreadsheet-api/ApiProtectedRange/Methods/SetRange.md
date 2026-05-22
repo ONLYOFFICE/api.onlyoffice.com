@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例更改受保护区域的区域。
+替换电子表格中现有受保护范围覆盖的单元格。
 
 ```javascript editor-xlsx
-// How to set a protected range.
+// How do I change which cells a protection lock applies to in a spreadsheet?
 
-// Update a range of a protected range.
+// Redirect a named protection to a different group of cells without recreating it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");

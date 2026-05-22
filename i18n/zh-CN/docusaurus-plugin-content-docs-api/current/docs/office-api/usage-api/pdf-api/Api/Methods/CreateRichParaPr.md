@@ -20,9 +20,13 @@ expression.CreateRichParaPr();
 
 ## 示例
 
-如何创建段落属性并将其设置为富文本段落。
+在 PDF 中格式化富文本注释中的文本对齐方式。
 
 ```javascript editor-pdf
+// How do I set text properties like alignment in a PDF annotation?
+
+// Create and apply paragraph formatting to text inside an annotation in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

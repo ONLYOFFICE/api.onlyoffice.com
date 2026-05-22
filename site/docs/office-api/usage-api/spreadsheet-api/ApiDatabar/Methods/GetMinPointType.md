@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the minimum point type from a data bar conditional formatting rule.
+Read how the lower boundary of a data bar is defined in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check the type of the minimum condition value.
+// How do I find out what method sets the minimum end of a data bar in a spreadsheet?
 
-// Get the minimum point type of a data bar conditional formatting rule.
+// Identify whether the bottom limit of a data bar uses a fixed value, percentage, or automatic setting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let minPointType = dataBar.GetMinPointType();
 
 worksheet.GetRange("C1").SetValue("Min Point Type:");
 worksheet.GetRange("C2").SetValue(minPointType);
-
 ```

@@ -20,9 +20,13 @@ expression.GetCustomProperties();
 
 ## 示例
 
-此示例演示如何获取工作簿的 ApiCustomProperties 对象
+访问与工作簿一起存储的自定义属性并在电子表格中读取其中一个值。
 
 ```javascript editor-xlsx
+// How do I store and retrieve my own metadata on a workbook in a spreadsheet?
+
+// Add a named string property to the workbook and display its value in a cell in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const customProps = workbook.GetCustomProperties();
 customProps.Add("MyStringProperty", "Hello, Spreadsheet!");
@@ -30,5 +34,4 @@ let stringValue = customProps.Get("MyStringProperty");
 
 const worksheet = workbook.GetActiveSheet();
 worksheet.GetRange('A1').SetValue(stringValue);
-
 ```

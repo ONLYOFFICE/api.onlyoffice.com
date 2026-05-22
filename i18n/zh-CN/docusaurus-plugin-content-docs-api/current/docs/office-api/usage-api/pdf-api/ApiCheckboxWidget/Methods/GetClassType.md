@@ -16,13 +16,17 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"checkboxWidget"
 
 ## 示例
 
-此示例获取复选框控件对象的类类型。
+获取 PDF 中复选框控件的类类型。
 
 ```javascript editor-pdf
+// How do I find out what class type a checkbox widget is in a PDF?
+
+// Identify a checkbox widget object by its class type identifier in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-此示例设置段落行距。
+在电子表格中加大形状内段落文本行之间的间距。
 
 ```javascript editor-xlsx
-// How to add a spacing line between paragraphs.
+// How do I make a paragraph easier to read by spreading out its lines in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying spacing between text lines.
+// Apply a triple line-height multiplier to loosen the vertical rhythm of paragraph text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

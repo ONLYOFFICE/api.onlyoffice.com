@@ -34,7 +34,7 @@ boolean 类型
 
 ### 示例
 
-``` ts
+```ts
 Asc.plugin.executeMethod("methodName", [param1, param2], (returnValue) => {
   console.log(returnValue)
 })

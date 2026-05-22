@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets checkbox widget checked prop in group of checkbox widgets.
+Check if a checkbox widget is selected in a PDF.
 
 ```javascript editor-pdf
+// How do I find out whether a checkbox is marked or unmarked in a PDF?
+
+// Determine the current state of a checkbox widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

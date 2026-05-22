@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取幻灯片的可见性属性。
+获取演示文稿中幻灯片的可见性属性。
 
 ```javascript editor-pptx
-// How to find out whether a slide is visible or not.
+// Retrieve the visibility status using GetVisible after setting slide visibility.
 
-// Get a slide, set its visibility and show it in the slide.
+// Display the visibility status on a different slide.
 
 const presentation = Api.GetPresentation();
 let slide = Api.CreateSlide();
@@ -52,5 +52,4 @@ slide.AddObject(shape);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The first slide visibility: " + isVisible);
-
 ```

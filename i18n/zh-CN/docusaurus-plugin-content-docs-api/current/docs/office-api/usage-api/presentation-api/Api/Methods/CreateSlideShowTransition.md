@@ -20,10 +20,12 @@ expression.CreateSlideShowTransition();
 
 ## 示例
 
-此示例创建幻灯片放映过渡效果
+在演示文稿中为幻灯片添加带有自动定时的过渡效果。
 
 ```javascript editor-pptx
-// with fade effect that starts after 3 seconds.
+// How do I make a slide advance automatically in a presentation?
+
+// Configure a slide to transition after a set delay with a specific animation effect in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,5 +40,4 @@ transition.SetAdvanceOnTime(true);
 transition.SetAdvanceTime(3000);
 
 slide.SetSlideShowTransition(transition);
-
 ```

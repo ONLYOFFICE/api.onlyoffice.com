@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-检索弧参数，包括半径和角度。
+从电子表格中的自定义形状路径读取弧命令的垂直半径。
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How do I find out the height radius of an arc drawn on a shape in a spreadsheet?
+
+// Extract the arc's vertical radius value and write it to a cell for review in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

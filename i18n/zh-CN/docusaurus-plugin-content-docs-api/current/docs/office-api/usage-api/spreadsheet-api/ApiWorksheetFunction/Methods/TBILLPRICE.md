@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回国库券的每 100 美元面值价格。
+在电子表格中返回国库券每 $100 面值的价格。
 
 ```javascript editor-xlsx
-// How to return the price per $100 face value for a Treasury bill.
+// Calculate the price based on Treasury bill settlement, maturity, and discount rate.
 
-// Use a function to calculate the price per $100 face value.
+// Apply the TBILLPRICE function with date and discount parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,9 +20,13 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-此示例展示如何从形状内的段落获取最后一个包含文本的文本块。
+查找电子表格中形状内段落的最后一个文本部分。
 
 ```javascript editor-xlsx
+// How do I locate the final piece of text content within a paragraph in a spreadsheet?
+
+// Access the trailing text segment of a paragraph to read or display its content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 140, 120));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -46,5 +50,4 @@ paragraph.AddElement(run2);
 
 const lastRun = paragraph.GetLastRunWithText();
 worksheet.GetRange('A1').SetValue('Last run text: ' + lastRun.GetText());
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表图例的轮廓。
+在演示文稿中为图表图例添加边框。
 
 ```javascript editor-pptx
-// How to outline a chart legend.
+// How do I add an outline to a chart's legend in a presentation?
 
-// Create a chart, set its properties and its legend's outline.
+// Create a chart and apply a stroke outline to its legend in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetLegendOutLine(stroke);
 slide.AddObject(chart);
-
 ```

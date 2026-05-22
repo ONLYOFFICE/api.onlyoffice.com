@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-此示例获取批注的引用文本。
+读取演示文稿中批注引用的高亮文本。
 
 ```javascript editor-pptx
-// How to retrieve a quote text from a comment.
+// How do I access the quoted text from a comment in a presentation?
 
-// Get all comments from the presentation and the first one's quote text.
+// Retrieve the passage of text that triggered a comment in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const quoteText = arrComments[0].GetQuoteText();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's quote text: " + quoteText);
-
 ```

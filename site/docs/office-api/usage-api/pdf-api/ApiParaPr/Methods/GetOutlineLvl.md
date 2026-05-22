@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-Number
+Number \| undefined
 
 ## Example
 
-This example shows how to get the outline level of the specified paragraph via paragraph properties.
+Determine the outline hierarchy level of a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I check the outline level for document structure in a PDF?
+
+// Get the nesting level used in document outline in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -33,7 +37,7 @@ const shape = Api.CreateShape('rect', 200 * 36000, 50 * 36000, fill, stroke);
 shape.SetPosition(10 * 36000, 10 * 36000);
 page.AddObject(shape);
 
-const content = shape.GetDocContent();
+const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 
@@ -45,5 +49,4 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

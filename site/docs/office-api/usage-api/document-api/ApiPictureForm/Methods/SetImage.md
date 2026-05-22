@@ -1,0 +1,37 @@
+# SetImage
+
+Sets an image to the current picture form.
+
+## Syntax
+
+```javascript
+expression.SetImage(imageSrc);
+```
+
+`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| imageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, only internet URL or base64 encoded images are supported). |
+
+## Returns
+
+boolean
+
+## Example
+
+Place an image into a picture form in a document.
+
+```javascript editor-docx
+// How do I insert a specific image into a picture form in a document?
+
+// Populate a picture form with an image from a web address in a document.
+
+let doc = Api.GetDocument();
+let pictureForm = Api.CreatePictureForm({"tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+let paragraph = doc.GetElement(0);
+paragraph.AddElement(pictureForm);
+```

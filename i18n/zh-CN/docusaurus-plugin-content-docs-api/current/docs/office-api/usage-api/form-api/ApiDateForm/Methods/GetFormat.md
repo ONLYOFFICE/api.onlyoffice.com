@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何从日期表单获取日期格式。
+从文档中的日期表单读取日期显示格式。
 
 ```javascript editor-forms
-// How to get a date form format.
+// How do I check which date format is applied to a date form in a document?
 
-// Retrieve the format of the date and display it.
+// Confirm the format after changing it to make sure the update took effect.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});

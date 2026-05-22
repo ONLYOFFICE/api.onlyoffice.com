@@ -20,10 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-如何查找形状的宽度并在页面上显示。
+查找 PDF 中形状的水平大小。
 
 ```javascript editor-pdf
-// Get a page shape's width.
+// How do I get the width of a drawn object in a PDF?
+
+// Measure the left-to-right dimension of a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,5 +40,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing width: " + width);
 page.AddObject(shape);
-
 ```

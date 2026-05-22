@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 将应用于段落内容的对齐类型。 |
+| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 对齐类型， |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置段落内容对齐方式。
+在 PDF 中对齐段落中的文本。
 
 ```javascript editor-pdf
-// How to set justification using a paragraph properties.
+// How do I change the text alignment in a paragraph in a PDF?
 
-// Create a paragraph setting its justification property.
+// Apply text alignment to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,7 +39,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetJc("center");
@@ -48,5 +48,4 @@ paragraph.AddText("The justification is specified in the paragraph style. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 page.AddObject(shape);
-
 ```

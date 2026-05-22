@@ -3,6 +3,9 @@
 Creates a chart of the specified type from the selected data range of the current sheet.
 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
 row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
+:::note
+Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside -**1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+:::
 
 ## Syntax
 
@@ -33,12 +36,12 @@ expression.AddChart(sDataRange, bInRows, sType, nStyleIndex, nExtX, nExtY, nFrom
 
 ## Example
 
-This example creates a chart of the specified type from the selected data range of the sheet.
+Build a bar chart from a data range and place it on the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add chart to the worksheet.
+// How do I turn a range of numbers into a visual chart in a spreadsheet?
 
-// Create a chart using data from a range from a worksheet.
+// Insert a titled 3D bar chart with custom series colors on top of worksheet data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

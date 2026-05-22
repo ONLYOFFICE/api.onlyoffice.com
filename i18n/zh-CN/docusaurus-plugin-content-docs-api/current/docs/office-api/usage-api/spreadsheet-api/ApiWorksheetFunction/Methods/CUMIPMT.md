@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-此示例演示如何获取两个期间之间支付的累计利息。
+在电子表格中汇总贷款期间范围内的利息支付。
 
 ```javascript editor-xlsx
-// How to return the cumulative interest paid between two periods.
+// What is the total interest paid during a specific loan period in a spreadsheet?
 
-// Use function to get cumulative interest paid between two periods.
+// Calculate the accumulated interest between payment periods in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

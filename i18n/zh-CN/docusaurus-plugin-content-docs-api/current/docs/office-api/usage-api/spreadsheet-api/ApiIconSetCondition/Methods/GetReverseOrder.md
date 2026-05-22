@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-此示例演示如何检查图标顺序是否反转。
+了解电子表格中图标集规则是否以相反顺序显示图标。
 
 ```javascript editor-xlsx
-// How to determine if icon set displays icons in reverse order.
+// How do I check if the icons in a formatting rule are shown in reverse order in a spreadsheet?
 
-// Check if the icon set rule reverses the icon display order.
+// Confirm that an icon set rule is currently set to flip its icon sequence in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,5 +42,4 @@ iconCondition.SetReverseOrder(true);
 
 let isReversed = iconCondition.GetReverseOrder();
 worksheet.GetRange("B1").SetValue("Icons reversed: " + isReversed);
-
 ```

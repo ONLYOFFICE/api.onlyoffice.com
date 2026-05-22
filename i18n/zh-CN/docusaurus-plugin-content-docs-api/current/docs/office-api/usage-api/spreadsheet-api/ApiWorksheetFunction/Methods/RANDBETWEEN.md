@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定数字之间的随机数。
+在电子表格中生成指定范围内的随机整数。
 
 ```javascript editor-xlsx
-// How to get a number between indicated values.
+// How do I pick a random value between two numbers in a spreadsheet?
 
-// Use a function to return a random value between specified limits.
+// Create an unpredictable integer within a minimum and maximum in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

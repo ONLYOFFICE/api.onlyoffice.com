@@ -2,30 +2,16 @@
 
 Returns the spacing before value of the current paragraph.
 
-## Syntax
-
-```javascript
-expression.GetSpacingBefore();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiParaPr.GetSpacingBefore](../../ApiParaPr/Methods/GetSpacingBefore.md).
 
 ## Example
 
-This example shows how to get the spacing before value of the current paragraph.
+Read the gap size that precedes a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get spacing information which is before the paragraph.
+// How do I check how much space is added above a paragraph in a spreadsheet?
 
-// Get two consecutive paragraphs add spacing between them then get the spacing before second one and display it in the worksheet. 
+// Confirm the top spacing value after applying a gap to a paragraph's leading edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

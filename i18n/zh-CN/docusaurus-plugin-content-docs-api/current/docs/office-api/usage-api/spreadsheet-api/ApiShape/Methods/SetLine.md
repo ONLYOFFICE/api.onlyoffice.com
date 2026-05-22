@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。
+在矩形放置到电子表格的工作表后将其边框更改为粗蓝线。
 
 ```javascript editor-xlsx
-// Creates a rectangle and changes its outline to a thick blue line.
+// How do I update the border style and color of a shape in a spreadsheet?
+
+// Swap out a shape's existing border for a new stroke with a different thickness and color in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -34,5 +37,4 @@ worksheet.GetRange("A1").SetValue("Original shape with no border");
 let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
 shape.SetLine(newStroke);
 worksheet.GetRange("A2").SetValue("Border changed to 3pt blue line");
-
 ```

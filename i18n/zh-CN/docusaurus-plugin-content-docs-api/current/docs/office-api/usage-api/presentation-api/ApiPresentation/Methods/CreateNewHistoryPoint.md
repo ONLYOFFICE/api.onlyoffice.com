@@ -20,12 +20,12 @@ expression.CreateNewHistoryPoint();
 
 ## 示例
 
-此示例创建一个新的历史记录点。
+在演示文稿中创建撤消-重做检查点。
 
 ```javascript editor-pptx
-// How to add a new history point to the presentation.
+// How do I save the current state as a point I can undo from in a presentation?
 
-// Create a presentation history point.
+// Add a new checkpoint to the presentation's edit history.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("New history point was just created.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

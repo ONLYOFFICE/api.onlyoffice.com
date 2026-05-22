@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取自定义 XML 节点的值。
+读取演示文稿中 XML 元素的文本内容。
 
 ```javascript editor-pptx
+// How do I extract the value of an XML node in a presentation?
+
+// Access the inner text of an XML element in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Node value: ' + nodeValue);
-
 ```

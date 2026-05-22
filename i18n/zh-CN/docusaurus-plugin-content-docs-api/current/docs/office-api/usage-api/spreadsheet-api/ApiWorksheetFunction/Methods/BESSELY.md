@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回修正贝塞尔函数 Yn(x)。
+计算电子表格中第二类贝塞尔函数。
 
 ```javascript editor-xlsx
-// How to get a result from Bessel function Yn(x).
+// How do I find the Bessel Y function result for signal analysis in a spreadsheet?
 
-// Use function to get the Bessel function Yn(x).
+// Use mathematical modeling for vibration and resonance calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -2,30 +2,16 @@
 
 返回格式条件的背景颜色。当格式条件的背景颜色为 null 时返回「无填充」。
 
-## 语法
-
-```javascript
-expression.GetFillColor();
-```
-
-`expression` - 表示 [ApiColorScale](../ApiColorScale.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiColor](../../ApiColor/ApiColor.md) \| 'No Fill'
+继承自 [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Methods/GetFillColor.md)。
 
 ## 示例
 
-此示例从条件格式规则获取背景颜色。
+读取电子表格中条件格式规则设置的背景颜色。
 
 ```javascript editor-xlsx
-// How to retrieve background colors from conditional formatting rules.
+// How do I find out what background color a conditional formatting rule applies to matching cells in a spreadsheet?
 
-// Get conditional formatting rule background color.
+// Confirm the highlight color of an existing rule before updating it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,5 +34,4 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```

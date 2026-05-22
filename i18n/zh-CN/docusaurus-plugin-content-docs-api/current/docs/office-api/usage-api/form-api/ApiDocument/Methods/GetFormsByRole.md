@@ -22,9 +22,13 @@ expression.GetFormsByRole(role);
 
 ## 示例
 
-此示例展示如何获取文档中具有指定角色的所有表单列表。
+检索文档中分配给特定角色的所有表单。
 
 ```javascript editor-forms
+// How do I filter forms by their assigned role in a document?
+
+// Separate employee and manager fields by querying each role independently in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");
@@ -50,5 +54,4 @@ forms = doc.GetFormsByRole("Chief");
 paragraph = Api.CreateParagraph();
 doc.Push(paragraph);
 paragraph.AddText("Number of forms with role 'Chief': " + forms.length);
-
 ```

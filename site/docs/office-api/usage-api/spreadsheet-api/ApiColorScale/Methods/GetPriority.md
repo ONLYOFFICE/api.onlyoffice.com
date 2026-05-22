@@ -2,30 +2,16 @@
 
 Returns the priority value of the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.GetPriority();
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-number
+Inherited from [ApiFormatCondition.GetPriority](../../ApiFormatCondition/Methods/GetPriority.md).
 
 ## Example
 
-This example gets the priority of a conditional formatting rule.
+Read the priority level assigned to a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the priority value from conditional formatting rules.
+// How do I find out what priority order a formatting rule has in a spreadsheet?
 
-// Get conditional formatting rule priority.
+// Check which position a formatting rule holds among all active rules in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
-
 ```

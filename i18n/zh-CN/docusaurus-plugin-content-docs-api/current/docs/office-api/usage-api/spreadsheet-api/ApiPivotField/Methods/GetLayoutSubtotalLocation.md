@@ -20,12 +20,12 @@ expression.GetLayoutSubtotalLocation();
 
 ## 示例
 
-此示例展示如何获取透视字段的布局分类汇总位置。
+读取透视字段的小计出现位置——在电子表格中每组的顶部还是底部。
 
 ```javascript editor-xlsx
-// How to get a layout subtotal location of a pivot field.
+// How do I find out where subtotals are placed for a pivot table field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout subtotal location of a specified pivot field.
+// Inspect the subtotal position of a pivot field to confirm whether totals show above or below grouped rows.
 
 let worksheet = Api.GetActiveSheet();
 

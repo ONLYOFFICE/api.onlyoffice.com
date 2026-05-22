@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example transforms font scheme to JSON then restore it from JSON.
+Convert a font scheme to JSON format and recreate it in a presentation.
 
 ```javascript editor-pptx
-// How to get a font scheme from JSON file.
+// How do I restore a font scheme from JSON data in a presentation?
 
-// Parse JSON file to get an object like font scheme.
+// Load and apply a font scheme that was previously exported as JSON in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -56,5 +56,4 @@ paragraph.AddText("Class type = " + sType);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置文本颜色。
+设置 PDF 中输入字段控件的文本大小。
 
 ```javascript editor-pdf
+// How do I change the font size of text in form fields in a PDF?
+
+// Adjust the text display size for all widgets in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -39,5 +43,4 @@ widgets.forEach(function(widget) {
     widget.SetTextColor(rgbColor);
     widget.SetTextSize(15);
 });
-
 ```

@@ -14,7 +14,7 @@ expression.GEOMEAN(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个将计算几何平均值的数值。参数可以是数字、名称、区域或数字数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个数值，将计算这些数值的几何平均值。 |
 
 ## 返回值
 
@@ -22,17 +22,15 @@ number
 
 ## 示例
 
-此示例演示如何计算正数数据的几何平均值。
+计算电子表格中一组正数的几何平均值。
 
 ```javascript editor-xlsx
-// How to find the geometric mean.
+// How do I find the geometric average of my data in a spreadsheet?
 
-// Use a function to calculate the geometric mean of positive numeric data.
+// Get the nth root of the product of n values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.GEOMEAN(28, 16, 878, 800, 1650, 2000);
 worksheet.GetRange("B2").SetValue(ans);
-
-
 ```

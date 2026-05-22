@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-从 PDF 文档中的三次贝塞尔曲线提取控制点。
+从 PDF 中的三次曲线检索端点的 y 坐标。
 
 ```javascript editor-pdf
-// Displays all control point coordinates in a text shape.
+// What is the endpoint's vertical position in a PDF?
+
+// Extract the endpoint's y value from a path in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

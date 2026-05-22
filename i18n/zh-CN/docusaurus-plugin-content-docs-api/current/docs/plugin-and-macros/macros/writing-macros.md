@@ -52,7 +52,7 @@ sidebar_position: -5
 
 现在我们将其整合成完整的脚本代码：
 
-``` ts
+```ts
 (function()
 {
     let worksheet = Api.GetActiveSheet();
@@ -84,17 +84,19 @@ sidebar_position: -5
 
 5. 检查代码，如有必要可进行调整。
 
-    > 尽管 AI 插件可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
+    :::warning
+    尽管 AI 插件可以生成完整且可运行的宏，但生成的宏并不总是完美的。请务必仔细检查输出内容，并进行测试，尤其是复杂的宏。
+    :::
 
 6. 点击![播放图标](/assets/images/plugins/play.svg)测试脚本。
 
 ## 订阅事件
 
-要订阅指定事件并在事件触发时调用回调函数，请使用 [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) 方法。
+要订阅指定事件并在事件触发时调用回调函数，请使用 [attachEvent](../../office-api/usage-api/document-api/Api/Methods/attachEvent.md) 方法。
 
 例如，要在文档中点击超链接时订阅事件，可以使用以下代码：
 
-``` ts
+```ts
 Api.attachEvent("asc_onHyperlinkClick", () => {
   console.log("HYPERLINK!!!");
 })

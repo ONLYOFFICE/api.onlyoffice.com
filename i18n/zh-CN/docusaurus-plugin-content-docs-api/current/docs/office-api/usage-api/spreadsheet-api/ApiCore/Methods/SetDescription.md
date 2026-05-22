@@ -22,9 +22,13 @@ expression.SetDescription(sDescription);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置当前工作簿的描述。
+在电子表格工作簿的文档属性中写入简短的用途摘要。
 
 ```javascript editor-xlsx
+// How do I add a description to a workbook's metadata in a spreadsheet?
+
+// Attach a plain-text explanation to the workbook so others know what it contains in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Description: " + description);
-
 ```

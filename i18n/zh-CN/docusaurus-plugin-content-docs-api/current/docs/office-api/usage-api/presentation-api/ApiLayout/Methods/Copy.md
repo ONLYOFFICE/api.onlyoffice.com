@@ -21,12 +21,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建幻灯片版式的副本并将其应用于其他幻灯片。
+在演示文稿中创建幻灯片布局的副本。
 
 ```javascript editor-pptx
-// How to create a copy of a layout.
+// How do I duplicate a layout from a presentation master in a presentation?
 
-// Copy a layout of a presentation master.
+// Copy a layout and apply it to another slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -44,5 +44,4 @@ presentation.AddSlide(slide);
 const copyLayout = layout.Copy();
 master.AddLayout(1, copyLayout);
 slide.ApplyLayout(copyLayout);
-
 ```

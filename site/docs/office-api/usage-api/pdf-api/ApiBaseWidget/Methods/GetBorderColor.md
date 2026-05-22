@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets field widget and displays it's border color.
+Read the border color of a form field widget in a PDF.
 
 ```javascript editor-pdf
+// How do I get the border color of a widget in a PDF?
+
+// Retrieve and display the outline color of a form field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -36,6 +40,4 @@ widgets.forEach(function(widget) {
 });
 let borderColor = widgets[0].GetBorderColor();
 textField.SetValue('Widgets border color is: ' + borderColor.R + ',' + borderColor.G + ',' + borderColor.B);
-
-
 ```

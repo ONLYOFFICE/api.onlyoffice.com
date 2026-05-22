@@ -22,12 +22,12 @@ expression.GetCommentById(sId);
 
 ## 示例
 
-此示例演示如何根据 ID 从当前文档获取批注。
+使用唯一标识符在电子表格中查找特定批注。
 
 ```javascript editor-xlsx
-// How to get specific comment by its ID.
+// How do I find a particular comment by its ID in a spreadsheet?
 
-// Find a comment by its ID.
+// Locate and read a single comment by referencing its identifier in a spreadsheet.
 
 let comment = Api.AddComment("Comment", "Bob");
 let id = comment.GetId();

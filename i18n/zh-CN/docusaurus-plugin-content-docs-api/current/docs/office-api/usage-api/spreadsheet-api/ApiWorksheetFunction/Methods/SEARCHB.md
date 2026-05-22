@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定子字符串在字符串中的位置，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
+在电子表格中查找双字节字符语言单元格中文本出现的位置。
 
 ```javascript editor-xlsx
-// How to get number of characters counting from the first occurance of search text for double-byte character set languages.
+// How do I search for text in Asian language content in a spreadsheet?
 
-// Use a function to count characters starting from the index at which the search text appears.
+// Locate a word in cells that use multi-byte characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

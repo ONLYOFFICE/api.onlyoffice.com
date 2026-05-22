@@ -22,12 +22,12 @@ expression.SetValue(name);
 
 ## 示例
 
-此示例展示如何为数据字段设置值。
+更新电子表格中数据透视表数据字段的源字段引用。
 
 ```javascript editor-xlsx
-// How to change a value of a table element.
+// How do I change which column a pivot table data field draws its values from in a spreadsheet?
 
-// Create a pivot table, add data to it then set a custom data field's value.
+// Point a value field at a different source column to recalculate pivot totals in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

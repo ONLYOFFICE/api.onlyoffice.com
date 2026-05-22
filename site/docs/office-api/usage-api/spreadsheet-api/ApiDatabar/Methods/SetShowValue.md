@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the show value setting of a data bar conditional formatting rule.
+Choose whether the numeric value is displayed inside the colored bar of a data bar rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to control whether the data bar shows the value.
+// How do I hide or reveal the numbers inside data bars when applying conditional formatting in a spreadsheet?
 
-// Set the show value setting of a data bar conditional formatting rule.
+// Keep cells uncluttered by toggling off the text overlay on top of data bars in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +50,4 @@ dataBar.SetShowValue(false);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetShowValue() ? "Yes" : "No");
-
 ```

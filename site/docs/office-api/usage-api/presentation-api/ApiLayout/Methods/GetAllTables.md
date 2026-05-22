@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all tables from the slide layout.
+Get all tables from a slide layout as an array.
 
 ```javascript editor-pptx
+// Tables can be added to layouts and counted across slide, layout, and master objects.
+
+// Display the count of tables on the slide, layout, and master.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -31,7 +35,7 @@ const master = presentation.GetMaster(0);
 const layout = master.GetLayout(0);
 layout.RemoveObject(0, layout.GetAllDrawings().length);
 
-const table = Api.CreateTable(3, 2);
+const table = Api.CreateTable(2, 3);
 table.GetRow(0).GetCell(0).GetContent().GetCurrentParagraph().AddText('US');
 table.GetRow(0).GetCell(1).GetContent().GetCurrentParagraph().AddText('CH');
 table.GetRow(0).GetCell(2).GetContent().GetCurrentParagraph().AddText('Others');
@@ -54,5 +58,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide layout: " + layout.GetAllTables().length);
 paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().length);
-
 ```

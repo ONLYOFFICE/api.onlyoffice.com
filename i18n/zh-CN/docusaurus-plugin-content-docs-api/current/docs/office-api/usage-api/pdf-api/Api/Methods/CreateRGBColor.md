@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## 示例
 
-此示例演示如何为渐变停止点创建 RGB 颜色。
+在 PDF 中的渐变填充中使用 RGB 颜色。
 
 ```javascript editor-pdf
-// How to create a RGB color for a gradient stop.
+// How do I define a custom color using red, green, and blue values in a PDF?
 
-// Add an RGB color as a stop for a gradient.
+// Create a gradient stop with an RGB color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -42,5 +42,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

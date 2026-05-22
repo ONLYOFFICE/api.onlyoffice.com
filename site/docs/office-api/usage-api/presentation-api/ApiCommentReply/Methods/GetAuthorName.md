@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get an author of a comment reply.
+Find the author name of a comment reply in a presentation.
 
 ```javascript editor-pptx
-// How to find out a comment's reply author.
+// How do I see who wrote a reply to a comment in a presentation?
 
-// Get all comments from the presentation and display the first one's reply author name.
+// Retrieve and display the name of the person who replied to a comment in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ const reply = arrComments[0].GetReply(0);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply author: " + reply.GetAuthorName());
-
 ```

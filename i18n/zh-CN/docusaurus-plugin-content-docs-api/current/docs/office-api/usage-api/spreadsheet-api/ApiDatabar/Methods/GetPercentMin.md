@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取最小百分比长度。
+读取电子表格中数据条规则的最小条长度百分比。
 
 ```javascript editor-xlsx
-// How to check the minimum length setting of a data bar.
+// How do I find out the lower percentage limit that controls data bar length in a spreadsheet?
 
-// Get the minimum percentage length of a data bar conditional formatting rule.
+// Inspect how narrow the shortest data bar can be relative to the cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let percentMin = dataBar.GetPercentMin();
 
 worksheet.GetRange("C1").SetValue("Min Percent:");
 worksheet.GetRange("C2").SetValue(percentMin + "%");
-
 ```

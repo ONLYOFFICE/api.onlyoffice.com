@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定水平轴上显示数据的方向。
+反转电子表格中图表水平轴上绘制分类的方向。
 
 ```javascript editor-xlsx
-// Set the orientation of the values on the horizontal axis.
+// How do I flip the left-to-right order of values on the horizontal axis of a chart in a spreadsheet?
 
-// How to change the direction of the values on the horizontal axis.
+// Mirror the horizontal axis so that chart categories run from right to left in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

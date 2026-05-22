@@ -22,12 +22,12 @@ expression.GetDrawingsByPlaceholderType(sType);
 
 ## 示例
 
-此示例按占位符类型获取绘图并将其从幻灯片中移除。
+按占位符类型获取绘图并从幻灯片移除。
 
 ```javascript editor-pptx
-// How to get all drawings knowing its placeholder as an array.
+// Find all drawings with a specific placeholder type using GetDrawingsByPlaceholderType.
 
-// Retrieve drawings with the specified placeholder and delete them.
+// Delete the retrieved drawings from the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ const drawingsWithPh = slide.GetDrawingsByPlaceholderType("chart");
 for (let i = 0; i < drawingsWithPh.length; i++) {
 	drawingsWithPh[i].Delete();
 }
-
 ```

@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the revision of the current presentation.
+Assign a revision number to a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I add a revision identifier to a presentation?
+
+// Set and read the revision information for a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetRevision("Rev. B");
@@ -40,5 +44,4 @@ paragraph.AddText("Revision: " + revision);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -2,32 +2,16 @@
 
 Sets the lock state of the current form.
 
-## Syntax
-
-```javascript
-expression.SetLock(isLock);
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| isLock | Required | boolean |  | Specifies whether to lock the form (true) or unlock it (false). |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetLock](../../ApiFormBase/Methods/SetLock.md).
 
 ## Example
 
-This example specifies if the current form should be locked.
+Lock a form field to prevent editing in a document.
 
 ```javascript editor-forms
-// How to lock a form.
+// How do I lock a form field so it cannot be changed in a document?
 
-// Make sure that the form cannot be edited.
+// Protect specific fields from modification while keeping others editable.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
@@ -38,5 +22,4 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```

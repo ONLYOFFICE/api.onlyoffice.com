@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the pdf document.
+Find out what kind of color object you're working with in a PDF.
 
 ```javascript editor-pdf
-// How to get a class type of ApiUniColor.
+// How do I identify the type of color being used in a PDF?
 
-// Retrieve class type of ApiUniColor object and insert it to the page.
+// Determine what color system defines a color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,11 +39,10 @@ const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000,
 shape.SetPosition(608400, 1267200);
 shape.SetSize(300 * 36000, 130 * 36000);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const classType = presetColor.GetClassType();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 page.AddObject(shape);
-
 ```

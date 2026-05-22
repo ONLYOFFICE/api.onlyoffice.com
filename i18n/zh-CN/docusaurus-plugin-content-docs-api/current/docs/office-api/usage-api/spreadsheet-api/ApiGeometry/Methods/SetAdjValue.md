@@ -23,10 +23,13 @@ expression.SetAdjValue(sName, nValue);
 
 ## 示例
 
-创建带有参考线和连接点的可调整自定义几何图形。
+更新电子表格中自定义形状上命名调整手柄的数值。
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I change the position of a shape adjustment control to a new value in a spreadsheet?
+
+// Override an existing adjustment handle's value to reshape a custom outline in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

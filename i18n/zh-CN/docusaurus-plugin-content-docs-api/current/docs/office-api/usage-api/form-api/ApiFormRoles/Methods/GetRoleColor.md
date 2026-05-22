@@ -22,14 +22,17 @@ null \| Object
 
 ## 示例
 
-此示例展示如何获取角色的颜色。
+检索文档中分配给角色的颜色。
 
 ```javascript editor-forms
+// How do I find out what color a role uses in a document?
+
+// Check the color value for a specific role in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 let color = roles.GetRoleColor("Customer");
 let paragraph = doc.GetElement(0);
 paragraph.AddText("Role color: rgb(" + color.r + ", " + color.g + ", " + color.b + ")");
-
 ```

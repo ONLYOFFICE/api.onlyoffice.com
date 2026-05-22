@@ -20,9 +20,13 @@ expression.CreateRichRun();
 
 ## 示例
 
-如何创建富文本块并将其添加到富文本段落。
+在 PDF 中向注释添加文本元素。
 
 ```javascript editor-pdf
+// How do I insert text into an annotation in a PDF?
+
+// Create and place formatted text inside a callout box in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

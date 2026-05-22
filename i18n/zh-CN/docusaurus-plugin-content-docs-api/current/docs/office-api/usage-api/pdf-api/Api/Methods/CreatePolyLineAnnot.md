@@ -23,12 +23,15 @@ expression.CreatePolyLineAnnot(rect, path);
 
 ## 示例
 
-此示例创建折线注释并将其添加到页面。
+在 PDF 页面添加折线注释。
 
 ```javascript editor-pdf
+// How do I draw a connected line with multiple points in a PDF?
+
+// Create an annotation with a series of connected line segments in a PDF.
+
 let doc = Api.GetDocument();
 let polylineAnnot = Api.CreatePolyLineAnnot([40, 40, 200, 200], [{x: 100, y: 100}, {x: 150, y: 150}, {x: 100, y: 150}]);
 let page = doc.GetPage(0);
 page.AddObject(polylineAnnot);
-
 ```

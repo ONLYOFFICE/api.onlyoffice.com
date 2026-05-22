@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve command.
+Read the horizontal position of the endpoint of a bezier curve and write it to a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays all bezier control points coordinates in spreadsheet cells.
+// How do I find the X coordinate of the final destination point on a curve path command in a spreadsheet?
+
+// Confirm where a cubic curve segment ends horizontally within a shape's path in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

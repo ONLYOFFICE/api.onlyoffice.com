@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例获取动画序列中的效果数量。
+计算演示文稿中序列中的动画数量。
 
 ```javascript editor-pptx
+// How do I find out how many animations are applied to a slide in a presentation?
+
+// Get the total number of animation effects in a sequence in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -64,5 +68,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Effects count: ' + count);
 slide.AddObject(infoShape);
-
 ```

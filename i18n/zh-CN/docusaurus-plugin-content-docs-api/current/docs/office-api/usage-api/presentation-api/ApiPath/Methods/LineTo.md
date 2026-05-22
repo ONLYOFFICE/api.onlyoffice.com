@@ -23,10 +23,13 @@ expression.LineTo(x, y);
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+在演示文稿中绘制连接自定义形状路径中各点的直线段。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// How do I create connected lines in a custom shape in a presentation?
+
+// Add line segments between coordinates in a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

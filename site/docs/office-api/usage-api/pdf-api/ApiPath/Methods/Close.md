@@ -20,10 +20,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Complete a shape by connecting the last point back to the starting point in a PDF.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I finish drawing a closed shape in a PDF?
+
+// Seal the outline of a custom shape by closing its path in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

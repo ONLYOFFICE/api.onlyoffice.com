@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何为日期表单设置日期。
+为文档中的日期表单分配特定日期。
 
 ```javascript editor-forms
+// How do I populate a date form with a chosen date in a document?
+
+// Pre-fill a date form with today's date and read back the stored value in a document.
+
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});
 let paragraph = doc.GetElement(0);

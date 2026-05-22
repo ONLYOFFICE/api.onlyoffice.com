@@ -2,32 +2,16 @@
 
 设置条件格式规则的作用域类型。
 
-## 语法
-
-```javascript
-expression.SetScopeType(ScopeType);
-```
-
-`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| ScopeType | 必需 | [XlPivotConditionScope](../../Enumeration/XlPivotConditionScope.md) |  | 作用域类型："xlSelectionScope"、"xlDataFieldScope" 或 "xlFieldsScope"。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiFormatCondition.SetScopeType](../../ApiFormatCondition/Methods/SetScopeType.md)。
 
 ## 示例
 
-此示例设置条件格式规则的作用域类型。
+定义格式规则应应用于电子表格中表格的哪个部分。
 
 ```javascript editor-xlsx
-// How to change the scope type of conditional formatting rules.
+// How do I limit a conditional formatting rule to only certain columns or data fields in a spreadsheet?
 
-// Set conditional formatting rule scope type.
+// Narrow or expand the reach of a highlight rule across table sections in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetScopeType("xlDataFieldScope");
 
 worksheet.GetRange("C4").SetValue("New scope:");
 worksheet.GetRange("C5").SetValue(condition1.GetScopeType());
-
 ```

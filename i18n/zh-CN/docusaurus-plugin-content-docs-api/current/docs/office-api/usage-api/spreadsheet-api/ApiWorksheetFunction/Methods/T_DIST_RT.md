@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回右尾学生 t 分布。
+计算电子表格中学生 t 分布的右尾概率。
 
 ```javascript editor-xlsx
-// How to calculate the right-tailed Student's t-distribution.
+// How do I find the right-tail probability for a given t-value in a spreadsheet?
 
-// Use a function to estimate the Student's t-distribution right-tailed.
+// Get the probability for the right side of the t-distribution curve in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

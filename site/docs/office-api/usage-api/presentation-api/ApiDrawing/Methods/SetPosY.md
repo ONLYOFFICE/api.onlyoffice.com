@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the y position of the drawing on the slide.
+Move a shape vertically on a slide in a presentation.
 
 ```javascript editor-pptx
+// How do I change the vertical position of a shape in a presentation?
+
+// Create a shape and move it to a specific distance from the top in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ shape.SetPosY(Api.MillimetersToEmus(60));
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Y position was changed to 60 mm.');
-
 ```

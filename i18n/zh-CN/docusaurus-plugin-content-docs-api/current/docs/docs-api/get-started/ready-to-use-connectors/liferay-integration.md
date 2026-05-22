@@ -11,7 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="U20aA97JglI"/>
 ```
 
-这个[应用](https://github.com/ONLYOFFICE/onlyoffice-liferay)允许用户使用ONLYOFFICE文档在[Liferay](https://www.liferay.com/)中编辑办公文档。
+这个[应用](https://github.com/ONLYOFFICE/onlyoffice-liferay)允许用户使用ONLYOFFICE 文档在[Liferay](https://www.liferay.com/)中编辑办公文档。
 
 ## 功能特性
 
@@ -19,11 +19,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 - 以下格式仅支持查看：CSV、DJVU、DOC、DOT、DPS、DPT、EPUB、ET、ETT、FB2、FODP、FODS、FODT、HTM、HTML、HWP、HWPX、KEY、MD、MHT、MHTML、NUMBERS、ODG、ODP、ODS、ODT、OTP、OTS、OTT、OXPS、PAGES、POT、PPS、PPT、RTF、STW、SXC、SXI、SXW、TXT、VSDM、VSDX、VSSM、VSSX、VSTM、VSTX、WPS、WPT、XLS、XLT、XML、XPS。
 - 该应用将在**文档和媒体**部分为办公文档创建一个新的**在ONLYOFFICE中编辑**菜单选项。这使得多个用户能够实时协作，并将所做的更改保存回Liferay系统。
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-您需要一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Liferay和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE文档还必须能够直接向Liferay发送POST请求。
+您需要一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Liferay和任何终端客户端解析并连接。如果无法满足此条件，请使用官方的[ONLYOFFICE 文档安装指南](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)。ONLYOFFICE 文档还必须能够直接向Liferay发送POST请求。
 
-使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE文档实例的最简单方法。
+使用[Docker](https://github.com/ONLYOFFICE/Docker-DocumentServer)是启动ONLYOFFICE 文档实例的最简单方法。
 
 ## 安装Liferay的ONLYOFFICE应用
 
@@ -33,7 +33,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 要配置该应用，请导航至**控制面板 -> 配置 -> 系统设置**。在**平台**部分，点击**连接器**类别并选择**ONLYOFFICE**。
 
-从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在Liferay的**系统设置**页面指定您自己的**密钥**。在ONLYOFFICE文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
+从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在Liferay的**系统设置**页面指定您自己的**密钥**。在ONLYOFFICE 文档[配置文件](../../additional-api/signature/signature.md)中，指定相同的密钥并启用验证。
 
 ## 编译Liferay的ONLYOFFICE应用
 
@@ -45,24 +45,24 @@ ONLYOFFICE集成遵循[此处](../basic-concepts.md)记录的API。
 
 1. 用户在Liferay中导航至**文档和媒体**部分，并选择在**ONLYOFFICE中编辑**操作。
 
-2. Liferay为ONLYOFFICE文档准备一个包含以下属性的JSON对象：
+2. Liferay为ONLYOFFICE 文档准备一个包含以下属性的JSON对象：
 
-   - **url** - ONLYOFFICE文档用于下载文档的URL；
-   - **callbackUrl** - ONLYOFFICE文档用于通知文档编辑状态的URL；
-   - **key** - 即 *fileVersionId*，用于指示ONLYOFFICE文档是否需要重新下载文档；
+   - **url** - ONLYOFFICE 文档用于下载文档的URL；
+   - **callbackUrl** - ONLYOFFICE 文档用于通知文档编辑状态的URL；
+   - **key** - 即 *fileVersionId*，用于指示ONLYOFFICE 文档是否需要重新下载文档；
    - **title** - 文档标题（名称）。
 
-3. 客户端浏览器向ONLYOFFICE文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给ONLYOFFICE文档。
+3. 客户端浏览器向ONLYOFFICE 文档的JavaScript库发出请求，并将包含上述属性的DocEditor配置发送给ONLYOFFICE 文档。
 
-4. 然后，ONLYOFFICE文档从Liferay下载文档，用户开始编辑。
+4. 然后，ONLYOFFICE 文档从Liferay下载文档，用户开始编辑。
 
-5. ONLYOFFICE文档向*callbackUrl*发送POST请求，通知Liferay有用户正在编辑文档。
+5. ONLYOFFICE 文档向*callbackUrl*发送POST请求，通知Liferay有用户正在编辑文档。
 
-6. Liferay锁定文档，但仍通过保留**在ONLYOFFICE中编辑**操作，允许具有写入权限的其他用户与ONLYOFFICE文档进行实时协作。
+6. Liferay锁定文档，但仍通过保留**在ONLYOFFICE中编辑**操作，允许具有写入权限的其他用户与ONLYOFFICE 文档进行实时协作。
 
 7. 当所有用户和客户端浏览器完成编辑后，他们关闭编辑窗口。
 
-8. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE文档向 *callbackUrl* 发送POST请求，告知Liferay客户端已完成文档编辑并关闭了窗口。
+8. 在[10秒](../how-it-works/saving-file.md#save-delay)无操作后，ONLYOFFICE 文档向 *callbackUrl* 发送POST请求，告知Liferay客户端已完成文档编辑并关闭了窗口。
 
 9. Liferay下载文档的新版本，替换旧版本。
 

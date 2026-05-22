@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Set the starting point for drawing a shape in a PDF.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// Where do I begin drawing a custom shape in a PDF?
+
+// Position the cursor before adding lines to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

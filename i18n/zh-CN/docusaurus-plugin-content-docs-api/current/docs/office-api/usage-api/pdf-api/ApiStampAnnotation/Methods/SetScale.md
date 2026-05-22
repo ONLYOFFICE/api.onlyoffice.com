@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为图章注释设置缩放比例。
+调整 PDF 中印章注释的大小
 
 ```javascript editor-pdf
+// What size options are available for a stamp annotation in a PDF?
+
+// Modify the scale percentage for a stamp annotation in a PDF
+
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');
 stampAnnot.SetScale(0.5);

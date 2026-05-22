@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为自由文本注释设置意图。
+在 PDF 中为文本注释分配用途类型。
 
 ```javascript editor-pdf
+// How do I specify what kind of comment a text annotation is in a PDF?
+
+// Define the annotation's purpose and verify it in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

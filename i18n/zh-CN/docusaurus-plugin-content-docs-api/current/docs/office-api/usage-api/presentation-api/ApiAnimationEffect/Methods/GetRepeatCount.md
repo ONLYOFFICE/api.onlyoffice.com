@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例获取动画效果的重复次数。
+获取演示文稿中动画效果的重复次数。
 
 ```javascript editor-pptx
+// Repeat count determines how many times an animation plays consecutively.
+
+// Retrieve the repeat count from an animation effect using GetRepeatCount() and display it.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Repeat count: ' + repeatCount);
 slide.AddObject(infoShape);
-
 ```

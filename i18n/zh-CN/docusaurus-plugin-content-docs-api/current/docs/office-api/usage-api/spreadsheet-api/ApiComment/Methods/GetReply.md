@@ -22,12 +22,12 @@ expression.GetReply(nIndex);
 
 ## 示例
 
-此示例展示如何获取指定的批注回复。
+从电子表格中的批注线程读取特定回复。
 
 ```javascript editor-xlsx
-// How to get a reply to the comment.
+// How do I access a particular reply within a comment thread in a spreadsheet?
 
-// Add a cooment reply text to a range of the worksheet.
+// Retrieve the text of a chosen reply to inspect its contents in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

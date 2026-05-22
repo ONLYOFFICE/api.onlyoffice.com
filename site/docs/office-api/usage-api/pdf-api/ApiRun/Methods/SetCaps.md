@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
+Display all letters as uppercase in text in a PDF.
 
 ```javascript editor-pdf
-// How to make a text capitalized.
+// How do I show text as all capital letters in a PDF?
 
-// Create a new text run and make each letters capitalized.
+// Convert text characters to capital letter format in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -48,5 +48,4 @@ run.SetCaps(true);
 run.AddText("This is a text run with the font set to capitalized letters.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取删除线注释的类类型。
+获取 PDF 文档中插入符号注释的类类型。
 
 ```javascript editor-pdf
+// Retrieve the class type from an annotation object.
+
+// Display the annotation class type in the console.
+
 let doc = Api.GetDocument();
 let strikeoutAnnot = Api.CreateStrikeoutAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

@@ -20,9 +20,13 @@ expression.GetTriggerType();
 
 ## 示例
 
-此示例获取动画效果的触发类型。
+获取演示文稿中动画效果的触发类型。
 
 ```javascript editor-pptx
+// How do I read the trigger type of an animation effect in a presentation?
+
+// Retrieve the setting that controls when an animation plays in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Trigger type: ' + triggerType);
 slide.AddObject(infoShape);
-
 ```

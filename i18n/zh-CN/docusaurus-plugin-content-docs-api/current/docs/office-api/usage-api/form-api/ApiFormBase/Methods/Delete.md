@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何删除复选框表单。
+从文档中删除表单字段。
 
 ```javascript editor-forms
+// How do I delete a form field in a document?
+
+// Clean up a document by removing one of several inserted checkbox forms.
+
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({
 	'key': 'Marital status',

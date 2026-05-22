@@ -4,7 +4,7 @@ The report filter area settings.
 
 ## Type
 
-Object
+object
 
 ## Properties
 

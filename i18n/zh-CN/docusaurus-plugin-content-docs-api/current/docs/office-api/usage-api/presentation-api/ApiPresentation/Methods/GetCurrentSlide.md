@@ -20,12 +20,12 @@ expression.GetCurrentSlide();
 
 ## 示例
 
-此示例演示如何获取当前幻灯片。
+获取当前正在编辑的幻灯片对象。
 
 ```javascript editor-pptx
-// How to get a current slide as an object.
+// Access the active slide as an ApiSlide object.
 
-// Get current working slide and update its content.
+// Add content to the current slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentSlide();
@@ -36,5 +36,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

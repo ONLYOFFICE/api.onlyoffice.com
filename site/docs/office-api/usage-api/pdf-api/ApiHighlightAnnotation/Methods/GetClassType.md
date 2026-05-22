@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of highlight annotation.
+Determine the type of a highlight annotation in a PDF.
 
 ```javascript editor-pdf
+// What class type does a highlight annotation have in a PDF?
+
+// Check the object classification for a highlight annotation in a PDF.
+
 let doc = Api.GetDocument();
 let highlightAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

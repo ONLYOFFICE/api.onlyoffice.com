@@ -22,10 +22,13 @@ expression.SetStroke(bStroke);
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+在演示文稿中为自定义形状的路径应用轮廓。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// What options are available for the outline of a shape in a presentation?
+
+// Configure the stroke settings for a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

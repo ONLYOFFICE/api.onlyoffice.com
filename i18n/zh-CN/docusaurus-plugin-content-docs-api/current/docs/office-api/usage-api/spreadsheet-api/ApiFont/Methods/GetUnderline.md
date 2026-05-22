@@ -20,12 +20,12 @@ expression.GetUnderline();
 
 ## 示例
 
-此示例演示如何获取应用于指定字体的下划线类型。
+检索电子表格中应用于文本字符的下划线样式。
 
 ```javascript editor-xlsx
-// How to determine whether a font is underlined or not.
+// How do I find out which underline style is used on a piece of text in a spreadsheet?
 
-// Get a boolean value that represents whether a font has an underline property or not and show the value in the worksheet.
+// Read the underline setting from a character's font and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

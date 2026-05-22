@@ -3,30 +3,16 @@
 从当前文本属性返回字体系列。
 如果字体是通过主题设置的，此方法会自动从主题计算字体。
 
-## 语法
-
-```javascript
-expression.GetFontFamily();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.md)。
 
 ## 示例
 
-此示例获取文本字体系列。
+读取电子表格中分配给文本的字体系列名称。
 
 ```javascript editor-xlsx
-// How to find out a text font family.
+// How do I find out which font family is used for text in a spreadsheet?
 
-// Get a text font family name and display it in the worksheet.
+// Display the typeface name stored in a text style inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

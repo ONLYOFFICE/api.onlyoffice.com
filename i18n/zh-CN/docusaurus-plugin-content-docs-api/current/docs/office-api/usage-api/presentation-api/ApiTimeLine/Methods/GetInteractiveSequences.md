@@ -20,9 +20,13 @@ expression.GetInteractiveSequences();
 
 ## 示例
 
-此示例从时间线获取所有交互式动画序列。
+检索演示文稿中幻灯片上所有点击触发的动画序列。
 
 ```javascript editor-pptx
+// How do I access the interactive animations that respond to clicks in a presentation?
+
+// Collect all animation sequences that are activated by user interactions in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -65,5 +69,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Interactive sequences count: ' + sequences.length);
 slide.AddObject(infoShape);
-
 ```

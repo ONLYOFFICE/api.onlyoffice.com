@@ -22,12 +22,12 @@ expression.SetMinPointValue(value);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的最小点值。
+指定数据条在电子表格中开始出现的下限阈值。
 
 ```javascript editor-xlsx
-// How to change the value of the minimum condition.
+// How do I set the exact number that represents the minimum bar length in a spreadsheet?
 
-// Set the minimum point value of a data bar conditional formatting rule.
+// Start the data bar scale at a specific value so bars below that point are not shown in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +50,4 @@ dataBar.SetMinPointValue(50);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetMinPointValue() || "Auto");
-
 ```

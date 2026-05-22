@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取透视字段的值。
+读取电子表格中透视字段的当前值设置。
 
 ```javascript editor-xlsx
-// How to get a pivot field's value.
+// How do I find out what value a pivot field is set to in a spreadsheet?
 
-// Create a pivot table, add data to it then get a value of a specified pivot field.
+// Display a pivot field's value to verify how it is configured in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

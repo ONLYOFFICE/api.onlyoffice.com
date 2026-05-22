@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Get the type of a grouped shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiGroup.
+// How do I identify what type a grouped shape is in a presentation?
 
-// Retrieve class type of ApiGroup object and insert it to the slide.
+// Retrieve the class name for a group object in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -54,5 +54,4 @@ paragraph1.AddText("Class Type = " + classType);
 const docContent2 = shape2.GetDocContent();
 const paragraph2 = docContent2.GetElement(0);
 paragraph2.AddText("Class Type = " + classType);
-
 ```

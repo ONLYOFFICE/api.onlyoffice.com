@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。
+在 PDF 中为形状添加边框。
 
 ```javascript editor-pdf
-// Creates a rectangle and changes its outline to a thick blue line.
+// How do I customize the outline of a shape in a PDF?
+
+// Give a shape a colored border with specific thickness in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -40,5 +43,4 @@ let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBCol
 shape.SetLine(newStroke);
 paragraph.AddLineBreak();
 paragraph.AddText("Border changed to 3pt blue line");
-
 ```

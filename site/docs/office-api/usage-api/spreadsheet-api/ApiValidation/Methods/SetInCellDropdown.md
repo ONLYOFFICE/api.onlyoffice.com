@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets whether a dropdown list is displayed.
+Enable or disable the drop-down arrow that lets users pick from allowed values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to show or hide the validation dropdown list.
+// How do I show a selectable list inside a cell that has a list-based validation rule in a spreadsheet?
 
-// Set the InCellDropdown setting.
+// Make it easier for users to enter valid data by displaying a clickable menu of options in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -35,5 +35,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateList", null, null, "Apple,Banana,Cherry");
 validation.SetInCellDropdown(true);
 worksheet.GetRange("B1").SetValue("Dropdown is enabled for A1");
-
 ```

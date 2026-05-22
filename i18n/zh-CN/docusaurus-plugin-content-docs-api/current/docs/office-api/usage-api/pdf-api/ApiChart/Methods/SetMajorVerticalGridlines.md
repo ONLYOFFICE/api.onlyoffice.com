@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何将描边设置为主垂直网格线。
+更改 PDF 中图表垂直网格线的样式。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical gridlines properties.
+// How do I format the vertical grid lines in a chart in a PDF?
+
+// Add a custom border to the vertical reference lines in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMajorVerticalGridlines(stroke);
 page.AddObject(chart);
-
 ```

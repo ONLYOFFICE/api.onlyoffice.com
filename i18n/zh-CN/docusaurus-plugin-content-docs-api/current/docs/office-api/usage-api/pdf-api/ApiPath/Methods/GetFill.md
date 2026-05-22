@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-分析页面上云形状的路径属性。
+检查 PDF 中形状内部填充的颜色或图案。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// What fill does a custom shape have in a PDF?
+
+// Find out if and how the inside of a shape is filled in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

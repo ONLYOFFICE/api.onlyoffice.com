@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the description of the current workbook using the ApiCore.
+Read the description stored in the workbook properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I retrieve the text description of a workbook in a spreadsheet?
+
+// Extract and display the summary text saved with the workbook in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Description: " + description);
-
 ```

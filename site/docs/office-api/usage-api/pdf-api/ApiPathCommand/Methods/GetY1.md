@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve in a pdf document.
+Retrieve the second control point y coordinate from a cubic curve in a PDF.
 
 ```javascript editor-pdf
-// Displays all control point coordinates in a text shape.
+// What is the second control point's vertical position in a PDF?
+
+// Extract the second control point's y value from a path in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

@@ -2,29 +2,17 @@
 
 为当前表单设置标签属性。
 
-## 语法
-
-```javascript
-expression.SetTag(tag);
-```
-
-`expression` - 表示 [ApiComplexForm](../ApiComplexForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| tag | 必需 | string |  | 将添加到当前容器的标签。 |
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md)。
 
 ## 示例
 
-此示例展示如何设置表单元素的标签。
+用自定义标识符标记文档中的表单字段。
 
 ```javascript editor-forms
+// How do I attach a label or identifier to a form field in a document?
+
+// Organize or reference form fields programmatically using custom tags.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -46,5 +34,4 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```

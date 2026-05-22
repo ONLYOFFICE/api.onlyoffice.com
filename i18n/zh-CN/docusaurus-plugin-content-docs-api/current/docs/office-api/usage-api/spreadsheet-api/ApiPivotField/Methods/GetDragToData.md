@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取透视字段的拖动到数据。
+检查电子表格中的透视字段是否可以移动到值区域。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to data.
+// How do I find out if a pivot field is allowed to be dragged to the data zone in a spreadsheet?
 
-// Create a pivot table, add data to it then get a drag to data of a specified pivot field.
+// Confirm that a pivot field supports use as a summary value in the pivot table body in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

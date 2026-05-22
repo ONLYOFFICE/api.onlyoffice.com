@@ -2,30 +2,16 @@
 
 返回指定数据透视表字段当前是否在数据透视表中可见的设置。
 
-## 语法
-
-```javascript
-expression.GetShowingInAxis();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetShowingInAxis](../../ApiPivotField/Methods/GetShowingInAxis.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段在轴中的显示。
+检查透视字段当前是否在电子表格中数据透视表的行轴或列轴上可见。
 
 ```javascript editor-xlsx
-// How to get a pivot field's showing in axis.
+// How do I tell if a pivot field is actively shown on an axis in a spreadsheet?
 
-// Create a pivot table, add data to it then get showing in axis of a specified pivot field.
+// Confirm the visibility status of a pivot field on the table axes to see which fields are displayed and which are hidden.
 
 let worksheet = Api.GetActiveSheet();
 

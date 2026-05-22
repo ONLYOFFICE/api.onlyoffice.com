@@ -2,30 +2,16 @@
 
 返回段落右侧缩进。
 
-## 语法
-
-```javascript
-expression.GetIndRight();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md) \| undefined
+继承自 [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md)。
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+读取电子表格中应用于段落的右侧缩进距离。
 
 ```javascript editor-xlsx
-// How to get a right indent of a paragraph.
+// How do I check how far a paragraph is pushed in from the right margin in a spreadsheet?
 
-// Get the right paragraph indent by the side.
+// Inspect the right margin offset of a paragraph to verify its horizontal boundary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

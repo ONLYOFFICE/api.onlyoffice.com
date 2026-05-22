@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取密文注释的类类型。
+识别 PDF 中涂黑标记的类别。
 
 ```javascript editor-pdf
+// How do I determine what kind of annotation a redaction is in a PDF?
+
+// Check the object type of a redaction element in a PDF.
+
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

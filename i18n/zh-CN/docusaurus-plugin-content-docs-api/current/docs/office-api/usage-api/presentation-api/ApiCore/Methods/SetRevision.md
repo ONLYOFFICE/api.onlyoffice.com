@@ -22,9 +22,13 @@ expression.SetRevision(sRevision);
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿的修订版本。
+为演示文稿分配修订号。
 
 ```javascript editor-pptx
+// How do I add a revision identifier to a presentation?
+
+// Set and read the revision information for a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetRevision("Rev. B");
@@ -40,5 +44,4 @@ paragraph.AddText("Revision: " + revision);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

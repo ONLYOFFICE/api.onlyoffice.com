@@ -22,12 +22,12 @@ expression.GetColumnFields(field);
 
 ## 示例
 
-此示例展示如何清除数据透视表。
+列出电子表格中数据透视表中配置的列字段。
 
 ```javascript editor-xlsx
-// How to remove all elements from a pivot table.
+// How do I find out which fields are placed in the column area of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then delete all its content.
+// Read the names of every column field to inspect or log the pivot table layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -68,5 +68,4 @@ for (let i = 0; i < pivotFields.length; i += 1) {
     let cell = pivotWorksheet.GetRangeByNumber(8 + i, 1);
     cell.SetValue(pivotFields[i].GetName());
 }
-
 ```

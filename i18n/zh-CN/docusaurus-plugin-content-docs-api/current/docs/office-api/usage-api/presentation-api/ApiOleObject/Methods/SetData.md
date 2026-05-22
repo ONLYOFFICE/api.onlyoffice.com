@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前 OLE 对象的数据。
+在演示文稿中的嵌入对象中存储数据或 URL。
 
 ```javascript editor-pptx
-// Set data to an OLE object.
+// How do I change the data in an embedded object in a presentation?
 
-// How to insert a url address to the OLE object.
+// Update the content of a linked object with a new URL in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,5 +42,4 @@ oleObject.SetSize(200 * 36000, 130 * 36000);
 oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
 oleObject.SetData('https://youtu.be/eJxpkjQG6Ew');
-
 ```

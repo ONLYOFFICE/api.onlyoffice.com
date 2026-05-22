@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何从自定义 XML 部件中删除 XML 元素。
+从电子表格中存储的 XML 数据移除子元素。
 
 ```javascript editor-xlsx
+// How do I cut out an unwanted XML node from custom data saved in a spreadsheet?
+
+// Prune a specific branch of an XML structure to keep only the relevant content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -36,5 +40,4 @@ const xml = xmlManager.Add(xmlString);
 
 xml.DeleteElement('/content/extra');
 worksheet.GetRange('A1').SetValue('XML after deletion: ' + xml.GetXml());
-
 ```

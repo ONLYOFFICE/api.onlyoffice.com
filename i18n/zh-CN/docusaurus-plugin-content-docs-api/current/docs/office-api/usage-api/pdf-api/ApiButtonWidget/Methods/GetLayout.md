@@ -20,9 +20,13 @@ expression.GetLayout();
 
 ## 示例
 
-此示例获取按钮控件的布局类型。
+查找 PDF 中按钮控件的布局样式。
 
 ```javascript editor-pdf
+// How do I check the button layout arrangement in a PDF?
+
+// Retrieve the icon and text arrangement setting for a button in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

@@ -22,12 +22,12 @@ expression.SetUserId(sUserId);
 
 ## Example
 
-This example shows how to set a user ID to a comment reply.
+Assign a user ID to a comment reply in a presentation.
 
 ```javascript editor-pptx
-// How to change a user ID of a comment reply.
+// How do I set the author ID for a reply to a comment in a presentation?
 
-// Get all comments from the presentation and change its first one's reply user ID.
+// Update the user ID of a comment reply to track who the responder is in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ reply.SetUserId("new-uid-123");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply user ID is set to: " + reply.GetUserId());
-
 ```

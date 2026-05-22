@@ -20,13 +20,12 @@ boolean
 
 ## 示例
 
-此示例取消选择当前图形对象。
+取消选择绘图同时在电子表格中保持其他形状的选中状态。
 
 ```javascript editor-xlsx
-// How to unselect drawing objects on the worksheet.
+// How do I remove a single drawing from the current selection in a spreadsheet?
 
-// Create three shapes, select all of them,
-// then unselect the second shape.
+// Drop one shape from a multi-object selection without affecting the rest in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,5 +41,4 @@ drawing1.Select(true);
 drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
-
 ```

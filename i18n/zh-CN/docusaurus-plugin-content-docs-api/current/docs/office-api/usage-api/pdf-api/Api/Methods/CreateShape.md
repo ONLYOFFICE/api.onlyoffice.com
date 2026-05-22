@@ -26,10 +26,12 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## 示例
 
-如何添加新的流程图形状。
+在 PDF 中插入带有文本和颜色的流程图形状。
 
 ```javascript editor-pdf
-// Add a new shape indicating its properties.
+// How do I add a shape and populate it with text in a PDF?
+
+// Create a shape with colored background and multiple text runs in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

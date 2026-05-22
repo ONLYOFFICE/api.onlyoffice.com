@@ -22,9 +22,13 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例展示如何从形状内的超链接获取元素。
+访问电子表格中超链接内的特定内容元素。
 
 ```javascript editor-xlsx
+// How do I read the inner content of a hyperlink in a spreadsheet?
+
+// Pull out an individual piece from a hyperlink by its position in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -46,5 +50,4 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for
 const element = hyperlink.GetElement(0);
 const classType = element ? element.GetClassType() : 'null';
 worksheet.GetRange('A1').SetValue('Element class type: ' + classType);
-
 ```

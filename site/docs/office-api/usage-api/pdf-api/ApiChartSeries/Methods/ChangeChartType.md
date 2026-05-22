@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example changes the type of the first series of ApiChart class and inserts the new type into the pdf document.
+Switch a data series to a different chart type in a PDF.
 
 ```javascript editor-pdf
-// How to change a chart type.
+// How do I change how one series in a chart displays in a PDF?
 
-// Change a chart type to the "area" type.
+// Display chart data as a different type, such as converting a line series to an area chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -57,5 +57,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

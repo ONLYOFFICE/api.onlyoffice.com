@@ -24,9 +24,13 @@ boolean
 
 ## Example
 
-This example shows how to update the value of an attribute in a custom XML node.
+Update the value of an attribute in a custom XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I modify an existing attribute in an XML element in a presentation?
+
+// Display the updated XML with the new attribute value in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after update: ' + xml.GetXml());
-
 ```

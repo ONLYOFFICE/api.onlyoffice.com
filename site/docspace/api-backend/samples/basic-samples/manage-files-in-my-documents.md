@@ -1,3 +1,8 @@
+---
+description: Upload, create, and delete files in My Documents via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -20,16 +20,16 @@ expression.ReplaceCurrentImage(sImageUrl, nWidth, nHeight);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example replaces the image with a new one.
+Swap a selected image for a different one in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to replace an image to another one.
+// How do I replace an existing image with a new one in a spreadsheet?
 
-// Replace an image from one to another using their urls.
+// Substitute the current image with another using its URL in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let drawing = worksheet.AddImage(
@@ -41,5 +41,4 @@ worksheet.ReplaceCurrentImage(
 	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
 	60 * 36000, 60 * 36000
 );
-
 ```

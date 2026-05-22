@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to check if the color is a theme color.
+Determine if a color is a theme color in a PDF.
 
 ```javascript editor-pdf
+// How can I tell whether a color comes from the theme in a PDF?
+
+// Compare a regular color and a theme color to see which one is theme-based.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,5 +46,4 @@ run.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
 run.AddText('\nIs themeColor a theme color? ' + themeColor.IsThemeColor());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何将八进制数转换为二进制数。
+在电子表格中将八进制数转换为其二进制表示。
 
 ```javascript editor-xlsx
-// How to get a binary number form an octal.
+// How do I change an octal value to binary in a spreadsheet?
 
-// Use a function to convert an octal number to binary.
+// Transform a base-8 number into a base-2 format in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

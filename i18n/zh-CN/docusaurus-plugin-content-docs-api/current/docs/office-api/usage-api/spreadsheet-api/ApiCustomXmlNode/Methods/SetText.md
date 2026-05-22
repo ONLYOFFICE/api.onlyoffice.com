@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何设置自定义 XML 节点的文本内容。
+向 XML 元素写入可读文本以更新电子表格中的内容。
 
 ```javascript editor-xlsx
-// How to update text content in custom XML node elements.
+// How do I change the text inside an XML node in a spreadsheet?
 
-// Set text for message node.
+// Store a new text value inside an existing XML entry in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

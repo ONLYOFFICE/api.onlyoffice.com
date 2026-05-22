@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a height of a shape and inserts it into the presentation.
+Retrieve the height of a shape and display it in a presentation.
 
 ```javascript editor-pptx
-// How to find a shape's height and display it on the slide.
+// How do I find the vertical size of a shape in a presentation?
 
-// Get a slide shape's height.
+// Get the height measurement of a shape and show it on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing height: " + height);
 slide.AddObject(shape);
-
 ```

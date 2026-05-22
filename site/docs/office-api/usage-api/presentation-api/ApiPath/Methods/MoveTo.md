@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a slide.
+Set the starting position for drawing a custom shape's outline in a presentation.
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// Where do I begin drawing a custom shape path in a presentation?
+
+// Position the drawing cursor at a specific point in a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

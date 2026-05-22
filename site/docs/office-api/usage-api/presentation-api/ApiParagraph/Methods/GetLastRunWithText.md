@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last Run with text in the paragraph.
+Get the last Run with text in the paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I access the final text element in a paragraph in a presentation?
+
+// Find the last text item in a paragraph and modify it in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ const lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(' [Last run]');
 lastRun.SetBold(true);
 slide.AddObject(shape);
-
 ```

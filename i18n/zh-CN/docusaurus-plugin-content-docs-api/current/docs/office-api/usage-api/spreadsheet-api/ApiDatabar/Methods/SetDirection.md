@@ -22,12 +22,12 @@ expression.SetDirection(direction);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的方向。
+设置数据条的增长方向使其在电子表格中从右到左填充单元格。
 
 ```javascript editor-xlsx
-// How to change the reading order direction of a data bar.
+// How do I control which direction data bars extend across a cell in a spreadsheet?
 
-// Set the direction of a data bar conditional formatting rule.
+// Match the visual flow of data bars to the reading orientation of your content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +50,4 @@ dataBar.SetDirection("xlRTL");
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetDirection());
-
 ```

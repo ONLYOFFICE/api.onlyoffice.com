@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get a number of slides.
+Retrieve the total number of slides in a presentation.
 
 ```javascript editor-pptx
-// How to count the slides of the presentation.
+// How do I count all the slides in a presentation?
 
-// Get a number of the presentation slides.
+// Show the slide count displayed in a shape on the current slide.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Number of slides = " + slidesCount);
 slide1.AddObject(shape);
-
 ```

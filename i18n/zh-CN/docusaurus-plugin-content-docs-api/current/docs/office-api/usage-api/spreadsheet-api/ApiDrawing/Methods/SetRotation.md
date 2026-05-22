@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置绘图的旋转角度。
+按给定角度旋转绘图以更改其在电子表格中的方向。
 
 ```javascript editor-xlsx
+// How do I tilt or rotate a shape to a specific angle in a spreadsheet?
+
+// Turn a drawing to a desired degree to adjust how it appears visually in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

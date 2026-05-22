@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回舍入到所需倍数的数字。
+在电子表格中将数字舍入到另一个值的最近倍数。
 
 ```javascript editor-xlsx
-// How to round the number.
+// What is a number rounded to a specific multiple in a spreadsheet?
 
-// Use a function to round the number.
+// Adjust a value to the closest increment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

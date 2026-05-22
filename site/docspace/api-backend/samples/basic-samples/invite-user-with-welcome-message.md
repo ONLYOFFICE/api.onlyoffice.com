@@ -1,3 +1,8 @@
+---
+description: Invite a user and send a welcome message after activation.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

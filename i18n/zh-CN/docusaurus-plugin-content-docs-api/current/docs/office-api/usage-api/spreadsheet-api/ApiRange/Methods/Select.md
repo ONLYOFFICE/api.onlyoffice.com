@@ -16,16 +16,16 @@ expression.Select();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例选择当前范围。
+在电子表格中选择单元格范围。
 
 ```javascript editor-xlsx
-// How to select a range.
+// How do I highlight a specific group of cells in a spreadsheet?
 
-// Select a range and get a selection from the worksheet.
+// Mark a range as the active selection so further actions apply to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C1");

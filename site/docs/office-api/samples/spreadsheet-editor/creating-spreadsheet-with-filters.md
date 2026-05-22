@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Apply autofilters to a spreadsheet header row.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Creating spreadsheet with filters

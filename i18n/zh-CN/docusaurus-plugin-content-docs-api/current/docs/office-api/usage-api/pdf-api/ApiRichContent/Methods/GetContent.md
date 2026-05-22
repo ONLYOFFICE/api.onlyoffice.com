@@ -22,9 +22,13 @@ expression.GetContent(getCopies);
 
 ## 示例
 
-此示例从富文本内容获取所有元素。
+检索 PDF 中格式化文本中存储的所有段落。
 
 ```javascript editor-pdf
+// How do I access all text elements in rich content in a PDF?
+
+// Read the complete list of paragraphs from formatted text in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

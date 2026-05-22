@@ -33,7 +33,7 @@ This method doesn't return any data.
 
 ### Example
 
-``` ts
+```ts
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument();
   const oParagraph = Api.CreateParagraph();
@@ -52,7 +52,7 @@ The functions cannot be passed to the *callCommand* method using the *Asc.sco
 
 ### Example
 
-``` ts
+```ts
 Asc.scope.text = text;
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument();
@@ -64,7 +64,7 @@ Asc.plugin.callCommand(() => {
 
 ## info object
 
-This object is used to change the object data and to send additional parameters when executing the **callCommand** method. The **info** object is the auxiliary object which is available when the plugin works. It stores all the information about the editor that uses the plugin (the used [editorType](#editorType) - text documents, spreadsheets, presentations, PDFs) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for the OLE objects vector drawing and some other OLE object parameters).
+This object is used to change the object data and to send additional parameters when executing the **callCommand** method. The **info** object is the auxiliary object which is available when the plugin works. It stores all the information about the editor that uses the plugin (the used [editorType](#editorType) - documents, spreadsheets, presentations, PDFs) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for the OLE objects vector drawing and some other OLE object parameters).
 
 For example, if the document content is changed and recalculation is needed, the parameter [recalculate](#recalculate) must be set to *true*. This action is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).
 
@@ -95,7 +95,7 @@ See the available *window.Asc.plugin.info* object parameters below to find out m
 
 ### Example for the data, height, imgSrc, mmToPx, objectId and width parameters
 
-``` ts
+```ts
 window.Asc.plugin.button = (id) => {
   const info = window.Asc.plugin.info;
 
@@ -134,7 +134,7 @@ window.Asc.plugin.button = (id) => {
 
 ### Example for the editorType parameter
 
-``` ts
+```ts
 function createScriptFromArray(aSelected) {
   if (aSelected.length !== 0) {
     switch (window.Asc.plugin.info.editorType) {
@@ -153,7 +153,7 @@ function createScriptFromArray(aSelected) {
 
 ### Example for the guid parameter
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   const plugin_uuid = window.Asc.plugin.info.guid;
 };
@@ -161,7 +161,7 @@ window.Asc.plugin.init = () => {
 
 ### Example for the recalculate parameter
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   let sScript = "var oDocument = Api.GetDocument();";
   sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`;
@@ -175,7 +175,7 @@ window.Asc.plugin.init = () => {
 
 ### Example for the resize parameter
 
-``` ts
+```ts
 if (window.Asc.plugin.info.resize === true) {
   window.Asc.plugin.button(0);
 }

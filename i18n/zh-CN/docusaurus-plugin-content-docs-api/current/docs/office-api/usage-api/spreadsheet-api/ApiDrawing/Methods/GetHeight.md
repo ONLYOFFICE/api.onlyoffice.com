@@ -20,12 +20,12 @@ expression.GetHeight();
 
 ## 示例
 
-此示例展示如何获取绘图的高度。
+检索电子表格中绘图对象的高度。
 
 ```javascript editor-xlsx
-// How to know a height of a drawing.
+// How do I find out how tall a drawing is in a spreadsheet?
 
-// Get a drawing's height and display it in the worksheet.
+// Measure the vertical size of a shape and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

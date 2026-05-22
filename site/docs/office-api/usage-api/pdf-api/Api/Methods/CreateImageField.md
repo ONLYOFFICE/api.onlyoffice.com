@@ -22,9 +22,13 @@ expression.CreateImageField(aRect);
 
 ## Example
 
-How to create and add a field with image to document.
+Create and add a field with image to document.
 
 ```javascript editor-pdf
+// Create the image field in a PDF document.
+
+// Create the image field and display the result in a PDF document.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

@@ -15,7 +15,7 @@ expression.AddDefName(sName, sRef, isHidden);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sName | Required | string |  | The range name. |
-| sRef | Required | string |  | Must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". |
+| sRef | Required | string |  | Must contain the sheet name, followed by sign ! and a range of cells. |
 | isHidden | Required | boolean |  | Defines if the range name is hidden or not. |
 
 ## Returns
@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example adds a new name to the worksheet.
+Assign a custom name to a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a name of the worksheet range.
+// How do I label a group of cells so I can refer to them by name in a spreadsheet?
 
-// Name a range from a worksheet.
+// Give a range a memorable label instead of using raw cell addresses.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

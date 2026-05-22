@@ -22,9 +22,13 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example applies strikeout formatting to paragraph text.
+Strike through paragraph text in a PDF.
 
 ```javascript editor-pdf
+// How do I apply strikeout formatting in a PDF?
+
+// Use strikeout effect on text within a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text struck out with a single line.');
 paragraph.SetStrikeout(true);
 page.AddObject(shape);
-
 ```

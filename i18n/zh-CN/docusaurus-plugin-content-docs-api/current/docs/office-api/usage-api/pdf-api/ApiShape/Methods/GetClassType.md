@@ -20,10 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-如何获取 ApiShape 的类类型。
+识别 PDF 中形状对象的类型。
 
 ```javascript editor-pdf
-// Retrieve class type of ApiShape object and insert it to the page.
+// What kind of object is a shape in a PDF?
+
+// Determine the class name of a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

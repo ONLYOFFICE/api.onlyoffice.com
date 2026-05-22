@@ -23,15 +23,14 @@ expression.attachEvent(eventName, callback);
 
 ## 示例
 
-此示例演示如何订阅超链接点击事件。
+在演示文稿中订阅超链接点击事件。
 
 ```javascript editor-pptx
-// How to trigger an event on hyperlink click.
+// Event handlers allow responding to user interactions like clicks on hyperlinks.
 
-// Subscribe to the hyperlink click event.
+// Attach a listener to the asc_onHyperlinkClick event using Api.attachEvent().
 
 Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");
 });
-
 ```

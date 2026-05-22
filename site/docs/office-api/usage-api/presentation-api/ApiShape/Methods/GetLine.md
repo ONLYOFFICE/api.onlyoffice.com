@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the outline properties from a shape and displays detailed information.
+Get the outline properties from a shape and display detailed information.
 
 ```javascript editor-pptx
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// Retrieve stroke properties including width, fill type, and dash type from a shape.
+
+// Display stroke details such as class type, width in EMU and points, fill type, and dash type.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -48,5 +51,4 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```

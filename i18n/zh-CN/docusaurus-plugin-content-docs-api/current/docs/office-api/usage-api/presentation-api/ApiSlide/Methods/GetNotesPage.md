@@ -20,9 +20,13 @@ expression.GetNotesPage();
 
 ## 示例
 
-此示例展示如何从幻灯片获取备注页。
+获取演示文稿中幻灯片的备注页。
 
 ```javascript editor-pptx
+// Retrieve the notes page using GetNotesPage and check its availability.
+
+// Display the notes page status on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ if (notesPage) {
 }
 
 slide.AddObject(shape);
-
 ```

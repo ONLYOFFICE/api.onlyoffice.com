@@ -20,9 +20,13 @@ Date
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取工作簿的创建日期。
+读取电子表格工作簿属性中记录的创建日期。
 
 ```javascript editor-xlsx
+// How do I find out when a workbook was originally created in a spreadsheet?
+
+// Retrieve and display the date the workbook was first made in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Created: " + createdDate);
-
 ```

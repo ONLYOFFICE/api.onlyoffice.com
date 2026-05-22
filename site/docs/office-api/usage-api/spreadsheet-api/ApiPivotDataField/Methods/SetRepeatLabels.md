@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether to repeat items labels at each row.
 
-## Syntax
-
-```javascript
-expression.SetRepeatLabels(repeat);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| repeat | Required | boolean |  | Specifies whether to repeat items labels at each row. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetRepeatLabels](../../ApiPivotField/Methods/SetRepeatLabels.md).
 
 ## Example
 
-This example shows how to set a repeate labels of a pivot field.
+Repeat a pivot field's labels on every row instead of showing them only once in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field repeated labels.
+// How do I make a pivot field label appear on each row of the pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then add repeat labels of a specified pivot.
+// Fill in blank label cells so every row in a pivot group is clearly identified in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -11,10 +11,9 @@
 - "xlByRows"
 - "xlByColumns"
 
-
 ## 示例
 
-此示例指定在区域中搜索完整文本匹配。
+指定在区域中搜索完整文本匹配。
 
 ```javascript editor-xlsx
 // How to search a text indicating search order.
@@ -30,5 +29,4 @@ let searchRange = range.Find({
 	SearchDirection: "xlNext",
 	MatchCase: true
 });
-
 ```

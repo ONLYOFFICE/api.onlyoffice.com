@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+应用具有特定路径的自定义几何图形以创建唯一形状。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// Define a custom path with multiple points and line segments for a star-like shape.
+
+// Apply the custom geometry to a shape along with solid fill and stroke properties.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

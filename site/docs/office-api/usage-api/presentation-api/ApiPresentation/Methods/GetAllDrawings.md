@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all the drawing objects from the current presentation
+Collect all images, shapes, charts, and embedded objects in a presentation.
 
 ```javascript editor-pptx
+// How do I find every drawing element across the entire presentation in a presentation?
+
+// Count and display all drawings from slides and masters in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const slideMaster = presentation.GetMaster(0);
@@ -75,5 +79,4 @@ paragraph.AddText('Drawings: ' + drawings.length);
 label.SetPosition(0, 144 * 36000);
 slide.AddObject(label);
 label.Select();
-
 ```

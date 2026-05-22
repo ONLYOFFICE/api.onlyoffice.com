@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiAnimationEffect 对象的类类型。
+检索演示文稿中动画效果的类类型。
 
 ```javascript editor-pptx
+// Class type identifiers distinguish different object types in the animation system.
+
+// Call GetClassType() on an animation effect object and display the result.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(infoShape);
-
 ```

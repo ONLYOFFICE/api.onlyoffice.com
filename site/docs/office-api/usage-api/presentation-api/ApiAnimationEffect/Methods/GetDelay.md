@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example gets the delay of an animation effect.
+Get the delay of an animation effect in a presentation.
 
 ```javascript editor-pptx
+// Delay values control the timing offset before an animation starts.
+
+// Retrieve the delay from an animation effect using GetDelay() and display it.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Delay: ' + delay + 'ms');
 slide.AddObject(infoShape);
-
 ```

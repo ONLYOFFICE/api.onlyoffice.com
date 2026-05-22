@@ -20,10 +20,13 @@ expression.GetGeometry();
 
 ## 示例
 
-从演示文稿幻灯片上的星形形状获取几何信息。
+检索形状几何图形并检查它在演示文稿中是预设还是自定义形状。
 
 ```javascript editor-pptx
-// Displays preset type and custom status in a text shape.
+// How do I learn about a shape's geometry in a presentation?
+
+// Get the preset type and check whether a shape uses custom geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

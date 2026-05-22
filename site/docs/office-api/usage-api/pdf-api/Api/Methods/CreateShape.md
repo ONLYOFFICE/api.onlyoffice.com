@@ -26,10 +26,12 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## Example
 
-How to add a new flowchart shape.
+Insert a flowchart shape with text and colors in a PDF.
 
 ```javascript editor-pdf
-// Add a new shape indicating its properties.
+// How do I add a shape and populate it with text in a PDF?
+
+// Create a shape with colored background and multiple text runs in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

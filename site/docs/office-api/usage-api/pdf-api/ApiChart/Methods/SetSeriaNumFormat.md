@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to set the "0.00" numeric format to the chart seria.
+Change the number format of values in a data series in a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series numeric format.
+// How do I format the numbers displayed in a data series in a chart in a PDF?
+
+// Apply a number format like "0.00" to all values in a data series in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +46,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

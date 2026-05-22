@@ -23,10 +23,13 @@ boolean
 
 ## 示例
 
-创建带有参考线和连接点的可调整自定义几何图形。
+向电子表格中的自定义形状添加命名调整手柄。
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I define a movable adjustment point for a custom shape in a spreadsheet?
+
+// Register a named adjustment control to fine-tune the proportions of a custom shape in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

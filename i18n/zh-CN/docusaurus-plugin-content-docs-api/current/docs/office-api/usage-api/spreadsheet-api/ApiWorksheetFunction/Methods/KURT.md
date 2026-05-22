@@ -14,7 +14,7 @@ expression.KURT(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个将计算峰度的数值。参数可以是数字、名称、区域或数字数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个数值，将计算这些数值的峰度。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数据集的峰度。
+计算电子表格中一组数字的峰度。
 
 ```javascript editor-xlsx
-// How to know a data set kurtosis.
+// How do I measure the shape of a data distribution in a spreadsheet?
 
-// Use a function to find out kurtosis of a data set.
+// Find the kurtosis value that describes the peakedness of a dataset in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

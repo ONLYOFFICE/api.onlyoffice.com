@@ -20,17 +20,16 @@ This method doesn't return any data.
 
 ## Example
 
-This example clears all the hyperlinks in the range.
+Remove all hyperlinks from a cell range while keeping the displayed text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to clear hyperlinks for a range.
+// How do I detach links from cells without deleting their text in a spreadsheet?
 
-// Get a range, clear hyperlinks and show the result.
+// Turn linked cells back into plain text by stripping away their URLs in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:B1").SetValue("http://example.com");
 let range = worksheet.GetRange("A1");
 range.ClearHyperlinks();
 worksheet.GetRange("A2").SetValue("Result is hyperlinks cleared for A1 cell.");
-
 ```

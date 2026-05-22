@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。
+读取路径命令端点的垂直位置并在电子表格中显示。
 
 ```javascript editor-xlsx
-// Shows total command count and first command information in cells.
+// How do I find the Y coordinate of a drawing command on a shape in a spreadsheet?
+
+// Confirm where a path step lands vertically within a shape's drawing area in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

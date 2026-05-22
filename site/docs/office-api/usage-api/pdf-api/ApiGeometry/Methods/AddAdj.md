@@ -23,10 +23,13 @@ boolean
 
 ## Example
 
-Creates adjustable geometry with guides and connection points for a pdf document.
+Create a parameter that controls the shape's appearance in a PDF.
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How do I add a value that changes how a shape is drawn in a PDF?
+
+// Define an adjustment control and apply it to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

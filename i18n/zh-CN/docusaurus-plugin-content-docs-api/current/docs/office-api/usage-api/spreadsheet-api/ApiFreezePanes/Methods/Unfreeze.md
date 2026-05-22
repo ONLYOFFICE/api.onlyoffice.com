@@ -20,12 +20,12 @@ expression.Unfreeze();
 
 ## 示例
 
-此示例冻结第一列，然后解冻工作表中的所有窗格。
+释放所有锁定的行和列使工作表在电子表格中自由滚动。
 
 ```javascript editor-xlsx
-// How to unfreeze columns from freezed panes.
+// How do I remove frozen panes and allow the entire sheet to scroll without restrictions in a spreadsheet?
 
-// Add freezed panes then unfreeze the first column and show all freezed ones' location to prove it.
+// Unpin any fixed areas to restore normal scrolling behavior across the whole sheet in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

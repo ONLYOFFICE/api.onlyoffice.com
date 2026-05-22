@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例从父字段中删除控件。
+从 PDF 移除表单字段控件。
 
 ```javascript editor-pdf
+// How do I delete a widget from a form field in a PDF?
+
+// Unlink a widget instance from its parent form field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -32,5 +36,4 @@ textField.SetValue('Example text');
 textField.AddWidget(0, [10, 40, 160, 60]);
 let widgets = textField.GetAllWidgets();
 widgets[0].Delete();
-
 ```

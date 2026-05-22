@@ -20,12 +20,12 @@ expression.GetIndRight();
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+读取电子表格中应用于段落的右侧缩进距离。
 
 ```javascript editor-xlsx
-// How to get a right indent of a paragraph.
+// How do I check how far a paragraph is pushed in from the right margin in a spreadsheet?
 
-// Get the right paragraph indent by the side.
+// Inspect the right margin offset of a paragraph to verify its horizontal boundary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

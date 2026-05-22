@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example selects the current paragraph.
+Select a paragraph for editing in a presentation.
 
 ```javascript editor-pptx
+// How do I highlight a paragraph in a presentation?
+
+// Select the entire paragraph content in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,5 +41,4 @@ paragraph.AddText('This paragraph will be selected.');
 slide.AddObject(shape);
 
 paragraph.Select();
-
 ```

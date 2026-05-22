@@ -1,0 +1,42 @@
+# GetClassType
+
+Returns a type of the ApiFill class.
+
+## Syntax
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - A variable that represents a [ApiFill](../ApiFill.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"fill"
+
+## Example
+
+Read the class type of a fill object and display it in a document.
+
+```javascript editor-docx
+// How do I identify the class type of a fill in a document?
+
+// Distinguish a fill object from other object types by checking its class identifier in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+let fill = Api.CreateRadialGradientFill([gs1, gs2]);
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 1908000, 1404000, fill, stroke);
+drawing.SetDistances(914400, 0, 914400, 0);
+drawing.SetWrappingStyle("square");
+paragraph.AddDrawing(drawing);
+let classType = fill.GetClassType();
+paragraph.AddText("Class Type = " + classType);
+```

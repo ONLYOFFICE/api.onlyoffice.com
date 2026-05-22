@@ -20,9 +20,13 @@ expression.CreateRichTextPr();
 
 ## 示例
 
-如何创建新的富文本属性并将其设置为富文本块。
+在 PDF 中使用粗体和下划线样式格式化注释中的文本。
 
 ```javascript editor-pdf
+// How can I apply bold and underline formatting to text in a PDF?
+
+// Set text properties like bold and underline on a text element in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets next rich paragraph and adds some text to it.
+Move to the following paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I navigate to the next paragraph in a PDF?
+
+// Jump to the subsequent paragraph and work with it in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

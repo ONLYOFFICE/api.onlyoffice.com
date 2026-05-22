@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to set cell left border with its fill color.
+Add a left border to a table cell in a PDF.
 
 ```javascript editor-pdf
-// Create table and set its cell left border.
+// How do I create a border on the left edge of a cell in a PDF?
+
+// Draw a styled line along the left side of a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,5 +40,4 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 cell.SetCellBorderLeft(2, fill);
 
 page.AddObject(table);
-
 ```

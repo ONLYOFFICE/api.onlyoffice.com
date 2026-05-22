@@ -20,15 +20,14 @@ expression.GetUsedRange();
 
 ## 示例
 
-此示例展示如何获取表示指定工作表上已用区域的 ApiRange 对象。
+查找电子表格工作表上哪些单元格实际包含数据。
 
 ```javascript editor-xlsx
-// How to get used ranges from the worksheet.
+// Detect the exact boundaries of content without empty rows or columns in a spreadsheet?
 
-// Get used ranges and fill it with color.
+// Shade all populated cells with a background color to visualize data extent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let usedRange = worksheet.GetUsedRange();
 usedRange.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```

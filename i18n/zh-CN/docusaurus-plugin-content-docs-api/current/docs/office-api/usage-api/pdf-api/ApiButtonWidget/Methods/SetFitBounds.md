@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置按钮控件的适应边界属性。
+在 PDF 文档中设置按钮控件的适合边界属性。
 
 ```javascript editor-pdf
+// Enable or disable the fit bounds behavior for a button widget.
+
+// Display the fit bounds status using the widget label.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

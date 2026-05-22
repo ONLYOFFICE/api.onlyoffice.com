@@ -2,7 +2,6 @@
 
 Represents the ApiDrawing class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -11,6 +10,7 @@ Represents the ApiDrawing class.
 | [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object from the parent. |
 | [GetClassType](./Methods/GetClassType.md) | "drawing" | Returns the type of the ApiDrawing class. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the height of the current drawing. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current drawing. |
 | [GetParentPage](./Methods/GetParentPage.md) | [ApiPage](../ApiPage/ApiPage.md) | Returns the type of the ApiDrawing class. |
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | Gets the x position of the drawing on the page. |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | Gets the y position of the drawing on the page. |

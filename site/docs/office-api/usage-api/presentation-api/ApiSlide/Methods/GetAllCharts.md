@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the chart objects from the slide.
+Find all charts on a slide in a presentation.
 
 ```javascript editor-pptx
-// How to get all charts from the slide.
+// How do I access all the charts in a slide in a presentation?
 
-// Get all charts from the slide as an array.
+// Retrieve the chart objects and modify their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ slide.AddObject(chart);
 const allCharts = slide.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 allCharts[0].SetMinorHorizontalGridlines(stroke);
-
 ```

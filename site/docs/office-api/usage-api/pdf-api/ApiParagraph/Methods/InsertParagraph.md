@@ -24,9 +24,13 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## Example
 
-This example inserts a paragraph at the specified position.
+Place a new paragraph next to an existing paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I add a paragraph at a specific location relative to another paragraph in a PDF?
+
+// Position a paragraph before or after an existing one in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,5 +46,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This paragraph was inserted after the first one.');
 paragraph.InsertParagraph(paragraph2, 'after', true);
 page.AddObject(shape);
-
 ```

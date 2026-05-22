@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiChartSeries 类的类型并将其插入文档中。
+识别电子表格中图表系列的对象类别。
 
 ```javascript editor-xlsx
-// How to get a chart series class type.
+// How do I check what kind of object a chart series belongs to in a spreadsheet?
 
-// Get a class type of a seria.
+// Confirm the internal type of a chart series by reading its category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

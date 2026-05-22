@@ -23,17 +23,16 @@ boolean
 
 ## 示例
 
-此示例将指定版式应用于幻灯片。版式必须位于幻灯片母版中。
+将幻灯片母版中的预定义布局应用于当前幻灯片。
 
 ```javascript editor-pptx
-// How to apply a layout to the slide.
+// Retrieve the master slide and select a specific layout by index.
 
-// Get a layout from the presentation master using its index and apply it to the slide.
+// Set the layout to the slide using the master's layout definition.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
 const layout = master.GetLayout(4);
 slide.ApplyLayout(layout);
-
 ```

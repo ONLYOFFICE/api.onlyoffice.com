@@ -18,20 +18,19 @@ expression.SetRightMargin(nPoints);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example sets the right margin of the sheet.
+Set the right margin width for printed pages in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set margin of the right side.
+// How do I control the empty space along the right edge when printing in a spreadsheet?
 
-// Resize the right margin of the sheet.
+// Determine how much blank space appears between your data and the right page boundary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRightMargin(20.8);
 let rightMargin = worksheet.GetRightMargin();
 worksheet.GetRange("A1").SetValue("Right margin: " + rightMargin + " mm");
-
 ```

@@ -22,10 +22,13 @@ expression.SetHeight(nHeight);
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。
+在添加到电子表格之前定义自定义形状路径的垂直大小。
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I control how tall a custom shape path is in a spreadsheet?
+
+// Assign a specific height to a drawn path so it scales correctly within the sheet in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

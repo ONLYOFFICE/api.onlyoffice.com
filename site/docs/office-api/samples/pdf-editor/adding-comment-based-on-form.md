@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Add comments to a document based on form field selections.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Adding comment based on form
@@ -8,7 +10,7 @@ Add contextual comments to a document automatically based on form field selectio
 
 - create a survey form with radio button options ([Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [ApiCheckBoxForm/SetRadioGroup](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetRadioGroup.md));
 - detect when a specific option is selected ([ApiCheckBoxForm/IsChecked](/docs/office-api/usage-api/form-api/ApiCheckBoxForm/Methods/IsChecked.md));
-- automatically add a comment to flag the selection for review ([Api/AddComment](/docs/office-api/usage-api/text-document-api/Api/Methods/AddComment.md)).
+- automatically add a comment to flag the selection for review ([Api/AddComment](/docs/office-api/usage-api/document-api/Api/Methods/AddComment.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

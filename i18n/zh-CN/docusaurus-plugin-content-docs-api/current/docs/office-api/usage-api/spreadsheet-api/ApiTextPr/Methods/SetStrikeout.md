@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示时在行的中心有一条水平线。
+在电子表格中为形状内文本绘制删除线。
 
 ```javascript editor-xlsx
-// How to strike out a text with one line.
+// How do I mark text as deleted or crossed out in a spreadsheet?
 
-// Cross out a text with one line.
+// Visually cancel text by running a line through it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

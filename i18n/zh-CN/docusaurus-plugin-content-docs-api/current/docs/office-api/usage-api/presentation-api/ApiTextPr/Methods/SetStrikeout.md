@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示时在行的中心有一条水平线。
+在演示文稿中为文本绘制删除线。
 
 ```javascript editor-pptx
-// How to strike out a text with one line.
+// Can I add a strikethrough effect to text in a presentation?
 
-// Get the text properties of the run and cross it out.
+// Enable a horizontal line that crosses through the center of the text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

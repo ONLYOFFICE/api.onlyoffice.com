@@ -23,9 +23,13 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例展示如何对形状内段落中的所有文本应用下划线格式。
+在电子表格中形状内为段落的所有文本添加下划线。
 
 ```javascript editor-xlsx
+// How do I make every word in a paragraph appear underlined in a spreadsheet?
+
+// Turn on underlining for an entire paragraph to visually emphasize its content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 140, 140));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -44,5 +48,4 @@ paragraph.SetUnderline(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not underlined.');
 content.Push(paragraph2);
-
 ```

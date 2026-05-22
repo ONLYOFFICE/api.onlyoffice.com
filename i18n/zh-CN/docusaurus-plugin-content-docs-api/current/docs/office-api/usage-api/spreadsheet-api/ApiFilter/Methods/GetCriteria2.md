@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-此示例读取筛选的第二个条件。
+检索列筛选器的辅助条件以查看电子表格中应用于数据的两个规则。
 
 ```javascript editor-xlsx
-// How to inspect the additional condition of an AutoFilter column.
+// How do I check the second filtering rule on a column when two conditions are combined in a spreadsheet?
 
-// Use ApiFilter.GetCriteria2() to get the second filter criterion.
+// Inspect the additional constraint set on a filter and display its value alongside the first rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Criteria2 (second condition):");
     worksheet.GetRange("D1").SetValue(filter.GetCriteria2());
 }
-
 ```

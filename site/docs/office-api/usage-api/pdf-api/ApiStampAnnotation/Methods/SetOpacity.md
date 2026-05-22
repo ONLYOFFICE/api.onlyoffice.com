@@ -1,0 +1,22 @@
+# SetOpacity
+
+Sets annotation opacity.
+
+Inherited from [ApiBaseAnnotation.SetOpacity](../../ApiBaseAnnotation/Methods/SetOpacity.md).
+
+## Example
+
+Make an annotation transparent or opaque in a PDF.
+
+```javascript editor-pdf
+// Adjust the transparency level of an annotation in a PDF.
+
+// Control how solid or see-through an annotation appears in a PDF.
+
+let doc = Api.GetDocument();
+let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
+let page = doc.GetPage(0);
+page.AddObject(squareAnnot);
+squareAnnot.SetFillColor(Api.RGB(255, 0, 0));
+squareAnnot.SetOpacity(50);
+```

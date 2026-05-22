@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets rect diff to square annotation.
+Adjust the spacing around a square annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I change the padding of a square annotation in a PDF?
+
+// Modify the margin between an annotation and its border in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

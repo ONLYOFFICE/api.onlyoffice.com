@@ -2,32 +2,16 @@
 
 Sets the border color to the current form.
 
-## Syntax
-
-```javascript
-expression.SetBorderColor(color);
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Optional | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | The border color. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
 ## Example
 
-This example sets the border color to the form.
+Apply a border color to a form field to highlight it in a document.
 
 ```javascript editor-forms
-// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+// How do I change the border color of a form field in a document?
 
-// Define the border color of the date form.
+// Style the outline of a form field with a specific color to draw attention to it in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

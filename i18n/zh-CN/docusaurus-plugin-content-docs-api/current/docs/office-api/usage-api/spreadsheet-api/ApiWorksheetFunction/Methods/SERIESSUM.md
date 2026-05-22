@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何根据公式返回幂级数的和。
+在电子表格中基于公式返回幂级数之和。
 
 ```javascript editor-xlsx
-// How to calculate the sum of a power series.
+// Calculate the sum of a power series using the SERIESSUM function.
 
-// Use a function to sum up a power series using a formula.
+// Apply the function to compute and display the result in a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

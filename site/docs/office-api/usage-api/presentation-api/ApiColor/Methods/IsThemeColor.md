@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to check if the color used in a shape fill is a theme color.
+Determine whether a fill color comes from the design theme or is a custom color in a presentation.
 
 ```javascript editor-pptx
+// How do I check if a color is a theme color or a standalone color in a presentation?
+
+// Verify if a fill uses a theme-based color in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ run.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
 run.AddText('\nIs themeColor a theme color? ' + themeColor.IsThemeColor());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

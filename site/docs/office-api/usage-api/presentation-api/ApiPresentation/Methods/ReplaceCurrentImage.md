@@ -24,12 +24,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to replace the current image with an image specified.
+Swap an image for a different one in a presentation.
 
 ```javascript editor-pptx
-// How to replace an image with another one.
+// How do I replace an image with another image in a presentation?
 
-// Replace the current ApiImage with another image on the slide.
+// Replace the selected image by loading a new one from a URL.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,5 +42,4 @@ const drawing = Api.CreateImage(url1, 300 * 36000, 150 * 36000);
 slide.AddObject(drawing);
 drawing.Select();
 presentation.ReplaceCurrentImage(url2, 60 * 36000, 60 * 36000);
-
 ```

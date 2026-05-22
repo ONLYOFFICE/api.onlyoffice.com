@@ -2,30 +2,16 @@
 
 Returns the border color of the current form.
 
-## Syntax
-
-```javascript
-expression.GetBorderColor();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiColor](../../../text-document-api/ApiColor/ApiColor.md)
+Inherited from [ApiFormBase.GetBorderColor](../../ApiFormBase/Methods/GetBorderColor.md).
 
 ## Example
 
-This example shows how to get the border color of a form.
+Read the border color of a form field in a document.
 
 ```javascript editor-forms
-// How to get the border color of a text form.
+// How do I get the border color of a form field in a document?
 
-// Retrieve the border color of a created text form and display it.
+// Verify a custom border color by reading its RGB values back after applying it.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
@@ -36,5 +22,4 @@ let borderColor = textForm.GetBorderColor();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Border color (RGB): (" + borderColor.r + ", " + borderColor.g + ", " + borderColor.b + ")");
 doc.Push(paragraph);
-
 ```

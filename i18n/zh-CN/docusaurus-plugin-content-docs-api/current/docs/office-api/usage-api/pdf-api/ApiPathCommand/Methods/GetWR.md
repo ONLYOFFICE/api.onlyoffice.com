@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析页面形状中的弧线命令参数。
+从 PDF 中的弧路径命令提取宽度半径值。
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// How can I get the width radius of an arc in a PDF?
+
+// Retrieve the arc's horizontal radius measurement in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

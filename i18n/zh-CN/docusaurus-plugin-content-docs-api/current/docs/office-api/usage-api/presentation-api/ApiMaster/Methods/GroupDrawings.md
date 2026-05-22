@@ -22,12 +22,12 @@ expression.GroupDrawings(aDrawings);
 
 ## 示例
 
-此示例演示如何在母版幻灯片上分组绘图。
+在幻灯片母版上将多个绘图对象分组。
 
 ```javascript editor-pptx
-// How to group drawings on master slide.
+// Create two shapes with different colors and add them to the master.
 
-// Create two shapes and group them. on master slide
+// Group the shapes together using the GroupDrawings method on the master.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ shape2.SetPosition(608400, 1400000);
 master.AddObject(shape1);
 master.AddObject(shape2);
 master.GroupDrawings([shape1, shape2]);
-
 ```

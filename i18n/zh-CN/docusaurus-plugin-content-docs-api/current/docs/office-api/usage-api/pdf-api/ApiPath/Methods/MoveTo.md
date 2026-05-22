@@ -23,10 +23,13 @@ expression.MoveTo(x, y);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。
+设置 PDF 中绘制形状的起始点。
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// Where do I begin drawing a custom shape in a PDF?
+
+// Position the cursor before adding lines to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

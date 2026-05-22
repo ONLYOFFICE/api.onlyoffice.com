@@ -22,12 +22,12 @@ expression.SetSolved(bSolved);
 
 ## 示例
 
-此示例将批注标记为已解决。
+将电子表格中的批注标记为已解决以关闭讨论。
 
 ```javascript editor-xlsx
-// How to resolve a comment.
+// How do I set a comment's status to resolved so others know it has been addressed in a spreadsheet?
 
-// Resolve a comment, then show its status in the worksheet.
+// Flag a comment as finished to signal that the raised issue no longer needs attention in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

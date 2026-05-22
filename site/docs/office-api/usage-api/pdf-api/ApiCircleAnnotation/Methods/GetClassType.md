@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of circle annotation.
+Get the class type of a circle annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I find out what class type a circle annotation is in a PDF?
+
+// Identify a circle annotation object by its class type identifier in a PDF.
+
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

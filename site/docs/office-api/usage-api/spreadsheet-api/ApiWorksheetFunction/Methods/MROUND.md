@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a number rounded to the desired multiple.
+Round a number to the nearest multiple of another value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round the number.
+// What is a number rounded to a specific multiple in a spreadsheet?
 
-// Use a function to round the number.
+// Adjust a value to the closest increment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

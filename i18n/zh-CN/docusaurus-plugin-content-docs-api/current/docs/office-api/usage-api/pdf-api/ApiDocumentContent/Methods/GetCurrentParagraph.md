@@ -20,9 +20,13 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-此示例返回文档内容中的当前段落。
+访问 PDF 中形状内当前活动的段落。
 
 ```javascript editor-pdf
+// How do I find the paragraph being edited in a PDF?
+
+// Retrieve the most recent paragraph that was added to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,5 +48,4 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 page.AddObject(shape);
-
 ```

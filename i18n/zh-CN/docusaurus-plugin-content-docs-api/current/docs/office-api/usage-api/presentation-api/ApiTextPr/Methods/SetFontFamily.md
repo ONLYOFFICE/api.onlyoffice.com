@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-此示例使用指定的字体系列设置所有 4 个字体槽。
+更改演示文稿中文本的字体。
 
 ```javascript editor-pptx
-// How to change a text font family.
+// What fonts can I use for text in a presentation?
 
-// Get the text properties of the run and set its font family.
+// Configure all font style slots to use a specific font family in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font family set to 'Comic Sans MS' using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

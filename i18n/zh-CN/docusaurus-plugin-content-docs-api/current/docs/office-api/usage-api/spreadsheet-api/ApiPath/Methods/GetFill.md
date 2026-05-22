@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-分析云形状路径属性并在单元格中显示它们。
+读取自定义形状路径的填充设置并在电子表格中显示形状属性。
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How do I check whether a path inside a custom shape is filled in a spreadsheet?
+
+// Inspect path dimensions, stroke, and fill values to understand how a shape is drawn in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

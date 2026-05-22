@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回角的正割。
+在电子表格中返回角度的正割值。
 
 ```javascript editor-xlsx
-// How to get angle's secant.
+// Get the secant value of an angle using the SEC function.
 
-// Use a function to calculate the secant of an angle.
+// Apply the function to calculate and display the result in a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回区域中值的第 k 个百分位数。
+查找电子表格中数字范围内指定百分位的值。
 
 ```javascript editor-xlsx
-// How to get the k-th percentile of values.
+// How do I calculate the k-th percentile of a dataset in a spreadsheet?
 
-// Use a function to get the k-th percentile.
+// Get the value below which a given percentage of data falls in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

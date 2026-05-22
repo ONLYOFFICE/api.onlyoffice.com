@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets commit on selection change prop to field with list of options.
+Enable auto-submission when a dropdown selection changes in a PDF.
 
 ```javascript editor-pdf
+// How do I make a field auto-submit when the selection changes in a PDF?
+
+// Configure a dropdown to trigger form submission on selection in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

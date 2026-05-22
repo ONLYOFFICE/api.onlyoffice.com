@@ -25,10 +25,13 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+在 PDF 中从一个点到另一个点绘制弧线。
 
 ```javascript editor-pdf
-// Demonstrates different curve types in a single path on a page.
+// How do I add an arc to a custom shape in a PDF?
+
+// Connect two points with a curved arc segment in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

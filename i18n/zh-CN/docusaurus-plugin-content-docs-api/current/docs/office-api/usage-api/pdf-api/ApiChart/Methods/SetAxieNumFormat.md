@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何更改左轴标签的数字格式。
+格式化 PDF 中图表轴上的数字。
 
 ```javascript editor-pdf
-// Create a chart then set its axis number format.
+// How do I control how numbers appear on a chart's axis in a PDF?
+
+// Change the number format of axis labels in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -43,5 +45,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

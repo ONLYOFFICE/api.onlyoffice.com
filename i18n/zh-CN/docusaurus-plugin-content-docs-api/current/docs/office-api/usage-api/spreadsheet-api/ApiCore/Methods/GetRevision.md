@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取当前工作簿的修订版本。
+检索电子表格中分配给工作簿的修订标签。
 
 ```javascript editor-xlsx
+// How do I read the revision identifier stored for a workbook in a spreadsheet?
+
+// Display the current revision marker recorded in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Revision: " + revision);
-
 ```

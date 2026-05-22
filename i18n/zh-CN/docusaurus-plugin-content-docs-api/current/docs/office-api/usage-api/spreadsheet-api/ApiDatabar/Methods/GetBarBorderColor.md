@@ -20,12 +20,12 @@ expression.GetBarBorderColor();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取条边框颜色。
+读取电子表格中应用于数据条的边框颜色。
 
 ```javascript editor-xlsx
-// How to retrieve the border color of a data bar.
+// How do I find out what border color is used on data bars in a spreadsheet?
 
-// Get the bar border color of a data bar conditional formatting rule.
+// Inspect the outline color of data bars to verify their visual style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let borderColor = dataBar.GetBarBorderColor();
 
 worksheet.GetRange("C1").SetValue("Border Color:");
 worksheet.GetRange("C2").SetValue(borderColor ? "Set" : "None");
-
 ```

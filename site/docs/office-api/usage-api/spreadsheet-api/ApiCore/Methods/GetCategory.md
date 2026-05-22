@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the category of the workbook using the ApiCore.
+Read the category assigned to a workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out what category a workbook belongs to in a spreadsheet?
+
+// Display the workbook category stored in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Category: " + category);
-
 ```

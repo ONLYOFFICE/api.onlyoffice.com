@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets callout of freeText annotation.
+Extract the callout shape used by a text annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I find the shape of a comment box in a PDF?
+
+// Retrieve the callout style from a text annotation in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取页面对象类类型并在文本字段中显示。
+识别 PDF 中页面的对象类型。
 
 ```javascript editor-pdf
+// How do I determine what kind of object this is in a PDF?
+
+// Retrieve the classification name for this element in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);

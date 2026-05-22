@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定作为背景应用于文本块内容的高亮颜色。
+在电子表格中用背景颜色高亮显示文本运行。
 
 ```javascript editor-xlsx
-// How to color a text object background.
+// How do I add a colored background behind a run of text in a spreadsheet?
 
-// Create a text run object, add color to its background.
+// Draw attention to a specific run by filling its background with a named highlight color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

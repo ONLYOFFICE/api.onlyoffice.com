@@ -20,9 +20,13 @@ expression.GetAllSlides();
 
 ## 示例
 
-此示例演示如何获取当前演示文稿中的所有幻灯片。
+列出演示文稿中的所有幻灯片。
 
 ```javascript editor-pptx
+// How do I access every slide I created in a presentation?
+
+// Add new slides and count the total in a presentation.
+
 const presentation = Api.GetPresentation();
 const firstSlide = presentation.GetSlideByIndex(0);
 
@@ -40,5 +44,4 @@ firstSlide.AddObject(shape);
 
 const paragraph =  shape.GetContent().GetElement(0);
 paragraph.AddText('Total slides count: ' + slides.length);
-
 ```

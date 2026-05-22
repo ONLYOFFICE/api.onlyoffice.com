@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Get the type of a gradient stop object in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiGradientStop.
+// How do I identify what type a gradient stop is in a presentation?
 
-// Retrieve class type of ApiGradientStop object and insert it to the slide.
+// Retrieve the class name for a gradient stop object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

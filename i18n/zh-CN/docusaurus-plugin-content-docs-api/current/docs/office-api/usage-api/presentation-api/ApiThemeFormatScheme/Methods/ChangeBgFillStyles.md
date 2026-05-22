@@ -14,7 +14,7 @@ expression.ChangeBgFillStyles(arrBgFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrBgFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md)[] |  | 背景填充样式数组必须包含 3 个元素 - 细微、中等和强烈填充。如果数组为空或数组中有 NoFill 元素，将使用 Api.CreateNoFill() 元素填充。 |
+| arrBgFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md)[] |  | 背景填充样式数组必须包含 3 个元素 - 微妙、适中和强烈填充。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.ChangeBgFillStyles(arrBgFill);
 
 ## 示例
 
-此示例为当前主题格式方案设置背景填充样式。
+更改演示文稿中主题格式方案中的背景填充样式。
 
 ```javascript editor-pptx
-// How to change background fill styles of a format scheme.
+// How do I update the background fill styles of a format scheme in a presentation?
 
-// Get format scheme and update its background fill styles, adding pattern, solid and radial fills.
+// Get a format scheme and replace its background fill styles in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -67,5 +67,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

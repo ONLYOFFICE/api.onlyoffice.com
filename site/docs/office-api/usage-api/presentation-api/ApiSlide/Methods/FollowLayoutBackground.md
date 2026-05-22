@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example sets the layout background as the background of the slide.
+Apply a layout's background to a slide in a presentation.
 
 ```javascript editor-pptx
-// How to set a slide's background same as the layout's.
+// How do I use a layout's background for a slide in a presentation?
 
-// Get a slide by its index and set its background as its layout.
+// Set the slide's background to match the layout it uses in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -35,5 +35,4 @@ const layout = master.GetLayout(0);
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
-
 ```

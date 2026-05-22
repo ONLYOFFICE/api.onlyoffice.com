@@ -2,7 +2,6 @@
 
 Represents the ApiGeometry class.
 
-
 ## Methods
 
 | Method | Returns | Description |

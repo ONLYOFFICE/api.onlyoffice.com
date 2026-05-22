@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
+Position text above or below the baseline in a PDF.
 
 ```javascript editor-pdf
-// How to change a vertical alignment of a text run.
+// Can text be raised or lowered relative to normal text in a PDF?
 
-// Create a new text run and make it subscript, baseline or superscript.
+// Align text vertically as superscript or subscript in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,7 +40,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 
 let run = Api.CreateRun();
@@ -62,5 +62,4 @@ run.SetVertAlign("superscript");
 run.AddText("This is a text run with the text aligned above the baseline vertically.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

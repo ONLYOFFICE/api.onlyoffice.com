@@ -14,11 +14,11 @@
 - [ApiPictureForm](../ApiPictureForm/ApiPictureForm.md)
 - [ApiDateForm](../ApiDateForm/ApiDateForm.md)
 - [ApiComplexForm](../ApiComplexForm/ApiComplexForm.md)
-
+- [ApiSignatureForm](../ApiSignatureForm/ApiSignatureForm.md)
 
 ## 示例
 
-此示例复制文本表单。
+复制文本表单。
 
 ```javascript editor-forms
 // Get a form and create its copy. 

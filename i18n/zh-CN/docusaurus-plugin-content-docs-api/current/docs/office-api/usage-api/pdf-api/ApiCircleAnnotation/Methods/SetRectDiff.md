@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为圆形注释设置矩形差异。
+调整 PDF 中圆形注释的边框宽度差异。
 
 ```javascript editor-pdf
+// How do I control the border thickness offset for a circle annotation in a PDF?
+
+// Apply rect difference values to a circle annotation in a PDF.
+
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

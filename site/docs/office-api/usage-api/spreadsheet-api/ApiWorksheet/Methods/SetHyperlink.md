@@ -22,19 +22,18 @@ expression.SetHyperlink(sRange, sAddress, subAddress, sScreenTip, sTextToDisplay
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example adds a hyperlink to the specified range.
+Attach a clickable hyperlink to a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add hyperlinks to the range.
+// How do I add a hyperlink to a cell in a spreadsheet?
 
-// Add a hyperlink to the cell.
+// Link a cell to an external URL so users can navigate to it directly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 const logoUrl = 'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png';
 worksheet.SetHyperlink('A1', logoUrl, 'Api ONLYOFFICE', 'ONLYOFFICE for developers');
-
 ```

@@ -20,9 +20,13 @@ string \| null
 
 ## Example
 
-This example shows how to get the chart title text.
+Read the title text from an existing chart in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I retrieve the current title of a chart in a spreadsheet?
+
+// Access the label displayed at the top of a chart in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue(2014);
 worksheet.GetRange('C1').SetValue(2015);
@@ -39,5 +43,4 @@ chart.SetTitle('Financial Overview', 13);
 
 const chartTitle = chart.GetTitle();
 worksheet.GetRange('E1').SetValue('Chart Title: ' + chartTitle);
-
 ```

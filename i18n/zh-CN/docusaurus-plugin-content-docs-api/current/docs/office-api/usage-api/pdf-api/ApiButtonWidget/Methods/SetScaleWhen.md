@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置按钮控件的缩放时机类型。
+在 PDF 文档中设置按钮控件的缩放条件类型。
 
 ```javascript editor-pdf
+// Configure when to scale the button icon using scale when property.
+
+// Display the set scale when value using the widget label.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

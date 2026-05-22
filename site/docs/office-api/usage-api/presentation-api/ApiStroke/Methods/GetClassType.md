@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Identify the type of a border line in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiStroke.
+// How do I check what kind of object a border line is in a presentation?
 
-// Retrieve class type of ApiStroke object and insert it to the slide.
+// Read the class type from a stroke and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

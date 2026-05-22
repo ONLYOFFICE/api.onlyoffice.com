@@ -20,9 +20,13 @@ expression.GetThemeName();
 
 ## 示例
 
-此示例展示如何获取形状填充中使用的主题颜色名称。
+检索应用于电子表格中形状的主题颜色名称。
 
 ```javascript editor-xlsx
+// How do I find out which theme color name is assigned to a fill in a spreadsheet?
+
+// Look up the built-in theme color label behind a shape's fill and print it to a cell in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const themeColor = Api.ThemeColor('accent1');
 
@@ -31,5 +35,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
 worksheet.GetRange("A12").SetValue("Theme name: " + themeColor.GetThemeName());
-
 ```

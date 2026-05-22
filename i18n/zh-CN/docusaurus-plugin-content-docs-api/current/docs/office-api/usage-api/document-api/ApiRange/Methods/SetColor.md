@@ -1,0 +1,42 @@
+# SetColor
+
+为当前文本范围设置文本颜色。
+
+## 语法
+
+```javascript
+expression.SetColor(color);
+```
+
+`expression` - 表示 [ApiRange](../ApiRange.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 文本颜色。 |
+
+## 返回值
+
+[ApiRange](../../ApiRange/ApiRange.md) \| null
+
+## 示例
+
+更改文档中文本范围的颜色。
+
+```javascript editor-docx
+// How do I apply a specific color to a portion of text in a document?
+
+// Give selected words a distinct color to draw attention to them in a document.
+
+const doc = Api.GetDocument();
+const firstParagraph = doc.GetElement(0);
+firstParagraph.AddText('ONLYOFFICE Document Builder');
+
+const companyRange = doc.GetRange(1, 11);
+companyRange.SetColor(Api.HexColor('#FF6F3D'));
+
+const productRange = doc.GetRange(12, 30);
+const themeColor = Api.ThemeColor('accent1');
+productRange.SetColor(themeColor);
+```

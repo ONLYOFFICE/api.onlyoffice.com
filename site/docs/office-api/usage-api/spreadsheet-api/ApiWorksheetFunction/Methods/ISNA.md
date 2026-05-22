@@ -14,7 +14,7 @@ expression.ISNA(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | The value to test. The value can be an empty cell, error, logical value, text, number, range, or range name. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | The value to test. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to check whether a value is N/A, and returns true or false.
+Identify whether a cell displays an N/A error in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check if the cell contains N/A value.
+// How do I check if a cell contains the N/A error in a spreadsheet?
 
-// Use a function to check whether a range data is an N/A value.
+// Use a function to find cells with N/A errors and handle them appropriately in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

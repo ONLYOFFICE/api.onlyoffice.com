@@ -13,12 +13,14 @@ Enumeration
 - "slides"
 - "text"
 
-
 ## Example
 
-This example gets type of a current selection.
+Get the type of a current selection.
 
 ```javascript editor-pptx
-const selectionType = Api.GetSelection().GetType();
+// Use the GetType method to retrieve the selection type.
 
+// The returned value is a string representing the selection type.
+
+const selectionType = Api.GetSelection().GetType();
 ```

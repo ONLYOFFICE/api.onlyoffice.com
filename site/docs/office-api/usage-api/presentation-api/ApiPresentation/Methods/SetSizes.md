@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the size to the current presentation.
+Change the dimensions of a presentation.
 
 ```javascript editor-pptx
-// How to specify the sizes of the current presentation.
+// How do I adjust the width and height of a presentation?
 
-// Set the width and height of the ApiPesentation object.
+// Set custom width and height values and display the new size.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -45,5 +45,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("The size of this presentation was changed: width - 254 mm, height - 190 mm.");
 slide.AddObject(shape);
-
 ```

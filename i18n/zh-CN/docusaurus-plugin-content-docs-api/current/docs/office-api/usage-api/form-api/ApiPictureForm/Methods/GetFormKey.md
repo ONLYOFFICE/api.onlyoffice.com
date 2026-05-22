@@ -2,30 +2,16 @@
 
 返回当前表单的键。
 
-## 语法
-
-```javascript
-expression.GetFormKey();
-```
-
-`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiFormBase.GetFormKey](../../ApiFormBase/Methods/GetFormKey.md)。
 
 ## 示例
 
-此示例展示如何获取表单键。
+检索分配给文档中表单字段的键。
 
 ```javascript editor-forms
-// How get a key of a comboBox form.
+// How do I get the key of a form field in a document?
 
-// Retrieve key of a created comboBox form object and display it.
+// Confirm the grouping key of a combo box by reading it back and displaying it.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

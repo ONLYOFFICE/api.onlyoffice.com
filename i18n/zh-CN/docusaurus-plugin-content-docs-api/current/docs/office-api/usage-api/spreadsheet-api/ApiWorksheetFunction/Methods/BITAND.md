@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回两个数的按位 AND 运算结果。
+在电子表格中使用按位与比较两个数字。
 
 ```javascript editor-xlsx
-// How to get a two numbers bitwise AND.
+// What do two numbers share at the binary level in a spreadsheet?
 
-// Use function to calculate bitwise AND opertation.
+// Get the common bits between two values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

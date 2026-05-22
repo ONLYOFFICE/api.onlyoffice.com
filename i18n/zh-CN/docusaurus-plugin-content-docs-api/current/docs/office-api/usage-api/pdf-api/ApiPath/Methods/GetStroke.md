@@ -20,10 +20,13 @@ boolean
 
 ## 示例
 
-分析页面上云形状的路径属性。
+检查 PDF 中形状的轮廓是否已绘制以及其边框的外观。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// Does a custom shape have a visible border in a PDF?
+
+// Read the outline settings of a shape to see its stroke properties in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿的主题。
+设置和检索演示文稿的主题或标题字段。
 
 ```javascript editor-pptx
+// How do I access the subject information in a presentation?
+
+// Display the subject metadata stored in a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetSubject("ApiCore Method Showcase");
@@ -38,5 +42,4 @@ paragraph.AddText("Subject: " + subject);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

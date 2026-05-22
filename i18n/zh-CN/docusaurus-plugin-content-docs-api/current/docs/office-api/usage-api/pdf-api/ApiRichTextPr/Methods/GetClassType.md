@@ -16,13 +16,17 @@ expression.GetClassType();
 
 ## 返回值
 
-"textPr"
+"richTextPr"
 
 ## 示例
 
-此示例获取富文本属性对象的类类型。
+识别 PDF 中文本属性的对象类型。
 
 ```javascript editor-pdf
+// How do I determine what kind of object handles text formatting in a PDF?
+
+// Verify the class type of a text properties object in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

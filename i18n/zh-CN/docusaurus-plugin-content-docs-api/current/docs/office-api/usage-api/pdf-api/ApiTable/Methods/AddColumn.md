@@ -15,7 +15,7 @@ expression.AddColumn(oCell, isBefore);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 如果未指定，将在表格末尾添加新列。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新列。如果未指定单元格，则忽略此参数。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新列。如果未指定单元格， |
 
 ## 返回值
 
@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何向表格插入列。
+在 PDF 中向表格插入新列
 
 ```javascript editor-pdf
-// Create a 2x4 table, set its position and then insert a column to it.
+// Can I add more columns to an existing table in a PDF?
+
+// Attach a column at a specific position within a table in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

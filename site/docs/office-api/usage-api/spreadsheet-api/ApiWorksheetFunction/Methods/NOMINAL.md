@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the annual nominal interest rate.
+Calculate the annual nominal interest rate in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the annual nominal interest rate.
+// Find the stated interest rate from effective rate and compounding periods in a spreadsheet.
 
-// Use a function to get the annual nominal interest rate.
+// Convert compounded interest into annual percentage rate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

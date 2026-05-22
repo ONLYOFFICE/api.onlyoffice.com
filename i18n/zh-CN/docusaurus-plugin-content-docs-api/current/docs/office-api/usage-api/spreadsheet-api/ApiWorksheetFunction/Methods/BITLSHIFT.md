@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回按指定位数左移后的数字。
+在电子表格中将数字向左移动给定的位数。
 
 ```javascript editor-xlsx
-// How to get a result from bits left shift.
+// What happens when you move the binary representation leftward in a spreadsheet?
 
-// Use function to calculate bitwise left shift operation.
+// Multiply a value by moving its bits toward higher positions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

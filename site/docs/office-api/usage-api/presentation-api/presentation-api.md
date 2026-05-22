@@ -4,7 +4,7 @@ sidebar_position: -3
 
 # Presentation API
 
-A presentation document has a more simple structure than that of a text document, most of the presentation elements are nested within the *slide* element with all the other elements placed on it. The single or multiple *slide* elements are a part of the *presentation* element.
+A presentation document has a more simple structure than that of a document, most of the presentation elements are nested within the *slide* element with all the other elements placed on it. The single or multiple *slide* elements are a part of the *presentation* element.
 
 If you need all the slides to contain the same fonts and images, the *slide master* should be used. It consists of the same elements as the *slide*.
 
@@ -16,7 +16,7 @@ The text cannot be placed directly to the *slide*, it can be only grouped to *pa
 
 The simplest example presentation with a single slide without any objects can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` ts
+```ts
 // create a presentation file in the .pptx format with ONLYOFFICE Document Builder
 builder.CreateFile("pptx");
 
@@ -40,7 +40,7 @@ builder.CloseFile();
 
 If you want to edit an already existing presentation, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The presentation is opened the following way:
 
-``` ts
+```ts
 // use a path or URL to an existing 'mypresentation.pptx' presentation file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/mypresentation.pptx");
 

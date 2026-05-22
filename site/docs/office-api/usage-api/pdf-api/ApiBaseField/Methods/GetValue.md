@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example gets value from first text field and sets to second text field.
+Copy the text from one form field to another in a PDF.
 
 ```javascript editor-pdf
+// How do I read the value entered in a form field in a PDF?
+
+// Transfer text content between form fields in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -34,5 +38,4 @@ page.AddObject(textField2);
 
 textField1.SetValue('Name Surname');
 textField2.SetValue(textField1.GetValue());
-
 ```

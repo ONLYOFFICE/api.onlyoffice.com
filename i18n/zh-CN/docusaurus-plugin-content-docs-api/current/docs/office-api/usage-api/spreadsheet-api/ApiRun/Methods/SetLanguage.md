@@ -14,7 +14,7 @@ expression.SetLanguage(sLangId);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | 必需 | string |  | 此参数的可能值是 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。 |
+| sLangId | 必需 | string |  | 此参数的可能值为由 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+为文本运行分配语言，使电子表格中的拼写和语法检查使用正确的规则。
 
 ```javascript editor-xlsx
-// How to set a language to the text for grammar checking.
+// How do I set the proofreading language for a piece of text in a spreadsheet?
 
-// Create a text run object, change its language to English for grammar check.
+// Mark text with a specific locale so the editor checks it against the right dictionary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

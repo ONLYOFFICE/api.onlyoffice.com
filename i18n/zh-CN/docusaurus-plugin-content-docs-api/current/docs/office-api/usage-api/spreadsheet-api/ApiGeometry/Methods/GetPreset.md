@@ -20,10 +20,13 @@ expression.GetPreset();
 
 ## 示例
 
-从电子表格中的星形中检索几何信息。
+读取分配给电子表格中形状的内置形状模板名称。
 
 ```javascript editor-xlsx
-// Displays preset type and custom status in cells.
+// How do I find out which standard shape template a shape is based on in a spreadsheet?
+
+// Identify the predefined outline category that describes a shape's form in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));

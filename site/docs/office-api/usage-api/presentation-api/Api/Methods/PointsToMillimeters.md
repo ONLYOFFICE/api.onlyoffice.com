@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to millimeters.
+Convert points to millimeters and display the result in a presentation.
 
 ```javascript editor-pptx
+// Use Api.PointsToMillimeters to convert measurement units.
+
+// Display the converted value in a shape text.
+
 const points = 100;
 const millimeters = Api.PointsToMillimeters(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the next paragraph.
+Get the next paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to get the next paragraph of the current one.
+// How do I navigate to the following paragraph in a presentation?
 
-// Return the next paragraph on the slide and make its text bold.
+// Move to the next paragraph and format it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ docContent.Push(paragraph2);
 slide.AddObject(shape);
 const nextParagraph = paragraph1.GetNext();
 nextParagraph.SetBold(true);
-
 ```

@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to calculate the greatest common divisor.
+Find the greatest common divisor of multiple numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find the greatest common divisor.
+// How do I determine the largest number that divides all my values evenly in a spreadsheet?
 
-// Use a function to calculate the greatest common divisor.
+// Get the highest common factor for a set of integers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

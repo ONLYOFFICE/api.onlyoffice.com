@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取透视字段的分类汇总名称。
+读取电子表格中分配给透视字段的自定义小计标签。
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotal name.
+// How do I check what label a pivot field's subtotal row is using in a spreadsheet?
 
-// Create a pivot table, add data to it then get subtotal name of a specified pivot field.
+// Confirm the subtotal name after applying a custom label to a pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,9 +20,13 @@ expression.GetNext();
 
 ## 示例
 
-此示例获取下一个富文本段落并向其添加一些文本。
+移动到 PDF 中的下一个段落。
 
 ```javascript editor-pdf
+// How do I navigate to the next paragraph in a PDF?
+
+// Jump to the subsequent paragraph and work with it in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

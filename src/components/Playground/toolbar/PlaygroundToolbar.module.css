@@ -124,6 +124,78 @@
     transform: rotate(180deg);
 }
 
+/* Settings Button */
+.SettingsButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-600);
+    transition: all var(--ifm-transition-fast) ease;
+}
+
+.SettingsButton:hover {
+    border-color: var(--ifm-color-primary-dark);
+    color: var(--ifm-color-primary-dark);
+}
+
+html[data-theme='dark'] .SettingsButton:hover {
+    border-color: var(--ifm-color-primary-light);
+    color: var(--ifm-color-primary-light);
+}
+
+.SettingsButtonActive {
+    color: var(--ifm-color-primary);
+    background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+    border-color: color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+}
+
+.SettingsButton.SettingsButtonActive:hover {
+    background: color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
+}
+
+/* Settings Form */
+.SettingsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.SettingsLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.SettingsInput {
+    padding: 8px 12px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+    font-size: 13px;
+    font-family: var(--ifm-font-family-monospace);
+    transition: border-color var(--ifm-transition-fast) ease;
+}
+
+.SettingsInput:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+}
+
+.SettingsInput::placeholder {
+    color: var(--ifm-color-emphasis-400);
+}
+
 /* Radix UI AlertDialog Styles */
 .DialogOverlay {
     position: fixed;
@@ -213,6 +285,10 @@
     background: var(--ifm-color-primary-dark);
 }
 
+html[data-theme='dark'] .ConfirmButton:hover {
+    background: var(--ifm-color-primary-light);
+}
+
 .ConfirmButton:active {
     background: var(--ifm-color-primary-darker);
 }
@@ -234,6 +310,11 @@
 
 .CancelButton:hover {
     background: var(--ifm-hover-overlay);
+}
+
+.CancelButton:active {
+    transform: scale(0.97);
+    background: var(--ifm-color-emphasis-200);
 }
 
 @media (max-width: 767px) {

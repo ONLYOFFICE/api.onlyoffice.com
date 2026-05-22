@@ -22,9 +22,13 @@ expression.SetLanguage(sLanguage);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置工作簿的语言。
+在电子表格工作簿的文档属性中记录主要语言。
 
 ```javascript editor-xlsx
+// How do I specify the language used in a workbook's metadata in a spreadsheet?
+
+// Mark the workbook with a locale code so readers know which language it targets in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Language: " + language);
-
 ```

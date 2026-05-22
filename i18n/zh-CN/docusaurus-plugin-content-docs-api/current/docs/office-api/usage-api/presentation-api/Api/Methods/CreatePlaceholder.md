@@ -22,12 +22,12 @@ expression.CreatePlaceholder(sType);
 
 ## 示例
 
-此示例演示如何为形状创建占位符。
+在演示文稿中将形状标记为内容占位符。
 
 ```javascript editor-pptx
-// How to change a placeholder type of an object.
+// How do I assign a placeholder type to a shape in a presentation?
 
-// Add a placeholder to the shape.
+// Designate a shape as a picture placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ shape.SetSize(300 * 36000, 130 * 36000);
 const placeholder = Api.CreatePlaceholder("picture");
 shape.SetPlaceholder(placeholder);
 slide.AddObject(shape);
-
 ```

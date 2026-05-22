@@ -2,30 +2,16 @@
 
 返回当前格式条件应用的字体。
 
-## 语法
-
-```javascript
-expression.GetFont();
-```
-
-`expression` - 表示 [ApiTop10](../ApiTop10.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+继承自 [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md)。
 
 ## 示例
 
-此示例获取条件格式规则应用的字体。
+访问电子表格中条件格式规则应用于匹配单元格的字体设置。
 
 ```javascript editor-xlsx
-// How to retrieve font settings from conditional formatting rules.
+// How do I retrieve the text style that a conditional formatting rule uses for highlighted cells in a spreadsheet?
 
-// Get conditional formatting rule font.
+// Inspect and adjust the font of a formatting condition to ensure consistent text styling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +38,4 @@ if (font) {
 worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
-
 ```

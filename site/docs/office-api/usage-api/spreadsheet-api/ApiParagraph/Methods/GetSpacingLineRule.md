@@ -2,30 +2,16 @@
 
 Returns the paragraph line spacing rule.
 
-## Syntax
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"auto" \| "atLeast" \| "exact" \| undefined
+Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md).
 
 ## Example
 
-This example shows how to get the paragraph line spacing value.
+Read the line spacing rule applied to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get spacing line value between sentences of a paragraph.
+// How do I find out whether a paragraph's line height is set to auto or a fixed rule in a spreadsheet?
 
-// Create a paragraph set spacing line between the sentences and retrieve the value.
+// Verify the spacing mode of a paragraph after setting its line height to confirm the rule type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

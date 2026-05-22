@@ -23,10 +23,13 @@ expression.MoveTo(x, y);
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。
+在绘制自定义形状之前将绘图光标放在电子表格中的特定起点。
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I set the starting point for a custom shape path in a spreadsheet?
+
+// Position the pen at a chosen coordinate to begin building a new path outline in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

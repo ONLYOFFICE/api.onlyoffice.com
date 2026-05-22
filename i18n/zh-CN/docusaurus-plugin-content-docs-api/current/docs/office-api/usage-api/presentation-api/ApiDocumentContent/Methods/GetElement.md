@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-此示例演示如何获取元素。
+按位置访问演示文稿中形状内的特定段落。
 
 ```javascript editor-pptx
-// How to get an element from the content of a slide shape.
+// How do I retrieve a paragraph from a shape using its index number in a presentation?
 
-// Find an element from the shape using its index.
+// Get the first paragraph from a shape and format it with numbering in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ oParagraph.SetBullet(oBullet);
 oParagraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(oParagraph);
 slide.AddObject(shape);
-
 ```

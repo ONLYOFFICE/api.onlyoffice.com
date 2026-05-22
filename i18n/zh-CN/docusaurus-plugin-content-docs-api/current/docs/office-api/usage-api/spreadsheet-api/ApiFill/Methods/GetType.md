@@ -20,10 +20,13 @@ expression.GetType();
 
 ## 示例
 
-获取填充类型并显示。
+读取形状的填充样式以了解其在电子表格中是否使用纯色、渐变或无填充。
 
 ```javascript editor-xlsx
-// Creates shapes with different fill types and shows their types.
+// How do I determine what kind of fill is applied to a shape in a spreadsheet?
+
+// Inspect shapes with different fill styles and display each fill style name as a label in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 
 // Solid fill
@@ -46,5 +49,4 @@ let noFill = Api.CreateNoFill();
 let shape3 = worksheet.AddShape("rect", 50 * 36000, 30 * 36000, noFill, stroke, 3, 0, 2, 2);
 let fill3 = shape3.GetFill();
 worksheet.GetRange("A3").SetValue("No fill type: " + fill3.GetType());
-
 ```

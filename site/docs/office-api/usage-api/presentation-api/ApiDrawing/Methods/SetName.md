@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example sets the name of the current drawing.
+Assign a name to a shape on a slide in a presentation.
 
 ```javascript editor-pptx
+// How do I give a shape a custom name in a presentation?
+
+// Create a shape, assign it a name, and verify the name was applied in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Shape name was set to: ' + shape.GetName());
 slide.AddObject(shape);
-
 ```

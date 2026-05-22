@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取最后修改当前工作簿的用户名称。
+检索电子表格中最后编辑工作簿的人员姓名。
 
 ```javascript editor-xlsx
+// How do I find out who made the most recent change to a workbook in a spreadsheet?
+
+// Look up the last editor's name recorded in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified by: " + lastModifiedBy);
-
 ```

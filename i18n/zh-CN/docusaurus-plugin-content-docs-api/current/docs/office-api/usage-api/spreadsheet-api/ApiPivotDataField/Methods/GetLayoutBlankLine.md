@@ -2,30 +2,16 @@
 
 返回指定是否在每个项目后插入空白行的设置。
 
-## 语法
-
-```javascript
-expression.GetLayoutBlankLine();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/GetLayoutBlankLine.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局空白行。
+检查电子表格中透视字段的每组之后是否插入空行。
 
 ```javascript editor-xlsx
-// How to get a blank line layout of a pivot field.
+// How do I find out if a pivot field is set to add a blank line between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout blank line of a specified pivot field.
+// Confirm the blank-line spacing setting for a pivot field's row layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

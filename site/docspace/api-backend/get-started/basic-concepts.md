@@ -1,5 +1,5 @@
 ---
-sidebar_position: -6
+sidebar_position: -7
 ---
 
 # Basic concepts
@@ -7,7 +7,7 @@ sidebar_position: -6
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
 - creating and customizing rooms for collaboration;
-- creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
+- creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
 - inviting users to collaborate on files with them in real time.
 
 The ONLYOFFICE DocSpace API is implemented as REST over HTTP using GET/POST/PUT/DELETE. All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.

@@ -2,30 +2,16 @@
 
 返回指定数据透视表项目的显示方式 - 表格格式或大纲格式。
 
-## 语法
-
-```javascript
-expression.GetLayoutForm();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[PivotLayoutType](../../Enumeration/PivotLayoutType.md)
+继承自 [ApiPivotField.GetLayoutForm](../../ApiPivotField/Methods/GetLayoutForm.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局形式。
+读取电子表格中应用于透视字段的布局表单样式。
 
 ```javascript editor-xlsx
-// How to get a layout form of a pivot field.
+// How do I find out which layout form a pivot field is using in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout form of a specified pivot field.
+// Identify whether a pivot field is displayed in tabular, outline, or compact form in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

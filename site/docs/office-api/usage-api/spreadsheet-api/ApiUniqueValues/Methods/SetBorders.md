@@ -2,34 +2,16 @@
 
 Sets the border style for the conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.SetBorders(bordersIndex, lineStyle, oColor);
-```
-
-`expression` - A variable that represents a [ApiUniqueValues](../ApiUniqueValues.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bordersIndex | Required | [BordersIndex](../../Enumeration/BordersIndex.md) |  | Specifies the cell border position. |
-| lineStyle | Required | [LineStyle](../../Enumeration/LineStyle.md) |  | Specifies the line style used to form the cell border. |
-| oColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The color object which specifies the color to be set to the cell border. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetBorders](../../ApiFormatCondition/Methods/SetBorders.md).
 
 ## Example
 
-This example sets borders for a conditional formatting rule.
+Add colored borders to cells that match a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to apply border formatting to conditional formatting rules.
+// How do I make matching cells show a border when a formatting condition is met in a spreadsheet?
 
-// Set conditional formatting rule borders.
+// Highlight qualifying cells with edge lines through a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,5 +35,4 @@ condition1.SetBorders("Bottom", "Thick", borderColor);
 
 worksheet.GetRange("C1").SetValue("Borders applied:");
 worksheet.GetRange("C2").SetValue("Red thick top/bottom borders");
-
 ```

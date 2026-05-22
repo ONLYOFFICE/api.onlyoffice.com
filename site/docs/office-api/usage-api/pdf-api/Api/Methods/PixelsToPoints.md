@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert pixels to points.
+Convert pixels to points in a PDF document.
 
 ```javascript editor-pdf
+// The API method performs measurement unit conversion.
+
+// The result is displayed in a shape text element.
+
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);
 
@@ -38,5 +42,4 @@ paragraph.AddText(pixels + ' pixels are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ expression.GetFilters();
 
 ## 示例
 
-此示例从工作表自动筛选中读取筛选信息。
+检索电子表格中应用于列的活动筛选条件列表。
 
 ```javascript editor-xlsx
-// How to inspect the criteria of existing filters.
+// How do I read the criteria that each column filter is using in a spreadsheet?
 
-// Read ApiFilter objects using ApiAutoFilter.GetFilters().
+// Inspect what values or rules each column is being filtered by in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,5 +61,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C10").SetValue("Filter On:");
     worksheet.GetRange("C11").SetValue(f.On);
 }
-
 ```

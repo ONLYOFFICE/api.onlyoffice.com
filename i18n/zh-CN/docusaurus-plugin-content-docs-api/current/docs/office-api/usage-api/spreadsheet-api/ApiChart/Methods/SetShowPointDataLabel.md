@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-此示例指定图表数据标签的显示选项。
+配置电子表格中单个图表数据点的数据标签显示。
 
 ```javascript editor-xlsx
-// How to hide chart data labels using options.
+// How do I control what a data label shows for one specific point on a chart in a spreadsheet?
 
-// Show only values as chart lables with series index equal to 1 from the array of the data used to build the chart from.
+// Display only the numeric value as a label on an individual bar within a chosen chart series in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

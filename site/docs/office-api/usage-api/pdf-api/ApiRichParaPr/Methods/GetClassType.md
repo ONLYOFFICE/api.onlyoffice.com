@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of rich paragraph properties.
+Identify the data type of a paragraph properties object in a PDF.
 
 ```javascript editor-pdf
+// How do I determine what type an object is in a PDF?
+
+// Find the classification of a paragraph formatting object in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

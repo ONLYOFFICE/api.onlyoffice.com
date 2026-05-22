@@ -20,12 +20,12 @@ expression.GetSource();
 
 ## 示例
 
-此示例展示如何获取数据透视表的源。
+读取馈送电子表格中数据透视表的原始数据范围。
 
 ```javascript editor-xlsx
-// How to get table source and its address.
+// How do I find out which cells a pivot table is built from in a spreadsheet?
 
-// Create a pivot table, add data to it then get its source.
+// Trace the data behind a pivot table by reading its source address in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

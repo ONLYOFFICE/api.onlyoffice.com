@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all paragraphs from the document content of a shape.
+Collect every paragraph stored inside a shape's text area in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I retrieve the full list of paragraphs from the content of a shape in a spreadsheet?
+
+// Count or iterate all text paragraphs held within a drawing's content block in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -45,5 +49,4 @@ content.Push(p2);
 
 const paragraphs = content.GetAllParagraphs();
 worksheet.GetRange('A1').SetValue('Paragraph count: ' + paragraphs.length);
-
 ```

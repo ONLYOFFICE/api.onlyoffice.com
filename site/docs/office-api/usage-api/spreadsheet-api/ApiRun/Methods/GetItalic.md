@@ -2,30 +2,16 @@
 
 Gets the italic property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetItalic();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md).
 
 ## Example
 
-This example gets a text italic property.
+Check whether text is formatted as italic in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is italic or not.
+// How do I find out if text is displayed in italic style in a spreadsheet?
 
-// Get a text italic property as a boolean value.
+// Read the italic setting from a text style and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到 PDF 文档中。
+确定 PDF 中颜色对象的类类型。
 
 ```javascript editor-pdf
-// How to get a class type of ApiColor.
+// What type is a color object in a PDF?
 
-// Retrieve class type of ApiColor object and insert it to the page.
+// Get the class type and display it as text in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +44,4 @@ run.SetFontSize(30);
 run.AddText("Class Type = " + classType);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何更改数据点的数字格式。
+格式化 PDF 中图表数据点上显示的数字。
 
 ```javascript editor-pdf
-// Create a chart then apply specified numeric format to its data points.
+// How do I control the number format displayed on individual data points in a PDF?
+
+// Apply a specific number format to a data point in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

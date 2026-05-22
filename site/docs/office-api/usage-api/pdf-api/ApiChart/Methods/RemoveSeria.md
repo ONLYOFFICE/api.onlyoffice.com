@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to delete a chart seria indicating its index.
+Delete a data series from a chart using its position in a PDF.
 
 ```javascript editor-pdf
-// Create a chart then delete a seria from it.
+// How do I remove one series from a chart in a PDF?
+
+// Take away a series by its index to simplify a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,5 +43,4 @@ chart.SetTitle("The Estimated Costs series was removed from the current chart.")
 const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 page.AddObject(chart);
-
 ```

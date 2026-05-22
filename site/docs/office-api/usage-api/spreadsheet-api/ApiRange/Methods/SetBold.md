@@ -18,16 +18,16 @@ expression.SetBold(isBold);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example sets the bold property to the text characters in the current cell or cell range.
+Make text bold in a cell or cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the font style properties of a range making it bold.
+// How do I apply bold formatting to a group of cells in a spreadsheet?
 
-// Make characters of the ApiRange object bold.
+// Emphasize cell content by switching its weight to bold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Bold text");

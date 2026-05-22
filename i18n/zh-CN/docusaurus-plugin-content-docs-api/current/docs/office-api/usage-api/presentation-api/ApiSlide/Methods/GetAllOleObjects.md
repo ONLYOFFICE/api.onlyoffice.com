@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-此示例展示如何获取幻灯片中所有 OLE 对象的数组。
+查找演示文稿中幻灯片上的所有嵌入对象。
 
 ```javascript editor-pptx
-// How to get all OLE objects from the slide.
+// How do I access all the embedded objects in a slide in a presentation?
 
-// Get all OLE objects from the slide as an array.
+// Retrieve the embedded objects and access their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 slide.AddObject(drawing);
-
 ```

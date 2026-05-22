@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取数据验证中的第二个公式。
+从电子表格中基于范围的验证规则读取上边界值。
 
 ```javascript editor-xlsx
-// How to retrieve the second validation formula.
+// How do I find out the second condition value used in a between-range validation in a spreadsheet?
 
-// Get the second formula.
+// Confirm the maximum limit defined when a validation rule checks values between two numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -33,5 +33,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlBetween", 10, 20);
 let formula2 = validation.GetFormula2();
 worksheet.GetRange("B1").SetValue("Formula2: " + formula2);
-
 ```

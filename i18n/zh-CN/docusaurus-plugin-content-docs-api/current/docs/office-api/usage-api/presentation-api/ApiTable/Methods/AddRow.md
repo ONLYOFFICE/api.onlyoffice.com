@@ -15,7 +15,7 @@ expression.AddRow(oCell, isBefore);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 如果未指定，将在表格末尾添加新行。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新行。如果未指定单元格，则忽略此参数。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新行。如果未指定单元格， |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## 示例
 
-此示例向表格添加新行。
+在演示文稿中向表格插入新行。
 
 ```javascript editor-pptx
-// How to insert a row to the table.
+// How do I add a new row to a table in a presentation?
 
-// Create a 2x4 table, set its position and then insert a row to it.
+// Create a table and add an extra row with content in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -44,5 +44,4 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

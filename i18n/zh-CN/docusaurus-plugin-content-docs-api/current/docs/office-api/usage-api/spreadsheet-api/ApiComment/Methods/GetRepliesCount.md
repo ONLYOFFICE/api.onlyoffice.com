@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-此示例展示如何获取批注回复的数量。
+计算电子表格中批注上存在的回复数量。
 
 ```javascript editor-xlsx
-// How to get a number of replies to the comment.
+// How do I find out the total number of replies attached to a comment in a spreadsheet?
 
-// Add a comment to the range and display its replies count in the worksheet.
+// Retrieve the reply count for a comment to track discussion activity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

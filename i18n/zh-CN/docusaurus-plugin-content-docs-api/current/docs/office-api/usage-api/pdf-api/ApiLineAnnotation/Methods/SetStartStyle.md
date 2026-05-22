@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为线条注释设置起点线条样式。
+自定义 PDF 中线条注释的起始外观。
 
 ```javascript editor-pdf
+// How do I change the start style in a PDF?
+
+// Apply a specific line beginning to the annotation in a PDF.
+
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 15, y: 15}, {x: 155, y: 30});
 lineAnnot.SetStartStyle("rClosedArrow");

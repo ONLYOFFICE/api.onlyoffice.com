@@ -24,9 +24,13 @@ boolean
 
 ## 示例
 
-此示例演示如何将属性插入自定义 XML 节点。
+在演示文稿中向自定义 XML 节点插入属性。
 
 ```javascript editor-pptx
+// How do I add a new attribute to an XML element in a presentation?
+
+// Show the updated XML with the new attribute in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after insertion: ' + xml.GetXml());
-
 ```

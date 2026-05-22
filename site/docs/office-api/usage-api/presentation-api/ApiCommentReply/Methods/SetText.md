@@ -22,12 +22,12 @@ expression.SetText(sText);
 
 ## Example
 
-This example shows how to set a comment reply text.
+Change the text of a reply to a comment in a presentation.
 
 ```javascript editor-pptx
-// How to change a text of a comment reply.
+// How do I edit the message in a comment reply in a presentation?
 
-// Get all comments from the presentation and set its first one's reply text.
+// Update the reply text of a comment to a new message in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ reply.SetText("New reply text");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply text: " + reply.GetText());
-
 ```

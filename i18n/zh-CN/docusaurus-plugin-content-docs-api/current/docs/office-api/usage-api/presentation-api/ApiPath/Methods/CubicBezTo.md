@@ -27,10 +27,13 @@ expression.CubicBezTo(x1, y1, x2, y2, x3, y3);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+在演示文稿中绘制三次贝塞尔曲线作为自定义形状的一部分。
 
 ```javascript editor-pptx
-// Demonstrates different curve types in a single path on a slide.
+// How do I create a smooth curved segment in a custom shape in a presentation?
+
+// Add a cubic Bézier curve to a geometry path on a slide in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

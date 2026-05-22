@@ -24,9 +24,13 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## 示例
 
-此示例在指定位置插入段落。
+在 PDF 中将新段落放在现有段落旁边。
 
 ```javascript editor-pdf
+// How do I add a paragraph at a specific location relative to another paragraph in a PDF?
+
+// Position a paragraph before or after an existing one in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,5 +46,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This paragraph was inserted after the first one.');
 paragraph.InsertParagraph(paragraph2, 'after', true);
 page.AddObject(shape);
-
 ```

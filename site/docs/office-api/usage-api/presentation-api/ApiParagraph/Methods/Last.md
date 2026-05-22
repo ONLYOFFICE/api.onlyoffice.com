@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last element of the paragraph.
+Get the last element from a paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I retrieve the last element in a paragraph in a presentation?
+
+// Access the last element to modify its formatting in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +50,4 @@ paragraph.Push(run2);
 const lastElement = paragraph.Last();
 lastElement.SetBold(true);
 slide.AddObject(shape);
-
 ```

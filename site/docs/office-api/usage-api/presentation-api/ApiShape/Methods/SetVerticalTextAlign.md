@@ -5,7 +5,7 @@ Sets the vertical alignment to the shape content where a paragraph or text runs 
 ## Syntax
 
 ```javascript
-expression.SetVerticalTextAlign(VerticalAlign);
+expression.SetVerticalTextAlign(verticalAlign);
 ```
 
 `expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
@@ -14,7 +14,7 @@ expression.SetVerticalTextAlign(VerticalAlign);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| VerticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The type of the vertical alignment for the shape inner contents. |
+| verticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The type of the vertical alignment for the shape inner contents. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
+Align text vertically within a shape to the bottom.
 
 ```javascript editor-pptx
-// How to set vertical alignment of the shape content.
+// Clear all default objects and create a custom shape with specific geometry.
 
-// Adjust vertical alignment of the text inside the shape.
+// Add text to the shape with bottom vertical alignment to position content at the lower edge.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -47,5 +47,4 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

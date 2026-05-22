@@ -1,0 +1,49 @@
+# CreateStyle
+
+Creates a new style with the specified type and name. If a style with the specified name already exists, it will be returned without creating a new one.
+
+## Syntax
+
+```javascript
+expression.CreateStyle(styleName, type);
+```
+
+`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| styleName | Required | string |  | The name of the style which will be created. |
+| type | Optional | [StyleType](../../Enumeration/StyleType.md) | "paragraph" | The document element which the style will be applied to. |
+
+## Returns
+
+[ApiStyle](../../ApiStyle/ApiStyle.md)
+
+## Example
+
+Define a custom paragraph style with a specific font, color, and spacing in a document.
+
+```javascript editor-docx
+// How do I create a reusable heading style and apply it to a paragraph in a document?
+
+// Give a heading a unique color and size so it stands out visually from body text in a document.
+
+let doc = Api.GetDocument();
+let heading1Style = doc.CreateStyle("Heading 1", "paragraph");
+let paraPr = heading1Style.GetParaPr();
+paraPr.SetKeepNext(true);
+paraPr.SetKeepLines(true);
+paraPr.SetSpacingAfter(240);
+let textPr = heading1Style.GetTextPr();
+textPr.SetColor(Api.HexColor('#FF6800'));
+textPr.SetFontSize(40);
+textPr.SetFontFamily("Calibri Light");
+let paragraph = doc.GetElement(0);
+paragraph.SetStyle(heading1Style);
+paragraph.AddText("This is a heading with a style created above");
+paragraph = Api.CreateParagraph();
+paragraph.AddText("This is just a text.");
+doc.Push(paragraph);
+```

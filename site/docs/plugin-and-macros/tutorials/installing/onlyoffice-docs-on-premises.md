@@ -75,7 +75,7 @@ The plugins will be available to all the users of **ONLYOFFICE Docs on-premises*
 
 For debugging, start ONLYOFFICE Docs together with the shared `sdkjs-plugins` folder:
 
-``` sh
+```sh
 docker run -itd -p 80:80 -v /absolutely_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
 ```
 
@@ -83,7 +83,7 @@ docker run -itd -p 80:80 -v /absolutely_path_to_work_dir:/var/www/onlyoffice/doc
 
 In [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md), add the relative path to the `config.json` file of the created plugin to the `plugins.pluginsData` parameter:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {
@@ -116,7 +116,7 @@ See the [ONLYOFFICE Docs API](../../../docs-api/usage-api/config/editor/plugins.
 - If the plugins placed into the folder and the plugins specified in the config coincide, the latter will be used.
 - If you want to upload the plugin to the S3 or Nginx servers, you need to allow cross-domain requests from the address of your document server. Or you can just let everyone use your plugin:
 
-``` sh
+```sh
 add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 ```
@@ -163,7 +163,7 @@ The path to the folder depends on the operating system you use:
 
 **Option 3.** Edit the [ONLYOFFICE Docs config](../../../docs-api/usage-api/config/editor/plugins.md) by removing the corresponding plugin. The plugin will become unavailable for all portal users upon the editor next start:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {
@@ -188,8 +188,8 @@ The table below contains default plugins guids to make it easier for you to find
 
 ## Default plugins GUIDs
 
-|                |                                        |
-| -------------- | -------------------------------------- |
+|                |                                          |
+| -------------- | ---------------------------------------- |
 | Highlight code | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |

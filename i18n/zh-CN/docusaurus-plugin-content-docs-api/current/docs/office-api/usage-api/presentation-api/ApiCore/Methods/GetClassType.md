@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+识别演示文稿中核心属性对象的类类型。
 
 ```javascript editor-pptx
+// How do I find out what type the core properties object is in a presentation?
+
+// Display the class type returned by the presentation's core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 const classType = core.GetClassType();
@@ -38,5 +42,4 @@ paragraph.AddText("Class type: " + classType);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

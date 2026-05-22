@@ -2,30 +2,16 @@
 
 返回具有当前文本属性的文本是否显示为比实际字体大小小两磅的大写字母。
 
-## 语法
-
-```javascript
-expression.GetSmallCaps();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiTextPr.GetSmallCaps](../../ApiTextPr/Methods/GetSmallCaps.md)。
 
 ## 示例
 
-此示例使用其属性获取文本大小写。
+检查电子表格中的文本是否应用了小型大写字母格式。
 
 ```javascript editor-xlsx
-// How to find out whether a text is uncapitalized or not.
+// How do I find out if text is displayed in small capital letters in a spreadsheet?
 
-// Find whether a text characters are in small caps or not.
+// Confirm if a text run uses small caps style instead of normal lowercase letters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

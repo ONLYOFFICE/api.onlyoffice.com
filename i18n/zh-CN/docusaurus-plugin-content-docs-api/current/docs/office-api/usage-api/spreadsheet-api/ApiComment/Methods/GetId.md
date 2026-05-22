@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取批注 ID。
+检索分配给电子表格中单元格批注的唯一标识符。
 
 ```javascript editor-xlsx
-// How to get a comment ID.
+// How do I get the ID that uniquely identifies a comment on a cell in a spreadsheet?
 
-// Find a comment by its ID and display its ID.
+// Look up a comment's own identifier so it can be referenced or tracked programmatically in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

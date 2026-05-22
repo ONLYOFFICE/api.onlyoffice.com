@@ -22,12 +22,12 @@ expression.GetDrawingsByPlaceholderType(sType);
 
 ## 示例
 
-此示例按占位符类型获取绘图并将其从版式中删除。
+按占位符类型从布局获取绘图并移除它们。
 
 ```javascript editor-pptx
-// How to get all drawings as an array by indicating placeholder type.
+// Drawings with specific placeholder types can be filtered and deleted.
 
-// Get drawings by their placeholder type.
+// Delete all drawings with the "ctrTitle" placeholder type from the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -37,5 +37,4 @@ let drawingsWithPh = layout.GetDrawingsByPlaceholderType("ctrTitle");
 for (let i = 0; i < drawingsWithPh.length; i++) {
 	drawingsWithPh[i].Delete();
 }
-
 ```

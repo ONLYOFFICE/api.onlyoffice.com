@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例删除动画效果。
+删除演示文稿中的动画效果。
 
 ```javascript editor-pptx
+// Removing animation effects modifies the sequence of object animations on slides.
+
+// Use the Delete() method to remove an effect and verify the count change.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -59,5 +63,4 @@ paragraph.AddText('Effects before delete: ' + countBefore);
 paragraph.AddLineBreak();
 paragraph.AddText('Effects after delete: ' + countAfter);
 slide.AddObject(infoShape);
-
 ```

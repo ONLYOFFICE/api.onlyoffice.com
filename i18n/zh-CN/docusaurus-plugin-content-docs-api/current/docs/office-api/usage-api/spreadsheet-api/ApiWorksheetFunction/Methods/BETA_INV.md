@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定 beta 分布的累积 beta 概率密度函数的反函数 (BETADIST)。
+查找电子表格中贝塔分布中给定概率的分位数值。
 
 ```javascript editor-xlsx
-// How to get a result from inverse of the cumulative beta probability density function.
+// How do I convert a probability percentage back into the original data range in a spreadsheet?
 
-// Use function to get the cumulative beta probability density function.
+// Retrieve the input value that corresponds to a specific cumulative probability in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

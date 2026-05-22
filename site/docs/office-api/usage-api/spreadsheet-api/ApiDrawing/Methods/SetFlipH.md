@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to flip the drawing horizontally.
+Mirror a drawing from left to right in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the horizontal flip property of the shape.
+// How do I flip a drawing so it faces the opposite horizontal direction in a spreadsheet?
 
-// Create a drawing and flip it horizontally.
+// Reverse a shape along its vertical axis to produce a horizontal mirror image in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -37,5 +37,4 @@ drawing.SetFlipH(true);
 let flip = drawing.GetFlipH();
 worksheet.SetColumnWidth(0, 30);
 worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
-
 ```

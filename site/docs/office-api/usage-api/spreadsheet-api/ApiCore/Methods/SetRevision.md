@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the revision of the workbook.
+Store a revision label in a workbook's document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I track the revision number of a workbook in a spreadsheet?
+
+// Mark the workbook with a version string so collaborators know which revision they are viewing in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Revision: " + revision);
-
 ```

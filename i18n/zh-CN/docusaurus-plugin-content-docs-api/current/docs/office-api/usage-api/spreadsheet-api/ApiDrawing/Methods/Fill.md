@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前图形对象的填充格式属性。
+为已放置在电子表格工作表上的形状应用渐变填充。
 
 ```javascript editor-xlsx
-// How to color a drawing with a radiant fill.
+// How do I change the background of a shape to a radial gradient in a spreadsheet?
 
-// Change the background color of the shape.
+// Replace a solid fill with a smooth color blend across a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
@@ -37,5 +37,4 @@ let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
 let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
 fill = Api.CreateRadialGradientFill([gs1, gs2]);
 drawing.Fill(fill);
-
 ```

@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-此示例展示如何获取批注创建时间戳（当前时区格式）。
+读取电子表格中使用本地时区创建批注的时间。
 
 ```javascript editor-xlsx
-// How to get a time when a comment was created.
+// How do I find out the exact date and time a comment was posted, in my local time, in a spreadsheet?
 
-// Add a comment creation timestamp to a range of the worksheet.
+// Capture the creation timestamp of a comment to record the local time it was added in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

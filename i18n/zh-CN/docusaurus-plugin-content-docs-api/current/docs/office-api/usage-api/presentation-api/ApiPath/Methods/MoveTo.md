@@ -23,10 +23,13 @@ expression.MoveTo(x, y);
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+设置演示文稿中绘制自定义形状轮廓的起始位置。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// Where do I begin drawing a custom shape path in a presentation?
+
+// Position the drawing cursor at a specific point in a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

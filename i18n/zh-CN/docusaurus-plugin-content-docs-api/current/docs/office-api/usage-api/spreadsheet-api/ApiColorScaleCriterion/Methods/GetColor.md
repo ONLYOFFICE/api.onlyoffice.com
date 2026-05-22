@@ -20,12 +20,12 @@ expression.GetColor();
 
 ## 示例
 
-此示例演示如何获取色阶条件的颜色。
+读取分配给电子表格中颜色渐变规则阈值点的颜色。
 
 ```javascript editor-xlsx
-// How to retrieve the color of a color scale criterion.
+// How do I find out what color is used at a specific stop of a color scale in a spreadsheet?
 
-// Get the color of a color scale criterion.
+// Inspect the fill color tied to one of the gradient breakpoints in a color scale rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,5 +48,4 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C1").SetValue("Has Color:");
     worksheet.GetRange("C2").SetValue(criterionColor ? "Yes" : "No");
 }
-
 ```

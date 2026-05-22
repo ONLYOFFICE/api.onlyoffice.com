@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回 x 的对数正态累积分布函数的反函数，其中 ln(x) 按指定参数呈正态分布。
+查找电子表格中对数正态分布中对应给定概率的值。
 
 ```javascript editor-xlsx
-// How to get the lognormal cumulative distribution function of x.
+// How do I calculate the inverse probability for a lognormal distributed dataset in a spreadsheet?
 
-// Use a function to return the lognormal cumulative distribution function.
+// Compute the x value for a specific percentile in a lognormal distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -52,5 +52,4 @@ let ans = func.LOGINV(probability, mean, standardDeviation);
 
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

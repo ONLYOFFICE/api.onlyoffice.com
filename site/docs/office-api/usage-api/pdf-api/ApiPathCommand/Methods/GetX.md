@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Retrieve the x coordinate from a path command in a PDF.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// What is the horizontal position value in a PDF?
+
+// Extract the x position of a path command in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回累积 beta 概率密度函数的反函数 (BETA_DIST)。
+查找电子表格中贝塔分布中对应特定概率的值。
 
 ```javascript editor-xlsx
-// How to get a result from the inverse of the cumulative beta probability density function.
+// How do I locate the data point that matches a given probability level in a spreadsheet?
 
-// Use function to get the inverse of the cumulative beta probability distribution function.
+// Reverse-calculate from probability to the original data value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

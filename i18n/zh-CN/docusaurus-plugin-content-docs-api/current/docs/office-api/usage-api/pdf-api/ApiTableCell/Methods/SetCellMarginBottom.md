@@ -15,7 +15,7 @@ expression.SetCellMarginBottom(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认表格单元格下边距，否则使用指定值覆盖当前单元格的表格单元格下边距。 |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则应使用默认的表格单元格底部边距， |
 
 ## 返回值
 
@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何为当前表格单元格设置底部边距。
+设置 PDF 中表格单元格的下边距。
 
 ```javascript editor-pdf
-// Specify the bottom margin value for the ApiTableCell object.
+// How do I add space below the content inside a cell in a PDF?
+
+// Adjust the spacing at the bottom of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,5 +43,4 @@ content.Push(paragraph);
 cell.SetCellMarginBottom(600);
 
 page.AddObject(table);
-
 ```

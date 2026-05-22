@@ -22,12 +22,12 @@ expression.GetMaster(nPos);
 
 ## Example
 
-This example shows how to get a slide master by its position in the presentation.
+Retrieve a slide master layout by index.
 
 ```javascript editor-pptx
-// How to get a slide master from the presentation.
+// Access the master slide object at a specific position.
 
-// Get a slide master of the presentation using its index.
+// Display the master slide class type information.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
-
 ```

@@ -18,7 +18,7 @@ expression.HYPGEOM_DIST(arg1, arg2, arg3, arg4, arg5);
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 样本大小。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 总体中的成功次数。 |
 | arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 总体大小。 |
-| arg5 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积分布函数。如果为 **false**，则函数返回概率质量函数。 |
+| arg5 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。 |
 
 ## 返回值
 
@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何获取超几何分布。
+计算电子表格中累积或概率密度的超几何分布。
 
 ```javascript editor-xlsx
-// How to get a result from a hypergeometric distribution.
+// How do I compute hypergeometric probabilities with different distribution types in a spreadsheet?
 
-// Use a function to get the result of hypergeometric distribution.
+// Return cumulative or probability density values from a hypergeometric distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

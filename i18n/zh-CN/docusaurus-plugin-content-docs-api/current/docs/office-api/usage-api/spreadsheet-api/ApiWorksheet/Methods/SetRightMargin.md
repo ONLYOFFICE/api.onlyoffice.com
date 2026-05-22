@@ -18,20 +18,19 @@ expression.SetRightMargin(nPoints);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置工作表的右边距。
+设置电子表格中打印页面的右边距宽度。
 
 ```javascript editor-xlsx
-// How to set margin of the right side.
+// How do I control the empty space along the right edge when printing in a spreadsheet?
 
-// Resize the right margin of the sheet.
+// Determine how much blank space appears between your data and the right page boundary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRightMargin(20.8);
 let rightMargin = worksheet.GetRightMargin();
 worksheet.GetRange("A1").SetValue("Right margin: " + rightMargin + " mm");
-
 ```

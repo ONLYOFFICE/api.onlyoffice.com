@@ -20,10 +20,13 @@ number
 
 ## 示例
 
-分析云形状路径属性并在单元格中显示它们。
+读取自定义形状路径的高度并在电子表格中显示。
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How do I check how tall a shape path is in a spreadsheet?
+
+// Inspect the vertical size of a drawn path to verify its dimensions in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

@@ -17,7 +17,7 @@ expression.LOGNORM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 用于计算函数的值，一个正数。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | ln(x) 的平均值。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | ln(x) 的标准差，一个正数。 |
-| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积分布函数。如果为 **false**，则函数返回概率密度函数。 |
+| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回 x 的对数正态分布，其中 ln(x) 按指定参数呈正态分布。
+计算电子表格中给定值的对数正态概率分布。
 
 ```javascript editor-xlsx
-// How to get the lognormal distribution of x.
+// How do I find the cumulative or probability density for a lognormal distributed variable in a spreadsheet?
 
-// Use a function to return the lognormal distribution.
+// Determine the probability distribution of a lognormally distributed dataset in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

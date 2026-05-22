@@ -20,12 +20,12 @@ expression.GetComments();
 
 ## 示例
 
-此示例演示如何获取 ApiComment 对象的数组。
+检索在电子表格顶层添加的所有批注。
 
 ```javascript editor-xlsx
-// How to get an array of comments.
+// How do I get a list of comments from the workbook level in a spreadsheet?
 
-// Get all comments as an array.
+// Read the text and author of comments stored at the document level in a spreadsheet.
 
 Api.AddComment("Comment 1", "Bob");
 Api.AddComment("Comment 2", "Bob");

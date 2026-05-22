@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to convert a shape fill color to JSON.
+Export a shape fill color as a JSON representation in a presentation.
 
 ```javascript editor-pptx
+// How do I convert a color to a JSON format in a presentation?
+
+// Serialize a fill color to JSON and display its structure in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText('Color JSON:\n' + color.ToJSON());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -27,10 +27,12 @@ boolean
 
 ## Example
 
-How to show specific chart data labels with options.
+Show or hide the label for a specific data point on a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and the visibility of its data labels options.
+// How do I control what information appears next to a single data point in a PDF?
+
+// Toggle labels for individual data points with formatting options in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -51,5 +53,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

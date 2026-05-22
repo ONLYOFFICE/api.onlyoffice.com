@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a class type of the color used in a shape fill.
+Retrieve the class type identifier string for a color object.
 
 ```javascript editor-pptx
+// Extract and display color object type metadata from a shape.
+
+// Get the class type of a color and display it within a shape text element.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText("Class Type = " + color.GetClassType());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get icon criteria collection.
+Retrieve all icon criteria from an icon set conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve icon criteria for conditional formatting.
+// How do I access each individual threshold and icon setting within an icon set rule in a spreadsheet?
 
-// Get the collection of icon criteria from the formatting rule.
+// List the full set of criteria that control which icon each cell receives under a formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -40,5 +40,4 @@ let iconCondition = formatConditions.AddIconSetCondition();
 
 let criteria = iconCondition.GetIconCriteria();
 worksheet.GetRange("B1").SetValue("Number of criteria: " + criteria.length);
-
 ```

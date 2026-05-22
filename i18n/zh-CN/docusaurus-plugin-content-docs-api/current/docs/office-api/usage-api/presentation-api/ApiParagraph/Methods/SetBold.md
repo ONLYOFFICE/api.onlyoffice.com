@@ -22,9 +22,13 @@ expression.SetBold(isBold);
 
 ## 示例
 
-此示例为段落文本设置粗体属性。
+在演示文稿中将段落文本设为粗体。
 
 ```javascript editor-pptx
+// How do I apply bold formatting to a paragraph in a presentation?
+
+// Display text in bold weight in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to bold.');
 paragraph.SetBold(true);
 slide.AddObject(shape);
-
 ```

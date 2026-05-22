@@ -2,30 +2,16 @@
 
 返回当前段落的段后间距值。
 
-## 语法
-
-```javascript
-expression.GetSpacingAfter();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md)
+继承自 [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md)。
 
 ## 示例
 
-此示例展示如何获取当前段落的段后间距值。
+读取电子表格中段落之后的间距大小。
 
 ```javascript editor-xlsx
-// How to get spacing information which is after the paragraph.
+// How do I check how much space is added below a paragraph in a spreadsheet?
 
-// Get two consecutive paragraphs add spacing between them then get the spacing after first one and display it in the worksheet. 
+// Confirm the bottom spacing value after applying a gap to a paragraph's trailing edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

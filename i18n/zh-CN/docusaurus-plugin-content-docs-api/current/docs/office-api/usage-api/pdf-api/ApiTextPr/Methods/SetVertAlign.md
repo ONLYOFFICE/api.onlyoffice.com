@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将相对于文本块的默认外观应用于文本块内容的对齐方式。
+在 PDF 中将文本定位在基线的上方或下方。
 
 ```javascript editor-pdf
-// How to set a vertical alignment of the text.
+// How do I create superscript or subscript text in a PDF?
 
-// Get the text properties of the run and make it superscript, subscript, etc.
+// Shift characters vertically relative to the text line in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,7 +40,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -50,5 +50,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text inside the shape with vertical alignment set to 'superscript'.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

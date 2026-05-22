@@ -20,9 +20,13 @@ Date
 
 ## 示例
 
-此示例演示如何获取当前工作簿最后修改的日期。
+读取电子表格中工作簿在更改后最后保存的日期。
 
 ```javascript editor-xlsx
+// How do I find out when a workbook was most recently modified in a spreadsheet?
+
+// Inspect the last-modified timestamp recorded in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified: " + lastModifiedDate);
-
 ```

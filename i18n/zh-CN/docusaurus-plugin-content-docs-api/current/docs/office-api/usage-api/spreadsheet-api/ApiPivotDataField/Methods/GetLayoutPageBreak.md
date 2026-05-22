@@ -2,30 +2,16 @@
 
 返回指定是否在每个字段后插入分页符的设置。
 
-## 语法
-
-```javascript
-expression.GetLayoutPageBreak();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的布局分页符。
+读取电子表格中数据透视表字段是否在每组之后插入分页符。
 
 ```javascript editor-xlsx
-// How to get a layout page break of a pivot field.
+// How do I check if a pivot field adds a page break between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout page break of a specified pivot field.
+// Verify the page break setting for a pivot field to understand how groups are separated on print.
 
 let worksheet = Api.GetActiveSheet();
 

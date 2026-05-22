@@ -47,8 +47,10 @@ To start using the AI plugin:
    - **Settings**: the configuration panel to select your AI provider, enter the API key, and select one of its models;
    - **Chatbot**: start a conversation with the AI to ask questions, rewrite text, brainstorm ideas, and more;
    - **Summarization**: automatically summarize the entered text and choose ways to insert the result;
-   - **Translation**: translate selected text using the configured AI service.
-3. You can use the plugin on selected text. To do this, select the text, right-click it, and in the AI menu choose one of the options: **Summarization**, **Text analysis**, **Translate**, **Image**, or **Chatbot**.
+   - **Translation**: translate selected text using the configured AI service;
+   - **Grammar & Spelling**: check the grammar and spelling of the selected text;
+   - **Create AI assistant**: create a new AI assistant to perform repetitive text tasks.
+3. You can use the plugin on selected text. To do this, select the text, right-click it, and in the AI menu choose one of the options: **Summarization**, **Text analysis**, **Translate**, **Image**, **Grammar & Spelling**, or **Chatbot**.
 4. The plugin will respond based on the configured AI model.
 5. Insert the response into the document or use it for your needs.
 

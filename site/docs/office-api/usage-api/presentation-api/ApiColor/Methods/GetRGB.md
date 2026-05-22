@@ -20,9 +20,13 @@ Object
 
 ## Example
 
-This example shows how to get the RGB components of a shape fill color.
+Extract RGB component values from a color object.
 
 ```javascript editor-pptx
+// Convert hexadecimal color to separate red, green, blue channels.
+
+// Get the RGB components of a color and display them within a shape text element.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,5 +45,4 @@ run.SetFontSize(30);
 run.AddText('RGB: ' + rgb.r + ', ' + rgb.g + ', ' + rgb.b);
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -22,9 +22,13 @@ expression.GetPage(nPos);
 
 ## 示例
 
-此示例获取第一页并设置旋转。
+从 PDF 访问单个页面。
 
 ```javascript editor-pdf
+// How do I work with a specific page in a PDF?
+
+// Retrieve a page and rotate it in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 page.SetRotation(90);

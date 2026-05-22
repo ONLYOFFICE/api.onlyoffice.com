@@ -20,12 +20,12 @@ expression.RefreshTable();
 
 ## 示例
 
-此示例展示如何刷新表格。
+更新数据透视表以反映电子表格中的最新数据。
 
 ```javascript editor-xlsx
-// How to refresh table values.
+// How do I force a pivot table to recalculate after the source data changes in a spreadsheet?
 
-// Create a pivot table, add data to it then refresh it.
+// Keep a pivot table in sync with its underlying data by triggering a refresh in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

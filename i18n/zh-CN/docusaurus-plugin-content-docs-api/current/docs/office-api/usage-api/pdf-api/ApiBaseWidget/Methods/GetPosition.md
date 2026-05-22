@@ -20,9 +20,13 @@ expression.GetPosition();
 
 ## 示例
 
-此示例创建新字段并获取其控件的位置。
+获取 PDF 中表单字段控件的坐标。
 
 ```javascript editor-pdf
+// How do I find the position of a widget in a PDF?
+
+// Retrieve the X and Y coordinates of a form field widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

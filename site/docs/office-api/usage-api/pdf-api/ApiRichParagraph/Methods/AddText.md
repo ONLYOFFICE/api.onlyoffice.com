@@ -22,9 +22,13 @@ expression.AddText(text);
 
 ## Example
 
-This example adds some text to rich paragraph.
+Add text to a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How can I insert text into a paragraph in a PDF?
+
+// Include written content within a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

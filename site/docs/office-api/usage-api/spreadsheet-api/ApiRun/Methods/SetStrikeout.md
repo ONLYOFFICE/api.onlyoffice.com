@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed with a single horizontal line through the center of the line.
+Draw a horizontal line through the middle of a text run to mark it as crossed out in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to strike out a text with one line.
+// How do I put a line through text to show it has been removed or cancelled in a spreadsheet?
 
-// Create a text run object, cross out it.
+// Strike through selected words to visually indicate deleted or outdated content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

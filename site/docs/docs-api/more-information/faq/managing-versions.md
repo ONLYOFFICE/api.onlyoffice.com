@@ -14,7 +14,7 @@ So the implementation of the document version history display should look like t
 
 1. The callback handler receives the data in the response from the **document editing service** with *status* **2** (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
 
-``` ts
+```ts
 const data = {
   key: "2745492410",
   status: 2,
@@ -73,10 +73,10 @@ const data = {
 
    - *currentVersion* is the number of the latest version which will be displayed in the editor interface as the current one;
    - *history* is the array of objects, each representing a document saved single version:
-    - *history.changes* and *history.serverVersion* is the data received from the **document editing service**;
-    - *history.user.id* is the ID of the user who was the last to save changes to the document for the specified version;
-    - *history.created* is the time of the document specified version compilation (corresponds to when *status* **2** was received);
-    - *history.version* is the number of the specified version as will be displayed in the version history section of the document editor interface.
+   - *history.changes* and *history.serverVersion* is the data received from the **document editing service**;
+   - *history.user.id* is the ID of the user who was the last to save changes to the document for the specified version;
+   - *history.created* is the time of the document specified version compilation (corresponds to when *status* **2** was received);
+   - *history.version* is the number of the specified version as will be displayed in the version history section of the document editor interface.
 
 4. The document is opened with all the above parameters specified. Switch to the **File** > **Version History** menu option (or **Collaboration** > **Version History**) and there the version data will be displayed.
 

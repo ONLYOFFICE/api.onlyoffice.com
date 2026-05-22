@@ -20,12 +20,12 @@ expression.AddTabStop();
 
 ## 示例
 
-此示例向段落添加一个制表位。
+在演示文稿中将制表符插入段落。
 
 ```javascript editor-pptx
-// How to add a tab after a sentence in a paragraph.
+// How do I add spacing between text elements using tabs in a presentation?
 
-// How to split a text string with a tab.
+// Place a tab stop at the current cursor position in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("This is the text which starts after the tab stops.");
 slide.AddObject(shape);
-
 ```

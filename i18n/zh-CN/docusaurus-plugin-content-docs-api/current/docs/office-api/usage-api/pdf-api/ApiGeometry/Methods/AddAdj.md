@@ -23,10 +23,13 @@ boolean
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调整几何图形。
+在 PDF 中创建控制形状外观的参数。
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How do I add a value that changes how a shape is drawn in a PDF?
+
+// Define an adjustment control and apply it to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

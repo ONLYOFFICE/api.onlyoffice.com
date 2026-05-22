@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例演示如何检查对单元格的引用是否包含公式，并返回 true 或 false。
+检测电子表格中的单元格是否包含公式。
 
 ```javascript editor-xlsx
-// How to check if the cell contains formula or not.
+// How do I find out if a cell has a formula in a spreadsheet?
 
-// Use a function to check whether a range data is a formula or not.
+// Use a function to identify cells with formulas versus static values in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether to insert a page break after each field.
 
-## Syntax
-
-```javascript
-expression.GetLayoutPageBreak();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetLayoutPageBreak](../../ApiPivotField/Methods/GetLayoutPageBreak.md).
 
 ## Example
 
-This example shows how to get a layout page break of a pivot field.
+Read whether a pivot table field inserts a page break after each group in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a layout page break of a pivot field.
+// How do I check if a pivot field adds a page break between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout page break of a specified pivot field.
+// Verify the page break setting for a pivot field to understand how groups are separated on print.
 
 let worksheet = Api.GetActiveSheet();
 

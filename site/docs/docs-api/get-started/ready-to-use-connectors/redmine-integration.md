@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Redmine for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/redmine.svg
 ---
@@ -17,7 +19,7 @@ The plugin is available in the official [Redmine Plugins Directory](https://www.
 
 ## Features
 
-- Viewing and editing text documents, spreadsheets, presentations, PDFs, and forms.
+- Viewing and editing documents, spreadsheets, presentations, PDFs, and forms.
 - Co-editing documents in real time using two co-editing modes (Fast and Strict), Track Changes, comments, built-in chat.
 - Settings page to set up connection to the server and JWT authentication, customize the editor's appearance.
 - Mobile view for licensed editors.

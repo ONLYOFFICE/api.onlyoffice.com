@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"buttonWidget"
 
 ## Example
 
-This example gets button widget object class type.
+Identify the class type of a button widget in a PDF.
 
 ```javascript editor-pdf
+// How do I determine what type a button widget object is in a PDF?
+
+// Get the object type information for a button widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 25, 25]);

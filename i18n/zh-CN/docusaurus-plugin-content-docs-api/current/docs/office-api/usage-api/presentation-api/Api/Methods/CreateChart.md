@@ -1,6 +1,9 @@
 # CreateChart
 
 使用指定的参数创建图表。
+:::note
+**1 - 48** 范围之外的 &lt;em&gt;nStyleIndex&lt;/em&gt; 值将被解释为 &lt;em&gt;cs:chartStyle&lt;/em&gt; 元素中的图表样式 ID（例如 201、215、284），仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) 和 [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+:::
 
 ## 语法
 
@@ -21,7 +24,7 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 | nWidth | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表宽度。 |
 | nHeight | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制度量单位表示的图表高度。 |
 | nStyleIndex | 必需 | number |  | 图表颜色样式索引（可以是 **1 - 48**，如 OOXML 规范所述）。 |
-| aNumFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。默认数字格式为"常规"。 |
+| aNumFormats | 必需 | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | 将应用于系列的数字格式（可以是自定义格式）。 |
 
 ## 返回值
 
@@ -29,12 +32,12 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 ## 示例
 
-此示例展示如何创建图表并将其粘贴到文档中。
+在演示文稿中创建 3D 条形图。
 
 ```javascript editor-pptx
-// How to add charts to slides.
+// How do I insert a chart and customize its appearance in a presentation?
 
-// Create a 3D bar chart, set its size, position, color and other properties.
+// Build a chart with multiple data series and apply formatting to each series in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +55,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

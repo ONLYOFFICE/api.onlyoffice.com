@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example pushes new element to rich paragraph.
+Add a new element to the end of a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I insert a new element into a paragraph in a PDF?
+
+// Append an additional element to a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

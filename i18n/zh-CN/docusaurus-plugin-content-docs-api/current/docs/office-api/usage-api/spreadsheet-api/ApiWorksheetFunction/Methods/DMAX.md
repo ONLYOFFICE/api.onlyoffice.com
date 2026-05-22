@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何获取数据库中与指定条件匹配的记录字段（列）中的最大数字。
+获取匹配指定条件的数据库列中的最大数。
 
 ```javascript editor-xlsx
-// How to get the maximum number from the database column that match the conditions you specify.
+// Find the maximum value among records meeting the given criteria.
 
-// Use function to get the maximum number from the database column that satisfies the conditions.
+// Use the DMAX function to retrieve the highest value from a database field with conditions.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

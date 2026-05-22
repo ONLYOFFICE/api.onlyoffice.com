@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetVerticalTextAlign(sVerticalAlign);
+expression.SetVerticalTextAlign(verticalAlign);
 ```
 
 `expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetVerticalTextAlign(sVerticalAlign);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sVerticalAlign | 必需 | "top" \| "center" \| "bottom" |  | 形状内部内容的垂直对齐类型。 |
+| verticalAlign | 必需 | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | 形状内部内容的垂直对齐类型。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置可以插入段落或文本块的形状内容的垂直对齐方式。
+在电子表格中将形状内的文本垂直对齐。
 
 ```javascript editor-xlsx
-// How to specify a vertical alignment of a shape content.
+// How do I position text at the top, middle, or bottom of a shape in a spreadsheet?
 
-// Set text vertical alignment of a shape to bottom.
+// Control where text sits vertically within a shape's boundaries in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

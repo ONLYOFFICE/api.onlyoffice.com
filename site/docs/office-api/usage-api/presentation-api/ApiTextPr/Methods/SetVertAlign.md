@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example specifies the alignment which will be applied to the contents of the run in relation to the default appearance of the run text.
+Set the vertical alignment of text inside a shape in a presentation.
 
 ```javascript editor-pptx
-// How to set a vertical alignment of the text.
+// How do I apply superscript or subscript formatting to text in a presentation?
 
-// Get the text properties of the run and make it superscript, subscript, etc.
+// Get text properties and apply vertical alignment adjustments in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text inside the shape with vertical alignment set to 'superscript'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

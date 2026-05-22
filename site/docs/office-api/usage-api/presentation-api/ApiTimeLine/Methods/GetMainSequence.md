@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the main animation sequence from a timeline.
+Access the primary animation sequence on a slide in a presentation.
 
 ```javascript editor-pptx
+// How do I get the default animation list for a slide in a presentation?
+
+// Retrieve the main timeline sequence where automatic animations are placed in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Effects in sequence: ' + mainSequence.GetCount());
 slide.AddObject(infoShape);
-
 ```

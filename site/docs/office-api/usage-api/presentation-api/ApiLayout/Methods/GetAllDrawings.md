@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the drawing objects from the slide layout.
+Get all drawing objects from a slide layout as an array.
 
 ```javascript editor-pptx
-// How to get all drawings from the layout of presentation.
+// Drawings in layouts can be accessed and configured with placeholders.
 
-// Get all drawings from the presentation as an array.
+// Set a placeholder on the first drawing in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -43,5 +43,4 @@ layout.AddObject(drawing);
 const drawings = layout.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("picture");
 drawings[0].SetPlaceholder(placeholder);
-
 ```

@@ -20,9 +20,13 @@ expression.GetDocument();
 
 ## 示例
 
-此示例获取文档对象以供进一步使用。
+访问文档对象以修改 PDF 中的页面。
 
 ```javascript editor-pdf
+// How do I access the main document object in a PDF?
+
+// Retrieve the document, add a new page, and rotate it in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.AddPage(1);
 page.SetRotation(90);

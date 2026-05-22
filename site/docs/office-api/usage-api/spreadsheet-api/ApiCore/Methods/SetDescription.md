@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the description of the current workbook using the ApiCore.
+Write a short summary of a workbook's purpose into its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I add a description to a workbook's metadata in a spreadsheet?
+
+// Attach a plain-text explanation to the workbook so others know what it contains in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Description: " + description);
-
 ```

@@ -20,9 +20,13 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-此示例从富文本内容获取当前段落。
+访问您在 PDF 中当前正在编辑的活动段落。
 
 ```javascript editor-pdf
+// How do I get the paragraph I am working on in rich content in a PDF?
+
+// Retrieve the paragraph being modified in formatted text in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

@@ -26,14 +26,12 @@ expression.AddCustomFunctionLibrary(sName, Func);
 
 ## 示例
 
-此示例计算自定义函数结果。
+将相关的自定义函数捆绑到命名库中并在电子表格的单元格中使用。
 
 ```javascript editor-xlsx
-// How to add custom function library.
+// How do I group custom functions under a shared library name in a spreadsheet?
 
-// How to use custom function.
-
-// How to add cell values using custom function library.
+// Organize reusable calculation logic inside a function library in a spreadsheet.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
 	/**

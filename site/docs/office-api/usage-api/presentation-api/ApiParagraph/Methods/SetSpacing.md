@@ -22,9 +22,13 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-This example sets the text spacing measured in twentieths of a point.
+Control the space between characters in text in a presentation.
 
 ```javascript editor-pptx
+// How do I adjust character spacing in a paragraph in a presentation?
+
+// Apply custom spacing measurements to text for readability in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text spacing set to 5 points.');
 paragraph.SetSpacing(60);
 slide.AddObject(shape);
-
 ```

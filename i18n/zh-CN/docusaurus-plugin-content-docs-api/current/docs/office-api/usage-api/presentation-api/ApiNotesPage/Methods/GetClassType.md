@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例展示如何获取 ApiNotesPage 的类类型。
+识别演示文稿中备注页对象的类型。
 
 ```javascript editor-pptx
+// How do I determine the class type of the notes page in a presentation?
+
+// Retrieve and display the class type of the slide notes in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ slide.AddObject(shape);
 
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Class type of ApiNotesPage: ' + classType);
-
 ```

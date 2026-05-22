@@ -16,12 +16,12 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| 名称     | 类型     | 描述                                                                                                                                                                                                                                                                                                                                                                      |
-|----------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| func     | function | 用 JavaScript 编写的命令，其作用是构造可插入至最终文档文件中的结构化数据（如格式化段落、表格、文本片段或单词等），随后将该数据发送给编辑器。该命令必须符合 [Office JavaScript API](../../../office-api/get-started/overview.md) 的语法。             |
-| isClose  | boolean  | 指定在执行完 func 参数中的代码后是否关闭插件窗口。值为 true 时将在执行后关闭插件窗口；值为 false 时将在执行后保持窗口开启，以便继续接收其他命令或操作。默认值为 false。 |
-| isCalc   | boolean  | 指定在执行 func 参数中的代码后是否重新计算文档内容。值为 true 时将在执行后重新计算文档；值为 false 时不重新计算（仅当您确认所做修改不影响文档计算时使用）。默认值为 true。                                              |
-| callback | function | 方法返回的结果。仅支持 JavaScript 标准类型（如传入对象将被替换为 undefined）。                                                                                                                                                                                                                                                    |
+| 名称     | 类型     | 描述                                                                                                                                                                                                                                     |
+| -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| func     | function | 用 JavaScript 编写的命令，其作用是构造可插入至最终文档文件中的结构化数据（如格式化段落、表格、文本片段或单词等），随后将该数据发送给编辑器。该命令必须符合 [Office JavaScript API](../../../office-api/get-started/overview.md) 的语法。 |
+| isClose  | boolean  | 指定在执行完 func 参数中的代码后是否关闭插件窗口。值为 true 时将在执行后关闭插件窗口；值为 false 时将在执行后保持窗口开启，以便继续接收其他命令或操作。默认值为 false。                                                                  |
+| isCalc   | boolean  | 指定在执行 func 参数中的代码后是否重新计算文档内容。值为 true 时将在执行后重新计算文档；值为 false 时不重新计算（仅当您确认所做修改不影响文档计算时使用）。默认值为 true。                                                               |
+| callback | function | 方法返回的结果。仅支持 JavaScript 标准类型（如传入对象将被替换为 undefined）。                                                                                                                                                           |
 
 ```mdx-code-block
 </APITable>
@@ -33,7 +33,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 示例
 
-``` ts
+```ts
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument()
   const oParagraph = Api.CreateParagraph()
@@ -52,7 +52,7 @@ Asc.plugin.callCommand(() => {
 
 ### 示例
 
-``` ts
+```ts
 Asc.scope.text = text
 Asc.plugin.callCommand(() => {
   const oDocument = Api.GetDocument()
@@ -76,18 +76,18 @@ Asc.plugin.callCommand(() => {
 <APITable>
 ```
 
-| 名称        | 类型    | 示例                 | 描述                                                                                              |
-|-------------|---------|-------------------------|----------------------------------------------------------------------------------------------------------|
+| 名称        | 类型    | 示例                    | 描述                                                                |
+| ----------- | ------- | ----------------------- | ------------------------------------------------------------------- |
 | data        | string  | `{data}`                | 需要发送到 window.Asc.plugin.info 对象并由插件使用的 OLE 对象数据。 |
-| editorType  | string  | "word"                  | 当前插件运行所在的编辑器类型。                                                   |
-| guid        | string  | `asc.{UUID}`            | 当前文档中 OLE 对象的全局唯一标识符（GUID）。                                                             |
-| height      | number  | 70                      | OLE 对象的高度，单位为毫米。                                                           |
-| imgSrc      | string  | "./resources/image.png" | OLE 对象中存储的图像（可视表示）的链接，供插件使用。        |
-| mmToPx      | number  | 3                       | OLE 对象矢量绘图的毫米与像素转换比率。                                     |
-| objectId    | string  | "1"                     | 当前文档中 OLE 对象的标识符。                                                       |
-| recalculate | boolean | true                    | 强制文档重新计算其内容数据。                                                      |
-| resize      | boolean | true                    | 检查 OLE 对象的尺寸是否已被更改。                                                          |
-| width       | number  | 70                      | OLE 对象的宽度，单位为毫米。                                                            |
+| editorType  | string  | "word"                  | 当前插件运行所在的编辑器类型。                                      |
+| guid        | string  | `asc.{UUID}`            | 当前文档中 OLE 对象的全局唯一标识符（GUID）。                       |
+| height      | number  | 70                      | OLE 对象的高度，单位为毫米。                                        |
+| imgSrc      | string  | "./resources/image.png" | OLE 对象中存储的图像（可视表示）的链接，供插件使用。                |
+| mmToPx      | number  | 3                       | OLE 对象矢量绘图的毫米与像素转换比率。                              |
+| objectId    | string  | "1"                     | 当前文档中 OLE 对象的标识符。                                       |
+| recalculate | boolean | true                    | 强制文档重新计算其内容数据。                                        |
+| resize      | boolean | true                    | 检查 OLE 对象的尺寸是否已被更改。                                   |
+| width       | number  | 70                      | OLE 对象的宽度，单位为毫米。                                        |
 
 ```mdx-code-block
 </APITable>
@@ -95,7 +95,7 @@ Asc.plugin.callCommand(() => {
 
 ### 关于 data、height、imgSrc、mmToPx、objectId 和 width 参数的示例
 
-``` ts
+```ts
 window.Asc.plugin.button = (id) => {
   const info = window.Asc.plugin.info
 
@@ -134,7 +134,7 @@ window.Asc.plugin.button = (id) => {
 
 ### 编辑器类型参数示例
 
-``` ts
+```ts
 function createScriptFromArray(aSelected) {
   if (aSelected.length !== 0) {
     switch (window.Asc.plugin.info.editorType) {
@@ -153,7 +153,7 @@ function createScriptFromArray(aSelected) {
 
 ### 全局唯一标识符示例
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   const plugin_uuid = window.Asc.plugin.info.guid
 }
@@ -161,7 +161,7 @@ window.Asc.plugin.init = () => {
 
 ### 重新计算参数的示例
 
-``` ts
+```ts
 window.Asc.plugin.init = () => {
   let sScript = "var oDocument = Api.GetDocument();"
   sScript = `${sScript}\noDocument.CreateNewHistoryPoint();`
@@ -175,7 +175,7 @@ window.Asc.plugin.init = () => {
 
 ### 调整大小参数的示例
 
-``` ts
+```ts
 if (window.Asc.plugin.info.resize === true) {
   window.Asc.plugin.button(0)
 }

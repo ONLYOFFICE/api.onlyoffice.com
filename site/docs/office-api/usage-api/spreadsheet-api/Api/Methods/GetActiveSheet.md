@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object that represents the active sheet.
+Access the currently open sheet to read or write data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an active sheet object.
+// How do I work with the sheet that is currently visible in a spreadsheet?
 
-// Get worksheet.
+// Target the active tab to place values into cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue("2");

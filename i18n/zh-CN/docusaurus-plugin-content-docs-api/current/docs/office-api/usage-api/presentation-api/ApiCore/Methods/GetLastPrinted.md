@@ -20,9 +20,13 @@ Date
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿最后一次打印的日期。
+设置和检查演示文稿的最后打印时间。
 
 ```javascript editor-pptx
+// How do I find the date a presentation was printed?
+
+// Read the timestamp of the most recent print event in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastPrinted(new Date());
@@ -38,5 +42,4 @@ paragraph.AddText("Last printed: " + lastPrintedDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

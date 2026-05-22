@@ -20,12 +20,12 @@ expression.GetAreas();
 
 ## 示例
 
-此示例演示如何获取范围的集合。
+在电子表格中将多区域选区分解为各个独立范围。
 
 ```javascript editor-xlsx
-// How to get range areas.
+// How do I count the separate areas that make up a range in a spreadsheet?
 
-// Get range areas, count them and display the result in the worksheet.
+// Tally the distinct sub-ranges within a selection and write the total to a cell.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");
@@ -37,5 +37,4 @@ range = worksheet.GetRange("A5");
 range.SetValue("The number of ranges in the areas: ");
 range.AutoFit(false, true);
 worksheet.GetRange("B5").SetValue(count);
-
 ```

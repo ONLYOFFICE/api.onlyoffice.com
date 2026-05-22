@@ -2,30 +2,16 @@
 
 Gets the text fill from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetTextFill();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiFill](../../ApiFill/ApiFill.md)
+Inherited from [ApiTextPr.GetTextFill](../../ApiTextPr/Methods/GetTextFill.md).
 
 ## Example
 
-This example shows how to find out a color of a text.
+Read the text color or fill properties in a presentation.
 
 ```javascript editor-pptx
-// How to know a color fill of a text.
+// How do I check what color is applied to text in a presentation?
 
-// Get the text properties of the run and display its font color.
+// Get the fill property of text to retrieve the color or fill style in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +39,4 @@ fill = textPr.GetTextFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text fill type: " + type);
 docContent.Push(paragraph);
-
 ```

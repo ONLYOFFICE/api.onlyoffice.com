@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例获取条件格式规则的优先级。
+读取分配给电子表格中条件格式规则的优先级。
 
 ```javascript editor-xlsx
-// How to retrieve the priority value from conditional formatting rules.
+// How do I find out what priority order a formatting rule has in a spreadsheet?
 
-// Get conditional formatting rule priority.
+// Check which position a formatting rule holds among all active rules in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +47,4 @@ let priority = condition1.GetPriority();
 
 worksheet.GetRange("C1").SetValue("Rule priority:");
 worksheet.GetRange("C2").SetValue(priority);
-
 ```

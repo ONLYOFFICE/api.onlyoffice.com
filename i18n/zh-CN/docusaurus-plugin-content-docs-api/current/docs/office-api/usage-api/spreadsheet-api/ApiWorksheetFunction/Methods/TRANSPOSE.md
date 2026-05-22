@@ -22,12 +22,12 @@ expression.TRANSPOSE(arg1);
 
 ## 示例
 
-此示例演示如何将垂直单元格区域转换为水平区域，反之亦然。
+在电子表格中将垂直的单元格范围转换为水平范围，反之亦然。
 
 ```javascript editor-xlsx
-// How to change orientation of cells to vertical/horizontal.
+// Flip the orientation of a 2x2 range from rows to columns.
 
-// Use a function to transpose a range.
+// Apply the TRANSPOSE function to rearrange the cell range layout.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

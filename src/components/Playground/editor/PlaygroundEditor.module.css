@@ -23,11 +23,11 @@
 }
 
 .runButton:hover {
-    background: #e55e31;
+    background: var(--ifm-color-primary-dark);
 }
 
 html[data-theme='dark'] .runButton:hover {
-    background: #ff8254;
+    background: var(--ifm-color-primary-light);
 }
 
 .runButton:active {

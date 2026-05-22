@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取 ApiCustomProperties 的类类型。
+检查电子表格中管理自定义属性的对象类型。
 
 ```javascript editor-xlsx
+// How do I confirm the category of the custom properties container in a spreadsheet?
+
+// Verify the identity of the metadata handler before working with custom fields in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 const classType = customProps.GetClassType();
@@ -33,5 +37,4 @@ const shape = worksheet.AddShape("rect", 100 * 36000, 50 * 36000, fill, stroke, 
 
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("ApiCustomProperties class type: " + classType);
-
 ```

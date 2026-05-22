@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a slide show transition
+Add a transition effect to a slide with automatic timing in a presentation.
 
 ```javascript editor-pptx
-// with fade effect that starts after 3 seconds.
+// How do I make a slide advance automatically in a presentation?
+
+// Configure a slide to transition after a set delay with a specific animation effect in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,5 +40,4 @@ transition.SetAdvanceOnTime(true);
 transition.SetAdvanceTime(3000);
 
 slide.SetSlideShowTransition(transition);
-
 ```

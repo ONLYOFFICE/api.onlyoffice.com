@@ -22,10 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Control whether the interior of a custom shape path is filled with color in a spreadsheet.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I turn on the fill for a custom shape path in a spreadsheet?
+
+// Define the fill rule for a drawn path so its enclosed area receives a color in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

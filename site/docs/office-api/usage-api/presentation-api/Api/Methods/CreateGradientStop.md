@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## Example
 
-This example shows how to create a gradient stop used for different types of gradients.
+Add a gradient stop to define a color transition in a presentation.
 
 ```javascript editor-pptx
-// How to add a gradient stop for gradient.
+// How do I create a gradient with multiple color points in a presentation?
 
-// Create a stop for a gradient.
+// Set color positions along a gradient fill to create smooth transitions in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
-
 ```

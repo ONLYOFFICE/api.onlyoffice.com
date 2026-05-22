@@ -22,12 +22,12 @@ expression.SetTime(nTimeStamp);
 
 ## 示例
 
-此示例设置批注创建时间戳（当前时区格式）。
+更新电子表格中批注的记录创建时间。
 
 ```javascript editor-xlsx
-// How to change a time when a comment was created.
+// How do I change when a comment appears to have been created in a spreadsheet?
 
-// Add a comment then update its creation time and show it in the worksheet.
+// Overwrite the original timestamp on a comment with a new time in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

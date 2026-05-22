@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Angular
 
 ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor-angular-workspace) 将 ONLYOFFICE 文档集成到 [Angular](https://angularjs.org/) 项目。
@@ -42,7 +46,7 @@ ONLYOFFICE 文档 Angular [组件](https://github.com/ONLYOFFICE/document-editor
 
 以下步骤取决于您使用的 Angular 版本。 要检查已安装的版本，请运行以下命令：
 
-``` sh
+```sh
 ng version
 ```
 
@@ -91,7 +95,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -118,7 +122,7 @@ ng version
    将以下行替换为您自己的数据：
 
    - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-   - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
+   - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 TypeScript 文件将创建 *AppComponent* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
 
@@ -140,7 +144,9 @@ ng version
 
 1. 打开 *onlyoffice-angular-demo* 项目中的 *./src/app/app.component.ts* 文件，并在您的使用组件中定义选项：
 
-   > 请注意，从 Angular v17.0.0 开始，默认情况下，*app.module.ts* 文件不会添加到新项目中。您必须在 *Component* 装饰器的 *imports* 属性中指定 *DocumentEditorModule*，并将 *standalone* 设置为 *true*。
+   :::note
+   从 Angular v17.0.0 开始，默认情况下，*app.module.ts* 文件不会添加到新项目中。您必须在 *Component* 装饰器的 *imports* 属性中指定 *DocumentEditorModule*，并将 *standalone* 设置为 *true*。
+   :::
 
    ``` ts
    import {Component} from "@angular/core";
@@ -162,7 +168,7 @@ ng version
        },
        documentType: "word",
        editorConfig: {
-         callbackUrl: "https://example.com/url-to-callback.ashx",
+         callbackUrl: "https://example.com/url-to-callback",
        },
      }
      onDocumentReady = () => {
@@ -187,7 +193,7 @@ ng version
    将以下行替换为您自己的数据：
 
    - `https://example.com/url-to-example-document.docx` - 替换为您的文件的 URL；您可以使用我们的示例文档的 URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` 进行测试。
-   - `https://example.com/url-to-callback.ashx` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
+   - `https://example.com/url-to-callback` - 替换为您的回调 URL（这是保存功能正常工作所必需的）。
 
    此 TypeScript 文件将创建 *AppComponent* 组件，其中包含配置了基本功能的 ONLYOFFICE 文档编辑器。
 
@@ -223,13 +229,13 @@ ng version
    const documentEditor = window.DocEditor.instances["docxEditor"]
    ```
 
-2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md):
+2. 从这个对象中调用任何编译器的 [方法](../../usage-api/methods.md)：
 
    ```ts
    documentEditor.showMessage("Welcome to ONLYOFFICE Editor!")
    ```
 
-示例:
+示例：
 
 ```ts
 onDocumentReady = () => {

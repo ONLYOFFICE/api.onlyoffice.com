@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"textPr"
+"richTextPr"
 
 ## Example
 
-This example gets class type of rich text properties object.
+Identify the object type of text properties in a PDF.
 
 ```javascript editor-pdf
+// How do I determine what kind of object handles text formatting in a PDF?
+
+// Verify the class type of a text properties object in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

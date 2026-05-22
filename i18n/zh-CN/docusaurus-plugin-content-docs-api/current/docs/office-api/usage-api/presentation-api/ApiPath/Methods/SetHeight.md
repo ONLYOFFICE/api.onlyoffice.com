@@ -22,10 +22,13 @@ expression.SetHeight(nHeight);
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+定义演示文稿中自定义形状绘图区域的垂直尺寸。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// How do I control the vertical size of a shape path in a presentation?
+
+// Adjust the height value of a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

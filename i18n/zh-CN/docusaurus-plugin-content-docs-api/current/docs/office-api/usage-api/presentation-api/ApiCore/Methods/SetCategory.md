@@ -22,9 +22,13 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置演示文稿的类别。
+为演示文稿分配类别。
 
 ```javascript editor-pptx
+// How do I set a category for a presentation in a presentation?
+
+// Set a category and display it as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
@@ -42,5 +46,4 @@ paragraph.AddText("Category: " + category);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

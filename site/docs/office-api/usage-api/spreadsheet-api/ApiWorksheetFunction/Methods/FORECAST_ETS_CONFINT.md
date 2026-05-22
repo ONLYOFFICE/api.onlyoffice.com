@@ -16,9 +16,9 @@ expression.FORECAST_ETS_CONFINT(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A date for which a new value will be predicted. Must be after the last date in the timeline. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | A range or an array of numeric data that determines the historical values for which a new point will be predicted. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | A range of date/time values that correspond to the historical values. The timeline range must be of the same size as the second argument. Date/time values must have a constant step between them and can't be zero. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | A range of date/time values that correspond to the historical values. |
 | arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A number between 0 and 1 that shows the confidence level for the calculated confidence interval. The default value is .95. |
-| arg5 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An optional numeric value that specifies the length of the seasonal pattern. The default value of 1 indicates seasonality is detected automatically. The 0 value means no seasonality. |
+| arg5 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An optional numeric value that specifies the length of the seasonal pattern. The default value of 1 indicates seasonality is detected automatically. |
 | arg6 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An optional numeric value to handle missing values. The default value of 1 replaces missing values by interpolation, and 0 replaces them with zeros. |
 | arg7 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An optional numeric value to aggregate multiple values with the same time stamp. |
 
@@ -28,12 +28,12 @@ number
 
 ## Example
 
-This example shows how to return a confidence interval for the forecast value at the specified target date.
+Calculate a confidence range for a forecasted value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate or predict a confidence interval for the forecast value.
+// How do I measure uncertainty around a predicted value in a spreadsheet?
 
-// Use a function to get a confidence interval for the forecast value at target date.
+// Get the upper and lower bounds of a forecast estimate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为单选按钮设置单选按钮组的键。
+将单选按钮分组，使文档中一次只能选择一个。
 
 ```javascript editor-forms
-// How to add a radio group to the form.
+// How do I link multiple radio buttons into a single exclusive group in a document?
 
-// Set a radio group to the form.
+// Ensure mutually exclusive choices by assigning all related buttons to the same group in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

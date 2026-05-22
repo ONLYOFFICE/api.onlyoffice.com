@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+读取电子表格中形状中使用的颜色对象的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiUniColor.
+// How do I identify what type of color object is applied to a shape in a spreadsheet?
 
-// Get a class type of ApiUniColor and display it in the worksheet.
+// Confirm the color category by checking its type label in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const presetColor = Api.CreatePresetColor("peachPuff");
@@ -39,5 +39,4 @@ worksheet.SetColumnWidth(0, 15);
 worksheet.SetColumnWidth(1, 10);
 worksheet.GetRange("A1").SetValue("Class Type = ");
 worksheet.GetRange("B1").SetValue(classType);
-
 ```

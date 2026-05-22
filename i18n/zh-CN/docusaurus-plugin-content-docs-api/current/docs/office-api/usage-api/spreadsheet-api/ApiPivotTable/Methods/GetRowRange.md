@@ -20,12 +20,12 @@ expression.GetRowRange();
 
 ## 示例
 
-此示例展示如何获取数据透视表的行区域。
+读取电子表格中数据透视表的行区域。
 
 ```javascript editor-xlsx
-// How to get table row range.
+// How do I find which cells make up the row section of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its row range and select it.
+// Select the row band of a pivot table to highlight or inspect it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取复选框控件组中复选框控件的选中属性。
+检查 PDF 中的复选框控件是否已选中。
 
 ```javascript editor-pdf
+// How do I find out whether a checkbox is marked or unmarked in a PDF?
+
+// Determine the current state of a checkbox widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

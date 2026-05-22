@@ -22,12 +22,12 @@ expression.SetNegativeBorderColor(oColor);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的负值条边框颜色。
+为电子表格中表示负值的条分配自定义边框颜色。
 
 ```javascript editor-xlsx
-// How to change the border color of negative value bars.
+// How do I change the outline color of negative-value bars on a data bar rule in a spreadsheet?
 
-// Set the negative bar border color of a data bar conditional formatting rule.
+// Distinguish negative bars visually by giving their borders a specific color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ dataBar.SetNegativeBorderColor(negativeBorderColor);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetNegativeBorderColor() ? "Set" : "None");
-
 ```

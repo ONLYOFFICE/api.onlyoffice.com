@@ -23,12 +23,12 @@ expression.SetFillColor(oColor);
 
 ## 示例
 
-此示例设置条件格式规则的背景颜色。
+为满足电子表格中条件格式规则的单元格应用背景颜色。
 
 ```javascript editor-xlsx
-// How to apply background colors to conditional formatting rules.
+// How do I fill matching cells with a specific color when a formatting condition is met in a spreadsheet?
 
-// Set conditional formatting rule background color.
+// Color-code qualifying cells automatically through a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -53,5 +53,4 @@ condition1.SetFillColor(fillColor);
 
 worksheet.GetRange("C4").SetValue("New color:");
 worksheet.GetRange("C5").SetValue("Yellow background");
-
 ```

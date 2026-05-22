@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例创建包含多个元素的复合表单，包括文本输入表单和静态文本。
+向文档中的复杂表单添加元素。
 
 ```javascript editor-forms
+// How do I add form fields and static text to a complex form in a document?
+
+// Build a multi-part entry field by combining a text input and a suffix label inside one form.
+
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({"key": "Email", "tip": "Email", "placeholder": "Start to fill complex form"});
 complexForm.Add(Api.CreateTextForm());

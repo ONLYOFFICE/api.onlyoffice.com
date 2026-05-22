@@ -2,32 +2,16 @@
 
 设置时间段条件的日期运算符。
 
-## 语法
-
-```javascript
-expression.SetDateOperator(DateOperator);
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| DateOperator | 必需 | [XlTimePeriods](../../Enumeration/XlTimePeriods.md) |  | 时间段条件的日期运算符。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiFormatCondition.SetDateOperator](../../ApiFormatCondition/Methods/SetDateOperator.md)。
 
 ## 示例
 
-此示例设置时间段条件格式规则的日期运算符。
+分配电子表格中基于日期的条件格式规则检查的时间段。
 
 ```javascript editor-xlsx
-// How to change date operators in time period conditional formatting rules.
+// How do I tell a date formatting rule whether to highlight cells from last week, this month, or another period in a spreadsheet?
 
-// Set conditional formatting rule date operator.
+// Choose which relative date window triggers a formatting rule for date cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetDateOperator("xlLastWeek");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetDateOperator() || "None");
-
 ```

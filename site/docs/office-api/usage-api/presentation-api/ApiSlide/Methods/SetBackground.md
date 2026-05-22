@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets background color of the slide.
+Set a background fill for a slide.
 
 ```javascript editor-pptx
-// How to change a background color of the slide.
+// Apply a radial gradient fill to the slide background.
 
-// Get a slide by its index, set its background and add it to the presentation.
+// Add the slide to the presentation with the new background.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
@@ -36,5 +36,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
-
 ```

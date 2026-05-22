@@ -15,8 +15,8 @@ expression.SetTabs(aPos, aVal);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aPos | 必需 | [twips](../../Enumeration/twips.md)[] |  | 自定义制表位相对于当前页边距的位置数组，以磅的二十分之一（1/1440 英寸）为单位。 |
-| aVal | 必需 | [TabJc](../../Enumeration/TabJc.md)[] |  | 自定义制表位样式数组，确定制表位的行为以及将应用于在当前自定义制表位输入的文本的对齐方式。 |
+| aPos | 必需 | [twips](../../Enumeration/twips.md)[] |  | 自定义制表位相对于当前页边距的位置数组 |
+| aVal | 必需 | [TabJc](../../Enumeration/TabJc.md)[] |  | 自定义制表位样式数组，确定制表位的行为以及 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置将用于段落中任何制表符的自定义制表位序列。
+在演示文稿中定义段落内的自定义制表位位置。
 
 ```javascript editor-pptx
-// How to set the size of a spacing tabs from a paragraph properties.
+// How do I add tabs to control text spacing in a presentation?
 
-// Change a tabs size property of a paragraph properties.
+// Configure tab stops for text alignment using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -57,5 +57,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");
 slide.AddObject(shape);
-
 ```

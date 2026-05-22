@@ -22,12 +22,12 @@ expression.FreezeAt(frozenRange);
 
 ## 示例
 
-此示例在工作表的最上方和最左侧窗格中冻结指定范围。
+锁定工作表的特定区域使其在电子表格中滚动时保持可见。
 
 ```javascript editor-xlsx
-// How to freeze a specified range of panes.
+// How do I pin a chosen block of rows and columns in place during scrolling in a spreadsheet?
 
-// Get freeze panes and freeze the specified part.
+// Keep a defined region always on screen by anchoring it to the corner of the view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let freezePanes = worksheet.GetFreezePanes();

@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回结算日和到期日之间应付的票息数。
+计算电子表格中到期前剩余的票息支付次数。
 
 ```javascript editor-xlsx
-// How to find the number of coupons payable between the settlement date and maturity date.
+// What is the count of interest payments you will receive in a spreadsheet?
 
-// Use function to get the number of coupons payable between the settlement date and maturity date.
+// Determine how many coupon periods remain from settlement to expiration in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例在缩放图像时遵守表单边框宽度。
+防止图像在文档中缩放时超出字段边框。
 
 ```javascript editor-forms
-// How to make borders respected when increasing it.
+// How do I keep a scaled image from overflowing the edges of its picture field in a document?
 
-// Set respect borders property of the picture form.
+// Ensure the border of a picture field stays visible no matter how the image is resized in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "shiftX": 50, "shiftY": 50});

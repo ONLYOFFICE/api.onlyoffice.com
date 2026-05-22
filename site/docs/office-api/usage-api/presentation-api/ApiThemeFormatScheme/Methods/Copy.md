@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the current theme format scheme.
+Duplicate a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to create a copy of a format scheme.
+// How do I create a copy of a format scheme in a presentation?
 
-// Get format scheme and create its copy.
+// Make a replica of an existing theme format scheme to apply to another slide in a presentation.
 
 const presentation = Api.GetPresentation();
 var master = presentation.GetMaster(0);
@@ -67,5 +67,4 @@ const copyFormatScheme = formatScheme.Copy();
 copyFormatScheme.ChangeBgFillStyles([newBgFill1, newBgFill2, newBgFill3]);
 const theme2 = Api.CreateTheme("Theme 2", master, colorScheme, copyFormatScheme, fontScheme);
 slide.ApplyTheme(theme2);
-
 ```

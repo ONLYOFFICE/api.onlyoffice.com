@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何向幻灯片的备注页添加文本。
+向幻灯片的备注部分添加文本以供演讲者参考。
 
 ```javascript editor-pptx
+// Access the notes functionality and attempt to add a note message.
+
+// Verify the result and display a confirmation message in a shape on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ if (isNotesAdded) {
 }
 
 slide.AddObject(shape);
-
 ```

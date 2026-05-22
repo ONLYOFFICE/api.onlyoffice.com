@@ -1,0 +1,48 @@
+# CreateTableCellPr
+
+创建空的表格单元格属性。
+
+## 语法
+
+```javascript
+expression.CreateTableCellPr();
+```
+
+`expression` - 表示 [Api](../Api.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiTableCellPr](../../ApiTableCellPr/ApiTableCellPr.md)
+
+## 示例
+
+在文档中为各个表格单元格应用自定义底纹。
+
+```javascript editor-docx
+// How do I change the background color of a specific table cell in a document?
+
+// Style a single cell with gray shading using a custom table style in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("We create a 3x3 table and set the gray shading for cell #1:");
+
+let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
+tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
+
+let table = Api.CreateTable(3, 3);
+table.SetWidth("percent", 100);
+
+let tableStylePr = tableStyle.GetConditionalTableStyle("topLeftCell");
+table.SetTableLook(true, true, true, true, true, true);
+let tableCellPr = Api.CreateTableCellPr();
+tableCellPr.SetShd("clear", 0xEE, 0xEE, 0xEE);
+tableStylePr.SetTableCellPr(tableCellPr);
+
+table.SetStyle(tableStyle);
+doc.Push(table);
+```

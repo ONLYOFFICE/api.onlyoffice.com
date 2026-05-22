@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example adds an object (image, shape or chart) to the current presentation slide.
+Create and add a 3D bar chart to a presentation slide.
 
 ```javascript editor-pptx
-// How to add an element to the slide.
+// Define chart data with two data series, axis titles, legend position, and styling.
 
-// Create a chart and add it to the ApiSlide object.
+// Apply custom fill colors to chart series and position the chart on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

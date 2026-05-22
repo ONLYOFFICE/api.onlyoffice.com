@@ -14,7 +14,7 @@ expression.SetLanguage(sLangId);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | 必需 | string |  | 此参数的可能值是 RFC 4646/BCP 47 定义的语言标识符。示例："en-CA"。 |
+| sLangId | 必需 | string |  | 此参数的可能值为由 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.SetLanguage(sLangId);
 
 ## 示例
 
-此示例指定在处理此文本块内容时将用于检查拼写和语法（如果请求）的语言。
+设置文本运行的拼写检查和语法验证语言。
 
 ```javascript editor-pptx
-// How to change language of the text for grammar check.
+// Configure the language for grammar checking on text content in a presentation.
 
-// Create a new text run and change its language.
+// Create a text run and assign a language code for grammar processing.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ run.AddText("This is a text run with the text language set to English (Canada)."
 paragraph.AddElement(run);
 run.SetLanguage("en-CA");
 slide.AddObject(shape);
-
 ```

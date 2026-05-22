@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the current slide object.
+Create a copy of a slide in a presentation.
 
 ```javascript editor-pptx
-// How to create a copy of the slide.
+// How do I copy a slide in a presentation?
 
-// Create a duplicate slide and add it to the presentation.
+// Add the copied slide to the presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,5 +37,4 @@ slide.SetBackground(fill);
 
 const copySlide = slide.Copy();
 presentation.AddSlide(copySlide);
-
 ```

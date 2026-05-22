@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+识别电子表格中文本属性块的对象类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiTextPr.
+// How do I find out what kind of object holds text formatting settings in a spreadsheet?
 
-// Get a class type of ApiTextPr and display it in the worksheet.
+// Display the type label of a text properties object inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

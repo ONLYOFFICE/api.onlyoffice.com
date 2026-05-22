@@ -20,9 +20,13 @@ expression.GetAllWidgets();
 
 ## 示例
 
-此示例获取页面上的所有字段。
+从 PDF 的页面检索所有交互式字段。
 
 ```javascript editor-pdf
+// How do I access all the form fields in a PDF?
+
+// List every interactive element on the current page in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

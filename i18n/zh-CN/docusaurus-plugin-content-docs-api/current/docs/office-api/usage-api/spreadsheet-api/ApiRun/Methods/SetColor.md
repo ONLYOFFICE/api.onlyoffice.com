@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-此示例以 RGB 格式设置当前文本块的文本颜色。
+使用十六进制值更改电子表格中文本运行的字体颜色。
 
 ```javascript editor-xlsx
-// How to change text color.
+// How do I set a specific color for text inside a shape in a spreadsheet?
 
-// Create a text run object, update its font color using RGB format values.
+// Apply a custom hex color to a run to visually distinguish it from surrounding text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,5 +44,4 @@ let run = Api.CreateRun();
 run.AddText('This is a text run with the font color set to gray.');
 paragraph.AddElement(run);
 run.SetColor(Api.HexColor('#808080'));
-
 ```

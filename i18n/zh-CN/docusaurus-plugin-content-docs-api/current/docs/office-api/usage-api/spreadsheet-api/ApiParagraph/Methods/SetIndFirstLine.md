@@ -2,32 +2,16 @@
 
 设置段落首行缩进。
 
-## 语法
-
-```javascript
-expression.SetIndFirstLine(nValue);
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 段落首行缩进值，以磅的二十分之一（1/1440 英寸）为单位。 |
-
-## 返回值
-
-boolean
+继承自 [ApiParaPr.SetIndFirstLine](../../ApiParaPr/Methods/SetIndFirstLine.md)。
 
 ## 示例
 
-此示例设置段落首行缩进。
+在电子表格中缩进形状内段落的第一行。
 
 ```javascript editor-xlsx
-// How to change the first sentence indentation of the paragraph.
+// How do I push in just the opening line of a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the first line indentation.
+// Control the first-line indent separately from the rest of the paragraph text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

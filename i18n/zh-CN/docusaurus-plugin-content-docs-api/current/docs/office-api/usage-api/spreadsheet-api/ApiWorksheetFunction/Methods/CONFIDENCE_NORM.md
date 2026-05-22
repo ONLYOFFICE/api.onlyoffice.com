@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何使用正态分布返回总体平均值的置信区间。
+确定电子表格中估计平均值的准确范围。
 
 ```javascript editor-xlsx
-// How to return the confidence interval for a population mean, using a normal distribution.
+// What uncertainty level should you expect around your average in a spreadsheet?
 
-// Use function to confidence interval for a population mean.
+// Measure how confident you can be in your average calculation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

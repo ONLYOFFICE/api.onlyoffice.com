@@ -20,17 +20,16 @@ expression.ClearContents();
 
 ## 示例
 
-此示例清除范围中的所有内容。
+删除电子表格中单元格范围的值，同时保留其格式不变。
 
 ```javascript editor-xlsx
-// How to clear contents for a range.
+// How do I remove cell data without touching the styling in a spreadsheet?
 
-// Get a range, clear contents and show the result.
+// Wipe only the text and numbers from selected cells so their appearance stays unchanged in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:B1").SetValue("Example text");
 let range = worksheet.GetRange("A1");
 range.ClearContents();
 worksheet.GetRange("A2").SetValue("Result is contents cleared for A1 cell.");
-
 ```

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the XML content of a custom XML part.
+Get the XML content of a custom XML part in a presentation.
 
 ```javascript editor-pptx
-// How to get the XML content of an XML part.
+// How do I extract the raw XML from a custom XML part in a presentation?
 
-// Get XML content.
+// Display the XML content in a shape in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

@@ -22,9 +22,13 @@ expression.SetTitle(sTitle);
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿的标题。
+向演示文稿元数据添加标题。
 
 ```javascript editor-pptx
+// How do I set the title that identifies my presentation?
+
+// Retrieve and display the presentation title in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetTitle("My Presentation Title");
@@ -40,5 +44,4 @@ paragraph.AddText("Title: " + title);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

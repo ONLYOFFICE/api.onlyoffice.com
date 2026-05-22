@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为线条注释设置终点。
+更改 PDF 中线条注释的结束位置。
 
 ```javascript editor-pdf
+// How do I move the endpoint of a line in a PDF?
+
+// Update the ending position of a line annotation in a PDF.
+
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 12, y: 12}, {x: 155, y: 30});
 lineAnnot.SetEndStyle("openArrow");

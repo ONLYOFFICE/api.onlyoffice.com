@@ -20,9 +20,13 @@ expression.GetAllSlideMasters();
 
 ## 示例
 
-此示例演示如何获取当前演示文稿中的所有幻灯片母版。
+访问演示文稿中的幻灯片模板。
 
 ```javascript editor-pptx
+// How do I retrieve every slide master design in a presentation?
+
+// Add new masters and display the total count in a presentation.
+
 const presentation = Api.GetPresentation();
 const firstSlide = presentation.GetSlideByIndex(0);
 firstSlide.RemoveAllObjects();
@@ -43,5 +47,4 @@ firstSlide.AddObject(shape);
 
 const paragraph =  shape.GetContent().GetElement(0);
 paragraph.AddText('Total slide masters count: ' + mastersCount);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to delete a data field.
+Remove a value field from a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove a table element.
+// How do I delete a data column from a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then delete a custom data field.
+// Drop an unwanted summary field to clean up pivot table results in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -57,12 +57,6 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
 let dataField = pivotTable.GetDataFields('Sum of Price');
-
-pivotWorksheet.GetRange('A12').SetValue('Sum of Price will be deleted soon');
-
-setTimeout(function() {
-    dataField.Remove();
-}, 5000);
+dataField.Remove();
 ```

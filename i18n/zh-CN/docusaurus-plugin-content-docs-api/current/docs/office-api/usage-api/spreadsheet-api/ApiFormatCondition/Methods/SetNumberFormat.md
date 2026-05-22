@@ -22,12 +22,12 @@ expression.SetNumberFormat(NumberFormat);
 
 ## 示例
 
-此示例设置条件格式规则的数字格式。
+控制电子表格中触发格式规则时数字的显示方式。
 
 ```javascript editor-xlsx
-// How to apply number formatting to conditional formatting rules.
+// How do I apply a custom number display pattern to a conditional formatting rule in a spreadsheet?
 
-// Set conditional formatting rule number format.
+// Ensure highlighted cells show values with a specific currency or decimal style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +52,4 @@ condition1.SetNumberFormat("$#,##0.00");
 
 worksheet.GetRange("C4").SetValue("New format:");
 worksheet.GetRange("C5").SetValue(condition1.GetNumberFormat());
-
 ```

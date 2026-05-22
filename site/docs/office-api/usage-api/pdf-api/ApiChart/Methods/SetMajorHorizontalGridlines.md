@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set major horizontal gridlines of the chart.
+Change the style of the horizontal grid lines in a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its major gridlines.
+// How do I format the horizontal grid lines in a chart in a PDF?
+
+// Add a custom border to the horizontal reference lines in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMajorHorizontalGridlines(stroke);
 page.AddObject(chart);
-
 ```

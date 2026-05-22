@@ -27,12 +27,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the fonts to the current theme font scheme.
+Apply fonts to a theme font scheme in a presentation.
 
 ```javascript editor-pptx
-// How to set fonts to a theme.
+// How do I change the fonts used in a font scheme in a presentation?
 
-// Retrieve theme and set its font theme by adding fonts.
+// Get a font scheme and replace its fonts with new ones in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ paragraph.SetJc("left");
 paragraph.AddText("New font scheme was set to this slide.");
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

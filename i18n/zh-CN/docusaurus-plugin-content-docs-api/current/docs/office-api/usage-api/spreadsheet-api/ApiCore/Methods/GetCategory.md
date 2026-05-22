@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取工作簿的类别。
+读取电子表格中分配给工作簿的类别。
 
 ```javascript editor-xlsx
+// How do I find out what category a workbook belongs to in a spreadsheet?
+
+// Display the workbook category stored in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Category: " + category);
-
 ```

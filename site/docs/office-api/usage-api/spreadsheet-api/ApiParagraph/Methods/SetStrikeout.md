@@ -22,9 +22,13 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example shows how to apply strikeout formatting to all text in a paragraph inside a shape.
+Draw a horizontal line through all text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I mark paragraph text as crossed out in a spreadsheet?
+
+// Strike through the text of a paragraph to indicate removed or deprecated content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 110, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetStrikeout(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has no strikeout.');
 content.Push(paragraph2);
-
 ```

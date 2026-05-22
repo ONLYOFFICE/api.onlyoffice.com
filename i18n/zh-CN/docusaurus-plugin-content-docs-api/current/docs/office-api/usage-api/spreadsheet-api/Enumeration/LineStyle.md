@@ -23,10 +23,9 @@
 - "Medium"
 - "Thick"
 
-
 ## 示例
 
-此示例为单元格设置黑色点线底部边框。
+为单元格设置黑色点线底部边框。
 
 ```javascript editor-xlsx
 // How to set a style of a border line.
@@ -35,5 +34,4 @@
 
 const color = Api.CreateColorFromRGB(0, 0, 0);
 worksheet.GetRange("E2").SetBorders("Bottom", "Dotted", color);
-
 ```

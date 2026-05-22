@@ -21,9 +21,13 @@ expression.GetCore();
 
 ## 示例
 
-此示例演示如何使用 ApiCore 管理电子表格元数据。
+读取和写入电子表格中的内置文档属性，如作者和标题。
 
 ```javascript editor-xlsx
+// How do I set or retrieve metadata like creator, subject, and keywords in a spreadsheet?
+
+// Store descriptive information about the document itself in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const core = Api.GetCore();
@@ -86,5 +90,4 @@ paragraph.AddText("Revision: " + revision + "\n");
 paragraph.AddText("Subject: " + subject + "\n");
 paragraph.AddText("Title: " + title + "\n");
 paragraph.AddText("Version: " + version);
-
 ```

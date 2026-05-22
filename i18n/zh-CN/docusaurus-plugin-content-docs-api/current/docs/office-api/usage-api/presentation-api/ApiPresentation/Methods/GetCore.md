@@ -21,9 +21,13 @@ expression.GetCore();
 
 ## 示例
 
-此示例演示如何获取 ApiCore 实例并使用其方法管理演示文稿元数据。
+访问核心属性实例以管理演示文稿元数据。
 
 ```javascript editor-pptx
+// Get the core object from the active presentation.
+
+// Display all core property values in a shape on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -84,5 +88,4 @@ paragraph.AddText("Title: " + title + "\n");
 paragraph.AddText("Version: " + version);
 
 slide.AddObject(shape);
-
 ```

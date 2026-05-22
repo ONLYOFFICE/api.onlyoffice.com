@@ -11,10 +11,9 @@ Enumeration
 - "xlFormulas"
 - "xlValues"
 
-
 ## Example
 
-This example specify that the whole text match will be searched in the range.
+Specify that the whole text match will be searched in the range.
 
 ```javascript editor-xlsx
 // How to indicate from where the text should be searched.
@@ -30,5 +29,4 @@ let searchRange = range.Find({
 	SearchDirection: "xlNext",
 	MatchCase: true
 });
-
 ```

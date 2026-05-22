@@ -25,10 +25,13 @@ expression.ArcTo(wR, hR, stAng, swAng);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+在演示文稿中绘制弧线作为自定义形状的一部分。
 
 ```javascript editor-pptx
-// Demonstrates different curve types in a single path on a slide.
+// How do I create a curved arc in a custom shape in a presentation?
+
+// Add an arc segment to a geometry path on a slide in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

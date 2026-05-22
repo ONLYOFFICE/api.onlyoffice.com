@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例指定当前文本块的内容显示为每个字符都有两条水平线穿过。
+在电子表格中为文本运行绘制双删除线。
 
 ```javascript editor-xlsx
-// How to strikethrough a text with two lines.
+// How do I apply a double strikethrough to text inside a shape in a spreadsheet?
 
-// Create a text run object, double cross out it.
+// Mark text as deleted or void using a double-line cross-out style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

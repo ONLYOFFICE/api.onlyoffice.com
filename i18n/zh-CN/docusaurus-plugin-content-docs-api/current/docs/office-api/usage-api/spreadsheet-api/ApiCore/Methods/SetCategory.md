@@ -22,9 +22,13 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置工作簿的类别。
+通过电子表格的文档属性为工作簿分配类别标签。
 
 ```javascript editor-xlsx
+// How do I set a category for a workbook in a spreadsheet?
+
+// Store a descriptive category in the metadata fields of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Category: " + category);
-
 ```

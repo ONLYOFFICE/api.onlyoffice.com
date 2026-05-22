@@ -20,9 +20,13 @@ Date
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取演示文稿的创建日期。
+设置和检索演示文稿的创建日期。
 
 ```javascript editor-pptx
+// How do I access the creation date in a presentation?
+
+// Read the date when a presentation was originally created in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreated(new Date('20 January 2000'));
@@ -38,5 +42,4 @@ paragraph.AddText("Created: " + createdDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -18,16 +18,16 @@ expression.SetRowHeight(nHeight);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置行高值。
+将电子表格中行的高度调整为特定大小。
 
 ```javascript editor-xlsx
-// How to set a row height of cells.
+// How do I make a row taller or shorter in a spreadsheet?
 
-// Get a range and specify its row height.
+// Resize a row to fit content or improve the visual layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetRowHeight(32);

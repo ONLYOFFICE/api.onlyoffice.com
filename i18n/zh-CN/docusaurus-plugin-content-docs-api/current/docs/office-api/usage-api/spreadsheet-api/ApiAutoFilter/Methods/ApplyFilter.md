@@ -25,12 +25,12 @@ void
 
 ## 示例
 
-此示例在数据更改后重新应用现有的自动筛选。
+重新应用当前筛选规则以刷新电子表格中可见的行。
 
 ```javascript editor-xlsx
-// How to reuse filter criteria without redefining them.
+// How do I update the filtered view after data has changed in a spreadsheet?
 
-// Reapply an AutoFilter using ApiAutoFilter.ApplyFilter().
+// Refresh the visible rows without changing or removing the filter conditions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -58,5 +58,4 @@ autoFilter.ApplyFilter();
 worksheet.GetRange("C1").SetValue("AutoFilter reapplied with ApplyFilter().");
 worksheet.GetRange("C2").SetValue("Filter: Score > 25");
 worksheet.GetRange("C7").SetValue("Updated value in A3 is now included by the filter.");
-
 ```

@@ -23,12 +23,12 @@ expression.Intersect(Range1, Range2);
 
 ## 示例
 
-此示例演示如何获取表示两个或多个范围的矩形交集的 ApiRange 对象。
+查找电子表格中两个范围共享的重叠单元格。
 
 ```javascript editor-xlsx
-// How to find intersection of two ranges and highlight it.
+// How do I get only the cells that belong to both of two selected ranges in a spreadsheet?
 
-// Find common cells of two ranges and fill them with a color.
+// Highlight the area where two ranges meet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range1 = worksheet.GetRange("A1:C5");

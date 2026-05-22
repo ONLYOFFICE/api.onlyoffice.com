@@ -4,21 +4,21 @@ sidebar_position: -17
 
 # Mentions
 
-The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Docs.
+The figure and steps below explain how the mentions feature works in ONLYOFFICE Docs.
 
 <img alt="Create mentions" src="/assets/images/editor/mentions-create.png" width="720px" />
 
-1. The user sends a request to get a list of users to mention by typing **+** sign in the comment field in the **document editor**.
-2. The **document editor** informs the **document manager** about the request.
-3. The **document manager** sends the list of users to the **document editor** where this list will be displayed under the comment field.
-4. The user types a comment in the comment field in the **document editor** and the comment is added to the document.
-5. The **document editor** sends the message, the list of emails and the link action in the document to the **document manager**.
+1. The user types `+` or `@` in the comment field of the **document editor**.
+2. The **document editor** requests the list of users who can be mentioned from the **document manager**.
+3. The **document manager** returns the user list to the **document editor**, which displays it under the comment field.
+4. The user selects a name, writes a comment, and submits it.
+5. The **document editor** sends the comment text, the list of mentioned emails, and the action link data to the **document manager**.
 
 ## How this can be done in practice
 
-1. Create an empty *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
+1. Create an `.html` file to [open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. In the configuration script for Document Editor initialization, specify the event handler for the hint about mentioning users in the comments to be displayed. When the user types the **+** sign, the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is called and the commenter can select other users for mentioning in the comments. The *data.c* parameter with the *mention* operation type is passed in this event.
+2. In the editor initialization config, define the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event handler. When the user types `+` or `@` in a comment, the editor calls this handler with `event.data.c` set to `"mention"`. Your code must respond by calling [setUsers](../../usage-api/methods.md#setusers) with the list of users who can be mentioned:
 
    <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
 
@@ -36,8 +36,8 @@ The reference figure and the steps below explain the process of mentioning users
            name: "Kate Cage",
          },
        ],
-     })
-   };
+     });
+   }
    
    const config = {
      events: {
@@ -48,50 +48,49 @@ The reference figure and the steps below explain the process of mentioning users
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-3. In order to set the users list under the comment field, the [setUsers](../../usage-api/methods.md#setusers) method must be called:
+3. Define the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event handler to send notifications to mentioned users. When the user submits a comment that mentions someone, the editor calls this handler with:
+
+   - `event.data.message` — the comment text
+   - `event.data.emails` — the list of mentioned email addresses
+   - `event.data.actionLink` — an object describing the comment position in the document
+
+   :::note
+   The `+` / `@` mention button in the comment field is only visible when `onRequestSendNotify` is set. In version 5.4, `onRequestSendNotify` can only be used if [onRequestUsers](../../usage-api/config/events.md#onrequestusers) is set. Starting from version 5.5, both events can be set independently.
+   :::
 
    ``` ts
-   docEditor.setUsers({
-     c: "mention",
-     users: [
-       {
-         email: "john@example.com",
-         name: "John Smith",
-       },
-       {
-         email: "kate@example.com",
-         name: "Kate Cage",
-       },
-     ],
-   })
+   function onRequestSendNotify(event) {
+     const ACTION_DATA = event.data.actionLink;
+     const comment = event.data.message;
+     const emails = event.data.emails;
+     NOTIFY_USERS(emails, comment, ACTION_DATA);
+   }
+   
+   const config = {
+     events: {
+       onRequestSendNotify,
+     },
+   };
+
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+   `NOTIFY_USERS` is a placeholder for your server-side logic that sends notifications to the mentioned users. Include `ACTION_DATA` so that the notification link opens the document at the comment position.
 
 ## Opening the comment
 
 <img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px" />
 
-1. The user follows the link in the **document manager**.
-2. The **document manager** sends the initialization *editorConfig* to the **document editor**.
-3. The **document editor** scrolls the document to the comment.
+1. The mentioned user opens the link from a notification (for example, an email), which navigates to the **document manager**.
+2. The **document manager** initializes the **document editor** with the [`config`](../../usage-api/config/config.md) that includes the comment position data in the [`actionLink`](../../usage-api/config/editor/editor.md#actionlink) parameter.
+3. The **document editor** opens the document and scrolls to the comment.
 
-Specify the event handler for the comment message and the list of emails to be sent in the configuration script for Document Editor initialization. When the user adds the comment, the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is called. The message and the list of emails are sent in the *data* parameter. The comment data is received in the *data.actionLink* parameter. As in the case of adding an [action link](./action-link.md#how-this-can-be-done-in-practice) to a bookmark, an *actionLink* object must be used in the configuration as the value for the [editorConfig.actionLink](../../usage-api/config/editor/editor.md#actionlink) parameter.
+As with [action links](./action-link.md#opening-the-bookmark), pass the `actionLink` object received from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event as the value of [`editorConfig.actionLink`](../../usage-api/config/editor/editor.md#actionlink):
 
-:::note
-In version 5.4, **onRequestSendNotify** event can only be used if [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event is set. Starting from version 5.5, there is no such dependency between **onRequestSendNotify** and **onRequestUsers** - both can be set independently.
-:::
-
-``` ts
-function onRequestSendNotify(event) {
-  const ACTION_DATA = event.data.actionLink
-  const comment = event.data.message
-  const emails = event.data.emails
-};
-
+```ts
 const config = {
-  events: {
-    onRequestSendNotify,
+  editorConfig: {
+    actionLink: ACTION_DATA,
   },
 };
 
@@ -100,13 +99,13 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## Sharing settings
 
-When the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is called, the software integrators provide access to the file, send notifications to the mentioned users with the action link which allows scrolling to the comment position in the document.
+When [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) fires, the integrator is responsible for granting the mentioned users access to the file and sending them a notification with the action link.
 
-In the case when the [document.info.sharingSettings](../../usage-api/config/document/info.md#sharingsettings) field is used in the document initialization but the list of the users from the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is different, the [setSharingSettings](../../usage-api/methods.md#setsharingsettings) method must be called.
+If the document config already includes a [`document.info.sharingSettings`](../../usage-api/config/document/info.md#sharingsettings) list and the set of users changes after mentioning, call [setSharingSettings](../../usage-api/methods.md#setsharingsettings) to update the displayed sharing list:
 
 ![Sharing settings](/assets/images/editor/sharing-settings.png#gh-light-mode-only)![Sharing settings](/assets/images/editor/sharing-settings.dark.png#gh-dark-mode-only)
 
-``` ts
+```ts
 docEditor.setSharingSettings({
   sharingSettings: [
     {
@@ -122,10 +121,6 @@ docEditor.setSharingSettings({
 });
 ```
 
-In the case when the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event does not provide access to the file, the [mentionShare](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) parameter in the customization section of the editor configuration must be set to **false**.
-
-:::note
-It will only be available for the comments if the [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) event is set.
-:::
+If [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) does not grant file access to mentioned users, set [`mentionShare`](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) to `false` to hide the sharing UI in comments.
 
 <img alt="Mentions" src="/assets/images/editor/mentionShare.png" width="379px" />

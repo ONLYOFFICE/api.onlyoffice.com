@@ -22,9 +22,13 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-此示例使用指定的字体系列设置所有 4 个字体槽。
+更改演示文稿中段落文本的字体。
 
 ```javascript editor-pptx
+// How do I set the font family for a paragraph in a presentation?
+
+// Apply a specific font typeface to all text in a paragraph in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This is a paragraph with the font family set to 'Consolas'.");
 paragraph.SetFontFamily('Consolas');
 slide.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ expression.GetEntireRow();
 
 ## 示例
 
-此示例演示如何获取包含范围的整行。
+选择与电子表格中给定范围重叠的完整行。
 
 ```javascript editor-xlsx
-// How to select entire rows from a range.
+// How do I highlight all the rows that a range belongs to in a spreadsheet?
 
-// Get a range, get its entire rows and fill them with color.
+// Fill the complete rows of a range with a background color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("C3:E5");
@@ -37,5 +37,4 @@ entireRows.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 
 worksheet.GetRange("A1").SetValue("Entire rows of C3:E5 are highlighted");
 worksheet.GetRange("A1").AutoFit(false, true);
-
 ```

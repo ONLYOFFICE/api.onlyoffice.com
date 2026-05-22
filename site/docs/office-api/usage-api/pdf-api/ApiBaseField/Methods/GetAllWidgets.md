@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all field widgets and sets border color for them.
+Access all visual instances of a form field in a PDF.
 
 ```javascript editor-pdf
+// How can I retrieve every visual representation of a form field in a PDF?
+
+// Modify the appearance of all form field widgets in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -35,5 +39,4 @@ let rgbColor = Api.RGB(255, 100, 0);
 widgets.forEach(function(widget) {
     widget.SetBorderColor(rgbColor);
 });
-
 ```

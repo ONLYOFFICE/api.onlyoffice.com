@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to convert a number into a text representation with the given radix (base).
+Convert a number to a text representation in a chosen base (such as binary or hexadecimal) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert a number into text.
+// Express a number in a different numeral base in a spreadsheet.
 
-// Use function to get a text from a number.
+// Rewrite a decimal value as a string in any radix with a minimum digit width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

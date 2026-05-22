@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例为图表设置「0.00」数字格式。
+在演示文稿中为图表数据点应用数字格式。
 
 ```javascript editor-pptx
-// How to change a number format of a data point.
+// How do I format numbers displayed on a chart in a presentation?
 
-// Create a chart then apply specified numeric format to its data points.
+// Create a chart and set a specific numeric format to display its data values in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

@@ -23,10 +23,10 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets size to the shape.
+Set size to the shape in a presentation.
 
 ```javascript editor-pptx
-// How to resize a drawing.
+// Size controls the dimensions of a shape on the slide.
 
 // Get a shape object from a slide and set its size.
 
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

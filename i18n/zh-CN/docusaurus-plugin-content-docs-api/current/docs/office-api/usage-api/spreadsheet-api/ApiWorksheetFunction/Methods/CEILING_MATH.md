@@ -16,7 +16,7 @@ expression.CEILING_MATH(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向上舍入的值。 |
 | arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向上舍入到的基数的倍数。如果省略，则使用默认值 1。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定负数是向零方向还是远离零方向舍入。如果省略或设置为 0，负数向零方向舍入。如果指定任何其他数值，负数远离零方向舍入。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定负数是向零方向舍入还是远离零方向舍入。如果省略或设置为 0，负数将向零方向舍入。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何将数字向上舍入到最接近的整数或最接近的基数倍数。
+在电子表格中将数字向上舍入到最近的整数值。
 
 ```javascript editor-xlsx
-// How to round a number up.
+// What is the ceiling of a negative or positive number in a spreadsheet?
 
-// Use function to round a number up the nearest integer or to the nearest multiple of significance.
+// Enforce upward rounding regardless of sign in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

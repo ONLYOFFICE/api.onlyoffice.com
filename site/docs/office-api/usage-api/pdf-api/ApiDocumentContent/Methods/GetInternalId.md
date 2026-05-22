@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example returns an internal ID of the current document content.
+Get the unique identifier assigned to a shape's content in a PDF.
 
 ```javascript editor-pdf
+// How can I find the ID that refers to a shape's content in a PDF?
+
+// Discover the reference code that distinguishes a content container in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -35,5 +39,4 @@ const internalId = docContent.GetInternalId();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Document content internal ID: ' + internalId);
 page.AddObject(shape);
-
 ```

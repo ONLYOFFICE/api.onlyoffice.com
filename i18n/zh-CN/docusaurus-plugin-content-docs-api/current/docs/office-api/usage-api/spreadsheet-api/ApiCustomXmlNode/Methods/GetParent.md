@@ -20,9 +20,13 @@ expression.GetParent();
 
 ## 示例
 
-此示例展示如何获取自定义 XML 节点的父节点。
+向上导航到电子表格中 XML 元素的包含节点。
 
 ```javascript editor-xlsx
+// How do I find the parent node of an XML element in a spreadsheet?
+
+// Traverse the XML hierarchy to identify where a node belongs in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -39,5 +43,4 @@ const grandParent = parentNode.GetParent();
 
 worksheet.GetRange('A1').SetValue('Parent node name: ' + parentNode.GetNodeName());
 worksheet.GetRange('A2').SetValue('Grand parent: ' + grandParent);
-
 ```

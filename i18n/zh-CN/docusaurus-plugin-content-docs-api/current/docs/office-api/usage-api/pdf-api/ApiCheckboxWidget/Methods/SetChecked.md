@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例在复选框控件组中设置复选框控件为选中状态。
+在 PDF 中将复选框标记为选中或取消选中。
 
 ```javascript editor-pdf
+// How do I toggle a checkbox widget between checked and unchecked in a PDF?
+
+// Set the checked state of a checkbox widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

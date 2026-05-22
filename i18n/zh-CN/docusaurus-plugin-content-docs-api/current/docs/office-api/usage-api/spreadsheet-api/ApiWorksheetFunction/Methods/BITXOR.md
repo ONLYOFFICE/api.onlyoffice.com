@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回两个数的按位 XOR 运算结果。
+查找电子表格中两个数字之间不同的位。
 
 ```javascript editor-xlsx
-// How to get a result from XOR operation.
+// Which bits are active in one number but not the other in a spreadsheet?
 
-// Use function to calculate bitwise "XOR" operation.
+// Highlight the unique bits when comparing two values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

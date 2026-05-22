@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-此示例演示如何获取指定字体的父级 ApiCharacters 对象。
+检索电子表格中字体设置所属的字符对象。
 
 ```javascript editor-xlsx
-// How to determine a font object's parent.
+// How do I get back to the characters object from a font so I can change its text in a spreadsheet?
 
-// Get a parent of a font and add text to it.
+// Navigate from a font up to its owning characters object to update the displayed text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

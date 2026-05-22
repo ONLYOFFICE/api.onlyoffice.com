@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取数据验证中的第一个公式。
+读取电子表格中单元格验证规则中设置的主要边界值。
 
 ```javascript editor-xlsx
-// How to retrieve the validation formula.
+// How do I find out what the first condition value is for a validated cell in a spreadsheet?
 
-// Get the first formula.
+// Verify the lower limit or single threshold defined in a cell's data validation rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -33,5 +33,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let formula1 = validation.GetFormula1();
 worksheet.GetRange("B1").SetValue("Formula1: " + formula1);
-
 ```

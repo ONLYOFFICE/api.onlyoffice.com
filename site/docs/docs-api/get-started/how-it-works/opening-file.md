@@ -4,45 +4,42 @@ sidebar_position: -22
 
 # Opening file
 
-The reference figure and the steps below explain the process of opening a document in ONLYOFFICE Docs.
+The figure and steps below explain how a document is opened in ONLYOFFICE Docs.
 
 ![Opening File](/assets/images/editor/opening.svg)
 
-1. The user uses the **document manager** (found in his/her browser) to open the document for viewing or editing.
+1. Using the **document manager** in the browser, the user opens a document to view or edit it.
+2. The **document manager** initializes the **document editor** with a [`config`](../../usage-api/config/config.md) object that includes the document [`key`](../../usage-api/config/document/document.md#key), [`url`](../../usage-api/config/document/document.md#url), and other required parameters.
+3. The **document editor** sends a request to the **document editing service** to open the document, using the `config` received from the **document manager**.
+4. The **document editing service** downloads the document file from the **document storage service** using the `url` provided. If the file is not already in one of the editors' native formats (`.docx`, `.xlsx`, `.pptx`, or `.pdf`), it is [converted](./converting-and-downloading-file.md) at this step so the **document editor** can work with it natively.
+5. When ready, the **document editing service** transfers the document file to the **document editor**.
+6. The **document editor** displays the document file and, if the user has the appropriate rights, allows editing.
 
-   > The browser **document manager** receives the list of all documents available to the user from the **document storage service**.
-
-2. The document identifier and the link to it at the **document storage service** are sent using the [JavaScript API](../basic-concepts.md) to the **document editor**.
-
-3. The **document editor** forms a request to the **document editing service** for document opening. The **document editor** uses the document identifier and its link received from the **document manager** (at step 2).
-
-4. The **document editing service** downloads the document file from the **document storage service** using the ID and link provided. At this step the [conversion](./converting-and-downloading-file.md) of the file into Office Open XML format is also performed for the **document editor** better performance and formats compatibility.
-
-5. When ready the **document editing service** transfers the document file to the browser-based **document editor**.
-
-6. The **document editor** displays the document file and/or (in case the appropriate rights are provided) allows its editing.
-
-After the editing is finished, the [document saving](./saving-file.md) process takes place.
+After editing is finished, the document is [saved](./saving-file.md).
 
 ## How this can be done in practice
 
-1. Create an empty *html* file.
+1. Create an empty `.html` file.
 
-2. Add the *div* element as shown below.
+2. Add the `<div>` element as shown below:
 
    ``` html
    <div id="placeholder"></div>
    ```
 
-3. Specify your ONLYOFFICE Docs link with the JavaScript API that will be used for your website.
+3. Include the ONLYOFFICE Docs JavaScript API script on your page:
 
    ``` html
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed. The `api.js` script is served by the **document editing service**; it loads the **document editor** and connects it to that same service.
 
-4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
+   :::tip
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   :::
+
+4. Add the script that initializes the **document editor** for the `<div>` element, using the configuration for the document you want to open:
 
    ``` ts
    const config = {
@@ -58,6 +55,11 @@ After the editing is finished, the [document saving](./saving-file.md) process t
 
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
-   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed.
 
-5. Open your *html* file in the browser.
+   Replace `example.com` with the host serving your document file — i.e., your **document storage service**. In this minimal example, the local `.html` file plays the role of the **document manager** — in a real integration, the manager would build this config dynamically for each user and document. For a quick test without hosting a file yourself, use `https://static.onlyoffice.com/assets/docs/samples/demo.docx` as the `url`.
+
+   :::caution
+   When JWT validation is enabled on your document server (the default configuration), the `config` must be signed with a matching [`token`](./security.md). The `token` above matches this exact config but is signed with a throwaway secret — it will not validate on your server, and it must be regenerated whenever the config changes (for example, if you switch `url` to the demo document). Sign with your document server's JWT secret. A token does not bypass network restrictions: if `url` points to a local or private address, the document server must still be able to reach it.
+   :::
+
+5. Open your `.html` file in the browser.

@@ -20,10 +20,10 @@ JSON
 
 ## Example
 
-This example converts the shape into JSON.
+Convert the shape into JSON in a presentation.
 
 ```javascript editor-pptx
-// How to convert a drawing object to a JSON object.
+// JSON conversion allows serializing drawing objects for storage or transfer.
 
 // Get a shape object from a slide and convert to JSON.
 
@@ -40,5 +40,4 @@ const drawingFromJSON = Api.FromJSON(json);
 drawingFromJSON.SetPosition(608400, 1267200);
 drawingFromJSON.SetSize(300 * 36000, 130 * 36000);
 slide.AddObject(drawingFromJSON);
-
 ```

@@ -28,12 +28,12 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 | 参数        | 类型   | 示例                        | 描述                                                                                                                                                                                                   |
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| displayName | string | `"John Smith"`              | 定义在*已连接的云盘*页面上显示的用户名。**此字段为必填项。**                                                                                                                                            |
-| email       | string | `"john@example.com"`        | 定义在*已连接的云盘*页面上显示的用户邮箱。                                                                                                                                                              |
-| domain      | string | `"https://exampledomain.com"` | 定义云盘名称和云盘入口点。**此字段为必填项。**                                                                                                                                                          |
-| provider    | string | `"onlyoffice"`              | 定义用于在 JavaScript 命令中引用桌面应用的提供商 ID（与 [配置](adding-a-dms-provider.md) 中的相同）。**此字段为必填项。**                                                                                     |
-| uiTheme     | string | `"theme-dark"`              | 定义编辑器主题设置。可以通过两种方式设置：<br /><br />• **主题 ID** – 用户通过主题 ID 设置主题参数（*theme-light、theme-classic-light、theme-dark、theme-contrast-dark*）。<br /><br />• **默认主题** – 将设置默认的深色或浅色主题值（*default-dark、default-light*）。<br /><br />默认的浅色主题是 *theme-classic-light*。第一种方式优先级更高。<br /><br />除了可用的编辑器主题外，用户还可以自定义应用界面的颜色主题。 |
-| userId      | string | `"78e1e841"`                | 定义用户 ID。**此字段为必填项。**                                                                                                                                                                       |
+| displayName | string | `"John Smith"`              | 在*已连接的云盘*页面上显示的用户名。**此字段为必填项。**                                                                                                                                            |
+| email       | string | `"john@example.com"`        | 在*已连接的云盘*页面上显示的用户邮箱。                                                                                                                                                              |
+| domain      | string | `"https://exampledomain.com"` | 云盘名称和云盘入口点。**此字段为必填项。**                                                                                                                                                          |
+| provider    | string | `"onlyoffice"`              | 用于在 JavaScript 命令中引用桌面应用的提供商 ID（与 [配置](adding-a-dms-provider.md) 中的相同）。**此字段为必填项。**                                                                                     |
+| uiTheme     | string | `"theme-dark"`              | 编辑器主题设置。可以通过两种方式设置：<br /><br />• **主题 ID** – 用户通过主题 ID 设置主题参数（*theme-light、theme-classic-light、theme-dark、theme-contrast-dark*）。<br /><br />• **默认主题** – 将设置默认的深色或浅色主题值（*default-dark、default-light*）。<br /><br />默认的浅色主题是 *theme-classic-light*。第一种方式优先级更高。<br /><br />除了可用的编辑器主题外，用户还可以自定义应用界面的颜色主题。 |
+| userId      | string | `"78e1e841"`                | 用户 ID。**此字段为必填项。**                                                                                                                                                                       |
 
 ```mdx-code-block
 </APITable>
@@ -69,7 +69,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify(params));
 
 | 参数   | 类型   | 示例                        | 描述                      |
 |--------|--------|-----------------------------|---------------------------|
-| domain | string | `https://exampledomain.com` | 定义云盘名称和云盘入口点。 |
+| domain | string | `https://exampledomain.com` | 云盘名称和云盘入口点。 |
 
 ```mdx-code-block
 </APITable>

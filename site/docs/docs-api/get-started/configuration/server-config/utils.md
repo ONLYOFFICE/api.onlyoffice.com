@@ -8,25 +8,25 @@ These parameters define the utils configuration.
 
 ## services.CoAuthoring.utils.limits_image_types_upload
 
-`Type: string`   `Default: "jpg;jpeg;jpe;png;gif;bmp;svg;tiff;tif;webp;heic;heif;avif"`
+**type:** `string` | **default:** `"jpg;jpeg;jpe;png;gif;bmp;svg;tiff;tif;webp;heic;heif;avif"`
 
 Defines the supported image formats for uploading.
 
 ## services.CoAuthoring.utils.utils_common_fontdir
 
-`Type: string`   `Default: "null"`
+**type:** `string` | **default:** `"null"`
 
 Defines a directory where all the fonts are stored.
 
 ## services.CoAuthoring.utils.utils_fonts_search_patterns
 
-`Type: string`   `Default: "*.ttf;*.ttc;*.otf"`
+**type:** `string` | **default:** `"*.ttf;*.ttc;*.otf"`
 
 Defines the patterns for searching font files of the corresponding extensions.
 
 ## services.CoAuthoring.utils.limits_document_types_upload
 
-`Type: string`   `Default: "xlsx"`
+**type:** `string` | **default:** `"xlsx"`
 
 Semicolon-separated list of document file extensions allowed for upload. Only files matching these extensions are accepted.
 

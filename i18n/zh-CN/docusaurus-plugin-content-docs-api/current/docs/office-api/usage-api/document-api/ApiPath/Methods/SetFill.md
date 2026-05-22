@@ -1,0 +1,51 @@
+# SetFill
+
+设置当前路径的填充类型。
+
+## 语法
+
+```javascript
+expression.SetFill(sFill);
+```
+
+`expression` - 表示 [ApiPath](../ApiPath.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sFill | 必需 | [PathFillType](../../Enumeration/PathFillType.md) |  | 路径填充类型。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
+## 示例
+
+在文档中为自定义形状的绘图路径应用填充设置。
+
+```javascript editor-docx
+// How do I control whether the interior of a custom shape's path is filled in a document?
+
+// Enable or disable the fill on a path to change how the shape's interior appears in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let customGeometry = Api.CreateCustomGeometry();
+let path = customGeometry.AddPath();
+path.SetWidth(100 * 36000);
+path.SetHeight(100 * 36000);
+path.SetStroke(true);
+path.SetFill("norm");
+path.MoveTo(50 * 36000, 0);
+path.LineTo(70 * 36000, 45 * 36000);
+path.LineTo(55 * 36000, 70 * 36000);
+path.LineTo(100 * 36000, 100 * 36000);
+path.LineTo(0, 100 * 36000);
+path.Close();
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
+let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
+shape.SetGeometry(customGeometry);
+paragraph.AddDrawing(shape);
+```

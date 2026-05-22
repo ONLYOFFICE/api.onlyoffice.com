@@ -8,7 +8,7 @@ sidebar_position: -4
 
 ## 示例
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
     <head>

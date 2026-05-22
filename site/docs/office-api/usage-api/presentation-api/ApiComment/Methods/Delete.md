@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to delete a comment.
+Remove a comment from a presentation.
 
 ```javascript editor-pptx
-// How to remove a comment.
+// How do I delete a comment in a presentation?
 
-// Get all comments from the presentation and remove the first one.
+// Erase an existing comment and all its replies in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The comment was just deleted from the current presentation.");
-
 ```

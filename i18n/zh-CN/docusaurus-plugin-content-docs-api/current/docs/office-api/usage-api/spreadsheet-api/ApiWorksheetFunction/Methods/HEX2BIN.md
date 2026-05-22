@@ -23,15 +23,14 @@ number
 
 ## 示例
 
-此示例演示如何将十六进制数转换为二进制数。
+在电子表格中将十六进制数转换为二进制。
 
 ```javascript editor-xlsx
-// How to get a binary from hexadecimal number.
+// How do I convert hexadecimal values to binary format in a spreadsheet?
 
-// Use a function to convert a hexadecimal number to binary.
+// Transform a hex value into its binary representation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.HEX2BIN("FFFFFFFF9C"));
-
 ```

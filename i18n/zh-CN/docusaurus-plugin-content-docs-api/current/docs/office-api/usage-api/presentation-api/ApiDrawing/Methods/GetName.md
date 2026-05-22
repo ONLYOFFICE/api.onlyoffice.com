@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例返回当前绘图的名称。
+获取演示文稿中形状的名称。
 
 ```javascript editor-pptx
+// How do I find the name assigned to an object in a presentation?
+
+// Read and display a shape's name in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing name: ' + name);
 slide.AddObject(shape);
-
 ```

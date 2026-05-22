@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何为标记设置轮廓。
+更改 PDF 中图表数据点符号的边框样式。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker outline.
+// How do I add a border to markers in a chart in a PDF?
+
+// Apply a stroke to the symbols that represent data in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +50,4 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

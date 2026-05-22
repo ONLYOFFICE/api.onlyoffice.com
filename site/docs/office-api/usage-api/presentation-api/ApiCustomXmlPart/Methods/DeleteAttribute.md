@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example demonstrates how to delete an attribute from a custom XML part.
+Delete an attribute from a custom XML part in a presentation.
 
 ```javascript editor-pptx
+// Remove a named property from an XML element in a presentation.
+
+// Strip an attribute from custom XML in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after deletion: ' + xml.GetXml());
-
 ```

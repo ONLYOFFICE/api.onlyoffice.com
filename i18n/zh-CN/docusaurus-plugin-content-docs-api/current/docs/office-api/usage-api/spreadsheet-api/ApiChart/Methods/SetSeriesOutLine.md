@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置指定图表系列的轮廓。
+在电子表格中为图表数据系列应用彩色边框。
 
 ```javascript editor-xlsx
-// How to outline chart series.
+// How do I add an outline stroke to a specific chart series in a spreadsheet?
 
-// Add colored stroke for a chart seria.
+// Make a chart series stand out by surrounding its bars with a visible colored edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

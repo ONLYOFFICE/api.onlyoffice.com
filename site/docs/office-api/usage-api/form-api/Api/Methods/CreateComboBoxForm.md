@@ -22,12 +22,12 @@ expression.CreateComboBoxForm(formPr);
 
 ## Example
 
-This example creates a combo box form with the common and specific combo box form properties.
+Create a dropdown list where users select from preset options in a document.
 
 ```javascript editor-forms
-// How to create a combo box form and add it to the paragraph.
+// How do I add a dropdown field to a document?
 
-// Add a combo box with the state options to the ApiDocument object.
+// Set up a selection menu with multiple choices that users can pick from in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({
@@ -41,5 +41,4 @@ let comboBoxForm = Api.CreateComboBoxForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(comboBoxForm);
-
 ```

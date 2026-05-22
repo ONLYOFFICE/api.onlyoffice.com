@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建主题字体方案的副本。
+在演示文稿中复制字体方案。
 
 ```javascript editor-pptx
-// How to create a copy of a font scheme.
+// How do I make a copy of an existing font scheme in a presentation?
 
-// Get font scheme and create its copy.
+// Get a font scheme and create a duplicate of it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -86,5 +86,4 @@ paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("New font scheme was set to this slide.");
 slide2.AddObject(shape);
-
 ```

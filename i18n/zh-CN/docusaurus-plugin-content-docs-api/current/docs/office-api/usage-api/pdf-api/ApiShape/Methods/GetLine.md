@@ -20,10 +20,13 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。
+从 PDF 中的形状检索边框属性。
 
 ```javascript editor-pdf
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// How do I read the outline details of a shape in a PDF?
+
+// View the border information including width and color in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -48,5 +51,4 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```

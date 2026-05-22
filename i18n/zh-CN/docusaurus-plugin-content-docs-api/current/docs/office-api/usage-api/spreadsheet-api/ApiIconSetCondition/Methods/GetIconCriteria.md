@@ -20,12 +20,12 @@ expression.GetIconCriteria();
 
 ## 示例
 
-此示例演示如何获取图标条件集合。
+从电子表格中的图标集条件格式规则检索所有图标条件。
 
 ```javascript editor-xlsx
-// How to retrieve icon criteria for conditional formatting.
+// How do I access each individual threshold and icon setting within an icon set rule in a spreadsheet?
 
-// Get the collection of icon criteria from the formatting rule.
+// List the full set of criteria that control which icon each cell receives under a formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -40,5 +40,4 @@ let iconCondition = formatConditions.AddIconSetCondition();
 
 let criteria = iconCondition.GetIconCriteria();
 worksheet.GetRange("B1").SetValue("Number of criteria: " + criteria.length);
-
 ```

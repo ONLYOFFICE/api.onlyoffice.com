@@ -23,10 +23,10 @@ expression.SetPosition(nPosX, nPosY);
 
 ## 示例
 
-此示例设置形状的位置。
+在演示文稿中为形状设置位置。
 
 ```javascript editor-pptx
-// How to change a position of a drawing.
+// Position defines where a shape appears on the slide.
 
 // Get a shape object from a slide and move it.
 
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 paragraph.AddText("This is an example of a paragraph inside a shape. Nothing special.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

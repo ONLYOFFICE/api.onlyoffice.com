@@ -23,12 +23,12 @@ expression.GetCharacters(Start, Length);
 
 ## 示例
 
-此示例演示如何获取表示对象文本中字符范围的 ApiCharacters 对象。
+在电子表格中选择单元格内的文本子字符串并单独格式化。
 
 ```javascript editor-xlsx
-// How to get range characters.
+// How do I bold just a few characters within a cell's text in a spreadsheet?
 
-// Get the range characters, get their font object and set it to bold.
+// Extract a slice of text by position and apply bold formatting to those characters only.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");
@@ -36,5 +36,4 @@ range.SetValue("This is just a sample text.");
 let characters = range.GetCharacters(9, 4);
 let font = characters.GetFont();
 font.SetBold(true);
-
 ```

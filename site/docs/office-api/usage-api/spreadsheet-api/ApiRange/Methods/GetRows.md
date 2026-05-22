@@ -22,12 +22,12 @@ expression.GetRows(nRow);
 
 ## Example
 
-This example shows how to get a Range object that represents the rows in the specified range.
+Access individual rows within a range to update their values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a cell rows of a range.
+// How do I iterate over each row in a range and set its value in a spreadsheet?
 
-// Get a range and change each cell's row value by getting all row objects.
+// Fill a multi-row range by writing a different value into each row one at a time in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("1:3");

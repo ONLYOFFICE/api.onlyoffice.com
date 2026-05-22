@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何设置和获取最后修改当前演示文稿的用户名称。
+设置和查看最后编辑演示文稿的人员姓名。
 
 ```javascript editor-pptx
+// How do I find who last modified a presentation?
+
+// Retrieve the name of the user who made the most recent changes in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -38,5 +42,4 @@ paragraph.AddText("Last modified by: " + lastModifiedBy);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

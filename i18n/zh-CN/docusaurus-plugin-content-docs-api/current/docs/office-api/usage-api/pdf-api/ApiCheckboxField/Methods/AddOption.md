@@ -24,9 +24,13 @@ expression.AddOption(nPage, aRect, sExportValue);
 
 ## 示例
 
-此示例为复选框字段组添加选项。
+在 PDF 中向复选框字段添加可选选项。
 
 ```javascript editor-pdf
+// How do I create multiple choices for a checkbox field in a PDF?
+
+// Create an additional choice that users can select in a checkbox field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

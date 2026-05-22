@@ -14,7 +14,7 @@ expression.CreateThemeColorScheme(arrColors, sName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrColors | 必需 | [ApiUniColor](../../ApiUniColor/ApiUniColor.md)[] \| [ApiRGBColor](../../ApiRGBColor/ApiRGBColor.md)[] \| [ApiColor](../../ApiColor/ApiColor.md)[] |  | 一组称为配色方案的颜色。配色方案负责定义十二种颜色的列表。数组应包含以下颜色序列：2 种深色、2 种浅色、6 种主要颜色、超链接颜色和已访问超链接颜色。 |
+| arrColors | 必需 | [ApiUniColor](../../ApiUniColor/ApiUniColor.md)[] \| [ApiRGBColor](../../ApiRGBColor/ApiRGBColor.md)[] \| [ApiColor](../../ApiColor/ApiColor.md)[] |  | 被称为配色方案的颜色集。 |
 | sName | 必需 | string |  | 主题配色方案名称。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ expression.CreateThemeColorScheme(arrColors, sName);
 
 ## 示例
 
-此示例演示如何创建新的主题配色方案。
+为演示文稿的主题构建自定义调色板。
 
 ```javascript editor-pptx
-// How to change color scheme of the theme.
+// How do I define custom colors for the presentation theme in a presentation?
 
-// Add color scheme to the theme.
+// Create a named color scheme with multiple custom colors and assign it to the presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

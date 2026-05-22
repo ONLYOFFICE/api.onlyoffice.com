@@ -22,13 +22,16 @@ boolean
 
 ## 示例
 
-此示例创建方形注释并为其设置显示属性。
+控制 PDF 中注释的可见性。
 
 ```javascript editor-pdf
+// Toggle whether an annotation appears or stays hidden in a PDF.
+
+// Set the display mode to show or conceal an annotation in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 squareAnnot.SetDisplay("hidden");
-
 ```

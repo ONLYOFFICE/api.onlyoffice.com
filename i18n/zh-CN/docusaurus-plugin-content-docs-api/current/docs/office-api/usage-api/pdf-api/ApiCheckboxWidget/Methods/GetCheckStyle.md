@@ -20,9 +20,13 @@ expression.GetCheckStyle();
 
 ## 示例
 
-此示例获取复选框控件的选中样式。
+读取 PDF 中复选框的外观样式。
 
 ```javascript editor-pdf
+// How do I find out what symbol displays when a checkbox is selected in a PDF?
+
+// Retrieve the check mark style used to indicate a selected checkbox in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

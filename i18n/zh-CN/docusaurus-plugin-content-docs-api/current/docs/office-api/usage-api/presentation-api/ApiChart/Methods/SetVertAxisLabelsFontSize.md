@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为垂直轴标签指定字体大小。
+更改演示文稿中垂直轴数字的字体大小。
 
 ```javascript editor-pptx
-// How to resize a font size of the vertical axis labels.
+// Adjust the size of axis tick labels on the Y-axis of a chart in a presentation.
 
-// Create a chart then change a font size of axis labels.
+// Resize the text of vertical scale values displayed on a chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

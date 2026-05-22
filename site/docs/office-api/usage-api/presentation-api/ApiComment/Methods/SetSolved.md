@@ -22,12 +22,12 @@ expression.SetSolved(bSolved);
 
 ## Example
 
-This example shows how to resolve a comment.
+Resolve a comment in a presentation.
 
 ```javascript editor-pptx
-// How to make a comment solved.
+// Mark a comment as solved to indicate it has been addressed.
 
-// Get all comments from the presentation and set it solved.
+// Set the first comment as resolved and display the result.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The comment is solved.");
-
 ```

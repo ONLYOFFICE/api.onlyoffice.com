@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-此示例演示如何删除文本字符串中的所有空格，但保留单词之间的单个空格。
+从电子表格中的文本移除多余空格，保留单词之间的单个空格。
 
 ```javascript editor-xlsx
-// How to delete unneccessary spaces from the text.
+// How do I clean up spacing in text within a spreadsheet?
 
-// Use a function to clear spaces from a string.
+// Delete unnecessary spaces from a text string in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

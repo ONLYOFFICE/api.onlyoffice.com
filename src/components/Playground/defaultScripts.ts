@@ -1,15 +1,15 @@
-import type { EditorType, PreviewType } from "./root/PlaygroundRootContext";
+import type { EditorType, ModeType } from "./root/PlaygroundRootContext";
 
-type FileConfig = { ext: string, docType: EditorType, url: string };
+type FileConfig = { ext: string; docType: EditorType; url: string };
 
 type Template = {
-    'office-js-api': string,
-    connector: string,
-    plugin: string,
-    builder: string,
-}
+    'office-js-api': string;
+    connector: string;
+    plugin: string;
+    builder: string;
+};
 
-type Script = Record<PreviewType, Template>
+type Script = Record<ModeType, Template>;
 
 const PLUGIN_HEADER =
     'var Editor = {\n\
@@ -28,7 +28,7 @@ const PLUGIN_HEADER =
             });\n\
         })());\n\
     }\n\
-};\n\n'
+};\n\n';
 
 export const FILE_CONFIGS: Record<string, FileConfig> = {
     word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/new.docx' },
@@ -36,7 +36,7 @@ export const FILE_CONFIGS: Record<string, FileConfig> = {
     cell: { ext: 'xlsx', docType: 'cell', url: 'https://static.onlyoffice.com/assets/docs/samples/new.xlsx' },
     slide: { ext: 'pptx', docType: 'slide', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pptx' },
     form: { ext: 'pdf', docType: 'pdf', url: 'https://static.onlyoffice.com/assets/docs/samples/new.pdf' },
-}
+};
 
 export const SAMPLE_FILE_CONFIGS: Record<string, FileConfig> = {
     word: { ext: 'docx', docType: 'word', url: 'https://static.onlyoffice.com/assets/docs/samples/demo.docx' },
@@ -52,7 +52,7 @@ export const SAMPLE_FILE_CONFIGS: Record<string, FileConfig> = {
         docType: 'pdf',
         url: 'https://static.onlyoffice.com/assets/docs/samples/demo-invoice.pdf',
     },
-}
+};
 
 const WORD_SCRIPTS: Template = {
     'office-js-api':
@@ -62,9 +62,14 @@ const WORD_SCRIPTS: Template = {
         'oDocument.InsertContent([oParagraph]);\n',
 
     connector:
-        'connector.executeMethod("GetCurrentWord", [], function(word) {\n' +
-        '    console.log("GetCurrentWord: " + word);\n' +
-        '});\n',
+        'connector.callCommand(function() {\n' +
+        '    var oDocument = Api.GetDocument();\n' +
+        '    var oParagraph = Api.CreateParagraph();\n' +
+        '    oParagraph.AddText("Hello world!");\n' +
+        '    oDocument.InsertContent([oParagraph]);\n' +
+        '});\n' +
+        '\n' +
+        'connector.executeMethod("AddContentControl", [1, {"Tag": "sample_tag", "Lock": 0}]);\n',
 
     plugin:
         PLUGIN_HEADER +
@@ -82,7 +87,7 @@ const WORD_SCRIPTS: Template = {
         "oDocument.InsertContent([oParagraph]);\n" +
         "builder.SaveFile(\"docx\", \"Api.docx\");\n" +
         "builder.CloseFile();\n",
-}
+};
 
 const CELL_SCRIPTS: Template = {
     'office-js-api':
@@ -114,7 +119,7 @@ const CELL_SCRIPTS: Template = {
         'worksheet.GetRange("B2:G28").Select();\n' +
         'builder.SaveFile("xlsx", "Api.xlsx");\n' +
         'builder.CloseFile();\n',
-}
+};
 
 const SLIDE_SCRIPTS: Template = {
     'office-js-api':
@@ -154,7 +159,7 @@ const SLIDE_SCRIPTS: Template = {
         "oPresentation.AddSlide(oSlide);\n" +
         "builder.SaveFile(\"pptx\", \"Api.pptx\");\n" +
         "builder.CloseFile();\n",
-}
+};
 
 const FORM_SCRIPTS: Template = {
     'office-js-api':
@@ -164,9 +169,15 @@ const FORM_SCRIPTS: Template = {
         'oDocument.InsertContent([oParagraph]);\n',
 
     connector:
-        'connector.executeMethod("GetCurrentWord", [], function(word) {\n' +
-        '    console.log("GetCurrentWord: " + word);\n' +
-        '});\n',
+        'connector.callCommand(function() {\n' +
+        '    var oDocument = Api.GetDocument();\n' +
+        '    var oParagraph = Api.CreateParagraph();\n' +
+        '    var oTextForm = Api.CreateTextForm({"key": "Name", "tip": "Enter your name", "required": true, "placeholder": "First name"});\n' +
+        '    oParagraph.AddElement(oTextForm);\n' +
+        '    oDocument.InsertContent([oParagraph]);\n' +
+        '});\n' +
+        '\n' +
+        'connector.executeMethod("InputText", ["ONLYOFFICE Playground", ""]);\n',
 
     plugin:
         PLUGIN_HEADER +
@@ -184,7 +195,7 @@ const FORM_SCRIPTS: Template = {
         "oDocument.InsertContent([oParagraph]);\n" +
         "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
         "builder.CloseFile();\n",
-}
+};
 
 const PDF_SCRIPTS: Template = {
     'office-js-api':
@@ -239,7 +250,7 @@ const PDF_SCRIPTS: Template = {
         'page.AddObject(shape);\n' +
         "builder.SaveFile(\"pdf\", \"Api.pdf\");\n" +
         "builder.CloseFile();\n",
-}
+};
 
 const DEFAULT_SCRIPTS: Record<EditorType, Script> = {
     word: { desktop: WORD_SCRIPTS, embedded: WORD_SCRIPTS, mobile: WORD_SCRIPTS },
@@ -247,12 +258,12 @@ const DEFAULT_SCRIPTS: Record<EditorType, Script> = {
     slide: { desktop: SLIDE_SCRIPTS, embedded: SLIDE_SCRIPTS, mobile: SLIDE_SCRIPTS },
     form: { desktop: FORM_SCRIPTS, embedded: FORM_SCRIPTS, mobile: FORM_SCRIPTS },
     pdf: { desktop: PDF_SCRIPTS, embedded: PDF_SCRIPTS, mobile: PDF_SCRIPTS },
-}
+};
 
 export function getDefaultScript(
     editorType: EditorType,
-    previewType: PreviewType,
+    modeType: ModeType,
     scriptType: keyof Template
 ): string {
-    return DEFAULT_SCRIPTS[editorType][previewType][scriptType]
+    return DEFAULT_SCRIPTS[editorType][modeType][scriptType];
 }

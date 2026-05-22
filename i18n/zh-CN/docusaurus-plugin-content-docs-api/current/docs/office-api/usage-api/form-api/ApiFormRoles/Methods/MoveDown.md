@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何向下移动指定角色。
+在文档中将角色移动到填写顺序中的更低位置。
 
 ```javascript editor-forms
+// How do I change the order of roles to place one later in the sequence in a document?
+
+// Reposition a role downward in the list and display the updated order in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -41,5 +45,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
     orderIndex++;
 });
-
 ```

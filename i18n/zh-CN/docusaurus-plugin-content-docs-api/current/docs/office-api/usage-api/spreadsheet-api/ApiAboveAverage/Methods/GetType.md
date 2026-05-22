@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例演示如何获取高于平均值条件格式规则的类型。
+读取电子表格中应用于范围的条件格式规则的类别。
 
 ```javascript editor-xlsx
-// How to identify the type of conditional formatting rule.
+// How do I find out what kind of conditional formatting rule is active in a spreadsheet?
 
-// Get the type of the above average conditional formatting rule.
+// Retrieve the rule category to confirm which formatting condition is in use in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ let conditionType = condition.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```

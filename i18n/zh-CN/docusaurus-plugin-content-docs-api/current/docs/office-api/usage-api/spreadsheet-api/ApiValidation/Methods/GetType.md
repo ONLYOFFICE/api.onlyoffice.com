@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例获取验证类型。
+读取限制电子表格中单元格接受哪些值的规则类型。
 
 ```javascript editor-xlsx
-// How to retrieve the validation type.
+// How do I find out what type of data rule is applied to a cell in a spreadsheet?
 
-// Get the validation type.
+// Identify whether a cell expects whole numbers, decimals, dates, or another category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -33,5 +33,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 let validationType = validation.GetType();
 worksheet.GetRange("B1").SetValue("Validation type: " + validationType);
-
 ```

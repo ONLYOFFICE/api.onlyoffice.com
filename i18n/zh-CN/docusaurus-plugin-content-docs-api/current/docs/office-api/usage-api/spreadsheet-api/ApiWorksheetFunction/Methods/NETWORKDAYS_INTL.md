@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何使用自定义周末参数返回两个日期之间的完整工作日数。
+使用自定义周末规则计算电子表格中的工作日数。
 
 ```javascript editor-xlsx
-// How to get the number of whole dates with parameters.
+// Calculate business days using a specific weekend pattern in a spreadsheet.
 
-// Use a function to get number of days between two dates.
+// Exclude custom holidays and weekends from workday calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

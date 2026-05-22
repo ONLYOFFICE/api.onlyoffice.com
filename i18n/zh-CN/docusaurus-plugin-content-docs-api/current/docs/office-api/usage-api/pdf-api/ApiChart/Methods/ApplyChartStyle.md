@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何更改图表样式。
+在 PDF 中为图表应用预设样式。
 
 ```javascript editor-pdf
-// Update chart style.
+// How do I change the visual appearance of a chart in a PDF?
+
+// Use a style preset to update a chart's formatting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +50,4 @@ stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(25
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 page.AddObject(chart);
-
 ```

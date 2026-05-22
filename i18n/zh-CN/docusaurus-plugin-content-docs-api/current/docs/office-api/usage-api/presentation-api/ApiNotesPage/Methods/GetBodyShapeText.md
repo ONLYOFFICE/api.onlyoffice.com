@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何从备注页的正文形状获取文本。
+从演示文稿中幻灯片的备注部分读取文本。
 
 ```javascript editor-pptx
+// How do I get the content of the slide notes in a presentation?
+
+// Retrieve text that was added to the notes page and display it in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ slide.AddObject(shape);
 const text = notesPage.GetBodyShapeText();
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText(text);
-
 ```

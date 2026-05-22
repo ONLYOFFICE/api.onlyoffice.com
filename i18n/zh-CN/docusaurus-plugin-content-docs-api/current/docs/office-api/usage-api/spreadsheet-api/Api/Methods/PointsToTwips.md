@@ -22,14 +22,17 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为缇。
+在电子表格中将磅转换为缇。
 
 ```javascript editor-xlsx
+// How do I express a point value as twips in a spreadsheet?
+
+// Get the twip equivalent of a given number of points in a spreadsheet.
+
 const points = 1000;
 const twips = Api.PointsToTwips(points);
 const text = points + ' points are equal to ' + twips + ' twips.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```

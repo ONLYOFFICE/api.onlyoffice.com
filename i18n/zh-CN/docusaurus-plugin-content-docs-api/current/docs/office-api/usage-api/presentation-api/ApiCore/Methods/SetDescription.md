@@ -22,9 +22,13 @@ expression.SetDescription(sDescription);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的描述。
+设置和检索演示文稿的描述。
 
 ```javascript editor-pptx
+// How do I set the description of a presentation in a presentation?
+
+// Retrieve and display the description as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetDescription("This is a sample presentation made to help fellow users understand how to use the ApiCore methods.");
@@ -40,5 +44,4 @@ paragraph.AddText("Description: " + description);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

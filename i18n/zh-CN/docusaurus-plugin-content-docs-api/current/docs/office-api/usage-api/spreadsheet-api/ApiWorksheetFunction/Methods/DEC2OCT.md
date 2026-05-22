@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何将十进制数转换为八进制数。
+在电子表格中将数字从十进制转换为八进制格式。
 
 ```javascript editor-xlsx
-// How to get decimal number from octal.
+// What is a decimal number expressed as octal in a spreadsheet?
 
-// Use function to convert a decimal number to octal.
+// Transform your decimal numbers into their octal equivalents in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

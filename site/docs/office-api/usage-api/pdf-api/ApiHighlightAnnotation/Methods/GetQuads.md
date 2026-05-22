@@ -2,27 +2,17 @@
 
 Gets quads from current markup annotation.
 
-## Syntax
-
-```javascript
-expression.GetQuads();
-```
-
-`expression` - A variable that represents a [ApiHighlightAnnotation](../ApiHighlightAnnotation.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[Quad](../../Enumeration/Quad.md)[]
+Inherited from [ApiBaseMarkupAnnotation.GetQuads](../../ApiBaseMarkupAnnotation/Methods/GetQuads.md).
 
 ## Example
 
-This example gets quads of markup annotation.
+Get the highlight area from a markup annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I read the highlight coordinates in a PDF?
+
+// Extract the quad coordinates that define the marked region in a PDF.
+
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

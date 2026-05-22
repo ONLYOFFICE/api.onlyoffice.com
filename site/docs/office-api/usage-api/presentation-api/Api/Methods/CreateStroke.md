@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## Example
 
-This example shows how to crate a stroke.
+Add an outline to a shape in a presentation.
 
 ```javascript editor-pptx
-// How to add a stroke to the shape.
+// How do I draw a border around a shape in a presentation?
 
-// Add solid fill and stroke to the shape properties.
+// Create a stroke with a custom width and fill color for a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ const stroke = Api.CreateStroke(3 * 36000, fill1);
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

@@ -11,7 +11,7 @@ sidebar_position: -1
 
 添加自定义 AI 工具可以扩展 AI 代理的功能，并使其能够适应特定的使用场景。无论是处理文档、电子表格还是演示文稿，自定义 AI 工具都能让你将 AI 驱动的操作直接集成到工作流程中，并使代理的行为符合你的需求。
 
-你可以在[此处](../samples/custom-ai-tools/custom-ai-tools.md)找到现成的自定义 AI 工具，也可以创建自己的工具。
+你可以在[此处](/samples/?doctype=ai&text=ai+tools)找到现成的自定义 AI 工具，也可以创建自己的工具。
 
 :::caution 当前限制
 添加自定义 AI 工具需要直接修改 [AI 插件源代码](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/master/sdkjs-plugins/content/ai)——然后可以通过自定义[商店链接](#setup)安装修改后的插件。
@@ -76,7 +76,7 @@ AI 代理将运行 `commentText` 函数，并在文档中插入相关评论。
 | --- | --- | --- | --- |
 | name | string | `"commentText"` | 函数名称。 |
 | parameters | object | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }` | 描述函数期望从 AI 获得的参数的对象。 |
-| examples | 对象数组 | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | 供 AI 参考的正确函数调用示例。 |
+| examples | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | 供 AI 参考的正确函数调用示例。 |
 | description | string | `"Adds a comment or footnote to explain or annotate the selected text."` | 向 AI 说明该函数用途的描述。 |
 
 这些参数供 AI 使用。`RegisteredFunction()` 对象在 [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) 文件中定义。
@@ -260,7 +260,7 @@ AI 代理将运行 `commentText` 函数，并在文档中插入相关评论。
 ```
 
 :::note
-为了确保在请求执行后可以回滚整个更改块，我们在 `commentText` 函数中使用了 [StartAction](../interacting-with-editors/text-document-api/Methods/StartAction.md) 和 [EndAction](../interacting-with-editors/text-document-api/Methods/EndAction.md) 方法。
+为了确保在请求执行后可以回滚整个更改块，我们在 `commentText` 函数中使用了 [StartAction](../interacting-with-editors/document-api/Methods/StartAction.md) 和 [EndAction](../interacting-with-editors/document-api/Methods/EndAction.md) 方法。
 :::
 
 AI 代理功能随着当今数字世界的需求不断发展。通过创建适合特定使用场景的自定义 AI 工具来扩展其功能吧。

@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为厘米。
+在演示文稿中将磅转换为厘米。
 
 ```javascript editor-pptx
+// Use the Api object to convert measurement units.
+
+// Display the conversion result in a shape on the slide.
+
 const points = 1000;
 const centimeters = Api.PointsToCentimeters(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

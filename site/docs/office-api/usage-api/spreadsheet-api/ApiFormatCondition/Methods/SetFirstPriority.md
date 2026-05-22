@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets a conditional formatting rule as first priority.
+Move a conditional formatting rule to the top of the evaluation order in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the priority order of conditional formatting rules.
+// How do I make a formatting rule take precedence over all other formatting rules in a spreadsheet?
 
-// Set conditional formatting rule as first priority.
+// Promote a formatting rule so it is evaluated before any other rules in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -55,5 +55,4 @@ condition2.SetFirstPriority();
 worksheet.GetRange("D1").SetValue("Priority after:");
 worksheet.GetRange("D2").SetValue("Rule 1: " + condition1.Priority);
 worksheet.GetRange("D3").SetValue("Rule 2: " + condition2.Priority);
-
 ```

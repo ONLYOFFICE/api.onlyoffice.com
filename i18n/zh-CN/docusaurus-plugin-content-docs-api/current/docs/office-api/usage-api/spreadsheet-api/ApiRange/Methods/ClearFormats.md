@@ -20,12 +20,12 @@ expression.ClearFormats();
 
 ## 示例
 
-此示例清除范围中的所有格式。
+清除电子表格中单元格范围的所有格式，同时保留其值不变。
 
 ```javascript editor-xlsx
-// How to clear formatting for a range.
+// How do I remove bold, colors, and other styling from cells in a spreadsheet?
 
-// Get a range, clear formatting and show the result.
+// Reset the appearance of selected cells to plain default style without deleting their data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:A2").SetValue("Example text")
@@ -33,5 +33,4 @@ worksheet.GetRange("A1:A2").SetBold(true);
 let range = worksheet.GetRange("A1");
 range.ClearFormats();
 worksheet.GetRange("A3").SetValue("Result is bold format cleared for A1 cell.");
-
 ```

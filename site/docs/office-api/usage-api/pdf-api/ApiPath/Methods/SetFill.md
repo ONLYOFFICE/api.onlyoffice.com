@@ -22,10 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Apply a fill color inside a shape path in a PDF.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I color the interior of a shape in a PDF?
+
+// Enable shading for a custom drawn shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

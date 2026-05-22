@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the radio group key to the radio button.
+Group radio buttons so only one can be selected at a time in a document.
 
 ```javascript editor-forms
-// How to add a radio group to the form.
+// How do I link multiple radio buttons into a single exclusive group in a document?
 
-// Set a radio group to the form.
+// Ensure mutually exclusive choices by assigning all related buttons to the same group in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

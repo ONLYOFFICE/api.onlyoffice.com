@@ -2,30 +2,16 @@
 
 返回当条件格式规则计算结果为 true 时应用于单元格的数字格式。
 
-## 语法
-
-```javascript
-expression.GetNumberFormat();
-```
-
-`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiFormatCondition.GetNumberFormat](../../ApiFormatCondition/Methods/GetNumberFormat.md)。
 
 ## 示例
 
-此示例获取条件格式规则的数字格式。
+读取电子表格中条件格式规则应用于匹配单元格的数字显示模式。
 
 ```javascript editor-xlsx
-// How to retrieve number formatting from conditional formatting rules.
+// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
 
-// Get conditional formatting rule number format.
+// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,5 +34,4 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
-
 ```

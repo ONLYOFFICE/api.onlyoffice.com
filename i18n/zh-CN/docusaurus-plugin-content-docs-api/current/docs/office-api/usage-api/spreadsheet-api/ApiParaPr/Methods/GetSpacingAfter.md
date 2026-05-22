@@ -20,12 +20,12 @@ expression.GetSpacingAfter();
 
 ## 示例
 
-此示例展示如何获取当前段落的段后间距值。
+读取电子表格中段落之后的间距大小。
 
 ```javascript editor-xlsx
-// How to get spacing information which is after the paragraph.
+// How do I check how much space is added below a paragraph in a spreadsheet?
 
-// Get two consecutive paragraphs add spacing between them then get the spacing after first one and display it in the worksheet. 
+// Confirm the bottom spacing value after applying a gap to a paragraph's trailing edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

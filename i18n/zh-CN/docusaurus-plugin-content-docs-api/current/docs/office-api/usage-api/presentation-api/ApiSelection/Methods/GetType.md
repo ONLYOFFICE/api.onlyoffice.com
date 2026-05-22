@@ -20,9 +20,13 @@ expression.GetType();
 
 ## 示例
 
-此示例展示如何在不同场景下获取选择的类型。
+识别演示文稿中不同场景下的选区类型。
 
 ```javascript editor-pptx
+// How do I determine what is selected in a presentation?
+
+// Check the selection type before and after adding a shape in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,18 +44,6 @@ shape.Select();
 type = selection.GetType();
 text += 'Type: ' + type + ' (shape added scenario)\n';
 
-/*
-
-const docContent = shape.GetDocContent();
-const paragraph = docContent.GetElement(0);
-paragraph.AddText('This is a text inside black rectangle');
-paragraph.Select();
-
-type = selection.GetType();
-text += 'Type: ' + type + ' (text selected scenario)\n';
-
-*/
-
 const outShapeFill = Api.CreateSolidFill(Api.RGB(50, 70, 180));
 const outShapeStroke = Api.CreateStroke(0, Api.CreateNoFill());
 const outShape = Api.CreateShape('rect', 200 * 36000, 30 * 36000, outShapeFill, outShapeStroke);
@@ -61,5 +53,4 @@ const outDoc = outShape.GetDocContent();
 const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(text);
 slide.AddObject(outShape);
-
 ```

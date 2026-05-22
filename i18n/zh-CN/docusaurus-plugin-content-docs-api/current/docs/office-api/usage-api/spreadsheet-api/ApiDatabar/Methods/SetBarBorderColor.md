@@ -22,12 +22,12 @@ expression.SetBarBorderColor(oColor);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的条边框颜色。
+更改电子表格中用于条件格式的数据条的边框颜色。
 
 ```javascript editor-xlsx
-// How to change the border color of a data bar.
+// How do I apply a custom border color to a data bar rule in a spreadsheet?
 
-// Set the bar border color of a data bar conditional formatting rule.
+// Distinguish data bar ranges visually by giving each bar outline a specific color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ dataBar.SetBarBorderColor(borderColor);
 
 worksheet.GetRange("C3").SetValue("After Color:");
 worksheet.GetRange("C4").SetValue(dataBar.GetBarBorderColor() ? "Set" : "None");
-
 ```

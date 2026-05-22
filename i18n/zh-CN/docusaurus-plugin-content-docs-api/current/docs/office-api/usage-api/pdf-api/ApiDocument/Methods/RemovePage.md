@@ -1,11 +1,12 @@
 # RemovePage
 
-按索引从文档移除页面
+按索引从文档中移除页面
+💡  无法删除最后一页 
 
 ## 语法
 
 ```javascript
-expression.RemovePage(nPos);
+expression.RemovePage(pos);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -14,7 +15,7 @@ expression.RemovePage(nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 页面位置 |
+| pos | 必需 | number |  | 页面位置 |
 
 ## 返回值
 
@@ -22,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例展示如何从文档中删除页面。
+从 PDF 删除页面。
 
 ```javascript editor-pdf
+// How do I remove an unwanted page from a PDF?
+
+// Delete a specific page number from a PDF.
+
 let doc = Api.GetDocument();
 doc.AddPage(1);
 doc.RemovePage(0);

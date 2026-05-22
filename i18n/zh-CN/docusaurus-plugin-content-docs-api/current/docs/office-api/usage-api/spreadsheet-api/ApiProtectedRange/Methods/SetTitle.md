@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例更改用户受保护区域的标题。
+在电子表格中为受保护范围分配新标题。
 
 ```javascript editor-xlsx
-// How to set a title for a protected range.
+// How do I rename a protected range in a spreadsheet?
 
-// Rename a title of a protected range.
+// Update the label on a locked area so collaborators know what it protects in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");

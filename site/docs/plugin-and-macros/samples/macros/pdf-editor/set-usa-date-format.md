@@ -1,0 +1,31 @@
+---
+hide_table_of_contents: true
+description: Set all date form fields to the USA date format.
+tags: ["Docs", "Macros", "PDF"]
+---
+
+# Set USA date format
+
+Sets all date form formats to USA one.
+
+```ts
+(function()
+{
+    let doc = Api.GetDocument();
+    
+    //Get all forms from the document
+    let allForms = doc.GetAllForms();
+    allForms.forEach(form => {
+        //For each Date form set USA date format
+        if(form.GetFormType() == "dateForm") {
+           form.SetFormat("mmmm dd, yyyy");
+        }
+    });
+})();
+```
+
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](/docs/office-api/usage-api/document-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](/docs/office-api/usage-api/document-api/ApiDateForm/Methods/SetFormat.md)
+
+## Result
+
+![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png#gh-light-mode-only)![Set USA Date Format](/assets/images/plugins/set-usa-date-format.dark.png#gh-dark-mode-only)

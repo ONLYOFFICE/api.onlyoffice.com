@@ -5,14 +5,16 @@ Sets field required
 ## Syntax
 
 ```javascript
-expression.SetRequired();
+expression.SetRequired(bRequired);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
 
 ## Parameters
 
-This method doesn't have any parameters.
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | Required | boolean |  | No description provided. |
 
 ## Returns
 
@@ -20,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets field required.
+Mark a form field as required in a PDF.
 
 ```javascript editor-pdf
+// How do I make a form field required in a PDF?
+
+// Check whether a field is marked as required in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

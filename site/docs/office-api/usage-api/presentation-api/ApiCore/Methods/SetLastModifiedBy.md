@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the name of the last user who modified the current presentation.
+Set and retrieve the last modifier of a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I set the last modifier of a presentation in a presentation?
+
+// Retrieve and display the last modifier as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastModifiedBy("Mark Pottato");
@@ -40,5 +44,4 @@ paragraph.AddText("Last modified by: " + lastModifiedBy);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

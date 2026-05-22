@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例获取占位符类型。
+读取演示文稿中占位符的类别。
 
 ```javascript editor-pptx
-// How to get a placeholder type (chart, table, etc.).
+// How do I find what type of placeholder is assigned to a shape in a presentation?
 
-// Create a shape and get its placeholder type.
+// Create a shape with a placeholder and retrieve its category in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Placeholder type in this shape is: "' + placeholder.GetType() + '"');
 slide.AddObject(shape);
-
 ```

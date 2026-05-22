@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get a name of a pivot item.
+Retrieve the internal name of each item in a pivot table field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot item name.
+// How do I get the name assigned to a pivot field item in a spreadsheet?
 
-// Create a pivot table, add data to it then get a name of a specified pivot item.
+// Loop through pivot field items and record their names for further processing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

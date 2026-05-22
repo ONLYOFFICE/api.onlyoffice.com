@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to set an outline to the marker.
+Change the border style of the data point symbols in a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker outline.
+// How do I add a border to markers in a chart in a PDF?
+
+// Apply a stroke to the symbols that represent data in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +50,4 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

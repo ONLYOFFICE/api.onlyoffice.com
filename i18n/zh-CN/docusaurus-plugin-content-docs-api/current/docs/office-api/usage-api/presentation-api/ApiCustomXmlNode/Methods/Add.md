@@ -22,12 +22,12 @@ expression.Add(nodeName);
 
 ## 示例
 
-此示例演示如何创建新子节点并将其作为当前 XML 节点的子节点插入。
+向演示文稿中的 XML 结构添加子元素。
 
 ```javascript editor-pptx
-// How to add a child node to an XML node.
+// How do I create and attach a new XML node to an existing one?
 
-// Add a new child node.
+// Build nested XML elements and verify their types in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

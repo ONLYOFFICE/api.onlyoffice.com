@@ -23,17 +23,15 @@ number
 
 ## 示例
 
-此示例演示如何返回学生 t 分布的左尾反函数。
+查找电子表格中给定左尾概率的 t 值。
 
 ```javascript editor-xlsx
-// How to calculate the left-tailed inverse of Student's t-distribution.
+// How do I determine the t-value that corresponds to a probability in a spreadsheet?
 
-// Use a function to estimate the Student's t-distribution left-tailed inverse.
+// Get the inverse of the left-tailed t-distribution to find critical values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let result = func.T_INV(0.75, 2);
 worksheet.GetRange("B2").SetValue(result);
-
-
 ```

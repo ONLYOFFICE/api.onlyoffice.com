@@ -22,9 +22,13 @@ expression.SetKeywords(sKeywords);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的关键字字符串。
+设置和检索演示文稿的关键词。
 
 ```javascript editor-pptx
+// How do I set the keywords of a presentation in a presentation?
+
+// Retrieve and display the keywords as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetKeywords("Example; ApiCore; Presentation");
@@ -40,5 +44,4 @@ paragraph.AddText("Keywords: " + keywords);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

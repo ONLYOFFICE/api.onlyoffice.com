@@ -14,7 +14,7 @@ expression.DEVSQ(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | 最多 255 个数值，用于计算偏差的平方和。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称或数字数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | 最多 255 个数值，用于求偏差平方和。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何获取数据点与其样本平均值之间偏差的平方和。
+获取数据点与其样本均值的偏差平方和。
 
 ```javascript editor-xlsx
-// How to get sum of squares of deviations.
+// Calculate deviations by comparing each data point to the sample mean.
 
-// Use function to get the sum of squares of deviations of data points from their sample mean.
+// Use the DEVSQ function to find the sum of squared deviations across the dataset.
 
 let worksheet = Api.GetActiveSheet();
 let argumentsArrA = [34, 244];

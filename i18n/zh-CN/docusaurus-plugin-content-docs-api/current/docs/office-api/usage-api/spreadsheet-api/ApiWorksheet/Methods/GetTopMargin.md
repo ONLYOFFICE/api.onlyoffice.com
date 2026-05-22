@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取工作表的顶边距。
+检查电子表格中页面设置的上边距距离。
 
 ```javascript editor-xlsx
-// How to get margin of the sheet's top side.
+// Measure the blank space above your printed content in a spreadsheet?
 
-// Get the size of the top margin of the sheet.
+// Show margin dimensions in cells for layout verification in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let topMargin = worksheet.GetTopMargin();

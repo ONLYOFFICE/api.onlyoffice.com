@@ -22,9 +22,13 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例对段落文本应用双删除线格式。
+在演示文稿中为段落文本应用双删除线格式。
 
 ```javascript editor-pptx
+// How do I add double strikethrough to text in a presentation?
+
+// Format text with two lines struck through in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text struck out with two lines.');
 paragraph.SetDoubleStrikeout(true);
 slide.AddObject(shape);
-
 ```

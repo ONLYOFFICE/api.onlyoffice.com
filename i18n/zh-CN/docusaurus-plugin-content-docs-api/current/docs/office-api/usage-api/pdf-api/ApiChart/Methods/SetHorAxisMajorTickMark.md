@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何使用预定义符号设置主刻度线。
+在 PDF 中为水平轴添加主刻度线。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and major tick mark for horizontal axis.
+// How do I display tick marks on the horizontal axis of a chart in a PDF?
+
+// Configure tick marks with a cross symbol on the axis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -52,5 +54,4 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 page.AddObject(chart);
-
 ```

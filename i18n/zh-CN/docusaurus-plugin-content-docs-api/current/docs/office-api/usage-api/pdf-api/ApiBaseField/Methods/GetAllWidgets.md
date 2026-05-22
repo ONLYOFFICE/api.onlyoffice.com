@@ -20,9 +20,13 @@ expression.GetAllWidgets();
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置边框颜色。
+访问 PDF 中表单字段的所有视觉实例。
 
 ```javascript editor-pdf
+// How can I retrieve every visual representation of a form field in a PDF?
+
+// Modify the appearance of all form field widgets in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -35,5 +39,4 @@ let rgbColor = Api.RGB(255, 100, 0);
 widgets.forEach(function(widget) {
     widget.SetBorderColor(rgbColor);
 });
-
 ```

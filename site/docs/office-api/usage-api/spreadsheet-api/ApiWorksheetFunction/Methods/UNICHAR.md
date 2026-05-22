@@ -22,12 +22,12 @@ string
 
 ## Example
 
-This example shows how to return the Unicode character referenced by the given numeric value.
+Return the Unicode character referenced by the given numeric value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a Unicode character.
+// The UNICHAR function converts numeric code points to their corresponding characters.
 
-// Use a function to return the Unicode character knowing its reference number.
+// Apply the function to obtain a character from its Unicode number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

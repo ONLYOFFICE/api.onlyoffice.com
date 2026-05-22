@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a class type of a hyperlink.
+Determine the type of a hyperlink object in a PDF.
 
 ```javascript editor-pdf
+// What is the class type of a hyperlink in a PDF?
+
+// Identify the object classification of a hyperlink in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ const classType = hyperlink.GetClassType();
 paragraph = Api.CreateParagraph();
 paragraph.AddText('Class Type of ApiHyperlink instance is \"' + classType + '\".');
 docContent.Push(paragraph);
-
 ```

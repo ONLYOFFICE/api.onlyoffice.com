@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取输入消息标题。
+读取选择电子表格中已验证单元格时显示的指导工具提示标题。
 
 ```javascript editor-xlsx
-// How to retrieve the validation input title.
+// How do I find out what title appears on the input prompt for a cell with a validation rule in a spreadsheet?
 
-// Get the input title.
+// Confirm the label used at the top of the input message box assigned to a restricted cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,5 +34,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetInputTitle("Enter Value");
 let inputTitle = validation.GetInputTitle();
 worksheet.GetRange("B1").SetValue("Input title: " + inputTitle);
-
 ```

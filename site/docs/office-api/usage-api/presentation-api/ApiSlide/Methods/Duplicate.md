@@ -22,12 +22,12 @@ expression.Duplicate(nPos);
 
 ## Example
 
-This example creates a duplicate of the specified slide object, adds the new slide to the slides collection.
+Create a duplicate of a slide in a presentation.
 
 ```javascript editor-pptx
-// How to create a duplicate slide.
+// How do I duplicate a slide in a presentation?
 
-// Get a slide by its index and create its copy.
+// Select a slide and create a copy of it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,5 +37,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 const duplicateSlide = slide.Duplicate(1);
-
 ```

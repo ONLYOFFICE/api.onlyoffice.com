@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the version of the current presentation.
+Store a version number for the presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I track the version of my presentation?
+
+// Write and retrieve the version identifier for a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetVersion("v9.0");
@@ -40,5 +44,4 @@ paragraph.AddText("Version: " + version);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

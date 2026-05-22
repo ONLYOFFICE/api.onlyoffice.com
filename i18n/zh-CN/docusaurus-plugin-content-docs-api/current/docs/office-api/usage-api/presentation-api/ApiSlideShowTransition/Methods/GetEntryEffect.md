@@ -20,9 +20,13 @@ expression.GetEntryEffect();
 
 ## 示例
 
-此示例从幻灯片放映过渡中获取进入效果。
+从幻灯片放映切换效果获取进入效果。
 
 ```javascript editor-pptx
+// Retrieve the entry effect identifier from a slide show transition object.
+
+// Display the entry effect value in a shape on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -44,5 +48,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Entry Effect: ' + entryEffect);
 slide.AddObject(shape);
-
 ```

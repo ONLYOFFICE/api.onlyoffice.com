@@ -14,7 +14,7 @@ expression.SetSeriaValues(sRange, nSeria);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRange | Required | string |  | A range of cells from the sheet with series values. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column, "Example series". |
+| sRange | Required | string |  | A range of cells from the sheet with series values. For example: |
 | nSeria | Required | number |  | The index of the chart series. |
 
 ## Returns
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets values from the specified range to the specified series.
+Assign cell range data as the values for a chart series in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add values to series from the indicated range using addresses.
+// How do I point a chart series to a different range of cells for its values in a spreadsheet?
 
-// Fill series with values obtained from the worksheet cells.
+// Update the data a chart series displays by linking it to a new range of cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

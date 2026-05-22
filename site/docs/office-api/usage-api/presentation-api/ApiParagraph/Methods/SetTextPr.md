@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the paragraph text properties.
+Apply text formatting properties like font size and weight in a presentation.
 
 ```javascript editor-pptx
+// How do I change the appearance of text in a paragraph in a presentation?
+
+// Configure font properties for text in a shape in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 paragraph.SetTextPr(textPr);
 slide.AddObject(shape);
-
 ```

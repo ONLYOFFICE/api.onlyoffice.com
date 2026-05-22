@@ -22,12 +22,12 @@ expression.GetById(xmlPartId);
 
 ## 示例
 
-此示例演示如何根据 ID 获取自定义 XML 部件。
+通过 ID 获取演示文稿中的自定义 XML 部件。
 
 ```javascript editor-pptx
-// How to retrieve a custom XML part using its ID.
+// How do I find a custom XML part using its unique ID in a presentation?
 
-// Get an XML part by its ID.
+// Display the retrieved XML part's content in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

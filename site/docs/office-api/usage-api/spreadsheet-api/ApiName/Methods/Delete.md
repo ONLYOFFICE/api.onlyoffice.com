@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example deletes the DefName object.
+Remove a named range from a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove custom DefName from a worksheet.
+// How do I delete a named range I no longer need in a spreadsheet?
 
-// Delete previously added DefName. 
+// Erase a saved range name to clean up the workbook in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

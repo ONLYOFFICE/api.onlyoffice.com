@@ -22,10 +22,13 @@ expression.GetPath(nIndex);
 
 ## 示例
 
-分析页面上云形状的路径属性。
+从 PDF 中形状的轮廓提取单个路径。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How do I access one of the outline segments from a shape in a PDF?
+
+// Retrieve a specific path and examine its properties in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

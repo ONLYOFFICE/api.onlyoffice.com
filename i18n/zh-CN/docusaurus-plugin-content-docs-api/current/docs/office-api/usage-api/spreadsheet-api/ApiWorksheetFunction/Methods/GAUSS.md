@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何计算标准正态总体成员落在平均值和距平均值 arg1 个标准差之间的概率。
+查找电子表格中标准正态分布的概率。
 
 ```javascript editor-xlsx
-// How to calculate the probability that a member of a standard normal population will fall between two values.
+// How do I calculate the area under the normal distribution curve in a spreadsheet?
 
-// Use a function to calculate the probability.
+// Get the cumulative normal probability for a given standard deviation value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

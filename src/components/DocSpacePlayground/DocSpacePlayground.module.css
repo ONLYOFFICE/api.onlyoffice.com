@@ -1,0 +1,347 @@
+/* ── Container ─────────────────────────────────────────────── */
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--ifm-background-color);
+    overflow: hidden;
+}
+
+/* ── Toolbar ───────────────────────────────────────────────── */
+
+.toolbar {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    background: var(--ifm-background-surface-color);
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.toolbarGroup {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toolbarGroupRight {
+    margin-left: auto;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-600);
+    white-space: nowrap;
+}
+
+.selectTrigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 6px 12px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    cursor: pointer;
+    font-size: 13px;
+    min-width: 150px;
+    text-align: left;
+    color: var(--ifm-font-color-base);
+    transition: all var(--ifm-transition-fast) ease;
+    appearance: none;
+}
+
+.selectTrigger:hover {
+    border-color: var(--ifm-color-primary);
+}
+
+.selectTrigger:focus-visible {
+    border-color: var(--ifm-color-primary);
+    outline: none;
+}
+
+.selectContent {
+    z-index: 1500;
+    background-color: var(--ifm-dropdown-background-color);
+    border-radius: var(--ifm-global-radius);
+    box-shadow: var(--ifm-global-shadow-md);
+}
+
+.selectPopup {
+    padding: 0.5rem;
+    min-width: 150px;
+}
+
+.selectOption {
+    border-radius: 0.25rem;
+    color: var(--ifm-dropdown-link-color);
+    display: block;
+    font-size: 0.875rem;
+    margin-top: 0.2rem;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.selectOption:hover,
+.selectOption[data-state="checked"],
+.selectOption[data-highlighted] {
+    background-color: var(--ifm-dropdown-hover-background-color);
+    color: var(--ifm-dropdown-link-color);
+}
+
+.selectOption:focus-visible {
+    outline: none;
+}
+
+@supports (-moz-appearance: none) {
+    .selectOption:focus {
+        outline: none;
+    }
+}
+
+.selectIcon {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: var(--dropdown-icon-width);
+    height: var(--dropdown-icon-height);
+    color: var(--ifm-font-color-base);
+}
+
+.selectIcon::before {
+    content: ' ';
+    background-color: currentColor;
+    mask-image: url('/icons/arrow-sidebar.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    height: var(--dropdown-icon-height);
+    margin-inline-end: var(--dropdown-icon-gap);
+    width: var(--dropdown-icon-width);
+    flex-shrink: 0;
+    transform: rotate(180deg);
+}
+
+/* ── Notice ────────────────────────────────────────────────── */
+
+.notice {
+    padding: 6px 20px;
+    font-size: 12px;
+    color: var(--ifm-color-emphasis-700);
+    background: var(--ifm-color-warning-contrast-background);
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    flex-shrink: 0;
+}
+
+/* ── Desktop split layout ──────────────────────────────────── */
+
+.desktopContent {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.resizeHandle {
+    position: relative;
+    width: 8px;
+    background-color: transparent;
+    cursor: col-resize;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resizeHandle::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: var(--ifm-color-emphasis-300);
+    transition: background-color 0.2s ease;
+}
+
+.resizeHandle:hover::before {
+    background-color: var(--ifm-color-primary);
+    width: 2px;
+}
+
+.resizeHandle:active::before {
+    background-color: var(--ifm-color-primary-darker);
+    width: 2px;
+}
+
+.resizeHandle[data-resize-handle-state="drag"]::before {
+    background-color: var(--ifm-color-primary);
+    width: 2px;
+}
+
+.resizeHandleGrip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 36px;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    color: var(--ifm-color-emphasis-600);
+    z-index: 1;
+    transition: opacity 0.2s ease;
+    box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.resizeHandleGrip svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ── Mobile tabs ───────────────────────────────────────────── */
+
+.tabsRoot {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.tabsList {
+    display: flex;
+    border-bottom: 1px solid var(--ifm-color-emphasis-300);
+    background: var(--ifm-background-surface-color);
+    flex-shrink: 0;
+}
+
+.tabPanel {
+    flex: 1;
+    overflow: hidden;
+}
+
+.tabPanel[hidden] {
+    display: none;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-600);
+    transition: all var(--ifm-transition-fast) ease;
+    position: relative;
+}
+
+.tab[data-state="active"] {
+    background: var(--ifm-color-emphasis-200);
+    color: var(--ifm-font-color-base);
+}
+
+.tab[data-state="active"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--ifm-color-primary);
+}
+
+/* ── Editor ────────────────────────────────────────────────── */
+
+.editorContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.runButton {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--ifm-global-radius);
+    cursor: pointer;
+    transition: all var(--ifm-transition-fast) ease;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.runButton:hover {
+    background: var(--ifm-color-primary-dark);
+}
+
+html[data-theme='dark'] .runButton:hover {
+    background: var(--ifm-color-primary-light);
+}
+
+.runButton:active {
+    background: var(--ifm-color-primary-darker);
+}
+
+.runButton > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* ── Preview ───────────────────────────────────────────────── */
+
+.preview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.preview iframe {
+    z-index: 0 !important;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+    .toolbar {
+        gap: 12px;
+        padding: 8px 12px;
+    }
+
+    .toolbarGroup {
+        gap: 6px;
+    }
+
+    .toolbarGroupRight {
+        margin-left: unset;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    .selectTrigger {
+        min-width: 120px;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .runButton {
+        left: 1rem;
+        right: unset;
+    }
+}

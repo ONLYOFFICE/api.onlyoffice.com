@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array with all the chart objects from the slide layout.
+Get all chart objects from a slide layout as an array.
 
 ```javascript editor-pptx
-// How to get all charts from the layout of presentation.
+// Charts added to layouts can be retrieved and modified.
 
-// Get all charts from the presentation as an array.
+// Apply formatting to the first chart in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -54,5 +54,4 @@ layout.AddObject(chart);
 const charts = layout.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 charts[0].SetMinorHorizontalGridlines(stroke);
-
 ```

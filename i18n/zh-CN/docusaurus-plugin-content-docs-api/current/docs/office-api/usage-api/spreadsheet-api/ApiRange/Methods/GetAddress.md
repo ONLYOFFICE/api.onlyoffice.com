@@ -26,12 +26,12 @@ string \| null
 
 ## 示例
 
-此示例演示如何获取范围地址。
+读取范围的单元格地址并在电子表格的另一个单元格中显示。
 
 ```javascript editor-xlsx
-// How to get an address of a range.
+// How do I find out the address of a selected range in a spreadsheet?
 
-// Get an address of one range and set it for another one.
+// Copy a range address into a label cell to document its location on the sheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -39,5 +39,4 @@ worksheet.GetRange("B1").SetValue("2");
 let address = worksheet.GetRange("A1").GetAddress(true, true, "xlA1", false);
 worksheet.GetRange("A3").SetValue("Address: ");
 worksheet.GetRange("B3").SetValue(address);
-
 ```

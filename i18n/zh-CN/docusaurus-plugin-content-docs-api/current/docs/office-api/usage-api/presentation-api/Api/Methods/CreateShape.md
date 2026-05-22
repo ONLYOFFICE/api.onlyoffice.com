@@ -26,12 +26,12 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## 示例
 
-此示例使用 'flowChartMagneticTape' 预设创建形状。
+在演示文稿中添加具有填充和描边属性的流程图形状。
 
 ```javascript editor-pptx
-// How to add a new flowchart shape.
+// How do I create a custom shape with colors in a presentation?
 
-// Add a new shape indicating its properties.
+// Set up a shape with a fill color, outline, and add text to it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

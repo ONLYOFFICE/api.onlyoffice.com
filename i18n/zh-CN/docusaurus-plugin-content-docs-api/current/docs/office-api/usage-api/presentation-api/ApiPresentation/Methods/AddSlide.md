@@ -23,12 +23,12 @@ expression.AddSlide(oSlide, nIndex);
 
 ## 示例
 
-此示例在演示文稿末尾追加新幻灯片。
+向演示文稿添加具有渐变背景的新幻灯片。
 
 ```javascript editor-pptx
-// How to add a new slide to the presentation.
+// How do I create and add a new slide to the end of a presentation?
 
-// Create a slide and add it to the end of presentation.
+// Create a slide with a radial gradient fill and add it to a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
@@ -37,5 +37,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 presentation.AddSlide(slide);
-
 ```

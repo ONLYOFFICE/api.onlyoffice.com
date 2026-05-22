@@ -15,7 +15,7 @@ expression.ROUND(arg1, arg2);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要舍入的数字。 |
-| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要舍入到的位数。如果此参数为负数，则数字将舍入到小数点左边。如果等于零，则数字将舍入到最接近的整数。 |
+| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要舍入到的位数。如果此参数为负数，则数字将在小数点左侧舍入。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何将数字舍入到指定的位数。
+在电子表格中将数字舍入到特定的小数位。
 
 ```javascript editor-xlsx
-// How to round a number.
+// How do I round numbers to a certain number of digits in a spreadsheet?
 
-// Use a function to round a number to indicated number of digits.
+// Adjust a number's precision by rounding it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

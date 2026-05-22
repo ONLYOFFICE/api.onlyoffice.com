@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为垂直轴标签指定字体大小。
+更改 PDF 中水平轴标签的字体大小。
 
 ```javascript editor-pdf
-// How to resize a font size of the vertical axis labels.
+// How do I make the axis labels larger or smaller in a PDF?
 
-// Create a chart then change a font size of axis labels.
+// Adjust the text size for numbers on the horizontal axis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -48,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

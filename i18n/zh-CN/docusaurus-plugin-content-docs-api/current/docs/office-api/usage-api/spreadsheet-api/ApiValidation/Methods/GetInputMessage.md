@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取输入消息文本。
+读取用户选择电子表格中已验证单元格时出现的指导消息。
 
 ```javascript editor-xlsx
-// How to retrieve the validation input message.
+// How do I find out what instruction text is shown when clicking on a cell with a validation rule in a spreadsheet?
 
-// Get the input message.
+// Retrieve the tooltip message displayed to guide users entering data into a restricted cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,5 +34,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetInputMessage("Enter a number greater than 10");
 let inputMessage = validation.GetInputMessage();
 worksheet.GetRange("B1").SetValue("Input message: " + inputMessage);
-
 ```

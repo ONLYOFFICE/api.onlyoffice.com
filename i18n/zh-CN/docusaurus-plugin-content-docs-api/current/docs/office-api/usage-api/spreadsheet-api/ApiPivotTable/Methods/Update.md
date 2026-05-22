@@ -20,13 +20,13 @@ expression.Update();
 
 ## 示例
 
-此示例展示如何更新数据透视表。
+刷新数据透视表以反映电子表格中的最新源数据。
 
 ```javascript editor-xlsx
-// How to update a table.
+// How do I force a pivot table to recalculate after the data changes in a spreadsheet?
 
-// Create a pivot table, add data to it then update it. 
- 
+// Keep a pivot table in sync with its underlying data by triggering a full recalculation in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('B1').SetValue('Region');

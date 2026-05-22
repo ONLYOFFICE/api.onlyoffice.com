@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"baseWidget"
 
 ## Example
 
-This example gets field widget and display it's type.
+Get the widget type classification in a PDF.
 
 ```javascript editor-pdf
+// How do I identify what kind of widget this is in a PDF?
+
+// Determine the class category of a form field widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -30,5 +34,4 @@ page.AddObject(textField);
 
 let widgets = textField.GetAllWidgets();
 textField.SetValue(widgets[0].GetClassType());
-
 ```

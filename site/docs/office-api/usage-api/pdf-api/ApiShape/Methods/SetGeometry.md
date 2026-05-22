@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-Applies custom geometry with specific fill and stroke properties.
+Use a custom drawing pattern for a shape in a PDF.
 
 ```javascript editor-pdf
+// How do I apply a custom shape design in a PDF?
+
+// Replace a shape's default pattern with a personalized drawing outline in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

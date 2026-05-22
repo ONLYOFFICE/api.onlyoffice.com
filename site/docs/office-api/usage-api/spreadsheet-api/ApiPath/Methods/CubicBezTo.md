@@ -27,10 +27,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curve shape using different bezier and arc commands.
+Draw a smooth cubic Bezier curve segment in a custom shape path in a spreadsheet.
 
 ```javascript editor-xlsx
-// Combines multiple curve types in a single path.
+// How do I add a flowing S-curve to a custom shape outline in a spreadsheet?
+
+// Bend a path segment into a smooth curve using two control points and an endpoint in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

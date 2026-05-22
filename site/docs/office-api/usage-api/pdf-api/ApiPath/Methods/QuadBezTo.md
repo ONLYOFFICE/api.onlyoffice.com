@@ -25,10 +25,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curved shape using various bezier and arc commands.
+Draw a smooth curved line from a control point in a PDF.
 
 ```javascript editor-pdf
-// Demonstrates different curve types in a single path on a page.
+// How do I create curved shapes in a PDF?
+
+// Add a curved segment to a path using control points in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

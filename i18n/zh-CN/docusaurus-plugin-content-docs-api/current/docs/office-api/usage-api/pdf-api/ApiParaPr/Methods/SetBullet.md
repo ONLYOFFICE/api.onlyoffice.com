@@ -22,12 +22,12 @@ expression.SetBullet(oBullet);
 
 ## 示例
 
-此示例设置当前段落的项目符号或编号。
+在 PDF 中为段落添加项目符号。
 
 ```javascript editor-pdf
-// How to set a bullet type to the paragraph properties.
+// How do I add a bullet to a paragraph in a PDF?
 
-// Create a bulleted paragraph setting its bullet type.
+// Create a bulleted list item in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,12 +39,11 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 const bullet = Api.CreateBullet("-");
 paraPr.SetBullet(bullet);
 paragraph.AddText(" This is an example of the bulleted paragraph.");
 page.AddObject(shape);
-
 ```

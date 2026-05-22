@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例获取文档中第一页的旋转角度并在文本字段中显示。
+检查 PDF 中应用于页面的当前旋转角度。
 
 ```javascript editor-pdf
+// How do I determine if a page is rotated in a PDF?
+
+// Read the page's rotation setting to display its current orientation in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 32]);

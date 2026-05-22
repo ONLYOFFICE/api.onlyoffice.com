@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-此示例检索拥有自动筛选的工作表。
+从电子表格中的筛选对象内访问包含活动筛选器的工作表。
 
 ```javascript editor-xlsx
-// How to navigate back from ApiAutoFilter to ApiWorksheet.
+// How do I get back to the sheet itself when I only have a filter reference in a spreadsheet?
 
-// Use ApiAutoFilter.GetParent() to get the parent sheet.
+// Navigate from the filter back to the worksheet so you can work with other cells on the same sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ worksheet.GetRange("C1").SetValue("Parent worksheet name:");
 worksheet.GetRange("C2").SetValue(parentSheet.GetName());
 
 worksheet.GetRange("C4").SetValue("AutoFilter is attached to this worksheet.");
-
 ```

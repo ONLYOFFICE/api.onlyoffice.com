@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例检查当前图片表单的宽高比是否已锁定。
+检查文档中图片表单的比例是否保持不变。
 
 ```javascript editor-forms
-// How to find out whether a picture form is fixed or not.
+// How do I find out if a picture form preserves its original proportions in a document?
 
-// Find out whether a picture form's size is fixed.
+// Confirm that resizing a picture form will not distort its image in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "respectBorders": false, "shiftX": 50, "shiftY": 50});

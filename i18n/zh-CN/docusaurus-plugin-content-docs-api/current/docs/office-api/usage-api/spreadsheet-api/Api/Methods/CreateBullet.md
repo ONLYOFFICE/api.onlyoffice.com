@@ -22,12 +22,12 @@ expression.CreateBullet(sSymbol);
 
 ## 示例
 
-此示例为段落创建项目符号。
+在电子表格中为形状内的段落添加项目符号标记。
 
 ```javascript editor-xlsx
-// Add paragraph with a custom bullet.
+// How do I add a custom bullet symbol to a paragraph in a spreadsheet?
 
-// How to create a custom bullet for a paragraph.
+// Mark a paragraph with a bullet character to create a list item in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

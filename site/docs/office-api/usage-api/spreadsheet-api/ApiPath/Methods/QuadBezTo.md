@@ -25,10 +25,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curve shape using different bezier and arc commands.
+Add a quadratic curved segment to a custom shape path in a spreadsheet.
 
 ```javascript editor-xlsx
-// Combines multiple curve types in a single path.
+// How do I draw a smooth single-control-point curve on a shape in a spreadsheet?
+
+// Build a gently curved outline by guiding the path through one control point to an endpoint in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

@@ -20,10 +20,13 @@ number
 
 ## 示例
 
-分析幻灯片上云形状路径属性。
+检索演示文稿中自定义形状绘图区域的宽度值。
 
 ```javascript editor-pptx
-// Displays comprehensive path information in a text shape.
+// What is the horizontal size of a shape path in a presentation?
+
+// Check the width dimensions of a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例用幻灯片上的绘图替换占位符。
+在演示文稿中用图像替换占位符。
 
 ```javascript editor-pptx
+// How do I swap a placeholder for an actual image in a presentation?
+
+// Insert an image into a shape that has a placeholder in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ slide.AddObject(shapeCopy);
 
 const image = Api.CreateImage('https://api.onlyoffice.com/img/logo.svg', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100));
 shapeCopy.ReplacePlaceholder(image);
-
 ```

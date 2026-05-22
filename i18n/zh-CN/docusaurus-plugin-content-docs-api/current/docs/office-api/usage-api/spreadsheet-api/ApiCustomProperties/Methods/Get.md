@@ -22,9 +22,13 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-此示例演示如何根据名称获取自定义属性的值。
+从电子表格读取命名自定义属性的值。
 
 ```javascript editor-xlsx
+// How do I look up a specific custom metadata field by name in a spreadsheet?
+
+// Retrieve stored custom data and handle missing fields gracefully in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 
@@ -45,5 +49,4 @@ const shape = worksheet.AddShape(
 let paragraph = shape.GetDocContent().GetElement(0);
 paragraph.AddText("Existing Property Value: " + existingProp);
 paragraph.AddText("\nNon-Existent Property Value: " + nonExistentProp);
-
 ```

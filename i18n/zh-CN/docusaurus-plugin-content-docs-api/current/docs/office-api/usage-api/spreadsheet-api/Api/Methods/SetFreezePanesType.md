@@ -22,12 +22,12 @@ expression.SetFreezePanesType(FreezePaneType);
 
 ## 示例
 
-此示例冻结第一列并将冻结的范围地址粘贴到表格中。
+锁定第一列使其在电子表格中滚动时保持可见。
 
 ```javascript editor-xlsx
-// How to freeze a column and get its address.
+// How do I freeze a column so it remains visible when navigating across many columns in a spreadsheet?
 
-// Insert address of freezed columns into a range.
+// Pin the leading column and record its address for reference in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

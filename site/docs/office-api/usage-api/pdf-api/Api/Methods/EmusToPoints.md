@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert EMUs (english metric units) to points.
+Convert measurement units from emus to points in a PDF.
 
 ```javascript editor-pdf
+// How do I convert emus to points for sizing in a PDF?
+
+// Translate emu values to point measurements and show the result in a PDF.
+
 const emus = 100;
 const points = Api.EmusToPoints(emus);
 
@@ -38,5 +42,4 @@ paragraph.AddText(emus + ' emus are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

@@ -23,12 +23,12 @@ expression.CreateNumbering(numType, startAt);
 
 ## 示例
 
-此示例为段落创建项目符号。
+在演示文稿中为文本创建编号项目符号。
 
 ```javascript editor-pptx
-// How to create a numbered paragraph specifying its numerical.
+// How do I add paragraph numbering to text in a presentation?
 
-// Add numbered paragraph to the slide.
+// Format text lines with automatic numbering in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

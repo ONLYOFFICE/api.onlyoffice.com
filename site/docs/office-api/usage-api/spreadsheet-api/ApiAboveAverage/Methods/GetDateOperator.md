@@ -2,30 +2,16 @@
 
 Returns the date operator for time period conditions.
 
-## Syntax
-
-```javascript
-expression.GetDateOperator();
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md).
 
 ## Example
 
-This example gets the date operator from a time period conditional formatting rule.
+Retrieve the time period comparison type used by a date-based formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve date operators from time period conditional formatting rules.
+// How do I check which date period a conditional formatting rule is set to highlight in a spreadsheet?
 
-// Get conditional formatting rule date operator.
+// Inspect the date condition of a rule to confirm it targets the intended time window in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```

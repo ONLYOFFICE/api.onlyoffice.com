@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Confluence for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/confluence.svg
 ---
@@ -47,7 +49,7 @@ You can also install the app from Confluence administration panel:
 
 Find the uploaded **ONLYOFFICE Connector for Confluence** on the **Manage add-ons** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

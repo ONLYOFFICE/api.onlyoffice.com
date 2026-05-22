@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiThemeColorScheme 对象转换为 JSON 对象。
+在演示文稿中将配色方案转换为 JSON 格式。
 
 ```javascript editor-pptx
-// How to convert a ApiThemeColorScheme object to a JSON object.
+// How can I export a color scheme as JSON data in a presentation?
 
-// Create a ApiThemeColorScheme, convert it to JSON and create a new object from it.
+// Create a color scheme, export it to JSON, and recreate it from the JSON in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -57,5 +57,4 @@ chart.SetTitle("Class type = " + sType, 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Odoo for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/odoo.svg
 ---
@@ -67,7 +69,7 @@ ONLYOFFICE demo templates will only be added to the Odoo modules that are alread
 
 To configure the app, go to **Settings**. Find **ONLYOFFICE** on the left sidebar and click it. Specify the URL of the installed ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

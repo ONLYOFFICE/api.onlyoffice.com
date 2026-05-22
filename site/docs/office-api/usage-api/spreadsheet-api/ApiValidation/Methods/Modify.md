@@ -26,12 +26,12 @@ expression.Modify(Type, AlertStyle, Operator, Formula1, Formula2);
 
 ## Example
 
-This example modifies a data validation rule for a range of cells.
+Update the restriction rule on a group of cells without removing it first in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change data validation for a range of cells.
+// How do I change the data rule that controls what values are allowed in selected cells in a spreadsheet?
 
-// Get a range from the worksheet and modify its data validation.
+// Replace an existing entry limit with new conditions so the affected cells enforce different criteria in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Data Validation for decimal to be more than 10 for A2 and A5");
@@ -42,5 +42,4 @@ const validation = range.GetValidation();
 validation.Add("xlValidateDecimal", "xlValidAlertWarning", "xlGreater", "12");
 targetRange.GetValidation().Modify("xlValidateDecimal", "xlValidAlertStop", "xlLess", "12");
 worksheet.GetRange("A6").SetValue("Data Validation is now modified for A4:A5, to accept values less than 12.");
-
 ```

@@ -2,27 +2,17 @@
 
 返回当前格式条件的父区域对象。
 
-## 语法
-
-```javascript
-expression.GetParent();
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiRange](../../ApiRange/ApiRange.md)
+继承自 [ApiFormatCondition.GetParent](../../ApiFormatCondition/Methods/GetParent.md)。
 
 ## 示例
 
-此示例展示如何获取条件格式规则的父范围。
+检索电子表格中拥有条件格式规则的集合。
 
 ```javascript editor-xlsx
+// How do I access the parent formatting collection that a specific rule belongs to in a spreadsheet?
+
+// Trace back from a formatting rule to its owning collection to manage all related conditions in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Sales Data');
@@ -38,5 +28,4 @@ condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
 const parentRange = condition.GetParent();
 worksheet.GetRange('C1').SetValue('Parent range:');
 worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
-
 ```

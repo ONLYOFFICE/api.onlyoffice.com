@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get the rank value for top 10 condition.
+Read how many top or bottom values a top 10 conditional formatting rule highlights in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the number of top or bottom values to highlight in the condition.
+// How do I find the count of values highlighted by a top 10 conditional formatting rule in a spreadsheet?
 
-// Get the rank value for the top 10 rule.
+// Confirm the number of items targeted by a top or bottom highlight rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -41,5 +41,4 @@ let top10Condition = formatConditions.AddTop10();
 
 let rank = top10Condition.GetRank();
 worksheet.GetRange("B1").SetValue("Current rank: " + rank);
-
 ```

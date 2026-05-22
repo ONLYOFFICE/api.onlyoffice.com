@@ -23,10 +23,12 @@ boolean
 
 ## 示例
 
-如何更改绘图的位置。
+将形状移动到 PDF 中的不同位置。
 
 ```javascript editor-pdf
-// Get a shape object from a page and move it.
+// How do I reposition an object on the page in a PDF?
+
+// Place a shape at new coordinates in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -2,30 +2,16 @@
 
 从当前文本属性获取文本轮廓。
 
-## 语法
-
-```javascript
-expression.GetOutLine();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiStroke](../../ApiStroke/ApiStroke.md)
+继承自 [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否有轮廓。
+检查演示文稿中的文本是否应用了轮廓效果。
 
 ```javascript editor-pptx
-// How to know whether an outline is set to the text.
+// How do I find out if text has an outline in a presentation?
 
-// Get the text properties of the run and find whether it is outlined or not.
+// Read the outline property of text to see if a stroke style is applied in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +39,4 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
-
 ```

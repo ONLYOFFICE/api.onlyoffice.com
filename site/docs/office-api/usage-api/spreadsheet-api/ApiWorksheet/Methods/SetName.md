@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets a name to the active sheet.
+Rename the active sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set name of the sheet.
+// How do I give a worksheet a custom name in a spreadsheet?
 
-// Rename the sheet.
+// Change the tab label of the current sheet to something meaningful in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetName("sheet 1");

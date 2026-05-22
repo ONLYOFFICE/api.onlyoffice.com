@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-此示例演示如何返回定期付息证券的每 100 美元面值价格。
+查找电子表格中有定期利息支付的债券价格。
 
 ```javascript editor-xlsx
-// How to return the price per $100 face value.
+// What is the market price of a security per $100 face value in a spreadsheet?
 
-// Use a function to return the price per $100 face value for a security.
+// Calculate the cost of a bond based on yield and maturity dates in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

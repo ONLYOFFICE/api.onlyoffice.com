@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例指定当前文本块的内容显示为每个字符都有两条水平线穿过。
+在演示文稿中为文本绘制双删除线。
 
 ```javascript editor-pptx
-// How to strike out a text with two lines.
+// What is double strikeout formatting in a presentation?
 
-// Create a new text run and set double strikeout to it.
+// Apply double strikeout formatting to text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ run.SetDoubleStrikeout(true);
 run.AddText("This is a text run with the text struck out with two lines.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

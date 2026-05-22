@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取工作表的底边距。
+读取电子表格中工作表的下页边距。
 
 ```javascript editor-xlsx
-// How to get margin of the bottom.
+// How do I find out the bottom margin size of a sheet in a spreadsheet?
 
-// Get the size of the bottom margin of the sheet.
+// Check how much space is reserved at the bottom of the printed page in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let bottomMargin = worksheet.GetBottomMargin();

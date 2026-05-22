@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-此示例获取受保护区域用户的 ID。
+读取有权访问电子表格中受保护范围的用户的唯一标识符。
 
 ```javascript editor-xlsx
-// How to get a user info of a protected range and show its Id.
+// How do I find a user's ID for a protected range in a spreadsheet?
 
-// Get a user id of a protected range and add it to the worksheet.
+// Confirm which user account is linked to a locked area by checking its ID in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");

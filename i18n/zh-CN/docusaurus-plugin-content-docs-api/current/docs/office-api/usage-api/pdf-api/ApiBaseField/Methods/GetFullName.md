@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例获取字段全名并显示。
+读取 PDF 中表单字段的完整名称标识符。
 
 ```javascript editor-pdf
+// How do I retrieve the full name assigned to a form field in a PDF?
+
+// Display the unique full name property of a form field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

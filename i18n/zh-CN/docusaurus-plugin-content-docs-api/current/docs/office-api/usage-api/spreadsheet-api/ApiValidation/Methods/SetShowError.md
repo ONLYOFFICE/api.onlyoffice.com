@@ -22,12 +22,12 @@ expression.SetShowError(ShowError);
 
 ## 示例
 
-此示例设置是否显示错误消息。
+为电子表格中具有验证规则的单元格打开或关闭错误警报。
 
 ```javascript editor-xlsx
-// How to show or hide the validation error message.
+// How do I make sure an error popup appears whenever someone enters a value that breaks a rule in a spreadsheet?
 
-// Set the ShowError setting.
+// Decide whether users see a warning when their input does not meet the required criteria in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -37,5 +37,4 @@ validation.SetErrorTitle("Error Title");
 validation.SetErrorMessage("Invalid value entered");
 validation.SetShowError(true);
 worksheet.GetRange("B1").SetValue("Error message will be shown");
-
 ```

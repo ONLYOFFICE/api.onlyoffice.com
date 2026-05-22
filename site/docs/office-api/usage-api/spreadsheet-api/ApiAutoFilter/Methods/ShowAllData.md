@@ -25,12 +25,12 @@ void
 
 ## Example
 
-This example clears the active filter and shows all rows in the AutoFilter range.
+Remove the current filter conditions so that every row becomes visible in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to temporarily show all data while keeping the filter drop-downs.
+// How do I unhide all filtered-out rows without removing the filter drop-downs in a spreadsheet?
 
-// Remove filter criteria using ApiAutoFilter.ShowAllData().
+// Reveal all hidden rows while leaving the filter controls on the header intact in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -56,5 +56,4 @@ autoFilter.ShowAllData();
 worksheet.GetRange("C4").SetValue("ShowAllData() called.");
 worksheet.GetRange("C5").SetValue("Filter drop-down remains on header.");
 worksheet.GetRange("C6").SetValue("All rows in the AutoFilter range are visible.");
-
 ```

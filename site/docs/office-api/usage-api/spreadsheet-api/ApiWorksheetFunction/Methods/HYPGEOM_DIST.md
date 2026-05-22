@@ -18,7 +18,7 @@ expression.HYPGEOM_DIST(arg1, arg2, arg3, arg4, arg5);
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The size of the sample. |
 | arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of successes in the population. |
 | arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The population size. |
-| arg5 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability mass function. |
+| arg5 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. |
 
 ## Returns
 
@@ -26,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to get the hypergeometric distribution.
+Calculate the hypergeometric distribution with cumulative or probability density in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from a hypergeometric distribution.
+// How do I compute hypergeometric probabilities with different distribution types in a spreadsheet?
 
-// Use a function to get the result of hypergeometric distribution.
+// Return cumulative or probability density values from a hypergeometric distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

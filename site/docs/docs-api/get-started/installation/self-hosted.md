@@ -27,7 +27,7 @@ To install it on your local server:
    `https://documentserver/web-apps/apps/api/documents/api.js` is the address where the API JavaScript file can normally be found.
 
    :::info
-   Starting from version 8.1, it is recommended to add the [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) parameter to the URL *QueryString* with the *key* value in it. For example, *?shardkey=Khirz6zTPdfd7*. This allows you to load balance requests.
+   Starting from version 8.1, it is recommended to add the [shardkey](/docs/docs-api/get-started/configuration/shard-key.md) parameter to the query string with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
 
    Starting from version 9.0, you can [preload](/docs/docs-api/get-started/configuration/preload.md) static assets (HTML, CSS, JS, fonts) into the browser cache before opening a document to speed up the first-time loading of the document editor.
    :::
@@ -44,16 +44,15 @@ To install it on your local server:
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
    };
 
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing. See the [How it works](/docs/docs-api/get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-   From now the *docEditor* object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
+   From now the [`docEditor`](/docs/docs-api/usage-api/doceditor.md) object can be used to call the **document editor** [Methods](/docs/docs-api/usage-api/methods.md).
 
    The example above includes all the parameters necessary for ONLYOFFICE Docs correct startup.
 
@@ -69,7 +68,7 @@ Before working with ONLYOFFICE Docs API documentation, it is recommended to make
 - configure [ONLYOFFICE Docs server settings](/docs/docs-api/get-started/configuration/server-config/intro.md) in ONLYOFFICE Docs configuration file;
 - switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using [SSL Certificates](https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx?from=api);
 - add additional [fonts](https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx?from=api) to ONLYOFFICE Docs to enhance the work with the editors;
-- add your own [color themes](https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx?from=api) for the application interface.
+- add your own [color themes](../how-it-works/customizing-themes.md) for the application interface.
 
 ## Health check
 

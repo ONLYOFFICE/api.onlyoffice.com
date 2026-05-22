@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## 示例
 
-此示例展示如何创建径向渐变填充。
+在 PDF 中为形状应用径向渐变填充。
 
 ```javascript editor-pdf
-// How to create a radial gradient fill.
+// How do I create a gradient that radiates from a center point in a PDF?
 
-// Add a radial gradient fill.
+// Fill a shape with a gradient that transitions outward from the center in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,5 +39,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

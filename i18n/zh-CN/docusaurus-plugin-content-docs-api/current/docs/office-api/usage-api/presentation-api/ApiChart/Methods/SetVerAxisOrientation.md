@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定纵轴的方向。
+反转演示文稿中图表垂直轴的方向。
 
 ```javascript editor-pptx
-// How to set an orientation of vertical axis.
+// Change the order and direction of scale on the vertical axis in a presentation.
 
-// Create a chart, set its properties and its vertical axis orientation.
+// Flip or reorient the vertical axis values in a chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ chart.SetSeriesFill(fill, 1, false);
 const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 slide.AddObject(chart);
-
 ```

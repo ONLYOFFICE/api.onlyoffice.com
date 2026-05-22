@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a run and inserts it into the document.
+Add text to a shape in a presentation.
 
 ```javascript editor-pptx
-// How to add text.
+// How do I insert styled text into a shape in a presentation?
 
-// Add an ApiRun object that represents a text.
+// Create a text run with custom font size and add it to a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

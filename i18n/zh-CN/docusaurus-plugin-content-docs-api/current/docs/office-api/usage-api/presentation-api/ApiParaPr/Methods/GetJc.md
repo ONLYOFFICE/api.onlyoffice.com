@@ -20,12 +20,12 @@ expression.GetJc();
 
 ## 示例
 
-此示例展示如何获取段落内容对齐方式。
+检查演示文稿中段落的文本对齐方式。
 
 ```javascript editor-pptx
-// How to set a justification of a paragraph property.
+// How do I read the alignment setting of a paragraph in a presentation?
 
-// Change a justification type of a text property from the slide.
+// Retrieve whether text is left-aligned, centered, right-aligned, or justified in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
-
 ```

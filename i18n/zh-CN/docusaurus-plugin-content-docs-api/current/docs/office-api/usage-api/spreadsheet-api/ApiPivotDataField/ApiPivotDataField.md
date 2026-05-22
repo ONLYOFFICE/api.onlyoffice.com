@@ -1,6 +1,6 @@
 # ApiPivotDataField
 
-表示 ApiPivotDataField 类。
+ApiPivotDataField 是 [ApiPivotField](../ApiPivotField/ApiPivotField.md) 的子类。
 
 ## 属性
 
@@ -11,7 +11,7 @@
 | Index | number | 返回数据字段的索引。 |
 | Name | string | 返回或设置表示对象名称的值。 |
 | NumberFormat | string \| null | 返回或设置表示对象格式代码的值。 |
-| Orientation | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | 返回表示数据字段在指定数据透视表报表中位置的数据字段方向值。 |
+| Orientation | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | 返回数据字段方向值 |
 | PivotField | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | 返回创建数据字段的透视字段。 |
 | Position | number | 返回或设置表示数据字段在类别中位置的值。 |
 | Value | string | 返回或设置表示数据透视表报表中指定数据字段名称的值。 |
@@ -45,7 +45,7 @@
 | [GetParent](./Methods/GetParent.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 返回当前字段的父对象。 |
 | [GetPivotField](./Methods/GetPivotField.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | 返回创建数据字段的透视字段。 |
 | [GetPivotFilters](./Methods/GetPivotFilters.md) | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | 返回应用于指定透视字段的透视筛选器集合。 |
-| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | 返回表示单个数据透视表项（ApiPivotItem 对象）或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。 |
+| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | 返回表示单个数据透视表项目（ApiPivotItem 对象）的对象 |
 | [GetPosition](./Methods/GetPosition.md) | number | 返回表示数据字段在类别中位置的值。 |
 | [GetRepeatLabels](./Methods/GetRepeatLabels.md) | boolean | 返回指定是否在每行重复项目标签的设置。 |
 | [GetShowAllItems](./Methods/GetShowAllItems.md) | boolean | 返回指定是否显示无数据项的设置。 |
@@ -71,7 +71,7 @@
 | [SetLayoutSubtotals](./Methods/SetLayoutSubtotals.md) | 无 | 设置指定是否显示分类汇总的设置。 |
 | [SetName](./Methods/SetName.md) | 无 | 设置表示对象名称的值。 |
 | [SetNumberFormat](./Methods/SetNumberFormat.md) | 无 | 设置表示对象格式代码的值。 |
-| [SetOrientation](./Methods/SetOrientation.md) | 无 | 设置表示字段在指定数据透视表报表中位置的透视字段方向值。 |
+| [SetOrientation](./Methods/SetOrientation.md) | 无 | 设置表示位置的数据透视字段方向值 |
 | [SetPosition](./Methods/SetPosition.md) | 无 | 设置表示数据字段在类别中位置的值。 |
 | [SetRepeatLabels](./Methods/SetRepeatLabels.md) | 无 | 设置指定是否在每行重复项目标签的设置。 |
 | [SetShowAllItems](./Methods/SetShowAllItems.md) | 无 | 设置指定是否显示无数据项的设置。 |

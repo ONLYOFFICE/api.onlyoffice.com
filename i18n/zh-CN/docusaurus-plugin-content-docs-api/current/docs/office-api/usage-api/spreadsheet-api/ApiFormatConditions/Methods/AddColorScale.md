@@ -22,12 +22,12 @@ expression.AddColorScale(ColorScaleType);
 
 ## 示例
 
-此示例向区域添加色阶条件格式。
+在电子表格中跨单元格应用渐变颜色范围以一目了然地可视化高值和低值。
 
 ```javascript editor-xlsx
-// How to add color scale conditional formatting rules to highlight cells with gradient colors.
+// How do I shade a column of numbers from one color to another based on their relative size in a spreadsheet?
 
-// Add color scale conditional formatting to cells.
+// Give a range a heat-map appearance by mapping cell values to a color spectrum in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 
 formatConditions.AddColorScale(3);
-
 ```

@@ -29,9 +29,13 @@ string
 
 ## Example
 
-This example shows how to get all text from the document content of a shape.
+Extract all text from the content of a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I read the full text written inside a shape in a spreadsheet?
+
+// Collect every word inside a shape and write it to a cell in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -54,5 +58,4 @@ paragraph.AddElement(run);
 
 const text = content.GetText();
 worksheet.GetRange('A1').SetValue('Text: ' + text);
-
 ```

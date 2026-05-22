@@ -23,12 +23,12 @@ expression.AddComment(sText, sAuthor);
 
 ## 示例
 
-此示例向范围添加批注。
+在电子表格中为单元格范围附加注释。
 
 ```javascript editor-xlsx
-// How to comment a range.
+// How do I add a comment to a range of cells in a spreadsheet?
 
-// Get a range from the worksheet, add a comment to it and then show the comments text.
+// Leave a written remark on a cell so other users see context when they open it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

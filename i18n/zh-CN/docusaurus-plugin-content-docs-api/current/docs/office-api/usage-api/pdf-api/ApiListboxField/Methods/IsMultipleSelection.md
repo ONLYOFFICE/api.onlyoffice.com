@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例从列表框字段获取多选属性。
+检查 PDF 中的列表选择字段是否允许选择多个项目。
 
 ```javascript editor-pdf
+// How do I know if multiple choices are allowed in a PDF?
+
+// Verify the selection mode for this field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let listboxField = Api.CreateListboxField([10, 10, 160, 100]);

@@ -1,0 +1,44 @@
+# Push
+
+向当前段落添加元素。
+
+## 语法
+
+```javascript
+expression.Push(oElement);
+```
+
+`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+向文档中的段落追加多个文本运行。
+
+```javascript editor-docx
+// How do I add several runs to the end of a paragraph in a document?
+
+// Build a paragraph by pushing new text runs one by one in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let run = Api.CreateRun();
+run.AddText("This is run #0, you must not push it to take effect.");
+paragraph.AddElement(run);
+paragraph.AddLineBreak();
+for (let i = 0; i < 5; ++i) {
+	run = Api.CreateRun();
+	run.AddText("This is run #" + (i + 1) + ", you must push it to take effect.");
+	paragraph.AddLineBreak();
+	paragraph.Push(run);
+}
+```

@@ -2,30 +2,16 @@
 
 Returns the paragraph right side indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndRight();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## Example
 
-This example shows how to get the paragraph right side indentation.
+Check the right margin of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to return a right side identation of a paragraph property.
+// How do I read the right indentation value from a paragraph in a presentation?
 
-// Return a right side indentation of a text property from the slide.
+// Retrieve the distance between the right edge and the paragraph text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +40,4 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
-
 ```

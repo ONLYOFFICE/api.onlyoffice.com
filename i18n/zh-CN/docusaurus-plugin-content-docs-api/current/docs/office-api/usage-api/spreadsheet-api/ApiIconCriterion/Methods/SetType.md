@@ -22,9 +22,13 @@ expression.SetType(type);
 
 ## 示例
 
-此示例展示如何为图标条件设置条件值类型。
+定义电子表格中图标条件阈值是数字、百分比还是公式。
 
 ```javascript editor-xlsx
+// How do I change the kind of value an icon criterion compares against in a spreadsheet?
+
+// Switch an icon criterion to use a fixed number instead of a percentage or other threshold type in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Metrics');
 worksheet.GetRange('A2').SetValue(90);
@@ -40,5 +44,4 @@ const secondCriterion = criteria[1];
 worksheet.GetRange('B1').SetValue('Type before: ' + secondCriterion.GetType());
 secondCriterion.SetType('xlConditionValueNumber');
 worksheet.GetRange('B2').SetValue('Type after: ' + secondCriterion.GetType());
-
 ```

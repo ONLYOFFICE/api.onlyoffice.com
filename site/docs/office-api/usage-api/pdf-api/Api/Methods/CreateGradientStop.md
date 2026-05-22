@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## Example
 
-This example shows how to create a gradient stop used for different types of gradients.
+Create a gradient stop used for different types of gradients in a PDF document.
 
 ```javascript editor-pdf
-// How to add a gradient stop for gradient.
+// Add a gradient stop for gradient in a PDF document.
 
-// Create a stop for a gradient.
+// Create a stop for a gradient in a PDF document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,5 +40,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

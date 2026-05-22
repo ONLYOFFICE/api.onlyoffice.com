@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充。
+更改 PDF 中形状的内部颜色。
 
 ```javascript editor-pdf
-// Creates a rectangle and applies a red fill to it.
+// How do I apply a background color to a shape in a PDF?
+
+// Modify a shape's background to use a specific color in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +42,4 @@ let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddLineBreak();
 paragraph.AddText("Fill changed to red");
-
 ```

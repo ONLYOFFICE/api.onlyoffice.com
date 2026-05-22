@@ -18,7 +18,7 @@ expression.SetNumberFormat(nDemical, sSepStyle, sNegStyle, sCurrency, bCurrencyP
 | sSepStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔样式 |
 | sNegStyle | 必需 | [NumberNegStyle](../../Enumeration/NumberNegStyle.md) |  | 负数样式 |
 | sCurrency | 必需 | string |  | 货币符号 |
-| bCurrencyPrepend | 必需 | boolean |  | 如果为 true，将货币符号放在数字前面（例如 $1,234.56）；如果为 false，则放在后面（例如 1,234.56$）。 |
+| bCurrencyPrepend | 必需 | boolean |  | 如果为 true，将货币符号放在数字前面（例如 $1,234.56）； |
 
 ## 返回值
 
@@ -26,9 +26,13 @@ boolean
 
 ## 示例
 
-此示例获取文本字段并为其设置数字格式。
+在 PDF 中以货币和格式显示数字。
 
 ```javascript editor-pdf
+// Can I show dollar signs and commas with numbers in a PDF?
+
+// Control the appearance of numerical values in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
@@ -36,5 +40,4 @@ page.AddObject(comboboxField);
 
 comboboxField.SetNumberFormat(0, "us", "black-minus", "$", true);
 comboboxField.SetValue('-1000.50');
-
 ```

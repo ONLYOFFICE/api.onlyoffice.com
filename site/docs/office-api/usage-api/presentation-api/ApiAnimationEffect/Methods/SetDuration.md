@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the duration of an animation effect.
+Set how long an animation effect takes to complete in a presentation.
 
 ```javascript editor-pptx
+// How do I control the speed of an animation in a presentation?
+
+// Adjust the time span for an animation to run from start to finish in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -56,5 +60,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New duration: ' + duration + 'ms (2 seconds)');
 slide.AddObject(infoShape);
-
 ```

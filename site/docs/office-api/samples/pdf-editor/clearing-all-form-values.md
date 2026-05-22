@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Clear all form field values to reset a PDF form.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Clearing all form values
@@ -7,8 +9,8 @@ hide_table_of_contents: true
 Reset all filled form fields and return the form to its initial state for reuse, input cancellation, or quick clearing:
 
 - create a form with various field types and default values ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- implement form clearing functionality ([ApiDocument/GetAllForms](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/GetAllForms.md), [ApiTextForm/SetText](/docs/office-api/usage-api/text-document-api/ApiTextForm/Methods/SetText.md), [ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/text-document-api/ApiCheckBoxForm/Methods/SetChecked.md));
-- restore fields to their default state ([ApiFormBase/GetFormType](/docs/office-api/usage-api/text-document-api/ApiFormBase/Methods/GetFormType.md), [ApiComboBoxForm/SetText](/docs/office-api/usage-api/text-document-api/ApiComboBoxForm/Methods/SetText.md)).
+- implement form clearing functionality ([ApiDocument/GetAllForms](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [ApiTextForm/SetText](/docs/office-api/usage-api/document-api/ApiTextForm/Methods/SetText.md), [ApiCheckBoxForm/SetChecked](/docs/office-api/usage-api/document-api/ApiCheckBoxForm/Methods/SetChecked.md));
+- restore fields to their default state ([ApiFormBase/GetFormType](/docs/office-api/usage-api/document-api/ApiFormBase/Methods/GetFormType.md), [ApiComboBoxForm/SetText](/docs/office-api/usage-api/document-api/ApiComboBoxForm/Methods/SetText.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

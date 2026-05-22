@@ -20,10 +20,12 @@ boolean
 
 ## Example
 
-How to delete a page drawing.
+Remove a drawing from a page in a PDF.
 
 ```javascript editor-pdf
-// Get a page drawing and delete it.
+// How do I delete an object that's on a page in a PDF?
+
+// Eliminate a selected shape from the document in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

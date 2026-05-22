@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the hyperlink from the current drawing object.
+Retrieve the link attached to a shape in a presentation.
 
 ```javascript editor-pptx
+// How do I get the web address from a shape that has a hyperlink in a presentation?
+
+// Read and display the hyperlink information from a shape in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ if (retrievedHyperlink) {
   paragraph.AddText('No hyperlink found.');
 }
 slide.AddObject(shape);
-
 ```

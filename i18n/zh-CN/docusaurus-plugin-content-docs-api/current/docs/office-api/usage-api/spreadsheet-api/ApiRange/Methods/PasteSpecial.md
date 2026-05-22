@@ -25,12 +25,12 @@ expression.PasteSpecial(sPasteType, sPasteSpecialOperation, bSkipBlanks, bTransp
 
 ## 示例
 
-此示例使用指定的选项从剪贴板粘贴数据（如果可能）。
+使用受控选项将剪贴板数据粘贴到电子表格中的单元格。
 
 ```javascript editor-xlsx
-// How to paste the copied or cut data from the clipboard using the special paste options.
+// How do I paste only specific parts of copied data, such as values or formats, in a spreadsheet?
 
-// Create a range, copy its value and paste it into another one with the specified properties.
+// Reuse copied cell content in a new location while choosing exactly what gets transferred in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

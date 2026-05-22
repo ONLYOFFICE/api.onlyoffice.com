@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the subject of the current workbook.
+Read the subject field from the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out what subject is recorded for a workbook in a spreadsheet?
+
+// Fetch the subject text stored in the metadata of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Subject: " + subject);
-
 ```

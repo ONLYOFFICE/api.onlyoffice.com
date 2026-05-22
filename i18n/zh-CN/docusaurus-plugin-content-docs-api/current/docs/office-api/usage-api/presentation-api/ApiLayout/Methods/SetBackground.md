@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前幻灯片版式的背景。
+在演示文稿中为布局的背景应用填充颜色。
 
 ```javascript editor-pptx
-// How to set a background of a layout.
+// How do I change the background appearance of a layout in a presentation?
 
-// Create a gradient fill and apply it as a background.
+// Create a gradient fill and assign it as the layout background in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,5 +39,4 @@ const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
-
 ```

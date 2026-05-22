@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the version of the current presentation.
+Set and retrieve the version of a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I get the version of a presentation in a presentation?
+
+// Retrieve and display the version as text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetVersion("v9.0");
@@ -38,5 +42,4 @@ paragraph.AddText("Version: " + version);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

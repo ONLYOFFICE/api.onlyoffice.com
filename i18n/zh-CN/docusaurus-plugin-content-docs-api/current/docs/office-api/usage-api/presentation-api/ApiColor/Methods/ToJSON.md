@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何将形状填充颜色转换为 JSON。
+在演示文稿中将形状填充颜色导出为 JSON 表示。
 
 ```javascript editor-pptx
+// How do I convert a color to a JSON format in a presentation?
+
+// Serialize a fill color to JSON and display its structure in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText('Color JSON:\n' + color.ToJSON());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

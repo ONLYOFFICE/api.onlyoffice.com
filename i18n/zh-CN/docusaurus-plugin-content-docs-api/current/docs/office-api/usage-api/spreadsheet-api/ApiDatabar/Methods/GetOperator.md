@@ -2,30 +2,16 @@
 
 返回格式条件运算符。
 
-## 语法
-
-```javascript
-expression.GetOperator();
-```
-
-`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlFormatConditionOperator](../../Enumeration/XlFormatConditionOperator.md)
+继承自 [ApiFormatCondition.GetOperator](../../ApiFormatCondition/Methods/GetOperator.md)。
 
 ## 示例
 
-此示例获取条件格式规则的运算符。
+读取电子表格中条件格式规则的比较类型。
 
 ```javascript editor-xlsx
-// How to retrieve the operator from conditional formatting rules.
+// How do I find out which comparison a conditional formatting rule uses to evaluate cell values in a spreadsheet?
 
-// Get conditional formatting rule operator.
+// Verify the logical condition of a formatting rule to ensure it highlights the right cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let operator = condition1.GetOperator();
 
 worksheet.GetRange("C1").SetValue("Rule operator:");
 worksheet.GetRange("C2").SetValue(operator);
-
 ```

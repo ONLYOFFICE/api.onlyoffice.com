@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取数据透视项的值。
+读取电子表格中数据透视表字段中每个项目的底层数据值。
 
 ```javascript editor-xlsx
-// How to get a pivot item value.
+// How do I extract the value stored in a pivot field item in a spreadsheet?
 
-// Create a pivot table, add data to it then get a value of a specified pivot item.
+// Inspect every item's value to verify or display what the pivot field holds in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

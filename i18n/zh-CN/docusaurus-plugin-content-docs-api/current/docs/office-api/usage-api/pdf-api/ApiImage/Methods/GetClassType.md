@@ -20,10 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-如何获取 ApiImage 的类类型。
+识别 PDF 中图像是哪种对象类型。
 
 ```javascript editor-pdf
-// Retrieve class type of ApiImage object and insert it to the page.
+// How do I find out what kind of image object I'm working with in a PDF?
+
+// Retrieve the classification of an image element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

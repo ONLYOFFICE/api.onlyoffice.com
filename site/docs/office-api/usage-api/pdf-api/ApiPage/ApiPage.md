@@ -2,7 +2,6 @@
 
 Represents the ApiPage class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -16,6 +15,8 @@ Represents the ApiPage class.
 | [GetRotation](./Methods/GetRotation.md) | number | Gets page rotation angle |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | Gets selected text on page |
 | [GetSelectionQuads](./Methods/GetSelectionQuads.md) | [Quad](../Enumeration/Quad.md)[] | Gets page selection quads |
+| [GetText](./Methods/GetText.md) | string | Gets all text content on the page. |
+| [GetTextWithQuads](./Methods/GetTextWithQuads.md) | [TextWithQuads](../Enumeration/TextWithQuads.md)[] | Gets all text content on the page with quads per line. |
 | [RecognizeContent](./Methods/RecognizeContent.md) | [Drawing](../Enumeration/Drawing.md)[] | Recognizes content on the page and returns an array of recognized objects. |
 | [Search](./Methods/Search.md) | Quads[] | Search words and returns their quads. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets page rotation angle |

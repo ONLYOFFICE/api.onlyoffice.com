@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何获取超几何分布。
+计算电子表格中超几何分布的概率。
 
 ```javascript editor-xlsx
-// How to get a result from a hypergeometric distribution.
+// How do I find the probability using a hypergeometric distribution in a spreadsheet?
 
-// Use a function to get the result of hypergeometric distribution.
+// Return the hypergeometric distribution value for a statistical analysis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

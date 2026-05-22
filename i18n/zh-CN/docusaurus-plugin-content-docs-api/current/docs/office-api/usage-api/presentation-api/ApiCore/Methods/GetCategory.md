@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取演示文稿的类别。
+从演示文稿的元数据读取类别。
 
 ```javascript editor-pptx
+// How do I check what category a presentation is labeled as in a presentation?
+
+// Retrieve the category value stored in the presentation's core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
@@ -40,5 +44,4 @@ paragraph.AddText("Category: " + category);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

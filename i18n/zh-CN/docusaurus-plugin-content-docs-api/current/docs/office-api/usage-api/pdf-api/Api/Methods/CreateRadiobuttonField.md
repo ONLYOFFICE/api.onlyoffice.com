@@ -22,9 +22,13 @@ expression.CreateRadiobuttonField(aRect);
 
 ## 示例
 
-如何创建单选按钮字段并添加到文档。
+向 PDF 表单添加单选按钮字段。
 
 ```javascript editor-pdf
+// How do I create a group of selectable radio buttons in a PDF?
+
+// Create a radio button field and configure options in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

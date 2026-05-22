@@ -20,12 +20,12 @@ expression.GetMaster();
 
 ## 示例
 
-此示例演示如何获取当前版式的父幻灯片母版。
+从演示文稿中的布局访问幻灯片母版。
 
 ```javascript editor-pptx
-// How to get a master of a layout.
+// How do I find the parent master of a layout in a presentation?
 
-// Get layout slide master.
+// Retrieve the master and display its class type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + classType);
 slide.AddObject(shape);
-
 ```

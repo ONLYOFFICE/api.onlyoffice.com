@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to move a layout.
+Reorder a layout by moving it to a new position in a presentation.
 
 ```javascript editor-pptx
-// How to move layout using a position index.
+// How do I change the order of layouts in a presentation?
 
-// Move a layout of a slide.
+// Shift a layout to a specific position within the master's layout collection in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The third layout was moved to the seventh position within the same collection.");
 presentation.AddSlide(slide3);
-
 ```

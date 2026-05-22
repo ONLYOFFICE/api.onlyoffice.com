@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-此示例创建文本块的副本。
+复制文本运行并将原始文本和副本都添加到电子表格中的段落。
 
 ```javascript editor-xlsx
-// How to create a text run object and its copy.
+// How do I reuse the same styled text run more than once in a spreadsheet?
 
-// Create an ApiRun and its copy and add it into paragraph.
+// Clone an existing run so its formatting and content appear twice without rewriting it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

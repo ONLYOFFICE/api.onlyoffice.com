@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example show how to set the outline to the data point.
+Add an outline to data points in a chart in a presentation.
 
 ```javascript editor-pptx
-// How to outline data points.
+// How do I add a border to data points in a chart in a presentation?
 
-// Create a chart then apply outline to its data points.
+// Create a chart and apply a stroke outline to individual data points in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetDataPointOutLine(stroke, 0, 0, false);
 slide.AddObject(chart);
-
 ```

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiTimeLine 对象的类类型。
+确定演示文稿中时间线的数据类型。
 
 ```javascript editor-pptx
+// How do I find out what type of object a timeline is in a presentation?
+
+// Get the class name identifier for a timeline in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const timeLine = slide.GetTimeLine();
@@ -39,5 +43,4 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(shape);
-
 ```

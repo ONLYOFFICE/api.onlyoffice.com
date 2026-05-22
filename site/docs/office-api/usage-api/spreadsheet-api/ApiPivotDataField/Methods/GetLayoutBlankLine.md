@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether to insert blank rows after each item.
 
-## Syntax
-
-```javascript
-expression.GetLayoutBlankLine();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/GetLayoutBlankLine.md).
 
 ## Example
 
-This example shows how to get a layout blank line of a pivot field.
+Check whether a blank row is inserted after each group in a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a blank line layout of a pivot field.
+// How do I find out if a pivot field is set to add a blank line between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout blank line of a specified pivot field.
+// Confirm the blank-line spacing setting for a pivot field's row layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

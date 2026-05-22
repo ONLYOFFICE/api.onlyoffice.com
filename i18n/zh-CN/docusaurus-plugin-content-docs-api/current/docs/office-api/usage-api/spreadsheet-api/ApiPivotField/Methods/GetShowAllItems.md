@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取透视字段的所有项。
+检查电子表格中的透视字段是否设置为显示所有项目，包括没有数据的项目。
 
 ```javascript editor-xlsx
-// How to get a pivot field's all items.
+// How do I find out if a pivot field shows items that have no matching data in a spreadsheet?
 
-// Create a pivot table, add data to it then get all items of a specified pivot field.
+// Confirm the show-all-items flag for a pivot field to see if empty categories are still listed in the table.
 
 let worksheet = Api.GetActiveSheet();
 

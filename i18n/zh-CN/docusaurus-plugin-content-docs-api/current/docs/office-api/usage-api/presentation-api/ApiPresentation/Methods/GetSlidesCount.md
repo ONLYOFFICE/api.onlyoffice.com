@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何获取幻灯片的数量。
+检索演示文稿中的幻灯片总数。
 
 ```javascript editor-pptx
-// How to count the slides of the presentation.
+// How do I count all the slides in a presentation?
 
-// Get a number of the presentation slides.
+// Show the slide count displayed in a shape on the current slide.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Number of slides = " + slidesCount);
 slide1.AddObject(shape);
-
 ```

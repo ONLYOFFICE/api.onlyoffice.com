@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何获取范围中的单元格数量。
+计算电子表格中范围内的单元格总数。
 
 ```javascript editor-xlsx
-// How to find out how many cells a range has.
+// How do I find out how many cells are in a range in a spreadsheet?
 
-// Get a range, get its cells count and show it in the worksheet.
+// Write the cell count of a range into a separate cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates how to use ApiCustomProperties to configure custom properties in a presentation.
+Manage custom properties for presentation metadata.
 
 ```javascript editor-pptx
+// Create and retrieve custom properties with various data types.
+
+// Display custom property values in a shape.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -50,5 +54,4 @@ paragraph.AddText("Custom Date Property: " + dateValue.toDateString() + "\n");
 paragraph.AddText("Custom Boolean Property: " + boolValue);
 
 slide.AddObject(shape);
-
 ```

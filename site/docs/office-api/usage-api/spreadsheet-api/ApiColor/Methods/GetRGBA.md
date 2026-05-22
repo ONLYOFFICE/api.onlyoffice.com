@@ -20,9 +20,13 @@ Object
 
 ## Example
 
-This example shows how to get the RGBA components of a shape fill color.
+Read the red, green, blue, and alpha values of a fill color in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I retrieve all four color channel values including transparency for a shape in a spreadsheet?
+
+// Capture the full color definition with opacity and display each channel separately in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGBA(110, 160, 180, 127);
 
@@ -32,5 +36,4 @@ worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 
 
 const rgba = color.GetRGBA();
 worksheet.GetRange("A12").SetValue("RGBA: " + rgba.r + ", " + rgba.g + ", " + rgba.b + ", " + rgba.a);
-
 ```

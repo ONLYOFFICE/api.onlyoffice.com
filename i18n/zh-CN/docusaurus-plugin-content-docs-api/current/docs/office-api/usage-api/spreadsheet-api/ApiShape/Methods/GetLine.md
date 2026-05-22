@@ -20,10 +20,13 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。
+读取形状的边框属性并在电子表格中列出其宽度、颜色和虚线样式。
 
 ```javascript editor-xlsx
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// How do I inspect the border line applied to a shape in a spreadsheet?
+
+// Pull the outline details from a shape and write each property into a separate cell in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
 let stroke = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(200, 100, 0)));
@@ -41,5 +44,4 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     worksheet.GetRange("A" + row++).SetValue("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```

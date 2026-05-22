@@ -47,6 +47,7 @@ New-Guid
 :::
 
 **关键字段说明：**
+
 - `name` — 插件菜单中显示的名称
 - `guid` — 唯一标识符（每个插件必须不同）
 - `url` — 入口点 HTML 文件
@@ -179,16 +180,19 @@ function insertFormattedText() {
 ## 下一步
 
 **深入学习：**
+
 - [插件结构与配置](../../structure/configuration/configuration.md)
 - [完整 API 参考](../../interacting-with-editors/overview/overview.md)
 - [UI 自定义选项](../../customization/toolbar.md)
 
 **浏览示例：**
-- [YouTube 插件](../../samples/plugin-samples/youtube.md) — 嵌入视频
-- [Translator 插件](../../samples/plugin-samples/translator.md) — 多语言支持
-- [更多示例](../../samples/plugin-samples/plugin-samples.md)
+
+- [YouTube 插件](../../samples/plugins/youtube.md) — 嵌入视频
+- [Translator 插件](../../samples/plugins/translator.md) — 多语言支持
+- [更多示例](/samples/?doctype=docs&text=plugin)
 
 **需要帮助？**
+
 - [开发者论坛](https://forum.onlyoffice.com/) — 社区支持
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — 报告错误
 - [常见问题](../../more-information/faq.md) — 常见问题解答

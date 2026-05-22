@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set and get the subject of the current presentation.
+Define the subject line for a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I add a subject to my presentation metadata?
+
+// Store and access the subject text in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetSubject("ApiCore Method Showcase");
@@ -40,5 +44,4 @@ paragraph.AddText("Subject: " + subject);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

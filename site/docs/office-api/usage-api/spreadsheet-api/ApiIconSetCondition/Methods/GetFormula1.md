@@ -2,30 +2,16 @@
 
 Returns the first formula used by the current conditional formatting rule.
 
-## Syntax
-
-```javascript
-expression.GetFormula1();
-```
-
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormatCondition.GetFormula1](../../ApiFormatCondition/Methods/GetFormula1.md).
 
 ## Example
 
-This example gets the first formula of a conditional formatting rule.
+Read the primary threshold value of a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the first formula from conditional formatting rules.
+// How do I find the first comparison value that a conditional formatting rule uses in a spreadsheet?
 
-// Get conditional formatting rule first formula.
+// Verify the lower or sole boundary of a formatting condition to confirm it is correctly defined in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let formula1 = condition1.GetFormula1();
 
 worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
-
 ```

@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example shows how to get the loop-until-stopped setting of the presentation.
+Check the loop-until-stopped playback setting.
 
 ```javascript editor-pptx
+// Enable continuous presentation playback looping.
+
+// Display the loop status on the slide.
+
 const presentation = Api.GetPresentation();
 presentation.SetLoopUntilStopped(true);
 
@@ -38,5 +42,4 @@ const paragraph = content.GetElement(0);
 const isLooping = presentation.GetLoopUntilStopped();
 paragraph.AddText("Loop until stopped: " + isLooping);
 slide.AddObject(shape);
-
 ```

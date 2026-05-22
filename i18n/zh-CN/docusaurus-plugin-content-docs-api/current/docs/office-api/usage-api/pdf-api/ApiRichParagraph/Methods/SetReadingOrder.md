@@ -26,9 +26,13 @@ expression.SetReadingOrder(readingOrder);
 
 ## 示例
 
-此示例为富文本段落设置从右到左方向。
+指定 PDF 中段落的文本阅读方向。
 
 ```javascript editor-pdf
+// How do I set the reading direction for a paragraph in a PDF?
+
+// Configure how text flows through a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

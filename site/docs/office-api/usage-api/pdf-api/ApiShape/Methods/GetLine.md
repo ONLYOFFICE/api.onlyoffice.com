@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the outline properties from a shape and displays detailed information.
+Retrieve the border properties from a shape in a PDF.
 
 ```javascript editor-pdf
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// How do I read the outline details of a shape in a PDF?
+
+// View the border information including width and color in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -48,5 +51,4 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```

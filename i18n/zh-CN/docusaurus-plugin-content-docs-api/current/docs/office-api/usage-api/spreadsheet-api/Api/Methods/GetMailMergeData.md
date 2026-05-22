@@ -23,12 +23,12 @@ string[][]
 
 ## 示例
 
-此示例演示如何获取邮件合并数据。
+按索引位置提取电子表格中的一行邮件合并收件人数据。
 
 ```javascript editor-xlsx
-// Get mail merge data from the worksheet.
+// How do I pull contact details from a mail merge table at a specific row in a spreadsheet?
 
-// How to get mail merge information using index.
+// Access a particular record from the merge data set and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 20);

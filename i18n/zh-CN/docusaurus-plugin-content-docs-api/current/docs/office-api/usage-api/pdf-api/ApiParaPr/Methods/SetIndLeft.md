@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置段落左侧缩进。
+在 PDF 中从左边缘缩进段落。
 
 ```javascript editor-pdf
-// How to set a left side indentation using a paragraph properties.
+// How do I indent a paragraph from the left in a PDF?
 
-// Create a paragraph setting its left side indentation property.
+// Add left margin indentation to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,7 +39,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndLeft(2880);
@@ -48,5 +48,4 @@ paragraph.AddText("This indent is set by the paragraph style. No paragraph inlin
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 page.AddObject(shape);
-
 ```

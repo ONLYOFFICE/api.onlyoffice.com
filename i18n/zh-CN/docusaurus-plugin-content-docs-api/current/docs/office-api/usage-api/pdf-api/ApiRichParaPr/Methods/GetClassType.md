@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取富文本段落属性的类类型。
+识别 PDF 中段落属性对象的数据类型。
 
 ```javascript editor-pdf
+// How do I determine what type an object is in a PDF?
+
+// Find the classification of a paragraph formatting object in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

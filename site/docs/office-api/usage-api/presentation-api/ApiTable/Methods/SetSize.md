@@ -23,9 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set the size of a table.
+Set the width and height of a table in a presentation.
 
 ```javascript editor-pptx
+// Specify custom dimensions for the table object.
+
+// Create a table and set its width and height values.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,5 +45,4 @@ paragraph.AddText('Table size: 220 x 110 millimeters.');
 content.Push(paragraph);
 
 slide.AddObject(table);
-
 ```

@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将毫米转换为像素。
+在演示文稿中将毫米转换为像素。
 
 ```javascript editor-pptx
+// Use the Api object to convert measurement units.
+
+// Display the conversion result in a shape on the slide.
+
 const millimeters = 100;
 const pixels = Api.MillimetersToPixels(millimeters);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

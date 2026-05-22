@@ -22,7 +22,7 @@ Plugin group that is separated from other plugins in the **Plugins** tab. The fi
 
 **Example**:
 
-``` json
+```json
 {
   "name": "group name",
   "rank": 2
@@ -89,7 +89,7 @@ Translations for the name field. The object keys are the two letter language cod
 
 **Example**: `{ "fr": "french plugin name" }`
 
-#### localeTranslate
+## localeTranslate
 
 `Type: object`
 
@@ -97,7 +97,7 @@ The translations for the text field. The object keys are the two letter language
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -129,13 +129,13 @@ Specifies whether the plugin is included in the server or desktop builds branded
 
 ## variations
 
-`Type: array of object`
+`Type: object[]`
 
 Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
 
 **Example**:
 
-``` json
+```json
 [
   {
     "buttons": [
@@ -189,13 +189,13 @@ Plugin variations, or subplugins, that are created inside the origin plugin. Mor
 
 ### variations.buttons
 
-`Type: array of Button`
+`Type: Button[]`
 
 The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
 
 **Example**:
 
-``` json
+```json
 [
   {
     "text": "Cancel",
@@ -217,16 +217,16 @@ The list of skinnable plugin buttons used in the plugin interface. This paramete
 
 The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. `isVisual == true` and `isInsideMode == false`).
 
-| Name       | Type                                | Description                                                                                                                                                               |
-| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| text       | string                              | The label which is displayed on the button.                                                                                                                               |
-| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                   |
-| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                            |
+| Name       | Type                                | Description                                                                                                                                                              |
+| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| text       | string                              | The label which is displayed on the button.                                                                                                                              |
+| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                  |
+| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                           |
 | textLocale | [localeTranslate](#localetranslate) | Translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language. |
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -304,7 +304,7 @@ Translations for the description field. The object keys are the two letter langu
 
 ### variations.EditorsSupport
 
-`Type: array of editorType`
+`Type: editorType[]`
 
 The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**). The default value is **[]**.
 
@@ -314,14 +314,14 @@ The editors which the plugin is available for (**word**, **cell**, **slide**, or
 
 The editors which the plugin is available for:
 
-- `word` - text document editor,
+- `word` - document editor,
 - `cell` - spreadsheet editor,
 - `slide` - presentation editor,
 - `pdf` - pdf editor.
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -333,7 +333,7 @@ The editors which the plugin is available for:
 
 ### variations.events
 
-`Type: array of EventType`
+`Type: EventType[]`
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method instead, which does not require this parameter.
@@ -351,7 +351,7 @@ Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -371,7 +371,7 @@ URL to the plugin icon image file. This URL allows setting your own rules for th
 
 ### variations.icons2
 
-`Type: array of object`
+`Type: object[]`
 
 :::danger[Deprecated]
 Please use the [variations.icons](#variationsicons) parameter instead.
@@ -413,7 +413,7 @@ The data type selected in the editor and sent to the plugin:
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -525,7 +525,7 @@ Specifies where the plugin will be placed (on the right or left panel).
 
 ### variations.screens
 
-`Type: array of string`
+`Type: string[]`
 
 :::danger[Deprecated]
 Please use the [variations.store.screenshots](#variationsstorescreenshots) parameter instead.
@@ -537,7 +537,7 @@ Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for 
 
 ### variations.size
 
-`Type: array of number`
+`Type: number[]`
 
 Plugin window size measured in pixels. This parameter is only used when *type == "window"*.
 
@@ -551,7 +551,7 @@ Plugin display options in **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "background": {
     "light": "#F5F5F5",
@@ -574,7 +574,7 @@ Background colors used for plugin icons in **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "light": "#F5F5F5",
   "dark": "#444444"
@@ -603,7 +603,7 @@ The background color used for the dark theme plugin icon.
 
 ### variations.store.categories
 
-`Type: array of string`
+`Type: string[]`
 
 Plugin categories in **ONLYOFFICE Plugin Marketplace**:
 
@@ -627,7 +627,7 @@ Paths to the plugin icon image files used in the **ONLYOFFICE Plugin Marketplace
 
 **Example**:
 
-``` json
+```json
 {
   "light": "resources/store/icons",
   "dark": "resources/store/icons"
@@ -664,7 +664,7 @@ The path to the scalable plugin icons for the dark theme. Name the icon files of
 
 ### variations.store.screenshots
 
-`Type: array of string`
+`Type: string[]`
 
 Images that are used for the plugin description in the **ONLYOFFICE Plugin Marketplace**.
 
@@ -709,7 +709,7 @@ The plugin version.
 
 ## Example
 
-``` json
+```json
 {
   "baseUrl": "",
   "group": {

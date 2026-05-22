@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to set and get the creator of the current presentation using the ApiCore.
+Set and view the author name in a presentation.
 
 ```javascript editor-pptx
+// How do I find who created a presentation?
+
+// Read the creator information stored in a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreator("John Smith");
@@ -38,5 +42,4 @@ paragraph.AddText("Creator: " + creator);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例从带有选项列表的字段获取选择更改时提交属性。
+检查 PDF 中下拉字段在选择更改时是否自动提交。
 
 ```javascript editor-pdf
+// How do I determine if a field triggers submission on selection change in a PDF?
+
+// Verify the auto-commit setting for a dropdown list in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to outline data points.
+Apply an outline to data points in a PDF.
 
 ```javascript editor-pdf
-// Create a chart then apply outline to its data points.
+// How do I add a border around specific data points in a PDF?
+
+// Create a chart and apply a stroke effect to one data point in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetDataPointOutLine(stroke, 0, 0, false);
 page.AddObject(chart);
-
 ```

@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Retrieves arc parameters including radii and angles.
+Read the vertical radius of an arc command from a custom shape path in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How do I find out the height radius of an arc drawn on a shape in a spreadsheet?
+
+// Extract the arc's vertical radius value and write it to a cell for review in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

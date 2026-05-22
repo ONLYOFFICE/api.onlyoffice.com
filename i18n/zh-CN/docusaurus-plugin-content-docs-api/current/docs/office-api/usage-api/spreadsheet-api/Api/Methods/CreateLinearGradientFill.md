@@ -23,12 +23,12 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 
 ## 示例
 
-此示例创建线性渐变填充，使用选定的线性渐变作为对象背景应用于对象。
+在电子表格中用沿直线方向流动的平滑颜色过渡填充形状。
 
 ```javascript editor-xlsx
-// How to create a gradient background using gradient fill.
+// How do I apply a background that blends from one color to another along a straight angle in a spreadsheet?
 
-// Create a shape with a gradient background using gradient fill.
+// Give a shape a gradient background by blending colors across a linear path in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

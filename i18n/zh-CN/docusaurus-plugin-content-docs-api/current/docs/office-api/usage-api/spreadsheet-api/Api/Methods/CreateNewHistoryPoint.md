@@ -16,16 +16,16 @@ expression.CreateNewHistoryPoint();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例创建一个新的历史记录点。
+保存撤消检查点，以便可以在电子表格中回滚此点之前的更改。
 
 ```javascript editor-xlsx
-// Add history point for a range.
+// How do I mark the current state so I can undo back to it later in a spreadsheet?
 
-// How to make a history point.
+// Preserve a recoverable snapshot of the document at a specific moment in a spreadsheet.
 
 var worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("This is just a sample text.");

@@ -2,32 +2,16 @@
 
 Sets the cell range to which the current conditional formatting rule applies.
 
-## Syntax
-
-```javascript
-expression.ModifyAppliesToRange(Range);
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Range | Required | [ApiRange](../../ApiRange/ApiRange.md) |  | The range to which the current conditional formatting rule will be applied. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.ModifyAppliesToRange](../../ApiFormatCondition/Methods/ModifyAppliesToRange.md).
 
 ## Example
 
-This example modifies the range where a conditional formatting rule applies.
+Change the cells that a conditional formatting rule covers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the cell range for existing conditional formatting rules.
+// How do I reassign a formatting rule to a different group of cells in a spreadsheet?
 
-// Modify conditional formatting rule range.
+// Expand or narrow the area where an existing formatting rule takes effect in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -55,5 +39,4 @@ condition1.ModifyAppliesToRange(newRange);
 
 worksheet.GetRange("D1").SetValue("Modified range:");
 worksheet.GetRange("D2").SetValue(condition1.GetAppliesTo().GetAddress());
-
 ```

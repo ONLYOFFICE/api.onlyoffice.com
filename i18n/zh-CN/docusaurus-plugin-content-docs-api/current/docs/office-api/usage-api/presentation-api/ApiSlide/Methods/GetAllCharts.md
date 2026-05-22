@@ -20,12 +20,12 @@ expression.GetAllCharts();
 
 ## 示例
 
-此示例展示如何获取幻灯片中所有图表对象的数组。
+查找演示文稿中幻灯片上的所有图表。
 
 ```javascript editor-pptx
-// How to get all charts from the slide.
+// How do I access all the charts in a slide in a presentation?
 
-// Get all charts from the slide as an array.
+// Retrieve the chart objects and modify their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ slide.AddObject(chart);
 const allCharts = slide.GetAllCharts();
 const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 allCharts[0].SetMinorHorizontalGridlines(stroke);
-
 ```

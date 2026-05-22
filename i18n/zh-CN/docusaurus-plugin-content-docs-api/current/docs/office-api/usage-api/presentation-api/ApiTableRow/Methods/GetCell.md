@@ -22,12 +22,12 @@ expression.GetCell(nPos);
 
 ## 示例
 
-此示例演示如何按行中的位置获取单元格。
+使用列位置访问演示文稿中的特定表格单元格。
 
 ```javascript editor-pptx
-// How to return a cell using its row index.
+// How do I retrieve a cell from a row by its column index in a presentation?
 
-// Create a table, get its row and get a cell from this row.
+// Select a cell from a table row to read or modify its content in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,5 +42,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

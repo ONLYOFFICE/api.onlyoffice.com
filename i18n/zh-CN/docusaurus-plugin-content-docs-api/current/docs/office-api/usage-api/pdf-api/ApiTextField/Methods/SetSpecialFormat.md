@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例获取文本字段并为其设置特殊格式。
+在 PDF 中为文本字段应用预定义格式（如电话号码）。
 
 ```javascript editor-pdf
+// How do I automatically format phone numbers and social security numbers in a PDF?
+
+// Use built-in formats to style user input in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -32,5 +36,4 @@ page.AddObject(textField);
 
 textField.SetSpecialFormat("phone");
 textField.SetValue("1234567890");
-
 ```

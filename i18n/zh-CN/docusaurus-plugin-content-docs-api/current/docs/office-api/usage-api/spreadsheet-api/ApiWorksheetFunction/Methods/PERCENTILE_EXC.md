@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回区域中值的第 k 个百分位数，其中 k 在 0 到 1 的范围内（不含端点）。
+使用排除边界在电子表格中查找指定百分位的值。
 
 ```javascript editor-xlsx
-// How to get the k-th percentile of values in a range (exclusive).
+// How do I calculate the k-th percentile excluding the minimum and maximum values in a spreadsheet?
 
-// Use a function to get the k-th percentile of values.
+// Get the percentile value when excluding the smallest and largest numbers in a dataset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

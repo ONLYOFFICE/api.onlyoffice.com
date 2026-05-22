@@ -22,13 +22,16 @@ boolean
 
 ## 示例
 
-此示例创建方形注释并将矩形设置为初始大小的两倍。
+在 PDF 中通过更改边界调整注释大小。
 
 ```javascript editor-pdf
+// Expand or shrink an annotation's size in a PDF.
+
+// Adjust the rectangular area covered by an annotation in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 squareAnnot.SetRect([10, 10, 320, 64]);
-
 ```

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置字段控件的边框宽度。
+设置 PDF 中字段控件的边框粗细。
 
 ```javascript editor-pdf
+// How do I change the border width for widgets in a PDF?
+
+// Apply different border thicknesses to widget outlines in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

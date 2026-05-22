@@ -20,11 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何创建包含三个单选按钮的表单并为每个单选按钮指定选项名称。
+从文档中一组单选按钮中检索所选选项的标签。
 
 ```javascript editor-forms
-// The radio buttons are grouped together by setting the same radio group key for each radio button.
-// The radio group key is displayed at the end of the document.
+// How do I find out which radio button a user has chosen by reading its name in a document?
+
+// Identify the active selection in a grouped set of choices so it can be displayed or processed in a document.
 
 let doc = Api.GetDocument();
 

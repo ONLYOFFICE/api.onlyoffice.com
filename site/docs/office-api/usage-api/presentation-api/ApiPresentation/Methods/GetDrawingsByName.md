@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## Example
 
-This example shows how to get all drawings with the specified names from the current presentation.
+Retrieve shapes and drawings by their names.
 
 ```javascript editor-pptx
-// Get drawings by their names.
+// Find and select multiple drawings using name-based lookup.
 
-// How to retrieve drawings by their names and rotate them.
+// Apply transformations like rotation to retrieved drawings.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ const drawings = presentation.GetDrawingsByName(["MyShape1", "MyShape2"]);
 for (let i = 0; i < drawings.length; i++) {
 	drawings[i].SetRotation(45);
 }
-
 ```

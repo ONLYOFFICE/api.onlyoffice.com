@@ -25,10 +25,13 @@ boolean
 
 ## Example
 
-Creates adjustable geometry with guides and connection points for a pdf document.
+Define text boundaries within a shape's geometry in a PDF.
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How can I set where text appears inside a shape in a PDF?
+
+// Establish custom text placement boundaries in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

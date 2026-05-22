@@ -2,30 +2,16 @@
 
 Returns the paragraph first line indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndFirstLine();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md).
 
 ## Example
 
-This example shows how to get the paragraph first line indentation.
+Check the first line indentation of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to return the first line identation of a paragraph property.
+// How do I read the first line indentation value from a paragraph in a presentation?
 
-// Return the first line indentation of a text property from the slide.
+// Retrieve the indentation distance set for the first line of text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +39,4 @@ const indFirstLine = paraPr.GetIndFirstLine();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("First line indent: " + indFirstLine);
 docContent.Push(paragraph);
-
 ```

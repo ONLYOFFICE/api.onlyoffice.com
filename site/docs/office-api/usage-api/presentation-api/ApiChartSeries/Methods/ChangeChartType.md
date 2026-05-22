@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example changes the type of the first series of ApiChart class and inserts the new type into the presentation.
+Modify the chart series type from bar/line combo to area style.
 
 ```javascript editor-pptx
-// How to change a chart type.
+// Extract series from combo chart and convert to area type before display.
 
-// Change a chart type to the "area" type.
+// Change first series to area chart type and display type change in title.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,5 +58,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

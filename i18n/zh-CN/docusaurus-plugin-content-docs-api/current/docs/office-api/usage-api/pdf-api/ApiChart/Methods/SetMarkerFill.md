@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何为标记设置填充。
+更改 PDF 中图表数据点符号的颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker color.
+// How do I change the color of markers in a chart in a PDF?
+
+// Apply a solid color to the symbols that represent data in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +52,4 @@ stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(25
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

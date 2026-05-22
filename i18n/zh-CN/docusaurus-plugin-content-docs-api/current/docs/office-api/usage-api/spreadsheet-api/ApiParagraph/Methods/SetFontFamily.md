@@ -22,9 +22,13 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-此示例展示如何为形状内段落中的所有文本设置字体系列。
+更改电子表格中形状内段落所有文本的字体。
 
 ```javascript editor-xlsx
+// How do I choose a specific font for an entire paragraph in a spreadsheet?
+
+// Give a paragraph a consistent look by assigning it a named font family in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 150, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetFontFamily('Georgia');
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text uses the default font family.');
 content.Push(paragraph2);
-
 ```

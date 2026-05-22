@@ -20,10 +20,13 @@ expression.GetPaths();
 
 ## 示例
 
-分析云形状路径属性并在单元格中显示它们。
+收集定义电子表格中形状轮廓的所有绘图路径。
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How do I retrieve every outline segment belonging to a shape at once in a spreadsheet?
+
+// Gather the full list of paths from a shape so each one can be inspected in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

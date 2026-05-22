@@ -17,7 +17,7 @@ expression.NORM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value for which the distribution will be returned. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The arithmetic mean of the distribution. |
 | arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The standard deviation of the distribution, a positive number. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability mass function. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. |
 
 ## Returns
 
@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the normal distribution for the specified mean and standard deviation.
+Calculate the normal distribution for a value given its mean and standard deviation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the normal distribution.
+// How do I compute the normal distribution in a spreadsheet?
 
-// Use a function to get the normal distribution knowing the mean and standard deviation.
+// Find the probability of a value in a normal distribution with specific mean and standard deviation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [36, 6, 7, false];

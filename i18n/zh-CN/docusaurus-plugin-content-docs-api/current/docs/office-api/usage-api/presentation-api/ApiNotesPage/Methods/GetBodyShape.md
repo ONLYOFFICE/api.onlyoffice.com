@@ -20,9 +20,13 @@ expression.GetBodyShape();
 
 ## 示例
 
-此示例展示如何从备注页获取正文形状。
+访问演示文稿中幻灯片备注页上的文本区域。
 
 ```javascript editor-pptx
+// How do I get the main content area from the slide notes in a presentation?
+
+// Retrieve the notes page text container and check if it exists in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const notesPage = slide.GetNotesPage();
@@ -48,5 +52,4 @@ paragraph.AddText(message);
 
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

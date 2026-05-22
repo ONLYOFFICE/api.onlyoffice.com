@@ -16,16 +16,16 @@ expression.Delete();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例删除 ApiComment 对象。
+从电子表格中完全移除单元格的批注。
 
 ```javascript editor-xlsx
-// How to remove a comment from a range.
+// How do I delete a comment that was added to a cell range in a spreadsheet?
 
-// Get a range add a comment to it and then remove it.
+// Clean up a cell by adding a comment and then erasing it to leave no annotation behind in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -21,10 +21,10 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | Returns an array of ApiComment objects. |
-| [AddCustomFunction](./Methods/AddCustomFunction.md) | None | Creates a new custom function. The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc. Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types. Parameters can be required or optional. A user can also set a default value. The passed function can be asynchronous (async function or function returning a Promise). Inside the passed function, you can access the current cell address where the calculation is performed using *this.address*. You can also access the addresses of function arguments using *this.args[0].address*, *this.args[1].address*, etc. This method is not used in ONLYOFFICE Document Builder. Use AddCustomFunctionLibrary instead. |
-| [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | None | Registers a new custom functions library (see the **SetCustomFunctions** plugin method). The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc. Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types. Parameters can be required or optional. A user can also set a default value. |
+| [AddCustomFunction](./Methods/AddCustomFunction.md) | None | Creates a new custom function. |
+| [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | None | Registers a new custom functions library (see the **SetCustomFunctions** plugin method). |
 | [AddDefName](./Methods/AddDefName.md) | boolean | Adds a new name to a range of cells. |
-| [AddSheet](./Methods/AddSheet.md) | None | Creates a new worksheet. The new worksheet becomes the active sheet. |
+| [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Creates a new worksheet. The new worksheet becomes the active sheet. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | Clears all custom functions. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
@@ -34,7 +34,7 @@ Represents the Api class.
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | Creates a new custom geometry. |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | Creates a gradient stop used for different types of gradients. |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background. |
-| [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | None | Creates a new history point. |
+| [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | Creates a new history point. |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates no fill and removes the fill from the element. |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the numbering character or symbol specified with the numType parameter. |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph. |
@@ -57,10 +57,11 @@ Represents the Api class.
 | [GetAllPivotTables](./Methods/GetAllPivotTables.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md)[] | Returns all pivot tables. |
 | [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | Returns a comment from the current document by its ID. |
 | [GetComments](./Methods/GetComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | Returns all comments related to the whole workbook. |
-| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Returns the core properties interface for the workbook. This method is used to view or modify standard metadata such as title, author, and keywords. |
+| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | Returns the core properties interface for the workbook. |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | Returns the workbook custom properties. |
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | Returns the ApiName object by the range name. |
-| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: **Application** - the application the document has been created with. **CreatedRaw** - the date and time when the file was created. **Created** - the parsed date and time when the file was created. **LastModifiedRaw** - the date and time when the file was last modified. **LastModified** - the parsed date and time when the file was last modified. **LastModifiedBy** - the name of the user who has made the latest change to the document. **Authors** - the persons who has created the file. **Title** - this property allows you to simplify your documents classification. **Tags** - this property allows you to simplify your documents classification. **Subject** - this property allows you to simplify your documents classification. **Comment** - this property allows you to simplify your documents classification. |
+| [GetDefNames](./Methods/GetDefNames.md) | [ApiName](../ApiName/ApiName.md)[] | Returns an array of all ApiName objects defined in the workbook, across all scopes (workbook-level and sheet-level). |
+| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | Returns the document information: |
 | [GetFreezePanesType](./Methods/GetFreezePanesType.md) | [FreezePaneType](../Enumeration/FreezePaneType.md) | Returns the freeze panes type. |
 | [GetFullName](./Methods/GetFullName.md) | string | Returns the full name of the currently opened file. |
 | [GetLocale](./Methods/GetLocale.md) | number | Returns the current locale ID. |
@@ -79,7 +80,7 @@ Represents the Api class.
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | Inserts the specified pivot table into a new worksheet. |
 | [Intersect](./Methods/Intersect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns the ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned. |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | Converts lines to points (1 line = 12 points). |
-| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). The result is an integer value. |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | Converts millimeters to English Metric Units (EMUs). |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | Converts millimeters to pixels. |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | Converts millimeters to points. |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | Converts picas to points. |
@@ -99,9 +100,9 @@ Represents the Api class.
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | None | Refreshes all pivot tables. |
 | [RemoveCustomFunction](./Methods/RemoveCustomFunction.md) | boolean | Removes a custom function. |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
-| [Save](./Methods/Save.md) | None | Saves changes to the specified document. |
+| [Save](./Methods/Save.md) | boolean | Saves changes to the specified document. |
 | [SetFreezePanesType](./Methods/SetFreezePanesType.md) | None | Sets a type to the freeze panes. |
-| [SetLocale](./Methods/SetLocale.md) | None | Sets a locale to the document. |
+| [SetLocale](./Methods/SetLocale.md) | boolean | Sets a locale to the document. |
 | [SetReferenceStyle](./Methods/SetReferenceStyle.md) | None | Sets the cell reference style. |
 | [SetThemeColors](./Methods/SetThemeColors.md) | boolean | Sets the theme colors to the current spreadsheet. |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a theme color. |

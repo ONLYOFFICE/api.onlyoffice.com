@@ -2,7 +2,6 @@
 
 Represents the ApiNotesPage class.
 
-
 ## Methods
 
 | Method | Returns | Description |

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例启用鼠标单击时前进到下一张幻灯片。
+启用鼠标单击时前进到下一张幻灯片。
 
 ```javascript editor-pptx
+// Configure the advance on click property of a slide show transition object.
+
+// Display a message indicating the transition will advance on time rather than click.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -47,5 +51,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Click set to false. Slide will advance automatically after 5 seconds.');
 slide.AddObject(shape);
-
 ```

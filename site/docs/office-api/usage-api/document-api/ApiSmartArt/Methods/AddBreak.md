@@ -1,0 +1,24 @@
+# AddBreak
+
+Inserts a break at the specified location in the main document.
+
+Inherited from [ApiDrawing.AddBreak](../../ApiDrawing/Methods/AddBreak.md).
+
+## Example
+
+Insert a page or line break before a drawing in a document.
+
+```javascript editor-docx
+// How do I place a break at a specific position relative to a drawing in a document?
+
+// Force content to start on a new page by adding a break before an existing shape.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.InsertParagraph("Added a line break after this paragraph.", "before", false);
+drawing.AddBreak(1, "before");
+```

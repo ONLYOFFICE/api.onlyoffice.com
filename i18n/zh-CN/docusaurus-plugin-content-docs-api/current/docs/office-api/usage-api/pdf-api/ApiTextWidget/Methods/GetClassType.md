@@ -16,13 +16,17 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"textWidget"
 
 ## 示例
 
-此示例获取文本控件并显示其类型。
+识别 PDF 中文本输入字段的类型。
 
 ```javascript editor-pdf
+// How do I determine what kind of form field this is in a PDF?
+
+// Read the classification of a text widget element in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

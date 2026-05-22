@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example returns the hyperlink address.
+Get the hyperlink address in a presentation.
 
 ```javascript editor-pptx
+// How do I retrieve the linked text or URL from a hyperlink in a presentation?
+
+// Obtain the linked text from a hyperlink in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -51,5 +55,4 @@ infoParagraph.AddText('Shape hyperlink linked text: ' + hyperlink.GetLinkedText(
 
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

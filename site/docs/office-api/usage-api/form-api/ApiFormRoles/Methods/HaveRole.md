@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to add new roles.
+Check if a role exists in a document.
 
 ```javascript editor-forms
+// How do I verify whether a specific role is available in a document?
+
+// Test for the presence of a role and display the result in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -38,5 +42,4 @@ let paragraph = doc.GetElement(0);
     }
     paragraph.AddLineBreak();
 });
-
 ```

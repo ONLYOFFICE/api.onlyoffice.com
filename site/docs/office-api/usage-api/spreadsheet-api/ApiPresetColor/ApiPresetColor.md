@@ -1,7 +1,6 @@
 # ApiPresetColor
 
-Represents the ApiPresetColor class.
-
+ApiPresetColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
 
 ## Methods
 

@@ -17,7 +17,7 @@ expression.F_DIST(arg1, arg2, arg3, arg4);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value at which to evaluate the function, a nonnegative number. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The numerator degrees of freedom, a number between 1 and 10^10, excluding 10^10. |
 | arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The denominator degrees of freedom, a number between 1 and 10^10, excluding 10^10. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value that determines the function form. If this parameter is **true**, the function will return the cumulative distribution function, if it is **false**, it will return the probability density function. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value that determines the function form. If this parameter is **true**, |
 
 ## Returns
 
@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the (left-tailed) F probability distribution (degree of diversity) for two data sets.
+Return the (left-tailed) F probability distribution for two data sets.
 
 ```javascript editor-xlsx
-// How to get the F probability distribution (degree of diversity).
+// Calculate the left-tailed probability of F-distributed values.
 
-// Use function to calculate a left-tailed F probability distribution.
+// Determine F distribution using F_DIST with specified degrees of freedom.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

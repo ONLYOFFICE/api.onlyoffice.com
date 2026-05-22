@@ -20,10 +20,12 @@ expression.GetPosY();
 
 ## 示例
 
-如何获取并显示绘图的 Y 坐标位置。
+查找 PDF 中形状的上下位置。
 
 ```javascript editor-pdf
-// Get a shape object from a page and get its Y position.
+// How do I check the Y coordinate of an object in a PDF?
+
+// Read the vertical distance of a shape from the top edge in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

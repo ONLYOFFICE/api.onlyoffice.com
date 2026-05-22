@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties on a slide.
+Retrieve the width value of a custom shape's drawing area in a presentation.
 
 ```javascript editor-pptx
-// Displays comprehensive path information in a text shape.
+// What is the horizontal size of a shape path in a presentation?
+
+// Check the width dimensions of a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

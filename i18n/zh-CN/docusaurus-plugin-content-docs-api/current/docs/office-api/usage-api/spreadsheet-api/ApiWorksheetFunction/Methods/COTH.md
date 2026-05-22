@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何获取数字的双曲余切。
+计算电子表格中数字的双曲余切。
 
 ```javascript editor-xlsx
-// How to find a hyperbolic cotangent.
+// What is the hyperbolic cotangent of an angle in a spreadsheet?
 
-// Use function to get the hyperbolic cotangent of an angle.
+// Find the inverse hyperbolic tangent relationship in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

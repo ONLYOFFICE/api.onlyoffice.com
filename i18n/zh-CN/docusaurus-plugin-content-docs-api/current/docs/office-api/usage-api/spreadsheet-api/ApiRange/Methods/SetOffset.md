@@ -19,16 +19,16 @@ expression.SetOffset(nRow, nCol);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置单元格偏移量。
+在电子表格中将单元格引用按给定的行数和列数偏移。
 
 ```javascript editor-xlsx
-// How to set an offset of cells.
+// How do I move a range reference to a different position in a spreadsheet?
 
-// Get a range and specify its cells offset.
+// Target a new location relative to the original range without selecting it manually in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B3").SetValue("Old Range");

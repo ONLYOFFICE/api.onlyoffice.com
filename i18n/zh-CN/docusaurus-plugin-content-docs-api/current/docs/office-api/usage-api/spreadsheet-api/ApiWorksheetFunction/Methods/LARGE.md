@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数据集中第 k 个最大值。例如，第五大的数字。
+从电子表格中的数字列表获取第 n 大的值。
 
 ```javascript editor-xlsx
-// How to find the k-th largest value in a data set.
+// How do I find the fourth largest number or any ranked value in a spreadsheet?
 
-// Use a function to find out the largest value in a data set specifying its order number.
+// Retrieve a specific ranked number by position in a sorted list in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

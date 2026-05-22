@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例更改 ApiChart 类第一个系列的类型并将新类型插入演示文稿。
+将图表系列类型从条形/折线组合修改为面积样式。
 
 ```javascript editor-pptx
-// How to change a chart type.
+// Extract series from combo chart and convert to area type before display.
 
-// Change a chart type to the "area" type.
+// Change first series to area chart type and display type change in title.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,5 +58,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

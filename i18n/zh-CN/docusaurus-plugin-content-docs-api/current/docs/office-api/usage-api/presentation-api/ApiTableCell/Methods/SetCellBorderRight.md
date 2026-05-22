@@ -23,12 +23,12 @@ expression.SetCellBorderRight(fSize, oApiFill);
 
 ## 示例
 
-此示例设置应在表格单元格右侧显示的边框。
+在演示文稿中为表格单元格右侧添加彩色边框。
 
 ```javascript editor-pptx
-// How to set cell right border with its fill color.
+// How do I add a colored border to the right side of a table cell in a presentation?
 
-// Create table and set its cell right border.
+// Create a table and apply a right border with a solid color fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ cell.SetCellBorderRight(2, fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

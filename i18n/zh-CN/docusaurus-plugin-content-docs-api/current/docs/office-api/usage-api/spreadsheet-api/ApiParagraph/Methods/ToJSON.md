@@ -23,9 +23,13 @@ JSON
 
 ## 示例
 
-此示例展示如何将段落序列化为 JSON 格式。
+在电子表格中将形状中的段落转换为 JSON 字符串。
 
 ```javascript editor-xlsx
+// How do I save a paragraph's structure as a JSON string in a spreadsheet?
+
+// Export paragraph data to a portable text format for storage or transfer in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(120, 110, 150));
@@ -43,5 +47,4 @@ paragraph.AddText('This paragraph will be converted to JSON.');
 
 const json = paragraph.ToJSON(true, true);
 worksheet.GetRange('A1').SetValue('JSON length: ' + json.length);
-
 ```

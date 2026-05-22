@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all fields on the page.
+Retrieve all interactive fields from a page in a PDF.
 
 ```javascript editor-pdf
+// How do I access all the form fields in a PDF?
+
+// List every interactive element on the current page in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

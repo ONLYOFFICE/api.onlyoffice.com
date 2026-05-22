@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the category of the workbook using the ApiCore.
+Assign a category label to the workbook through its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set a category for a workbook in a spreadsheet?
+
+// Store a descriptive category in the metadata fields of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Category: " + category);
-
 ```

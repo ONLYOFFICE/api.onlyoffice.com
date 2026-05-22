@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to delete the checkbox form.
+Remove a form field from a document.
 
 ```javascript editor-forms
+// How do I delete a form field in a document?
+
+// Clean up a document by removing one of several inserted checkbox forms.
+
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({
 	'key': 'Marital status',

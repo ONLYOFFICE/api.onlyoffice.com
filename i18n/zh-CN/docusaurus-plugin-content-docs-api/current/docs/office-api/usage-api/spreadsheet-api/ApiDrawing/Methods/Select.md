@@ -22,14 +22,12 @@ expression.Select(isReplace);
 
 ## 示例
 
-此示例选择当前图形对象。
+在电子表格的工作表上选择绘图对象。
 
 ```javascript editor-xlsx
-// How to select drawing objects on the worksheet.
+// How do I programmatically choose which drawings are selected in a spreadsheet?
 
-// Create three shapes, select the first one,
-// then select the second shape with isReplace=true (replacing the selection),
-// and finally select the third shape without isReplace parameter (adding to selection).
+// Build a multi-shape selection by adding shapes one at a time or replacing the current selection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -44,5 +42,4 @@ let drawing3 = worksheet.AddShape("rect", 60 * 36000, 35 * 36000, fill3, stroke3
 drawing1.Select(true);
 drawing2.Select(true);
 drawing3.Select();
-
 ```

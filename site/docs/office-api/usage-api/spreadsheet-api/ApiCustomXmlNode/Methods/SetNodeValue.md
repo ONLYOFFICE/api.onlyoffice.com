@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to set the value of a custom XML node.
+Write a new value into an XML node to update its stored data in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I change the value held by an XML node in a spreadsheet?
+
+// Replace an existing node's content with fresh data in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -40,5 +44,4 @@ const bookNode = xml.GetNodes('/bookstore/book')[0];
 bookNode.SetNodeValue('<book>Updated content</book>');
 worksheet.GetRange('A1').SetValue('XML after update:');
 worksheet.GetRange('B1').SetValue(xml.GetXml());
-
 ```

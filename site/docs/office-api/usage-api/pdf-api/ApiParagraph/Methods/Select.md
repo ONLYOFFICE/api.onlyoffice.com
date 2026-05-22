@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example selects the current paragraph.
+Highlight and select a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I mark a paragraph as selected in a PDF?
+
+// Activate selection on a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -36,5 +40,4 @@ paragraph.AddText('This paragraph will be selected.');
 page.AddObject(shape);
 
 paragraph.Select();
-
 ```

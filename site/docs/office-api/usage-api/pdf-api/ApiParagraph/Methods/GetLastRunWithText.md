@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last Run with text in the paragraph.
+Access the final text element in a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I find the last text element within a paragraph in a PDF?
+
+// Locate and modify the final text segment of a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,5 +48,4 @@ const lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(' [Last run]');
 lastRun.SetBold(true);
 page.AddObject(shape);
-
 ```

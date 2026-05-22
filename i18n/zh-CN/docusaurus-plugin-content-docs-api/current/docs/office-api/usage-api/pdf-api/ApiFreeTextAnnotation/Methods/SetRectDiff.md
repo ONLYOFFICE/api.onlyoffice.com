@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为自由文本注释设置矩形差异。
+调整 PDF 中文本注释周围的边框间距。
 
 ```javascript editor-pdf
+// How do I control the distance between the text and the annotation border in a PDF?
+
+// Modify the boundary offset and confirm the change in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

@@ -20,18 +20,17 @@ expression.SetRowHeight(nRow, nHeight);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置以磅为单位的指定行高度。
+修改电子表格中的行高以提高可见性。
 
 ```javascript editor-xlsx
-// How to resize the height of the row.
+// How do I resize a row to be taller or shorter in a spreadsheet?
 
-// Set a row height.
+// Set the vertical dimension of a row to match your content needs in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetRowHeight(0, 30);
-
 ```

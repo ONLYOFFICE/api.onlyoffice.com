@@ -18,19 +18,18 @@ expression.SetPrintGridlines(bPrint);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例指定是否必须打印工作表网格线。
+在电子表格中启用或禁用打印页面上的网格线。
 
 ```javascript editor-xlsx
-// How to set whether sheet gridlines should be printed or not.
+// How do I include or exclude the grid pattern when printing my spreadsheet?
 
-// Set a boolean value representing whether to print gridlines or not.
+// Specify whether printed output shows the cell boundary lines in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintGridlines(true);
 worksheet.GetRange("A1").SetValue("Gridlines of cells will be printed on this page: " + worksheet.GetPrintGridlines());
-
 ```

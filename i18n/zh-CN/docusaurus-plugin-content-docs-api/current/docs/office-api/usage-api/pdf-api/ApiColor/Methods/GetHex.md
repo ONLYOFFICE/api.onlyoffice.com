@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取颜色的 RGB 分量。
+获取 PDF 中的十六进制颜色值。
 
 ```javascript editor-pdf
+// How do I convert a color to hex format in a PDF?
+
+// Retrieve the hex code and display it as text in the PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText('Hex of rgbColor: ' + rgbColorHex);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

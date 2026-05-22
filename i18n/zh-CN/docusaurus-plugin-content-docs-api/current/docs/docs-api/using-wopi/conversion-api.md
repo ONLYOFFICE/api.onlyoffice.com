@@ -12,7 +12,7 @@ sidebar_position: -3
 | ---------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | format           | string  | 必填 | 输出文件格式。                                                                                                                |
 | PDFVer           | string  | 非必填的 | 用于输出文件（PDF/A-1b、PDF/A-2b 等）的相应 PDF 类型的 pdf 版本。                               |
-| FullSheetPreview | bollean | 非必填的 | 指定完整工作表预览是否可用。                                                                          |
+| FullSheetPreview | boolean | 非必填的 | 指定完整工作表预览是否可用。                                                                          |
 | file             | object  | 必填 | 要在负载中转换的文件。                                                                                                       |
 | lang             | string  | 非必填的 | 默认格式语言。它用于日期类型的单元格。如果指定了语言，它决定了显示/输出格式。 |
 | Password         | string  | 非必填的 | 受保护文档的密码。从版本 8.2 开始可用。                                                                      |
@@ -22,7 +22,7 @@ sidebar_position: -3
 
 ### 转换请求示例
 
-``` sh
+```sh
 curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.docx
 ```
 
@@ -30,7 +30,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 
 ### HTML 格式的转换请求示例
 
-``` html
+```html
 <form action="https://documentserver/cool/convert-to/docx" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     <input type="submit" value="Convert to DOCX">
@@ -41,7 +41,7 @@ curl -F "data=sample.txt" https://documentserver/cool/convert-to/docx > result.d
 
 ### 带有*格式*参数的转换请求示例
 
-``` sh
+```sh
 curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserver/cool/convert-to > result.pdf
 ```
 
@@ -49,7 +49,7 @@ curl -F "data=sample.odt" -F "format=pdf" "PDFVer=PDF/A-2b" https://documentserv
 
 ### *格式*参数为 HTML 格式的转换请求示例
 
-``` html
+```html
 <form action="https://documentserver/cool/convert-to" enctype="multipart/form-data" method="post">
     File: <input type="file" name="data"><br/>
     Format: <input type="text" name="format"><br/>

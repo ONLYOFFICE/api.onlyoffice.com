@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将像素转换为磅。
+在 PDF 文档中将像素转换为磅。
 
 ```javascript editor-pdf
+// The API method performs measurement unit conversion.
+
+// The result is displayed in a shape text element.
+
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);
 
@@ -38,5 +42,4 @@ paragraph.AddText(pixels + ' pixels are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

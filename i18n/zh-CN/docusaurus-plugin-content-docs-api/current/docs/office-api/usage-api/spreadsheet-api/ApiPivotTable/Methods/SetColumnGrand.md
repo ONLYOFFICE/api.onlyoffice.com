@@ -22,12 +22,12 @@ expression.SetColumnGrand(show);
 
 ## 示例
 
-此示例展示如何获取列总计。
+控制电子表格中数据透视表是否显示列的总计行。
 
 ```javascript editor-xlsx
-// How to select a column grand of a table.
+// How do I turn the column grand total on or off in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its column grand.
+// Hide or reveal the column totals summary at the bottom of a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

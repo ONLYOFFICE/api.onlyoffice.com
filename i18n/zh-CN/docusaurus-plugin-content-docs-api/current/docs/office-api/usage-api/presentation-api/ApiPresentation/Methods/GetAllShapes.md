@@ -20,9 +20,13 @@ expression.GetAllShapes();
 
 ## 示例
 
-此示例演示如何获取当前演示文稿中的所有形状。
+列出演示文稿中的所有形状。
 
 ```javascript editor-pptx
+// How do I find every rectangle, circle, heart, or custom shape in a presentation?
+
+// Count and display shapes after removing master slides in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -52,5 +56,4 @@ const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const shapesCount = presentation.GetAllShapes().length;
 paragraph.AddText('Shapes: ' + shapesCount);
-
 ```

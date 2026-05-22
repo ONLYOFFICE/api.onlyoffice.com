@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例删除包含指定单元格的表格列。
+使用单元格引用删除表格列。
 
 ```javascript editor-pptx
-// How to delete a column from the table.
+// Delete a column from the table by specifying a cell within it.
 
-// Create a table, create cells and remove the whole column by its cell.
+// Create a table and remove a column using a cell from that column.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

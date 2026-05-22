@@ -20,10 +20,12 @@ expression.Copy();
 
 ## 示例
 
-如何创建相同的页面形状。
+在 PDF 的不同页面上创建形状的副本。
 
 ```javascript editor-pdf
-// Get a page shape, add it to the page and create its copy.
+// How do I copy a shape to another location in a PDF?
+
+// Make an identical copy of a drawing object in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

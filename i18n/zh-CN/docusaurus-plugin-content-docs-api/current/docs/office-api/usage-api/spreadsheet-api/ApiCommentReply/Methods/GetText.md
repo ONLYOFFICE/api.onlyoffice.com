@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取批注回复文本。
+读取电子表格中批注回复的书面内容。
 
 ```javascript editor-xlsx
-// How to get a raw text of a reply.
+// How do I retrieve the message a user left as a reply to a comment in a spreadsheet?
 
-// Display a reply text to a range of the worksheet.
+// Extract the reply text from a comment thread and show it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

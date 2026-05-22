@@ -15,7 +15,7 @@ expression.AddElement(richRun, pos);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | richRun | 必需 | [ApiRichRun](../../ApiRichRun/ApiRichRun.md) |  | 将在当前位置添加的元素。 |
-| pos | 可选 | number |  | 将添加当前元素的位置。如果未指定此值，则元素将添加到当前段落的末尾。 |
+| pos | 可选 | number |  | 将添加当前元素的位置。如果此值不 |
 
 ## 返回值
 
@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例向富文本段落添加新元素。
+在 PDF 中向段落插入元素。
 
 ```javascript editor-pdf
+// How do I add items to a paragraph in a PDF?
+
+// Place a new element at a specific position in a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

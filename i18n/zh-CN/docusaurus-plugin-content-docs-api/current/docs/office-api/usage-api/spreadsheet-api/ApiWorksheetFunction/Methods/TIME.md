@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何将以数字形式给出的小时、分钟和秒转换为序列号，并以时间格式进行格式化。
+在电子表格中将以数字给出的小时、分钟和秒转换为序列号，并以时间格式格式化。
 
 ```javascript editor-xlsx
-// How to create a serial number indicating hours, minutes and seconds.
+// Create a serial number from time components for use in spreadsheet calculations.
 
-// Use a function to convert hours, minutes and seconds to serial numbers.
+// Apply the TIME function with hour, minute, and second parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

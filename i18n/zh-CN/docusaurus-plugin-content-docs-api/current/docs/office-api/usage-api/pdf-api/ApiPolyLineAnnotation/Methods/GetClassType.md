@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取折线注释的类类型。
+识别 PDF 中折线标记的对象类型。
 
 ```javascript editor-pdf
+// How do I determine the object type of a polyline marking in a PDF?
+
+// Find the classification name for a polyline marking in a PDF.
+
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polylineAnnot = Api.CreatePolyLineAnnot([40, 5, 160, 110], vertices);

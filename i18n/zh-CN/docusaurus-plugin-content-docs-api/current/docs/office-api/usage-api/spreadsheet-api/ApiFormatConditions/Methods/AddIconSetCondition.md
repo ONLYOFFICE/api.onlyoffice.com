@@ -20,12 +20,12 @@ expression.AddIconSetCondition();
 
 ## 示例
 
-此示例向区域添加图标集条件格式。
+在电子表格中的单元格内显示小状态图标以指示值是低、中还是高。
 
 ```javascript editor-xlsx
-// How to add icon set conditional formatting rules to display icons based on values.
+// How do I place visual symbols next to numbers to show their relative standing at a glance in a spreadsheet?
 
-// Add icon set conditional formatting to cells.
+// Represent data tiers with icons so readers can judge cell values without reading exact numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,5 +42,4 @@ worksheet.GetRange("A9").SetValue(80);
 let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddIconSetCondition();
-
 ```

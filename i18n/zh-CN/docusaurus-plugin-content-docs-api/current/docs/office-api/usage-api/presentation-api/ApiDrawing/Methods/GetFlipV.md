@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-此示例检查绘图是否垂直翻转。
+确定演示文稿中的形状是否上下翻转。
 
 ```javascript editor-pptx
-// How to get the vertical flip property of the shape.
+// How do I check if a shape has been flipped vertically in a presentation?
 
-// Create a drawing, flip it vertically, and read its vertical flip value.
+// Flip a shape and verify its vertical flip status in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped vertically: " + flip);
-
 ```

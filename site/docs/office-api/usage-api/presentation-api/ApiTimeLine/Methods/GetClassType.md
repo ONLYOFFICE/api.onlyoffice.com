@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the class type of the ApiTimeLine object.
+Determine the data type of a timeline in a presentation.
 
 ```javascript editor-pptx
+// How do I find out what type of object a timeline is in a presentation?
+
+// Get the class name identifier for a timeline in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const timeLine = slide.GetTimeLine();
@@ -39,5 +43,4 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(shape);
-
 ```

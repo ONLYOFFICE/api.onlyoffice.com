@@ -23,12 +23,12 @@ expression.SetName(FontName);
 
 ## 示例
 
-此示例设置指定字体的名称属性。
+更改电子表格中特定文本字符使用的字体。
 
 ```javascript editor-xlsx
-// How to change name of a font.
+// How do I assign a different font family to part of the text in a spreadsheet?
 
-// Get a font object of characters and set a new name for it.
+// Switch selected characters to a named typeface and confirm the change in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

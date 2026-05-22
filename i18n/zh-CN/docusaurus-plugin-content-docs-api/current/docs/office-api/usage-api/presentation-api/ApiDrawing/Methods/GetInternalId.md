@@ -20,21 +20,26 @@ string
 
 ## 示例
 
-此示例返回当前文档内容的内部 ID。
+获取演示文稿中形状的唯一标识符。
 
 ```javascript editor-pptx
+// How do I retrieve the internal ID assigned to a shape in a presentation?
+
+// Extract and display the unique internal ID of a drawing object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.HexColor('#A2C4E0'));
+const fill = Api.CreateSolidFill(Api.HexColor('#FADBD8'));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape('roundRect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
+const shape = Api.CreateShape('rect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
 shape.SetPosition(Api.MillimetersToEmus(20), Api.MillimetersToEmus(35));
-const docContent = shape.GetContent();
-const internalId = docContent.GetInternalId();
-const paragraph = docContent.GetElement(0);
-paragraph.AddText('Document content internal ID: ' + internalId);
-slide.AddObject(shape);
 
+const internalId = shape.GetInternalId();
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText('Drawing internal ID: ' + internalId);
+slide.AddObject(shape);
 ```

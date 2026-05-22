@@ -20,10 +20,13 @@ number
 
 ## 示例
 
-分析页面上云形状的路径属性。
+测量 PDF 中形状绘图区域的垂直大小。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How do I find the height of a custom shape in a PDF?
+
+// Read the vertical measurement of a shape's outline bounds in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

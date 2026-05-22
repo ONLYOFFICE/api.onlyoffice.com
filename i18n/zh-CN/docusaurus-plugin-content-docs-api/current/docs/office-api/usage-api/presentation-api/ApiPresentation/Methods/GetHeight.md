@@ -20,12 +20,12 @@ expression.GetHeight();
 
 ## 示例
 
-此示例演示如何获取以英制单位表示的演示文稿高度。
+检索演示文稿幻灯片的高度。
 
 ```javascript editor-pptx
-// How to get a height of the presentation.
+// Get the slide height in English measure units.
 
-// Get a height of the ApiPresentation object.
+// Display the height value on the current slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 const height = presentation.GetHeight();
 paragraph.AddText("Height = " + height);
 slide.AddObject(shape);
-
 ```

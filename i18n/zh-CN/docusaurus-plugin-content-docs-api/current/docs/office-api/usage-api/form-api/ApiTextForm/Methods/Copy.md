@@ -2,30 +2,16 @@
 
 复制当前表单（如果存在形状，则连同形状一起复制）。
 
-## 语法
-
-```javascript
-expression.Copy();
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiForm](../../Enumeration/ApiForm.md)
+继承自 [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md)。
 
 ## 示例
 
-此示例展示如何复制表单。
+在文档中复制表单字段。
 
 ```javascript editor-forms
-// How to create the same text form.
+// How do I copy a form field in a document?
 
-// Create two same text forms to the document separated by a line break.
+// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

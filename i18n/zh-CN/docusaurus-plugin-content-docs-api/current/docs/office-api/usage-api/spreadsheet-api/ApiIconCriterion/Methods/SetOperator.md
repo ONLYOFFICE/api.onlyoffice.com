@@ -22,9 +22,13 @@ expression.SetOperator(operator);
 
 ## 示例
 
-此示例展示如何为图标条件设置比较运算符。
+定义电子表格中图标条件的比较运算符。
 
 ```javascript editor-xlsx
+// How do I control whether an icon criterion triggers on values greater than or equal to a threshold in a spreadsheet?
+
+// Choose between greater-than and other comparison rules to decide when an icon appears in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Results');
 worksheet.GetRange('A2').SetValue(80);
@@ -40,5 +44,4 @@ const secondCriterion = criteria[1];
 worksheet.GetRange('B1').SetValue('Operator before: ' + secondCriterion.GetOperator());
 secondCriterion.SetOperator('xlGreater');
 worksheet.GetRange('B2').SetValue('Operator after: ' + secondCriterion.GetOperator());
-
 ```

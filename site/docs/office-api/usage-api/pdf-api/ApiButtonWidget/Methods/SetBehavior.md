@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets button widget behavior type.
+Set button widget behavior type in a PDF document.
 
 ```javascript editor-pdf
+// Apply behavior type such as 'outline' to a button widget.
+
+// Display the set behavior value using the widget label.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

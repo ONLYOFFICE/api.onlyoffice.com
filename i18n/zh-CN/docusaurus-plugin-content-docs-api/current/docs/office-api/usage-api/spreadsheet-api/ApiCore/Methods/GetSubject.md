@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取当前工作簿的主题。
+从电子表格工作簿文档属性读取主题字段。
 
 ```javascript editor-xlsx
+// How do I find out what subject is recorded for a workbook in a spreadsheet?
+
+// Fetch the subject text stored in the metadata of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Subject: " + subject);
-
 ```

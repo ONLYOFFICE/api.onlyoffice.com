@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何分析指定的字符串并返回其包含的字符数，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
+计算电子表格中多字节字符语言的文本字节长度。
 
 ```javascript editor-xlsx
-// How to analyse the specified string and get its length.
+// How do I measure text length in Chinese, Japanese, or other double-byte languages in a spreadsheet?
 
-// Use a function to analyse a string, get length of a string and its intended language.
+// Get the byte count of text instead of character count in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

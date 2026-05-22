@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+调整 PDF 中文本字符之间的间距。
 
 ```javascript editor-pdf
-// How to resize spacing between words in a text run.
+// What is the way to modify character spacing in text in a PDF?
 
-// Create a new text run and set its spacing size (point * 20).
+// Control the distance between letters in your text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -48,5 +48,4 @@ run.SetSpacing(80);
 run.AddText("This is a text run with the text spacing set to 4 points (20 twentieths of a point).");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

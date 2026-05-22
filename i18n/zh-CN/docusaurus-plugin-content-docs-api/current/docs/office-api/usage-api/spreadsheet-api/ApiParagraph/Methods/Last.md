@@ -20,9 +20,13 @@ expression.Last();
 
 ## 示例
 
-此示例展示如何获取形状内段落的最后一个非空元素。
+从电子表格中形状内的段落检索最后一个文本运行。
 
 ```javascript editor-xlsx
+// How do I read the content of the final element in a paragraph in a spreadsheet?
+
+// Identify which run appears at the end of a paragraph to inspect its text in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(140, 100, 120));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -45,5 +49,4 @@ paragraph.AddElement(run2);
 
 const last = paragraph.Last();
 worksheet.GetRange('A1').SetValue('Last element text: ' + last.GetText());
-
 ```

@@ -1,7 +1,6 @@
 # ApiRGBColor
 
-表示 ApiRGBColor 类。
-
+ApiRGBColor 是 [ApiUniColor](../ApiUniColor/ApiUniColor.md) 的子类。
 
 ## 方法
 

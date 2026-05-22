@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为文档中的第一页设置旋转。
+在 PDF 中将页面旋转到特定角度。
 
 ```javascript editor-pdf
+// How do I turn a page to face the right direction in a PDF?
+
+// Apply a rotation transformation to change the page orientation in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 page.SetRotation(90);

@@ -22,12 +22,15 @@ expression.SetReadingOrder(direction);
 
 ## 示例
 
-此示例演示如何设置单元格范围中文本的阅读顺序。
+设置电子表格中单元格范围内文本的阅读方向。
 
 ```javascript editor-xlsx
+// How do I switch text to read right-to-left in a spreadsheet?
+
+// Support languages like Arabic or Hebrew by adjusting the text flow direction in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B2").SetValue("Hello, أهلاً, 你好");
 const range = worksheet.GetRange("A1:C3");
 range.SetReadingOrder('rtl');
-
 ```

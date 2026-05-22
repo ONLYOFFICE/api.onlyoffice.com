@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例使用指定的位置移除元素。
+从电子表格中形状的给定位置删除单个段落。
 
 ```javascript editor-xlsx
-// How to remove an element from a document knowing its position in the document content.
+// How do I remove one specific paragraph from a shape by its index in a spreadsheet?
 
-// Delete an element from a document and prove it by showing the difference.
+// Eliminate a paragraph at a known position and confirm the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

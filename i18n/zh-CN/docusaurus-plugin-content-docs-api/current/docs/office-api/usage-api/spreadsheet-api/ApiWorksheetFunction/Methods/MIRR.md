@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回一系列定期现金流的内部收益率，同时考虑投资成本和现金再投资的利息。
+计算电子表格中具有不同利率的投资的修正内部收益率。
 
 ```javascript editor-xlsx
-// How to get the internal rate of return for a series of periodic cash flows.
+// What is the return rate on an investment with different borrowing and lending costs in a spreadsheet?
 
-// Use a function to calculate the internal rate of return.
+// Find the effective rate of return on cash flows with separate rates in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

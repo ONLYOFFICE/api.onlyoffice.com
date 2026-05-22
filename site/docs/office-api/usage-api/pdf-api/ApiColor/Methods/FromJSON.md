@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## Example
 
-This example shows how to restore a shape fill color from JSON.
+Restore a color from a JSON object in a PDF.
 
 ```javascript editor-pdf
+// How do I convert a JSON color back to a color object in a PDF?
+
+// Parse a JSON string, restore the original color, and verify it matches.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,5 +48,4 @@ run.SetFontSize(30);
 run.AddText('Original: ' + original.GetHex() + '\nRestored: ' + restored.GetHex());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -13,10 +13,9 @@ Enumeration
 - "xlUpward"
 - "xlVertical"
 
-
 ## Example
 
-This example specifies that the range contents will be rotated upward.
+Specify that the range contents will be rotated upward.
 
 ```javascript editor-xlsx
 // Use angles to set orientation of the range. 

@@ -16,16 +16,16 @@ expression.Clear();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例清除范围。
+清除电子表格中单元格范围的所有值和格式。
 
 ```javascript editor-xlsx
-// How to clear a content of a range.
+// How do I completely wipe a range of cells clean in a spreadsheet?
 
-// Get a range and remove everything from it.
+// Reset a group of cells to a blank state by removing both their data and styling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:B1");

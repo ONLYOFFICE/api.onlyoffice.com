@@ -24,10 +24,13 @@ boolean
 
 ## Example
 
-Creates adjustable geometry with guides and connection points for a pdf document.
+Mark a spot where connectors can attach to a shape in a PDF.
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How do I specify where lines can connect to my shape in a PDF?
+
+// Define attachment points and apply them to a custom shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

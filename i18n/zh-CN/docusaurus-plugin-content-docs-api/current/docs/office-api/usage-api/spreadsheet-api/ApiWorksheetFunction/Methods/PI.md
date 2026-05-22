@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数学常数 pi，等于 3.14159265358979，精确到 15 位数字。
+在电子表格中将数学常数 pi 插入到单元格中。
 
 ```javascript editor-xlsx
-// How to return the mathematical constant pi.
+// How do I get the value of pi for mathematical calculations in a spreadsheet?
 
-// Use a function to return a constant pi.
+// Use pi to calculate circles, circumference, and other geometric formulas in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

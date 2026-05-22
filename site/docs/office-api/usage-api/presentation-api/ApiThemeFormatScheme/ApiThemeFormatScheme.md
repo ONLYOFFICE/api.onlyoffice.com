@@ -2,7 +2,6 @@
 
 Represents the ApiThemeFormatScheme class.
 
-
 ## Methods
 
 | Method | Returns | Description |

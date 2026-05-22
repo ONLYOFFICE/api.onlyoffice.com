@@ -27,12 +27,12 @@ number
 
 ## Example
 
-This example shows how to get the cumulative principal paid on a loan between two periods.
+Sum up the principal payments on a loan during a period range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the cumulative principal paid on a loan between two periods.
+// What is the total principal paid down during a specific loan period in a spreadsheet?
 
-// Use function to get the cumulative principal paid on a loan between two periods.
+// Calculate the accumulated principal reduction between payment periods in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

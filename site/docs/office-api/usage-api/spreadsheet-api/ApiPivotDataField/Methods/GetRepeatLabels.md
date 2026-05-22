@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether to repeat items labels at each row.
 
-## Syntax
-
-```javascript
-expression.GetRepeatLabels();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetRepeatLabels](../../ApiPivotField/Methods/GetRepeatLabels.md).
 
 ## Example
 
-This example shows how to get repeate labels value of a pivot field.
+Check whether a pivot field repeats its labels in every row of the table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's repeate labels boolean value.
+// How do I find out if a pivot field is set to repeat labels down each row in a spreadsheet?
 
-// Create a pivot table, add data to it then get repeate labels of a specified pivot field.
+// Verify the repeat-labels setting of a pivot field to see if group names are shown in every cell or only once.
 
 let worksheet = Api.GetActiveSheet();
 

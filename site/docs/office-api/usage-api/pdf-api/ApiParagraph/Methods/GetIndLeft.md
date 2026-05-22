@@ -2,30 +2,16 @@
 
 Returns the paragraph left side indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndLeft();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndLeft](../../ApiParaPr/Methods/GetIndLeft.md).
 
 ## Example
 
-This example shows how to get the paragraph left side indentation.
+Retrieve the left margin indentation value from a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to return a left side identation of a paragraph property.
+// How do I get the left side indent measurement in a PDF?
 
-// Return a left side indentation of a text property from the page.
+// Obtain the left edge offset amount in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +24,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetIndLeft(2880);
@@ -52,5 +38,4 @@ const indLeft = paraPr.GetIndLeft();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Left indent: " + indLeft);
 docContent.Push(paragraph);
-
 ```

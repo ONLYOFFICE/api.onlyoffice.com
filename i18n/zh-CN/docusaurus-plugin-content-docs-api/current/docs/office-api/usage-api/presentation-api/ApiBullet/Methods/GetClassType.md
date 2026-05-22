@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取 ApiBullet 类的类型并将其插入文档。
+获取演示文稿中项目符号的类类型。
 
 ```javascript editor-pptx
-// How get a class type of ApiBullet.
+// How do I identify the class type of a bullet in a presentation?
 
-// Retrieve class type of ApiBullet object and insert it to the slide.
+// Retrieve the type identifier for a bullet in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ newParagraph.SetJc("left");
 newParagraph.AddText("Class Type = " + classType);
 docContent.Push(newParagraph);
 slide.AddObject(shape);
-
 ```

@@ -8,19 +8,19 @@ These parameters define the configuration of the DNS cache which is used for the
 
 ## dnscache.enable
 
-`Type: boolean`   `Default: true`
+**type:** `boolean` | **default:** `true`
 
 Defines if the DNS cache is enabled or not.
 
 ## dnscache.ttl
 
-`Type: integer`   `Default: 300`
+**type:** `integer` | **default:** `300`
 
 Defines the time when the DNS records expire (measured in seconds).
 
 ## dnscache.cachesize
 
-`Type: integer`   `Default: 1000`
+**type:** `integer` | **default:** `1000`
 
 Defines the DNS cache size.
 

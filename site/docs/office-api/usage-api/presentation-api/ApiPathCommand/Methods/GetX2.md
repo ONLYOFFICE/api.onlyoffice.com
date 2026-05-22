@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve in a presentation.
+Get the endpoint x coordinate of a curve in a presentation.
 
 ```javascript editor-pptx
-// Displays all control point coordinates in a text shape.
+// How do I find the end position of a curve path in a presentation?
+
+// Read curve endpoints to verify bezier path geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

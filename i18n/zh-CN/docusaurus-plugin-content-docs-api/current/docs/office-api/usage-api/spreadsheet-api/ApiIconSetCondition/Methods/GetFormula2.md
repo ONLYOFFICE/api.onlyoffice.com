@@ -2,30 +2,16 @@
 
 返回当前条件格式规则使用的第二个公式。
 
-## 语法
-
-```javascript
-expression.GetFormula2();
-```
-
-`expression` - 表示 [ApiIconSetCondition](../ApiIconSetCondition.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiFormatCondition.GetFormula2](../../ApiFormatCondition/Methods/GetFormula2.md)。
 
 ## 示例
 
-此示例获取条件格式规则的第二个公式。
+读取电子表格中基于范围的条件格式规则的上边界值。
 
 ```javascript editor-xlsx
-// How to retrieve the second formula from conditional formatting rules.
+// How do I retrieve the second comparison value from a between-style formatting rule in a spreadsheet?
 
-// Get conditional formatting rule second formula.
+// Check the upper limit of a formatting condition to ensure the highlighted range is accurate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +36,4 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
-
 ```

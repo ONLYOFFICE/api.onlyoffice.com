@@ -4,7 +4,7 @@ sidebar_position: -2
 
 # 表单 API
 
-表单文档的结构与[文本文档](../text-document-api/text-document-api.md)完全相同。唯一的区别是新的*表单*实体与其他段落元素一起放置 - 文本片段、行内文本内容控件和超链接。共有七种表单类型：*文本字段*、*组合框*、*下拉列表*、*复选框*、*单选按钮*、*图片表单*和*复合字段*。
+表单文档的结构与[文本文档](../document-api/document-api.md)完全相同。唯一的区别是新的*表单*实体与其他段落元素一起放置 - 文本片段、行内文本内容控件和超链接。共有七种表单类型：*文本字段*、*组合框*、*下拉列表*、*复选框*、*单选按钮*、*图片表单*和*复合字段*。
 
 ## 创建新的表单文档
 
@@ -14,7 +14,7 @@ sidebar_position: -2
 
 使用 **ONLYOFFICE Document Builder** 可以通过以下代码构建一个包含"John Smith"文本的单个文本表单的最简单示例表单文档：
 
-``` ts
+```ts
 // create a document file in the .docx format with ONLYOFFICE Document Builder
 builder.CreateFile("docx");
 
@@ -44,7 +44,7 @@ builder.CloseFile();
 
 如果您想编辑已存在的表单文档，可以使用 **ONLYOFFICE Document Builder** 打开它，获取其元素并根据需要进行更改。文档按以下方式打开：
 
-``` ts
+```ts
 // use a path or URL to an existing 'myformdocument.pdf' form document file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/myformdocument.pdf");
 

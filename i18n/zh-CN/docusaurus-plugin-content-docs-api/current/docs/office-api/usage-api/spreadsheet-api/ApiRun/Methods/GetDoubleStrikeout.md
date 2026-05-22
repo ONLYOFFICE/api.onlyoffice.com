@@ -2,30 +2,16 @@
 
 从当前文本属性获取双删除线属性。
 
-## 语法
-
-```javascript
-expression.GetDoubleStrikeout();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiTextPr.GetDoubleStrikeout](../../ApiTextPr/Methods/GetDoubleStrikeout.md)。
 
 ## 示例
 
-此示例获取文本的双删除线属性。
+检查电子表格中的文本是否应用了双删除线。
 
 ```javascript editor-xlsx
-// How to find out whether a text is stroke out with double lines or not.
+// How do I find out if text is crossed out with two lines in a spreadsheet?
 
-// Get a text double cross out property.
+// Read the double strikethrough setting from a text style and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

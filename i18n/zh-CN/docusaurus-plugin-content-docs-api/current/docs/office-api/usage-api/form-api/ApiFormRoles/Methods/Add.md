@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例展示如何添加新角色。
+在文档中为表单访问控制创建新的用户角色。
 
 ```javascript editor-forms
+// How do I add a new role that can fill forms in a document?
+
+// Define a role name that controls who can edit form fields in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -35,5 +39,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddText(role);
     paragraph.AddLineBreak();
 });
-
 ```

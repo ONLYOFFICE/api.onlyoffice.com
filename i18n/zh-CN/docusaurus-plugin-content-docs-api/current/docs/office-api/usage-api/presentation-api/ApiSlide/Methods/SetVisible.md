@@ -22,16 +22,15 @@ boolean
 
 ## 示例
 
-此示例设置当前演示文稿幻灯片的可见性。
+控制演示文稿中幻灯片的可见性。
 
 ```javascript editor-pptx
-// How to change visibility of the slide.
+// Create a new slide in the presentation.
 
-// Create a slide and make it hidden.
+// Hide the slide using the SetVisible method.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
 slide.SetVisible(false);
 presentation.AddSlide(slide);
-
 ```

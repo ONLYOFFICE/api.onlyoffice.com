@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example gets the repeat count of an animation effect.
+Get the repeat count of an animation effect in a presentation.
 
 ```javascript editor-pptx
+// Repeat count determines how many times an animation plays consecutively.
+
+// Retrieve the repeat count from an animation effect using GetRepeatCount() and display it.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Repeat count: ' + repeatCount);
 slide.AddObject(infoShape);
-
 ```

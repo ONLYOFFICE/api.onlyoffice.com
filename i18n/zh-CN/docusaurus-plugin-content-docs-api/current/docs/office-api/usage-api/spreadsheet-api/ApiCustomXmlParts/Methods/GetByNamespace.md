@@ -22,12 +22,12 @@ expression.GetByNamespace(namespace);
 
 ## 示例
 
-此示例演示如何根据命名空间获取自定义 XML 部件。
+按声明的命名空间筛选电子表格中存储的 XML 块。
 
 ```javascript editor-xlsx
-// How to retrieve custom XML parts using their namespace.
+// How do I find all XML entries that belong to a specific namespace in a spreadsheet?
 
-// Get XML parts by namespace.
+// Narrow down embedded XML data to only those matching a given namespace in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

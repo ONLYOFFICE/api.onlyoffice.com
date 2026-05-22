@@ -22,12 +22,12 @@ expression.GetLayout(nPos);
 
 ## Example
 
-This example shows how to get a layout of the specified slide master by its position.
+Retrieve a layout from a slide master by its index position.
 
 ```javascript editor-pptx
-// How to get a master layout knowing its index.
+// Access the master and create a layout object to apply to a slide.
 
-// Get a layout object from the master.
+// Add the layout to the master and apply it to the current slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ shape.SetSize(300 * 36000, 130 * 36000);
 layout.AddObject(shape);
 master.AddLayout(0, layout);
 slide.ApplyLayout(master.GetLayout(0));
-
 ```

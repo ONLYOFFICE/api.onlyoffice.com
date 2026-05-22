@@ -4,39 +4,31 @@ sidebar_position: -11
 
 # Anonymous users
 
-The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Docs.
+The figure and steps below explain how an anonymous user’s name is set in ONLYOFFICE Docs.
 
 <img alt="Anonymous" src="/assets/images/editor/anonymous-user.png" width="720px" />
 
-1. The anonymous user uses the **document manager** to open a document for viewing or editing.
-
-   > Anonymous user is a user with an empty [user id](../../usage-api/config/editor/editor.md#user).
-
-2. The **document storage service** sends the initialization config to the **document editor** using the [JavaScript API](../basic-concepts.md) but the user name is not specified there.
-
-3. The **document editor** requests the user name.
-
-4. The **document editor** sends the received name to the **document editing service**.
-
-5. The **document editing service** sends the user name to the **document editors** of all the users in the co-editing mode.
+1. An anonymous user opens a document for viewing or editing through the **document manager**.
+2. The **document manager** initializes the **document editor** with a [`config`](../../usage-api/config/config.md) that has an empty [`user.id`](../../usage-api/config/editor/editor.md#user) and no user name.
+3. The **document editor** prompts the user for a name.
+4. The **document editor** sends the name to the **document editing service**.
+5. The **document editing service** relays the name to the **document editors** of all users who are co-editing the document.
 
 ## How this can be done in practice
 
-1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
+1. Create an `.html` file to [open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. If the anonymous user’s name is specified, it is displayed on the top toolbar.
+2. To make a user anonymous, pass an empty [`user.id`](../../usage-api/config/editor/editor.md#user) in the editor [`config`](../../usage-api/config/config.md). The [`editorConfig.customization.anonymous`](../../usage-api/config/editor/customization/customization-standard-branding.md#anonymous) parameter controls the name prompt and the guest label:
 
-3. If the user name is not specified, it will be requested. The request can be turned off with the *"request"=false* value of the [editorConfig.customization.anonymous](../../usage-api/config/editor/customization/customization-standard-branding.md#anonymous) parameter.
-
-   ![Name request](/assets/images/editor/name-request.png)
-
-4. After the anonymous user’s name is set, the postfix is added to it via the *label* field of the *editorConfig.customization.anonymous* parameter to distinguish guests during the coediting session. By default this postfix is *"Guest"*.
-
-   ![Label](/assets/images/editor/label.png)
+   - `request` — when `true` (the default), the **document editor** prompts the user for a name on first open. Set to `false` to suppress the prompt.
+   - `label` — a suffix appended to the name to distinguish guests during co-editing. The default value is `"Guest"`.
 
    ``` ts
    const config = {
      editorConfig: {
+       user: {
+         id: "",
+       },
        customization: {
          anonymous: {
            request: true,
@@ -49,16 +41,24 @@ The reference figure and the steps below explain the process of setting a name t
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-5. As soon as you set the name for the first time, it will be stored in the browser local storage. To use it next time, just press the **F5** button.
+3. When `request` is `true` and no name is stored yet, the **document editor** shows a name prompt:
 
-6. To change this name, click it on the top toolbar and enter a new one in the opened window.
+   ![Name request](/assets/images/editor/name-request.png)
 
-7. All the co-authors will see the new name.
+4. Once the name is set, the `label` suffix is appended to it:
+
+   ![Label](/assets/images/editor/label.png)
+
+5. The entered name is saved to the browser’s local storage. On the next visit, the stored name is reused automatically — the user is not prompted again.
+
+6. To change the name, the user clicks their name on the top toolbar and enters a new one in the dialog that opens.
+
+7. All co-authors see the updated name immediately.
 
 ## Restricting access to the editor or live viewer
 
-To restrict anonymous users access to the editor or live viewer, set the [services.CoAuthoring.server.isAnonymousSupport](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport) parameter in the configuration file to **false**. In this case, when the anonymous user tries to open the editor, a warning will occur.
+To restrict anonymous user access to the editor or live viewer, set the [`services.CoAuthoring.server.isAnonymousSupport`](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport) parameter in the server configuration file to `false`. When an anonymous user tries to open the editor, a warning is shown:
 
 <img alt="Anonymous user warning" src="/assets/images/editor/anonymous-warning.jpg" width="400px" />
 
-The live viewer will switch to the offline viewer without warnings.
+For the live viewer, no warning is shown — it falls back to the offline viewer silently.

@@ -20,9 +20,13 @@ Object
 
 ## 示例
 
-此示例展示如何获取颜色的 RGB 分量。
+从 PDF 中的颜色提取 RGB 分量。
 
 ```javascript editor-pdf
+// How do I get the red, green, and blue values from a color in a PDF?
+
+// Retrieve the RGB values and display them as comma-separated numbers.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText('RGB of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b);
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## 示例
 
-此示例设置当前文本块的文本轮廓。
+在演示文稿中为文本添加边框轮廓。
 
 ```javascript editor-pptx
-// How to make a text outlined.
+// Can I add a stroke or border to text in a presentation?
 
-// Get the text properties of the run and outline it with a stroke.
+// Apply a stroke outline effect to the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

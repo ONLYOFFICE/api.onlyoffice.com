@@ -20,10 +20,13 @@ expression.AddPath();
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。
+向电子表格中的自定义形状轮廓追加新的绘图路径。
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I add another outline segment to a custom shape in a spreadsheet?
+
+// Extend a custom shape by attaching an additional path that defines part of its boundary in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

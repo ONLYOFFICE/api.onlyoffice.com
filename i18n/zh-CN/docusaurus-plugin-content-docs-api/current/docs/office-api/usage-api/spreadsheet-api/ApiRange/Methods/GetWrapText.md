@@ -20,17 +20,16 @@ boolean
 
 ## 示例
 
-此示例演示如何获取有关单元格自动换行样式的信息。
+检查电子表格中的单元格是否启用了文本换行。
 
 ```javascript editor-xlsx
-// How to get a cell value wrapping type.
+// How do I find out if a cell is set to wrap its text in a spreadsheet?
 
-// Get a wrapping type of a cell from its range and show it.
+// Confirm the wrap setting of a cell by reading and displaying it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
 range.SetValue("This is the text wrapped to fit the cell size.");
 range.SetWrap(true);
 worksheet.GetRange("A3").SetValue("The text in the cell A1 is wrapped: " + range.GetWrapText());
-
 ```

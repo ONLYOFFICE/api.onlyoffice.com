@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的反双曲正弦。
+计算电子表格中数字的反双曲正弦。
 
 ```javascript editor-xlsx
-// How to get an inverse hyperbolic sine.
+// Apply the ASINH function for hyperbolic calculations in a spreadsheet.
 
-// Use function to get an inverse hyperbolic sine of a number.
+// Obtain the inverse hyperbolic sine result for mathematical operations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

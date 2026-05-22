@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all shapes from the sheet.
+Retrieve every shape placed on a worksheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all shapes.
+// How do I list all shapes on a sheet in a spreadsheet?
 
-// Get all shapes as an array.
+// Collect all drawn shapes from the worksheet to modify their content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

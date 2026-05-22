@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何设置行高。
+设置 PDF 中表格行的高度。
 
 ```javascript editor-pdf
-// Create a table and change its rows height.
+// How do I make a row taller or shorter in a PDF?
+
+// Change the row dimensions to a specific measurement in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

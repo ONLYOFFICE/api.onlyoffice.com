@@ -24,9 +24,13 @@ boolean
 
 ## Example
 
-This example shows how to insert an attribute into a custom XML node.
+Insert an attribute into a custom XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I add a new attribute to an XML element in a presentation?
+
+// Show the updated XML with the new attribute in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after insertion: ' + xml.GetXml());
-
 ```

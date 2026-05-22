@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例演示如何在自定义 XML 节点上设置属性值。
+在演示文稿中为自定义 XML 节点设置属性值。
 
 ```javascript editor-pptx
-// How to set an attribute on an XML node.
+// Apply multiple attribute values to a custom XML node in a presentation.
 
-// Set an XML node attribute.
+// Assign properties to a node by setting named attributes in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

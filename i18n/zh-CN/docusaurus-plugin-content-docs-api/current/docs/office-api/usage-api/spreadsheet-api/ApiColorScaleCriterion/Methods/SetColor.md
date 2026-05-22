@@ -22,12 +22,12 @@ expression.SetColor(oColor);
 
 ## 示例
 
-此示例演示如何设置色阶条件的颜色。
+为电子表格中的色阶规则点分配特定颜色。
 
 ```javascript editor-xlsx
-// How to change the color of a color scale criterion.
+// How do I change the color used at a boundary point of a color scale rule in a spreadsheet?
 
-// Set the color of a color scale criterion.
+// Customize the gradient appearance of a color scale rule by updating the color at one of its stops in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -54,5 +54,4 @@ if (criteria && criteria.length > 0) {
     worksheet.GetRange("C3").SetValue("After Color:");
     worksheet.GetRange("C4").SetValue(criteria[0].GetColor() ? "Set" : "None");
 }
-
 ```

@@ -23,10 +23,13 @@ expression.SetAdjValue(sName, nValue);
 
 ## 示例
 
-为演示文稿创建带有参考线和连接点的可调整几何图形。
+修改演示文稿中自定义形状几何图形中的调整值。
 
 ```javascript editor-pptx
-// Displays adjustment value and applies custom geometry to shape.
+// How do I change adjustment parameters on a custom shape in a presentation?
+
+// Update a numeric adjustment value to reshape custom geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

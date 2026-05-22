@@ -22,12 +22,12 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-此示例设置批注作者的用户 ID。
+为电子表格中批注的作者分配新的用户标识符。
 
 ```javascript editor-xlsx
-// How to change a comment author ID.
+// How do I update which user account is linked to a comment in a spreadsheet?
 
-// Replace a comment author ID to a new one.
+// Transfer ownership of a comment to a different user account in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

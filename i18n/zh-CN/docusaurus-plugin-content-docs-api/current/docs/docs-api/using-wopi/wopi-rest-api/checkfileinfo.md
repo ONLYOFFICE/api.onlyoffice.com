@@ -70,11 +70,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称                        | 类型    | 示例                     | 描述                                                                                                                                                                                                                                                                                                  |
 | --------------------------- | ------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ClosePostMessage            | boolean | true                        | 指定主机是否希望在在线办公软件中的 **Close** UI 激活时接收 [UI\_Close](../postmessage.md#UI_Close) PostMessage。                                                                                                                                           |
-| EditModePostMessage         | boolean | true                        | 指定主机是否希望在在线办公软件中的 *Edit* UI 激活时接收 [UI\_Edit](../postmessage.md#UI_Edit) PostMessage。如果此属性未设置为 *true*，则在线办公软件会在 *Edit* UI 激活时将内部 iframe URL 导航到编辑操作 URL。 |
-| EditNotificationPostMessage | boolean | true                        | 指定主机是否希望接收 [Edit\_Notification](../postmessage.md#Edit_Notification) PostMessage。                                                                                                                                                                                 |
-| FileSharingPostMessage      | boolean | true                        | 指定当在线办公软件中的 *Share* UI 激活时，主机是否期望接收 [UI\_Sharing](../postmessage.md#UI_Sharing) PostMessage。                                                                                                                                         |
-| FileVersionPostMessage      | boolean | true                        | 指定当在线办公软件中的 *Previous Versions* UI 激活时，主机是否期望接收 [UI\_FileVersions](../postmessage.md#UI_FileVersions) PostMessage。                                                                                                                   |
+| ClosePostMessage            | boolean | true                        | 主机是否希望在在线办公软件中的 **Close** UI 激活时接收 [UI\_Close](../postmessage.md#UI_Close) PostMessage。                                                                                                                                           |
+| EditModePostMessage         | boolean | true                        | 主机是否希望在在线办公软件中的 *Edit* UI 激活时接收 [UI\_Edit](../postmessage.md#UI_Edit) PostMessage。如果此属性未设置为 *true*，则在线办公软件会在 *Edit* UI 激活时将内部 iframe URL 导航到编辑操作 URL。 |
+| EditNotificationPostMessage | boolean | true                        | 主机是否希望接收 [Edit\_Notification](../postmessage.md#Edit_Notification) PostMessage。                                                                                                                                                                                 |
+| FileSharingPostMessage      | boolean | true                        | 当在线办公软件中的 *Share* UI 激活时，主机是否期望接收 [UI\_Sharing](../postmessage.md#UI_Sharing) PostMessage。                                                                                                                                         |
+| FileVersionPostMessage      | boolean | true                        | 当在线办公软件中的 *Previous Versions* UI 激活时，主机是否期望接收 [UI\_FileVersions](../postmessage.md#UI_FileVersions) PostMessage。                                                                                                                   |
 | PostMessageOrigin           | string  | `https://exampledomain.com` | [host page](../host-page.md) 正在向其发送和接收 PostMessage 的域。在线办公软件仅向此域发送传出的 PostMessage，并且仅监听来自此域的 PostMessage。                                                                           |
 
 ```mdx-code-block
@@ -106,8 +106,8 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称                  | 类型    | 示例                        | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------------------- | ------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CopyPasteRestrictions | string  | "BlockAll"                     | 指定 WOPI 客户端是否应禁用应用程序内的**复制和粘贴**功能。默认情况下，所有**复制和粘贴**功能均已启用，即该设置无效。可能的属性值：<br/><br/>- **BlockAll** - 应用程序中的**复制和粘贴**功能完全禁用；<br/><br/>- **CurrentDocumentOnly** - **复制和粘贴**功能已启用，但只能在应用程序中当前打开的文件中复制和粘贴内容。 |
-| DisablePrint          | boolean | true                           | 指定 WOPI 客户端是否应禁用所有打印功能。                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| CopyPasteRestrictions | string  | "BlockAll"                     | WOPI 客户端是否应禁用应用程序内的**复制和粘贴**功能。默认情况下，所有**复制和粘贴**功能均已启用，即该设置无效。可能的属性值：<br/><br/>- **BlockAll** - 应用程序中的**复制和粘贴**功能完全禁用；<br/><br/>- **CurrentDocumentOnly** - **复制和粘贴**功能已启用，但只能在应用程序中当前打开的文件中复制和粘贴内容。 |
+| DisablePrint          | boolean | true                           | WOPI 客户端是否应禁用所有打印功能。                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | FileExtension         | string  | ".docx"                        | 文件扩展名必须以“。”开头。如果提供，WOPI 客户端将使用此值作为文件扩展名。否则，将从 [BaseFileName](#BaseFileName) 解析扩展名。                                                                                                                                                                                                                                                                                                               |
 | FileNameMaxLength     | integer | 20                             | WOPI 主机支持的文件名的最大长度，不包括文件扩展名。默认值为 250。请注意，如果省略该属性或将其明确设置为 0，WOPI 客户端将使用此默认值。                                                                                                                                                                                                                                                                                           |
 | LastModifiedTime      | string  | "2009-06-15T13:45:30.0000000Z" | 上次修改文件的时间。此时间必须始终为 UTC 时间，并且必须采用 ISO 8601 往返格式。此属性可以指定为 [Version](#Version) 属性的替代。                                                                                                                                                                                                                                                                                  |
@@ -124,7 +124,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称             | 类型    | 示例      | 描述                                                                                                                                                                          |
 | ---------------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| IsAnonymousUser  | boolean | true         | 指定用户是否通过主机进行身份验证。对于未经身份验证的用户，主机应始终将其设置为 *true*，以便客户端知道用户是匿名用户。 |
+| IsAnonymousUser  | boolean | true         | 用户是否通过主机进行身份验证。对于未经身份验证的用户，主机应始终将其设置为 *true*，以便客户端知道用户是匿名用户。 |
 | UserFriendlyName | string  | "John Smith" | 用户的名称，适合在 UI 中显示。                                                                                                                                 |
 | UserId           | string  | "uid-1"      | 唯一标识当前访问文件的用户的值。                                                                                                                  |
 
@@ -140,11 +140,11 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称                    | 类型    | 示例 | 描述                                                                                                                                                                                                                                                                                                              |
 | ----------------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ReadOnly                | boolean | true    | 指定当前用户是否无法更改文件。                                                                                                                                                                                                                                                               |
-| UserCanNotWriteRelative | boolean | false   | 指定用户是否具有在 WOPI 服务器上创建新文件的足够权限。**true** 值表示此用户在当前文件上执行 [PutRelativeFile](./putrelativefile.md) 将失败。默认情况下，此参数为 **false**，并执行 *PutRelativeFile* 操作。 |
-| UserCanRename           | boolean | true    | 指定用户是否有权重命名当前文件。                                                                                                                                                                                                                                                        |
-| UserCanReview           | boolean | true    | 指定用户是否有权查看当前文件。                                                                                                                                                                                                                                                        |
-| UserCanWrite            | boolean | true    | 指定用户是否有权更改文件。                                                                                                                                                                                                                                                                 |
+| ReadOnly                | boolean | true    | 当前用户是否无法更改文件。                                                                                                                                                                                                                                                               |
+| UserCanNotWriteRelative | boolean | false   | 用户是否具有在 WOPI 服务器上创建新文件的足够权限。**true** 值表示此用户在当前文件上执行 [PutRelativeFile](./putrelativefile.md) 将失败。默认情况下，此参数为 **false**，并执行 *PutRelativeFile* 操作。 |
+| UserCanRename           | boolean | true    | 用户是否有权重命名当前文件。                                                                                                                                                                                                                                                        |
+| UserCanReview           | boolean | true    | 用户是否有权查看当前文件。                                                                                                                                                                                                                                                        |
+| UserCanWrite            | boolean | true    | 用户是否有权更改文件。                                                                                                                                                                                                                                                                 |
 
 ```mdx-code-block
 </APITable>
@@ -158,10 +158,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称              | 类型    | 示例 | 描述                                                                                                                                       |
 | ----------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SupportsLocks     | boolean | true    | 指定主机是否支持 [Lock](./lock.md)、[Unlock](./unlock.md) 和 [RefreshLock](./refreshlock.md) 操作。 |
-| SupportsRename    | boolean | true    | 指定 WOPI 服务器是否支持重命名权限。                                                                                    |
-| SupportsReviewing | boolean | true    | 指定主机是否支持查看权限。                                                                                             |
-| SupportsUpdate    | boolean | true    | 指定主机是否支持 [PutFile](./putfile.md) 和 [PutRelativeFile](./putrelativefile.md) 操作。                  |
+| SupportsLocks     | boolean | true    | 主机是否支持 [Lock](./lock.md)、[Unlock](./unlock.md) 和 [RefreshLock](./refreshlock.md) 操作。 |
+| SupportsRename    | boolean | true    | WOPI 服务器是否支持重命名权限。                                                                                    |
+| SupportsReviewing | boolean | true    | 主机是否支持查看权限。                                                                                             |
+| SupportsUpdate    | boolean | true    | 主机是否支持 [PutFile](./putfile.md) 和 [PutRelativeFile](./putrelativefile.md) 操作。                  |
 
 ```mdx-code-block
 </APITable>
@@ -175,8 +175,22 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 名称                    | 类型    | 示例 | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------------------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| EnableInsertRemoteImage | boolean | true    | 指定是否启用调用 [UI\_InsertGraphic](../postmessage.md#UI_InsertGraphic) 消息的菜单项和工具栏项。此属性用于显示用户界面元素（例如，对话框），允许用户从集成中选择图像。该集成应该提供一个可下载一次的临时 URL，并通过 [Action\_InsertGraphic](../postmessage.md#Action_InsertGraphic) 消息将其返回，并将 *Values* 设置为临时 URL。 |
-| HidePrintOption         | boolean | false   | 指定 WOPI 服务器是否隐藏 UI 中文件菜单栏的打印选项。                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| EnableInsertRemoteImage | boolean | true    | 是否启用调用 [UI\_InsertGraphic](../postmessage.md#UI_InsertGraphic) 消息的菜单项和工具栏项。此属性用于显示用户界面元素（例如，对话框），允许用户从集成中选择图像。该集成应该提供一个可下载一次的临时 URL，并通过 [Action\_InsertGraphic](../postmessage.md#Action_InsertGraphic) 消息将其返回，并将 *Values* 设置为临时 URL。 |
+| HidePrintOption         | boolean | false   | WOPI 服务器是否隐藏 UI 中文件菜单栏的打印选项。                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+```mdx-code-block
+</APITable>
+```
+
+## Collabora 属性
+
+```mdx-code-block
+<APITable>
+```
+
+| 名称               | 类型    | 示例 | 描述                                             |
+|--------------------|---------|---------|------------------------------------------------------|
+| UserCanOnlyComment | boolean | true    | 用户是否只能向文档添加评论。 |
 
 ```mdx-code-block
 </APITable>

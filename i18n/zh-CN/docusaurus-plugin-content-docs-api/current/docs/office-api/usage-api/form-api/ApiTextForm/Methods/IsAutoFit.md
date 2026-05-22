@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例检查文本字段内容是否自动适应。
+检查文档中的文本字段是否自动调整其内容大小。
 
 ```javascript editor-forms
-// How to know whether the first text form from this document is autofit.
+// How do I find out if a text field is set to shrink text to fit in a document?
 
-// Get the boolean that represents the autofit property of the text form.
+// Confirm the auto-fit setting on a form field before adjusting its layout in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

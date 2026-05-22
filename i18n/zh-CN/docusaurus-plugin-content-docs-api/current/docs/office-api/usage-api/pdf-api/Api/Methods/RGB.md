@@ -24,9 +24,13 @@ expression.RGB(r, g, b);
 
 ## 示例
 
-此示例展示如何创建 RGB 格式的颜色并将其用作形状填充。
+在 PDF 中使用红、绿、蓝值创建颜色。
 
 ```javascript editor-pdf
+// How do I define a custom color in a PDF?
+
+// Set a shape's fill color using RGB values in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -36,5 +40,4 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
-
 ```

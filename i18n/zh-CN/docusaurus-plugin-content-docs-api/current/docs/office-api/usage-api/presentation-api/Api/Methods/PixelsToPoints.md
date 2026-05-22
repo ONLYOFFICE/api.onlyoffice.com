@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将像素转换为磅。
+在演示文稿中将像素转换为磅。
 
 ```javascript editor-pptx
+// Use the Api object to convert measurement units.
+
+// Display the conversion result in a shape on the slide.
+
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

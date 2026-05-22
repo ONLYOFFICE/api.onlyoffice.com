@@ -22,12 +22,12 @@ expression.Insert(shift);
 
 ## 示例
 
-此示例将单元格或单元格范围插入工作表或宏表，并移动其他单元格以腾出空间。
+在电子表格中添加新单元格或范围并将现有单元格推到一边腾出空间。
 
 ```javascript editor-xlsx
-// How to insert a range or a cell into a worksheet.
+// How do I insert a blank cell into a filled area and shift the surrounding data in a spreadsheet?
 
-// Insert a range or a cell into a worksheet specifying its shift direction.
+// Make space for new data by inserting a cell and choosing which direction the neighbors move in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B4").SetValue("1");
@@ -36,5 +36,4 @@ worksheet.GetRange("D4").SetValue("3");
 worksheet.GetRange("C5").SetValue("5");
 let range = worksheet.GetRange("C4");
 range.Insert("down");
-
 ```

@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the price per $100 face value for a Treasury bill.
+Return the price per $100 face value for a Treasury bill in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the price per $100 face value for a Treasury bill.
+// Calculate the price based on Treasury bill settlement, maturity, and discount rate.
 
-// Use a function to calculate the price per $100 face value.
+// Apply the TBILLPRICE function with date and discount parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -24,12 +24,12 @@ expression.SetColumnWidth(nWidth);
 
 ## 示例
 
-此示例设置范围内所有列的宽度。
+设置电子表格中范围内列的宽度。
 
 ```javascript editor-xlsx
-// How to make a cell column wider.
+// How do I make a column wider or narrower in a spreadsheet?
 
-// Get a range and set its column width.
+// Resize every column covered by a range to a specific width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetColumnWidth(20);

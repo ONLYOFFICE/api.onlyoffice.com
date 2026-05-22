@@ -1,0 +1,24 @@
+# Fill
+
+Sets the fill formatting properties to the current graphic object.
+
+Inherited from [ApiDrawing.Fill](../../ApiDrawing/Methods/Fill.md).
+
+## Example
+
+Apply a gradient fill to a shape already placed on a sheet in a spreadsheet.
+
+```javascript editor-xlsx
+// How do I change the background of a shape to a radial gradient in a spreadsheet?
+
+// Replace a solid fill with a smooth color blend across a shape in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = worksheet.AddShape("cube", 90 * 36000, 27 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+fill = Api.CreateRadialGradientFill([gs1, gs2]);
+drawing.Fill(fill);
+```

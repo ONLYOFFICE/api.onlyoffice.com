@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取当前工作簿的关键字字符串。
+读取电子表格工作簿属性中存储的关键词。
 
 ```javascript editor-xlsx
+// How do I find the search keywords associated with a workbook in a spreadsheet?
+
+// Extract and display the tag words saved with the workbook in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```

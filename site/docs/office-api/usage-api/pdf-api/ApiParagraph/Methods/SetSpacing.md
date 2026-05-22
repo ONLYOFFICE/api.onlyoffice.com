@@ -22,9 +22,13 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-This example sets the text spacing measured in twentieths of a point.
+Adjust the distance between characters in a PDF.
 
 ```javascript editor-pdf
+// How do I change the spacing between letters in text in a PDF?
+
+// Modify character distance to make text tighter or looser in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the text spacing set to 5 points.');
 paragraph.SetSpacing(60);
 page.AddObject(shape);
-
 ```

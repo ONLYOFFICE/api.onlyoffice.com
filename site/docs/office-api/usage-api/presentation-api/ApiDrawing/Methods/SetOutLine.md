@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the outline properties to the specified graphic object.
+Add a border to a shape on a slide in a presentation.
 
 ```javascript editor-pptx
-// How to outline the drawing with the stroke.
+// How do I add an outline to a shape in a presentation?
 
-// Set the borders of the shape.
+// Create a shape and apply a colored stroke as its border in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,5 +38,4 @@ drawing2.SetPosition(608400, 3267200);
 let stroke2 = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
 drawing2.SetOutLine(stroke2);
 slide.AddObject(drawing2);
-
 ```

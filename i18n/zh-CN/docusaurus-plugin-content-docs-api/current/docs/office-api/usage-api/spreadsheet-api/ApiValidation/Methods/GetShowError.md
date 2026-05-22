@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例获取是否显示错误消息。
+检查电子表格中已验证的单元格是否开启了错误警报。
 
 ```javascript editor-xlsx
-// How to check if validation shows an error message.
+// How do I find out if an error message appears when someone enters a wrong value in a spreadsheet?
 
-// Get the ShowError setting.
+// Confirm that invalid entries will trigger a visible warning in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -34,5 +34,4 @@ validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
 validation.SetShowError(true);
 let showError = validation.GetShowError();
 worksheet.GetRange("B1").SetValue("Show error: " + showError);
-
 ```

@@ -1,7 +1,6 @@
 # ApiSchemeColor
 
-Represents the ApiSchemeColor class.
-
+ApiSchemeColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
 
 ## Methods
 

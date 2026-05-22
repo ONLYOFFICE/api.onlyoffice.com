@@ -4,21 +4,21 @@ sidebar_position: -15
 
 # 审阅
 
-**审阅选项**允许您在不真正编辑文档的情况下查看文档、更改句子、短语和其他页面元素、更正拼写等。所有更改都将被记录并显示给创建文档的用户。
+审阅模式允许用户在不直接修改原始文本的情况下对文档提出修改建议。所有更改都会被跟踪，具有相应权限的用户可以接受或拒绝这些更改。本节介绍如何在集成中启用和配置审阅功能。
 
 ![审阅](/assets/images/editor/review.png)
 
 ## 审阅访问权限
 
-为了启用审阅选项，文档初始化的权限部分中的[审阅](../../usage-api/config/document/permissions.md#review)参数必须设置为 **true**。文档**状态栏**将包含**审阅**菜单选项。
+要启用审阅功能，请在编辑器初始化配置的 `document.permissions` 部分中将 [`review`](../../usage-api/config/document/permissions.md#review) 参数设置为 `true`。[`mode`](../../usage-api/config/editor/editor.md#mode) 参数必须设置为 `edit`——在 `view` 模式下审阅功能不可用。
 
-如果 *edit* 参数设置为 **true** 并且 *review* 参数也设置为 **true**，用户将能够编辑文档，接受或拒绝更改并切换到他/她自己的审阅模式。
+如果 `permissions.edit` 为 `true` 且 `permissions.review` 也为 `true`，用户可以编辑文档、接受或拒绝跟踪的更改，以及切换到审阅模式。
 
 ![审阅](/assets/images/editor/accept_reject.png)
 
-如果 *edit* 参数设置为 **false** 并且 *review* 参数设置为 **true**，则文档将仅可用于审阅。
+如果 `permissions.edit` 为 `false` 且 `permissions.review` 为 `true`，则文档仅可用于审阅。
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -31,36 +31,29 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-:::note
-请注意，仅当 [mode](../../usage-api/config/editor/editor.md#mode) 参数设置为 **edit** 时，文档编辑器才能使用文档审阅。
-:::
+## 基于组的审阅权限
 
-## 按组区分审阅权
+1. 通过在 `editorConfig` 部分的 [`user`](../../usage-api/config/editor/editor.md#user) 参数中添加 [`group`](../../usage-api/config/editor/editor.md#usergroup) 字段来指定用户所属的组（或用逗号分隔的多个组）。
 
-1. 通过在 editorConfig 部分的 [user](../../usage-api/config/editor/editor.md#user) 参数中添加字段 *group* 来指定用户所属的组（或用逗号分隔的多个组）。
+   ``` ts
+   const config = {
+     editorConfig: {
+       user: {
+         id: "78e1e841",
+         name: "John Smith",
+         group: "Group1,Group2",
+       },
+     },
+   };
 
-  ``` ts
-  const condig = {
-    editorConfig: {
-      user: [{
-        id: "78e1e841",
-        name: "John Smith",
-        group: "Group1,Group2",
-      },
-      {
-        id: "78e1e841",
-        name: "John Smith",
-        group: "Group1,Group2",
-      }],
-    },
-  };
+   const docEditor = new DocsAPI.DocEditor("placeholder", config);
+   ```
 
-  const docEditor = new DocsAPI.DocEditor("placeholder", config);
-  ```
+2. 使用编辑器初始化配置的 `document.permissions` 部分中的 [`reviewGroups`](../../usage-api/config/document/permissions.md#reviewgroups) 参数指定访问权限。
 
-2. 使用编辑器初始化的权限部分中的 [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) 参数指定访问权限。
-
-   > 如果在编辑器配置中指定了 **reviewGroups** 参数，则禁用查看所有更改的访问权限。否则，如果当前用户不属于任何组，他或她可以查看所有组的文档。
+   :::note
+   如果指定了 `reviewGroups`，用户只能审阅来自所列组的用户所做的更改。如果未指定该参数，用户可以审阅所有组的更改。
+   :::
 
    ``` ts
    const config = {
@@ -74,9 +67,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   *\["Group1", "Group2"]* 表示用户可以查看来自 *Group1* 和 *Group2* 的用户所做的更改。
+   `["Group1", "Group2"]` 表示用户可以审阅来自 Group1 和 Group2 的用户所做的更改。
 
-   [reviewGroups](../../usage-api/config/document/permissions.md#reviewgroups) 参数可以采用空组的值。这意味着用户可以查看不属于任何组的用户所做的更改（例如，在第三方编辑器中查看的文档）。
+   `reviewGroups` 数组中的空字符串匹配不属于任何组的用户（例如，在第三方编辑器中所做的更改）。
 
    ``` ts
    const config = {
@@ -90,4 +83,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   *\["Group2", ""]* 表示用户可以查看 *Group2* 中的用户和不属于任何组的用户所做的更改。
+   `["Group2", ""]` 表示用户可以审阅来自 Group2 的用户以及不属于任何组的用户所做的更改。

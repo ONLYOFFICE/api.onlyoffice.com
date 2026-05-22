@@ -20,12 +20,12 @@ expression.GetIndRight();
 
 ## 示例
 
-此示例展示如何获取段落右侧缩进。
+检查演示文稿中段落的右边距。
 
 ```javascript editor-pptx
-// How to return a right side identation of a paragraph property.
+// How do I read the right indentation value from a paragraph in a presentation?
 
-// Return a right side indentation of a text property from the slide.
+// Retrieve the distance between the right edge and the paragraph text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ const indRight = paraPr.GetIndRight();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Right indent: " + indRight);
 docContent.Push(paragraph);
-
 ```

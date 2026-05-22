@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## 示例
 
-此示例创建用于不同类型渐变的渐变色标。
+在电子表格中沿渐变的特定位置设置颜色锚点。
 
 ```javascript editor-xlsx
-// How to create a gradient background using gradient stop.
+// How do I define where one color ends and another begins inside a gradient fill in a spreadsheet?
 
-// Create a shape with a gradient background using gradient stop.
+// Control a gradient's color transition by placing a color marker at a chosen position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

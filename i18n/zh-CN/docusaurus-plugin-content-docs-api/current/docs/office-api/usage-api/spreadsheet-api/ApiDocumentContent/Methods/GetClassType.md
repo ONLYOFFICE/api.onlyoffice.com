@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+识别电子表格中附加到形状的文本内容对象的类型名称。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiDocumentContent.
+// How do I find out what kind of content object a shape's text area returns in a spreadsheet?
 
-// Get a class type of ApiDocumentContent and display it in the worksheet.
+// Confirm the content category of a shape by reading its type label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

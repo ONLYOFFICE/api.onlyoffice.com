@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取数据透视表标题。
+读取电子表格中数据透视表的标题。
 
 ```javascript editor-xlsx
-// How to get table title.
+// How do I find out what a pivot table is named in a spreadsheet?
 
-// Create a pivot table, add data to it then get its title.
+// Retrieve the display name assigned to a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

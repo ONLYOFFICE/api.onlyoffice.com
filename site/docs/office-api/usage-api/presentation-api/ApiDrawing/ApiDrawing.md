@@ -2,7 +2,6 @@
 
 Represents the ApiDrawing class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -31,9 +30,9 @@ Represents the ApiDrawing class.
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
-| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | Sets a hyperlink to the current drawing object (shape or image). Pass null to remove the hyperlink. |
+| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | Sets a hyperlink to the current drawing object (shape or image). |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
 | [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | Sets the specified placeholder to the current drawing object. |
 | [SetPosX](./Methods/SetPosX.md) | boolean | Sets the x position of the drawing on the slide. |

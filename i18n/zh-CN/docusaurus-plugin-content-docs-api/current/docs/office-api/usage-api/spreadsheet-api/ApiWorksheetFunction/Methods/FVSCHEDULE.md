@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何在应用一系列复利利率后返回初始本金的未来值。
+在应用一系列复合利率后返回初始本金的未来值。
 
 ```javascript editor-xlsx
-// How to get the future value of an initial principal.
+// Apply multiple interest rates sequentially to calculate compound growth.
 
-// Use a function to get future value of an initial principal based on different parameters.
+// Determine final principal value using FVSCHEDULE with varying rates.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

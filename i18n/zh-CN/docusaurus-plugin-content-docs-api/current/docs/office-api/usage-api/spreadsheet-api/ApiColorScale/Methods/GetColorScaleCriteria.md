@@ -20,12 +20,12 @@ expression.GetColorScaleCriteria();
 
 ## 示例
 
-此示例演示如何获取色阶条件集合。
+访问定义电子表格中色阶规则的阈值标准列表。
 
 ```javascript editor-xlsx
-// How to access and display color scale criteria information.
+// How do I retrieve the individual breakpoints and colors that make up a color scale rule in a spreadsheet?
 
-// Get the collection of color scale criteria from a color scale conditional formatting rule.
+// Count the criteria entries of a color scale rule and display the total in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let criteria = colorScale.GetColorScaleCriteria();
 
 worksheet.GetRange("C1").SetValue("Criteria Count:");
 worksheet.GetRange("C2").SetValue(criteria ? criteria.length : 0);
-
 ```

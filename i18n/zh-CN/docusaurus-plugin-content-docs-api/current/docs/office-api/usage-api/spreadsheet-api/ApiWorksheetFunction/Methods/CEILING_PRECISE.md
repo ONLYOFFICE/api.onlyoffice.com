@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回向上舍入到最接近的整数或最接近的基数倍数的数字。无论数字的符号如何，都始终向上舍入。
+在电子表格中一致地向上舍入任何数字。
 
 ```javascript editor-xlsx
-// How to round a number up precisely.
+// What is the precise ceiling for positive and negative values in a spreadsheet?
 
-// Use function to round a negative or positive number up the nearest integer or to the nearest multiple of significance.
+// Always round toward positive infinity by a specified interval in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

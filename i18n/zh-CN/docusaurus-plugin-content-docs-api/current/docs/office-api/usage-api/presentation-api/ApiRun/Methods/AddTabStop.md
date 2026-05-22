@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例向文本块添加制表位。
+在演示文稿中为文本添加制表符间距。
 
 ```javascript editor-pptx
-// How to add a tab after a string in a text run.
+// How do I insert tabs in text in a presentation?
 
-// How to split a text with a tab.
+// Space out text by adding multiple tab stops in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ run.AddTabStop();
 run.AddText("This is the text which starts after the tab stops.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

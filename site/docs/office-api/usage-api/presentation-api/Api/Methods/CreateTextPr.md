@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to create a text properties and use it.
+Format text with custom style properties in a presentation.
 
 ```javascript editor-pptx
-// How to change text style, size and font.
+// How do I make text bold and change its size in a presentation?
 
-// Change text properties.
+// Apply bold formatting and set a custom font size for text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ run.SetTextPr(textPr);
 paragraph.AddElement(run);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

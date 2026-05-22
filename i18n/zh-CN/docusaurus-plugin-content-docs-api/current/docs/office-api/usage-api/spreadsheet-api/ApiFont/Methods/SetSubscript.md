@@ -23,12 +23,12 @@ expression.SetSubscript(isSubscript);
 
 ## 示例
 
-此示例设置指定字体的下标属性。
+在电子表格中将选定的文本字符降低到基线以下作为下标。
 
 ```javascript editor-xlsx
-// How to change a regular text to a subscript.
+// How do I format part of the text as subscript in a spreadsheet?
 
-// Get a font object of characters and make it subscript.
+// Shift a run of characters downward to create subscript notation in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const range = worksheet.GetRange("B1");
@@ -36,5 +36,4 @@ range.SetValue("This is just a sample text.");
 const characters = range.GetCharacters(9, 4);
 const font = characters.GetFont();
 font.SetSubscript(true);
-
 ```

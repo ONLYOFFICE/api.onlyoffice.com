@@ -20,10 +20,13 @@ expression.GetType();
 
 ## 示例
 
-分析演示文稿幻灯片上星形形状的路径命令。
+获取演示文稿中自定义形状路径的命令类型。
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I identify what kind of path command is used in a presentation?
+
+// Check shape geometry commands to find movement or drawing operations in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

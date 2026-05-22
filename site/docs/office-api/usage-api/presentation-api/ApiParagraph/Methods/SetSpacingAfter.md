@@ -4,33 +4,16 @@ Sets the spacing after the current paragraph. If the value of the isAfterAuto pa
 any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it 
 will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingAfter(nAfter, isAfterAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAfter | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing after the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isAfterAuto | Optional | boolean | false | The true value disables the spacing after the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Add space below a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set the size of a spacing after a text from a paragraph properties.
+// How do I set the distance between paragraphs in a presentation?
 
-// Change the size property of a spacing after a paragraph.
+// Configure the gap after a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +38,4 @@ const secondParagraph = Api.CreateParagraph();
 secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(secondParagraph);
 slide.AddObject(shape);
-
 ```

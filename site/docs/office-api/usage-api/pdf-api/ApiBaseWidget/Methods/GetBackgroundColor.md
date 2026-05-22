@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets field widget and displays it's background color.
+Read the background color of a form field widget in a PDF.
 
 ```javascript editor-pdf
+// How do I get the background color of a widget in a PDF?
+
+// Retrieve and display the fill color of a form field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -36,6 +40,4 @@ widgets.forEach(function(widget) {
 });
 let bgColor = widgets[0].GetBackgroundColor();
 textField.SetValue('Widgets background color is: ' + bgColor.R + ',' + bgColor.G + ',' + bgColor.B);
-
-
 ```

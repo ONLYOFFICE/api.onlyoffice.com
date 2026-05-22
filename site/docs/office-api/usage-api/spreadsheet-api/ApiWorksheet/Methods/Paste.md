@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to paste date from clipboard.
+Paste clipboard contents onto the active sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to paste a copied or cut data from the clipboard.
+// How do I paste copied or cut data from the clipboard in a spreadsheet?
 
-// Paste to the worksheet.
+// Insert clipboard data into the current worksheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.Paste();

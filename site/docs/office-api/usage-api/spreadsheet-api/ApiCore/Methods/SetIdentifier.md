@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the identifier of the workbook using the ApiCore.
+Assign a unique identifier to a workbook through its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I tag a workbook with a unique ID in a spreadsheet?
+
+// Label the workbook with a custom reference code stored in its metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Identifier: " + identifier);
-
 ```

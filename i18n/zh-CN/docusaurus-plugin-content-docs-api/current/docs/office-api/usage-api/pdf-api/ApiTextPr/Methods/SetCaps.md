@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-此示例指定文本块中的任何小写字符仅格式化显示为其对应的大写字母。
+在 PDF 中将小写字母显示为大写。
 
 ```javascript editor-pdf
-// How to make a text capitalized.
+// How do I convert text to all capitals in a PDF?
 
-// Get the text properties of the run and set its letters uppercase.
+// Apply uppercase formatting to all text characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape set to capital letters using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

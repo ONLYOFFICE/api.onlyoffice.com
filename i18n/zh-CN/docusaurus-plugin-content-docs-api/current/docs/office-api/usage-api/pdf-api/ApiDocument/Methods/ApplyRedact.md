@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例向第一页添加密文注释并应用密文处理。
+在 PDF 中永久隐藏敏感内容。
 
 ```javascript editor-pdf
+// Can I remove information so it cannot be recovered in a PDF?
+
+// Cover and protect confidential areas in a PDF.
+
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

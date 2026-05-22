@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回给定日期在一年中的 ISO 周数。
+获取电子表格中日期的 ISO 周数。
 
 ```javascript editor-xlsx
-// How to get the ISO week number.
+// How do I find the week number using the ISO standard in a spreadsheet?
 
-// Use a function to get an ISO week number in the year.
+// Use a function to convert dates to their corresponding ISO week numbers in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -35,5 +35,4 @@ let func = Api.WorksheetFunction;
 let ans = func.ISOWEEKNUM("9/1/2017"); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

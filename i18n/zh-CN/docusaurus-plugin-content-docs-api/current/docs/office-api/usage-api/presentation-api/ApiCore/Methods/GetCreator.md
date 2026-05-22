@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的创建者。
+设置和查看演示文稿中的作者名称。
 
 ```javascript editor-pptx
+// How do I find who created a presentation?
+
+// Read the creator information stored in a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCreator("John Smith");
@@ -38,5 +42,4 @@ paragraph.AddText("Creator: " + creator);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表图例的填充。
+在电子表格中为图表图例应用背景颜色。
 
 ```javascript editor-xlsx
-// How to fill the chart legend with the solid fill.
+// How do I fill the chart legend with a custom color in a spreadsheet?
 
-// Color the legend of the chart.
+// Give the legend a solid background to make it stand out from the chart area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

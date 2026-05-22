@@ -1,3 +1,8 @@
+---
+description: Retrieve a group and its members by ID via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

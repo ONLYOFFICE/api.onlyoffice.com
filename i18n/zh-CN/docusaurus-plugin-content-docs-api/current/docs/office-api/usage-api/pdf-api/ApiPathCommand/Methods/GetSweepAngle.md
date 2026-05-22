@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析页面形状中的弧线命令参数。
+查找 PDF 中弧的总旋转跨度。
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// How much does an arc curve turn in a PDF?
+
+// Measure the angular distance traveled by an arc in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

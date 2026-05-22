@@ -22,12 +22,12 @@ expression.SetShowAllItems(show);
 
 ## 示例
 
-此示例展示如何设置透视字段的显示所有项。
+强制电子表格中的数据透视表字段显示所有项目，包括没有数据的项目。
 
 ```javascript editor-xlsx
-// How to change a pivot field show all items value.
+// How do I make a pivot field show every item even when it has no matching data in a spreadsheet?
 
-// Create a pivot table, add data to it then set show all items of a specified pivot.
+// Keep empty categories visible so the pivot table layout stays consistent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

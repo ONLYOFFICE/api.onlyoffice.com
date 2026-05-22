@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的以 2 为底的对数。
+计算电子表格中复数的以 2 为底的对数。
 
 ```javascript editor-xlsx
-// How to get the logarithm of base 2 of a comlex numbers.
+// How do I find the logarithm with base 2 of a complex number in a spreadsheet?
 
-// Use a function to get the base 2 logarithm.
+// Get the base-2 logarithmic result for complex number operations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

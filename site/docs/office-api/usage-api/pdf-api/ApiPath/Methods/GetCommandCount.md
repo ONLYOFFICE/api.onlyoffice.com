@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Count the number of drawing steps that make up a shape's outline in a PDF.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// How many drawing steps does a shape have in a PDF?
+
+// Find out how many commands are used to create a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

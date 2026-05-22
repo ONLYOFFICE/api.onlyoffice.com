@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例将选择中的每个段落（或单元格中的文本）替换为字符串数组中的相应文本。
+用列表中的新值替换电子表格中每个选定单元格的文本。
 
 ```javascript editor-xlsx
-// Replace string values of the selected range with a new values.
+// How do I swap out the contents of multiple cells at once using a set of replacement values in a spreadsheet?
 
-// Replace cell string values with a new ones.
+// Overwrite selected cell values in bulk using a matching array of strings in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

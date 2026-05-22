@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例为带图像的字段设置图像。
+设置 PDF 文档中按钮控件的图像。
 
 ```javascript editor-pdf
+// Assign an image resource to an image field with normal state.
+
+// Add the image field to a PDF page.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let imageField = Api.CreateImageField([10, 10, 100, 100]);

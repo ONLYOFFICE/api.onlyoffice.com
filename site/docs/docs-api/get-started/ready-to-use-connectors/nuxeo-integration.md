@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Nuxeo for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/nuxeo.svg
 ---
@@ -36,7 +38,7 @@ Install directly from [Nuxeo Marketplace](https://connect.nuxeo.com/nuxeo/site/m
 
 **Option 2**. [nuxeoctl](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/)
 
-``` sh
+```sh
 nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip
 ```
 

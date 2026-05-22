@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to change the rank value for top 10 condition.
+Adjust how many top or bottom values a conditional formatting rule highlights in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the number of top or bottom values to highlight in the condition.
+// How do I choose the exact number of leading values to mark with a formatting rule in a spreadsheet?
 
-// Change the rank value for the top 10 rule.
+// Narrow the spotlight to only the top 2 scores by updating the rank threshold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -44,5 +44,4 @@ let top10Condition = formatConditions.AddTop10();
 worksheet.GetRange("B1").SetValue("Before: Top 10 values");
 top10Condition.SetRank(2);
 worksheet.GetRange("B2").SetValue("After: Top 2 values");
-
 ```

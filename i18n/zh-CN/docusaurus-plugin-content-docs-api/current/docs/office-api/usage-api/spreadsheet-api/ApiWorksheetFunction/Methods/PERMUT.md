@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回可从对象总数中选择的给定数量对象的排列数。
+计算电子表格中排列一组对象的方式数。
 
 ```javascript editor-xlsx
-// How to return the number of permutations for a given number of objects.
+// How do I find the number of arrangements for selected items in a spreadsheet?
 
-// Use a function to claculate the number of permutations.
+// Determine the count of unique permutations from a pool of distinct objects in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

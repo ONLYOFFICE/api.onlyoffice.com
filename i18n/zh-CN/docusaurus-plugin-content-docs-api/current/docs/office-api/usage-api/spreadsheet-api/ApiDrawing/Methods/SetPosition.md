@@ -27,12 +27,12 @@ expression.SetPosition(nFromCol, nColOffset, nFromRow, nRowOffset);
 
 ## 示例
 
-此示例更改绘图对象的位置。
+在电子表格中将绘图放置在相对于单元格的特定位置。
 
 ```javascript editor-xlsx
-// How to change the position of the drawing on the worksheet.
+// How do I control exactly where a drawing appears in a spreadsheet?
 
-// Move a drawing by setting the position.
+// Reposition a shape by anchoring it to a chosen cell column and row in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -14,7 +14,7 @@ expression.SetSeriaName(sNameRange, nSeria);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sNameRange | 必需 | string |  | 系列名称。可以是单元格范围或普通文本。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列，「Example series」。 |
+| sNameRange | 必需 | string |  | 系列名称。可以是单元格范围或普通文本。例如： |
 | nSeria | 必需 | number |  | 图表系列的索引。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例设置指定系列的名称。
+重命名电子表格中图表图例中显示的数据系列。
 
 ```javascript editor-xlsx
-// How to name chart series.
+// How do I change the label of a particular chart series in a spreadsheet?
 
-// Set seria name for a chart.
+// Replace the default series title with a custom name to clarify the chart data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

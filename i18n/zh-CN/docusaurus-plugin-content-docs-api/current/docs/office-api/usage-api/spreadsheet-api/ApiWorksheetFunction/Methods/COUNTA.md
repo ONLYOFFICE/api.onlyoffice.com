@@ -14,7 +14,7 @@ expression.COUNTA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | string \| number \| boolean \| (string \| number \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个项目或区域用于计数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值、文本字符串、区域、名称或数组。 |
+| args | 必需 | string \| number \| boolean \| (string \| number \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个项或用于计数值的范围。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何计算区域中非空单元格的数量。
+计算电子表格中所有已占用的单元格，不论内容类型。
 
 ```javascript editor-xlsx
-// How to find a number of non-empty cells.
+// What is the total number of filled cells in a range in a spreadsheet?
 
-// Use function to get non-empty cells count.
+// Tally cells containing any data, whether text or numbers, in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let numbersArr = [45, 6, 8];

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何将二进制数转换为十进制数。
+在电子表格中将二进制表示法转换为标准十进制数字。
 
 ```javascript editor-xlsx
-// How to get a decimal representation of a binary number.
+// How do I change a binary code into the regular number system in a spreadsheet?
 
-// Use function to convert a binary to decimal.
+// Translate base-2 values to base-10 format for everyday calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-从演示文稿中的三次贝塞尔曲线提取控制点。
+获取演示文稿中曲线端点的 x 坐标。
 
 ```javascript editor-pptx
-// Displays all control point coordinates in a text shape.
+// How do I find the end position of a curve path in a presentation?
+
+// Read curve endpoints to verify bezier path geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

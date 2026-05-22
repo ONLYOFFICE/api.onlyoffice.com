@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例检查文本字段是否为多行。
+检查文档中的文本字段是否接受多行输入。
 
 ```javascript editor-forms
-// How to know whether the first text form from this document is multiline.
+// How do I find out if a form field allows line breaks and wrapping in a document?
 
-// Get the boolean that represents the multiline property of the text form.
+// Confirm that a text field supports more than one line of text in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

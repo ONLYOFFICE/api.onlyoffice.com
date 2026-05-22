@@ -24,9 +24,13 @@ expression.RGB(r, g, b);
 
 ## 示例
 
-此示例展示如何创建 RGB 格式的颜色并将其用作形状填充。
+在演示文稿中创建 RGB 格式的颜色并将其用作形状填充。
 
 ```javascript editor-pptx
+// Use Api.RGB to define colors for shape styling.
+
+// Display the shape with the specified color on a slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,5 +41,4 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

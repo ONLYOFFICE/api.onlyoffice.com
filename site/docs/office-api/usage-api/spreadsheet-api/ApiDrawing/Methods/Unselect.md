@@ -20,13 +20,12 @@ boolean
 
 ## Example
 
-This example unselects the current graphic object.
+Deselect a drawing while keeping other shapes selected in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to unselect drawing objects on the worksheet.
+// How do I remove a single drawing from the current selection in a spreadsheet?
 
-// Create three shapes, select all of them,
-// then unselect the second shape.
+// Drop one shape from a multi-object selection without affecting the rest in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -42,5 +41,4 @@ drawing1.Select(true);
 drawing2.Select();
 drawing3.Select();
 drawing2.Unselect();
-
 ```

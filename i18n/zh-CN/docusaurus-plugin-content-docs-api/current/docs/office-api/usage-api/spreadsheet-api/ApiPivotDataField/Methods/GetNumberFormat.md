@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取数据字段的数字格式。
+读取电子表格中应用于数据透视表数据字段的数字格式。
 
 ```javascript editor-xlsx
-// How to get a table element format.
+// How do I check the number format used by a data field in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's number format.
+// Inspect how values are displayed — such as currency or percentage — for a summarized field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

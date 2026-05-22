@@ -2,30 +2,16 @@
 
 返回段落行距规则。
 
-## 语法
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - 表示 [ApiParagraph](../ApiParagraph.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-"auto" \| "atLeast" \| "exact" \| undefined
+继承自 [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md)。
 
 ## 示例
 
-此示例展示如何获取段落行距值。
+读取电子表格中应用于段落的行距规则。
 
 ```javascript editor-xlsx
-// How to get spacing line value between sentences of a paragraph.
+// How do I find out whether a paragraph's line height is set to auto or a fixed rule in a spreadsheet?
 
-// Create a paragraph set spacing line between the sentences and retrieve the value.
+// Verify the spacing mode of a paragraph after setting its line height to confirm the rule type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

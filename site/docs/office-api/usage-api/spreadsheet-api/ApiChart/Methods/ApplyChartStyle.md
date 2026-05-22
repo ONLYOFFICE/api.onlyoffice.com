@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a style to the chart by style ID.
+Change the visual style of a chart using a predefined style number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to update visualization of a chart setting a new style by using its ID.
+// How do I give a chart a different look by picking one of the built-in styles in a spreadsheet?
 
-// Apply new style by its ID.
+// Refresh the appearance of a chart to match a preferred design theme in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

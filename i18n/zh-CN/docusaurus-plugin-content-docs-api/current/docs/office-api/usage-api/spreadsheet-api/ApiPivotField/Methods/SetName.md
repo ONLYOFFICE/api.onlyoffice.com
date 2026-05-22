@@ -22,12 +22,12 @@ expression.SetName(name);
 
 ## 示例
 
-此示例展示如何设置透视字段的名称。
+重命名透视字段以在电子表格中为其提供更清晰的自定义标签。
 
 ```javascript editor-xlsx
-// How to change a pivot field name.
+// How do I change the display name of a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then rename a specified pivot.
+// Replace a default field heading with a meaningful title that suits the report in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

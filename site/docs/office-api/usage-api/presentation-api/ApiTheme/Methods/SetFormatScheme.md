@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the format scheme to the current presentation theme.
+Apply a new format scheme to a presentation's theme.
 
 ```javascript editor-pptx
-// How to get a theme and set a new format scheme.
+// How do I change the formatting styles used throughout a presentation?
 
-// Create a new format scheme and apply it to the slide theme.
+// Create a custom format scheme and assign it to the theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -62,5 +62,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

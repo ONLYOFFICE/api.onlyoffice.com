@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all shapes from the current presentation.
+List all shapes in a presentation.
 
 ```javascript editor-pptx
+// How do I find every rectangle, circle, heart, or custom shape in a presentation?
+
+// Count and display shapes after removing master slides in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -52,5 +56,4 @@ const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const shapesCount = presentation.GetAllShapes().length;
 paragraph.AddText('Shapes: ' + shapesCount);
-
 ```

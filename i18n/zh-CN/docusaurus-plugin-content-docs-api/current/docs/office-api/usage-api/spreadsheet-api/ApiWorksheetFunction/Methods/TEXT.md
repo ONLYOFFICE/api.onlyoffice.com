@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-此示例演示如何将值转换为特定数字格式的文本。
+在电子表格中以特定数字格式将值转换为文本。
 
 ```javascript editor-xlsx
-// How to convert a value to text.
+// Format the number as a currency string with two decimal places.
 
-// Use a function to convert a value to text.
+// Apply the TEXT function with value and format code parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

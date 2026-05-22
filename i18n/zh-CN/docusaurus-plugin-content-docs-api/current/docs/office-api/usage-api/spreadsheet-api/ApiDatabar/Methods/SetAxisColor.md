@@ -22,12 +22,12 @@ expression.SetAxisColor(oColor);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的轴颜色。
+为电子表格中数据条的中心轴线应用自定义颜色。
 
 ```javascript editor-xlsx
-// How to change the axis color of a data bar.
+// How do I change the color of the axis that divides positive and negative data bars in a spreadsheet?
 
-// Set the axis color of a data bar conditional formatting rule.
+// Give the data bar axis a distinct color to make the zero line stand out in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ dataBar.SetAxisColor(axisColor);
 
 worksheet.GetRange("C3").SetValue("After Color:");
 worksheet.GetRange("C4").SetValue(dataBar.GetAxisColor() ? "Set" : "None");
-
 ```

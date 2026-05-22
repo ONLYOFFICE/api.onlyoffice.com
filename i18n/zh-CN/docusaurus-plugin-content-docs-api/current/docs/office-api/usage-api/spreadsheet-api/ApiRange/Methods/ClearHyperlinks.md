@@ -20,17 +20,16 @@ expression.ClearHyperlinks();
 
 ## 示例
 
-此示例清除范围中的所有超链接。
+从电子表格中的单元格范围移除所有超链接，同时保留显示的文本。
 
 ```javascript editor-xlsx
-// How to clear hyperlinks for a range.
+// How do I detach links from cells without deleting their text in a spreadsheet?
 
-// Get a range, clear hyperlinks and show the result.
+// Turn linked cells back into plain text by stripping away their URLs in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:B1").SetValue("http://example.com");
 let range = worksheet.GetRange("A1");
 range.ClearHyperlinks();
 worksheet.GetRange("A2").SetValue("Result is hyperlinks cleared for A1 cell.");
-
 ```

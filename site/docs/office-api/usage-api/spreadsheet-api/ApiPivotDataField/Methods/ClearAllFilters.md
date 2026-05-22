@@ -2,30 +2,16 @@
 
 Deletes all filters currently applied to the pivot field.
 
-## Syntax
-
-```javascript
-expression.ClearAllFilters();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.ClearAllFilters](../../ApiPivotField/Methods/ClearAllFilters.md).
 
 ## Example
 
-This example shows how to clear all filters from a pivot field.
+Remove every filter applied to a pivot table field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field filters.
+// How do I reset all filters on a pivot field to show its full data in a spreadsheet?
 
-// Create a pivot table, add data to it then delete all filters from a custom field.
+// Wipe out label, value, and manual filters at once to restore the unfiltered pivot view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the spacing after value of the current paragraph.
+Check the space below a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to get the size of a spacing after a text from a paragraph.
+// How do I read the spacing value after a paragraph in a presentation?
 
-// Return a property of the spacing size after a paragraph.
+// Retrieve the distance between the end of a paragraph and the next element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

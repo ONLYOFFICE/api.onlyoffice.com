@@ -22,9 +22,13 @@ expression.GetElement(pos);
 
 ## Example
 
-This example gets first element of rich content.
+Access a specific paragraph by position in formatted text in a PDF.
 
 ```javascript editor-pdf
+// How do I get a particular text element from rich content in a PDF?
+
+// Retrieve a single paragraph from a list of formatted text in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

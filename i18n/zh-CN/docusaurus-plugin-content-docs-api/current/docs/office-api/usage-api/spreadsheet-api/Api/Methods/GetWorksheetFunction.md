@@ -20,12 +20,12 @@ expression.GetWorksheetFunction();
 
 ## 示例
 
-此示例演示如何使用工作表函数对象使用内置函数。
+访问并运行电子表格中的内置计算函数。
 
 ```javascript editor-xlsx
-// How to use system functions in a spreadsheets.
+// How do I use built-in math and text functions in a spreadsheet?
 
-// Use built-in functions in a worksheet.
+// Apply a built-in function to a cell value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.GetWorksheetFunction();

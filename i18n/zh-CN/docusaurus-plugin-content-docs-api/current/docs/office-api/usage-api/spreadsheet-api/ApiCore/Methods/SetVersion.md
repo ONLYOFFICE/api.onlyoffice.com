@@ -22,9 +22,13 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-此示例演示如何设置工作簿的版本。
+设置电子表格核心属性中存储的文档版本。
 
 ```javascript editor-xlsx
+// How do I record a version number in the document metadata in a spreadsheet?
+
+// Store a custom version label alongside the file's built-in properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Version: " + version);
-
 ```

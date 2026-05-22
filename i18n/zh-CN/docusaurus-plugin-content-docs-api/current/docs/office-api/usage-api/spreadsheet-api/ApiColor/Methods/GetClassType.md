@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到表格中。
+检索电子表格中颜色对象的类类型。
 
 ```javascript editor-xlsx
-// How to get a color class type.
+// How do I find out what class type a color object belongs to in a spreadsheet?
 
-// Get an RGB color type.
+// Identify whether a color belongs to a specific class by reading its type label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let color = Api.CreateColorFromRGB(255, 111, 61);

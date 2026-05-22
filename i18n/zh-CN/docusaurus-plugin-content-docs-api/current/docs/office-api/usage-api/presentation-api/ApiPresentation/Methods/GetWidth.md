@@ -20,12 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-此示例演示如何获取以英制单位表示的演示文稿宽度。
+查找演示文稿的宽度。
 
 ```javascript editor-pptx
-// How to get a width of the presentation.
+// How do I check the width of a presentation?
 
-// Get a width of the ApiPresentation object.
+// Display the width measurement on a shape in the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 const width = presentation.GetWidth();
 paragraph.AddText("Width = " + width);
 slide.AddObject(shape);
-
 ```

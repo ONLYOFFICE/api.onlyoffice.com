@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+识别演示文稿中段落属性对象的类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiParaPr.
+// How do I determine the class type of paragraph properties in a presentation?
 
-// Retrieve class type of ApiParaPr object and insert it to the slide.
+// Get the class type from a paragraph's formatting properties and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("Class Type = " + classType);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

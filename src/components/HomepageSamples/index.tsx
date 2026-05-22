@@ -32,7 +32,7 @@ const HomepageSamples: FC<HomepageSamplesProps.Props> = ({
               />
             </div>
             <div className={styles.buttonWrapper}>
-              <Link className={styles.samplesButton} to="/samples/docs/docs-api/language-specific-examples/" >
+              <Link className={styles.samplesButton} to="/samples/" >
                 See all samples
               </Link>
             </div>

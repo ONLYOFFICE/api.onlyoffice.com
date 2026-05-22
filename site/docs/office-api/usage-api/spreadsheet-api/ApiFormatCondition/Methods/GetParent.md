@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the parent range of a conditional formatting rule.
+Retrieve the collection that owns a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I access the parent formatting collection that a specific rule belongs to in a spreadsheet?
+
+// Trace back from a formatting rule to its owning collection to manage all related conditions in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Sales Data');
@@ -38,5 +42,4 @@ condition.SetFillColor(Api.CreateColorFromRGB(200, 100, 100));
 const parentRange = condition.GetParent();
 worksheet.GetRange('C1').SetValue('Parent range:');
 worksheet.GetRange('C2').SetValue(parentRange.GetAddress());
-
 ```

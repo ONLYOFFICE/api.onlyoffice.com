@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取当前工作簿的名称（文件名）
+读取打开的工作簿的文件名并在电子表格的工作表上显示。
 
 ```javascript editor-xlsx
+// How do I find out what the current file is called in a spreadsheet?
+
+// Embed the workbook's filename inside a shape on the active sheet in a spreadsheet.
+
 const workbook = Api.GetActiveWorkbook();
 const workbookName = workbook.GetName();
 const worksheet = workbook.GetActiveSheet();
@@ -40,5 +44,4 @@ let shape = worksheet.AddShape(
 );
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Filename: ' + workbookName);
-
 ```

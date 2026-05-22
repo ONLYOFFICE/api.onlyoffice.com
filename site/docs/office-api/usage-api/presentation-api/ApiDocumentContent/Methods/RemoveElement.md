@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to remove an element.
+Remove a specific element from the content inside a shape in a presentation.
 
 ```javascript editor-pptx
-// How to remove an elements from the slide shape.
+// How do I delete an element by its position in a shape in a presentation?
 
-// Get a slide shape's content and remove an element from it using its index.
+// Access the shape's content and remove a single text or object element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ paragraph = Api.CreateParagraph();
 paragraph.AddText("This is the second paragraph. The first paragraph was removed from the document content.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

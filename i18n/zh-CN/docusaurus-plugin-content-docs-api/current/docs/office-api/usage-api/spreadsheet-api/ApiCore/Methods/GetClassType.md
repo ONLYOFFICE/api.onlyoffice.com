@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到工作表中。
+读取电子表格中文档属性对象的类型标签。
 
 ```javascript editor-xlsx
+// How do I find out what kind of object holds the document properties in a spreadsheet?
+
+// Identify the internal type of the core document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 const classType = core.GetClassType();
@@ -38,5 +42,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Class type: " + classType);
-
 ```

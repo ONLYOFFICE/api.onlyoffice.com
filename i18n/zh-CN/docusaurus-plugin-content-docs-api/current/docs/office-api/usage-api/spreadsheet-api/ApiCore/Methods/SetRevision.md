@@ -22,9 +22,13 @@ expression.SetRevision(sRevision);
 
 ## 示例
 
-此示例演示如何设置工作簿的修订版本。
+在电子表格工作簿的文档属性中存储修订标签。
 
 ```javascript editor-xlsx
+// How do I track the revision number of a workbook in a spreadsheet?
+
+// Mark the workbook with a version string so collaborators know which revision they are viewing in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Revision: " + revision);
-
 ```

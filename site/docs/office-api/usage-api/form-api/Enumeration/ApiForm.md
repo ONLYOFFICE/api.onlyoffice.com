@@ -14,11 +14,11 @@ Enumeration
 - [ApiPictureForm](../ApiPictureForm/ApiPictureForm.md)
 - [ApiDateForm](../ApiDateForm/ApiDateForm.md)
 - [ApiComplexForm](../ApiComplexForm/ApiComplexForm.md)
-
+- [ApiSignatureForm](../ApiSignatureForm/ApiSignatureForm.md)
 
 ## Example
 
-This example copies a text form.
+Copy a text form.
 
 ```javascript editor-forms
 // Get a form and create its copy. 

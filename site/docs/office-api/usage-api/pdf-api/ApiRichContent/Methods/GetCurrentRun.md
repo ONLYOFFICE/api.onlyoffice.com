@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets current paragraph from rich content.
+Access the text segment you are currently editing in a PDF.
 
 ```javascript editor-pdf
+// How do I get the text run I am working on in rich content in a PDF?
+
+// Retrieve the text segment being modified in formatted content in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

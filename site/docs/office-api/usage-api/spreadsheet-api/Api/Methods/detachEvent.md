@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example unsubscribes from the "onWorksheetChange" event.
+Stop listening for cell change notifications after they are no longer needed in a spreadsheet.
 
 ```javascript editor-xlsx
-// Detach from an event.
+// How do I unregister a previously attached change listener in a spreadsheet?
 
-// How to stop event handling.
+// Prevent a handler from firing on future edits by removing it from the event queue in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

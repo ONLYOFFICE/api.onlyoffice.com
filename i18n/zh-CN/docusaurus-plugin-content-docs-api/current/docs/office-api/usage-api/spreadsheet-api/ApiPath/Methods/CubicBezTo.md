@@ -27,10 +27,13 @@ expression.CubicBezTo(x1, y1, x2, y2, x3, y3);
 
 ## 示例
 
-使用不同的贝塞尔曲线和弧命令创建复杂的曲线形状。
+在电子表格中的自定义形状路径中绘制平滑的三次贝塞尔曲线段。
 
 ```javascript editor-xlsx
-// Combines multiple curve types in a single path.
+// How do I add a flowing S-curve to a custom shape outline in a spreadsheet?
+
+// Bend a path segment into a smooth curve using two control points and an endpoint in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

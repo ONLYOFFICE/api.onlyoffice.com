@@ -17,7 +17,7 @@ expression.NORMDIST(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将返回分布的值。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 分布的算术平均值。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 分布的标准差，一个正数。 |
-| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积分布函数。如果为 **false**，则函数返回概率质量函数。 |
+| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回标准正态累积分布（平均值为零，标准差为一）。
+计算电子表格中某值的正态分布概率。
 
 ```javascript editor-xlsx
-// How to calculate the standard normal cumulative distribution.
+// Find the cumulative probability in a distribution with specified mean and standard deviation in a spreadsheet.
 
-// Use a function to get the standard normal cumulative distribution.
+// Determine statistical likelihood using the normal distribution curve in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

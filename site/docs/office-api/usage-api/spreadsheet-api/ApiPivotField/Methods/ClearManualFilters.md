@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to clear manual filters from a pivot field.
+Remove manually selected item filters from a pivot table field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field manual filters.
+// How do I uncheck all manually hidden items in a pivot field to show everything again in a spreadsheet?
 
-// Create a pivot table, add data to it then delete manual filters from a custom field.
+// Restore all hand-picked item exclusions so the pivot field displays its full list of values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何获取批注的文本。
+获取演示文稿中批注的文本。
 
 ```javascript editor-pptx
-// How to get a raw text of a comment.
+// Extract the raw text content from a specific comment.
 
-// Get all comments from the presentation and the first one's text.
+// Add all comments to the presentation, then display the first comment's text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const text = arrComments[0].GetText();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's text: " + text);
-
 ```

@@ -20,10 +20,12 @@ number
 
 ## 示例
 
-如何返回行中的单元格数量。
+计算 PDF 中表格行中的单元格总数。
 
 ```javascript editor-pdf
-// Create a table, count its cells and display the number in the page.
+// How do I find out how many cells are in a row in a PDF?
+
+// Determine the cell count in your table row in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

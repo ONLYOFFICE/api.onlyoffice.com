@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置占位符索引。
+为演示文稿中的占位符分配位置索引。
 
 ```javascript editor-pptx
+// How do I change the index number of a placeholder in a presentation?
+
+// Set a placeholder's index and verify it was applied in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -49,5 +53,4 @@ slide.AddObject(shape);
 
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Placeholder index set to ' + placeholder.GetIndex());
-
 ```

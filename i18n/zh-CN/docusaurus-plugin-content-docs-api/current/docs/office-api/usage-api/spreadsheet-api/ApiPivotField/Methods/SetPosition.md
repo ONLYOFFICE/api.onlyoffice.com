@@ -23,12 +23,12 @@ expression.SetPosition(position);
 
 ## 示例
 
-此示例展示如何设置透视字段的位置。
+更改电子表格中透视字段在其区域内的顺序。
 
 ```javascript editor-xlsx
-// How to change a pivot field position.
+// How do I reorder pivot fields within the rows or columns section in a spreadsheet?
 
-// Create a pivot table, add data to it then change a position a specified pivot.
+// Shift a pivot field to a specific index to control how data groups are arranged in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,12 +60,6 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
-pivotWorksheet.GetRange('A12').SetValue('The Style field position will change soon');
-
 let pivotField = pivotTable.GetPivotFields('Style');
-
-setTimeout(function () {
-    pivotField.SetPosition(1);
-}, 5000);
+pivotField.SetPosition(1);
 ```

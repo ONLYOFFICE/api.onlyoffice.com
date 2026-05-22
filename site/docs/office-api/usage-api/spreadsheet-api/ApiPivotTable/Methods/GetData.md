@@ -14,7 +14,7 @@ expression.GetData(items);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| items | Required | string[] |  | Describes a single cell in the pivot table report. For example, "'Estimated Costs' Tables May", which shows the estimated costs for tables in May (Data field = Costs, Product = Tables, Month = May). |
+| items | Required | string[] |  | Describes a single cell in the pivot table report. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number \| null
 
 ## Example
 
-This example shows how to get data from a pivot table using names.
+Retrieve a specific value from a pivot table by row and column names in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a field data from a pivot table.
+// How do I look up a single summarized value inside a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get some data from it.
+// Pull the aggregated result for a chosen category combination and write it to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

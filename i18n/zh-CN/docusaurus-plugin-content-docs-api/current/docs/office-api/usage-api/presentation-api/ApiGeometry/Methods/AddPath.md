@@ -20,10 +20,13 @@ expression.AddPath();
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。
+创建自定义形状并将其添加到演示文稿的幻灯片。
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// Paths define the outline and visual structure of custom geometry shapes.
+
+// Add a path to a geometry and apply it to a shape.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

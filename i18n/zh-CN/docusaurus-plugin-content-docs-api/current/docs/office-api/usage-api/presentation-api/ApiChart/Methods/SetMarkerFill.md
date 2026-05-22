@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置指定图表系列中标记的填充。
+在演示文稿中为图表数据点标记应用背景颜色。
 
 ```javascript editor-pptx
-// How to set a fill to the marker.
+// How do I change the color of the data point symbols in a chart in a presentation?
 
-// Create a chart, set its properties and its marker color.
+// Set marker colors for different data series to make them visually distinct in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
-
 ```

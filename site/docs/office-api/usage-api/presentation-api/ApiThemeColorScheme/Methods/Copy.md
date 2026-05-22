@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the current theme color scheme.
+Duplicate a theme's color scheme in a presentation.
 
 ```javascript editor-pptx
-// How to create a copy of a color scheme.
+// How do I make a copy of a color scheme to reuse it elsewhere?
 
-// Get color scheme and create its copy.
+// Access a color scheme and create a duplicate copy in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -77,5 +77,4 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 const theme2 = Api.CreateTheme("New theme", master, copyColorScheme, formatScheme, fontScheme);
 slide2.ApplyTheme(theme2);
 slide2.AddObject(chart);
-
 ```

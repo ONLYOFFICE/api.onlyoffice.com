@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例演示如何获取自定义 XML 部件管理器的类类型。
+读取电子表格中 XML 存储管理器对象的类型标签。
 
 ```javascript editor-xlsx
-// How to get the class type of the XML parts manager.
+// How do I find out what type of object manages XML data in a spreadsheet?
 
-// Get the class type.
+// Confirm the category of the XML manager to handle it correctly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

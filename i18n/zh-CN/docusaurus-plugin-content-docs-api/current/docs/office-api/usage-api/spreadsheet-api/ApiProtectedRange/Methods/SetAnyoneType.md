@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例更改受保护区域中任何人的访问类型。
+设置适用于电子表格中受保护范围所有用户的默认访问级别。
 
 ```javascript editor-xlsx
-// How to set access type to the "can view" one.
+// How do I control what anyone without explicit permission can do with a locked range in a spreadsheet?
 
-// Make a protected range viewable for anyone.
+// Restrict or open a protected range to everyone by choosing a blanket access level in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");

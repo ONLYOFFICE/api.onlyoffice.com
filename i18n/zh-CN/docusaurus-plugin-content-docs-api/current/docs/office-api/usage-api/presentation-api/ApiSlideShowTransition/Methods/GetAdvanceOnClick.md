@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取单击时前进设置并显示。
+从过渡检索单击前进设置。
 
 ```javascript editor-pptx
+// Create a slide show transition with specific properties.
+
+// Get the advance on click value and display it on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -45,5 +49,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance On Click: ' + advanceOnClick);
 slide.AddObject(shape);
-
 ```

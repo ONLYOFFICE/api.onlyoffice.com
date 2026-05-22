@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the paragraph left side indentation.
+Set the left margin for a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set a left side indentation using a paragraph properties.
+// How do I indent text from the left side in a presentation?
 
-// Create a paragraph setting its left side indentation property.
+// Adjust the left indentation of a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.AddText("This indent is set by the paragraph style. No paragraph inlin
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 slide.AddObject(shape);
-
 ```

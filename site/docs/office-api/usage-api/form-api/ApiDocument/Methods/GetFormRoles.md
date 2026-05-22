@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get roles manager.
+Retrieve the list of user roles assigned to form fields in a document.
 
 ```javascript editor-forms
+// How do I see what roles have access to form fields in a document?
+
+// Access the role management system to view form permissions in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -32,5 +36,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddText(role);
     paragraph.AddLineBreak();
 });
-
 ```

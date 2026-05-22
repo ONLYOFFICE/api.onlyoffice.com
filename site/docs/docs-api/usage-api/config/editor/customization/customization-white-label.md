@@ -4,29 +4,31 @@ sidebar_label: White label
 
 # Customization - White label
 
-The customization section allows you to customize the editor interface according to your needs, as well as change the presence or absence of additional buttons, links, change logos and other details of the editor's owner.
+The customization section defines the editor customization parameters.
 
-On this page you will find the customization parameters available only for the [extended white label license](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api) of ONLYOFFICE Docs Developer. To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
+:::info
+The parameters on this page are available only for the extended white label license of [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api). To request a quote, please contact our sales team at [sales@onlyoffice.com](mailto:sales@onlyoffice.com).
+:::
 
 ## about
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **About** menu button is displayed or hidden. The default value is **true**.
+Whether to display the **About** menu button.
 
-**Example**: ``true``
+**Example**: `true`
 
 ## features.spellcheck.change
 
-`Type: boolean`
+**type:** `boolean`
 
-Defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types.
+Whether to display the spell checker setting. This setting is available in all editor types.
 
 :::note
 Other fields of the `features` object are available for the standard branding and are described [here](customization-standard-branding.md#features). Only the `features.spellcheck.change` field requires additional payment.
 :::
 
-:::note
+:::danger[Deprecated]
 Deprecated since version 9.0.4.
 :::
 
@@ -34,14 +36,14 @@ Deprecated since version 9.0.4.
 
 ## font
 
-`Type:  object`
+**type:** `object`
 
-Defines the font for the interface elements (buttons, tabs, etc.).
+The font for the interface elements (buttons, tabs, etc.).
 
 **Example**:
 
-``` ts
-const font = {
+```ts
+{
   name: "Arial",
   size: "11px",
 }
@@ -49,7 +51,7 @@ const font = {
 
 ### font.name
 
-`Type: string`
+**type:** `string`
 
 The font name.
 
@@ -57,7 +59,7 @@ The font name.
 
 ### font.size
 
-`Type: string`
+**type:** `string`
 
 The font size.
 
@@ -65,14 +67,14 @@ The font size.
 
 ## layout
 
-`Type:  object`
+**type:** `object`
 
-Defines the parameters that the user can use to hide the interface elements but not to disable features completely (for example, if this functionality is available from other elements such as context menu, or via hotkeys).
+The parameters that the user can use to hide the interface elements but not to disable features completely. The hidden features are still available from other elements such as the context menu or via hotkeys.
 
 **Example**:
 
-``` ts
-const layout = {
+```ts
+{
   header: {
     editMode: true,
     save: true,
@@ -118,14 +120,14 @@ const layout = {
 
 ### layout.header
 
-`Type: object`
+**type:** `object`
 
-Defines the editor header settings.
+The editor header settings.
 
 **Example**:
 
-``` ts
-const header = {
+```ts
+{
   editMode: true,
   save: true,
   user: true,
@@ -135,46 +137,46 @@ const header = {
 
 ### layout.header.editMode
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if a button for switching editor modes will be displayed in the header or not. The default value is **true**.
+Whether to display a button for switching editor modes in the header.
 
 **Example**: `true`
 
 ### layout.header.save
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Save** button in the editor header is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **false**.
+Whether to display the **Save** button in the editor header. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to `false`.
 
 **Example**: `true`
 
 ### layout.header.user
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the icon with the user's avatar/initials in the editor header is displayed or hidden. The default value is **true**.
+Whether to display the icon with the user's avatar/initials in the editor header.
 
 **Example**: `true`
 
 ### layout.header.users
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the button with the editing users is displayed or hidden. The default value is **true**.
+Whether to display the button with the editing users.
 
 **Example**: `true`
 
 ### layout.leftMenu
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the left menu settings. If this parameter is a boolean value, then it specifies whether the left menu will be displayed or hidden. The default value is **true**.
+The left menu settings. If set to `false`, the left menu is hidden.
 
 **Example**:
 
-``` ts
-const leftMenu = {
+```ts
+{
   mode: true,
   navigation: true,
   spellcheck: true,
@@ -183,60 +185,60 @@ const leftMenu = {
 
 ### layout.leftMenu.mode
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines the initial value of the left panel visibility - displayed or hidden. It is used for the **Left panel** menu option on the **View** tab. The default value is **true**.
+The initial value of the left panel visibility - displayed or hidden. It is used for the **Left panel** menu option on the **View** tab.
 
 **Example**: `true`
 
 ### layout.leftMenu.navigation
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
+Whether to display the **Navigation** button. This parameter will only be available for the document editor.
 
 **Example**: `true`
 
 ### layout.leftMenu.spellcheck
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Spellcheck** button is displayed or hidden. The default value is **true**. This parameter will only be available for the spreadsheet editor.
+Whether to display the **Spellcheck** button. This parameter will only be available for the spreadsheet editor.
 
 **Example**: `true`
 
 ### layout.rightMenu
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden. The default value is **true**.
+The right menu settings. If set to `false`, the right menu is hidden.
 
 **Example**:
 
-``` ts
-const rightMenu = {
+```ts
+{
   mode: true,
 }
 ```
 
 ### layout.rightMenu.mode
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines the initial value of the right panel visibility - displayed or hidden. It is used for the **Right panel** menu option on the **View** tab. The default value is **true**.
+The initial value of the right panel visibility - displayed or hidden. It is used for the **Right panel** menu option on the **View** tab.
 
 **Example**: `true`
 
 ### layout.statusBar
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the status bar settings. If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden. The default value is **true**.
+The status bar settings. If set to `false`, the status bar is hidden.
 
 **Example**:
 
-``` ts
-const statusBar = {
+```ts
+{
   actionStatus: true,
   docLang: true,
   textLang: true,
@@ -245,38 +247,38 @@ const statusBar = {
 
 ### layout.statusBar.actionStatus
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if an action status is displayed or hidden. The default value is **true**.
+Whether to display an action status.
 
 **Example**: `true`
 
 ### layout.statusBar.docLang
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if a button for choosing the document language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
+Whether to display a button for choosing the document language. This parameter will only be available for the document editor and the presentation editor.
 
 **Example**: `true`
 
 ### layout.statusBar.textLang
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if a button for choosing the text language is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor and the presentation editor.
+Whether to display a button for choosing the text language. This parameter will only be available for the document editor and the presentation editor.
 
 **Example**: `true`
 
 ### layout.toolbar
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the toolbar settings. If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden. The default value is **true**.
+The toolbar settings. If set to `false`, the toolbar is hidden.
 
 **Example**:
 
-``` ts
-const toolbar = {
+```ts
+{
   collaboration: {
     mailmerge: true,
   },
@@ -288,7 +290,13 @@ const toolbar = {
     settings: true,
   },
   home: {},
-  layout: true,
+  insert: {
+    file: true,
+    field: true,
+  },
+  layout: {
+    pagecolor: true,
+  },
   plugins: true,
   protect: true,
   references: true,
@@ -301,44 +309,44 @@ const toolbar = {
 
 ### layout.toolbar.collaboration
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the **Collaboration** tab settings. If this parameter is a boolean value, then it specifies whether the **Collaboration** tab will be displayed or hidden. The default value is **true**.
+The **Collaboration** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
-``` ts
-const collaboration = {
+```ts
+{
   mailmerge: true,
 }
 ```
 
 ### layout.toolbar.collaboration.mailmerge
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the button for choosing the mail merge base is displayed or hidden. The default value is **true**.
+Whether to display the button for choosing the mail merge base.
 
 **Example**: `true`
 
 ### layout.toolbar.draw
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Draw** tab is displayed or hidden. The default value is **true**.
+Whether to display the **Draw** tab.
 
 **Example**: `true`
 
 ### layout.toolbar.file
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the **File** tab settings. If this parameter is a boolean value, then it specifies whether the **File** tab will be displayed or hidden. The default value is **true**.
+The **File** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
-``` ts
-const file = {
+```ts
+{
   close: true,
   info: true,
   save: true,
@@ -348,119 +356,168 @@ const file = {
 
 ### layout.toolbar.file.close
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Close menu** option is displayed or hidden. The default value is **true**.
+Whether to display the **Close menu** option.
 
 **Example**: `true`
 
 ### layout.toolbar.file.info
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Document info** option is displayed or hidden. The default value is **true**.
+Whether to display the **Document info** option.
 
 **Example**: `true`
 
 ### layout.toolbar.file.save
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Save** option is displayed or hidden. The default value is **true**.
+Whether to display the **Save** option.
 
 **Example**: `true`
 
 ### layout.toolbar.file.settings
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Advanced settings** option is displayed or hidden. The default value is **true**.
+Whether to display the **Advanced settings** option.
 
 **Example**: `true`
 
 ### layout.toolbar.home
 
-`Type: object`
+**type:** `object`
 
-Defines the **Home** tab settings. This tab cannot be hidden.
+The **Home** tab settings. This tab cannot be hidden.
 
 **Example**: `{}`
 
 ### layout.toolbar.home.mailmerge
 
-`Type: boolean`
+**type:** `boolean`
 
-Defines if the button for choosing the mail merge base is displayed or hidden. This parameter is deprecated, please use the *toolbar.collaboration.mailmerge* parameter instead.
+Whether to display the button for choosing the mail merge base.
+
+:::danger[Deprecated]
+Please use the [toolbar.collaboration.mailmerge](#layouttoolbarcollaborationmailmerge) parameter instead.
+:::
+
+**Example**: `true`
+
+### layout.toolbar.insert
+
+**type:** `object | boolean` | **default:** `true`
+
+The **Insert** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the document editor.
+
+**Example**:
+
+```ts
+{
+  file: true,
+  field: true,
+}
+```
+
+### layout.toolbar.insert.field
+
+**type:** `boolean` | **default:** `true`
+
+Whether to display the **Field** button. This parameter will only be available for the document editor.
+
+**Example**: `true`
+
+### layout.toolbar.insert.file
+
+**type:** `boolean` | **default:** `true`
+
+Whether to display the **Text from File** button. This parameter will only be available for the document editor.
 
 **Example**: `true`
 
 ### layout.toolbar.layout
 
-`Type: boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines if the **Layout** tab is displayed or hidden. This parameter will only be available for the document editor and the spreadsheet editor. The default value is **true**.
+The **Layout** tab settings. If set to `false`, the tab is hidden. This parameter will only be available for the document editor and the spreadsheet editor.
+
+**Example**:
+
+```ts
+{
+  pagecolor: true,
+}
+```
+
+### layout.toolbar.layout.pagecolor
+
+**type:** `boolean` | **default:** `true`
+
+Whether to display the **Page Color** button. This parameter will only be available for the document editor.
 
 **Example**: `true`
 
 ### layout.toolbar.plugins
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Plugins** tab is displayed or hidden. The default value is **true**.
+Whether to display the **Plugins** tab.
 
 **Example**: `true`
 
 ### layout.toolbar.protect
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Protection** tab is displayed or hidden. The default value is **true**.
+Whether to display the **Protection** tab.
 
 **Example**: `true`
 
 ### layout.toolbar.references
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **References** tab is displayed or hidden. This parameter will only be available for the document editor. The default value is **true**.
+Whether to display the **References** tab. This parameter will only be available for the document editor.
 
 **Example**: `true`
 
 ### layout.toolbar.save
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Save** button on the toolbar is displayed or hidden. The default value is **true**. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to **true**.
+Whether to display the **Save** button on the toolbar. Please note that this setting is used when the [compactHeader](customization-standard-branding.md#compactheader) parameter is set to `true`.
 
 **Example**: `true`
 
 ### layout.toolbar.view
 
-`Type: object | boolean`
+**type:** `object | boolean` | **default:** `true`
 
-Defines the **View** tab settings. If this parameter is a boolean value, then it specifies whether the **View** tab will be displayed or hidden. The default value is **true**.
+The **View** tab settings. If set to `false`, the tab is hidden.
 
 **Example**:
 
-``` ts
-const view = {
+```ts
+{
   navigation: true,
 }
 ```
 
 ### layout.toolbar.view.navigation
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the **Navigation** button is displayed or hidden. The default value is **true**. This parameter will only be available for the document editor.
+Whether to display the **Navigation** button. This parameter will only be available for the document editor.
 
 **Example**: `true`
 
 ## leftMenu
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the left menu panel is displayed or hidden. The default value is **true**.
+Whether to display the left menu panel.
 
 :::danger[Deprecated]
 Starting from version 7.1, please use the [layout.leftMenu](#layoutleftmenu) parameter instead.
@@ -470,25 +527,29 @@ Starting from version 7.1, please use the [layout.leftMenu](#layoutleftmenu) par
 
 ## loaderLogo
 
-`Type: string`
+**type:** `string`
 
-Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
+The path to the image logo displayed while the document is being loaded. The image will be proportionally resized to the height of 160 pixels when displayed in the editors.
 
-**Example**: `https://example.com/loader-logo.png`
+:::note
+There are no special recommendations for this file, but it would be better if it were in .png format with transparent background.
+:::
+
+**Example**: `"https://example.com/loader-logo.png"`
 
 ## loaderName
 
-`Type: string`
+**type:** `string`
 
-Defines the text which will be displayed while the document is being loaded.
+The text displayed while the document is being loaded.
 
 **Example**: `"The document is loading, please wait..."`
 
 ## rightMenu
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the right menu panel is displayed or hidden. The default value is **true**.
+Whether to display the right menu panel.
 
 :::danger[Deprecated]
 Starting from version 7.1, please use the [layout.rightMenu](#layoutrightmenu) parameter instead.
@@ -498,9 +559,9 @@ Starting from version 7.1, please use the [layout.rightMenu](#layoutrightmenu) p
 
 ## statusBar
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the status bar is displayed or hidden. The default value is **true**.
+Whether to display the status bar.
 
 :::danger[Deprecated]
 Starting from version 7.1, please use the [layout.statusBar](#layoutstatusbar) parameter instead.
@@ -510,9 +571,9 @@ Starting from version 7.1, please use the [layout.statusBar](#layoutstatusbar) p
 
 ## toolbar
 
-`Type: boolean`
+**type:** `boolean` | **default:** `true`
 
-Defines if the top toolbar is displayed or hidden. The default value is **true**.
+Whether to display the top toolbar.
 
 :::danger[Deprecated]
 Starting from version 7.1, please use the [layout.toolbar](#layouttoolbar) parameter instead.
@@ -522,9 +583,11 @@ Starting from version 7.1, please use the [layout.toolbar](#layouttoolbar) param
 
 ## Example
 
-``` ts
+```ts
 const config = {
+  // ...
   editorConfig: {
+    // ...
     customization: {
       about: true,
       features: {

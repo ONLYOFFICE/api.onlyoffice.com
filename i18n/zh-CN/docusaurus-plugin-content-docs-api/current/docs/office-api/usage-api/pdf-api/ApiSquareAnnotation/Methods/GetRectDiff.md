@@ -20,9 +20,13 @@ expression.GetRectDiff();
 
 ## 示例
 
-此示例获取方形注释的矩形差异。
+读取 PDF 中方形注释周围的间距。
 
 ```javascript editor-pdf
+// How do I find the padding or margin of a square annotation in a PDF?
+
+// Check the distance from the annotation's edges to its borders in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

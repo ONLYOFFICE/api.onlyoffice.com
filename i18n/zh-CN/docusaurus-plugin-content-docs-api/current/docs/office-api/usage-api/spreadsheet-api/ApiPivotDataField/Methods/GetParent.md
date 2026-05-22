@@ -2,30 +2,16 @@
 
 返回当前字段的父对象。
 
-## 语法
-
-```javascript
-expression.GetParent();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+继承自 [ApiPivotField.GetParent](../../ApiPivotField/Methods/GetParent.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的父级。
+访问电子表格中拥有给定透视字段的数据透视表。
 
 ```javascript editor-xlsx
-// How to get a pivot field parent.
+// How do I get the pivot table a particular field belongs to in a spreadsheet?
 
-// Create a pivot table, add data to it then get a parent of a specified pivot field.
+// Navigate from a pivot field back to its parent table to perform further operations on the whole table.
 
 let worksheet = Api.GetActiveSheet();
 

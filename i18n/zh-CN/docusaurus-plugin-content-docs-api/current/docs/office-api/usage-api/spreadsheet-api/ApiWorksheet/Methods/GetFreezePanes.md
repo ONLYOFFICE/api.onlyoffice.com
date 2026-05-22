@@ -20,12 +20,12 @@ expression.GetFreezePanes();
 
 ## 示例
 
-此示例冻结第一列并将冻结的范围地址粘贴到表格中。
+读取冻结窗格区域并在电子表格的工作表上显示其地址。
 
 ```javascript editor-xlsx
-// How to get freezed panes.
+// How do I find out which rows or columns are frozen in a spreadsheet?
 
-// Get all freezed panes, its location and show it on the worksheet.
+// Check where the freeze boundary is and write its location to a cell in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

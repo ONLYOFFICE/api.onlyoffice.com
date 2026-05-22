@@ -20,12 +20,12 @@ expression.GetAllDrawings();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片版式中所有绘图对象的数组。
+将幻灯片布局中的所有绘图对象作为数组获取。
 
 ```javascript editor-pptx
-// How to get all drawings from the layout of presentation.
+// Drawings in layouts can be accessed and configured with placeholders.
 
-// Get all drawings from the presentation as an array.
+// Set a placeholder on the first drawing in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -43,5 +43,4 @@ layout.AddObject(drawing);
 const drawings = layout.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("picture");
 drawings[0].SetPlaceholder(placeholder);
-
 ```

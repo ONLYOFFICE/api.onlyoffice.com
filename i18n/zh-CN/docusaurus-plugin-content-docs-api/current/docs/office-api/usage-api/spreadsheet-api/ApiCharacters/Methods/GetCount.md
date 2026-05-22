@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何获取表示集合中对象数量的值。
+计算电子表格中单元格内选定文本范围中的字符数。
 
 ```javascript editor-xlsx
-// How to get collection objects count.
+// How do I find out how many characters are in a specific portion of a cell's text in a spreadsheet?
 
-// How to get array length.
+// Measure the length of a character selection taken from a cell value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

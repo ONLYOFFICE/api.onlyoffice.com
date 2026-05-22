@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example deletes the current slide from the presentation.
+Remove a slide from a presentation.
 
 ```javascript editor-pptx
-// How to delete a slide.
+// How do I delete a slide in a presentation?
 
-// Remove a slide from the presentation.
+// Add a new slide and then remove it from the presentation.
 
 const presentation = Api.GetPresentation();
 let slide = Api.CreateSlide();
@@ -38,5 +38,4 @@ presentation.AddSlide(slide);
 
 slide = presentation.GetSlideByIndex(0);
 slide.Delete();
-
 ```

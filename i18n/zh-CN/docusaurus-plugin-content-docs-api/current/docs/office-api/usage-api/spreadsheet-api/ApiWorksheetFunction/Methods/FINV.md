@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何计算（右尾）F 概率分布的反函数：如果 p = FDIST(x,...)，则 FINV(p,...) = x。
+在电子表格中计算 F 概率分布的逆函数。
 
 ```javascript editor-xlsx
-// How to get an inverse of the (right-tailed) F probability distribution.
+// How do I work backwards from a probability to find a value in a spreadsheet?
 
-// Use function to find out a F probability distribution.
+// Get the value that corresponds to a given F probability level in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

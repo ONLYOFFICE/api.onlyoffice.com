@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the bar color from a data bar conditional formatting rule.
+Read the fill color used for data bars in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the bar color of a data bar.
+// How do I find out what color is applied to data bars in a spreadsheet?
 
-// Get the bar color of a data bar conditional formatting rule.
+// Check the color of data bars to confirm their appearance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let barColor = dataBar.GetBarColor();
 
 worksheet.GetRange("C1").SetValue("Has Bar Color:");
 worksheet.GetRange("C2").SetValue(barColor ? "Yes" : "No");
-
 ```

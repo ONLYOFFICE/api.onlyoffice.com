@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的语言。
+设置和确定演示文稿的语言设置。
 
 ```javascript editor-pptx
+// How do I find the language used in a presentation?
+
+// Retrieve the language code defined for a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLanguage("en-US");
@@ -38,5 +42,4 @@ paragraph.AddText("Language: " + language);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

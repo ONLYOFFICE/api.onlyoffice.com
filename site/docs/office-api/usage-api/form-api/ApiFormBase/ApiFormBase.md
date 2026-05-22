@@ -2,7 +2,6 @@
 
 Represents the ApiFormBase class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -10,8 +9,8 @@ Represents the ApiFormBase class.
 | [Clear](./Methods/Clear.md) | boolean | Clears the current form. |
 | [Copy](./Methods/Copy.md) | [ApiForm](../Enumeration/ApiForm.md) | Copies the current form (copies with the shape if it exists). |
 | [Delete](./Methods/Delete.md) | boolean | Removes a form and its content. If keepContent is true, the content is not deleted. |
-| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../text-document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
-| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../text-document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
+| [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the background color of the current form. |
+| [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../../document-api/ApiColor/ApiColor.md) | Returns the border color of the current form. |
 | [GetClassType](./Methods/GetClassType.md) | "form" | Returns a type of the ApiFormBase class. |
 | [GetFormKey](./Methods/GetFormKey.md) | string | Returns the current form key. |
 | [GetFormType](./Methods/GetFormType.md) | [FormType](../Enumeration/FormType.md) | Returns a type of the current form. |
@@ -21,9 +20,11 @@ Represents the ApiFormBase class.
 | [GetRole](./Methods/GetRole.md) | string | Returns the role of the current form. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current form. |
 | [GetText](./Methods/GetText.md) | string | Returns the text from the current form. |
-| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../text-document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form. *Used if possible for this type of form* |
+| [GetTextPr](./Methods/GetTextPr.md) | [ApiTextPr](../../document-api/ApiTextPr/ApiTextPr.md) | Returns the text properties from the current form. |
 | [GetTipText](./Methods/GetTipText.md) | string | Returns the tip text of the current form. |
-| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../text-document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. The null value will be returned for the inline forms. |
+| [GetValue](./Methods/GetValue.md) | string \| boolean | Returns the current value of the form field. |
+| [GetWrapperShape](./Methods/GetWrapperShape.md) | [ApiShape](../../document-api/ApiShape/ApiShape.md) | Returns a shape in which the form is placed to control the position and size of the fixed size form frame. |
+| [IsFilled](./Methods/IsFilled.md) | boolean | Checks if the current form is filled. |
 | [IsFixed](./Methods/IsFixed.md) | boolean | Checks if the current form is fixed size. |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if the current form is required. |
 | [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | Places a cursor before/after the current form. |
@@ -31,11 +32,12 @@ Represents the ApiFormBase class.
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets the border color to the current form. |
 | [SetFormKey](./Methods/SetFormKey.md) | boolean | Sets a key to the current form. |
 | [SetLock](./Methods/SetLock.md) | boolean | Sets the lock state of the current form. |
-| [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form. *Can't be set to checkbox or radio button.* |
+| [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current form. |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Specifies if the current form should be required. |
 | [SetRole](./Methods/SetRole.md) | boolean | Sets the role to the current form. |
 | [SetTag](./Methods/SetTag.md) | boolean | Sets the tag attribute to the current form. |
-| [SetTextPr](./Methods/SetTextPr.md) | boolean | Sets the text properties to the current form. *Used if possible for this type of form* |
+| [SetTextPr](./Methods/SetTextPr.md) | boolean | Sets the text properties to the current form. |
 | [SetTipText](./Methods/SetTipText.md) | boolean | Sets the tip text to the current form. |
+| [SetValue](./Methods/SetValue.md) | boolean | Sets the value of the form field. |
 | [ToFixed](./Methods/ToFixed.md) | boolean | Converts the current form to a fixed size form. |
-| [ToInline](./Methods/ToInline.md) | boolean | Converts the current form to an inline form. *Picture form can't be converted to an inline form, it's always a fixed size object.* |
+| [ToInline](./Methods/ToInline.md) | boolean | Converts the current form to an inline form. |

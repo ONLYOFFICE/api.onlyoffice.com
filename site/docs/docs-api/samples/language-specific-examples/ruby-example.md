@@ -1,9 +1,10 @@
 ---
 sidebar_position: -4
 description: Integrate ONLYOFFICE Docs into a Ruby web application.
+tags: ["Docs", "Integration", "Ruby"]
 ---
 
-# Ruby example
+# Ruby integration
 
 ## Overview
 
@@ -32,14 +33,14 @@ To run the example using [Docker](https://www.docker.com/), you will need [Docke
 
 Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/ruby):
 
-``` sh
+```sh
 curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
 unzip Ruby.Example.zip
 ```
 
 Then open the example directory and [start containers](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L46):
 
-``` sh
+```sh
 cd "Ruby Example"
 make compose-prod
 ```
@@ -60,14 +61,14 @@ To run the example on your local machine, you will need [Ruby 3.2.2](https://www
 
 Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/ruby):
 
-``` sh
+```sh
 curl --output Ruby.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Ruby.Example.zip
 unzip Ruby.Example.zip
 ```
 
 Then open the example directory, [install dependencies](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L33), and [start the server](https://github.com/ONLYOFFICE/document-server-integration/blob/eaa06d1919ee92b72c945e14aa8d96871dd26879/web/documentserver-example/ruby/Makefile#L42):
 
-``` sh
+```sh
 cd "Ruby Example"
 make prod
 make server-prod

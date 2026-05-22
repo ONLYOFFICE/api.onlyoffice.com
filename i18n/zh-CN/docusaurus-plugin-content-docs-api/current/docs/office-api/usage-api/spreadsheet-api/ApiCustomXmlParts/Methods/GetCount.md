@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何获取 XML 管理器中自定义 XML 部件的数量。
+计算电子表格中工作簿中存储的 XML 块数量。
 
 ```javascript editor-xlsx
-// How to get the count of custom XML parts.
+// How do I find out how many embedded XML entries exist in a spreadsheet?
 
-// Get the count of XML parts.
+// Check the total number of saved XML blocks before iterating over them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

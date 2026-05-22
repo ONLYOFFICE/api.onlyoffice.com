@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the type of color scale conditional formatting rule.
+Read the category label that identifies what kind of conditional formatting rule is active in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to identify the type of conditional formatting rule.
+// How do I confirm that a formatting rule is a color scale and not another rule type in a spreadsheet?
 
-// Get the type of the color scale conditional formatting rule.
+// Verify the rule category assigned to a color gradient condition before processing it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let conditionType = colorScale.GetType();
 
 worksheet.GetRange("C1").SetValue("Type:");
 worksheet.GetRange("C2").SetValue(conditionType);
-
 ```

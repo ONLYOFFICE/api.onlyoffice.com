@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何获取数据库中与指定条件匹配的记录字段（列）中的最小数字。
+获取匹配指定条件的数据库列中的最小数。
 
 ```javascript editor-xlsx
-// How to get the minimum number from the database column that match the conditions you specify.
+// Find the minimum value among records meeting the given criteria.
 
-// Use function to get the minimum number from the database column that satisfies the conditions.
+// Use the DMIN function to retrieve the lowest value from a database field with conditions.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

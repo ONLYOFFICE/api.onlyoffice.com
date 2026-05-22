@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例展示如何垂直翻转绘图。
+在演示文稿中将幻灯片上的对象从上到下镜像。
 
 ```javascript editor-pptx
-// How to set the vertical flip property of the shape.
+// How do I flip a shape vertically in a presentation?
 
-// Create a drawing and flip it vertically.
+// Create a shape, reverse it vertically, and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,5 +43,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Drawing is flipped vertically: " + flip);
 slide.AddObject(drawing);
-
 ```

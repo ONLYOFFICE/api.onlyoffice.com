@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置字段控件的边框样式。
+在 PDF 中为字段控件应用边框样式。
 
 ```javascript editor-pdf
+// How do I set the border style for widgets in a PDF?
+
+// Change the appearance of widget borders with preset styles in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

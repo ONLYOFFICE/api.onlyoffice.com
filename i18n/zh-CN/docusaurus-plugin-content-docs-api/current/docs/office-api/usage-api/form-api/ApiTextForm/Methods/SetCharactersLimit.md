@@ -14,7 +14,7 @@ expression.SetCharactersLimit(nChars);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nChars | 必需 | number |  | 文本字段中的最大字符数。如果此参数等于 -1，则不设置限制。如果应用字符梳，则必须设置限制。此参数的最大值为 1000000。 |
+| nChars | 必需 | number |  | 文本字段中的最大字符数。如果此参数等于 -1，则不设置限制。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置文本字段的字符数限制。
+限制用户可以在文档中文本字段中输入的字符数。
 
 ```javascript editor-forms
-// How to specify the characters limit of the text form.
+// How do I cap the total number of characters allowed in a text field in a document?
 
-// Set the maximum number of characters that can be inserted to the text form.
+// Enforce a maximum input length to keep text field entries concise in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "cellWidth": 3, "multiLine": false, "autoFit": false});

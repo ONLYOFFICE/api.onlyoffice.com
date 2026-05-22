@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+确定演示文稿中颜色对象的数据类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiUniColor.
+// How do I find out what type of color object is being used in a presentation?
 
-// Retrieve class type of ApiUniColor object and insert it to the slide.
+// Get the class name identifier for a color object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

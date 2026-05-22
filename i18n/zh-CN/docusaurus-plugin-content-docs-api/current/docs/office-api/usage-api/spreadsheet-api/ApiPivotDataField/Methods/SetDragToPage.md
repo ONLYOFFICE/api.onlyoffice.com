@@ -2,32 +2,16 @@
 
 设置指定是否可以将指定字段拖动到页位置的设置。
 
-## 语法
-
-```javascript
-expression.SetDragToPage(flag);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | 必需 | boolean |  | 指定是否可以将指定字段拖动到页位置。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetDragToPage](../../ApiPivotField/Methods/SetDragToPage.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到页。
+控制电子表格中的透视字段是否可以拖动到筛选区域。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to page.
+// How do I prevent a pivot field from being moved to the page filter area in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to page of a specified pivot using boolean value.
+// Lock a pivot field so users cannot reposition it as a page filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

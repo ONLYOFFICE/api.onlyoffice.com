@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the shape associated with an animation effect.
+Get the shape associated with an animation effect in a presentation.
 
 ```javascript editor-pptx
+// Each animation effect is bound to a specific shape on the slide.
+
+// Retrieve the shape from an animation effect using GetShape() and display its type.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -53,5 +57,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Animated object type: ' + shapeType);
 slide.AddObject(infoShape);
-
 ```

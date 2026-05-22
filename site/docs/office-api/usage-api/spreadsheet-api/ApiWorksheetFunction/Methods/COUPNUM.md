@@ -25,12 +25,12 @@ number
 
 ## Example
 
-This example shows how to return the number of coupons payable between the settlement date and maturity date.
+Calculate the remaining coupon payments until maturity in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find the number of coupons payable between the settlement date and maturity date.
+// What is the count of interest payments you will receive in a spreadsheet?
 
-// Use function to get the number of coupons payable between the settlement date and maturity date.
+// Determine how many coupon periods remain from settlement to expiration in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

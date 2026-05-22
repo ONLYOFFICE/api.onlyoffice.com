@@ -29,12 +29,12 @@ number
 
 ## 示例
 
-此示例演示如何返回末期不规则证券的每 100 美元面值价格。
+计算电子表格中不规则最终付款期的证券价格。
 
 ```javascript editor-xlsx
-// How to get the price per $100 face value of a security.
+// How do I find the price of a bond with an odd last period in a spreadsheet?
 
-// Use a function to return the price per $100 face value of a security.
+// Determine the per-$100 value of a security when the final coupon period is irregular in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

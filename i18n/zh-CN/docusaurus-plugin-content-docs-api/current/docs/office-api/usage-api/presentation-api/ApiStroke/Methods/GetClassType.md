@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+识别演示文稿中边框线的类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiStroke.
+// How do I check what kind of object a border line is in a presentation?
 
-// Retrieve class type of ApiStroke object and insert it to the slide.
+// Read the class type from a stroke and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

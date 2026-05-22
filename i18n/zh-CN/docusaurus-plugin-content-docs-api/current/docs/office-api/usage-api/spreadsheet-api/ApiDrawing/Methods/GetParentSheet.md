@@ -20,12 +20,12 @@ expression.GetParentSheet();
 
 ## 示例
 
-此示例演示如何获取绘图的父工作表。
+检索电子表格中包含绘图的工作表。
 
 ```javascript editor-xlsx
-// How to know a parent sheet of a shape.
+// How do I find out which worksheet a drawing belongs to in a spreadsheet?
 
-// Get a shape's parent sheet and display it in the worksheet.
+// Identify the parent sheet of a shape and use its name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

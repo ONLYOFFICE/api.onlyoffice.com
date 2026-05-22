@@ -20,12 +20,12 @@ expression.GetFontSize();
 
 ## 示例
 
-此示例演示如何确定文本字体大小。
+从文本运行属性检索字体大小。
 
 ```javascript editor-pptx
-// How to know font size of a text run.
+// Create a shape with a text run and set a specific font size.
 
-// Get the text properties of the run and display its font size.
+// Get and display the font size used in the text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const fontSize = textPr.GetFontSize();
 paragraph.AddText("Font size: " + fontSize);
 docContent.Push(paragraph);
-
 ```

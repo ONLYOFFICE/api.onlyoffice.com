@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取单选按钮字段对象的类类型。
+识别 PDF 中单选按钮字段的对象类型。
 
 ```javascript editor-pdf
+// How do I determine the object type of a radio button field in a PDF?
+
+// Find the classification name for a radio button field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

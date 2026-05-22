@@ -20,10 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-如何获取 ApiDrawing 的类类型。
+检查 PDF 中对象的形状类型。
 
 ```javascript editor-pdf
-// Retrieve class type of ApiDrawing object and insert it to the page.
+// How do I identify the category of a drawing object in a PDF?
+
+// Determine the kind of object you're working with in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

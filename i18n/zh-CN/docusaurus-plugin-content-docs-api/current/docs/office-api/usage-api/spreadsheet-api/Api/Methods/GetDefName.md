@@ -22,12 +22,12 @@ expression.GetDefName(defName);
 
 ## 示例
 
-此示例演示如何根据范围名称获取 ApiName 对象。
+按标签查找命名范围并在电子表格中读取其名称。
 
 ```javascript editor-xlsx
-// How to work with named ranges in a spreadsheet using the API.
+// How do I find a named range using its label in a spreadsheet?
 
-// Get name of an object using a range name. 
+// Resolve a range label to its definition and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

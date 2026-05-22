@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to check if icon set uses percentile values.
+Find out whether an icon set rule uses percentile-based thresholds in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine if percentile values are used for icon set thresholds.
+// How do I check if an icon set rule measures thresholds as percentiles in a spreadsheet?
 
-// Check if the icon set rule uses percentile values for criteria.
+// Verify that the icon set rule distributes icons according to percentile values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -43,5 +43,4 @@ iconCondition.SetPercentileValues(true);
 
 let usesPercentiles = iconCondition.GetPercentileValues();
 worksheet.GetRange("B1").SetValue("Uses percentiles: " + usesPercentiles);
-
 ```

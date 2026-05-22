@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回累积二项分布大于或等于标准值的最小值。
+查找达到电子表格中目标概率所需的最小成功次数。
 
 ```javascript editor-xlsx
-// How to get a smallest value for which the cumulative binomial distribution >= criterion value.
+// What is the smallest count of wins needed to hit a certain probability level in a spreadsheet?
 
-// Use function to get a minimum value so that the cumulative binomial distribution >= criterion value.
+// Determine how many successful outcomes satisfy a probability target in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

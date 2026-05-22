@@ -22,12 +22,12 @@ expression.SetOutLine(oStroke);
 
 ## Example
 
-This example sets the text outline to the current text run.
+Add a border outline around text in a presentation.
 
 ```javascript editor-pptx
-// How to make a text outlined.
+// Can I add a stroke or border to text in a presentation?
 
-// Get the text properties of the run and outline it with a stroke.
+// Apply a stroke outline effect to the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

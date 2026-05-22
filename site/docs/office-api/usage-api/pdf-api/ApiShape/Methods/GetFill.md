@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets the fill properties from a shape and displays detailed information.
+Retrieve the fill properties from a shape in a PDF.
 
 ```javascript editor-pdf
-// Creates a shape with gradient fill, retrieves it and shows fill details.
+// What fill settings does a shape have in a PDF?
+
+// Get the color or gradient applied to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -39,5 +42,4 @@ let retrievedFill = shape.GetFill();
 if (retrievedFill) {
     paragraph.AddText("Fill type: " + retrievedFill.GetType());
 }
-
 ```

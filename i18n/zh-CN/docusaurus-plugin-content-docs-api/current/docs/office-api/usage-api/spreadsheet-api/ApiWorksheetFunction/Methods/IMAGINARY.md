@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的虚数系数。
+提取电子表格中复数的虚部。
 
 ```javascript editor-xlsx
-// How to get the imaginary part of the complex number.
+// How do I read the imaginary coefficient in a spreadsheet?
 
-// Use a function to get an imaginary coefficient of the complex number. 
+// Find the imaginary component of a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

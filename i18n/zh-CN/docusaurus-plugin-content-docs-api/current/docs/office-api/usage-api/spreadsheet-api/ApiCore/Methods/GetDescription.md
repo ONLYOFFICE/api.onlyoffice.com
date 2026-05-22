@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取当前工作簿的描述。
+读取电子表格工作簿属性中存储的描述。
 
 ```javascript editor-xlsx
+// How do I retrieve the text description of a workbook in a spreadsheet?
+
+// Extract and display the summary text saved with the workbook in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Description: " + description);
-
 ```

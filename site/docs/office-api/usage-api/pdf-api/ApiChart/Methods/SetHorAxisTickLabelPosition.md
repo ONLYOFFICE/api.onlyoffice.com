@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to change a position of tick label.
+Reposition the tick labels on the horizontal axis in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis tick label position.
+// How do I move axis numbers to the top or bottom of the chart in a PDF?
+
+// Place tick labels at the high position on the horizontal axis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

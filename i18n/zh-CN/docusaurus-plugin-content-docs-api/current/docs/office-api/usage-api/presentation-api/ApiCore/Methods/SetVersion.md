@@ -22,9 +22,13 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿的版本。
+为演示文稿存储版本号。
 
 ```javascript editor-pptx
+// How do I track the version of my presentation?
+
+// Write and retrieve the version identifier for a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetVersion("v9.0");
@@ -40,5 +44,4 @@ paragraph.AddText("Version: " + version);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

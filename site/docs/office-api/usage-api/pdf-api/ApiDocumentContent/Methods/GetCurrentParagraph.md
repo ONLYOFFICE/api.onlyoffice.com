@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the current paragraph from the document content.
+Access the paragraph that is currently active in a shape in a PDF.
 
 ```javascript editor-pdf
+// How do I find the paragraph being edited in a PDF?
+
+// Retrieve the most recent paragraph that was added to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,5 +48,4 @@ if (currentParagraph) {
   currentParagraph.AddText(' (Current paragraph detected!)');
 }
 page.AddObject(shape);
-
 ```

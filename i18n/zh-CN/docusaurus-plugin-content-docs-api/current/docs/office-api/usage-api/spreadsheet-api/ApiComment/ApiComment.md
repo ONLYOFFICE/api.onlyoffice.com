@@ -21,7 +21,7 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddReply](./Methods/AddReply.md) | 无 | 向批注添加回复。 |
-| [Delete](./Methods/Delete.md) | 无 | 删除 ApiComment 对象。 |
+| [Delete](./Methods/Delete.md) | boolean | 删除 ApiComment 对象。 |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | 返回批注作者的姓名。 |
 | [GetClassType](./Methods/GetClassType.md) | "comment" | 返回 ApiComment 类的类型。 |
 | [GetId](./Methods/GetId.md) | string | 返回当前批注 ID。 |

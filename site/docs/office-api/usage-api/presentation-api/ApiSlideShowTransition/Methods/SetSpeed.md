@@ -26,9 +26,13 @@ boolean
 
 ## Example
 
-This example sets the transition speed to 'slow'.
+Set the duration of a slide transition in a presentation.
 
 ```javascript editor-pptx
+// How do I change how fast a transition plays in a presentation?
+
+// Apply a specific transition speed to control animation timing in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -48,5 +52,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Speed is "slow" which is 1 second by default.');
 slide.AddObject(shape);
-
 ```

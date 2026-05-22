@@ -4,7 +4,7 @@ Axis-aligned point.
 
 ## Type
 
-Object
+object
 
 ## Properties
 

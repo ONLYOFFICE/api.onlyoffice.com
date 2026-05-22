@@ -18,22 +18,22 @@ Explore interactive examples showing real-world use cases:
 
 | Use case | Description |
 | -------- | ----------- |
-| [Working with comments](../../samples/external-access-to-the-document-editing/working-with-comments.md) | Collect and display all document comments in a custom interface. Add, remove, and navigate between comments from your own UI. |
-| [Managing review changes](../../samples/external-access-to-the-document-editing/working-with-review-changes.md) | Control the review process externally — accept or reject tracked changes and navigate between revisions from a custom panel. |
-| [Filling out forms](../../samples/external-access-to-the-document-editing/filling-out-the-form.md) | Auto-populate form fields with external data. Sync form values between your interface and the document in real-time. |
-| [Working with content controls](../../samples/external-access-to-the-document-editing/working-with-content-controls.md) | Add different types of content controls and inspect their properties from an external UI. |
+| [Working with comments](../../samples/automation-api/working-with-comments.md) | Collect and display all document comments in a custom interface. Add, remove, and navigate between comments from your own UI. |
+| [Managing review changes](../../samples/automation-api/working-with-review-changes.md) | Control the review process externally — accept or reject tracked changes and navigate between revisions from a custom panel. |
+| [Filling out forms](../../samples/automation-api/filling-out-the-form.md) | Auto-populate form fields with external data. Sync form values between your interface and the document in real-time. |
+| [Working with content controls](../../samples/automation-api/working-with-content-controls.md) | Add different types of content controls and inspect their properties from an external UI. |
 
 ## Getting started
 
 To start using Automation API, create a connector using the [createConnector](../methods.md#createconnector) method:
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 ```
 
 The connector provides methods to execute editor commands, listen to document events, and interact with the editor UI:
 
-``` ts
+```ts
 // Listen to document events
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log("Content changed:", obj);

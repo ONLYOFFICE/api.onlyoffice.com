@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何计算区域内满足给定条件的单元格数量。
+计算电子表格中匹配特定条件的单元格。
 
 ```javascript editor-xlsx
-// How to find a number of cells that satisfies some condition.
+// What is the total of entries that match your pattern in a spreadsheet?
 
-// Use function to get cells if a condition is met.
+// Find how many cells contain values that meet your requirement in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

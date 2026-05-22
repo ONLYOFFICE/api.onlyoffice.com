@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the year fraction representing the number of whole days between the start date and end date.
+Calculate the fraction of a year between two dates in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the year fraction.
+// How do I express the time period between two dates as a fraction of a year in a spreadsheet?
 
-// Use a function to calculate a year fraction.
+// Find the percentage of a year that spans between a start and end date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,5 +37,4 @@ let func = Api.WorksheetFunction;
 let ans = func.YEARFRAC("12/7/1981", "11/5/2018");
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

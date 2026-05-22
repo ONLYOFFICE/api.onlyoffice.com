@@ -20,9 +20,13 @@ expression.GetRect();
 
 ## 示例
 
-此示例创建新字段并获取其控件的矩形。
+获取 PDF 中表单字段控件的边界框尺寸。
 
 ```javascript editor-pdf
+// How do I find the size and position of a widget in a PDF?
+
+// Retrieve the rectangle boundaries of a form field widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

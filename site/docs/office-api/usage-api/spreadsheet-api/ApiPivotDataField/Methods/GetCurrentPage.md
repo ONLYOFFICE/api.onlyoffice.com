@@ -2,30 +2,16 @@
 
 Returns the current page which is displayed for the page field (valid only for page fields).
 
-## Syntax
-
-```javascript
-expression.GetCurrentPage();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string \| number
+Inherited from [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md).
 
 ## Example
 
-This example shows how to get a current page of a pivot field.
+Read the active page selection for a pivot filter field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field current page.
+// How do I find which page is currently selected for a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a current page of a specified pivot field.
+// Identify the active filter value shown in the page area of a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

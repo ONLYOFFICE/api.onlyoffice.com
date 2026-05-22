@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Find the class type of a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiShape.
+// How do I identify a shape's class type in a presentation?
 
-// Retrieve class type of ApiShape object and insert it to the slide.
+// Display the class identifier of a shape object in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -42,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 const classType = shape.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ expression.CreateNoFill();
 
 ## 示例
 
-此示例创建无填充并移除元素的填充。
+从形状移除背景填充，使其在电子表格中内部变为透明。
 
 ```javascript editor-xlsx
-// How to remove fill from the element.
+// How do I make a shape's background fully transparent by removing its fill in a spreadsheet?
 
-// Set no fill color for the element.
+// Clear any color or pattern from a shape's background to leave it see-through in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

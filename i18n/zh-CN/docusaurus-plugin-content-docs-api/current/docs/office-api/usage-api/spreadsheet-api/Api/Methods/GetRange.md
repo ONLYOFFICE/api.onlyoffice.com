@@ -22,12 +22,12 @@ expression.GetRange(sRange);
 
 ## 示例
 
-此示例演示如何根据范围引用获取 ApiRange 对象。
+按地址选择一组单元格并在电子表格中应用背景颜色。
 
 ```javascript editor-xlsx
-// How to get a range object using an address.
+// How do I target a specific block of cells using their address to change formatting in a spreadsheet?
 
-// Update a rabge knowing its cell address.
+// Highlight a defined cell area by providing its coordinates and setting a fill color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = Api.GetRange("A1:C1");

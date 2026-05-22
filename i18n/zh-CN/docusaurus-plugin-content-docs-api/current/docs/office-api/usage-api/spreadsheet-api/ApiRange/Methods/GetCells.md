@@ -23,15 +23,14 @@ expression.GetCells(row, col);
 
 ## 示例
 
-此示例演示如何获取表示指定范围中所有单元格或指定单元格的 Range 对象。
+通过行和列位置访问电子表格中范围内的特定单元格。
 
 ```javascript editor-xlsx
-// How to get range cells.
+// How do I pick out one cell from a larger range in a spreadsheet?
 
-// Get range cells, fill them with a color and display the result in the worksheet.
+// Target a single cell inside a multi-cell range and fill it with a highlight color.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C3");
 range.GetCells(2, 1).SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
-
 ```

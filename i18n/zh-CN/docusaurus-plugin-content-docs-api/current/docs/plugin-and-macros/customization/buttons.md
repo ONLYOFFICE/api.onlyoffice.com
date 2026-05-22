@@ -15,7 +15,7 @@ sidebar_position: -2
 
 ## 示例
 
-``` ts
+```ts
 Asc.plugin.button = (id, windowId) => {
   if (!windowId) {
     return;

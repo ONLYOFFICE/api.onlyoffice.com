@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例展示如何更改角色的颜色。
+为文档中的角色分配颜色。
 
 ```javascript editor-forms
+// How do I apply a specific color to identify a role in a document?
+
+// Change the color value for a role to customize its appearance in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -35,5 +39,4 @@ doc.InsertTextForm({
 	role: "Customer",
 	placeholder: "Enter your name"
 });
-
 ```

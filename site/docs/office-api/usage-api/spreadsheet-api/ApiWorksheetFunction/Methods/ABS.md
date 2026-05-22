@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to get absolute value of a number.
+Find the absolute value of a number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add absolute value to the worksheet.
+// How do I convert a negative number to positive in a spreadsheet?
 
-// Get a function that gets absolute value.
+// Discard the sign and use only the magnitude of any value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

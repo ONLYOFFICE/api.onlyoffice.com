@@ -24,9 +24,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the transition speed and displays it.
+Get the transition speed and display it in a presentation.
 
 ```javascript editor-pptx
+// Retrieve the speed value from a slide show transition object.
+
+// Display the retrieved speed in a shape on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -48,5 +52,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition Speed is ' + transitionSpeed);
 slide.AddObject(shape);
-
 ```

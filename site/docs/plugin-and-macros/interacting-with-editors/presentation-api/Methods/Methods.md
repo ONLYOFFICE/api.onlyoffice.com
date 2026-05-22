@@ -2,7 +2,6 @@
 
 Represents the Api class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -11,7 +10,6 @@ Represents the Api class.
 | [AddOleObject](./AddOleObject.md) | None | Adds an OLE object to the current document position. |
 | [ChangeComment](./ChangeComment.md) | boolean | Changes the specified comment. |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
-| [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
 | [EndSlideShow](./EndSlideShow.md) | None | Ends the current slide show. |
@@ -42,14 +40,14 @@ Represents the Api class.
 | [PasteHtml](./PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./PasteText.md) | None | Pastes text into the document. |
 | [PauseSlideShow](./PauseSlideShow.md) | None | Pauses the current slide show. |
-| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
+| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
 | [RemoveOleObject](./RemoveOleObject.md) | None | Removes the OLE object from the presentation by its internal ID. |
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [ResumeSlideShow](./ResumeSlideShow.md) | None | Resumes the current slide show. |
 | [SetMacros](./SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
+| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
 | [SetProperties](./SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./ShowError.md) | None | Shows an error/warning message. |

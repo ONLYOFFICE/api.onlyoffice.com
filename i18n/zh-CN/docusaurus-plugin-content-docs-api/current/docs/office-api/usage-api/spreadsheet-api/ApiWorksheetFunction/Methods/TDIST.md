@@ -24,17 +24,15 @@ number
 
 ## 示例
 
-此示例演示如何返回学生 t 分布。
+在电子表格中返回学生 t 分布。
 
 ```javascript editor-xlsx
-// How to calculate a Student's t-distribution.
+// Calculate the probability for the t-distribution with given degrees of freedom.
 
-// Use a function to estimate a Student's t-distribution.
+// Apply the TDIST function with t-value and degrees of freedom parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.TDIST(1.5, 10, 1);
 worksheet.GetRange("B2").SetValue(ans);
-
-
 ```

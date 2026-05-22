@@ -20,12 +20,12 @@ expression.GetRange();
 
 ## 示例
 
-此示例获取应用自动筛选的范围。
+查找电子表格中活动筛选下拉菜单覆盖的确切单元格。
 
 ```javascript editor-xlsx
-// How to find the AutoFilter range and work with it as a normal ApiRange.
+// How do I get the cell range that the current filter is applied to in a spreadsheet?
 
-// Use ApiAutoFilter.GetRange() to get the filtered area.
+// Identify the full span of rows and columns under filter control so you can format or read them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -56,5 +56,4 @@ if (filterRange !== null) {
 } else {
     worksheet.GetRange("D2").SetValue("No AutoFilter defined.");
 }
-
 ```

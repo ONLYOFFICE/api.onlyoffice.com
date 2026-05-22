@@ -2,30 +2,16 @@
 
 从当前文本属性获取文本间距，以磅的二十分之一为单位。
 
-## 语法
-
-```javascript
-expression.GetSpacing();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[twips](../../Enumeration/twips.md)
+继承自 [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md)。
 
 ## 示例
 
-此示例演示如何确定文本的间距大小。
+获取 PDF 中文本字母之间的间距量。
 
 ```javascript editor-pdf
-// How to know a text spacing.
+// How do I find the character spacing setting in a PDF?
 
-// Get the text properties of the run and display its spacing size.
+// Read and display the letter spacing value applied to text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -35,7 +21,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -50,5 +36,4 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```

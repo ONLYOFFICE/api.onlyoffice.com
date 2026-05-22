@@ -27,11 +27,12 @@ expression.Add(filterType, dataField, value1, value2, wholeDayFilter);
 
 ## 示例
 
-此示例演示 ApiPivotFilters.Add 方法的综合测试
+对电子表格中的数据透视表字段应用筛选器以缩小报表中显示的项目范围。
 
 ```javascript editor-xlsx
-// Creates one comprehensive dataset and 15 pivot tables with different filter types
-// Tests all major filter categories: label, value, top/bottom, and date filters
+// How do I add a label, value, top-bottom, or date filter to a pivot table field in a spreadsheet?
+
+// Restrict pivot data to only the rows that meet a specific condition or ranking criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -274,5 +275,4 @@ let dateField19 = pivotTable19.GetPivotFields('Date');
 dateField19.PivotFilters.Add("xlDateBetween", null, new Date("1 March 2024"), new Date("31 May 2024"), true); // March 1 - May 31, 2024
 
 worksheet.GetRange('U31').SetValue('Test 19: Date Between Mar-May 2024');
-
 ```

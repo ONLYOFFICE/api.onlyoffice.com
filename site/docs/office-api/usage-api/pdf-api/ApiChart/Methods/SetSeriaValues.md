@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to set values to the specified ApiChart object.
+Replace the data numbers in a chart series in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series values.
+// How do I change the values displayed in a chart series in a PDF?
+
+// Update the numeric data that makes up a data series in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

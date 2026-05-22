@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get drawings on a page.
+Retrieve all shapes and graphics from a page in a PDF.
 
 ```javascript editor-pdf
-// Get drawing on a page and select it.
+// How do I access all the drawings in a PDF?
+
+// List every visual element on the current page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

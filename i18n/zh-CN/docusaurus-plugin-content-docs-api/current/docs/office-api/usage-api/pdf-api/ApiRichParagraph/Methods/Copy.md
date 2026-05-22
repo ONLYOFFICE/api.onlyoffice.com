@@ -20,9 +20,13 @@ expression.Copy();
 
 ## 示例
 
-此示例复制富文本段落。
+在 PDF 中复制段落。
 
 ```javascript editor-pdf
+// How do I create a copy of a paragraph in a PDF?
+
+// Clone an existing paragraph and add it to content in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

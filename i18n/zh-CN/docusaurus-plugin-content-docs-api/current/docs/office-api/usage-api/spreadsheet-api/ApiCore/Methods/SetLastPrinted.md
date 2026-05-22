@@ -22,9 +22,13 @@ expression.SetLastPrinted(oLastPrinted);
 
 ## 示例
 
-此示例演示如何设置工作簿最后打印的日期。
+在电子表格工作簿的文档属性中保存最近的打印日期。
 
 ```javascript editor-xlsx
+// How do I log the last time a workbook was printed in a spreadsheet?
+
+// Capture the date a workbook was last sent to the printer and store it in the metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
-
 ```

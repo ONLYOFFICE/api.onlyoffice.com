@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-此示例指定当前文本块的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。
+在 PDF 中为文本添加下划线。
 
 ```javascript editor-pdf
-// How to create a new text and underline it.
+// Can text have an underline applied in a PDF?
 
-// Create a new text run and underline it.
+// Place a line beneath text characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -49,5 +49,4 @@ run.SetUnderline(true);
 run.AddText("This is a text run with the text underlined with a single line.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

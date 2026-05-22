@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the type of a top 10 conditional formatting rule.
+Read the rule type from a top 10 conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out what kind of conditional formatting rule is applied in a spreadsheet?
+
+// Confirm the rule category after creating a top 10 condition in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 worksheet.GetRange('A1').SetValue('Employee');
@@ -52,5 +56,4 @@ worksheet.GetRange('D2').SetValue('Condition type:');
 worksheet.GetRange('E2').SetValue(conditionType);
 worksheet.GetRange('D3').SetValue('Rank:');
 worksheet.GetRange('E3').SetValue(top10Condition.GetRank());
-
 ```

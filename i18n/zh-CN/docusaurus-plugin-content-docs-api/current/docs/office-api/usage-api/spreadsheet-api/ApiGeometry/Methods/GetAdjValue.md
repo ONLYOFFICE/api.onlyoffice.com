@@ -22,10 +22,13 @@ number \| null
 
 ## 示例
 
-创建带有参考线和连接点的可调整自定义几何图形。
+读取电子表格中自定义形状上命名调整手柄的当前值。
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I retrieve the numeric value stored in a shape adjustment control in a spreadsheet?
+
+// Inspect how far a particular adjustment handle has been moved on a custom shape in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

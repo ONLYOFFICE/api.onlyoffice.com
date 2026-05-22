@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何根据 0 到 1（不含端点）的百分位数值返回数据集的四分位数。
+使用排除百分位计算在电子表格中查找四分位数。
 
 ```javascript editor-xlsx
-// How to get the exclusive quartile of a data set.
+// What is the quartile boundary excluding the minimum and maximum values in a spreadsheet?
 
-// Use a function to calculate an exclusive fourth part of a data set.
+// Calculate quartile position based on percentiles from 0 to 1 in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

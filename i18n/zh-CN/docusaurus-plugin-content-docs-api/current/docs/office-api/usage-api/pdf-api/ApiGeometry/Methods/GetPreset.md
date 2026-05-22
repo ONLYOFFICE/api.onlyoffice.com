@@ -20,10 +20,13 @@ expression.GetPreset();
 
 ## 示例
 
-从演示文稿页面上的星形形状获取几何信息。
+识别 PDF 中形状使用的内置形状模板。
 
 ```javascript editor-pdf
-// Displays preset type and custom status in a text shape.
+// How do I find out what preset shape type is being used in a PDF?
+
+// Check whether a shape is using a preset or a custom design in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

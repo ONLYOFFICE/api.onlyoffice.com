@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets radiobutton field check in unison property.
+Find out whether radio button options are linked in a PDF.
 
 ```javascript editor-pdf
+// How do I check if radio button choices work together in a PDF?
+
+// Verify the unified selection setting for radio buttons in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

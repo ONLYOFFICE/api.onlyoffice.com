@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-Number
+Number \| undefined
 
 ## Example
 
-This example shows how to get the outline level of the specified paragraph via paragraph properties.
+Check the heading level of a paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I read the outline level of a paragraph in a presentation?
+
+// Retrieve the hierarchical level assigned to a paragraph for outline or table of contents purposes in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +50,4 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

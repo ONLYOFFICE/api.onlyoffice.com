@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取圆形注释的类类型。
+获取 PDF 中圆形注释的类类型。
 
 ```javascript editor-pdf
+// How do I find out what class type a circle annotation is in a PDF?
+
+// Identify a circle annotation object by its class type identifier in a PDF.
+
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

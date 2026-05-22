@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the font size property to the specified font.
+Adjust the text size of specific characters in a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the font size.
+// How do I make part of the text in a cell larger or smaller in a spreadsheet?
 
-// Get a font object of characters and resize it.
+// Resize a selected run of characters to a chosen point size in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

@@ -28,14 +28,13 @@ expression.AddImage(sImageSrc, nWidth, nHeight, nFromCol, nColOffset, nFromRow, 
 
 ## 示例
 
-此示例使用指定的参数向工作表添加图像。
+在电子表格的工作表上以特定位置和大小放置图像。
 
 ```javascript editor-xlsx
-// How to add an image to the worksheet specifying its url and size.
+// How do I embed a picture from a URL into my sheet in a spreadsheet?
 
-// Insert an image to the worksheet.
+// Decorate a worksheet by inserting an image with defined dimensions and placement.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddImage("https://static.onlyoffice.com/assets/docs/samples/img/presentation_sky.png", 60 * 36000, 35 * 36000, 0, 2 * 36000, 0, 3 * 36000);
-
 ```

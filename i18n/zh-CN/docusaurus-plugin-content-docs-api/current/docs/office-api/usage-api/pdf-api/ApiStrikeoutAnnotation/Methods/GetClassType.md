@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取插入符注释的类类型。
+获取 PDF 中删除线注释的分类代码
 
 ```javascript editor-pdf
+// What is the internal type identifier for a strikeout annotation in a PDF?
+
+// Find and display the class name of a strikeout annotation in a PDF
+
 let doc = Api.GetDocument();
 let caretAnnot = Api.CreateCaretAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

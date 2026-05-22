@@ -14,8 +14,8 @@ expression.AddElement(oElement, nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the oElement type is not supported by a paragraph. |
-| nPos | Optional | number |  | The position where the current element will be added. If this value is not specified, then the element will be added at the end of the current paragraph. |
+| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the |
+| nPos | Optional | number |  | The position where the current element will be added. If this value is not |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example adds a run to the paragraph.
+Insert a text element into a paragraph in a presentation.
 
 ```javascript editor-pptx
-// Insert a text run to the ApiParagraph object.
+// How do I add styled text to a paragraph in a presentation?
 
-// How to add the ApiRun object to the slide.
+// Add a run with specific formatting to a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const run = Api.CreateRun();
 run.AddText("This is the text for a text run. Nothing special.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

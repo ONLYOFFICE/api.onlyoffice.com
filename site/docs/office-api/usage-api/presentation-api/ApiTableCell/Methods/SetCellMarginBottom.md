@@ -15,7 +15,7 @@ expression.SetCellMarginBottom(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell bottom margin shall be used, otherwise override the table cell bottom margin with specified value for the current cell. |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell bottom margin shall be used, |
 
 ## Returns
 
@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to specify an amount of space which shall be left between the bottom extent of the cell contents and the border of a specific individual table cell within a table.
+Set the spacing between text and the bottom edge of a table cell in a presentation.
 
 ```javascript editor-pptx
-// How to set the cell bottom margin for the current table cell.
+// How do I add space below text in a table cell in a presentation?
 
-// Specify the bottom margin value for the ApiTableCell object.
+// Adjust the bottom margin to control padding in a table cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ cell.SetCellMarginBottom(600);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

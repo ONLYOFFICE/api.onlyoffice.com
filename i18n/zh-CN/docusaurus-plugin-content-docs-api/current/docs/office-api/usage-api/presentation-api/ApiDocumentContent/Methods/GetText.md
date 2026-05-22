@@ -29,9 +29,13 @@ string
 
 ## 示例
 
-此示例返回文档内容中的文本。
+从演示文稿中形状的内容提取所有文本。
 
 ```javascript editor-pptx
+// How do I get all the text inside a shape in a presentation?
+
+// Retrieve the combined text content from a shape and display it on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,5 +52,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Text from document content: ' + text);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

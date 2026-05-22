@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to move up the specified role.
+Shift a role to a higher position in the fill order in a document.
 
 ```javascript editor-forms
+// How do I change the order of roles to place one earlier in the sequence in a document?
+
+// Reposition a role upward in the list and display the updated order in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -41,5 +45,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
     orderIndex++;
 });
-
 ```

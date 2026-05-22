@@ -1,6 +1,5 @@
 import { SamplesGrid } from "@site/src/components/SamplesGrid";
 import { BlogGrid } from "@site/src/components/BlogGrid";
-import Link from '@docusaurus/Link';
 import ClockIcon from "@site/static/icons/clock-icon.svg";
 import CodeIcon from "@site/static/icons/code-icon.svg";
 import ChatIcon from "@site/static/icons/chat-icon.svg";
@@ -19,7 +18,7 @@ export const Samples: Samples = {
     {
       icon: <ClockIcon />,
       title: 'Creating advanced form',
-      category: 'favorite',
+      category: 'favorites',
       description: (
         <>
           Creates advanced form with table structure using Document Builder.
@@ -32,19 +31,19 @@ export const Samples: Samples = {
       ],
       viewLink:'https://github.com/ONLYOFFICE/document-builder-samples/blob/master/cpp/creating_advanced_form/main.cpp',
       tags: [
-        { label: 'Document Builder', variant: 'blue' },
-        { label: 'Forms' },
+        { label: 'Docs', variant: 'blue' },
+        { label: 'Builder', variant: 'blue' },
+        { label: 'PDF', variant: 'pink' },
         { label: 'C++', variant: 'purple' },
-        { label: '.Net' },
       ],
     },
     {
       icon: <CodeIcon />,
       title: 'Inserting Pivot Table',
-      category: 'favorite',
+      category: 'favorites',
       description: (
         <>
-          This <Link to="/samples/docs/plugin-and-macros/custom-ai-tools/spreadsheet-editor/insertPivotTable/">AI tool</Link> inserts a pivot table into the specified range.
+          This AI tool inserts a pivot table into the specified range.
         </>
       ),
       features: [
@@ -52,21 +51,21 @@ export const Samples: Samples = {
         'Custom range selection',
         'AI-powered automation',
       ],
-      viewLink:'/samples/docs/plugin-and-macros/custom-ai-tools/#spreadsheet-editor',
+      viewLink:'/docs/plugin-and-macros/samples/custom-ai-tools/spreadsheet-editor/insert-pivot-table/',
       tags: [
+        { label: 'Docs', variant: 'blue' },
         { label: 'Plugins', variant: 'blue' },
-        { label: 'Spreadsheet' },
-        { label: 'AI tools', variant: 'green' },
-        { label: 'Macros' },
+        { label: 'AI Tools', variant: 'pink' },
+        { label: 'Spreadsheets', variant: 'green' },
       ],
     },
     {
       icon: <ChatIcon />,
       title: 'Working with comments',
-      category: 'favorite',
+      category: 'favorites',
       description: (
         <>
-          Collects all the <Link to="/samples/docs/docs-api/external-access-to-the-document-editing/working-with-comments/">comments</Link> from the document and displays them in a custom interface.
+          Collects all the comments from the document and displays them in a custom interface.
         </>
       ),
       features: [
@@ -74,12 +73,12 @@ export const Samples: Samples = {
         'Custom comment UI',
         'Real-time collaboration',
       ],
-      viewLink:'/samples/docs/docs-api/external-access-to-the-document-editing/',
+      viewLink:'/docs/docs-api/samples/automation-api/working-with-comments/',
       tags: [
-        { label: 'Docs API', variant: 'blue' },
-        { label: 'Automation', variant: 'purple' },
-        { label: 'Comments' },
-        { label: 'Collaboration', variant: 'green' },
+        { label: 'Docs', variant: 'blue' },
+        { label: 'Integration', variant: 'purple' },
+        { label: 'External access', variant: 'green' },
+        { label: 'Automation API', variant: 'blue' },
       ],
     },
 

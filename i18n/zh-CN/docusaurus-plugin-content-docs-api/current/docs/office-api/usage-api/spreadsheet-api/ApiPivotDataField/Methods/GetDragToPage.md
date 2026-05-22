@@ -2,30 +2,16 @@
 
 返回指定是否可以将指定字段拖动到页位置的设置。
 
-## 语法
-
-```javascript
-expression.GetDragToPage();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiPivotField.GetDragToPage](../../ApiPivotField/Methods/GetDragToPage.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的拖动到页。
+检查电子表格中的透视字段是否可以移动到页面筛选区域。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to page.
+// How do I find out if a pivot field is allowed to be dragged to the page zone in a spreadsheet?
 
-// Create a pivot table, add data to it then get a drag to page of a specified pivot field.
+// Confirm that a pivot field supports use as a top-level filter above the pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

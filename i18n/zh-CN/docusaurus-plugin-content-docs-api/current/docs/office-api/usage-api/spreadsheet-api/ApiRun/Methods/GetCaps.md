@@ -2,30 +2,16 @@
 
 返回具有当前文本属性的文本是否大写。
 
-## 语法
-
-```javascript
-expression.GetCaps();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md)。
 
 ## 示例
 
-此示例使用其属性获取文本大小写。
+检查电子表格中的文本是否设置为以大写字母显示。
 
 ```javascript editor-xlsx
-// How to find out whether a text is capitalized or not.
+// How do I find out if all-caps formatting is applied to text in a spreadsheet?
 
-// Get a text capitalized property.
+// Read the capitalization setting from a text style and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

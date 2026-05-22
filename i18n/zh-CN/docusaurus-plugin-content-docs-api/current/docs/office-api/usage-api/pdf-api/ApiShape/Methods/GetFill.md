@@ -20,10 +20,13 @@ expression.GetFill();
 
 ## 示例
 
-从形状获取填充属性并显示详细信息。
+从 PDF 中的形状检索填充属性。
 
 ```javascript editor-pdf
-// Creates a shape with gradient fill, retrieves it and shows fill details.
+// What fill settings does a shape have in a PDF?
+
+// Get the color or gradient applied to a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -39,5 +42,4 @@ let retrievedFill = shape.GetFill();
 if (retrievedFill) {
     paragraph.AddText("Fill type: " + retrievedFill.GetType());
 }
-
 ```

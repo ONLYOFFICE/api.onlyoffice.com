@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何使用固定余额递减法返回资产在指定期间的折旧。
+计算电子表格中资产每期贬值多少。
 
 ```javascript editor-xlsx
-// How to get the depreciation of an asset for a specified period.
+// What is the depreciation amount for a particular period in a spreadsheet?
 
-// Use function to return the depreciation of an asset for a specified period using the fixed-declining balance method.
+// Find the fixed-declining balance depreciation for your assets in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

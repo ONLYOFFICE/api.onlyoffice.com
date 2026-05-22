@@ -17,7 +17,7 @@ expression.AVERAGEIFS(arg1, arg2, arg3, arg4, arg5);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 将被计算的单元格区域。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 以数字、表达式或文本形式定义将用于计算平均值的单元格的第一个条件或标准。 |
 | arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 用于计算平均值的实际单元格。如果省略，则使用区域中的单元格。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 127 个以数字、表达式或文本形式定义将用于计算平均值的单元格的附加条件或标准。这些参数是可选的。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 127 个附加条件或标准，以数字、表达式或文本的形式定义哪些单元格将用于计算平均值。 |
 | arg5 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 127 个用于计算平均值的实际区域。如果省略，则使用区域中的单元格。这些参数是可选的。 |
 
 ## 返回值
@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何计算由给定条件或标准集指定的单元格的平均值（算术平均数）。
+仅对电子表格中同时满足多个条件的单元格求平均值。
 
 ```javascript editor-xlsx
-// How to find an average if list of conditions are met.
+// Calculate the mean of values matching several criteria simultaneously in a spreadsheet.
 
-// Use function to get an average (arithmetic mean) of the cells if the set of requirements is satisfied.
+// Apply more than one filter to a dataset and compute the mean of qualifying rows in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

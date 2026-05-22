@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回完全投资证券的利率。
+计算电子表格中证券的利率。
 
 ```javascript editor-xlsx
-// How to calculate an interest rate for a fully invested security.
+// How do I find the interest rate based on investment values in a spreadsheet?
 
-// Use a function to get a fully invested security's interest rate.
+// Determine the return rate on a security investment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ expression.GetSheets();
 
 ## 示例
 
-此示例演示如何获取表示活动工作簿中所有工作表的工作表集合。
+将所有工作表标签收集到列表中并在电子表格的单元格中显示其名称。
 
 ```javascript editor-xlsx
-// Get all sheets as an array.
+// How do I loop through every sheet in the workbook and read their names in a spreadsheet?
 
-// How to get array of sheets.
+// Build an inventory of all tabs by gathering their titles and writing them out in a spreadsheet.
 
 Api.AddSheet("new_sheet_name");
 let sheets = Api.GetSheets();

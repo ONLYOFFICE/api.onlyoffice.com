@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何根据所选数据库条目的整个总体计算标准差。
+根据数据库条目的整个总体计算标准差。
 
 ```javascript editor-xlsx
-// How to estimate the standard deviation based on an entire population.
+// Compute population variance to measure data dispersion across all records.
 
-// Use function to estimate the standard deviation based on the entire population from a range.
+// Use the DSTDEVP function to find population standard deviation of database values with conditions.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,17 +20,16 @@ This method doesn't return any data.
 
 ## Example
 
-This example clears all the contents in the range.
+Delete the values from a cell range while keeping its formatting intact in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to clear contents for a range.
+// How do I remove cell data without touching the styling in a spreadsheet?
 
-// Get a range, clear contents and show the result.
+// Wipe only the text and numbers from selected cells so their appearance stays unchanged in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:B1").SetValue("Example text");
 let range = worksheet.GetRange("A1");
 range.ClearContents();
 worksheet.GetRange("A2").SetValue("Result is contents cleared for A1 cell.");
-
 ```

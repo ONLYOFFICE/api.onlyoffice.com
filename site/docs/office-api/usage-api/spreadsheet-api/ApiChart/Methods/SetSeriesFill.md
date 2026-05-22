@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the specified chart series.
+Apply a solid fill color to a chart data series in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color chart series.
+// How do I change the background color of a specific chart series in a spreadsheet?
 
-// Add background solid fill color for a chart seria.
+// Distinguish chart series visually by painting each one a different color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

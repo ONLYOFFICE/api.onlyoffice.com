@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a placeholder from the current drawing object.
+Get the placeholder assigned to a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a placeholder of a slide shape.
+// How do I find the placeholder for an object in a presentation?
 
-// Get a placeholder of a slide shape.
+// Retrieve and check a shape's placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the element from the shape = " + type);
 slide.AddObject(shape);
-
 ```

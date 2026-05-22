@@ -22,10 +22,13 @@ number \| null
 
 ## 示例
 
-为演示文稿创建带有参考线和连接点的可调整几何图形。
+从演示文稿中的自定义形状检索调整值。
 
 ```javascript editor-pptx
-// Displays adjustment value and applies custom geometry to shape.
+// How do I access adjustment parameters on a custom shape in a presentation?
+
+// Get a numeric adjustment value from a custom geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

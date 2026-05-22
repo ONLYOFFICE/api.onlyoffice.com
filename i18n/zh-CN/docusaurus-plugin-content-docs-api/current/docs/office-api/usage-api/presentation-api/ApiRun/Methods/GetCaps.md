@@ -2,30 +2,16 @@
 
 返回具有当前文本属性的文本是否大写。
 
-## 语法
-
-```javascript
-expression.GetCaps();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiTextPr.GetCaps](../../ApiTextPr/Methods/GetCaps.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否大写。
+从文本运行属性检索大写属性。
 
 ```javascript editor-pptx
-// How to know whether the text letters are uppercase or not.
+// Create a shape with a text run and apply capitalization formatting.
 
-// Get the text properties of the run and find whether it is capitalized or not.
+// Get and display whether the text is capitalized.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +37,4 @@ paragraph = Api.CreateParagraph();
 const caps = textPr.GetCaps();
 paragraph.AddText("Property of the capitalized letters: " + caps);
 docContent.Push(paragraph);
-
 ```

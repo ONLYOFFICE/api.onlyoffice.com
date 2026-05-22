@@ -2,30 +2,16 @@
 
 从透视筛选器集合中删除所有标签筛选器或所有日期筛选器。
 
-## 语法
-
-```javascript
-expression.ClearLabelFilters();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.ClearLabelFilters](../../ApiPivotField/Methods/ClearLabelFilters.md)。
 
 ## 示例
 
-此示例展示如何从透视字段清除标签筛选器。
+从电子表格中的数据透视表字段移除基于标签的筛选器。
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field label filters.
+// How do I clear text or name filters from a pivot field without affecting other filter types in a spreadsheet?
 
-// Create a pivot table, add data to it then delete label filters from a custom field.
+// Reset only the label filters on a pivot field so its item names are no longer restricted in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

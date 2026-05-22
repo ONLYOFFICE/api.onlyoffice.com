@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the selected shapes from current selection.
+Retrieve all shapes from the current selection in a presentation.
 
 ```javascript editor-pptx
+// How do I get selected shapes in a presentation?
+
+// Access the list of shapes from a selection and count them in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -52,5 +56,4 @@ const outDoc = outShape.GetDocContent();
 const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(result);
 slide.AddObject(outShape);
-
 ```

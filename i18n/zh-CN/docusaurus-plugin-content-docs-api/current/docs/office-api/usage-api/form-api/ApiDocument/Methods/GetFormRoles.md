@@ -20,9 +20,13 @@ expression.GetFormRoles();
 
 ## 示例
 
-此示例展示如何获取角色管理器。
+检索文档中分配给表单字段的用户角色列表。
 
 ```javascript editor-forms
+// How do I see what roles have access to form fields in a document?
+
+// Access the role management system to view form permissions in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -32,5 +36,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddText(role);
     paragraph.AddLineBreak();
 });
-
 ```

@@ -2,32 +2,16 @@
 
 设置当前表单的边框颜色。
 
-## 语法
-
-```javascript
-expression.SetBorderColor(color);
-```
-
-`expression` - 表示 [ApiComboBoxForm](../ApiComboBoxForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 可选 | [ApiColor](../../../text-document-api/ApiColor/ApiColor.md) |  | 边框颜色。 |
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md)。
 
 ## 示例
 
-此示例为表单设置边框颜色。
+在文档中为表单字段应用边框颜色以突出显示。
 
 ```javascript editor-forms
-// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+// How do I change the border color of a form field in a document?
 
-// Define the border color of the date form.
+// Style the outline of a form field with a specific color to draw attention to it in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

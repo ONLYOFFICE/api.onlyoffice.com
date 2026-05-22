@@ -23,12 +23,12 @@ number \| string \| boolean
 
 ## 示例
 
-此示例演示如何检查第一个参数中的公式是否有错误。如果没有错误，函数返回公式的结果，如果有错误，则返回第二个参数中指定的值。
+当电子表格中的公式产生错误时显示自定义值。
 
 ```javascript editor-xlsx
-// How to check a formula.
+// How do I handle errors in calculations and show a default value in a spreadsheet?
 
-// Use a function to get a result from a formula if an error occurs show specified error message.
+// Catch formula errors and replace them with a specified message or value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

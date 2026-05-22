@@ -22,9 +22,13 @@ expression.SetModified(oModified);
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿最后一次修改的日期。
+标记演示文稿的最后修改日期。
 
 ```javascript editor-pptx
+// How do I set when a presentation was last edited?
+
+// Update and display the modification timestamp for a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetModified(new Date("10 March 1990"));
@@ -40,5 +44,4 @@ paragraph.AddText("Last modified: " + lastModifiedDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

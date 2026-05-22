@@ -20,12 +20,12 @@ expression.GetSpacingBefore();
 
 ## 示例
 
-此示例展示如何获取当前段落的段前间距值。
+读取电子表格中段落之前的间距大小。
 
 ```javascript editor-xlsx
-// How to get spacing information which is before the paragraph.
+// How do I check how much space is added above a paragraph in a spreadsheet?
 
-// Get two consecutive paragraphs add spacing between them then get the spacing before second one and display it in the worksheet. 
+// Confirm the top spacing value after applying a gap to a paragraph's leading edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

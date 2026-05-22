@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to set a fill to the marker.
+Change the color of the data point symbols in a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker color.
+// How do I change the color of markers in a chart in a PDF?
+
+// Apply a solid color to the symbols that represent data in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +52,4 @@ stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(25
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

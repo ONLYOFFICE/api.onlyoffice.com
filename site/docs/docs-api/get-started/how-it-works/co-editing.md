@@ -4,37 +4,41 @@ sidebar_position: -20
 
 # Co-editing
 
-The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Docs.
+The figure and steps below explain how a document is co-edited in ONLYOFFICE Docs.
 
-<img alt="Co-editing scheme" src="/assets/images/editor/coedit.jpg" width="720px" />
+![Co-editing scheme](/assets/images/editor/coedit.jpg)
 
-1. User 1 and user 2 open one and the same document in **document editor**, i.e. when opening the file one and the same [document.key](../../usage-api/config/document/document.md#key) has been used.
-2. User 1 makes changes to the opened document.
-3. The **document editor** sends changes made by user 1 to the **document editing service**.
-4. The **document editing service** sends the changes made by user 1 to the user 2 **document editor**.
-5. Now these changes become visible to user 2.
+1. **user 1** and **user 2** both open the same document in the **document editor** — that is, their configs contain the same [`document.key`](../../usage-api/config/document/document.md#key).
+2. **user 1** makes changes to the opened document.
+3. The **document editor** sends changes made by **user 1** to the **document editing service**.
+4. The **document editing service** sends the changes made by **user 1** to the **user 2** **document editor**.
+5. Now these changes become visible to **user 2**.
 
 ![Co-editing view](/assets/images/editor/coedit-view.png)
 
 ## How this can be done in practice
 
-1. Create an empty *html* file.
+1. Create an empty `.html` file.
 
-2. Add the *div* element as shown below.
+2. Add the `<div>` element as shown below:
 
    ``` html
    <div id="placeholder"></div>
    ```
 
-3. Specify your ONLYOFFICE Docs link with the JavaScript API that will be used for your website.
+3. Include the ONLYOFFICE Docs JavaScript API script on your page:
 
    ``` html
    <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
    ```
 
-   Where **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed. The `api.js` script is served by the **document editing service**; it loads the **document editor** and connects it to that same service.
 
-4. Add the script initializing the **Document Editor** for the *div* element with the configuration for the document you want to open. Be sure to add a [token](../../additional-api/signature/signature.md) when using local links. Otherwise, an error will occur.
+   :::tip
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   :::
+
+4. Add the script that initializes the **document editor** for the `<div>` element, using the configuration for the document you want to open:
 
    ``` ts
    const config = {
@@ -57,60 +61,43 @@ The reference figure and the steps below explain the process of co-editing a doc
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
+   Replace `example.com` with the host serving your document file — i.e., your **document storage service**. In this minimal example, the local `.html` file plays the role of the **document manager** — in a real integration, the manager would build this config dynamically for each user and document. For a quick test, use `https://static.onlyoffice.com/assets/docs/samples/demo.docx` as the `url`.
 
-5. Open your *html* file in the browser.
+   :::caution
+   When JWT validation is enabled on your document server (the default configuration), the `config` must be signed with a matching [`token`](./security.md). The `token` above matches this exact config but is signed with a throwaway secret — it will not validate on your server, and it must be regenerated whenever the config changes (for example, if you switch `url` to the demo document). Sign with your document server's JWT secret. A token does not bypass network restrictions: if `url` points to a local or private address, the document server must still be able to reach it.
+   :::
 
-6. Now make a copy of your *html* file created above.
+5. Open your `.html` file in the browser.
 
-7. Change the script initializing the **Document Editor** in the copied *html* file.
-
-   ``` ts
-   const config = {
-     document: {
-       fileType: "docx",
-       key: "Khirz6zTPdfd7",
-       title: "Example Document Title.docx",
-       url: "https://example.com/url-to-example-document.docx",
-     },
-     documentType: "word",
-     editorConfig: {
-       user: {
-         id: "F89d8069ba2b",
-         name: "Kate Cage",
-       },
-     },
-     token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50IFRpdGxlLmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJ1c2VyIjp7ImlkIjoiRjg5ZDgwNjliYTJiIiwibmFtZSI6IkthdGUgQ2FnZSJ9fX0.rdmhKLzXwXXVTABioKy3R2-HGMBY5u4pbZ_TVhW2rJs",
-   };
-
-   const docEditor = new DocsAPI.DocEditor("placeholder", config);
-   ```
-
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-
-8. Open your copied and edited *html* file in the browser.
+6. Open the same `.html` file in a second browser tab. Because both tabs use the same document `key`, the **document editing service** connects them into a single co-editing session — you are now co-editing with yourself.
 
 ## Using a key in co-editing
 
-In order to open a document for editing, the config initialization requires the [*key*](../../usage-api/config/document/document.md#key) parameter which allows the user to reopen the document from the editor cache. The key is a text field with a limited length and a number of symbols. It is generated by the software integrators and defines the unique document identifier used by the service to recognize the document.
+To open a document for editing, the editor config requires the [`key`](../../usage-api/config/document/document.md#key) parameter — a unique document identifier generated by the integrator. The **document editing service** uses this key to recognize the document. The `key` is a text field with a limited length.
 
 :::note
-The key characters can be used: **0-9**, **a-z**, **A-Z**, **-.\_=**. The maximal key length is **128** characters.
+The key can contain the characters `0-9`, `a-z`, `A-Z`, `-._=`. The maximum key length is **128** characters.
 :::
 
-Therefore, it is important that users have the same key to open the document for co-editing. The **document editing service** identifies the key of another user (or another tab/editing session for [inline editors](./inline-editors.md)) who is trying to open the document, and if that key matches the key of the file, the user is allowed to open it. If the key is different, then a new file, which is not related to other files and file versions, is opened.
+For co-editing to work, all users must open the document with the same `key`. When a user (or another tab/editing session for [inline editors](./inline-editors.md)) opens a document, the **document editing service** checks whether the `key` matches an existing editing session. If it matches, the user joins that session. If it does not, a new independent editing session starts — unrelated to other sessions or file versions.
 
-Once the request for saving the file is sent (the *status* value is equal to *2*) and the operation completion is successful (the response value is equal *\{"error":0\}*), this key can’t be used to open the document for editing. The editor is loaded with an [error message](../../more-information/troubleshooting.md#the-file-version-has-been-changed). However, it can be used for viewing the document from the cache if it exists.
+Once the save request is sent (`status` equals `2`) and the operation completes successfully (the response is `{"error":0}`), the key can no longer be used to open the document for editing — attempting to do so loads an [error message](../../more-information/troubleshooting.md#the-file-version-has-been-changed). However, the key can still be used to view the document from the cache, provided the cached version has not expired.
 
-If the user saves the document before the editing is finished (the *status* value is equal to *6*), the key can’t be changed. Otherwise, the co-editing stops. Please note that after the force saving procedure the key also can’t be changed for the new users who are just entering the current editing session.
+If the user force-saves the document while editing is still in progress (`status` equals `6`), the key must not be changed — otherwise co-editing stops. After a forcesave, the key also must not be changed for new users joining the current editing session.
 
 ### Examples
 
-1. Add the script initializing the **Document Editor** with *key 1*. The key is unknown and the URL for opening the file is specified.
+:::note
+In every example below, replace `example.com` with the host serving your document file — i.e., your **document storage service**. For a quick test, use `https://static.onlyoffice.com/assets/docs/samples/demo.docx` as the `url`.
+:::
 
-   Be sure to add a [token](./security.md) when using local links. Otherwise, an error will occur.
+1. Add the script initializing the **document editor** with **key 1**. The key is not yet cached by the service, so the URL is used to download the file.
 
-   Close the **Document Editor**.
+   Close the **document editor**.
+
+   :::caution
+   When JWT validation is enabled (the default), the `config` must include a matching [`token`](./security.md).
+   :::
 
    ``` ts
    const config = {
@@ -127,9 +114,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-
-2. Add the script initializing the **Document Editor** with the same *key 1*. The new URL is not used because the key is known and the document is reopened from the editor cache.
+2. Add the script initializing the **document editor** with the same **key 1**. The key is already cached, so the new URL is ignored and the document is reopened from the cache.
 
    ``` ts
    const config = {
@@ -146,11 +131,9 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
+3. Add the script initializing another **document editor** with **key 2**. This key is not yet cached, so the URL is used to download the file. Even if this URL and the URL from example 1 are the same, the different key means two independent editing sessions.
 
-3. Add the script initializing another **Document Editor** with *key 2*. The key is unknown and the URL for opening the file is specified. Even if this URL and the URL from the first scenario are the same, there are two independent editing sessions.
-
-   Close the **Document Editor**.
+   Close the **document editor**.
 
    ``` ts
    const config = {
@@ -167,9 +150,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-
-4. Add the script initializing another **Document Editor** with *key 1*. The key is known and the document is reopened from the editor cache. As this key and the key from the second scenario are the same, the document are opened in the co-editing mode.
+4. Add the script initializing another **document editor** with **key 1**. The key is already cached, so the document is reopened from the cache. Because this key matches example 2, the document opens in co-editing mode.
 
    Get the current document state without closing the document. The [forcesave](../../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) parameter allows you to do it in the customization section of the editor initialization.
 
@@ -193,11 +174,9 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
+5. Add the script initializing another **document editor**. After a successful [forcesave](./saving-file.md#force-saving), the key does not change for new users joining the current editing session. Therefore, **key 1** must be used to join the same co-editing session as the users from examples 2 and 4.
 
-5. Add the script initializing another **Document Editor**. The key is not changed for the new users of the current editing session after the successful procedure of [force saving](./saving-file.md#force-saving). Therefore, *key 1* must be used to get to the same co-editing session as the users from the second and the fourth scenarios.
-
-   Close all the three editing sessions with *key 1*. All changes are successfully saved. As the document is saved, the key must be generated anew.
+   Close all three editing sessions with **key 1**. All changes are saved successfully. Because the document is now saved, the integrator must generate a new key.
 
    ``` ts
    const config = {
@@ -209,7 +188,7 @@ If the user saves the document before the editing is finished (the *status* valu
      },
      documentType: "word",
      editorConfig: {
-       callbackUrl: "https://example.com/url-to-callback.ashx",
+       callbackUrl: "https://example.com/url-to-callback",
      },
      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidGl0bGUiOiJFeGFtcGxlIERvY3VtZW50LmRvY3giLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifSwiZG9jdW1lbnRUeXBlIjoid29yZCIsImVkaXRvckNvbmZpZyI6eyJjYWxsYmFja1VybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWNhbGxiYWNrLmFzaHgifX0.L53bCRlJyvIf-C7bcKYM2WMfmk4FeZIoeDaEpc5IxXA",
    };
@@ -217,9 +196,7 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-
-6. Add the script initializing the **Document Editor** for viewing the document created. *Key 1* can be used.
+6. Add the script initializing the **document editor** for viewing the saved document. The old **key 1** can still be used for viewing.
 
    ``` ts
    const config = {
@@ -239,11 +216,9 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
+7. Add the script initializing the **document editor** for editing the saved document. **Key 1** can no longer be used for editing — the service rejects it with an [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) because the document was already saved with that key.
 
-7. Add the script initializing the **Document Editor** for editing the document created. *Key 1* cannot be used as it was changed after saving the file. An [error](../../more-information/troubleshooting.md#the-file-version-has-been-changed) occurs.
-
-   Close the **Document Editor**.
+   Close the **document editor**.
 
    ``` ts
    const config = {
@@ -263,15 +238,13 @@ If the user saves the document before the editing is finished (the *status* valu
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where **example.com** is the name of the server where **document manager** and **document storage service** are installed. You can use the URL `https://static.onlyoffice.com/assets/docs/samples/demo.docx` of our sample document for testing.
-
 ## Co-editing modes
 
-There are two modes to collaborate on documents in real time - **Fast** and **Strict**.
+There are two modes to collaborate on documents in real time — **Fast** and **Strict**.
 
 You can change the co-editing mode using the [editorConfig.coEditing](../../usage-api/config/editor/editor.md#coediting) parameter:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     coEditing: {
@@ -286,14 +259,14 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ### Fast mode
 
-The **Fast** mode is used by default and defines the real-time co-editing. All changes are saved automatically and the possibility to redo the last undone operation is not available. This mode displays the user cursors and tooltips with their names when they are editing the text.
+**Fast** mode is the default. All changes are sent to other users in real time — you see their cursors and name tooltips as they edit the document. Changes are saved automatically, and redo is not available.
 
 ![Fast mode](/assets/images/editor/fast-mode.png)
 
 ### Strict mode
 
-In the **Strict** mode, you need to use the **Save** button to sync the changes made by you and other users. Until you click this button, the changes made by others are hidden. When a document is being edited by several users simultaneously, the edited text is marked with dashed lines of different colors.
+In **Strict** mode, each user works in an isolated session. Changes made by others stay hidden until you click **Save**. While several users are editing simultaneously, their regions are marked with dashed lines of different colors.
 
-When the user saves the changes by clicking the **Save** button, the others will receive a note about updates. To accept them and save your own changes to show them to other users, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> button in the left upper corner of the top toolbar. The updates will be highlighted.
+After you click **Save**, the other users receive a notification about updates. To accept them and send your own changes, click the <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> button in the top-left corner of the toolbar. The accepted updates are highlighted.
 
 ![Strict mode](/assets/images/editor/strict-mode.png)

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get a presentation.
+Access the current presentation and work with its content in a presentation.
 
 ```javascript editor-pptx
-// How to get the ApiPresentation object.
+// How can I reference the active presentation in a presentation?
 
-// Retrieve the current presentation object and work with its slides.
+// Get the presentation object and add a chart to a slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

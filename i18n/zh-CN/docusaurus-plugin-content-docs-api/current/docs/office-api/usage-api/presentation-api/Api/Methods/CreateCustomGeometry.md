@@ -20,9 +20,13 @@ expression.CreateCustomGeometry();
 
 ## 示例
 
-此示例演示如何在演示文稿中创建预设几何图形。
+在演示文稿中使用绘图路径创建自定义形状。
 
 ```javascript editor-pptx
+// How do I design a custom shape with precise point coordinates in a presentation?
+
+// Build a complex shape from lines and curves defined by coordinates in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 

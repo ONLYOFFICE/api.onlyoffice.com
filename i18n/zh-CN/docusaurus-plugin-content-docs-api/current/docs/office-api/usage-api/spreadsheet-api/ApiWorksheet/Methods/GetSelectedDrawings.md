@@ -20,12 +20,12 @@ expression.GetSelectedDrawings();
 
 ## 示例
 
-此示例展示如何从工作表中获取选中的绘图对象。
+获取用户在电子表格中高亮显示的所有绘图。
 
 ```javascript editor-xlsx
-// How to get seletectd drawings.
+// Access each drawing object when multiple are selected at the same time in a spreadsheet?
 
-// Get selected drawings as an array.
+// Modify properties of every highlighted drawing by looping through them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
@@ -44,5 +44,4 @@ let shapes = worksheet.GetSelectedDrawings();
 shapes.forEach(function(shape) {
 	shape.SetRotation(45);
 });
-
 ```

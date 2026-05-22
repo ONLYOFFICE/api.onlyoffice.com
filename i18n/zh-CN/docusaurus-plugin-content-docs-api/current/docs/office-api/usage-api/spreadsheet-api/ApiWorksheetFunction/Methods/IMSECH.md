@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的双曲正割。
+计算电子表格中复数的双曲正割。
 
 ```javascript editor-xlsx
-// How to get the hyperbolic secant.
+// How do I find the hyperbolic secant value of a complex number in a spreadsheet?
 
-// Use a function to get the hyperbolic secant of a complex number.
+// Get the hyperbolic secant result for complex number calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

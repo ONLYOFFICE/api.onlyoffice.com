@@ -1,3 +1,8 @@
+---
+description: Open a modal window in DocSpace using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Open modal
 
 This example demonstrates how to open a predefined modal window in DocSpace using the JavaScript SDK.

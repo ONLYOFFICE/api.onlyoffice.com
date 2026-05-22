@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置和获取当前演示文稿的关键字字符串。
+设置和显示演示文稿中的搜索关键词。
 
 ```javascript editor-pptx
+// How do I retrieve keywords associated with a presentation?
+
+// Access the keyword list stored in a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetKeywords("Example; ApiCore; Presentation");
@@ -38,5 +42,4 @@ paragraph.AddText("Keywords: " + keywords);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

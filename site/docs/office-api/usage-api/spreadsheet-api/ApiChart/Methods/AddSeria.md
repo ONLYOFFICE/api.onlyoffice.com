@@ -14,9 +14,9 @@ expression.AddSeria(sNameRange, sValuesRange, sXValuesRange);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sNameRange | Required | string |  | The series name. Can be a range of cells or usual text. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column, "Example series". |
-| sValuesRange | Required | string |  | A range of cells from the sheet with series values. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column. |
-| sXValuesRange | Optional | string |  | A range of cells from the sheet with series x-axis values. It is used with the scatter charts only. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column. |
+| sNameRange | Required | string |  | The series name. Can be a range of cells or usual text. For example: |
+| sValuesRange | Required | string |  | A range of cells from the sheet with series values. For example: |
+| sXValuesRange | Optional | string |  | A range of cells from the sheet with series x-axis values. It is used with the scatter charts only. For example: |
 
 ## Returns
 
@@ -24,12 +24,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example adds a new series to the chart.
+Expand an existing chart by adding a new data series to it in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a new series to create a chart.
+// How do I include an additional row of data as a separate line or bar in a chart in a spreadsheet?
 
-// Add a new series to update a chart.
+// Enrich a chart with extra data to make comparisons more complete in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

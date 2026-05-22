@@ -18,16 +18,16 @@ expression.SetStrikeout(isStrikeout);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例指定单元格的内容显示时在内容中心有一条水平线。
+在电子表格中为单元格文本绘制删除线。
 
 ```javascript editor-xlsx
-// How to add strikeout to the cell value.
+// How do I cross out the text in a cell in a spreadsheet?
 
-// Get a range and add strikeout to its text.
+// Mark content as deleted or outdated by striking through it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Struckout text");

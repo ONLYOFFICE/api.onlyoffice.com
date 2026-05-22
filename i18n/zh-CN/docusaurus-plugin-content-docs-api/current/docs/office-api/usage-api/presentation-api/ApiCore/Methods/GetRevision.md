@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何设置和获取当前演示文稿的修订版本。
+设置和显示演示文稿的修订号。
 
 ```javascript editor-pptx
+// How do I check the revision information for a presentation?
+
+// Read the revision identifier stored in a presentation in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetRevision("Rev. A");
@@ -38,5 +42,4 @@ paragraph.AddText("Revision: " + revision);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

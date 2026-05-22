@@ -18,19 +18,18 @@ expression.SetPrintGridlines(bPrint);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example specifies whether the sheet gridlines must be printed or not.
+Enable or disable gridlines on printed pages in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set whether sheet gridlines should be printed or not.
+// How do I include or exclude the grid pattern when printing my spreadsheet?
 
-// Set a boolean value representing whether to print gridlines or not.
+// Specify whether printed output shows the cell boundary lines in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintGridlines(true);
 worksheet.GetRange("A1").SetValue("Gridlines of cells will be printed on this page: " + worksheet.GetPrintGridlines());
-
 ```

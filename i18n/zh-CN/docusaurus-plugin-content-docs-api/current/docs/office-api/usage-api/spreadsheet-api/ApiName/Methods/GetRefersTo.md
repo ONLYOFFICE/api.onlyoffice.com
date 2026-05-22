@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取名称定义引用的公式。
+读取电子表格中命名范围指向的公式。
 
 ```javascript editor-xlsx
-// How to add a defname that refers to the formula from the specified range.
+// How do I find out which formula a named range refers to in a spreadsheet?
 
-// Add a defname for the formula and then display it in the worksheet.
+// Check what expression is stored behind a range name to verify its target in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

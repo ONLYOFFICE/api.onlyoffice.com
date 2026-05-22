@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回现金流计划的净现值。
+计算电子表格中在特定日期发生的现金流的净现值。
 
 ```javascript editor-xlsx
-// How to return the net present value for a schedule of cash flows.
+// How do I find the net present value when payments happen on irregular dates in a spreadsheet?
 
-// Use a function to return the net present value.
+// Evaluate the current value of future cash flows with custom payment dates in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

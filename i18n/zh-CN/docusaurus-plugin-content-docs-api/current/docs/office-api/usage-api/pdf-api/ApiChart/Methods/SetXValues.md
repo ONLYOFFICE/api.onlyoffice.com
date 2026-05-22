@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何为散点图的所有系列向水平轴添加值。
+在 PDF 中为散点图的水平轴添加自定义值。
 
 ```javascript editor-pdf
-// Fill all x-axis values of scattered charts series.
+// How do I set custom labels for the horizontal axis in a scatter chart in a PDF?
+
+// Replace the default horizontal axis values with custom text labels in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255,
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

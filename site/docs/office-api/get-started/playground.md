@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
+
 # Playground
 
 The Playground serves as an interactive platform for users to explore and test the capabilities of the ONLYOFFICE Docs APIs without registration and installing anything. It provides users with various API functionalities, allowing them to experiment with different document types seamlessly.
@@ -13,8 +15,4 @@ The Playground serves as an interactive platform for users to explore and test t
 - **Multi-platform**. Test for desktop, mobile, or embedded platforms.
 - **Customization**. Switch themes and interface languages for convenience.
 
-```mdx-code-block
-import {PlaygroundCardsRow} from '@site/src/components/PlaygroundCard';
-
-<PlaygroundCardsRow searchParams={[{testType: "office-js-api"}, {document: "sample"}]}/>
-```
+<PlaygroundCardsRow searchParams={[{script: "office-js-api"}]}/>

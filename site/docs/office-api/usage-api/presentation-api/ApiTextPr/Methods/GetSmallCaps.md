@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to find out whether a text is uncapitalized.
+Check if text uses small capitals formatting in a presentation.
 
 ```javascript editor-pptx
-// How to know whether the text letters are lowercase or not.
+// How do I determine if text is displayed as small capitals in a presentation?
 
-// Get the text properties of the run and find whether it is uncapitalized or not.
+// Read the small capitals property to see if the style is enabled for text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const smallCaps = textPr.GetSmallCaps();
 paragraph.AddText("Property of the small capitalized letters: " + smallCaps);
 docContent.Push(paragraph);
-
 ```

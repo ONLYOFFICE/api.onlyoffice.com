@@ -20,12 +20,12 @@ expression.GetLayout();
 
 ## 示例
 
-此示例展示如何获取当前幻灯片的版式。
+获取演示文稿中当前幻灯片的版式。
 
 ```javascript editor-pptx
-// How to return a slide layout.
+// Retrieve the slide layout using GetLayout method.
 
-// Get a slide layout and set its background color.
+// Apply a background color to the layout using SetBackground.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -33,5 +33,4 @@ const layout = slide.GetLayout();
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 layout.SetBackground(fill);
 slide.FollowLayoutBackground();
-
 ```

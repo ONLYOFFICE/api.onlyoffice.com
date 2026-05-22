@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieves geometry information from a star shape in a spreadsheet.
+Read the outline geometry of a shape and display its preset name and custom status in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays preset type and custom status in cells.
+// How do I find out what geometric form a shape is using in a spreadsheet?
+
+// Inspect a shape's outline definition and write the results into sheet cells in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
 let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));

@@ -22,9 +22,13 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example shows how to apply all-caps formatting to a paragraph inside a shape.
+Display all text in a paragraph as capital letters inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I make every letter in a paragraph appear uppercase in a spreadsheet?
+
+// Enforce an all-caps style on a paragraph without changing the underlying text in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 130, 170));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetCaps(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has normal capitalization.');
 content.Push(paragraph2);
-
 ```

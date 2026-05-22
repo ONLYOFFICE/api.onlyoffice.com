@@ -14,7 +14,7 @@ expression.SKEW_P(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将返回其分布的偏度。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
+| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将返回其分布的偏度。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何根据总体返回分布的偏度：描述分布围绕其平均值的不对称程度。
+在电子表格中返回基于总体的分布偏度：分布围绕其均值的不对称程度的表征。
 
 ```javascript editor-xlsx
-// How to calaculate the skewness of a distribution based on a population.
+// Calculate the population skewness of a distribution using the SKEW_P function.
 
-// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean.
+// Place values in cells and apply the function to display the asymmetry result.
 
 const worksheet = Api.GetActiveSheet();
 

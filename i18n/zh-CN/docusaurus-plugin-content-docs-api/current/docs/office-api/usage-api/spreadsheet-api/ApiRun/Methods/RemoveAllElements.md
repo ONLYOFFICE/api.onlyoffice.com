@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例从文本块中移除所有元素。
+清除电子表格中文本运行的所有内容。
 
 ```javascript editor-xlsx
-// How to remove all text elements.
+// How do I wipe out everything inside a text run in a spreadsheet?
 
-// Create a text run object, add a text to it and clear its content.
+// Reset a run to empty before inserting fresh text into a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

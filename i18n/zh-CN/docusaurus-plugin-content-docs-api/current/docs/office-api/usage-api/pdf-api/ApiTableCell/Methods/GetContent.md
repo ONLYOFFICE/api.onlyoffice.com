@@ -20,10 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-如何获取 ApiTableCell 对象的内容。
+从 PDF 中的表格单元格检索内部内容。
 
 ```javascript editor-pdf
-// Return the ApiDocumentContent object from the table cell.
+// How do I access what is stored inside a table cell in a PDF?
+
+// Extract the document elements contained within a cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,5 +39,4 @@ paragraph.AddText("This is a sample text in the cell.");
 content.Push(paragraph);
 
 page.AddObject(table);
-
 ```

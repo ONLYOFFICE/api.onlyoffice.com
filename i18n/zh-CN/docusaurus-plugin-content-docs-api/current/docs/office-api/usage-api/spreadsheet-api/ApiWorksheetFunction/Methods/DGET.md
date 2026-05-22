@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何从数据库中提取与指定条件匹配的单个记录。
+从数据库中提取匹配指定条件的单条记录。
 
 ```javascript editor-xlsx
-// How to get a value from a database range that satisfies a condition.
+// Retrieve values based on criteria applied to database columns.
 
-// Use function to get a record after applying condition.
+// Use the DGET function to fetch records meeting multiple conditions from a range.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

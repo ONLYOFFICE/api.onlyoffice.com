@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example adds a new element to rich content.
+Insert a paragraph into formatted text content in a PDF.
 
 ```javascript editor-pdf
+// How do I add text blocks to rich content in a PDF?
+
+// Place new elements within text formatting containers in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

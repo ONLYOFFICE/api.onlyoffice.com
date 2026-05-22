@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a number from 1 to 7 identifying the day of the week of the specified date.
+Get the week number of a date within the year in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return a weekday.
+// How do I find which week of the year a specific date belongs to in a spreadsheet?
 
-// Use a function to get a weekday using numbers.
+// Calculate the numeric week position for any date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,5 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.WEEKNUM("11/5/2018", 2); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

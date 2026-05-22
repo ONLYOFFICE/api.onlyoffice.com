@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回以数字格式给出的日期中的日，一个从 1 到 31 的数字。
+从电子表格中的日期提取日期数字（1-31）。
 
 ```javascript editor-xlsx
-// How to get a day from a date.
+// What day of the month does a date represent in a spreadsheet?
 
-// Use function to get day from provided date.
+// Pull the day component from a date value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -35,5 +35,4 @@ let func = Api.WorksheetFunction;
 let ans = func.DAY("2018/3/16"); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

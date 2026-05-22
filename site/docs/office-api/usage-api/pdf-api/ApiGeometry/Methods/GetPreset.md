@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Gets geometry information from a star shape on a presentation page.
+Identify which built-in shape template was used for a shape in a PDF.
 
 ```javascript editor-pdf
-// Displays preset type and custom status in a text shape.
+// How do I find out what preset shape type is being used in a PDF?
+
+// Check whether a shape is using a preset or a custom design in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

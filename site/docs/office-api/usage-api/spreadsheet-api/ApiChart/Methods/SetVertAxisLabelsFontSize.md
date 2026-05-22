@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the font size to the vertical axis labels.
+Change the text size of the vertical axis labels on a chart in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a font size of the vertical axis labels.
+// How do I make the numbers on the vertical axis larger or smaller in a spreadsheet?
 
-// Resize a font size of the vertical axis labels.
+// Adjust vertical axis label font size to improve chart readability in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

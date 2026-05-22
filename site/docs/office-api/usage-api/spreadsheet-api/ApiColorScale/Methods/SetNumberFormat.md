@@ -2,32 +2,16 @@
 
 Sets the number format applied to a cell when the conditional formatting rule evaluates to true.
 
-## Syntax
-
-```javascript
-expression.SetNumberFormat(NumberFormat);
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| NumberFormat | Required | string |  | The number format code (e.g., "General", "#,##0.00", etc.) |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetNumberFormat](../../ApiFormatCondition/Methods/SetNumberFormat.md).
 
 ## Example
 
-This example sets the number format for a conditional formatting rule.
+Control how numbers are displayed when a formatting rule is triggered in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to apply number formatting to conditional formatting rules.
+// How do I apply a custom number display pattern to a conditional formatting rule in a spreadsheet?
 
-// Set conditional formatting rule number format.
+// Ensure highlighted cells show values with a specific currency or decimal style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetNumberFormat("$#,##0.00");
 
 worksheet.GetRange("C4").SetValue("New format:");
 worksheet.GetRange("C5").SetValue(condition1.GetNumberFormat());
-
 ```

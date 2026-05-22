@@ -24,10 +24,12 @@ boolean
 
 ## 示例
 
-如何为图表系列添加轮廓。
+在 PDF 中为图表的条形或列添加边框。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series outline.
+// How do I add an outline to each data series in a PDF?
+
+// Apply a stroke outline to chart series in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 page.AddObject(chart);
-
 ```

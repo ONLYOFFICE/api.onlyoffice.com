@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-此示例指定此文本块中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。
+在 PDF 中为文本字母应用小型大写字母格式。
 
 ```javascript editor-pdf
-// How to make text uncapitalized.
+// What format makes text appear as small capitals in a PDF?
 
-// Create a new text run and make its letters lowercase.
+// Designate text characters to display in small capital style in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is just a sample text. ");
@@ -49,5 +49,4 @@ run.SetSmallCaps(true);
 run.AddText("This is a text run with the font set to small capitalized letters.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

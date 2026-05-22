@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-此示例获取 ApiChart 类的第一个系列并将其类型插入到 PDF 文档中。
+读取 PDF 中数据系列的图表类型。
 
 ```javascript editor-pdf
-// How to get a chart type and show it on the page.
+// How do I determine what type of chart a particular series uses in a PDF?
 
-// Change a chart type to the "area" type.
+// Display the chart type of a series as text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +50,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a name to the current theme format scheme.
+Assign a name to a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to set a format scheme name.
+// How do I give a name to a format scheme in a presentation?
 
-// Create new format scheme and set its name.
+// Label a theme format scheme with a custom name in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("New name was set to the theme format scheme.");
 slide.AddObject(shape);
-
 ```

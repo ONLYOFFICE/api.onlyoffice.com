@@ -4,28 +4,29 @@ sidebar_position: -18
 
 # Action link
 
-The reference figure and the steps below explain the process of working with links in ONLYOFFICE Docs.
+The figure and steps below explain how a shareable link to a bookmark position in a document is created in ONLYOFFICE Docs.
 
 <img alt="Action link" src="/assets/images/editor/actionLink-create.png" width="720px" />
 
-1. The user sends a request to get a link to the document which contains a bookmark in the **document editor**.
-2. The **document editor** sends the request to the **document manager** where the software integrators create the link.
-3. The **document manager** sends the link back to the **document editor** where the link is displayed.
+1. The user clicks the **Get link** button in the bookmark editing menu of the **document editor**.
+2. The **document editor** fires the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event, passing the bookmark data to the **document manager**.
+3. The **document manager** builds a URL that encodes the bookmark data and passes it back to the **document editor** via the [setActionLink](../../usage-api/methods.md#setactionlink) method.
+4. The **document editor** displays the link to the user.
 
 ## How this can be done in practice
 
-1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
+1. Create an `.html` file to [open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for the *Get link* button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization. When the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event is called, the user request is sent to the software integrators which create the link in the document storage service.
+2. In the editor initialization config, define the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event handler. When the user clicks **Get link** in the bookmark menu, the editor calls this handler with an `event.data` object that describes the bookmark position. Your code must build a URL that encodes this data and pass it back to the editor via [setActionLink](../../usage-api/methods.md#setactionlink):
 
    ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onMakeActionLink(event) {
-     const ACTION_DATA = event.data
-     const link = GENERATE_LINK(ACTION_DATA)
-     docEditor.setActionLink(link)
-   };
+     const ACTION_DATA = event.data;
+     const link = GENERATE_LINK(ACTION_DATA);
+     docEditor.setActionLink(link);
+   }
    
    const config = {
      events: {
@@ -36,23 +37,19 @@ The reference figure and the steps below explain the process of working with lin
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-3. In order to give the user the link to the document which contains a bookmark, the software integrators send the link to the [setActionLink](../../usage-api/methods.md#setactionlink) method:
-
-   ``` ts
-   docEditor.setActionLink(link)
-   ```
+   `GENERATE_LINK` is a placeholder for your server-side logic that builds a URL containing the bookmark data (for example, as a query-string parameter). When a user later opens that URL, your **document manager** must extract the data and pass it to the editor as described below.
 
 ## Opening the bookmark
 
 <img alt="Open action link" src="/assets/images/editor/actionLink-open.png" width="720px" />
 
-1. The user follows the link in the **document manager**.
-2. The **document manager** sends the initialization *editorConfig* to the **document editor**.
-3. The **document editor** scrolls the document to the bookmark.
+1. The user opens the action link in the browser, which navigates to the **document manager**.
+2. The **document manager** initializes the **document editor** with the [`config`](../../usage-api/config/config.md) that includes the bookmark data in the [`actionLink`](../../usage-api/config/editor/editor.md#actionlink) parameter.
+3. The **document editor** opens the document and scrolls to the bookmark.
 
-When the user follows the link, the **document editor** sends the initialization *editorConfig* to the **document editing service**. The ACTION\_DATA received from the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event is specified in the [data.actionLink](../../usage-api/config/editor/editor.md#actionlink) parameter of the *editorConfig*:
+To open a document at a bookmark position, pass the `ACTION_DATA` object (originally received from the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event) as the value of [`editorConfig.actionLink`](../../usage-api/config/editor/editor.md#actionlink):
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     actionLink: ACTION_DATA,
@@ -63,5 +60,5 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
 :::note
-The link is generated in the same way when [mentioning](./mentions.md#how-this-can-be-done-in-practice) users in the comments.
+The link is generated in the same way when [mentioning](./mentions.md#how-this-can-be-done-in-practice) users in comments.
 :::

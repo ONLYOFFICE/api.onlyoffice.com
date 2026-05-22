@@ -24,9 +24,13 @@ expression.InsertParagraph(paragraph, sPosition, beRNewPara);
 
 ## Example
 
-This example inserts a paragraph at the specified position.
+Insert a paragraph at the specified position in a presentation.
 
 ```javascript editor-pptx
+// How do I add a new paragraph before or after an existing one in a presentation?
+
+// Add a paragraph at a specific location in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This paragraph was inserted after the first one.');
 paragraph.InsertParagraph(paragraph2, 'after', true);
 slide.AddObject(shape);
-
 ```

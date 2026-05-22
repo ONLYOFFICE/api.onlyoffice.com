@@ -20,12 +20,12 @@ expression.GetOutLine();
 
 ## 示例
 
-此示例获取文本的轮廓属性。
+读取电子表格中应用于文本的轮廓边框。
 
 ```javascript editor-xlsx
-// How to find out whether a text is outlined or not.
+// How do I find out what outline is drawn around text in a spreadsheet?
 
-// Get a text outline property type, for example as a stroke.
+// Inspect the border object assigned to a text style and display its type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

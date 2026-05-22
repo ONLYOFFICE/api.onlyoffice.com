@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例将指定的数字格式设置为图表系列。
+格式化演示文稿中图表数据系列中显示的数字。
 
 ```javascript editor-pptx
-// How to set the "0.00" numeric format to the chart seria.
+// How do I change how numbers are displayed in a chart in a presentation?
 
-// Create a chart, set its properties and its series numeric format.
+// Apply a custom number format like "0.00" to show decimal places in chart values in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

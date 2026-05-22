@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the parent of a custom XML node.
+Access the parent element of an XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I find the parent of an XML element in a presentation?
+
+// Retrieve the containing XML element of a node in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -42,5 +46,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Parent node name: ' + parent.GetNodeName());
-
 ```

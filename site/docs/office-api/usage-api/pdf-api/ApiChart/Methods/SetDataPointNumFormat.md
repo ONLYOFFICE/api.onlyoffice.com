@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to change a number format of a data point.
+Format the numbers shown on chart data points in a PDF.
 
 ```javascript editor-pdf
-// Create a chart then apply specified numeric format to its data points.
+// How do I control the number format displayed on individual data points in a PDF?
+
+// Apply a specific number format to a data point in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

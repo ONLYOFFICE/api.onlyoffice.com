@@ -20,12 +20,12 @@ expression.GetDocContent();
 
 ## 示例
 
-此示例展示如何获取可以插入段落或文本块的形状内部内容。
+打开形状的文档级内容并在电子表格中用新段落替换其文本。
 
 ```javascript editor-xlsx
-// How to get content of ApiShape.
+// How do I rewrite the document content stored inside a shape in a spreadsheet?
 
-// Get content of ApiShape, remove all its elements and add a new paragraph to it.
+// Clear all existing elements from a shape's document body and push in a fresh paragraph in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

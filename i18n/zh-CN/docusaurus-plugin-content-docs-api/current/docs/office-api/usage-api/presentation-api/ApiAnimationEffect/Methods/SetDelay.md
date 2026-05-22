@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置动画效果的延迟时间。
+设置演示文稿中动画效果开始前的延迟。
 
 ```javascript editor-pptx
+// How do I add a pause before an animation plays in a presentation?
+
+// Configure the waiting time between the trigger and when the animation begins in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -56,5 +60,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New delay: ' + delay + 'ms (1 second)');
 slide.AddObject(infoShape);
-
 ```

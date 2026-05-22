@@ -20,10 +20,13 @@ number
 
 ## 示例
 
-分析页面上云形状的路径属性。
+计算 PDF 中形状的轮廓段数。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How do I find out how many separate paths a shape contains in a PDF?
+
+// Get the total number of paths and display it in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

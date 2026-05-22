@@ -15,7 +15,7 @@ expression.AddElement(richRun, pos);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | richRun | Required | [ApiRichRun](../../ApiRichRun/ApiRichRun.md) |  | The element which will be added at the current position. |
-| pos | Optional | number |  | The position where the current element will be added. If this value is not specified, then the element will be added at the end of the current paragraph. |
+| pos | Optional | number |  | The position where the current element will be added. If this value is not |
 
 ## Returns
 
@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example adds new element to rich paragraph.
+Insert an element into a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I add items to a paragraph in a PDF?
+
+// Place a new element at a specific position in a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

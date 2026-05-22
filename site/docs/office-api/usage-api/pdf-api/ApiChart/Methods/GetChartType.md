@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a chart type of a chart.
+Determine what kind of chart is displayed in a PDF.
 
 ```javascript editor-pdf
+// How do I find out if a chart is a bar chart or line chart in a PDF?
+
+// Retrieve the chart type and show it as text in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ const chartType = chart.GetChartType();
 chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 page.AddObject(chart);
-
 ```

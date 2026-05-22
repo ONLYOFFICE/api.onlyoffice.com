@@ -22,9 +22,13 @@ number
 
 ## Example
 
-This example shows how to convert points to picas.
+Convert points to picas and display the result in a presentation.
 
 ```javascript editor-pptx
+// Use Api.PointsToPicas to convert measurement units.
+
+// Display the converted value in a shape text.
+
 const points = 42;
 const picas = Api.PointsToPicas(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

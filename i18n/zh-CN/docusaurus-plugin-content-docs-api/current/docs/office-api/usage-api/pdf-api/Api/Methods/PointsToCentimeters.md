@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为厘米。
+在 PDF 文档中将磅转换为厘米。
 
 ```javascript editor-pdf
+// The API method performs measurement unit conversion.
+
+// The result is displayed in a shape text element.
+
 const points = 1000;
 const centimeters = Api.PointsToCentimeters(points);
 
@@ -38,5 +42,4 @@ paragraph.AddText(points + ' points are equal to ' + centimeters + ' centimeters
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

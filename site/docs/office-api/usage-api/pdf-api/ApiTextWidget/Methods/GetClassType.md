@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-"page"
+"textWidget"
 
 ## Example
 
-This example gets text widget and displays it's type.
+Identify the type of a text input field in a PDF.
 
 ```javascript editor-pdf
+// How do I determine what kind of form field this is in a PDF?
+
+// Read the classification of a text widget element in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

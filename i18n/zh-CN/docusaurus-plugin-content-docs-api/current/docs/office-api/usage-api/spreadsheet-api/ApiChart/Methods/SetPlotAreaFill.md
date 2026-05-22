@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表绘图区域的填充。
+在电子表格中为图表绘图区应用背景填充。
 
 ```javascript editor-xlsx
-// How to color chart plot area.
+// How do I change the background color of the chart plot area in a spreadsheet?
 
-// Fill plot area with a solid fill.
+// Customize the chart interior by setting a colored fill behind the data bars in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

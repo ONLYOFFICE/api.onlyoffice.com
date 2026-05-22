@@ -31,12 +31,12 @@ expression.AddShape(sType, nWidth, nHeight, oFill, oStroke, nFromCol, nColOffset
 
 ## 示例
 
-此示例使用指定的参数向工作表添加形状。
+在电子表格的工作表上绘制具有自定义填充和位置的形状。
 
 ```javascript editor-xlsx
-// How to add a shape to the worksheet.
+// How do I place a colored geometric shape onto a worksheet in a spreadsheet?
 
-// Insert a flowchart shape to the worksheet.
+// Decorate a sheet by adding a gradient-filled shape at defined coordinates.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
@@ -44,5 +44,4 @@ let gradientStop2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 let fill = Api.CreateLinearGradientFill([gradientStop1, gradientStop2], 5400000);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
-
 ```

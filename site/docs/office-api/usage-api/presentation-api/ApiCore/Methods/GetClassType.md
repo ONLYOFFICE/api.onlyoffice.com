@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Identify the class type of the core properties object in a presentation.
 
 ```javascript editor-pptx
+// How do I find out what type the core properties object is in a presentation?
+
+// Display the class type returned by the presentation's core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 const classType = core.GetClassType();
@@ -38,5 +42,4 @@ paragraph.AddText("Class type: " + classType);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the theme font scheme.
+Duplicate a font scheme in a presentation.
 
 ```javascript editor-pptx
-// How to create a copy of a font scheme.
+// How do I make a copy of an existing font scheme in a presentation?
 
-// Get font scheme and create its copy.
+// Get a font scheme and create a duplicate of it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);
@@ -86,5 +86,4 @@ paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("New font scheme was set to this slide.");
 slide2.AddObject(shape);
-
 ```

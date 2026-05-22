@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the selection quads on the page and highlights it.
+Obtain the exact boundaries of selected text on a page in a PDF.
 
 ```javascript editor-pdf
+// How do I find the coordinates of highlighted text in a PDF?
+
+// Fetch the selection areas to mark them with visual highlights in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 page.SetSelection({x: 10, y: 10}, {x: 100, y: 100});

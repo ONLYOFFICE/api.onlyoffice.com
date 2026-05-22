@@ -23,7 +23,10 @@ expression.GetLine();
 从形状获取轮廓属性并显示详细信息。
 
 ```javascript editor-pptx
-// Creates a shape with a stroke, retrieves it and shows stroke details.
+// Retrieve stroke properties including width, fill type, and dash type from a shape.
+
+// Display stroke details such as class type, width in EMU and points, fill type, and dash type.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -48,5 +51,4 @@ if (retrievedStroke) {
     let dashType = retrievedStroke.GetDashType();
     paragraph.AddText("Dash type: " + (dashType ? '"' + dashType + '"' : "not set"));
 }
-
 ```

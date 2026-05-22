@@ -1,6 +1,6 @@
 # FORECAST_ETS
 
-使用指数平滑 (ETS) 算法的 AAA 版本，根据现有（历史）值计算或预测未来值。
+使用指数平滑 (ETS) 算法的 AAA 版本根据现有（历史）值计算或预测未来值。
 
 ## 语法
 
@@ -16,8 +16,8 @@ expression.FORECAST_ETS(arg1, arg2, arg3, arg4, arg5, arg6);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将预测新值的日期。必须在时间线中的最后一个日期之后。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | 确定将预测新点的历史值的数值数据区域或数组。 |
-| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 与历史值对应的日期/时间值区域。时间线区域必须与第二个参数大小相同。日期/时间值之间必须有恒定的步长，且不能为零。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定季节性模式长度的可选数值。默认值 1 表示自动检测季节性。值 0 表示没有季节性。 |
+| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 与历史值对应的日期/时间值范围。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定季节模式长度的可选数值。默认值 1 表示自动检测季节性。 |
 | arg5 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 处理缺失值的可选数值。默认值 1 通过插值替换缺失值，0 则用零替换。 |
 | arg6 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 用于聚合具有相同时间戳的多个值的可选数值。 |
 
@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-此示例演示如何使用 AAA 版本的指数平滑 (ETS) 算法根据现有（历史）值计算或预测未来值。
+根据电子表格中的历史数据模式预测未来值。
 
 ```javascript editor-xlsx
-// How to calculate or predict a future value based on existing (historical) values.
+// How do I forecast the next data point using past values in a spreadsheet?
 
-// Use an AAA version of the Exponential Smoothing (ETS) algorithm to calculate or predict a future value based on existing values.
+// Use trend analysis to estimate an upcoming value from existing data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ expression.SetLayoutSubtotals(show);
 
 ## 示例
 
-此示例展示如何设置透视字段的布局分类汇总。
+显示或隐藏电子表格中透视字段组的小计。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout subtotals.
+// How do I turn off subtotals for a specific pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout subtotals of a specified pivot.
+// Remove automatic group totals from a pivot field to simplify the summary view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

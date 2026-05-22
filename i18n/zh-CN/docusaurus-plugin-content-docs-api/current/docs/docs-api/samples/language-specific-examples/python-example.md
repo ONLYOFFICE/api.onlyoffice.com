@@ -2,11 +2,11 @@
 sidebar_position: -9
 ---
 
-# Python 示例
+# Python 集成
 
 ## 概述
 
-本示例将帮助您把ONLYOFFICE文档集成到用Python编写的Web应用程序中。
+本示例将帮助您把ONLYOFFICE 文档集成到用Python编写的Web应用程序中。
 
 :::caution
 本示例仅用于测试目的以及演示编辑器的功能。在没有进行适当的代码修改之前，**请勿**在您自己的服务器上使用此集成示例。如果您启用了测试示例，在投入生产环境之前请将其禁用。
@@ -18,8 +18,8 @@ sidebar_position: -9
 
 - 由于无需授权，存储不受未经授权访问的保护。
 - 由于参数是由代码根据预先安排的脚本生成的，因此不会对链接中的参数替换进行检查。
-- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE文档的请求。
-- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE文档进行交互。
+- 编辑后保存文件的请求中不会进行数据检查，因为每个测试示例仅适用于来自ONLYOFFICE 文档的请求。
+- 不禁止从其他网站使用测试示例，因为它们旨在与来自其他域的ONLYOFFICE 文档进行交互。
 
 ## 步骤1.安装先决条件并运行带有编辑器的网站
 
@@ -31,14 +31,14 @@ Python示例提供了多种安装选项，但我们强烈建议为此使用Docke
 
 安装好所有内容后，下载发行版压缩包并解压，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python)克隆源代码：
 
-``` sh
+```sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
 unzip Python.Example.zip
 ```
 
 然后打开示例目录并[启动容器](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L38):
 
-``` sh
+```sh
 cd "Python Example"
 make compose-prod
 ```
@@ -49,9 +49,9 @@ make compose-prod
 
 ### 选项2.在本地计算机上
 
-下载并安装ONLYOFFICE文档（打包为文档服务器）：
+下载并安装ONLYOFFICE 文档（打包为文档服务器）：
 
-[获取ONLYOFFICE文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
+[获取ONLYOFFICE 文档](https://www.onlyoffice.com/download-docs.aspx?from=api#docs-developer)
 
 查看详细指南，了解如何在[Windows](https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_python_example)、[Linux](https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_python_example)或[Docker](https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx?from=api_python_example)上安装它。
 
@@ -59,14 +59,14 @@ make compose-prod
 
 安装好所有内容后，下载发行版压缩包并解压，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python)克隆源代码：
 
-``` sh
+```sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
 unzip Python.Example.zip
 ```
 
 然后打开示例目录，[安装依赖项](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L13)，并[启动服务器](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L21):
 
-``` sh
+```sh
 cd "Python Example"
 make prod
 make server-prod
@@ -78,9 +78,9 @@ make server-prod
 
 ## 步骤2.检查可访问性
 
-如果示例和ONLYOFFICE文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE文档。
+如果示例和ONLYOFFICE 文档安装在不同的计算机上，请确保安装了示例的服务器能够访问您在配置文件中指定的（替换了`documentserver`的）地址的ONLYOFFICE 文档。
 
-同时确保ONLYOFFICE文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
+同时确保ONLYOFFICE 文档反过来也能够访问安装了示例的服务器，使用您在配置文件中指定的（替换了`example.com`的）地址。
 
 ## 步骤3.配置Python示例 {#step-3-configure-the-python-example}
 

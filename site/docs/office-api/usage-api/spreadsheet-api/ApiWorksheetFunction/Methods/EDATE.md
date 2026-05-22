@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the serial number of the date which comes the indicated number of months before or after the start date.
+Calculate a date that is a specified number of months before or after a given date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a date some months before or after the start date.
+// How do I find a date by adding or subtracting months from a starting date in a spreadsheet?
 
-// Use function to get the serial number of the date indicated number of months before or after the start date.
+// Shift a date forward or backward by a number of months in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,5 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.EDATE("3/16/2018", 7); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

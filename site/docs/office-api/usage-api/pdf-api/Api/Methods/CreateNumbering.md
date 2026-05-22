@@ -23,10 +23,10 @@ expression.CreateNumbering(numType, startAt);
 
 ## Example
 
-This example creates a bullet for paragraphs.
+Create a bullet for paragraphs in a PDF document.
 
 ```javascript editor-pdf
-// How to create a numbered paragraph specifying its numerical.
+// Create a numbered paragraph specifying its numerical in a PDF document.
 
 // Add numbered paragraph to the page.
 
@@ -37,7 +37,7 @@ const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const bullet = Api.CreateNumbering("ArabicParenR", 1);
 paragraph.SetBullet(bullet);
@@ -47,5 +47,4 @@ paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(paragraph);
 page.AddObject(shape);
-
 ```

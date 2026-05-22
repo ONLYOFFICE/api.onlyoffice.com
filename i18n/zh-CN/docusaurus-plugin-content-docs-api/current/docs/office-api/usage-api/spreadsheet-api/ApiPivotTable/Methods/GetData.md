@@ -14,7 +14,7 @@ expression.GetData(items);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| items | 必需 | string[] |  | 描述数据透视表报表中的单个单元格。例如，"'Estimated Costs' Tables May" 显示五月份桌子的预估成本（数据字段 = 成本，产品 = 桌子，月份 = 五月）。 |
+| items | 必需 | string[] |  | 描述数据透视表报表中的单个单元格。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number \| null
 
 ## 示例
 
-此示例展示如何使用名称从数据透视表获取数据。
+按行和列名称从电子表格中的数据透视表检索特定值。
 
 ```javascript editor-xlsx
-// How to get a field data from a pivot table.
+// How do I look up a single summarized value inside a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get some data from it.
+// Pull the aggregated result for a chosen category combination and write it to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

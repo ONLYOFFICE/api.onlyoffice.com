@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example returns an internal ID of the current document content.
+Get the unique identifier of a shape's text content in a presentation.
 
 ```javascript editor-pptx
+// How do I find the internal ID assigned to a shape's text content in a presentation?
+
+// Retrieve the internal ID from a shape and display it as text on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -36,5 +40,4 @@ const internalId = docContent.GetInternalId();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Document content internal ID: ' + internalId);
 slide.AddObject(shape);
-
 ```

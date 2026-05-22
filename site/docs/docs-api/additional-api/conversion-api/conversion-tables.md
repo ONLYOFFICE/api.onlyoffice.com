@@ -10,7 +10,7 @@ Below you can find tables with formats that are available for conversion in diff
 In the [onlyoffice-docs-formats.json](https://github.com/ONLYOFFICE/document-formats/blob/master/onlyoffice-docs-formats.json) file, you can find a list of all file formats supported by ONLYOFFICE editors with their properties (possible actions, MIME, etc.).
 :::
 
-## Text document file formats
+## Document file formats
 <div className="conversion-table">
 
 |                  |          |          |          |          |          |          | Output&#x20; |  format  |          |          |          |          |          |          |          |          |          |

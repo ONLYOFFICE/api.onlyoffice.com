@@ -2,30 +2,16 @@
 
 返回在指定数据透视表报表的分类汇总列或行标题中显示的文本标签。
 
-## 语法
-
-```javascript
-expression.GetSubtotalName();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiPivotField.GetSubtotalName](../../ApiPivotField/Methods/GetSubtotalName.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的分类汇总名称。
+读取电子表格中分配给透视字段的自定义小计标签。
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotal name.
+// How do I check what label a pivot field's subtotal row is using in a spreadsheet?
 
-// Create a pivot table, add data to it then get subtotal name of a specified pivot field.
+// Confirm the subtotal name after applying a custom label to a pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

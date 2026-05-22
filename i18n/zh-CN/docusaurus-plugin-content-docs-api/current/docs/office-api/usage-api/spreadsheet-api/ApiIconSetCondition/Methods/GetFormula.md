@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取与图标集条件关联的公式。
+读取与电子表格中图标集条件格式规则关联的公式。
 
 ```javascript editor-xlsx
+// How do I find out whether an icon set condition uses a formula to determine its thresholds in a spreadsheet?
+
+// Check if a formula drives the icon set rule instead of a fixed value in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Month');
 worksheet.GetRange('B1').SetValue('Revenue');
@@ -46,5 +50,4 @@ if (formula) {
 	worksheet.GetRange('D1').SetValue('Icon set condition does not have a formula.');
 }
 worksheet.GetRange('D2').SetValue('Type: ' + iconCondition.GetType());
-
 ```

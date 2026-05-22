@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回现金流计划的内部收益率。
+计算电子表格中一系列有日期的现金流的内部收益率。
 
 ```javascript editor-xlsx
-// How to return the internal rate of return.
+// How do I find the internal rate of return when cash flows occur on specific dates in a spreadsheet?
 
-// Use a function to return the internal rate of return.
+// Determine the annual rate of return based on irregular payment timing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

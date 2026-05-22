@@ -2,32 +2,16 @@
 
 设置当前文本块的文本填充。
 
-## 语法
-
-```javascript
-expression.SetTextFill(oApiFill);
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充文本颜色的颜色或图案。 |
-
-## 返回值
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+继承自 [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md)。
 
 ## 示例
 
-此示例设置当前文本块的文本填充。
+在电子表格中用纯色填充形状内的文本。
 
 ```javascript editor-xlsx
-// How to color a text with solid fill.
+// How do I change the color of text using a solid fill in a spreadsheet?
 
-// Set color a text using solid color fill.
+// Paint the interior of letters with a chosen color to style text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

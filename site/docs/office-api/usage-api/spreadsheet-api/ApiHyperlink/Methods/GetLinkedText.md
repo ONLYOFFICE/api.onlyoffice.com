@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the URL of a hyperlink inside a shape.
+Read the URL address stored in a hyperlink in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I retrieve the destination address of a hyperlink in a spreadsheet?
+
+// Extract the web address that a hyperlink points to in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Linked text: ' + hyperlink.GetLinkedText());
-
 ```

@@ -20,12 +20,12 @@ expression.GetSpacingAfter();
 
 ## 示例
 
-此示例展示如何获取当前段落的段后间距值。
+检查演示文稿中段落下方的空间。
 
 ```javascript editor-pptx
-// How to get the size of a spacing after a text from a paragraph.
+// How do I read the spacing value after a paragraph in a presentation?
 
-// Return a property of the spacing size after a paragraph.
+// Retrieve the distance between the end of a paragraph and the next element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为横轴指定主刻度线「cross」。
+设置演示文稿中图表水平轴上主刻度线的样式。
 
 ```javascript editor-pptx
-// How to set a major tick mark using predefined symbols.
+// How do I choose the appearance of tick marks on a chart's horizontal axis in a presentation?
 
-// Create a chart, set its properties and major tick mark for horizontal axis.
+// Create a chart and apply a specific tick mark style to the horizontal axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 slide.AddObject(chart);
-
 ```

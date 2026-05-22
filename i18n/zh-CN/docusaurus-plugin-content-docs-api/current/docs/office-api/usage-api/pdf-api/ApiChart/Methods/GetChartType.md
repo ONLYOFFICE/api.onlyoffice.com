@@ -20,9 +20,13 @@ expression.GetChartType();
 
 ## 示例
 
-如何获取图表的图表类型。
+确定 PDF 中显示的图表类型。
 
 ```javascript editor-pdf
+// How do I find out if a chart is a bar chart or line chart in a PDF?
+
+// Retrieve the chart type and show it as text in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -40,5 +44,4 @@ const chartType = chart.GetChartType();
 chart.SetTitle('This chart is of the ' + chartType + ' type', 14);
 
 page.AddObject(chart);
-
 ```

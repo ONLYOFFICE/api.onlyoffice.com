@@ -22,9 +22,13 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-此示例展示如何根据 XPath 从自定义 XML 节点获取节点。
+在演示文稿中查找匹配路径的 XML 元素。
 
 ```javascript editor-pptx
+// How do I select multiple XML nodes using a path in a presentation?
+
+// Retrieve child elements from an XML node in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -61,5 +65,4 @@ for (let i = 0; i < nodes.length; i++) {
 	displayText += '\n' + (i + 1) + '. ' + species + ' with name ' + name + ', aged ' + age;
 }
 paragraph.AddText(displayText);
-
 ```

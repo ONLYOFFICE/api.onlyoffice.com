@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to delete a drawing object.
+Remove a chart or shape from a presentation.
 
 ```javascript editor-pptx
-// How to delete a slide drawing.
+// How do I delete an object that is no longer needed in a presentation?
 
-// Get a slide drawing and delete it.
+// Select and delete a specific drawing object from a slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,5 +58,4 @@ const docContent = drawing1.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The chart was deleted from this slide.");
-
 ```

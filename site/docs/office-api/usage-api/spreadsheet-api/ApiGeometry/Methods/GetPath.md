@@ -22,10 +22,13 @@ expression.GetPath(nIndex);
 
 ## Example
 
-Analyzes cloud shape path properties and displays them in cells.
+Retrieve a specific outline segment from a shape by its index in a spreadsheet.
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How do I access one particular drawing path from a shape's geometry in a spreadsheet?
+
+// Pull out a single path by position so its dimensions and style can be examined in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

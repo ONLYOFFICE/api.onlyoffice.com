@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## Example
 
-This example creates a color selecting for create gradient stop.
+Use a preset color in a gradient fill in a PDF.
 
 ```javascript editor-pdf
-// How to create a preset color.
+// How do I select a named color for a gradient in a PDF?
 
-// Add a preset color as a gradient stop.
+// Create a gradient stop with a built-in preset color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -39,5 +39,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 page.AddObject(drawing);
-
 ```

@@ -2,27 +2,17 @@
 
 返回当前表单的标签属性。
 
-## 语法
-
-```javascript
-expression.GetTag();
-```
-
-`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string
+继承自 [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md)。
 
 ## 示例
 
-此示例展示如何获取表单元素的标签。
+读取文档中附加到表单字段的标签。
 
 ```javascript editor-forms
+// How do I get the tag of a form field in a document?
+
+// Label a form with a custom tag, then retrieve it to confirm it was stored correctly.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -44,5 +34,4 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```

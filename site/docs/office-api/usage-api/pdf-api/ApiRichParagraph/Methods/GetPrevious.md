@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets previous rich paragraph and adds some text to it.
+Access the preceding paragraph and modify it in a PDF.
 
 ```javascript editor-pdf
+// How do I get the previous paragraph in a PDF?
+
+// Navigate backward to the previous paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

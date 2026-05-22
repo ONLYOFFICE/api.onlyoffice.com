@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为列表框字段设置多选。
+允许 PDF 中的列表选择字段接受多个选择。
 
 ```javascript editor-pdf
+// How do I enable multiple selections in a PDF?
+
+// Configure the field to permit picking several options in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let listboxField = Api.CreateListboxField([10, 10, 160, 100]);

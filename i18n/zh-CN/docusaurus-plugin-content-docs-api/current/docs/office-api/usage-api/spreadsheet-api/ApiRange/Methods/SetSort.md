@@ -29,12 +29,12 @@ expression.SetSort(key1, sSortOrder1, key2, sSortOrder2, key3, sSortOrder3, sHea
 
 ## 示例
 
-此示例根据请求中指定的参数对给定范围内的单元格进行排序。
+在电子表格中按多列以升序或降序对数据范围排序。
 
 ```javascript editor-xlsx
-// How to sort values of cells specifying the order.
+// How do I reorder rows by the values in one or more columns in a spreadsheet?
 
-// Get a range and sort its values.
+// Organize table data by applying multi-column sort rules in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(2016);

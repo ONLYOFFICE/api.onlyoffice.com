@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example adds a redact annot to first page and applies redact.
+Hide sensitive content permanently in a PDF.
 
 ```javascript editor-pdf
+// Can I remove information so it cannot be recovered in a PDF?
+
+// Cover and protect confidential areas in a PDF.
+
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

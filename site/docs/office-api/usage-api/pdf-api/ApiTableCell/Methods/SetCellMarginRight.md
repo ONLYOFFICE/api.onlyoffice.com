@@ -15,7 +15,7 @@ expression.SetCellMarginRight(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin shall be used, otherwise override the table cell right margin with specified value for the current cell. |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin shall be used, |
 
 ## Returns
 
@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to set the cell right margin for the current table cell.
+Set the right margin of a table cell in a PDF.
 
 ```javascript editor-pdf
-// Specify the right margin value for the ApiTableCell object.
+// How do I add space to the right of content inside a cell in a PDF?
+
+// Adjust the spacing on the right side of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,5 +43,4 @@ content.Push(paragraph);
 cell.SetCellMarginRight(600);
 
 page.AddObject(table);
-
 ```

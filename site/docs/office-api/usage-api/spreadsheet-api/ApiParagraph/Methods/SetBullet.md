@@ -2,32 +2,16 @@
 
 Sets the bullet or numbering to the current paragraph.
 
-## Syntax
-
-```javascript
-expression.SetBullet(oBullet);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oBullet | Required | [ApiBullet](../../ApiBullet/ApiBullet.md) |  | The bullet object created with the [Api#CreateBullet](../../Api/Methods/CreateBullet.md) or [Api#CreateNumbering](../../Api/Methods/CreateNumbering.md) method. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiParaPr.SetBullet](../../ApiParaPr/Methods/SetBullet.md).
 
 ## Example
 
-This example sets the bullet or numbering to the current paragraph.
+Add a bullet marker to a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a dash bullet to the paragraph.
+// How do I prepend a dash or symbol to lines of text in a paragraph in a spreadsheet?
 
-// Numbering and adding custom bullet points to the text.
+// Mark each paragraph entry with a custom bullet character to create a visual list in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

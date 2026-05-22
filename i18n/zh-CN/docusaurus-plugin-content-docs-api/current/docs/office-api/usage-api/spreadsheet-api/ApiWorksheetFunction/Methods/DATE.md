@@ -24,15 +24,14 @@ number
 
 ## 示例
 
-此示例演示如何返回表示日期时间代码中日期的数字。
+从电子表格中的年、月、日数字创建日期值。
 
 ```javascript editor-xlsx
-// How to get a date.
+// What date do these numbers represent in a spreadsheet?
 
-// Use function to get the date from a number.
+// Combine date parts into a single date value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DATE(2018, 3, 16));
-
 ```

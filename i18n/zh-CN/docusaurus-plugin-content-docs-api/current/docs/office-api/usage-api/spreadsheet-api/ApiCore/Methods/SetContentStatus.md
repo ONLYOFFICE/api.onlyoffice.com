@@ -22,9 +22,13 @@ expression.SetContentStatus(sStatus);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置当前工作簿的内容状态。
+在电子表格的工作簿文档属性中记录内容状态值。
 
 ```javascript editor-xlsx
+// How do I mark the content status of a workbook in a spreadsheet?
+
+// Save a status label such as "Final" or "Draft" in the file metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 core.SetContentStatus("Final");
@@ -41,5 +45,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
-
 ```

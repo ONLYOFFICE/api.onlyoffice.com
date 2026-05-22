@@ -11,7 +11,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 <YoutubeVideo videoId="_1Q86nRnumo"/>
 ```
 
-这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助ONLYOFFICE文档，在[Redmine](https://www.redmine.org/)中编辑附件。
+这个[插件](https://github.com/ONLYOFFICE/onlyoffice-redmine)能让用户借助ONLYOFFICE 文档，在[Redmine](https://www.redmine.org/)中编辑附件。
 
 该插件可在官方的[Redmine插件目录](https://www.redmine.org/plugins/onlyoffice_redmine)中获取。
 
@@ -34,11 +34,11 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 \* *- 要能够打开这些格式进行编辑，请在[格式设置](#formats)中勾选。由于某些格式限制，可能会出现数据丢失的情况。*
 
-## 安装ONLYOFFICE文档
+## 安装ONLYOFFICE 文档
 
-在安装插件之前，请确保您拥有一个ONLYOFFICE文档（文档服务器）实例，该实例必须能从Redmine和任何终端客户端解析并连接。此外，要确保ONLYOFFICE文档能够直接向Redmine发送POST请求。
+在安装插件之前，请确保您拥有一个ONLYOFFICE 文档（文档服务器）实例，该实例必须能从Redmine和任何终端客户端解析并连接。此外，要确保ONLYOFFICE 文档能够直接向Redmine发送POST请求。
 
-我们建议使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)来安装ONLYOFFICE文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)，在Debian、Ubuntu或其衍生系统上进行安装。
+我们建议使用[Docker](https://github.com/onlyoffice/Docker-DocumentServer)来安装ONLYOFFICE 文档。或者，您也可以按照[这些说明](https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx)，在Debian、Ubuntu或其衍生系统上进行安装。
 
 ## 安装Redmine ONLYOFFICE集成插件
 
@@ -84,17 +84,17 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ### 常规设置
 
-- **文档编辑服务地址**：已安装的ONLYOFFICE文档（文档服务器）的URL。留空则会禁用该插件。
+- **文档编辑服务地址**：已安装的ONLYOFFICE 文档（文档服务器）的URL。留空则会禁用该插件。
 
 ### 高级服务器设置
 
-- **服务器内部请求的ONLYOFFICE文档地址。**
-- **ONLYOFFICE文档内部请求的服务器地址。**
-- **连接到演示ONLYOFFICE文档服务器。**
+- **服务器内部请求的ONLYOFFICE 文档地址。**
+- **ONLYOFFICE 文档内部请求的服务器地址。**
+- **连接到演示ONLYOFFICE 文档服务器。**
 
 ### 安全设置
 
-- **密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE文档的访问，保障安全性和数据完整性。在ONLYOFFICE文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
+- **密钥**：从7.2版本开始，JWT默认启用，并且会自动生成密钥，用于限制对ONLYOFFICE 文档的访问，保障安全性和数据完整性。在ONLYOFFICE 文档的[配置文件](../../additional-api/signature/signature.md)中指定您的密钥，然后在插件的设置页面中指定相同的密钥。留空则会禁用身份验证。
 - **授权标头。**
 - **禁用证书验证（不安全）。**
 
@@ -112,7 +112,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 ## 工作原理
 
-该插件使用[ONLYOFFICE文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
+该插件使用[ONLYOFFICE 文档API](../basic-concepts.md)并集成到Redmine的多个页面中，包括[文档](#documents)，[附件](#attachments)，[文件](#files)，[问题](#issues)，[新闻](#news)，[维基](#wiki)，和[论坛](#forums)。此外，该插件还添加了诸如["在ONLYOFFICE中创建"](#create-in-onlyoffice)和["使用ONLYOFFICE转换"](#convert-with-onlyoffice)等常规页面。
 
 ### 文档 {#documents}
 

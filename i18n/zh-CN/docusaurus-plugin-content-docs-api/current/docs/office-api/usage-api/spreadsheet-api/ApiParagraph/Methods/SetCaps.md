@@ -22,9 +22,13 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-此示例展示如何对形状内的段落应用全大写格式。
+在电子表格中形状内以大写字母显示段落的所有文本。
 
 ```javascript editor-xlsx
+// How do I make every letter in a paragraph appear uppercase in a spreadsheet?
+
+// Enforce an all-caps style on a paragraph without changing the underlying text in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 130, 170));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetCaps(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has normal capitalization.');
 content.Push(paragraph2);
-
 ```

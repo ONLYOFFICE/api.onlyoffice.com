@@ -1,7 +1,6 @@
 # ApiRichRun
 
-表示 ApiRichRun 类。
-
+ApiRichRun 是 [ApiRichTextPr](../ApiRichTextPr/ApiRichTextPr.md) 的子类。
 
 ## 方法
 

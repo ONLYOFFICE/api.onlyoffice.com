@@ -20,9 +20,13 @@ number
 
 ## Example
 
-This example gets the duration of an animation effect.
+Get the duration of an animation effect in a presentation.
 
 ```javascript editor-pptx
+// Duration values specify how long an animation takes to complete.
+
+// Retrieve the duration from an animation effect using GetDuration() and display it.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -52,5 +56,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Duration: ' + duration + 'ms');
 slide.AddObject(infoShape);
-
 ```

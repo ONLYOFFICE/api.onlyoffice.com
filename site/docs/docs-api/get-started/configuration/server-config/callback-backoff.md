@@ -8,43 +8,43 @@ These parameters define the [callback backoff options](https://github.com/tim-ko
 
 ## services.CoAuthoring.callbackBackoffOptions.httpStatus
 
-`Type: string`   `Default: "429,500-599"`
+**type:** `string` | **default:** `"429,500-599"`
 
 Defines the HTTP statuses of the callback backoff.
 
 ## services.CoAuthoring.callbackBackoffOptions.retries
 
-`Type: integer`   `Default: 3`
+**type:** `integer` | **default:** `3`
 
 Defines the maximum amount of times to retry the operation.
 
 ## services.CoAuthoring.callbackBackoffOptions.timeout
 
-`Type: object`
+**type:** `object`
 
 Defines the callback backoff timeouts.
 
 ### services.CoAuthoring.callbackBackoffOptions.timeout.factor
 
-`Type: integer`   `Default: 2`
+**type:** `integer` | **default:** `2`
 
 Defines the exponential factor to use.
 
 ### services.CoAuthoring.callbackBackoffOptions.timeout.maxTimeout
 
-`Type: integer`   `Default: 2147483647`
+**type:** `integer` | **default:** `2147483647`
 
 Defines the maximum number of milliseconds between two retries.
 
 ### services.CoAuthoring.callbackBackoffOptions.timeout.minTimeout
 
-`Type: integer`   `Default: 1000`
+**type:** `integer` | **default:** `1000`
 
 Defines the number of milliseconds before starting the first try.
 
 ### services.CoAuthoring.callbackBackoffOptions.timeout.randomize
 
-`Type: boolean`   `Default: false`
+**type:** `boolean` | **default:** `false`
 
 Defines if the timeouts are randomized by multiplying with a factor between 1 and 2 or not.
 

@@ -20,10 +20,13 @@ expression.GetPaths();
 
 ## 示例
 
-分析页面上云形状的路径属性。
+从 PDF 中的形状提取所有轮廓段。
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// How do I retrieve every path that makes up a shape in a PDF?
+
+// Access all paths from a shape and review their details in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

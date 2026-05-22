@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all the OLE objects from the current presentation.
+List all embedded or linked files in a presentation.
 
 ```javascript editor-pptx
+// How do I find every linked video, spreadsheet, or external file in a presentation?
+
+// Retrieve OLE objects from slides and masters and count them in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -50,5 +54,4 @@ const oleObjects = presentation.GetAllOleObjects();
 const docContent = label.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('OLE Objects: ' + oleObjects.length);
-
 ```

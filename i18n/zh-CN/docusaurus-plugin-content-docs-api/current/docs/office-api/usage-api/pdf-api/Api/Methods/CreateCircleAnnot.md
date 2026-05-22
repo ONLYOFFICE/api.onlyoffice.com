@@ -22,12 +22,15 @@ expression.CreateCircleAnnot(rect);
 
 ## 示例
 
-此示例创建圆形注释并将其添加到页面。
+在 PDF 中添加圆形注释以高亮显示区域。
 
 ```javascript editor-pdf
+// How do I draw a circle annotation in a PDF?
+
+// Mark a region with a circular outline in a PDF.
+
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(circleAnnot);
-
 ```

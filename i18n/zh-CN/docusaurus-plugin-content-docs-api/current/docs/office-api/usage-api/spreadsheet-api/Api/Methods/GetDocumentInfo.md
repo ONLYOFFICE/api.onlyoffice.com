@@ -31,12 +31,12 @@ object
 
 ## 示例
 
-此示例演示如何获取表示为对象的文档信息并将应用程序名称粘贴到「A1」单元格。
+读取文档属性并在电子表格中显示应用程序名称。
 
 ```javascript editor-xlsx
-// How to get document info and iys application name.
+// How do I access general document information such as the application name in a spreadsheet?
 
-// Get application name using document info.
+// Retrieve metadata about the current file and write it into a cell in a spreadsheet.
 
 let docInfo = Api.GetDocumentInfo();
 let range = Api.GetActiveSheet().GetRange('A1');

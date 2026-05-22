@@ -29,9 +29,13 @@ string
 
 ## Example
 
-This example returns the text from the document content.
+Extract all text from a shape's content in a presentation.
 
 ```javascript editor-pptx
+// How do I get all the text inside a shape in a presentation?
+
+// Retrieve the combined text content from a shape and display it on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -48,5 +52,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Text from document content: ' + text);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

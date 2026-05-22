@@ -22,12 +22,12 @@ expression.SetDragToPage(flag);
 
 ## 示例
 
-此示例展示如何设置透视字段的拖动到页。
+控制电子表格中的透视字段是否可以拖动到筛选区域。
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to page.
+// How do I prevent a pivot field from being moved to the page filter area in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to page of a specified pivot using boolean value.
+// Lock a pivot field so users cannot reposition it as a page filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to get column grand of a pivot table.
+Check whether column grand totals are shown in a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get column grand from a pivot table.
+// How do I find out if a pivot table displays grand totals for its columns in a spreadsheet?
 
-// Create a pivot table, add data to it then get its column grand.
+// Retrieve the column grand total setting and display the result on the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

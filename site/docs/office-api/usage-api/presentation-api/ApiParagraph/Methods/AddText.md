@@ -22,12 +22,12 @@ expression.AddText(text);
 
 ## Example
 
-This example adds some text to the paragraph.
+Add text to a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to add a text to the ApiParagraph object.
+// How do I add text to a paragraph in a presentation?
 
-// How to add a text to the shape.
+// Insert text content and line breaks into a text box in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ paragraph.AddText("This is a text inside the shape aligned left.");
 paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 slide.AddObject(shape);
-
 ```

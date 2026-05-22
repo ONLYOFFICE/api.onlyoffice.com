@@ -3,30 +3,16 @@
 将当前表单转换为内联表单。
 *图片表单无法转换为内联表单，它始终是固定大小的对象。*
 
-## 语法
-
-```javascript
-expression.ToInline();
-```
-
-`expression` - 表示 [ApiPictureForm](../ApiPictureForm.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.ToInline](../../ApiFormBase/Methods/ToInline.md)。
 
 ## 示例
 
-此示例将表单转换为内联表单。
+在文档中将固定大小的表单字段转换回内联表单。
 
 ```javascript editor-forms
-// How to make the form inline.
+// How do I switch a form field from fixed size to inline positioning in a document?
 
-// Create a text form and make its position inline.
+// Allow a form field to flow with surrounding text instead of occupying a fixed block.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

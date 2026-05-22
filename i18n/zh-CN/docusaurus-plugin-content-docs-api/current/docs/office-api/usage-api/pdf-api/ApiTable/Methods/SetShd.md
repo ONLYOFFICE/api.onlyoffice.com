@@ -25,10 +25,12 @@ boolean
 
 ## 示例
 
-如何为表格背景添加底纹。
+在 PDF 中为表格应用背景颜色底纹。
 
 ```javascript editor-pdf
-// Create a table, set its shading color and add it to the page.
+// How do I add color to the background of a table in a PDF?
+
+// Set the background fill color for your entire table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

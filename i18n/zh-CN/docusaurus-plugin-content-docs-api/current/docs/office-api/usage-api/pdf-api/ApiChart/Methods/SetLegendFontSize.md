@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何调整图表图例的字体大小。
+调整 PDF 中图例条目的文本大小。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's font size.
+// How do I make the legend text larger or smaller in a PDF?
+
+// Set the legend to display text at 16 points in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

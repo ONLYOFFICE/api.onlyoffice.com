@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回年名义利率。
+计算电子表格中的年名义利率。
 
 ```javascript editor-xlsx
-// How to calculate the annual nominal interest rate.
+// Find the stated interest rate from effective rate and compounding periods in a spreadsheet.
 
-// Use a function to get the annual nominal interest rate.
+// Convert compounded interest into annual percentage rate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

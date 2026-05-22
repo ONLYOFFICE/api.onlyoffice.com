@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example clears the slide background.
+Remove the background from a slide in a presentation.
 
 ```javascript editor-pptx
-// How to remove the background from the slide.
+// How do I remove a slide's background in a presentation?
 
-// Create a duplicate slide and change its background.
+// Create a duplicate of the slide and then clear its background in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,5 +37,4 @@ slide.SetBackground(fill);
 
 const duplicateSlide = slide.Duplicate(1);
 duplicateSlide.ClearBackground();
-
 ```

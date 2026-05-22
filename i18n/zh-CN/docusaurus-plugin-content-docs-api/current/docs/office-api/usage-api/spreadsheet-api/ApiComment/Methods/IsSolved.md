@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例检查批注是否已解决。
+检查电子表格中的批注是否已标记为已解决。
 
 ```javascript editor-xlsx
-// How to find out whether a comment is resolved.
+// How do I tell if a comment has already been resolved or is still open in a spreadsheet?
 
-// Add a comment resolved status to a range of the worksheet.
+// Verify the resolved state of a comment to decide if further action is needed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

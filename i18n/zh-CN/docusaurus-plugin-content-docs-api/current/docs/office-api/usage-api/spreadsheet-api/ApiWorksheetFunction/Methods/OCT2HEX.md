@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何将八进制数转换为十六进制数。
+在电子表格中将八进制数转换为十六进制。
 
 ```javascript editor-xlsx
-// How to get a hexadecimal number form an octal.
+// How do I convert an octal value to hexadecimal in a spreadsheet?
 
-// Use a function to convert an octal number to hexadecimal.
+// Change an octal number into its hexadecimal equivalent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

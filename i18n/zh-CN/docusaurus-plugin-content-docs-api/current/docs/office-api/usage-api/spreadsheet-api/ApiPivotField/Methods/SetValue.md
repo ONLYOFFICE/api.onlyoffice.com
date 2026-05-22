@@ -22,12 +22,12 @@ expression.SetValue(name);
 
 ## 示例
 
-此示例展示如何设置透视字段的值。
+为电子表格中的数据透视表字段分配自定义值。
 
 ```javascript editor-xlsx
-// How to change a pivot field value.
+// How do I update the value stored in a pivot field to a different setting in a spreadsheet?
 
-// Create a pivot table, add data to it then set value of a specified pivot.
+// Override the default field value to tailor how data is represented in the pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

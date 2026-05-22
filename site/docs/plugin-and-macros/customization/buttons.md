@@ -10,12 +10,12 @@ To process [buttons](../structure/configuration/configuration.md#variationsbutto
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| id | `number` | Defines the button index in the [buttons](../structure/configuration/configuration.md#variationsbuttons) array of the *config.json* file. If `id == -1`, then the plugin considers that the **Close** window cross button has been clicked or its operation has been somehow interrupted. |
-| windowId | `number` | Defines an index of the button from the modal window. |
+| id | `number` | The button index in the [buttons](../structure/configuration/configuration.md#variationsbuttons) array of the *config.json* file. If `id == -1`, then the plugin considers that the **Close** window cross button has been clicked or its operation has been somehow interrupted. |
+| windowId | `number` | An index of the button from the modal window. |
 
 ## Example
 
-``` ts
+```ts
 Asc.plugin.button = (id, windowId) => {
   if (!windowId) {
     return;

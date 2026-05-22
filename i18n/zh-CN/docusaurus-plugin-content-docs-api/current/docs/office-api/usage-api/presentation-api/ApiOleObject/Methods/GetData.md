@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例演示如何从当前 OLE 对象获取字符串数据。
+读取演示文稿中嵌入对象存储的数据。
 
 ```javascript editor-pptx
-// How to get data from an OLE object.
+// How do I retrieve the data from an embedded object in a presentation?
 
-// Retrieve a content of an OLE object as a string.
+// Extract the content or URL from a linked object and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The OLE object data: ' + data);
 slide.AddObject(drawing);
-
 ```

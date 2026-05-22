@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将厘米转换为磅。
+在 PDF 中将距离从厘米转换为磅。
 
 ```javascript editor-pdf
+// How do I convert centimeters to points in a PDF?
+
+// Display a measurement conversion in a shape in a PDF.
+
 const centimeters = 1000;
 const points = Api.CentimetersToPoints(centimeters);
 
@@ -38,5 +42,4 @@ paragraph.AddText(centimeters + ' centimeters are equal to ' + points + ' points
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例为当前图片表单设置图像。
+将图像放入文档中的图片表单。
 
 ```javascript editor-forms
-// How to set image of the picture form.
+// How do I insert a specific image into a picture form in a document?
 
-// Set the url of the image to the picture form.
+// Populate a picture form with an image from a web address in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

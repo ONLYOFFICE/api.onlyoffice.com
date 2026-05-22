@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-此示例创建一个文本域并将其插入到文档中。
+在 PDF 中向形状插入具有不同字体大小和字体系列的文本。
 
 ```javascript editor-pdf
-// How to add text.
+// How do I add formatted text to a shape in a PDF?
 
-// Add an ApiRun object that represents a text.
+// Create separate text runs with distinct font properties inside a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -34,7 +34,7 @@ const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.SetFontSize(60);
@@ -46,5 +46,4 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

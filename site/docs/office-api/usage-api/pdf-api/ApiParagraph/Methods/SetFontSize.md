@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the paragraph.
+Adjust the text size of a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I change the font size in a paragraph in a PDF?
+
+// Enlarge or shrink text in a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font size set to 24 points.');
 paragraph.SetFontSize(48);
 page.AddObject(shape);
-
 ```

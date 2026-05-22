@@ -3,30 +3,16 @@
 Returns the text properties from the current form.
 *Used if possible for this type of form*
 
-## Syntax
-
-```javascript
-expression.GetTextPr();
-```
-
-`expression` - A variable that represents a [ApiTextForm](../ApiTextForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
+Inherited from [ApiFormBase.GetTextPr](../../ApiFormBase/Methods/GetTextPr.md).
 
 ## Example
 
-This example shows how to get the text properties from the form.
+Read the text formatting properties applied to a form field in a document.
 
 ```javascript editor-forms
-// How to get a text properties of a text form.
+// How do I access the font and style settings of a form field in a document?
 
-// How to make italic the text of the form.
+// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何删除父幻灯片母版中的指定对象（如果存在）。
+从演示文稿母版删除布局。
 
 ```javascript editor-pptx
-// How to delete a layout.
+// Remove objects from a layout that belongs to the slide master.
 
-// Remove a layout from a presentation master.
+// The number of layouts decreases after deletion.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

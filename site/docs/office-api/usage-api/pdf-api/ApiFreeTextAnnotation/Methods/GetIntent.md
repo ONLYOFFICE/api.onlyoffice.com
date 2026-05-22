@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets intent of freeText annotation.
+Determine the purpose or intent of a text annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I find what type of comment mark was intended in a PDF?
+
+// Check the annotation intent setting in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

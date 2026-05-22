@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-此示例演示如何获取批注创建的 UTC 时间。
+获取演示文稿中批注创建的 UTC 时间。
 
 ```javascript editor-pptx
-// How to know when a comment was added.
+// Retrieve the UTC timestamp of a specific comment.
 
-// Get all comments from the presentation and the first one's time of creation in UTC format.
+// Add a comment to the presentation and display its creation time in UTC format.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const timeUTC = arrComments[0].GetTimeUTC();
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's time (UTC): " + timeUTC);
-
 ```

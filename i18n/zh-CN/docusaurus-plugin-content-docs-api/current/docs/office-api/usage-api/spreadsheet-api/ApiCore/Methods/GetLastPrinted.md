@@ -20,9 +20,13 @@ Date
 
 ## 示例
 
-此示例演示如何获取当前工作簿最后打印的日期。
+检索电子表格中工作簿最近发送到打印机的日期。
 
 ```javascript editor-xlsx
+// How do I check when a workbook was last printed in a spreadsheet?
+
+// Confirm the last print date stored in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
-
 ```

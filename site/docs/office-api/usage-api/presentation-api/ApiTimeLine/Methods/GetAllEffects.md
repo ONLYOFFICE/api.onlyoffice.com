@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all animation effects from a timeline.
+Retrieve all animation effects on a slide in a presentation.
 
 ```javascript editor-pptx
+// How do I access the list of all animations on a slide in a presentation?
+
+// Collect every animation effect that has been added to a presentation slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -65,5 +69,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Total effects on slide: ' + allEffects.length);
 slide.AddObject(infoShape);
-
 ```

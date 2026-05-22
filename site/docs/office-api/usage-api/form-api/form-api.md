@@ -4,7 +4,7 @@ sidebar_position: -2
 
 # Form API
 
-A form document has exactly the same structure as a [text document](../text-document-api/text-document-api.md). The only difference is a new *forms* entity placed with other paragraph elements – text runs, inline text content controls and hyperlinks. There are seven form types: *text field*, *combo box*, *dropdown list*, *checkbox*, *radio button*, *picture form*, and *complex field*.
+A form document has exactly the same structure as a [document](../document-api/document-api.md). The only difference is a new *forms* entity placed with other paragraph elements – text runs, inline text content controls and hyperlinks. There are seven form types: *text field*, *combo box*, *dropdown list*, *checkbox*, *radio button*, *picture form*, and *complex field*.
 
 ## Creating a new form document
 
@@ -14,7 +14,7 @@ To save the ready document as a form, you need to use the [SaveFile](../../../do
 
 The simplest example form document with a single text form containing the "John Smith" text can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` ts
+```ts
 // create a document file in the .docx format with ONLYOFFICE Document Builder
 builder.CreateFile("docx");
 
@@ -44,7 +44,7 @@ builder.CloseFile();
 
 If you want to edit an already existing form document, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The document is opened the following way:
 
-``` ts
+```ts
 // use a path or URL to an existing 'myformdocument.pdf' form document file to open it with ONLYOFFICE Document Builder
 builder.OpenFile("https://example.com/myformdocument.pdf");
 

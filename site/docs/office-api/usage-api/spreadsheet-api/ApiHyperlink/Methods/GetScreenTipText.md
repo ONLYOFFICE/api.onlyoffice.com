@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the screen tip text of a hyperlink inside a shape.
+Read the tooltip text that appears when hovering over a hyperlink in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out what tooltip is set on a hyperlink in a spreadsheet?
+
+// Retrieve the hover hint message attached to a hyperlink in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Screen tip: ' + hyperlink.GetScreenTipText());
-
 ```

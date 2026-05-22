@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何获取当前工作簿的标题。
+读取电子表格工作簿文档属性中存储的标题。
 
 ```javascript editor-xlsx
+// How do I retrieve the title that has been saved for a workbook in a spreadsheet?
+
+// Fetch the document title from the metadata fields of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Title: " + title);
-
 ```

@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例展示如何获取绘图的旋转角度。
+检索电子表格中绘图的旋转角度。
 
 ```javascript editor-xlsx
+// How do I find out by how many degrees a drawing has been turned in a spreadsheet?
+
+// Confirm the angle at which a shape is oriented after it has been rotated in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

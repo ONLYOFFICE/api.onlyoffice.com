@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例返回当前文档内容的内部 ID。
+获取演示文稿中形状文本内容的唯一标识符。
 
 ```javascript editor-pptx
+// How do I find the internal ID assigned to a shape's text content in a presentation?
+
+// Retrieve the internal ID from a shape and display it as text on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -36,5 +40,4 @@ const internalId = docContent.GetInternalId();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Document content internal ID: ' + internalId);
 slide.AddObject(shape);
-
 ```

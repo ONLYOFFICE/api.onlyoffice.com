@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the class type of the ApiAnimationSequence object.
+Get the class type of an animation sequence in a presentation.
 
 ```javascript editor-pptx
+// How do I identify the type of an animation sequence in a presentation?
+
+// Read the class information of an animation sequence object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const timeLine = slide.GetTimeLine();
@@ -40,5 +44,4 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Class type: ' + classType);
 slide.AddObject(shape);
-
 ```

@@ -16,13 +16,17 @@ expression.GetOutlineLvl();
 
 ## 返回值
 
-Number
+Number \| undefined
 
 ## 示例
 
-此示例演示如何通过段落属性设置和获取指定段落的大纲级别。
+读取电子表格中分配给段落的大纲级别。
 
 ```javascript editor-xlsx
+// How do I find out which heading depth a paragraph belongs to in a spreadsheet?
+
+// Capture a paragraph's outline depth before and after changing it to track the update in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +43,4 @@ const levelAfter = paraPr.GetOutlineLvl();
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

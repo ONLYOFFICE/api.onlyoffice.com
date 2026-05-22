@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充。
+将形状的填充颜色从无填充更改为纯红色。
 
 ```javascript editor-pptx
-// Creates a rectangle and applies a red fill to it.
+// Create a rectangle with no fill and display the initial state.
+
+// Apply a solid red fill and show the updated appearance.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +42,4 @@ let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddLineBreak();
 paragraph.AddText("Fill changed to red");
-
 ```

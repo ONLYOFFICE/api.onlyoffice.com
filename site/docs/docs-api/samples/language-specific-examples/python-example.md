@@ -1,9 +1,10 @@
 ---
 sidebar_position: -9
 description: Integrate ONLYOFFICE Docs into a Python web application.
+tags: ["Docs", "Integration", "Python"]
 ---
 
-# Python example
+# Python integration
 
 ## Overview
 
@@ -32,14 +33,14 @@ To run the example using [Docker](https://www.docker.com/), you will need [Docke
 
 Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python):
 
-``` sh
+```sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
 unzip Python.Example.zip
 ```
 
 Then open the example directory and [up containers](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L38):
 
-``` sh
+```sh
 cd "Python Example"
 make compose-prod
 ```
@@ -60,14 +61,14 @@ To run the example on your local machine, you will need [Python 3.11.4](https://
 
 Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python):
 
-``` sh
+```sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
 unzip Python.Example.zip
 ```
 
 Then open the example directory, [install dependencies](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L13), and [start the server](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L21):
 
-``` sh
+```sh
 cd "Python Example"
 make prod
 make server-prod

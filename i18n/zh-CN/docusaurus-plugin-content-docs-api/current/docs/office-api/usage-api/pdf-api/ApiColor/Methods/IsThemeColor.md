@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例展示如何检查颜色是否为主题颜色。
+确定 PDF 中的颜色是否为主题颜色。
 
 ```javascript editor-pdf
+// How can I tell whether a color comes from the theme in a PDF?
+
+// Compare a regular color and a theme color to see which one is theme-based.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -42,5 +46,4 @@ run.AddText('Is hexColor a theme color? ' + hexColor.IsThemeColor());
 run.AddText('\nIs themeColor a theme color? ' + themeColor.IsThemeColor());
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ expression.AddLineBreak();
 
 ## 示例
 
-此示例在当前位置添加换行符，并从新行开始下一个元素。
+在演示文稿中的段落内插入换行符。
 
 ```javascript editor-pptx
-// How to add a line break after a sentence in a paragraph.
+// How do I move text to the next line within a paragraph in a presentation?
 
-// How to split a text with a line break.
+// Start a new line at the current text position in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ paragraph.AddText("This is a text inside the shape aligned left.");
 paragraph.AddLineBreak();
 paragraph.AddText("This is a text after the line break.");
 slide.AddObject(shape);
-
 ```

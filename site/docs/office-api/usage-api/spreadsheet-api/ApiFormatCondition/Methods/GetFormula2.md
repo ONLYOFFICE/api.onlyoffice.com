@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example gets the second formula of a conditional formatting rule.
+Read the upper boundary value of a range-based conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the second formula from conditional formatting rules.
+// How do I retrieve the second comparison value from a between-style formatting rule in a spreadsheet?
 
-// Get conditional formatting rule second formula.
+// Check the upper limit of a formatting condition to ensure the highlighted range is accurate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +50,4 @@ worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
 worksheet.GetRange("C3").SetValue("Second formula:");
 worksheet.GetRange("C4").SetValue(formula2);
-
 ```

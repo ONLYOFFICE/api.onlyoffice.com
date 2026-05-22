@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例将 x 轴值设置为所有图表系列。仅用于散点图。
+为散点图系列填充具有自定义数据标签的 x 轴值。
 
 ```javascript editor-pptx
-// How to add values to horizontal axis for all series of scatter charts.
+// Configure horizontal axis values in scatter chart mode for all data series.
 
-// Fill all x-axis values of scattered charts series.
+// Set custom year labels on the x-axis of a scatter chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)))
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 slide.AddObject(chart);
-
 ```

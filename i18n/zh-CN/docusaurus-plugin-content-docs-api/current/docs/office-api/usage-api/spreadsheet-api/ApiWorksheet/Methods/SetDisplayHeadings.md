@@ -18,19 +18,18 @@ expression.SetDisplayHeadings(isDisplayed);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例指定是否必须显示工作表的行/列标题。
+在电子表格中显示或隐藏工作表上的行列标题。
 
 ```javascript editor-xlsx
-// How to set whether sheet headings should be displayed or not.
+// How do I toggle the row and column headers on or off in a spreadsheet?
 
-// Set a boolean value representing whether to display row/column headings or not.
+// Control whether the letter and number labels along the edges of the sheet are visible in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The sheet settings make it display no row/column headers");
 worksheet.SetDisplayHeadings(false);
-
 ```

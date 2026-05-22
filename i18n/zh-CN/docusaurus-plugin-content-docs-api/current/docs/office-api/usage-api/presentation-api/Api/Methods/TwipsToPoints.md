@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将缇转换为磅。
+在演示文稿中将缇转换为磅。
 
 ```javascript editor-pptx
+// Twips are units of measurement where 1440 twips equals 1 inch.
+
+// Use Api.TwipsToPoints() to convert measurement units for text sizing.
+
 const twips = 100;
 const points = Api.TwipsToPoints(twips);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

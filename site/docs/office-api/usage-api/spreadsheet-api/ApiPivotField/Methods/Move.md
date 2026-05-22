@@ -14,7 +14,7 @@ expression.Move(type, index);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | Required | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The direction to move the pivot table field, or the pivot field orientation type. |
+| type | Required | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | The direction to move the pivot table field, |
 | index | Required | number \| undefined |  | The field index in a new category. |
 
 ## Returns
@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to move a pivot field.
+Relocate a pivot field to a different area of the pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the position a pivot field.
+// How do I move a pivot field from rows to columns in a spreadsheet?
 
-// Create a pivot table, add data to it then move a specified pivot field by columns.
+// Reorganize the pivot table layout by shifting a field to a new position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -59,12 +59,7 @@ pivotTable.AddFields({
     columns: 'Style',
 });
 
-let pivotWorksheet = Api.GetActiveSheet();
 pivotTable.AddDataField('Price');
 let pivotField = pivotTable.GetPivotFields('Region');
-pivotWorksheet.GetRange('A10').SetValue('The Region field will be moved soon');
-
-setTimeout(function () {
-    pivotField.Move('Columns');
-}, 5000);
+pivotField.Move('Columns');
 ```

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置段落文本属性。
+在 PDF 中为段落应用文本格式属性。
 
 ```javascript editor-pdf
+// How do I style paragraph text with font settings in a PDF?
+
+// Modify appearance of text through property settings in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -41,5 +45,4 @@ textPr.SetFontSize(30);
 textPr.SetBold(true);
 paragraph.SetTextPr(textPr);
 page.AddObject(shape);
-
 ```

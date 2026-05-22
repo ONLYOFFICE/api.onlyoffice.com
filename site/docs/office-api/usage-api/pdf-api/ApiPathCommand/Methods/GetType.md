@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Retrieve the type of a path command in a PDF.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// How do I find out the command type in a PDF?
+
+// Identify the type value from a path command in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

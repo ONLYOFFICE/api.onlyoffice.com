@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties and displays them in cells.
+Read the width of a custom shape path and display it in a spreadsheet.
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How do I check how wide a shape path is in a spreadsheet?
+
+// Inspect the horizontal size of a drawn path to verify its dimensions in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));

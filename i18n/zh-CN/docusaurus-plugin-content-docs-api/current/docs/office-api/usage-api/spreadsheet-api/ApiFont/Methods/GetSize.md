@@ -20,12 +20,12 @@ number \| null
 
 ## 示例
 
-此示例演示如何获取指定字体的大小属性。
+读取电子表格中应用于字符范围的字体大小。
 
 ```javascript editor-xlsx
-// How to determine a font size of characters.
+// How do I find out the point size of the text used for specific characters in a cell in a spreadsheet?
 
-// Get the size of a font and display it in the worksheet.
+// Set a font size on a group of characters, then retrieve and display that size in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

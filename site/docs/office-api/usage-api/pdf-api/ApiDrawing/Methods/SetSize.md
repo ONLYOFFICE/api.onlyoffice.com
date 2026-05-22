@@ -23,10 +23,12 @@ boolean
 
 ## Example
 
-How to resize a drawing.
+Resize a drawing object to specific dimensions in a PDF.
 
 ```javascript editor-pdf
-// Get a shape object from a page and set its size.
+// How do I make a shape larger or smaller in a PDF?
+
+// Modify the width and height of a drawing element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

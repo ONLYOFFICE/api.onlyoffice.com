@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+读取配色方案颜色的类型标签并写入电子表格的单元格。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiSchemeColor.
+// How do I find out what type a scheme color object is in a spreadsheet?
 
-// Get a class type of ApiSchemeColor and display it in the worksheet.
+// Confirm the category of a color object by printing its type to the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let schemeColor = Api.CreateSchemeColor("dk1");

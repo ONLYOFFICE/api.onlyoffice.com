@@ -25,12 +25,12 @@ string
 
 ## 示例
 
-此示例演示如何用不同的文本字符串替换文本字符串的一部分。
+在电子表格中将文本值的一部分替换为特定位置的不同文本。
 
 ```javascript editor-xlsx
-// How to replace a substring with another one.
+// How do I change a portion of text within a larger string in a spreadsheet?
 
-// Use a function to replace one part of a text with another one.
+// Remove a section of text and insert new content in its place in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -3,32 +3,16 @@
 设置表示字段在指定数据透视表报表中
 位置的透视字段方向值。
 
-## 语法
-
-```javascript
-expression.SetOrientation(type);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| type | 必需 | [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 透视字段方向类型。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md)。
 
 ## 示例
 
-此示例展示如何设置透视字段的方向。
+将透视字段移动到电子表格中的行、列或值区域。
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation.
+// How do I reassign a pivot field to a different area of the pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then change an orientation a specified pivot.
+// Reorganize a pivot table by switching a field from rows to columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,12 +44,6 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
-pivotWorksheet.GetRange('A12').SetValue('The Style field orientation will change soon');
-
 let pivotField = pivotTable.GetPivotFields('Style');
-
-setTimeout(function () {
-    pivotField.SetOrientation("Columns");
-}, 5000);
+pivotField.SetOrientation("Columns");
 ```

@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例清除复合表单的内容。
+清除文档中复杂表单的内容。
 
 ```javascript editor-forms
+// How do I clear the content inside a complex form in a document?
+
+// Wipe user-entered values from a complex form without removing the form structure itself.
+
 let doc = Api.GetDocument()
 let complexForm = Api.CreateComplexForm({"key": "Complex1"});
 let paragraph = doc.GetElement(0);

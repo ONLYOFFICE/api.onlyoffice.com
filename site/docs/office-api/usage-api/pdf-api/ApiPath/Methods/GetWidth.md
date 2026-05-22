@@ -20,10 +20,13 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties on a page.
+Get the horizontal size of a custom shape in a PDF.
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// What dimensions do my drawn shapes have in a PDF?
+
+// Retrieve all measurements of a shape path in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

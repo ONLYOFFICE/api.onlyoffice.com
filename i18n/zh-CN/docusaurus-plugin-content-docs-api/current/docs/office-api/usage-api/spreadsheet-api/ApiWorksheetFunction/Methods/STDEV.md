@@ -14,7 +14,7 @@ expression.STDEV(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个将计算标准差的数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
+| args | 必需 | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将计算这些数值的标准偏差。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何根据样本估算标准差（忽略样本中的逻辑值和文本）。
+估计样本的标准差。
 
 ```javascript editor-xlsx
-// How to calculate the standard deviation based on a sample.
+// The STDEV function calculates sample standard deviation while ignoring logical values and text.
 
-// Use a function to get the standard deviation.
+// Get the standard deviation of the sample values and place it in cell C1.
 
 const worksheet = Api.GetActiveSheet();
 

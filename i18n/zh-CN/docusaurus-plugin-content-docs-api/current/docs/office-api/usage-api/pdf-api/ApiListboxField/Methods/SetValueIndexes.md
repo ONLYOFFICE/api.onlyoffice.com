@@ -2,29 +2,17 @@
 
 设置选定值的索引。
 
-## 语法
-
-```javascript
-expression.SetValueIndexes(aIndexes);
-```
-
-`expression` - 表示 [ApiListboxField](../ApiListboxField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | 必需 | number[] |  | 选定的索引 |
-
-## 返回值
-
-boolean
+继承自 [ApiBaseListField.SetValueIndexes](../../ApiBaseListField/Methods/SetValueIndexes.md)。
 
 ## 示例
 
-此示例为带有选项列表的字段设置选中值索引。
+按位置在 PDF 中的下拉列表中将项目标记为已选中。
 
 ```javascript editor-pdf
+// How do I select options by index in a dropdown field in a PDF?
+
+// Choose items from a list using their numeric positions in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

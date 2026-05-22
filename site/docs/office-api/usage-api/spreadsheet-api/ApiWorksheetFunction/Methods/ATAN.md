@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the arctangent of a number.
+Calculate the arctangent of a number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an arctangent of a number.
+// Find an angle in radians from a decimal value in a spreadsheet.
 
-// Use function to get an arctangent of a number.
+// Determine what angle produces a specific tangent ratio in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

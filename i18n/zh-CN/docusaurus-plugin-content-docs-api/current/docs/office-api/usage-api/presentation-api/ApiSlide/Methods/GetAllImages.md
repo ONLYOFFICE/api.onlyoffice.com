@@ -20,12 +20,12 @@ expression.GetAllImages();
 
 ## 示例
 
-此示例展示如何获取幻灯片中所有图像对象的数组。
+查找演示文稿中幻灯片上的所有图像。
 
 ```javascript editor-pptx
-// How to get all images from the slide.
+// How do I access all the images in a slide in a presentation?
 
-// Get all images from the slide as an array.
+// Retrieve the image objects and read their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc('left');
 paragraph.AddText('Class type = ' + type);
 slide.AddObject(shape);
-
 ```

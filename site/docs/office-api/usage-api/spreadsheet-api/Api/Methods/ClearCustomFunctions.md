@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example clears all added custom functions.
+Remove all registered custom functions at once in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete custom function library.
+// How do I unregister every custom function that was added in a spreadsheet?
 
-// Remove unused custom function library.
+// Clean up previously defined calculation functions to reset the formula environment in a spreadsheet.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
     /**
@@ -43,5 +43,4 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("=ADD(1, 2)");
 Api.ClearCustomFunctions();
 worksheet.GetRange("A3").SetValue("All the custom functions were removed.");
-
 ```

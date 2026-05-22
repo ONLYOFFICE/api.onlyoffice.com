@@ -14,8 +14,8 @@ window.AscDesktopEditor.execCommand(command, parameters);
 
 | 名称        | 类型   | 描述                     |
 | ----------- | ------ | ------------------------ |
-| command     | string | 定义必须执行的命令。     |
-| parameters  | string | 定义传递给该方法的参数。 |
+| command     | string | 必须执行的命令。     |
+| parameters  | string | 传递给该方法的参数。 |
 
 可用命令如下：
 

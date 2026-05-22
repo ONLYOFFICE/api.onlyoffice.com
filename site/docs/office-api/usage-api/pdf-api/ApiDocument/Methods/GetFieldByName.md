@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets field by name in document.
+Find a specific form field by its name in a PDF.
 
 ```javascript editor-pdf
+// How do I search for a field using its assigned name in a PDF?
+
+// Retrieve a field and set its value by name in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

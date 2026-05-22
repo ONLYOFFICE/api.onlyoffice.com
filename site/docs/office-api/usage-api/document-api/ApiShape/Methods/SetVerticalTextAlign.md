@@ -1,0 +1,44 @@
+# SetVerticalTextAlign
+
+Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.
+
+## Syntax
+
+```javascript
+expression.SetVerticalTextAlign(verticalAlign);
+```
+
+`expression` - A variable that represents a [ApiShape](../ApiShape.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| verticalAlign | Required | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | The type of the vertical alignment for the shape inner contents. |
+
+## Returns
+
+boolean
+
+## Example
+
+Position text vertically within a shape in a document.
+
+```javascript editor-docx
+// How do I align text to the top, middle, or bottom inside a shape in a document?
+
+// Control where text sits vertically inside a shape container in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 3212465, 963295, fill, stroke);
+paragraph.AddDrawing(drawing);
+let docContent = drawing.GetContent();
+let classType = drawing.GetClassType();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Class Type = " + classType);
+docContent.AddElement(0, paragraph);
+drawing.SetVerticalTextAlign("top");
+```

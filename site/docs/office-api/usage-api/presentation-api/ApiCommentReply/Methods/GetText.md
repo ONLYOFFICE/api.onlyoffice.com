@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get text of a comment reply.
+Read the text of a reply to a comment in a presentation.
 
 ```javascript editor-pptx
-// How to get a raw text of a comment reply.
+// How do I get the message text from a comment reply in a presentation?
 
-// Get all comments from the presentation, get the first one's reply and return its text.
+// Extract the reply text from a comment and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ const reply = arrComments[0].GetReply(0);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply text: " + reply.GetText());
-
 ```

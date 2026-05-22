@@ -20,16 +20,16 @@ expression.ReplaceCurrentImage(sImageUrl, nWidth, nHeight);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例用新图像替换原图像。
+在电子表格中将选定的图像替换为另一个图像。
 
 ```javascript editor-xlsx
-// How to replace an image to another one.
+// How do I replace an existing image with a new one in a spreadsheet?
 
-// Replace an image from one to another using their urls.
+// Substitute the current image with another using its URL in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let drawing = worksheet.AddImage(
@@ -41,5 +41,4 @@ worksheet.ReplaceCurrentImage(
 	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
 	60 * 36000, 60 * 36000
 );
-
 ```

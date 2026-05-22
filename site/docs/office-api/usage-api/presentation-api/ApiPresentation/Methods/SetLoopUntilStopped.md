@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the presentation to loop continuously until manually stopped.
+Enable continuous playback of a presentation until stopped.
 
 ```javascript editor-pptx
+// How do I make a presentation loop continuously in a presentation?
+
+// Set the presentation to loop and display the current loop status.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,5 +45,4 @@ paragraph.AddText("Loop until stopped initial value: " + isLooping);
 presentation.SetLoopUntilStopped(true);
 paragraph.AddText("\nLoop until stopped new value: " + presentation.GetLoopUntilStopped());
 slide.AddObject(shape);
-
 ```

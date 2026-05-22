@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回修正贝塞尔函数 Kn(x)。
+计算电子表格中第二类修正贝塞尔函数。
 
 ```javascript editor-xlsx
-// How to get a result from Bessel function Kn(x).
+// How do I find the Bessel K function result for engineering calculations in a spreadsheet?
 
-// Use function to get the Bessel function Kn(x).
+// Apply mathematical modeling for wave propagation and oscillatory behavior in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

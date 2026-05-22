@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置动画效果的持续时间。
+设置演示文稿中动画效果完成所需的时间。
 
 ```javascript editor-pptx
+// How do I control the speed of an animation in a presentation?
+
+// Adjust the time span for an animation to run from start to finish in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -56,5 +60,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('New duration: ' + duration + 'ms (2 seconds)');
 slide.AddObject(infoShape);
-
 ```

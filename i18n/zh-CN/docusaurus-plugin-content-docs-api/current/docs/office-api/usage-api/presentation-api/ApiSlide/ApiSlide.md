@@ -2,7 +2,6 @@
 
 表示 ApiSlide 类。
 
-
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -10,7 +9,7 @@
 | [AddComment](./Methods/AddComment.md) | boolean | 向当前幻灯片添加批注。 |
 | [AddNotesText](./Methods/AddNotesText.md) | boolean | 向当前幻灯片的备注页添加文本。 |
 | [AddObject](./Methods/AddObject.md) | boolean | 向当前演示文稿幻灯片添加对象（图像、形状或图表）。 |
-| [ApplyLayout](./Methods/ApplyLayout.md) | boolean | 将指定版式应用于当前幻灯片。版式必须在幻灯片母版中。 |
+| [ApplyLayout](./Methods/ApplyLayout.md) | boolean | 将指定的版式应用于当前幻灯片。 |
 | [ApplyTheme](./Methods/ApplyTheme.md) | boolean | 将指定主题应用于当前幻灯片。 |
 | [ClearBackground](./Methods/ClearBackground.md) | boolean | 清除幻灯片背景。 |
 | [Copy](./Methods/Copy.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null | 创建当前幻灯片对象的副本。 |

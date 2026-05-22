@@ -2,32 +2,16 @@
 
 设置当前表单的提示文本。
 
-## 语法
-
-```javascript
-expression.SetTipText(sText);
-```
-
-`expression` - 表示 [ApiTextForm](../ApiTextForm.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| sText | 必需 | string |  | 提示文本。 |
-
-## 返回值
-
-boolean
+继承自 [ApiFormBase.SetTipText](../../ApiFormBase/Methods/SetTipText.md)。
 
 ## 示例
 
-此示例为表单设置提示文本。
+在文档中为表单字段设置工具提示文本以提供指导。
 
 ```javascript editor-forms
-// Add text as a tip of the form.
+// How do I add a tooltip that appears when hovering over a form field in a document?
 
-// Create a text form and set its tip text (text that appears on hold).
+// Give users helpful instructions that appear when they hover over a field.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

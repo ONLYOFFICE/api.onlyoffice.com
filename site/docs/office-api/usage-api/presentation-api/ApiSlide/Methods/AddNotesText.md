@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example shows how to add text to the notes page of a slide.
+Add text to the notes section of a slide for speaker reference.
 
 ```javascript editor-pptx
+// Access the notes functionality and attempt to add a note message.
+
+// Verify the result and display a confirmation message in a shape on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -44,5 +48,4 @@ if (isNotesAdded) {
 }
 
 slide.AddObject(shape);
-
 ```

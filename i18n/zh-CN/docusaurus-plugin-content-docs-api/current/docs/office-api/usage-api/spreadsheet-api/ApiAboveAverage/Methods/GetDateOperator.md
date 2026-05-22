@@ -2,30 +2,16 @@
 
 返回时间段条件的日期运算符。
 
-## 语法
-
-```javascript
-expression.GetDateOperator();
-```
-
-`expression` - 表示 [ApiAboveAverage](../ApiAboveAverage.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[XlTimePeriods](../../Enumeration/XlTimePeriods.md) \| null
+继承自 [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Methods/GetDateOperator.md)。
 
 ## 示例
 
-此示例从时间段条件格式规则获取日期运算符。
+检索电子表格中基于日期的格式规则使用的时间段比较类型。
 
 ```javascript editor-xlsx
-// How to retrieve date operators from time period conditional formatting rules.
+// How do I check which date period a conditional formatting rule is set to highlight in a spreadsheet?
 
-// Get conditional formatting rule date operator.
+// Inspect the date condition of a rule to confirm it targets the intended time window in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```

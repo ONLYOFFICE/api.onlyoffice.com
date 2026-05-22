@@ -2,33 +2,16 @@
 
 为数据透视表报表建立自动字段排序规则。
 
-## 语法
-
-```javascript
-expression.AutoSort(order, field);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| order | 必需 | [SortOrder](../../Enumeration/SortOrder.md) |  | 排序顺序。 |
-| field | 必需 | string |  | 用于排序的字段名称（pivotField.SourceName、pivotField.Name、dataField.Name）。 |
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.AutoSort](../../ApiPivotField/Methods/AutoSort.md)。
 
 ## 示例
 
-此示例展示如何为数据透视表报表建立自动字段排序规则。
+按值自动排序电子表格中的数据透视表字段。
 
 ```javascript editor-xlsx
-// How to use the AutoSort method to sort pivot field data.
+// How do I make a pivot table sort a row or column field in ascending or descending order in a spreadsheet?
 
-// Create a pivot table, add data to it then apply automatic sorting to a specified field.
+// Configure automatic sorting rules so a pivot field stays ordered whenever the data refreshes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -90,5 +73,4 @@ pivotWorksheet.GetRange('A15').SetValue(`Product field will be sorted by Units i
 let priorityPivotField = pivotTable.GetPivotFields('Priority');
 priorityPivotField.AutoSort("xlManual", priorityField.Name);
 pivotWorksheet.GetRange('A16').SetValue(`Priority field set to manual sorting mode (${priorityPivotField.AutoSortOrder} - ${priorityPivotField.AutoSortField})`);
-
 ```

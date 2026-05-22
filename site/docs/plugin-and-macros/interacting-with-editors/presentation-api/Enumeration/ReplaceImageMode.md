@@ -13,7 +13,6 @@ Enumeration
 - "original"
 - "stretch"
 
-
 ## Example
 
 ```javascript

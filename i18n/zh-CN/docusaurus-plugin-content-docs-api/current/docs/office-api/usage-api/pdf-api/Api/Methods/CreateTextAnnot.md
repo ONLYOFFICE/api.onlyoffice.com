@@ -22,12 +22,15 @@ expression.CreateTextAnnot(rect);
 
 ## 示例
 
-此示例创建文本注释并将其添加到页面。
+在 PDF 中向页面添加文本注释。
 
 ```javascript editor-pdf
+// How do I add a text annotation to a PDF?
+
+// Create and insert a text annotation at specified coordinates in a PDF.
+
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(textAnnot);
-
 ```

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+读取文本运行的类类型并在电子表格中形状内显示。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiRun.
+// How do I find out what type of object a text run is in a spreadsheet?
 
-// Get a class type of ApiRun and display it in the worksheet.
+// Confirm the kind of element a run represents by checking its type label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

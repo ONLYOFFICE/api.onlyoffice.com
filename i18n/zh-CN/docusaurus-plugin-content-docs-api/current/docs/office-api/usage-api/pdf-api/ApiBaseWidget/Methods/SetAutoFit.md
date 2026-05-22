@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例获取所有字段控件并为它们设置文本自动适应。
+为 PDF 中所有字段控件启用自动文本适配。
 
 ```javascript editor-pdf
+// How do I set autofit for field widgets in a PDF?
+
+// Apply autofit to scale text to fit widget boundaries in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -36,5 +40,4 @@ let widgets = textField.GetAllWidgets();
 widgets.forEach(function(widget) {
     widget.SetAutoFit(true);
 });
-
 ```

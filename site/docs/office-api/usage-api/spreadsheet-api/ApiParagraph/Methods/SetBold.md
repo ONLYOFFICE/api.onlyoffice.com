@@ -22,9 +22,13 @@ expression.SetBold(isBold);
 
 ## Example
 
-This example shows how to set bold formatting for all text in a paragraph inside a shape.
+Make all text in a paragraph bold inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I apply bold formatting to an entire paragraph in a spreadsheet?
+
+// Emphasize a paragraph's text by turning on bold weight for every character in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 110));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetBold(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text is not bold.');
 content.Push(paragraph2);
-
 ```

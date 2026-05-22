@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current run from the document content of a shape.
+Retrieve the text run that is currently active inside a shape's content area in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I access the specific run of text the cursor is positioned on within a shape in a spreadsheet?
+
+// Read the active inline text segment from a shape's content to inspect its value in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -42,5 +46,4 @@ run.AddText('Run text.');
 const currentRun = content.GetCurrentRun();
 const result = currentRun ? currentRun.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current run: ' + result);
-
 ```

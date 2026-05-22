@@ -25,12 +25,12 @@ number \| string
 
 ## 示例
 
-此示例演示如何返回复数的索引。
+从电子表格中表格的特定行和列获取值。
 
 ```javascript editor-xlsx
-// How to get an index of a complex numbers.
+// How do I retrieve a value at a specific position in a table in a spreadsheet?
 
-// Use a function to get the index.
+// Access a cell's value using row and column numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

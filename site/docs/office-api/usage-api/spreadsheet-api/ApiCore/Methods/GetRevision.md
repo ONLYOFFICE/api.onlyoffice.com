@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the revision of the current workbook.
+Retrieve the revision label assigned to the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I read the revision identifier stored for a workbook in a spreadsheet?
+
+// Display the current revision marker recorded in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Revision: " + revision);
-
 ```

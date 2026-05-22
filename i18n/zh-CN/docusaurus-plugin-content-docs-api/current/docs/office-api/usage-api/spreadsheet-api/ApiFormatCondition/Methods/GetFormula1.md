@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例获取条件格式规则的第一个公式。
+读取电子表格中条件格式规则的主要阈值。
 
 ```javascript editor-xlsx
-// How to retrieve the first formula from conditional formatting rules.
+// How do I find the first comparison value that a conditional formatting rule uses in a spreadsheet?
 
-// Get conditional formatting rule first formula.
+// Verify the lower or sole boundary of a formatting condition to confirm it is correctly defined in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +47,4 @@ let formula1 = condition1.GetFormula1();
 
 worksheet.GetRange("C1").SetValue("First formula:");
 worksheet.GetRange("C2").SetValue(formula1);
-
 ```

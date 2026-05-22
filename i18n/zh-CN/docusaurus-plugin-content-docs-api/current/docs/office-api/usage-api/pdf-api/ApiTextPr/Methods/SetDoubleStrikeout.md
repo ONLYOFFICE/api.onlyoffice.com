@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-此示例指定文本块的内容显示为每个字符都有两条水平线穿过。
+在 PDF 中为文本字符添加双删除线。
 
 ```javascript editor-pdf
-// How to strike out a text with two lines.
+// How do I apply double strikethrough to text in a PDF?
 
-// Get the text propertiesof the run and cross it out with two lines.
+// Mark text with two crossed lines for emphasis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -37,7 +37,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const run = Api.CreateRun();
 const textPr = run.GetTextPr();
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape struck out with two lines using the text properties.");
 paragraph.AddElement(run);
 page.AddObject(shape);
-
 ```

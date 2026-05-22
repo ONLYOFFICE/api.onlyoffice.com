@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set a background color for the plot area.
+Change the background color of the chart's data area in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its plot area color.
+// How do I set a background color for the chart area in a PDF?
+
+// Apply a fill color to the region where data is displayed in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -44,5 +46,4 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetPlotAreaFill(fill);
 page.AddObject(chart);
-
 ```

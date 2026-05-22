@@ -20,12 +20,12 @@ expression.GetSelection();
 
 ## 示例
 
-此示例演示如何获取表示所选范围的对象。
+操作用户在电子表格中当前选择的单元格。
 
 ```javascript editor-xlsx
-// How to get selected range.
+// Identify which cells are active and modify them regardless of their location in a spreadsheet?
 
-// Get selection from the worksheet and set its value.
+// Put text into selected cells without knowing their exact position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetSelection().SetValue("selected");

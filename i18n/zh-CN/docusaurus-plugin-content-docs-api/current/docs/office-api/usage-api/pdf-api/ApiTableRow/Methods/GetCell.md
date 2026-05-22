@@ -22,10 +22,12 @@ expression.GetCell(nPos);
 
 ## 示例
 
-如何使用行索引返回单元格。
+从 PDF 中的表格行访问特定单元格。
 
 ```javascript editor-pdf
-// Create a table, get its row and get a cell from this row.
+// How do I retrieve a single cell from a row in a PDF?
+
+// Get any cell you want from a table row in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

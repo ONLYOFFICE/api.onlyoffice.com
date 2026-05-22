@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example demonstrates how to get the language of the current workbook using the ApiCore.
+Read the document language setting stored in the workbook metadata in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out what language is assigned to a workbook in a spreadsheet?
+
+// Check the language property to confirm the locale recorded for the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Language: " + language);
-
 ```

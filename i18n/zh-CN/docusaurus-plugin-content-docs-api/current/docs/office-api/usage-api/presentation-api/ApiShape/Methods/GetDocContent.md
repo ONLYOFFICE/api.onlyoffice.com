@@ -21,12 +21,12 @@ expression.GetDocContent();
 
 ## 示例
 
-此示例展示如何获取可以插入段落或文本块的形状内部内容。
+访问演示文稿中形状内的文档内容。
 
 ```javascript editor-pptx
-// How to get a content of a shape.
+// How do I add text to a shape in a presentation?
 
-// Retrieve a slide content and insert a paragraph to it.
+// Insert a new paragraph into a shape and position it vertically in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
@@ -46,5 +46,4 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 paragraph.AddText("aligning it vertically by the bottom.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

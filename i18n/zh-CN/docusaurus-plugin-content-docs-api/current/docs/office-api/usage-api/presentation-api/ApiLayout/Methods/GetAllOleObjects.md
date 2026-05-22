@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片版式中所有 OLE 对象的数组。
+将幻灯片布局中的所有 OLE 对象作为数组获取。
 
 ```javascript editor-pptx
-// How to get all OLE objects from the layout of presentation.
+// OLE objects in layouts can be accessed and their application IDs retrieved.
 
-// Get all OLE objects from the presentation as an array.
+// Display the application ID of the first OLE object in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -56,5 +56,4 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('The application ID for the current OLE object: ' + appId);
 layout.AddObject(drawing);
-
 ```

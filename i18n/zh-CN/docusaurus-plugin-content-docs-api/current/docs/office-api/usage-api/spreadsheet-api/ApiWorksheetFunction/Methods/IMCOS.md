@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回复数的余弦。
+获取电子表格中复数的余弦。
 
 ```javascript editor-xlsx
-// How to get the cosine.
+// How do I calculate the cosine of a complex number in a spreadsheet?
 
-// Use a function to get the cosine of a complex number.
+// Apply the cosine function to a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

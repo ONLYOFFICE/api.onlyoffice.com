@@ -1,10 +1,10 @@
 ---
-sidebar_label: .Net example
 sidebar_position: -10
 description: Integrate ONLYOFFICE Docs into a .Net (C#) web application.
+tags: ["Docs", "Integration", "C#"]
 ---
 
-# .Net example
+# .Net (C#) integration
 
 ## Overview
 
@@ -37,21 +37,21 @@ Download the release archive and unarchive it, or clone the source code from Git
 
 For .Net (C#):
 
-``` sh
+```sh
 curl --output DotNet.Csharp.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.Example.zip
 unzip DotNet.Csharp.Example.zip
 ```
 
 For .Net (C# MVC):
 
-``` sh
+```sh
 curl --output DotNet.Csharp.MVC.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/DotNet.Csharp.MVC.Example.zip
 unzip DotNet.Csharp.MVC.Example.zip
 ```
 
 To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the `settings.config` file (or `web.appsettings.config` file for MVC version):
 
-``` xml
+```xml
 <add key="storage-path" value=""/>
 <add key="files.docservice.url.site" value="https://documentserver/" />
 ```
@@ -81,7 +81,7 @@ Configure the IIS components for the server to work correctly:
 
 Open the `settings.config` file (or `web.appsettings.config` file for MVC version) and [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs to enable JWT:
 
-``` xml
+```xml
 <add key="files.docservice.secret" value="secret" />
 ```
 

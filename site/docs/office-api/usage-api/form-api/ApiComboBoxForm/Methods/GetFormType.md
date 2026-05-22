@@ -2,30 +2,16 @@
 
 Returns a type of the current form.
 
-## Syntax
-
-```javascript
-expression.GetFormType();
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[FormType](../../Enumeration/FormType.md)
+Inherited from [ApiFormBase.GetFormType](../../ApiFormBase/Methods/GetFormType.md).
 
 ## Example
 
-This example shows how to get a type of the form.
+Read the type of a form field in a document.
 
 ```javascript editor-forms
-// How to know the type of a text form.
+// How do I get the type of a form field in a document?
 
-// Create a text form and diplay its type in the document.
+// Distinguish one form from another by printing its type identifier next to it.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

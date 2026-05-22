@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-此示例指定文本块中的任何小写字符仅格式化显示为其对应的大写字母。
+在电子表格中将所有文本字符显示为大写字母而不更改底层内容。
 
 ```javascript editor-xlsx
-// How to make text capitalized.
+// How do I make every letter in a text run appear as an uppercase character in a spreadsheet?
 
-// Make all characters of a text as a capital letter.
+// Force a text run to render in all-caps style for a consistent visual look in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

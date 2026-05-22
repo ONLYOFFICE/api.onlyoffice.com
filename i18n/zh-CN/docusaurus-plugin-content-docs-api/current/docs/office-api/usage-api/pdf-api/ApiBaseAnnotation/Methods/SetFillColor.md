@@ -14,7 +14,7 @@ expression.SetFillColor(color);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 未提供描述。 |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 要设置的填充颜色（省略参数以设置无填充） |
 
 ## 返回值
 
@@ -22,13 +22,16 @@ boolean
 
 ## 示例
 
-此示例创建方形注释并为其设置红色填充颜色。
+设置 PDF 中注释的背景颜色。
 
 ```javascript editor-pdf
+// Apply a fill color to make an annotation stand out in a PDF.
+
+// Change the interior color of an annotation in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(squareAnnot);
 squareAnnot.SetFillColor(Api.RGB(255, 0, 0));
-
 ```

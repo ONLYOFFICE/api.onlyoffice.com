@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何对形状内段落中的所有文本应用文本属性。
+在电子表格中为形状内段落的所有文本应用粗体、斜体和字体大小设置。
 
 ```javascript editor-xlsx
+// How do I style all the text in a paragraph at once in a spreadsheet?
+
+// Change the appearance of paragraph text by assigning a shared set of formatting properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(110, 140, 130));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -48,5 +52,4 @@ paragraph.SetTextPr(textPr);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has default properties.');
 content.Push(paragraph2);
-
 ```

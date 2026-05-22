@@ -20,9 +20,13 @@ number \| undefined
 
 ## Example
 
-This example gets the automatic advance time and displays it.
+Get the automatic advance time and display it in a presentation.
 
 ```javascript editor-pptx
+// Retrieve the advance time value from a slide show transition object.
+
+// Display the retrieved advance time as milliseconds in a shape on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -46,5 +50,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Advance Time: ' + advanceTime + ' ms');
 slide.AddObject(shape);
-
 ```

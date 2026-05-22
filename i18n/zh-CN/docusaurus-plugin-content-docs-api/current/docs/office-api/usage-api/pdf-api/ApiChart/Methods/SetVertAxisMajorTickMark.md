@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何使用预定义符号设置主刻度线。
+在 PDF 中为图表的垂直轴添加刻度线。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and major tick mark for vertical axis.
+// How do I display tick marks on a chart's vertical axis in a PDF?
+
+// Apply a preset tick mark style to the vertical axis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -50,5 +52,4 @@ stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255,
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 page.AddObject(chart);
-
 ```

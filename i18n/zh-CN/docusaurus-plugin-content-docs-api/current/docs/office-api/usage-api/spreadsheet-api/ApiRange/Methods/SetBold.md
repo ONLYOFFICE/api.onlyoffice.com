@@ -18,16 +18,16 @@ expression.SetBold(isBold);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置当前单元格或单元格范围中文本字符的粗体属性。
+在电子表格中将单元格或单元格范围的文本设为粗体。
 
 ```javascript editor-xlsx
-// How to change the font style properties of a range making it bold.
+// How do I apply bold formatting to a group of cells in a spreadsheet?
 
-// Make characters of the ApiRange object bold.
+// Emphasize cell content by switching its weight to bold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Bold text");

@@ -20,9 +20,13 @@ expression.GetLastRunWithText();
 
 ## 示例
 
-此示例展示如何获取段落中最后一个包含文本的 Run。
+访问 PDF 中段落的最后一个文本元素。
 
 ```javascript editor-pdf
+// How do I find the last text element within a paragraph in a PDF?
+
+// Locate and modify the final text segment of a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -44,5 +48,4 @@ const lastRun = paragraph.GetLastRunWithText();
 lastRun.AddText(' [Last run]');
 lastRun.SetBold(true);
 page.AddObject(shape);
-
 ```

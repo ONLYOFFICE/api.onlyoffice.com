@@ -22,12 +22,12 @@ expression.InsertTextForm(formPr);
 
 ## 示例
 
-此示例在选定文本上方插入具有指定文本框属性的文本框。
+在文档中将选定文本替换为可编辑的表单字段。
 
 ```javascript editor-forms
-// How to create a text form and add it to the paragraph.
+// How do I convert text into a fillable field in a document?
 
-// Add a text form to the ApiDocument object, set its properties like characters limit, autofit, etc.
+// Turn highlighted content into an interactive text input area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
@@ -46,5 +46,4 @@ doc.InsertTextForm({
 	"placeholderFromSelection": true,
 	"keepSelectedTextInForm": false
 });
-
 ```

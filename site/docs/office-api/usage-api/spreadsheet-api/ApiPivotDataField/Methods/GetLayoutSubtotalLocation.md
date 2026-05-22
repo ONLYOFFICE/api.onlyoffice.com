@@ -2,30 +2,16 @@
 
 Returns the layout subtotal location.
 
-## Syntax
-
-```javascript
-expression.GetLayoutSubtotalLocation();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[LayoutSubtotalLocationType](../../Enumeration/LayoutSubtotalLocationType.md)
+Inherited from [ApiPivotField.GetLayoutSubtotalLocation](../../ApiPivotField/Methods/GetLayoutSubtotalLocation.md).
 
 ## Example
 
-This example shows how to get a layout subtotal location of a pivot field.
+Read where subtotals appear for a pivot field — at the top or bottom of each group in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a layout subtotal location of a pivot field.
+// How do I find out where subtotals are placed for a pivot table field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout subtotal location of a specified pivot field.
+// Inspect the subtotal position of a pivot field to confirm whether totals show above or below grouped rows.
 
 let worksheet = Api.GetActiveSheet();
 

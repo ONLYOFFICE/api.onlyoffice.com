@@ -20,9 +20,13 @@ string \| null
 
 ## 示例
 
-此示例展示如何获取图标条件的比较运算符。
+从电子表格中的图标条件读取比较运算符。
 
 ```javascript editor-xlsx
+// How do I find out which comparison operator an icon criterion uses in a spreadsheet?
+
+// Check whether a criterion compares values with greater-than, less-than, or another rule in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Scores');
 worksheet.GetRange('A2').SetValue(85);
@@ -40,5 +44,4 @@ for (let i = 0; i < criteria.length; i++) {
 	const range = worksheet.GetRange('B' + (i + 2));
 	range.SetValue('Criterion ' + (i + 1) + ' operator: ' + criteria[i].GetOperator());
 }
-
 ```

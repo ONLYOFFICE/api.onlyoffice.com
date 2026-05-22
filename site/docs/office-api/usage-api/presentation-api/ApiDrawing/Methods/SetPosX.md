@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets the x position of the drawing on the slide.
+Move a shape horizontally on a slide in a presentation.
 
 ```javascript editor-pptx
+// How do I change the horizontal position of a shape in a presentation?
+
+// Create a shape and move it to a specific distance from the left in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ shape.SetPosX(Api.MillimetersToEmus(50));
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('X position was changed to 50 mm.');
-
 ```

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为复选框字段设置切换为关闭属性。
+启用或禁用 PDF 中复选框的取消切换行为。
 
 ```javascript editor-pdf
+// How do I make a checkbox uncheck when clicked if already checked in a PDF?
+
+// Control whether a checked checkbox deselects on a second click in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);

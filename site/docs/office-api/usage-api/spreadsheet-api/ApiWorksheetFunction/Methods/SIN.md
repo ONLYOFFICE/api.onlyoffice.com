@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the sine of an angle.
+Return the sine of an angle in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calaculate the sine of a number.
+// Calculate the sine value of an angle using the SIN function.
 
-// Use a function to get a sine of a number.
+// Apply the function to compute and display the result in a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Draw the outline of a custom shape in a PDF.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I create the boundary of a unique shape in a PDF?
+
+// Define the shape's outline using lines and curves in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

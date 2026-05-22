@@ -20,9 +20,13 @@ Date
 
 ## Example
 
-This example demonstrates how to set and get the date when the current presentation was modified last time.
+Set and view the last modification date of a presentation in a presentation.
 
 ```javascript editor-pptx
+// How do I find when a presentation was last changed?
+
+// Retrieve the timestamp of the most recent edit in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetModified(new Date("10 March 1990"));
@@ -38,5 +42,4 @@ paragraph.AddText("Last modified: " + lastModifiedDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

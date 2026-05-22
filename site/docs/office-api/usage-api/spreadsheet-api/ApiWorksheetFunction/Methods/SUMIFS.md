@@ -17,7 +17,7 @@ expression.SUMIFS(arg1, arg2, arg3, arg4, arg5);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The range of cells to be evaluated. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | The first condition or criteria in the form of a number, expression, or text that defines which cells will be added. |
 | arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The first range to sum. If omitted, the cells in range are used. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | Up to 127 additional conditions or criteria in the form of a number, expression, or text that defines which cells will be added. These arguments are optional. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | Up to 127 additional conditions or criteria in the form of a number, expression, or text that defines which cells will be added. |
 | arg5 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 127 actual ranges to be used to be added. If omitted, the cells in the range are used. These arguments are optional. |
 
 ## Returns
@@ -26,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to add the cells specified by a given set of conditions or criteria.
+Add the cells specified by a given set of conditions or criteria in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to sum up all elements under conditions.
+// Sum values based on multiple conditions using the SUMIFS function.
 
-// Use a function to estimate a sum from the cells by a given condition.
+// Returns the total sum of cells meeting all specified criteria.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

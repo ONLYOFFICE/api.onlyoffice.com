@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Retrieve all the drawing instructions that define a shape's outline in a PDF.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// How do I access all steps of a shape's outline in a PDF?
+
+// Get the complete list of commands that build a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

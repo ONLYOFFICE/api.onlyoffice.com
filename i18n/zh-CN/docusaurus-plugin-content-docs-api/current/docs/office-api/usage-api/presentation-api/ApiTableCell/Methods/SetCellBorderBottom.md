@@ -23,12 +23,12 @@ expression.SetCellBorderBottom(fSize, oApiFill);
 
 ## 示例
 
-此示例设置应在表格单元格底部显示的边框。
+为表格单元格底部应用带有填充颜色的边框。
 
 ```javascript editor-pptx
-// How to set cell bottom border with its fill color.
+// Set the bottom border style and fill for the cell.
 
-// Create table and set its cell bottom border.
+// Create a table cell and apply a bottom border with color.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ cell.SetCellBorderBottom(2, fill);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

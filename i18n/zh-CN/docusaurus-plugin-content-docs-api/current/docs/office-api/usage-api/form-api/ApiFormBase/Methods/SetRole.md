@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何为表单元素设置角色。
+为文档中的表单字段分配角色以控制填写者。
 
 ```javascript editor-forms
+// How do I associate a form field with a specific role in a document?
+
+// Restrict which signers or participants are responsible for a given field.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -50,5 +54,4 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```

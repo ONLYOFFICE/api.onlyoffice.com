@@ -18,16 +18,16 @@ expression.SetWrap(isWrap);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例指定单元格中的文字是否必须换行以适应单元格大小。
+在电子表格中将单元格内的文本换行以适应列宽。
 
 ```javascript editor-xlsx
-// How to wrapp a text in the cell.
+// How do I stop text from spilling out of a cell in a spreadsheet?
 
-// Get a range and make its content wrapped.
+// Enable word wrap on a cell to keep long content visible without widening the column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

@@ -23,12 +23,12 @@ expression.GetPivotFields(field);
 
 ## 示例
 
-此示例展示如何获取数据透视表的透视字段。
+列出电子表格中数据透视表中可用的所有字段。
 
 ```javascript editor-xlsx
-// How to get table pivot fields as an array of fields.
+// How do I see every field that a pivot table can use for rows, columns, or filters in a spreadsheet?
 
-// Create a pivot table, add data to it then get its pivot fields.
+// Retrieve the complete set of pivot fields and display their names in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

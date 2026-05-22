@@ -23,12 +23,12 @@ expression.CreateNumbering(numType, startAt);
 
 ## 示例
 
-此示例使用 sType 参数指定的编号字符或符号为段落创建项目符号。
+向段落添加顺序编号标记以在电子表格中形成编号列表。
 
 ```javascript editor-xlsx
-// How to create a numbered paragraphs or sentences.
+// How do I automatically number each paragraph in a list inside a shape in a spreadsheet?
 
-// Create number bullets to number paragraphs.
+// Turn separate paragraphs into an ordered list by attaching numbered labels to each one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

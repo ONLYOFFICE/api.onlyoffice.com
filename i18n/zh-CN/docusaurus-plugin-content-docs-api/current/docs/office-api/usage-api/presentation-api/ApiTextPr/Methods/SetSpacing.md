@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+调整演示文稿中文本字符之间的间距。
 
 ```javascript editor-pptx
-// How to change a spacing size of a text.
+// Can I widen or reduce the gap between letters in a presentation?
 
-// Get the text properties of the run and resize its spacing (20 * point).
+// Set the character spacing value in twentieths of a point in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the spacing set to 4 points (80 twentieths of a point) using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

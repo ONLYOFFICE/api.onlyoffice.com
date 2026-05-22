@@ -24,12 +24,12 @@ string
 
 ## 示例
 
-此示例演示如何根据起始位置和长度返回文本字符串中间的字符。
+从电子表格中字符串的中间位置开始提取文本。
 
 ```javascript editor-xlsx
-// How to get characters from the middle of the string indicating an index and length.
+// What characters can I pull from a text string in a spreadsheet?
 
-// Use a function to get an array of characters from the middle of a string.
+// Get a substring from a specific position and length in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -25,10 +25,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a complex curved shape using various bezier and arc commands.
+Draw an arc curve as part of a custom shape in a presentation.
 
 ```javascript editor-pptx
-// Demonstrates different curve types in a single path on a slide.
+// How do I create a curved arc in a custom shape in a presentation?
+
+// Add an arc segment to a geometry path on a slide in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

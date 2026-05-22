@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状内超链接的屏幕提示文本。
+读取鼠标悬停在电子表格中超链接上时显示的工具提示文本。
 
 ```javascript editor-xlsx
+// How do I find out what tooltip is set on a hyperlink in a spreadsheet?
+
+// Retrieve the hover hint message attached to a hyperlink in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Screen tip: ' + hyperlink.GetScreenTipText());
-
 ```

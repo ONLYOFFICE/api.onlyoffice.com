@@ -1,0 +1,29 @@
+# GetSpacingAfter
+
+返回当前段落的段后间距值。
+
+继承自 [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md)。
+
+## 示例
+
+读取段落设置的段后间距值并在文档中显示。
+
+```javascript editor-docx
+// How do I get the amount of spacing after a paragraph in a document?
+
+// Verify the gap between paragraphs by retrieving and printing the spacing-after measurement in a document.
+
+let doc = Api.GetDocument();
+let paragraph1 = doc.GetElement(0);
+let paraPr = paragraph1.GetParaPr();
+paraPr.SetSpacingAfter(1440);
+paragraph1.AddText("This is an example of setting a space after a paragraph. ");
+paragraph1.AddText("The second paragraph will have an offset of one inch from the top. ");
+paragraph1.AddText("This is due to the fact that the first paragraph has this offset enabled.");
+let paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
+paragraph2.AddLineBreak();
+let spacingAfter = paraPr.GetSpacingAfter();
+paragraph2.AddText("Spacing after: " + spacingAfter);
+doc.Push(paragraph2);
+```

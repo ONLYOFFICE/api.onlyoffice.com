@@ -20,9 +20,13 @@ boolean
 
 ## Example
 
-This example gets editable property for combobox field and displays it.
+Check if a combobox field allows user editing in a PDF.
 
 ```javascript editor-pdf
+// How do I enable or check if a combobox field is editable in a PDF?
+
+// Set a field to editable and display its editable state in the PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

@@ -22,12 +22,12 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-此示例设置批注回复作者的姓名。
+更改电子表格中批注回复上显示的作者名称。
 
 ```javascript editor-xlsx
-// How to add author's name to the reply.
+// How do I update the name shown as the writer of a comment reply in a spreadsheet?
 
-// Add a reply to the comment and set author name, then show author name in the worksheet.
+// Replace the existing author label on a reply with a different name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

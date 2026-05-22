@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析演示文稿形状中的弧线命令参数。
+获取演示文稿中弧形的起始角度。
 
 ```javascript editor-pptx
-// Retrieves and displays arc radii and angle information.
+// How do I find the arc starting angle in a presentation?
+
+// Read angle properties to check arc direction in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

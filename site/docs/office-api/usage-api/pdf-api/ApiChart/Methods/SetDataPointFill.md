@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to color a data point.
+Apply a color to an individual data point in a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart then color its data points.
+// How do I change the color of a single bar or point in a chart in a PDF?
+
+// Fill a specific data point with a color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 page.AddObject(chart);
-
 ```

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例启用定时后自动前进幻灯片。
+启用定时自动换片。
 
 ```javascript editor-pptx
+// Configure the advance on time property of a slide show transition object.
+
+// Apply the transition and display a confirmation message on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -46,5 +50,4 @@ const content = shape.GetContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Slide will advance on click or automatically after 5 seconds.');
 slide.AddObject(shape);
-
 ```

@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例展示如何获取角色数量。
+计算文档中为表单设置的用户角色数量。
 
 ```javascript editor-forms
+// How do I find out how many roles exist in a document?
+
+// Check the total number of roles that have been created in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
@@ -34,5 +38,4 @@ roles.GetAllRoles().forEach(role => {
 });
 let numRoles = roles.GetCount();
 paragraph.AddText("Number of roles: " + numRoles);
-
 ```

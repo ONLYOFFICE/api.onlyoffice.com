@@ -20,9 +20,13 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-此示例返回文档内容中所有段落的数组。
+获取演示文稿中形状文本内容的所有段落。
 
 ```javascript editor-pptx
+// How do I access every paragraph inside a shape in a presentation?
+
+// Retrieve the complete list of paragraphs from a shape and format the first one.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -47,5 +51,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

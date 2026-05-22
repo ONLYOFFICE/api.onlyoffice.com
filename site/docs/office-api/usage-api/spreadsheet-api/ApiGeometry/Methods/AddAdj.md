@@ -23,10 +23,13 @@ boolean
 
 ## Example
 
-Creates adjustable custom geometry with guides and connection points.
+Add a named adjustment handle to a custom shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I define a movable adjustment point for a custom shape in a spreadsheet?
+
+// Register a named adjustment control to fine-tune the proportions of a custom shape in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

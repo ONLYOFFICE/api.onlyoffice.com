@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into WordPress for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/wordpress.svg
 ---
@@ -32,7 +34,7 @@ To start using ONLYOFFICE Docs with WordPress, follow these steps:
 
 Alternatively, you can clone the main branch (and then activate the plugin from the WordPress administrative dashboard as well):
 
-``` sh
+```sh
 cd wp-content/plugins
 git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
 ```

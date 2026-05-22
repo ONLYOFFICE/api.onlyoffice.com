@@ -20,9 +20,13 @@ expression.Copy();
 
 ## 示例
 
-此示例复制富文本块对象并将其添加到父富文本段落。
+复制文本运行并将其放入 PDF 中的段落。
 
 ```javascript editor-pdf
+// How do I make a copy of a text run in a PDF?
+
+// Create a duplicate of a text run and add it to a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

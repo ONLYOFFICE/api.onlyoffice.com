@@ -20,10 +20,12 @@ expression.RecognizeContent();
 
 ## 示例
 
-如何识别页面上的内容。
+检测并识别 PDF 页面上的形状和元素。
 
 ```javascript editor-pdf
-// Get recognized drawing on a page and select it.
+// How do I find what objects are drawn on a page in a PDF?
+
+// Extract recognized elements from a page to work with them in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

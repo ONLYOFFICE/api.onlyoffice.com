@@ -21,12 +21,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example showh how to get the data for all forms added to the document.
+Collect the current values of all forms in a document.
 
 ```javascript editor-forms
-// How to get form information as a string.
+// How do I export form field data as a JSON string in a document?
 
-// Display the form data in the document.
+// Verify filled-in form values by printing them as text at the end of a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -41,5 +41,4 @@ let text = JSON.stringify(doc.GetFormsData());
 let paragraph2 = Api.CreateParagraph();
 paragraph2.AddText(text);
 doc.Push(paragraph2);
-
 ```

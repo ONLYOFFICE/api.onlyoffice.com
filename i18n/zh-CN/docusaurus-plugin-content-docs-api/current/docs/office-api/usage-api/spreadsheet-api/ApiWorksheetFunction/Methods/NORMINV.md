@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定平均值和标准差的正态累积分布的反函数。
+查找电子表格中正态分布中给定概率的值。
 
 ```javascript editor-xlsx
-// How to calculate the inverse of the normal cumulative distribution.
+// Calculate the inverse of cumulative probability with custom mean and standard deviation in a spreadsheet.
 
-// Use a function to get the inverse of the normal cumulative distribution.
+// Determine the threshold value corresponding to a percentile in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [0.34, 7, 3];

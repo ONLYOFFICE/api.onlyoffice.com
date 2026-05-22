@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例使用指定的位置移除元素。
+按位置从电子表格中的段落删除单个文本运行。
 
 ```javascript editor-xlsx
-// How to delete a paragraph element knowing its index.
+// How do I remove one specific piece of text from a paragraph in a spreadsheet?
 
-// Change the content of a shape by removing elements.
+// Trim unwanted content from a paragraph by targeting the run at a given index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回一组数据值内部部分的平均值。
+通过排除极值计算电子表格中数据集中间值的平均值。
 
 ```javascript editor-xlsx
-// How to delete the mean of the data values interior portion.
+// How do I find the average of interior data points in a spreadsheet?
 
-// Use a function to remove the mean from the interior portion of a set of data values.
+// Get the trimmed mean that excludes outliers from a dataset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let argumentsArr = [1, 2, 3, 4];
@@ -45,5 +45,4 @@ let data = worksheet.GetRange("A1:A4");
 let func = Api.WorksheetFunction;
 let result = func.TRIMMEAN(data, 0.6);
 worksheet.GetRange("B1").SetValue(result);
-
 ```

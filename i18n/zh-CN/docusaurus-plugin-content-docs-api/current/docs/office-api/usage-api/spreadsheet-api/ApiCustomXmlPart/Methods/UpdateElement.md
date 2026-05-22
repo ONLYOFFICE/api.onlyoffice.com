@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何更新自定义 XML 部件中的 XML 元素。
+用新数据替换电子表格中存储的 XML 元素的内容。
 
 ```javascript editor-xlsx
+// How do I change the value inside a saved XML structure in a spreadsheet?
+
+// Overwrite an existing XML node to keep embedded data current in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = '<content><text>Old value</text></content>';
@@ -33,5 +37,4 @@ const xml = xmlManager.Add(xmlString);
 
 xml.UpdateElement('/content/text', '<text>New value</text>');
 worksheet.GetRange('A1').SetValue('XML after update: ' + xml.GetXml());
-
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定横轴的次刻度线。
+控制电子表格中图表水平轴上次刻度线出现的位置。
 
 ```javascript editor-xlsx
-// How to specify minor tick mark for the horizontal axis.
+// How do I set the style of minor tick marks on the horizontal axis of a chart in a spreadsheet?
 
-// Minor mark the horizontal axis of the chart.
+// Add fine-grained interval markers along the bottom axis of a chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

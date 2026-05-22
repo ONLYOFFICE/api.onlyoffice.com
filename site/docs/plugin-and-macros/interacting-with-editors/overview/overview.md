@@ -26,7 +26,7 @@ If the plugin operates with an OLE object, [window.Asc.plugin.callCommand](how-t
 
 Let's see how this is done in the *helloworld.js* plugin:
 
-``` ts
+```ts
 window.Asc.plugin.init = function init() {
   window.Asc.plugin.callCommand(() => {
     const oDocument = Api.GetDocument();
@@ -46,4 +46,4 @@ All [Office JavaScript API](../../../office-api/get-started/overview.md) feature
 
 The only OK button (*window.Asc.plugin.button = function (id) \{...\}*) is used to create the text and finish the work with the plugin.
 
-More existing open source plugin examples can be found [here](../../samples/plugin-samples/plugin-samples.md).
+More existing open source plugin examples can be found [here](/samples/?doctype=docs&text=plugin).

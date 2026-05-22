@@ -20,12 +20,12 @@ expression.GetAllDrawings();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片母版中所有绘图对象的数组。
+从演示文稿中的幻灯片母版检索所有绘图。
 
 ```javascript editor-pptx
-// How to get all drawings from the master of presentation.
+// How do I find all drawing objects on a slide master in a presentation?
 
-// Get all drawings from the presentation as an array.
+// List every drawing in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,5 +42,4 @@ master.AddObject(drawing);
 const allDrawings = master.GetAllDrawings();
 const placeholder = Api.CreatePlaceholder("picture");
 allDrawings[0].SetPlaceholder(placeholder);
-
 ```

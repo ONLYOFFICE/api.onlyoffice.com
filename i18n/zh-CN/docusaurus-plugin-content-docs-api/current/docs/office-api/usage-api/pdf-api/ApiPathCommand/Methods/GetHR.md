@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析页面形状中的弧线命令参数。
+读取 PDF 中弧的垂直半径。
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// How do I find the height measurement of an arc in a PDF?
+
+// Retrieve the vertical span of a curved arc segment in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

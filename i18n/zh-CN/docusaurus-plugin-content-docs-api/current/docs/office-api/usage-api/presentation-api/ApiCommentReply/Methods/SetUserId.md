@@ -22,12 +22,12 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-此示例演示如何为批注回复设置用户 ID。
+为演示文稿中的批注回复分配用户 ID。
 
 ```javascript editor-pptx
-// How to change a user ID of a comment reply.
+// How do I set the author ID for a reply to a comment in a presentation?
 
-// Get all comments from the presentation and change its first one's reply user ID.
+// Update the user ID of a comment reply to track who the responder is in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ reply.SetUserId("new-uid-123");
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Comment's reply user ID is set to: " + reply.GetUserId());
-
 ```

@@ -31,12 +31,12 @@ object
 
 ## Example
 
-This example shows how to get the document info represented as an object and paste the application name into "A1" cell.
+Read the document properties and display the application name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get document info and iys application name.
+// How do I access general document information such as the application name in a spreadsheet?
 
-// Get application name using document info.
+// Retrieve metadata about the current file and write it into a cell in a spreadsheet.
 
 let docInfo = Api.GetDocumentInfo();
 let range = Api.GetActiveSheet().GetRange('A1');

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to find out whether a text is outlined.
+Check if text has an outline effect applied in a presentation.
 
 ```javascript editor-pptx
-// How to know whether an outline is set to the text.
+// How do I find out if text has an outline in a presentation?
 
-// Get the text properties of the run and find whether it is outlined or not.
+// Read the outline property of text to see if a stroke style is applied in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -53,5 +53,4 @@ stroke = textPr.GetOutLine();
 const type = stroke.GetClassType();
 paragraph.AddText("Text outline type: " + type);
 docContent.Push(paragraph);
-
 ```

@@ -22,12 +22,12 @@ expression.SetTableStyleColumnStripes(show);
 
 ## 示例
 
-此示例展示如何设置数据透视表的表格样式列条纹。
+在电子表格中启用数据透视表样式的交替列底纹。
 
 ```javascript editor-xlsx
-// How to set table style column stripes of a table.
+// How do I add column stripe formatting to a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its table style column stripes.
+// Apply banded column colors to make pivot table data easier to scan in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

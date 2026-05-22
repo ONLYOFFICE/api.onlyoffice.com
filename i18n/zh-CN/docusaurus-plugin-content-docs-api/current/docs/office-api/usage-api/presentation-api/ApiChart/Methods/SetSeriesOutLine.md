@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例设置指定图表系列的轮廓。
+在演示文稿中为图表系列添加边框线。
 
 ```javascript editor-pptx
-// How to outline a chart seria.
+// Create an outline or stroke around chart elements in a presentation.
 
-// Create a chart, set its properties and its series outline.
+// Define the border style and color for a chart series in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 slide.AddObject(chart);
-
 ```

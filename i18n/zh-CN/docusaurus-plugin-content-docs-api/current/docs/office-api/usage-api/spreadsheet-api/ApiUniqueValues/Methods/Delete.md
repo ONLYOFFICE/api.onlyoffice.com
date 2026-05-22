@@ -2,30 +2,16 @@
 
 删除当前格式条件。
 
-## 语法
-
-```javascript
-expression.Delete();
-```
-
-`expression` - 表示 [ApiUniqueValues](../ApiUniqueValues.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Delete.md)。
 
 ## 示例
 
-此示例删除条件格式规则。
+从电子表格中的单元格范围移除条件格式规则。
 
 ```javascript editor-xlsx
-// How to remove specific conditional formatting rules from a range.
+// How do I delete an existing conditional formatting rule applied to cells in a spreadsheet?
 
-// Delete conditional formatting rule.
+// Clear an unwanted formatting condition so cells revert to their default appearance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +36,4 @@ condition1.Delete();
 
 worksheet.GetRange("D1").SetValue("Rules after deletion:");
 worksheet.GetRange("D2").SetValue(formatConditions.GetCount());
-
 ```

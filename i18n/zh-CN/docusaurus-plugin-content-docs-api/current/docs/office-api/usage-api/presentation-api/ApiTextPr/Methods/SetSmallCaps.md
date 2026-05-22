@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-此示例指定文本块中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。
+在演示文稿中将小写字母转换为小型大写字母。
 
 ```javascript editor-pptx
-// How to make a text uncapitalized.
+// Can I display text with smaller capital letters in a presentation?
 
-// Get the text properties of the run and make its letters lowercase.
+// Format all lowercase characters to appear as small capitals in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +49,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font set to small capitalized letters using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

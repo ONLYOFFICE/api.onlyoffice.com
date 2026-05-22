@@ -31,7 +31,9 @@ If you want to add your own plugin, you can do it manually, even if you are offl
 
 1. Pack all the [plugin files](../../plugin-and-macros/structure/configuration/configuration.md) within the plugin folder into a **zip** archive and change its extension to *.plugin* (all the plugin files and subfolders must be at the archive root).
 
-   > If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   :::note
+   If you download a plugin from [GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins), unpack the plugin folder first and then archive its elements only.
+   :::
 
 2. Open the **Plugin Manager** on the **Plugins** tab.
 
@@ -69,7 +71,7 @@ The plugin will be added to the opened editors and all the editors you will open
 
 For example, for the **Extended comments** plugin the *guid* parameter will look the following way:
 
-``` json
+```json
 {
   "name": "Extended comments",
   "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}"
@@ -108,8 +110,8 @@ The table below contains default plugins guids to make it easier for you to find
 
 ## Default plugins guid’s
 
-|                |                                        |
-| -------------- | -------------------------------------- |
+|                |                                          |
+| -------------- | ---------------------------------------- |
 | Highlight code | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9841\} |
 | Mendeley       | \{BE5CBF95-C0AD-4842-B157-AC40FEDD9441\} |
 | OCR            | \{440EBF13-9B19-4BD8-8621-05200E58140B\} |

@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例设置当前绘图的名称。
+为演示文稿中幻灯片上的形状分配名称。
 
 ```javascript editor-pptx
+// How do I give a shape a custom name in a presentation?
+
+// Create a shape, assign it a name, and verify the name was applied in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Shape name was set to: ' + shape.GetName());
 slide.AddObject(shape);
-
 ```

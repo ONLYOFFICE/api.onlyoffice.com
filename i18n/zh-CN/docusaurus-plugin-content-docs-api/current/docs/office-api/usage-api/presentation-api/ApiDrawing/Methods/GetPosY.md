@@ -20,9 +20,13 @@ expression.GetPosY();
 
 ## 示例
 
-此示例获取绘图在幻灯片上的 Y 坐标位置。
+获取演示文稿中形状的垂直位置。
 
 ```javascript editor-pptx
+// How do I find the top edge coordinate of an object in a presentation?
+
+// Read and display the Y position of a shape in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -37,5 +41,4 @@ const posY = shape.GetPosY();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Drawing Y position: ' + posY + ' EMU');
-
 ```

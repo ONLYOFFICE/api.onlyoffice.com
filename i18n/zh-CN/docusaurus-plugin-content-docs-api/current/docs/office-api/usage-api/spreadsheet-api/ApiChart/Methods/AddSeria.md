@@ -14,9 +14,9 @@ expression.AddSeria(sNameRange, sValuesRange, sXValuesRange);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sNameRange | 必需 | string |  | 系列名称。可以是单元格范围或普通文本。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列，「Example series」。 |
-| sValuesRange | 必需 | string |  | 包含系列值的工作表单元格范围。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列。 |
-| sXValuesRange | 可选 | string |  | 包含系列 X 轴值的工作表单元格范围。仅用于散点图。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列。 |
+| sNameRange | 必需 | string |  | 系列名称。可以是单元格范围或普通文本。例如： |
+| sValuesRange | 必需 | string |  | 工作表中包含系列值的单元格范围。例如： |
+| sXValuesRange | 可选 | string |  | 工作表中包含系列 x 轴值的单元格范围。仅用于散点图。例如： |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ expression.AddSeria(sNameRange, sValuesRange, sXValuesRange);
 
 ## 示例
 
-此示例向图表添加新系列。
+通过向电子表格中的现有图表添加新数据系列来扩展它。
 
 ```javascript editor-xlsx
-// How to add a new series to create a chart.
+// How do I include an additional row of data as a separate line or bar in a chart in a spreadsheet?
 
-// Add a new series to update a chart.
+// Enrich a chart with extra data to make comparisons more complete in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

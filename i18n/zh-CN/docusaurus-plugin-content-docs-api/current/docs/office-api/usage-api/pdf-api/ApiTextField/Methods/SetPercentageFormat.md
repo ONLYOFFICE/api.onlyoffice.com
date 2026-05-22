@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例获取文本字段并为其设置百分比格式。
+在 PDF 文本字段中将数字转换并显示为百分比。
 
 ```javascript editor-pdf
+// How do I show decimal values as percentages in a PDF?
+
+// Apply percentage formatting to text input in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -33,5 +37,4 @@ page.AddObject(textField);
 
 textField.SetPercentageFormat(0, "us");
 textField.SetValue(10);
-
 ```

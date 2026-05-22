@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the number of standard deviations from the average.
+Define how far above the average a value must be before the highlight rule applies in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to modify the standard deviation setting for above average conditions.
+// How do I control the statistical threshold used by an above-average formatting rule in a spreadsheet?
 
-// Change the number of standard deviations for conditional formatting.
+// Adjust the spread multiplier so only the most extreme values get highlighted in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ condition.SetNumStdDev(2);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetNumStdDev().toString());
-
 ```

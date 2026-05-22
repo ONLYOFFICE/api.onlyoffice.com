@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to flip the drawing vertically.
+Mirror a drawing from top to bottom in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the vertical flip property of the shape.
+// How do I flip a drawing so it faces the opposite vertical direction in a spreadsheet?
 
-// Create a drawing and flip it vertically.
+// Reverse a shape along its horizontal axis to produce a vertical mirror image in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -37,5 +37,4 @@ drawing.SetFlipV(true);
 let flip = drawing.GetFlipV();
 worksheet.SetColumnWidth(0, 28);
 worksheet.GetRange("A1").SetValue("Drawing is flipped vertically: " + flip);
-
 ```

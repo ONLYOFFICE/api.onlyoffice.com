@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回从票息期开始到结算日的天数。
+计算电子表格中自票息期开始以来经过的天数。
 
 ```javascript editor-xlsx
-// How to find the number of days from the beginning of the coupon period to the settlement date.
+// What is the interval from the start of coupon to settlement in a spreadsheet?
 
-// Use function to get days count from the beginning of the coupon period to the settlement date.
+// Determine the duration between coupon inception and transaction date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

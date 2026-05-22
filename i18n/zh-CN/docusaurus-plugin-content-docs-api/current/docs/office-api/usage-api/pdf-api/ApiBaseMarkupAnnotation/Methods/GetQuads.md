@@ -20,9 +20,13 @@ expression.GetQuads();
 
 ## 示例
 
-此示例获取标记注释的四边形。
+从 PDF 中的标记注释获取高亮区域。
 
 ```javascript editor-pdf
+// How do I read the highlight coordinates in a PDF?
+
+// Extract the quad coordinates that define the marked region in a PDF.
+
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

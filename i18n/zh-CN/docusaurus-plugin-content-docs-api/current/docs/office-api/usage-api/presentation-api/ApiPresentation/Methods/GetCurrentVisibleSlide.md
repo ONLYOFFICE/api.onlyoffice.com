@@ -20,9 +20,13 @@ expression.GetCurrentVisibleSlide();
 
 ## 示例
 
-此示例演示如何获取当前可见幻灯片的对象。
+检索当前在屏幕上可见的幻灯片对象。
 
 ```javascript editor-pptx
+// Access the slide displayed in the presentation view.
+
+// Add a label to the visible slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentVisibleSlide();
 
@@ -37,5 +41,4 @@ if (slide) {
 	const paragraph = docContent.GetElement(0);
 	paragraph.AddText('This slide is currently visible');
 }
-
 ```

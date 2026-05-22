@@ -22,9 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the creation date of the workbook using the ApiCore.
+Write a creation date into the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I set the creation date recorded for a workbook in a spreadsheet?
+
+// Store a specific date as the origin timestamp for the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Created: " + createdDate);
-
 ```

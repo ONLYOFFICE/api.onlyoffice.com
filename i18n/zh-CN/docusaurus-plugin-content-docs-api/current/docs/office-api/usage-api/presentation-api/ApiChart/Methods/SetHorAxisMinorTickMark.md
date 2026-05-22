@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定横轴的次刻度线。
+设置演示文稿中图表水平轴上次刻度线的样式。
 
 ```javascript editor-pptx
-// How to set a minor tick mark using predefined symbols.
+// How do I customize the appearance of minor tick marks on a chart in a presentation?
 
-// Create a chart, set its properties and minor tick mark for horizontal axis.
+// Create a chart and apply a specific minor tick mark style to the horizontal axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 slide.AddObject(chart);
-
 ```

@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-检索弧参数，包括半径和角度。
+读取绘制弧开始的角度并写入电子表格的单元格。
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How do I find the starting angle of an arc path command in a spreadsheet?
+
+// Inspect an arc segment to confirm the exact degree at which the curve opens in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

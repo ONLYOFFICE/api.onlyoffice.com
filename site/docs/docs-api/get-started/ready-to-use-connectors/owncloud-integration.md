@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into ownCloud for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/owncloud.svg
 ---
@@ -72,7 +74,7 @@ If the server with the ownCloud installed does not have the Internet access, or 
 
 In ownCloud, open the *\~/settings/admin?sectionid=additional#onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
@@ -94,7 +96,7 @@ The **Open in ONLYOFFICE** action will be added to the file context menu. You ca
 
 You can check the connection to ONLYOFFICE Docs by using the following occ command:
 
-``` sh
+```sh
 occ onlyoffice:documentserver --check
 ```
 
@@ -109,7 +111,7 @@ To enable work within **ownCloud Web**, register the app in the ownCloud Web *co
 
 To register the app, use these lines:
 
-``` json
+```json
 {
   "external_apps": [
     {

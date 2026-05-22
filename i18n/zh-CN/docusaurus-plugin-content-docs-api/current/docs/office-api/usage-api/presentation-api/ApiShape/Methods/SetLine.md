@@ -22,10 +22,13 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。
+将形状的轮廓从无边框更改为粗蓝线。
 
 ```javascript editor-pptx
-// Creates a rectangle and changes its outline to a thick blue line.
+// Create a rectangle with no stroke and display the initial state.
+
+// Apply a 3-point blue line and show the updated appearance.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
@@ -40,5 +43,4 @@ let newStroke = Api.CreateStroke(3 * 12700, Api.CreateSolidFill(Api.CreateRGBCol
 shape.SetLine(newStroke);
 paragraph.AddLineBreak();
 paragraph.AddText("Border changed to 3pt blue line");
-
 ```

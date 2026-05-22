@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例为指定的图表系列设置名称。
+更改演示文稿中图表数据系列的名称。
 
 ```javascript editor-pptx
-// How to rename a chart seria.
+// How do I rename the labels shown in a chart legend in a presentation?
 
-// Create a chart, set its properties and its series names.
+// Update the display name for a specific data series to appear correctly in the chart legend in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

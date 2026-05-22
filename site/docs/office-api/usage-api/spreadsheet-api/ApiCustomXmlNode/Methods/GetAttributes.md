@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all attributes of a custom XML node.
+Retrieve every attribute attached to an XML node in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I list all attributes of a custom XML element in a spreadsheet?
+
+// Loop through the complete set of attributes on an embedded XML node and display them in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -42,5 +46,4 @@ for (let i = 0; i < attributes.length; i++) {
 	worksheet.GetRange('A' + (i + 2)).SetValue(attributes[i].name);
 	worksheet.GetRange('B' + (i + 2)).SetValue(attributes[i].value);
 }
-
 ```

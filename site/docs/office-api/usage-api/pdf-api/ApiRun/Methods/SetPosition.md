@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## Example
 
-This example specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
+Adjust text baseline alignment in a PDF.
 
 ```javascript editor-pdf
-// How to change inline position of the text.
+// How do I move text up or down relative to other text in a PDF?
 
-// Create a new text run and make its position lower or higher.
+// Raise or lower text positioning in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +38,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 let run = Api.CreateRun();
 run.AddText("This is a text run with the text raised 10 half-points.");
@@ -50,5 +50,4 @@ run.AddText("This is a text run with the text lowered 16 half-points.");
 paragraph.AddElement(run);
 run.SetPosition(-16);
 page.AddObject(shape);
-
 ```

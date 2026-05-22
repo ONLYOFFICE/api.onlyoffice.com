@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+确定演示文稿中主题格式方案的数据类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiThemeFormatScheme.
+// How do I identify what kind of object a theme format scheme is in a presentation?
 
-// Retrieve class type of ApiThemeFormatScheme object and insert it to the slide.
+// Get the class name identifier for a theme format scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
-
 ```

@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何替换自定义 XML 节点的 XML 内容。
+在电子表格中用全新的标记覆盖 XML 节点。
 
 ```javascript editor-xlsx
+// How do I replace the contents of an XML node with different XML in a spreadsheet?
+
+// Swap out a node's structure by supplying a fresh XML fragment in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -40,5 +44,4 @@ const bookNode = xml.GetNodes('/bookstore/book')[0];
 bookNode.SetXml('<book><title>New Book</title></book>');
 worksheet.GetRange('A1').SetValue('XML after replacement:');
 worksheet.GetRange('A2').SetValue(xml.GetXml());
-
 ```

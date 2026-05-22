@@ -22,12 +22,12 @@ expression.SetTime(nTimeStamp);
 
 ## 示例
 
-此示例设置当前时区格式的批注回复创建时间戳。
+设置电子表格中批注回复的本地时间戳。
 
 ```javascript editor-xlsx
-// How to change a time when a reply was created.
+// How do I update when a comment reply was posted in a spreadsheet?
 
-// Add a reply then update its creation time and show it in the worksheet.
+// Record a new creation time for an existing comment reply in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

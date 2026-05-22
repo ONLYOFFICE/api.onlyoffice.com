@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回数字的反正弦，以弧度表示，范围从 -Pi/2 到 Pi/2。
+计算电子表格中数字的反正弦并以弧度返回结果。
 
 ```javascript editor-xlsx
-// How to get an arcsine of a number in radians.
+// Find the inverse sine using the ASIN function in a spreadsheet.
 
-// Use function to get an arcsine of a number and display it in the worksheet.
+// Determine the angle value from a sine number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

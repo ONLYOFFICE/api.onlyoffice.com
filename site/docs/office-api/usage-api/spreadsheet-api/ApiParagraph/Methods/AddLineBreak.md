@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds a line break to the current position and starts the next element from a new line.
+Break a paragraph onto a new line without starting a new paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to insert a text from a new line.
+// How do I split text across two lines inside the same paragraph in a spreadsheet?
 
-// Get the paragraph from the shape and add two sentences separated by a linebreak.
+// Separate two sentences within one paragraph by inserting a hard line break between them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

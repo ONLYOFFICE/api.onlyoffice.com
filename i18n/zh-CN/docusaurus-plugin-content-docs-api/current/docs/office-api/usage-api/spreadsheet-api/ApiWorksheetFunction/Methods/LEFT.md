@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-此示例演示如何从文本字符串的开头返回指定数量的字符。
+从电子表格中文本的开头提取字符。
 
 ```javascript editor-xlsx
-// How to find the number of characters starting from the index.
+// How do I get the first few letters or a prefix from a text string in a spreadsheet?
 
-// Use a function to get a length of a text starting from the index.
+// Retrieve a specific number of characters counting from the left side of text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

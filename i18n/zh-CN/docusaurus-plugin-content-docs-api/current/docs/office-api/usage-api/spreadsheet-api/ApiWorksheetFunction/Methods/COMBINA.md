@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回给定项目数的可重复组合数。
+计算电子表格中允许重复时的组合数。
 
 ```javascript editor-xlsx
-// How to find a number of combinations with repetitions.
+// How many selections can you make if you can reuse items in a spreadsheet?
 
-// Use function to count possible combinations with duplicates for a given number of items.
+// Find all possible selections including repeated items in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-This example sets all 4 font slots with the specified font family.
+Change the font family of a text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the text font family.
+// How do I apply a different typeface to a run of text in a spreadsheet?
 
-// Create a text run object and set the "Comic Sans MS" font faminy to it.
+// Switch the font of a specific run to stand out from the rest of the paragraph in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

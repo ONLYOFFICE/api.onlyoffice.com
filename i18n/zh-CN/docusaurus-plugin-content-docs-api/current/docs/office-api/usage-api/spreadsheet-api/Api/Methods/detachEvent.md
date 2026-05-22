@@ -22,12 +22,12 @@ expression.detachEvent(eventName);
 
 ## 示例
 
-此示例取消订阅「onWorksheetChange」事件。
+在不再需要时停止监听电子表格中的单元格更改通知。
 
 ```javascript editor-xlsx
-// Detach from an event.
+// How do I unregister a previously attached change listener in a spreadsheet?
 
-// How to stop event handling.
+// Prevent a handler from firing on future edits by removing it from the event queue in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

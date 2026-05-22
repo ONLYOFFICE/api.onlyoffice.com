@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取复选框控件的默认选中属性。
+了解 PDF 中复选框是否默认预选。
 
 ```javascript editor-pdf
+// How do I check whether a checkbox widget is set to be checked when the form first opens in a PDF?
+
+// Read the default checked state of a checkbox widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

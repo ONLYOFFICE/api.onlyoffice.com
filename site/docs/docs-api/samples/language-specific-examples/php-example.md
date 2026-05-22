@@ -1,9 +1,10 @@
 ---
 sidebar_position: -5
 description: Integrate ONLYOFFICE Docs into a PHP web application.
+tags: ["Docs", "Integration", "PHP"]
 ---
 
-# PHP example
+# PHP integration
 
 ## Overview
 
@@ -32,14 +33,14 @@ To run the example using [Docker](https://www.docker.com/), you will need [Docke
 
 Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php):
 
-``` sh
+```sh
 curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
 unzip PHP.Example.zip
 ```
 
 Then open the example directory and [start containers](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L60):
 
-``` sh
+```sh
 cd "PHP Example"
 make compose-prod
 ```
@@ -60,14 +61,14 @@ To run the example on your local machine, you will need [PHP 8.2.11](https://www
 
 Once you have everything installed, download the release archive and unarchive it, or clone the source code from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/php):
 
-``` sh
+```sh
 curl --output PHP.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/PHP.Example.zip
 unzip PHP.Example.zip
 ```
 
 Then open the example directory, [install dependencies](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L16), and [start the server](https://github.com/ONLYOFFICE/document-server-integration/blob/880423545fc0c1f21b004e1c8121a319809f4b72/web/documentserver-example/php/Makefile#L40):
 
-``` sh
+```sh
 cd "PHP Example"
 make prod
 make server-prod

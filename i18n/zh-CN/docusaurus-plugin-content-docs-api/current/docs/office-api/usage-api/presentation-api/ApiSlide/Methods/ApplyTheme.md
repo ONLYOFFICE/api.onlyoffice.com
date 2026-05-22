@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例将指定主题应用于当前幻灯片。
+创建具有配色、格式和字体方案的自定义主题并应用于幻灯片。
 
 ```javascript editor-pptx
-// How to create a theme with different properties and apply it to the slide.
+// Define color schemes, gradient fills, pattern fills, format schemes, and font schemes.
 
-// Create a theme, specify its color schemes, formats and patterns, then apply it to the slide.
+// Apply the complete theme to the slide and display a chart using the new theme colors.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -72,5 +72,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

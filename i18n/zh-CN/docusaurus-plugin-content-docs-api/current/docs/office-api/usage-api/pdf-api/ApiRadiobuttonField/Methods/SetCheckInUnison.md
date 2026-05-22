@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置单选按钮字段的统一选中属性。
+链接单选按钮选项使 PDF 中一次只能选择一个。
 
 ```javascript editor-pdf
+// How do I make radio buttons work together in a PDF?
+
+// Enable synchronized selection across radio button choices in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

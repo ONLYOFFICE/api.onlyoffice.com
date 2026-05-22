@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例清除文本块中的内容。
+从电子表格中的文本运行移除所有文本而不删除运行本身。
 
 ```javascript editor-xlsx
-// How to create a text run object, add a text to it and clear its value.
+// How do I erase the text inside a run while keeping the run in place in a spreadsheet?
 
-// Clear content of an ApiRun object.
+// Wipe a run's content so it appears empty in the final document in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

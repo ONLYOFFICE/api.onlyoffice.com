@@ -14,7 +14,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The date language. The possible value for this parameter is a language identifier as defined in RFC 4646/BCP 47. Example: "en-CA". |
+| sLangId | Required | string |  | The date language. The possible value for this parameter is a language identifier as defined in |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to set the date language in a date form.
+Set the language used by a date form in a document.
 
 ```javascript editor-forms
-// Change the language of the date form.
+// How do I change the locale of a date form in a document?
 
-// How to set the date form language to "en-CA".
+// Update a date form to use a different language and confirm the new locale is applied in a document.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});

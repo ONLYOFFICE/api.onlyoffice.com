@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为幻灯片设置幻灯片放映过渡效果。
+为幻灯片应用幻灯片放映过渡效果。
 
 ```javascript editor-pptx
+// Configure the transition with entry effect and speed settings.
+
+// Set the advance on click property for the transition.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -44,5 +48,4 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition parameters: random effect, fast speed, advance on click');
 slide.AddObject(shape);
-
 ```

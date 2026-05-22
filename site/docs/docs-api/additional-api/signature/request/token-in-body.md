@@ -2,12 +2,12 @@
 
 Starting from version 5.2, it is possible to use the token in body parameters with ONLYOFFICE Docs. To enable it, set the [services.CoAuthoring.token.inbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-inbox-inBody) and [services.CoAuthoring.token.outbox.inBody](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-token-outbox-inBody) in configuration file to `true`.
 
-## Parameters
+## Configuration parameters
 
 | Parameter                                | Type    | Example | Description                                                        |
 | ---------------------------------------- | ------- | ------- | ------------------------------------------------------------------ |
-| services.CoAuthoring.token.inbox.inBody  | boolean | false   | Defines if a token is enabled in the incoming request body or not. |
-| services.CoAuthoring.token.outbox.inBody | boolean | false   | Defines if a token is enabled in the outgoing request body or not. |
+| services.CoAuthoring.token.inbox.inBody  | boolean | false   | Whether a token is enabled in the incoming request body or not. |
+| services.CoAuthoring.token.outbox.inBody | boolean | false   | Whether a token is enabled in the outgoing request body or not. |
 
 The `payload` for the JSON Web Token contains the request body parameters.
 
@@ -34,7 +34,7 @@ These parameters must be encoded into the token so that the request looked like 
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/command" \
   -H "Content-Type: application/json" \
   -d '{
@@ -62,7 +62,7 @@ Sample parameters of request to convert the document:
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/converter" \
   -H "Content-Type: application/json" \
   -d '{
@@ -85,7 +85,7 @@ Sample parameters of request to document builder service:
 
 **Request:**
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -110,8 +110,8 @@ Sample parameters of request to "callbackUrl" address by document editing servic
 
 **Request:**
 
-``` bash
-curl -X POST "https://example.com/url-to-callback.ashx" \
+```bash
+curl -X POST "https://example.com/url-to-callback" \
   -H "Content-Type: application/json" \
   -d '{
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"

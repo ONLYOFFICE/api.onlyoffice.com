@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-此示例展示如何从 JSON 恢复形状填充颜色。
+从电子表格中存储的 JSON 表示重建颜色。
 
 ```javascript editor-xlsx
+// How do I recreate a color object from a previously saved JSON value in a spreadsheet?
+
+// Load a color back from a JSON snapshot and apply it to a shape in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const original = Api.RGB(93, 192, 232);
 const json = JSON.parse(original.ToJSON());
@@ -35,5 +39,4 @@ const stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(0, 0, 0)));
 worksheet.AddShape("rect", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 
 worksheet.GetRange("A12").SetValue("Original: " + original.GetHex() + " | Restored: " + restored.GetHex());
-
 ```

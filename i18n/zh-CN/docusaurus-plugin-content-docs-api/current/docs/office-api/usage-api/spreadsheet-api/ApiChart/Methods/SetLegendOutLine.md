@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置图表图例的轮廓。
+在电子表格中为图表图例绘制可见边框。
 
 ```javascript editor-xlsx
-// How to change the outline of the chart legend using a stoke.
+// How do I add an outline to the chart legend in a spreadsheet?
 
-// Outline the chart legend creating a solid stroke.
+// Frame the legend with a colored border to separate it from the rest of the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

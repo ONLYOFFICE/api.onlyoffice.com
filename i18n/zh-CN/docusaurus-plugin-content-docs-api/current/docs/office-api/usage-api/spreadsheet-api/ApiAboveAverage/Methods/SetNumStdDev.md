@@ -22,12 +22,12 @@ expression.SetNumStdDev(numStdDev);
 
 ## 示例
 
-此示例演示如何设置与平均值的标准偏差数。
+定义在电子表格中高亮规则生效之前值必须高于平均值多少。
 
 ```javascript editor-xlsx
-// How to modify the standard deviation setting for above average conditions.
+// How do I control the statistical threshold used by an above-average formatting rule in a spreadsheet?
 
-// Change the number of standard deviations for conditional formatting.
+// Adjust the spread multiplier so only the most extreme values get highlighted in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ condition.SetNumStdDev(2);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(condition.GetNumStdDev().toString());
-
 ```

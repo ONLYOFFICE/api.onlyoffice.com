@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example shows how to remove a range of slides from the presentation.
+Delete multiple slides from a presentation.
 
 ```javascript editor-pptx
-// How to remove the slides from the presentation.
+// How do I remove a range of slides from a presentation?
 
-// Delete a range of the ApiSlide objects from the presentation.
+// Remove slides starting from a specific index and show a message.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();
@@ -53,5 +53,4 @@ const oParagraph = oDocContent.GetElement(0);
 const sClassType = presentation.GetClassType();
 oParagraph.AddText("A slide with no background was removed from this presentation.");
 slide.AddObject(oShape);
-
 ```

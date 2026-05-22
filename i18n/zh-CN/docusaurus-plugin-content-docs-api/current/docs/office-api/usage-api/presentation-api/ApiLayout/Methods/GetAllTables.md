@@ -20,9 +20,13 @@ expression.GetAllTables();
 
 ## 示例
 
-此示例演示如何获取包含幻灯片版式中所有表格的数组。
+将幻灯片布局中的所有表格作为数组获取。
 
 ```javascript editor-pptx
+// Tables can be added to layouts and counted across slide, layout, and master objects.
+
+// Display the count of tables on the slide, layout, and master.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -31,7 +35,7 @@ const master = presentation.GetMaster(0);
 const layout = master.GetLayout(0);
 layout.RemoveObject(0, layout.GetAllDrawings().length);
 
-const table = Api.CreateTable(3, 2);
+const table = Api.CreateTable(2, 3);
 table.GetRow(0).GetCell(0).GetContent().GetCurrentParagraph().AddText('US');
 table.GetRow(0).GetCell(1).GetContent().GetCurrentParagraph().AddText('CH');
 table.GetRow(0).GetCell(2).GetContent().GetCurrentParagraph().AddText('Others');
@@ -54,5 +58,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide layout: " + layout.GetAllTables().length);
 paragraph.AddLineBreak();
 paragraph.AddText("Number of tables on slide master: " + master.GetAllTables().length);
-
 ```

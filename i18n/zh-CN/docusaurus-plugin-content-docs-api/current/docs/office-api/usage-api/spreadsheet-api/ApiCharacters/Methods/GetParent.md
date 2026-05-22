@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-此示例演示如何获取指定字符的父对象。
+检索电子表格中拥有特定字符范围的父单元格。
 
 ```javascript editor-xlsx
-// How to get a parent of the characters.
+// How do I find which cell a selected group of characters belongs to in a spreadsheet?
 
-// Find a characters parent of the selected range.
+// Trace a character selection back to its containing cell to apply further formatting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

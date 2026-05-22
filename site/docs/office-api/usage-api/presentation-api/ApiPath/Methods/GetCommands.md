@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes path commands of a star shape on a presentation slide.
+Retrieve all drawing commands from a shape's geometry path in a presentation.
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I access all the drawing commands that make up a shape in a presentation?
+
+// Get the complete list of path commands used to construct a shape in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

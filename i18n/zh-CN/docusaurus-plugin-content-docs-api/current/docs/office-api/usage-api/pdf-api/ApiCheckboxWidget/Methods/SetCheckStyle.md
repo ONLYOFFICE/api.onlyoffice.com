@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置复选框控件的选中样式。
+更改 PDF 中复选框控件的勾选符号外观。
 
 ```javascript editor-pdf
+// How do I customize what symbol appears inside a checked checkbox in a PDF?
+
+// Apply a visual style to a checkbox widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let radiobuttonField = Api.CreateRadiobuttonField([10, 10, 25, 25]);

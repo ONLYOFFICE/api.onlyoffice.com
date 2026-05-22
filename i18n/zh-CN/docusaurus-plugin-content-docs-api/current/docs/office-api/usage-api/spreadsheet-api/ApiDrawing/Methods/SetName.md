@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例展示如何为绘图对象设置名称。
+为绘图分配自定义名称以便在电子表格中通过该名称识别。
 
 ```javascript editor-xlsx
+// How do I give a drawing a recognizable label in a spreadsheet?
+
+// Label a shape with a specific name to make it easier to reference later in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(80, 120, 160));
@@ -44,5 +48,4 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Name: ' + drawing.GetName());
 
 worksheet.GetRange('A1').SetValue('Drawing name was set to: ' + drawing.GetName());
-
 ```

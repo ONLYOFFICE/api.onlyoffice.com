@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-此示例从区域中删除所有条件格式。
+移除电子表格中应用于一组单元格的所有格式规则。
 
 ```javascript editor-xlsx
-// How to delete conditional formatting rules from cells.
+// How do I clear every highlight and color rule from a selected range in a spreadsheet?
 
-// Delete all conditional formatting from cells.
+// Strip away previously set visual conditions to return cells to their default look in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ formatConditions.AddIconSetCondition();
 worksheet.GetRange("B1").SetValue("Rules before delete: " + formatConditions.GetCount());
 formatConditions.Delete();
 worksheet.GetRange("B2").SetValue("Rules after delete: " + formatConditions.GetCount());
-
 ```

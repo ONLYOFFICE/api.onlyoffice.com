@@ -22,10 +22,13 @@ expression.GetCommand(nIndex);
 
 ## 示例
 
-分析演示文稿幻灯片上星形形状的路径命令。
+从演示文稿中形状的几何路径检索特定绘图命令。
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I access individual drawing commands in a custom shape in a presentation?
+
+// Get and inspect a single path command from a shape's geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

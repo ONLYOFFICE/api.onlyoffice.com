@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all interactive animation sequences from a timeline.
+Retrieve all click-triggered animation sequences on a slide in a presentation.
 
 ```javascript editor-pptx
+// How do I access the interactive animations that respond to clicks in a presentation?
+
+// Collect all animation sequences that are activated by user interactions in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -65,5 +69,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Interactive sequences count: ' + sequences.length);
 slide.AddObject(infoShape);
-
 ```

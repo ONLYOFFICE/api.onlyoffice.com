@@ -22,14 +22,17 @@ number
 
 ## 示例
 
-此示例展示如何将像素转换为磅。
+在电子表格中将像素数表示为排版磅。
 
 ```javascript editor-xlsx
+// How do I turn a number of pixels into an equivalent number of points in a spreadsheet?
+
+// Record the point equivalent of a pixel measurement in a spreadsheet.
+
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);
 const text = pixels + ' pixels are equal to ' + points + ' points.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```

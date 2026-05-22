@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the spacing before value of the current paragraph.
+Check the space above a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to get the size of a spacing before a text from a paragraph.
+// How do I read the spacing value before a paragraph in a presentation?
 
-// Return a property of the spacing size before a paragraph.
+// Retrieve the distance between the previous element and the start of a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -55,5 +55,4 @@ const spacingBefore = paraPr.GetSpacingBefore();
 const paragraph3 = Api.CreateParagraph();
 paragraph3.AddText("Spacing before: " + spacingBefore);
 docContent.Push(paragraph3);
-
 ```

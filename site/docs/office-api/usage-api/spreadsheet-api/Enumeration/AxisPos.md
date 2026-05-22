@@ -13,10 +13,9 @@ Enumeration
 - "right"
 - "left"
 
-
 ## Example
 
-This example sets the axis values to the top position of the chart.
+Set the axis values to the top position of the chart.
 
 ```javascript editor-xlsx
 // How to change the axis labels format of the chart.

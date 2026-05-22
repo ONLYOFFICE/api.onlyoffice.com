@@ -20,10 +20,13 @@ expression.Close();
 
 ## 示例
 
-创建自定义形状并将其添加到页面。
+在 PDF 中通过将最后一点连接回起始点来完成形状。
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I finish drawing a closed shape in a PDF?
+
+// Seal the outline of a custom shape by closing its path in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

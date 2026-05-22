@@ -2,27 +2,17 @@
 
 Returns the outline level of the specified properties.
 
-## Syntax
-
-```javascript
-expression.GetOutlineLvl();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-Number
+Inherited from [ApiParaPr.GetOutlineLvl](../../ApiParaPr/Methods/GetOutlineLvl.md).
 
 ## Example
 
-This example shows how to get the outline level of the specified paragraph via paragraph properties.
+Check the heading level of a paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I read the outline level of a paragraph in a presentation?
+
+// Retrieve the hierarchical level assigned to a paragraph for outline or table of contents purposes in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +36,4 @@ let text =  'Outline level (index) for this paragraph is currently set to ' + le
 text += ',\n';
 text += 'but originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

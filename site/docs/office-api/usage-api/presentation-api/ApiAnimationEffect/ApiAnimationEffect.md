@@ -2,7 +2,6 @@
 
 Represents the ApiAnimationEffect class.
 
-
 ## Methods
 
 | Method | Returns | Description |

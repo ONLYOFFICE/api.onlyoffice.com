@@ -2,7 +2,6 @@
 
 表示 ApiTextPr 类。
 
-
 ## 方法
 
 | 方法 | 返回值 | 描述 |
@@ -12,7 +11,7 @@
 | [GetClassType](./Methods/GetClassType.md) | "textPr" | 返回 ApiTextPr 类的类型。 |
 | [GetDoubleStrikeout](./Methods/GetDoubleStrikeout.md) | boolean | 从当前文本属性获取双删除线属性。 |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 从当前文本属性获取文本颜色。 |
-| [GetFontFamily](./Methods/GetFontFamily.md) | string | 从当前文本属性返回字体系列。如果字体是通过主题设置的，此方法会自动从主题计算字体。 |
+| [GetFontFamily](./Methods/GetFontFamily.md) | string | 返回当前文本属性中的字体系列。 |
 | [GetFontSize](./Methods/GetFontSize.md) | [hps](../Enumeration/hps.md) | 从当前文本属性获取字体大小。 |
 | [GetItalic](./Methods/GetItalic.md) | boolean | 从当前文本属性获取斜体属性。 |
 | [GetOutLine](./Methods/GetOutLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) | 从当前文本属性获取文本轮廓。 |
@@ -29,9 +28,9 @@
 | [SetFontSize](./Methods/SetFontSize.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 设置当前文本块字符的字体大小。 |
 | [SetItalic](./Methods/SetItalic.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 为文本字符设置斜体属性。 |
 | [SetOutLine](./Methods/SetOutLine.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 设置当前文本块的文本轮廓。 |
-| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定文本块中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。 |
+| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定文本域中的所有小写字母字符仅格式化显示为其对应的大写 |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 设置以二十分之一磅为单位测量的文本间距。 |
 | [SetStrikeout](./Methods/SetStrikeout.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定文本块的内容显示为中间有一条水平线穿过。 |
 | [SetTextFill](./Methods/SetTextFill.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 设置当前文本块的文本填充。 |
-| [SetUnderline](./Methods/SetUnderline.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定文本块的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。 |
-| [SetVertAlign](./Methods/SetVertAlign.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定将应用于文本块内容相对于文本块默认外观的对齐方式：**"baseline"** - 当前文本块中的字符将按默认文本基线对齐。**"subscript"** - 当前文本块中的字符将对齐到默认文本基线下方。**"superscript"** - 当前文本块中的字符将对齐到默认文本基线上方。 |
+| [SetUnderline](./Methods/SetUnderline.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定文本域的内容显示时，字符正下方会出现一条线 |
+| [SetVertAlign](./Methods/SetVertAlign.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | 指定将应用于文本域内容的对齐方式，相对于文本域文本的默认外观： |

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the application ID to the current OLE object.
+Assign an application identifier to an embedded object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set application id of OLE object.
+// How do I set which application an embedded object is linked to in a spreadsheet?
 
-// Add Ole object, set its application id and display it in the worksheet.
+// Update the application identifier on an embedded object to associate it with a different app in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -38,5 +38,4 @@ let oleObject = worksheet.AddOleObject(
 	0, 2 * 36000, 4, 3 * 36000
 );
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
-
 ```

@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例获取按钮控件的适应边界属性并显示。
+检查 PDF 文档中按钮控件是否在其边界内。
 
 ```javascript editor-pdf
+// Retrieve the fit bounds property from a button widget.
+
+// Display the fit bounds status using the widget label.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 120, 100]);

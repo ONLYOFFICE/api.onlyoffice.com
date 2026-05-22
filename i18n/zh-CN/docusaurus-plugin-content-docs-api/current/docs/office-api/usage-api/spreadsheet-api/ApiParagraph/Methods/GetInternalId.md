@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取形状内段落的内部标识符。
+检索分配给电子表格中形状内段落的唯一标识符。
 
 ```javascript editor-xlsx
+// How do I read the internal ID of a paragraph in a spreadsheet?
+
+// Confirm which paragraph is being referenced by checking its identifier in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -38,5 +42,4 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Sample text.');
 
 worksheet.GetRange('A1').SetValue('Paragraph ID: ' + paragraph.GetInternalId());
-
 ```

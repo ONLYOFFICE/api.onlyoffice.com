@@ -20,9 +20,13 @@ expression.GetIconType();
 
 ## 示例
 
-此示例获取文本注释的图标类型。
+读取 PDF 中文本注释使用的图标符号。
 
 ```javascript editor-pdf
+// How do I see which icon a text annotation displays in a PDF?
+
+// Find out what symbol appears for an annotation comment in a PDF.
+
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 textAnnot.SetContents("Annot contents");

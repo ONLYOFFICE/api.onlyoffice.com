@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set an orientation of horizontal axis.
+Reverse the direction of the horizontal axis in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis orientation.
+// How do I flip the left-to-right order of axis values in a PDF?
+
+// Invert the horizontal axis scale for a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

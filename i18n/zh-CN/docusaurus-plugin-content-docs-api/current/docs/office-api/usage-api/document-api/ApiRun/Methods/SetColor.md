@@ -1,0 +1,45 @@
+# SetColor
+
+设置当前文本块的文本颜色。
+
+## 语法
+
+```javascript
+expression.SetColor(color);
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | 必需 | [ApiColor](../../ApiColor/ApiColor.md) |  | 文本颜色。 |
+
+## 返回值
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
+## 示例
+
+在文档中为文本运行的文本应用特定颜色。
+
+```javascript editor-docx
+// How do I change the color of a piece of text in a document?
+
+// Give a run a distinct hue to make it stand out visually in a document.
+
+const doc = Api.GetDocument();
+const paragraph = doc.GetElement(0);
+
+const firstRun = Api.CreateRun();
+firstRun.AddText('This is a text run with the font color set to orange.');
+firstRun.SetColor(Api.HexColor('#FF6F3D'));
+paragraph.AddElement(firstRun);
+
+const secondRun = Api.CreateRun();
+secondRun.AddText('The text uses a bluish color created with HexColor method.');
+const hexColor = Api.HexColor('#219ebc');
+secondRun.SetColor(hexColor);
+paragraph.AddElement(secondRun);
+```

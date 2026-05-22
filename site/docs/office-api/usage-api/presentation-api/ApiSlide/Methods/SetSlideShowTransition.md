@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets a slide show transition to a slide.
+Apply a slide show transition effect to a slide.
 
 ```javascript editor-pptx
+// Configure the transition with entry effect and speed settings.
+
+// Set the advance on click property for the transition.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -44,5 +48,4 @@ const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Transition parameters: random effect, fast speed, advance on click');
 slide.AddObject(shape);
-
 ```

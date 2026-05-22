@@ -22,10 +22,13 @@ expression.GetCommand(nIndex);
 
 ## Example
 
-Analyzes path commands of a star shape on a pdf document page.
+Retrieve a specific drawing instruction from a shape's outline in a PDF.
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// How do I access one step of a shape's outline in a PDF?
+
+// Find and inspect an individual command that builds a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

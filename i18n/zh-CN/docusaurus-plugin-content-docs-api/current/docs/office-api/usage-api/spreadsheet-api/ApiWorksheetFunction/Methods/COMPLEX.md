@@ -16,7 +16,7 @@ expression.COMPLEX(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 复数的实数系数。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 复数的虚数系数。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | 复数虚部的后缀。可以是小写的 "i" 或 "j"。如果省略，函数将假定后缀为 "i"。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string |  | 复数虚部的后缀。可以是小写的 "i" 或 "j"。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何将实数和虚数系数转换为复数。
+在电子表格中从各部分创建复数。
 
 ```javascript editor-xlsx
-// How to create a complex number using coefficients.
+// What is a complex number made from two values in a spreadsheet?
 
-// Use function to convert real and imaginary coefficients into a complex number.
+// Combine regular and imaginary parts to build a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

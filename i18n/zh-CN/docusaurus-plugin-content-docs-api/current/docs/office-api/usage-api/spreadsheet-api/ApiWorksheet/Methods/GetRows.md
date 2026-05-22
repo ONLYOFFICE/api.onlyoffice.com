@@ -22,12 +22,12 @@ expression.GetRows(value);
 
 ## 示例
 
-此示例展示如何获取表示行区域中所有单元格的 ApiRange 对象。
+同时选择多行以在电子表格中一次性设置其样式。
 
 ```javascript editor-xlsx
-// How to get all row cells.
+// Work with a group of rows when you want to apply one change everywhere in a spreadsheet?
 
-// Get all row cells from the worksheet.
+// Color a row range uniformly by treating it as a single collection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRows("1:4").SetFillColor(Api.CreateColorFromRGB(255, 213, 191));

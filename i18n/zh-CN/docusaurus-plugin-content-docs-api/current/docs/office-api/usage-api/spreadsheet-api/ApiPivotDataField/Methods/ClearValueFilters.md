@@ -2,30 +2,16 @@
 
 从透视筛选器集合中删除所有值筛选器。
 
-## 语法
-
-```javascript
-expression.ClearValueFilters();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-此方法不返回任何数据。
+继承自 [ApiPivotField.ClearValueFilters](../../ApiPivotField/Methods/ClearValueFilters.md)。
 
 ## 示例
 
-此示例展示如何从透视字段清除值筛选器。
+从电子表格中的数据透视表字段移除所有值筛选器。
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field value filters.
+// How do I clear the value filters applied to a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then delete value filters from a custom field.
+// Reset a pivot field's value filters to show all items without restriction in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

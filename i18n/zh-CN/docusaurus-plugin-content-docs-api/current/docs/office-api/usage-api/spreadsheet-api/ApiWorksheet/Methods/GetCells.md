@@ -23,12 +23,12 @@ expression.GetCells(row, col);
 
 ## 示例
 
-此示例展示如何获取表示工作表上所有单元格的 ApiRange。
+一次性选择电子表格工作表上的所有单元格。
 
 ```javascript editor-xlsx
-// How to get all cells.
+// How do I target all cells on a sheet in a spreadsheet?
 
-// Get all cells from the worksheet.
+// Apply formatting across the entire worksheet by referencing all its cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let cells = worksheet.GetCells();

@@ -18,16 +18,16 @@ expression.SetHeight(nValue);
 
 ## Returns
 
-This method doesn't return any data.
+[EMU](../../Enumeration/EMU.md) \| null
 
 ## Example
 
-This example sets the height to the table row.
+Set the height of a table row.
 
 ```javascript editor-pptx
-// How to set a height of the row.
+// Create a table and access the first row.
 
-// Create a table and change its rows height.
+// Apply a new height value to the row.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,5 +38,4 @@ row.SetHeight(30 * 36000);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

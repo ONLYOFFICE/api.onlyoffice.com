@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to delete an attribute from the current XML node.
+Remove an attribute from an XML node in a presentation.
 
 ```javascript editor-pptx
+// How do I remove an attribute from XML data in a presentation?
+
+// Delete a specific property from an XML element in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ slide.AddObject(shape);
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('XML after deletion: ' + xml.GetXml());
-
 ```

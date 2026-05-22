@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回表示值的数据类型的整数：数字 = 1；文本 = 2；逻辑值 = 4；错误值 = 16；数组 = 64；复合数据 = 128。
+识别电子表格中单元格值的数据类型并返回数字代码。
 
 ```javascript editor-xlsx
-// How to get an integer representing the data type of a value.
+// How do I determine what type of data is stored in a cell in a spreadsheet?
 
-// Use a function to return the data type of a value.
+// Get a numeric identifier that indicates whether a value is text, a number, or a boolean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ expression.SetNegativeBarColor(oColor);
 
 ## 示例
 
-此示例演示如何设置数据条条件格式规则的负值条颜色。
+为电子表格中表示负值的数据条分配不同的颜色。
 
 ```javascript editor-xlsx
-// How to change the color of negative value bars.
+// How do I make negative data bars appear in a different color from positive ones in a spreadsheet?
 
-// Set the negative bar color of a data bar conditional formatting rule.
+// Highlight cells with negative numbers by giving their data bars a contrasting color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -51,5 +51,4 @@ dataBar.SetNegativeBarColor(negativeColor);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetNegativeBarColor() ? "Set" : "None");
-
 ```

@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-此示例演示如何返回包含结算日的票息期的天数。
+计算电子表格中票息期的总天数。
 
 ```javascript editor-xlsx
-// How to find the the number of days in the coupon period that contains the settlement date.
+// What is the length of the coupon interval including settlement in a spreadsheet?
 
-// Use function to get the number of days in the coupon period that contains the settlement date.
+// Determine the coupon cycle duration relevant to your transaction in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

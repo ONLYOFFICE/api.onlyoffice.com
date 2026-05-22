@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example gets all field widgets and sets text color for them.
+Set text size for input field widgets in a PDF.
 
 ```javascript editor-pdf
+// How do I change the font size of text in form fields in a PDF?
+
+// Adjust the text display size for all widgets in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -39,5 +43,4 @@ widgets.forEach(function(widget) {
     widget.SetTextColor(rgbColor);
     widget.SetTextSize(15);
 });
-
 ```

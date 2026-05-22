@@ -22,9 +22,13 @@ expression.AddInteractiveSequence(drawing);
 
 ## Example
 
-This example creates an interactive animation sequence.
+Add an interactive animation triggered by clicking a shape in a presentation.
 
 ```javascript editor-pptx
+// How do I create an animation that responds to user clicks in a presentation?
+
+// Define an animation sequence that starts when a specific shape is clicked in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -67,5 +71,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Click the green button to spin the star!');
 slide.AddObject(infoShape);
-
 ```

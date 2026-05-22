@@ -22,9 +22,13 @@ expression.SetIdentifier(sIdentifier);
 
 ## 示例
 
-此示例演示如何使用 ApiCore 设置工作簿的标识符。
+通过电子表格的文档属性为工作簿分配唯一标识符。
 
 ```javascript editor-xlsx
+// How do I tag a workbook with a unique ID in a spreadsheet?
+
+// Label the workbook with a custom reference code stored in its metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Identifier: " + identifier);
-
 ```

@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set an orientation of vertical axis.
+Reverse or rotate the direction of the vertical axis in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical axis orientation.
+// How do I change which way the vertical axis runs in a PDF?
+
+// Flip the orientation of values on a chart's vertical axis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -45,5 +47,4 @@ chart.SetSeriesFill(fill, 1, false);
 const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 page.AddObject(chart);
-
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例在文本块位置添加换行符，并从新行开始下一个元素。
+在演示文稿中添加换行符以将内容移到新行。
 
 ```javascript editor-pptx
-// How to add a line break after a sentence in a text run.
+// How do I insert a line break in text in a presentation?
 
-// How to split a text with a line break.
+// Split text across multiple lines using line breaks in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ run.AddText("This is the text which starts from the beginning of the second line
 run.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

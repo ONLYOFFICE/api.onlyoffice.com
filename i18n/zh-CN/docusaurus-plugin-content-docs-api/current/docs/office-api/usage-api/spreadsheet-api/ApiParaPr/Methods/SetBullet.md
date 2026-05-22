@@ -22,12 +22,12 @@ expression.SetBullet(oBullet);
 
 ## 示例
 
-此示例设置当前段落的项目符号或编号。
+在电子表格中为形状内的段落添加项目符号标记。
 
 ```javascript editor-xlsx
-// How to add a dash bullet to the paragraph.
+// How do I prepend a dash or symbol to lines of text in a paragraph in a spreadsheet?
 
-// Numbering and adding custom bullet points to the text.
+// Mark each paragraph entry with a custom bullet character to create a visual list in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

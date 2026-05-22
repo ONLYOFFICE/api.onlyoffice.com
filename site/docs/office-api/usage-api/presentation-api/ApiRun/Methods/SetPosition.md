@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## Example
 
-This example specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
+Adjust text position relative to the baseline in a presentation.
 
 ```javascript editor-pptx
-// How to change inline position of the text.
+// Raise or lower text to create superscript or subscript effects.
 
-// Create a new text run and make its position lower or higher.
+// Create text runs and position them above or below the baseline.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ run.AddText("This is a text run with the text lowered 16 half-points.");
 paragraph.AddElement(run);
 run.SetPosition(-16);
 slide.AddObject(shape);
-
 ```

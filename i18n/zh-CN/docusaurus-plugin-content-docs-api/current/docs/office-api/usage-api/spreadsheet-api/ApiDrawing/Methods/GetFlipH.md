@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-此示例检查绘图是否水平翻转。
+读取电子表格中绘图的水平翻转状态。
 
 ```javascript editor-xlsx
-// How to get the horizontal flip property of the shape.
+// How do I find out whether a drawing is mirrored left to right in a spreadsheet?
 
-// Create a drawing and read its horizontal flip value.
+// Confirm whether a shape has been reversed along its vertical axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
@@ -34,5 +34,4 @@ let drawing = worksheet.AddShape("cube", 60 * 36000, 35 * 36000, fill, stroke, 0
 let flip = drawing.GetFlipH();
 worksheet.SetColumnWidth(0, 25);
 worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
-
 ```

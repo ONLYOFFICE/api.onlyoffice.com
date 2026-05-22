@@ -52,7 +52,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
 Now let's sum it up with the complete script code:
 
-``` ts
+```ts
 (function()
 {
     let worksheet = Api.GetActiveSheet();
@@ -84,17 +84,19 @@ If you want to speed up the process, starting from version 9.0, you can use the 
 
 5. Review the code and make adjustments if necessary.
 
-    > While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::warning
+    While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::
 
 6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
 
 ## Subscribing to events
 
-To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](../../office-api/usage-api/text-document-api/Api/Methods/attachEvent.md) method.
+To subscribe to the specified event and call the callback function when the event fires, use the [attachEvent](../../office-api/usage-api/document-api/Api/Methods/attachEvent.md) method.
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 
-``` ts
+```ts
 Api.attachEvent("asc_onHyperlinkClick", () => {
   console.log("HYPERLINK!!!");
 })

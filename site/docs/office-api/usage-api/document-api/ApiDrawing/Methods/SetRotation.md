@@ -1,0 +1,46 @@
+# SetRotation
+
+Sets the rotation angle to the current drawing object.
+
+## Syntax
+
+```javascript
+expression.SetRotation(nRotAngle);
+```
+
+`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nRotAngle | Required | number |  | New drawing rotation angle. |
+
+## Returns
+
+boolean
+
+## Example
+
+Rotate a drawing by a specified angle in a document.
+
+```javascript editor-docx
+// How do I tilt a shape to a particular degree in a document?
+
+// Turn a wide rectangle ninety degrees and display the resulting angle inside it in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 110 * 36000, 10 * 36000, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.SetRotation(90);
+let rotAngle = drawing.GetRotation();
+let docContent = drawing.GetContent();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
+docContent.AddElement(0, paragraph);
+```

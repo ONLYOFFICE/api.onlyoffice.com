@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Create an employee onboarding checklist form.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating onboarding checklist
@@ -7,9 +9,9 @@ hide_table_of_contents: true
 Creates an onboarding checklist form with document tracking:
 
 - create text fields for employee information ([Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [Api/CreateComboBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateComboBoxForm.md));
-- create checkbox table for signed documents tracking ([Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md));
-- style tables with custom borders ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md));
-- use utility functions for consistent form creation ([ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md)).
+- create checkbox table for signed documents tracking ([Api/CreateCheckBoxForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateCheckBoxForm.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md));
+- style tables with custom borders ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderRight.md));
+- use utility functions for consistent form creation ([ApiTable/GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md)).
 
 ```ts editor-forms zoom=60
 let doc = Api.GetDocument();

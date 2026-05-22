@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a name for data field.
+Assign a custom name to a pivot table value field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a table element.
+// How do I rename a data field inside a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set a custom data field's name.
+// Update the field identifier so it reflects the meaning of the aggregated data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

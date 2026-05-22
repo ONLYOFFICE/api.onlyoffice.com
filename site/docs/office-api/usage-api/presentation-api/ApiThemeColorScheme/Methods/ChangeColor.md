@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example changes a color in the theme color scheme.
+Change a color in a theme's color scheme in a presentation.
 
 ```javascript editor-pptx
-// How to get a color scheme of a theme and change its color.
+// How do I modify the color palette used by a presentation's theme?
 
-// Get color scheme and update its colors.
+// Access the theme's color scheme and update specific colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

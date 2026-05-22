@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例演示如何获取幻灯片母版的数量。
+获取演示文稿中幻灯片母版的数量。
 
 ```javascript editor-pptx
-// How to get a master count from the presentation.
+// How do I count the slide masters in a presentation?
 
-// Count masters of the presentation.
+// Display the total count of masters on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Number of masters = " + mastersCount);
 slide.AddObject(shape);
-
 ```

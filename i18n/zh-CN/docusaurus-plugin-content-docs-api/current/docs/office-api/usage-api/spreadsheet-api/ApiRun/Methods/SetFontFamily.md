@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-此示例使用指定的字体系列设置所有 4 个字体槽。
+更改电子表格中文本运行的字体系列。
 
 ```javascript editor-xlsx
-// How to change the text font family.
+// How do I apply a different typeface to a run of text in a spreadsheet?
 
-// Create a text run object and set the "Comic Sans MS" font faminy to it.
+// Switch the font of a specific run to stand out from the rest of the paragraph in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

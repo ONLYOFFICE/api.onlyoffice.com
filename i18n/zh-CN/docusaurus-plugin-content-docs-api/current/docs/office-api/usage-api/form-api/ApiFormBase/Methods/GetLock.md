@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例检查当前表单是否已锁定。
+检查文档中表单字段的锁定状态。
 
 ```javascript editor-forms
-// How to know whether a form is locked or not.
+// How do I find out whether a form field is locked in a document?
 
-// Display a boolean representing whether a form is locked.
+// Protect a form, then confirm the lock is active by reading the lock state.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
@@ -36,5 +36,4 @@ let locked = textForm.GetLock();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("The first form from this document is locked: " + locked);
 doc.Push(paragraph);
-
 ```

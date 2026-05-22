@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例演示如何添加布尔自定义属性。
+向电子表格添加各种类型的命名自定义属性。
 
 ```javascript editor-xlsx
+// How do I attach extra metadata such as text, numbers, dates, and flags to a spreadsheet?
+
+// Extend a file with user-defined fields that store business data alongside the content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();
 
@@ -67,5 +71,4 @@ paragraph.AddLineBreak();
 
 paragraph.AddText("\nBirthDate: " + birthDate.toDateString());
 paragraph.AddText("\nIs of legal age: " + isOfLegalAge);
-
 ```

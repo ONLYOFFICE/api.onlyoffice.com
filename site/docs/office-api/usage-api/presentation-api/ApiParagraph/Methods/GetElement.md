@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## Example
 
-This example shows how to get a paragraph element using the position specified.
+Access a specific element within a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to return an element from the ApiPargaraph object.
+// How do I retrieve an element from a paragraph in a presentation?
 
-// Get an object from the paragraph.
+// Read text content from a paragraph element by position in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -58,5 +58,4 @@ paragraph.AddElement(run);
 run = paragraph.GetElement(2);
 run.SetBold(true);
 slide.AddObject(shape);
-
 ```

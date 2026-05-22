@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether the specified field can be dragged to the row position.
 
-## Syntax
-
-```javascript
-expression.SetDragToRow(flag);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | Required | boolean |  | Specifies whether the specified field can be dragged to the row position. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetDragToRow](../../ApiPivotField/Methods/SetDragToRow.md).
 
 ## Example
 
-This example shows how to set a drag to row of a pivot field.
+Allow or prevent a pivot field from being dragged to the row area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to row.
+// How do I control whether a pivot field can be moved to the row section in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to row of a specified pivot.
+// Lock a pivot field's position to stop users from repositioning it as a row in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

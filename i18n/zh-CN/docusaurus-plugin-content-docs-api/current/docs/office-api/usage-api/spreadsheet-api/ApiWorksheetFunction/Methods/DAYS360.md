@@ -16,7 +16,7 @@ expression.DAYS360(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 开始计算天数的起始日期。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 计算天数的结束日期。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定在计算中使用美国 (NASD)（false 或省略）还是欧洲（true）方法的逻辑值。根据欧洲方法，在某月 31 日的开始和结束日期变为同月的 30 日。根据美国方法，如果开始日期是某月的最后一天，则变为同月的 30 日。如果结束日期是某月的最后一天且开始日期早于某月的 30 日，则结束日期变为下个月的 1 日。否则，结束日期变为同月的 30 日。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定在计算中是使用美国 (NASD)（false 或省略）还是欧洲（true）方法的逻辑值。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何根据 360 天的年份（十二个 30 天的月份）返回两个日期之间的天数。
+使用 360 天年制计算电子表格中两个日期之间的天数。
 
 ```javascript editor-xlsx
-// How to get number of days between two dates using 360-day year.
+// What is the total days between two specific dates using 360-day year in a spreadsheet?
 
-// Use function to get days count between two dates on a 360-day year.
+// Count the number of days from one date to another with 360-day months in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -37,5 +37,4 @@ let func = Api.WorksheetFunction;
 let ans = func.DAYS360("3/31/2018", "4/30/2019", false); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

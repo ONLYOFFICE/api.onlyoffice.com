@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例将演示文稿设置为持续循环播放直到手动停止。
+启用演示文稿的连续播放直到停止。
 
 ```javascript editor-pptx
+// How do I make a presentation loop continuously in a presentation?
+
+// Set the presentation to loop and display the current loop status.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -41,5 +45,4 @@ paragraph.AddText("Loop until stopped initial value: " + isLooping);
 presentation.SetLoopUntilStopped(true);
 paragraph.AddText("\nLoop until stopped new value: " + presentation.GetLoopUntilStopped());
 slide.AddObject(shape);
-
 ```

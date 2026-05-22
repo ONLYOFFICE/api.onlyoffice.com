@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example adds a paragraph to the presentation.
+Add a new paragraph to the end of a shape's text content in a presentation.
 
 ```javascript editor-pptx
-// How to insert an element into a slide shape.
+// How do I append a new paragraph to a shape's existing content in a presentation?
 
-// Get a slide shape's content and add a text to it.
+// Get a shape, clear its existing text, and add a new paragraph with text to it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ paragraph.AddText("We removed all elements from the shape and added a new paragr
 docContent.AddElement(paragraph);
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

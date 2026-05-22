@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example deletes the paragraph.
+Remove a paragraph from a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove a paragraph.
+// How do I erase a paragraph that was added to a shape in a spreadsheet?
 
-// Delete the paragraph from the shape content.
+// Confirm a paragraph is gone by checking the cell value after deleting it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

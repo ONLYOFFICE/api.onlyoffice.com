@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例演示如何确定文本是否为粗体。
+从文本运行属性检索粗体属性。
 
 ```javascript editor-pptx
-// How to know whether a text is set to bold or not.
+// Create a shape with a text run and set bold formatting.
 
-// Get the text properties of the run and find whether it is bold or not.
+// Get and display whether the text is bold.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const bold = textPr.GetBold();
 paragraph.AddText("Bold property: " + bold);
 docContent.Push(paragraph);
-
 ```

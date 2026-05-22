@@ -17,11 +17,11 @@
 - "pictureForm"
 - "complexForm"
 - "dateForm"
-
+- "signatureForm"
 
 ## 示例
 
-此示例返回当前表单的类型。
+返回当前表单的类型。
 
 ```javascript editor-forms
 // How to get a form type.

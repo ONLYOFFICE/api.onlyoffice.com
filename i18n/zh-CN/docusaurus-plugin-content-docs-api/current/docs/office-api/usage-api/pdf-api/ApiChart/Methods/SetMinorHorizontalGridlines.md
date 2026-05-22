@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何设置图表的次水平网格线。
+更改 PDF 中图表次水平网格线的样式。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its minor gridlines.
+// How do I format the minor horizontal grid lines in a chart in a PDF?
+
+// Add a custom border to the minor horizontal reference lines in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 10000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMinorHorizontalGridlines(stroke);
 page.AddObject(chart);
-
 ```

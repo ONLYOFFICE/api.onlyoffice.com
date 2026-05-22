@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置当前段落的段后间距。
+在电子表格中为形状内段落的下方添加额外空间。
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points.
+// How do I increase the gap between one paragraph and the next in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
+// Push the following paragraph down by setting a bottom spacing value on the preceding one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

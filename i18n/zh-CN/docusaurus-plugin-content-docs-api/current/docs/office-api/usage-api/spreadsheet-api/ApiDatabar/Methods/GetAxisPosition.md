@@ -20,12 +20,12 @@ expression.GetAxisPosition();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取轴位置。
+读取电子表格中条形格式规则内中点轴的放置位置。
 
 ```javascript editor-xlsx
-// How to check the axis position setting of a data bar.
+// How do I find out the axis position setting of a data bar rule in a spreadsheet?
 
-// Get the axis position of a data bar conditional formatting rule.
+// Inspect the axis placement to understand how bars are oriented in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let axisPosition = dataBar.GetAxisPosition();
 
 worksheet.GetRange("C1").SetValue("Axis Position:");
 worksheet.GetRange("C2").SetValue(axisPosition);
-
 ```

@@ -22,10 +22,13 @@ boolean
 
 ## Example
 
-Sets a solid fill color to a shape.
+Change the fill color of a shape from no fill to solid red.
 
 ```javascript editor-pptx
-// Creates a rectangle and applies a red fill to it.
+// Create a rectangle with no fill and display the initial state.
+
+// Apply a solid red fill and show the updated appearance.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +42,4 @@ let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0));
 shape.SetFill(fill);
 paragraph.AddLineBreak();
 paragraph.AddText("Fill changed to red");
-
 ```

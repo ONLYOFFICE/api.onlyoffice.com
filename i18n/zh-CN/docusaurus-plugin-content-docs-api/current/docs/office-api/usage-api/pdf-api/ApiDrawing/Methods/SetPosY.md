@@ -22,10 +22,12 @@ boolean
 
 ## 示例
 
-如何更改绘图的 Y 坐标位置。
+在 PDF 中垂直重新定位绘图对象。
 
 ```javascript editor-pdf
-// Get a shape object from a page and move by Y axis.
+// How do I move a shape to a different vertical location in a PDF?
+
+// Adjust the Y coordinate of a drawing element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

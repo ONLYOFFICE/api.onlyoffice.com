@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例演示如何使用 ApiCore 获取当前工作簿的标识符。
+读取电子表格工作簿属性中存储的唯一标识符。
 
 ```javascript editor-xlsx
+// How do I look up the identifier assigned to a workbook in a spreadsheet?
+
+// Extract and display the workbook's unique ID from the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Identifier: " + identifier);
-
 ```

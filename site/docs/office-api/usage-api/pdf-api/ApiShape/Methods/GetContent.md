@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to get a content of a shape.
+Access the inner content of a shape in a PDF.
 
 ```javascript editor-pdf
-// Retrieve a shape content and insert a paragraph to it.
+// How do I get what is inside a shape in a PDF?
+
+// Extract and work with a shape's content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

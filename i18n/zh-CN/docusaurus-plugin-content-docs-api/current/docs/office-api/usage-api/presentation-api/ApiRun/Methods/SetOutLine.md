@@ -2,32 +2,16 @@
 
 设置当前文本块的文本轮廓。
 
-## 语法
-
-```javascript
-expression.SetOutLine(oStroke);
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| oStroke | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md) |  | 用于创建文本轮廓的笔画。 |
-
-## 返回值
-
-[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+继承自 [ApiTextPr.SetOutLine](../../ApiTextPr/Methods/SetOutLine.md)。
 
 ## 示例
 
-此示例设置当前文本块的文本轮廓。
+在演示文稿中为文本添加边框轮廓。
 
 ```javascript editor-pptx
-// How to make a text outlined.
+// Can I add a stroke or border to text in a presentation?
 
-// Get the text properties of the run and outline it with a stroke.
+// Apply a stroke outline effect to the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -49,5 +33,4 @@ paragraph.SetJc("left");
 run.AddText("This is a text run with the black text outline set using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

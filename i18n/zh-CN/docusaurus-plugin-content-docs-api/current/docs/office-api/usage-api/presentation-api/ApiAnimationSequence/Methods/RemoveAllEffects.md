@@ -20,9 +20,13 @@ boolean
 
 ## 示例
 
-此示例从动画序列中移除所有效果。
+从演示文稿中的序列移除所有动画。
 
 ```javascript editor-pptx
+// How do I delete all animations on a slide in a presentation?
+
+// Clear all animation effects from an animation sequence in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -72,5 +76,4 @@ paragraph.AddText('Effects before: ' + countBefore);
 paragraph.AddLineBreak();
 paragraph.AddText('Effects after: ' + countAfter);
 slide.AddObject(infoShape);
-
 ```

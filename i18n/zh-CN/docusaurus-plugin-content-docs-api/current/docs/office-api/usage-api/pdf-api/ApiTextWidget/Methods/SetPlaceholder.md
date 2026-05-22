@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为文本控件设置占位符。
+在 PDF 中添加在文本字段中输入前显示的提示文本。
 
 ```javascript editor-pdf
+// How do I add a hint text to an empty text field in a PDF?
+
+// Configure what example text shows when a text field is empty in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

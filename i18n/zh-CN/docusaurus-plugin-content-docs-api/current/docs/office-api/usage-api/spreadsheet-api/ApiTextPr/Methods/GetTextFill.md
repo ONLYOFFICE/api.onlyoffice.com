@@ -20,12 +20,12 @@ expression.GetTextFill();
 
 ## 示例
 
-此示例使用其属性获取文本填充。
+读取应用于文本运行的填充以检查电子表格中的颜色类型。
 
 ```javascript editor-xlsx
-// How to find out a text color type.
+// How do I find out what kind of fill is used to color text in a spreadsheet?
 
-// Get solid fill color of a text run object.
+// Retrieve the text fill object and identify whether it is a solid, gradient, or other fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -22,10 +22,13 @@ expression.GetPath(nIndex);
 
 ## Example
 
-Analyzes cloud shape path properties on a slide.
+Access a path from a shape's geometry in a presentation.
 
 ```javascript editor-pptx
-// Displays comprehensive path information in a text shape.
+// How do I get a drawing path from a shape in a presentation?
+
+// Retrieve a specific path object from a preset or custom shape in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

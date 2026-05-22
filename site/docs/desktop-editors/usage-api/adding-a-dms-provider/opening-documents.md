@@ -6,7 +6,7 @@ sidebar_position: -4
 
 After [registering](./login-and-logout.md) in the cloud, you can start working on documents stored there.
 
-Connecting ONLYOFFICE Desktop Editors to your cloud allows you to edit text documents, spreadsheets, and presentations without having a constant Internet connection and easily switch to the online mode for real-time co-editing (in case [ONLYOFFICE Docs](../../../docs-api/get-started/basic-concepts.md) is integrated with your cloud).
+Connecting ONLYOFFICE Desktop Editors to your cloud allows you to edit documents, spreadsheets, presentations, PDFs, and fillable forms without having a constant Internet connection and easily switch to the online mode for real-time co-editing (in case [ONLYOFFICE Docs](../../../docs-api/get-started/basic-concepts.md) is integrated with your cloud).
 
 Besides, using ONLYOFFICE Desktop Editors you are no longer limited by your browser resources. It means you can:
 
@@ -21,7 +21,7 @@ To open a document in a new window / tab correctly:
 
 **Option 2.** Use the *open:document* command of the [execCommand](./execcommand.md) method. When this command is sent, the document is opened. Parameters are specified in the format of a string with the serialized *json* as follows:
 
-``` json
+```json
 {
   "url": "url to document",
   "type": "type",
@@ -36,9 +36,9 @@ import APITable from '@site/src/components/APITable/APITable';
 ```
 | Parameter | Type   | Example                                            | Description                                                                                                                                    |
 | --------- | ------ | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| url       | string | `https://example.com/url-to-example-document.docx` | Defines the absolute URL to the opened document.                                                                                               |
-| type      | string | `"word"`                                           | Defines the type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.                                |
-| provider  | string | `"onlyoffice"`                                     | Defines the provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)). |
+| url       | string | `https://example.com/url-to-example-document.docx` | The absolute URL to the opened document.                                                                                               |
+| type      | string | `"word"`                                           | The type of the opened document if it is possible to define: **word**, **cell**, **slide**, or **pdf**.                                |
+| provider  | string | `"onlyoffice"`                                     | The provider id used to refer to the desktop app in the JavaScript commands (the same as in the [config](./adding-a-dms-provider.md)). |
 
 ```mdx-code-block
 </APITable>
@@ -46,7 +46,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ## Example
 
-``` ts
+```ts
 const params = {
   url: "https://example.com/url-to-example-document.docx",
   type: "word",

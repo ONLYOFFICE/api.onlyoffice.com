@@ -20,9 +20,13 @@ expression.GetReplies();
 
 ## 示例
 
-此示例创建方形注释并获取其回复。
+检索 PDF 中附加到注释的所有回复注释。
 
 ```javascript editor-pdf
+// What reply annotations are associated with a parent annotation in a PDF?
+
+// Access the list of reply comments linked to an annotation object in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 squareAnnot.SetContents("Annot contents");
@@ -37,5 +41,4 @@ let replies = squareAnnot.GetReplies();
 replies.forEach((reply, idx) => {
 	console.log(`Reply with idx ${idx}: "${reply.GetContents()}"`);
 });
-
 ```

@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example sets image for field with image.
+Set image for button widget in a PDF document.
 
 ```javascript editor-pdf
+// Assign an image resource to an image field with normal state.
+
+// Add the image field to a PDF page.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let imageField = Api.CreateImageField([10, 10, 100, 100]);

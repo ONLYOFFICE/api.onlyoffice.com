@@ -23,14 +23,17 @@ expression.MillimetersToEmus(mm);
 
 ## 示例
 
-此示例展示如何将毫米转换为 EMU。
+在电子表格中将毫米测量值转换为 EMU。
 
 ```javascript editor-xlsx
+// How do I convert millimeters to EMU units in a spreadsheet?
+
+// Show the EMU equivalent of a given millimeter value in a spreadsheet.
+
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);
 const text = millimeters + ' millimeters are equal to ' + emus + ' emus (value is rounded to integer).';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```

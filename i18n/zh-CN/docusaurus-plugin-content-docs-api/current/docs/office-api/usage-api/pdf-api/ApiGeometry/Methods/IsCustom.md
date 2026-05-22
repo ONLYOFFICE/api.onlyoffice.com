@@ -20,10 +20,13 @@ boolean
 
 ## 示例
 
-从 PDF 文档页面上的星形形状获取几何信息。
+识别 PDF 中的形状是否使用自定义几何图形。
 
 ```javascript editor-pdf
-// Displays preset type and custom status in a text shape.
+// How can I check if a shape has custom geometry in a PDF?
+
+// Determine custom geometry status for a star shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

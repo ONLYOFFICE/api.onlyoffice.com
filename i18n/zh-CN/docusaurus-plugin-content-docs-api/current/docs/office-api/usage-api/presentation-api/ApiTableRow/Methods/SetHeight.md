@@ -18,16 +18,16 @@ expression.SetHeight(nValue);
 
 ## 返回值
 
-此方法不返回任何数据。
+[EMU](../../Enumeration/EMU.md) \| null
 
 ## 示例
 
-此示例设置表格行的高度。
+设置表格行的高度。
 
 ```javascript editor-pptx
-// How to set a height of the row.
+// Create a table and access the first row.
 
-// Create a table and change its rows height.
+// Apply a new height value to the row.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,5 +38,4 @@ row.SetHeight(30 * 36000);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

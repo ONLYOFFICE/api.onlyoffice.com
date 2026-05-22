@@ -16,13 +16,17 @@ expression.GetClassType();
 
 ## 返回值
 
-"page"
+"baseWidget"
 
 ## 示例
 
-此示例获取字段控件并显示其类型。
+获取 PDF 中控件的类型分类。
 
 ```javascript editor-pdf
+// How do I identify what kind of widget this is in a PDF?
+
+// Determine the class category of a form field widget in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);
@@ -30,5 +34,4 @@ page.AddObject(textField);
 
 let widgets = textField.GetAllWidgets();
 textField.SetValue(widgets[0].GetClassType());
-
 ```

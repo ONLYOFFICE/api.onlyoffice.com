@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-此示例设置以二十分之一磅为单位测量的文本间距。
+控制电子表格中文本运行字符之间的间距。
 
 ```javascript editor-xlsx
-// How to set the text spacing size.
+// How do I widen or tighten the gaps between letters in a spreadsheet?
 
-// Create a text run object, update its spacing.
+// Stretch or compress letter spacing to fine-tune the appearance of a word or phrase in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

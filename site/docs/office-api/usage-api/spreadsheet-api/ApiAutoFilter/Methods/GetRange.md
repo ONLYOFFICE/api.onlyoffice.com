@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example obtains the range to which an AutoFilter is applied.
+Find the exact cells covered by the active filter drop-downs in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find the AutoFilter range and work with it as a normal ApiRange.
+// How do I get the cell range that the current filter is applied to in a spreadsheet?
 
-// Use ApiAutoFilter.GetRange() to get the filtered area.
+// Identify the full span of rows and columns under filter control so you can format or read them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -56,5 +56,4 @@ if (filterRange !== null) {
 } else {
     worksheet.GetRange("D2").SetValue("No AutoFilter defined.");
 }
-
 ```

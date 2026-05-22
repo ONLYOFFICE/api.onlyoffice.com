@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns the current run from the document content.
+Access the current text run in a shape's content in a presentation.
 
 ```javascript editor-pptx
+// How do I get the text run where the cursor is positioned in a shape in a presentation?
+
+// Retrieve the active text run from a shape and add text to it.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +47,4 @@ if (currentRun) {
   currentRun.AddText(' (Current run detected!)');
 }
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-此示例指定作为背景应用于文本块内容的高亮颜色。
+在演示文稿中为文本添加背景高亮颜色。
 
 ```javascript editor-pptx
-// How to set highlight to the text run.
+// What highlight colors are available for text in a presentation?
 
-// Create a new text run and highlight it.
+// Apply highlighting to text runs in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ run.AddText("This is a text run with the text highlighted with light gray color.
 paragraph.AddElement(run);
 run.SetHighlight("lightGray");
 slide.AddObject(shape);
-
 ```

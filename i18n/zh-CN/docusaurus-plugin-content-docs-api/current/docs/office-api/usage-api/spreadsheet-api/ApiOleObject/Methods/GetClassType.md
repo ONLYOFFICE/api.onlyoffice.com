@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+读取电子表格中嵌入对象的类类型。
 
 ```javascript editor-xlsx
-// How to get a class type of ApiOleObject.
+// How do I find out what class type an embedded object has in a spreadsheet?
 
-// Get a class type of ApiOleObject and display it in the worksheet.
+// Inspect the type label of an embedded object to identify its category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -37,5 +37,4 @@ let oleObject = worksheet.AddOleObject(
 );
 let type = oleObject.GetClassType();
 worksheet.GetRange('A1').SetValue('Class type: ' + type);
-
 ```

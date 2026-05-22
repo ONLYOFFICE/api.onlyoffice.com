@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何为形状内的超链接设置新 URL。
+更改电子表格中现有超链接的目标 URL。
 
 ```javascript editor-xlsx
+// How do I update the address a hyperlink points to in a spreadsheet?
+
+// Replace the web address on a hyperlink so it navigates to a new location in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -46,5 +50,4 @@ const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for
 
 hyperlink.SetLink('https://helpcenter.onlyoffice.com');
 worksheet.GetRange('A1').SetValue('New link: ' + hyperlink.GetLinkedText());
-
 ```

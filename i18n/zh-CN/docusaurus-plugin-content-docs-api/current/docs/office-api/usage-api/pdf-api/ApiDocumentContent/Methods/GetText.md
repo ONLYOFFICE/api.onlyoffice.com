@@ -29,9 +29,13 @@ string
 
 ## 示例
 
-此示例返回文档内容中的文本。
+从 PDF 中的形状提取所有文本内容。
 
 ```javascript editor-pdf
+// How do I read all the text that is inside a shape in a PDF?
+
+// Gather the combined text from all paragraphs within a shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -47,5 +51,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Text from document content: ' + text);
 docContent.Push(infoParagraph);
 page.AddObject(shape);
-
 ```

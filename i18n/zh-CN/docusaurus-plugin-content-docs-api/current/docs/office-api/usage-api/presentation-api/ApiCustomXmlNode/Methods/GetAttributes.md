@@ -20,9 +20,13 @@ expression.GetAttributes();
 
 ## 示例
 
-此示例展示如何检索并显示当前 XML 节点的属性。
+列出演示文稿中 XML 元素的所有属性。
 
 ```javascript editor-pptx
+// How do I view all attributes assigned to an XML node in a presentation?
+
+// Retrieve the name-value pairs of an XML element in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -46,5 +50,4 @@ for (let i = 0; i < attributes.length; i++) {
 	displayText += 'name: ' + attributes[i].name + ', value: ' + attributes[i].value + '\n';
 }
 paragraph.AddText(displayText);
-
 ```

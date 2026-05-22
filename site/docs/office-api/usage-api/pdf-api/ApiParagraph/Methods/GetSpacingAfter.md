@@ -2,30 +2,16 @@
 
 Returns the spacing after value of the current paragraph.
 
-## Syntax
-
-```javascript
-expression.GetSpacingAfter();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md).
 
 ## Example
 
-This example shows how to get the spacing after value of the current paragraph.
+Get the space amount that appears after a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to get the size of a spacing after a text from a paragraph.
+// How do I find the bottom margin spacing for text in a PDF?
 
-// Return a property of the spacing size after a paragraph.
+// Retrieve the gap size following paragraph content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -38,7 +24,7 @@ const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, 
 shape.SetPosition(608400, 1267200);
 page.AddObject(shape);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 let paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetSpacingAfter(1440);

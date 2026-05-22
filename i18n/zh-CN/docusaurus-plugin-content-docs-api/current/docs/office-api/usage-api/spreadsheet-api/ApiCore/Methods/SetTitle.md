@@ -22,9 +22,13 @@ expression.SetTitle(sTitle);
 
 ## 示例
 
-此示例演示如何设置工作簿的标题。
+通过电子表格的文档属性为工作簿指定描述性标题。
 
 ```javascript editor-xlsx
+// How do I assign a title to a workbook's metadata in a spreadsheet?
+
+// Name the workbook by writing a title into its document properties so it is easy to identify in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Title: " + title);
-
 ```

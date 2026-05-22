@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## Example
 
-This example shows how to get nodes from a custom XML part using XPath.
+Select matching elements from stored XML data by path in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get nodes from an XML part using XPath.
+// How do I pull out specific nodes from a custom XML block saved in a spreadsheet?
 
-// Get XML nodes.
+// Navigate an XML structure to collect all elements at a given location in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

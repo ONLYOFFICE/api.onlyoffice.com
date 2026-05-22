@@ -5,7 +5,7 @@ sidebar_position: -6
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Java Spring 示例
+# Java Spring 集成
 
 ## 概述
 

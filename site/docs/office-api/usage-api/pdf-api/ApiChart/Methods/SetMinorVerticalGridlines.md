@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set minor vertical gridlines of the chart.
+Change the style of the minor vertical grid lines in a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its minor gridlines.
+// How do I format the minor vertical grid lines in a chart in a PDF?
+
+// Add a custom border to the minor vertical reference lines in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -47,5 +49,4 @@ chart.SetSeriesFill(fill, 1, false);
 let stroke = Api.CreateStroke(1 * 10000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
 chart.SetMinorVerticalGridlines(stroke);
 page.AddObject(chart);
-
 ```

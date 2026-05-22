@@ -2,28 +2,28 @@
 sidebar_position: -5
 ---
 
-# Advanced parameters
+# Configuration overview
 
-The parameters, which can be changed for ONLYOFFICE Docs, can be subdivided into the following main sections:
+The [configuration object](./config/config.md) passed to the [`DocsAPI.DocEditor`](./doceditor.md) constructor has the following main sections:
 
-[**config**](./config/config.md) - allows to change the platform type used, document display size (width and height) and type of the document opened;
+[`config`](./config/config.md) - the root section with the document type, platform type, and display size;
 
-- [**document**](./config/document/document.md) - contains all the parameters pertaining to the document (title, url, file type, etc.);
+- [`document`](./config/document/document.md) - contains the document parameters (title, url, file type, etc.);
 
-  - [**info**](./config/document/info.md) - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
-  - [**permissions**](./config/document/permissions.md) - defines whether the document can be edited and downloaded or not;
+  - [`info`](./config/document/info.md) - contains the document metadata (owner, folder, upload date, sharing settings);
+  - [`permissions`](./config/document/permissions.md) - defines the document access rights (editing, downloading, commenting, printing, etc.);
 
-- [**editorConfig**](./config/editor/editor.md) - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.;
+- [`editorConfig`](./config/editor/editor.md) - defines the editor interface parameters: opening mode, language, callback URL, etc.;
 
-  - [**customization**](./config/editor/customization/customization-standard-branding.md) - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
-  - [**embedded**](./config/editor/embedded.md) - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
-  - [**plugins**](./config/editor/plugins.md) - is used to connect the necessary [plugins](../../plugin-and-macros/get-started/get-started.md) to your ONLYOFFICE Docs, so that they become visible to all document editor users;
+  - [`customization`](./config/editor/customization/customization-standard-branding.md) - allows you to customize the editor interface: branding, buttons, links, logos, and other UI elements;
+  - [`embedded`](./config/editor/embedded.md) - defines the behavior of the embedded mode controls (used when type is embedded);
+  - [`plugins`](./config/editor/plugins.md) - connects [plugins](../../plugin-and-macros/get-started/get-started.md) to ONLYOFFICE Docs for all editor users;
 
-- [**events**](./config/events.md) - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
+- [`events`](./config/events.md) - the list of event handlers triggered by document actions (loading, editing, saving, etc.).
 
-The complete *config* with all the additional parameters looks the following way:
+The complete `config` with all available parameters:
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",
@@ -78,12 +78,12 @@ const config = {
   documentType: "word",
   editorConfig: {
     actionLink: ACTION_DATA,
-    callbackUrl: "https://example.com/url-to-callback.ashx",
+    callbackUrl: "https://example.com/url-to-callback",
     coEditing: {
       mode: "fast",
       change: true,
     },
-    createUrl: "https://example.com/url-to-create-document/",
+    createUrl: "https://example.com/url-to-create-document",
     customization: {
       about: true,
       anonymous: {
@@ -294,6 +294,7 @@ const config = {
     onDownloadAs,
     onError,
     onInfo,
+    onMakeActionLink,
     onMetaChange,
     onOutdatedVersion,
     onPluginsReady,
@@ -327,6 +328,8 @@ const config = {
   type: "desktop",
   width: "100%",
 };
+
+const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
+Replace `example.com` with the host of your **document storage service**. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.

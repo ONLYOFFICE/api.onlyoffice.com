@@ -8,7 +8,7 @@ sidebar_position: -1
 
 ![Debug](/assets/images/desktop/debugging.png#gh-light-mode-only)![Debug](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
 
-### 调试工具
+## 调试工具
 
 **开发者控制台**
 
@@ -39,7 +39,7 @@ this.callCommand(function () {
 或者，您可以在开发者工具中手动设置调试断点：打开 Sources > 找到您的插件文件 > 点击行号以添加断点（右键单击可添加条件断点）。
 :::
 
-### 最佳实践
+## 最佳实践
 
 调试插件初始化
 
@@ -63,7 +63,7 @@ this.callCommand(function () {
 })(window, undefined);
 ```
 
-### 调试器用例和作用域管理
+## 调试器用例和作用域管理
 
 您可以通过将外部变量附加到 `Asc.scope` 对象来在插件中使用它们。
 

@@ -26,10 +26,13 @@ boolean
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调整几何图形。
+在 PDF 中创建测量线以对齐形状内的元素。
 
 ```javascript editor-pdf
-// Displays adjustment value and applies custom geometry to shape.
+// How do I add helper lines to position content inside a shape in a PDF?
+
+// Set up positioning guides and use them in a custom shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

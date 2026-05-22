@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-此示例演示如何获取范围的数组公式。
+读取电子表格中一组单元格共享的数组公式。
 
 ```javascript editor-xlsx
-// How to get an array formula value.
+// How do I find out what array formula is assigned to a cell in a spreadsheet?
 
-// Get a range, get its array formula value and show it in the worksheet.
+// Print the array formula of each cell in an array range to the worksheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:A3").SetFormulaArray("={1;2;3}");

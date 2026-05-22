@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the HEX string of a shape fill color.
+Extract the hexadecimal color value from a color object.
 
 ```javascript editor-pptx
+// Convert color representation to hex string format for display.
+
+// Get the hex value of a color and display it within a shape text element.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -40,5 +44,4 @@ run.SetFontSize(30);
 run.AddText('Hex: ' + color.GetHex());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

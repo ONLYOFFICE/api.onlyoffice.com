@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例将带图像字段的图标 X 坐标位置设置为 0。
+设置 PDF 文档中字段图像图标的 X 位置。
 
 ```javascript editor-pdf
+// Configure the horizontal position of an icon in an image field.
+
+// Apply the X position value to a button widget.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let imageField = Api.CreateImageField([10, 10, 100, 100]);

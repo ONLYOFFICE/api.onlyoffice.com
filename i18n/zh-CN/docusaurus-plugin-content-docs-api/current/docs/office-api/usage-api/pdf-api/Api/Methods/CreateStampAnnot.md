@@ -25,12 +25,15 @@ expression.CreateStampAnnot(rect, type, author, creationDate);
 
 ## 示例
 
-此示例创建图章注释并将其添加到页面。
+在 PDF 页面添加批准印章注释。
 
 ```javascript editor-pdf
+// How do I mark a document with a stamp in a PDF?
+
+// Place a preset stamp at specified coordinates in a PDF.
+
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([40, 40, 100, 100], 'SB_Approved');
 let page = doc.GetPage(0);
 page.AddObject(stampAnnot);
-
 ```

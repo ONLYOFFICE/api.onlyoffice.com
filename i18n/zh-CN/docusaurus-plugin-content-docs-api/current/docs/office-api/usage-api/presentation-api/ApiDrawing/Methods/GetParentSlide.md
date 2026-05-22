@@ -20,12 +20,12 @@ expression.GetParentSlide();
 
 ## 示例
 
-此示例演示如何获取绘图的父幻灯片。
+查找演示文稿中包含形状的幻灯片。
 
 ```javascript editor-pptx
-// How to get a parent slide of a slide shape.
+// How do I locate the slide an object belongs to in a presentation?
 
-// Get a parent slide knowing a shape.
+// Access the parent slide of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -45,5 +45,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
-
 ```

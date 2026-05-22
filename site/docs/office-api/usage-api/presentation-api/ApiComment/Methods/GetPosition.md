@@ -20,9 +20,13 @@ Object
 
 ## Example
 
-This example shows how to get the position of the comment in the presentation.
+Read the X and Y coordinates where a comment is anchored in a presentation.
 
 ```javascript editor-pptx
+// How do I find the location of a comment in a presentation?
+
+// Retrieve the position of a comment on a slide in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.GetAllComments().forEach(comment => {
 	comment.Delete();
@@ -43,5 +47,4 @@ const position = arrComments[0].GetPosition();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Comment position - X: ' + position.x + ', Y: ' + position.y);
-
 ```

@@ -22,14 +22,17 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为毫米。
+在电子表格中将磅转换为毫米。
 
 ```javascript editor-xlsx
+// How do I express a point value as millimeters in a spreadsheet?
+
+// Get the millimeter equivalent of a given number of points in a spreadsheet.
+
 const points = 100;
 const millimeters = Api.PointsToMillimeters(points);
 const text = points + ' points are equal to ' + millimeters + ' millimeters.';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```

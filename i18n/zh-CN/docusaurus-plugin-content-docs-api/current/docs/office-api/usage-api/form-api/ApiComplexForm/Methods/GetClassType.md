@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其插入到文档中。
+检索文档中复杂表单的类类型。
 
 ```javascript editor-forms
+// How do I get the class type of a complex form in a document?
+
+// Identify what kind of object a complex form is by reading its type label at runtime.
+
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例演示如何从幻灯片版式中删除对象。
+从演示文稿中的布局删除形状或对象。
 
 ```javascript editor-pptx
-// How to remove objects from a layout using their index position.
+// How do I remove an element from a layout by its position in a presentation?
 
-// Delete an element from the slide.
+// Remove a specific shape using its index on a layout in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +54,4 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The second cube was removed from this layout.");
-
 ```

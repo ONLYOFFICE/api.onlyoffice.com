@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例展示如何为形状内段落中的所有文本设置字体大小。
+调整电子表格中形状内段落所有内容的文本大小。
 
 ```javascript editor-xlsx
+// How do I make text in a paragraph larger or smaller in a spreadsheet?
+
+// Control the visual weight of a paragraph by specifying an exact font size in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(120, 140, 100));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetFontSize(24);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has the default font size.');
 content.Push(paragraph2);
-
 ```

@@ -20,12 +20,12 @@ expression.GetAppliesTo();
 
 ## 示例
 
-此示例获取条件格式规则应用的区域。
+读取电子表格中条件格式规则覆盖的单元格范围。
 
 ```javascript editor-xlsx
-// How to retrieve the cell range of existing conditional formatting rules.
+// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
 
-// Get conditional formatting rule range.
+// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +47,4 @@ let appliedRange = condition1.GetAppliesTo();
 
 worksheet.GetRange("C1").SetValue("Rule applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
-
 ```

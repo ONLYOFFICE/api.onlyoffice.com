@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将磅转换为派卡。
+将磅转换为派卡并在演示文稿中显示结果。
 
 ```javascript editor-pptx
+// Use Api.PointsToPicas to convert measurement units.
+
+// Display the converted value in a shape text.
+
 const points = 42;
 const picas = Api.PointsToPicas(points);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

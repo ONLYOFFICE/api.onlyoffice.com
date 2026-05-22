@@ -18,16 +18,16 @@ expression.SetItalic(isItalic);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例设置单元格中文本字符的斜体属性。
+在电子表格中以斜体样式显示单元格文本。
 
 ```javascript editor-xlsx
-// How to make a text value of cells italic.
+// How do I make the text inside a cell appear slanted in a spreadsheet?
 
-// Get a range and make specified cells font style italic.
+// Emphasize content by switching the font to italic in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Italicized text");

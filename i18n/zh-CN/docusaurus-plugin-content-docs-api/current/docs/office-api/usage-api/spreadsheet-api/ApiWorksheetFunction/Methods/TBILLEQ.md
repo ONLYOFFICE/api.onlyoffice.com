@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回国库券的债券等效收益率。
+在电子表格中返回国库券的债券等价收益率。
 
 ```javascript editor-xlsx
-// How to return the bond-equivalent yield for a treasury bill.
+// Calculate the bond-equivalent yield for a treasury bill using the TBILLEQ function.
 
-// Use a function to calculate the bond-equivalent yield.
+// Returns the bond-equivalent yield value for the specified dates and discount rate.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

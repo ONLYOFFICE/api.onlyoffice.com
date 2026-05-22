@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回计算机字符集中指定文本字符串第一个字符的代码数字。
+获取电子表格中文本字符串第一个字符的数字代码值。
 
 ```javascript editor-xlsx
-// How to return the code number from your computer's character set.
+// Retrieve the character set number that identifies the first letter of a word in a spreadsheet.
 
-// Use function to get a code number from your computer's character set.
+// Convert the first character of your text into its underlying numeric representation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

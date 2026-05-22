@@ -43,20 +43,20 @@ Restart the services for the config changes to take effect:
   </TabItem>
 </Tabs>
 
-## Parameters
+## Configuration parameters
 
 | Parameter                                        | Type    | Example | Description                                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------ | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| services.CoAuthoring.secret.browser.string       | string  | secret  | Defines the secret key to generate a token in the client-side [browser requests](browser.md) to ONLYOFFICE Docs.                                                                                                                                                                         |
-| services.CoAuthoring.secret.inbox.string         | string  | secret  | Defines the secret key to generate a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**. |
-| services.CoAuthoring.secret.outbox.string        | string  | secret  | Defines the secret key to generate a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) to the `callbackUrl` address by **document editing service**.                                                                                                 |
-| services.CoAuthoring.token.enable.browser        | boolean | false   | Defines if a token in the client-side [browser requests](browser.md) is enabled or not.                                                                                                                                                                                                  |
-| services.CoAuthoring.token.enable.request.inbox  | boolean | false   | Defines if a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) is enabled or not.                                                                                                                                                                     |
-| services.CoAuthoring.token.enable.request.outbox | boolean | false   | Defines if a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) is enabled or not.                                                                                                                                                                    |
+| services.CoAuthoring.secret.browser.string       | string  | secret  | The secret key to generate a token in the client-side [browser requests](browser.md) to ONLYOFFICE Docs.                                                                                                                                                                         |
+| services.CoAuthoring.secret.inbox.string         | string  | secret  | The secret key to generate a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**. |
+| services.CoAuthoring.secret.outbox.string        | string  | secret  | The secret key to generate a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) to the `callbackUrl` address by **document editing service**.                                                                                                 |
+| services.CoAuthoring.token.enable.browser        | boolean | false   | Whether a token in the client-side [browser requests](browser.md) is enabled or not.                                                                                                                                                                                                  |
+| services.CoAuthoring.token.enable.request.inbox  | boolean | false   | Whether a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) is enabled or not.                                                                                                                                                                     |
+| services.CoAuthoring.token.enable.request.outbox | boolean | false   | Whether a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) is enabled or not.                                                                                                                                                                    |
 
 ## Sample local.json configuration
 
-``` json
+```json
 {
   "services": {
     "CoAuthoring": {
@@ -87,141 +87,137 @@ Restart the services for the config changes to take effect:
 
 ## Code samples for signature generation
 
-Below you can find examples of signature generation for initialization config and requests. They are taken from [test samples](../../samples/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
+Below you can find examples of signature generation for initialization config and requests. All examples use the HMAC-SHA256 algorithm and include the required library and imports. They are based on [test samples](../../samples/language-specific-examples/language-specific-examples.md) in different programming languages. We advise you to use this code in your projects to generate signatures.
 
 <Tabs>
   <TabItem value="nodejs" label="Node.js">
       ``` ts
-      import config from "config"
+      // npm install jsonwebtoken
+      import jwt from "jsonwebtoken"
 
-      const configServer = config.get("server")
-      const cfgSignatureSecretExpiresIn = configServer.get("token.expiresIn")
-      const cfgSignatureSecret = configServer.get("token.secret")
-      const cfgSignatureSecretAlgorithmRequest = configServer.get("token.algorithmRequest")
-      documentService.getToken = function getToken(data) {
-        const options = {algorithm: cfgSignatureSecretAlgorithmRequest,
-          expiresIn: cfgSignatureSecretExpiresIn}
-        return jwt.sign(data, cfgSignatureSecret, options)
+      function jwtEncode(payload, secret) {
+        return jwt.sign(payload, secret, {algorithm: "HS256"})
       }
       ```
   </TabItem>
   <TabItem value="javascript" label="JavaScript">
       ``` javascript
-      (async () => {
-          config.token = await createJWT(config, "JWT_SECRET");
-      })();
+      async function createJWT(payload, secret) {
+        const header = {
+          typ: "JWT",
+          alg: "HS256",
+        }
 
-      async function createJWT(json, secret) {
-          if (!secret) return null;
-          let header = {
-              typ: "JWT",
-              alg: "HS256"
-          }
+        function base64UrlEncode(str) {
+          return btoa(str)
+            .replace(/\+/g, "-")
+            .replace(/\//g, "_")
+            .replace(/=/g, "")
+        }
 
-          let base64EncodeURL = function(str) {
-              return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
-          }
+        const encodedHeader = base64UrlEncode(JSON.stringify(header))
+        const encodedPayload = base64UrlEncode(JSON.stringify(payload))
 
-          let encodedHeader = base64EncodeURL(JSON.stringify(header));
-          let encodedPayload = base64EncodeURL(JSON.stringify(json));
-          let encoder = new TextEncoder();
-          let algorithm = { name: "HMAC", hash: "SHA-256" };
-          let key = await crypto.subtle.importKey("raw", encoder.encode(secret), algorithm, false, ["sign", "verify"]);
-          let buf = encoder.encode(encodedHeader + "." + encodedPayload);
-          let sign = await crypto.subtle.sign(algorithm.name, key, buf);
-          let hash = base64EncodeURL(String.fromCharCode(...new Uint8Array(sign)));
-          return encodedHeader + "." + encodedPayload + "." + hash;
+        const encoder = new TextEncoder()
+        const algorithm = {name: "HMAC", hash: "SHA-256"}
+        const key = await crypto.subtle.importKey(
+          "raw",
+          encoder.encode(secret),
+          algorithm,
+          false,
+          ["sign"]
+        )
+
+        const data = encoder.encode(`${encodedHeader}.${encodedPayload}`)
+        const signature = await crypto.subtle.sign(algorithm.name, key, data)
+        const encodedSignature = base64UrlEncode(
+          String.fromCharCode(...new Uint8Array(signature))
+        )
+
+        return `${encodedHeader}.${encodedPayload}.${encodedSignature}`
       }
       ```
   </TabItem>
   <TabItem value="csharp" label="C#">
       ``` cs
-      public static class JwtManager
+      // NuGet: Install-Package JWT
+      using JWT;
+      using JWT.Algorithms;
+      using JWT.Serializers;
+
+      public static string JwtEncode(
+          IDictionary<string, object> payload,
+          string secret)
       {
-          private static readonly string Secret;
-          public static readonly bool Enabled;
-
-          static JwtManager()
-          {
-              Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
-              Enabled = !string.IsNullOrEmpty(Secret);
-          }
-
-          public static string Encode(IDictionary<string, object> payload)
-          {
-              var encoder = new JwtEncoder(new HMACSHA256Algorithm(),
-                                              new JsonNetSerializer(),
-                                              new JwtBase64UrlEncoder());
-              return encoder.Encode(payload, Secret);
-          }
+          var encoder = new JwtEncoder(
+              new HMACSHA256Algorithm(),
+              new JsonNetSerializer(),
+              new JwtBase64UrlEncoder());
+          return encoder.Encode(payload, secret);
       }
       ```
   </TabItem>
   <TabItem value="java" label="Java">
       ``` java
-      public static String CreateToken(Map<String, Object> payloadClaims)
-      {
-          try
-          {
-              String secret = ConfigManager.GetProperty("files.docservice.secret");
-              Signer signer = HMACSigner.newSHA256Signer(secret);
-              JWT jwt = new JWT();
-              for (String key : payloadClaims.keySet())
-              {
-                  jwt.addClaim(key, payloadClaims.get(key));
-              }
-              return JWT.getEncoder().encode(jwt, signer);
+      // Maven: io.fusionauth:fusionauth-jwt
+      import io.fusionauth.jwt.Signer;
+      import io.fusionauth.jwt.hmac.HMACSigner;
+      import io.fusionauth.jwt.domain.JWT;
+
+      public static String jwtEncode(
+              Map<String, Object> payload,
+              String secret) {
+          Signer signer = HMACSigner.newSHA256Signer(secret);
+          JWT jwt = new JWT();
+          for (String key : payload.keySet()) {
+              jwt.addClaim(key, payload.get(key));
           }
-          catch (Exception e)
-          {
-              return "";
-          }
+          return JWT.getEncoder().encode(jwt, signer);
       }
       ```
   </TabItem>
   <TabItem value="php" label="PHP">
       ``` php
-      <?php
-      function jwtEncode($payload) {
-          return \Firebase\JWT\JWT::encode($payload, $GLOBALS["DOC_SERV_JWT_SECRET"], "HS256");
+      // composer require firebase/php-jwt
+      use Firebase\JWT\JWT;
+
+      function jwtEncode($payload, $secret) {
+          return JWT::encode($payload, $secret, "HS256");
       }
-      ?>
       ```
   </TabItem>
   <TabItem value="python" label="Python">
       ``` py
-      def encode(payload):
-          return jwt.encode(payload, config.DOC_SERV_JWT_SECRET, algorithm='HS256')
+      # pip install PyJWT
+      import jwt
+
+      def jwt_encode(payload, secret):
+          return jwt.encode(payload, secret, algorithm="HS256")
       ```
   </TabItem>
   <TabItem value="ruby" label="Ruby">
       ``` rb
-      @jwt_secret = Rails.configuration.jwtSecret
+      # gem install jwt
+      require "jwt"
 
-      class << self
-          def encode(payload)
-              return JWT.encode payload, @jwt_secret, 'HS256'
-          end
+      def jwt_encode(payload, secret)
+        JWT.encode(payload, secret, "HS256")
       end
       ```
   </TabItem>
   <TabItem value="go" label="Go">
       ``` go
-      type onlyofficeJwtManager struct {
-          key []byte
-      }
+      // go get github.com/golang-jwt/jwt/v5
+      import (
+          "github.com/golang-jwt/jwt/v5"
+      )
 
-      func (j onlyofficeJwtManager) Sign(payload interface {
-          Valid() error
-      }) (string, error) {
-          token := jwt.NewWithClaims(jwt.SigningMethodHS256, payload)
-          ss, err := token.SignedString(j.key)
-
-          if err != nil {
-              return "", errors.New("could not generate a new jwt")
-          }
-
-          return ss, nil
+      func jwtEncode(
+          claims jwt.MapClaims,
+          secret []byte,
+      ) (string, error) {
+          token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+          return token.SignedString(secret)
       }
       ```
   </TabItem>

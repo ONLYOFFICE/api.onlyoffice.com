@@ -2,12 +2,12 @@
 
 表示 ApiDocumentContent 类。
 
-
 ## 方法
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddElement](./Methods/AddElement.md) | boolean | 使用在文档内容中的位置添加段落、表格或块级内容控件。 |
+| [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | 将指定文本追加到文档内容的末尾。 |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | 从当前文档内容返回所有段落的数组。 |
 | [GetClassType](./Methods/GetClassType.md) | "documentContent" | 返回 ApiDocumentContent 类的类型。 |
 | [GetCurrentParagraph](./Methods/GetCurrentParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 返回光标所在的当前段落。 |
@@ -17,5 +17,6 @@
 | [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前文档内容的内部 ID。 |
 | [GetText](./Methods/GetText.md) | string | 返回当前文档内容对象的内部文本。 |
 | [Push](./Methods/Push.md) | boolean | 推送段落或表格以将其实际添加到文档中。 |
-| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。💡 当所有元素被移除时，会自动创建一个新的空段落。如果要向此段落添加内容，请使用 [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) 方法。 |
+| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。 |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。 |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定的文本替换当前文档内容对象的所有内容， |

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the legend font size.
+Change the text size of the chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the font size of the chart legend.
+// How do I make the chart legend text larger or smaller in a spreadsheet?
 
-// Resize the font of the chart legend.
+// Adjust the legend font size so the labels are easier to read in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

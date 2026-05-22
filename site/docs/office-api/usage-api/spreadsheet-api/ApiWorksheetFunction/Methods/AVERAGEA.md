@@ -14,7 +14,7 @@ expression.AVERAGEA(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| number[] |  | Up to 255 numeric values for which the average value will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, text, or logical values, such as **true** and **false**, names, or arrays of numbers. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| number[] |  | Up to 255 numeric values for which the average value will be returned. The first argument is required, |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the average (arithmetic mean) of the specified arguments.
+Calculate the average of a list that includes numbers, text, and logical values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find an average (arithmetic mean).
+// Average values when the range contains text or TRUE/FALSE entries in a spreadsheet.
 
-// Use function to get the find an average (arithmetic mean).
+// Include non-numeric cells such as booleans when computing a mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

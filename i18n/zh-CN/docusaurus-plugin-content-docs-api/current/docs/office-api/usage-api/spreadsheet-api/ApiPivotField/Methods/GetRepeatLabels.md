@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取透视字段的重复标签值。
+检查电子表格中透视字段是否在表格的每行中重复其标签。
 
 ```javascript editor-xlsx
-// How to get a pivot field's repeate labels boolean value.
+// How do I find out if a pivot field is set to repeat labels down each row in a spreadsheet?
 
-// Create a pivot table, add data to it then get repeate labels of a specified pivot field.
+// Verify the repeat-labels setting of a pivot field to see if group names are shown in every cell or only once.
 
 let worksheet = Api.GetActiveSheet();
 

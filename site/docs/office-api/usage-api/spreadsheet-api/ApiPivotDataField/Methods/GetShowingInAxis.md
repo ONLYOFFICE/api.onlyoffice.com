@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether the pivot table field is currently visible in the pivot table.
 
-## Syntax
-
-```javascript
-expression.GetShowingInAxis();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetShowingInAxis](../../ApiPivotField/Methods/GetShowingInAxis.md).
 
 ## Example
 
-This example shows how to get showing in axis of a pivot field.
+Check whether a pivot field is currently visible in the row or column axis of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's showing in axis.
+// How do I tell if a pivot field is actively shown on an axis in a spreadsheet?
 
-// Create a pivot table, add data to it then get showing in axis of a specified pivot field.
+// Confirm the visibility status of a pivot field on the table axes to see which fields are displayed and which are hidden.
 
 let worksheet = Api.GetActiveSheet();
 

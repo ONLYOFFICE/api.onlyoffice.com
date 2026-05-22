@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例选择页面上的文本。
+在 PDF 的页面上将特定文本区域标记为已选中。
 
 ```javascript editor-pdf
+// How do I highlight a range of text on a page in a PDF?
+
+// Define and activate a text selection within given coordinates in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 page.SetSelection({x: 10, y: 10}, {x: 100, y: 100});

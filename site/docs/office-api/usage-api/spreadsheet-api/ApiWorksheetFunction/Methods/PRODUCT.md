@@ -14,7 +14,7 @@ expression.PRODUCT(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 numeric values that will be multiplied. The first argument is required, subsequent arguments are optional. Arguments can be numbers, ranges, or arrays of numbers. |
+| args | Required | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 numeric values that will be multiplied. The first argument is required, subsequent arguments are optional. |
 
 ## Returns
 
@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to multiply all the numbers given as arguments.
+Multiply a set of numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the result after multiplication.
+// What is the product of multiple numbers in a spreadsheet?
 
-// Use a function to multiply a list of numbers.
+// Calculate the result of multiplying a series of values together in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.PRODUCT(65, 34, 165, 6, 9, 54));
-
 ```

@@ -2,7 +2,6 @@
 
 Represents the ApiPathCommand class.
 
-
 ## Methods
 
 | Method | Returns | Description |

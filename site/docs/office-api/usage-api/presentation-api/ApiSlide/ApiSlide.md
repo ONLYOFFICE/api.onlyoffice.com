@@ -2,7 +2,6 @@
 
 Represents the ApiSlide class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -10,7 +9,7 @@ Represents the ApiSlide class.
 | [AddComment](./Methods/AddComment.md) | boolean | Adds a comment to the current slide. |
 | [AddNotesText](./Methods/AddNotesText.md) | boolean | Adds a text to the notes page of the current slide. |
 | [AddObject](./Methods/AddObject.md) | boolean | Adds an object (image, shape or chart) to the current presentation slide. |
-| [ApplyLayout](./Methods/ApplyLayout.md) | boolean | Applies the specified layout to the current slide. The layout must be in slide master. |
+| [ApplyLayout](./Methods/ApplyLayout.md) | boolean | Applies the specified layout to the current slide. |
 | [ApplyTheme](./Methods/ApplyTheme.md) | boolean | Applies the specified theme to the current slide. |
 | [ClearBackground](./Methods/ClearBackground.md) | boolean | Clears the slide background. |
 | [Copy](./Methods/Copy.md) | [ApiSlide](../ApiSlide/ApiSlide.md) \| null | Creates a copy of the current slide object. |

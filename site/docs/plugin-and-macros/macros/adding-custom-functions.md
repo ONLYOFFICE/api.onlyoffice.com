@@ -41,7 +41,7 @@ Now you can use this function in the spreadsheet.
 
 ![Add function usage](/assets/images/plugins/add.png#gh-light-mode-only)![Add function usage](/assets/images/plugins/add.dark.png#gh-dark-mode-only)
 
-You can find a sample of a custom function [here](../samples/macro-samples/spreadsheet-editor/weighted-average-function.md).
+You can find a sample of a custom function [here](../samples/macros/spreadsheet-editor/weighted-average-function.md).
 
 ## Accessing cell addresses
 
@@ -66,7 +66,7 @@ The following properties are available:
 
 Example:
 
-``` ts
+```ts
 (function()
 {
   /**
@@ -104,7 +104,7 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 
 :::
 
-``` ts
+```ts
 (function()
 {
   /**
@@ -120,4 +120,4 @@ Starting from version 9.0, you can add asynchronous custom functions to manage a
 })();
 ```
 
-You can find a sample of an asynchronous custom function [here](../samples/macro-samples/spreadsheet-editor/calculate-world-bank-indicator.md).
+You can find a sample of an asynchronous custom function [here](../samples/macros/spreadsheet-editor/calculate-world-bank-indicator.md).

@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将英寸转换为磅。
+在演示文稿中将英寸转换为磅。
 
 ```javascript editor-pptx
+// Convert measurement units using the Api object.
+
+// Display the conversion result in a shape on the slide.
+
 const inches = 100;
 const points = Api.InchesToPoints(inches);
 
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

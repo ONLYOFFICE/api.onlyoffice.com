@@ -22,12 +22,12 @@ expression.SetVerticalAlign(sType);
 
 ## 示例
 
-此示例指定当前表格单元格内文本的垂直对齐方式。
+在演示文稿中将文本对齐到表格单元格的底部、中间或顶部。
 
 ```javascript editor-pptx
-// How to set the cell text vertical alignment.
+// How do I position text vertically in a table cell in a presentation?
 
-// Create a table and set the text alignment of its cell from the row.
+// Adjust the vertical alignment of text within a cell in a table in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ cell.SetVerticalAlign("bottom");
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

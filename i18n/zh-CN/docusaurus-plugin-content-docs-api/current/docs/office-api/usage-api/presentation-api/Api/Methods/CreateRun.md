@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-此示例创建一个文本域并将其插入到文档中。
+在演示文稿中向形状添加文本。
 
 ```javascript editor-pptx
-// How to add text.
+// How do I insert styled text into a shape in a presentation?
 
-// Add an ApiRun object that represents a text.
+// Create a text run with custom font size and add it to a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

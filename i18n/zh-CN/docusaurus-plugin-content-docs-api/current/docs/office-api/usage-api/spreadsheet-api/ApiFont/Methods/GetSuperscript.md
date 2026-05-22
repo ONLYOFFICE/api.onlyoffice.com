@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-此示例演示如何获取指定字体的上标属性。
+检查电子表格中文本字符是否显示为上标。
 
 ```javascript editor-xlsx
-// How to determine a font superscript property.
+// How do I find out if a character is raised above the text baseline in a spreadsheet?
 
-// Get a boolean value that represents whether a font has a superscript property or not and show the value in the worksheet.
+// Read the superscript setting from a character's font and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

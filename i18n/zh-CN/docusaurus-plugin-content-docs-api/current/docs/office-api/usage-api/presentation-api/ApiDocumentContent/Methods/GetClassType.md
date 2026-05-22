@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取类类型并将其粘贴到演示文稿中。
+识别演示文稿中形状文本内容的类型。
 
 ```javascript editor-pptx
-// How to get a class type of ApiDocumentContent.
+// How do I find out what type of text content a shape has in a presentation?
 
-// Retrieve class type of ApiDocumentContent object and insert it to the slide.
+// Retrieve the class type of a shape's content and display it on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 const classType = docContent.GetClassType();
 paragraph.AddText("Class Type: " + classType);
 slide.AddObject(shape);
-
 ```

@@ -2,30 +2,16 @@
 
 返回为页字段显示的当前页面（仅对页字段有效）。
 
-## 语法
-
-```javascript
-expression.GetCurrentPage();
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-string \| number
+继承自 [ApiPivotField.GetCurrentPage](../../ApiPivotField/Methods/GetCurrentPage.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的当前页。
+读取电子表格中透视筛选字段的活动页面选择。
 
 ```javascript editor-xlsx
-// How to get a pivot field current page.
+// How do I find which page is currently selected for a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a current page of a specified pivot field.
+// Identify the active filter value shown in the page area of a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Identify the type of a preset color in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiPresetColor.
+// How do I determine what type a preset color is in a presentation?
 
-// Retrieve class type of ApiPresetColor object and insert it to the slide.
+// Display the color type name on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -46,5 +46,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回指定 x 和 y 坐标的反正切，以弧度表示，范围在 -Pi 和 Pi 之间，不包括 -Pi。
+计算电子表格中由 x 和 y 坐标定义的点的反正切。
 
 ```javascript editor-xlsx
-// How to get an arctangent of the specified x and y coordinates.
+// Get the angle in radians from a pair of coordinates in a spreadsheet.
 
-// Use function to get an arctangent of the specified x and y coordinates in radians.
+// Determine direction from the origin to a specific point in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

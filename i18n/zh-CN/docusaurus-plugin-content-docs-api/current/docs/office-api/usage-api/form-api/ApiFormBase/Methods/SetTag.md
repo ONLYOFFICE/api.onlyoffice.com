@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例展示如何设置表单元素的标签。
+用自定义标识符标记文档中的表单字段。
 
 ```javascript editor-forms
+// How do I attach a label or identifier to a form field in a document?
+
+// Organize or reference form fields programmatically using custom tags.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -46,5 +50,4 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```

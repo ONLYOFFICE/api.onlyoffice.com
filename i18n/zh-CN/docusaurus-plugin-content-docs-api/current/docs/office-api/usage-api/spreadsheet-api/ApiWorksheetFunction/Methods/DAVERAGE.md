@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何计算列表或数据库中与指定条件匹配的记录字段（列）中值的平均值。
+查找电子表格中行满足条件的列中值的平均值。
 
 ```javascript editor-xlsx
-// How to find an average from the column values.
+// What is the average value for records matching your filter in a spreadsheet?
 
-// Use function to get the average of the values that match conditions specified.
+// Calculate the mean across filtered rows in a database table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

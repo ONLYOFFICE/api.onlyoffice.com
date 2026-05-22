@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例指定图表纵轴标题。
+为电子表格中图表的垂直轴添加描述性标签。
 
 ```javascript editor-xlsx
-// How to add title for the chart vertical axis.
+// How do I give the vertical axis of a chart its own title in a spreadsheet?
 
-// Specify the chart vertical axis title.
+// Label the vertical axis so readers know what the values represent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

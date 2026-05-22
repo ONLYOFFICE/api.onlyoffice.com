@@ -20,12 +20,12 @@ expression.GetAlertStyle();
 
 ## 示例
 
-此示例获取验证警告样式。
+读取电子表格中验证规则上设置的警报样式。
 
 ```javascript editor-xlsx
-// How to retrieve the validation alert style.
+// How do I check what kind of alert appears when invalid data is entered in a spreadsheet?
 
-// Get the validation alert style.
+// Inspect the warning type assigned to a cell's data validation rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -33,5 +33,4 @@ let validation = range.GetValidation();
 validation.Add("xlValidateWholeNumber", "xlValidAlertWarning", "xlGreater", 10);
 let alertStyle = validation.GetAlertStyle();
 worksheet.GetRange("B1").SetValue("Alert style: " + alertStyle);
-
 ```

@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-此示例演示如何返回到期付息证券的应计利息。
+确定电子表格中到期债券在结算时的应计利息。
 
 ```javascript editor-xlsx
-// How to get an accrued interest for a security that pays periodic interest at maturity.
+// How do I calculate accumulated interest on a bond paid at final maturity date in a spreadsheet?
 
-// Get a function that gets accrued interest for a security at maturity.
+// Figure out the total interest earned on a bond from issuance through settlement day in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

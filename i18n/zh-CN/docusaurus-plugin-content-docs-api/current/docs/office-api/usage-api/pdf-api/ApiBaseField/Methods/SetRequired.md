@@ -5,14 +5,16 @@
 ## 语法
 
 ```javascript
-expression.SetRequired();
+expression.SetRequired(bRequired);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
 
 ## 参数
 
-此方法没有任何参数。
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | 必需 | boolean |  | 未提供描述。 |
 
 ## 返回值
 
@@ -20,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例设置字段为必填。
+在 PDF 中将表单字段标记为必填。
 
 ```javascript editor-pdf
+// How do I make a form field required in a PDF?
+
+// Check whether a field is marked as required in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let textField = Api.CreateTextField([10, 10, 160, 30]);

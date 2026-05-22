@@ -20,12 +20,12 @@ expression.AddTabStop();
 
 ## 示例
 
-此示例向段落添加一个制表位。
+在 PDF 中插入间距停靠点以对齐段落中的文本。
 
 ```javascript editor-pdf
-// How to add a tab after a sentence in a paragraph.
+// How do I indent text using tabs in a paragraph in a PDF?
 
-// How to split a text string with a tab.
+// Add tab positions to organize and position text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -36,7 +36,7 @@ const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 
 paragraph.AddText("This is just a sample text. After it three tab stops will be added.");
@@ -45,5 +45,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("This is the text which starts after the tab stops.");
 page.AddObject(shape);
-
 ```

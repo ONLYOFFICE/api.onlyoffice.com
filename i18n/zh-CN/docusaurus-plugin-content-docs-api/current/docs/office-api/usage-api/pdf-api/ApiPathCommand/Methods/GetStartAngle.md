@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析页面形状中的弧线命令参数。
+获取 PDF 中弧线的起始角度。
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// Where does an arc begin in terms of angle in a PDF?
+
+// Find the initial rotation point of an arc shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

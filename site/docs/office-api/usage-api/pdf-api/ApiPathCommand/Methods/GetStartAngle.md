@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes arc command parameters in a page shape.
+Get the starting angle of a curved arc in a PDF.
 
 ```javascript editor-pdf
-// Retrieves and displays arc radii and angle information.
+// Where does an arc begin in terms of angle in a PDF?
+
+// Find the initial rotation point of an arc shape in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

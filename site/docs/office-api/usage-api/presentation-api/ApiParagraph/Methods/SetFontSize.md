@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the paragraph.
+Change the font size for paragraph text in a presentation.
 
 ```javascript editor-pptx
+// How do I adjust the size of text in a paragraph in a presentation?
+
+// Set the font size to a specific point value in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font size set to 24 points.');
 paragraph.SetFontSize(48);
 slide.AddObject(shape);
-
 ```

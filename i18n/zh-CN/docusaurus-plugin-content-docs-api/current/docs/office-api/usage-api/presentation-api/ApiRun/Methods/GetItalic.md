@@ -2,30 +2,16 @@
 
 从当前文本属性获取斜体属性。
 
-## 语法
-
-```javascript
-expression.GetItalic();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-boolean
+继承自 [ApiTextPr.GetItalic](../../ApiTextPr/Methods/GetItalic.md)。
 
 ## 示例
 
-此示例演示如何确定文本是否为斜体。
+检查演示文稿中的文本是否格式化为斜体。
 
 ```javascript editor-pptx
-// How to know whether a text is set to italic or not.
+// How do I determine if text uses italic formatting in a presentation?
 
-// Get the text properties of the run and find whether it is italic or not.
+// Read the italic property of text to see if the formatting is applied in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +37,4 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
-
 ```

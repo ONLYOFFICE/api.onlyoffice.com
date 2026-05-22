@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Retrieves arc parameters including radii and angles.
+Read the angle where a drawn arc begins and write it to a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How do I find the starting angle of an arc path command in a spreadsheet?
+
+// Inspect an arc segment to confirm the exact degree at which the curve opens in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

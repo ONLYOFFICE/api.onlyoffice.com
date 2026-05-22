@@ -14,7 +14,7 @@ expression.ChangeLineStyles(arrLine);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrLine | Required | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | The array of line styles must contain 3 elements - subtle, moderate and intense fills. If an array is empty or ApiStroke elements are with no fill, it will be filled with the Api.CreateStroke(0, Api.CreateNoFill()) elements. |
+| arrLine | Required | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | The array of line styles must contain 3 elements - subtle, moderate and intense fills. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the line styles to the current theme format scheme.
+Change the line styles of a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to change line styles of a format scheme.
+// How do I update the line appearance used by a theme in a presentation?
 
-// Get format scheme and update its line styles.
+// Modify the stroke patterns applied to shapes using a theme format scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -69,5 +69,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Create a shape by yourself to see the stroke style set to this presentation.");
 slide.AddObject(shape);
-
 ```

@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例从第一个文本字段获取值并设置到第二个文本字段。
+在 PDF 中将文本从一个表单字段复制到另一个。
 
 ```javascript editor-pdf
+// How do I read the value entered in a form field in a PDF?
+
+// Transfer text content between form fields in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 
@@ -34,5 +38,4 @@ page.AddObject(textField2);
 
 textField1.SetValue('Name Surname');
 textField2.SetValue(textField1.GetValue());
-
 ```

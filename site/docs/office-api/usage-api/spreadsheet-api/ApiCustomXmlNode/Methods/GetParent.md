@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the parent of a custom XML node.
+Navigate upward to the containing node of an XML element in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find the parent node of an XML element in a spreadsheet?
+
+// Traverse the XML hierarchy to identify where a node belongs in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();
 const xmlString = `
@@ -39,5 +43,4 @@ const grandParent = parentNode.GetParent();
 
 worksheet.GetRange('A1').SetValue('Parent node name: ' + parentNode.GetNodeName());
 worksheet.GetRange('A2').SetValue('Grand parent: ' + grandParent);
-
 ```

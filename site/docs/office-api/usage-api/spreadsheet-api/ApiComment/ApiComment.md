@@ -21,7 +21,7 @@ Represents the ApiComment class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddReply](./Methods/AddReply.md) | None | Adds a reply to a comment. |
-| [Delete](./Methods/Delete.md) | None | Deletes the ApiComment object. |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the ApiComment object. |
 | [GetAuthorName](./Methods/GetAuthorName.md) | string | Returns the comment author's name. |
 | [GetClassType](./Methods/GetClassType.md) | "comment" | Returns a type of the ApiComment class. |
 | [GetId](./Methods/GetId.md) | string | Returns the current comment ID. |

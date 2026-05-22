@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-此示例演示如何从指定字符串的左侧字符开始提取子字符串，适用于使用双字节字符集 (DBCS) 的语言，如日语、中文、韩语等。
+在电子表格中使用多字节字符的字节计数从字符串左侧提取文本。
 
 ```javascript editor-xlsx
-// How to extract the substring from the left character.
+// How do I get a substring from text in languages like Chinese or Japanese in a spreadsheet?
 
-// Use a function to get the substring from the left.
+// Work with left-aligned text extraction that counts bytes instead of characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

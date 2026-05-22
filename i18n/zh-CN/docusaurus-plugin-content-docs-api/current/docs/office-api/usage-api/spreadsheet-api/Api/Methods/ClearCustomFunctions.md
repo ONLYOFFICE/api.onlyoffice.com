@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例清除所有已添加的自定义函数。
+一次性删除电子表格中所有已注册的自定义函数。
 
 ```javascript editor-xlsx
-// How to delete custom function library.
+// How do I unregister every custom function that was added in a spreadsheet?
 
-// Remove unused custom function library.
+// Clean up previously defined calculation functions to reset the formula environment in a spreadsheet.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
     /**
@@ -43,5 +43,4 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("=ADD(1, 2)");
 Api.ClearCustomFunctions();
 worksheet.GetRange("A3").SetValue("All the custom functions were removed.");
-
 ```

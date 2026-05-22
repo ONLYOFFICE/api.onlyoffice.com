@@ -3,32 +3,16 @@
 返回表示单个数据透视表项（ApiPivotItem 对象）
 或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。
 
-## 语法
-
-```javascript
-expression.GetPivotItems(index);
-```
-
-`expression` - 表示 [ApiPivotDataField](../ApiPivotDataField.md) 类的变量。
-
-## 参数
-
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| index | 可选 | number |  | 项索引。 |
-
-## 返回值
-
-[ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../../ApiPivotItem/ApiPivotItem.md) \| null
+继承自 [ApiPivotField.GetPivotItems](../../ApiPivotField/Methods/GetPivotItems.md)。
 
 ## 示例
 
-此示例展示如何获取透视字段的项。
+检索电子表格中属于透视字段的各个项目的列表。
 
 ```javascript editor-xlsx
-// How to get a pivot field items.
+// How do I get all the values that appear under a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get items of a specified pivot field as an array.
+// Loop through a pivot field's items to read each distinct value shown in the pivot table.
 
 let worksheet = Api.GetActiveSheet();
 

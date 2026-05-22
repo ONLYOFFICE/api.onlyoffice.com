@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to find out a text is spacing size.
+Read the character spacing value for text in a presentation.
 
 ```javascript editor-pptx
-// How to know a text spacing.
+// How do I check the spacing between characters in text in a presentation?
 
-// Get the text properties of the run and display its spacing size.
+// Get the spacing property of text to see the current character spacing in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```

@@ -22,12 +22,12 @@ expression.GetItem(ind);
 
 ## 示例
 
-此示例展示如何按 ID 从集合中获取单个对象。
+按位置从电子表格中的多区域选区检索特定范围。
 
 ```javascript editor-xlsx
-// How to find an object by its ID from the collection.
+// How do I access one particular range out of a multi-area selection in a spreadsheet?
 
-// Get element from an array by its ID.
+// Pull out an individual area by index to work with it separately in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");

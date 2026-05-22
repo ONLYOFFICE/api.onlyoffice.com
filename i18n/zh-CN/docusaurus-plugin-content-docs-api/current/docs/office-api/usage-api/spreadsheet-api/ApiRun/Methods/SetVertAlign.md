@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-此示例指定将应用于当前文本块内容相对于文本块默认外观的对齐方式。
+在电子表格中将形状内的文本定位在基线的上方、下方或上面。
 
 ```javascript editor-xlsx
-// How to set vertical alignment of a text object.
+// How do I control whether text appears as superscript or subscript in a spreadsheet?
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Raise or lower individual text runs relative to the normal line height in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

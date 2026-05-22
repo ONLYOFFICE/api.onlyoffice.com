@@ -24,9 +24,13 @@ expression.AddPage(nPos, nWidth, nHeight);
 
 ## Example
 
-This example adds new page into document after 0 index page.
+Insert a new page into a document in a PDF.
 
 ```javascript editor-pdf
+// Can I add pages to a PDF document?
+
+// Place additional pages at specific positions in a PDF.
+
 let doc = Api.GetDocument();
 doc.AddPage(1);
 ```

@@ -2,33 +2,16 @@
 
 Establishes automatic field-sorting rules for the pivot table reports.
 
-## Syntax
-
-```javascript
-expression.AutoSort(order, field);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| order | Required | [SortOrder](../../Enumeration/SortOrder.md) |  | The sort order. |
-| field | Required | string |  | The name of the field to sort by (pivotField.SourceName, pivotField.Name, dataField.Name). |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.AutoSort](../../ApiPivotField/Methods/AutoSort.md).
 
 ## Example
 
-This example shows how to establish automatic field-sorting rules for PivotTable reports.
+Sort a pivot table field automatically by its values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to use the AutoSort method to sort pivot field data.
+// How do I make a pivot table sort a row or column field in ascending or descending order in a spreadsheet?
 
-// Create a pivot table, add data to it then apply automatic sorting to a specified field.
+// Configure automatic sorting rules so a pivot field stays ordered whenever the data refreshes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -90,5 +73,4 @@ pivotWorksheet.GetRange('A15').SetValue(`Product field will be sorted by Units i
 let priorityPivotField = pivotTable.GetPivotFields('Priority');
 priorityPivotField.AutoSort("xlManual", priorityField.Name);
 pivotWorksheet.GetRange('A16').SetValue(`Priority field set to manual sorting mode (${priorityPivotField.AutoSortOrder} - ${priorityPivotField.AutoSortField})`);
-
 ```

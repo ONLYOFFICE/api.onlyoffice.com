@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-检索弧参数，包括半径和角度。
+读取弧围绕其中心扫过的角度并写入电子表格的单元格。
 
 ```javascript editor-xlsx
-// Displays arc width radius, height radius, start and sweep angles in cells.
+// How do I find the total rotation span of an arc path command in a spreadsheet?
+
+// Verify the angular extent of a curved segment on a shape in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

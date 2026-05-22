@@ -13,10 +13,9 @@ Enumeration
 - "xlToRight"
 - "xlToLeft"
 
-
 ## Example
 
-This example shows how to get a Range object that represents the left end of the specified range.
+Get a Range object that represents the left end of the specified range.
 
 ```javascript editor-xlsx
 // How to set a direction of the range.
@@ -25,5 +24,4 @@ This example shows how to get a Range object that represents the left end of the
 
 const color = Api.CreateColorFromRGB(255, 224, 204);
 worksheet.GetRange("C4:D5").End("xlToLeft").SetFillColor(color);
-
 ```

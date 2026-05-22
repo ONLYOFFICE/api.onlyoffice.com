@@ -22,12 +22,12 @@ expression.SetIcon(icon);
 
 ## 示例
 
-此示例演示如何更改条件的图标。
+为电子表格中的条件分配特定图标。
 
 ```javascript editor-xlsx
-// How to modify the icon assigned to an icon set criterion.
+// How do I replace the default icon for one of the thresholds in an icon set rule in a spreadsheet?
 
-// Set a custom icon for this criterion threshold.
+// Override the automatically chosen icon with a custom one for a selected criterion in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ worksheet.GetRange("B1").SetValue("Before: Default icons");
 
 criteria[0].SetIcon("xlIconRedFlag");
 worksheet.GetRange("B2").SetValue("After: First icon changed to red flag");
-
 ```

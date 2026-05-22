@@ -20,12 +20,12 @@ expression.GetDateOperator();
 
 ## 示例
 
-此示例从时间段条件格式规则获取日期运算符。
+检索电子表格中基于日期的格式规则使用的时间段比较类型。
 
 ```javascript editor-xlsx
-// How to retrieve date operators from time period conditional formatting rules.
+// How do I check which date period a conditional formatting rule is set to highlight in a spreadsheet?
 
-// Get conditional formatting rule date operator.
+// Inspect the date condition of a rule to confirm it targets the intended time window in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +47,4 @@ let dateOperator = condition1.GetDateOperator();
 
 worksheet.GetRange("C1").SetValue("Date operator:");
 worksheet.GetRange("C2").SetValue(dateOperator ? dateOperator : "None");
-
 ```

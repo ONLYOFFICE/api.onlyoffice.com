@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of caret annotation.
+Get the classification code for a strikeout annotation in a PDF
 
 ```javascript editor-pdf
+// What is the internal type identifier for a strikeout annotation in a PDF?
+
+// Find and display the class name of a strikeout annotation in a PDF
+
 let doc = Api.GetDocument();
 let caretAnnot = Api.CreateCaretAnnot([84, 60, 231, 70]);
 let page = doc.GetPage(0);

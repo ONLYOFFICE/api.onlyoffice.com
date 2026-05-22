@@ -14,7 +14,7 @@ expression.COUNTA(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | string \| number \| boolean \| (string \| number \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 items, or ranges to count values. The first argument is required, subsequent arguments are optional. Arguments can be numbers, logical values, text strings, ranges, names, or arrays. |
+| args | Required | string \| number \| boolean \| (string \| number \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 items, or ranges to count values. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to count a number of cells in a range that are not empty.
+Count all occupied cells regardless of content type in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find a number of non-empty cells.
+// What is the total number of filled cells in a range in a spreadsheet?
 
-// Use function to get non-empty cells count.
+// Tally cells containing any data, whether text or numbers, in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let numbersArr = [45, 6, 8];

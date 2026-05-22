@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置当前 OLE 对象的应用程序 ID。
+为电子表格中的嵌入对象分配应用程序标识符。
 
 ```javascript editor-xlsx
-// How to set application id of OLE object.
+// How do I set which application an embedded object is linked to in a spreadsheet?
 
-// Add Ole object, set its application id and display it in the worksheet.
+// Update the application identifier on an embedded object to associate it with a different app in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -38,5 +38,4 @@ let oleObject = worksheet.AddOleObject(
 	0, 2 * 36000, 4, 3 * 36000
 );
 oleObject.SetApplicationId('asc.{E5773A43-F9B3-4E81-81D9-CE0A132470E7}');
-
 ```

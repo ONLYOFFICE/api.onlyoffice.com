@@ -6,6 +6,8 @@
 
 此事件没有参数。
 
+## 示例
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onDocumentContentReady", () => {
     let oProperties = {
@@ -19,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onDocumentContentReady", () => {
     });
 });
 ```
-

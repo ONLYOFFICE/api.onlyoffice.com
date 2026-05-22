@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-此示例展示如何获取数据字段的索引。
+读取电子表格中数据透视表数据字段的数字索引。
 
 ```javascript editor-xlsx
-// How to get a table element index.
+// How do I find the index number of a specific data field in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's index.
+// Identify a data field by its position number among all fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

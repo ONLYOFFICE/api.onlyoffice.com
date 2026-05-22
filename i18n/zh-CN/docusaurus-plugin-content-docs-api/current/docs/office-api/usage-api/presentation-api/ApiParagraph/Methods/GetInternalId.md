@@ -20,9 +20,13 @@ string
 
 ## 示例
 
-此示例展示如何获取段落的内部 ID。
+检索演示文稿中段落的内部 ID。
 
 ```javascript editor-pptx
+// How do I find the unique identifier for a paragraph in a presentation?
+
+// Access and display the internal ID associated with a specific paragraph in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Internal Id: ' + paragraph.GetInternalId());
 docContent.Push(paragraph2);
 slide.AddObject(shape);
-
 ```

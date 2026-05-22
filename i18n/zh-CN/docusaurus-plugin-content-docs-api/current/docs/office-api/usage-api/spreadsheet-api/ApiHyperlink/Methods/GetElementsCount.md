@@ -20,9 +20,13 @@ number
 
 ## 示例
 
-此示例展示如何获取形状内超链接中的元素数量。
+计算电子表格中超链接包含的内容元素数量。
 
 ```javascript editor-xlsx
+// How do I check the number of items inside a hyperlink in a spreadsheet?
+
+// Measure the total pieces of content stored within a hyperlink in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(160, 100, 130));
@@ -42,5 +46,4 @@ paragraph.AddElement(run, 0);
 
 const hyperlink = run.AddHyperlink('https://api.onlyoffice.com', 'ONLYOFFICE for developers');
 worksheet.GetRange('A1').SetValue('Elements count: ' + hyperlink.GetElementsCount());
-
 ```

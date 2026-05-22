@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart plot area.
+Apply a background color to the chart plot area in a presentation.
 
 ```javascript editor-pptx
-// How to set a background color for the plot area.
+// How do I change the background color of the area where the data is displayed in a presentation?
 
-// Create a chart, set its properties and its plot area color.
+// Set a solid fill color for the plot area to customize the chart appearance in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,5 +47,4 @@ chart.SetSeriesFill(fill, 1, false);
 fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetPlotAreaFill(fill);
 slide.AddObject(chart);
-
 ```

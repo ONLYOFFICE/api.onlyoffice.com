@@ -23,10 +23,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a page.
+Draw a straight line within a shape path in a PDF.
 
 ```javascript editor-pdf
-// Applies custom geometry with specific fill and stroke properties.
+// How do I connect points with lines in a PDF?
+
+// Add line segments to create custom shapes in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

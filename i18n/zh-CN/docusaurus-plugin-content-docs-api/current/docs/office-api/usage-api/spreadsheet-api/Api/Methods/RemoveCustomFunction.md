@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例清除当前自定义函数。
+取消注册自定义公式，使其在电子表格中不再可用。
 
 ```javascript editor-xlsx
-// How to delete custom created function from the library.
+// How do I delete a previously added custom formula from the available functions in a spreadsheet?
 
-// Remove custom function library.
+// Clean up unused custom formulas to keep the function list tidy in a spreadsheet.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
     /**
@@ -44,5 +44,4 @@ let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("=ADD(1, 2)");
 Api.RemoveCustomFunction("add");
 worksheet.GetRange("A3").SetValue("The ADD custom function was removed.");
-
 ```

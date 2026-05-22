@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析 PDF 文档页面上星形形状的路径命令。
+从 PDF 中的路径命令检索 y 坐标。
 
 ```javascript editor-pdf
-// Shows command count and first command details in a text shape.
+// What is the vertical position value in a PDF?
+
+// Extract the y position of a path command in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

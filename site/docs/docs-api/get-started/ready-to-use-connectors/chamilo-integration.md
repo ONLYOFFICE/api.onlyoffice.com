@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Chamilo for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/chamilo.svg
 ---
@@ -95,7 +97,7 @@ To start using ONLYOFFICE Docs with Chamilo, the following steps must be perform
 
 On the **Plugins** page, find ONLYOFFICE and click **Configure**. You will see the **Settings** page. Enable the plugin and specify the ONLYOFFICE Docs address:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
@@ -111,7 +113,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 1. To create a new file, teachers can open the documents folder and click the **Create new** ONLYOFFICE icon.
 
-2. The user is redirected to the file creation page where they need to enter the file name and format (text document, spreadsheet, or presentation). The browser calls the */plugin/onlyoffice/create.php* method. It adds a copy of an empty file to the course folder.
+2. The user is redirected to the file creation page where they need to enter the file name and format (document, spreadsheet, or presentation). The browser calls the */plugin/onlyoffice/create.php* method. It adds a copy of an empty file to the course folder.
 
 3. To open an existing file, the user chooses the **Open with ONLYOFFICE** icon next to the normal edit icon.
 

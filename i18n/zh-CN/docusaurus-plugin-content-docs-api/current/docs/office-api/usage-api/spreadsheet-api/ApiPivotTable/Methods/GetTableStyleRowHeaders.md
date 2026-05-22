@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例展示如何获取数据透视表的表格样式行标题。
+检查电子表格中数据透视表样式是否启用了行标题格式。
 
 ```javascript editor-xlsx
-// How to get table style raw headers.
+// How do I find out if a pivot table style highlights row headers in a spreadsheet?
 
-// Create a pivot table, add data to it then get its table style raw headers.
+// Inspect the row header setting of a pivot table's visual theme in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

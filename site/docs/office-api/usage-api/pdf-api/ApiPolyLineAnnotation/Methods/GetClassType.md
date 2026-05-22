@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets class type of polyline annotation.
+Identify what type of object a polyline marking is in a PDF.
 
 ```javascript editor-pdf
+// How do I determine the object type of a polyline marking in a PDF?
+
+// Find the classification name for a polyline marking in a PDF.
+
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];
 let polylineAnnot = Api.CreatePolyLineAnnot([40, 5, 160, 110], vertices);

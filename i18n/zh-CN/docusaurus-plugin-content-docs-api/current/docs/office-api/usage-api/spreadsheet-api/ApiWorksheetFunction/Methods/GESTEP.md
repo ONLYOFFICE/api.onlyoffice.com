@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何测试数字是否大于阈值。如果数字大于或等于阈值，函数返回 1，否则返回 0。
+检查电子表格中的数字是否大于或等于阈值。
 
 ```javascript editor-xlsx
-// How to compare a number with a threshold value.
+// How do I test whether a value meets a minimum requirement in a spreadsheet?
 
-// Use a function to find out whether a value greater than a limit.
+// Get a binary result showing if one number exceeds another in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

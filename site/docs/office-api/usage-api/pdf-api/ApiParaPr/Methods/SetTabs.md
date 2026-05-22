@@ -15,8 +15,8 @@ expression.SetTabs(aPos, aVal);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins measured in twentieths of a point (1/1440 of an inch). |
-| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab stop and the alignment which will be applied to text entered at the current custom tab stop. |
+| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins |
+| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab |
 
 ## Returns
 
@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets a sequence of custom tab stops which will be used for any tab characters in the paragraph.
+Define custom tab positions for aligning text in a PDF.
 
 ```javascript editor-pdf
-// How to set the size of a spacing tabs from a paragraph properties.
+// How do I set where tabs align text in a PDF?
 
-// Change a tabs size property of a paragraph properties.
+// Configure tab stop locations and alignment styles in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,7 +41,7 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 
-const docContent = shape.GetDocContent();
+const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetTabs([1440, 4320, 7200], ["left", "center", "right"]);
@@ -56,5 +56,4 @@ paragraph.AddTabStop();
 paragraph.AddTabStop();
 paragraph.AddText("Custom tab - 5 inches right");
 page.AddObject(shape);
-
 ```

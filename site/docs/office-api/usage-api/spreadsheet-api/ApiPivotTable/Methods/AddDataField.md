@@ -22,12 +22,12 @@ expression.AddDataField(field);
 
 ## Example
 
-This example shows how to a data field to a pivot table.
+Add a value field to a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add new field to the table.
+// How do I include a numeric column as a calculated value in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then add new data field to it.
+// Assign a custom label to the data field after inserting it into the pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

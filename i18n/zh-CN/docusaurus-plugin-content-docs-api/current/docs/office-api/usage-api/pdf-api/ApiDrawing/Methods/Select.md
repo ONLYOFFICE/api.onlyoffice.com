@@ -20,10 +20,12 @@ boolean
 
 ## 示例
 
-如何选择页面的绘图对象。
+在 PDF 中高亮显示形状以进行编辑。
 
 ```javascript editor-pdf
-// Select an object from a page.
+// How do I select a drawing object on a page in a PDF?
+
+// Pick an object to activate it for changes in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

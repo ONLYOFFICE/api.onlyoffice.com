@@ -20,12 +20,12 @@ expression.GetNegativeBorderColor();
 
 ## 示例
 
-此示例演示如何从数据条条件格式规则获取负值条边框颜色。
+读取电子表格中表示负值的条上使用的边框颜色。
 
 ```javascript editor-xlsx
-// How to retrieve the border color of negative value bars.
+// How do I find out what outline color is applied to negative data bars in a spreadsheet?
 
-// Get the negative bar border color of a data bar conditional formatting rule.
+// Confirm the border shade assigned to bars displaying below-zero values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let negativeBorderColor = dataBar.GetNegativeBorderColor();
 
 worksheet.GetRange("C1").SetValue("Negative Border:");
 worksheet.GetRange("C2").SetValue(negativeBorderColor ? "Set" : "None");
-
 ```

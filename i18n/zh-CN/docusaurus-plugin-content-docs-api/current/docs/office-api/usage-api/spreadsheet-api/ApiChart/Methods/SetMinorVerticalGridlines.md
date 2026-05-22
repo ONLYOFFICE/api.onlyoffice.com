@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例指定次垂直网格线的视觉属性。
+设置电子表格中图表次垂直网格线的样式。
 
 ```javascript editor-xlsx
-// Set a stroke as a minor vertical gridline.
+// How do I change the appearance of the secondary vertical gridlines on a chart in a spreadsheet?
 
-// How to add gridlines for the chart.
+// Add finer vertical guide lines with a custom color to help readers follow values across the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

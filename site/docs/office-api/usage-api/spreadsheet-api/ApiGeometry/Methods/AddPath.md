@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Append a new drawing path to a custom shape outline in a spreadsheet.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I add another outline segment to a custom shape in a spreadsheet?
+
+// Extend a custom shape by attaching an additional path that defines part of its boundary in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();

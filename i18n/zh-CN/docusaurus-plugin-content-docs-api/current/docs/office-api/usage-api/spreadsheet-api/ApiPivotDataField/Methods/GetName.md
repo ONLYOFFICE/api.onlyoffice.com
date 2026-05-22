@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取数据字段的名称。
+读取电子表格中分配给数据透视表数据字段的名称。
 
 ```javascript editor-xlsx
-// How to get a table element name.
+// How do I retrieve the name of a data field from a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's name.
+// Look up what a data field is called so it can be referenced or displayed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

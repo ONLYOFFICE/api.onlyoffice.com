@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example moves an animation effect to a different position.
+Reorder an animation effect within a sequence in a presentation.
 
 ```javascript editor-pptx
+// How do I change the position of an animation in a list of animations in a presentation?
+
+// Rearrange when an animation plays relative to other animations in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -77,5 +81,4 @@ const content = infoShape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('First effect moved to position 2');
 slide.AddObject(infoShape);
-
 ```

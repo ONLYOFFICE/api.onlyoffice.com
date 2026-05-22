@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取图章注释的类类型。
+了解添加到 PDF 的印章类型。
 
 ```javascript editor-pdf
+// How do I check the stamp annotation category in a PDF?
+
+// Determine the specific stamp type used in a PDF.
+
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'SB_Approved');
 let page = doc.GetPage(0);

@@ -23,12 +23,12 @@ expression.GetCells(row, col);
 
 ## Example
 
-This example shows how to get the ApiRange that represents all the cells on the worksheet.
+Select every cell on a worksheet at once in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all cells.
+// How do I target all cells on a sheet in a spreadsheet?
 
-// Get all cells from the worksheet.
+// Apply formatting across the entire worksheet by referencing all its cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let cells = worksheet.GetCells();

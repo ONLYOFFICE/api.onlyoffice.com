@@ -2,30 +2,16 @@
 
 Checks if the current form is fixed size.
 
-## Syntax
-
-```javascript
-expression.IsFixed();
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.IsFixed](../../ApiFormBase/Methods/IsFixed.md).
 
 ## Example
 
-This example checks if the current form is fixed size.
+Determine whether a form field has a fixed size in a document.
 
 ```javascript editor-forms
-// How to know whether a text form is fixed or not.
+// How do I find out if a form field is locked to a specific size in a document?
 
-// Display a boolean representing whether a text form is fixed.
+// Confirm the fixed-size status of a form field before deciding whether layout adjustments are needed in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

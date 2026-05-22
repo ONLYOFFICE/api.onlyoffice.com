@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回双尾学生 t 分布。
+计算电子表格中学生 t 分布的双尾概率。
 
 ```javascript editor-xlsx
-// How to calculate the two-tailed Student's t-distribution.
+// How do I find the two-tailed probability for a given t-value in a spreadsheet?
 
-// Use a function to estimate the Student's t-distribution right-tailed.
+// Get the probability for both tails of the t-distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

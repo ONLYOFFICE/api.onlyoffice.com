@@ -20,12 +20,12 @@ expression.GetPresentation();
 
 ## 示例
 
-此示例演示如何获取演示文稿。
+访问当前演示文稿并处理其内容。
 
 ```javascript editor-pptx
-// How to get the ApiPresentation object.
+// How can I reference the active presentation in a presentation?
 
-// Retrieve the current presentation object and work with its slides.
+// Get the presentation object and add a chart to a slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

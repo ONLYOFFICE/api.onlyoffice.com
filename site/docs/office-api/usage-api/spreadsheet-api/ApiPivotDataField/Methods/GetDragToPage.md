@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether the specified field can be dragged to the page position.
 
-## Syntax
-
-```javascript
-expression.GetDragToPage();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetDragToPage](../../ApiPivotField/Methods/GetDragToPage.md).
 
 ## Example
 
-This example shows how to get a drag to page of a pivot field.
+Check whether a pivot field can be moved to the page filter area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to page.
+// How do I find out if a pivot field is allowed to be dragged to the page zone in a spreadsheet?
 
-// Create a pivot table, add data to it then get a drag to page of a specified pivot field.
+// Confirm that a pivot field supports use as a top-level filter above the pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

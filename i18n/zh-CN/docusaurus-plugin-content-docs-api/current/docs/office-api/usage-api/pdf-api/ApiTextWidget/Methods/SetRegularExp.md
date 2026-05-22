@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为文本控件设置正则表达式。
+定义 PDF 文本字段中允许的文本模式。
 
 ```javascript editor-pdf
+// How do I set a pattern that text must match in a text field in a PDF?
+
+// Restrict text input to a specific format in a form field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

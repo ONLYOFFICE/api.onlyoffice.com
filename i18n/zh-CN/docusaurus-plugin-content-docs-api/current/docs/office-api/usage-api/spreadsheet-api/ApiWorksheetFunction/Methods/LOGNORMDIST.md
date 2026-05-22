@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何返回 x 的累积对数正态分布，其中 ln(x) 按指定参数呈正态分布。
+计算电子表格中对数正态分布的累积概率。
 
 ```javascript editor-xlsx
-// How to get the cumulative lognormal distribution of x.
+// How do I find the probability that a value falls below a given threshold in a lognormal distribution in a spreadsheet?
 
-// Use a function to return the cumulative lognormal distribution.
+// Determine the cumulative probability of a lognormal dataset in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -52,5 +52,4 @@ let ans = func.LOGNORMDIST(xValue, mean, standardDeviation);
 
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to set text direction of the table cell.
+Set the direction that text flows inside a table cell in a PDF.
 
 ```javascript editor-pdf
-// Create a table and set the text direction for the ApiTableCell object.
+// How do I rotate text direction in a table cell in a PDF?
+
+// Change the text orientation inside your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -41,5 +43,4 @@ paragraph.AddText("This is just a sample text.");
 content.Push(paragraph);
 
 page.AddObject(table);
-
 ```

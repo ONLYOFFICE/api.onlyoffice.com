@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the icon of a criterion.
+Read which icon is assigned to a conditional formatting criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the icon from an icon set criterion.
+// How do I find out what icon a formatting rule uses in a spreadsheet?
 
-// Get the icon assigned to this criterion.
+// Check the visual symbol tied to a specific condition in an icon set rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,5 +42,4 @@ let criteria = iconCondition.GetIconCriteria();
 let firstIcon = criteria[0].GetIcon();
 
 worksheet.GetRange("B1").SetValue("First criterion icon: " + firstIcon);
-
 ```

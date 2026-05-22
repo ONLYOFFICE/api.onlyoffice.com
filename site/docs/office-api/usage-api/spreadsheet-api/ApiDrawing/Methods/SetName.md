@@ -23,9 +23,13 @@ boolean
 
 ## Example
 
-This example shows how to set the name for a drawing object.
+Assign a custom name to a drawing so it can be identified by that name in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I give a drawing a recognizable label in a spreadsheet?
+
+// Label a shape with a specific name to make it easier to reference later in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(80, 120, 160));
@@ -44,5 +48,4 @@ const paragraph = content.GetElement(0);
 paragraph.AddText('Name: ' + drawing.GetName());
 
 worksheet.GetRange('A1').SetValue('Drawing name was set to: ' + drawing.GetName());
-
 ```

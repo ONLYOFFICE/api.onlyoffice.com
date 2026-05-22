@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the table.
+Identify the internal object category of a chart and write it to a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to show class type on the worksheet.
+// How do I check what kind of object a chart is classified as in a spreadsheet?
 
-// Get class type of the chart and insert it in the range.
+// Verify the object category assigned to a chart for use in conditional logic in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

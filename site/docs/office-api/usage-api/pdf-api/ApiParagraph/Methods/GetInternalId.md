@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get the internal ID of a paragraph.
+Retrieve the unique identifier of a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I get the internal ID of a paragraph in a PDF?
+
+// Look up the identification code for a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -38,5 +42,4 @@ const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('Internal Id: ' + paragraph.GetInternalId());
 docContent.Push(paragraph2);
 page.AddObject(shape);
-
 ```

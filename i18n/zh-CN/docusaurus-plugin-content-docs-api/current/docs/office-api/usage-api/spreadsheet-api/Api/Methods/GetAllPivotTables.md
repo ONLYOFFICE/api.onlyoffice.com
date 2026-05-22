@@ -20,12 +20,12 @@ expression.GetAllPivotTables();
 
 ## 示例
 
-此示例演示如何从工作表获取数据透视表。
+检索电子表格中所有工作表上的每个数据透视表。
 
 ```javascript editor-xlsx
-// How to  get pivot tables.
+// How do I access all pivot tables at once in a spreadsheet?
 
-// How to work with pivot tables.
+// Loop through each pivot table to apply changes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B1').SetValue('Region');
@@ -43,5 +43,4 @@ Api.InsertPivotNewWorksheet(dataRef);
 Api.GetAllPivotTables().forEach(function (pivot) {
     pivot.AddDataField('Price');
 });
-
 ```

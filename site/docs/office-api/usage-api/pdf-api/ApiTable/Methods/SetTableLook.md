@@ -20,12 +20,12 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isFirstColumn | Required | boolean |  | Specifies that the first column conditional formatting shall be applied to the     table. |
+| isFirstColumn | Required | boolean |  | Specifies that the first column conditional formatting shall be applied to the |
 | isFirstRow | Required | boolean |  | Specifies that the first row conditional formatting shall be applied to the table. |
-| isLastColumn | Required | boolean |  | Specifies that the last column conditional formatting shall be applied to the     table. |
+| isLastColumn | Required | boolean |  | Specifies that the last column conditional formatting shall be applied to the |
 | isLastRow | Required | boolean |  | Specifies that the last row conditional formatting shall be applied to the table. |
-| isHorBand | Required | boolean |  | Specifies that the horizontal banding conditional formatting shall not be applied     to the table. |
-| isVerBand | Required | boolean |  | Specifies that the vertical banding conditional formatting shall not be applied to     the table. |
+| isHorBand | Required | boolean |  | Specifies that the horizontal banding conditional formatting shall not be applied |
+| isVerBand | Required | boolean |  | Specifies that the vertical banding conditional formatting shall not be applied to |
 
 ## Returns
 
@@ -33,10 +33,12 @@ boolean
 
 ## Example
 
-How to set a table look with options.
+Configure the styling options for a table in a PDF.
 
 ```javascript editor-pdf
-// Create the ApiTable object and set its look.
+// How do I customize how a table looks in a PDF?
+
+// Apply formatting rules to change the table appearance in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

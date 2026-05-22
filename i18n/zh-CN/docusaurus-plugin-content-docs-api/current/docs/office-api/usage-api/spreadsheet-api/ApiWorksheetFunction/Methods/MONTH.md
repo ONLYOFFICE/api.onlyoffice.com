@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回月份，一个从 1（一月）到 12（十二月）的数字。
+从电子表格中的日期提取月份。
 
 ```javascript editor-xlsx
-// How to get the month from a date.
+// What month does a date represent in a spreadsheet?
 
-// Use a function to get a month.
+// Get the month as a number from a date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -35,5 +35,4 @@ let func = Api.WorksheetFunction;
 let ans = func.MONTH("3/16/2018"); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

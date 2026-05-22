@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets rich paragraph properties to rich paragraph.
+Apply formatting settings to a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I configure paragraph appearance in a PDF?
+
+// Assign custom formatting rules to a paragraph in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

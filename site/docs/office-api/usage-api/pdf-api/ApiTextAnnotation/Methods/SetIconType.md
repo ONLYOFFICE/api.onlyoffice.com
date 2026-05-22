@@ -22,9 +22,13 @@ boolean
 
 ## Example
 
-This example sets new icon type for text annotation.
+Choose the icon symbol for a text annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I change which icon a text annotation shows in a PDF?
+
+// Assign a different icon appearance to an annotation comment in a PDF.
+
 let doc = Api.GetDocument();
 let textAnnot = Api.CreateTextAnnot([10, 10, 20, 20]);
 let oldIcon = textAnnot.GetIconType();

@@ -22,9 +22,13 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-此示例设置段落字符的字体大小。
+更改演示文稿中段落文本的字体大小。
 
 ```javascript editor-pptx
+// How do I adjust the size of text in a paragraph in a presentation?
+
+// Set the font size to a specific point value in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font size set to 24 points.');
 paragraph.SetFontSize(48);
 slide.AddObject(shape);
-
 ```

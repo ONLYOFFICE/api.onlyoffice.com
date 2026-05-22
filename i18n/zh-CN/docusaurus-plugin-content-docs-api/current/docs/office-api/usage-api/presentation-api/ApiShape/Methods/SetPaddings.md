@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-此示例设置当前形状的文本内边距。
+设置形状内文本内容的内部间距。
 
 ```javascript editor-pptx
-// How to update paddings of the drawing.
+// Create a rectangle shape with text content and apply asymmetric padding values.
 
-// Create a shape and set its paddings.
+// Configure left, top, right, and bottom margins to control text position inside the shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

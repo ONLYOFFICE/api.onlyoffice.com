@@ -20,10 +20,13 @@ string \| null
 
 ## 示例
 
-分析演示文稿幻灯片上星形形状的路径命令。
+获取演示文稿中自定义形状路径中点的 y 坐标。
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I find the vertical position of a path point in a presentation?
+
+// Check shape path coordinates to display point locations in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

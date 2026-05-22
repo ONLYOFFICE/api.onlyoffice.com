@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example gets a number of cells in the row.
+Get the count of cells in a table row.
 
 ```javascript editor-pptx
-// How to return a number of cells from the row.
+// Create a table and access the first row object.
 
-// Create a table, count its cells and display the number in the slide.
+// Retrieve the number of cells and display it in the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,5 +41,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取高亮注释的类类型。
+确定 PDF 中高亮注释的类型。
 
 ```javascript editor-pdf
+// What class type does a highlight annotation have in a PDF?
+
+// Check the object classification for a highlight annotation in a PDF.
+
 let doc = Api.GetDocument();
 let highlightAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);
 let page = doc.GetPage(0);

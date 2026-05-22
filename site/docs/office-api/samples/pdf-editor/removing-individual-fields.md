@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Remove form fields by key based on user role.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Removing individual fields

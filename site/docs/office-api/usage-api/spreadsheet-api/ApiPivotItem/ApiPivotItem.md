@@ -22,4 +22,4 @@ Represents the ApiPivotItem class.
 | [GetParent](./Methods/GetParent.md) | [ApiPivotField](../ApiPivotField/ApiPivotField.md) | Returns a parent of the pivot item. |
 | [GetValue](./Methods/GetValue.md) | string | Returns a name of the specified item in the pivot table field. |
 | [GetVisible](./Methods/GetVisible.md) | boolean | Returns the visibility of the pivot item. |
-| [SetVisible](./Methods/SetVisible.md) | None | Sets the visibility of the pivot item. 💡  At least one item must remain visible when hiding others.  |
+| [SetVisible](./Methods/SetVisible.md) | None | Sets the visibility of the pivot item. |

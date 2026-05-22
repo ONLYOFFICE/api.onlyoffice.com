@@ -22,12 +22,12 @@ expression.SetText(text);
 
 ## 示例
 
-此示例设置批注文本。
+更新电子表格中现有批注的书面消息。
 
 ```javascript editor-xlsx
-// How to change a comment text.
+// How do I replace the text inside a comment with new content in a spreadsheet?
 
-// Replace a comment text with a new text.
+// Overwrite an outdated comment message with a revised note in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -20,9 +20,13 @@ expression.GetCurrentRun();
 
 ## 示例
 
-此示例展示如何从形状的文档内容中获取当前文本块。
+检索电子表格中形状内容区域内当前活动的文本运行。
 
 ```javascript editor-xlsx
+// How do I access the specific run of text the cursor is positioned on within a shape in a spreadsheet?
+
+// Read the active inline text segment from a shape's content to inspect its value in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const fill = Api.CreateSolidFill(Api.RGB(89, 130, 190));
@@ -42,5 +46,4 @@ run.AddText('Run text.');
 const currentRun = content.GetCurrentRun();
 const result = currentRun ? currentRun.GetText() : 'null';
 worksheet.GetRange('A1').SetValue('Current run: ' + result);
-
 ```

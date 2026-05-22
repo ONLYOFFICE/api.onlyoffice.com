@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets rect diff of square annotation.
+Read the spacing around a square annotation in a PDF.
 
 ```javascript editor-pdf
+// How do I find the padding or margin of a square annotation in a PDF?
+
+// Check the distance from the annotation's edges to its borders in a PDF.
+
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);

@@ -18,16 +18,16 @@ expression.SetVisible(isVisible);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example sets the state of sheet visibility.
+Display or conceal a sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set visibility of the sheet.
+// How do I make a sheet visible or hidden from other users in a spreadsheet?
 
-// Make a sheet visible or not.
+// Control whether a sheet appears in the tab list or remains inaccessible in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetVisible(true);

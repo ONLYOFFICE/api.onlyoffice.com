@@ -22,9 +22,13 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-此示例展示如何对形状内段落中的所有文本应用删除线格式。
+在电子表格中形状内为段落的所有文本绘制删除线。
 
 ```javascript editor-xlsx
+// How do I mark paragraph text as crossed out in a spreadsheet?
+
+// Strike through the text of a paragraph to indicate removed or deprecated content in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 110, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -43,5 +47,4 @@ paragraph.SetStrikeout(true);
 const paragraph2 = Api.CreateParagraph();
 paragraph2.AddText('This text has no strikeout.');
 content.Push(paragraph2);
-
 ```

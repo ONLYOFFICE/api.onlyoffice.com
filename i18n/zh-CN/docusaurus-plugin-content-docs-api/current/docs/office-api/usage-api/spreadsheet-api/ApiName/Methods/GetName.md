@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-此示例展示如何获取 ApiName 类的类型。
+读取电子表格中分配给命名范围的标签。
 
 ```javascript editor-xlsx
-// How to retrieve name of ApiName class object.
+// How do I find out what a named range is called in a spreadsheet?
 
-// Get name of a specified object.
+// Retrieve the text name of a range to display or compare it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

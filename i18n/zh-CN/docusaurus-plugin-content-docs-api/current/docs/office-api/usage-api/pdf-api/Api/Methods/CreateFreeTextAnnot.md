@@ -22,12 +22,15 @@ expression.CreateFreeTextAnnot(rect);
 
 ## 示例
 
-此示例创建自由文本注释并将其添加到页面。
+在 PDF 中添加文本框注释。
 
 ```javascript editor-pdf
+// How do I add a free text annotation in a PDF?
+
+// Display a note with text content in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([10, 10, 160, 32]);
 let page = doc.GetPage(0);
 page.AddObject(freeTextAnnot);
-
 ```

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-此示例获取文本斜体属性。
+检查电子表格中的文本是否格式化为斜体。
 
 ```javascript editor-xlsx
-// How to find out whether a text is italic or not.
+// How do I find out if text is displayed in italic style in a spreadsheet?
 
-// Get a text italic property as a boolean value.
+// Read the italic setting from a text style and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

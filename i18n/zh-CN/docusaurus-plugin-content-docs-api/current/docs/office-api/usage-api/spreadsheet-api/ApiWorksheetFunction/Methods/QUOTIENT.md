@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回除法的整数部分。
+获取电子表格中一个值除以另一个值的整数结果。
 
 ```javascript editor-xlsx
-// How to get the integer part from the result of division.
+// How do I find the integer portion of a division in a spreadsheet?
 
-// Use a function to integer part from division.
+// Extract the quotient without the remainder from two numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

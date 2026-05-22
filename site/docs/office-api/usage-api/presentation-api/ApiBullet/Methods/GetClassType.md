@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a type of ApiBullet class and inserts it into the document.
+Get the class type of a bullet in a presentation.
 
 ```javascript editor-pptx
-// How get a class type of ApiBullet.
+// How do I identify the class type of a bullet in a presentation?
 
-// Retrieve class type of ApiBullet object and insert it to the slide.
+// Retrieve the type identifier for a bullet in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -48,5 +48,4 @@ newParagraph.SetJc("left");
 newParagraph.AddText("Class Type = " + classType);
 docContent.Push(newParagraph);
 slide.AddObject(shape);
-
 ```

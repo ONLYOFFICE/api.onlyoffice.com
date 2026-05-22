@@ -25,12 +25,12 @@ JSON
 
 ## 示例
 
-此示例将 ApiSlide 对象转换为 JSON 对象。
+将幻灯片对象转换为 JSON 格式。
 
 ```javascript editor-pptx
-// How to convert a slide object to a JSON object.
+// Export the slide as JSON and reconstruct it from the JSON data.
 
-// Get a slide by its index and convert it to JSON.
+// Verify the class type of the reconstructed slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -51,5 +51,4 @@ slide.AddObject(drawing);
 const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
-
 ```

@@ -75,7 +75,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 调试时可使用共享 `sdkjs-plugins` 文件夹启动 ONLYOFFICE 文档：
 
-``` sh
+```sh
 docker run -itd -p 80:80 -v /absolutely_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
 ```
 
@@ -83,7 +83,7 @@ docker run -itd -p 80:80 -v /absolutely_path_to_work_dir:/var/www/onlyoffice/doc
 
 在 [ONLYOFFICE 文档配置](../../../docs-api/usage-api/config/editor/plugins.md)中，将插件的 `config.json` 相对路径添加到 `plugins.pluginsData` 参数中：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {
@@ -102,7 +102,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-其中 **example.com** 是安装了文档管理器和文档存储服务，以及放置插件的服务器的名称。请参阅[工作原理](../../../docs-api/get-started/how-it-works/how-it-works.md)部分，以了解有关 ONLYOFFICE 文档客户端与服务器交互的更多信息。
 
 `https://example.com/plugin1/config.json` 是插件的路径。
 
@@ -116,7 +115,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 如果插件同时存在于文件夹中并在配置文件中指定，则优先使用配置文件中指定的插件。
 - 如果您希望将插件上传到 S3 或 Nginx 服务器，您需要允许来自文档服务器地址的跨域请求。或者，你也可以直接允许所有人使用你的插件：
 
-``` sh
+```sh
 add_header 'Access-Control-Allow-Origin' '*';
 add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 ```
@@ -163,7 +162,7 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 
 **选项 3.** 通过移除对应的插件，编辑 [ONLYOFFICE 文档配置文件](../../../docs-api/usage-api/config/editor/plugins.md)。编辑器下次启动后，该插件将对所有门户用户不可用：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {

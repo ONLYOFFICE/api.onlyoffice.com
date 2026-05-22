@@ -22,9 +22,13 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example sets all characters in the paragraph to display as capitals.
+Convert paragraph text to capital letters in a PDF.
 
 ```javascript editor-pdf
+// How do I display all text as capitals in a paragraph in a PDF?
+
+// Apply uppercase styling to a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -37,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to capitalized letters.');
 paragraph.SetCaps(true);
 page.AddObject(shape);
-
 ```

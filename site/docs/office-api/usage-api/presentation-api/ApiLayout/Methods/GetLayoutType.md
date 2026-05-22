@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns a type of the layout.
+Get the type of a slide layout in a presentation.
 
 ```javascript editor-pptx
+// How do I identify the type of a layout in a presentation?
+
+// Retrieve all available layout types and display them in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 const master = presentation.GetMaster(0);
@@ -41,5 +45,4 @@ paragraph.AddText(
 		.map(layout => layout.GetLayoutType())
 		.join(', ')
 );
-
 ```

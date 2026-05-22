@@ -20,10 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes cloud shape path properties on a page.
+Check what color or pattern fills the interior of a shape in a PDF.
 
 ```javascript editor-pdf
-// Displays comprehensive path information in a text shape.
+// What fill does a custom shape have in a PDF?
+
+// Find out if and how the inside of a shape is filled in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 

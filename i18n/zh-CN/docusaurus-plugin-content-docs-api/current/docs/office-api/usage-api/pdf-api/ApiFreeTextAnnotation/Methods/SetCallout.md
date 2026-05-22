@@ -22,9 +22,13 @@ boolean
 
 ## 示例
 
-此示例为自由文本注释设置标注。
+设置 PDF 中文本注释的标注形状样式。
 
 ```javascript editor-pdf
+// How do I change what the comment box looks like in a PDF?
+
+// Assign a callout appearance to an annotation element in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);

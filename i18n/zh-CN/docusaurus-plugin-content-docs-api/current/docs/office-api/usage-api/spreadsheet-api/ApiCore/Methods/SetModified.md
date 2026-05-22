@@ -22,9 +22,13 @@ expression.SetModified(oModified);
 
 ## 示例
 
-此示例演示如何设置工作簿最后修改的日期。
+在电子表格工作簿的文档属性中记录最后更改日期。
 
 ```javascript editor-xlsx
+// How do I write a custom last-modified date into a workbook's metadata in a spreadsheet?
+
+// Update the modification timestamp stored in the workbook so the history reflects a specific date in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified: " + lastModifiedDate);
-
 ```

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-此示例向指定的幻灯片母版添加版式。
+在演示文稿中向幻灯片母版插入新布局。
 
 ```javascript editor-pptx
-// Create a layout and add it to the slide master.
+// How do I add a custom layout to a master in a presentation?
 
-// Add layout to the slide master.
+// Create a layout and insert it at a specific position in the master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after adding new layout: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

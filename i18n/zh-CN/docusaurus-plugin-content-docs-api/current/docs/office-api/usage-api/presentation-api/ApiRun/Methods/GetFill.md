@@ -2,30 +2,16 @@
 
 从当前文本属性获取文本颜色。
 
-## 语法
-
-```javascript
-expression.GetFill();
-```
-
-`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
-
-## 参数
-
-此方法没有任何参数。
-
-## 返回值
-
-[ApiFill](../../ApiFill/ApiFill.md)
+继承自 [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md)。
 
 ## 示例
 
-此示例演示如何确定文本颜色。
+从文本运行属性检索填充属性。
 
 ```javascript editor-pptx
-// How to know with which color a text is filled.
+// Create a shape with a text run and apply fill color.
 
-// Get the text properties of the run and get its font color.
+// Get and display the text fill type.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -54,5 +40,4 @@ fill = textPr.GetFill();
 const type = fill.GetClassType();
 paragraph.AddText("Text color type: " + type);
 docContent.Push(paragraph);
-
 ```

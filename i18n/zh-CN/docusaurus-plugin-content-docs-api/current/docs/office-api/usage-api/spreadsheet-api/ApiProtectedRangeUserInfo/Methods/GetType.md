@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-此示例获取受保护区域用户的类型。
+读取在电子表格中受保护范围上分配给用户的权限类型。
 
 ```javascript editor-xlsx
-// How to get a user info of a protected range and show its type.
+// How do I check what access level a user has on a protected range in a spreadsheet?
 
-// Get a user type of a protected range and add it to the worksheet.
+// Verify whether a collaborator can view or edit a locked area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");

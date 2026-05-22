@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-此示例用另一段文本替换两个段落中的文本。
+替换演示文稿元素中的多个文本值。
 
 ```javascript editor-pptx
-// How to replace a substring with another one.
+// Use Api.ReplaceTextSmart to find and replace text with specified values.
 
-// Replace text from an array with another one.
+// Remove all slide objects and add a shape with text content.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -59,5 +59,4 @@ slide.AddObject(shape);
 // range3.Select();
 const arr = ["test_1", "test_2"];
 Api.ReplaceTextSmart(arr, "", "");
-
 ```

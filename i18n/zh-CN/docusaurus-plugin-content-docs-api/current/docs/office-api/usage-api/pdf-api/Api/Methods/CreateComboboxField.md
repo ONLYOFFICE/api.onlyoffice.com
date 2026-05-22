@@ -22,9 +22,13 @@ expression.CreateComboboxField(aRect);
 
 ## 示例
 
-如何创建组合框字段并添加到文档。
+在 PDF 中创建具有多个选项的下拉字段。
 
 ```javascript editor-pdf
+// How do I add a combobox to a form in a PDF?
+
+// Populate a dropdown list with selectable choices in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 

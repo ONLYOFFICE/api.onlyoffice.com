@@ -15,7 +15,7 @@ expression.WEEKDAY(arg1, arg2);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 表示日期的数字，或其他公式或函数的结果。 |
-| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 确定返回值类型的数字：**1** - 返回从 1（星期日）到 7（星期六）的数字；**2** - 返回从 1（星期一）到 7（星期日）的数字；**3** - 返回从 0（星期一）到 6（星期日）的数字。 |
+| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 确定返回值类型的数字：**1** - 返回从 1（星期日）到 7（星期六）的数字； |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-此示例演示如何返回从 1 到 7 的数字，以标识指定日期是星期几。
+获取电子表格中给定日期的星期几（1 到 7 的数字）。
 
 ```javascript editor-xlsx
-// How to return a weekday.
+// How do I identify which day of the week a specific date falls on in a spreadsheet?
 
-// Use a function to get a weekday using numbers.
+// Determine the numeric weekday value for any date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,5 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.WEEKDAY("11/5/2018", 2); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

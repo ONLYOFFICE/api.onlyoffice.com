@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get parent.
+Find the parent container of a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a parent of a slide shape.
+// How do I locate what an object belongs to in a presentation?
 
-// Get a slide shape's parent object.
+// Identify the parent element that holds a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -44,5 +44,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type of the shape parent = " + sType);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Read the type label of a paragraph object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiParagraph.
+// How do I find out what kind of object a paragraph is in a spreadsheet?
 
-// Get a class type of ApiParagraph and display it in the worksheet.
+// Display the paragraph's type name as text inside the shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

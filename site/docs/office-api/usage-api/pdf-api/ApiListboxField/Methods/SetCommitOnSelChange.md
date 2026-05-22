@@ -2,29 +2,17 @@
 
 Sets field commit on selection change prop.
 
-## Syntax
-
-```javascript
-expression.SetCommitOnSelChange(bCommit);
-```
-
-`expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| bCommit | Required | boolean |  | will the field value be applied to all with the same name immediately after the change |
-
-## Returns
-
-boolean
+Inherited from [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md).
 
 ## Example
 
-This example sets commit on selection change prop to field with list of options.
+Enable auto-submission when a dropdown selection changes in a PDF.
 
 ```javascript editor-pdf
+// How do I make a field auto-submit when the selection changes in a PDF?
+
+// Configure a dropdown to trigger form submission on selection in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

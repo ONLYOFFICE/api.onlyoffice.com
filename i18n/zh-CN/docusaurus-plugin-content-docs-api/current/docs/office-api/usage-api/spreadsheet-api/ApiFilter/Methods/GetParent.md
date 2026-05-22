@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-此示例检索筛选列的父自动筛选。
+检索电子表格中拥有特定列筛选器的自动筛选对象。
 
 ```javascript editor-xlsx
-// How to navigate from ApiFilter back to ApiAutoFilter.
+// How do I get back to the overall auto-filter from one of its individual column filters in a spreadsheet?
 
-// Use ApiFilter.GetParent() to access the parent filters collection.
+// Trace a column filter up to its containing auto-filter to inspect the filtered range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,5 +61,4 @@ if (filters.length > 0) {
     worksheet.GetRange("D4").SetValue("This filter belongs to the sheet:");
     worksheet.GetRange("D5").SetValue(parentAutoFilter.Parent.GetName());
 }
-
 ```

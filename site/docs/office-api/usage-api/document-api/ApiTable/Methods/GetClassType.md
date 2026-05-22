@@ -1,0 +1,39 @@
+# GetClassType
+
+Returns a type of the ApiTable class.
+
+## Syntax
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"table"
+
+## Example
+
+Identify the object type of a table in a document.
+
+```javascript editor-docx
+// How do I check what kind of object a table is in a document?
+
+// Confirm the category of a table element and display the result in a document.
+
+let doc = Api.GetDocument();
+let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
+tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
+let table = Api.CreateTable(3, 3);
+table.SetStyle(tableStyle);
+doc.Push(table);
+let classType = table.GetClassType();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("Class Type = " + classType);
+```

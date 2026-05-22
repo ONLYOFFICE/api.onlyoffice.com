@@ -22,9 +22,13 @@ number
 
 ## 示例
 
-此示例展示如何将缇转换为磅。
+在 PDF 中将缇转换为磅。
 
 ```javascript editor-pdf
+// How can I change twips to points in a PDF?
+
+// Display the point equivalent of a twip measurement in a PDF.
+
 const twips = 100;
 const points = Api.TwipsToPoints(twips);
 
@@ -38,5 +42,4 @@ paragraph.AddText(twips + ' twips are equal to ' + points + ' points.');
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 page.AddObject(shape);
-
 ```

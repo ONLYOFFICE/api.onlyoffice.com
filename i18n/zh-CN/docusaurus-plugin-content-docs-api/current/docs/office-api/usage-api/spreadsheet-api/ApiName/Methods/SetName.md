@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-此示例设置表示对象名称的字符串值。
+将电子表格中的命名范围重命名为不同的标签。
 
 ```javascript editor-xlsx
-// How to rename an object.
+// How do I change the name of an existing named range in a spreadsheet?
 
-// Set a new name for an object and display it in the worksheet.
+// Update a range label so formulas and references use the new name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -20,10 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to recognize content on a page.
+Detect and identify shapes and elements on a page in a PDF.
 
 ```javascript editor-pdf
-// Get recognized drawing on a page and select it.
+// How do I find what objects are drawn on a page in a PDF?
+
+// Extract recognized elements from a page to work with them in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

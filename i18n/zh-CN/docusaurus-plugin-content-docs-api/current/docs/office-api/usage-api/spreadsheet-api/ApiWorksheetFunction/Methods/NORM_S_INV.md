@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-此示例演示如何返回标准正态累积分布的反函数（平均值为零，标准差为一）。
+计算电子表格中给定概率的标准正态分布逆函数。
 
 ```javascript editor-xlsx
-// How to calculate the inverse of the standard normal cumulative distribution.
+// How do I find the inverse of the standard normal distribution in a spreadsheet?
 
-// Use a function to get the inverse of the standard normal cumulative distribution.
+// Get the quantile value for a probability in a standard normal distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

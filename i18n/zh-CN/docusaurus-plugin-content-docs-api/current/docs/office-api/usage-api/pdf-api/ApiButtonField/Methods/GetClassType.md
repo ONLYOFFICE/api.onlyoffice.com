@@ -20,9 +20,13 @@ expression.GetClassType();
 
 ## 示例
 
-此示例获取按钮字段对象的类类型。
+检查 PDF 中按钮字段的类类型。
 
 ```javascript editor-pdf
+// How do I identify what type a button field object is in a PDF?
+
+// Retrieve the object type for a button form field in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let buttonField = Api.CreateImageField([10, 10, 25, 25]);

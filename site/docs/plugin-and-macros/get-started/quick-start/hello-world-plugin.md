@@ -47,6 +47,7 @@ Then format it as `asc.{YOUR-GENERATED-GUID}`.
 :::
 
 **Key fields explained:**
+
 - `name` — Display name in the plugin menu
 - `guid` — Unique identifier (must be different for each plugin)
 - `url` — Entry point HTML file
@@ -179,16 +180,19 @@ function insertFormattedText() {
 ## Next steps
 
 **Learn more:**
+
 - [Plugin structure and configuration](../../structure/configuration/configuration.md)
 - [Complete API reference](../../interacting-with-editors/overview/overview.md)
 - [UI customization options](../../customization/toolbar.md)
 
 **Explore examples:**
-- [YouTube plugin](../../samples/plugin-samples/youtube.md) — Embed videos
-- [Translator plugin](../../samples/plugin-samples/translator.md) — Multi-language support
-- [More examples](../../samples/plugin-samples/plugin-samples.md)
+
+- [YouTube plugin](../../samples/plugins/youtube.md) — Embed videos
+- [Translator plugin](../../samples/plugins/translator.md) — Multi-language support
+- [More examples](/samples/?doctype=docs&text=plugin)
 
 **Need help?**
+
 - [Developer Forum](https://forum.onlyoffice.com/) — Community support
 - [GitHub Issues](https://github.com/ONLYOFFICE/sdkjs-plugins) — Report bugs
 - [FAQ](../../more-information/faq.md) — Frequently asked questions

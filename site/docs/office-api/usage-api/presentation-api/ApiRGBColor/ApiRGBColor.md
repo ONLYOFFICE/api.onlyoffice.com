@@ -1,7 +1,6 @@
 # ApiRGBColor
 
-Represents the ApiRGBColor class.
-
+ApiRGBColor is a subclass of [ApiUniColor](../ApiUniColor/ApiUniColor.md).
 
 ## Methods
 

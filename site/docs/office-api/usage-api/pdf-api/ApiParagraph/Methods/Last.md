@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the last element of the paragraph.
+Access the final element of a paragraph in a PDF.
 
 ```javascript editor-pdf
+// How do I get the last element from a paragraph in a PDF?
+
+// Retrieve and modify the final run in a paragraph in a PDF.
+
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
 
@@ -45,5 +49,4 @@ paragraph.Push(run2);
 const lastElement = paragraph.Last();
 lastElement.SetBold(true);
 page.AddObject(shape);
-
 ```

@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example specifies that all the small letter characters in this text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
+Display all text as small capital letters in a presentation.
 
 ```javascript editor-pptx
-// How to make text uncapitalized.
+// Convert lowercase letters to smaller capital letter equivalents for typographic effect.
 
-// Create a new text run and make its letters lowercase.
+// Create a text run and apply small caps formatting.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ run.SetSmallCaps(true);
 run.AddText("This is a text run with the font set to small capitalized letters.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

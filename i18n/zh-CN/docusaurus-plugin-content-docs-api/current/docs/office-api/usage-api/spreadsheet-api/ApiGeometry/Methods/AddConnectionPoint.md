@@ -24,10 +24,13 @@ boolean
 
 ## 示例
 
-创建带有参考线和连接点的可调整自定义几何图形。
+向电子表格中的自定义形状附加命名连接器锚点。
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I place a fixed connection spot on a custom shape in a spreadsheet?
+
+// Mark a specific position on a custom shape so lines can snap to it in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);

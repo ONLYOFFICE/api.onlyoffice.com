@@ -20,10 +20,12 @@ expression.GetPosX();
 
 ## 示例
 
-如何获取并显示绘图的 X 坐标位置。
+查找 PDF 中形状的左右位置。
 
 ```javascript editor-pdf
-// Get a shape object from a page and get its X position.
+// How do I check the X coordinate of an object in a PDF?
+
+// Read the horizontal distance of a shape from the left edge in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

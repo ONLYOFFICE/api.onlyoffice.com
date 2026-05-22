@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example saves changes to the specified document.
+Save all changes to the presentation after modifying it.
 
 ```javascript editor-pptx
-// How to save all changes.
+// Use Api.Save to persist modifications to the document.
 
-// Add new elements like paragraphs, shapes and etc. to the slide and save all changes. 
+// Add elements to a shape and save them to the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ paragraph.AddText("This shape with paragraph in it is saved to the document.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
 Api.Save();
-
 ```

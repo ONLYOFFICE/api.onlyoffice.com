@@ -25,12 +25,12 @@ expression.CreateThemeFormatScheme(arrFill, arrBgFill, arrLine, sName);
 
 ## 示例
 
-此示例演示如何创建新的主题格式方案。
+为演示文稿主题定义颜色、填充和轮廓。
 
 ```javascript editor-pptx
-// How to change theme format of the theme.
+// How can I customize the appearance settings of a presentation theme in a presentation?
 
-// Add theme format to the theme.
+// Set up a new color and stroke scheme for a presentation theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);
@@ -55,5 +55,4 @@ const formatScheme = Api.CreateThemeFormatScheme([fill1, fill2, fill3], [bgFill1
 const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");
 const theme = Api.CreateTheme("New theme", master, clrScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
-
 ```

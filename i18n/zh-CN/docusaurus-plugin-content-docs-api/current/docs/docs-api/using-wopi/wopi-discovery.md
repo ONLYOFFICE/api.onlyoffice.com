@@ -45,7 +45,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 ### 示例
 
-``` xml
+```xml
 <action name="edit" ext="docx" requires="locks,update"
     urlsrc="https://word-edit.officeapps.live.com/we/wordeditorframe.aspx?
 ui=en-us&amp;thm=1&amp;"/>
@@ -87,7 +87,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 请注意 Collabora 连接器的 *discovery.xml* 结构。他们通过包含在以下结构的 *app* 元素中的 MIME 类型打开编辑器：
 
-``` xml
+```xml
 <app name="application/msword">
     <action default="true" ext="" name="edit" urlsrc="http://159.89.20.129:9980/loleaflet/ba528af/loleaflet.html?"/>
 </app>
@@ -95,7 +95,7 @@ ui=en-us&amp;thm=1&amp;"/>
 
 像这样的 *app* 元素：
 
-``` xml
+```xml
 <app name="Word" favIconUrl="http://localhost:8000/web-apps/apps/documenteditor/main/resources/img/favicon.ico">
 ```
 

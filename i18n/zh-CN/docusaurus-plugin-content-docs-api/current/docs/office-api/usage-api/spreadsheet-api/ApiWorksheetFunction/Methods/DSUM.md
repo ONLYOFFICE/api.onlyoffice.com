@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-此示例演示如何将数据库中与指定条件匹配的记录字段（列）中的数字相加。
+对电子表格中满足指定条件的数据库字段中的数值求和。
 
 ```javascript editor-xlsx
-// How to calculate the sum.
+// How do I add numbers from filtered database records in a spreadsheet?
 
-// Use function to add values from a range.
+// Calculate totals for database entries matching specific conditions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

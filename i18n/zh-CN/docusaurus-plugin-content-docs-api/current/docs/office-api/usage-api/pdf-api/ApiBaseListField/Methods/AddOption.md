@@ -23,9 +23,13 @@ boolean
 
 ## 示例
 
-此示例向带有选项列表的字段添加新选项。
+在 PDF 中向下拉列表或列表字段添加选项。
 
 ```javascript editor-pdf
+// How can I add options to a dropdown list in a PDF?
+
+// Populate a form field with multiple selectable items in a PDF.
+
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);
 let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);

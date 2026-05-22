@@ -20,12 +20,12 @@ string \| string[] \| number \| [XlDynamicFilterCriteria](../../Enumeration/XlDy
 
 ## 示例
 
-此示例读取筛选的第一个条件。
+检索应用于列筛选器的主要条件以查看电子表格中通过的值。
 
 ```javascript editor-xlsx
-// How to inspect the main condition of an AutoFilter column.
+// How do I find out the main filtering condition set on a column in a spreadsheet?
 
-// Use ApiFilter.GetCriteria1() to get the first filter criterion.
+// Examine the first rule of an active column filter and display its value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +52,4 @@ if (filters.length > 0) {
     worksheet.GetRange("C1").SetValue("Criteria1 (first condition):");
     worksheet.GetRange("D1").SetValue(criteria1);
 }
-
 ```

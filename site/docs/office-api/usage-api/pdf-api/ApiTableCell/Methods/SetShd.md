@@ -25,10 +25,12 @@ boolean
 
 ## Example
 
-How to set shading fill to the cell.
+Apply a background fill color to a table cell in a PDF.
 
 ```javascript editor-pdf
-// Create table and set its cell shading color.
+// How do I change the background color of a table cell in a PDF?
+
+// Color the background of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -40,5 +42,4 @@ const fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
 cell.SetShd(fill);
 
 page.AddObject(table);
-
 ```

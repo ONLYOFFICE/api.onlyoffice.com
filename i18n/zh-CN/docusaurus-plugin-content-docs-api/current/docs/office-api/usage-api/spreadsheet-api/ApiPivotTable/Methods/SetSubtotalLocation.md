@@ -22,12 +22,12 @@ expression.SetSubtotalLocation(type);
 
 ## 示例
 
-此示例展示如何设置数据透视表的分类汇总位置。
+在电子表格中数据透视表的每组顶部或底部放置小计行。
 
 ```javascript editor-xlsx
-// How to set subtotal location of a table.
+// How do I move subtotals above or below the detail rows in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its subtotal location.
+// Reposition subtotals to improve readability of grouped data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

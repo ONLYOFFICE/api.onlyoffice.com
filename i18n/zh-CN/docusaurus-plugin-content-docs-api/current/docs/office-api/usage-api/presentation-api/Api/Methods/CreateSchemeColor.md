@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-此示例展示如何使用 'dk1' 标识符创建方案颜色。
+在演示文稿中使用主题标识符创建配色方案颜色。
 
 ```javascript editor-pptx
-// How to create a new scheme color.
+// How do I apply a theme color to a shape in a presentation?
 
-// Add a scheme color to create a solid fill.
+// Use a scheme color to fill a shape with a color from the presentation theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,5 +39,4 @@ const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("curvedUpArrow", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
 slide.AddObject(drawing);
-
 ```

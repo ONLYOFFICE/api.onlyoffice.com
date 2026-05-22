@@ -22,12 +22,12 @@ expression.Add(xml);
 
 ## 示例
 
-此示例演示如何添加新的自定义 XML 部件然后访问它。
+向电子表格中的工作簿附加新的 XML 数据块。
 
 ```javascript editor-xlsx
-// How to add a custom XML part to the workbook.
+// How do I store custom XML content inside a workbook in a spreadsheet?
 
-// Add a new XML part.
+// Embed structured XML so it travels with the file when saved in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

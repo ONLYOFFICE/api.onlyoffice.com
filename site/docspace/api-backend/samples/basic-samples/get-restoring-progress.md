@@ -1,3 +1,8 @@
+---
+description: Check the progress of a portal restoration via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

@@ -16,16 +16,16 @@ expression.SetActive();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-此示例激活工作表。
+在电子表格中将焦点切换到特定工作表。
 
 ```javascript editor-xlsx
-// How to set an active sheet.
+// How do I make a particular sheet the active one in a spreadsheet?
 
-// Set a current sheet active.
+// Bring a named sheet to the foreground so it becomes the working sheet in a spreadsheet.
 
 Api.AddSheet("New_sheet");
 let sheet = Api.GetSheet("New_sheet");

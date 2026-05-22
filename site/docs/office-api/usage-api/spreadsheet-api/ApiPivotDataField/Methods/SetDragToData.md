@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether the specified field can be dragged to the data position.
 
-## Syntax
-
-```javascript
-expression.SetDragToData(flag);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | Required | boolean |  | Specifies whether the specified field can be dragged to the data position. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetDragToData](../../ApiPivotField/Methods/SetDragToData.md).
 
 ## Example
 
-This example shows how to set a drag to data of a pivot field.
+Control whether a pivot field can be dragged into the values area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to data.
+// How do I prevent a pivot field from being moved to the values area in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to data of a specified pivot using boolean value.
+// Lock a pivot field so users cannot reposition it as a data value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

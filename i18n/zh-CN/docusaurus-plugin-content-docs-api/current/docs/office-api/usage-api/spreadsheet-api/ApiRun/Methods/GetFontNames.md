@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-此示例展示如何获取文本块中所有元素的所有字体名称。
+收集电子表格中文本运行各元素使用的每种字体名称。
 
 ```javascript editor-xlsx
-// How to get all font names from the ApiRun object elements.
+// How do I list all fonts applied to a run of text in a spreadsheet?
 
-// Get all font names from a text run as an array and display it in the worksheet.
+// Extract the font families from a run and print each one on its own line in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

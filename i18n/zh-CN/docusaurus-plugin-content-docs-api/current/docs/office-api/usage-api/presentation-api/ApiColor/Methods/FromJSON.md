@@ -22,9 +22,13 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-此示例展示如何从 JSON 恢复形状填充颜色。
+从 JSON 反序列化颜色对象并将其应用于形状填充。
 
 ```javascript editor-pptx
+// Parse JSON color data and reconstruct the color object representation.
+
+// Restore a color from JSON format and compare original and restored hex values.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -45,5 +49,4 @@ run.SetFontSize(30);
 run.AddText('Original: ' + original.GetHex() + '\nRestored: ' + restored.GetHex());
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -20,9 +20,13 @@ Object
 
 ## 示例
 
-此示例展示如何获取演示文稿中批注的位置。
+读取演示文稿中批注锚定的 X 和 Y 坐标。
 
 ```javascript editor-pptx
+// How do I find the location of a comment in a presentation?
+
+// Retrieve the position of a comment on a slide in a presentation.
+
 const presentation = Api.GetPresentation();
 presentation.GetAllComments().forEach(comment => {
 	comment.Delete();
@@ -43,5 +47,4 @@ const position = arrComments[0].GetPosition();
 const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Comment position - X: ' + position.x + ', Y: ' + position.y);
-
 ```

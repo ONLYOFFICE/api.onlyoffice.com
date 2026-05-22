@@ -22,9 +22,13 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-This example sets the italic property to the text character.
+Apply italic formatting to paragraph text in a presentation.
 
 ```javascript editor-pptx
+// How do I make text italic in a presentation?
+
+// Format a paragraph with italic style for emphasis in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText('This is a paragraph with the font set to italicized letters.');
 paragraph.SetItalic(true);
 slide.AddObject(shape);
-
 ```

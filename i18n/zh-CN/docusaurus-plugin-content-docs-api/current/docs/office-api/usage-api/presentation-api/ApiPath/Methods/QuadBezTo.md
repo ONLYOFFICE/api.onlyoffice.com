@@ -25,10 +25,13 @@ expression.QuadBezTo(x1, y1, x2, y2);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。
+在演示文稿中向自定义形状的路径添加平滑曲线段。
 
 ```javascript editor-pptx
-// Demonstrates different curve types in a single path on a slide.
+// How do I create curved lines between points in a shape in a presentation?
+
+// Draw smooth curves using control points in a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();

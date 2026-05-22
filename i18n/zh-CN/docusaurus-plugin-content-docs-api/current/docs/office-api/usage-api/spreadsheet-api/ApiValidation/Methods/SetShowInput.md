@@ -22,12 +22,12 @@ expression.SetShowInput(ShowInput);
 
 ## 示例
 
-此示例设置是否显示输入消息。
+控制在选择电子表格中的单元格时是否显示验证输入消息。
 
 ```javascript editor-xlsx
-// How to show or hide the validation input message.
+// How do I show or hide the hint message that guides users when they click a validated cell in a spreadsheet?
 
-// Set the ShowInput setting.
+// Toggle the input prompt on so users see instructions before entering a value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");
@@ -37,5 +37,4 @@ validation.SetInputTitle("Input Title");
 validation.SetInputMessage("Please enter a number greater than 10");
 validation.SetShowInput(true);
 worksheet.GetRange("B1").SetValue("Input message will be shown");
-
 ```

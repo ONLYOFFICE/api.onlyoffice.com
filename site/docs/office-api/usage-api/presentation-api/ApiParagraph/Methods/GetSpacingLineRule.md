@@ -2,30 +2,16 @@
 
 Returns the paragraph line spacing rule.
 
-## Syntax
-
-```javascript
-expression.GetSpacingLineRule();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"auto" \| "atLeast" \| "exact" \| undefined
+Inherited from [ApiParaPr.GetSpacingLineRule](../../ApiParaPr/Methods/GetSpacingLineRule.md).
 
 ## Example
 
-This example shows how to get the paragraph line spacing rule.
+Check the line spacing mode of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to get the size of a spacing line rule of a text from a paragraph.
+// How do I read the line spacing rule from a paragraph in a presentation?
 
-// Return a spacing line rule property of a paragraph.
+// Retrieve whether line spacing is automatic, fixed, or measured in multiples in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +38,4 @@ const spacingLineRule = paraPr.GetSpacingLineRule();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Spacing line rule : " + spacingLineRule);
 docContent.Push(paragraph);
-
 ```

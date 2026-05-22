@@ -17,16 +17,16 @@ expression.GetTextPr();
 
 ## 返回值
 
-[ApiTextPr](../../../text-document-api/ApiTextPr/ApiTextPr.md)
+[ApiTextPr](../../../document-api/ApiTextPr/ApiTextPr.md)
 
 ## 示例
 
-此示例展示如何从表单获取文本属性。
+读取文档中应用于表单字段的文本格式属性。
 
 ```javascript editor-forms
-// How to get a text properties of a text form.
+// How do I access the font and style settings of a form field in a document?
 
-// How to make italic the text of the form.
+// Retrieve the current text properties of a form so they can be adjusted and reapplied in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

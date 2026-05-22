@@ -22,10 +22,12 @@ boolean
 
 ## Example
 
-How to change a position of tick label.
+Position tick labels on a chart's vertical axis in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical axis tick label position.
+// How do I place tick labels on the vertical axis of a chart in a PDF?
+
+// Set where numbers appear on the vertical axis of a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);
@@ -46,5 +48,4 @@ chart.SetSeriesFill(fill, 0, false);
 fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 page.AddObject(chart);
-
 ```

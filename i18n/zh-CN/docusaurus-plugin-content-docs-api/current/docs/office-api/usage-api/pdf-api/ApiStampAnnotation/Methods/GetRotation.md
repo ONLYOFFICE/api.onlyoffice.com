@@ -20,9 +20,13 @@ expression.GetRotation();
 
 ## 示例
 
-此示例获取图章注释的旋转角度。
+查找 PDF 中印章的角度。
 
 ```javascript editor-pdf
+// How do I check how much a stamp is rotated in a PDF?
+
+// See the rotation angle of a stamp annotation in a PDF.
+
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');
 let oldRotAngle = stampAnnot.GetRotation();

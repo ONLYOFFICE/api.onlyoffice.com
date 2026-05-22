@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example returns an array of all paragraphs from the document content.
+Get all paragraphs from a shape's text content in a presentation.
 
 ```javascript editor-pptx
+// How do I access every paragraph inside a shape in a presentation?
+
+// Retrieve the complete list of paragraphs from a shape and format the first one.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -47,5 +51,4 @@ const infoParagraph = Api.CreateParagraph();
 infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
 docContent.Push(infoParagraph);
 slide.AddObject(shape);
-
 ```

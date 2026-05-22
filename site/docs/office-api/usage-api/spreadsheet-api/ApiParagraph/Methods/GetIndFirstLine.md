@@ -2,30 +2,16 @@
 
 Returns the paragraph first line indentation.
 
-## Syntax
-
-```javascript
-expression.GetIndFirstLine();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md) \| undefined
+Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLine.md).
 
 ## Example
 
-This example shows how to get the paragraph first line indentation.
+Read the first-line indent distance set on a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get first line indent of a paragraph.
+// How do I check how far the first line of a paragraph is indented in a spreadsheet?
 
-// Get paragraph lines using the indent order.
+// Retrieve the leading indent value to confirm the paragraph's opening offset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

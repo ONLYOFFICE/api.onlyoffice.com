@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets rect diff of freeText annotation.
+Calculate the spacing between annotation borders in a PDF.
 
 ```javascript editor-pdf
+// How do I measure the padding around a comment box in a PDF?
+
+// Get the inner border margins of an annotation in a PDF.
+
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
 let page = doc.GetPage(0);
