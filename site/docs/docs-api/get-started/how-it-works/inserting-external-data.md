@@ -57,7 +57,7 @@ The figure and steps below explain how data from one spreadsheet is inserted int
 
 6. If the clipboard contains the source spreadsheet metadata from step 3, and the destination spreadsheet config includes the `onRequestReferenceData` handler, the *Paste link* button appears in the paste dialog.
 
-   <img alt="Paste link" src="/assets/images/editor/paste-link.png" width="550px" />
+   ![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
 7. When the user clicks *Paste link*, a formula is inserted into the current cell and the `referenceData` object is saved to the destination file. The formula has the following format:
 
@@ -91,7 +91,7 @@ The figure and steps below explain how data from one spreadsheet is inserted int
    }
    ```
 
-   <img alt="Update values" src="/assets/images/editor/update-values.png" width="700px" />
+   ![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
 9. To refresh the data, call the [`setReferenceData`](../../usage-api/methods.md#setreferencedata) method. The call must include a [`token`](./security.md) to validate the parameters.
 
@@ -120,7 +120,7 @@ The figure and steps below explain how data from one spreadsheet is inserted int
 
    The `data` parameter contains an object with the unique file data, the file path, and a new browser tab name. To open the referenced external file in a new tab, call [`window.open`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) with the source URL and `windowName`.
 
-   <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
+   ![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
    Example:
 
@@ -150,7 +150,7 @@ The figure and steps below explain how data from one spreadsheet is inserted int
    To send data to the `setReferenceSource` method, search for the file by `referenceData` first. If that field is missing or the file cannot be found, fall back to the `path` parameter.
    :::
 
-   <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
+   ![Change source](/assets/images/editor/change-source.png#gh-light-mode-only)![Change source](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
    Example:
 

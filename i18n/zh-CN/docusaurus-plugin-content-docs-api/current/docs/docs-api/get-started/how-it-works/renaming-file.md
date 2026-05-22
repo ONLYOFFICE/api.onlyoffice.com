@@ -20,8 +20,7 @@ sidebar_position: -16
 
 2. 在编辑器初始化配置中，定义 [onRequestRename](../../usage-api/config/events.md#onrequestrename) 事件处理程序。当用户在编辑器菜单中选择*重命名...*时，此事件会在 `event.data` 中传递新名称（不含文件扩展名）。在处理程序中，将新名称发送到您的服务器，以便在**文档存储服务**中重命名文件。
 
-   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />
-   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
+   ![onRequestRename](/assets/images/editor/onRequestRename.png#gh-light-mode-only)![onRequestRename](/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestRename(event) {
