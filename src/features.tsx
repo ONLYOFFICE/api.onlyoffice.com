@@ -95,7 +95,7 @@ export const DocSpaceFeatures: Features = {
     },
     {
       title: 'Embed SDK',
-      link: 'javascript-sdk/overview/overview',
+      link: 'javascript-sdk/get-started',
       description: (
         <>
           Embed DocSpace into your website as a frame using JavaScript APIs—choose to display an entire portal, a specific room, or a single document.
