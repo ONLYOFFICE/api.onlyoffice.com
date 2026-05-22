@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取组合框表单对象的类类型。
+识别文档中组合框表单的类类型。
 
 ```javascript editor-forms
-// How can I get the class type of a combo box form?
+// How do I check what class type a combo box form belongs to in a document?
 
-// Get the class type of a combo box form and display it in the document.
+// Distinguish a combo box form from other form objects by reading its type label.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

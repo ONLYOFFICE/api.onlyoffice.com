@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。 |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 指定正值（升高文本）或负值（降低文本） |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在 PDF 文档中此 run 的文本相对于周围非定位文本的默认基线升高或降低的量。
+调整 PDF 中的文本基线对齐。
 
 ```javascript editor-pdf
-// How to change inline position of the text in a PDF document.
+// How do I move text up or down relative to other text in a PDF?
 
-// Create a new text run and make its position lower or higher in a PDF document.
+// Raise or lower text positioning in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

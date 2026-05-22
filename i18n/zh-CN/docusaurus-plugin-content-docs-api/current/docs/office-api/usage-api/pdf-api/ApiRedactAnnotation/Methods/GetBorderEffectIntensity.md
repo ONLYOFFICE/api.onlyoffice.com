@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其边框效果强度。
+检索 PDF 中注释上边框效果的强度级别。
 
 ```javascript editor-pdf
-// How do I get the border effect intensity in a PDF document?
+// What is the border effect intensity value for an annotation in a PDF?
 
-// Get the border effect intensity using an annotation object in a PDF document.
+// Check the strength of a cloud or other border effect applied to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get rich paragraph properties from rich paragraph in a PDF document.
+Retrieve paragraph formatting options in a PDF.
 
 ```javascript editor-pdf
-// How can I get the para pr using a rich paragraph in a PDF document?
+// How can I access paragraph settings in a PDF?
 
-// Get the para pr for a rich paragraph in a PDF document.
+// Extract formatting properties from a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

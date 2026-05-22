@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更新当前文档中的所有字段。
+自动刷新文档中的所有字段。
 
 ```javascript editor-docx
-// How to update all forms in the document.
+// How do I update every field at once in a document?
 
-// Edit document fields and then update all of them.
+// Keep page numbers, cross-references, and other dynamic fields current after editing content in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");

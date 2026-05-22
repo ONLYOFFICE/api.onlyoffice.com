@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为形状设置轮廓属性。在 PDF 文档中创建矩形并将其轮廓更改为粗蓝线。
+在 PDF 中为形状添加边框。
 
 ```javascript editor-pdf
-// How to set line for a shape in a PDF document?
+// How do I customize the outline of a shape in a PDF?
 
-// Set line and display the result in a PDF document.
+// Give a shape a colored border with specific thickness in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

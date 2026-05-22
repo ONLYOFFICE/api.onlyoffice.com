@@ -20,12 +20,12 @@ expression.GetDocument();
 
 ## 示例
 
-获取文档中的当前文档。
+向当前文档添加带有文本的新段落。
 
 ```javascript editor-docx
-// Return the current document object and add a paragraph to it.
+// How do I access the open document and add content to it in a document?
 
-// Create the paragraph object, add a text to it, and insert this object into the document object.
+// Insert a paragraph into the active document using a reference to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

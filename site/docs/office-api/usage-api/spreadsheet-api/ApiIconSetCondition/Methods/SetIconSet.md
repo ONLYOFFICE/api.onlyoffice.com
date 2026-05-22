@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Change the icon set type for conditional formatting in a spreadsheet.
+Apply a specific icon set to a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to modify the icon set type used in conditional formatting.
+// How do I choose which icon set appears in a conditional formatting rule in a spreadsheet?
 
-// Set a different icon set type for the formatting rule.
+// Switch the icons used to visualize data ranges without changing the rule itself.
 
 let worksheet = Api.GetActiveSheet();
 

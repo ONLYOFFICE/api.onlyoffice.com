@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将十进制数转换为二进制。
+在电子表格中将数字从十进制转换为二进制格式。
 
 ```javascript editor-xlsx
-// How to get decimal number from binary in a spreadsheet.
+// What is a decimal number expressed as binary in a spreadsheet?
 
-// Use function to convert a decimal number to binary in a spreadsheet.
+// Transform your decimal numbers into their binary equivalents in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

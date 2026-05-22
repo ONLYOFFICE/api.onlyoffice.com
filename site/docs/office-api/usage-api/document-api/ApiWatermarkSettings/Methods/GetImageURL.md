@@ -20,12 +20,12 @@ string \| null
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Read the web address of a watermark image in a document.
 
 ```javascript editor-docx
-// How to get the URL of the image in a document.
+// How do I find out where the watermark image is loaded from in a document?
 
-// Get the watermark image link address in a document.
+// Retrieve the source link of a watermark image in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

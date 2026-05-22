@@ -6,12 +6,12 @@ Inherited from [ApiFormatCondition.GetFillColor](../../ApiFormatCondition/Method
 
 ## Example
 
-Get the background color from a conditional formatting rule.
+Read the background color set by a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve background colors from conditional formatting rules.
+// How do I find out what background color a conditional formatting rule applies to matching cells in a spreadsheet?
 
-// Get conditional formatting rule background color.
+// Confirm the highlight color of an existing rule before updating it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ expression.GetActiveSheet();
 
 ## 示例
 
-获取电子表格中当前工作簿的名称（文件名）。
+检索当前打开的工作表并在电子表格中显示其名称。
 
 ```javascript editor-xlsx
-// How can I get active sheet using a workbook in a spreadsheet?
+// How do I find out which sheet the user is looking at right now in a spreadsheet?
 
-// Get active sheet for a workbook in a spreadsheet.
+// Capture the active sheet's name and write it into a shape on the same sheet in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();

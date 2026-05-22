@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中统一颜色对象的类类型。
+确定演示文稿中颜色对象的数据类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a uni color in a presentation?
+// How do I find out what type of color object is being used in a presentation?
 
-// Get the class type of a uni color and display it in the presentation.
+// Get the class name identifier for a color object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

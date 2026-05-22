@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为图标集阈值启用百分位值。
+将电子表格中图标集阈值切换为使用百分位值而非固定数字。
 
 ```javascript editor-xlsx
-// How to configure icon set to use percentile values instead of actual values in a spreadsheet.
+// How do I make icon set boundaries based on percentiles rather than exact values in a spreadsheet?
 
-// Enable percentile values for icon set threshold calculation in a spreadsheet.
+// Compare cell values by their relative position in the data range instead of their absolute amounts.
 
 let worksheet = Api.GetActiveSheet();
 

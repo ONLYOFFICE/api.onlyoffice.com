@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查演示文稿中的选区是否为空。
+确定演示文稿中的当前选区是否为空。
 
 ```javascript editor-pptx
-// How can I is empty using a selection in a presentation?
+// How do I check whether anything is selected in a presentation?
 
-// Is empty for a selection in a presentation.
+// Test if the selection contains items before and after selecting a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

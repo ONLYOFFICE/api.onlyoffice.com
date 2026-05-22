@@ -23,12 +23,12 @@ expression.Split(nRow, nCol);
 
 ## 示例
 
-将单元格拆分为指定数量的行和列。
+在文档中将表格单元格分割为多行多列。
 
 ```javascript editor-docx
-// Split the first cell into two.
+// How do I split one table cell into several smaller cells in a document?
 
-// Split for a table cell in a document.
+// Break a single cell apart into a grid of cells to reorganize a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

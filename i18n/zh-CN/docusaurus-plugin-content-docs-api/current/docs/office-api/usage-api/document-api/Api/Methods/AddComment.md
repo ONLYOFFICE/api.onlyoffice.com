@@ -25,12 +25,12 @@ expression.AddComment(element, text, author, userId);
 
 ## 示例
 
-在文档中向第一个段落添加文本和批注。
+在文档中为段落添加指定作者的批注。
 
 ```javascript editor-docx
-// The comment is attached to the paragraph with the specified author name.
+// How do I attach a comment to a paragraph in a document?
 
-// Add a paragraph to the document and comment on it.
+// Annotate a paragraph with reviewer feedback and an author name in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -24,12 +24,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-向文档添加批注。
+向文档添加带有作者的批注。
 
 ```javascript editor-docx
-// How to comment the document.
+// How do I add an authored comment to a document?
 
-// Add comment to the document indicating the author.
+// Annotate a document with a reviewer's note tied to a specific author in a document.
 
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 

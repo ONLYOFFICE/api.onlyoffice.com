@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中文本控件返回的类类型。
+识别 PDF 中文本输入字段的类型。
 
 ```javascript editor-pdf
-// How do I check what type a text widget object is in a PDF document?
+// How do I determine what kind of form field this is in a PDF?
 
-// Retrieve and output the class type string for a text widget in a PDF document.
+// Read the classification of a text widget element in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

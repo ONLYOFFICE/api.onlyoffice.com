@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中容器的标注属性。
+读取分配给文档中内容控件的标签。
 
 ```javascript editor-docx
-// Create a block content control, set a label to it, and return this label to insert it into the second paragraph of the document.
+// How do I get the label of a content control in a document?
 
-// How to get a label from the block-level content control object in a document.
+// Set a label on a content control and then display that label as text in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

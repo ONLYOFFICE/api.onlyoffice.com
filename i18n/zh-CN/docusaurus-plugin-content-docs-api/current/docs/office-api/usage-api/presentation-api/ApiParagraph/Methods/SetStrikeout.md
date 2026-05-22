@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-对段落文本应用删除线格式。
+在演示文稿中为段落文本应用删除线格式。
 
 ```javascript editor-pptx
-// How can I set strikeout using a paragraph in a presentation?
+// How do I add a line through text in a presentation?
 
-// Set strikeout for a paragraph in a presentation.
+// Strike through text by applying strikeout formatting in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

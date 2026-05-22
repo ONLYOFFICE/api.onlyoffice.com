@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the paragraph contents justification in a spreadsheet.
+Align paragraph text to the center inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to center a paragraph text in a spreadsheet.
+// How do I change the horizontal alignment of a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying its justification type in a spreadsheet.
+// Control whether paragraph text snaps to the left, right, center, or stretches across the full width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Move down the specified role in a form document.
+Shift a role to a lower position in the fill order in a document.
 
 ```javascript editor-forms
-// How to move down for a form roles?
+// How do I change the order of roles to place one later in the sequence in a document?
 
-// Move down and display the result in a form document.
+// Reposition a role downward in the list and display the updated order in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

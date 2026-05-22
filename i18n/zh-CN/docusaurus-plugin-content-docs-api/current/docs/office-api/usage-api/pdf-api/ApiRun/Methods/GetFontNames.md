@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取 PDF 文档中 run 内所有元素的所有字体名称。
+列出 PDF 中文本使用的所有字体。
 
 ```javascript editor-pdf
-// How to get all font names used in the text in a PDF document.
+// How do I see all the font names used in a text element in a PDF?
 
-// Retrieve text run font names and display them in the page.
+// Display the fonts applied to text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

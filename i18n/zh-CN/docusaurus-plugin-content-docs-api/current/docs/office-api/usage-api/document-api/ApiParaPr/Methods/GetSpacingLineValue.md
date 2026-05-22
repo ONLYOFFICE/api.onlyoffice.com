@@ -20,12 +20,12 @@ expression.GetSpacingLineValue();
 
 ## 示例
 
-获取文档中的段落行距值。
+读取应用于段落的行距值并在文档中显示。
 
 ```javascript editor-docx
-// How to get the spacing line value of the paragraph and display it in a document.
+// How do I get the line spacing value of a paragraph in a document?
 
-// Get the paragraph spacing line value in a document.
+// Confirm the exact spacing amount by printing the numeric line spacing value after setting triple-line spacing in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom triangle geometry and apply it to a shape. Uses basic path drawing commands: MoveTo, LineTo and Close in a document.
+Set the starting point of a custom shape's drawing path in a document.
 
 ```javascript editor-docx
-// How to move to for a geometry path in a document?
+// How do I position the pen at a specific point before drawing a shape's outline in a document?
 
-// Move to and display the result in a document.
+// Begin a new path segment from a chosen coordinate to control where lines start in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

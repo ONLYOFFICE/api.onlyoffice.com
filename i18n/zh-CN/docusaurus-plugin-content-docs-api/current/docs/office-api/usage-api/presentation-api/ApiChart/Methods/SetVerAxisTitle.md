@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定图表垂直轴标题。
+为演示文稿中图表的垂直轴添加标签。
 
 ```javascript editor-pptx
-// Title the chart's vertical axis in a presentation.
+// Name the scale or values shown on the Y-axis of a chart in a presentation.
 
-// Create a chart, set its properties and name its vertical axis title in a presentation.
+// Create a heading for the vertical measurement axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

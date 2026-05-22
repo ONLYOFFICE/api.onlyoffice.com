@@ -15,7 +15,7 @@ expression.GetHeader(sType, isCreate);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | Required | [HdrFtrType](../../Enumeration/HdrFtrType.md) |  | Header type to get the content from. |
-| isCreate | Optional | boolean | false | Specifies whether to create a new header or not with the specified header type in case no header with such a type could be found in the current section. |
+| isCreate | Optional | boolean | false | Specifies whether to create a new header or not with the specified header type in case |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.GetHeader(sType, isCreate);
 
 ## Example
 
-Get the content for the specified header type in a document.
+Access the header area of a section in a document.
 
 ```javascript editor-docx
-// How to get the header of the page.
+// How do I retrieve the header from a specific section in a document?
 
-// Get the default header from the final section in a document.
+// Open the header region to add or inspect text that appears at the top of pages in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

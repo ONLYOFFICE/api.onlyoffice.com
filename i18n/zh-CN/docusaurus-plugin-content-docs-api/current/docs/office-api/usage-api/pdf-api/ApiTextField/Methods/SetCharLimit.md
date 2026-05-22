@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中添加文本字段并设置字符限制。
+限制可以输入到 PDF 文本字段中的字符数。
 
 ```javascript editor-pdf
-// How to set char limit for a text field in a PDF document?
+// How do I prevent users from typing beyond a certain character count in a PDF?
 
-// Set char limit and display the result in a PDF document.
+// Control how many characters a text field will accept in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

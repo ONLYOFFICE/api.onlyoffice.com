@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查内容控件是否为表单。
+确定文档中的内联内容控件是否属于表单。
 
 ```javascript editor-docx
-// How to know whether the inline text control is a form or not.
+// How do I find out whether an inline content control is part of a form in a document?
 
-// Check whether the inline text control is a fomrm and display it in a document.
+// Separate form-bound controls from standalone controls to apply different processing rules in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定图表图例字体大小。
+更改演示文稿中图表图例的文本大小。
 
 ```javascript editor-pptx
-// How to resize a font of a chart legend in a presentation.
+// How do I make the legend text larger or smaller in a presentation?
 
-// Create a chart, set its properties and its legend's font size in a presentation.
+// Create a chart and adjust the font size of the text in its legend in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

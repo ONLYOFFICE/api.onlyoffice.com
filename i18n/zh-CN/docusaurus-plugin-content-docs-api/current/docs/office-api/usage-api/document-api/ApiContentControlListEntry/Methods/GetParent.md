@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取文档中列表项集合中内容控件列表项的父级。
+访问文档中拥有列表条目的父下拉列表或组合框控件。
 
 ```javascript editor-docx
-// How to get the parent for a content control list entry in a document?
+// How do I get the parent control of a list entry in a document?
 
-// Get the parent and display the result in a document.
+// Trace ownership from a list item back to its containing control when you need to work with the control directly in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

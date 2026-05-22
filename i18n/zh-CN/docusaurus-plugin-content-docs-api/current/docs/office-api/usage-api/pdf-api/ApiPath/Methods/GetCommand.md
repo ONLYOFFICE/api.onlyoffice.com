@@ -22,12 +22,12 @@ expression.GetCommand(nIndex);
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+从 PDF 中形状的轮廓检索特定绘图指令。
 
 ```javascript editor-pdf
-// How do I get the command in a PDF document?
+// How do I access one step of a shape's outline in a PDF?
 
-// Get the command using a geometry path object in a PDF document.
+// Find and inspect an individual command that builds a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

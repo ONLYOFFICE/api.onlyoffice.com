@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetPageMargins(nLeft, nTop, nRight, nBottom);
+expression.SetPageMargins(left, top, right, bottom);
 ```
 
 `expression` - 表示 [ApiSection](../ApiSection.md) 类的变量。
@@ -14,10 +14,10 @@ expression.SetPageMargins(nLeft, nTop, nRight, nBottom);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | 必需 | [twips](../../Enumeration/twips.md) |  | 左边距宽度，以点的二十分之一为单位（1/1440 英寸）。 |
-| nTop | 必需 | [twips](../../Enumeration/twips.md) |  | 上边距高度，以点的二十分之一为单位（1/1440 英寸）。 |
-| nRight | 必需 | [twips](../../Enumeration/twips.md) |  | 右边距宽度，以点的二十分之一为单位（1/1440 英寸）。 |
-| nBottom | 必需 | [twips](../../Enumeration/twips.md) |  | 下边距高度，以点的二十分之一为单位（1/1440 英寸）。 |
+| left | 必需 | [twips](../../Enumeration/twips.md) |  | 左边距宽度，以点的二十分之一为单位（1/1440 英寸）。 |
+| top | 必需 | [twips](../../Enumeration/twips.md) |  | 上边距高度，以点的二十分之一为单位（1/1440 英寸）。 |
+| right | 必需 | [twips](../../Enumeration/twips.md) |  | 右边距宽度，以点的二十分之一为单位（1/1440 英寸）。 |
+| bottom | 必需 | [twips](../../Enumeration/twips.md) |  | 下边距高度，以点的二十分之一为单位（1/1440 英寸）。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-指定此节中所有页面的页边距。
+设置文档中节内页面的上、下、左、右边距。
 
 ```javascript editor-docx
-// How to set page margins.
+// How do I define the blank space around the edges of each page in a document?
 
-// Update the margins of the page.
+// Adjust the border spacing on all sides of the pages within a section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

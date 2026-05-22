@@ -15,7 +15,7 @@ expression.CHOOSE(arg1, args);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 值在值列表中的位置，一个大于或等于 1 但小于值列表中值数量的数值。 |
-| args | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 254 个要分析的值或选定的单元格区域。第一个参数是必需的，后续参数是可选的。参数可以是数字、区域、名称或文本字符串。 |
+| args | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 254 个值或要分析的选定单元格范围。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中基于索引号从值列表中选择要执行的值或操作。
+通过指定位置编号从电子表格中的列表选择一个值。
 
 ```javascript editor-xlsx
-// How to choose a value or action to perform from a list of values, based on an index number.
+// Return the item at a specific index from a collection of values in a spreadsheet.
 
-// Use function to choose a value or action to perform from a list of values, based on an index number.
+// Use an index to access a particular entry in your choice options in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

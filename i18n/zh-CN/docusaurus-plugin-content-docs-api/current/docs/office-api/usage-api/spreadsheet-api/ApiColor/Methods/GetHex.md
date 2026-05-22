@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中形状填充颜色的十六进制字符串。
+读取电子表格中使用的颜色的十六进制表示。
 
 ```javascript editor-xlsx
-// How do I get the hex in a spreadsheet?
+// How do I obtain the hex code of a fill color applied to a shape in a spreadsheet?
 
-// Get the hex using a color object in a spreadsheet.
+// Inspect a shape's fill color and extract its hex value for display in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGB(255, 111, 61);

@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-获取文档中包含该内容控件的内容控件。
+查找文档中包裹嵌套内容控件的外部内容控件。
 
 ```javascript editor-docx
-// How to get the parent content control for a block-level content control in a document?
+// How do I access the parent content control of a nested content control in a document?
 
-// Get the parent content control and display the result in a document.
+// Nest one content control inside another and then name the outer one in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

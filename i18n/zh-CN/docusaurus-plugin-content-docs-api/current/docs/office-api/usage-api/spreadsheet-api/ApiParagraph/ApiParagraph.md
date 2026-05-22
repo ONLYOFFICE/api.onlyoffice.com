@@ -23,18 +23,22 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [GetJc](./Methods/GetJc.md) | "left" \| "right" \| "both" \| "center" \| undefined | 返回段落内容对齐方式。 |
 | [GetLastRunWithText](./Methods/GetLastRunWithText.md) | [ApiRun](../ApiRun/ApiRun.md) | 返回当前段落中最后一个包含文本的 Run。 |
 | [GetNext](./Methods/GetNext.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 返回下一个段落。 |
-| [GetOutlineLvl](./Methods/GetOutlineLvl.md) | Number | 返回指定属性的大纲级别。 |
+| [GetOutlineLvl](./Methods/GetOutlineLvl.md) | Number \| undefined | 返回指定属性的大纲级别。 |
 | [GetParaPr](./Methods/GetParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 返回段落属性。 |
 | [GetPrevious](./Methods/GetPrevious.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 返回上一个段落。 |
 | [GetSpacingAfter](./Methods/GetSpacingAfter.md) | [twips](../Enumeration/twips.md) | 返回当前段落的段后间距值。 |
 | [GetSpacingBefore](./Methods/GetSpacingBefore.md) | [twips](../Enumeration/twips.md) | 返回当前段落的段前间距值。 |
 | [GetSpacingLineRule](./Methods/GetSpacingLineRule.md) | "auto" \| "atLeast" \| "exact" \| undefined | 返回段落行距规则。 |
 | [GetSpacingLineValue](./Methods/GetSpacingLineValue.md) | [twips](../Enumeration/twips.md) \| [line240](../Enumeration/line240.md) \| undefined | 返回段落行距值。 |
+| [GetTabs](./Methods/GetTabs.md) | [TabStop](../Enumeration/TabStop.md)[] | 返回当前段落的自定义制表位。 |
+| [GetText](./Methods/GetText.md) | string | 返回段落文本。 |
 | [InsertParagraph](./Methods/InsertParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) \| null | 在指定位置插入段落。 |
 | [Last](./Methods/Last.md) | [ParagraphContent](../Enumeration/ParagraphContent.md) | 返回段落的最后一个元素。 |
+| [MoveCursorToEnd](./Methods/MoveCursorToEnd.md) | boolean | 将光标移动到段落末尾。 |
+| [MoveCursorToStart](./Methods/MoveCursorToStart.md) | boolean | 将光标移动到段落开头。 |
 | [Push](./Methods/Push.md) | boolean | 向当前段落添加元素。 |
-| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前段落中移除所有元素。💡 当从段落中移除所有元素时，将自动创建一个新的空 Run。如果要向此 Run 添加内容，请使用 [ApiParagraph#GetElement](../ApiParagraph/Methods/GetElement.md) 方法。 |
-| [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。💡 如果移除的元素是段落的最后一个元素（即所有元素都从段落中移除），将自动创建一个新的空 Run。如果要向此 Run 添加内容，请使用 [ApiParagraph#GetElement](../ApiParagraph/Methods/GetElement.md) 方法。 |
+| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前段落中移除所有元素。 |
+| [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。 |
 | [SetBold](./Methods/SetBold.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 为文本字符设置粗体属性。 |
 | [SetBullet](./Methods/SetBullet.md) | 无 | 设置当前段落的项目符号或编号。 |
 | [SetCaps](./Methods/SetCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的任何小写字符仅格式化显示为其对应的大写字母。 |
@@ -48,13 +52,14 @@ ApiParagraph 是 [ApiParaPr](../ApiParaPr/ApiParaPr.md) 的子类。
 | [SetItalic](./Methods/SetItalic.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 为文本字符设置斜体属性。 |
 | [SetJc](./Methods/SetJc.md) | boolean | 设置段落内容对齐方式。 |
 | [SetOutlineLvl](./Methods/SetOutlineLvl.md) | boolean | 设置指定属性的大纲级别。 |
-| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的所有小写字母仅格式化显示为比指定字体大小小两磅的大写字母。 |
+| [SetSmallCaps](./Methods/SetSmallCaps.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落中的所有小写字母字符仅格式化显示为其对应的大写 |
 | [SetSpacing](./Methods/SetSpacing.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 设置以二十分之一磅为单位测量的文本间距。 |
-| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。如果 isAfterAuto 参数的值为 true，则 nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则将其解释为 false。 |
-| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。如果 isBeforeAuto 参数的值为 true，则 nBefore 的任何值都将被忽略。如果未指定 isBeforeAuto 参数，则将其解释为 false。 |
-| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。如果 sLineRule 参数的值为 "atLeast" 或 "exact"，则 nLine 的值将被解释为磅的二十分之一。如果 sLineRule 参数的值为 "auto"，则 nLine 参数的值将被解释为行的 240 分之一。 |
+| [SetSpacingAfter](./Methods/SetSpacingAfter.md) | boolean | 设置当前段落的段后间距。如果 isAfterAuto 参数的值为 true，则 |
+| [SetSpacingBefore](./Methods/SetSpacingBefore.md) | boolean | 设置当前段落的段前间距。如果 isBeforeAuto 参数的值为 true，则 |
+| [SetSpacingLine](./Methods/SetSpacingLine.md) | boolean | 设置段落行距。如果 sLineRule 参数的值为 |
 | [SetStrikeout](./Methods/SetStrikeout.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示为中间有一条水平线穿过。 |
-| [SetTabs](./Methods/SetTabs.md) | boolean | 指定将用于当前段落中任何制表符的自定义制表位序列。**警告**：aPos 数组和 aVal 数组的长度**必须**相等。 |
+| [SetTabs](./Methods/SetTabs.md) | boolean | 指定将用于当前段落中任何制表符的自定义制表位序列。 |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定文本替换段落内容。 |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | 设置段落文本属性。 |
-| [SetUnderline](./Methods/SetUnderline.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示时在字符正下方有一条线（小于行中字符上下的所有间距）。 |
+| [SetUnderline](./Methods/SetUnderline.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 指定此段落的内容显示时，字符正下方会出现一条线 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiParagraph 对象转换为 JSON 对象。 |

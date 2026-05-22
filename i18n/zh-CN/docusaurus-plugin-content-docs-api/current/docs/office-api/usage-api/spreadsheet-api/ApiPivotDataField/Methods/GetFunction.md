@@ -20,12 +20,12 @@ expression.GetFunction();
 
 ## 示例
 
-获取电子表格中数据字段的函数。
+读取电子表格中应用于数据透视表数据字段的汇总函数。
 
 ```javascript editor-xlsx
-// How to get a table element function in a spreadsheet.
+// How do I check which calculation method a data field uses in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's function in a spreadsheet.
+// Confirm whether a data field totals values by sum, count, or another method in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

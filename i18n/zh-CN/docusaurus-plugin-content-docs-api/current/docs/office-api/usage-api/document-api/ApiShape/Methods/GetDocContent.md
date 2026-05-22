@@ -20,12 +20,12 @@ expression.GetDocContent();
 
 ## 示例
 
-获取文档中可以插入段落或文本 run 的形状内部内容。
+检索文档中形状的内部书写区域作为内容容器。
 
 ```javascript editor-docx
-// How to get the doc content of the drawing in a document.
+// How do I obtain the document-level content block held inside a shape in a document?
 
-// Retrieve the content of the shape add the paragraph to it in a document.
+// Write into a shape by gaining access to its document content region in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为当前 OLE 对象设置应用程序 ID。
+为演示文稿中的嵌入对象分配应用程序标识符。
 
 ```javascript editor-pptx
-// Set an application ID for an OLE object in a presentation.
+// How do I set the application ID for an embedded object in a presentation?
 
-// Create an OLE object and set its application ID in a presentation.
+// Configure which application should handle an embedded object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

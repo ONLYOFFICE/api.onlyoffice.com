@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-从电子表格中形状内的超链接获取元素。
+访问电子表格中超链接内的特定内容元素。
 
 ```javascript editor-xlsx
-// How do I get the element in a spreadsheet?
+// How do I read the inner content of a hyperlink in a spreadsheet?
 
-// Get the element using a hyperlink object in a spreadsheet.
+// Pull out an individual piece from a hyperlink by its position in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

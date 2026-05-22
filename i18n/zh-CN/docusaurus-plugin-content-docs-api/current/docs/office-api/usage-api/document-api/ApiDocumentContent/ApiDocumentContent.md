@@ -7,6 +7,8 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddElement](./Methods/AddElement.md) | boolean | 使用在文档内容中的位置添加段落、表格或块级内容控件。 |
+| [AddParagraph](./Methods/AddParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落并将其追加到文档内容的末尾。 |
+| [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | 将指定文本追加到文档内容的末尾。 |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | 从文档内容返回图表对象集合。 |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | 从文档内容返回绘图对象集合。 |
 | [GetAllImages](./Methods/GetAllImages.md) | [ApiImage](../ApiImage/ApiImage.md)[] | 从文档内容返回图像对象集合。 |
@@ -27,8 +29,10 @@
 | [GetText](./Methods/GetText.md) | string | 返回当前文档内容对象的内部文本。 |
 | [IsEndnote](./Methods/IsEndnote.md) | boolean | 检查当前文档内容是否为尾注。 |
 | [IsFootnote](./Methods/IsFootnote.md) | boolean | 检查当前文档内容是否为脚注。 |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | 将光标移动到主文档中此脚注/尾注的引用处。如果此文档内容不是脚注/尾注，则不执行任何操作。 |
 | [Push](./Methods/Push.md) | boolean | 推送段落或表格以将其实际添加到文档中。 |
-| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。💡 当所有元素被移除时，会自动创建一个新的空段落。如果要向此段落添加内容，请使用 [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) 方法。 |
+| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | 从当前文档或当前文档元素中移除所有元素。 |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | 使用指定的位置移除元素。 |
 | [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | 选择此脚注/尾注的引用。如果此文档内容不是脚注/尾注，则不执行任何操作。 |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | 用指定的文本替换当前文档内容对象的所有内容， |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiDocumentContent 对象转换为 JSON 对象。 |

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档中用新的绘图对象替换绘图对象。
+在文档中用形状绘图替换现有图表。
 
 ```javascript editor-docx
-// How to change the image to another one in a document.
+// How do I substitute one drawing object for another in a document?
 
-// Add the new drawing instead of another one in a document.
+// Swap a bar chart for a gradient rectangle to update the visual layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

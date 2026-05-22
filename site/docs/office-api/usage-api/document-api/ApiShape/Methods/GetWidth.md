@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetWidth](../../ApiDrawing/Methods/GetWidth.md).
 
 ## Example
 
-Get the width of the drawing in a document.
+Read the width of a drawing object in a document.
 
 ```javascript editor-docx
-// How to print the width of the drawing in a document.
+// How do I get the width of a shape in a document?
 
-// Create a rectangle and then show its width in mm in a document.
+// Display the measured width of a drawing as text inside the shape itself in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

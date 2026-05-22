@@ -14,7 +14,7 @@ expression.MAX(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the largest number will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the largest number will be returned. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the largest value in a set of values. Ignores logical values and text in a spreadsheet.
+Find the largest number in a set of values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a maximum number from a list of numbers in a spreadsheet.
+// How do I identify the highest sales amount from a list of quarterly results in a spreadsheet?
 
-// Use a function to find a maximum from a list in a spreadsheet.
+// Get the maximum value from a collection of numbers in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

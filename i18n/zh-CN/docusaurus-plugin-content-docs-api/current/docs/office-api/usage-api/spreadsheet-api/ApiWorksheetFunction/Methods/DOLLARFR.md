@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中将以小数表示的美元价格转换为以分数表示的美元价格。
+将十进制美元价格转换为其分数等值。
 
 ```javascript editor-xlsx
-// How to convert a dollar price from decimal to fraction in a spreadsheet.
+// Transform prices from decimal notation to fractional notation.
 
-// Use function to get fraction from decimal price in a spreadsheet.
+// Use the DOLLARFR function to convert decimal prices to fractional format.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

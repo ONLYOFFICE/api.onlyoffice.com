@@ -20,12 +20,12 @@ expression.GetPaths();
 
 ## 示例
 
-分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
+从演示文稿中形状的几何图形检索所有路径。
 
 ```javascript editor-pptx
-// How to get the paths for a geometry in a presentation?
+// How do I access all drawing paths in a shape in a presentation?
 
-// Get the paths and display the result in a presentation.
+// Extract the complete list of paths that define a shape's outline in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

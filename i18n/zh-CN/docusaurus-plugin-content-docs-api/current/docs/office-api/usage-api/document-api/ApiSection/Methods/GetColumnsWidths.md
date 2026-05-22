@@ -20,12 +20,12 @@ expression.GetColumnsWidths();
 
 ## 示例
 
-指定文档中当前节的所有列具有不同的宽度。
+读取文档中节中每列的宽度。
 
 ```javascript editor-docx
-// How to get the columns widths for a section in a document?
+// How do I find out how wide each column is in a document?
 
-// Get the columns widths and display the result in a document.
+// Retrieve the individual column widths from a multi-column layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

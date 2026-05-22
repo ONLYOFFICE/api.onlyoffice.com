@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档内容中获取所有表格的数组。
+从文档中的内容容器检索所有表格。
 
 ```javascript editor-docx
-// Get all tables added to the document.
+// How do I get every table inside a shape or content area in a document?
 
-// How to retrieve all tables and add a text to its first cell.
+// Write text into the first cell of the first table found inside a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

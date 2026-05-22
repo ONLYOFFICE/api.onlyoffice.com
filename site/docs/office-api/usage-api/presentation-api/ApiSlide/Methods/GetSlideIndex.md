@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get a position of the current slide in the presentation.
+Get the position of the current slide in the presentation.
 
 ```javascript editor-pptx
-// How to return a slide index.
+// Retrieve the slide index using GetSlideIndex method.
 
-// Get a slide and return its index.
+// Display the slide index value on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

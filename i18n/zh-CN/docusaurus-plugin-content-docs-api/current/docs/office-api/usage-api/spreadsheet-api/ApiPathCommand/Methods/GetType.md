@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。在单元格中显示命令总数和第一个命令信息。
+识别路径命令表示的绘图指令类型并在电子表格中显示。
 
 ```javascript editor-xlsx
-// How to get the type for a path command in a spreadsheet?
+// How do I find out the type of a path command on a shape in a spreadsheet?
 
-// Get the type and display the result in a spreadsheet.
+// Distinguish between move, line, curve, and arc steps in a shape's drawing path in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

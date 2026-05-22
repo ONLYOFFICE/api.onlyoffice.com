@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中向 run 位置添加换行符并从新行开始下一个元素。
+在 PDF 中在文本中间创建新行。
 
 ```javascript editor-pdf
-// How to add a line break after a sentence in a text run in a PDF document.
+// How do I move text to the next line in a PDF?
 
-// How to split a text with a line break in a PDF document.
+// Insert a line break in text within a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

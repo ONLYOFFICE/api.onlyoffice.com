@@ -20,12 +20,12 @@ expression.GetGeometry();
 
 ## 示例
 
-从预设星形中获取几何图形信息。显示预设类型并检查几何图形是否为自定义。
+读取文档中形状的几何轮廓和预设类型。
 
 ```javascript editor-docx
-// How can I get the geometry using a shape in a document?
+// How do I find out the exact outline definition used by a shape in a document?
 
-// Get the geometry for a shape in a document.
+// Inspect whether a shape uses a built-in or custom outline path in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

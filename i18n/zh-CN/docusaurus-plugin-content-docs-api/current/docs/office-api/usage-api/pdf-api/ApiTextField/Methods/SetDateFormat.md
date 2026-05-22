@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置日期格式。
+在 PDF 文本字段中按用户期望的方式格式化日期。
 
 ```javascript editor-pdf
-// How do I set date format in a PDF document?
+// How do I make sure dates display in a specific format in a PDF?
 
-// Set date format using a text field object.
+// Apply a date format pattern to a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

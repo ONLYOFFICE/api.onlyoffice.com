@@ -23,9 +23,9 @@ boolean
 在文档中当前光标位置插入空白页。
 
 ```javascript editor-docx
-// How can I insert the blank page using a document in a document?
+// How do I add an empty page at a specific point in a document?
 
-// Insert the blank page for a document in a document.
+// Create a visual separator between sections by placing a fully empty page before subsequent content.
 
 const doc = Api.GetDocument();
 doc.InsertBlankPage();

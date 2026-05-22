@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Check the checkbox in a document.
+Mark a checkbox form as checked in a document.
 
 ```javascript editor-forms
-// How to check a form.
+// How do I programmatically check a checkbox form in a document?
 
-// Set checked for a checkbox form in a document.
+// Pre-select a specific radio button option without requiring manual user interaction in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"key": "Marital status", "tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

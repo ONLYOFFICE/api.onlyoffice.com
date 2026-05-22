@@ -22,12 +22,12 @@ expression.SetStyle(oStyle);
 
 ## 示例
 
-在文档中为当前范围设置样式。
+在文档中为选定的文本部分应用命名样式。
 
 ```javascript editor-docx
-// How to style a text of the range in a document.
+// How do I give a range of words a predefined look such as a heading style in a document?
 
-// Get a range, apply "Heading 2" style to it in a document.
+// Reformat highlighted text by assigning it one of the built-in styles available in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

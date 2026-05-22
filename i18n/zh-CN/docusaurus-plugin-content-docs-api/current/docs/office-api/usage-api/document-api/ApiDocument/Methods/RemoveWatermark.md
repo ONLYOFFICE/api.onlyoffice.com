@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+在文档中应用自定义设置后删除水印。
 
 ```javascript editor-docx
-// How to remove the watermark in a document.
+// How do I add and then delete a watermark in a document?
 
-// Add the watermark with settings and then delete it in a document.
+// Verify that a watermark can be cleared by checking the type before and after removal in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

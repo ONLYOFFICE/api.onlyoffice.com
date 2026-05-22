@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查演示文稿中的文本是否有突出显示。
+检查演示文稿中的文本是否应用了高亮颜色。
 
 ```javascript editor-pptx
-// How to know whether a highlight set to the text in a presentation.
+// How do I find out if text is highlighted in a presentation?
 
-// Get the text properties of the run and find whether it is highlighted or not in a presentation.
+// Read the highlight property of text to determine its highlighting status in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中不同级别段落的大纲级别。
+读取文档中不同层次位置段落分配的大纲级别。
 
 ```javascript editor-docx
-// How to get the outline lvl for a paragraph properties in a document?
+// How do I get the outline level of a paragraph in a document?
 
-// Get the outline lvl and display the result in a document.
+// Verify the heading structure by checking outline levels across multiple paragraphs in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ expression.SetBarFillType(fillType);
 
 ## 示例
 
-设置数据条条件格式规则的条形填充类型。
+控制电子表格中数据条是以纯色还是渐变填充显示。
 
 ```javascript editor-xlsx
-// How to change the fill type setting of a data bar in a spreadsheet.
+// How do I switch between solid and gradient fill styles for data bars in a spreadsheet?
 
-// Set the bar fill type of a data bar conditional formatting rule.
+// Give data bars a uniform look by choosing a consistent fill appearance across cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

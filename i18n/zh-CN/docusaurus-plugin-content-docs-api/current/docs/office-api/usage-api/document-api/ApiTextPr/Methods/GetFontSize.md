@@ -20,12 +20,12 @@ expression.GetFontSize();
 
 ## 示例
 
-获取文档中文本的字体大小。
+读取文档中应用于文本运行的字体大小。
 
 ```javascript editor-docx
-// How to know the font size of the form.
+// How do I find out what font size is set on a piece of text in a document?
 
-// Retrieve text properties of the form to find out its font size.
+// Inspect a text run to confirm the current character size used in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

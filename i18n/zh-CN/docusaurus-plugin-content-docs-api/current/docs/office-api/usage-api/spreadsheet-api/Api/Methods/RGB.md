@@ -24,12 +24,12 @@ expression.RGB(r, g, b);
 
 ## 示例
 
-在电子表格中创建 RGB 格式的颜色并将其用作形状填充。
+从红、绿、蓝值创建颜色并将其作为电子表格中的形状填充应用。
 
 ```javascript editor-xlsx
-// How can I r g b in a spreadsheet?
+// How do I define a custom color using RGB components in a spreadsheet?
 
-// R g b and display the result in a spreadsheet.
+// Fill a shape with a color built from specific red, green, and blue intensities in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGB(186, 218, 85);

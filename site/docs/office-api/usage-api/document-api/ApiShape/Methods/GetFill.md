@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the fill properties from a shape and display detailed information. Creates a shape with gradient fill, retrieve it and show fill details.
+Read the background fill applied to a shape in a document.
 
 ```javascript editor-docx
-// How do I get the fill in a document?
+// How do I inspect the color or gradient covering the inside of a shape in a document?
 
-// Get the fill using a shape object in a document.
+// Extract fill details from a shape to display its visual properties in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

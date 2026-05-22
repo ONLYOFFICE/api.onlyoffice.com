@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-指定在文档中此段落的内容与字符正下方的线条一起显示。
+在文档中为段落的所有文本添加下划线以引起注意。
 
 ```javascript editor-docx
-// How to create a new text and underline it in a document.
+// How do I display a line beneath every word in a paragraph in a document?
 
-// Create a new text run and underline it in a document.
+// Emphasize paragraph content by enabling underlining for the entire block of text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+读取文档中应用于水印文本的格式。
 
 ```javascript editor-docx
-// How to retrieve the text properties from the watermark and display it in the document.
+// How do I find out what font and style settings the watermark text uses in a document?
 
-// Get the text properties from the watermark settings in a document.
+// Inspect the visual style of the text used as a watermark in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取电子表格中批注回复创建的 UTC 格式时间戳。
+读取电子表格中批注回复上记录的 UTC 创建时间。
 
 ```javascript editor-xlsx
-// How to get a time in UTC when a reply was created in a spreadsheet.
+// How do I get the universal timestamp for when a reply was posted to a comment in a spreadsheet?
 
-// Add a comment reply creation timestamp UTC to a range of the worksheet.
+// Retrieve the timezone-neutral posting time of a reply within a comment thread in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

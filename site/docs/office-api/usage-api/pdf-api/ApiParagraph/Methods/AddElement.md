@@ -14,8 +14,8 @@ expression.AddElement(oElement, nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the oElement type is not supported by a paragraph. |
-| nPos | Optional | number |  | The position where the current element will be added. If this value is not specified, then the element will be added at the end of the current paragraph. |
+| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the |
+| nPos | Optional | number |  | The position where the current element will be added. If this value is not |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add a run to the paragraph in a PDF document.
+Insert text content into a paragraph in a PDF.
 
 ```javascript editor-pdf
-// Insert a text run to the paragraph object in a PDF document.
+// How do I add text to a paragraph in a PDF?
 
-// How to add the text run object to the page.
+// Place a text element within a paragraph to display content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

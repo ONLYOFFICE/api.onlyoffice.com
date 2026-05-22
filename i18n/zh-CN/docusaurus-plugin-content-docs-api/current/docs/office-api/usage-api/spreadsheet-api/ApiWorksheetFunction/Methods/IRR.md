@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回一系列现金流的内部收益率。
+计算电子表格中现金流的内部收益率。
 
 ```javascript editor-xlsx
-// How to calculate the internal rate of the return for a series of cash flows in a spreadsheet.
+// How do I find the rate of return on a series of investments in a spreadsheet?
 
-// Use a function to get the internal rate in a spreadsheet.
+// Determine the yield from a sequence of cash flows in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

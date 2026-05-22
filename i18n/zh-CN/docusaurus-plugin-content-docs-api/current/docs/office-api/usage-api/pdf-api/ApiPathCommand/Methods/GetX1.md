@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-从 PDF 文档中的三次贝塞尔曲线提取控制点。在文本形状中显示所有控制点坐标。
+从 PDF 中的三次曲线检索第二个控制点的 x 坐标。
 
 ```javascript editor-pdf
-// How can I get the x1 using a path command in a PDF document?
+// What is the second control point's horizontal position in a PDF?
 
-// Get the x1 for a path command in a PDF document.
+// Extract the second control point's x value from a path in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

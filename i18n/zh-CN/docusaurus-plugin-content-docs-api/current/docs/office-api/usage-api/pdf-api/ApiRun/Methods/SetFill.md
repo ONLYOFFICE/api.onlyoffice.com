@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-在 PDF 文档中为当前文本 run 设置文本颜色。
+在 PDF 中为文本应用颜色填充。
 
 ```javascript editor-pdf
-// How to set solid fill to the text in a PDF document.
+// How do I color text with a fill effect in a PDF?
 
-// Create a new text run and set its font color in a PDF document.
+// Change the appearance of text using a solid color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

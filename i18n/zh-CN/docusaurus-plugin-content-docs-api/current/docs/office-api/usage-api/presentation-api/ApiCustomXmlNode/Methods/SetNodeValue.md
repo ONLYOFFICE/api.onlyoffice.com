@@ -25,9 +25,9 @@ boolean
 在演示文稿中设置当前节点的 XML 内容。
 
 ```javascript editor-pptx
-// How to set node value for a custom XML node in a presentation?
+// Replace a custom XML node with new XML content in a presentation.
 
-// Set node value and display the result in a presentation.
+// Update the value of an existing custom XML node in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

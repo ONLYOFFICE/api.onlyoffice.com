@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建 run 的副本。
+复制文本运行并将副本放入文档中的同一段落。
 
 ```javascript editor-docx
-// How to create a duplicate of the text in a document.
+// How do I reproduce an existing text run and insert it again in a document?
 
-// Create a copy of the run and insert it to the paragraph in a document.
+// Clone a run so the same styled text appears twice within a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

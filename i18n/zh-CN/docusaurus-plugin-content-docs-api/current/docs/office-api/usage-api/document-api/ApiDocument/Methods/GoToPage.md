@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将光标移动到文档中指定页面的开头。
+将光标移动到文档中的特定页面。
 
 ```javascript editor-docx
-// How to navigate to a specific page in the document.
+// How do I navigate to a particular page number in a document?
 
-// Move the cursor to the second page of the document.
+// Jump the editing position to a target page so that typed text lands on that page.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

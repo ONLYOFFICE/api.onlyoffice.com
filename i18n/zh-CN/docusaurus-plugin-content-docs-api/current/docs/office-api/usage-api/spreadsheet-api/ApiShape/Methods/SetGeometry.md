@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-创建自定义三角形并将其添加到工作表。将具有特定填充和笔触的自定义几何图形应用于形状。
+通过提供手工制作的路径数据在电子表格中为现有形状绘制自定义多边形轮廓。
 
 ```javascript editor-xlsx
-// How do I set geometry in a spreadsheet?
+// How do I replace a shape's outline with a custom drawn path in a spreadsheet?
 
-// Set geometry using a shape object in a spreadsheet.
+// Override the default form of a shape with a manually defined geometric path in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

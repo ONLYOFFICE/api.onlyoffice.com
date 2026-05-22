@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查 PDF 文档中的文本是否有下划线。
+检查 PDF 中的文本是否有下划线。
 
 ```javascript editor-pdf
-// How to know whether a text is underlined or not in a PDF document.
+// How do I determine if underline formatting exists on text in a PDF?
 
-// Get the text properties of the run and find whether it is underlined or not in a PDF document.
+// Inspect the underline status of text formatting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

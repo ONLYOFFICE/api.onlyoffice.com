@@ -12,7 +12,9 @@ ApiRadiobuttonField is a subclass of [ApiCheckboxField](../ApiCheckboxField/ApiC
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
 | [GetClassType](./Methods/GetClassType.md) | "radiobuttonField" | Returns a type of the ApiRadiobuttonField class. |
 | [GetFullName](./Methods/GetFullName.md) | string | Gets field full name. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
+| [GetTooltip](./Methods/GetTooltip.md) | boolean | Gets field tooltip |
 | [GetValue](./Methods/GetValue.md) | string | Gets field value |
 | [IsCheckInUnison](./Methods/IsCheckInUnison.md) | boolean | Checks if field will check in unison. |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |
@@ -24,4 +26,5 @@ ApiRadiobuttonField is a subclass of [ApiCheckboxField](../ApiCheckboxField/ApiC
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Sets field required |
 | [SetToggleToOff](./Methods/SetToggleToOff.md) | boolean | Sets field toggle to off prop. |
+| [SetTooltip](./Methods/SetTooltip.md) | boolean | Sets field tooltip |
 | [SetValue](./Methods/SetValue.md) | boolean | Sets field value |

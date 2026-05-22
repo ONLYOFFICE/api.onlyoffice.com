@@ -2,6 +2,10 @@
 
 返回用于遍历当前文档元素的访问器对象。
 
+:::note\
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::
+
 ## 语法
 
 ```javascript
@@ -20,12 +24,12 @@ ApiDocumentVisitor
 
 ## 示例
 
-在文档中使用文档访问者遍历文档元素。
+使用文档访问者遍历文档中的所有段落和表格。
 
 ```javascript editor-docx
-// How can I get the document visitor using a document content in a document?
+// How do I walk through every element in a document content with a visitor in a document?
 
-// Get the document visitor for a document content in a document.
+// Count paragraphs and tables automatically without iterating element indexes by hand.
 
 const doc = Api.GetDocument();
 

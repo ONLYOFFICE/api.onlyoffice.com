@@ -6,12 +6,12 @@ Inherited from [ApiFormatCondition.SetPriority](../../ApiFormatCondition/Methods
 
 ## Example
 
-Set the priority of a conditional formatting rule.
+Assign a specific evaluation rank to a formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the priority value of conditional formatting rules.
+// How do I control which conditional formatting rule takes precedence over others in a spreadsheet?
 
-// Set conditional formatting rule priority.
+// Reorder highlight rules so a chosen one is checked at a particular position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

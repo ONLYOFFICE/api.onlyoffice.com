@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取弧线参数，包括半径和角度。在单元格中显示弧线宽度半径、高度半径、起始角和扫掠角。
+从电子表格中的自定义形状路径读取弧命令的垂直半径。
 
 ```javascript editor-xlsx
-// How to get the h r for a path command in a spreadsheet?
+// How do I find out the height radius of an arc drawn on a shape in a spreadsheet?
 
-// Get the h r and display the result in a spreadsheet.
+// Extract the arc's vertical radius value and write it to a cell for review in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

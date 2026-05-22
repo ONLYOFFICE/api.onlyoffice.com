@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert centimeters to points in a PDF document.
+Convert a distance from centimeters to points in a PDF.
 
 ```javascript editor-pdf
-// How to convert centimeters to points in a PDF document?
+// How do I convert centimeters to points in a PDF?
 
-// Convert centimeters to points using the PDF document API.
+// Display a measurement conversion in a shape in a PDF.
 
 const centimeters = 1000;
 const points = Api.CentimetersToPoints(centimeters);

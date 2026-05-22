@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中使用双倍余额递减法或指定的其他方法计算指定期间资产的折旧。
+使用双倍余额递减法计算电子表格中的资产折旧。
 
 ```javascript editor-xlsx
-// How to count the non-empty cells containing numbers in the field (column) of records in the database that match the conditions you specify.
+// What is the depreciation amount for an asset in a specific period in a spreadsheet?
 
-// Use function to count numbers from non-empty database records that met a condition specified in a spreadsheet.
+// Determine how much value your asset loses with accelerated depreciation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

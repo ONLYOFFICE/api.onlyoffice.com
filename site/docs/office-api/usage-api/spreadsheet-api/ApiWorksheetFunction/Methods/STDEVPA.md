@@ -15,7 +15,7 @@ expression.STDEVPA(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number[] \| number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 values for which the standard deviation will be calculated. The first argument is required, subsequent arguments are optional. Arguments can be numbers, logical values, text strings, names, ranges, or arrays. |
+| args | Required | number[] \| number \| string \| boolean \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 values for which the standard deviation will be calculated. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Calculate standard deviation based on the entire population, including logical values and text. Text and the false logical value have the value 0; the true logical value has the value 1 in a spreadsheet.
+Calculate the standard deviation of a population including logical values and text.
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population considering logical and text data types in a spreadsheet.
+// The STDEVPA function treats text as 0 and logical values as 0 (false) or 1 (true) in population calculations.
 
-// Use a function to get the standard deviation in a spreadsheet.
+// Get the population standard deviation including logical and text values, and place it in cell C1.
 
 const worksheet = Api.GetActiveSheet();
 

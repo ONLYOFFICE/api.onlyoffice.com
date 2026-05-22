@@ -24,12 +24,12 @@ expression.SetBorders(bordersIndex, lineStyle, oColor);
 
 ## 示例
 
-为条件格式规则设置边框。
+为匹配电子表格中条件格式规则的单元格添加彩色边框。
 
 ```javascript editor-xlsx
-// How to apply border formatting to conditional formatting rules.
+// How do I make matching cells show a border when a formatting condition is met in a spreadsheet?
 
-// Set conditional formatting rule borders.
+// Highlight qualifying cells with edge lines through a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

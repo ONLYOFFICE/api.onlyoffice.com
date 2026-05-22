@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the first paragraphs from all endnotes in the document.
+Add an endnote and write bold text into its first paragraph in a document.
 
 ```javascript editor-docx
-// How to get the first endnote paragraph, add text to it and make it bold in a document.
+// How do I access the first paragraph of each endnote to add formatted text in a document?
 
-// Retrieve all endnote first paragraph for further manipulation in a document.
+// Populate endnote content by writing directly to each endnote's opening paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0); 

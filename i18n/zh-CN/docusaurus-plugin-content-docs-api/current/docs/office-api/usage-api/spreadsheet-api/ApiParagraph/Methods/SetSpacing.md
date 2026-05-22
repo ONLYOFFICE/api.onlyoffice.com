@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-为电子表格中形状内段落的所有文本设置字符间距。
+扩展电子表格中形状内段落各字符之间的间距。
 
 ```javascript editor-xlsx
-// How do I set spacing in a spreadsheet?
+// How do I widen or tighten the gaps between letters in a paragraph in a spreadsheet?
 
-// Set spacing using a paragraph object in a spreadsheet.
+// Adjust letter spacing to make text looser or more compact within a shape in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(150, 130, 100));

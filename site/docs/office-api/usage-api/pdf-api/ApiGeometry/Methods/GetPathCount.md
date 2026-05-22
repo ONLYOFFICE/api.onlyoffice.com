@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Analyzes cloud shape path properties on a page. Displays comprehensive path information in a text shape.
+Count the number of outline segments in a shape in a PDF.
 
 ```javascript editor-pdf
-// How to get the path count for a geometry in a PDF document?
+// How do I find out how many separate paths a shape contains in a PDF?
 
-// Get the path count and display the result in a PDF document.
+// Get the total number of paths and display it in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

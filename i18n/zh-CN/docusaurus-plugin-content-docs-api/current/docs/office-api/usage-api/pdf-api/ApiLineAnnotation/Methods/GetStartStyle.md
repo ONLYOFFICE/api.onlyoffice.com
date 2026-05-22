@@ -20,12 +20,12 @@ expression.GetStartStyle();
 
 ## 示例
 
-获取 PDF 文档中线条注释的起始线条样式。
+检查 PDF 中线条的起始装饰类型。
 
 ```javascript editor-pdf
-// How can I get the start style using a line annotation in a PDF document?
+// How do I find what arrow or marker is at the start of a line in a PDF?
 
-// Get the start style for a line annotation in a PDF document.
+// Retrieve the line starting style of a line annotation in a PDF.
 
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 15, y: 15}, {x: 155, y: 30});

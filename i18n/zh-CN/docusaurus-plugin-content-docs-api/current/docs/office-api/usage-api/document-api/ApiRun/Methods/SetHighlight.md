@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## 示例
 
-指定在文档中作为背景应用于 run 内容的突出显示颜色。
+在文档中为文本运行应用背景高亮颜色。
 
 ```javascript editor-docx
-// How to set highlight to the text run in a document.
+// How do I add a colored highlight behind specific words in a document?
 
-// Create a new text run and highlight it in a document.
+// Visually mark a portion of text with a background color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件的选中样式。
+更改 PDF 中复选框控件的勾选符号外观。
 
 ```javascript editor-pdf
-// How can I set check style using a checkbox widget in a PDF document?
+// How do I customize what symbol appears inside a checked checkbox in a PDF?
 
-// Set check style for a checkbox widget in a PDF document.
+// Apply a visual style to a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

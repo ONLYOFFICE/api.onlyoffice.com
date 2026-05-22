@@ -20,12 +20,12 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isFirstColumn | 必需 | boolean |  | 指定应将第一列条件格式应用于表格。 |
+| isFirstColumn | 必需 | boolean |  | 指定第一列条件格式应用于 |
 | isFirstRow | 必需 | boolean |  | 指定应将第一行条件格式应用于表格。 |
-| isLastColumn | 必需 | boolean |  | 指定应将最后一列条件格式应用于表格。 |
+| isLastColumn | 必需 | boolean |  | 指定最后一列条件格式应用于 |
 | isLastRow | 必需 | boolean |  | 指定应将最后一行条件格式应用于表格。 |
-| isHorBand | 必需 | boolean |  | 指定不应将水平条带条件格式应用于表格。 |
-| isVerBand | 必需 | boolean |  | 指定不应将垂直条带条件格式应用于表格。 |
+| isHorBand | 必需 | boolean |  | 指定水平条带条件格式不应用 |
+| isVerBand | 必需 | boolean |  | 指定垂直条带条件格式不应用于 |
 
 ## 返回值
 
@@ -33,12 +33,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中使用选项设置表格外观。
+配置 PDF 中表格的样式选项。
 
 ```javascript editor-pdf
-// Create the table object and set its look in a PDF document.
+// How do I customize how a table looks in a PDF?
 
-// Use table to set table look in a PDF document.
+// Apply formatting rules to change the table appearance in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

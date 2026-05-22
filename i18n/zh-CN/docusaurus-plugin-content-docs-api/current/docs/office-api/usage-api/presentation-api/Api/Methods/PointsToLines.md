@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在演示文稿中将磅转换为行。
+将磅转换为行并在演示文稿中显示结果。
 
 ```javascript editor-pptx
-// How can I convert points to lines in a presentation?
+// Use Api.PointsToLines to convert measurement units.
 
-// Convert points to lines in a presentation.
+// Display the converted value in a shape text.
 
 const points = 100;
 const lines = Api.PointsToLines(points);

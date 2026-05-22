@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查范围返回的类类型。
+识别文档中所选文本区域的类型。
 
 ```javascript editor-docx
-// How do I check what type a range object is?
+// How do I check what kind of object a text selection is in a document?
 
-// Retrieve and output the class type string for a range.
+// Confirm the category of a highlighted portion before applying further changes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

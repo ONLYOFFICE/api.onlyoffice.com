@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get a name of the current layout in a presentation.
+Read the name of a layout in a presentation.
 
 ```javascript editor-pptx
-// How do I get the name in a presentation?
+// How do I view the layout name in a presentation?
 
-// Get the name using a layout object in a presentation.
+// Display the name of a layout after assigning it a custom value in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

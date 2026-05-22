@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-返回演示文稿中的超链接地址。
+获取演示文稿中的超链接地址。
 
 ```javascript editor-pptx
-// How do I get the linked text in a presentation?
+// How do I retrieve the linked text or URL from a hyperlink in a presentation?
 
-// Get the linked text using a hyperlink object in a presentation.
+// Obtain the linked text from a hyperlink in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

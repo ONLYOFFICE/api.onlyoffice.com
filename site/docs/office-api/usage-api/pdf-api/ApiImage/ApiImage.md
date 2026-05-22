@@ -6,10 +6,11 @@ ApiImage is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a copy of the specified drawing object. |
+| [Copy](./Methods/Copy.md) | [ApiImage](../ApiImage/ApiImage.md) | Creates a copy of the specified image. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object from the parent. |
 | [GetClassType](./Methods/GetClassType.md) | "image" | Returns the type of the ApiImage class. |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | Returns the height of the current drawing. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current drawing. |
 | [GetParentPage](./Methods/GetParentPage.md) | [ApiPage](../ApiPage/ApiPage.md) | Returns the type of the ApiDrawing class. |
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | Gets the x position of the drawing on the page. |
 | [GetPosY](./Methods/GetPosY.md) | [EMU](../Enumeration/EMU.md) | Gets the y position of the drawing on the page. |

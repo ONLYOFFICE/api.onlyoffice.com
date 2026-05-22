@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中向 run 位置添加分栏符并从新列开始下一个元素。
+在文档中的特定位置将文本运行拆分到两个栏。
 
 ```javascript editor-docx
-// How to add a column break between the text in a document.
+// How do I push part of a text run into the next column in a document?
 
-// Add text to the text run and separate it with a column break in a document.
+// Force text to continue from the top of the following column in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

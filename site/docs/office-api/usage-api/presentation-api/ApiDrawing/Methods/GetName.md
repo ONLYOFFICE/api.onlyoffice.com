@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Return the name of the current drawing in a presentation.
+Get the name of a shape in a presentation.
 
 ```javascript editor-pptx
-// How do I get the name in a presentation?
+// How do I find the name assigned to an object in a presentation?
 
-// Get the name using a drawing object object in a presentation.
+// Read and display a shape's name in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

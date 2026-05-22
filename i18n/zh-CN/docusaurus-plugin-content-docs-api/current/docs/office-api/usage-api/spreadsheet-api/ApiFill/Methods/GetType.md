@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取并显示填充类型。在电子表格中创建具有不同填充类型的形状并显示其类型。
+读取形状的填充样式以了解其在电子表格中是否使用纯色、渐变或无填充。
 
 ```javascript editor-xlsx
-// How do I get the type in a spreadsheet?
+// How do I determine what kind of fill is applied to a shape in a spreadsheet?
 
-// Get the type using a fill object in a spreadsheet.
+// Inspect shapes with different fill styles and display each fill style name as a label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

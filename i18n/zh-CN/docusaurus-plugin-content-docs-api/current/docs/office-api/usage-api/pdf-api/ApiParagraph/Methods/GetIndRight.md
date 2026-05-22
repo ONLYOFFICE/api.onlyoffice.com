@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中的段落右侧缩进。
+从 PDF 中的段落检索右边距缩进值。
 
 ```javascript editor-pdf
-// How to return a right side identation of a paragraph property in a PDF document.
+// How do I get the right side indent measurement in a PDF?
 
-// Return a right side indentation of a text property from the page.
+// Obtain the right edge offset amount in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

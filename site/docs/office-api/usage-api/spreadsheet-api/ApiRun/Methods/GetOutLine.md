@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetOutLine](../../ApiTextPr/Methods/GetOutLine.md).
 
 ## Example
 
-Get an outline property of a text in a spreadsheet.
+Read the outline border applied to text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is outlined or not in a spreadsheet.
+// How do I find out what outline is drawn around text in a spreadsheet?
 
-// Get a text outline property type, for example as a stroke in a spreadsheet.
+// Inspect the border object assigned to a text style and display its type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

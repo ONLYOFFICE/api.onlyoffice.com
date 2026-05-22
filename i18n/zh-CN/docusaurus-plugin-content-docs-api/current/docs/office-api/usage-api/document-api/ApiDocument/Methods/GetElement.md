@@ -6,12 +6,12 @@
 
 ## 示例
 
-通过位置获取文档内容中的元素。
+通过索引从文档内容中检索特定元素。
 
 ```javascript editor-docx
-// How to get element knowing its index in a document.
+// How do I get a single element at a known position inside a document content in a document?
 
-// Get the first paragraph and add text to it in a document.
+// Add text to a header paragraph by fetching it directly through its position index.
 
 let doc = Api.GetDocument();
 let section = doc.GetFinalSection();

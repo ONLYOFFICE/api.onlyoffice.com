@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the hex representation of the color in a document.
+Read the hex color value from different color types in a document.
 
 ```javascript editor-docx
-// How to get the hex for a color in a document?
+// How do I get the hexadecimal representation of a color in a document?
 
-// Get the hex and display the result in a document.
+// Verify that theme and auto colors always return black hex while hex-defined colors return their actual value.
 
 const doc = Api.GetDocument();
 

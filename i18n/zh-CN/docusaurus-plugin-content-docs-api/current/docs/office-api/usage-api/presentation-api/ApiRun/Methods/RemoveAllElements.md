@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从演示文稿中的 run 移除所有元素。
+从演示文稿中的文本运行移除所有元素。
 
 ```javascript editor-pptx
-// How to remove all elements from the text run object in a presentation.
+// Delete content stored in a text run in a presentation?
 
-// Delete text from the slide.
+// Clear a text run before adding new text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

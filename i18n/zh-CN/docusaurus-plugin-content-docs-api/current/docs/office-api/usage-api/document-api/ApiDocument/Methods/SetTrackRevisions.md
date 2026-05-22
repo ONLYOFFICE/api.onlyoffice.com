@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置修订跟踪模式。
+在文档中打开或关闭更改跟踪模式。
 
 ```javascript editor-docx
-// How to track revisions of the document.
+// How do I enable revision tracking so all edits are recorded in a document?
 
-// Start document tracking mode.
+// Activate tracked changes before editing so reviewers can accept or reject each modification later.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

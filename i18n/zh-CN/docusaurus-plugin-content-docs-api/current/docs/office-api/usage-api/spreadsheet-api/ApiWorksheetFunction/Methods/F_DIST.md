@@ -17,7 +17,7 @@ expression.F_DIST(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 用于计算函数的值，一个非负数。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 分子自由度，一个介于 1 和 10^10 之间的数字，不包括 10^10。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 分母自由度，一个介于 1 和 10^10 之间的数字，不包括 10^10。 |
-| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值。如果此参数为 **true**，函数将返回累积分布函数；如果为 **false**，则返回概率密度函数。 |
+| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值。如果此参数为 **true**， |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个数据集的（左尾）F 概率分布（差异程度）。
+返回两个数据集的（左尾）F 概率分布。
 
 ```javascript editor-xlsx
-// How to get the F probability distribution (degree of diversity) in a spreadsheet.
+// Calculate the left-tailed probability of F-distributed values.
 
-// Use function to calculate a left-tailed F probability distribution in a spreadsheet.
+// Determine F distribution using F_DIST with specified degrees of freedom.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

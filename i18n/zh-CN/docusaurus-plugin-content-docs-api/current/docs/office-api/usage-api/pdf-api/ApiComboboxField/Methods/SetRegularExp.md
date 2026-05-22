@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中获取文本字段并为其设置正则表达式验证。
+在 PDF 中使用模式规则验证字段输入。
 
 ```javascript editor-pdf
-// How do I set regular exp in a PDF document?
+// Can I check that data matches a pattern in a PDF?
 
-// Set regular exp using a combobox field object in a PDF document.
+// Ensure text follows a specific format in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

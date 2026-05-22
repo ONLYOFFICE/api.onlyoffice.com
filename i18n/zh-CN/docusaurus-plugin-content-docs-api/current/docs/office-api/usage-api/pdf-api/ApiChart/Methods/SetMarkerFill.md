@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为标记设置填充。
+更改 PDF 中图表数据点符号的颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its marker color in a PDF document.
+// How do I change the color of markers in a chart in a PDF?
 
-// Set marker fill using a chart object in a PDF document.
+// Apply a solid color to the symbols that represent data in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

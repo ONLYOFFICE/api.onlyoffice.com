@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将 EMU（英制度量单位）转换为磅。
+在电子表格中将 EMU 转换为磅。
 
 ```javascript editor-xlsx
-// How do I convert emus to points in a spreadsheet?
+// How do I change a size value from EMUs into points in a spreadsheet?
 
-// Convert emus to points and display the result in a spreadsheet.
+// Express a dimension in points rather than EMUs in a spreadsheet.
 
 const emus = 100;
 const points = Api.EmusToPoints(emus);

@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-获取 PDF 文档中的元素。
+按位置从 PDF 中的形状检索段落。
 
 ```javascript editor-pdf
-// How to get an element from the content of a page shape.
+// How do I access a specific paragraph inside a shape in a PDF?
 
-// Find an element from the shape using its index in a PDF document.
+// Extract a text block from a shape using its number in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

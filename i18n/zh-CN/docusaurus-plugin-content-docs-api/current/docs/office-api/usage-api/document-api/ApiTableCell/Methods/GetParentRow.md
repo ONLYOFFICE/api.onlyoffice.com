@@ -20,12 +20,12 @@ expression.GetParentRow();
 
 ## 示例
 
-获取文档中单元格的父行。
+访问文档中包含特定表格单元格的行。
 
 ```javascript editor-docx
-// How to get parent row of the cell.
+// How do I get the row that a table cell belongs to in a document?
 
-// Retrieve the cell from the table and get the height of its parent row.
+// Reach the containing row from a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

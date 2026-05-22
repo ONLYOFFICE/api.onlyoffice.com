@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中绘图对象的名称。
+检索分配给电子表格中绘图对象的名称。
 
 ```javascript editor-xlsx
-// How can I get the name using a drawing object in a spreadsheet?
+// How do I read the label that identifies a drawing in a spreadsheet?
 
-// Get the name for a drawing object in a spreadsheet.
+// Look up the title given to a shape so it can be referenced later in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

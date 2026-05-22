@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## 示例
 
-根据特定 XPath 获取节点并在文档中显示其值。
+使用路径查询从文档中的自定义 XML 节点选择子节点。
 
 ```javascript editor-docx
-// How to get the nodes for a custom XML node in a document?
+// How do I retrieve matching child nodes from a custom XML node in a document?
 
-// Get the nodes and display the result in a document.
+// Traverse embedded XML data by querying for a set of elements under a given node in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

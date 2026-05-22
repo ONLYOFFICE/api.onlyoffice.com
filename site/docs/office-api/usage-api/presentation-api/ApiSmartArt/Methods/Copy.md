@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
 
 ## Example
 
-Create a copy of a shape and insert it into the presentation.
+Duplicate a shape and place the copy on another slide in a presentation.
 
 ```javascript editor-pptx
-// How to create the same slide shape.
+// How do I make a copy of a shape in a presentation?
 
-// Get a slide shape, add it to the slide and create its copy.
+// Create an exact duplicate of a shape and add it to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

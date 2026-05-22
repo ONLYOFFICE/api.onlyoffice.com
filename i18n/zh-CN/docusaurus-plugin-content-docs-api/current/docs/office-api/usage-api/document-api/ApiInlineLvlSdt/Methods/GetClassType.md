@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中内联内容控件对象的类类型。
+识别文档中内联内容控件的类类型。
 
 ```javascript editor-docx
-// How can I get the class type of an inline content control in a document?
+// How do I get the class type of an inline content control in a document?
 
-// Get the class type of an inline content control and display it in the document.
+// Verify the object type at runtime to distinguish content controls from other elements in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

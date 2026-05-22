@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取角度的双曲余割值。
+计算电子表格中角度的双曲余割。
 
 ```javascript editor-xlsx
-// How to return hyperbolic cosecant in a spreadsheet.
+// What is the hyperbolic cosecant value in a spreadsheet?
 
-// Use function to get the hyperbolic cosecant of an angle in a spreadsheet.
+// Determine the inverse hyperbolic sine ratio in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

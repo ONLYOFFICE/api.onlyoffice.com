@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定文档所包含的文档部分的 Range 对象。
+按字符位置在文档中选择特定文本范围。
 
 ```javascript editor-docx
-// How to get the range using row and column indexes in a document.
+// How do I get a range of characters using start and end indexes in a document?
 
-// Make a range text bold using the document API in a document.
+// Apply bold formatting to a precise word by targeting it with index-based range selection in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

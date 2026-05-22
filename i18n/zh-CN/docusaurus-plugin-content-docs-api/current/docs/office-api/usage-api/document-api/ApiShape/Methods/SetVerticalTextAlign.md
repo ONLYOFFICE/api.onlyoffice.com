@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中可以插入段落或文本 run 的形状内容的垂直对齐方式。
+在文档中将文本在形状内垂直定位。
 
 ```javascript editor-docx
-// How to align the text of the shape to top in a document.
+// How do I align text to the top, middle, or bottom inside a shape in a document?
 
-// Set vertical text align to top in a document.
+// Control where text sits vertically inside a shape container in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

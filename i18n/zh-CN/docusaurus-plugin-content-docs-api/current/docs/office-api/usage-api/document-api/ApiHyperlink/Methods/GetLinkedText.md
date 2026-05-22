@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的超链接地址。
+读取文档中超链接存储的 URL 地址。
 
 ```javascript editor-docx
-// How to get the raw link of the hyperlink in a document.
+// How do I get the destination URL of a hyperlink in a document?
 
-// Add a hyperlink to the paragraph and show its address as a text in a document.
+// Retrieve the updated link target after changing the hyperlink address in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

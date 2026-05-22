@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中返回投资的现值：一系列未来付款目前的总价值。
+计算电子表格中一系列未来支付的现值。
 
 ```javascript editor-xlsx
-// How to get the present value of an investment in a spreadsheet.
+// What is an investment worth today given future payment amounts in a spreadsheet?
 
-// Use a function to calculate the total amount that a series of future payments is worth now in a spreadsheet.
+// Determine the lump sum needed now for a stream of future payments in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

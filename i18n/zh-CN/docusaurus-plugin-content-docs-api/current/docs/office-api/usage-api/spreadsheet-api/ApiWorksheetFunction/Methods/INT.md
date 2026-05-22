@@ -25,9 +25,9 @@ number
 在电子表格中将数字向下舍入到最接近的整数。
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest integer in a spreadsheet.
+// How do I round down a decimal number in a spreadsheet?
 
-// Use a function to round down a number in a spreadsheet.
+// Truncate decimal places from a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

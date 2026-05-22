@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-获取文档中包含图形对象的父内容控件。
+检索文档中包含绘图对象的父内容控件。
 
 ```javascript editor-docx
-// Get an element's parent control in a document.
+// How do I find the content control that wraps a drawing in a document?
 
-// How to show the shape's wrapper control in a document.
+// Access the enclosing block-level content control to add text alongside a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

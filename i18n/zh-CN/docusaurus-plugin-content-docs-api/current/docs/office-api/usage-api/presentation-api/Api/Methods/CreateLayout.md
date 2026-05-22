@@ -22,12 +22,12 @@ expression.CreateLayout(oMaster);
 
 ## 示例
 
-在演示文稿中创建版式。
+在演示文稿中创建自定义幻灯片布局。
 
 ```javascript editor-pptx
-// How to create and apply a layout for a slide.
+// How do I design a layout template for multiple slides in a presentation?
 
-// Create the layout and display the result in a presentation.
+// Apply a predefined layout to existing and new slides in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);

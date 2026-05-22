@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据字段的标题。
+读取电子表格中数据透视表数据字段的显示标题。
 
 ```javascript editor-xlsx
-// How to get a table element caption in a spreadsheet.
+// How do I find the label shown for a data field in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then display a custom data field's caption text in a spreadsheet.
+// Verify the visible heading text assigned to a summarized value column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取应用于文档中引用给定编号定义和编号级别的任何编号段落的段落属性。
+通过列表级别定义在文档中为编号段落应用段落格式。
 
 ```javascript editor-docx
-// How to retrieve the paragraph properties in a document.
+// How do I adjust spacing and indentation for a numbered list level in a document?
 
-// Get the properties of the paragraph of the numbering in a document.
+// Control line spacing and alignment of list items by editing the level's paragraph properties in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

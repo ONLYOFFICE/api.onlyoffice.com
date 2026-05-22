@@ -16,7 +16,7 @@ expression.AddColumns(oCell, nCount, isBefore);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在该单元格之后添加新列。如果未指定，将在表格末尾添加新列。 |
 | nCount | 必需 | Number |  | 要添加的列数。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新列。如果未指定单元格，则将忽略此参数。 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前 (false) 或之后 (true) 添加新列。如果未指定单元格， |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 ## 示例
 
-在文档中向表格添加新列（多列）。
+在文档中向现有表格添加额外的列。
 
 ```javascript editor-docx
-// How to insert columns to the table in a document.
+// How do I insert additional columns into a table in a document?
 
-// Get a table cell and insert two new columns after it.
+// Expand a table sideways by placing new columns at a chosen position in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

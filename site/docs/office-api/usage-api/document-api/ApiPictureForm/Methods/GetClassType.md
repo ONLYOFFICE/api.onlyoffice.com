@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a picture form.
+Identify the category label of a picture form field in a document.
 
 ```javascript editor-docx
-// How do I check what type a picture form object is?
+// How do I find out what category a picture form field belongs to in a document?
 
-// Retrieve and output the class type string for a picture form.
+// Confirm the kind of form element in use by reading its category label in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

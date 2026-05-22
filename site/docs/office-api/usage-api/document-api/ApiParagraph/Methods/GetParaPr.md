@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph properties in a document.
+Read the formatting properties of a paragraph in a document.
 
 ```javascript editor-docx
-// How to set the spacing line, justification and other properties of the text in a document.
+// How do I access the spacing, alignment, and indent settings of a paragraph in a document?
 
-// Create a paragraph, add its text and properties in a document.
+// Apply line spacing and justification to a paragraph using its properties object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

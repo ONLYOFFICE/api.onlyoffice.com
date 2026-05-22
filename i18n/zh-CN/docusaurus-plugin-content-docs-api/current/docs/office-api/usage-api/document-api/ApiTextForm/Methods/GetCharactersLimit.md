@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中文本字段的字符限制。
+读取文档中文本字段允许的最大字符数。
 
 ```javascript editor-docx
-// How to display the characters limit of the text form.
+// How do I check how many characters a text entry area is limited to in a document?
 
-// Get the maximum number of characters that can be inserted to the text form.
+// Verify the character cap set on a text field to ensure input constraints are correct in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "cellWidth": 3, "multiLine": false, "autoFit": false});

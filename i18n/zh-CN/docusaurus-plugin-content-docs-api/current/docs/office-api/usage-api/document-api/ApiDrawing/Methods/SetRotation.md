@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中绘图对象的旋转角度。
+在文档中按指定角度旋转绘图。
 
 ```javascript editor-docx
-// How to set rotation for a drawing object in a document?
+// How do I tilt a shape to a particular degree in a document?
 
-// Set rotation and display the result in a document.
+// Turn a wide rectangle ninety degrees and display the resulting angle inside it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

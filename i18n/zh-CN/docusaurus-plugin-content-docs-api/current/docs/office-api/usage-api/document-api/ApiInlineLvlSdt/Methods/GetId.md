@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中容器的 ID。
+读取分配给文档中内联内容控件的标识符。
 
 ```javascript editor-docx
-// How do I get the id in a document?
+// How do I retrieve the ID of an inline content control in a document?
 
-// Get the id using an inline content control object in a document.
+// Verify the custom ID set on an inline content control by printing it to the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

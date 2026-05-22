@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-获取文档中当前文档的创建日期。
+读取文档核心属性中存储的创建日期。
 
 ```javascript editor-docx
-// How can I get the created using a core properties in a document?
+// How do I get the date a document was created from its core properties in a document?
 
-// Get the created for a core properties in a document.
+// Display when a document was first made to track its history in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

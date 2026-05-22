@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查电子表格中自定义属性返回的类类型。
+检查电子表格中管理自定义属性的对象类型。
 
 ```javascript editor-xlsx
-// How do I check what type a custom properties object is in a spreadsheet?
+// How do I confirm the category of the custom properties container in a spreadsheet?
 
-// Retrieve and output the class type string for a custom properties in a spreadsheet.
+// Verify the identity of the metadata handler before working with custom fields in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const customProps = Api.GetCustomProperties();

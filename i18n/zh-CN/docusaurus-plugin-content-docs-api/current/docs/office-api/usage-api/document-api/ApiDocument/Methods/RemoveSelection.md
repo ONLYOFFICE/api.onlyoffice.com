@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-移除文档中的当前选区。
+删除文档中当前选定的文本范围。
 
 ```javascript editor-docx
-// How to remove the selected part of the document.
+// How do I remove a selected portion of text in a document?
 
-// Select the range and delete it in a document.
+// Programmatically select a range and then erase it to trim content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

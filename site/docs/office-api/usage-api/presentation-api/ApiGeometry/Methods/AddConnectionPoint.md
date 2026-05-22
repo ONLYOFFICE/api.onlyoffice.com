@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Create adjustable geometry with guides and connection points for a presentation. Displays adjustment value and apply custom geometry to shape.
+Create adjustable geometry with guides and connection points in a presentation.
 
 ```javascript editor-pptx
-// How do I add the connection point in a presentation?
+// Connection points define where connectors attach to a shape's geometry.
 
-// Add the connection point using a geometry object in a presentation.
+// Add a connection point using a geometry object.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中表格单元格属性的类类型。
+检索文档中表格单元格属性对象的类类型。
 
 ```javascript editor-docx
-// How to identify the class type of a table cell properties?
+// How do I identify what type of object holds the table cell properties in a document?
 
-// Obtain the class type identifier of a table cell properties object.
+// Read and display the category label assigned to a table cell properties object in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

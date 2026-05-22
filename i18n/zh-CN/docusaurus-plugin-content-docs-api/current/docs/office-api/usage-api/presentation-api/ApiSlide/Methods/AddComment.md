@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在演示文稿中向特定幻灯片添加批注。
+向幻灯片添加带有作者和用户 ID 信息的批注。
 
 ```javascript editor-pptx
-// How to add the comment for a slide?
+// Create multiple comments with different properties and retrieve all comments from the presentation.
 
-// Add the comment and display the result in a presentation.
+// Display the comment details including text, author name, and user ID in a shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

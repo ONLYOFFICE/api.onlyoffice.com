@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的笔触对象转换为 JSON 对象。
+将边框样式保存为可移植数据格式并在文档中重用。
 
 ```javascript editor-docx
-// How to get a JSON from the stroke object in a document.
+// How do I export and restore a border style for reuse in a document?
 
-// Convert the stroke to json and add it to the document.
+// Preserve a border configuration so it can be applied again later in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

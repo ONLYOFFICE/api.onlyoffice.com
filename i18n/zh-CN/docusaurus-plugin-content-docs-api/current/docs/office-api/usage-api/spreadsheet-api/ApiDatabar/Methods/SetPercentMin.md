@@ -22,12 +22,12 @@ expression.SetPercentMin(percent);
 
 ## 示例
 
-设置数据条条件格式规则的最小百分比长度。
+将数据条规则中最短的条设置为电子表格中列宽的最小百分比。
 
 ```javascript editor-xlsx
-// How to change the minimum length setting of a data bar in a spreadsheet.
+// How do I ensure that even the smallest data bar is still visible inside a cell in a spreadsheet?
 
-// Set the minimum percentage length of a data bar conditional formatting rule.
+// Keep low-value bars from disappearing entirely by enforcing a lower percentage limit in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

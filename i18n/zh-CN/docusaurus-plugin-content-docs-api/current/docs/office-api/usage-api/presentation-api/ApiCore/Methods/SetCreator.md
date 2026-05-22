@@ -22,12 +22,12 @@ expression.SetCreator(sCreator);
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的创建者。
+设置和检索演示文稿的创建者。
 
 ```javascript editor-pptx
-// How do I set creator in a presentation?
+// How do I set the creator of a presentation in a presentation?
 
-// Set creator using a core properties object in a presentation.
+// Retrieve and display the creator as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

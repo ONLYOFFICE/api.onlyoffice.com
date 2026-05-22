@@ -22,12 +22,12 @@ expression.CreateTableStylePr(sType);
 
 ## Example
 
-Create and use the conditional table style properties in a document.
+Apply different formatting to specific parts of a table in a document.
 
 ```javascript editor-docx
-// How to create a style that will be applied to the table elements whish satisfy the condition in a document.
+// How do I style only the first row or first column of a table differently in a document?
 
-// Create a conditional table style properties in a document.
+// Use conditional table formatting to highlight header rows and banded columns in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

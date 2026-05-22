@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取演示文稿中批注的作者。
+检索演示文稿中编写批注的人员姓名。
 
 ```javascript editor-pptx
-// How to find out a comment's author in a presentation.
+// How do I find out who created a comment in a presentation?
 
-// Get all comments from the presentation and display the first one's author name.
+// Display the author's name for a comment in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

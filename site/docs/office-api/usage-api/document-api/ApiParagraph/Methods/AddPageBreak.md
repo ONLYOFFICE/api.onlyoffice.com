@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Add a page break and start the next element from the next page.
+Split paragraph content across two pages with a page break in a document.
 
 ```javascript editor-docx
-// How to add a page break to the text.
+// How do I force the text that follows to start at the top of the next page in a document?
 
-// Add a break between the text of a paragraph in a document.
+// Divide a long paragraph so that a chosen point becomes the opening line of a new page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@ Inherited from [ApiBaseField.GetAllWidgets](../../ApiBaseField/Methods/GetAllWid
 
 ## Example
 
-Get all field widgets and set border color for them in a PDF document.
+Access all visual instances of a form field in a PDF.
 
 ```javascript editor-pdf
-// How to get all widgets for a base field in a PDF document?
+// How can I retrieve every visual representation of a form field in a PDF?
 
-// Get all widgets and display the result in a PDF document.
+// Modify the appearance of all form field widgets in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

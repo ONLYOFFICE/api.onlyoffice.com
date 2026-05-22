@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的容器设置标签属性。
+为文档中的内容控件附加标签以进行标识。
 
 ```javascript editor-docx
-// Create a block content control and set a tag to it in a document.
+// How do I add a custom tag string to a content control in a document?
 
-// How to add a tag to the block-level content control object in a document.
+// Mark a content control with a tag so it can be identified or processed later in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

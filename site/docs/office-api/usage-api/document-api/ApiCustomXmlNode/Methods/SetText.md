@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get the XPath of a custom XML node in a document.
+Change the text content of specific XML nodes embedded in a document.
 
 ```javascript editor-docx
-// How do I set text in a document?
+// How do I update the plain text inside a node in the XML data stored in a document?
 
-// Set text using a custom XML node object in a document.
+// Correct or refresh the human-readable values in structured XML fields in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

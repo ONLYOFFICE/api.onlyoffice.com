@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中集合内图标条件的索引。
+查找电子表格中图标条件在其规则集合中的位置。
 
 ```javascript editor-xlsx
-// How do I get the index in a spreadsheet?
+// How do I determine the order of a criterion inside an icon set rule in a spreadsheet?
 
-// Get the index using an icon criterion object in a spreadsheet.
+// Identify which slot a particular condition occupies in the icon set sequence in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Data');

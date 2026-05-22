@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在演示文稿中设置以磅的二十分之一为单位的文本间距。
+调整演示文稿中文本运行的字符间距。
 
 ```javascript editor-pptx
-// How to resize spacing between words in a text run in a presentation.
+// Increase or decrease spacing between characters for readability or design effect.
 
-// Create a new text run and set its spacing size (point * 20) in a presentation.
+// Create a text run and set spacing measured in twentieths of a point.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

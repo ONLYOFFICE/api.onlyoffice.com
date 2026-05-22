@@ -14,7 +14,7 @@ expression.SKEW(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the skewness of a distribution will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the skewness of a distribution will be returned. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ number
 Return the skewness of a distribution: a characterization of the degree of asymmetry of a distribution around its mean in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calaculate the skewness of a distribution in a spreadsheet.
+// Calculate the skewness of a distribution using the SKEW function.
 
-// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean in a spreadsheet.
+// Place values in cells and apply the function to display the asymmetry result.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置形状边界框的大小。
+通过指定宽度和高度在电子表格中将绘图调整为精确尺寸。
 
 ```javascript editor-xlsx
-// How to change the size of the drawing in a spreadsheet.
+// How do I make a drawing larger or smaller in a spreadsheet?
 
-// Resize a drawing by setting its width and height in a spreadsheet.
+// Scale a shape to fit a particular area by defining its bounding box dimensions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

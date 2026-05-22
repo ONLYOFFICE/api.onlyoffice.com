@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## Example
 
-Set the bold property to the text of the paragraph in a PDF document.
+Make paragraph text bold in a PDF.
 
 ```javascript editor-pdf
-// How do I set bold in a PDF document?
+// How do I apply bold formatting to a paragraph in a PDF?
 
-// Set bold using a paragraph object in a PDF document.
+// Strengthen text weight in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

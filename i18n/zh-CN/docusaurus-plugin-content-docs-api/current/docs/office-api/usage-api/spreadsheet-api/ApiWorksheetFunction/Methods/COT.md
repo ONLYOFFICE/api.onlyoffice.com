@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取数字的余切值。
+计算电子表格中角度的余切。
 
 ```javascript editor-xlsx
-// How to find a cotangent in a spreadsheet.
+// What is the reciprocal tangent value in a spreadsheet?
 
-// Use function to get the cotangent of an angle in a spreadsheet.
+// Find the inverted tangent ratio for a given angle in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

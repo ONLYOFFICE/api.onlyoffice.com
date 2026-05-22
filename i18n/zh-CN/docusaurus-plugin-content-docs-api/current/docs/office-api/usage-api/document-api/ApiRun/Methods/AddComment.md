@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-在文档中向 run 添加批注。
+在文档中为一段文本附加带有作者名称的审阅批注。
 
 ```javascript editor-docx
-// How to comment a specific text in a document.
+// How do I leave a named comment on a specific section of text in a document?
 
-// Insert a comment into the run and add an author to it in a document.
+// Annotate a text passage so collaborators can see feedback and who wrote it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

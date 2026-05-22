@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中的图表图例位置。
+将文档中图表的图例定位在图表底部。
 
 ```javascript editor-docx
-// How to set legend position of the chart in a document.
+// How do I move the legend to a different side of the chart in a document?
 
-// Create a chart and move its legend to the bottom in a document.
+// Relocate the legend below the chart to keep it from overlapping the data area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

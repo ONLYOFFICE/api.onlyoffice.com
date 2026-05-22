@@ -20,12 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-获取笔触的宽度（EMU）。在 PDF 文档中创建具有不同边框宽度的形状并显示其宽度。
+测量 PDF 中边框线的粗细
 
 ```javascript editor-pdf
-// How can I get the width using a stroke in a PDF document?
+// What is the border thickness measured in units in a PDF?
 
-// Get the width for a stroke in a PDF document.
+// Read and display the line width of a border in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中垂直轴的刻度标签位置。
+设置文档中图表垂直轴上刻度标签的位置。
 
 ```javascript editor-docx
-// How to change a position of tick label in a document.
+// How do I control where tick labels appear on the vertical axis in a document?
 
-// Create a chart, set its properties and its vertical axis tick label position in a document.
+// Place tick labels at the far end of the vertical axis to keep them away from the chart area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

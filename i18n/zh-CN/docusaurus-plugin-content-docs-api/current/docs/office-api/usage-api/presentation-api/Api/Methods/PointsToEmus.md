@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在演示文稿中将磅转换为 EMU。
+将磅转换为 EMU 并在演示文稿中显示结果。
 
 ```javascript editor-pptx
-// How to convert points to emus in a presentation?
+// Use Api.PointsToEmus to convert measurement units.
 
-// Convert points to emus using the presentation API.
+// Display the converted value in a shape text.
 
 const points = 1000;
 const emus = Api.PointsToEmus(points);

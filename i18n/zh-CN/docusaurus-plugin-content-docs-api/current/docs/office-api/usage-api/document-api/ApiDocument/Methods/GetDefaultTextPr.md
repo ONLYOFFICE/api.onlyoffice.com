@@ -20,12 +20,12 @@ expression.GetDefaultTextPr();
 
 ## 示例
 
-获取文档中当前文档内文本块的默认属性集。
+读取并修改整个文档的默认文本格式属性。
 
 ```javascript editor-docx
-// How to get default text properties of a document.
+// How do I set the default font family, size, and language for all text in a document?
 
-// Update the default text properties of the text elements in a document.
+// Change font settings at the document level so every text run inherits the new defaults in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

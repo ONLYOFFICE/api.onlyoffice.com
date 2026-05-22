@@ -20,12 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-获取演示文稿中幻灯片的宽度（英制度量单位）。
+获取以英制度量单位表示的幻灯片宽度。
 
 ```javascript editor-pptx
-// How to find a slide's width and display it on the slide.
+// Display the width value on the slide using a shape.
 
-// Get a width of the slide object and show it in the slide.
+// Retrieve the width measurement and show it in a text element.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

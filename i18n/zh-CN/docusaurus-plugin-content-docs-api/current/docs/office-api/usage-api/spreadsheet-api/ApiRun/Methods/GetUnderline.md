@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中文本的下划线属性。
+检查电子表格中文本运行是否开启了下划线格式。
 
 ```javascript editor-xlsx
-// How to find out whether a text is underlined or not in a spreadsheet.
+// How do I find out if text has an underline applied in a spreadsheet?
 
-// Get underlined property of a text run object in a spreadsheet.
+// Confirm the underline state of a text run by reading its formatting property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除单元格的内容。
+清除文档中表格单元格的所有内容。
 
 ```javascript editor-docx
-// Remove the content of the table cell.
+// How do I remove everything inside a table cell in a document?
 
-// Get the table cell and clear its value.
+// Empty a cell so it is ready to receive fresh content in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

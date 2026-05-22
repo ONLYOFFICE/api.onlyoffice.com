@@ -6,12 +6,12 @@ Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
 ## Example
 
-Clear the current form.
+Erase the entered value from a text form field in a document.
 
 ```javascript editor-docx
-// How to remove texy from the form.
+// How do I clear the content of a form in a document?
 
-// Clear answer from the text form.
+// Reset a filled-in form field to blank so it is ready for new input in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

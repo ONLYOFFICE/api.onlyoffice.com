@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-从文档的节中删除指定类型的页脚。
+从文档中所选节删除页脚。
 
 ```javascript editor-docx
-// How to remove the footer of the current section in a document.
+// How do I remove the footer that appears at the bottom of a section in a document?
 
-// Create section from the paragraph and remove its footer in a document.
+// Clear the bottom area of a section so no footer is shown in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

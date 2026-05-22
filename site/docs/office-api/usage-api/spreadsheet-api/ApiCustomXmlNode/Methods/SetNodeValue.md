@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the value of a custom XML node in a spreadsheet.
+Write a new value into an XML node to update its stored data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set node value for a custom XML node in a spreadsheet?
+// How do I change the value held by an XML node in a spreadsheet?
 
-// Set node value and display the result in a spreadsheet.
+// Replace an existing node's content with fresh data in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

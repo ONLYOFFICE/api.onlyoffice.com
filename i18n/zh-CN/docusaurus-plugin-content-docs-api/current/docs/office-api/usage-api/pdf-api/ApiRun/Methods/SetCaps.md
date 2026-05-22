@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定当前文本 run 中的所有小写字符仅以其对应的大写字母格式显示。
+在 PDF 中将文本的所有字母显示为大写。
 
 ```javascript editor-pdf
-// How to make a text capitalized in a PDF document.
+// How do I show text as all capital letters in a PDF?
 
-// Create a new text run and make each letters capitalized in a PDF document.
+// Convert text characters to capital letter format in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

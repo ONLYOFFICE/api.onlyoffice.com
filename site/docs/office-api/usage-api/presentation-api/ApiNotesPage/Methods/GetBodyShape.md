@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the body shape from a notes page in a presentation.
+Access the text area on the notes page of a slide in a presentation.
 
 ```javascript editor-pptx
-// How to get the body shape for a notes page?
+// How do I get the main content area from the slide notes in a presentation?
 
-// Get the body shape and display the result in a presentation.
+// Retrieve the notes page text container and check if it exists in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中当前段落的段后间距值。
+获取 PDF 中段落后出现的空间量。
 
 ```javascript editor-pdf
-// How to get the size of a spacing after a text from a paragraph in a PDF document.
+// How do I find the bottom margin spacing for text in a PDF?
 
-// Return a property of the spacing size after a paragraph in a PDF document.
+// Retrieve the gap size following paragraph content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

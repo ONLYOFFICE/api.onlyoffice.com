@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置绘图对象在幻灯片上的 y 位置。
+在演示文稿中垂直移动幻灯片上的形状。
 
 ```javascript editor-pptx
-// How can I set pos y using a drawing object in a presentation?
+// How do I change the vertical position of a shape in a presentation?
 
-// Set pos y for a drawing object in a presentation.
+// Create a shape and move it to a specific distance from the top in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -25,12 +25,12 @@ expression.QuadBezTo(x1, y1, x2, y2);
 
 ## 示例
 
-使用三次贝塞尔、二次贝塞尔和圆弧命令创建复杂曲线。在文档中演示不同类型的曲线绘制方法。
+在文档中为自定义形状的路径添加平滑二次曲线段。
 
 ```javascript editor-docx
-// How can I quad bez to using a geometry path in a document?
+// How do I draw a gently curved edge on a custom shape in a document?
 
-// Quad bez to for a geometry path in a document.
+// Create a flowing curve between two points using a single control point in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

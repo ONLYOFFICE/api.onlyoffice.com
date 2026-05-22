@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-使用文档中指定的位置获取段落元素。
+通过索引访问文档中段落内的特定元素。
 
 ```javascript editor-docx
-// How to get the second element of the paragraph in a document.
+// How do I retrieve a single run from a paragraph by position in a document?
 
-// Get the word from paragraph using its index and make it bold in a document.
+// Target one text run out of many to apply selective formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

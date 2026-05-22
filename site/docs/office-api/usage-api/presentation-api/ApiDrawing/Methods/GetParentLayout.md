@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Show hot to get the drawing parent slide layout.
+Find the parent layout that contains a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a parent layout of a slide shape.
+// How do I access the layout a shape belongs to in a presentation?
 
-// Get a slide shape's parent layout.
+// Get the parent layout for a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

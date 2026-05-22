@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Remove all elements from a shape in a presentation.
+Remove all elements from the content inside a shape in a presentation.
 
 ```javascript editor-pptx
-// How to remove all elements from the slide shape.
+// How do I clear the text and objects inside a shape in a presentation?
 
-// Get a slide shape's content and remove all elements from it.
+// Access the shape's content area and delete all text and elements in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

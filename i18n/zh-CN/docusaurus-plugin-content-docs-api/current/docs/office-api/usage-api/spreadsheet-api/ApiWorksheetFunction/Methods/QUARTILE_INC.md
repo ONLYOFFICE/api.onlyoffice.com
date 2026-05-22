@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回数据集的四分位数，基于 0..1（含端点）的百分位值。
+使用包含百分位计算在电子表格中查找四分位数。
 
 ```javascript editor-xlsx
-// How to get the inclusive quartile of a data set in a spreadsheet.
+// What is the quartile boundary including all data values in a spreadsheet?
 
-// Use a function to calculate an inclusive fourth part of a data set in a spreadsheet.
+// Calculate quartile position based on percentiles from 0 to 1 inclusive in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档中的文档内容获取图像对象集合。
+检索文档内容中嵌入的所有图像。
 
 ```javascript editor-docx
-// Get all images added to the document.
+// How do I get every image from a content container in a document?
 
-// How to retrieve all images and display the class type of the first one in a document.
+// Read the class type of the first image found inside a shape and display it as text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

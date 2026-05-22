@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从演示文稿中删除当前幻灯片。
+从演示文稿中移除幻灯片。
 
 ```javascript editor-pptx
-// How to delete a slide.
+// How do I delete a slide in a presentation?
 
-// Remove a slide from the presentation.
+// Add a new slide and then remove it from the presentation.
 
 const presentation = Api.GetPresentation();
 let slide = Api.CreateSlide();

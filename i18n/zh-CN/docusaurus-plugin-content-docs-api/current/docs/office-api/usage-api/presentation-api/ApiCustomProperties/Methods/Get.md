@@ -22,12 +22,12 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-通过名称获取演示文稿中自定义属性的值。
+按名称检索演示文稿中的自定义属性值。
 
 ```javascript editor-pptx
-// Return null for properties that do not exist.
+// How do I read a custom property from a presentation?
 
-// Get using a custom properties object in a presentation.
+// Access custom metadata and handle missing properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();

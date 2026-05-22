@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the content status of the current document using the core properties in a document.
+Read the content status stored in the core properties of a document.
 
 ```javascript editor-docx
-// How can I get the content status using a core properties in a document?
+// How do I retrieve the content status value from the core properties in a document?
 
-// Get the content status for a core properties in a document.
+// Check whether a document is marked as Draft, Final, or another status in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

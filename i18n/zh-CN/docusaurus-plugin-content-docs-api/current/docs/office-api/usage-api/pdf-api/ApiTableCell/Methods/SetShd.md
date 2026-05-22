@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-如何为单元格设置底纹填充。
+在 PDF 中为表格单元格应用背景填充颜色。
 
 ```javascript editor-pdf
-// Create table and set its cell shading color.
+// How do I change the background color of a table cell in a PDF?
 
-// Set shd using a table cell object.
+// Color the background of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

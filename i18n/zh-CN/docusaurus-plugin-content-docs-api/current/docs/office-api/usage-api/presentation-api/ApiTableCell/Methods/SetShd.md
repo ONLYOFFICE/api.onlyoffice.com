@@ -25,12 +25,12 @@ expression.SetShd(sType, r, g, b);
 
 ## 示例
 
-指定应用于当前表格单元格范围的底纹。
+在演示文稿中为表格单元格应用背景颜色。
 
 ```javascript editor-pptx
-// How to set shading fill to the cell.
+// How do I fill a table cell with a color in a presentation?
 
-// Create table and set its cell shading color.
+// Create a table and set a solid color background for a cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

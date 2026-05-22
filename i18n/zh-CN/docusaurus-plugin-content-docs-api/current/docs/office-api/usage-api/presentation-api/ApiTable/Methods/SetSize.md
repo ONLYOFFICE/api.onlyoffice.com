@@ -23,12 +23,12 @@ expression.SetSize(width, height);
 
 ## 示例
 
-在演示文稿中设置表格的大小。
+设置演示文稿中表格的宽度和高度。
 
 ```javascript editor-pptx
-// How do I set size in a presentation?
+// Specify custom dimensions for the table object.
 
-// Set size using a table object in a presentation.
+// Create a table and set its width and height values.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

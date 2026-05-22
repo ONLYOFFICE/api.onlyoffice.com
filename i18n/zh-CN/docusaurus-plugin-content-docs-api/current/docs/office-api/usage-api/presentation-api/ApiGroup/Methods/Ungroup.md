@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在演示文稿中取消组合绘图元素。
+在演示文稿中将分组的形状分离回各个独立对象。
 
 ```javascript editor-pptx
-// How to ungroup a grouped drawings in a presentation.
+// How do I ungroup shapes that are grouped together in a presentation?
 
-// How to remove a grouping from objects in a presentation.
+// Remove the grouping from multiple shapes in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

@@ -22,12 +22,12 @@ Quads[]
 
 ## 示例
 
-在页面中搜索某个单词并为其添加高亮。
+在 PDF 的页面上查找并定位单词的所有实例。
 
 ```javascript editor-pdf
-// How do I search in a PDF document?
+// How do I search for text on a page in a PDF?
 
-// Search using a page object.
+// Look up a specific word and identify all matching locations in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

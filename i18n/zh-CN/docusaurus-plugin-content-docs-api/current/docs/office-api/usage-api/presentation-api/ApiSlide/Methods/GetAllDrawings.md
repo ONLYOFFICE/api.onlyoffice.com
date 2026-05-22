@@ -20,12 +20,12 @@ expression.GetAllDrawings();
 
 ## 示例
 
-获取幻灯片中所有绘图对象的数组。
+查找演示文稿中幻灯片上的所有绘图。
 
 ```javascript editor-pptx
-// How to get all drawings from the slide.
+// How do I access all the drawings in a slide in a presentation?
 
-// Get all drawings from the slide as an array.
+// Retrieve the drawing objects and configure their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

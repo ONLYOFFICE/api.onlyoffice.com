@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查电子表格中形状填充使用的颜色是否为主题颜色。
+确定电子表格中的颜色是否链接到文档主题。
 
 ```javascript editor-xlsx
-// How can I is theme color using a color in a spreadsheet?
+// How do I check if a given color comes from the theme palette rather than a custom value in a spreadsheet?
 
-// Is theme color for a color in a spreadsheet.
+// Compare a plain hex color and a theme color to verify which one is theme-based in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const hexColor = Api.HexColor('#FF0000');

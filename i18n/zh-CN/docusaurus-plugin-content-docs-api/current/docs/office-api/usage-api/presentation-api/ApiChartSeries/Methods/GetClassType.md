@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中图表系列对象的类类型。
+检索图表系列对象的类类型标识符字符串。
 
 ```javascript editor-pptx
-// How can I get the class type of a chart series in a presentation?
+// Extract and display the object type metadata of a chart series.
 
-// Get the class type of a chart series and display it in the presentation.
+// Get the class type of a series and output it as the slide title text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

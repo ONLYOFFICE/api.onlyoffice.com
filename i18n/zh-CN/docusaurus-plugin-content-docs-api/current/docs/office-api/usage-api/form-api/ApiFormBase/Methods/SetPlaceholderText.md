@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为表单设置占位符文本。
+在文档中为表单字段设置占位符文本以指导用户输入。
 
 ```javascript editor-forms
-// Add text as a placeholder of the form.
+// How do I add hint text inside an empty form field in a document?
 
-// Create a text form and set its placeholder text.
+// Display a prompt inside a field before the user fills it in.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

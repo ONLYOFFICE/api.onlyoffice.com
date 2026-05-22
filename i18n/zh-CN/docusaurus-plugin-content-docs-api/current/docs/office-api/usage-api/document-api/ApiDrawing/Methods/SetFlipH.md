@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中绘图对象的水平翻转。
+在文档中水平翻转绘图。
 
 ```javascript editor-docx
-// How to set flip h for a drawing object in a document?
+// How do I mirror a shape along its vertical axis in a document?
 
-// Set flip h and display the result in a document.
+// Produce a mirrored copy of an arrow to compare original and flipped orientations in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

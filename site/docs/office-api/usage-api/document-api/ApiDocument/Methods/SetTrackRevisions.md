@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the change tracking mode in a document.
+Turn change-tracking mode on or off in a document.
 
 ```javascript editor-docx
-// How to track revisions of the document.
+// How do I enable revision tracking so all edits are recorded in a document?
 
-// Start document tracking mode.
+// Activate tracked changes before editing so reviewers can accept or reject each modification later.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

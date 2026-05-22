@@ -22,12 +22,12 @@ expression.SetText(sText);
 
 ## 示例
 
-在演示文稿中设置批注回复文本。
+更改演示文稿中批注回复的文本。
 
 ```javascript editor-pptx
-// How to change a text of a comment reply in a presentation.
+// How do I edit the message in a comment reply in a presentation?
 
-// Get all comments from the presentation and set its first one's reply text.
+// Update the reply text of a comment to a new message in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

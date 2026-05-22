@@ -22,12 +22,12 @@ expression.GetRows(nRow);
 
 ## 示例
 
-获取表示电子表格中指定范围中行的 Range 对象。
+访问范围内的各个行以在电子表格中更新其值。
 
 ```javascript editor-xlsx
-// How to get a cell rows of a range.
+// How do I iterate over each row in a range and set its value in a spreadsheet?
 
-// Get a range and change each cell's row value by getting all row objects.
+// Fill a multi-row range by writing a different value into each row one at a time in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("1:3");

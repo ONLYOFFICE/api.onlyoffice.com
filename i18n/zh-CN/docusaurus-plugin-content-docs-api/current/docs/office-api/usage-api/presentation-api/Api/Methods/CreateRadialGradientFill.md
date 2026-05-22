@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## 示例
 
-在演示文稿中创建径向渐变填充。
+在演示文稿中用从中心向外混合的颜色填充形状。
 
 ```javascript editor-pptx
-// How to create a radial gradient fill in a presentation.
+// How do I apply a radial gradient to a shape in a presentation?
 
-// Add a radial gradient fill in a presentation.
+// Create a gradient that fades from one color at the center to another at the edges in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ expression.SetSolved(bSolved);
 
 ## 示例
 
-在文档中将批注标记为已解决。
+将文档中的批注标记为已解决。
 
 ```javascript editor-docx
-// How to make a comment solved in a document.
+// How do I set a comment's status to solved in a document?
 
-// Get all comments from the presentation and set it solved.
+// Close out a review thread by flagging the comment as no longer needing attention.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

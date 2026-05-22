@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a type of the current table conditional style in a document.
+Read the conditional region identifier assigned to a table style in a document.
 
 ```javascript editor-docx
-// How to get the table style type and display it in the document.
+// How do I find out which part of a table a style condition targets in a document?
 
-// Retrieve the type of the style in a document.
+// Identify the area of the table that a conditional formatting rule applies to in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 将应用于段落内容的对齐类型。 |
+| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 对齐类型， |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置段落内容对齐方式。
+控制文档中段落文本的水平对齐方式。
 
 ```javascript editor-docx
-// How to set justification of the paragraph content in a document.
+// How do I apply left, right, center, or justified alignment to paragraphs in a document?
 
-// Change the justification of the paragraph in a document.
+// Demonstrate multiple alignment styles side by side to choose the right layout for content.
 
 let doc = Api.GetDocument();
 let myStyleLeft = doc.CreateStyle("My style with left text alignment");

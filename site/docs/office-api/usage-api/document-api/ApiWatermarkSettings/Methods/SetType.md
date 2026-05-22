@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Switch the watermark to text mode and configure its appearance in a document.
 
 ```javascript editor-docx
-// How to set the type of the watermark in a document.
+// How do I set the watermark type to text in a document?
 
-// Change the watermark type to "text" using its settings in a document.
+// Control whether the watermark displays as text or an image in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

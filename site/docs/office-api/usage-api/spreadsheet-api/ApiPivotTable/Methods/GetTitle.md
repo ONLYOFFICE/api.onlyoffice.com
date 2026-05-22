@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get a title pivot table in a spreadsheet.
+Read the title of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table title in a spreadsheet.
+// How do I find out what a pivot table is named in a spreadsheet?
 
-// Create a pivot table, add data to it then get its title in a spreadsheet.
+// Retrieve the display name assigned to a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

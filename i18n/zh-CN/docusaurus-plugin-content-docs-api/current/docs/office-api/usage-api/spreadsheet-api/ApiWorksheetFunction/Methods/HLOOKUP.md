@@ -15,9 +15,9 @@ expression.HLOOKUP(arg1, arg2, arg3, arg4);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 要在表的第一行中查找的值，可以是值、引用或文本字符串。 |
-| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 在其中查找数据的文本、数字或逻辑值表。数据按升序排序。此参数可以是单元格区域或区域名称。 |
+| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 在其中查找数据的文本、数字或逻辑值表。数据按升序排列。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 应从中返回匹配值的数据表中的行号。表中值的第一行是第 1 行。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定是在首行中查找最接近的匹配项（按升序排序）（**true** 或省略）还是查找精确匹配项（**false**）的逻辑值。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定是否在顶部行（按升序排列）中查找最接近的匹配项的逻辑值（**true** 或省略） |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number \| string
 
 ## 示例
 
-在电子表格中在表格或值数组的第一行中查找值，并从指定行返回同一列中的值。
+在电子表格中搜索表格顶行中的值并从同列中指定行检索值。
 
 ```javascript editor-xlsx
-// How to find a value from the row of a table in a spreadsheet.
+// How do I find values in a horizontal table using a lookup formula in a spreadsheet?
 
-// Use a function to look up a value from a table or an array and return found value in a spreadsheet.
+// Retrieve a specific cell value from a table by searching horizontally in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -14,7 +14,7 @@ expression.VARP(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 numeric values for which the variance will be calculated. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 numeric values for which the variance will be calculated. |
 
 ## Returns
 
@@ -25,9 +25,9 @@ number
 Calculate variance based on the entire population (ignores logical values and text in the population) in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to estimate variance based on population in a spreadsheet.
+// The VARP function computes population variance from numeric data only.
 
-// Use a function to estimate variance based on population in a spreadsheet.
+// Apply the function to calculate variance based on the entire population in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

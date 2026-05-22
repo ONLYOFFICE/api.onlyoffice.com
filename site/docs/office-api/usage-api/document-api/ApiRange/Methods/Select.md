@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Set the selection to the specified range in a document.
+Highlight a specific range of text as the active selection in a document.
 
 ```javascript editor-docx
-// How to select a range with a cursor in a document.
+// How do I make a portion of text become the current selection in a document?
 
-// Get range of the paragraph and select it in a document.
+// Mark a segment of text so it is selected and ready for further actions in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-保存对指定文档的更改。
+向段落添加文本并保存文档中的更改。
 
 ```javascript editor-docx
-// Add a text to the first paragraph of the document and save these changes.
+// How do I save changes after editing a paragraph in a document?
 
-// How to save changes made to the paragraph object in a document.
+// Write text into the first paragraph and persist the result to the file in a document.
 
 let paragraph = Api.GetDocument().GetElement(0);
 paragraph.AddText("This sample text is saved to the document.");

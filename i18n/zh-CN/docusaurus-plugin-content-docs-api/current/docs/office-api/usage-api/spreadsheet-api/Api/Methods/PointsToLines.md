@@ -25,9 +25,9 @@ number
 在电子表格中将磅转换为行。
 
 ```javascript editor-xlsx
-// How can I convert points to lines in a spreadsheet?
+// How do I express a point value as lines in a spreadsheet?
 
-// Convert points to lines in a spreadsheet.
+// Get the line-unit equivalent of a given number of points in a spreadsheet.
 
 const points = 100;
 const lines = Api.PointsToLines(points);

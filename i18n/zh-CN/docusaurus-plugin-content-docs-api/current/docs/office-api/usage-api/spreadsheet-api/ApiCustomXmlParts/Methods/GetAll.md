@@ -20,12 +20,12 @@ expression.GetAll();
 
 ## 示例
 
-获取电子表格中的所有自定义 XML 部件。
+收集电子表格中工作簿的每个存储 XML 块。
 
 ```javascript editor-xlsx
-// How to retrieve all custom XML parts from the workbook in a spreadsheet.
+// How do I retrieve all embedded XML data at once from a workbook in a spreadsheet?
 
-// Get all for a custom XML parts in a spreadsheet.
+// Loop through each saved XML entry to inspect or process it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

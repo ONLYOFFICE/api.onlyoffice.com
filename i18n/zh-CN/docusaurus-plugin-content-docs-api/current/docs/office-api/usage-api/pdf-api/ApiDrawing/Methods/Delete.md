@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-如何删除页面绘图。
+从 PDF 的页面移除绘图。
 
 ```javascript editor-pdf
-// Get a page drawing and delete it.
+// How do I delete an object that's on a page in a PDF?
 
-// Delete using a drawing object object in a PDF document.
+// Eliminate a selected shape from the document in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

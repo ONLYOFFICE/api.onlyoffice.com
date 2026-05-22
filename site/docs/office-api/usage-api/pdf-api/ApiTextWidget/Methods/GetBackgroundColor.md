@@ -6,12 +6,12 @@ Inherited from [ApiBaseWidget.GetBackgroundColor](../../ApiBaseWidget/Methods/Ge
 
 ## Example
 
-Get field widget and display it's background color in a PDF document.
+Read the background color of a form field widget in a PDF.
 
 ```javascript editor-pdf
-// How do I get the background color in a PDF document?
+// How do I get the background color of a widget in a PDF?
 
-// Get the background color using a widget object in a PDF document.
+// Retrieve and display the fill color of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取 PDF 文档中图章注释的类型。
+了解 PDF 中印章注释的类别
 
 ```javascript editor-pdf
-// How do I get the type in a PDF document?
+// What kind of stamp annotation is being used in a PDF?
 
-// Get the type using a stamp annotation object in a PDF document.
+// Look up and print the identifier type assigned to a stamp annotation in a PDF
 
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');

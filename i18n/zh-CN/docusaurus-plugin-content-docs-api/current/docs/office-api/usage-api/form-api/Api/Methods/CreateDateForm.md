@@ -22,12 +22,12 @@ expression.CreateDateForm(formPr);
 
 ## 示例
 
-使用通用和特定的日期表单属性创建日期表单。
+在文档中创建用户输入日历日期的日期输入字段。
 
 ```javascript editor-forms
-// How to create a date form and add it to the paragraph.
+// How do I add a date picker field to a document?
 
-// Add a date form specifying its format and language to the document object.
+// Set up a form field that accepts date values with specific formatting in a document.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({

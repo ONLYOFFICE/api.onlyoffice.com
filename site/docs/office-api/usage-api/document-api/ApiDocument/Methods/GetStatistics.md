@@ -25,12 +25,12 @@ object
 
 ## Example
 
-Get the document statistics represented as an object in a document.
+Retrieve document statistics as a structured object in a document.
 
 ```javascript editor-docx
-// How to get the document statistics showing pages count, words count, etc.
+// How do I read page count, word count, and paragraph count in a document?
 
-// Display words, pages, symbols, paragraphs count of the document.
+// Check how many pages, words, symbols, and paragraphs a finished document contains.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析云形路径属性并在单元格中显示。显示路径数量、尺寸、笔触和填充信息。
+计算构成电子表格中形状轮廓的绘图路径数量。
 
 ```javascript editor-xlsx
-// How can I get the path count using a geometry in a spreadsheet?
+// How do I find out how many separate path segments a shape contains in a spreadsheet?
 
-// Get the path count for a geometry in a spreadsheet.
+// Determine the total number of outline segments that together form a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

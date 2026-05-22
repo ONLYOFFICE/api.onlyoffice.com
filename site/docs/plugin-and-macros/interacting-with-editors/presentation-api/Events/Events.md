@@ -10,6 +10,6 @@
 | [onExternalMouseUp](./onExternalMouseUp.md) | The function called when the mouse button is released outside the plugin iframe. |
 | [onSlideShowBegin](./onSlideShowBegin.md) | The function called when a slide show presentation starts. |
 | [onSlideShowEnd](./onSlideShowEnd.md) | The function called when a slide show presentation ends. |
-| [onSlideShowNextSlide](./onSlideShowNextSlide.md) | The function called after a slide has been changed and displayed during a slide show presentation. Fires before the slide content is actually displayed. |
+| [onSlideShowNextSlide](./onSlideShowNextSlide.md) | The function called after a slide has been changed and displayed during a slide show presentation. |
 | [onSlideShowSlideChanged](./onSlideShowSlideChanged.md) | The function called when slide changes during a slide show presentation. Provides information about both the current and previous slide. |
 | [onTargetPositionChanged](./onTargetPositionChanged.md) | The function called when the target position in the editor is changed. |

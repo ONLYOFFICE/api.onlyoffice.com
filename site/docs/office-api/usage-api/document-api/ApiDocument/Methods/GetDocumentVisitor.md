@@ -2,16 +2,20 @@
 
 Returns a visitor object for traversing the elements of the current document.
 
+:::note\
+This functionality is available in paid ONLYOFFICE Docs editions.\
+:::
+
 Inherited from [ApiDocumentContent.GetDocumentVisitor](../../ApiDocumentContent/Methods/GetDocumentVisitor.md).
 
 ## Example
 
-Use a document visitor to traverse document elements in a document.
+Traverse all paragraphs and tables using a document visitor in a document.
 
 ```javascript editor-docx
-// How can I get the document visitor using a document content in a document?
+// How do I walk through every element in a document content with a visitor in a document?
 
-// Get the document visitor for a document content in a document.
+// Count paragraphs and tables automatically without iterating element indexes by hand.
 
 const doc = Api.GetDocument();
 

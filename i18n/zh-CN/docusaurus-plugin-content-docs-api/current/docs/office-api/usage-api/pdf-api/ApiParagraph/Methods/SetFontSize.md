@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在 PDF 文档中为段落的字符设置字体大小。
+调整 PDF 中段落的文本大小。
 
 ```javascript editor-pdf
-// How to set font size for a paragraph in a PDF document?
+// How do I change the font size in a paragraph in a PDF?
 
-// Set font size and display the result in a PDF document.
+// Enlarge or shrink text in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

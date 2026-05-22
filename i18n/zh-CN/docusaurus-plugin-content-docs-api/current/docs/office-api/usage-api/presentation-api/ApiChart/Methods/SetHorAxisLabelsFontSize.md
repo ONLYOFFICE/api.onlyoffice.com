@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为水平轴标签设置字体大小。
+更改演示文稿中图表水平轴标签的字体大小。
 
 ```javascript editor-pptx
-// How to resize a font size of the horizontal axis labels in a presentation.
+// How do I make the numbers along the bottom of a chart larger in a presentation?
 
-// Create a chart then change a font size of axis labels in a presentation.
+// Create a chart and adjust the text size of the horizontal axis labels in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

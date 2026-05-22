@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中将父下拉列表或组合框内容控件中的当前项目向上移动一个元素。
+将文档中下拉列表或组合框列表条目上移一个位置。
 
 ```javascript editor-docx
-// How do I move up in a document?
+// How do I move a list item up in a dropdown control in a document?
 
-// Move up using a content control list entry object in a document.
+// Reorder entries by promoting an item toward the top of the list when adjusting option priority in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

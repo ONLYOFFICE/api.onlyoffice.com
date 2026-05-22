@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格右边框及其填充颜色。
+在 PDF 中设置带有填充颜色的表格单元格右边框。
 
 ```javascript editor-pdf
-// Create table and set its cell right border.
+// How do I customize the appearance of the right edge of a cell in a PDF?
 
-// Use table cell to set cell border right.
+// Style the border on the right side of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

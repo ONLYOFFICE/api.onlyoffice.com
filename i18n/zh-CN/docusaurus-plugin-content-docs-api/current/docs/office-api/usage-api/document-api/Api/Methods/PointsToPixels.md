@@ -25,9 +25,9 @@ number
 在文档中将磅转换为像素。
 
 ```javascript editor-docx
-// How to convert points to pixels in a document?
+// How do I convert points to pixels in a document?
 
-// Convert points to pixels using the document API.
+// Display the pixel equivalent of a point value as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

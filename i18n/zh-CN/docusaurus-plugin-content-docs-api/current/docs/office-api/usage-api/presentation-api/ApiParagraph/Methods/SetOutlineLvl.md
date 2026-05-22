@@ -6,12 +6,12 @@
 
 ## 示例
 
-在演示文稿中通过段落属性设置指定段落的大纲级别。
+在演示文稿中为段落分配大纲级别。
 
 ```javascript editor-pptx
-// How can I set outline lvl using a paragraph properties in a presentation?
+// How do I set the outline hierarchy level of a paragraph in a presentation?
 
-// Set outline lvl for a paragraph properties in a presentation.
+// Configure the outline depth of a paragraph using paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

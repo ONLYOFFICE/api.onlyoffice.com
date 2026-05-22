@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the timestamp of the comment creation in the current time zone format.
+Update the recorded creation time of a comment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a time when a comment was created in a spreadsheet.
+// How do I change when a comment appears to have been created in a spreadsheet?
 
-// Add a comment then update its creation time and show it in the worksheet.
+// Overwrite the original timestamp on a comment with a new time in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

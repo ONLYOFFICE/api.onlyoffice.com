@@ -23,9 +23,9 @@ number
 获取当前幻灯片在演示文稿中的位置。
 
 ```javascript editor-pptx
-// How to return a slide index.
+// Retrieve the slide index using GetSlideIndex method.
 
-// Get a slide and return its index.
+// Display the slide index value on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -6,12 +6,12 @@ Inherited from [ApiFormatCondition.Delete](../../ApiFormatCondition/Methods/Dele
 
 ## Example
 
-Delete a conditional formatting rule.
+Remove a conditional formatting rule from a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove specific conditional formatting rules from a range.
+// How do I delete an existing conditional formatting rule applied to cells in a spreadsheet?
 
-// Delete conditional formatting rule.
+// Clear an unwanted formatting condition so cells revert to their default appearance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

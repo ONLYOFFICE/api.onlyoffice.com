@@ -25,9 +25,9 @@ number
 在电子表格中返回秒数，0 到 59 的数字。
 
 ```javascript editor-xlsx
-// How to get seconds from time in a spreadsheet.
+// Extract the seconds component from a time value using the SECOND function.
 
-// Use a function to return seconds from time object in a spreadsheet.
+// Apply the function to retrieve and display the seconds in a cell.
 
 const worksheet = Api.GetActiveSheet();
 

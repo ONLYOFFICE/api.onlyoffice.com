@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中块级容器的背景颜色。
+在文档中为内容控件设置背景颜色。
 
 ```javascript editor-docx
-// How can I set background color using a block-level content control in a document?
+// How do I change the background color of a content control in a document?
 
-// Set background color for a block-level content control in a document.
+// Highlight a content control with a colored background to make it stand out in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

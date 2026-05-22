@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set rotate for first page in document.
+Rotate a page to a specific angle in a PDF.
 
 ```javascript editor-pdf
-// How can I set rotation using a page in a PDF document?
+// How do I turn a page to face the right direction in a PDF?
 
-// Set rotation for a page in a PDF document.
+// Apply a rotation transformation to change the page orientation in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

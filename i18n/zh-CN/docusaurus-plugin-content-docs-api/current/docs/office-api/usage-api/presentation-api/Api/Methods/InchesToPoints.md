@@ -25,9 +25,9 @@ number
 在演示文稿中将英寸转换为磅。
 
 ```javascript editor-pptx
-// How to convert inches to points in a presentation?
+// Convert measurement units using the Api object.
 
-// Convert inches to points using the presentation API.
+// Display the conversion result in a shape on the slide.
 
 const inches = 100;
 const points = Api.InchesToPoints(inches);

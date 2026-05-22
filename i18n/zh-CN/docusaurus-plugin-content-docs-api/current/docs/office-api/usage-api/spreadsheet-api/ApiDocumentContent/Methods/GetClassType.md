@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档内容返回的类类型。
+识别电子表格中附加到形状的文本内容对象的类型名称。
 
 ```javascript editor-xlsx
-// How do I check what type a document content object is?
+// How do I find out what kind of content object a shape's text area returns in a spreadsheet?
 
-// Retrieve and output the class type string for a document content.
+// Confirm the content category of a shape by reading its type label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

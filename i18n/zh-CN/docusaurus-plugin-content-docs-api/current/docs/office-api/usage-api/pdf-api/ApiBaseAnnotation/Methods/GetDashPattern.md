@@ -20,12 +20,12 @@ number[]
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其虚线模式。
+检索 PDF 中注释上虚线边框的虚线图案。
 
 ```javascript editor-pdf
-// How to get the dash pattern for an annotation in a PDF document?
+// What dash pattern is used for an annotation's border in a PDF?
 
-// Get the dash pattern and display the result in a PDF document.
+// Check the spacing and length of dashes on an annotation's border in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -22,12 +22,12 @@ expression.SetLanguage(sLanguage);
 
 ## 示例
 
-在电子表格中使用核心属性设置工作簿的语言。
+在电子表格工作簿的文档属性中记录主要语言。
 
 ```javascript editor-xlsx
-// How can I set language using a core properties in a spreadsheet?
+// How do I specify the language used in a workbook's metadata in a spreadsheet?
 
-// Set language for a core properties in a spreadsheet.
+// Mark the workbook with a locale code so readers know which language it targets in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

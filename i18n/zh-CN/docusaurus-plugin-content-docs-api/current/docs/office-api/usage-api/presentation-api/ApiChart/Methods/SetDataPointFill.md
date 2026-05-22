@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为数据点设置填充。
+更改演示文稿中图表内单个数据点的颜色。
 
 ```javascript editor-pptx
-// How to color a data point in a presentation.
+// How do I color an individual data point in a chart in a presentation?
 
-// Create a chart then color its data points in a presentation.
+// Create a chart and apply a fill color to one specific data point in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

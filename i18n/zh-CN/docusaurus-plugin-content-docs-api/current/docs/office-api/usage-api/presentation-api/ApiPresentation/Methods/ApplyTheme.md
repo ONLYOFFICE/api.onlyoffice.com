@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将主题应用于演示文稿中的所有幻灯片。
+将自定义主题应用于演示文稿中的所有幻灯片。
 
 ```javascript editor-pptx
-// How to apply a theme to the presentation.
+// How do I create and apply a custom theme to a presentation?
 
-// Create the theme object and apply it to the presentation.
+// Define a theme with custom colors, fonts, and effects and apply it to a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

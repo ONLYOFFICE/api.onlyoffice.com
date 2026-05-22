@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.SetTextFill](../../ApiTextPr/Methods/SetTextFill.md).
 
 ## Example
 
-Set a text fill for the WordArt text in a document.
+Fill WordArt text with a solid color in a document.
 
 ```javascript editor-docx
-// How to color a text object in a document.
+// How do I change the fill color of decorative text in a document?
 
-// Create a text run object, add color to it using solid fill in a document.
+// Give artistic text a distinct appearance by applying a colored fill in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

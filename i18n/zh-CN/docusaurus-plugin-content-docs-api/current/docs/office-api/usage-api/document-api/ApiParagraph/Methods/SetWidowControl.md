@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在显示时是否将当前段落的单行通过移至下一页的方式显示在与其余内容不同的页面上。
+防止文档中的孤行出现在单独的页面上。
 
 ```javascript editor-docx
-// Set the window control of the paragraph in a document.
+// How do I keep the last line of a paragraph from being stranded on the next page in a document?
 
-// Make the last line to be displayed on the next page, by setting widow control method set to 'true'.
+// Ensure paragraph lines stay together across page breaks for better readability in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

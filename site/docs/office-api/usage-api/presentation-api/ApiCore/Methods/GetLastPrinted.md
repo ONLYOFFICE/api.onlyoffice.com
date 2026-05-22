@@ -20,12 +20,12 @@ Date
 
 ## Example
 
-Set and get the date when the current presentation was printed last time in a presentation.
+Set and check when a presentation was last printed in a presentation.
 
 ```javascript editor-pptx
-// How can I get last printed using a core properties in a presentation?
+// How do I find the date a presentation was printed?
 
-// Get last printed for a core properties in a presentation.
+// Read the timestamp of the most recent print event in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

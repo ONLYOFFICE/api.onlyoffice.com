@@ -20,12 +20,12 @@ expression.GetAllCharts();
 
 ## 示例
 
-获取演示文稿中幻灯片版式的所有图表对象数组。
+将幻灯片布局中的所有图表对象作为数组获取。
 
 ```javascript editor-pptx
-// How to get all charts from the layout of presentation.
+// Charts added to layouts can be retrieved and modified.
 
-// Get all charts from the presentation as an array.
+// Apply formatting to the first chart in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中条件格式规则的父范围。
+检索电子表格中拥有条件格式规则的集合。
 
 ```javascript editor-xlsx
-// How to get the parent for a format condition?
+// How do I access the parent formatting collection that a specific rule belongs to in a spreadsheet?
 
-// Get the parent and display the result in a spreadsheet.
+// Trace back from a formatting rule to its owning collection to manage all related conditions in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

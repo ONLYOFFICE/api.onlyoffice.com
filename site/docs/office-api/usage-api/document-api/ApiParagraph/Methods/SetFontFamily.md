@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-Set all 4 font slots with the specified font family in a document.
+Apply a specific typeface to all text in a paragraph in a document.
 
 ```javascript editor-docx
-// How to set font family to the text in a document.
+// How do I change the font family used for a paragraph's text in a document?
 
-// Create a paragraph and change its font family in a document.
+// Switch a paragraph to a different typeface to match a desired visual style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

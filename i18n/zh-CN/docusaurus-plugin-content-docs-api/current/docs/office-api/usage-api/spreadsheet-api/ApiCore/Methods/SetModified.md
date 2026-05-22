@@ -22,12 +22,12 @@ expression.SetModified(oModified);
 
 ## 示例
 
-在电子表格中设置工作簿的最后修改日期。
+在电子表格工作簿的文档属性中记录最后更改日期。
 
 ```javascript editor-xlsx
-// How do I set modified in a spreadsheet?
+// How do I write a custom last-modified date into a workbook's metadata in a spreadsheet?
 
-// Set modified using a core properties object in a spreadsheet.
+// Update the modification timestamp stored in the workbook so the history reflects a specific date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

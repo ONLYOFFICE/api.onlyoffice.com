@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取控件数据，如同其在文档中映射的 XML 中被填充一样。
+提取文档中内联内容控件在 XML 映射中显示的文本值。
 
 ```javascript editor-docx
-// How to get the data for xml mapping for an inline content control in a document?
+// How do I retrieve the XML-mapped data from an inline content control in a document?
 
-// Get the data for xml mapping and display the result in a document.
+// Output the raw control value to verify what would be written to a bound XML store in a document.
 
 let doc = Api.GetDocument();
 let contentControl = Api.CreateInlineLvlSdt();

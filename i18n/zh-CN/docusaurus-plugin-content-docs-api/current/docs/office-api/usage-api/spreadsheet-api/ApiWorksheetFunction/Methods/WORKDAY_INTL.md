@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中使用自定义周末参数返回指定工作日数之前或之后的日期序列号。
+使用自定义周末定义在电子表格中计算工作日日期。
 
 ```javascript editor-xlsx
-// How to return the serial number of the date adding some workdays in a spreadsheet.
+// How do I find a date by counting workdays with a custom weekend schedule in a spreadsheet?
 
-// Use a function to calculate the serial number of the date in a spreadsheet.
+// Determine a target date based on workdays using custom weekend parameters in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Add a content control and change its appearance in a document.
+Control the visual appearance of an inline content control in a document.
 
 ```javascript editor-docx
-// How can I set appearance using an inline content control in a document?
+// How do I hide or show the border of an inline content control in a document?
 
-// Set appearance for an inline content control in a document.
+// Make a content control invisible to the reader by setting its appearance to hidden in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

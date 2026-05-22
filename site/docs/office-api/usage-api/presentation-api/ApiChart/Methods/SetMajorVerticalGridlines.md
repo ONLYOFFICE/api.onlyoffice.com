@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Specify the visual properties for the major vertical gridlines in a presentation.
+Format the major vertical gridlines in a chart in a presentation.
 
 ```javascript editor-pptx
-// How to set a stroke as major vertical gridlines in a presentation.
+// How do I customize the appearance of the main vertical lines in a chart in a presentation?
 
-// Create a chart, set its properties and its vertical gridlines properties in a presentation.
+// Apply a custom color and thickness to the major vertical gridlines in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

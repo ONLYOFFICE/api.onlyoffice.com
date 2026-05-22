@@ -23,12 +23,12 @@ expression.AddPictureContentControl(width, height);
 
 ## Example
 
-Add a picture content control to a document: in a document.
+Add a picture content control in a document.
 
 ```javascript editor-docx
-// How can I add the picture content control using a document in a document?
+// How do I insert a picture placeholder field into a document?
 
-// Add the picture content control for a document in a document.
+// Reserve a spot where a reader can later replace the placeholder with their own image in a document.
 
 let doc = Api.GetDocument();
 doc.AddPictureContentControl();

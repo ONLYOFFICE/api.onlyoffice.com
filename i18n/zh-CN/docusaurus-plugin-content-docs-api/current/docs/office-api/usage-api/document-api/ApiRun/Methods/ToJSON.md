@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-在文档中将文本 run 对象转换为 JSON 对象。
+将文本运行序列化为文档中可传输的数据格式。
 
 ```javascript editor-docx
-// How to convert a slide object to a JSON object.
+// How do I save a text run's content and formatting as structured data in a document?
 
-// Get a slide by its index and convert it to JSON.
+// Capture a text run as a portable object that can be restored later in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

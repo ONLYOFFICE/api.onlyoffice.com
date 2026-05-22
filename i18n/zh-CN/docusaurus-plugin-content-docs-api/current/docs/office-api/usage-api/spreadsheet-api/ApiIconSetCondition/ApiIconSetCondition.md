@@ -44,7 +44,7 @@ ApiIconSetCondition 是 [ApiFormatCondition](../ApiFormatCondition/ApiFormatCond
 | [ModifyAppliesToRange](./Methods/ModifyAppliesToRange.md) | 无 | 设置当前条件格式规则应用的单元格区域。 |
 | [SetBorders](./Methods/SetBorders.md) | 无 | 设置条件格式规则的边框样式。 |
 | [SetDateOperator](./Methods/SetDateOperator.md) | 无 | 设置时间段条件的日期运算符。 |
-| [SetFillColor](./Methods/SetFillColor.md) | 无 | 使用先前创建的颜色对象设置格式条件的背景颜色。当先前创建的颜色对象为 null 时设置为「无填充」。 |
+| [SetFillColor](./Methods/SetFillColor.md) | 无 | 使用先前创建的颜色对象为格式条件设置背景颜色。 |
 | [SetFirstPriority](./Methods/SetFirstPriority.md) | 无 | 将当前条件格式规则的优先级值设置为「1」，使其在工作表上的所有其他规则之前计算。 |
 | [SetIconSet](./Methods/SetIconSet.md) | boolean | 设置条件格式规则的图标集类型。 |
 | [SetLastPriority](./Methods/SetLastPriority.md) | 无 | 设置当前条件格式规则的计算顺序，使其在工作表上的所有其他规则之后计算。 |

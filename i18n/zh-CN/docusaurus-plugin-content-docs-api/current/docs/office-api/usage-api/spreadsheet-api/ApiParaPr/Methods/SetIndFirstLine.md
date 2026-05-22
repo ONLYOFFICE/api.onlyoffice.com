@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置电子表格中段落的首行缩进。
+在电子表格中缩进形状内段落的第一行。
 
 ```javascript editor-xlsx
-// How to change the first sentence indentation of the paragraph in a spreadsheet.
+// How do I push in just the opening line of a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the first line indentation in a spreadsheet.
+// Control the first-line indent separately from the rest of the paragraph text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

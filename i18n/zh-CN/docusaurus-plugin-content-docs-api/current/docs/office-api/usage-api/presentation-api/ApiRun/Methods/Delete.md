@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除 run。
+从演示文稿中的段落移除文本运行。
 
 ```javascript editor-pptx
-// How to delete a text run object in a presentation.
+// How do I delete a text run in a presentation?
 
-// Remove text from the slide.
+// Remove content from a slide by deleting a text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-从文档中组合框列表值中选择指定的值。
+从文档中组合框的下拉列表中选择特定值。
 
 ```javascript editor-docx
-// How to know whether a combobox form is required or not.
+// How do I programmatically pick an option from a combo box list in a document?
 
-// Display a boolean representing whether a combobox is required in a document.
+// Pre-fill a combo box with a known answer to set the default selection in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the hyperlink address in a document.
+Change the URL of a hyperlink in a document.
 
 ```javascript editor-docx
-// How to change the link address of the hyperlink object in a document.
+// How do I update the address a hyperlink points to in a document?
 
-// Set link of the hyperlink in a document.
+// Point an existing hyperlink to a different website in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

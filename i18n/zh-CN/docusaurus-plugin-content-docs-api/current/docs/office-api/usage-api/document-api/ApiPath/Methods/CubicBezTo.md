@@ -27,12 +27,12 @@ expression.CubicBezTo(x1, y1, x2, y2, x3, y3);
 
 ## 示例
 
-使用三次贝塞尔、二次贝塞尔和圆弧命令创建复杂曲线。在文档中演示不同类型的曲线绘制方法。
+在文档中使用两个控制点为自定义形状的路径添加平滑三次曲线段。
 
 ```javascript editor-docx
-// How to cubic bez to for a geometry path in a document?
+// How do I draw a flowing S-curve or bend along a shape's outline in a document?
 
-// Cubic bez to and display the result in a document.
+// Shape a custom path with a precisely controlled curve by specifying its start, end, and two guide points in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

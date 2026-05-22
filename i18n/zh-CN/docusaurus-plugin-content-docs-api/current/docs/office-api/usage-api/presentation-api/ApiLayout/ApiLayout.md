@@ -8,7 +8,7 @@
 | ------ | ------- | ----------- |
 | [AddObject](./Methods/AddObject.md) | boolean | 向当前幻灯片版式添加对象（图像、形状或图表）。 |
 | [ClearBackground](./Methods/ClearBackground.md) | boolean | 清除幻灯片版式背景。 |
-| [Copy](./Methods/Copy.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | 创建指定幻灯片版式对象的副本。不复制母版幻灯片。 |
+| [Copy](./Methods/Copy.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | 创建指定幻灯片版式对象的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 如果存在，则从父幻灯片母版中删除指定对象。 |
 | [Duplicate](./Methods/Duplicate.md) | [ApiLayout](../ApiLayout/ApiLayout.md) \| null | 创建指定幻灯片版式对象的副本，并将新幻灯片版式添加到幻灯片版式集合。 |
 | [FollowMasterBackground](./Methods/FollowMasterBackground.md) | boolean | 将母版背景设置为版式的背景。 |

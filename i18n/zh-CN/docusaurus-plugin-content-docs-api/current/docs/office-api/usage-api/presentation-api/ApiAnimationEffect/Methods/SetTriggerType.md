@@ -25,9 +25,9 @@ boolean
 在演示文稿中设置动画效果的触发类型。
 
 ```javascript editor-pptx
-// How to set trigger type for an animation effect in a presentation?
+// How do I control when an animation starts in a presentation?
 
-// Set trigger type and display the result in a presentation.
+// Choose whether an animation plays on click, automatically, or with the previous animation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

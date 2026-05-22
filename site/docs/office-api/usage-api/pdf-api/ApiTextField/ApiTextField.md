@@ -10,18 +10,20 @@ ApiTextField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 | [ClearFormat](./Methods/ClearFormat.md) | boolean | Clears format of field. |
 | [Delete](./Methods/Delete.md) | boolean | Removes field from document. |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | Gets array with widgets of the current field. |
-| [GetCharLimit](./Methods/GetCharLimit.md) | number | Gets text field chars limit. &lt;note&gt; Char limit 0 means field doesn't have char limit |
+| [GetCharLimit](./Methods/GetCharLimit.md) | number | Gets text field chars limit. |
 | [GetClassType](./Methods/GetClassType.md) | "textField" | Returns a type of the ApiTextField class. |
 | [GetFullName](./Methods/GetFullName.md) | string | Gets field full name. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field. |
 | [GetPartialName](./Methods/GetPartialName.md) | string | Gets field partial name. |
+| [GetTooltip](./Methods/GetTooltip.md) | boolean | Gets field tooltip |
 | [GetValue](./Methods/GetValue.md) | string | Gets field value |
 | [IsComb](./Methods/IsComb.md) | boolean | Checks if text field is comb. |
 | [IsMultiline](./Methods/IsMultiline.md) | boolean | Checks if text field is multiline. |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if field is required |
 | [IsScrollLongText](./Methods/IsScrollLongText.md) | boolean | Checks if text field can scroll long text. |
-| [SetCharLimit](./Methods/SetCharLimit.md) | boolean | Sets text field chars limit. &lt;note&gt; Char limit 0 means field doesn't have char limit |
-| [SetComb](./Methods/SetComb.md) | boolean | Sets text field comb prop. 💡  Should have char limit more then 0  |
+| [SetCharLimit](./Methods/SetCharLimit.md) | boolean | Sets text field chars limit. |
+| [SetComb](./Methods/SetComb.md) | boolean | Sets text field comb prop. |
 | [SetDateFormat](./Methods/SetDateFormat.md) | boolean | Sets date format for field. |
 | [SetFullName](./Methods/SetFullName.md) | boolean | Sets new field name if possible. |
 | [SetMask](./Methods/SetMask.md) | boolean | Sets mask for entered text for field. |
@@ -35,5 +37,6 @@ ApiTextField is a subclass of [ApiBaseField](../ApiBaseField/ApiBaseField.md).
 | [SetScrollLongText](./Methods/SetScrollLongText.md) | boolean | Sets text field can scroll long text prop. |
 | [SetSpecialFormat](./Methods/SetSpecialFormat.md) | boolean | Sets special format for field. |
 | [SetTimeFormat](./Methods/SetTimeFormat.md) | boolean | Sets time format for field. |
-| [SetValidateRange](./Methods/SetValidateRange.md) | boolean | Sets validate range for field. 💡  Can only be applied to fields with a percentage or number format.  |
+| [SetTooltip](./Methods/SetTooltip.md) | boolean | Sets field tooltip |
+| [SetValidateRange](./Methods/SetValidateRange.md) | boolean | Sets validate range for field. |
 | [SetValue](./Methods/SetValue.md) | boolean | Sets field value |

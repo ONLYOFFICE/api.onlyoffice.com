@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetStyle(sStyleName);
+expression.GetStyle(styleName);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -14,20 +14,20 @@ expression.GetStyle(sStyleName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyleName | 必需 | string |  | 样式名称。 |
+| styleName | 必需 | string |  | 样式名称。 |
 
 ## 返回值
 
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+[ApiStyle](../../ApiStyle/ApiStyle.md) \| null
 
 ## 示例
 
-通过名称获取文档中的样式。
+在文档中为段落应用命名样式。
 
 ```javascript editor-docx
-// How to get the style of the heading in a document.
+// How do I retrieve and apply a built-in heading style in a document?
 
-// Display the style name of the "Heading 6" in a document.
+// Reuse an existing style from the style gallery to format text without defining custom properties.
 
 let doc = Api.GetDocument();
 let noSpacingStyle = doc.GetStyle("Heading 6");

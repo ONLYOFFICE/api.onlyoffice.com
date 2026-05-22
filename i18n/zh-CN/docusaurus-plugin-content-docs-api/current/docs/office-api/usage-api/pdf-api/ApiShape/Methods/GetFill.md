@@ -20,12 +20,12 @@ expression.GetFill();
 
 ## 示例
 
-从形状获取填充属性并显示详细信息。创建带渐变填充的形状，获取并显示填充详细信息。
+从 PDF 中的形状检索填充属性。
 
 ```javascript editor-pdf
-// How can I get the fill using a shape in a PDF document?
+// What fill settings does a shape have in a PDF?
 
-// Get the fill for a shape in a PDF document.
+// Get the color or gradient applied to a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

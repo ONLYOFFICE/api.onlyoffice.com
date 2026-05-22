@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-从文档中的范围获取文本属性。
+读取文档中应用于选定区域的文本格式设置。
 
 ```javascript editor-docx
-// How to make italic the text of the range in a document.
+// How do I retrieve the styling details of a highlighted portion of text in a document?
 
-// Get a range and update its text style in a document.
+// Capture the visual style of one selection and apply it to another region in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

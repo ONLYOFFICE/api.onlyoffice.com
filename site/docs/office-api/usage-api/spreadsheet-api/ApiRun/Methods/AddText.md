@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Add some text to the run in a spreadsheet.
+Write text into a run and place it inside a shape on a worksheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a text to the run in a spreadsheet.
+// How do I put readable text inside a shape in a spreadsheet?
 
-// Get a paragraph and add a text to it in a spreadsheet.
+// Build a styled text run and attach it to a paragraph within a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

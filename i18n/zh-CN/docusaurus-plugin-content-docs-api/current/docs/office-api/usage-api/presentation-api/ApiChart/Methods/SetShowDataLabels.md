@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-指定在演示文稿中为图表显示哪些数据标签。
+控制演示文稿中图表上数据标签的可见性。
 
 ```javascript editor-pptx
-// How to show specific chart data labels in a presentation.
+// Choose which values appear as labels on chart bars or points in a presentation.
 
-// Create a chart, set its properties and its specific data labels visibility in a presentation.
+// Display selected data labels for different elements of a chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

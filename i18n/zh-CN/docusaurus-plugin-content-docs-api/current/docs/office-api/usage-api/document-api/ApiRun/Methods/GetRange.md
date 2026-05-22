@@ -1,6 +1,7 @@
 # GetRange
 
-返回表示指定文本块中所包含文档部分的 Range 对象。
+返回表示指定文本运行中包含的文档部分的 Range 对象。
+调用此方法之前，文本运行必须已附加到文档。
 
 ## 语法
 
@@ -23,12 +24,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定 run 所包含的文档部分的 Range 对象。
+按字符位置在文档中选择文本运行的一部分。
 
 ```javascript editor-docx
-// Get a range using position index and make it bold in a document.
+// How do I pick out a specific slice of text within a run in a document?
 
-// How to get the range where the run is located in a document.
+// Target a character range inside a text run for formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

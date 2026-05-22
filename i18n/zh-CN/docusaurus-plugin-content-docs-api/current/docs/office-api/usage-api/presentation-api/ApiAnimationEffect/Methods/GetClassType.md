@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查演示文稿中动画效果返回的类类型。
+检索演示文稿中动画效果的类类型。
 
 ```javascript editor-pptx
-// How do I check what type an animation effect object is in a presentation?
+// Class type identifiers distinguish different object types in the animation system.
 
-// Retrieve and output the class type string for an animation effect in a presentation.
+// Call GetClassType() on an animation effect object and display the result.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

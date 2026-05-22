@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表设置类别名称。
+更改演示文稿中图表分类的名称。
 
 ```javascript editor-pptx
-// How to rename a chart category in a presentation.
+// How do I rename a category label on a chart in a presentation?
 
-// Create a chart then name its category in a presentation.
+// Create a chart and replace one of its category names in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

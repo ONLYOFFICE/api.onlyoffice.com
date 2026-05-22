@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the tag of a form element in a document.
+Read the tag attached to a form field in a document.
 
 ```javascript editor-forms
-// How to get the tag for a form base?
+// How do I get the tag of a form field in a document?
 
-// Get the tag and display the result in a document.
+// Label a form with a custom tag, then retrieve it to confirm it was stored correctly.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

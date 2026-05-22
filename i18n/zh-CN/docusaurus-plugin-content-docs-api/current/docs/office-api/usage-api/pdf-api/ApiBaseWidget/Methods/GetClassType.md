@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中控件对象的类类型。
+获取 PDF 中控件的类型分类。
 
 ```javascript editor-pdf
-// How can I get the class type of a widget in a PDF document?
+// How do I identify what kind of widget this is in a PDF?
 
-// Get the class type of a widget and display it in the PDF.
+// Determine the class category of a form field widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

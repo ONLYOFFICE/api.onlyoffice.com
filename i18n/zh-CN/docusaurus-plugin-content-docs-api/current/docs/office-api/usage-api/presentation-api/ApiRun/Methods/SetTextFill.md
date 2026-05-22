@@ -6,12 +6,12 @@
 
 ## 示例
 
-在演示文稿中为当前文本 run 设置文本填充。
+在演示文稿中为文本应用填充颜色。
 
 ```javascript editor-pptx
-// How to change a font color in a presentation.
+// What fill colors can be applied to text in a presentation?
 
-// Get the text properties of the run and color its font in a presentation.
+// Set the solid color that fills the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

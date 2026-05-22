@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中超链接对象的类类型。
+读取文档中超链接对象的类类型。
 
 ```javascript editor-docx
-// How can I get the class type of a hyperlink in a document?
+// How do I identify the type of a hyperlink element in a document?
 
-// Get the class type of a hyperlink and display it in the document.
+// Verify that a hyperlink returns the correct class type label when queried in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

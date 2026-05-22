@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中内联级别内容控件的内部 ID。
+读取文档中内联内容控件的内部标识符。
 
 ```javascript editor-docx
-// How to get the internal id for an inline content control in a document?
+// How do I obtain the internal ID of an inline content control in a document?
 
-// Get the internal id and display the result in a document.
+// Display the system-assigned internal ID of an inline content control alongside its text in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);

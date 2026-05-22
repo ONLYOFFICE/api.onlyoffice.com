@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the current document in a document.
+Add a new paragraph with text to the current document.
 
 ```javascript editor-docx
-// Return the current document object and add a paragraph to it.
+// How do I access the open document and add content to it in a document?
 
-// Create the paragraph object, add a text to it, and insert this object into the document object.
+// Insert a paragraph into the active document using a reference to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

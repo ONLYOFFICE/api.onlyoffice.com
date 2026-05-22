@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Get all custom XML parts in a presentation.
 
 ```javascript editor-pptx
-// How to retrieve all custom XML parts from the presentation.
+// How do I retrieve all custom XML parts from a presentation?
 
-// Get all XML parts using the custom XML parts API in a presentation.
+// Display the count and content of each XML part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

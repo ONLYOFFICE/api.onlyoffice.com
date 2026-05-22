@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-向文档添加目录。
+从文档中的标题生成目录。
 
 ```javascript editor-docx
-// How to add headings to the document and generate a table of contents.
+// How do I build a table of contents based on heading styles in a document?
 
-// Insert a table of contents specifying its properties in a document.
+// Configure page numbers, leader dots, and outline depth when inserting a table of contents in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");

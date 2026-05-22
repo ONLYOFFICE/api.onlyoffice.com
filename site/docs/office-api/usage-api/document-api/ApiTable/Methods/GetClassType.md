@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a table in a document.
+Identify the object type of a table in a document.
 
 ```javascript editor-docx
-// How to identify the class type of a table in a document?
+// How do I check what kind of object a table is in a document?
 
-// Obtain the class type identifier of a table object in a document.
+// Confirm the category of a table element and display the result in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

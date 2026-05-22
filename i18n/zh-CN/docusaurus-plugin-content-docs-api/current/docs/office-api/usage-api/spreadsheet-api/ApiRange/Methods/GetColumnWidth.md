@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中的列宽值。
+读取列的宽度并在电子表格的工作表上显示值。
 
 ```javascript editor-xlsx
-// How to get width of a range column in a spreadsheet.
+// How do I find out the current width of a column in a spreadsheet?
 
-// Get a range, get its column width and show it in the worksheet.
+// Measure a column's width and record that measurement in a nearby cell.
 
 let worksheet = Api.GetActiveSheet();
 let width = worksheet.GetRange("A1").GetColumnWidth();

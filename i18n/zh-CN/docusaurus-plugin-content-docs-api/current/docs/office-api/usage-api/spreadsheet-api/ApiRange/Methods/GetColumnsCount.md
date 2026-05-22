@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中指定范围的列数。
+计算电子表格中选定范围内的列数。
 
 ```javascript editor-xlsx
-// How to get a count of columns in the range in a spreadsheet.
+// How do I find out how many columns a range spans in a spreadsheet?
 
-// Get a count of columns in the range and display it in another cell.
+// Display the column count of a range in a nearby cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:E2");

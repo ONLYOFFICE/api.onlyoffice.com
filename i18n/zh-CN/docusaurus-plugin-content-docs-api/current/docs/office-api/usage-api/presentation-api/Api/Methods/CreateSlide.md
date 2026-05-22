@@ -20,12 +20,12 @@ expression.CreateSlide();
 
 ## 示例
 
-创建幻灯片并将其插入到演示文稿中。
+创建新幻灯片并将其添加到演示文稿。
 
 ```javascript editor-pptx
-// How to add a new slide.
+// How do I insert a slide with a custom background in a presentation?
 
-// Add new slides to the presentation.
+// Apply a gradient fill background to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();

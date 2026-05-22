@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置段落首行缩进。
+在文档中缩进段落的第一行。
 
 ```javascript editor-docx
-// How to set the indentation size for the paragraph first line in a document.
+// How do I set a first-line indent for paragraphs using a paragraph style in a document?
 
-// Create a new paragraph and set its first line indentation in a document.
+// Give paragraphs a classic indented opening line to improve readability and visual structure.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

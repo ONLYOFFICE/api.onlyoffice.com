@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中将光标移动到范围对象内的指定位置。
+将光标移动到文档中的特定字符位置。
 
 ```javascript editor-docx
-// How can I move cursor to pos using a document in a document?
+// How do I place the cursor at an exact offset within a document?
 
-// Move cursor to pos for a document in a document.
+// Jump directly to a known position inside a range to begin editing there in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -18,16 +18,16 @@ expression.SetHidden(isHidden);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Set the value hiding property in a spreadsheet.
+Hide rows so their contents are not visible in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to hide cells from a range.
+// How do I make certain rows disappear from view in a spreadsheet?
 
-// Get a range and make specified cells invisible.
+// Keep data in place but prevent specific rows from showing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRows("1:3");

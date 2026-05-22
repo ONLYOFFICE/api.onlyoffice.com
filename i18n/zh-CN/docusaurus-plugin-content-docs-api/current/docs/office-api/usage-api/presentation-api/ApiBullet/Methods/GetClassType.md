@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查演示文稿中项目符号返回的类类型。
+获取演示文稿中项目符号的类类型。
 
 ```javascript editor-pptx
-// How do I check what type a bullet object is in a presentation?
+// How do I identify the class type of a bullet in a presentation?
 
-// Retrieve and output the class type string for a bullet in a presentation.
+// Retrieve the type identifier for a bullet in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

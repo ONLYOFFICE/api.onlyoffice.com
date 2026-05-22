@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a comment object in a document.
+Retrieve the class type of a comment object in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a comment in a document?
+// How do I check what type of object a comment is in a document?
 
-// Get the class type of a comment and display it in the document.
+// Confirm the object category of a comment to distinguish it from other element types.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

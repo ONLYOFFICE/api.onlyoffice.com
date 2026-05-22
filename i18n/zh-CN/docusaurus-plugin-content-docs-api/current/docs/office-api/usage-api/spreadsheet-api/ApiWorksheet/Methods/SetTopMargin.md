@@ -18,16 +18,16 @@ expression.SetTopMargin(nPoints);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-在电子表格中设置工作表的上边距。
+设置电子表格中打印页面的上边距宽度。
 
 ```javascript editor-xlsx
-// How to set margin of the top side in a spreadsheet.
+// How do I control the empty space along the top edge when printing in a spreadsheet?
 
-// Resize the top margin of the sheet in a spreadsheet.
+// Determine how much blank space appears between the top page boundary and your data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetTopMargin(25.1);

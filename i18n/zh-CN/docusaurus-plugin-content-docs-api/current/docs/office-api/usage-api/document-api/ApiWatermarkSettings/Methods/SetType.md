@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+将文档中的水印切换为文本模式并配置其外观。
 
 ```javascript editor-docx
-// How to set the type of the watermark in a document.
+// How do I set the watermark type to text in a document?
 
-// Change the watermark type to "text" using its settings in a document.
+// Control whether the watermark displays as text or an image in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

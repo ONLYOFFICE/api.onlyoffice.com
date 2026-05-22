@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## Example
 
-Specify an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text in a spreadsheet.
+Raise or lower a text run relative to the surrounding text baseline in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set an inline position of a text in a spreadsheet.
+// How do I shift text up or down without changing its font size in a spreadsheet?
 
-// Create a text run object, specify its position to move down or up in a spreadsheet.
+// Adjust the vertical offset of a word or phrase to create superscript or subscript-like effects in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中的单元格索引。
+查找文档中表格单元格的列位置。
 
 ```javascript editor-docx
-// How to get position index of the cell.
+// How do I determine which column a table cell occupies in a document?
 
-// Retrieve the index of the table cell and display it in the document.
+// Look up the column number of a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

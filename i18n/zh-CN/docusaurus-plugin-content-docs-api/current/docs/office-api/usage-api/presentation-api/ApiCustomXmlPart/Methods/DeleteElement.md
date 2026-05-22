@@ -25,9 +25,9 @@ boolean
 从演示文稿中的自定义 XML 部件删除 XML 元素。
 
 ```javascript editor-pptx
-// How do I delete the element in a presentation?
+// Remove a child element from custom XML in a presentation.
 
-// Delete the element using a custom XML part object in a presentation.
+// Discard an XML node from a custom XML part in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

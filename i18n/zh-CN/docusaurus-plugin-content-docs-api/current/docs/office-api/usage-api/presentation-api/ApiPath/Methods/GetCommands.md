@@ -20,12 +20,12 @@ expression.GetCommands();
 
 ## 示例
 
-分析演示文稿幻灯片上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+从演示文稿中形状的几何路径检索所有绘图命令。
 
 ```javascript editor-pptx
-// How do I get the commands in a presentation?
+// How do I access all the drawing commands that make up a shape in a presentation?
 
-// Get the commands using a geometry path object in a presentation.
+// Get the complete list of path commands used to construct a shape in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

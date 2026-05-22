@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查 PDF 文档中的颜色是否为主题颜色。
+确定 PDF 中的颜色是否为主题颜色。
 
 ```javascript editor-pdf
-// How to is theme color for a color in a PDF document?
+// How can I tell whether a color comes from the theme in a PDF?
 
-// Is theme color and display the result in a PDF document.
+// Compare a regular color and a theme color to see which one is theme-based.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

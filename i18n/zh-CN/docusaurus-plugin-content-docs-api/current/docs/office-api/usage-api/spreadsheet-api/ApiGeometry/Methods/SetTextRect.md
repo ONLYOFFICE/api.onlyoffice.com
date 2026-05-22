@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-创建带有参考线和连接点的可调节自定义几何图形。在单元格中显示调整值并将几何图形应用于形状。
+定义电子表格中自定义形状内的文本区域边界。
 
 ```javascript editor-xlsx
-// How do I set text rect in a spreadsheet?
+// How do I control where text appears inside a shape in a spreadsheet?
 
-// Set text rect using a geometry object in a spreadsheet.
+// Restrict the writable region of a shape so text fits within a specific zone in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

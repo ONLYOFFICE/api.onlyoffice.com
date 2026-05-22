@@ -22,12 +22,12 @@ expression.AddDatePickerContentControl(datePickerPr);
 
 ## Example
 
-Add a date picker content control to a document: in a document.
+Add a date picker content control in a document.
 
 ```javascript editor-docx
-// How to add the date picker content control for a document?
+// How do I insert a date picker field into a document?
 
-// Add the date picker content control and display the result in a document.
+// Let readers select a date from a calendar picker embedded in the document.
 
 let doc = Api.GetDocument();
 doc.AddDatePickerContentControl();

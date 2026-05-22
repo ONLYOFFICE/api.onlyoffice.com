@@ -20,16 +20,16 @@ expression.SetBorders(bordersIndex, lineStyle, oColor);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-使用指定的参数为单元格设置边框。
+在电子表格中为单元格添加边框。
 
 ```javascript editor-xlsx
-// How to set the thick bottom border to a cell.
+// How do I draw a border on a specific side of a cell in a spreadsheet?
 
-// Get a range and set its border specifying its side, type and color in a spreadsheet.
+// Define which edge of a cell gets a border, its thickness, and its color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);

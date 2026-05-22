@@ -25,12 +25,12 @@ expression.AddComment(element, text, author, userId);
 
 ## Example
 
-Add text and comment to the first paragraph in a document.
+Add a comment to a paragraph with a specified author in a document.
 
 ```javascript editor-docx
-// The comment is attached to the paragraph with the specified author name.
+// How do I attach a comment to a paragraph in a document?
 
-// Add a paragraph to the document and comment on it.
+// Annotate a paragraph with reviewer feedback and an author name in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

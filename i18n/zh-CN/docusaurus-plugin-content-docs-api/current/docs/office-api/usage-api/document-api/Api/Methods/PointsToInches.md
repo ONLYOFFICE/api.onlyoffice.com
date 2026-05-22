@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将磅转换为英寸。
+将排版磅值转换为英寸并在文档中显示结果。
 
 ```javascript editor-docx
-// How to convert points to inches in a document?
+// How do I find the inch equivalent of a measurement given in points in a document?
 
-// Convert points to inches using the document API.
+// Write out the inch value that corresponds to a specific number of points in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

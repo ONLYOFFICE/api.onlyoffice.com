@@ -22,12 +22,12 @@ expression.GetCommentById(sId);
 
 ## 示例
 
-通过 ID 获取文档中的批注。
+通过唯一 ID 获取文档中的特定批注。
 
 ```javascript editor-docx
-// Search the comment by its ID in a document.
+// How do I look up a comment using its ID in a document?
 
-// Get comment author knowing its ID in a document.
+// Read the author name of a known comment by retrieving it with its ID in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

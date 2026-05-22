@@ -16,7 +16,7 @@ expression.AddColumns(oCell, nCount, isBefore);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which the new columns will be added. If not specified, the new columns will be added at the end of the table. |
 | nCount | Required | Number |  | Count of columns to be added. |
-| isBefore | Optional | boolean | false | Adds the new columns before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| isBefore | Optional | boolean | false | Adds the new columns before (false) or after (true) the specified cell. If no cell is specified, |
 
 ## Returns
 
@@ -24,12 +24,12 @@ expression.AddColumns(oCell, nCount, isBefore);
 
 ## Example
 
-Add the new columns to the table in a document.
+Add extra columns to an existing table in a document.
 
 ```javascript editor-docx
-// How to insert columns to the table in a document.
+// How do I insert additional columns into a table in a document?
 
-// Get a table cell and insert two new columns after it.
+// Expand a table sideways by placing new columns at a chosen position in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -6,12 +6,12 @@
 
 ## 示例
 
-从 PDF 文档中的第一个文本字段获取值并设置到第二个文本字段。
+在 PDF 中将文本从一个表单字段复制到另一个。
 
 ```javascript editor-pdf
-// How can I get the value using a base field in a PDF document?
+// How do I read the value entered in a form field in a PDF?
 
-// Get the value for a base field in a PDF document.
+// Transfer text content between form fields in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

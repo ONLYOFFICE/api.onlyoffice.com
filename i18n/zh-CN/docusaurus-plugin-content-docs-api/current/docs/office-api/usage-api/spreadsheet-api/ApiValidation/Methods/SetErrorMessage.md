@@ -22,12 +22,12 @@ expression.SetErrorMessage(ErrorMessage);
 
 ## 示例
 
-在电子表格中设置错误消息文本。
+分配在电子表格中输入无效值时出现的警报正文文本。
 
 ```javascript editor-xlsx
-// How to set the validation error message in a spreadsheet.
+// How do I write a custom explanation that pops up when a cell entry fails validation in a spreadsheet?
 
-// Set error message for a validation in a spreadsheet.
+// Give users a clear reason why their input was rejected by defining the alert text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

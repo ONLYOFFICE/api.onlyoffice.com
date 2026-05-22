@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-Specify that the contents of the current run are displayed with two horizontal lines through each character displayed on the line in a PDF document.
+Apply double strikethrough formatting in a PDF.
 
 ```javascript editor-pdf
-// How to strike out a text with two lines in a PDF document.
+// How do I add a strikethrough effect to text in a PDF?
 
-// Create a new text run and set double strikeout to it in a PDF document.
+// Create text with two lines crossed through in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

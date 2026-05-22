@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将磅转换为行。
+将排版磅值转换为行并在文档中显示结果。
 
 ```javascript editor-docx
-// How can I convert points to lines in a document?
+// How do I find the line equivalent of a measurement given in points in a document?
 
-// Convert points to lines in a document.
+// Show how many lines correspond to a specific number of points as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

@@ -20,12 +20,12 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-返回文档内容中所有段落的数组。
+访问 PDF 中形状内的所有文本块。
 
 ```javascript editor-pdf
-// How can I get all paragraphs using a document content in a PDF document?
+// How do I list every paragraph inside a shape in a PDF?
 
-// Get all paragraphs for a document content in a PDF document.
+// Retrieve all text sections and modify one of them in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

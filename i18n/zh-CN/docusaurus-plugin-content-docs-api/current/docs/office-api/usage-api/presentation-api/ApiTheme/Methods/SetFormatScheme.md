@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前演示文稿主题设置格式方案。
+将新的格式方案应用于演示文稿的主题。
 
 ```javascript editor-pptx
-// How to get a theme and set a new format scheme.
+// How do I change the formatting styles used throughout a presentation?
 
-// Create a new format scheme and apply it to the slide theme.
+// Create a custom format scheme and assign it to the theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ expression.AddDrawing(oDrawing);
 
 ## 示例
 
-在文档中向段落添加图表。
+在文档的段落中嵌入条形图。
 
 ```javascript editor-docx
-// How to add a drawing to the paragraph in a document.
+// How do I insert a drawing object into a paragraph in a document?
 
-// Add a chart to the paragraph in a document.
+// Visualize financial data by placing a formatted 3D bar chart inside a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

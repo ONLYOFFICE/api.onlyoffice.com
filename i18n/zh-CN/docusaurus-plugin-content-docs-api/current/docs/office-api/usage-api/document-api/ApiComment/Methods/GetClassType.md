@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中批注对象的类类型。
+检索文档中批注对象的类类型。
 
 ```javascript editor-docx
-// How can I get the class type of a comment in a document?
+// How do I check what type of object a comment is in a document?
 
-// Get the class type of a comment and display it in the document.
+// Confirm the object category of a comment to distinguish it from other element types.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

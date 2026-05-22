@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表图例设置填充。
+更改演示文稿中图表图例的背景颜色。
 
 ```javascript editor-pptx
-// How to color a chart legend in a presentation.
+// How do I set a background color for a chart's legend in a presentation?
 
-// Create a chart, set its properties and background color of a legend in a presentation.
+// Create a chart and apply a solid fill color to its legend in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

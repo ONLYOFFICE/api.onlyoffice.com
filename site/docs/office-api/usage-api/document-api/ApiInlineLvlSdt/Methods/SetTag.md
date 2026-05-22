@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a string tag to the inline text content control in a document.
+Attach a string tag to an inline text content control in a document.
 
 ```javascript editor-docx
-// How to set tag for the inline content control in a document.
+// How do I add a searchable tag to an inline content control in a document?
 
-// Display the tag set for inline text element in a document.
+// Read back the tag after setting it to confirm the stored value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

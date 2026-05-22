@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为图表图例设置轮廓。
+在 PDF 中为图例添加边框。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's outline in a PDF document.
+// How do I apply a stroke outline to the legend box in a PDF?
 
-// Set legend out line using a chart object in a PDF document.
+// Draw a thin border around the legend with a solid stroke in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

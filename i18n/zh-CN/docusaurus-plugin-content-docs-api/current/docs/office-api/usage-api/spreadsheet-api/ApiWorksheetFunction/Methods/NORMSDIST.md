@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回标准正态累积分布（均值为零，标准差为一）。
+计算电子表格中标准正态分布的概率。
 
 ```javascript editor-xlsx
-// How to calculate the standard normal cumulative distribution in a spreadsheet.
+// Find cumulative probability using the standard normal curve in a spreadsheet.
 
-// Use a function to get the standard normal cumulative distribution in a spreadsheet.
+// Determine statistical likelihood for standardized values in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let valueArr = [0.34, 7, 3];

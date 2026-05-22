@@ -15,7 +15,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetLanguage(sLangId);
 
 ## Example
 
-Specify the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run in a PDF document.
+Specify the language for text in a PDF.
 
 ```javascript editor-pdf
-// How to change language of the text for grammar check in a PDF document.
+// How do I set text language for spell checking in a PDF?
 
-// Create a new text run and change its language in a PDF document.
+// Configure language detection for text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

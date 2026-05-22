@@ -20,12 +20,12 @@ expression.GetOperator();
 
 ## 示例
 
-获取电子表格中的数据验证运算符。
+读取电子表格中单元格数据验证规则使用的比较运算符。
 
 ```javascript editor-xlsx
-// How to retrieve the validation operator in a spreadsheet.
+// How do I find out which condition operator is applied to a validated cell in a spreadsheet?
 
-// Get the operator using the validation API in a spreadsheet.
+// Determine whether a validation rule uses greater-than, between, or another comparison type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

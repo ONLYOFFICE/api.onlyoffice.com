@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置超链接的屏幕提示文本。
+定义鼠标悬停在 PDF 中超链接上时显示的文本。
 
 ```javascript editor-pdf
-// How to specify the hyperlink screen tip text in a PDF document.
+// How do I set the message displayed for a link in a PDF?
 
-// Set the screen tip text of the link in a PDF document.
+// Specify a tooltip for a hyperlink in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

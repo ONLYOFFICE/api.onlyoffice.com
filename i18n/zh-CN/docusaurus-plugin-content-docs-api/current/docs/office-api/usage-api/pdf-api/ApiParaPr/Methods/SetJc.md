@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 将应用于段落内容的对齐类型。 |
+| sJc | 必需 | "left" \| "right" \| "both" \| "center" |  | 对齐类型， |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置段落内容对齐方式。
+在 PDF 中对齐段落中的文本。
 
 ```javascript editor-pdf
-// How to set justification using a paragraph properties in a PDF document.
+// How do I change the text alignment in a paragraph in a PDF?
 
-// Create a paragraph setting its justification property in a PDF document.
+// Apply text alignment to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

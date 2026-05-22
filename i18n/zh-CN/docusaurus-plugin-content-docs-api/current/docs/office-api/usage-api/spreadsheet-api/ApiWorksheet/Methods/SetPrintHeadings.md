@@ -18,16 +18,16 @@ expression.SetPrintHeadings(bPrint);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-指定电子表格中当前工作表的行/列标题是否必须打印。
+在电子表格的打印输出中添加行号和列字母。
 
 ```javascript editor-xlsx
-// How to set whether sheet headings should be printed or not in a spreadsheet.
+// How do I include row and column identifiers on my printed pages in a spreadsheet?
 
-// Set a boolean value representing whether to print row/column headings or not in a spreadsheet.
+// Display the grid labels (A, B, C and 1, 2, 3) when printing your spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintHeadings(true);

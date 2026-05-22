@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为指定图形对象设置轮廓属性。
+在演示文稿中为幻灯片上的形状添加边框。
 
 ```javascript editor-pptx
-// How to outline the drawing with the stroke in a presentation.
+// How do I add an outline to a shape in a presentation?
 
-// Set the borders of the shape in a presentation.
+// Create a shape and apply a colored stroke as its border in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

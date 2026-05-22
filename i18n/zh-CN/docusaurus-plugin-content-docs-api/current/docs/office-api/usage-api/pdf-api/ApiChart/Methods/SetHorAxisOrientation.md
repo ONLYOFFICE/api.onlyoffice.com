@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中设置水平轴的方向。
+在 PDF 中反转水平轴的方向。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis orientation in a PDF document.
+// How do I flip the left-to-right order of axis values in a PDF?
 
-// Set hor axis orientation for a chart in a PDF document.
+// Invert the horizontal axis scale for a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

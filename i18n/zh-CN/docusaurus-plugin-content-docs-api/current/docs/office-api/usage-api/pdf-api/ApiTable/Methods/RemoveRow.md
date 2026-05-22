@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何从 PDF 文档中的表格删除行。
+从 PDF 中的表格删除行。
 
 ```javascript editor-pdf
-// Create a table, create cells and remove the whole row by its cell.
+// How do I remove an unwanted row from a table in a PDF?
 
-// Remove the row for a table in a PDF document.
+// Take out a horizontal row of cells from your table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-从文档中的当前图表中删除指定的系列。
+按位置从文档中的图表移除数据系列。
 
 ```javascript editor-docx
-// How to remove seria from the chart indicating its index in a document.
+// How do I delete one of the data series from a chart in a document?
 
-// Create a chart, add series to it and then remove the second one in a document.
+// Trim a chart down to fewer series when some data is no longer needed in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

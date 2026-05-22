@@ -22,12 +22,12 @@ expression.GetOption(nPos);
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取选项。
+从 PDF 中的下拉字段检索特定选项。
 
 ```javascript editor-pdf
-// How to get the option for a list field in a PDF document?
+// How do I access an individual option from a dropdown in a PDF?
 
-// Get the option and display the result in a PDF document.
+// Display a selected choice from a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

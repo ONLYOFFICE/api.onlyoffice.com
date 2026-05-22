@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中形状的类类型。
+识别文档中形状的对象类型。
 
 ```javascript editor-docx
-// How to identify the class type of a shape in a document?
+// How do I find out the category of a drawing element in a document?
 
-// Obtain the class type identifier of a shape object in a document.
+// Confirm whether a drawn element belongs to the expected object type in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

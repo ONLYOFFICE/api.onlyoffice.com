@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-移除演示文稿中的元素。
+从演示文稿中形状内的内容移除特定元素。
 
 ```javascript editor-pptx
-// How to remove an elements from the slide shape.
+// How do I delete an element by its position in a shape in a presentation?
 
-// Get a slide shape's content and remove an element from it using its index.
+// Access the shape's content and remove a single text or object element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

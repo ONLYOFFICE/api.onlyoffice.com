@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-使用指定系数在文档中缩放图形的宽度。
+在文档中按给定比例缩放绘图的宽度。
 
 ```javascript editor-docx
-// How to increase the width of the drawing in a document.
+// How do I resize the width of a shape proportionally in a document?
 
-// Scale width for a drawing object in a document.
+// Create several shapes at increasing width scales to compare sizes side by side in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

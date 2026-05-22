@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-从演示文稿中的三次贝塞尔曲线提取控制点。在文本形状中显示所有控制点坐标。
+获取演示文稿中曲线第二个控制点的 Y 坐标。
 
 ```javascript editor-pptx
-// How to get the y1 for a path command in a presentation?
+// How do I access the Y coordinate of a control point in a shape path in a presentation?
 
-// Get the y1 and display the result in a presentation.
+// Extract and display all control points from a curved shape in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

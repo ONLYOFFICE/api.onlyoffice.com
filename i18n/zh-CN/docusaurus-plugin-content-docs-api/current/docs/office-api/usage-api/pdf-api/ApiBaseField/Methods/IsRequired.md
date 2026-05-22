@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取并显示 PDF 文档中字段的必填属性。
+检查 PDF 中的表单字段是否必须在提交前填写。
 
 ```javascript editor-pdf
-// How can I is required using a base field in a PDF document?
+// How can I determine if a form field is required in a PDF?
 
-// Is required for a base field in a PDF document.
+// Verify whether a form field must have a value in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

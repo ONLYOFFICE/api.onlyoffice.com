@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-替换文本并保留格式和其他内容。
+用新文本替换所选文本，同时保留文档中原有的粗体和斜体格式。
 
 ```javascript editor-docx
-// Add a text to the first paragraph of the document, set the bold and italic properties to it, and replace it with a new text preserving the text style.
+// How do I replace text without losing its bold or italic styling in a document?
 
-// Replace each paragraph (or text in cell) in the select with the corresponding text from an array of strings.
+// Swap out paragraph text for new content and retain the existing character formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

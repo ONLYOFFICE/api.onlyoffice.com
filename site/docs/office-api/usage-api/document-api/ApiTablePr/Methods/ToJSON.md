@@ -20,12 +20,12 @@ JSON
 
 ## Example
 
-Convert the table object into the JSON object in a document.
+Save table formatting settings as a portable data structure in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the table properties in a document.
+// How do I export table style properties so they can be stored or reused in a document?
 
-// Convert the table property to json and add it to the document.
+// Serialize the table property configuration into a transferable format in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

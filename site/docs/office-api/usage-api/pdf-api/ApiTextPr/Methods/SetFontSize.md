@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-Set the font size to the characters of the text run in a PDF document.
+Adjust the text size in a PDF.
 
 ```javascript editor-pdf
-// How to change a text font size in a PDF document.
+// How do I make text larger or smaller in a PDF?
 
-// Get the text properties of the run and set its font size in a PDF document.
+// Modify the point size of characters displayed in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

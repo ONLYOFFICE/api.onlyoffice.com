@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the negative bar border color from a data bar conditional formatting rule.
+Read the border color used on bars that represent negative values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the border color of negative value bars in a spreadsheet.
+// How do I find out what outline color is applied to negative data bars in a spreadsheet?
 
-// Get the negative bar border color of a data bar conditional formatting rule.
+// Confirm the border shade assigned to bars displaying below-zero values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

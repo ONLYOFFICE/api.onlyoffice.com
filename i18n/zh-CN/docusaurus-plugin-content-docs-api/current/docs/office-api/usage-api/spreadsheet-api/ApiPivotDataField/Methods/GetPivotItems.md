@@ -7,12 +7,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的项。
+检索电子表格中属于透视字段的各个项目的列表。
 
 ```javascript editor-xlsx
-// How to get a pivot field items in a spreadsheet.
+// How do I get all the values that appear under a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get items of a specified pivot field as an array in a spreadsheet.
+// Loop through a pivot field's items to read each distinct value shown in the pivot table.
 
 let worksheet = Api.GetActiveSheet();
 

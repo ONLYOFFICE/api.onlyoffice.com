@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中移动带有选项列表的字段中的选项。
+在 PDF 中重新排序下拉字段中的选项。
 
 ```javascript editor-pdf
-// How can I move option using a list field in a PDF document?
+// How do I rearrange the order of options in a dropdown in a PDF?
 
-// Move option for a list field in a PDF document.
+// Change the position of an item in a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中返回累积 Beta 概率密度函数。
+计算电子表格中贝塔分布的累积分布或概率密度。
 
 ```javascript editor-xlsx
-// How to get a result from cumulative beta probability density function in a spreadsheet.
+// How do I determine what percentage of outcomes fall within a range in a spreadsheet?
 
-// Use function to get the cumulative beta probability density function in a spreadsheet.
+// Evaluate the distribution curve to understand probability across different values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

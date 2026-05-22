@@ -31,12 +31,12 @@ expression.CreateWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, 
 
 ## 示例
 
-创建文本变换类型为 "textArchUp" 的艺术字对象。
+在演示文稿中创建拱形曲线的样式化文本。
 
 ```javascript editor-pptx
-// How to create word art indicating its text properties in a presentation.
+// How do I add decorative curved text to a presentation in a presentation?
 
-// Add arch up text word art in a presentation.
+// Insert text art with custom formatting and text effects in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

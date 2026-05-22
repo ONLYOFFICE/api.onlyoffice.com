@@ -20,12 +20,12 @@ expression.GetSelectionQuads();
 
 ## 示例
 
-获取页面上的选区四边形并高亮显示。
+获取 PDF 页面上选定文本的精确边界。
 
 ```javascript editor-pdf
-// How do I get the selection quads in a PDF document?
+// How do I find the coordinates of highlighted text in a PDF?
 
-// Get the selection quads using a page object.
+// Fetch the selection areas to mark them with visual highlights in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

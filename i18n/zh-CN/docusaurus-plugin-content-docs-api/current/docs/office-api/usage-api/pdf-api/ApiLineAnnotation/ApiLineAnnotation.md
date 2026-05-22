@@ -22,6 +22,7 @@ ApiLineAnnotation 是 [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation
 | [GetEndPoint](./Methods/GetEndPoint.md) | [Point](../Enumeration/Point.md) | 获取线条终点。 |
 | [GetEndStyle](./Methods/GetEndStyle.md) | [LineEndStyle](../Enumeration/LineEndStyle.md) | 获取线条终点样式。 |
 | [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 获取批注填充颜色。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前注释的内部 ID。 |
 | [GetModDate](./Methods/GetModDate.md) | number | 获取批注最后修改日期。 |
 | [GetOpacity](./Methods/GetOpacity.md) | string | 获取批注不透明度。 |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | 获取批注位置。 |
@@ -33,13 +34,13 @@ ApiLineAnnotation 是 [ApiBaseAnnotation](../ApiBaseAnnotation/ApiBaseAnnotation
 | [GetUniqueName](./Methods/GetUniqueName.md) | string | 获取批注唯一名称。 |
 | [SetAuthorName](./Methods/SetAuthorName.md) | boolean | 设置批注作者姓名。 |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | 设置批注边框颜色。 |
-| [SetBorderEffectIntensity](./Methods/SetBorderEffectIntensity.md) | boolean | 设置批注边框效果强度。💡 可应用于圆形、方形、自由文本和多边形批注 |
-| [SetBorderEffectStyle](./Methods/SetBorderEffectStyle.md) | boolean | 设置批注边框效果样式。💡 可应用于圆形、方形、自由文本和多边形批注 |
+| [SetBorderEffectIntensity](./Methods/SetBorderEffectIntensity.md) | boolean | 设置批注边框效果强度。 |
+| [SetBorderEffectStyle](./Methods/SetBorderEffectStyle.md) | boolean | 设置批注边框效果样式。 |
 | [SetBorderStyle](./Methods/SetBorderStyle.md) | boolean | 设置批注边框样式。 |
 | [SetBorderWidth](./Methods/SetBorderWidth.md) | boolean | 设置批注边框宽度。 |
 | [SetContents](./Methods/SetContents.md) | boolean | 设置批注内容。 |
 | [SetCreationDate](./Methods/SetCreationDate.md) | boolean | 设置批注创建日期。 |
-| [SetDashPattern](./Methods/SetDashPattern.md) | boolean | 设置批注虚线图案。💡 边框样式属性必须设置为 "dashed"。 |
+| [SetDashPattern](./Methods/SetDashPattern.md) | boolean | 设置批注虚线图案。 |
 | [SetDisplay](./Methods/SetDisplay.md) | boolean | 设置批注显示类型。 |
 | [SetEndPoint](./Methods/SetEndPoint.md) | boolean | 设置线条终点。 |
 | [SetEndStyle](./Methods/SetEndStyle.md) | boolean | 设置线条终点样式。 |

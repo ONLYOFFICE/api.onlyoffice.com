@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.GetTableDescription](../../ApiTablePr/Methods/GetTabl
 
 ## Example
 
-Get the table description in a document.
+Read the descriptive text assigned to a table in a document.
 
 ```javascript editor-docx
-// How to get the table description and display it in the document.
+// How do I retrieve the written description stored with a table in a document?
 
-// Add text showing the description of the table in a document.
+// Display the accessibility description associated with a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

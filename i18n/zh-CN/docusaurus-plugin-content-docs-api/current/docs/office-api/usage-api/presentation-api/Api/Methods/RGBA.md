@@ -25,12 +25,12 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-在演示文稿中创建 RGBA 颜色并将其用作形状填充。
+在演示文稿中创建带有透明度的 RGBA 颜色并将其用作形状填充。
 
 ```javascript editor-pptx
-// How do I r g b an in a presentation?
+// Use Api.RGBA to define colors with alpha channel transparency.
 
-// R g b an and display the result in a presentation.
+// Display the shape with the specified color on a slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -15,7 +15,7 @@ expression.SetCellMarginBottom(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 单元格内容底边下方的间距值，以点的二十分之一为单位（1/1440 英寸）。如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认的表格单元格下边距，否则将使用当前单元格的指定值覆盖表格单元格下边距。 |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 以二十分之一 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定表格中特定表格单元格的单元格内容底部边缘与边框之间的间距。
+设置文档中表格单元格内容与底部边缘之间的间距。
 
 ```javascript editor-docx
-// How to add margin to the bottom of the cell.
+// How do I control the gap between text and the bottom border of a table cell in a document?
 
-// Create a 3x3 table and add the bottom cell margin.
+// Push cell content away from the bottom boundary of a table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

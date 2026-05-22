@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-Specify that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
+Display lowercase letters as capitals in a text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make text characters capitalized in a spreadsheet.
+// How do I make all letters in a text run appear as uppercase in a spreadsheet?
 
-// Create a text run object, update its style by making its letters capitalized in a spreadsheet.
+// Force a visual all-caps style on a run without changing the underlying text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

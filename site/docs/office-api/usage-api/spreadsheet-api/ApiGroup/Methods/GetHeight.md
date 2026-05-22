@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetHeight](../../ApiDrawing/Methods/GetHeight.md).
 
 ## Example
 
-Get the height of the drawing in a spreadsheet.
+Retrieve the height of a drawing object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know a height of a drawing in a spreadsheet.
+// How do I find out how tall a drawing is in a spreadsheet?
 
-// Get a drawing's height and display it in the worksheet.
+// Measure the vertical size of a shape and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

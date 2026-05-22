@@ -22,12 +22,12 @@ expression.IntersectWith(oRange);
 
 ## 示例
 
-在文档中返回当前范围与另一个范围的交集作为新范围。
+从文档中两个高亮区域的重叠部分生成新的文本选区。
 
 ```javascript editor-docx
-// How to intersect two ranges into the new one in a document.
+// How do I find the shared content between two text selections in a document?
 
-// Create a range by intersection of two and make its text bold in a document.
+// Combine two overlapping spans into their common area for focused formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

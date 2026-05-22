@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert points to inches in a presentation.
+Convert points to inches and display the result in a presentation.
 
 ```javascript editor-pptx
-// How to convert points to inches in a presentation?
+// Use Api.PointsToInches to convert measurement units.
 
-// Convert points to inches using the presentation API.
+// Display the converted value in a shape text.
 
 const points = 1000;
 const inches = Api.PointsToInches(points);

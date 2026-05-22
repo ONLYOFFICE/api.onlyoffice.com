@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的内容控件设置数据绑定。
+在文档中将内容控件链接到 XML 数据源。
 
 ```javascript editor-docx
-// How can I set data binding using a block-level content control in a document?
+// How do I connect a content control to custom XML data in a document?
 
-// Set data binding for a block-level content control in a document.
+// Bind a content control to a specific XML field so it displays live data in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

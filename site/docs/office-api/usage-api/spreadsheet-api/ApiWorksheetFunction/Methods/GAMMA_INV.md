@@ -24,12 +24,12 @@ number
 
 ## Example
 
-Return the inverse of the gamma cumulative distribution: if p = GAMMA.DIST(x,...), then GAMMA.INV(p,...) = x in a spreadsheet.
+Find the value that corresponds to a given probability in a gamma distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the inverse of the gamma cumulative distribution in a spreadsheet.
+// How do I calculate the inverse of a gamma cumulative distribution in a spreadsheet?
 
-// Use a function to get the inverse of the gamma cumulative distribution in a spreadsheet.
+// Get the x-value for a probability point in a gamma distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

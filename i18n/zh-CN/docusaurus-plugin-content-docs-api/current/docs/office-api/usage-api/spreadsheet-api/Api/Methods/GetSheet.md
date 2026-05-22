@@ -22,12 +22,12 @@ expression.GetSheet(nameOrIndex);
 
 ## 示例
 
-获取表示电子表格中工作表的对象。
+按名称打开特定工作表并在电子表格中向其一个单元格写入内容。
 
 ```javascript editor-xlsx
-// How to get a sheet knowing its name in a spreadsheet.
+// How do I navigate to a particular sheet using its tab name in a spreadsheet?
 
-// Find and get a sheet object by its name in a spreadsheet.
+// Target a named sheet directly and place a value into it without switching tabs in a spreadsheet.
 
 let worksheet = Api.GetSheet("Sheet1");
 worksheet.GetRange("A1").SetValue("This is a sample text on 'Sheet1'.");

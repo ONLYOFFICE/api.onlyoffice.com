@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the font scheme of the theme in a presentation.
+Get the font scheme from a theme in a presentation.
 
 ```javascript editor-pptx
-// How to get a font scheme from a theme in a presentation.
+// How do I access the fonts defined in a presentation's theme?
 
-// Get a font scheme and display its class type in a presentation.
+// Retrieve the font scheme and display its type information in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

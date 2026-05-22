@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the comment reply text in a document.
+Read the text content of a comment reply in a document.
 
 ```javascript editor-docx
-// How to get a raw text of a comment reply in a document.
+// How do I extract the written text from a comment reply in a document?
 
-// Get all comments from the presentation, get the first one's reply and return its text.
+// Retrieve a reply's message to display or process the reviewer's feedback programmatically.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

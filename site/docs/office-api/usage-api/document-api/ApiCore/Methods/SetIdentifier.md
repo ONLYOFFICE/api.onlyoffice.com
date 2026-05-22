@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the identifier of the current document using the core properties in a document.
+Assign a unique identifier to the document through its core properties in a document.
 
 ```javascript editor-docx
-// How to set identifier for a core properties in a document?
+// How do I store a custom ID string in a document's metadata in a document?
 
-// Set identifier and display the result in a document.
+// Link a document to an external system by embedding its tracking ID in the built-in properties in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

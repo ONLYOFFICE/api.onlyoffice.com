@@ -22,12 +22,12 @@ expression.GetCommentById(sId);
 
 ## Example
 
-Get a comment from the document by its ID in a document.
+Fetch a specific comment by its unique ID in a document.
 
 ```javascript editor-docx
-// Search the comment by its ID in a document.
+// How do I look up a comment using its ID in a document?
 
-// Get comment author knowing its ID in a document.
+// Read the author name of a known comment by retrieving it with its ID in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

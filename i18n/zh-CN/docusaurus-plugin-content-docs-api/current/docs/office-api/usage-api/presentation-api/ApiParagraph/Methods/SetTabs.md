@@ -7,12 +7,12 @@
 
 ## 示例
 
-在演示文稿中设置一系列自定义制表位，用于段落中的所有制表符。
+在演示文稿中定义段落内的自定义制表位位置。
 
 ```javascript editor-pptx
-// How to set the size of a spacing tabs from a paragraph properties in a presentation.
+// How do I add tabs to control text spacing in a presentation?
 
-// Change a tabs size property of a paragraph properties in a presentation.
+// Configure tab stops for text alignment using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

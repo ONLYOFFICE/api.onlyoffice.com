@@ -22,12 +22,12 @@ expression.ThemeColor(name);
 
 ## 示例
 
-在电子表格中创建主题颜色并将其用作形状填充。
+使用主题强调色作为电子表格中形状的背景填充。
 
 ```javascript editor-xlsx
-// How do I theme color in a spreadsheet?
+// How do I fill a shape with one of the document's built-in theme colors in a spreadsheet?
 
-// Theme color and display the result in a spreadsheet.
+// Draw a rectangle filled with a coordinated theme color to maintain consistent styling in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.ThemeColor('accent6');

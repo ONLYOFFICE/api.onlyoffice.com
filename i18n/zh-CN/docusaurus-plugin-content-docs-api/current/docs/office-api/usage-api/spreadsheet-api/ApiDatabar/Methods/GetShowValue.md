@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从数据条条件格式规则获取显示值设置。
+检查电子表格中单元格值是否与数据条一起可见。
 
 ```javascript editor-xlsx
-// How to check if the data bar shows the value in a spreadsheet.
+// How do I find out if numbers are displayed inside data bar cells in a spreadsheet?
 
-// Get the show value setting of a data bar conditional formatting rule.
+// Verify whether a data bar rule keeps the underlying values visible to the reader in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

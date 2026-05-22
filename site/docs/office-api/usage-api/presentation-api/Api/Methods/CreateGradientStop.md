@@ -23,12 +23,12 @@ expression.CreateGradientStop(color, pos);
 
 ## Example
 
-Create a gradient stop used for different types of gradients in a presentation.
+Add a gradient stop to define a color transition in a presentation.
 
 ```javascript editor-pptx
-// How to add a gradient stop for gradient in a presentation.
+// How do I create a gradient with multiple color points in a presentation?
 
-// Create a stop for a gradient in a presentation.
+// Set color positions along a gradient fill to create smooth transitions in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

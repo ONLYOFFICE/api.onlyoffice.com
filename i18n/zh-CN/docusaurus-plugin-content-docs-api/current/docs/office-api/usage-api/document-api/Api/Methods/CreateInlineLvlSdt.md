@@ -20,12 +20,12 @@ expression.CreateInlineLvlSdt();
 
 ## 示例
 
-向文档添加内联容器。
+在文档中插入带有可编辑内容的内联文本容器。
 
 ```javascript editor-docx
-// How to create an inline text content control, add a text run to it, and add this container to the document.
+// How do I add an inline text box that sits inside a paragraph in a document?
 
-// Create an inline container and add it to the paragraph class in a document.
+// Wrap typed text inside an inline field that flows with the surrounding paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

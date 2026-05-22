@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中笔触返回的类类型。
+读取文档中边框样式对象的类类型。
 
 ```javascript editor-docx
-// How do I check what type a stroke object is in a document?
+// How do I find out what kind of object a border style is in a document?
 
-// Retrieve and output the class type string for a stroke in a document.
+// Identify the category of a border style and display the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

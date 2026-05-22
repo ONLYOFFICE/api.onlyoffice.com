@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在 PDF 文档中相对于 run 文本默认外观应用于 run 内容的对齐方式。
+在 PDF 中将文本定位在基线的上方或下方。
 
 ```javascript editor-pdf
-// How to set a vertical alignment of the text in a PDF document.
+// How do I create superscript or subscript text in a PDF?
 
-// Get the text properties of the run and make it superscript, subscript, etc in a PDF document.
+// Shift characters vertically relative to the text line in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

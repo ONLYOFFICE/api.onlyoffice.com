@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中设置和获取最后修改当前演示文稿的用户名称。
+设置和查看最后编辑演示文稿的人员姓名。
 
 ```javascript editor-pptx
-// How can I get last modified by using a core properties in a presentation?
+// How do I find who last modified a presentation?
 
-// Get last modified by for a core properties in a presentation.
+// Retrieve the name of the user who made the most recent changes in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

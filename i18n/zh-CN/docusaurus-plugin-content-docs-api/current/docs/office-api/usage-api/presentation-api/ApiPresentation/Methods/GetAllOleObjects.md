@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-获取当前演示文稿中的所有 OLE 对象。
+列出演示文稿中所有嵌入或链接的文件。
 
 ```javascript editor-pptx
-// How can I get all ole objects using a presentation in a presentation?
+// How do I find every linked video, spreadsheet, or external file in a presentation?
 
-// Get all ole objects for a presentation in a presentation.
+// Retrieve OLE objects from slides and masters and count them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

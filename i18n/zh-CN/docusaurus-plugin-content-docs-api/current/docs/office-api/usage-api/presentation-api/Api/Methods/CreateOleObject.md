@@ -26,12 +26,12 @@ expression.CreateOleObject(sImageSrc, nWidth, nHeight, sData, sAppId);
 
 ## 示例
 
-创建 OLE 对象并将其插入到幻灯片中。
+向演示文稿添加带有缩略图的嵌入对象。
 
 ```javascript editor-pptx
-// How to create an Ole object in a presentation.
+// How do I insert a linked object in a presentation?
 
-// Add an Ole object to the slide.
+// Create an object that displays an image and links to external content in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

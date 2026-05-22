@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Find out whether the text italic or not in a document.
+Determine whether a run of text is formatted as italic in a document.
 
 ```javascript editor-docx
-// How to know if the text of the form is italic.
+// How do I check if a piece of text has italic formatting applied in a document?
 
-// Retrieve text properties of the form and get whether a text style changed or not.
+// Verify whether slanted text style is currently enabled for a text run in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

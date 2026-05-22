@@ -22,12 +22,12 @@ expression.GetDefName(defName);
 
 ## 示例
 
-在电子表格中通过工作表名称获取命名范围对象。
+按名称从电子表格中的活动工作表检索命名范围。
 
 ```javascript editor-xlsx
-// How to get def name object in a spreadsheet.
+// How do I look up a named range on a worksheet in a spreadsheet?
 
-// Get named range object using its name in a spreadsheet.
+// Find a specific named range and read its title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

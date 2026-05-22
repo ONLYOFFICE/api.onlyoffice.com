@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中幻灯片母版的类类型。
+检索幻灯片母版对象的类类型。
 
 ```javascript editor-pptx
-// How to identify the class type of a slide master?
+// The GetClassType method identifies what type a slide master object is.
 
-// Obtain the class type identifier of a slide master object.
+// Output the class type string in a text shape on the presentation slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

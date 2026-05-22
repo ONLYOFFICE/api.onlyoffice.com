@@ -20,12 +20,12 @@ expression.GetIndFirstLine();
 
 ## 示例
 
-获取 PDF 文档中的段落首行缩进。
+从 PDF 中的段落检索首行缩进值。
 
 ```javascript editor-pdf
-// How to return the first line identation of a paragraph property in a PDF document.
+// How do I get the first line indent measurement in a PDF?
 
-// Return the first line indentation of a text property from the page.
+// Obtain the starting line offset amount in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

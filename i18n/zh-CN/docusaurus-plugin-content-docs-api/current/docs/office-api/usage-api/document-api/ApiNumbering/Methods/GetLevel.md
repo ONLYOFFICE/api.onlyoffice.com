@@ -22,12 +22,12 @@ expression.GetLevel(nLevel);
 
 ## 示例
 
-获取文档中编号的指定级别。
+访问文档中编号列表的特定级别。
 
 ```javascript editor-docx
-// How to find out the level of the bulleted paragraph in a document.
+// How do I get a particular numbering level from a list definition in a document?
 
-// Print the level of numbering of the text in a document.
+// Assign each paragraph to its own list level to create a multi-level bulleted outline in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

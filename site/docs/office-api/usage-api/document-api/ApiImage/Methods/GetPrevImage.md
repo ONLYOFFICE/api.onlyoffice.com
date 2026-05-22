@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the previous inline image if exists in a document.
+Get the previous image before a given image and copy it into a paragraph in a document.
 
 ```javascript editor-docx
-// How to add the previous drawing to the paragraph in a document.
+// How do I access the image that comes before another image in a document?
 
-// Get the previous drawing and add it separated with a line break in a document.
+// Copy a sibling image by navigating backward through inline images in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -21,12 +21,12 @@ expression.GetCore();
 
 ## 示例
 
-获取核心属性实例并使用其方法管理文档元数据。
+访问并更新文档的核心元数据属性。
 
 ```javascript editor-docx
-// How can I get the core using a document in a document?
+// How do I read and write document metadata such as title, author, and keywords in a document?
 
-// Get the core for a document in a document.
+// Populate all built-in metadata fields and then display their values in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

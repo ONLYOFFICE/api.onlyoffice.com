@@ -18,7 +18,7 @@ expression.SetNumberFormat(nDemical, sSepStyle, sNegStyle, sCurrency, bCurrencyP
 | sSepStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔样式 |
 | sNegStyle | 必需 | [NumberNegStyle](../../Enumeration/NumberNegStyle.md) |  | 负数样式 |
 | sCurrency | 必需 | string |  | 货币符号 |
-| bCurrencyPrepend | 必需 | boolean |  | 如果为 true，将货币符号放在数字前面（例如 $1,234.56）；如果为 false，则放在后面（例如 1,234.56$）。 |
+| bCurrencyPrepend | 必需 | boolean |  | 如果为 true，将货币符号放在数字前面（例如 $1,234.56）； |
 
 ## 返回值
 
@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置数字格式。
+在 PDF 文本字段中以货币符号和格式显示数字。
 
 ```javascript editor-pdf
-// How can I set number format using a text field in a PDF document?
+// How do I show dollar amounts and decimal places correctly in a PDF?
 
-// Set number format for a text field in a PDF document.
+// Configure number formatting with currency and decimal precision in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

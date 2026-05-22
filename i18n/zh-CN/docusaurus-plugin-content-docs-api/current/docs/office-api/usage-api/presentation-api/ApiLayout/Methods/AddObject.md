@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-向幻灯片添加形状。
+向幻灯片布局添加形状。
 
 ```javascript editor-pptx
-// How to add a shape object to the master layout in a presentation.
+// How do I insert a drawing object into a master layout in a presentation?
 
-// Add a drawing to the layout object in a presentation.
+// Add a shape to the layout object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

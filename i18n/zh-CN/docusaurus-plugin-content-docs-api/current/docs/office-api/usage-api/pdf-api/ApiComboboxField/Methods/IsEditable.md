@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取并显示 PDF 文档中组合框字段的可编辑属性。
+检查 PDF 中的组合框字段是否允许用户编辑。
 
 ```javascript editor-pdf
-// How to is editable for a combobox field in a PDF document?
+// How do I enable or check if a combobox field is editable in a PDF?
 
-// Is editable and display the result in a PDF document.
+// Set a field to editable and display its editable state in the PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

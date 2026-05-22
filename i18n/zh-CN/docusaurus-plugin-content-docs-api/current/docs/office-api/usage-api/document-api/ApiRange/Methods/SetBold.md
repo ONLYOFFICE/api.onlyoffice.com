@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## 示例
 
-在文档中为文本字符设置粗体属性。
+在文档中为文本范围应用粗体格式。
 
 ```javascript editor-docx
-// How to make a range text bold in a document.
+// How do I make a portion of text appear bold in a document?
 
-// Update text properties of the range in a document.
+// Strengthen the visual weight of selected words by turning them bold in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ expression.SetContentStatus(sStatus);
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的内容状态。
+设置和检索演示文稿的内容状态。
 
 ```javascript editor-pptx
-// How can I set content status using a core properties in a presentation?
+// How do I set the content status of a presentation in a presentation?
 
-// Set content status for a core properties in a presentation.
+// Retrieve and display the content status as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

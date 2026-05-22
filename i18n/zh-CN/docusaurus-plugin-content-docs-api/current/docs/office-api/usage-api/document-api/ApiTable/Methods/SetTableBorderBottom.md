@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中设置表格底部显示的边框。
+在文档中为表格应用底部边框。
 
 ```javascript editor-docx
-// How to find out a style that will be applied to the table elements whish satisfy the condition in a document.
+// How do I add a border along the bottom edge of a table in a document?
 
-// Retrieve a conditional table style in a document.
+// Style the lower edge of a table with a visible border line in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

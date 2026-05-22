@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中超链接的元素数量。
+计算文档中超链接内包含的元素数量。
 
 ```javascript editor-docx
-// How to get the number of elements of the hyperlink in a document.
+// How do I find out how many elements a hyperlink holds in a document?
 
-// Add a hyperlink to the paragraph and show its elements count in a document.
+// Check the total number of runs and text pieces within a hyperlink in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

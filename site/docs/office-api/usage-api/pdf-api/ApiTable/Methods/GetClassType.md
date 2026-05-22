@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a table in a PDF document.
+Identify the type classification of a table in a PDF.
 
 ```javascript editor-pdf
-// How to identify the class type of a table in a PDF document?
+// How can I determine what type a table is in a PDF?
 
-// Obtain the class type identifier of a table object in a PDF document.
+// Retrieve the object type information for any table in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

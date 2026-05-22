@@ -22,12 +22,12 @@ expression.SetShowValue(showValue);
 
 ## 示例
 
-设置数据条条件格式规则的显示值设置。
+选择是否在电子表格中数据条规则的彩色条内显示数值。
 
 ```javascript editor-xlsx
-// How to control whether the data bar shows the value in a spreadsheet.
+// How do I hide or reveal the numbers inside data bars when applying conditional formatting in a spreadsheet?
 
-// Set the show value setting of a data bar conditional formatting rule.
+// Keep cells uncluttered by toggling off the text overlay on top of data bars in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

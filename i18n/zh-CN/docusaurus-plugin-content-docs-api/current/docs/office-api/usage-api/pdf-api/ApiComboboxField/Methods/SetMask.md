@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中获取文本字段并为其设置输入文本的掩码。
+在 PDF 中为字段应用输入模式。
 
 ```javascript editor-pdf
-// How can I set mask using a combobox field in a PDF document?
+// What format should user input follow in a PDF?
 
-// Set mask for a combobox field in a PDF document.
+// Enforce a specific input structure in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.CreateRadialGradientFill(gradientStops);
 
 ## 示例
 
-在文档中创建径向渐变填充。
+在文档中为形状应用从一种颜色渐变到另一种颜色的径向渐变。
 
 ```javascript editor-docx
-// Create the fill object which represents a radial gradient fill and apply it to the created shape in a document.
+// How do I fill a shape with a color that radiates outward from the center in a document?
 
-// Create a radial gradient fill from an array of the gradient color stops and use it as a background for the shape class in a document.
+// Give a shape a circular color transition by setting gradient stops for the fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

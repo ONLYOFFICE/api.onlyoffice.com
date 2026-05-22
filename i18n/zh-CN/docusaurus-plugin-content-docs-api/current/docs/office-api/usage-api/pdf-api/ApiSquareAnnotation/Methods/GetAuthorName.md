@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其作者名称。
+读取 PDF 中注释的作者。
 
 ```javascript editor-pdf
-// How do I get the author name in a PDF document?
+// How can I find out who created an annotation in a PDF?
 
-// Get the author name using an annotation object in a PDF document.
+// Retrieve the name of the person who added an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -27,9 +27,9 @@ boolean
 在演示文稿中为自定义 XML 节点设置属性值。
 
 ```javascript editor-pptx
-// How to set an attribute on an XML node in a presentation.
+// Apply multiple attribute values to a custom XML node in a presentation.
 
-// Set an XML node attribute in a presentation.
+// Assign properties to a node by setting named attributes in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

@@ -14,7 +14,7 @@ expression.ChangeLineStyles(arrLine);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrLine | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | 线条样式数组必须包含 3 个元素 - 细微、中等和强烈填充。如果数组为空或 ApiStroke 元素没有填充，将使用 Api.CreateStroke(0, Api.CreateNoFill()) 元素填充。 |
+| arrLine | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | 线条样式数组必须包含 3 个元素 - 微妙、适中和强烈填充。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.ChangeLineStyles(arrLine);
 
 ## 示例
 
-为当前主题格式方案设置线条样式。
+更改演示文稿中主题格式方案的线条样式。
 
 ```javascript editor-pptx
-// How to change line styles of a format scheme.
+// How do I update the line appearance used by a theme in a presentation?
 
-// Get format scheme and update its line styles.
+// Modify the stroke patterns applied to shapes using a theme format scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

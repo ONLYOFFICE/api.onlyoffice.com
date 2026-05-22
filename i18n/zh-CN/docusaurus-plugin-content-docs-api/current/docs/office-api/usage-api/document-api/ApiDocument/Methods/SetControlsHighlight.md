@@ -22,16 +22,16 @@ boolean
 
 ## 示例
 
-为文档中的内容控件设置突出显示。
+为文档中的所有内容控件应用背景高亮颜色。
 
 ```javascript editor-docx
-// How to highlight thw controls with rose color in a document.
+// How do I change the highlight color of content controls in a document?
 
-// Add elements to the document and color their background.
+// Make form controls stand out visually by setting a custom fill color across the whole document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();
 blockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
 doc.AddElement(0, blockLvlSdt);
-doc.SetControlsHighlight(Api.HexColor('#FF6F3D'));
+doc.SetControlsHighlight(Api.HexColor('#FFEFBF'));
 ```

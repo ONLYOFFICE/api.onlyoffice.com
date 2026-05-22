@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中向备注页的正文形状添加文本。
+向演示文稿中幻灯片的备注部分添加文本。
 
 ```javascript editor-pptx
-// How do I add the body shape text in a presentation?
+// How do I add text to the slide notes in a presentation?
 
-// Add the body shape text using a notes page object.
+// Insert content into the notes page using the notes page object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

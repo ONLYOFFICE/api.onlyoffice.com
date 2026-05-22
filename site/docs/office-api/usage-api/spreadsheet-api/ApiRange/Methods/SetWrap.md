@@ -18,16 +18,16 @@ expression.SetWrap(isWrap);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Specify whether the words in the cell must be wrapped to fit the cell size or not.
+Wrap text inside a cell so it fits within the column width in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to wrapp a text in the cell.
+// How do I stop text from spilling out of a cell in a spreadsheet?
 
-// Get a range and make its content wrapped in a spreadsheet.
+// Enable word wrap on a cell to keep long content visible without widening the column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

@@ -23,12 +23,12 @@ expression.AddComment(sText, sAuthor);
 
 ## Example
 
-Add a comment to the document.
+Attach a comment with an author name to a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add comments in a worksheet.
+// How do I add a comment to a cell in a spreadsheet?
 
-// Insert a comment into a cell.
+// Annotate a cell with reviewer notes and display the comment text in a spreadsheet.
 
 Api.AddComment("Comment 1", "Bob");
 Api.AddComment("Comment 2");

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取文档的类别。
+从文档的内置核心属性读取类别字段。
 
 ```javascript editor-docx
-// How do I get the category in a document?
+// How do I retrieve the category metadata stored in a document?
 
-// Get the category using a core properties object in a document.
+// Inspect the category to verify or display how a document is classified within a collection in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

@@ -8,12 +8,12 @@ nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
 
 ## 示例
 
-在演示文稿中设置当前段落的段后间距。
+在演示文稿中为段落下方添加空间。
 
 ```javascript editor-pptx
-// How to set the size of a spacing after a text from a paragraph properties in a presentation.
+// How do I set the distance between paragraphs in a presentation?
 
-// Change the size property of a spacing after a paragraph in a presentation.
+// Configure the gap after a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

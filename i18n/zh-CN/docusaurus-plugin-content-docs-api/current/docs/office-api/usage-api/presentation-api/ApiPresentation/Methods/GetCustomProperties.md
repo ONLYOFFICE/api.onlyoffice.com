@@ -20,12 +20,12 @@ expression.GetCustomProperties();
 
 ## 示例
 
-在演示文稿中使用自定义属性配置自定义属性。
+管理演示文稿元数据的自定义属性。
 
 ```javascript editor-pptx
-// How do I get custom properties in a presentation?
+// Create and retrieve custom properties with various data types.
 
-// Get custom properties using a presentation object.
+// Display custom property values in a shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

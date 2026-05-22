@@ -25,9 +25,9 @@ number
 在 PDF 文档中将像素转换为磅。
 
 ```javascript editor-pdf
-// How to convert pixels to points in a PDF document?
+// The API method performs measurement unit conversion.
 
-// Convert pixels to points using the PDF document API.
+// The result is displayed in a shape text element.
 
 const pixels = 100;
 const points = Api.PixelsToPoints(pixels);

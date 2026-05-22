@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中图像的类类型。
+识别 PDF 中图像是哪种对象类型。
 
 ```javascript editor-pdf
-// How to identify the class type of an image in a PDF document?
+// How do I find out what kind of image object I'm working with in a PDF?
 
-// Obtain the class type identifier of an image object in a PDF document.
+// Retrieve the classification of an image element in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

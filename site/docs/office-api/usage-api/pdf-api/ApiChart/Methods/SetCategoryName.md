@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-How to rename a chart category in a PDF document.
+Change the label of a category on a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart then name its category in a PDF document.
+// How do I rename the x-axis categories of a chart in a PDF?
 
-// Set category name for a chart in a PDF document.
+// Update a category name to display different text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-使用演示文稿中指定的位置返回超链接元素。
+获取演示文稿中指定位置的超链接元素。
 
 ```javascript editor-pptx
-// How can I get the element using a hyperlink in a presentation?
+// How do I access a child element within a hyperlink in a presentation?
 
-// Get the element for a hyperlink in a presentation.
+// Retrieve the element for a hyperlink at a specific position in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-获取 PDF 文档中自由文本注释的富文本内容。
+从 PDF 中的注释检索文本内容。
 
 ```javascript editor-pdf
-// How do I get the content in a PDF document?
+// How do I read what is written in a comment note in a PDF?
 
-// Get the content using a free text annotation object in a PDF document.
+// Extract the message text from an annotation element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

@@ -20,12 +20,12 @@ expression.GetParentParagraph();
 
 ## 示例
 
-获取 PDF 文档中富文本 run 对象的父富文本段落并为其设置对齐方式属性。
+访问 PDF 中包含文本运行的段落。
 
 ```javascript editor-pdf
-// How do I get the parent paragraph in a PDF document?
+// How do I reach the parent paragraph from a text run in a PDF?
 
-// Get the parent paragraph using a rich text run object in a PDF document.
+// Locate the paragraph holding a specific text element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

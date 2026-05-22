@@ -14,7 +14,7 @@ expression.SUM(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string \| number \| boolean \| (string \| number \| boolean)[] |  | 最多 255 个要相加的数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值、数字的文本表示形式、区域或数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string \| number \| boolean \| (string \| number \| boolean)[] |  | 最多 255 个要相加的数值。第一个参数是必需的，后续参数是可选的。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ number
 在电子表格中将单元格范围内的所有数字相加。
 
 ```javascript editor-xlsx
-// How to sum up all values from the list in a spreadsheet.
+// Sum all values using the SUM function with numeric arguments.
 
-// Use a function to estimate a sum from the cells.
+// Returns the total sum of the specified values.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

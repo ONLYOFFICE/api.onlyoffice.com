@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中是否允许空白值。
+检查电子表格中空单元格是否允许绕过验证规则。
 
 ```javascript editor-xlsx
-// How to check if blank values are allowed in validation in a spreadsheet.
+// How do I find out if blank entries are permitted in a validated cell in a spreadsheet?
 
-// Get the IgnoreBlank setting in a spreadsheet.
+// Confirm whether leaving a cell empty skips the validation check in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

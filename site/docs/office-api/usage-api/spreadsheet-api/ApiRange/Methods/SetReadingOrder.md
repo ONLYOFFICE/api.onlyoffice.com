@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the reading order of the text in the cell range in a spreadsheet.
+Set the direction text is read across a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set reading order for a cell range?
+// How do I switch text to read right-to-left in a spreadsheet?
 
-// Set reading order and display the result in a spreadsheet.
+// Support languages like Arabic or Hebrew by adjusting the text flow direction in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B2").SetValue("Hello, أهلاً, 你好");

@@ -14,7 +14,7 @@ expression.VARA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| string \| boolean \| (number \| string \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个将计算方差的值。第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值或数字的文本表示形式、名称、区域或数组。 |
+| args | 必需 | number \| string \| boolean \| (number \| string \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个值，将计算这些值的方差。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ number
 在电子表格中基于样本估计方差，包括逻辑值和文本。文本和 false 逻辑值为 0；true 逻辑值为 1。
 
 ```javascript editor-xlsx
-// How to estimate variance based on a sample considering logical and text data types in a spreadsheet.
+// The VARA function calculates sample variance by treating logical and text values as numbers.
 
-// Use a function to estimate variance not ignoring logical and text values in a spreadsheet.
+// Apply the function to estimate variance including logical and text values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

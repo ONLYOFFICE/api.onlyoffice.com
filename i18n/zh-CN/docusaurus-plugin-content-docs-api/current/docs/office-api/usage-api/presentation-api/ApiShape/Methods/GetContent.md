@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-获取演示文稿中可以插入段落或文本 run 的形状内部内容。
+访问演示文稿中形状内的文本内容。
 
 ```javascript editor-pptx
-// How to get a content of a shape in a presentation.
+// How do I edit the text inside a shape in a presentation?
 
-// Retrieve a slide content and insert a paragraph to it.
+// Add a new paragraph to a shape and align it vertically in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

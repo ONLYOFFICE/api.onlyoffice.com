@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-Set highlight color "lightGray" for the paragraph in a PDF document.
+Add background color to paragraph text in a PDF.
 
 ```javascript editor-pdf
-// How to create a paragraph and highlight it with color in a PDF document.
+// How do I highlight text in a paragraph in a PDF?
 
-// Set a light gray highlight color to a paragraph and insert it to the page shape.
+// Apply a highlight color to text in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

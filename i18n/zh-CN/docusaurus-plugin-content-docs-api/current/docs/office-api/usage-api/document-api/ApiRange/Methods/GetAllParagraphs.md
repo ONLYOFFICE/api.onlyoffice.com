@@ -20,12 +20,12 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-获取表示文档中指定范围内所有段落的段落集合。
+收集文档中所选范围内包含的所有段落。
 
 ```javascript editor-docx
-// How to get all paragraphs in a document.
+// How do I get every paragraph that falls inside a text selection in a document?
 
-// Retrieve all paragraphs from the document and make the first one bold.
+// Pull together each paragraph from a bounded region to process them as a group in a document.
 
 let doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);

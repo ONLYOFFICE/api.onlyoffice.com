@@ -20,12 +20,12 @@ expression.GetBorderWidth();
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其边框宽度。
+检索 PDF 中注释的边框宽度测量值。
 
 ```javascript editor-pdf
-// How do I get the border width in a PDF document?
+// How thick is the border around an annotation in a PDF?
 
-// Get the border width using an annotation object in a PDF document.
+// Check the line thickness of an annotation's border in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

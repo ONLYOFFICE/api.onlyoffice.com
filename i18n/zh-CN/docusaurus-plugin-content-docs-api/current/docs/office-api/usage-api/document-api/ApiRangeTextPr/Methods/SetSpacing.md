@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中设置以磅的二十分之一为单位的文本间距。
+设置文档中字符之间的间距。
 
 ```javascript editor-docx
-// How to set the text spacing size in a document.
+// How do I increase or decrease the gap between letters in a document?
 
-// Create a text run object, update its spacing in a document.
+// Control how tightly or loosely characters are spaced along a line in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

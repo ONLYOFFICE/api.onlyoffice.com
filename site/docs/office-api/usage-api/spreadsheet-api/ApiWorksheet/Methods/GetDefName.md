@@ -22,12 +22,12 @@ expression.GetDefName(defName);
 
 ## Example
 
-Get the named range object by the worksheet name in a spreadsheet.
+Retrieve a named range from the active sheet by its name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get def name object in a spreadsheet.
+// How do I look up a named range on a worksheet in a spreadsheet?
 
-// Get named range object using its name in a spreadsheet.
+// Find a specific named range and read its title in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

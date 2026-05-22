@@ -21,7 +21,7 @@ expression.AddCaption(sAdditional, sLabel, bExludeLabel, sNumberingFormat, bBefo
 | bExludeLabel | Optional | boolean | false | Specifies whether to exclude the label from the caption. |
 | sNumberingFormat | Optional | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | The possible caption numbering format. |
 | bBefore | Optional | boolean | false | Specifies whether to insert the caption before the current paragraph (true) or after (false) (after/before the shape if it is placed in the shape). |
-| nHeadingLvl | Optional | Number |  | The heading level (used if you want to specify the chapter number). 💡 If you want to specify "Heading 1", then nHeadingLvl === 0 and etc. |
+| nHeadingLvl | Optional | Number |  | The heading level (used if you want to specify the chapter number). |
 | sCaptionSep | Optional | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | The caption separator (used if you want to specify the chapter number). |
 
 ## Returns
@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-Add a caption paragraph after the paragraph in a document.
+Insert a caption below an image paragraph in a document.
 
 ```javascript editor-docx
-// How to add caption to the paragraph in a document.
+// How do I label a figure with a numbered caption in a document?
 
-// Add a caption to the text specifying its properties in a document.
+// Automatically number an inserted image using a formatted figure caption in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

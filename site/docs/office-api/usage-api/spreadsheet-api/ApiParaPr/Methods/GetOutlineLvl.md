@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-Number
+Number \| undefined
 
 ## Example
 
-Set and get the outline level of the specified paragraph via paragraph properties in a spreadsheet.
+Read the outline level assigned to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the outline lvl for a paragraph properties in a spreadsheet?
+// How do I find out which heading depth a paragraph belongs to in a spreadsheet?
 
-// Get the outline lvl and display the result in a spreadsheet.
+// Capture a paragraph's outline depth before and after changing it to track the update in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-Specify which chart data labels are shown for the chart in a spreadsheet.
+Control which data label elements are displayed on a chart in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to hide chart data labels in a spreadsheet.
+// How do I choose what information appears in chart data labels in a spreadsheet?
 
-// Show only values as chart lables in a spreadsheet.
+// Show only the numeric values on chart bars while hiding category names and percentages in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

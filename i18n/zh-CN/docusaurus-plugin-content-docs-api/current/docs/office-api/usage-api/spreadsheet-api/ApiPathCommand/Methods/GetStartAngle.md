@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取弧线参数，包括半径和角度。在单元格中显示弧线宽度半径、高度半径、起始角和扫掠角。
+读取绘制弧开始的角度并写入电子表格的单元格。
 
 ```javascript editor-xlsx
-// How to get the start angle for a path command in a spreadsheet?
+// How do I find the starting angle of an arc path command in a spreadsheet?
 
-// Get the start angle and display the result in a spreadsheet.
+// Inspect an arc segment to confirm the exact degree at which the curve opens in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

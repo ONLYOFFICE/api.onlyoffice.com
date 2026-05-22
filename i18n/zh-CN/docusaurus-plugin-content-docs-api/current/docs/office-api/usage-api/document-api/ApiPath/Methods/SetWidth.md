@@ -22,12 +22,12 @@ expression.SetWidth(nWidth);
 
 ## 示例
 
-创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
+设置文档中自定义形状绘图区域的宽度。
 
 ```javascript editor-docx
-// How do I set width in a document?
+// How do I control the horizontal size of a shape's drawing area in a document?
 
-// Set width using a geometry path object in a document.
+// Define how wide the drawable region of a custom shape is in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

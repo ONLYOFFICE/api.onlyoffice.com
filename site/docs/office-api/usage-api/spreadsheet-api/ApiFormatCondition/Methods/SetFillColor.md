@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the background color for a conditional formatting rule.
+Apply a background color to cells that satisfy a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to apply background colors to conditional formatting rules.
+// How do I fill matching cells with a specific color when a formatting condition is met in a spreadsheet?
 
-// Set conditional formatting rule background color.
+// Color-code qualifying cells automatically through a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

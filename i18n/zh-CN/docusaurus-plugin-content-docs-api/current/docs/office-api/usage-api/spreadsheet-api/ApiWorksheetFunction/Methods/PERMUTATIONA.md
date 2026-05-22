@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回从总对象中可选择给定数量对象（可重复）的排列数。
+计算电子表格中允许重复时排列项目的方式数。
 
 ```javascript editor-xlsx
-// How to return the number of permutations for a given number of objects with duplicates in a spreadsheet.
+// How do I find the count of arrangements when objects can be reused in a spreadsheet?
 
-// Use a function to claculate the number of permutations including duplicates in a spreadsheet.
+// Determine permutations where items can appear more than once in the selection in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

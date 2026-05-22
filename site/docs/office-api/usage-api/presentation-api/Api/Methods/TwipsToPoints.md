@@ -25,9 +25,9 @@ number
 Convert twips to points in a presentation.
 
 ```javascript editor-pptx
-// How can I convert twips to points in a presentation?
+// Twips are units of measurement where 1440 twips equals 1 inch.
 
-// Convert twips to points in a presentation.
+// Use Api.TwipsToPoints() to convert measurement units for text sizing.
 
 const twips = 100;
 const points = Api.TwipsToPoints(twips);

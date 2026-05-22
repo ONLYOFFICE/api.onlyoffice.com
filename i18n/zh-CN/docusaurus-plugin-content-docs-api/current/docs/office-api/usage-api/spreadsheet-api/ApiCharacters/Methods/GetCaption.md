@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取表示电子表格中指定字符范围文本的字符串值。
+从电子表格中单元格内选定的字符范围提取文本字符串。
 
 ```javascript editor-xlsx
-// Get a value that represents the label text for the pivot field in a spreadsheet.
+// How do I read the actual text that a character selection represents in a spreadsheet?
 
-// How to get and display caption of the text in a spreadsheet.
+// Pull out a substring from a cell by selecting characters at a given position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

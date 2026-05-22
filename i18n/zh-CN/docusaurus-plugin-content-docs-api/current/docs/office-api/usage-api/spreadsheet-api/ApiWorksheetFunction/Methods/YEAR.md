@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回日期的年份，1900-9999 范围内的整数。
+从电子表格中的日期值提取年份。
 
 ```javascript editor-xlsx
-// How to return the year of a date in a spreadsheet.
+// How do I get the year portion of a date in a spreadsheet?
 
-// Use a function to get a year from a date object in a spreadsheet.
+// Retrieve the four-digit year number from any date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

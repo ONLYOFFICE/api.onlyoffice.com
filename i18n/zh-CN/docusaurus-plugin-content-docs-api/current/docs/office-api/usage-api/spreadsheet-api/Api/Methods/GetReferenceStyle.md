@@ -20,12 +20,12 @@ expression.GetReferenceStyle();
 
 ## 示例
 
-获取电子表格中的引用样式。
+读取当前的单元格寻址样式并在电子表格的单元格中显示。
 
 ```javascript editor-xlsx
-// Get style of a reference in a spreadsheet.
+// How do I check whether the column-letter or column-number addressing style is active in a spreadsheet?
 
-// Insert a reference style into the cell.
+// Record the active cell reference notation into a cell for inspection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue(Api.GetReferenceStyle());

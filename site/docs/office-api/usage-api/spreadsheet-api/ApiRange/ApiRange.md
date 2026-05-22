@@ -59,18 +59,24 @@ Represents the ApiRange class.
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | Adds a comment to the current range. |
 | [AutoFit](./Methods/AutoFit.md) | None | Changes the width of the columns or the height of the rows in the range to achieve the best fit. |
-| [Clear](./Methods/Clear.md) | None | Clears the current range. |
+| [Clear](./Methods/Clear.md) | boolean | Clears the current range. |
 | [ClearContents](./Methods/ClearContents.md) | None | Clears all contents from the current range. |
 | [ClearFormats](./Methods/ClearFormats.md) | None | Clears all formatting from the current range. |
 | [ClearHyperlinks](./Methods/ClearHyperlinks.md) | None | Clears all hyperlinks from the current range. |
 | [Copy](./Methods/Copy.md) | None | Copies the range to the specified range or to the clipboard. |
 | [Cut](./Methods/Cut.md) | None | Cuts the range and save it to the clipboard or paste it to the specified range. |
 | [Delete](./Methods/Delete.md) | None | Deletes the Range object. |
+| [DeleteColumns](./Methods/DeleteColumns.md) | None | No description provided. |
+| [DeleteRows](./Methods/DeleteRows.md) | None | No description provided. |
 | [End](./Methods/End.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the end in the specified direction in the specified range. |
+| [FillDown](./Methods/FillDown.md) | boolean | Copies the contents and formatting of the top row of the range into the remaining rows. |
+| [FillLeft](./Methods/FillLeft.md) | boolean | Copies the contents and formatting of the rightmost column of the range into the remaining columns. |
+| [FillRight](./Methods/FillRight.md) | boolean | Copies the contents and formatting of the leftmost column of the range into the remaining columns. |
+| [FillUp](./Methods/FillUp.md) | boolean | Copies the contents and formatting of the bottom row of the range into the remaining rows. |
 | [Find](./Methods/Find.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Finds specific information in the current range. |
 | [FindNext](./Methods/FindNext.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the next cell that matches those same conditions and returns the ApiRange object that represents that cell. This does not affect the selection or the active cell. |
 | [FindPrevious](./Methods/FindPrevious.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Continues a search that was begun with the [ApiRange#Find](../ApiRange/Methods/Find.md) method. Finds the previous cell that matches those same conditions and returns the ApiRange object that represents that cell. This does not affect the selection or the active cell. |
-| [ForEach](./Methods/ForEach.md) | None | Executes a provided function once for each cell. |
+| [ForEach](./Methods/ForEach.md) | boolean | Executes a provided function once for each cell. |
 | [GetAddress](./Methods/GetAddress.md) | string \| null | Returns the range address. |
 | [GetAreas](./Methods/GetAreas.md) | [ApiAreas](../ApiAreas/ApiAreas.md) | Returns a collection of the ranges. |
 | [GetCells](./Methods/GetCells.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents all the cells in the specified range or a specified cell. |
@@ -95,46 +101,49 @@ Represents the ApiRange class.
 | [GetNumberFormat](./Methods/GetNumberFormat.md) | string \| null | Returns a value that represents the format code for the current range. |
 | [GetOrientation](./Methods/GetOrientation.md) | [Angle](../Enumeration/Angle.md) | Returns the current range angle. |
 | [GetPivotTable](./Methods/GetPivotTable.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) \| null | Returns the ApiPivotTable object that represents the pivot table report containing the upper-left corner of the specified range. |
-| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents a cell or a range of cells. When applied to a Range object, the property is relative to that Range object. |
+| [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents a cell or a range of cells. |
 | [GetRow](./Methods/GetRow.md) | number | Returns a row number for the selected cell. |
 | [GetRowHeight](./Methods/GetRowHeight.md) | [pt](../Enumeration/pt.md) | Returns the row height value. |
 | [GetRows](./Methods/GetRows.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object that represents the rows in the specified range. If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row. |
 | [GetRowsCount](./Methods/GetRowsCount.md) | number | Returns a number of rows in the current range. |
 | [GetText](./Methods/GetText.md) | string \| string[][] | Returns the text of the specified range. |
 | [GetValidation](./Methods/GetValidation.md) | [ApiValidation](../ApiValidation/ApiValidation.md) | Returns the data validation object associated with this range. If no validation object exists yet, it will be created. |
-| [GetValue](./Methods/GetValue.md) | string \| string[][] | Returns a value of the specified range. |
+| [GetValue](./Methods/GetValue.md) | string \| number \| boolean \| (string \| number \| boolean)[][] | Returns a value of the specified range. |
 | [GetValue2](./Methods/GetValue2.md) | string \| string[][] | Returns the Value2 property (value without format) of the specified range. |
 | [GetWorksheet](./Methods/GetWorksheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode. |
 | [GetWrapText](./Methods/GetWrapText.md) | boolean | Returns the information about the wrapping cell style. |
 | [Insert](./Methods/Insert.md) | None | Inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space. |
-| [Merge](./Methods/Merge.md) | None | Merges the selected cell range into a single cell or a cell row. |
+| [InsertColumns](./Methods/InsertColumns.md) | None | No description provided. |
+| [InsertRows](./Methods/InsertRows.md) | None | No description provided. |
+| [Merge](./Methods/Merge.md) | boolean | Merges the selected cell range into a single cell or a cell row. |
 | [Offset](./Methods/Offset.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Returns a Range object offset from the current range. |
 | [Paste](./Methods/Paste.md) | None | Pastes the Range object to the specified range. |
 | [PasteSpecial](./Methods/PasteSpecial.md) | None | Pastes the Range object to the specified range using the special paste options. |
-| [Replace](./Methods/Replace.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Replaces specific information to another one in a range. |
+| [Replace](./Methods/Replace.md) | boolean | Replaces specific information to another one in a range. |
 | [Resize](./Methods/Resize.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | Resizes the current range by changing the number of rows and columns. |
-| [Select](./Methods/Select.md) | None | Selects the current range. |
+| [Select](./Methods/Select.md) | boolean | Selects the current range. |
 | [SetAlignHorizontal](./Methods/SetAlignHorizontal.md) | boolean | Sets the horizontal alignment of the text in the current cell range. |
 | [SetAlignVertical](./Methods/SetAlignVertical.md) | boolean | Sets the vertical alignment of the text in the current cell range. |
 | [SetAutoFilter](./Methods/SetAutoFilter.md) | None | Adds an AutoFilter to the current range. |
-| [SetBold](./Methods/SetBold.md) | None | Sets the bold property to the text characters in the current cell or cell range. |
-| [SetBorders](./Methods/SetBorders.md) | None | Sets the border to the cell / cell range with the parameters specified. |
-| [SetColumnWidth](./Methods/SetColumnWidth.md) | None | Sets the width of all the columns in the current range. One unit of column width is equal to the width of one character in the Normal style. For proportional fonts, the width of the character 0 (zero) is used. |
-| [SetFillColor](./Methods/SetFillColor.md) | None | Sets the background color to the current cell range with the previously created color object. Sets 'No Fill' when previously created color object is null. |
-| [SetFontColor](./Methods/SetFontColor.md) | None | Sets the text color to the current cell range with the previously created color object. |
-| [SetFontName](./Methods/SetFontName.md) | None | Sets the specified font family as the font name for the current cell range. |
-| [SetFontSize](./Methods/SetFontSize.md) | None | Sets the font size to the characters of the current cell range. |
+| [SetBold](./Methods/SetBold.md) | boolean | Sets the bold property to the text characters in the current cell or cell range. |
+| [SetBorders](./Methods/SetBorders.md) | boolean | Sets the border to the cell / cell range with the parameters specified. |
+| [SetColumnWidth](./Methods/SetColumnWidth.md) | None | Sets the width of all the columns in the current range. |
+| [SetFillColor](./Methods/SetFillColor.md) | boolean | Sets the background color to the current cell range with the previously created color object. |
+| [SetFontColor](./Methods/SetFontColor.md) | boolean | Sets the text color to the current cell range with the previously created color object. |
+| [SetFontName](./Methods/SetFontName.md) | boolean | Sets the specified font family as the font name for the current cell range. |
+| [SetFontSize](./Methods/SetFontSize.md) | boolean | Sets the font size to the characters of the current cell range. |
+| [SetFormula](./Methods/SetFormula.md) | boolean | Sets a formula or value to the current cell or cell range. |
 | [SetFormulaArray](./Methods/SetFormulaArray.md) | boolean | Sets an array formula to the current range. |
-| [SetHidden](./Methods/SetHidden.md) | None | Sets the value hiding property. The specified range must span an entire column or row. |
-| [SetItalic](./Methods/SetItalic.md) | None | Sets the italic property to the text characters in the current cell or cell range. |
-| [SetNumberFormat](./Methods/SetNumberFormat.md) | None | Specifies whether a number in the cell should be treated like number, currency, date, time, etc. or just like text. |
-| [SetOffset](./Methods/SetOffset.md) | None | Sets the cell offset. |
+| [SetHidden](./Methods/SetHidden.md) | boolean | Sets the value hiding property. The specified range must span an entire column or row. |
+| [SetItalic](./Methods/SetItalic.md) | boolean | Sets the italic property to the text characters in the current cell or cell range. |
+| [SetNumberFormat](./Methods/SetNumberFormat.md) | boolean | Specifies whether a number in the cell should be treated like number, currency, date, time, etc. or just like text. |
+| [SetOffset](./Methods/SetOffset.md) | boolean | Sets the cell offset. |
 | [SetOrientation](./Methods/SetOrientation.md) | None | Sets an angle to the current cell range. |
 | [SetReadingOrder](./Methods/SetReadingOrder.md) | None | Sets the direction (reading order) of the text in the current cell range. |
-| [SetRowHeight](./Methods/SetRowHeight.md) | None | Sets the row height value. |
+| [SetRowHeight](./Methods/SetRowHeight.md) | boolean | Sets the row height value. |
 | [SetSort](./Methods/SetSort.md) | None | Sorts the cells in the given range by the parameters specified in the request. |
-| [SetStrikeout](./Methods/SetStrikeout.md) | None | Specifies that the contents of the cell / cell range are displayed with a single horizontal line through the center of the contents. |
-| [SetUnderline](./Methods/SetUnderline.md) | None | Specifies that the contents of the current cell / cell range are displayed along with a line appearing directly below the character. |
+| [SetStrikeout](./Methods/SetStrikeout.md) | boolean | Specifies that the contents of the cell / cell range are displayed with a single horizontal line through the center of the contents. |
+| [SetUnderline](./Methods/SetUnderline.md) | boolean | Specifies that the contents of the current cell / cell range are displayed along with a line appearing directly below the character. |
 | [SetValue](./Methods/SetValue.md) | boolean | Sets a value to the current cell or cell range. |
-| [SetWrap](./Methods/SetWrap.md) | None | Specifies whether the words in the cell must be wrapped to fit the cell size or not. |
-| [UnMerge](./Methods/UnMerge.md) | None | Splits the selected merged cell range into the single cells. |
+| [SetWrap](./Methods/SetWrap.md) | boolean | Specifies whether the words in the cell must be wrapped to fit the cell size or not. |
+| [UnMerge](./Methods/UnMerge.md) | boolean | Splits the selected merged cell range into the single cells. |

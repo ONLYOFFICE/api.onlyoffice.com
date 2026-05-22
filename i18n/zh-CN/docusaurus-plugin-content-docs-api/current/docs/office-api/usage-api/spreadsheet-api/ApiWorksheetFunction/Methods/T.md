@@ -25,9 +25,9 @@ expression.T(arg1);
 在电子表格中检查值是否为文本，如果是则返回文本，如果不是则返回双引号（空文本）。
 
 ```javascript editor-xlsx
-// How to return a text if a value is a text otherwise return an empty string in a spreadsheet.
+// Test if a value is text using the T function and return accordingly.
 
-// Use a function to check whether a cell value is a text.
+// Returns the text value if the input is text, otherwise returns empty string.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

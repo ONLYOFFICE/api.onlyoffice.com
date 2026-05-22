@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-Set the text paddings to the current shape in a spreadsheet.
+Set inner padding on all four sides of a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to update paddings of the drawing in a spreadsheet.
+// How do I control the space between a shape's border and its text in a spreadsheet?
 
-// Create a shape and set its paddings in a spreadsheet.
+// Adjust the inner margins of a shape so the text inside has breathing room in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

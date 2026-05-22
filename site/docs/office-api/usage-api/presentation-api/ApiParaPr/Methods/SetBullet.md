@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the bullet or numbering to the current paragraph in a presentation.
+Add a bullet point to a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set a bullet type to the paragraph properties in a presentation.
+// How do I apply a bullet style to a paragraph in a presentation?
 
-// Create a bulleted paragraph setting its bullet type in a presentation.
+// Format a paragraph to display with a custom bullet character in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

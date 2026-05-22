@@ -27,9 +27,9 @@ boolean
 Set an attribute value on a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How to set an attribute on an XML node in a presentation.
+// Apply multiple attribute values to a custom XML node in a presentation.
 
-// Set an XML node attribute in a presentation.
+// Assign properties to a node by setting named attributes in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

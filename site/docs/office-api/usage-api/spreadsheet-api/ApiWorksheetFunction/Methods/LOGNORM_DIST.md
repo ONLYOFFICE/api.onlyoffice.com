@@ -17,7 +17,7 @@ expression.LOGNORM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value at which to evaluate the function, a positive number. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The mean of ln(x). |
 | arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The standard deviation of ln(x), a positive number. |
-| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability density function. |
+| arg4 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. |
 
 ## Returns
 
@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Return the lognormal distribution of x, where ln(x) is normally distributed with the specified parameters in a spreadsheet.
+Calculate the lognormal probability distribution for a given value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the lognormal distribution of x in a spreadsheet.
+// How do I find the cumulative or probability density for a lognormal distributed variable in a spreadsheet?
 
-// Use a function to return the lognormal distribution in a spreadsheet.
+// Determine the probability distribution of a lognormally distributed dataset in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

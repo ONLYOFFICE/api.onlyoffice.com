@@ -20,12 +20,12 @@ expression.GetIconSet();
 
 ## 示例
 
-获取电子表格中条件格式的图标集类型。
+读取电子表格中条件格式规则使用的图标集。
 
 ```javascript editor-xlsx
-// How to retrieve the current icon set type used in conditional formatting.
+// How do I find out which icon set a formatting rule is using in a spreadsheet?
 
-// Get the icon set type assigned to the formatting rule.
+// Identify the icon collection assigned to a cell range's formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

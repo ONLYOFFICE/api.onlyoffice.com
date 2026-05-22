@@ -25,6 +25,7 @@
 | [CreateInlineLvlSdt](./Methods/CreateInlineLvlSdt.md) | [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md) | 创建新的内联容器。 |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。 |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建无填充并移除元素的填充。 |
+| [CreateNumbering](./Methods/CreateNumbering.md) | [ApiNumbering](../ApiNumbering/ApiNumbering.md) | 创建具有指定类型的抽象多级编号。 |
 | [CreateOleObject](./Methods/CreateOleObject.md) | [ApiOleObject](../ApiOleObject/ApiOleObject.md) | 使用指定的参数创建 OLE 对象。 |
 | [CreateParaPr](./Methods/CreateParaPr.md) | [ApiParaPr](../ApiParaPr/ApiParaPr.md) | 创建空的段落属性。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落。 |
@@ -34,7 +35,7 @@
 | [CreatePresetGeometry](./Methods/CreatePresetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) \| null | 使用可用的预设形状之一创建几何图形。 |
 | [CreateRGBColor](./Methods/CreateRGBColor.md) | [ApiRGBColor](../ApiRGBColor/ApiRGBColor.md) | 通过设置红、绿、蓝颜色分量的适当值来创建 RGB 颜色。 |
 | [CreateRadialGradientFill](./Methods/CreateRadialGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建径向渐变填充，使用所选径向渐变作为对象背景应用于对象。 |
-| [CreateRange](./Methods/CreateRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 创建元素范围。如果不指定起始和结束位置，将从整个元素获取范围。 |
+| [CreateRange](./Methods/CreateRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 创建元素范围。 |
 | [CreateRun](./Methods/CreateRun.md) | [ApiRun](../ApiRun/ApiRun.md) | 创建要插入到当前段落或表格中的新的较小文本块。 |
 | [CreateSchemeColor](./Methods/CreateSchemeColor.md) | [ApiSchemeColor](../ApiSchemeColor/ApiSchemeColor.md) | 从可用的配色方案中选择创建复杂配色方案。 |
 | [CreateShape](./Methods/CreateShape.md) | [ApiShape](../ApiShape/ApiShape.md) | 使用指定的参数创建形状。 |
@@ -60,7 +61,7 @@
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
 | [LoadMailMergeData](./Methods/LoadMailMergeData.md) | boolean | 加载邮件合并的数据。 |
 | [MailMerge](./Methods/MailMerge.md) | boolean | 启动邮件合并过程。 |
-| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。结果为整数值。 |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | 将派卡转换为磅。 |

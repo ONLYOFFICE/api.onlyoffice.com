@@ -20,12 +20,12 @@ expression.Save();
 
 ## 示例
 
-保存电子表格中工作簿的更改。
+在编辑工作簿后将所有未保存的更改持久化到磁盘。
 
 ```javascript editor-xlsx
-// How can I save using a workbook in a spreadsheet?
+// How do I make sure my changes are written to the file in a spreadsheet?
 
-// Save for a workbook in a spreadsheet.
+// Write a value to a cell and immediately commit the workbook to storage in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const worksheet = workbook.GetActiveSheet();

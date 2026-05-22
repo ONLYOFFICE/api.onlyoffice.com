@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中批注对象的类类型。
+获取演示文稿中批注的对象类型标识符。
 
 ```javascript editor-pptx
-// How can I get the class type of a comment in a presentation?
+// How do I find the class type of a comment in a presentation?
 
-// Get the class type of a comment and display it in the presentation.
+// Read the type label that identifies a comment object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

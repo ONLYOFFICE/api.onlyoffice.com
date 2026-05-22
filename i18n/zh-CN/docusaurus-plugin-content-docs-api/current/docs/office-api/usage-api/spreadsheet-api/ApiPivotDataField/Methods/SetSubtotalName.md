@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的小计名称。
+为电子表格中数据透视表字段的小计行分配自定义标签。
 
 ```javascript editor-xlsx
-// How to change a pivot field subtotal name in a spreadsheet.
+// How do I rename the subtotal row of a pivot field to something more descriptive in a spreadsheet?
 
-// Create a pivot table, add data to it then set subtotal name of a specified pivot in a spreadsheet.
+// Replace the default subtotal heading with a meaningful title for clearer reporting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

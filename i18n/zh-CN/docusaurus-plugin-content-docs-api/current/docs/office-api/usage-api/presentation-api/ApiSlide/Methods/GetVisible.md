@@ -23,9 +23,9 @@ boolean
 获取演示文稿中幻灯片的可见性属性。
 
 ```javascript editor-pptx
-// How to find out whether a slide is visible or not.
+// Retrieve the visibility status using GetVisible after setting slide visibility.
 
-// Get a slide, set its visibility and show it in the slide.
+// Display the visibility status on a different slide.
 
 const presentation = Api.GetPresentation();
 let slide = Api.CreateSlide();

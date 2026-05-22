@@ -17,6 +17,7 @@
 - "pictureForm"
 - "complexForm"
 - "dateForm"
+- "signatureForm"
 
 ## 示例
 

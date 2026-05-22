@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get rotate of stamp annotation in a PDF document.
+Find the angle of a stamp in a PDF.
 
 ```javascript editor-pdf
-// How can I get the rotation using a stamp annotation in a PDF document?
+// How do I check how much a stamp is rotated in a PDF?
 
-// Get the rotation for a stamp annotation in a PDF document.
+// See the rotation angle of a stamp annotation in a PDF.
 
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');

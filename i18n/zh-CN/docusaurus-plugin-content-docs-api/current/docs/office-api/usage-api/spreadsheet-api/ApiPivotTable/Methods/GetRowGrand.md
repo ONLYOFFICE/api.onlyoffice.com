@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中数据透视表的行总计。
+检查电子表格中数据透视表是否显示行总计。
 
 ```javascript editor-xlsx
-// How to get table row grand in a spreadsheet.
+// How do I find out if a pivot table shows a grand total row at the bottom in a spreadsheet?
 
-// Create a pivot table, add data to it then get its row grand in a spreadsheet.
+// Verify the row grand total setting on a pivot table to see if totals are turned on in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

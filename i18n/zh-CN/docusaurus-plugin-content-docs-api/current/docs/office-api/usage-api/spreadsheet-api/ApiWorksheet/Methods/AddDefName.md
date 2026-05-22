@@ -15,7 +15,7 @@ expression.AddDefName(sName, sRef, isHidden);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sName | 必需 | string |  | 范围名称。 |
-| sRef | 必需 | string |  | 必须包含工作表名称，后跟 ! 符号和单元格区域。示例："Sheet1!$A$1:$B$2"。 |
+| sRef | 必需 | string |  | 必须包含工作表名称，后跟 ! 号和单元格范围。 |
 | isHidden | 必需 | boolean |  | 定义范围名称是否隐藏。 |
 
 ## 返回值
@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-向工作表添加新名称。
+在电子表格中为单元格范围分配自定义名称。
 
 ```javascript editor-xlsx
-// How to change a name of the worksheet range.
+// How do I label a group of cells so I can refer to them by name in a spreadsheet?
 
-// Name a range from a worksheet.
+// Give a range a memorable label instead of using raw cell addresses.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

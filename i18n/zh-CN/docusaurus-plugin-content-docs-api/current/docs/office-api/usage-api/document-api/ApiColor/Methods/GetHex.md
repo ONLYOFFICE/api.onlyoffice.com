@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中颜色的十六进制表示。
+从文档中不同颜色类型读取十六进制颜色值。
 
 ```javascript editor-docx
-// How to get the hex for a color in a document?
+// How do I get the hexadecimal representation of a color in a document?
 
-// Get the hex and display the result in a document.
+// Verify that theme and auto colors always return black hex while hex-defined colors return their actual value.
 
 const doc = Api.GetDocument();
 

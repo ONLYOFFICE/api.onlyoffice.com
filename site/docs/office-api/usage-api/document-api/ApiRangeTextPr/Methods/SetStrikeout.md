@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.SetStrikeout](../../ApiTextPr/Methods/SetStrikeout.md)
 
 ## Example
 
-Specify that the contents of the current run are displayed with a single horizontal line through the center of the line in a document.
+Apply a strikethrough line to text in a document.
 
 ```javascript editor-docx
-// How to strike out a text with one line in a document.
+// How do I draw a horizontal line through the middle of text in a document?
 
-// Create a text run object, cross out it in a document.
+// Mark text as deleted or deprecated by crossing it out in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

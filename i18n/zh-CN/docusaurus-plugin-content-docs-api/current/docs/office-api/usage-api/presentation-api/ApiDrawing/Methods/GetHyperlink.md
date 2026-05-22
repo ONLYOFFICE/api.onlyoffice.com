@@ -20,12 +20,12 @@ expression.GetHyperlink();
 
 ## 示例
 
-返回演示文稿中当前绘图对象的超链接。
+检索附加到演示文稿中形状的链接。
 
 ```javascript editor-pptx
-// How to get the hyperlink for a drawing object in a presentation?
+// How do I get the web address from a shape that has a hyperlink in a presentation?
 
-// Get the hyperlink and display the result in a presentation.
+// Read and display the hyperlink information from a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

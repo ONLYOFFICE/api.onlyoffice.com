@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-从文档的节中删除指定类型的页眉。
+从文档中所选节删除页眉。
 
 ```javascript editor-docx
-// How to remove the header of the current section in a document.
+// How do I remove the header that appears at the top of a section in a document?
 
-// Create section from the paragraph and remove its header in a document.
+// Clear the top area of a section so no header is shown in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

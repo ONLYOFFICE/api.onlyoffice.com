@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a copy of the run in a document.
+Duplicate a text run and place the copy into the same paragraph in a document.
 
 ```javascript editor-docx
-// How to create a duplicate of the text in a document.
+// How do I reproduce an existing text run and insert it again in a document?
 
-// Create a copy of the run and insert it to the paragraph in a document.
+// Clone a run so the same styled text appears twice within a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

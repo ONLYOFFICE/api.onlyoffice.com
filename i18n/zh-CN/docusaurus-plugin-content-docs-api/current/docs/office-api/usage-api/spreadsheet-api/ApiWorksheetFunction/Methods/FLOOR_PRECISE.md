@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回向下舍入到最接近的整数或有效数字倍数的数字。无论符号如何，数字始终向下舍入。
+在电子表格中将任何数字向下舍入到最近的整数或倍数，不论符号。
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest integer regardless its sign in a spreadsheet.
+// How do I round down negative numbers consistently in a spreadsheet?
 
-// Use function to round down a negative/positive number in a spreadsheet.
+// Always decrease a number to the nearest integer or increment, preserving its direction in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

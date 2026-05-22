@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中是否显示下拉列表。
+检查电子表格中已验证的单元格是否显示用于选择值的下拉列表。
 
 ```javascript editor-xlsx
-// How to check if validation displays a dropdown list in a spreadsheet.
+// How do I find out if a list validation rule displays a dropdown menu in a spreadsheet?
 
-// Get the InCellDropdown setting.
+// Confirm whether users see a pick list when clicking on a cell with list-based validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

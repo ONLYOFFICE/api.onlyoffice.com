@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+计算构成文档中形状轮廓路径的总步骤数。
 
 ```javascript editor-docx
-// How can I get the command count using a geometry path in a document?
+// How do I find out how many steps are in a shape's drawing path in a document?
 
-// Get the command count for a geometry path in a document.
+// Check how many individual segments define a shape's outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

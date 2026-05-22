@@ -1,6 +1,6 @@
 # onChangeCommentData
 
-使用 [ChangeComment](../../../../../docs/plugin-and-macros/interacting-with-editors/document-api/Methods/ChangeComment.md) 方法更改指定评论时调用的函数。
+使用 [ChangeComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md) 方法更改指定评论时调用的函数。
 
 ## 参数
 

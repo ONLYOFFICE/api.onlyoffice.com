@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取 PDF 文档中复选框控件的默认选中属性。
+了解 PDF 中复选框是否默认预选。
 
 ```javascript editor-pdf
-// How to is checked by default for a checkbox widget in a PDF document?
+// How do I check whether a checkbox widget is set to be checked when the form first opens in a PDF?
 
-// Is checked by default and display the result in a PDF document.
+// Read the default checked state of a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

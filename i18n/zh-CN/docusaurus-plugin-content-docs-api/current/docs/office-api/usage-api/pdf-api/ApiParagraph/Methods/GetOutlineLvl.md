@@ -6,12 +6,12 @@
 
 ## 示例
 
-通过 PDF 文档中的段落属性获取指定段落的大纲级别。
+确定 PDF 中段落的大纲层次级别。
 
 ```javascript editor-pdf
-// How do I get the outline lvl in a PDF document?
+// How do I check the outline level for document structure in a PDF?
 
-// Get the outline lvl using a paragraph properties object in a PDF document.
+// Get the nesting level used in document outline in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

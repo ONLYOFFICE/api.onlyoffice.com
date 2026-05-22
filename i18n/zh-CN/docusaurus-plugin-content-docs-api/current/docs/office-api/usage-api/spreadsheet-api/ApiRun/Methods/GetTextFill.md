@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中文本的填充属性。
+读取应用于文本运行的填充以检查电子表格中的颜色类型。
 
 ```javascript editor-xlsx
-// How to find out a text color type in a spreadsheet.
+// How do I find out what kind of fill is used to color text in a spreadsheet?
 
-// Get solid fill color of a text run object in a spreadsheet.
+// Retrieve the text fill object and identify whether it is a solid, gradient, or other fill in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

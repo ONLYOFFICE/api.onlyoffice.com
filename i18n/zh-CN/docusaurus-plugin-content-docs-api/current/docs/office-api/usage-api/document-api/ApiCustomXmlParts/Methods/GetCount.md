@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中 XML 管理器中自定义 XML 部件的数量。
+计算文档中存储的自定义 XML 部件数量。
 
 ```javascript editor-docx
-// How do I get the count in a document?
+// How do I find the total number of custom XML parts in a document?
 
-// Get the count using a custom XML parts object in a document.
+// Verify that all expected XML data blocks were added by checking the part count in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

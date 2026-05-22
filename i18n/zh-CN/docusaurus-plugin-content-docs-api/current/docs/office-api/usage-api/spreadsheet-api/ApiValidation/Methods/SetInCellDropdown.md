@@ -22,12 +22,12 @@ expression.SetInCellDropdown(InCellDropdown);
 
 ## 示例
 
-在电子表格中设置是否显示下拉列表。
+启用或禁用让用户从允许值中选取的下拉箭头。
 
 ```javascript editor-xlsx
-// How to show or hide the validation dropdown list in a spreadsheet.
+// How do I show a selectable list inside a cell that has a list-based validation rule in a spreadsheet?
 
-// Set the InCellDropdown setting.
+// Make it easier for users to enter valid data by displaying a clickable menu of options in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

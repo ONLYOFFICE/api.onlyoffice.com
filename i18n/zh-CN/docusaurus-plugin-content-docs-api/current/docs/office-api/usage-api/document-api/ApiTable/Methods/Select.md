@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中选中当前表格。
+在文档中选择整个表格。
 
 ```javascript editor-docx
-// How to select a table with a cursor in a document.
+// How do I programmatically select a whole table in a document?
 
-// Add text to the table cell and select it.
+// Highlight a table for further editing or copying in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get end point of line annotation in a PDF document.
+Find where a line annotation ends in a PDF.
 
 ```javascript editor-pdf
-// How do I get the end point in a PDF document?
+// How do I find the ending position of a line in a PDF?
 
-// Get the end point using a line annotation object in a PDF document.
+// Retrieve the coordinates of the line's endpoint in a PDF.
 
 let doc = Api.GetDocument();
 let lineAnnot = Api.CreateLineAnnot([10, 10, 160, 32], {x: 12, y: 12}, {x: 155, y: 30});

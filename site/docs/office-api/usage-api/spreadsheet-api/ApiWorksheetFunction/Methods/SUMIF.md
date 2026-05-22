@@ -27,9 +27,9 @@ number
 Add the cells specified by a given condition or criteria in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to sum up all elements under the condition in a spreadsheet.
+// Sum values based on a single condition using the SUMIF function.
 
-// Use a function to estimate a sum from the cells by a given condition.
+// Returns the total sum of cells that meet the specified criteria.
 
 let worksheet = Api.GetActiveSheet();
 let product = ["Product", "Apple", "range", "Banana"]

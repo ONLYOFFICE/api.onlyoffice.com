@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中选择下拉列表或组合框内容控件中的列表条目，并将内容控件的文本设置为该项目的值。
+选择下拉列表条目并将其值应用为文档中的活动选区。
 
 ```javascript editor-docx
-// How can I select using a content control list entry in a document?
+// How do I programmatically select a specific list item in a dropdown control in a document?
 
-// Select for a content control list entry in a document.
+// Set the current choice in a combo box or dropdown when you need a default or computed selection in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

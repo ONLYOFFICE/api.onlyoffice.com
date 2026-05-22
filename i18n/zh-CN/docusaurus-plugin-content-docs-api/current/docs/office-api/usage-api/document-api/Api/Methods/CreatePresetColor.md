@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## 示例
 
-在文档中从可用的颜色预设中选择为渐变光圈创建颜色。
+在文档中使用命名的预设颜色作为渐变填充形状的其中一个光圈。
 
 ```javascript editor-docx
-// Create the preset color object and apply it to the gradient stop class in a document.
+// How do I pick a preset color by name and use it as the start of a gradient fill in a document?
 
-// How to create a preset color and use it for the gradient stop in a document.
+// Build a radial gradient that blends from a named color to an orange tone on a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

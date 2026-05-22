@@ -20,12 +20,12 @@ expression.CreateTablePr();
 
 ## 示例
 
-在文档中创建并使用表格属性。
+在文档中为表格应用自定义边框。
 
 ```javascript editor-docx
-// How to create table properties and set it to table style in a document.
+// How do I add a border to the bottom of a table in a document?
 
-// Create the table pr in a document.
+// Style a table with a black bottom border using a custom table style in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

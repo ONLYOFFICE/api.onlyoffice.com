@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get source of a pivot table in a spreadsheet.
+Read the original data range that feeds a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table source and its address in a spreadsheet.
+// How do I find out which cells a pivot table is built from in a spreadsheet?
 
-// Create a pivot table, add data to it then get its source in a spreadsheet.
+// Trace the data behind a pivot table by reading its source address in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

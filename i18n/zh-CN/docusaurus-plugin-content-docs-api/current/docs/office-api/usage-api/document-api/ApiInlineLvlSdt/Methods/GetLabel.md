@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中容器的标注属性。
+检索分配给文档中内联内容控件的标签值。
 
 ```javascript editor-docx
-// How to display the label of the inline text control in the document.
+// How do I read the label of an inline content control in a document?
 
-// Set the label of the inline text element and print it in a document.
+// Confirm the numeric label set on an inline content control by printing it to the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

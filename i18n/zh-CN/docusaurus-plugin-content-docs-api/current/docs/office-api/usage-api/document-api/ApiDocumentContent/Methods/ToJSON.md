@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-将文档内容对象转换为 JSON 对象。
+将形状的文档内容序列化为 JSON 并在文档中恢复。
 
 ```javascript editor-docx
-// How to get a JSON object from the document content.
+// How do I convert document content to JSON and recreate it from that data in a document?
 
-// Convert the document to json file and print its class type.
+// Round-trip a shape's content through JSON to verify the class type of the reconstructed object.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在表单文档中上移指定角色。
+在文档中将角色移动到填写顺序中的更高位置。
 
 ```javascript editor-forms
-// How can I move up using a form roles in a form document?
+// How do I change the order of roles to place one earlier in the sequence in a document?
 
-// Move up for a form roles in a form document.
+// Reposition a role upward in the list and display the updated order in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

@@ -22,12 +22,12 @@ expression.CreateCheckBoxContentControl(checkBoxPr);
 
 ## 示例
 
-在文档中创建复选框内容控件。
+在文档中插入已选中的复选框。
 
 ```javascript editor-docx
-// How can I create the check box content control in a document?
+// How do I add a checkbox that is already checked to a document?
 
-// Create the check box content control in a document.
+// Place a pre-checked checkbox control on a new line in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateCheckBoxContentControl({checked: true});

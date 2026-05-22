@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档中的文档内容获取形状对象集合。
+检索文档内容中嵌入的所有形状。
 
 ```javascript editor-docx
-// Get all shapes added to the document.
+// How do I collect every shape from a content container in a document?
 
-// How to retrieve all shapes and fill with color the second one in a document.
+// Read the class type of the first shape and write it as text at the bottom of the shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

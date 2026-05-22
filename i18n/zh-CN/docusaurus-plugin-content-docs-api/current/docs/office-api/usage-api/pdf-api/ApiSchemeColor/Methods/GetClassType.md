@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中配色方案颜色返回的类类型。
+识别 PDF 中配色方案对象的类型。
 
 ```javascript editor-pdf
-// How do I check what type a scheme color object is in a PDF document?
+// What kind of object is a scheme color in a PDF?
 
-// Retrieve and output the class type string for a scheme color in a PDF document.
+// Determine the class name of a color scheme in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

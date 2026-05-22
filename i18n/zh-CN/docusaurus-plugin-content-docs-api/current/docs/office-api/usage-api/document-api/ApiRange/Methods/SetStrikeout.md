@@ -22,12 +22,12 @@ expression.SetStrikeout(isStrikeout);
 
 ## 示例
 
-指定在文档中当前范围的内容以通过范围中心的单条水平线显示。
+在文档中为所选文本绘制删除线。
 
 ```javascript editor-docx
-// How to cross the range with one line in a document.
+// How do I mark a portion of text as crossed out with a single line in a document?
 
-// Strike out the range content in a document.
+// Visually cancel or remove words by placing a strikethrough across them in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-获取电子表格中工作簿的创建日期（使用核心属性）。
+读取电子表格工作簿属性中记录的创建日期。
 
 ```javascript editor-xlsx
-// How can I get the created using a core properties in a spreadsheet?
+// How do I find out when a workbook was originally created in a spreadsheet?
 
-// Get the created for a core properties in a spreadsheet.
+// Retrieve and display the date the workbook was first made in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

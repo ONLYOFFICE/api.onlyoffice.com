@@ -15,7 +15,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetLanguage(sLangId);
 
 ## Example
 
-Specify the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run in a presentation.
+Set the language for spell-check and grammar validation of a text run.
 
 ```javascript editor-pptx
-// How to change language of the text for grammar check in a presentation.
+// Configure the language for grammar checking on text content in a presentation.
 
-// Create a new text run and change its language in a presentation.
+// Create a text run and assign a language code for grammar processing.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

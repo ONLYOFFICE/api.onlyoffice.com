@@ -26,7 +26,7 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 在 PDF 文档中创建线性渐变填充，使用所选线性渐变作为对象背景。
 
 ```javascript editor-pdf
-// How to create a linear gradient fill to set it as a drawing background in a PDF document.
+// Create a linear gradient fill to set it as a drawing background in a PDF document.
 
 // Change a drawing background using gradient fill in a PDF document.
 

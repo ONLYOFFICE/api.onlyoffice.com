@@ -6,12 +6,12 @@
 
 ## 示例
 
-复制文档中的当前图形对象。
+复制绘图并在文档中为副本应用新的填充。
 
 ```javascript editor-docx
-// How to create a duplicate of a drawing in a document.
+// How do I create a copy of a shape and give it a different fill in a document?
 
-// Add two similar shapes into the document.
+// Reuse an existing shape's geometry by cloning it and styling the clone independently.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

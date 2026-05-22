@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-检查电子表格中的绘图对象是否垂直翻转。
+读取电子表格中绘图的垂直翻转状态。
 
 ```javascript editor-xlsx
-// How to get the vertical flip property of the shape in a spreadsheet.
+// How do I find out whether a drawing is mirrored top to bottom in a spreadsheet?
 
-// Create a drawing, flip it vertically, and read its vertical flip value in a spreadsheet.
+// Confirm whether a shape has been reversed along its horizontal axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

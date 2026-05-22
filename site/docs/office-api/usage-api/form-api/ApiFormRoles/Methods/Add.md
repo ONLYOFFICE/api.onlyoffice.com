@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add new roles in a form document.
+Create a new user role for form access control in a document.
 
 ```javascript editor-forms
-// How to add for a form roles?
+// How do I add a new role that can fill forms in a document?
 
-// Add and display the result in a form document.
+// Define a role name that controls who can edit form fields in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

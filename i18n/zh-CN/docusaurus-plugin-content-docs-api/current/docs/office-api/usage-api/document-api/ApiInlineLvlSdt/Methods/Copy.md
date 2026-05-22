@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建内联内容控件的副本。
+在文档中复制内联内容控件。
 
 ```javascript editor-docx
-// How to create a duplicate of the inline text element in a document.
+// How do I copy an inline content control in a document?
 
-// Add inline content control and its copy to the paragraph separated by a line break in a document.
+// Place the original and its copy side by side in a paragraph to reuse formatted input fields in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中绘图对象的高度。
+检索文档中绘图对象的高度。
 
 ```javascript editor-docx
-// How to print the height of the drawing in a document.
+// How do I get the height of a shape and display it in millimeters in a document?
 
-// Create a rectangle and then show its height in mm in a document.
+// Print the measured height of a rectangle inside the shape's own content area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

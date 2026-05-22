@@ -7,12 +7,12 @@
 
 ## 示例
 
-在演示文稿中设置当前绘图对象的名称。
+为演示文稿中幻灯片上的形状分配名称。
 
 ```javascript editor-pptx
-// How to set name for a drawing object in a presentation?
+// How do I give a shape a custom name in a presentation?
 
-// Set name and display the result in a presentation.
+// Create a shape, assign it a name, and verify the name was applied in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

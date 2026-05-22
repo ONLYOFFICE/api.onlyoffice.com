@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Add above average conditional formatting to a range.
+Highlight cells whose values exceed the average of the range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add above average conditional formatting rules to highlight cells.
+// How do I automatically mark cells that are above the group average in a spreadsheet?
 
-// Add above average conditional formatting to cells.
+// Draw attention to standout high values by coloring them relative to the mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

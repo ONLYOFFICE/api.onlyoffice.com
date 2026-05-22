@@ -19,16 +19,16 @@ expression.FormatAsTable(sRange);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-将工作表中选定的单元格范围格式化为表格。
+在电子表格中将单元格范围转换为格式化表格。
 
 ```javascript editor-xlsx
-// How to format a range as a table.
+// How do I turn a plain data range into a structured table in a spreadsheet?
 
-// Select a range and format it as a table.
+// Apply table styling to a range so data is easier to read and filter.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.FormatAsTable("A1:E10");

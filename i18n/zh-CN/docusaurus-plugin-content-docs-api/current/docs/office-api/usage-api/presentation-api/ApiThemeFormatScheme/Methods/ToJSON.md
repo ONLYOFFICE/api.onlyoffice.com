@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将主题格式方案对象转换为 JSON 对象。
+在演示文稿中将主题格式方案导出为 JSON 格式。
 
 ```javascript editor-pptx
-// How to convert a theme format scheme object to a JSON object.
+// How do I convert a theme format scheme to JSON in a presentation?
 
-// Create a theme format scheme, convert it to JSON and create a new object from it.
+// Transform a theme format scheme into a JSON representation to store or reuse in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ expression.GetBehavior();
 
 ## 示例
 
-获取并显示 PDF 文档中按钮控件的行为类型。
+检索 PDF 中按钮控件的行为类型。
 
 ```javascript editor-pdf
-// How to get the behavior for a button widget in a PDF document?
+// How do I find the button behavior setting in a PDF?
 
-// Get the behavior and display the result in a PDF document.
+// Display the behavior configuration for a button widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

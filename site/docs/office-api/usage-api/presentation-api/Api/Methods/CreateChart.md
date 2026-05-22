@@ -1,6 +1,9 @@
 # CreateChart
 
 Creates a chart with the parameters specified.
+:::note
+Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside -**1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+:::
 
 ## Syntax
 
@@ -21,7 +24,7 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 | nWidth | Required | [EMU](../../Enumeration/EMU.md) |  | The chart width in English measure units. |
 | nHeight | Required | [EMU](../../Enumeration/EMU.md) |  | The chart height in English measure units. |
 | nStyleIndex | Required | number |  | The chart color style index (can be **1 - 48**, as described in OOXML specification). |
-| aNumFormats | Required | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | Numeric formats which will be applied to the series (can be custom formats). The default numeric format is "General". |
+| aNumFormats | Required | [NumFormat](../../Enumeration/NumFormat.md)[] \| String[] |  | Numeric formats which will be applied to the series (can be custom formats). |
 
 ## Returns
 
@@ -29,12 +32,12 @@ expression.CreateChart(sType, aSeries, aSeriesNames, aCatNames, nWidth, nHeight,
 
 ## Example
 
-Create a chart and paste it into the document.
+Create a 3D bar chart in a presentation.
 
 ```javascript editor-pptx
-// How to add charts to slides.
+// How do I insert a chart and customize its appearance in a presentation?
 
-// Create a 3D bar chart, set its size, position, color and other properties in a presentation.
+// Build a chart with multiple data series and apply formatting to each series in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

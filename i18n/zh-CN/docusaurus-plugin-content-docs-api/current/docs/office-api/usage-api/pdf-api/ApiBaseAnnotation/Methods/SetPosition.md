@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并设置新位置。
+在 PDF 中将注释移动到页面上的新位置。
 
 ```javascript editor-pdf
-// How to set position for an annotation in a PDF document?
+// Reposition an annotation by changing its coordinates in a PDF.
 
-// Set position and display the result in a PDF document.
+// Update where an annotation appears in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

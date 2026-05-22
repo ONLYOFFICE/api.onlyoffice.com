@@ -1,6 +1,6 @@
 # onChangeCommentData
 
-The function called when the specified comment is changed with the [ChangeComment](../../../../../docs/plugin-and-macros/interacting-with-editors/document-api/Methods/ChangeComment.md) method.
+The function called when the specified comment is changed with the [ChangeComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/ChangeComment.md) method.
 
 ## Parameters
 

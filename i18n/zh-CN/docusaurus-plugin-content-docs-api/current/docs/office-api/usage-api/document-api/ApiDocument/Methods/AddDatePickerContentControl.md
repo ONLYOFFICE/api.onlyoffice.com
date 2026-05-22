@@ -25,9 +25,9 @@ expression.AddDatePickerContentControl(datePickerPr);
 在文档中添加日期选择器内容控件。
 
 ```javascript editor-docx
-// How to add the date picker content control for a document?
+// How do I insert a date picker field into a document?
 
-// Add the date picker content control and display the result in a document.
+// Let readers select a date from a calendar picker embedded in the document.
 
 let doc = Api.GetDocument();
 doc.AddDatePickerContentControl();

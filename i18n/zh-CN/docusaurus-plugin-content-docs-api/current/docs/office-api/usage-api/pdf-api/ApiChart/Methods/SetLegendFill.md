@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为图表图例设置颜色。
+更改 PDF 中图例的背景颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and background color of a legend in a PDF document.
+// How do I set a solid color fill for the legend box in a PDF?
 
-// Use chart to set legend fill in a PDF document.
+// Apply a gray fill to the legend area of a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

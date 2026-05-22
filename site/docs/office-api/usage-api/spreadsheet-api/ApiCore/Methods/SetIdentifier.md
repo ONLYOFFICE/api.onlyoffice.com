@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the identifier of the workbook using the core properties in a spreadsheet.
+Assign a unique identifier to a workbook through its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set identifier for a core properties in a spreadsheet?
+// How do I tag a workbook with a unique ID in a spreadsheet?
 
-// Set identifier and display the result in a spreadsheet.
+// Label the workbook with a custom reference code stored in its metadata in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

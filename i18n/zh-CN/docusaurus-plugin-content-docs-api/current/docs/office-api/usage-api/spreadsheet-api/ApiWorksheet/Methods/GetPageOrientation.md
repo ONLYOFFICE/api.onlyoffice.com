@@ -20,12 +20,12 @@ expression.GetPageOrientation();
 
 ## 示例
 
-获取电子表格中的页面方向。
+读取电子表格中活动工作表的打印页面方向。
 
 ```javascript editor-xlsx
-// How to get orientation of the sheet in a spreadsheet.
+// How do I check whether a sheet is set to portrait or landscape in a spreadsheet?
 
-// Get a sheet orientation using the worksheet API in a spreadsheet.
+// Retrieve the orientation setting and display it in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let pageOrientation = worksheet.GetPageOrientation();

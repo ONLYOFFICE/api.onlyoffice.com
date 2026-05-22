@@ -20,12 +20,12 @@ expression.GetDashType();
 
 ## 示例
 
-获取笔触的虚线类型。在 PDF 文档中创建具有实线边框的形状并显示其虚线类型。返回字符串值："dash"、"dashDot"、"dot"、"lgDash"、"lgDashDot"、"lgDashDotDot"、"solid"、"sysDash"、"sysDashDot"、"sysDashDotDot"、"sysDot"。
+识别 PDF 中边框的线条图案样式
 
 ```javascript editor-pdf
-// How to get the dash type for a stroke in a PDF document?
+// What dash pattern is applied to a border line in a PDF?
 
-// Get the dash type and display the result in a PDF document.
+// Extract and show the line style for a border in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

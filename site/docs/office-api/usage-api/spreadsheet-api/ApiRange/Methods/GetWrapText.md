@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Get the information about the wrapping cell style in a spreadsheet.
+Check whether text wrapping is enabled for a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a cell value wrapping type.
+// How do I find out if a cell is set to wrap its text in a spreadsheet?
 
-// Get a wrapping type of a cell from its range and show it.
+// Confirm the wrap setting of a cell by reading and displaying it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

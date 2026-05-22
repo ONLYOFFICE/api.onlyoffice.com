@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中绘图对象的类类型。
+识别演示文稿中绘图对象的类型。
 
 ```javascript editor-pptx
-// How to identify the class type of a drawing object in a presentation?
+// How do I find out what kind of object a shape is in a presentation?
 
-// Obtain the class type identifier of a drawing object object in a presentation.
+// Get the name and display the type category of a drawing object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

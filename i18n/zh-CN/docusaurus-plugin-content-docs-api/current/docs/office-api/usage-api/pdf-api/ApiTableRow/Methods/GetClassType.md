@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中表格行返回的类类型。
+确定 PDF 中表格行对象的类型。
 
 ```javascript editor-pdf
-// How do I check what type a table row object is in a PDF document?
+// How do I identify what type a table row is in a PDF?
 
-// Retrieve and output the class type string for a table row in a PDF document.
+// Find out which class a table row belongs to in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

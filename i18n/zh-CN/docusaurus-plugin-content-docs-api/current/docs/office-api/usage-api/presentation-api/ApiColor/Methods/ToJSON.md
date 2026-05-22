@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中将形状填充颜色转换为 JSON。
+在演示文稿中将形状填充颜色导出为 JSON 表示。
 
 ```javascript editor-pptx
-// The color is obtained from the first shape fill on the first slide.
+// How do I convert a color to a JSON format in a presentation?
 
-// Convert the color to a JSON string and display the result.
+// Serialize a fill color to JSON and display its structure in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

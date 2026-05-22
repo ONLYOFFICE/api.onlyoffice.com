@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-指定在文档中应用于表格范围的底纹。
+在文档中用颜色填充整个表格的背景。
 
 ```javascript editor-docx
-// How to add shading to the paragraph in a document.
+// How do I apply a background shade to a whole table in a document?
 
-// Apply the clear shading to the paragraph in a document.
+// Give a table a colored backdrop to highlight it visually in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

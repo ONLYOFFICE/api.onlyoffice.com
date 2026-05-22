@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the creator of the current document using the core properties in a document.
+Read the name of the author stored in the core properties of a document.
 
 ```javascript editor-docx
-// How do I get the creator in a document?
+// How do I get the creator's name from the core properties in a document?
 
-// Get the creator using a core properties object in a document.
+// Identify who originally authored a document without opening its file dialog in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

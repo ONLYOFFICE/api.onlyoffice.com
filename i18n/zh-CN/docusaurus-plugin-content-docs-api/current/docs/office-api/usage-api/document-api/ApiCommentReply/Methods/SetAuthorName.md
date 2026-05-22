@@ -22,12 +22,12 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-设置文档中批注回复作者的名称。
+设置文档中批注回复的作者名称。
 
 ```javascript editor-docx
-// How to change a comment's reply author name in a document.
+// How do I change the author name of a comment reply in a document?
 
-// Get all comments from the presentation and set an author to the first one's reply.
+// Update who is shown as the reply author to reflect the correct contributor.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

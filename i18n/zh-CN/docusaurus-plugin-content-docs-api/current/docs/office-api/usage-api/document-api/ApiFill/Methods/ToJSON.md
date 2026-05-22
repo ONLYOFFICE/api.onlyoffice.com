@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的填充对象转换为 JSON 对象。
+将填充对象序列化为 JSON 并应用于文档中的新形状。
 
 ```javascript editor-docx
-// How to get a JSON object from the fill object in a document.
+// How do I convert a fill to JSON and reuse it in a document?
 
-// Convert the radial gradient fill to json and add it to the paragraph in a document.
+// Transfer a gradient fill from one context to another by saving it as JSON and rebuilding it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the previous section in a document.
+Access the section that comes before the current one in a document.
 
 ```javascript editor-docx
-// How to get prevoius section from the current one in a document.
+// How do I retrieve the section preceding the one I am working with in a document?
 
-// Update the margins of the next section in a document.
+// Navigate backward through sections to reach an earlier part of a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

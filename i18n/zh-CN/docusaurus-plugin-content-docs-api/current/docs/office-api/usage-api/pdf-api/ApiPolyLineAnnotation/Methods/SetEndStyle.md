@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为折线注释设置线条终止样式。
+更改 PDF 中折线标记的线条结束外观。
 
 ```javascript editor-pdf
-// How can I set end style using a polyline annotation in a PDF document?
+// How do I update the line ending style on a polyline marking in a PDF?
 
-// Set end style for a polyline annotation in a PDF document.
+// Modify the appearance of the endpoint shown on a polyline marking in a PDF.
 
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];

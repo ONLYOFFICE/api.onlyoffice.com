@@ -5,7 +5,7 @@ Returns a table row by its position in the table.
 ## Syntax
 
 ```javascript
-expression.GetRow(nPos);
+expression.GetRow(rowIndex);
 ```
 
 `expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
@@ -14,20 +14,20 @@ expression.GetRow(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | The row position within the table. |
+| rowIndex | Required | number |  | The row index within the table. |
 
 ## Returns
 
-[ApiTableRow](../../ApiTableRow/ApiTableRow.md) \| null
+[ApiTableRow](../../ApiTableRow/ApiTableRow.md)
 
 ## Example
 
-Get a row by its index in a document.
+Retrieve a specific row from a table by its position in a document.
 
 ```javascript editor-docx
-// How to get a second row from the table in a document.
+// How do I access a particular row of a table by its index in a document?
 
-// Add a row from the another one in a document.
+// Use an existing row as a reference point to insert a new row in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

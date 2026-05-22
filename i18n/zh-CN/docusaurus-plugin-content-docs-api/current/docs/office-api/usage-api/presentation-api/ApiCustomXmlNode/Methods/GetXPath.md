@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-返回演示文稿中当前 XML 节点的绝对 XPath。
+获取演示文稿中 XML 节点的完整位置路径。
 
 ```javascript editor-pptx
-// How to get the x path for a custom XML node in a presentation?
+// How do I find the path to an XML element in a presentation?
 
-// Get the x path and display the result in a presentation.
+// Retrieve the XPath address of an XML node in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

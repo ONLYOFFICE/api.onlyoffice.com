@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-设置图片在表单内的位置。
+控制图像在文档中图片字段内的位置。
 
 ```javascript editor-forms
-// How to move the picture inside the form.
+// How do I shift an image to a specific spot inside a picture field in a document?
 
-// Specify the picture position of the form.
+// Reposition the image horizontally and vertically inside a picture field in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});

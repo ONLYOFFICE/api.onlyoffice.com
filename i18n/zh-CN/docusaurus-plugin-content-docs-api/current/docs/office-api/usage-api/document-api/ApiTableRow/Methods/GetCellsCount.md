@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中行内的单元格数量。
+计算文档中表格行包含的单元格数量。
 
 ```javascript editor-docx
-// How to count the cells of the row.
+// How do I find out the total number of cells in a given row in a document?
 
-// Display the number of row cells.
+// Read the cell count of a row to understand the column structure of a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

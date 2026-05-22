@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add text field and set char limit for it in a PDF document.
+Limit the number of characters that can be entered into a text field in a PDF.
 
 ```javascript editor-pdf
-// How to set char limit for a text field in a PDF document?
+// How do I prevent users from typing beyond a certain character count in a PDF?
 
-// Set char limit and display the result in a PDF document.
+// Control how many characters a text field will accept in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

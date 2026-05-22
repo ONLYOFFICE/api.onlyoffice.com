@@ -8,12 +8,12 @@ nAfter 的任何值都将被忽略。如果未指定 isAfterAuto 参数，则
 
 ## 示例
 
-设置电子表格中当前段落之后的间距。
+在电子表格中为形状内段落的下方添加额外空间。
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points in a spreadsheet.
+// How do I increase the gap between one paragraph and the next in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text in a spreadsheet.
+// Push the following paragraph down by setting a bottom spacing value on the preceding one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

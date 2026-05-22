@@ -8,12 +8,12 @@ nBefore 的任何值都将被忽略。如果未指定 isBeforeAuto 参数，则
 
 ## 示例
 
-在演示文稿中设置当前段落的段前间距。
+在演示文稿中为段落上方添加空间。
 
 ```javascript editor-pptx
-// How to set the size of a spacing before a text from a paragraph properties in a presentation.
+// How do I set the distance before a paragraph begins in a presentation?
 
-// Change the size property of a spacing before a paragraph in a presentation.
+// Configure the gap before a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

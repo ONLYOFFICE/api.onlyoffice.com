@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中文本属性的类类型。
+识别电子表格中文本属性块的对象类型。
 
 ```javascript editor-xlsx
-// How to identify the class type of a text properties in a spreadsheet?
+// How do I find out what kind of object holds text formatting settings in a spreadsheet?
 
-// Obtain the class type identifier of a text properties object in a spreadsheet.
+// Display the type label of a text properties object inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

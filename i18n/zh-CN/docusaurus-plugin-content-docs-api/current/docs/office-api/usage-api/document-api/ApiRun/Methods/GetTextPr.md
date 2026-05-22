@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取文档中 run 的文本属性。
+读取文档中应用于文本运行的文本格式设置。
 
 ```javascript editor-docx
-// How to change the text properties in a document.
+// How do I retrieve the current text formatting of a run in a document?
 
-// Create a text object, set its font size, justification, etc in a document.
+// Inspect and reuse the styling options already set on a piece of text in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

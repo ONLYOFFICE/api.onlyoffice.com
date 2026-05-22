@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定垂直轴的刻度标签位置。
+将垂直轴上的刻度标签定位在图表区域顶部。
 
 ```javascript editor-pptx
-// How to change a position of tick label in a presentation.
+// Configure chart styling with axis label placement in a presentation.
 
-// Create a chart, set its properties and its vertical axis tick label position in a presentation.
+// Create a 3D bar chart with vertical axis tick labels positioned at the top.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

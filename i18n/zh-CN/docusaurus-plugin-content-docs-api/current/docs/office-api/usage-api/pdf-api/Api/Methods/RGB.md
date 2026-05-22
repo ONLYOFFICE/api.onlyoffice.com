@@ -24,12 +24,12 @@ expression.RGB(r, g, b);
 
 ## 示例
 
-在 PDF 文档中创建 RGB 格式的颜色并将其用作形状填充。
+在 PDF 中使用红、绿、蓝值创建颜色。
 
 ```javascript editor-pdf
-// How to r g b in a PDF document?
+// How do I define a custom color in a PDF?
 
-// R g b using the PDF document API.
+// Set a shape's fill color using RGB values in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

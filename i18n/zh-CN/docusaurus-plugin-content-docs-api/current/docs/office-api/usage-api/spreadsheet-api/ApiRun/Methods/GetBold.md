@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中文本的粗体属性。
+检查电子表格中的文本是否格式化为粗体。
 
 ```javascript editor-xlsx
-// How to find out whether a text is bold or not in a spreadsheet.
+// How do I find out if text is bold in a spreadsheet?
 
-// Get a text bold property in a spreadsheet.
+// Read the bold setting from a text style and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

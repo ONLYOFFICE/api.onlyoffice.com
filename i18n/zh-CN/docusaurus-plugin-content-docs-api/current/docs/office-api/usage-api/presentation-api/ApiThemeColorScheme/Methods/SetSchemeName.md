@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为当前主题配色方案设置名称。
+为演示文稿中的主题配色方案设置名称。
 
 ```javascript editor-pptx
-// How to set a scheme name in a presentation.
+// How do I assign a custom name to a color scheme in a presentation?
 
-// Create new color scheme and set its name in a presentation.
+// Create a color scheme and give it a new name in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

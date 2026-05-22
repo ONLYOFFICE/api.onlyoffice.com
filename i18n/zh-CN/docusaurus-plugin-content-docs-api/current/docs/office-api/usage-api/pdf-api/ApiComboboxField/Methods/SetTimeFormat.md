@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置时间格式。
+在 PDF 中以小时、分钟和秒显示时间。
 
 ```javascript editor-pdf
-// How do I set time format in a PDF document?
+// Can I control the time display format in a PDF?
 
-// Set time format using a combobox field object.
+// Show times using a 12-hour or 24-hour format in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

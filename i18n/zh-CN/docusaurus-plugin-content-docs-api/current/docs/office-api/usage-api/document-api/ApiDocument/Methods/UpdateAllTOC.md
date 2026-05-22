@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更新当前文档中的所有目录。
+在添加新标题后刷新文档中的所有目录。
 
 ```javascript editor-docx
-// How to update all table of contents in a document.
+// How do I keep tables of contents up to date in a document?
 
-// Edit document content and update the table of contents.
+// Reflect the latest heading structure in every table of contents without rebuilding it manually in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");

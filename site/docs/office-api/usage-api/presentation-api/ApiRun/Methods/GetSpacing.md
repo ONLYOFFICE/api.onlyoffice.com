@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
 ## Example
 
-Find out a text is spacing size in a presentation.
+Read the character spacing value for text in a presentation.
 
 ```javascript editor-pptx
-// How to know a text spacing in a presentation.
+// How do I check the spacing between characters in text in a presentation?
 
-// Get the text properties of the run and display its spacing size in a presentation.
+// Get the spacing property of text to see the current character spacing in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

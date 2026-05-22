@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set and get the title of the current presentation in a presentation.
+Add a title to the presentation metadata in a presentation.
 
 ```javascript editor-pptx
-// How to set title for a core properties in a presentation?
+// How do I set the title that identifies my presentation?
 
-// Set title and display the result in a presentation.
+// Retrieve and display the presentation title in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

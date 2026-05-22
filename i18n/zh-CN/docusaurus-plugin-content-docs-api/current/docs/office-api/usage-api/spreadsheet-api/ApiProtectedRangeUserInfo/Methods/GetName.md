@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取电子表格中受保护范围用户的名称。
+读取有权访问电子表格中受保护范围的用户的显示名称。
 
 ```javascript editor-xlsx
-// How to get an user info of a protected range and show its name in a spreadsheet.
+// How do I find out a user's name for a protected range in a spreadsheet?
 
-// Get an user name of a protected range and add it to the worksheet.
+// Identify a collaborator by name when inspecting who can edit a locked area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");

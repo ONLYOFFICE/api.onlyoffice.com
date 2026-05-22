@@ -18,16 +18,16 @@ expression.SetPrintHeadings(bPrint);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Specify whether the current sheet row/column headers must be printed or not in a spreadsheet.
+Add row numbers and column letters to printed output in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set whether sheet headings should be printed or not in a spreadsheet.
+// How do I include row and column identifiers on my printed pages in a spreadsheet?
 
-// Set a boolean value representing whether to print row/column headings or not in a spreadsheet.
+// Display the grid labels (A, B, C and 1, 2, 3) when printing your spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetPrintHeadings(true);

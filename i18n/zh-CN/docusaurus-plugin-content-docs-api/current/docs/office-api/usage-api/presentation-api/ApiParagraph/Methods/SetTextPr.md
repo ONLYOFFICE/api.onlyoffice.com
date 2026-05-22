@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置段落文本属性。
+在演示文稿中应用字体大小和字重等文本格式属性。
 
 ```javascript editor-pptx
-// How to set text pr for a paragraph in a presentation?
+// How do I change the appearance of text in a paragraph in a presentation?
 
-// Set text pr and display the result in a presentation.
+// Configure font properties for text in a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

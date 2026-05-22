@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-从文档中的组合框内容控件中选择列表项。
+在文档中的组合框内容控件中选择活动列表项。
 
 ```javascript editor-docx
-// How to select list item for an inline content control in a document?
+// How do I set the selected value of a combo box or dropdown control in a document?
 
-// Select list item and display the result in a document.
+// Pick a specific entry by value to pre-fill a combo box for the user in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

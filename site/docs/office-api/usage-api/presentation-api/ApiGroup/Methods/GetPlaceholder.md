@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetPlaceholder](../../ApiDrawing/Methods/GetPlacehold
 
 ## Example
 
-Get a placeholder from the current drawing object in a presentation.
+Get the placeholder assigned to a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a placeholder of a slide shape.
+// How do I find the placeholder for an object in a presentation?
 
-// Get a placeholder of a slide shape.
+// Retrieve and check a shape's placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

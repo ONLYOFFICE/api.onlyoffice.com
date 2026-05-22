@@ -18,16 +18,16 @@ expression.SetLeftMargin(nPoints);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Set the left margin of the sheet in a spreadsheet.
+Define the left page margin for a sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set margin of the left side in a spreadsheet.
+// How do I set the left margin of a worksheet in a spreadsheet?
 
-// Resize the left margin of the sheet in a spreadsheet.
+// Adjust the spacing on the left side of the printed page in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetLeftMargin(20.8);

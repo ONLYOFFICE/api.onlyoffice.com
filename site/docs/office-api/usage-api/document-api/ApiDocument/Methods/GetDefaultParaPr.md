@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a set of default paragraph properties in the current document in a document.
+Read and modify the default paragraph formatting properties in a document.
 
 ```javascript editor-docx
-// How to update the default paragraph properties such as spacing, justification, etc in a document.
+// How do I change the default line spacing and paragraph spacing for all paragraphs in a document?
 
-// Display the paragraph text after changing its default properties in a document.
+// Adjust justification and spacing at the style level so every new paragraph inherits the settings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

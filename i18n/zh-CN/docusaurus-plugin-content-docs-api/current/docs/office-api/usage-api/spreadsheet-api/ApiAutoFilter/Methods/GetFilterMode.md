@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查工作表当前是否有自动筛选。
+检查电子表格中是否有任何行当前被活动筛选器隐藏。
 
 ```javascript editor-xlsx
-// How to detect if filtering is active on a sheet in a spreadsheet.
+// How do I tell if a filter is hiding rows on a sheet in a spreadsheet?
 
-// Use ApiAutoFilter.GetFilterMode() to test filter state in a spreadsheet.
+// Confirm that at least one filtering rule is in effect and some data is being suppressed in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

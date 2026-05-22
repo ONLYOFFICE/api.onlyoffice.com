@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-返回当前文档内容的内部 ID。
+获取分配给 PDF 中形状内容的唯一标识符。
 
 ```javascript editor-pdf
-// How do I get the internal id in a PDF document?
+// How can I find the ID that refers to a shape's content in a PDF?
 
-// Get the internal id using a document content object.
+// Discover the reference code that distinguishes a content container in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

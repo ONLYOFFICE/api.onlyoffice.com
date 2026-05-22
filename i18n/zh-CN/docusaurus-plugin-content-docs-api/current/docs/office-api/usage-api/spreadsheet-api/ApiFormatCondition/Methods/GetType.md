@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取条件格式规则的类型。
+读取对电子表格中条件格式规则进行分类的类别。
 
 ```javascript editor-xlsx
-// How to retrieve the type of existing conditional formatting rules.
+// How do I find out whether a formatting rule is based on cell value, a formula, or a date period in a spreadsheet?
 
-// Get conditional formatting rule type.
+// Inspect what kind of condition a formatting rule evaluates in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

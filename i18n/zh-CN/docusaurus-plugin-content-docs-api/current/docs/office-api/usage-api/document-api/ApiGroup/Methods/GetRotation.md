@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中绘图对象的旋转角度。
+读取文档中绘图对象的旋转角度。
 
 ```javascript editor-docx
-// How do I get the rotation in a document?
+// How do I get the rotation angle of a shape in a document?
 
-// Get the rotation using a drawing object object in a document.
+// Display the current tilt of a drawing as text inside the shape itself in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

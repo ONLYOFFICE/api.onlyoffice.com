@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a style to the table in a document.
+Apply a predefined visual style to a table in a document.
 
 ```javascript editor-docx
-// How to set style of the table in a document.
+// How do I give a table a consistent look and feel in a document?
 
-// Set style and display the result in a document.
+// Dress up a table using one of the built-in formatting styles in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

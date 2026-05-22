@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的批注作者名称。
+从文档中的批注读取作者名称。
 
 ```javascript editor-docx
-// How to find out a comment's author in a document.
+// How do I find out who wrote a comment in a document?
 
-// Get all comments from the presentation and display the first one's author name.
+// Identify the person behind a comment by retrieving the name stored with it.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取电子表格中批注回复创建的当前时区格式时间戳。
+读取电子表格中批注回复上记录的本地创建时间。
 
 ```javascript editor-xlsx
-// How to get a time when a reply was created in a spreadsheet.
+// How do I find out exactly when a reply to a comment was posted in a spreadsheet?
 
-// Add a reply creation timestamp to a range of the worksheet.
+// Show the date and time a reply was added to a comment thread in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

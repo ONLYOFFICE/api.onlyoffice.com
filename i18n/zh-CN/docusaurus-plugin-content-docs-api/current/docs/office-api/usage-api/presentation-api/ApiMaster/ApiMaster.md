@@ -10,7 +10,7 @@
 | [AddObject](./Methods/AddObject.md) | boolean | 向当前幻灯片母版添加对象（图像、形状或图表）。 |
 | [ClearBackground](./Methods/ClearBackground.md) | boolean | 清除幻灯片母版背景。 |
 | [Copy](./Methods/Copy.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | 创建指定幻灯片母版对象的副本。 |
-| [Delete](./Methods/Delete.md) | boolean | 如果存在，则从父对象中删除指定对象。注意：如果是演示文稿中的最后一个母版，则无法删除。 |
+| [Delete](./Methods/Delete.md) | boolean | 如果存在，则从父对象中删除指定的对象。 |
 | [Duplicate](./Methods/Duplicate.md) | [ApiMaster](../ApiMaster/ApiMaster.md) \| null | 创建指定幻灯片母版对象的副本，并将新幻灯片母版添加到幻灯片母版集合。 |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | 返回包含幻灯片母版中所有图表对象的数组。 |
 | [GetAllDrawings](./Methods/GetAllDrawings.md) | [Drawing](../Enumeration/Drawing.md)[] | 返回包含幻灯片母版中所有绘图对象的数组。 |
@@ -29,5 +29,5 @@
 | [RemoveLayout](./Methods/RemoveLayout.md) | boolean | 从当前幻灯片母版中删除版式。 |
 | [RemoveObject](./Methods/RemoveObject.md) | boolean | 从当前幻灯片母版中删除对象（图像、形状或图表）。 |
 | [SetBackground](./Methods/SetBackground.md) | boolean | 设置当前幻灯片母版的背景。 |
-| [SetTheme](./Methods/SetTheme.md) | boolean | 为幻灯片母版设置主题。设置主题对象的副本。 |
+| [SetTheme](./Methods/SetTheme.md) | boolean | 为幻灯片母版设置主题。 |
 | [ToJSON](./Methods/ToJSON.md) | JSON | 将 ApiMaster 对象转换为 JSON 对象。 |

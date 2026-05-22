@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a report about every change which was made to the document in the review mode.
+Generate a detailed report of all tracked changes made during review in a document.
 
 ```javascript editor-docx
-// How to get the report after the document review.
+// How do I extract a summary of every edit recorded in review mode in a document?
 
-// Get all information about review changes like author, formatted text, etc.
+// Build a table listing each reviewer's additions, removals, and formatting changes in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -49,7 +49,7 @@ for (let userName in reviewReport) {
     rows += reviewReport[userName].length;
 }
 let cols = 4;
-let table = Api.CreateTable(cols, rows);
+let table = Api.CreateTable(rows, cols);
 doc.Push(table);
 
 function privateFillCell(curRow, curCol, text) {

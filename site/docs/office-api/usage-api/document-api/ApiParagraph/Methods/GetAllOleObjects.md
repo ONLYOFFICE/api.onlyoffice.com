@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a collection of OLE objects in the paragraph in a document.
+Retrieve all OLE objects embedded in a paragraph in a document.
 
 ```javascript editor-docx
-// How to retrieve all OLE objects from the document.
+// How do I get every OLE object from a paragraph in a document?
 
-// Get all OLE objects and get the application ID of the first one in a document.
+// Read application metadata from embedded objects by collecting all OLE objects in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

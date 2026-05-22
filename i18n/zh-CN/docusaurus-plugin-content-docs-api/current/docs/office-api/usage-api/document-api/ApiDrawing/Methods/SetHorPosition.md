@@ -16,7 +16,7 @@ expression.SetHorPosition(sRelativeFrom, nDistance, bPercent);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sRelativeFrom | 必需 | [RelFromH](../../Enumeration/RelFromH.md) |  | 将作为对象水平对齐参考点的文档元素。 |
 | nDistance | 必需 | [EMU](../../Enumeration/EMU.md) \| number |  | 从文档元素右侧到浮动对象的距离。当 bPercent=true 时，使用 EMU 表示绝对距离或使用数字表示百分比（1 = 1%）。 |
-| bPercent | 可选 | boolean | false | 定义垂直对齐偏移量是否以百分比指定的选项。 |
+| bPercent | 可选 | boolean | false | 定义水平对齐偏移是否以百分比指定的选项。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置文档中浮动对象水平定位的绝对度量值。
+在文档中将浮动形状定位在特定的水平位置。
 
 ```javascript editor-docx
-// How to set the horizontal position property of the shape in a document.
+// How do I place a shape next to a page margin in a document?
 
-// Create a drawing, add text to it and set its horizontal position in a document.
+// Place two shapes at different horizontal offsets relative to page and margin anchors in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

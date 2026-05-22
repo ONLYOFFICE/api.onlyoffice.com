@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of an inline content control object in a document.
+Identify the class type of an inline content control in a document.
 
 ```javascript editor-docx
-// How can I get the class type of an inline content control in a document?
+// How do I get the class type of an inline content control in a document?
 
-// Get the class type of an inline content control and display it in the document.
+// Verify the object type at runtime to distinguish content controls from other elements in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

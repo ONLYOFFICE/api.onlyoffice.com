@@ -15,7 +15,7 @@ expression.SetCellMarginRight(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认表格单元格右边距，否则使用指定值覆盖当前单元格的表格单元格右边距。 |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则应使用默认的表格单元格右边距， |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetCellMarginRight(nValue);
 
 ## 示例
 
-指定表格中特定单元格当前内容右侧边缘与右边框之间应保留的间距。
+设置演示文稿中表格单元格文本与右边缘之间的间距。
 
 ```javascript editor-pptx
-// How to set the cell right margin for the current table cell.
+// How do I add space to the right of text in a table cell in a presentation?
 
-// Specify the right margin value for the table cell object.
+// Adjust the right margin to control padding in a table cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

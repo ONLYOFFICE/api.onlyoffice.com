@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## 示例
 
-在文档中为渐变光圈创建 RGB 颜色。
+使用红、绿、蓝值定义自定义颜色以填充文档中的形状。
 
 ```javascript editor-docx
-// Create an RGB color setting the appropriate values for the red, green and blue color components in a document.
+// How do I specify exact RGB color values to create a gradient fill on a shape in a document?
 
-// How to create the RGB color object and use it to create a gradient stop in a document.
+// Blend two hand-picked RGB colors across a shape using a linear gradient in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-创建形状的副本并将其插入演示文稿。
+复制形状并将副本放在演示文稿的另一张幻灯片上。
 
 ```javascript editor-pptx
-// How to create the same slide shape.
+// How do I make a copy of a shape in a presentation?
 
-// Get a slide shape, add it to the slide and create its copy.
+// Create an exact duplicate of a shape and add it to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

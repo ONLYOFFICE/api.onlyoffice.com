@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中返回假定面值为 $100 的证券的修正麦考利久期。
+计算电子表格中债券的修正久期以衡量其价格敏感性。
 
 ```javascript editor-xlsx
-// How to get a modified Macauley duration of a security in a spreadsheet.
+// How do I assess how a bond's price will change with interest rate shifts in a spreadsheet?
 
-// Use a function to get a result from modified Macauley duration in a spreadsheet.
+// Compute the weighted average time to receive a bond's cash flows in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

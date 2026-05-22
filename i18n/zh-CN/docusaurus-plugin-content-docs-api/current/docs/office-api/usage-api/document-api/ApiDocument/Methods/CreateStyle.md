@@ -1,11 +1,11 @@
 # CreateStyle
 
-创建具有指定类型和名称的新样式。如果存在同名样式，它将被新样式替换。
+使用指定的类型和名称创建新样式。如果已存在具有指定名称的样式，将返回该样式而不创建新样式。
 
 ## 语法
 
 ```javascript
-expression.CreateStyle(sStyleName, sType);
+expression.CreateStyle(styleName, type);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -14,8 +14,8 @@ expression.CreateStyle(sStyleName, sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyleName | 必需 | string |  | 将创建的样式的名称。 |
-| sType | 可选 | [StyleType](../../Enumeration/StyleType.md) | "paragraph" | 样式将应用于的文档元素。 |
+| styleName | 必需 | string |  | 将创建的样式的名称。 |
+| type | 可选 | [StyleType](../../Enumeration/StyleType.md) | "paragraph" | 样式将应用于的文档元素。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.CreateStyle(sStyleName, sType);
 
 ## 示例
 
-在文档中创建类型为 "Heading 1"、名称为 "paragraph" 的新样式。
+在文档中定义具有特定字体、颜色和间距的自定义段落样式。
 
 ```javascript editor-docx
-// How to create a paragraph and set its style as a heading in a document.
+// How do I create a reusable heading style and apply it to a paragraph in a document?
 
-// Set style of the paragraph in a document.
+// Give a heading a unique color and size so it stands out visually from body text in a document.
 
 let doc = Api.GetDocument();
 let heading1Style = doc.CreateStyle("Heading 1", "paragraph");

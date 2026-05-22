@@ -20,12 +20,12 @@ expression.CreateParagraph();
 
 ## 示例
 
-在电子表格中创建新段落。
+在电子表格工作表上放置的形状中插入新的文本段落。
 
 ```javascript editor-xlsx
-// How to add a text in a shape in a spreadsheet.
+// How do I add a separate block of text as its own paragraph inside a shape in a spreadsheet?
 
-// Create a text paragraph for a shape in a spreadsheet.
+// Build and place a standalone text block within a shape's content area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

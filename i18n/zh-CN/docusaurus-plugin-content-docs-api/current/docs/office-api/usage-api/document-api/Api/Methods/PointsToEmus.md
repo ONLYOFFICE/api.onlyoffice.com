@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将磅转换为 EMU。
+将排版磅值转换为英制度量单位并在文档中显示结果。
 
 ```javascript editor-docx
-// How to convert points to emus in a document?
+// How do I translate a point measurement into English metric units in a document?
 
-// Convert points to emus using the document API.
+// Show the English metric unit equivalent of a given number of points as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

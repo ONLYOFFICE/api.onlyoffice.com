@@ -20,12 +20,12 @@ expression.GetSpacing();
 
 ## 示例
 
-获取当前表单间距值。
+读取文档中应用于文本运行的字符间距。
 
 ```javascript editor-docx
-// How to find out th text spacing in a document.
+// How do I check how much space is added between characters in a document?
 
-// Get the property of the text that shows the size of spacing in a document.
+// Inspect the spacing value set on a text run to verify its letter-spacing in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

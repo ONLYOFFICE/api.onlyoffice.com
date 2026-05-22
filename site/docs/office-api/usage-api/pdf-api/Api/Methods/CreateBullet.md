@@ -22,12 +22,12 @@ expression.CreateBullet(sSymbol);
 
 ## Example
 
-Create a bullet in a PDF document.
+Add a bullet point to a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to add a bullet to the paragraph in a PDF document.
+// How do I create a bulleted list in a PDF?
 
-// Create the bullet and display the result in a PDF document.
+// Format a paragraph with a bullet character in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

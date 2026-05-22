@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom shape and add it to a page. Applies custom geometry with specific fill and stroke properties.
+Draw an outline around a shape path in a PDF.
 
 ```javascript editor-pdf
-// How do I set stroke in a PDF document?
+// How do I add a border to a shape in a PDF?
 
-// Set stroke using a geometry path object in a PDF document.
+// Enable or disable the outline of a custom shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -21,7 +21,7 @@ expression.AddCaption(additionalText, label, excludeLabel, numFormat, isBefore, 
 | excludeLabel | Optional | boolean | false | Specifies whether to exclude the label from the caption. |
 | numFormat | Optional | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | The possible caption numbering format. |
 | isBefore | Optional | boolean | false | Specifies whether to insert the caption before the current content control (true) or after (false) (after/before the shape if it is placed in the shape). |
-| headingLvl | Optional | Number |  | The heading level (used if you want to specify the chapter number). 💡 If you want to specify "Heading 1", then nHeadingLvl === 0 and etc. |
+| headingLvl | Optional | Number |  | The heading level (used if you want to specify the chapter number). |
 | captionSep | Optional | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | The caption separator (used if you want to specify the chapter number). |
 
 ## Returns
@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-Add a caption paragraph after (or before) the current content control in a document.
+Add a numbered figure caption below a content control in a document.
 
 ```javascript editor-docx
-// Add a figure caption after the block content control and set the Arabic caption numbering format.
+// How do I label a content control with a figure caption in a document?
 
-// Create a block content control, add a paragraph with an image to it, and add a figure caption for the current content control in a document.
+// Insert an image into a content control and attach a caption with automatic numbering in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

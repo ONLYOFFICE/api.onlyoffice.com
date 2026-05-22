@@ -6,12 +6,12 @@ ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 创建指定绘图对象的副本。 |
+| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | 创建指定形状的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 从父对象中删除指定的绘图对象。 |
 | [Fill](./Methods/Fill.md) | boolean | 设置当前图形对象的填充格式属性。 |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | 返回 ApiShape 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回可以插入段落或文本块的形状内部内容。 |
-| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 在 6.2 中已弃用。返回可以插入段落或文本块的形状内部内容。 |
+| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 在 6.2 中已弃用。 |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 从当前形状获取填充属性。 |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | 获取当前绘图的水平翻转状态。 |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | 获取当前绘图的垂直翻转状态。 |
@@ -37,10 +37,10 @@ ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | 设置当前绘图的水平翻转。 |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | 设置当前绘图的垂直翻转。 |
 | [SetGeometry](./Methods/SetGeometry.md) | boolean | 为当前形状设置自定义几何形状。 |
-| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | 为当前绘图对象（形状或图像）设置超链接。传递 null 以删除超链接。 |
+| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | 为当前绘图对象（形状或图像）设置超链接。 |
 | [SetLine](./Methods/SetLine.md) | boolean | 设置当前形状的轮廓属性。 |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | 设置当前绘图的指定锁定类型的锁定值。 |
-| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。如果已存在同名的另一个绘图，该绘图的名称将重置为默认的自动生成名称。 |
+| [SetName](./Methods/SetName.md) | boolean | 设置当前绘图的名称。 |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | 设置指定图形对象的轮廓属性。 |
 | [SetPaddings](./Methods/SetPaddings.md) | boolean | 设置当前形状的文本内边距。 |
 | [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | 将指定的占位符设置到当前绘图对象。 |

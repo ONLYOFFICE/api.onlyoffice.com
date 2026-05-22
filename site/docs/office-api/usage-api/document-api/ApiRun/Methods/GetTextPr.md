@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the text properties of the run in a document.
+Read the text formatting settings applied to a run in a document.
 
 ```javascript editor-docx
-// How to change the text properties in a document.
+// How do I retrieve the current text formatting of a run in a document?
 
-// Create a text object, set its font size, justification, etc in a document.
+// Inspect and reuse the styling options already set on a piece of text in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

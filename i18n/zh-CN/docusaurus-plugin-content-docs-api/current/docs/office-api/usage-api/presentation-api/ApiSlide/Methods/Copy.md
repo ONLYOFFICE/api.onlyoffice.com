@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-创建当前幻灯片对象的副本。
+在演示文稿中创建幻灯片的副本。
 
 ```javascript editor-pptx
-// How to create a copy of the slide.
+// How do I copy a slide in a presentation?
 
-// Create a duplicate slide and add it to the presentation.
+// Add the copied slide to the presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

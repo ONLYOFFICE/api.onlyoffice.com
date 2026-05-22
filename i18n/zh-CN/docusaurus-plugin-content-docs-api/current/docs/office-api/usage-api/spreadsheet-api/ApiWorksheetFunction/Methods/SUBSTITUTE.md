@@ -28,9 +28,9 @@ string
 在电子表格中用新文本替换文本字符串中的现有文本。
 
 ```javascript editor-xlsx
-// How to substitute a substring with another one in a spreadsheet.
+// Substitute a substring with another one using the SUBSTITUTE function.
 
-// Use a function to replace a text with another one in a spreadsheet.
+// Returns the modified text with the specified replacement applied.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -8,7 +8,7 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | ------ | ------- | ----------- |
 | [AddBreak](./Methods/AddBreak.md) | boolean | Inserts a break at the specified location in the main document. |
 | [ApplyChartStyle](./Methods/ApplyChartStyle.md) | boolean | Sets a style to the current chart by style ID. |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Copies the current graphic object. |
+| [Copy](./Methods/Copy.md) | [ApiChart](../ApiChart/ApiChart.md) | Copies the current chart. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current graphic object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetAllSeries](./Methods/GetAllSeries.md) | [ApiChartSeries](../ApiChartSeries/ApiChartSeries.md)[] | Returns all series from the chart space. |
@@ -39,12 +39,13 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | Scales the width of the figure using the specified coefficient. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
 | [SetAxieNumFormat](./Methods/SetAxieNumFormat.md) | boolean | Sets the specified numeric format to the axis values. |
+| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | None | No description provided. |
 | [SetCategoryName](./Methods/SetCategoryName.md) | boolean | Sets a name to the specified chart category. |
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | Sets the fill to the data point in the specified chart series. |
 | [SetDataPointNumFormat](./Methods/SetDataPointNumFormat.md) | boolean | Sets the specified numeric format to the chart data point. |
 | [SetDataPointOutLine](./Methods/SetDataPointOutLine.md) | boolean | Sets the outline to the data point in the specified chart series. |
-| [SetDistances](./Methods/SetDistances.md) | boolean | Specifies the minimum distance which will be maintained between the edges of the current drawing object and any subsequent text. |
-| [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | Sets the properties from another drawing to the current drawing. The following properties will be copied: horizontal and vertical alignment, distance between the edges of the current drawing object and any subsequent text, wrapping style, drawing name, title and description. |
+| [SetDistances](./Methods/SetDistances.md) | boolean | Specifies the minimum distance which will be maintained between the edges of the current drawing object and any |
+| [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | Sets the properties from another drawing to the current drawing. |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
 | [SetHorAlign](./Methods/SetHorAlign.md) | boolean | Specifies how the floating object will be horizontally aligned. |
@@ -67,7 +68,7 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetMarkerOutLine](./Methods/SetMarkerOutLine.md) | boolean | Sets the outline to the marker in the specified chart series. |
 | [SetMinorHorizontalGridlines](./Methods/SetMinorHorizontalGridlines.md) | boolean | Specifies minor horizontal gridline visual properties. |
 | [SetMinorVerticalGridlines](./Methods/SetMinorVerticalGridlines.md) | boolean | Specifies minor vertical gridline visual properties. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
 | [SetPlotAreaFill](./Methods/SetPlotAreaFill.md) | boolean | Sets the fill to the chart plot area. |
 | [SetPlotAreaOutLine](./Methods/SetPlotAreaOutLine.md) | boolean | Sets the outline to the chart plot area. |
@@ -94,7 +95,7 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetVertAxisMinorTickMark](./Methods/SetVertAxisMinorTickMark.md) | boolean | Specifies minor tick mark for the vertical axis. |
 | [SetVertAxisTickLabelPosition](./Methods/SetVertAxisTickLabelPosition.md) | boolean | Spicifies tick labels position for the vertical axis. |
 | [SetVertFlip](./Methods/SetVertFlip.md) | boolean | Flips the current drawing vertically. |
-| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | Sets the wrapping type of the current object (image, shape, chart). One of the following wrapping style types can be set: **"inline"** - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible. If one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly: **"square"** - the text wraps the rectangular box that bounds the object. **"tight"** - the text wraps the actual object edges. **"through"** - the text wraps around the object edges and fills in the open white space within the object. **"topAndBottom"** - the text is only above and below the object. **"behind"** - the text overlaps the object. **"inFront"** - the object overlaps the text. |
+| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | Sets the wrapping type of the current object (image, shape, chart). One of the following wrapping style types can be set: |
 | [SetXValues](./Methods/SetXValues.md) | boolean | Sets the x-axis values to all chart series. It is used with the scatter charts only. |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDrawing object into the JSON object. |
 | [Unselect](./Methods/Unselect.md) | boolean | Removes the current graphic object from the selection. |

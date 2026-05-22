@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的创建者。
+设置和查看演示文稿中的作者名称。
 
 ```javascript editor-pptx
-// How do I get the creator in a presentation?
+// How do I find who created a presentation?
 
-// Get the creator using a core properties object in a presentation.
+// Read the creator information stored in a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

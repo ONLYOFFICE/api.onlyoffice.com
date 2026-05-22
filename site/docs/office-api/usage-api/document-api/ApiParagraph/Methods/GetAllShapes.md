@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a collection of shape objects in the paragraph in a document.
+Retrieve all shape objects embedded in a paragraph in a document.
 
 ```javascript editor-docx
-// How to retrieve all shapes from the document.
+// How do I get every shape from a paragraph in a document?
 
-// Get all shapes and color the first one in a document.
+// Apply consistent styling to multiple shapes at once by collecting them from a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

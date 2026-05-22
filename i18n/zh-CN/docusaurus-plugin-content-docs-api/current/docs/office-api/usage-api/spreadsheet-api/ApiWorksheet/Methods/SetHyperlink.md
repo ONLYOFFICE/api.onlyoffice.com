@@ -22,16 +22,16 @@ expression.SetHyperlink(sRange, sAddress, subAddress, sScreenTip, sTextToDisplay
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-在电子表格中向指定范围添加超链接。
+在电子表格中为单元格范围附加可点击的超链接。
 
 ```javascript editor-xlsx
-// How to add hyperlinks to the range in a spreadsheet.
+// How do I add a hyperlink to a cell in a spreadsheet?
 
-// Add a hyperlink to the cell.
+// Link a cell to an external URL so users can navigate to it directly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 const logoUrl = 'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png';

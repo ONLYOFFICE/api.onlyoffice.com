@@ -21,12 +21,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the text properties which will be applied to the text in the numbering level itself, not to the text in the subsequent paragraph in a document.
+Apply text formatting to the numbering label of a list level in a document.
 
 ```javascript editor-docx
-// How to retrieve the text properties of the numbering in a document.
+// How do I change the font and size of a list level's numbering label in a document?
 
-// Update text properties of the numbering in a document.
+// Style the numbering marker itself with bold and a custom typeface without affecting the paragraph text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

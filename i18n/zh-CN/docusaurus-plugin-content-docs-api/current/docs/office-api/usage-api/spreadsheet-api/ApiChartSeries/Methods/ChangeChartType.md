@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更改图表类的第一个系列的类型并将新类型插入到文档中。
+将电子表格中的单个数据系列切换为不同的图表类型。
 
 ```javascript editor-xlsx
-// How to change a chart type to an area one in a spreadsheet.
+// How do I change one series in a combined chart to a new chart style in a spreadsheet?
 
-// Change chart type and display the result in a spreadsheet.
+// Convert a single series from one chart style to another within the same chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

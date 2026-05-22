@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the parent slide master of the current layout in a presentation.
+Access the slide master from a layout in a presentation.
 
 ```javascript editor-pptx
-// How to get a master of a layout in a presentation.
+// How do I find the parent master of a layout in a presentation?
 
-// Get the master and display the result in a presentation.
+// Retrieve the master and display its class type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

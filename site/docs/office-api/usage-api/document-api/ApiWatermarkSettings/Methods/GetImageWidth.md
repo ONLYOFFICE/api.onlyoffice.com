@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Read the width of a watermark image in a document.
 
 ```javascript editor-docx
-// How to get the width of the image in a document.
+// How do I find out how wide the watermark image is in a document?
 
-// Get the watermark image width in a document.
+// Check the horizontal size of a watermark image in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

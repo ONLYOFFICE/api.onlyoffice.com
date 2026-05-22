@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a parent table of the cell in a document.
+Access the table that contains a specific cell in a document.
 
 ```javascript editor-docx
-// How to get parent table of the cell.
+// How do I get the table that a particular cell belongs to in a document?
 
-// Retrieve the cell from the table and get the height of its parent table.
+// Reach the surrounding table from a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

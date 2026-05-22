@@ -22,12 +22,12 @@ expression.SetFill(oApiFill);
 
 ## 示例
 
-在电子表格中为当前文本 run 设置文本颜色。
+应用纯色填充以更改电子表格中文本运行的颜色。
 
 ```javascript editor-xlsx
-// How to color a text with a solid fill in a spreadsheet.
+// How do I set a specific color for text using a fill in a spreadsheet?
 
-// Set a text color using a solid fill in a spreadsheet.
+// Paint text with a chosen color by assigning a solid fill to its formatting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

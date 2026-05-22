@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中从左到右返回特定字符或文本字符串首次出现的字符编号（不区分大小写）。
+查找电子表格中文本字符串在单元格内出现的位置。
 
 ```javascript editor-xlsx
-// How to get number of characters counting from first occurance of search text in a spreadsheet.
+// How do I locate the position of text within a longer string in a spreadsheet?
 
-// Use a function to count characters starting from the index at which the search text appears in a spreadsheet.
+// Search for a word and get its character position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

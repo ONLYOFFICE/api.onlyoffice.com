@@ -20,12 +20,12 @@ expression.GetParentTableCell();
 
 ## 示例
 
-获取文档中包含当前段落的表格单元格。
+检索文档中包含给定段落的表格单元格。
 
 ```javascript editor-docx
-// How to get the parent table cell of the paragraph.
+// How do I find the table cell that holds a paragraph in a document?
 
-// Set shading to the cell of the parent table.
+// Apply a background color to a cell by accessing it from a paragraph nested inside it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

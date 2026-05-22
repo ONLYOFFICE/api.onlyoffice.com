@@ -18,16 +18,16 @@ expression.SetVisible(isVisible);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-在电子表格中设置工作表可见性的状态。
+在电子表格中显示或隐藏工作表。
 
 ```javascript editor-xlsx
-// How to set visibility of the sheet in a spreadsheet.
+// How do I make a sheet visible or hidden from other users in a spreadsheet?
 
-// Make a sheet visible or not in a spreadsheet.
+// Control whether a sheet appears in the tab list or remains inaccessible in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetVisible(true);

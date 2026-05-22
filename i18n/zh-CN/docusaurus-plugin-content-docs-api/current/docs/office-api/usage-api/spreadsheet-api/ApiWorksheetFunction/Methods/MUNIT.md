@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定维度的单位矩阵。
+在电子表格中生成特定大小的单位矩阵。
 
 ```javascript editor-xlsx
-// How to get an unit matrix in a spreadsheet.
+// Create a unit matrix and place it in a cell in a spreadsheet.
 
-// Use a function to get an unit matrix specifying dimension in a spreadsheet.
+// Insert a matrix of ones and zeros into your spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -21,7 +21,7 @@ expression.AddCaption(sAdditional, sLabel, bExludeLabel, sNumberingFormat, bBefo
 | bExludeLabel | 可选 | boolean | false | 指定是否从题注中排除标签。 |
 | sNumberingFormat | 可选 | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | 可能的题注编号格式。 |
 | bBefore | 可选 | boolean | false | 指定是在当前段落之前（true）还是之后（false）插入题注（如果位于形状中，则在形状之前/之后）。 |
-| nHeadingLvl | 可选 | Number |  | 标题级别（如果要指定章节号时使用）。💡 如果要指定「标题 1」，则 nHeadingLvl === 0，以此类推。 |
+| nHeadingLvl | 可选 | Number |  | 标题级别（在要指定章节编号时使用）。 |
 | sCaptionSep | 可选 | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | 题注分隔符（如果要指定章节号时使用）。 |
 
 ## 返回值
@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-在文档中在段落后添加题注段落。
+在文档中图像段落下方插入题注。
 
 ```javascript editor-docx
-// How to add caption to the paragraph in a document.
+// How do I label a figure with a numbered caption in a document?
 
-// Add a caption to the text specifying its properties in a document.
+// Automatically number an inserted image using a formatted figure caption in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中表单元素的标签。
+读取文档中附加到表单字段的标签。
 
 ```javascript editor-forms
-// How to get the tag for a form base?
+// How do I get the tag of a form field in a document?
 
-// Get the tag and display the result in a document.
+// Label a form with a custom tag, then retrieve it to confirm it was stored correctly.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -26,12 +26,12 @@ expression.CreateOleObject(imageSrc, width, height, data, appId);
 
 ## 示例
 
-创建 OLE 对象并将其插入文档。
+将带有预览图像的外部对象嵌入到文档中。
 
 ```javascript editor-docx
-// Create the OLE object object and add it to the first paragraph of the document.
+// How do I insert an embedded application object into a paragraph in a document?
 
-// How to create an Ole object using the specified image source, width, height, Ole data, application ID and insert it into the paragraph class in a document.
+// Link a third-party data source to a visual placeholder and place it inside a paragraph in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

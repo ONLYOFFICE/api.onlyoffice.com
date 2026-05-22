@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在 PDF 文档中设置以磅的二十分之一为单位的文本间距。
+调整 PDF 中文本字符之间的间距。
 
 ```javascript editor-pdf
-// How to resize spacing between words in a text run in a PDF document.
+// What is the way to modify character spacing in text in a PDF?
 
-// Create a new text run and set its spacing size (point * 20) in a PDF document.
+// Control the distance between letters in your text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

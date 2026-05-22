@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将厘米转换为磅。
+在文档中显示厘米值对应的磅值。
 
 ```javascript editor-docx
-// How to convert centimeters to points in a document?
+// How do I convert a measurement from centimeters to points in a document?
 
-// Convert centimeters to points using the document API.
+// Insert the result of a centimeters-to-points conversion as text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

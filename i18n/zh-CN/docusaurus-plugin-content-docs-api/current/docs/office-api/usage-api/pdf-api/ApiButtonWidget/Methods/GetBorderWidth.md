@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取并显示 PDF 文档中字段控件的边框宽度。
+读取 PDF 中表单字段控件的边框宽度。
 
 ```javascript editor-pdf
-// How to get the border width for a widget in a PDF document?
+// How do I get the border width of a widget in a PDF?
 
-// Get the border width and display the result in a PDF document.
+// Retrieve the outline thickness of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -25,12 +25,12 @@ object
 
 ## 示例
 
-获取以对象形式表示的文档统计信息。
+将文档统计信息作为结构化对象检索。
 
 ```javascript editor-docx
-// How to get the document statistics showing pages count, words count, etc.
+// How do I read page count, word count, and paragraph count in a document?
 
-// Display words, pages, symbols, paragraphs count of the document.
+// Check how many pages, words, symbols, and paragraphs a finished document contains.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

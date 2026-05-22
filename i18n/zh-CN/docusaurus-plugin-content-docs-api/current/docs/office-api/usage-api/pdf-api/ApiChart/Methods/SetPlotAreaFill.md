@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为绘图区域设置背景颜色。
+更改 PDF 中图表数据区域的背景颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its plot area color in a PDF document.
+// How do I set a background color for the chart area in a PDF?
 
-// Use chart to set plot area fill in a PDF document.
+// Apply a fill color to the region where data is displayed in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

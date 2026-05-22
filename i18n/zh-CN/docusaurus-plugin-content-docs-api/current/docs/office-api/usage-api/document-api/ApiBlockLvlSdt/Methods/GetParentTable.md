@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含当前内容控件的表格。
+查找文档中包含内容控件的表格。
 
 ```javascript editor-docx
-// How can I get the parent table using a block-level content control in a document?
+// How do I access the table that holds a content control in a document?
 
-// Get the parent table for a block-level content control in a document.
+// Place a content control inside a table cell and then remove a row from that table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

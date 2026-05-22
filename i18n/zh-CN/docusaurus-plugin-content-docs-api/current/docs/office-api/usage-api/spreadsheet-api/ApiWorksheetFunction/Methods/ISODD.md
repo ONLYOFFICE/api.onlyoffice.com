@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中如果数字为奇数则返回 true。
+检查电子表格中的数字是否为奇数。
 
 ```javascript editor-xlsx
-// How to check if the number is odd in a spreadsheet.
+// How do I determine whether a number is odd or even in a spreadsheet?
 
-// Use a function to check whether a number is odd or not in a spreadsheet.
+// Use a function to filter odd numbers from a set of values in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

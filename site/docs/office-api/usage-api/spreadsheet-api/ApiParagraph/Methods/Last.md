@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the last non-empty element of a paragraph inside a shape in a spreadsheet.
+Retrieve the last text run from a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I last using a paragraph in a spreadsheet?
+// How do I read the content of the final element in a paragraph in a spreadsheet?
 
-// Last for a paragraph in a spreadsheet.
+// Identify which run appears at the end of a paragraph to inspect its text in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(140, 100, 120));

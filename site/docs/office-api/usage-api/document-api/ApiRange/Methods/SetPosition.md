@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## Example
 
-Specify the amount by which text is raised or lowered for the Range in relation to the default baseline of the surrounding non-positioned text in a document.
+Raise or lower selected text relative to the surrounding baseline in a document.
 
 ```javascript editor-docx
-// How to set an inline position of a range text in a document.
+// How do I shift a portion of text up or down without changing its size in a document?
 
-// Get a range text, specify its position to move down or up in a document.
+// Adjust the vertical offset of highlighted words to create superscript or subscript effects in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set rect diff to circle annotation in a PDF document.
+Adjust the border width difference of a circle annotation in a PDF.
 
 ```javascript editor-pdf
-// How can I set rect diff using a circle annotation in a PDF document?
+// How do I control the border thickness offset for a circle annotation in a PDF?
 
-// Set rect diff for a circle annotation in a PDF document.
+// Apply rect difference values to a circle annotation in a PDF.
 
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);

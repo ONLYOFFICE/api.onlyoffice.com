@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的描述（使用核心属性）。
+读取电子表格工作簿属性中存储的描述。
 
 ```javascript editor-xlsx
-// How do I get the description in a spreadsheet?
+// How do I retrieve the text description of a workbook in a spreadsheet?
 
-// Get the description using a core properties object in a spreadsheet.
+// Extract and display the summary text saved with the workbook in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

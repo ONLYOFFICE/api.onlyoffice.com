@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a name to the current layout in a presentation.
+Assign a custom name to a layout in a presentation.
 
 ```javascript editor-pptx
-// How to set name for a layout in a presentation.
+// How do I rename a layout in a presentation?
 
-// Rename a slide layout using the layout API in a presentation.
+// Assign a new name to a layout and verify it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

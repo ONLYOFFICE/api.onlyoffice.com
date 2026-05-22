@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get the rotation angle of the drawing in a document.
+Read the rotation angle of a drawing object in a document.
 
 ```javascript editor-docx
-// How do I get the rotation in a document?
+// How do I get the rotation angle of a shape in a document?
 
-// Get the rotation using a drawing object object in a document.
+// Display the current tilt of a drawing as text inside the shape itself in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

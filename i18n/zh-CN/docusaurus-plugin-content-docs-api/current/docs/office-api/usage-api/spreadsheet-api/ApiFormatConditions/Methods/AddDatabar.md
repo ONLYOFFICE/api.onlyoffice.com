@@ -20,12 +20,12 @@ expression.AddDatabar();
 
 ## 示例
 
-向范围添加数据条条件格式。
+在电子表格中显示按比例表示范围内每个值的单元格内进度条。
 
 ```javascript editor-xlsx
-// How to add data bar conditional formatting rules to visualize cell values with bars.
+// How do I add visual bars inside cells to compare numbers without creating a separate chart in a spreadsheet?
 
-// Add data bar conditional formatting to cells.
+// Turn a column of numbers into an instant bar-chart view using built-in cell formatting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

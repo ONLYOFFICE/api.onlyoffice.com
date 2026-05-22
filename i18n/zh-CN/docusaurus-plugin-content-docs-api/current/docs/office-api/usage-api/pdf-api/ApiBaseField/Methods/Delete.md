@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从文档中移除字段。
+从 PDF 移除表单字段。
 
 ```javascript editor-pdf
-// How to delete for a base field in a PDF document?
+// How do I delete a form field from a PDF?
 
-// Delete and display the result in a PDF document.
+// Remove a field and all its associated widgets from a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

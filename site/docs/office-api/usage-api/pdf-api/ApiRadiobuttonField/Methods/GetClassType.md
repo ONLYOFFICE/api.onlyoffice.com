@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a radio button field in a PDF document.
+Identify what type of object a radio button field is in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a radio button field object is in a PDF document?
+// How do I determine the object type of a radio button field in a PDF?
 
-// Retrieve and output the class type string for a radio button field in a PDF document.
+// Find the classification name for a radio button field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

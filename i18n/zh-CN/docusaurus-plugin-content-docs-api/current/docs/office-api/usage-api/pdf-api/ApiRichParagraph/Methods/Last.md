@@ -20,12 +20,12 @@ expression.Last();
 
 ## 示例
 
-获取 PDF 文档中富文本段落的最后一个元素。
+从 PDF 中的段落获取最后一个元素。
 
 ```javascript editor-pdf
-// How to last for a rich paragraph in a PDF document?
+// How do I access the last element in a paragraph in a PDF?
 
-// Last and display the result in a PDF document.
+// Obtain the bottom-most item from a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

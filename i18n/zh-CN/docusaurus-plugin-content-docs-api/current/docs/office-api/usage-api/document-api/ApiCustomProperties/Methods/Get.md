@@ -22,12 +22,12 @@ string \| number \| Date \| boolean \| null
 
 ## 示例
 
-通过名称获取文档中自定义属性的值。
+按名称从文档中检索自定义属性的值。
 
 ```javascript editor-docx
-// Return null for properties that do not exist.
+// How do I read a custom metadata field stored in a document?
 
-// Get for a custom properties in a document.
+// Access existing custom properties and confirm that missing ones return null in a document.
 
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();

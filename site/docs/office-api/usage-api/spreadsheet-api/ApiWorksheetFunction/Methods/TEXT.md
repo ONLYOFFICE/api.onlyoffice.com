@@ -26,9 +26,9 @@ string
 Convert a value to text in a specific number format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert a value to text in a spreadsheet.
+// Format the number as a currency string with two decimal places.
 
-// Use a function to convert a value to text in a spreadsheet.
+// Apply the TEXT function with value and format code parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

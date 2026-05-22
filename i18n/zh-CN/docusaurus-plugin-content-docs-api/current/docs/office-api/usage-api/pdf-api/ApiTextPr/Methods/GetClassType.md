@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中文本属性对象的类类型。
+识别 PDF 中文本格式设置的对象类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a text properties in a PDF document?
+// How do I determine what kind of formatting object I'm working with in a PDF?
 
-// Get the class type of a text properties and display it in the PDF.
+// Retrieve the classification information for text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

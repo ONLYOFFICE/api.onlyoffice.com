@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表标题的轮廓。
+在文档中为图表标题区域绘制边框轮廓。
 
 ```javascript editor-docx
-// How to outline a chart title in a document.
+// How do I add a visible border to the chart title box in a document?
 
-// Create a chart, set its properties and its title outline in a document.
+// Frame a chart title with a stroke to separate it visually from the rest of the chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

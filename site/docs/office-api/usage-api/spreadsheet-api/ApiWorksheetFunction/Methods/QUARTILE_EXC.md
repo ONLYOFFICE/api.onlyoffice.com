@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return the quartile of a data set, based on percentile values from 0..1, exclusive in a spreadsheet.
+Find the quartile using exclusive percentile calculation in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the exclusive quartile of a data set in a spreadsheet.
+// What is the quartile boundary excluding the minimum and maximum values in a spreadsheet?
 
-// Use a function to calculate an exclusive fourth part of a data set in a spreadsheet.
+// Calculate quartile position based on percentiles from 0 to 1 in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

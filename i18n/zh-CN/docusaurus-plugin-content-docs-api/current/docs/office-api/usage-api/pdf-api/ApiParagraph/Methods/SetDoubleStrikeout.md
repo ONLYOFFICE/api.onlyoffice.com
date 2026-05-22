@@ -22,12 +22,12 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## 示例
 
-对段落文本应用双删除线格式。
+在 PDF 中为段落文本应用双删除线。
 
 ```javascript editor-pdf
-// How to set double strikeout for a paragraph in a PDF document?
+// How do I cross out text with two lines in a paragraph in a PDF?
 
-// Set double strikeout and display the result in a PDF document.
+// Strike through text with a double line in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

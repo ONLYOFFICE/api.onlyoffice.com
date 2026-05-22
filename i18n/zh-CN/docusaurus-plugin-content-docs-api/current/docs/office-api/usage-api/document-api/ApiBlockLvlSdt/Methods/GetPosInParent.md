@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中内容控件在其父元素中的位置。
+查找文档中内容控件在同级元素中的位置。
 
 ```javascript editor-docx
-// Create a block content control, add it to the current document, and return its position in the document.
+// How do I get the index position of a content control within its parent in a document?
 
-// Specify the position of the block container within the parent document.
+// Insert a content control and use its position to retrieve and update it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

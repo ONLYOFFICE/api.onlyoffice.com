@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-使用电子表格中指定的位置获取段落元素。
+按位置访问电子表格中段落内的特定文本运行。
 
 ```javascript editor-xlsx
-// How to get an element of a paragraph using its index in a spreadsheet.
+// How do I pick out one piece of a paragraph to change its style in a spreadsheet?
 
-// Find a paragraph element using its index and change its properties in a spreadsheet.
+// Bold the third text run in a paragraph by targeting it through its index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

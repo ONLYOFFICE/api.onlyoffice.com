@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中文本的突出显示属性。
+读取文档中应用于文本运行的高亮颜色。
 
 ```javascript editor-docx
-// How to know the highlight type of the form.
+// How do I find out what highlight color is set on a piece of text in a document?
 
-// Retrieve text properties of the form to find out its highlight type.
+// Inspect a text run to confirm which background highlight is active in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

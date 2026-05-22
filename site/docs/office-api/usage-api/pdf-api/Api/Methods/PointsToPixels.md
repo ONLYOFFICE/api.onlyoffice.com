@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert points to pixels in a PDF document.
+Convert points to pixels in a PDF.
 
 ```javascript editor-pdf
-// How can I convert points to pixels in a PDF document?
+// How can I change points to pixels in a PDF?
 
-// Convert points to pixels in a PDF document.
+// Display the pixel equivalent of a point measurement in a PDF.
 
 const points = 1000;
 const pixels = Api.PointsToPixels(points);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a text color property in a spreadsheet.
+Read the color fill applied to text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text color type in a spreadsheet.
+// How do I find out what color fill is used for text in a spreadsheet?
 
-// Get a text solid color fill in a spreadsheet.
+// Inspect the fill type assigned to a text style and display it inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

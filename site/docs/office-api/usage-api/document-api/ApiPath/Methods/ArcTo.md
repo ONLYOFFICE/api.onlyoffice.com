@@ -25,12 +25,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a complex curve using cubic bezier, quadratic bezier and arc commands. Demonstrates different types of curve drawing methods in a document.
+Draw an arc segment along a custom shape path to create curved geometry in a document.
 
 ```javascript editor-docx
-// How do I arc to in a document?
+// How do I add a curved arc portion to a shape's outline path in a document?
 
-// Arc to using a geometry path object in a document.
+// Extend a shape's boundary with a smooth elliptical arc connecting two points in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为多边形注释设置顶点。
+更改 PDF 中多边形标记的角点。
 
 ```javascript editor-pdf
-// How can I set vertices using a polygon annotation in a PDF document?
+// How do I update the corner points of a polygon marking in a PDF?
 
-// Set vertices for a polygon annotation in a PDF document.
+// Modify the coordinates that define a polygon marking in a PDF.
 
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];

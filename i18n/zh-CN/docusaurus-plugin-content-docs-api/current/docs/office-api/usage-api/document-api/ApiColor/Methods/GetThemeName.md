@@ -20,12 +20,12 @@ expression.GetThemeName();
 
 ## 示例
 
-获取文档中颜色对象的主题颜色名称。
+从文档中的颜色对象检索主题颜色名称。
 
 ```javascript editor-docx
-// The color object can be created from a hex value or a theme color.
+// How do I find out which theme slot a color belongs to in a document?
 
-// Get the theme name using a color object in a document.
+// Distinguish between a color defined by a hex value and one tied to a named theme slot in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

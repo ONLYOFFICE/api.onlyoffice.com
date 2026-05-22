@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-为演示文稿创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
+定义演示文稿中自定义形状的文本边界框。
 
 ```javascript editor-pptx
-// How to set text rect for a geometry in a presentation?
+// How do I set where text appears inside a custom shape in a presentation?
 
-// Set text rect and display the result in a presentation.
+// Specify the drawing area where text will render in a custom geometry in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

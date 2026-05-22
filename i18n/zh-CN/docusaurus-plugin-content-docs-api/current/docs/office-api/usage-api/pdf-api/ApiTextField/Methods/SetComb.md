@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中添加文本字段并设置梳状属性。
+在 PDF 文本字段中以单独的单元格显示文本输入。
 
 ```javascript editor-pdf
-// How can I set comb using a text field in a PDF document?
+// How do I spread out characters into separate boxes in a PDF?
 
-// Set comb for a text field in a PDF document.
+// Enable spaced character input for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

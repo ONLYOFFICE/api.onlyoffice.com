@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Analyzes cloud shape path properties on a slide. Displays comprehensive path information in a text shape.
+Retrieve the stroke settings of a custom shape's outline in a presentation.
 
 ```javascript editor-pptx
-// How can I get the stroke using a geometry path in a presentation?
+// What outline properties are set on a shape path in a presentation?
 
-// Get the stroke for a geometry path in a presentation.
+// Display the stroke status and properties of a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

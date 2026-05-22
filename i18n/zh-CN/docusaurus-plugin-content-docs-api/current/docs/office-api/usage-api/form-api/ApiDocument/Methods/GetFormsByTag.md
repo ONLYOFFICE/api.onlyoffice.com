@@ -22,12 +22,12 @@ expression.GetFormsByTag(sTag);
 
 ## 示例
 
-获取文档中具有指定标签名称的所有表单列表。
+检索文档中共享给定标签名称的所有表单。
 
 ```javascript editor-forms
-// How to get all forms with a specific tag.
+// How do I look up forms by their tag in a document?
 
-// Update the forms knowing their tag (add text or list values).
+// Populate related form fields at once by targeting them through a shared tag in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "FirstName", "tip": "Enter your first name", "tag": "form_1", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

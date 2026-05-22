@@ -6,12 +6,12 @@
 
 ## 示例
 
-删除文档中的复选框表单。
+从文档中删除表单字段。
 
 ```javascript editor-docx
-// How can I delete using a form base in a document?
+// How do I delete a form field in a document?
 
-// Delete for a form base in a document.
+// Clean up a document by removing one of several inserted checkbox forms.
 
 const doc = Api.GetDocument();
 const checkBoxForm = Api.CreateCheckBoxForm({

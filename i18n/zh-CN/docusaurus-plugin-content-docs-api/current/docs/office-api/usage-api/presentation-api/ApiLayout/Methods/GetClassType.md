@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中版式对象的类类型。
+获取演示文稿中布局对象的类类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a layout in a presentation?
+// The class type identifies the type of the object in the API.
 
-// Get the class type of a layout and display it in the presentation.
+// Display the class type of the layout.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

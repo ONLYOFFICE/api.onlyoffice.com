@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the document object for further use.
+Access the document object to modify pages in a PDF.
 
 ```javascript editor-pdf
-// How to get the document in a PDF document?
+// How do I access the main document object in a PDF?
 
-// Get the document using the PDF document API.
+// Retrieve the document, add a new page, and rotate it in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.AddPage(1);

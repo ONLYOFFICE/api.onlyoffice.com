@@ -23,12 +23,12 @@ expression.AddColumns(nCount, isBefore);
 
 ## Example
 
-Add the new columns to the table in a document.
+Insert additional columns next to an existing cell in a table in a document.
 
 ```javascript editor-docx
-// Insert new columns after the current cell.
+// How do I add more columns beside a specific cell in a table in a document?
 
-// Get the cell, add the text to it and add columns after it.
+// Expand a table horizontally by appending columns after a chosen cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

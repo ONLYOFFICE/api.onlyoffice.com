@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Show hpw to get the lock type of the container in a document.
+Read the lock type applied to an inline content control in a document.
 
 ```javascript editor-docx
-// How to display the lock of the inline text control in the document.
+// How do I check the lock setting of an inline content control in a document?
 
-// Set the lock type of the inline text element and print it in a document.
+// Confirm a content lock by setting it on an inline control and printing the result in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

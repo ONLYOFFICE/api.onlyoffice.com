@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的主题。
+设置和检索演示文稿的主题或标题字段。
 
 ```javascript editor-pptx
-// How do I get the subject in a presentation?
+// How do I access the subject information in a presentation?
 
-// Get the subject using a core properties object in a presentation.
+// Display the subject metadata stored in a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

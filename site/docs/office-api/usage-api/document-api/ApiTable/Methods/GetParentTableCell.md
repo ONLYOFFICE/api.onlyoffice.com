@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a table cell that contains the table in a document.
+Access the cell that directly contains a nested table in a document.
 
 ```javascript editor-docx
-// How to get the parent table cell.
+// How do I find the cell that holds a nested table in a document?
 
-// Retrieve the parent table cell, apply the shading to it.
+// Locate the surrounding cell so its appearance can be adjusted in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

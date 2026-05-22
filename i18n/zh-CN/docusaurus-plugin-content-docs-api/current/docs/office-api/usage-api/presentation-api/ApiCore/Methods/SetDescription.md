@@ -22,12 +22,12 @@ expression.SetDescription(sDescription);
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取当前演示文稿的描述。
+设置和检索演示文稿的描述。
 
 ```javascript editor-pptx
-// How do I set description in a presentation?
+// How do I set the description of a presentation in a presentation?
 
-// Set description using a core properties object in a presentation.
+// Retrieve and display the description as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

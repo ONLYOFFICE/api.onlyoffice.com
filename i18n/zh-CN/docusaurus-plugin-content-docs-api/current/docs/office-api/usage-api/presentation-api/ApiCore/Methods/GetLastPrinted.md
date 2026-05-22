@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的最后打印日期。
+设置和检查演示文稿的最后打印时间。
 
 ```javascript editor-pptx
-// How can I get last printed using a core properties in a presentation?
+// How do I find the date a presentation was printed?
 
-// Get last printed for a core properties in a presentation.
+// Read the timestamp of the most recent print event in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

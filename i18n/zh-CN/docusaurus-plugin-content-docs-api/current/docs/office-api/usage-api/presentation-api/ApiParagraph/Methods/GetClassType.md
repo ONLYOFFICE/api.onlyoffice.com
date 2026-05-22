@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查演示文稿中段落返回的类类型。
+识别演示文稿中段落的类类型。
 
 ```javascript editor-pptx
-// How do I check what type a paragraph object is in a presentation?
+// How do I determine the class type of a paragraph in a presentation?
 
-// Retrieve and output the class type string for a paragraph in a presentation.
+// Retrieve and display the class type information for a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

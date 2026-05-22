@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中当前文档的主题。
+从文档核心属性读取主题字段。
 
 ```javascript editor-docx
-// How to get the subject for a core properties in a document?
+// How do I retrieve the subject stored in a document's metadata in a document?
 
-// Get the subject and display the result in a document.
+// Verify that a subject was recorded correctly by printing its value into the document body in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

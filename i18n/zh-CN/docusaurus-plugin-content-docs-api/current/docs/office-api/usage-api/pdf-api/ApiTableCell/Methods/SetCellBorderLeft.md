@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格左边框及其填充颜色。
+在 PDF 中为表格单元格添加左边框。
 
 ```javascript editor-pdf
-// Create table and set its cell left border.
+// How do I create a border on the left edge of a cell in a PDF?
 
-// Use table cell to set cell border left.
+// Draw a styled line along the left side of a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中设置图表的主要水平网格线。
+更改 PDF 中图表水平网格线的样式。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its major gridlines in a PDF document.
+// How do I format the horizontal grid lines in a chart in a PDF?
 
-// Use chart to set major horizontal gridlines in a PDF document.
+// Add a custom border to the horizontal reference lines in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

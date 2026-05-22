@@ -22,12 +22,12 @@ expression.ExpandTo(oRange);
 
 ## 示例
 
-在文档中返回一个超出指定范围并在任意方向上跨越不同范围的新范围。
+扩展文本选区以覆盖文档中更广泛的内容范围。
 
 ```javascript editor-docx
-// How to expand the first range to the second one in a document.
+// How do I extend one text selection so it also includes another passage in a document?
 
-// Create a range and make it cover a different area in a document.
+// Widen an existing selection to bridge two separate areas of text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

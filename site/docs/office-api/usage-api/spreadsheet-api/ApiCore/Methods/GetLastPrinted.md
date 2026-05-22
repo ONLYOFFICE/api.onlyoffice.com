@@ -20,12 +20,12 @@ Date
 
 ## Example
 
-Get the date when the current workbook was printed last time in a spreadsheet.
+Retrieve the date the workbook was most recently sent to a printer in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get last printed for a core properties in a spreadsheet?
+// How do I check when a workbook was last printed in a spreadsheet?
 
-// Get last printed and display the result in a spreadsheet.
+// Confirm the last print date stored in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

@@ -20,12 +20,12 @@ expression.GetTableRowPr();
 
 ## 示例
 
-获取将应用于表格中与条件格式类型匹配的所有行的表格行属性集。
+访问文档中与条件表格样式关联的行格式。
 
 ```javascript editor-docx
-// How to get table properties and set its height in a document.
+// How do I read and adjust row settings for a conditional style region in a document?
 
-// Update the table row properties by setting its style in a document.
+// Set the height of rows matched by a table style condition in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

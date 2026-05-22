@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Get the hypergeometric distribution in a spreadsheet.
+Calculate the hypergeometric distribution probability in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a result from a hypergeometric distribution in a spreadsheet.
+// How do I find the probability using a hypergeometric distribution in a spreadsheet?
 
-// Use a function to get the result of hypergeometric distribution in a spreadsheet.
+// Return the hypergeometric distribution value for a statistical analysis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

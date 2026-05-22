@@ -16,16 +16,16 @@ expression.GetSelectedDrawings();
 
 ## 返回值
 
-[ApiShape](../../ApiShape/ApiShape.md)[] \| [ApiImage](../../ApiImage/ApiImage.md)[] \| [ApiChart](../../ApiChart/ApiChart.md)[] \| [ApiDrawing](../../ApiDrawing/ApiDrawing.md)[]
+[Drawing](../../Enumeration/Drawing.md)[]
 
 ## 示例
 
-获取文档中当前文档内所有选中的绘图对象。
+检索文档中当前选定的所有绘图。
 
 ```javascript editor-docx
-// How to get the drawing selected on the document.
+// How do I get a reference to the selected drawings in a document?
 
-// Select a drawing and make it bigger in a document.
+// Resize a shape after selecting it by accessing it through the selected drawings collection in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

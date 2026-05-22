@@ -25,9 +25,9 @@ number
 在电子表格中返回引用中的工作表数。
 
 ```javascript editor-xlsx
-// The SHEETS function counts all sheets in the current workbook.
+// Count all sheets in the current workbook using the SHEETS function.
 
-// Add additional sheets and return their total count.
+// Add additional sheets and retrieve their total count in a cell.
 
 Api.AddSheet("Sheet2")
 Api.AddSheet("Sheet3")

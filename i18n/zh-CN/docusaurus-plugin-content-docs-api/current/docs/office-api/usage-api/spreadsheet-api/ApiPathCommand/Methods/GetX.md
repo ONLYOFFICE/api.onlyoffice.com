@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析星形的路径命令并显示命令详细信息。在单元格中显示命令总数和第一个命令信息。
+读取路径命令端点的水平位置并在电子表格中显示。
 
 ```javascript editor-xlsx
-// How can I get the x using a path command in a spreadsheet?
+// How do I find the X coordinate of a drawing command on a shape in a spreadsheet?
 
-// Get the x for a path command in a spreadsheet.
+// Confirm where a path step lands horizontally within a shape's drawing area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

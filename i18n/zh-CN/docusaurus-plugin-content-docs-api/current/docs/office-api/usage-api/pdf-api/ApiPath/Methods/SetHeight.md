@@ -22,12 +22,12 @@ expression.SetHeight(nHeight);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。应用具有特定填充和笔触属性的自定义几何图形。
+设置 PDF 中形状路径的垂直大小。
 
 ```javascript editor-pdf
-// How can I set height using a geometry path in a PDF document?
+// What is the height of my custom shape in a PDF?
 
-// Set height for a geometry path in a PDF document.
+// Define the tall dimension of a drawn path in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

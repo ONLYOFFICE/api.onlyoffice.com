@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-在文档中使用指定的字体系列设置所有 4 个字体槽。
+在文档中为文本范围应用特定字体。
 
 ```javascript editor-docx
-// How to change the text font family in a document.
+// How do I change the font used for a portion of text in a document?
 
-// Create a text run object and set the "Comic Sans MS" font faminy to it in a document.
+// Switch the appearance of selected words by assigning them a different typeface in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

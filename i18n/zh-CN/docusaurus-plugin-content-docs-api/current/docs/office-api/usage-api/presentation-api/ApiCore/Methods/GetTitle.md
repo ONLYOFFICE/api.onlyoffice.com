@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的标题。
+设置和检索演示文稿的标题。
 
 ```javascript editor-pptx
-// How can I get the title using a core properties in a presentation?
+// How do I get the title of a presentation in a presentation?
 
-// Get the title for a core properties in a presentation.
+// Retrieve and display the title as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

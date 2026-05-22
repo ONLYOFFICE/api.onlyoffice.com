@@ -20,12 +20,12 @@ expression.GetColumnsSpaces();
 
 ## 示例
 
-指定文档中当前节的所有列具有不同的宽度。
+读取文档中节中列之间的间距大小。
 
 ```javascript editor-docx
-// How do I get the columns spaces in a document?
+// How do I find out the spacing between each column in a document?
 
-// Get the columns spaces using a section object in a document.
+// Retrieve the distances separating adjacent columns from a multi-column layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

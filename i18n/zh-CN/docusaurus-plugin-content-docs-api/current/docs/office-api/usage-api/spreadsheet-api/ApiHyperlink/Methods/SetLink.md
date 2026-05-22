@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为形状内的超链接设置新 URL。
+更改电子表格中现有超链接的目标 URL。
 
 ```javascript editor-xlsx
-// How can I set link using a hyperlink in a spreadsheet?
+// How do I update the address a hyperlink points to in a spreadsheet?
 
-// Set link for a hyperlink in a spreadsheet.
+// Replace the web address on a hyperlink so it navigates to a new location in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

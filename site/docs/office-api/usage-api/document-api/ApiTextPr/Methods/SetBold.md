@@ -22,12 +22,12 @@ expression.SetBold(isBold);
 
 ## Example
 
-Set the bold property to the text character in a document.
+Apply bold formatting to the default text characters in a document.
 
 ```javascript editor-docx
-// How to make a text bold in a document.
+// How do I make text appear heavier and bolder throughout a document?
 
-// Get a font object of characters and make it bold in a document.
+// Change the weight of the default font so that all text renders with a bold appearance in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

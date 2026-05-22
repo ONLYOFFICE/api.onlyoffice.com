@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中计算数据库中与指定条件匹配的记录字段（列）中包含数字的单元格数。
+计算电子表格中满足条件的数据库列中的数值。
 
 ```javascript editor-xlsx
-// How to count the cells containing numbers in the field (column) of records in the database that match the conditions you specify.
+// How many numeric entries satisfy the conditions you set in a spreadsheet?
 
-// Use function to count numbers from database records that met a condition specified in a spreadsheet.
+// Find how many records match your filter and contain numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

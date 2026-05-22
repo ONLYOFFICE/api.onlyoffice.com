@@ -20,12 +20,12 @@ expression.GetColorScheme();
 
 ## 示例
 
-获取演示文稿中主题的配色方案。
+从演示文稿中的主题获取配色方案。
 
 ```javascript editor-pptx
-// How to get a color scheme of presentation master's theme.
+// How do I access the colors defined in a presentation's theme?
 
-// Get a theme color scheme and change its colors in a presentation.
+// Retrieve the theme's color scheme and modify its colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

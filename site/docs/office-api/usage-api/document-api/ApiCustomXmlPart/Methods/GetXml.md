@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the XML string representation of a custom XML part in a document.
+Read the full XML content of a custom XML part as a string in a document.
 
 ```javascript editor-docx
-// How to get the xml for a custom XML part in a document?
+// How do I export or inspect the raw XML of a custom XML part in a document?
 
-// Get the xml and display the result in a document.
+// Serialize the entire XML structure to display or process its contents in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

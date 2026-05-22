@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the scope type of a conditional formatting rule.
+Define which portion of a table a formatting rule should apply to in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the scope type of conditional formatting rules.
+// How do I limit a conditional formatting rule to only certain columns or data fields in a spreadsheet?
 
-// Set conditional formatting rule scope type.
+// Narrow or expand the reach of a highlight rule across table sections in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

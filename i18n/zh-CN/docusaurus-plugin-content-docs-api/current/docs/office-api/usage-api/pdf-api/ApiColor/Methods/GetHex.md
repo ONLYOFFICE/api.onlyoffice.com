@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取 PDF 文档中颜色的 RGB 分量。
+获取 PDF 中的十六进制颜色值。
 
 ```javascript editor-pdf
-// How to get the hex for a color in a PDF document?
+// How do I convert a color to hex format in a PDF?
 
-// Get the hex and display the result in a PDF document.
+// Retrieve the hex code and display it as text in the PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

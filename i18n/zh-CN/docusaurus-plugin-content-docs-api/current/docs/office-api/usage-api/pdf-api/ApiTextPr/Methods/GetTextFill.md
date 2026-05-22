@@ -20,12 +20,12 @@ expression.GetTextFill();
 
 ## 示例
 
-获取 PDF 文档中文本的颜色。
+获取 PDF 中应用于文本的颜色或填充效果。
 
 ```javascript editor-pdf
-// How to know a color fill of a text in a PDF document.
+// How do I check what color the text uses in a PDF?
 
-// Get the text properties of the run and display its font color in a PDF document.
+// Retrieve the fill properties assigned to text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

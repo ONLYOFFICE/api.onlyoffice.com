@@ -22,12 +22,12 @@ expression.GetElement(pos);
 
 ## 示例
 
-获取 PDF 文档中富文本内容的第一个元素。
+按位置访问 PDF 中格式化文本中的特定段落。
 
 ```javascript editor-pdf
-// How can I get the element using a rich content in a PDF document?
+// How do I get a particular text element from rich content in a PDF?
 
-// Get the element for a rich content in a PDF document.
+// Retrieve a single paragraph from a list of formatted text in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

@@ -21,12 +21,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取将应用于编号级别本身文本的文本属性，而非文档中后续段落的文本。
+在文档中为列表级别的编号标签应用文本格式。
 
 ```javascript editor-docx
-// How to retrieve the text properties of the numbering in a document.
+// How do I change the font and size of a list level's numbering label in a document?
 
-// Update text properties of the numbering in a document.
+// Style the numbering marker itself with bold and a custom typeface without affecting the paragraph text in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

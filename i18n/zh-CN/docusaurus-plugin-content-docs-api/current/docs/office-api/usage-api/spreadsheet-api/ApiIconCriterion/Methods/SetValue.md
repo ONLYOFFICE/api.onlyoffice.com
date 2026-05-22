@@ -22,12 +22,12 @@ expression.SetValue(value);
 
 ## 示例
 
-在电子表格中设置图标条件的值。
+为电子表格中的图标条件分配阈值。
 
 ```javascript editor-xlsx
-// How to modify the threshold value for an icon set criterion in a spreadsheet.
+// How do I change the cutoff number that determines which icon a cell displays in a spreadsheet?
 
-// Set the value used for criterion threshold comparison in a spreadsheet.
+// Update the boundary value for one of the icon set thresholds so cells are colored differently in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中表单的文本。
+从文档中的表单字段检索输入的文本。
 
 ```javascript editor-forms
-// How to get a raw text of a text form.
+// How do I read the current value typed into a form in a document?
 
-// Display the answer of the form as a raw text.
+// Extract the raw content of a filled-in text field to use or display elsewhere in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

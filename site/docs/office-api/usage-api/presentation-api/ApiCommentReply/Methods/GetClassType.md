@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a comment reply in a presentation.
+Identify the class type of a comment reply in a presentation.
 
 ```javascript editor-pptx
-// How do I check what type a comment reply object is in a presentation?
+// How do I determine what type a comment reply object is in a presentation?
 
-// Retrieve and output the class type string for a comment reply in a presentation.
+// Display the class type of a reply to a comment in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

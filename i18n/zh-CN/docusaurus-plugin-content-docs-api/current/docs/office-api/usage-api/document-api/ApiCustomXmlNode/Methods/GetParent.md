@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取自定义 XML 节点的父节点并在文档中显示其值。
+导航到文档中自定义 XML 节点的父节点。
 
 ```javascript editor-docx
-// How do I get the parent in a document?
+// How do I get the parent node of a custom XML node in a document?
 
-// Get the parent using a custom XML node object in a document.
+// Move up the XML tree from a child element to find its containing node in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

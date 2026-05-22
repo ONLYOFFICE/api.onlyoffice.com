@@ -21,6 +21,7 @@ ApiPolyLineAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/
 | [GetDisplay](./Methods/GetDisplay.md) | [DisplayType](../Enumeration/DisplayType.md) | Gets annotation display type. |
 | [GetEndStyle](./Methods/GetEndStyle.md) | [LineEndStyle](../Enumeration/LineEndStyle.md) | Gets a line end style. |
 | [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets annotation fill color. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current annotation. |
 | [GetModDate](./Methods/GetModDate.md) | number | Gets annotation last modification date. |
 | [GetOpacity](./Methods/GetOpacity.md) | string | Gets annotation opacity. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets annotation position. |
@@ -32,13 +33,13 @@ ApiPolyLineAnnotation is a subclass of [ApiBaseAnnotation](../ApiBaseAnnotation/
 | [GetVertices](./Methods/GetVertices.md) | [Path](../Enumeration/Path.md) | Gets ink path list. |
 | [SetAuthorName](./Methods/SetAuthorName.md) | boolean | Sets annotation author name. |
 | [SetBorderColor](./Methods/SetBorderColor.md) | boolean | Sets annotation border color. |
-| [SetBorderEffectIntensity](./Methods/SetBorderEffectIntensity.md) | boolean | Sets annotation border effect intensity. 💡  Can be applied to circle, square, freeText and polygon annotations  |
-| [SetBorderEffectStyle](./Methods/SetBorderEffectStyle.md) | boolean | Sets annotation border effect style. 💡  Can be applied to circle, square, freeText and polygon annotations  |
+| [SetBorderEffectIntensity](./Methods/SetBorderEffectIntensity.md) | boolean | Sets annotation border effect intensity. |
+| [SetBorderEffectStyle](./Methods/SetBorderEffectStyle.md) | boolean | Sets annotation border effect style. |
 | [SetBorderStyle](./Methods/SetBorderStyle.md) | boolean | Sets annotation border style. |
 | [SetBorderWidth](./Methods/SetBorderWidth.md) | boolean | Sets annotation border width. |
 | [SetContents](./Methods/SetContents.md) | boolean | Sets annotation contents. |
 | [SetCreationDate](./Methods/SetCreationDate.md) | boolean | Sets annotation creation date. |
-| [SetDashPattern](./Methods/SetDashPattern.md) | boolean | Sets annotation dash pattern. 💡  The border style property must be set to "dashed".  |
+| [SetDashPattern](./Methods/SetDashPattern.md) | boolean | Sets annotation dash pattern. |
 | [SetDisplay](./Methods/SetDisplay.md) | boolean | Sets annotation display type. |
 | [SetEndStyle](./Methods/SetEndStyle.md) | boolean | Sets a line end style. |
 | [SetFillColor](./Methods/SetFillColor.md) | boolean | Sets annotation fill color. |

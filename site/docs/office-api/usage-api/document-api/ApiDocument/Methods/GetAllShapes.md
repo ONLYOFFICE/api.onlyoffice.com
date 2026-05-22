@@ -6,12 +6,12 @@ Inherited from [ApiDocumentContent.GetAllShapes](../../ApiDocumentContent/Method
 
 ## Example
 
-Get a collection of shape objects from the document content in a document.
+Retrieve all shapes embedded in document content in a document.
 
 ```javascript editor-docx
-// Get all shapes added to the document.
+// How do I collect every shape from a content container in a document?
 
-// How to retrieve all shapes and fill with color the second one in a document.
+// Read the class type of the first shape and write it as text at the bottom of the shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

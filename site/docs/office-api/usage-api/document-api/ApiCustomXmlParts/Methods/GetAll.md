@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve all custom XML parts in the document and display them.
+List every custom XML part stored in a document.
 
 ```javascript editor-docx
-// How do I get all in a document?
+// How do I retrieve all custom XML parts at once in a document?
 
-// Get all using a custom XML parts object in a document.
+// Iterate over every embedded XML part to audit or process stored data in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

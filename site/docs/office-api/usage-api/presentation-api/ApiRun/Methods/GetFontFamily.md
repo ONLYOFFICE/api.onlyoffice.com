@@ -7,12 +7,12 @@ Inherited from [ApiTextPr.GetFontFamily](../../ApiTextPr/Methods/GetFontFamily.m
 
 ## Example
 
-Find out a text font family in a presentation.
+Retrieve the font family from text run properties.
 
 ```javascript editor-pptx
-// How to know font name of a text run in a presentation.
+// Create a shape with a text run and set a specific font family.
 
-// Get the text properties of the run and display its font family in a presentation.
+// Get and display the font name used in the text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

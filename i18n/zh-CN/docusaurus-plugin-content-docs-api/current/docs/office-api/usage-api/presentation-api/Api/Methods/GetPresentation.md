@@ -20,12 +20,12 @@ expression.GetPresentation();
 
 ## 示例
 
-获取演示文稿。
+访问当前演示文稿并处理其内容。
 
 ```javascript editor-pptx
-// How to get the presentation object.
+// How can I reference the active presentation in a presentation?
 
-// Retrieve the current presentation object and work with its slides.
+// Get the presentation object and add a chart to a slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -18,16 +18,16 @@ expression.SetNumberFormat(sFormat);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-指定单元格中的数字应作为数字、货币、日期、时间等还是纯文本处理。
+控制电子表格中数字的显示方式——作为货币、日期、百分比或纯文本。
 
 ```javascript editor-xlsx
-// How to set number format of cells.
+// How do I change the way a number looks without changing its value in a spreadsheet?
 
-// Get a range and specify number format of its cells.
+// Apply formatting patterns so the same number renders differently in each cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 30);

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中预设颜色的类类型。
+识别 PDF 中预设颜色是哪种对象类型。
 
 ```javascript editor-pdf
-// How to identify the class type of a preset color in a PDF document?
+// How do I determine the object type of a preset color in a PDF?
 
-// Obtain the class type identifier of a preset color object in a PDF document.
+// Find the classification name for a preset color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

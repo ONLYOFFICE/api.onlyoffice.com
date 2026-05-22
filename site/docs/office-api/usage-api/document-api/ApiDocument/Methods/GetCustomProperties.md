@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Use custom properties to configure custom properties in a document.
+Add and read custom metadata properties of various types in a document.
 
 ```javascript editor-docx
-// How can I get custom properties using a document in a document?
+// How do I store and retrieve custom string, number, date, and boolean properties in a document?
 
-// Get custom properties for a document in a document.
+// Attach structured metadata to a document so it can be read back programmatically in a document.
 
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();

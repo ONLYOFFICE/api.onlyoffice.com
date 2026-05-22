@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## 示例
 
-在演示文稿中为渐变光圈创建 RGB 颜色。
+在演示文稿中使用红、绿、蓝值定义自定义颜色。
 
 ```javascript editor-pptx
-// How to create a RGB color for a gradient stop in a presentation.
+// How do I specify a color using RGB numbers in a presentation?
 
-// Add an RGB color as a stop for a gradient in a presentation.
+// Create a gradient with custom RGB color stops in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

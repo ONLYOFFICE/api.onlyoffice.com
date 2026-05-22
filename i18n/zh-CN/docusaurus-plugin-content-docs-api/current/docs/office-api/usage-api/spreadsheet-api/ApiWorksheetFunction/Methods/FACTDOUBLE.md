@@ -25,9 +25,9 @@ number
 在电子表格中返回数字的双阶乘。
 
 ```javascript editor-xlsx
-// How to calculate a double factorial in a spreadsheet.
+// Calculate the double factorial of a number.
 
-// Use function to calculate the double factorial of a number in a spreadsheet.
+// Apply FACTDOUBLE function to get the double factorial value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

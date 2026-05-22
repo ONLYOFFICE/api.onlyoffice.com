@@ -16,7 +16,7 @@ expression.POISSON_DIST(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of events. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The expected numeric value, a positive number. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative Poisson probability. If it is **false**, the function returns the Poisson probability mass function. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. |
 
 ## Returns
 
@@ -24,12 +24,12 @@ number
 
 ## Example
 
-Calculate the Poisson distribution in a spreadsheet.
+Calculate event probability using the Poisson statistical distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution in a spreadsheet.
+// How do I find the probability of events occurring at a given rate in a spreadsheet?
 
-// Use a function to calculate the Poisson distribution in a spreadsheet.
+// Determine cumulative or individual event probabilities from a Poisson distribution in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -23,12 +23,12 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 
 ## 示例
 
-在文档中创建线性渐变填充，使用所选线性渐变作为绘图对象背景。
+在文档中用平滑的双色渐变填充形状。
 
 ```javascript editor-docx
-// Create the ApiLinearGradientFill object using two gradient stops and apply it to the created shape in a document.
+// How do I apply a linear gradient background to a shape in a document?
 
-// How to create a shape using a linear gradient fill in a document.
+// Style a rectangle with a blended color transition from one shade to another in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

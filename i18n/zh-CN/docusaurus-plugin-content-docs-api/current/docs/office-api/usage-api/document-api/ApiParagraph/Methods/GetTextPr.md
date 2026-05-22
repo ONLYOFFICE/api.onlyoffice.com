@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取文档中的段落文本属性。
+读取文档中段落的文本格式属性。
 
 ```javascript editor-docx
-// How to get text properties of the paragraph object in a document.
+// How do I retrieve the text properties object from a paragraph in a document?
 
-// Get the paragraph text properties and display it in a document.
+// Fetch existing paragraph text properties and extend them with italic formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

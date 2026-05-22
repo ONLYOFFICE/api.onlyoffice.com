@@ -14,7 +14,7 @@ expression.SetFillColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | No description provided. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | color to set fill (omit the argument to set no fill) |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Create a square annotation and set red fill color to it in a PDF document.
+Set the background color of an annotation in a PDF.
 
 ```javascript editor-pdf
-// How can I set fill color using an annotation in a PDF document?
+// Apply a fill color to make an annotation stand out in a PDF.
 
-// Set fill color for an annotation in a PDF document.
+// Change the interior color of an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

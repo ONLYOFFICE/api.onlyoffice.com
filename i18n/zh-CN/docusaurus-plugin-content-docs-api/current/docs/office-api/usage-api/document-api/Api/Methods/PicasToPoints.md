@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将派卡转换为磅。
+将派卡测量值转换为排版磅并在文档中显示结果。
 
 ```javascript editor-docx
-// How do I convert picas to points in a document?
+// How do I find the point equivalent of a value given in picas in a document?
 
-// Convert picas to points and display the result in a document.
+// Write out how many points correspond to a specific number of picas in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

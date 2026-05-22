@@ -20,12 +20,12 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isFirstColumn | 必需 | boolean |  | 指定应将第一列条件格式应用于表格。 |
+| isFirstColumn | 必需 | boolean |  | 指定第一列条件格式应用于 |
 | isFirstRow | 必需 | boolean |  | 指定应将第一行条件格式应用于表格。 |
-| isLastColumn | 必需 | boolean |  | 指定应将最后一列条件格式应用于表格。 |
+| isLastColumn | 必需 | boolean |  | 指定最后一列条件格式应用于 |
 | isLastRow | 必需 | boolean |  | 指定应将最后一行条件格式应用于表格。 |
-| isHorBand | 必需 | boolean |  | 指定不应将水平条带条件格式应用于表格。 |
-| isVerBand | 必需 | boolean |  | 指定不应将垂直条带条件格式应用于表格。 |
+| isHorBand | 必需 | boolean |  | 指定水平条带条件格式不应用 |
+| isVerBand | 必需 | boolean |  | 指定垂直条带条件格式不应用于 |
 
 ## 返回值
 
@@ -33,16 +33,16 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 ## 示例
 
-在演示文稿中设置表格外观。
+配置表格的视觉样式选项。
 
 ```javascript editor-pptx
-// How to set a table look with options in a presentation.
+// Set formatting flags to control table appearance and style.
 
-// Create the table object and set its look in a presentation.
+// Create a table and apply visual styling with configuration flags.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
-const table = Api.CreateTable(2, 4);
+const table = Api.CreateTable(4, 4);
 table.SetTableLook(true, false, false, false, false, true);
 slide.RemoveAllObjects();
 slide.AddObject(table);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在幻灯片上用绘图对象替换占位符。
+在演示文稿中用图像替换占位符。
 
 ```javascript editor-pptx
-// How can I replace placeholder using a drawing object in a presentation?
+// How do I swap a placeholder for an actual image in a presentation?
 
-// Replace placeholder for a drawing object in a presentation.
+// Insert an image into a shape that has a placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

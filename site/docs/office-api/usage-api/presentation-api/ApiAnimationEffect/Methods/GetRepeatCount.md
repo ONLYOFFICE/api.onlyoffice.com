@@ -23,9 +23,9 @@ number
 Get the repeat count of an animation effect in a presentation.
 
 ```javascript editor-pptx
-// How do I get the repeat count in a presentation?
+// Repeat count determines how many times an animation plays consecutively.
 
-// Get the repeat count using an animation effect object in a presentation.
+// Retrieve the repeat count from an animation effect using GetRepeatCount() and display it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

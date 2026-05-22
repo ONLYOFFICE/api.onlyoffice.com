@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中启动邮件合并过程。
+将模板与数据记录合并以在文档中生成个性化信件。
 
 ```javascript editor-docx
-// Wrap the text runs in the mail merge fields, loads the mail merge data into the document, and start the mail merge process.
+// How do I fill a letter template with names and greetings from a data list in a document?
 
-// How to use the mail merge feature starting from the first mail merge record in a document.
+// Automate the creation of multiple personalized copies from a single template in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

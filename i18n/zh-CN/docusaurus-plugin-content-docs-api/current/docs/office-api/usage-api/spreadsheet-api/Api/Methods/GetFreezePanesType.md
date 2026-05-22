@@ -20,12 +20,12 @@ expression.GetFreezePanesType();
 
 ## 示例
 
-冻结第一列并将冻结类型粘贴到电子表格中的表格。
+锁定第一列并在电子表格的单元格中显示活动的冻结类型。
 
 ```javascript editor-xlsx
-// How to freeze a column in a worksheet.
+// How do I find out which rows or columns are currently frozen in a spreadsheet?
 
-// Freeze worksheet column and show its name in a cell.
+// Check what kind of pane freeze is applied and record it in a cell in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

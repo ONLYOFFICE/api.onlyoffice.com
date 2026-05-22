@@ -29,12 +29,12 @@ string
 
 ## Example
 
-Get a text from document content element.
+Extract all text from a document content container as a plain string in a document.
 
 ```javascript editor-docx
-// Get the text of the document content as a string.
+// How do I read the full text stored inside a document content object in a document?
 
-// Display all content using the document content API in a document.
+// Verify the text inside a content control by reading it back as a single string.
 
 const doc = Api.GetDocument();
 

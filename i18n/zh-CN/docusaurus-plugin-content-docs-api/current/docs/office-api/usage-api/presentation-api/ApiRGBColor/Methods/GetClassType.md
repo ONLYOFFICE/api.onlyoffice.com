@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中 RGB 颜色对象的类类型。
+识别演示文稿中 RGB 颜色的类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a RGB color in a presentation?
+// How do I determine what type an RGB color is in a presentation?
 
-// Get the class type of a RGB color and display it in the presentation.
+// Display the color type name on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

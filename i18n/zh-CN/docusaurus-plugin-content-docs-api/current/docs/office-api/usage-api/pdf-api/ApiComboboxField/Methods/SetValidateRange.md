@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中获取文本字段并为其设置验证范围。
+将 PDF 中的字段值限制在数字范围内。
 
 ```javascript editor-pdf
-// How to set validate range for a combobox field in a PDF document?
+// Can I restrict numbers to a minimum and maximum in a PDF?
 
-// Set validate range and display the result in a PDF document.
+// Accept only numbers within specified bounds in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

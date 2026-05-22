@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the ISO week number in the year for a given date in a spreadsheet.
+Get the ISO week number for a date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the ISO week number in a spreadsheet.
+// How do I find the week number using the ISO standard in a spreadsheet?
 
-// Use a function to get an ISO week number in the year in a spreadsheet.
+// Use a function to convert dates to their corresponding ISO week numbers in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

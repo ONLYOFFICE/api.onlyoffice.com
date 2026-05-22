@@ -22,12 +22,12 @@ expression.SetLastModifiedBy(sLastModifiedBy);
 
 ## 示例
 
-设置文档中最后修改当前文档的用户名称。
+在文档中记录最后修改文档的人员姓名。
 
 ```javascript editor-docx
-// How can I set last modified by using a core properties in a document?
+// How do I store the author name of the most recent edit in a document?
 
-// Set last modified by for a core properties in a document.
+// Track document ownership and editing history by saving the modifier's name in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

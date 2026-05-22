@@ -20,12 +20,12 @@ expression.MergeCells();
 
 ## 示例
 
-合并行中的单元格。
+在文档中将表格行的所有单元格合并为单个单元格。
 
 ```javascript editor-docx
-// Merge cells of the entire row.
+// How do I join every cell across a row so they become one in a document?
 
-// Combine the entire row cells.
+// Collapse a row's individual cells into one unified cell to span the full width in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

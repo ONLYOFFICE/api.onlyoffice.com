@@ -15,7 +15,7 @@ expression.CreateSection(oParagraph);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oParagraph | Required | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | The paragraph after which a new document section will be inserted. Paragraph must be in a document. |
+| oParagraph | Required | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | The paragraph after which a new document section will be inserted. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.CreateSection(oParagraph);
 
 ## Example
 
-Create a new document section which ends at the specified paragraph.
+Insert a new section with custom page size and margins after a paragraph in a document.
 
 ```javascript editor-docx
-// How to create a section indicating its size, margins, etc in a document.
+// How do I split content into sections with different page layouts in a document?
 
-// Create a paragraph under the section in a document.
+// Give one part of a document its own column count, margins, and header spacing without affecting the rest in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

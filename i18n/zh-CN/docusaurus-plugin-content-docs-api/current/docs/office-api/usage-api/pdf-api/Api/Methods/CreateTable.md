@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.CreateTable(nCols, nRows);
+expression.CreateTable(rows, cols);
 ```
 
 `expression` - 表示 [Api](../Api.md) 类的变量。
@@ -14,8 +14,8 @@ expression.CreateTable(nCols, nRows);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCols | 必需 |  |  | 列数。 |
-| nRows | 必需 |  |  | 行数。 |
+| rows | 必需 |  |  | 行数。 |
+| cols | 必需 |  |  | 列数。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.CreateTable(nCols, nRows);
 
 ## 示例
 
-如何在 PDF 文档中创建具有两行四列的新表格。
+在 PDF 中插入具有多行多列的表格。
 
 ```javascript editor-pdf
-// Add a table to the pdf document.
+// How do I add a table to a PDF page?
 
-// Create the table using the PDF document API.
+// Create and place a table with specific dimensions in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

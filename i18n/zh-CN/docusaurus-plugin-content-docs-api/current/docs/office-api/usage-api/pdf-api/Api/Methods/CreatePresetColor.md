@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## 示例
 
-在 PDF 文档中选择颜色以创建渐变光圈。
+在 PDF 中的渐变填充中使用预设颜色。
 
 ```javascript editor-pdf
-// How to create a preset color in a PDF document.
+// How do I select a named color for a gradient in a PDF?
 
-// Add a preset color as a gradient stop in a PDF document.
+// Create a gradient stop with a built-in preset color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

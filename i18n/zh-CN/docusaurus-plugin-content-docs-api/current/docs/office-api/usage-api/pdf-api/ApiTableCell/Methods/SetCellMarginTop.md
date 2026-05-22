@@ -15,7 +15,7 @@ expression.SetCellMarginTop(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则使用默认表格单元格上边距，否则使用指定值覆盖当前单元格的表格单元格上边距。 |
+| nValue | 必需 | [twips](../../Enumeration/twips.md) |  | 如果此值为 &lt;code&gt;null&lt;/code&gt;，则应使用默认的表格单元格顶部边距， |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何为当前表格单元格设置顶部边距。
+设置 PDF 中表格单元格的上边距。
 
 ```javascript editor-pdf
-// Specify the top margin value for the table cell object.
+// How do I add space above the content inside a cell in a PDF?
 
-// Set cell margin top using a table cell object.
+// Adjust the spacing at the top of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

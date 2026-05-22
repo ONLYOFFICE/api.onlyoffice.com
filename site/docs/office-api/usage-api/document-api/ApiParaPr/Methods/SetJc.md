@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the paragraph contents justification in a document.
+Control the horizontal alignment of paragraph text in a document.
 
 ```javascript editor-docx
-// How to set justification of the paragraph content in a document.
+// How do I apply left, right, center, or justified alignment to paragraphs in a document?
 
-// Change the justification of the paragraph in a document.
+// Demonstrate multiple alignment styles side by side to choose the right layout for content.
 
 let doc = Api.GetDocument();
 let myStyleLeft = doc.CreateStyle("My style with left text alignment");

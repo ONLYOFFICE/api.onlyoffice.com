@@ -1,6 +1,6 @@
 # onAddComment
 
-使用 [AddComment](../../../../../docs/plugin-and-macros/interacting-with-editors/document-api/Methods/AddComment.md) 方法向文档添加评论时调用的函数。
+使用 [AddComment](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/AddComment.md) 方法向文档添加评论时调用的函数。
 
 ## 参数
 

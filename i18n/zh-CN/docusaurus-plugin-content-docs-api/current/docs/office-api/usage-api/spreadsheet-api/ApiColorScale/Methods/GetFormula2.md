@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取条件格式规则的第二个公式。
+读取电子表格中基于范围的条件格式规则的上边界值。
 
 ```javascript editor-xlsx
-// How to retrieve the second formula from conditional formatting rules.
+// How do I retrieve the second comparison value from a between-style formatting rule in a spreadsheet?
 
-// Get conditional formatting rule second formula.
+// Check the upper limit of a formatting condition to ensure the highlighted range is accurate in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

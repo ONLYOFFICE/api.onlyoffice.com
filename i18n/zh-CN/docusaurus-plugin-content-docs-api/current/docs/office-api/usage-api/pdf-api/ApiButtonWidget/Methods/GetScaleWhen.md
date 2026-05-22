@@ -20,12 +20,12 @@ expression.GetScaleWhen();
 
 ## 示例
 
-获取并显示 PDF 文档中按钮控件的缩放条件类型。
+确定 PDF 中按钮图标何时缩放。
 
 ```javascript editor-pdf
-// How do I get the scale when in a PDF document?
+// How do I check the icon scaling timing for a button in a PDF?
 
-// Get the scale when using a button widget object in a PDF document.
+// Retrieve the icon scaling trigger condition for a button widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

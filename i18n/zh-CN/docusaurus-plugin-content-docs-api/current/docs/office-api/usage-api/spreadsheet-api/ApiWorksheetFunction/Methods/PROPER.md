@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-在电子表格中将文本字符串转换为适当的大小写：每个单词的首字母大写，所有其他字母小写。
+在电子表格中格式化文本使每个单词的首字母大写。
 
 ```javascript editor-xlsx
-// How to make each word's first letter uppercase in a spreadsheet.
+// How do I capitalize the first letter of every word in a spreadsheet?
 
-// Use a function to make proper casing for all text strings in a spreadsheet.
+// Convert mixed-case text to proper case format in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中通过样式 ID 为图表设置样式。
+使用预定义的样式编号更改电子表格中图表的视觉样式。
 
 ```javascript editor-xlsx
-// How to update visualization of a chart setting a new style by using its ID in a spreadsheet.
+// How do I give a chart a different look by picking one of the built-in styles in a spreadsheet?
 
-// Apply new style by its ID in a spreadsheet.
+// Refresh the appearance of a chart to match a preferred design theme in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

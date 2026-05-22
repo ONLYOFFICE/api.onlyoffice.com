@@ -20,12 +20,12 @@ expression.CreateTextPr();
 
 ## 示例
 
-在文档中创建文本属性并使用。
+定义可重用的文本格式设置并将其应用于文档中的样式文本。
 
 ```javascript editor-docx
-// Create the empty text properties object and set the bold property, font size, capitalized letters, color, and font family to it in a document.
+// How do I set font, size, bold, and color for decorative text all at once in a document?
 
-// Create a Text Art object using the specified text properties in a document.
+// Bundle text styling options such as font family, size, and capitalization into a single reusable object in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

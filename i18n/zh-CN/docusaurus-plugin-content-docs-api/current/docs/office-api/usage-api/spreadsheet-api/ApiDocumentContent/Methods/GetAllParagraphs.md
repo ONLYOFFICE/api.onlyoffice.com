@@ -20,12 +20,12 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-获取电子表格中形状的文档内容中的所有段落。
+收集电子表格中形状文本区域内存储的每个段落。
 
 ```javascript editor-xlsx
-// How to get all paragraphs for a document content?
+// How do I retrieve the full list of paragraphs from the content of a shape in a spreadsheet?
 
-// Get all paragraphs and display the result in a spreadsheet.
+// Count or iterate all text paragraphs held within a drawing's content block in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

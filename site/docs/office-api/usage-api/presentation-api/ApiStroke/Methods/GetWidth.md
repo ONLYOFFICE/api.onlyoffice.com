@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a presentation.
+Measure the thickness of a border line in a presentation.
 
 ```javascript editor-pptx
-// How do I get the width in a presentation?
+// How do I find out how thick a border is in a presentation?
 
-// Get the width using a stroke object in a presentation.
+// Read the border width value and display it in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

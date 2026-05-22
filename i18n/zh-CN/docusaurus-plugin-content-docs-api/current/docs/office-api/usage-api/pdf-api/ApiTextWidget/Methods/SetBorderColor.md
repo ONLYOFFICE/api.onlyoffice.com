@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中的所有字段控件并为其设置边框颜色。
+在 PDF 中为所有字段控件应用边框颜色。
 
 ```javascript editor-pdf
-// How can I set border color using a widget in a PDF document?
+// How do I set the border color for widgets in a PDF?
 
-// Set border color for a widget in a PDF document.
+// Change the outline color of widget borders in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

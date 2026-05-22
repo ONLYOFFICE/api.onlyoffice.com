@@ -18,16 +18,16 @@ expression.AddSheet(sName);
 
 ## Returns
 
-This method doesn't return any data.
+[ApiWorksheet](../../ApiWorksheet/ApiWorksheet.md)
 
 ## Example
 
-Create a new worksheet.
+Insert a new sheet with a custom name into a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a new worksheet.
+// How do I add a new worksheet to an existing file in a spreadsheet?
 
-// Add the sheet and display the result in a spreadsheet.
+// Expand the workbook by creating an additional sheet in a spreadsheet.
 
 Api.AddSheet("New sheet");
 ```

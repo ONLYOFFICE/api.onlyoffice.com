@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetHorPosition](../../ApiDrawing/Methods/SetHorPositi
 
 ## Example
 
-Set the absolute measurement for the horizontal positioning of the floating object in a document.
+Position a floating shape at a specific horizontal location in a document.
 
 ```javascript editor-docx
-// How to set the horizontal position property of the shape in a document.
+// How do I place a shape next to a page margin in a document?
 
-// Create a drawing, add text to it and set its horizontal position in a document.
+// Place two shapes at different horizontal offsets relative to page and margin anchors in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-Set the table paddings in a document.
+Set the spacing between cell content and cell edges in a table in a document.
 
 ```javascript editor-docx
-// How to set paddings of the table in a document.
+// How do I add inner spacing to all cells of a table in a document?
 
-// Create a table and specify its paddings in a document.
+// Control how much breathing room text has inside each table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

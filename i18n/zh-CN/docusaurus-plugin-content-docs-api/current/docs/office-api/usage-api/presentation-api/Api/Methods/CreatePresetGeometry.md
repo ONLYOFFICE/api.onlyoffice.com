@@ -22,12 +22,12 @@ expression.CreatePresetGeometry(sPreset);
 
 ## 示例
 
-在演示文稿中创建预设几何形状。
+在演示文稿中使用内置形状模板。
 
 ```javascript editor-pptx
-// How can I create the preset geometry in a presentation?
+// How do I apply a preset shape to an object in a presentation?
 
-// Create the preset geometry in a presentation.
+// Create a shape with a predefined geometry like a star in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

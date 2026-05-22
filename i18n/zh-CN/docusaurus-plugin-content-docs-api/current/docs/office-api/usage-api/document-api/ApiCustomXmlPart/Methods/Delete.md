@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除文档中的自定义 XML 部件。
+从文档中移除嵌入的 XML 数据块。
 
 ```javascript editor-docx
-// How to delete for a custom XML part in a document?
+// How do I delete one of the XML data blocks stored inside a document?
 
-// Delete and display the result in a document.
+// Clean up stale or unwanted structured data by removing it from the document entirely.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

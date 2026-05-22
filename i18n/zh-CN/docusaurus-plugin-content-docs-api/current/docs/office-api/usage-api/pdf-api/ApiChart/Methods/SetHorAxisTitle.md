@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为图表的水平轴设置标题。
+在 PDF 中为水平轴添加标题。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and name its horizontal axis in a PDF document.
+// How do I label what the horizontal axis represents in a PDF?
 
-// Set hor axis title for a chart in a PDF document.
+// Set the axis title and configure other chart properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

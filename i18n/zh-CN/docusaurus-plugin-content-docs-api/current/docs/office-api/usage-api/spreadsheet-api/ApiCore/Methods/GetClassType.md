@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查电子表格中核心属性返回的类类型。
+读取电子表格中文档属性对象的类型标签。
 
 ```javascript editor-xlsx
-// How do I check what type a core properties object is in a spreadsheet?
+// How do I find out what kind of object holds the document properties in a spreadsheet?
 
-// Retrieve and output the class type string for a core properties in a spreadsheet.
+// Identify the internal type of the core document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

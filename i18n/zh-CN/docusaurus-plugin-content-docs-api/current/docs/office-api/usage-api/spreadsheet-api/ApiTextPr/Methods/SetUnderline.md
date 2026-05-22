@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-指定在电子表格中当前 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
+在电子表格中为形状内的文本添加下划线。
 
 ```javascript editor-xlsx
-// How to underline a text in a spreadsheet.
+// How do I add an underline beneath text in a spreadsheet?
 
-// Set underline and display the result in a spreadsheet.
+// Emphasize text by placing a line directly below the characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

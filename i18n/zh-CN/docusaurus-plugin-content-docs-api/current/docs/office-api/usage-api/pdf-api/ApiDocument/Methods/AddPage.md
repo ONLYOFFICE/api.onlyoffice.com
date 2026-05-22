@@ -24,12 +24,12 @@ expression.AddPage(nPos, nWidth, nHeight);
 
 ## 示例
 
-在第 0 页之后向文档添加新页面。
+在 PDF 中向文档插入新页面。
 
 ```javascript editor-pdf
-// How do I add the page in a PDF document?
+// Can I add pages to a PDF document?
 
-// Add the page using a document object.
+// Place additional pages at specific positions in a PDF.
 
 let doc = Api.GetDocument();
 doc.AddPage(1);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中向 run 添加文本。
+在 PDF 中向文本元素插入文本内容。
 
 ```javascript editor-pdf
-// How to add a text to a text run object in a PDF document.
+// How do I add text to a text run in a PDF?
 
-// How to add a text to the page.
+// Place text on the page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

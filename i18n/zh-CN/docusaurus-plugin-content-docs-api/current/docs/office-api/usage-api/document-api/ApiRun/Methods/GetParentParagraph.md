@@ -20,12 +20,12 @@ expression.GetParentParagraph();
 
 ## 示例
 
-获取文档中 run 的父段落以进行进一步操作。
+访问文档中包含文本运行的段落。
 
 ```javascript editor-docx
-// How to get the parent paragraph for a text run in a document?
+// How do I get the paragraph that holds a particular text run in a document?
 
-// Get the parent paragraph and display the result in a document.
+// Navigate from a text run up to its surrounding paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

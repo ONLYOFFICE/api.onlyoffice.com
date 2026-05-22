@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-指定文档中绘图对象边缘与后续文本之间保持的最小距离。
+设置文档中绘图与周围文本之间的间距。
 
 ```javascript editor-docx
-// How to create drawings and set the distance between them in a document.
+// How do I control the gap between a shape and nearby text in a document?
 
-// Create a rectangle, square and set the minimum distance between them in a document.
+// Keep text away from a floating shape by defining margins on each side of the drawing in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

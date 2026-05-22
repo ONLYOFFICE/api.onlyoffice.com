@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-更新文档中自定义 XML 部件中的 XML 元素。
+替换文档中自定义 XML 部件内 XML 元素的内容。
 
 ```javascript editor-docx
-// How to update element for a custom XML part in a document?
+// How do I update an existing XML element within a custom XML part in a document?
 
-// Update element and display the result in a document.
+// Overwrite a child element with new markup to reflect changed data in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

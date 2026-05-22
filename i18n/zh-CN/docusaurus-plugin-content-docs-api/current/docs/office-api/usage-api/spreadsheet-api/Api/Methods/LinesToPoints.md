@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将行转换为磅。
+在电子表格中将行数转换为磅。
 
 ```javascript editor-xlsx
-// How to convert lines to points in a spreadsheet?
+// How do I convert a number of lines into points in a spreadsheet?
 
-// Convert lines to points using the spreadsheet API.
+// Show the point equivalent of a given number of lines in a spreadsheet.
 
 const lines = 100;
 const points = Api.LinesToPoints(lines);

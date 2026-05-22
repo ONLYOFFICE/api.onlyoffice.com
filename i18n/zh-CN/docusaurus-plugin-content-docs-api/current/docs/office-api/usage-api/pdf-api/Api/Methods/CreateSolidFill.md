@@ -22,12 +22,12 @@ expression.CreateSolidFill(color);
 
 ## 示例
 
-在 PDF 文档中创建纯色填充。
+在 PDF 中为形状应用纯色填充。
 
 ```javascript editor-pdf
-// How to color a background in a PDF document.
+// How do I set the background color of a shape in a PDF?
 
-// Add solid fill color as a shape background in a PDF document.
+// Use an RGB color to fill a shape's background in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

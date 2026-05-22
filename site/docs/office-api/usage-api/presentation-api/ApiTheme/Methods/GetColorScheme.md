@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the color scheme of the theme in a presentation.
+Get the color scheme from a theme in a presentation.
 
 ```javascript editor-pptx
-// How to get a color scheme of presentation master's theme.
+// How do I access the colors defined in a presentation's theme?
 
-// Get a theme color scheme and change its colors in a presentation.
+// Retrieve the theme's color scheme and modify its colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

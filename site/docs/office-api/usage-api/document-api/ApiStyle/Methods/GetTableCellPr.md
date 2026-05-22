@@ -20,16 +20,16 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the table cell properties of the style in a document.
+Set background colors for individual table cells through a style in a document.
 
 ```javascript editor-docx
-// How to get table cell properties and add shading to it.
+// How do I change the background color of specific table cells using a style in a document?
 
-// Update the table cell background.
+// Color the corner cells of a table differently by editing their style settings in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
-let table = Api.CreateTable(2, 3);
+let table = Api.CreateTable(3, 3);
 table.SetWidth("percent", 100);
 doc.Push(table);
 table.SetStyle(tableStyle);

@@ -36,12 +36,12 @@
 | [OnEncryption](./OnEncryption.md) | 无 | 加密文档。 |
 | [PasteHtml](./PasteHtml.md) | 无 | 将 HTML 格式的文本粘贴到文档中。 |
 | [PasteText](./PasteText.md) | 无 | 将文本粘贴到文档中。 |
-| [PutImageDataToSelection](./PutImageDataToSelection.md) | 无 | 用参数中指定的图像替换第一个选定的图形。如果没有选择图形，该方法将在当前位置插入图像。 |
+| [PutImageDataToSelection](./PutImageDataToSelection.md) | 无 | 用参数中指定的图像替换第一个选定的图形。 |
 | [RemovePlugin](./RemovePlugin.md) | object | 删除具有指定 GUID 的插件。 |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选定内容中的每个段落（或单元格中的文本）。 |
 | [SetFormValue](./SetFormValue.md) | 无 | 为指定的表单设置值。 |
 | [SetMacros](./SetMacros.md) | 无 | 为文档设置宏。 |
-| [SetPluginsOptions](./SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。例如，此方法可用于向插件传递授权令牌。此方法只能与连接器类一起使用。 |
+| [SetPluginsOptions](./SetPluginsOptions.md) | 无 | 从外部源配置插件。可以为所有插件或特定插件设置参数。 |
 | [SetProperties](./SetProperties.md) | 无 | 为文档设置属性。 |
 | [ShowButton](./ShowButton.md) | 无 | 显示或隐藏页眉中的按钮。 |
 | [ShowError](./ShowError.md) | 无 | 显示错误/警告消息。 |

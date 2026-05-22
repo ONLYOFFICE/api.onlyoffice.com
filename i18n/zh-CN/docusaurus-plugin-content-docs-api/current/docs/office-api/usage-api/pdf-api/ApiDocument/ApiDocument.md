@@ -13,5 +13,5 @@
 | [GetFieldByName](./Methods/GetFieldByName.md) | [ApiField](../Enumeration/ApiField.md) | 按名称获取字段。 |
 | [GetPage](./Methods/GetPage.md) | [ApiPage](../ApiPage/ApiPage.md) | 按索引从文档获取页面。 |
 | [GetPagesCount](./Methods/GetPagesCount.md) | number | 获取文档页数 |
-| [RemovePage](./Methods/RemovePage.md) | boolean | 按索引从文档移除页面 |
+| [RemovePage](./Methods/RemovePage.md) | boolean | 按索引从文档中移除页面 |
 | [SearchAndRedact](./Methods/SearchAndRedact.md) | [ApiRedactAnnotation](../ApiRedactAnnotation/ApiRedactAnnotation.md)[] | 搜索词语并对其添加涂黑。 |

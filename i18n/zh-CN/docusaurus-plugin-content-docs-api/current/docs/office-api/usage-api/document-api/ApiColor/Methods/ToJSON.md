@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-将文档中不同类型的颜色对象转换为 JSON 字符串。
+将文档中不同类型的颜色对象序列化为 JSON 字符串。
 
 ```javascript editor-docx
-// The color object can be created from a hex value or a theme color.
+// How do I export a color's full definition as a JSON string in a document?
 
-// Convert each color type to a JSON string and display the result.
+// Save or transfer color data by converting RGB, RGBA, hex, theme, and auto colors to JSON in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

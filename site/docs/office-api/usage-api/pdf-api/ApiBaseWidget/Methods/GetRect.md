@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a new field and get rect of its widget in a PDF document.
+Get the bounding box dimensions of a form field widget in a PDF.
 
 ```javascript editor-pdf
-// How to get the rect for a widget in a PDF document?
+// How do I find the size and position of a widget in a PDF?
 
-// Get the rect and display the result in a PDF document.
+// Retrieve the rectangle boundaries of a form field widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

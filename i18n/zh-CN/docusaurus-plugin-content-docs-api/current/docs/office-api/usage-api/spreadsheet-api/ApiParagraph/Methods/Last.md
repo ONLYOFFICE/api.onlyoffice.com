@@ -20,12 +20,12 @@ expression.Last();
 
 ## 示例
 
-获取电子表格中形状内段落的最后一个非空元素。
+从电子表格中形状内的段落检索最后一个文本运行。
 
 ```javascript editor-xlsx
-// How can I last using a paragraph in a spreadsheet?
+// How do I read the content of the final element in a paragraph in a spreadsheet?
 
-// Last for a paragraph in a spreadsheet.
+// Identify which run appears at the end of a paragraph to inspect its text in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(140, 100, 120));

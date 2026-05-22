@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-如何获取 PDF 文档中形状的内容。
+访问 PDF 中形状的内部内容。
 
 ```javascript editor-pdf
-// Retrieve a shape content and insert a paragraph to it in a PDF document.
+// How do I get what is inside a shape in a PDF?
 
-// Use shape to get the content in a PDF document.
+// Extract and work with a shape's content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

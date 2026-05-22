@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set a conditional formatting rule as last priority.
+Move a formatting rule to the lowest position in the evaluation order in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the priority order of conditional formatting rules.
+// How do I make a conditional formatting rule apply after all other rules in a spreadsheet?
 
-// Set conditional formatting rule as last priority.
+// Push an existing highlight rule to the bottom of the priority stack in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

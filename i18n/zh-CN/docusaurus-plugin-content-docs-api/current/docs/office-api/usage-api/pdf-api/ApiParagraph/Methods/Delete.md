@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除 PDF 文档中的段落。
+从 PDF 中移除段落。
 
 ```javascript editor-pdf
-// How to remove a paragraph from the page.
+// How do I delete a paragraph in a PDF?
 
-// Delete and display the result in a PDF document.
+// Erase a paragraph and display the remaining content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

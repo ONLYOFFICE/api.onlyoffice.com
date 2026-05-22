@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中自定义属性的类类型。
+获取文档中自定义属性对象的类类型。
 
 ```javascript editor-docx
-// How to identify the class type of a custom properties in a document?
+// How do I identify the type of a custom properties object at runtime in a document?
 
-// Obtain the class type identifier of a custom properties object in a document.
+// Confirm the object type before calling type-specific methods on custom properties in a document.
 
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();

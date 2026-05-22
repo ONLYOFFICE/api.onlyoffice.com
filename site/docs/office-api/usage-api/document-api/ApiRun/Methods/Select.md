@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Select the current run in a document.
+Highlight a text run as the active selection in a document.
 
 ```javascript editor-docx
-// How to select a text with a cursor in a document.
+// How do I programmatically select a piece of text in a document?
 
-// Select and display the result in a document.
+// Mark a run so it appears selected for the user in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

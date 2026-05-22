@@ -15,7 +15,7 @@ expression.SetPosition(nPosition);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 以半磅（1/144 英寸）为单位指定正值（升高文本）或负值（降低文本）。 |
+| nPosition | 必需 | [hps](../../Enumeration/hps.md) |  | 指定正值（升高文本）或负值（降低文本） |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.SetPosition(nPosition);
 
 ## 示例
 
-指定在文档中范围的文本相对于周围非定位文本的默认基线升高或降低的量。
+相对于文档中周围的基线升高或降低选定文本。
 
 ```javascript editor-docx
-// How to set an inline position of a range text in a document.
+// How do I shift a portion of text up or down without changing its size in a document?
 
-// Get a range text, specify its position to move down or up in a document.
+// Adjust the vertical offset of highlighted words to create superscript or subscript effects in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

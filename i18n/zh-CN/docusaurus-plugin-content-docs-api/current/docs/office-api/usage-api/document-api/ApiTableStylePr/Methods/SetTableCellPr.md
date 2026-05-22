@@ -22,12 +22,12 @@ expression.SetTableCellPr(oTableCellPr);
 
 ## 示例
 
-创建并设置将应用于表格中与条件格式类型匹配的所有单元格的表格单元格属性。
+在文档中为表格样式的条件区域应用单元格格式。
 
 ```javascript editor-docx
-// How to set the table cell properties to table style.
+// How do I set the background shading for cells in a specific part of a table style in a document?
 
-// Update the table style table cell properties.
+// Assign visual cell appearance to a targeted section of a styled table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

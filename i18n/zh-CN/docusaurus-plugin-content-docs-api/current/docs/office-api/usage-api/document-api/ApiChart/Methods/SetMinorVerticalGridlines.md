@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中次要垂直网格线的视觉属性。
+设置文档中图表次垂直网格线的样式。
 
 ```javascript editor-docx
-// How to set minor vertical gridlines of the chart in a document.
+// How do I control the appearance of minor vertical gridlines in a document?
 
-// Create a chart, set its properties and its minor gridlines as a stroke in a document.
+// Add fine vertical reference lines between major intervals to increase horizontal scale precision in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

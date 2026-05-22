@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set subtotal location of a pivot table in a spreadsheet.
+Place subtotal rows at the top or bottom of each group in a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set subtotal location of a table in a spreadsheet.
+// How do I move subtotals above or below the detail rows in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its subtotal location in a spreadsheet.
+// Reposition subtotals to improve readability of grouped data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

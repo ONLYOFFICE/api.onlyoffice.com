@@ -22,12 +22,12 @@ expression.SetStroke(bStroke);
 
 ## 示例
 
-创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
+启用或禁用文档中自定义形状绘图路径上的轮廓边框。
 
 ```javascript editor-docx
-// How do I set stroke in a document?
+// How do I control whether a custom shape's path has a visible border in a document?
 
-// Set stroke using a geometry path object in a document.
+// Toggle the outline visibility for a shape's drawing path in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

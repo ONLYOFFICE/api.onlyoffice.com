@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中水平轴的刻度标签位置。
+将文档中图表的水平轴刻度标签移动到顶部。
 
 ```javascript editor-docx
-// How to change a position of a horizontal axis tick label in a document.
+// How do I reposition tick labels to display above the chart area in a document?
 
-// Create a chart and move its horizontal axis tick label in a document.
+// Place category labels at the high end of the axis to free up space at the bottom in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

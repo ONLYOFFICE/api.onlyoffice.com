@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-指定应用于表格单元格内容的底纹。
+在文档中为表格单元格应用背景颜色。
 
 ```javascript editor-docx
-// Create a 3x3 table and add an orange shading to cell #1.
+// How do I fill a table cell with a specific background color in a document?
 
-// Set shading to the table cell.
+// Highlight a table cell by giving it a colored background in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

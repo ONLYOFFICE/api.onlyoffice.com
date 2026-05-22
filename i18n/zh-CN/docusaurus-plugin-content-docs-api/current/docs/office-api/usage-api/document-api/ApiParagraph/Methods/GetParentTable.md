@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含段落的表格。
+检索文档中包含给定段落的表格。
 
 ```javascript editor-docx
-// How to get the parent table of the paragraph in a document.
+// How do I get the table that a paragraph belongs to in a document?
 
-// Remove the cell from the parent element.
+// Remove a row from the parent table by navigating up from a paragraph inside one of its cells in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

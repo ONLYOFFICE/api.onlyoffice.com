@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the border color for the block-level container in a document.
+Set a border color on a content control in a document.
 
 ```javascript editor-docx
-// How can I set border color using a block-level content control in a document?
+// How do I change the border color of a content control in a document?
 
-// Set border color for a block-level content control in a document.
+// Give a content control a colored outline to visually distinguish it from other content in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

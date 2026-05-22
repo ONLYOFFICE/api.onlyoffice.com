@@ -22,12 +22,12 @@ expression.SetCreator(sCreator);
 
 ## 示例
 
-使用文档中的核心属性设置当前文档的创建者。
+在文档的核心属性中存储作者姓名。
 
 ```javascript editor-docx
-// How to set creator for a core properties in a document?
+// How do I set the creator field in a document's metadata in a document?
 
-// Set creator and display the result in a document.
+// Attribute ownership of the document by writing the author's name into the built-in properties in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

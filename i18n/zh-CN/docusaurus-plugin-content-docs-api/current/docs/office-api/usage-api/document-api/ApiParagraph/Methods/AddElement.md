@@ -14,8 +14,8 @@ expression.AddElement(oElement, nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果段落不支持 oElement 类型，则返回 false。 |
-| nPos | 可选 | number |  | 将添加当前元素的位置。如果未指定此值，则元素将添加到当前段落的末尾。 |
+| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果 |
+| nPos | 可选 | number |  | 将添加当前元素的位置。如果此值不 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加 Run。
+向文档中的段落追加文本运行元素。
 
 ```javascript editor-docx
-// How to add an element to the paragraph in a document.
+// How do I insert a formatted run of text into an existing paragraph in a document?
 
-// Create a text run and insert it to the paragraph in a document.
+// Build paragraph content by adding a standalone text run as a child element in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

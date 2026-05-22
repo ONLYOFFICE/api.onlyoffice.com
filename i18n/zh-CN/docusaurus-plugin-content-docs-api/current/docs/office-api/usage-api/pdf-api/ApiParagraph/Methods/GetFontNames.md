@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取 PDF 文档中段落内所有元素的所有字体名称。
+列出 PDF 中段落使用的所有字体。
 
 ```javascript editor-pdf
-// How can I get the font names using a paragraph in a PDF document?
+// How do I find which fonts are used in a paragraph in a PDF?
 
-// Get the font names for a paragraph in a PDF document.
+// Retrieve the names of fonts applied to text in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

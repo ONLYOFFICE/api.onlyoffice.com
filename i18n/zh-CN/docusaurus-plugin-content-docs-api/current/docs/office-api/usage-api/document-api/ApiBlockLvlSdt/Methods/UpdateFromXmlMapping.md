@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中使用数据绑定将映射的 XML 文件的数据与内容控件同步。
+刷新文档中的内容控件以显示更新的 XML 数据。
 
 ```javascript editor-docx
-// How to update from xml mapping for a block-level content control in a document?
+// How do I update a content control after its linked XML data changes in a document?
 
-// Update from xml mapping and display the result in a document.
+// Change the value in an XML source and pull the new text into a content control in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

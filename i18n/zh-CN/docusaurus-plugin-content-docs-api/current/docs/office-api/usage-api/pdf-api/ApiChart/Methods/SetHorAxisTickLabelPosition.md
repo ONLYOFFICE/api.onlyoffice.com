@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中更改刻度标签的位置。
+在 PDF 中重新定位水平轴上的刻度标签。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its horizontal axis tick label position in a PDF document.
+// How do I move axis numbers to the top or bottom of the chart in a PDF?
 
-// Use chart to set hor axis tick label position in a PDF document.
+// Place tick labels at the high position on the horizontal axis in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

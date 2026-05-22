@@ -15,8 +15,8 @@ expression.SetTabs(aPos, aVal);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aPos | 必需 | [twips](../../Enumeration/twips.md)[] |  | 自定义制表位相对于当前页边距的位置数组，以磅的二十分之一（1/1440 英寸）为单位。 |
-| aVal | 必需 | [TabJc](../../Enumeration/TabJc.md)[] |  | 自定义制表位样式数组，确定制表位的行为以及将应用于在当前自定义制表位输入的文本的对齐方式。 |
+| aPos | 必需 | [twips](../../Enumeration/twips.md)[] |  | 自定义制表位相对于当前页边距的位置数组 |
+| aVal | 必需 | [TabJc](../../Enumeration/TabJc.md)[] |  | 自定义制表位样式数组，确定制表位的行为以及 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置一系列自定义制表位，用于电子表格中段落中的任何制表符。
+在电子表格中段落内的特定位置放置自定义制表位。
 
 ```javascript editor-xlsx
-// How to change sizes of tabs between paragraphs in a spreadsheet.
+// How do I align text columns using tabs at precise distances in a spreadsheet?
 
-// Customize all kind of tabs indicating sizes in a spreadsheet.
+// Define left, center, and right tab stops so text snaps into tidy columns when a tab character is inserted in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

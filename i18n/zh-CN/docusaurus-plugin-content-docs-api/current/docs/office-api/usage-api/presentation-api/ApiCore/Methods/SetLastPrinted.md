@@ -22,12 +22,12 @@ expression.SetLastPrinted(oLastPrinted);
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的最后打印日期。
+记录演示文稿的最后打印时间。
 
 ```javascript editor-pptx
-// How to set last printed for a core properties in a presentation?
+// How do I track the last print date of a presentation?
 
-// Set last printed and display the result in a presentation.
+// Store and retrieve the last printed timestamp for a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

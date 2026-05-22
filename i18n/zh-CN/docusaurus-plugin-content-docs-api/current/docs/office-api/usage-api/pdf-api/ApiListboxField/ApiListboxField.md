@@ -12,9 +12,11 @@ ApiListboxField 是 [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md) 
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
 | [GetClassType](./Methods/GetClassType.md) | "listboxField" | 返回 ApiListboxField 类的类型。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 获取字段完整名称。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前字段的内部 ID。 |
 | [GetOption](./Methods/GetOption.md) | [ListOption](../Enumeration/ListOption.md) | 从列表选项获取选项。 |
 | [GetOptions](./Methods/GetOptions.md) | [ListOption](../Enumeration/ListOption.md)[] | 获取列表中的所有选项。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
+| [GetTooltip](./Methods/GetTooltip.md) | boolean | 获取字段工具提示 |
 | [GetValue](./Methods/GetValue.md) | string | 获取字段值 |
 | [GetValueIndexes](./Methods/GetValueIndexes.md) | number[] | 获取选定值的索引。 |
 | [IsCommitOnSelChange](./Methods/IsCommitOnSelChange.md) | boolean | 检查字段是否可在选择更改时提交。 |
@@ -29,5 +31,6 @@ ApiListboxField 是 [ApiBaseListField](../ApiBaseListField/ApiBaseListField.md) 
 | [SetPartialName](./Methods/SetPartialName.md) | boolean | 设置新的字段部分名称。 |
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | 设置字段为只读 |
 | [SetRequired](./Methods/SetRequired.md) | boolean | 设置字段为必填 |
+| [SetTooltip](./Methods/SetTooltip.md) | boolean | 设置字段工具提示 |
 | [SetValue](./Methods/SetValue.md) | boolean | 设置字段值 |
 | [SetValueIndexes](./Methods/SetValueIndexes.md) | boolean | 设置选定值的索引。 |

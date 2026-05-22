@@ -1,31 +1,45 @@
 # Copy
 
-Creates a copy of the specified drawing object.
+Creates a copy of the specified image.
 
-Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
+:::note\
+This functionality is available in paid ONLYOFFICE Docs editions.\
+:::
+
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents a [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiImage](../../ApiImage/ApiImage.md)
 
 ## Example
 
-Create a copy of a shape and insert it into the presentation.
+Duplicate an image and place the copy on another slide in a presentation.
 
 ```javascript editor-pptx
-// How to create the same slide shape.
+// How do I make a copy of an image in a presentation?
 
-// Get a slide shape, add it to the slide and create its copy.
+// Create an exact duplicate of an image and add it to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
-const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
-shape.SetSize(300 * 36000, 130 * 36000);
-slide.AddObject(shape);
+const image = Api.CreateImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', 60 * 36000, 60 * 36000);
+slide.AddObject(image);
 
-const copyShape = shape.Copy();
+const copyImage = image.Copy();
 const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
-newSlide.AddObject(copyShape);
+newSlide.AddObject(copyImage);
 ```

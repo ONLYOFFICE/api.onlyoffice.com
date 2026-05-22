@@ -26,12 +26,12 @@ expression.CreateShape(shapeType, width, height, fill, stroke);
 
 ## Example
 
-Create a shape using the 'rect' preset in a document.
+Insert a rectangle shape into a paragraph in a document.
 
 ```javascript editor-docx
-// Create the "rect" shape and add it to the first paraghraph of the document.
+// How do I add a shape to a paragraph in a document?
 
-// How to create the shape object and add it to the paragraph class in a document.
+// Place a colored gradient-filled rectangle inside existing text content in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

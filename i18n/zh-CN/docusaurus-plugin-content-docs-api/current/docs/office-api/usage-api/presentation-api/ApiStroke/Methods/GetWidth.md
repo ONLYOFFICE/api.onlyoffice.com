@@ -20,12 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-获取笔触的宽度（EMU）。在演示文稿中创建具有不同边框宽度的形状并显示其宽度。
+测量演示文稿中边框线的粗细。
 
 ```javascript editor-pptx
-// How do I get the width in a presentation?
+// How do I find out how thick a border is in a presentation?
 
-// Get the width using a stroke object in a presentation.
+// Read the border width value and display it in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

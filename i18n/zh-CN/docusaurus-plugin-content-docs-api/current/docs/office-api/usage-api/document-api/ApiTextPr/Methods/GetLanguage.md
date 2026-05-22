@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的文本语言。
+读取文档中分配给文本运行的语言。
 
 ```javascript editor-docx
-// Get the language of the text properties in a document.
+// How do I find out which language is set on a piece of text in a document?
 
-// How to know the text language property in a document.
+// Inspect a text run to confirm the locale currently applied to it in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph right side indentation in a PDF document.
+Retrieve the right margin indentation value from a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to return a right side identation of a paragraph property in a PDF document.
+// How do I get the right side indent measurement in a PDF?
 
-// Return a right side indentation of a text property from the page.
+// Obtain the right edge offset amount in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-在演示文稿中从 JSON 恢复形状填充颜色。
+从 JSON 反序列化颜色对象并将其应用于形状填充。
 
 ```javascript editor-pptx
-// The JSON string contains the color type and value properties.
+// Parse JSON color data and reconstruct the color object representation.
 
-// Restore the color object from JSON and apply it to a shape fill.
+// Restore a color from JSON format and compare original and restored hex values.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

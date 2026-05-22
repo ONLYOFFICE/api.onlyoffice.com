@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-将当前表单转换为内联表单。
+检查文档中的文本是否应用了粗体格式。
 
 ```javascript editor-docx
-// How to find out whether a text is bold or not in a document.
+// How do I find out if a piece of text has bold formatting turned on in a document?
 
-// Get the bold property of the text in a document.
+// Read the bold state of text to verify its current formatting in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

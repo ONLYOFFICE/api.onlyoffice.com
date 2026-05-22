@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定范围所包含的文档部分的 Range 对象。
+从文档中现有的高亮区域内提取更窄的文本选区。
 
 ```javascript editor-docx
-// Get the range from the range indicating its start and end positions in a document.
+// How do I cut out a smaller portion of text from an already selected region in a document?
 
-// Retrieve a range and make them italic in a document.
+// Trim a wider selection down to a tighter span for targeted editing in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

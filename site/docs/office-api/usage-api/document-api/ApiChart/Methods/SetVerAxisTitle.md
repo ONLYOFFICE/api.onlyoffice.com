@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Specify the chart vertical axis title in a document.
+Add a label to the vertical axis of a chart in a document.
 
 ```javascript editor-docx
-// Title the chart's vertical axis in a document.
+// How do I describe what the vertical axis measures on a chart in a document?
 
-// Create a chart, set its properties and name its vertical axis title in a document.
+// Clarify the unit or category of vertical axis values for readers of a chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

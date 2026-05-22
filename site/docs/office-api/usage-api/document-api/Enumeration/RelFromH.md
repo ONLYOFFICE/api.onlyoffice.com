@@ -10,9 +10,11 @@ Enumeration
 
 - "character"
 - "column"
+- "insideMargin"
 - "leftMargin"
 - "rightMargin"
 - "margin"
+- "outsideMargin"
 - "page"
 
 ## Example

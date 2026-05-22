@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中当前文档的标题。
+获取文档核心属性中存储的标题。
 
 ```javascript editor-docx
-// How can I get the title using a core properties in a document?
+// How do I read the title from a document's metadata in a document?
 
-// Get the title for a core properties in a document.
+// Confirm the document title is set correctly by inserting it as text into the document body in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

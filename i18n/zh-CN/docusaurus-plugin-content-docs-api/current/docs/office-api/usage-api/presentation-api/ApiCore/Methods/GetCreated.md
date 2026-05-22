@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-在演示文稿中使用核心属性设置和获取演示文稿的创建日期。
+设置和检索演示文稿的创建日期。
 
 ```javascript editor-pptx
-// How do I get the created in a presentation?
+// How do I access the creation date in a presentation?
 
-// Get the created using a core properties object in a presentation.
+// Read the date when a presentation was originally created in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

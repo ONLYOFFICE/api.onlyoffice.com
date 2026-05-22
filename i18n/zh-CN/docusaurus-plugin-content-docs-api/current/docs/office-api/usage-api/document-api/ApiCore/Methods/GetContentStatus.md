@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的内容状态。
+读取文档核心属性中存储的内容状态。
 
 ```javascript editor-docx
-// How can I get the content status using a core properties in a document?
+// How do I retrieve the content status value from the core properties in a document?
 
-// Get the content status for a core properties in a document.
+// Check whether a document is marked as Draft, Final, or another status in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

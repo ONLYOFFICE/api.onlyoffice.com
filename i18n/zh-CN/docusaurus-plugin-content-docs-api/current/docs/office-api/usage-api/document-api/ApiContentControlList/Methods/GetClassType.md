@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中内容控件列表返回的类类型。
+读取文档中下拉列表内容控件的类类型。
 
 ```javascript editor-docx
-// How do I check what type a content control list object is in a document?
+// How do I find out the class type of a content control list in a document?
 
-// Retrieve and output the class type string for a content control list in a document.
+// Confirm the object kind of a dropdown list by checking its type identifier in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

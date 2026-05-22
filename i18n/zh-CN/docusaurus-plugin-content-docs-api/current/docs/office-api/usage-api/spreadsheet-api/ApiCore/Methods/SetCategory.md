@@ -22,12 +22,12 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-在电子表格中使用核心属性设置工作簿的类别。
+通过电子表格的文档属性为工作簿分配类别标签。
 
 ```javascript editor-xlsx
-// How do I set category in a spreadsheet?
+// How do I set a category for a workbook in a spreadsheet?
 
-// Set category using a core properties object in a spreadsheet.
+// Store a descriptive category in the metadata fields of the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

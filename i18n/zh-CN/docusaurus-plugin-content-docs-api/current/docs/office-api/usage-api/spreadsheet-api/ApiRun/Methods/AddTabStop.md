@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在电子表格中向 run 添加制表位。
+在文本运行中插入制表位以在电子表格中将后续文本沿行推进。
 
 ```javascript editor-xlsx
-// How to add a tab to a sentence in a spreadsheet.
+// How do I add spacing between words using tabs inside a shape in a spreadsheet?
 
-// Break two lines of a text run with a tab in a spreadsheet.
+// Align text visually by placing multiple tab characters within a single run in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

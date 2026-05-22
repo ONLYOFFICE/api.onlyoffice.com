@@ -22,12 +22,12 @@ expression.SetRevision(sRevision);
 
 ## 示例
 
-设置文档中当前文档的修订版本。
+为文档分配修订标签。
 
 ```javascript editor-docx
-// How do I set revision in a document?
+// How do I mark a document with a specific revision identifier?
 
-// Set revision using a core properties object in a document.
+// Version-control a document by embedding a revision string in its core metadata in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

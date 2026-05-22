@@ -15,7 +15,7 @@ expression.NORM_S_DIST(arg1, arg2);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The value for which the distribution will be returned. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability mass function. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. |
 
 ## Returns
 
@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return the standard normal distribution (has a mean of zero and a standard deviation of one) in a spreadsheet.
+Calculate the standard normal distribution for a given value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the standard normal distribution in a spreadsheet.
+// How do I compute the standard normal distribution in a spreadsheet?
 
-// Use a function to get the standard normal distribution with a mean = 0 and standard deviation = 1 in a spreadsheet.
+// Find the probability of a value in a standard normal distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

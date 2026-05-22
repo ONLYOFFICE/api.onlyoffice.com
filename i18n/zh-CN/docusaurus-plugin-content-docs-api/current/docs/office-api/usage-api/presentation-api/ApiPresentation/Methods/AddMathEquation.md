@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-以三种不同格式向文档添加数学公式：LaTeX、Unicode 和 MathML。
+将多种格式的数学公式插入演示文稿。
 
 ```javascript editor-pptx
-// How to add math equations in different formats.
+// How do I add equations to a presentation using LaTeX, Unicode, or MathML in a presentation?
 
-// Insert math equations using LaTeX, Unicode, and MathML formats.
+// Add mathematical expressions in three different notation styles in a presentation.
 
 const presentation = Api.GetPresentation();
 

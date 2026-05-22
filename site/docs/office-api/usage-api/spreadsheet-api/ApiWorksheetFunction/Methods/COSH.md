@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Get the hyperbolic cosine of a number in a spreadsheet.
+Compute the hyperbolic cosine of a value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find a hyperbolic cosine in a spreadsheet.
+// What is the hyperbolic cosine result of a number in a spreadsheet?
 
-// Use function to get the hyperbolic cosine of an angle in a spreadsheet.
+// Calculate the exponential curve ratio for a given value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

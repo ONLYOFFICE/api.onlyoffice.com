@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-将表单转换为固定大小的表单。
+在文档中将表单字段转换为固定大小的块。
 
 ```javascript editor-docx
-// How to fix the size of the text form.
+// How do I set a specific width and height for a form field in a document?
 
-// Create a text form and make the size of it fixed.
+// Lock a form's dimensions so layout does not shift when content changes.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取文本字段并显示其在 PDF 文档中的梳状属性。
+检查 PDF 中的文本字段是否使用梳状字符间距。
 
 ```javascript editor-pdf
-// How can I is comb using a text field in a PDF document?
+// How do I know if a text field is set to display characters in separate boxes in a PDF?
 
-// Is comb for a text field in a PDF document.
+// Verify if the comb format is enabled for a text input field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

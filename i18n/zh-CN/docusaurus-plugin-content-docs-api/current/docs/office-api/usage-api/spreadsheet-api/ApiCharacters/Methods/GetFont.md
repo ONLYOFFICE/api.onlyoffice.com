@@ -20,12 +20,12 @@ expression.GetFont();
 
 ## 示例
 
-获取表示电子表格中指定字符字体的字体对象。
+访问电子表格中单元格内特定字符范围的字体设置。
 
 ```javascript editor-xlsx
-// How to get font style of the array of characters in a spreadsheet.
+// How do I read or change the font properties of part of a cell's text in a spreadsheet?
 
-// Use font of the specified characters to set their style in a spreadsheet.
+// Target individual characters within a cell to apply bold, size, or other formatting in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

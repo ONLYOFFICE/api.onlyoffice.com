@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为垂直轴指定次要刻度线。
+在电子表格中垂直轴的主间隔之间显示次刻度线。
 
 ```javascript editor-xlsx
-// How to add a minor tick as an out for the vertical axis labels in a spreadsheet.
+// How do I add small subdivision markers to the vertical axis of a chart in a spreadsheet?
 
-// Specify minor tick mark for the vertical axis in a spreadsheet.
+// Break the vertical axis into finer increments using minor tick marks in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -20,12 +20,12 @@ expression.GetOrientation();
 
 ## 示例
 
-获取电子表格中的范围角度。
+读取电子表格中应用于单元格范围的文本旋转角度。
 
 ```javascript editor-xlsx
-// How to find out cell orientation of a range.
+// How do I find out the current text orientation of a range in a spreadsheet?
 
-// Get a range, get its orientation (upward, downward, etc.) and show it in the worksheet.
+// Confirm the direction cells are tilted after applying a rotation style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

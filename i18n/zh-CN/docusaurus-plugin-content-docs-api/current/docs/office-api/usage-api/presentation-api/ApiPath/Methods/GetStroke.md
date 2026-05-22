@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
+检索演示文稿中自定义形状轮廓的描边设置。
 
 ```javascript editor-pptx
-// How can I get the stroke using a geometry path in a presentation?
+// What outline properties are set on a shape path in a presentation?
 
-// Get the stroke for a geometry path in a presentation.
+// Display the stroke status and properties of a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

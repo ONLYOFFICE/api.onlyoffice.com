@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中将笔触设置为主要垂直网格线。
+更改 PDF 中图表垂直网格线的样式。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its vertical gridlines properties in a PDF document.
+// How do I format the vertical grid lines in a chart in a PDF?
 
-// Set major vertical gridlines using a chart object in a PDF document.
+// Add a custom border to the vertical reference lines in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

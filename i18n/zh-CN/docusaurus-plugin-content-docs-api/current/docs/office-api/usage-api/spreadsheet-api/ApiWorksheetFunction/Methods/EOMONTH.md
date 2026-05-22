@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定月数之前或之后的月份最后一天的序列号。
+查找电子表格中指定月数之后的月份的最后一天。
 
 ```javascript editor-xlsx
-// How to get a date of the last day of the month before or after specified months in a spreadsheet.
+// How do I get the end date of a month by counting months forward or backward in a spreadsheet?
 
-// Use function to get the serial number of the last day of the month before or after the specified number of months in a spreadsheet.
+// Calculate the final date of a month relative to a starting date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -6,13 +6,14 @@ ApiShape 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | 创建指定绘图对象的副本。 |
+| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | 创建指定形状的副本。 |
 | [Delete](./Methods/Delete.md) | boolean | 从父对象中删除指定的绘图对象。 |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | 返回 ApiShape 类的类型。 |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | 返回可以插入段落或文本块的形状内部内容。 |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | 从当前形状获取填充属性。 |
 | [GetGeometry](./Methods/GetGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 返回当前形状的几何对象。 |
 | [GetHeight](./Methods/GetHeight.md) | [EMU](../Enumeration/EMU.md) | 返回当前绘图的高度。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前绘图的内部 ID。 |
 | [GetLine](./Methods/GetLine.md) | [ApiStroke](../ApiStroke/ApiStroke.md) \| null | 从当前形状获取轮廓属性。 |
 | [GetParentPage](./Methods/GetParentPage.md) | [ApiPage](../ApiPage/ApiPage.md) | 返回 ApiDrawing 类的类型。 |
 | [GetPosX](./Methods/GetPosX.md) | [EMU](../Enumeration/EMU.md) | 获取绘图在页面上的 x 位置。 |

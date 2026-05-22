@@ -22,12 +22,12 @@ number \| null
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
+读取 PDF 中形状调整参数的当前值。
 
 ```javascript editor-pdf
-// How do I get the adj value in a PDF document?
+// How do I check what value a shape's adjustment is set to in a PDF?
 
-// Get the adj value using a geometry object in a PDF document.
+// Retrieve and display an adjustment parameter's current value in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

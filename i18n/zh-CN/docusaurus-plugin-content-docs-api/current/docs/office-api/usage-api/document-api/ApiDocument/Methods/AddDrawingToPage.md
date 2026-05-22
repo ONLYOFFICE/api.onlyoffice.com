@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-获取文档中给定绝对页面上的表格集合。
+在文档中将图像放置在页面上的固定位置。
 
 ```javascript editor-docx
-// How to add the drawing to the document.
+// How do I add a drawing to a specific page in a document?
 
-// Create an image from the URL and insert it to the page.
+// Anchor a logo or illustration at exact coordinates without disrupting text flow in a document.
 
 let doc = Api.GetDocument();
 let drawing = Api.CreateImage(

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件的导出（选中）值。
+定义 PDF 中复选框被选中时提交的值。
 
 ```javascript editor-pdf
-// How to set export value for a checkbox widget in a PDF document?
+// How do I set what data is recorded when someone checks a checkbox in a PDF?
 
-// Set export value and display the result in a PDF document.
+// Assign an export value to a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

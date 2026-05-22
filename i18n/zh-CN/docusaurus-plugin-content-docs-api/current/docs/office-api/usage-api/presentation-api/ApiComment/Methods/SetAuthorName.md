@@ -25,9 +25,9 @@ expression.SetAuthorName(sAuthorName);
 在演示文稿中设置批注的作者。
 
 ```javascript editor-pptx
-// How to change a comment's author name in a presentation.
+// Change the author name associated with a comment.
 
-// Get all comments from the presentation and set an author for the first one.
+// Retrieve the first comment and update its author name, then display the result.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

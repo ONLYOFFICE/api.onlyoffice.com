@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为指定的图表系列设置填充。
+在演示文稿中为图表系列应用纯色填充。
 
 ```javascript editor-pptx
-// How to color a chart seria in a presentation.
+// Change the background color of chart bars or areas in a presentation.
 
-// Create a chart, set its properties and its series background in a presentation.
+// Shade a chart series with a specific color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

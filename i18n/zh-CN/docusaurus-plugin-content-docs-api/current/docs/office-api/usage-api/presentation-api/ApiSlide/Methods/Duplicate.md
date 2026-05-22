@@ -22,12 +22,12 @@ expression.Duplicate(nPos);
 
 ## 示例
 
-创建指定幻灯片对象的副本，将新幻灯片添加到幻灯片集合。
+在演示文稿中创建幻灯片的副本。
 
 ```javascript editor-pptx
-// How to create a duplicate slide.
+// How do I duplicate a slide in a presentation?
 
-// Get a slide by its index and create its copy.
+// Select a slide and create a copy of it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

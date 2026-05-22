@@ -22,12 +22,12 @@ expression.Add(nodeName);
 
 ## 示例
 
-创建新的子节点并将其作为文档中当前 XML 节点的子节点插入。
+向文档中现有的自定义 XML 节点添加新的子节点。
 
 ```javascript editor-docx
-// How can I add using a custom XML node in a document?
+// How do I insert a child node into a custom XML node in a document?
 
-// Add for a custom XML node in a document.
+// Extend stored XML data by nesting a new element under an existing node in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取文档中当前表格条件样式的类型。
+读取文档中分配给表格样式的条件区域标识符。
 
 ```javascript editor-docx
-// How to get the table style type and display it in the document.
+// How do I find out which part of a table a style condition targets in a document?
 
-// Retrieve the type of the style in a document.
+// Identify the area of the table that a conditional formatting rule applies to in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

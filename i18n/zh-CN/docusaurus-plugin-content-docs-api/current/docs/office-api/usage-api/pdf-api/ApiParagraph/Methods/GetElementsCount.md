@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取 PDF 文档中当前段落的元素数量。
+计算 PDF 中段落内的所有文本元素。
 
 ```javascript editor-pdf
-// Find out how many elements a paragraph has in a PDF document.
+// How do I find out how many elements a paragraph contains in a PDF?
 
-// Return a number of elements from the paragraph object in a PDF document.
+// Get the total number of elements within a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

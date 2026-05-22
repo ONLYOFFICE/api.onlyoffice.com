@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中的表格标题。
+读取分配给文档中表格的标题标签。
 
 ```javascript editor-docx
-// How to get the table title in a document.
+// How do I retrieve the title stored with a table in a document?
 
-// Display the title of the table in the document.
+// Output the named heading attached to a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

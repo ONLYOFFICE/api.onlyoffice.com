@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set layout subtotals of a table in a spreadsheet.
+Control whether subtotals appear in a pivot table layout in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set subtotals of a table in a spreadsheet.
+// How do I turn subtotals on or off in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set subtotals using a boolean value in a spreadsheet.
+// Hide or show subtotal rows to simplify the pivot table view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

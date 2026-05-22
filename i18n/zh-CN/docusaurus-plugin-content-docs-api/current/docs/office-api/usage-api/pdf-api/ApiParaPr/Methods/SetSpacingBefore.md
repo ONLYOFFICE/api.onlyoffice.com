@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置当前段落的段前间距。
+在 PDF 中为段落上方添加空间。
 
 ```javascript editor-pdf
-// How to set the size of a spacing before a text from a paragraph properties in a PDF document.
+// How do I add space before a paragraph in a PDF?
 
-// Change the size property of a spacing before a paragraph in a PDF document.
+// Set the space above a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

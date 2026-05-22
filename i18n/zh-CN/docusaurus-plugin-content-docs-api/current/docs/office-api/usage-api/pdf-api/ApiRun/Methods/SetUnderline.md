@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-指定在 PDF 文档中当前 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
+在 PDF 中为文本添加下划线。
 
 ```javascript editor-pdf
-// How to create a new text and underline it in a PDF document.
+// Can text have an underline applied in a PDF?
 
-// Create a new text run and underline it in a PDF document.
+// Place a line beneath text characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中的批注是否已解决。
+确定文档中的批注是否标记为已解决。
 
 ```javascript editor-docx
-// How to know whether a comment is resolved or not in a document.
+// How do I check if a comment has been resolved in a document?
 
-// Get a boolean value that indicates that a comment is solved in a document.
+// Filter out already-resolved comments before processing open review threads.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

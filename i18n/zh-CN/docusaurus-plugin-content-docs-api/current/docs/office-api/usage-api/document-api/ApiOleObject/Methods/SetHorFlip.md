@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中水平翻转绘图对象。
+在文档中将形状从左到右镜像。
 
 ```javascript editor-docx
-// How to set the horizontal flip property of the shape in a document.
+// How do I flip a shape horizontally after adding it to a document?
 
-// Create a drawing, add text to it and flip it horizontally in a document.
+// Reverse the orientation of a cube shape so it faces the opposite direction in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在 PDF 文档中将磅转换为缇。
+在 PDF 中将磅转换为缇。
 
 ```javascript editor-pdf
-// How to convert points to twips in a PDF document?
+// How can I convert between different measurement units in a PDF?
 
-// Convert points to twips using the PDF document API.
+// Transform point measurements into twips and show the result in a PDF.
 
 const points = 1000;
 const twips = Api.PointsToTwips(points);

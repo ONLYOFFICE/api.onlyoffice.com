@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定文档中的垂直轴方向。
+反转文档中图表垂直轴的方向。
 
 ```javascript editor-docx
-// How to set an orientation of vertical axis in a document.
+// How do I flip the vertical axis so values run from high to low in a document?
 
-// Create a chart, set its properties and its vertical axis orientation in a document.
+// Display chart data in descending order along the vertical axis in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

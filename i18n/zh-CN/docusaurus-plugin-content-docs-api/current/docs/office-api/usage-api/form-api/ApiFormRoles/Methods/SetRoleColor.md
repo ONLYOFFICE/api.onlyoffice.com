@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-更改表单文档中角色的颜色。
+为文档中的角色分配颜色。
 
 ```javascript editor-forms
-// How to set role color for a form roles?
+// How do I apply a specific color to identify a role in a document?
 
-// Set role color and display the result in a form document.
+// Change the color value for a role to customize its appearance in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

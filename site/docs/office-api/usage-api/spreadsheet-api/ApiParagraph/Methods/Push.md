@@ -14,7 +14,7 @@ expression.Push(oElement);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the oElement type is not supported by a paragraph. |
+| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Push a run element to a paragraph inside a shape in a spreadsheet.
+Append a new text run to the end of a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I push in a spreadsheet?
+// How do I add text to the end of an existing paragraph in a spreadsheet?
 
-// Push using a paragraph object in a spreadsheet.
+// Extend a paragraph with extra content by inserting a run after all existing elements in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 100, 160));

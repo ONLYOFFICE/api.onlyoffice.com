@@ -26,9 +26,9 @@ number
 在电子表格中返回学生 t 分布的双尾逆函数。
 
 ```javascript editor-xlsx
-// How to create a serial number from the two-tailed inverse in a spreadsheet.
+// Calculate the inverse t-value for a given probability and degrees of freedom.
 
-// Use a function to get two-tailed inverse of the Student's t-distribution in a spreadsheet.
+// Apply the TINV function with probability and degrees of freedom parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

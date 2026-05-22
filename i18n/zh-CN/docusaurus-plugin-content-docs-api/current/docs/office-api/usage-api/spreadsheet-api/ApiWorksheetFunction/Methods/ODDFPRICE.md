@@ -30,12 +30,12 @@ number
 
 ## 示例
 
-在电子表格中返回首期不规则证券每 $100 面值的价格。
+计算电子表格中不规则首次付款期的证券价格。
 
 ```javascript editor-xlsx
-// How to get the price per $100 face value of a security with an odd first period in a spreadsheet.
+// How do I find the price of a bond with an odd first period in a spreadsheet?
 
-// Use a function to return the price per $100 face value of a security in a spreadsheet.
+// Determine the per-$100 value of a security when the first coupon period is irregular in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

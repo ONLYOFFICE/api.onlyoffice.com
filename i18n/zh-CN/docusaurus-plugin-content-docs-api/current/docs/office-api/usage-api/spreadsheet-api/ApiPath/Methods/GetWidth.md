@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析云形路径属性并在单元格中显示。显示路径数量、尺寸、笔触和填充信息。
+读取自定义形状路径的宽度并在电子表格中显示。
 
 ```javascript editor-xlsx
-// How do I get the width in a spreadsheet?
+// How do I check how wide a shape path is in a spreadsheet?
 
-// Get the width using a geometry path object in a spreadsheet.
+// Inspect the horizontal size of a drawn path to verify its dimensions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

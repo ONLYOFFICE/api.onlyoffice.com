@@ -20,12 +20,12 @@ expression.GetFontSize();
 
 ## 示例
 
-获取 PDF 文档中的文本字体大小。
+从 PDF 读取文本大小值。
 
 ```javascript editor-pdf
-// How to know font size of a text run in a PDF document.
+// How do I check what font size is used for text in a PDF?
 
-// Get the text properties of the run and display its font size in a PDF document.
+// Retrieve the font size measurement from text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

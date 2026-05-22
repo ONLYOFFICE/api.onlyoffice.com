@@ -22,12 +22,12 @@ expression.EmusToMillimeters(emu);
 
 ## Example
 
-Convert emus to millimeters in a document.
+Display a measurement converted from internal units to millimeters in a document.
 
 ```javascript editor-docx
-// How do I convert emus to millimeters in a document?
+// How do I show a size value in millimeters inside a document?
 
-// Convert emus to millimeters and display the result in a document.
+// Write the millimeter equivalent of a raw numeric measurement into a paragraph in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

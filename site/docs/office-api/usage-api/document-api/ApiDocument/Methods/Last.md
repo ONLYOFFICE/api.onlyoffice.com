@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the last document element in a document.
+Retrieve the last element of a document.
 
 ```javascript editor-docx
-// How to bold the final element of the document.
+// How do I access the final paragraph or element in a document?
 
-// Find the last paragraph and update its text properties in a document.
+// Apply bold formatting to the closing section without knowing the total element count in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

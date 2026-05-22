@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中返回到期付息证券的年收益率。
+计算电子表格中到期支付利息的证券的年收益率。
 
 ```javascript editor-xlsx
-// How to return annual yield of a security in a spreadsheet.
+// How do I find the yield of a bond that only pays interest when it matures in a spreadsheet?
 
-// Use a function to get a security annual yield in a spreadsheet.
+// Determine the annual return for a security with a single interest payment at maturity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的批注文本。
+读取文档中批注的文本内容。
 
 ```javascript editor-docx
-// How to get a raw text of a comment in a document.
+// How do I get the message written inside a comment in a document?
 
-// Get all comments from the presentation and the first one's text.
+// Extract a comment's text to display or process reviewer notes programmatically.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

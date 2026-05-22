@@ -31,12 +31,12 @@ object
 
 ## 示例
 
-获取以对象形式表示的文档信息，并将应用程序名称粘贴到文档的最后一个段落中。
+检索文档元数据并在文档中显示应用程序名称。
 
 ```javascript editor-docx
-// How to get information such as application with which the document was created.
+// How do I read document properties like the creating application in a document?
 
-// Display the document information.
+// Add a paragraph showing which application produced the document in a document.
 
 let doc = Api.GetDocument();
 let docInfo = doc.GetDocumentInfo();

@@ -6,12 +6,12 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a copy of the specified drawing object. |
+| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a copy of the specified shape. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object from the parent. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns the type of the ApiShape class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the shape inner contents where a paragraph or text runs can be inserted. |
-| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Deprecated in 6.2. Returns the shape inner contents where a paragraph or text runs can be inserted. |
+| [GetDocContent](./Methods/GetDocContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Deprecated in 6.2. |
 | [GetFill](./Methods/GetFill.md) | [ApiFill](../ApiFill/ApiFill.md) \| null | Gets the fill properties from the current shape. |
 | [GetFlipH](./Methods/GetFlipH.md) | boolean \| null | Get horizontal flip of current drawing. |
 | [GetFlipV](./Methods/GetFlipV.md) | boolean \| null | Get vertical flip of current drawing. |
@@ -37,10 +37,10 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
 | [SetGeometry](./Methods/SetGeometry.md) | boolean | Sets a custom geometry for the current shape. |
-| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | Sets a hyperlink to the current drawing object (shape or image). Pass null to remove the hyperlink. |
+| [SetHyperlink](./Methods/SetHyperlink.md) | boolean | Sets a hyperlink to the current drawing object (shape or image). |
 | [SetLine](./Methods/SetLine.md) | boolean | Sets the outline properties to the current shape. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
 | [SetPaddings](./Methods/SetPaddings.md) | boolean | Sets the text paddings to the current shape. |
 | [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | Sets the specified placeholder to the current drawing object. |

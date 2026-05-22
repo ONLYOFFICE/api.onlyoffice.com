@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前图形对象设置填充格式属性。
+在演示文稿中为形状应用渐变颜色填充。
 
 ```javascript editor-pptx
-// How to color a drawing with a radiant fill in a presentation.
+// How do I add a color gradient effect to a shape in a presentation?
 
-// Change the background color of the shape in a presentation.
+// Set the background fill of a shape with a radial gradient in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

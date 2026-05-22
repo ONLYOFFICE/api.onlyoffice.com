@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the comparison operator for an icon criterion in a spreadsheet.
+Define the comparison operator for an icon criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I set operator in a spreadsheet?
+// How do I control whether an icon criterion triggers on values greater than or equal to a threshold in a spreadsheet?
 
-// Set operator using an icon criterion object in a spreadsheet.
+// Choose between greater-than and other comparison rules to decide when an icon appears in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Results');

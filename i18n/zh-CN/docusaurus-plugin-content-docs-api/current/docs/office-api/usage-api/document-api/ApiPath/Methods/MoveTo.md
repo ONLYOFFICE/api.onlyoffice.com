@@ -23,12 +23,12 @@ expression.MoveTo(x, y);
 
 ## 示例
 
-创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
+设置文档中自定义形状绘图路径的起始点。
 
 ```javascript editor-docx
-// How to move to for a geometry path in a document?
+// How do I position the pen at a specific point before drawing a shape's outline in a document?
 
-// Move to and display the result in a document.
+// Begin a new path segment from a chosen coordinate to control where lines start in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

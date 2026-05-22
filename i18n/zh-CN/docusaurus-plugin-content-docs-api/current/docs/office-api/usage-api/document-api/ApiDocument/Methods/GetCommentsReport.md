@@ -20,12 +20,12 @@ expression.GetCommentsReport();
 
 ## 示例
 
-获取添加到文档的所有批注的报告。
+在文档中构建按作者分组的所有批注的完整报告。
 
 ```javascript editor-docx
-// Retrieve each comment reports and display their contents one by one in a document.
+// How do I collect and display every comment made by each user in a document?
 
-// Create a table and insert the comment reports to its cells.
+// Summarize review activity by listing comment details in a formatted table in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -58,7 +58,7 @@ for (let userName in commentsReport) {
 	rows += commentsReport[userName].length;
 }
 let cols = 6;
-let table = Api.CreateTable(cols, rows);
+let table = Api.CreateTable(rows, cols);
 doc.Push(table);
 
 function addTextToCell(cell, text) {

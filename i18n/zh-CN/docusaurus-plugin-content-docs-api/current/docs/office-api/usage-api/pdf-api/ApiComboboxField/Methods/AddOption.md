@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中向带有选项列表的字段添加新选项。
+在 PDF 中向下拉列表或列表字段添加选项。
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
+// How can I add options to a dropdown list in a PDF?
 
-// Add the option using a list field object in a PDF document.
+// Populate a form field with multiple selectable items in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

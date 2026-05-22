@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the text properties of the run in a presentation.
+Get text properties from a text run in a presentation.
 
 ```javascript editor-pptx
-// How to get the text properties of the current text run object and change its font size in a presentation.
+// What text formatting properties can be read from a run?
 
-// Resize a font of a text run in a presentation.
+// Retrieve text properties and modify font size in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

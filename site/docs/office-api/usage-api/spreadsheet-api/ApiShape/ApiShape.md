@@ -6,6 +6,8 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
+| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | Creates a copy of the specified shape. |
+| [Delete](./Methods/Delete.md) | boolean | Deletes the specified drawing object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns a type of the ApiShape class. |
 | [GetContent](./Methods/GetContent.md) | [ApiDocumentContent](../ApiDocumentContent/ApiDocumentContent.md) | Returns the shape inner contents where a paragraph or text runs can be inserted. |
@@ -28,10 +30,10 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetGeometry](./Methods/SetGeometry.md) | boolean | Sets a custom geometry for the current shape. |
 | [SetLine](./Methods/SetLine.md) | boolean | Sets the outline properties to the current shape. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
 | [SetPaddings](./Methods/SetPaddings.md) | boolean | Sets the text paddings to the current shape. |
-| [SetPosition](./Methods/SetPosition.md) | None | Changes the position for the drawing object. 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set. |
+| [SetPosition](./Methods/SetPosition.md) | None | Changes the position for the drawing object. |
 | [SetRotation](./Methods/SetRotation.md) | boolean | Sets the rotation angle to the current drawing object. |
 | [SetSize](./Methods/SetSize.md) | None | Sets a size of the object (image, shape, chart) bounding box. |
 | [SetVerticalTextAlign](./Methods/SetVerticalTextAlign.md) | boolean | Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted. |

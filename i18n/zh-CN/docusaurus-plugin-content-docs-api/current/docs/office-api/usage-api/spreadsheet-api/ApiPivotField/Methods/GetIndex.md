@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中透视字段的索引。
+读取电子表格中透视字段在数据透视表内的数字位置。
 
 ```javascript editor-xlsx
-// How to get a pivot field's index in a spreadsheet.
+// How do I find the index number assigned to a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get an index of a specified pivot field in a spreadsheet.
+// Identify where a pivot field sits in the ordered list of all pivot table fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

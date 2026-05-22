@@ -22,12 +22,12 @@ expression.SetLayoutBlankLine(insert);
 
 ## 示例
 
-在电子表格中设置透视字段的布局空白行。
+在电子表格中透视字段的每组后添加空行以提高可读性。
 
 ```javascript editor-xlsx
-// How to change a pivot field layout blank line in a spreadsheet.
+// How do I insert a blank row after each pivot field group in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout blank line of a specified pivot in a spreadsheet.
+// Visually separate pivot groups by toggling the blank line spacing option in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

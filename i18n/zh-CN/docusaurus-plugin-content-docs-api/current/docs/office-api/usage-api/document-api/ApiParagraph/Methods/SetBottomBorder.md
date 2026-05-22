@@ -8,12 +8,12 @@
 
 ## 示例
 
-指定在文档中具有相同段落边框设置的一组段落下方显示的边框。
+通过样式在文档中为段落添加底部边框。
 
 ```javascript editor-docx
-// Add the bottom border to the paragraph in a document.
+// How do I place a line below a paragraph using paragraph border settings in a document?
 
-// Get the first paragraph and set its border in a document.
+// Visually separate a styled paragraph from content below it by drawing a bottom edge.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

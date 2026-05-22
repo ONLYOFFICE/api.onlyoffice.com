@@ -23,9 +23,9 @@ number
 在电子表格中以 MM/dd/yy 格式返回当前日期。
 
 ```javascript editor-xlsx
-// How to get a current date in a spreadsheet.
+// Retrieve the system date and display it with the built-in time format.
 
-// Use a function to get current date in MM/dd/yy format.
+// Apply the TODAY function to insert the current date into a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

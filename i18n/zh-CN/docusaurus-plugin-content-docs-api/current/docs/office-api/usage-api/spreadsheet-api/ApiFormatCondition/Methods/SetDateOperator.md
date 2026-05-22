@@ -22,12 +22,12 @@ expression.SetDateOperator(DateOperator);
 
 ## 示例
 
-设置时间段条件格式规则的日期运算符。
+分配电子表格中基于日期的条件格式规则检查的时间段。
 
 ```javascript editor-xlsx
-// How to change date operators in time period conditional formatting rules.
+// How do I tell a date formatting rule whether to highlight cells from last week, this month, or another period in a spreadsheet?
 
-// Set conditional formatting rule date operator.
+// Choose which relative date window triggers a formatting rule for date cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

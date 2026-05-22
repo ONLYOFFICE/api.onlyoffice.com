@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取表示电子表格中集合中对象数量的值。
+计算构成电子表格中多区域选区的独立范围数量。
 
 ```javascript editor-xlsx
-// How to get collection objects count in a spreadsheet.
+// How do I find the total number of distinct ranges within a multi-area selection in a spreadsheet?
 
-// Get the count for a range areas collection in a spreadsheet.
+// Determine the size of an areas collection to loop over each range individually in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1:D1");

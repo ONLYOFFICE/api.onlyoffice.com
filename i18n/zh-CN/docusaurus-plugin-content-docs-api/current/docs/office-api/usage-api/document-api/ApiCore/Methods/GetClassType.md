@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中核心属性对象的类类型。
+读取文档中核心属性对象的类类型。
 
 ```javascript editor-docx
-// How can I get the class type of a core properties in a document?
+// How do I find out what class type the core properties object belongs to in a document?
 
-// Get the class type of a core properties and display it in the document.
+// Confirm the object identity before calling type-specific methods in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

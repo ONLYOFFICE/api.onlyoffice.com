@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中形状的类类型。
+读取形状的类型标签并将其写入电子表格的单元格中。
 
 ```javascript editor-xlsx
-// How to identify the class type of a shape in a spreadsheet?
+// How do I find out what type a shape object is in a spreadsheet?
 
-// Obtain the class type identifier of a shape object in a spreadsheet.
+// Confirm the category of a shape by printing its type label to the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

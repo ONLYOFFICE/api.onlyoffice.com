@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的布局分页符。
+读取电子表格中数据透视表字段是否在每组之后插入分页符。
 
 ```javascript editor-xlsx
-// How to get a layout page break of a pivot field.
+// How do I check if a pivot field adds a page break between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout page break of a specified pivot field.
+// Verify the page break setting for a pivot field to understand how groups are separated on print.
 
 let worksheet = Api.GetActiveSheet();
 

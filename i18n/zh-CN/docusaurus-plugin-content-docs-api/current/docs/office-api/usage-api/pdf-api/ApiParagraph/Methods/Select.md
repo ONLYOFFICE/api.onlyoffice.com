@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中选中当前段落。
+在 PDF 中高亮显示并选择段落。
 
 ```javascript editor-pdf
-// How do I select in a PDF document?
+// How do I mark a paragraph as selected in a PDF?
 
-// Select using a paragraph object in a PDF document.
+// Activate selection on a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

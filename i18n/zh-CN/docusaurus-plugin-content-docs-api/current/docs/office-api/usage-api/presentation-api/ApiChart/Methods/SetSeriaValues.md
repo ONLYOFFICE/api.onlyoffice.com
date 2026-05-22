@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为指定的图表系列设置值。
+修改演示文稿中特定图表系列中显示的数字。
 
 ```javascript editor-pptx
-// How to set values to the specified chart object in a presentation.
+// Change the data values of a chart series in a presentation.
 
-// Create a chart, set its properties and its series values in a presentation.
+// Update a chart series with new numerical data in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

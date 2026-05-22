@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将毫米转换为像素。
+将毫米测量值转换为像素并在文档中显示结果。
 
 ```javascript editor-docx
-// How can I convert millimeters to pixels in a document?
+// How do I find the pixel equivalent of a measurement given in millimeters in a document?
 
-// Convert millimeters to pixels in a document.
+// Show how many pixels correspond to a specific number of millimeters in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

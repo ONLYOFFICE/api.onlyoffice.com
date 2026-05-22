@@ -20,12 +20,12 @@ expression.GetAllFields();
 
 ## 示例
 
-获取文档中的所有字段。
+访问 PDF 中的所有输入字段。
 
 ```javascript editor-pdf
-// How can I get all fields using a document in a PDF document?
+// How do I retrieve all the form fields from a PDF?
 
-// Get all fields for a document in a PDF document.
+// Locate and list each field's type in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

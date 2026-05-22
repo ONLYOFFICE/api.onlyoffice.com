@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置单元格范围中文本的垂直对齐方式。
+在电子表格中的单元格范围内垂直对齐文本。
 
 ```javascript editor-xlsx
-// How to change the vertical alignment of the cell content.
+// How do I position text at the top, middle, or bottom of cells in a spreadsheet?
 
-// Change the vertical alignment of the cell range content to distributed.
+// Control where content sits within the height of each cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:D5");

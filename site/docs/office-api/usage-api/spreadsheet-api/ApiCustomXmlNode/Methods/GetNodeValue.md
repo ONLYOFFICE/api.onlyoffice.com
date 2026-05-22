@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the value of a custom XML node in a spreadsheet.
+Read the stored value of a specific XML node in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the node value for a custom XML node in a spreadsheet?
+// How do I retrieve what value is saved inside an XML node in a spreadsheet?
 
-// Get the node value and display the result in a spreadsheet.
+// Extract a node's raw value to inspect embedded data in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中行的内容。
+清除文档中表格行的所有内容。
 
 ```javascript editor-docx
-// How to delete the content of the first row in a document.
+// How do I wipe out everything written inside a row's cells in a document?
 
-// Remove the text from the table row in a document.
+// Empty a row so its cells contain no text or other content in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetIndFirstLine](../../ApiParaPr/Methods/GetIndFirstLi
 
 ## Example
 
-Get the paragraph first line indentation in a spreadsheet.
+Read the first-line indent distance set on a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get first line indent of a paragraph in a spreadsheet.
+// How do I check how far the first line of a paragraph is indented in a spreadsheet?
 
-// Get paragraph lines using the indent order in a spreadsheet.
+// Retrieve the leading indent value to confirm the paragraph's opening offset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

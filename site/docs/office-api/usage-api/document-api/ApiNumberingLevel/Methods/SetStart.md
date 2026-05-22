@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Specify the starting value for the numbering used by the parent numbering level within a given numbering level definition in a document.
+Set the starting counter value for a nested numbering level in a document.
 
 ```javascript editor-docx
-// How to set the bullet numbering to the paragraph in a document.
+// How do I make a child list begin at a specific number instead of one in a document?
 
-// Reset the numbering of the bulleted text in a document.
+// Offset a sub-list's first item to continue numbering from a chosen value in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

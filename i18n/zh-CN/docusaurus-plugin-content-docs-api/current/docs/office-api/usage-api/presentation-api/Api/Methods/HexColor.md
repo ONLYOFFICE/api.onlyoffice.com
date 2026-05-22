@@ -25,9 +25,9 @@ expression.HexColor(hexString);
 在演示文稿中创建十六进制颜色并将其用作形状填充。
 
 ```javascript editor-pptx
-// How to hex color in a presentation?
+// Create a hex color using the presentation API.
 
-// Hex color using the presentation API.
+// Apply the hex color to a shape fill.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

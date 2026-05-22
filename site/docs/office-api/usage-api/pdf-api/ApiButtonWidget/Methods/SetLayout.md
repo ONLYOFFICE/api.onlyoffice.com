@@ -25,9 +25,9 @@ boolean
 Set button widget layout type in a PDF document.
 
 ```javascript editor-pdf
-// How do I set layout in a PDF document?
+// Apply layout type such as 'iconTextV' to a button widget.
 
-// Set layout using a button widget object in a PDF document.
+// Display the set layout value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

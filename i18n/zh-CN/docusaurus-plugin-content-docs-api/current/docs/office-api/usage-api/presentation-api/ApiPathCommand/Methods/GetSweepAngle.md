@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析演示文稿形状中的弧线命令参数。获取并显示弧线半径和角度信息。
+获取演示文稿中弧形的扫掠角度。
 
 ```javascript editor-pptx
-// How can I get the sweep angle using a path command in a presentation?
+// How do I find how far an arc sweeps in a presentation?
 
-// Get the sweep angle for a path command in a presentation.
+// Read angle properties to check arc span in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

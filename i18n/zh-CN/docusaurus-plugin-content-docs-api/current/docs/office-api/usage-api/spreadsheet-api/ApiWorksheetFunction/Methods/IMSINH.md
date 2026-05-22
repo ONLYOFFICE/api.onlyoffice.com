@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的双曲正弦值。
+计算电子表格中复数的双曲正弦。
 
 ```javascript editor-xlsx
-// How to get the hyperbolic sine in a spreadsheet.
+// How do I find the hyperbolic sine value of a complex number in a spreadsheet?
 
-// Use a function to get the hyperbolic sine of a complex number in a spreadsheet.
+// Get the hyperbolic sine result for complex number calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中如果数字为偶数则返回 true。
+检查电子表格中的数字是否为偶数。
 
 ```javascript editor-xlsx
-// How to check if the number is even in a spreadsheet.
+// How do I determine if a number is even in a spreadsheet?
 
-// Use a function to check whether a number is even or not in a spreadsheet.
+// Test whether a value is an even number in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

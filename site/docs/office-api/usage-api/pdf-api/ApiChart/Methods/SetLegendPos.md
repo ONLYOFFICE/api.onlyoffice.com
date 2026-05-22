@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-How to place a chart legend in a PDF document.
+Position the legend on a chart in a PDF.
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's position in a PDF document.
+// How do I move the legend to the top, bottom, left, or right in a PDF?
 
-// Set legend pos for a chart in a PDF document.
+// Place the legend at the bottom of the chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

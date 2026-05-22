@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-通过字段指令代码向指定范围添加字段。注意：此方法会移除文档中范围内的文本。
+用自动更新的字段替换文档中的文本选区。
 
 ```javascript editor-docx
-// How do I add the field in a document?
+// How do I insert a dynamic field that replaces existing text in a document?
 
-// Add the field using a range object.
+// Swap out a passage for a field that updates its value automatically in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

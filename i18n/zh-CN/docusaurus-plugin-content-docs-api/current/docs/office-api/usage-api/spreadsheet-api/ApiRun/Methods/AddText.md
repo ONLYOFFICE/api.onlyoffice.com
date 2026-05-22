@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中向 run 添加文本。
+将文本写入文本运行并将其放入电子表格工作表上的形状内。
 
 ```javascript editor-xlsx
-// How to add a text to the run in a spreadsheet.
+// How do I put readable text inside a shape in a spreadsheet?
 
-// Get a paragraph and add a text to it in a spreadsheet.
+// Build a styled text run and attach it to a paragraph within a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

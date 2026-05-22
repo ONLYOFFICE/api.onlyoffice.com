@@ -22,12 +22,12 @@ expression.SetUserId(sUserId);
 
 ## 示例
 
-在电子表格中设置批注回复作者的用户 ID。
+为电子表格中批注回复的作者分配用户标识符。
 
 ```javascript editor-xlsx
-// How to change a reply author ID in a spreadsheet.
+// How do I change which user is credited as the author of a comment reply in a spreadsheet?
 
-// Replace a reply author ID to a new one in a spreadsheet.
+// Update the author identity linked to an existing comment reply in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

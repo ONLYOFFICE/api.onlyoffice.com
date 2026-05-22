@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-将文档中的节对象转换为 JSON 对象。
+将节设置保存为文档中的可移植数据结构。
 
 ```javascript editor-docx
-// How to get a JSON from the section object in a document.
+// How do I export a section's configuration so it can be stored or reused in a document?
 
-// Convert the section to json and add it to the document.
+// Capture and restore the layout properties of a section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

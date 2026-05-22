@@ -20,7 +20,7 @@ expression.VDB(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 | arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将计算折旧的起始期间，使用与资产使用寿命相同的单位。 |
 | arg5 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将计算折旧的结束期间，使用与资产使用寿命相同的单位。 |
 | arg6 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 余额下降的比率。如果省略，函数将假定为 2 |
-| arg7 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定当折旧大于余额递减计算时是否使用直线折旧（**false** 或省略）。如果设置为 **true**，函数使用余额递减法。 |
+| arg7 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定当折旧大于余额递减计算时是否使用直线折旧（**false** 或省略）。 |
 
 ## 返回值
 
@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-在电子表格中使用双倍余额递减法或指定的其他方法返回任何指定期间（包括部分期间）的资产折旧。
+使用双倍余额递减法计算电子表格中的资产折旧。
 
 ```javascript editor-xlsx
-// How to estimate depreciation of an asset for any specified period in a spreadsheet.
+// How do I calculate asset depreciation over a specific time period in a spreadsheet?
 
-// Use a depreciation of an asset for any specified period including partial periods in a spreadsheet.
+// Determine the depreciation amount for an asset including partial periods in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ expression.SetFill(sFill);
 
 ## 示例
 
-创建自定义形状并将其添加到页面。应用具有特定填充和笔触属性的自定义几何图形。
+在 PDF 中为形状路径内部应用填充颜色。
 
 ```javascript editor-pdf
-// How to set fill for a geometry path in a PDF document?
+// How do I color the interior of a shape in a PDF?
 
-// Set fill and display the result in a PDF document.
+// Enable shading for a custom drawn shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

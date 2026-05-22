@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中统一颜色返回的类类型。
+读取颜色对象的类型标识符并在文档中显示。
 
 ```javascript editor-docx
-// How do I check what type a uni color object is in a document?
+// How do I find out what kind of color object I am working with in a document?
 
-// Retrieve and output the class type string for a uni color in a document.
+// Confirm the category of a preset color by printing its type label in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

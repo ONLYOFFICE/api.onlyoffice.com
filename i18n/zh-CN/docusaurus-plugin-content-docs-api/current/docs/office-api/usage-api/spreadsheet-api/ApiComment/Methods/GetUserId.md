@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中批注作者的用户 ID。
+检索在电子表格中编写批注的人员的唯一标识符。
 
 ```javascript editor-xlsx
-// How to get a comment author's user ID in a spreadsheet.
+// How do I look up the user ID belonging to the author of a comment in a spreadsheet?
 
-// Add a comment author's ID to a range of the worksheet.
+// Identify who created a comment by reading their account identifier in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

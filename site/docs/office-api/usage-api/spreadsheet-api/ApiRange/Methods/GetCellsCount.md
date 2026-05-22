@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get a count of cells in the specified range in a spreadsheet.
+Count the total number of cells inside a selected range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a count of cells in the range.
+// How do I find out how many cells are in a range in a spreadsheet?
 
-// Get a count of cells in the range and display it in another cell.
+// Confirm the expected cell count by writing the total next to the filled range.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:D10");

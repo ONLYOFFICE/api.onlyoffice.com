@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查 PDF 文档中的文本是否为大写。
+检测 PDF 中的文本是否使用大写字母格式。
 
 ```javascript editor-pdf
-// How to know whether the text letters are uppercase or not in a PDF document.
+// How do I check whether text letters are set to uppercase in a PDF?
 
-// Get the text properties of the run and find whether it is capitalized or not in a PDF document.
+// Retrieve the capitalization setting from text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

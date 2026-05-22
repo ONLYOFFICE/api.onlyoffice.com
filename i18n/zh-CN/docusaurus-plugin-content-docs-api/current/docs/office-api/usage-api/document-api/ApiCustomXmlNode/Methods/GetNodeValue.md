@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取自定义 XML 节点的值并在文档中显示。
+提取文档中自定义 XML 节点存储的值。
 
 ```javascript editor-docx
-// How do I get the node value in a document?
+// How do I get the value of a custom XML node in a document?
 
-// Get the node value using a custom XML node object in a document.
+// Read raw data out of a specific XML element to use or display it in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

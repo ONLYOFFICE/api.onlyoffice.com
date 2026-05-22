@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其创建日期。
+检索 PDF 中注释的创建日期。
 
 ```javascript editor-pdf
-// How to get the creation date for an annotation in a PDF document?
+// When was an annotation added to the PDF?
 
-// Get the creation date and display the result in a PDF document.
+// Check the creation timestamp of an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

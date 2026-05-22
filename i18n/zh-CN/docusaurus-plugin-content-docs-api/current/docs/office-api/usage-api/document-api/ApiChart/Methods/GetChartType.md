@@ -20,12 +20,12 @@ expression.GetChartType();
 
 ## 示例
 
-获取文档中图表的图表类型。
+读取并显示文档中嵌入图表的图表类型。
 
 ```javascript editor-docx
-// How to get the chart type for a chart in a document?
+// How do I find out which chart type is used for a chart in a document?
 
-// Get the chart type and display the result in a document.
+// Confirm a chart's category at runtime by showing its type in the chart title in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);

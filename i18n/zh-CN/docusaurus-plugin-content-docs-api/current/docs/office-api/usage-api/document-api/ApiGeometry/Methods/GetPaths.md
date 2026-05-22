@@ -20,12 +20,12 @@ expression.GetPaths();
 
 ## 示例
 
-分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
+从文档中形状的几何图形检索所有路径。
 
 ```javascript editor-docx
-// How can I get the paths using a geometry in a document?
+// How do I get every path that belongs to a shape's geometry in a document?
 
-// Get the paths for a geometry in a document.
+// Collect all geometry paths at once to examine or iterate them as an array in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

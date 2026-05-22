@@ -25,9 +25,9 @@ number
 在电子表格中将八进制数转换为十进制。
 
 ```javascript editor-xlsx
-// How to get a decimal number from an octal in a spreadsheet.
+// How do I convert an octal value to decimal in a spreadsheet?
 
-// Use a function to convert an octal to a decimal number in a spreadsheet.
+// Change an octal number into its decimal equivalent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

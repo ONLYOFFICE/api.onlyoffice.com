@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-在演示文稿中将主题字体方案对象转换为 JSON 对象。
+在演示文稿中将字体方案转换为 JSON 格式。
 
 ```javascript editor-pptx
-// How to convert a theme font scheme object to a JSON object in a presentation.
+// How can I export a font scheme as JSON data in a presentation?
 
-// Create a theme font scheme, convert it to JSON and create a new object from it in a presentation.
+// Create a font scheme, export it to JSON, and recreate it from the JSON in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

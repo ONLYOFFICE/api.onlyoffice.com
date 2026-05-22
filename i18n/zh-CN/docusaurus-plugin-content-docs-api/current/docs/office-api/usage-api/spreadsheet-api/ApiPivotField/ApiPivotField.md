@@ -27,7 +27,7 @@
 | Orientation | number | 返回或设置表示字段在指定数据透视表报表中位置的透视字段方向值。 |
 | Parent | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 返回当前字段的父对象。 |
 | PivotFilters | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | 返回表示指定字段筛选器的对象。 |
-| PivotItems | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] | 返回表示单个数据透视表项（ApiPivotItem 对象）或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。 |
+| PivotItems | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] | 返回表示单个数据透视表项目（ApiPivotItem 对象）的对象 |
 | Position | number | 返回或设置表示字段在其方向（行、列、页、数据）中所有字段中的位置（第一、第二、第三等）的值。 |
 | RepeatLabels | boolean | 返回或设置指定是否在每行重复项目标签的设置。 |
 | ShowAllItems | boolean | 返回或设置指定是否显示无数据项的设置。 |
@@ -61,11 +61,11 @@
 | [GetLayoutSubtotalLocation](./Methods/GetLayoutSubtotalLocation.md) | [LayoutSubtotalLocationType](../Enumeration/LayoutSubtotalLocationType.md) | 返回布局分类汇总位置。 |
 | [GetLayoutSubtotals](./Methods/GetLayoutSubtotals.md) | boolean | 返回指定是否显示分类汇总的设置。 |
 | [GetName](./Methods/GetName.md) | string | 返回表示对象名称的值。 |
-| [GetOrientation](./Methods/GetOrientation.md) | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | 返回表示字段在指定数据透视表报表中位置的透视字段方向值。 |
+| [GetOrientation](./Methods/GetOrientation.md) | [PivotFieldOrientationType](../Enumeration/PivotFieldOrientationType.md) | 返回表示位置的数据透视字段方向值 |
 | [GetParent](./Methods/GetParent.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 返回当前字段的父对象。 |
 | [GetPivotFilters](./Methods/GetPivotFilters.md) | [ApiPivotFilters](../ApiPivotFilters/ApiPivotFilters.md) | 返回应用于指定透视字段的透视筛选器集合。 |
-| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | 返回表示单个数据透视表项（ApiPivotItem 对象）或指定字段中所有可见和隐藏项集合（ApiPivotItem 对象数组）的对象。 |
-| [GetPosition](./Methods/GetPosition.md) | number | 返回表示字段在其方向（行、列、页、数据）中所有字段中的位置（第一、第二、第三等）的值。 |
+| [GetPivotItems](./Methods/GetPivotItems.md) | [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md)[] \| [ApiPivotItem](../ApiPivotItem/ApiPivotItem.md) \| null | 返回表示单个数据透视表项目（ApiPivotItem 对象）的对象 |
+| [GetPosition](./Methods/GetPosition.md) | number | 返回表示字段位置（第一、第二、第三等）的值 |
 | [GetRepeatLabels](./Methods/GetRepeatLabels.md) | boolean | 返回指定是否在每行重复项目标签的设置。 |
 | [GetShowAllItems](./Methods/GetShowAllItems.md) | boolean | 返回指定是否显示无数据项的设置。 |
 | [GetShowingInAxis](./Methods/GetShowingInAxis.md) | boolean | 返回指定数据透视表字段当前是否在数据透视表中可见的设置。 |
@@ -88,8 +88,8 @@
 | [SetLayoutSubtotalLocation](./Methods/SetLayoutSubtotalLocation.md) | 无 | 设置布局分类汇总位置。 |
 | [SetLayoutSubtotals](./Methods/SetLayoutSubtotals.md) | 无 | 设置指定是否显示分类汇总的设置。 |
 | [SetName](./Methods/SetName.md) | 无 | 设置表示对象名称的值。 |
-| [SetOrientation](./Methods/SetOrientation.md) | 无 | 设置表示字段在指定数据透视表报表中位置的透视字段方向值。 |
-| [SetPosition](./Methods/SetPosition.md) | 无 | 设置表示字段在其方向（行、列、页、数据）中所有字段中的位置（第一、第二、第三等）的值。 |
+| [SetOrientation](./Methods/SetOrientation.md) | 无 | 设置表示位置的数据透视字段方向值 |
+| [SetPosition](./Methods/SetPosition.md) | 无 | 设置表示字段位置（第一、第二、第三等）的值 |
 | [SetRepeatLabels](./Methods/SetRepeatLabels.md) | 无 | 设置指定是否在每行重复项目标签的设置。 |
 | [SetShowAllItems](./Methods/SetShowAllItems.md) | 无 | 设置指定是否显示无数据项的设置。 |
 | [SetSubtotalName](./Methods/SetSubtotalName.md) | 无 | 设置在指定数据透视表报表的分类汇总列或行标题中显示的文本标签。 |

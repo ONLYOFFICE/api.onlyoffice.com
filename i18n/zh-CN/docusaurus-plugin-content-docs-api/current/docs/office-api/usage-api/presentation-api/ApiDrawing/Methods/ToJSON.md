@@ -23,7 +23,7 @@ JSON
 在演示文稿中将形状转换为 JSON。
 
 ```javascript editor-pptx
-// How to convert a drawing object to a JSON object in a presentation.
+// JSON conversion allows serializing drawing objects for storage or transfer.
 
 // Get a shape object from a slide and convert to JSON.
 

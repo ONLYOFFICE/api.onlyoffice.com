@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add new options to field with list of options in a PDF document.
+Add choices to a dropdown or list field in a PDF.
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
+// How can I add options to a dropdown list in a PDF?
 
-// Add the option using a list field object in a PDF document.
+// Populate a form field with multiple selectable items in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.GetSection();
 
 ## 示例
 
-获取文档中的段落所属节。
+检索文档中包含给定段落的节。
 
 ```javascript editor-docx
-// How to get the section where the paragraph is located in a document.
+// How do I find the section a paragraph belongs to in a document?
 
-// Get the paragraph section and set its page size.
+// Resize the page by accessing the section through one of its paragraphs in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

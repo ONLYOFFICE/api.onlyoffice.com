@@ -22,12 +22,12 @@ expression.SetTextPr(textPr);
 
 ## 示例
 
-在 PDF 文档中为富文本 run 对象设置富文本属性。
+在 PDF 中为文本内容应用富文本格式。
 
 ```javascript editor-pdf
-// How can I set text pr using a rich text run in a PDF document?
+// How do I add text styling to PDF annotations in a PDF?
 
-// Set text pr for a rich text run in a PDF document.
+// Configure multiple text properties at once in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

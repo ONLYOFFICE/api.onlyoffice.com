@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Assign a web image as the watermark in a document.
 
 ```javascript editor-docx
-// How to set the image URL of the watermark in a document.
+// How do I point the watermark to an image hosted online in a document?
 
-// Indicate the link address to the image using the watermark settings in a document.
+// Use a remote image as the background watermark in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

@@ -22,12 +22,12 @@ expression.GetCommand(nIndex);
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+按位置检索文档中的单个绘图路径步骤。
 
 ```javascript editor-docx
-// How do I get the command in a document?
+// How do I read one specific step from a shape's outline path in a document?
 
-// Get the command using a geometry path object in a document.
+// Inspect the type and coordinates of any individual path step in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

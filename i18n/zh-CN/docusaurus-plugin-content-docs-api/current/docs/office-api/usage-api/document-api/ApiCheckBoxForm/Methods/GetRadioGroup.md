@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中复选框为单选按钮时的单选组键。
+检索将文档中相关单选按钮链接在一起的单选组名称。
 
 ```javascript editor-docx
-// How to get checkbox form radio group.
+// How do I find out which radio group a checkbox button belongs to in a document?
 
-// Retrieve type of a created checkbox object and display it in a document.
+// Confirm that multiple radio buttons share the same group so only one can be selected at a time in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "placeholder": "Marital status", "radio": true});

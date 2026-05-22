@@ -20,12 +20,12 @@ expression.GetTableRowPr();
 
 ## 示例
 
-获取文档中当前样式的表格行属性。
+通过样式设置文档中表格行的最小高度。
 
 ```javascript editor-docx
-// How to get table row and set its height in a document.
+// How do I define the row height for a table using a style in a document?
 
-// Resize the row of the table in a document.
+// Enforce a consistent row size across a table by updating the style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -1,0 +1,40 @@
+# GetPageBreakBefore
+
+Returns the page break before value of the current paragraph.
+
+## Syntax
+
+```javascript
+expression.GetPageBreakBefore();
+```
+
+`expression` - A variable that represents a [ApiParaPr](../ApiParaPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean \| undefined
+
+## Example
+
+Read whether a paragraph is set to start on a new page in a document.
+
+```javascript editor-docx
+// How do I check if a page break is applied before a paragraph in a document?
+
+// Confirm that a paragraph's page break setting is active by reading its value and displaying it in a document.
+
+let doc = Api.GetDocument();
+doc.Push(Api.CreateParagraph());
+let paragraph = doc.GetElement(1);
+let paraPr = paragraph.GetParaPr();
+paraPr.SetPageBreakBefore(true);
+paragraph.AddText("This paragraph starts on a new page.");
+let pageBreakBefore = paraPr.GetPageBreakBefore();
+let paragraph2 = Api.CreateParagraph();
+paragraph2.AddText("Page break before: " + pageBreakBefore);
+doc.Push(paragraph2);
+```

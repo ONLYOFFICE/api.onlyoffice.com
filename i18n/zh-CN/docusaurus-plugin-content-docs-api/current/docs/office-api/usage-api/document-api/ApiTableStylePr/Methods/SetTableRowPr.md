@@ -22,12 +22,12 @@ expression.SetTableRowPr(oTableRowPr);
 
 ## 示例
 
-创建并设置将应用于表格中与条件格式类型匹配的所有行的表格行属性。
+在文档中为表格样式的条件区域应用行格式。
 
 ```javascript editor-docx
-// How to set table row properties to table style and set its height in a document.
+// How do I set the row height for a specific part of a table style in a document?
 
-// Update the table style table row properties in a document.
+// Assign row layout settings to a targeted section of a styled table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

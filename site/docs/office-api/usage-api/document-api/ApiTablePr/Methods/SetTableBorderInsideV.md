@@ -28,12 +28,12 @@ boolean
 
 ## Example
 
-Specify the border which will be displayed on all vertical table cell borders which are not on the outmost edge of the parent table.
+Add borders between columns inside a table in a document.
 
 ```javascript editor-docx
-// How to set inside vertical border to the table in a document.
+// How do I draw vertical dividing lines between the inner columns of a table in a document?
 
-// How to create a 3x3 table and add the inside vertical 4 point orange borders in a document.
+// Separate table columns from each other with interior vertical borders in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

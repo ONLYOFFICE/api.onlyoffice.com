@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a table that contains the table in a document.
+Access the outer table that contains a nested table in a document.
 
 ```javascript editor-docx
-// How to get the parent table and delete its row in a document.
+// How do I navigate from a nested table up to its surrounding table in a document?
 
-// Retrieve the parent table, get its cell and remove the row of it.
+// Locate the enclosing table so its rows can be modified in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

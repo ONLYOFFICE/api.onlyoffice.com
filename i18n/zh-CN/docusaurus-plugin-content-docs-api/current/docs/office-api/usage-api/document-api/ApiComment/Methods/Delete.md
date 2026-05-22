@@ -23,9 +23,9 @@ boolean
 从文档中删除批注。
 
 ```javascript editor-docx
-// How to remove a comment in a document.
+// How do I delete a comment from a document?
 
-// Get all comments from the presentation and remove the first one.
+// Remove an unwanted annotation after a review is complete in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

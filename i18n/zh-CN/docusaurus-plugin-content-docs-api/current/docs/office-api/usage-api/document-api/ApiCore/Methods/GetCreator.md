@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的创建者。
+读取文档核心属性中存储的作者姓名。
 
 ```javascript editor-docx
-// How do I get the creator in a document?
+// How do I get the creator's name from the core properties in a document?
 
-// Get the creator using a core properties object in a document.
+// Identify who originally authored a document without opening its file dialog in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

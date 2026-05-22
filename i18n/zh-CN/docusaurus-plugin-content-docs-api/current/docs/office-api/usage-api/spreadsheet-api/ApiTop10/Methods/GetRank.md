@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中前 10 条件的排名值。
+读取电子表格中前 10 项条件格式规则高亮显示多少个最高或最低值。
 
 ```javascript editor-xlsx
-// How to retrieve the number of top or bottom values to highlight in the condition in a spreadsheet.
+// How do I find the count of values highlighted by a top 10 conditional formatting rule in a spreadsheet?
 
-// Get the rank value for the top 10 rule in a spreadsheet.
+// Confirm the number of items targeted by a top or bottom highlight rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

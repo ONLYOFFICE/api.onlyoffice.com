@@ -27,12 +27,12 @@ expression.CubicBezTo(x1, y1, x2, y2, x3, y3);
 
 ## 示例
 
-使用各种贝塞尔和弧线命令创建复杂的曲线形状。在页面上的单条路径中演示不同的曲线类型。
+在 PDF 中使用控制点绘制平滑曲线。
 
 ```javascript editor-pdf
-// How can I cubic bez to using a geometry path in a PDF document?
+// How do I create a curved path segment in a PDF?
 
-// Cubic bez to for a geometry path in a PDF document.
+// Add a cubic curve that bends toward control points in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

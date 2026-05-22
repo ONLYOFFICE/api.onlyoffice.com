@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除文档中的段落。
+从文档内容中删除段落。
 
 ```javascript editor-docx
-// How to remove the paragraph in a document.
+// How do I delete a specific paragraph in a document?
 
-// Create two paragraphs and delete the second one in a document.
+// Clean up unwanted text blocks by eliminating a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

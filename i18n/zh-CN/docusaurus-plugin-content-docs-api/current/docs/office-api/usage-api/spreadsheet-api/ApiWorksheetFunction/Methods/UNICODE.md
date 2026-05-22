@@ -25,9 +25,9 @@ number
 在电子表格中返回与文本第一个字符对应的数字（码位）。
 
 ```javascript editor-xlsx
-// How to get an Unicode of a character in a spreadsheet.
+// The UNICODE function converts characters to their numeric Unicode values.
 
-// Use a function to return the character's Unicode in a spreadsheet.
+// Apply the function to obtain a character's code point from text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

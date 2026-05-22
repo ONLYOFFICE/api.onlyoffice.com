@@ -20,12 +20,12 @@ expression.GetCustomProperties();
 
 ## 示例
 
-使用自定义属性在电子表格中配置自定义属性。
+添加和读取附加到电子表格的用户定义属性。
 
 ```javascript editor-xlsx
-// How can I get custom properties in a spreadsheet?
+// How do I store custom key-value data inside a spreadsheet?
 
-// Get custom properties in a spreadsheet.
+// Attach extra information of any type to the document itself in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

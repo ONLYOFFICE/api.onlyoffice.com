@@ -14,7 +14,7 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, only internet URL or Base64 encoded images are supported). |
+| sImageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, |
 | nWidth | Required | [EMU](../../Enumeration/EMU.md) |  | The image width in English measure units. |
 | nHeight | Required | [EMU](../../Enumeration/EMU.md) |  | The image height in English measure units. |
 
@@ -24,12 +24,12 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## Example
 
-Create an image and paste it into the document.
+Insert an image from a URL in a presentation.
 
 ```javascript editor-pptx
-// How to create an image object using an url and specifying its width and height in a presentation.
+// How do I add an image with specific dimensions to a slide in a presentation?
 
-// Create an image and insert it to the slide.
+// Place an image on a slide by specifying its source and size in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

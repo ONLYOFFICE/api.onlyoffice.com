@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-检查 PDF 文档中的文本是否有突出显示。
+验证 PDF 中的文本是否应用了高亮颜色。
 
 ```javascript editor-pdf
-// How to know whether a highlight set to the text in a PDF document.
+// How do I determine if text is highlighted in a PDF?
 
-// Get the text properties of the run and find whether it is highlighted or not in a PDF document.
+// Look up the highlight setting from text formatting properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

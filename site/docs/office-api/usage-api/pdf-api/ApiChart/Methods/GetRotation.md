@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md)
 
 ## Example
 
-How to get rotate from a drawing object in a PDF document.
+Find the rotation angle of a shape in a PDF.
 
 ```javascript editor-pdf
-// Get drawing rotate in a PDF document.
+// How do I see how many degrees a shape is turned in a PDF?
 
-// Get the rotation for a drawing object in a PDF document.
+// Check how much an object is rotated from its default position in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.GetAppearance();
 
 ## 示例
 
-向内容控件添加文本并获取文档中其外观。
+读取文档中内联内容控件的外观设置。
 
 ```javascript editor-docx
-// How do I get the appearance in a document?
+// How do I get the appearance style of an inline content control in a document?
 
-// Get the appearance using an inline content control object in a document.
+// Check whether a content control is displayed as a bounding box, tags, or hidden in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

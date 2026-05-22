@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取演示文稿名称并将其插入到演示文稿中。
+访问演示文稿的完整文件路径和名称。
 
 ```javascript editor-pptx
-// How to get a presentation name.
+// How can I get the complete filename of a presentation in a presentation?
 
-// Retrieve name of presentation.
+// Display the presentation's file path as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

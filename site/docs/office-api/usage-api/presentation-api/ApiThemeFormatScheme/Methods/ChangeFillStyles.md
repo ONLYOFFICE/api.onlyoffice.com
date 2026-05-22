@@ -14,7 +14,7 @@ expression.ChangeFillStyles(arrFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrFill | Required | [ApiFill](../../ApiFill/ApiFill.md)[] |  | The array of fill styles must contain 3 elements - subtle, moderate and intense fills. If an array is empty or NoFill elements are in the array, it will be filled with the Api.CreateNoFill() elements. |
+| arrFill | Required | [ApiFill](../../ApiFill/ApiFill.md)[] |  | The array of fill styles must contain 3 elements - subtle, moderate and intense fills. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the fill styles to the current theme format scheme.
+Change the fill styles in a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to change fill styles of a format scheme.
+// How do I update the fill styles of a format scheme in a presentation?
 
-// Get format scheme and update its fill styles, adding pattern, solid and radial fills.
+// Get a format scheme and replace its fill styles in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ expression.GetAllItems();
 
 ## 示例
 
-获取文档中内容控件列表条目的集合。
+从文档中的下拉列表内容控件检索所有条目。
 
 ```javascript editor-docx
-// How can I get all items using a content control list in a document?
+// How do I get every item stored in a combo box dropdown list in a document?
 
-// Get all items for a content control list in a document.
+// Collect the full set of selectable options from a list control to display or process them in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

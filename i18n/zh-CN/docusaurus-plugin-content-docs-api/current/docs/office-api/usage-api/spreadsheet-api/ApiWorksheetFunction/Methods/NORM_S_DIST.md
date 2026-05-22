@@ -15,7 +15,7 @@ expression.NORM_S_DIST(arg1, arg2);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将返回分布的值。 |
-| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积分布函数。如果为 **false**，则函数返回概率质量函数。 |
+| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回标准正态分布（均值为零，标准差为一）。
+计算电子表格中给定值的标准正态分布。
 
 ```javascript editor-xlsx
-// How to calculate the standard normal distribution in a spreadsheet.
+// How do I compute the standard normal distribution in a spreadsheet?
 
-// Use a function to get the standard normal distribution with a mean = 0 and standard deviation = 1 in a spreadsheet.
+// Find the probability of a value in a standard normal distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

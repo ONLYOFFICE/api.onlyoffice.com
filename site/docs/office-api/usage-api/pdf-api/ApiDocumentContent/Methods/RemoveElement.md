@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Remove an element in a PDF document.
+Delete a single paragraph from a shape's content in a PDF.
 
 ```javascript editor-pdf
-// How to remove an elements from the page shape.
+// How do I remove one paragraph from inside a shape in a PDF?
 
-// Get a page shape's content and remove an element from it using its index.
+// Erase a specific text block by its position in a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

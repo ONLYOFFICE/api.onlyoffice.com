@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除文档中的当前 XML 节点。
+从文档中嵌入的自定义 XML 数据移除特定节点。
 
 ```javascript editor-docx
-// How can I delete using a custom XML node in a document?
+// How do I delete a custom XML node in a document?
 
-// Delete for a custom XML node in a document.
+// Clean up stored XML by eliminating an unwanted element from the tree in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

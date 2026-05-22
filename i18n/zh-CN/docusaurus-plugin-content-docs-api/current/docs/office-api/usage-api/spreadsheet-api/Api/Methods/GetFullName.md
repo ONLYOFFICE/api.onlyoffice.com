@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前打开文件的完整名称。
+检索电子表格中当前打开文档的完整文件路径。
 
 ```javascript editor-xlsx
-// How to get a full name of the file in a spreadsheet.
+// How do I display the full name and location of the current file in a spreadsheet?
 
-// Insert a full name of the file into a cell.
+// Write the entire file path into a cell so the source is always visible in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let name = Api.GetFullName();

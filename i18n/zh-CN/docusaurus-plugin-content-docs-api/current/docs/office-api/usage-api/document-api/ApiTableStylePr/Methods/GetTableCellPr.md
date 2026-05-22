@@ -20,12 +20,12 @@ expression.GetTableCellPr();
 
 ## 示例
 
-获取将应用于表格中与条件格式类型匹配的所有单元格的表格单元格属性集。
+访问文档中与条件表格样式关联的单元格格式。
 
 ```javascript editor-docx
-// How to get the table cell properties.
+// How do I read and change cell appearance settings for a specific area of a table in a document?
 
-// Get the table cell properties and set shading to its background.
+// Apply background shading to cells matched by a table style condition in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

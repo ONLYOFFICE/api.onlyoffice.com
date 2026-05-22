@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查 PDF 文档中的文本是否为斜体。
+检测 PDF 中的文本是否有斜体格式。
 
 ```javascript editor-pdf
-// How to know whether a text is set to italic or not in a PDF document.
+// How do I check if text is italicized in a PDF?
 
-// Get the text properties of the run and find whether it is italic or not in a PDF document.
+// Access the italic property from text formatting settings in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

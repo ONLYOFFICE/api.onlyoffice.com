@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表标题设置填充。
+在演示文稿中为图表标题应用背景颜色。
 
 ```javascript editor-pptx
-// How to color a chart title in a presentation.
+// Change the fill color of chart title text in a presentation.
 
-// Create a chart, set its properties and its title color in a presentation.
+// Add a background or highlight color to a chart heading in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

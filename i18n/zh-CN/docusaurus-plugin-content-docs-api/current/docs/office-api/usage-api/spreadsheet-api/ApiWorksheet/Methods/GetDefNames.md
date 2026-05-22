@@ -20,12 +20,12 @@ expression.GetDefNames();
 
 ## 示例
 
-获取电子表格中命名范围对象的数组。
+收集电子表格中活动工作表上定义的所有命名范围。
 
 ```javascript editor-xlsx
-// How to get all def names in a spreadsheet.
+// How do I list every named range on a worksheet in a spreadsheet?
 
-// Get all def names as an array in a spreadsheet.
+// Loop through all named ranges and display their names in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

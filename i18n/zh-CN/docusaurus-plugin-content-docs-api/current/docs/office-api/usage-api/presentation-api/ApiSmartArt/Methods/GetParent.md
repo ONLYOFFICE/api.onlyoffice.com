@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取演示文稿中的父对象。
+查找演示文稿中形状的父容器。
 
 ```javascript editor-pptx
-// How to get a parent of a slide shape.
+// How do I locate what an object belongs to in a presentation?
 
-// Get a slide shape's parent object.
+// Identify the parent element that holds a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 

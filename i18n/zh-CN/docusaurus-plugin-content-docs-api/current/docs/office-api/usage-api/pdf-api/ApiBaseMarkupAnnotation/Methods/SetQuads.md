@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为标记注释设置四边形。
+指定 PDF 中标记注释的高亮区域。
 
 ```javascript editor-pdf
-// How do I set quads in a PDF document?
+// How do I define the highlighted region in a PDF?
 
-// Set quads using a markup annotation object in a PDF document.
+// Assign new coordinates to the marked area of an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let markupAnnot = Api.CreateHighlightAnnot([84, 55, 231, 72]);

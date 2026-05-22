@@ -22,12 +22,12 @@ expression.SetTableStyleRowStripes(show);
 
 ## 示例
 
-在电子表格中设置数据透视表的表格样式行条纹。
+打开电子表格中数据透视表的交替行底纹。
 
 ```javascript editor-xlsx
-// How to set table style row stripes of a table in a spreadsheet.
+// How do I apply striped row formatting to a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its table style row stripes in a spreadsheet.
+// Make a pivot table easier to read by enabling banded row colors in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

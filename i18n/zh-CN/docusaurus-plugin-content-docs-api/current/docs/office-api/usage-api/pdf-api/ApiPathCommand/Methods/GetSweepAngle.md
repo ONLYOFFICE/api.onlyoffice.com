@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析页面形状中的弧线命令参数。获取并显示弧线半径和角度信息。
+查找 PDF 中弧的总旋转跨度。
 
 ```javascript editor-pdf
-// How to get the sweep angle for a path command in a PDF document?
+// How much does an arc curve turn in a PDF?
 
-// Get the sweep angle and display the result in a PDF document.
+// Measure the angular distance traveled by an arc in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

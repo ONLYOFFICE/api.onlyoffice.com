@@ -20,12 +20,12 @@ expression.GetFormatScheme();
 
 ## 示例
 
-获取演示文稿中主题的格式方案。
+从演示文稿中的主题获取格式方案。
 
 ```javascript editor-pptx
-// How to get a format scheme from a theme.
+// How do I access the formatting styles defined in a presentation's theme?
 
-// Get a format scheme and display its class type.
+// Retrieve the format scheme and display its type information in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

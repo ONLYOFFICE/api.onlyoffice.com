@@ -20,12 +20,12 @@ expression.GetThemeName();
 
 ## 示例
 
-获取电子表格中形状填充使用的主题颜色名称。
+检索应用于电子表格中形状的主题颜色名称。
 
 ```javascript editor-xlsx
-// How do I get the theme name in a spreadsheet?
+// How do I find out which theme color name is assigned to a fill in a spreadsheet?
 
-// Get the theme name using a color object in a spreadsheet.
+// Look up the built-in theme color label behind a shape's fill and print it to a cell in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const themeColor = Api.ThemeColor('accent1');

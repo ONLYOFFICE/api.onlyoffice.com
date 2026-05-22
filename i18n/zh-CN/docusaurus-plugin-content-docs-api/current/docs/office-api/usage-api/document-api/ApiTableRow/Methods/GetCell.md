@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetCell(nPos);
+expression.GetCell(cellIndex);
 ```
 
 `expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetCell(nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 当前行中的单元格位置。 |
+| cellIndex | 必需 | number |  | 当前行中的单元格索引。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.GetCell(nPos);
 
 ## 示例
 
-通过位置获取文档中的单元格。
+通过位置访问文档中表格行内的特定单元格。
 
 ```javascript editor-docx
-// How to get cell from the table.
+// How do I select a single cell from a row using its index in a document?
 
-// Get the first table cell and add text to it.
+// Pinpoint one cell in a row by its numbered position to work with its content in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

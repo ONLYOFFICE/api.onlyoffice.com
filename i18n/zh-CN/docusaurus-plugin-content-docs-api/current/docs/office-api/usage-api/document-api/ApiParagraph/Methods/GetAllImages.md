@@ -20,12 +20,12 @@ expression.GetAllImages();
 
 ## 示例
 
-获取文档中段落内的图像对象集合。
+检索文档中段落内嵌入的所有图像对象。
 
 ```javascript editor-docx
-// How to retrieve all images from the document.
+// How do I get every image from a paragraph in a document?
 
-// Get all images and get the class type of the first one in a document.
+// Inspect or process multiple pictures at once by collecting all images in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

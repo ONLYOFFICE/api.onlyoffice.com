@@ -15,7 +15,7 @@ expression.DOLLAR(arg1, arg2);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 数字、包含数字的单元格引用或返回数字的公式。 |
-| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 小数点右边的位数。数字会根据需要舍入。如果省略，函数将假定为 2。 |
+| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 小数点右侧的位数。数字将根据需要进行舍入。 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ string
 
 ## 示例
 
-在电子表格中使用货币格式 $#.## 将数字转换为文本。
+使用带美元符号的货币格式将数字转换为文本。
 
 ```javascript editor-xlsx
-// How to convert a number to text in a spreadsheet.
+// Format numeric values as currency strings with specified decimal places.
 
-// Use function to get text from a number using dollar format.
+// Use the DOLLAR function to convert numbers to formatted currency text.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

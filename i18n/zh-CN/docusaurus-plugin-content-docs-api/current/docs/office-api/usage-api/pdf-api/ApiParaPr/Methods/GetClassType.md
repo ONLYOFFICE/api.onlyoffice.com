@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中段落属性返回的类类型。
+识别 PDF 中段落属性的对象类型。
 
 ```javascript editor-pdf
-// How do I check what type a paragraph properties object is in a PDF document?
+// How do I determine what type of object paragraph properties are in a PDF?
 
-// Retrieve and output the class type string for a paragraph properties in a PDF document.
+// Find the class name for paragraph property objects in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -14,7 +14,7 @@ expression.SetRelativeWidth(sRelativeFrom, nPercent);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRelativeFrom | 可选 | [RelFromV](../../Enumeration/RelFromV.md) | "page" | 将作为对象宽度参考点的文档元素。 |
+| sRelativeFrom | 可选 | [SizeRelFromH](../../Enumeration/SizeRelFromH.md) | "page" | 将作为对象宽度参考点的文档元素。 |
 | nPercent | 必需 | [percentage](../../Enumeration/percentage.md) |  | 未提供描述。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-相对于页面尺寸的形状相对宽度调整。
+将文档中形状的宽度设置为页面的百分比。
 
 ```javascript editor-docx
-// How to set shape width and height as percentages of the page.
+// How do I make a shape's width span a fixed fraction of the page in a document?
 
-// Create a responsive rectangle that scales with page size.
+// Stretch a rectangle to half the page width so its layout stays consistent across page sizes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

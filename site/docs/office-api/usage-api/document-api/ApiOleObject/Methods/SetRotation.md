@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetRotation](../../ApiDrawing/Methods/SetRotation.md)
 
 ## Example
 
-Set the rotation angle to the drawing in a document.
+Rotate a drawing by a specified angle in a document.
 
 ```javascript editor-docx
-// How to set rotation for a drawing object in a document?
+// How do I tilt a shape to a particular degree in a document?
 
-// Set rotation and display the result in a document.
+// Turn a wide rectangle ninety degrees and display the resulting angle inside it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

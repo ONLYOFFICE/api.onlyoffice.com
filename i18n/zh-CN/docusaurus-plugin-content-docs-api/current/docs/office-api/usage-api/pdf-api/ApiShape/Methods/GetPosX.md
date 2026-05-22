@@ -6,12 +6,12 @@
 
 ## 示例
 
-如何在 PDF 文档中获取并显示绘图对象的 X 位置。
+查找 PDF 中形状的左右位置。
 
 ```javascript editor-pdf
-// Get a shape object from a page and get its X position.
+// How do I check the X coordinate of an object in a PDF?
 
-// Get the pos x using a drawing object object in a PDF document.
+// Read the horizontal distance of a shape from the left edge in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

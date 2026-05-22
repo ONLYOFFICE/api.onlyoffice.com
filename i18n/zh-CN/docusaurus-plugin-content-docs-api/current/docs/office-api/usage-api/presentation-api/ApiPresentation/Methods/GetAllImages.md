@@ -20,12 +20,12 @@ expression.GetAllImages();
 
 ## 示例
 
-获取当前演示文稿中的所有图像。
+查找演示文稿中的所有图像文件。
 
 ```javascript editor-pptx
-// How to get all images for a presentation?
+// How do I access every picture I inserted in a presentation?
 
-// Get all images and display the result in a presentation.
+// Count images and display the total in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

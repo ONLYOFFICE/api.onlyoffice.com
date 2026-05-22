@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Get the notes page from a slide in a presentation.
 
 ```javascript editor-pptx
-// How can I get the notes page using a slide in a presentation?
+// Retrieve the notes page using GetNotesPage and check its availability.
 
-// Get the notes page for a slide in a presentation.
+// Display the notes page status on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

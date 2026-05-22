@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加书签交叉引用。
+在文档中插入链接到书签的交叉引用。
 
 ```javascript editor-docx
-// How to create a bookmark reference to the paragraph in a document.
+// How do I add a navigable reference pointing to a named bookmark in a document?
 
-// Add a cross-reference to the bookmark of the paragraph in a document.
+// Connect one paragraph to another location by referencing a bookmark by name in a document.
 
 let doc = Api.GetDocument(); 
 let paragraph = doc.GetElement(0); 

@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-从单元格范围删除数据验证规则。
+从电子表格中的单元格范围移除数据验证规则。
 
 ```javascript editor-xlsx
-// How to remove data validation from a range of cells.
+// How do I clear an existing input restriction from a cell range in a spreadsheet?
 
-// Get a range from the worksheet and delete its data validation.
+// Lift a validation constraint so cells accept any value again in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Data Validation for decimals to be more than 10 for A2 and A3");

@@ -20,12 +20,12 @@ expression.GetBarFillType();
 
 ## 示例
 
-从数据条条件格式规则获取条形填充类型。
+读取电子表格中数据条是否使用纯色或渐变填充。
 
 ```javascript editor-xlsx
-// How to check the fill type setting of a data bar in a spreadsheet.
+// How do I find out which fill style is applied to data bars in a spreadsheet?
 
-// Get the bar fill type of a data bar conditional formatting rule.
+// Determine the shading style of data bars to understand their visual format in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

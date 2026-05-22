@@ -20,12 +20,12 @@ expression.GetWorksheet();
 
 ## 示例
 
-获取表示电子表格中包含指定范围的工作表的 Worksheet 对象。
+查找电子表格中选定范围所属的工作表。
 
 ```javascript editor-xlsx
-// How to get a worksheet where a range is contained in.
+// How do I identify the sheet that contains a particular range in a spreadsheet?
 
-// Get a worksheet from its range and show its name.
+// Confirm the parent sheet of a range by checking its name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C1");

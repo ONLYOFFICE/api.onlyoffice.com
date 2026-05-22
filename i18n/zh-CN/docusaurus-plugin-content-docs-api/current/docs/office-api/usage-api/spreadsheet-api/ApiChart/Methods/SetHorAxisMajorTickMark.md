@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为水平轴指定主要刻度线 "cross"。
+控制电子表格中图表水平轴上主刻度线出现的位置。
 
 ```javascript editor-xlsx
-// How to specify major tick mark for the horizontal axis in a spreadsheet.
+// How do I set the style of major tick marks on the horizontal axis of a chart in a spreadsheet?
 
-// Major mark the horizontal axis of the chart in a spreadsheet.
+// Place crossing tick marks at each major interval along the bottom axis of a chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

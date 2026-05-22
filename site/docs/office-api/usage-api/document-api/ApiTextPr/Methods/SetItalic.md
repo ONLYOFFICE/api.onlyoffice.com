@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-Set the italic property to the text character in a document.
+Make text appear in italic style in a document.
 
 ```javascript editor-docx
-// How to make a text italic in a document.
+// How do I format text to display in italics in a document?
 
-// Create a text run object, change its properties by making it italic in a document.
+// Emphasize words by switching the default text style to italicized letters in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

@@ -25,12 +25,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## Example
 
-Add a comment to the run in a document.
+Attach a reviewer note with an author name to a piece of text in a document.
 
 ```javascript editor-docx
-// How to comment a specific text in a document.
+// How do I leave a named comment on a specific section of text in a document?
 
-// Insert a comment into the run and add an author to it in a document.
+// Annotate a text passage so collaborators can see feedback and who wrote it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

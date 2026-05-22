@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中表单元素的标签。
+用自定义标识符标记文档中的表单字段。
 
 ```javascript editor-forms
-// How to set tag for a form base?
+// How do I attach a label or identifier to a form field in a document?
 
-// Set tag and display the result in a document.
+// Organize or reference form fields programmatically using custom tags.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

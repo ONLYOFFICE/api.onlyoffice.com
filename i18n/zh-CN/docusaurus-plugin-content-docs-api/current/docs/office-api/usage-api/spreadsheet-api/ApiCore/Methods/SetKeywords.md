@@ -22,12 +22,12 @@ expression.SetKeywords(sKeywords);
 
 ## 示例
 
-在电子表格中使用核心属性设置工作簿的关键词字符串。
+向电子表格工作簿的文档属性添加可搜索的关键词。
 
 ```javascript editor-xlsx
-// How can I set keywords using a core properties in a spreadsheet?
+// How do I attach search tags to a workbook's metadata in a spreadsheet?
 
-// Set keywords for a core properties in a spreadsheet.
+// Tag the workbook with descriptive terms that make it easier to find in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

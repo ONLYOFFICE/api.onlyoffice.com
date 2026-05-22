@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Find out the class type of a custom XML part object in a presentation.
 
 ```javascript editor-pptx
-// How can I get the class type of a custom XML part in a presentation?
+// Identify the type of a custom XML part in a presentation.
 
-// Get the class type of a custom XML part and display it in the presentation.
+// Retrieve the class type name of a custom XML part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

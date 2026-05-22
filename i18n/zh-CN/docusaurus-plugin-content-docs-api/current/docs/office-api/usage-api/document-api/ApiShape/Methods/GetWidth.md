@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中绘图对象的宽度。
+读取文档中绘图对象的宽度。
 
 ```javascript editor-docx
-// How to print the width of the drawing in a document.
+// How do I get the width of a shape in a document?
 
-// Create a rectangle and then show its width in mm in a document.
+// Display the measured width of a drawing as text inside the shape itself in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

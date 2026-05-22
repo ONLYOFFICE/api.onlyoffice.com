@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的小计。
+检索电子表格中为透视字段激活的小计计算。
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotals in a spreadsheet.
+// How do I see all subtotal types enabled on a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get subtotals of a specified pivot field as an array in a spreadsheet.
+// Inspect each subtotal setting of a pivot field and display the results in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

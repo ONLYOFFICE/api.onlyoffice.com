@@ -20,12 +20,12 @@ expression.GetAllShapes();
 
 ## 示例
 
-在电子表格中获取工作表中的所有形状。
+检索电子表格工作表上放置的每个形状。
 
 ```javascript editor-xlsx
-// How to get all shapes in a spreadsheet.
+// How do I list all shapes on a sheet in a spreadsheet?
 
-// Get all shapes as an array in a spreadsheet.
+// Collect all drawn shapes from the worksheet to modify their content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

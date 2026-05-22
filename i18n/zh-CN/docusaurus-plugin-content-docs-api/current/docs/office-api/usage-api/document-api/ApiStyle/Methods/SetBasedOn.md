@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档的样式层次结构中指定此样式所继承的父样式的引用。
+在文档中基于现有样式创建自定义表格样式。
 
 ```javascript editor-docx
-// How to get the specific style from the document and create table style based on it.
+// How do I build a new table style that inherits formatting from another style in a document?
 
-// Inherit bordered style of the document.
+// Reuse a built-in style as the foundation for a custom table style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -27,12 +27,12 @@ JSON
 
 ## 示例
 
-将文档对象转换为 JSON 对象。
+将文档对象序列化为 JSON 表示。
 
 ```javascript editor-docx
-// How to get a JSON object from the document content.
+// How do I convert a document to JSON so its structure can be reused in a document?
 
-// Convert the document to json file.
+// Export a document as JSON and then reconstruct its elements to insert shapes or other objects into a new context.
 
 let doc = Api.GetDocument();
 let json = doc.ToJSON(true, true, true, true, true, true);

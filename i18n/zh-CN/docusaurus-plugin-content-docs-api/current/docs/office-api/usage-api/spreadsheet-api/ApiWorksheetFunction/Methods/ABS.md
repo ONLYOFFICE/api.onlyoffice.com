@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取数字的绝对值。
+查找电子表格中数字的绝对值。
 
 ```javascript editor-xlsx
-// How to add absolute value to the worksheet.
+// How do I convert a negative number to positive in a spreadsheet?
 
-// Get a function that gets absolute value in a spreadsheet.
+// Discard the sign and use only the magnitude of any value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

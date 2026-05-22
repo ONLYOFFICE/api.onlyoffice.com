@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-指定文档中图表数据标签的显示选项。
+配置文档中图表上单个数据点的数据标签可见性。
 
 ```javascript editor-docx
-// How to show specific chart data labels with options in a document.
+// How do I control which label details appear on one specific data point in a document?
 
-// Create a chart, set its properties and the visibility of its data labels options in a document.
+// Target an individual point to show only the label information relevant to that value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

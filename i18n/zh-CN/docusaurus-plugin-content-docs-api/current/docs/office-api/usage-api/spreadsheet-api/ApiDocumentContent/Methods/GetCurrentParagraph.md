@@ -20,12 +20,12 @@ expression.GetCurrentParagraph();
 
 ## 示例
 
-获取电子表格中形状的文档内容中的当前段落。
+检索电子表格中形状文本内容内当前活动的段落。
 
 ```javascript editor-xlsx
-// How to get current paragraph for a document content?
+// How do I access the paragraph the cursor is on within a shape's content area in a spreadsheet?
 
-// Get current paragraph and display the result in a spreadsheet.
+// Read the active paragraph from a shape to inspect or display its text in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表绘图区域设置填充。
+在演示文稿中为图表绘图区应用背景颜色。
 
 ```javascript editor-pptx
-// How to set a background color for the plot area in a presentation.
+// How do I change the background color of the area where the data is displayed in a presentation?
 
-// Create a chart, set its properties and its plot area color in a presentation.
+// Set a solid fill color for the plot area to customize the chart appearance in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

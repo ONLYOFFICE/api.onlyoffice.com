@@ -22,12 +22,12 @@ string
 
 ## Example
 
-Remove all the nonprintable characters from the text in a spreadsheet.
+Remove invisible control characters from imported or pasted text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove all the nonprintable characters from the text in a spreadsheet.
+// Eliminate all nonprintable characters that don't display properly in your cells in a spreadsheet.
 
-// Use function to clean all nonprintable characters in a spreadsheet.
+// Purify text data by stripping out hidden formatting and special characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

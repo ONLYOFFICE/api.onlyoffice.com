@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中向指定范围添加书签。
+用命名书签标记文档中的特定文本部分。
 
 ```javascript editor-docx
-// How to bookmark a range of document.
+// How do I attach a named bookmark to a selected portion of text in a document?
 
-// Insert a bookmark into the 'ONLYOFFICE' range in a document.
+// Label a text selection so it can be referenced or navigated to later in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

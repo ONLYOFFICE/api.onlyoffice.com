@@ -5,7 +5,7 @@ Returns a style by its name.
 ## Syntax
 
 ```javascript
-expression.GetStyle(sStyleName);
+expression.GetStyle(styleName);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,20 +14,20 @@ expression.GetStyle(sStyleName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyleName | Required | string |  | The style name. |
+| styleName | Required | string |  | The style name. |
 
 ## Returns
 
-[ApiStyle](../../ApiStyle/ApiStyle.md)
+[ApiStyle](../../ApiStyle/ApiStyle.md) \| null
 
 ## Example
 
-Get a style by its name in a document.
+Apply a named style to a paragraph in a document.
 
 ```javascript editor-docx
-// How to get the style of the heading in a document.
+// How do I retrieve and apply a built-in heading style in a document?
 
-// Display the style name of the "Heading 6" in a document.
+// Reuse an existing style from the style gallery to format text without defining custom properties.
 
 let doc = Api.GetDocument();
 let noSpacingStyle = doc.GetStyle("Heading 6");

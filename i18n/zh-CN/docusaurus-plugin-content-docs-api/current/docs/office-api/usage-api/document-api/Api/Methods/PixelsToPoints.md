@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在文档中将像素转换为磅。
+将像素测量值转换为排版磅并在文档中显示结果。
 
 ```javascript editor-docx
-// How to convert pixels to points in a document?
+// How do I translate a pixel value into points in a document?
 
-// Convert pixels to points using the document API.
+// Write out the point equivalent of a given pixel count as readable text in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

@@ -27,9 +27,9 @@ expression.RGB(r, g, b);
 Create a color in RGB format and use it as a shape fill in a presentation.
 
 ```javascript editor-pptx
-// How can I r g b in a presentation?
+// Use Api.RGB to define colors for shape styling.
 
-// R g b and display the result in a presentation.
+// Display the shape with the specified color on a slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

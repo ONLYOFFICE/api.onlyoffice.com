@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在电子表格中为自定义 XML 节点设置属性值。
+向电子表格中的 XML 元素附加带有值的命名属性。
 
 ```javascript editor-xlsx
-// How to set attributes on custom XML node elements in a spreadsheet.
+// How do I add an attribute to an XML node in a spreadsheet?
 
-// Set attributes on product node in a spreadsheet.
+// Annotate an XML element with descriptive metadata fields in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

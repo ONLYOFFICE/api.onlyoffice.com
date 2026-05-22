@@ -22,12 +22,12 @@ null \| Object
 
 ## 示例
 
-获取表单文档中角色的颜色。
+检索文档中分配给角色的颜色。
 
 ```javascript editor-forms
-// How do I get the role color in a form document?
+// How do I find out what color a role uses in a document?
 
-// Get the role color using a form roles object.
+// Check the color value for a specific role in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

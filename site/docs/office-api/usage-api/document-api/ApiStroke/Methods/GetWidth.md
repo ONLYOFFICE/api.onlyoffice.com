@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a document.
+Retrieve the border width of a shape in a document.
 
 ```javascript editor-docx
-// How do I get the width in a document?
+// How do I find out how thick a shape's border is in a document?
 
-// Get the width using a stroke object in a document.
+// Check the measured thickness of each shape's outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

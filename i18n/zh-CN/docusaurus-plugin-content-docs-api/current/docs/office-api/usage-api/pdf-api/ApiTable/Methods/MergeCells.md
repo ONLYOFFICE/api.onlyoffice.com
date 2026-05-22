@@ -23,12 +23,12 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-如何通过位置索引获取两个单元格并将它们合并为一个。
+在 PDF 中将多个单元格合并为一个统一的单元格。
 
 ```javascript editor-pdf
-// Create a table, create cells and merge them into one.
+// How can I join cells together within a table in a PDF?
 
-// Use table to merge cells.
+// Join adjacent cells to form a single larger cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

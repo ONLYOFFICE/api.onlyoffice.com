@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Analyzes path commands of a star shape. Retrieves information about the first command including type and coordinates.
+Count the total number of steps that make up a shape's outline path in a document.
 
 ```javascript editor-docx
-// How can I get the command count using a geometry path in a document?
+// How do I find out how many steps are in a shape's drawing path in a document?
 
-// Get the command count for a geometry path in a document.
+// Check how many individual segments define a shape's outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

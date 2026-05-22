@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文本字段是否为具有相同单元格宽度的字符梳。
+检查文档中的文本字段是否将输入拆分为等距单元格。
 
 ```javascript editor-forms
-// How to know whether the first text form from this document is comb.
+// How do I determine if a text field uses a comb layout for its characters in a document?
 
-// Get the boolean that represents the comb property of the text form.
+// Verify that equal-width character cells are active on a text field in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "maxCharacters": 10, "multiLine": false, "autoFit": false});

@@ -17,7 +17,7 @@ expression.ToMarkdown(bHtmlHeadings, bBase64img, bDemoteHeadings, bRenderHTMLTag
 | bHtmlHeadings | Optional | boolean | false | Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs. |
 | bBase64img | Optional | boolean | false | Defines if the images will be created in the base64 format. |
 | bDemoteHeadings | Optional | boolean | false | Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body. |
-| bRenderHTMLTags | Optional | boolean | false | Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket in the following way: \&lt;tag&gt;text\&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters. |
+| bRenderHTMLTags | Optional | boolean | false | Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket |
 
 ## Returns
 
@@ -25,12 +25,12 @@ string
 
 ## Example
 
-Convert a document to Markdown.
+Convert the document content to a Markdown string in a document.
 
 ```javascript editor-docx
-// How to get a markdown object from the document content.
+// How do I export a document with headings and paragraphs as Markdown in a document?
 
-// Convert the document to markdown.
+// Produce a Markdown representation of the document so the text can be used in version-controlled or plain-text workflows.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置虚线边框。
+设置 PDF 中注释的边框样式。
 
 ```javascript editor-pdf
-// How to set border style for an annotation in a PDF document?
+// Should an annotation border be solid, dashed, or have another pattern in a PDF?
 
-// Set border style and display the result in a PDF document.
+// Apply a border style pattern to an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

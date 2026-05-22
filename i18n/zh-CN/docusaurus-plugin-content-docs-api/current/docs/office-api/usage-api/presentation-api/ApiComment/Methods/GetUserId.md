@@ -23,9 +23,9 @@ string
 获取演示文稿中的用户 ID。
 
 ```javascript editor-pptx
-// How do I get the user id in a presentation?
+// Retrieve the user identifier associated with a comment.
 
-// Get the user id using a comment object in a presentation.
+// Set and retrieve the user ID using a comment object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

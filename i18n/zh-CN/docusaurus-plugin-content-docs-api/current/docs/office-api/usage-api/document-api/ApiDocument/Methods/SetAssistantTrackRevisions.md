@@ -20,3 +20,30 @@ expression.SetAssistantTrackRevisions(isTrack, assistantName);
 ## 返回值
 
 boolean
+
+## 示例
+
+在文档中启用带有作者名称的 AI 辅助修订跟踪。
+
+```javascript editor-docx
+// How do I track changes made by an AI assistant in a document?
+
+// Assign a named author to AI-generated edits so reviewers can identify them separately.
+
+const doc = Api.GetDocument();
+
+const paragraph = doc.GetElement(0);
+paragraph.AddText('Original document text.');
+
+doc.SetAssistantTrackRevisions(true, 'AI Assistant');
+
+const assistantParagraph = Api.CreateParagraph();
+assistantParagraph.AddText('Text added by AI assistant.');
+doc.Push(assistantParagraph);
+
+doc.SetAssistantTrackRevisions(false);
+
+const resultParagraph = Api.CreateParagraph();
+resultParagraph.AddText('AI-assisted tracking has been enabled and then disabled.');
+doc.Push(resultParagraph);
+```

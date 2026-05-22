@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-从电子表格中的当前图表移除指定的系列。
+按位置从电子表格中的图表删除数据系列。
 
 ```javascript editor-xlsx
-// How to delete series using indices in a spreadsheet.
+// How do I remove one of the data series from a chart in a spreadsheet?
 
-// Remove seria from the chart using idex number in a spreadsheet.
+// Strip an unwanted series out of a chart to simplify its data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

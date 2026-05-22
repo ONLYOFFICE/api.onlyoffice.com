@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中列表项集合中内容控件列表项的索引。
+为文档中的下拉列表或组合框列表条目分配新位置。
 
 ```javascript editor-docx
-// How to set index for a content control list entry in a document?
+// How do I change the order of a list item by setting its index in a document?
 
-// Set index and display the result in a document.
+// Reposition an entry to a specific slot when you need to reorganize a list programmatically in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

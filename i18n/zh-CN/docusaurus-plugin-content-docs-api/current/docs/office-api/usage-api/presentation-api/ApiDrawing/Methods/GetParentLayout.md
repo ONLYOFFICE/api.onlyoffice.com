@@ -20,12 +20,12 @@ expression.GetParentLayout();
 
 ## 示例
 
-演示如何获取绘图对象的父幻灯片版式。
+查找演示文稿中包含形状的父布局。
 
 ```javascript editor-pptx
-// How to get a parent layout of a slide shape.
+// How do I access the layout a shape belongs to in a presentation?
 
-// Get a slide shape's parent layout.
+// Get the parent layout for a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

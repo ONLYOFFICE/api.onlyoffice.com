@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Get a layout of the current slide in a presentation.
 
 ```javascript editor-pptx
-// How to return a slide layout.
+// Retrieve the slide layout using GetLayout method.
 
-// Get a slide layout and set its background color.
+// Apply a background color to the layout using SetBackground.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

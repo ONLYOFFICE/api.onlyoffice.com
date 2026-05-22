@@ -16,16 +16,16 @@ expression.GetOutlineLvl();
 
 ## 返回值
 
-Number
+Number \| undefined
 
 ## 示例
 
-通过演示文稿中的段落属性获取指定段落的大纲级别。
+检查演示文稿中段落的标题级别。
 
 ```javascript editor-pptx
-// How can I get the outline lvl using a paragraph properties in a presentation?
+// How do I read the outline level of a paragraph in a presentation?
 
-// Get the outline lvl for a paragraph properties in a presentation.
+// Retrieve the hierarchical level assigned to a paragraph for outline or table of contents purposes in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

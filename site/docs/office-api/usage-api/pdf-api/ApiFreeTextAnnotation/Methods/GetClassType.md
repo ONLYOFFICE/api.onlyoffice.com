@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a free text annotation in a PDF document.
+Determine the class type of a text annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a free text annotation object is in a PDF document?
+// How do I identify what category a text note belongs to in a PDF?
 
-// Retrieve and output the class type string for a free text annotation in a PDF document.
+// Get the classification of an annotation element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

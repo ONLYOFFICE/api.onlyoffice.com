@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中垂直翻转绘图对象。
+在电子表格中将绘图从上到下镜像。
 
 ```javascript editor-xlsx
-// How to set the vertical flip property of the shape in a spreadsheet.
+// How do I flip a drawing so it faces the opposite vertical direction in a spreadsheet?
 
-// Create a drawing and flip it vertically in a spreadsheet.
+// Reverse a shape along its horizontal axis to produce a vertical mirror image in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

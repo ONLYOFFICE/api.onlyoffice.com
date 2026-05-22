@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an array with all the chart objects from the slide master.
+Retrieve all charts from a slide master in a presentation.
 
 ```javascript editor-pptx
-// How to get all charts from the master of presentation.
+// How do I find all charts on a slide master in a presentation?
 
-// Get all charts from the presentation as an array.
+// List every chart object in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -5,14 +5,16 @@
 ## 语法
 
 ```javascript
-expression.SetReadOnly();
+expression.SetReadOnly(bRequired);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
 
 ## 参数
 
-此方法没有任何参数。
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bRequired | 必需 | boolean |  | 未提供描述。 |
 
 ## 返回值
 
@@ -20,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置字段为只读。
+锁定 PDF 中的表单字段以防止编辑。
 
 ```javascript editor-pdf
-// How can I set read only using a base field in a PDF document?
+// How do I make a form field read-only in a PDF?
 
-// Set read only for a base field in a PDF document.
+// Disable editing on a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

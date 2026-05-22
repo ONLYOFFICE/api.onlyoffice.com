@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的编号对象转换为 JSON 对象。
+将编号定义序列化为 JSON 并在文档中恢复。
 
 ```javascript editor-docx
-// How to get a JSON from the numbering object in a document.
+// How do I convert a numbering object to JSON format in a document?
 
-// Convert the bullet numbering to json and add it to the paragraph in a document.
+// Duplicate a bullet list style by exporting it to JSON and rebuilding it from scratch in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("bullet");

@@ -20,12 +20,12 @@ expression.GetSpacingLineValue();
 
 ## 示例
 
-获取演示文稿中的段落行距值。
+检查演示文稿中段落的行距。
 
 ```javascript editor-pptx
-// / How to get the spacing line value between sentences of a paragraph in a presentation.
+// How do I read the line spacing value from a paragraph in a presentation?
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value in a presentation.
+// Retrieve the distance between lines within a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

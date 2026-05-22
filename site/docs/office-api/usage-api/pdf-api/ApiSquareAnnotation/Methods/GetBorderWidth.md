@@ -6,12 +6,12 @@ Inherited from [ApiBaseAnnotation.GetBorderWidth](../../ApiBaseAnnotation/Method
 
 ## Example
 
-Create a square annotation and get its border width in a PDF document.
+Retrieve the border width measurement of an annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I get the border width in a PDF document?
+// How thick is the border around an annotation in a PDF?
 
-// Get the border width using an annotation object in a PDF document.
+// Check the line thickness of an annotation's border in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

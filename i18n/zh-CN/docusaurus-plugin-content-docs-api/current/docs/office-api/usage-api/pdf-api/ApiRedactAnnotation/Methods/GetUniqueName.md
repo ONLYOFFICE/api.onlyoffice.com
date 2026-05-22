@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其唯一名称。
+获取 PDF 中注释的唯一标识符。
 
 ```javascript editor-pdf
-// How to get the unique name for an annotation in a PDF document?
+// What is the unique name assigned to an annotation in a PDF?
 
-// Get the unique name and display the result in a PDF document.
+// Obtain the identifier string that uniquely identifies an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

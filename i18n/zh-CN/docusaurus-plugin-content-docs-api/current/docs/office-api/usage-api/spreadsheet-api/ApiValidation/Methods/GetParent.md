@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取电子表格中验证的父范围。
+识别电子表格中拥有给定验证规则的单元格范围。
 
 ```javascript editor-xlsx
-// How to retrieve the validation parent range in a spreadsheet.
+// How do I find out which cells a data validation rule belongs to in a spreadsheet?
 
-// Get the parent for a validation in a spreadsheet.
+// Trace back from a validation object to the range of cells it is applied to in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:A5");

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中的文本是否设置了双删除线属性。
+确定文档中的文本是否有双删除线。
 
 ```javascript editor-docx
-// How to know whether a text is crossed by two horizontal lines in a document.
+// How do I check if a piece of text has two strikethrough lines applied in a document?
 
-// Retrieve text properties of the form to find out whether it is double stroke out.
+// Inspect a text run to confirm whether double strikethrough formatting is active in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get document pages count and display it in text field.
+Count the total number of pages in a PDF.
 
 ```javascript editor-pdf
-// How can I get the pages count using a document in a PDF document?
+// How do I find out how many pages my PDF has?
 
-// Get the pages count for a document in a PDF document.
+// Show the page count in a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

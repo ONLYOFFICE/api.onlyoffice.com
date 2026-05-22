@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-替换电子表格中自定义 XML 节点的 XML 内容。
+在电子表格中用全新的标记覆盖 XML 节点。
 
 ```javascript editor-xlsx
-// How can I set xml using a custom XML node in a spreadsheet?
+// How do I replace the contents of an XML node with different XML in a spreadsheet?
 
-// Set xml for a custom XML node in a spreadsheet.
+// Swap out a node's structure by supplying a fresh XML fragment in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

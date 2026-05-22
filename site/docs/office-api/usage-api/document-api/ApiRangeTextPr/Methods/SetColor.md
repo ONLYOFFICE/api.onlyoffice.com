@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.SetColor](../../ApiTextPr/Methods/SetColor.md).
 
 ## Example
 
-Set the text color for the current text run in a document.
+Apply a specific color to the default text characters in a document.
 
 ```javascript editor-docx
-// How to change a text color in a document.
+// How do I change the color of text across a whole document?
 
-// Get a font object of characters and color it specifying a color in RGB format.
+// Paint the default font with a chosen color so every paragraph inherits that tint in a document.
 
 const doc = Api.GetDocument();
 const textPr = doc.GetDefaultTextPr();

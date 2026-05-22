@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从 PDF 文档中的文本控件获取正则表达式并显示。
+从 PDF 中的文本字段检索验证模式。
 
 ```javascript editor-pdf
-// How can I get the regular exp using a text widget in a PDF document?
+// How do I access the validation pattern from a text field in a PDF?
 
-// Get the regular exp for a text widget in a PDF document.
+// Display what text pattern is required for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

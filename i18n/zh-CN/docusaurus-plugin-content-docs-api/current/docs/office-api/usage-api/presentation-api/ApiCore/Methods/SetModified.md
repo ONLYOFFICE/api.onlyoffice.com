@@ -22,12 +22,12 @@ expression.SetModified(oModified);
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的最后修改日期。
+标记演示文稿的最后修改日期。
 
 ```javascript editor-pptx
-// How to set modified for a core properties in a presentation?
+// How do I set when a presentation was last edited?
 
-// Set modified and display the result in a presentation.
+// Update and display the modification timestamp for a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

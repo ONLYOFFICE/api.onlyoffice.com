@@ -22,12 +22,12 @@ expression.ThemeColor(name);
 
 ## 示例
 
-在 PDF 文档中创建主题颜色并将其用作形状填充。
+在 PDF 中将文档主题的颜色应用于形状。
 
 ```javascript editor-pdf
-// How do I theme color in a PDF document?
+// How do I use a theme color instead of a custom color in a PDF?
 
-// Theme color and display the result in a PDF document.
+// Fill a shape with an accent color from the theme in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

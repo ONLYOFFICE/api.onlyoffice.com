@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Set and get the revision of the current presentation in a presentation.
+Set and display the revision number of a presentation in a presentation.
 
 ```javascript editor-pptx
-// How can I get the revision using a core properties in a presentation?
+// How do I check the revision information for a presentation?
 
-// Get the revision for a core properties in a presentation.
+// Read the revision identifier stored in a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

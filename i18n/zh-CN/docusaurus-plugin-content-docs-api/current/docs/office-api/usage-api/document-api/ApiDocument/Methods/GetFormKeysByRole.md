@@ -22,12 +22,12 @@ string[]
 
 ## 示例
 
-获取文档中附加到指定角色的所有表单键列表。
+列出分配给特定角色的所有表单字段键并在文档中显示。
 
 ```javascript editor-docx
-// How to get the form keys by role for a document?
+// How do I find which form fields belong to a particular role in a document?
 
-// Get the form keys by role and display the result in a document.
+// Separate form responsibilities by role so each participant sees only their required fields in a document.
 
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();

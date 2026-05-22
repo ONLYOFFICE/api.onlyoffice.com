@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the placeholder type in a presentation.
+Read the category of a placeholder in a presentation.
 
 ```javascript editor-pptx
-// How to get a placeholder type (chart, table, etc.) in a presentation.
+// How do I find what type of placeholder is assigned to a shape in a presentation?
 
-// Create a shape and get its placeholder type in a presentation.
+// Create a shape with a placeholder and retrieve its category in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

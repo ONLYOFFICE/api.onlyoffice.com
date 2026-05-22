@@ -23,12 +23,12 @@ expression.SetVisible(visible);
 
 ## 示例
 
-在电子表格中设置透视项的可见性。
+隐藏或显示数据透视表字段中的特定项目以控制电子表格报表中显示的内容。
 
 ```javascript editor-xlsx
-// How to show/hide pivot items using SetVisible method and Visible property in a spreadsheet.
+// How do I hide certain pivot field items so they are excluded from the pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then demonstrate setting visibility of pivot items in a spreadsheet.
+// Toggle individual item visibility to focus the pivot table on only the relevant categories in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

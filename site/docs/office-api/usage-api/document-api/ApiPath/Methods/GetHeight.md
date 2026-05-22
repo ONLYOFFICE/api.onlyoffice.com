@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Analyzes path properties of a cloud shape. Retrieves and display path dimensions, stroke and fill information.
+Read the height value set for a shape's drawing path in a document.
 
 ```javascript editor-docx
-// How to get the height for a geometry path in a document?
+// How do I find out the height of a shape's path area in a document?
 
-// Get the height and display the result in a document.
+// Confirm the vertical size of a path before scaling or repositioning a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

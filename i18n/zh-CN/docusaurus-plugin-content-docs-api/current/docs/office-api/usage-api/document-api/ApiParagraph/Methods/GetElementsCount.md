@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中当前段落的元素数量。
+计算文档中段落内的元素数量。
 
 ```javascript editor-docx
-// How to get the number of elements of the paragraph in a document.
+// How do I count the elements that make up a paragraph in a document?
 
-// Count words of the paragraph and print it in the document.
+// Track how the element count changes as new runs are added to a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

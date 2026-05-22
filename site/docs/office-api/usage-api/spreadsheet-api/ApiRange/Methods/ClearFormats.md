@@ -20,12 +20,12 @@ This method doesn't return any data.
 
 ## Example
 
-Clear all the formatting in the range.
+Strip all formatting from a cell range while leaving its values untouched in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to clear formatting for a range.
+// How do I remove bold, colors, and other styling from cells in a spreadsheet?
 
-// Get a range, clear formatting and show the result.
+// Reset the appearance of selected cells to plain default style without deleting their data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1:A2").SetValue("Example text")

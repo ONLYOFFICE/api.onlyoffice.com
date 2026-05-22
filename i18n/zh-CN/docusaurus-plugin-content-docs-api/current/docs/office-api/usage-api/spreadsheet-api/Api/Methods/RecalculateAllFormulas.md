@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-重新计算活动工作簿中的所有公式。
+在更改单元格值后重新计算电子表格中的所有公式结果。
 
 ```javascript editor-xlsx
-// How to recalculate all formulas in a worksheet.
+// How do I force all formulas to update their results after editing data in a spreadsheet?
 
-// Reset all values calculated by formulas.
+// Refresh every computed value to reflect the latest input changes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(1);

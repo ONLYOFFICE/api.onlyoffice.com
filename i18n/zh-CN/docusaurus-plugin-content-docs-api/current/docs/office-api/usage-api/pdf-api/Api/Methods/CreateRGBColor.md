@@ -24,12 +24,12 @@ expression.CreateRGBColor(r, g, b);
 
 ## 示例
 
-在 PDF 文档中为渐变光圈创建 RGB 颜色。
+在 PDF 中的渐变填充中使用 RGB 颜色。
 
 ```javascript editor-pdf
-// How to create a RGB color for a gradient stop in a PDF document.
+// How do I define a custom color using red, green, and blue values in a PDF?
 
-// Add an RGB color as a stop for a gradient in a PDF document.
+// Create a gradient stop with an RGB color in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

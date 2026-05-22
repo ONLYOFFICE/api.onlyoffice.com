@@ -20,12 +20,12 @@ expression.GetCommands();
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+检索定义 PDF 中形状轮廓的所有绘图指令。
 
 ```javascript editor-pdf
-// How to get the commands for a geometry path in a PDF document?
+// How do I access all steps of a shape's outline in a PDF?
 
-// Get the commands and display the result in a PDF document.
+// Get the complete list of commands that build a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

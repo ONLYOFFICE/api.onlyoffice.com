@@ -24,12 +24,12 @@ string
 
 ## Example
 
-Round a number to the specified number of decimals and return the result as text with or without commas in a spreadsheet.
+Format a number to a fixed number of decimal places in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round a number with parameters in a spreadsheet.
+// How do I display a number with a specific number of decimals in a spreadsheet?
 
-// Use function to round a number with specified decimal points in a spreadsheet.
+// Round and format a number as text with optional thousand separators in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

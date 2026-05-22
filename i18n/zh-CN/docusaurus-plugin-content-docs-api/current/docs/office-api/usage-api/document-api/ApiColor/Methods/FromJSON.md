@@ -22,12 +22,12 @@ expression.FromJSON(jsonObject);
 
 ## 示例
 
-从 JSON 还原文档中不同类型的颜色对象。
+从文档中的 JSON 表示重建颜色对象。
 
 ```javascript editor-docx
-// The JSON string contains the color type and value properties.
+// How do I deserialize saved color data back into usable color objects in a document?
 
-// Restore each color object from JSON and display the theme name.
+// Round-trip colors through JSON to verify that each restored value matches the original in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

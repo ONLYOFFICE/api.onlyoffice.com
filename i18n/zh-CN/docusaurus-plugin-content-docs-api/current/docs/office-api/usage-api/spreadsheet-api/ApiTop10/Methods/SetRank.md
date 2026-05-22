@@ -22,12 +22,12 @@ expression.SetRank(rank);
 
 ## 示例
 
-更改电子表格中前 10 条件的排名值。
+调整电子表格中条件格式规则高亮显示的最高或最低值数量。
 
 ```javascript editor-xlsx
-// How to set the number of top or bottom values to highlight in the condition in a spreadsheet.
+// How do I choose the exact number of leading values to mark with a formatting rule in a spreadsheet?
 
-// Change the rank value for the top 10 rule in a spreadsheet.
+// Narrow the spotlight to only the top 2 scores by updating the rank threshold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

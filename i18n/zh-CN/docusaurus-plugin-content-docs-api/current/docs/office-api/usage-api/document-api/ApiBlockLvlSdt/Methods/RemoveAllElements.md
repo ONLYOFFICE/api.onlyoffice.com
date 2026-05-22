@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中内容控件的内容。
+清除文档中内容控件的所有内容。
 
 ```javascript editor-docx
-// Create a block content control, add a text to it, and clear its contents in a document.
+// How do I remove all content from a content control in a document?
 
-// Remove all elements from the block level content control in a document.
+// Empty a content control to start fresh with no paragraphs or text inside it in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

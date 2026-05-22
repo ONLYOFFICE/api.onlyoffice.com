@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set and get the description of the current presentation using the core properties in a presentation.
+Set and retrieve the description of a presentation in a presentation.
 
 ```javascript editor-pptx
-// How do I set description in a presentation?
+// How do I set the description of a presentation in a presentation?
 
-// Set description using a core properties object in a presentation.
+// Retrieve and display the description as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

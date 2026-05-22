@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an array with all tables from the presentation.
+Find all tables in a presentation.
 
 ```javascript editor-pptx
-// How can I get all tables using a presentation in a presentation?
+// How do I access every table on slides, layouts, and masters in a presentation?
 
-// Get all tables for a presentation in a presentation.
+// Count tables from all locations and display the results in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
