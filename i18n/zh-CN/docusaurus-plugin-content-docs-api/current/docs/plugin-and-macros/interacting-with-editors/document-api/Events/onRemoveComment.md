@@ -1,6 +1,6 @@
 # onRemoveComment
 
-使用 [RemoveComments](../../../../../docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/RemoveComments.md) 方法删除指定评论时调用的函数。
+使用 [RemoveComments](../../../../../docs/plugin-and-macros/interacting-with-editors/document-api/Methods/RemoveComments.md) 方法删除指定评论时调用的函数。
 
 ## 参数
 

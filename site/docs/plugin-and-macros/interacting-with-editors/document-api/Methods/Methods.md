@@ -53,7 +53,7 @@ Represents the Api class.
 | [GetVBAMacros](./GetVBAMacros.md) | string \| null | Returns all VBA macros from the document. |
 | [GetVersion](./GetVersion.md) | string | Returns the editor version. |
 | [InputText](./InputText.md) | None | Inserts text into the document. |
-| [InsertAndReplaceContentControls](./InsertAndReplaceContentControls.md) | [ContentControlProperties](../Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document](../../../../../docs/office-api/usage-api/text-document-api/text-document-api.md), or by a link to the shared document. |
+| [InsertAndReplaceContentControls](./InsertAndReplaceContentControls.md) | [ContentControlProperties](../Enumeration/ContentControlProperties.md)[] | Inserts the content control containing data. The data is specified by the JS code for [Document](../../../../../docs/office-api/usage-api/document-api/document-api.md), or by a link to the shared document. |
 | [InsertOleObject](./InsertOleObject.md) | None | Inserts the OLE object at the current document position. |
 | [InstallPlugin](./InstallPlugin.md) | object | Installs a plugin using the specified plugin config. |
 | [IsEditingOFormMode](./IsEditingOFormMode.md) | boolean | Checks if the document is in the editing OForm mode. |

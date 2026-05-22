@@ -1,6 +1,6 @@
 # InsertAndReplaceContentControls
 
-插入包含数据的内容控件。数据由 [Document](../../../../../docs/office-api/usage-api/text-document-api/text-document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。
+插入包含数据的内容控件。数据由 [Document](../../../../../docs/office-api/usage-api/document-api/document-api.md) 的 JS 代码指定，或通过共享文档的链接指定。
 
 ## 语法
 
