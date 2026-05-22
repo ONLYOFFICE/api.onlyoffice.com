@@ -143,3 +143,15 @@ npm run dev
 ```
 
 Open `http://localhost:5173` in your browser to access your DocSpace instance.
+
+## What's next
+
+Now that DocSpace is running, a few parameters to explore:
+
+- `showMenu` — show or hide the left navigation panel
+- `width` / `height` — control the frame dimensions (percentages or pixels)
+- `theme` — set the UI theme
+- `locale` — set the interface language using a four-letter language code
+- `events` — attach callbacks for SDK lifecycle events
+
+For the full list of available parameters, see [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md). For other initialization modes such as `initEditor`, `initViewer`, or `initRoomSelector`, see [Embedding modes]().
