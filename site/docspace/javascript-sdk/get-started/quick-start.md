@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Quick Start
 
-There are two ways to embed a working DocSpace instance in your web application. You can do it using an HTML script tag, or installing our [npm package](https://www.npmjs.com/package/@onlyoffice/docspace-plugin-sdk). Both methods render DocSpace inside a `div` you control.
+There are two ways to embed a working DocSpace instance in your web application. You can do it using an HTML script tag, or installing our [npm package](https://www.npmjs.com/package/@onlyoffice/docspace-sdk-js). Both methods render DocSpace inside a `div` you control.
 
 ## Embedding with a script tag
 
@@ -79,34 +79,15 @@ If you are testing on localhost, make sure to whitelist your local origin (e.g.,
 
 ## Using the npm package
 
-If you are working in a React, Vue, or any other frontend framework project, you can install the SDK as an npm package instead.
+If you are working in a React, Vue, or any other frontend framework project, you can install the SDK as an npm package instead. You will need [Node.js](https://nodejs.org) installed.
 
-```bash
-npm install @onlyoffice/docspace-sdk-js
-```
-
-Then import and initialize:
-
-```javascript
-import  SDK  from "@onlyoffice/docspace-sdk-js";
-
-const sdk = new SDK();
-
-const docSpace = sdk.initManager({
-  frameId: "ds-frame",
-  src: "https://your-docspace.onlyoffice.com",
-});
-```
-
-Below is a simple working example using React and Vite:
-
-First, create a new React project:
+**Step 1.** Create a new React + Vite project:
 
 ```bash
 npm create vite@latest docspace-app -- --template react -y
 ```
 
-In a new terminal window:
+**Step 2.** Install the dependencies and the SDK:
 
 ```bash
 cd docspace-app
@@ -114,7 +95,7 @@ npm install
 npm install @onlyoffice/docspace-sdk-js
 ```
 
-Next, replace the contents of `src/App.jsx` with the following:
+**Step 3.** Replace the contents of `src/App.jsx` with the following:
 
 ```jsx
 import { useEffect } from "react";
@@ -136,13 +117,19 @@ export default function App() {
 }
 ```
 
-If not already running, run the app:
+**Step 4.** Run the app:
 
 ```bash
 npm run dev
 ```
 
 Open `http://localhost:5173` in your browser to access your DocSpace instance.
+
+:::tip
+
+If you are testing on localhost, make sure to whitelist your local origin (e.g., `http://localhost:5173`) in your DocSpace settings under the **JavaScript SDK** tab. If you still see a CSP error, add `checkCSP: false` to your config (for local development only).
+
+:::
 
 ## What's next
 
