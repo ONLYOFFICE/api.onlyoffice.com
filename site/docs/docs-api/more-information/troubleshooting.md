@@ -4,7 +4,7 @@ The most common problems with the editors integration and the ways to solve them
 
 ## Download failed
 
-![Download failed](/assets/images/editor/e-download.png)
+![Download failed](/assets/images/editor/e-download.png#gh-light-mode-only)![Download failed](/assets/images/editor/e-download.dark.png#gh-dark-mode-only)
 
 The "Download failed" message is displayed at the editors loading process.
 
@@ -22,7 +22,7 @@ Check if the [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#cal
 
 ## Could not be saved
 
-![Could not be saved](/assets/images/editor/e-error0.png)
+![Could not be saved](/assets/images/editor/e-error0.png#gh-light-mode-only)![Could not be saved](/assets/images/editor/e-error0.dark.png#gh-dark-mode-only)
 
 The editor is loaded with the "The document could not be saved" message.
 
@@ -32,7 +32,7 @@ Check if the [Callback handler](../usage-api/callback-handler.md#document-save-e
 
 ## The file version has been changed
 
-![The file version has been changed](/assets/images/editor/e-key.png)
+![The file version has been changed](/assets/images/editor/e-key.png#gh-light-mode-only)![The file version has been changed](/assets/images/editor/e-key.dark.png#gh-dark-mode-only)
 
 The editor displays the "Connection is lost. Trying to connect. Please check connection settings." message.
 
@@ -42,7 +42,7 @@ Do not forget that every time the document is edited and saved, the [document.ke
 
 ## The file version cannot be opened
 
-![The file version cannot be opened](/assets/images/editor/changes-url.png)
+![The file version cannot be opened](/assets/images/editor/changes-url.png#gh-light-mode-only)![The file version cannot be opened](/assets/images/editor/changes-url.dark.png#gh-dark-mode-only)
 
 The **document editing service** cannot open the file version.
 
@@ -50,7 +50,7 @@ Check if the *changesUrl* link from the [setHistoryData](../usage-api/methods.md
 
 ## No collaborative editing
 
-![No collaborative editing](/assets/images/editor/e-coedit.png)
+![No collaborative editing](/assets/images/editor/e-coedit.png#gh-light-mode-only)![No collaborative editing](/assets/images/editor/e-coedit.dark.png#gh-dark-mode-only)
 
 No co-editing is available when the document is opened for editing by different users.
 
@@ -60,7 +60,7 @@ Check if the [document.key](../usage-api/config/document/document.md#key) values
 
 ## Invalid token
 
-![Invalid token](/assets/images/editor/e-token.png)
+![Invalid token](/assets/images/editor/e-token.png#gh-light-mode-only)![Invalid token](/assets/images/editor/e-token.dark.png#gh-dark-mode-only)
 
 The editor is loaded with the "The document security token is not correctly formed. Please contact your Document Server administrator" message.
 
