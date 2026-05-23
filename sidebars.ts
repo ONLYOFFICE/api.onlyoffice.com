@@ -42,12 +42,6 @@ const sidebars: SidebarsConfig = {
 
   docspaceJSSdk: [
     {
-    type: "doc",
-    id: "docspace/javascript-sdk/overview/overview",
-    label: "Overview",
-    className: "sidebar-no-arrow",
-    },
-    {
       type: "category",
       label: "Get Started",
       collapsed: false,
