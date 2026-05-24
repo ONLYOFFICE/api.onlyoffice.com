@@ -7,6 +7,7 @@ Represents the Api class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
 | [CreateChart](./Methods/CreateChart.md) | [ApiChart](../ApiChart/ApiChart.md) | Creates a chart with the parameters specified. |

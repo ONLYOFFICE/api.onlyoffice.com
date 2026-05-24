@@ -27,6 +27,7 @@
 | [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 创建新工作表。新工作表将成为活动工作表。 |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | 清除所有自定义函数。 |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
 | [CreateColorByName](./Methods/CreateColorByName.md) | [ApiColor](../ApiColor/ApiColor.md) | 从可用的颜色预设中选择创建颜色。 |

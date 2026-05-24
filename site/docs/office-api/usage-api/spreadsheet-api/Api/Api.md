@@ -27,6 +27,7 @@ Represents the Api class.
 | [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | Creates a new worksheet. The new worksheet becomes the active sheet. |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | Converts centimeters to points. |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | Clears all custom functions. |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates an ApiColor from a universal input. The method recognizes several call signatures and either delegates to a narrower factory or constructs an ApiColor directly. |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | Creates a blip fill to apply to the object using the selected image as the object background. |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter. |
 | [CreateColorByName](./Methods/CreateColorByName.md) | [ApiColor](../ApiColor/ApiColor.md) | Creates a color selecting it from one of the available color presets. |
