@@ -234,7 +234,6 @@ curl -X POST "https://documentserver/docbuilder" \
 }
 ```
 
-<!--
 ### 文档比较
 
 您可以比较两个文档并生成包含修订记录的结果文件。脚本使用 [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) 打开第二个文档进行比较：
@@ -242,7 +241,7 @@ curl -X POST "https://documentserver/docbuilder" \
 ```js
 builderJS.OpenFile("https://example.com/file1.docx");
 const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
-AscCommonWord.CompareDocuments(Api, file, null);
+AscCommonWord.CompareDocuments(Api, file);
 file.Close();
 builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
@@ -270,7 +269,6 @@ curl -X POST "https://documentserver/docbuilder" \
 ```
 
 有关文档比较的更多详细信息，请参阅[文档比较](../../document-builder/using-cli/comparing-documents.md)。
--->
 
 ## 可能的错误代码及其描述
 
