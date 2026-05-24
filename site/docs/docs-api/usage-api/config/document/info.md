@@ -10,7 +10,7 @@ The highlighting state of the *Favorite* icon. When the user clicks the icon, th
 
 **Example**: `true`
 
-![Favorite](/assets/images/editor/favorite.png)
+![Favorite](/assets/images/editor/favorite.png#gh-light-mode-only)![Favorite](/assets/images/editor/favorite.dark.png#gh-dark-mode-only)
 
 ## folder
 

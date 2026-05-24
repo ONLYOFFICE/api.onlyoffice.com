@@ -43,11 +43,11 @@ The figure and steps below explain how an anonymous user’s name is set in ONLY
 
 3. When `request` is `true` and no name is stored yet, the **document editor** shows a name prompt:
 
-   ![Name request](/assets/images/editor/name-request.png)
+   ![Name request](/assets/images/editor/name-request.png#gh-light-mode-only)![Name request](/assets/images/editor/name-request.dark.png#gh-dark-mode-only)
 
 4. Once the name is set, the `label` suffix is appended to it:
 
-   ![Label](/assets/images/editor/label.png)
+   ![Label](/assets/images/editor/label.png#gh-light-mode-only)![Label](/assets/images/editor/label.dark.png#gh-dark-mode-only)
 
 5. The entered name is saved to the browser’s local storage. On the next visit, the stored name is reused automatically — the user is not prompted again.
 
@@ -59,6 +59,6 @@ The figure and steps below explain how an anonymous user’s name is set in ONLY
 
 To restrict anonymous user access to the editor or live viewer, set the [`services.CoAuthoring.server.isAnonymousSupport`](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-isAnonymousSupport) parameter in the server configuration file to `false`. When an anonymous user tries to open the editor, a warning is shown:
 
-<img alt="Anonymous user warning" src="/assets/images/editor/anonymous-warning.jpg" width="400px" />
+![Anonymous user warning](/assets/images/editor/anonymous-warning.png#gh-light-mode-only)![Anonymous user warning](/assets/images/editor/anonymous-warning.dark.png#gh-dark-mode-only)
 
 For the live viewer, no warning is shown — it falls back to the offline viewer silently.

@@ -14,7 +14,7 @@ sidebar_position: -20
 4. **文档编辑服务**将**用户1**所做的修改发送给**用户2**的**文档编辑器**。
 5. 现在这些修改对**用户2**可见。
 
-![共同编辑](/assets/images/editor/coedit-view.png)
+![共同编辑](/assets/images/editor/coedit-view.png#gh-light-mode-only)![共同编辑](/assets/images/editor/coedit-view.dark.png#gh-dark-mode-only)
 
 ## 实际操作方法
 
@@ -261,7 +261,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **快速**模式为默认模式。所有更改会实时发送给其他用户——您可以在他们编辑文档时看到他们的光标和名称提示。更改会自动保存，且不支持重做操作。
 
-![快速模式](/assets/images/editor/fast-mode.png)
+![快速模式](/assets/images/editor/fast-mode.png#gh-light-mode-only)![快速模式](/assets/images/editor/fast-mode.dark.png#gh-dark-mode-only)
 
 ### 严格模式
 
@@ -269,4 +269,4 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 点击**保存**后，其他用户会收到更新通知。要接受更新并发送您自己的更改，请点击工具栏左上角的 <img alt="Save updates" src="/assets/images/editor/save-updates.png" width="18px" /> 按钮。接受的更新将被高亮显示。
 
-![严格模式](/assets/images/editor/strict-mode.png)
+![严格模式](/assets/images/editor/strict-mode.png#gh-light-mode-only)![严格模式](/assets/images/editor/strict-mode.dark.png#gh-dark-mode-only)

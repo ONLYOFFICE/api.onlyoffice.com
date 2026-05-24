@@ -30,7 +30,7 @@ customization 部分定义编辑器自定义参数。
 }
 ```
 
-![匿名](/assets/images/editor/anonymous.png)
+![匿名](/assets/images/editor/anonymous.png#gh-light-mode-only)![匿名](/assets/images/editor/anonymous.dark.png#gh-dark-mode-only)
 
 ### anonymous.request
 
@@ -398,7 +398,7 @@ customization 部分定义编辑器自定义参数。
 }
 ```
 
-![反馈](/assets/images/editor/feedback.png)
+![反馈](/assets/images/editor/feedback.png#gh-light-mode-only)![反馈](/assets/images/editor/feedback.dark.png#gh-dark-mode-only)
 
 ### feedback.url
 
@@ -663,7 +663,7 @@ customization 部分定义编辑器自定义参数。
 
 **示例**: `true`
 
-<img alt="Mention share" src="/assets/images/editor/mentionShare.png" width="379px" />
+![Mention share](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mention share](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)
 
 ## mobile
 
@@ -949,8 +949,8 @@ PDF 表单编辑模式下*开始填写*按钮的标题。
 }
 ```
 
-![提交按钮](/assets/images/editor/submitForm.png)
-![提交按钮](/assets/images/editor/submitForm-message.png)
+![提交按钮](/assets/images/editor/submitForm.png#gh-light-mode-only)![提交按钮](/assets/images/editor/submitForm.dark.png#gh-dark-mode-only)
+![提交按钮](/assets/images/editor/submitForm-message.png#gh-light-mode-only)![提交按钮](/assets/images/editor/submitForm-message.dark.png#gh-dark-mode-only)
 
 ### submitForm.visible
 

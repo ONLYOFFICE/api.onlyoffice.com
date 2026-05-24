@@ -20,8 +20,7 @@ The figure and steps below explain how a document is renamed in ONLYOFFICE Docs.
 
 2. In the editor initialization config, define the [onRequestRename](../../usage-api/config/events.md#onrequestrename) event handler. When the user selects *Rename...* in the editor menu, this event fires with the new name (without the file extension) in `event.data`. In the handler, send the new name to your server so it can rename the file in the **document storage service**.
 
-   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.png#gh-light-mode-only" width="282px" />
-   <img alt="onRequestRename" src="/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only" width="282px" />
+   ![onRequestRename](/assets/images/editor/onRequestRename.png#gh-light-mode-only)![onRequestRename](/assets/images/editor/onRequestRename.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestRename(event) {

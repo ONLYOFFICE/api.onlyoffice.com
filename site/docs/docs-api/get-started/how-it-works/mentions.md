@@ -20,7 +20,7 @@ The figure and steps below explain how the mentions feature works in ONLYOFFICE 
 
 2. In the editor initialization config, define the [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event handler. When the user types `+` or `@` in a comment, the editor calls this handler with `event.data.c` set to `"mention"`. Your code must respond by calling [setUsers](../../usage-api/methods.md#setusers) with the list of users who can be mentioned:
 
-   <img alt="onRequestUsers" src="/assets/images/editor/onRequestUsers.png" width="309px" />
+   ![onRequestUsers](/assets/images/editor/onRequestUsers.png#gh-light-mode-only)![onRequestUsers](/assets/images/editor/onRequestUsers.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestUsers(event) {
@@ -123,4 +123,4 @@ docEditor.setSharingSettings({
 
 If [onRequestSendNotify](../../usage-api/config/events.md#onrequestsendnotify) does not grant file access to mentioned users, set [`mentionShare`](../../usage-api/config/editor/customization/customization-standard-branding.md#mentionshare) to `false` to hide the sharing UI in comments.
 
-<img alt="Mentions" src="/assets/images/editor/mentionShare.png" width="379px" />
+![Mentions](/assets/images/editor/mentionShare.png#gh-light-mode-only)![Mentions](/assets/images/editor/mentionShare.dark.png#gh-dark-mode-only)

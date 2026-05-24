@@ -176,7 +176,7 @@ In case `edit` is set to `true` and `review` is also set to `true`, the user wil
 
 **Example**: `true`
 
-![Review document](/assets/images/editor/review.png)
+![Review document](/assets/images/editor/review.png#gh-light-mode-only)![Review document](/assets/images/editor/review.dark.png#gh-dark-mode-only)
 
 ## reviewGroups
 

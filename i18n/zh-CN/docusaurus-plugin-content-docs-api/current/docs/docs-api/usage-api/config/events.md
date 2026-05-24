@@ -1083,6 +1083,8 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 `event.data` 是角色对象的数组。
 
+![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
+
 **示例**:
 
 ```ts

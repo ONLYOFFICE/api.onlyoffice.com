@@ -84,7 +84,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `true`
 
-![共同编辑模式](/assets/images/editor/coediting-mode.png)
+![共同编辑模式](/assets/images/editor/coediting-mode.png#gh-light-mode-only)![共同编辑模式](/assets/images/editor/coediting-mode.dark.png#gh-dark-mode-only)
 
 ## createUrl
 
@@ -98,7 +98,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `"https://example.com/url-to-create-document"`
 
-![创建 URL](/assets/images/editor/create.png)
+![创建 URL](/assets/images/editor/create.png#gh-light-mode-only)![创建 URL](/assets/images/editor/create.dark.png#gh-dark-mode-only)
 
 ## fileChoiceUrl
 
@@ -256,7 +256,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `"https://example.com/exampledocument1.docx"`
 
-![最近的文件](/assets/images/editor/recent.png) 
+![最近的文件](/assets/images/editor/recent.png#gh-light-mode-only)![最近的文件](/assets/images/editor/recent.dark.png#gh-dark-mode-only)
 
 ## 地区 {#region}
 
@@ -390,7 +390,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `"https://example.com/url-to-create-template1"`
 
-![模板](/assets/images/editor/templates.png)
+![模板](/assets/images/editor/templates.png#gh-light-mode-only)![模板](/assets/images/editor/templates.dark.png#gh-dark-mode-only)
 
 ## 用户 {#user}
 

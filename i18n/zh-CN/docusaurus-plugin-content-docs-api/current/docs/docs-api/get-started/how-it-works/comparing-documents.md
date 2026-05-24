@@ -46,6 +46,6 @@ sidebar_position: -9
 
 3. 比较加载完成后，用户可以使用顶部工具栏上的相应按钮来接受或拒绝更改。
 
-   ![接受更改](/assets/images/editor/compare-documents.png)
+   ![接受更改](/assets/images/editor/compare-documents.png#gh-light-mode-only)![接受更改](/assets/images/editor/compare-documents.dark.png#gh-dark-mode-only)
 
 用户完成审阅后，文档会连同已接受的更改一起[保存](./saving-file.md)。

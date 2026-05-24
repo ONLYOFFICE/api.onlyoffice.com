@@ -19,7 +19,7 @@ sidebar_position: -4
 
 2. 在**文档编辑器**初始化的配置脚本中，添加 [onRequestUsers](../../usage-api/config/events.md#onrequestusers) 事件处理程序。当用户打开*保护 -> 保护范围*、单击*新建*并开始在*谁可以编辑*字段中输入内容时，此事件将触发，其中 `data.c` 设置为 `protect`。处理程序调用 [setUsers](../../usage-api/methods.md#setusers) 方法来提供可被授予编辑权限的用户列表：
 
-   <img alt="Grant access" src="/assets/images/editor/protect-range.png" width="292px" />
+   ![Grant access](/assets/images/editor/protect-range.png#gh-light-mode-only)![Grant access](/assets/images/editor/protect-range.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestUsers(event) {

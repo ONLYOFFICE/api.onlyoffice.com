@@ -6,7 +6,7 @@ sidebar_position: -15
 
 审阅模式允许用户在不直接修改原始文本的情况下对文档提出修改建议。所有更改都会被跟踪，具有相应权限的用户可以接受或拒绝这些更改。本节介绍如何在集成中启用和配置审阅功能。
 
-![审阅](/assets/images/editor/review.png)
+![审阅](/assets/images/editor/review.png#gh-light-mode-only)![审阅](/assets/images/editor/review.dark.png#gh-dark-mode-only)
 
 ## 审阅访问权限
 
@@ -14,7 +14,7 @@ sidebar_position: -15
 
 如果 `permissions.edit` 为 `true` 且 `permissions.review` 也为 `true`，用户可以编辑文档、接受或拒绝跟踪的更改，以及切换到审阅模式。
 
-![审阅](/assets/images/editor/accept_reject.png)
+![审阅](/assets/images/editor/accept_reject.png#gh-light-mode-only)![审阅](/assets/images/editor/accept_reject.dark.png#gh-dark-mode-only)
 
 如果 `permissions.edit` 为 `false` 且 `permissions.review` 为 `true`，则文档仅可用于审阅。
 

@@ -57,7 +57,7 @@ sidebar_position: -6
 
 6. 如果剪贴板包含步骤3中的源电子表格元数据，并且目标电子表格配置包含`onRequestReferenceData`处理程序，则*粘贴链接*按钮将出现在粘贴对话框中。
 
-   <img alt="Paste link" src="/assets/images/editor/paste-link.png" width="550px" />
+   ![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
 7. 当用户点击*粘贴链接*时，公式将插入到当前单元格中，并且`referenceData`对象将保存到目标文件中。公式格式如下：
 
@@ -91,7 +91,7 @@ sidebar_position: -6
    }
    ```
 
-   <img alt="Update values" src="/assets/images/editor/update-values.png" width="700px" />
+   ![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
 9. 要刷新数据，请调用[`setReferenceData`](../../usage-api/methods.md#setreferencedata)方法。调用时必须包含[`token`](./security.md)以验证参数。
 
@@ -120,7 +120,7 @@ sidebar_position: -6
 
    `data`参数包含一个对象，其中包含唯一文件数据、文件路径和新浏览器选项卡名称。要在新选项卡中打开引用的外部文件，请使用源URL和`windowName`调用[`window.open`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)。
 
-   <img alt="Open source" src="/assets/images/editor/open-source.png" width="498px" />
+   ![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
    示例：
 
@@ -150,7 +150,7 @@ sidebar_position: -6
    要将数据发送到`setReferenceSource`方法，请首先通过`referenceData`搜索文件。如果该字段不存在或找不到文件，则回退到`path`参数。
    :::
 
-   <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
+   ![Change source](/assets/images/editor/change-source.png#gh-light-mode-only)![Change source](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
    示例：
 
