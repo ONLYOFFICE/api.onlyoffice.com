@@ -10,6 +10,14 @@ The plugin identifiers from the [config.json](../../../../plugin-and-macros/stru
 
 **Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
 
+## disable
+
+**type:** `string[]`
+
+The plugin identifiers from the [config.json](../../../../plugin-and-macros/structure/configuration/configuration.md#guid) file for plugins that will be disabled on load. The specified plugins will be blocked and unavailable in the editor interface.
+
+**Example**: `["asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}"]`
+
 ## options
 
 **type:** `object`
@@ -95,6 +103,9 @@ const config = {
     plugins: {
       autostart: [
         "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
+      ],
+      disable: [
+        "asc.{CFE4BE46-3F85-4B79-B96E-B5AAF0EC9BC3}",
       ],
       options: {
         "all": {

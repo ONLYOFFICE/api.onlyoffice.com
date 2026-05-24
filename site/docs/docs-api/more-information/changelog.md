@@ -5,6 +5,7 @@ The list of changes of ONLYOFFICE Docs API.
 ## Version 9.4
 
 - Added the [plugin command logging](../usage-api/config/editor/plugins.md#plugin-command-logging) feature for enabling debug output of plugin commands in the browser console.
+- Added the [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) parameter to block specific plugins on load.
 
 ## Version 9.1
 

@@ -5,6 +5,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 9.4
 
 - 新增[插件命令日志](../usage-api/config/editor/plugins.md#plugin-command-logging)功能，用于在浏览器控制台中启用插件命令的调试输出。
+- 添加了 [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) 参数，用于在加载时阻止指定插件。
 
 ## 版本 9.1
 
