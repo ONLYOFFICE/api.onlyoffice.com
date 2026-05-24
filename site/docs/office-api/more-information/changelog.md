@@ -4,6 +4,17 @@ The list of changes for Office JavaScript API.
 
 ## Version 9.4
 
+### Document methods
+
+- Added the [Api/MergeDocuments](../usage-api/document-api/Api/Methods/MergeDocuments.md) method to Document API.
+
+### Color methods
+
+- Added the [Api/Color](../usage-api/document-api/Api/Methods/Color.md) method to Document API.
+- Added the [Api/Color](../usage-api/spreadsheet-api/Api/Methods/Color.md) method to Spreadsheet API.
+- Added the [Api/Color](../usage-api/presentation-api/Api/Methods/Color.md) method to Presentation API.
+- Added the [Api/Color](../usage-api/pdf-api/Api/Methods/Color.md) method to PDF API.
+
 ### Signature form
 
 - Added the [ApiSignatureForm](../usage-api/document-api/ApiSignatureForm/ApiSignatureForm.md) class to Document API.
