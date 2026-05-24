@@ -6,6 +6,13 @@ sidebar_position: -1
 
 The list of changes for ONLYOFFICE Plugins and Macros API.
 
+## Version 9.4
+
+- Added the [MoveCursorToField](../interacting-with-editors/document-api/Methods/MoveCursorToField.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the [MoveCursorOutsideField](../interacting-with-editors/document-api/Methods/MoveCursorOutsideField.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
+- Added the *lockScroll* and *keepSelection* parameters to the [StartAction](../interacting-with-editors/document-api/Methods/StartAction.md) method of *window\.Asc.plugin.executeMethod*.
+- Added the *scrollToTarget* and *cancel* parameters to the [EndAction](../interacting-with-editors/document-api/Methods/EndAction.md) method of *window\.Asc.plugin.executeMethod*.
+
 ## Version 9.3
 
 - Added the [SelectAddinField](../interacting-with-editors/document-api/Methods/SelectAddinField.md) method to *window\.Asc.plugin.executeMethod* for Document Api.
