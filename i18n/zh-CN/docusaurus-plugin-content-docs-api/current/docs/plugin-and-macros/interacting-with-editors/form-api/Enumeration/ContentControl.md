@@ -15,7 +15,7 @@ Object
 | Border | Object | 内容控件的边框颜色。仅在设置了边框颜色时显示。 |
 | Color | Object | 内容控件的标签颜色。仅在设置了标签颜色时显示。 |
 | FormKey | string | 唯一的表单键。仅在内容控件为表单字段时显示。 |
-| FormValue | [*](../../document-api/*/*.md) | 表单字段的当前值。仅在内容控件为表单字段时显示。 |
+| FormValue | string \| [bool](../../document-api/bool/bool.md) \| Date | 表单字段的当前值。仅在内容控件为表单字段时显示。 |
 | Id | string | 唯一的内容控件标识符。可用于搜索特定的内容控件并在代码中引用它。 |
 | InternalId | string | 内容控件的唯一内部标识符。用于所有内容控件操作。 |
 | Lock | [ContentControlLock](../Enumeration/ContentControlLock.md) | 定义是否可以删除和/或编辑内容控件的值。 |
