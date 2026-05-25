@@ -1,5 +1,41 @@
 # Change log
 
+## 8.7.0
+
+### New features
+
+#### Docs API
+
+* Added `editorConfig.plugins.disable` parameter documentation
+* Added Croatian language to version 9.4 changelog
+* Removed deprecated `editorConfig.customization.commentAuthorOnly` parameter
+
+#### Office API
+
+* Updated office-js-api reference documentation for version 9.4
+* Added version 9.4 changelog with MergeDocuments and Color methods
+
+#### Plugins and macros
+
+* Updated plugins API reference documentation for version 9.4 (text annotations, form methods, comment events)
+* Added version 9.4 changelog
+
+#### Document Builder
+
+* Published document comparison documentation and fixed CompareDocuments signature
+* Added ability to select a specific sample via link
+
+### Improvements
+
+#### Docs API
+
+* Updated screenshots with dark theme support across editor, customization, events, permissions, co-editing, reviewing, and other pages
+* Added onRequestStartFilling screenshot to events page
+
+#### Localization
+
+* Added dark theme support for zh-CN documentation screenshots
+
 ## 8.6.0
 
 ### New features
