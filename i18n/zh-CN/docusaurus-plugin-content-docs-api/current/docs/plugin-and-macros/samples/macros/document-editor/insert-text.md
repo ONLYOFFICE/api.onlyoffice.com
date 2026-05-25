@@ -20,4 +20,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Insert text](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Insert text](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-text.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-text.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

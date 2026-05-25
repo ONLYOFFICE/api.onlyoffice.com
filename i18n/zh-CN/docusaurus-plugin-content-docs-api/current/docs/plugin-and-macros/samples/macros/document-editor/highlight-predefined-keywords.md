@@ -26,4 +26,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/highlight-predefined-keywords.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/highlight-predefined-keywords.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

@@ -33,5 +33,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![TextFormCharacterLimit](/assets/images/plugins/limit-number-of-characters.png#gh-light-mode-only)
-![TextFormCharacterLimit](/assets/images/plugins/limit-number-of-characters.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/limit-number-of-characters.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/limit-number-of-characters.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

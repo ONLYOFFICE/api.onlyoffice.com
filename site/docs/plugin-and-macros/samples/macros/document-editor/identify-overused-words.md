@@ -123,5 +123,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![IdentifyOverusedWords](/assets/images/plugins/identify-overused-words.png#gh-light-mode-only)
-![IdentifyOverusedWords](/assets/images/plugins/identify-overused-words.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/identify-overused-words.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/identify-overused-words.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

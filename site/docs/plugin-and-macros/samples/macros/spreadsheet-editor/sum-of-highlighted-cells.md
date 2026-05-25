@@ -63,4 +63,11 @@ End Sub
 
 ## Result
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/sum-of-highlighted-cells.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/sum-of-highlighted-cells.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

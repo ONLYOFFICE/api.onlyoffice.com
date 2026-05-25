@@ -91,4 +91,11 @@ Methods used: [AddCustomFunction](/docs/office-api/usage-api/spreadsheet-api/Api
 
 ## Result
 
-![World Bank indicator](/assets/images/plugins/world-bank-indicator.png#gh-light-mode-only)![World Bank indicator](/assets/images/plugins/world-bank-indicator.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

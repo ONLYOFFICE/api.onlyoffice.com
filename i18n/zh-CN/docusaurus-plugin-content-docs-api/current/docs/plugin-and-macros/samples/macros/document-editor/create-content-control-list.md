@@ -93,5 +93,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![创建内容控件列表](/assets/images/plugins/create-content-control-list.png#gh-light-mode-only)
-![创建内容控件列表](/assets/images/plugins/create-content-control-list.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/create-content-control-list.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/create-content-control-list.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

@@ -80,5 +80,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![阅读时间计算](/assets/images/plugins/time-to-read.png#gh-light-mode-only)
-![阅读时间计算](/assets/images/plugins/time-to-read.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/calculate-time-to-read.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/calculate-time-to-read.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

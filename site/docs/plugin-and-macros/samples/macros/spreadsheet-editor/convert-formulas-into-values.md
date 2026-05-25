@@ -45,4 +45,11 @@ End Sub
 
 ## Result
 
-![Convert formulas into values](/assets/images/plugins/convert-formulas-into-values.png#gh-light-mode-only)![Convert formulas into values](/assets/images/plugins/convert-formulas-into-values.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

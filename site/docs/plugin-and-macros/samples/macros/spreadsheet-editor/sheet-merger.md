@@ -43,4 +43,11 @@ Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods
 
 ## Result
 
-![SheetMerger](/assets/images/plugins/sheet-merger.png#gh-light-mode-only)![SheetMerger](/assets/images/plugins/sheet-merger.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/sheet-merger.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/sheet-merger.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

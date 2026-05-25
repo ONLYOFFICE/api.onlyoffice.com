@@ -91,4 +91,11 @@ For the macros to function, replace *YOUR_API_KEY* with the API key obtained fro
 
 ## Result
 
-![Write data](/assets/images/plugins/complete-address-information.png#gh-light-mode-only)![Write data](/assets/images/plugins/complete-address-information.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/complete-address-information.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/complete-address-information.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

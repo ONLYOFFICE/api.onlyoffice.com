@@ -121,5 +121,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![识别过度重复使用词汇](/assets/images/plugins/identify-overused-words.png#gh-light-mode-only)
-![识别过度重复使用词汇](/assets/images/plugins/identify-overused-words.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/identify-overused-words.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/identify-overused-words.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

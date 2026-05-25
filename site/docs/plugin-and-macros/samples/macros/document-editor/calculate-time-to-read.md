@@ -82,5 +82,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![TimeToRead](/assets/images/plugins/time-to-read.png#gh-light-mode-only)
-![TimeToRead](/assets/images/plugins/time-to-read.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/calculate-time-to-read.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/calculate-time-to-read.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

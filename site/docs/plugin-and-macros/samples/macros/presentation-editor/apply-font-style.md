@@ -33,7 +33,7 @@ Applies a consistent font style across all the slides.
 })();
 ```
 
-Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFontFamily.md)  
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/SetFontFamily.md)
 
 ## Reference Microsoft VBA macro code
 
@@ -71,5 +71,11 @@ End Sub
 
 ## Result
 
-![Apply font style](/assets/images/plugins/apply-font-style.png#gh-light-mode-only)![Apply font style](/assets/images/plugins/apply-font-style.dark.png#gh-dark-mode-only)
-
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/apply-font-style.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/apply-font-style.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

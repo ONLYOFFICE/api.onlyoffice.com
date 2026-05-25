@@ -49,9 +49,15 @@ Formats the title of each slide in a presentation. It sets the font, font size, 
 })();
 ```
 
-Methods used: [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFontFamily.md), [SetFontSize](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize.md), [SetJc](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/SetJc.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [SetVerticalTextAlign](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/SetVerticalTextAlign.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md)
+Methods used: [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/SetFontFamily.md), [SetFontSize](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/SetFontSize.md), [SetJc](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/SetJc.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [SetVerticalTextAlign](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/SetVerticalTextAlign.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md)
 
 ## Result
 
-![FormatSlideTitles](/assets/images/plugins/format-slide-titles.png#gh-light-mode-only)
-![FormatSlideTitles](/assets/images/plugins/format-slide-titles.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/format-slide-titles.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/format-slide-titles.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

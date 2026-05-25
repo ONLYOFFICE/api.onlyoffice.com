@@ -55,5 +55,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除空段落](/assets/images/plugins/remove-empty-paragraphs.png#gh-light-mode-only)
-![删除空段落](/assets/images/plugins/remove-empty-paragraphs.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-empty-paragraphs.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-empty-paragraphs.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

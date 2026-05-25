@@ -104,5 +104,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![从列表项创建幻灯片](/assets/images/plugins/create-similar-slides.png#gh-light-mode-only)
-![从列表项创建幻灯片](/assets/images/plugins/create-similar-slides.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/create-slides-from-list-items.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/create-slides-from-list-items.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

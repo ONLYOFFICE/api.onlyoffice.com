@@ -43,4 +43,11 @@ End Sub
 
 ## 结果
 
-![公式转换数值](/assets/images/plugins/convert-formulas-into-values.png#gh-light-mode-only)![公式转换数值](/assets/images/plugins/convert-formulas-into-values.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

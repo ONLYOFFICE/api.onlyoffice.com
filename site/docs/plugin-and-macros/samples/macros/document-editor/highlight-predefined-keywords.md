@@ -6,7 +6,7 @@ tags: ["Docs", "Macros", "Documents"]
 
 # Highlight predefined keywords
 
-Highlights predefined keywords in document.
+Highlights predefined keywords in a document.
 
 ```ts
 (function () {
@@ -28,4 +28,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/highlight-predefined-keywords.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/highlight-predefined-keywords.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

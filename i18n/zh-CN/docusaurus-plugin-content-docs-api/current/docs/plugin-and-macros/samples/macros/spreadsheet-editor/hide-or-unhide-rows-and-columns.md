@@ -28,7 +28,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用的方法: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetRows](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [GetHidden](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetHidden.md), [GetCols](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [SetHidden](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetHidden.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRows.md), [GetHidden](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetHidden.md), [GetCols](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [SetHidden](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetHidden.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -41,4 +41,11 @@ End Sub
 
 ## 结果
 
-![隐藏或取消隐藏行和列](/assets/images/plugins/hide-unhide-rows-columns.png#gh-light-mode-only)![隐藏或取消隐藏行和列](/assets/images/plugins/hide-unhide-rows-columns.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/hide-or-unhide-rows-and-columns.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/hide-or-unhide-rows-and-columns.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

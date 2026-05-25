@@ -36,5 +36,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDo
 
 ## Result
 
-![Remove All Drawings](/assets/images/plugins/remove-all-drawings.png#gh-light-mode-only)
-![Remove All Drawings](/assets/images/plugins/remove-all-drawings.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/remove-all-drawings.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/remove-all-drawings.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

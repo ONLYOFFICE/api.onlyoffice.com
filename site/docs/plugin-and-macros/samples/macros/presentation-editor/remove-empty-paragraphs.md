@@ -57,5 +57,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![RemoveEmptyParagraphs](/assets/images/plugins/remove-empty-paragraphs.png#gh-light-mode-only)
-![RemoveEmptyParagraphs](/assets/images/plugins/remove-empty-paragraphs.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-empty-paragraphs.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-empty-paragraphs.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

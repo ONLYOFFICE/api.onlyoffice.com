@@ -25,4 +25,11 @@ End Sub
 
 ## 结果
 
-![Column width](/assets/images/plugins/column-width.png#gh-light-mode-only)![Column width](/assets/images/plugins/column-width.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/set-column-width.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/set-column-width.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

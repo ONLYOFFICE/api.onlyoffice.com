@@ -41,5 +41,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![BookmarkLastView](/assets/images/plugins/bookmark-last-view-macro.png#gh-light-mode-only)
-![BookmarkLastView](/assets/images/plugins/bookmark-last-view-macro.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/bookmark-last-view.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/bookmark-last-view.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

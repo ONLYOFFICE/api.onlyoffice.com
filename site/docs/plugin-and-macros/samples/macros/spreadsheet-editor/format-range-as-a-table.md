@@ -27,4 +27,11 @@ End Sub
 
 ## Result
 
-![Range as a table](/assets/images/plugins/range-as-a-table.png#gh-light-mode-only)![Range as a table](/assets/images/plugins/range-as-a-table.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/format-range-as-a-table.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/format-range-as-a-table.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

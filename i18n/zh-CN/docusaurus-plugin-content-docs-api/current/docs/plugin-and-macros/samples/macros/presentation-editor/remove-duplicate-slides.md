@@ -88,5 +88,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除重复幻灯片](/assets/images/plugins/remove-duplicate-slides.png#gh-light-mode-only)
-![删除重复幻灯片](/assets/images/plugins/remove-duplicate-slides.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-duplicate-slides.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-duplicate-slides.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

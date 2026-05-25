@@ -11,6 +11,7 @@ Automatically sorts table rows alphabetically or numerically based on the select
 :::tip
 Please select the entire column by which you want the table to be sorted.
 The macro will only work correctly if the whole column is selected.
+By default, the header row is excluded. Set `isFirstRowIncluded` to `true` in the code to include it.
 :::
 
 ```ts
@@ -102,5 +103,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![SortTables](/assets/images/plugins/sort-tables.png#gh-light-mode-only)
-![SortTables](/assets/images/plugins/sort-tables.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/sort-tables.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/sort-tables.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

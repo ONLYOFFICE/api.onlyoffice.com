@@ -89,4 +89,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![世界银行指标](/assets/images/plugins/world-bank-indicator.png#gh-light-mode-only)![世界银行指标](/assets/images/plugins/world-bank-indicator.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

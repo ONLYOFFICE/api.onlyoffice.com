@@ -13,12 +13,14 @@ hide_table_of_contents: true
 ```ts
 (function() 
 {
+    //Load the file from the URL
     function LoadFile() {
         $.ajax({
             url: 'your url',
             dataType: 'text',
         }).done(successFunction);
     }
+    // Process the data
     function successFunction(data) {
         let arrAllRows = data.split(/\r?\n|\r/);
         let worksheet = Api.GetActiveSheet();
@@ -36,16 +38,22 @@ hide_table_of_contents: true
             i = i + 1;
             j = 1;
         }
+        let usedRange = worksheet.GetUsedRange();
+        usedRange.AutoFit(true, true);
     }
     LoadFile();
-    let reload = setInterval(function(){
-        Api.asc_calculate(Asc.c_oAscCalculateType.All);
-    });
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 ## 结果
 
-![Import CSV/text data](/assets/images/plugins/import-csv-macro.png#gh-light-mode-only)![Import CSV/text data](/assets/images/plugins/import-csv-macro.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/import-csv-or-txt-data.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/import-csv-or-txt-data.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

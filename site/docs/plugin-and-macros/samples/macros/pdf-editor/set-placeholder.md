@@ -24,5 +24,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![SetPlaceholder](/assets/images/plugins/set-placeholder.png#gh-light-mode-only)
-![SetPlaceholder](/assets/images/plugins/set-placeholder.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/set-placeholder.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/set-placeholder.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

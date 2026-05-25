@@ -97,5 +97,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![DataMismatchChecker](/assets/images/plugins/data-mismatch-checker.png#gh-light-mode-only)
-![DataMismatchChecker](/assets/images/plugins/data-mismatch-checker.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/check-data-mismatch.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/check-data-mismatch.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

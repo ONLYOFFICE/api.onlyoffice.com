@@ -15,12 +15,14 @@ This macro is operational only with the desktop versions of the ONLYOFFICE edito
 ```ts
 (function() 
 {
+    // Load the file from the URL
     function LoadFile() {
         $.ajax({
             url: 'your url',
             dataType: 'text',
         }).done(successFunction);
     }
+    // Process the data
     function successFunction(data) {
         let arrAllRows = data.split(/\r?\n|\r/);
         let worksheet = Api.GetActiveSheet();
@@ -38,16 +40,22 @@ This macro is operational only with the desktop versions of the ONLYOFFICE edito
             i = i + 1;
             j = 1;
         }
+        let usedRange = worksheet.GetUsedRange();
+        usedRange.AutoFit(true, true);
     }
     LoadFile();
-    let reload = setInterval(function(){
-        Api.asc_calculate(Asc.c_oAscCalculateType.All);
-    });
 })();
 ```
 
-Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
+Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetCells](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetCells.md), [SetValue](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetUsedRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [AutoFit](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md)
 
 ## Result
 
-![Import CSV/text data](/assets/images/plugins/import-csv-macro.png#gh-light-mode-only)![Import CSV/text data](/assets/images/plugins/import-csv-macro.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/import-csv-or-txt-data.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/import-csv-or-txt-data.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

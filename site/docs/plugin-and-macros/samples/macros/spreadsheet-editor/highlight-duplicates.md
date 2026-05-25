@@ -112,4 +112,11 @@ End Sub
 
 ## Result
 
-![Highlight duplicates](/assets/images/plugins/highlight-duplicates.png#gh-light-mode-only)![Highlight duplicates](/assets/images/plugins/highlight-duplicates.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/highlight-duplicates.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/highlight-duplicates.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -38,4 +38,11 @@ End Sub
 
 ## Result
 
-![Change cell value](/assets/images/plugins/change-cell-value.png#gh-light-mode-only)![Change cell value](/assets/images/plugins/change-cell-value.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/change-cell-value.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/change-cell-value.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -39,5 +39,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDo
 
 ## Result
 
-![Delete Annotations](/assets/images/plugins/delete-annotations.png#gh-light-mode-only)
-![Delete Annotations](/assets/images/plugins/delete-annotations.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/delete-annotations.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/delete-annotations.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

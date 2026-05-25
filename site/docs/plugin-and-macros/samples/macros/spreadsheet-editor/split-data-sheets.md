@@ -87,5 +87,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![SplitDataSheets](/assets/images/plugins/split-data-sheets.png#gh-light-mode-only)
-![SplitDataSheets](/assets/images/plugins/split-data-sheets.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/split-data-sheets.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/split-data-sheets.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

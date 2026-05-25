@@ -45,4 +45,11 @@ End Sub
 
 ## Result
 
-![Unmerge-before](/assets/images/plugins/unmerge-before.png#gh-light-mode-only)![Unmerge-before](/assets/images/plugins/unmerge-before.dark.png#gh-dark-mode-only) ![Unmerge-after](/assets/images/plugins/unmerge-after.png#gh-light-mode-only)![Unmerge-after](/assets/images/plugins/unmerge-after.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -89,4 +89,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Write data](/assets/images/plugins/complete-address-information.png#gh-light-mode-only)![Write data](/assets/images/plugins/complete-address-information.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/complete-address-information.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/complete-address-information.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

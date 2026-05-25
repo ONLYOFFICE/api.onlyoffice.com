@@ -41,5 +41,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![WatermarkInserter](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
-![WatermarkInserter](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-watermark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-watermark.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

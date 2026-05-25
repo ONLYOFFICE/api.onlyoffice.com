@@ -56,5 +56,11 @@ Methods used: [GetSheets](/docs/office-api/usage-api/spreadsheet-api/Api/Methods
 
 ## Result
 
-![RemoveDuplicateSheet](/assets/images/plugins/remove-duplicate-sheet.png#gh-light-mode-only)
-![RemoveDuplicateSheet](/assets/images/plugins/remove-duplicate-sheet.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/remove-duplicate-sheet.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/remove-duplicate-sheet.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
