@@ -15,7 +15,7 @@ Object
 | Border | Object | The border color of the content control. Present only if the border color is set. |
 | Color | Object | The tag color of the content control. Present only if the tag color is set. |
 | FormKey | string | A unique form key. Present only if the content control is a form field. |
-| FormValue | string \| bool \| Date | The current value of the form field. Present only if the content control is a form field. |
+| FormValue | string \| boolean \| Date | The current value of the form field. Present only if the content control is a form field. |
 | Id | string | A unique content control identifier. It can be used to search for a certain content control and make reference to it in your code. |
 | InternalId | string | A unique internal identifier of the content control. It is used for all operations with content controls. |
 | Lock | [ContentControlLock](../Enumeration/ContentControlLock.md) | A value that defines if it is possible to delete and/or edit the content control or not. |
