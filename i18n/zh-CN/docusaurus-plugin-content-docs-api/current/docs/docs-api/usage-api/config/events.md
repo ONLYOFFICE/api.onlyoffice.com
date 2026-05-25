@@ -1187,11 +1187,25 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
 
+**Parameters**:
+
+| Parameter             | Type     | Description        |
+| --------------------- | -------- | ------------------ |
+| event.data.color      | `string` | 角色颜色，十六进制格式（例如 `#FF0000`）。 |
+| event.data.name       | `string` | 角色名称。     |
+| event.data.user.email | `string` | 用户电子邮件。    |
+| event.data.user.id    | `string` | 用户 ID。       |
+| event.data.user.image | `string` | 用户头像的 URL。 |
+| event.data.user.name  | `string` | 用户名称。     |
+
+`event.data` 是一个角色对象数组。
+
 **Example**:
 
 ```ts
-function onStartFilling() {
-  console.log("The PDF form is ready for filling.");
+function onStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
 }
 
 const config = {

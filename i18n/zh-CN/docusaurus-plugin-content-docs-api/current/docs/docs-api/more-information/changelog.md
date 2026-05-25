@@ -8,6 +8,8 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) 参数，用于在加载时阻止指定插件。
 - 在支持的[界面语言](../usage-api/config/editor/editor.md#lang)列表中添加了克罗地亚语 (`hr`)。
 - 移除了已弃用的 `editorConfig.customization.commentAuthorOnly` 字段。
+- 为 [onStartFilling](../usage-api/config/events.md#onstartfilling) 事件添加了 `roles` 参数，包含角色和用户信息。
+- 修复了 [destroyEditor](../usage-api/methods.md#destroyeditor) 方法中的内存泄漏问题，该问题导致无法完全释放内存。
 
 ## 版本 9.1
 

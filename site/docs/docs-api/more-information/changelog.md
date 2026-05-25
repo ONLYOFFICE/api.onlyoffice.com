@@ -8,6 +8,8 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) parameter to block specific plugins on load.
 - Added Croatian (`hr`) to the list of supported [interface languages](../usage-api/config/editor/editor.md#lang).
 - Removed the deprecated `editorConfig.customization.commentAuthorOnly` field.
+- Added the `roles` parameter to the [onStartFilling](../usage-api/config/events.md#onstartfilling) event with role and user information.
+- Fixed a memory leak in the [destroyEditor](../usage-api/methods.md#destroyeditor) method that prevented full cleanup.
 
 ## Version 9.1
 

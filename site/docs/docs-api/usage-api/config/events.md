@@ -1187,11 +1187,25 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
 
+**Parameters**:
+
+| Parameter             | Type     | Description        |
+| --------------------- | -------- | ------------------ |
+| event.data.color      | `string` | The role color in hex format (e.g. `#FF0000`). |
+| event.data.name       | `string` | The role name.     |
+| event.data.user.email | `string` | The user email.    |
+| event.data.user.id    | `string` | The user ID.       |
+| event.data.user.image | `string` | The URL to the user avatar. |
+| event.data.user.name  | `string` | The user name.     |
+
+The `event.data` is an array of role objects.
+
 **Example**:
 
 ```ts
-function onStartFilling() {
-  console.log("The PDF form is ready for filling.");
+function onStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
 }
 
 const config = {
