@@ -111,18 +111,6 @@ It will only be available if the [onRequestClose](../../events.md#onrequestclose
 
 ![Cross button in the header](/assets/images/editor/cross-button.png#gh-light-mode-only)![Cross button in the header](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
 
-## commentAuthorOnly
-
-**type:** `boolean` | **default:** `false`
-
-Whether the user can edit and delete only their comments.
-
-:::danger[Deprecated]
-Starting from version 6.3, please use the [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) fields instead.
-:::
-
-**Example**: `true`
-
 ## comments
 
 **type:** `boolean` | **default:** `true`

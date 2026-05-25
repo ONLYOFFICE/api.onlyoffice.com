@@ -111,18 +111,6 @@ customization 部分定义编辑器自定义参数。
 
 ![标题中的十字按钮](/assets/images/editor/cross-button.png#gh-light-mode-only)![标题中的十字按钮](/assets/images/editor/cross-button.dark.png#gh-dark-mode-only)
 
-## commentAuthorOnly
-
-**类型：** `boolean` | **默认值：** `false`
-
-用户是否只能编辑和删除自己的评论。
-
-:::danger[Deprecated]
-自 6.3 版起已弃用，请改用 [document.permissions.editCommentAuthorOnly](../../document/permissions.md#editcommentauthoronly) 和 [document.permissions.deleteCommentAuthorOnly](../../document/permissions.md#deletecommentauthoronly) 字段。
-:::
-
-**示例**: `true`
-
 ## 评论 {#comments}
 
 **类型：** `boolean` | **默认值：** `true`

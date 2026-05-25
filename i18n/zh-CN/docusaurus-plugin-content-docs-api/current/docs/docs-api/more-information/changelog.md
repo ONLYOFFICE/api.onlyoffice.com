@@ -7,6 +7,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 新增[插件命令日志](../usage-api/config/editor/plugins.md#plugin-command-logging)功能，用于在浏览器控制台中启用插件命令的调试输出。
 - 添加了 [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) 参数，用于在加载时阻止指定插件。
 - 在支持的[界面语言](../usage-api/config/editor/editor.md#lang)列表中添加了克罗地亚语 (`hr`)。
+- 移除了已弃用的 `editorConfig.customization.commentAuthorOnly` 字段。
 
 ## 版本 9.1
 
@@ -207,7 +208,7 @@ ONLYOFFICE 文档 API 的更改列表。
 - 添加了 [license](../additional-api/command-service/license.md) 命令。
 - 添加了e [editorConfig.customization.hideRulers](../usage-api/config/editor/customization/customization-standard-branding.md#hiderulers) 字段。
 - 添加了 [editorConfig.customization.anonymous](../usage-api/config/editor/customization/customization-standard-branding.md#anonymous) 字段。
-- [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) 字段已弃用，请使用 [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) 和 [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) 字段。
+- `editorConfig.customization.commentAuthorOnly` 字段已弃用，请使用 [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) 和 [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) 字段。
 - 添加了 [setFavorite](../usage-api/methods.md#setfavorite) 方法。
 - 将 *data.favorite* 参数添加到 [events.onMetaChange](../usage-api/config/events.md#onmetachange) 事件。
 - 添加了 [document.info.favorite](../usage-api/config/document/info.md#favorite) 字段。
@@ -286,7 +287,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - 添加了 [转换](../additional-api/conversion-api/conversion-tables.md) 到OOXML（dotx、 xltx、potx）和 ODF（ott、ots、otp）模板的功能。
 - 添加了[editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) 字段。
-- [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) 字段现在也用于限制评论删除。
+- `editorConfig.customization.commentAuthorOnly` 字段现在也用于限制评论删除。
 - 添加了 [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) 字段。
 - 添加了 [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) 字段。
 - 添加了 [editorConfig.customization.toolbarNoTabs](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarnotabs) 字段。
@@ -341,7 +342,7 @@ ONLYOFFICE 文档 API 的更改列表。
 
 - 添加了 [destroyEditor](../usage-api/methods.md#destroyeditor) 方法。
 - 从插件连接模式中删除了 `editorConfig.plugins.url` 方法。
-- 添加了 [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) 方法。
+- 添加了 `editorConfig.customization.commentAuthorOnly` 方法。
 - 添加了 [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) 方法。
 - 添加了 [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) 方法。
 - 强制保存文件时，在回调处理程序请求中添加了 [forcesavetype](../usage-api/callback-handler.md#forcesavetype) 方法。
