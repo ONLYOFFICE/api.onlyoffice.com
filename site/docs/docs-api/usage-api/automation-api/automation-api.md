@@ -50,6 +50,46 @@ connector.callCommand(() => {
   const oParagraph = Api.CreateParagraph();
   oParagraph.AddText("Hello from Automation API");
   oDocument.InsertContent([oParagraph]);
+  return {status: "ok"};
+}, (res) => {
+  console.log("Result:", res);
+});
+```
+
+## Debugging
+
+### Command logging
+
+To log all [`callCommand`](./connector-class.md#callcommand) and [`executeMethod`](./connector-class.md#executemethod) calls to the browser console, set the `asc_plugin_commands_log` key in the browser's local storage:
+
+```js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+To disable logging, remove the key:
+
+```js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
+The setting persists across page reloads.
+
+### Error handling in callCommand
+
+Since `commandFn` runs in an isolated context, errors inside it are not propagated to the caller. Use a try/catch block and return the result via the callback:
+
+```ts
+connector.callCommand(() => {
+  try {
+    const doc = Api.GetDocument();
+    return {status: "ok"};
+  } catch (err) {
+    return {status: "fail", error: err.stack};
+  }
+}, (res) => {
+  if (res.status !== "ok") {
+    console.log(res.error);
+  }
 });
 ```
 

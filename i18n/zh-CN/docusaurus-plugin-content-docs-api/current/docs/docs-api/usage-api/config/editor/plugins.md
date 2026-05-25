@@ -79,20 +79,6 @@ plugins 部分定义运行时插件参数。
 
 ![插件](/assets/images/editor/plugins.png#gh-light-mode-only)![插件](/assets/images/editor/plugins.dark.png#gh-dark-mode-only)
 
-## 插件命令日志 {#plugin-command-logging}
-
-要在浏览器控制台中启用插件命令日志，请将浏览器本地存储中的 `asc_plugin_commands_log` 键设置为 `"true"`：
-
-```js
-localStorage.setItem("asc_plugin_commands_log", "true");
-```
-
-要禁用日志，请删除该键或将其设置为任意其他值：
-
-```js
-localStorage.removeItem("asc_plugin_commands_log");
-```
-
 ## 示例
 
 ```ts

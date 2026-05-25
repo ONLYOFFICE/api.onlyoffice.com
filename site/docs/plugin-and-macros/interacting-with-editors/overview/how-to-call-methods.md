@@ -39,3 +39,19 @@ Asc.plugin.executeMethod("methodName", [param1, param2], (returnValue) => {
   console.log(returnValue);
 });
 ```
+
+## Debugging
+
+To log all `executeMethod` and [`callCommand`](how-to-call-commands.md) calls to the browser console, set the `asc_plugin_commands_log` key in the browser's local storage:
+
+```js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+To disable logging, remove the key:
+
+```js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
+The setting persists across page reloads.
