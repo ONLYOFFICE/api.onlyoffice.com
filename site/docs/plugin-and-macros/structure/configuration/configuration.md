@@ -278,9 +278,9 @@ Specifies whether the encryption is disabled upon startup.
 
 The encryption mode. The available values:
 
-- **0** - none (encryption is disabled);
-- **1** - simple;
-- **2** - advanced.
+- `0` - none (encryption is disabled);
+- `1` - simple;
+- `2` - advanced.
 
 **Example**: `"1"`
 
@@ -306,7 +306,7 @@ Translations for the description field. The object keys are the two letter langu
 
 **type:** `editorType[]`
 
-The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**). The default value is **[]**.
+The editors which the plugin is available for (`word`, `cell`, `slide`, or `pdf`). The default value is `[]`.
 
 **Example**: `["word"]`
 
@@ -395,7 +395,7 @@ The data which is sent from the editor to the plugin at the plugin start. This p
 
 **type:** `initDataType`
 
-The data type selected in the editor and sent to the plugin (**text**, **html**, **ole**, **desktop**, **desktop-external**, **sign**, or **none**).
+The data type selected in the editor and sent to the plugin (`text`, `html`, `ole`, `desktop`, `desktop-external`, `sign`, or `none`).
 
 **Example**: `"ole"`
 
@@ -678,12 +678,12 @@ Images that are used for the plugin description in the **ONLYOFFICE Plugin Marke
 
 Plugin [type](./types.md). The available values:
 
-- **system** - not displayed in the editor interface and started in the background with the server (or desktop editors start). Cannot be disabled.
-- **background** - runs continuously once started. Its state (enabled / disabled) persists between sessions.
-- **window** - operates as a standalone window upon launch.
-- **panel** - opens in the left-side panel.
-- **panelRight** - opens in the right-side panel.
-- **unvisible** - invisible upon launch but can create windows later.
+- `system` - not displayed in the editor interface and started in the background with the server (or desktop editors start). Cannot be disabled.
+- `background` - runs continuously once started. Its state (enabled / disabled) persists between sessions.
+- `window` - operates as a standalone window upon launch.
+- `panel` - opens in the left-side panel.
+- `panelRight` - opens in the right-side panel.
+- `unvisible` - invisible upon launch but can create windows later.
 
 **Example**: `"background"`
 
