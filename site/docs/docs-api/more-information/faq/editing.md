@@ -30,7 +30,7 @@ The *document.key* parameter is a unique document identifier which helps disting
 
 Each time the document is changed, the *document.key* parameter must also be generated anew as the documents with the known key are taken from cache.
 
-More information on this parameter is available [here](../../usage-api/config/document/document.md#key).
+For more information, see [document.key](../../usage-api/config/document/document.md#key).
 
 ## How to define the mode that the file should be opened in (viewing or editing)?
 
@@ -51,4 +51,4 @@ Set the mode using the *editorConfig* section of the configuration file:
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-More information on this parameter is available [here](../../usage-api/config/editor/editor.md#mode).
+For more information, see [editorConfig.mode](../../usage-api/config/editor/editor.md#mode).

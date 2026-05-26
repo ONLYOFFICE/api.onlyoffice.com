@@ -347,7 +347,7 @@ sidebar_position: -5
 
 **类型：** `string`
 
-插件事件（如 "[onDocumentContentReady](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)"、"[onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)"、"[onClick](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onClick.md)"、"onInputHelperClear"、"onInputHelperInput" 等）。
+插件事件（如 [onDocumentContentReady](../../interacting-with-editors/form-api/Events/onDocumentContentReady.md)、[onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md)、[onClick](../../interacting-with-editors/form-api/Events/onClick.md)、onInputHelperClear、onInputHelperInput 等）。
 
 **示例**:
 

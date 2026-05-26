@@ -131,7 +131,7 @@ Specifies whether the plugin is included in the server or desktop builds branded
 
 **type:** `object[]`
 
-Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
+Plugin variations, or subplugins, that are created inside the origin plugin. For more information, see [variations](variations.md).
 
 **Example**:
 
@@ -347,7 +347,7 @@ Plugin events which are used in the current plugin code. Find out how to subscri
 
 **type:** `string`
 
-Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)", "[onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)", "[onClick](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onClick.md)", "onInputHelperClear", "onInputHelperInput", etc.).
+Plugin event ([onDocumentContentReady](../../interacting-with-editors/form-api/Events/onDocumentContentReady.md), [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md), [onClick](../../interacting-with-editors/form-api/Events/onClick.md), onInputHelperClear, onInputHelperInput, etc.).
 
 **Example**:
 
@@ -365,7 +365,7 @@ Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with
 
 **type:** `string`
 
-URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. More information can be found [here](../../customization/icons.md).
+URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. For more information, see [icons](../../customization/icons.md).
 
 **Example**: `"url_to_icon"`
 
@@ -377,7 +377,7 @@ URL to the plugin icon image file. This URL allows setting your own rules for th
 Please use the [variations.icons](#variationsicons) parameter instead.
 :::
 
-Scalable icons for plugin extensions. More information can be found [here](../../customization/icons.md).
+Scalable icons for plugin extensions. For more information, see [icons](../../customization/icons.md).
 
 **Example**: `[{ "100%": { "normal": "icon.png" } }]`
 
