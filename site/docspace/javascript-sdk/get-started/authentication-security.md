@@ -16,7 +16,7 @@ Choosing the right authentication approach depends on who your users are and whe
 
 *api.js* uses the active DocSpace application sessions to authenticate users. If the user is logged in to the DocSpace portal that the SDK will connect to, then *api.js* recognizes and uses that active session.
 
-If the users are not authenticated, they will see a page asking them to sign in to DocSpace the first time they use it. Authentication is also possible through the SDK [login](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) method.
+If the users are not authenticated, they will see a page asking them to sign in to DocSpace whenever they are not already signed in. Authentication is also possible through the SDK [login](/docspace/javascript-sdk/usage-sdk/classes/SDKInstance.md#login) method.
 
 ## Token-based auth for public rooms
 
@@ -30,13 +30,13 @@ DocSpace.SDK.initManager({
 });
 ```
 
-The token is scoped to a specific room and grants access to its contents without requiring the viewer to have a DocSpace account.
+The token is scoped to a specific room and grants access to its contents without requiring the viewer to have a DocSpace account. The `requestToken` parameter is supported by all init methods, not just `initManager`.
 
 :::caution
 Never expose admin-level tokens in client-side code. Obtain `requestToken` values server-side and inject them into the page at render time.
 :::
 
-## Restricting embed origins
+## Registering allowed embed origins
 
 For the JavaScript SDK to work correctly, it must be launched on the server. Note that running the HTML file directly will not work. Please make sure you are using a server environment.
 
@@ -53,6 +53,8 @@ Only exact origins are matched — subdomains and paths are not automatically in
 ## SameSite cookie requirements
 
 When DocSpace is embedded in an iframe on a different domain, the browser must send session cookies with the cross-origin request. Without this setting, the embedded DocSpace behaves as if no user is logged in.
+
+Note that `"Secure": true` requires both the DocSpace server and the embedding page to be served over HTTPS. Without HTTPS, browsers will not send cookies with the `Secure` flag set.
 
 Set the following in `appsettings.json` on the DocSpace server:
 
@@ -71,6 +73,6 @@ Before initializing the iframe, the SDK checks whether the embedding domain is i
 
 > *"The current domain is not set in the Content Security Policy (CSP) settings."*
 
-The allowlist is managed via `GET /api/2.0/security/csp`. To add your domain, register it in **DocSpace settings → Developer Tools → JavaScript SDK** as described in [Restricting embed origins](#restricting-embed-origins) above.
+The current CSP allowlist can be checked via `GET /api/2.0/security/csp`. To add your domain, register it in **DocSpace settings → Developer Tools → JavaScript SDK** as described in [Registering allowed embed origins](#registering-allowed-embed-origins) above.
 
-You can set `checkCSP: false` in the frame config to skip the check, but this is not recommended for production.
+You can set `checkCSP: false` in the frame config to skip the check, but this is not recommended for production — doing so allows the SDK to initialize on any domain, including unauthorized ones.
