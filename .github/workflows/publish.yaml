@@ -152,7 +152,7 @@ jobs:
 
         export NODE_OPTIONS="--max-old-space-size=28672"
         export UV_THREADPOOL_SIZE=4
-        export RSPACK_PARALLEL=6
-        export RAYON_NUM_THREADS=6
+        export RSPACK_PARALLEL=3
+        export RAYON_NUM_THREADS=3
         export TOKIO_WORKER_THREADS=4
         npm run build -- ${SUB_ARGS} --locale en --locale zh-CN
