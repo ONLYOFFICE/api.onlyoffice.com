@@ -19,7 +19,7 @@ The fastest way to get DocSpace running in your app is via a script tag. No inst
 **Step 2.** Load the SDK from your DocSpace server:
 
 ```html
-<script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.0.0/api.js"></script>
+<script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.1.0/api.js"></script>
 ```
 
 **Step 3.** Initialize the frame:
@@ -53,14 +53,14 @@ Below is a basic working example you can save and serve to verify your setup:
   <body>
     <div id="ds-frame"></div>
 
-    <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="https://your-docspace.onlyoffice.com/static/scripts/sdk/2.1.0/api.js"></script>
 
     <script>
       const config = {
         frameId: "ds-frame",
         src: "https://your-docspace.onlyoffice.com",
         showMenu: true, // optional
-        //other configurations
+        // other configurations
       };
 
       const docSpace = DocSpace.SDK.initManager(config);
@@ -69,7 +69,7 @@ Below is a basic working example you can save and serve to verify your setup:
 </html>
 ```
 
-This example uses the `initManager` mode. Configuration options may change depending on the type of embedding mode. For a full breakdown, see [Comparison of embedding modes]().
+This example uses the `initManager` mode. Configuration options may change depending on the type of embedding mode. For a full breakdown, see [Comparison of embedding modes](./get-started.md#embedding-modes).
 
 :::tip
 
@@ -79,7 +79,7 @@ If you are testing on localhost, make sure to whitelist your local origin (e.g.,
 
 ## Using the npm package
 
-If you are working in a React, Vue, or any other frontend framework project, you can install the SDK as an npm package instead. You will need [Node.js](https://nodejs.org) installed.
+If you are working in a project with a modern bundler (Webpack, Vite, esbuild, or similar), you can install the SDK as an npm package instead. You will need [Node.js](https://nodejs.org) installed.
 
 **Step 1.** Create a new React + Vite project:
 
@@ -105,12 +105,16 @@ export default function App() {
   useEffect(() => {
     const sdk = new SDK();
 
-    sdk.initManager({
+    const instance = sdk.initManager({
       frameId: "ds-frame",
       src: "https://your-docspace.onlyoffice.com",
       showMenu: true,
       // additional configuration options
     });
+
+    return () => {
+      instance.destroyFrame();
+    };
   }, []);
 
   return <div id="ds-frame" style={{ width: "100%", height: "100%" }} />;
@@ -141,4 +145,4 @@ Now that DocSpace is running, a few parameters to explore:
 - `locale` — set the interface language using a four-letter language code
 - `events` — attach callbacks for SDK lifecycle events
 
-For the full list of available parameters, see [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md). For other initialization modes such as `initEditor`, `initViewer`, or `initRoomSelector`, see [Embedding modes]().
+For the full list of available parameters, see [TFrameConfig](../usage-sdk/type-aliases/TFrameConfig.md). For other initialization modes such as `initEditor`, `initViewer`, or `initRoomSelector`, see [Embedding modes](./get-started.md#embedding-modes).
