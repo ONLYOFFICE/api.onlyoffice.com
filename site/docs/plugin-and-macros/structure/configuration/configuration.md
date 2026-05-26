@@ -4,13 +4,13 @@ sidebar_position: -5
 
 # Configuration
 
-The *config.json* file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
+The `config.json` file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
 
 ## baseUrl
 
 **type:** `string`
 
-Path to the plugin. All other paths are calculated relative to this path. If *baseUrl == ""*, the path to the plugin in the default *sdkjs-plugins* folder will be used.
+Path to the plugin. All other paths are calculated relative to this path. If `baseUrl == ""`, the path to the plugin in the default `sdkjs-plugins` folder will be used.
 
 **Example**: `""`
 
@@ -51,7 +51,7 @@ The group rank in the **Plugins** tab, an integer starting from 1.
 
 **type:** `string`
 
-Plugin identifier. It **must** be of the *asc.\{UUID\}* type.
+Plugin identifier. It **must** be of the `asc.{UUID}` type.
 
 **Example**: `"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"`
 
@@ -59,7 +59,7 @@ Plugin identifier. It **must** be of the *asc.\{UUID\}* type.
 
 **type:** `string`
 
-Path to the plugin help page. If the parameter is specified, the *help* button is displayed in the plugin window. When the user clicks the button, he follows the link to the plugin help page.
+Path to the plugin help page. If the parameter is specified, the `help` button is displayed in the plugin window. When the user clicks the button, they follow the link to the plugin help page.
 
 **Example**: `"url_to_help_page"`
 
@@ -191,7 +191,7 @@ Plugin variations, or subplugins, that are created inside the origin plugin. Mor
 
 **type:** `Button[]`
 
-The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
+The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is `window`, `panel`, or `panelRight`.
 
 **Example**:
 
@@ -385,7 +385,7 @@ Scalable icons for plugin extensions. More information can be found [here](../..
 
 **type:** `string`
 
-The data which is sent from the editor to the plugin at the plugin start. This parameter is usually equal to *""*. If *initDataType == "text"*, the plugin will receive the selected text upon launch. It may also be equal to *encryption* in the encryption plugins.
+The data which is sent from the editor to the plugin at the plugin start. This parameter is usually equal to `""`. If `initDataType == "text"`, the plugin will receive the selected text upon launch. It may also be equal to `encryption` in the encryption plugins.
 
 **Example**: `"text"`
 
@@ -427,7 +427,7 @@ The data type selected in the editor and sent to the plugin:
 
 **type:** `boolean`
 
-Specifies if the plugin watches the text selection events in the editor window. This parameter is set to **true** when the plugin works with the selected text and its output changes when the selection changes. For example, the **Translator** plugin displays the translation of the selected text.
+Specifies if the plugin watches the text selection events in the editor window. This parameter is set to `true` when the plugin works with the selected text and its output changes when the selection changes. For example, the **Translator** plugin displays the translation of the selected text.
 
 **Example**: `true`
 
@@ -435,7 +435,7 @@ Specifies if the plugin watches the text selection events in the editor window. 
 
 **type:** `boolean`
 
-Specifies if the plugin uses a custom window, without standard borders and buttons (used only when *type == "window"*).
+Specifies if the plugin uses a custom window, without standard borders and buttons (used only when `type == "window"`).
 
 **Example**: `true`
 
@@ -443,7 +443,7 @@ Specifies if the plugin uses a custom window, without standard borders and butto
 
 **type:** `boolean`
 
-Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (*isDisplayedInViewer == true*) or in the editor mode only (*isDisplayedInViewer == false*).
+Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (`isDisplayedInViewer == true`) or in the editor mode only (`isDisplayedInViewer == false`).
 
 **Example**: `true`
 
@@ -467,7 +467,7 @@ Specifies if the plugin must be displayed inside the editor panel instead of its
 Please use the [type](#variationstype) parameter instead.
 :::
 
-Specifies if the opened plugin window is modal (used for visual plugins only, and if *isInsideMode* is not **true**).
+Specifies if the opened plugin window is modal (used for visual plugins only, and if `isInsideMode` is not `true`).
 
 **Example**: `true`
 
@@ -487,7 +487,7 @@ Specifies if the plugin is not displayed in the editor interface and is started 
 
 **type:** `boolean`
 
-Specifies if an OLE object must be redrawn when resized in the editor using the vector object drawing type or not (used for OLE objects only, i.e. *initDataType == "ole"*).
+Specifies if an OLE object must be redrawn when resized in the editor using the vector object drawing type or not (used for OLE objects only, i.e. `initDataType == "ole"`).
 
 **Example**: `true`
 
@@ -495,7 +495,7 @@ Specifies if an OLE object must be redrawn when resized in the editor using the 
 
 **type:** `boolean`
 
-Specifies if the plugin is working when the document is available in the viewer mode only or not. The default value is **false**.
+Specifies if the plugin is working when the document is available in the viewer mode only or not. The default value is `false`.
 
 **Example**: `false`
 
@@ -539,7 +539,7 @@ Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for 
 
 **type:** `number[]`
 
-Plugin window size measured in pixels. This parameter is only used when *type == "window"*.
+Plugin window size measured in pixels. This parameter is only used when `type == "window"`.
 
 **Example**: `[600]`
 
@@ -695,7 +695,7 @@ A plugin of any type can create windows and tabs during its work.
 
 **type:** `string`
 
-Plugin entry point, i.e. an HTML file which connects the *plugin.js* file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../entry-point.md) section for the detailed information.
+Plugin entry point, i.e. an HTML file which connects the `plugin.js` file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../entry-point.md) section for the detailed information.
 
 **Example**: `"index.html"`
 

@@ -4,13 +4,13 @@ sidebar_position: -5
 
 # Configuration
 
-*config.json* 文件是插件的配置文件，包含将插件注册到编辑器中所需的主要信息。
+`config.json` 文件是插件的配置文件，包含将插件注册到编辑器中所需的主要信息。
 
 ## baseUrl
 
 **类型：** `string`
 
-插件路径。所有其他路径都相对于此路径进行计算。如果 *baseUrl == ""*，则默认使用 *sdkjs-plugins* 文件夹中的插件路径。
+插件路径。所有其他路径都相对于此路径进行计算。如果 `baseUrl == ""`，则默认使用 `sdkjs-plugins` 文件夹中的插件路径。
 
 **示例**: `""`
 
@@ -51,7 +51,7 @@ sidebar_position: -5
 
 **类型：** `string`
 
-插件标识符，**必须**为 *asc.\{UUID\}* 类型。
+插件标识符，**必须**为 `asc.{UUID}` 类型。
 
 **示例**: `"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"`
 
@@ -191,7 +191,7 @@ sidebar_position: -5
 
 **类型：** `Button[]`
 
-插件界面中使用的可换肤按钮列表。该参数仅适用于插件窗口和面板类型的插件，即当 [type](#variationstype) 参数为 *window*、*panel* 或 *panelRight* 时使用。
+插件界面中使用的可换肤按钮列表。该参数仅适用于插件窗口和面板类型的插件，即当 [type](#variationstype) 参数为 `window`、`panel` 或 `panelRight` 时使用。
 
 **示例**:
 
@@ -385,7 +385,7 @@ sidebar_position: -5
 
 **类型：** `string`
 
-编辑器启动插件时发送给插件的数据。该参数通常为 *""*。如果 *initDataType == "text"*，插件启动时将接收选中的文本。加密插件中也可能等于 *encryption*。
+编辑器启动插件时发送给插件的数据。该参数通常为 `""`。如果 `initDataType == "text"`，插件启动时将接收选中的文本。加密插件中也可能等于 `encryption`。
 
 **示例**: `"text"`
 
@@ -427,7 +427,7 @@ sidebar_position: -5
 
 **类型：** `boolean`
 
-指定插件是否监听编辑器窗口中的文本选区事件。当插件处理选中文本且输出会随选区变化而改变时，该参数设置为 **true**。例如，**翻译器**插件会显示选中文本的翻译。
+指定插件是否监听编辑器窗口中的文本选区事件。当插件处理选中文本且输出会随选区变化而改变时，该参数设置为 `true`。例如，**翻译器**插件会显示选中文本的翻译。
 
 **示例**: `true`
 
@@ -435,7 +435,7 @@ sidebar_position: -5
 
 **类型：** `boolean`
 
-指定插件是否使用无标准边框和按钮的自定义窗口（仅在 *type == "window"* 时使用）。
+指定插件是否使用无标准边框和按钮的自定义窗口（仅在 `type == "window"` 时使用）。
 
 **示例**: `true`
 
@@ -443,7 +443,7 @@ sidebar_position: -5
 
 **类型：** `boolean`
 
-指定插件是否同时在查看器模式和编辑器模式中显示（*isDisplayedInViewer == true*），或仅在编辑器模式中显示（*isDisplayedInViewer == false*）。
+指定插件是否同时在查看器模式和编辑器模式中显示（`isDisplayedInViewer == true`），或仅在编辑器模式中显示（`isDisplayedInViewer == false`）。
 
 **示例**: `true`
 
@@ -467,7 +467,7 @@ sidebar_position: -5
 请改用 [type](#variationstype) 参数。
 :::
 
-指定打开的插件窗口是否为模态窗口（仅用于可视插件，且当 *isInsideMode* 不为 **true** 时）。
+指定打开的插件窗口是否为模态窗口（仅用于可视插件，且当 `isInsideMode` 不为 `true` 时）。
 
 **示例**: `true`
 
@@ -487,7 +487,7 @@ sidebar_position: -5
 
 **类型：** `boolean`
 
-指定在编辑器中使用矢量对象绘制类型调整 OLE 对象大小时，是否必须重绘该对象（仅用于 OLE 对象，即 *initDataType == "ole"*）。
+指定在编辑器中使用矢量对象绘制类型调整 OLE 对象大小时，是否必须重绘该对象（仅用于 OLE 对象，即 `initDataType == "ole"`）。
 
 **示例**: `true`
 
@@ -495,7 +495,7 @@ sidebar_position: -5
 
 **类型：** `boolean`
 
-指定插件是否仅在文档以查看器模式时生效。默认值为 **false**。
+指定插件是否仅在文档以查看器模式时生效。默认值为 `false`。
 
 **示例**: `false`
 
@@ -539,7 +539,7 @@ sidebar_position: -5
 
 **类型：** `number[]`
 
-插件窗口尺寸，单位为像素。仅在 *type == "window"* 时使用。
+插件窗口尺寸，单位为像素。仅在 `type == "window"` 时使用。
 
 **示例**: `[600]`
 
@@ -695,7 +695,7 @@ sidebar_position: -5
 
 **类型：** `string`
 
-插件入口，即连接 *plugin.js* 文件（插件工作的基础文件）并启动插件代码的 HTML 文件。详见 [index.html](../entry-point.md) 部分。
+插件入口，即连接 `plugin.js` 文件（插件工作的基础文件）并启动插件代码的 HTML 文件。详见 [index.html](../entry-point.md) 部分。
 
 **示例**: `"index.html"`
 
