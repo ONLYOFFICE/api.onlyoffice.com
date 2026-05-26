@@ -3,6 +3,8 @@ description: Edit images using the Toast UI Image Editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Photo editor
 
 Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for editing images right in the document: cropping, resizing, applying effects, etc.
@@ -11,9 +13,7 @@ Connects the [Toast UI Image Editor](https://ui.toast.com/tui-image-editor) for 
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/photo-editor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/photo-editor" />
 
 ## Installation
 

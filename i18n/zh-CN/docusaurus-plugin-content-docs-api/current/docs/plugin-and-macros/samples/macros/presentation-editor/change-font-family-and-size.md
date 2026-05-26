@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 更改字体和字号
 
 更改演示文稿中所有幻灯片的字体和/或字号。
@@ -67,11 +69,4 @@ End Sub
 
 ## 结果
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/change-font-family-and-size.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/change-font-family-and-size.dark.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
+<Video src="/assets/video/macros/presentation-editor/change-font-family-and-size" dark />

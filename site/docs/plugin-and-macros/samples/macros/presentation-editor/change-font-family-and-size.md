@@ -4,6 +4,8 @@ description: Change font family and size across all slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Change font family and size
 
 Changes the font family and/or size on all the slides in your presentation.
@@ -69,11 +71,4 @@ End Sub
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/change-font-family-and-size.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/change-font-family-and-size.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/presentation-editor/change-font-family-and-size" dark />

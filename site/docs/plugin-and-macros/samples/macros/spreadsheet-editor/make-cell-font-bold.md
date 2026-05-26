@@ -4,6 +4,8 @@ description: Make the font bold for specified cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Make cell font bold
 
 Sets the font of the cell **A2** to bold.
@@ -27,11 +29,4 @@ End Sub
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/make-cell-font-bold.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/make-cell-font-bold.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/make-cell-font-bold" dark />

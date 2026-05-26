@@ -4,6 +4,8 @@ description: Change the background color of specified cells.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Change cell background color
 
 Sets the background color of the cell **B3** to blue.
@@ -27,11 +29,4 @@ End Sub
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/change-cell-background-color.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/change-cell-background-color.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-background-color" dark />

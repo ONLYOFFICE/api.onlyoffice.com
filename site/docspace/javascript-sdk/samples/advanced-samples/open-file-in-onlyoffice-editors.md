@@ -3,6 +3,8 @@ description: Select a file and open it in ONLYOFFICE editors via the SDK.
 tags: ["DocSpace", "Embed SDK", "Integration"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Open file in ONLYOFFICE editors
 
 This example opens a file in [ONLYOFFICE editors](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initeditor) using the [file selector](/docspace/javascript-sdk/usage-sdk/classes/SDK.md#initfileselector).
@@ -132,6 +134,4 @@ Add a script to initialize the [file selector](/docspace/javascript-sdk/usage-sd
 
 Run our HTML file and make sure everything works.
 
-<video autoPlay loop muted playsInline width="720px">
-  <source src="/assets/images/docspace/webm/open-editors.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/docspace/webm/open-editors" />

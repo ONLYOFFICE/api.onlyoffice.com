@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 将超链接转换为二维码
 
 使用外部 API 将演示文稿中的所有超链接转换为二维码。
@@ -62,11 +64,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes.dark.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
+<Video src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes" dark />

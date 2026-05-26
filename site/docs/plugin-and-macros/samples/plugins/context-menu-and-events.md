@@ -3,6 +3,8 @@ description: Track context menu events and cursor position changes.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Context menu and events
 
 Tracks the events of calling the context menu and clicking on its items. It also tracks the cursor position changes.
@@ -11,9 +13,7 @@ Tracks the events of calling the context menu and clicking on its items. It also
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/context-menu-and-events.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/context-menu-and-events" />
 
 ## Installation
 

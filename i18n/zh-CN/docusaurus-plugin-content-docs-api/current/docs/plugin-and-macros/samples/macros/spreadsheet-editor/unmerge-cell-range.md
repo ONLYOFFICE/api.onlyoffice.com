@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 取消合并单元格区域
 
 取消选定的单元格区域的合并操作。
@@ -25,11 +27,4 @@ End Sub
 
 ## 结果
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range.dark.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range" dark />

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 隐藏或取消隐藏行和列
 
 在电子表格中隐藏或取消隐藏指定的行和/或列。
@@ -41,11 +43,4 @@ End Sub
 
 ## 结果
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/hide-or-unhide-rows-and-columns.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/hide-or-unhide-rows-and-columns.dark.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/hide-or-unhide-rows-and-columns" dark />

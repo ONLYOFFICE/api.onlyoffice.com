@@ -4,6 +4,8 @@ description: Unmerge all merged cells in a spreadsheet.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Unmerge all cells
 
 Unmerges all the merged cells in the active worksheet.
@@ -45,11 +47,4 @@ End Sub
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells" dark />

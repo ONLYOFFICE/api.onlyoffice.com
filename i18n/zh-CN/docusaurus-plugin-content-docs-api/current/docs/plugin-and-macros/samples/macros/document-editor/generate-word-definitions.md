@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成单词释义
 
 使用 [API Ninjas](https://api-ninjas.com) 提供的 [API 词典](https://api-ninjas.com/api/dictionary)在文档中生成单词释义。
@@ -37,11 +39,4 @@ hide_table_of_contents: true
 
 ## 结果
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/document-editor/generate-word-definitions.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/document-editor/generate-word-definitions.dark.webm" type="video/webm" />
-  您的浏览器不支持HTML5视频.
-</video>
+<Video src="/assets/video/macros/document-editor/generate-word-definitions" dark />

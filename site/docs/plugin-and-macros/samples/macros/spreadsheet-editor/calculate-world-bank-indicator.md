@@ -4,6 +4,8 @@ description: Calculate indicators using World Bank data.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Calculate World Bank indicator
 
 Creates an [asynchronous custom function](/docs/plugin-and-macros/macros/adding-custom-functions.md#asynchronous-functions) to calculate a World Bank indicator value for a specific year.
@@ -91,11 +93,4 @@ Methods used: [AddCustomFunction](/docs/office-api/usage-api/spreadsheet-api/Api
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator" dark />

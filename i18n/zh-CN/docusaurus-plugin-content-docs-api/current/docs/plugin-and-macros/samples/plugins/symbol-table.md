@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档、电子表格、演示文稿。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/symbol-table.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/symbol-table" />
 
 ## 安装方式
 

@@ -4,6 +4,8 @@ description: Auto-complete address fields from partial data.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Complete address information
 
 Completes the basic address data with detailed address information and inserts it into a spreadsheet.
@@ -91,11 +93,4 @@ For the macros to function, replace *YOUR_API_KEY* with the API key obtained fro
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/complete-address-information.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/complete-address-information.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/complete-address-information" dark />

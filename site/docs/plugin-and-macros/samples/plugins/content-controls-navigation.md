@@ -3,6 +3,8 @@ description: Navigate and select content controls in a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Content controls navigation
 
 Inserts content controls (automatically or manually), navigates and selects them as well as pastes text into them.
@@ -11,9 +13,7 @@ Inserts content controls (automatically or manually), navigates and selects them
 
 **Supported editors:** documents.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-navigation.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-navigation" />
 
 ## Installation
 

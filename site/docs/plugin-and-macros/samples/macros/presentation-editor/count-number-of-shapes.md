@@ -4,6 +4,8 @@ description: Count the number of shapes on each slide.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Count number of shapes
 
 Counts the total number of shapes in a presentation by iterating through all slides and displays the count on a newly created slide.
@@ -69,11 +71,4 @@ End Sub
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/count-number-of-shapes.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/count-number-of-shapes.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/presentation-editor/count-number-of-shapes" dark />

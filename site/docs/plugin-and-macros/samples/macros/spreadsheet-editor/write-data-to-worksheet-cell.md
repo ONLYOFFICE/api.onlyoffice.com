@@ -4,6 +4,8 @@ description: Write data to a specific worksheet cell.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Write data to worksheet cell
 
 Writes the data (the *Hello world* phrase) to the worksheet third column of the fourth row.
@@ -27,11 +29,4 @@ End Sub
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/write-data-to-worksheet-cell.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/write-data-to-worksheet-cell.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/write-data-to-worksheet-cell" dark />

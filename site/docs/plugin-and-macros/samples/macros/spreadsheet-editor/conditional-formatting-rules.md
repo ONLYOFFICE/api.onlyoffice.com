@@ -4,6 +4,8 @@ description: Apply conditional formatting rules to a cell range.
 tags: ["Docs", "Macros", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Conditional formatting rules
 
 Applies multiple conditional formatting rules to the selected range.
@@ -43,11 +45,4 @@ Methods used: [GetSelection](/docs/office-api/usage-api/spreadsheet-api/Api/Meth
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/conditional-formatting-rules.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/spreadsheet-editor/conditional-formatting-rules.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/spreadsheet-editor/conditional-formatting-rules" dark />

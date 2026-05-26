@@ -3,6 +3,8 @@ description: Check and fix spelling errors in the current paragraph.
 tags: ["Docs", "Plugins", "AI Tools", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Check spelling
 
 This function checks spelling or fixes other text errors in the current paragraph.
@@ -183,11 +185,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/check-spelling.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/document-editor/check-spelling.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/document-editor/check-spelling" dark />

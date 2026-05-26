@@ -6,9 +6,7 @@
 
 **支持编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/work-with-content-controls-tags.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/work-with-content-controls-tags" />
 
 ## 安装
 

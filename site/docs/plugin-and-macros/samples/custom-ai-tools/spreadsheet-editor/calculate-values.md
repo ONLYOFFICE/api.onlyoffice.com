@@ -3,6 +3,8 @@ description: Perform math operations on a cell range.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Calculate values
 
 This function performs basic mathematical operations (addition, subtraction, multiplication, division, median, average) on selected cells or a specified range and writes the result to a specified cell or below the last used cell in the column.
@@ -367,12 +369,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/calculate-values.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/calculate-values.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/spreadsheet-editor/calculate-values" dark />

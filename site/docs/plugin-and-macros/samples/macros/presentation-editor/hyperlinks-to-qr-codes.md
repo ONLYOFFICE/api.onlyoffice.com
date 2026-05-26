@@ -4,6 +4,8 @@ description: Convert hyperlinks on slides to QR codes.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Hyperlinks to QR codes
 
 Converts all the hyperlinks in the presentation into QR codes using an external API.
@@ -64,11 +66,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes" dark />

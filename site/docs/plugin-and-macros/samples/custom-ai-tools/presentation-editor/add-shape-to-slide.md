@@ -3,6 +3,8 @@ description: Add a shape with text to a slide.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add shape to slide
 
 This function adds a shape to the slide with optional text. By default, the shape is 139x42 mm, centered, with a blue fill and a dark border.
@@ -148,11 +150,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-shape-to-slide.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-shape-to-slide.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/presentation-editor/add-shape-to-slide" dark />

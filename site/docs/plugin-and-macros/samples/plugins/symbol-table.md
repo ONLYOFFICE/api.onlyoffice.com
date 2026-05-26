@@ -3,6 +3,8 @@ description: Insert special symbols from a character table.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Symbol table
 
 Inserts special symbols into the document.
@@ -11,9 +13,7 @@ Inserts special symbols into the document.
 
 **Supported editors:** documents, spreadsheets, presentations.
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/symbol-table.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/symbol-table" />
 
 ## Installation
 

@@ -4,6 +4,8 @@ description: Remove all drawing objects from all PDF pages.
 tags: ["Docs", "Macros", "PDF"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Remove all drawings
 
 Removes all drawing objects (shapes, charts, images) from every page of the PDF document. Outputs the total number of deleted objects to the console. Useful for cleaning up a document by removing all visual elements in one click.
@@ -36,11 +38,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDo
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/pdf-editor/remove-all-drawings.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/pdf-editor/remove-all-drawings.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/pdf-editor/remove-all-drawings" dark />

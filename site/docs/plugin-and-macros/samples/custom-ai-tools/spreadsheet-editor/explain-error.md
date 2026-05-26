@@ -3,6 +3,8 @@ description: Explain a cell error in natural language.
 tags: ["Docs", "Plugins", "AI Tools", "Spreadsheets"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Explain error
 
 This function explains the error in the specified cell by adding a comment with the explanation.
@@ -264,11 +266,4 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explain-error.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/spreadsheet-editor/explain-error.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/spreadsheet-editor/explain-error" dark />

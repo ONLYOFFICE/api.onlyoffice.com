@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 文档。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/move-cursor.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/move-cursor" />
 
 ## 安装
 

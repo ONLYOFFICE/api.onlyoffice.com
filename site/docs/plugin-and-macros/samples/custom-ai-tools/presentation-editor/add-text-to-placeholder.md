@@ -3,6 +3,8 @@ description: Add text to a slide placeholder.
 tags: ["Docs", "Plugins", "AI Tools", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Add text to placeholder
 
 This function adds any text content to the specified or the current slide. Use this function for all text insertion requests, including recipes, lists, instructions, notes, ideas, or other text content.
@@ -266,12 +268,4 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-text-to-placeholder.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/images/plugins/functions-video/presentation-editor/add-text-to-placeholder.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/images/plugins/functions-video/presentation-editor/add-text-to-placeholder" dark />

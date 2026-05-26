@@ -4,6 +4,8 @@ description: Format the title text on all slides.
 tags: ["Docs", "Macros", "Presentations"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Format slide titles
 
 Formats the title of each slide in a presentation. It sets the font, font size, justification, and vertical text alignment for the title.
@@ -53,11 +55,4 @@ Methods used: [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiPar
 
 ## Result
 
-<video className="light-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/format-slide-titles.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
-<video className="dark-video" controls style={{maxWidth: '848px'}}>
-  <source src="/assets/video/macros/presentation-editor/format-slide-titles.dark.webm" type="video/webm" />
-  Your browser does not support HTML5 video.
-</video>
+<Video src="/assets/video/macros/presentation-editor/format-slide-titles" dark />

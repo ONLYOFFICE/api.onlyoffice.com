@@ -6,9 +6,7 @@
 
 **支持的编辑器：** 电子表格。
 
-<video autoPlay loop muted playsInline>
-  <source src="/assets/images/plugins/webm/add-comment-in-cell.webm" type="video/webm" />
-</video>
+<Video src="/assets/images/plugins/webm/add-comment-in-cell" />
 
 ## 安装
 
