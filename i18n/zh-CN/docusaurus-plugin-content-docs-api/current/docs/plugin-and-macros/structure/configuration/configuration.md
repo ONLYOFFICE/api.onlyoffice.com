@@ -607,13 +607,13 @@ sidebar_position: -5
 
 **ONLYOFFICE 插件市场**中的插件分类：
 
-- "all" - 全部，
-- "recommended" - 推荐，
-- "devTools" - 开发者工具，
-- "work" - 工作，
-- "entertainment" - 娱乐，
-- "communication" - 通讯，
-- "specAbilities" - 特殊功能。
+- `all` - 全部，
+- `recommended` - 推荐，
+- `devTools` - 开发者工具，
+- `work` - 工作，
+- `entertainment` - 娱乐，
+- `communication` - 通讯，
+- `specAbilities` - 特殊功能。
 
 **示例**: `["specAbilities", "work"]`
 

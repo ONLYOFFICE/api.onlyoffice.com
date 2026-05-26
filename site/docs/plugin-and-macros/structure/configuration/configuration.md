@@ -4,7 +4,7 @@ sidebar_position: -5
 
 # Configuration
 
-The `config.json` file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
+The `config.json` file is a plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
 
 ## baseUrl
 
@@ -408,7 +408,7 @@ The data type selected in the editor and sent to the plugin:
 - `ole` - OLE object data,
 - `desktop` - the desktop editor data,
 - `desktop-external` - the main page data of the desktop app (system messages),
-- `none` - no data will be send to the plugin from the editor,
+- `none` - no data will be sent to the plugin from the editor,
 - `sign` - the sign for the keychain plugin.
 
 **Example**:
@@ -607,13 +607,13 @@ The background color used for the dark theme plugin icon.
 
 Plugin categories in **ONLYOFFICE Plugin Marketplace**:
 
-- "all" - All,
-- "recommended" - Recommended,
-- "devTools" - Developer tools,
-- "work" - Work,
-- "entertainment" - Entertainment,
-- "communication" - Communication,
-- "specAbilities" - Special abilities.
+- `all` - All,
+- `recommended` - Recommended,
+- `devTools` - Developer tools,
+- `work` - Work,
+- `entertainment` - Entertainment,
+- `communication` - Communication,
+- `specAbilities` - Special abilities.
 
 **Example**: `["specAbilities", "work"]`
 
