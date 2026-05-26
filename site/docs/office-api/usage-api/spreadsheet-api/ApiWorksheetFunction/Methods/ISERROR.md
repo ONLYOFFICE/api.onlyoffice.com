@@ -1,6 +1,6 @@
 # ISERROR
 
-Checks whether a value is an error, and returns -**true** or -**false**.
+Checks whether a value is an error, and returns - **true** or - **false**.
 
 ## Syntax
 

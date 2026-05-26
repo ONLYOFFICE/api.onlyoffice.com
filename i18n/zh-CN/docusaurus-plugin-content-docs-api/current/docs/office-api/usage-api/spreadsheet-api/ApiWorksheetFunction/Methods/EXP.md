@@ -1,6 +1,6 @@
 # EXP
 
-返回 **e** 常数的给定数字次幂。**e** 常数等于 **2.71828182845904**，是自然对数的底数。
+Returns the - **e** constant raised to the power of a given number. The - **e** constant is equal to - **2.71828182845904**, the base of the natural logarithm.
 
 ## 语法
 

@@ -1,6 +1,6 @@
 # ISNONTEXT
 
-Checks whether a value is not text (blank cells are not text), and returns -**true** or -**false**.
+Checks whether a value is not text (blank cells are not text), and returns - **true** or - **false**.
 
 ## Syntax
 

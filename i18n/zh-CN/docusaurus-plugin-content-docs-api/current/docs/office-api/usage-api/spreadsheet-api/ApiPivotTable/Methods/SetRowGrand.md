@@ -1,6 +1,6 @@
 # SetRowGrand
 
-为数据透视表行设置 -**总计** 设置。
+Sets the - **Grand Totals** setting to the pivot table rows.
 
 ## 语法
 

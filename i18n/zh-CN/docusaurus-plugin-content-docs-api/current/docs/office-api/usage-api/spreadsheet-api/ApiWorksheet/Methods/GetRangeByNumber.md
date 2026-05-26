@@ -1,6 +1,6 @@
 # GetRangeByNumber
 
-返回使用 -**行/列** 坐标进行单元格选择的当前工作表选定区域的对象。
+Returns an object that represents the selected range of the current sheet using the - **row/column** coordinates for the cell selection.
 
 ## 语法
 

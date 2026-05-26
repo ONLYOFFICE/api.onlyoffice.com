@@ -2,7 +2,7 @@
 
 Creates a chart with the parameters specified.
 :::note
-Values of &lt;em&gt;styleIndex&lt;/em&gt; outside -**1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+Values of &lt;em&gt;styleIndex&lt;/em&gt; outside - **1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 ## Syntax

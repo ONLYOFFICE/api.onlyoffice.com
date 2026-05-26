@@ -1,6 +1,6 @@
 # ISNUMBER
 
-检查值是否为数字，并返回 **true** 或 **false**。
+Checks whether a value is a number, and returns - **true** or - **false**.
 
 ## 语法
 

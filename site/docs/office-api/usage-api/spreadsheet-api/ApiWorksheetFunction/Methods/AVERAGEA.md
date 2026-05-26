@@ -1,6 +1,6 @@
 # AVERAGEA
 
-Returns the average (arithmetic mean) of the specified arguments, evaluating text and -**false** in arguments as 0; -**true** evaluates as 1.
+Returns the average (arithmetic mean) of the specified arguments, evaluating text and - **false** in arguments as 0; - **true** evaluates as 1.
 
 ## Syntax
 

@@ -1,6 +1,6 @@
 # ISTEXT
 
-Checks whether a value is text, and returns -**true** or -**false**.
+Checks whether a value is text, and returns - **true** or - **false**.
 
 ## Syntax
 

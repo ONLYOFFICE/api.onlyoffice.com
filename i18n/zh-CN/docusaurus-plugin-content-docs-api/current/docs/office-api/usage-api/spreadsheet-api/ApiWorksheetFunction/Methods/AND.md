@@ -1,6 +1,6 @@
 # AND
 
-检查测试中的所有条件是否都为 **true**。
+Checks whether all conditions in a test are - **true**.
 
 ## 语法
 

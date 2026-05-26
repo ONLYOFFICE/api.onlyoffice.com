@@ -1,6 +1,6 @@
 # ISREF
 
-检查值是否为引用，并返回 **true** 或 **false**。
+Checks whether a value is a reference, and returns - **true** or - **false**.
 
 ## 语法
 

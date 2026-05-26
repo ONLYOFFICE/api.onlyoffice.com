@@ -1,6 +1,6 @@
 # AVERAGEA
 
-返回指定参数的平均值（算术平均数），将参数中的文本和 -**false** 视为 0；-**true** 视为 1。
+Returns the average (arithmetic mean) of the specified arguments, evaluating text and - **false** in arguments as 0; - **true** evaluates as 1.
 
 ## 语法
 

@@ -1,6 +1,6 @@
 # IF
 
-检查是否满足条件，如果为 **true** 则返回一个值，如果为 **false** 则返回另一个值。
+Checks whether a condition is met, and returns one value if - **true**, and another value if - **false**.
 
 ## 语法
 

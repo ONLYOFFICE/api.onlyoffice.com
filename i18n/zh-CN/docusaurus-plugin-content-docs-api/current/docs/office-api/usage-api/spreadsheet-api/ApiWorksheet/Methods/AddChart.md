@@ -1,9 +1,10 @@
 # AddChart
 
-从当前工作表的选定数据范围创建指定类型的图表。
-💡 请注意，水平和垂直偏移仅在指定的列和行单元格限制内计算。如果此值超过单元格宽度或高度，将设置另一个垂直/水平位置。
+Creates a chart of the specified type from the selected data range of the current sheet.
+💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
+row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
 :::note
-**1 - 48** 范围之外的 &lt;em&gt;nStyleIndex&lt;/em&gt; 值将被解释为 &lt;em&gt;cs:chartStyle&lt;/em&gt; 元素中的图表样式 ID（例如 201、215、284），仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) 和 [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside - **1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 ## 语法

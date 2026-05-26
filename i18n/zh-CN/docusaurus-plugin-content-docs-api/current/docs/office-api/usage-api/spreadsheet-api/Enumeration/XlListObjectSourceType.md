@@ -1,7 +1,7 @@
 # XlListObjectSourceType
 
-指定 ListObject 的数据源。
-当前仅支持 **"xlSrcRange"**。
+Specifies the data source for the ListObject.
+Only - **"xlSrcRange"** is currently supported.
 
 ## 类型
 

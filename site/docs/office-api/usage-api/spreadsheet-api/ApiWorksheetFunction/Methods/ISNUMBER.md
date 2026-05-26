@@ -1,6 +1,6 @@
 # ISNUMBER
 
-Checks whether a value is a number, and returns -**true** or -**false**.
+Checks whether a value is a number, and returns - **true** or - **false**.
 
 ## Syntax
 

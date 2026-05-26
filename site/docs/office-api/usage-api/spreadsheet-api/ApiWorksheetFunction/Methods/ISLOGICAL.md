@@ -1,6 +1,6 @@
 # ISLOGICAL
 
-Checks whether a value is a logical value (-**true** or -**false**), and returns -**true** or -**false**.
+Checks whether a value is a logical value (- **true** or - **false**), and returns - **true** or - **false**.
 
 ## Syntax
 

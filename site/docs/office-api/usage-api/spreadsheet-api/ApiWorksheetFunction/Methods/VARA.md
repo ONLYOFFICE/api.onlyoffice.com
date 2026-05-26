@@ -1,6 +1,6 @@
 # VARA
 
-Estimates variance based on a sample, including logical values and text. Text and the -**false** logical value have the value 0; the -**true** logical value has the value 1.
+Estimates variance based on a sample, including logical values and text. Text and the - **false** logical value have the value 0; the - **true** logical value has the value 1.
 
 ## Syntax
 

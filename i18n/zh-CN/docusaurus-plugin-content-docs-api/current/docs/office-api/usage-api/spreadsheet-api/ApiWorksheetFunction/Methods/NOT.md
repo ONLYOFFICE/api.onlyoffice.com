@@ -1,6 +1,6 @@
 # NOT
 
-检查指定的逻辑值是 **true** 还是 **false**。如果参数为 **false**，函数返回 **true**；如果参数为 **true**，则返回 **false**。
+Checks if the specified logical value is - **true** or - **false**. The function returns - **true** if the argument is - **false** and - **false** if the argument is - **true**.
 
 ## 语法
 

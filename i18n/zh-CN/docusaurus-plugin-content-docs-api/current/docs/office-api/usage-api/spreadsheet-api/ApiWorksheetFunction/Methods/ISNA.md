@@ -1,6 +1,6 @@
 # ISNA
 
-检查值是否为 *#N/A*，并返回 **true** 或 **false**。
+Checks whether a value is *#N/A*, and returns - **true** or - **false**.
 
 ## 语法
 

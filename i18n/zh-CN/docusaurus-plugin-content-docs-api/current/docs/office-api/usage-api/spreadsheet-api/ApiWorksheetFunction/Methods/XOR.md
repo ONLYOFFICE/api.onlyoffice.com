@@ -1,6 +1,6 @@
 # XOR
 
-返回所有参数的逻辑**异或**值。当 **true** 输入的数量为奇数时，函数返回 **true**；当 **true** 输入的数量为偶数时，返回 **false**。
+Returns the logical - **Exclusive Or** value of all arguments. The function returns - **true** when the number of - **true** inputs is odd and - **false** when the number of - **true** inputs is even.
 
 ## 语法
 

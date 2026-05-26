@@ -1,6 +1,6 @@
 # ISREF
 
-Checks whether a value is a reference, and returns -**true** or -**false**.
+Checks whether a value is a reference, and returns - **true** or - **false**.
 
 ## Syntax
 

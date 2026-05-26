@@ -1,6 +1,6 @@
 # ISERROR
 
-检查值是否为错误，并返回 **true** 或 **false**。
+Checks whether a value is an error, and returns - **true** or - **false**.
 
 ## 语法
 

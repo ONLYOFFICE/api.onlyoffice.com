@@ -1,6 +1,6 @@
 # ISLOGICAL
 
-检查值是否为逻辑值（**true** 或 **false**），并返回 **true** 或 **false**。
+Checks whether a value is a logical value (- **true** or - **false**), and returns - **true** or - **false**.
 
 ## 语法
 

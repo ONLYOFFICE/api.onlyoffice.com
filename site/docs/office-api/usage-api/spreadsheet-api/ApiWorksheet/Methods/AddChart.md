@@ -4,7 +4,7 @@ Creates a chart of the specified type from the selected data range of the curren
 💡 Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
 row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.
 :::note
-Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside -**1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside - **1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 ## Syntax

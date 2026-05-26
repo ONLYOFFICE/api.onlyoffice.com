@@ -1,6 +1,6 @@
 # SetColumnGrand
 
-为数据透视表列设置 -**总计** 设置。
+Sets the - **Grand Totals** setting to the pivot table columns.
 
 ## 语法
 

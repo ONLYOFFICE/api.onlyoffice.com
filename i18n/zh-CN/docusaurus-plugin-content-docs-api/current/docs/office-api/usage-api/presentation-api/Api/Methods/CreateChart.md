@@ -1,8 +1,8 @@
 # CreateChart
 
-使用指定的参数创建图表。
+Creates a chart with the parameters specified.
 :::note
-**1 - 48** 范围之外的 &lt;em&gt;nStyleIndex&lt;/em&gt; 值将被解释为 &lt;em&gt;cs:chartStyle&lt;/em&gt; 元素中的图表样式 ID（例如 201、215、284），仅适用于 [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) 和 [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api)。
+Values of &lt;em&gt;nStyleIndex&lt;/em&gt; outside - **1 - 48** are interpreted as a chart style id from the &lt;em&gt;cs:chartStyle&lt;/em&gt; element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
 :::
 
 ## 语法

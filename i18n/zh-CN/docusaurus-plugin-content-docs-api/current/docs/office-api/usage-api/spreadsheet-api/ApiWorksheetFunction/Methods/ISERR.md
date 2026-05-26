@@ -1,6 +1,6 @@
 # ISERR
 
-检查值是否为 *#N/A* 以外的错误，并返回 **true** 或 **false**。
+Checks whether a value is an error other than *#N/A*, and returns - **true** or - **false**.
 
 ## 语法
 

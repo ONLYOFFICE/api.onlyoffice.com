@@ -1,7 +1,7 @@
 # SetTabs
 
-指定将用于当前段落中任何制表符的自定义制表位序列。
--**警告**：aPos 数组和 aVal 数组的长度-**必须**相等。
+Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.
+- **Warning**: The lengths of aPos array and aVal array - **MUST BE** equal to each other.
 
 ## 语法
 

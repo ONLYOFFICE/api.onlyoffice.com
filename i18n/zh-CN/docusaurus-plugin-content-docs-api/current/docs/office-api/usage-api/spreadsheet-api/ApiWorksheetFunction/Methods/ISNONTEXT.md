@@ -1,6 +1,6 @@
 # ISNONTEXT
 
-检查值是否不是文本（空单元格不是文本），并返回 **true** 或 **false**。
+Checks whether a value is not text (blank cells are not text), and returns - **true** or - **false**.
 
 ## 语法
 

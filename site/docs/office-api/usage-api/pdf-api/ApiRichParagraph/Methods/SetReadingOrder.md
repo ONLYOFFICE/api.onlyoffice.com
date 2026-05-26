@@ -2,9 +2,9 @@
 
 Specifies the reading order for the current paragraph.
 Possible values are:
--**null** - use the standart direction parameter;
--**"ltr"** - left-to-right text direction;
--**"rtl"** - right-to-left text direction.
+- **null** - use the standart direction parameter;
+- **"ltr"** - left-to-right text direction;
+- **"rtl"** - right-to-left text direction.
 
 ## Syntax
 

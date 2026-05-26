@@ -1,7 +1,7 @@
 # STDEVPA
 
-根据整个总体计算标准差，包括逻辑值和文本。
-文本和 -**false** 逻辑值的值为 0；-**true** 逻辑值的值为 1。
+Calculates standard deviation based on the entire population, including logical values and text.
+Text and the - **false** logical value have the value 0; the - **true** logical value has the value 1.
 
 ## 语法
 
