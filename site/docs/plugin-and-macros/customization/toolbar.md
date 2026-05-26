@@ -10,7 +10,7 @@ Plugins can be placed on the toolbar: create their own tabs and fill them, add b
 
 ## AddToolbarMenuItem
 
-`Type: method`
+**type:** `method`
 
 Adds an item to the toolbar menu.
 
@@ -52,7 +52,7 @@ Asc.plugin.executeMethod("AddToolbarMenuItem", [{
 
 ## ToolbarMenuMainItem
 
-`Type: object`
+**type:** `object`
 
 The main toolbar menu item.
 
@@ -74,7 +74,7 @@ const oToolbarMenuMainItem = {
 
 ## ToolbarMenuTab
 
-`Type: object`
+**type:** `object`
 
 The toolbar menu tab.
 
@@ -98,7 +98,7 @@ const oToolbarMenuTab = {
 
 ## ToolbarMenuItem
 
-`Type: object`
+**type:** `object`
 
 The toolbar menu item.
 
@@ -155,7 +155,7 @@ const oToolbarMenuItem = {
 
 ## ToolbarMenuItemType
 
-`Type: "button" | "big-button"`
+**type:** `"button" | "big-button"`
 
 The toolbar menu item type. The *button* and *big-button* values are the same and can be equally used to specify the toolbar button.
 
@@ -291,7 +291,7 @@ A button that can be toggled.
 
 ## onToolbarMenuClick
 
-`Type: event`
+**type:** `event`
 
 The event called when the toolbar menu button has been clicked. [Subscribe](../interacting-with-editors/overview/how-to-attach-events.md) to this event to handle toolbar button clicks.
 
@@ -311,7 +311,7 @@ window.Asc.plugin.event_onToolbarMenuClick = (id) => {
 
 ## UpdateToolbarMenuItem
 
-`Type: method`
+**type:** `method`
 
 Updates the toolbar menu item.
 
@@ -351,7 +351,7 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
 
 ## attachToolbarMenuClickEvent
 
-`Type: method`
+**type:** `method`
 
 Adds an event listener, a function that will be called whenever the specified button is clicked in the toolbar menu and triggers an event. For each toolbar menu button, you can specify a separate event listener by its ID.
 

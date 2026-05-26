@@ -10,7 +10,7 @@ sidebar_position: -5
 
 ## AddToolbarMenuItem
 
-`类型：方法`
+**类型：** `method`
 
 向工具栏菜单添加项目。
 
@@ -52,7 +52,7 @@ Asc.plugin.executeMethod("AddToolbarMenuItem", [{
 
 ## ToolbarMenuMainItem
 
-`类型：对象`
+**类型：** `object`
 
 主工具栏菜单项。
 
@@ -74,7 +74,7 @@ const oToolbarMenuMainItem = {
 
 ## ToolbarMenuTab
 
-`类型：对象`
+**类型：** `object`
 
 工具栏菜单选项卡。
 
@@ -98,7 +98,7 @@ const oToolbarMenuTab = {
 
 ## ToolbarMenuItem
 
-`类型：对象`
+**类型：** `object`
 
 工具栏菜单项。
 
@@ -155,7 +155,7 @@ const oToolbarMenuItem = {
 
 ## ToolbarMenuItemType
 
-`类型："button" | "big-button"`
+**类型：** `"button" | "big-button"`
 
 工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
 
@@ -291,7 +291,7 @@ const oToolbarMenuItem = {
 
 ## onToolbarMenuClick
 
-`类型：事件`
+**类型：** `event`
 
 当工具栏菜单按钮被点击时调用的事件。[订阅](../interacting-with-editors/overview/how-to-attach-events.md)此事件以处理工具栏按钮点击。
 
@@ -311,7 +311,7 @@ window.Asc.plugin.event_onToolbarMenuClick = (id) => {
 
 ## UpdateToolbarMenuItem
 
-`类型：方法`
+**类型：** `method`
 
 更新工具栏菜单项。
 
@@ -351,7 +351,7 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
 
 ## attachToolbarMenuClickEvent
 
-`类型：方法`
+**类型：** `method`
 
 添加事件监听器，即当工具栏菜单中指定按钮被点击并触发事件时调用的函数。对于每个工具栏菜单按钮，可以通过其 ID 指定单独的事件监听器。
 
