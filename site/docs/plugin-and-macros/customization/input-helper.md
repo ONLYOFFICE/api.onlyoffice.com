@@ -60,7 +60,7 @@ To show an input helper, use the **ShowInputHelper** method of `window.Asc.plugi
 | *guid*           | `string`  | A string value which specifies a plugin identifier which must be of the `asc.{UUID}` type. |
 | *w*              | `number`  | A number which specifies the window width measured in millimeters.                           |
 | *h*              | `number`  | A number which specifies the window height measured in millimeters.                          |
-| *isKeyboardTake* | `boolean` | Whether the keyboard is caught (**true**) or not (**false**).                                |
+| *isKeyboardTake* | `boolean` | Whether the keyboard is caught (`true`) or not (`false`).                                |
 
 **Returns**: This method doesn't return any data.
 
@@ -79,7 +79,7 @@ To unshow an input helper, use the **UnShowInputHelper** method of `window.Asc.p
 | Name      | Type      | Description                                                                                  |
 |-----------|-----------|----------------------------------------------------------------------------------------------|
 | *guid*    | `string`  | A string value which specifies a plugin identifier which must be of the `asc.{UUID}` type. |
-| *isclear* | `boolean` | Whether the input context will be cleared (**true**) or not (**false**).                     |
+| *isclear* | `boolean` | Whether the input context will be cleared (`true`) or not (`false`).                     |
 
 **Returns**: This method doesn't return any data.
 
@@ -235,7 +235,7 @@ Shows an input helper.
 |---------------------|-----------|------------------------------------------------------------------|
 | *width*             | `number`  | The input helper window width measured in millimeters.           |
 | *height*            | `number`  | The input helper window height measured in millimeters.          |
-| *isCaptureKeyboard* | `boolean` | Whether the keyboard is caught (**true**) or not (**false**). |
+| *isCaptureKeyboard* | `boolean` | Whether the keyboard is caught (`true`) or not (`false`). |
 
 **Returns**: This method doesn't return any data.
 

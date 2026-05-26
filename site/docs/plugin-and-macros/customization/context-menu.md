@@ -61,12 +61,12 @@ The plugin can be accessed via the context menu.
 
    The context menu type:
 
-   - **None** - not used,
-   - **Target** - nothing is selected,
-   - **Selection** - text is selected,
-   - **Image** - image is selected,
-   - **Shape** - shape is selected,
-   - **OleObject** - OLE object is selected.
+   - `None` - not used,
+   - `Target` - nothing is selected,
+   - `Selection` - text is selected,
+   - `Image` - image is selected,
+   - `Shape` - shape is selected,
+   - `OleObject` - OLE object is selected.
 
    Depending on the selection type, different context menu items can be added.
 
