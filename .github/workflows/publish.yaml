@@ -135,24 +135,24 @@ jobs:
 
         export SITE_MODE="$mode"
 
-        #if [[ "$CN" == "true" ]]; then
-        #   LOCALE="$LOCALE --locale zh-CN"
-        #   # Docusaurus link issues fix — NOTE: remove after fix lands upstream
-        #   mkdir -p i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
-        #   cp -r site/** i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
-        #   cp -r i18n/zh-CN/docusaurus-plugin-content-docs-api/current/** i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
-        #   rm -rf i18n/zh-CN/docusaurus-plugin-content-docs-api/current
-        #   mv i18n/zh-CN/docusaurus-plugin-content-docs-api/current2 i18n/zh-CN/docusaurus-plugin-content-docs-api/current
-        #fi
+        if [[ "$CN" == "true" ]]; then
+           LOCALE="$LOCALE --locale zh-CN"
+           # Docusaurus link issues fix — NOTE: remove after fix lands upstream
+           mkdir -p i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
+           cp -r site/** i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
+           cp -r i18n/zh-CN/docusaurus-plugin-content-docs-api/current/** i18n/zh-CN/docusaurus-plugin-content-docs-api/current2
+           rm -rf i18n/zh-CN/docusaurus-plugin-content-docs-api/current
+           mv i18n/zh-CN/docusaurus-plugin-content-docs-api/current2 i18n/zh-CN/docusaurus-plugin-content-docs-api/current
+        fi
 
         #[[ "${{ github.event.inputs.dev }}" == "true" ]] && SUB_ARGS="--dev"
 
         free -h
         cat /sys/fs/cgroup/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2>/dev/null || echo "Memory limit info not available"
 
-        export NODE_OPTIONS="--max-old-space-size=28672"
-        export UV_THREADPOOL_SIZE=4
-        export RSPACK_PARALLEL=3
-        export RAYON_NUM_THREADS=3
-        export TOKIO_WORKER_THREADS=4
+        export NODE_OPTIONS="--max-old-space-size=24672"
+        export UV_THREADPOOL_SIZE=2
+        export RSPACK_PARALLEL=2
+        export RAYON_NUM_THREADS=2
+        export TOKIO_WORKER_THREADS=2
         npm run build -- ${SUB_ARGS} --locale en --locale zh-CN
