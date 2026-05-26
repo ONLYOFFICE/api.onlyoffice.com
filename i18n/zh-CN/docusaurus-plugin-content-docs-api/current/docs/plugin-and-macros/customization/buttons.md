@@ -10,7 +10,7 @@ sidebar_position: -2
 
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ---- |
-| id | `number` | 指定该按钮在 *config.json* 文件的 [buttons](../structure/configuration/configuration.md#variationsbuttons) 数组中的索引。如果 `id == -1`，则表示插件认为点击了窗口的**关闭（Close）** 按钮，或操作被某种方式中断。 |
+| id | `number` | 指定该按钮在 `config.json` 文件的 [buttons](../structure/configuration/configuration.md#variationsbuttons) 数组中的索引。如果 `id == -1`，则表示插件认为点击了窗口的**关闭（Close）** 按钮，或操作被某种方式中断。 |
 | windowId | `number` | 指定模态窗口中按钮的索引。 |
 
 ## 示例

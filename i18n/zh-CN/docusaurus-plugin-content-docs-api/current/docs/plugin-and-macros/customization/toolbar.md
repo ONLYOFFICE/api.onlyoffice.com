@@ -112,7 +112,7 @@ const oToolbarMenuTab = {
 | *hint*           | string                                      | 菜单项提示信息。                                                                                 |
 | *icons*          | string / object                             | 菜单项图标（参见插件的[config](../structure/configuration/configuration.md#variationsicons)文档）。 |
 | *disabled*       | boolean                                     | 指定当前菜单项是否被锁定。                                                                       |
-| *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"*）或其上半部分（当 *"split == true"*）是否可切换。        |
+| *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 `split == false`）或其上半部分（当 `split == true`）是否可切换。        |
 | *lockInViewMode* | boolean                                     | 指定工具栏菜单项在视图模式下（如预览、查看表单、断开连接等）是否自动锁定。                       |
 | *separator*      | boolean                                     | 指定工具栏菜单项之间是否使用分隔符。                                                             |
 | *split*          | boolean                                     | 指定工具栏菜单项是否拆分为两部分，并包含下拉菜单。                                               |
@@ -157,7 +157,7 @@ const oToolbarMenuItem = {
 
 **类型：** `"button" | "big-button"`
 
-工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
+工具栏菜单项类型。`button` 和 `big-button` 两个值等效，可用于指定工具栏按钮。
 
 ## 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
 

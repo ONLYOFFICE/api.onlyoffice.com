@@ -51,13 +51,13 @@ window.Asc.plugin.init = (text) => {
 
 ## Showing an input helper
 
-To show an input helper, use the **ShowInputHelper** method of *window.Asc.plugin.executeMethod*.
+To show an input helper, use the **ShowInputHelper** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
 | Name             | Type      | Description                                                                                  |
 |------------------|-----------|----------------------------------------------------------------------------------------------|
-| *guid*           | `string`  | A string value which specifies a plugin identifier which must be of the *asc.\{UUID\}* type. |
+| *guid*           | `string`  | A string value which specifies a plugin identifier which must be of the `asc.{UUID}` type. |
 | *w*              | `number`  | A number which specifies the window width measured in millimeters.                           |
 | *h*              | `number`  | A number which specifies the window height measured in millimeters.                          |
 | *isKeyboardTake* | `boolean` | Whether the keyboard is caught (**true**) or not (**false**).                                |
@@ -72,13 +72,13 @@ window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
 
 ## Unshowing an input helper
 
-To unshow an input helper, use the **UnShowInputHelper** method of *window.Asc.plugin.executeMethod*.
+To unshow an input helper, use the **UnShowInputHelper** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
 | Name      | Type      | Description                                                                                  |
 |-----------|-----------|----------------------------------------------------------------------------------------------|
-| *guid*    | `string`  | A string value which specifies a plugin identifier which must be of the *asc.\{UUID\}* type. |
+| *guid*    | `string`  | A string value which specifies a plugin identifier which must be of the `asc.{UUID}` type. |
 | *isclear* | `boolean` | Whether the input context will be cleared (**true**) or not (**false**).                     |
 
 **Returns**: This method doesn't return any data.
@@ -168,7 +168,7 @@ Returns the sizes of the input helper scrolled window. Returns an object with wi
 
 **Parameters**: This method doesn't have any parameters.
 
-**Returns**: object (with *w* and *h* properties)
+**Returns**: object (with `w` and `h` properties)
 
 **Example**:
 
