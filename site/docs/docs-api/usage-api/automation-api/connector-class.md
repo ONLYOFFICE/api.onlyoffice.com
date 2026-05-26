@@ -157,11 +157,11 @@ To call commands and send the data back to the editor, define the callCommand me
 
 ### Parameters
 
-| Name      | Type     | Required | Description                                                                                                                                                                                                                                                     |
-| --------- | -------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| commandFn | function | required | A function containing [Office JavaScript API](../../../office-api/get-started/overview.md) commands to manipulate the document. |
+| Name      | Type     | Required | Description                                                                                                                                                                                                                                                      |
+| --------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| commandFn | function | required | A function containing [Office JavaScript API](../../../office-api/get-started/overview.md) commands to manipulate the document.                                                                                                                                  |
 | callback  | function | optional | A function that receives the return value of `commandFn`. Primitives, plain objects, arrays, and TypedArrays are supported (up to 10 levels of nesting). If the return value contains functions or exceeds the nesting limit, the callback receives `undefined`. |
-| isNoCalc  | boolean  | optional | Whether to skip document recalculation. Set to `true` only when your edits surely will not require recalculation. Default: `false`. |
+| isNoCalc  | boolean  | optional | Whether to skip document recalculation. Set to `true` only when your edits surely will not require recalculation. Default: `false`.                                                                                                                              |
 
 The `commandFn` function is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to it, use the [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) object.
 
