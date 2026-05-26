@@ -26,9 +26,9 @@ expression.MillimetersToEmus(mm);
 在 PDF 文档中将毫米转换为 EMU。
 
 ```javascript editor-pdf
-// How can I convert millimeters to emus in a PDF document?
+// The API method performs measurement unit conversion.
 
-// Convert millimeters to emus in a PDF document.
+// The result is displayed in a shape text element.
 
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);

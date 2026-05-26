@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置书签文本。
+用新文本替换文档中书签内的文本内容。
 
 ```javascript editor-docx
-// How to set a text to a bookmark in a document.
+// How do I update the words covered by a bookmark in a document?
 
-// Get a bookmark from the document by its name then set its text.
+// Swap out a bookmark's original text for a revised value without removing the bookmark in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

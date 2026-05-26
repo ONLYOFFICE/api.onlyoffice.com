@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-从演示文稿中备注页的正文形状获取文本。
+从演示文稿中幻灯片的备注部分读取文本。
 
 ```javascript editor-pptx
-// How do I get the body shape text in a presentation?
+// How do I get the content of the slide notes in a presentation?
 
-// Get the body shape text using a notes page object.
+// Retrieve text that was added to the notes page and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

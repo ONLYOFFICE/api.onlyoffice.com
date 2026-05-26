@@ -7,12 +7,12 @@
 
 ## 示例
 
-在电子表格中设置透视字段的方向。
+将透视字段移动到电子表格中的行、列或值区域。
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation in a spreadsheet.
+// How do I reassign a pivot field to a different area of the pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then change an orientation a specified pivot in a spreadsheet.
+// Reorganize a pivot table by switching a field from rows to columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -44,12 +44,6 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
-pivotWorksheet.GetRange('A12').SetValue('The Style field orientation will change soon');
-
 let pivotField = pivotTable.GetPivotFields('Style');
-
-setTimeout(function () {
-    pivotField.SetOrientation("Columns");
-}, 5000);
+pivotField.SetOrientation("Columns");
 ```

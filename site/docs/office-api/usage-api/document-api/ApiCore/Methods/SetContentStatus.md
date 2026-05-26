@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Get the content status of the current document using the core properties in a document.
+Mark the content status of a document in its core properties in a document.
 
 ```javascript editor-docx
-// How do I set content status in a document?
+// How do I record whether a document is a draft, review, or final version in a document?
 
-// Set content status using a core properties object in a document.
+// Attach a workflow stage label to the document so collaborators know its current state in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

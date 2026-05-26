@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为表格中的所有单元格设置背景颜色。
+在文档中为表格的所有单元格应用背景颜色。
 
 ```javascript editor-docx
-// How to color a background of the table in a document.
+// How do I change the background color of a table in a document?
 
-// Color background to the middle washed rose color in a document.
+// Give a table a distinct fill color to improve visual clarity in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

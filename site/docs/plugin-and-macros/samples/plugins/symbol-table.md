@@ -45,7 +45,7 @@ Repository on GitHub: [symboltable](https://github.com/ONLYOFFICE/sdkjs-plugins/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Symbol Table",
   "nameLocale": {

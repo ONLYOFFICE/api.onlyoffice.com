@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中绘图对象的内容。
+获取绘图对象的内部内容以在文档中向其内部添加文本。
 
 ```javascript editor-docx
-// How do I get the content in a document?
+// How do I access the editable content area inside a drawing shape in a document?
 
-// Get the content using a drawing object object in a document.
+// Insert a paragraph with custom text directly into a shape's content container in a document.
 
 const doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);

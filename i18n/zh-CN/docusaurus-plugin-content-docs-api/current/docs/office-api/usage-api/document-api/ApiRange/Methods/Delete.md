@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中删除范围的所有内容。
+从文档中完全删除选定的文本部分。
 
 ```javascript editor-docx
-// How to clear the content of the range in a document.
+// How do I erase a specific stretch of words from the body of a document?
 
-// Delete the text from the content in a document.
+// Wipe out a passage so it no longer appears anywhere in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

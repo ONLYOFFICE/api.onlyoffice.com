@@ -47,5 +47,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![AdjustIndentation](/assets/images/plugins/adjust-indentation.png#gh-light-mode-only)
-![AdjustIndentation](/assets/images/plugins/adjust-indentation.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/adjust-indentation.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/adjust-indentation.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

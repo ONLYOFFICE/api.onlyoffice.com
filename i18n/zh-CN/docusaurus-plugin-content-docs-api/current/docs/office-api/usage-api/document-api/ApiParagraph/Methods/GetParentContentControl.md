@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-获取文档中包含段落的内容控件。
+检索包裹文档中给定段落的内容控件。
 
 ```javascript editor-docx
-// How to get the parent control of the paragraph in a document.
+// How do I find the content control that contains a paragraph in a document?
 
-// Make bold the parent element in a document.
+// Bold the first words inside a content control by navigating from its child paragraph in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

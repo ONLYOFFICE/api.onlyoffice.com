@@ -32,7 +32,7 @@ See the available command types below to find more about them.
 
 The JSON Web Token should be sent in the JSON object format to **document command service**. It is used to receive the status of the document with the key specified.
 
-``` json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
 }
@@ -42,7 +42,7 @@ The JSON Web Token should be sent in the JSON object format to **document comman
 
 | Name  | Type   | Presence                  | Description                                                                                                                                                                    |
 | ----- | ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| token | string | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/request/token-in-body.md#get-document-status). |
+| token | string | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](../../additional-api/signature/request/token-in-body.md#get-document-status). |
 
 The **document editing service** informs the **document storage service** about the result caused by command and sends the response with all the necessary data via the [callback handler](../../usage-api/callback-handler.md).
 

@@ -51,11 +51,11 @@ import TabItem from '@theme/TabItem';
 
 | 名称        | 类型    | 示例 | 描述                                                        |
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
-| wopi.enable | boolean | true    | 定义是否启用 WOPI。默认值为 **false**。 |
+| wopi.enable | boolean | true    | 是否启用 WOPI。默认值为 **false**。 |
 
 ### 示例
 
-``` json
+```json
 {
   "wopi": {
     "enable": true

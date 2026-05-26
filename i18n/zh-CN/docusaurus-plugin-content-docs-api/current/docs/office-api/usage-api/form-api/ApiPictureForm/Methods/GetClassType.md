@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查图片表单返回的类类型。
+识别文档中图片表单字段的类别标签。
 
 ```javascript editor-forms
-// How do I check what type a picture form object is?
+// How do I find out what category a picture form field belongs to in a document?
 
-// Retrieve and output the class type string for a picture form.
+// Confirm the kind of form element in use by reading its category label in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});

@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在演示文稿中将切换速度设置为 'slow'。
+设置演示文稿中幻灯片过渡的持续时间。
 
 ```javascript editor-pptx
-// How to set speed for a slide show transition?
+// How do I change how fast a transition plays in a presentation?
 
-// Set speed and display the result in a presentation.
+// Apply a specific transition speed to control animation timing in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -28,10 +28,10 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | 参数        | 类型   | 描述                                                                                                                     |
 |-------------|--------|-------------------------------------------------------------------------------------------------------------------------|
-| e           | object  | 定义消息参数。                                                                                                           |
+| e           | object  | 消息参数。                                                                                                           |
 | e.type      | string  | 检查消息类型是否为 *operation*。如果不是，则不向用户显示任何消息。                                                           |
-| e.opMessage | string  | 定义将向用户显示的消息。                                                                                                  |
-| e.opType    | integer | 如果 `opMessage` 参数未定义，则通过操作类型定义消息。设置为 **0** 用于通知用户文件上传，设置为 **1** 用于通知用户文件加密。     |
+| e.opMessage | string  | 将向用户显示的消息。                                                                                                  |
+| e.opType    | integer | 如果 `opMessage` 参数未定义，则根据操作类型确定消息。设置为 **0** 用于通知用户文件上传，设置为 **1** 用于通知用户文件加密。     |
 
 ```mdx-code-block
 </APITable>

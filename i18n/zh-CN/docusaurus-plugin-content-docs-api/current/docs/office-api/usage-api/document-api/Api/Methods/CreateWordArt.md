@@ -29,12 +29,12 @@ expression.CreateWordArt(textPr, text, transform, fill, stroke, rotAngle, width,
 
 ## 示例
 
-创建文本变换类型为 "textArchUp" 的艺术字对象。
+在文档的段落中插入装饰性拱形文本。
 
 ```javascript editor-docx
-// Create a Text Art object using the specified text properties in a document.
+// How do I add stylized curved text to a document?
 
-// Create the empty text properties object and set the bold property, font size, capitalized letters, color, and font family to it in a document.
+// Place bold capitalized text shaped into an upward arch with a colored fill and outline in a document.
 
 let doc = Api.GetDocument();
 let textPr = Api.CreateTextPr();

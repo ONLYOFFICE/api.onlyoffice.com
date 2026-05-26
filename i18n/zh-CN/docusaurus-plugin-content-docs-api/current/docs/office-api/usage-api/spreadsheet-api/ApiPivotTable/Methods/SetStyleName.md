@@ -22,12 +22,12 @@ expression.SetStyleName(name);
 
 ## 示例
 
-在电子表格中设置数据透视表的样式名称。
+在电子表格中为数据透视表应用命名的视觉样式。
 
 ```javascript editor-xlsx
-// How to set style name of a table in a spreadsheet.
+// How do I change the color scheme or style of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its style name in a spreadsheet.
+// Pick a built-in table style to make the pivot table easier to read in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -60,10 +60,5 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
-pivotWorksheet.GetRange('B9').SetValue('Pivot Table Style will change soon');
-
-setTimeout(function () {
-    pivotTable.SetStyleName('PivotStyleLight14');
-}, 5000);
+pivotTable.SetStyleName('PivotStyleLight14');
 ```

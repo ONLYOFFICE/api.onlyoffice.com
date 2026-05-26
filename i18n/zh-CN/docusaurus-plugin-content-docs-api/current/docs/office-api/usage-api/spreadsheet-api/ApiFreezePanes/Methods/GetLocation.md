@@ -20,12 +20,12 @@ expression.GetLocation();
 
 ## 示例
 
-冻结第一列并将冻结的范围地址粘贴到电子表格中的表格。
+读取当前冻结区域的地址并在电子表格的单元格中显示。
 
 ```javascript editor-xlsx
-// How to get location address of a freezed column in a spreadsheet.
+// How do I find out which rows or columns are currently locked in place in a spreadsheet?
 
-// Get an address of a column from freezed panes and display it in the worksheet.
+// Retrieve the cell reference of the frozen region to confirm what is pinned in a spreadsheet.
 
 Api.SetFreezePanesType('column');
 let worksheet = Api.GetActiveSheet();

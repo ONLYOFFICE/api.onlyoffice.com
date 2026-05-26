@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a rich paragraph in a PDF document.
+Identify the type of a paragraph object in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a rich paragraph object is in a PDF document?
+// How do I determine what type a paragraph is in a PDF?
 
-// Retrieve and output the class type string for a rich paragraph in a PDF document.
+// Check the object classification of a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

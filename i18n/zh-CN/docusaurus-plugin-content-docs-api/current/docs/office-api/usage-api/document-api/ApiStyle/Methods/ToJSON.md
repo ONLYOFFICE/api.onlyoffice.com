@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-将文档中的样式对象转换为 JSON 对象。
+将样式导出为可移植数据格式并在文档中恢复为新样式。
 
 ```javascript editor-docx
-// How to get a JSON from the style object in a document.
+// How do I serialize a style so it can be stored, transferred, and recreated in a document?
 
-// Convert the style to json and add it to the document.
+// Duplicate an existing style under a different name by converting it to data and back in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

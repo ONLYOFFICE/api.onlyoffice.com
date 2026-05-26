@@ -20,12 +20,12 @@ expression.AddPageNumber();
 
 ## 示例
 
-将当前文档页码插入段落。
+在文档的段落中插入自动当前页码字段。
 
 ```javascript editor-docx
-// How to add a page number to the text.
+// How do I display the current page number inside a header or footer paragraph in a document?
 
-// Insert a page number to the paragraph.
+// Place a dynamic page counter in a paragraph so each printed page shows its own number in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-设置文档中绘图对象的名称。
+为文档中的绘图分配自定义名称。
 
 ```javascript editor-docx
-// How to set name for a drawing object in a document?
+// How do I label a shape so it can be identified by name in a document?
 
-// Set name and display the result in a document.
+// Retrieve and display the assigned name inside the shape itself in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

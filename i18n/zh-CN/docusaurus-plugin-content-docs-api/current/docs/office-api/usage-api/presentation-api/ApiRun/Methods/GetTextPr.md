@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取演示文稿中 run 的文本属性。
+从演示文稿中的文本运行获取文本属性。
 
 ```javascript editor-pptx
-// How to get the text properties of the current text run object and change its font size in a presentation.
+// What text formatting properties can be read from a run?
 
-// Resize a font of a text run in a presentation.
+// Retrieve text properties and modify font size in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

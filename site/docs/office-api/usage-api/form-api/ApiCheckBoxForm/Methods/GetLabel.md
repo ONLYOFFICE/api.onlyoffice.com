@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the label text from the checkbox form.
+Read the visible label text attached to a checkbox form in a document.
 
 ```javascript editor-forms
-// How to retrieve a label from the checkbox form.
+// How do I retrieve the label displayed next to a checkbox form in a document?
 
-// Get the label text from the checkbox in a document.
+// Confirm the descriptive label of a checkbox before presenting it to users in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Select if you agree to terms", "required": true, "key" : "Terms agreement"});

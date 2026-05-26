@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查 PDF 文档中的文本是否为粗体。
+检查 PDF 中的文本是否有粗体格式。
 
 ```javascript editor-pdf
-// How to know whether a text is set to bold or not in a PDF document.
+// How do I determine whether text is bold in a PDF?
 
-// Get the text properties of the run and find whether it is bold or not in a PDF document.
+// Read the bold property from text formatting settings in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

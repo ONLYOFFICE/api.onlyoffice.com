@@ -34,7 +34,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example of search and replace",
   "guid": "asc.{5FF5F75F-2977-4B98-8D36-7C406D610B90}",

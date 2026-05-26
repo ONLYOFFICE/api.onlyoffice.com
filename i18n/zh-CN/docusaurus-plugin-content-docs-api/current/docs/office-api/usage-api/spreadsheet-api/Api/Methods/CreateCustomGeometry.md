@@ -20,12 +20,12 @@ expression.CreateCustomGeometry();
 
 ## 示例
 
-在电子表格中创建自定义几何图形。
+在电子表格中绘制由线条和曲线组成的完全自定义轮廓的形状。
 
 ```javascript editor-xlsx
-// How can I create custom geometry in a spreadsheet?
+// How do I build a shape with a hand-crafted path instead of a preset form in a spreadsheet?
 
-// Create custom geometry in a spreadsheet.
+// Insert an object whose edges follow a unique path defined point by point in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 // Airplane shape in EMU units

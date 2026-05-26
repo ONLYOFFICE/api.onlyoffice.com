@@ -20,12 +20,12 @@ expression.GetPageMarginRight();
 
 ## 示例
 
-指定此节中所有页面的页边距并返回。
+读取文档中节内页面的右边距。
 
 ```javascript editor-docx
-// How to get right page margin.
+// How do I find out the size of the right page margin for a section in a document?
 
-// Get the page margin right for a section in a document.
+// Retrieve the right spacing value to verify the page layout is correct in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

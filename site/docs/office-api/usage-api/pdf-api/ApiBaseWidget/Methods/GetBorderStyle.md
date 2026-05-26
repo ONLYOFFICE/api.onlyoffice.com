@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get field widgets border style and display it in a PDF document.
+Read the border style of a form field widget in a PDF.
 
 ```javascript editor-pdf
-// How can I get the border style using a widget in a PDF document?
+// How do I get the border style of a widget in a PDF?
 
-// Get the border style for a widget in a PDF document.
+// Retrieve the outline appearance setting of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

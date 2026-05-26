@@ -42,5 +42,11 @@ Methods used: [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlid
 
 ## Result
 
-![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces-slide.png#gh-light-mode-only)
-![RemoveExtraSpaces](/assets/images/plugins/remove-extra-spaces-slide.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-extra-spaces.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-extra-spaces.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

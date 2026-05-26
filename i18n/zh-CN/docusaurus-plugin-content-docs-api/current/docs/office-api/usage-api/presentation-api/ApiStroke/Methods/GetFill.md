@@ -20,12 +20,12 @@ expression.GetFill();
 
 ## 示例
 
-获取笔触的填充颜色。在演示文稿中创建具有彩色边框的形状并获取其填充属性。
+读取演示文稿中应用于边框线的颜色或图案。
 
 ```javascript editor-pptx
-// How do I get the fill in a presentation?
+// How do I see what color or fill the border has in a presentation?
 
-// Get the fill using a stroke object in a presentation.
+// Access the fill properties of a stroke to check its appearance in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

@@ -14,7 +14,7 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, only internet URL or Base64 encoded images are supported). |
+| sImageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently, |
 | nWidth | Required | [EMU](../../Enumeration/EMU.md) |  | The image width in English measure units. |
 | nHeight | Required | [EMU](../../Enumeration/EMU.md) |  | The image height in English measure units. |
 
@@ -24,7 +24,7 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 ## Example
 
-How to create an image object using an url and specifying its width and height in a PDF document.
+Create an image object using an url and specifying its width and height in a PDF document.
 
 ```javascript editor-pdf
 // Create an image and insert it to the page.

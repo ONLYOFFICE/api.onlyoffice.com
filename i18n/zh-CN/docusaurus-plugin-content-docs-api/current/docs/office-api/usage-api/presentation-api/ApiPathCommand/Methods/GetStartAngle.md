@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析演示文稿形状中的弧线命令参数。获取并显示弧线半径和角度信息。
+获取演示文稿中弧形的起始角度。
 
 ```javascript editor-pptx
-// How to get the start angle for a path command in a presentation?
+// How do I find the arc starting angle in a presentation?
 
-// Get the start angle and display the result in a presentation.
+// Read angle properties to check arc direction in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

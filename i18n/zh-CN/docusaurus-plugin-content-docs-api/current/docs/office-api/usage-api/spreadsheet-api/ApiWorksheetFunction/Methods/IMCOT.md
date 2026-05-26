@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的余切值。
+获取电子表格中复数的余切。
 
 ```javascript editor-xlsx
-// How to get the cotangent in a spreadsheet.
+// How do I calculate the cotangent of a complex number in a spreadsheet?
 
-// Use a function to get the cotangent of a complex number in a spreadsheet.
+// Apply the cotangent function to a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

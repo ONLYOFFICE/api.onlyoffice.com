@@ -22,12 +22,12 @@ expression.GetProtectedRange(sTitle);
 
 ## 示例
 
-在电子表格中获取表示受保护范围的对象。
+按名称访问受保护的范围并在电子表格中更新其标题。
 
 ```javascript editor-xlsx
-// How to get protected range in a spreadsheet.
+// How do I retrieve a protected range from a worksheet in a spreadsheet?
 
-// Get protected range and set its title in a spreadsheet.
+// Locate a locked cell range and rename it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "Sheet1!$A$1:$B$1");

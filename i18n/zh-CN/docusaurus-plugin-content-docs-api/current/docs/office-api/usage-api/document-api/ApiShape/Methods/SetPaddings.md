@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-设置文档中当前形状的文本内边距。
+在文档中为形状的内部文本与边缘之间添加间距。
 
 ```javascript editor-docx
-// How to update paddings of the drawing in a document.
+// How do I control the gap between text and the boundary of a shape in a document?
 
-// Create a shape and set its paddings in a document.
+// Push text away from the walls of a shape by adjusting its interior margins in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

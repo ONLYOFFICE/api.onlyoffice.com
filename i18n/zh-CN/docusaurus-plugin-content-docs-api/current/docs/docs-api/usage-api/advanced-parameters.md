@@ -23,7 +23,7 @@ sidebar_position: -5
 
 包含所有可用参数的完整 `config`：
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",
@@ -240,6 +240,9 @@ const config = {
       autostart: [
         "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
         "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+      ],
+      disable: [
+        "asc.{CFE4BE46-3F85-4B79-B96E-B5AAF0EC9BC3}",
       ],
       options: {
         "all": {

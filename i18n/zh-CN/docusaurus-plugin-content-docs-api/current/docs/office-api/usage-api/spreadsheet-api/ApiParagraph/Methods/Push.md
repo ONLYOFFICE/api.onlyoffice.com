@@ -14,7 +14,7 @@ expression.Push(oElement);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果段落不支持 oElement 类型，则返回 false。 |
+| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将 run 元素推送到电子表格中形状内的段落。
+向电子表格中形状内段落的末尾追加新的文本运行。
 
 ```javascript editor-xlsx
-// How do I push in a spreadsheet?
+// How do I add text to the end of an existing paragraph in a spreadsheet?
 
-// Push using a paragraph object in a spreadsheet.
+// Extend a paragraph with extra content by inserting a run after all existing elements in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(130, 100, 160));

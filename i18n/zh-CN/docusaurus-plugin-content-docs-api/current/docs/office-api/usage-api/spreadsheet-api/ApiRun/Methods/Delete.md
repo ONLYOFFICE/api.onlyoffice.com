@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除 run。
+从电子表格中形状内的段落移除文本运行。
 
 ```javascript editor-xlsx
-// How to delete a text run object in a spreadsheet.
+// How do I delete a run of text from a shape in a spreadsheet?
 
-// Create the text run object, add it into the paragraph and remove it from it in a spreadsheet.
+// Add a run to a paragraph and then discard it so nothing appears in the shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

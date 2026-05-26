@@ -22,12 +22,12 @@ expression.CreateTableStylePr(sType);
 
 ## 示例
 
-在文档中创建并使用条件表格样式属性。
+在文档中为表格的特定部分应用不同的格式。
 
 ```javascript editor-docx
-// How to create a style that will be applied to the table elements whish satisfy the condition in a document.
+// How do I style only the first row or first column of a table differently in a document?
 
-// Create a conditional table style properties in a document.
+// Use conditional table formatting to highlight header rows and banded columns in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

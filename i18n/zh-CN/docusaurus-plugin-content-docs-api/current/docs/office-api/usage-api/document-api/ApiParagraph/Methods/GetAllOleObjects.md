@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-获取文档中段落内的 OLE 对象集合。
+检索文档中段落内嵌入的所有 OLE 对象。
 
 ```javascript editor-docx
-// How to retrieve all OLE objects from the document.
+// How do I get every OLE object from a paragraph in a document?
 
-// Get all OLE objects and get the application ID of the first one in a document.
+// Read application metadata from embedded objects by collecting all OLE objects in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

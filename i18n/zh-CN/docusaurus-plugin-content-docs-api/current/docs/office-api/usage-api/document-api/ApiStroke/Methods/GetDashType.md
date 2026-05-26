@@ -20,12 +20,12 @@ expression.GetDashType();
 
 ## 示例
 
-获取笔触的虚线类型。在文档中创建带有实线边框的形状并显示其虚线类型。返回字符串值："dash"、"dashDot"、"dot"、"lgDash"、"lgDashDot"、"lgDashDotDot"、"solid"、"sysDash"、"sysDashDot"、"sysDashDotDot"、"sysDot"。
+读取文档中形状边框的虚线图案。
 
 ```javascript editor-docx
-// How can I get the dash type using a stroke in a document?
+// How do I find out what dash pattern is applied to a shape's border in a document?
 
-// Get the dash type for a stroke in a document.
+// Retrieve and display the line dash style used on a shape border in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

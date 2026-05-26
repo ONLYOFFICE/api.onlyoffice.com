@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-在 PDF 文档中创建标识符为 'dk1' 的配色方案颜色。
+在 PDF 中用预定义的配色方案填充形状。
 
 ```javascript editor-pdf
-// How to create a new scheme color in a PDF document.
+// How do I use theme colors to fill a shape in a PDF?
 
-// Add a scheme color to create a solid fill in a PDF document.
+// Apply a scheme color to a shape's background in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

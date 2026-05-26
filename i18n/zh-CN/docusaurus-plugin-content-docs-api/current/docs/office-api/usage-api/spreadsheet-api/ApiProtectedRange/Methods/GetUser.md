@@ -22,12 +22,12 @@ expression.GetUser(sId);
 
 ## 示例
 
-获取电子表格中受保护范围的用户。
+查找电子表格中受保护范围特定用户的详细信息。
 
 ```javascript editor-xlsx
-// How to get an user information of the protected range.
+// How do I find one person's access information for a locked range in a spreadsheet?
 
-// Get an active sheet, add protected range to it, add user with rights and get user info in a spreadsheet.
+// Fetch a single user's name and permissions from a protected range by their ID in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange", "$A$1:$B$1").AddUser("userId", "name", "CanView");

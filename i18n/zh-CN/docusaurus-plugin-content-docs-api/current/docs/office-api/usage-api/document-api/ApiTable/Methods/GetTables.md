@@ -20,12 +20,12 @@ expression.GetTables();
 
 ## 示例
 
-获取文档中指定表格的嵌套表格。
+收集文档中表格内包含的所有嵌套表格。
 
 ```javascript editor-docx
-// How to get all tables from the table object in a document.
+// How do I get a list of every table embedded inside another table in a document?
 
-// Get array of tables and update their width in a document.
+// Adjust the width of each nested table retrieved from a parent table in a document.
 
 let doc = Api.GetDocument();
 let table1 = Api.CreateTable(3, 3);

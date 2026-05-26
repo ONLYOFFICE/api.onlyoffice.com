@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在 PDF 文档中创建 run 的副本。
+在 PDF 中复制文本并重复。
 
 ```javascript editor-pdf
-// How to copy a text run object and insert it to the paragraph in a PDF document.
+// How do I duplicate text in a PDF?
 
-// Create a duplicate of a text in a PDF document.
+// Reuse text by copying it to another location in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

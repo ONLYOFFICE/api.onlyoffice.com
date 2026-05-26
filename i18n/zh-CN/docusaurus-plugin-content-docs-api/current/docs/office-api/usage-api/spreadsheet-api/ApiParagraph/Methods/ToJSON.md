@@ -23,12 +23,12 @@ JSON
 
 ## 示例
 
-在电子表格中将段落序列化为 JSON 格式。
+在电子表格中将形状中的段落转换为 JSON 字符串。
 
 ```javascript editor-xlsx
-// The paragraph is obtained from a shape on the worksheet.
+// How do I save a paragraph's structure as a JSON string in a spreadsheet?
 
-// Serialize the paragraph to a JSON string and display the result.
+// Export paragraph data to a portable text format for storage or transfer in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

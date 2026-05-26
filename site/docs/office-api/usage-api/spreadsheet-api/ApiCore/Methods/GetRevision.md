@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the revision of the current workbook in a spreadsheet.
+Retrieve the revision label assigned to the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the revision for a core properties in a spreadsheet?
+// How do I read the revision identifier stored for a workbook in a spreadsheet?
 
-// Get the revision and display the result in a spreadsheet.
+// Display the current revision marker recorded in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

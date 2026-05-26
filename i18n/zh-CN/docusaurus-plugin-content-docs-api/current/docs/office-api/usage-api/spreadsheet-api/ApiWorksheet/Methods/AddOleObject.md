@@ -30,12 +30,12 @@ expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nCo
 
 ## 示例
 
-在电子表格中使用指定参数向工作表添加 OLE 对象。
+将来自外部源的链接对象嵌入到电子表格的工作表中。
 
 ```javascript editor-xlsx
-// How to add an OLE object to the worksheet specifying its url, size, etc.
+// How do I insert an embedded object with a preview image and a link in a spreadsheet?
 
-// Insert an OLE object to the worksheet.
+// Attach an interactive linked object to a worksheet at a given position and size.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddOleObject(

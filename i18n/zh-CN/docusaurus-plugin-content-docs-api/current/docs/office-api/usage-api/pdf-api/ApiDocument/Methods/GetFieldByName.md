@@ -20,12 +20,12 @@ expression.GetFieldByName();
 
 ## 示例
 
-通过名称获取文档中的字段。
+按名称在 PDF 中查找特定表单字段。
 
 ```javascript editor-pdf
-// How can I get the field by name using a document in a PDF document?
+// How do I search for a field using its assigned name in a PDF?
 
-// Get the field by name for a document in a PDF document.
+// Retrieve a field and set its value by name in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

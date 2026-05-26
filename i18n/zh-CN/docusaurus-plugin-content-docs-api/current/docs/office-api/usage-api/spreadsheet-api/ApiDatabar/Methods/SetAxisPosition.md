@@ -22,12 +22,12 @@ expression.SetAxisPosition(position);
 
 ## 示例
 
-设置数据条条件格式规则的轴位置。
+控制电子表格中数据条单元格内分割轴的放置位置。
 
 ```javascript editor-xlsx
-// How to change the axis position setting of a data bar in a spreadsheet.
+// How do I choose whether the data bar axis sits at the midpoint or follows the data in a spreadsheet?
 
-// Set the axis position of a data bar conditional formatting rule.
+// Reposition the axis that separates positive and negative bars within cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

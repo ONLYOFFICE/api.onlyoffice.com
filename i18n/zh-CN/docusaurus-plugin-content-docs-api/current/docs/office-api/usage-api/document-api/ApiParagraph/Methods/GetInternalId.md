@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中段落的内部 ID。
+检索分配给文档中段落的唯一内部标识符。
 
 ```javascript editor-docx
-// How to get the internal id for a paragraph in a document?
+// How do I obtain the internal ID of a paragraph in a document?
 
-// Get the internal id and display the result in a document.
+// Display the internal ID alongside the paragraph text to identify it in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

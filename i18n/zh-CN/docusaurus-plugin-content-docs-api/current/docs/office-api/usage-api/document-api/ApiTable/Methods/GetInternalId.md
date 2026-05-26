@@ -20,15 +20,15 @@ string
 
 ## 示例
 
-获取文档中表格的内部 ID。
+检索分配给文档中表格的唯一标识符。
 
 ```javascript editor-docx
-// How do I get the internal id in a document?
+// How do I find the unique identifier of a table in a document?
 
-// Get the internal id using a table object in a document.
+// Read the built-in ID that distinguishes one table from another in a document.
 
 const doc = Api.GetDocument();
-const table = Api.CreateTable(2, 1);
+const table = Api.CreateTable(2, 2);
 table.SetWidth('percent', 100);
 doc.Push(table);
 

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取形状的高度并将其插入演示文稿。
+检索形状的高度并在演示文稿中显示。
 
 ```javascript editor-pptx
-// How to find a shape's height and display it on the slide.
+// How do I find the vertical size of a shape in a presentation?
 
-// Get a slide shape's height.
+// Get the height measurement of a shape and show it on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

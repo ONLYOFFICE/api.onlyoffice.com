@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a collection of section objects in the document.
+Retrieve all sections present in a document.
 
 ```javascript editor-docx
-// How to get all sections from the document.
+// How do I access every section object in a document?
 
-// Get all sections and display the class type of the first one in a document.
+// Inspect the type of a newly created section by reading it from the sections collection in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

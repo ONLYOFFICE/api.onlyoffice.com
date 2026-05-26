@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-删除文档中的内容控件及其内容。
+从文档中移除内联内容控件。
 
 ```javascript editor-docx
-// How to delete inline text element in a document.
+// How do I delete an inline content control in a document?
 
-// Add inline content control and then clear its content in a document.
+// Replace a content control with plain text to clean up unwanted input fields in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

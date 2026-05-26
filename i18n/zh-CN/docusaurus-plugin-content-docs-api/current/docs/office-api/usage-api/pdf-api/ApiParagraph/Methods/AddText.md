@@ -22,12 +22,12 @@ expression.AddText(text);
 
 ## 示例
 
-在 PDF 文档中向段落添加文本。
+向 PDF 中的段落添加文本内容。
 
 ```javascript editor-pdf
-// How to add a text to the paragraph object in a PDF document.
+// How do I insert text into a paragraph in a PDF?
 
-// How to add a text to the shape in a PDF document.
+// Place text inside a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

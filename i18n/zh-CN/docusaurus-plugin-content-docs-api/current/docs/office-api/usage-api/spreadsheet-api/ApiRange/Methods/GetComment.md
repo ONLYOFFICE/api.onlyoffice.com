@@ -20,12 +20,12 @@ expression.GetComment();
 
 ## 示例
 
-获取电子表格中范围的批注对象。
+读取附加到电子表格中单元格范围的批注。
 
 ```javascript editor-xlsx
-// How to get a range comment in a spreadsheet.
+// How do I retrieve the text of a comment on a cell in a spreadsheet?
 
-// Get a range, get its comment and show its text in the worksheet.
+// Display a cell's comment text in another cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

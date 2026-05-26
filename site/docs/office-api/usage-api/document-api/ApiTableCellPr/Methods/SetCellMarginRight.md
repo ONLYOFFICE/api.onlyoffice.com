@@ -14,7 +14,7 @@ expression.SetCellMarginRight(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space to the right extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell right margin will be used, otherwise the table cell right margin will be overridden with the specified value for the current cell. |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | The value for the amount of space to the right extent of the cell measured in twentieths |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Specify an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.
+Set the spacing between the cell content and the right edge of a table cell in a document.
 
 ```javascript editor-docx
-// How to add margin to the right of the cell.
+// How do I control the gap between text and the right border of a table cell in a document?
 
-// Create a 3x3 table and add the right cell margin.
+// Push cell content away from the right boundary of a table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

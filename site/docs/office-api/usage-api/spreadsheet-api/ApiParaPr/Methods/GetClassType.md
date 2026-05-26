@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a paragraph properties in a spreadsheet.
+Read the class type of a paragraph formatting object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I check what type a paragraph properties object is in a spreadsheet?
+// How do I identify what type of object holds a paragraph's formatting settings in a spreadsheet?
 
-// Retrieve and output the class type string for a paragraph properties in a spreadsheet.
+// Confirm the object category returned by paragraph properties to verify its role in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

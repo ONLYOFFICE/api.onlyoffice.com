@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-检查演示文稿中的绘图对象是否水平翻转。
+确定演示文稿中的形状是否从左到右翻转。
 
 ```javascript editor-pptx
-// How to get the horizontal flip property of the shape in a presentation.
+// How do I check if a shape has been flipped horizontally in a presentation?
 
-// Create a drawing and read its horizontal flip value in a presentation.
+// Create a shape and retrieve its horizontal flip status in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

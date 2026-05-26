@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the width of the drawing in a spreadsheet.
+Retrieve the width of a drawing object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know a width of a drawing in a spreadsheet.
+// How do I find out how wide a drawing is in a spreadsheet?
 
-// Get a drawing's width and display it in the worksheet.
+// Measure the horizontal size of a shape and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

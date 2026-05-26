@@ -20,12 +20,12 @@ expression.GetTextPr();
 
 ## 示例
 
-获取 PDF 文档中 run 的文本属性。
+访问 PDF 中文本的所有格式设置。
 
 ```javascript editor-pdf
-// How to get the text properties of the current text run object and change its font size in a PDF document.
+// How do I get the text formatting properties in a PDF?
 
-// Resize a font of a text run in a PDF document.
+// Modify the font size using text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

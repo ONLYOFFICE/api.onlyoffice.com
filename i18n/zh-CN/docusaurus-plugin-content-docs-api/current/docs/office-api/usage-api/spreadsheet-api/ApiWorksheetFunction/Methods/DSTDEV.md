@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中基于所选数据库条目的样本估计标准差。
+根据数据库条目的样本估计标准差。
 
 ```javascript editor-xlsx
-// How to calculate the standard deviation based on a sample in a spreadsheet.
+// Calculate sample-based variance to measure data dispersion.
 
-// Use function to estimate the standard deviation based on a range sample in a spreadsheet.
+// Use the DSTDEV function to find sample standard deviation of database values with conditions.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetFlipH](../../ApiDrawing/Methods/SetFlipH.md).
 
 ## Example
 
-Set the horizontal flip for a drawing in a document.
+Flip a drawing horizontally in a document.
 
 ```javascript editor-docx
-// How to set flip h for a drawing object in a document?
+// How do I mirror a shape along its vertical axis in a document?
 
-// Set flip h and display the result in a document.
+// Produce a mirrored copy of an arrow to compare original and flipped orientations in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

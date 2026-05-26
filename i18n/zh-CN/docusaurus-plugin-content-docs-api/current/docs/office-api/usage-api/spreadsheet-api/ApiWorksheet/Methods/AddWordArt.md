@@ -33,12 +33,12 @@ expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWi
 
 ## 示例
 
-在电子表格中使用指定参数向工作表添加艺术字对象。
+在电子表格的工作表上放置样式化的装饰性文本对象。
 
 ```javascript editor-xlsx
-// How to add a word art to the worksheet specifying its properties, color, size, etc.
+// How do I add eye-catching artistic text with custom fonts and colors in a spreadsheet?
 
-// Insert a word art to the worksheet.
+// Render a bold curved text banner with a solid fill and outline on the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 let textProps = Api.CreateTextPr();

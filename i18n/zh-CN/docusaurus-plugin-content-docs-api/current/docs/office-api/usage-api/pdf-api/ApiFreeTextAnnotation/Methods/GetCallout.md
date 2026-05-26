@@ -20,12 +20,12 @@ expression.GetCallout();
 
 ## 示例
 
-获取 PDF 文档中自由文本注释的标注。
+提取 PDF 中文本注释使用的标注形状。
 
 ```javascript editor-pdf
-// How to get the callout for a free text annotation in a PDF document?
+// How do I find the shape of a comment box in a PDF?
 
-// Get the callout and display the result in a PDF document.
+// Retrieve the callout style from a text annotation in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

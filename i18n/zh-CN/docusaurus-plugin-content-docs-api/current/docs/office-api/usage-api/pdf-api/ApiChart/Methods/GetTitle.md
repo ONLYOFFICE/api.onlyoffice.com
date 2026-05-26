@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取 PDF 文档中的图表标题文本。
+从 PDF 中的图表读取标题文本。
 
 ```javascript editor-pdf
-// How do I get the title in a PDF document?
+// How do I retrieve what the chart title says in a PDF?
 
-// Get the title using a chart object in a PDF document.
+// Extract and display a chart's title in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

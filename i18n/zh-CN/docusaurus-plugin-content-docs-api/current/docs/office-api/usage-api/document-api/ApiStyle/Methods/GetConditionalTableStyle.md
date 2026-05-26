@@ -23,12 +23,12 @@ expression.GetConditionalTableStyle(sType);
 
 ## 示例
 
-获取一组格式属性，这些属性将有条件地应用于文档中与 sType 参数指定的要求匹配的表格部分。
+根据位置在文档中为表格的特定区域应用不同的格式。
 
 ```javascript editor-docx
-// How to find out a style that will be applied to the table elements whish satisfy the condition in a document.
+// How do I style certain parts of a table differently depending on where they appear in a document?
 
-// Retrieve a conditional table style in a document.
+// Target individual table areas such as columns or corners to give them unique visual treatment in a document.
 
 let doc = Api.GetDocument();
 let table = Api.CreateTable(2, 2);

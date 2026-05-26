@@ -31,12 +31,12 @@ object
 
 ## 示例
 
-获取以对象形式表示的文档信息，并将应用程序名称粘贴到文档中。
+检索文档元数据信息。
 
 ```javascript editor-pptx
-// How to get a document info from the presentation.
+// Access document info properties like application name.
 
-// Get current document info.
+// Display the application name on a slide shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

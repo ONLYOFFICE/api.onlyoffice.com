@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set a category name for chart in a presentation.
+Change the name of a chart category in a presentation.
 
 ```javascript editor-pptx
-// How to rename a chart category in a presentation.
+// How do I rename a category label on a chart in a presentation?
 
-// Create a chart then name its category in a presentation.
+// Create a chart and replace one of its category names in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetStrikeout](../../ApiTextPr/Methods/GetStrikeout.md)
 
 ## Example
 
-Find out whether a text has the strikeout property set in a document.
+Check whether a single strikethrough line is applied to a text run in a document.
 
 ```javascript editor-docx
-// How to know whether a text is crossed by one horizontal line in a document.
+// How do I tell if text has a line drawn through it in a document?
 
-// Retrieve text properties of the form to find out whether it is stroke out.
+// Confirm the strikeout state of a text run before deciding whether to toggle it in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

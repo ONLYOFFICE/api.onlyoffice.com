@@ -15,8 +15,8 @@ expression.SetTabs(aPos, aVal);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins measured in twentieths of a point (1/1440 of an inch). |
-| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab stop and the alignment which will be applied to text entered at the current custom tab stop. |
+| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins |
+| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab |
 
 ## Returns
 
@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Set a sequence of custom tab stops which will be used for any tab characters in the paragraph in a presentation.
+Define custom tab stop positions in a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set the size of a spacing tabs from a paragraph properties in a presentation.
+// How do I add tabs to control text spacing in a presentation?
 
-// Change a tabs size property of a paragraph properties in a presentation.
+// Configure tab stops for text alignment using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

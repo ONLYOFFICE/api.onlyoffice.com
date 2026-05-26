@@ -20,12 +20,12 @@ expression.GetAllCharts();
 
 ## 示例
 
-获取文档中段落内的图表对象集合。
+检索文档中段落内嵌入的所有图表对象。
 
 ```javascript editor-docx
-// How to retrieve all charts from the document.
+// How do I get every chart from a paragraph in a document?
 
-// Get all charts and set minor horizontal gridlines in a document.
+// Apply formatting changes to multiple charts at once by collecting them from a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

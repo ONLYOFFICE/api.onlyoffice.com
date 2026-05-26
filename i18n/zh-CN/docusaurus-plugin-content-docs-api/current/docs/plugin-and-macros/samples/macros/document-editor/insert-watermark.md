@@ -39,5 +39,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![WatermarkInserter](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
-![WatermarkInserter](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-watermark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-watermark.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

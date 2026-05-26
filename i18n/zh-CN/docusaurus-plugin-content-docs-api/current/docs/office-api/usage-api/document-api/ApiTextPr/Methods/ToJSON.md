@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-在文档中将文本属性对象转换为 JSON 对象。
+将文本格式设置导出为 JSON 并在文档中重新应用。
 
 ```javascript editor-docx
-// How to get a JSON from the text properties in a document.
+// How do I serialize text formatting so it can be restored and reused in a document?
 
-// Convert the text properties to json and add it to the document.
+// Save and reload a set of text properties through a JSON snapshot in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

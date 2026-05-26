@@ -26,9 +26,9 @@ This method doesn't return any data.
 Set the position of the comment in the presentation.
 
 ```javascript editor-pptx
-// How do I set position in a presentation?
+// Reposition a comment to a different location on the slide.
 
-// Set position using a comment object in a presentation.
+// Move a comment to a new position and display the updated coordinates.
 
 const presentation = Api.GetPresentation();
 presentation.GetAllComments().forEach(comment => {

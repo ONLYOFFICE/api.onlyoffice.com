@@ -21,7 +21,7 @@ expression.AddCaption(sAdditional, sLabel, bExludeLabel, sNumberingFormat, bBefo
 | bExludeLabel | Optional | boolean | false | Specifies whether to exclude the label from the caption. |
 | sNumberingFormat | Optional | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | The possible caption numbering format. |
 | bBefore | Optional | boolean | false | Specifies whether to insert the caption before the current table (true) or after (false) (after/before the shape if it is placed in the shape). |
-| nHeadingLvl | Optional | Number |  | The heading level (used if you want to specify the chapter number). 💡 If you want to specify "Heading 1", then nHeadingLvl === 0 and etc. |
+| nHeadingLvl | Optional | Number |  | The heading level (used if you want to specify the chapter number). |
 | sCaptionSep | Optional | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | The caption separator (used if you want to specify the chapter number). |
 
 ## Returns
@@ -30,12 +30,12 @@ boolean
 
 ## Example
 
-Add a caption paragraph after the current table in a document.
+Insert a labeled caption below a table to identify it in a document.
 
 ```javascript editor-docx
-// How to add caption to the table in a document.
+// How do I add a numbered caption beneath a table so readers can reference it in a document?
 
-// Add text as a table caption specifying its properties in a document.
+// Attach a descriptive label with a sequence number to a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -65,7 +65,7 @@ Repository on GitHub: [ai](https://github.com/ONLYOFFICE/onlyoffice.github.io/tr
 
 ## Config
 
-``` json
+```json
 {
     "name" : "AI",
     "nameLocale": {

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-更新电子表格中自定义 XML 部件元素中属性的值。
+更改电子表格中 XML 元素上现有属性的值。
 
 ```javascript editor-xlsx
-// How can I update attribute using a custom XML part in a spreadsheet?
+// How do I overwrite the current value of a named property on an XML node in a spreadsheet?
 
-// Update attribute for a custom XML part in a spreadsheet.
+// Revise stored XML metadata by updating a specific attribute to a new value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Insert a watermark on each document page.
+Add a text watermark to every page in a document.
 
 ```javascript editor-docx
-// How to insert watermark to the document.
+// How do I stamp a watermark string across all pages in a document?
 
-// Insert the watermark and display the result in a document.
+// Mark draft or confidential content by overlaying a repeating label on each printed page.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

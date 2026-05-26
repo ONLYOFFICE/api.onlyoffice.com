@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中当前光标位置输入文本。
+在文档中当前光标位置插入文本。
 
 ```javascript editor-docx
-// How to add a line break at the cursor position in a document.
+// How do I type text at the cursor without selecting a paragraph element in a document?
 
-// Enter text in a paragraph and add a line break in a document.
+// Programmatically simulate typing so content appears exactly where the cursor is placed in a document.
 
 let doc = Api.GetDocument();
 doc.EnterText("This is the text in your document.");

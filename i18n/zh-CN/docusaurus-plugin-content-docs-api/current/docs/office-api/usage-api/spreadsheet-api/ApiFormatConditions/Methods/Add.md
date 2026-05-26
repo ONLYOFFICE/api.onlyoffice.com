@@ -25,12 +25,12 @@ expression.Add(Type, Operator, Formula1, Formula2);
 
 ## 示例
 
-向范围添加条件格式。
+当电子表格中的单元格值满足条件时自动高亮显示。
 
 ```javascript editor-xlsx
-// How to add conditional formatting rules to highlight cells based on values.
+// How do I create a rule that colors cells based on whether they are above or below a threshold in a spreadsheet?
 
-// Add different types of conditional formatting to cells.
+// Set up automatic cell formatting that reacts to the data entered in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

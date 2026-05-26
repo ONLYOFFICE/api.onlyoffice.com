@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取文本字段并显示其在 PDF 文档中的长文本滚动属性。
+检查 PDF 中的文本字段是否滚动超出其边界的文本。
 
 ```javascript editor-pdf
-// How do I is scroll long text in a PDF document?
+// How do I know if long text will scroll instead of wrap in a text field in a PDF?
 
-// Is scroll long text using a text field object in a PDF document.
+// Determine whether a text input allows scrolling for content larger than the field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

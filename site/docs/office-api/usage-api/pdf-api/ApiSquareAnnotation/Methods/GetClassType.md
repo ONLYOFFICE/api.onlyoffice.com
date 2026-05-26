@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a square annotation in a PDF document.
+Identify what type of annotation a square box is in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a square annotation object is in a PDF document?
+// How do I determine the annotation category of a square box in a PDF?
 
-// Retrieve and output the class type string for a square annotation in a PDF document.
+// Learn the specific kind of square annotation used in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Delete the worksheet.
+Remove a sheet from the workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete sheets in a spreadsheet.
+// How do I delete a worksheet that is no longer needed in a spreadsheet?
 
-// Delete and display the result in a spreadsheet.
+// Permanently discard a sheet and confirm the removal with a message.
 
 Api.AddSheet("New sheet");
 let sheet = Api.GetActiveSheet();

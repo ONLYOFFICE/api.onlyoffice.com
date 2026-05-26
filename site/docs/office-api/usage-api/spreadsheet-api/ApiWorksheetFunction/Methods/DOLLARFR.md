@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Convert a dollar price, expressed as a decimal number, into a dollar price, expressed as a fraction in a spreadsheet.
+Convert a decimal dollar price to its fractional equivalent.
 
 ```javascript editor-xlsx
-// How to convert a dollar price from decimal to fraction in a spreadsheet.
+// Transform prices from decimal notation to fractional notation.
 
-// Use function to get fraction from decimal price in a spreadsheet.
+// Use the DOLLARFR function to convert decimal prices to fractional format.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

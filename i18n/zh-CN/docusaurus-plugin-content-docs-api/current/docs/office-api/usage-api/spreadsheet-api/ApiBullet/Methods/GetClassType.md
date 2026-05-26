@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查电子表格中项目符号返回的类类型。
+读取电子表格中文本形状中使用的项目符号的类型标签。
 
 ```javascript editor-xlsx
-// How do I check what type a bullet object is in a spreadsheet?
+// How do I find out what kind of bullet object I am working with in a spreadsheet?
 
-// Retrieve and output the class type string for a bullet in a spreadsheet.
+// Distinguish a numbering bullet from other list styles by checking its type identifier in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

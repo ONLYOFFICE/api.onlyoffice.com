@@ -14,7 +14,7 @@ expression.PRODUCT(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个将被相乘的数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、区域或数字数组。 |
+| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个将被相乘的数值。第一个参数是必需的，后续参数是可选的。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将所有作为参数给出的数字相乘。
+在电子表格中将一组数字相乘。
 
 ```javascript editor-xlsx
-// How to return the result after multiplication in a spreadsheet.
+// What is the product of multiple numbers in a spreadsheet?
 
-// Use a function to multiply a list of numbers in a spreadsheet.
+// Calculate the result of multiplying a series of values together in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

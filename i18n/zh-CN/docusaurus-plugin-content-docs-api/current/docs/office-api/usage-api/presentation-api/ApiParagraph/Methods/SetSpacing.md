@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在演示文稿中设置以磅的二十分之一为单位的文本间距。
+控制演示文稿中文本字符之间的间距。
 
 ```javascript editor-pptx
-// How do I set spacing in a presentation?
+// How do I adjust character spacing in a paragraph in a presentation?
 
-// Set spacing using a paragraph object in a presentation.
+// Apply custom spacing measurements to text for readability in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

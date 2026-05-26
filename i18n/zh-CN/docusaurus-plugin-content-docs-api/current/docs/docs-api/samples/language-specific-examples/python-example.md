@@ -31,14 +31,14 @@ Python示例提供了多种安装选项，但我们强烈建议为此使用Docke
 
 安装好所有内容后，下载发行版压缩包并解压，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python)克隆源代码：
 
-``` sh
+```sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
 unzip Python.Example.zip
 ```
 
 然后打开示例目录并[启动容器](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L38):
 
-``` sh
+```sh
 cd "Python Example"
 make compose-prod
 ```
@@ -59,14 +59,14 @@ make compose-prod
 
 安装好所有内容后，下载发行版压缩包并解压，或从[GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/python)克隆源代码：
 
-``` sh
+```sh
 curl --output Python.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Python.Example.zip
 unzip Python.Example.zip
 ```
 
 然后打开示例目录，[安装依赖项](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L13)，并[启动服务器](https://github.com/ONLYOFFICE/document-server-integration/blob/cd0647e0f7a16eaa5af8d82fa09ae95cd3c483ba/web/documentserver-example/python/Makefile#L21):
 
-``` sh
+```sh
 cd "Python Example"
 make prod
 make server-prod

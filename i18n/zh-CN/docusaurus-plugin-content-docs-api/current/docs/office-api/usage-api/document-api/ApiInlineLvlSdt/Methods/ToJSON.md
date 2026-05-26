@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-将文档中的内联内容控件对象转换为 JSON 对象。
+将内联内容控件序列化为 JSON 并在文档中恢复。
 
 ```javascript editor-docx
-// How to get a JSON from the inline text control in a document.
+// How do I convert an inline content control to JSON format in a document?
 
-// Convert the inline text control to json and add it to the paragraph in a document.
+// Preserve and reuse a configured inline content control by round-tripping it through JSON in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

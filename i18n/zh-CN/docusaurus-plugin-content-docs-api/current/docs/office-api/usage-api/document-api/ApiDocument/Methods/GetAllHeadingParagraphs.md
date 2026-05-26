@@ -20,12 +20,12 @@ expression.GetAllHeadingParagraphs();
 
 ## 示例
 
-获取文档中的所有标题段落。
+检索文档中的所有标题段落。
 
 ```javascript editor-docx
-// Get all heading paragraphs added to the document.
+// How do I collect every heading paragraph present in a document?
 
-// How to retrieve all heading paragraphs and make capitalized the first one in a document.
+// Apply capitalization to the first heading when enforcing a consistent title style.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");

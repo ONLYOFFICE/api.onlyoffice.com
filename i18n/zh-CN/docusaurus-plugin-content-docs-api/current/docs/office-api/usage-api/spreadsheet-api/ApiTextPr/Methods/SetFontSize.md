@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在电子表格中为当前文本 run 的字符设置字体大小。
+在电子表格中更改文本运行的字体大小使其变大或变小。
 
 ```javascript editor-xlsx
-// How to change a font size of a text in a spreadsheet.
+// How do I set a specific font size for text inside a shape in a spreadsheet?
 
-// Set text font size using the text properties API in a spreadsheet.
+// Adjust the point size of text to control how big it appears in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中当前文档内容的元素数量。
+计算电子表格中形状内的段落总数。
 
 ```javascript editor-xlsx
-// How to get a number of elements of a shape from a document content.
+// How do I find out how many paragraphs are contained within a shape in a spreadsheet?
 
-// Get a shape than count number of elements and display it using paragraph in a spreadsheet.
+// Display the paragraph count of a shape's contents as text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

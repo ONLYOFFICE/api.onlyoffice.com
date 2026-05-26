@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中基于固定付款和固定利率计算贷款的付款额。
+查找电子表格中偿还贷款所需的月付款金额。
 
 ```javascript editor-xlsx
-// How to return the payment for a loan based on different parameters in a spreadsheet.
+// How do I calculate what I need to pay each month on a loan in a spreadsheet?
 
-// Use a function to return the payment for a loan in a spreadsheet.
+// Determine the regular payment required given an interest rate and loan period in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the autofilter object for a worksheet.
+Retrieve the active auto filter from a worksheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the AutoFilter object of a worksheet.
+// How do I access the auto filter applied to a sheet in a spreadsheet?
 
-// Get the AutoFilter object in a spreadsheet.
+// Read the filtered range address by obtaining the worksheet's auto filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("Product");

@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Presentations"]
 
 Sets blue color as the background of even indexed slides, if it is odd sets an image.
 
-``` ts
+```ts
 (function()
 {
     let presentation = Api.GetPresentation(); 
@@ -103,4 +103,11 @@ End Sub
 
 ## Result
 
-![Change Background Color](/assets/images/plugins/change-background-color.png#gh-light-mode-only)![Change Background Color](/assets/images/plugins/change-background-color.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/change-background-color.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/change-background-color.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -20,12 +20,12 @@ expression.GetThemeName();
 
 ## 示例
 
-获取 PDF 文档中形状填充使用的主题颜色名称。
+查找 PDF 中颜色的主题颜色名称。
 
 ```javascript editor-pdf
-// How to get the theme name for a color in a PDF document?
+// How do I identify what theme color is being used in a PDF?
 
-// Get the theme name and display the result in a PDF document.
+// Check the theme name and display it as text in the document.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

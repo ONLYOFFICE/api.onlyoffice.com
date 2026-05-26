@@ -22,12 +22,12 @@ expression.SetPriority(Priority);
 
 ## 示例
 
-设置条件格式规则的优先级。
+为电子表格中的格式规则分配特定的评估排名。
 
 ```javascript editor-xlsx
-// How to change the priority value of conditional formatting rules.
+// How do I control which conditional formatting rule takes precedence over others in a spreadsheet?
 
-// Set conditional formatting rule priority.
+// Reorder highlight rules so a chosen one is checked at a particular position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

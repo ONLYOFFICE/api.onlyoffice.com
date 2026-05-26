@@ -14,7 +14,7 @@ expression.SetCellWidth(nCellWidth);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nCellWidth | 可选 | [mm](../../Enumeration/mm.md) | 0 | 以毫米为单位的单元格宽度。如果未指定此参数或等于 0 或更小，则宽度将自动设置。必须 &gt;= 1 且 &lt;= 558.8。 |
+| nCellWidth | 可选 | [mm](../../Enumeration/mm.md) | 0 | 以毫米为单位的单元格宽度。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为应用的字符梳设置单元格宽度。
+设置文档中梳状文本字段中每个字符单元格的宽度。
 
 ```javascript editor-docx
-// How to set the width of the cell of the text form.
+// How do I control the width of individual character boxes in a text field in a document?
 
-// Resize the text form cell.
+// Adjust character cell width to ensure uniform spacing across a comb text field in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "maxCharacters": 10, "multiLine": false, "autoFit": false});

@@ -49,7 +49,7 @@ The figure and steps below explain how a shareable link to a bookmark position i
 
 To open a document at a bookmark position, pass the `ACTION_DATA` object (originally received from the [onMakeActionLink](../../usage-api/config/events.md#onmakeactionlink) event) as the value of [`editorConfig.actionLink`](../../usage-api/config/editor/editor.md#actionlink):
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     actionLink: ACTION_DATA,

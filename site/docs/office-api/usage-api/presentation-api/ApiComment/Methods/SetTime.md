@@ -25,9 +25,9 @@ expression.SetTime(nTimeStamp);
 Set a comment time in a presentation.
 
 ```javascript editor-pptx
-// How to change a creation time of a comment in a presentation.
+// Change the creation timestamp of a specific comment.
 
-// Get all comments from the presentation and change its first one's creation time.
+// Update the first comment's creation time and display the result.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

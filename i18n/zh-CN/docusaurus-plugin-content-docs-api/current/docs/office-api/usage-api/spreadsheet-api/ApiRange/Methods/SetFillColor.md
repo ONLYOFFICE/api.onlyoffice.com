@@ -19,16 +19,16 @@ expression.SetFillColor(oColor);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-使用先前创建的颜色对象为单元格范围设置背景颜色。
+在电子表格中用颜色填充单元格范围的背景。
 
 ```javascript editor-xlsx
-// How to color a cell.
+// How do I set a background color on a group of cells in a spreadsheet?
 
-// Get a range and apply a solid fill to its background color in a spreadsheet.
+// Paint the background of cells with a chosen color to visually distinguish them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetColumnWidth(0, 50);

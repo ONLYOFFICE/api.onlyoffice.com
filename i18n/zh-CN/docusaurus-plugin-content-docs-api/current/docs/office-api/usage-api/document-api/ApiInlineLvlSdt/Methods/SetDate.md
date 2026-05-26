@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的日期选择器内容控件设置日期。
+为文档中的日期选择器内容控件分配特定日期。
 
 ```javascript editor-docx
-// How can I set date using an inline content control in a document?
+// How do I set the selected date on a date picker content control in a document?
 
-// Set date for an inline content control in a document.
+// Pre-fill a date picker with a fixed date so users see a ready-made value in a document.
 
 let doc = Api.GetDocument();
 let contentControl = doc.AddDatePickerContentControl();

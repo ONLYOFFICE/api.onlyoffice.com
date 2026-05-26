@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 表格单元格中可用的文本方向类型：&lt;code&gt;"lrtb"&lt;/code&gt; - 从左到右、从上到下的文本方向，&lt;code&gt;"tbrl"&lt;/code&gt; - 从上到下、从右到左的文本方向，&lt;code&gt;"btlr"&lt;/code&gt; - 从下到上、从左到右的文本方向。 |
+| sType | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 表格单元格中可用的文字方向类型：&lt;code&gt;"lrtb"&lt;/code&gt; |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定此表格单元格的文本流方向。
+更改文档中表格单元格内文本的流动方向。
 
 ```javascript editor-docx
-// Set the direction of the cell text.
+// How do I rotate or reorient the text inside a table cell in a document?
 
-// Get the cell from the table and set its direction.
+// Display text vertically rather than horizontally within a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

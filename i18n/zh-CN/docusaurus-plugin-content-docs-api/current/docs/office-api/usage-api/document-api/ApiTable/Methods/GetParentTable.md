@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含该表格的表格。
+访问文档中包含嵌套表格的外部表格。
 
 ```javascript editor-docx
-// How to get the parent table and delete its row in a document.
+// How do I navigate from a nested table up to its surrounding table in a document?
 
-// Retrieve the parent table, get its cell and remove the row of it.
+// Locate the enclosing table so its rows can be modified in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

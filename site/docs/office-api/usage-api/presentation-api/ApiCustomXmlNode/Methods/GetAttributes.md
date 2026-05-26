@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve and display the attributes of the current XML node in a presentation.
+List all properties of an XML element in a presentation.
 
 ```javascript editor-pptx
-// How can I get the attributes using a custom XML node in a presentation?
+// How do I view all attributes assigned to an XML node in a presentation?
 
-// Get the attributes for a custom XML node in a presentation.
+// Retrieve the name-value pairs of an XML element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

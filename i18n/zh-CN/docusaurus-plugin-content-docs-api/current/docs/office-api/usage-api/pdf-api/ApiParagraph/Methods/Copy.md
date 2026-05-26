@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在 PDF 文档中创建段落副本。
+在 PDF 中复制段落。
 
 ```javascript editor-pdf
-// How to add a duplicate paragraph in a PDF document.
+// How do I make a copy of a paragraph in a PDF?
 
-// Copy a paragraph and add it to the shape in a PDF document.
+// Create a duplicate and add it to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

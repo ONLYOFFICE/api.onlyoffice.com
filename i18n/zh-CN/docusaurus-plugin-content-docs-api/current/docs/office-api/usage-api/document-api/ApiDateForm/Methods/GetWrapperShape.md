@@ -7,12 +7,12 @@
 
 ## 示例
 
-获取文档中放置表单的形状，以控制固定大小表单框架的位置和大小。
+访问包含固定大小表单字段的容器形状以控制其在文档中的框架。
 
 ```javascript editor-docx
-// Get wrapper shape of the text form.
+// How do I get the surrounding shape of a form field so I can adjust its border or position in a document?
 
-// Set outline to the shape which contains the current form.
+// Apply a custom outline to the wrapper shape of a form field to make it stand out visually in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

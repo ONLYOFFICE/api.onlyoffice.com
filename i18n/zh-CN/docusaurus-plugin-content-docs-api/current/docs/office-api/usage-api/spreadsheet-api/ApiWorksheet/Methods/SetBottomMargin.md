@@ -18,16 +18,16 @@ expression.SetBottomMargin(nPoints);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-在电子表格中设置工作表的下边距。
+定义电子表格中工作表的下页边距。
 
 ```javascript editor-xlsx
-// How to set margin of the bottom in a spreadsheet.
+// How do I set the bottom margin of a worksheet in a spreadsheet?
 
-// Resize the bottom margin of the sheet in a spreadsheet.
+// Adjust the spacing at the bottom of the printed page in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetBottomMargin(25.1);

@@ -14,7 +14,7 @@ expression.CreateSection(oParagraph);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oParagraph | 必需 | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 将在该段落之后插入新文档节。段落必须在文档中。 |
+| oParagraph | 必需 | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 将在该段落之后插入新文档节。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ expression.CreateSection(oParagraph);
 
 ## 示例
 
-创建在指定段落处结束的新文档节。
+在文档中段落之后插入具有自定义页面大小和边距的新节。
 
 ```javascript editor-docx
-// How to create a section indicating its size, margins, etc in a document.
+// How do I split content into sections with different page layouts in a document?
 
-// Create a paragraph under the section in a document.
+// Give one part of a document its own column count, margins, and header spacing without affecting the rest in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

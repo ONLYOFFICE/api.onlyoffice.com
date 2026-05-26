@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将单元格范围 **A1:D10** 格式化为表格。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().FormatAsTable("A1:D10");
@@ -25,4 +25,11 @@ End Sub
 
 ## 结果
 
-![Range as a table](/assets/images/plugins/range-as-a-table.png#gh-light-mode-only)![Range as a table](/assets/images/plugins/range-as-a-table.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/format-range-as-a-table.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/format-range-as-a-table.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

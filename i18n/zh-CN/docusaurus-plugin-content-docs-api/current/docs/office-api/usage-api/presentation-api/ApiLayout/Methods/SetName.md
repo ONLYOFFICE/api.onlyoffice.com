@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为当前版式设置名称。
+为演示文稿中的布局分配自定义名称。
 
 ```javascript editor-pptx
-// How to set name for a layout in a presentation.
+// How do I rename a layout in a presentation?
 
-// Rename a slide layout using the layout API in a presentation.
+// Assign a new name to a layout and verify it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

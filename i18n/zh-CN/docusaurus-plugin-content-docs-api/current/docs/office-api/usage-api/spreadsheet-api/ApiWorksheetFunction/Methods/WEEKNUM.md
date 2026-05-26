@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回 1 到 7 的数字，标识指定日期是星期几。
+获取电子表格中日期在年份中的周数。
 
 ```javascript editor-xlsx
-// How to return a weekday in a spreadsheet.
+// How do I find which week of the year a specific date belongs to in a spreadsheet?
 
-// Use a function to get a weekday using numbers in a spreadsheet.
+// Calculate the numeric week position for any date in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

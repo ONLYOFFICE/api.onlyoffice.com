@@ -16,7 +16,7 @@ expression.SetPicture(imageUrl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| imageUrl | Required | string |  | The URL of the image to be used for the content control. Currently, only internet URLs are supported. |
+| imageUrl | Required | string |  | The URL of the image to be used for the content control. |
 
 ## Returns
 
@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Set image to picture content control in a document.
+Insert an image into a picture content control in a document.
 
 ```javascript editor-docx
-// How to set picture for an inline content control in a document?
+// How do I load an image from a URL into a picture content control in a document?
 
-// Set picture and display the result in a document.
+// Replace the default placeholder of a picture control with an actual image in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中图像返回的类类型。
+检索文档中图像元素的类类型。
 
 ```javascript editor-docx
-// How do I check what type an image object is in a document?
+// How do I get the type identifier of an image object in a document?
 
-// Retrieve and output the class type string for an image in a document.
+// Display what kind of drawing element an image is classified as in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

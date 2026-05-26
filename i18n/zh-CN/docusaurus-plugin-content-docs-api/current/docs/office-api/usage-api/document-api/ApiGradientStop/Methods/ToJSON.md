@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的渐变光圈对象转换为 JSON 对象。
+将文档中的渐变光圈转换为 JSON 表示。
 
 ```javascript editor-docx
-// How to get a JSON object from the gradient stop object in a document.
+// How do I serialize a gradient stop into JSON format in a document?
 
-// Convert the radial gradient stop object to json and add it to the paragraph in a document.
+// Restore a gradient stop from its saved JSON data to reuse in a shape fill in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的语言。
+读取文档核心属性中存储的语言设置。
 
 ```javascript editor-docx
-// How can I get the language using a core properties in a document?
+// How do I get the language value from the core properties in a document?
 
-// Get the language for a core properties in a document.
+// Detect the declared locale of a document to apply the correct spell-check or formatting rules in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

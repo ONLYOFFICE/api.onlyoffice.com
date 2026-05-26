@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的平方根。
+计算数字的平方根。
 
 ```javascript editor-xlsx
-// How to calculate the square root of a number in a spreadsheet.
+// The SQRT function returns the positive square root of a numeric value.
 
-// Use a function to get the square root of a number in a spreadsheet.
+// Get the square root of 100 and place it in cell A1.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

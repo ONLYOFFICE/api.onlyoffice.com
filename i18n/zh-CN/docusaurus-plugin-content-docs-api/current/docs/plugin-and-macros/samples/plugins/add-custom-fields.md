@@ -30,7 +30,7 @@ GitHub 仓库：[**example_customfields_add**](https://github.com/ONLYOFFICE/sdk
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example add custom fields",
   "guid": "asc.{4E2B5030-E1BE-41FA-BEE3-7E9BE7B5BFCF}",

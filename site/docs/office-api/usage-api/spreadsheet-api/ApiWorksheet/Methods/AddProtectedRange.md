@@ -23,12 +23,12 @@ expression.AddProtectedRange(sTitle, sDataRange);
 
 ## Example
 
-Add a new protected range in a spreadsheet.
+Lock a range of cells so it cannot be edited without permission in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the protected cell range object.
+// How do I protect a specific group of cells from changes in a spreadsheet?
 
-// Insert a protected range to the worksheet.
+// Restrict editing on a named cell range by marking it as protected.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

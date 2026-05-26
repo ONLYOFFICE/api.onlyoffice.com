@@ -20,12 +20,12 @@ expression.GetSheets();
 
 ## 示例
 
-获取电子表格中工作簿的所有工作表。
+列出工作簿中的每个工作表并将其名称写入电子表格的单元格中。
 
 ```javascript editor-xlsx
-// How can I get the sheets using a workbook in a spreadsheet?
+// How do I get the full list of sheets that exist in a workbook in a spreadsheet?
 
-// Get the sheets for a workbook in a spreadsheet.
+// Enumerate all tabs by index and record each sheet's name in a spreadsheet.
 
 Api.AddSheet('new_sheet_name');
 

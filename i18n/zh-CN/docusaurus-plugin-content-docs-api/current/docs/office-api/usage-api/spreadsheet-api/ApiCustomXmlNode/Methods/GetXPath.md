@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 节点的 XPath。
+确定电子表格中文档内 XML 节点的完整路径地址。
 
 ```javascript editor-xlsx
-// How to retrieve XPath location from custom XML node elements in a spreadsheet.
+// How do I find out where an XML node sits in the overall structure in a spreadsheet?
 
-// Get XPath from employee node in a spreadsheet.
+// Identify the exact location of a node by reading its path expression in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

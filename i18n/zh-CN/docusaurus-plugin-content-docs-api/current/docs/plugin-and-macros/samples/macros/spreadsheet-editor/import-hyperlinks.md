@@ -23,7 +23,7 @@ hide_table_of_contents: true
   worksheetA.SetActive();
   worksheetA.GetRange("A1").SetValue("title1");
   worksheetA.GetRange("A2").SetValue("title2");
-  worksheetA.GetRange("A3").SetValue("title2");
+  worksheetA.GetRange("A3").SetValue("title3");
   worksheetA.GetRange("B1").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/spreadsheet-api/");
   worksheetA.GetRange("B2").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/document-api/");
   worksheetA.GetRange("B3").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/presentation-api/");
@@ -99,4 +99,11 @@ End Sub
 
 ## 结果
 
-![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png#gh-light-mode-only)![Import hyperlinks](/assets/images/plugins/import-hyperlinks.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/import-hyperlinks.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/import-hyperlinks.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

@@ -25,9 +25,9 @@ number
 在电子表格中将表示数字的文本字符串转换为数字。
 
 ```javascript editor-xlsx
-// How to get number from a text in a spreadsheet.
+// The VALUE function parses numeric text and returns actual numeric values.
 
-// Use a function to return a number from a string in a spreadsheet.
+// Apply the function to convert numeric text strings to numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ expression.SetTextPr(textPr);
 
 ## 示例
 
-将文本设置应用于文档中的指定样式。
+在样式中存储字体大小和字重设置，以便使用该样式的所有文本在文档中看起来统一。
 
 ```javascript editor-docx
-// Create a paragraph, add a text to it, and set the font size and bold property to this text in a document.
+// How do I make every paragraph use the same font size and bold setting by updating a shared style in a document?
 
-// Specify the text properties object and apply its settings to the style object in a document.
+// Control the appearance of all body text at once by embedding character formatting in the default style in a document.
 
 let doc = Api.GetDocument();
 let normalStyle = doc.GetDefaultStyle("paragraph");

@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个数据集的（右尾）F 概率分布（差异程度）。
+返回两个数据集的（右尾）F 概率分布。
 
 ```javascript editor-xlsx
-// How to get the F probability distribution in a spreadsheet.
+// Calculate the right-tailed probability of F-distributed values.
 
-// Use function to calculate a right-tailed F probability distribution in a spreadsheet.
+// Determine F distribution using F_DIST_RT with specified degrees of freedom.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

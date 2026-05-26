@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中将光标向上移动。
+在文档中将光标向上移动指定的行数。
 
 ```javascript editor-docx
-// How to move the cursor up by a specified number of paragraphs in a document.
+// How do I shift the cursor upward through several lines in a document?
 
-// Create multiple paragraphs, move cursor down, then move it up with selection in a document.
+// Return to an earlier line after reaching the end to read content at that position in a document.
 
 let doc = Api.GetDocument();
 const paragraphCount = 5;

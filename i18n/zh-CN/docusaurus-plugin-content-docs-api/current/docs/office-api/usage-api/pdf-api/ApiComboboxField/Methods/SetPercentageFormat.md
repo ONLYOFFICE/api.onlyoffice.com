@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置百分比格式。
+在 PDF 中以百分比形式呈现字段中的值。
 
 ```javascript editor-pdf
-// How to set percentage format for a combobox field?
+// Can I show numbers as percentages in a PDF?
 
-// Set percentage format and display the result in a PDF document.
+// Convert numerical input to percentage display in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

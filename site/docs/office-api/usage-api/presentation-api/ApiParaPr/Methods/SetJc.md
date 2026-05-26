@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the paragraph contents justification in a presentation.
+Center text alignment in a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set justification using a paragraph properties in a presentation.
+// How do I change the alignment of text in a presentation?
 
-// Create a paragraph setting its justification property in a presentation.
+// Apply text alignment to a paragraph using paragraph properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

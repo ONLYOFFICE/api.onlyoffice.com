@@ -20,12 +20,12 @@ expression.GetCustomProperties();
 
 ## 示例
 
-在文档中使用自定义属性配置自定义属性。
+在文档中添加和读取各种类型的自定义元数据属性。
 
 ```javascript editor-docx
-// How can I get custom properties using a document in a document?
+// How do I store and retrieve custom string, number, date, and boolean properties in a document?
 
-// Get custom properties for a document in a document.
+// Attach structured metadata to a document so it can be read back programmatically in a document.
 
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();

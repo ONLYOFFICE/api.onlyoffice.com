@@ -36,7 +36,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 **方式二**：[nuxeoctl](https://doc.nuxeo.com/nxdoc/installing-a-new-package-on-your-instance/)
 
-``` sh
+```sh
 nuxeoctl mp-install /path/to/onlyoffice-nuxeo-package-x.x.zip
 ```
 

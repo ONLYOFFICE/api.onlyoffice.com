@@ -23,7 +23,7 @@ expression.CreateNoFill();
 在 PDF 文档中创建无填充并移除元素的填充。
 
 ```javascript editor-pdf
-// How to remove background fill from the object in a PDF document.
+// Remove background fill from the object in a PDF document.
 
 // Create no fill and apply it to the element in a PDF document.
 

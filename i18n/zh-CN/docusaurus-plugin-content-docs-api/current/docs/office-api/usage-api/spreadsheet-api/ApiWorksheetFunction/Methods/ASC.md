@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-演示在电子表格中对于双字节字符集 (DBCS) 语言，该函数将全角（双字节）字符更改为半角（单字节）字符。
+在电子表格中将 DBCS 语言的全角字符转换为半角。
 
 ```javascript editor-xlsx
-// How to make characters half-width (single-byte) characters in a spreadsheet.
+// Apply the ASC function to change character width in a spreadsheet.
 
-// Use function to make characters half-width in a spreadsheet.
+// Reduce character size by converting from double-byte to single-byte in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

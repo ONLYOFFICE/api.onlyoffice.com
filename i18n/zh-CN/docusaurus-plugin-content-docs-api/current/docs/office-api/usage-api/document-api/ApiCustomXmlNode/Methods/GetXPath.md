@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中自定义 XML 节点的 XPath。
+检索文档中嵌入的 XML 数据内特定节点的路径。
 
 ```javascript editor-docx
-// How do I get the x path in a document?
+// How do I find the location of a node in embedded XML data in a document?
 
-// Get the x path using a custom XML node object in a document.
+// Read a node's position to navigate or reference it programmatically in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

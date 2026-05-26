@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查 PDF 文档中的文本是否有单线删除线。
+检查 PDF 中的文本是否有删除线。
 
 ```javascript editor-pdf
-// How to know whether a text is crossed with one horizontal line in a PDF document.
+// How do I see if strikethrough formatting is applied to text in a PDF?
 
-// Get the text properties of the run and find whether it is strikethrough or not in a PDF document.
+// Verify the strikethrough setting on text content in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

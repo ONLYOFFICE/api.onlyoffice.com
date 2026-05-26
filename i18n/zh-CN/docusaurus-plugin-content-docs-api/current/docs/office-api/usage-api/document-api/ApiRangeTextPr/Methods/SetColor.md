@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中为当前文本 run 设置文本颜色。
+在文档中为默认文本字符应用特定颜色。
 
 ```javascript editor-docx
-// How to change a text color in a document.
+// How do I change the color of text across a whole document?
 
-// Get a font object of characters and color it specifying a color in RGB format.
+// Paint the default font with a chosen color so every paragraph inherits that tint in a document.
 
 const doc = Api.GetDocument();
 const textPr = doc.GetDefaultTextPr();

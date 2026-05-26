@@ -27,12 +27,12 @@ number
 
 ## Example
 
-Return the interest rate per period for a loan or an investment. For example, use 6%/4 for quarterly payments at 6% APR in a spreadsheet.
+Calculate the interest rate for each payment period of a loan or investment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to estimate the interest rate per period for a loan or an investment in a spreadsheet.
+// How do I determine the periodic interest rate from loan payment details in a spreadsheet?
 
-// Use a function to get the loan/investment interest rate per period in a spreadsheet.
+// Find the rate applied to each period when given the total payment schedule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

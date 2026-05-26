@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取并显示 PDF 文档中字段的只读属性。
+检查 PDF 中的表单字段是否已锁定以防止编辑。
 
 ```javascript editor-pdf
-// How can I is read only using a base field in a PDF document?
+// How can I determine if a form field is read-only in a PDF?
 
-// Is read only for a base field in a PDF document.
+// Verify the read-only status of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

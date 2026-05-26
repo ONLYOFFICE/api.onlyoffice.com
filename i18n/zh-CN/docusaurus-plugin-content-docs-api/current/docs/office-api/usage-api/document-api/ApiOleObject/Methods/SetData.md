@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中当前 OLE 对象的数据。
+更新文档中嵌入的 OLE 对象的数据字符串。
 
 ```javascript editor-docx
-// How to add link to the OLE object in a document.
+// How do I change the link or data stored in an OLE object in a document?
 
-// Update content of the OLE object in a document.
+// Replace the existing OLE object content with a new URL or data value in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

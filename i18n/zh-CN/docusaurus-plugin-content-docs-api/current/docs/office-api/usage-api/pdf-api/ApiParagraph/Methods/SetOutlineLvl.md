@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中通过段落属性设置指定段落的大纲级别。
+在 PDF 中将段落设置为标题级别。
 
 ```javascript editor-pdf
-// How can I set outline lvl using a paragraph properties in a PDF document?
+// How do I assign a heading level to a paragraph in a PDF?
 
-// Set outline lvl for a paragraph properties in a PDF document.
+// Organize a paragraph as part of the document outline in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

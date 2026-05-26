@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中的级别索引。
+检索文档中编号级别的索引。
 
 ```javascript editor-docx
-// How to retrieve the index of the numbering level in a document.
+// How do I get the position of a list level within its numbering definition in a document?
 
-// Get the number of the level in a document.
+// Distinguish parent and child list levels by reading their numeric index values in a document.
 
 let doc = Api.GetDocument();
 let numbering = doc.CreateNumbering("numbered");

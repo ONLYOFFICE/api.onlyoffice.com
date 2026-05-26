@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置主题。
+在 PDF 中为注释添加主题或话题标签。
 
 ```javascript editor-pdf
-// How can I set subject using an annotation in a PDF document?
+// Categorize an annotation with a subject line in a PDF.
 
-// Set subject for an annotation in a PDF document.
+// Assign a subject title to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置粗边框宽度。
+更改 PDF 中注释边框的粗细。
 
 ```javascript editor-pdf
-// How to set border width for an annotation in a PDF document?
+// How thick should an annotation border be in a PDF?
 
-// Set border width and display the result in a PDF document.
+// Set the width of the border outline on an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

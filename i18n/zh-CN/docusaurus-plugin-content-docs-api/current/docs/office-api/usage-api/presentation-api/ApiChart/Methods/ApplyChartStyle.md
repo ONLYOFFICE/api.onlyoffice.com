@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为图表应用样式。
+在演示文稿中为图表应用预设样式。
 
 ```javascript editor-pptx
-// How to change a style of a chart in a presentation.
+// How do I change the visual style of a chart in a presentation?
 
-// Apply chart style and display the result in a presentation.
+// Set a predefined style for a chart and customize its colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

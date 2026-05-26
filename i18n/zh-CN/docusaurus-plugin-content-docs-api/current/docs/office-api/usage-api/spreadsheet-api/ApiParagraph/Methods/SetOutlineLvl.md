@@ -6,12 +6,12 @@
 
 ## 示例
 
-通过电子表格中的段落属性设置和获取指定段落的大纲级别。
+为电子表格中形状内的段落分配大纲级别。
 
 ```javascript editor-xlsx
-// How do I set outline lvl in a spreadsheet?
+// How do I mark a paragraph as a heading tier for document structure in a spreadsheet?
 
-// Set outline lvl using a paragraph properties object in a spreadsheet.
+// Read the current outline depth, change it, then confirm the new value in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

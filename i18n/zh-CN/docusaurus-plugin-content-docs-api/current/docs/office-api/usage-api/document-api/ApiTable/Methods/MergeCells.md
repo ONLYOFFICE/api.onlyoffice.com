@@ -23,12 +23,12 @@ expression.MergeCells(aCells);
 
 ## 示例
 
-合并一组单元格。
+在文档中将多个表格单元格合并为单个单元格。
 
 ```javascript editor-docx
-// How to merge cells of the table into one.
+// How do I merge several cells together into one in a document?
 
-// Create a table and merge cells into another one.
+// Reduce cell count by joining adjacent cells into a unified area in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -22,12 +22,12 @@ expression.HexColor(hexString);
 
 ## Example
 
-Create a hex color and use it as a shape fill in a PDF document.
+Fill a shape with a color defined by a hex code in a PDF.
 
 ```javascript editor-pdf
-// How to hex color in a PDF document?
+// How do I apply a hex color to a shape in a PDF?
 
-// Hex color using the PDF document API.
+// Create a color from a hex value and use it to fill a rectangle in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

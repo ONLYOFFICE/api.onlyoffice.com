@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中数据透视表的描述。
+读取电子表格中数据透视表的描述文本。
 
 ```javascript editor-xlsx
-// How to get pivot table description in a spreadsheet.
+// How do I check or update the description stored on a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its description in a spreadsheet.
+// Set a custom description on a pivot table and confirm the change by reading it back in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

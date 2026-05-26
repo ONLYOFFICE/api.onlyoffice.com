@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a rich content in a PDF document.
+Find out what type of formatted text object you are working with in a PDF.
 
 ```javascript editor-pdf
-// How do I check what type a rich content object is in a PDF document?
+// How do I check the category of a rich content container in a PDF?
 
-// Retrieve and output the class type string for a rich content in a PDF document.
+// Determine the classification of formatted text content in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

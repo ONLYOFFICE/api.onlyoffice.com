@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回两个数字的按位 "OR"。
+在电子表格中使用按位或合并两个数字。
 
 ```javascript editor-xlsx
-// How to get a result from OR operation in a spreadsheet.
+// Which bits are set in either number in a spreadsheet?
 
-// Use function to calculate bitwise "OR" operation in a spreadsheet.
+// Merge binary values to include all active bits in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

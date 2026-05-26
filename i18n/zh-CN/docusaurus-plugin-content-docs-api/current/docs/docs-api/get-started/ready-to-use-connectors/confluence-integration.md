@@ -47,7 +47,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 在**管理插件**页面找到已上传的**ONLYOFFICE Connector for Confluence**。点击**配置**，然后输入安装了ONLYOFFICE 文档的服务器名称：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

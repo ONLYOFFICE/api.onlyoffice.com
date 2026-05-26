@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中获取证券的贴现率。
+获取证券的贴现率。
 
 ```javascript editor-xlsx
-// How to get a security discount rate in a spreadsheet.
+// Calculate the annual discount rate based on settlement and maturity dates.
 
-// Use function to find security discount rate in a spreadsheet.
+// Use the DISC function to determine the discount rate for an investment security.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

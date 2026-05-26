@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## 示例
 
-在电子表格中从可用的颜色预设中选择创建颜色。
+在电子表格中为形状背景应用命名的预设颜色。
 
 ```javascript editor-xlsx
-// How to get a color from a preset in a spreadsheet.
+// How do I use a built-in color preset to fill a shape in a spreadsheet?
 
-// Color a shape background using a color from a preset in a spreadsheet.
+// Give a shape a ready-made color without entering custom values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let presetColor = Api.CreatePresetColor("peachPuff");

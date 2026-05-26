@@ -2,6 +2,15 @@
 
 The list of changes of ONLYOFFICE Docs API.
 
+## Version 9.4
+
+- Added the [plugin command logging](../usage-api/config/editor/plugins.md#plugin-command-logging) feature for enabling debug output of plugin commands in the browser console.
+- Added the [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) parameter to block specific plugins on load.
+- Added Croatian (`hr`) to the list of supported [interface languages](../usage-api/config/editor/editor.md#lang).
+- Removed the deprecated `editorConfig.customization.commentAuthorOnly` field.
+- Added the `roles` parameter to the [onStartFilling](../usage-api/config/events.md#onstartfilling) event with role and user information.
+- Fixed a memory leak in the [destroyEditor](../usage-api/methods.md#destroyeditor) method that prevented full cleanup.
+
 ## Version 9.1
 
 - The document is opened in viewer mode with an error message if it cannot be [locked](../using-wopi/key-concepts.md#lock) in WOPI.
@@ -140,7 +149,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [connections\_view](../additional-api/command-service/license.md#license.connections_view), [users\_view\_count](../additional-api/command-service/license.md#license.users_view_count) and [users\_view](../additional-api/command-service/license.md#quota.users_view) parameters to the license response.
 - Added the [live viewer](../get-started/how-it-works/viewing.md) mode to the document, spreadsheet and presentation editors.
 - Added the [embedview](../using-wopi/wopi-discovery.md#embedview) action to the WOPI discovery.
-- The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#parameters) parameter instead.
+- The [services.CoAuthoring.secret.browser.string](../additional-api/signature/signature.md#configuration-parameters) parameter is deprecated, please use the [services.CoAuthoring.secret.inbox.string](../additional-api/signature/signature.md#configuration-parameters) parameter instead.
 
 ## Version 7.1
 
@@ -201,7 +210,7 @@ The list of changes of ONLYOFFICE Docs API.
 - Added the [license](../additional-api/command-service/license.md) command.
 - Added the [editorConfig.customization.hideRulers](../usage-api/config/editor/customization/customization-standard-branding.md#hiderulers) field.
 - Added the [editorConfig.customization.anonymous](../usage-api/config/editor/customization/customization-standard-branding.md#anonymous) field.
-- The [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) field is deprecated, please use the [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) fields.
+- The `editorConfig.customization.commentAuthorOnly` field is deprecated, please use the [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) and [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) fields.
 - Added the [setFavorite](../usage-api/methods.md#setfavorite) method.
 - Added the *data.favorite* parameter to the [events.onMetaChange](../usage-api/config/events.md#onmetachange) event.
 - Added the [document.info.favorite](../usage-api/config/document/info.md#favorite) field.
@@ -280,7 +289,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added [conversion](../additional-api/conversion-api/conversion-tables.md) to the OOXML (dotx, xltx, potx) and ODF (ott, ots, otp) templates.
 - Added the [editorConfig.customization.reviewDisplay](../usage-api/config/editor/customization/customization-standard-branding.md#reviewdisplay) field.
-- The [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) field is now used to restrict comment deletion as well.
+- The `editorConfig.customization.commentAuthorOnly` field is now used to restrict comment deletion as well.
 - Added the [editorConfig.customization.compactHeader](../usage-api/config/editor/customization/customization-standard-branding.md#compactheader) field.
 - Added the [editorConfig.customization.hideRightMenu](../usage-api/config/editor/customization/customization-standard-branding.md#hiderightmenu) field.
 - Added the [editorConfig.customization.toolbarNoTabs](../usage-api/config/editor/customization/customization-standard-branding.md#toolbarnotabs) field.
@@ -335,7 +344,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 - Added the [destroyEditor](../usage-api/methods.md#destroyeditor) method.
 - Removed the `editorConfig.plugins.url` field from the plugin connection pattern.
-- Added the [editorConfig.customization.commentAuthorOnly](../usage-api/config/editor/customization/customization-standard-branding.md#commentauthoronly) field.
+- Added the `editorConfig.customization.commentAuthorOnly` field.
 - Added the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) field.
 - Added the [editorConfig.customization.showReviewChanges](../usage-api/config/editor/customization/customization-standard-branding.md#showreviewchanges) field.
 - Added the [forcesavetype](../usage-api/callback-handler.md#forcesavetype) field in the callback handler request when force saving the file.

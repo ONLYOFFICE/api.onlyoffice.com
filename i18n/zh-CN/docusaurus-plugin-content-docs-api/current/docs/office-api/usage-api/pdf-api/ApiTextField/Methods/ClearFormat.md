@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取文本字段并为其设置数字格式，然后清除格式。
+从 PDF 中的文本输入字段移除所有格式。
 
 ```javascript editor-pdf
-// How can I clear format using a text field in a PDF document?
+// How do I clear formatting that was applied to a text field in a PDF?
 
-// Clear format for a text field in a PDF document.
+// Reset a text field to its default appearance without any special formatting in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

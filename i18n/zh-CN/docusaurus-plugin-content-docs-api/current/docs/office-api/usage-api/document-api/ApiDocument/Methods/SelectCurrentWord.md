@@ -20,12 +20,12 @@ object
 
 ## 示例
 
-选中文档中的当前单词。
+选择光标下的单词并读取文档中的选定文本。
 
 ```javascript editor-docx
-// How to select the word at the specific cursor position in a document.
+// How do I programmatically select a word at a given cursor position in a document?
 
-// Move the cursor to the position 16 and select the word in a document.
+// Move the cursor to a character offset and capture the whole word it lands on in a document.
 
 let doc = Api.GetDocument();
 let para1 = doc.GetElement(0);

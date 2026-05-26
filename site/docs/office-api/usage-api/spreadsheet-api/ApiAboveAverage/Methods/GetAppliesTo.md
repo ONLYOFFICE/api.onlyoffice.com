@@ -6,12 +6,12 @@ Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Method
 
 ## Example
 
-Get the range where a conditional formatting rule applies.
+Read the cell range that a conditional formatting rule covers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the cell range of existing conditional formatting rules.
+// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
 
-// Get conditional formatting rule range.
+// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -6,12 +6,12 @@
 
 ## 示例
 
-相对于页面尺寸的形状相对宽度调整。
+将文档中形状的宽度设置为页面的百分比。
 
 ```javascript editor-docx
-// How to set shape width and height as percentages of the page.
+// How do I make a shape's width span a fixed fraction of the page in a document?
 
-// Create a responsive rectangle that scales with page size.
+// Stretch a rectangle to half the page width so its layout stays consistent across page sizes in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

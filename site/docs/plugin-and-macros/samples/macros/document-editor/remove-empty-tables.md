@@ -56,5 +56,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![RemoveEmptyTables](/assets/images/plugins/remove-empty-tables.png#gh-light-mode-only)
-![RemoveEmptyTables](/assets/images/plugins/remove-empty-tables.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/remove-empty-tables.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/remove-empty-tables.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -7,12 +7,12 @@
 
 ## 示例
 
-指定单元格内容左侧边缘与父表格中所有表格单元格左边框之间保留的间距。
+设置文档中每个表格单元格内容与左边缘之间的间距。
 
 ```javascript editor-docx
-// How to add margin to the left of the cell.
+// How do I control how much space appears to the left of the text inside table cells in a document?
 
-// Create a 3x3 table and add the left cell margin.
+// Push cell content away from the left border of each table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

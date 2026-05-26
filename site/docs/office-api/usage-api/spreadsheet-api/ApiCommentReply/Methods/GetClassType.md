@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a comment reply in a spreadsheet.
+Check what type of object a comment reply is in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to identify the class type of a comment reply in a spreadsheet?
+// How do I confirm the kind of object returned when working with a comment reply in a spreadsheet?
 
-// Obtain the class type identifier of a comment reply object in a spreadsheet.
+// Verify the category label assigned to a reply within a comment thread in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

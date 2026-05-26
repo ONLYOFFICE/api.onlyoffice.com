@@ -6,12 +6,12 @@ Inherited from [ApiBaseAnnotation.GetContents](../../ApiBaseAnnotation/Methods/G
 
 ## Example
 
-Create a square annotation and get its contents in a PDF document.
+Retrieve the text or message inside an annotation in a PDF.
 
 ```javascript editor-pdf
-// How to get the contents for an annotation in a PDF document?
+// What text is stored in an annotation in a PDF?
 
-// Get the contents and display the result in a PDF document.
+// Read the content or description that was added to an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

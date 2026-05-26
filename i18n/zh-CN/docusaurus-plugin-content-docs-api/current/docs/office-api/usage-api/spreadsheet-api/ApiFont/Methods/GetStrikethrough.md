@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-获取电子表格中指定字体的删除线属性。
+读取电子表格中特定字符范围是否有删除线格式。
 
 ```javascript editor-xlsx
-// How to determine a font strikethrough property in a spreadsheet.
+// How do I check if certain characters in a cell are displayed with a line through them in a spreadsheet?
 
-// Get a boolean value that represents whether a font is strikethrough or not and show the value in the worksheet.
+// Inspect the strikethrough setting of a character range and display the result in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

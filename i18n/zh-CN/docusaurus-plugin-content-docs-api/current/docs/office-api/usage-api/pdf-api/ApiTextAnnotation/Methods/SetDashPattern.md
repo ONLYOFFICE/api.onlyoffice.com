@@ -7,12 +7,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为边框设置虚线模式。
+在 PDF 中为注释应用虚线边框样式。
 
 ```javascript editor-pdf
-// How to set dash pattern for an annotation in a PDF document?
+// Create a dotted line effect on an annotation's border in a PDF.
 
-// Set dash pattern and display the result in a PDF document.
+// Define the dash pattern for an annotation's outline in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

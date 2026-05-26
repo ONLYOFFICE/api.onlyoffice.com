@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格底部边框及其填充颜色。
+在 PDF 中为表格单元格添加底部边框。
 
 ```javascript editor-pdf
-// Create table and set its cell bottom border.
+// How do I create a border on the bottom edge of a cell in a PDF?
 
-// Set cell border bottom using a table cell object.
+// Draw a styled line along the bottom of a table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

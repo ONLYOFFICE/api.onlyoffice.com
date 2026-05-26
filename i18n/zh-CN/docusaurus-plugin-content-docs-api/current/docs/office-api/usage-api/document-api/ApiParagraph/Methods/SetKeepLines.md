@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在使用页面视图呈现文档时，尽可能将段落的所有行保持在同一页上。
+防止文档中的段落跨页拆分。
 
 ```javascript editor-docx
-// How to set keep lines property of the paragraph content in a document.
+// How do I keep all lines of a paragraph together on one page in a document?
 
-// Keep all lines of the paragraph on the same page.
+// Ensure that long paragraphs always start on a new page rather than breaking mid-content.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

@@ -20,12 +20,12 @@ expression.GetSpacingLineValue();
 
 ## 示例
 
-获取 PDF 文档中的段落行距值。
+读取 PDF 中段落的行距量。
 
 ```javascript editor-pdf
-// / How to get the spacing line value between sentences of a paragraph in a PDF document.
+// How do I check the space between lines in a paragraph in a PDF?
 
-// Create a paragraph, set the spacing line between the sentences and retrieve the value in a PDF document.
+// Find the line spacing distance used in a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

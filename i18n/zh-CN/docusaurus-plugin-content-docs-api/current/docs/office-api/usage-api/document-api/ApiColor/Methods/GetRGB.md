@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取文档中颜色的 RGB 分量。
+提取文档中颜色的红、绿、蓝通道值。
 
 ```javascript editor-docx
-// How can I get the r g b using a color in a document?
+// How do I read the individual RGB components of a color in a document?
 
-// Get the r g b for a color in a document.
+// Compare channel values across theme, auto, and hex colors to understand how each type resolves in a document.
 
 const doc = Api.GetDocument();
 

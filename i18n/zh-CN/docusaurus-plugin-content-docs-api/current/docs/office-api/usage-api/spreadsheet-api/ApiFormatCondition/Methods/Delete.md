@@ -20,12 +20,12 @@ expression.Delete();
 
 ## 示例
 
-删除条件格式规则。
+从电子表格中的单元格范围移除条件格式规则。
 
 ```javascript editor-xlsx
-// How to remove specific conditional formatting rules from a range.
+// How do I delete an existing conditional formatting rule applied to cells in a spreadsheet?
 
-// Delete conditional formatting rule.
+// Clear an unwanted formatting condition so cells revert to their default appearance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

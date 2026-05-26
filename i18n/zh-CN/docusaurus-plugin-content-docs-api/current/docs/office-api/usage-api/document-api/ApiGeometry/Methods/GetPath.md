@@ -22,12 +22,12 @@ expression.GetPath(nIndex);
 
 ## 示例
 
-分析云形的路径属性。获取并显示路径尺寸、笔触和填充信息。
+从文档中形状的几何图形检索特定路径。
 
 ```javascript editor-docx
-// How to get the path for a geometry in a document?
+// How do I get a path by index from a shape's geometry in a document?
 
-// Get the path and display the result in a document.
+// Inspect a shape's individual path to read its size, stroke, and fill settings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

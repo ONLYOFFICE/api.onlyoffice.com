@@ -21,12 +21,13 @@
 | 方法 | 返回值 | 描述 |
 | ------ | ------- | ----------- |
 | [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) \| null | 返回 ApiComment 对象的数组。 |
-| [AddCustomFunction](./Methods/AddCustomFunction.md) | 无 | 创建新的自定义函数。函数参数和结果的描述使用 JSDoc 指定。JSDoc 中需要 *@customfunction* 标签。参数和结果可以指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。参数可以是必需的或可选的。用户还可以设置默认值。传递的函数可以是异步的（async 函数或返回 Promise 的函数）。在传递的函数内部，可以使用 *this.address* 访问执行计算的当前单元格地址。还可以使用 *this.args[0].address*、*this.args[1].address* 等访问函数参数的地址。此方法不用于 ONLYOFFICE Document Builder。请改用 AddCustomFunctionLibrary。 |
-| [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | 无 | 注册新的自定义函数库（请参阅 **SetCustomFunctions** 插件方法）。函数参数和结果的描述使用 JSDoc 指定。JSDoc 中需要 *@customfunction* 标签。参数和结果可以指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。参数可以是必需的或可选的。用户还可以设置默认值。 |
+| [AddCustomFunction](./Methods/AddCustomFunction.md) | 无 | 创建新的自定义函数。 |
+| [AddCustomFunctionLibrary](./Methods/AddCustomFunctionLibrary.md) | 无 | 注册新的自定义函数库（参见 **SetCustomFunctions** 插件方法）。 |
 | [AddDefName](./Methods/AddDefName.md) | boolean | 向单元格范围添加新名称。 |
-| [AddSheet](./Methods/AddSheet.md) | 无 | 创建新工作表。新工作表将成为活动工作表。 |
+| [AddSheet](./Methods/AddSheet.md) | [ApiWorksheet](../ApiWorksheet/ApiWorksheet.md) | 创建新工作表。新工作表将成为活动工作表。 |
 | [CentimetersToPoints](./Methods/CentimetersToPoints.md) | number | 将厘米转换为磅。 |
 | [ClearCustomFunctions](./Methods/ClearCustomFunctions.md) | boolean | 清除所有自定义函数。 |
+| [Color](./Methods/Color.md) | [ApiColor](../ApiColor/ApiColor.md) | 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。 |
 | [CreateBlipFill](./Methods/CreateBlipFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建图片填充，使用所选图像作为对象背景应用于对象。 |
 | [CreateBullet](./Methods/CreateBullet.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 sSymbol 参数指定的字符或符号为段落创建项目符号。 |
 | [CreateColorByName](./Methods/CreateColorByName.md) | [ApiColor](../ApiColor/ApiColor.md) | 从可用的颜色预设中选择创建颜色。 |
@@ -34,7 +35,7 @@
 | [CreateCustomGeometry](./Methods/CreateCustomGeometry.md) | [ApiGeometry](../ApiGeometry/ApiGeometry.md) | 创建新的自定义几何图形。 |
 | [CreateGradientStop](./Methods/CreateGradientStop.md) | [ApiGradientStop](../ApiGradientStop/ApiGradientStop.md) | 创建用于不同类型渐变的渐变光圈。 |
 | [CreateLinearGradientFill](./Methods/CreateLinearGradientFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建线性渐变填充，使用所选线性渐变作为对象背景应用于对象。 |
-| [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | 无 | 创建新的历史记录点。 |
+| [CreateNewHistoryPoint](./Methods/CreateNewHistoryPoint.md) | boolean | 创建新的历史记录点。 |
 | [CreateNoFill](./Methods/CreateNoFill.md) | [ApiFill](../ApiFill/ApiFill.md) | 创建无填充并移除元素的填充。 |
 | [CreateNumbering](./Methods/CreateNumbering.md) | [ApiBullet](../ApiBullet/ApiBullet.md) | 使用 numType 参数指定的编号字符或符号为段落创建项目符号。 |
 | [CreateParagraph](./Methods/CreateParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | 创建新段落。 |
@@ -57,10 +58,11 @@
 | [GetAllPivotTables](./Methods/GetAllPivotTables.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md)[] | 返回所有数据透视表。 |
 | [GetCommentById](./Methods/GetCommentById.md) | [ApiComment](../ApiComment/ApiComment.md) | 通过 ID 从当前文档返回批注。 |
 | [GetComments](./Methods/GetComments.md) | [ApiComment](../ApiComment/ApiComment.md)[] | 返回与整个工作簿相关的所有批注。 |
-| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | 返回工作簿的核心属性接口。此方法用于查看或修改标准元数据，如标题、作者和关键字。 |
+| [GetCore](./Methods/GetCore.md) | [ApiCore](../ApiCore/ApiCore.md) | 返回工作簿的核心属性接口。 |
 | [GetCustomProperties](./Methods/GetCustomProperties.md) | [ApiCustomProperties](../ApiCustomProperties/ApiCustomProperties.md) | 返回工作簿的自定义属性。 |
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | 根据范围名称返回 ApiName 对象。 |
-| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | 返回文档信息：**Application** - 创建文档的应用程序。**CreatedRaw** - 文件创建的日期和时间。**Created** - 解析后的文件创建日期和时间。**LastModifiedRaw** - 文件最后修改的日期和时间。**LastModified** - 解析后的文件最后修改日期和时间。**LastModifiedBy** - 对文档进行最新更改的用户名称。**Authors** - 创建文件的人员。**Title** - 此属性可简化文档分类。**Tags** - 此属性可简化文档分类。**Subject** - 此属性可简化文档分类。**Comment** - 此属性可简化文档分类。 |
+| [GetDefNames](./Methods/GetDefNames.md) | [ApiName](../ApiName/ApiName.md)[] | 返回工作簿中定义的所有 ApiName 对象的数组，涵盖所有作用域（工作簿级和工作表级）。 |
+| [GetDocumentInfo](./Methods/GetDocumentInfo.md) | object | 返回文档信息： |
 | [GetFreezePanesType](./Methods/GetFreezePanesType.md) | [FreezePaneType](../Enumeration/FreezePaneType.md) | 返回冻结窗格类型。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 返回当前打开文件的完整名称。 |
 | [GetLocale](./Methods/GetLocale.md) | number | 返回当前区域设置 ID。 |
@@ -79,7 +81,7 @@
 | [InsertPivotNewWorksheet](./Methods/InsertPivotNewWorksheet.md) | [ApiPivotTable](../ApiPivotTable/ApiPivotTable.md) | 将指定的数据透视表插入到新工作表中。 |
 | [Intersect](./Methods/Intersect.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示两个或多个范围的矩形交集的 ApiRange 对象。如果指定了来自不同工作表的一个或多个范围，将返回错误。 |
 | [LinesToPoints](./Methods/LinesToPoints.md) | number | 将行转换为磅（1 行 = 12 磅）。 |
-| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。结果为整数值。 |
+| [MillimetersToEmus](./Methods/MillimetersToEmus.md) | [EMU](../Enumeration/EMU.md) | 将毫米转换为英制度量单位 (EMU)。 |
 | [MillimetersToPixels](./Methods/MillimetersToPixels.md) | number | 将毫米转换为像素。 |
 | [MillimetersToPoints](./Methods/MillimetersToPoints.md) | number | 将毫米转换为磅。 |
 | [PicasToPoints](./Methods/PicasToPoints.md) | number | 将派卡转换为磅。 |
@@ -99,9 +101,9 @@
 | [RefreshAllPivots](./Methods/RefreshAllPivots.md) | 无 | 刷新所有数据透视表。 |
 | [RemoveCustomFunction](./Methods/RemoveCustomFunction.md) | boolean | 删除自定义函数。 |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选区中的每个段落（或单元格中的文本）。 |
-| [Save](./Methods/Save.md) | 无 | 保存对指定文档的更改。 |
+| [Save](./Methods/Save.md) | boolean | 保存对指定文档的更改。 |
 | [SetFreezePanesType](./Methods/SetFreezePanesType.md) | 无 | 设置冻结窗格的类型。 |
-| [SetLocale](./Methods/SetLocale.md) | 无 | 设置文档的区域设置。 |
+| [SetLocale](./Methods/SetLocale.md) | boolean | 设置文档的区域设置。 |
 | [SetReferenceStyle](./Methods/SetReferenceStyle.md) | 无 | 设置单元格引用样式。 |
 | [SetThemeColors](./Methods/SetThemeColors.md) | boolean | 设置当前电子表格的主题颜色。 |
 | [ThemeColor](./Methods/ThemeColor.md) | [ApiColor](../ApiColor/ApiColor.md) | 创建主题颜色。 |

@@ -22,12 +22,12 @@ expression.SetInputMessage(InputMessage);
 
 ## 示例
 
-在电子表格中设置输入消息文本。
+编写用户选择具有验证规则的单元格时在电子表格中出现的指导文本。
 
 ```javascript editor-xlsx
-// How to set the validation input message in a spreadsheet.
+// How do I add a helpful hint that shows up before someone types a value into a restricted cell in a spreadsheet?
 
-// Set input message for a validation in a spreadsheet.
+// Guide users toward acceptable entries by displaying instructions when they click on a validated cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

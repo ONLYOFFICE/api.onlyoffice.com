@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the x position of the drawing on the slide.
+Get the horizontal position of a shape in a presentation.
 
 ```javascript editor-pptx
-// How can I get the pos x using a drawing object in a presentation?
+// How do I find the left edge coordinate of an object in a presentation?
 
-// Get the pos x for a drawing object in a presentation.
+// Read and display the X position of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的主题。
+从电子表格工作簿文档属性读取主题字段。
 
 ```javascript editor-xlsx
-// How can I get the subject using a core properties in a spreadsheet?
+// How do I find out what subject is recorded for a workbook in a spreadsheet?
 
-// Get the subject for a core properties in a spreadsheet.
+// Fetch the subject text stored in the metadata of the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

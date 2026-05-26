@@ -29,12 +29,12 @@ string
 
 ## 示例
 
-获取电子表格中形状的文档内容中的所有文本。
+从电子表格中形状的内容提取所有文本。
 
 ```javascript editor-xlsx
-// How to get the text for a document content?
+// How do I read the full text written inside a shape in a spreadsheet?
 
-// Get the text and display the result in a spreadsheet.
+// Collect every word inside a shape and write it to a cell in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

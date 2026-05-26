@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置不透明度。
+在 PDF 中使注释透明或不透明。
 
 ```javascript editor-pdf
-// How do I set opacity in a PDF document?
+// Adjust the transparency level of an annotation in a PDF.
 
-// Set opacity using an annotation object in a PDF document.
+// Control how solid or see-through an annotation appears in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

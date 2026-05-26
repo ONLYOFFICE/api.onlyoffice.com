@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中设置字段全名并显示。
+在 PDF 中为表单字段分配完整的名称标识符。
 
 ```javascript editor-pdf
-// How do I set full name in a PDF document?
+// How do I name a form field in a PDF?
 
-// Set full name using a base field object in a PDF document.
+// Set the unique full name property of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

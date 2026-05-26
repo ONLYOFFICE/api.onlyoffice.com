@@ -23,12 +23,12 @@ expression.AutoFit(bRows, bCols);
 
 ## 示例
 
-更改范围内列的宽度或行的高度以在电子表格中实现最佳适配。
+调整电子表格中范围内列或行的大小，使所有内容完全显示而不被截断。
 
 ```javascript editor-xlsx
-// How to set an autofit for width or height for a range in a spreadsheet.
+// How do I automatically adjust column width or row height to fit the text in a spreadsheet?
 
-// Get a range and apply autofit property in a spreadsheet.
+// Prevent truncated text by letting the spreadsheet size each column and row to match its content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

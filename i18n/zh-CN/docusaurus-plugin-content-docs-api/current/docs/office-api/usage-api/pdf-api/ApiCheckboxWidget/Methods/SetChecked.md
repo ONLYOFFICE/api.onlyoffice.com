@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件组中的复选框控件为选中状态。
+在 PDF 中将复选框标记为选中或取消选中。
 
 ```javascript editor-pdf
-// How can I set checked using a checkbox widget in a PDF document?
+// How do I toggle a checkbox widget between checked and unchecked in a PDF?
 
-// Set checked for a checkbox widget in a PDF document.
+// Set the checked state of a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

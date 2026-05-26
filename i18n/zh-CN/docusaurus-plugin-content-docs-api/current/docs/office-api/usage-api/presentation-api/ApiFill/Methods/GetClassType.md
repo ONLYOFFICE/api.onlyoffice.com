@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中填充对象的类类型。
+检索演示文稿中填充的类类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a fill in a presentation?
+// Class type identifies what kind of fill is applied to a shape.
 
-// Get the class type of a fill and display it in the presentation.
+// Obtain the class type identifier of a fill object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

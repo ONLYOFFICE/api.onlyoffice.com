@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.SetFontSize](../../ApiTextPr/Methods/SetFontSize.md).
 
 ## Example
 
-Set the font size to the characters of the current text run in a document.
+Adjust the font size applied to text in a document.
 
 ```javascript editor-docx
-// How to change the text font size in a document.
+// How do I make text larger or smaller in a document?
 
-// Create a text run object, resize its font in a document.
+// Control how big characters appear by setting a custom font size in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

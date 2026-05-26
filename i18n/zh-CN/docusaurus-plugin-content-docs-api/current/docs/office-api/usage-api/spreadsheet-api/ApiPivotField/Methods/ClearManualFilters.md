@@ -20,12 +20,12 @@ expression.ClearManualFilters();
 
 ## 示例
 
-清除电子表格中透视字段的手动筛选器。
+从电子表格中的数据透视表字段移除手动选择的项目筛选器。
 
 ```javascript editor-xlsx
-// How to remove previously applied pivot field manual filters in a spreadsheet.
+// How do I uncheck all manually hidden items in a pivot field to show everything again in a spreadsheet?
 
-// Create a pivot table, add data to it then delete manual filters from a custom field in a spreadsheet.
+// Restore all hand-picked item exclusions so the pivot field displays its full list of values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

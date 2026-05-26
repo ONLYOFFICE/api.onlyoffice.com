@@ -20,12 +20,12 @@ expression.GetParentContentControl();
 
 ## 示例
 
-获取文档中包含表格的内容控件。
+访问文档中包裹表格的内容控件。
 
 ```javascript editor-docx
-// How to get the parent element of the table and set its alias in a document.
+// How do I find the structured container holding a table in a document?
 
-// Retrieve the parent content control of the table in a document.
+// Reach the enclosing content control so its properties can be updated in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

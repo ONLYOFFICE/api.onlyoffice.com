@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Set and get the description of the current presentation using the core properties in a presentation.
+Set and retrieve the summary text in a presentation.
 
 ```javascript editor-pptx
-// How do I get the description in a presentation?
+// How do I access the description of a presentation?
 
-// Get the description using a core properties object in a presentation.
+// Read the descriptive text associated with a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

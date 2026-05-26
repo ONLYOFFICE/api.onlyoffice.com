@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取表单元素的角色。
+检索分配给文档中表单字段的角色。
 
 ```javascript editor-forms
-// How can I get the role using a form base in a document?
+// How do I get the role of a form field in a document?
 
-// Get the role for a form base in a document.
+// Assign a custom role to a form, then read it back to verify the assignment.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

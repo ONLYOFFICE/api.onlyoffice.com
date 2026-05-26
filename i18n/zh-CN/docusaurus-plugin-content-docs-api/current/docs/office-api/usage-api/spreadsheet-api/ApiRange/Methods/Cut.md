@@ -22,12 +22,12 @@ expression.Cut(destination);
 
 ## 示例
 
-在电子表格中将范围剪切到剪贴板。
+将单元格范围从电子表格中的一个位置移动到另一个位置。
 
 ```javascript editor-xlsx
-// How to cut a range in a spreadsheet.
+// How do I relocate a group of cells and remove them from their original position in a spreadsheet?
 
-// Get a range, set some value for it and cut it to the clipboard in a spreadsheet.
+// Transfer cell content to a new spot, leaving the source cells empty in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

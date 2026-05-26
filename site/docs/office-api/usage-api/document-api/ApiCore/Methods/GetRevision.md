@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the revision of the current document in a document.
+Retrieve the revision label stored in the document properties in a document.
 
 ```javascript editor-docx
-// How do I get the revision in a document?
+// How do I read the revision value from a document's metadata in a document?
 
-// Get the revision using a core properties object in a document.
+// Display the current revision string in the document body to confirm it was saved correctly in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

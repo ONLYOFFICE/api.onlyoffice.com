@@ -23,12 +23,12 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## 示例
 
-在 PDF 文档中创建图片填充，使用所选图像作为对象背景应用于对象。
+在 PDF 中用图像填充形状。
 
 ```javascript editor-pdf
-// How to set an image as a background in a PDF document.
+// How do I use an image as a fill in a PDF?
 
-// Use blip fill to fill a background with an image in a PDF document.
+// Apply a repeating image pattern to a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

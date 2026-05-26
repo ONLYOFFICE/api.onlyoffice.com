@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Return the individual term binomial distribution probability in a spreadsheet.
+Calculate cumulative or individual binomial distribution probability in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an individual term binomial distribution probability in a spreadsheet.
+// How do I determine the chance of successes in a series of repeated attempts in a spreadsheet?
 
-// Use function to get an individual term binomial distribution probability in a spreadsheet.
+// Evaluate the probability of reaching a target number of positive outcomes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

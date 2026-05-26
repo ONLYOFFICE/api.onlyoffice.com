@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the minute, a number from 0 to 59 in a spreadsheet.
+Extract the minute component from a time value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a minute from a time in a spreadsheet.
+// What minute does a time represent in a spreadsheet?
 
-// Use a function to get minutes from a time object in a spreadsheet.
+// Get the minute portion as a number from a time in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

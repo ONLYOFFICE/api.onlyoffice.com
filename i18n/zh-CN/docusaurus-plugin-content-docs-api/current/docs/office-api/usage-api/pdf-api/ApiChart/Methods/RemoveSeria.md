@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中通过索引删除图表系列。
+按位置从 PDF 中的图表删除数据系列。
 
 ```javascript editor-pdf
-// Create a chart then delete a seria from it in a PDF document.
+// How do I remove one series from a chart in a PDF?
 
-// Remove the seria using a chart object in a PDF document.
+// Take away a series by its index to simplify a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

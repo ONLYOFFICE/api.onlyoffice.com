@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get rich content of freeText annotation in a PDF document.
+Retrieve the text content from an annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I get the content in a PDF document?
+// How do I read what is written in a comment note in a PDF?
 
-// Get the content using a free text annotation object in a PDF document.
+// Extract the message text from an annotation element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

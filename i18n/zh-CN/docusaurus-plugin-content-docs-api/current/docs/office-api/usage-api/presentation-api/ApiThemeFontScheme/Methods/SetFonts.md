@@ -27,12 +27,12 @@ expression.SetFonts(mjLatin, mjEa, mjCs, mnLatin, mnEa, mnCs);
 
 ## 示例
 
-在演示文稿中为当前主题字体方案设置字体。
+在演示文稿中将字体应用于主题字体方案。
 
 ```javascript editor-pptx
-// How to set fonts to a theme in a presentation.
+// How do I change the fonts used in a font scheme in a presentation?
 
-// Retrieve theme and set its font theme by adding fonts in a presentation.
+// Get a font scheme and replace its fonts with new ones in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

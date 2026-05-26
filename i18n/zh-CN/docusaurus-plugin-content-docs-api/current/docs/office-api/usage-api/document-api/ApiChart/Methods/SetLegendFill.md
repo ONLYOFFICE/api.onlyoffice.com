@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表图例的填充。
+在文档中为图表图例应用背景填充颜色。
 
 ```javascript editor-docx
-// How to color a chart legend in a document.
+// How do I set a solid background color for the legend of a chart in a document?
 
-// Create a chart and set a solid fill to its legend in a document.
+// Highlight the legend with a distinct fill so it stands out from the chart area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@ Inherited from [ApiFormBase.GetRole](../../ApiFormBase/Methods/GetRole.md).
 
 ## Example
 
-Get the role of a form element.
+Retrieve the role assigned to a form field in a document.
 
 ```javascript editor-docx
-// How can I get the role using a form base in a document?
+// How do I get the role of a form field in a document?
 
-// Get the role for a form base in a document.
+// Assign a custom role to a form, then read it back to verify the assignment.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

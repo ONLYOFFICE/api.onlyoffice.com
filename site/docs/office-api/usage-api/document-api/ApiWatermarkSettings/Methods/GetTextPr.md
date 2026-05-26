@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Read the formatting applied to watermark text in a document.
 
 ```javascript editor-docx
-// How to retrieve the text properties from the watermark and display it in the document.
+// How do I find out what font and style settings the watermark text uses in a document?
 
-// Get the text properties from the watermark settings in a document.
+// Inspect the visual style of the text used as a watermark in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

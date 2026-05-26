@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # 验证表单字段
 
-使用指定颜色高亮显示文档中为空或非必填的文本字段。
+使用指定颜色高亮显示文档中为空的可选文本字段。
 
 ```ts
 (function () {
@@ -42,5 +42,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.png#gh-light-mode-only)
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/validate-form-fields.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/validate-form-fields.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

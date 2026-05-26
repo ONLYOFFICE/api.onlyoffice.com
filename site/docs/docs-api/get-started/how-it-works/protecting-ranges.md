@@ -19,7 +19,7 @@ The figure and steps below explain how range protection works in ONLYOFFICE Docs
 
 2. In the configuration script for **document editor** initialization, add an [onRequestUsers](../../usage-api/config/events.md#onrequestusers) event handler. When the user opens *Protection -> Protect Range*, clicks *New*, and starts typing in the *Who can edit* field, this event fires with `data.c` set to `protect`. The handler calls the [setUsers](../../usage-api/methods.md#setusers) method to supply the list of users who can be granted editing rights:
 
-   <img alt="Grant access" src="/assets/images/editor/protect-range.png" width="292px" />
+   ![Grant access](/assets/images/editor/protect-range.png#gh-light-mode-only)![Grant access](/assets/images/editor/protect-range.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestUsers(event) {

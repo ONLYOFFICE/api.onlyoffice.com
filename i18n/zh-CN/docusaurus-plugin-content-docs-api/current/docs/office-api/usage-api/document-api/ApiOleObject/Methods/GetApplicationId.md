@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中 OLE 对象的应用程序 ID。
+读取文档中嵌入的 OLE 对象的应用程序 ID。
 
 ```javascript editor-docx
-// How to get an application ID of the OLE object in a document.
+// How do I retrieve the application identifier from an OLE object in a document?
 
-// Display the application ID of the OLE object in a document.
+// Inspect which application is associated with an embedded object by displaying its ID in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

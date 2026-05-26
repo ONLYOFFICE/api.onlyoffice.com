@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Subscribe to the "onWorksheetChange" event in a spreadsheet.
+Subscribe to a change notification so code runs automatically when cells are edited in a spreadsheet.
 
 ```javascript editor-xlsx
-// Attach an event in a spreadsheet.
+// How do I run custom code whenever a cell value changes in a spreadsheet?
 
-// How to start event handling in a spreadsheet.
+// React to user edits without polling by registering a listener for worksheet changes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

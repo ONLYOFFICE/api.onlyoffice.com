@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中设置字段为必填。
+在 PDF 中将表单字段标记为必填。
 
 ```javascript editor-pdf
-// How to set required for a base field in a PDF document?
+// How do I make a form field required in a PDF?
 
-// Set required and display the result in a PDF document.
+// Check whether a field is marked as required in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

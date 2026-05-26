@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中为当前段落设置指定的节。
+为文档中的段落分配节。
 
 ```javascript editor-docx
-// How to set section to the paragraph in a document.
+// How do I attach a page section to a specific paragraph in a document?
 
-// Add the section to the text in a document.
+// Group paragraphs under a named section with custom page settings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

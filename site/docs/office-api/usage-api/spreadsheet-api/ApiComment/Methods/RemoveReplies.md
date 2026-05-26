@@ -24,12 +24,12 @@ This method doesn't return any data.
 
 ## Example
 
-Remove the specified comment replies in a spreadsheet.
+Delete selected replies from a comment thread in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove replies from the comment in a spreadsheet.
+// How do I remove one or more specific replies from a comment in a spreadsheet?
 
-// Add a comment and replies to it, then remove specified reply and then show replies count in a spreadsheet.
+// Clean up a comment thread by erasing unwanted replies and confirming the remaining count in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

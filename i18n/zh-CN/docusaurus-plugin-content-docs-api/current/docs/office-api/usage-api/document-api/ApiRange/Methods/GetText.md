@@ -29,12 +29,12 @@ string
 
 ## 示例
 
-从文档中的指定范围获取文本。
+读取文档中所选文本区域的纯文本内容。
 
 ```javascript editor-docx
-// How to get a raw text from the characters in a document.
+// How do I extract the actual words from a highlighted portion of content in a document?
 
-// Retrieve a text from the character collection in a document.
+// Pull out the written content of a bounded selection for display or further use in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

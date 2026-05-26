@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前主题格式方案设置名称。
+为演示文稿中的主题格式方案分配名称。
 
 ```javascript editor-pptx
-// How to set a format scheme name.
+// How do I give a name to a format scheme in a presentation?
 
-// Create new format scheme and set its name.
+// Label a theme format scheme with a custom name in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

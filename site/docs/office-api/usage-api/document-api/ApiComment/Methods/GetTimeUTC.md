@@ -20,12 +20,12 @@ Number
 
 ## Example
 
-Get the timestamp of the comment creation in UTC format in a document.
+Read the creation timestamp of a comment in UTC format in a document.
 
 ```javascript editor-docx
-// How to know when a comment was added in a document.
+// How do I get the UTC creation time of a comment in a document?
 
-// Get all comments from the presentation and the first one's time of creation in UTC format.
+// Store or compare comment timestamps across time zones using a UTC-normalized value.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

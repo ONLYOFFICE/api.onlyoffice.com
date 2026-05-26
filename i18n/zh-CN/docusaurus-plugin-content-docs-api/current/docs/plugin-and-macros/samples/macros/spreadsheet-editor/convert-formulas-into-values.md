@@ -10,7 +10,7 @@ hide_table_of_contents: true
 该宏是通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)从 VBA 代码转换而来。
 :::
 
-``` ts
+```ts
 (function(){
     // 获取当前活动工作表
     var oWorksheet = Api.GetActiveSheet();
@@ -43,4 +43,11 @@ End Sub
 
 ## 结果
 
-![公式转换数值](/assets/images/plugins/convert-formulas-into-values.png#gh-light-mode-only)![公式转换数值](/assets/images/plugins/convert-formulas-into-values.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/convert-formulas-into-values.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

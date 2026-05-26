@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get a limit of the text field characters in a document.
+Read the maximum number of characters allowed in a text field in a document.
 
 ```javascript editor-docx
-// How to display the characters limit of the text form.
+// How do I check how many characters a text entry area is limited to in a document?
 
-// Get the maximum number of characters that can be inserted to the text form.
+// Verify the character cap set on a text field to ensure input constraints are correct in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "cellWidth": 3, "multiLine": false, "autoFit": false});

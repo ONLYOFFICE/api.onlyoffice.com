@@ -20,12 +20,12 @@ expression.GetCurrentRun();
 
 ## 示例
 
-返回文档内容中的当前 run。
+访问演示文稿中形状内容中的当前文本运行。
 
 ```javascript editor-pptx
-// How to get current run for a document content?
+// How do I get the text run where the cursor is positioned in a shape in a presentation?
 
-// Get current run and display the result in a presentation.
+// Retrieve the active text run from a shape and add text to it.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

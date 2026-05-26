@@ -14,7 +14,7 @@ expression.ISTEXT(arg1);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | The value to test. The value can be an empty cell, error, logical value, text, number, range, or range name. |
+| arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | The value to test. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Check whether a value is text, and return true or false in a spreadsheet.
+Determine whether a cell contains text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know whether a value is a text in a spreadsheet.
+// How do I check if a cell holds text rather than numbers in a spreadsheet?
 
-// Use a function to find out whether a value is a text in a spreadsheet.
+// Use a function to filter text values from numeric and empty cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

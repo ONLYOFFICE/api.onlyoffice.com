@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其显示方式。
+检索 PDF 中注释的显示首选项设置。
 
 ```javascript editor-pdf
-// How do I get the display in a PDF document?
+// How is the visibility of an annotation configured in a PDF?
 
-// Get the display using an annotation object in a PDF document.
+// Check whether an annotation is displayed or hidden in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

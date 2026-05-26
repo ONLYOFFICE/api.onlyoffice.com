@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将当前幻灯片移动到同一集合中的特定位置。
+将幻灯片移动到演示文稿中的特定位置。
 
 ```javascript editor-pptx
-// How to move a slide to the position index.
+// Create a new slide and add it to the presentation.
 
-// Create a slide and change its position.
+// Reposition the slide using the MoveTo method.
 
 const presentation = Api.GetPresentation();
 const slide = Api.CreateSlide();

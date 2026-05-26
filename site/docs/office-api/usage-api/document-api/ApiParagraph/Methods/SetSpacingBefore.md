@@ -8,12 +8,12 @@ Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBe
 
 ## Example
 
-Set the spacing before the current paragraph in a document.
+Add extra space above a paragraph to separate it from the content that precedes it in a document.
 
 ```javascript editor-docx
-// How to set the size of a spacing before a text from a paragraph properties in a document.
+// How do I control the amount of space before a paragraph in a document?
 
-// Change the size property of a spacing before a paragraph in a document.
+// Create a visual gap above a paragraph so it stands apart from the text above it.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

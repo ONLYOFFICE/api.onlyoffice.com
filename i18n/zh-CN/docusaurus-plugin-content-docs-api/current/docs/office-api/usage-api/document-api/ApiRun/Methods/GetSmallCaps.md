@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查当前表单是否为小型大写字母。
+确定文档中的文本运行是否格式化为小型大写字母。
 
 ```javascript editor-docx
-// How to find out whether a text is ucapitalized or not in a document.
+// How do I check if a piece of text uses small caps formatting in a document?
 
-// Get the property of the text that shows whether a text is in lowercase in a document.
+// Verify whether lowercase letters are displayed as reduced capitals in a text run in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

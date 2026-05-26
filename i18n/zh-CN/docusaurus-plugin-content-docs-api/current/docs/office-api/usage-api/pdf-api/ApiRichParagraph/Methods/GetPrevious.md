@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取 PDF 文档中的上一个富文本段落并向其添加文本。
+访问 PDF 中的前一个段落并修改。
 
 ```javascript editor-pdf
-// How do I get previous in a PDF document?
+// How do I get the previous paragraph in a PDF?
 
-// Get previous using a rich paragraph object in a PDF document.
+// Navigate backward to the previous paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

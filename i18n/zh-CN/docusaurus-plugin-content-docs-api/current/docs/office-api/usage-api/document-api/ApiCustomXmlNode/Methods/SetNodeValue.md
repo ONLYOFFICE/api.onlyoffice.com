@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-获取文档中自定义 XML 节点的 XPath。
+替换文档中存储的 XML 节点的原始值。
 
 ```javascript editor-docx
-// How to set node value for a custom XML node in a document?
+// How do I overwrite the content of a node in the embedded XML data in a document?
 
-// Set node value and display the result in a document.
+// Refresh a node's payload with updated markup when the stored data changes in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

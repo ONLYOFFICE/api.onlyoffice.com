@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-使用单元格中的位置添加段落。
+在文档中表格单元格内的特定位置放置新段落。
 
 ```javascript editor-docx
-// Insert new paragraph into the current cell.
+// How do I insert a paragraph at a chosen spot within a table cell in a document?
 
-// Get the cell, add an element to it.
+// Populate a cell with a paragraph of text by targeting its exact index in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -39,5 +39,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.png#gh-light-mode-only)
-![BulletPointFormatter](/assets/images/plugins/bullet-point-formatter.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/format-bullet-points.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/format-bullet-points.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-在文档中将表格对象转换为 JSON 对象。
+将表格格式设置保存为文档中的可移植数据结构。
 
 ```javascript editor-docx
-// How to get a JSON from the table properties in a document.
+// How do I export table style properties so they can be stored or reused in a document?
 
-// Convert the table property to json and add it to the document.
+// Serialize the table property configuration into a transferable format in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

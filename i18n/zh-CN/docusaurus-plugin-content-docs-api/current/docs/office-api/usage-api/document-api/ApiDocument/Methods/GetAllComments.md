@@ -20,12 +20,12 @@ expression.GetAllComments();
 
 ## 示例
 
-获取文档中当前文档的所有批注。
+从文档中检索所有批注并读取第一个批注的类类型。
 
 ```javascript editor-docx
-// Get all comments added to the document.
+// How do I get every comment in a document so I can inspect or process them in a document?
 
-// How to retrieve all comments and display the class type of the first one in a document.
+// Confirm the type of a comment object after collecting the full set of reviewer annotations in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

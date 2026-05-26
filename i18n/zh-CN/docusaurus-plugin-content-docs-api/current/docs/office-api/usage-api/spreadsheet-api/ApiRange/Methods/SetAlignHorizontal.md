@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置单元格范围中文本的水平对齐方式。
+在电子表格中的单元格范围内水平对齐文本。
 
 ```javascript editor-xlsx
-// How to change the horizontal alignment of the cell content.
+// How do I center or justify text across a group of cells in a spreadsheet?
 
-// Change the horizontal alignment of the cell range content to center.
+// Control whether cell content sits to the left, center, or right within each cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

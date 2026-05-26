@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中渐变光圈返回的类类型。
+读取文档中渐变光圈对象的类类型。
 
 ```javascript editor-docx
-// How do I check what type a gradient stop object is in a document?
+// How do I get the class type of a gradient stop in a document?
 
-// Retrieve and output the class type string for a gradient stop in a document.
+// Confirm the object category of a gradient stop when working with mixed fill types in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

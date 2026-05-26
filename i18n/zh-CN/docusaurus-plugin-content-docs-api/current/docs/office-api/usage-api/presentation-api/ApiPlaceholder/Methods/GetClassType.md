@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查演示文稿中占位符返回的类类型。
+识别演示文稿中占位符的类类型。
 
 ```javascript editor-pptx
-// How do I check what type a placeholder object is in a presentation?
+// How do I determine what class a placeholder belongs to in a presentation?
 
-// Retrieve and output the class type string for a placeholder in a presentation.
+// Create a placeholder and retrieve its class type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

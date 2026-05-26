@@ -24,12 +24,12 @@ expression.AddComment(sText, sAuthor, sUserId);
 
 ## 示例
 
-在文档中向范围添加批注。
+在文档中为选定的文本部分附加审阅批注。
 
 ```javascript editor-docx
-// How to comment a range of document.
+// How do I add a comment with an author name to a text selection in a document?
 
-// Insert a comment into the 'ONLYOFFICE' range and add an author to it in a document.
+// Annotate a passage with feedback and an author attribution in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

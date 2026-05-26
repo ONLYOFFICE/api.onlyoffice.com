@@ -20,12 +20,12 @@ expression.GetPrevious();
 
 ## 示例
 
-获取文档中的上一行。
+访问文档中紧接在给定行之前的行。
 
 ```javascript editor-docx
-// Get the previous row from the current row in a document.
+// How do I move from one row to the row directly above it in a document?
 
-// Display the second and the first row in a document.
+// Navigate backward through table rows to reach the one before the current position in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get a type of the named range class in a spreadsheet.
+Read the label assigned to a named range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve name of named range class object in a spreadsheet.
+// How do I find out what a named range is called in a spreadsheet?
 
-// Get name of a specified object in a spreadsheet.
+// Retrieve the text name of a range to display or compare it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

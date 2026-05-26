@@ -14,8 +14,8 @@ expression.AddElement(oElement, nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果段落不支持 oElement 类型，则返回 false。 |
-| nPos | 可选 | number |  | 将添加当前元素的位置。如果未指定此值，则元素将添加到当前段落的末尾。 |
+| oElement | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 将在当前位置添加的文档元素。如果 |
+| nPos | 可选 | number |  | 将添加当前元素的位置。如果此值不 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在演示文稿中向段落添加 run。
+在演示文稿中将文本元素插入段落。
 
 ```javascript editor-pptx
-// Insert a text run to the paragraph object in a presentation.
+// How do I add styled text to a paragraph in a presentation?
 
-// How to add the text run object to the slide.
+// Add a run with specific formatting to a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

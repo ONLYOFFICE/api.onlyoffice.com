@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a fill in a PDF document.
+Determine the class category of a fill style in a PDF.
 
 ```javascript editor-pdf
-// How to identify the class type of a fill in a PDF document?
+// How do I identify what kind of fill is applied to a shape in a PDF?
 
-// Obtain the class type identifier of a fill object in a PDF document.
+// Retrieve the classification of a fill pattern in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

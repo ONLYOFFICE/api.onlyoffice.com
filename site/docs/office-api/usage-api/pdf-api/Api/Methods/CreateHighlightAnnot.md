@@ -25,7 +25,7 @@ expression.CreateHighlightAnnot(rect);
 Create a highlight annotation and add it to the page.
 
 ```javascript editor-pdf
-// How to create the highlight annot in a PDF document?
+// Create the highlight annot in a PDF document.
 
 // Create the highlight annot using the PDF document API.
 

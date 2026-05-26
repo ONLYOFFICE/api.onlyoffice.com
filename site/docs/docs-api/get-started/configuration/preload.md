@@ -12,7 +12,7 @@ Two options are available.
 
 Append the `?preload=placeholder` parameter to the `api.js` URL:
 
-``` html
+```html
 <div id="placeholder"></div>
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js?preload=placeholder"></script>
 ```
@@ -29,7 +29,7 @@ When this script loads, in addition to providing the [`DocsAPI.DocEditor`](../..
 
 Alternatively, you can insert a hidden `<iframe>` pointing to the preload page manually:
 
-``` html
+```html
 <iframe src="https://documentserver/web-apps/apps/api/documents/preload.html" style="display:none;"></iframe>
 ```
 

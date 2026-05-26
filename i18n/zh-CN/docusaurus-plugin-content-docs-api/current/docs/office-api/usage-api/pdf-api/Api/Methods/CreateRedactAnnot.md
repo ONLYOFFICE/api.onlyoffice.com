@@ -22,12 +22,12 @@ expression.CreateRedactAnnot(rect);
 
 ## 示例
 
-创建密文注释并将其添加到页面。
+在 PDF 页面添加涂黑注释。
 
 ```javascript editor-pdf
-// How do I create the redact annot in a PDF document?
+// How do I mark content for permanent removal in a PDF?
 
-// Create the redact annot and display the result in a PDF document.
+// Create a redaction area that obscures text or content in a PDF.
 
 let doc = Api.GetDocument();
 let redactAnnot = Api.CreateRedactAnnot([[85.04985826771654,56.70000000000001,229.27237795275593,56.70000000000001,85.04985826771654,70.9988031496063,229.27237795275593,70.9988031496063]]);

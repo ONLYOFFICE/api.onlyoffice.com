@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中为复选框字段组添加选项。
+在 PDF 中向复选框字段添加可选选项。
 
 ```javascript editor-pdf
-// How do I add the option in a PDF document?
+// How do I create multiple choices for a checkbox field in a PDF?
 
-// Add the option using a checkbox field object in a PDF document.
+// Create an additional choice that users can select in a checkbox field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

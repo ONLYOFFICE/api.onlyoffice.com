@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回分钟数，0 到 59 的数字。
+从电子表格中的时间值提取分钟。
 
 ```javascript editor-xlsx
-// How to get a minute from a time in a spreadsheet.
+// What minute does a time represent in a spreadsheet?
 
-// Use a function to get minutes from a time object in a spreadsheet.
+// Get the minute portion as a number from a time in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

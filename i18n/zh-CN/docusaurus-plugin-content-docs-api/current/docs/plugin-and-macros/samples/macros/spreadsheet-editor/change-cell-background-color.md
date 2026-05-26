@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 将单元格 **B3** 的背景颜色设置为蓝色。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("B3").SetFillColor(Api.CreateColorFromRGB(0, 0, 250));
@@ -25,4 +25,11 @@ End Sub
 
 ## 结果
 
-![Background color](/assets/images/plugins/background-color.png#gh-light-mode-only)![Background color](/assets/images/plugins/background-color.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/change-cell-background-color.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/change-cell-background-color.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

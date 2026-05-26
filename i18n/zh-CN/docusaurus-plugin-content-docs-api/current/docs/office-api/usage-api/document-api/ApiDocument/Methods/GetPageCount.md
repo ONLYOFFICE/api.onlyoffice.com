@@ -21,12 +21,12 @@ number
 
 ## 示例
 
-获取文档中当前文档的页数。
+计算文档中的总页数。
 
 ```javascript editor-docx
-// How to count the number of pages in the document.
+// How do I find out how many pages a document has in a document?
 
-// Display the number of pages of the document.
+// Insert the page count as readable text so readers see it at a glance in a document.
 
 let doc = Api.GetDocument();
 let pageCount = doc.GetPageCount();

@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 计算电子表格中所有高亮单元格的数值总和。
 
-``` ts
+```ts
 (function () {
     let worksheet = Api.GetActiveSheet();
     let range1 = worksheet.GetRange("B1"); // 设置用于颜色参考的单元格范围
@@ -61,4 +61,11 @@ End Sub
 
 ## 结果
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/sum-of-highlighted-cells.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/sum-of-highlighted-cells.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

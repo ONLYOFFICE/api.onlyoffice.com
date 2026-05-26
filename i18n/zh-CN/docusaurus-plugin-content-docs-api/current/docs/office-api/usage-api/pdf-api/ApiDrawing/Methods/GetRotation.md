@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-如何从 PDF 文档中的绘图对象获取旋转角度。
+查找 PDF 中形状的旋转角度。
 
 ```javascript editor-pdf
-// Get drawing rotate in a PDF document.
+// How do I see how many degrees a shape is turned in a PDF?
 
-// Get the rotation for a drawing object in a PDF document.
+// Check how much an object is rotated from its default position in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

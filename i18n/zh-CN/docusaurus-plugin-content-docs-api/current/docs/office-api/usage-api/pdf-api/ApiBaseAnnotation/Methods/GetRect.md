@@ -20,12 +20,12 @@ expression.GetRect();
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其矩形。
+获取 PDF 中注释的矩形边界。
 
 ```javascript editor-pdf
-// How to get the rect for an annotation in a PDF document?
+// What is the area occupied by an annotation in a PDF?
 
-// Get the rect and display the result in a PDF document.
+// Read the bounding rectangle coordinates of an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

@@ -22,12 +22,12 @@ JSON
 
 ## Example
 
-Convert the inline content control object into the JSON object in a document.
+Serialize an inline content control to JSON and restore it in a document.
 
 ```javascript editor-docx
-// How to get a JSON from the inline text control in a document.
+// How do I convert an inline content control to JSON format in a document?
 
-// Convert the inline text control to json and add it to the paragraph in a document.
+// Preserve and reuse a configured inline content control by round-tripping it through JSON in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

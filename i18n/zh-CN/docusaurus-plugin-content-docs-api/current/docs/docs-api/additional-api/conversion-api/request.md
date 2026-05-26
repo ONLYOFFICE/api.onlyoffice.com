@@ -28,23 +28,23 @@ import APITable from '@site/src/components/APITable/APITable';
 
 | Parameter | Type | Presence | Description |
 | --------- | ---- | -------- | ----------- |
-| async | boolean | optional | 定义转换请求类型：异步与否。支持的值：**true**，**false**。使用异步请求类型时，响应立即形成。在这种情况下，要获得结果，必须在转换完成之前发送不更改参数的请求。默认值为 **false**。 |
-| codePage | integer | optional | 定义从 *csv* 或 *txt* 格式转换时的文件编码。主要支持的值：**932** - 日语 (Shift-JIS)，**950** - 繁体中文 (Big5)，**1250** - 中欧 (Windows)，**1251** - 西里尔字母 (Windows)，**65001** - Unicode (UTF-8)。您可以在[此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。 |
-| delimiter | integer | optional | 定义从 *csv* 格式转换时用于分隔值的定界符。支持的值：**0** - 没有定界符，**1** - 制表符，**2** - 分号，**3** - 冒号，**4** - 逗号，**5** - 空格。 |
-| documentLayout | object | optional | 定义文档布局，该布局指定参数，用于说明将表单打印为 *pdf* 文档还是图像。 |
-| documentLayout.drawPlaceHolders | boolean | optional | 定义是否将绘制占位符。 |
-| documentLayout.drawFormHighlight | boolean | optional | 定义表单是否突出显示。 |
-| documentLayout.isPrint | boolean | optional | 定义打印模式是打开还是关闭。此参数仅用于将 *docx* 转换为 *pdf*。如果此参数等于 **true**，则使用 *drawPlaceHolders* 和 *drawFormHighlight* 标志，如上所述。如果此参数为 **false**，则 *drawFormHighlight* 标志不起作用，并且 *drawPlaceHolders* 参数允许将表单保存为 *pdf* 格式。默认值为 **false**。 |
-| documentRenderer | object | optional | 定义从 *pdf*、*xps*、*oxps* 转换时的文档渲染器。 |
-| documentRenderer.textAssociation | string | optional | 定义渲染模式：**blockChar** - 所有文本都由单个字符转换，**blockLine** - 所有文本都由单独的行转换，**plainLine** - 所有文本都转换为纯文本，每行作为单独的段落，**plainParagraph** - 所有文本都转换为纯文本，行被组合成段落。默认值为 **plainLine**。 |
-| filetype | string | required | 定义要转换的文档文件的类型。 |
-| key | string | required | 定义文档标识符，用于明确标识文档文件。 |
-| outputtype | string | required | 定义生成的转换文档类型。从 7.0 版开始，可以指定文件格式而不是扩展名：**ooxml**（转换为 *docx*、*docm*、*xlsx*、*xlsm*、*pptx* 或 *pptm*），**odf**（转换为 *odt*、*ods* 或 *odp*）。 |
-| password | string | optional | 如果文件有密码保护，则定义文件的密码。转换后的文件没有密码。 |
-| pdf | object | optional | 定义将文档文件转换为 pdf 的设置。 |
-| pdf.form | boolean | optional | 定义文档是否转换为 *pdf* 格式（**true**）或常规 *pdf* 文件（**false**）。如果省略此参数，则不会更改文档内容。 |
-| region | string | optional | 定义从*电子表格*格式转换为 *pdf* 时货币、日期和时间的默认显示格式。使用四个字母（**en-US**、**fr-FR** 等）语言代码设置。默认值为 **en-US**。 |
-| spreadsheetLayout | object | optional | 定义将电子表格转换为 pdf 的设置。 |
+| async | boolean | optional | 转换请求类型：异步与否。支持的值：**true**，**false**。使用异步请求类型时，响应立即形成。在这种情况下，要获得结果，必须在转换完成之前发送不更改参数的请求。默认值为 **false**。 |
+| codePage | integer | optional | 从 *csv* 或 *txt* 格式转换时的文件编码。主要支持的值：**932** - 日语 (Shift-JIS)，**950** - 繁体中文 (Big5)，**1250** - 中欧 (Windows)，**1251** - 西里尔字母 (Windows)，**65001** - Unicode (UTF-8)。您可以在[此文件](https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js)中找到所有支持的值。 |
+| delimiter | integer | optional | 从 *csv* 格式转换时用于分隔值的定界符。支持的值：**0** - 没有定界符，**1** - 制表符，**2** - 分号，**3** - 冒号，**4** - 逗号，**5** - 空格。 |
+| documentLayout | object | optional | 文档布局，该布局指定参数，用于说明将表单打印为 *pdf* 文档还是图像。 |
+| documentLayout.drawPlaceHolders | boolean | optional | 是否将绘制占位符。 |
+| documentLayout.drawFormHighlight | boolean | optional | 表单是否突出显示。 |
+| documentLayout.isPrint | boolean | optional | 打印模式是打开还是关闭。此参数仅用于将 *docx* 转换为 *pdf*。如果此参数等于 **true**，则使用 *drawPlaceHolders* 和 *drawFormHighlight* 标志，如上所述。如果此参数为 **false**，则 *drawFormHighlight* 标志不起作用，并且 *drawPlaceHolders* 参数允许将表单保存为 *pdf* 格式。默认值为 **false**。 |
+| documentRenderer | object | optional | 从 *pdf*、*xps*、*oxps* 转换时的文档渲染器。 |
+| documentRenderer.textAssociation | string | optional | 渲染模式：**blockChar** - 所有文本都由单个字符转换，**blockLine** - 所有文本都由单独的行转换，**plainLine** - 所有文本都转换为纯文本，每行作为单独的段落，**plainParagraph** - 所有文本都转换为纯文本，行被组合成段落。默认值为 **plainLine**。 |
+| filetype | string | required | 要转换的文档文件的类型。 |
+| key | string | required | 文档标识符，用于明确标识文档文件。 |
+| outputtype | string | required | 生成的转换文档类型。从 7.0 版开始，可以指定文件格式而不是扩展名：**ooxml**（转换为 *docx*、*docm*、*xlsx*、*xlsm*、*pptx* 或 *pptm*），**odf**（转换为 *odt*、*ods* 或 *odp*）。 |
+| password | string | optional | 文件有密码保护时的密码。转换后的文件没有密码。 |
+| pdf | object | optional | 将文档文件转换为 pdf 的设置。 |
+| pdf.form | boolean | optional | 文档是否转换为 *pdf* 格式（**true**）或常规 *pdf* 文件（**false**）。如果省略此参数，则不会更改文档内容。 |
+| region | string | optional | 从*电子表格*格式转换为 *pdf* 时货币、日期和时间的默认显示格式。使用四个字母（**en-US**、**fr-FR** 等）语言代码设置。默认值为 **en-US**。 |
+| spreadsheetLayout | object | optional | 将电子表格转换为 pdf 的设置。 |
 | spreadsheetLayout.fitToHeight | integer | optional | 设置转换区域的高度，以页数为单位。默认值为 **0**。 |
 | spreadsheetLayout.fitToWidth | integer | optional | 设置转换区域的宽度，以页数为单位。默认值为 **0**。 |
 | spreadsheetLayout.gridLines | boolean | optional | 允许在输出 PDF 文件中包含或不包含网格线。默认值为 **false**。 |
@@ -60,38 +60,38 @@ import APITable from '@site/src/components/APITable/APITable';
 | spreadsheetLayout.pageSize.height | string | optional | 设置输出 PDF 文件的页面高度。默认值为 **297mm**。 |
 | spreadsheetLayout.pageSize.width | string | optional | 设置输出 PDF 文件的页面宽度。默认值为 **210mm**。 |
 | spreadsheetLayout.scale | integer | optional | 允许设置输出 PDF 文件的缩放比例。默认值为 **100**。 |
-| thumbnail | object | optional | 在将图像格式（*bmp*、*gif*、*jpg*、*png*）指定为 *outputtype* 时，定义缩略图的设置。 |
-| thumbnail.aspect | integer | optional | 定义使图像适合指定的高度和宽度的模式：**0** - 拉伸文件以适应高度和宽度，**1** - 保持图像的外观，**2** - 页面的米制尺寸被转换为 96dpi 的像素。默认值为 **2**。 |
-| thumbnail.first | boolean | optional | 定义是否应仅为首页或所有文档页面生成缩略图。如果为 false，将创建包含所有页面缩略图的 zip 存档。默认值为 **true**。 |
-| thumbnail.height | integer | optional | 以像素为单位定义缩略图高度。默认值为 **100**。 |
-| thumbnail.width | integer | optional | 以像素为单位定义缩略图宽度。默认值为 **100**。 |
-| title | string | optional | 定义转换后的文件名。 |
-| token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#convert-document)的形式定义添加到 **ONLYOFFICE 文档**配置的加密签名。 |
-| url | string | required | 定义要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。 |
-| watermark | object | optional | 定义一个 JSON 对象，其中包含水印的[属性](../../../plugin-and-macros/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)，在转换过程中将其插入到 pdf 和图像文件中。 |
-| watermark.align | integer | optional | 定义水印形状中的垂直文本对齐方式：**0** - 底部、**1** - 中心、**4** - 顶部。 |
-| watermark.fill | integer[] \| string | optional | 以 RGB 格式定义水印填充颜色，或图像的 URL（base64 支持：*data:image/png;...*）。空数组 \[] 表示水印没有填充。 |
-| watermark.height | integer | optional | 定义以毫米为单位测量的水印高度。 |
-| watermark.margins | integer[] | optional | 定义水印形状中的文本边距（以毫米为单位）。 |
-| watermark.paragraphs | object[] | optional | 使用当前水印中的段落及其属性定义数组。 |
-| watermark.paragraphs.align | integer | optional | 定义当前段落中的水平文本对齐方式：**0** - 右、**1** - 左、**2** - 居中、**3** - 两端对齐。 |
-| watermark.paragraphs.fill | integer[] | optional | 以 RGB 格式定义段落突出显示。空数组 \[] 表示该段落不突出显示。 |
-| watermark.paragraphs.linespacing | integer | optional | 定义当前段落中的文本行间距。 |
-| watermark.paragraphs.runs | object[] | optional | 定义包含当前段落中的 runs 及其属性的数组。 |
-| watermark.paragraphs.runs.bold | boolean | optional | 定义当前文本是否显示为粗体。 |
-| watermark.paragraphs.runs.fill | integer[] | optional | 以 RGB 格式定义文本突出显示。空数组 \[] 表示文本不突出显示。 |
-| watermark.paragraphs.runs.font-family | string | optional | 定义文本字体系列。 |
-| watermark.paragraphs.runs.font-size | string | optional | 定义以磅 (pt) 为单位测量的文本字体大小。 |
-| watermark.paragraphs.runs.italic | boolean | optional | 定义当前文本是否显示为斜体。 |
-| watermark.paragraphs.runs.strikeout | boolean | optional | 定义当前文本是否显示为删除线。 |
-| watermark.paragraphs.runs.text | string | optional | 定义 run 文本。 |
-| watermark.paragraphs.runs.underline | boolean | optional | 定义当前文本是否显示下划线。 |
-| watermark.rotate | integer | optional | 定义水印旋转角度（以度为单位）。 |
-| watermark.stroke | integer[] | optional | 以 RGB 格式定义水印描边颜色。空数组 \[] 表示水印笔划没有填充。 |
-| watermark.stroke-width | integer | optional | 定义以毫米为单位测量的水印描边宽度。 |
-| watermark.transparent | float | optional | 定义水印透明度。 |
-| watermark.type | string | optional | 定义指定当前水印的预设形状几何形状的[形状类型](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md)。 |
-| watermark.width | integer | optional | 定义以毫米为单位测量的水印宽度。 |
+| thumbnail | object | optional | 在将图像格式（*bmp*、*gif*、*jpg*、*png*）指定为 *outputtype* 时的缩略图设置。 |
+| thumbnail.aspect | integer | optional | 使图像适合指定的高度和宽度的模式：**0** - 拉伸文件以适应高度和宽度，**1** - 保持图像的外观，**2** - 页面的米制尺寸被转换为 96dpi 的像素。默认值为 **2**。 |
+| thumbnail.first | boolean | optional | 是否应仅为首页或所有文档页面生成缩略图。如果为 false，将创建包含所有页面缩略图的 zip 存档。默认值为 **true**。 |
+| thumbnail.height | integer | optional | 缩略图高度（以像素为单位）。默认值为 **100**。 |
+| thumbnail.width | integer | optional | 缩略图宽度（以像素为单位）。默认值为 **100**。 |
+| title | string | optional | 转换后的文件名。 |
+| token | string | required by configuration | 以[令牌](../signature/request/token-in-body.md#convert-document)的形式添加到 **ONLYOFFICE 文档**配置的加密签名。 |
+| url | string | required | 要转换的文档的绝对 URL。使用本地链接时请务必添加[令牌](../../get-started/how-it-works/security.md)。否则会出现错误。 |
+| watermark | object | optional | 一个 JSON 对象，其中包含水印的[属性](../../../plugin-and-macros/interacting-with-editors/document-api/Enumeration/watermark_on_draw.md)，在转换过程中将其插入到 pdf 和图像文件中。 |
+| watermark.align | integer | optional | 水印形状中的垂直文本对齐方式：**0** - 底部、**1** - 中心、**4** - 顶部。 |
+| watermark.fill | integer[] \| string | optional | 以 RGB 格式表示的水印填充颜色，或图像的 URL（base64 支持：*data:image/png;...*）。空数组 \[] 表示水印没有填充。 |
+| watermark.height | integer | optional | 以毫米为单位测量的水印高度。 |
+| watermark.margins | integer[] | optional | 水印形状中的文本边距（以毫米为单位）。 |
+| watermark.paragraphs | object[] | optional | 当前水印中的段落及其属性的数组。 |
+| watermark.paragraphs.align | integer | optional | 当前段落中的水平文本对齐方式：**0** - 右、**1** - 左、**2** - 居中、**3** - 两端对齐。 |
+| watermark.paragraphs.fill | integer[] | optional | 以 RGB 格式表示的段落高亮。空数组 \[] 表示该段落不突出显示。 |
+| watermark.paragraphs.linespacing | integer | optional | 当前段落中的文本行间距。 |
+| watermark.paragraphs.runs | object[] | optional | 包含当前段落中的 runs 及其属性的数组。 |
+| watermark.paragraphs.runs.bold | boolean | optional | 当前文本是否显示为粗体。 |
+| watermark.paragraphs.runs.fill | integer[] | optional | 以 RGB 格式表示的文本高亮。空数组 \[] 表示文本不突出显示。 |
+| watermark.paragraphs.runs.font-family | string | optional | 文本字体系列。 |
+| watermark.paragraphs.runs.font-size | string | optional | 以磅 (pt) 为单位测量的文本字体大小。 |
+| watermark.paragraphs.runs.italic | boolean | optional | 当前文本是否显示为斜体。 |
+| watermark.paragraphs.runs.strikeout | boolean | optional | 当前文本是否显示为删除线。 |
+| watermark.paragraphs.runs.text | string | optional |  run 文本。 |
+| watermark.paragraphs.runs.underline | boolean | optional | 当前文本是否显示下划线。 |
+| watermark.rotate | integer | optional | 水印旋转角度（以度为单位）。 |
+| watermark.stroke | integer[] | optional | 以 RGB 格式表示的水印描边颜色。空数组 \[] 表示水印笔划没有填充。 |
+| watermark.stroke-width | integer | optional | 以毫米为单位测量的水印描边宽度。 |
+| watermark.transparent | float | optional | 水印透明度。 |
+| watermark.type | string | optional | 指定当前水印的预设形状几何形状的[形状类型](../../../office-api/usage-api/document-api/Enumeration/ShapeType.md)。 |
+| watermark.width | integer | optional | 以毫米为单位测量的水印宽度。 |
 
 ```mdx-code-block
 </APITable>
@@ -115,7 +115,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了将 *docx* 文件转换为 *pdf* 格式的基本请求。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -132,7 +132,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *password* 参数将受密码保护的 *docx* 文件转换为 *pdf* 格式。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -150,7 +150,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *pdf.form* 参数将 *docx* 文件转换为可填写的 *pdf* 表单。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -170,7 +170,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *watermark* 参数将 *docx* 文件转换为带水印的 *pdf* 格式。
 
-``` json
+```json
 {
   "async": false,
   "filetype": "docx",
@@ -221,7 +221,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *thumbnail* 参数从 *docx* 文件生成 *png* 缩略图。
 
-``` json
+```json
 {
   "filetype": "docx",
   "key": "Khirz6zTPdfd7",
@@ -243,7 +243,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 *spreadsheetLayout* 参数将电子表格文件转换为 *pdf* 格式。
 
-``` json
+```json
 {
   "filetype": "xlsx",
   "key": "Khirz6zTPdfd7",
@@ -279,7 +279,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 此示例展示了如何使用 JSON Web Token 进行身份验证，将 *docx* 文件转换为 *pdf* 格式。
 
-``` json
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }

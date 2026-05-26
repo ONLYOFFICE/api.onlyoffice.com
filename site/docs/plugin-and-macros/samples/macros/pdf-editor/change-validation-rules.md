@@ -39,5 +39,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![ChangeValidationRules](/assets/images/plugins/change-validation-rules.png#gh-light-mode-only)
-![ChangeValidationRules](/assets/images/plugins/change-validation-rules.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/change-validation-rules.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/change-validation-rules.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all images from the current presentation in a presentation.
+Find all image files in a presentation.
 
 ```javascript editor-pptx
-// How to get all images for a presentation?
+// How do I access every picture I inserted in a presentation?
 
-// Get all images and display the result in a presentation.
+// Count images and display the total in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

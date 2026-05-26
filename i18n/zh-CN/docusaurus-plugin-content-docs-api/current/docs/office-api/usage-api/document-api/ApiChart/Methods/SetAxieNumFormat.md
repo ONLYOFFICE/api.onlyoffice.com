@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为轴值设置指定的数字格式。
+格式化文档中图表轴上显示的数字。
 
 ```javascript editor-docx
-// How to set number format style to the axis.
+// How do I control how axis values are formatted on a chart in a document?
 
-// Create a chart and format its axis numbering.
+// Display axis labels with a fixed decimal precision to improve chart readability in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

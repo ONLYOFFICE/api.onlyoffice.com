@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetCell(nRow, nCell);
+expression.GetCell(rowIndex, cellIndex);
 ```
 
 `expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
@@ -14,21 +14,21 @@ expression.GetCell(nRow, nCell);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nRow | 必需 | number |  | 指定单元格所在的当前表格中的行位置。 |
-| nCell | 必需 | number |  | 当前表格中的单元格位置。 |
+| rowIndex | 必需 | number |  | 当前表格中的行索引。 |
+| cellIndex | 必需 | number |  | 指定行中的单元格索引。 |
 
 ## 返回值
 
-[ApiTableCell](../../ApiTableCell/ApiTableCell.md) \| null
+[ApiTableCell](../../ApiTableCell/ApiTableCell.md)
 
 ## 示例
 
-通过位置获取文档中的单元格。
+通过行和列位置访问文档中的特定单元格。
 
 ```javascript editor-docx
-// How to get cell from the table.
+// How do I retrieve a particular cell from a table in a document?
 
-// Get the first table cell and add text to it.
+// Target an individual cell using its coordinates to write content in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

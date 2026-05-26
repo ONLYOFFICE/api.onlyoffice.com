@@ -154,7 +154,7 @@ sidebar_position: -10
 
 要启用此模式，请使用 *document.permissions.fillForms* 参数：
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -190,7 +190,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您需要将 *document.permission.edit* 和document.permission.comment *document.permission.comment* 参数都设置为 **true**，以便用户能够编辑文档和评论。这种情况下的配置将如下所示：
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -234,7 +234,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 这种情况下的配置将如下所示：
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -258,7 +258,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您需要将 *document.permission.download* 设置为 **false**，以便从文档**文件**菜单（如果 *document.permission.edit* 参数设置为 **true** ）或顶部工具栏中删除**下载为...**选项（如果 *document.permission.edit* 设置为 **false** 并且该文件仅供查看），并且用户无法从编辑器下载该文档。这种情况下的*权限*配置将如下所示：
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -278,7 +278,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您需要将 *document.permission.print* 设置为 **false**，以便从文档 **文件** 菜单（如果 *document.permission.edit* 参数设置为 **true**）或顶部工具栏（如果 *document.permission.edit* 设置为 **false** 并且该文件仅供查看）移除**打印**选项,并且用户无法从编辑器中打印出该文档。这种情况下的*权限*配置将如下所示：
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -308,7 +308,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 *sharingSettings* 配置可能如下所示：
 
-``` ts
+```ts
 const config = {
   document: {
     info: {
@@ -336,7 +336,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 默认情况下评论是被启用的。如果您想限制评论并只允许作者编辑和/或删除他们的评论，您需要更改 *document.permissions.editCommentsAuthorOnly* 和/或 *document.permissions.deleteCommentsAuthorOnly* 参数：
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {

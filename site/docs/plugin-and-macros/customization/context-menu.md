@@ -20,7 +20,7 @@ The plugin can be accessed via the context menu.
 
    | Name | Type | Description |
    | ---- | ---- | ----------- |
-   | options | [ContextMenuOptions](#contextmenuoptions) | Defines the information of the selected context menu item. |
+   | options | [ContextMenuOptions](#contextmenuoptions) | The information of the selected context menu item. |
 
    **Example**:
 
@@ -43,7 +43,7 @@ The plugin can be accessed via the context menu.
 
    ### ContextMenuOptions
 
-   Defines the context menu options.
+   The context menu options.
 
    `Type: object`
 
@@ -132,7 +132,7 @@ To update the context menu item, specify the **UpdateContextMenuItem** method.
 
 **Example**:
 
-``` ts
+```ts
 Asc.plugin.attachEvent("onContextMenuShow", (options) => {
   const items = {
     guid: window.Asc.plugin.guid,

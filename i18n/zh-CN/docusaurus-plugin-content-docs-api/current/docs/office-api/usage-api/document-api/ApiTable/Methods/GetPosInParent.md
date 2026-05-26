@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中表格在其父元素中的位置。
+查找文档中表格在同级元素中的索引位置。
 
 ```javascript editor-docx
-// How to find out the location of the table in its parent one in a document.
+// How do I determine where a table sits relative to other elements in a document?
 
-// Get the position index of the table in a document.
+// Identify the numeric position of a table within its parent container in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

@@ -22,12 +22,12 @@ expression.SetText(sText);
 
 ## 示例
 
-在文档中设置批注文本。
+替换文档中现有批注的文本。
 
 ```javascript editor-docx
-// How to change a text of a comment in a document.
+// How do I change the message written inside a comment in a document?
 
-// Get all comments from the presentation and set its first one's text.
+// Update a comment's content to correct or revise the original feedback.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

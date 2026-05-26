@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert inches to points in a PDF document.
+Convert measurement units from inches to points in a PDF.
 
 ```javascript editor-pdf
-// How do I convert inches to points in a PDF document?
+// How do I convert inches to points for sizing in a PDF?
 
-// Convert inches to points and display the result in a PDF document.
+// Translate inch values to point measurements and show the conversion in a PDF.
 
 const inches = 100;
 const points = Api.InchesToPoints(inches);

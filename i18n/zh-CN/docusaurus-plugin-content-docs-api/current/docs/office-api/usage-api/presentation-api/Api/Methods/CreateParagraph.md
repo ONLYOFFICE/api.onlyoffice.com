@@ -20,12 +20,12 @@ expression.CreateParagraph();
 
 ## 示例
 
-在演示文稿中创建新段落并将其插入形状。
+在演示文稿中向形状内添加文本内容。
 
 ```javascript editor-pptx
-// How to add a text in a presentation.
+// How do I create multiple text lines inside a shape in a presentation?
 
-// Insert text to the paragraph and add it to the slide.
+// Create paragraphs with text alignment inside a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

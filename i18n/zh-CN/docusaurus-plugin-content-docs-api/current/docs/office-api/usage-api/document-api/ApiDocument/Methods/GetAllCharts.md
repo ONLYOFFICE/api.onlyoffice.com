@@ -6,12 +6,12 @@
 
 ## 示例
 
-从文档中的文档内容获取图表对象集合。
+检索文档内容中嵌入的所有图表。
 
 ```javascript editor-docx
-// Get all charts from the document.
+// How do I access every chart inside a content container in a document?
 
-// How to retrieve all charts and set horizontal gridlines to the first one in a document.
+// Apply custom gridline styling to the first chart found inside a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

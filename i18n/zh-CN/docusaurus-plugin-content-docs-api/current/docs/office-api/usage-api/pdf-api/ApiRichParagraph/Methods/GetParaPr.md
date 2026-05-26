@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取 PDF 文档中富文本段落的富文本段落属性。
+检索 PDF 中的段落格式选项。
 
 ```javascript editor-pdf
-// How can I get the para pr using a rich paragraph in a PDF document?
+// How can I access paragraph settings in a PDF?
 
-// Get the para pr for a rich paragraph in a PDF document.
+// Extract formatting properties from a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

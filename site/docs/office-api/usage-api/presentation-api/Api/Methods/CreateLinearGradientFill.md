@@ -23,12 +23,12 @@ expression.CreateLinearGradientFill(gradientStops, angle);
 
 ## Example
 
-Create a linear gradient fill to apply to the object using the selected linear gradient as the object background in a presentation.
+Apply a linear gradient background to a shape in a presentation.
 
 ```javascript editor-pptx
-// How to create a linear gradient fill to set it as a drawing background in a presentation.
+// How do I fill a shape with colors that blend smoothly across an angle in a presentation?
 
-// Change a drawing background using gradient fill in a presentation.
+// Customize a shape's appearance with a gradient that transitions between colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

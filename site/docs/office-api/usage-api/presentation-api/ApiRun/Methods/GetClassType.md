@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a text run object in a presentation.
+Identify the type of a text run in a presentation.
 
 ```javascript editor-pptx
-// How can I get the class type of a text run in a presentation?
+// How do I determine the type of a text run in a presentation?
 
-// Get the class type of a text run and display it in the presentation.
+// Display the text run type name on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

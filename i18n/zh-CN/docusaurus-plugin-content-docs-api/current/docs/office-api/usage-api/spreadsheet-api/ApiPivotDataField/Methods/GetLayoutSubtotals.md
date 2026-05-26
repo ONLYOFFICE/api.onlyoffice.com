@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的布局小计。
+读取电子表格中为透视字段启用的小计类型。
 
 ```javascript editor-xlsx
-// How to get a layout subtotals of a pivot field in a spreadsheet.
+// How do I check what subtotals are active for a pivot table field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout subtotals of a specified pivot field in a spreadsheet.
+// Retrieve the list of subtotal calculations applied to a pivot field to review its summary configuration.
 
 let worksheet = Api.GetActiveSheet();
 

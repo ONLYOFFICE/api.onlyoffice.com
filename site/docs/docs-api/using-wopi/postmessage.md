@@ -6,7 +6,7 @@ sidebar_position: -4
 
 [PostMessage](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage) is the [HTML5 Web Messaging](https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages) protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. It allows the online office frame to communicate with its parent host page.
 
-``` ts
+```ts
 otherWindow.postMessage(msg, targetOrigin)
 ```
 

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a paragraph in a PDF document.
+Check what type a paragraph is in a PDF.
 
 ```javascript editor-pdf
-// How to identify the class type of a paragraph in a PDF document?
+// How do I identify the type of a paragraph in a PDF?
 
-// Obtain the class type identifier of a paragraph object in a PDF document.
+// Find the classification identifier of a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -38,7 +38,7 @@ The plugin settings page is available after installation: **Admin -> ONLYOFFICE 
 
 Enter the following address to connect ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

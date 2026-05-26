@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 向选定的单元格范围添加一个新图表。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().AddChart("'Sheet1'!$C$5:$D$7", true, "bar", 2, 105 * 36000, 105 * 36000, 0, 0, 9, 0);
@@ -27,4 +27,11 @@ End Sub
 
 ## 结果
 
-![Chart](/assets/images/plugins/add-chart.png#gh-light-mode-only)![Chart](/assets/images/plugins/add-chart.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/add-chart.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/add-chart.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

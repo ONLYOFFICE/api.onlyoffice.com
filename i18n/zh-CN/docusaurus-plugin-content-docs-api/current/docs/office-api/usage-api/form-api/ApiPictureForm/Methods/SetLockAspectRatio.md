@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-锁定图片表单的纵横比。
+防止在文档中调整图片表单大小时其比例发生变化。
 
 ```javascript editor-forms
-// How to lock an aspect ratio of the picture form in this document.
+// How do I ensure a picture form keeps its original proportions when resized in a document?
 
-// Lock the aspect ratio of the picture form.
+// Protect an image from distortion by locking the width-to-height ratio of its form in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "respectBorders": false, "shiftX": 50, "shiftY": 50});

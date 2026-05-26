@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Calculate how often values occur within a range of values and then returns the first value of the returned vertical array of numbers in a spreadsheet.
+Calculate how often values occur within a range of values and return a vertical array.
 
 ```javascript editor-xlsx
-// How to get frequency of first value from a range in a spreadsheet.
+// Count the frequency of data points that fall within specified bin intervals.
 
-// Use a function to count how often values occur within a range in a spreadsheet.
+// Determine value distribution across bins using FREQUENCY function.
 
 const worksheet = Api.GetActiveSheet();
 

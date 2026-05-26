@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中色阶条件的索引。
+检索电子表格中颜色渐变规则中断点的位置编号。
 
 ```javascript editor-xlsx
-// How to determine which threshold a criterion represents in a spreadsheet.
+// How do I find out which stop number a particular criterion occupies in a color scale in a spreadsheet?
 
-// Get the index of a color scale criterion in a spreadsheet.
+// Identify the sequential order of a color scale breakpoint to understand its place in the gradient in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

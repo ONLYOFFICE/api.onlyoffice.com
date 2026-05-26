@@ -25,12 +25,12 @@ expression.AddComment(text, author, userId);
 
 ## 示例
 
-向文档中的块级内容控件添加批注。
+在文档中为内容控件附加审阅批注。
 
 ```javascript editor-docx
-// Create a block content control in the document class, add a paragraph with a text to it, and add a comment to the content control.
+// How do I add a comment with an author name to a content control in a document?
 
-// John Smith comments on the block content control in the current document.
+// Let a named reviewer leave a comment on a content control for collaborative review in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the title of the current workbook in a spreadsheet.
+Read the title stored in the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I get the title in a spreadsheet?
+// How do I retrieve the title that has been saved for a workbook in a spreadsheet?
 
-// Get the title using a core properties object in a spreadsheet.
+// Fetch the document title from the metadata fields of the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

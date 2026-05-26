@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-为电子表格中形状内段落的所有文本设置字体系列。
+更改电子表格中形状内段落所有文本的字体。
 
 ```javascript editor-xlsx
-// How can I set font family using a paragraph in a spreadsheet?
+// How do I choose a specific font for an entire paragraph in a spreadsheet?
 
-// Set font family for a paragraph in a spreadsheet.
+// Give a paragraph a consistent look by assigning it a named font family in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const fill = Api.CreateSolidFill(Api.RGB(100, 150, 150));

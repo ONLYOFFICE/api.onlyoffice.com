@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Add a text to the content control and get its appearance in a document.
+Read the appearance setting of an inline content control in a document.
 
 ```javascript editor-docx
-// How do I get the appearance in a document?
+// How do I get the appearance style of an inline content control in a document?
 
-// Get the appearance using an inline content control object in a document.
+// Check whether a content control is displayed as a bounding box, tags, or hidden in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

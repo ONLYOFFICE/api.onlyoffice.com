@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the application ID from the OLE object in a document.
+Read the application ID of an embedded OLE object in a document.
 
 ```javascript editor-docx
-// How to get an application ID of the OLE object in a document.
+// How do I retrieve the application identifier from an OLE object in a document?
 
-// Display the application ID of the OLE object in a document.
+// Inspect which application is associated with an embedded object by displaying its ID in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

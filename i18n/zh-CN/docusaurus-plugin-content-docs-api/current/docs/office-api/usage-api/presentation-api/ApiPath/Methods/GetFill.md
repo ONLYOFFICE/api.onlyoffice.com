@@ -20,12 +20,12 @@ expression.GetFill();
 
 ## 示例
 
-分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
+检索演示文稿中自定义形状路径的填充颜色。
 
 ```javascript editor-pptx
-// How to get the fill for a geometry path in a presentation?
+// What fill color is applied to a shape's outline in a presentation?
 
-// Get the fill and display the result in a presentation.
+// Display the fill color properties of a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

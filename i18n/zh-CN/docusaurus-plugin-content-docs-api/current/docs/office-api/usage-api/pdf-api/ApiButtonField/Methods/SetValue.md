@@ -1,22 +1,25 @@
 # SetValue
 
-设置字段值
+为所有按钮字段控件设置图像
 
-继承自 [ApiBaseField.SetValue](../../ApiBaseField/Methods/SetValue.md)。
+:::note\
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::
 
-## 示例
+## 语法
 
-在 PDF 文档中为文本字段设置值。
-
-```javascript editor-pdf
-// How can I set value using a base field in a PDF document?
-
-// Set value for a base field in a PDF document.
-
-let doc = Api.GetDocument();
-let page = doc.GetPage(0);
-let textField = Api.CreateTextField([10, 10, 160, 30]);
-page.AddObject(textField);
-
-textField.SetValue('Name Surname');
+```javascript
+expression.SetValue(imageUrl);
 ```
+
+`expression` - 表示 [ApiButtonField](../ApiButtonField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| imageUrl | 必需 | string |  | 未提供描述。 |
+
+## 返回值
+
+boolean

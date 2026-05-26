@@ -23,12 +23,12 @@ expression.SetColor(Color);
 
 ## 示例
 
-在电子表格中为指定字体设置字体颜色属性。
+更改电子表格中单元格内特定文本字符的颜色。
 
 ```javascript editor-xlsx
-// How to change a text color in a spreadsheet.
+// How do I apply a custom color to part of the text inside a cell in a spreadsheet?
 
-// Get a font object of characters and color it specifying a color in RGB format.
+// Paint a selected run of characters with an RGB color value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

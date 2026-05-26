@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从预设星形中获取几何图形信息。显示预设类型并检查几何图形是否为自定义。
+检查文档中形状的几何图形是自定义的还是使用内置预设。
 
 ```javascript editor-docx
-// How do I is custom in a document?
+// How do I tell if a shape's geometry is custom-defined in a document?
 
-// Is custom using a geometry object in a document.
+// Distinguish between preset and hand-crafted geometry before deciding how to modify a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

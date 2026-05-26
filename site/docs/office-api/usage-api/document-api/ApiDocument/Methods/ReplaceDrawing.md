@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Replace a drawing with a new drawing in a document.
+Replace an existing chart with a shape drawing in a document.
 
 ```javascript editor-docx
-// How to change the image to another one in a document.
+// How do I substitute one drawing object for another in a document?
 
-// Add the new drawing instead of another one in a document.
+// Swap a bar chart for a gradient rectangle to update the visual layout in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

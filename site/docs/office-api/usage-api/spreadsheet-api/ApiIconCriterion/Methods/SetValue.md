@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the value of an icon criterion in a spreadsheet.
+Assign a threshold value to an icon criterion in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to modify the threshold value for an icon set criterion in a spreadsheet.
+// How do I change the cutoff number that determines which icon a cell displays in a spreadsheet?
 
-// Set the value used for criterion threshold comparison in a spreadsheet.
+// Update the boundary value for one of the icon set thresholds so cells are colored differently in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

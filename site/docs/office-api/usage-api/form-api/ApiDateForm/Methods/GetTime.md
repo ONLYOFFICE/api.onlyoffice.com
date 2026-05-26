@@ -20,12 +20,12 @@ undefined \| number
 
 ## Example
 
-Get the date timestamp from a date form in a document.
+Read the timestamp stored in a date form in a document.
 
 ```javascript editor-forms
-// How to get a time enetered to the date form.
+// How do I get the date and time value entered into a date form in a document?
 
-// Display the time from the date and time answer in a document.
+// Convert the returned timestamp to a readable date to display it as a formatted string.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Your date here", "format": "mm.dd.yyyy", "lang": "en-US"});

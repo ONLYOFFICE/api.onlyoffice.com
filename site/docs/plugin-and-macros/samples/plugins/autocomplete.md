@@ -37,7 +37,7 @@ Repository on GitHub: [autocomplete](https://github.com/ONLYOFFICE/onlyoffice.gi
 
 ## Config
 
-``` json
+```json
 {
   "name": "Autocomplete",
   "nameLocale": {

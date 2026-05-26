@@ -18,16 +18,16 @@ expression.SetFontName(sName);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-将指定的字体系列设置为单元格范围的字体名称。
+更改电子表格中单元格范围使用的字体系列。
 
 ```javascript editor-xlsx
-// How to change a cell font family.
+// How do I switch the typeface for a group of cells in a spreadsheet?
 
-// Get a range and set its font family using its name in a spreadsheet.
+// Apply a named font to all text within a range of cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("2");

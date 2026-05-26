@@ -25,14 +25,14 @@ sidebar_position: 1
 | *id*       | string                   | 项目 ID。                                                                                                           |
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
-| *disabled* | boolean                  | 指定当前项是否已禁用。                                                                          |
+| *disabled* | boolean                  | 当前项是否已禁用。                                                                          |
 | *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons)文档）。 |
 | *onClick*  | function                 | 点击事件回调。仅适用于 [addContextMenuItem](#addcontextmenuitem) 方法。                                                                                                  |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | 包含当前项的上下文菜单项的数组。                                                           |
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onContextMenuShow", (options) => {
   connector.addContextMenuItem([{
@@ -78,11 +78,11 @@ connector.attachEvent("onContextMenuShow", (options) => {
 | *text*           | string                                      | 项目标题。如果此字段为""，则工具栏按钮仅显示图标，不显示标题。                             |
 | *hint*           | string                                      | 项目提示。                                                                                                                           |
 | *icons*          | string \| object                            | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
-| *disabled*       | boolean                                     | 指定当前项目是否已锁定。                                                                                          |
-| *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"* 时）或其顶部（当 *"split == true"* 时）是否可以切换。               |
-| *lockInViewMode* | boolean                                     | 指定工具栏菜单项是否在视图模式（预览、查看表单、断开连接等时）中自动锁定。 |
-| *separator*      | boolean                                     | 指定工具栏菜单项之间是否使用分隔符。                                                                    |
-| *split*          | boolean                                     | 指定工具栏菜单项是否分为两部分并包含下拉菜单。                                         |
+| *disabled*       | boolean                                     | 当前项目是否已锁定。                                                                                          |
+| *enableToggle*   | boolean                                     | 工具栏菜单项（当 *"split == false"* 时）或其顶部（当 *"split == true"* 时）是否可以切换。               |
+| *lockInViewMode* | boolean                                     | 工具栏菜单项是否在视图模式（预览、查看表单、断开连接等时）中自动锁定。 |
+| *separator*      | boolean                                     | 工具栏菜单项之间是否使用分隔符。                                                                    |
+| *split*          | boolean                                     | 工具栏菜单项是否分为两部分并包含下拉菜单。                                         |
 | onClick          | function                                    | 点击事件回调。                                                                                                                |
 | *items*          | ToolbarMenuItem[]                    | 包含当前项的上下文菜单项的数组。                                                                         |
 
@@ -94,7 +94,7 @@ connector.attachEvent("onContextMenuShow", (options) => {
 
 #### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.addToolbarMenuItem({
   tabs: [
@@ -144,7 +144,7 @@ connector.addToolbarMenuItem({
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log(`[EVENT] onChangeContentControl: ${JSON.stringify(obj)}`);
@@ -157,17 +157,17 @@ connector.attachEvent("onChangeContentControl", (obj) => {
 
 ### 参数
 
-| 名称     | 类型     | 描述                                                                                                                                                                                                                                                                                                                                                                      |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| command  | function | 定义用JavaScript编写的命令，其目的是形成可插入结果文档文件（格式化段落、表格、文本部分和单独单词等）的结构化数据。然后将数据发送给编辑器。该命令必须与 [Office JavaScript API](../../../office-api/get-started/overview.md) 语法兼容。|
-| callback | function | 方法返回的结果。这是一个可选参数。                                                                                                                                                                                                                                                                                                                 |
-| isNoCalc | boolean  | 定义是否可以重新计算文档。**true** 值不会重新计算文档（仅当您的编辑肯定不需要重新计算文档时才使用它）。**false** 值用于在执行 *command* 参数中的函数后重新计算文档。默认值为 **false**。                                    |
+| 名称      | 类型     | 必需     | 描述                                                                                                                                                                                                                                                     |
+| --------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| commandFn | function | 必需     | 包含 [Office JavaScript API](../../../office-api/get-started/overview.md) 命令的函数，用于操作文档。|
+| callback  | function | 可选     | 接收 `commandFn` 返回值的函数。支持原始类型、普通对象、数组和 TypedArray（最多 10 层嵌套）。如果返回值包含函数或超过嵌套限制，回调将收到 `undefined`。 |
+| isNoCalc  | boolean  | 可选     | 是否跳过文档重新计算。仅当您的编辑肯定不需要重新计算时，才设置为 `true`。默认值：`false`。 |
 
-此方法在与其他JavaScript数据隔离的上下文中执行。如果需要将某些参数或其他数据传递给此方法，请使用 [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
+`commandFn` 函数在与其他 JavaScript 数据隔离的独立上下文中执行。如果需要将某些参数或其他数据传递给它，请使用 [Asc.scope](../../../plugin-and-macros/interacting-with-editors/overview/how-to-call-commands.md#ascscope-object) 对象。
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.callCommand(() => {
   const oDocument = Api.GetDocument();
@@ -189,7 +189,7 @@ connector.callCommand(() => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.connect();
 ```
@@ -200,7 +200,7 @@ connector.connect();
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 ```
@@ -217,7 +217,7 @@ const testConnectorWindow = connector.createWindow();
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.detachEvent("onChangeContentControl");
 ```
@@ -228,7 +228,7 @@ connector.detachEvent("onChangeContentControl");
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.disconnect();
 ```
@@ -253,7 +253,7 @@ connector.disconnect();
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 connector.executeMethod("GetCurrentWord", [], (word) => {
   console.log(`[METHOD] GetCurrentWord: ${word}`);
@@ -272,7 +272,7 @@ connector.executeMethod("GetCurrentWord", [], (word) => {
 
 ### 示例
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const items = [
   {

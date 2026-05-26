@@ -59,7 +59,7 @@ Creates new slides based on the listed items in the current slide. Each list ite
         let slideWidth = presentation.GetWidth();
         let slideHeight = presentation.GetHeight();
 
-        let shapeWidth = slideWidth * 0.7; // Ajdust this value to your liking
+        let shapeWidth = slideWidth * 0.7; // Adjust this value to your liking
         let shapeHeight = slideHeight * 0.25; // Adjust this value to your liking
 
         let posX = (slideWidth - shapeWidth) / 2; // Centered, adjust this value to your liking
@@ -106,5 +106,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![CreateSimilarSlides](/assets/images/plugins/create-similar-slides.png#gh-light-mode-only)
-![CreateSimilarSlides](/assets/images/plugins/create-similar-slides.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/create-slides-from-list-items.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/create-slides-from-list-items.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

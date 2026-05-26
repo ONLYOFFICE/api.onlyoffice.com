@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在文档中当前 run 的内容以通过行中心的单条水平线显示。
+在文档中为文本应用删除线。
 
 ```javascript editor-docx
-// How to strike out a text with one line in a document.
+// How do I draw a horizontal line through the middle of text in a document?
 
-// Create a text run object, cross out it in a document.
+// Mark text as deleted or deprecated by crossing it out in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

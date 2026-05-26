@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中为水平轴标签设置字体大小。
+调整电子表格中图表底部轴标签的文本大小。
 
 ```javascript editor-xlsx
-// How to update font size of the horizontal axis labels in a spreadsheet.
+// How do I make the labels on the horizontal axis of a chart larger or smaller in a spreadsheet?
 
-// Change the size of the horizontal axis labels of the chart in a spreadsheet.
+// Resize the category label text on the horizontal axis to improve chart legibility in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

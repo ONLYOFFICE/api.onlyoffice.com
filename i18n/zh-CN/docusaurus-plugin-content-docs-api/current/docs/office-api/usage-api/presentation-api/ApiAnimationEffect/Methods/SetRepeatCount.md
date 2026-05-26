@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中设置动画效果的重复次数。
+设置演示文稿中动画效果重复的次数。
 
 ```javascript editor-pptx
-// How do I set repeat count in a presentation?
+// How do I make an animation play multiple times in a presentation?
 
-// Set repeat count using an animation effect object in a presentation.
+// Configure an animation to loop a specified number of times in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

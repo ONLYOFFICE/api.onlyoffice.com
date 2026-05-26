@@ -22,12 +22,12 @@ expression.SetItalic(isItalic);
 
 ## 示例
 
-在电子表格中为文本字符设置斜体属性。
+在电子表格中使形状内的文本运行变为斜体。
 
 ```javascript editor-xlsx
-// How to make a text italic in a spreadsheet.
+// How do I slant a portion of text to italic style in a spreadsheet?
 
-// Create a text run object, change its properties by making it italic in a spreadsheet.
+// Distinguish a run visually by applying an italic style to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

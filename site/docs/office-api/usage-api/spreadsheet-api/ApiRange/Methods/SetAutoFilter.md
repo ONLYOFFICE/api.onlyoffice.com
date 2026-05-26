@@ -15,7 +15,7 @@ expression.SetAutoFilter(Field, Criteria1, Operator, Criteria2, VisibleDropDown)
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Field | Optional | number \| null |  | The integer offset of the field on which you want to base the filter (from the left of the list; the leftmost field is field one). If &#123;null&#125; provided, clears the AutoFilter for the range. |
-| Criteria1 | Optional | string \| string[] \| [ApiColor](../../ApiColor/ApiColor.md) \| [XlDynamicFilterCriteria](../../Enumeration/XlDynamicFilterCriteria.md) |  | The criteria (a string; for example, "101"). Use "=" to find blank fields, "&lt;&gt;" to find non-blank fields, and "&gt;&lt;" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If Operator is xlTop10Items, Criteria1 specifies the number of items (for example, "10"). |
+| Criteria1 | Optional | string \| string[] \| [ApiColor](../../ApiColor/ApiColor.md) \| [XlDynamicFilterCriteria](../../Enumeration/XlDynamicFilterCriteria.md) |  | The criteria (a string; for example, "101"). Use "=" to find blank fields, "&lt;&gt;" to find non-blank fields, and "&gt;&lt;" to select (No Data) fields in data types. |
 | Operator | Optional | [XlAutoFilterOperator](../../Enumeration/XlAutoFilterOperator.md) |  | An XlAutoFilterOperator constant specifying the type of filter. |
 | Criteria2 | Optional | string |  | The second criteria (a string). Used with Criteria1 and Operator to construct compound criteria. |
 | VisibleDropDown | Optional | boolean |  | True to display the AutoFilter drop-down arrow for the filtered field. False to hide the AutoFilter drop-down arrow for the filtered field. True by default. |
@@ -26,12 +26,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the autofilter by cell range.
+Apply an automatic filter to a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to automatically filter the specified range values in a spreadsheet.
+// How do I let users filter rows by value within a range in a spreadsheet?
 
-// Automatically filter out a range values in a spreadsheet.
+// Narrow visible rows down to only those matching chosen values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("header");

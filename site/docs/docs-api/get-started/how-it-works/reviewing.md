@@ -6,7 +6,7 @@ sidebar_position: -15
 
 Review mode lets users suggest changes to a document without modifying the original text directly. All changes are tracked and can be accepted or rejected by users with the appropriate rights. This section explains how to enable and configure reviewing in your integration.
 
-![Review scheme](/assets/images/editor/review.png)
+![Review scheme](/assets/images/editor/review.png#gh-light-mode-only)![Review scheme](/assets/images/editor/review.dark.png#gh-dark-mode-only)
 
 ## Review access rights
 
@@ -14,11 +14,11 @@ To enable reviewing, set the [`review`](../../usage-api/config/document/permissi
 
 If `permissions.edit` is `true` and `permissions.review` is also `true`, the user can edit the document, accept or reject tracked changes, and switch to review mode.
 
-![Reviewing](/assets/images/editor/accept_reject.png)
+![Reviewing](/assets/images/editor/accept_reject.png#gh-light-mode-only)![Reviewing](/assets/images/editor/accept_reject.dark.png#gh-dark-mode-only)
 
 If `permissions.edit` is `false` and `permissions.review` is `true`, the document is available for reviewing only.
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {

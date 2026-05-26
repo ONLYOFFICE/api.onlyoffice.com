@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析云形路径属性并在单元格中显示。显示路径数量、尺寸、笔触和填充信息。
+读取自定义形状路径的高度并在电子表格中显示。
 
 ```javascript editor-xlsx
-// How can I get the height using a geometry path in a spreadsheet?
+// How do I check how tall a shape path is in a spreadsheet?
 
-// Get the height for a geometry path in a spreadsheet.
+// Inspect the vertical size of a drawn path to verify its dimensions in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));

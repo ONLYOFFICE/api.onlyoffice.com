@@ -26,9 +26,9 @@ expression.SetPosition(x, y);
 在演示文稿中设置批注的位置。
 
 ```javascript editor-pptx
-// How do I set position in a presentation?
+// Reposition a comment to a different location on the slide.
 
-// Set position using a comment object in a presentation.
+// Move a comment to a new position and display the updated coordinates.
 
 const presentation = Api.GetPresentation();
 presentation.GetAllComments().forEach(comment => {

@@ -20,12 +20,12 @@ expression.GetAllDrawings();
 
 ## 示例
 
-在电子表格中获取工作表中的所有绘图对象。
+将工作表上的每个绘图收集到电子表格的列表中。
 
 ```javascript editor-xlsx
-// How to get all drawings in a spreadsheet.
+// How do I retrieve all drawings at once to resize or adjust them in a spreadsheet?
 
-// Get all drawings as an array in a spreadsheet.
+// Loop through all existing drawings and apply a uniform size change to each one.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

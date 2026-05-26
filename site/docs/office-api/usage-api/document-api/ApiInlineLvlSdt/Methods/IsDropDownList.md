@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Check if the content control is a dropdown list in a document.
+Determine whether an inline content control is a dropdown list in a document.
 
 ```javascript editor-docx
-// How can I is drop down list using an inline content control in a document?
+// How do I check whether a content control is a dropdown list in a document?
 
-// Is drop down list for an inline content control in a document.
+// Distinguish a dropdown list from combo boxes or text controls before reading its selected option in a document.
 
 let doc = Api.GetDocument();
 let inlineControl = doc.AddDropDownListContentControl();

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set whether blank values are permitted in a spreadsheet.
+Control whether leaving a validated cell empty is treated as an error in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to allow or disallow blank values in validation in a spreadsheet.
+// How do I make a cell's validation rule apply even when the cell is left blank in a spreadsheet?
 
-// Set the IgnoreBlank setting in a spreadsheet.
+// Require users to fill in a restricted cell rather than allowing them to skip it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

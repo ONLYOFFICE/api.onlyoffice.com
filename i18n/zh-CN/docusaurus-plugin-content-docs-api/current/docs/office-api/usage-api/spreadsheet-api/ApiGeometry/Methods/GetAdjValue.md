@@ -22,12 +22,12 @@ number \| null
 
 ## 示例
 
-创建带有参考线和连接点的可调节自定义几何图形。在单元格中显示调整值并将几何图形应用于形状。
+读取电子表格中自定义形状上命名调整手柄的当前值。
 
 ```javascript editor-xlsx
-// How can I get the adj value using a geometry in a spreadsheet?
+// How do I retrieve the numeric value stored in a shape adjustment control in a spreadsheet?
 
-// Get the adj value for a geometry in a spreadsheet.
+// Inspect how far a particular adjustment handle has been moved on a custom shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

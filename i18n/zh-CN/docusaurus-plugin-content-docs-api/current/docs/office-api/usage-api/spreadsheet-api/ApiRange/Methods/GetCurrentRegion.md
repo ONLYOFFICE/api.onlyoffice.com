@@ -20,12 +20,12 @@ expression.GetCurrentRegion();
 
 ## 示例
 
-获取电子表格中范围的当前区域。
+将单元格选区扩展到电子表格中周围的已填充区域。
 
 ```javascript editor-xlsx
-// How can I get current region using a cell range in a spreadsheet?
+// How do I find the contiguous block of data around a cell in a spreadsheet?
 
-// Get current region for a cell range in a spreadsheet.
+// Identify the address of the data region that surrounds a given cell in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue('Name');

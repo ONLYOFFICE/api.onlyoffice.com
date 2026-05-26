@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置内容。
+向 PDF 中的注释添加文本内容。
 
 ```javascript editor-pdf
-// How can I set contents using an annotation in a PDF document?
+// Store a message or note within an annotation in a PDF.
 
-// Set contents for an annotation in a PDF document.
+// Assign descriptive text to mark or label an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

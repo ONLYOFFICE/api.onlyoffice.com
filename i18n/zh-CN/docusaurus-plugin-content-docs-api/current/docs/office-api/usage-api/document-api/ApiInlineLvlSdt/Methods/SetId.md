@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中容器的 ID。
+为文档中的内联内容控件分配唯一标识符。
 
 ```javascript editor-docx
-// How do I set id in a document?
+// How do I give an inline content control a specific ID in a document?
 
-// Set id using an inline content control object in a document.
+// Tag a content control with a known ID so it can be retrieved by reference later in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

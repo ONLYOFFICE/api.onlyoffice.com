@@ -16,7 +16,7 @@ expression.RANK_EQ(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将返回其排名的数字。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | 数字数组或区域。非数字值将被忽略。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定数字排序方式的数值。如果为 0 或省略，则按降序排列列表中的排名。任何其他数值表示按升序排列列表中的排名。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定数字排序方式的数值。如果为 0 或省略，列表中的排名将按降序排列。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字在数字列表中的排名。如果多个值具有相同的排名，则返回该组值的最高排名。
+查找电子表格中某值在列表中的排名，将最高排名给予并列值。
 
 ```javascript editor-xlsx
-// How to estimate a rank of a number from the list, return top if there are multiple in a spreadsheet.
+// How do I rank a number when tied with other equal values in a spreadsheet?
 
-// Use a function to estimate rank of the a number from the list in a spreadsheet.
+// Calculate a value's position where duplicate items share the top rank in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

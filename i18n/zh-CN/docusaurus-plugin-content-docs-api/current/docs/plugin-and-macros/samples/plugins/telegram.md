@@ -43,7 +43,7 @@ GitHub 仓库地址：[telegram](https://github.com/ONLYOFFICE/onlyoffice.github
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Telegram",
   "nameLocale": {

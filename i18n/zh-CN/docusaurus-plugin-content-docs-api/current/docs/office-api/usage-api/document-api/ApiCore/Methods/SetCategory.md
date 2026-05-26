@@ -22,12 +22,12 @@ expression.SetCategory(sCategory);
 
 ## 示例
 
-使用文档中的核心属性设置文档的类别。
+通过文档的核心属性为文档分配类别。
 
 ```javascript editor-docx
-// How can I set category using a core properties in a document?
+// How do I tag a document with a category in its metadata in a document?
 
-// Set category for a core properties in a document.
+// Record which group or type a document belongs to so it can be filtered later in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建新字段并为其控件设置新位置。
+在 PDF 中将控件移动到新位置。
 
 ```javascript editor-pdf
-// How can I set position using a widget in a PDF document?
+// How do I change the position of a widget in a PDF?
 
-// Set position for a widget in a PDF document.
+// Reposition a field widget using coordinate values in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

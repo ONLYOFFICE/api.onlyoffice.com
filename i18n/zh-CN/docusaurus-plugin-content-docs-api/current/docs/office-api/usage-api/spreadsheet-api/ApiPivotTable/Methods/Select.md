@@ -20,12 +20,12 @@ expression.Select();
 
 ## 示例
 
-在电子表格中选中数据透视表。
+将整个数据透视表范围高亮显示为电子表格中的活动选区。
 
 ```javascript editor-xlsx
-// How to select a table in a spreadsheet.
+// How do I programmatically select a whole pivot table at once in a spreadsheet?
 
-// Create a pivot table, add data to it then select it in a spreadsheet.
+// Focus the cursor on a pivot table so it becomes the current selection in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

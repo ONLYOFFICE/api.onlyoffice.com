@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-设置水印参数并将其应用于文档。
+读取文档中水印图像的网址。
 
 ```javascript editor-docx
-// How to get the URL of the image in a document.
+// How do I find out where the watermark image is loaded from in a document?
 
-// Get the watermark image link address in a document.
+// Retrieve the source link of a watermark image in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

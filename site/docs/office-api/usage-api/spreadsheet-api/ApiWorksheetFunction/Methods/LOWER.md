@@ -22,12 +22,12 @@ string
 
 ## Example
 
-Convert all letters in a text string to lowercase in a spreadsheet.
+Convert text to all lowercase letters in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make all characters uncapitalized in a spreadsheet.
+// How do I change "HELLO" to "hello" in a spreadsheet?
 
-// Use a function to make a text string to lowercase in a spreadsheet.
+// Transform mixed case text into lowercase in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

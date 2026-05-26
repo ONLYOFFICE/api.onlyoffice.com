@@ -22,12 +22,12 @@ expression.SetTextPr(oTextPr);
 
 ## 示例
 
-创建并设置将应用于表格中与条件格式类型匹配的所有文本 run 的文本 run 属性。
+在文档中为表格样式的条件区域应用文本格式。
 
 ```javascript editor-docx
-// How to set text properties to the table style and make it bold in a document.
+// How do I make the text bold in a specific part of a table style in a document?
 
-// Update the table style text properties in a document.
+// Define the text appearance for a targeted section of a styled table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

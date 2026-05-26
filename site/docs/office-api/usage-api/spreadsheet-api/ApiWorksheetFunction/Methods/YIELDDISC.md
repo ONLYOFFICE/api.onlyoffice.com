@@ -26,12 +26,12 @@ number
 
 ## Example
 
-Return the annual yield for a discounted security. For example, a Treasury bill in a spreadsheet.
+Calculate the annual yield of a discounted security like a Treasury bill in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return an annual yield for a discounted security in a spreadsheet.
+// How do I find the annual yield for a discounted bond or Treasury bill in a spreadsheet?
 
-// Use a function to get an annual yield in a spreadsheet.
+// Determine the return rate for a discounted security sold at a price below par in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

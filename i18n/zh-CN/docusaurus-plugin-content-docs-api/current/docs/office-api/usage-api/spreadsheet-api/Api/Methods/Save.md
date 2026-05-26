@@ -16,16 +16,16 @@ expression.Save();
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-保存对指定文档的更改。
+将电子表格中所有未保存的编辑持久化到磁盘。
 
 ```javascript editor-xlsx
-// How to save changes of the spreadsheets.
+// How do I make sure all recent changes are written and not lost in a spreadsheet?
 
-// Save all applied changes in a spreadsheet.
+// Commit the current state of the document so no work is discarded in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("This sample text is saved to the worksheet.");

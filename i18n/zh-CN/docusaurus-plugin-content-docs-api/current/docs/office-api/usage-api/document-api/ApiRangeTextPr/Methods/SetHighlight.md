@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在文档中添加到文本属性并作为背景应用于当前 run/范围/段落内容的突出显示颜色。
+在文档中为文本应用背景高亮颜色。
 
 ```javascript editor-docx
-// How to color a text object background in a document.
+// How do I mark text with a colored background in a document?
 
-// Create a text run object, add color to its background in a document.
+// Draw attention to specific words by painting a highlight behind them in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

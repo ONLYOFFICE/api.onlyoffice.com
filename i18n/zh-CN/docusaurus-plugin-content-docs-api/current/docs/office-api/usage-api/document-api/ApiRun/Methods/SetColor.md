@@ -22,12 +22,12 @@ expression.SetColor(color);
 
 ## 示例
 
-在文档中为当前文本 run 设置文本颜色。
+在文档中为文本运行的文本应用特定颜色。
 
 ```javascript editor-docx
-// How to change text color in a document.
+// How do I change the color of a piece of text in a document?
 
-// Create a new text run and change its font color in a document.
+// Give a run a distinct hue to make it stand out visually in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set and get the content status of the current presentation using the core properties in a presentation.
+Set and retrieve the content status of a presentation in a presentation.
 
 ```javascript editor-pptx
-// How can I set content status using a core properties in a presentation?
+// How do I set the content status of a presentation in a presentation?
 
-// Set content status for a core properties in a presentation.
+// Retrieve and display the content status as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

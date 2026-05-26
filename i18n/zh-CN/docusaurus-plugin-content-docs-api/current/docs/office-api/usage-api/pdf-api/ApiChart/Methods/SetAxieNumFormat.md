@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何更改左轴标签的数字格式。
+格式化 PDF 中图表轴上的数字。
 
 ```javascript editor-pdf
-// Create a chart then set its axis number format.
+// How do I control how numbers appear on a chart's axis in a PDF?
 
-// Set axie num format using a chart object.
+// Change the number format of axis labels in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

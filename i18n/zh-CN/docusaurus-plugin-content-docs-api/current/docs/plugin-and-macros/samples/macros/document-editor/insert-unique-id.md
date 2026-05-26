@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 在表单文档中插入唯一 ID。
 
-``` ts
+```ts
 (function()
 {
     function generate () {
@@ -32,4 +32,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![Insert id](/assets/images/plugins/insert-id.png#gh-light-mode-only)![Insert id](/assets/images/plugins/insert-id.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-unique-id.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-unique-id.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

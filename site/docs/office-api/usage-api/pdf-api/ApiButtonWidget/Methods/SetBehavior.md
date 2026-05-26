@@ -25,9 +25,9 @@ boolean
 Set button widget behavior type in a PDF document.
 
 ```javascript editor-pdf
-// How do I set behavior in a PDF document?
+// Apply behavior type such as 'outline' to a button widget.
 
-// Set behavior using a button widget object in a PDF document.
+// Display the set behavior value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -26,9 +26,9 @@ boolean
 从演示文稿中的自定义 XML 部件删除属性。
 
 ```javascript editor-pptx
-// How do I delete the attribute in a presentation?
+// Remove a named property from an XML element in a presentation.
 
-// Delete the attribute using a custom XML part object in a presentation.
+// Strip an attribute from custom XML in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+从 PDF 中的路径命令检索 x 坐标。
 
 ```javascript editor-pdf
-// How do I get the x in a PDF document?
+// What is the horizontal position value in a PDF?
 
-// Get the x using a path command object in a PDF document.
+// Extract the x position of a path command in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

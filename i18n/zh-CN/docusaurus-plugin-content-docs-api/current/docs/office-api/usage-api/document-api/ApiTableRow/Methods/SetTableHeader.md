@@ -9,12 +9,12 @@
 
 ## 示例
 
-指定当前表格行在表格显示时在每个新页面的顶部重复。
+将文档中的表格行标记为在每页重复作为表头。
 
 ```javascript editor-docx
-// Rename the header of the table in a document.
+// How do I make a row appear at the top of a table on each new page in a document?
 
-// How to set table row as a header in a document.
+// Designate a table row as a repeating header across page breaks in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+读取文档中绘图命令端点的垂直位置。
 
 ```javascript editor-docx
-// How can I get the y using a path command in a document?
+// How do I find the vertical coordinate of the first drawing command on a shape in a document?
 
-// Get the y for a path command in a document.
+// Inspect a shape's path to confirm the vertical position of its starting point in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

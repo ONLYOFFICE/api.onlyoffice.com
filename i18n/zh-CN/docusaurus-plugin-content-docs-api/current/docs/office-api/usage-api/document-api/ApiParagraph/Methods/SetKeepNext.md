@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定在使用分页视图呈现文档时，尽可能将段落的内容至少部分地与下一段落呈现在同一页上。
+使文档中的段落与其后面的段落保持在同一页上。
 
 ```javascript editor-docx
-// How to partly keep lines of the paragraph content in a document.
+// How do I prevent a paragraph from being separated from the next paragraph in a document?
 
-// How to try to keep all lines of the paragraph on the same page.
+// Ensure two consecutive paragraphs always appear together when the page breaks.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

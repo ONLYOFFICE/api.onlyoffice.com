@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a group object in a document.
+Read the class type identifier of a grouped drawing in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a group in a document?
+// How do I retrieve the class type of a group object in a document?
 
-// Get the class type of a group and display it in the document.
+// Confirm that grouped shapes return the expected type label when inspected in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

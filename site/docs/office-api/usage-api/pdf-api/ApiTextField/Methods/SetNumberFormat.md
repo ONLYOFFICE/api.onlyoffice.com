@@ -18,7 +18,7 @@ expression.SetNumberFormat(nDemical, sSepStyle, sNegStyle, sCurrency, bCurrencyP
 | sSepStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | number separate style |
 | sNegStyle | Required | [NumberNegStyle](../../Enumeration/NumberNegStyle.md) |  | number negative style |
 | sCurrency | Required | string |  | currency sybmol |
-| bCurrencyPrepend | Required | boolean |  | If true, places the currency symbol before the number (e.g., $1,234.56);  if false, places it after (e.g., 1,234.56$). |
+| bCurrencyPrepend | Required | boolean |  | If true, places the currency symbol before the number (e.g., $1,234.56);  |
 
 ## Returns
 
@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-Get text field and set number format for it.
+Display numbers with currency symbols and formatting in a PDF text field.
 
 ```javascript editor-pdf
-// How can I set number format using a text field in a PDF document?
+// How do I show dollar amounts and decimal places correctly in a PDF?
 
-// Set number format for a text field in a PDF document.
+// Configure number formatting with currency and decimal precision in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -22,12 +22,12 @@ expression.GetCols(sRange);
 
 ## 示例
 
-获取表示电子表格中列范围上所有单元格的单元格范围对象。
+在电子表格工作表上选择指定列范围内的所有单元格。
 
 ```javascript editor-xlsx
-// How to get all column cells.
+// How do I target every cell in a set of columns in a spreadsheet?
 
-// Get all column cells from the worksheet.
+// Apply formatting to a group of columns by referencing all their cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let cols = worksheet.GetCols("A1:C1");

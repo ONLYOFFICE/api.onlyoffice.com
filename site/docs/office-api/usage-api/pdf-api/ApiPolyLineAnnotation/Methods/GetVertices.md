@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get vertices from polyline annotation in a PDF document.
+Retrieve corner points of a polyline marking in a PDF.
 
 ```javascript editor-pdf
-// How to get the vertices for a polyline annotation in a PDF document?
+// How do I find the corner points of a polyline marking in a PDF?
 
-// Get the vertices and display the result in a PDF document.
+// Extract all coordinates that define the shape of a polyline marking in a PDF.
 
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];

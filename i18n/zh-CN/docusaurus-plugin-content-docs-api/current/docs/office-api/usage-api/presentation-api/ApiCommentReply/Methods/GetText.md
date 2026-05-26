@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取演示文稿中批注回复的文本。
+读取演示文稿中批注回复的文本。
 
 ```javascript editor-pptx
-// How to get a raw text of a comment reply in a presentation.
+// How do I get the message text from a comment reply in a presentation?
 
-// Get all comments from the presentation, get the first one's reply and return its text.
+// Extract the reply text from a comment and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

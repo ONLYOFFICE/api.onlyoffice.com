@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-Specify a highlighting color which is applied as a background to the contents of the run in a PDF document.
+Apply background highlighting to text in a PDF.
 
 ```javascript editor-pdf
-// How to set highlight to the text run in a PDF document.
+// How do I mark text with color in a PDF?
 
-// Create a new text run and highlight it in a PDF document.
+// Add a highlight background behind text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

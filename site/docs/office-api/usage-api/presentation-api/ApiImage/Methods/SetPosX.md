@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.SetPosX](../../ApiDrawing/Methods/SetPosX.md).
 
 ## Example
 
-Set the x position of the drawing on the slide.
+Move a shape horizontally on a slide in a presentation.
 
 ```javascript editor-pptx
-// How can I set pos x using a drawing object in a presentation?
+// How do I change the horizontal position of a shape in a presentation?
 
-// Set pos x for a drawing object in a presentation.
+// Create a shape and move it to a specific distance from the left in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -20,12 +20,12 @@ expression.GetPlaceholder();
 
 ## 示例
 
-从演示文稿中当前绘图对象获取占位符。
+获取演示文稿中分配给形状的占位符。
 
 ```javascript editor-pptx
-// How to get a placeholder of a slide shape.
+// How do I find the placeholder for an object in a presentation?
 
-// Get a placeholder of a slide shape.
+// Retrieve and check a shape's placeholder in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

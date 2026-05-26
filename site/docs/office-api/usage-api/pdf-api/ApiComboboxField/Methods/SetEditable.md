@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set editable property for combobox field in a PDF document.
+Enable or disable user input for a field in a PDF.
 
 ```javascript editor-pdf
-// How can I set editable using a combobox field in a PDF document?
+// Can I control whether users can type in a field in a PDF?
 
-// Set editable for a combobox field in a PDF document.
+// Make a field accept or reject text entries in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

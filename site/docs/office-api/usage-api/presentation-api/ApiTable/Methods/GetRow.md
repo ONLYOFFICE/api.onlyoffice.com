@@ -22,12 +22,12 @@ expression.GetRow(nIndex);
 
 ## Example
 
-Get a row by its index in a presentation.
+Access a specific row from a table in a presentation.
 
 ```javascript editor-pptx
-// How to get a row object from the table in a presentation.
+// How do I get a row from a table using its position in a presentation?
 
-// Create a table, add rows and columns, then get its row by index in a presentation.
+// Retrieve a table row by index and add text to it in a presentation.
 
 const presentation = Api.GetPresentation();
 

@@ -23,12 +23,12 @@ expression.AddRows(nCount, isBefore);
 
 ## Example
 
-Add the new rows to the table in a document.
+Insert additional rows below an existing cell in a table in a document.
 
 ```javascript editor-docx
-// Insert new rows after the current cell.
+// How do I add more rows beneath a specific cell in a table in a document?
 
-// Get the cell, add the text to it and add rows after it.
+// Extend a table downward by appending rows after a chosen cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

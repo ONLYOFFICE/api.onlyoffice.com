@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the format scheme of the theme in a presentation.
+Get the format scheme from a theme in a presentation.
 
 ```javascript editor-pptx
-// How to get a format scheme from a theme.
+// How do I access the formatting styles defined in a presentation's theme?
 
-// Get a format scheme and display its class type.
+// Retrieve the format scheme and display its type information in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

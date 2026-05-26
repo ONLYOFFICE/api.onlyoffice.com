@@ -23,12 +23,12 @@ expression.CreateBlipFill(imageUrl, blipFillType);
 
 ## 示例
 
-在文档中创建图片填充，使用所选图像作为对象背景应用于对象。
+在文档中使用平铺图像背景填充形状。
 
 ```javascript editor-docx
-// A shape with the "star10" type uses a tiled blip fill as its background.
+// How do I use an image as a repeating background fill for a shape in a document?
 
-// Create a blip fill with the specified image url and the "tile" fill type and use it to fill the created shape in the document.
+// Insert a star shape whose background is covered with a tiled photo in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

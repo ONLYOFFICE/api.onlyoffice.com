@@ -7,15 +7,17 @@ Represents the ApiBaseWidget class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | boolean | Removes widget from parent field. |
+| [GetActionsJSON](./Methods/GetActionsJSON.md) | JSON | Gets all field actions in json format. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget background color. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget border color. |
 | [GetBorderStyle](./Methods/GetBorderStyle.md) | [WidgetBorderStyle](../Enumeration/WidgetBorderStyle.md) | Gets widget border style. |
 | [GetBorderWidth](./Methods/GetBorderWidth.md) | [WidgetBorderWidth](../Enumeration/WidgetBorderWidth.md) | Gets widget border width. |
 | [GetClassType](./Methods/GetClassType.md) | "baseWidget" | Returns a type of the ApiBaseWidget class. |
+| [GetInternalId](./Methods/GetInternalId.md) | string | Returns an internal ID of the current field widget. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets widget position. |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
-| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. 💡  Text size === 0 means autofit  |
+| [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
 | [SetAutoFit](./Methods/SetAutoFit.md) | boolean | Sets text autofit. |
 | [SetBackgroundColor](./Methods/SetBackgroundColor.md) | boolean | Sets widget background color. |
@@ -25,4 +27,4 @@ Represents the ApiBaseWidget class.
 | [SetPosition](./Methods/SetPosition.md) | boolean | Sets widget position. |
 | [SetRect](./Methods/SetRect.md) | boolean | Sets field rect. |
 | [SetTextColor](./Methods/SetTextColor.md) | boolean | Sets widget text color. |
-| [SetTextSize](./Methods/SetTextSize.md) | boolean | Sets widget text size. 💡  Text size === 0 means autofit  |
+| [SetTextSize](./Methods/SetTextSize.md) | boolean | Sets widget text size. |

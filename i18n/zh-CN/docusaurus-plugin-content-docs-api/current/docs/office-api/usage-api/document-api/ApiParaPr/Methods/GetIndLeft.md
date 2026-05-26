@@ -20,12 +20,12 @@ expression.GetIndLeft();
 
 ## 示例
 
-获取文档中的段落左侧缩进。
+读取文档中段落设置的左缩进值。
 
 ```javascript editor-docx
-// Get the left indentation of the paragraph and show it in the document.
+// How do I find out how far a paragraph is indented from the left margin in a document?
 
-// How to know the number of inches of the left indentation in a document.
+// Check the left indent size before synchronizing paragraph layout across multiple styles.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

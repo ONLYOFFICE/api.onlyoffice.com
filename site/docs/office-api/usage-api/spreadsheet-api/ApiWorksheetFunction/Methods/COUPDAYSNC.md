@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Return the number of days from the settlement date to the next coupon date in a spreadsheet.
+Calculate days remaining until the next coupon payment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find the number of days from the settlement date to the next coupon date in a spreadsheet.
+// What is the time until the upcoming coupon payment from today in a spreadsheet?
 
-// Use function to get the number of days from the settlement date to the next coupon date in a spreadsheet.
+// Determine the gap between settlement and the next coupon maturity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

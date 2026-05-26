@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.Fill](../../ApiDrawing/Methods/Fill.md).
 
 ## Example
 
-Set the fill formatting properties to the current graphic object.
+Apply a radial gradient fill to a copied shape in a document.
 
 ```javascript editor-docx
-// How to color a drawing with a radiant fill in a document.
+// How do I set a gradient fill on a drawing object in a document?
 
-// Change the background color of the shape in a document.
+// Differentiate two identical shapes by filling the duplicate with a radial gradient while leaving the original solid.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

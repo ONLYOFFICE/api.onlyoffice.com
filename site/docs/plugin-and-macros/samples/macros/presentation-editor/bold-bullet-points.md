@@ -40,9 +40,15 @@ Automatically **bolds** the first word of each bullet point that contains a colo
 })();
 ```
 
-Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetIndLeft](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), GetText, [RemoveAllElements](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
+Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](/docs/office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](/docs/office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](/docs/office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllParagraphs](/docs/office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetIndLeft](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetIndLeft.md), [GetText](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/RemoveAllElements.md), [AddText](/docs/office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetBold](/docs/office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md)
 
 ## Result
 
-![BoldBulletPoints](/assets/images/plugins/bold-bullet-points.png#gh-light-mode-only)
-![BoldBulletPoints](/assets/images/plugins/bold-bullet-points.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/bold-bullet-points.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/bold-bullet-points.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

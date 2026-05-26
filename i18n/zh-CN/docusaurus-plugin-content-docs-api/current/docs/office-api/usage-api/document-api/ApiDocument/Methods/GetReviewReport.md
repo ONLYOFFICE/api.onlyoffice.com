@@ -20,12 +20,12 @@ expression.GetReviewReport();
 
 ## 示例
 
-获取在审阅模式下对文档所做的每项更改的报告。
+在文档中生成审阅期间所做的所有跟踪更改的详细报告。
 
 ```javascript editor-docx
-// How to get the report after the document review.
+// How do I extract a summary of every edit recorded in review mode in a document?
 
-// Get all information about review changes like author, formatted text, etc.
+// Build a table listing each reviewer's additions, removals, and formatting changes in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);
@@ -49,7 +49,7 @@ for (let userName in reviewReport) {
     rows += reviewReport[userName].length;
 }
 let cols = 4;
-let table = Api.CreateTable(cols, rows);
+let table = Api.CreateTable(rows, cols);
 doc.Push(table);
 
 function privateFillCell(curRow, curCol, text) {

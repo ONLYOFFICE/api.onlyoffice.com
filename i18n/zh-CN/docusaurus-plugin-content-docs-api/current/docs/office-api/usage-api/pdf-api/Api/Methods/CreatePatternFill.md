@@ -24,12 +24,12 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## 示例
 
-在 PDF 文档中创建图案填充，使用所选图案作为对象背景应用于对象。
+在 PDF 中为形状应用图案填充。
 
 ```javascript editor-pdf
-// How to apply pattern to the background of a drawing in a PDF document.
+// How do I add a pattern background to a drawing in a PDF?
 
-// Change color of an element using a pattern fill in a PDF document.
+// Fill a shape with a repeating pattern using custom colors in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

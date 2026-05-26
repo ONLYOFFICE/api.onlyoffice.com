@@ -25,9 +25,9 @@ expression.AddText(text);
 在演示文稿中向段落添加文本。
 
 ```javascript editor-pptx
-// How to add a text to the paragraph object in a presentation.
+// How do I add text to a paragraph in a presentation?
 
-// How to add a text to the shape in a presentation.
+// Insert text content and line breaks into a text box in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

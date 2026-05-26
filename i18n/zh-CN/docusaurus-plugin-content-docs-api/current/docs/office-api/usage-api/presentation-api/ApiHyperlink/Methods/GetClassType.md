@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中超链接对象的类类型。
+检查演示文稿中超链接的类类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a hyperlink in a presentation?
+// How do I identify the class type of a hyperlink in a presentation?
 
-// Get the class type of a hyperlink and display it in the presentation.
+// Retrieve the class type identifier for a hyperlink in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

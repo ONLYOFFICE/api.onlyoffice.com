@@ -26,4 +26,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.png#gh-light-mode-only)![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/automatic-bookmark-generation.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/automatic-bookmark-generation.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

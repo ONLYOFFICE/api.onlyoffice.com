@@ -25,9 +25,9 @@ number
 在电子表格中将磅转换为缇。
 
 ```javascript editor-xlsx
-// How to convert points to twips in a spreadsheet?
+// How do I express a point value as twips in a spreadsheet?
 
-// Convert points to twips using the spreadsheet API.
+// Get the twip equivalent of a given number of points in a spreadsheet.
 
 const points = 1000;
 const twips = Api.PointsToTwips(points);

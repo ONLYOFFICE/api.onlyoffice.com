@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中组对象的类类型。
+读取文档中分组绘图的类类型标识符。
 
 ```javascript editor-docx
-// How can I get the class type of a group in a document?
+// How do I retrieve the class type of a group object in a document?
 
-// Get the class type of a group and display it in the document.
+// Confirm that grouped shapes return the expected type label when inspected in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

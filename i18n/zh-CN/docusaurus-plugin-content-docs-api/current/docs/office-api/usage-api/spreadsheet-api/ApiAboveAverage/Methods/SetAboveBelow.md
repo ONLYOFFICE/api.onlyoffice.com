@@ -22,12 +22,12 @@ expression.SetAboveBelow(aboveBelow);
 
 ## 示例
 
-在电子表格中设置规则是查找高于还是低于平均值的值。
+选择电子表格中高亮规则是标记高于还是低于平均值的单元格。
 
 ```javascript editor-xlsx
-// How to switch between above average and below average conditions in a spreadsheet.
+// How do I switch a highlight rule between targeting high and low values in a spreadsheet?
 
-// Toggle between above and below average conditional formatting.
+// Flip a conditional rule to focus on below-average cells instead of above-average ones in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

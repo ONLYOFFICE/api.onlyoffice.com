@@ -21,12 +21,12 @@ boolean
 
 ## 示例
 
-如果存在，从演示文稿的父对象中删除指定对象。
+从演示文稿中删除幻灯片母版。
 
 ```javascript editor-pptx
-// How to delete a master in a presentation.
+// How do I delete a slide master in a presentation?
 
-// Remove a master from a presentation.
+// Remove an existing slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

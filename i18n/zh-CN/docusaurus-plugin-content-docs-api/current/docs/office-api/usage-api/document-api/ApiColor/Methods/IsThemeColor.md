@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中的颜色是否为主题颜色。
+确定文档中的颜色是否链接到主题插槽。
 
 ```javascript editor-docx
-// How can I is theme color using a color in a document?
+// How do I check if a color comes from the document theme in a document?
 
-// Is theme color for a color in a document.
+// Distinguish a fixed hex color from a theme-bound color that changes with the theme in a document.
 
 const doc = Api.GetDocument();
 const hexColor = Api.HexColor('#FF0000');

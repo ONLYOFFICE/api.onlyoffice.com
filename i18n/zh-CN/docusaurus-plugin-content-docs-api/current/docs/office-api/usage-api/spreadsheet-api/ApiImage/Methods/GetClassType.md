@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中图像的类类型。
+读取插入到电子表格中的图像的类类型。
 
 ```javascript editor-xlsx
-// How to identify the class type of an image in a spreadsheet?
+// How do I find out what class type an image object belongs to in a spreadsheet?
 
-// Obtain the class type identifier of an image object in a spreadsheet.
+// Identify the object category of an image to distinguish it from other drawing elements.
 
 let worksheet = Api.GetActiveSheet();
 let image = worksheet.AddImage(

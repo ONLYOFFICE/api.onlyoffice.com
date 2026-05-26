@@ -22,12 +22,12 @@ expression.GetSeries(nIdx);
 
 ## 示例
 
-获取图表类的第一个系列并将其类型插入演示文稿。
+从图表访问特定数据系列并在演示文稿中显示其类型。
 
 ```javascript editor-pptx
-// How to get a seria from a chart using its index in a presentation.
+// How do I get a particular series from a chart by its index in a presentation?
 
-// Get the series for a chart in a presentation.
+// Retrieve a series from a chart and show its type in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

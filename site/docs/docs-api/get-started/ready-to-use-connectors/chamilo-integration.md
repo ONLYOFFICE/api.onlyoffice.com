@@ -97,7 +97,7 @@ To start using ONLYOFFICE Docs with Chamilo, the following steps must be perform
 
 On the **Plugins** page, find ONLYOFFICE and click **Configure**. You will see the **Settings** page. Enable the plugin and specify the ONLYOFFICE Docs address:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

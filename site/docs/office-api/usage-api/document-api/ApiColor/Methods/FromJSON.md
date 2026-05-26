@@ -22,12 +22,12 @@ expression.FromJSON(jsonObject);
 
 ## Example
 
-Restore color objects of different types from JSON in a document.
+Rebuild color objects from their JSON representations in a document.
 
 ```javascript editor-docx
-// The JSON string contains the color type and value properties.
+// How do I deserialize saved color data back into usable color objects in a document?
 
-// Restore each color object from JSON and display the theme name.
+// Round-trip colors through JSON to verify that each restored value matches the original in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

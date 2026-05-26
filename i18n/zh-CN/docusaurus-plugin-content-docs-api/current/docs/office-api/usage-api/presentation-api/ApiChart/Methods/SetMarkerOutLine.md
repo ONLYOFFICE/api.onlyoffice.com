@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为指定图表系列中的标记设置轮廓。
+在演示文稿中为图表数据点标记添加边框。
 
 ```javascript editor-pptx
-// How to set an outline to the marker in a presentation.
+// How do I add an outline around the data point symbols in a chart in a presentation?
 
-// Create a chart, set its properties and its marker outline in a presentation.
+// Apply different border colors and widths to markers in different data series in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

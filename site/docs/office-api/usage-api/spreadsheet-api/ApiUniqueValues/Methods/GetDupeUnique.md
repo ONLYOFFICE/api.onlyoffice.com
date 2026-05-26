@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the duplicate/unique value setting from an unique values conditional formatting rule.
+Read whether a conditional formatting rule highlights unique or duplicate values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check whether rule highlights unique or duplicate values in a spreadsheet.
+// How do I tell if a formatting rule is set to mark unique entries or duplicates in a spreadsheet?
 
-// Get the duplicate/unique setting from unique values rule in a spreadsheet.
+// Verify the highlight mode of a unique-values rule to see which kind of entries it targets in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

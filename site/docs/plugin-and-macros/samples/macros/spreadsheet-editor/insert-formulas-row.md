@@ -12,8 +12,8 @@ Copies formulas and number formats from the row above into the currently active 
 (function () {
   let sheet = Api.GetActiveSheet();
   let rowNum = sheet.GetActiveCell().GetRow();
-  let sourceRow = sheet.GetRange(rowNum + ":" + rowNum);
-  let destRow = sheet.GetRange((rowNum + 1) + ":" + (rowNum + 1));
+  let sourceRow = sheet.GetRange((rowNum - 1) + ":" + (rowNum - 1));
+  let destRow = sheet.GetRange(rowNum + ":" + rowNum);
 
   sourceRow.Copy();
 
@@ -38,4 +38,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![Insert formulas row](/assets/images/plugins/insert-formulas-row.png#gh-light-mode-only)![Insert formulas row](/assets/images/plugins/insert-formulas-row.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/insert-formulas-row.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/insert-formulas-row.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

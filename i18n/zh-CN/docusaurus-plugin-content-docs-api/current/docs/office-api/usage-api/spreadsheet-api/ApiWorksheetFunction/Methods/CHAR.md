@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-在电子表格中返回计算机字符集中由代码号指定的字符。
+在电子表格中将数字代码转换为其字符符号。
 
 ```javascript editor-xlsx
-// How to return the character specified by the code number from your computer's character set in a spreadsheet.
+// What character does a number code represent in a spreadsheet?
 
-// Use function to return the character specified by the code number from your computer's character set in a spreadsheet.
+// Display the letter or symbol matching a code value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

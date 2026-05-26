@@ -14,20 +14,20 @@ expression.SetUnderline(undelineType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| undelineType | 必需 | 'none' \| 'single' \| 'singleAccounting' \| 'double' \| 'doubleAccounting' |  | 指定字符下方显示的线条类型。可用值如下：**「none」** - 无下划线；**「single」** - 单下划线；**「singleAccounting」** - 单下划线但不超出单元格边框；**「double」** - 双下划线；**「doubleAccounting」** - 双下划线但不超出单元格边框。 |
+| undelineType | 必需 | 'none' \| 'single' \| 'singleAccounting' \| 'double' \| 'doubleAccounting' |  | 指定 |
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-指定当前单元格的内容显示时在字符正下方添加下划线。
+在电子表格中为单元格内的文本添加下划线。
 
 ```javascript editor-xlsx
-// How to add underline to the cell value.
+// How do I underline the contents of a cell in a spreadsheet?
 
-// Get a range and add underline to its text in a spreadsheet.
+// Highlight or emphasize cell text by placing a line under it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The text underlined with a single line");

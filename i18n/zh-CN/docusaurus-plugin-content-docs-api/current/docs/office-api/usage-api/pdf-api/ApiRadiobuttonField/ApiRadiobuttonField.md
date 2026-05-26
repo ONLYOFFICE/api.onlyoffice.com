@@ -12,7 +12,9 @@ ApiRadiobuttonField 是 [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
 | [GetClassType](./Methods/GetClassType.md) | "radiobuttonField" | 返回 ApiRadiobuttonField 类的类型。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 获取字段完整名称。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前字段的内部 ID。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
+| [GetTooltip](./Methods/GetTooltip.md) | boolean | 获取字段工具提示 |
 | [GetValue](./Methods/GetValue.md) | string | 获取字段值 |
 | [IsCheckInUnison](./Methods/IsCheckInUnison.md) | boolean | 检查字段是否统一选中。 |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | 检查字段是否为只读 |
@@ -24,4 +26,5 @@ ApiRadiobuttonField 是 [ApiCheckboxField](../ApiCheckboxField/ApiCheckboxField.
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | 设置字段为只读 |
 | [SetRequired](./Methods/SetRequired.md) | boolean | 设置字段为必填 |
 | [SetToggleToOff](./Methods/SetToggleToOff.md) | boolean | 设置字段的切换为关闭属性。 |
+| [SetTooltip](./Methods/SetTooltip.md) | boolean | 设置字段工具提示 |
 | [SetValue](./Methods/SetValue.md) | boolean | 设置字段值 |

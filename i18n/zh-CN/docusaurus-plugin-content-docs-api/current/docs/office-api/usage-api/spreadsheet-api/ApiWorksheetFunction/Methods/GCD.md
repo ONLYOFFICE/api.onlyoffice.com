@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中计算最大公约数。
+查找电子表格中多个数字的最大公约数。
 
 ```javascript editor-xlsx
-// How to find the greatest common divisor in a spreadsheet.
+// How do I determine the largest number that divides all my values evenly in a spreadsheet?
 
-// Use a function to calculate the greatest common divisor in a spreadsheet.
+// Get the highest common factor for a set of integers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

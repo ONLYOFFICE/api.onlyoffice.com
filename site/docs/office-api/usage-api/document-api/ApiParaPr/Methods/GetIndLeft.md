@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the paragraph left side indentation in a document.
+Read the left indentation value set on a paragraph in a document.
 
 ```javascript editor-docx
-// Get the left indentation of the paragraph and show it in the document.
+// How do I find out how far a paragraph is indented from the left margin in a document?
 
-// How to know the number of inches of the left indentation in a document.
+// Check the left indent size before synchronizing paragraph layout across multiple styles.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

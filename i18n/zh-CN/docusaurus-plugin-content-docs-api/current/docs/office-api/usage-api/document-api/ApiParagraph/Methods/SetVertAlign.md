@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-在文档中创建两个段落，一个垂直对齐方式为 "subscript"（下标），另一个为 "superscript"（上标）。
+将文档中的段落文本定位在正常书写行的上方或下方。
 
 ```javascript editor-docx
-// How to change a vertical alignment of a text run in a document.
+// How do I raise or lower the text of a paragraph relative to the baseline in a document?
 
-// Create a new text run and make it subscript, baseline or superscript in a document.
+// Distinguish scientific notation or footnote markers by shifting paragraph text vertically in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

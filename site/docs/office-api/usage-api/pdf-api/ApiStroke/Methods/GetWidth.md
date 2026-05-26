@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the width of a stroke in EMU. Creates shapes with different border widths and display their widths in a PDF document.
+Measure the thickness of a border line in a PDF
 
 ```javascript editor-pdf
-// How can I get the width using a stroke in a PDF document?
+// What is the border thickness measured in units in a PDF?
 
-// Get the width for a stroke in a PDF document.
+// Read and display the line width of a border in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

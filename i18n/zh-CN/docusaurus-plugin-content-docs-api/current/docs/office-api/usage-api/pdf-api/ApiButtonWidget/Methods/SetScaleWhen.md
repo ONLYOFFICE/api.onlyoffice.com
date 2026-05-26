@@ -25,9 +25,9 @@ boolean
 在 PDF 文档中设置按钮控件的缩放条件类型。
 
 ```javascript editor-pdf
-// How to set scale when for a button widget in a PDF document?
+// Configure when to scale the button icon using scale when property.
 
-// Set scale when and display the result in a PDF document.
+// Display the set scale when value using the widget label.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all comments from the current document in a document.
+Retrieve all comments from a document and read the class type of the first one in a document.
 
 ```javascript editor-docx
-// Get all comments added to the document.
+// How do I get every comment in a document so I can inspect or process them in a document?
 
-// How to retrieve all comments and display the class type of the first one in a document.
+// Confirm the type of a comment object after collecting the full set of reviewer annotations in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

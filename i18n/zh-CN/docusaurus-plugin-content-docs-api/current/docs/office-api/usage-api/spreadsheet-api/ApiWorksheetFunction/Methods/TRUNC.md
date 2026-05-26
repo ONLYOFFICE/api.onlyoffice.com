@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中通过移除数字的小数部分将数字截断为整数。
+在电子表格中不进行舍入地移除数字的小数位。
 
 ```javascript editor-xlsx
-// How to truncate a number to an integer in a spreadsheet.
+// How do I truncate a number to a specific number of decimal places in a spreadsheet?
 
-// Use a function to truncate a number in a spreadsheet.
+// Cut off the decimal portion of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

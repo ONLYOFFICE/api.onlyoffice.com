@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中以数据集百分比形式返回值在数据集中的排名。
+获取电子表格中某值作为所有值百分比的排名。
 
 ```javascript editor-xlsx
-// How to return the rank of a value in a data set as a percentage in a spreadsheet.
+// How do I find where a number ranks within a dataset as a percentage in a spreadsheet?
 
-// Use a function to get a rank of a value in a data set in a spreadsheet.
+// Calculate what percentage of values fall below a specific number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文本表单返回的类类型。
+识别文档中文本字段的对象类型。
 
 ```javascript editor-forms
-// How do I check what type a text form object is?
+// How do I find out what type of element a text entry area represents in a document?
 
-// Retrieve and output the class type string for a text form.
+// Confirm the category of a text field to distinguish it from other elements in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

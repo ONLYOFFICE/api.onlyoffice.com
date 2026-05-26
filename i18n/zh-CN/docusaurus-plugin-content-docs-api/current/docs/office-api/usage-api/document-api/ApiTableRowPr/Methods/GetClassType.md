@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中表格行属性返回的类类型。
+读取文档中表格行属性对象的类类型。
 
 ```javascript editor-docx
-// How do I check what type a table row properties object is in a document?
+// How do I find out what kind of object holds the row formatting settings in a document?
 
-// Retrieve and output the class type string for a table row properties in a document.
+// Identify the type label assigned to a table row properties object in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

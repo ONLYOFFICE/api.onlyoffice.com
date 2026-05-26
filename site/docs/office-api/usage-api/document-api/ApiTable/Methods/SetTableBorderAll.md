@@ -6,12 +6,12 @@ Inherited from [ApiTablePr.SetTableBorderAll](../../ApiTablePr/Methods/SetTableB
 
 ## Example
 
-Set a border for the entire table in a document.
+Apply a uniform border around and inside every edge of a table in a document.
 
 ```javascript editor-docx
-// How can I set table border all using a table properties in a document?
+// How do I add borders to all sides of every cell in a table in a document?
 
-// Set table border all for a table properties in a document.
+// Draw consistent lines along all internal and external table edges in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

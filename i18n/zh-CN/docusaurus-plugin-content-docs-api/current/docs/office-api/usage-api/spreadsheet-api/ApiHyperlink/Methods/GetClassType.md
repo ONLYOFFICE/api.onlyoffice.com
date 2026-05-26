@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查电子表格中超链接返回的类类型。
+读取电子表格中超链接对象的类类型。
 
 ```javascript editor-xlsx
-// How do I check what type a hyperlink object is in a spreadsheet?
+// How do I find out what type a hyperlink object is in a spreadsheet?
 
-// Retrieve and output the class type string for a hyperlink in a spreadsheet.
+// Confirm the category of a hyperlink by checking its type label in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

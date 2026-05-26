@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何设置单元格顶部边框及其填充颜色。
+在 PDF 中设置带有填充颜色的表格单元格顶部边框。
 
 ```javascript editor-pdf
-// Create table and set its cell top border.
+// How do I customize the appearance of the top edge of a cell in a PDF?
 
-// Set cell border top using a table cell object.
+// Style the border on the top side of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -17,7 +17,7 @@ expression.NEGBINOM_DIST(arg1, arg2, arg3, arg4);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 失败次数。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 成功次数阈值。 |
 | arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 成功的概率；一个介于 0 和 1 之间的数字。 |
-| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 决定函数形式的逻辑值（**true** 或 **false**）。如果为 **true**，则函数返回累积分布函数。如果为 **false**，则函数返回概率密度函数。 |
+| arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 确定函数形式的逻辑值（**true** 或 **false**）。 |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回负二项分布，即在最后一次成功之前出现指定数量失败的概率，具有指定的成功概率。
+计算电子表格中负二项分布的值。
 
 ```javascript editor-xlsx
-// How to return the negative binomial distribution in a spreadsheet.
+// Analyze probability of failures in repeated trials in a spreadsheet.
 
-// Use a function to get the probability of the specified number of failures before the last success (negative binomial distribution) in a spreadsheet.
+// Compute distribution statistics for success and failure scenarios in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

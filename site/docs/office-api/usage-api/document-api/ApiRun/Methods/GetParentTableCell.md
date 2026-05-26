@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a table cell that contains the run in a document.
+Find the table cell that contains a text run in a document.
 
 ```javascript editor-docx
-// Get a parent table cell of the text.
+// How do I access the cell that holds a specific piece of text in a document?
 
-// How to set shading of the table cell that contains a text run.
+// Navigate from a text run up to its enclosing table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

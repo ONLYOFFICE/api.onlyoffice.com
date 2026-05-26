@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a custom triangle geometry and apply it to a shape. Uses basic path drawing commands: MoveTo, LineTo and Close in a document.
+Apply a fill setting to a custom shape's drawing path in a document.
 
 ```javascript editor-docx
-// How do I set fill in a document?
+// How do I control whether the interior of a custom shape's path is filled in a document?
 
-// Set fill using a geometry path object in a document.
+// Enable or disable the fill on a path to change how the shape's interior appears in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

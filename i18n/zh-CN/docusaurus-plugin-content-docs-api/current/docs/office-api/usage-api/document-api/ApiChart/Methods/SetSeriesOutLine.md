@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置文档中指定图表系列的轮廓。
+在文档中为图表上的特定数据系列应用边框轮廓。
 
 ```javascript editor-docx
-// How to outline a chart seria in a document.
+// How do I add a visible border around a single data series on a chart in a document?
 
-// Create a chart, set its properties and its series outline in a document.
+// Style individual series differently to distinguish them from the rest of the chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

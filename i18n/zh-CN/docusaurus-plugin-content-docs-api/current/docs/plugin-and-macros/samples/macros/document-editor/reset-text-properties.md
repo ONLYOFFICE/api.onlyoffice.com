@@ -33,5 +33,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![重置文本属性](/assets/images/plugins/reset-text-properties.png#gh-light-mode-only)
-![重置文本属性](/assets/images/plugins/reset-text-properties.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/reset-text-properties.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/reset-text-properties.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

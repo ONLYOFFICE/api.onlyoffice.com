@@ -20,12 +20,12 @@ expression.GetPrevImage();
 
 ## 示例
 
-获取文档中的上一个内联图像（如果存在）。
+获取给定图像之前的上一个图像并将其复制到文档的段落中。
 
 ```javascript editor-docx
-// How to add the previous drawing to the paragraph in a document.
+// How do I access the image that comes before another image in a document?
 
-// Get the previous drawing and add it separated with a line break in a document.
+// Copy a sibling image by navigating backward through inline images in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

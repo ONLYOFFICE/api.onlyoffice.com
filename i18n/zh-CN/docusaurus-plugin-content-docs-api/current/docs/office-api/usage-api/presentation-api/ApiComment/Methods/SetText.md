@@ -25,9 +25,9 @@ expression.SetText(sText);
 在演示文稿中设置批注文本。
 
 ```javascript editor-pptx
-// How to change a text of a comment in a presentation.
+// Change the text content of a specific comment.
 
-// Get all comments from the presentation and set its first one's text.
+// Update the first comment's text and display the new content.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

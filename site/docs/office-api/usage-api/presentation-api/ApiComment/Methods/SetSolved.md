@@ -25,9 +25,9 @@ expression.SetSolved(bSolved);
 Resolve a comment in a presentation.
 
 ```javascript editor-pptx
-// How to make a comment solved in a presentation.
+// Mark a comment as solved to indicate it has been addressed.
 
-// Get all comments from the presentation and set it solved.
+// Set the first comment as resolved and display the result.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ expression.SetVerticalTextAlign(verticalAlign);
 
 ## 示例
 
-在演示文稿中为可以插入段落或文本 run 的形状内容设置垂直对齐方式。
+将形状内的文本垂直对齐到底部。
 
 ```javascript editor-pptx
-// How to set vertical alignment of the shape content in a presentation.
+// Clear all default objects and create a custom shape with specific geometry.
 
-// Adjust vertical alignment of the text inside the shape in a presentation.
+// Add text to the shape with bottom vertical alignment to position content at the lower edge.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

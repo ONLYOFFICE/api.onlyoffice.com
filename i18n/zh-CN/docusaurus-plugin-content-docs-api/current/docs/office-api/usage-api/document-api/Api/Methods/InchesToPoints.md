@@ -25,9 +25,9 @@ number
 在文档中将英寸转换为磅。
 
 ```javascript editor-docx
-// How can I convert inches to points in a document?
+// How do I convert inches to points in a document?
 
-// Convert inches to points in a document.
+// Display the equivalent point value for a given number of inches in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

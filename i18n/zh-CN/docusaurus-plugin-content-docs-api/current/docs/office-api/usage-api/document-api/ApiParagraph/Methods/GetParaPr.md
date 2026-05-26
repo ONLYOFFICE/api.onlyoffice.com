@@ -20,12 +20,12 @@ expression.GetParaPr();
 
 ## 示例
 
-获取文档中的段落属性。
+读取文档中段落的格式属性。
 
 ```javascript editor-docx
-// How to set the spacing line, justification and other properties of the text in a document.
+// How do I access the spacing, alignment, and indent settings of a paragraph in a document?
 
-// Create a paragraph, add its text and properties in a document.
+// Apply line spacing and justification to a paragraph using its properties object in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

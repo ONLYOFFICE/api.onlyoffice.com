@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-移除 PDF 文档中的元素。
+从 PDF 中形状的内容删除单个段落。
 
 ```javascript editor-pdf
-// How to remove an elements from the page shape.
+// How do I remove one paragraph from inside a shape in a PDF?
 
-// Get a page shape's content and remove an element from it using its index.
+// Erase a specific text block by its position in a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

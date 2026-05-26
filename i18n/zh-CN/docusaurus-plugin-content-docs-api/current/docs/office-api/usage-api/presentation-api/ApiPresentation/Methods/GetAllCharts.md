@@ -20,12 +20,12 @@ expression.GetAllCharts();
 
 ## 示例
 
-获取当前演示文稿中的所有图表对象。
+列出演示文稿中的所有图表。
 
 ```javascript editor-pptx
-// How can I get all charts using a presentation in a presentation?
+// How do I access every chart across the entire presentation in a presentation?
 
-// Get all charts for a presentation in a presentation.
+// Retrieve and count charts to display their total in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

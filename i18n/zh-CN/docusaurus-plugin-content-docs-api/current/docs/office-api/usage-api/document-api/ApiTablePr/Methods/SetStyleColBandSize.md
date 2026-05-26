@@ -22,31 +22,31 @@ boolean
 
 ## 示例
 
-在文档中指定构成此表格样式的每个表格列带区的列数。
+在文档中将多个相邻列组合为单个交替带。
 
 ```javascript editor-docx
-// How to set column band size in a document.
+// How do I make the striped column pattern span more than one column in a document?
 
-// How to style a column band size in a document.
+// Widen the repeating column highlight bands applied by a table style in a document.
 
 let doc = Api.GetDocument();
 doc.RemoveAllElements();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let table = Api.CreateTable(4, 2);
+let table = Api.CreateTable(2, 4);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 let tablePr = tableStyle.GetTablePr();
 table.SetTableLook(true, true, true, true, true, true);
 tablePr.SetStyleColBandSize(2);
 tableStyle.GetConditionalTableStyle("bandedColumn").GetTextPr().SetBold(true);
-table.GetRow(0).GetCell(0).GetContent().GetElement(0).AddText("Bold");
-table.GetRow(0).GetCell(1).GetContent().GetElement(0).AddText("Bold");
-table.GetRow(0).GetCell(2).GetContent().GetElement(0).AddText("Normal");
-table.GetRow(0).GetCell(3).GetContent().GetElement(0).AddText("Normal");
-table.GetRow(1).GetCell(0).GetContent().GetElement(0).AddText("Bold");
-table.GetRow(1).GetCell(1).GetContent().GetElement(0).AddText("Bold");
-table.GetRow(1).GetCell(2).GetContent().GetElement(0).AddText("Normal");
-table.GetRow(1).GetCell(3).GetContent().GetElement(0).AddText("Normal");
+table.Cells[0][0].GetContent().AddText("Bold");
+table.Cells[0][1].GetContent().AddText("Bold");
+table.Cells[0][2].GetContent().AddText("Normal");
+table.Cells[0][3].GetContent().AddText("Normal");
+table.Cells[1][0].GetContent().AddText("Bold");
+table.Cells[1][1].GetContent().AddText("Bold");
+table.Cells[1][2].GetContent().AddText("Normal");
+table.Cells[1][3].GetContent().AddText("Normal");
 doc.Push(table);
 ```

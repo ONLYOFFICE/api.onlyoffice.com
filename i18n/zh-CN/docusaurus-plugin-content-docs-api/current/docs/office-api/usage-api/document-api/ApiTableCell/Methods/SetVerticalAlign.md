@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定表格单元格内文本内容的垂直对齐方式。
+控制文档中表格单元格内文本的垂直位置。
 
 ```javascript editor-docx
-// Set text vertical alignment to the cell.
+// How do I align text to the top, middle, or bottom of a table cell in a document?
 
-// Align the text to bottom of the cell.
+// Anchor cell content to a specific vertical position within a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

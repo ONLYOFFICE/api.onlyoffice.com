@@ -7,12 +7,12 @@ Inherited from [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOri
 
 ## Example
 
-Set an orientation of a pivot field in a spreadsheet.
+Move a pivot field to the rows, columns, or values area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field orientation in a spreadsheet.
+// How do I reassign a pivot field to a different area of the pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then change an orientation a specified pivot in a spreadsheet.
+// Reorganize a pivot table by switching a field from rows to columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -44,12 +44,6 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-let pivotWorksheet = Api.GetActiveSheet();
-pivotWorksheet.GetRange('A12').SetValue('The Style field orientation will change soon');
-
 let pivotField = pivotTable.GetPivotFields('Style');
-
-setTimeout(function () {
-    pivotField.SetOrientation("Columns");
-}, 5000);
+pivotField.SetOrientation("Columns");
 ```

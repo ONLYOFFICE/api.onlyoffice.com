@@ -14,7 +14,7 @@ expression.AVERAGEA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| number[] |  | 最多 255 个数值，将返回这些数值的平均值。第一个参数是必需的，后续参数是可选的。参数可以是数字、文本或逻辑值（如 **true** 和 **false**）、名称或数字数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| number[] |  | 最多 255 个数值，将返回这些数值的平均值。第一个参数是必需的， |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回指定参数的平均值（算术平均数）。
+计算电子表格中包含数字、文本和逻辑值的列表的平均值。
 
 ```javascript editor-xlsx
-// How to find an average (arithmetic mean) in a spreadsheet.
+// Average values when the range contains text or TRUE/FALSE entries in a spreadsheet.
 
-// Use function to get the find an average (arithmetic mean) in a spreadsheet.
+// Include non-numeric cells such as booleans when computing a mean in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

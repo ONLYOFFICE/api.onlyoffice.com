@@ -20,12 +20,12 @@ expression.Close();
 
 ## 示例
 
-创建自定义形状并将其添加到幻灯片。应用具有特定填充和笔触属性的自定义几何图形。
+关闭形状路径以完成演示文稿中的自定义形状轮廓。
 
 ```javascript editor-pptx
-// How can I close using a geometry path in a presentation?
+// How do I finish drawing a closed shape in a presentation?
 
-// Close for a geometry path in a presentation.
+// Complete a custom geometry path by connecting the endpoints in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

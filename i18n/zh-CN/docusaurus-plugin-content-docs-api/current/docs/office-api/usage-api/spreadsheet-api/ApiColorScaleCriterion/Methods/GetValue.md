@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取电子表格中色阶条件的值。
+读取电子表格中色阶规则点中存储的阈值。
 
 ```javascript editor-xlsx
-// How to retrieve the value of a color scale criterion in a spreadsheet.
+// How do I retrieve the numeric boundary set for a color scale rule point in a spreadsheet?
 
-// Get the value of a color scale criterion in a spreadsheet.
+// Confirm what boundary number a color scale rule entry holds before applying the gradient in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

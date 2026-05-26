@@ -22,12 +22,12 @@ expression.CreateSolidFill(color);
 
 ## Example
 
-Create a solid fill to apply to the object using a selected solid color as the object background in a spreadsheet.
+Paint a shape with a single flat color as its background in a spreadsheet.
 
 ```javascript editor-xlsx
-// Create a solid fill to set a background color in a spreadsheet.
+// How do I fill a shape with one uniform color in a spreadsheet?
 
-// How to create a solid color to fill a shape in a spreadsheet.
+// Cover a shape's surface with a plain, unblended color to make it stand out in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let rgbColor = Api.RGB(255, 111, 61);

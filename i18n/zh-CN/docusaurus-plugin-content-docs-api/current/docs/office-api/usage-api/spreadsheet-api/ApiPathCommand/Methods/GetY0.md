@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-从三次贝塞尔曲线命令提取控制点。在电子表格单元格中显示所有贝塞尔控制点坐标。
+读取贝塞尔曲线第一个控制点的垂直位置并写入电子表格的单元格。
 
 ```javascript editor-xlsx
-// How can I get the y0 using a path command in a spreadsheet?
+// How do I find the Y coordinate of the first bezier handle on a curve path command in a spreadsheet?
 
-// Get the y0 for a path command in a spreadsheet.
+// Inspect the initial vertical anchor that shapes a cubic curve segment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

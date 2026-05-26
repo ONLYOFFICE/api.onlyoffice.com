@@ -23,12 +23,12 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## 示例
 
-指定此文本 run 中的所有小写字母字符仅以比指定字体大小小两磅的对应大写字母格式显示。
+在文档中将文本运行的小写字母显示为小型大写字母。
 
 ```javascript editor-docx
-// How to make text uncapitalized in a document.
+// How do I make text appear in small capitals without changing the original letters in a document?
 
-// Create a new text run and make its letters lowercase in a document.
+// Style a run so that all characters render as compact uppercase glyphs in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

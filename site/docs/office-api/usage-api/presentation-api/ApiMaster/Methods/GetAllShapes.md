@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an array with all the shape objects from the slide master in a presentation.
+Retrieve all shapes from a slide master in a presentation.
 
 ```javascript editor-pptx
-// How to get all shapes from the presentation slide master.
+// How do I find all shapes on a slide master in a presentation?
 
-// Get all shapes from the presentation master as an array.
+// List every shape object in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);

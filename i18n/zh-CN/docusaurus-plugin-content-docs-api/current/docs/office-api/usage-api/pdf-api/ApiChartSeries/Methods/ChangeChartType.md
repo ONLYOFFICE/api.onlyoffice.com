@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更改图表类的第一个系列的类型并将新类型插入 PDF 文档。
+在 PDF 中将数据系列切换为不同的图表类型。
 
 ```javascript editor-pdf
-// How to change a chart type in a PDF document.
+// How do I change how one series in a chart displays in a PDF?
 
-// Change a chart type to the "area" type in a PDF document.
+// Display chart data as a different type, such as converting a line series to an area chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

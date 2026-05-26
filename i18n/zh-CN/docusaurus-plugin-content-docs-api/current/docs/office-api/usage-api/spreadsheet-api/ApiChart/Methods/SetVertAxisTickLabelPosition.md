@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中设置图表刻度标签相对于主垂直标签或图表数据值的可能位置值。
+相对于垂直轴刻度线定位电子表格中的值标签。
 
 ```javascript editor-xlsx
-// How to set a tick position to the high of the vertical axis labels in a spreadsheet.
+// How do I move the number labels to the far side of the vertical axis in a spreadsheet?
 
-// Specify tick mark position for the vertical axis in a spreadsheet.
+// Place vertical axis labels at a chosen position beside the chart data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -42,7 +42,7 @@ GitHub 仓库：[youtube](https://github.com/ONLYOFFICE/onlyoffice.github.io/tre
 
 ## 配置
 
-``` json
+```json
 {
   "name": "YouTube",
   "nameLocale": {

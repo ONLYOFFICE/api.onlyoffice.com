@@ -22,12 +22,12 @@ expression.SetTableRowPr(tableRowPr);
 
 ## 示例
 
-设置文档中当前样式的表格行属性。
+将行级格式（如高度）保存到表格样式中，以便文档中的所有行共享这些尺寸。
 
 ```javascript editor-docx
-// How to create table row properties for style and set its height in a document.
+// How do I set a minimum row height for every table row by defining it in the table style in a document?
 
-// Update table row properties in the style in a document.
+// Enforce uniform row sizing across a table by embedding the row settings in a reusable style in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

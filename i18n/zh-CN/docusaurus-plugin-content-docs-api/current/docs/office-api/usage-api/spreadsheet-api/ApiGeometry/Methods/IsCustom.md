@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-从电子表格中的星形获取几何图形信息。在单元格中显示预设类型和自定义状态。
+检查电子表格中的形状是否使用手绘轮廓而非内置模板。
 
 ```javascript editor-xlsx
-// How do I is custom in a spreadsheet?
+// How do I tell if a shape's geometry was defined manually instead of chosen from a preset list in a spreadsheet?
 
-// Is custom using a geometry object in a spreadsheet.
+// Verify that a shape carries a fully custom outline rather than one of the standard shapes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

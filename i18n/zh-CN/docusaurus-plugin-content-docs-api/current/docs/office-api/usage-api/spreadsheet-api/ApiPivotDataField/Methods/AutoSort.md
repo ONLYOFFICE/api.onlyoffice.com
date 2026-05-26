@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中为数据透视表报表建立自动字段排序规则。
+按值自动排序电子表格中的数据透视表字段。
 
 ```javascript editor-xlsx
-// How to use the AutoSort method to sort pivot field data in a spreadsheet.
+// How do I make a pivot table sort a row or column field in ascending or descending order in a spreadsheet?
 
-// Create a pivot table, add data to it then apply automatic sorting to a specified field in a spreadsheet.
+// Configure automatic sorting rules so a pivot field stays ordered whenever the data refreshes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

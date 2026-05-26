@@ -6,12 +6,12 @@
 
 ## 示例
 
-在文档中的指定位置插入段落。
+在文档中将段落插入到绘图的内容区域。
 
 ```javascript editor-docx
-// How to insert the paragraph into the drawing in a document.
+// How do I add text inside a shape in a document?
 
-// Create a rectangle and then add a paragraph to it in a document.
+// Place a labeled paragraph inside a rectangle to annotate the shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

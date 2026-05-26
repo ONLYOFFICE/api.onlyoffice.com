@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get checkbox widget check style in a PDF document.
+Read the appearance style of a checkbox in a PDF.
 
 ```javascript editor-pdf
-// How can I get the check style using a checkbox widget in a PDF document?
+// How do I find out what symbol displays when a checkbox is selected in a PDF?
 
-// Get the check style for a checkbox widget in a PDF document.
+// Retrieve the check mark style used to indicate a selected checkbox in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

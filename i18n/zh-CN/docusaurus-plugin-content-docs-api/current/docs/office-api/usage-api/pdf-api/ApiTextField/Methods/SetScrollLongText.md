@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中添加文本字段并设置长文本滚动属性。
+当文本超过 PDF 中字段宽度时允许水平滚动。
 
 ```javascript editor-pdf
-// How to set scroll long text for a text field in a PDF document?
+// How do I make a narrow text field scrollable for longer content in a PDF?
 
-// Set scroll long text and display the result in a PDF document.
+// Enable scrolling for text that overflows the field boundary in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

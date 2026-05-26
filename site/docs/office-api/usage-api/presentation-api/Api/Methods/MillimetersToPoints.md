@@ -25,9 +25,9 @@ number
 Convert millimeters to points in a presentation.
 
 ```javascript editor-pptx
-// How can I convert millimeters to points in a presentation?
+// Use the Api object to convert measurement units.
 
-// Convert millimeters to points in a presentation.
+// Display the conversion result in a shape on the slide.
 
 const millimeters = 100;
 const points = Api.MillimetersToPoints(millimeters);

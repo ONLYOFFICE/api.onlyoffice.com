@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在演示文稿中为数据点设置轮廓。
+在演示文稿中为图表数据点添加轮廓。
 
 ```javascript editor-pptx
-// How to outline data points in a presentation.
+// How do I add a border to data points in a chart in a presentation?
 
-// Create a chart then apply outline to its data points in a presentation.
+// Create a chart and apply a stroke outline to individual data points in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

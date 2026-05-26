@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在 PDF 文档中为文本 run 的字符设置字体大小。
+调整 PDF 中的文本大小。
 
 ```javascript editor-pdf
-// How to change a text font size in a PDF document.
+// How do I make text larger or smaller in a PDF?
 
-// Get the text properties of the run and set its font size in a PDF document.
+// Modify the point size of characters displayed in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

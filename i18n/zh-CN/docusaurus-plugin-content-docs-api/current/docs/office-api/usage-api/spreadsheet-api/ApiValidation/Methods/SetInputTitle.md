@@ -22,12 +22,12 @@ expression.SetInputTitle(InputTitle);
 
 ## 示例
 
-在电子表格中设置输入消息标题。
+为用户选择电子表格中已验证单元格时出现的提示框分配标题。
 
 ```javascript editor-xlsx
-// How to set the validation input title in a spreadsheet.
+// How do I add a title to the tooltip that guides users when they click on a restricted cell in a spreadsheet?
 
-// Set input title for a validation in a spreadsheet.
+// Name the input prompt so users know at a glance what kind of value a cell expects in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

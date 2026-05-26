@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中给定范围对象的结束位置。
+确定文档内容中选定文本区域的结束位置。
 
 ```javascript editor-docx
-// How to get the last index of the range position in a document.
+// How do I find the last character position of a text selection in a document?
 
-// Get a range of the paragraph and display its the end position in a document.
+// Pinpoint the final boundary of a highlighted span to measure its extent in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

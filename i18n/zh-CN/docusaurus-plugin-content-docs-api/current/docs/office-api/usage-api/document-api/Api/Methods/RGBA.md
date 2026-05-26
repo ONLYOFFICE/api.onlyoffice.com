@@ -25,12 +25,12 @@ expression.RGBA(r, g, b, a);
 
 ## 示例
 
-在文档中创建 RGBA 颜色并将其用作内容控件背景颜色。
+创建半透明颜色并将其应用为文档中内联文本控件的背景。
 
 ```javascript editor-docx
-// How to r g b an in a document?
+// How do I set a translucent background color on an inline text control in a document?
 
-// R g b an using the document API.
+// Use a color with opacity to highlight an inline text area inside a paragraph in a document.
 
 const doc = Api.GetDocument();
 

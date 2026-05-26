@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中批注创建的当前时区格式时间戳。
+读取文档中批注的本地时区格式创建时间戳。
 
 ```javascript editor-docx
-// How to know when a comment was added in a document.
+// How do I find out when a comment was created in a document?
 
-// Get all comments from the presentation and the first one's time of creation.
+// Display a comment's creation time in the user's local time zone for human-readable audit trails.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

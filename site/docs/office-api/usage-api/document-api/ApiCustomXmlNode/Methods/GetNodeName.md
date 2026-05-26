@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Retrieve the name of the current XML node in a document.
+Read the tag name of a custom XML node in a document.
 
 ```javascript editor-docx
-// How to get the node name for a custom XML node in a document?
+// How do I get the name of a custom XML node in a document?
 
-// Get the node name and display the result in a document.
+// Identify which element you are working with by reading its tag name in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

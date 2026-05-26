@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Make the sheet active in a spreadsheet.
+Switch focus to a specific sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set an active sheet in a spreadsheet.
+// How do I make a particular sheet the active one in a spreadsheet?
 
-// Set a current sheet active in a spreadsheet.
+// Bring a named sheet to the foreground so it becomes the working sheet in a spreadsheet.
 
 Api.AddSheet("New_sheet");
 let sheet = Api.GetSheet("New_sheet");

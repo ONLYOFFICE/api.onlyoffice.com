@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为轴值设置指定的数字格式。
+格式化演示文稿中图表轴上显示的数字。
 
 ```javascript editor-pptx
-// How to change a numeric format of left axis lables.
+// How do I change the number format for the axis labels in a presentation?
 
-// Create a chart then set its axis number format.
+// Create a chart and apply a decimal format to its axis values in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

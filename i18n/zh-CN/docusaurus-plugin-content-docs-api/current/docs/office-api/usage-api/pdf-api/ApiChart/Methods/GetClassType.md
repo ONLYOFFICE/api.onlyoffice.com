@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中图表返回的类类型。
+识别 PDF 中图表对象的类类型。
 
 ```javascript editor-pdf
-// How do I check what type a chart object is in a PDF document?
+// How do I determine what kind of object a chart is in a PDF?
 
-// Retrieve and output the class type string for a chart in a PDF document.
+// Retrieve and display the class type of a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

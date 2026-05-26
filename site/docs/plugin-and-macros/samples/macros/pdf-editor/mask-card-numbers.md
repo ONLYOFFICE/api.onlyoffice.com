@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "PDF"]
 
 Applies the mask to all forms with the specified form key to hide card numbers.
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();
@@ -33,4 +33,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png#gh-light-mode-only)![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/mask-card-numbers.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/mask-card-numbers.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

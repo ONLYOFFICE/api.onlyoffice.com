@@ -17,6 +17,7 @@ Enumeration
 - "pictureForm"
 - "complexForm"
 - "dateForm"
+- "signatureForm"
 
 ## Example
 

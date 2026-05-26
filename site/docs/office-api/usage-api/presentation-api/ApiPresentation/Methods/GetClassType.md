@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a presentation in a presentation.
+Identify the object type in a presentation.
 
 ```javascript editor-pptx
-// How to identify the class type of a presentation?
+// How do I verify that an object is a presentation in a presentation?
 
-// Obtain the class type identifier of a presentation object.
+// Display the class type identifier for a presentation in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

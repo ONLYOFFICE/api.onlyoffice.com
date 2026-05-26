@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取表示文档中下拉列表或组合框内容控件的列表项显示文本的字符串。
+读取文档中下拉列表或组合框列表条目的显示标签。
 
 ```javascript editor-docx
-// How do I get the text in a document?
+// How do I get the visible text of a list item in a document?
 
-// Get the text using a content control list entry object in a document.
+// Retrieve the label shown to the user when you need to verify or compare entry names in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中向 run 位置添加换行符并从新行开始下一个元素。
+在文本运行内插入换行符以在文档的下一行继续文本。
 
 ```javascript editor-docx
-// How to start a sentence on a new line in a document.
+// How do I split a single text run across two lines without starting a new paragraph in a document?
 
-// Break two lines of a text run with a line in a document.
+// Push the remaining text onto a fresh line while keeping it in the same paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

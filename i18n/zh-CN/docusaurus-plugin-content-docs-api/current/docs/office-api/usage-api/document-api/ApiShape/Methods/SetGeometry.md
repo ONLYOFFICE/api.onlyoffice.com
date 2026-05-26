@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-创建自定义三角形几何图形并将其应用于形状。在文档中使用基本路径绘制命令：MoveTo、LineTo 和 Close。
+在文档中用自定义绘制的路径替换形状的轮廓。
 
 ```javascript editor-docx
-// How can I set geometry using a shape in a document?
+// How do I give a shape a custom geometric outline in a document?
 
-// Set geometry for a shape in a document.
+// Define a unique silhouette for a shape by providing hand-drawn path coordinates in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-为演示文稿创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
+在演示文稿中创建带有参考线和连接点的可调整几何图形。
 
 ```javascript editor-pptx
-// How do I add the connection point in a presentation?
+// Connection points define where connectors attach to a shape's geometry.
 
-// Add the connection point using a geometry object in a presentation.
+// Add a connection point using a geometry object.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

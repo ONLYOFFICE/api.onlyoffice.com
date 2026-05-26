@@ -22,12 +22,12 @@ expression.SetVersion(sVersion);
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的版本。
+为演示文稿存储版本号。
 
 ```javascript editor-pptx
-// How to set version for a core properties in a presentation?
+// How do I track the version of my presentation?
 
-// Set version and display the result in a presentation.
+// Write and retrieve the version identifier for a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

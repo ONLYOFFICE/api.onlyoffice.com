@@ -22,12 +22,12 @@ expression.GetByNamespace(namespace);
 
 ## 示例
 
-通过命名空间获取文档中的自定义 XML 部件。
+检索文档中匹配特定命名空间的所有自定义 XML 部件。
 
 ```javascript editor-docx
-// How to get the by namespace for a custom XML parts in a document?
+// How do I filter custom XML parts by namespace in a document?
 
-// Get the by namespace and display the result in a document.
+// Narrow down embedded XML data to only the parts belonging to a given namespace in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

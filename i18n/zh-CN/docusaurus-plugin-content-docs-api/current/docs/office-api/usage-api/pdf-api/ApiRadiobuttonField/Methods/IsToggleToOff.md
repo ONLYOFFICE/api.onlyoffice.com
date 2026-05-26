@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中复选框字段的切换为关闭属性。
+检查 PDF 中的复选框是否可以在单击时取消选中。
 
 ```javascript editor-pdf
-// How can I is toggle to off using a checkbox field in a PDF document?
+// How do I find out if a checkbox uses toggle-off behavior in a PDF?
 
-// Is toggle to off for a checkbox field in a PDF document.
+// Determine whether a checked checkbox unselects when clicked again in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

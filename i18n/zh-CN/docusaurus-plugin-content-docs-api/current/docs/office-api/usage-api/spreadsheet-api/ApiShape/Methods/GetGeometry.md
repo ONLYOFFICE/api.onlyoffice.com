@@ -20,12 +20,12 @@ expression.GetGeometry();
 
 ## 示例
 
-从电子表格中的星形获取几何图形信息。在单元格中显示预设类型和自定义状态。
+读取形状的轮廓几何图形并在电子表格中显示其预设名称和自定义状态。
 
 ```javascript editor-xlsx
-// How to get the geometry for a shape in a spreadsheet?
+// How do I find out what geometric form a shape is using in a spreadsheet?
 
-// Get the geometry and display the result in a spreadsheet.
+// Inspect a shape's outline definition and write the results into sheet cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));

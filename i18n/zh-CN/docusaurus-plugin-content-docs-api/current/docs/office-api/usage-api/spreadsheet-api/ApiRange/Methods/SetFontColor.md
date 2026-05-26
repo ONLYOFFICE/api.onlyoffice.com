@@ -18,16 +18,16 @@ expression.SetFontColor(oColor);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-为单元格范围设置文本颜色。
+更改电子表格中单元格范围的文本颜色。
 
 ```javascript editor-xlsx
-// How to color a cell text.
+// How do I make the text in a group of cells a different color in a spreadsheet?
 
-// Get a range and apply an RGB color to its text color in a spreadsheet.
+// Give cell text a specific color to highlight or differentiate it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetFontColor(Api.CreateColorFromRGB(255, 111, 61));

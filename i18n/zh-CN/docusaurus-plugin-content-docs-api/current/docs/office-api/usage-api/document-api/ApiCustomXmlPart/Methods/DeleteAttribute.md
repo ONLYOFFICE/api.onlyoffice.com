@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-从文档中的自定义 XML 部件中删除属性。
+从文档中嵌入的 XML 数据的元素中移除特定属性。
 
 ```javascript editor-docx
-// How can I delete the attribute using a custom XML part in a document?
+// How do I strip an unwanted attribute from an XML element stored in a document?
 
-// Delete the attribute for a custom XML part in a document.
+// Clean up obsolete metadata on an element without altering the rest of the XML in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

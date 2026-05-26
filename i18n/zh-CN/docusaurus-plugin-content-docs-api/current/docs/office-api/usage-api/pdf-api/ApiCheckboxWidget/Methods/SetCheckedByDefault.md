@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置复选框控件的默认选中属性。
+使复选框在 PDF 表单首次打开时显示为已选中。
 
 ```javascript editor-pdf
-// How to set checked by default for a checkbox widget in a PDF document?
+// How do I configure a checkbox to be pre-selected by default in a PDF?
 
-// Set checked by default and display the result in a PDF document.
+// Set the initial checked state for a checkbox widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

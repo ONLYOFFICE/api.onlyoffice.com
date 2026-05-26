@@ -26,12 +26,12 @@ boolean
 
 ## Example
 
-Create a shape with adjustable parameters and guides. Sets up text rectangle and connection points for the custom geometry in a document.
+Add a guide to a custom geometry shape in a document.
 
 ```javascript editor-docx
-// How to add the guide for a geometry in a document?
+// How do I add a guide to a shape's geometry in a document?
 
-// Add the guide and display the result in a document.
+// Use a guide to reference a calculated position when defining a shape's outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return a random number between the numbers specified in a spreadsheet.
+Generate a random whole number within a specified range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a number between indicated values in a spreadsheet.
+// How do I pick a random value between two numbers in a spreadsheet?
 
-// Use a function to return a random value between specified limits in a spreadsheet.
+// Create an unpredictable integer within a minimum and maximum in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

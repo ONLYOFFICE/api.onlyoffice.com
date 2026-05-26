@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取条件格式规则应用的范围。
+读取电子表格中条件格式规则覆盖的单元格范围。
 
 ```javascript editor-xlsx
-// How to retrieve the cell range of existing conditional formatting rules.
+// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
 
-// Get conditional formatting rule range.
+// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

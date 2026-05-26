@@ -22,12 +22,12 @@ null \| boolean \| string
 
 ## 示例
 
-使用键获取指定表单的值。
+通过键读取表单字段的当前值并在文档中打印。
 
 ```javascript editor-forms
-// How do I get the form value by key in a document?
+// How do I retrieve what a user entered in a named form field in a document?
 
-// Get the form value by key using a document object.
+// Verify filled-in form data by looking up field values by key in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

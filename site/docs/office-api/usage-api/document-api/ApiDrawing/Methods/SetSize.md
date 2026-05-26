@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set the size of the shape bounding box in a document.
+Resize a shape to specific width and height dimensions in a document.
 
 ```javascript editor-docx
-// How to resize the drawing in a document.
+// How do I change the size of a drawing in a document?
 
-// Set the height and the width of the shape in a document.
+// Adjust a shape's bounding box after it has already been placed on the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ expression.GetDrawingsByName(ids);
 
 ## 示例
 
-从文档中获取具有指定名称的所有绘图对象。
+按名称检索特定绘图并在文档中旋转它们。
 
 ```javascript editor-docx
-// Get drawings by their names in a document.
+// How do I find drawings by their names and apply a transformation in a document?
 
-// How to retrieve drawings by their names and rotate them in a document.
+// Select a subset of shapes from the page and change their orientation in a document.
 
 const doc = Api.GetDocument();
 const paragraph = doc.GetElement(0);

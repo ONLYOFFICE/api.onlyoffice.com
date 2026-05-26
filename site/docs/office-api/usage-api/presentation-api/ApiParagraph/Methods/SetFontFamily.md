@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## Example
 
-Set all 4 font slots with the specified font family in a presentation.
+Change the font typeface for paragraph text in a presentation.
 
 ```javascript editor-pptx
-// How to set font family for a paragraph in a presentation?
+// How do I set the font family for a paragraph in a presentation?
 
-// Set font family and display the result in a presentation.
+// Apply a specific font typeface to all text in a paragraph in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

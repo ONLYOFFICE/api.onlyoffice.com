@@ -14,7 +14,7 @@ expression.SetSeriaValues(sRange, nSeria);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRange | 必需 | string |  | 包含系列值的工作表单元格范围。例如：「'sheet 1'!$A$2:$A$5」- 必须是单个单元格、行或列，「A1:A5」- 必须是单个单元格、行或列，「Example series」。 |
+| sRange | 必需 | string |  | 工作表中包含系列值的单元格范围。例如： |
 | nSeria | 必需 | number |  | 图表系列的索引。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在电子表格中将指定范围的值设置到指定系列。
+将单元格范围数据分配为电子表格中图表系列的值。
 
 ```javascript editor-xlsx
-// How to add values to series from the indicated range using addresses in a spreadsheet.
+// How do I point a chart series to a different range of cells for its values in a spreadsheet?
 
-// Fill series with values obtained from the worksheet cells.
+// Update the data a chart series displays by linking it to a new range of cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

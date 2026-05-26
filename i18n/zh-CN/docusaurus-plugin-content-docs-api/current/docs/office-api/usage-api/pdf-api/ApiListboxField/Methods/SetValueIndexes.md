@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中为带有选项列表的字段设置选中值的索引。
+按位置在 PDF 中的下拉列表中将项目标记为已选中。
 
 ```javascript editor-pdf
-// How do I set value indexes in a PDF document?
+// How do I select options by index in a dropdown field in a PDF?
 
-// Set value indexes using a list field object in a PDF document.
+// Choose items from a list using their numeric positions in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

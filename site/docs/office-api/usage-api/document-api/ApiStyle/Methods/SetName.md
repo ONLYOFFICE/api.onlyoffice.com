@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a name of the current style in a document.
+Assign a custom name to an existing table style in a document.
 
 ```javascript editor-docx
-// Rename the table style in a document.
+// How do I rename a table style so it appears under a different label in a document?
 
-// How to change the name of the created table style in a document.
+// Give a built-in table style a new identifying name to distinguish it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

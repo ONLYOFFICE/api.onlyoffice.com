@@ -43,20 +43,20 @@ Restart the services for the config changes to take effect:
   </TabItem>
 </Tabs>
 
-## Parameters
+## Configuration parameters
 
 | Parameter                                        | Type    | Example | Description                                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------ | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| services.CoAuthoring.secret.browser.string       | string  | secret  | Defines the secret key to generate a token in the client-side [browser requests](browser.md) to ONLYOFFICE Docs.                                                                                                                                                                         |
-| services.CoAuthoring.secret.inbox.string         | string  | secret  | Defines the secret key to generate a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**. |
-| services.CoAuthoring.secret.outbox.string        | string  | secret  | Defines the secret key to generate a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) to the `callbackUrl` address by **document editing service**.                                                                                                 |
-| services.CoAuthoring.token.enable.browser        | boolean | false   | Defines if a token in the client-side [browser requests](browser.md) is enabled or not.                                                                                                                                                                                                  |
-| services.CoAuthoring.token.enable.request.inbox  | boolean | false   | Defines if a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) is enabled or not.                                                                                                                                                                     |
-| services.CoAuthoring.token.enable.request.outbox | boolean | false   | Defines if a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) is enabled or not.                                                                                                                                                                    |
+| services.CoAuthoring.secret.browser.string       | string  | secret  | The secret key to generate a token in the client-side [browser requests](browser.md) to ONLYOFFICE Docs.                                                                                                                                                                         |
+| services.CoAuthoring.secret.inbox.string         | string  | secret  | The secret key to generate a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) with the commands from the **document storage service** to the **document command service**, **document conversion service** and **document builder service**. |
+| services.CoAuthoring.secret.outbox.string        | string  | secret  | The secret key to generate a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) to the `callbackUrl` address by **document editing service**.                                                                                                 |
+| services.CoAuthoring.token.enable.browser        | boolean | false   | Whether a token in the client-side [browser requests](browser.md) is enabled or not.                                                                                                                                                                                                  |
+| services.CoAuthoring.token.enable.request.inbox  | boolean | false   | Whether a token in the [incoming HTTP requests](request/token-in-body.md#incoming-request) is enabled or not.                                                                                                                                                                     |
+| services.CoAuthoring.token.enable.request.outbox | boolean | false   | Whether a token in the [outgoing HTTP requests](request/token-in-body.md#outgoing-requests) is enabled or not.                                                                                                                                                                    |
 
 ## Sample local.json configuration
 
-``` json
+```json
 {
   "services": {
     "CoAuthoring": {

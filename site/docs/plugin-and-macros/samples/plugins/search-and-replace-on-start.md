@@ -33,7 +33,7 @@ Repository on GitHub: [example_search_replace](https://github.com/ONLYOFFICE/sdk
 
 ## Config
 
-``` json
+```json
 {
   "name": "searchAndReplaceOnStart",
   "guid": "asc.{C820F3CC-1248-4CA2-8D0F-D7EFD44DE09C}",

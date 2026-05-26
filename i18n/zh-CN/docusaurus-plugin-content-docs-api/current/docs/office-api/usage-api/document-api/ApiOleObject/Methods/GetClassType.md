@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查文档中 OLE 对象返回的类类型。
+读取文档中嵌入的 OLE 对象的类类型。
 
 ```javascript editor-docx
-// How do I check what type an OLE object object is in a document?
+// How do I find out the class type of an OLE object in a document?
 
-// Retrieve and output the class type string for an OLE object in a document.
+// Identify what kind of embedded object is inserted by checking its class type string in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

@@ -24,12 +24,12 @@ expression.InsertPivotExistingWorksheet(dataRef, pivotRef, confirmation);
 
 ## 示例
 
-在电子表格中的现有工作表上插入数据透视表。
+在电子表格的现有工作表中添加数据透视表。
 
 ```javascript editor-xlsx
-// How to insert a pivot table into a range of an existing worksheet using references.
+// How do I place a pivot table on a sheet that already exists in a spreadsheet?
 
-// Get a pivot table and insert it to the range in a spreadsheet.
+// Summarize data with a pivot table on the current sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -17,7 +17,7 @@ expression.TREND(arg1, arg2, arg3, arg4);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | A range or array of y-values from the *y = mx + b* equation. |
 | arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | An optional range or array of x-values from the *y = mx + b* equation, an array of the same size as an array of y-values. |
 | arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | A range or array of new x-values for which this function will return corresponding y-values. |
-| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, and *b* is set equal to 0 if the parameter is **false**. |
+| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, |
 
 ## Returns
 
@@ -28,9 +28,9 @@ number
 Return numbers in a linear trend matching known data points, using the least squares method in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get numbers in a linear trend using the least squares method in a spreadsheet.
+// Calculate trend values for monthly sales data using least squares regression.
 
-// Use a function to find a linear trend using data points by the least squares method in a spreadsheet.
+// Apply the TREND function with known y-values and x-values to predict the trend.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

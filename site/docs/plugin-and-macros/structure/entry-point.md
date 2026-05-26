@@ -8,7 +8,7 @@ Each plugin acts in its own iframe. The editor will connect the *index.html* fil
 
 ## Example
 
-``` html
+```html
 <!DOCTYPE html>
 <html>
     <head>

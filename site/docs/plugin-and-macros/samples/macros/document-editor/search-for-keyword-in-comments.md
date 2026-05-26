@@ -44,5 +44,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CommentWordSearch](/assets/images/plugins/comment-word-search.png#gh-light-mode-only)
-![CommentWordSearch](/assets/images/plugins/comment-word-search.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/search-for-keyword-in-comments.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/search-for-keyword-in-comments.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

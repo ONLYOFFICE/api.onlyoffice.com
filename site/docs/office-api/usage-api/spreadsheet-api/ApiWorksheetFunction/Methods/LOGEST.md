@@ -16,8 +16,8 @@ expression.LOGEST(arg1, arg2, arg3, arg4);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | The set of y-values from the *y = b*m^x* equation. |
 | arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | An optional set of x-values from the *y = b*m^x* equation. |
-| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, and *b* is set equal to 1 if the parameter is **false**. |
-| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to **true**, and return m-coefficients and the constant *b* if the parameter is **false** or omitted. |
+| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, |
+| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to **true**, |
 
 ## Returns
 
@@ -25,12 +25,12 @@ number
 
 ## Example
 
-Return statistics that describe an exponential curve matching known data points in a spreadsheet.
+Calculate statistics that describe an exponential curve for data points in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the statistics of exponential curve matching the data points in a spreadsheet.
+// How do I analyze the trend of exponentially growing data in a spreadsheet?
 
-// Use a function to return the statistics of exponential curve matching the data points in a spreadsheet.
+// Use curve statistics to predict future values based on exponential growth patterns in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

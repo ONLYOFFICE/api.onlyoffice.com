@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Remove a table column with the specified cell.
+Delete a column from a table in a document.
 
 ```javascript editor-docx
-// How to remove the column from the table in a document.
+// How do I remove a specific column from a table in a document?
 
-// Create a table, get one of its cells and delete the column.
+// Narrow a table by eliminating an unwanted column in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为图表标题设置颜色。
+更改 PDF 中图表标题的颜色。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title color in a PDF document.
+// How do I apply a fill color to the title text in a PDF?
 
-// Use chart to set title fill in a PDF document.
+// Apply a solid fill to the title of a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

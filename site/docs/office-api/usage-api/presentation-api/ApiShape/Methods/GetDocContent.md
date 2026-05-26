@@ -21,12 +21,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the shape inner contents where a paragraph or text runs can be inserted in a presentation.
+Access the document content inside a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a content of a shape in a presentation.
+// How do I add text to a shape in a presentation?
 
-// Retrieve a slide content and insert a paragraph to it.
+// Insert a new paragraph into a shape and position it vertically in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the background color for the block-level container in a document.
+Set a background color on a content control in a document.
 
 ```javascript editor-docx
-// How can I set background color using a block-level content control in a document?
+// How do I change the background color of a content control in a document?
 
-// Set background color for a block-level content control in a document.
+// Highlight a content control with a colored background to make it stand out in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-清除文档中 run 的内容。
+清除文本运行中的所有文本，同时保留其在文档段落中的存在。
 
 ```javascript editor-docx
-// How to delete a text from the run object in a document.
+// How do I wipe the content of a text run without removing the run itself in a document?
 
-// Remove the text from the run in a document.
+// Empty a run so its paragraph shows no visible text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

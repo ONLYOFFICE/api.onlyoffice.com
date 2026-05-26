@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get selected drawings from the sheet in a spreadsheet.
+Get all the drawings that a user has highlighted in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get seletectd drawings in a spreadsheet.
+// Access each drawing object when multiple are selected at the same time in a spreadsheet?
 
-// Get selected drawings as an array in a spreadsheet.
+// Modify properties of every highlighted drawing by looping through them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);

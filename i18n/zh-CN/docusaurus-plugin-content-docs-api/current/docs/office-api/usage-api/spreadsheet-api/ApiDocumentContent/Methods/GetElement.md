@@ -22,12 +22,12 @@ expression.GetElement(nPos);
 
 ## 示例
 
-通过位置获取文档内容中的元素。
+按位置从电子表格中的形状检索特定段落。
 
 ```javascript editor-xlsx
-// How to get an element of the document content knowing its index position.
+// How do I access a particular paragraph inside a shape by its index in a spreadsheet?
 
-// Get a document element then change its position and content.
+// Read and modify a paragraph at a known position within a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

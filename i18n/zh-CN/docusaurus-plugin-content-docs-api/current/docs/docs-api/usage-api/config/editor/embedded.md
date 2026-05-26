@@ -10,7 +10,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `"document" | "player"` | **默认值：** `"player"`
 
-定义嵌入式查看器的启动模式。在 `player` 模式下，幻灯片放映会自动开始。
+嵌入式查看器的启动模式。在 `player` 模式下，幻灯片放映会自动开始。
 
 **示例**: `"document"`
 
@@ -18,7 +18,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义嵌入文档的源文件的绝对 URL。
+嵌入文档的源文件的绝对 URL。
 
 **示例**: `"https://example.com/embedded?doc=exampledocument1.docx"`
 
@@ -26,7 +26,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义以全屏模式打开文档的绝对 URL。
+以全屏模式打开文档的绝对 URL。
 
 **示例**: `"https://example.com/embedded?doc=exampledocument1.docx#fullscreen"`
 
@@ -34,7 +34,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义将文档保存到用户本地计算机的绝对 URL。
+将文档保存到用户本地计算机的绝对 URL。
 
 **示例**: `"https://example.com/download?doc=exampledocument1.docx"`
 
@@ -42,7 +42,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `string`
 
-定义与其他用户共享文档的绝对 URL。
+与其他用户共享文档的绝对 URL。
 
 **示例**: `"https://example.com/view?doc=exampledocument1.docx"`
 
@@ -50,7 +50,7 @@ embedded 部分定义嵌入模式参数。
 
 **类型：** `"top" | "bottom"` | **默认值：** `"top"`
 
-定义嵌入式查看器工具栏的位置。
+嵌入式查看器工具栏的位置。
 
 **示例**: `"bottom"`
 
@@ -58,7 +58,7 @@ embedded 部分定义嵌入模式参数。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the ID of the container in a document.
+Read the identifier assigned to an inline content control in a document.
 
 ```javascript editor-docx
-// How do I get the id in a document?
+// How do I retrieve the ID of an inline content control in a document?
 
-// Get the id using an inline content control object in a document.
+// Verify the custom ID set on an inline content control by printing it to the page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

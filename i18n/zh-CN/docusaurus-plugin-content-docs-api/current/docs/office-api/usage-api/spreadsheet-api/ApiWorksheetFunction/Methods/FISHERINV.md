@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中获取 Fisher 变换的逆函数：若 y = FISHER(x)，则 FISHERINV(y) = x。
+在电子表格中反转 Fisher 变换以获取相关值。
 
 ```javascript editor-xlsx
-// How to get an inverse of the Fisher transformation.
+// How do I convert a Fisher transformation back to a correlation in a spreadsheet?
 
-// Use function to find out an inverse of Fisher transformation.
+// Extract the original correlation value from its Fisher transformation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

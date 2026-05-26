@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert points to twips in a PDF document.
+Convert points to twips in a PDF.
 
 ```javascript editor-pdf
-// How to convert points to twips in a PDF document?
+// How can I convert between different measurement units in a PDF?
 
-// Convert points to twips using the PDF document API.
+// Transform point measurements into twips and show the result in a PDF.
 
 const points = 1000;
 const twips = Api.PointsToTwips(points);

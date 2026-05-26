@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-向当前幻灯片母版添加对象（图像、形状或图表）。
+在演示文稿中向幻灯片母版添加形状。
 
 ```javascript editor-pptx
-// Create a shape and add it to the presentation master.
+// How do I place a shape on the master slide in a presentation?
 
-// Add an element like paragraph, image or chart and etc. to the slide master.
+// Create a shape and add it to the master so it appears on all slides in a presentation.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);

@@ -34,7 +34,7 @@ sidebar_position: -3
 
 如果您想在浏览器的开发者控制台中显示某些值，可以使用 **console.log()** 方法。将你想检查的值或一段消息字符串作为参数传入此方法，然后按 **F12** 按键打开开发者控制台，即可查看结果：
 
-``` ts
+```ts
 console.log(123);
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

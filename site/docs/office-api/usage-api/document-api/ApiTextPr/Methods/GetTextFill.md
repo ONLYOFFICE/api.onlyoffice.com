@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the text fill of the text properties in a document.
+Read the fill color applied to decorative text in a document.
 
 ```javascript editor-docx
-// How do I get the text fill in a document?
+// How do I find out what color fills the inside of styled text in a document?
 
-// Get the text fill using a text properties object in a document.
+// Reuse the fill from one text shape to paint another shape with the same color in a document.
 
 const doc = Api.GetDocument();
 

@@ -7,12 +7,12 @@
 
 ## 示例
 
-指定表格中特定表格单元格的单元格内容顶部边缘与边框之间的间距。
+设置文档中表格单元格内容与顶部边缘之间的间距。
 
 ```javascript editor-docx
-// How to add margin to the top of the cell.
+// How do I control the gap between text and the top border of a table cell in a document?
 
-// Create a 3x3 table and add the top cell margin.
+// Push cell content away from the top boundary of a table cell in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

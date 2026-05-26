@@ -22,12 +22,12 @@ expression.GetItem(index);
 
 ## 示例
 
-通过索引获取特定的条件格式规则。
+按列表中的位置从电子表格中的范围检索单个格式规则。
 
 ```javascript editor-xlsx
-// How to get individual conditional formatting rules from a collection.
+// How do I access one particular highlight rule out of several applied to a range in a spreadsheet?
 
-// Get specific conditional formatting rule by index.
+// Pick out an individual color condition by its order to inspect or modify it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

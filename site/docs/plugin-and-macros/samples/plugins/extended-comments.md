@@ -43,7 +43,7 @@ Repository on GitHub: [example_extended_comments](https://github.com/ONLYOFFICE/
 
 ## Config
 
-``` json
+```json
 {
   "name": "Extended comments",
   "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}",

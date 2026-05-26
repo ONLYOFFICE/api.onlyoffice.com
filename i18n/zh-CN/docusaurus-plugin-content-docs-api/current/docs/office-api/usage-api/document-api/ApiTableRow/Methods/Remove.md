@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-删除文档中的表格行。
+从文档中的表格删除行。
 
 ```javascript editor-docx
-// Delete the row from the table in a document.
+// How do I permanently remove an unwanted row from a table in a document?
 
-// How to remove the first row in a document.
+// Eliminate a specific row to shorten or clean up a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

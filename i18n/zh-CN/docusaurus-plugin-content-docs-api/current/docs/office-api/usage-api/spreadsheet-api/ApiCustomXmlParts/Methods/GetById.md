@@ -22,12 +22,12 @@ expression.GetById(xmlPartId);
 
 ## 示例
 
-通过 ID 获取电子表格中的自定义 XML 部件。
+使用唯一标识符在电子表格中查找特定的存储 XML 块。
 
 ```javascript editor-xlsx
-// How to retrieve a custom XML part using its ID in a spreadsheet.
+// How do I find a particular XML entry by its ID in a spreadsheet?
 
-// Get an XML part by its ID in a spreadsheet.
+// Locate a single XML block precisely when its identifier is already known in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

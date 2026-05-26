@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中基于所选数据库条目的样本估计方差。
+计算电子表格中满足指定条件的数据库条目的样本方差。
 
 ```javascript editor-xlsx
-// How to estimate variance in a spreadsheet.
+// How do I estimate variance from filtered database records in a spreadsheet?
 
-// Use function to calculate a variance from a range sample in a spreadsheet.
+// Find the spread of values in a database subset using sample variance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

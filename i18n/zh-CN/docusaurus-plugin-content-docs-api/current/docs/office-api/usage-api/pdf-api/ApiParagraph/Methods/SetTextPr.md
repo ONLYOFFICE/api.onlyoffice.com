@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置段落文本属性。
+在 PDF 中为段落应用文本格式属性。
 
 ```javascript editor-pdf
-// How to set text pr for a paragraph in a PDF document?
+// How do I style paragraph text with font settings in a PDF?
 
-// Set text pr and display the result in a PDF document.
+// Modify appearance of text through property settings in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

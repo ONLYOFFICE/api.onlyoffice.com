@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-为图表设置"0.00"数字格式。
+格式化文档中特定数据点标签上显示的数字。
 
 ```javascript editor-docx
-// How to set a numeric format of the data points.
+// How do I control the numeric format of individual data point labels on a chart in a document?
 
-// Create a chart and set its data points number format to two decimal places.
+// Show data point values with consistent decimal precision when labels are visible on a chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

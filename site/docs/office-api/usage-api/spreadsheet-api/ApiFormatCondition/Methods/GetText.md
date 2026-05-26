@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the text value from a text-based conditional formatting rule.
+Read the text string that a conditional formatting rule matches against in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve text values from text-based conditional formatting rules.
+// How do I find out what word or phrase a text-based formatting rule is looking for in a spreadsheet?
 
-// Get conditional formatting rule text value.
+// Retrieve the search term stored inside a text-matching formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中主题的类类型。
+读取电子表格中活动工作簿主题的类类型。
 
 ```javascript editor-xlsx
-// How to identify the class type of a theme in a spreadsheet?
+// How do I identify what type of object a theme is in a spreadsheet?
 
-// Obtain the class type identifier of a theme object in a spreadsheet.
+// Confirm the category of a theme object and write the result to a cell in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const theme = workbook.GetTheme();

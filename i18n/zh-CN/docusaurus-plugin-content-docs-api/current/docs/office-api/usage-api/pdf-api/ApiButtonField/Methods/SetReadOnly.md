@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中设置字段为只读。
+锁定 PDF 中的表单字段以防止编辑。
 
 ```javascript editor-pdf
-// How can I set read only using a base field in a PDF document?
+// How do I make a form field read-only in a PDF?
 
-// Set read only for a base field in a PDF document.
+// Disable editing on a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -46,5 +46,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AcronymFullForms](/assets/images/plugins/acronym-full-forms.png#gh-light-mode-only)
-![AcronymFullForms](/assets/images/plugins/acronym-full-forms.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/acronym-full-forms.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/acronym-full-forms.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

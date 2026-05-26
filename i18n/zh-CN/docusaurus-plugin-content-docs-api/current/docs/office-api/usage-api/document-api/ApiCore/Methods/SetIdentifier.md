@@ -22,12 +22,12 @@ expression.SetIdentifier(sIdentifier);
 
 ## 示例
 
-使用文档中的核心属性设置当前文档的标识符。
+通过文档的核心属性为文档分配唯一标识符。
 
 ```javascript editor-docx
-// How to set identifier for a core properties in a document?
+// How do I store a custom ID string in a document's metadata in a document?
 
-// Set identifier and display the result in a document.
+// Link a document to an external system by embedding its tracking ID in the built-in properties in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

@@ -23,12 +23,12 @@ expression.CreateComboBoxContentControl(list, selected);
 
 ## 示例
 
-在文档中创建组合框内容控件。
+在文档中插入带有可选选项的下拉组合框。
 
 ```javascript editor-docx
-// How do I create the combo box content control in a document?
+// How do I add a combo box with a list of choices to a document?
 
-// Create the combo box content control and display the result in a document.
+// Embed an interactive combo box that lets readers pick from predefined values in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: 'one', value: '1'}, {display: 'two', value: '2'}], 1);

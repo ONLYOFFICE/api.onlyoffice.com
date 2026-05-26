@@ -26,9 +26,9 @@ expression.AddPictureContentControl(width, height);
 在文档中添加图片内容控件。
 
 ```javascript editor-docx
-// How can I add the picture content control using a document in a document?
+// How do I insert a picture placeholder field into a document?
 
-// Add the picture content control for a document in a document.
+// Reserve a spot where a reader can later replace the placeholder with their own image in a document.
 
 let doc = Api.GetDocument();
 doc.AddPictureContentControl();

@@ -6,11 +6,11 @@ The editorConfig section defines the editor interface parameters.
 
 **type:** `object`
 
-Specifies the data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
+The data received from the **document editing service** using the [onMakeActionLink](../events.md#onmakeactionlink) event or the [onRequestSendNotify](../events.md#onrequestsendnotify) event in `data.actionLink` parameter, which contains the information about the action in the document that will be scrolled to.
 
 **Example**:
 
-``` ts
+```ts
 {
   action: {
     type: "bookmark",
@@ -45,7 +45,7 @@ The data associated with the action: the bookmark name or the comment ID.
 
 **type:** `string` | **required**
 
-Specifies the absolute URL to the **document storage service**. This service [must be implemented](../../callback-handler.md) by the software integrators who use ONLYOFFICE Docs on their own server.
+The absolute URL to the **document storage service**. This service [must be implemented](../../callback-handler.md) by the software integrators who use ONLYOFFICE Docs on their own server.
 
 **Example**: `"https://example.com/url-to-callback"`
 
@@ -53,11 +53,11 @@ Specifies the absolute URL to the **document storage service**. This service [mu
 
 **type:** `object`
 
-Defines the co-editing mode and the possibility to change it. This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
+The co-editing mode and the possibility to change it. This parameter is used to apply the [co-editing](../../../get-started/how-it-works/co-editing.md#co-editing-modes) and [viewing](../../../get-started/how-it-works/viewing.md) modes.
 
 **Example**:
 
-``` json
+```json
 {
   "mode": "fast",
   "change": true
@@ -80,17 +80,17 @@ In case `mode` setting is changed in the editor interface, it will be stored in 
 
 **type:** `boolean` | **default:** `true`
 
-Defines if the co-editing mode can be changed in the editor interface or not.
+Whether to allow changing the co-editing mode in the editor interface.
 
 **Example**: `true`
 
-![Coediting mode](/assets/images/editor/coediting-mode.png)
+![Coediting mode](/assets/images/editor/coediting-mode.png#gh-light-mode-only)![Coediting mode](/assets/images/editor/coediting-mode.dark.png#gh-dark-mode-only)
 
 ## createUrl
 
 **type:** `string`
 
-Defines the absolute URL of the document where it will be created and available after creation.
+The absolute URL of the document where it will be created and available after creation.
 
 :::note
 If not specified, the **Create** button will not be displayed. Instead of this parameter, you can use the [onRequestCreateNew](../events.md#onrequestcreatenew) event.
@@ -98,13 +98,13 @@ If not specified, the **Create** button will not be displayed. Instead of this p
 
 **Example**: `"https://example.com/url-to-create-document"`
 
-![Create URL](/assets/images/editor/create.png)
+![Create URL](/assets/images/editor/create.png#gh-light-mode-only)![Create URL](/assets/images/editor/create.dark.png#gh-dark-mode-only)
 
 ## fileChoiceUrl
 
 **type:** `string`
 
-Defines the URL of the file selection dialog opened in an iframe for inserting images, selecting documents for comparison, or choosing mail merge data sources. The URL can contain the `{documentType}` and `{fileExt}` placeholders, which will be replaced with the appropriate values (e.g., `ImagesOnly`, `DocumentsOnly`).
+The URL of the file selection dialog opened in an iframe for inserting images, selecting documents for comparison, or choosing mail merge data sources. The URL can contain the `{documentType}` and `{fileExt}` placeholders, which will be replaced with the appropriate values (e.g., `ImagesOnly`, `DocumentsOnly`).
 
 :::note
 The `{documentType}` placeholder is required for the *Image from Storage* and *Document from Storage* buttons to appear.
@@ -120,7 +120,7 @@ Instead of this parameter, use the [onRequestInsertImage](../events.md#onrequest
 
 **type:** `string` | **default:** `"en"`
 
-Defines the editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
+The editor interface language. Uses two-letter (`de`, `ru`, `it`, etc.) language codes.
 
 :::note
 To translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan) (added in version 7.2), use the four-letter language codes `pt-PT` or `zh-TW`, respectively. The two-letter `pt` language code sets Portuguese (Brazil) and the `zh` code specifies Chinese (People's Republic of China).
@@ -186,7 +186,7 @@ To translate the editor interface into Portuguese (Portugal) or Chinese (Traditi
 
 **type:** `string` | **default:** `""`
 
-Defines the default measurement units. Specify `us` or `ca` to set inches.
+The default measurement units. Specify `us` or `ca` to set inches.
 
 :::danger[Deprecated]
 Starting from version 8.2, please use the [region](#region) parameter instead.
@@ -198,7 +198,7 @@ Starting from version 8.2, please use the [region](#region) parameter instead.
 
 **type:** `"edit" | "view"` | **default:** `"edit"`
 
-Defines the editor opening mode.
+The editor opening mode.
 
 **Example**: `"view"`
 
@@ -206,7 +206,7 @@ Defines the editor opening mode.
 
 **type:** `string`
 
-Defines the absolute URL to the folder for saving the mail merge result.
+The absolute URL to the folder for saving the mail merge result.
 
 :::danger[Deprecated]
 Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsaveas) event.
@@ -218,11 +218,11 @@ Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsavea
 
 **type:** `object[]`
 
-Defines the presence or absence of the documents in the **Open Recent...** menu option.
+The presence or absence of the documents in the **Open Recent...** menu option.
 
 **Example**:
 
-``` json
+```json
 [
   {
     "folder": "Example Files",
@@ -256,13 +256,13 @@ The absolute URL to the document where it is stored.
 
 **Example**: `"https://example.com/exampledocument1.docx"`
 
-![Recent documents](/assets/images/editor/recent.png)
+![Recent documents](/assets/images/editor/recent.png#gh-light-mode-only)![Recent documents](/assets/images/editor/recent.dark.png#gh-dark-mode-only)
 
 ## region
 
 **type:** `string` | **default:** `"en-US"`
 
-Defines the default display format for currency, date, and time (in the **Spreadsheet Editor** only). Is set using the four-letter (`en-US`, `fr-FR`, etc.) language codes.
+The default display format for currency, date, and time (in the **Spreadsheet Editor** only). Is set using the four-letter (`en-US`, `fr-FR`, etc.) language codes.
 
 :::note
 If `lang` is defined and a matching regional setting exists, the default value is taken from the `lang` parameter. Otherwise, `en-US` is used.
@@ -328,7 +328,7 @@ Starting from version 8.2, this parameter also defines the default measurement u
 
 **type:** `string`
 
-Defines the absolute URL to the folder for saving files.
+The absolute URL to the folder for saving files.
 
 :::danger[Deprecated]
 Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsaveas) event.
@@ -340,7 +340,7 @@ Instead of this parameter, use the [onRequestSaveAs](../events.md#onrequestsavea
 
 **type:** `string`
 
-Defines the absolute URL to the document sharing settings page.
+The absolute URL to the document sharing settings page.
 
 :::danger[Deprecated]
 Instead of this parameter, use the [onRequestSharingSettings](../events.md#onrequestsharingsettings) event.
@@ -352,11 +352,11 @@ Instead of this parameter, use the [onRequestSharingSettings](../events.md#onreq
 
 **type:** `object[]`
 
-Defines the presence or absence of the templates in the **Create New...** menu option.
+The presence or absence of the templates in the **Create New...** menu option.
 
 **Example**:
 
-``` json
+```json
 [
   {
     "image": "https://example.com/exampletemplate1.png",
@@ -390,13 +390,13 @@ The absolute URL to the document where it will be created and available after cr
 
 **Example**: `"https://example.com/url-to-create-template1"`
 
-![Templates](/assets/images/editor/templates.png)
+![Templates](/assets/images/editor/templates.png#gh-light-mode-only)![Templates](/assets/images/editor/templates.dark.png#gh-dark-mode-only)
 
 ## user
 
 **type:** `object`
 
-Defines the user currently viewing or editing the document.
+The user currently viewing or editing the document.
 
 :::note
 The request to the user's avatar is sent without authorization because the avatar URL is inserted into the HTML of the editor frame. A CORS issue may occur. In this case, use the avatar in the base64 format (e.g. `"data:image/png;base64,*****"`).
@@ -406,7 +406,7 @@ If you are subscribed to the [onRequestUsers](../events.md#onrequestusers) event
 
 **Example**:
 
-``` json
+```json
 {
   "group": "Group1,Group2",
   "id": "78e1e841",
@@ -460,7 +460,7 @@ The full name of the user. The length is limited to 128 symbols.
 
 **type:** `string[]`
 
-Defines the roles assigned to the user for PDF form filling. The first role in the array is used to determine which form fields the user can fill.
+The roles assigned to the user for PDF form filling. The first role in the array is used to determine which form fields the user can fill.
 
 **Example**: `["Role1"]`
 
@@ -498,7 +498,7 @@ The maximum length for file names that the WOPI host supports, excluding the fil
 
 ## Example
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

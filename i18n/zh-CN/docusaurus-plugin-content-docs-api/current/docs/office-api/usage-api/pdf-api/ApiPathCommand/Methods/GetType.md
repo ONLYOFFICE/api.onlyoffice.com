@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-分析 PDF 文档页面上星形的路径命令。在文本形状中显示命令数量和第一个命令的详细信息。
+检索 PDF 中路径命令的类型。
 
 ```javascript editor-pdf
-// How can I get the type using a path command in a PDF document?
+// How do I find out the command type in a PDF?
 
-// Get the type for a path command in a PDF document.
+// Identify the type value from a path command in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

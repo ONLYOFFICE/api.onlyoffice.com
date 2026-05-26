@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中移除形状的所有内容并在其中添加新段落。
+向文档中形状的内容追加新段落。
 
 ```javascript editor-docx
-// Insert an element to the document.
+// How do I add a paragraph at the end of a shape's content in a document?
 
-// Push the paragraph to the content of the document.
+// Clear a shape's existing content and place a fresh paragraph inside it to replace all prior text.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

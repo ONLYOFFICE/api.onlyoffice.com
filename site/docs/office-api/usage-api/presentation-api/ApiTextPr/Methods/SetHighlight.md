@@ -22,12 +22,12 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-Specify a highlighting color which is added to the text properties and applied as a background to the contents of the run in a presentation.
+Add background highlighting color to text in a presentation.
 
 ```javascript editor-pptx
-// How to highlight a text with a color in a presentation.
+// What highlight colors work best for text in a presentation?
 
-// Get the text properties of the run and highlight it in a presentation.
+// Set a background color that fills behind the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

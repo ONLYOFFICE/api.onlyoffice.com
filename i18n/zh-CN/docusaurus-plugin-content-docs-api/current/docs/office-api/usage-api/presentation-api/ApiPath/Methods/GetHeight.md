@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
+检索演示文稿中自定义形状绘图区域的高度值。
 
 ```javascript editor-pptx
-// How to get the height for a geometry path in a presentation?
+// What is the vertical size of a shape path in a presentation?
 
-// Get the height and display the result in a presentation.
+// Check the height dimensions of a geometry path in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

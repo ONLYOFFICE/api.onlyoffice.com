@@ -26,7 +26,7 @@ ONLYOFFICE [模块](https://github.com/ONLYOFFICE/onlyoffice-drupal)使用户能
 
 请确保运行：
 
-``` sh
+```sh
 composer require firebase/php-jwt:^6.0
 ```
 
@@ -42,13 +42,13 @@ composer require firebase/php-jwt:^6.0
 
 这是推荐的方式。在您站点的根目录输入以下命令：
 
-``` sh
+```sh
 composer require onlyoffice/onlyoffice-drupal
 ```
 
 要应用本地化设置，请运行：
 
-``` sh
+```sh
 drush locale-check
 drush locale-update
 ```
@@ -90,7 +90,7 @@ drush locale-update
 
 在 Drupal 中，打开 *\~/config/system/onlyoffice-settings* 页面，该页面包含 **ONLYOFFICE** 部分的管理设置。或者依次点击**配置 → 媒体 → ONLYOFFICE 连接器设置**。输入连接 ONLYOFFICE 文档的地址：
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

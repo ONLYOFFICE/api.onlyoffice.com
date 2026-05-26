@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中重命名图表。
+在 PDF 中为图表添加标题。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its title in a PDF document.
+// How do I add a heading to a chart in a PDF?
 
-// Use chart to set title using the chart API in a PDF document.
+// Set the text and font size of a chart title in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

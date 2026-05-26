@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-获取文档中的下一个单元格。
+导航到文档中给定表格单元格之后的单元格。
 
 ```javascript editor-docx
-// How to get next cell.
+// How do I move to the next cell after a specific table cell in a document?
 
-// Retrieve the cell from the table and get the next one.
+// Step forward from one table cell to the adjacent one in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

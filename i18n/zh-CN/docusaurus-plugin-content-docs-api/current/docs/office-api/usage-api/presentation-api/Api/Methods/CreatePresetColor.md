@@ -22,12 +22,12 @@ expression.CreatePresetColor(presetColor);
 
 ## 示例
 
-在演示文稿中创建用于创建渐变光圈的颜色选择。
+在演示文稿中使用命名颜色作为渐变颜色光圈。
 
 ```javascript editor-pptx
-// How to create a preset color in a presentation.
+// How do I apply a preset color in a presentation?
 
-// Add a preset color as a gradient stop in a presentation.
+// Create a gradient with a predefined color stop in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

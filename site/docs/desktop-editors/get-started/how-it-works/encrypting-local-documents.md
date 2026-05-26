@@ -21,7 +21,7 @@ More information about the plugin structure can be found [here](../../../plugin-
 
 Let’s have a look at the config:
 
-``` json
+```json
 {
   "name": "crypto",
   "guid": "asc.{22222222-2222-2222-2222-222222222222}",
@@ -54,7 +54,7 @@ All the config parameters are described in the [documentation](../../../plugin-a
 
 After the config file is ready, create the plugin code file with the following contents:
 
-``` ts
+```ts
 const globalPassword = "{my-super-long-password}"
 window.Asc.plugin.init = function init(obj) {
   if (!obj) {
@@ -95,7 +95,7 @@ The **Encryption** plugin has no interface and can’t run by default. It works 
 
 This plugin can’t access the editing features but has almost the same config:
 
-``` json
+```json
 {
   "name": "Encryption",
   "nameLocale": { 
@@ -121,7 +121,7 @@ This plugin can’t access the editing features but has almost the same config:
 
 The *index.html* file will look as follows:
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -142,7 +142,7 @@ With it, we will get a new tab called **Encryption** on the main app page:
 
 Enable encryption by ticking the checkbox:
 
-``` ts
+```ts
 window.addEventListener("load", () => {
   const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0;
   const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2;

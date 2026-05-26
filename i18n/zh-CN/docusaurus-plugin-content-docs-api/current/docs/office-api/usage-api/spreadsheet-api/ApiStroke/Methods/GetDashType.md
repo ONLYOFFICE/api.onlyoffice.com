@@ -20,12 +20,12 @@ expression.GetDashType();
 
 ## 示例
 
-获取笔触的虚线类型。在电子表格中创建具有实线边框的形状并显示其虚线类型。返回字符串值："dash"、"dashDot"、"dot"、"lgDash"、"lgDashDot"、"lgDashDotDot"、"solid"、"sysDash"、"sysDashDot"、"sysDashDotDot"、"sysDot"。
+读取形状边框的线条样式以了解其在电子表格中是实线、虚线还是点线。
 
 ```javascript editor-xlsx
-// How can I get the dash type using a stroke in a spreadsheet?
+// How do I check what dash pattern a shape's border uses in a spreadsheet?
 
-// Get the dash type for a stroke in a spreadsheet.
+// Inspect the border line style of a shape so you can verify or display the pattern name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));

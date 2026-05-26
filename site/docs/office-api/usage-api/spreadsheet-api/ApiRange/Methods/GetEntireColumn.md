@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the entire columns containing a range in a spreadsheet.
+Select full columns that overlap with a given range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to select entire columns from a range in a spreadsheet.
+// How do I highlight all the columns that a range belongs to in a spreadsheet?
 
-// Get a range, get its entire columns and fill them with color in a spreadsheet.
+// Fill the complete columns of a range with a background color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("C3:E5");

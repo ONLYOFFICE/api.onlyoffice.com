@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-指定节中所有页面的属性（大小和方向）。
+设置文档中节内所有页面的宽度和高度。
 
 ```javascript editor-docx
-// How to set page size.
+// How do I change the physical dimensions of the pages in a section in a document?
 
-// Get the final section and resize its page.
+// Resize the pages of a section to fit a custom paper format in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

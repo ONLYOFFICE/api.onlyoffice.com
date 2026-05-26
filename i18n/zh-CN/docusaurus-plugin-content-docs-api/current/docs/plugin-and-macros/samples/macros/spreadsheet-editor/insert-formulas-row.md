@@ -10,7 +10,7 @@ hide_table_of_contents: true
 (function () {
   let sheet = Api.GetActiveSheet();
   let rowNum = sheet.GetActiveCell().GetRow();
-  let sourceRow = sheet.GetRange(rowNum - 1 + ":" + (rowNum - 1));
+  let sourceRow = sheet.GetRange((rowNum - 1) + ":" + (rowNum - 1));
   let destRow = sheet.GetRange(rowNum + ":" + rowNum);
 
   sourceRow.Copy();
@@ -32,8 +32,15 @@ hide_table_of_contents: true
 })();
 ```
 
-所用方法：[GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md)，[GetActiveCell](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetActiveCell.md)，[GetRow](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRow.md)，[GetRange](/docs/office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)，[Copy](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/Copy.md)，[PasteSpecial](/docs/office-api/usage-api/spreadsheet-api/ApiRange/Methods/PasteSpecial.md)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetActiveCell](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetActiveCell.md), [GetRow](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRow.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Copy](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Copy.md), [PasteSpecial](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/PasteSpecial.md)
 
 ## 结果
 
-![Insert formulas row](/assets/images/plugins/insert-formulas-row.png#gh-light-mode-only)![Insert formulas row](/assets/images/plugins/insert-formulas-row.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/insert-formulas-row.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/insert-formulas-row.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

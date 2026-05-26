@@ -20,12 +20,12 @@ string \| string[][]
 
 ## 示例
 
-获取电子表格中指定范围的公式。
+读取电子表格中单元格存储的公式。
 
 ```javascript editor-xlsx
-// How to find out a range formula.
+// How do I find out what formula a cell contains in a spreadsheet?
 
-// Get a range, get its cell formula and show it in the worksheet.
+// Display a cell's formula as text in another cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(1);

@@ -53,7 +53,7 @@ Repository on GitHub: [translator](https://github.com/ONLYOFFICE/onlyoffice.gith
 
 ## Config
 
-``` json
+```json
 {
   "name": "Translator",
   "nameLocale": {

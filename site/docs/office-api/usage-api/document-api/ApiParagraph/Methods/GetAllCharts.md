@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a collection of chart objects in the paragraph in a document.
+Retrieve all chart objects embedded in a paragraph in a document.
 
 ```javascript editor-docx
-// How to retrieve all charts from the document.
+// How do I get every chart from a paragraph in a document?
 
-// Get all charts and set minor horizontal gridlines in a document.
+// Apply formatting changes to multiple charts at once by collecting them from a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

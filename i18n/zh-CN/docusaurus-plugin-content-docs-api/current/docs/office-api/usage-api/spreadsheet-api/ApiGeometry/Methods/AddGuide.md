@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-创建带有参考线和连接点的可调节自定义几何图形。在单元格中显示调整值并将几何图形应用于形状。
+为电子表格中的自定义形状定义命名布局参考线。
 
 ```javascript editor-xlsx
-// How can I add the guide using a geometry in a spreadsheet?
+// How do I set up a reusable reference line for positioning parts of a custom shape in a spreadsheet?
 
-// Add the guide for a geometry in a spreadsheet.
+// Store a calculated reference value under a name so other shape properties can depend on it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();

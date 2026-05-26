@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其主题。
+读取 PDF 中注释的主题行。
 
 ```javascript editor-pdf
-// How to get the subject for an annotation in a PDF document?
+// What is the subject text assigned to an annotation in a PDF?
 
-// Get the subject and display the result in a PDF document.
+// Extract the subject property from an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

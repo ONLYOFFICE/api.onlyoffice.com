@@ -22,12 +22,12 @@ expression.SetTopBottom(topBottom);
 
 ## 示例
 
-设置电子表格中前 10 条件的顶部/底部方向。
+在电子表格中切换前 10 项条件格式规则以高亮显示最高值或最低值。
 
 ```javascript editor-xlsx
-// How to configure whether the condition evaluates top or bottom values in a spreadsheet.
+// How do I make a formatting rule mark the bottom values instead of the top ones in a spreadsheet?
 
-// Set the top/bottom direction for the top 10 rule in a spreadsheet.
+// Redirect attention to underperformers by flipping a highlight rule to bottom mode in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

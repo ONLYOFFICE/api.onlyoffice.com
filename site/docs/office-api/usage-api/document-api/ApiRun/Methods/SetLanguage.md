@@ -15,7 +15,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.SetLanguage(sLangId);
 
 ## Example
 
-Specify the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run in a document.
+Assign a spell-check language to a text run in a document.
 
 ```javascript editor-docx
-// How to change language of the text for grammar check in a document.
+// How do I tell the editor which language to use when checking a run of text in a document?
 
-// Create a new text run and change its language in a document.
+// Target a specific locale for grammar and spelling validation in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为组合框字段设置可编辑属性。
+启用或禁用 PDF 中字段的用户输入。
 
 ```javascript editor-pdf
-// How can I set editable using a combobox field in a PDF document?
+// Can I control whether users can type in a field in a PDF?
 
-// Set editable for a combobox field in a PDF document.
+// Make a field accept or reject text entries in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

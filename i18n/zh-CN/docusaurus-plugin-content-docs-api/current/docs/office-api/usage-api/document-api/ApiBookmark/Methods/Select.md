@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中转到书签并选中。
+以编程方式选择文档中命名书签的文本范围。
 
 ```javascript editor-docx
-// Select a bookmark in a document.
+// How do I highlight a bookmark's content as a selection in a document?
 
-// Select a bookmark from the documnet by getting it by its name in a document.
+// Bring a bookmark's text into focus so it is ready for editing or formatting in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

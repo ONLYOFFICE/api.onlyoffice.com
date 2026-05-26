@@ -23,9 +23,9 @@ boolean
 删除演示文稿中的自定义 XML 部件。
 
 ```javascript editor-pptx
-// How to delete a custom XML part from the presentation.
+// Remove a custom XML part and show remaining parts in a presentation.
 
-// Delete and display the result in a presentation.
+// Discard an XML part from the document in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

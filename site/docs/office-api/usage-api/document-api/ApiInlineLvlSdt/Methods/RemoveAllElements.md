@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Clear the contents from the content control in a document.
+Remove all elements from an inline content control in a document.
 
 ```javascript editor-docx
-// How to remove all elements from the inline text control in a document.
+// How do I clear all content from an inline text control in a document?
 
-// Delete text from the inline content control in a document.
+// Reset a content control to empty when replacing its contents with fresh text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

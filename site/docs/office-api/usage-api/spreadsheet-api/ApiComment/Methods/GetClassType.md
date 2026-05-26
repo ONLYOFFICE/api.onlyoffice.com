@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a comment object in a spreadsheet.
+Verify the object category of a cell comment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I get the class type of a comment in a spreadsheet?
+// How do I confirm what kind of object a cell comment is classified as in a spreadsheet?
 
-// Get the class type of a comment and display it in the spreadsheet.
+// Display the category label that identifies a comment object to distinguish it from other element types in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

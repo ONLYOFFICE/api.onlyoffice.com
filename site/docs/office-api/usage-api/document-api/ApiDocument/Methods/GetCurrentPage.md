@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get current page index in a document.
+Retrieve the index of the current page in a document.
 
 ```javascript editor-docx
-// How to know the order index of the current page.
+// How do I find which page the cursor is on in a document?
 
-// Get current page number using the document API in a document.
+// Useful when building navigation tools that need to report the user's current position in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

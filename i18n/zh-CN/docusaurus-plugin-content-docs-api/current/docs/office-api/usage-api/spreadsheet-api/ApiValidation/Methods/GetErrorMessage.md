@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中的错误消息文本。
+读取电子表格中违反单元格验证规则时显示的错误消息。
 
 ```javascript editor-xlsx
-// How to retrieve the validation error message in a spreadsheet.
+// How do I find out what error message appears after an invalid entry in a spreadsheet?
 
-// Get the error message using the validation API in a spreadsheet.
+// Retrieve the text displayed to users when they enter a value that fails validation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

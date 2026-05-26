@@ -20,12 +20,12 @@ expression.GetTextFill();
 
 ## 示例
 
-获取文档中文本属性的文本填充。
+读取文档中应用于装饰性文本的填充颜色。
 
 ```javascript editor-docx
-// How do I get the text fill in a document?
+// How do I find out what color fills the inside of styled text in a document?
 
-// Get the text fill using a text properties object in a document.
+// Reuse the fill from one text shape to paint another shape with the same color in a document.
 
 const doc = Api.GetDocument();
 

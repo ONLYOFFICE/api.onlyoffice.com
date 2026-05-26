@@ -6,12 +6,12 @@
 
 ## 示例
 
-检查文档中绘图对象是否水平翻转。
+检查文档中的绘图是否水平翻转。
 
 ```javascript editor-docx
-// How to get the horizontal flip property of the shape in a document.
+// How do I read the horizontal flip state of a shape in a document?
 
-// Create a drawing, add text to it, and read its horizontal flip value in a document.
+// Display the horizontal flip flag of a drawing as a text label in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

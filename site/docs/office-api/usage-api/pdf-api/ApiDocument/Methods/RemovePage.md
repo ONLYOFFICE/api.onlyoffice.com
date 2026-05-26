@@ -1,11 +1,12 @@
 # RemovePage
 
 Removes page by index from document
+💡  You can't delete last page 
 
 ## Syntax
 
 ```javascript
-expression.RemovePage(nPos);
+expression.RemovePage(pos);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,7 +15,7 @@ expression.RemovePage(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | page position |
+| pos | Required | number |  | page position |
 
 ## Returns
 
@@ -22,12 +23,12 @@ boolean
 
 ## Example
 
-Remove page from document in a PDF document.
+Delete a page from a PDF.
 
 ```javascript editor-pdf
-// How can I remove the page using a document in a PDF document?
+// How do I remove an unwanted page from a PDF?
 
-// Remove the page for a document in a PDF document.
+// Delete a specific page number from a PDF.
 
 let doc = Api.GetDocument();
 doc.AddPage(1);

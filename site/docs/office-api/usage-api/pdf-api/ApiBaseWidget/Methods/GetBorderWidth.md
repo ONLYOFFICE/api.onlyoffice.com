@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get field widgets border width and display it in a PDF document.
+Read the border width of a form field widget in a PDF.
 
 ```javascript editor-pdf
-// How to get the border width for a widget in a PDF document?
+// How do I get the border width of a widget in a PDF?
 
-// Get the border width and display the result in a PDF document.
+// Retrieve the outline thickness of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

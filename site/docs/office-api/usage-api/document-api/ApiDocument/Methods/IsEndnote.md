@@ -6,12 +6,12 @@ Inherited from [ApiDocumentContent.IsEndnote](../../ApiDocumentContent/Methods/I
 
 ## Example
 
-Check is the document content is an endnote.
+Detect whether a note is an endnote in a document.
 
 ```javascript editor-docx
-// How to add endnote to the document.
+// How do I tell if a note is an endnote rather than a footnote in a document?
 
-// Use document content to is endnote.
+// Distinguish endnotes from footnotes to display the correct label next to each note.
 
 let doc = Api.GetDocument();
 let endnote = doc.AddEndnote();

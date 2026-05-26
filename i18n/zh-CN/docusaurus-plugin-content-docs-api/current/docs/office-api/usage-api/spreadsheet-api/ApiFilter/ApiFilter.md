@@ -18,6 +18,6 @@
 | ------ | ------- | ----------- |
 | [GetCriteria1](./Methods/GetCriteria1.md) | string \| string[] \| number \| [XlDynamicFilterCriteria](../Enumeration/XlDynamicFilterCriteria.md) \| null | 返回此列筛选器关联的第一个条件。 |
 | [GetCriteria2](./Methods/GetCriteria2.md) | string \| null | 返回此列筛选器关联的第二个条件。 |
-| [GetOn](./Methods/GetOn.md) | boolean | 指示此列是否应用了任何筛选器。当该列存在以下至少一种基础结构时，该属性为 true：- Filters - CustomFiltersObj - DynamicFilter - ColorFilter - Top10 |
+| [GetOn](./Methods/GetOn.md) | boolean | 指示此列上是否应用了任何筛选器。 |
 | [GetOperator](./Methods/GetOperator.md) | [XlAutoFilterOperator](../Enumeration/XlAutoFilterOperator.md) \| null | 返回此列筛选器使用的运算符。 |
 | [GetParent](./Methods/GetParent.md) | [ApiAutoFilter](../ApiAutoFilter/ApiAutoFilter.md) | 返回此筛选列的父筛选器集合。 |

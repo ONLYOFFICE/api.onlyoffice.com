@@ -7,12 +7,12 @@
 
 ## 示例
 
-指定在文档中具有相同段落边框设置的一组段落上方显示的边框。
+在文档中为段落上方添加顶部边框。
 
 ```javascript editor-docx
-// Set top border to the paragraph in a document.
+// How do I draw a line above a paragraph in a document?
 
-// Border with single line the text in a document.
+// Separate a paragraph from the content above it using a visible border line in a document.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

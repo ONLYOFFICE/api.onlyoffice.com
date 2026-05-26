@@ -25,12 +25,12 @@ This method doesn't return any data.
 
 ## Example
 
-Create a complex curved shape using various bezier and arc commands. Demonstrates different curve types in a single path on a page.
+Draw a curved arc from one point to another in a PDF.
 
 ```javascript editor-pdf
-// How can I arc to using a geometry path in a PDF document?
+// How do I add an arc to a custom shape in a PDF?
 
-// Arc to for a geometry path in a PDF document.
+// Connect two points with a curved arc segment in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

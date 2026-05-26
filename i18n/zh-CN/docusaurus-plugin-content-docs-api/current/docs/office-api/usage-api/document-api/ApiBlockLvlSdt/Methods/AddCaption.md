@@ -21,7 +21,7 @@ expression.AddCaption(additionalText, label, excludeLabel, numFormat, isBefore, 
 | excludeLabel | 可选 | boolean | false | 指定是否从题注中排除标签。 |
 | numFormat | 可选 | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | 可能的题注编号格式。 |
 | isBefore | 可选 | boolean | false | 指定是否在当前内容控件之前（true）或之后（false）插入题注（如果内容控件位于形状中，则在形状之后/之前）。 |
-| headingLvl | 可选 | Number |  | 标题级别（如果要指定章节号时使用）。💡 如果要指定「标题 1」，则 nHeadingLvl === 0，以此类推。 |
+| headingLvl | 可选 | Number |  | 标题级别（在要指定章节编号时使用）。 |
 | captionSep | 可选 | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | 题注分隔符（如果要指定章节号时使用）。 |
 
 ## 返回值
@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-在文档中当前内容控件之后（或之前）添加题注段落。
+在文档中内容控件下方添加编号的图形题注。
 
 ```javascript editor-docx
-// Add a figure caption after the block content control and set the Arabic caption numbering format.
+// How do I label a content control with a figure caption in a document?
 
-// Create a block content control, add a paragraph with an image to it, and add a figure caption for the current content control in a document.
+// Insert an image into a content control and attach a caption with automatic numbering in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

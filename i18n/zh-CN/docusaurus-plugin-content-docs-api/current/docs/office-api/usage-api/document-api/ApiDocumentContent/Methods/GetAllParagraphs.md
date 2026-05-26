@@ -20,12 +20,12 @@ expression.GetAllParagraphs();
 
 ## 示例
 
-从文档中的文档内容获取所有段落的数组。
+从文档中的内容容器检索所有段落。
 
 ```javascript editor-docx
-// Get all paragraphs added to the document.
+// How do I get every paragraph inside a shape or content area in a document?
 
-// How to retrieve all paragraphs and make the first one bold in a document.
+// Bold the first paragraph found inside a shape to highlight it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

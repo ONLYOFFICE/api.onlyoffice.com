@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the previous row in a document.
+Access the row that immediately precedes a given row in a document.
 
 ```javascript editor-docx
-// Get the previous row from the current row in a document.
+// How do I move from one row to the row directly above it in a document?
 
-// Display the second and the first row in a document.
+// Navigate backward through table rows to reach the one before the current position in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

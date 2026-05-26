@@ -8,7 +8,7 @@ The function called when the application is loaded into the browser.
 
 **Example**:
 
-``` ts
+```ts
 function onAppReady() {
   console.log("ONLYOFFICE Document Editor is ready");
 }
@@ -29,7 +29,7 @@ The function called when the document is co-edited by another user in the `stric
 
 **Example**:
 
-``` ts
+```ts
 function onCollaborativeChanges() {
   console.log("The document changed by collaborative user");
 }
@@ -50,7 +50,7 @@ The function called when the document is loaded into the document editor.
 
 **Example**:
 
-``` ts
+```ts
 function onDocumentReady() {
   console.log("Document is loaded");
 }
@@ -77,7 +77,7 @@ The function called when the document is modified.
 
 **Example**:
 
-``` ts
+```ts
 function onDocumentStateChange(event) {
   if (event.data) {
     console.log("The document changed");
@@ -109,7 +109,7 @@ The function called with the absolute URL to the edited file when the [downloadA
 
 **Example**:
 
-``` ts
+```ts
 function onDownloadAs(event) {
   const fileType = event.data.fileType;
   const url = event.data.url;
@@ -139,7 +139,7 @@ The function called when an error or some other specific event occurs.
 
 **Example**:
 
-``` ts
+```ts
 function onError(event) {
   console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
 }
@@ -166,7 +166,7 @@ The function called when the application opened the file.
 
 **Example**:
 
-``` ts
+```ts
 function onInfo(event) {
   console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`);
 }
@@ -202,7 +202,7 @@ If this event is not declared, the *Get Link* button will not be displayed.
 
 **Example**:
 
-``` ts
+```ts
 function onMakeActionLink(event) {
   const ACTION_DATA = event.data;
   const link = GENERATE_LINK(ACTION_DATA);
@@ -236,7 +236,7 @@ When the user clicks the *Favorite* icon, the [setFavorite](../methods.md#setfav
 
 **Example**:
 
-``` ts
+```ts
 function onMetaChange(event) {
   const title = event.data.title;
   const favorite = event.data.favorite;
@@ -262,7 +262,7 @@ Starting from version 8.3, please use [onRequestRefreshFile](#onrequestrefreshfi
 
 **Example**:
 
-``` ts
+```ts
 function onOutdatedVersion() {
   location.reload(true);
 }
@@ -283,7 +283,7 @@ The function called when all plugins are loaded and can be used.
 
 **Example**:
 
-``` ts
+```ts
 function onPluginsReady() {
   console.log("All plugins are loaded");
 }
@@ -308,7 +308,7 @@ If this event is not declared, the [editorConfig.customization.close](./editor/c
 
 **Example**:
 
-``` ts
+```ts
 function onRequestClose() {
   if (window.opener) {
     window.close();
@@ -348,7 +348,7 @@ This event is used instead of the [createUrl](./editor/editor.md#createurl) fiel
 
 **Example**:
 
-``` ts
+```ts
 function onRequestCreateNew() {
   console.log("Create new document");
 }
@@ -377,7 +377,7 @@ If [editorConfig.mode](./editor/editor.md#mode) is set to `view` and [document.p
 
 **Example**:
 
-``` ts
+```ts
 function onRequestEditRights() {
   console.log("ONLYOFFICE Document Editor requests editing rights");
   document.location.reload();
@@ -405,7 +405,7 @@ The function called to request the filling status for the current role in PDF fo
 
 **Example**:
 
-``` ts
+```ts
 function onRequestFillingStatus(event) {
   const role = event.data;
   console.log("Filling status requested for role:", role);
@@ -434,7 +434,7 @@ If this event and the [onRequestHistoryData](#onrequesthistorydata) event are no
 
 **Example**:
 
-``` ts
+```ts
 function onRequestHistory() {
   docEditor.refreshHistory({
     currentVersion: 2,
@@ -489,7 +489,7 @@ If this event is not declared, the *Close History* button will not be displayed.
 
 **Example**:
 
-``` ts
+```ts
 function onRequestHistoryClose() {
   document.location.reload();
 }
@@ -522,7 +522,7 @@ If this event and the [onRequestHistory](#onrequesthistory) event are not declar
 
 **Example**:
 
-``` ts
+```ts
 function onRequestHistoryData(event) {
   const version = event.data;
   docEditor.setHistoryData({
@@ -571,7 +571,7 @@ If this event is not declared, the *Image from Storage* button will not be displ
 
 **Example**:
 
-``` ts
+```ts
 function onRequestInsertImage(event) {
   docEditor.insertImage({
     c: event.data.c,
@@ -628,7 +628,7 @@ If this event is not declared, the *Open source* button will not be displayed.
 
 **Example**:
 
-``` ts
+```ts
 function onRequestOpen(event) {
   const path = event.data.path;
   const referenceData = event.data.referenceData;
@@ -670,7 +670,7 @@ The function called when the user is trying to refresh data inserted from the ex
 
 **Example**:
 
-``` ts
+```ts
 function onRequestReferenceData(event) {
   const link = event.data.link;
   const referenceData = event.data.referenceData;
@@ -719,7 +719,7 @@ The function called when the user is trying to change a source of the external d
 
 **Example**:
 
-``` ts
+```ts
 function onRequestReferenceSource(event) {
   const referenceData = event.data.referenceData;
   const path = event.data.path;
@@ -758,7 +758,7 @@ In these cases, the [refreshFile](../methods.md#refreshfile) method is called an
 
 **Example**:
 
-``` ts
+```ts
 function onRequestRefreshFile() {
   docEditor.refreshFile({
     document: {
@@ -804,7 +804,7 @@ If this event is not declared, the *Rename...* button will not be displayed.
 
 **Example**:
 
-``` ts
+```ts
 function onRequestRename(event) {
   const title = event.data;
   console.log(`The user is trying to rename the file to: ${title}`);
@@ -840,7 +840,7 @@ If this event is not declared, the *Restore* button will not be displayed. The *
 
 **Example**:
 
-``` ts
+```ts
 function onRequestRestore(event) {
   const fileType = event.data.fileType;
   const url = event.data.url;
@@ -907,7 +907,7 @@ If this event is not declared, the *Save Copy as...* button will not be displaye
 
 **Example**:
 
-``` ts
+```ts
 function onRequestSaveAs(event) {
   const fileType = event.data.fileType;
   const title = event.data.title;
@@ -940,7 +940,7 @@ The function called when the user is trying to select a document for comparing, 
 
 **Example**:
 
-``` ts
+```ts
 function onRequestSelectDocument(event) {
   docEditor.setRequestedDocument({
     c: event.data.c,
@@ -975,7 +975,7 @@ The function called when the user is trying to select recipients data by clickin
 
 **Example**:
 
-``` ts
+```ts
 function onRequestSelectSpreadsheet(event) {
   docEditor.setRequestedSpreadsheet({
     c: event.data.c,
@@ -1010,7 +1010,7 @@ The function called when the user is mentioned in a comment. The list of users t
 
 **Example**:
 
-``` ts
+```ts
 function onRequestSendNotify(event) {
   const ACTION_DATA = event.data.actionLink;
   const comment = event.data.message;
@@ -1039,7 +1039,7 @@ If this event is not declared, the *Change access rights* button will not be dis
 
 **Example**:
 
-``` ts
+```ts
 function onRequestSharingSettings() {
   docEditor.setSharingSettings({
     sharingSettings: [
@@ -1083,9 +1083,11 @@ If this event is not declared, the *Start filling* button will not be displayed.
 
 The `event.data` is an array of role objects.
 
+![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
+
 **Example**:
 
-``` ts
+```ts
 function onRequestStartFilling(event) {
   const roles = event.data;
   console.log("Roles:", roles);
@@ -1119,7 +1121,7 @@ The function called when the user can select other users to mention in the comme
 
 **Example**:
 
-``` ts
+```ts
 function onRequestUsers(event) {
   const c = event.data.c;
   const id = event.data.id;
@@ -1165,7 +1167,7 @@ The function called to save the document as binary data.
 
 **Example**:
 
-``` ts
+```ts
 function onSaveDocument(event) {
   const buffer = event.data;
   console.log("Document binary size:", buffer.byteLength);
@@ -1185,11 +1187,25 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The function called when the PDF form is ready for filling, i.e. after the [startFilling](../methods.md#startfilling) method is called and the form preparation is complete.
 
+**Parameters**:
+
+| Parameter             | Type     | Description        |
+| --------------------- | -------- | ------------------ |
+| event.data.color      | `string` | The role color in hex format (e.g. `#FF0000`). |
+| event.data.name       | `string` | The role name.     |
+| event.data.user.email | `string` | The user email.    |
+| event.data.user.id    | `string` | The user ID.       |
+| event.data.user.image | `string` | The URL to the user avatar. |
+| event.data.user.name  | `string` | The user name.     |
+
+The `event.data` is an array of role objects.
+
 **Example**:
 
-``` ts
-function onStartFilling() {
-  console.log("The PDF form is ready for filling.");
+```ts
+function onStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
 }
 
 const config = {
@@ -1208,7 +1224,7 @@ The function called when the force saving request of the `3` [forcesavetype](../
 
 **Example**:
 
-``` ts
+```ts
 function onSubmit() {
   console.log("The form was submitted.");
 }
@@ -1233,7 +1249,7 @@ The function called when a user action is required to open a document in the fol
 
 **Example**:
 
-``` ts
+```ts
 function onUserActionRequired() {
   console.log("Enter a password");
 }
@@ -1261,7 +1277,7 @@ The function called when a warning occurs.
 
 **Example**:
 
-``` ts
+```ts
 function onWarning(event) {
   console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`);
 }

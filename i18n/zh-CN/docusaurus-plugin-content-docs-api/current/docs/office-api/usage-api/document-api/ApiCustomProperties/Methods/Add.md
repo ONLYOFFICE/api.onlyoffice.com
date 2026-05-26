@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-向文档中添加字符串自定义属性。
+向文档添加各种类型的自定义属性。
 
 ```javascript editor-docx
-// Custom properties support string, boolean, number, and date value types.
+// How do I store custom metadata fields in a document?
 
-// Add using a custom properties object in a document.
+// Attach named values of string, boolean, number, and date types as custom properties in a document.
 
 const doc = Api.GetDocument();
 const customProps = doc.GetCustomProperties();

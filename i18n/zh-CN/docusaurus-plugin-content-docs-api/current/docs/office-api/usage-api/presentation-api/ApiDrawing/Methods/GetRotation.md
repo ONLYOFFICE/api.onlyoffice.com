@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取演示文稿中绘图对象的旋转角度。
+获取演示文稿中形状的旋转角度。
 
 ```javascript editor-pptx
-// How do I get the rotation in a presentation?
+// How do I find how much a shape is rotated in a presentation?
 
-// Get the rotation using a drawing object object in a presentation.
+// Read and display the rotation value of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

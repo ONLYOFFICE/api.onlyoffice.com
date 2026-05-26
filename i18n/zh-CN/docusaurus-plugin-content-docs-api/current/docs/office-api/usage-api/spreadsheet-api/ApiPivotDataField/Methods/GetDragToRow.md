@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的拖动到行属性。
+检查电子表格中的透视字段是否可以移动到行区域。
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to row in a spreadsheet.
+// How do I find out if a pivot field is allowed to be dragged to the row zone in a spreadsheet?
 
-// Create a pivot table, add data to it then get a drag to row of a specified pivot field in a spreadsheet.
+// Verify that a pivot field supports placement as a row label in the pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

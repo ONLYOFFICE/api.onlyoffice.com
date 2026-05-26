@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set the height to the current table row within the table in a document.
+Define the height of a table row in a document.
 
 ```javascript editor-docx
-// Resize the height of the row in a document.
+// How do I control how tall a row appears inside a table in a document?
 
-// How to set a minimum row height of the table in a document.
+// Adjust the vertical size of a table row to a fixed minimum in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

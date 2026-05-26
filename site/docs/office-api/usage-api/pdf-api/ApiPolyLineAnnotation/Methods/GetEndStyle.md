@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get line end style of polyline annotation in a PDF document.
+Find the line ending appearance of a polyline marking in a PDF.
 
 ```javascript editor-pdf
-// How to get the end style for a polyline annotation in a PDF document?
+// How do I check what the line ending looks like on a polyline marking in a PDF?
 
-// Get the end style and display the result in a PDF document.
+// Retrieve the style of the endpoint displayed on a polyline marking in a PDF.
 
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];

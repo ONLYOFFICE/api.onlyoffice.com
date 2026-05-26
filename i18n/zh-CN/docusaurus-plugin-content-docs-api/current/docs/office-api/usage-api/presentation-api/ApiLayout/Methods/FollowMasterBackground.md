@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在演示文稿中将母版背景设置为版式的背景。
+将母版的背景应用于演示文稿中的布局。
 
 ```javascript editor-pptx
-// How to apply master background to the layout in a presentation.
+// Layouts can inherit background properties from their master.
 
-// Change background of the presentation layout to the background of a master.
+// The layout background now matches the master's background.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

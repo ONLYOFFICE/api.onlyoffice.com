@@ -10,7 +10,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` ts
+```ts
 {
   action: {
     type: "bookmark",
@@ -23,7 +23,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `object`
 
-定义文档中要滚动到的操作对象。
+文档中要滚动到的操作对象。
 
 ### actionLink.action.type
 
@@ -45,7 +45,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string` | **必填**
 
-指定**文档存储服务**的绝对 URL。此服务[必须](../../callback-handler.md)由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施。
+**文档存储服务**的绝对 URL。此服务[必须](../../callback-handler.md)由在自己的服务器上使用 ONLYOFFICE 文档的软件集成商实施。
 
 **示例**: `"https://example.com/url-to-callback"`
 
@@ -53,11 +53,11 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `object`
 
-定义共同编辑模式以及更改它的可能性。此参数用于应用[共同编辑](../../../get-started/how-it-works/co-editing.md#co-editing-modes)和[查看](../../../get-started/how-it-works/viewing.md)模式。
+共同编辑模式以及更改它的可能性。此参数用于应用[共同编辑](../../../get-started/how-it-works/co-editing.md#co-editing-modes)和[查看](../../../get-started/how-it-works/viewing.md)模式。
 
 **示例**:
 
-``` json
+```json
 {
   "mode": "fast",
   "change": true
@@ -80,17 +80,17 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `boolean` | **默认值：** `true`
 
-定义是否可以在编辑器界面中更改共同编辑模式。
+是否允许在编辑器界面中更改共同编辑模式。
 
 **示例**: `true`
 
-![共同编辑模式](/assets/images/editor/coediting-mode.png)
+![共同编辑模式](/assets/images/editor/coediting-mode.png#gh-light-mode-only)![共同编辑模式](/assets/images/editor/coediting-mode.dark.png#gh-dark-mode-only)
 
 ## createUrl
 
 **类型：** `string`
 
-定义将在其中创建并在创建后可用的文档的绝对 URL。
+将在其中创建并在创建后可用的文档的绝对 URL。
 
 :::note
 如果未指定，**创建**按钮将不会显示。您可以使用 [onRequestCreateNew](../events.md#onrequestcreatenew) 事件代替此参数。
@@ -98,13 +98,13 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `"https://example.com/url-to-create-document"`
 
-![创建 URL](/assets/images/editor/create.png)
+![创建 URL](/assets/images/editor/create.png#gh-light-mode-only)![创建 URL](/assets/images/editor/create.dark.png#gh-dark-mode-only)
 
 ## fileChoiceUrl
 
 **类型：** `string`
 
-定义在 iframe 中打开的文件选择对话框的 URL，用于插入图像、选择比较文档或选择邮件合并数据源。URL 可以包含 `{documentType}` 和 `{fileExt}` 占位符，它们将被替换为相应的值（例如 `ImagesOnly`、`DocumentsOnly`）。
+在 iframe 中打开的文件选择对话框的 URL，用于插入图像、选择比较文档或选择邮件合并数据源。URL 可以包含 `{documentType}` 和 `{fileExt}` 占位符，它们将被替换为相应的值（例如 `ImagesOnly`、`DocumentsOnly`）。
 
 :::note
 需要 `{documentType}` 占位符才能显示*从存储中获取图像*和*从存储中获取文档*按钮。
@@ -120,7 +120,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string` | **默认值：** `"en"`
 
-定义编辑器界面语言。使用两个字母（`de`、`ru`、`it`等）语言代码。
+编辑器界面语言。使用两个字母（`de`、`ru`、`it`等）语言代码。
 
 :::note
 要将编辑器界面翻译为葡萄牙语（葡萄牙）或中文（繁体，台湾）（在7.2版中添加），请使用四个字母的语言代码 `pt-PT` 或 `zh-TW`。两个字母 `pt` 语言代码设置葡萄牙语（巴西），`zh` 代码指定汉语（中华人民共和国）。
@@ -186,7 +186,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string` | **默认值：** `""`
 
-定义默认测量单位。指定 `us` 或 `ca` 以设置英寸。
+默认测量单位。指定 `us` 或 `ca` 以设置英寸。
 
 :::danger[Deprecated]
 自 8.2 版起已弃用，请改用[地区](#region)参数。
@@ -198,7 +198,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `"edit" | "view"` | **默认值：** `"edit"`
 
-定义编辑器打开模式。
+编辑器打开模式。
 
 **示例**: `"view"`
 
@@ -206,7 +206,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-定义用于保存邮件合并结果的文件夹的绝对 URL。
+用于保存邮件合并结果的文件夹的绝对 URL。
 
 :::danger[已弃用]
 请使用 [onRequestSaveAs](../events.md#onrequestsaveas) 事件代替此参数。
@@ -218,11 +218,11 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `object[]`
 
-在 **打开最近...** 菜单选项中定义文档存在或不存在。
+**打开最近...**菜单选项中文档的存在或不存在。
 
 **示例**:
 
-``` json
+```json
 [
   {
     "folder": "Example Files",
@@ -256,13 +256,13 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `"https://example.com/exampledocument1.docx"`
 
-![最近的文件](/assets/images/editor/recent.png) 
+![最近的文件](/assets/images/editor/recent.png#gh-light-mode-only)![最近的文件](/assets/images/editor/recent.dark.png#gh-dark-mode-only)
 
 ## 地区 {#region}
 
 **类型：** `string` | **默认值：** `"en-US"`
 
-定义货币、日期和时间的默认显示格式（仅在**电子表格编辑器**中）。使用四个字母（`en-US`、`fr-FR`等）语言代码设置。
+货币、日期和时间的默认显示格式（仅在**电子表格编辑器**中）。使用四个字母（`en-US`、`fr-FR`等）语言代码设置。
 
 :::note
 如果定义了 `lang` 且存在匹配的区域设置，则默认值取自 `lang` 参数。否则，使用 `en-US`。
@@ -328,7 +328,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-定义用于保存文件的文件夹的绝对 URL。
+用于保存文件的文件夹的绝对 URL。
 
 :::danger[已弃用]
 请使用 [onRequestSaveAs](../events.md#onrequestsaveas) 事件代替此参数。
@@ -340,7 +340,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string`
 
-定义文档共享设置页面的绝对 URL。
+文档共享设置页面的绝对 URL。
 
 :::danger[已弃用]
 请使用 [onRequestSharingSettings](../events.md#onrequestsharingsettings) 事件代替此参数。
@@ -352,11 +352,11 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `object[]`
 
-在 **Create New...** 菜单选项中定义模板是否存在。
+**Create New...**菜单选项中模板的存在或不存在。
 
 **示例**:
 
-``` json
+```json
 [
   {
     "image": "https://example.com/exampletemplate1.png",
@@ -390,13 +390,13 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**: `"https://example.com/url-to-create-template1"`
 
-![模板](/assets/images/editor/templates.png)
+![模板](/assets/images/editor/templates.png#gh-light-mode-only)![模板](/assets/images/editor/templates.dark.png#gh-dark-mode-only)
 
 ## 用户 {#user}
 
 **类型：** `object`
 
-定义当前查看或编辑文档的用户。
+当前查看或编辑文档的用户。
 
 :::note
 因为头像 URL 被插入到编辑器框架的 HTML 中，对用户头像的请求是未经授权发送的。可能会出现 CORS 问题。在这种情况下，请使用 base64 格式的头像（例如 `"data:image/png;base64,*****"`）。
@@ -406,7 +406,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **示例**:
 
-``` json
+```json
 {
   "group": "Group1,Group2",
   "id": "78e1e841",
@@ -460,7 +460,7 @@ editorConfig 部分定义了编辑器界面参数。
 
 **类型：** `string[]`
 
-定义分配给用户的 PDF 表单填写角色。数组中的第一个角色用于确定用户可以填写哪些表单字段。
+分配给用户的 PDF 表单填写角色。数组中的第一个角色用于确定用户可以填写哪些表单字段。
 
 **示例**: `["Role1"]`
 
@@ -498,7 +498,7 @@ WOPI 主机支持的文件名最大长度，不包括文件扩展名。对应 Ch
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   editorConfig: {

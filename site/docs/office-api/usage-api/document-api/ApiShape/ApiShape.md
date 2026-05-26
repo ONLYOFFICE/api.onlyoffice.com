@@ -7,7 +7,7 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddBreak](./Methods/AddBreak.md) | boolean | Inserts a break at the specified location in the main document. |
-| [Copy](./Methods/Copy.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Copies the current graphic object. |
+| [Copy](./Methods/Copy.md) | [ApiShape](../ApiShape/ApiShape.md) | Copies the current shape. |
 | [Delete](./Methods/Delete.md) | boolean | Deletes the current graphic object. |
 | [Fill](./Methods/Fill.md) | boolean | Sets the fill formatting properties to the current graphic object. |
 | [GetClassType](./Methods/GetClassType.md) | "shape" | Returns a type of the ApiShape class. |
@@ -36,8 +36,9 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [ScaleHeight](./Methods/ScaleHeight.md) | boolean | Scales the height of the figure using the specified coefficient. |
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | Scales the width of the figure using the specified coefficient. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
-| [SetDistances](./Methods/SetDistances.md) | boolean | Specifies the minimum distance which will be maintained between the edges of the current drawing object and any subsequent text. |
-| [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | Sets the properties from another drawing to the current drawing. The following properties will be copied: horizontal and vertical alignment, distance between the edges of the current drawing object and any subsequent text, wrapping style, drawing name, title and description. |
+| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | None | No description provided. |
+| [SetDistances](./Methods/SetDistances.md) | boolean | Specifies the minimum distance which will be maintained between the edges of the current drawing object and any |
+| [SetDrawingPrFromDrawing](./Methods/SetDrawingPrFromDrawing.md) | boolean | Sets the properties from another drawing to the current drawing. |
 | [SetFill](./Methods/SetFill.md) | boolean | Sets the fill properties to the current shape. |
 | [SetFlipH](./Methods/SetFlipH.md) | boolean | Sets the horizontal flip of the current drawing. |
 | [SetFlipV](./Methods/SetFlipV.md) | boolean | Sets the vertical flip of the current drawing. |
@@ -47,7 +48,7 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetHorPosition](./Methods/SetHorPosition.md) | boolean | Sets the absolute measurement for the horizontal positioning of the floating object. |
 | [SetLine](./Methods/SetLine.md) | boolean | Sets the outline properties to the current shape. |
 | [SetLockValue](./Methods/SetLockValue.md) | boolean | Sets the lock value to the specified lock type of the current drawing. |
-| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. If another drawing with the same name already exists, that drawing's name will be reset to a default auto-generated name. |
+| [SetName](./Methods/SetName.md) | boolean | Sets the name of the current drawing. |
 | [SetOutLine](./Methods/SetOutLine.md) | boolean | Sets the outline properties to the specified graphic object. |
 | [SetPaddings](./Methods/SetPaddings.md) | boolean | Sets the text paddings to the current shape. |
 | [SetRelativeHeight](./Methods/SetRelativeHeight.md) | boolean | Sets the relative height of the object (image, shape, chart) bounding box. |
@@ -58,6 +59,6 @@ ApiShape is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [SetVerPosition](./Methods/SetVerPosition.md) | boolean | Sets the absolute measurement for the vertical positioning of the floating object. |
 | [SetVertFlip](./Methods/SetVertFlip.md) | boolean | Flips the current drawing vertically. |
 | [SetVerticalTextAlign](./Methods/SetVerticalTextAlign.md) | boolean | Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted. |
-| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | Sets the wrapping type of the current object (image, shape, chart). One of the following wrapping style types can be set: **"inline"** - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible. If one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly: **"square"** - the text wraps the rectangular box that bounds the object. **"tight"** - the text wraps the actual object edges. **"through"** - the text wraps around the object edges and fills in the open white space within the object. **"topAndBottom"** - the text is only above and below the object. **"behind"** - the text overlaps the object. **"inFront"** - the object overlaps the text. |
+| [SetWrappingStyle](./Methods/SetWrappingStyle.md) | boolean | Sets the wrapping type of the current object (image, shape, chart). One of the following wrapping style types can be set: |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDrawing object into the JSON object. |
 | [Unselect](./Methods/Unselect.md) | boolean | Removes the current graphic object from the selection. |

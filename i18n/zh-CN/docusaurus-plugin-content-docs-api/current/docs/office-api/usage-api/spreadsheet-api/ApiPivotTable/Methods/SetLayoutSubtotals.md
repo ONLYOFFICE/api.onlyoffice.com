@@ -22,12 +22,12 @@ expression.SetLayoutSubtotals(show);
 
 ## 示例
 
-在电子表格中设置表格的布局小计。
+控制电子表格中数据透视表布局中是否显示小计。
 
 ```javascript editor-xlsx
-// How to set subtotals of a table in a spreadsheet.
+// How do I turn subtotals on or off in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set subtotals using a boolean value in a spreadsheet.
+// Hide or show subtotal rows to simplify the pivot table view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

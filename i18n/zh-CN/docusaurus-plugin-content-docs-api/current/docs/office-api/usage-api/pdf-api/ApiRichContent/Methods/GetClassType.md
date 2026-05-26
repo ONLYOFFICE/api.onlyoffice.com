@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中富文本内容返回的类类型。
+了解您在 PDF 中使用的格式化文本对象类型。
 
 ```javascript editor-pdf
-// How do I check what type a rich content object is in a PDF document?
+// How do I check the category of a rich content container in a PDF?
 
-// Retrieve and output the class type string for a rich content in a PDF document.
+// Determine the classification of formatted text content in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

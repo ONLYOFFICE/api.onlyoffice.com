@@ -20,7 +20,7 @@ You can integrate **ONLYOFFICE Document Builder** into your Python, C++, COM, Ja
 
 ## Example
 
-<Tabs groupId="lang">
+<Tabs groupId="lang" queryString="lang">
     <TabItem value="python" label="Python">
         ```py
         import os

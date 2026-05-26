@@ -6,12 +6,12 @@
 
 ## 示例
 
-为电子表格中的当前段落设置项目符号或编号。
+在电子表格中为形状内的段落添加项目符号标记。
 
 ```javascript editor-xlsx
-// How to add a dash bullet to the paragraph in a spreadsheet.
+// How do I prepend a dash or symbol to lines of text in a paragraph in a spreadsheet?
 
-// Numbering and adding custom bullet points to the text in a spreadsheet.
+// Mark each paragraph entry with a custom bullet character to create a visual list in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

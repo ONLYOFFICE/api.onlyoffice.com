@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中的所有字段控件并为其设置边框颜色。
+访问 PDF 中表单字段的所有视觉实例。
 
 ```javascript editor-pdf
-// How to get all widgets for a base field in a PDF document?
+// How can I retrieve every visual representation of a form field in a PDF?
 
-// Get all widgets and display the result in a PDF document.
+// Modify the appearance of all form field widgets in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

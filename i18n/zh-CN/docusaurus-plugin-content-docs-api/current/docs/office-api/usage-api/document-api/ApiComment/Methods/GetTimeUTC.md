@@ -20,12 +20,12 @@ Number
 
 ## 示例
 
-获取文档中批注创建的 UTC 格式时间戳。
+读取文档中批注的 UTC 格式创建时间戳。
 
 ```javascript editor-docx
-// How to know when a comment was added in a document.
+// How do I get the UTC creation time of a comment in a document?
 
-// Get all comments from the presentation and the first one's time of creation in UTC format.
+// Store or compare comment timestamps across time zones using a UTC-normalized value.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

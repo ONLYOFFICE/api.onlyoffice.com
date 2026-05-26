@@ -59,5 +59,11 @@ Methods used: [GetActiveSheet](/docs/office-api/usage-api/spreadsheet-api/Api/Me
 
 ## Result
 
-![FindInvalidEmails](/assets/images/plugins/find-invalid-emails.png#gh-light-mode-only)
-![FindInvalidEmails](/assets/images/plugins/find-invalid-emails.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/find-invalid-emails.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/find-invalid-emails.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get a parent of a pivot field in a spreadsheet.
+Access the pivot table that owns a given pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field parent in a spreadsheet.
+// How do I get the pivot table a particular field belongs to in a spreadsheet?
 
-// Create a pivot table, add data to it then get a parent of a specified pivot field in a spreadsheet.
+// Navigate from a pivot field back to its parent table to perform further operations on the whole table.
 
 let worksheet = Api.GetActiveSheet();
 

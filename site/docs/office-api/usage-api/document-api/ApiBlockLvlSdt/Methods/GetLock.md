@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the lock type of the container in a document.
+Read the editing restriction applied to a content control in a document.
 
 ```javascript editor-docx
-// Create a block content control, set its lock to "sdtContentLocked", and return the lock type to insert it into the second paragraph of the document.
+// How do I check what lock type is set on a content control in a document?
 
-// How to get the lock type of the block-level content control object in a document.
+// Apply a content lock to a content control and then verify what restriction is active in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

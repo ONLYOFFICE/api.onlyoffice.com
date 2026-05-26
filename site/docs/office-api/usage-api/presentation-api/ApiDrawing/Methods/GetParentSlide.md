@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the drawing parent slide.
+Find the slide that contains a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a parent slide of a slide shape.
+// How do I locate the slide an object belongs to in a presentation?
 
-// Get a parent slide knowing a shape.
+// Access the parent slide of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

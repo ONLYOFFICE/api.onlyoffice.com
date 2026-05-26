@@ -23,9 +23,9 @@ expression.GetTimeLine();
 从幻灯片获取动画时间线并添加动画效果。
 
 ```javascript editor-pptx
-// How do I get the time line in a presentation?
+// Retrieve the timeline using GetTimeLine and access the main animation sequence.
 
-// Get the time line using a slide object.
+// Add a fade entrance animation effect to a shape.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

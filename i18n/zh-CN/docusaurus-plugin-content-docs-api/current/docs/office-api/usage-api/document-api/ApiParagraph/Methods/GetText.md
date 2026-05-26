@@ -26,12 +26,12 @@ string
 
 ## 示例
 
-获取文档中的段落文本。
+提取文档中段落的纯文本内容。
 
 ```javascript editor-docx
-// How to get text of the paragraph object in a document.
+// How do I read the text string from a paragraph in a document?
 
-// Get the paragraph text and display it in a document.
+// Retrieve paragraph text with custom separators and print it in a second paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

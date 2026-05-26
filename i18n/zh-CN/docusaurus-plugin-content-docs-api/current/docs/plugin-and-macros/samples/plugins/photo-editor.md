@@ -46,7 +46,7 @@ GitHub 仓库：[photoeditor](https://github.com/ONLYOFFICE/onlyoffice.github.io
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Photo Editor",
   "nameLocale": {

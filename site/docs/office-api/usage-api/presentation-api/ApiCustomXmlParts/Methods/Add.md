@@ -25,9 +25,9 @@ expression.Add(xml);
 Add a new custom XML part and then access it in a presentation.
 
 ```javascript editor-pptx
-// How to add a custom XML part to the presentation.
+// How do I create a new custom XML part in a presentation?
 
-// Add and display the result in a presentation.
+// Display the XML content of the added part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();

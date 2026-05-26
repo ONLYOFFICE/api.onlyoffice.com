@@ -20,12 +20,12 @@ expression.GetSelection();
 
 ## 示例
 
-获取演示文稿中的当前选区。
+检索演示文稿中当前选定的对象或文本。
 
 ```javascript editor-pptx
-// How can I get the selection in a presentation?
+// How do I access the selected content in a presentation in a presentation?
 
-// Get the selection in a presentation.
+// Read the properties of selected elements in a presentation.
 
 const presentation = Api.GetPresentation();
 

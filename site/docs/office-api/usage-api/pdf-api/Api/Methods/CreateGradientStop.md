@@ -26,7 +26,7 @@ expression.CreateGradientStop(color, pos);
 Create a gradient stop used for different types of gradients in a PDF document.
 
 ```javascript editor-pdf
-// How to add a gradient stop for gradient in a PDF document.
+// Add a gradient stop for gradient in a PDF document.
 
 // Create a stop for a gradient in a PDF document.
 

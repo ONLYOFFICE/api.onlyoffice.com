@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a paragraph copy in a spreadsheet.
+Duplicate a paragraph and append it to a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create an identical paragraph in a spreadsheet.
+// How do I reuse an existing paragraph without rewriting it in a spreadsheet?
 
-// Get a paragraph from the content of the shape create its copy and add it to the shape in a spreadsheet.
+// Clone a formatted paragraph and attach the duplicate at the end of the shape content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

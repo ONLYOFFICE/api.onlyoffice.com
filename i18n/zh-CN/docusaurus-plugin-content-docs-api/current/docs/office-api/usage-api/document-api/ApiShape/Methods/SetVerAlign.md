@@ -6,12 +6,12 @@
 
 ## 示例
 
-指定文档中浮动对象的垂直对齐方式。
+在文档中将浮动形状相对于页面垂直对齐。
 
 ```javascript editor-docx
-// How to set the vertical alignment of the drawing in a document.
+// How do I control the vertical alignment of a drawing in a document?
 
-// Move the shape to the top of the page.
+// Pin a shape to the top of the page without manually setting its coordinates in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Unmerges the selected cell range.
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("C5:D10").UnMerge();
@@ -27,4 +27,11 @@ End Sub
 
 ## Result
 
-![Unmerge-before](/assets/images/plugins/unmerge-cells-before.png#gh-light-mode-only)![Unmerge-before](/assets/images/plugins/unmerge-cells-before.dark.png#gh-dark-mode-only) ![Unmerge-after](/assets/images/plugins/unmerge-cells-after.png#gh-light-mode-only)![Unmerge-after](/assets/images/plugins/unmerge-cells-after.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/unmerge-cell-range.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

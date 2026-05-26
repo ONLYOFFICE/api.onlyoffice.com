@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中的批注 ID。
+读取文档中批注的唯一标识符。
 
 ```javascript editor-docx
-// Display comment author name by finding a comment by its ID in a document.
+// How do I get the ID assigned to a comment in a document?
 
-// How to get a comment knowing its ID in a document.
+// Use a comment's ID to look it up again and access its properties.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

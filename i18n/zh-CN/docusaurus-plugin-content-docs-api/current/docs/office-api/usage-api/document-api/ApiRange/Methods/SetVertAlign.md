@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-为文本范围设置垂直对齐方式 "superscript"（上标）。
+将文档中的选定文本设置为上标或下标，使其位于正常行的上方或下方。
 
 ```javascript editor-docx
-// Set the vertical alignment of a text in a document.
+// How do I align a range of characters vertically as raised or lowered text in a document?
 
-// Get a range, specify its vertical alignment as "baseline", "subscript" or "superscript" in a document.
+// Mark a word or symbol to sit above or below the baseline of surrounding text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

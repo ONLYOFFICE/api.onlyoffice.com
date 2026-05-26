@@ -23,12 +23,12 @@ expression.GetPivotData(dataField, fieldItemsArray);
 
 ## Example
 
-Get a pivot data of a pivot table in a spreadsheet.
+Extract a specific summarized value from a pivot table by field and item in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table pivot data in a spreadsheet.
+// How do I look up a single aggregated number for a particular row or column intersection in a spreadsheet?
 
-// Create a pivot table, add data to it then get its pivot data in a spreadsheet.
+// Pull a targeted data point out of a pivot table using a field name and a category filter in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

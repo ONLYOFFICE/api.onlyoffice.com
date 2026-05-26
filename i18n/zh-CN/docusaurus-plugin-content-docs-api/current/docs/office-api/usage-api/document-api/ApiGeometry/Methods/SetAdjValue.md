@@ -23,12 +23,12 @@ expression.SetAdjValue(sName, nValue);
 
 ## 示例
 
-创建具有可调参数和参考线的形状。在文档中为自定义几何图形设置文本矩形和连接点。
+设置控制文档中自定义形状比例的调整值。
 
 ```javascript editor-docx
-// How do I set adj value in a document?
+// How do I change an adjustment parameter on a shape's geometry in a document?
 
-// Set adj value using a geometry object in a document.
+// Fine-tune a named adjustment handle to reshape a custom geometry without redrawing its paths in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

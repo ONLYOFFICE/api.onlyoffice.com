@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中设置形状内容的垂直对齐方式。
+在 PDF 中将形状内的文本垂直定位。
 
 ```javascript editor-pdf
-// Adjust vertical alignment of the text inside the shape in a PDF document.
+// How do I align text to the top, middle, or bottom of a shape in a PDF?
 
-// Use shape to set vertical text align in a PDF document.
+// Control where text appears vertically inside a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

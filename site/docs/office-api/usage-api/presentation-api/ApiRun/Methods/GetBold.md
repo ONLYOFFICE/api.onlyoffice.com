@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
 ## Example
 
-Find out whether a text is bold in a presentation.
+Retrieve the bold property from text run properties.
 
 ```javascript editor-pptx
-// How to know whether a text is set to bold or not in a presentation.
+// Create a shape with a text run and set bold formatting.
 
-// Get the text properties of the run and find whether it is bold or not in a presentation.
+// Get and display whether the text is bold.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

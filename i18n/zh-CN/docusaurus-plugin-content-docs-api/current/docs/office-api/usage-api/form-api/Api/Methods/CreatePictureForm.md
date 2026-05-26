@@ -22,12 +22,12 @@ expression.CreatePictureForm(formPr);
 
 ## 示例
 
-使用通用和特定的图片表单属性创建图片表单。
+在文档中插入用户可以添加照片的图像上传字段。
 
 ```javascript editor-forms
-// How to create a picture form and add it to the paragraph.
+// How do I create an image field for users to upload pictures in a document?
 
-// Add the picture form object to the document to upload a photo and set its image by an URL.
+// Enable users to fill in a form by selecting or uploading image files in a document.
 
 let doc = Api.GetDocument();
 let pictureForm = Api.CreatePictureForm({

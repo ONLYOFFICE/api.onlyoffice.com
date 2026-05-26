@@ -22,12 +22,12 @@ expression.SetDisplayFieldCaptions(show);
 
 ## 示例
 
-在电子表格中设置表格的显示字段标题。
+切换电子表格中数据透视表中字段标题标注的可见性。
 
 ```javascript editor-xlsx
-// How to set a display field captions of a table in a spreadsheet.
+// How do I hide or show the field label row at the top of a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set a display field captions in a spreadsheet.
+// Remove or restore the column and row header labels displayed in a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

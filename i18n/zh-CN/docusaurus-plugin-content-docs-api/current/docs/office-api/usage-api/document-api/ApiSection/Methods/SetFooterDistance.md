@@ -14,7 +14,7 @@ expression.SetFooterDistance(nDistance);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nDistance | 必需 | [twips](../../Enumeration/twips.md) |  | 从页面底边到页脚底边的距离，以点的二十分之一为单位（1/1440 英寸）。 |
+| nDistance | 必需 | [twips](../../Enumeration/twips.md) |  | 从页面底部边缘到页脚底部边缘的距离，以 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定从页面底部边缘到页脚底部边缘的距离。
+控制文档中页脚距离页面底部边缘的距离。
 
 ```javascript editor-docx
-// How to set footer distance of the section in a document.
+// How do I set the gap between the page bottom and the footer area in a document?
 
-// Specify the distance between the page end and the footer.
+// Adjust the spacing that separates the footer from the lower edge of a page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

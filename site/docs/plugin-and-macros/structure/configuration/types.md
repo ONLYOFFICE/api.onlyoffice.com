@@ -65,7 +65,7 @@ A plugin of any type can create windows and tabs during its work.
 
 ## Example
 
-``` json
+```json
 {
   "variations": [
     {

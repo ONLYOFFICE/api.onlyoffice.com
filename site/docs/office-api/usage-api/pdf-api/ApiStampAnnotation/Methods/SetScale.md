@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set scale for stamp annotation in a PDF document.
+Adjust the size of a stamp annotation in a PDF
 
 ```javascript editor-pdf
-// How can I set scale using a stamp annotation in a PDF document?
+// What size options are available for a stamp annotation in a PDF?
 
-// Set scale for a stamp annotation in a PDF document.
+// Modify the scale percentage for a stamp annotation in a PDF
 
 let doc = Api.GetDocument();
 let stampAnnot = Api.CreateStampAnnot([10, 10, 0, 0], 'D_Reviewed', 'Joe Doe');

@@ -24,12 +24,12 @@ string
 
 ## 示例
 
-返回文档中文本 run 的文本。
+从文档中的文本运行提取纯文本内容。
 
 ```javascript editor-docx
-// How to get a raw text value in a document.
+// How do I read the string of characters stored in a text run in a document?
 
-// Get a run, get its text value and show it in the document.
+// Retrieve the readable text from a run and display it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中指定字符范围的文本。
+读取电子表格中选定字符组的纯文本内容。
 
 ```javascript editor-xlsx
-// How to get a raw text from the characters in a spreadsheet.
+// How do I extract just the text from a specific portion of a cell's value in a spreadsheet?
 
-// Retrieve a text from the character collection in a spreadsheet.
+// Capture a substring of cell text for comparison or display elsewhere in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

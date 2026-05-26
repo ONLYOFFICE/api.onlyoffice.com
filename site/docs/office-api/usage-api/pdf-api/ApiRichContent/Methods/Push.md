@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Pushes a new element to rich content in a PDF document.
+Add a new element to rich content in a PDF.
 
 ```javascript editor-pdf
-// How can I push using a rich content in a PDF document?
+// How do I insert elements into rich content in a PDF?
 
-// Push for a rich content in a PDF document.
+// Push a new paragraph into the content area in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

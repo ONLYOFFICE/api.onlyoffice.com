@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中将派卡转换为磅。
+在电子表格中将派卡测量值表示为磅。
 
 ```javascript editor-xlsx
-// How to convert picas to points in a spreadsheet?
+// How do I turn a value in picas into its equivalent in points in a spreadsheet?
 
-// Convert picas to points using the spreadsheet API.
+// Display a typographic size converted from picas to points in a spreadsheet.
 
 const picas = 100;
 const points = Api.PicasToPoints(picas);

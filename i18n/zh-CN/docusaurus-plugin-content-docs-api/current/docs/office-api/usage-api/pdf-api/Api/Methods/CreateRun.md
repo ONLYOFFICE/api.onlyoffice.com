@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-创建文本块并将其插入文档。
+在 PDF 中向形状插入具有不同字体大小和字体系列的文本。
 
 ```javascript editor-pdf
-// How to add text in a PDF document.
+// How do I add formatted text to a shape in a PDF?
 
-// Add an text run object that represents a text in a PDF document.
+// Create separate text runs with distinct font properties inside a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

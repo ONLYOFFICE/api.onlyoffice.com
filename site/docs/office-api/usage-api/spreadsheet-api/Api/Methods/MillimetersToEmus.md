@@ -23,12 +23,12 @@ expression.MillimetersToEmus(mm);
 
 ## Example
 
-Convert millimeters to emus in a spreadsheet.
+Turn a millimeter measurement into EMUs in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert millimeters to emus in a spreadsheet?
+// How do I convert millimeters to EMU units in a spreadsheet?
 
-// Convert millimeters to emus using the spreadsheet API.
+// Show the EMU equivalent of a given millimeter value in a spreadsheet.
 
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);

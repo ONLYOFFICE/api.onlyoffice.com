@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get an object that represents the selected range in a spreadsheet.
+Operate on cells the user currently has chosen in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get selected range in a spreadsheet.
+// Identify which cells are active and modify them regardless of their location in a spreadsheet?
 
-// Get selection from the worksheet and set its value.
+// Put text into selected cells without knowing their exact position in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetSelection().SetValue("selected");

@@ -26,12 +26,12 @@ number
 
 ## 示例
 
-在电子表格中返回 Beta 概率分布函数。
+确定电子表格中贝塔分布的累积概率。
 
 ```javascript editor-xlsx
-// How to get a result from beta probability distribution function in a spreadsheet.
+// How do I calculate what percentage of outcomes fall below a specific value in a spreadsheet?
 
-// Use function to get the beta probability distribution function in a spreadsheet.
+// Assess the probability that a random result occurs up to a given threshold in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

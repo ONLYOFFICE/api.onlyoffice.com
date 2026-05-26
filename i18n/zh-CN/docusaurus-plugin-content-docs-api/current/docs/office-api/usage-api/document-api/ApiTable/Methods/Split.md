@@ -24,12 +24,12 @@ expression.Split(oCell, nRow, nCol);
 
 ## 示例
 
-将单元格拆分为指定数量的行和列。
+在文档中将一个表格单元格分割为更小单元格的网格。
 
 ```javascript editor-docx
-// How to divide the table cell.
+// How do I break a single cell into multiple rows and columns in a document?
 
-// Split the table cell into specific number of rows and columns.
+// Subdivide a cell to create a nested grid structure inside a table in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定表格所包含的文档部分的 Range 对象。
+在文档中选择跨越表格特定单元格的内容范围。
 
 ```javascript editor-docx
-// How to get a range object using an address in a document.
+// How do I target a portion of a table's content by cell coordinates in a document?
 
-// Update a rabge knowing its cell address.
+// Apply formatting to a defined span of table cells in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

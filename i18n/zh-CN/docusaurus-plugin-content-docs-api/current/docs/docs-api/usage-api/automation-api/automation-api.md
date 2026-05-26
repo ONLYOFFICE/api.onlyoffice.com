@@ -27,13 +27,13 @@ sidebar_position: -2
 
 要开始使用自动化 API，请使用 [createConnector](../methods.md#createconnector) 方法创建连接器：
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 ```
 
 连接器提供执行编辑器命令、监听文档事件和与编辑器 UI 交互的方法：
 
-``` ts
+```ts
 // 监听文档事件
 connector.attachEvent("onChangeContentControl", (obj) => {
   console.log("Content changed:", obj);
@@ -50,6 +50,46 @@ connector.callCommand(() => {
   const oParagraph = Api.CreateParagraph();
   oParagraph.AddText("Hello from Automation API");
   oDocument.InsertContent([oParagraph]);
+  return {status: "ok"};
+}, (res) => {
+  console.log("Result:", res);
+});
+```
+
+## 调试
+
+### 命令日志
+
+要在浏览器控制台中记录所有 [`callCommand`](./connector-class.md#callcommand) 和 [`executeMethod`](./connector-class.md#executemethod) 调用，请在浏览器本地存储中设置 `asc_plugin_commands_log` 键：
+
+```js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+要禁用日志，请删除该键：
+
+```js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
+该设置在页面重新加载后仍然有效。
+
+### callCommand 中的错误处理
+
+由于 `commandFn` 在隔离的上下文中运行，其内部的错误不会传播到调用方。使用 try/catch 块并通过回调返回结果：
+
+```ts
+connector.callCommand(() => {
+  try {
+    const doc = Api.GetDocument();
+    return {status: "ok"};
+  } catch (err) {
+    return {status: "fail", error: err.stack};
+  }
+}, (res) => {
+  if (res.status !== "ok") {
+    console.log(res.error);
+  }
 });
 ```
 

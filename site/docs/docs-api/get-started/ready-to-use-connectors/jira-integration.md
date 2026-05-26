@@ -46,7 +46,7 @@ You can also install the app from the Jira administration panel:
 
 Find the uploaded app on the **Manage apps** page. Click **Configure** and enter the name of the server with ONLYOFFICE Docs installed:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 

@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置文档中浮动对象垂直定位的绝对度量值。
+在文档中将浮动形状放置在页面上的精确垂直位置。
 
 ```javascript editor-docx
-// How to set the vertical position at page in points.
+// How do I set the vertical position of a drawing in a document?
 
-// Move the shape vertically on the page.
+// Offset a shape by a precise distance from the top of the page, or position it by percentage in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

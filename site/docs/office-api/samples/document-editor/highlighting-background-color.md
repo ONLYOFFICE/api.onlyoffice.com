@@ -12,7 +12,7 @@ Create a document with colored highlighting inside sentences for visual emphasis
 - apply background color highlighting to specific text fragments ([ApiRun/SetHighlight](/docs/office-api/usage-api/document-api/ApiRun/Methods/SetHighlight.md));
 - combine highlighted and normal text within the same paragraph for visual emphasis on key phrases.
 
-``` ts editor-docx
+```ts editor-docx
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 

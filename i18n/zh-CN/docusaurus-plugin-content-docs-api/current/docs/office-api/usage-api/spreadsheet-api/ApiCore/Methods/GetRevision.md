@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的修订版本。
+检索电子表格中分配给工作簿的修订标签。
 
 ```javascript editor-xlsx
-// How to get the revision for a core properties in a spreadsheet?
+// How do I read the revision identifier stored for a workbook in a spreadsheet?
 
-// Get the revision and display the result in a spreadsheet.
+// Display the current revision marker recorded in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

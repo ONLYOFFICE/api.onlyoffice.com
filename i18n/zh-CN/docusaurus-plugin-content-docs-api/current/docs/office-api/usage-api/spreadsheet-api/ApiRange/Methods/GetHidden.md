@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中的值隐藏属性。
+检查电子表格中选定范围内的行是否隐藏。
 
 ```javascript editor-xlsx
-// How to find out hidden property from a range in a spreadsheet.
+// How do I find out if a range of rows is currently hidden in a spreadsheet?
 
-// Get a range, get its cell hiding property and show it in the worksheet.
+// Reveal the visibility state of a row group without scrolling through the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRows("1:3");

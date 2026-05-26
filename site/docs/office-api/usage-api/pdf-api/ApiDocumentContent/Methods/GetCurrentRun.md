@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Return the current run from the document content.
+Access the text segment that is currently active in a shape in a PDF.
 
 ```javascript editor-pdf
-// How to get current run for a document content?
+// How do I find the text segment being edited in a PDF?
 
-// Get current run and display the result in a PDF document.
+// Retrieve the most recent text portion that was added to a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取演示文稿中演示文稿的类别（使用核心属性）。
+从演示文稿的元数据读取类别。
 
 ```javascript editor-pptx
-// How can I get the category using a core properties in a presentation?
+// How do I check what category a presentation is labeled as in a presentation?
 
-// Get the category for a core properties in a presentation.
+// Retrieve the category value stored in the presentation's core properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

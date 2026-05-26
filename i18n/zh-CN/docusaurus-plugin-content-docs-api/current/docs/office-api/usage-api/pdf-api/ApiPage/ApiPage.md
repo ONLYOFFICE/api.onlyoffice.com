@@ -15,6 +15,8 @@
 | [GetRotation](./Methods/GetRotation.md) | number | 获取页面旋转角度 |
 | [GetSelectedText](./Methods/GetSelectedText.md) | string | 获取页面上的选定文本 |
 | [GetSelectionQuads](./Methods/GetSelectionQuads.md) | [Quad](../Enumeration/Quad.md)[] | 获取页面选择四边形 |
+| [GetText](./Methods/GetText.md) | string | 获取页面上的所有文本内容。 |
+| [GetTextWithQuads](./Methods/GetTextWithQuads.md) | [TextWithQuads](../Enumeration/TextWithQuads.md)[] | 获取页面上每行带有四边形坐标的所有文本内容。 |
 | [RecognizeContent](./Methods/RecognizeContent.md) | [Drawing](../Enumeration/Drawing.md)[] | 识别页面上的内容并返回已识别对象的数组。 |
 | [Search](./Methods/Search.md) | Quads[] | 搜索词语并返回其四边形。 |
 | [SetRotation](./Methods/SetRotation.md) | boolean | 设置页面旋转角度 |

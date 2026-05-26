@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the name of the last user who modified the current document in a document.
+Record the name of the last person who modified a document in a document.
 
 ```javascript editor-docx
-// How can I set last modified by using a core properties in a document?
+// How do I store the author name of the most recent edit in a document?
 
-// Set last modified by for a core properties in a document.
+// Track document ownership and editing history by saving the modifier's name in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

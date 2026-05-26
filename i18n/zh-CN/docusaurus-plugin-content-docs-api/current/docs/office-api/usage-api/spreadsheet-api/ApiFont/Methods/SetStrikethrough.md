@@ -23,12 +23,12 @@ expression.SetStrikethrough(isStrikethrough);
 
 ## 示例
 
-在电子表格中为指定字体设置删除线属性。
+在电子表格中为选定的文本字符绘制删除线。
 
 ```javascript editor-xlsx
-// How to make a text strikethrough in a spreadsheet.
+// How do I add a strikethrough effect to part of the text in a spreadsheet?
 
-// Get a font object of characters and make it strikethrough in a spreadsheet.
+// Mark a run of characters as crossed out to indicate deleted content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

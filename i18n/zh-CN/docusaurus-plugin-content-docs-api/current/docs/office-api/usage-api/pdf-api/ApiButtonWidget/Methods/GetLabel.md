@@ -22,12 +22,12 @@ string
 
 ## 示例
 
-获取并显示 PDF 文档中按钮控件的标签。
+检索 PDF 中不同状态下的按钮标签。
 
 ```javascript editor-pdf
-// How do I get the label in a PDF document?
+// How do I access the text displayed on a button in a PDF?
 
-// Get the label using a button widget object in a PDF document.
+// Get the label for each button state (normal, hover, down) in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

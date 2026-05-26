@@ -14,8 +14,8 @@ expression.AddRow(oCell, isBefore);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which a new row will be added. If not specified, a new row will be added at the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new row before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which a new row will be added. If not specified, a new row will |
+| isBefore | Optional | boolean | false | Adds a new row before (false) or after (true) the specified cell. If no cell is specified, then |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## Example
 
-Add a new row to the table in a document.
+Insert a new row into a table in a document.
 
 ```javascript editor-docx
-// How to add row to the table in a document.
+// How do I add an extra row to a table in a document?
 
-// Get row cell and add it as row.
+// Extend a table by appending a row after a chosen position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

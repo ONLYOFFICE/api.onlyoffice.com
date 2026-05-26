@@ -22,12 +22,12 @@ expression.SetNumberFormat(format);
 
 ## 示例
 
-在电子表格中设置数据字段的数字格式。
+在电子表格中为数据透视表值字段应用数字格式。
 
 ```javascript editor-xlsx
-// How to change a number format a table element.
+// How do I control how numbers are displayed in a pivot table data field in a spreadsheet?
 
-// Create a pivot table, add data to it then set a custom data field's number format.
+// Format the values in a pivot field as currency, percentages, or scientific notation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

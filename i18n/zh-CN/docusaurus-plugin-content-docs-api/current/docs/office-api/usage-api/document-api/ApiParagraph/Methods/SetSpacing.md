@@ -22,12 +22,12 @@ expression.SetSpacing(nSpacing);
 
 ## 示例
 
-在文档中设置以磅的二十分之一为单位的文本间距。
+设置文档中段落文本的字符间距。
 
 ```javascript editor-docx
-// How to specify the spacing value of paragraph in a document.
+// How do I control the amount of space between characters in a paragraph in a document?
 
-// Indicate the paragraph text space in a document.
+// Expand or compress the gaps between letters within a paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定文档中当前节的所有文本列等宽。
+在文档中将节分为多个等宽列。
 
 ```javascript editor-docx
-// How to split the text into 3 equal columns in a document.
+// How do I arrange text into evenly sized side-by-side columns in a document?
 
-// Get the final section and set its columns in a document.
+// Lay out a section so all columns share an equal width throughout a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

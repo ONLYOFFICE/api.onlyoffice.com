@@ -20,12 +20,12 @@ number[]
 
 ## 示例
 
-获取文档中当前可见页面的索引。
+检索文档中所有当前可见页面的索引。
 
 ```javascript editor-docx
-// How to get all indexes of non-hidden pages.
+// How do I get a list of page numbers visible to the user in a document?
 
-// How to display numbers of all visible pages.
+// Useful when synchronizing a thumbnail panel or sidebar with the pages the reader can see in a document.
 
 const doc = Api.GetDocument();
 const paragraph = Api.CreateParagraph();

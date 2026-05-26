@@ -7,6 +7,8 @@ Represents the ApiDocumentContent class.
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a blockLvl content control using its position in the document content. |
+| [AddParagraph](./Methods/AddParagraph.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md) | Creates a new paragraph and appends it to the end of the document content. |
+| [AddText](./Methods/AddText.md) | [ApiRun](../ApiRun/ApiRun.md) | Appends the specified text to the end of the document content. |
 | [GetAllCharts](./Methods/GetAllCharts.md) | [ApiChart](../ApiChart/ApiChart.md)[] | Returns a collection of chart objects from the document content. |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects from the document content. |
 | [GetAllImages](./Methods/GetAllImages.md) | [ApiImage](../ApiImage/ApiImage.md)[] | Returns a collection of image objects from the document content. |
@@ -27,8 +29,10 @@ Represents the ApiDocumentContent class.
 | [GetText](./Methods/GetText.md) | string | Returns the inner text of the current document content object. |
 | [IsEndnote](./Methods/IsEndnote.md) | boolean | Check if the current document content is an endnote. |
 | [IsFootnote](./Methods/IsFootnote.md) | boolean | Check if the current document content is a footnote. |
+| [MoveCursorToNoteReference](./Methods/MoveCursorToNoteReference.md) | boolean | Moves the cursor to the reference of this footnote/endnote in the main document. If this document content is not a footnote/endnote, does nothing. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table to actually add it to the document. |
-| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. 💡 When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the [ApiDocumentContent#GetElement](../ApiDocumentContent/Methods/GetElement.md) method. |
+| [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Removes all the elements from the current document or from the current document element. |
 | [RemoveElement](./Methods/RemoveElement.md) | boolean | Removes an element using the position specified. |
 | [SelectNoteReference](./Methods/SelectNoteReference.md) | boolean | Select the reference to this footnote/endnote. If this document content is not a footnote/endnote, do nothing. |
+| [SetText](./Methods/SetText.md) | [ApiRun](../ApiRun/ApiRun.md) | Replaces all content of the current document content object with the specified text, |
 | [ToJSON](./Methods/ToJSON.md) | JSON | Converts the ApiDocumentContent object into the JSON object. |

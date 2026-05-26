@@ -20,12 +20,12 @@ expression.GetAllSeries();
 
 ## 示例
 
-获取图表类的所有系列并将其类型插入电子表格中的表格。
+收集图表中的每个数据系列并在电子表格的工作表上列出其类型。
 
 ```javascript editor-xlsx
-// How to get all series of the chart and diplay their type on the worksheet.
+// How do I loop through all the data series in a chart and display each one's type in a spreadsheet?
 
-// Get all series from the chart and display their types in a spreadsheet.
+// Audit a chart by reading each series and writing its category into cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

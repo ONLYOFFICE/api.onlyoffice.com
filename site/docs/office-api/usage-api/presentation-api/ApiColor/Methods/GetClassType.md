@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a color object in a presentation.
+Retrieve the class type identifier string for a color object.
 
 ```javascript editor-pptx
-// How can I get the class type of a color in a presentation?
+// Extract and display color object type metadata from a shape.
 
-// Get the class type of a color and display it in the presentation.
+// Get the class type of a color and display it within a shape text element.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

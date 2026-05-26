@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中返回投资特定期间支付的利息。
+计算电子表格中贷款特定期间的利息支付。
 
 ```javascript editor-xlsx
-// How to get the investment interest paid during a specific period in a spreadsheet.
+// How do I find the interest amount for a particular payment period in a spreadsheet?
 
-// Use a function to get an interest paid during a specific period in a spreadsheet.
+// Use a function to break down loan payments into principal and interest components in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

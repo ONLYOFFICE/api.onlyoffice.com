@@ -20,12 +20,12 @@ expression.GetSpacingLineRule();
 
 ## 示例
 
-获取演示文稿中的段落行距规则。
+检查演示文稿中段落的行距模式。
 
 ```javascript editor-pptx
-// How to get the size of a spacing line rule of a text from a paragraph in a presentation.
+// How do I read the line spacing rule from a paragraph in a presentation?
 
-// Return a spacing line rule property of a paragraph in a presentation.
+// Retrieve whether line spacing is automatic, fixed, or measured in multiples in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

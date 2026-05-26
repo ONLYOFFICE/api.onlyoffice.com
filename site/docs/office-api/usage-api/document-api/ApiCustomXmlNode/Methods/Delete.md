@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Delete the current XML node in a document.
+Remove a specific node from embedded custom XML data in a document.
 
 ```javascript editor-docx
-// How can I delete using a custom XML node in a document?
+// How do I delete a custom XML node in a document?
 
-// Delete for a custom XML node in a document.
+// Clean up stored XML by eliminating an unwanted element from the tree in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

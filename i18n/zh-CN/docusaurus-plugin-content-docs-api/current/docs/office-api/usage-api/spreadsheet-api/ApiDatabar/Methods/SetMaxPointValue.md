@@ -22,12 +22,12 @@ expression.SetMaxPointValue(value);
 
 ## 示例
 
-设置数据条条件格式规则的最大点值。
+指定数据条在电子表格中达到其完整长度的上限阈值。
 
 ```javascript editor-xlsx
-// How to change the value of the maximum condition in a spreadsheet.
+// How do I set the exact number that represents the maximum bar length in a spreadsheet?
 
-// Set the maximum point value of a data bar conditional formatting rule.
+// Cap the data bar scale at a specific value so bars do not grow beyond a known limit in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

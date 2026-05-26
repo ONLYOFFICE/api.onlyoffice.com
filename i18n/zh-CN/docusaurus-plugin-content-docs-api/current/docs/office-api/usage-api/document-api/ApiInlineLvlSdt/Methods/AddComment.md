@@ -28,9 +28,9 @@ expression.AddComment(sText, sAuthor, sUserId);
 向文档中的内联内容控件添加批注。
 
 ```javascript editor-docx
-// How to comment an inline text element in a document.
+// How do I attach a comment to an inline text control in a document?
 
-// Add the comment and display the result in a document.
+// Annotate an inline control with a reviewer name and note in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

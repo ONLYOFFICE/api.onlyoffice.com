@@ -20,12 +20,12 @@ expression.GetLine();
 
 ## 示例
 
-从形状获取轮廓属性并显示详细信息。创建带笔触的形状，获取并显示笔触详细信息。
+读取形状的边框属性并在电子表格中列出其宽度、颜色和虚线样式。
 
 ```javascript editor-xlsx
-// How to get the line for a shape in a spreadsheet?
+// How do I inspect the border line applied to a shape in a spreadsheet?
 
-// Get the line and display the result in a spreadsheet.
+// Pull the outline details from a shape and write each property into a separate cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));

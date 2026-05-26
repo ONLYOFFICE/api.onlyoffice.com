@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档内容对象的类类型。
+识别 PDF 中形状内容容器的类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a document content?
+// How can I determine the type of a content element in a PDF?
 
-// Get the class type of a document content and display it in the PDF.
+// Find what category or class an object belongs to in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

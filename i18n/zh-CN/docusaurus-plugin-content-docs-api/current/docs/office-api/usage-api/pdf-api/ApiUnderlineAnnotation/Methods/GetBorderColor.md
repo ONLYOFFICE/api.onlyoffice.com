@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其边框颜色。
+检查 PDF 中注释的边框颜色。
 
 ```javascript editor-pdf
-// How to get the border color for an annotation in a PDF document?
+// How can I find the color of an annotation's outline in a PDF?
 
-// Get the border color and display the result in a PDF document.
+// Read the border color value from an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

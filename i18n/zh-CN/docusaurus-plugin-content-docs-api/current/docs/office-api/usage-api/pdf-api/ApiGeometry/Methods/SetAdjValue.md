@@ -23,12 +23,12 @@ expression.SetAdjValue(sName, nValue);
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
+修改 PDF 中形状几何图形的调整值。
 
 ```javascript editor-pdf
-// How to set adj value for a geometry in a PDF document?
+// How do I change adjustment parameters for a shape in a PDF?
 
-// Set adj value and display the result in a PDF document.
+// Apply custom adjustment settings to geometry in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

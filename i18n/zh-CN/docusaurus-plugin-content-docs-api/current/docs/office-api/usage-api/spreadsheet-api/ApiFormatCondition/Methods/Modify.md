@@ -25,12 +25,12 @@ expression.Modify(Type, Operator, Formula1, Formula2);
 
 ## 示例
 
-修改条件格式规则。
+更新电子表格中现有格式规则的条件以使用新标准。
 
 ```javascript editor-xlsx
-// How to change the conditions of existing conditional formatting rules.
+// How do I change what value or formula a conditional formatting rule checks for in a spreadsheet?
 
-// Modify conditional formatting rule parameters.
+// Replace the trigger condition of a formatting rule without removing it from a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

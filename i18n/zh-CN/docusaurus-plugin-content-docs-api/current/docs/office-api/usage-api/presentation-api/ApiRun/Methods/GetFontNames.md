@@ -20,12 +20,12 @@ string[]
 
 ## 示例
 
-获取演示文稿中 run 内所有元素的所有字体名称。
+获取演示文稿中文本运行使用的所有字体名称。
 
 ```javascript editor-pptx
-// How to get all font names used in the text in a presentation.
+// What font families are applied to text in a presentation?
 
-// Retrieve text run font names and display them in the slide.
+// Retrieve and list the font names of text runs in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

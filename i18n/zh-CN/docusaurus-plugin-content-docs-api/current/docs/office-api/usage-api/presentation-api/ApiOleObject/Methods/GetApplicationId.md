@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-从演示文稿中的当前 OLE 对象获取应用程序 ID。
+检索与演示文稿中嵌入对象关联的应用程序标识符。
 
 ```javascript editor-pptx
-// How to return an application ID of the current OLE object in a presentation.
+// How do I get the application ID of an embedded object in a presentation?
 
-// Get an application ID of a specified OLE object in a presentation.
+// Read the application ID from a linked or embedded object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

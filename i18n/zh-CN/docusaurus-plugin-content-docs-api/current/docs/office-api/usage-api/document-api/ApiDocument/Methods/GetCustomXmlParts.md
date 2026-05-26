@@ -21,12 +21,12 @@ expression.GetCustomXmlParts();
 
 ## 示例
 
-获取自定义 XML 管理器，添加新的 XML 部件，并通过 ID 检索。
+嵌入自定义 XML 部件并通过其生成的 ID 在文档中检索。
 
 ```javascript editor-docx
-// How can I get custom xml parts using a document in a document?
+// How do I add and look up custom XML data stored inside a document?
 
-// Get custom xml parts for a document in a document.
+// Store structured XML payloads within a document and confirm they can be fetched back by identifier in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

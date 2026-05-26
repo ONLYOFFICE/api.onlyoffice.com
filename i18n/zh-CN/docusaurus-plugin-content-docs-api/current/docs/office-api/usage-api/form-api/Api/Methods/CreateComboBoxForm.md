@@ -22,12 +22,12 @@ expression.CreateComboBoxForm(formPr);
 
 ## 示例
 
-使用通用和特定的组合框表单属性创建组合框表单。
+在文档中创建用户从预设选项中选择的下拉列表。
 
 ```javascript editor-forms
-// How to create a combo box form and add it to the paragraph.
+// How do I add a dropdown field to a document?
 
-// Add a combo box with the state options to the document object.
+// Set up a selection menu with multiple choices that users can pick from in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({

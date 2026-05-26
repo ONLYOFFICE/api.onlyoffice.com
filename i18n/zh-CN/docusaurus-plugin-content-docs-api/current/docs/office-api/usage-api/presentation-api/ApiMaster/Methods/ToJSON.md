@@ -22,12 +22,12 @@ JSON
 
 ## 示例
 
-将幻灯片母版对象转换为 JSON 对象。
+在演示文稿中将幻灯片母版转换为 JSON 对象。
 
 ```javascript editor-pptx
-// How to convert a slide master object to a JSON object.
+// How do I convert a slide master to JSON in a presentation?
 
-// Get a slide master object from a slide and convert to JSON.
+// Save a slide master as JSON data and restore it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

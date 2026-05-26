@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-设置文档中指定图表系列的填充。
+在文档中用纯色填充为图表系列着色。
 
 ```javascript editor-docx
-// How to color a chart seria in a document.
+// How do I change the fill color of a chart series in a document?
 
-// Create a chart, set its properties and its series background in a document.
+// Visually separate data series from each other by assigning each one a distinct background color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

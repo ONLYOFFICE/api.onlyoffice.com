@@ -32,7 +32,7 @@ GitHub 仓库：[example_search_and_change_text_background_color](https://github
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example search and change background text",
   "guid": "asc.{EF5735E0-69A7-4D4A-9ABE-F58FD70F488J}",

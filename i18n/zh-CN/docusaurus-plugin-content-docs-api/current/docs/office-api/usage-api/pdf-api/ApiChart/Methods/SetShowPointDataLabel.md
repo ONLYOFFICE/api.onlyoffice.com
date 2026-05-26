@@ -27,12 +27,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中使用选项显示特定的图表数据标签。
+显示或隐藏 PDF 中图表上特定数据点的标签。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and the visibility of its data labels options in a PDF document.
+// How do I control what information appears next to a single data point in a PDF?
 
-// Set show point data label for a chart in a PDF document.
+// Toggle labels for individual data points with formatting options in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

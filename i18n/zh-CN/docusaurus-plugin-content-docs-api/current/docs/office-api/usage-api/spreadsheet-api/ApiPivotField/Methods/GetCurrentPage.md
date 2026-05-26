@@ -20,12 +20,12 @@ string \| number
 
 ## 示例
 
-获取电子表格中透视字段的当前页。
+读取电子表格中透视筛选字段的活动页面选择。
 
 ```javascript editor-xlsx
-// How to get a pivot field current page.
+// How do I find which page is currently selected for a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a current page of a specified pivot field.
+// Identify the active filter value shown in the page area of a pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

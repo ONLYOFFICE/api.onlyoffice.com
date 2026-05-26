@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中按钮控件的类类型。
+识别 PDF 中按钮控件的类类型。
 
 ```javascript editor-pdf
-// How to identify the class type of a button widget in a PDF document?
+// How do I determine what type a button widget object is in a PDF?
 
-// Obtain the class type identifier of a button widget object in a PDF document.
+// Get the object type information for a button widget in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

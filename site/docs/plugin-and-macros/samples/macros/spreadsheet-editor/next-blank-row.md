@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Spreadsheets"]
 
 Finds the next available blank row in a worksheet. This macro allows you to get the blank at the very end of your data (not between it).
 
-``` ts
+```ts
 (function () 
 {
     // Getting the active sheet
@@ -48,4 +48,11 @@ End Sub
 
 ## Result
 
-![Next blank row](/assets/images/plugins/next-blank-row.png#gh-light-mode-only)![Next blank row](/assets/images/plugins/next-blank-row.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/next-blank-row.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/next-blank-row.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

@@ -20,12 +20,12 @@ string \| null
 
 ## Example
 
-Analyzes arc command parameters in a presentation shape. Retrieves and display arc radii and angle information.
+Get the starting angle of an arc shape in a presentation.
 
 ```javascript editor-pptx
-// How to get the start angle for a path command in a presentation?
+// How do I find the arc starting angle in a presentation?
 
-// Get the start angle and display the result in a presentation.
+// Read angle properties to check arc direction in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

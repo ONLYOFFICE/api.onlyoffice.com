@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中文本字段对象的类类型。
+确定 PDF 中文本字段的对象类型。
 
 ```javascript editor-pdf
-// How can I get the class type of a text field in a PDF document?
+// How do I find out what class a text field belongs to in a PDF?
 
-// Get the class type of a text field and display it in the PDF.
+// Identify the type category of a text input box in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

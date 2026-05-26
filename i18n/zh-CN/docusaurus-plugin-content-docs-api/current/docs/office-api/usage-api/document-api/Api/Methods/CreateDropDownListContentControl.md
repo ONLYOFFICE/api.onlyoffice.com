@@ -23,12 +23,12 @@ expression.CreateDropDownListContentControl(list, selected);
 
 ## 示例
 
-在文档中创建组合框内容控件。
+向文档添加带有可选选项的下拉列表字段。
 
 ```javascript editor-docx
-// How to create the drop down list content control in a document?
+// How do I insert a drop-down list field into a document?
 
-// Create the drop down list content control using the document API.
+// Give readers a fixed set of choices by embedding a drop-down list control in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateDropDownListContentControl([{display: 'one', value: '1'}, {display: 'two', value: '2'}], 1);

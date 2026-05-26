@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定文本 run 中的所有小写字符仅以其对应的大写字母格式显示。
+在文档中将所有小写字母显示为大写而不更改底层文本。
 
 ```javascript editor-docx
-// How to make text characters capitalized in a document.
+// How do I make text appear in all capital letters without retyping it in a document?
 
-// Create a text run object, update its style by making its letters capitalized in a document.
+// Apply a visual-only capitals effect to the default text so readers see uppercase letters in a document.
 
 let doc = Api.GetDocument();
 let textPr = doc.GetDefaultTextPr();

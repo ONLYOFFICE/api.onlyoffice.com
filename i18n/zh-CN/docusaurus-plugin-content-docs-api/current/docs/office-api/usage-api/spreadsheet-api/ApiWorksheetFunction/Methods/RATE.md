@@ -27,12 +27,12 @@ number
 
 ## 示例
 
-在电子表格中返回贷款或投资每期的利率。例如，6% 年利率的季度付款使用 6%/4。
+计算电子表格中贷款或投资每个支付期的利率。
 
 ```javascript editor-xlsx
-// How to estimate the interest rate per period for a loan or an investment in a spreadsheet.
+// How do I determine the periodic interest rate from loan payment details in a spreadsheet?
 
-// Use a function to get the loan/investment interest rate per period in a spreadsheet.
+// Find the rate applied to each period when given the total payment schedule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

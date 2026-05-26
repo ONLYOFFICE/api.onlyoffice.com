@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes path properties of a cloud shape. Retrieves and display path dimensions, stroke and fill information.
+Retrieve all paths from a shape's geometry in a document.
 
 ```javascript editor-docx
-// How can I get the paths using a geometry in a document?
+// How do I get every path that belongs to a shape's geometry in a document?
 
-// Get the paths for a geometry in a document.
+// Collect all geometry paths at once to examine or iterate them as an array in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

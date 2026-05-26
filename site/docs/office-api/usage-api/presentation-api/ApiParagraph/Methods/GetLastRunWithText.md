@@ -23,9 +23,9 @@ This method doesn't have any parameters.
 Get the last Run with text in the paragraph in a presentation.
 
 ```javascript editor-pptx
-// How do I get last run with text in a presentation?
+// How do I access the final text element in a paragraph in a presentation?
 
-// Get last run with text using a paragraph object in a presentation.
+// Find the last text item in a paragraph and modify it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

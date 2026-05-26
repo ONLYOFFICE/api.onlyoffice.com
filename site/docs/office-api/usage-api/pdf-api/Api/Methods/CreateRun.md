@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Create a run and insert it into the document.
+Insert text with different font sizes and families into a shape in a PDF.
 
 ```javascript editor-pdf
-// How to add text in a PDF document.
+// How do I add formatted text to a shape in a PDF?
 
-// Add an text run object that represents a text in a PDF document.
+// Create separate text runs with distinct font properties inside a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取条件格式规则的数字格式。
+读取电子表格中条件格式规则应用于匹配单元格的数字显示模式。
 
 ```javascript editor-xlsx
-// How to retrieve number formatting from conditional formatting rules.
+// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
 
-// Get conditional formatting rule number format.
+// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

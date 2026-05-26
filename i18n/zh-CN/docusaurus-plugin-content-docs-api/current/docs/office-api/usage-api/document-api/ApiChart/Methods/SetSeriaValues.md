@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-为文档中指定的图表系列设置值。
+更新文档中图表系列的数据值。
 
 ```javascript editor-docx
-// How to set values to the specified chart object in a document.
+// How do I replace the numbers in a chart series in a document?
 
-// Create a chart, set its properties and its series values in a document.
+// Refresh a chart with revised figures without rebuilding the entire chart from scratch in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

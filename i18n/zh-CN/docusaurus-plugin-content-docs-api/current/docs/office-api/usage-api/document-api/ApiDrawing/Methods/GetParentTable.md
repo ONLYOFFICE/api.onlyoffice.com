@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中包含图形对象的父表格。
+检索文档中包含绘图对象的父表格。
 
 ```javascript editor-docx
-// Get an element's parent table in a document.
+// How do I find the table that holds a drawing in a document?
 
-// How to show the shape's wrapper table in a document.
+// Access the enclosing table to apply a style after placing a shape inside one of its cells in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

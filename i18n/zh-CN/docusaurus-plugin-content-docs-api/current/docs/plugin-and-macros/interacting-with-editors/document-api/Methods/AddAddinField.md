@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddAddinField(data);
+expression.AddAddinField(data, data);
 ```
 
 `expression` - 表示 [Api](Methods.md) 类的变量。
@@ -14,11 +14,14 @@ expression.AddAddinField(data);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
+| data | 必需 | Object |  | 加载项字段数据。 |
+| data.Value | 必需 | string |  | 字段值。 |
+| data.Content | 必需 | string |  | 字段文本内容。 |
 | data | 必需 | [AddinFieldData](../Enumeration/AddinFieldData.md) |  | 加载项字段数据。 |
 
 ## 返回值
 
-此方法不返回任何数据。
+[AddinFieldData](../Enumeration/AddinFieldData.md)
 
 ## 示例
 

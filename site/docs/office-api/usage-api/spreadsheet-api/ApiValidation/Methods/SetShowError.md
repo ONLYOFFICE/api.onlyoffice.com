@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set whether the error message is displayed in a spreadsheet.
+Turn the error alert on or off for a cell that has a validation rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to show or hide the validation error message in a spreadsheet.
+// How do I make sure an error popup appears whenever someone enters a value that breaks a rule in a spreadsheet?
 
-// Set the ShowError setting in a spreadsheet.
+// Decide whether users see a warning when their input does not meet the required criteria in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1");

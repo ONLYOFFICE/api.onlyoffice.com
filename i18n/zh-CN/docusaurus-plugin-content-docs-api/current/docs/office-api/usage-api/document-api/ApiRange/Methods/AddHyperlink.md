@@ -24,12 +24,12 @@ expression.AddHyperlink(sLink, sScreenTipText, sBookmarkName);
 
 ## 示例
 
-在文档中向指定范围添加超链接。
+将文档中选定的文本部分转换为可点击的超链接。
 
 ```javascript editor-docx
-// Insert a link to the range in a document.
+// How do I attach a web address to a specific word or phrase in a document?
 
-// Get range and add a hyperlink to it in a document.
+// Make a passage navigable by binding it to an external URL in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

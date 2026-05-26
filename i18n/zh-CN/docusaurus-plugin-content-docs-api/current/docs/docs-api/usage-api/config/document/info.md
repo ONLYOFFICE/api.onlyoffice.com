@@ -6,17 +6,17 @@ info 部分定义文档信息参数。
 
 **类型：** `boolean`
 
-定义*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange)事件。如果参数为`undefined`或`null`，则*收藏*图标不会显示在编辑器窗口标题处。
+*收藏*图标的高亮状态。当用户单击图标时，将调用 [onMetaChange](../events.md#onmetachange)事件。如果参数为`undefined`或`null`，则*收藏*图标不会显示在编辑器窗口标题处。
 
 **示例**: `true`
 
-![收藏](/assets/images/editor/favorite.png)
+![收藏](/assets/images/editor/favorite.png#gh-light-mode-only)![收藏](/assets/images/editor/favorite.dark.png#gh-dark-mode-only)
 
 ## 文件夹
 
 **类型：** `string`
 
-定义存储文档的文件夹。如果文档位于根文件夹中，可以为空。
+存储文档的文件夹。如果文档位于根文件夹中，可以为空。
 
 **示例**: `"Example Files"`
 
@@ -24,7 +24,7 @@ info 部分定义文档信息参数。
 
 **类型：** `string`
 
-定义文档所有者/创建者的名称。
+文档所有者/创建者的名称。
 
 **示例**: `"John Smith"`
 
@@ -32,11 +32,11 @@ info 部分定义文档信息参数。
 
 **类型：** `object[]`
 
-显示有关允许与其他用户共享文档的设置的信息。
+有关允许与其他用户共享文档的设置的信息。
 
 **示例**:
 
-``` ts
+```ts
 [
   {
     isLink: false,
@@ -50,7 +50,7 @@ info 部分定义文档信息参数。
 
 **类型：** `boolean`
 
-将用户图标更改为链接图标。
+是否用链接图标替换用户图标。
 
 **示例**: `false`
 
@@ -76,7 +76,7 @@ info 部分定义文档信息参数。
 
 **类型：** `string`
 
-定义文档上传日期。
+文档上传日期。
 
 **示例**: `"2010-07-07 3:46 PM"`
 
@@ -84,7 +84,7 @@ info 部分定义文档信息参数。
 
 ## 示例
 
-``` ts
+```ts
 const config = {
   // ...
   document: {

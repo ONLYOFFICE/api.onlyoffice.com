@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a color in a document.
+Retrieve the class type of a color object in a document.
 
 ```javascript editor-docx
-// How to identify the class type of a color in a document?
+// How do I identify what kind of color object is used in a document?
 
-// Obtain the class type identifier of a color object in a document.
+// Useful when you need to confirm the object type before processing color properties.
 
 const doc = Api.GetDocument();
 const color = Api.ThemeColor('accent1');

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the content of the container in a document.
+Access the inner content of a content control to add text to it in a document.
 
 ```javascript editor-docx
-// How to get the content for a block-level content control in a document?
+// How do I add text to the inside of a content control in a document?
 
-// Get the content and display the result in a document.
+// Write additional text into an existing content control by reading its contents in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

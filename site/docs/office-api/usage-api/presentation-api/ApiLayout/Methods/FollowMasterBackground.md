@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Set the master background as the background of the layout in a presentation.
+Apply the master's background to a layout in the presentation.
 
 ```javascript editor-pptx
-// How to apply master background to the layout in a presentation.
+// Layouts can inherit background properties from their master.
 
-// Change background of the presentation layout to the background of a master.
+// The layout background now matches the master's background.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

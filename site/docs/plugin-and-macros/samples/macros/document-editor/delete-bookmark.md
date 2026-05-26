@@ -34,5 +34,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![DeleteBookmark](/assets/images/plugins/delete-bookmark.png#gh-light-mode-only)
-![DeleteBookmark](/assets/images/plugins/delete-bookmark.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/delete-bookmark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/delete-bookmark.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

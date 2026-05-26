@@ -20,12 +20,12 @@ expression.GetParentTable();
 
 ## 示例
 
-获取文档中行的父表格。
+检索文档中包含特定行的表格。
 
 ```javascript editor-docx
-// Get the parent table of the table row in a document.
+// How do I get a reference to the whole table from one of its rows in a document?
 
-// Display the first and the second row in a document.
+// Reach back from a row to its containing table to apply changes at the table level in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

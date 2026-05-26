@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the format conditions collection for a range in a spreadsheet.
+Retrieve the conditional formatting rules applied to a range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the format conditions for a cell range?
+// How do I access the conditional formatting rules on a cell range in a spreadsheet?
 
-// Get the format conditions and display the result in a spreadsheet.
+// Add a data bar rule to a range and check how many rules are active in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 worksheet.GetRange('A1').SetValue('Score');

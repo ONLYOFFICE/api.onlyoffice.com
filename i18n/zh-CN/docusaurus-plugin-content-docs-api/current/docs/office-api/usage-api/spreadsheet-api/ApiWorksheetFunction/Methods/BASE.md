@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中将数字转换为给定基数的文本表示。
+在电子表格中将数字转换为所选进制（如二进制或十六进制）的文本表示。
 
 ```javascript editor-xlsx
-// How to convert a number into text in a spreadsheet.
+// Express a number in a different numeral base in a spreadsheet.
 
-// Use function to get a text from a number in a spreadsheet.
+// Rewrite a decimal value as a string in any radix with a minimum digit width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

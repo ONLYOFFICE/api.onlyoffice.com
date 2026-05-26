@@ -20,12 +20,12 @@ boolean \| null
 
 ## 示例
 
-获取电子表格中指定字体的下标属性。
+读取电子表格中特定字符范围是否格式化为下标。
 
 ```javascript editor-xlsx
-// How to determine a font subscript property in a spreadsheet.
+// How do I check if certain characters in a cell are displayed in a lowered subscript position in a spreadsheet?
 
-// Get a boolean value that represents whether a font has a subscript property or not and show the value in the worksheet.
+// Inspect the subscript setting of a character range and display the result in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

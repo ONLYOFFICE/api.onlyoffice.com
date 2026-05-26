@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取电子表格中透视字段的表格对象。
+从电子表格中其字段之一访问父数据透视表。
 
 ```javascript editor-xlsx
-// How to get a pivot field's table in a spreadsheet.
+// How do I get back to the whole pivot table when I only have a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it in a spreadsheet.
+// Use a pivot field as an entry point to modify the pivot table it belongs to in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

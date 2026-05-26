@@ -25,9 +25,9 @@ boolean
 在演示文稿中将自动换片时间设置为 4.3 秒（4300 毫秒）。
 
 ```javascript editor-pptx
-// How do I set advance time in a presentation?
+// Configure the advance time property of a slide show transition object.
 
-// Set advance time using a slide show transition object.
+// Apply the transition and display a confirmation message on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

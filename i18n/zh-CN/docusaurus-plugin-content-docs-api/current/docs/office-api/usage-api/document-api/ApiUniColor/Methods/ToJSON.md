@@ -20,12 +20,12 @@ JSON
 
 ## 示例
 
-将文档中的统一颜色对象转换为 JSON 对象。
+将颜色对象序列化为 JSON 并恢复以在文档中使用。
 
 ```javascript editor-docx
-// How to get a JSON from the uni color object in a document.
+// How do I convert a named color into a portable JSON format for reuse in a document?
 
-// Convert the uni color to json and add it to the document.
+// Preserve a preset color definition by round-tripping it through JSON in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

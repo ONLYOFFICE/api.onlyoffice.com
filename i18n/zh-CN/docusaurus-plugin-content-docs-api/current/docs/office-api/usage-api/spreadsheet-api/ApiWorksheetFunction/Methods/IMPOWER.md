@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的整数次幂。
+在电子表格中将复数提升到指定的幂。
 
 ```javascript editor-xlsx
-// How to get the result from raising into power of a complex number in a spreadsheet.
+// How do I calculate a complex number raised to an integer power in a spreadsheet?
 
-// Use a function to get the result from the power in a spreadsheet.
+// Get the exponential result of complex number calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

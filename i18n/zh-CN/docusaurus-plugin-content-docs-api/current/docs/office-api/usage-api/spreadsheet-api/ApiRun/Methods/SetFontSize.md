@@ -22,12 +22,12 @@ expression.SetFontSize(nSize);
 
 ## 示例
 
-在电子表格中为当前文本 run 的字符设置字体大小。
+调整电子表格中文本运行的字体大小。
 
 ```javascript editor-xlsx
-// How to change the text font size in a spreadsheet.
+// How do I make one part of the text larger than the rest in a spreadsheet?
 
-// Create a text run object, resize its font in a spreadsheet.
+// Scale up a specific run to give it visual weight compared to other text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

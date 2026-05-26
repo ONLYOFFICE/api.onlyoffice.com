@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中重命名图表类别。
+更改 PDF 中图表分类的标签。
 
 ```javascript editor-pdf
-// Create a chart then name its category in a PDF document.
+// How do I rename the x-axis categories of a chart in a PDF?
 
-// Set category name for a chart in a PDF document.
+// Update a category name to display different text in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

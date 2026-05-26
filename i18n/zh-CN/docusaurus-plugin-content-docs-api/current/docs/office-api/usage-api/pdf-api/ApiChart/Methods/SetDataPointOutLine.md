@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为数据点设置轮廓。
+在 PDF 中为数据点应用轮廓。
 
 ```javascript editor-pdf
-// Create a chart then apply outline to its data points in a PDF document.
+// How do I add a border around specific data points in a PDF?
 
-// Use chart to set data point out line in a PDF document.
+// Create a chart and apply a stroke effect to one data point in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

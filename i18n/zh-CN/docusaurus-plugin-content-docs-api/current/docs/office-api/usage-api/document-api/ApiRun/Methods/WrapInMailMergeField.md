@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中用邮件合并字段包装 run。
+将文档中的文本运行转换为邮件合并占位符。
 
 ```javascript editor-docx
-// How to create a run wrapped in 'Mail Merge Field' in a document.
+// How do I mark a piece of text so it acts as a merge field in a document?
 
-// Add a text run to the mail merge field in a document.
+// Convert a named text run into a field that gets filled during mail merge in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中向指定位置添加文本。
+在文档中文本选区的前面或后面直接插入附加文字。
 
 ```javascript editor-docx
-// How to add raw text to the range in a document.
+// How do I place new text immediately before or after an existing passage in a document?
 
-// Change content of the range by adding a text in a document.
+// Expand the content of a selection by injecting text at either end in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

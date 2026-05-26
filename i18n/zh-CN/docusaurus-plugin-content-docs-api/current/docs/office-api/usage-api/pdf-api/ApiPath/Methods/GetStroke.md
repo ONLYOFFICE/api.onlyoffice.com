@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-分析页面上云形路径属性。在文本形状中显示全面的路径信息。
+检查 PDF 中形状的轮廓是否已绘制以及其边框的外观。
 
 ```javascript editor-pdf
-// How can I get the stroke using a geometry path in a PDF document?
+// Does a custom shape have a visible border in a PDF?
 
-// Get the stroke for a geometry path in a PDF document.
+// Read the outline settings of a shape to see its stroke properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为当前幻灯片母版设置背景。
+为幻灯片母版应用背景填充。
 
 ```javascript editor-pptx
-// How to set a background of a slide master.
+// Create a solid fill with a custom color and set it as the master background.
 
-// Create a solid fill and apply it as a background for a slide master.
+// Clear any existing background before applying the new fill.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

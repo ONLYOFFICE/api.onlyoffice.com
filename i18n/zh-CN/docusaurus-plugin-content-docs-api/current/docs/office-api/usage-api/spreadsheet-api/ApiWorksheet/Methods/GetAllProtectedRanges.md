@@ -20,12 +20,12 @@ expression.GetAllProtectedRanges();
 
 ## 示例
 
-在电子表格中获取表示所有受保护范围的对象。
+检索电子表格工作表上定义的每个受保护范围。
 
 ```javascript editor-xlsx
-// How to get all protected ranges in a spreadsheet.
+// How do I list all protected ranges on a sheet in a spreadsheet?
 
-// Get all protected ranges as an array in a spreadsheet.
+// Loop through all locked ranges on the worksheet to update their titles in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddProtectedRange("protectedRange1", "Sheet1!$A$1:$B$1");

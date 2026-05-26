@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置电子表格中段落的右侧缩进。
+在电子表格中将形状内的段落从右边缘推开。
 
 ```javascript editor-xlsx
-// How to change the sentence's right side indentation of the paragraph in a spreadsheet.
+// How do I add a right margin to a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the right side indentation in a spreadsheet.
+// Shrink the paragraph's line width by pulling its right boundary inward in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

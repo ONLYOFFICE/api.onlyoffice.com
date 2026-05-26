@@ -1,6 +1,5 @@
 ---
 sidebar_position: 3
-draft: true
 ---
 
 # Comparing documents
@@ -12,7 +11,7 @@ Create a `compare.js` script file with the following code:
 ```js
 builderJS.OpenFile("file1.docx");
 const file = builderJS.OpenTmpFile("file2.docx");
-AscCommonWord.CompareDocuments(Api, file, null);
+AscCommonWord.CompareDocuments(Api, file);
 file.Close();
 builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();

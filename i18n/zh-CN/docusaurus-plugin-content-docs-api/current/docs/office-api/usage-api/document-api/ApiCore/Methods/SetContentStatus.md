@@ -22,12 +22,12 @@ expression.SetContentStatus(sStatus);
 
 ## 示例
 
-使用文档中的核心属性获取当前文档的内容状态。
+在文档的核心属性中标记文档的内容状态。
 
 ```javascript editor-docx
-// How do I set content status in a document?
+// How do I record whether a document is a draft, review, or final version in a document?
 
-// Set content status using a core properties object in a document.
+// Attach a workflow stage label to the document so collaborators know its current state in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

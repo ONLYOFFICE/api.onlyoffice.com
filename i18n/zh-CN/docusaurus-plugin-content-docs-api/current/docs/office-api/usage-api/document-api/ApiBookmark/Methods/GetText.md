@@ -29,12 +29,12 @@ string
 
 ## 示例
 
-获取文档中的书签文本。
+读取并显示文档中书签内存储的文本内容。
 
 ```javascript editor-docx
-// How to add a bookmark and then display its content's text in a document.
+// How do I extract the text from a named bookmark in a document?
 
-// Show a bookmark text in the document.
+// Confirm what words are covered by a bookmark by printing its content in a document.
 
 let doc = Api.GetDocument()
 let paragraph = doc.GetElement(0)

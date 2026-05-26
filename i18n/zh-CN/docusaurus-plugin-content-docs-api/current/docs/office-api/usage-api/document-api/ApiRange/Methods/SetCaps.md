@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-指定当前文本范围中的所有小写字符仅以其对应的大写字母格式显示。
+在文档中以大写字母显示文本范围，但不更改底层内容。
 
 ```javascript editor-docx
-// How to make range text uppercase in a document.
+// How do I make lowercase letters appear as capitals across a text range in a document?
 
-// Update text letters of the range by converting them to capital letters in a document.
+// Force a section of text to render in uppercase for visual emphasis in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

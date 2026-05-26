@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在电子表格中为数据点设置填充。
+在电子表格中将单个数据点着色为与其余系列不同的颜色。
 
 ```javascript editor-xlsx
-// Set the fill to the data point in the specified chart series in a spreadsheet.
+// How do I change the background color of one specific data point on a chart in a spreadsheet?
 
-// How to set data point fill filling it with a solid color in a spreadsheet.
+// Highlight an individual bar or marker by giving it a distinct fill color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -20,12 +20,12 @@ expression.GetNext();
 
 ## 示例
 
-获取文档中的下一个段落。
+导航到下一个段落并在文档中为其应用粗体格式。
 
 ```javascript editor-docx
-// Get the next paragraph and make it bold in a document.
+// How do I get a reference to the paragraph that follows the current one in a document?
 
-// How to access the next paragraph in a document.
+// Bold the second paragraph by traversing from the first paragraph in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

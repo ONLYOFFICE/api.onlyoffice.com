@@ -15,7 +15,7 @@ expression.AddColumn(oCell, isBefore);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which a new column will be added. If not specified, a new column will be added at the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new column before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| isBefore | Optional | boolean | false | Adds a new column before (false) or after (true) the specified cell. If no cell is specified, |
 
 ## Returns
 
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add a new column to the table in a document.
+Insert an extra column into an existing table to expand its structure in a document.
 
 ```javascript editor-docx
-// How to insert a column to the table in a document.
+// How do I add a column next to an existing one to widen a table in a document?
 
-// Get a table cell from the row and add it as a column.
+// Grow a table horizontally by placing a new column at a chosen position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

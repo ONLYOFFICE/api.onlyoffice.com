@@ -20,12 +20,12 @@ expression.GetShapes();
 
 ## 示例
 
-从演示文稿中的当前选区获取选中的形状。
+从演示文稿中的当前选区检索所有形状。
 
 ```javascript editor-pptx
-// How can I get the shapes using a selection in a presentation?
+// How do I get selected shapes in a presentation?
 
-// Get the shapes for a selection in a presentation.
+// Access the list of shapes from a selection and count them in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

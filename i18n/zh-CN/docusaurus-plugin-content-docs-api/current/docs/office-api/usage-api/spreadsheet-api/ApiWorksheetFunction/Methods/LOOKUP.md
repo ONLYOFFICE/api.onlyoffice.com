@@ -24,12 +24,12 @@ number \| string \| boolean
 
 ## 示例
 
-在电子表格中从单行或单列范围查找值。提供向后兼容性。
+在电子表格中搜索行或列中的值并从另一行或列返回对应结果。
 
 ```javascript editor-xlsx
-// How to look up a value from an one-row or one-column range in a spreadsheet.
+// How do I find a phone number for a specific person's name in a list in a spreadsheet?
 
-// Use a function to find a value from a row or a column range in a spreadsheet.
+// Retrieve a matching value from a parallel row or column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

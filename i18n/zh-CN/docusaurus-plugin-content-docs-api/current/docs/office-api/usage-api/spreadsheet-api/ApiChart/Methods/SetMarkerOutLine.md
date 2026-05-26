@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-在电子表格中为指定图表系列中的标记设置轮廓。
+为电子表格中图表系列的数据点标记添加彩色边框。
 
 ```javascript editor-xlsx
-// Create the "scatter" chart and set an outline of the specified width and color to its markers in a spreadsheet.
+// How do I outline the markers of a scatter chart with a specific color and width in a spreadsheet?
 
-// Apply a stroke outline to the chart markers using a stroke object.
+// Give each series marker a distinct border to make individual data points easier to identify in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

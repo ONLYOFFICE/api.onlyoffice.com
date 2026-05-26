@@ -26,20 +26,20 @@ You can [preload static resources](../get-started/configuration/preload.md) (HTM
 
 To create an editor instance, call the `DocEditor` constructor with two arguments — the `id` attribute of an existing HTML element where the editor will be rendered, and a [configuration object](./config/config.md):
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-| Parameter   | Type   | Description                                                                                                                          |
-| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| placeholder | string | The `id` attribute of an existing HTML element where the editor will be rendered (e.g. `"placeholder"` for `<div id="placeholder">`). |
+| Parameter | Type   | Description                                                                                                                          |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| id        | string | The `id` attribute of an existing HTML element where the editor will be rendered (e.g. `"placeholder"` for `<div id="placeholder">`). |
 | config      | object | The [configuration object](./config/config.md) containing the document, editor, and event parameters.                                |
 
 ## Instance methods
 
 The constructor returns a `docEditor` object. Use it to call [methods](./methods.md) that control the editor at runtime — download files, manage version history, update sharing settings, and more:
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 // later, when handling events or user actions:
@@ -53,7 +53,7 @@ See [Methods](./methods.md) for the full list.
 
 Events are functions passed in the `config.events` section. They allow the integrator to respond to editor actions — for example, when the document is ready, when the user requests to save, or when collaborative changes arrive:
 
-``` ts
+```ts
 const config = {
   events: {
     onAppReady() {
@@ -72,7 +72,7 @@ See [Events](./config/events.md) for the full list of available events.
 
 ## Minimal example
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",
@@ -92,6 +92,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 Replace `example.com` with the host of your **document storage service**. The [`callbackUrl`](./config/editor/editor.md#callbackurl) is the endpoint on your server where ONLYOFFICE Docs sends document status updates and saved files. See the [How it works](../get-started/how-it-works/how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 For the complete configuration structure with all available sections and parameters, see [Configuration overview](./advanced-parameters.md).
+
+:::tip[TypeScript support]
+Install [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) for full IntelliSense and type checking of the config object, `DocEditor` methods, and events. The package version tracks the ONLYOFFICE Docs version.
+:::
 
 :::caution
 When JWT validation is enabled on your document server (the default configuration), the `config` must include a matching [`token`](../get-started/how-it-works/security.md). Sign the config with your document server's JWT secret.

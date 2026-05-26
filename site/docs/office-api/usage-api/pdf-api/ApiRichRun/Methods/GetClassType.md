@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a rich text run object in a PDF document.
+Identify the type category of a text run in a PDF.
 
 ```javascript editor-pdf
-// How can I get the class type of a rich text run in a PDF document?
+// How do I determine what type of object a text run is in a PDF?
 
-// Get the class type of a rich text run and display it in the PDF.
+// Check the classification of a text element in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

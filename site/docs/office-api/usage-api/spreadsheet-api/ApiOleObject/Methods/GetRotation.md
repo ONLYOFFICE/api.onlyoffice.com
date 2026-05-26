@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.GetRotation](../../ApiDrawing/Methods/GetRotation.md)
 
 ## Example
 
-Get the rotation angle of the drawing in a spreadsheet.
+Retrieve the rotation angle of a drawing in a spreadsheet.
 
 ```javascript editor-xlsx
-// How can I get the rotation using a drawing object in a spreadsheet?
+// How do I find out by how many degrees a drawing has been turned in a spreadsheet?
 
-// Get the rotation for a drawing object in a spreadsheet.
+// Confirm the angle at which a shape is oriented after it has been rotated in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

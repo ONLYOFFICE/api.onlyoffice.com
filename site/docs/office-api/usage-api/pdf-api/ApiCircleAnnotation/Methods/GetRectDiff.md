@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get rect diff of circle annotation in a PDF document.
+Read the border width difference of a circle annotation in a PDF.
 
 ```javascript editor-pdf
-// How do I get the rect diff in a PDF document?
+// How do I check the border thickness offset of a circle annotation in a PDF?
 
-// Get the rect diff using a circle annotation object in a PDF document.
+// Retrieve the rect difference values for a circle annotation in a PDF.
 
 let doc = Api.GetDocument();
 let circleAnnot = Api.CreateCircleAnnot([10, 10, 160, 32]);

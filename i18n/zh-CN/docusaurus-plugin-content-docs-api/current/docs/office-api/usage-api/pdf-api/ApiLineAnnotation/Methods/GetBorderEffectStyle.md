@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并获取其边框效果样式。
+检索 PDF 中应用于注释的边框效果样式。
 
 ```javascript editor-pdf
-// How do I get the border effect style in a PDF document?
+// What type of border effect is applied to an annotation in a PDF?
 
-// Get the border effect style using an annotation object in a PDF document.
+// Find out whether an annotation has a cloud, solid, or other border effect style in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

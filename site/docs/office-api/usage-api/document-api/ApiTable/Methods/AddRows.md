@@ -14,9 +14,9 @@ expression.AddRows(oCell, nCount, isBefore);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which the new rows will be added. If not specified, the new rows will be added at the end of the table. |
+| oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | The cell after which the new rows will be added. If not specified, the new rows will |
 | nCount | Required | Number |  | Count of rows to be added. |
-| isBefore | Optional | boolean | false | Adds the new rows before (false) or after (true) the specified cell. If no cell is specified, then this parameter will be ignored. |
+| isBefore | Optional | boolean | false | Adds the new rows before (false) or after (true) the specified cell. If no cell is specified, then |
 
 ## Returns
 
@@ -24,12 +24,12 @@ expression.AddRows(oCell, nCount, isBefore);
 
 ## Example
 
-Add the new rows to the table in a document.
+Insert multiple rows into a table at once in a document.
 
 ```javascript editor-docx
-// How to add rows to the table in a document.
+// How do I add several rows to a table in a document?
 
-// Get a table cell and insert two new rows after it.
+// Grow a table by placing a batch of new rows after a selected cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

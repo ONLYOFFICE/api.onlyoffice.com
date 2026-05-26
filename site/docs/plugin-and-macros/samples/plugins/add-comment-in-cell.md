@@ -34,7 +34,7 @@ Repository on GitHub: [example_add_comment_in_cell](https://github.com/ONLYOFFIC
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example add comment",
   "guid": "asc.{89643394-0F74-4297-9E0B-541A67F1E98C}",

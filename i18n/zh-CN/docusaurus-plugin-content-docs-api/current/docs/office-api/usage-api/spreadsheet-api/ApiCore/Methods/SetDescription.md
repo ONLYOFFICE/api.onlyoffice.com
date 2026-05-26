@@ -22,12 +22,12 @@ expression.SetDescription(sDescription);
 
 ## 示例
 
-在电子表格中使用核心属性设置当前工作簿的描述。
+在电子表格工作簿的文档属性中写入简短的用途摘要。
 
 ```javascript editor-xlsx
-// How do I set description in a spreadsheet?
+// How do I add a description to a workbook's metadata in a spreadsheet?
 
-// Set description using a core properties object in a spreadsheet.
+// Attach a plain-text explanation to the workbook so others know what it contains in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

@@ -34,8 +34,24 @@ boolean 类型
 
 ### 示例
 
-``` ts
+```ts
 Asc.plugin.executeMethod("methodName", [param1, param2], (returnValue) => {
   console.log(returnValue)
 })
 ```
+
+## 调试
+
+要在浏览器控制台中记录所有 `executeMethod` 和 [`callCommand`](how-to-call-commands.md) 调用，请在浏览器本地存储中设置 `asc_plugin_commands_log` 键：
+
+```js
+localStorage.setItem("asc_plugin_commands_log", "true");
+```
+
+要禁用日志，请删除该键：
+
+```js
+localStorage.removeItem("asc_plugin_commands_log");
+```
+
+该设置在页面重新加载后仍然有效。

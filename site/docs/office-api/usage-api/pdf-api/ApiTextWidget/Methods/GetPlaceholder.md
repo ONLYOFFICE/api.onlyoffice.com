@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get placeholder from text widget and display it in a PDF document.
+Retrieve the placeholder text from a form field in a PDF.
 
 ```javascript editor-pdf
-// How do I get the placeholder in a PDF document?
+// How do I read the hint text in a form field in a PDF?
 
-// Get the placeholder using a text widget object in a PDF document.
+// Access the placeholder message displayed in a text input in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

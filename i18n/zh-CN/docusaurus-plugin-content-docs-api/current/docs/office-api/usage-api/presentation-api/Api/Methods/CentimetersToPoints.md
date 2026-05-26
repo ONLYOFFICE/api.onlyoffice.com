@@ -25,9 +25,9 @@ number
 在演示文稿中将厘米转换为磅。
 
 ```javascript editor-pptx
-// How do I convert centimeters to points in a presentation?
+// How do I convert measurements from centimeters to points in a presentation?
 
-// Convert centimeters to points and display the result in a presentation.
+// Display the converted point value from a centimeter measurement in a presentation.
 
 const centimeters = 1000;
 const points = Api.CentimetersToPoints(centimeters);

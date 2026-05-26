@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-获取水印文本并将其粘贴到文档中。
+读取文档中作为水印显示的标签文本。
 
 ```javascript editor-docx
-// How to retrieve the text from the watermark and display it in the document.
+// How do I find out what text is used as the watermark in a document?
 
-// Get the text form the watermark settings.
+// Retrieve the words displayed as a watermark overlay in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

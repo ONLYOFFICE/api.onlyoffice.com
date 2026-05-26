@@ -15,8 +15,8 @@ expression.SetTabs(aPos, aVal);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins measured in twentieths of a point (1/1440 of an inch). |
-| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab stop and the alignment which will be applied to text entered at the current custom tab stop. |
+| aPos | Required | [twips](../../Enumeration/twips.md)[] |  | An array of the positions of custom tab stops with respect to the current page margins |
+| aVal | Required | [TabJc](../../Enumeration/TabJc.md)[] |  | An array of the styles of custom tab stops, which determines the behavior of the tab |
 
 ## Returns
 
@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Set a sequence of custom tab stops which will be used for any tab characters in the paragraph in a PDF document.
+Define custom tab positions for aligning text in a PDF.
 
 ```javascript editor-pdf
-// How to set the size of a spacing tabs from a paragraph properties in a PDF document.
+// How do I set where tabs align text in a PDF?
 
-// Change a tabs size property of a paragraph properties in a PDF document.
+// Configure tab stop locations and alignment styles in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

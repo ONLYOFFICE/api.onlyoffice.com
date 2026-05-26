@@ -28,12 +28,12 @@ boolean
 
 ## 示例
 
-指定在不位于父表格最外边缘的所有垂直表格单元格边框上显示的边框。
+在文档中为表格内的列之间添加边框。
 
 ```javascript editor-docx
-// How to set inside vertical border to the table in a document.
+// How do I draw vertical dividing lines between the inner columns of a table in a document?
 
-// How to create a 3x3 table and add the inside vertical 4 point orange borders in a document.
+// Separate table columns from each other with interior vertical borders in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取演示文稿中的文本颜色。
+从文本运行属性检索填充属性。
 
 ```javascript editor-pptx
-// How to know with which color a text is filled in a presentation.
+// Create a shape with a text run and apply fill color.
 
-// Get the text properties of the run and get its font color in a presentation.
+// Get and display the text fill type.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

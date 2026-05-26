@@ -51,7 +51,7 @@ Repository on GitHub: [photoeditor](https://github.com/ONLYOFFICE/onlyoffice.git
 
 ## Config
 
-``` json
+```json
 {
   "name": "Photo Editor",
   "nameLocale": {

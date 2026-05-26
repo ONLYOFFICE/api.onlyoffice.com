@@ -14,7 +14,7 @@ expression.SUMSQ(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | 最多 255 个将计算平方和的数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、逻辑值或数字的文本表示形式、包含数字的单元格区域或数组。 |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | 最多 255 个数值，将计算这些数值的平方和。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ number
 在电子表格中返回参数的平方和。
 
 ```javascript editor-xlsx
-// How to calculate the sum of the squares in a spreadsheet.
+// Calculate the sum of squared values using the SUMSQ function.
 
-// Use a function to estimate the sum of the squares in a spreadsheet.
+// Returns the total of all squared arguments.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

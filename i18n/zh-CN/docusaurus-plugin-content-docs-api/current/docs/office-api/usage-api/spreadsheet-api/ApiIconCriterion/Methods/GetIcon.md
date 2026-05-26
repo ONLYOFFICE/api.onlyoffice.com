@@ -20,12 +20,12 @@ expression.GetIcon();
 
 ## 示例
 
-获取电子表格中条件的图标。
+读取电子表格中分配给条件格式条件的图标。
 
 ```javascript editor-xlsx
-// How to retrieve the icon from an icon set criterion in a spreadsheet.
+// How do I find out what icon a formatting rule uses in a spreadsheet?
 
-// Get the icon assigned to this criterion in a spreadsheet.
+// Check the visual symbol tied to a specific condition in an icon set rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

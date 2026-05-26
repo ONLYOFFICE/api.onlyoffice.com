@@ -20,12 +20,12 @@ expression.GetColor();
 
 ## 示例
 
-获取电子表格中指定字体的字体颜色属性。
+读取电子表格中应用于字符范围的文本颜色。
 
 ```javascript editor-xlsx
-// How to know a font color of the characters in a spreadsheet.
+// How do I retrieve the exact color used to display certain characters in a cell in a spreadsheet?
 
-// Get a color value represented in RGB format and show it in the worksheet.
+// Copy the color from one group of characters and apply it to another group of characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

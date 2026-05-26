@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档的每一页插入水印。
+在文档的每一页添加文字水印。
 
 ```javascript editor-docx
-// How to insert watermark to the document.
+// How do I stamp a watermark string across all pages in a document?
 
-// Insert the watermark and display the result in a document.
+// Mark draft or confidential content by overlaying a repeating label on each printed page.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

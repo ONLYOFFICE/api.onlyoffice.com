@@ -12,5 +12,6 @@
 | [CreateComplexForm](./Methods/CreateComplexForm.md) | [ApiComplexForm](../ApiComplexForm/ApiComplexForm.md) | 使用指定的复杂表单属性创建复杂表单。 |
 | [CreateDateForm](./Methods/CreateDateForm.md) | [ApiDateForm](../ApiDateForm/ApiDateForm.md) | 使用指定的日期表单属性创建日期表单。 |
 | [CreatePictureForm](./Methods/CreatePictureForm.md) | [ApiPictureForm](../ApiPictureForm/ApiPictureForm.md) | 使用指定的图片表单属性创建图片表单。 |
+| [CreateSignatureForm](./Methods/CreateSignatureForm.md) | [ApiSignatureForm](../ApiSignatureForm/ApiSignatureForm.md) | 使用指定的图片表单属性创建图片表单。 |
 | [CreateTextForm](./Methods/CreateTextForm.md) | [ApiTextForm](../ApiTextForm/ApiTextForm.md) | 使用指定的文本字段属性创建文本字段。 |
 | [ReplaceTextSmart](./Methods/ReplaceTextSmart.md) | boolean | 用字符串数组中的相应文本替换选区中的每个段落（或单元格中的文本）。 |

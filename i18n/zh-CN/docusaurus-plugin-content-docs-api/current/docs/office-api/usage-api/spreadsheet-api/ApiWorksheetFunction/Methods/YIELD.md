@@ -28,12 +28,12 @@ number
 
 ## 示例
 
-在电子表格中返回定期付息证券的收益率。
+计算电子表格中债券或定期付息证券的年收益率。
 
 ```javascript editor-xlsx
-// How to return the yield on a security in a spreadsheet.
+// How do I find the yield rate for a bond with regular interest payments in a spreadsheet?
 
-// Use a function to calculate the yield on a security that pays periodic interest in a spreadsheet.
+// Determine the annual return rate of a periodic-paying security in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

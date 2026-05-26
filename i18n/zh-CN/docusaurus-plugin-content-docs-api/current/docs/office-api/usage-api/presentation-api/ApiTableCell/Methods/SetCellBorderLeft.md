@@ -23,12 +23,12 @@ expression.SetCellBorderLeft(fSize, oApiFill);
 
 ## 示例
 
-设置表格单元格左侧显示的边框。
+在演示文稿中为表格单元格左侧添加彩色边框。
 
 ```javascript editor-pptx
-// How to set cell left border with its fill color.
+// How do I add a colored border to the left side of a table cell in a presentation?
 
-// Create table and set its cell left border.
+// Create a table and apply a left border with a solid color fill in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

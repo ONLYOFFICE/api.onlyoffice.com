@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-从数据条条件格式规则获取最大百分比长度。
+读取电子表格中数据条规则的最大条长度百分比。
 
 ```javascript editor-xlsx
-// How to check the maximum length setting of a data bar in a spreadsheet.
+// How do I find out the upper percentage limit that controls data bar length in a spreadsheet?
 
-// Get the maximum percentage length of a data bar conditional formatting rule.
+// Inspect how wide the longest data bar can grow relative to the cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

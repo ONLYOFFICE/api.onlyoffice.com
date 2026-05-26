@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中文本属性的类类型。
+读取文档中文本属性对象的类型名称。
 
 ```javascript editor-docx
-// How to identify the class type of a text properties in a document?
+// How do I find out what kind of object holds the text formatting settings in a document?
 
-// Obtain the class type identifier of a text properties object in a document.
+// Identify the category of a text properties object to confirm its type in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -10,7 +10,7 @@ hide_table_of_contents: true
 该宏由 VBA 代码通过 [AI 插件](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
 :::
 
-``` ts
+```ts
 (function(){
     // 获取当前工作表
     var oWorksheet = Api.GetActiveSheet();
@@ -43,4 +43,11 @@ End Sub
 
 ## 结果
 
-![取消合并单元格前](/assets/images/plugins/unmerge-before.png#gh-light-mode-only)![取消合并单元格前](/assets/images/plugins/unmerge-before.dark.png#gh-dark-mode-only) ![取消合并单元格后](/assets/images/plugins/unmerge-after.png#gh-light-mode-only)![取消合并单元格后](/assets/images/plugins/unmerge-after.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

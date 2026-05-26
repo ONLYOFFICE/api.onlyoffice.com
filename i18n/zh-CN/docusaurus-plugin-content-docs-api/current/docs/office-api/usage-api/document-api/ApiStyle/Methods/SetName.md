@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中当前样式的名称。
+为文档中的现有表格样式分配自定义名称。
 
 ```javascript editor-docx
-// Rename the table style in a document.
+// How do I rename a table style so it appears under a different label in a document?
 
-// How to change the name of the created table style in a document.
+// Give a built-in table style a new identifying name to distinguish it in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.GetStyle("Bordered");

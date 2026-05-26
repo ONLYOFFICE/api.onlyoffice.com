@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取条件格式规则的父范围。
+查找电子表格中拥有一组格式规则的单元格范围。
 
 ```javascript editor-xlsx
-// How to get the range that contains conditional formatting rules.
+// How do I identify which cells a group of highlight conditions belongs to in a spreadsheet?
 
-// Get parent range of conditional formatting rules.
+// Trace formatting rules back to the range they were applied to in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

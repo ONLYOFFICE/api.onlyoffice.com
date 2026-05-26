@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回在指定下限和无穷大之间积分的互补误差函数。
+计算电子表格中指定值的互补误差函数。
 
 ```javascript editor-xlsx
-// How to get the complementary error function (from lower limit and infinity) in a spreadsheet.
+// How do I compute the complementary error function in a spreadsheet?
 
-// Use function to get a complementary error function set between the specified lower limit and infinity in a spreadsheet.
+// Evaluate the complement of the error function from a value to infinity in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

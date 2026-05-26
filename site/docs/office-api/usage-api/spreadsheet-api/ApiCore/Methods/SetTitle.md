@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the title of the workbook in a spreadsheet.
+Give a workbook a descriptive title through its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How do I set title in a spreadsheet?
+// How do I assign a title to a workbook's metadata in a spreadsheet?
 
-// Set title using a core properties object in a spreadsheet.
+// Name the workbook by writing a title into its document properties so it is easy to identify in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

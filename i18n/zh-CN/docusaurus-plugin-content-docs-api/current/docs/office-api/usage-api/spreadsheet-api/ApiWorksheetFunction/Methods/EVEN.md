@@ -25,9 +25,9 @@ number
 在电子表格中将正数向上、负数向下舍入到最接近的偶整数。
 
 ```javascript editor-xlsx
-// How to round up a number in a spreadsheet.
+// Round numbers to the nearest even integer.
 
-// Use function to round up positive/negative numbers in a spreadsheet.
+// Apply EVEN function to round positive and negative numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

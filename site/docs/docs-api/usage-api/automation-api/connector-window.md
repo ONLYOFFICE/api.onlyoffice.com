@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Connector window
 
-Connector window is a class that represents the connector window. To create it, use the [createWindow](./connector-class.md#createwindow) method of the connector object.
+The **ConnectorWindow** class is used to manage a modal window created by a connector inside the editor. To create it, use the [createWindow](./connector-class.md#createwindow) method of the connector object.
 
 Below you can find methods that are available for this class.
 
@@ -21,7 +21,7 @@ The function called to add an event listener to the modal window frame. This fun
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.attachEvent("onWindowMessage", (message) => {
@@ -42,7 +42,7 @@ The function called to send an event to the modal window frame. The list of all 
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.dispatchEvent("messageName", {
@@ -62,7 +62,7 @@ The function called to show a modal window inside the editor.
 
 ### Example
 
-``` ts
+```ts
 const connector = docEditor.createConnector();
 const testConnectorWindow = connector.createWindow();
 testConnectorWindow.show({
@@ -88,8 +88,8 @@ The function called to subscribe to the messages from the plugin.
 
 | Name     | Type     | Description         |
 | -------- | -------- | ------------------- |
-| *id*     | string   | The event name.     |
-| *action* | function | The event listener. |
+| id       | string   | The event name.     |
+| action   | function | The event listener. |
 
 #### Returns
 
@@ -97,7 +97,7 @@ This method doesn't return any data.
 
 #### Example
 
-``` ts
+```ts
 window.Asc.plugin.attachEvent("messageName", (message) => {
   console.log(message);
 });
@@ -116,6 +116,6 @@ The function called to send a message to the editor from the modal window.
 
 #### Example
 
-``` ts
+```ts
 window.Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 ```

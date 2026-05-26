@@ -24,12 +24,12 @@ expression.GetRange(cell1, cell2);
 
 ## 示例
 
-从电子表格中现有范围获取子范围。
+从电子表格中较大的范围内选择较小的单元格范围。
 
 ```javascript editor-xlsx
-// How to get a range within a range in a spreadsheet.
+// How do I pick out a subset of cells from an existing range in a spreadsheet?
 
-// Get a range, access subranges and fill them with different colors in a spreadsheet.
+// Highlight distinct sections of a range by filling each sub-selection with a different color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let parentRange = worksheet.GetRange("B2:F6");

@@ -8,7 +8,7 @@
 
 **示例**:
 
-``` ts
+```ts
 function onAppReady() {
   console.log("ONLYOFFICE Document Editor is ready");
 }
@@ -29,7 +29,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onCollaborativeChanges() {
   console.log("The document changed by collaborative user");
 }
@@ -50,7 +50,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onDocumentReady() {
   console.log("Document is loaded");
 }
@@ -77,7 +77,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onDocumentStateChange(event) {
   if (event.data) {
     console.log("The document changed");
@@ -109,7 +109,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onDownloadAs(event) {
   const fileType = event.data.fileType;
   const url = event.data.url;
@@ -139,7 +139,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onError(event) {
   console.log(`ONLYOFFICE Document Editor reports an error: code ${event.data.errorCode}, description ${event.data.errorDescription}`);
 }
@@ -166,7 +166,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onInfo(event) {
   console.log(`ONLYOFFICE Document Editor is opened in mode ${event.data.mode}`);
 }
@@ -202,7 +202,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onMakeActionLink(event) {
   const ACTION_DATA = event.data;
   const link = GENERATE_LINK(ACTION_DATA);
@@ -236,7 +236,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onMetaChange(event) {
   const title = event.data.title;
   const favorite = event.data.favorite;
@@ -262,7 +262,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onOutdatedVersion() {
   location.reload(true);
 }
@@ -283,7 +283,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onPluginsReady() {
   console.log("All plugins are loaded");
 }
@@ -308,7 +308,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestClose() {
   if (window.opener) {
     window.close();
@@ -348,7 +348,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestCreateNew() {
   console.log("Create new document");
 }
@@ -377,7 +377,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestEditRights() {
   console.log("ONLYOFFICE Document Editor requests editing rights");
   document.location.reload();
@@ -405,7 +405,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestFillingStatus(event) {
   const role = event.data;
   console.log("Filling status requested for role:", role);
@@ -434,7 +434,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestHistory() {
   docEditor.refreshHistory({
     currentVersion: 2,
@@ -489,7 +489,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestHistoryClose() {
   document.location.reload();
 }
@@ -522,7 +522,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestHistoryData(event) {
   const version = event.data;
   docEditor.setHistoryData({
@@ -571,7 +571,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestInsertImage(event) {
   docEditor.insertImage({
     c: event.data.c,
@@ -628,7 +628,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestOpen(event) {
   const path = event.data.path;
   const referenceData = event.data.referenceData;
@@ -670,7 +670,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestReferenceData(event) {
   const link = event.data.link;
   const referenceData = event.data.referenceData;
@@ -719,7 +719,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestReferenceSource(event) {
   const referenceData = event.data.referenceData;
   const path = event.data.path;
@@ -758,7 +758,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestRefreshFile() {
   docEditor.refreshFile({
     document: {
@@ -804,7 +804,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestRename(event) {
   const title = event.data;
   console.log(`The user is trying to rename the file to: ${title}`);
@@ -840,7 +840,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestRestore(event) {
   const fileType = event.data.fileType;
   const url = event.data.url;
@@ -907,7 +907,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestSaveAs(event) {
   const fileType = event.data.fileType;
   const title = event.data.title;
@@ -940,7 +940,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestSelectDocument(event) {
   docEditor.setRequestedDocument({
     c: event.data.c,
@@ -975,7 +975,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestSelectSpreadsheet(event) {
   docEditor.setRequestedSpreadsheet({
     c: event.data.c,
@@ -1010,7 +1010,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestSendNotify(event) {
   const ACTION_DATA = event.data.actionLink;
   const comment = event.data.message;
@@ -1039,7 +1039,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestSharingSettings() {
   docEditor.setSharingSettings({
     sharingSettings: [
@@ -1083,9 +1083,11 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 `event.data` 是角色对象的数组。
 
+![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.png#gh-light-mode-only)![onRequestStartFilling](/assets/images/editor/onRequestStartFilling.dark.png#gh-dark-mode-only)
+
 **示例**:
 
-``` ts
+```ts
 function onRequestStartFilling(event) {
   const roles = event.data;
   console.log("Roles:", roles);
@@ -1119,7 +1121,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onRequestUsers(event) {
   const c = event.data.c;
   const id = event.data.id;
@@ -1165,7 +1167,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onSaveDocument(event) {
   const buffer = event.data;
   console.log("Document binary size:", buffer.byteLength);
@@ -1185,11 +1187,25 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 调用 [startFilling](../methods.md#startfilling) 方法且表单准备完成后，PDF 表单准备就绪可供填写时调用的函数。
 
+**Parameters**:
+
+| Parameter             | Type     | Description        |
+| --------------------- | -------- | ------------------ |
+| event.data.color      | `string` | 角色颜色，十六进制格式（例如 `#FF0000`）。 |
+| event.data.name       | `string` | 角色名称。     |
+| event.data.user.email | `string` | 用户电子邮件。    |
+| event.data.user.id    | `string` | 用户 ID。       |
+| event.data.user.image | `string` | 用户头像的 URL。 |
+| event.data.user.name  | `string` | 用户名称。     |
+
+`event.data` 是一个角色对象数组。
+
 **Example**:
 
-``` ts
-function onStartFilling() {
-  console.log("The PDF form is ready for filling.");
+```ts
+function onStartFilling(event) {
+  const roles = event.data;
+  console.log("Roles:", roles);
 }
 
 const config = {
@@ -1208,7 +1224,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onSubmit() {
   console.log("The form was submitted.");
 }
@@ -1233,7 +1249,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onUserActionRequired() {
   console.log("Enter a password");
 }
@@ -1261,7 +1277,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 **示例**:
 
-``` ts
+```ts
 function onWarning(event) {
   console.log(`ONLYOFFICE Document Editor reports a warning: code ${event.data.warningCode}, description ${event.data.warningDescription}`);
 }

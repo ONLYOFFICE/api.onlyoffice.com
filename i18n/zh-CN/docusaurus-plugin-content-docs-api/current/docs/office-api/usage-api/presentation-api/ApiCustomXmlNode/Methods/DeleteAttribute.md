@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-从演示文稿中当前 XML 节点删除属性。
+从演示文稿中的 XML 节点移除属性。
 
 ```javascript editor-pptx
-// How do I delete the attribute in a presentation?
+// How do I remove an attribute from XML data in a presentation?
 
-// Delete the attribute using a custom XML node object in a presentation.
+// Delete a specific property from an XML element in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

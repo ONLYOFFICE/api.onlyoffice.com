@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Retrieve the name of the current XML node in a presentation.
+Get the tag name of an XML element in a presentation.
 
 ```javascript editor-pptx
-// How do I get the node name in a presentation?
+// How do I find the name of an XML node in a presentation?
 
-// Get the node name using a custom XML node object in a presentation.
+// Read the element name from an XML node in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

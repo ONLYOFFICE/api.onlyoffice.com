@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a theme color scheme object in a presentation.
+Get the class type of a theme color scheme in a presentation.
 
 ```javascript editor-pptx
-// How can I get the class type of a theme color scheme in a presentation?
+// How can I identify the type of a color scheme object in a presentation?
 
-// Get the class type of a theme color scheme and display it in the presentation.
+// Retrieve the class type identifier and display it for a color scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

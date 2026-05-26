@@ -6,12 +6,12 @@
 
 ## 示例
 
-在电子表格中为指定的图形对象设置轮廓属性。
+在电子表格中为绘图添加可见边框以定义其边缘。
 
 ```javascript editor-xlsx
-// How to outline the drawing with the stroke in a spreadsheet.
+// How do I add a colored outline to a shape in a spreadsheet?
 
-// Set the borders of the shape in a spreadsheet.
+// Style a drawing by giving it a solid border with a chosen color and thickness in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));

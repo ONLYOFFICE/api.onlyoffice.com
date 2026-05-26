@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中指定图例的字体大小。
+更改电子表格中图表图例的文本大小。
 
 ```javascript editor-xlsx
-// How to change the font size of the chart legend in a spreadsheet.
+// How do I make the chart legend text larger or smaller in a spreadsheet?
 
-// Resize the font of the chart legend in a spreadsheet.
+// Adjust the legend font size so the labels are easier to read in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

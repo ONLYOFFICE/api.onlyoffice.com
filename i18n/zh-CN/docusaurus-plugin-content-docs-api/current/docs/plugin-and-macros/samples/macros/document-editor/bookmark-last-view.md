@@ -39,5 +39,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![书签标记最后浏览位置](/assets/images/plugins/bookmark-last-view-macro.png#gh-light-mode-only)
-![书签标记最后浏览位置](/assets/images/plugins/bookmark-last-view-macro.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/bookmark-last-view.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/bookmark-last-view.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在电子表格中创建 run 的副本。
+复制文本运行并将原始文本和副本都添加到电子表格中的段落。
 
 ```javascript editor-xlsx
-// How to create a text run object and its copy in a spreadsheet.
+// How do I reuse the same styled text run more than once in a spreadsheet?
 
-// Create an text run and its copy and add it into paragraph in a spreadsheet.
+// Clone an existing run so its formatting and content appear twice without rewriting it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

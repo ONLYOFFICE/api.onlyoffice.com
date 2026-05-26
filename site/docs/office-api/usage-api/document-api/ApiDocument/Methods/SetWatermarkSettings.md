@@ -22,12 +22,12 @@ expression.SetWatermarkSettings(Settings);
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Apply a styled text watermark with custom font and color settings in a document.
 
 ```javascript editor-docx
-// How to specify the watermark settings such as text and type in a document.
+// How do I add a watermark with specific text and formatting to a document?
 
-// Set watermark settings for the document with text properties.
+// Brand or protect pages by stamping them with a formatted watermark that uses bold, italic, and underline styles.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

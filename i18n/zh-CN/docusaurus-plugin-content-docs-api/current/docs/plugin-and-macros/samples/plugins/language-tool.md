@@ -49,7 +49,7 @@ GitHub 仓库：[language tool](https://github.com/ONLYOFFICE/onlyoffice.github.
 
 ## 配置
 
-``` json
+```json
 {
   "name": "LanguageTool",
   "nameLocale": {

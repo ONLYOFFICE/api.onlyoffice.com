@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-设置文档中图表图例的轮廓。
+在文档中为图表图例绘制边框。
 
 ```javascript editor-docx
-// How to ouline a chart legend in a document.
+// How do I add an outline stroke to the legend box of a chart in a document?
 
-// Create a chart and set ouline of its legend with a stroke in a document.
+// Frame the legend with a visible border to visually separate it from the rest of the chart in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Flip the drawing horizontally in a presentation.
+Mirror an object left-to-right on a slide in a presentation.
 
 ```javascript editor-pptx
-// How to set the horizontal flip property of the shape in a presentation.
+// How do I flip a shape horizontally in a presentation?
 
-// Create a drawing and flip it horizontally in a presentation.
+// Create a shape, reverse it horizontally, and display the result in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

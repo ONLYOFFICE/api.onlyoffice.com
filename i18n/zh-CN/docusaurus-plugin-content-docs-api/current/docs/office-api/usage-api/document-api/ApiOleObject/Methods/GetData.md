@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中 OLE 对象的字符串数据。
+提取文档中嵌入的 OLE 对象内存储的数据字符串。
 
 ```javascript editor-docx
-// How to get raw data from the OLE object content in a document.
+// How do I read the raw data value from an OLE object in a document?
 
-// Retrieve content of the OLE object and insert it to the document.
+// Display the stored data of an OLE object as text in a paragraph in a document.
 
 let doc = Api.GetDocument();
 let oleObject = Api.CreateOleObject(

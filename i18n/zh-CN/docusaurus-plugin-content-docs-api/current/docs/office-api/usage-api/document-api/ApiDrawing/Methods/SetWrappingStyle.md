@@ -30,12 +30,12 @@ boolean
 
 ## 示例
 
-在文档中创建环绕样式为"square"的形状。
+在文档中使用四周环绕样式使文本环绕形状。
 
 ```javascript editor-docx
-// How to wrap the shape with squared style in a document.
+// How do I control how text flows around a drawing in a document?
 
-// Create a drawing, add its properties and set its wrapping style in a document.
+// Keep a fixed gap between surrounding text and all sides of a floating shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

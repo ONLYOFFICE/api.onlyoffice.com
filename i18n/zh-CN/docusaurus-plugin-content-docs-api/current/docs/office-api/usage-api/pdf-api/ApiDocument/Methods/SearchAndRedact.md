@@ -22,12 +22,12 @@ expression.SearchAndRedact(props);
 
 ## 示例
 
-在文档中搜索某个单词并为其添加密文注释。
+在 PDF 中查找并隐藏敏感文本。
 
 ```javascript editor-pdf
-// How can I search and redact using a document in a PDF document?
+// How do I black out certain words throughout a PDF?
 
-// Search and redact for a document in a PDF document.
+// Search for a word and apply redaction to all matches in a PDF.
 
 let doc = Api.GetDocument();
 doc.SearchAndRedact({text: "Lorem", matchCase: false, wholeWords: false});

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out whether a text has the properties set in a document.
+Read the named style attached to a text run in a document.
 
 ```javascript editor-docx
-// How to know whether a text's style is changed or not in a document.
+// How do I find out which style is applied to a piece of text in a document?
 
-// Retrieve text properties of the form and display its style name.
+// Retrieve the style name from a text run to verify its formatting origin in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

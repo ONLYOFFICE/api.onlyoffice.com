@@ -22,12 +22,12 @@ expression.SetTime(nTimeStamp);
 
 ## 示例
 
-设置批注创建的当前时区格式时间戳。
+使用本地时区设置文档中批注的创建时间戳。
 
 ```javascript editor-docx
-// How to change a creation time of a comment in a document.
+// How do I assign a specific creation time to a comment in a document?
 
-// Get all comments from the presentation and change its first one's creation time.
+// Correct or backdate a comment's recorded time when importing or migrating annotations.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

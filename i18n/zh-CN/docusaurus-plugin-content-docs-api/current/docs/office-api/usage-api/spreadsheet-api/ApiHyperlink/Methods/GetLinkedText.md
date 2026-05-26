@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中形状内超链接的 URL。
+读取电子表格中超链接存储的 URL 地址。
 
 ```javascript editor-xlsx
-// How to get the linked text for a hyperlink in a spreadsheet?
+// How do I retrieve the destination address of a hyperlink in a spreadsheet?
 
-// Get the linked text and display the result in a spreadsheet.
+// Extract the web address that a hyperlink points to in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

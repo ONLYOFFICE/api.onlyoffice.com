@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字的反正切值。
+计算电子表格中数字的反正切。
 
 ```javascript editor-xlsx
-// How to get an arctangent of a number in a spreadsheet.
+// Find an angle in radians from a decimal value in a spreadsheet.
 
-// Use function to get an arctangent of a number in a spreadsheet.
+// Determine what angle produces a specific tangent ratio in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -14,7 +14,7 @@ expression.ISNONTEXT(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查值是否不是文本（空白单元格不是文本），并返回 true 或 false。
+确定电子表格中的单元格是否包含文本以外的内容。
 
 ```javascript editor-xlsx
-// How to check if the cell contains a non-text value.
+// How do I verify if a cell is not text (includes numbers and blank cells) in a spreadsheet?
 
-// Use a function to check whether a range data is a text or not in a spreadsheet.
+// Use a function to separate text values from numbers and empty cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -23,9 +23,9 @@ expression.GetNext();
 获取演示文稿中的下一个段落。
 
 ```javascript editor-pptx
-// How to get the next paragraph of the current one in a presentation.
+// How do I navigate to the following paragraph in a presentation?
 
-// Return the next paragraph on the slide and make its text bold.
+// Move to the next paragraph and format it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Documents"]
 
 Inserts a unique id into a form document.
 
-``` ts
+```ts
 (function()
 {
     function generate () {
@@ -34,4 +34,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Insert id](/assets/images/plugins/insert-id.png#gh-light-mode-only)![Insert id](/assets/images/plugins/insert-id.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-unique-id.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-unique-id.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

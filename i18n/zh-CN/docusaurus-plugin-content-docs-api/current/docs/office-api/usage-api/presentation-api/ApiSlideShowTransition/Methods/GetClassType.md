@@ -23,9 +23,9 @@ expression.GetClassType();
 检查幻灯片放映切换效果返回的类类型。
 
 ```javascript editor-pptx
-// How do I check what type a slide show transition object is?
+// Retrieve the class type identifier from a slide show transition object.
 
-// Retrieve and output the class type string for a slide show transition.
+// Display the class type in a shape on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

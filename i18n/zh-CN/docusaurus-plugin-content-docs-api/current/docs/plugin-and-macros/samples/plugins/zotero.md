@@ -41,13 +41,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 对于启用了 SELinux 的 CentOS 用户，在将 src 文件夹复制到 sdkjs-plugins 后，插件可能因文件安全上下文变量导致无法工作。恢复权限请执行：
 
-``` sh
+```sh
 sudo restorecon -Rv /var/www/onlyoffice/documentserver/sdkjs-plugins/
 ```
 
 然后重启服务：
 
-``` sh
+```sh
 sudo supervisorctl restart ds:docservice
 ```
 
@@ -73,7 +73,7 @@ GitHub 仓库地址：[zotero](https://github.com/ONLYOFFICE/onlyoffice.github.i
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Zotero",
   "nameLocale": {

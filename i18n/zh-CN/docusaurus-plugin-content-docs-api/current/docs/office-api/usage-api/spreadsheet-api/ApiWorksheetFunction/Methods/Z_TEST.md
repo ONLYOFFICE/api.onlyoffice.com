@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回 z 检验的单尾 P 值。
+在电子表格中执行 z 检验并返回单尾概率值。
 
 ```javascript editor-xlsx
-// How to return one-tailed P-value in a spreadsheet.
+// How do I run a one-tailed z-test for statistical hypothesis testing in a spreadsheet?
 
-// Use a function to get one-tailed P-value in a spreadsheet.
+// Evaluate the p-value for a one-tailed z-test on a dataset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let argumentsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];

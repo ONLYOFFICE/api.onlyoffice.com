@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## Example
 
-Create a complex color scheme selecting from one of the available schemes in a spreadsheet.
+Pick a theme color by name and apply it to a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// Get a color scheme using its name in a spreadsheet.
+// How do I use one of the document's theme colors to fill a shape in a spreadsheet?
 
-// How to create a color from the schemes in a spreadsheet.
+// Reuse a named theme color so the shape automatically matches the document palette in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let schemeColor = Api.CreateSchemeColor("dk1");

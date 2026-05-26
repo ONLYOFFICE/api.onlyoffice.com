@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Link numbering level with the specified heading style in a document.
+Link a numbering level to a heading style in a document.
 
 ```javascript editor-docx
-// How to link the numbering with the style of another element in a document.
+// How do I connect a list numbering level to a paragraph heading style in a document?
 
-// Apply the style of the element to the numbering in a document.
+// Combine custom numbered lists with styled headings to create a formatted outline in a document.
 
 const doc = Api.GetDocument();
 const headings = [];

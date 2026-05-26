@@ -14,7 +14,7 @@ expression.AddTableOfFigures(oTofPr, bReplace);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTofPr | Optional | [TofPr](../../Enumeration/TofPr.md) | &#123;&#125; | Table of figures properties. 💡 Please note that the table of figures properties will be filled with the default properties if they are undefined. |
+| oTofPr | Optional | [TofPr](../../Enumeration/TofPr.md) | &#123;&#125; | Table of figures properties. |
 | bReplace | Optional | boolean | true | Specifies whether to replace the selected table of figures instead of adding a new one. |
 
 ## Returns
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add a table of figures to the current document.
+Generate a table of figures from captioned drawings in a document.
 
 ```javascript editor-docx
-// How to add drawings to the document and generate a table of figures.
+// How do I build a table of figures based on chart captions in a document?
 
-// Insert a table of figures specifying its properties in a document.
+// Configure page numbers, leader dots, and label numbers when inserting a table of figures in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

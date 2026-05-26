@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中当前工作簿的名称（文件名）。
+读取打开的工作簿的文件名并在电子表格的工作表上显示。
 
 ```javascript editor-xlsx
-// How can I get the name using a workbook in a spreadsheet?
+// How do I find out what the current file is called in a spreadsheet?
 
-// Get the name for a workbook in a spreadsheet.
+// Embed the workbook's filename inside a shape on the active sheet in a spreadsheet.
 
 const workbook = Api.GetActiveWorkbook();
 const workbookName = workbook.GetName();

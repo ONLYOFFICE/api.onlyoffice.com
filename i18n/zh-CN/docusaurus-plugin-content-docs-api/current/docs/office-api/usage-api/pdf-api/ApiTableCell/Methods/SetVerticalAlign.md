@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何设置单元格文本的垂直对齐方式。
+设置 PDF 中表格单元格内文本的垂直对齐方式。
 
 ```javascript editor-pdf
-// Create a table and set the text alignment of its cell from the row.
+// How do I position text vertically within a cell in a PDF?
 
-// Use table cell to set vertical align.
+// Align content to the top, middle, or bottom of your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

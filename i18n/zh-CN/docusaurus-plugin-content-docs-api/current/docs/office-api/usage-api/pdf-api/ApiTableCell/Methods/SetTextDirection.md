@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何设置表格单元格的文本方向。
+设置 PDF 中表格单元格内文本的流动方向。
 
 ```javascript editor-pdf
-// Create a table and set the text direction for the table cell object.
+// How do I rotate text direction in a table cell in a PDF?
 
-// Set text direction using a table cell object.
+// Change the text orientation inside your table cell in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建块级内容控件的副本。
+复制内容控件并将副本放入文档中。
 
 ```javascript editor-docx
-// Create a block content control in the current document, copy it, and add a copy to the same document.
+// How do I copy a content control and add the duplicate to the same document?
 
-// Create a block level container in the document class, add a text to it, and copy it into the same document.
+// Reuse a content control by making an exact copy and appending it elsewhere in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

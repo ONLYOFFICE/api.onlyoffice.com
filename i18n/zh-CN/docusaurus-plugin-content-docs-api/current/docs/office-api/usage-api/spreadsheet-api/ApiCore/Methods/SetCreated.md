@@ -22,12 +22,12 @@ expression.SetCreated(oCreated);
 
 ## 示例
 
-在电子表格中使用核心属性设置工作簿的创建日期。
+在电子表格的工作簿文档属性中写入创建日期。
 
 ```javascript editor-xlsx
-// How to set created for a core properties in a spreadsheet?
+// How do I set the creation date recorded for a workbook in a spreadsheet?
 
-// Set created and display the result in a spreadsheet.
+// Store a specific date as the origin timestamp for the file in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

@@ -24,12 +24,12 @@ string
 
 ## Example
 
-Return a text from the text run in a document.
+Extract the plain text content from a text run in a document.
 
 ```javascript editor-docx
-// How to get a raw text value in a document.
+// How do I read the string of characters stored in a text run in a document?
 
-// Get a run, get its text value and show it in the document.
+// Retrieve the readable text from a run and display it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

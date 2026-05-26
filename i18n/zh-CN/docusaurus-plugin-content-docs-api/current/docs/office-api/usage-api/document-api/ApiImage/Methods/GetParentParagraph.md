@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中包含图形对象的父段落。
+检索文档中包含绘图对象的父段落。
 
 ```javascript editor-docx
-// Get an element's parent paragraph in a document.
+// How do I find the paragraph that holds a drawing in a document?
 
-// How to show the shape's wrapper paragraph in a document.
+// Access the enclosing paragraph to append a line break and label text after a shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

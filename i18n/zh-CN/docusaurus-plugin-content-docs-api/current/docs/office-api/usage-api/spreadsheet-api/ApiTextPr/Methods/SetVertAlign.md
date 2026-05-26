@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在电子表格中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+在电子表格中将形状内的文本提升到上标位置。
 
 ```javascript editor-xlsx
-// How to change vertical alignment of a text in a spreadsheet.
+// How do I position text above or below the normal line in a spreadsheet?
 
-// Make text superscript using the text properties API in a spreadsheet.
+// Lift characters above the baseline to create a superscript effect in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

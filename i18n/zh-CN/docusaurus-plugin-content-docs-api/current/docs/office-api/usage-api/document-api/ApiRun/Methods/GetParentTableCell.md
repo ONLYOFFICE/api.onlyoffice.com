@@ -20,12 +20,12 @@ expression.GetParentTableCell();
 
 ## 示例
 
-获取文档中包含 run 的表格单元格。
+查找文档中包含文本运行的表格单元格。
 
 ```javascript editor-docx
-// Get a parent table cell of the text.
+// How do I access the cell that holds a specific piece of text in a document?
 
-// How to set shading of the table cell that contains a text run.
+// Navigate from a text run up to its enclosing table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

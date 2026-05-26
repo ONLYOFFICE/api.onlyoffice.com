@@ -25,9 +25,9 @@ expression.SetText(sText);
 Set a comment text in a presentation.
 
 ```javascript editor-pptx
-// How to change a text of a comment in a presentation.
+// Change the text content of a specific comment.
 
-// Get all comments from the presentation and set its first one's text.
+// Update the first comment's text and display the new content.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

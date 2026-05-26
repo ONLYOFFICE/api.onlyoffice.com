@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Set the fill to the specified chart series in a presentation.
+Apply a solid fill color to a chart series in a presentation.
 
 ```javascript editor-pptx
-// How to color a chart seria in a presentation.
+// Change the background color of chart bars or areas in a presentation.
 
-// Create a chart, set its properties and its series background in a presentation.
+// Shade a chart series with a specific color in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

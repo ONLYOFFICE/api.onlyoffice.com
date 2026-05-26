@@ -23,7 +23,7 @@ In the HTML examples below, replace `documentserver` with the address of the ser
 
 To open a PDF form for editing, set `documentType` to `"pdf"` and `permissions.edit` to `true`. Provide a [`key`](../../usage-api/config/document/document.md#key) so that multiple users can co-edit the form template simultaneously:
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "pdf",
@@ -42,7 +42,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The complete HTML page:
 
-``` html
+```html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
 <button onclick="openFormTemplate()">Open Form Template</button>
 <div id="placeholder"></div>
@@ -74,13 +74,13 @@ The complete HTML page:
 
 After editing, click **Start filling** to switch the form to filling mode.
 
-![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png)
+![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.png#gh-light-mode-only)![Embed pdf form for editing](/assets/images/editor/embed-pdf-for-editing.dark.png#gh-dark-mode-only)
 
 ## Filling forms
 
 To open a PDF form for filling, set `permissions.edit` to `false` and `permissions.fillForms` to `true`. Omit the [`key`](../../usage-api/config/document/document.md#key) parameter — the editor will generate a random key for each session, so every user fills out an independent copy without affecting others:
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "pdf",
@@ -99,7 +99,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 The complete HTML page:
 
-``` html
+```html
 <script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"></script>
 <button onclick="openForm()">Open Form</button>
 <div id="placeholder"></div>
@@ -131,4 +131,4 @@ The complete HTML page:
 
 After filling in all required fields, click **Complete & Submit** to submit the data.
 
-![Embed pdf form](/assets/images/editor/embed-pdf.png)
+![Embed pdf form](/assets/images/editor/embed-pdf.png#gh-light-mode-only)![Embed pdf form](/assets/images/editor/embed-pdf.dark.png#gh-dark-mode-only)

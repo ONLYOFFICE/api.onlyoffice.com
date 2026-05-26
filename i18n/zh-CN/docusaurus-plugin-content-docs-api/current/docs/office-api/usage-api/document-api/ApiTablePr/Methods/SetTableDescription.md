@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置表格描述。
+为文档中的表格分配描述性文本标签。
 
 ```javascript editor-docx
-// How to display the table description in the document.
+// How do I attach a written description to a table in a document?
 
-// Get the table description from the table properties in a document.
+// Give a table a readable summary that can be retrieved later in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

@@ -14,8 +14,8 @@ expression.AddRow(oCell, isBefore);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在该单元格之后添加新行。如果未指定，将在表格末尾添加新行。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前（false）或之后（true）添加新行。如果未指定单元格，则将忽略此参数。 |
+| oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 将在此单元格之后添加新行。如果未指定，新行将 |
+| isBefore | 可选 | boolean | false | 在指定单元格之前 (false) 或之后 (true) 添加新行。如果未指定单元格，则 |
 
 ## 返回值
 
@@ -23,12 +23,12 @@ expression.AddRow(oCell, isBefore);
 
 ## 示例
 
-在文档中向表格添加新行。
+在文档中向表格插入新行。
 
 ```javascript editor-docx
-// How to add row to the table in a document.
+// How do I add an extra row to a table in a document?
 
-// Get row cell and add it as row.
+// Extend a table by appending a row after a chosen position in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

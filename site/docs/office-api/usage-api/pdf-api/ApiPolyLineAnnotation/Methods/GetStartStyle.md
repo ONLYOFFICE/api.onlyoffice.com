@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get line start style of polyline annotation in a PDF document.
+Find the line beginning appearance of a polyline marking in a PDF.
 
 ```javascript editor-pdf
-// How to get the start style for a polyline annotation in a PDF document?
+// How do I check what the line beginning looks like on a polyline marking in a PDF?
 
-// Get the start style and display the result in a PDF document.
+// Retrieve the style of the starting point displayed on a polyline marking in a PDF.
 
 let doc = Api.GetDocument();
 let vertices = [{x: 100, y: 10}, {x: 150, y: 100}, {x: 50, y: 100}];

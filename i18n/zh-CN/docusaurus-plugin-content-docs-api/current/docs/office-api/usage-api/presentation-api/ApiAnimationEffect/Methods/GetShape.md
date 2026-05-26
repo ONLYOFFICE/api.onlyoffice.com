@@ -23,9 +23,9 @@ expression.GetShape();
 获取演示文稿中与动画效果关联的形状。
 
 ```javascript editor-pptx
-// How do I get the shape in a presentation?
+// Each animation effect is bound to a specific shape on the slide.
 
-// Get the shape using an animation effect object in a presentation.
+// Retrieve the shape from an animation effect using GetShape() and display its type.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

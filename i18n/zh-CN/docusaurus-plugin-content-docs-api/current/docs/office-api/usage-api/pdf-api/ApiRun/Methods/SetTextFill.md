@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中为当前文本 run 设置文本填充。
+更改 PDF 中文本的颜色。
 
 ```javascript editor-pdf
-// How to change a font color in a PDF document.
+// How do I set the text color in a PDF?
 
-// Get the text properties of the run and color its font in a PDF document.
+// Apply a color to font characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the text properties from the Range in a document.
+Read the text formatting settings applied to a selected region in a document.
 
 ```javascript editor-docx
-// How to make italic the text of the range in a document.
+// How do I retrieve the styling details of a highlighted portion of text in a document?
 
-// Get a range and update its text style in a document.
+// Capture the visual style of one selection and apply it to another region in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

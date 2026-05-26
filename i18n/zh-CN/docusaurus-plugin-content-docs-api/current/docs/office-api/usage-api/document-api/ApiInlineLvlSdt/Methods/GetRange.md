@@ -23,12 +23,12 @@ expression.GetRange(Start, End);
 
 ## 示例
 
-获取表示文档中指定内容控件所包含的文档部分的 Range 对象。
+从文档中的内联内容控件内提取文本范围。
 
 ```javascript editor-docx
-// How to get range of the inline text control in a document.
+// How do I select a specific portion of text inside an inline content control in a document?
 
-// Get the range where the inline content control is located in a document.
+// Apply bold formatting to a substring inside a content control by targeting its range in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

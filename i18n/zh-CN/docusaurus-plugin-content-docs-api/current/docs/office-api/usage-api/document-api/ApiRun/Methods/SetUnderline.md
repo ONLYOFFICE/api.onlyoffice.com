@@ -23,12 +23,12 @@ expression.SetUnderline(isUnderline);
 
 ## 示例
 
-指定在文档中当前 run 的内容与字符正下方的线条一起显示（小于行中字符上下的所有间距）。
+在文档中为文本运行添加下划线。
 
 ```javascript editor-docx
-// How to create a new text and underline it in a document.
+// How do I display text with a line drawn under it in a document?
 
-// Create a new text run and underline it in a document.
+// Mark a portion of text so that it appears underlined when rendered in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

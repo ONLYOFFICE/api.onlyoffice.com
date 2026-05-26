@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Spicifies tick label position for the vertical axis in a document.
+Set the position of tick labels on the vertical axis of a chart in a document.
 
 ```javascript editor-docx
-// How to change a position of tick label in a document.
+// How do I control where tick labels appear on the vertical axis in a document?
 
-// Create a chart, set its properties and its vertical axis tick label position in a document.
+// Place tick labels at the far end of the vertical axis to keep them away from the chart area in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

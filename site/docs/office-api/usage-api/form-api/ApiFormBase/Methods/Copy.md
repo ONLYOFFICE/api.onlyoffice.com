@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Make a copy of the form in a document.
+Duplicate a form field in a document.
 
 ```javascript editor-forms
-// How to create the same text form.
+// How do I copy a form field in a document?
 
-// Create two same text forms to the document separated by a line break.
+// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

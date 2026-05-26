@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中块级容器的内部 ID。
+读取分配给文档中内容控件的唯一标识符。
 
 ```javascript editor-docx
-// How to get the internal id for a block-level content control in a document?
+// How do I retrieve the unique ID of a content control in a document?
 
-// Get the internal id and display the result in a document.
+// Display the ID of a content control to identify it programmatically in a document.
 
 const doc = Api.GetDocument();
 const blockLvlSdt = Api.CreateBlockLvlSdt();

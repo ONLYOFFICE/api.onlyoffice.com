@@ -20,12 +20,12 @@ expression.GetAllOleObjects();
 
 ## 示例
 
-在电子表格中获取工作表中的所有 OLE 对象。
+从电子表格工作表检索每个嵌入的 OLE 对象。
 
 ```javascript editor-xlsx
-// How to get all OLE objects images in a spreadsheet.
+// How do I list all OLE objects on a sheet in a spreadsheet?
 
-// Get all OLE objects as an array in a spreadsheet.
+// Collect the full set of embedded objects from a worksheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddOleObject(

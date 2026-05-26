@@ -20,12 +20,12 @@ expression.GetPageHeight();
 
 ## 示例
 
-获取文档中的页面高度。
+读取文档中节定义的页面高度。
 
 ```javascript editor-docx
-// How to get the page height.
+// How do I find out the page height for a section in a document?
 
-// Get the final section of the page and get its height.
+// Retrieve the vertical page size to verify or display layout dimensions in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

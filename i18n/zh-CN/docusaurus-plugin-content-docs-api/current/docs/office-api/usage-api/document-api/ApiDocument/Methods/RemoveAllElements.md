@@ -7,12 +7,12 @@
 
 ## 示例
 
-从当前文档或当前文档内容中移除所有元素。
+清除文档中形状内容区域的所有元素。
 
 ```javascript editor-docx
-// Clear entire document.
+// How do I delete every element inside a shape's content block in a document?
 
-// Remove each document element.
+// Reset a shape's interior to an empty state before inserting new content.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

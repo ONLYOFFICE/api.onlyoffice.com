@@ -22,12 +22,12 @@ expression.SetName(sName);
 
 ## 示例
 
-在电子表格中为活动工作表设置名称。
+重命名电子表格中的活动工作表。
 
 ```javascript editor-xlsx
-// How to set name of the sheet in a spreadsheet.
+// How do I give a worksheet a custom name in a spreadsheet?
 
-// Set name for a worksheet in a spreadsheet.
+// Change the tab label of the current sheet to something meaningful in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.SetName("sheet 1");

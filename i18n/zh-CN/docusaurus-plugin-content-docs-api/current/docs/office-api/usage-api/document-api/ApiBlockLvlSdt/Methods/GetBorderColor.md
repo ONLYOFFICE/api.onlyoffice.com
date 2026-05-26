@@ -20,12 +20,12 @@ expression.GetBorderColor();
 
 ## 示例
 
-获取文档中块级容器的边框颜色。
+读取文档中内容控件的边框颜色。
 
 ```javascript editor-docx
-// How do I get the border color in a document?
+// How do I get the border color set on a content control in a document?
 
-// Get the border color using a block-level content control object in a document.
+// Check what border color a content control has and display its hex value in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

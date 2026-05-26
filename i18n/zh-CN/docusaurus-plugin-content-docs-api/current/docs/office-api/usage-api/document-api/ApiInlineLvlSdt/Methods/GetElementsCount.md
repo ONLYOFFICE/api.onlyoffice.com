@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-获取文档中内联文本内容控件的元素数量。
+计算文档中内联文本内容控件内的元素数量。
 
 ```javascript editor-docx
-// How to get the number of elements of the inline control in a document.
+// How do I check how many elements an inline content control contains in a document?
 
-// Create an inline text content control and show its elements count in a document.
+// Track the element count of an inline content control as runs are added to it in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

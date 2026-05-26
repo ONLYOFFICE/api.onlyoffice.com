@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.GetShowAllItems](../../ApiPivotField/Methods/GetSh
 
 ## Example
 
-Get all items of a pivot field in a spreadsheet.
+Check whether a pivot field is set to display all items, including those with no data in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's all items in a spreadsheet.
+// How do I find out if a pivot field shows items that have no matching data in a spreadsheet?
 
-// Create a pivot table, add data to it then get all items of a specified pivot field in a spreadsheet.
+// Confirm the show-all-items flag for a pivot field to see if empty categories are still listed in the table.
 
 let worksheet = Api.GetActiveSheet();
 

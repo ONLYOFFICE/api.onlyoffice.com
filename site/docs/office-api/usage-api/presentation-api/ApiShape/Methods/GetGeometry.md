@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get geometry information from a star shape on a presentation slide. Displays preset type and custom status in a text shape.
+Retrieve the shape geometry and check if it is a preset or custom shape in a presentation.
 
 ```javascript editor-pptx
-// How can I get the geometry using a shape in a presentation?
+// How do I learn about a shape's geometry in a presentation?
 
-// Get the geometry for a shape in a presentation.
+// Get the preset type and check whether a shape uses custom geometry in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

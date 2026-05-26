@@ -23,9 +23,9 @@ number \| undefined
 获取并显示演示文稿中的自动换片时间。
 
 ```javascript editor-pptx
-// How to get the advance time for a slide show transition?
+// Retrieve the advance time value from a slide show transition object.
 
-// Get the advance time and display the result in a presentation.
+// Display the retrieved advance time as milliseconds in a shape on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

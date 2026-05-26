@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Check the class type returned by a drawing object in a document.
+Retrieve the class type of a drawing object in a document.
 
 ```javascript editor-docx
-// How do I check what type a drawing object object is in a document?
+// How do I identify what class type a drawing object belongs to in a document?
 
-// Retrieve and output the class type string for a drawing object in a document.
+// Verify the kind of object a shape is before applying type-specific logic in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

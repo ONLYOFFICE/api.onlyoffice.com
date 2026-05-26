@@ -14,7 +14,7 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a language which will be used to check spelling and grammar in a presentation.
+Specify a language for spell-checking and grammar in a presentation.
 
 ```javascript editor-pptx
-// How to specify a language of the current presentation.
+// How do I set the language for a presentation?
 
-// Set the 'en-CA' language to the presentation object.
+// Enable English (Canada) for checking spelling and grammar.
 
 const presentation = Api.GetPresentation();
 presentation.SetLanguage("en-CA");

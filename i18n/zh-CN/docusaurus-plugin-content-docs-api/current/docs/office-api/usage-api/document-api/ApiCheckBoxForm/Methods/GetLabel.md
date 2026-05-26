@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取复选框表单的标签文本。
+读取文档中附加到复选框表单的可见标签文本。
 
 ```javascript editor-docx
-// How to retrieve a label from the checkbox form.
+// How do I retrieve the label displayed next to a checkbox form in a document?
 
-// Get the label text from the checkbox in a document.
+// Confirm the descriptive label of a checkbox before presenting it to users in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Select if you agree to terms", "required": true, "key" : "Terms agreement"});

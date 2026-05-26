@@ -34,7 +34,7 @@ Repository on GitHub: [example_work_with_content_controls_content](https://githu
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example work with content controls content",
   "guid": "asc.{C9945AC2-8275-4F9B-92E4-CA1104D7305B}",

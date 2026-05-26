@@ -22,12 +22,12 @@ expression.SetSubject(sSubject);
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的主题。
+定义演示文稿的主题行。
 
 ```javascript editor-pptx
-// How to set subject for a core properties in a presentation?
+// How do I add a subject to my presentation metadata?
 
-// Set subject and display the result in a presentation.
+// Store and access the subject text in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

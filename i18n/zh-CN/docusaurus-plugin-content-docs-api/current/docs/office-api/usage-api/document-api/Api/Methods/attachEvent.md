@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-在文档中订阅超链接点击事件。
+在文档中每次点击超链接时运行自定义操作。
 
 ```javascript editor-docx
-// How to attach the "asc_onHyperlinkClick" event in a document.
+// How do I run a function automatically when a hyperlink is clicked in a document?
 
-// Subscribes to the "asc_onHyperlinkClick" event and calls the callback function which displays the "HYPERLINK!!!" message in the console log when the event fires in a document.
+// Listen for hyperlink clicks and trigger a response without manual intervention in a document.
 
 Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");

@@ -20,12 +20,12 @@ expression.GetHeight();
 
 ## 示例
 
-如何查找形状的高度并在页面上显示。
+查找 PDF 中形状的垂直大小。
 
 ```javascript editor-pdf
-// Get a page shape's height.
+// How do I get the height of a drawn object in a PDF?
 
-// Get the height for a drawing object in a PDF document.
+// Measure the tall-to-short dimension of a shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

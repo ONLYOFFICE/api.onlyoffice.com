@@ -20,12 +20,12 @@ expression.GetDashType();
 
 ## 示例
 
-获取笔触的虚线类型。在演示文稿中创建具有实线边框的形状并显示其虚线类型。返回字符串值："dash"、"dashDot"、"dot"、"lgDash"、"lgDashDot"、"lgDashDotDot"、"solid"、"sysDash"、"sysDashDot"、"sysDashDotDot"、"sysDot"。
+确定演示文稿中边框的线条图案。
 
 ```javascript editor-pptx
-// How do I get the dash type in a presentation?
+// How do I find out if a border line is solid or dashed in a presentation?
 
-// Get the dash type using a stroke object in a presentation.
+// Retrieve the line pattern style from a stroke and check its settings in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

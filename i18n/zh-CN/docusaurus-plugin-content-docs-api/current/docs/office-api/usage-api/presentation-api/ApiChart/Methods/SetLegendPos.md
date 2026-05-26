@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中指定图表图例位置。
+设置演示文稿中图表图例的位置。
 
 ```javascript editor-pptx
-// How to place a chart legend in a presentation.
+// How do I move a chart legend to a different location in a presentation?
 
-// Create a chart, set its properties and its legend's position in a presentation.
+// Place the legend at the bottom, top, left, right, or inside the chart area in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

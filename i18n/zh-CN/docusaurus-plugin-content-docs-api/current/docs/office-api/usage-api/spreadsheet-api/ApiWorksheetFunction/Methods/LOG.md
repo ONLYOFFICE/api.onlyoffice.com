@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回数字以指定底数的对数。
+使用自定义底数计算电子表格中数字的对数。
 
 ```javascript editor-xlsx
-// How to get the logarithm to the specified base in a spreadsheet.
+// How do I find the logarithm with a base other than 10 or e in a spreadsheet?
 
-// Use a function to return the logarithm in a spreadsheet.
+// Get the logarithmic value of a number to any specified base in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

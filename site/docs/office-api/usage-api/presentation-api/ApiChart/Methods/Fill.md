@@ -6,12 +6,12 @@ Inherited from [ApiDrawing.Fill](../../ApiDrawing/Methods/Fill.md).
 
 ## Example
 
-Set the fill formatting properties to the current graphic object.
+Apply a gradient color fill to a shape in a presentation.
 
 ```javascript editor-pptx
-// How to color a drawing with a radiant fill in a presentation.
+// How do I add a color gradient effect to a shape in a presentation?
 
-// Change the background color of the shape in a presentation.
+// Set the background fill of a shape with a radial gradient in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

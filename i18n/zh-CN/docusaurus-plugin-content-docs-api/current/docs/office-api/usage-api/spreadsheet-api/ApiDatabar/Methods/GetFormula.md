@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-从数据条条件格式规则获取公式。
+读取驱动电子表格中数据条规则的公式。
 
 ```javascript editor-xlsx
-// How to retrieve the formula string from a data bar.
+// How do I retrieve the formula expression tied to a data bar in a spreadsheet?
 
-// Get the formula of a data bar conditional formatting rule.
+// Examine the calculation behind a data bar condition to understand its logic in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

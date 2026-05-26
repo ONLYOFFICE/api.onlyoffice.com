@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-将幻灯片母版添加到演示文稿的幻灯片母版集合。
+向演示文稿添加新的母版幻灯片。
 
 ```javascript editor-pptx
-// How to add a presentation master.
+// How do I create and add a master slide to a presentation?
 
-// Create a shape and set its placeholder type to "chart" in a presentation.
+// Create a master slide and add it to the presentation's master collection.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

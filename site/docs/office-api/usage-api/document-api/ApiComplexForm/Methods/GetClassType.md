@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a complex form object.
+Retrieve the class type of a complex form in a document.
 
 ```javascript editor-docx
-// How can I get the class type of a complex form?
+// How do I get the class type of a complex form in a document?
 
-// Get the class type of a complex form and display it in the document.
+// Identify what kind of object a complex form is by reading its type label at runtime.
 
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm();

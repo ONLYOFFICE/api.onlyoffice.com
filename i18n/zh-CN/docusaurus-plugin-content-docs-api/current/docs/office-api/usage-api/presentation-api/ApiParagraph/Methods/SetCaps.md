@@ -22,12 +22,12 @@ expression.SetCaps(isCaps);
 
 ## 示例
 
-在演示文稿中将段落中的所有字符设置为以大写字母显示。
+在演示文稿中将段落文本转换为全大写字母。
 
 ```javascript editor-pptx
-// How can I set caps using a paragraph in a presentation?
+// How do I display text in uppercase in a presentation?
 
-// Set caps for a paragraph in a presentation.
+// Format text to show only uppercase characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

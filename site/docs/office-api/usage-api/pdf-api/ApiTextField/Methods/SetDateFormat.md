@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Get text field and set date format for it.
+Format dates the way users expect to see them in a PDF text field.
 
 ```javascript editor-pdf
-// How do I set date format in a PDF document?
+// How do I make sure dates display in a specific format in a PDF?
 
-// Set date format using a text field object.
+// Apply a date format pattern to a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

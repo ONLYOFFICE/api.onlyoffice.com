@@ -23,12 +23,12 @@ string \| null
 
 ## 示例
 
-从电子表格中的自定义 XML 节点获取属性值。
+从嵌入在电子表格中的 XML 节点读取单个命名属性。
 
 ```javascript editor-xlsx
-// How to get an attribute from an XML node in a spreadsheet.
+// How do I extract the value of a specific attribute from a custom XML element in a spreadsheet?
 
-// Get an XML node attribute in a spreadsheet.
+// Pull individual attribute values out of stored XML data and display them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

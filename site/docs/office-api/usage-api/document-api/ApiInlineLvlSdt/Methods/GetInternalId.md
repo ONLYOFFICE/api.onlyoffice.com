@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the internal ID of an inline-level content control in a document.
+Read the internal identifier of an inline content control in a document.
 
 ```javascript editor-docx
-// How to get the internal id for an inline content control in a document?
+// How do I obtain the internal ID of an inline content control in a document?
 
-// Get the internal id and display the result in a document.
+// Display the system-assigned internal ID of an inline content control alongside its text in a document.
 
 const doc = Api.GetDocument();
 const firstParagraph = doc.GetElement(0);

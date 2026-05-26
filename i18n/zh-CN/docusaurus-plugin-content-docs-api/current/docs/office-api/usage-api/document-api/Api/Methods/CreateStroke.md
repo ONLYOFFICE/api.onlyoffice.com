@@ -24,12 +24,12 @@ expression.CreateStroke(width, fill, sDash);
 
 ## 示例
 
-在文档中创建笔触。
+在文档中为形状添加彩色边框。
 
 ```javascript editor-docx
-// Create a stroke using the specified width and fill and apply it to the shape from the first paragraph in a document.
+// How do I set the border color and thickness of a shape in a document?
 
-// Specify the parameters of the shape stroke in a document.
+// Give a shape a visible outline with a custom width and color in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

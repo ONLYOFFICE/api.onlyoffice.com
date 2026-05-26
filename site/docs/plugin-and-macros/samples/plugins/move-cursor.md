@@ -34,7 +34,7 @@ Repository on GitHub: [example_move_cursor](https://github.com/ONLYOFFICE/sdkjs-
 
 ## Config
 
-``` json
+```json
 {
   "name": "Example move cursor",
   "guid": "asc.{EF5735E0-69A7-4D4A-9ABE-F58FD70F488D}",

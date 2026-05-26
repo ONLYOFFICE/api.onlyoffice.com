@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Add some text to the run in a PDF document.
+Insert text content into a text element in a PDF.
 
 ```javascript editor-pdf
-// How to add a text to a text run object in a PDF document.
+// How do I add text to a text run in a PDF?
 
-// How to add a text to the page.
+// Place text on the page in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

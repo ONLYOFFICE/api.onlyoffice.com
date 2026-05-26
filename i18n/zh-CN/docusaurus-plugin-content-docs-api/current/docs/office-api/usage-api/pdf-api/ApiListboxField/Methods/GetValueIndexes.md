@@ -6,12 +6,12 @@
 
 ## 示例
 
-从 PDF 文档中带有选项列表的字段获取选中值的索引。
+检索 PDF 中下拉列表中已选项目的索引位置。
 
 ```javascript editor-pdf
-// How do I get the value indexes in a PDF document?
+// How do I find which items are selected in a dropdown field in a PDF?
 
-// Get the value indexes using a list field object in a PDF document.
+// Get the numeric positions of chosen options in a list field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

@@ -20,12 +20,12 @@ string \| null
 
 ## 示例
 
-分析圆弧命令参数，包括半径和角度。获取文档中圆弧的宽度半径、高度半径、起始角度和扫掠角度。
+读取文档中自定义形状内弧跨越的角度。
 
 ```javascript editor-docx
-// How can I get the sweep angle using a path command in a document?
+// How do I find out how far around an arc extends in a custom shape in a document?
 
-// Get the sweep angle for a path command in a document.
+// Retrieve the total angular span of an arc segment within a drawn shape in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Read the operator used by a filter in a spreadsheet.
+Read the comparison operator used by a column filter in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to detect the type of filter (values, custom AND/OR, dynamic, top10, etc.) in a spreadsheet.
+// How do I find out what kind of filtering rule is applied to a column in a spreadsheet?
 
-// Use ApiFilter.GetOperator() to identify the filter operator in a spreadsheet.
+// Identify the filtering logic behind a column's filter to understand how rows are shown or hidden in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

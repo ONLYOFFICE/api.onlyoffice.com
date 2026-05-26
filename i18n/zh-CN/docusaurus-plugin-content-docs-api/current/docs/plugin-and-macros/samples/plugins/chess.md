@@ -32,7 +32,7 @@ GitHub 仓库：[象棋](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Chess",
   "nameLocale": {

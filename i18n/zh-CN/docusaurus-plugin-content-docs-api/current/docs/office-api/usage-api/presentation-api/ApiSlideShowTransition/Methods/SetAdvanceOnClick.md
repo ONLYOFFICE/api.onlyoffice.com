@@ -25,9 +25,9 @@ boolean
 启用鼠标单击时前进到下一张幻灯片。
 
 ```javascript editor-pptx
-// How do I set advance on click in a presentation?
+// Configure the advance on click property of a slide show transition object.
 
-// Set advance on click using a slide show transition object.
+// Display a message indicating the transition will advance on time rather than click.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -6,6 +6,13 @@ sidebar_position: -1
 
 ONLYOFFICE 插件与宏 API 的变更列表。
 
+## 版本 9.4 {#version-94}
+
+- 为文本文档 API 的 *window.Asc.plugin.executeMethod* 添加了 [MoveCursorToField](../interacting-with-editors/document-api/Methods/MoveCursorToField.md) 方法。
+- 为文本文档 API 的 *window.Asc.plugin.executeMethod* 添加了 [MoveCursorOutsideField](../interacting-with-editors/document-api/Methods/MoveCursorOutsideField.md) 方法。
+- 向 *window.Asc.plugin.executeMethod* 的 [StartAction](../interacting-with-editors/document-api/Methods/StartAction.md) 方法添加了 *lockScroll* 和 *keepSelection* 参数。
+- 向 *window.Asc.plugin.executeMethod* 的 [EndAction](../interacting-with-editors/document-api/Methods/EndAction.md) 方法添加了 *scrollToTarget* 和 *cancel* 参数。
+
 ## 版本 9.2 {#version-92}
 
 - 为文本文档 API 添加了 [AnnotateParagraph](../interacting-with-editors/document-api/Methods/AnnotateParagraph.md) 方法。

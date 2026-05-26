@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查演示文稿中自定义属性返回的类类型。
+识别演示文稿中自定义属性对象的数据类型。
 
 ```javascript editor-pptx
-// How do I check what type a custom properties object is in a presentation?
+// How do I determine the class of a custom properties collection?
 
-// Retrieve and output the class type string for a custom properties in a presentation.
+// Display the class information for custom properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const customProps = presentation.GetCustomProperties();

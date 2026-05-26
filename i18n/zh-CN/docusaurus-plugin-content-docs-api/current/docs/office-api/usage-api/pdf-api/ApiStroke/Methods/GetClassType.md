@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取 PDF 文档中笔触的类类型。
+查找 PDF 中边框线的对象类型标签
 
 ```javascript editor-pdf
-// How to identify the class type of a stroke in a PDF document?
+// What class identifier does a border line report in a PDF?
 
-// Obtain the class type identifier of a stroke object in a PDF document.
+// Print the type classification of a border line in a PDF
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

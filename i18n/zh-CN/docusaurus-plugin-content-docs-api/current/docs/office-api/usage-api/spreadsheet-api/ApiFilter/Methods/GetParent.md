@@ -20,12 +20,12 @@ expression.GetParent();
 
 ## 示例
 
-获取电子表格中筛选列的父级自动筛选。
+检索电子表格中拥有特定列筛选器的自动筛选对象。
 
 ```javascript editor-xlsx
-// How to navigate from filter back to auto filter in a spreadsheet.
+// How do I get back to the overall auto-filter from one of its individual column filters in a spreadsheet?
 
-// Use ApiFilter.GetParent() to access the parent filters collection in a spreadsheet.
+// Trace a column filter up to its containing auto-filter to inspect the filtered range in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

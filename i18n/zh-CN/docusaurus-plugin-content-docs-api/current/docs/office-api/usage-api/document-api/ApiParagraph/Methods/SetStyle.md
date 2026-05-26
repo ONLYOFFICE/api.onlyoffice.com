@@ -7,12 +7,12 @@
 
 ## 示例
 
-在文档中为段落设置样式。
+为段落应用命名样式以控制其在文档中的外观。
 
 ```javascript editor-docx
-// Set the style of the paragraph to "Heading 6" in a document.
+// How do I assign a built-in style such as a heading to a paragraph in a document?
 
-// Create a text in a paragraph styled with the 'Heading 6' style in a document.
+// Reuse a predefined heading style on a paragraph instead of applying formatting manually.
 
 let doc = Api.GetDocument();
 let heading6Style = doc.GetStyle("Heading 6");

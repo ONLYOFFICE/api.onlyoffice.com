@@ -5,7 +5,7 @@ Specifies the page margins for all the pages in this section.
 ## Syntax
 
 ```javascript
-expression.SetPageMargins(nLeft, nTop, nRight, nBottom);
+expression.SetPageMargins(left, top, right, bottom);
 ```
 
 `expression` - A variable that represents a [ApiSection](../ApiSection.md) class.
@@ -14,10 +14,10 @@ expression.SetPageMargins(nLeft, nTop, nRight, nBottom);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLeft | Required | [twips](../../Enumeration/twips.md) |  | The left margin width measured in twentieths of a point (1/1440 of an inch). |
-| nTop | Required | [twips](../../Enumeration/twips.md) |  | The top margin height measured in twentieths of a point (1/1440 of an inch). |
-| nRight | Required | [twips](../../Enumeration/twips.md) |  | The right margin width measured in twentieths of a point (1/1440 of an inch). |
-| nBottom | Required | [twips](../../Enumeration/twips.md) |  | The bottom margin height measured in twentieths of a point (1/1440 of an inch). |
+| left | Required | [twips](../../Enumeration/twips.md) |  | The left margin width measured in twentieths of a point (1/1440 of an inch). |
+| top | Required | [twips](../../Enumeration/twips.md) |  | The top margin height measured in twentieths of a point (1/1440 of an inch). |
+| right | Required | [twips](../../Enumeration/twips.md) |  | The right margin width measured in twentieths of a point (1/1440 of an inch). |
+| bottom | Required | [twips](../../Enumeration/twips.md) |  | The bottom margin height measured in twentieths of a point (1/1440 of an inch). |
 
 ## Returns
 
@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-Specify the page margins for all the pages in this section.
+Set the top, bottom, left, and right margins for pages in a section in a document.
 
 ```javascript editor-docx
-// How to set page margins.
+// How do I define the blank space around the edges of each page in a document?
 
-// Update the margins of the page.
+// Adjust the border spacing on all sides of the pages within a section in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

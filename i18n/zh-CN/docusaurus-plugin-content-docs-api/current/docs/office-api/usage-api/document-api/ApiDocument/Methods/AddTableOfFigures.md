@@ -14,7 +14,7 @@ expression.AddTableOfFigures(oTofPr, bReplace);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTofPr | 可选 | [TofPr](../../Enumeration/TofPr.md) | &#123;&#125; | 图表目录属性。💡 请注意，如果图表目录属性未定义，将使用默认属性填充。 |
+| oTofPr | 可选 | [TofPr](../../Enumeration/TofPr.md) | &#123;&#125; | 图表目录属性。 |
 | bReplace | 可选 | boolean | true | 指定是替换选中的图表目录还是添加新的图表目录。 |
 
 ## 返回值
@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-向当前文档添加图表目录。
+从文档中带有题注的绘图生成图表目录。
 
 ```javascript editor-docx
-// How to add drawings to the document and generate a table of figures.
+// How do I build a table of figures based on chart captions in a document?
 
-// Insert a table of figures specifying its properties in a document.
+// Configure page numbers, leader dots, and label numbers when inserting a table of figures in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

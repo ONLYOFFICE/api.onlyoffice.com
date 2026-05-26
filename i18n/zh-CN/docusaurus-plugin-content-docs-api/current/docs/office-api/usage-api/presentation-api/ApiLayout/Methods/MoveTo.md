@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中移动版式。
+通过将布局移动到新位置来在演示文稿中重新排序。
 
 ```javascript editor-pptx
-// How to move layout using a position index in a presentation.
+// How do I change the order of layouts in a presentation?
 
-// Move a layout of a slide.
+// Shift a layout to a specific position within the master's layout collection in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide1 = presentation.GetSlideByIndex(0);

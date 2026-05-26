@@ -12,14 +12,14 @@ The integrator must check that the request is received from ONLYOFFICE Docs. It 
 
 | Name            | Type   | Example               | Description                                                                                    |
 | --------------- | ------ | --------------------- | ---------------------------------------------------------------------------------------------- |
-| wopi.publicKey  | string | "public key example"  | Defines the public key that the integrator uses to check the private key.                      |
-| wopi.modulus    | string | "modulus example"     | Defines the RSA modulus in the Base64-encoded format that is used to retrieve the public key.  |
-| wopi.exponent   | string | "AQAB"                | Defines the RSA exponent in the Base64-encoded format that is used to retrieve the public key. |
-| wopi.privateKey | string | "private key example" | Defines the private key that signs the ONLYOFFICE Docs request.                                |
+| wopi.publicKey  | string | "public key example"  | The public key that the integrator uses to check the private key.                      |
+| wopi.modulus    | string | "modulus example"     | The RSA modulus in the Base64-encoded format that is used to retrieve the public key.  |
+| wopi.exponent   | string | "AQAB"                | The RSA exponent in the Base64-encoded format that is used to retrieve the public key. |
+| wopi.privateKey | string | "private key example" | The private key that signs the ONLYOFFICE Docs request.                                |
 
 ## Example
 
-``` json
+```json
 {
   "wopi": {
     "publicKey": "public key example",

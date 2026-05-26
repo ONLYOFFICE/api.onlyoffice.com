@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中计算值在值范围内出现的频率，然后返回返回的垂直数字数组的第一个值。
+计算值在值范围内出现的频率并返回垂直数组。
 
 ```javascript editor-xlsx
-// How to get frequency of first value from a range in a spreadsheet.
+// Count the frequency of data points that fall within specified bin intervals.
 
-// Use a function to count how often values occur within a range in a spreadsheet.
+// Determine value distribution across bins using FREQUENCY function.
 
 const worksheet = Api.GetActiveSheet();
 

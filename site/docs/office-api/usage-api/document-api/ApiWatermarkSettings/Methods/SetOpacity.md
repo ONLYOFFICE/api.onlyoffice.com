@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the parameters of the watermark settings and apply them to the document.
+Adjust how transparent the watermark appears in a document.
 
 ```javascript editor-docx
-// How to set the image opacity of the watermark in a document.
+// How do I make the watermark more or less visible in a document?
 
-// Indicate the image opacity in watermark settings in a document.
+// Control the fade level of the watermark overlay in a document.
 
 let doc = Api.GetDocument();
 let watermarkSettings = doc.GetWatermarkSettings();

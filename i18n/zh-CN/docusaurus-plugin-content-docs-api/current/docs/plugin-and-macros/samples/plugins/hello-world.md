@@ -29,7 +29,7 @@ GitHub 仓库：[helloworld](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/ma
 
 ## 配置
 
-``` json
+```json
 {
   "name": "hello world",
   "guid": "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",

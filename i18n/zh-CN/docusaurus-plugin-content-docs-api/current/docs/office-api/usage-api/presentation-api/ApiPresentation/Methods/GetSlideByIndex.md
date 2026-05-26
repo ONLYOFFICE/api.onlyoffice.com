@@ -22,12 +22,12 @@ expression.GetSlideByIndex(nIndex);
 
 ## 示例
 
-通过位置获取演示文稿中的幻灯片。
+按位置访问演示文稿中的幻灯片。
 
 ```javascript editor-pptx
-// How to find a slide from the presentation using its index.
+// How do I find a specific slide using its index in a presentation?
 
-// Get slide from the presentation by its index.
+// Retrieve the first slide from the presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

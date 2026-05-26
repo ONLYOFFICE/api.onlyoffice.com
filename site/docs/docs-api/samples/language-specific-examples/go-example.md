@@ -35,14 +35,14 @@ See the detailed guide to learn how to install Document Server [for Windows](htt
 
 Download the archive with the Go example and unpack the archive, or get the source code directly from [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/go):
 
-``` sh
+```sh
 curl --output Go.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip
 unzip Go.Example.zip
 ```
 
 Change the current directory for the project directory:
 
-``` sh
+```sh
 cd "Go Example"
 ```
 
@@ -83,7 +83,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 Open the *config/configuration.json* file and enable JWT:
 
-``` json
+```json
 {
     "JWT_IS_ENABLED": true
 }
@@ -91,7 +91,7 @@ Open the *config/configuration.json* file and enable JWT:
 
 Also, [specify the same secret key](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx) as used in your ONLYOFFICE Docs: 
 
-``` json
+```json
 {
     "JWT_SECRET": "secret"
 }

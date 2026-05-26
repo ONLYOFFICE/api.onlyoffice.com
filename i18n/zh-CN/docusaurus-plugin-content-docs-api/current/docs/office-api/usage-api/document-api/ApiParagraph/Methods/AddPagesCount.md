@@ -20,12 +20,12 @@ expression.AddPagesCount();
 
 ## 示例
 
-将当前文档的总页数插入段落。
+在文档的段落中插入总页数字段。
 
 ```javascript editor-docx
-// How to add the number of pages to the text.
+// How do I show the total number of pages inside a header or footer paragraph in a document?
 
-// Insert a pages count to the pxaragraph.
+// Combine a page-number field with a page-count field to produce a "Page X of Y" indicator in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

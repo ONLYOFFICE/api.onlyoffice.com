@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中主题配色方案对象的类类型。
+获取演示文稿中主题配色方案的类类型。
 
 ```javascript editor-pptx
-// How can I get the class type of a theme color scheme in a presentation?
+// How can I identify the type of a color scheme object in a presentation?
 
-// Get the class type of a theme color scheme and display it in the presentation.
+// Retrieve the class type identifier and display it for a color scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-更改图表类的第一个系列的类型并将新类型插入到文档中。
+更改文档中单个图表系列的视觉类型。
 
 ```javascript editor-docx
-// How to change a chart type in a document.
+// How do I switch a single data series to a different chart style in a document?
 
-// Change a chart type to the "area" type in a document.
+// Convert a bar series to an area series so overlapping data trends are easier to read in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

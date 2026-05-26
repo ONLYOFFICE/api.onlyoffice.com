@@ -20,12 +20,12 @@ expression.GetType();
 
 ## 示例
 
-获取色阶条件格式规则的类型。
+读取标识电子表格中哪种条件格式规则处于活动状态的类别标签。
 
 ```javascript editor-xlsx
-// How to identify the type of conditional formatting rule.
+// How do I confirm that a formatting rule is a color scale and not another rule type in a spreadsheet?
 
-// Get the type of the color scale conditional formatting rule.
+// Verify the rule category assigned to a color gradient condition before processing it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

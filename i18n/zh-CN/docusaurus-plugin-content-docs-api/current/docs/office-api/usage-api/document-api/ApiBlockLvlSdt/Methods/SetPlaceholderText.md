@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的内容控件设置占位符文本。
+向文档中的空内容控件添加占位符文本。
 
 ```javascript editor-docx
-// Create a block content control and set the placeholder text to it in a document.
+// How do I set hint text that appears inside an unfilled content control in a document?
 
-// How to add the placeholder text to the block-level content control object in a document.
+// Guide users with a prompt message shown inside a blank content control in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

@@ -28,7 +28,7 @@ GitHub 仓库：[示例：查找替换](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 配置
 
-``` json
+```json
 {
   "name": "searchAndReplaceOnStart",
   "guid": "asc.{C820F3CC-1248-4CA2-8D0F-D7EFD44DE09C}",

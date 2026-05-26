@@ -25,9 +25,9 @@ number
 在电子表格中返回在 0 和指定下限之间积分的误差函数。
 
 ```javascript editor-xlsx
-// How to get an error function (from 0 to lower) in a spreadsheet.
+// Get an error function from 0 to the lower limit.
 
-// Use function to get an error function set between 0 and lower limits in a spreadsheet.
+// Calculate the integrated error function using ERF_PRECISE in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

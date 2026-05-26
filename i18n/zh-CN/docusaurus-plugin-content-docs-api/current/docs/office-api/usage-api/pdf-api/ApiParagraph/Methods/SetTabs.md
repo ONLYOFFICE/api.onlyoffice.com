@@ -7,12 +7,12 @@
 
 ## 示例
 
-在 PDF 文档中设置一系列自定义制表位，用于段落中的所有制表符。
+定义 PDF 中用于对齐文本的自定义制表位位置。
 
 ```javascript editor-pdf
-// How to set the size of a spacing tabs from a paragraph properties in a PDF document.
+// How do I set where tabs align text in a PDF?
 
-// Change a tabs size property of a paragraph properties in a PDF document.
+// Configure tab stop locations and alignment styles in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

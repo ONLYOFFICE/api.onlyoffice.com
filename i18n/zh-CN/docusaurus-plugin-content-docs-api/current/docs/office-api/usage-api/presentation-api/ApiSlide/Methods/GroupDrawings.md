@@ -22,12 +22,12 @@ expression.GroupDrawings(aDrawings);
 
 ## 示例
 
-在演示文稿中的幻灯片上分组绘图对象。
+将多个形状对象合并为一个组。
 
 ```javascript editor-pptx
-// How to group two shapes in a presentation.
+// Create and position two shapes on the slide.
 
-// Create two shape objects and group them in a presentation.
+// Combine them using the GroupDrawings method.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -40,5 +40,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![删除多余空格](/assets/images/plugins/remove-extra-spaces-slide.png#gh-light-mode-only)
-![删除多余空格](/assets/images/plugins/remove-extra-spaces-slide.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-extra-spaces.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-extra-spaces.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

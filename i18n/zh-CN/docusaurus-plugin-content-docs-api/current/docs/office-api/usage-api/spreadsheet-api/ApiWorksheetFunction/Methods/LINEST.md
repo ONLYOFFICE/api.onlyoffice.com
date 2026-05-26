@@ -16,8 +16,8 @@ expression.LINEST(arg1, arg2, arg3, arg4);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | *y = mx + b* 方程中的 y 值集。 |
 | arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | *y = mx + b* 方程中的可选 x 值集。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true** 或省略，则常数 *b* 正常计算；如果参数为 **false**，则 *b* 设为 0。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true**，则返回附加的回归统计；如果参数为 **false** 或省略，则返回 m 系数和常数 *b*。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true** 或省略，则常量 *b* 将正常计算， |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true**，则返回附加回归统计信息， |
 
 ## 返回值
 
@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中使用最小二乘法拟合直线，返回描述与已知数据点匹配的线性趋势的统计信息。
+在电子表格中将直线拟合到数据点并获取趋势统计信息。
 
 ```javascript editor-xlsx
-// How to get statistics that describe a linear trend matching known data points in a spreadsheet.
+// How do I analyze the relationship between x and y values to predict a trend in a spreadsheet?
 
-// Use a function to return statistics that describe a linear trend matching known data points using the least squares method in a spreadsheet.
+// Get the slope, intercept, and accuracy metrics for a linear regression in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

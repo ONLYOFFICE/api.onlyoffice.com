@@ -22,12 +22,12 @@ expression.SetSubject(sSubject);
 
 ## 示例
 
-在电子表格中设置工作簿的主题。
+通过将主题写入电子表格的文档属性来定义工作簿的主题。
 
 ```javascript editor-xlsx
-// How can I set subject using a core properties in a spreadsheet?
+// How do I set a subject line for a workbook's metadata in a spreadsheet?
 
-// Set subject for a core properties in a spreadsheet.
+// Categorize the workbook's content by assigning it a subject in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

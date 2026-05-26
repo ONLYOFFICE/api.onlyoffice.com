@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-将文本设置应用于文档中内容控件的内容。
+在文档中为内容控件内的文本应用字体大小和粗体格式。
 
 ```javascript editor-docx
-// Create a block content control, add a text to it, and set the font size and bold property to this text in a document.
+// How do I change the font style of text inside a content control in a document?
 
-// Specify the text properties object and apply its settings to the block-level content control object in a document.
+// Style the text of a content control with a larger font and bold weight in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

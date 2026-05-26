@@ -14,7 +14,7 @@ expression.ISNA(arg1);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。值可以是空单元格、错误、逻辑值、文本、数字、区域或区域名称。 |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| string \| number \| boolean \| [ApiName](../../ApiName/ApiName.md) |  | 要测试的值。 |
 
 ## 返回值
 
@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查值是否为 N/A，并返回 true 或 false。
+识别电子表格中的单元格是否显示 N/A 错误。
 
 ```javascript editor-xlsx
-// How to check if the cell contains N/A value.
+// How do I check if a cell contains the N/A error in a spreadsheet?
 
-// Use a function to check whether a range data is an N/A value in a spreadsheet.
+// Use a function to find cells with N/A errors and handle them appropriately in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

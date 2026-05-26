@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中为文本字段设置值。
+在 PDF 中向表单字段输入文本。
 
 ```javascript editor-pdf
-// How can I set value using a base field in a PDF document?
+// How do I fill in a form field in a PDF?
 
-// Set value for a base field in a PDF document.
+// Set a text value for a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

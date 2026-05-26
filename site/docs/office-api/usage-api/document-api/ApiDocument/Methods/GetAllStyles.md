@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all styles of the current document in a document.
+Retrieve all styles defined in a document.
 
 ```javascript editor-docx
-// Get all styles added to the document.
+// How do I list every style available in a document?
 
-// How to retrieve all styles and display their names in a document.
+// Print each style name as a paragraph to audit the complete set of styles in use.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

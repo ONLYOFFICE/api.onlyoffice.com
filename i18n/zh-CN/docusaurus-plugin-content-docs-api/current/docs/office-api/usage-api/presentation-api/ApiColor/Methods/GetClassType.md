@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取演示文稿中颜色对象的类类型。
+检索颜色对象的类类型标识符字符串。
 
 ```javascript editor-pptx
-// How can I get the class type of a color in a presentation?
+// Extract and display color object type metadata from a shape.
 
-// Get the class type of a color and display it in the presentation.
+// Get the class type of a color and display it within a shape text element.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

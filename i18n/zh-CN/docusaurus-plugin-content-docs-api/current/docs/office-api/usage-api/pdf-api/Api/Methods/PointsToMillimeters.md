@@ -25,9 +25,9 @@ number
 在 PDF 文档中将磅转换为毫米。
 
 ```javascript editor-pdf
-// How can I convert points to millimeters in a PDF document?
+// The API method performs measurement unit conversion.
 
-// Convert points to millimeters in a PDF document.
+// The result is displayed in a shape text element.
 
 const points = 100;
 const millimeters = Api.PointsToMillimeters(points);

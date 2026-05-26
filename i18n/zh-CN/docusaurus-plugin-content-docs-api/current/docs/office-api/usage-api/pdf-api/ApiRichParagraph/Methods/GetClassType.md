@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-检查 PDF 文档中富文本段落返回的类类型。
+识别 PDF 中段落对象的类型。
 
 ```javascript editor-pdf
-// How do I check what type a rich paragraph object is in a PDF document?
+// How do I determine what type a paragraph is in a PDF?
 
-// Retrieve and output the class type string for a rich paragraph in a PDF document.
+// Check the object classification of a paragraph in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

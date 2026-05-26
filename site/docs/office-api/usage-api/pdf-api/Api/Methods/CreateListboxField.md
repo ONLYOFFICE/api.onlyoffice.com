@@ -22,10 +22,10 @@ expression.CreateListboxField(aRect);
 
 ## Example
 
-How to create and add a listbox field to document.
+Create and add a listbox field to document.
 
 ```javascript editor-pdf
-// How do I create the listbox field in a PDF document?
+// Create the listbox field in a PDF document.
 
 // Create the listbox field and display the result in a PDF document.
 

@@ -20,12 +20,12 @@ expression.GetFill();
 
 ## 示例
 
-获取电子表格中文本的颜色属性。
+读取电子表格中应用于文本的颜色填充。
 
 ```javascript editor-xlsx
-// How to find out a text color type in a spreadsheet.
+// How do I find out what color fill is used for text in a spreadsheet?
 
-// Get a text solid color fill in a spreadsheet.
+// Inspect the fill type assigned to a text style and display it inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

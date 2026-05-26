@@ -9,7 +9,7 @@
 在演示文稿中设置形状的大小。
 
 ```javascript editor-pptx
-// How to resize a drawing in a presentation.
+// Size controls the dimensions of a shape on the slide.
 
 // Get a shape object from a slide and set its size.
 

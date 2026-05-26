@@ -6,12 +6,12 @@ Inherited from [ApiTableCellPr.SetTextDirection](../../ApiTableCellPr/Methods/Se
 
 ## Example
 
-Specify the direction of the text flow for this table cell.
+Change the direction in which text flows inside a table cell in a document.
 
 ```javascript editor-docx
-// Set the direction of the cell text.
+// How do I rotate or reorient the text inside a table cell in a document?
 
-// Get the cell from the table and set its direction.
+// Display text vertically rather than horizontally within a table cell in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

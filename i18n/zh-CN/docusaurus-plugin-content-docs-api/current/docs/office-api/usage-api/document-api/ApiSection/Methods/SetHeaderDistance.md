@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定从页面顶部边缘到页眉顶部边缘的距离。
+控制文档中页眉距离页面顶部边缘的距离。
 
 ```javascript editor-docx
-// How to set header distance of the section in a document.
+// How do I set the gap between the page top and the header area in a document?
 
-// Specify the distance between the page end and the header.
+// Adjust the spacing that separates the header from the upper edge of a page in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

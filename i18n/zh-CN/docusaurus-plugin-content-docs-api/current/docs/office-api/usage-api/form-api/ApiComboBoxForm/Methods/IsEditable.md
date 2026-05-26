@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中组合框文本是否可以编辑。
+确定用户是否可以在文档中的组合框表单中输入自定义文本。
 
 ```javascript editor-forms
-// How to know whether a combobox form is editable.
+// How do I check if a combo box form allows free-text input in a document?
 
-// Display a boolean representing editability of a combobox in a document.
+// Show whether a combo box restricts selection to preset options or permits manual entry in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

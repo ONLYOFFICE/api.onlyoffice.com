@@ -134,5 +134,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![表格转换图表](/assets/images/plugins/table-to-chart.png#gh-light-mode-only)
-![表格转换图表](/assets/images/plugins/table-to-chart.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/table-to-chart.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/table-to-chart.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

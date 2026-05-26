@@ -6,12 +6,12 @@
 
 ## 示例
 
-在 PDF 文档中创建方形注释并为其设置红色边框颜色。
+更改 PDF 中注释的边框颜色。
 
 ```javascript editor-pdf
-// How to set border color for an annotation in a PDF document?
+// What color should the border of an annotation be in a PDF?
 
-// Set border color and display the result in a PDF document.
+// Apply a color to the border outline of an annotation object in a PDF.
 
 let doc = Api.GetDocument();
 let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);

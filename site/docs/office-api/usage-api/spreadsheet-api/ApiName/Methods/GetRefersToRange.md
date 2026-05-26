@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the cell range object by its name in a spreadsheet.
+Access the cells that a named range covers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a range knowig its defname in a spreadsheet.
+// How do I work with the actual cells behind a named range in a spreadsheet?
 
-// Find a range by its name and change its properties in a spreadsheet.
+// Look up a range by its label and apply formatting to those cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

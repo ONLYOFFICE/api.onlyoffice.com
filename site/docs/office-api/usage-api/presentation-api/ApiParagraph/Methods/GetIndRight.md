@@ -6,12 +6,12 @@ Inherited from [ApiParaPr.GetIndRight](../../ApiParaPr/Methods/GetIndRight.md).
 
 ## Example
 
-Get the paragraph right side indentation in a presentation.
+Check the right margin of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to return a right side identation of a paragraph property in a presentation.
+// How do I read the right indentation value from a paragraph in a presentation?
 
-// Return a right side indentation of a text property from the slide.
+// Retrieve the distance between the right edge and the paragraph text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -23,9 +23,9 @@ Number
 获取演示文稿中批注创建的时间。
 
 ```javascript editor-pptx
-// How to know when a comment was added in a presentation.
+// Retrieve the creation timestamp of a specific comment.
 
-// Get all comments from the presentation and the first one's time of creation.
+// Add a comment to the presentation and display its creation time.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ number
 
 ## 示例
 
-在电子表格中返回复数的共轭复数。
+获取电子表格中数字的复共轭。
 
 ```javascript editor-xlsx
-// How to get the complex conjugate in a spreadsheet.
+// How do I find the conjugate of a complex number in a spreadsheet?
 
-// Use a function to get the complex conjugate of a complex number in a spreadsheet.
+// Reflect a complex number across the real axis in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

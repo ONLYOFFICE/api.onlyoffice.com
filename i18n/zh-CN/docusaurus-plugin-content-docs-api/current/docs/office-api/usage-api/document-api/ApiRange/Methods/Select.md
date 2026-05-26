@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-在文档中将选区设置为指定范围。
+将文档中的特定文本范围高亮显示为活动选区。
 
 ```javascript editor-docx
-// How to select a range with a cursor in a document.
+// How do I make a portion of text become the current selection in a document?
 
-// Get range of the paragraph and select it in a document.
+// Mark a segment of text so it is selected and ready for further actions in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

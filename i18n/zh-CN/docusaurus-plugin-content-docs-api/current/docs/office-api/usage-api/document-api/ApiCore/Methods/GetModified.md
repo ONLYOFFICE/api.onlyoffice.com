@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-获取文档中当前文档的最后修改日期。
+读取文档核心属性中存储的最后修改日期。
 
 ```javascript editor-docx
-// How to get the modified for a core properties in a document?
+// How do I get the date a document was last modified from its core properties in a document?
 
-// Get the modified and display the result in a document.
+// Compare the modification timestamp against a deadline to flag outdated content in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

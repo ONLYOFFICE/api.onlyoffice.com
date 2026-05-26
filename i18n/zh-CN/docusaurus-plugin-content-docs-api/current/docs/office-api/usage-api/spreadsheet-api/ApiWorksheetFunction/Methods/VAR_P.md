@@ -14,7 +14,7 @@ expression.VAR_P(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个将计算方差的数值。第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、区域或数字数组。 |
+| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 255 个数值，将计算这些数值的方差。 |
 
 ## 返回值
 
@@ -25,9 +25,9 @@ number
 在电子表格中基于整个总体计算方差（忽略总体中的逻辑值和文本）。
 
 ```javascript editor-xlsx
-// How to get variance based on the population in a spreadsheet.
+// The VAR_P function computes population variance from numeric data only.
 
-// Use a function to calculate variance based on the entire population in a spreadsheet.
+// Apply the function to calculate variance based on the entire population in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

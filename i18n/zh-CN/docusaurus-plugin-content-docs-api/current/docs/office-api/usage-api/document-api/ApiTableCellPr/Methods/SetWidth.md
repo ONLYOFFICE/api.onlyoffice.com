@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-设置当前表格单元格的首选宽度。
+为文档中的表格单元格设置固定最小宽度。
 
 ```javascript editor-docx
-// Resize the width of the cell.
+// How do I control how wide a cell appears in a document?
 
-// Change the width of the cell.
+// Enforce a consistent cell size across all columns in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

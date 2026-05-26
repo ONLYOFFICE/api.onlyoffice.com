@@ -22,12 +22,12 @@ expression.SetSubject(sSubject);
 
 ## 示例
 
-设置文档中当前文档的主题。
+设置文档核心属性中的主题字段。
 
 ```javascript editor-docx
-// How can I set subject using a core properties in a document?
+// How do I define a subject for a document's metadata?
 
-// Set subject for a core properties in a document.
+// Categorize or describe document content by writing a subject string to its metadata in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

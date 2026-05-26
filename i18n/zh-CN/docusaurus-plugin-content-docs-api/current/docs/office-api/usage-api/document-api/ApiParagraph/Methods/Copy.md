@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在文档中创建段落副本。
+复制段落并将副本追加到文档末尾。
 
 ```javascript editor-docx
-// How to add a duplicate paragraph in a document.
+// How do I copy a paragraph and place it elsewhere in a document?
 
-// Copy a paragraph using the paragraph API in a document.
+// Reuse existing paragraph content without retyping it in a document.
 
 let doc = Api.GetDocument();
 let paragraph1 = doc.GetElement(0);

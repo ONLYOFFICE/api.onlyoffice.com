@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Find out the class type of a RGB color object in a presentation.
+Identify the type of an RGB color in a presentation.
 
 ```javascript editor-pptx
-// How can I get the class type of a RGB color in a presentation?
+// How do I determine what type an RGB color is in a presentation?
 
-// Get the class type of a RGB color and display it in the presentation.
+// Display the color type name on the slide in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

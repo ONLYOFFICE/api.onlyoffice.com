@@ -26,7 +26,7 @@ sidebar_position: -5
 
 **示例**：
 
-``` ts
+```ts
 Asc.plugin.executeMethod("AddToolbarMenuItem", [{
   guid: Asc.plugin.guid,
   tabs: [
@@ -65,7 +65,7 @@ Asc.plugin.executeMethod("AddToolbarMenuItem", [{
 
 **示例**：
 
-``` ts
+```ts
 const oToolbarMenuMainItem = {
   guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
   tabs: [oToolbarMenuTab],
@@ -88,7 +88,7 @@ const oToolbarMenuMainItem = {
 
 **示例**：
 
-``` ts
+```ts
 const oToolbarMenuTab = {
   id: "ChatGPT",
   text: "AI Assistant",
@@ -120,7 +120,7 @@ const oToolbarMenuTab = {
 
 **示例**：
 
-``` ts
+```ts
 const oToolbarMenuItem = {
   id: "MeaningItem",
   type: "button",
@@ -220,7 +220,7 @@ const oToolbarMenuItem = {
 
 普通按钮。
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -234,7 +234,7 @@ const oToolbarMenuItem = {
 
 一个被拆分为两部分的按钮：按钮的上半部分可以单独切换，下半部分包含一个下拉菜单。
 
-``` json
+```json
 {
   "text": "caption",
   "split": true,
@@ -249,7 +249,7 @@ const oToolbarMenuItem = {
 
 一个拆分为两部分的按钮，每部分可以单独点击，按钮的下半部分包含一个下拉菜单。
 
-``` json
+```json
 {
   "text": "caption",
   "split": true,
@@ -264,7 +264,7 @@ const oToolbarMenuItem = {
 
 带有下拉菜单的按钮，点击按钮时会打开该菜单。
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -279,7 +279,7 @@ const oToolbarMenuItem = {
 
 可切换的按钮。
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -303,7 +303,7 @@ const oToolbarMenuItem = {
 
 **示例**：
 
-``` ts
+```ts
 window.Asc.plugin.event_onToolbarMenuClick = (id) => {
   console.log("Toolbar menu item clicked: " + id);
 };
@@ -327,7 +327,7 @@ window.Asc.plugin.event_onToolbarMenuClick = (id) => {
 
 **示例**：
 
-``` ts
+```ts
 Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
   {
     let buttonMainToolbar = new Asc.ButtonToolbar(null, id);
@@ -368,7 +368,7 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
 
 **示例**：
 
-``` ts
+```ts
 plugin.attachToolbarMenuClickEvent("my_tab", (data) => {
   console.log(data);
 });

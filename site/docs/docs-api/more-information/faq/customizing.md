@@ -30,7 +30,7 @@ Changing these options is only available to the [ONLYOFFICE Docs Developer](http
 
 With all the above fields filled, the *customization* configuration will look like this:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -61,7 +61,7 @@ Further information about the customization can be found [at this page](../../us
 
 If the interface language is present in the [list of available ONLYOFFICE Docs languages](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx?from=api), you can simply use the *editorConfig.lang* property in the configuration file to set it to the necessary locale, like this:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     lang: "de",
@@ -79,7 +79,7 @@ Further information about the language settings can be found [at this page](../.
 
 The chat and comments are enabled by default. To disable them use the *document.permissions.comment* and *document.permissions.chat* parameters with the values set to **false** in the configuration file respectively:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -100,7 +100,7 @@ Further information about the customization can be found [at this page](../../us
 
 You can either display the full top toolbar or its compact version. To control this the *editorConfig.customization.compactToolbar* parameter is used. With the default **false** value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -118,7 +118,7 @@ Further information about the customization can be found [at this page](../../us
 
 The document owner and uploading date is affected by the *document.info.owner* and *document.info.uploaded* parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:
 
-``` ts
+```ts
 const config = {
   document: {
     info: {
@@ -181,7 +181,7 @@ To enable plugins for all ONLYOFFICE Docs users, you need the following:
 - Put the plugins to the folder accessible by Document Editor.
 - Change the configuration file the following way:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {
@@ -208,7 +208,7 @@ Further information about enabling the plugins for ONLYOFFICE Docs can be found 
 
 To disable the tooltips about new features in the editor on first loading, use the *features.featuresTips* configuration parameter and set its value to **false**:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -228,7 +228,7 @@ Further information about the feature customization can be found [at this page](
 
 To customize the font name and size of the interface elements (buttons, tabs, etc.), use the *font* configuration block and edit the *font.name* and *font.size* parameters:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -253,7 +253,7 @@ Further information about the interface font customization can be found [at this
 
 To hide the icon with the user's avatar/initials in the editor header, use the *layout* configuration block and set the *layout.header.user* parameter to **false**. You can also hide the button with the editing users setting the *layout.header.users* parameter to **false**:
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {

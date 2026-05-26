@@ -26,7 +26,7 @@ GitHub 仓库：[设置](https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master
 
 ## 配置
 
-``` json
+```json
 {
   "name": "settings",
   "guid": "asc.{CF3A000F-C6B4-451D-AC0B-F3DDAB1880D2}",

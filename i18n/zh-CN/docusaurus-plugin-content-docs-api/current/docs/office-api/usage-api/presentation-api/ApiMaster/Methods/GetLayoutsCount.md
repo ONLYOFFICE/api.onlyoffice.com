@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取版式对象的数量并将其插入演示文稿。
+获取幻灯片母版中的布局总数。
 
 ```javascript editor-pptx
-// How to get a master layout count knowing its index in a presentation.
+// The GetLayoutsCount method returns the number of layout objects in the master.
 
-// Count each layout from the master in a presentation.
+// Display the layout count in a text shape on the presentation slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

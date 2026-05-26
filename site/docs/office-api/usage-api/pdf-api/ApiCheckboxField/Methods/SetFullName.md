@@ -6,12 +6,12 @@ Inherited from [ApiBaseField.SetFullName](../../ApiBaseField/Methods/SetFullName
 
 ## Example
 
-Set field full name and display it in a PDF document.
+Assign a complete name identifier to a form field in a PDF.
 
 ```javascript editor-pdf
-// How do I set full name in a PDF document?
+// How do I name a form field in a PDF?
 
-// Set full name using a base field object in a PDF document.
+// Set the unique full name property of a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

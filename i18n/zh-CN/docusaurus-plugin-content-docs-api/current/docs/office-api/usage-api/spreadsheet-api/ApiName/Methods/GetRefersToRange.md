@@ -20,12 +20,12 @@ expression.GetRefersToRange();
 
 ## 示例
 
-通过名称获取电子表格中的单元格范围对象。
+访问电子表格中命名范围覆盖的单元格。
 
 ```javascript editor-xlsx
-// How to get a range knowig its defname in a spreadsheet.
+// How do I work with the actual cells behind a named range in a spreadsheet?
 
-// Find a range by its name and change its properties in a spreadsheet.
+// Look up a range by its label and apply formatting to those cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

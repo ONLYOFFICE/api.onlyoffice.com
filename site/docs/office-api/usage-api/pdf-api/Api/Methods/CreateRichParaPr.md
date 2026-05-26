@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-How to create a paragraph properties and set it for rich paragraph in a PDF document.
+Format text alignment in a rich text annotation in a PDF.
 
 ```javascript editor-pdf
-// How to create the rich para pr in a PDF document?
+// How do I set text properties like alignment in a PDF annotation?
 
-// Create the rich para pr using the PDF document API.
+// Create and apply paragraph formatting to text inside an annotation in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

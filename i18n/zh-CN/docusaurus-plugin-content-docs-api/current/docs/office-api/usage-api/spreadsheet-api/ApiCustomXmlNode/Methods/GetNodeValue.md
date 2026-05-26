@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取电子表格中自定义 XML 节点的值。
+读取电子表格中特定 XML 节点的存储值。
 
 ```javascript editor-xlsx
-// How to get the node value for a custom XML node in a spreadsheet?
+// How do I retrieve what value is saved inside an XML node in a spreadsheet?
 
-// Get the node value and display the result in a spreadsheet.
+// Extract a node's raw value to inspect embedded data in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const xmlManager = worksheet.GetCustomXmlParts();

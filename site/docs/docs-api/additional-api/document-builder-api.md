@@ -8,7 +8,7 @@ For the interaction with the **web document builder service** the POST requests 
 Starting from version 8.1, it is recommended to add the [shardkey](../get-started/configuration/shard-key.md) parameter to the query string with the `key` value in it. For example, `?shardkey=Khirz6zTPdfd7`. This allows you to load balance requests.
 :::
 
-## Request parameters and their description
+## Request parameters
 
 ```mdx-code-block
 <APITable>
@@ -16,11 +16,11 @@ Starting from version 8.1, it is recommended to add the [shardkey](../get-starte
 
 | Parameter | Type    | Presence                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| argument  | object  | optional                  | Defines the arguments to pass to the created document. See [supported properties](../../document-builder/builder-framework/CDocBuilder/SetProperty.md#--argument) for details on how the argument is used.                                                                                                                                                                                                                                                                                                                                      |
-| async     | boolean | optional                  | Defines the type of the request to the **document builder service**: asynchronous or not. When `true`, the response is formed instantly with a `key` in the response. You must then poll by sending requests with this `key` until document generation is finished (when `end` becomes `true`). The default value is `false`.                                                                                                                                                                                                                   |
-| key       | string  | conditional               | Defines the request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the `async` parameter is set to `true`) the key is not present in the first request, but must be present in all the following requests which will be sent before the generation is complete. When the synchronous request is used (the `async` parameter is set to `false`), this parameter is not required. |
-| token     | string  | required by configuration | Defines the encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#document-builder).                                                                                                                                                                                                                                                                                                                                                                     |
-| url       | string  | required                  | Defines the absolute URL to the `.js` script file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| argument  | object  | optional                  | The arguments to pass to the created document. See [supported properties](../../document-builder/builder-framework/CDocBuilder/SetProperty.md#--argument) for details on how the argument is used.                                                                                                                                                                                                                                                                                                                                      |
+| async     | boolean | optional                  | The type of the request to the **document builder service**: asynchronous or not. When `true`, the response is formed instantly with a `key` in the response. You must then poll by sending requests with this `key` until document generation is finished (when `end` becomes `true`). The default value is `false`.                                                                                                                                                                                                                   |
+| key       | string  | conditional               | The request identifier used to unambiguously identify the request. The key is formed on the **document builder service** side and is returned as the response to the first request. When the asynchronous request is used (the `async` parameter is set to `true`) the key is not present in the first request, but must be present in all the following requests which will be sent before the generation is complete. When the synchronous request is used (the `async` parameter is set to `false`), this parameter is not required. |
+| token     | string  | required by configuration | The encrypted signature added to the **ONLYOFFICE Docs** config in the form of a [token](./signature/request/token-in-body.md#document-builder).                                                                                                                                                                                                                                                                                                                                                                     |
+| url       | string  | required                  | The absolute URL to the `.js` script file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ```mdx-code-block
 </APITable>
@@ -36,7 +36,7 @@ The `.js` script file can contain several output files as a result. The URL to t
 When using `builder.OpenFile()` in your script, you must provide an absolute URL to the file (e.g., `https://example.com/document.docx`), not a local path. The Document Server needs to download the file from a publicly accessible location.
 :::
 
-## Response parameters and their description
+## Response parameters
 
 The request result is returned in JSON format.
 
@@ -46,10 +46,10 @@ The request result is returned in JSON format.
 
 | Parameter | Type    | Example                                         | Description                                                                                                                                                                                                                                                                                                                                     |
 | --------- | ------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| end       | boolean | `true`                                          | Defines if the document generation is completed or not. When `false`, the task is still being processed and the `urls` parameter is not included in the response. When `true`, the task is complete and the `urls` parameter will be present.                                                                                                   |
-| error     | integer | `-8`                                            | Defines an error that occurred during document generation. Possible error codes can be found [below](#possible-error-codes-and-their-description).                                                                                                                                                                                              |
-| key       | string  | `af86C7e71Ca8`                                  | Defines the unique identifier of the document generation task. If the `key` parameter was provided in the request, the same value is returned. If the `key` parameter was not provided in the first asynchronous request, a new key is generated by the **document builder service**. Use this value in all subsequent polling requests.        |
-| urls      | object  | `{"output.docx": "https://documentserver/..."}` | Defines an object containing the absolute URLs to the generated output files. The object keys are the output file names as specified in the `.js` script. This parameter is present only when the `end` value is `true`.                                                                                                                        |
+| end       | boolean | `true`                                          | Whether the document generation is completed or not. When `false`, the task is still being processed and the `urls` parameter is not included in the response. When `true`, the task is complete and the `urls` parameter will be present.                                                                                                   |
+| error     | integer | `-8`                                            | An error that occurred during document generation. Possible error codes can be found [below](#possible-error-codes-and-their-description).                                                                                                                                                                                              |
+| key       | string  | `af86C7e71Ca8`                                  | The unique identifier of the document generation task. If the `key` parameter was provided in the request, the same value is returned. If the `key` parameter was not provided in the first asynchronous request, a new key is generated by the **document builder service**. Use this value in all subsequent polling requests.        |
+| urls      | object  | `{"output.docx": "https://documentserver/..."}` | An object containing the absolute URLs to the generated output files. The object keys are the output file names as specified in the `.js` script. This parameter is present only when the `end` value is `true`.                                                                                                                        |
 
 ```mdx-code-block
 </APITable>
@@ -59,7 +59,7 @@ The request result is returned in JSON format.
 
 Below is a simple `.js` script that creates a document with "Hello World!" text:
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -80,7 +80,7 @@ In the examples below, `example.com` represents the server where your **document
 
 **Step 1.** Send the initial request with the `.js` script file URL:
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -91,7 +91,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "end": false
@@ -100,7 +100,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Step 2.** Poll using the returned `key` until `end` is `true`:
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -111,7 +111,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -123,7 +123,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### Synchronous request
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -134,7 +134,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -146,7 +146,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 ### Asynchronous request with token
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -156,7 +156,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "error": -8
 }
@@ -168,7 +168,7 @@ This example demonstrates the error response when the token is invalid. See the 
 
 ### Synchronous request with arguments
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -183,7 +183,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -197,7 +197,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 A `.js` script can generate multiple files. For example:
 
-``` js
+```js
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
@@ -212,7 +212,7 @@ builder.SaveFile("xlsx", "spreadsheet1.xlsx");
 builder.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -223,7 +223,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "af86C7e71Ca8",
   "urls": {
@@ -234,21 +234,20 @@ curl -X POST "https://documentserver/docbuilder" \
 }
 ```
 
-<!--
 ### Comparing documents
 
 You can compare two documents and generate a result file with tracked changes. The script uses [OpenTmpFile](../../document-builder/using-cli/overview.md#opentmpfile) to open the second document for comparison:
 
-``` js
+```js
 builderJS.OpenFile("https://example.com/file1.docx");
 const file = builderJS.OpenTmpFile("https://example.com/file2.docx");
-AscCommonWord.CompareDocuments(Api, file, null);
+AscCommonWord.CompareDocuments(Api, file);
 file.Close();
 builderJS.SaveFile("docx", "Result.docx");
 builderJS.CloseFile();
 ```
 
-``` bash
+```bash
 curl -X POST "https://documentserver/docbuilder" \
   -H "Content-Type: application/json" \
   -d '{
@@ -259,7 +258,7 @@ curl -X POST "https://documentserver/docbuilder" \
 
 **Response:**
 
-``` json
+```json
 {
   "key": "Khirz6zTPdfd7",
   "urls": {
@@ -270,7 +269,6 @@ curl -X POST "https://documentserver/docbuilder" \
 ```
 
 See [Comparing documents](../../document-builder/using-cli/comparing-documents.md) for more details about document comparison.
--->
 
 ## Possible error codes and their description
 

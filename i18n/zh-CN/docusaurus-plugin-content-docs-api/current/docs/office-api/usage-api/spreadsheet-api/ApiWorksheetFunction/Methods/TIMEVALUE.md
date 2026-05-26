@@ -25,9 +25,9 @@ number
 在电子表格中将文本时间转换为时间序列号，从 0 (12:00:00 AM) 到 0.999988426 (11:59:59 PM)。输入公式后以时间格式格式化数字。
 
 ```javascript editor-xlsx
-// How to create a serial number from a date time object in a spreadsheet.
+// Parse a text string representing a time and convert it to a serial number.
 
-// Use a function to convert date, hours, minutes and seconds to serial numbers in a spreadsheet.
+// Apply the TIMEVALUE function with a time string in date and time format.
 
 const worksheet = Api.GetActiveSheet();
 

@@ -20,12 +20,12 @@ number
 
 ## Example
 
-Get a number of rows in the table in a document.
+Count the total number of rows in a table in a document.
 
 ```javascript editor-docx
-// How to count the number of rows of the table and display it in the document.
+// How do I find out how many rows a table contains in a document?
 
-// Add text showing the rows count of two tables in a document.
+// Display the row count before and after adding a row to a table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

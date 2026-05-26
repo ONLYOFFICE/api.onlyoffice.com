@@ -20,12 +20,12 @@ expression.GetCommands();
 
 ## 示例
 
-分析星形的路径命令。获取第一个命令的信息，包括类型和坐标。
+检索定义文档中形状轮廓路径的所有绘图步骤。
 
 ```javascript editor-docx
-// How can I get the commands using a geometry path in a document?
+// How do I get the full list of steps from a shape's drawing path in a document?
 
-// Get the commands for a geometry path in a document.
+// Read every path segment at once to inspect or process them in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

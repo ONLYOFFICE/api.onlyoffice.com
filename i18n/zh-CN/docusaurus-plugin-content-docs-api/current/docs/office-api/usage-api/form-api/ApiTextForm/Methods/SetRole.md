@@ -6,12 +6,12 @@
 
 ## 示例
 
-为文档中的表单元素设置角色。
+为文档中的表单字段分配角色以控制填写者。
 
 ```javascript editor-forms
-// How can I set role using a form base in a document?
+// How do I associate a form field with a specific role in a document?
 
-// Set role for a form base in a document.
+// Restrict which signers or participants are responsible for a given field.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

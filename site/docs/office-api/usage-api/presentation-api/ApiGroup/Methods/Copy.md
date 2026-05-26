@@ -1,17 +1,35 @@
 # Copy
 
-Creates a copy of the specified drawing object.
+Creates a copy of the specified group of drawings.
 
-Inherited from [ApiDrawing.Copy](../../ApiDrawing/Methods/Copy.md).
+:::note\
+This functionality is available in paid ONLYOFFICE Docs editions.\
+:::
+
+## Syntax
+
+```javascript
+expression.Copy();
+```
+
+`expression` - A variable that represents a [ApiGroup](../ApiGroup.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiGroup](../../ApiGroup/ApiGroup.md)
 
 ## Example
 
-Create a copy of a shape and insert it into the presentation.
+Duplicate a group of drawings in a presentation.
 
 ```javascript editor-pptx
-// How to create the same slide shape.
+// How do I make a copy of a grouped set of objects in a presentation?
 
-// Get a slide shape, add it to the slide and create its copy.
+// Create an exact duplicate of a group and place it on another slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -19,13 +37,15 @@ slide.RemoveAllObjects();
 
 const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
-const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
-shape.SetPosition(608400, 1267200);
-shape.SetSize(300 * 36000, 130 * 36000);
-slide.AddObject(shape);
+const shape1 = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
+shape1.SetPosition(608400, 1267200);
+const shape2 = Api.CreateShape("ellipse", 100 * 36000, 100 * 36000, fill, stroke);
+shape2.SetPosition(2100000, 1267200);
+const group = Api.CreateGroup([shape1, shape2]);
+slide.AddObject(group);
 
-const copyShape = shape.Copy();
+const copyGroup = group.Copy();
 const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
-newSlide.AddObject(copyShape);
+newSlide.AddObject(copyGroup);
 ```

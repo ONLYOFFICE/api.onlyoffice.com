@@ -14,7 +14,7 @@ expression.SetSeriaName(sNameRange, nSeria);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sNameRange | Required | string |  | The series name. Can be a range of cells or usual text. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column, "Example series". |
+| sNameRange | Required | string |  | The series name. Can be a range of cells or usual text. For example: |
 | nSeria | Required | number |  | The index of the chart series. |
 
 ## Returns
@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Set a name to the specified series in a spreadsheet.
+Rename a data series shown in a chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to name chart series in a spreadsheet.
+// How do I change the label of a particular chart series in a spreadsheet?
 
-// Set seria name for a chart in a spreadsheet.
+// Replace the default series title with a custom name to clarify the chart data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

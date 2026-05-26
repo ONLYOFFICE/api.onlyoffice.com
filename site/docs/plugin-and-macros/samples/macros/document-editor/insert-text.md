@@ -8,7 +8,7 @@ tags: ["Docs", "Macros", "Documents"]
 
 Inserts text into the document at the current cursor position.
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();
@@ -22,4 +22,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Insert text](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Insert text](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-text.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/insert-text.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

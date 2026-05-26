@@ -51,7 +51,7 @@ Repository on GitHub: [thesaurus](https://github.com/ONLYOFFICE/onlyoffice.githu
 
 ## Config
 
-``` json
+```json
 {
   "name": "Thesaurus",
   "nameLocale": {

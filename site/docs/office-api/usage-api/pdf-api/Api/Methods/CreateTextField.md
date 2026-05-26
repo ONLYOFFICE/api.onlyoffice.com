@@ -22,12 +22,12 @@ expression.CreateTextField(aRect);
 
 ## Example
 
-How to create and add a text field to document.
+Add a text field to a page in a PDF.
 
 ```javascript editor-pdf
-// How do I create the text field in a PDF document?
+// How do I add a text field to a PDF?
 
-// Create the text field and display the result in a PDF document.
+// Create a text field, insert it into a page, and set its value in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

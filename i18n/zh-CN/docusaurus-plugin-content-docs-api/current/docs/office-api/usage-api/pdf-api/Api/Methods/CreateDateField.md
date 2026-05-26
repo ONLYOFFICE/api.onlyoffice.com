@@ -22,12 +22,12 @@ expression.CreateDateField(aRect);
 
 ## 示例
 
-如何创建带日期选择器的文本字段并添加到文档。
+在 PDF 表单中创建日期输入字段。
 
 ```javascript editor-pdf
-// How do I create the date field in a PDF document?
+// How do I add a date picker to a form in a PDF?
 
-// Create the date field and display the result in a PDF document.
+// Set a default date value in a date field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

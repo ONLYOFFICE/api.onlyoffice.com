@@ -6,8 +6,8 @@ Represents the ApiBlockLvlSdt class.
 
 | Method | Returns | Description |
 | ------ | ------- | ----------- |
-| [AddCaption](./Methods/AddCaption.md) | boolean | Adds a caption paragraph after (or before) the current content control. 💡 Please note that the current content control must be in the document (not in the footer/header). And if the current content control is placed in a shape, then a caption is added after (or before) the parent shape. |
-| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current block content control. 💡 Please note that the current block content control must be in the document. |
+| [AddCaption](./Methods/AddCaption.md) | boolean | Adds a caption paragraph after (or before) the current content control. |
+| [AddComment](./Methods/AddComment.md) | [ApiComment](../ApiComment/ApiComment.md) | Adds a comment to the current block content control. |
 | [AddElement](./Methods/AddElement.md) | boolean | Adds a paragraph or a table or a block content control to the current container. |
 | [AddText](./Methods/AddText.md) | boolean | Adds a text to the current content control. |
 | [Copy](./Methods/Copy.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | Creates a copy of an block content control. Ignores comments, footnote references, complex fields. |
@@ -16,7 +16,7 @@ Represents the ApiBlockLvlSdt class.
 | [GetAllContentControls](./Methods/GetAllContentControls.md) | [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md)[] \| [ApiInlineLvlSdt](../ApiInlineLvlSdt/ApiInlineLvlSdt.md)[] | Returns a collection of content control objects in the current content control. |
 | [GetAllDrawingObjects](./Methods/GetAllDrawingObjects.md) | [Drawing](../Enumeration/Drawing.md)[] | Returns a collection of drawing objects in the current content control. |
 | [GetAllParagraphs](./Methods/GetAllParagraphs.md) | [ApiParagraph](../ApiParagraph/ApiParagraph.md)[] | Returns a collection of paragraph objects in the current content control. |
-| [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. 💡 This method can be a little bit slow, because it runs the document calculation process to arrange tables on the specified page. |
+| [GetAllTablesOnPage](./Methods/GetAllTablesOnPage.md) | [ApiTable](../ApiTable/ApiTable.md)[] | Returns a collection of tables on a given absolute page. |
 | [GetAppearance](./Methods/GetAppearance.md) | "boundingBox" \| "hidden" | Gets the visualization of the content control. |
 | [GetBackgroundColor](./Methods/GetBackgroundColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the background color of the current content control. |
 | [GetBorderColor](./Methods/GetBorderColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Returns the border color of the current content control. |
@@ -36,7 +36,7 @@ Represents the ApiBlockLvlSdt class.
 | [GetPosInParent](./Methods/GetPosInParent.md) | Number | Returns the content control position within its parent element. |
 | [GetRange](./Methods/GetRange.md) | [ApiRange](../ApiRange/ApiRange.md) | Returns a Range object that represents the part of the document contained in the specified content control. |
 | [GetTag](./Methods/GetTag.md) | string | Returns the tag attribute for the current container. |
-| [IsPicture](./Methods/IsPicture.md) | boolean | Checks whether the content control is a picture control. This method verifies if the content control is specifically a picture control. |
+| [IsPicture](./Methods/IsPicture.md) | boolean | Checks whether the content control is a picture control. |
 | [MoveCursorOutside](./Methods/MoveCursorOutside.md) | boolean | Places a cursor before/after the current content control. |
 | [Push](./Methods/Push.md) | boolean | Pushes a paragraph or a table or a block content control to actually add it to the current container. |
 | [RemoveAllElements](./Methods/RemoveAllElements.md) | boolean | Clears the contents from the current content control. |
@@ -50,8 +50,8 @@ Represents the ApiBlockLvlSdt class.
 | [SetDataBinding](./Methods/SetDataBinding.md) | boolean | Sets the data binding for the content control. |
 | [SetId](./Methods/SetId.md) | None | Specifies a unique ID for the current content control. |
 | [SetLabel](./Methods/SetLabel.md) | boolean | Sets the label attribute to the current container. |
-| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current block text content control: **"unlocked"** - content can be edited and the container can be deleted. **"contentLocked"** - content cannot be edited. **"sdtContentLocked"** - content cannot be edited and the container cannot be deleted. **"sdtLocked"** - the container cannot be deleted. |
-| [SetPicture](./Methods/SetPicture.md) | boolean | Sets the content (image) for the picture content control. This method updates the picture inside a content control by setting an image from a provided URL. The URL should be an internet link to the image. |
+| [SetLock](./Methods/SetLock.md) | boolean | Sets the lock to the current block text content control: |
+| [SetPicture](./Methods/SetPicture.md) | boolean | Sets the content (image) for the picture content control. |
 | [SetPlaceholderText](./Methods/SetPlaceholderText.md) | boolean | Sets the placeholder text to the current content control. |
 | [SetTag](./Methods/SetTag.md) | boolean | Sets the tag attribute to the current container. |
 | [SetTextPr](./Methods/SetTextPr.md) | boolean | Applies text settings to the content of the content control. |

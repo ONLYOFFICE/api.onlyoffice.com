@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为文档中的表单设置突出显示。
+为文档中的所有表单字段应用背景高亮颜色。
 
 ```javascript editor-docx
-// How to set color for forms background.
+// How do I highlight form fields with a custom color in a document?
 
-// Highlight the forms color.
+// Draw attention to fillable areas by painting them with a distinct background color.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

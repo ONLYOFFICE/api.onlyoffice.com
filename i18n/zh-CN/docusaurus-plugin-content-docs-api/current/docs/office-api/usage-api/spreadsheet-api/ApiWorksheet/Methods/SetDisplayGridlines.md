@@ -18,16 +18,16 @@ expression.SetDisplayGridlines(isDisplayed);
 
 ## 返回值
 
-此方法不返回任何数据。
+boolean
 
 ## 示例
 
-指定电子表格中是否必须显示工作表网格线。
+在电子表格中显示或隐藏工作表上的网格线。
 
 ```javascript editor-xlsx
-// How to set whether sheet gridlines should be displayed or not in a spreadsheet.
+// How do I turn gridlines on or off in a spreadsheet?
 
-// Set a boolean value representing whether to display gridlines or not in a spreadsheet.
+// Control whether the cell border lines are visible on the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("The sheet settings make it display no gridlines");

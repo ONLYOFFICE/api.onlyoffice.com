@@ -22,12 +22,12 @@ expression.SetTime(nTimeStamp);
 
 ## Example
 
-Set the timestamp of the comment creation in the current time zone format.
+Set the creation timestamp of a comment using the local time zone in a document.
 
 ```javascript editor-docx
-// How to change a creation time of a comment in a document.
+// How do I assign a specific creation time to a comment in a document?
 
-// Get all comments from the presentation and change its first one's creation time.
+// Correct or backdate a comment's recorded time when importing or migrating annotations.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

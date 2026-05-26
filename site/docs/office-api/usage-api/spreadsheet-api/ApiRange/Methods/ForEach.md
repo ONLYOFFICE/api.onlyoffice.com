@@ -18,16 +18,16 @@ expression.ForEach(fCallback);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-Execute a provided function once for each cell.
+Run a custom action on every cell in a range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to iterate through each cell from a range.
+// How do I apply the same operation to each cell in a selection in a spreadsheet?
 
-// For Each cycle implementation for cell range in a spreadsheet.
+// Loop over a group of cells and bold any that do not contain a specific value.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

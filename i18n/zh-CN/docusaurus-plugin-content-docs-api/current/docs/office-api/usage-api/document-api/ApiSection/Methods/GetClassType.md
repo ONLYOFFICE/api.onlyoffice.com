@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中节的类类型。
+读取文档中分配给节的类型标签。
 
 ```javascript editor-docx
-// How to identify the class type of a section in a document?
+// How do I find out what kind of object a section is in a document?
 
-// Obtain the class type identifier of a section object in a document.
+// Confirm the category of a section by checking its type identifier in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

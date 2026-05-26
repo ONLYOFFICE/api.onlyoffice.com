@@ -44,7 +44,7 @@ End Sub
 
 您可以将此 VBA 代码粘贴到 AI 插件转换器中。插件将返回以下 JavaScript 宏：
 
-``` ts
+```ts
 (function(){
     // 此代码将取消活动工作表中所有合并单元格的合并
     
@@ -104,7 +104,7 @@ End Sub
 
 使用 ONLYOFFICE 宏也可以实现完全相同的功能。如果您了解 Visual Basic for Applications 和 JavaScript，会发现它们的代码几乎一致且易于理解：
 
-``` ts
+```ts
 (function()
 {
   for (let run = 1; run <= 3; run += 1) {

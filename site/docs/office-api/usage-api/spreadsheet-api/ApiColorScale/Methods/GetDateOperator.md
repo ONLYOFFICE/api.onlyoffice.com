@@ -6,12 +6,12 @@ Inherited from [ApiFormatCondition.GetDateOperator](../../ApiFormatCondition/Met
 
 ## Example
 
-Get the date operator from a time period conditional formatting rule.
+Retrieve the time period comparison type used by a date-based formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve date operators from time period conditional formatting rules.
+// How do I check which date period a conditional formatting rule is set to highlight in a spreadsheet?
 
-// Get conditional formatting rule date operator.
+// Inspect the date condition of a rule to confirm it targets the intended time window in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

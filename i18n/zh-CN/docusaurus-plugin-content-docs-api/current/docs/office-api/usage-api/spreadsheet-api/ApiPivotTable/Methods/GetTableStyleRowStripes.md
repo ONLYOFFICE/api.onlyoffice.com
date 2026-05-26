@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-获取电子表格中数据透视表的表格样式行条纹。
+检查电子表格中数据透视表样式是否启用了交替行底纹。
 
 ```javascript editor-xlsx
-// How to get table style row stripes in a spreadsheet.
+// How do I find out if a pivot table style uses banded rows in a spreadsheet?
 
-// Create a pivot table, add data to it then get its table style row stripes in a spreadsheet.
+// Inspect the row stripe setting of a pivot table's visual theme in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

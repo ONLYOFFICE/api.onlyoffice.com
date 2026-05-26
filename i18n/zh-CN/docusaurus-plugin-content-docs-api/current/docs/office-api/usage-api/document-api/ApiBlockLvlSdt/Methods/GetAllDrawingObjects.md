@@ -20,12 +20,12 @@ expression.GetAllDrawingObjects();
 
 ## 示例
 
-获取文档中内容控件中的绘图对象集合。
+检索文档中内容控件内的所有形状和图像。
 
 ```javascript editor-docx
-// How can I get all drawing objects using a block-level content control in a document?
+// How do I get a list of every drawing placed inside a content control in a document?
 
-// Get all drawing objects for a block-level content control in a document.
+// Access the drawings within a content control to inspect or modify them in a document.
 
 let doc = Api.GetDocument();
 let paragraph = Api.CreateParagraph();

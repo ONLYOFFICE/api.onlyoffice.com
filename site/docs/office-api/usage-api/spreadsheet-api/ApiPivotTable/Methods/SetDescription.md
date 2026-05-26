@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set a description of a table in a spreadsheet.
+Assign a custom description to a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a description of a table in a spreadsheet.
+// How do I add or change the description text for a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its description in a spreadsheet.
+// Label a pivot table with a meaningful note so its purpose is clear in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

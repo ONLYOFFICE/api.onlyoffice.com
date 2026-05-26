@@ -22,12 +22,12 @@ expression.AddInteractiveSequence(drawing);
 
 ## 示例
 
-在演示文稿中创建交互式动画序列。
+添加通过单击演示文稿中形状触发的交互式动画。
 
 ```javascript editor-pptx
-// How can I add the interactive sequence using a timeline in a presentation?
+// How do I create an animation that responds to user clicks in a presentation?
 
-// Add the interactive sequence for a timeline in a presentation.
+// Define an animation sequence that starts when a specific shape is clicked in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

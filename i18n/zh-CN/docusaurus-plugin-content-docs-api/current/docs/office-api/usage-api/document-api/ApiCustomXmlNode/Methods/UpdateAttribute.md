@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-更新文档中自定义 XML 节点中现有属性的值。
+更新文档中 XML 节点上现有属性的值。
 
 ```javascript editor-docx
-// How can I update attribute using a custom XML node in a document?
+// How do I change the value of an attribute that already exists on a node in a document?
 
-// Update attribute for a custom XML node in a document.
+// Correct outdated metadata on a node without removing and re-adding the attribute in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

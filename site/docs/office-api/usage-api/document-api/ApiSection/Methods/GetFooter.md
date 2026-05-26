@@ -15,7 +15,7 @@ expression.GetFooter(sType, isCreate);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sType | Required | [HdrFtrType](../../Enumeration/HdrFtrType.md) |  | Footer type to get the content from. |
-| isCreate | Optional | boolean | false | Specifies whether to create a new footer or not with the specified footer type in case no footer with such a type could be found in the current section. |
+| isCreate | Optional | boolean | false | Specifies whether to create a new footer or not with the specified footer type in case |
 
 ## Returns
 
@@ -23,12 +23,12 @@ expression.GetFooter(sType, isCreate);
 
 ## Example
 
-Get the content for the specified footer type in a document.
+Access the footer area of a section in a document.
 
 ```javascript editor-docx
-// How to get the footer of the page.
+// How do I retrieve the footer from a specific section in a document?
 
-// Get the default footer from the final section in a document.
+// Read the footer content to add or inspect text at the bottom of pages in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

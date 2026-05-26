@@ -37,5 +37,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![修改验证规则](/assets/images/plugins/change-validation-rules.png#gh-light-mode-only)
-![修改验证规则](/assets/images/plugins/change-validation-rules.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/change-validation-rules.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/change-validation-rules.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

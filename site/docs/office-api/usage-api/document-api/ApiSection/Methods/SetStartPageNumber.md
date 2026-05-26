@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set a custom start page index for section.
+Set the starting page number for a section in a document.
 
 ```javascript editor-docx
-// How to set the start page number for the current section.
+// How do I control which number a section begins counting pages from in a document?
 
-// Get a section from the paragraph and change its first page number to 2.
+// Begin a section from a specific page number rather than continuing the default count in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

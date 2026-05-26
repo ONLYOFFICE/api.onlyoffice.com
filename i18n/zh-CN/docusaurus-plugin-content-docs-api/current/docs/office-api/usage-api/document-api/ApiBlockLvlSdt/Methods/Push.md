@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-推入段落以将其实际添加到文档中的容器。
+向文档中的内容控件添加段落。
 
 ```javascript editor-docx
-// Create a block content control and pushes a paragraph to it in a document.
+// How do I add a paragraph to a content control in a document?
 
-// Create the paragraph object, add a text to it, and push it to the block container in a document.
+// Insert new text into a content control by appending a paragraph to it in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

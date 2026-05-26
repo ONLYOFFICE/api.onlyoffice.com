@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取文档中的上一个内联绘图对象（如果存在）。
+访问文档中紧接在另一个绘图之前出现的绘图。
 
 ```javascript editor-docx
-// How to set vertical flip for the previous drawing in a document.
+// How do I get the preceding drawing object in a document?
 
-// Get the previous drawing and update its properties in a document.
+// Apply a horizontal flip to the earlier shape in a sequence of drawings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

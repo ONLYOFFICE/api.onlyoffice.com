@@ -22,12 +22,12 @@ expression.SetAuthorName(sAuthorName);
 
 ## 示例
 
-在演示文稿中为批注回复设置作者。
+更改演示文稿中批注回复的作者名称。
 
 ```javascript editor-pptx
-// How to change a comment's reply author name in a presentation.
+// How do I update who replied to a comment in a presentation?
 
-// Get all comments from the presentation and set an author to the first one's reply.
+// Assign a different author name to an existing comment reply in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

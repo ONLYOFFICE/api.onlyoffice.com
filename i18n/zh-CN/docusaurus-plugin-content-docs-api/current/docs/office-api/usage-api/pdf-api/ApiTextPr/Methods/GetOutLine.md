@@ -20,12 +20,12 @@ expression.GetOutLine();
 
 ## 示例
 
-检查 PDF 文档中的文本是否有轮廓。
+检查 PDF 中的文本是否有轮廓边框效果。
 
 ```javascript editor-pdf
-// How to know whether an outline is set to the text in a PDF document.
+// How do I determine if text has an outline applied in a PDF?
 
-// Get the text properties of the run and find whether it is outlined or not in a PDF document.
+// Retrieve the outline properties from text formatting in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a drawing object in a presentation.
+Identify the type of a drawing object in a presentation.
 
 ```javascript editor-pptx
-// How to identify the class type of a drawing object in a presentation?
+// How do I find out what kind of object a shape is in a presentation?
 
-// Obtain the class type identifier of a drawing object object in a presentation.
+// Get the name and display the type category of a drawing object in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

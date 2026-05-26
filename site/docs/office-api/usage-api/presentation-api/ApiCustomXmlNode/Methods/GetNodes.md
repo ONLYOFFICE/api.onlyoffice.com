@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## Example
 
-Get nodes from a custom XML node based on an XPath in a presentation.
+Find XML elements matching a path in a presentation.
 
 ```javascript editor-pptx
-// How can I get the nodes using a custom XML node in a presentation?
+// How do I select multiple XML nodes using a path in a presentation?
 
-// Get the nodes for a custom XML node in a presentation.
+// Retrieve child elements from an XML node in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

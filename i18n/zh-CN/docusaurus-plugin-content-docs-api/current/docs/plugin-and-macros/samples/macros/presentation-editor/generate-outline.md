@@ -53,5 +53,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![生成演示文稿大纲](/assets/images/plugins/generate-outline.png#gh-light-mode-only)
-![生成演示文稿大纲](/assets/images/plugins/generate-outline.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/generate-outline.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/generate-outline.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

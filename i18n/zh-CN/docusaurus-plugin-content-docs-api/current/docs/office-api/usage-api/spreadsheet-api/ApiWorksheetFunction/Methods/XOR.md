@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中返回所有参数的逻辑异或值。当 true 输入的数量为奇数时返回 true，为偶数时返回 false。
+在电子表格中对多个逻辑值执行异或运算。
 
 ```javascript editor-xlsx
-// How to return the logical Exclusive Or value of all arguments in a spreadsheet.
+// How do I test whether an odd number of conditions are true in a spreadsheet?
 
-// Use a function to calculate Exclusive Or in a spreadsheet.
+// Determine if exactly one or an odd number of values are true in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

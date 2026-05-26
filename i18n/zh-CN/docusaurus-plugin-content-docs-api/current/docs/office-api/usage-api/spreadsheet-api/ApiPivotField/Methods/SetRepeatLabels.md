@@ -22,12 +22,12 @@ expression.SetRepeatLabels(repeat);
 
 ## 示例
 
-在电子表格中设置透视字段的重复标签。
+在电子表格中的每行上重复透视字段的标签，而不是仅显示一次。
 
 ```javascript editor-xlsx
-// How to change a pivot field repeated labels in a spreadsheet.
+// How do I make a pivot field label appear on each row of the pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then add repeat labels of a specified pivot in a spreadsheet.
+// Fill in blank label cells so every row in a pivot group is clearly identified in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

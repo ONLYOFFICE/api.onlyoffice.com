@@ -20,12 +20,12 @@ expression.Copy();
 
 ## 示例
 
-在演示文稿中创建 run 的副本。
+在演示文稿中复制文本运行。
 
 ```javascript editor-pptx
-// How to copy a text run object and insert it to the paragraph in a presentation.
+// How do I copy a text run and add it to a paragraph in a presentation?
 
-// Create a duplicate of a text in a presentation.
+// Reuse text formatting and content by copying a text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

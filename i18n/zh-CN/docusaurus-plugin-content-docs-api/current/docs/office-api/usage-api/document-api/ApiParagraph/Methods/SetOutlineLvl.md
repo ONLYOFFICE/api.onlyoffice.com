@@ -6,12 +6,12 @@
 
 ## 示例
 
-通过文档中的段落属性获取指定段落的大纲级别。
+为段落分配大纲级别以控制其在文档结构中的位置。
 
 ```javascript editor-docx
-// How to set outline lvl for a paragraph properties in a document?
+// How do I set the outline level of a paragraph in a document?
 
-// Set outline lvl and display the result in a document.
+// Change a paragraph's heading depth so it appears correctly in the navigation panel.
 
 const doc = Api.GetDocument();
 

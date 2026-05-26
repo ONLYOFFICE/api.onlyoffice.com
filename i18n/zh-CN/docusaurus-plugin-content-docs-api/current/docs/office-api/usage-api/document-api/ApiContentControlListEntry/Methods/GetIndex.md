@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取文档中列表项集合中内容控件列表项的索引。
+检索文档中下拉列表条目在其列表内的位置。
 
 ```javascript editor-docx
-// How to get the index for a content control list entry in a document?
+// How do I find the index of a specific item in a dropdown list in a document?
 
-// Get the index and display the result in a document.
+// Check where a list entry sits when you need to track or compare item order in a document.
 
 let doc = Api.GetDocument();
 let cc = Api.CreateComboBoxContentControl([{display: "Mercury", value: "planet1"}, {display: "Venus", value: "planet2"}, {display: "Earth", value: "planet3"}, {display: "Mars", value: "planet4"}], 2);

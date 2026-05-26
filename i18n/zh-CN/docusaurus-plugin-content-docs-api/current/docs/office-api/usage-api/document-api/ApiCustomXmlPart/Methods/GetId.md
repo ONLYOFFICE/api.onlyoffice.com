@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中自定义 XML 部件的 ID。
+读取文档中自定义 XML 部件的唯一标识符。
 
 ```javascript editor-docx
-// How do I get the id in a document?
+// How do I get the ID assigned to a custom XML part in a document?
 
-// Get the id using a custom XML part object in a document.
+// Store or reference a custom XML part by its ID for later lookup in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

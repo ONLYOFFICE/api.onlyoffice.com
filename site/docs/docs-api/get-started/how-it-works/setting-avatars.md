@@ -36,9 +36,9 @@ The figure and steps below explain how user avatars are set in ONLYOFFICE Docs.
 
 3. In the initialization script, specify the event handler for requesting users' avatars. When the user opens comments or the co-editors list, the [`onRequestUsers`](../../usage-api/config/events.md#onrequestusers) event is fired. The event's `data.c` parameter is set to `"info"`, and `data.id` contains the IDs of the users whose avatars are needed.
 
-   <img alt="Avatars in comments" src="/assets/images/editor/avatars-comments.png" width="295px" />
+   ![Avatars in comments](/assets/images/editor/avatars-comments.png#gh-light-mode-only)![Avatars in comments](/assets/images/editor/avatars-comments.dark.png#gh-dark-mode-only)
 
-   <img alt="Co-editors avatars" src="/assets/images/editor/avatars-coediting.png" width="298px" />
+   ![Co-editors avatars](/assets/images/editor/avatars-coediting.png#gh-light-mode-only)![Co-editors avatars](/assets/images/editor/avatars-coediting.dark.png#gh-dark-mode-only)
 
    ``` ts
    function onRequestUsers(event) {

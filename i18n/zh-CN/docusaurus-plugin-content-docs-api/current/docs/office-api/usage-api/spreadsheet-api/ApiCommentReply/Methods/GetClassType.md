@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中批注回复的类类型。
+检查电子表格中批注回复的对象类型。
 
 ```javascript editor-xlsx
-// How to identify the class type of a comment reply in a spreadsheet?
+// How do I confirm the kind of object returned when working with a comment reply in a spreadsheet?
 
-// Obtain the class type identifier of a comment reply object in a spreadsheet.
+// Verify the category label assigned to a reply within a comment thread in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

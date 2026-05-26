@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-为形状设置纯色填充颜色。在电子表格中创建矩形并为其应用红色填充。
+在矩形形状添加到电子表格的工作表后为其应用纯红色填充。
 
 ```javascript editor-xlsx
-// How can I set fill using a shape in a spreadsheet?
+// How do I change the background color of a shape in a spreadsheet?
 
-// Set fill for a shape in a spreadsheet.
+// Paint the interior of a shape with a chosen color to update its appearance in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());

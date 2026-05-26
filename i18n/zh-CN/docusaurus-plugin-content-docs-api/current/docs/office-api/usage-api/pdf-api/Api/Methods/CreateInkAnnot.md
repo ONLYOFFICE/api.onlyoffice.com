@@ -26,7 +26,7 @@ expression.CreateInkAnnot(rect, pathList);
 创建墨迹注释并将其添加到页面。
 
 ```javascript editor-pdf
-// How to create the ink annot in a PDF document?
+// Create the ink annot in a PDF document.
 
 // Create the ink annot using the PDF document API.
 

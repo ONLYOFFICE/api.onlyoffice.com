@@ -15,7 +15,7 @@ expression.MoveField(identifier, type, index);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | identifier | 必需 | number \| string |  | 字段的索引号或名称。 |
-| type | 必需 | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 移动数据透视表字段的方向，或透视字段方向类型。 |
+| type | 必需 | [PivotMoveFieldType](../../Enumeration/PivotMoveFieldType.md) \| [PivotFieldOrientationType](../../Enumeration/PivotFieldOrientationType.md) |  | 移动数据透视表字段的方向， |
 | index | 可选 | number |  | 新类别中的字段索引。 |
 
 ## 返回值
@@ -24,12 +24,12 @@ expression.MoveField(identifier, type, index);
 
 ## 示例
 
-在电子表格中移动透视字段。
+通过将字段移动到不同区域来重新排列电子表格中的数据透视表字段。
 
 ```javascript editor-xlsx
-// How to change a position of a field by columns in a spreadsheet.
+// How do I change which area a field appears in (rows, columns, or values) in a spreadsheet?
 
-// Create a pivot table, add data to it then move a field using its name in a spreadsheet.
+// Reorganize a pivot table layout by shifting a field from rows to columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -61,9 +61,5 @@ pivotTable.AddFields({
 
 pivotTable.AddDataField('Price');
 
-Api.GetActiveSheet().GetRange('F4').SetValue('Style field will be moved in columns soon');
-
-setTimeout(function () {
-    pivotTable.MoveField('Style', 'Columns');
-}, 5000);
+pivotTable.MoveField('Style', 'Columns');
 ```

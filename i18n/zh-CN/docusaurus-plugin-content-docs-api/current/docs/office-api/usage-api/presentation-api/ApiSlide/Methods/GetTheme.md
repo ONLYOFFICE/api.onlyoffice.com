@@ -23,9 +23,9 @@ expression.GetTheme();
 获取演示文稿中当前幻灯片的主题。
 
 ```javascript editor-pptx
-// How to return a theme of the slide.
+// Retrieve the slide theme using GetTheme and modify its color scheme.
 
-// Get a slide, get its theme and its properties.
+// Apply the new theme color scheme and display a chart with the updated colors.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

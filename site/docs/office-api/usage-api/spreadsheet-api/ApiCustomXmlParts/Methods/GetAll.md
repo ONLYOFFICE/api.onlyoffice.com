@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get all custom XML parts in a spreadsheet.
+Collect every stored XML block from a workbook in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve all custom XML parts from the workbook in a spreadsheet.
+// How do I retrieve all embedded XML data at once from a workbook in a spreadsheet?
 
-// Get all for a custom XML parts in a spreadsheet.
+// Loop through each saved XML entry to inspect or process it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let xmlManager = worksheet.GetCustomXmlParts();

@@ -14,7 +14,7 @@ expression.MEDIAN(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the median will be calculated. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the median will be calculated. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the median, or the number in the middle of the set of given numbers in a spreadsheet.
+Find the middle value from a set of numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a median from the list in a spreadsheet.
+// What is the median number in a list in a spreadsheet?
 
-// Use a function to get a value that located in the middle of the list in a spreadsheet.
+// Extract the median value from a range of values in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

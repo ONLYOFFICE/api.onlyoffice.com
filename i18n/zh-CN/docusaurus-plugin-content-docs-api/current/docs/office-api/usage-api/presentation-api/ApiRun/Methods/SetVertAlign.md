@@ -25,12 +25,12 @@ expression.SetVertAlign(sType);
 
 ## 示例
 
-指定在演示文稿中相对于文本 run 默认外观应用于当前 run 内容的对齐方式。
+在演示文稿中将文本定位在基线的上方、上面或下方。
 
 ```javascript editor-pptx
-// How to change a vertical alignment of a text run in a presentation.
+// How do I align text vertically in a presentation?
 
-// Create a new text run and make it subscript, baseline or superscript in a presentation.
+// Create text runs and apply subscript, baseline, and superscript alignment in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

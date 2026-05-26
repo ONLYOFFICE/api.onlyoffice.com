@@ -23,12 +23,12 @@ number
 
 ## 示例
 
-在电子表格中返回独立性检验：统计量的卡方分布值和相应的自由度。
+比较观测计数与预期计数以确定电子表格中两个类别是否独立。
 
 ```javascript editor-xlsx
-// How to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom in a spreadsheet.
+// Calculate the probability that differences between actual and expected data occur by chance in a spreadsheet.
 
-// Use function to return the value from the chi-squared distribution for the statistic and the appropriate degrees of freedom in a spreadsheet.
+// Assess whether patterns in your data are statistically meaningful or just random variation in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

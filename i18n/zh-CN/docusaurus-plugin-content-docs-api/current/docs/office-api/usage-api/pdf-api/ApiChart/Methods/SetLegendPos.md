@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中放置图表图例。
+在 PDF 中定位图表上的图例。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its legend's position in a PDF document.
+// How do I move the legend to the top, bottom, left, or right in a PDF?
 
-// Set legend pos for a chart in a PDF document.
+// Place the legend at the bottom of the chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -16,7 +16,7 @@ expression.InsertContent(arrContent, isInline, oPr);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arrContent | Required | [DocumentElement](../../Enumeration/DocumentElement.md)[] |  | An array of elements to insert. |
 | isInline | Optional | boolean | false | Inline insert or not (works only for the last and the first element and only if it's a paragraph). |
-| oPr | Optional | object |  | Specifies that text and paragraph document properties are preserved for the inserted elements.  The object should look like this: &#123;"KeepTextOnly": true&#125;. |
+| oPr | Optional | object |  | Specifies that text and paragraph document properties are preserved for the inserted elements.  |
 
 ## Returns
 
@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-Insert an array of elements into the current position of the document.
+Insert a collection of elements at the current position in a document.
 
 ```javascript editor-docx
-// How to insert the paragraph to the document.
+// How do I add multiple paragraphs at once to a document?
 
-// Create a paragraph and show it in a document.
+// Programmatically place pre-built content blocks into the document without appending them one by one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

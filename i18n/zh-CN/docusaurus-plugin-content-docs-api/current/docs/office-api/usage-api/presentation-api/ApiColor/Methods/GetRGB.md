@@ -20,12 +20,12 @@ Object
 
 ## 示例
 
-获取演示文稿中形状填充颜色的 RGB 分量。
+从颜色对象提取 RGB 分量值。
 
 ```javascript editor-pptx
-// How do I get the r g b in a presentation?
+// Convert hexadecimal color to separate red, green, blue channels.
 
-// Get the r g b using a color object in a presentation.
+// Get the RGB components of a color and display them within a shape text element.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

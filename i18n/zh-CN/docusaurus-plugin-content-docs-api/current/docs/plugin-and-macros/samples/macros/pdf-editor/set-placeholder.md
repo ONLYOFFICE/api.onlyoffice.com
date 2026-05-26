@@ -22,5 +22,11 @@ hide_table_of_contents: true
 
 ## 结果
 
-![设置占位文本](/assets/images/plugins/set-placeholder.png#gh-light-mode-only)
-![设置占位文本](/assets/images/plugins/set-placeholder.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/set-placeholder.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/set-placeholder.dark.webm" type="video/webm" />
+  您的浏览器不支持HTML5视频.
+</video>

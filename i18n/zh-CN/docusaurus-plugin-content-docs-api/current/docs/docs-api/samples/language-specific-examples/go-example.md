@@ -33,14 +33,14 @@ sidebar_position: -7
 
 下载 Go 示例压缩包并解压，或直接从 [GitHub](https://github.com/ONLYOFFICE/document-server-integration/tree/master/web/documentserver-example/go) 获取源代码：
 
-``` sh
+```sh
 curl --output Go.Example.zip --location https://github.com/ONLYOFFICE/document-server-integration/releases/latest/download/Go.Example.zip
 unzip Go.Example.zip
 ```
 
 切换到项目目录：
 
-``` sh
+```sh
 cd "Go Example"
 ```
 
@@ -81,7 +81,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 打开 *config/configuration.json* 文件并启用 JWT：
 
-``` json
+```json
 {
     "JWT_IS_ENABLED": true
 }
@@ -89,7 +89,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 同样也要与 ONLYOFFICE 文档[指定相同密钥](https://helpcenter.onlyoffice.com/installation/docs-configure-jwt.aspx)：
 
-``` json
+```json
 {
     "JWT_SECRET": "secret"
 }

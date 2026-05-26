@@ -6,12 +6,12 @@
 
 ## 示例
 
-为当前图形对象设置填充格式属性。
+为已放置在电子表格工作表上的形状应用渐变填充。
 
 ```javascript editor-xlsx
-// How to color a drawing with a radiant fill in a spreadsheet.
+// How do I change the background of a shape to a radial gradient in a spreadsheet?
 
-// Change the background color of the shape in a spreadsheet.
+// Replace a solid fill with a smooth color blend across a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));

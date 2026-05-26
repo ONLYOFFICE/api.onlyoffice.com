@@ -25,12 +25,12 @@ boolean
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
+在 PDF 中定义形状几何图形内的文本边界。
 
 ```javascript editor-pdf
-// How to set text rect for a geometry in a PDF document?
+// How can I set where text appears inside a shape in a PDF?
 
-// Set text rect and display the result in a PDF document.
+// Establish custom text placement boundaries in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

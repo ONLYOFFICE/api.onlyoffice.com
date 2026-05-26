@@ -26,7 +26,7 @@ This method doesn't return any data.
 
 **Example**:
 
-``` ts
+```ts
 Asc.plugin.executeMethod("AddToolbarMenuItem", [{
   guid: Asc.plugin.guid,
   tabs: [
@@ -65,7 +65,7 @@ The main toolbar menu item.
 
 **Example**:
 
-``` ts
+```ts
 const oToolbarMenuMainItem = {
   guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
   tabs: [oToolbarMenuTab],
@@ -88,7 +88,7 @@ The toolbar menu tab.
 
 **Example**:
 
-``` ts
+```ts
 const oToolbarMenuTab = {
   id: "ChatGPT",
   text: "AI Assistant",
@@ -120,7 +120,7 @@ The toolbar menu item.
 
 **Example**:
 
-``` ts
+```ts
 const oToolbarMenuItem = {
   id: "MeaningItem",
   type: "button",
@@ -220,7 +220,7 @@ The toolbar menu item type. The *button* and *big-button* values are the same an
 
 A regular button.
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -234,7 +234,7 @@ A regular button.
 
 A button that is split into two parts: the top part of the button can be toggled separately from the bottom part, that includes a drop-down menu.
 
-``` json
+```json
 {
   "text": "caption",
   "split": true,
@@ -249,7 +249,7 @@ A button that is split into two parts: the top part of the button can be toggled
 
 A button that is split into two parts, each part can be clicked separately, the bottom part of the item includes a drop-down menu.
 
-``` json
+```json
 {
   "text": "caption",
   "split": true,
@@ -264,7 +264,7 @@ A button that is split into two parts, each part can be clicked separately, the 
 
 A button with a drop-down menu which opens when the button is clicked.
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -279,7 +279,7 @@ A button with a drop-down menu which opens when the button is clicked.
 
 A button that can be toggled.
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -303,7 +303,7 @@ The event called when the toolbar menu button has been clicked. [Subscribe](../i
 
 **Example**:
 
-``` ts
+```ts
 window.Asc.plugin.event_onToolbarMenuClick = (id) => {
   console.log("Toolbar menu item clicked: " + id);
 };
@@ -327,7 +327,7 @@ This method doesn't return any data.
 
 **Example**:
 
-``` ts
+```ts
 Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
   {
     let buttonMainToolbar = new Asc.ButtonToolbar(null, id);
@@ -368,7 +368,7 @@ This method doesn't return any data.
 
 **Example**:
 
-``` ts
+```ts
 plugin.attachToolbarMenuClickEvent("my_tab", (data) => {
   console.log(data);
 });

@@ -26,12 +26,12 @@ boolean
 
 ## 示例
 
-在文档中向段落添加标题交叉引用。
+在文档的段落中插入对标题的交叉引用。
 
 ```javascript editor-docx
-// How to create a heading reference to the paragraph in a document.
+// How do I link paragraph text to an existing heading in a document?
 
-// Add a cross-reference to the heading of the paragraph in a document.
+// Let readers jump to a titled section by embedding a heading reference inside another paragraph in a document.
 
 let doc = Api.GetDocument();
 let newDocumentStyle = doc.GetStyle("Heading 1");

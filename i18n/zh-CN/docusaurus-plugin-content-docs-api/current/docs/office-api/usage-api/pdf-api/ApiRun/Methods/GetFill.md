@@ -6,12 +6,12 @@
 
 ## 示例
 
-获取 PDF 文档中的文本颜色。
+读取 PDF 中的文本颜色设置。
 
 ```javascript editor-pdf
-// How to know with which color a text is filled in a PDF document.
+// How do I find out what color text is using in a PDF?
 
-// Get the text properties of the run and get its font color in a PDF document.
+// Retrieve the fill color information from text properties in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

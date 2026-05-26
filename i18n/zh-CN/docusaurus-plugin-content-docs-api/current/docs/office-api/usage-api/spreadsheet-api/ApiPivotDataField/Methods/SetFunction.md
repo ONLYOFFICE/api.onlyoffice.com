@@ -22,12 +22,12 @@ expression.SetFunction(func);
 
 ## 示例
 
-在电子表格中为数据字段设置函数。
+更改电子表格中数据透视表值字段使用的计算类型。
 
 ```javascript editor-xlsx
-// How to change a function of a table element in a spreadsheet.
+// How do I switch a data field from summing values to counting them in a spreadsheet?
 
-// Create a pivot table, add data to it then set a custom data field's function in a spreadsheet.
+// Pick a different aggregation method, such as average or count, for a pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -94,5 +94,11 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![SplitSlides](/assets/images/plugins/split-slides.png#gh-light-mode-only)
-![SplitSlides](/assets/images/plugins/split-slides.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/split-slides.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/split-slides.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

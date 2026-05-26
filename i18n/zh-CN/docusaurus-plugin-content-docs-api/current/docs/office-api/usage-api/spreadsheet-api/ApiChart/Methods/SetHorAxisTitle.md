@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在电子表格中指定图表水平轴标题。
+为电子表格中图表的水平轴设置标题。
 
 ```javascript editor-xlsx
-// How to set title for horizontal axis in a spreadsheet.
+// How do I label the horizontal axis on a chart in a spreadsheet?
 
-// Add title for the axis using the chart API in a spreadsheet.
+// Give the bottom axis a descriptive name to clarify the data categories in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -10,18 +10,20 @@ ApiTextField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 | [ClearFormat](./Methods/ClearFormat.md) | boolean | 清除字段的格式。 |
 | [Delete](./Methods/Delete.md) | boolean | 从文档中移除字段。 |
 | [GetAllWidgets](./Methods/GetAllWidgets.md) | [ApiWidget](../Enumeration/ApiWidget.md)[] | 获取当前字段的控件数组。 |
-| [GetCharLimit](./Methods/GetCharLimit.md) | number | 获取文本字段的字符限制。&lt;note&gt; 字符限制为 0 表示字段没有字符限制 |
+| [GetCharLimit](./Methods/GetCharLimit.md) | number | 获取文本字段的字符限制。 |
 | [GetClassType](./Methods/GetClassType.md) | "textField" | 返回 ApiTextField 类的类型。 |
 | [GetFullName](./Methods/GetFullName.md) | string | 获取字段完整名称。 |
+| [GetInternalId](./Methods/GetInternalId.md) | string | 返回当前字段的内部 ID。 |
 | [GetPartialName](./Methods/GetPartialName.md) | string | 获取字段部分名称。 |
+| [GetTooltip](./Methods/GetTooltip.md) | boolean | 获取字段工具提示 |
 | [GetValue](./Methods/GetValue.md) | string | 获取字段值 |
 | [IsComb](./Methods/IsComb.md) | boolean | 检查文本字段是否为梳状。 |
 | [IsMultiline](./Methods/IsMultiline.md) | boolean | 检查文本字段是否为多行。 |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | 检查字段是否为只读 |
 | [IsRequired](./Methods/IsRequired.md) | boolean | 检查字段是否为必填 |
 | [IsScrollLongText](./Methods/IsScrollLongText.md) | boolean | 检查文本字段是否可以滚动长文本。 |
-| [SetCharLimit](./Methods/SetCharLimit.md) | boolean | 设置文本字段的字符限制。&lt;note&gt; 字符限制为 0 表示字段没有字符限制 |
-| [SetComb](./Methods/SetComb.md) | boolean | 设置文本字段的梳状属性。💡 字符限制应大于 0 |
+| [SetCharLimit](./Methods/SetCharLimit.md) | boolean | 设置文本字段的字符限制。 |
+| [SetComb](./Methods/SetComb.md) | boolean | 设置文本字段的梳状属性。 |
 | [SetDateFormat](./Methods/SetDateFormat.md) | boolean | 设置字段的日期格式。 |
 | [SetFullName](./Methods/SetFullName.md) | boolean | 如果可能，设置新的字段名称。 |
 | [SetMask](./Methods/SetMask.md) | boolean | 设置字段输入文本的掩码。 |
@@ -35,5 +37,6 @@ ApiTextField 是 [ApiBaseField](../ApiBaseField/ApiBaseField.md) 的子类。
 | [SetScrollLongText](./Methods/SetScrollLongText.md) | boolean | 设置文本字段可滚动长文本的属性。 |
 | [SetSpecialFormat](./Methods/SetSpecialFormat.md) | boolean | 设置字段的特殊格式。 |
 | [SetTimeFormat](./Methods/SetTimeFormat.md) | boolean | 设置字段的时间格式。 |
-| [SetValidateRange](./Methods/SetValidateRange.md) | boolean | 设置字段的验证范围。💡 只能应用于具有百分比或数字格式的字段。 |
+| [SetTooltip](./Methods/SetTooltip.md) | boolean | 设置字段工具提示 |
+| [SetValidateRange](./Methods/SetValidateRange.md) | boolean | 设置字段的验证范围。 |
 | [SetValue](./Methods/SetValue.md) | boolean | 设置字段值 |

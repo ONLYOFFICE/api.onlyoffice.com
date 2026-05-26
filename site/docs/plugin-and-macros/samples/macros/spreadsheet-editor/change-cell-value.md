@@ -12,7 +12,7 @@ Changes the selected cell value.
 This macro was converted from VBA code using the [AI plugin](/docs/plugin-and-macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin).
 :::
 
-``` ts
+```ts
 (function(){
     // Get the active sheet
     var activeSheet = Api.GetActiveSheet();
@@ -38,4 +38,11 @@ End Sub
 
 ## Result
 
-![Change cell value](/assets/images/plugins/change-cell-value.png#gh-light-mode-only)![Change cell value](/assets/images/plugins/change-cell-value.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/change-cell-value.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/change-cell-value.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

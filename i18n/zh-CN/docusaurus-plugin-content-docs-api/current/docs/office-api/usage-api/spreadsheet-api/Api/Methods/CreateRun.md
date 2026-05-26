@@ -20,12 +20,12 @@ expression.CreateRun();
 
 ## 示例
 
-在电子表格中创建要插入到段落或表格中的新的较小文本块。
+向电子表格中形状内的段落添加独立样式的文本段。
 
 ```javascript editor-xlsx
-// Create a text to construct a paragraph in a spreadsheet.
+// How do I insert multiple text pieces with different formatting into one paragraph in a spreadsheet?
 
-// Add a text in a paragraph in a spreadsheet.
+// Build a paragraph from separate text portions so each portion can carry its own style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

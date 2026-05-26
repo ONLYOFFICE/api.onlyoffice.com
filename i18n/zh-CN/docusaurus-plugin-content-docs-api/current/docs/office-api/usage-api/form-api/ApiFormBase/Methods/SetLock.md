@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定当前表单是否应被锁定。
+锁定文档中的表单字段以防止编辑。
 
 ```javascript editor-forms
-// How to lock a form.
+// How do I lock a form field so it cannot be changed in a document?
 
-// Make sure that the form cannot be edited.
+// Protect specific fields from modification while keeping others editable.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

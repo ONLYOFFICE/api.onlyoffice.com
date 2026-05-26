@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-Check if change tracking mode is enabled or not in a document.
+Check whether revision tracking is currently enabled in a document.
 
 ```javascript editor-docx
-// How to track revisions of the document.
+// How do I find out if change tracking is turned on in a document?
 
-// Get a boolean value that shows whether revision tracking is enabled or not in a document.
+// Verify the tracking state before deciding whether to record or ignore edits in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

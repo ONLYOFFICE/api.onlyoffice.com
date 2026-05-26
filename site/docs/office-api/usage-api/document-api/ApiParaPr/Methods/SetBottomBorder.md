@@ -29,12 +29,12 @@ boolean
 
 ## Example
 
-Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings in a document.
+Add a bottom border to a paragraph via its style in a document.
 
 ```javascript editor-docx
-// Add the bottom border to the paragraph in a document.
+// How do I place a line below a paragraph using paragraph border settings in a document?
 
-// Get the first paragraph and set its border in a document.
+// Visually separate a styled paragraph from content below it by drawing a bottom edge.
 
 let doc = Api.GetDocument();
 let myStyle = doc.CreateStyle("My document style");

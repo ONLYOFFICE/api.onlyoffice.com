@@ -26,9 +26,9 @@ boolean
 在电子表格中检查两个文本字符串是否完全相同，并返回 true 或 false。此函数区分大小写。
 
 ```javascript editor-xlsx
-// How to compare strings in a spreadsheet.
+// Compare two text strings with case sensitivity.
 
-// Use function to compare two texts (case-sensitive) in a spreadsheet.
+// Verify if two texts are identical using EXACT function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

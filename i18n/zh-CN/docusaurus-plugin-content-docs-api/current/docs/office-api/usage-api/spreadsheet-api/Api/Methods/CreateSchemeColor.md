@@ -22,12 +22,12 @@ expression.CreateSchemeColor(schemeColorId);
 
 ## 示例
 
-在电子表格中从可用的配色方案中选择创建复杂配色方案。
+按名称选取主题颜色并将其应用于电子表格中的形状。
 
 ```javascript editor-xlsx
-// Get a color scheme using its name in a spreadsheet.
+// How do I use one of the document's theme colors to fill a shape in a spreadsheet?
 
-// How to create a color from the schemes in a spreadsheet.
+// Reuse a named theme color so the shape automatically matches the document palette in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let schemeColor = Api.CreateSchemeColor("dk1");

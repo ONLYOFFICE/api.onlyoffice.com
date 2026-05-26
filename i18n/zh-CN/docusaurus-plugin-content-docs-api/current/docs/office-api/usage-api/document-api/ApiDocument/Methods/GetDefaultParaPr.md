@@ -20,12 +20,12 @@ expression.GetDefaultParaPr();
 
 ## 示例
 
-获取文档中当前文档内的默认段落属性集。
+读取并修改文档中的默认段落格式属性。
 
 ```javascript editor-docx
-// How to update the default paragraph properties such as spacing, justification, etc in a document.
+// How do I change the default line spacing and paragraph spacing for all paragraphs in a document?
 
-// Display the paragraph text after changing its default properties in a document.
+// Adjust justification and spacing at the style level so every new paragraph inherits the settings in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

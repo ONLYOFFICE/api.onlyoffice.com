@@ -25,12 +25,12 @@ number
 
 ## 示例
 
-在电子表格中计算满足一组给定条件的指定单元格数量。
+计算电子表格中同时满足多个条件的单元格。
 
 ```javascript editor-xlsx
-// How to find a number of cells that satisfy a list of conditions.
+// What is the total of rows matching all your conditions in a spreadsheet?
 
-// Use function to get cells if conditions are met.
+// Find entries that pass every requirement across different columns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

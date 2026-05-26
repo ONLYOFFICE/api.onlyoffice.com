@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中指定主要垂直网格线的视觉属性。
+设置电子表格中图表主垂直网格线的样式。
 
 ```javascript editor-xlsx
-// Set a stroke as a major vertical gridline in a spreadsheet.
+// How do I change the appearance of the main vertical gridlines on a chart in a spreadsheet?
 
-// How to add gridlines for the chart in a spreadsheet.
+// Give the primary vertical gridlines a custom color and thickness to guide the eye across the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

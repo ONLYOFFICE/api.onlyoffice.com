@@ -25,9 +25,9 @@ expression.detachEvent(eventName);
 在演示文稿中取消订阅超链接点击事件。
 
 ```javascript editor-pptx
-// How to detach an event on hyperlink click in a presentation.
+// Detaching events removes previously registered listeners to stop event handling.
 
-// Unsubscribe from the hyperlink click event in a presentation.
+// Remove the listener from the asc_onHyperlinkClick event using Api.detachEvent().
 
 Api.detachEvent("asc_onHyperlinkClick");
 ```

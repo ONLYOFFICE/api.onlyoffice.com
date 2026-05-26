@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-为 PDF 文档创建带有参考线和连接点的可调节几何图形。显示调整值并将自定义几何图形应用于形状。
+在 PDF 中标记连接器可以附加到形状的位置。
 
 ```javascript editor-pdf
-// How to add the connection point for a geometry in a PDF document?
+// How do I specify where lines can connect to my shape in a PDF?
 
-// Add the connection point and display the result in a PDF document.
+// Define attachment points and apply them to a custom shape in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

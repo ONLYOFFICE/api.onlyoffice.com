@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-向文档中的自定义 XML 部件插入新的 XML 元素。
+向文档中的自定义 XML 部件添加新的子元素。
 
 ```javascript editor-docx
-// How can I insert the element using a custom XML part in a document?
+// How do I insert an XML element at a specific position within a custom XML part in a document?
 
-// Insert the element for a custom XML part in a document.
+// Build up an XML structure incrementally by appending or prepending elements in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

@@ -1,6 +1,6 @@
 # SelectAnnotationRange
 
-使用给定的批注选择文档中的文本。
+使用给定的注解在文档中选择文本。
 
 ## 语法
 
@@ -14,7 +14,7 @@ expression.SelectAnnotationRange(annotation);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| annotation | 必需 | [TextAnnotation](../Enumeration/TextAnnotation.md) |  | 批注选择对象。 |
+| annotation | 必需 | [TextAnnotation](../Enumeration/TextAnnotation.md) |  | 注解选择对象。 |
 
 ## 返回值
 

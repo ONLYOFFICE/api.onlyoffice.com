@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get content of a drawing in a document.
+Get the inner content of a drawing object to add text inside it in a document.
 
 ```javascript editor-docx
-// How do I get the content in a document?
+// How do I access the editable content area inside a drawing shape in a document?
 
-// Get the content using a drawing object object in a document.
+// Insert a paragraph with custom text directly into a shape's content container in a document.
 
 const doc = Api.GetDocument();
 let firstParagraph = doc.GetElement(0);

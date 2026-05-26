@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取电子表格中渐变光圈的类类型。
+读取电子表格中渐变光圈对象的类类型。
 
 ```javascript editor-xlsx
-// How to identify the class type of a gradient stop in a spreadsheet?
+// How do I find out what type a gradient stop object is in a spreadsheet?
 
-// Obtain the class type identifier of a gradient stop object in a spreadsheet.
+// Confirm the category of a gradient stop by checking its type label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let gradientStop1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);

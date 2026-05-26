@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-创建具有可调参数和参考线的形状。在文档中为自定义几何图形设置文本矩形和连接点。
+在文档中为自定义形状几何图形添加调整参数。
 
 ```javascript editor-docx
-// How do I add the adj in a document?
+// How do I define a named adjustment value for a custom shape in a document?
 
-// Add the adj using a geometry object in a document.
+// Control the proportions of a shape dynamically using a named geometry adjustment.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

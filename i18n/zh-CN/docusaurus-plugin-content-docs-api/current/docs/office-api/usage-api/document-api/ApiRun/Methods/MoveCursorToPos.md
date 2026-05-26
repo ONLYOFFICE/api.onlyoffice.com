@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档中将光标放置在文本的指定位置。
+将光标移动到文档中文本运行内的特定字符位置。
 
 ```javascript editor-docx
-// How to move the cursor to the specific position of the text in a document.
+// How do I place the cursor at a chosen position inside a text run in a document?
 
-// Add text to the paragraph and move the cursor to the 16 position in a document.
+// Position the insertion point at an exact offset within a piece of text in a document.
 
 let doc = Api.GetDocument();
 let para = doc.GetElement(0);

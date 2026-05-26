@@ -15,7 +15,7 @@ expression.SetCellMarginTop(nValue);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell top margin shall be used, otherwise override the table cell top margin with specified value for the current cell. |
+| nValue | Required | [twips](../../Enumeration/twips.md) |  | If this value is &lt;code&gt;null&lt;/code&gt;, then default table cell top margin shall be used, |
 
 ## Returns
 
@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-Specify an amount of space which shall be left between the top extent of the current cell contents and the top edge border of a specific individual table cell within a table.
+Set the spacing between text and the top edge of a table cell in a presentation.
 
 ```javascript editor-pptx
-// How to set the cell top margin for the current table cell.
+// How do I add space above text in a table cell in a presentation?
 
-// Specify the top margin value for the table cell object.
+// Adjust the top margin to control padding in a table cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

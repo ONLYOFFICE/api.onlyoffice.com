@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中自定义 XML 节点对象的类类型。
+识别文档中自定义 XML 节点对象的类类型。
 
 ```javascript editor-docx
-// How can I get the class type of a custom XML node in a document?
+// How do I get the class type of a custom XML node in a document?
 
-// Get the class type of a custom XML node and display it in the document.
+// Confirm what kind of object a node is before working with it programmatically in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

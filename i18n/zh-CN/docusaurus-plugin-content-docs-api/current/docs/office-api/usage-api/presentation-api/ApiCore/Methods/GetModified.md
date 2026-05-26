@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-在演示文稿中设置和获取当前演示文稿的最后修改日期。
+设置和查看演示文稿的最后修改日期。
 
 ```javascript editor-pptx
-// How can I get the modified using a core properties in a presentation?
+// How do I find when a presentation was last changed?
 
-// Get the modified for a core properties in a presentation.
+// Retrieve the timestamp of the most recent edit in a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

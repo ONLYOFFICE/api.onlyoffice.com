@@ -16,7 +16,7 @@ expression.InsertContent(arrContent, isInline, oPr);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arrContent | 必需 | [DocumentElement](../../Enumeration/DocumentElement.md)[] |  | 要插入的元素数组。 |
 | isInline | 可选 | boolean | false | 是否行内插入（仅对第一个和最后一个元素有效，且仅当它是段落时）。 |
-| oPr | 可选 | object |  | 指定为插入的元素保留文本和段落文档属性。对象应如下所示：&#123;"KeepTextOnly": true&#125;。 |
+| oPr | 可选 | object |  | 指定为插入的元素保留文本和段落文档属性。 |
 
 ## 返回值
 
@@ -24,12 +24,12 @@ boolean
 
 ## 示例
 
-在文档的当前位置插入元素数组。
+在文档中当前位置插入元素集合。
 
 ```javascript editor-docx
-// How to insert the paragraph to the document.
+// How do I add multiple paragraphs at once to a document?
 
-// Create a paragraph and show it in a document.
+// Programmatically place pre-built content blocks into the document without appending them one by one.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

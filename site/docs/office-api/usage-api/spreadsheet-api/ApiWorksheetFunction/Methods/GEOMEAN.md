@@ -14,7 +14,7 @@ expression.GEOMEAN(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the geometric mean will be calculated. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the geometric mean will be calculated. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Calculate the geometric mean of positive numeric data in a spreadsheet.
+Calculate the geometric mean of a set of positive numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find the geometric mean in a spreadsheet.
+// How do I find the geometric average of my data in a spreadsheet?
 
-// Use a function to calculate the geometric mean of positive numeric data in a spreadsheet.
+// Get the nth root of the product of n values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

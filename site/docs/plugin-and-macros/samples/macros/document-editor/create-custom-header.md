@@ -43,5 +43,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CustomHeader](/assets/images/plugins/create-custom-header.png#gh-light-mode-only)
-![CustomHeader](/assets/images/plugins/create-custom-header.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/create-custom-header.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/create-custom-header.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

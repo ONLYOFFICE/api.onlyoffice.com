@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取 PDF 文档中段落的内部 ID。
+检索 PDF 中段落的唯一标识符。
 
 ```javascript editor-pdf
-// How to get the internal id for a paragraph in a PDF document?
+// How do I get the internal ID of a paragraph in a PDF?
 
-// Get the internal id and display the result in a PDF document.
+// Look up the identification code for a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-指定默认的表格单元格间距。
+在文档中为表格的所有单元格之间添加统一间距。
 
 ```javascript editor-docx
-// How to set the size of the cell spacing.
+// How do I control the space between individual cells in a document?
 
-// Create a table and indicate its cell spacing.
+// Space out table cells evenly to improve readability in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

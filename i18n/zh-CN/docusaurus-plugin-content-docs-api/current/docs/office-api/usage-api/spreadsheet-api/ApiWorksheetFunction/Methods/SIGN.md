@@ -25,9 +25,9 @@ number
 在电子表格中返回数字的符号：正数为 1，零为 0，负数为 -1。
 
 ```javascript editor-xlsx
-// How to find out whether a number is positive or negative in a spreadsheet.
+// Determine the sign of a number using the SIGN function.
 
-// Use a function to get a sign of a number in a spreadsheet.
+// Apply the function to display the sign value in a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

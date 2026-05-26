@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在演示文稿中向幻灯片的备注页添加文本。
+向幻灯片的备注部分添加文本以供演讲者参考。
 
 ```javascript editor-pptx
-// How can I add the notes text using a slide in a presentation?
+// Access the notes functionality and attempt to add a note message.
 
-// Add the notes text for a slide in a presentation.
+// Verify the result and display a confirmation message in a shape on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

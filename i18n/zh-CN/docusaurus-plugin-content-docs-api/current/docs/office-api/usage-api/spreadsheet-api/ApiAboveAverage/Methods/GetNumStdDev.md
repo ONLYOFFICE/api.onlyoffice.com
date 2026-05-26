@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-获取电子表格中与平均值的标准差数。
+读取电子表格中条件格式规则使用的偏离均值多少个标准差。
 
 ```javascript editor-xlsx
-// How to check the standard deviation setting for above average conditions in a spreadsheet.
+// How do I check the standard deviation threshold set on an above-average formatting rule in a spreadsheet?
 
-// Get the number of standard deviations used in the conditional formatting rule.
+// Verify the deviation count that controls which cells get highlighted by an average-based rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

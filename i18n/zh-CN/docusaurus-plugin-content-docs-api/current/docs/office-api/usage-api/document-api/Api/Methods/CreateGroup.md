@@ -22,12 +22,12 @@ expression.CreateGroup(drawings);
 
 ## 示例
 
-在文档中创建一组绘图对象。
+将多个形状组合在一起，使其在文档中作为一个单元移动和调整大小。
 
 ```javascript editor-docx
-// Create two "rect" shapes in the current document and group them.
+// How do I combine several shapes into a single group in a document?
 
-// How to create the group object from an array of drawings in a document.
+// Keep two shapes aligned by bundling them into one grouped object in a document.
 
 let doc = Api.GetDocument();
 let fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));

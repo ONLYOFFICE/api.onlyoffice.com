@@ -22,12 +22,12 @@ expression.SetParaPr(oParaPr);
 
 ## 示例
 
-创建并设置将应用于表格中与条件格式类型匹配的所有段落的段落属性。
+在文档中为表格样式的条件区域应用段落格式。
 
 ```javascript editor-docx
-// How to set paragraph properties to the table style in a document.
+// How do I control paragraph alignment for a specific part of a table style in a document?
 
-// Update the table style paragraph properties in a document.
+// Assign paragraph layout settings to a targeted section of a styled table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

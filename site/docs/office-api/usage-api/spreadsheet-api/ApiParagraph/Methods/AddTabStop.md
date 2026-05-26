@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Add a tab stop to the paragraph in a spreadsheet.
+Insert tab stops between two sentences in a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to insert a text separated by a tab in a spreadsheet.
+// How do I push text to a specific position using tabs in a spreadsheet?
 
-// Get the paragraph from the shape and add two sentences separated by three tabs in a spreadsheet.
+// Space out content within a shape by placing multiple tab stops between phrases in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

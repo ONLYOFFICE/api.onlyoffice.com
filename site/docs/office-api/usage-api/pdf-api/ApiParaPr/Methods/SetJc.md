@@ -14,7 +14,7 @@ expression.SetJc(sJc);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Set the paragraph contents justification in a PDF document.
+Align text in a paragraph in a PDF.
 
 ```javascript editor-pdf
-// How to set justification using a paragraph properties in a PDF document.
+// How do I change the text alignment in a paragraph in a PDF?
 
-// Create a paragraph setting its justification property in a PDF document.
+// Apply text alignment to a paragraph in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

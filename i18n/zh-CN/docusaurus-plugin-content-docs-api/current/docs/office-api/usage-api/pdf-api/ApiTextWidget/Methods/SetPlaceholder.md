@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为文本控件设置占位符。
+在 PDF 中添加在文本字段中输入前显示的提示文本。
 
 ```javascript editor-pdf
-// How do I set placeholder in a PDF document?
+// How do I add a hint text to an empty text field in a PDF?
 
-// Set placeholder using a text widget object in a PDF document.
+// Configure what example text shows when a text field is empty in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

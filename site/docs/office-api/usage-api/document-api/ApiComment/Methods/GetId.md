@@ -20,12 +20,12 @@ string
 
 ## Example
 
-Get the comment ID in a document.
+Read the unique identifier of a comment in a document.
 
 ```javascript editor-docx
-// Display comment author name by finding a comment by its ID in a document.
+// How do I get the ID assigned to a comment in a document?
 
-// How to get a comment knowing its ID in a document.
+// Use a comment's ID to look it up again and access its properties.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

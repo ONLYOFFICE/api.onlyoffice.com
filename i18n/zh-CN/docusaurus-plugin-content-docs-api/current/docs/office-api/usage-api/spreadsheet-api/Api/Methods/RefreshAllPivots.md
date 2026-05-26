@@ -20,12 +20,12 @@ expression.RefreshAllPivots();
 
 ## 示例
 
-如何刷新电子表格中活动工作簿中的所有数据透视表。
+刷新所有数据透视表以反映电子表格中的最新源数据。
 
 ```javascript editor-xlsx
-// How to refresh all pivot tables in a worksheet.
+// How do I update every pivot table at once when the underlying data changes in a spreadsheet?
 
-// Refresh all values from the pivot table using a method in a spreadsheet.
+// Synchronize all summary views with the most recent data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

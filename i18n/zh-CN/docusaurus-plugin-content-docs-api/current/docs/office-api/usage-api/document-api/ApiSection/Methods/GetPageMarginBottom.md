@@ -20,12 +20,12 @@ expression.GetPageMarginBottom();
 
 ## 示例
 
-指定此节中所有页面的页边距并返回。
+读取文档中节内页面的下边距。
 
 ```javascript editor-docx
-// How to get bottom page margin.
+// How do I find out the size of the bottom page margin for a section in a document?
 
-// Get the page margin bottom using a section object.
+// Retrieve the bottom spacing value to verify the page layout is correct in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

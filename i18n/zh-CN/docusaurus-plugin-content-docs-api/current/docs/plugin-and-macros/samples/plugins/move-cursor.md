@@ -29,7 +29,7 @@ GitHub 仓库：[示例：移动光标](https://github.com/ONLYOFFICE/sdkjs-plug
 
 ## 配置
 
-``` json
+```json
 {
   "name": "Example move cursor",
   "guid": "asc.{EF5735E0-69A7-4D4A-9ABE-F58FD70F488D}",

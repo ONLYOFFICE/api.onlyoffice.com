@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the inverse hyperbolic cotangent of a number in a spreadsheet.
+Calculate the inverse hyperbolic cotangent of a number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an inverse hyperbolic cotangent of a number and display it in the worksheet.
+// Compute the ACOTH value for mathematical analysis in a spreadsheet.
 
-// Get a function that gets inverse hyperbolic cotangent of a number in a spreadsheet.
+// Output the inverse hyperbolic cotangent to a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

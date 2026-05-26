@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the page orientation in a spreadsheet.
+Read the print page orientation of the active sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get orientation of the sheet in a spreadsheet.
+// How do I check whether a sheet is set to portrait or landscape in a spreadsheet?
 
-// Get a sheet orientation using the worksheet API in a spreadsheet.
+// Retrieve the orientation setting and display it in a cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let pageOrientation = worksheet.GetPageOrientation();

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a theme font scheme in a presentation.
+Get the class type of a theme font scheme in a presentation.
 
 ```javascript editor-pptx
-// How to identify the class type of a theme font scheme in a presentation?
+// How can I determine the type of a font scheme object in a presentation?
 
-// Obtain the class type identifier of a theme font scheme object in a presentation.
+// Retrieve the class type identifier and display it for a font scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

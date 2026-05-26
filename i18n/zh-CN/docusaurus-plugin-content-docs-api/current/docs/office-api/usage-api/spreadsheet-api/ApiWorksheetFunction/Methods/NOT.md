@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在电子表格中检查指定的逻辑值是 true 还是 false。如果参数为 false 则返回 true，如果参数为 true 则返回 false。
+在电子表格中反转布尔值。
 
 ```javascript editor-xlsx
-// How to negate a boolean value in a spreadsheet.
+// How do I negate a true or false value in a spreadsheet?
 
-// Use a function to get the opposite of the boolean value in a spreadsheet.
+// Get the opposite result of a logical condition in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

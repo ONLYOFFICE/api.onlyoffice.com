@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Convert points to inches in a spreadsheet.
+Convert a measurement from points to inches in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to convert points to inches in a spreadsheet?
+// How do I express a point value as inches in a spreadsheet?
 
-// Convert points to inches using the spreadsheet API.
+// Get the inch equivalent of a given number of points in a spreadsheet.
 
 const points = 1000;
 const inches = Api.PointsToInches(points);

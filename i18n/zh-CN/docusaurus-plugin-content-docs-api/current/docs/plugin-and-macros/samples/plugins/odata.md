@@ -31,7 +31,7 @@ GitHub 仓库：[odata](https://github.com/ONLYOFFICE/onlyoffice.github.io/tree/
 
 ## 配置
 
-``` json
+```json
 {
   "name": "OData Import",
   "nameLocale": {

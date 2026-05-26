@@ -22,12 +22,12 @@ expression.SetId(id);
 
 ## 示例
 
-设置文档中容器的 ID。
+为文档中的内容控件分配唯一标识符。
 
 ```javascript editor-docx
-// How do I set id in a document?
+// How do I give a content control a specific ID in a document?
 
-// Set id using a block-level content control object in a document.
+// Label a content control with a custom ID and verify it was applied in a document.
 
 let doc = Api.GetDocument();
 let blockLvlSdt = Api.CreateBlockLvlSdt();

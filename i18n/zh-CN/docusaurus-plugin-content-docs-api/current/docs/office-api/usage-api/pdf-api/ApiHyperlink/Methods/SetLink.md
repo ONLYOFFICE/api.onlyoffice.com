@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中设置超链接地址。
+更改 PDF 中超链接的 URL 地址。
 
 ```javascript editor-pdf
-// How to change the link address of the hyperlink object in a PDF document.
+// How do I update where a hyperlink points to in a PDF?
 
-// Set link of the hyperlink in a PDF document.
+// Assign a new web address to a hyperlink in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

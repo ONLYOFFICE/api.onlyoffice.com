@@ -6,12 +6,12 @@
 
 ## 示例
 
-设置基于文本的条件格式规则的文本值。
+更新触发电子表格中基于文本的格式规则的单词或短语。
 
 ```javascript editor-xlsx
-// How to change text values in text-based conditional formatting rules.
+// How do I change which text a conditional highlight rule looks for in a spreadsheet?
 
-// Set conditional formatting rule text value.
+// Replace the search string in a rule so different cell content gets highlighted in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

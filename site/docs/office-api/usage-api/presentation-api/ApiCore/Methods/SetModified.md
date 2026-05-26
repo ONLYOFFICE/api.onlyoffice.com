@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set and get the date when the current presentation was modified last time in a presentation.
+Mark the last modification date of a presentation in a presentation.
 
 ```javascript editor-pptx
-// How to set modified for a core properties in a presentation?
+// How do I set when a presentation was last edited?
 
-// Set modified and display the result in a presentation.
+// Update and display the modification timestamp for a presentation.
 
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();

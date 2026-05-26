@@ -6,12 +6,12 @@ Inherited from [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/Ge
 
 ## Example
 
-Get a layout blank line of a pivot field in a spreadsheet.
+Check whether a blank row is inserted after each group in a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a blank line layout of a pivot field in a spreadsheet.
+// How do I find out if a pivot field is set to add a blank line between groups in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout blank line of a specified pivot field in a spreadsheet.
+// Confirm the blank-line spacing setting for a pivot field's row layout in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

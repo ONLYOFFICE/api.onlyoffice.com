@@ -20,12 +20,12 @@ Date
 
 ## 示例
 
-获取电子表格中当前工作簿的最后打印日期。
+检索电子表格中工作簿最近发送到打印机的日期。
 
 ```javascript editor-xlsx
-// How to get last printed for a core properties in a spreadsheet?
+// How do I check when a workbook was last printed in a spreadsheet?
 
-// Get last printed and display the result in a spreadsheet.
+// Confirm the last print date stored in the document properties in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();

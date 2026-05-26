@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在文档中设置段落 ID。
+为文档中的段落分配唯一标识符。
 
 ```javascript editor-docx
-// How to set para id for a paragraph in a document?
+// How do I give a paragraph a custom ID so it can be referenced later in a document?
 
-// Set para id and display the result in a document.
+// Tag a paragraph with a specific identifier and confirm it was applied in a document.
 
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

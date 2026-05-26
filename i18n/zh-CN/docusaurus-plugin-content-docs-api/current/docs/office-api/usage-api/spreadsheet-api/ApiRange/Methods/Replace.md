@@ -18,16 +18,16 @@ expression.Replace(oReplaceData);
 
 ## 返回值
 
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+boolean
 
 ## 示例
 
-在范围中将特定信息替换为另一个。
+在电子表格中的单元格范围内将旧值替换为新值。
 
 ```javascript editor-xlsx
-// How to replace one data value with another in a range in a spreadsheet.
+// How do I find and replace a specific value throughout a range in a spreadsheet?
 
-// Create a range and replace its data field value with a new one in a spreadsheet.
+// Update multiple cells at once by substituting a target value wherever it appears in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中应用具有特定填充和笔触属性的自定义几何图形。
+在 PDF 中使用自定义绘图图案作为形状。
 
 ```javascript editor-pdf
-// How to set geometry for a shape in a PDF document?
+// How do I apply a custom shape design in a PDF?
 
-// Set geometry and display the result in a PDF document.
+// Replace a shape's default pattern with a personalized drawing outline in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

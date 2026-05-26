@@ -20,12 +20,12 @@ expression.GetContent();
 
 ## 示例
 
-获取电子表格中可以插入段落或文本 run 的形状内部内容。
+访问形状内的文本区域并在电子表格中用新段落替换其内容。
 
 ```javascript editor-xlsx
-// How to get content of shape in a spreadsheet.
+// How do I clear and rewrite the text inside a shape in a spreadsheet?
 
-// Get content of shape, remove all its elements and add a new paragraph to it in a spreadsheet.
+// Wipe all existing text from a shape and insert fresh content through its inner area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));

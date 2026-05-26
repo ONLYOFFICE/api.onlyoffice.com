@@ -52,7 +52,7 @@ Now that you know how macros work, try to write your own macro. We have a table 
 
 Now let's sum it up with the complete script code:
 
-``` ts
+```ts
 (function()
 {
     let worksheet = Api.GetActiveSheet();
@@ -96,7 +96,7 @@ To subscribe to the specified event and call the callback function when the even
 
 For example, to subscribe to an event when a hyperlink in a document is clicked, use the following lines:
 
-``` ts
+```ts
 Api.attachEvent("asc_onHyperlinkClick", () => {
   console.log("HYPERLINK!!!");
 })

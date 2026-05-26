@@ -4,7 +4,7 @@ Forcibly saves the document being edited without closing it. The document editin
 
 ## Request example
 
-``` json
+```json
 {
   "c": "forcesave",
   "key": "Khirz6zTPdfd7",
@@ -12,26 +12,26 @@ Forcibly saves the document being edited without closing it. The document editin
 }
 ```
 
-## Parameters
+## Request parameters
 
 | Parameter | Type   | Presence | Description                                                                                                       |
 | --------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------- |
-| c         | string | required | Defines the command type.                                                                                         |
-| key       | string | required | Defines the document identifier used to unambiguously identify the document file.                                 |
-| userdata  | string | optional | Defines some custom identifier which will help distinguish the specific request in case there were more than one. |
+| c         | string | required | The command type.                                                                                         |
+| key       | string | required | The document identifier used to unambiguously identify the document file.                                 |
+| userdata  | string | optional | Some custom identifier which will help distinguish the specific request in case there were more than one. |
 
 ## Response example
 
-``` json
+```json
 {
   "error": 0,
   "key": "Khirz6zTPdfd7"
 }
 ```
 
-## Parameters
+## Response parameters
 
 | Parameter | Type    | Presence | Description                                                                       |
 | --------- | ------- | -------- | --------------------------------------------------------------------------------- |
-| error     | integer | required | Defines an error code.                                                            |
-| key       | string  | required | Defines the document identifier used to unambiguously identify the document file. |
+| error     | integer | required | An error code.                                                            |
+| key       | string  | required | The document identifier used to unambiguously identify the document file. |

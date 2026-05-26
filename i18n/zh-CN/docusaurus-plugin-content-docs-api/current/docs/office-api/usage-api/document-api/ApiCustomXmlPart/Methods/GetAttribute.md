@@ -23,12 +23,12 @@ string \| null
 
 ## 示例
 
-获取文档中自定义 XML 部件的版本属性值。
+从文档中嵌入的 XML 数据的元素读取命名属性的值。
 
 ```javascript editor-docx
-// How do I get the attribute in a document?
+// How do I get the value of a specific attribute from an XML element stored in a document?
 
-// Get the attribute using a custom XML part object in a document.
+// Extract a metadata value from structured XML so it can be displayed or validated in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

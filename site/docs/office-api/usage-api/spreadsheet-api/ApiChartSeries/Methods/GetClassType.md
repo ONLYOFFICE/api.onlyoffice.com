@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Retrieve the class type of a chart series in a spreadsheet.
+Identify the object category of a chart series in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to identify the class type of a chart series in a spreadsheet?
+// How do I check what kind of object a chart series belongs to in a spreadsheet?
 
-// Obtain the class type identifier of a chart series object in a spreadsheet.
+// Confirm the internal type of a chart series by reading its category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);

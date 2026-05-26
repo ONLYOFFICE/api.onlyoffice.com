@@ -20,12 +20,12 @@ boolean
 
 ## 示例
 
-检查文档中的文本是否设置了删除线属性。
+检查文档中的文本运行是否应用了单删除线。
 
 ```javascript editor-docx
-// How to know whether a text is crossed by one horizontal line in a document.
+// How do I tell if text has a line drawn through it in a document?
 
-// Retrieve text properties of the form to find out whether it is stroke out.
+// Confirm the strikeout state of a text run before deciding whether to toggle it in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

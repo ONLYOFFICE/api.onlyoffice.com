@@ -71,7 +71,7 @@ The plugin will be added to the opened editors and all the editors you will open
 
 For example, for the **Extended comments** plugin the *guid* parameter will look the following way:
 
-``` json
+```json
 {
   "name": "Extended comments",
   "guid": "asc.{91EAC419-EF8B-440C-A960-B451C7DF3A37}"

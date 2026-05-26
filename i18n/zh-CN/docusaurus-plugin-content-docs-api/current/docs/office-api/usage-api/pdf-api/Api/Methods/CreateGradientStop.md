@@ -26,7 +26,7 @@ expression.CreateGradientStop(color, pos);
 在 PDF 文档中创建用于不同类型渐变的渐变光圈。
 
 ```javascript editor-pdf
-// How to add a gradient stop for gradient in a PDF document.
+// Add a gradient stop for gradient in a PDF document.
 
 // Create a stop for a gradient in a PDF document.
 

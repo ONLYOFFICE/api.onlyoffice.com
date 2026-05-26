@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-Change the type of the first series of chart class and insert the new type into the document.
+Change the visual type of an individual chart series in a document.
 
 ```javascript editor-docx
-// How to change a chart type in a document.
+// How do I switch a single data series to a different chart style in a document?
 
-// Change a chart type to the "area" type in a document.
+// Convert a bar series to an area series so overlapping data trends are easier to read in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

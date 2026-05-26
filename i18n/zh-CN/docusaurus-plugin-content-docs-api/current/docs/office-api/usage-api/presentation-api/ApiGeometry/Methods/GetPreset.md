@@ -20,12 +20,12 @@ expression.GetPreset();
 
 ## 示例
 
-从演示文稿幻灯片上的星形获取几何图形信息。在文本形状中显示预设类型和自定义状态。
+识别演示文稿中用于几何图形的预设形状类型。
 
 ```javascript editor-pptx
-// How do I get the preset in a presentation?
+// How do I determine if a shape is a preset type in a presentation?
 
-// Get the preset using a geometry object in a presentation.
+// Check what built-in shape preset defines a geometry in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

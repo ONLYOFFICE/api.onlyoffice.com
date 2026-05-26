@@ -20,12 +20,12 @@ expression.CreateNoFill();
 
 ## 示例
 
-在文档中创建无填充并移除元素的填充。
+在文档中绘制具有透明边框且无轮廓颜色的形状。
 
 ```javascript editor-docx
-// The no-fill object removes any existing fill from the shape stroke.
+// How do I make a shape border completely transparent in a document?
 
-// Create a stroke with no fill in a document.
+// Remove all color from a shape's outline so it appears borderless in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

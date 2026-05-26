@@ -20,12 +20,12 @@ expression.GetComments();
 
 ## 示例
 
-获取电子表格中的批注对象数组。
+检索电子表格工作表上留下的每个批注。
 
 ```javascript editor-xlsx
-// How to get all comments in a spreadsheet.
+// How do I list all comments on a sheet in a spreadsheet?
 
-// Get all comments from the worksheet.
+// Read comment text by collecting all annotations from the worksheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

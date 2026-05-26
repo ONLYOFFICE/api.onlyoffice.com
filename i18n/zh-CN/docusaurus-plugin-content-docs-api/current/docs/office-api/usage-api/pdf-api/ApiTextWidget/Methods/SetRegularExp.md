@@ -22,12 +22,12 @@ boolean
 
 ## 示例
 
-在 PDF 文档中为文本控件设置正则表达式。
+定义 PDF 文本字段中允许的文本模式。
 
 ```javascript editor-pdf
-// How can I set regular exp using a text widget in a PDF document?
+// How do I set a pattern that text must match in a text field in a PDF?
 
-// Set regular exp for a text widget in a PDF document.
+// Restrict text input to a specific format in a form field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

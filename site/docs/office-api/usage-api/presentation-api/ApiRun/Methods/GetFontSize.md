@@ -6,12 +6,12 @@ Inherited from [ApiTextPr.GetFontSize](../../ApiTextPr/Methods/GetFontSize.md).
 
 ## Example
 
-Find out a text font size in a presentation.
+Retrieve the font size from text run properties.
 
 ```javascript editor-pptx
-// How to know font size of a text run in a presentation.
+// Create a shape with a text run and set a specific font size.
 
-// Get the text properties of the run and display its font size in a presentation.
+// Get and display the font size used in the text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

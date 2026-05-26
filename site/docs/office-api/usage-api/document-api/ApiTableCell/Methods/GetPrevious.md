@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-Get the previous cell in a document.
+Navigate to the cell that precedes a given table cell in a document.
 
 ```javascript editor-docx
-// How to get previous cell.
+// How do I move to the cell before a specific table cell in a document?
 
-// Retrieve the cell from the table and get the previous one.
+// Step backward from one table cell to the adjacent one in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");

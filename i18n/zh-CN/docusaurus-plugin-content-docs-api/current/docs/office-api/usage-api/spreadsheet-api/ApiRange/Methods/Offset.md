@@ -23,12 +23,12 @@ expression.Offset(rowOffset, columnOffset);
 
 ## 示例
 
-获取电子表格中从当前范围偏移的范围。
+在电子表格中将范围按行数和列数偏移到新位置。
 
 ```javascript editor-xlsx
-// How to offset a range by rows and columns in a spreadsheet.
+// How do I move a selection to a different area by stepping over rows and columns in a spreadsheet?
 
-// Get a range, offset it and fill the offset range with color in a spreadsheet.
+// Highlight the displaced range with a background color to make its new position visible in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let originalRange = worksheet.GetRange("C3:D4");

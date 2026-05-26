@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回无论数字符号如何都向上舍入到最接近的整数或有效数字倍数的数字。
+在电子表格中将数字向上舍入到指定有效位数的最近倍数。
 
 ```javascript editor-xlsx
-// How to round up a number to the nearest integer in a spreadsheet.
+// How do I round up numbers following the ISO standard in a spreadsheet?
 
-// Use a function to round up a number to the nearest integer in a spreadsheet.
+// Use a function to round negative and positive numbers consistently upward in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

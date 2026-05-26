@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-指定在文档中表格前导边缘之前添加的缩进。
+设置文档中表格的左缩进。
 
 ```javascript editor-docx
-// How to display the table description in the document.
+// How do I control how far a table is pushed in from the left margin in a document?
 
-// Get the table description from the table properties in a document.
+// Shift a table away from the left edge by applying an indentation value in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

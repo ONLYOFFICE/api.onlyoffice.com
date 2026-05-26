@@ -31,7 +31,7 @@ sidebar_custom_props:
 
 您也可以通过Docker安装插件：
 
-``` sh
+```sh
 docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 start
 ```
 
@@ -49,7 +49,7 @@ docker run -p 8080:8080 -e ADDONS="onlyoffice.plone" plone/plone-backend:6.0 sta
 
 运行以下命令从本地存储库安装附加组件：
 
-``` sh
+```sh
 docker run -p 8080:8080 -e DEVELOP="/app/src/onlyoffice.plone" -v /path/to/onlyoffice.plone:/app/src/onlyoffice.plone plone/plone-backend:6.0 start
 ```
 

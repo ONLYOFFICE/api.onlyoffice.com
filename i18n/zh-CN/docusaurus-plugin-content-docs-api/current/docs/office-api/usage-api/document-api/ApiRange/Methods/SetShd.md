@@ -23,12 +23,12 @@ expression.SetShd(type, color);
 
 ## 示例
 
-指定在文档中应用于当前文本范围内容的底纹。
+在文档中为选定的文本部分应用背景颜色。
 
 ```javascript editor-docx
-// How to set a shading for a range text in a document.
+// How do I highlight a range of words with a custom background shade in a document?
 
-// Get a range text, specify its shading options in a document.
+// Color the area behind specific text to make it stand out visually in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

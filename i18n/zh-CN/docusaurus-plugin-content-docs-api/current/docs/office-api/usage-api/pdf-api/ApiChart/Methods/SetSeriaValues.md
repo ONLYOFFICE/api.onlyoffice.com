@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-如何在 PDF 文档中为指定的图表对象设置值。
+替换 PDF 中图表系列中的数据数字。
 
 ```javascript editor-pdf
-// Create a chart, set its properties and its series values in a PDF document.
+// How do I change the values displayed in a chart series in a PDF?
 
-// Set seria values using a chart object in a PDF document.
+// Update the numeric data that makes up a data series in a chart in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

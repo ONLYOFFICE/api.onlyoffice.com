@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-Set the description of the current document using the core properties in a document.
+Write a descriptive summary into the document's core properties in a document.
 
 ```javascript editor-docx
-// How do I set description in a document?
+// How do I add a description to a document's built-in metadata in a document?
 
-// Set description using a core properties object in a document.
+// Provide context about a document's purpose by saving a plain-text summary in its properties in a document.
 
 const doc = Api.GetDocument();
 const core = doc.GetCore();

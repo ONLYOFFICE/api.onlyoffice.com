@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-在电子表格中将形状填充颜色转换为 JSON。
+将电子表格中形状填充颜色序列化为 JSON 字符串。
 
 ```javascript editor-xlsx
-// The color is obtained from the first shape fill on the worksheet.
+// How do I export a color object as a JSON-formatted string for storage or inspection in a spreadsheet?
 
-// Convert the color to a JSON string and display the result.
+// Capture the full color definition as structured text and write it to a cell in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 const color = Api.RGB(64, 128, 192);

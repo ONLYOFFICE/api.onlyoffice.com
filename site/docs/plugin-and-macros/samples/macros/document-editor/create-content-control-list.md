@@ -95,5 +95,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CreateContentControlList](/assets/images/plugins/create-content-control-list.png#gh-light-mode-only)
-![CreateContentControlList](/assets/images/plugins/create-content-control-list.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/create-content-control-list.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/document-editor/create-content-control-list.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

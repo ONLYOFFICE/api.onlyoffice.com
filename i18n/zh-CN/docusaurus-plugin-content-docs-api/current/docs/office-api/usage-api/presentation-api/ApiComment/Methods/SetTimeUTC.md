@@ -22,12 +22,12 @@ expression.SetTimeUTC(nTimeStamp);
 
 ## 示例
 
-在演示文稿中设置批注的 UTC 时间。
+设置演示文稿中批注的 UTC 格式创建时间。
 
 ```javascript editor-pptx
-// How to change a creation time of a comment in UTC format.
+// How do I change when a comment was created in a presentation?
 
-// Get all comments from the presentation and change its first one's creation UTC time.
+// Update a comment's timestamp to a specific UTC date in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);

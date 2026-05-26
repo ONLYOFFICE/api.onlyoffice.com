@@ -20,12 +20,12 @@ number
 
 ## 示例
 
-分析幻灯片上云形路径属性。在文本形状中显示全面的路径信息。
+计算演示文稿中形状几何图形中的绘图路径数。
 
 ```javascript editor-pptx
-// How do I get the path count in a presentation?
+// How do I find how many paths a shape has in a presentation?
 
-// Get the path count using a geometry object in a presentation.
+// Determine the number of paths that make up a shape's outline in a presentation.
 
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);

@@ -22,12 +22,12 @@ expression.SetTableRowPr(oTableRowPr);
 
 ## Example
 
-Create and set the table row properties which will be applied to all the rows within a table which match the conditional formatting type.
+Apply row formatting to a conditional region of a table style in a document.
 
 ```javascript editor-docx
-// How to set table row properties to table style and set its height in a document.
+// How do I set the row height for a specific part of a table style in a document?
 
-// Update the table style table row properties in a document.
+// Assign row layout settings to a targeted section of a styled table in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

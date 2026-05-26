@@ -40,4 +40,11 @@ End Sub
 
 ## Result
 
-![Freeze panes](/assets/images/plugins/freeze-panes.png#gh-light-mode-only)![Freeze panes](/assets/images/plugins/freeze-panes.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/freeze-panes.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/spreadsheet-editor/freeze-panes.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

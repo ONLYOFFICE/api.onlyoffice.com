@@ -26,5 +26,11 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![CheckboxUnchecker](/assets/images/plugins/clear-checkboxes.png#gh-light-mode-only)
-![CheckboxUnchecker](/assets/images/plugins/clear-checkboxes.dark.png#gh-dark-mode-only)
+<video className="light-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/clear-checkboxes.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>
+<video className="dark-video" controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/clear-checkboxes.dark.webm" type="video/webm" />
+  Your browser does not support HTML5 video.
+</video>

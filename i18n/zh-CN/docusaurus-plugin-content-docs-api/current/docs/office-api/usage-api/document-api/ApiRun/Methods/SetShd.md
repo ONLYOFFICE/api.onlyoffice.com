@@ -23,12 +23,12 @@ expression.SetShd(type, color);
 
 ## 示例
 
-指定在文档中应用于当前文本 run 内容的底纹。
+在文档中为文本运行应用背景底纹颜色。
 
 ```javascript editor-docx
-// How to add shading to the text in a document.
+// How do I shade the background behind a run of text in a document?
 
-// Create a new text run and apply shading to it in a document.
+// Color the area behind words to make them stand out in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

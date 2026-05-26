@@ -26,20 +26,20 @@ sidebar_position: -6
 
 要创建编辑器实例，请使用两个参数调用 `DocEditor` 构造函数——编辑器将渲染到的现有 HTML 元素的 `id` 属性，以及[配置对象](./config/config.md)：
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-| 参数        | 类型   | 描述                                                                                                             |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
-| placeholder | string | 编辑器将渲染到的现有 HTML 元素的 `id` 属性（例如，`"placeholder"` 对应 `<div id="placeholder">`）。              |
-| config      | object | 包含文档、编辑器和事件参数的[配置对象](./config/config.md)。                                                     |
+| 参数   | 类型   | 描述                                                                                                |
+| ------ | ------ | --------------------------------------------------------------------------------------------------- |
+| id     | string | 编辑器将渲染到的现有 HTML 元素的 `id` 属性（例如，`"placeholder"` 对应 `<div id="placeholder">`）。 |
+| config | object | 包含文档、编辑器和事件参数的[配置对象](./config/config.md)。                                        |
 
 ## 实例方法
 
 构造函数返回一个 `docEditor` 对象。使用它来调用在运行时控制编辑器的[方法](./methods.md)——下载文件、管理版本历史、更新共享设置等：
 
-``` ts
+```ts
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 // 稍后，在处理事件或用户操作时：
@@ -53,7 +53,7 @@ docEditor.destroyEditor();
 
 事件是在 `config.events` 部分传递的函数。它们允许集成商响应编辑器操作——例如，当文档准备就绪时、当用户请求保存时或当协作更改到达时：
 
-``` ts
+```ts
 const config = {
   events: {
     onAppReady() {
@@ -72,7 +72,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 最小示例
 
-``` ts
+```ts
 const config = {
   document: {
     fileType: "docx",
@@ -92,6 +92,10 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 将 `example.com` 替换为您的**文档存储服务**的主机地址。[`callbackUrl`](./config/editor/editor.md#callbackurl) 是您服务器上的端点，ONLYOFFICE 文档 会向该端点发送文档状态更新和已保存的文件。请参阅[工作原理](../get-started/how-it-works/how-it-works.md)部分，了解有关 ONLYOFFICE 文档 服务客户端-服务器交互的更多信息。
 
 有关包含所有可用部分和参数的完整配置结构，请参阅[配置概述](./advanced-parameters.md)。
+
+:::tip[TypeScript 支持]
+安装 [`@onlyoffice/doceditor-types`](https://www.npmjs.com/package/@onlyoffice/doceditor-types) 以获取配置对象、`DocEditor` 方法和事件的完整 IntelliSense 和类型检查。该包的版本号与 ONLYOFFICE 文档版本号保持一致。
+:::
 
 :::caution
 当您的文档服务器启用了 JWT 验证（默认配置）时，`config` 必须包含匹配的 [`token`](../get-started/how-it-works/security.md)。请使用您的文档服务器的 JWT 密钥对配置进行签名。

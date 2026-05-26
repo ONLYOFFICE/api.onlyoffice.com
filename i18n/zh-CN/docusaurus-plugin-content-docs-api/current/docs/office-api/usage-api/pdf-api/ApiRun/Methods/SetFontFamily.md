@@ -22,12 +22,12 @@ expression.SetFontFamily(sFontFamily);
 
 ## 示例
 
-在 PDF 文档中使用指定的字体系列设置所有 4 个字体槽。
+设置 PDF 中文本的字体样式。
 
 ```javascript editor-pdf
-// How to set font family to the text run in a PDF document.
+// How do I change what font is used in a PDF?
 
-// Create a new text run and change its font family in a PDF document.
+// Assign a specific typeface to text characters in a PDF.
 
 const doc = Api.GetDocument();
 const page = doc.GetPage(0);

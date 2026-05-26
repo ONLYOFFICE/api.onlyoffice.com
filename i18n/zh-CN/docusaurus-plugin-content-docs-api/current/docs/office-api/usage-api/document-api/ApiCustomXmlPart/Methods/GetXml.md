@@ -20,12 +20,12 @@ string
 
 ## 示例
 
-获取文档中自定义 XML 部件的 XML 字符串表示。
+将文档中自定义 XML 部件的完整 XML 内容作为字符串读取。
 
 ```javascript editor-docx
-// How to get the xml for a custom XML part in a document?
+// How do I export or inspect the raw XML of a custom XML part in a document?
 
-// Get the xml and display the result in a document.
+// Serialize the entire XML structure to display or process its contents in a document.
 
 let doc = Api.GetDocument();
 let xmlManager = doc.GetCustomXmlParts();

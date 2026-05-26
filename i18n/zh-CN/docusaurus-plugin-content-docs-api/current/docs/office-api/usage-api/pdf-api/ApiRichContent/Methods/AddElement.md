@@ -23,12 +23,12 @@ boolean
 
 ## 示例
 
-向 PDF 文档中的富文本内容添加新元素。
+在 PDF 中向格式化文本内容插入段落。
 
 ```javascript editor-pdf
-// How to add the element for a rich content in a PDF document?
+// How do I add text blocks to rich content in a PDF?
 
-// Add the element and display the result in a PDF document.
+// Place new elements within text formatting containers in a PDF.
 
 let doc = Api.GetDocument();
 let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);

@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-Add text field and set comb for it in a PDF document.
+Display text input in individual cells in a text field in a PDF.
 
 ```javascript editor-pdf
-// How can I set comb using a text field in a PDF document?
+// How do I spread out characters into separate boxes in a PDF?
 
-// Set comb for a text field in a PDF document.
+// Enable spaced character input for a text field in a PDF.
 
 let doc = Api.GetDocument();
 let page = doc.GetPage(0);

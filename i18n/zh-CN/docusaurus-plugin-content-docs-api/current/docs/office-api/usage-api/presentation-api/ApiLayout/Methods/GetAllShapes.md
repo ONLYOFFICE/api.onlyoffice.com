@@ -20,12 +20,12 @@ expression.GetAllShapes();
 
 ## 示例
 
-获取演示文稿中幻灯片版式的所有形状对象数组。
+将幻灯片布局中的所有形状对象作为数组获取。
 
 ```javascript editor-pptx
-// How to get all shapes from the layout of presentation.
+// Shapes in layouts can be retrieved and their content modified.
 
-// Get all shapes from the presentation as an array.
+// Add text content to the first shape in the layout.
 
 const presentation = Api.GetPresentation();
 const master = presentation.GetMaster(0);

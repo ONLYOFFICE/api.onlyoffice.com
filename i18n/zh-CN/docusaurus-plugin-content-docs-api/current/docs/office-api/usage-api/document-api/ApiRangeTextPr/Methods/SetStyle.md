@@ -8,12 +8,12 @@
 
 ## 示例
 
-在文档中为 run 设置样式。
+在文档中为文本运行应用命名字符样式。
 
 ```javascript editor-docx
-// How to style a text in a document.
+// How do I assign a predefined style to a portion of text in a document?
 
-// Create a text run object, create a text style and apply it in a document.
+// Reuse saved formatting by attaching a custom run style to specific text in a document.
 
 let doc = Api.GetDocument();
 let myNewRunStyle = doc.CreateStyle("My New Run Style", "run");

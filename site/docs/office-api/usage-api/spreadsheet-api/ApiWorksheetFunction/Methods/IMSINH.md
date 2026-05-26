@@ -22,12 +22,12 @@ number
 
 ## Example
 
-Return the hyperbolic sine of a complex number in a spreadsheet.
+Calculate the hyperbolic sine of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the hyperbolic sine in a spreadsheet.
+// How do I find the hyperbolic sine value of a complex number in a spreadsheet?
 
-// Use a function to get the hyperbolic sine of a complex number in a spreadsheet.
+// Get the hyperbolic sine result for complex number calculations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

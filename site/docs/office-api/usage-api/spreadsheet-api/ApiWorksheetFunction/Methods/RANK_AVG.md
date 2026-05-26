@@ -16,7 +16,7 @@ expression.RANK_AVG(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number for which the rank will be returned. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | An array or range of numbers. Nonnumeric values are ignored. |
-| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | The numeric value that specifyes how to order the numbers. If it is 0 or omitted, the rank in the list will be sorted in descending order. Any other numeric value means that the rank in the list will be sorted in ascending order. |
+| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | The numeric value that specifyes how to order the numbers. If it is 0 or omitted, the rank in the list will be sorted in descending order. |
 
 ## Returns
 
@@ -24,12 +24,12 @@ number
 
 ## Example
 
-Return the rank of a number in a list of numbers: its size relative to other values in the list. If more than one value has the same rank, the average rank is returned in a spreadsheet.
+Find the rank of a value in a list, using the average rank if there are ties in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to estimate a rank of a number from the list in a spreadsheet.
+// How do I rank a number when multiple values are equal in a spreadsheet?
 
-// Use a function to estimate rank of the a number from the list in a spreadsheet.
+// Determine a value's position in a list with tied items split evenly in rank in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 

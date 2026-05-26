@@ -20,12 +20,12 @@ expression.GetWidth();
 
 ## 示例
 
-获取笔触的 EMU 宽度。在文档中创建具有不同边框宽度的形状并显示其宽度。
+检索文档中形状的边框宽度。
 
 ```javascript editor-docx
-// How do I get the width in a document?
+// How do I find out how thick a shape's border is in a document?
 
-// Get the width using a stroke object in a document.
+// Check the measured thickness of each shape's outline in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

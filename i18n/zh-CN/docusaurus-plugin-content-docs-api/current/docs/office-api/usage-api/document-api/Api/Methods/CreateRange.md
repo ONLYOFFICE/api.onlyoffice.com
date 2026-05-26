@@ -25,12 +25,12 @@ expression.CreateRange(element, start, end);
 
 ## 示例
 
-在文档中创建范围并为前 10 个字符设置粗体。
+通过选择文档中的文本范围将段落的前几个字符设为粗体。
 
 ```javascript editor-docx
-// Create the range object from the paragraph class and set the range to bold.
+// How do I select a specific portion of a paragraph and make it bold in a document?
 
-// How to create a range from the paragraph and set a bold property to it in a document.
+// Apply bold formatting to the opening words of a paragraph without affecting the rest of the text in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

@@ -22,17 +22,17 @@ boolean
 
 ## 示例
 
-为表格单元格设置背景颜色。
+在文档中为表格单元格应用背景颜色。
 
 ```javascript editor-docx
-// How to color the cell.
+// How do I fill a table cell with a specific color in a document?
 
-// Get the first cell from the table and set its background color.
+// Give a cell a colored background to highlight it visually in a document.
 
 let doc = Api.GetDocument();
 let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
 tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
-let table = Api.CreateTable(4, 2);
+let table = Api.CreateTable(2, 2);
 table.SetWidth("percent", 100);
 table.SetStyle(tableStyle);
 let cell = table.GetRow(0).GetCell(0);

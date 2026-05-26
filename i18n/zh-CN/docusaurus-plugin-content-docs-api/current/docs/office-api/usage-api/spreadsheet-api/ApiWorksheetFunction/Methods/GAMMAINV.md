@@ -24,12 +24,12 @@ number
 
 ## 示例
 
-在电子表格中返回 Gamma 累积分布的逆函数：若 p = GAMMADIST(x,...)，则 GAMMAINV(p,...) = x。
+查找电子表格中伽马分布中对应给定概率的值。
 
 ```javascript editor-xlsx
-// How to calculate the inverse of the gamma cumulative distribution in a spreadsheet.
+// How do I calculate the inverse of a gamma cumulative distribution in a spreadsheet?
 
-// Use a function to get the inverse of the gamma cumulative distribution in a spreadsheet.
+// Get the x-value for a probability point in a gamma distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,12 +20,12 @@ expression.GetClassType();
 
 ## 示例
 
-获取文档中图表系列对象的类类型。
+检索文档中图表系列对象的类类型标识符。
 
 ```javascript editor-docx
-// How can I get the class type of a chart series in a document?
+// How do I determine the object type of a chart series at runtime in a document?
 
-// Get the class type of a chart series and display it in the document.
+// Confirm the kind of object you are working with before applying series-specific operations in a document.
 
 let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);

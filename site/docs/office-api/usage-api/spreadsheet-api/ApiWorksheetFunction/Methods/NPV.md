@@ -15,7 +15,7 @@ expression.NPV(arg1, args);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The discount rate. |
-| args | Required | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 arguments representing future payments (negative values) and income (positive values). The first argument is required, the subsequent values are optional. Arguments can be numbers, ranges, arrays of numbers. |
+| args | Required | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | Up to 255 arguments representing future payments (negative values) and income (positive values). |
 
 ## Returns
 
@@ -23,12 +23,12 @@ number
 
 ## Example
 
-Return the net present value of an investment based on a discount rate and a series of future payments (negative values) and income (positive values) in a spreadsheet.
+Calculate the net present value of an investment using a discount rate in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the net present value of an investment in a spreadsheet.
+// How do I find the net present value of future cash flows in a spreadsheet?
 
-// Use a function to get the net present value of an investment based on different parameters in a spreadsheet.
+// Evaluate an investment by discounting future payments and income in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
