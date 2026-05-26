@@ -236,11 +236,16 @@ jobs:
 
     - name: Update CloudFront (terraform apply)
       id: cfconf
-      if: ${{ env.SITE_PUBLISH == 'true' && steps.sync.outcome == 'success' }}
+      if: ${{ (env.SITE_PUBLISH == 'true' && steps.sync.outcome == 'success') || (env.LAMBDA_PUBLISH == 'true' && steps.lambda.outcome == 'success') }}
       working-directory: ${{ env.CF_TF_DIR }}
       run: |
-        terraform apply -auto-approve -input=false -no-color \
-          -var="api_site_s3_bucket_name=${TARGET_BUCKET}"
+       if [ "${{ steps.sync.outcome }}" = "success" ]; then
+         BUCKET="${TARGET_BUCKET}"
+       else
+         BUCKET="${CURRENT_BUCKET}"
+       fi
+       terraform apply -auto-approve -input=false -no-color \
+         -var="api_site_s3_bucket_name=${BUCKET}"
 
     - name: Invalidate AWS CloudFront Cache
       if: ${{ (env.SITE_PUBLISH == 'true' && steps.cfconf.outcome == 'success') || (env.LAMBDA_PUBLISH == 'true' && steps.lambda.outcome == 'success') }}
