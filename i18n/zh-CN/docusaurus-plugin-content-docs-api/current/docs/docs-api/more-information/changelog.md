@@ -208,7 +208,7 @@ ONLYOFFICE 文档 API 的更改列表。
 ## 版本 6.3
 
 - 添加了 [license](../additional-api/command-service/license.md) 命令。
-- 添加了e [editorConfig.customization.hideRulers](../usage-api/config/editor/customization/customization-standard-branding.md#hiderulers) 字段。
+- 添加了 [editorConfig.customization.hideRulers](../usage-api/config/editor/customization/customization-standard-branding.md#hiderulers) 字段。
 - 添加了 [editorConfig.customization.anonymous](../usage-api/config/editor/customization/customization-standard-branding.md#anonymous) 字段。
 - `editorConfig.customization.commentAuthorOnly` 字段已弃用，请使用 [document.permissions.editCommentAuthorOnly](../usage-api/config/document/permissions.md#editcommentauthoronly) 和 [document.permissions.deleteCommentAuthorOnly](../usage-api/config/document/permissions.md#deletecommentauthoronly) 字段。
 - 添加了 [setFavorite](../usage-api/methods.md#setfavorite) 方法。
