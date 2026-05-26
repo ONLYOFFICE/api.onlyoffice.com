@@ -26,7 +26,7 @@ sidebar_position: 1
 | *text*     | string                   | 项目标题。                                                                                                       |
 | *data*     | string                   | 项目数据（此数据将发送到点击事件回调）。                                                        |
 | *disabled* | boolean                  | 当前项是否已禁用。                                                                          |
-| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons)文档）。 |
+| *icons*    | string                   | 项目图标（请参阅插件 [config](../../../plugin-and-macros/structure/configuration/configuration.md#variationsicons) 文档）。 |
 | *onClick*  | function                 | 点击事件回调。仅适用于 [addContextMenuItem](#addcontextmenuitem) 方法。                                                                                                  |
 | *items*    | [ContextMenuItem](#contextmenuitem)[] | 包含当前项的上下文菜单项的数组。                                                           |
 
@@ -184,7 +184,7 @@ connector.callCommand(() => {
 调用该函数将连接器连接到编辑器。
 
 :::note
-请注意，只有在您已经使用了[disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](../methods.md#createconnector) 方法一起自动被调用。
+请注意，只有在您已经使用了 [disconnect](#disconnect) 方法断开连接器，并需要将连接器重新连接到编辑器时，才应调用此方法。在创建连接器时，无需使用 *connect* 方法，因为它会同 [createConnector](../methods.md#createconnector) 方法一起自动被调用。
 :::
 
 ### 示例
