@@ -15,7 +15,8 @@ expression.WEEKDAY(arg1, arg2);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 表示日期的数字，或其他公式或函数的结果。 |
-| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 确定返回值类型的数字：**1** - 返回从 1（星期日）到 7（星期六）的数字； |
+| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 确定返回值类型的数字：**1** - 返回从 1（星期日）到 7（星期六）的数字；
+**2** - 返回从 1（星期一）到 7（星期日）的数字；**3** - 返回从 0（星期一）到 6（星期日）的数字。 |
 
 ## 返回值
 

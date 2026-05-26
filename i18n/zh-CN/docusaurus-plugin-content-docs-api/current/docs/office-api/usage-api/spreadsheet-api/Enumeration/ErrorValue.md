@@ -1,6 +1,6 @@
 # ErrorValue
 
-The error value.
+错误值。
 * - **"#NULL!"** - 1
 * - **"#DIV/0!"** - 2
 * - **"#VALUE!"** - 3

@@ -14,7 +14,8 @@ expression.CreateSection(oParagraph);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oParagraph | 必需 | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 将在该段落之后插入新文档节。 |
+| oParagraph | 必需 | [ApiParagraph](../../ApiParagraph/ApiParagraph.md) |  | 在其后插入新文档节的段落。
+段落必须在文档中。 |
 
 ## 返回值
 

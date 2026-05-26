@@ -20,12 +20,12 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isFirstColumn | 必需 | boolean |  | 指定第一列条件格式应用于 |
+| isFirstColumn | 必需 | boolean |  | 指定将首列条件格式应用于表格。 |
 | isFirstRow | 必需 | boolean |  | 指定应将第一行条件格式应用于表格。 |
-| isLastColumn | 必需 | boolean |  | 指定最后一列条件格式应用于 |
+| isLastColumn | 必需 | boolean |  | 指定将末列条件格式应用于表格。 |
 | isLastRow | 必需 | boolean |  | 指定应将最后一行条件格式应用于表格。 |
-| isHorBand | 必需 | boolean |  | 指定水平条带条件格式不应用 |
-| isVerBand | 必需 | boolean |  | 指定垂直条带条件格式不应用于 |
+| isHorBand | 必需 | boolean |  | 指定不将水平条带条件格式应用于表格。 |
+| isVerBand | 必需 | boolean |  | 指定不将垂直条带条件格式应用于表格。 |
 
 ## 返回值
 

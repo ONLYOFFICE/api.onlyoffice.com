@@ -14,7 +14,8 @@ expression.ChangeLineStyles(arrLine);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrLine | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | 线条样式数组必须包含 3 个元素 - 微妙、适中和强烈填充。 |
+| arrLine | 必需 | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | 线条样式数组必须包含 3 个元素 - 细微、中等和强烈填充。
+如果数组为空或 ApiStroke 元素无填充，将使用 Api.CreateStroke(0, Api.CreateNoFill()) 元素填充。 |
 
 ## 返回值
 

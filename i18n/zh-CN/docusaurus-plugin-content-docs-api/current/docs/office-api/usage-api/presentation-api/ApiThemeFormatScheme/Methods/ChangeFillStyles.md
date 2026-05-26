@@ -14,7 +14,8 @@ expression.ChangeFillStyles(arrFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md)[] |  | 填充样式数组必须包含 3 个元素 - 微妙、适中和强烈填充。 |
+| arrFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md)[] |  | 填充样式数组必须包含 3 个元素 - 细微、中等和强烈填充。
+如果数组为空或数组中包含 NoFill 元素，将使用 Api.CreateNoFill() 元素填充。 |
 
 ## 返回值
 

@@ -1,6 +1,6 @@
 # N
 
-Converts a value to a number, dates to serial numbers, - **true** to 1, error to [ErrorValue](../../Enumeration/ErrorValue.md), anything else to 0 (zero).
+将值转换为数字，日期转换为序列号，**true** 转换为 1，错误转换为 [ErrorValue](../../Enumeration/ErrorValue.md)，其他任何值转换为 0（零）。
 
 ## 语法
 

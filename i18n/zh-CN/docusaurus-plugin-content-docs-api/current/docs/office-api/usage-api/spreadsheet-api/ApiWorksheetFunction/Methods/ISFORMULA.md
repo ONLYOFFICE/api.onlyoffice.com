@@ -1,6 +1,6 @@
 # ISFORMULA
 
-Checks whether a reference to a cell contains a formula, and returns - **true** or - **false**.
+检查单元格引用是否包含公式，并返回 **true** 或 **false**。
 
 ## 语法
 

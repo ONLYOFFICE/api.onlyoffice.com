@@ -15,7 +15,11 @@ expression.OnEncryption(obj);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | obj | 必需 | object |  | 加密属性。 |
-| obj.type | 必需 | string |  | 加密操作的类型： |
+| obj.type | 必需 | string |  | 加密操作的类型：
+**generatePassword** - 为文档生成密码，
+**getPasswordByFile** - 打开文档时发送密码，
+**encryptData** - 协同编辑时加密更改，
+**decryptData** - 协同编辑时解密更改。 |
 | obj.password | 必需 | string |  | 指定访问文档密码的字符串值。 |
 | obj.data | 必需 | string |  | 加密/解密的更改。 |
 | obj.check | 必需 | boolean |  | 检查加密/解密操作是否成功（仅用于 *encryptData* 或 *decryptData* 类型）。 |

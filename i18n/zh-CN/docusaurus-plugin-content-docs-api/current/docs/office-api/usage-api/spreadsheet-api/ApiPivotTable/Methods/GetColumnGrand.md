@@ -1,6 +1,6 @@
 # GetColumnGrand
 
-Returns the - **Grand Totals** setting of the pivot table columns.
+返回数据透视表列的 **Grand Totals** 设置。
 
 ## 语法
 

@@ -1,6 +1,6 @@
 # SetRowGrand
 
-Sets the - **Grand Totals** setting to the pivot table rows.
+设置数据透视表行的 **Grand Totals** 设置。
 
 ## 语法
 

@@ -18,7 +18,8 @@ expression.SetNumberFormat(nDemical, sSepStyle, sNegStyle, sCurrency, bCurrencyP
 | sSepStyle | Required | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | number separate style |
 | sNegStyle | Required | [NumberNegStyle](../../Enumeration/NumberNegStyle.md) |  | number negative style |
 | sCurrency | Required | string |  | currency sybmol |
-| bCurrencyPrepend | Required | boolean |  | If true, places the currency symbol before the number (e.g., $1,234.56);  |
+| bCurrencyPrepend | Required | boolean |  | If true, places the currency symbol before the number (e.g., $1,234.56); 
+if false, places it after (e.g., 1,234.56$). |
 
 ## Returns
 

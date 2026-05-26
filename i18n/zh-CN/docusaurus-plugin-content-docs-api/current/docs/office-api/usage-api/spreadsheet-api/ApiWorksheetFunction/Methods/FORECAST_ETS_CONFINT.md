@@ -16,9 +16,11 @@ expression.FORECAST_ETS_CONFINT(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将预测新值的日期。必须在时间线中的最后一个日期之后。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number[] |  | 确定将预测新点的历史值的数值数据区域或数组。 |
-| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 与历史值对应的日期/时间值范围。 |
+| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 与历史值对应的日期/时间值范围。
+时间线范围的大小必须与第二个参数相同。日期/时间值之间必须有恒定的间隔且不能为零。 |
 | arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 一个介于 0 和 1 之间的数字，表示计算出的置信区间的置信水平。默认值为 0.95。 |
-| arg5 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定季节模式长度的可选数值。默认值 1 表示自动检测季节性。 |
+| arg5 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定季节性模式长度的可选数值。默认值 1 表示自动检测季节性。
+值 0 表示无季节性。 |
 | arg6 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 处理缺失值的可选数值。默认值 1 通过插值替换缺失值，0 则用零替换。 |
 | arg7 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 用于聚合具有相同时间戳的多个值的可选数值。 |
 

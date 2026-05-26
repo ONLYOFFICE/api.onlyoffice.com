@@ -16,7 +16,11 @@ expression.DAYS360(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 开始计算天数的起始日期。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 计算天数的结束日期。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定在计算中是使用美国 (NASD)（false 或省略）还是欧洲（true）方法的逻辑值。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定在计算中使用美国 (NASD)（false 或省略）还是欧洲（true）方法的逻辑值。
+按照欧洲方法，发生在月份 31 日的起始和结束日期将变为同月 30 日。
+按照美国方法，如果起始日期是月份的最后一天，则变为同月 30 日。
+如果结束日期是月份的最后一天且起始日期早于月份的 30 日，则结束日期变为下月 1 日。
+否则结束日期变为同月 30 日。 |
 
 ## 返回值
 

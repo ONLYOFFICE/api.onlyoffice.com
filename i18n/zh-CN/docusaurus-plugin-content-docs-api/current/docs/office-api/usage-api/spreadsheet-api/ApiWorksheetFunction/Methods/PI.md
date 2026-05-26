@@ -1,6 +1,6 @@
 # PI
 
-Returns the mathematical constant - **pi**, equal to - **3.14159265358979**, accurate to 15 digits.
+返回数学常数 **pi**，等于 **3.14159265358979**，精确到 15 位数字。
 
 ## 语法
 

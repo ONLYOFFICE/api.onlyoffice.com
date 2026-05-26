@@ -14,7 +14,9 @@ expression.SetCharactersLimit(nChars);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nChars | Required | number |  | The maximum number of characters in the text field. If this parameter is equal to -1, no limit will be set. |
+| nChars | Required | number |  | The maximum number of characters in the text field. If this parameter is equal to -1, no limit will be set.
+A limit is required to be set if a comb of characters is applied.
+Maximum value for this parameter is 1000000. |
 
 ## Returns
 

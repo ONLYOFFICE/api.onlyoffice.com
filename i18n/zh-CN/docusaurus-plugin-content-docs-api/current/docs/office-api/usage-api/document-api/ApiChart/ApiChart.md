@@ -39,7 +39,6 @@ ApiChart 是 [ApiDrawing](../ApiDrawing/ApiDrawing.md) 的子类。
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | 使用指定的系数缩放图形的宽度。 |
 | [Select](./Methods/Select.md) | boolean | 选择当前图形对象。 |
 | [SetAxieNumFormat](./Methods/SetAxieNumFormat.md) | boolean | 将指定的数字格式设置为坐标轴值。 |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | 无 | 未提供描述。 |
 | [SetCategoryName](./Methods/SetCategoryName.md) | boolean | 为指定的图表类别设置名称。 |
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | 设置指定图表系列中数据点的填充。 |
 | [SetDataPointNumFormat](./Methods/SetDataPointNumFormat.md) | boolean | 将指定的数字格式设置为图表数据点。 |

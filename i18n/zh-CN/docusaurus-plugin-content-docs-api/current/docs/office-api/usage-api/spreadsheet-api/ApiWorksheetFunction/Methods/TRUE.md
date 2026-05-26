@@ -1,6 +1,6 @@
 # TRUE
 
-Returns the - **true** logical value.
+返回 **true** 逻辑值。
 
 ## 语法
 

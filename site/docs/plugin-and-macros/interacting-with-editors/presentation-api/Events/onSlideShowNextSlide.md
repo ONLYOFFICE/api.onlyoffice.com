@@ -1,6 +1,7 @@
 # onSlideShowNextSlide
 
 The function called after a slide has been changed and displayed during a slide show presentation.
+Fires before the slide content is actually displayed.
 
 ## Parameters
 

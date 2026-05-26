@@ -1,6 +1,6 @@
 # EXACT
 
-Checks whether two text strings are exactly the same, and returns - **true** or - **false**. This function is case-sensitive.
+检查两个文本字符串是否完全相同，并返回 **true** 或 **false**。此函数区分大小写。
 
 ## 语法
 

@@ -14,7 +14,8 @@ expression.AddTableOfFigures(oTofPr, bReplace);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oTofPr | Optional | [TofPr](../../Enumeration/TofPr.md) | &#123;&#125; | Table of figures properties. |
+| oTofPr | Optional | [TofPr](../../Enumeration/TofPr.md) | &#123;&#125; | Table of figures properties.
+💡 Please note that the table of figures properties will be filled with the default properties if they are undefined. |
 | bReplace | Optional | boolean | true | Specifies whether to replace the selected table of figures instead of adding a new one. |
 
 ## Returns

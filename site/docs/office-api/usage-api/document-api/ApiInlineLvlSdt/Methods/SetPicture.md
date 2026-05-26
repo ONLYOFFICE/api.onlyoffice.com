@@ -16,7 +16,8 @@ expression.SetPicture(imageUrl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| imageUrl | Required | string |  | The URL of the image to be used for the content control. |
+| imageUrl | Required | string |  | The URL of the image to be used for the content control.
+Currently, only internet URLs are supported. |
 
 ## Returns
 

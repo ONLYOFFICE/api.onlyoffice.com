@@ -1,6 +1,6 @@
 # ISEVEN
 
-Returns - **true** if a number is even.
+如果数字为偶数，返回 **true**。
 
 ## 语法
 

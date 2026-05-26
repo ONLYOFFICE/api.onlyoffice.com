@@ -1,6 +1,6 @@
 # SetColumnGrand
 
-Sets the - **Grand Totals** setting to the pivot table columns.
+设置数据透视表列的 **Grand Totals** 设置。
 
 ## 语法
 

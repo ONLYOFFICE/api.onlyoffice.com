@@ -14,7 +14,13 @@ expression.SetUnderline(undelineType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| undelineType | 必需 | 'none' \| 'single' \| 'singleAccounting' \| 'double' \| 'doubleAccounting' |  | 指定 |
+| undelineType | 必需 | 'none' \| 'single' \| 'singleAccounting' \| 'double' \| 'doubleAccounting' |  | 指定显示在字符下方的线条类型。
+可用值如下：
+**"none"** - 无下划线；
+**"single"** - 单线下划线；
+**"singleAccounting"** - 单线下划线，但不超出单元格边框；
+**"double"** - 双线下划线；
+**"doubleAccounting"** - 双线下划线，但不超出单元格边框。 |
 
 ## 返回值
 

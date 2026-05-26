@@ -14,7 +14,8 @@ expression.ChangeLineStyles(arrLine);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrLine | Required | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | The array of line styles must contain 3 elements - subtle, moderate and intense fills. |
+| arrLine | Required | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | The array of line styles must contain 3 elements - subtle, moderate and intense fills.
+If an array is empty or ApiStroke elements are with no fill, it will be filled with the Api.CreateStroke(0, Api.CreateNoFill()) elements. |
 
 ## Returns
 

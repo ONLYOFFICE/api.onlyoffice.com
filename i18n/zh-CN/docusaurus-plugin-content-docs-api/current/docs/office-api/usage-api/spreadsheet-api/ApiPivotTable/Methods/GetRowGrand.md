@@ -1,6 +1,6 @@
 # GetRowGrand
 
-Returns the - **Grand Totals** setting of the pivot table rows.
+返回数据透视表行的 **Grand Totals** 设置。
 
 ## 语法
 

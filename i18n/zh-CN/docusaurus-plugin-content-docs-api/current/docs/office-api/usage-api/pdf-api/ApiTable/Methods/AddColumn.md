@@ -15,7 +15,8 @@ expression.AddColumn(oCell, isBefore);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | 可选 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 如果未指定，将在表格末尾添加新列。 |
-| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新列。如果未指定单元格， |
+| isBefore | 可选 | boolean | false | 在指定单元格之前或之后添加新列。如果未指定单元格，
+则此参数将被忽略。 |
 
 ## 返回值
 

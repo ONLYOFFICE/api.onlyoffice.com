@@ -16,8 +16,10 @@ expression.LINEST(arg1, arg2, arg3, arg4);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | *y = mx + b* 方程中的 y 值集。 |
 | arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | *y = mx + b* 方程中的可选 x 值集。 |
-| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true** 或省略，则常量 *b* 将正常计算， |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true**，则返回附加回归统计信息， |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true** 或省略，常量 *b* 将正常计算；
+如果参数为 **false**，*b* 将设置为 0。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 逻辑值：如果此参数设置为 **true**，返回额外的回归统计信息；
+如果参数为 **false** 或省略，返回 m 系数和常量 *b*。 |
 
 ## 返回值
 

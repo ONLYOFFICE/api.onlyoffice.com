@@ -20,12 +20,16 @@ expression.SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHo
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| isFirstColumn | Required | boolean |  | Specifies that the first column conditional formatting shall be applied to the |
+| isFirstColumn | Required | boolean |  | Specifies that the first column conditional formatting shall be applied to the
+    table. |
 | isFirstRow | Required | boolean |  | Specifies that the first row conditional formatting shall be applied to the table. |
-| isLastColumn | Required | boolean |  | Specifies that the last column conditional formatting shall be applied to the |
+| isLastColumn | Required | boolean |  | Specifies that the last column conditional formatting shall be applied to the
+    table. |
 | isLastRow | Required | boolean |  | Specifies that the last row conditional formatting shall be applied to the table. |
-| isHorBand | Required | boolean |  | Specifies that the horizontal banding conditional formatting shall not be applied |
-| isVerBand | Required | boolean |  | Specifies that the vertical banding conditional formatting shall not be applied to |
+| isHorBand | Required | boolean |  | Specifies that the horizontal banding conditional formatting shall not be applied
+    to the table. |
+| isVerBand | Required | boolean |  | Specifies that the vertical banding conditional formatting shall not be applied to
+    the table. |
 
 ## Returns
 

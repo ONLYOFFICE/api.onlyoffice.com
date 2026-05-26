@@ -14,10 +14,15 @@ expression.AGGREGATE(arg1, arg2, arg3, args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定要使用的函数的数值：**1** - AVERAGE，**2** - COUNT，**3** - COUNTA，**4** - MAX，**5** - MIN， |
-| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定应忽略哪些值的数值：**0** 或省略 - 嵌套的 SUBTOTAL 和 AGGREGATE 函数， |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定要使用的函数的数值：**1** - AVERAGE，**2** - COUNT，**3** - COUNTA，**4** - MAX，**5** - MIN，
+**6** - PRODUCT，**7** - STDEV.S，**8** - STDEV.P，**9** - SUM，**10** - VAR.S，**11** - VAR.P，**12** - MEDIAN，**13** - MODE.SNGL，**14** - LARGE，
+**15** - SMALL，**16** - PERCENTILE.INC，**17** - QUARTILE.INC，**18** - PERCENTILE.EXC，**19** - QUARTILE.EXC。 |
+| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定应忽略哪些值的数值：**0** 或省略 - 嵌套的 SUBTOTAL 和 AGGREGATE 函数，
+**1** - 隐藏行、嵌套的 SUBTOTAL 和 AGGREGATE 函数，**2** - 错误值、嵌套的 SUBTOTAL 和 AGGREGATE 函数，
+**3** - 隐藏行、错误值、嵌套的 SUBTOTAL 和 AGGREGATE 函数，**4** - 不忽略，**5** - 隐藏行，**6** - 错误值，**7** - 隐藏行和错误值。 |
 | arg3 | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 将返回聚合值的第一个数值。 |
-| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 253 个数值或包含要返回聚合值的值的单元格范围。 |
+| args | 必需 | number \| [ApiRange](../../ApiRange/ApiRange.md) \| number[] |  | 最多 253 个数值或包含值的单元格范围，将返回这些值的聚合值。
+参数可以是数字、范围或数字数组。 |
 
 ## 返回值
 

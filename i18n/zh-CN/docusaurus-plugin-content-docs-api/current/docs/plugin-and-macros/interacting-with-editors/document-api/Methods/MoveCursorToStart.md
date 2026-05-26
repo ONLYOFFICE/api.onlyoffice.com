@@ -1,7 +1,7 @@
 # MoveCursorToStart
 
-Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).
-This method is similar to pressing the - **Ctrl + Home** keyboard shortcut.
+将光标移动到当前编辑区域（文档正文、页眉/页脚、脚注或自选图形）的开头。
+此方法类似于按下 **Ctrl + Home** 键盘快捷键。
 
 ## 语法
 

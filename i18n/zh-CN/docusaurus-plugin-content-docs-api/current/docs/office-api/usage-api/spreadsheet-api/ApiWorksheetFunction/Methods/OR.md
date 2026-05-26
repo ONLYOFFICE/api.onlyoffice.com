@@ -1,6 +1,6 @@
 # OR
 
-Checks whether any of the arguments are - **true**. Returns - **false** only if all arguments are - **false**.
+检查是否有任何参数为 **true**。仅当所有参数均为 **false** 时返回 **false**。
 
 ## 语法
 

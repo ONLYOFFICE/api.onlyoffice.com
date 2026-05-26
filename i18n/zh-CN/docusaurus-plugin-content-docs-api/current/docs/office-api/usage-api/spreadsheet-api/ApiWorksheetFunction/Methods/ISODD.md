@@ -1,6 +1,6 @@
 # ISODD
 
-Returns - **true** if a number is odd.
+如果数字为奇数，返回 **true**。
 
 ## 语法
 

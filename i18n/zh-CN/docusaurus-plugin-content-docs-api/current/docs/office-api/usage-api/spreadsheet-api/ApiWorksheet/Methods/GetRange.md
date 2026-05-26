@@ -1,7 +1,7 @@
 # GetRange
 
-Returns an object that represents the selected range of the current sheet. Can be a single cell - - **A1**, or cells
-from a single row - - **A1:E1**, or cells from a single column - - **A1:A10**, or cells from several rows and columns - - **A1:E10**.
+返回表示当前工作表所选范围的对象。可以是单个单元格 - **A1**，或
+单行中的单元格 - **A1:E1**，或单列中的单元格 - **A1:A10**，或多行多列中的单元格 - **A1:E10**。
 
 ## 语法
 

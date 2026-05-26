@@ -1,6 +1,6 @@
 # SIGN
 
-Returns the sign of a number: - **1** if the number is positive, - **0** if the number is zero, or - **-1** if the number is negative.
+返回数字的符号：如果数字为正数，返回 **1**；如果数字为零，返回 **0**；如果数字为负数，返回 **-1**。
 
 ## 语法
 

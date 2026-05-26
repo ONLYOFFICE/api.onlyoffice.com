@@ -1,6 +1,6 @@
 # VARPA
 
-Calculates variance based on the entire population, including logical values and text. Text and the - **false** logical value have the value 0; the - **true** logical value has the value 1.
+基于整个总体计算方差，包括逻辑值和文本。文本和 **false** 逻辑值的值为 0；**true** 逻辑值的值为 1。
 
 ## 语法
 
@@ -14,7 +14,8 @@ expression.VARPA(args);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | 必需 | number \| string \| boolean \| (number \| string \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个值，将计算这些值的方差。 |
+| args | 必需 | number \| string \| boolean \| (number \| string \| boolean)[] \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 255 个值，将计算这些值的方差。
+第一个参数是必需的，后续参数是可选的。参数可以是数字、逻辑值或数字的文本表示、名称、范围或数组。 |
 
 ## 返回值
 

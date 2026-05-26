@@ -17,7 +17,8 @@ expression.AVERAGEIFS(arg1, arg2, arg3, arg4, arg5);
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 将被计算的单元格区域。 |
 | arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 以数字、表达式或文本形式定义将用于计算平均值的单元格的第一个条件或标准。 |
 | arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 用于计算平均值的实际单元格。如果省略，则使用区域中的单元格。 |
-| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 127 个附加条件或标准，以数字、表达式或文本的形式定义哪些单元格将用于计算平均值。 |
+| arg4 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | 最多 127 个附加条件或条件，以数字、表达式或文本的形式定义将用于计算平均值的单元格。
+这些参数是可选的。 |
 | arg5 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 127 个用于计算平均值的实际区域。如果省略，则使用区域中的单元格。这些参数是可选的。 |
 
 ## 返回值

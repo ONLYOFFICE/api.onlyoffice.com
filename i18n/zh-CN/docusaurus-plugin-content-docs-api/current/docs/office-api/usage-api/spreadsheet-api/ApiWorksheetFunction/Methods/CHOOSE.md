@@ -15,7 +15,8 @@ expression.CHOOSE(arg1, args);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 值在值列表中的位置，一个大于或等于 1 但小于值列表中值数量的数值。 |
-| args | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 254 个值或要分析的选定单元格范围。 |
+| args | 必需 | number \| string \| [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | 最多 254 个值或所选的单元格范围用于分析。
+第一个参数是必需的，后续参数是可选的。参数可以是数字、范围、名称或文本字符串。 |
 
 ## 返回值
 

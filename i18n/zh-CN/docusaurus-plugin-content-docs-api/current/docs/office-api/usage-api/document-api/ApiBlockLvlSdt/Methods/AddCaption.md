@@ -21,7 +21,8 @@ expression.AddCaption(additionalText, label, excludeLabel, numFormat, isBefore, 
 | excludeLabel | 可选 | boolean | false | 指定是否从题注中排除标签。 |
 | numFormat | 可选 | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | 可能的题注编号格式。 |
 | isBefore | 可选 | boolean | false | 指定是否在当前内容控件之前（true）或之后（false）插入题注（如果内容控件位于形状中，则在形状之后/之前）。 |
-| headingLvl | 可选 | Number |  | 标题级别（在要指定章节编号时使用）。 |
+| headingLvl | 可选 | Number |  | 标题级别（用于指定章节编号时使用）。
+💡 如果要指定 "Heading 1"，则 nHeadingLvl === 0，以此类推。 |
 | captionSep | 可选 | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | 题注分隔符（如果要指定章节号时使用）。 |
 
 ## 返回值

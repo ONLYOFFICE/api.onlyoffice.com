@@ -15,7 +15,9 @@ expression.SetNumPr(oNumPr, nLvl);
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oNumPr | 必需 | [ApiNumbering](../../ApiNumbering/ApiNumbering.md) |  | 指定编号定义。 |
-| nLvl | 可选 | number | 0 | 指定编号级别引用。如果 ApiParaPr 类的当前实例是直接 |
+| nLvl | 可选 | number | 0 | 指定编号级别引用。如果当前 ApiParaPr 类的实例是段落的直接格式设置，
+则必须指定此参数。否则，如果当前 ApiParaPr 类的实例
+是 ApiStyle 属性的一部分，则此参数将被忽略。 |
 
 ## 返回值
 

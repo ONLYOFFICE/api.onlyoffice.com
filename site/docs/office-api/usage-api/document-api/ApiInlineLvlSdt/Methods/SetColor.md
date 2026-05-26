@@ -14,7 +14,7 @@ expression.SetColor(color);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| color | Required | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | The tag color. Pass &lt;em&gt;null&lt;/em&gt; to remove the color. |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) \| null |  | The tag color. Pass *null* to remove the color. |
 
 ## Returns
 

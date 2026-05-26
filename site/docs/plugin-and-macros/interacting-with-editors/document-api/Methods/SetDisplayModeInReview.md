@@ -14,7 +14,11 @@ expression.SetDisplayModeInReview(sMode);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sMode | Optional | string | "edit" | The display mode: |
+| sMode | Optional | string | "edit" | The display mode:
+**edit** - all changes are displayed,
+**simple** - all changes are displayed but the balloons are turned off,
+**final** - all accepted changes are displayed,
+**original** - all rejected changes are displayed. |
 
 ## Returns
 

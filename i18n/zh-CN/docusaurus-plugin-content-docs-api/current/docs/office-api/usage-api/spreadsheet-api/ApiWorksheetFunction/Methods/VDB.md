@@ -20,7 +20,8 @@ expression.VDB(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 | arg4 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将计算折旧的起始期间，使用与资产使用寿命相同的单位。 |
 | arg5 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 将计算折旧的结束期间，使用与资产使用寿命相同的单位。 |
 | arg6 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 余额下降的比率。如果省略，函数将假定为 2 |
-| arg7 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定当折旧大于余额递减计算时是否使用直线折旧（**false** 或省略）。 |
+| arg7 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | 指定当折旧额大于余额递减计算时是否使用直线折旧法（**false** 或省略）。
+如果设置为 **true**，函数使用余额递减法。 |
 
 ## 返回值
 

@@ -39,7 +39,6 @@ ApiChart is a subclass of [ApiDrawing](../ApiDrawing/ApiDrawing.md).
 | [ScaleWidth](./Methods/ScaleWidth.md) | boolean | Scales the width of the figure using the specified coefficient. |
 | [Select](./Methods/Select.md) | boolean | Selects the current graphic object. |
 | [SetAxieNumFormat](./Methods/SetAxieNumFormat.md) | boolean | Sets the specified numeric format to the axis values. |
-| [SetBackgroundColor](./Methods/SetBackgroundColor.md) | None | No description provided. |
 | [SetCategoryName](./Methods/SetCategoryName.md) | boolean | Sets a name to the specified chart category. |
 | [SetDataPointFill](./Methods/SetDataPointFill.md) | boolean | Sets the fill to the data point in the specified chart series. |
 | [SetDataPointNumFormat](./Methods/SetDataPointNumFormat.md) | boolean | Sets the specified numeric format to the chart data point. |

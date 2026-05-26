@@ -1,9 +1,9 @@
 # AddCustomFunctionLibrary
 
-Registers a new custom functions library (see the - **SetCustomFunctions** plugin method).
-The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.
-Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.
-Parameters can be required or optional. A user can also set a default value.
+注册新的自定义函数库（参见 **SetCustomFunctions** 插件方法）。
+函数参数和结果的描述使用 JSDoc 指定。JSDoc 中需要 *@customfunction* 标签。
+参数和结果可指定为 *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* 类型。
+参数可以是必需的或可选的。用户还可以设置默认值。
 
 ## 语法
 
