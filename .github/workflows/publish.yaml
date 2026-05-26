@@ -55,7 +55,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_RUNNER_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_RUNNER_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_RUNNER_REGION }}
+          aws-region: eu-central-1
 
       - name: Start EC2 instance if stopped
         run: |
