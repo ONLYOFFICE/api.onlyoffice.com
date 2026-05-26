@@ -46,8 +46,33 @@ env:
   com_s3bucket_2: api-site-onlyoffice-com2
 
 jobs:
-  publish:
+  start-runner:
+    name: Start AWS Runner
     runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_RUNNER_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_RUNNER_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_RUNNER_REGION }}
+
+      - name: Start EC2 instance if stopped
+        run: |
+          STATE=$(aws ec2 describe-instances --instance-ids i-0d1670a99456ecce2 --query 'Reservations[0].Instances[0].State.Name' --output text)
+          echo "Current instance state: ${STATE}"
+          if [ "${STATE}" = "stopped" ]; then
+            echo "Starting instance i-0d1670a99456ecce2..."
+            aws ec2 start-instances --instance-ids i-0d1670a99456ecce2
+            aws ec2 wait instance-running --instance-ids i-0d1670a99456ecce2
+            echo "Instance started successfully."
+          else
+            echo "Instance is already in state '${STATE}', skipping start."
+          fi
+
+  publish:
+    runs-on: ubuntu-latest-max
+    needs: start-runner
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
