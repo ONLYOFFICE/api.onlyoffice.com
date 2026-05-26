@@ -24,6 +24,11 @@ let func = new RegisteredFunction({
   parameters: {
     type: "object",
     properties: {
+      prompt: {
+        type: "string",
+        description:
+          "Instruction for the AI, for example: 'Generate a headline for the selected text.'",
+      },
       scope: {
         type: "string",
         description:
@@ -74,6 +79,7 @@ let func = new RegisteredFunction({
 
 | Name  | Type   | Example     | Description                                                                                                 |
 | ----- | ------ | ----------- | ----------------------------------------------------------------------------------------------------------- |
+| prompt | string | "Generate a headline" | AI headline generation instructions. |
 | scope | string | "selection" | Whether to summarize the 'currentParagraph', 'selection', or the 'entireDocument' (default is 'selection'). |
 
 ## Function execution {#function-execution}

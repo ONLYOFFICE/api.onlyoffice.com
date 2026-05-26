@@ -32,5 +32,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AutofillFields](/assets/images/plugins/autofill-fields.png#gh-light-mode-only)
-![AutofillFields](/assets/images/plugins/autofill-fields.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/autofill-fields.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/autofill-fields.dark.webm" type="video/webm" />
+</video>

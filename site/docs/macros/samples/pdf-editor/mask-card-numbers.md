@@ -33,4 +33,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png#gh-light-mode-only)![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/mask-card-numbers.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/mask-card-numbers.dark.webm" type="video/webm" />
+</video>

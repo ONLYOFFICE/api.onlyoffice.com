@@ -53,5 +53,9 @@ Methods used: [SetFontFamily](/docs/office-api/usage-api/presentation-api/ApiRun
 
 ## Result
 
-![FormatSlideTitles](/assets/images/plugins/format-slide-titles.png#gh-light-mode-only)
-![FormatSlideTitles](/assets/images/plugins/format-slide-titles.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/format-slide-titles.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/format-slide-titles.dark.webm" type="video/webm" />
+</video>

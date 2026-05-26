@@ -33,5 +33,9 @@ Methods used: Methods used: [GetPresentation](/docs/office-api/usage-api/present
 
 ## Result
 
-![ChartAligner](/assets/images/plugins/chart-aligner.png#gh-light-mode-only)
-![ChartAligner](/assets/images/plugins/chart-aligner.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/align-charts.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/align-charts.dark.webm" type="video/webm" />
+</video>

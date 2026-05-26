@@ -56,5 +56,9 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![RemoveEmptyTextBoxes](/assets/images/plugins/remove-empty-text-boxes.png#gh-light-mode-only)
-![RemoveEmptyTextBoxes](/assets/images/plugins/remove-empty-text-boxes.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-empty-text-boxes.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/remove-empty-text-boxes.dark.webm" type="video/webm" />
+</video>

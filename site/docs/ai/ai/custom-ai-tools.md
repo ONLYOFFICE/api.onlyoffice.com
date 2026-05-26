@@ -75,11 +75,14 @@ To add a new function, the `RegisteredFunction` object is used, which adds metad
 | Name        | Type     | Example                                                                                          | Description                                                                       |
 | ----------- | -------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
 | name        | string   | `"commentText"`                                                                                  | The function name.                                                                |
-| text        | string   | `"Add Comment to Text"`                                                                          | Human-readable name displayed in the AI plugin UI.                                |
 | description | string   | `"Adds a comment or footnote to explain or annotate the selected text."`                         | The function description which explains to the AI what the function is used for. |
 | parameters  | object   | `{ type: "object", properties: { prompt: { type: "string" } }, required: ["prompt"] }`           | An object describing the parameters the function expects from the AI.             |
 | examples    | object[] | `[{ prompt: "Explain this text", arguments: { prompt: "Explain this text", type: "comment" } }]` | The examples of correct function calls for the AI.                                |
 | returns     | object   | `{ type: "object", properties: { isApply: { type: "boolean" } }, required: ["isApply"] }`        | Describes what the function returns to the AI model (optional).                   |
+
+:::note Build-time convention
+The `text` field (used in the JavaScript source files of custom functions, as seen in the example below) is a build-time field only. The `helpers.py` script extracts it to generate the display name map and strips it before writing the final `helpers.js` file. The runtime `RegisteredFunction` constructor silently ignores it, and it does not exist as a property on the compiled function object.
+:::
 
 These parameters are used by the AI. The `RegisteredFunction()` object is defined in the [helperFuncs.js](https://github.com/ONLYOFFICE/onlyoffice.github.io/blob/master/sdkjs-plugins/content/ai/scripts/helpers/helperFuncs.js) file.
 

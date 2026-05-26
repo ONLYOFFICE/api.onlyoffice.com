@@ -31,5 +31,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![KeywordMatch](/assets/images/plugins/keyword-match.png#gh-light-mode-only)
-![KeywordMatch](/assets/images/plugins/keyword-match.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/keyword-match-in-form-keys.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/keyword-match-in-form-keys.dark.webm" type="video/webm" />
+</video>

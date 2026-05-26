@@ -106,5 +106,9 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![CreateSimilarSlides](/assets/images/plugins/create-similar-slides.png#gh-light-mode-only)
-![CreateSimilarSlides](/assets/images/plugins/create-similar-slides.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/create-slides-from-list-items.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/create-slides-from-list-items.dark.webm" type="video/webm" />
+</video>

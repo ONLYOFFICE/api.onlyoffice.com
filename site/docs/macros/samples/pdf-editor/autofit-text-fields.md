@@ -27,5 +27,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AutofitTextForms](/assets/images/plugins/autofit-text-fields.png#gh-light-mode-only)
-![AutofitTextForms](/assets/images/plugins/autofit-text-fields.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/autofit-text-fields.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/autofit-text-fields.dark.webm" type="video/webm" />
+</video>

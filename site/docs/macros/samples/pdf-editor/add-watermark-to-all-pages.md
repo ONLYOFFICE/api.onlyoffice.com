@@ -55,5 +55,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/pdf-api/Api/Methods/GetDo
 
 ## Result
 
-![Add Watermark To All Pages](/assets/images/plugins/add-watermark-to-all-pages.png#gh-light-mode-only)
-![Add Watermark To All Pages](/assets/images/plugins/add-watermark-to-all-pages.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/add-watermark-to-all-pages.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/add-watermark-to-all-pages.dark.webm" type="video/webm" />
+</video>

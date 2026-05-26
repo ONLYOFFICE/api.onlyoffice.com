@@ -11,7 +11,7 @@ Macros are quite simple — pure JavaScript with no installation required.
 ## Step 1: Open the macro editor
 
 1. Open any document in ONLYOFFICE.
-2. Go to **Tools → Macros**.
+2. Go to **View → Macros**.
 3. The macro editor will open.
 
 ## Step 2: Write your first macro
@@ -29,7 +29,7 @@ Paste this code into the editor:
 
     // Make it bold and blue
     oParagraph.SetBold(true);
-    oParagraph.SetColor(0, 102, 204);
+    oParagraph.SetColor(Api.CreateColorFromRGB(0, 102, 204));
 
     // Add it to the document
     oDocument.Push(oParagraph);
@@ -52,7 +52,7 @@ Paste this code into the editor:
 
 1. Click **Save** in the macro editor.
 2. Give it a name like "Insert Blue Text".
-3. Now you can run it anytime from **Tools → Macros → [Your Macro Name]**.
+3. Now you can run it anytime from **View → Macros → [Your Macro Name]**.
 
 ## Practice macros
 
@@ -68,8 +68,8 @@ Try these examples to learn more:
     var oHeading = Api.CreateParagraph();
     oHeading.AddText("Chapter 1: Introduction");
     oHeading.SetBold(true);
-    oHeading.SetFontSize(24);
-    oHeading.SetColor(51, 51, 51);
+    oHeading.SetFontSize(48); // 48 half-points = 24 pt
+    oHeading.SetColor(Api.CreateColorFromRGB(51, 51, 51));
 
     oDocument.Push(oHeading);
 })();
@@ -83,7 +83,7 @@ Try these examples to learn more:
     var searchText = "important";
 
     // Search for the keyword
-    oDocument.Search(searchText, true, false, false);
+    oDocument.Search(searchText, true);
 
     // Highlight found text
     var oRange = oDocument.GetRangeBySelect();

@@ -28,5 +28,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![DateSetter](/assets/images/plugins/update-date-field.png#gh-light-mode-only)
-![DateSetter](/assets/images/plugins/update-date-field.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/update-date-field.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/update-date-field.dark.webm" type="video/webm" />
+</video>

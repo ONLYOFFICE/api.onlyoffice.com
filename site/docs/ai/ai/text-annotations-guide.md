@@ -21,8 +21,8 @@ Detailed instructions on using the plugin can be found [here](https://github.com
 The plugin adds annotations to text, enabling users to create AI assistants that analyze content and highlight sections matching specific criteria defined in the assistant's prompt. There are three options:
 
 1. *Hint* — Displays explanatory text.
-2. *Replace + Hint* — Suggests replacement text and displays an explanation below (which can include links).
-3. *Replace* — Suggests replacement text.
+2. *Replace* — Suggests replacement text.
+3. *Replace + Hint* — Suggests replacement text and displays an explanation below (which can include links).
 
 The interface for creating or editing an assistant consists of three fields:
 
@@ -101,8 +101,8 @@ let aiAnswer = {
     reason: "detailed explanation why the fragment satisfies the query",
     difference: "difference between original text and suggested replacement (in HTML format for clarity)",
     // --//--
-    occurrence: 1,       // how many times the match occurs in the paragraph
-    confidence: 0.95     // value from 0 to 1, confidence in the correct selection
+    occurrence: "How many times the match occurs in the paragraph (1 time, 2 times, etc.)",
+    confidence: "value from 0 to 1, confidence percentage in the correct selection"
 }
 ```
 
@@ -119,7 +119,7 @@ await Asc.Editor.callMethod("AnnotateParagraph", [{
     paragraphId: "p1", // value taken from paragraph information
     recalcId: "r12", // value taken from paragraph information
     ranges: [ // calculated based on aiAnswer.origin and aiAnswer.occurrence
-        { start: 5, length: 10, id: 1 }
+        { start: 5, length: 10, id: "a1" }
         // start is the index of the first character of the match in the paragraph
     ]
 }]);
@@ -169,7 +169,7 @@ To complete the workflow, users must be able to either apply the AI's suggestion
  */
 onAccept: async function (paraId, rangeId) {
     // Sets _skipNextChangeParagraph = true to prevent re-annotation after replacement
-    await CustomAnnotator.prototype.onAccept.call(this, paraId, rangeId);
+    await CustomAnnotator.prototype.onAccept.call(this);
 
     // Retrieve the AI suggestion stored for this annotation
     let text = this.getAnnotation(paraId, rangeId)["suggestion"];

@@ -63,5 +63,9 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![InsertCalculations](/assets/images/plugins/insert-calculations.png#gh-light-mode-only)
-![InsertCalculations](/assets/images/plugins/insert-calculations.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/insert-calculations.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/pdf-editor/insert-calculations.dark.webm" type="video/webm" />
+</video>

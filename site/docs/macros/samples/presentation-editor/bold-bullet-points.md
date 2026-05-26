@@ -44,5 +44,9 @@ Methods used: [GetPresentation](/docs/office-api/usage-api/presentation-api/Api/
 
 ## Result
 
-![BoldBulletPoints](/assets/images/plugins/bold-bullet-points.png#gh-light-mode-only)
-![BoldBulletPoints](/assets/images/plugins/bold-bullet-points.dark.png#gh-dark-mode-only)
+<video className="light-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/bold-bullet-points.webm" type="video/webm" />
+</video>
+<video className="dark-video" autoPlay loop muted playsInline controls style={{maxWidth: '848px'}}>
+  <source src="/assets/video/macros/presentation-editor/bold-bullet-points.dark.webm" type="video/webm" />
+</video>

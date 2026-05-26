@@ -30,8 +30,8 @@ You can find ready-to-use macros [here](/samples/?doctype=docs&text=macros) or c
 5. [Write](./writing-macros.md) code for your macro or copy an example macro code from the [macro samples](/samples/?doctype=docs&text=macros) and paste it into the macro editor's workspace.
 ![Macros window](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Macros window](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
 
-7. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.
-8. When ready, click ![Play icon](/assets/images/plugins/play.svg) to run your code in the document.
+6. To rename the macro, click ![Dots icon](/assets/images/plugins/dots.svg#gh-light-mode-only)![Dots icon](/assets/images/plugins/dots.dark.svg#gh-dark-mode-only) next to the macro name and select **Rename**. Enter a new name for the macro and click **Ok**.
+7. When ready, click ![Play icon](/assets/images/plugins/play.svg) to run your code in the document.
 
 
 ![Run macro](/assets/images/plugins/run-macro.png#gh-light-mode-only)![Run macro](/assets/images/plugins/run-macro.dark.png#gh-dark-mode-only)
