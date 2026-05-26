@@ -304,9 +304,9 @@ Translations for the description field. The object keys are the two letter langu
 
 ### variations.EditorsSupport
 
-**type:** `editorType[]`
+**type:** `editorType[]` | **default:** `[]`
 
-The editors which the plugin is available for (`word`, `cell`, `slide`, or `pdf`). The default value is `[]`.
+The editors which the plugin is available for (`word`, `cell`, `slide`, or `pdf`).
 
 **Example**: `["word"]`
 
@@ -383,9 +383,9 @@ Scalable icons for plugin extensions. More information can be found [here](../..
 
 ### variations.initData
 
-**type:** `string`
+**type:** `string` | **default:** `""`
 
-The data which is sent from the editor to the plugin at the plugin start. This parameter is usually equal to `""`. If `initDataType == "text"`, the plugin will receive the selected text upon launch. It may also be equal to `encryption` in the encryption plugins.
+The data which is sent from the editor to the plugin at the plugin start. If `initDataType == "text"`, the plugin will receive the selected text upon launch. It may also be equal to `encryption` in the encryption plugins.
 
 **Example**: `"text"`
 
@@ -407,7 +407,7 @@ The data type selected in the editor and sent to the plugin:
 - `html` - HTML formatted code,
 - `ole` - OLE object data,
 - `desktop` - the desktop editor data,
-- `destop-external` - the main page data of the desktop app (system messages),
+- `desktop-external` - the main page data of the desktop app (system messages),
 - `none` - no data will be send to the plugin from the editor,
 - `sign` - the sign for the keychain plugin.
 
@@ -493,9 +493,9 @@ Specifies if an OLE object must be redrawn when resized in the editor using the 
 
 ### variations.isViewer
 
-**type:** `boolean`
+**type:** `boolean` | **default:** `false`
 
-Specifies if the plugin is working when the document is available in the viewer mode only or not. The default value is `false`.
+Specifies if the plugin is working when the document is available in the viewer mode only or not.
 
 **Example**: `false`
 

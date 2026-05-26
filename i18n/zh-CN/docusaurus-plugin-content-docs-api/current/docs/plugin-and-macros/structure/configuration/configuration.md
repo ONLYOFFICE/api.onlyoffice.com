@@ -304,9 +304,9 @@ sidebar_position: -5
 
 ### variations.EditorsSupport
 
-**类型：** `editorType[]`
+**类型：** `editorType[]` | **默认值：** `[]`
 
-插件可用的编辑器（`word`、`cell`、`slide` 或 `pdf`）。默认值为 `[]`。
+插件可用的编辑器（`word`、`cell`、`slide` 或 `pdf`）。
 
 **示例**: `["word"]`
 
@@ -383,9 +383,9 @@ sidebar_position: -5
 
 ### variations.initData
 
-**类型：** `string`
+**类型：** `string` | **默认值：** `""`
 
-编辑器启动插件时发送给插件的数据。该参数通常为 `""`。如果 `initDataType == "text"`，插件启动时将接收选中的文本。加密插件中也可能等于 `encryption`。
+编辑器启动插件时发送给插件的数据。如果 `initDataType == "text"`，插件启动时将接收选中的文本。加密插件中也可能等于 `encryption`。
 
 **示例**: `"text"`
 
@@ -493,9 +493,9 @@ sidebar_position: -5
 
 ### variations.isViewer
 
-**类型：** `boolean`
+**类型：** `boolean` | **默认值：** `false`
 
-指定插件是否仅在文档以查看器模式时生效。默认值为 `false`。
+指定插件是否仅在文档以查看器模式时生效。
 
 **示例**: `false`
 
