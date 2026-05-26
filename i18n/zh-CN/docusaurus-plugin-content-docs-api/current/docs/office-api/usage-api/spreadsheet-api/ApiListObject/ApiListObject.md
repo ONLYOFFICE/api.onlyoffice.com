@@ -62,7 +62,7 @@
 | [GetShowTableStyleRowStripes](./Methods/GetShowTableStyleRowStripes.md) | boolean | 返回是否对表格应用了条带行格式。 |
 | [GetShowTotals](./Methods/GetShowTotals.md) | boolean | 返回表格是否显示汇总行。 |
 | [GetSort](./Methods/GetSort.md) | [ApiSort](../ApiSort/ApiSort.md) | 返回此列表对象的 Sort 对象。 |
-| [GetSourceType](./Methods/GetSourceType.md) | string | 返回表格的源类型。对于基于范围的表格，始终返回 "xlSrcRange"。 |
+| [GetSourceType](./Methods/GetSourceType.md) | string | 返回表格的源类型。对于基于范围的表格，始终返回 “xlSrcRange”。 |
 | [GetSummary](./Methods/GetSummary.md) | string | 返回表格的摘要描述（替代文本摘要）。 |
 | [GetTableStyle](./Methods/GetTableStyle.md) | string | 返回应用于表格的表格样式名称。 |
 | [GetTotalsRowRange](./Methods/GetTotalsRowRange.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表格汇总行的范围。 |

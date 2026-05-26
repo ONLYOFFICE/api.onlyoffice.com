@@ -22,10 +22,10 @@
 | ------ | ------- | ----------- |
 | [Delete](./Methods/Delete.md) | 无 | 从集合中移除此排序字段。 |
 | [GetKey](./Methods/GetKey.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回排序键范围（完整表格列）。 |
-| [GetOrder](./Methods/GetOrder.md) | [SortOrder](../Enumeration/SortOrder.md) | 返回排序顺序："xlAscending" 或 "xlDescending"。 |
+| [GetOrder](./Methods/GetOrder.md) | [SortOrder](../Enumeration/SortOrder.md) | 返回排序顺序：“xlAscending” 或 “xlDescending”。 |
 | [GetParent](./Methods/GetParent.md) | [ApiSortFields](../ApiSortFields/ApiSortFields.md) | 返回父 SortFields 集合。 |
 | [GetPriority](./Methods/GetPriority.md) | number | 返回此排序字段在集合中从 1 开始的优先级。 |
-| [GetSortOn](./Methods/GetSortOn.md) | [XlSortOn](../Enumeration/XlSortOn.md) | 返回排序依据类型："xlSortOnValues"、"xlSortOnCellColor"、"xlSortOnFontColor"、"xlSortOnIcon"。 |
+| [GetSortOn](./Methods/GetSortOn.md) | [XlSortOn](../Enumeration/XlSortOn.md) | 返回排序依据类型：“xlSortOnValues”、“xlSortOnCellColor”、“xlSortOnFontColor”、“xlSortOnIcon”。 |
 | [GetSortOnValue](./Methods/GetSortOnValue.md) | [ApiColor](../ApiColor/ApiColor.md) \| null | 返回此排序字段排序依据的值（颜色或 null）。 |
 | [ModifyKey](./Methods/ModifyKey.md) | 无 | 更改排序键列。 |
 | [SetOrder](./Methods/SetOrder.md) | 无 | 设置排序顺序。 |

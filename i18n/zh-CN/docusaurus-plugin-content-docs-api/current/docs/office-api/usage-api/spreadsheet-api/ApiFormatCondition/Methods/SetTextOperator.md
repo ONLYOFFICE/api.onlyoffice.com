@@ -14,7 +14,7 @@ expression.SetTextOperator(TextOperator);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| TextOperator | 必需 | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | 文本运算符："xlContains"、"xlDoesNotContain"、"xlBeginsWith"、"xlEndsWith"。 |
+| TextOperator | 必需 | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | 文本运算符：“xlContains”、“xlDoesNotContain”、“xlBeginsWith”、“xlEndsWith”。 |
 
 ## 返回值
 

@@ -16,7 +16,7 @@ expression.AddDefName(sName, sRef, isHidden);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | sName | 必需 | string |  | 范围名称。 |
 | sRef | 必需 | string |  | 指定范围的引用。必须包含工作表名称，后跟 ! 符号和单元格范围。
-示例："Sheet1!$A$1:$B$2"。 |
+示例：“Sheet1!$A$1:$B$2”。 |
 | isHidden | 必需 | boolean |  | 定义范围名称是否隐藏。 |
 
 ## 返回值

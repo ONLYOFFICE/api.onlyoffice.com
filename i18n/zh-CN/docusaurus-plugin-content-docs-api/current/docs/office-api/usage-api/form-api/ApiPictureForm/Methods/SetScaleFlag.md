@@ -14,7 +14,7 @@ expression.SetScaleFlag(sScaleFlag);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sScaleFlag | 必需 | [ScaleFlag](../../Enumeration/ScaleFlag.md) |  | 图片缩放条件："always"、"never"、"tooBig" 或 "tooSmall"。 |
+| sScaleFlag | 必需 | [ScaleFlag](../../Enumeration/ScaleFlag.md) |  | 图片缩放条件：“always”、“never”、“tooBig” 或 “tooSmall”。 |
 
 ## 返回值
 

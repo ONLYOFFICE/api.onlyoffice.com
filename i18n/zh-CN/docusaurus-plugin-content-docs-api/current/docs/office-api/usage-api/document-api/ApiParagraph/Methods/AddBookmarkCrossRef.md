@@ -18,8 +18,8 @@ expression.AddBookmarkCrossRef(sRefTo, sBookmarkName, bLink, bAboveBelow, sSepWi
 | sRefTo | 必需 | [bookmarkRefTo](../../Enumeration/bookmarkRefTo.md) |  | 要插入的书签引用的文本或数值。 |
 | sBookmarkName | 必需 | string |  | 要引用的书签名称（必须在文档中）。 |
 | bLink | 可选 | boolean | true | 指定引用是否作为超链接插入。 |
-| bAboveBelow | 可选 | boolean | false | 指定是否应包含表示引用位置的「上方/下方」字样（不与 "text" 和 "aboveBelow" sRefType 一起使用）。 |
-| sSepWith | 可选 | string | "" | 数字分隔符（仅与 "fullCtxParaNum" sRefType 一起使用）。 |
+| bAboveBelow | 可选 | boolean | false | 指定是否应包含表示引用位置的“上方/下方”字样（不与 “text” 和 “aboveBelow” sRefType 一起使用）。 |
+| sSepWith | 可选 | string | "" | 数字分隔符（仅与 “fullCtxParaNum” sRefType 一起使用）。 |
 
 ## 返回值
 

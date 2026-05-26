@@ -1,6 +1,6 @@
 # GetSortMethod
 
-返回排序方法："xlPinYin" 或 "xlStroke"。
+返回排序方法：“xlPinYin” 或 “xlStroke”。
 
 :::note\
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。\

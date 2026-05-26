@@ -1,14 +1,14 @@
 # Color
 
 从通用输入创建 ApiColor。该方法识别多种调用签名，并委托给更具体的工厂方法或直接构造 ApiColor。
-- **数值分量**："Api.Color(r, g, b)" 或 "Api.Color(r, g, b, a)" 从字节分量 (0-255) 创建 RGB 或 RGBA 颜色。
-- **打包整数**："Api.Color(0xRRGGBB)" 从 24 位整数创建 RGB 颜色。
-- **完整十六进制字符串**："Api.Color('#RRGGBB')" 或 "Api.Color('RRGGBB')" 创建十六进制颜色；前导 "#" 是可选的。
-- **简短十六进制字符串**："Api.Color('#RGB')" 通过重复每个数字进行扩展，因此 "#F0A" 变为 "#FF00AA"。
-- **主题颜色名称**："Api.Color('accent1')" 创建主题颜色；接受 SchemeColorId 的任何值。
-- **预设颜色名称**："Api.Color('aliceBlue')" 将 PresetColor 的任何值解析为其 RGB 等效值。
-- **自动颜色**："Api.Color('auto')" 创建自动颜色。
-对于单个字符串参数，解析优先级为："auto"、以 "#" 开头的字符串、主题名称、预设名称、不带前缀的 6 位十六进制字符串。主题和预设调色板不重叠。3 位简写仅在带有前导 "#" 时接受。
+- **数值分量**：“Api.Color(r, g, b)”或“Api.Color(r, g, b, a)”从字节分量 (0-255) 创建 RGB 或 RGBA 颜色。
+- **打包整数**：“Api.Color(0xRRGGBB)”从 24 位整数创建 RGB 颜色。
+- **完整十六进制字符串**：“Api.Color('#RRGGBB')”或“Api.Color('RRGGBB')”创建十六进制颜色；前导“#”是可选的。
+- **简短十六进制字符串**：“Api.Color('#RGB')”通过重复每个数字进行扩展，因此“#F0A”变为“#FF00AA”。
+- **主题颜色名称**：“Api.Color('accent1')”创建主题颜色；接受 SchemeColorId 的任何值。
+- **预设颜色名称**：“Api.Color('aliceBlue')”将 PresetColor 的任何值解析为其 RGB 等效值。
+- **自动颜色**：“Api.Color('auto')”创建自动颜色。
+对于单个字符串参数，解析优先级为：“auto”、以“#”开头的字符串、主题名称、预设名称、不带前缀的 6 位十六进制字符串。主题和预设调色板不重叠。3 位简写仅在带有前导“#”时接受。
 不支持的输入（对象、数组、已有的 ApiColor、未知字符串、无参数）返回黑色 (#000000)。
 
 ## 语法

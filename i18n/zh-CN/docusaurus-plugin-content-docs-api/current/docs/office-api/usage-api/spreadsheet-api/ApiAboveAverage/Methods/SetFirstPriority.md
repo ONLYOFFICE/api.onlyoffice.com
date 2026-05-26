@@ -1,6 +1,6 @@
 # SetFirstPriority
 
-将当前条件格式规则的优先级值设置为「1」，使其在工作表上的所有其他规则之前计算。
+将当前条件格式规则的优先级值设置为“1”，使其在工作表上的所有其他规则之前计算。
 
 继承自 [ApiFormatCondition.SetFirstPriority](../../ApiFormatCondition/Methods/SetFirstPriority.md)。
 

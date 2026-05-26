@@ -11,4 +11,4 @@ Object
 | 名称 | 类型 | 描述 |
 | ---- | ---- | ----------- |
 | Color | [ApiColor](../ApiColor/ApiColor.md) | 底纹颜色。 |
-| Type | [ShdType](../Enumeration/ShdType.md) | 底纹类型：**"nil"** - 无底纹，**"clear"** - 纯色填充。 |
+| Type | [ShdType](../Enumeration/ShdType.md) | 底纹类型：**“nil”** - 无底纹，**“clear”** - 纯色填充。 |

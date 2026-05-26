@@ -14,7 +14,7 @@ expression.SetTriggerType(trigger);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| trigger | 必需 | [AnimationTriggerType](../../Enumeration/AnimationTriggerType.md) |  | 触发器类型："onclick"、"withprevious" 或 "afterprevious"。 |
+| trigger | 必需 | [AnimationTriggerType](../../Enumeration/AnimationTriggerType.md) |  | 触发器类型：“onclick”、“withprevious” 或 “afterprevious”。 |
 
 ## 返回值
 

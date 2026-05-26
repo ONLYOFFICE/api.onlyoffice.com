@@ -1,8 +1,8 @@
 # SetSpacingLine
 
 设置段落行距。如果 sLineRule 参数的值为
-"atLeast" 或 "exact"，则 nLine 的值将被解释为磅的二十分之一。如果
-sLineRule 参数的值为 "auto"，则
+“atLeast” 或 “exact”，则 nLine 的值将被解释为磅的二十分之一。如果
+sLineRule 参数的值为 “auto”，则
 nLine 参数的值将被解释为行的 240 分之一。
 
 ## 语法

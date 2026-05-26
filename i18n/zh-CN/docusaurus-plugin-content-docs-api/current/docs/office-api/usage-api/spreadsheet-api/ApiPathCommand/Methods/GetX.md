@@ -1,6 +1,6 @@
 # GetX
 
-返回「moveTo」/「lineTo」路径命令的 X 坐标。
+返回“moveTo”/“lineTo”路径命令的 X 坐标。
 
 ## 语法
 

@@ -1,6 +1,6 @@
 # GetY
 
-返回「moveTo」/「lineTo」路径命令的 Y 坐标。
+返回“moveTo”/“lineTo”路径命令的 Y 坐标。
 
 ## 语法
 

@@ -1,6 +1,6 @@
 # GetSourceType
 
-返回表格的源类型。对于基于范围的表格，始终返回 "xlSrcRange"。
+返回表格的源类型。对于基于范围的表格，始终返回 “xlSrcRange”。
 
 :::note\
 此功能仅在 ONLYOFFICE Docs 付费版本中可用。\

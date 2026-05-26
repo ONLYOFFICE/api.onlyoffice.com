@@ -22,7 +22,7 @@ expression.AddCaption(sAdditional, sLabel, bExludeLabel, sNumberingFormat, bBefo
 | sNumberingFormat | 可选 | [CaptionNumberingFormat](../../Enumeration/CaptionNumberingFormat.md) | "Arabic" | 可能的题注编号格式。 |
 | bBefore | 可选 | boolean | false | 指定是在当前段落之前（true）还是之后（false）插入题注（如果位于形状中，则在形状之前/之后）。 |
 | nHeadingLvl | 可选 | Number |  | 标题级别（用于指定章节编号时使用）。
-💡 如果要指定 "Heading 1"，则 nHeadingLvl === 0，以此类推。 |
+💡 如果要指定 “Heading 1”，则 nHeadingLvl === 0，以此类推。 |
 | sCaptionSep | 可选 | [CaptionSep](../../Enumeration/CaptionSep.md) | "hyphen" | 题注分隔符（如果要指定章节号时使用）。 |
 
 ## 返回值

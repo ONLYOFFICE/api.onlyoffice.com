@@ -31,7 +31,7 @@ ApiTable 是 [ApiTablePr](../ApiTablePr/ApiTablePr.md) 的子类。
 | [GetTableTitle](./Methods/GetTableTitle.md) | string | 返回表格标题（题注）。 |
 | [GetTables](./Methods/GetTables.md) | [ApiTable](../ApiTable/ApiTable.md)[] | 返回表示嵌套在指定表格中的所有表格的数组。 |
 | [InsertInContentControl](./Methods/InsertInContentControl.md) | [ApiTable](../ApiTable/ApiTable.md) \| [ApiBlockLvlSdt](../ApiBlockLvlSdt/ApiBlockLvlSdt.md) | 用内容控件包装当前表格对象。 |
-| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 合并单元格数组。如果合并成功，将返回合并后的单元格，否则结果将为 "null"。 |
+| [MergeCells](./Methods/MergeCells.md) | [ApiTableCell](../ApiTableCell/ApiTableCell.md) | 合并单元格数组。如果合并成功，将返回合并后的单元格，否则结果将为 “null”。 |
 | [RemoveColumn](./Methods/RemoveColumn.md) | boolean | 删除包含指定单元格的表格列。 |
 | [RemoveRow](./Methods/RemoveRow.md) | boolean | 删除包含指定单元格的表格行。 |
 | [ReplaceByElement](./Methods/ReplaceByElement.md) | boolean | 用新元素替换当前表格。 |

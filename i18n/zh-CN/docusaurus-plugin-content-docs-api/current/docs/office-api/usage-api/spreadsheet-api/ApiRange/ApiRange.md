@@ -91,7 +91,7 @@
 | [GetDefName](./Methods/GetDefName.md) | [ApiName](../ApiName/ApiName.md) | 返回当前范围的 ApiName 对象。 |
 | [GetEntireColumn](./Methods/GetEntireColumn.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示包含指定范围的整列的 Range 对象。 |
 | [GetEntireRow](./Methods/GetEntireRow.md) | [ApiRange](../ApiRange/ApiRange.md) \| null | 返回表示包含指定范围的整行的 Range 对象。 |
-| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回当前单元格范围的背景颜色。当单元格/单元格范围的背景颜色为空时返回「No Fill」。 |
+| [GetFillColor](./Methods/GetFillColor.md) | [ApiColor](../ApiColor/ApiColor.md) \| 'No Fill' | 返回当前单元格范围的背景颜色。当单元格/单元格范围的背景颜色为空时返回“No Fill”。 |
 | [GetFormatConditions](./Methods/GetFormatConditions.md) | [ApiFormatConditions](../ApiFormatConditions/ApiFormatConditions.md) | 返回当前范围的条件格式规则集合。 |
 | [GetFormula](./Methods/GetFormula.md) | string \| string[][] | 返回指定范围的公式。 |
 | [GetFormulaArray](./Methods/GetFormulaArray.md) | string \| null | 返回当前范围的数组公式。 |

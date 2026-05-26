@@ -52,7 +52,7 @@
 
 ## 示例
 
-创建文本变换类型为 "textArchUp" 的艺术字对象。
+创建文本变换类型为 “textArchUp” 的艺术字对象。
 
 ```javascript editor-xlsx
 // How to create a word art with adding properties like fill color, size, and transform type to it.
