@@ -32,8 +32,33 @@ env:
   com_s3bucket: api-site-onlyoffice-com
 
 jobs:
-  publish:
+  start-runner:
+    name: Start AWS Runner
     runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_RUNNER_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_RUNNER_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+
+      - name: Start EC2 instance if stopped
+        run: |
+          STATE=$(aws ec2 describe-instances --instance-ids i-0d1670a99456ecce2 --query 'Reservations[0].Instances[0].State.Name' --output text)
+          echo "Current instance state: ${STATE}"
+          if [ "${STATE}" = "stopped" ]; then
+            echo "Starting instance i-0d1670a99456ecce2..."
+            aws ec2 start-instances --instance-ids i-0d1670a99456ecce2
+            aws ec2 wait instance-running --instance-ids i-0d1670a99456ecce2
+            echo "Instance started successfully."
+          else
+            echo "Instance is already in state '${STATE}', skipping start."
+          fi
+
+  publish:
+    runs-on: ubuntu-latest-max
+    needs: start-runner
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -74,11 +99,11 @@ jobs:
 
         cat /sys/fs/cgroup/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2>/dev/null || echo "Memory limit info not available"
 
-        export NODE_OPTIONS="--max-old-space-size=8192"
-        export UV_THREADPOOL_SIZE=4
-        export RSPACK_PARALLEL=6
-        export RAYON_NUM_THREADS=6
-        export TOKIO_WORKER_THREADS=4
+        export NODE_OPTIONS="--max-old-space-size=42192"
+        export UV_THREADPOOL_SIZE=16
+        export RSPACK_PARALLEL=8
+        export RAYON_NUM_THREADS=8
+        export TOKIO_WORKER_THREADS=8
         npm run build -- ${SUB_ARGS} ${LOCALE}
     
     - uses: actions/cache/restore@v3
