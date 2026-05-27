@@ -10,7 +10,7 @@ The Playground serves as an interactive platform for users to explore and test t
 
 ## Features
 
-- **Script testing**. Write and run JavaScript code using one of the provided ONLYOFFICE APIs ([Office JavaScript API](../../office-api/get-started/overview.md), [Automation API](../../docs-api/usage-api/automation-api/automation-api.md), or [Macros API](../../macros/get-started/get-started.md)).
+- **Script testing**. Write and run JavaScript code using one of the provided ONLYOFFICE APIs ([Office JavaScript API](../../office-api/get-started/overview.md), [Automation API](../../docs-api/usage-api/automation-api/automation-api.md), or [Macros](../../macros/get-started/get-started.md)).
 - **Live preview**. See the result of your script instantly in the embedded document editor.
 - **Multi-platform**. Test for desktop, mobile, or embedded platforms.
 - **Customization**. Switch themes and interface languages for convenience.

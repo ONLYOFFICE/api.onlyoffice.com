@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Learn how to extend ONLYOFFICE editors with plugins, macros, and custom AI tools.
 ---
 
 # Getting started

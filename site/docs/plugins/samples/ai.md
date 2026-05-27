@@ -7,7 +7,7 @@ tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presenta
 
 Connects an AI provider (e.g., OpenAI, DeepSeek) to ONLYOFFICE editors, enabling intelligent text generation, editing, summarization, and automatic macro creation.
 
-**Plugin type:** background.  
+**Plugin type:** background.
 
 **Supported editors:** documents, spreadsheets, presentations, PDF.
 

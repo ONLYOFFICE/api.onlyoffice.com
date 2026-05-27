@@ -4,6 +4,8 @@ description: Expand acronyms to their full forms in a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # Acronym full forms
 
 Identifies all acronyms in the document and adds their full forms in comments.
@@ -24,17 +26,14 @@ Identifies all acronyms in the document and adds their full forms in comments.
       // Add more acronyms as needed
     ]);
 
-    let totalFound = 0;
-
     acronymDictionary.forEach((fullForm, acronym) => {
       let searchResults = doc.Search(acronym, true);
 
-    if (searchResults && searchResults.length) {
-      totalFound += searchResults.length;
-      searchResults.forEach((result) => {
-        result.AddComment(fullForm);
-      });
-    }
+      if (searchResults && searchResults.length) {
+        searchResults.forEach((result) => {
+          result.AddComment(fullForm);
+        });
+      }
     });
   }
 
@@ -46,5 +45,4 @@ Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/
 
 ## Result
 
-![AcronymFullForms](/assets/images/plugins/acronym-full-forms.png#gh-light-mode-only)
-![AcronymFullForms](/assets/images/plugins/acronym-full-forms.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/acronym-full-forms" dark />
