@@ -152,9 +152,9 @@ jobs:
         free -h
         cat /sys/fs/cgroup/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/memory.limit_in_bytes 2>/dev/null || echo "Memory limit info not available"
 
-        export NODE_OPTIONS="--max-old-space-size=24672"
-        export UV_THREADPOOL_SIZE=2
-        export RSPACK_PARALLEL=2
-        export RAYON_NUM_THREADS=2
-        export TOKIO_WORKER_THREADS=2
+        export NODE_OPTIONS="--max-old-space-size=42192"
+        export UV_THREADPOOL_SIZE=16
+        export RSPACK_PARALLEL=8
+        export RAYON_NUM_THREADS=8
+        export TOKIO_WORKER_THREADS=8
         npm run build -- ${SUB_ARGS} --locale en --locale zh-CN
