@@ -14,7 +14,7 @@ expression.SetAuthorName(name);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | Required | string |  | No description provided. |
+| name | Required | string |  | The author name. |
 
 ## Returns
 

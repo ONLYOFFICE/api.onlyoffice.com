@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetShowTableStyleRowStripes(bShow);
+expression.SetShowTableStyleRowStripes(show);
 ```
 
 `expression` - 表示 [ApiListObject](../ApiListObject.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetShowTableStyleRowStripes(bShow);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | 必需 | boolean |  | 未提供描述。 |
+| show | 必需 | boolean |  | 指定是否对表格应用镶边行格式。 |
 
 ## 返回值
 

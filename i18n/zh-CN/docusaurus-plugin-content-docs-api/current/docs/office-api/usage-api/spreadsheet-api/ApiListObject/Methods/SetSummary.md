@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetSummary(sSummary);
+expression.SetSummary(summary);
 ```
 
 `expression` - 表示 [ApiListObject](../ApiListObject.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetSummary(sSummary);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sSummary | 必需 | string |  | 未提供描述。 |
+| summary | 必需 | string |  | 表格的替代文本摘要。 |
 
 ## 返回值
 

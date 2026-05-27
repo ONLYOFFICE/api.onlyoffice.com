@@ -5,7 +5,7 @@ Sets field read only
 ## Syntax
 
 ```javascript
-expression.SetReadOnly(bRequired);
+expression.SetReadOnly(readOnly);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetReadOnly(bRequired);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRequired | Required | boolean |  | No description provided. |
+| readOnly | Required | boolean |  | Specifies whether the field is read-only. |
 
 ## Returns
 

@@ -14,7 +14,7 @@ expression.SetBorderWidth(width);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| width | Required | [pt](../../Enumeration/pt.md) |  | No description provided. |
+| width | Required | [pt](../../Enumeration/pt.md) |  | The border width in points. |
 
 ## Returns
 

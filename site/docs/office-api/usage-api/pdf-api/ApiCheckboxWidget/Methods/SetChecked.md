@@ -5,7 +5,7 @@ Sets checkbox widget checked.
 ## Syntax
 
 ```javascript
-expression.SetChecked(bChecked);
+expression.SetChecked(checked);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetChecked(bChecked);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bChecked | Required | boolean |  | No description provided. |
+| checked | Required | boolean |  | Specifies whether the checkbox is checked. |
 
 ## Returns
 

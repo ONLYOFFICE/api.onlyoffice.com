@@ -5,7 +5,7 @@ Sets button widget behavior.
 ## Syntax
 
 ```javascript
-expression.SetBehavior(sType);
+expression.SetBehavior(type);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetBehavior(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | No description provided. |
+| type | Required | [ButtonBehavior](../../Enumeration/ButtonBehavior.md) |  | The highlight behavior when the button is clicked. |
 
 ## Returns
 

@@ -14,8 +14,8 @@ expression.SetSelection(startPoint, endPoint);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| startPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
-| endPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 未提供描述。 |
+| startPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 选区的起始点。 |
+| endPoint | 必需 | [Point](../../Enumeration/Point.md) |  | 选区的结束点。 |
 
 ## 返回值
 

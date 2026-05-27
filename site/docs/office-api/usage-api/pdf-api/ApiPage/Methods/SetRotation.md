@@ -5,7 +5,7 @@ Sets page rotation angle
 ## Syntax
 
 ```javascript
-expression.SetRotation(nAngle);
+expression.SetRotation(angle);
 ```
 
 `expression` - A variable that represents a [ApiPage](../ApiPage.md) class.
@@ -14,7 +14,7 @@ expression.SetRotation(nAngle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAngle | Required | number |  | No description provided. |
+| angle | Required | number |  | The rotation angle in degrees. Must be a multiple of 90. |
 
 ## Returns
 

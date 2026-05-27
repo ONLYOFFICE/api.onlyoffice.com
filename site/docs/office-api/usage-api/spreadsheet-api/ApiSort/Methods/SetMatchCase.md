@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetMatchCase(bMatchCase);
+expression.SetMatchCase(matchCase);
 ```
 
 `expression` - A variable that represents a [ApiSort](../ApiSort.md) class.
@@ -18,7 +18,7 @@ expression.SetMatchCase(bMatchCase);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bMatchCase | Required | boolean |  | No description provided. |
+| matchCase | Required | boolean |  | Specifies whether the sort is case-sensitive. |
 
 ## Returns
 

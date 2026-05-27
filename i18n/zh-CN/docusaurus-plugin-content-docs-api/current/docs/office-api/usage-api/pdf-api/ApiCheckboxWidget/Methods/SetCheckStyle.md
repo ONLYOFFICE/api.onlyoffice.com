@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCheckStyle(sStyle);
+expression.SetCheckStyle(style);
 ```
 
 `expression` - 表示 [ApiCheckboxWidget](../ApiCheckboxWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetCheckStyle(sStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyle | 必需 | [CheckStyle](../../Enumeration/CheckStyle.md) |  | 未提供描述。 |
+| style | 必需 | [CheckStyle](../../Enumeration/CheckStyle.md) |  | 复选框样式。 |
 
 ## 返回值
 

@@ -14,7 +14,7 @@ expression.SetDisplay(display);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| display | Required | [DisplayType](../../Enumeration/DisplayType.md) |  | No description provided. |
+| display | Required | [DisplayType](../../Enumeration/DisplayType.md) |  | The display type for the annotation. |
 
 ## Returns
 

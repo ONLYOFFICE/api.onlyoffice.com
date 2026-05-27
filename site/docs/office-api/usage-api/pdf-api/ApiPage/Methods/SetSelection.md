@@ -14,8 +14,8 @@ expression.SetSelection(startPoint, endPoint);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| startPoint | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
-| endPoint | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| startPoint | Required | [Point](../../Enumeration/Point.md) |  | The start point of the selection. |
+| endPoint | Required | [Point](../../Enumeration/Point.md) |  | The end point of the selection. |
 
 ## Returns
 

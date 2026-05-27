@@ -14,7 +14,7 @@ expression.SetCallout(callout);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| callout | Required | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | No description provided. |
+| callout | Required | [FreeTextCallout](../../Enumeration/FreeTextCallout.md) |  | An array of 3 points defining the callout line. |
 
 ## Returns
 

@@ -14,7 +14,7 @@ expression.SetIconType(iconType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| iconType | Required | [TextIconType](../../Enumeration/TextIconType.md) |  | No description provided. |
+| iconType | Required | [TextIconType](../../Enumeration/TextIconType.md) |  | The icon type for the text annotation. |
 
 ## Returns
 

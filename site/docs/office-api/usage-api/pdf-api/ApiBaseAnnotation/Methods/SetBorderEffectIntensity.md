@@ -15,7 +15,7 @@ expression.SetBorderEffectIntensity(value);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| value | Required | number |  | No description provided. |
+| value | Required | number |  | The border effect intensity. Must be greater than or equal to 0. |
 
 ## Returns
 

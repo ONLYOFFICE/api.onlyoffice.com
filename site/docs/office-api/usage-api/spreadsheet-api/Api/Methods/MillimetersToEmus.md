@@ -15,7 +15,7 @@ expression.MillimetersToEmus(mm);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| mm | Required | [mm](../../Enumeration/mm.md) |  | No description provided. |
+| mm | Required | [mm](../../Enumeration/mm.md) |  | The value in millimeters. |
 
 ## Returns
 

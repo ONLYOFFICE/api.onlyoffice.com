@@ -5,20 +5,18 @@
 ## 语法
 
 ```javascript
-expression.GetBorderEffectIntensity(value);
+expression.GetBorderEffectIntensity();
 ```
 
 `expression` - 表示 [ApiBaseAnnotation](../ApiBaseAnnotation.md) 类的变量。
 
 ## 参数
 
-| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| value | 必需 | number |  | 未提供描述。 |
+此方法没有任何参数。
 
 ## 返回值
 
-boolean
+number
 
 ## 示例
 

@@ -49,7 +49,7 @@ Represents the Api class.
 | [CreateTableStylePr](./Methods/CreateTableStylePr.md) | [ApiTableStylePr](../ApiTableStylePr/ApiTableStylePr.md) | Creates the empty table style properties. |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Creates the empty text properties. |
 | [CreateWordArt](./Methods/CreateWordArt.md) | [ApiDrawing](../ApiDrawing/ApiDrawing.md) | Creates a Text Art object with the parameters specified. |
-| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English Metric Units (EMUs) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [FromJSON](./Methods/FromJSON.md) | object | Converts the specified JSON object into the Document Builder object of the corresponding type. |
 | [GetByInternalId](./Methods/GetByInternalId.md) | object | Returns the object by it's internal ID. |

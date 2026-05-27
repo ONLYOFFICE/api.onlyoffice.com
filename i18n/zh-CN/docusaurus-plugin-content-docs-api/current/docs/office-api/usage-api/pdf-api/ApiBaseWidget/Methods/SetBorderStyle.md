@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBorderStyle(sBorderStyle);
+expression.SetBorderStyle(borderStyle);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetBorderStyle(sBorderStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderStyle | 必需 | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | 未提供描述。 |
+| borderStyle | 必需 | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | 边框样式。 |
 
 ## 返回值
 

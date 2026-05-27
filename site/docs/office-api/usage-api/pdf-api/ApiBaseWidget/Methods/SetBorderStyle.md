@@ -5,7 +5,7 @@ Sets widget border style.
 ## Syntax
 
 ```javascript
-expression.SetBorderStyle(sBorderStyle);
+expression.SetBorderStyle(borderStyle);
 ```
 
 `expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetBorderStyle(sBorderStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderStyle | Required | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | No description provided. |
+| borderStyle | Required | [WidgetBorderStyle](../../Enumeration/WidgetBorderStyle.md) |  | The border style. |
 
 ## Returns
 

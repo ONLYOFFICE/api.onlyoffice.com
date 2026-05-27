@@ -5,7 +5,7 @@ Sets the relative width of the object (image, shape, chart) bounding box.
 ## Syntax
 
 ```javascript
-expression.SetRelativeWidth(sRelativeFrom, nPercent);
+expression.SetRelativeWidth(relativeFrom, percent);
 ```
 
 `expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
@@ -14,8 +14,8 @@ expression.SetRelativeWidth(sRelativeFrom, nPercent);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRelativeFrom | Optional | [SizeRelFromH](../../Enumeration/SizeRelFromH.md) | "page" | The document element which will be taken as a countdown point for the object width. |
-| nPercent | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| relativeFrom | Optional | [SizeRelFromH](../../Enumeration/SizeRelFromH.md) | "page" | The document element which will be taken as a countdown point for the object width. |
+| percent | Required | [percentage](../../Enumeration/percentage.md) |  | The width of the object as a percentage of the specified element. |
 
 ## Returns
 

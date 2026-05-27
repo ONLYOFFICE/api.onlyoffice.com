@@ -5,7 +5,7 @@ Sets annotation opacity.
 ## Syntax
 
 ```javascript
-expression.SetOpacity(name);
+expression.SetOpacity(value);
 ```
 
 `expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
@@ -14,7 +14,7 @@ expression.SetOpacity(name);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | Required | [percentage](../../Enumeration/percentage.md) |  | No description provided. |
+| value | Required | [percentage](../../Enumeration/percentage.md) |  | The opacity value from 0 (transparent) to 100 (opaque). |
 
 ## Returns
 

@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetPriority(nPriority);
+expression.SetPriority(priority);
 ```
 
 `expression` - A variable that represents a [ApiSortField](../ApiSortField.md) class.
@@ -18,7 +18,7 @@ expression.SetPriority(nPriority);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPriority | Required | number |  | No description provided. |
+| priority | Required | number |  | The new 1-based priority of the sort field. |
 
 ## Returns
 

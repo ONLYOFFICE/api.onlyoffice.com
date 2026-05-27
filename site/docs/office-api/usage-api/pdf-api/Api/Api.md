@@ -55,7 +55,7 @@ Represents the Api class.
 | [CreateTextField](./Methods/CreateTextField.md) | [ApiTextField](../ApiTextField/ApiTextField.md) | Creates a text field. |
 | [CreateTextPr](./Methods/CreateTextPr.md) | [ApiTextPr](../ApiTextPr/ApiTextPr.md) | Creates the empty text properties. |
 | [CreateUnderlineAnnot](./Methods/CreateUnderlineAnnot.md) | [ApiUnderlineAnnotation](../ApiUnderlineAnnotation/ApiUnderlineAnnotation.md) | Creates underline annotation. |
-| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English measure units (EMU) to millimeters. |
+| [EmusToMillimeters](./Methods/EmusToMillimeters.md) | [mm](../Enumeration/mm.md) | Converts English Metric Units (EMUs) to millimeters. |
 | [EmusToPoints](./Methods/EmusToPoints.md) | number | Converts EMUs (English Metric Units) to points. |
 | [GetByInternalId](./Methods/GetByInternalId.md) | object | Returns the object by it's internal ID. |
 | [GetDocument](./Methods/GetDocument.md) | [ApiDocument](../ApiDocument/ApiDocument.md) | Creates a text field with the specified text field properties. |

@@ -14,7 +14,7 @@ expression.SetRotation(angle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| angle | Required | [Degree](../../Enumeration/Degree.md) |  | No description provided. |
+| angle | Required | [Degree](../../Enumeration/Degree.md) |  | The rotation angle in degrees. |
 
 ## Returns
 

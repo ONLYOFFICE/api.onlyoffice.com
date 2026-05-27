@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetBorderWidth(sBorderWidth);
+expression.SetBorderWidth(borderWidth);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetBorderWidth(sBorderWidth);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 未提供描述。 |
+| borderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 边框宽度：**"none"**、**"thin"**、**"medium"** 或 **"thick"**。 |
 
 ## 返回值
 

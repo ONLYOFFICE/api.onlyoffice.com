@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetIconYPos(nPosY);
+expression.SetIconYPos(posY);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetIconYPos(nPosY);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosY | 必需 | [percentage](../../Enumeration/percentage.md) |  | 未提供描述。 |
+| posY | 必需 | [percentage](../../Enumeration/percentage.md) |  | 图标的垂直位置，以按钮高度的百分比表示。 |
 
 ## 返回值
 

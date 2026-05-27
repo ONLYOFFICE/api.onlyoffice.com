@@ -14,7 +14,7 @@ expression.SetPosition(position);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| position | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| position | Required | [Point](../../Enumeration/Point.md) |  | The new position of the annotation. |
 
 ## Returns
 

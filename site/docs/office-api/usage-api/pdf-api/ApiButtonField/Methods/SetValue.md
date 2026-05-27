@@ -18,7 +18,7 @@ expression.SetValue(imageUrl);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| imageUrl | Required | string |  | No description provided. |
+| imageUrl | Required | string |  | The URL of the image to set for the button. |
 
 ## Returns
 

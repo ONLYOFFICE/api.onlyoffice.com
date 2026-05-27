@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetName(sName);
+expression.SetName(name);
 ```
 
 `expression` - 表示 [ApiListObject](../ApiListObject.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetName(sName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | 必需 | string |  | 未提供描述。 |
+| name | 必需 | string |  | 表格的新名称。 |
 
 ## 返回值
 

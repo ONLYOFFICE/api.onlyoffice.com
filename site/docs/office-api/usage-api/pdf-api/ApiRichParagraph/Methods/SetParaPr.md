@@ -14,7 +14,7 @@ expression.SetParaPr(paraPr);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| paraPr | Required | [ApiRichParaPr](../../ApiRichParaPr/ApiRichParaPr.md) |  | No description provided. |
+| paraPr | Required | [ApiRichParaPr](../../ApiRichParaPr/ApiRichParaPr.md) |  | The paragraph properties to apply. |
 
 ## Returns
 

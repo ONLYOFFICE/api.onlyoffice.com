@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetSortMethod(sSortMethod);
+expression.SetSortMethod(sortMethod);
 ```
 
 `expression` - A variable that represents a [ApiSort](../ApiSort.md) class.
@@ -18,7 +18,7 @@ expression.SetSortMethod(sSortMethod);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sSortMethod | Required | [XlSortMethod](../../Enumeration/XlSortMethod.md) |  | No description provided. |
+| sortMethod | Required | [XlSortMethod](../../Enumeration/XlSortMethod.md) |  | The sort method. |
 
 ## Returns
 

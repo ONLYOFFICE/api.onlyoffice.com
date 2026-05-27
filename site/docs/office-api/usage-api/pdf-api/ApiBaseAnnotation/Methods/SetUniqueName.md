@@ -14,7 +14,7 @@ expression.SetUniqueName(name);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| name | Required | string |  | No description provided. |
+| name | Required | string |  | The unique name for the annotation. |
 
 ## Returns
 

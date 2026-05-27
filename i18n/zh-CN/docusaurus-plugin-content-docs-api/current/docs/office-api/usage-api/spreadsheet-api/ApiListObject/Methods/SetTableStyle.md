@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetTableStyle(sStyleName);
+expression.SetTableStyle(styleName);
 ```
 
 `expression` - 表示 [ApiListObject](../ApiListObject.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetTableStyle(sStyleName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyleName | 必需 | string |  | 未提供描述。 |
+| styleName | 必需 | string |  | 要应用的表格样式名称。 |
 
 ## 返回值
 

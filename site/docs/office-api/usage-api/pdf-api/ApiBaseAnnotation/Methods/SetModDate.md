@@ -14,7 +14,7 @@ expression.SetModDate(timeStamp);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| timeStamp | Required | number |  | No description provided. |
+| timeStamp | Required | number |  | The annotation last modification date as a numeric timestamp. |
 
 ## Returns
 

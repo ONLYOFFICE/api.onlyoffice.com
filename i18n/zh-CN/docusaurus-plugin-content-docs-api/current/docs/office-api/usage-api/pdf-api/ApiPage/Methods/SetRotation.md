@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetRotation(nAngle);
+expression.SetRotation(angle);
 ```
 
 `expression` - 表示 [ApiPage](../ApiPage.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetRotation(nAngle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAngle | 必需 | number |  | 未提供描述。 |
+| angle | 必需 | number |  | 以度为单位的旋转角度。必须是 90 的倍数。 |
 
 ## 返回值
 

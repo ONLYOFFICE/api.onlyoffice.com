@@ -10,7 +10,7 @@
 ## 语法
 
 ```javascript
-expression.SetShowAutoFilter(bShow);
+expression.SetShowAutoFilter(show);
 ```
 
 `expression` - 表示 [ApiListObject](../ApiListObject.md) 类的变量。
@@ -19,7 +19,7 @@ expression.SetShowAutoFilter(bShow);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | 必需 | boolean |  | 未提供描述。 |
+| show | 必需 | boolean |  | 指定表格上是否存在自动筛选。 |
 
 ## 返回值
 

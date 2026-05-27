@@ -14,7 +14,7 @@ expression.SetStartStyle(style);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | 必需 | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | 未提供描述。 |
+| style | 必需 | [LineEndStyle](../../Enumeration/LineEndStyle.md) |  | 线条起始端点的样式。 |
 
 ## 返回值
 

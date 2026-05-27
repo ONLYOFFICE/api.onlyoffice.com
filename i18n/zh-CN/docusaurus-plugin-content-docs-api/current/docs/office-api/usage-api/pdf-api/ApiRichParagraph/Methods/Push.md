@@ -14,7 +14,7 @@ expression.Push(richRun);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| richRun | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 未提供描述。 |
+| richRun | 必需 | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | 要添加到段落末尾的元素。 |
 
 ## 返回值
 

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.ReplacePlaceholder(oDrawing);
+expression.ReplacePlaceholder(drawing);
 ```
 
 `expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
@@ -14,7 +14,7 @@ expression.ReplacePlaceholder(oDrawing);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oDrawing | 必需 | [Drawing](../../Enumeration/Drawing.md) |  | 未提供描述。 |
+| drawing | 必需 | [Drawing](../../Enumeration/Drawing.md) |  | 将替换占位符的绘图对象。 |
 
 ## 返回值
 

@@ -5,7 +5,7 @@ Sets field required
 ## Syntax
 
 ```javascript
-expression.SetRequired(bRequired);
+expression.SetRequired(required);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetRequired(bRequired);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bRequired | Required | boolean |  | No description provided. |
+| required | Required | boolean |  | Specifies whether the field is required. |
 
 ## Returns
 

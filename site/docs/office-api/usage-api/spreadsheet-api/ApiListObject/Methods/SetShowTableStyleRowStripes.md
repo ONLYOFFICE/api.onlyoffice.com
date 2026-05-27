@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetShowTableStyleRowStripes(bShow);
+expression.SetShowTableStyleRowStripes(show);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -18,7 +18,7 @@ expression.SetShowTableStyleRowStripes(bShow);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | Required | boolean |  | No description provided. |
+| show | Required | boolean |  | Specifies whether banded row formatting is applied to the table. |
 
 ## Returns
 

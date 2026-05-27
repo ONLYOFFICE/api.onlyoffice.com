@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetFullName(sName);
+expression.SetFullName(name);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetFullName(sName);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | 必需 | string |  | 未提供描述。 |
+| name | 必需 | string |  | 字段的新完整名称。 |
 
 ## 返回值
 

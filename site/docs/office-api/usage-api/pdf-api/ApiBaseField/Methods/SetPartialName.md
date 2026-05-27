@@ -5,7 +5,7 @@ Sets new field partial name.
 ## Syntax
 
 ```javascript
-expression.SetPartialName(sName);
+expression.SetPartialName(name);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,7 +14,7 @@ expression.SetPartialName(sName);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sName | Required | string |  | No description provided. |
+| name | Required | string |  | The new partial name for the field. |
 
 ## Returns
 

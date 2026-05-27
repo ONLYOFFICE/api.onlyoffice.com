@@ -14,7 +14,7 @@ expression.SetStartPoint(point);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| point | Required | [Point](../../Enumeration/Point.md) |  | No description provided. |
+| point | Required | [Point](../../Enumeration/Point.md) |  | The start point of the line. |
 
 ## Returns
 

@@ -14,7 +14,7 @@ expression.SetBorderStyle(borderStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| borderStyle | 必需 | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | 未提供描述。 |
+| borderStyle | 必需 | [AnnotBorderStyle](../../Enumeration/AnnotBorderStyle.md) |  | 边框样式：**"solid"** 或 **"dashed"**。 |
 
 ## 返回值
 

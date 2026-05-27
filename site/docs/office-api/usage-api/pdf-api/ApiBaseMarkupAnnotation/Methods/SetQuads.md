@@ -14,7 +14,7 @@ expression.SetQuads(quads);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| quads | Required | [Quad](../../Enumeration/Quad.md)[] |  | No description provided. |
+| quads | Required | [Quad](../../Enumeration/Quad.md)[] |  | An array of quadrilaterals defining the highlighted regions. |
 
 ## Returns
 

@@ -5,7 +5,7 @@ Sets widget border width.
 ## Syntax
 
 ```javascript
-expression.SetBorderWidth(sBorderWidth);
+expression.SetBorderWidth(borderWidth);
 ```
 
 `expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetBorderWidth(sBorderWidth);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sBorderWidth | Required | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | No description provided. |
+| borderWidth | Required | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | The border width: **"none"**, **"thin"**, **"medium"**, or **"thick"**. |
 
 ## Returns
 

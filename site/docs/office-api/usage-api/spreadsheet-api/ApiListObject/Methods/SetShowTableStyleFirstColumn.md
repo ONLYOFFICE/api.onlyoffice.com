@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetShowTableStyleFirstColumn(bShow);
+expression.SetShowTableStyleFirstColumn(show);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -18,7 +18,7 @@ expression.SetShowTableStyleFirstColumn(bShow);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | Required | boolean |  | No description provided. |
+| show | Required | boolean |  | Specifies whether the first column formatting is applied to the table. |
 
 ## Returns
 

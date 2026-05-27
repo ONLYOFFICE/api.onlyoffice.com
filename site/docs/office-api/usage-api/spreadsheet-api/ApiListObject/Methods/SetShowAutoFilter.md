@@ -10,7 +10,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetShowAutoFilter(bShow);
+expression.SetShowAutoFilter(show);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -19,7 +19,7 @@ expression.SetShowAutoFilter(bShow);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | Required | boolean |  | No description provided. |
+| show | Required | boolean |  | Specifies whether the AutoFilter is present on the table. |
 
 ## Returns
 

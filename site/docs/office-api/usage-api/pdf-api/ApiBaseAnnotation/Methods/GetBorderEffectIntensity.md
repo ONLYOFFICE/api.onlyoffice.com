@@ -5,20 +5,18 @@ Gets annotation border effect intensity.
 ## Syntax
 
 ```javascript
-expression.GetBorderEffectIntensity(value);
+expression.GetBorderEffectIntensity();
 ```
 
 `expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
 
 ## Parameters
 
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| value | Required | number |  | No description provided. |
+This method doesn't have any parameters.
 
 ## Returns
 
-boolean
+number
 
 ## Example
 

@@ -1,6 +1,6 @@
 # ListOption
 
-No description provided.
+A single list option, either a plain string (used as both display and export value) or a tuple.
 
 ## Type
 

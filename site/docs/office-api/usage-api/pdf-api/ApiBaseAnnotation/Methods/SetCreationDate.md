@@ -14,7 +14,7 @@ expression.SetCreationDate(timeStamp);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| timeStamp | Required | number |  | No description provided. |
+| timeStamp | Required | number |  | The annotation creation date as a numeric timestamp. |
 
 ## Returns
 

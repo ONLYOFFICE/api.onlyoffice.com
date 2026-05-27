@@ -14,7 +14,7 @@ expression.SetIntent(intentType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| intentType | Required | [FreeTextIntent](../../Enumeration/FreeTextIntent.md) |  | No description provided. |
+| intentType | Required | [FreeTextIntent](../../Enumeration/FreeTextIntent.md) |  | The intent type of the free text annotation. |
 
 ## Returns
 

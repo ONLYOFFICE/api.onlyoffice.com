@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetOrientation(sOrientation);
+expression.SetOrientation(orientation);
 ```
 
 `expression` - A variable that represents a [ApiSort](../ApiSort.md) class.
@@ -18,7 +18,7 @@ expression.SetOrientation(sOrientation);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sOrientation | Required | [XlSortOrientation](../../Enumeration/XlSortOrientation.md) |  | No description provided. |
+| orientation | Required | [XlSortOrientation](../../Enumeration/XlSortOrientation.md) |  | The sort orientation: **"xlTopToBottom"** to sort by rows, **"xlLeftToRight"** to sort by columns. |
 
 ## Returns
 

@@ -1,6 +1,6 @@
 # Color
 
-No description provided.
+Represents an RGBA color with components in the range [0, 255].
 
 ## Type
 

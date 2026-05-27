@@ -14,7 +14,7 @@ expression.SetIconType(iconType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| iconType | 必需 | [TextIconType](../../Enumeration/TextIconType.md) |  | 未提供描述。 |
+| iconType | 必需 | [TextIconType](../../Enumeration/TextIconType.md) |  | 文本批注的图标类型。 |
 
 ## 返回值
 

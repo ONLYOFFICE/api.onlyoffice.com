@@ -9,7 +9,7 @@
 ## 语法
 
 ```javascript
-expression.SetOrientation(sOrientation);
+expression.SetOrientation(orientation);
 ```
 
 `expression` - 表示 [ApiSort](../ApiSort.md) 类的变量。
@@ -18,7 +18,7 @@ expression.SetOrientation(sOrientation);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sOrientation | 必需 | [XlSortOrientation](../../Enumeration/XlSortOrientation.md) |  | 未提供描述。 |
+| orientation | 必需 | [XlSortOrientation](../../Enumeration/XlSortOrientation.md) |  | 排序方向：**"xlTopToBottom"** 按行排序，**"xlLeftToRight"** 按列排序。 |
 
 ## 返回值
 

@@ -5,7 +5,7 @@ Sets widget checkbox style.
 ## Syntax
 
 ```javascript
-expression.SetCheckStyle(sStyle);
+expression.SetCheckStyle(style);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxWidget](../ApiCheckboxWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetCheckStyle(sStyle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sStyle | Required | [CheckStyle](../../Enumeration/CheckStyle.md) |  | No description provided. |
+| style | Required | [CheckStyle](../../Enumeration/CheckStyle.md) |  | The checkbox style. |
 
 ## Returns
 

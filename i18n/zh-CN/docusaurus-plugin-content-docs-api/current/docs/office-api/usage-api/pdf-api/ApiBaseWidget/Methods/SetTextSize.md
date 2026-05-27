@@ -6,7 +6,7 @@
 ## 语法
 
 ```javascript
-expression.SetTextSize(nSize);
+expression.SetTextSize(size);
 ```
 
 `expression` - 表示 [ApiBaseWidget](../ApiBaseWidget.md) 类的变量。
@@ -15,7 +15,7 @@ expression.SetTextSize(nSize);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nSize | 必需 | [pt](../../Enumeration/pt.md) |  | 未提供描述。 |
+| size | 必需 | [pt](../../Enumeration/pt.md) |  | 以磅为单位的字体大小。 |
 
 ## 返回值
 

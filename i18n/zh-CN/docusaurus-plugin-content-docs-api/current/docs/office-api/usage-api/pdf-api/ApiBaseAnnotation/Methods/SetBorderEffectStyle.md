@@ -15,7 +15,7 @@ expression.SetBorderEffectStyle(style);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| style | 必需 | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | 未提供描述。 |
+| style | 必需 | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | 边框效果样式：**"none"** 或 **"cloud"**。 |
 
 ## 返回值
 

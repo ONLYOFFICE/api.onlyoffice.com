@@ -9,7 +9,7 @@ This functionality is available in paid ONLYOFFICE Docs editions.\
 ## Syntax
 
 ```javascript
-expression.SetShowTableStyleLastColumn(bShow);
+expression.SetShowTableStyleLastColumn(show);
 ```
 
 `expression` - A variable that represents a [ApiListObject](../ApiListObject.md) class.
@@ -18,7 +18,7 @@ expression.SetShowTableStyleLastColumn(bShow);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bShow | Required | boolean |  | No description provided. |
+| show | Required | boolean |  | Specifies whether the last column formatting is applied to the table. |
 
 ## Returns
 
