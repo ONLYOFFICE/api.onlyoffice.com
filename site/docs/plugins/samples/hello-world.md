@@ -1,4 +1,4 @@
-﻿---
+---
 description: "Insert 'Hello world!' text on button click."
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---

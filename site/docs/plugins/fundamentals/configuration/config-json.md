@@ -343,7 +343,7 @@ Plugin events which are used in the current plugin code. Find out how to subscri
 
 `Type: string`
 
-Plugin event ("[onDocumentContentReady](/docs/plugins/interacting-with-editors/form-api/Events/onDocumentContentReady.md)", "[onTargetPositionChanged](/docs/plugins/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)", "[onClick](/docs/plugins/interacting-with-editors/form-api/Events/onClick.md)", "onInputHelperClear", "onInputHelperInput", etc.).
+Plugin event ("[onDocumentContentReady](../../interacting-with-editors/form-api/Events/onDocumentContentReady)", "[onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged)", "[onClick](../../interacting-with-editors/form-api/Events/onClick)", "onInputHelperClear", "onInputHelperInput", etc.).
 
 **Example**:
 

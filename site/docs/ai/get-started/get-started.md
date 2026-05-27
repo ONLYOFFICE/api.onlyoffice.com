@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Getting started
 
 ONLYOFFICE supports three ways to extend editor functionality: **plugins**, **macros**, and **custom AI tools**. This page helps you choose the right approach and get started.
@@ -36,7 +40,7 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 - **[Forum](https://forum.onlyoffice.com/)** — Ask questions, share projects
 - **[GitHub](https://github.com/ONLYOFFICE/sdkjs-plugins)** — Source code, issues, contributions
 - **[Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice)** — Technical Q&A
-- **[Changelog](/docs/plugins/more-information/changelog)** — Latest API updates
+- **[Changelog](/docs/ai/more-information/changelog)** — Latest API updates
 
 ## Next steps {#next-steps}
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Extract text from images using TesseractJS OCR.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

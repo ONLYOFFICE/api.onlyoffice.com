@@ -1,5 +1,5 @@
 ---
-sidebar_position: -4
+sidebar_position: 1
 ---
 
 # Getting started
@@ -20,7 +20,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 Starting from version 9.0.4, the AI plugin was added to the server and desktop distributions built with ONLYOFFICE branding.
 
-If you need to add it manually, download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/ai) and install it following the [desktop](/docs/plugins/tutorials/installing/onlyoffice-desktop-editors.md), [on-premises](/docs/plugins/tutorials/installing/onlyoffice-docs-on-premises.md), or [cloud](/docs/plugins/tutorials/installing/onlyoffice-cloud.md) installation instructions.
+If you need to add it manually, download this plugin from the [ONLYOFFICE App Directory](https://www.onlyoffice.com/app-directory/en/ai) and install it following the [desktop](/docs/plugins/development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](/docs/plugins/development-workflow/installing-and-testing/docs-on-premises-installation.md), or [cloud](/docs/plugins/development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
 
 The plugin guid is `asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`.
 

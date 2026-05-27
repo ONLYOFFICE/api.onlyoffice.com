@@ -1,4 +1,8 @@
-﻿# Getting started
+---
+sidebar_position: 1
+---
+
+# Getting started
 
 ONLYOFFICE supports three ways to extend editor functionality: **plugins**, **macros**, and **custom AI tools**. This page helps you choose the right approach and get started.
 
@@ -15,7 +19,7 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 - **[Interactive playground](playground.md)** — Test code without installation
 - **[UI component library](https://onlyoffice.github.io/storybook/static/)** — Pre-built components
 - **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** — Starter projects
-- **[Browser DevTools](/docs/plugins/development-workflow/debugging/browser-devtools-guide)** — Debugging guide
+- **[Browser DevTools](../development-workflow/debugging/browser-devtools-guide)** — Debugging guide
 
 ### Sample code
 
@@ -25,8 +29,8 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 
 ### Documentation
 
-- **[API reference](/docs/plugins/interacting-with-editors/overview/)** — Complete API documentation
-- **[Plugin structure](/docs/plugins/fundamentals/configuration/config-json)** — Configuration guide
+- **[API reference](../interacting-with-editors/overview/)** — Complete API documentation
+- **[Plugin structure](../fundamentals/configuration/config-json)** — Configuration guide
 - **[Macro guide](/docs/macros/macros/writing-macros)** — Macro development
 - **[AI integration](/docs/ai/ai/ai-plugin)** — AI plugin setup
 - **[FAQ](../more-information/faq.md)** — Frequently asked questions
@@ -43,7 +47,7 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 **Start building:**
 
 - [Quick start guides](quick-start/hello-world-plugin.md)
-- [Plugin tutorial](/docs/plugins/fundamentals/getting-started/what-is-a-plugin)
+- [Plugin tutorial](../fundamentals/getting-started/what-is-a-plugin)
 - [Macro tutorial](/docs/macros/macros/getting-started)
 - [AI integration](/docs/ai/ai/ai-plugin)
 
@@ -54,6 +58,6 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 
 **Learn more:**
 
-- [API reference](/docs/plugins/interacting-with-editors/overview/)
-- [Best practices](/docs/plugins/development-workflow/developing/for-web-editors)
-- [Publishing guide](/docs/plugins/development-workflow/publishing/marketplace-submission)
+- [API reference](../interacting-with-editors/overview/)
+- [Best practices](../development-workflow/developing/for-web-editors)
+- [Publishing guide](../development-workflow/publishing/marketplace-submission)

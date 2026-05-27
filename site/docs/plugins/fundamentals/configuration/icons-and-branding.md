@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 description: Learn how to add and configure icons for your ONLYOFFICE plugins.
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 description: Connect Telegram for instant messaging in the editor.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
 ---

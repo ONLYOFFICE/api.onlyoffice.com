@@ -1,4 +1,4 @@
-﻿---
+---
 description: Get a list of content control tags in a document.
 tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
 ---
