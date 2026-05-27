@@ -4,7 +4,7 @@ The list of changes of ONLYOFFICE Docs API.
 
 ## Version 9.4
 
-- Added the [plugin command logging](../usage-api/config/editor/plugins.md#plugin-command-logging) feature for enabling debug output of plugin commands in the browser console.
+- Added the [plugin command logging](../usage-api/automation-api/automation-api.md#command-logging) feature for enabling debug output of plugin commands in the browser console.
 - Added the [editorConfig.plugins.disable](../usage-api/config/editor/plugins.md#disable) parameter to block specific plugins on load.
 - Added Croatian (`hr`) to the list of supported [interface languages](../usage-api/config/editor/editor.md#lang).
 - Removed the deprecated `editorConfig.customization.commentAuthorOnly` field.
