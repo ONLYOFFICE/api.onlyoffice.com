@@ -30,7 +30,7 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 
 ### Documentation
 
-- **[API reference](/docs/plugins/interacting-with-editors/overview/)** — Complete API documentation
+- **[API reference](/docs/office-api/get-started/overview)** — Complete API documentation
 - **[Plugin structure](/docs/plugins/fundamentals/configuration/config-json)** — Configuration guide
 - **[Macro guide](/docs/macros/macros/writing-macros)** — Macro development
 - **[AI integration](/docs/ai/ai/ai-plugin)** — AI plugin setup
@@ -59,5 +59,5 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 
 **Learn more:**
 
-- [API reference](/docs/plugins/interacting-with-editors/overview/)
+- [API reference](/docs/office-api/get-started/overview)
 - [Best practices](/docs/plugins/development-workflow/developing/for-web-editors)

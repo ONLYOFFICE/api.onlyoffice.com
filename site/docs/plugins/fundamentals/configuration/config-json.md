@@ -59,7 +59,7 @@ Plugin identifier. It **must** be of the *asc.\{UUID\}* type.
 
 `Type: string`
 
-Path to the plugin help page. If the parameter is specified, the *help* button is displayed in the plugin window. When the user clicks the button, he follows the link to the plugin help page.
+Path to the plugin help page. If the parameter is specified, the *help* button is displayed in the plugin window. When the user clicks the button, they follow the link to the plugin help page.
 
 **Example**: `"url_to_help_page"`
 

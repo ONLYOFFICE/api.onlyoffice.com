@@ -33,7 +33,7 @@ Some events (like selection change) fire rapidly. Debounce to avoid excessive pr
 ```javascript
 let debounceTimer;
 
-window.Asc.plugin.attachEditorEvent("onChangeContentControl", function () {
+window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", function () {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
     updatePluginUI();
@@ -47,7 +47,7 @@ Always detach event listeners when the plugin is closed to avoid memory leaks:
 
 ```javascript
 window.Asc.plugin.onDestroy = function () {
-  window.Asc.plugin.detachEvent("onChangeContentControl", myHandler);
+  window.Asc.plugin.detachEvent("onTargetPositionChanged", myHandler);
   clearTimeout(debounceTimer);
 };
 ```
@@ -57,7 +57,8 @@ window.Asc.plugin.onDestroy = function () {
 | Event | Fires when |
 |-------|-----------|
 | `onDocumentContentReady` | Document finishes loading |
-| `onChangeContentControl` | Selection or content changes |
+| `onTargetPositionChanged` | Cursor position or selection changes |
+| `onChangeContentControl` | A content control in the document is changed |
 | `onThemeChanged` | Editor theme switches |
 | `onExternalMouseUp` | User clicks outside the plugin |
 

@@ -102,7 +102,7 @@ Answer these questions to find your ideal path:
 
 **Macro doesn't run:**
 
-- Check macros are enabled in **Tools → Settings**
+- Ensure macros are enabled in your ONLYOFFICE configuration (contact your administrator if the **Macros** button is missing from the **View** tab)
 - Look for syntax errors in the macro editor
 - Verify API method names are correct
 

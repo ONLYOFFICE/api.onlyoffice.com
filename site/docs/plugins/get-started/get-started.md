@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Learn how to build and deploy plugins for ONLYOFFICE editors.
 ---
 
 # Getting started

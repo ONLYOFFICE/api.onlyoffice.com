@@ -63,5 +63,5 @@ window.Asc.plugin.executeMethod("GetAllContentControls", [], function (controls)
 
 ## See also
 
-- [Text Document API](../overview/how-to-call-methods.md)
+- [How to call methods](../overview/how-to-call-methods.md)
 - [Working with selections](working-with-selections.md)

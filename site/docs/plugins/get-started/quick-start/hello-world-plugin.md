@@ -105,10 +105,12 @@ Choose your environment:
 
 ### For ONLYOFFICE Desktop Editors
 
-1. Open ONLYOFFICE Desktop.
-2. Go to **Plugins → Settings → Add Plugin**.
-3. Browse to your `hello-world-plugin` folder.
-4. Click **OK**.
+1. Open ONLYOFFICE Desktop Editors.
+2. Place your `hello-world-plugin` folder in the `sdkjs-plugins` directory:
+   - Windows: `%ProgramFiles%\ONLYOFFICE\DesktopEditors\editors\sdkjs-plugins\`
+   - macOS: `/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/`
+   - Linux: `/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/`
+3. Restart Desktop Editors.
 
 [Detailed Desktop installation guide](../../development-workflow/installing-and-testing/desktop-editors-installation.md)
 

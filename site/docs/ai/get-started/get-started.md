@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Learn how to build custom AI tools for ONLYOFFICE editors.
 ---
 
 # Getting started
