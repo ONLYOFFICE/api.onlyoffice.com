@@ -1,3 +1,10 @@
+---
+description: Add comments to spreadsheet cells.
+tags: ["Docs", "Plugins", "Ready-to-use", "Spreadsheets"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 在单元格中添加评论
 
 向电子表格的单元格中添加评论。

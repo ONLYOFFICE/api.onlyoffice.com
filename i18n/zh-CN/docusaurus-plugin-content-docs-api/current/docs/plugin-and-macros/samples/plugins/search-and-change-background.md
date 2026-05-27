@@ -1,3 +1,10 @@
+---
+description: Search for text and change its background color.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 搜索并更改背景颜色
 
 搜索目标文本并更改其背景颜色。

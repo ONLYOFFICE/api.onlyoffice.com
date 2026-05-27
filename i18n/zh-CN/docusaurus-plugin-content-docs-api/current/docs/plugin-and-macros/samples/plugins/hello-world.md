@@ -1,3 +1,10 @@
+---
+description: "Insert 'Hello world!' text on button click."
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # Hello world
 
 当用户按下按钮时，插入 *Hello world!* 这句话。

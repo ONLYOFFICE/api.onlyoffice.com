@@ -1,3 +1,10 @@
+---
+description: Search and replace text automatically on document open.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 启动时搜索并替换
 
 在重新打开文档时搜索并替换文本。

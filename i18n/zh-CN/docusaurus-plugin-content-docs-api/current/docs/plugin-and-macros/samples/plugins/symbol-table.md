@@ -1,3 +1,10 @@
+---
+description: Insert special symbols from a character table.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 符号表
 
 将特殊符号插入到文档中。

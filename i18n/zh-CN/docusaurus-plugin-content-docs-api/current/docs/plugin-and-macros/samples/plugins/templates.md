@@ -1,3 +1,10 @@
+---
+description: Insert document templates from Document Builder scripts.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 模板
 
 插入由 Document Builder 脚本生成的文档模板。

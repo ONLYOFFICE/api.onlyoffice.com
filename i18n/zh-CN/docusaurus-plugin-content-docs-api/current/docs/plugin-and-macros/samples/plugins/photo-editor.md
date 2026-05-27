@@ -1,3 +1,10 @@
+---
+description: Edit images using the Toast UI Image Editor.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 图片编辑器
 
 连接 [Toast UI 图片编辑器](https://ui.toast.com/tui-image-editor)，可直接在文档中编辑图像：裁剪、调整大小、应用效果等。

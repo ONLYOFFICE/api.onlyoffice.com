@@ -1,3 +1,10 @@
+---
+description: Insert custom text fields and dropdowns into a document.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 添加自定义字段
 
 向文档中插入自定义字段。

@@ -1,3 +1,10 @@
+---
+description: Get a list of content control tags in a document.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 内容控件标签操作
 
 获取内容控件标签列表。

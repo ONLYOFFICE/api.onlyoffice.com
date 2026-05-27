@@ -1,3 +1,10 @@
+---
+description: Manage comments with categories and severity levels.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 扩展评论
 
 在文档中插入、编辑和删除评论及回复（包含用户信息）。

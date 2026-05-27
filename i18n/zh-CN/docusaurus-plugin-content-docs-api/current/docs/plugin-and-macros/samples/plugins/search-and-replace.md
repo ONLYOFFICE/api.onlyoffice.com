@@ -1,3 +1,10 @@
+---
+description: Search for text and replace it interactively.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 查找并替换
 
 查找目标文本并将其替换为其他内容。

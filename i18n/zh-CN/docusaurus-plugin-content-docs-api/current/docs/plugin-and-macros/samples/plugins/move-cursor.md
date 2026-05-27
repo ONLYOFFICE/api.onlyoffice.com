@@ -1,3 +1,10 @@
+---
+description: Move the cursor to the document start or end.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 移动光标
 
 将文本光标移动到文档的开头或结尾。

@@ -1,3 +1,10 @@
+---
+description: Protect documents with a watermark overlay.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents", "Spreadsheets", "Presentations"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 设置
 
 使用水印保护文档。

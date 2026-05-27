@@ -1,3 +1,10 @@
+---
+description: Load custom fields with questions and dropdowns.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 加载自定义字段（Load custom fields）
 
 从文档中加载自定义字段。

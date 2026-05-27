@@ -1,3 +1,10 @@
+---
+description: Track context menu events and cursor position changes.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 右键菜单与事件
 
 跟踪右键菜单的调用事件及其选项的点击操作，同时还会跟踪光标位置的变化。

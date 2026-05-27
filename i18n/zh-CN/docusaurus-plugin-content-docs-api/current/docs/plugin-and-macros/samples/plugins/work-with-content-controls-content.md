@@ -1,3 +1,10 @@
+---
+description: Copy content between content controls.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 内容控件内容操作
 
 将一个内容控件中的内容插入到另一个内容控件中。

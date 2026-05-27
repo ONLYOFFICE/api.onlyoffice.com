@@ -1,3 +1,10 @@
+---
+description: Insert template fields for invoice information.
+tags: ["Docs", "Plugins", "Ready-to-use", "Documents"]
+---
+
+import Video from '@site/src/components/Video/Video';
+
 # 发票
 
 向文档中插入发票信息的模板字段。
