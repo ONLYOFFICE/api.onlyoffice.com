@@ -195,7 +195,7 @@ If this event is not declared, the *Get Link* button will not be displayed.
 | ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | event.data          | `object` | The action data. Must be used in the configuration as the value for the [editorConfig.actionLink](./editor/editor.md#actionlink) parameter. |
 | event.data.action   | `object` | The action object that defines what to scroll to in the document. |
-| event.data.action.type | `string` | The type of action: `"bookmark"` or `"comment"`. |
+| event.data.action.type | `"bookmark" \| "comment"` | The type of action in the document. |
 | event.data.action.data | `string` | The data associated with the action: the bookmark name or the comment ID. |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)

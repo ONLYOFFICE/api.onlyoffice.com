@@ -195,7 +195,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 | ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
 | event.data              | `object` | 操作数据。必须在配置中用作 [editorConfig.actionLink](./editor/editor.md#actionlink) 参数的值。 |
 | event.data.action       | `object` | 定义文档中要滚动到的操作对象。 |
-| event.data.action.type  | `string` | 操作类型：`"bookmark"` 或 `"comment"`。 |
+| event.data.action.type  | `"bookmark" \| "comment"` | 文档中的操作类型。 |
 | event.data.action.data  | `string` | 与操作关联的数据：书签名称或评论 ID。 |
 
 ![onMakeActionLink](/assets/images/editor/onMakeActionLink.png#gh-light-mode-only)![onMakeActionLink](/assets/images/editor/onMakeActionLink.dark.png#gh-dark-mode-only)
