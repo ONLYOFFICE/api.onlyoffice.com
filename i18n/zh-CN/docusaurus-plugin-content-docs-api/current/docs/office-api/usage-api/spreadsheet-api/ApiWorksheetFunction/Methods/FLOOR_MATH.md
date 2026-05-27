@@ -1,0 +1,38 @@
+# FLOOR_MATH
+
+将数字向下舍入到最接近的整数或最接近的基数倍数。
+
+## 语法
+
+```javascript
+expression.FLOOR_MATH(arg1, arg2, arg3);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向下舍入的数值。 |
+| arg2 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 要向下舍入到的基数的倍数。如果省略，则使用默认值 1。 |
+| arg3 | 可选 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 指定负数是朝零方向还是远离零方向舍入。如果省略或设置为 0，负数远离零方向舍入。
+如果指定任何其他数值，负数朝零方向舍入。 |
+
+## 返回值
+
+number
+
+## 示例
+
+在电子表格中将数字向下舍入到最近的整数或倍数。
+
+```javascript editor-xlsx
+// How do I round down a negative or positive number in a spreadsheet?
+
+// Decrease a number to the nearest whole number or custom increment in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let func = Api.WorksheetFunction;
+worksheet.GetRange("A1").SetValue(func.FLOOR_MATH(-5.5, 2, 1));
+```

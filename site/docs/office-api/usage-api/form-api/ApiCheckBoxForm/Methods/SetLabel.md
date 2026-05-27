@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the label text to the checkbox form.
+Assign a visible label to a checkbox form in a document.
 
-```javascript editor-pdf
-// How to add a label to the checkbox form.
+```javascript editor-forms
+// How do I add descriptive text next to a checkbox in a document?
 
-// Set a label text to the checkbox.
+// Label each checkbox option so readers know what they are selecting in a document.
 
 let doc = Api.GetDocument();
 let checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "radio": true, "key" : "Marital status"});
@@ -38,5 +38,4 @@ paragraph.AddLineBreak();
 checkBoxForm = Api.CreateCheckBoxForm({"tip": "Specify your marital status", "required": true, "radio" : true, "key" : "Marital status"});
 checkBoxForm.SetLabel(" Single");
 paragraph.AddElement(checkBoxForm);
-
 ```

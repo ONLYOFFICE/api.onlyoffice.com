@@ -1,9 +1,16 @@
+---
+description: Authenticate a user with a one-time 2FA code via the API.
+tags: ["DocSpace", "REST API", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Authenticate a user by code (2FA)
 
 This example shows how to authenticate in ONLYOFFICE DocSpace using a one-time code from an authenticator app (TOTP) via POST `/api/2.0/authentication/:code`.
+
+Complete source code on GitHub: [Node.js](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/nodejs/samples/authenticate-user-by-code.js)/[Python](https://github.com/ONLYOFFICE/docspace-samples/blob/master/api-backend/python/samples/authenticate-user-by-code.py)
 
 ## Before you start
 

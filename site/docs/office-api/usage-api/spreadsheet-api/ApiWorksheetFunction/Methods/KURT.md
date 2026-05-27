@@ -14,7 +14,8 @@ expression.KURT(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the kurtosis will be calculated. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| number[] \| [ApiName](../../ApiName/ApiName.md) |  | Up to 255 numeric values for which the kurtosis will be calculated.
+Arguments can be numbers, names, ranges, or arrays of numbers. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the kurtosis of a data set.
+Calculate the kurtosis of a set of numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know a data set kurtosis.
+// How do I measure the shape of a data distribution in a spreadsheet?
 
-// Use a function to find out kurtosis of a data set.
+// Find the kurtosis value that describes the peakedness of a dataset in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

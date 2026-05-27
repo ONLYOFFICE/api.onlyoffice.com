@@ -15,7 +15,8 @@ expression.ROUNDUP(arg1, arg2);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | Any real number that will be rounded up. |
-| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of digits to round to. If this argument is negative, the number will be rounded to the left of the decimal point. If it is equal to zero, the number will be rounded to the nearest integer. |
+| arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of digits to round to. If this argument is negative, the number will be rounded to the left of the decimal point.
+If it is equal to zero, the number will be rounded to the nearest integer. |
 
 ## Returns
 
@@ -23,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to round a number up, away from zero.
+Round a number up to the nearest integer in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round a number up.
+// How do I round numbers up in a cell in a spreadsheet?
 
-// Use a function to round a number away from zero.
+// Increase a number to its higher whole number or specified decimal place in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

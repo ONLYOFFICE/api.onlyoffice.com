@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the string data from the OLE object.
+Read the content stored inside an embedded object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get ApiOleObject content as a string.
+// How do I retrieve the data held by an embedded object in a spreadsheet?
 
-// Get ApiOleObject data and display it in the worksheet.
+// Extract the stored value from an embedded object to display or reuse it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -37,5 +37,4 @@ let oleObject = worksheet.AddOleObject(
 );
 let data = oleObject.GetData();
 worksheet.GetRange('A1').SetValue('The OLE object data: ' + data);
-
 ```

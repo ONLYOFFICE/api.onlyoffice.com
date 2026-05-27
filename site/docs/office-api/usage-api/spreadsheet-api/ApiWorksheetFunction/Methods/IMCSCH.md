@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the hyperbolic cosecant of a complex number.
+Get the hyperbolic cosecant of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the hyperbolic cosecant.
+// How do I find the hyperbolic cosecant in a spreadsheet?
 
-// Use a function to get the hyperbolic cosecant of a complex number.
+// Calculate the hyperbolic cosecant function for a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

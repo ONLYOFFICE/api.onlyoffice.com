@@ -2,30 +2,16 @@
 
 Clears the current form.
 
-## Syntax
-
-```javascript
-expression.Clear();
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.Clear](../../ApiFormBase/Methods/Clear.md).
 
 ## Example
 
-This example clears the current form.
+Erase the entered value from a text form field in a document.
 
-```javascript editor-pdf
-// How to remove texy from the form.
+```javascript editor-forms
+// How do I clear the content of a form in a document?
 
-// Clear answer from the text form.
+// Reset a filled-in form field to blank so it is ready for new input in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});

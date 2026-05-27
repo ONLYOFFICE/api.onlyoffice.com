@@ -22,14 +22,18 @@ boolean
 
 ## Example
 
-This example shows how to set the rotation angle to the drawing.
+Set the rotation angle to the drawing in a presentation.
 
 ```javascript editor-pptx
+// Rotation transforms a shape's orientation on the slide.
+
+// Set rotation and display the result in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 130 * 36000, 10 * 36000, fill, stroke);
 shape.SetPosition(100000, 2500000);
@@ -40,5 +44,4 @@ const docContent = shape.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
 slide.AddObject(shape);
-
 ```

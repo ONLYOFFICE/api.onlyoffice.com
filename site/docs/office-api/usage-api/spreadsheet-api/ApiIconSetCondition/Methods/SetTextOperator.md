@@ -2,32 +2,16 @@
 
 Sets the text operator for text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.SetTextOperator(TextOperator);
-```
-
-`expression` - A variable that represents a [ApiIconSetCondition](../ApiIconSetCondition.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| TextOperator | Required | [XlContainsOperator](../../Enumeration/XlContainsOperator.md) |  | The text operator: "xlContains", "xlDoesNotContain", "xlBeginsWith", "xlEndsWith". |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetTextOperator](../../ApiFormatCondition/Methods/SetTextOperator.md).
 
 ## Example
 
-This example sets the text operator for a text-based conditional formatting rule.
+Change how a text formatting rule matches cell content, such as begins with or ends with, in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change text operators in text-based conditional formatting rules.
+// How do I switch a text highlight rule from checking if a cell contains a word to checking how it starts in a spreadsheet?
 
-// Set conditional formatting rule text operator.
+// Adjust the matching strategy of a text-based highlight rule to target different patterns in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetTextOperator("xlBeginsWith");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetTextOperator() || "None");
-
 ```

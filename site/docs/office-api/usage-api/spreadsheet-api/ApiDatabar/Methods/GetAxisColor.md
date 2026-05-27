@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the axis color from a data bar conditional formatting rule.
+Read the color set for the midpoint axis line of a bar rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the axis color of a data bar.
+// How do I find out what color the axis line has in a data bar rule in a spreadsheet?
 
-// Get the axis color of a data bar conditional formatting rule.
+// Inspect the axis line color to verify or copy bar formatting settings in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let axisColor = dataBar.GetAxisColor();
 
 worksheet.GetRange("C1").SetValue("Has Axis Color:");
 worksheet.GetRange("C2").SetValue(axisColor ? "Yes" : "No");
-
 ```

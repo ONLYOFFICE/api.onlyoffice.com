@@ -1,12 +1,14 @@
-# 修改限制回调
+# onChangeRestrictions
 
-当编辑器中的限制条件发生变化时调用的函数。
+当编辑器中的限制更改时调用的函数。
 
 ## 参数
 
 | **名称** | **数据类型** | **描述** |
-| -------- | ------------- | -------- |
+| --------- | ------------- | ----------- |
 | value | number | 限制值。 |
+
+## 示例
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {
@@ -15,4 +17,3 @@ window.Asc.plugin.attachEditorEvent("onChangeRestrictions", (value) => {
     }
 });
 ```
-

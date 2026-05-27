@@ -2,36 +2,22 @@
 
 Gets the text spacing from the current text properties measured in twentieths of a point.
 
-## Syntax
-
-```javascript
-expression.GetSpacing();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiTextPr.GetSpacing](../../ApiTextPr/Methods/GetSpacing.md).
 
 ## Example
 
-This example shows how to find out a text is spacing size.
+Read the character spacing value for text in a presentation.
 
 ```javascript editor-pptx
-// How to know a text spacing.
+// How do I check the spacing between characters in text in a presentation?
 
-// Get the text properties of the run and display its spacing size.
+// Get the spacing property of text to see the current character spacing in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -51,5 +37,4 @@ paragraph = Api.CreateParagraph();
 const spacing = textPr.GetSpacing();
 paragraph.AddText("Text spacing: " + spacing);
 docContent.Push(paragraph);
-
 ```

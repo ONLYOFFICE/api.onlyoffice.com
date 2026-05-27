@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example inserts a string replacing the specified characters.
+Replace a selected portion of cell text with a new string in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to replace characters with a different string value.
+// How do I substitute part of a cell's text with different content in a spreadsheet?
 
-// Change the characters to another string value.
+// Overwrite a specific slice of characters to correct or update cell content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

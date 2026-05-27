@@ -22,18 +22,18 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-This example sets the text spacing measured in twentieths of a point.
+Adjust the space between text characters in a presentation.
 
 ```javascript editor-pptx
-// How to change a spacing size of a text.
+// Can I widen or reduce the gap between letters in a presentation?
 
-// Get the text properties of the run and resize its spacing (20 * point).
+// Set the character spacing value in twentieths of a point in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the spacing set to 4 points (80 twentieths of a point) using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

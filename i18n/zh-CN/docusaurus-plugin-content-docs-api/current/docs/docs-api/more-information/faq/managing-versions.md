@@ -14,7 +14,7 @@ sidebar_position: -4
 
 1. 回调处理程序从**文档编辑服务**接收到 *status* 为 **2** 的响应中的数据（这意味着文档的所有用户都关闭了它并且当前版本已经编译）。此响应将如下所示：
 
-``` ts
+```ts
 const data = {
   key: "2745492410",
   status: 2,
@@ -73,14 +73,16 @@ const data = {
 
    - *currentVersion* 是最新版本号，将作为当前版本显示在编辑器界面中；
    - *history* 是对象数组，每个对象代表一个文档保存的单个版本：
-    - *history.changes* 和 *history.serverVersion* 和 *history.serverVersion* 是从**文档编辑服务**接收到的数据；
-    - *history.user.id* 是最后一个为指定版本保存文档更改的用户的id；
-    - *history.created* 是文档指定版本编译的时间（对应收到 *status* 为 **2** 的时间）；
-    - *history.version* 是指定版本的编号，将显示在文档编辑器界面的版本历史记录部分。
+   - *history.changes* 和 *history.serverVersion* 和 *history.serverVersion* 是从**文档编辑服务**接收到的数据；
+   - *history.user.id* 是最后一个为指定版本保存文档更改的用户的id；
+   - *history.created* 是文档指定版本编译的时间（对应收到 *status* 为 **2** 的时间）；
+   - *history.version* 是指定版本的编号，将显示在文档编辑器界面的版本历史记录部分。
 
 4. 使用指定的所有上述参数打开文档。切换到**文件** > **版本历史** 菜单选项（或 **协作** > **版本历史**），将显示版本数据。
 
-> *history.changes* 对象在版本中显示为较小的更改（修订）。
+:::note
+*history.changes* 对象在版本中显示为较小的更改（修订）。
+:::
 
 ## 如何显示具有突出显示更改的文档？ {#how-to-display-a-document-with-highlighted-changes}
 
@@ -136,4 +138,4 @@ const data = {
 
 ## 为什么强制保存文档后，文档历史记录中未显示新版本？ {#why-is-a-new-version-not-shown-in-the-document-history-after-i-forcefully-save-a-document}
 
-ONLYOFFICE文档突出显示从当前文档会话开始时所做的更改，而不是从文档版本开始时所作的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。因此您无法在文档历史记录中看到使用[强制保存选项](../../get-started/how-it-works/saving-file.md#force-saving)创建的文档版本。
+ONLYOFFICE 文档突出显示从当前文档会话开始时所做的更改，而不是从文档版本开始时所作的更改。即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。因此您无法在文档历史记录中看到使用[强制保存选项](../../get-started/how-it-works/saving-file.md#force-saving)创建的文档版本。

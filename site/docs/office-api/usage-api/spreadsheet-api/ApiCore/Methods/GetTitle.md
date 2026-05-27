@@ -20,16 +20,20 @@ string
 
 ## Example
 
-This example demonstrates how to get the title of the current workbook.
+Read the title stored in the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I retrieve the title that has been saved for a workbook in a spreadsheet?
+
+// Fetch the document title from the metadata fields of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetTitle("My Workbook Title");
 const title = core.GetTitle();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Title: " + title);
-
 ```

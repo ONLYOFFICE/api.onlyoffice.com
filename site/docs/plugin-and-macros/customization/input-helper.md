@@ -5,7 +5,7 @@ description: Learn how to create and use input helpers in ONLYOFFICE plugins.
 
 # Input helper
 
-Plugins can create its own window that appears and disappears when you type text. Its location is tied to the cursor.
+Plugins can create their own windows that appear and disappear when you type text. Their location is tied to the cursor.
 
 ![Input helper](/assets/images/plugins/input-helper.png)
 
@@ -23,7 +23,6 @@ To create an input helper, use the **createInputHelper** method.
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -44,7 +43,6 @@ To get the [InputHelper object](#inputhelper), use the **getInputHelper** method
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -53,16 +51,16 @@ window.Asc.plugin.init = (text) => {
 
 ## Showing an input helper
 
-To show an input helper, use the **ShowInputHelper** method of *window.Asc.plugin.executeMethod*.
+To show an input helper, use the **ShowInputHelper** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
 | Name             | Type      | Description                                                                                  |
 |------------------|-----------|----------------------------------------------------------------------------------------------|
-| *guid*           | `string`  | A string value which specifies a plugin identifier which must be of the *asc.\{UUID\}* type. |
+| *guid*           | `string`  | A string value which specifies a plugin identifier which must be of the `asc.{UUID}` type. |
 | *w*              | `number`  | A number which specifies the window width measured in millimeters.                           |
 | *h*              | `number`  | A number which specifies the window height measured in millimeters.                          |
-| *isKeyboardTake* | `boolean` | Defines if the keyboard is caught (**true**) or not (**false**).                             |
+| *isKeyboardTake* | `boolean` | Whether the keyboard is caught (`true`) or not (`false`).                                |
 
 **Returns**: This method doesn't return any data.
 
@@ -74,14 +72,14 @@ window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
 
 ## Unshowing an input helper
 
-To unshow an input helper, use the **UnShowInputHelper** method of *window.Asc.plugin.executeMethod*.
+To unshow an input helper, use the **UnShowInputHelper** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
 | Name      | Type      | Description                                                                                  |
 |-----------|-----------|----------------------------------------------------------------------------------------------|
-| *guid*    | `string`  | A string value which specifies a plugin identifier which must be of the *asc.\{UUID\}* type. |
-| *isclear* | `boolean` | Defines if the input context will be cleared (**true**) or not (**false**).                  |
+| *guid*    | `string`  | A string value which specifies a plugin identifier which must be of the `asc.{UUID}` type. |
+| *isclear* | `boolean` | Whether the input context will be cleared (`true`) or not (`false`).                     |
 
 **Returns**: This method doesn't return any data.
 
@@ -111,7 +109,6 @@ Creates an input helper window.
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentText = "";
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -124,7 +121,7 @@ Returns an array of the [InputHelperItem](#inputhelperitem) objects that contain
 
 **Parameters**: This method doesn't have any parameters.
 
-**Returns**: Array.\<[InputHelperItem](#inputhelperitem)\>
+**Returns**: [InputHelperItem](#inputhelperitem)[]
 
 **Example**:
 
@@ -171,14 +168,14 @@ Returns the sizes of the input helper scrolled window. Returns an object with wi
 
 **Parameters**: This method doesn't have any parameters.
 
-**Returns**: object (with *w* and *h* properties)
+**Returns**: object (with `w` and `h` properties)
 
 **Example**:
 
 ```ts
 function getInputHelperSize() {
   const size = window.Asc.plugin.getInputHelper().getScrollSizes();
-  let width = 200;
+  let width = 150;
   let height = size.h;
   const inputHelper = window.Asc.plugin.getInputHelper();
   const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length));
@@ -201,7 +198,7 @@ Sets the items to the input helper.
 
 | Name    | Type                                            | Description                                                                                                           |
 |---------|-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| *items* | `Array.<InputHelperItem>` | Defines an array of the [InputHelperItem](#inputhelperitem) objects which contain all the items for the input helper. |
+| *items* | [InputHelperItem](#inputhelperitem)[] | An array of the [InputHelperItem](#inputhelperitem) objects which contain all the items for the input helper. |
 
 **Returns**: This method doesn't return any data.
 
@@ -238,7 +235,7 @@ Shows an input helper.
 |---------------------|-----------|------------------------------------------------------------------|
 | *width*             | `number`  | The input helper window width measured in millimeters.           |
 | *height*            | `number`  | The input helper window height measured in millimeters.          |
-| *isCaptureKeyboard* | `boolean` | Defines if the keyboard is caught (**true**) or not (**false**). |
+| *isCaptureKeyboard* | `boolean` | Whether the keyboard is caught (`true`) or not (`false`). |
 
 **Returns**: This method doesn't return any data.
 
@@ -284,7 +281,7 @@ window.Asc.plugin.executeMethod("SelectContentControl", [window.Asc.plugin.curre
 
 ## InputHelperItem
 
-Defines the input helper item.
+The input helper item.
 
 `Type: object`
 

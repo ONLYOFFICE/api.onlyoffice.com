@@ -11,12 +11,11 @@ Enumeration
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [DateFormPrBase](../Enumeration/DateFormPrBase.md)
 
-
 ## Example
 
-This example creates a date form with the common and specific date form properties.
+Create a date form with the common and specific date form properties.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to create a date form with its properties.
 
 // Create the properties and apply them to the ApiDateForm object.
@@ -30,5 +29,4 @@ let dateFormPr = {
 	"lang": "en-US"
 };
 let dateForm = Api.CreateDateForm(dateFormPr);
-
 ```

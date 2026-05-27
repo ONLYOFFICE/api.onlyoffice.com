@@ -1,0 +1,52 @@
+# GetLayoutBlankLine
+
+返回指定是否在每个项目后插入空白行的设置。
+
+继承自 [ApiPivotField.GetLayoutBlankLine](../../ApiPivotField/Methods/GetLayoutBlankLine.md)。
+
+## 示例
+
+检查电子表格中透视字段的每组之后是否插入空行。
+
+```javascript editor-xlsx
+// How do I find out if a pivot field is set to add a blank line between groups in a spreadsheet?
+
+// Confirm the blank-line spacing setting for a pivot field's row layout in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
+
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
+
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
+
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
+
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+
+pivotTable.AddFields({
+    rows: ['Region', 'Style'],
+});
+
+pivotTable.AddDataField('Price');
+pivotTable.SetRowAxisLayout('Tabular');
+
+let pivotWorksheet = Api.GetActiveSheet();
+let pivotField = pivotTable.GetPivotFields('Region');
+
+pivotWorksheet.GetRange('A14').SetValue('Region blank line');
+pivotWorksheet.GetRange('B14').SetValue(pivotField.GetLayoutBlankLine());
+```

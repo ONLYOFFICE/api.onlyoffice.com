@@ -16,8 +16,10 @@ expression.LINEST(arg1, arg2, arg3, arg4);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The set of y-values from the *y = mx + b* equation. |
 | arg2 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | An optional set of x-values from the *y = mx + b* equation. |
-| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted, and *b* is set equal to 0 if the parameter is **false**. |
-| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to **true**, and return m-coefficients and the constant *b* if the parameter is **false** or omitted. |
+| arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: the constant *b* is calculated normally if this parameter is set to **true** or omitted,
+and *b* is set equal to 0 if the parameter is **false**. |
+| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value: return additional regression statistics if this parameter is set to **true**,
+and return m-coefficients and the constant *b* if the parameter is **false** or omitted. |
 
 ## Returns
 
@@ -25,12 +27,12 @@ number
 
 ## Example
 
-This example shows how to return statistics that describe a linear trend matching known data points, by fitting a straight line using the least squares method.
+Fit a straight line to data points and get trend statistics in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get statistics that describe a linear trend matching known data points.
+// How do I analyze the relationship between x and y values to predict a trend in a spreadsheet?
 
-// Use a function to return statistics that describe a linear trend matching known data points using the least squares method.
+// Get the slope, intercept, and accuracy metrics for a linear regression in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -58,6 +60,4 @@ let ans = func.LINEST(yRange, xRange, constant, stats);
 
 //print answer 
  worksheet.GetRange("D1").SetValue(ans);
-
-
 ```

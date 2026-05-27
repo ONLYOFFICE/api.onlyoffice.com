@@ -20,19 +20,19 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Check the text alignment of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set a justification of a paragraph property.
+// How do I read the alignment setting of a paragraph in a presentation?
 
-// Change a justification type of a text property from the slide.
+// Retrieve whether text is left-aligned, centered, right-aligned, or justified in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
@@ -53,5 +53,4 @@ const jc = paraPr.GetJc();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Justification: " + jc);
 docContent.Push(paragraph);
-
 ```

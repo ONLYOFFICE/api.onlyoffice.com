@@ -1,0 +1,44 @@
+# SetBackgroundColor
+
+Sets widget background color.
+
+## Syntax
+
+```javascript
+expression.SetBackgroundColor(color);
+```
+
+`expression` - A variable that represents a [ApiBaseWidget](../ApiBaseWidget.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color. |
+
+## Returns
+
+boolean
+
+## Example
+
+Apply a background color to all field widgets in a PDF.
+
+```javascript editor-pdf
+// How do I set the background color for widgets in a PDF?
+
+// Change the fill color of widget backgrounds in a PDF.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let textField = Api.CreateTextField([10, 10, 160, 30]);
+page.AddObject(textField);
+
+textField.SetValue('Example text');
+textField.AddWidget(0, [10, 40, 160, 60]);
+let widgets = textField.GetAllWidgets();
+let rgbColor = Api.RGB(255, 100, 0);
+widgets.forEach(function(widget) {
+    widget.SetBackgroundColor(rgbColor);
+});
+```

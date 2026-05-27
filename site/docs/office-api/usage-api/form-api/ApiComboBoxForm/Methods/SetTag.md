@@ -2,29 +2,17 @@
 
 Sets the tag attribute to the current form.
 
-## Syntax
-
-```javascript
-expression.SetTag(tag);
-```
-
-`expression` - A variable that represents a [ApiComboBoxForm](../ApiComboBoxForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| tag | Required | string |  | The tag which will be added to the current container. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetTag](../../ApiFormBase/Methods/SetTag.md).
 
 ## Example
 
-This example shows how to set the tag of a form element.
+Tag a form field with a custom identifier in a document.
 
-```javascript editor-pdf
+```javascript editor-forms
+// How do I attach a label or identifier to a form field in a document?
+
+// Organize or reference form fields programmatically using custom tags.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -46,5 +34,4 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```

@@ -23,15 +23,15 @@ boolean
 
 ## Example
 
-This example sets the lock value to the specified lock type of the current drawing.
+Prevent a drawing from being selected or modified by setting a lock on it in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a lock type of a drawing.
+// How do I restrict what a user can do with a drawing in a spreadsheet?
 
-// Create a drawing, set its lock value and display it in the worksheet.
+// Protect a shape from user interaction by applying a specific lock type to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 drawing.SetSize(120 * 36000, 70 * 36000);

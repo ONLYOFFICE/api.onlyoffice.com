@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies if the text field should be miltiline.
+Allow a text field to span multiple lines in a document.
 
-```javascript editor-pdf
-// How to set the first text form from this document multiline.
+```javascript editor-forms
+// How do I enable a text field to accept line breaks and wrap across multiple rows in a document?
 
-// Set the boolean that represents the multiline property of the text form.
+// Expand a text field so users can enter longer responses across several lines in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "autoFit": false});

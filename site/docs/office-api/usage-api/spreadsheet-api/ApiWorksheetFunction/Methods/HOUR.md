@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to get the hour as a number from 0 (12:00 A.M.) to 23 (11:00 P.M.).
+Extract the hour from a time value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an hour.
+// How do I get the hour component from a time in a spreadsheet?
 
-// Use a function to get an hour from a time.
+// Return the hour portion of a time as a number from 0 to 23 in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -35,5 +35,4 @@ let func = Api.WorksheetFunction;
 let ans = func.HOUR("4:17 pm"); 
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

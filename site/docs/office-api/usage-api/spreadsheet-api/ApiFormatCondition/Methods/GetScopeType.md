@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the scope type of a conditional formatting rule.
+Read the scope type that controls where a conditional formatting rule applies in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the scope type from conditional formatting rules.
+// How do I find out whether a formatting rule targets cells, a table, or a pivot table in a spreadsheet?
 
-// Get conditional formatting rule scope type.
+// Determine the coverage area defined for a conditional formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +47,4 @@ let scopeType = condition1.GetScopeType();
 
 worksheet.GetRange("C1").SetValue("Scope type:");
 worksheet.GetRange("C2").SetValue(scopeType);
-
 ```

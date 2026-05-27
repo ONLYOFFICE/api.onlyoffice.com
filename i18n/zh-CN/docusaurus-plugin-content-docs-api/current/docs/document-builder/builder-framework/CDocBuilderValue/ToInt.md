@@ -1,0 +1,122 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# ToInt
+
+将 `CDocBuilderValue` 对象转换为整数。
+
+:::note
+此方法不适用于 **JS**。
+:::
+
+## 语法
+
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        ```py
+        def ToInt(self) -> int
+        ```
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        int ToInt();
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        ```cpp
+        HRESULT ToInt([out, retval] int* result);
+        ```
+    </TabItem>
+    <TabItem value="java" label="Java">
+        ```java
+        int toInt();
+        ```
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        ```cs
+        int ToInt();
+        ```
+    </TabItem>
+</Tabs>
+
+## 参数
+
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="com" label="COM">
+        | 名称   | 类型 | 描述           |
+        | ------ | ---- | -------------- |
+        | result | int* | 返回的整数值。 |
+    </TabItem>
+    <TabItem value="java" label="Java">
+        此方法没有参数。
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        此方法没有参数。
+    </TabItem>
+</Tabs>
+
+## 示例
+
+<Tabs groupId="lang">
+    <TabItem value="python" label="Python">
+        ```py
+        builder = docbuilder.CDocBuilder()
+        context = builder.GetContext()
+        globalObj = context.GetGlobal()
+        nGlobal = globalObj.ToInt()
+        ```
+    </TabItem>
+    <TabItem value="cpp" label="C++">
+        ```cpp
+        std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+        CDocBuilder::Initialize(sWorkDirectory.c_str());
+        CDocBuilder oBuilder;
+        CContext oContext = oBuilder.GetContext();
+        CValue oGlobal = oContext.GetGlobal();
+        int nGlobal = oGlobal.ToInt();
+        CDocBuilder::Dispose();
+        ```
+    </TabItem>
+    <TabItem value="com" label="COM">
+        ```cpp
+        CoInitialize(NULL);
+        IONLYOFFICEDocBuilder* oBuilder = NULL;
+        CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_INPROC_SERVER, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+        IONLYOFFICEDocBuilderContext* oContext = NULL;
+        IONLYOFFICEDocBuilderValue* oGlobal = NULL;
+        int n;
+        oBuilder->Initialize();
+        oBuilder->GetContext(&oContext);
+        oContext->GetGlobal(&oGlobal);
+        oGlobal->ToInt(&n);
+        oBuilder->Dispose();
+        ```
+    </TabItem>
+    <TabItem value="java" label="Java">
+        ```java
+        CDocBuilder.initialize("");
+        CDocBuilder builder = new CDocBuilder();
+        CDocBuilderContext context = builder.getContext();
+        CDocBuilderValue global = context.getGlobal();
+        int intValue = global.toInt();
+        CDocBuilder.dispose();
+        ```
+    </TabItem>
+    <TabItem value="net" label=".Net">
+        ```cs
+        string workDirectory = "C:/Program Files/ONLYOFFICE/documentBuilder";
+        CDocBuilder.Initialize(workDirectory);
+        CDocBuilder oBuilder = new CDocBuilder();
+        CContext oContext = oBuilder.GetContext();
+        CValue oGlobal = oContext.GetGlobal();
+        int nGlobal = oGlobal.ToInt();
+        CDocBuilder.Destroy();
+        ```
+    </TabItem>
+</Tabs>

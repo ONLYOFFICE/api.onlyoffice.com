@@ -20,12 +20,12 @@ JSON
 
 ## Example
 
-This example converts the ApiThemeFontScheme object into the JSON object.
+Convert a font scheme to JSON format in a presentation.
 
 ```javascript editor-pptx
-// How to convert a ApiThemeFontScheme object to a JSON object.
+// How can I export a font scheme as JSON data in a presentation?
 
-// Create a ApiThemeFontScheme, convert it to JSON and create a new object from it.
+// Create a font scheme, export it to JSON, and recreate it from the JSON in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,7 +43,7 @@ const theme = slide.GetTheme();
 theme.SetFontScheme(fontSchemeFromJSON);
 const sType = fontSchemeFromJSON.GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -54,5 +54,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + sType);
 slide.AddObject(shape);
-
 ```

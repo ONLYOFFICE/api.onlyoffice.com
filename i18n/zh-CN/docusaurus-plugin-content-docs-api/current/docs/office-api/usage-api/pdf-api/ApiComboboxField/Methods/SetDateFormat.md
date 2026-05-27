@@ -1,0 +1,39 @@
+# SetDateFormat
+
+设置字段的日期格式。
+
+## 语法
+
+```javascript
+expression.SetDateFormat(format);
+```
+
+`expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| format | 必需 | string |  | 日期格式（例如 “dd.mm.yyyy”） |
+
+## 返回值
+
+boolean
+
+## 示例
+
+在 PDF 中格式化组合框字段中的日期。
+
+```javascript editor-pdf
+// Can I control how dates appear in a PDF?
+
+// Display dates with a specific format in a PDF.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let comboboxField = Api.CreateComboboxField([10, 10, 160, 30]);
+page.AddObject(comboboxField);
+
+comboboxField.SetDateFormat("dd.mm.yyyy");
+comboboxField.SetValue("10 january 2015");
+```

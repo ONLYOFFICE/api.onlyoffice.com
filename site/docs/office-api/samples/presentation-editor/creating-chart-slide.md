@@ -1,3 +1,9 @@
+---
+hide_table_of_contents: true
+description: Create a slide with a title and column chart.
+tags: ["Docs", "Office API", "Presentations"]
+---
+
 # Creating chart slide
 
 Create a slide with a chart for data visualization:

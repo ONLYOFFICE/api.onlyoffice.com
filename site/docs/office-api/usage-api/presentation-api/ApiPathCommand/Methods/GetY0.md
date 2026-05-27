@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve in a presentation.
+Get the first control point y coordinate of a curve in a presentation.
 
 ```javascript editor-pptx
-// Displays all control point coordinates in a text shape.
+// How do I find the starting control point position of a curve in a presentation?
+
+// Read curve control points to verify bezier path geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -36,8 +39,8 @@ path.QuadBezTo(100 * 36000, 50 * 36000, 100 * 36000, 100 * 36000);
 path.ArcTo(50 * 36000, 50 * 36000, 0, 10800000);
 path.Close();
 let cmd = path.GetCommand(1);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = Api.CreateShape("star5", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 let paragraph = shape.GetDocContent().GetElement(0);

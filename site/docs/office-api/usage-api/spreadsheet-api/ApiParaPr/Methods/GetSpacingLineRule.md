@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph line spacing value.
+Read the line spacing rule applied to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get spacing line value between sentences of a paragraph.
+// How do I find out whether a paragraph's line height is set to auto or a fixed rule in a spreadsheet?
 
-// Create a paragraph set spacing line between the sentences and retrieve the value.
+// Verify the spacing mode of a paragraph after setting its line height to confirm the rule type in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

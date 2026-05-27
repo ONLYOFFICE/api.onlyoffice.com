@@ -22,9 +22,13 @@ string[]
 
 ## Example
 
-This example shows how to get a list of all form keys attached to the specified role.
+List all form field keys assigned to a specific role and display them in a document.
 
-```javascript editor-pdf
+```javascript editor-forms
+// How do I find which form fields belong to a particular role in a document?
+
+// Separate form responsibilities by role so each participant sees only their required fields in a document.
+
 let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Employee");
@@ -50,5 +54,4 @@ keys.forEach(key => {
     paragraph.AddLineBreak();
     paragraph.AddText(key);
 });
-
 ```

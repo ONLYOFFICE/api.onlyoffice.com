@@ -20,19 +20,19 @@ string
 
 ## Example
 
-This example gets a presentation name and inserts it into the presentation.
+Access the full file path and name of a presentation in a presentation.
 
 ```javascript editor-pptx
-// How to get a presentation name.
+// How can I get the complete filename of a presentation in a presentation?
 
-// Retrieve name of presentation.
+// Display the presentation's file path as text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
@@ -42,5 +42,4 @@ const paragraph = docContent.GetElement(0);
 const fullName = Api.GetFullName();
 paragraph.AddText("File name: " + fullName);
 slide.AddObject(shape);
-
 ```

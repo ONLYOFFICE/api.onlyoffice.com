@@ -34,7 +34,9 @@ The ONLYOFFICE DocSpace API uses API keys for authentication. To create a user A
     }
     ```
 
-    > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+    :::note
+    You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+    :::
   </TabItem>
   <TabItem value="response" label="Response">
     ``` http
@@ -58,21 +60,23 @@ You can also create and manage API keys on your portal from the **Developer Tool
 2. Navigate to the **Developer Tools** section.
 3. On the **API keys** tab, click the **Create new secret key** button to generate a new secret key.
     
-    ![API keys](/assets/images/docspace/api-keys.png)
+    ![API keys](/assets/images/docspace/api-keys.png#gh-light-mode-only)![API keys](/assets/images/docspace/api-keys.dark.png#gh-dark-mode-only)
 
 5. Specify the key name. The name usually contains information that allows the user to quickly understand where the key is used. For example, "LangFlow on a home computer."
 6. Configure the key access rights. You can create a read-only key or grant full access to the data.
 7. Specify the key lifetime in days (maximum 365), after which the key will be automatically deactivated.
 
-    ![Create API key](/assets/images/docspace/create-api-key.png)
+    ![Create API key](/assets/images/docspace/create-api-key.png#gh-light-mode-only)![Create API key](/assets/images/docspace/create-api-key.dark.png#gh-dark-mode-only)
 
-> Do not share the API key or include it in any client-side code (browsers, apps). API keys should be securely loaded from environment variables or a key management service on the server side.
+:::warning
+Do not share the API key or include it in any client-side code (browsers, apps). API keys should be securely loaded from environment variables or a key management service on the server side.
+:::
 
 ## How to use API keys
 
 When calling the API, pass the API keys in the Authorization header in the same way as an OAuth access token.
 
-API keys should be provided via [HTTP Bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/):
+API keys should be provided via [HTTP Bearer authentication](https://swagger.io/docs/specification/v3_0/authentication/bearer-authentication/):
 
 ```sh
 Authorization: Bearer ONLYOFFICE_API_KEY
@@ -85,7 +89,7 @@ curl https://yourportal.onlyoffice.com/api/2.0/people/@self \
   -H "Authorization: Bearer ONLYOFFICE_API_KEY" 
 ```
 
-where `ONLYOFFICE_API_KEY` is the API key.
+where `ONLYOFFICE_API_KEY` is the API key.
 
 ## Recommendations for using API keys
 

@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example moves the sheet to another location in the workbook.
+Reorder sheets by shifting one before or after another in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change an order of the sheet.
+// Change the tab position of a sheet relative to your other sheets in a spreadsheet?
 
-// Move a sheet.
+// Reorganize sheet sequence to group related data together in a spreadsheet.
 
 let sheet1 = Api.GetActiveSheet();
 Api.AddSheet("Sheet2");

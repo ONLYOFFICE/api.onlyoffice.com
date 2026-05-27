@@ -1,0 +1,30 @@
+# SetRelativeHeight
+
+Sets the relative height of the object (image, shape, chart) bounding box.
+
+Inherited from [ApiDrawing.SetRelativeHeight](../../ApiDrawing/Methods/SetRelativeHeight.md).
+
+## Example
+
+Size a shape's height as a percentage of the page in a document.
+
+```javascript editor-docx
+// How do I make a shape's height scale proportionally with the page in a document?
+
+// Stretch a rectangle to fill a quarter of the page height so it adapts to different page sizes in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(91, 155, 213));
+let stroke = Api.CreateStroke(0.4 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(65, 113, 156)));
+let drawing = Api.CreateShape("rect", 1 * 36000, 1 * 36000, fill, stroke);
+drawing.SetWrappingStyle("inFront");
+drawing.SetVerPosition("page", 50 * 36000);
+drawing.SetHorPosition("page", 0);
+drawing.SetRelativeWidth("page", 100);
+drawing.SetRelativeHeight("page", 25);
+paragraph.AddDrawing(drawing);
+paragraph = Api.CreateParagraph();
+paragraph.AddText("The shape was created with a width 100% of page width and 25% of height page");
+doc.Push(paragraph);
+```

@@ -9,7 +9,7 @@ sidebar_position: -8
 本文档详细说明：
 
 - 如何通过(../usage-api/config/editor/plugins.md)和[个性化设置](../usage-api/config/editor/customization/customization-standard-branding.md)，或根据您的使用场景限制其功能
-- 如何通过[自动化 API](../usage-api/automation-api.md)管理编辑器
+- 如何通过[自动化 API](../usage-api/automation-api/automation-api.md)管理编辑器
 - 如何使用 [WOPI 协议](../using-wopi/overview.md)将您的应用程序与在线办公软件集成
 - 如何将 ONLYOFFICE 文档集成到多种[前端框架](./frontend-frameworks/react.md)和[文档管理系统 (DMSs)](./ready-to-use-connectors/nextcloud-integration.md) 中
 

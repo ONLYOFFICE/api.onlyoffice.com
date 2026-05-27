@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all the image objects from the slide.
+Find all images on a slide in a presentation.
 
 ```javascript editor-pptx
-// How to get all images from the slide.
+// How do I access all the images in a slide in a presentation?
 
-// Get all images from the slide as an array.
+// Retrieve the image objects and read their properties in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -39,7 +39,7 @@ slide.AddObject(image);
 const allImages = slide.GetAllImages();
 const type = allImages[0].GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('flowChartMagneticTape', 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -50,5 +50,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc('left');
 paragraph.AddText('Class type = ' + type);
 slide.AddObject(shape);
-
 ```

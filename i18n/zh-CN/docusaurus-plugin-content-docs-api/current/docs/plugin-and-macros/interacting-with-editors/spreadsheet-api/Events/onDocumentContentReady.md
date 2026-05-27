@@ -1,10 +1,12 @@
-# 文档加载完成回调
+# onDocumentContentReady
 
-当文档完全加载完成时调用的函数。
+当文档完全加载时调用的函数。
 
 ## 参数
 
-此事件无参数。
+此事件没有参数。
+
+## 示例
 
 ```javascript
 window.Asc.plugin.attachEditorEvent("onDocumentContentReady", () => {
@@ -19,4 +21,3 @@ window.Asc.plugin.attachEditorEvent("onDocumentContentReady", () => {
     });
 });
 ```
-

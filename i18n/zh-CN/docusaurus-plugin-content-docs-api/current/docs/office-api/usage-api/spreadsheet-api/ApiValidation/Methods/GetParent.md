@@ -1,0 +1,36 @@
+# GetParent
+
+返回父区域对象。
+
+## 语法
+
+```javascript
+expression.GetParent();
+```
+
+`expression` - 表示 [ApiValidation](../ApiValidation.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiRange](../../ApiRange/ApiRange.md)
+
+## 示例
+
+识别电子表格中拥有给定验证规则的单元格范围。
+
+```javascript editor-xlsx
+// How do I find out which cells a data validation rule belongs to in a spreadsheet?
+
+// Trace back from a validation object to the range of cells it is applied to in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let range = worksheet.GetRange("A1:A5");
+let validation = range.GetValidation();
+validation.Add("xlValidateWholeNumber", "xlValidAlertStop", "xlGreater", 10);
+let parent = validation.GetParent();
+worksheet.GetRange("B1").SetValue("Parent range: " + parent.GetAddress());
+```

@@ -4,25 +4,25 @@ sidebar_position: -5
 
 # Configuration
 
-The *config.json* file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
+The `config.json` file is a plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
 
 ## baseUrl
 
-`Type: string`
+**type:** `string`
 
-Path to the plugin. All other paths are calculated relative to this path. If *baseUrl == ""*, the path to the plugin in the default *sdkjs-plugins* folder will be used.
+Path to the plugin. All other paths are calculated relative to this path. If `baseUrl == ""`, the path to the plugin in the default `sdkjs-plugins` folder will be used.
 
 **Example**: `""`
 
 ## group
 
-`Type: object`
+**type:** `object`
 
 Plugin group that is separated from other plugins in the **Plugins** tab. The first group usually includes the **Plugin Manager** and **Background plugins**, if they exist. Other plugins are placed after them in the second group. You can add as many groups as you need. If this parameter is omitted, the plugin will be added to the last group.
 
 **Example**:
 
-``` json
+```json
 {
   "name": "group name",
   "rank": 2
@@ -31,7 +31,7 @@ Plugin group that is separated from other plugins in the **Plugins** tab. The fi
 
 ### group.name
 
-`Type: string`
+**type:** `string`
 
 The group name.
 
@@ -39,7 +39,7 @@ The group name.
 
 ### group.rank
 
-`Type: number`
+**type:** `number`
 
 The group rank in the **Plugins** tab, an integer starting from 1.
 
@@ -49,17 +49,17 @@ The group rank in the **Plugins** tab, an integer starting from 1.
 
 ## guid
 
-`Type: string`
+**type:** `string`
 
-Plugin identifier. It **must** be of the *asc.\{UUID\}* type.
+Plugin identifier. It **must** be of the `asc.{UUID}` type.
 
 **Example**: `"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"`
 
 ## help
 
-`Type: string`
+**type:** `string`
 
-Path to the plugin help page. If the parameter is specified, the *help* button is displayed in the plugin window. When the user clicks the button, he follows the link to the plugin help page.
+Path to the plugin help page. If the parameter is specified, the `help` button is displayed in the plugin window. When the user clicks the button, they follow the link to the plugin help page.
 
 **Example**: `"url_to_help_page"`
 
@@ -67,7 +67,7 @@ Path to the plugin help page. If the parameter is specified, the *help* button i
 
 ## minVersion
 
-`Type: string`
+**type:** `string`
 
 The minimum editor version which supports the current plugin.
 
@@ -75,7 +75,7 @@ The minimum editor version which supports the current plugin.
 
 ## name
 
-`Type: string`
+**type:** `string`
 
 Plugin name which will be visible at the plugin toolbar.
 
@@ -83,21 +83,21 @@ Plugin name which will be visible at the plugin toolbar.
 
 ## nameLocale
 
-`Type: localeTranslate`
+**type:** `localeTranslate`
 
 Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.
 
 **Example**: `{ "fr": "french plugin name" }`
 
-#### localeTranslate
+## localeTranslate
 
-`Type: object`
+**type:** `object`
 
 The translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language.
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -113,7 +113,7 @@ The translations for the text field. The object keys are the two letter language
 
 ## offered
 
-`Type: string`
+**type:** `string`
 
 Plugin author who proposed the plugin for publication.
 
@@ -121,7 +121,7 @@ Plugin author who proposed the plugin for publication.
 
 ## onlyofficeScheme
 
-`Type: boolean`
+**type:** `boolean`
 
 Specifies whether the plugin is included in the server or desktop builds branded as ONLYOFFICE.
 
@@ -129,13 +129,13 @@ Specifies whether the plugin is included in the server or desktop builds branded
 
 ## variations
 
-`Type: array of object`
+**type:** `object[]`
 
-Plugin variations, or subplugins, that are created inside the origin plugin. More information you can find [here](variations.md).
+Plugin variations, or subplugins, that are created inside the origin plugin. For more information, see [variations](variations.md).
 
 **Example**:
 
-``` json
+```json
 [
   {
     "buttons": [
@@ -189,13 +189,13 @@ Plugin variations, or subplugins, that are created inside the origin plugin. Mor
 
 ### variations.buttons
 
-`Type: array of Button`
+**type:** `Button[]`
 
-The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is *window*, *panel*, or *panelRight*.
+The list of skinnable plugin buttons used in the plugin interface. This parameter is used only for plugin windows and panels, i.e. when the [type](#variationstype) parameter is `window`, `panel`, or `panelRight`.
 
 **Example**:
 
-``` json
+```json
 [
   {
     "text": "Cancel",
@@ -213,20 +213,20 @@ The list of skinnable plugin buttons used in the plugin interface. This paramete
 
 #### Button
 
-`Type: object`
+**type:** `object`
 
 The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. `isVisual == true` and `isInsideMode == false`).
 
-| Name       | Type                                | Description                                                                                                                                                               |
-| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| text       | string                              | The label which is displayed on the button.                                                                                                                               |
-| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                   |
-| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                            |
+| Name       | Type                                | Description                                                                                                                                                              |
+| ---------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| text       | string                              | The label which is displayed on the button.                                                                                                                              |
+| primary    | boolean                             | Defines if the button is primary or not. The primary flag affects the button skin only.                                                                                  |
+| isViewer   | boolean                             | Defines if the button is shown in the viewer mode only or not.                                                                                                           |
 | textLocale | [localeTranslate](#localetranslate) | Translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language. |
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -248,7 +248,7 @@ The skinnable plugin button used in the plugin interface (used for visual plugin
 
 ### variations.cryptoDisabledForExternalCloud
 
-`Type: string`
+**type:** `string`
 
 Specifies whether the encryption for the third-party clouds is disabled.
 
@@ -256,7 +256,7 @@ Specifies whether the encryption for the third-party clouds is disabled.
 
 ### variations.cryptoDisabledForInternalCloud
 
-`Type: string`
+**type:** `string`
 
 Specifies whether the encryption for the local files is disabled.
 
@@ -264,7 +264,7 @@ Specifies whether the encryption for the local files is disabled.
 
 ### variations.cryptoDisabledOnStart
 
-`Type: string`
+**type:** `string`
 
 Specifies whether the encryption is disabled upon startup.
 
@@ -274,19 +274,19 @@ Specifies whether the encryption is disabled upon startup.
 
 ### variations.cryptoMode
 
-`Type: string`
+**type:** `string`
 
 The encryption mode. The available values:
 
-- **0** - none (encryption is disabled);
-- **1** - simple;
-- **2** - advanced.
+- `0` - none (encryption is disabled);
+- `1` - simple;
+- `2` - advanced.
 
 **Example**: `"1"`
 
 ### variations.description
 
-`Type: string`
+**type:** `string`
 
 The description, i.e. what describes your plugin the best way. It will be displayed in the **ONLYOFFICE Plugin Marketplace**.
 
@@ -296,7 +296,7 @@ The description, i.e. what describes your plugin the best way. It will be displa
 
 ### variations.descriptionLocale
 
-`Type: localeTranslate`
+**type:** `localeTranslate`
 
 Translations for the description field. The object keys are the two letter language codes (fr, de, it, etc.) and the values are the plugin description translation for each language.
 
@@ -304,9 +304,9 @@ Translations for the description field. The object keys are the two letter langu
 
 ### variations.EditorsSupport
 
-`Type: array of editorType`
+**type:** `editorType[]` | **default:** `[]`
 
-The editors which the plugin is available for (**word**, **cell**, **slide**, or **pdf**).
+The editors which the plugin is available for (`word`, `cell`, `slide`, or `pdf`).
 
 **Example**: `["word"]`
 
@@ -314,14 +314,14 @@ The editors which the plugin is available for (**word**, **cell**, **slide**, or
 
 The editors which the plugin is available for:
 
-- `word` - text document editor,
+- `word` - document editor,
 - `cell` - spreadsheet editor,
 - `slide` - presentation editor,
 - `pdf` - pdf editor.
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -333,7 +333,11 @@ The editors which the plugin is available for:
 
 ### variations.events
 
-`Type: array of EventType`
+**type:** `EventType[]`
+
+:::danger[Deprecated]
+Starting from version 8.2, please use the [attachEditorEvent](../../interacting-with-editors/overview/how-to-attach-events.md#option-1-using-the-attacheditorevent-method) method instead, which does not require this parameter.
+:::
 
 Plugin events which are used in the current plugin code. Find out how to subscribe to events [here](../../interacting-with-editors/overview/how-to-attach-events.md).
 
@@ -341,13 +345,13 @@ Plugin events which are used in the current plugin code. Find out how to subscri
 
 #### EventType
 
-`Type: string`
+**type:** `string`
 
-Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onDocumentContentReady.md)", "[onTargetPositionChanged](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onTargetPositionChanged.md)", "[onClick](/docs/plugin-and-macros/interacting-with-editors/form-api/Events/onClick.md)", "onInputHelperClear", "onInputHelperInput", etc.).
+Plugin event ([onDocumentContentReady](../../interacting-with-editors/form-api/Events/onDocumentContentReady.md), [onTargetPositionChanged](../../interacting-with-editors/form-api/Events/onTargetPositionChanged.md), [onClick](../../interacting-with-editors/form-api/Events/onClick.md), onInputHelperClear, onInputHelperInput, etc.).
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -359,39 +363,39 @@ Plugin event ("[onDocumentContentReady](/docs/plugin-and-macros/interacting-with
 
 ### variations.icons
 
-`Type: string`
+**type:** `string`
 
-URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. More information can be found [here](../../customization/icons.md).
+URL to the plugin icon image file. This URL allows setting your own rules for theme (name, type), styles (normal, hover, active), and scaling. For more information, see [icons](../../customization/icons.md).
 
 **Example**: `"url_to_icon"`
 
 ### variations.icons2
 
-`Type: array of object`
+**type:** `object[]`
 
 :::danger[Deprecated]
 Please use the [variations.icons](#variationsicons) parameter instead.
 :::
 
-Scalable icons for plugin extensions. More information can be found [here](../../customization/icons.md).
+Scalable icons for plugin extensions. For more information, see [icons](../../customization/icons.md).
 
 **Example**: `[{ "100%": { "normal": "icon.png" } }]`
 
 ### variations.initData
 
-`Type: string`
+**type:** `string` | **default:** `""`
 
-The data which is sent from the editor to the plugin at the plugin start. This parameter is usually equal to *""*. If *initDataType == "text"*, the plugin will receive the selected text upon launch. It may also be equal to *encryption* in the encryption plugins.
+The data which is sent from the editor to the plugin at the plugin start. If `initDataType == "text"`, the plugin will receive the selected text upon launch. It may also be equal to `encryption` in the encryption plugins.
 
 **Example**: `"text"`
 
-![Init data](/assets/images/plugins/init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/init-data.dark.png#gh-dark-mode-only)
+![Init data](/assets/images/plugins/plugin-init-data.png#gh-light-mode-only)![Init data](/assets/images/plugins/plugin-init-data.dark.png#gh-dark-mode-only)
 
 ### variations.initDataType
 
-`Type: initDataType`
+**type:** `initDataType`
 
-The data type selected in the editor and sent to the plugin (**text**, **html**, **ole**, **desktop**, **desktop-external**, **sign**, or **none**).
+The data type selected in the editor and sent to the plugin (`text`, `html`, `ole`, `desktop`, `desktop-external`, `sign`, or `none`).
 
 **Example**: `"ole"`
 
@@ -403,13 +407,13 @@ The data type selected in the editor and sent to the plugin:
 - `html` - HTML formatted code,
 - `ole` - OLE object data,
 - `desktop` - the desktop editor data,
-- `destop-external` - the main page data of the desktop app (system messages),
-- `none` - no data will be send to the plugin from the editor,
+- `desktop-external` - the main page data of the desktop app (system messages),
+- `none` - no data will be sent to the plugin from the editor,
 - `sign` - the sign for the keychain plugin.
 
 **Example**:
 
-``` json
+```json
 {
   "variations": [
     {
@@ -421,31 +425,31 @@ The data type selected in the editor and sent to the plugin:
 
 ### variations.initOnSelectionChanged
 
-`Type: boolean`
+**type:** `boolean`
 
-Specifies if the plugin watches the text selection events in the editor window. This parameter is set to **true** when the plugin works with the selected text and its output changes when the selection changes. For example, the **Translator** plugin displays the translation of the selected text.
+Specifies if the plugin watches the text selection events in the editor window. This parameter is set to `true` when the plugin works with the selected text and its output changes when the selection changes. For example, the **Translator** plugin displays the translation of the selected text.
 
 **Example**: `true`
 
 ### variations.isCustomWindow
 
-`Type: boolean`
+**type:** `boolean`
 
-Specifies if the plugin uses a custom window, without standard borders and buttons (used only when *type == "window"*).
+Specifies if the plugin uses a custom window, without standard borders and buttons (used only when `type == "window"`).
 
 **Example**: `true`
 
 ### variations.isDisplayedInViewer
 
-`Type: boolean`
+**type:** `boolean`
 
-Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (*isDisplayedInViewer == true*) or in the editor mode only (*isDisplayedInViewer == false*).
+Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (`isDisplayedInViewer == true`) or in the editor mode only (`isDisplayedInViewer == false`).
 
 **Example**: `true`
 
 ### variations.isInsideMode
 
-`Type: boolean`
+**type:** `boolean`
 
 :::danger[Deprecated]
 Please use the [type](#variationstype) parameter instead.
@@ -457,19 +461,19 @@ Specifies if the plugin must be displayed inside the editor panel instead of its
 
 ### variations.isModal
 
-`Type: boolean`
+**type:** `boolean`
 
 :::danger[Deprecated]
 Please use the [type](#variationstype) parameter instead.
 :::
 
-Specifies if the opened plugin window is modal (used for visual plugins only, and if *isInsideMode* is not **true**).
+Specifies if the opened plugin window is modal (used for visual plugins only, and if `isInsideMode` is not `true`).
 
 **Example**: `true`
 
 ### variations.isSystem
 
-`Type: boolean`
+**type:** `boolean`
 
 :::danger[Deprecated]
 Please use the [type](#variationstype) parameter instead.
@@ -481,23 +485,23 @@ Specifies if the plugin is not displayed in the editor interface and is started 
 
 ### variations.isUpdateOleOnResize
 
-`Type: boolean`
+**type:** `boolean`
 
-Specifies if an OLE object must be redrawn when resized in the editor using the vector object drawing type or not (used for OLE objects only, i.e. *initDataType == "ole"*).
+Specifies if an OLE object must be redrawn when resized in the editor using the vector object drawing type or not (used for OLE objects only, i.e. `initDataType == "ole"`).
 
 **Example**: `true`
 
 ### variations.isViewer
 
-`Type: boolean`
+**type:** `boolean` | **default:** `false`
 
-Specifies if the plugin is working when the document is available in the viewer mode only or not. The default value is **false**.
+Specifies if the plugin is working when the document is available in the viewer mode only or not.
 
 **Example**: `false`
 
 ### variations.isVisual
 
-`Type: boolean`
+**type:** `boolean`
 
 :::danger[Deprecated]
 Please use the [type](#variationstype) parameter instead.
@@ -509,7 +513,7 @@ Specifies if the plugin is visual (will open a window for some action, or introd
 
 ### variations.menu
 
-`Type: string`
+**type:** `string`
 
 :::danger[Deprecated]
 Please use the [type](#variationstype) parameter instead.
@@ -521,7 +525,7 @@ Specifies where the plugin will be placed (on the right or left panel).
 
 ### variations.screens
 
-`Type: array of string`
+**type:** `string[]`
 
 :::danger[Deprecated]
 Please use the [variations.store.screenshots](#variationsstorescreenshots) parameter instead.
@@ -533,21 +537,21 @@ Plugin screenshot image files used in the **ONLYOFFICE Plugin Marketplace** for 
 
 ### variations.size
 
-`Type: array of number`
+**type:** `number[]`
 
-Plugin window size measured in pixels. This parameter is only used when *type == "window"*.
+Plugin window size measured in pixels. This parameter is only used when `type == "window"`.
 
 **Example**: `[600]`
 
 ### variations.store
 
-`Type: object`
+**type:** `object`
 
 Plugin display options in **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "background": {
     "light": "#F5F5F5",
@@ -564,13 +568,13 @@ Plugin display options in **ONLYOFFICE Plugin Marketplace**.
 
 ### variations.store.background
 
-`Type: object`
+**type:** `object`
 
 Background colors used for plugin icons in **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "light": "#F5F5F5",
   "dark": "#444444"
@@ -579,37 +583,37 @@ Background colors used for plugin icons in **ONLYOFFICE Plugin Marketplace**.
 
 ### variations.store.background.light
 
-`Type: string`
+**type:** `string`
 
 The background color used for the light theme plugin icon.
 
 **Example**: `"#F5F5F5"`
 
-![Light icon](/assets/images/plugins/icon-light.png)
+![Light icon](/assets/images/plugins/plugin-icon.png)
 
 ### variations.store.background.dark
 
-`Type: string`
+**type:** `string`
 
 The background color used for the dark theme plugin icon.
 
 **Example**: `"#444444"`
 
-![Dark icon](/assets/images/plugins/icon-dark.png)
+![Dark icon](/assets/images/plugins/plugin-icon.dark.png)
 
 ### variations.store.categories
 
-`Type: array of string`
+**type:** `string[]`
 
 Plugin categories in **ONLYOFFICE Plugin Marketplace**:
 
-- "all" - All,
-- "recommended" - Recommended,
-- "devTools" - Developer tools,
-- "work" - Work,
-- "entertainment" - Entertainment,
-- "communication" - Communication,
-- "specAbilities" - Special abilities.
+- `all` - All,
+- `recommended` - Recommended,
+- `devTools` - Developer tools,
+- `work` - Work,
+- `entertainment` - Entertainment,
+- `communication` - Communication,
+- `specAbilities` - Special abilities.
 
 **Example**: `["specAbilities", "work"]`
 
@@ -617,13 +621,13 @@ Plugin categories in **ONLYOFFICE Plugin Marketplace**:
 
 ### variations.store.icons
 
-`Type: object`
+**type:** `object`
 
 Paths to the plugin icon image files used in the **ONLYOFFICE Plugin Marketplace**.
 
 **Example**:
 
-``` json
+```json
 {
   "light": "resources/store/icons",
   "dark": "resources/store/icons"
@@ -632,7 +636,7 @@ Paths to the plugin icon image files used in the **ONLYOFFICE Plugin Marketplace
 
 ### variations.store.icons.light
 
-`Type: string`
+**type:** `string`
 
 The path to the scalable plugin icons for the light theme. Name the icon files of different scales in the following way:
 
@@ -646,7 +650,7 @@ The path to the scalable plugin icons for the light theme. Name the icon files o
 
 ### variations.store.icons.dark
 
-`Type: string`
+**type:** `string`
 
 The path to the scalable plugin icons for the dark theme. Name the icon files of different scales in the following way:
 
@@ -660,7 +664,7 @@ The path to the scalable plugin icons for the dark theme. Name the icon files of
 
 ### variations.store.screenshots
 
-`Type: array of string`
+**type:** `string[]`
 
 Images that are used for the plugin description in the **ONLYOFFICE Plugin Marketplace**.
 
@@ -670,16 +674,16 @@ Images that are used for the plugin description in the **ONLYOFFICE Plugin Marke
 
 ### variations.type
 
-`Type: string`
+**type:** `string`
 
 Plugin [type](./types.md). The available values:
 
-- **system** - not displayed in the editor interface and started in the background with the server (or desktop editors start). Cannot be disabled.
-- **background** - runs continuously once started. Its state (enabled / disabled) persists between sessions.
-- **window** - operates as a standalone window upon launch.
-- **panel** - opens in the left-side panel.
-- **panelRight** - opens in the right-side panel.
-- **unvisible** - invisible upon launch but can create windows later.
+- `system` - not displayed in the editor interface and started in the background with the server (or desktop editors start). Cannot be disabled.
+- `background` - runs continuously once started. Its state (enabled / disabled) persists between sessions.
+- `window` - operates as a standalone window upon launch.
+- `panel` - opens in the left-side panel.
+- `panelRight` - opens in the right-side panel.
+- `unvisible` - invisible upon launch but can create windows later.
 
 **Example**: `"background"`
 
@@ -689,15 +693,15 @@ A plugin of any type can create windows and tabs during its work.
 
 ### variations.url
 
-`Type: string`
+**type:** `string`
 
-Plugin entry point, i.e. an HTML file which connects the *plugin.js* file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../entry-point.md) section for the detailed information.
+Plugin entry point, i.e. an HTML file which connects the `plugin.js` file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../entry-point.md) section for the detailed information.
 
 **Example**: `"index.html"`
 
 ## version
 
-`Type: string`
+**type:** `string`
 
 The plugin version.
 
@@ -705,7 +709,7 @@ The plugin version.
 
 ## Example
 
-``` json
+```json
 {
   "baseUrl": "",
   "group": {

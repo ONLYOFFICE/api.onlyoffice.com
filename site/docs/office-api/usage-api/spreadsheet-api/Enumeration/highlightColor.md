@@ -26,10 +26,9 @@ Enumeration
 - "lightGray"
 - "none"
 
-
 ## Example
 
-This example sets a paragraph highlight to green.
+Set a paragraph highlight to green.
 
 ```javascript editor-xlsx
 // How to change a highlight color to green.

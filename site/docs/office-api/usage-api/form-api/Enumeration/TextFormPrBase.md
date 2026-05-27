@@ -16,12 +16,11 @@ Object
 | maxCharacters | number | The maximum number of characters in the text field. |
 | multiLine | boolean | Specifies if the current fixed size text field is multiline or not. |
 
-
 ## Example
 
-This example creates a text form with the specific text form properties.
+Create a text form with the specific text form properties.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to create a text form with adding base properties like max characters limit, cell width, etc. to it.
 
 // Create a text form with base properties.
@@ -34,5 +33,4 @@ let textFormPrBase = {
 	"autoFit": false
 };
 let textForm = Api.CreateTextForm(textFormPrBase);
-
 ```

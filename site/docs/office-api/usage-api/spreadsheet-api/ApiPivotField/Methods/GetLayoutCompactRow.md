@@ -20,12 +20,12 @@ boolean
 
 ## Example
 
-This example shows how to get a layout compact row of a pivot field.
+Check whether a pivot field uses compact row layout in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a compact row layout of a pivot field.
+// How do I find out if a pivot field is displayed in compact row form in a spreadsheet?
 
-// Create a pivot table, add data to it then get a layout compact row of a specified pivot field.
+// Confirm whether multiple row fields are stacked into a single column in the pivot table in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

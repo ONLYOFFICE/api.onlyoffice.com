@@ -39,7 +39,7 @@ Follow the steps [in this section](../../using-wopi/overview.md#ip-filter) to co
 
 The requests are sent to the `https://documentserver/hosting/discovery` address where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
-More information about WOPI discovery can be found [here](../../using-wopi/wopi-discovery.md).
+For more information, see [WOPI discovery](../../using-wopi/wopi-discovery.md).
 
 ## How to customize the editor behavior via WOPI?
 
@@ -86,7 +86,7 @@ To restrict public access to your data, a secure exchange of requests between an
 
 The integrator must check that the request is received from ONLYOFFICE Docs. It uses [proof keys](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/proofkeys) for this purpose. ONLYOFFICE Docs signs the request with a private key. The corresponding public key is written in the proof-key element in the [WOPI discovery XML](../../using-wopi/wopi-discovery.md). The integrator checks the private key with the public key. The signature is sent with every request in the **X-WOPI-Proof** and **X-WOPI-ProofOld** HTTP headers.
 
-More information about proof keys can be found [on this page](../../using-wopi/proof-keys.md).
+For more information, see [proof keys](../../using-wopi/proof-keys.md).
 
 ## Where can I find possible WOPI error codes and their descriptions?
 
@@ -100,7 +100,7 @@ ONLYOFFICE Docs uses the following WOPI operations: [CheckFileInfo](../../using-
 
 You cannot restrict access to the use of ONLYOFFICE server via WOPI. Editing access cotrol is available only via ONLYOFFICE Docs API and based on JWT signature. The secret key is required to generate a [file open request](../../additional-api/signature/browser.md).
 
-More information about signature can be found [here](../../additional-api/signature/signature.md).
+For more information, see [signature](../../additional-api/signature/signature.md).
 
 ## How to get information about the file properties, access rights and editor settings via WOPI?
 

@@ -1,0 +1,48 @@
+# GetBarColor
+
+返回数据条的颜色。
+
+## 语法
+
+```javascript
+expression.GetBarColor();
+```
+
+`expression` - 表示 [ApiDatabar](../ApiDatabar.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiColor](../../ApiColor/ApiColor.md) \| null
+
+## 示例
+
+读取电子表格中数据条使用的填充颜色。
+
+```javascript editor-xlsx
+// How do I find out what color is applied to data bars in a spreadsheet?
+
+// Check the color of data bars to confirm their appearance in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange("A1").SetValue("Sales Data");
+worksheet.GetRange("A2").SetValue(100);
+worksheet.GetRange("A3").SetValue(250);
+worksheet.GetRange("A4").SetValue(150);
+worksheet.GetRange("A5").SetValue(300);
+worksheet.GetRange("A6").SetValue(75);
+
+let dataRange = worksheet.GetRange("A2:A6");
+let formatConditions = dataRange.GetFormatConditions();
+
+let dataBar = formatConditions.AddDatabar();
+
+let barColor = dataBar.GetBarColor();
+
+worksheet.GetRange("C1").SetValue("Has Bar Color:");
+worksheet.GetRange("C2").SetValue(barColor ? "Yes" : "No");
+```

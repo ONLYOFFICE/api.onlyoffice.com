@@ -23,12 +23,12 @@ expression.GetPivotFields(field);
 
 ## Example
 
-This example shows how to get pivot fields of a pivot table.
+List all fields available in a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get table pivot fields as an array of fields.
+// How do I see every field that a pivot table can use for rows, columns, or filters in a spreadsheet?
 
-// Create a pivot table, add data to it then get its pivot fields.
+// Retrieve the complete set of pivot fields and display their names in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

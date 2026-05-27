@@ -20,7 +20,7 @@ The plugin can be accessed via the context menu.
 
    | Name | Type | Description |
    | ---- | ---- | ----------- |
-   | options | [ContextMenuOptions](#contextmenuoptions) | Defines the information of the selected context menu item. |
+   | options | [ContextMenuOptions](#contextmenuoptions) | The information of the selected context menu item. |
 
    **Example**:
 
@@ -43,9 +43,9 @@ The plugin can be accessed via the context menu.
 
    ### ContextMenuOptions
 
-   Defines the context menu options.
+   The context menu options.
 
-   `Type: object`
+   **type:** `object`
 
    **Properties**:
 
@@ -61,16 +61,16 @@ The plugin can be accessed via the context menu.
 
    The context menu type:
 
-   - **None** - not used,
-   - **Target** - nothing is selected,
-   - **Selection** - text is selected,
-   - **Image** - image is selected,
-   - **Shape** - shape is selected,
-   - **OleObject** - OLE object is selected.
+   - `None` - not used,
+   - `Target` - nothing is selected,
+   - `Selection` - text is selected,
+   - `Image` - image is selected,
+   - `Shape` - shape is selected,
+   - `OleObject` - OLE object is selected.
 
    Depending on the selection type, different context menu items can be added.
 
-   `Type: "None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
+   **type:** `"None" | "Target" | "Selection" | "Image" | "Shape" | "OleObject"`
 
 2. Specify the **AddContextMenuItem** method to add a button to the context menu if necessary.
 
@@ -86,7 +86,7 @@ The plugin can be accessed via the context menu.
 
    The context menu item.
 
-   `Type: object`
+   **type:** `object`
 
    **Properties**:
 
@@ -132,7 +132,7 @@ To update the context menu item, specify the **UpdateContextMenuItem** method.
 
 **Example**:
 
-``` ts
+```ts
 Asc.plugin.attachEvent("onContextMenuShow", (options) => {
   const items = {
     guid: window.Asc.plugin.guid,

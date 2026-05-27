@@ -20,13 +20,16 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes cloud shape path properties and displays them in cells.
+Read the fill setting of a custom shape path and display shape properties in a spreadsheet.
 
 ```javascript editor-xlsx
-// Shows path count, dimensions, stroke and fill information.
+// How do I check whether a path inside a custom shape is filled in a spreadsheet?
+
+// Inspect path dimensions, stroke, and fill values to understand how a shape is drawn in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("cloud", 60 * 36000, 60 * 36000, fill, stroke, 3, 0, 2, 2);
 let geometry = shape.GetGeometry();
 worksheet.GetRange("A3").SetValue("Path count: " + geometry.GetPathCount());

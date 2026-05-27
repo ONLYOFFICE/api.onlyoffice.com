@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph right side indentation.
+Read the right-side indent distance applied to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a right indent of a paragraph.
+// How do I check how far a paragraph is pushed in from the right margin in a spreadsheet?
 
-// Get the right paragraph indent by the side.
+// Inspect the right margin offset of a paragraph to verify its horizontal boundary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

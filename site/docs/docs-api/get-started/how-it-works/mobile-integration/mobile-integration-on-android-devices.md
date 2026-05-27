@@ -4,11 +4,11 @@ sidebar_label: Android
 
 # Mobile integration on Android devices
 
-In this section, we will look at the integration process via [WebView](https://developer.android.com/reference/android/webkit/WebView) using the mobile demo sample for Android which is available on [GitHub](https://github.com/ONLYOFFICE/editors-webview-android).
+The **document editor** can be embedded in an Android application using the [WebView](https://developer.android.com/reference/android/webkit/WebView) component. A complete demo project is available on [GitHub](https://github.com/ONLYOFFICE/editors-webview-android).
 
 ## Integration based on the ONLYOFFICE test sample
 
-This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../../samples/language-specific-examples/language-specific-examples.md).
+This example shows how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE [test or DMS sample](../../../samples/language-specific-examples/language-specific-examples.md).
 
 ![Android integration via test sample](/assets/images/editor/android-test-sample.png)
 
@@ -18,36 +18,40 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
 
 2. Download the mobile demo sample for Android from [GitHub](https://github.com/ONLYOFFICE/editors-webview-android).
 
-3. Open the top-level *build.gradle* file with [Android Studio](https://developer.android.com/studio) to modify code fragments of this example for your DMS to work correctly.
+3. Open the project with [Android Studio](https://developer.android.com/studio).
 
-4. To display the main page of your DMS, specify the address of the ONLYOFFICE Docs web interface in the value of the **DOCUMENT\_SERVER\_URL** property in the module-level *build.gradle* file:
+4. In the module-level `build.gradle` file, set the `DOCUMENT_SERVER_URL` property to the address of your ONLYOFFICE Docs instance:
 
    ``` groovy
    buildConfigField("String", "DOCUMENT_SERVER_URL", "https://documentserver/")
    ```
 
-   where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+   Where `documentserver` is the name of the server where ONLYOFFICE Docs is installed.
 
-   If **DOCUMENT\_SERVER\_URL** is specified, the DMS main page is loaded. Otherwise, an error occurs:
+   :::tip
+   Don't have a document server yet? [Register](https://www.onlyoffice.com/docs-registration.aspx?from=api) for a free ONLYOFFICE Docs Cloud and use the public IP address or public DNS name of your instance as `documentserver`. You can find them in the **Instances** section of the cloud console.
+   :::
+
+   If `DOCUMENT_SERVER_URL` is empty, the app displays an error dialog instead of loading the **document manager** page:
 
    ``` kt
    private fun showDialog() {
        AlertDialog.Builder(requireContext())
-       .setMessage("Document server url is empty.\nYou must specify the address in build.gradle")
-       .setPositiveButton("Ok") { dialog, _ ->
-           dialog.dismiss()
-           requireActivity().finish()
-       }
-       .create()
-       .show()
+           .setMessage("Document server url is empty.\nYou must specify the address in build.gradle")
+           .setPositiveButton("Ok") { dialog, _ ->
+               dialog.dismiss()
+               requireActivity().finish()
+           }
+           .create()
+           .show()
    }
    ```
 
    <img alt="Android error" src="/assets/images/editor/android-error.png" width="260px" />
 
-   <img alt="Android managing" src="/assets/images/editor/android-managing.png" width="260px" />
+   <img alt="Android document manager" src="/assets/images/editor/android-managing.png" width="260px" />
 
-5. Use the **MainFragment.kt** controller to open the editors correctly on Android devices. In this controller, define a function to open a document via WebView component. Request a URL and check if it contains the *"editor"* string which specifies that the document will be opened:
+5. The `MainFragment.kt` controller handles navigation from the **document manager** to the **document editor**. When the user taps a document, the controller intercepts the URL, checks whether it contains the `"editor"` string, and — if so — navigates to the editor fragment:
 
    ``` kt
    private class MainWebViewClient(private val navController: NavController) : WebViewClient() {
@@ -70,9 +74,9 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    }
    ```
 
-   The full code for **MainFragment.kt** can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/MainFragment.kt).
+   The full code for `MainFragment.kt` can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/main/app/src/main/java/ru/mike/florida/MainFragment.kt).
 
-6. To start working with documents, display the ONLYOFFICE editor on your mobile device via the WebView component. To do this, set up WebView and layout in the **EditorFragment.kt** controller as follows:
+6. The `EditorFragment.kt` controller displays the **document editor** via the WebView component. Configure WebView settings and layout as follows:
 
    ``` kt
    @SuppressLint("SetJavaScriptEnabled")
@@ -88,13 +92,28 @@ This example demonstrates how to integrate ONLYOFFICE mobile web editors with th
    }
    ```
 
-7. In the Android Studio toolbar, select your application and the device where the app will be run. After that, click the **Run** button in the project toolbar to build and run your code.
+   The `load()` method sets the [`type`](../../../usage-api/config/config.md#type) parameter to `"mobile"` so the editor UI is optimized for touch screens:
 
-8. The application will be opened to demonstrate an example of integrating ONLYOFFICE mobile web editors with the ONLYOFFICE test or DMS sample.
+   ``` kt
+   private fun load() {
+       url?.let {
+           val loadUrl = it.toString()
+           if (it.query?.contains("docxf") == true) {
+               webView?.loadUrl(loadUrl)
+           } else {
+               webView?.loadUrl(loadUrl.replace("type=desktop", "type=mobile"))
+           }
+       }
+   }
+   ```
+
+7. In the Android Studio toolbar, select your application and the target device, then click **Run** to build and launch the app.
+
+8. The app opens the **document manager** page. Select a document to open it in the **document editor**.
 
 ### Closing ONLYOFFICE editors
 
-Use the **EditorFragment.kt** controller to exit from the editor:
+The `EditorFragment.kt` controller also handles exiting the editor. When the user navigates away from the editor (the URL no longer contains `"editor"`), the controller pops back to the **document manager**:
 
 ``` kt
 private class EditorWebViewClient(private val navController: NavController) : WebViewClient() {
@@ -112,4 +131,4 @@ private class EditorWebViewClient(private val navController: NavController) : We
 }
 ```
 
-The full code for **EditorFragment.kt** can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/EditorFragment.kt).
+The full code for `EditorFragment.kt` can be found [here](https://github.com/ONLYOFFICE/editors-webview-android/blob/main/app/src/main/java/ru/mike/florida/EditorFragment.kt).

@@ -23,18 +23,18 @@ expression.CreateNumbering(numType, startAt);
 
 ## Example
 
-This example creates a bullet for paragraphs.
+Create numbered bullets for text in a presentation.
 
 ```javascript editor-pptx
-// How to create a numbered paragraph specifying its numerical.
+// How do I add paragraph numbering to text in a presentation?
 
-// Add numbered paragraph to the slide.
+// Format text lines with automatic numbering in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -48,5 +48,4 @@ paragraph.SetBullet(bullet);
 paragraph.AddText(" This is an example of the numbered paragraph.");
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

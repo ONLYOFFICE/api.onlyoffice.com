@@ -1,18 +1,17 @@
-# 选择类型
+# SelectionType
 
-当前的选择类型（"none"、"text"、"drawing" 或 "slide"）。
+当前选择类型（"none"、"text"、"drawing" 或 "slide"）。
 
 ## 类型
 
-Enumeration（枚举）
+枚举
 
 ## 值
 
-- "none"（无）
-- "text"（文本）
-- "drawing"（绘图）
-- "slide"（幻灯片）
-
+- "none"
+- "text"
+- "drawing"
+- "slide"
 
 ## 示例
 

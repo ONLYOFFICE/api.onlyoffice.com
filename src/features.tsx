@@ -7,18 +7,19 @@ import HostingIcon from "@site/static/icons/self-hosted-icon.svg";
 import { FeaturesGrid } from "@site/src/components/FeaturesGrid";
 import DocumentBuilderIcon from "@site/static/icons/document-builder-icon.svg";
 import DesktopEditorIcon from "@site/static/icons/desktop-editors-icon.svg";
+import MCPServerIcon from "@site/static/icons/mcp-server-icon.svg";
 
 export type Features = {
   linkPrefix: string
   items: FeaturesGrid.Item[]
-  button: FeaturesGrid.Button
+  button?: FeaturesGrid.Button
 };
 
 export const DocsFeatures: Features = {
   linkPrefix: 'docs',
   button: {
     text: "Try Docs Playground",
-    href: "/docs/docs-api/get-started/playground/",
+    href: "/playground/?script=config",
   },
   items: [
     {
@@ -26,9 +27,7 @@ export const DocsFeatures: Features = {
       link: 'docs-api/get-started/basic-concepts',
       description: (
         <>
-          Bring document editing and{" "}
-          co-authoring to your web app users, set up, configure, and integrate{" "}
-          ONLYOFFICE Docs.
+          Integrate and configure ONLYOFFICE Docs into your web app to enable document editing, co-authoring, and sharing for your users.
         </>
       ),
       icon: <DocsApiIcon/>,
@@ -38,10 +37,7 @@ export const DocsFeatures: Features = {
       link: 'office-api/get-started/overview',
       description: (
         <>
-          Use our JavaScript library to{" "}
-          write code for your plugins, macros, builder scripts, etc. This library{" "}
-          contains classes and methods for every document type: Text document API,{" "}
-          Spreadsheet API, Presentation API, and Form API.
+          Use our JavaScript library to build plugins, macros, and scripts across all document types: documents, spreadsheets, presentations, and forms.
         </>
       ),
       icon: <OfficeApiIcon/>,
@@ -52,8 +48,7 @@ export const DocsFeatures: Features = {
       description: (
         <>
           Extend the ONLYOFFICE Docs{" "}
-          functionality by creating your own plugins/macros. Here you will find{" "}
-          the information about their structure, development lifecycle, and examples.
+          functionality by creating your own plugins/macros.
         </>
       ),
       icon: <PluginIcon/>,
@@ -63,9 +58,7 @@ export const DocsFeatures: Features = {
       link: 'document-builder/get-started/overview',
       description: (
         <>
-          Generate documents easily without{" "}
-          running a document editor and integrate Document builder into your DMS,{" "}
-          CRM system, etc.
+          Integrate Document Builder into your DMS or CRM to generate documents directly within your workflow—no separate document editor required.
         </>
       ),
       icon: <DocumentBuilderIcon/>,
@@ -75,9 +68,7 @@ export const DocsFeatures: Features = {
       link: 'desktop-editors/get-started/overview',
       description: (
         <>
-          Extend the ONLYOFFICE Desktop{" "}
-          Editors functionality by setting up, customizing and integrating them{" "}
-          with the document management systems.
+          Extend and customize ONLYOFFICE Desktop Editors by integrating with document management systems.
         </>
       ),
       icon: <DesktopEditorIcon/>,
@@ -88,8 +79,8 @@ export const DocsFeatures: Features = {
 export const DocSpaceFeatures: Features = {
   linkPrefix: 'docspace',
   button: {
-    text: "Try DocSpace Cloud",
-    href: "https://www.onlyoffice.com/docspace-registration",
+    text: "Try DocSpace Playground",
+    href: "/docspace-playground/",
   },
   items: [
     {
@@ -97,8 +88,7 @@ export const DocSpaceFeatures: Features = {
       link: 'api-backend/get-started/basic-concepts',
       description: (
         <>
-          Integrate ONLYOFFICE DocSpace into{" "}
-          your own application and interact with its backend using GET/POST/PUT/DELETE.
+          Integrate ONLYOFFICE DocSpace into your application to interact with its REST API using GET, POST, PUT, and DELETE methods.
         </>
       ),
       icon: <DocSpaceApiIcon/>,
@@ -108,9 +98,7 @@ export const DocSpaceFeatures: Features = {
       link: 'javascript-sdk/get-started',
       description: (
         <>
-          Connect DocSpace as a frame to{" "}
-          your website using api.js. You can embed an entire DocSpace portal, a{" "}
-          single room, or a document.
+          Embed DocSpace into your website as a frame using JavaScript APIs—choose to display an entire portal, a specific room, or a single document.
         </>
       ),
       icon: <SdkIcon/>,
@@ -120,11 +108,21 @@ export const DocSpaceFeatures: Features = {
       link: 'plugins-sdk/get-started',
       description: (
         <>
-          Create your own plugins and add{" "}
-          them to the DocSpace portal.
+          Create your plugins and add them to the DocSpace portal.
         </>
       ),
       icon: <PluginIcon/>,
+    },
+	{
+      title: 'MCP Server',
+      link: 'mcp-server/getting-started',
+      description: (
+        <>
+          Connect AI tools directly to ONLYOFFICE DocSpace to execute actions{" "}
+          through natural language interactions.
+        </>
+      ),
+      icon: <MCPServerIcon/>,
     },
   ]
 }

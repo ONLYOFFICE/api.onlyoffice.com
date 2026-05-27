@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the table.
+Check what type of object a comment reply is in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiCommentReply.
+// How do I confirm the kind of object returned when working with a comment reply in a spreadsheet?
 
-// Get a class type of ApiCommentReply and display it in the worksheet.
+// Verify the category label assigned to a reply within a comment thread in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

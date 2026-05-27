@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Identify the object type of a text properties block in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiTextPr.
+// How do I find out what kind of object holds text formatting settings in a spreadsheet?
 
-// Get a class type of ApiTextPr and display it in the worksheet.
+// Display the type label of a text properties object inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

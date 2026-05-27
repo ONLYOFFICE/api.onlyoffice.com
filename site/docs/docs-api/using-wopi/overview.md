@@ -39,7 +39,9 @@ All the necessary [WOPI settings](https://helpcenter.onlyoffice.com/installation
   </TabItem>
 </Tabs>
 
-> The default values are available in the *default.json* configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+:::note
+The default values are available in the *default.json* configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the *default.json* file directly. The default values will be restored each time you restart Docker container or upgrade **ONLYOFFICE Docs** to a new version and all your changes will be lost.
+:::
 
 ## Enabling WOPI
 
@@ -49,11 +51,11 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 | Name        | Type    | Example | Description                                                        |
 | ----------- | ------- | ------- | ------------------------------------------------------------------ |
-| wopi.enable | boolean | true    | Defines if WOPI is enabled or not. The default value is **false**. |
+| wopi.enable | boolean | true    | Whether WOPI is enabled or not. The default value is **false**. |
 
 ### Example
 
-``` json
+```json
 {
   "wopi": {
     "enable": true
@@ -65,7 +67,9 @@ To enable WOPI, set the [wopi.enable](https://helpcenter.onlyoffice.com/installa
 
 ONLYOFFICE Docs can accept WOPI requests only from the trusted integrator. The IP address of such an integrator must be included in the [WOPI domain allow list](https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list). At the same time, access for all the other integrators must be denied.
 
-> By default, all the IP addresses are considered trusted.
+:::note
+By default, all the IP addresses are considered trusted.
+:::
 
 Follow the steps below to configure the ONLYOFFICE Docs [IP filter](https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter):
 

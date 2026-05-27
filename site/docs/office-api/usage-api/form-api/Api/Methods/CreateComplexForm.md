@@ -22,12 +22,12 @@ expression.CreateComplexForm(formPr);
 
 ## Example
 
-This example creates a complex form with the common complex form properties.
+Combine multiple input fields into a single complex form field in a document.
 
-```javascript editor-pdf
-// How to create a complex form and add it to the paragraph.
+```javascript editor-forms
+// How do I create a form field that contains multiple parts in a document?
 
-// Add a complex form with the state options to the ApiDocument object.
+// Build a composite field that allows users to enter different types of data together in a document.
 
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm({
@@ -39,5 +39,4 @@ complexForm.Add(Api.CreateTextForm());
 complexForm.Add("@onlyoffice.com");
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(complexForm);
-
 ```

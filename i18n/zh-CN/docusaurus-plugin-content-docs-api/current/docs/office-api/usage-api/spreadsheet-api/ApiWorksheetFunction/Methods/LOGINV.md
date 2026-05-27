@@ -1,0 +1,55 @@
+# LOGINV
+
+返回 x 的对数正态累积分布函数的逆函数，其中 ln(x) 以指定参数呈正态分布。
+
+## 语法
+
+```javascript
+expression.LOGINV(arg1, arg2, arg3);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 与对数正态分布相关的概率，一个介于 0 和 1 之间（含 0 和 1）的数字。 |
+| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | ln(x) 的平均值。 |
+| arg3 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | ln(x) 的标准差，一个正数。 |
+
+## 返回值
+
+number
+
+## 示例
+
+查找电子表格中对数正态分布中对应给定概率的值。
+
+```javascript editor-xlsx
+// How do I calculate the inverse probability for a lognormal distributed dataset in a spreadsheet?
+
+// Compute the x value for a specific percentile in a lognormal distribution in a spreadsheet.
+
+const worksheet = Api.GetActiveSheet();
+
+//configure function parameters
+let numbersArr = [0.5, 4, 7];
+
+//set values in cells
+for (let i = 0; i < numbersArr.length; i++) {
+  worksheet.GetRange("A" + (i + 1)).SetValue(numbersArr[i]);
+}
+
+//get parameters
+let probability = worksheet.GetRange("A1");
+let mean = worksheet.GetRange("A2");
+let standardDeviation = worksheet.GetRange("A3");
+
+//invoke LOGINV method
+let func = Api.WorksheetFunction;
+let ans = func.LOGINV(probability, mean, standardDeviation);
+
+//print answer
+worksheet.GetRange("C1").SetValue(ans);
+```

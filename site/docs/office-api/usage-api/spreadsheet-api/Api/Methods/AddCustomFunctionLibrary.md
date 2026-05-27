@@ -1,6 +1,6 @@
 # AddCustomFunctionLibrary
 
-Registers a new custom functions library (see the -**SetCustomFunctions** plugin method).
+Registers a new custom functions library (see the - **SetCustomFunctions** plugin method).
 The description of the function parameters and result is specified using JSDoc. The *@customfunction* tag is required in JSDoc.
 Parameters and results can be specified as the *number / string / boolean / any / number[][] / string[][] / boolean[][] / any[][]* types.
 Parameters can be required or optional. A user can also set a default value.
@@ -26,14 +26,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example calculates custom function result.
+Bundle related custom functions into a named library and use them in cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add custom function library.
+// How do I group custom functions under a shared library name in a spreadsheet?
 
-// How to use custom function.
-
-// How to add cell values using custom function library.
+// Organize reusable calculation logic inside a function library in a spreadsheet.
 
 Api.AddCustomFunctionLibrary("LibraryName", function(){
 	/**

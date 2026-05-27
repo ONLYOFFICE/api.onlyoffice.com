@@ -11,12 +11,11 @@ Enumeration
 - [FormPrBase](../Enumeration/FormPrBase.md)
 - [CheckBoxFormPrBase](../Enumeration/CheckBoxFormPrBase.md)
 
-
 ## Example
 
-This example creates a checkbox form with the common and specific checkbox form properties.
+Create a checkbox form with the common and specific checkbox form properties.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to create a checkbox form with its properties.
 
 // Create the checkbox properties and apply them to the ApiCheckBoxForm object.

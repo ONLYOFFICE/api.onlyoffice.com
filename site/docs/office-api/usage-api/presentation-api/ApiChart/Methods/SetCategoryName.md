@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets a category name for chart.
+Change the name of a chart category in a presentation.
 
 ```javascript editor-pptx
-// How to rename a chart category.
+// How do I rename a category label on a chart in a presentation?
 
-// Create a chart then name its category.
+// Create a chart and replace one of its category names in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,10 +42,9 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 chart.SetCategoryName("2013", 0);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

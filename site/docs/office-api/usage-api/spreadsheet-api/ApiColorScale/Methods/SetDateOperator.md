@@ -2,32 +2,16 @@
 
 Sets the date operator for time period conditions.
 
-## Syntax
-
-```javascript
-expression.SetDateOperator(DateOperator);
-```
-
-`expression` - A variable that represents a [ApiColorScale](../ApiColorScale.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| DateOperator | Required | [XlTimePeriods](../../Enumeration/XlTimePeriods.md) |  | The date operator for time period conditions. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiFormatCondition.SetDateOperator](../../ApiFormatCondition/Methods/SetDateOperator.md).
 
 ## Example
 
-This example sets the date operator for a time period conditional formatting rule.
+Assign the time period that a date-based conditional formatting rule checks in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change date operators in time period conditional formatting rules.
+// How do I tell a date formatting rule whether to highlight cells from last week, this month, or another period in a spreadsheet?
 
-// Set conditional formatting rule date operator.
+// Choose which relative date window triggers a formatting rule for date cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +36,4 @@ condition1.SetDateOperator("xlLastWeek");
 
 worksheet.GetRange("C4").SetValue("New operator:");
 worksheet.GetRange("C5").SetValue(condition1.GetDateOperator() || "None");
-
 ```

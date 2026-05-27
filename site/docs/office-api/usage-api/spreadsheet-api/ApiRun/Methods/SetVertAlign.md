@@ -1,9 +1,9 @@
 # SetVertAlign
 
 Specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run:
--**"baseline"** - the characters in the current text run will be aligned by the default text baseline.
--**"subscript"** - the characters in the current text run will be aligned below the default text baseline.
--**"superscript"** - the characters in the current text run will be aligned above the default text baseline.
+- **"baseline"** - the characters in the current text run will be aligned by the default text baseline.
+- **"subscript"** - the characters in the current text run will be aligned below the default text baseline.
+- **"superscript"** - the characters in the current text run will be aligned above the default text baseline.
 
 ## Syntax
 
@@ -25,15 +25,15 @@ expression.SetVertAlign(sType);
 
 ## Example
 
-This example specifies the alignment which will be applied to the contents of the current run in relation to the default appearance of the text run.
+Position text above, below, or on the baseline inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set vertical alignment of a text object.
+// How do I control whether text appears as superscript or subscript in a spreadsheet?
 
-// Create a text run object, specify its vertical alignment as "baseline", "subscript" or "superscript".
+// Raise or lower individual text runs relative to the normal line height in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

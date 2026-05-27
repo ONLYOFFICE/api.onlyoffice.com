@@ -14,7 +14,8 @@ expression.ChangeFillStyles(arrFill);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrFill | Required | [ApiFill](../../ApiFill/ApiFill.md)[] |  | The array of fill styles must contain 3 elements - subtle, moderate and intense fills. If an array is empty or NoFill elements are in the array, it will be filled with the Api.CreateNoFill() elements. |
+| arrFill | Required | [ApiFill](../../ApiFill/ApiFill.md)[] |  | The array of fill styles must contain 3 elements - subtle, moderate and intense fills.
+If an array is empty or NoFill elements are in the array, it will be filled with the Api.CreateNoFill() elements. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the fill styles to the current theme format scheme.
+Change the fill styles in a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to change fill styles of a format scheme.
+// How do I update the fill styles of a format scheme in a presentation?
 
-// Get format scheme and update its fill styles, adding pattern, solid and radial fills.
+// Get a format scheme and replace its fill styles in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -35,11 +36,11 @@ slide.RemoveAllObjects();
 
 const master = presentation.GetMaster(0);
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill1 = Api.CreateRadialGradientFill([gs1, gs2]);
-const fill2 = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51));
-const fill3 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill2 = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
+const fill3 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let theme = slide.GetTheme();
 const formatScheme = theme.GetFormatScheme();
 formatScheme.ChangeFillStyles([fill1, fill2, fill3]);
@@ -67,5 +68,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

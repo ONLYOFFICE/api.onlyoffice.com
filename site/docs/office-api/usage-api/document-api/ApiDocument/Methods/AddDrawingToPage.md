@@ -1,0 +1,46 @@
+# AddDrawingToPage
+
+Adds a drawing to the specified page.
+💡 This method can be a little bit slow, because it runs the document calculation
+process to arrange tables on the specified page.
+
+## Syntax
+
+```javascript
+expression.AddDrawingToPage(oDrawing, nPage, x, y);
+```
+
+`expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oDrawing | Required | [ApiDrawing](../../ApiDrawing/ApiDrawing.md) |  | A drawing to add to the page. |
+| nPage | Required | number |  | The page index. |
+| x | Required | [EMU](../../Enumeration/EMU.md) |  | The X coordinate in English measure units. |
+| y | Required | [EMU](../../Enumeration/EMU.md) |  | The Y coordinate in English measure units. |
+
+## Returns
+
+boolean
+
+## Example
+
+Place an image at a fixed position on a page in a document.
+
+```javascript editor-docx
+// How do I add a drawing to a specific page in a document?
+
+// Anchor a logo or illustration at exact coordinates without disrupting text flow in a document.
+
+let doc = Api.GetDocument();
+let drawing = Api.CreateImage(
+	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
+	60 * 36000, 60 * 36000
+);
+let paragraph = Api.CreateParagraph();
+paragraph.AddPageBreak();
+doc.Push(paragraph);
+doc.AddDrawingToPage(drawing, 1, 50 * 36000, 50 * 36000);
+```

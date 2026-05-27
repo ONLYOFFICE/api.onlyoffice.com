@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set repeat all labels of a pivot table.
+Repeat row and column labels on every row of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set repeat all labels of a table.
+// How do I make category labels appear on every row in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then set its repeat all labels.
+// Fill in blank label cells so each row clearly shows its category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

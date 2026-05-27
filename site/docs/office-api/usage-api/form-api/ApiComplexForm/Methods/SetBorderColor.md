@@ -2,39 +2,20 @@
 
 Sets the border color to the current form.
 
-## Syntax
-
-```javascript
-expression.SetBorderColor(r, g, b, bNone);
-```
-
-`expression` - A variable that represents a [ApiComplexForm](../ApiComplexForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
-| g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
-| b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |
-| bNone | Required | boolean |  | Defines that border color will not be set. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetBorderColor](../../ApiFormBase/Methods/SetBorderColor.md).
 
 ## Example
 
-This example sets the border color to the form.
+Apply a border color to a form field to highlight it in a document.
 
-```javascript editor-pdf
-// Applies an orange border (RGB: 255, 111, 61) to highlight the date form form visually.
+```javascript editor-forms
+// How do I change the border color of a form field in a document?
 
-// Define the border color of the date form.
+// Style the outline of a form field with a specific color to draw attention to it in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(textForm);
-textForm.SetBorderColor(255, 111, 61);
+textForm.SetBorderColor(Api.HexColor('#FF6F3D'));
 ```

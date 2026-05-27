@@ -12,14 +12,14 @@ sidebar_position: -6
 
 | 名称            | 类型   | 示例               | 描述                                                                                    |
 | --------------- | ------ | --------------------- | ---------------------------------------------------------------------------------------------- |
-| wopi.publicKey  | string | "public key example"  | 定义集成商用来检查私钥的公钥。                      |
-| wopi.modulus    | string | "modulus example"     | 以 Base64 编码格式定义用于检索公钥的 RSA 模块。  |
-| wopi.exponent   | string | "AQAB"                | 以 Base64 编码格式定义用于检索公钥的 RSA 指数。 |
-| wopi.privateKey | string | "private key example" | >定义签署文档服务器请求的私钥。                                |
+| wopi.publicKey  | string | "public key example"  | 集成商用来检查私钥的公钥。                      |
+| wopi.modulus    | string | "modulus example"     | 用于检索公钥的 Base64 编码格式的 RSA 模数。  |
+| wopi.exponent   | string | "AQAB"                | 用于检索公钥的 Base64 编码格式的 RSA 指数。 |
+| wopi.privateKey | string | "private key example" | 签署文档服务器请求的私钥。                                |
 
 ## 示例
 
-``` json
+```json
 {
   "wopi": {
     "publicKey": "public key example",
@@ -30,4 +30,6 @@ sidebar_position: -6
 }
 ```
 
-> 默认情况下，证明密钥已设置。它们不会生成，即所有安装都使用相同的密钥。
+:::note
+默认情况下，证明密钥已设置。它们不会生成，即所有安装都使用相同的密钥。
+:::

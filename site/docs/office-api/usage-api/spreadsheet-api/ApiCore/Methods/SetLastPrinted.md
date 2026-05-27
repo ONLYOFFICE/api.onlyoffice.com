@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the date when the workbook was printed last time.
+Save the most recent print date of a workbook in its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I log the last time a workbook was printed in a spreadsheet?
+
+// Capture the date a workbook was last sent to the printer and store it in the metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetLastPrinted(new Date());
 const lastPrintedDate = core.GetLastPrinted().toDateString();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last printed: " + lastPrintedDate);
-
 ```

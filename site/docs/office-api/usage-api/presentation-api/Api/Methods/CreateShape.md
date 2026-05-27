@@ -26,18 +26,18 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 ## Example
 
-This example creates a shape using the 'flowChartMagneticTape' preset.
+Add a flowchart shape with fill and stroke properties in a presentation.
 
 ```javascript editor-pptx
-// How to add a new flowchart shape.
+// How do I create a custom shape with colors in a presentation?
 
-// Add a new shape indicating its properties.
+// Set up a shape with a fill color, outline, and add text to it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -55,5 +55,4 @@ run.SetFontFamily("Comic Sans MS");
 run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

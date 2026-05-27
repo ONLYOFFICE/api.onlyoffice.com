@@ -1,6 +1,13 @@
+---
+description: Remove tags from a DocSpace room using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Remove tags from room
 
 This example demonstrates how to remove one or more tags from a room using the JavaScript SDK method.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/remove-tags-from-room.html)
 
 ## Before you start
 
@@ -19,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Remove Tags from Room</title>
 
     <!-- Replace with your actual DocSpace portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -85,7 +92,7 @@ Build an HTML page with an embedded iframe and a button to trigger tag removal.
     <title>Remove Tags from Room</title>
 
     <!-- Replace with your actual DocSpace portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -116,7 +123,7 @@ Build an HTML page with an embedded iframe and a button to trigger tag removal.
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic

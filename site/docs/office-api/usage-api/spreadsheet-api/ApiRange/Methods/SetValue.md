@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets a value to cells.
+Set values in a range of cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add underline to the cell value.
+// How do I put data into specific cells in a spreadsheet?
 
-// Get a range and add underline its text.
+// Populate cells with numbers and a formula to calculate their product in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue("2");

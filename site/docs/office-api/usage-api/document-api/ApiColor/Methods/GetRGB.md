@@ -1,0 +1,48 @@
+# GetRGB
+
+Gets the RGB components of the color.
+
+## Syntax
+
+```javascript
+expression.GetRGB();
+```
+
+`expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+Object
+
+## Example
+
+Extract the red, green, and blue channel values of a color in a document.
+
+```javascript editor-docx
+// How do I read the individual RGB components of a color in a document?
+
+// Compare channel values across theme, auto, and hex colors to understand how each type resolves in a document.
+
+const doc = Api.GetDocument();
+
+const themeColor = Api.ThemeColor('accent1');
+const autoColor = Api.AutoColor();
+const hexColor = Api.HexColor('#FF0000');
+
+const themeColorRGB = themeColor.GetRGB();
+const autoColorRGB = autoColor.GetRGB();
+const hexColorRGB = hexColor.GetRGB();
+
+const paragraph = doc.GetElement(0);
+paragraph.AddText('RGB of themeColor: ' + themeColorRGB.r + ', ' + themeColorRGB.g + ', ' + themeColorRGB.b);
+paragraph.AddLineBreak();
+paragraph.AddText('RGB of autoColor: ' + autoColorRGB.r + ', ' + autoColorRGB.g + ', ' + autoColorRGB.b);
+paragraph.AddLineBreak();
+paragraph.AddText('RGB of hexColor: ' + hexColorRGB.r + ', ' + hexColorRGB.g + ', ' + hexColorRGB.b);
+paragraph.AddLineBreak();
+paragraph.AddText('RGB for theme colors and auto color are always opaque black; actual color depends on the document theme.');
+```

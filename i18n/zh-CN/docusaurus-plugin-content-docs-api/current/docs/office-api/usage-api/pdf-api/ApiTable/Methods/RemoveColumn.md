@@ -1,0 +1,46 @@
+# RemoveColumn
+
+删除包含指定单元格的表格列。
+
+## 语法
+
+```javascript
+expression.RemoveColumn(columnCell);
+```
+
+`expression` - 表示 [ApiTable](../ApiTable.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| columnCell | 必需 | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | 要删除的列中的单元格。 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+从 PDF 中的表格删除列。
+
+```javascript editor-pdf
+// How do I remove an unwanted column from a table in a PDF?
+
+// Take out a vertical column of cells from your table in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const table = Api.CreateTable(2, 4);
+const row = table.GetRow(0);
+let cell = row.GetCell(1);
+table.RemoveColumn(cell);
+cell = row.GetCell(0);
+const content = cell.GetContent();
+const paragraph = Api.CreateParagraph();
+paragraph.AddText("The second column was removed.");
+content.Push(paragraph);
+
+page.AddObject(table);
+```

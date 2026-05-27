@@ -1,0 +1,50 @@
+# GetLinkedText
+
+Returns the hyperlink address.
+
+## Syntax
+
+```javascript
+expression.GetLinkedText();
+```
+
+`expression` - A variable that represents a [ApiHyperlink](../ApiHyperlink.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
+## Example
+
+Retrieve the text that contains a hyperlink in a PDF.
+
+```javascript editor-pdf
+// What text is associated with a hyperlink in a PDF?
+
+// Display the actual text of a hyperlink in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const fill = Api.CreateSolidFill(Api.HexColor('#456789'));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('rect', 150 * 36000, 150 * 36000, fill, stroke);
+page.AddObject(shape);
+
+const docContent = shape.GetContent();
+let paragraph = docContent.GetElement(0);
+
+let run = Api.CreateRun();
+run.AddText("ONLYOFFICE Document Builder");
+paragraph.AddElement(run);
+let hyperlink = paragraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+hyperlink.SetLink("https://api.onlyoffice.com/");
+let linkedText = hyperlink.GetLinkedText();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Linked text: " + linkedText);
+docContent.Push(paragraph);
+```

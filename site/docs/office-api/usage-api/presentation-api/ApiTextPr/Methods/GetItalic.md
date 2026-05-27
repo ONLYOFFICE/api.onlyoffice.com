@@ -20,18 +20,18 @@ boolean
 
 ## Example
 
-This example shows how to find out whether a text is italic.
+Check if text is formatted as italic in a presentation.
 
 ```javascript editor-pptx
-// How to know whether a text is set to italic or not.
+// How do I determine if text uses italic formatting in a presentation?
 
-// Get the text properties of the run and find whether it is italic or not.
+// Read the italic property of text to see if the formatting is applied in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const italic = textPr.GetItalic();
 paragraph.AddText("Italic property: " + italic);
 docContent.Push(paragraph);
-
 ```

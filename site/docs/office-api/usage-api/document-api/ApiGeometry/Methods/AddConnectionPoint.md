@@ -1,0 +1,57 @@
+# AddConnectionPoint
+
+Adds a connection point to the current geometry.
+
+## Syntax
+
+```javascript
+expression.AddConnectionPoint(sAngle, sX, sY);
+```
+
+`expression` - A variable that represents a [ApiGeometry](../ApiGeometry.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sAngle | Required | string |  | The angle of the connection point. |
+| sX | Required | string |  | The X position. |
+| sY | Required | string |  | The Y position. |
+
+## Returns
+
+boolean
+
+## Example
+
+Add a connection point to a custom shape geometry in a document.
+
+```javascript editor-docx
+// How do I define where connectors attach to a custom shape in a document?
+
+// Specify fixed anchor positions on a shape so lines snap to exact spots.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let customGeometry = Api.CreateCustomGeometry();
+customGeometry.AddAdj("adj1", 25000);
+customGeometry.SetAdjValue("adj1", 30000);
+paragraph.AddText("Adjustment value: " + customGeometry.GetAdjValue("adj1"));
+customGeometry.AddGuide("x1", "*/", "adj1", "w", "100000");
+customGeometry.SetTextRect("x1", "0", "w", "h");
+customGeometry.AddConnectionPoint("0", "hc", "0");
+let path = customGeometry.AddPath();
+path.SetStroke(true);
+path.SetFill("norm");
+path.MoveTo("l", "t");
+path.LineTo("r", "t");
+path.LineTo("r", "b");
+path.LineTo("l", "b");
+path.LineTo("x1", "hd2");
+path.Close();
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 100));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 100, 0)));
+let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
+shape.SetGeometry(customGeometry);
+paragraph.AddDrawing(shape);
+```

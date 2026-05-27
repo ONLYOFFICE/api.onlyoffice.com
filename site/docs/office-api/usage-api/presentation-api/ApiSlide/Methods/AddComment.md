@@ -26,9 +26,13 @@ boolean
 
 ## Example
 
-This example demonstrates how to add a comment to a specific slide.
+Add comments to a slide with author and user ID information.
 
 ```javascript editor-pptx
+// Create multiple comments with different properties and retrieve all comments from the presentation.
+
+// Display the comment details including text, author name, and user ID in a shape.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
@@ -41,7 +45,7 @@ const posY = 20 * 36000;
 slide.AddComment(posX, posY, commentText, commentAuthor, commentUserId);
 slide.AddComment(posX, posY, 'Author for this comment was not specified');
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(50, 100, 150));
+const fill = Api.CreateSolidFill(Api.RGB(50, 100, 150));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 300 * 36000, 150 * 36000, fill, stroke);
 const paragraph = shape.GetDocContent().GetElement(0);
@@ -59,5 +63,4 @@ for (let i = 0; i < comments.length; i++) {
 slide.RemoveAllObjects();
 shape.SetPosition(posX, posY);
 slide.AddObject(shape);
-
 ```

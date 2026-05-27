@@ -1,0 +1,47 @@
+# GetClassType
+
+Returns a type of the ApiColor class.
+
+## Syntax
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - A variable that represents a [ApiColor](../ApiColor.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"color"
+
+## Example
+
+Retrieve the class type identifier string for a color object.
+
+```javascript editor-pptx
+// Extract and display color object type metadata from a shape.
+
+// Get the class type of a color and display it within a shape text element.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const color = Api.RGB(255, 111, 61);
+const fill = Api.CreateSolidFill(color);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+const run = Api.CreateRun();
+run.SetFontSize(30);
+run.AddText("Class Type = " + color.GetClassType());
+paragraph.AddElement(run);
+slide.AddObject(shape);
+```

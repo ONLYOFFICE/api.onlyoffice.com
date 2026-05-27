@@ -28,7 +28,9 @@ If you want to speed up the process, starting from version 9.0, you can use the 
 
 5. Review the code and make adjustments if necessary.
 
-    > While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::warning
+    While the AI plugin can generate a complete and working macro, it's not always perfect. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::
 
 6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
 
@@ -42,7 +44,7 @@ End Sub
 
 You can paste this VBA code into the AI plugin converter. The plugin will return the following JavaScript macro:
 
-``` ts
+```ts
 (function(){
     // This code will unmerge all the merged cells in the active worksheet
     
@@ -102,11 +104,7 @@ The macro counts the sum of the values from the three cell ranges of the **A** c
 
 The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
 
-<!-- This code is related to macros. -->
-
-<!-- eslint-skip -->
-
-``` ts
+```ts
 (function()
 {
   for (let run = 1; run <= 3; run += 1) {

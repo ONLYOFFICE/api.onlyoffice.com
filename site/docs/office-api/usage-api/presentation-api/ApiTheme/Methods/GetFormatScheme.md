@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the format scheme of the theme.
+Get the format scheme from a theme in a presentation.
 
 ```javascript editor-pptx
-// How to get a format scheme from a theme.
+// How do I access the formatting styles defined in a presentation's theme?
 
-// Get a format scheme and display its class type.
+// Retrieve the format scheme and display its type information in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -36,7 +36,7 @@ const theme = master.GetTheme();
 const formatScheme = theme.GetFormatScheme();
 const type = formatScheme.GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -47,5 +47,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + type);
 slide.AddObject(shape);
-
 ```

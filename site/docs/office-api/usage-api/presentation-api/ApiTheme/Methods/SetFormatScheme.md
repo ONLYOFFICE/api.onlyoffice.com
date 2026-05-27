@@ -22,26 +22,26 @@ boolean
 
 ## Example
 
-This example sets the format scheme to the current presentation theme.
+Apply a new format scheme to a presentation's theme.
 
 ```javascript editor-pptx
-// How to get a theme and set a new format scheme.
+// How do I change the formatting styles used throughout a presentation?
 
-// Create a new format scheme and apply it to the slide theme.
+// Create a custom format scheme and assign it to the theme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 
 const oFill1 = Api.CreateRadialGradientFill([gs1, gs2]);
-const oFill2 = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51));
-const oFill3 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const oFill2 = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
+const oFill3 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const oBgFill1 = Api.CreateRadialGradientFill([gs1, gs2]);
-const oBgFill2 = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51));
-const oBgFill3 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const oBgFill2 = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
+const oBgFill3 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const oStroke1 = Api.CreateStroke(1 * 36000, oFill1);
 const oStroke2 = Api.CreateStroke(1 * 36000, oFill2);
 const oStroke3 = Api.CreateStroke(1 * 36000, oFill3);
@@ -62,5 +62,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

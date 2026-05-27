@@ -1,6 +1,6 @@
 # GetSmallCaps
 
-Specifies whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
+Returns whether the text with the current text properties are displayed capitalized two points smaller than the actual font size.
 
 ## Syntax
 
@@ -20,15 +20,15 @@ boolean
 
 ## Example
 
-This example gets a text capitalization using its property.
+Check whether small caps formatting is applied to text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is uncapitalized or not.
+// How do I find out if text is displayed in small capital letters in a spreadsheet?
 
-// Find whether a text characters are in small caps or not.
+// Confirm if a text run uses small caps style instead of normal lowercase letters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

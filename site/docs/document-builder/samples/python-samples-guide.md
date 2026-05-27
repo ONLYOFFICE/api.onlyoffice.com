@@ -1,5 +1,6 @@
 ---
 sidebar_position: -2
+description: Set up and run Document Builder samples in Python.
 ---
 
 # Python samples guide
@@ -39,12 +40,12 @@ globalObj = context.GetGlobal()
 api = globalObj["Api"]
 
 # Create file content
-document = api.Call("GetDocument")
-paragraph = api.Call("CreateParagraph")
-paragraph.Call("AddText", "Hello, World!")
+document = api.GetDocument()
+paragraph = api.CreateParagraph()
+paragraph.AddText("Hello, World!")
 content = context.CreateArray(1)
 content[0] = paragraph
-document.Call("InsertContent", content)
+document.InsertContent(content)
 
 # Save file and close DocBuilder
 dstPath = os.getcwd() + "/result.docx"

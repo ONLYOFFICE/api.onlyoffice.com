@@ -6,27 +6,27 @@ sidebar_position: -1
 
 Starting from version 9.0, you can add custom buttons to content controls using the `Asc.ButtonContentControl` class:
 
-``` ts
+```ts
 let button = new Asc.ButtonContentControl();
 ```
 
 ## icons
 
-`Type: string`
+**type:** `string`
 
 Sets the path to the icon displayed on the button.
 
 **Example**:
 
-``` ts
+```ts
 button.icons = "/resources/check%scale%(default).png";
 ```
 
 ## attachOnClick
 
-`Type: function`
+**type:** `function`
 
-Defines the action to be performed when the button is clicked.
+The action to be performed when the button is clicked.
 
 ### Parameters
 
@@ -36,7 +36,7 @@ Defines the action to be performed when the button is clicked.
 
 **Example**:
 
-``` ts
+```ts
 button.attachOnClick((contentControlId) => {
   Asc.plugin.executeMethod("RemoveContentControl", [contentControlId]);
 });
@@ -44,7 +44,7 @@ button.attachOnClick((contentControlId) => {
 
 ## Example
 
-``` ts
+```ts
 (function (window) {
   window.Asc.plugin.init = () => {
     let button = new Asc.ButtonContentControl();

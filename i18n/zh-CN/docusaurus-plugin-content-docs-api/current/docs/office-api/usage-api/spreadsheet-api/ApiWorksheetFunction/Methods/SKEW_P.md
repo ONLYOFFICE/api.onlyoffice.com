@@ -1,0 +1,46 @@
+# SKEW_P
+
+基于总体返回分布的偏度：分布围绕其平均值的不对称程度的特征。
+
+## 语法
+
+```javascript
+expression.SKEW_P(args);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| args | 必需 | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | 最多 255 个数值，将返回这些数值分布的偏度。
+第一个参数是必需的，后续参数是可选的。参数可以是数字、名称、范围或数字数组。 |
+
+## 返回值
+
+number
+
+## 示例
+
+在电子表格中返回基于总体的分布偏度：分布围绕其均值的不对称程度的表征。
+
+```javascript editor-xlsx
+// Calculate the population skewness of a distribution using the SKEW_P function.
+
+// Place values in cells and apply the function to display the asymmetry result.
+
+const worksheet = Api.GetActiveSheet();
+
+let valueArr = [1, 0, 0, 0, 0, 1, 0, 0, 2, 3, 4, 5, 6, 8, 10, 12];
+
+// Place the numbers in cells
+for (let i = 0; i < valueArr.length; i++) {
+  worksheet.GetRange("A" + (i + 1)).SetValue(valueArr[i]);
+}
+
+let func = Api.WorksheetFunction;
+let ans = func.SKEW_P(1, 0, 0, 0, 0, 1, 0, 0, 2, 3, 4, 5, 6, 8, 10, 12);
+
+worksheet.GetRange("C1").SetValue(ans);
+```

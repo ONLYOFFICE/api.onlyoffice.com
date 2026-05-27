@@ -1,0 +1,44 @@
+# GetAllOleObjects
+
+Returns a collection of OLE objects in the paragraph.
+
+## Syntax
+
+```javascript
+expression.GetAllOleObjects();
+```
+
+`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiOleObject](../../ApiOleObject/ApiOleObject.md)[]
+
+## Example
+
+Retrieve all OLE objects embedded in a paragraph in a document.
+
+```javascript editor-docx
+// How do I get every OLE object from a paragraph in a document?
+
+// Read application metadata from embedded objects by collecting all OLE objects in a document.
+
+let doc = Api.GetDocument();
+let oleObject = Api.CreateOleObject(
+	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
+	150 * 36000, 150 * 36000,
+	'https://youtu.be/SKGz4pmnpgY',
+	'asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}'
+);
+let paragraph = doc.GetElement(0);
+paragraph.AddDrawing(oleObject);
+let oleObjects = paragraph.GetAllOleObjects();
+let appId = oleObjects[0].GetApplicationId();
+paragraph = Api.CreateParagraph();
+paragraph.AddText('The application ID for the current OLE object: ' + appId);
+doc.Push(paragraph);
+```

@@ -30,12 +30,12 @@ expression.AddOleObject(sImageSrc, nWidth, nHeight, sData, sAppId, nFromCol, nCo
 
 ## Example
 
-This example adds an OLE object to the sheet with the parameters specified.
+Embed a linked object from an external source into a sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add an OLE object to the worksheet specifying its url, size, etc.
+// How do I insert an embedded object with a preview image and a link in a spreadsheet?
 
-// Insert an OLE object to the worksheet.
+// Attach an interactive linked object to a worksheet at a given position and size.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.AddOleObject(
@@ -45,5 +45,4 @@ worksheet.AddOleObject(
 	'asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}',
 	0, 2 * 36000, 4, 3 * 36000
 );
-
 ```

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get current selection
+Retrieve the currently selected object or text in a presentation.
 
 ```javascript editor-pptx
+// How do I access the selected content in a presentation in a presentation?
+
+// Read the properties of selected elements in a presentation.
+
 const presentation = Api.GetPresentation();
 
 const rgb = Api.CreateRGBColor(50, 100, 150);
@@ -39,5 +43,4 @@ const selection = Api.GetSelection();
 const content = shape.GetDocContent();
 const paragraph = content.GetElement(0);
 paragraph.AddText('Type: ' + selection.GetType());
-
 ```

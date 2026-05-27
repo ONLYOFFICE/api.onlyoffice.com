@@ -1,5 +1,5 @@
 ---
-sidebar_position: -6
+sidebar_position: -7
 sidebar_label: Introduction
 title: Introducing ONLYOFFICE DocSpace
 ---
@@ -7,7 +7,7 @@ title: Introducing ONLYOFFICE DocSpace
 [ONLYOFFICE DocSpace](https://www.onlyoffice.com/docspace.aspx) is a collaborative cloud platform that allows users to edit and collaborate on documents, spreadsheets, presentations, PDFs, and forms in customizable rooms. It provides the following features:
 
 - [creating and customizing rooms for collaboration](#step-3-create-a-room);
-- creating, editing and viewing text documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
+- creating, editing and viewing documents, spreadsheets, presentations, fillable forms, PDFs, ebooks, multimedia files;
 - inviting users to collaborate on files in real time.
 
 :::info

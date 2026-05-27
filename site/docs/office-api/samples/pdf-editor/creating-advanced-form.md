@@ -1,19 +1,23 @@
 ---
 hide_table_of_contents: true
+description: Create a complex form with tables, text fields, and checkboxes.
+tags: ["Docs", "Office API", "PDF"]
 ---
 
 # Creating advanced form
 
 Create an advanced form with a table structure:
 
-- create a new document, create tables for the text and form inputs ([Api/CreateParagraph](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateParagraph.md), [Api/CreateTable](/docs/office-api/usage-api/text-document-api/Api/Methods/CreateTable.md), [ApiDocument/Push](/docs/office-api/usage-api/text-document-api/ApiDocument/Methods/Push.md), [ApiDocumentContent/GetElement](/docs/office-api/usage-api/text-document-api/ApiDocumentContent/Methods/GetElement.md), [ApiParagraph/AddText](/docs/office-api/usage-api/text-document-api/ApiParagraph/Methods/AddText.md), [ApiTable/GetRow](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetRow.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/text-document-api/ApiTableCell/Methods/GetContent.md), [ApiTable/GetCell](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/GetCell.md));
-- style tables ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetTableBorderRight.md), [ApiTable/SetWidth](/docs/office-api/usage-api/text-document-api/ApiTable/Methods/SetWidth.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/text-document-api/ApiTableRow/Methods/SetBackgroundColor.md));
+- create a new document, create tables for the text and form inputs ([Api/CreateParagraph](/docs/office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [Api/CreateTable](/docs/office-api/usage-api/document-api/Api/Methods/CreateTable.md), [ApiDocument/Push](/docs/office-api/usage-api/document-api/ApiDocument/Methods/Push.md), [ApiDocumentContent/GetElement](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetElement.md), [ApiParagraph/AddText](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [ApiTable/GetRow](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetRow.md), [ApiTableCell/GetContent](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [ApiTable/GetCell](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md));
+- style tables ([ApiTable/SetTableBorderTop](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderTop.md), [ApiTable/SetTableBorderBottom](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderBottom.md), [ApiTable/SetTableBorderLeft](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderLeft.md), [ApiTable/SetTableBorderRight](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetTableBorderRight.md), [ApiTable/SetWidth](/docs/office-api/usage-api/document-api/ApiTable/Methods/SetWidth.md), [ApiTableRow/SetBackgroundColor](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/SetBackgroundColor.md));
 - create the text and image forms and add them to the tables ([Api/CreatePictureForm](/docs/office-api/usage-api/form-api/Api/Methods/CreatePictureForm.md), [Api/CreateTextForm](/docs/office-api/usage-api/form-api/Api/Methods/CreateTextForm.md)).
 
-This sample is available for the **C++ and .Net DocBuilder Frameworks**.
-Download the sample and get more information on the [Builder framework samples](/docs/document-builder/samples/samples.md) page.
+:::tip
+This sample is also available for **Document Builder**.
+Download the sample and get more information on the [Document Builder samples](/docs/document-builder/samples/samples.md) page.
+:::
 
-```ts editor-pdf zoom=60
+```ts editor-forms zoom=60
 let doc = Api.GetDocument();
 
 // Helper functions for form creation

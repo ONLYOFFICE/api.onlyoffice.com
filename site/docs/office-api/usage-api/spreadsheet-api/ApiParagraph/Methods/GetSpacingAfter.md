@@ -2,33 +2,19 @@
 
 Returns the spacing after value of the current paragraph.
 
-## Syntax
-
-```javascript
-expression.GetSpacingAfter();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[twips](../../Enumeration/twips.md)
+Inherited from [ApiParaPr.GetSpacingAfter](../../ApiParaPr/Methods/GetSpacingAfter.md).
 
 ## Example
 
-This example shows how to get the spacing after value of the current paragraph.
+Read the gap size that follows a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get spacing information which is after the paragraph.
+// How do I check how much space is added below a paragraph in a spreadsheet?
 
-// Get two consecutive paragraphs add spacing between them then get the spacing after first one and display it in the worksheet. 
+// Confirm the bottom spacing value after applying a gap to a paragraph's trailing edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

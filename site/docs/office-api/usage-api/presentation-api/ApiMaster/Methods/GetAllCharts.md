@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all the chart objects from the slide master.
+Retrieve all charts from a slide master in a presentation.
 
 ```javascript editor-pptx
-// How to get all charts from the master of presentation.
+// How do I find all charts on a slide master in a presentation?
 
-// Get all charts from the presentation as an array.
+// List every chart object in a slide master in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -43,15 +43,14 @@ chart.SetTitle("Financial Overview", 13);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 
 master.AddObject(chart);
 slide.RemoveAllObjects();
 const aCharts = master.GetAllCharts();
-const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+const stroke = Api.CreateStroke(1 * 150, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 aCharts[0].SetMinorHorizontalGridlines(stroke);
-
 ```

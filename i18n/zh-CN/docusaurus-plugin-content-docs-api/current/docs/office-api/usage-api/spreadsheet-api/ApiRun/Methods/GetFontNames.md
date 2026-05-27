@@ -1,0 +1,53 @@
+# GetFontNames
+
+返回当前文本块中所有元素的所有字体名称。
+
+## 语法
+
+```javascript
+expression.GetFontNames();
+```
+
+`expression` - 表示 [ApiRun](../ApiRun.md) 类（文本块）的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+string[]
+
+## 示例
+
+收集电子表格中文本运行各元素使用的每种字体名称。
+
+```javascript editor-xlsx
+// How do I list all fonts applied to a run of text in a spreadsheet?
+
+// Extract the font families from a run and print each one on its own line in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+let content = shape.GetContent();
+let paragraph = content.GetElement(0);
+let run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+paragraph.AddElement(run);
+run = Api.CreateRun();
+run.SetFontFamily("Comic Sans MS");
+run.AddText("This is a text run with the font family set to 'Comic Sans MS'.");
+paragraph.AddElement(run);
+paragraph.AddLineBreak();
+let fontNames = run.GetFontNames();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Run font names: ");
+paragraph.AddLineBreak();
+for (let i = 0; i < fontNames.length; i++) {
+    paragraph.AddText(fontNames[i]);
+    paragraph.AddLineBreak();
+}
+content.Push(paragraph);
+```

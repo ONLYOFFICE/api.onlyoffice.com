@@ -25,7 +25,9 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
         }
         ```
 
-        > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address. For security purposes, store your username and password in `env` variables and reference them in the request.  
+        :::note
+        You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address. For security purposes, store your username and password in `env` variables and reference them in the request.
+        :::
       </TabItem>
       <TabItem value="response" label="Response">
         ``` http
@@ -57,7 +59,9 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
    Authorization: sdjhfskjdhkqy739459234
    ```
 
-   > Please note, that you have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   :::note
+   You have to enter your own portal address to the *Host: yourportal.onlyoffice.com* line instead of *yourportal.onlyoffice.com* address.
+   :::
 
 ## Authentication request examples
 
@@ -133,4 +137,6 @@ Follow these steps to generate a PAT and use it to authorize your DocSpace accou
   </TabItem>
 </Tabs>
 
-> Please note, that you have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively. 
+:::note
+You have to enter your own portal address, username and password instead of *yourportal.onlyoffice.com*, *yourusername* and *yourpassword* respectively.
+:::

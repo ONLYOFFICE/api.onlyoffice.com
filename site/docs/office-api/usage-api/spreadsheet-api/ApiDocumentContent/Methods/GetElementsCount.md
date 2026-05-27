@@ -20,15 +20,15 @@ number
 
 ## Example
 
-This example shows how to get a number of elements in the current document content.
+Count the total number of paragraphs inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a number of elements of a shape from a document content.
+// How do I find out how many paragraphs are contained within a shape in a spreadsheet?
 
-// Get a shape than count number of elements and display it using paragraph.
+// Display the paragraph count of a shape's contents as text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 200 * 36000, 60 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

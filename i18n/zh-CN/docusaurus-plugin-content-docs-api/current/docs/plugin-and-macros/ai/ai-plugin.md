@@ -24,8 +24,7 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 插件的 guid 是 `{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}`。
 
-<a id="configuring"></a>
-## 配置
+## 配置 {#configuring}
 
 要开始使用该插件，需要设置 AI 提供商：
 
@@ -48,11 +47,13 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
    - **设置**：配置面板，用于选择 AI 提供商、输入 API 密钥以及选择其模型之一；
    - **聊天机器人**：与 AI 开始对话，以提问、重写文本、集思广益等；
    - **摘要提取**：自动总结输入的文本并选择插入结果的方式；
-   - **翻译**：使用配置的 AI 服务翻译选中的文本。
-3. 可以对选中的文本使用该插件。操作方法为：选中文本，右键单击，在 AI 菜单中选择以下选项之一：**摘要提取**、**文本分析**、**翻译**、**图像** 或 **聊天机器人**。
+   - **翻译**：使用配置的 AI 服务翻译选中的文本；
+   - **语法与拼写检查**：检查所选文本的语法和拼写；
+   - **创建 AI 助手**：创建新的 AI 助手以执行重复性文本任务。
+3. 可以对选中的文本使用该插件。操作方法为：选中文本，右键单击，在 AI 菜单中选择以下选项之一：**摘要提取**、**文本分析**、**翻译**、**图像**、**语法与拼写检查** 或 **聊天机器人**。
 4. 插件将根据配置的 AI 模型做出响应。
 5. 将响应插入文档或根据需要使用。
 
 ## 支持
 
-如果想请求该插件的新功能或报告相关漏洞，请使用 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 上的问题反馈区。
+如果想请求该插件的新功能或报告错误，请使用 [GitHub](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues) 上的问题反馈区。

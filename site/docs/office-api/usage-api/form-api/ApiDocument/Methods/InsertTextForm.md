@@ -22,14 +22,14 @@ expression.InsertTextForm(formPr);
 
 ## Example
 
-This example inserts a text box with the specified text box properties over the selected text.
+Replace selected text with an editable form field in a document.
 
-```javascript editor-pdf
-// How to create a text form and add it to the paragraph.
+```javascript editor-forms
+// How do I convert text into a fillable field in a document?
 
-// Add a text form to the ApiDocument object, set its properties like characters limit, autofit, etc.
+// Turn highlighted content into an interactive text input area in a document.
 
-let doc = editor.GetDocument();
+let doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 paragraph.AddText("First name");
 paragraph.Select();
@@ -46,5 +46,4 @@ doc.InsertTextForm({
 	"placeholderFromSelection": true,
 	"keepSelectedTextInForm": false
 });
-
 ```

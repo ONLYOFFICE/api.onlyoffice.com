@@ -22,10 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom triangle shape and adds it to the worksheet.
+Define the vertical size of a custom shape path before adding it to a spreadsheet.
 
 ```javascript editor-xlsx
-// Applies custom geometry to a shape with specific fill and stroke.
+// How do I control how tall a custom shape path is in a spreadsheet?
+
+// Assign a specific height to a drawn path so it scales correctly within the sheet in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();
@@ -39,8 +42,8 @@ path.LineTo(55 * 36000, 70 * 36000);
 path.LineTo(100 * 36000, 100 * 36000);
 path.LineTo(0, 100 * 36000);
 path.Close();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 3, 0, 2, 2);
 shape.SetGeometry(customGeometry);
 ```

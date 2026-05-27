@@ -20,20 +20,24 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the selected shapes from current selection.
+Retrieve all shapes from the current selection in a presentation.
 
 ```javascript editor-pptx
+// How do I get selected shapes in a presentation?
+
+// Access the list of shapes from a selection and count them in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill1 = Api.CreateSolidFill(Api.CreateRGBColor(0, 100, 200));
+const fill1 = Api.CreateSolidFill(Api.RGB(0, 100, 200));
 const stroke1 = Api.CreateStroke(0, Api.CreateNoFill());
 const shape1 = Api.CreateShape('rect', 80 * 36000, 20 * 36000, fill1, stroke1);
 shape1.SetPosition(0, 0);
 slide.AddObject(shape1);
 
-const fill2 = Api.CreateSolidFill(Api.CreateRGBColor(0, 200, 100));
+const fill2 = Api.CreateSolidFill(Api.RGB(0, 200, 100));
 const stroke2 = Api.CreateStroke(0, Api.CreateNoFill());
 const shape2 = Api.CreateShape('ellipse', 60 * 36000, 20 * 36000, fill2, stroke2);
 shape2.SetPosition(100 * 36000, 0);
@@ -44,7 +48,7 @@ const selection = Api.GetSelection();
 const shapes = selection.GetShapes();
 const result = 'Selected shapes count: ' + shapes.length;
 
-const outShapeFill = Api.CreateSolidFill(Api.CreateRGBColor(50, 70, 180));
+const outShapeFill = Api.CreateSolidFill(Api.RGB(50, 70, 180));
 const outShapeStroke = Api.CreateStroke(0, Api.CreateNoFill());
 const outShape = Api.CreateShape('rect', 160 * 36000, 30 * 36000, outShapeFill, outShapeStroke);
 outShape.SetPosition(0, 30 * 36000);
@@ -52,5 +56,4 @@ const outDoc = outShape.GetDocContent();
 const outParagraph = outDoc.GetElement(0);
 outParagraph.AddText(result);
 slide.AddObject(outShape);
-
 ```

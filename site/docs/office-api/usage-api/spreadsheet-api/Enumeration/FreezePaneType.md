@@ -13,7 +13,6 @@ Enumeration
 - "cell"
 - null
 
-
 ## Example
 
 Set the "column" freeze pane type to the current worksheet.
@@ -25,5 +24,4 @@ Set the "column" freeze pane type to the current worksheet.
 
 const freezePaneType = "column";
 Api.SetFreezePanesType(freezePaneType);
-
 ```

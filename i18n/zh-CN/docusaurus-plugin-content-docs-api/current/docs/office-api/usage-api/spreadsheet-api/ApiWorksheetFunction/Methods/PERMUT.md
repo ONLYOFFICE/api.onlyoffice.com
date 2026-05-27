@@ -1,0 +1,36 @@
+# PERMUT
+
+返回从总对象中选择给定数量对象的排列数。
+
+## 语法
+
+```javascript
+expression.PERMUT(arg1, arg2);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| arg1 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 对象总数。 |
+| arg2 | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | 每个排列中的对象数。 |
+
+## 返回值
+
+number
+
+## 示例
+
+计算电子表格中排列一组对象的方式数。
+
+```javascript editor-xlsx
+// How do I find the number of arrangements for selected items in a spreadsheet?
+
+// Determine the count of unique permutations from a pool of distinct objects in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let func = Api.WorksheetFunction;
+worksheet.GetRange("A1").SetValue(func.PERMUT(32, 2));
+```

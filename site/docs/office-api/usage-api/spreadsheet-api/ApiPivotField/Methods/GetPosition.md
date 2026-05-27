@@ -21,12 +21,12 @@ number
 
 ## Example
 
-This example shows how to get position of a pivot field.
+Read the position index of a pivot field within its area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field position.
+// How do I find out the order of a pivot field among other fields in the same area in a spreadsheet?
 
-// Create a pivot table, add data to it then get the position of a specified pivot field.
+// Check the numeric position of a pivot field to determine where it sits relative to adjacent fields.
 
 let worksheet = Api.GetActiveSheet();
 

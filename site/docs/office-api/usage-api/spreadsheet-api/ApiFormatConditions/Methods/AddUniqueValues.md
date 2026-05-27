@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds unique values conditional formatting to a range.
+Mark cells that contain one-of-a-kind entries differently from repeated ones in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add unique values conditional formatting rules to highlight unique or duplicate values.
+// How do I visually separate unique items from duplicates across a data range in a spreadsheet?
 
-// Add unique values conditional formatting to cells.
+// Color-code cells so repeated and distinct values are easy to tell apart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -44,5 +44,4 @@ let formatConditions = dataRange.GetFormatConditions();
 let uniqueValuesCondition = formatConditions.AddUniqueValues();
 
 uniqueValuesCondition.GetFont().SetColor(Api.CreateColorFromRGB(255, 0, 0));
-
 ```

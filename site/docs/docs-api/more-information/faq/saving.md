@@ -49,7 +49,7 @@ There are several ways to initiate forced saving:
   }
   ```
 
-Depending on which type of forced saving you need, you can select the correct implementation. More information about this can be found at [this page](../../get-started/how-it-works/saving-file.md#force-saving).
+Depending on which type of forced saving you need, you can select the correct implementation. For more information, see [force saving](../../get-started/how-it-works/saving-file.md#force-saving).
 
 ## How to save the created document?
 
@@ -79,7 +79,9 @@ The **Autosave** option is enabled by default. To disable it, you need to set th
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-> Please note, that disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
+:::note
+Disabling the **Autosave** will also disable the **Fast** co-editing mode which only works with the automatic document saving enabled.
+:::
 
 Further information about the autosaving can be found [at this page](../../usage-api/config/editor/customization/customization-standard-branding.md#autosave).
 
@@ -122,4 +124,4 @@ For this purpose the POST request with the parameters set in the request body is
   }
   ```
 
-Further information about using the codepage during conversion can be found [at this page](../../additional-api/conversion-api/request.md#codepage).
+Further information about using the codepage during conversion can be found [at this page](../../additional-api/conversion-api/request.md#codePage).

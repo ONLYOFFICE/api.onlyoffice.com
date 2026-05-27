@@ -22,15 +22,15 @@ expression.SetTextPr(oTextPr);
 
 ## Example
 
-This example sets the text properties to the current run.
+Apply a full set of formatting properties to a text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create text property for a text object.
+// How do I update the font size, weight, and other appearance settings for text in a spreadsheet?
 
-// Create a text run object, add properties like font size, style, color, etc.
+// Bundle multiple style choices — such as bold and size — into one step when formatting a text run in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

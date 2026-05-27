@@ -1,0 +1,46 @@
+# GroupDrawings
+
+在当前版式中将绘图数组分组。
+
+## 语法
+
+```javascript
+expression.GroupDrawings(aDrawings);
+```
+
+`expression` - 表示 [ApiLayout](../ApiLayout.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| aDrawings | 必需 | [DrawingForGroup](../../Enumeration/DrawingForGroup.md)[] |  | 要分组的绘图对象数组。 |
+
+## 返回值
+
+[ApiGroup](../../ApiGroup/ApiGroup.md)
+
+## 示例
+
+在演示文稿中将布局上的多个形状合并为一个组。
+
+```javascript editor-pptx
+// How do I group shapes together on a layout in a presentation?
+
+// Create two shapes and combine them into one grouped object in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const layout = slide.GetLayout();
+
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const fill2 = Api.CreateSolidFill(Api.RGB(111, 255, 61));
+const shape1 = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 60 * 36000, fill1, stroke);
+const shape2 = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 60 * 36000, fill2, stroke);
+shape1.SetPosition(608400, 1267200);
+shape2.SetPosition(608400, 1400000);
+layout.AddObject(shape1);
+layout.AddObject(shape2);
+layout.GroupDrawings([shape1, shape2]);
+```

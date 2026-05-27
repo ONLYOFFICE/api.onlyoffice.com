@@ -2,30 +2,16 @@
 
 Returns the range of cells to which the current conditional formatting rule applies.
 
-## Syntax
-
-```javascript
-expression.GetAppliesTo();
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiRange](../../ApiRange/ApiRange.md) \| null
+Inherited from [ApiFormatCondition.GetAppliesTo](../../ApiFormatCondition/Methods/GetAppliesTo.md).
 
 ## Example
 
-This example gets the range where a conditional formatting rule applies.
+Read the cell range that a conditional formatting rule covers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the cell range of existing conditional formatting rules.
+// How do I find out which cells a conditional formatting rule is applied to in a spreadsheet?
 
-// Get conditional formatting rule range.
+// Identify the target area of a formatting condition to verify it targets the correct cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let appliedRange = condition1.GetAppliesTo();
 
 worksheet.GetRange("C1").SetValue("Rule applies to:");
 worksheet.GetRange("C2").SetValue(appliedRange.GetAddress());
-
 ```

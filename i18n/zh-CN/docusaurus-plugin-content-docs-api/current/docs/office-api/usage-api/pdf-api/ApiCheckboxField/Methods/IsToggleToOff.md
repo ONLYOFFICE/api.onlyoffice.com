@@ -1,0 +1,37 @@
+# IsToggleToOff
+
+检查字段是否可以取消选中。
+
+## 语法
+
+```javascript
+expression.IsToggleToOff();
+```
+
+`expression` - 表示 [ApiCheckboxField](../ApiCheckboxField.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
+## 示例
+
+检查 PDF 中的复选框是否可以在单击时取消选中。
+
+```javascript editor-pdf
+// How do I find out if a checkbox uses toggle-off behavior in a PDF?
+
+// Determine whether a checked checkbox unselects when clicked again in a PDF.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+let checkboxField = Api.CreateCheckboxField([10, 10, 25, 25]);
+page.AddObject(checkboxField);
+
+checkboxField.SetToggleToOff(false);
+console.log('Toggle to off is: ' + checkboxField.IsToggleToOff());
+```

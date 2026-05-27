@@ -4,13 +4,14 @@ sidebar_position: -2
 
 # Overview
 
-**ONLYOFFICE Desktop Editors** is an open-source office suite for working with documents stored on your computer. This application allows you to create, edit and view text documents, spreadsheets and presentations without constant connection to the Internet. Most popular formats are supported: DOCX, ODT, XLSX, ODS, CVS, PPTX, ODP, etc.
+**ONLYOFFICE Desktop Editors** is an open-source office suite for working with documents stored on your computer. This application allows you to create, edit and view documents, spreadsheets, presentations, PDFs, and fillable forms without constant connection to the Internet. Most popular formats are supported: DOCX, ODT, XLSX, ODS, CVS, PPTX, ODP, etc.
 
 This documentation describes:
 
 - How to enable [debug mode](../usage-api/debugging/running-in-debug-mode-on-windows.md) to detect and fix all the possible errors
 - How to extend editor functionality with ready-to-use [plugins](../usage-api/adding-plugins.md) or creating your own ones
 - How to integrate desktop editors into the [document management systems (DMS) providers](../usage-api/adding-a-dms-provider/adding-a-dms-provider.md), [open](../usage-api/adding-a-dms-provider/opening-documents.md) and [encrypt](../usage-api/adding-a-dms-provider/encryption/encryption.md) documents in them
+- How to [connect MCP servers](../usage-api/connecting-mcp-servers/connecting-mcp-servers.md) to extend AI capabilities with custom tools and integrations
 
 ## How to install
 

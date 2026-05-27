@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all images from the current presentation.
+Find all image files in a presentation.
 
 ```javascript editor-pptx
+// How do I access every picture I inserted in a presentation?
+
+// Count images and display the total in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -35,7 +39,7 @@ for (let i = 0; i < copiesCount; i++) {
 	slide.AddObject(drawing);
 }
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 153, 204));
+const fill = Api.CreateSolidFill(Api.RGB(255, 153, 204));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('heart', 38 * 36000, 38 * 36000, fill, stroke);
 shape.SetPosition(184 * 36000, 0 * 36000);
@@ -45,5 +49,4 @@ const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 const imagesCount = presentation.GetAllImages().length;
 paragraph.AddText('' + imagesCount);
-
 ```

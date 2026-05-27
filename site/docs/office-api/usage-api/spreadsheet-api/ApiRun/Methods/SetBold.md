@@ -22,15 +22,15 @@ expression.SetBold(isBold);
 
 ## Example
 
-This example sets the bold property to the text character.
+Make a text run bold inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make text bold.
+// How do I display part of a text in bold inside a spreadsheet?
 
-// Create a text run object, update its style by making it bold.
+// Emphasize a specific portion of text by applying bold weight to a run in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

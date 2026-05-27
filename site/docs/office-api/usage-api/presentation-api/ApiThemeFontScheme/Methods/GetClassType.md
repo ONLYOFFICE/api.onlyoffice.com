@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Get the class type of a theme font scheme in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiThemeFontScheme.
+// How can I determine the type of a font scheme object in a presentation?
 
-// Retrieve class type of ApiThemeFontScheme object and insert it to the slide.
+// Retrieve the class type identifier and display it for a font scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -34,7 +34,7 @@ slide.RemoveAllObjects();
 const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chinese", "Arabic", "Times New Roman", "Noto Serif Simplified Chinese", "Arabic", "New font scheme");
 const sType = fontScheme.GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -45,5 +45,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Class type = " + sType);
 slide.AddObject(shape);
-
 ```

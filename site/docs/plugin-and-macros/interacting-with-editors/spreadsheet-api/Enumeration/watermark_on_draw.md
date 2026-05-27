@@ -2,6 +2,10 @@
 
 An object containing the watermark properties.
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -27,13 +31,8 @@ An object containing the watermark properties.
 | stroke | number[] | The watermark stroke color in the RGB format. The empty array [] means that the watermark stroke has no fill. |
 | stroke-width | number | The watermark stroke width measured in millimeters. |
 | transparent | number | The watermark transparency degree. |
-| type | string | The [shape](../../../../../docs/office-api/usage-api/text-document-api/Enumeration/ShapeType.md) which specifies the preset shape geometry for the current watermark. |
+| type | [ShapeType](../Enumeration/ShapeType.md) | The type which specifies the preset shape geometry for the current watermark. |
 | width | number | The watermark width measured in millimeters. |
-## Type
-
-Object
-
-
 
 ## Example
 

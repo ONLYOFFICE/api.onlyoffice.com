@@ -17,3 +17,33 @@ This method doesn't have any parameters.
 ## Returns
 
 [ApiCustomXmlNode](../../ApiCustomXmlNode/ApiCustomXmlNode.md) \| null
+
+## Example
+
+Access the parent element of an XML node in a presentation.
+
+```javascript editor-pptx
+// How do I find the parent of an XML element in a presentation?
+
+// Retrieve the containing XML element of a node in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const xmlManager = presentation.GetCustomXmlParts();
+const xmlText = '<zoo><animal species="Lion"><name>Leo</name></animal></zoo>';
+const xml = xmlManager.Add(xmlText);
+const node = xml.GetNodes('/zoo/animal')[0];
+const parent = node.GetParent();
+
+const fill = Api.CreateSolidFill(Api.HexColor('#81a181'));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('rect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
+shape.SetPosition(Api.MillimetersToEmus(20), Api.MillimetersToEmus(35));
+slide.AddObject(shape);
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText('Parent node name: ' + parent.GetNodeName());
+```

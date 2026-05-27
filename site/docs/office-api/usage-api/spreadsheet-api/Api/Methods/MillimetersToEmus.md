@@ -15,7 +15,7 @@ expression.MillimetersToEmus(mm);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| mm | Required | [mm](../../Enumeration/mm.md) |  | No description provided. |
+| mm | Required | [mm](../../Enumeration/mm.md) |  | The value in millimeters. |
 
 ## Returns
 
@@ -23,14 +23,17 @@ expression.MillimetersToEmus(mm);
 
 ## Example
 
-This example shows how to convert millimeters to emus.
+Turn a millimeter measurement into EMUs in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I convert millimeters to EMU units in a spreadsheet?
+
+// Show the EMU equivalent of a given millimeter value in a spreadsheet.
+
 const millimeters = 0.2001;
 const emus = Api.MillimetersToEmus(millimeters);
 const text = millimeters + ' millimeters are equal to ' + emus + ' emus (value is rounded to integer).';
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange('B2').SetValue(text);
-
 ```

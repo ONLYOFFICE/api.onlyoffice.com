@@ -26,15 +26,15 @@ boolean
 
 ## Example
 
-This example sets the paragraph line spacing.
+Widen the space between lines of text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a spacing line between paragraphs.
+// How do I make a paragraph easier to read by spreading out its lines in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying spacing between text lines.
+// Apply a triple line-height multiplier to loosen the vertical rhythm of paragraph text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

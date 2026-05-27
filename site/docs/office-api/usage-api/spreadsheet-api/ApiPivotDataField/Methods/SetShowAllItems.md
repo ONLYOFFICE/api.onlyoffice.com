@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether to show items with no data.
 
-## Syntax
-
-```javascript
-expression.SetShowAllItems(show);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| show | Required | boolean |  | Specifies whether to show items with no data. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetShowAllItems](../../ApiPivotField/Methods/SetShowAllItems.md).
 
 ## Example
 
-This example shows how to set a show all items of a pivot field.
+Force a pivot table field to display all items, including those with no data, in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field show all items value.
+// How do I make a pivot field show every item even when it has no matching data in a spreadsheet?
 
-// Create a pivot table, add data to it then set show all items of a specified pivot.
+// Keep empty categories visible so the pivot table layout stays consistent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

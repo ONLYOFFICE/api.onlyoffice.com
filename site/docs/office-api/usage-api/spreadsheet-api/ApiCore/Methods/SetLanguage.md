@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the language of the workbook using the ApiCore.
+Record the primary language of a workbook in its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I specify the language used in a workbook's metadata in a spreadsheet?
+
+// Mark the workbook with a locale code so readers know which language it targets in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetLanguage("en-US");
 const language = core.GetLanguage();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Language: " + language);
-
 ```

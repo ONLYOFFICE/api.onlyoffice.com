@@ -14,7 +14,8 @@ expression.SUM(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string \| number \| boolean \| (string \| number \| boolean)[] |  | Up to 255 numeric values to add. The first argument is required, subsequent arguments are optional. Arguments can be numbers, logical values, text representations of numbers, ranges, or arrays. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| string \| number \| boolean \| (string \| number \| boolean)[] |  | Up to 255 numeric values to add. The first argument is required, subsequent arguments are optional.
+Arguments can be numbers, logical values, text representations of numbers, ranges, or arrays. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to add all the numbers in a range of cells.
+Add all the numbers in a range of cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to sum up all values from the list.
+// Sum all values using the SUM function with numeric arguments.
 
-// Use a function to estimate a sum from the cells.
+// Returns the total sum of the specified values.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

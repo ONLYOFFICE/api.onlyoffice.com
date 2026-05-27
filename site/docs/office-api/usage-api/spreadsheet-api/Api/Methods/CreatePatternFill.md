@@ -15,8 +15,8 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | patternType | Required | [PatternType](../../Enumeration/PatternType.md) |  | The pattern type used for the fill selected from one of the available pattern types. |
-| bgColor | Required | [ApiUniColor](../../ApiUniColor/ApiUniColor.md) |  | The background color used for the pattern creation. |
-| fgColor | Required | [ApiUniColor](../../ApiUniColor/ApiUniColor.md) |  | The foreground color used for the pattern creation. |
+| bgColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The background color used for the pattern creation. |
+| fgColor | Required | [ApiColor](../../ApiColor/ApiColor.md) |  | The foreground color used for the pattern creation. |
 
 ## Returns
 
@@ -24,15 +24,15 @@ expression.CreatePatternFill(patternType, bgColor, fgColor);
 
 ## Example
 
-This example creates a pattern fill to apply to the object using the selected pattern as the object background.
+Fill a shape's background with a repeating pattern of two colors in a spreadsheet.
 
 ```javascript editor-xlsx
-// Create customized pattern to fill background of a shape.
+// How do I apply a tiled pattern as the background of a shape in a spreadsheet?
 
-// Set a shape background using a pattern fill.
+// Decorate a shape by covering its surface with a repeated design made from two chosen colors in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```

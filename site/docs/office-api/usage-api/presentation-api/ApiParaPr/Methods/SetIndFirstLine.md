@@ -22,19 +22,19 @@ boolean
 
 ## Example
 
-This example sets the paragraph first line indentation.
+Indent the first line of a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set a size of the first line indentation using a paragraph properties.
+// How do I set the first line indentation for a paragraph in a presentation?
 
-// Create a paragraph setting its first line indentation.
+// Apply a specific indentation distance to just the first line of text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
@@ -50,5 +50,4 @@ paragraph.AddText("These sentences are used to add lines for demonstrative purpo
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
 paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
 slide.AddObject(shape);
-
 ```

@@ -20,16 +20,20 @@ string
 
 ## Example
 
-This example demonstrates how to get the version of the current workbook.
+Read the version number saved in the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out which version is recorded for a workbook in a spreadsheet?
+
+// Display the version string stored in the metadata of the file in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetVersion("v9.0");
 const version = core.GetVersion();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Version: " + version);
-
 ```

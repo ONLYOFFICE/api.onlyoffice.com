@@ -20,10 +20,14 @@ string[]
 
 ## Example
 
-This example shows how to get a list of all roles in the filling order.
+View all user roles defined for your form in a document.
 
-```javascript editor-pdf
-let doc = editor.GetDocument();
+```javascript editor-forms
+// How do I see every role that can access form fields in a document?
+
+// List all the role names available for controlling form permissions in a document.
+
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");
@@ -35,5 +39,4 @@ roles.GetAllRoles().forEach(role => {
     paragraph.AddLineBreak();
     orderIndex++;
 });
-
 ```

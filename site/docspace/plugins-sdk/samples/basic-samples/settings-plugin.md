@@ -1,3 +1,8 @@
+---
+description: Add a configuration panel to the plugin settings area.
+tags: ["DocSpace", "Plugins", "Basic"]
+---
+
 # Settings plugin
 
 This guide walks you through creating a plugin for DocSpace that adds a plugin configuration panel to the plugin settings area in the admin interface.

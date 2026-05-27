@@ -4,7 +4,7 @@ sidebar_position: -4
 
 # Spreadsheet API
 
-A spreadsheet document has a more simple structure than that of a text document, most of the spreadsheet elements are nested within the *worksheet* element with all the other elements placed on it.
+A spreadsheet document has a more simple structure than that of a document, most of the spreadsheet elements are nested within the *worksheet* element with all the other elements placed on it.
 
 The *cells* can be given various values, some of the cell text properties can also be changed.
 
@@ -18,56 +18,56 @@ The text that does not pertain to the cell values, can be grouped to *paragraphs
 
 The simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of **ONLYOFFICE Document Builder** using the following code:
 
-``` ts
+```ts
 // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
-builder.CreateFile("xlsx")
+builder.CreateFile("xlsx");
 
 // create a new 'oWorksheet' variable and get the created spreadsheet contents
-const oWorksheet = Api.GetActiveSheet()
+const oWorksheet = Api.GetActiveSheet();
 
 // set the 'sheet 1' name for the current active sheet
-oWorksheet.SetName("sheet 1")
+oWorksheet.SetName("sheet 1");
 
 // set the width of the first column to 140 pixels
-oWorksheet.SetColumnWidth(0, 20)
+oWorksheet.SetColumnWidth(0, 20);
 
 // set the 'New cell' value to the A1 spreadsheet cell
-oWorksheet.GetRange("A1").SetValue("New cell")
+oWorksheet.GetRange("A1").SetValue("New cell");
 
 // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
-builder.SaveFile("xlsx", "example.xlsx")
+builder.SaveFile("xlsx", "example.xlsx");
 
 // close the spreadsheet file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
 ## Opening an existing spreadsheet
 
-If you want to edit an already existing spreadsheet, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The only difference from a spreadsheet editor in this case will be that you will not need this spreadsheet editor. The spreadsheet is opened the following way:
+If you want to edit an already existing spreadsheet, you can open it using **ONLYOFFICE Document Builder**, get its elements and change them however you need. The spreadsheet is opened the following way:
 
-``` ts
-// use a path to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
-builder.OpenFile("https://example.com/myspreadsheet.xlsx")
+```ts
+// use a path or URL to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
+builder.OpenFile("https://example.com/myspreadsheet.xlsx");
 
-// create a new 'oWorksheet' variable and get the created spreadsheet contents
-const oWorksheet = Api.GetActiveSheet()
+// create a new 'oWorksheet' variable and get the opened spreadsheet contents
+const oWorksheet = Api.GetActiveSheet();
 
 // set the 'sheet 1 renamed' name for the current active sheet
-oWorksheet.SetName("sheet 1 renamed")
+oWorksheet.SetName("sheet 1 renamed");
 
 // set the width of the first column to 140 pixels
-oWorksheet.SetColumnWidth(0, 20)
+oWorksheet.SetColumnWidth(0, 20);
 
 // set the 'New cell' value to the A1 spreadsheet cell
-oWorksheet.GetRange("A1").SetValue("New cell")
+oWorksheet.GetRange("A1").SetValue("New cell");
 
 // save the resulting spreadsheet as a file in the .xlsx format with a new 'example.xlsx' name
-builder.SaveFile("xlsx", "example.xlsx")
+builder.SaveFile("xlsx", "example.xlsx");
 
 // close the spreadsheet file and finish work with ONLYOFFICE Document Builder
-builder.CloseFile()
+builder.CloseFile();
 ```
 
-As you can see you just need to use the *builder.OpenFile();* method of the [CDocBuilder](../../../document-builder/builder-framework/C++/CDocBuilder/CDocBuilder.md) class with the path to the necessary spreadsheet as an argument to open it. In the above example we open **myspreadsheet.xlsx** spreadsheet, get its first sheet and change the sheet name, first column width and enter the new value into its A1 cell. The same way any other spreadsheet element can be changed.
+As you can see you just need to use the *builder.OpenFile* method of the [CDocBuilder](../../../document-builder/builder-framework/CDocBuilder/CDocBuilder.md) class with the path or URL to the necessary spreadsheet as an argument to open it. In the above example we open the **myspreadsheet.xlsx** spreadsheet, get its first sheet and change the sheet name, first column width and enter the new value into its A1 cell. In the same way, any other spreadsheet element can be changed.
 
-Use the appropriate API documentation sections to find out which methods allow you to change certain document and spreadsheet element formatting properties.
+Use the appropriate API documentation sections to find out which methods allow you to change certain spreadsheet element formatting properties.

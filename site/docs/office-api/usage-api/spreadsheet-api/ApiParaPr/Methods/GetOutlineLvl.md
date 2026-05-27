@@ -16,13 +16,17 @@ This method doesn't have any parameters.
 
 ## Returns
 
-Number
+Number \| undefined
 
 ## Example
 
-This example shows how to set and get the outline level of the specified paragraph via paragraph properties.
+Read the outline level assigned to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out which heading depth a paragraph belongs to in a spreadsheet?
+
+// Capture a paragraph's outline depth before and after changing it to track the update in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
@@ -39,5 +43,4 @@ const levelAfter = paraPr.GetOutlineLvl();
 let text =  'Outline level (index) for this paragraph is currently set to ' + levelAfter;
 text += ',\nbut originally was set to ' + levelBefore;
 paragraph.AddText(text);
-
 ```

@@ -11,10 +11,9 @@ Enumeration
 - "xlAscending"
 - "xlDescending"
 
-
 ## Example
 
-This example specify that the sort order for the values specified in "A1:A5" is ascending.
+Specify that the sort order for the values specified in "A1:A5" is ascending.
 
 ```javascript editor-xlsx
 // How to specify a sorting order (ascending or descending) for each range.

@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether to show subtotals.
 
-## Syntax
-
-```javascript
-expression.SetLayoutSubtotals(show);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| show | Required | boolean |  | Specifies whether to show subtotals. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutSubtotals](../../ApiPivotField/Methods/SetLayoutSubtotals.md).
 
 ## Example
 
-This example shows how to set a layout subtotals of a pivot field.
+Show or hide subtotals for a pivot field group in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout subtotals.
+// How do I turn off subtotals for a specific pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout subtotals of a specified pivot.
+// Remove automatic group totals from a pivot field to simplify the summary view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

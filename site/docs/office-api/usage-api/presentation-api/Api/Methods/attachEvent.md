@@ -23,15 +23,14 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to subscribe on hyperlink click event.
+Subscribe to the hyperlink click event in a presentation.
 
 ```javascript editor-pptx
-// How to trigger an event on hyperlink click.
+// Event handlers allow responding to user interactions like clicks on hyperlinks.
 
-// Subscribe to the hyperlink click event.
+// Attach a listener to the asc_onHyperlinkClick event using Api.attachEvent().
 
 Api.attachEvent("asc_onHyperlinkClick", function() {
 	console.log("HYPERLINK!!!");
 });
-
 ```

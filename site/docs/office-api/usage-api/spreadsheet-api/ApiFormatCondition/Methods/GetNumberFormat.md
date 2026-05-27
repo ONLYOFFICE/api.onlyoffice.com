@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example gets the number format of a conditional formatting rule.
+Read the number display pattern that a conditional formatting rule applies to matching cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve number formatting from conditional formatting rules.
+// How do I find out what number format a conditional formatting rule uses for highlighted cells in a spreadsheet?
 
-// Get conditional formatting rule number format.
+// Inspect the numeric display style of a formatting condition to confirm it presents values correctly in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,5 +48,4 @@ let numberFormat = condition1.GetNumberFormat();
 
 worksheet.GetRange("C1").SetValue("Number format:");
 worksheet.GetRange("C2").SetValue(numberFormat);
-
 ```

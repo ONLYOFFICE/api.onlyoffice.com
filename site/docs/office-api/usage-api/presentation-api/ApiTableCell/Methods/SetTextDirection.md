@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | "lrtb" \| "tbrl" \| "btlr" |  | The type of the text flow direction. |
+| sType | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The type of the text flow direction. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example specifies the direction of the text flow for the current table cell.
+Change the text flow direction in a table cell in a presentation.
 
 ```javascript editor-pptx
-// How to set text direction of the table cell.
+// How do I rotate text vertically in a table cell in a presentation?
 
-// Create a table and set the text direction for the ApiTableCell object.
+// Set the text orientation to flow from top to bottom in a table cell in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,5 +44,4 @@ content.Push(paragraph);
 
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

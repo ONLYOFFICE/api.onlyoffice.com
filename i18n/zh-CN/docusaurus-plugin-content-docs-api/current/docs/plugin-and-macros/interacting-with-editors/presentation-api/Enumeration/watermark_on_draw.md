@@ -1,39 +1,38 @@
-# 绘图水印
+# watermark_on_draw
 
-一个包含水印属性的对象。
+包含水印属性的对象。
+
+## 类型
+
+Object
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
-| ---- | ---- | ---- |
+| ---- | ---- | ----------- |
 | align | number | 水印形状中的垂直文本对齐方式：**0** - 底部，**1** - 居中，**4** - 顶部。 |
-| fill | number[] \| string | 水印填充颜色，采用 RGB 格式，或图像的 URL（支持 base64，格式如 data:image/png;...）。空数组 [] 表示水印无填充。 |
-| height | number | 水印高度，单位为毫米。 |
-| margins | number[] | 水印形状中文字的边距，单位为毫米。 |
-| paragraphs | object[] | 当前水印中的段落数组及其属性。 |
-| paragraphs.align | number | 当前段落的水平文本对齐方式：**0** - 右对齐，**1** - 左对齐，**2** - 居中，**3** - 两端对齐。 |
-| paragraphs.fill | number[] | 段落高亮颜色，采用 RGB 格式。空数组 [] 表示段落无高亮。 |
-| paragraphs.linespacing | number | 当前段落的行间距。 |
-| paragraphs.runs | object[] | 当前段落中的文本运行（runs）数组及其属性。 |
-| paragraphs.runs.bold | boolean | 指定当前文本是否为加粗。 |
-| paragraphs.runs.fill | number[] | 文本高亮颜色，采用 RGB 格式。空数组 [] 表示文本无高亮。 |
-| paragraphs.runs.font-family | string | 文本字体家族。 |
-| paragraphs.runs.font-size | string | 文本字体大小，单位为磅（pt）。 |
-| paragraphs.runs.italic | boolean | 指定当前文本是否为斜体。 |
-| paragraphs.runs.strikeout | boolean | 指定当前文本是否带有删除线。 |
-| paragraphs.runs.text | string | 文本内容。 |
-| paragraphs.runs.underline | boolean | 指定当前文本是否带下划线。 |
-| rotate | number | 水印旋转角度，单位为度。 |
-| stroke | number[] | 水印描边颜色，采用 RGB 格式。空数组 [] 表示水印描边无填充。 |
-| stroke-width | number | 水印描边宽度，单位为毫米。 |
-| transparent | number | 水印透明度等级。 |
-| type | string | [形状类型](../../../../../docs/office-api/usage-api/text-document-api/Enumeration/ShapeType.md)，指定当前水印的预设形状几何。 |
-| width | number | 水印宽度，单位为毫米。 |
-## 类型
-
-Object（对象）
-
-
+| fill | number[] \| string | RGB 格式的水印填充颜色，或图像的 URL（支持 base64：data:image/png;...）。空数组 [] 表示水印没有填充。 |
+| height | number | 水印的高度，以毫米为单位。 |
+| margins | number[] | 水印形状中的文本边距，以毫米为单位。 |
+| paragraphs | object[] | 包含当前水印中段落及其属性的数组。 |
+| paragraphs.align | number | 当前段落中的水平文本对齐方式：**0** - 右对齐，**1** - 左对齐，**2** - 居中，**3** - 两端对齐。 |
+| paragraphs.fill | number[] | RGB 格式的段落高亮。空数组 [] 表示段落没有高亮。 |
+| paragraphs.linespacing | number | 当前段落中的文本行间距。 |
+| paragraphs.runs | object[] | 包含当前段落中的文本块及其属性的数组。 |
+| paragraphs.runs.bold | boolean | 定义当前文本是否显示为粗体。 |
+| paragraphs.runs.fill | number[] | RGB 格式的文本高亮。空数组 [] 表示文本没有高亮。 |
+| paragraphs.runs.font-family | string | 文本字体系列。 |
+| paragraphs.runs.font-size | string | 文本字体大小，以磅（pt）为单位。 |
+| paragraphs.runs.italic | boolean | 定义当前文本是否显示为斜体。 |
+| paragraphs.runs.strikeout | boolean | 定义当前文本是否显示为删除线。 |
+| paragraphs.runs.text | string | 文本块内容。 |
+| paragraphs.runs.underline | boolean | 定义当前文本是否显示为下划线。 |
+| rotate | number | 水印的旋转角度，以度为单位。 |
+| stroke | number[] | RGB 格式的水印描边颜色。空数组 [] 表示水印描边没有填充。 |
+| stroke-width | number | 水印描边的宽度，以毫米为单位。 |
+| transparent | number | 水印的透明度。 |
+| type | [ShapeType](../Enumeration/ShapeType.md) | 指定当前水印预设形状几何的类型。 |
+| width | number | 水印的宽度，以毫米为单位。 |
 
 ## 示例
 

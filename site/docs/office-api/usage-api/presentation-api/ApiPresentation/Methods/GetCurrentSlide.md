@@ -20,21 +20,20 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the current slide.
+Obtain the slide object currently being edited.
 
 ```javascript editor-pptx
-// How to get a current slide as an object.
+// Access the active slide as an ApiSlide object.
 
-// Get current working slide and update its content.
+// Add content to the current slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentSlide();
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
 slide.AddObject(shape);
-
 ```

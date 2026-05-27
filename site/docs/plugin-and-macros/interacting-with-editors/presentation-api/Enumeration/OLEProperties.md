@@ -2,6 +2,10 @@
 
 The OLE object properties
 
+## Type
+
+Object
+
 ## Properties
 
 | Name | Type | Description |
@@ -13,11 +17,6 @@ The OLE object properties
 | imgSrc | string | A link to the image (its visual representation) stored in the OLE object and used by the plugin. |
 | width | number | The OLE object width measured in millimeters. |
 | widthPix | number | The OLE object image width in pixels. |
-## Type
-
-Object
-
-
 
 ## Example
 

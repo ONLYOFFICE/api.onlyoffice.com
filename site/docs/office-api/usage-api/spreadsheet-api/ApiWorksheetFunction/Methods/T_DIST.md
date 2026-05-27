@@ -16,7 +16,9 @@ expression.T_DIST(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The numeric value at which to evaluate the distribution. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | An integer indicating the number of degrees of freedom that characterize the distribution. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative distribution function. If it is **false**, the function returns the probability density function. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form.
+If it is **true**, the function returns the cumulative distribution function.
+If it is **false**, the function returns the probability density function. |
 
 ## Returns
 
@@ -24,17 +26,15 @@ number
 
 ## Example
 
-This example shows how to return the left-tailed Student's t-distribution.
+Calculate the left-tail probability of the Student's t-distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the left-tailed Student's t-distribution.
+// How do I find the probability for a given t-value in a spreadsheet?
 
-// Use a function to estimate the Student's t-distribution left-tailed.
+// Get the cumulative distribution function for the t-distribution in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.T_DIST(1.5, 10, false);
 worksheet.GetRange("B2").SetValue(ans);
-
-
 ```

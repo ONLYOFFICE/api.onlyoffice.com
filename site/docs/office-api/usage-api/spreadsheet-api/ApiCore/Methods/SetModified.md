@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the date when the workbook was modified last time.
+Record the date a workbook was last changed in its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I write a custom last-modified date into a workbook's metadata in a spreadsheet?
+
+// Update the modification timestamp stored in the workbook so the history reflects a specific date in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetModified(new Date("10 March 1990"));
 const lastModifiedDate = core.GetModified().toDateString();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified: " + lastModifiedDate);
-
 ```

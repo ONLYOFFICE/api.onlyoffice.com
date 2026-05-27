@@ -2,27 +2,17 @@
 
 Returns the tag attribute for the current form.
 
-## Syntax
-
-```javascript
-expression.GetTag();
-```
-
-`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormBase.GetTag](../../ApiFormBase/Methods/GetTag.md).
 
 ## Example
 
-This example shows how to get the tag of a form element.
+Read the tag attached to a form field in a document.
 
-```javascript editor-pdf
+```javascript editor-forms
+// How do I get the tag of a form field in a document?
+
+// Label a form with a custom tag, then retrieve it to confirm it was stored correctly.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -44,5 +34,4 @@ const formTag = textForm.GetTag();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form tag: " + formTag);
 doc.Push(paragraph);
-
 ```

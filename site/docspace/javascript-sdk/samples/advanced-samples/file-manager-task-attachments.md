@@ -1,6 +1,13 @@
+---
+description: Attach files to tasks using a DocSpace file selector modal.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # File manager with task attachments
 
 This example demonstrates how to integrate the DocSpace file selector into a task management interface. Users can attach files to individual tasks by selecting a row and using a modal-based file selector.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/file-manager-task-attachments.html)
 
 ## Before you start
 
@@ -16,7 +23,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
   <head>
     <meta charset="UTF-8" />
     <title>Task Attachments</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* CSS omitted for brevity */
     </style>

@@ -1,0 +1,49 @@
+# SetOrientation
+
+设置表示字段在指定数据透视表报表中
+位置的透视字段方向值。
+
+继承自 [ApiPivotField.SetOrientation](../../ApiPivotField/Methods/SetOrientation.md)。
+
+## 示例
+
+将透视字段移动到电子表格中的行、列或值区域。
+
+```javascript editor-xlsx
+// How do I reassign a pivot field to a different area of the pivot table in a spreadsheet?
+
+// Reorganize a pivot table by switching a field from rows to columns in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
+
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
+
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
+
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
+
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+
+pivotTable.AddFields({
+    rows: ['Region', 'Style'],
+});
+
+pivotTable.AddDataField('Price');
+
+let pivotField = pivotTable.GetPivotFields('Style');
+pivotField.SetOrientation("Columns");
+```

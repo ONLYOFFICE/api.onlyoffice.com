@@ -14,7 +14,10 @@ expression.SetSeriaXValues(sRange, nSeria);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRange | Required | string |  | A range of cells from the sheet with series x-axis values. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column, "Example series". |
+| sRange | Required | string |  | A range of cells from the sheet with series x-axis values. For example:
+"'sheet 1'!$A$2:$A$5" - must be a single cell, row or column,
+"A1:A5" - must be a single cell, row or column,
+"Example series". |
 | nSeria | Required | number |  | The index of the chart series. |
 
 ## Returns
@@ -23,12 +26,12 @@ boolean
 
 ## Example
 
-This example sets the x-axis values from the specified range to the specified series. It is used with the scatter charts only.
+Assign cell range data as the horizontal axis values for a scatter chart series in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add values to the horizontal axis of series for scatter charts from the indicated range using addresses.
+// How do I set custom x-axis values for a scatter chart series from a cell range in a spreadsheet?
 
-// Fill seria's x-axis of scatter charts with values from the worksheet cells.
+// Control the horizontal positions of scatter chart points by linking them to a row of cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -48,12 +51,12 @@ worksheet.GetRange("D4").SetValue(2019);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "scatter", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
 chart.SetSeriaXValues("'Sheet1'!$B$4:$D$4", 0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetMarkerFill(fill, 0, 0, true);
-let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerOutLine(stroke, 0, 0, true);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
-stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```

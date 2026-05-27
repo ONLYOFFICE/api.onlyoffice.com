@@ -1,3 +1,8 @@
+---
+description: Add a custom item to the user profile menu.
+tags: ["DocSpace", "Plugins", "Basic"]
+---
+
 # Profile menu plugin
 
 This guide walks you through creating a plugin for DocSpace that adds a custom item to the user profile dropdown menu and performs an action when clicked.

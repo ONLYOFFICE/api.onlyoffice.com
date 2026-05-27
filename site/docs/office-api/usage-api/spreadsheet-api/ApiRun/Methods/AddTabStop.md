@@ -20,15 +20,15 @@ boolean
 
 ## Example
 
-This example adds a tab stop to the run.
+Insert tab stops into a text run to push following text further along the line in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a tab to a sentence.
+// How do I add spacing between words using tabs inside a shape in a spreadsheet?
 
-// Break two lines of a text run with a tab. 
+// Align text visually by placing multiple tab characters within a single run in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

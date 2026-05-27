@@ -1,0 +1,23 @@
+# Copy
+
+复制当前表单（如果存在形状，则连同形状一起复制）。
+
+继承自 [ApiFormBase.Copy](../../ApiFormBase/Methods/Copy.md)。
+
+## 示例
+
+在文档中复制表单字段。
+
+```javascript editor-forms
+// How do I copy a form field in a document?
+
+// Reuse an existing form by placing an identical copy elsewhere on the same paragraph.
+
+let doc = Api.GetDocument();
+let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "maxCharacters": 10, "cellWidth": 3, "multiLine": false, "autoFit": false});
+let paragraph = doc.GetElement(0);
+paragraph.AddElement(textForm);
+let copyTextForm = textForm.Copy();
+paragraph.AddLineBreak();
+paragraph.AddElement(copyTextForm);
+```

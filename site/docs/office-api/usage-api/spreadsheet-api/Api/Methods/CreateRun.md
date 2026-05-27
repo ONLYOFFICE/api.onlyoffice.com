@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a new smaller text block to be inserted to the paragraph or table.
+Add independently styled text segments to a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// Create a text to construct a paragraph.
+// How do I insert multiple text pieces with different formatting into one paragraph in a spreadsheet?
 
-// Add a text in a paragraph.
+// Build a paragraph from separate text portions so each portion can carry its own style in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

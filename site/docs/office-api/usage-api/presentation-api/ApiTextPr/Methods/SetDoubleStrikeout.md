@@ -22,18 +22,18 @@ expression.SetDoubleStrikeout(isDoubleStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with two horizontal lines through each character displayed on the line.
+Apply a double strikethrough effect to text in a presentation.
 
 ```javascript editor-pptx
-// How to strike out a text with two lines.
+// How do I add two lines through text for strikethrough in a presentation?
 
-// Get the text propertiesof the run and cross it out with two lines.
+// Use the text properties to enable double strikeout formatting on characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape struck out with two lines using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

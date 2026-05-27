@@ -22,18 +22,18 @@ boolean
 
 ## Example
 
-This example gets a lock value of a shape and inserts it into the presentation.
+Get a lock setting for a shape in a presentation.
 
 ```javascript editor-pptx
-// How to get a slide shape's lock value and display it in the slide.
+// How do I find the lock status of an object in a presentation?
 
-// Get a slide shape's lock value.
+// Retrieve and display the lock value of a shape in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -45,5 +45,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 slide.AddObject(shape);
-
 ```

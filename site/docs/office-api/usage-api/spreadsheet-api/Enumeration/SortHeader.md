@@ -11,10 +11,9 @@ Enumeration
 - "xlNo"
 - "xlYes"
 
-
 ## Example
 
-This example specify that the first row contains header information.
+Specify that the first row contains header information.
 
 ```javascript editor-xlsx
 // How to specify a sorting header for a range.

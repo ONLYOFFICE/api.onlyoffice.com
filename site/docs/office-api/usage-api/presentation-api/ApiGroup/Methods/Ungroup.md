@@ -20,20 +20,20 @@ boolean
 
 ## Example
 
-This example shows how to ugroup a group drawing element.
+Separate grouped shapes back into individual objects in a presentation.
 
 ```javascript editor-pptx
-// How to ungroup a grouped drawings.
+// How do I ungroup shapes that are grouped together in a presentation?
 
-// How to remove a grouping from objects.
+// Remove the grouping from multiple shapes in a presentation.
 
 const presentation = Api.GetPresentation();
 presentation.SetSizes(254 * 36000, 190 * 36000);
 const slide = presentation.GetCurrentSlide();
 slide.RemoveAllObjects();
 
-const fill1 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-const fill2 = Api.CreateSolidFill(Api.CreateRGBColor(111, 255, 61));
+const fill1 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const fill2 = Api.CreateSolidFill(Api.RGB(111, 255, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 
 const shape1 = Api.CreateShape("flowChartOnlineStorage", 200 * 36000, 130 * 36000, fill1, stroke);
@@ -54,5 +54,4 @@ paragraph1.AddText("Shapes are ungrouped");
 const docContent2 = shape2.GetDocContent();
 const paragraph2 = docContent2.GetElement(0);
 paragraph2.AddText("Shapes are ungrouped");
-
 ```

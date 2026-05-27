@@ -2,30 +2,16 @@
 
 Returns the text value used in text-based conditional formatting rules.
 
-## Syntax
-
-```javascript
-expression.GetText();
-```
-
-`expression` - A variable that represents a [ApiDatabar](../ApiDatabar.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiFormatCondition.GetText](../../ApiFormatCondition/Methods/GetText.md).
 
 ## Example
 
-This example gets the text value from a text-based conditional formatting rule.
+Read the text string that a conditional formatting rule matches against in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve text values from text-based conditional formatting rules.
+// How do I find out what word or phrase a text-based formatting rule is looking for in a spreadsheet?
 
-// Get conditional formatting rule text value.
+// Retrieve the search term stored inside a text-matching formatting rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +33,4 @@ let textValue = condition1.GetText();
 
 worksheet.GetRange("C1").SetValue("Text value:");
 worksheet.GetRange("C2").SetValue(textValue);
-
 ```

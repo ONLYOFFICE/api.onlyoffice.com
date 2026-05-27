@@ -20,13 +20,16 @@ This method doesn't have any parameters.
 
 ## Example
 
-Analyzes path commands of a star shape and displays command details.
+Retrieve all drawing commands from a custom shape path in a spreadsheet.
 
 ```javascript editor-xlsx
-// Shows total command count and first command information in cells.
+// How do I access every step in a shape's drawing sequence at once in a spreadsheet?
+
+// Collect the full list of path instructions to inspect or process a shape's outline in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("star5", 60 * 36000, 60 * 36000, fill, stroke, 3, 0, 2, 0);
 let geometry = shape.GetGeometry();
 let path = geometry.GetPath(0);

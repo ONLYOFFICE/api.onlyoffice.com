@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get description of a pivot table.
+Read the description text of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get pivot table description.
+// How do I check or update the description stored on a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its description.
+// Set a custom description on a pivot table and confirm the change by reading it back in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

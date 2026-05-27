@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a theme of the current slide.
+Get a theme of the current slide in a presentation.
 
 ```javascript editor-pptx
-// How to return a theme of the slide.
+// Retrieve the slide theme using GetTheme and modify its color scheme.
 
-// Get a slide, get its theme and its properties.
+// Apply the new theme color scheme and display a chart with the updated colors.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -52,5 +52,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

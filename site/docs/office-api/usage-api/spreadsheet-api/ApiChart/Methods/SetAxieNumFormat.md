@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the axis values.
+Apply a custom number format to the values shown on a chart axis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to format numbers of the axis.
+// How do I control how numbers are displayed on a chart axis in a spreadsheet?
 
-// Apply number format for the chart axis using an expression.
+// Format axis values with a specific pattern to improve chart readability in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -45,8 +45,8 @@ worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
 chart.SetAxieNumFormat("0.00", "left");
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```

@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the straight-line depreciation of an asset for one period.
+Calculate the straight-line depreciation of an asset for one period.
 
 ```javascript editor-xlsx
-// How to return the straight-line depreciation of an asset.
+// The SLN function returns depreciation based on initial cost, salvage value, and asset life.
 
-// Use a function to get the straight-line depreciation of an asset.
+// Get the depreciation amount and place it in cell A1.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to remove the specified series from the current chart.
+Delete a data series from a chart by its position in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete series using indices. 
+// How do I remove one of the data series from a chart in a spreadsheet?
 
-// Remove seria from the chart using idex number.
+// Strip an unwanted series out of a chart to simplify its data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -44,7 +44,7 @@ worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
 chart.RemoveSeria(1);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 0, false);
 worksheet.GetRange("A5").SetValue("The Estimated Costs series was removed from the current chart.");
 ```

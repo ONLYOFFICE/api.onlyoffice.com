@@ -22,15 +22,15 @@ boolean
 
 ## Example
 
-This example shows how to get the lock value for the specified lock type of the drawing.
+Retrieve the protection setting of a drawing in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know a lock type of a drawing.
+// How do I check whether a specific restriction is enabled on a drawing in a spreadsheet?
 
-// Set a drawing's lock type and display it in the worksheet.
+// Verify that a drawing is locked against a particular action in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 drawing.SetSize(120 * 36000, 70 * 36000);

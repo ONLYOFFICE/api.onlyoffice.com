@@ -15,6 +15,10 @@
     gap: 8px;
 }
 
+.ToolbarGroupRight {
+    margin-left: auto;
+}
+
 .Label {
     font-size: 13px;
     font-weight: 500;
@@ -37,6 +41,8 @@
     text-align: left;
     color: var(--ifm-font-color-base);
     transition: all var(--ifm-transition-fast) ease;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .SelectTrigger:hover {
@@ -45,16 +51,17 @@
 
 .SelectTrigger:focus-visible {
     border-color: var(--ifm-color-primary);
+    outline: none;
 }
 
 .SelectContent {
     z-index: 1500;
-}
-
-.SelectPopup {
     background-color: var(--ifm-dropdown-background-color);
     border-radius: var(--ifm-global-radius);
     box-shadow: var(--ifm-global-shadow-md);
+}
+
+.SelectPopup {
     padding: 0.5rem;
     min-width: 130px;
 }
@@ -70,13 +77,19 @@
     cursor: default;
 }
 
-.SelectOption:hover, .SelectOption[data-selected] {
+.SelectOption:hover, .SelectOption[data-state="checked"], .SelectOption[data-highlighted] {
     background-color: var(--ifm-dropdown-hover-background-color);
     color: var(--ifm-dropdown-link-color);
 }
 
 .SelectOption:focus-visible {
     outline: none;
+}
+
+@supports (-moz-appearance: none) {
+    .SelectOption:focus {
+        outline: none;
+    }
 }
 
 .SelectIcon {
@@ -109,6 +122,78 @@
     width: var(--dropdown-icon-width);
     flex-shrink: 0;
     transform: rotate(180deg);
+}
+
+/* Settings Button */
+.SettingsButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    cursor: pointer;
+    color: var(--ifm-color-emphasis-600);
+    transition: all var(--ifm-transition-fast) ease;
+}
+
+.SettingsButton:hover {
+    border-color: var(--ifm-color-primary-dark);
+    color: var(--ifm-color-primary-dark);
+}
+
+html[data-theme='dark'] .SettingsButton:hover {
+    border-color: var(--ifm-color-primary-light);
+    color: var(--ifm-color-primary-light);
+}
+
+.SettingsButtonActive {
+    color: var(--ifm-color-primary);
+    background: color-mix(in srgb, var(--ifm-color-primary) 8%, transparent);
+    border-color: color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+}
+
+.SettingsButton.SettingsButtonActive:hover {
+    background: color-mix(in srgb, var(--ifm-color-primary) 15%, transparent);
+}
+
+/* Settings Form */
+.SettingsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.SettingsLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ifm-color-emphasis-700);
+}
+
+.SettingsInput {
+    padding: 8px 12px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+    background: var(--ifm-background-color);
+    color: var(--ifm-font-color-base);
+    font-size: 13px;
+    font-family: var(--ifm-font-family-monospace);
+    transition: border-color var(--ifm-transition-fast) ease;
+}
+
+.SettingsInput:focus {
+    outline: none;
+    border-color: var(--ifm-color-primary);
+}
+
+.SettingsInput::placeholder {
+    color: var(--ifm-color-emphasis-400);
 }
 
 /* Radix UI AlertDialog Styles */
@@ -179,27 +264,6 @@
     }
 }
 
-.RunButton {
-    padding: 6px 16px;
-    background: var(--ifm-color-primary);
-    color: white;
-    border: none;
-    border-radius: var(--ifm-global-radius);
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--ifm-transition-fast) ease;
-    margin-left: auto;
-}
-
-.RunButton:hover {
-    background: var(--ifm-color-primary-dark);
-}
-
-.RunButton:active {
-    background: var(--ifm-color-primary-darker);
-}
-
 .ConfirmButton,
 .KeepButton,
 .CancelButton {
@@ -219,6 +283,10 @@
 
 .ConfirmButton:hover {
     background: var(--ifm-color-primary-dark);
+}
+
+html[data-theme='dark'] .ConfirmButton:hover {
+    background: var(--ifm-color-primary-light);
 }
 
 .ConfirmButton:active {
@@ -244,6 +312,11 @@
     background: var(--ifm-hover-overlay);
 }
 
+.CancelButton:active {
+    transform: scale(0.97);
+    background: var(--ifm-color-emphasis-200);
+}
+
 @media (max-width: 767px) {
     .Toolbar {
         gap: 12px;
@@ -252,6 +325,10 @@
 
     .ToolbarGroup {
         gap: 6px;
+    }
+
+    .ToolbarGroupRight {
+        margin-left: unset;
     }
 
     .Label {

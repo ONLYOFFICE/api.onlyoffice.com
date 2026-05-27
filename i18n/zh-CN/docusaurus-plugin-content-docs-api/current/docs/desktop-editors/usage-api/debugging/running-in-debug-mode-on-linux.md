@@ -19,7 +19,7 @@ sidebar_label: Linux
 
 结果如下：
 
-![调试](/assets/images/desktop/debugging.png)
+![调试](/assets/images/desktop/debugging.png#gh-light-mode-only)![调试](/assets/images/desktop/debugging.dark.png#gh-dark-mode-only)
 
 ## 运行应用程序
 

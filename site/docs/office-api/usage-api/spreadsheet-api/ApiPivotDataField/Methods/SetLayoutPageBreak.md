@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether to insert a page break after each field.
 
-## Syntax
-
-```javascript
-expression.SetLayoutPageBreak(insert);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| insert | Required | boolean |  | Specifies whether to insert a page break after each field. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutPageBreak](../../ApiPivotField/Methods/SetLayoutPageBreak.md).
 
 ## Example
 
-This example shows how to set a layout page break of a pivot field.
+Insert a page break after each pivot field group when printing in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout page break.
+// How do I make each pivot field group start on a new page in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout page break of a specified pivot.
+// Ensure every group in a pivot field prints on its own page by enabling page breaks in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

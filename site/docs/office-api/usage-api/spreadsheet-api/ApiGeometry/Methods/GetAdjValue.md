@@ -22,10 +22,13 @@ number \| null
 
 ## Example
 
-Creates adjustable custom geometry with guides and connection points.
+Read the current value of a named adjustment handle on a custom shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I retrieve the numeric value stored in a shape adjustment control in a spreadsheet?
+
+// Inspect how far a particular adjustment handle has been moved on a custom shape in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);
@@ -43,8 +46,8 @@ path.LineTo("r", "b");
 path.LineTo("l", "b");
 path.LineTo("x1", "hd2");
 path.Close();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 9, 0, 2, 2);
 shape.SetGeometry(customGeometry);
 ```

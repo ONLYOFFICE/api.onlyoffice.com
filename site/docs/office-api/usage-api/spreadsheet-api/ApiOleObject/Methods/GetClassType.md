@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Read the class type of an embedded object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiOleObject.
+// How do I find out what class type an embedded object has in a spreadsheet?
 
-// Get a class type of ApiOleObject and display it in the worksheet.
+// Inspect the type label of an embedded object to identify its category in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -37,5 +37,4 @@ let oleObject = worksheet.AddOleObject(
 );
 let type = oleObject.GetClassType();
 worksheet.GetRange('A1').SetValue('Class type: ' + type);
-
 ```

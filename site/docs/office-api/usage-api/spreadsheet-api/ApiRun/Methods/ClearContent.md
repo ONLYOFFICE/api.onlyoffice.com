@@ -20,15 +20,15 @@ boolean
 
 ## Example
 
-This example clears the content from the run.
+Remove all text from a run without deleting the run itself in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a text run object, add a text to it and clear its value.
+// How do I erase the text inside a run while keeping the run in place in a spreadsheet?
 
-// Clear content of an ApiRun object.
+// Wipe a run's content so it appears empty in the final document in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

@@ -82,8 +82,11 @@ const getDocumentType = (fileType: string): string => {
   }
 };
 
-const getDocumentName = (isDemo: boolean = false, isForm: boolean = false): string => {
-  return isDemo ? (isForm ? "demo-invoice" : "demo") : "new";
+const getDocumentName = (fileType: string, isDemo: boolean = false, isForm: boolean = false): string => {
+  if (isDemo) {
+    return isForm ? "demo-invoice" : "demo";
+  }
+  return (fileType !== "pdf" || isForm) ? "new" : "blank";
 };
 
 const createDocumentConfig = (fileType: string, templateUrl: string, title?: string, isDemo: boolean = false, isForm: boolean = false): object => {
@@ -91,25 +94,26 @@ const createDocumentConfig = (fileType: string, templateUrl: string, title?: str
     fileType,
     key: `doc-${Date.now()}`,
     title: title || `Example Document.${fileType}`,
-    url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(isDemo, isForm)}.${fileType}`
+    url: templateUrl ? templateUrl : `https://static.onlyoffice.com/assets/docs/samples/${getDocumentName(fileType, isDemo, isForm)}.${fileType}`
   };
 };
 
-function deepMergePreferFirst(a: any, b: any): any {
-  if (typeof a !== "object" || a === null) return a;
-  if (typeof b !== "object" || b === null) return a;
+function deepMerge<T extends object>(target: T, ...sources: Partial<T>[]): T {
+  const result = { ...target } as T;
 
-  const result: any = Array.isArray(a) ? [...a] : { ...b, ...a };
+  for (const source of sources) {
+    for (const key in source) {
+      const targetVal = result[key];
+      const sourceVal = source[key];
 
-  for (const key in b) {
-    if (a.hasOwnProperty(key)) {
-      if (typeof a[key] === "object" && typeof b[key] === "object" && a[key] !== null && b[key] !== null) {
-        result[key] = deepMergePreferFirst(a[key], b[key]);
+      if (sourceVal && typeof sourceVal === "object" && !Array.isArray(sourceVal)) {
+        result[key] = deepMerge(
+          (targetVal && typeof targetVal === "object" ? targetVal : {}) as any,
+          sourceVal as any
+        );
       } else {
-        result[key] = a[key];
+        result[key] = sourceVal as any;
       }
-    } else {
-      result[key] = b[key];
     }
   }
 
@@ -118,7 +122,7 @@ function deepMergePreferFirst(a: any, b: any): any {
 
 const scriptId: string = "editorScript";
 
-const addScript = async (server: string, secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
+const addScript = async (secret: string, fileType: string, code: string, theme: string, templateUrl: string, zoom: number,
                          externalConfig?: code, externalScript?: OnlyOfficeEditorProps["externalScript"], isDemo: boolean = false, isForm: boolean = false): Promise<void> => {
   const scriptConfig = document.createElement("script");
   scriptConfig.id = scriptId;
@@ -134,7 +138,8 @@ const addScript = async (server: string, secret: string, fileType: string, code:
     externalConfig.editorConfig.customization.customer.logo = new URL("/assets/images/try-docs/example-logo-big.png", window.location.origin).href;
   }
 
-  const config = deepMergePreferFirst(
+  const config = deepMerge<code>(
+    externalConfig || {},
     {
       document: documentConfig,
       documentType: getDocumentType(fileType),
@@ -148,7 +153,6 @@ const addScript = async (server: string, secret: string, fileType: string, code:
         },
       },
     },
-    externalConfig
   );
 
   const token = await createJWT(config, secret);
@@ -159,24 +163,26 @@ const addScript = async (server: string, secret: string, fileType: string, code:
       window.docEditor = null;
     }
 
-    ${externalScript?.beforeDocumentReady}
-    window.onDocumentReady = function() {
-      window.connector = docEditor.createConnector();
-      connector.callCommand(() => {
-        ${code}
-      }, () => {
-      });
-      ${externalScript?.onDocumentReady}
-    };
+    (() => {
+      ${externalScript?.beforeDocumentReady}
+      window.onDocumentReady = function() {
+        window.connector = docEditor.createConnector();
+        connector.callCommand(() => {
+          ${code}
+        }, () => {
+        });
+        ${externalScript?.onDocumentReady}
+      };
 
-    var config = ${JSON.stringify(config)};
-    config.token = "${token}";
-    config.events = {
-      onDocumentReady: window.onDocumentReady,
-    };
+      const config = ${JSON.stringify(config)};
+      config.token = "${token}";
+      config.events = {
+        onDocumentReady: window.onDocumentReady,
+      };
 
-    window.docEditor = new DocsAPI.DocEditor("placeholder", config);
-    ${externalScript?.otherFunctional}
+      window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+      ${externalScript?.otherFunctional}
+    })();
   `;
 
   document.body.appendChild(scriptConfig);
@@ -218,13 +224,13 @@ const OnlyOfficeEditor: React.FC<OnlyOfficeEditorProps> = ({
         };
         scriptApi.onload = () => {
           document.documentElement.setAttribute("data-script-api-state", "2");
-          addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
+          addScript(documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
         };
 
         document.documentElement.setAttribute("data-script-api-state", "1");
         document.body.appendChild(scriptApi);
       } else {
-        addScript(documentServer, documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
+        addScript(documentServerSecret, fileType, code, colorMode, templateUrl, zoom, config, externalScript, isDemo, isForm);
       }
     }
 

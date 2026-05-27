@@ -1,4 +1,4 @@
-# 更新插件
+# UpdatePlugin
 
 使用指定的插件配置更新插件。
 
@@ -8,17 +8,17 @@
 expression.UpdatePlugin(config);
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **说明** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| config | 选填 | object |  | 插件的[配置对象](https://api.onlyoffice.com/zh-CN/docs/plugin-and-macros/structure/configuration/)。 |
+| config | 可选 | object |  | 插件 [config](../../../../../docs/plugin-and-macros/structure/configuration/configuration.md)。 |
 
 ## 返回值
 
-object（对象）
+object
 
 ## 示例
 

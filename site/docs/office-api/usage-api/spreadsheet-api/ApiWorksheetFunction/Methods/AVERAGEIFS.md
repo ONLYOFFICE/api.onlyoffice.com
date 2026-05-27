@@ -17,7 +17,8 @@ expression.AVERAGEIFS(arg1, arg2, arg3, arg4, arg5);
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The range of cells which will be evaluated. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | The first condition or criteria in the form of a number, expression, or text that defines which cells will be used to find the average. |
 | arg3 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | The actual cells to be used to find the average. If omitted, the cells in the range are used. |
-| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | Up to 127 additional conditions or criteria in the form of a number, expression, or text that defines which cells will be used to find the average. These arguments are optional. |
+| arg4 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string |  | Up to 127 additional conditions or criteria in the form of a number, expression, or text that defines which cells will be used to find the average.
+These arguments are optional. |
 | arg5 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) |  | Up to 127 actual ranges to be used to find the average. If omitted, the cells in the range are used. These arguments are optional. |
 
 ## Returns
@@ -26,12 +27,12 @@ number
 
 ## Example
 
-This example shows how to find the average (arithmetic mean) for the cells specified by a given set of conditions or criteria.
+Average only the cells that satisfy multiple conditions at once in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find an average if list of conditions are met.
+// Calculate the mean of values matching several criteria simultaneously in a spreadsheet.
 
-// Use function to get an average (arithmetic mean) of the cells if the set of requirements is satisfied.
+// Apply more than one filter to a dataset and compute the mean of qualifying rows in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

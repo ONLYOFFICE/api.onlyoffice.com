@@ -22,10 +22,13 @@ This method doesn't return any data.
 
 ## Example
 
-Creates a custom shape and adds it to a slide.
+Define the vertical dimension of a custom shape's drawing area in a presentation.
 
 ```javascript editor-pptx
-// Applies custom geometry with specific fill and stroke properties.
+// How do I control the vertical size of a shape path in a presentation?
+
+// Adjust the height value of a geometry path in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -40,8 +43,8 @@ path.LineTo(55 * 36000, 70 * 36000);
 path.LineTo(100 * 36000, 100 * 36000);
 path.LineTo(0, 100 * 36000);
 path.Close();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 shape.SetPosition(2000000, 1000000);

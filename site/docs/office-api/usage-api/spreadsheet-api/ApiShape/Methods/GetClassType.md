@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Read the type label of a shape and write it into a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiShape.
+// How do I find out what type a shape object is in a spreadsheet?
 
-// Get a class type of ApiShape and display it in the worksheet.
+// Confirm the category of a shape by printing its type label to the sheet in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 2, 3 * 36000);
 let classType = shape.GetClassType();

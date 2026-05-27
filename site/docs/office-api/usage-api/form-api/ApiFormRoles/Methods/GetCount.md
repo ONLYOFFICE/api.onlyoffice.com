@@ -20,10 +20,14 @@ number
 
 ## Example
 
-This example shows how to get the number of roles.
+Count how many user roles are set up for your form in a document.
 
-```javascript editor-pdf
-let doc = editor.GetDocument();
+```javascript editor-forms
+// How do I find out how many roles exist in a document?
+
+// Check the total number of roles that have been created in a document.
+
+let doc = Api.GetDocument();
 let roles = doc.GetFormRoles();
 roles.Add("Customer");
 roles.Add("Seller");
@@ -34,5 +38,4 @@ roles.GetAllRoles().forEach(role => {
 });
 let numRoles = roles.GetCount();
 paragraph.AddText("Number of roles: " + numRoles);
-
 ```

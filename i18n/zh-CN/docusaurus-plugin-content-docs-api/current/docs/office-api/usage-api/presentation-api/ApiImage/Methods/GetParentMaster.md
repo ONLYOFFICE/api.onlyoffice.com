@@ -1,0 +1,34 @@
+# GetParentMaster
+
+返回绘图的父幻灯片母版。
+
+继承自 [ApiDrawing.GetParentMaster](../../ApiDrawing/Methods/GetParentMaster.md)。
+
+## 示例
+
+查找演示文稿中包含形状的幻灯片母版。
+
+```javascript editor-pptx
+// How do I access the master slide a shape belongs to in a presentation?
+
+// Retrieve the parent master for a shape in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+const master = presentation.GetMaster(0);
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+shape.SetSize(300 * 36000, 130 * 36000);
+master.AddObject(shape);
+
+const parent = shape.GetParentMaster();
+const sType = parent.GetClassType();
+slide.RemoveAllObjects();
+const docContent = shape.GetDocContent();
+const paragraph = docContent.GetElement(0);
+paragraph.SetJc("left");
+paragraph.AddText("Class type of the shape parent = " + sType);
+```

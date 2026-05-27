@@ -20,19 +20,19 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Check the class type returned by a slide.
 
 ```javascript editor-pptx
-// How to get a class type of ApiSlide.
+// Retrieve the class type using the GetClassType method and display in a shape.
 
-// Retrieve class type of ApiSlide object and insert it to the slide.
+// Output the class type string for the slide object.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
@@ -43,5 +43,4 @@ const paragraph = docContent.GetElement(0);
 const classType = slide.GetClassType();
 paragraph.AddText("Class Type = " + classType);
 slide.AddObject(shape);
-
 ```

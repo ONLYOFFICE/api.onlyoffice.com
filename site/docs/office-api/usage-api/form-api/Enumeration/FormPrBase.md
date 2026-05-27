@@ -17,12 +17,11 @@ Object
 | tag | string | The form tag. |
 | tip | string | The form tip text. |
 
-
 ## Example
 
-This example creates a text form with the common form properties.
+Create a text form with the common form properties.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to create a text form using its base properties.
 
 // Create the base properties and apply them to the ApiTextForm object.
@@ -34,5 +33,4 @@ let formPrBase = {
 	"placeholder": "First name"
 };
 let textForm = Api.CreateTextForm(formPrBase);
-
 ```

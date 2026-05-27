@@ -1,0 +1,40 @@
+# SetFlipH
+
+设置当前绘图的水平翻转。
+
+## 语法
+
+```javascript
+expression.SetFlipH(bFlip);
+```
+
+`expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bFlip | 必需 | boolean |  | 指定图形是否水平翻转。 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+在电子表格中将绘图从左到右镜像。
+
+```javascript editor-xlsx
+// How do I flip a drawing so it faces the opposite horizontal direction in a spreadsheet?
+
+// Reverse a shape along its vertical axis to produce a horizontal mirror image in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = worksheet.AddShape("cube", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
+drawing.SetFlipH(true);
+let flip = drawing.GetFlipH();
+worksheet.SetColumnWidth(0, 30);
+worksheet.GetRange("A1").SetValue("Drawing is flipped horizontally: " + flip);
+```

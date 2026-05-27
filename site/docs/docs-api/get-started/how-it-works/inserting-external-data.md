@@ -4,23 +4,23 @@ sidebar_position: -6
 
 # Inserting external data
 
-The steps below explain the process of inserting data into the spreadsheet by an external link in ONLYOFFICE Docs.
+The figure and steps below explain how data from one spreadsheet is inserted into another via an external link in ONLYOFFICE Docs.
 
 ![Inserting external data](/assets/images/editor/insert-external-data.svg)
 
-1. The user copies the cell value to the clipboard from the **document editor** of the source spreadsheet. At the same time, the special data is also copied.
-2. The user inserts the copied data into the **document editor** of the destination spreadsheet.
-3. The **document editor** requests a link to the source file by sending the data to the **document manager**.
-4. The **document manager** sends the source spreadsheet link to the **document editor**.
-5. The **document editor** sends a request to the **document editing service** for spreadsheet downloading.
+1. The user copies a cell value to the clipboard from the **document editor** of the source spreadsheet. Along with the visible content, special metadata is also copied.
+2. The user pastes the copied data into the **document editor** of the destination spreadsheet.
+3. The **document editor** sends the metadata to the **document manager** to request a link to the source file.
+4. The **document manager** returns the source spreadsheet link to the **document editor**.
+5. The **document editor** sends a download request to the **document editing service**.
 6. The **document editing service** downloads the source spreadsheet from the **document storage service**.
-7. The **document editing service** sends all the necessary data to display in the **document editor** of the destination spreadsheet.
+7. The **document editing service** sends the necessary data back to the **document editor** of the destination spreadsheet for display.
 
 ## How this can be done in practice
 
-1. Create a source spreadsheet from where the data will be copied.
+1. Create the source spreadsheet from which data will be copied.
 
-2. Specify the [document.referenceData](../../usage-api/config/document/document.md#referencedata) parameter in the initialization config of the source spreadsheet:
+2. Specify the [`document.referenceData`](../../usage-api/config/document/document.md#referencedata) parameter in the initialization config of the source spreadsheet:
 
    ``` ts
    const config = {
@@ -35,15 +35,15 @@ The steps below explain the process of inserting data into the spreadsheet by an
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-3. When the user copies the data from the source spreadsheet, the clipboard receives a list of the following values:
+3. When the user copies data from the source spreadsheet, the clipboard receives:
 
-   - the sheet name and the range from where the data was copied which will be used later to refresh the copied data;
-   - the [document.referenceData](../../usage-api/config/document/document.md#referencedata) object which will be used to check the availability of insering data into the destination spreadsheet by the external link;
-   - the file name which will be used to display a formula in the editor.
+   - the sheet name and cell range — used later to refresh the copied data;
+   - the [`document.referenceData`](../../usage-api/config/document/document.md#referencedata) object — used to verify that external-link insertion is available in the destination spreadsheet;
+   - the file name — used to display the formula in the editor.
 
-4. Create a destination spreadsheet where the external data will be inserted.
+4. Create the destination spreadsheet where the external data will be inserted.
 
-5. Specify the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet for the *Paste link* and *Update values* buttons to be displayed:
+5. Specify the [`onRequestReferenceData`](../../usage-api/config/events.md#onrequestreferencedata) event handler in the initialization config of the destination spreadsheet. This enables the *Paste link* and *Update values* buttons:
 
    ``` ts
    const config = {
@@ -55,43 +55,49 @@ The steps below explain the process of inserting data into the spreadsheet by an
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-6. If the clipboard has the source spreadsheet data specified in step 3, and the destination spreadsheet has the *onRequestReferenceData* event handler in the initialization config, then the *Paste link* button is displayed in the dialog box.
+6. If the clipboard contains the source spreadsheet metadata from step 3, and the destination spreadsheet config includes the `onRequestReferenceData` handler, the *Paste link* button appears in the paste dialog.
 
-   <img alt="Paste link" src="/assets/images/editor/paste-link.png" width="550px" />
+   ![Paste link](/assets/images/editor/paste-link.png#gh-light-mode-only)![Paste link](/assets/images/editor/paste-link.dark.png#gh-dark-mode-only)
 
-7. When the user clicks the *Paste link* button, the formula is inserted into the current cell, and the *referenceData* object is saved to the destination file. The inserted formula is displayed as follows:
+7. When the user clicks *Paste link*, a formula is inserted into the current cell and the `referenceData` object is saved to the destination file. The formula has the following format:
 
    ``` txt
    ='[fileName]sheetName'!cell
    ```
 
-   | Parameter | Type   | Example   | Description                                    |
-   | --------- | ------ | --------- | ---------------------------------------------- |
-   | cell      | string | E5        | The cell from where the data was copied.       |
-   | fileName  | string | new\.xlsx | The file name from where the data was copied.  |
-   | sheetName | string | Sheet1    | The sheet name from where the data was copied. |
+   | Parameter | Type   | Example   | Description                                     |
+   | --------- | ------ | --------- | ----------------------------------------------- |
+   | cell      | string | E5        | The cell from which the data was copied.        |
+   | fileName  | string | new\.xlsx | The file name from which the data was copied.   |
+   | sheetName | string | Sheet1    | The sheet name from which the data was copied.  |
 
-   The data update request to the file will be sent to the file URL.
+   The data update request is sent to the source file URL.
 
-   > Please note that you can enter a formula of the specified format in the cell, and the data from the extrenal file will be inserted as well. But in this case, the *onRequestReferenceData* event will be executed only with the *path* parameter.
+   :::note
+   You can also type a formula in this format manually — the external data will be inserted the same way. However, in that case the `onRequestReferenceData` event fires with only the `path` parameter.
+   :::
 
-8. When the user is trying to refresh data from the source file by clicking the *Update values* button in the *External links* dialog box of the *Data* tab, the [onRequestReferenceData](../../usage-api/config/events.md#onrequestreferencedata) event is called. An object with the unique file data received from the source file, the file path or name, and the file URL are sent in the *data* parameter.
+8. When the user clicks the *Update values* button in the *External links* dialog (on the *Data* tab) to refresh data from the source file, the [`onRequestReferenceData`](../../usage-api/config/events.md#onrequestreferencedata) event fires. The `data` parameter contains an object with the unique file data from the source file, the file path or name, and the file URL.
 
-   > To send the data to the *setReferenceData* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* or *link* parameters are used.
+   :::note
+   To send data to the [`setReferenceData`](../../usage-api/methods.md#setreferencedata) method, search for the file by `referenceData` first. If that field is missing or the file cannot be found, fall back to the `path` or `link` parameters.
+   :::
 
    ``` ts
    function onRequestReferenceData(event) {
-     const link = event.data.link
-     const referenceData = event.data.referenceData
-     const path = event.data.path
-   };
+     const link = event.data.link;
+     const referenceData = event.data.referenceData;
+     const path = event.data.path;
+   }
    ```
 
-<img alt="Update values" src="/assets/images/editor/update-values.png" width="700px" />
+   ![Update values](/assets/images/editor/update-values.png#gh-light-mode-only)![Update values](/assets/images/editor/update-values.dark.png#gh-dark-mode-only)
 
-9. In order to refresh the data from the source file, the [setReferenceData](../../usage-api/methods.md#setreferencedata) method must be called. When calling this method, the token must be added to validate the parameters.
+9. To refresh the data, call the [`setReferenceData`](../../usage-api/methods.md#setreferencedata) method. The call must include a [`token`](./security.md) to validate the parameters.
 
-   > Please note that this method is executed only when the user has permissions to the source file.
+   :::note
+   This method only executes when the user has permissions to the source file.
+   :::
 
    ``` ts
    docEditor.setReferenceData({
@@ -107,31 +113,25 @@ The steps below explain the process of inserting data into the spreadsheet by an
    });
    ```
 
-   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./inserting-external-data.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
 ## Working with external links
 
-1. Specify the event handler for the *Open source* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to open an external link by clicking the *Open source* button, the [onRequestOpen](../../usage-api/config/events.md#onrequestopen) event is called.
+1. Specify the [`onRequestOpen`](../../usage-api/config/events.md#onrequestopen) event handler in the initialization config for the *Open source* button to appear. When the user clicks *Open source* to open an external link, this event fires.
 
-   To open the editor with the external file referenced by the *path* or *referenceData* parameters in a new tab, you must pass a link to this tab by calling the [window.open](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) method with the *path* and *windowName* parameters.
+   The `data` parameter contains an object with the unique file data, the file path, and a new browser tab name. To open the referenced external file in a new tab, call [`window.open`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open) with the source URL and `windowName`.
 
-   An object with the unique file data, the file path, and a new browser tab name are sent in the *data* parameter.
-
-   <img alt="open-source" src="/assets/images/editor/open-source.png" width="498px" />
+   ![Open source](/assets/images/editor/open-source.png#gh-light-mode-only)![Open source](/assets/images/editor/open-source.dark.png#gh-dark-mode-only)
 
    Example:
 
    ``` ts
    function onRequestOpen(event) {
-     const path = event.data.path
-     const referenceData = event.data.referenceData
-     const windowName = event.data.windowName
-     window.open({
-       path: "https://example.com/external-url.docx",
-       windowName: event.data.windowName,
-     })
-   };
-   
+     const path = event.data.path;
+     const referenceData = event.data.referenceData;
+     const windowName = event.data.windowName;
+     window.open("https://example.com/external-url.docx", windowName);
+   }
+
    const config = {
      events: {
        onRequestOpen,
@@ -141,25 +141,24 @@ The steps below explain the process of inserting data into the spreadsheet by an
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](./how-it-works.md) section to find out more on ONLYOFFICE Docs service client-server interactions.
 
-2. Specify the event handler for the *Change source* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to change an external link by clicking the *Change source* button, the [onRequestReferenceSource](../../usage-api/config/events.md#onrequestreferencesource) event is called.
+2. Specify the [`onRequestReferenceSource`](../../usage-api/config/events.md#onrequestreferencesource) event handler in the initialization config for the *Change source* button to appear. When the user clicks *Change source* to change an external link, this event fires. If the event is not declared, the *Change source* button will not appear.
 
-   An object with the unique file data and the file path or name are sent in the *data* parameter.
+   The `data` parameter contains an object with the unique file data and the file path or name. When the button is clicked, call the [`setReferenceSource`](../../usage-api/methods.md#setreferencesource) method to change the source of the external data. The call must include a [`token`](./security.md) to validate the parameters.
 
-   When the button is clicked, you must call the [setReferenceSource](../../usage-api/methods.md#setreferencesource) method to change a source of the external data. When calling this method, the token must be added to validate the parameters. If the event is not declared, the *Change source* button will not be displayed.
+   :::note
+   To send data to the `setReferenceSource` method, search for the file by `referenceData` first. If that field is missing or the file cannot be found, fall back to the `path` parameter.
+   :::
 
-   > To send the data to the *setReferenceSource* method, it is recommended to search for the file by the *referenceData* parameter first. If there is no such a field or a file cannot be found, then the *path* parameter is used.
-   
-   <img alt="Change source" src="/assets/images/editor/change-source.png" width="498px" />
+   ![Change source](/assets/images/editor/change-source.png#gh-light-mode-only)![Change source](/assets/images/editor/change-source.dark.png#gh-dark-mode-only)
 
    Example:
 
    ``` ts
-   function onRequestReferenceSource() {
-     const referenceData = event.data.referenceData
-     const path = event.data.path
-   
+   function onRequestReferenceSource(event) {
+     const referenceData = event.data.referenceData;
+     const path = event.data.path;
+
      docEditor.setReferenceSource({
        fileType: "xlsx",
        key: "Khirz6zTPdfd7",
@@ -170,9 +169,9 @@ The steps below explain the process of inserting data into the spreadsheet by an
        },
        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlVHlwZSI6Inhsc3giLCJwYXRoIjoic2FtcGxlLnhsc3giLCJyZWZlcmVuY2VEYXRhIjp7ImZpbGVLZXkiOiJCQ0ZBMkNFRCIsImluc3RhbmNlSWQiOiJodHRwczovL2V4YW1wbGUuY29tIn0sInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQueGxzeCJ9.UXosmM-E_Cu9j9QGSlcj9FEoSu5m-zCS4b6FxO_2k7w",
        url: "https://example.com/url-to-example-document.xlsx",
-     })
-   };
-   
+     });
+   }
+
    const config = {
      events: {
        onRequestReferenceSource,

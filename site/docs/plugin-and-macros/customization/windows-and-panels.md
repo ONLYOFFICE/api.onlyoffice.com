@@ -20,15 +20,15 @@ To create a modal window / panel for the plugin:
 
    **Parameters**:
 
-   | Name                     | Type            | Example                                                                                                            | Description                                                                                                                                                                                                                                                               |
-   | ------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | variations               | `object`        |                                                                                                                    | The modal window / panel settings.                                                                                                                                                                                                                                        |
-   | variations.url           | `string`        | "settings.html"                                                                                                    | The modal window / panel entry point, i.e. an HTML file which connects the *plugin.js* file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../structure/entry-point.md) section for the detailed information. |
-   | variations.description   | `string`        | "Description"                                                                                                      | The description for the modal window / panel.                                                                                                                                                                                                                             |
-   | variations.type          | `string`        | "window"                                                                                                           | The plugin [type](../structure/configuration/configuration.md#variationstype). Use the **"window"** value for modal windows, **"panel"** for left panels and **"panelRight"** for right panels.                                                                                     |
-   | variations.size          | `number[]`      | [343, 122]                                                                                                         | The modal window size. This parameter is used only for modal windows.                                                                                                                                                                                                     |
-   | variations.buttons       | `Button[]`      | [\{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | The list of skinnable plugin buttons used in the modal windows. This parameter is used only for modal windows.                                                                                                                                                            |
-   | variations.isActivated   | `boolean`       | false                                                                                                              | Specifies whether the created panel will be collapsed (**false**) or expanded (**true**). The default value is **true**. This parameter is only available since version 8.3 and if the `variations.type` parameter is "panel" or "panelRight".                        |
+   | Name                   | Type       | Example                                                                                                              | Description                                                                                                                                                                                                                                                    |
+   | ---------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | variations             | `object`   |                                                                                                                      | The modal window / panel settings.                                                                                                                                                                                                                             |
+   | variations.url         | `string`   | "settings.html"                                                                                                      | The modal window / panel entry point, i.e. an HTML file which connects the `plugin.js` file (the base file needed for work with plugins) and launches the plugin code. See the [index.html](../structure/entry-point.md) section for the detailed information. |
+   | variations.description | `string`   | "Description"                                                                                                        | The description for the modal window / panel.                                                                                                                                                                                                                  |
+   | variations.type        | `string`   | "window"                                                                                                             | The plugin [type](../structure/configuration/configuration.md#variationstype). Use the `"window"` value for modal windows, `"panel"` for left panels and `"panelRight"` for right panels.                                                                |
+   | variations.size        | `number[]` | [343, 122]                                                                                                           | The modal window size. This parameter is used only for modal windows.                                                                                                                                                                                          |
+   | variations.buttons     | `Button[]` | [\{ "text": "Cancel", "primary": false, "isviewer": false, "textLocale": \{ "fr": "Annuler", "es": "Cancelar" \} \}] | The list of skinnable plugin buttons used in the modal windows. This parameter is used only for modal windows.                                                                                                                                                 |
+   | variations.isActivated | `boolean`  | false                                                                                                                | Specifies whether the created panel will be collapsed (`false`) or expanded (`true`). The default value is `true`. This parameter is only available since version 8.3 and if the `variations.type` parameter is "panel" or "panelRight".                 |
 
    **Example**:
 
@@ -75,9 +75,9 @@ To show the plugin modal window / panel in the editor, use the **show** method.
 
 **Parameters**:
 
-| Name        | Type      | Description                        |
-| ----------- | --------- | ---------------------------------- |
-| variation   | `variation` | The modal window / panel settings. |
+| Name      | Type        | Description                        |
+| --------- | ----------- | ---------------------------------- |
+| variation | `variation` | The modal window / panel settings. |
 
 **Returns**: This method doesn't return any data.
 
@@ -87,14 +87,14 @@ To show the plugin modal window / panel in the editor, use the **show** method.
 newWindow.show(variation);
 ```
 
-You can also use the **ShowWindow** method of *window.Asc.plugin.executeMethod*.
+You can also use the **ShowWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name        | Type      | Description                        |
-| ----------- | --------- | ---------------------------------- |
-| frameId     | `string`  | The frame ID.                      |
-| variation   | `variation` | The modal window / panel settings. |
+| Name      | Type        | Description                        |
+| --------- | ----------- | ---------------------------------- |
+| frameId   | `string`    | The frame ID.                      |
+| variation | `variation` | The modal window / panel settings. |
 
 **Returns**: This method doesn't return any data.
 
@@ -124,13 +124,13 @@ window.Asc.plugin.executeMethod("ShowWindow", ["iframe_asc.{BE5CBF95-C0AD-4842-B
 
 ## Activating a window
 
-To activate (move forward) the plugin window / panel, use the **ActivateWindow** method of *window.Asc.plugin.executeMethod*.
+To activate (move forward) the plugin window / panel, use the **ActivateWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name      | Type   | Description   |
-| --------- | ------ | ------------- |
-| frameId   | `string` | The frame ID. |
+| Name    | Type     | Description   |
+| ------- | -------- | ------------- |
+| frameId | `string` | The frame ID. |
 
 **Returns**: This method doesn't return any data.
 
@@ -144,15 +144,15 @@ window.Asc.plugin.executeMethod("ActivateWindow", ["iframe_asc.{BE5CBF95-C0AD-48
 
 ### MouseMoveWindow
 
-You can send an event to the plugin when the mouse button is moved inside the plugin iframe by using the **MouseMoveWindow** method of *window.Asc.plugin.executeMethod*.
+You can send an event to the plugin when the mouse button is moved inside the plugin iframe by using the **MouseMoveWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name      | Type   | Description       |
-| --------- | ------ | ----------------- |
-| frameId   | `string` | The frame ID.     |
-| x         | `number` | The X coordinate. |
-| y         | `number` | The Y coordinate. |
+| Name    | Type     | Description       |
+| ------- | -------- | ----------------- |
+| frameId | `string` | The frame ID.     |
+| x       | `number` | The X coordinate. |
+| y       | `number` | The Y coordinate. |
 
 **Returns**: This method doesn't return any data.
 
@@ -164,15 +164,15 @@ window.Asc.plugin.executeMethod("MouseMoveWindow", ["iframe_asc.{BE5CBF95-C0AD-4
 
 ### MouseUpWindow
 
-You can send an event to the plugin when the mouse button is released inside the plugin iframe by using the **MouseUpWindow** method of *window.Asc.plugin.executeMethod*.
+You can send an event to the plugin when the mouse button is released inside the plugin iframe by using the **MouseUpWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name      | Type   | Description       |
-| --------- | ------ | ----------------- |
-| frameId   | `string` | The frame ID.     |
-| x         | `number` | The X coordinate. |
-| y         | `number` | The Y coordinate. |
+| Name    | Type     | Description       |
+| ------- | -------- | ----------------- |
+| frameId | `string` | The frame ID.     |
+| x       | `number` | The X coordinate. |
+| y       | `number` | The Y coordinate. |
 
 **Returns**: This method doesn't return any data.
 
@@ -184,16 +184,16 @@ window.Asc.plugin.executeMethod("MouseUpWindow", ["iframe_asc.{BE5CBF95-C0AD-484
 
 ### ResizeWindow
 
-You can resize the plugin modal window by using the **ResizeWindow** method of *window.Asc.plugin.executeMethod*.
+You can resize the plugin modal window by using the **ResizeWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name      | Type   | Description             |
-| --------- | ------ | ----------------------- |
-| frameId   | `string` | The frame ID.           |
-| size      | `number` | The frame size.         |
-| minSize   | `number` | The frame minimum size. |
-| maxSize   | `number` | The frame maximum size. |
+| Name    | Type     | Description             |
+| ------- | -------- | ----------------------- |
+| frameId | `string` | The frame ID.           |
+| size    | `number` | The frame size.         |
+| minSize | `number` | The frame minimum size. |
+| maxSize | `number` | The frame maximum size. |
 
 **Returns**: This method doesn't return any data.
 
@@ -209,14 +209,14 @@ You can also use the **resizeWindow** method to change the window size updating 
 
 **Parameters**:
 
-| Name     | Type   | Description                |
-| -------- | ------ | -------------------------- |
-| width    | `number` | The window width.          |
-| height   | `number` | The window height.         |
-| minW     | `number` | The window minimum width.  |
-| minH     | `number` | The window minimum height. |
-| maxW     | `number` | The window maximum width.  |
-| maxH     | `number` | The window maximum height. |
+| Name   | Type     | Description                |
+| ------ | -------- | -------------------------- |
+| width  | `number` | The window width.          |
+| height | `number` | The window height.         |
+| minW   | `number` | The window minimum width.  |
+| minH   | `number` | The window minimum height. |
+| maxW   | `number` | The window maximum width.  |
+| maxH   | `number` | The window maximum height. |
 
 **Returns**: This method doesn't return any data.
 
@@ -234,10 +234,10 @@ You can send a message to the modal window / panel by using the **command** meth
 
 **Parameters**:
 
-| Name          | Type   | Description                                                      |
-| ------------- | ------ | ---------------------------------------------------------------- |
-| messageName   | `string` | The message name.                                                |
-| data          | `string` | The message data (this data will be sent to the event callback). |
+| Name        | Type     | Description                                                      |
+| ----------- | -------- | ---------------------------------------------------------------- |
+| messageName | `string` | The message name.                                                |
+| data        | `string` | The message data (this data will be sent to the event callback). |
 
 **Returns**: This method doesn't return any data.
 
@@ -253,10 +253,10 @@ You can send a message to the plugin from the modal window / panel by using the 
 
 **Parameters**:
 
-| Name   | Type   | Description     |
-| ------ | ------ | --------------- |
-| name   | `string` | The event name. |
-| data   | `object` | The event data. |
+| Name | Type     | Description     |
+| ---- | -------- | --------------- |
+| name | `string` | The event name. |
+| data | `object` | The event data. |
 
 **Returns**: `boolean`
 
@@ -268,15 +268,15 @@ Asc.plugin.sendToPlugin("onWindowMessage", {type: "onWindowReady"});
 
 ### SendToWindow
 
-You can send a message to the plugin modal window / panel by using the **SendToWindow** method of *window.Asc.plugin.executeMethod*.
+You can send a message to the plugin modal window / panel by using the **SendToWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name       | Type   | Description     |
-| ---------- | ------ | --------------- |
-| windowID   | `string` | The frame ID.   |
-| name       | `string` | The event name. |
-| data       | `object` | The event data. |
+| Name     | Type     | Description     |
+| -------- | -------- | --------------- |
+| windowID | `string` | The frame ID.   |
+| name     | `string` | The event name. |
+| data     | `object` | The event data. |
 
 **Returns**: This method doesn't return any data.
 
@@ -292,10 +292,10 @@ You can subscribe to the messages from the plugin by using the **attachEvent** m
 
 **Parameters**:
 
-| Name     | Type     | Description         |
-| -------- | -------- | ------------------- |
-| id       | `string`   | The event name.     |
-| action   | `function` | The event listener. |
+| Name   | Type       | Description         |
+| ------ | ---------- | ------------------- |
+| id     | `string`   | The event name.     |
+| action | `function` | The event listener. |
 
 **Returns**: This method doesn't return any data.
 
@@ -309,13 +309,13 @@ Asc.plugin.attachEvent("messageName", (message) => {
 
 ## Closing a window
 
-To close the plugin window / panel, use the **CloseWindow** method of *window.Asc.plugin.executeMethod*.
+To close the plugin window / panel, use the **CloseWindow** method of `window.Asc.plugin.executeMethod`.
 
 **Parameters**:
 
-| Name      | Type   | Description   |
-| --------- | ------ | ------------- |
-| frameId   | `string` | The frame ID. |
+| Name    | Type     | Description   |
+| ------- | -------- | ------------- |
+| frameId | `string` | The frame ID. |
 
 **Returns**: This method doesn't return any data.
 

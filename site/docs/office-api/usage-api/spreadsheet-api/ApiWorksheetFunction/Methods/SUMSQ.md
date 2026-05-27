@@ -14,7 +14,9 @@ expression.SUMSQ(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | Up to 255 numeric values for which the sum of the squares will be calculated. The first argument is required, subsequent arguments are optional. The arguments can be numbers, names, logical values or text representations of numbers, ranges of cells that contain numbers, or arrays. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | Up to 255 numeric values for which the sum of the squares will be calculated.
+The first argument is required, subsequent arguments are optional.
+The arguments can be numbers, names, logical values or text representations of numbers, ranges of cells that contain numbers, or arrays. |
 
 ## Returns
 
@@ -22,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the sum of the squares of the arguments.
+Return the sum of the squares of the arguments in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calculate the sum of the squares.
+// Calculate the sum of squared values using the SUMSQ function.
 
-// Use a function to estimate the sum of the squares.
+// Returns the total of all squared arguments.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

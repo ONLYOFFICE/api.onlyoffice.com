@@ -1,0 +1,69 @@
+# SetRepeatLabels
+
+设置指定是否在每行重复项目标签的设置。
+
+## 语法
+
+```javascript
+expression.SetRepeatLabels(repeat);
+```
+
+`expression` - 表示 [ApiPivotField](../ApiPivotField.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| repeat | 必需 | boolean |  | 指定是否在每行重复项目标签。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
+## 示例
+
+在电子表格中的每行上重复透视字段的标签，而不是仅显示一次。
+
+```javascript editor-xlsx
+// How do I make a pivot field label appear on each row of the pivot table in a spreadsheet?
+
+// Fill in blank label cells so every row in a pivot group is clearly identified in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
+
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
+
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
+
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
+
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+
+pivotTable.AddFields({
+    rows: ['Region', 'Style'],
+});
+
+pivotTable.AddDataField('Price');
+pivotTable.SetRowAxisLayout('Tabular');
+
+let pivotWorksheet = Api.GetActiveSheet();
+let pivotField = pivotTable.GetPivotFields('Region');
+pivotField.SetRepeatLabels(true);
+
+pivotWorksheet.GetRange('A12').SetValue('Region repeat labels');
+pivotWorksheet.GetRange('B12').SetValue(pivotField.GetRepeatLabels());
+```

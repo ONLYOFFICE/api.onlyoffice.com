@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get a caption of a pivot item.
+Read the display text of each item in a pivot table field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot item's caption.
+// How do I retrieve the visible label shown for a pivot item in a spreadsheet?
 
-// Create a pivot table, add data to it then get a caption of a specified pivot item.
+// Collect the caption of every field item to inspect or reuse the displayed text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -66,5 +66,4 @@ pivotWorksheet.GetRangeByNumber(15, 0).SetValue('Style item captions');
 for (let i = 0; i < pivotItems.length; i += 1) {
     pivotWorksheet.GetRangeByNumber(15 + i, 1).SetValue(pivotItems[i].GetCaption());
 }
-
 ```

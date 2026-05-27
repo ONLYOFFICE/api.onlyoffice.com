@@ -17,11 +17,11 @@ To build the **Encryption** plugin, you need to create three files:
 - JS file with code,
 - JSON file with config.
 
-More information about the plugin structure can be found [here](../../../plugin-and-macros/structure/configuration/configuration.md).
+For more information about the plugin structure, see [configuration](../../../plugin-and-macros/structure/configuration/configuration.md).
 
 Let’s have a look at the config:
 
-``` json
+```json
 {
   "name": "crypto",
   "guid": "asc.{22222222-2222-2222-2222-222222222222}",
@@ -54,7 +54,7 @@ All the config parameters are described in the [documentation](../../../plugin-a
 
 After the config file is ready, create the plugin code file with the following contents:
 
-``` ts
+```ts
 const globalPassword = "{my-super-long-password}"
 window.Asc.plugin.init = function init(obj) {
   if (!obj) {
@@ -83,9 +83,11 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
+As we can see from the code above, all files will be encrypted with one password - *\{my-super-long-password\}*. The [OnEncryption](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/OnEncryption.md), [StartAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md), [EndAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md) methods can be found in the **Plugins and macros API documentation**.
 
-> Please note that the *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
+:::note
+The *encryptData* and *decryptData* types of the *OnEncryption* method are not relevant for local files.
+:::
 
 ## Step 2. Creating the UI plugin for the app
 
@@ -93,7 +95,7 @@ The **Encryption** plugin has no interface and can’t run by default. It works 
 
 This plugin can’t access the editing features but has almost the same config:
 
-``` json
+```json
 {
   "name": "Encryption",
   "nameLocale": { 
@@ -119,7 +121,7 @@ This plugin can’t access the editing features but has almost the same config:
 
 The *index.html* file will look as follows:
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -136,11 +138,11 @@ The *index.html* file will look as follows:
 
 With it, we will get a new tab called **Encryption** on the main app page:
 
-![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
+![Encryption enabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption enabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
 
 Enable encryption by ticking the checkbox:
 
-``` ts
+```ts
 window.addEventListener("load", () => {
   const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0;
   const ASC_DESKTOP_EDITOR_CRYPTO_MODE = 2;

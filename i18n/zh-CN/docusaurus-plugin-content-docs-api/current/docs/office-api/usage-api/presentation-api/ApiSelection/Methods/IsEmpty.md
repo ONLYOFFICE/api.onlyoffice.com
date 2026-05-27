@@ -1,0 +1,54 @@
+# IsEmpty
+
+指定当前选择是否为空。
+
+## 语法
+
+```javascript
+expression.IsEmpty();
+```
+
+`expression` - 表示 [ApiSelection](../ApiSelection.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+boolean
+
+## 示例
+
+确定演示文稿中的当前选区是否为空。
+
+```javascript editor-pptx
+// How do I check whether anything is selected in a presentation?
+
+// Test if the selection contains items before and after selecting a shape in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const selection = Api.GetSelection();
+let text = 'Step 1 - Is selection empty: ' + selection.IsEmpty() + '\n';
+
+const fill = Api.CreateSolidFill(Api.RGB(0, 100, 200));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('rect', 100 * 36000, 100 * 36000, fill, stroke);
+shape.SetPosition(0, 0);
+slide.AddObject(shape);
+shape.Select();
+text += 'Step 2 - Is selection empty: ' + selection.IsEmpty();
+
+const outFill = Api.CreateSolidFill(Api.RGB(50, 70, 180));
+const outStroke = Api.CreateStroke(0, Api.CreateNoFill());
+const outShape = Api.CreateShape('rect', 200 * 36000, 30 * 36000, outFill, outStroke);
+outShape.SetPosition(0, 110 * 36000);
+
+const outDoc = outShape.GetDocContent();
+const outParagraph = outDoc.GetElement(0);
+outParagraph.AddText(text);
+slide.AddObject(outShape);
+```

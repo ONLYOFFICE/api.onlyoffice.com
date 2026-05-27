@@ -1,0 +1,31 @@
+# SetPosY
+
+设置绘图在幻灯片上的 y 位置。
+
+继承自 [ApiDrawing.SetPosY](../../ApiDrawing/Methods/SetPosY.md)。
+
+## 示例
+
+在演示文稿中垂直移动幻灯片上的形状。
+
+```javascript editor-pptx
+// How do I change the vertical position of a shape in a presentation?
+
+// Create a shape and move it to a specific distance from the top in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const fill = Api.CreateSolidFill(Api.RGB(176, 196, 222));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('roundRect', Api.MillimetersToEmus(200), Api.MillimetersToEmus(100), fill, stroke);
+shape.SetPosition(0, 0);
+slide.AddObject(shape);
+
+shape.SetPosY(Api.MillimetersToEmus(60));
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText('Y position was changed to 60 mm.');
+```

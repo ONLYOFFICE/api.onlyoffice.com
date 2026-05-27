@@ -1,0 +1,52 @@
+# GetClassType
+
+Returns the type of the ApiImage class.
+
+## Syntax
+
+```javascript
+expression.GetClassType();
+```
+
+`expression` - A variable that represents a [ApiImage](../ApiImage.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+"image"
+
+## Example
+
+Identify what type of object an image is in a PDF.
+
+```javascript editor-pdf
+// How do I find out what kind of image object I'm working with in a PDF?
+
+// Retrieve the classification of an image element in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const image = Api.CreateImage(
+	'https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png',
+	60 * 36000, 60 * 36000
+);
+page.AddObject(image);
+
+const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const fill = Api.CreateRadialGradientFill([gs1, gs2]);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('flowChartMagneticTape', 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+const classType = image.GetClassType();
+const paragraph = docContent.GetElement(0);
+paragraph.SetJc('left');
+paragraph.AddText('Class Type = ' + classType);
+page.AddObject(shape);
+```

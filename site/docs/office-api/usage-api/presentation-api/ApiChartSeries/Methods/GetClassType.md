@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a type of ApiChartSeries class and inserts it into the presentation.
+Retrieve the class type identifier string for a chart series object.
 
 ```javascript editor-pptx
-// How get a class type of ApiChartSeries.
+// Extract and display the object type metadata of a chart series.
 
-// Retrieve class type of ApiChartSeries object and insert it to the slide.
+// Get the class type of a series and output it as the slide title text.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -47,10 +47,9 @@ chart.SetTitle(title, 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

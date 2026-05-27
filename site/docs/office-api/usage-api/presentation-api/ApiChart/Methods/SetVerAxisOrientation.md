@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the vertical axis orientation.
+Reverse the direction of the vertical axis on a chart in a presentation.
 
 ```javascript editor-pptx
-// How to set an orientation of vertical axis.
+// Change the order and direction of scale on the vertical axis in a presentation.
 
-// Create a chart, set its properties and its vertical axis orientation.
+// Flip or reorient the vertical axis values in a chart in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,12 +41,11 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 chart.SetTitle("Financial Overview", 13);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+const stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetTitleOutLine(stroke);
 slide.AddObject(chart);
-
 ```

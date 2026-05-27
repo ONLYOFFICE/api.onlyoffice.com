@@ -1,0 +1,64 @@
+# GetWidth
+
+获取笔触的宽度（以英制度量单位）。
+
+## 语法
+
+```javascript
+expression.GetWidth();
+```
+
+`expression` - 表示 [ApiStroke](../ApiStroke.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[EMU](../../Enumeration/EMU.md) \| null
+
+## 示例
+
+测量 PDF 中边框线的粗细
+
+```javascript editor-pdf
+// What is the border thickness measured in units in a PDF?
+
+// Read and display the line width of a border in a PDF
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 100));
+
+// Shape with 1pt border
+let stroke1 = Api.CreateStroke(1 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255)));
+let shape1 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, fill, stroke1);
+shape1.SetPosition(2000000, 1000000);
+page.AddObject(shape1);
+let content1 = shape1.GetContent();
+let para1 = content1.GetElement(0);
+let width1 = shape1.GetLine().GetWidth();
+para1.AddText("1pt: " + width1 + " EMU");
+
+// Shape with 2.5pt border
+let stroke2 = Api.CreateStroke(2.5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 0)));
+let shape2 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, fill, stroke2);
+shape2.SetPosition(2000000, 2000000);
+page.AddObject(shape2);
+let content2 = shape2.GetContent();
+let para2 = content2.GetElement(0);
+let width2 = shape2.GetLine().GetWidth();
+para2.AddText("2.5pt: " + width2 + " EMU");
+
+// Shape with 5pt border
+let stroke3 = Api.CreateStroke(5 * 12700, Api.CreateSolidFill(Api.CreateRGBColor(0, 255, 0)));
+let shape3 = Api.CreateShape("rect", 50 * 36000, 30 * 36000, fill, stroke3);
+shape3.SetPosition(2000000, 3000000);
+page.AddObject(shape3);
+let content3 = shape3.GetContent();
+let para3 = content3.GetElement(0);
+let width3 = shape3.GetLine().GetWidth();
+para3.AddText("5pt: " + width3 + " EMU");
+```

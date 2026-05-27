@@ -1,0 +1,45 @@
+# GetStroke
+
+Returns true if the current path is stroked, otherwise false.
+
+## Syntax
+
+```javascript
+expression.GetStroke();
+```
+
+`expression` - A variable that represents a [ApiPath](../ApiPath.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+boolean
+
+## Example
+
+Check if a shape's outline is drawn and what its border looks like in a PDF.
+
+```javascript editor-pdf
+// Does a custom shape have a visible border in a PDF?
+
+// Read the outline settings of a shape to see its stroke properties in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
+let shape = Api.CreateShape("cloud", 100 * 36000, 100 * 36000, fill, stroke);
+let geometry = shape.GetGeometry();
+let path = geometry.GetPath(0);
+let paths = geometry.GetPaths();
+let paragraph = shape.GetContent().GetElement(0);
+paragraph.AddText("Paths: " + geometry.GetPathCount() + ", Width: " + path.GetWidth());
+paragraph.AddText(", Height: " + path.GetHeight() + ", Stroke: " + path.GetStroke());
+paragraph.AddText(", Fill: " + path.GetFill() + ", Array: " + paths.length);
+shape.SetPosition(1000000, 1000000);
+page.AddObject(shape);
+```

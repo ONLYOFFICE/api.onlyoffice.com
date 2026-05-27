@@ -1,0 +1,50 @@
+# GetParent
+
+返回当前字段的父对象。
+
+继承自 [ApiPivotField.GetParent](../../ApiPivotField/Methods/GetParent.md)。
+
+## 示例
+
+访问电子表格中拥有给定透视字段的数据透视表。
+
+```javascript editor-xlsx
+// How do I get the pivot table a particular field belongs to in a spreadsheet?
+
+// Navigate from a pivot field back to its parent table to perform further operations on the whole table.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
+
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
+
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Fancy');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
+
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
+
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+
+pivotTable.AddFields({
+    rows: ['Region', 'Style'],
+});
+
+pivotTable.AddDataField('Price');
+
+let pivotWorksheet = Api.GetActiveSheet();
+let pivotField = pivotTable.GetPivotFields('Style');
+
+pivotField.GetParent().AddDataField('Region');
+```

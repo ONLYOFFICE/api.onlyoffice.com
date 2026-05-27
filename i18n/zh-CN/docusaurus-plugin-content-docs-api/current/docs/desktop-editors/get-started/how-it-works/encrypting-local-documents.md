@@ -83,9 +83,11 @@ window.Asc.plugin.init = function init(obj) {
 }
 ```
 
-从上面的代码可以看出，所有文件都将使用一个密码加密——*\{my-super-long-password\}*。[OnEncryption](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/OnEncryption.md)、[StartAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/StartAction.md)、[EndAction](../../../plugin-and-macros/interacting-with-editors/text-document-api/Methods/EndAction.md) 方法可以在**插件和宏 API 文档**中找到。
+从上面的代码可以看出，所有文件都将使用一个密码加密——*\{my-super-long-password\}*。[OnEncryption](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/OnEncryption.md)、[StartAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/StartAction.md)、[EndAction](../../../plugin-and-macros/interacting-with-editors/document-api/Methods/EndAction.md) 方法可以在**插件和宏 API 文档**中找到。
 
-> 请注意，*OnEncryption* 方法的 *encryptData* 和 *decryptData* 类型与本地文件无关。
+:::note
+请注意，*OnEncryption* 方法的 *encryptData* 和 *decryptData* 类型与本地文件无关。
+:::
 
 ## 步骤 2：为应用创建 UI 插件
 
@@ -136,7 +138,7 @@ window.Asc.plugin.init = function init(obj) {
 
 有了它，我们将在主应用页面上获得一个名为**Encryption**的新选项卡：
 
-![Encryption exabled](/assets/images/desktop/encryption-enabled.png)
+![Encryption enabled](/assets/images/desktop/encryption-enabled.png#gh-light-mode-only)![Encryption enabled](/assets/images/desktop/encryption-enabled.dark.png#gh-dark-mode-only)
 
 通过勾选复选框启用加密：
 

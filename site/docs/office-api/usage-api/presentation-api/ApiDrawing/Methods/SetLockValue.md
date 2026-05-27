@@ -23,18 +23,18 @@ boolean
 
 ## Example
 
-This example sets the lock value to the specified lock type of the shape.
+Prevent a shape from being selected on a slide in a presentation.
 
 ```javascript editor-pptx
-// How to set a lock value to a shape which means that the shape cannot be selected.
+// How do I lock a shape so it cannot be changed in a presentation?
 
-// Select a shape object from a slide and set its lock value.
+// Create a shape and restrict access to it by preventing selection in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -46,5 +46,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.AddText("This drawing cannot be selected: " + lockValue);
 docContent.AddElement(0, paragraph);
 slide.AddObject(shape);
-
 ```

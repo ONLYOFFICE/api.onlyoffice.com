@@ -4,40 +4,23 @@ Sets the spacing before the current paragraph. If the value of the isBeforeAuto 
 any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then 
 it will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingBefore(nBefore, isBeforeAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nBefore | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing before the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isBeforeAuto | Optional | boolean | false | The true value disables the spacing before the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md).
 
 ## Example
 
-This example sets the spacing before the current paragraph.
+Add space above a paragraph in a presentation.
 
 ```javascript editor-pptx
-// How to set the size of a spacing before a text from a paragraph properties.
+// How do I set the distance before a paragraph begins in a presentation?
 
-// Change the size property of a spacing before a paragraph.
+// Configure the gap before a paragraph using paragraph settings in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
@@ -56,5 +39,4 @@ secondParaPr.SetSpacingBefore(1440);
 secondParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 docContent.Push(secondParagraph);
 slide.AddObject(shape);
-
 ```

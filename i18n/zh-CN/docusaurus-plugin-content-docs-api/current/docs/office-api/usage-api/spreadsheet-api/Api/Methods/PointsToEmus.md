@@ -1,0 +1,38 @@
+# PointsToEmus
+
+将磅转换为 EMU（英制度量单位）。
+
+## 语法
+
+```javascript
+expression.PointsToEmus(pt);
+```
+
+`expression` - 表示 [Api](../Api.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| pt | 必需 | number |  | 要转换为 EMU 的磅数。 |
+
+## 返回值
+
+number
+
+## 示例
+
+在电子表格中将磅转换为英制度量单位。
+
+```javascript editor-xlsx
+// How do I express a point value as English metric units in a spreadsheet?
+
+// Get the EMU equivalent of a given number of points in a spreadsheet.
+
+const points = 1000;
+const emus = Api.PointsToEmus(points);
+const text = points + ' points are equal to ' + emus + ' english metric units.';
+
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange('B2').SetValue(text);
+```

@@ -23,15 +23,15 @@ expression.CreateNumbering(numType, startAt);
 
 ## Example
 
-This example creates a bullet for a paragraph with the numbering character or symbol specified with the sType parameter.
+Add sequential numbered markers to paragraphs to form a numbered list in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a numbered paragraphs or sentences.
+// How do I automatically number each paragraph in a list inside a shape in a spreadsheet?
 
-// Create number bullets to number paragraphs.
+// Turn separate paragraphs into an ordered list by attaching numbered labels to each one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let docContent = shape.GetContent();

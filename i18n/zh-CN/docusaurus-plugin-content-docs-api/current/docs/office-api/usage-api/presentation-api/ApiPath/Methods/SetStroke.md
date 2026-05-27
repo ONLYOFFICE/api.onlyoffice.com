@@ -1,0 +1,52 @@
+# SetStroke
+
+设置当前路径是否有描边。
+
+## 语法
+
+```javascript
+expression.SetStroke(bStroke);
+```
+
+`expression` - 表示 [ApiPath](../ApiPath.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| bStroke | 必需 | boolean |  | 指定路径是否有描边（true）或无描边（false）。 |
+
+## 返回值
+
+此方法不返回任何数据。
+
+## 示例
+
+在演示文稿中为自定义形状的路径应用轮廓。
+
+```javascript editor-pptx
+// What options are available for the outline of a shape in a presentation?
+
+// Configure the stroke settings for a geometry path in a presentation.
+
+let presentation = Api.GetPresentation();
+let slide = presentation.GetSlideByIndex(0);
+let customGeometry = Api.CreateCustomGeometry();
+let path = customGeometry.AddPath();
+path.SetWidth(100 * 36000);
+path.SetHeight(100 * 36000);
+path.SetStroke(true);
+path.SetFill("norm");
+path.MoveTo(50 * 36000, 0);
+path.LineTo(70 * 36000, 45 * 36000);
+path.LineTo(55 * 36000, 70 * 36000);
+path.LineTo(100 * 36000, 100 * 36000);
+path.LineTo(0, 100 * 36000);
+path.Close();
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
+let shape = Api.CreateShape("rect", 100 * 36000, 100 * 36000, fill, stroke);
+shape.SetGeometry(customGeometry);
+shape.SetPosition(2000000, 1000000);
+slide.AddObject(shape);
+```

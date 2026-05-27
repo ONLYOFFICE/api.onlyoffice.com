@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the negative bar color from a data bar conditional formatting rule.
+Read the fill color used for bars that represent negative values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the color of negative value bars.
+// How do I find out what color is applied to negative data bars in a spreadsheet?
 
-// Get the negative bar color of a data bar conditional formatting rule.
+// Confirm the distinct color assigned to bars that display below-zero values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let negativeColor = dataBar.GetNegativeBarColor();
 
 worksheet.GetRange("C1").SetValue("Negative Color:");
 worksheet.GetRange("C2").SetValue(negativeColor ? "Set" : "None");
-
 ```

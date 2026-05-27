@@ -14,7 +14,8 @@ expression.SKEW_P(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the skewness of a distribution will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number \| [ApiName](../../ApiName/ApiName.md) \| number[] \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the skewness of a distribution will be returned.
+The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean.
+Return the skewness of a distribution based on a population: a characterization of the degree of asymmetry of a distribution around its mean in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to calaculate the skewness of a distribution based on a population.
+// Calculate the population skewness of a distribution using the SKEW_P function.
 
-// Use a function to get a characterization of the degree of asymmetry of a distribution around its mean.
+// Place values in cells and apply the function to display the asymmetry result.
 
 const worksheet = Api.GetActiveSheet();
 

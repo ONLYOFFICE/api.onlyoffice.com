@@ -2,7 +2,6 @@
 
 Represents the Api class.
 
-
 ## Methods
 
 | Method | Returns | Description |
@@ -11,13 +10,11 @@ Represents the Api class.
 | [AddOleObject](./AddOleObject.md) | None | Adds an OLE object to the current document position. |
 | [ChangeComment](./ChangeComment.md) | boolean | Changes the specified comment. |
 | [CoAuthoringChatSendMessage](./CoAuthoringChatSendMessage.md) | None | Sends a message to the co-authoring chat. |
-| [ConvertDocument](./ConvertDocument.md) | string | Converts a document to Markdown or HTML text. |
 | [EditOleObject](./EditOleObject.md) | None | Edits an OLE object in the document. |
 | [EndAction](./EndAction.md) | None | Specifies the end action for long operations. |
 | [FocusEditor](./FocusEditor.md) | None | Returns focus to the editor. |
 | [GetAllComments](./GetAllComments.md) | [comment](../Enumeration/comment.md)[] | Returns all the comments from the document. |
 | [GetCustomFunctions](./GetCustomFunctions.md) | string | Returns a library of local custom functions. |
-| [GetDocumentLang](./GetDocumentLang.md) | string | Returns the document language. |
 | [GetFileToDownload](./GetFileToDownload.md) | string | Returns the current file to download in the specified format. |
 | [GetFontList](./GetFontList.md) | [FontInfo](../Enumeration/FontInfo.md)[] | Returns the fonts list. |
 | [GetImageDataFromSelection](./GetImageDataFromSelection.md) | [ImageData](../Enumeration/ImageData.md) | Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle. |
@@ -37,14 +34,14 @@ Represents the Api class.
 | [OnEncryption](./OnEncryption.md) | None | Encrypts the document. |
 | [PasteHtml](./PasteHtml.md) | None | Pastes text in the HTML format into the document. |
 | [PasteText](./PasteText.md) | None | Pastes text into the document. |
-| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. If there are no drawings selected, the method inserts the image at the current position. |
+| [PutImageDataToSelection](./PutImageDataToSelection.md) | None | Replaces the first selected drawing with the image specified in the parameters. |
 | [RemoveComments](./RemoveComments.md) | None | Removes the specified comments. |
 | [RemoveOleObject](./RemoveOleObject.md) | None | Removes the OLE object from the workbook by its internal ID. |
 | [RemovePlugin](./RemovePlugin.md) | object | Removes a plugin with the specified GUID. |
 | [ReplaceTextSmart](./ReplaceTextSmart.md) | boolean | Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings. |
 | [SetCustomFunctions](./SetCustomFunctions.md) | None | Updates a library of local custom functions. |
 | [SetMacros](./SetMacros.md) | None | Sets macros to the document. |
-| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. For example, this method can be used to pass an authorization token to the plugin. This method can be used only with the connector class. |
+| [SetPluginsOptions](./SetPluginsOptions.md) | None | Configures plugins from an external source. The settings can be set for all plugins or for a specific plugin. |
 | [SetProperties](./SetProperties.md) | None | Sets the properties to the document. |
 | [ShowButton](./ShowButton.md) | None | Shows or hides buttons in the header. |
 | [ShowError](./ShowError.md) | None | Shows an error/warning message. |

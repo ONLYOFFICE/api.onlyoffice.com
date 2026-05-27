@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to convert a decimal number to hexadecimal.
+Convert numbers from base 10 to base 16 format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get decimal number from hexadecimal.
+// What is a decimal number expressed as hexadecimal in a spreadsheet?
 
-// Use function to convert a decimal number to hexadecimal.
+// Transform your decimal numbers into their hexadecimal equivalents in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

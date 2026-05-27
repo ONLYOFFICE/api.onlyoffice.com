@@ -27,15 +27,15 @@ This method doesn't return any data.
 
 ## Example
 
-This example changes the position for the drawing object.
+Place a drawing at a specific location relative to the cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the position of the drawing on the worksheet.
+// How do I control exactly where a drawing appears in a spreadsheet?
 
-// Move a drawing by setting the position.
+// Reposition a shape by anchoring it to a chosen cell column and row in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let drawing = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 drawing.SetSize(120 * 36000, 70 * 36000);

@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to return the current date in the MM/dd/yy format.
+Return the current date in the MM/dd/yy format in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a current date.
+// Retrieve the system date and display it with the built-in time format.
 
-// Use a function to get current date in MM/dd/yy format.
+// Apply the TODAY function to insert the current date into a cell.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

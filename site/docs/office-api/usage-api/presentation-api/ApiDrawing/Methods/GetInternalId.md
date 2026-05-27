@@ -1,0 +1,45 @@
+# GetInternalId
+
+Returns an internal ID of the current drawing object.
+
+## Syntax
+
+```javascript
+expression.GetInternalId();
+```
+
+`expression` - A variable that represents a [ApiDrawing](../ApiDrawing.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+string
+
+## Example
+
+Get the unique identifier of a shape in a presentation.
+
+```javascript editor-pptx
+// How do I retrieve the internal ID assigned to a shape in a presentation?
+
+// Extract and display the unique internal ID of a drawing object in a presentation.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const fill = Api.CreateSolidFill(Api.HexColor('#FADBD8'));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('rect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
+shape.SetPosition(Api.MillimetersToEmus(20), Api.MillimetersToEmus(35));
+
+const internalId = shape.GetInternalId();
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+paragraph.AddText('Drawing internal ID: ' + internalId);
+slide.AddObject(shape);
+```

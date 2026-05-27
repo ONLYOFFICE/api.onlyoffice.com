@@ -24,15 +24,14 @@ number
 
 ## Example
 
-This example shows how to return a number that represents the date in the date-time code.
+Create a date value from year, month, and day numbers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a date.
+// What date do these numbers represent in a spreadsheet?
 
-// Use function to get the date from a number.
+// Combine date parts into a single date value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.DATE(2018, 3, 16));
-
 ```

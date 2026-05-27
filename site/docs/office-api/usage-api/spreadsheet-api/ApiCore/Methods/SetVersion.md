@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to sets the version of the workbook.
+Set the document version stored in the core properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I record a version number in the document metadata in a spreadsheet?
+
+// Store a custom version label alongside the file's built-in properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetVersion("v9.0");
 const version = core.GetVersion();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Version: " + version);
-
 ```

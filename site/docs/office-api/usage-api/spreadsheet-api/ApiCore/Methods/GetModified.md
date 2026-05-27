@@ -20,16 +20,20 @@ Date
 
 ## Example
 
-This example demonstrates how to get the date when the current workbook was modified last time.
+Read the date the workbook was last saved after changes were made in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out when a workbook was most recently modified in a spreadsheet?
+
+// Inspect the last-modified timestamp recorded in the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetModified(new Date("10 March 1990"));
 const lastModifiedDate = core.GetModified().toDateString();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Last modified: " + lastModifiedDate);
-
 ```

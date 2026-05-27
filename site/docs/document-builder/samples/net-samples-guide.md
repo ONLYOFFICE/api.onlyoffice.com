@@ -1,5 +1,6 @@
 ---
 sidebar_position: -3
+description: Set up and run Document Builder samples in .Net.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -30,7 +31,8 @@ namespace Sample
     {
         public static void Main(string[] args)
         {
-            string workDirectory = Constants.BUILDER_DIR;
+            // Specify the path to the Document Builder work directory
+            string workDirectory = "C:\\document-builder";
             string resultPath = "../../../result.docx";
 
             // add Docbuilder dlls in path
@@ -98,7 +100,7 @@ Run the sample:
     csc /target:exe /out:MyApplication.exe MyApplication.cs ...
     ```
 
-    Then to run it :
+    Then to run it:
 
     ```bash
     mono MyApplication.exe

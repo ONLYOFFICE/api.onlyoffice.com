@@ -7,7 +7,7 @@ description: Learn how to style your ONLYOFFICE plugin interface using the provi
 
 ONLYOFFICE provides a style sheet for different interface elements. To adjust your plugin interface to the ONLYOFFICE style, connect the [plugin.css](https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css) to the [index.html](../structure/entry-point.md) file with the following link:
 
-``` html
+```html
 <link rel="stylesheet" href="https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css">
 ```
 
@@ -27,19 +27,19 @@ The button color is chosen by the developer. The darker the button, the more imp
 
 ### btn-text-default
 
-`Type: class`
+**type:** `class`
 
 Adds the default white button style to your plugin.
 
 **Example**:
 
-``` html
+```html
 <button class="btn-text-default" style="width:75px;">Button 1</button>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 .btn-text-default {
     background: #fff;
     border: 1px solid #cfcfcf;
@@ -56,19 +56,19 @@ Adds the default white button style to your plugin.
 
 ### btn-text-default.submit.primary
 
-`Type: class`
+**type:** `class`
 
 Adds the primary dark grey button style to your plugin. Used to confirm actions and send results.
 
 **Example**:
 
-``` html
+```html
 <button class="btn-text-default submit primary" style="width:75px;">Button 2</button>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 .btn-text-default.submit.primary {
     color: #fff;
     background-color: #7d858c;
@@ -79,19 +79,19 @@ Adds the primary dark grey button style to your plugin. Used to confirm actions 
 
 ### btn-text-default.submit
 
-`Type: class`
+**type:** `class`
 
 Adds the light grey button style to your plugin.
 
 **Example**:
 
-``` html
+```html
 <button class="btn-text-default submit" style="width:75px;">Button 3</button>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 .btn-text-default.submit {
     font-weight: bold;
     background-color: #d8dadc;
@@ -103,19 +103,19 @@ Adds the light grey button style to your plugin.
 
 ### btn-edit
 
-`Type: class`
+**type:** `class`
 
 Adds the edit button icon to your plugin.
 
 **Example**:
 
-``` html
+```html
 <label class="for-combo">Edit button</label><div class="btn-edit" style="display: inline-block; margin-left: 10px;"></div>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 .btn-edit {
     width: 13px;
     height: 13px;
@@ -132,19 +132,19 @@ Input components for user data entry.
 
 ### textarea
 
-`Type: element`
+**type:** `element`
 
 Adds a text area input field to your plugin.
 
 **Example**:
 
-``` html
+```html
 <textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"></textarea>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 textarea.form-control {
     resize: none;
 }
@@ -154,19 +154,19 @@ textarea.form-control {
 
 ### input[type="text"]
 
-`Type: element`
+**type:** `element`
 
 Adds a text field input to your plugin.
 
 **Example**:
 
-``` html
+```html
 <input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;">
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 .form-control {
     border: 1px solid #cfcfcf;
     border-radius: 2px;
@@ -188,19 +188,19 @@ Adds a text field input to your plugin.
 
 ### input[type="checkbox"]
 
-`Type: element`
+**type:** `element`
 
 Adds a checkbox input to your plugin.
 
 **Example**:
 
-``` html
+```html
 <input type="checkbox" class="form-control" style="vertical-align: middle;"><label style="margin-left: 5px;vertical-align: middle;">Checkbox</label>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 input[type='checkbox '].form-control {
     height: auto;
     margin: 0;
@@ -215,19 +215,19 @@ Label components for text display.
 
 ### label.header
 
-`Type: class`
+**type:** `class`
 
 Adds a bold header label to your plugin.
 
 **Example**:
 
-``` html
+```html
 <label class="header">Header label</label>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 label.header {
     font-weight: bold;
 }
@@ -235,19 +235,19 @@ label.header {
 
 ### label.link
 
-`Type: class`
+**type:** `class`
 
 Adds a link-styled label to your plugin.
 
 **Example**:
 
-``` html
+```html
 <label class="link">Link label</label>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 label.link {
     border-bottom: 1px dotted #aaa;
     cursor: pointer;
@@ -256,13 +256,13 @@ label.link {
 
 ## ComboBox
 
-`Type: function`
+**type:** `function`
 
 Adds a combo box dropdown to your plugin using the [select2](https://select2.org/) library.
 
 **Example**:
 
-``` html
+```html
 <select id="select_example" class="" ></select>
 $('#select_example').select2({
     data : [{id:0, text:'Item 1'}, {id:1, text:'Item 2'}, {id:2, text:'Item 3'}],
@@ -275,19 +275,19 @@ $('#select_example').select2({
 
 ## Loader
 
-`Type: class`
+**type:** `class`
 
 Adds a loader container to your plugin for displaying loading states.
 
 **Example**:
 
-``` html
+```html
 <div id="loader-container" class="asc-loader-container" style="margin: 10px; height: 40px; border: 1px solid #cfcfcf;"></div>
 ```
 
 **CSS parameters**:
 
-``` css
+```css
 .asc-loader-container {
     position: relative;
 }
@@ -301,7 +301,7 @@ This example demonstrates how to add interface elements in the ONLYOFFICE style 
 
 ![YouTube plugin](/assets/images/plugins/youtube_interface.png)
 
-``` html
+```html
 <!-- Default white button -->
 <button class="btn-text-default" style="width:30px;">OK</button>
 

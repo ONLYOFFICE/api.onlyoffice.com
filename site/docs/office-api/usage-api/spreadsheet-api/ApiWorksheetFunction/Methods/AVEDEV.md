@@ -14,7 +14,8 @@ expression.AVEDEV(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | Up to 255 numeric values for which the average of the absolute deviations will be returned. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, or arrays of numbers. |
+| args | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| number[] |  | Up to 255 numeric values for which the average of the absolute deviations will be returned. The first argument is required,
+subsequent arguments are optional. Arguments can be numbers, names, or arrays of numbers. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the average of the absolute deviations of data points from their mean.
+Measure how spread out a set of numbers is from their average in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an average of the absolute deviations.
+// Find the average distance of values from their mean in a spreadsheet.
 
-// Use function to get the average of the absolute deviations of data points from their mean.
+// Summarize data variability by averaging all absolute deviations in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

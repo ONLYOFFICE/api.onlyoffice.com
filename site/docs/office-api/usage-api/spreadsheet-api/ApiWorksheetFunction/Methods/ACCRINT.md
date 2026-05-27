@@ -21,7 +21,8 @@ expression.ACCRINT(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 | arg5 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The par value of the security. |
 | arg6 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of interest payments per year. The possible values are: 1 for annual payments, 2 for semiannual payments, 4 for quarterly payments. |
 | arg7 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The day count basis to use: **0** or omitted - US (NASD) 30/360; **1** - Actual/actual; **2** - Actual/360; **3** - Actual/365; **4** - European 30/360. |
-| arg8 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A logical value: **true** (1) or omitted returns the accrued interest from the issue date to the settlement date. **false** (0) returns the accrued interest from the first interest date to the settlement date. |
+| arg8 | Optional | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | A logical value: **true** (1) or omitted returns the accrued interest from the issue date to the settlement date.
+**false** (0) returns the accrued interest from the first interest date to the settlement date. |
 
 ## Returns
 
@@ -29,12 +30,12 @@ number
 
 ## Example
 
-This example shows how to return the accrued interest for a security that pays periodic interest.
+Determine accrued interest on coupon bonds up to a settlement date in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an accrued interest for a security that pays periodic interest.
+// How do I calculate accumulated interest on a bond that pays periodic amounts in a spreadsheet?
 
-// Get a function that gets accrued interest for a security.
+// Figure out how much interest income a periodic-pay bond has earned by a specific date in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

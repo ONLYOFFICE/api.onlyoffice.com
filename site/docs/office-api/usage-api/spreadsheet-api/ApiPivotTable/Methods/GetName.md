@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get name of a pivot table.
+Read the name assigned to a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a table name.
+// How do I find out what a pivot table is called in a spreadsheet?
 
-// Create a pivot table, add data to it then get its name.
+// Retrieve the identifier of a pivot table to reference or display it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

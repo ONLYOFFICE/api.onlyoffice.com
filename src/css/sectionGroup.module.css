@@ -36,13 +36,10 @@
   }
 }
 
-.samplesСontainer {
+.samplesContainer {
   max-width: var(--temp-home-breakpoint-xlarge, 1300px);
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-.samplesСontainerInner {
   display: flex;
   flex-direction: column;
   gap: var(--base-size-48, 3rem);
@@ -99,7 +96,7 @@
 }
 
 @media (max-width: 640px) {
-  .samplesСontainer {
+  .samplesContainer {
     padding: 0 1rem;
   }
 
@@ -152,7 +149,7 @@
     padding-bottom: 5rem;
   }
 
-  .samplesСontainer {
+  .samplesContainer {
     padding: 0 0.5rem;
   }
 

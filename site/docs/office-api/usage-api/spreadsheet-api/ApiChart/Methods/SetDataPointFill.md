@@ -25,12 +25,12 @@ boolean
 
 ## Example
 
-This example show how to set the fill to the data point.
+Color a single data point differently from the rest of its series in a spreadsheet.
 
 ```javascript editor-xlsx
-// Sets the fill to the data point in the specified chart series.
+// How do I change the background color of one specific data point on a chart in a spreadsheet?
 
-// How to set data point fill filling it with a solid color.
+// Highlight an individual bar or marker by giving it a distinct fill color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -46,10 +46,10 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
+fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetDataPointFill(fill, 0, 0, false);
 ```

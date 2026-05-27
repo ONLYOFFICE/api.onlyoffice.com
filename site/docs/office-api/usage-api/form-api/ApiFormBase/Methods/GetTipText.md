@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the tip text of the form.
+Retrieve the tooltip hint text assigned to a form field in a document.
 
-```javascript editor-pdf
-// Get a comboBox form tip text and show it in the document.
+```javascript editor-forms
+// How do I read the instructional hint shown when a user hovers over a form field in a document?
 
-// Show a tip text of the form.
+// Display the tooltip message of a drop-down form to verify what guidance is shown to the user in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

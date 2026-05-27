@@ -154,7 +154,7 @@ Starting from version 5.2, ONLYOFFICE Docs provides functionality for filling sp
 
 To enable this mode the *document.permissions.fillForms* parameter is used:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -190,7 +190,7 @@ To open the document with both the *editing* and the *commenting* modes enabled,
 
 You will need to set both the *document.permission.edit* and *document.permission.comment* parameters to **true**, so that the user will be able to edit the document and comment. The configuration in this case will look like this:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -228,11 +228,13 @@ To open the document with both the *viewing* mode enabled, the *document.permiss
 
 You will need to set the *document.permission.edit*, *document.permission.review* and *document.permission.fillForms* parameters to **false**, so that the user will not be able to either edit, or review the document, or change form fields in it. If you additionally want to disable the commenting functionality for the document, set the *comment* parameter also to **false** (the existing comments will be available for viewing though).
 
-> In case you disable all the editing permissions, we suggest that you also set the *document.permissions.chat* to **false**, so that the users with the access to the document could not spam to the document embedded chat.
+:::tip
+In case you disable all the editing permissions, we suggest that you also set the *document.permissions.chat* to **false**, so that the users with the access to the document could not spam to the document embedded chat.
+:::
 
 The configuration in this case will look like this:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -256,7 +258,7 @@ To open the document with the *downloading* option disabled, the *document.permi
 
 You will need to set the *document.permission.download* to **false**, so that the **Download as...** option were removed from the document **File** menu (in case the *document.permission.edit* parameter is set to **true**) or from the top toolbar (in case the *document.permission.edit* is set to **false** and the file is available for viewing only) and the user could not download the document from the editor. The *permission* configuration in this case will look like this:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -276,7 +278,7 @@ To open the document with the *printing* option disabled, the *document.permissi
 
 You will need to set the *document.permission.print* to **false**, so that the **Print** option were removed from the document **File** menu (in case the *document.permission.edit* parameter is set to **true**) or from the top toolbar (in case the *document.permission.edit* is set to **false** and the file is available for viewing only) and the user could not print out the document from the editor. The *permission* configuration in this case will look like this:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -300,11 +302,13 @@ The *document.info.sharingSettings.user* is a string parameter, which can displa
 
 The *document.info.sharingSettings.permissions* is also a string parameter, which displays the name of the access rights corresponding to the set of rules defining the user access to the current document.
 
-> Please note, that initially there are not any predefined set of rules for the document access. In case you use **ONLYOFFICE Workspace**, there are several access right rules defined (**Full Access, Read Only, Deny Access**) which will be used and displayed. If you set up your own **document storage service**, you will have to define your own set of rules and their names (e.g. **Read-only access** with *document.permission.edit*, *document.permission.review*, *document.permission.fillForms* parameters set to **false**; or **Download only** with all the *document.permission* parameters set to **false** and only *document.permission.download* parameter set to **true**, etc.) and send them to the **document editing service** so that the user could access the document and these settings were displayed in the document **Access rights...** window.
+:::note
+Initially there are not any predefined set of rules for the document access. In case you use **ONLYOFFICE Workspace**, there are several access right rules defined (**Full Access, Read Only, Deny Access**) which will be used and displayed. If you set up your own **document storage service**, you will have to define your own set of rules and their names (e.g. **Read-only access** with *document.permission.edit*, *document.permission.review*, *document.permission.fillForms* parameters set to **false**; or **Download only** with all the *document.permission* parameters set to **false** and only *document.permission.download* parameter set to **true**, etc.) and send them to the **document editing service** so that the user could access the document and these settings were displayed in the document **Access rights...** window.
+:::
 
 The *sharingSettings* configuration might look the following way:
 
-``` ts
+```ts
 const config = {
   document: {
     info: {
@@ -332,7 +336,7 @@ Further information about the permissions can be found [at this page](../../usag
 
 The comments are enabled by default. If you want to restrict commenting and allow the authors to edit and/or delete only their comments, you will need to change the *document.permissions.editCommentsAuthorOnly* and/or *document.permissions.deleteCommentsAuthorOnly* parameters:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -346,4 +350,6 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-> Do not forget to set the *editorConfig.mode* to **edit**, otherwise any commenting functionality will be disabled.
+:::tip
+Do not forget to set the *editorConfig.mode* to **edit**, otherwise any commenting functionality will be disabled.
+:::

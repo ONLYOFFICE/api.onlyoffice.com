@@ -1,0 +1,53 @@
+# GetAllParagraphs
+
+从当前文档内容返回所有段落的数组。
+
+## 语法
+
+```javascript
+expression.GetAllParagraphs();
+```
+
+`expression` - 表示 [ApiDocumentContent](../ApiDocumentContent.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiParagraph](../../ApiParagraph/ApiParagraph.md)[]
+
+## 示例
+
+访问 PDF 中形状内的所有文本块。
+
+```javascript editor-pdf
+// How do I list every paragraph inside a shape in a PDF?
+
+// Retrieve all text sections and modify one of them in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const fill = Api.CreateSolidFill(Api.RGB(189, 215, 175));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('rect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
+shape.SetPosition(Api.MillimetersToEmus(20), Api.MillimetersToEmus(35));
+const docContent = shape.GetContent();
+
+const paragraph1 = docContent.GetElement(0);
+paragraph1.AddText('Paragraph 1');
+
+const paragraph2 = Api.CreateParagraph();
+paragraph2.AddText('Paragraph 2');
+docContent.Push(paragraph2);
+
+const allParagraphs = docContent.GetAllParagraphs();
+
+allParagraphs[0].SetBold(true);
+const infoParagraph = Api.CreateParagraph();
+infoParagraph.AddText('Total paragraphs: ' + allParagraphs.length);
+docContent.Push(infoParagraph);
+page.AddObject(shape);
+```

@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return the effective annual interest rate.
+Calculate the effective annual interest rate from a nominal interest rate in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an effective annual interest rate.
+// How do I find the true annual interest rate for an investment in a spreadsheet?
 
-// Use function to get effective annual interest rate.
+// Convert a nominal interest rate to its effective annual equivalent in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

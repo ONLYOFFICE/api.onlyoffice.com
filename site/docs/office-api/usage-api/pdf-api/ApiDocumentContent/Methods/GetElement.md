@@ -1,0 +1,52 @@
+# GetElement
+
+Returns an element by its position in the document.
+
+## Syntax
+
+```javascript
+expression.GetElement(nPos);
+```
+
+`expression` - A variable that represents a [ApiDocumentContent](../ApiDocumentContent.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nPos | Required | number |  | The element position that will be taken from the document. |
+
+## Returns
+
+[DocumentElement](../../Enumeration/DocumentElement.md)
+
+## Example
+
+Retrieve a paragraph from a shape by its position in a PDF.
+
+```javascript editor-pdf
+// How do I access a specific paragraph inside a shape in a PDF?
+
+// Extract a text block from a shape using its number in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const oBullet = Api.CreateNumbering("ArabicParenR", 1);
+
+const docContent = shape.GetContent();
+let oParagraph = docContent.GetElement(0);
+oParagraph.SetBullet(oBullet);
+oParagraph.AddText(" This is an example of the numbered paragraph.");
+
+oParagraph = Api.CreateParagraph();
+oParagraph.SetBullet(oBullet);
+oParagraph.AddText(" This is an example of the numbered paragraph.");
+docContent.Push(oParagraph);
+page.AddObject(shape);
+```

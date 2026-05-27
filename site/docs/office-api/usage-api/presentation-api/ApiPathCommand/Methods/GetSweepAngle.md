@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Analyzes arc command parameters in a presentation shape.
+Get the sweep angle of an arc shape in a presentation.
 
 ```javascript editor-pptx
-// Retrieves and displays arc radii and angle information.
+// How do I find how far an arc sweeps in a presentation?
+
+// Read angle properties to check arc span in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 let customGeometry = Api.CreateCustomGeometry();
@@ -36,8 +39,8 @@ path.QuadBezTo(100 * 36000, 50 * 36000, 100 * 36000, 100 * 36000);
 path.ArcTo(50 * 36000, 50 * 36000, 0, 10800000);
 path.Close();
 let cmd = path.GetCommand(3); // arc command
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = Api.CreateShape("star5", 100 * 36000, 100 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 let paragraph = shape.GetDocContent().GetElement(0);

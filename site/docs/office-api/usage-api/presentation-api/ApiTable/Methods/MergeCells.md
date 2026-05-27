@@ -1,7 +1,7 @@
 # MergeCells
 
 Merges an array of cells. If merge is successful, it will return merged cell, otherwise "null".
--**Warning**: The number of cells in any row and the number of rows in the current table may be changed.
+- **Warning**: The number of cells in any row and the number of rows in the current table may be changed.
 
 ## Syntax
 
@@ -23,12 +23,12 @@ expression.MergeCells(aCells);
 
 ## Example
 
-This example merges an array of cells.
+Merge an array of cells into one.
 
 ```javascript editor-pptx
-// How to get two cells by their position index and merge them into one.
+// Get two cells by their position index and merge them.
 
-// Create a table, create cells and merge them into one.
+// Create a table, obtain two cells, and merge them together.
 
 const presentation = Api.GetPresentation();
 
@@ -47,5 +47,4 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

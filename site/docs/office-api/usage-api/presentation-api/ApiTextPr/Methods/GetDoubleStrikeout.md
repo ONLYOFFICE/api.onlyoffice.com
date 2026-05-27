@@ -20,18 +20,18 @@ boolean
 
 ## Example
 
-This example shows how to find out whether a text has a double strikethrough.
+Retrieve the double strikeout property from text run properties.
 
 ```javascript editor-pptx
-// How to know whether a text is crossed with two horizontal lines.
+// Create a shape with a text run and apply double strikeout formatting.
 
-// Get the text properties of the run and find whether it has a double strikethrough.
+// Get and display whether the text has double strikethrough.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -51,5 +51,4 @@ paragraph = Api.CreateParagraph();
 const doubleStrikeout = textPr.GetDoubleStrikeout();
 paragraph.AddText("Double strikeout property: " + doubleStrikeout);
 docContent.Push(paragraph);
-
 ```

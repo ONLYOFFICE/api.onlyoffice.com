@@ -1,0 +1,46 @@
+# GetPicturePosition
+
+Returns the picture position inside the current form.
+
+## Syntax
+
+```javascript
+expression.GetPicturePosition();
+```
+
+`expression` - A variable that represents a [ApiPictureForm](../ApiPictureForm.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[percentage](../../Enumeration/percentage.md)[]
+
+## Example
+
+Retrieve the offset of a picture within its form frame in a document.
+
+```javascript editor-docx
+// How do I find out where a picture is positioned inside a form in a document?
+
+// Inspect the horizontal and vertical shift of an image inside a picture form in a document.
+
+let doc = Api.GetDocument();
+let pictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false});
+let paragraph = doc.GetElement(0);
+paragraph.AddElement(pictureForm);
+pictureForm.SetImage("https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png", Api.MillimetersToEmus(70), Api.MillimetersToEmus(80));
+pictureForm.SetPicturePosition(70, 70);
+let position = pictureForm.GetPicturePosition();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Picture position: ");
+paragraph.AddLineBreak();
+for (let i = 0; i < position.length; i++ ){
+	let shift = position[i];
+	paragraph.AddText("" + shift);
+	paragraph.AddLineBreak();
+}
+doc.Push(paragraph);
+```

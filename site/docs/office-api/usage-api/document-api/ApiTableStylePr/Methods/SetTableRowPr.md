@@ -1,0 +1,50 @@
+# SetTableRowPr
+
+Sets the table row properties to the current table style properties.
+
+## Syntax
+
+```javascript
+expression.SetTableRowPr(oTableRowPr);
+```
+
+`expression` - A variable that represents a [ApiTableStylePr](../ApiTableStylePr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oTableRowPr | Required | [ApiTableRowPr](../../ApiTableRowPr/ApiTableRowPr.md) |  | The table row properties that will be set. |
+
+## Returns
+
+[ApiTableStylePr](../../ApiTableStylePr/ApiTableStylePr.md)
+
+## Example
+
+Apply row formatting to a conditional region of a table style in a document.
+
+```javascript editor-docx
+// How do I set the row height for a specific part of a table style in a document?
+
+// Assign row layout settings to a targeted section of a styled table in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("We create a 3x3 table and set the height of half an inch to all the rows:");
+
+let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
+tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
+
+let table = Api.CreateTable(3, 3);
+table.SetWidth("percent", 100);
+
+let tableStylePr = tableStyle.GetConditionalTableStyle("wholeTable");
+table.SetTableLook(true, true, true, true, true, true);
+let tableRowPr = Api.CreateTableRowPr();
+tableRowPr.SetHeight("atLeast", 720);
+tableStylePr.SetTableRowPr(tableRowPr);
+
+table.SetStyle(tableStyle);
+doc.Push(table);
+```

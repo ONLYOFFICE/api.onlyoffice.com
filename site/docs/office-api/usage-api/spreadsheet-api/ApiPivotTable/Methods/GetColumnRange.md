@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get column range of a pivot table.
+Select the column header area of a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get column range from a pivot table.
+// How do I highlight the cells that contain column headers in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its column range and select them.
+// Locate the column header range and bring it into view by selecting it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

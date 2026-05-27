@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether to insert blank rows after each item.
 
-## Syntax
-
-```javascript
-expression.SetLayoutBlankLine(insert);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| insert | Required | boolean |  | Specifies whether to insert blank rows after each item. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetLayoutBlankLine](../../ApiPivotField/Methods/SetLayoutBlankLine.md).
 
 ## Example
 
-This example shows how to set a layout blank line of a pivot field.
+Add a blank line after each group in a pivot field to improve readability in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout blank line.
+// How do I insert a blank row after each pivot field group in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout blank line of a specified pivot.
+// Visually separate pivot groups by toggling the blank line spacing option in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

@@ -20,15 +20,15 @@ boolean
 
 ## Example
 
-This example deletes the run.
+Remove a text run from a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete a text run object.
+// How do I delete a run of text from a shape in a spreadsheet?
 
-// Create the ApiRun object, add it into the paragraph and remove it from it.
+// Add a run to a paragraph and then discard it so nothing appears in the shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

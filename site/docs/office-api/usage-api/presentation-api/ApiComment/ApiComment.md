@@ -2,7 +2,6 @@
 
 Represents the ApiComment class.
 
-
 ## Methods
 
 | Method | Returns | Description |

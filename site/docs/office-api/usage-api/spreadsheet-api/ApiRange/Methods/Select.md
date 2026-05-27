@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example selects the current range.
+Select a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to select a range.
+// How do I highlight a specific group of cells in a spreadsheet?
 
-// Select a range and get a selection from the worksheet.
+// Mark a range as the active selection so further actions apply to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:C1");

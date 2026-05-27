@@ -1,9 +1,16 @@
+---
+description: Create a task management table with auto-generated DocSpace rooms.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Create basic task
 
 This example demonstrates how to create a task management table using the DocSpace JavaScript SDK. When a task is created, a corresponding room is automatically created in DocSpace.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/basic-task-create.html)
 
 ## Before you start
 
@@ -19,7 +26,7 @@ Please make sure you are using a server environment to run the HTML file because
   <head>
     <meta charset="UTF-8" />
     <title>Basic Task Creation</title>
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* Check CSS tab for styles */
     </style>

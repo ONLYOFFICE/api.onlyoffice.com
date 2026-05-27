@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the application ID from the OLE object.
+Read the application identifier of an embedded object in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve application id of OLE object.
+// How do I find out which application an embedded object belongs to in a spreadsheet?
 
-// Add Ole object and display its application id in the worksheet.
+// Check the identifier stored on an embedded object to confirm its source application in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let oleObject = worksheet.AddOleObject(
@@ -37,5 +37,4 @@ let oleObject = worksheet.AddOleObject(
 );
 let appId = oleObject.GetApplicationId();
 worksheet.GetRange('A1').SetValue('The OLE object application ID: ' + appId);
-
 ```

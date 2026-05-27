@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the text operator from a text-based conditional formatting rule.
+Read the comparison type used by a text-based conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve text operators from text-based conditional formatting rules.
+// How do I find out whether a text formatting rule checks for contains, begins with, or ends with in a spreadsheet?
 
-// Get conditional formatting rule text operator.
+// Identify the matching method a text-based formatting rule relies on in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -47,5 +47,4 @@ let textOperator = condition1.GetTextOperator();
 
 worksheet.GetRange("C1").SetValue("Text operator:");
 worksheet.GetRange("C2").SetValue(textOperator ? textOperator : "None");
-
 ```

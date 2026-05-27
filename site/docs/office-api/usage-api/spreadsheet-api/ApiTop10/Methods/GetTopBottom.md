@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the top/bottom setting for top 10 condition.
+Read whether a top 10 rule highlights the highest or lowest values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to determine if the condition evaluates top or bottom values.
+// How do I check if a top 10 conditional formatting rule targets top or bottom values in a spreadsheet?
 
-// Get the top/bottom direction setting from the top 10 rule.
+// Confirm the direction of a top 10 highlight rule — highest or lowest — in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -41,5 +41,4 @@ let top10Condition = formatConditions.AddTop10();
 
 let topBottom = top10Condition.GetTopBottom();
 worksheet.GetRange("B1").SetValue("Direction: " + topBottom);
-
 ```

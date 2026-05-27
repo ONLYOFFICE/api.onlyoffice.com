@@ -14,7 +14,10 @@ expression.SetSeriaName(sNameRange, nSeria);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sNameRange | Required | string |  | The series name. Can be a range of cells or usual text. For example: "'sheet 1'!$A$2:$A$5" - must be a single cell, row or column, "A1:A5" - must be a single cell, row or column, "Example series". |
+| sNameRange | Required | string |  | The series name. Can be a range of cells or usual text. For example:
+"'sheet 1'!$A$2:$A$5" - must be a single cell, row or column,
+"A1:A5" - must be a single cell, row or column,
+"Example series". |
 | nSeria | Required | number |  | The index of the chart series. |
 
 ## Returns
@@ -23,12 +26,12 @@ boolean
 
 ## Example
 
-This example sets a name to the specified series.
+Rename a data series shown in a chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to name chart series.
+// How do I change the label of a particular chart series in a spreadsheet?
 
-// Set seria name for a chart.
+// Replace the default series title with a custom name to clarify the chart data in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -45,8 +48,8 @@ worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
 chart.SetSeriaName("Projected Sales", 0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```

@@ -4,36 +4,19 @@ Sets the spacing before the current paragraph. If the value of the isBeforeAuto 
 any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then 
 it will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingBefore(nBefore, isBeforeAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nBefore | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing before the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isBeforeAuto | Optional | boolean | false | The true value disables the spacing before the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingBefore](../../ApiParaPr/Methods/SetSpacingBefore.md).
 
 ## Example
 
-This example sets the spacing before the current paragraph.
+Add extra space above a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the spacing before the paragraphs using points.
+// How do I increase the gap between one paragraph and the one before it in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the spacing before a custom text.
+// Separate two paragraphs visually by applying a top spacing value to the second one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

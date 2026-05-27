@@ -14,7 +14,8 @@ expression.STDEVP(args);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| args | Required | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the standard deviation will be calculated. The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
+| args | Required | number[] \| number \| [ApiName](../../ApiName/ApiName.md) \| [ApiRange](../../ApiRange/ApiRange.md) |  | Up to 255 numeric values for which the standard deviation will be calculated.
+The first argument is required, subsequent arguments are optional. Arguments can be numbers, names, ranges, or arrays of numbers. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to calculate standard deviation based on the entire population given as arguments (ignores logical values and text).
+Calculate the standard deviation of an entire population.
 
 ```javascript editor-xlsx
-// How to calculate standard deviation based on the entire population.
+// The STDEVP function computes population standard deviation while ignoring logical values and text.
 
-// Use a function to get the standard deviation.
+// Get the population standard deviation and place it in cell C1.
 
 const worksheet = Api.GetActiveSheet();
 

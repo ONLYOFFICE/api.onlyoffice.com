@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the class type of ApiNotesPage.
+Identify the type of the notes page object in a presentation.
 
 ```javascript editor-pptx
+// How do I determine the class type of the notes page in a presentation?
+
+// Retrieve and display the class type of the slide notes in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -38,5 +42,4 @@ slide.AddObject(shape);
 
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Class type of ApiNotesPage: ' + classType);
-
 ```

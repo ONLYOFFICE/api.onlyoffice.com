@@ -20,14 +20,18 @@ Date
 
 ## Example
 
-This example demonstrates how to set and get the date when the current presentation was printed last time.
+Set and check when a presentation was last printed in a presentation.
 
 ```javascript editor-pptx
+// How do I find the date a presentation was printed?
+
+// Read the timestamp of the most recent print event in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetLastPrinted(new Date());
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
+const fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 150 * 36000, 150 * 36000, fill, stroke);
 
@@ -38,5 +42,4 @@ paragraph.AddText("Last printed: " + lastPrintedDate);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

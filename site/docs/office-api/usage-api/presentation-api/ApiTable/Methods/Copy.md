@@ -1,6 +1,10 @@
 # Copy
 
-Creates a copy of the current table.
+Creates a copy of the specified table.
+
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
+:::
 
 ## Syntax
 
@@ -20,12 +24,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a copy of the table.
+Duplicate a table and place the copy on another slide in a presentation.
 
 ```javascript editor-pptx
-// How to copy a table and add it to the slide.
+// How do I make a copy of a table to reuse in a presentation?
 
-// Create a 2x4 table, its copy and add them to the presentation.
+// Clone a table and add the duplicate to a new slide in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -46,5 +50,4 @@ const copyTable = table.Copy();
 const newSlide = Api.CreateSlide();
 presentation.AddSlide(newSlide);
 newSlide.AddObject(copyTable);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all custom XML parts.
+Get all custom XML parts in a presentation.
 
 ```javascript editor-pptx
-// How to retrieve all custom XML parts from the presentation.
+// How do I retrieve all custom XML parts from a presentation?
 
-// Get all XML parts.
+// Display the count and content of each XML part in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -35,7 +35,7 @@ xmlManager.Add("<projects><project>Website</project></projects>");
 let allParts = xmlManager.GetAll();
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

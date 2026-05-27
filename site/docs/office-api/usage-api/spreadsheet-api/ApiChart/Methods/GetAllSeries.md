@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets all series of ApiChart class and inserts their types into the table.
+Collect every data series from a chart and list their types on the sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all series of the chart and diplay their type on the worksheet.
+// How do I loop through all the data series in a chart and display each one's type in a spreadsheet?
 
-// Get all series from the chart and display their types. 
+// Audit a chart by reading each series and writing its category into cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -41,9 +41,9 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "comboBarLine", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 let allSeries = chart.GetAllSeries();
 let series, seriesType;

@@ -1,6 +1,13 @@
+---
+description: Insert room and file links into a chat using slash commands.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # DocSpace chat commands
 
 This example shows how to integrate DocSpace SDK selectors into a chat interface. Users can enter special slash commands to open file or room selectors. Once an item is selected, the link is automatically added to the chat.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/advanced-samples/insert-rooms-and-files-into-chat.html)
 
 ## Before you start
 
@@ -19,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat with DocSpace Selectors</title>
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
     <style>
       /* Styles omitted for brevity - same as your input */
     </style>

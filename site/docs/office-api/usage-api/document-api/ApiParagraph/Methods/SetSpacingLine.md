@@ -1,0 +1,55 @@
+# SetSpacingLine
+
+Sets the paragraph line spacing. If the value of the sLineRule parameter is either 
+"atLeast" or "exact", then the value of nLine will be interpreted as twentieths of a point. If 
+the value of the sLineRule parameter is "auto", then the value of the 
+nLine parameter will be interpreted as 240ths of a line.
+
+Inherited from [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md).
+
+## Example
+
+Set the line spacing of a paragraph to control the vertical distance between lines in a document.
+
+```javascript editor-docx
+// How do I change the line height inside a paragraph in a document?
+
+// Compare different line-spacing modes — automatic, exact, and at-least — applied to separate paragraphs.
+
+let doc = Api.GetDocument();
+let myStyle1 = doc.CreateStyle("My document style #1");
+let paraPr = myStyle1.GetParaPr();
+paraPr.SetSpacingLine(3 * 240, "auto");
+let myStyle2 = doc.CreateStyle("My document style #2");
+paraPr = myStyle2.GetParaPr();
+paraPr.SetSpacingLine(200, "exact");
+let myStyle3 = doc.CreateStyle("My document style #3");
+paraPr = myStyle3.GetParaPr();
+paraPr.SetSpacingLine(400, "atLeast");
+let paragraph = doc.GetElement(0);
+paragraph.SetStyle(myStyle1);
+paragraph.AddText("Paragraph 1. Spacing: 3 times of a common paragraph line spacing.");
+paragraph.AddLineBreak();
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(myStyle2);
+paragraph.AddText("Paragraph 2. Spacing: exact 10 points.");
+paragraph.AddLineBreak();
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+doc.Push(paragraph);
+paragraph = Api.CreateParagraph();
+paragraph.SetStyle(myStyle3);
+paragraph.AddText("Paragraph 3. Spacing: atLeast 20 points.");
+paragraph.AddLineBreak();
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes.");
+doc.Push(paragraph);
+```

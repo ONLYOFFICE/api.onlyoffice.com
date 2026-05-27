@@ -22,13 +22,17 @@ number
 
 ## Example
 
-This example shows how to convert points to centimeters.
+Convert points to centimeters in a presentation.
 
 ```javascript editor-pptx
+// Use the Api object to convert measurement units.
+
+// Display the conversion result in a shape on the slide.
+
 const points = 1000;
 const centimeters = Api.PointsToCentimeters(points);
 
-const rgb = Api.CreateRGBColor(50, 150, 250);
+const rgb = Api.RGB(50, 150, 250);
 const fill = Api.CreateSolidFill(rgb);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape('rect', 300 * 36000, 150 * 36000, fill, stroke);
@@ -39,5 +43,4 @@ const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

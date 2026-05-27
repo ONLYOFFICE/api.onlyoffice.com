@@ -22,15 +22,15 @@ expression.SetSpacing(nSpacing);
 
 ## Example
 
-This example sets the text spacing measured in twentieths of a point.
+Control the amount of space between characters in a text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set the text spacing size.
+// How do I widen or tighten the gaps between letters in a spreadsheet?
 
-// Create a text run object, update its spacing.
+// Stretch or compress letter spacing to fine-tune the appearance of a word or phrase in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

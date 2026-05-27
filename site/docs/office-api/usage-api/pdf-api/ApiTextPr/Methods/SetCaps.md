@@ -1,0 +1,50 @@
+# SetCaps
+
+Specifies that any lowercase characters in the text run are formatted for display only as their capital letter character equivalents.
+
+## Syntax
+
+```javascript
+expression.SetCaps(isCaps);
+```
+
+`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| isCaps | Required | boolean |  | Specifies that the contents of the current run are displayed capitalized. |
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
+## Example
+
+Display lowercase letters as uppercase in a PDF.
+
+```javascript editor-pdf
+// How do I convert text to all capitals in a PDF?
+
+// Apply uppercase formatting to all text characters in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+const run = Api.CreateRun();
+const textPr = run.GetTextPr();
+textPr.SetFontSize(50);
+textPr.SetCaps(true);
+paragraph.SetJc("left");
+run.AddText("This is a sample text inside the shape set to capital letters using the text properties.");
+paragraph.AddElement(run);
+page.AddObject(shape);
+```

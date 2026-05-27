@@ -22,14 +22,17 @@ expression.GetCommand(nIndex);
 
 ## Example
 
-Analyzes path commands of a star shape on a presentation slide.
+Retrieve a specific drawing command from a shape's geometry path in a presentation.
 
 ```javascript editor-pptx
-// Shows command count and first command details in a text shape.
+// How do I access individual drawing commands in a custom shape in a presentation?
+
+// Get and inspect a single path command from a shape's geometry in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = Api.CreateShape("star5", 100 * 36000, 100 * 36000, fill, stroke);
 let geometry = shape.GetGeometry();
 let path = geometry.GetPath(0);

@@ -20,12 +20,12 @@ string \| number \| null
 
 ## Example
 
-This example demonstrates getting the maximum point value from a data bar conditional formatting rule.
+Read the upper boundary value used by a data bar rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve the value of the maximum condition.
+// How do I find out the number or threshold at the top end of a data bar in a spreadsheet?
 
-// Get the maximum point value of a data bar conditional formatting rule.
+// Check what value marks the longest bar to understand the data bar scale in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let maxPointValue = dataBar.GetMaxPointValue();
 
 worksheet.GetRange("C1").SetValue("Max Point Value:");
 worksheet.GetRange("C2").SetValue(maxPointValue || "Auto");
-
 ```

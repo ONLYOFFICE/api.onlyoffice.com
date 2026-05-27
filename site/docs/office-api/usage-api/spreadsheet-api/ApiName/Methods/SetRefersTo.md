@@ -14,20 +14,21 @@ expression.SetRefersTo(sRef);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sRef | Required | string |  | The range reference which must contain the sheet name, followed by sign ! and a range of cells. Example: "Sheet1!$A$1:$B$2". |
+| sRef | Required | string |  | The range reference which must contain the sheet name, followed by sign ! and a range of cells.
+Example: "Sheet1!$A$1:$B$2". |
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example sets a formula that the name is defined to refer to.
+Point a named range at a specific formula in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a name and refer it to the formula.
+// How do I make a named range refer to a formula instead of plain cells in a spreadsheet?
 
-// Create new ranges and a formula, refer a name to the formula then display it in the worksheet.
+// Reassign a range name so it targets a calculated expression in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

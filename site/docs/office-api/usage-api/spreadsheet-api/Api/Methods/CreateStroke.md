@@ -5,7 +5,7 @@ Creates a stroke adding shadows to the element.
 ## Syntax
 
 ```javascript
-expression.CreateStroke(width, fill);
+expression.CreateStroke(width, fill, sDash);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -16,6 +16,7 @@ expression.CreateStroke(width, fill);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | width | Required | [EMU](../../Enumeration/EMU.md) |  | The width of the shadow measured in English measure units. |
 | fill | Required | [ApiFill](../../ApiFill/ApiFill.md) |  | The fill type used to create the shadow. |
+| sDash | Optional | [DashType](../../Enumeration/DashType.md) | "solid" | The type of line dash. |
 
 ## Returns
 
@@ -23,18 +24,18 @@ expression.CreateStroke(width, fill);
 
 ## Example
 
-This example creates a stroke adding shadows to the element.
+Draw a colored border around a shape with a chosen width in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a stroke with a gradient fill.
+// How do I add a visible outline to a shape in a spreadsheet?
 
-// Set a gradient stroke for a shape.
+// Surround a shape with a styled border to make its edges clearly defined in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-let gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
-let fill1 = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill1 = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 let stroke = Api.CreateStroke(3 * 36000, fill1);
 worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 1, 3 * 36000);
 ```

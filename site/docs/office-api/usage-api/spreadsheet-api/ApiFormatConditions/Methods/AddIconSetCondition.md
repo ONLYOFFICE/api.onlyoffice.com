@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example adds icon set conditional formatting to a range.
+Display small status icons inside cells to indicate whether values are low, medium, or high in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add icon set conditional formatting rules to display icons based on values.
+// How do I place visual symbols next to numbers to show their relative standing at a glance in a spreadsheet?
 
-// Add icon set conditional formatting to cells.
+// Represent data tiers with icons so readers can judge cell values without reading exact numbers in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -42,5 +42,4 @@ worksheet.GetRange("A9").SetValue(80);
 let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 formatConditions.AddIconSetCondition();
-
 ```

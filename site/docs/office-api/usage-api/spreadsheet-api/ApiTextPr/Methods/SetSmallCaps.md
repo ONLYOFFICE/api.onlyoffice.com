@@ -23,15 +23,15 @@ expression.SetSmallCaps(isSmallCaps);
 
 ## Example
 
-This example specifies that all the small letter characters in the text run are formatted for display only as their capital letter character equivalents which are two points smaller than the actual font size specified for this text.
+Display lowercase letters as smaller capital letters in a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make text uncapitalized.
+// How do I format text so all letters appear as small capitals in a spreadsheet?
 
-// Make all characters of a text as a small letter.
+// Render every letter in a reduced capital style without changing the original casing in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

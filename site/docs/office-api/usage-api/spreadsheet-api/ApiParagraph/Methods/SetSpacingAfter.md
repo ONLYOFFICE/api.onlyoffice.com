@@ -4,36 +4,19 @@ Sets the spacing after the current paragraph. If the value of the isAfterAuto pa
 any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it 
 will be interpreted as false.
 
-## Syntax
-
-```javascript
-expression.SetSpacingAfter(nAfter, isAfterAuto);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nAfter | Required | [twips](../../Enumeration/twips.md) |  | The value of the spacing after the current paragraph measured in twentieths of a point (1/1440 of an inch). |
-| isAfterAuto | Optional | boolean | false | The true value disables the spacing after the current paragraph. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingAfter](../../ApiParaPr/Methods/SetSpacingAfter.md).
 
 ## Example
 
-This example sets the spacing after the current paragraph.
+Add extra space below a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add the spacing after the paragraphs using points.
+// How do I increase the gap between one paragraph and the next in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying the spacing after a custom text.
+// Push the following paragraph down by setting a bottom spacing value on the preceding one in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

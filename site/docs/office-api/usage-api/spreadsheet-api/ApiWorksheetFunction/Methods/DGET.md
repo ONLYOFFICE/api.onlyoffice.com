@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to extract from a database a single record that matches the conditions you specify.
+Extract a single record from a database that matches specified conditions.
 
 ```javascript editor-xlsx
-// How to get a value from a database range that satisfies a condition.
+// Retrieve values based on criteria applied to database columns.
 
-// Use function to get a record after applying condition.
+// Use the DGET function to fetch records meeting multiple conditions from a range.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

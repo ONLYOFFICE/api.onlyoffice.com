@@ -22,15 +22,15 @@ boolean
 
 ## Example
 
-This example removes all the elements from the current paragraph.
+Clear every element from a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to clear a content from the paragraph.
+// How do I wipe all content out of a paragraph in a spreadsheet?
 
-// Create a paragraph, add a text to it then delete all elements from it.
+// Reset a paragraph to empty before refilling it with fresh text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example reates a copy of the run.
+Duplicate a text run and add both the original and the copy to a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create a text run object and its copy.
+// How do I reuse the same styled text run more than once in a spreadsheet?
 
-// Create an ApiRun and its copy and add it into paragraph.
+// Clone an existing run so its formatting and content appear twice without rewriting it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

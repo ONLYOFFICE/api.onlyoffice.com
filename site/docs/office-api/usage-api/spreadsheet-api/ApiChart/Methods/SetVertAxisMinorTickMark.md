@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the minor tick mark for the vertical axis.
+Display minor tick marks between major intervals on the vertical axis in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a minor tick as a out for the vertical axis labels.
+// How do I add small subdivision markers to the vertical axis of a chart in a spreadsheet?
 
-// Specifies minor tick mark for the vertical axis.
+// Break the vertical axis into finer increments using minor tick marks in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -44,12 +44,12 @@ worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "scatter", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
 chart.SetVertAxisMinorTickMark("out");
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetMarkerFill(fill, 0, 0, true);
-let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerOutLine(stroke, 0, 0, true);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
-stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```

@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the visual properties of the major vertical gridline.
+Style the major vertical gridlines of a chart in a spreadsheet.
 
 ```javascript editor-xlsx
-// Set a stroke as a major vertical gridline.
+// How do I change the appearance of the main vertical gridlines on a chart in a spreadsheet?
 
-// How to add gridlines for the chart.
+// Give the primary vertical gridlines a custom color and thickness to guide the eye across the chart in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -43,10 +43,10 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+let stroke = Api.CreateStroke(1 * 15000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMajorVerticalGridlines(stroke);
 ```

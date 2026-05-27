@@ -2,30 +2,16 @@
 
 Returns the parent object for the current field.
 
-## Syntax
-
-```javascript
-expression.GetParent();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+Inherited from [ApiPivotField.GetParent](../../ApiPivotField/Methods/GetParent.md).
 
 ## Example
 
-This example shows how to get a parent of a pivot field.
+Access the pivot table that owns a given pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field parent.
+// How do I get the pivot table a particular field belongs to in a spreadsheet?
 
-// Create a pivot table, add data to it then get a parent of a specified pivot field.
+// Navigate from a pivot field back to its parent table to perform further operations on the whole table.
 
 let worksheet = Api.GetActiveSheet();
 

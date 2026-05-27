@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example elects the specified value from the combo box list values.
+Choose a specific value from a combo box drop-down list in a document.
 
-```javascript editor-pdf
-// How to know whether a combobox form is required or not.
+```javascript editor-forms
+// How do I programmatically pick an option from a combo box list in a document?
 
-// Display a boolean representing whether a combobox is required.
+// Pre-fill a combo box with a known answer to set the default selection in a document.
 
 let doc = Api.GetDocument();
 let comboBoxForm = Api.CreateComboBoxForm({"key": "Personal information", "tip": "Choose your country", "required": true, "placeholder": "Country", "editable": false, "autoFit": false, "items": ["Latvia", "USA", "UK"]});

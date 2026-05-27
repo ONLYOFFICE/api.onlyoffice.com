@@ -2,30 +2,16 @@
 
 Returns the text label displayed in the subtotal column or row heading in the specified pivot table report.
 
-## Syntax
-
-```javascript
-expression.GetSubtotalName();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiPivotField.GetSubtotalName](../../ApiPivotField/Methods/GetSubtotalName.md).
 
 ## Example
 
-This example shows how to get a subtotal name of a pivot field.
+Read the custom subtotal label assigned to a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's subtotal name.
+// How do I check what label a pivot field's subtotal row is using in a spreadsheet?
 
-// Create a pivot table, add data to it then get subtotal name of a specified pivot field.
+// Confirm the subtotal name after applying a custom label to a pivot field in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

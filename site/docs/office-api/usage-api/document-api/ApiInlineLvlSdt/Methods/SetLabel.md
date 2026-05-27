@@ -1,0 +1,44 @@
+# SetLabel
+
+Adds a string label to the current inline text content control.
+
+## Syntax
+
+```javascript
+expression.SetLabel(label);
+```
+
+`expression` - A variable that represents a [ApiInlineLvlSdt](../ApiInlineLvlSdt.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| label | Required | number |  | The label which will be added to the current inline text content control. Can be a positive or negative integer from **-2147483647** to **2147483647**. |
+
+## Returns
+
+boolean
+
+## Example
+
+Attach a numeric label to an inline text content control in a document.
+
+```javascript editor-docx
+// How do I assign a label value to an inline content control in a document?
+
+// Read back a label after setting it to confirm the value was stored correctly in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let inlineLvlSdt = Api.CreateInlineLvlSdt();
+paragraph.AddInlineLvlSdt(inlineLvlSdt);
+let run = Api.CreateRun();
+run.AddText("This is an inline text content control with a label set to it.");
+inlineLvlSdt.SetLabel(2147483647);
+inlineLvlSdt.AddElement(run, 0);
+let label = inlineLvlSdt.GetLabel();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Label: " + label);
+doc.Push(paragraph);
+```

@@ -1,0 +1,47 @@
+# Close
+
+关闭当前路径。
+
+## 语法
+
+```javascript
+expression.Close();
+```
+
+`expression` - 表示 [ApiPath](../ApiPath.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+此方法不返回任何数据。
+
+## 示例
+
+关闭自定义形状路径以在电子表格中形成完整的封闭轮廓。
+
+```javascript editor-xlsx
+// How do I seal the last point of a shape back to its starting point in a spreadsheet?
+
+// Connect the final drawing point to the first to produce a fully closed polygon in a spreadsheet.
+
+let worksheet = Api.GetActiveSheet();
+let customGeometry = Api.CreateCustomGeometry();
+let path = customGeometry.AddPath();
+path.SetWidth(100 * 36000);
+path.SetHeight(100 * 36000);
+path.SetStroke(true);
+path.SetFill("norm");
+path.MoveTo(50 * 36000, 0);
+path.LineTo(70 * 36000, 45 * 36000);
+path.LineTo(55 * 36000, 70 * 36000);
+path.LineTo(100 * 36000, 100 * 36000);
+path.LineTo(0, 100 * 36000);
+path.Close();
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
+let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 3, 0, 2, 2);
+shape.SetGeometry(customGeometry);
+```

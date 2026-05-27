@@ -24,12 +24,12 @@ boolean
 
 ## Example
 
-This example specifies the chart title with the specified parameters.
+Add a title to a chart with a chosen font size in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add chart title indicating its font size.
+// How do I set the heading text and font size for a chart in a spreadsheet?
 
-// Add title for a chart with its font size and style.
+// Label a chart clearly by giving it a descriptive title at a readable font size in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -45,8 +45,8 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```

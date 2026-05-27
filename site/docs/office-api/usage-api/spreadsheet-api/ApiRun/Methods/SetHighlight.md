@@ -22,15 +22,15 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-This example specifies a highlighting color which is applied as a background to the contents of the run.
+Highlight a text run with a background color in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to color a text object background.
+// How do I add a colored background behind a run of text in a spreadsheet?
 
-// Create a text run object, add color to its background.
+// Draw attention to a specific run by filling its background with a named highlight color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

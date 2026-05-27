@@ -1,0 +1,39 @@
+# CreateImageField
+
+创建图像字段。
+
+## 语法
+
+```javascript
+expression.CreateImageField(rect);
+```
+
+`expression` - 表示 [Api](../Api.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 控件矩形 |
+
+## 返回值
+
+[ApiButtonField](../../ApiButtonField/ApiButtonField.md)
+
+## 示例
+
+创建并向文档添加带有图像的字段。
+
+```javascript editor-pdf
+// Create the image field in a PDF document.
+
+// Create the image field and display the result in a PDF document.
+
+let doc = Api.GetDocument();
+let page = doc.GetPage(0);
+
+let imageField = Api.CreateImageField([10, 10, 100, 100]);
+page.AddObject(imageField);
+let widgets = imageField.GetAllWidgets();
+widgets[0].SetImage('https://static.onlyoffice.com/assets/docs/samples/img/onlyoffice_logo.png', 'normal');
+```

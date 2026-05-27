@@ -1,3 +1,8 @@
+---
+description: Configure and use the Text display component.
+tags: ["DocSpace", "Plugins", "Basic"]
+---
+
 # Text component
 
 This guide demonstrates how to configure and use the [Text](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/text) component in the DocSpace Plugins SDK with nearly all supported layout and style properties.

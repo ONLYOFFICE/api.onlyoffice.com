@@ -6,13 +6,13 @@ sidebar_position: -2
 
 从 8.1 版本开始，您可以获取桌面编辑器的视口设置。此方法用于设置顶部面板和桌面编辑器部件之间的间距。
 
-``` ts
+```ts
 window.AscDesktopEditor.getViewportSettings();
 ```
 
 该方法返回一个包含以下参数的对象：
 
-``` json
+```json
 { 
   "widgetType": "window",
   "captionHeight": 100
@@ -36,7 +36,7 @@ import APITable from '@site/src/components/APITable/APITable';
 
 您还可以订阅 *onViewportSettingsChanged* 事件，该事件在视口设置每次更改时都会被调用：
 
-``` ts
+```ts
 window.AscDesktopEditor.attachEvent("onViewportSettingsChanged", () => {
   console.log("视口设置已更改。");
 });

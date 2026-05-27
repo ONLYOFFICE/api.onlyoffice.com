@@ -8,7 +8,9 @@ sidebar_position: -7
 
 以下选项可用于定制 ONLYOFFICE 文档版本（白标化），修改**关于**页面显示信息（所有编辑器用户可见）：
 
-> 请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx)用户。
+:::note
+请注意，更改这些选项仅适用于 [ONLYOFFICE 文档开发者版](https://www.onlyoffice.com/developer-edition-prices.aspx)用户。
+:::
 
 - *editorConfig.customization.customer* 选项：
 
@@ -28,7 +30,7 @@ sidebar_position: -7
 
 填写所有上述字段后，*定制*配置将如下所示：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -57,9 +59,9 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 ## 如何更改 ONLYOFFICE 文档界面的默认语言？ {#how-to-change-the-default-language-of-the-onlyoffice-docs-interface}
 
-如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/server/document/available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
+如果界面语言出现在[可用的 ONLYOFFICE 文档语言列表](https://helpcenter.onlyoffice.com/docs/docs-available-languages.aspx)中，您可以简单地使用配置文件中的 *editorConfig.lang* 属性将其设置为必要的语言环境，如下所示：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     lang: "de",
@@ -69,7 +71,7 @@ const config = {
 const docEditor = new DocsAPI.DocEditor("placeholder", config);
 ```
 
-若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文档[此文](https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx)了解如何将其安装到 ONLYOFFICE 文档中。
+若当前语言未包含在可用选项中，且您需要自行翻译或已完成自定义语言翻译，请参阅[此文档[此文](https://helpcenter.onlyoffice.com/docs/installation/docs-community-add-language-docker.aspx)了解如何将其安装到 ONLYOFFICE 文档中。
 
 有关语言设置的更多信息，请参见[此页](../../usage-api/config/editor/editor.md)。
 
@@ -77,7 +79,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 默认情况下聊天和评论是被启用的。要禁用它们，请使用 *document.permissions.comment* 和 *document.permissions.chat* 参数，并在配置文件中将它们的值分别设置为 **false**:
 
-``` ts
+```ts
 const config = {
   document: {
     permissions: {
@@ -98,7 +100,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 您可以显示完整的顶部工具栏或其紧凑版本。为了控制这一点，使用 *editorConfig.customization.compactToolbar* 参数。使用默认的 **false** 值，顶部工具栏将具有其通常的视图。如果要显示其紧凑型变体，则配置必须如下所示：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     customization: {
@@ -116,7 +118,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 
 文档所有者和上传日期分别受 *document.info.owner* 和 *document.info.uploaded* 参数影响。您可以通过以下方式将这些设置从您的某个数据库传递到文档配置文件：
 
-``` ts
+```ts
 const config = {
   document: {
     info: {
@@ -179,7 +181,7 @@ const docEditor = new DocsAPI.DocEditor("placeholder", config);
 - 将插件放到文档编辑器可访问的文件夹中。
 - 通过以下方式更改配置文件：
 
-``` ts
+```ts
 const config = {
   editorConfig: {
     plugins: {

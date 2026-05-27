@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example sets the specified numeric format to the axis values.
+Format the numbers shown on a chart's axis in a presentation.
 
 ```javascript editor-pptx
-// How to change a numeric format of left axis lables.
+// How do I change the number format for the axis labels in a presentation?
 
-// Create a chart then set its axis number format.
+// Create a chart and apply a decimal format to its axis values in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,10 +41,9 @@ const chart = Api.CreateChart("bar3D", [
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 chart.SetAxieNumFormat("0.00", "left");
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

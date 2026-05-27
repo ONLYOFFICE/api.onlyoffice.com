@@ -16,16 +16,16 @@ This method doesn't have any parameters.
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example clears the range.
+Erase all values and formatting from a cell range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to clear a content of a range.
+// How do I completely wipe a range of cells clean in a spreadsheet?
 
-// Get a range and remove everything from it.
+// Reset a group of cells to a blank state by removing both their data and styling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("A1:B1");

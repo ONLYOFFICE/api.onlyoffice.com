@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to round a number down to the nearest integer.
+Round a number down to the nearest integer in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to round a number down to the nearest integer.
+// How do I round down a decimal number in a spreadsheet?
 
-// Use a function to round down a number.
+// Truncate decimal places from a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

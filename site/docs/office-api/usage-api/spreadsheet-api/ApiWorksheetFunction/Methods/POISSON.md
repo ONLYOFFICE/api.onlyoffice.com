@@ -16,7 +16,9 @@ expression.POISSON(arg1, arg2, arg3);
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | arg1 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The number of events. |
 | arg2 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number |  | The expected numeric value, a positive number. |
-| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form. If it is **true**, the function returns the cumulative Poisson probability. If it is **false**, the function returns the Poisson probability mass function. |
+| arg3 | Required | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| boolean |  | A logical value (**true** or **false**) that determines the function form.
+If it is **true**, the function returns the cumulative Poisson probability.
+If it is **false**, the function returns the Poisson probability mass function. |
 
 ## Returns
 
@@ -24,12 +26,12 @@ number
 
 ## Example
 
-This example shows how to calculate the Poisson distribution.
+Calculate the probability using the Poisson distribution model in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the Poisson distribution.
+// How do I use the Poisson distribution to find event probabilities in a spreadsheet?
 
-// Use a function to calculate the Poisson distribution.
+// Get the likelihood of a certain number of events occurring in a fixed timeframe in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -42,5 +44,4 @@ let func = Api.WorksheetFunction;
 let ans = func.POISSON(x, mean, cumulative);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

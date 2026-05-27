@@ -1,0 +1,47 @@
+# Push
+
+Adds an element to the current paragraph.
+
+## Syntax
+
+```javascript
+expression.Push(richRun);
+```
+
+`expression` - A variable that represents a [ApiRichParagraph](../ApiRichParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| richRun | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The element to add at the end of the paragraph. |
+
+## Returns
+
+boolean
+
+## Example
+
+Add a new element to the end of a paragraph in a PDF.
+
+```javascript editor-pdf
+// How do I insert a new element into a paragraph in a PDF?
+
+// Append an additional element to a paragraph in a PDF.
+
+let doc = Api.GetDocument();
+let freeTextAnnot = Api.CreateFreeTextAnnot([160, 50, 360, 135]);
+let page = doc.GetPage(0);
+page.AddObject(freeTextAnnot);
+freeTextAnnot.SetIntent("freeTextCallout");
+freeTextAnnot.SetCallout([{x: 161, y: 51}, {x: 249, y: 125}, {x: 261, y: 125}]);
+freeTextAnnot.SetRectDiff([100, 64, 0.5, 0.5]);
+
+let richContent = freeTextAnnot.GetContent();
+let para = richContent.GetElement(0);
+let newRun = Api.CreateRichRun();
+newRun.AddText("New run element");
+para.Push(newRun);
+
+console.log("We pushed new rich run element to rich paragraph");
+```

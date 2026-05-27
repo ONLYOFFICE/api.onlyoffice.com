@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the paragraph properties.
+Access the formatting properties of a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get properites of a paragraph and set the spacing.
+// How do I read and adjust the layout settings of a paragraph in a spreadsheet?
 
-// Get the paragraph properites, change them, add a text and add the paragraph to the shape content.
+// Modify paragraph spacing through its properties object and observe the effect in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

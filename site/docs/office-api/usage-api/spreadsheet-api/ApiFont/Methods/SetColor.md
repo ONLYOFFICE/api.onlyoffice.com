@@ -23,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the font color property to the specified font.
+Change the color of specific text characters in a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a text color.
+// How do I apply a custom color to part of the text inside a cell in a spreadsheet?
 
-// Get a font object of characters and color it specifying a color in RGB format.
+// Paint a selected run of characters with an RGB color value in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("B1");

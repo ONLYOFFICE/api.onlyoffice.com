@@ -1,6 +1,6 @@
 # FALSE
 
-Returns the -**false** logical value.
+Returns the - **false** logical value.
 
 ## Syntax
 
@@ -20,16 +20,15 @@ boolean
 
 ## Example
 
-This example shows how to return the false logical value.
+Return the false logical value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get false value.
+// Get the boolean false value.
 
-// Use function to get a boolean false.
+// Apply FALSE function to return false in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 let ans = func.FALSE(); //returns false, doesnt require arguments
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

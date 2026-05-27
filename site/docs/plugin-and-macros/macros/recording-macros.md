@@ -2,7 +2,7 @@
 sidebar_position: -1
 ---
 
-# Reording macros
+# Recording macros
 
 ONLYOFFICE Editors allow you to record macros. Recording a macro captures your actions, clicks, and movements in the editor and saves them as a macro to automate the process.
 
@@ -24,6 +24,8 @@ To record a macro:
 
 4. Review the code and make adjustments if necessary.
 
-    > While recording a macro can generate a complete and working macro, it might not be accurate. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::warning
+    While recording a macro can generate a complete and working macro, it might not be accurate. Make sure to review the output carefully and test it thoroughly, especially for complex macros.
+    :::
 
 5. Click ![Play icon](/assets/images/plugins/play.svg) to run the script.

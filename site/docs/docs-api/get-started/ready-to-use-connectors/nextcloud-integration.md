@@ -1,4 +1,6 @@
 ---
+description: Integrate ONLYOFFICE Docs into Nextcloud for document editing and collaboration.
+tags: ["Docs", "Integration", "Ready-to-use"]
 sidebar_custom_props:
   icon: /assets/images/editor/connectors/nextcloud.svg
 ---
@@ -13,14 +15,14 @@ import YoutubeVideo from '@site/src/components/YoutubeVideo/YoutubeVideo';
 
 This [app](https://github.com/ONLYOFFICE/onlyoffice-nextcloud) enables users to edit office documents from [Nextcloud](https://nextcloud.com) using ONLYOFFICE Docs.
 
-The latest connector signed versions are available in the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
+The latest app signed versions are available in the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
 
 ## Features
 
-- Currently, the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.
-- The following format is available for viewing only: PDF.
+- Currently, the following document formats can be opened and edited with this app: DOCM, DOCX, DOTM, DOTX, PDF, POTM, POTX, PPSM, PPSX, PPTM, PPTX, XLSB, XLSM, XLSX, XLTM, XLTX.
+- The following formats are available for viewing only: CSV, DJVU, DOC, DOT, DPS, DPT, EPUB, ET, ETT, FB2, FODP, FODS, FODT, HTM, HTML, HWP, HWPX, KEY, MD, MHT, MHTML, NUMBERS, ODG, ODP, ODS, ODT, OTP, OTS, OTT, OXPS, PAGES, POT, PPS, PPT, RTF, STW, SXC, SXI, SXW, TXT, VSDM, VSDX, VSSM, VSSX, VSTM, VSTX, WPS, WPT, XLS, XLT, XML, XPS.
 - The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.
-- The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
+- The app will create an item in the **new (+)** menu to create **Document**, **Spreadsheet**, **Presentation**, **PDF**. It will also create a new **Open in ONLYOFFICE** menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
 
 ## Installing ONLYOFFICE Docs
 
@@ -32,15 +34,19 @@ The easiest way to start an instance of ONLYOFFICE Docs is to use [Docker](https
 
 You can also use our [Docker installation](https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud) to get installed and configured ONLYOFFICE Docs and Nextcloud installation with a couple of commands.
 
-## Installing Nextcloud ONLYOFFICE integration app
+## Installing ONLYOFFICE app for Nextcloud
 
 The Nextcloud administrator can install the integration app from the in-built application market. To do this, go to the user name and select **Apps**. After that, find **ONLYOFFICE** in the list of available applications and install it.
 
 If the server with the Nextcloud installed does not have the Internet access, or if you need it for some other reason, the administrator can install the application manually. To start using ONLYOFFICE Docs with Nextcloud, the following steps must be performed:
 
-1. Go to the Nextcloud server *apps/* directory (or some other directory [used](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories) to connect applications): cd apps/
+1. Go to the Nextcloud server *apps/* directory (or some other directory [used](https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories) to connect applications): 
 
-2. Get the Nextcloud ONLYOFFICE integration app. There are several ways to do that:
+   ``` sh
+   cd apps/
+   ```
+
+2. Get the ONLYOFFICE app for Nextcloud. There are several ways to do that:
 
    1. Download the latest signed version from the official store for [Nextcloud](https://apps.nextcloud.com/apps/onlyoffice).
    2. Download the latest signed version from the application [release page](https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases) on GitHub.
@@ -52,23 +58,36 @@ If the server with the Nextcloud installed does not have the Internet access, or
    git submodule update --init --recursive
    ```
 
-3. Change the owner to update the application right from Nextcloud web interface:
+3. Build webpack (only if you chose to clone on the previous step):
+
+   ``` sh
+   npm install
+   npm run build
+   ```
+
+4. Install Composer dependencies (only if you chose to clone on the step 2):
+
+   ``` sh
+   composer install
+   ```
+
+5. Change the owner to update the application right from Nextcloud web interface:
 
     ``` sh
     chown -R www-data:www-data onlyoffice
     ```
 
-4. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
+6. In Nextcloud, open the *\~/settings/apps/disabled* page with **Not enabled** apps by administrator and click **Enable** for the **ONLYOFFICE** application.
 
-## Configuring Nextcloud ONLYOFFICE integration app
+## Configuring ONLYOFFICE app for Nextcloud
 
 In Nextcloud, open the *\~/settings/admin/onlyoffice* page with administrative settings for **ONLYOFFICE** section. Enter the following address to connect ONLYOFFICE Docs:
 
-``` sh
+```sh
 https://<documentserver>/
 ```
 
-where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible for the user browser and from the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+where the **documentserver** is the name of the server with the **ONLYOFFICE Docs** installed. The address must be accessible from both the user's browser and the Nextcloud server. The Nextcloud server address must also be accessible from **ONLYOFFICE Docs** for correct work. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
 
 ![Local](/assets/images/editor/nextcloud-local.jpg)
 
@@ -76,21 +95,108 @@ Sometimes your network configuration might not allow the requests between instal
 
 ![Public](/assets/images/editor/nextcloud-public.jpg)
 
-Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Nextcloud administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
+Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict access to ONLYOFFICE Docs and for security reasons and data integrity. Specify your own **Secret key** in the Nextcloud administrative configuration. In the ONLYOFFICE Docs [config file](../../additional-api/signature/signature.md), specify the same secret key and enable the validation.
 
 Enable or disable the **Open file in the same tab** setting.
 
 The **Open in ONLYOFFICE** action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.
 
+### ONLYOFFICE Connector for Nextcloud: Configuration Parameters
+
+These are all available configuration parameters for the ONLYOFFICE integration app for Nextcloud.
+The parameters are grouped into two categories depending on how they can be configured:
+
+- Basic settings: configured via the Nextcloud admin UI or OCC commands.
+- Advanced settings: configured **only via `config/config.php`** file.
+
+#### Basic Configuration (UI / OCC)
+
+These settings are available through the Nextcloud admin interface or via `occ` commands.
+
+| Parameter                                    | Description                                                                 |
+|---------------------------------------------|-----------------------------------------------------------------------------|
+| `DocumentServerUrl`                         | Public address of ONLYOFFICE Docs server (set via UI or `occ`).            |
+| `Open in same tab`                          | Defines whether documents open in the same browser tab.                    |
+| `Enable JWT`                                | Enables JWT validation for secure communication.                           |
+| `Secret key`                                | JWT secret used to sign requests (alternative to `jwt_secret` in config). |
+| `Advanced server settings`                  | Enables configuration of internal server URLs.                             |
+| `DocumentServerInternalUrl`                 | Internal address of ONLYOFFICE Docs (used if advanced settings enabled).   |
+| `StorageUrl`                                | Internal address of Nextcloud (used if advanced settings enabled).         |
+| `def_formats`                               | Defines default file formats.                                              |
+| `editable`                                  | Enables editing of certain file types.                                     |
+| `review`                                    | Enables review-only mode.                                                  |
+| `forcesave`                                 | Enables force saving documents to storage.                                 |
+| `customizationChat`                         | Enables or disables chat panel.                                            |
+| `customizationFeedback`                     | Enables feedback and support links.                                        |
+| `customizationHelp`                         | Enables help link.                                                         |
+| `customizationToolbarNoTabs`                | Shows toolbar without tabs.                                                |
+| `customizationCompactHeader`                | Enables compact header mode.                                               |
+| `customizationToolbarHideSettings`          | Hides the “Settings” menu in the editor.                                   |
+| `customizationFeedbackSuggestion`           | Allows users to submit suggestions.                                        |
+| `customizationFeedbackBug`                  | Allows users to report bugs.                                               |
+| `customizationAutosave`                     | Enables autosave mode.                                                     |
+| `SameTab`                                   | Opens files in the same tab (deprecated UI setting).                       |
+| `preview`                                   | Enables document preview generation.                                       |
+| `about`                                     | Shows About section.                                                       |
+
+:::tip
+You can also use the `occ` command-line interface to get/set these parameters:
+
+```sh
+php occ config:app:set onlyoffice customizationChat --value=false
+```
+:::
+
+#### Advanced Configuration (`config/config.php` only)
+
+You can define the following parameters in the `config/config.php` file to customize the behavior of the ONLYOFFICE connector:
+
+| Parameter                   | Description                                                                                     |
+|----------------------------|-------------------------------------------------------------------------------------------------|
+| `DocumentServerUrl`         | Public address of the ONLYOFFICE Docs server.                                                  |
+| `DocumentServerInternalUrl`| Internal address of ONLYOFFICE Docs used for server-to-server communication.                   |
+| `StorageUrl`               | Internal address of the Nextcloud server used by ONLYOFFICE Docs.                              |
+| `jwt_secret`               | Secret key used to generate and validate JWT tokens.                                           |
+| `jwt_secret_path`          | Path to a file containing the JWT secret.                                                      |
+| `jwt_header`               | Name of the HTTP header used to send the JWT. Default is `Authorization`.                     |
+| `jwt_in_body`              | If `true`, the JWT token is sent in the request body instead of the header.                    |
+| `jwt_disable`              | If `true`, disables JWT signature verification.                                                |
+| `jwt_leeway`               | Leeway in seconds to account for clock skew when validating JWT tokens.                        |
+| `jwt_expiration`           | JWT token expiration time in seconds.                                                          |
+| `verify_peer_off`          | If `true`, disables SSL peer verification for connections.                                     |
+| `limit_thumb_size`         | Maximum file size in bytes for which thumbnails will be generated.                             |
+| `disable_download`         | If `true`, disables file download functionality.                                               |
+| `editors_check_interval`   | Interval in minutes for checking availability of ONLYOFFICE Docs. Default is `1440`.           |
+
+The following parameters must be added manually to the `config/config.php` file in your Nextcloud installation:
+
+```php
+<?php
+'onlyoffice' => array (
+    'jwt_secret' => 'your_secret_key',
+    'jwt_header' => 'Authorization',
+)
+?>
+```
+
 ## Checking the connection
 
 You can check the connection to ONLYOFFICE Docs by using the following occ command:
 
-``` sh
+```sh
 occ onlyoffice:documentserver --check
 ```
 
 You will see a text either with information about the successful connection or the cause of the error.
+
+## Advanced document permissions 
+
+The Advanced tab allows you to grant additional access rights only to those users specified in the Sharing tab without the ability to re-share the file. Depending on the chosen Custom permission option and the file type (docx, pptx, xlsx), you can grant different additional rights.
+
+- If the **DOCX** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only reviewing (**Review only**) or only commenting (**Comment only**) in the Advanced tab.
+- If the **XLSX** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only commenting (**Comment only**) or applying filtering for everyone (**Global filter**, which is enabled by default) in the Advanced tab.
+- If the **PPTX** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only commenting (**Comment only**) in the Advanced tab.
+- If the **PDF** file is shared with the Custom permission (Edit enabled, Share disabled) in the Sharing tab, you can set the given rights to only filling out (**Form Filling**) in the Advanced tab.
 
 ## How it works
 
@@ -152,7 +258,7 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
   To solve this, we added an asynchronous background task which runs on the server to check availability of the editors. It allows testing the connection between your **Nextcloud instance** and **ONLYOFFICE Docs**, namely availability of server addresses and the validity of the JWT secret are being checked.
 
-  If any issue is detected, the ONLYOFFICE integration connector (consequently, the ability to create and open files) will be disabled. As a Nextcloud admin, you will get the corresponding notification.
+  If any issue is detected, the ONLYOFFICE app (consequently, the ability to create and open files) will be disabled. As a Nextcloud admin, you will get the corresponding notification.
 
   This option allows you to avoid issues when the server settings become incorrect and require changes.
 
@@ -176,4 +282,6 @@ The ONLYOFFICE integration follows the API documented [here](../basic-concepts.m
 
 - When accessing a document without download permission, file printing and using the system clipboard are not available. Copying and pasting within the editor is available via buttons in the editor toolbar and in the context menu.
 
-Download the Nextcloud ONLYOFFICE integration app [here](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).
+- When a file is opened for editing in ONLYOFFICE while being simultaneously edited in other tools, changes may be overwritten or lost. To avoid conflicts and ensure smooth collaboration, we recommend using the Temporary File Lock application: https://apps.nextcloud.com/apps/files_lock. This helps prevent parallel editing and safeguards your work.
+
+Download the ONLYOFFICE app for Nextcloud [here](https://github.com/ONLYOFFICE/onlyoffice-nextcloud).

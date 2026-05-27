@@ -20,14 +20,18 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example show how to get an array with all tables from the slide.
+Get an array with all tables from the slide.
 
 ```javascript editor-pptx
+// Retrieve tables using the GetAllTables method on a slide object.
+
+// Display the count of tables found on the slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const table = editor.CreateTable(3, 2);
+const table = Api.CreateTable(2, 3);
 table.GetRow(0).GetCell(0).GetContent().GetCurrentParagraph().AddText('US');
 table.GetRow(0).GetCell(1).GetContent().GetCurrentParagraph().AddText('CH');
 table.GetRow(0).GetCell(2).GetContent().GetCurrentParagraph().AddText('Others');
@@ -36,7 +40,7 @@ table.GetRow(1).GetCell(1).GetContent().GetCurrentParagraph().AddText('8.27');
 table.GetRow(1).GetCell(2).GetContent().GetCurrentParagraph().AddText('80.14');
 slide.AddObject(table);
 
-const fillColor = Api.CreateRGBColor(100, 100, 200);
+const fillColor = Api.RGB(100, 100, 200);
 const fill = Api.CreateSolidFill(fillColor);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 250 * 36000, 50 * 36000, fill, stroke);
@@ -46,5 +50,4 @@ slide.AddObject(shape);
 const docContent = shape.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Number of tables on slide: " + slide.GetAllTables().length);
-
 ```

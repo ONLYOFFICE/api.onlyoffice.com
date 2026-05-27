@@ -2,29 +2,17 @@
 
 Sets the role to the current form.
 
-## Syntax
-
-```javascript
-expression.SetRole(role);
-```
-
-`expression` - A variable that represents a [ApiDateForm](../ApiDateForm.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| role | Required | string |  | The role which will be attached to the current form. |
-
-## Returns
-
-boolean
+Inherited from [ApiFormBase.SetRole](../../ApiFormBase/Methods/SetRole.md).
 
 ## Example
 
-This example shows how to set a role for a form element.
+Assign a role to a form field to control who fills it in a document.
 
-```javascript editor-pdf
+```javascript editor-forms
+// How do I associate a form field with a specific role in a document?
+
+// Restrict which signers or participants are responsible for a given field.
+
 const doc = Api.GetDocument();
 let paragraph = doc.GetElement(0);
 
@@ -50,5 +38,4 @@ const role = textForm.GetRole();
 paragraph = Api.CreateParagraph();
 paragraph.AddText("Form role: " + role);
 doc.Push(paragraph);
-
 ```

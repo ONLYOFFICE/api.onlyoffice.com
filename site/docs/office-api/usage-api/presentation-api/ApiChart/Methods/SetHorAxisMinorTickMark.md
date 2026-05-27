@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the minor tick mark for the horizontal axis.
+Set the style of minor tick marks on a chart's horizontal axis in a presentation.
 
 ```javascript editor-pptx
-// How to set a minor tick mark using predefined symbols.
+// How do I customize the appearance of minor tick marks on a chart in a presentation?
 
-// Create a chart, set its properties and minor tick mark for horizontal axis.
+// Create a chart and apply a specific minor tick mark style to the horizontal axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,16 +44,15 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetHorAxisMinorTickMark("in");
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
-let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerFill(fill, 0, 0, true);
 chart.SetMarkerOutLine(stroke, 0, 0, true);
 
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 
 slide.AddObject(chart);
-
 ```

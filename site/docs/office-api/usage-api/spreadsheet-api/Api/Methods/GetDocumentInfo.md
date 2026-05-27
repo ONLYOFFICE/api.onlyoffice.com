@@ -1,17 +1,17 @@
 # GetDocumentInfo
 
 Returns the document information:
--**Application** - the application the document has been created with.
--**CreatedRaw** - the date and time when the file was created.
--**Created** - the parsed date and time when the file was created.
--**LastModifiedRaw** - the date and time when the file was last modified.
--**LastModified** - the parsed date and time when the file was last modified.
--**LastModifiedBy** - the name of the user who has made the latest change to the document.
--**Authors** - the persons who has created the file.
--**Title** - this property allows you to simplify your documents classification.
--**Tags** - this property allows you to simplify your documents classification.
--**Subject** - this property allows you to simplify your documents classification.
--**Comment** - this property allows you to simplify your documents classification.
+- **Application** - the application the document has been created with.
+- **CreatedRaw** - the date and time when the file was created.
+- **Created** - the parsed date and time when the file was created.
+- **LastModifiedRaw** - the date and time when the file was last modified.
+- **LastModified** - the parsed date and time when the file was last modified.
+- **LastModifiedBy** - the name of the user who has made the latest change to the document.
+- **Authors** - the persons who has created the file.
+- **Title** - this property allows you to simplify your documents classification.
+- **Tags** - this property allows you to simplify your documents classification.
+- **Subject** - this property allows you to simplify your documents classification.
+- **Comment** - this property allows you to simplify your documents classification.
 
 ## Syntax
 
@@ -31,12 +31,12 @@ object
 
 ## Example
 
-This example shows how to get the document info represented as an object and paste the application name into "A1" cell.
+Read the document properties and display the application name in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get document info and iys application name.
+// How do I access general document information such as the application name in a spreadsheet?
 
-// Get application name using document info.
+// Retrieve metadata about the current file and write it into a cell in a spreadsheet.
 
 let docInfo = Api.GetDocumentInfo();
 let range = Api.GetActiveSheet().GetRange('A1');

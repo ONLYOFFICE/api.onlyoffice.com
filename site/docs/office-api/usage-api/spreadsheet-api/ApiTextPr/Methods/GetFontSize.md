@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a text font size.
+Read the font size assigned to text in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a text font size.
+// How do I find out what font size is used for text in a spreadsheet?
 
-// Get a text font size and display it in the worksheet.
+// Display the point size stored in a text style inside a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

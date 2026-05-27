@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Read the class type of a text run and display it inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a class type of ApiRun.
+// How do I find out what type of object a text run is in a spreadsheet?
 
-// Get a class type of ApiRun and display it in the worksheet.
+// Confirm the kind of element a run represents by checking its type label in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

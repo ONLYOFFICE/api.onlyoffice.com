@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example demonstrates getting the number of standard deviations from the average.
+Read how many standard deviations away from the mean a conditional formatting rule uses in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check the standard deviation setting for above average conditions.
+// How do I check the standard deviation threshold set on an above-average formatting rule in a spreadsheet?
 
-// Get the number of standard deviations used in the conditional formatting rule.
+// Verify the deviation count that controls which cells get highlighted by an average-based rule in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ let numStdDev = condition.GetNumStdDev();
 
 worksheet.GetRange("C1").SetValue("Std Deviations:");
 worksheet.GetRange("C2").SetValue(numStdDev.toString());
-
 ```

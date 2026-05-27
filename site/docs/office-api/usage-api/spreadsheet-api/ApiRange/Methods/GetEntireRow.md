@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the entire rows containing a range.
+Select full rows that overlap with a given range in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to select entire rows from a range.
+// How do I highlight all the rows that a range belongs to in a spreadsheet?
 
-// Get a range, get its entire rows and fill them with color.
+// Fill the complete rows of a range with a background color in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("C3:E5");
@@ -37,5 +37,4 @@ entireRows.SetFillColor(Api.CreateColorFromRGB(255, 213, 191));
 
 worksheet.GetRange("A1").SetValue("Entire rows of C3:E5 are highlighted");
 worksheet.GetRange("A1").AutoFit(false, true);
-
 ```

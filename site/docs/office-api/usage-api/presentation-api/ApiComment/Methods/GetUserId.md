@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example shows how to get a user ID.
+Get a user ID in a presentation.
 
 ```javascript editor-pptx
+// Retrieve the user identifier associated with a comment.
+
+// Set and retrieve the user ID using a comment object in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -30,7 +34,7 @@ slide.RemoveAllObjects();
 const posX = 15 * 36000;
 const posY = 35 * 36000;
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(posX, posY);
@@ -45,5 +49,4 @@ const userId = comment.GetUserId();
 const paragraph = shape.GetDocContent().GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The ID of the user who commented on this presentation is " + userId);
-
 ```

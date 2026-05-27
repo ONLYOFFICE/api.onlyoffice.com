@@ -22,12 +22,12 @@ expression.CreateDateForm(formPr);
 
 ## Example
 
-This example creates a date form with the common and specific date form properties.
+Create a date entry field where users input calendar dates in a document.
 
-```javascript editor-pdf
-// How to create a date form and add it to the paragraph.
+```javascript editor-forms
+// How do I add a date picker field to a document?
 
-// Add a date form specifying its format and language to the ApiDocument object.
+// Set up a form field that accepts date values with specific formatting in a document.
 
 let doc = Api.GetDocument();
 let dateForm = Api.CreateDateForm({
@@ -40,5 +40,4 @@ let dateForm = Api.CreateDateForm({
 });
 let paragraph = doc.GetElement(0);
 paragraph.AddElement(dateForm);
-
 ```

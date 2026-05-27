@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Determine the type of an embedded object in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiOleObject.
+// How do I find the class type of an embedded object in a presentation?
 
-// Retrieve class type of ApiOleObject object and insert it to the slide.
+// Get the class type of a linked or embedded object and display it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -42,8 +42,8 @@ oleObject.SetPosition(70 * 36000, 30 * 36000);
 slide.AddObject(oleObject);
 const sType = oleObject.GetClassType();
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape('rect', 300 * 36000, 15 * 36000, fill, stroke);
@@ -52,5 +52,4 @@ const docContent = drawing.GetContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText('Class type: ' + sType);
 slide.AddObject(drawing);
-
 ```

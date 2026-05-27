@@ -22,12 +22,12 @@ expression.GetNodes(xPath);
 
 ## Example
 
-This example shows how to get nodes from a custom XML part using XPath.
+Get nodes from a custom XML part using XPath in a presentation.
 
 ```javascript editor-pptx
-// How to get nodes from an XML part using XPath.
+// How do I retrieve nodes matching an XPath expression in a presentation?
 
-// Get XML nodes.
+// Display matching XML nodes in a shape in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -35,7 +35,7 @@ let xml = xmlManager.Add("<products><item>Laptop</item><item>Mouse</item><item>K
 let itemNodes = xml.GetNodes('/products/item');
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

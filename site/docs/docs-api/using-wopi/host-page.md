@@ -8,14 +8,14 @@ In order to create an online office session within your application, a host must
 
 The host page must contain the following elements:
 
-- A *form* element via which the host must *POST* the [access\_token](#access_token) and [access\_token\_ttl](#access_token_ttl) parameters to the online office iframe for security purposes. The [docs\_api\_config](#docs_api_config) parameter is optional.
+- A *form* element via which the host must *POST* the [access_token](#access_token) and [access_token_ttl](#access_token_ttl) parameters to the online office iframe for security purposes. The [docs_api_config](#docs_api_config) parameter is optional.
 - JavaScript code for interacting with the online office iframe using [PostMessage](./postmessage.md).
 - Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon for the page using the favicon URL provided in [WOPI discovery](./wopi-discovery.md).
 - A *viewport* meta tag to avoid visual and functional problems in mobile browsers.
 
 ## Host page code
 
-``` html
+```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
@@ -81,7 +81,9 @@ The host page must contain the following elements:
 </html>
 ```
 
-> Please note that the *"\<%= actionUrl %\>"*, *"\<%= token %\>"*, *"\<%= tokenTtl %\>"*, *"\<%= apiConfig %\>"* strings will be rendered with the appropriate parameters.
+:::note
+The *"\<%= actionUrl %\>"*, *"\<%= token %\>"*, *"\<%= tokenTtl %\>"*, *"\<%= apiConfig %\>"* strings will be rendered with the appropriate parameters.
+:::
 
 ## Parameters
 
@@ -91,11 +93,11 @@ import APITable from '@site/src/components/APITable/APITable';
 <APITable>
 ```
 
-| Name               | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name               | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | access\_token      | string  | An [access token](./key-concepts.md#access-token) that the host will use to determine the identity and permissions of the issuer of a WOPI request.                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | access\_token\_ttl | integer | The time when an [access token expires](./key-concepts.md#the-access_token_ttl-property), represented as the number of milliseconds since January 1, 1970 UTC. It is recommended to set this parameter to 10 hours. This parameter can be also set to 0. This means for the client that the token expiry is either infinite or unknown. In this case, clients might disable any UI prompting users to refresh their sessions. This can lead to unexpected data loss due to access token expiry. So, this is strongly recommended to specify a value for *access\_token\_ttl*. |
-| docs\_api\_config  | string  | The optional [config](../usage-api/config/config.md) parameters for opening the editor via Docs API that are not supported by the WOPI protocol. For example, to enable the [forcesaving](../get-started/how-it-works/saving-file.md#force-saving) functionality by clicking the **Save** button, the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) parameter must be passed in this object.                                                                                                           |
+| docs\_api\_config  | string  | The optional [config](../usage-api/config/config.md) parameters for opening the editor via Docs API that are not supported by the WOPI protocol. For example, to enable the [forcesaving](../get-started/how-it-works/saving-file.md#force-saving) functionality by clicking the **Save** button, the [editorConfig.customization.forcesave](../usage-api/config/editor/customization/customization-standard-branding.md#forcesave) parameter must be passed in this object.                                                                                                  |
 
 ```mdx-code-block
 </APITable>

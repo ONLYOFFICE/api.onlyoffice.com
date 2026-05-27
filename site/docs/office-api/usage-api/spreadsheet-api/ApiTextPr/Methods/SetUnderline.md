@@ -23,15 +23,15 @@ expression.SetUnderline(isUnderline);
 
 ## Example
 
-This example specifies that the contents of the current run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).
+Underline text inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to underline a text.
+// How do I add an underline beneath text in a spreadsheet?
 
-// Add text underline.
+// Emphasize text by placing a line directly below the characters in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

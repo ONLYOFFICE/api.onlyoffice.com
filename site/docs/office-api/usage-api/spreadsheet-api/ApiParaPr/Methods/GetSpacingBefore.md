@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the spacing before value of the current paragraph.
+Read the gap size that precedes a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get spacing information which is before the paragraph.
+// How do I check how much space is added above a paragraph in a spreadsheet?
 
-// Get two consecutive paragraphs add spacing between them then get the spacing before second one and display it in the worksheet. 
+// Confirm the top spacing value after applying a gap to a paragraph's leading edge in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

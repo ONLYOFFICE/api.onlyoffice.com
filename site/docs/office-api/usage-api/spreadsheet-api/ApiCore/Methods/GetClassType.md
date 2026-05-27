@@ -20,14 +20,18 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the worksheet.
+Read the type label of the document properties object in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find out what kind of object holds the document properties in a spreadsheet?
+
+// Identify the internal type of the core document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 const classType = core.GetClassType();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -38,5 +42,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Class type: " + classType);
-
 ```

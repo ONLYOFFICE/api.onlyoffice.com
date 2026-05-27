@@ -10,7 +10,7 @@ sidebar_position: -5
 
 ## AddToolbarMenuItem
 
-`类型：方法`
+**类型：** `method`
 
 向工具栏菜单添加项目。
 
@@ -26,7 +26,7 @@ sidebar_position: -5
 
 **示例**：
 
-``` ts
+```ts
 Asc.plugin.executeMethod("AddToolbarMenuItem", [{
   guid: Asc.plugin.guid,
   tabs: [
@@ -52,7 +52,7 @@ Asc.plugin.executeMethod("AddToolbarMenuItem", [{
 
 ## ToolbarMenuMainItem
 
-`类型：对象`
+**类型：** `object`
 
 主工具栏菜单项。
 
@@ -65,7 +65,7 @@ Asc.plugin.executeMethod("AddToolbarMenuItem", [{
 
 **示例**：
 
-``` ts
+```ts
 const oToolbarMenuMainItem = {
   guid: "asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}",
   tabs: [oToolbarMenuTab],
@@ -74,7 +74,7 @@ const oToolbarMenuMainItem = {
 
 ## ToolbarMenuTab
 
-`类型：对象`
+**类型：** `object`
 
 工具栏菜单选项卡。
 
@@ -88,7 +88,7 @@ const oToolbarMenuMainItem = {
 
 **示例**：
 
-``` ts
+```ts
 const oToolbarMenuTab = {
   id: "ChatGPT",
   text: "AI Assistant",
@@ -98,7 +98,7 @@ const oToolbarMenuTab = {
 
 ## ToolbarMenuItem
 
-`类型：对象`
+**类型：** `object`
 
 工具栏菜单项。
 
@@ -112,7 +112,7 @@ const oToolbarMenuTab = {
 | *hint*           | string                                      | 菜单项提示信息。                                                                                 |
 | *icons*          | string / object                             | 菜单项图标（参见插件的[config](../structure/configuration/configuration.md#variationsicons)文档）。 |
 | *disabled*       | boolean                                     | 指定当前菜单项是否被锁定。                                                                       |
-| *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 *"split == false"*）或其上半部分（当 *"split == true"*）是否可切换。        |
+| *enableToggle*   | boolean                                     | 指定工具栏菜单项（当 `split == false`）或其上半部分（当 `split == true`）是否可切换。        |
 | *lockInViewMode* | boolean                                     | 指定工具栏菜单项在视图模式下（如预览、查看表单、断开连接等）是否自动锁定。                       |
 | *separator*      | boolean                                     | 指定工具栏菜单项之间是否使用分隔符。                                                             |
 | *split*          | boolean                                     | 指定工具栏菜单项是否拆分为两部分，并包含下拉菜单。                                               |
@@ -120,7 +120,7 @@ const oToolbarMenuTab = {
 
 **示例**：
 
-``` ts
+```ts
 const oToolbarMenuItem = {
   id: "MeaningItem",
   type: "button",
@@ -155,9 +155,9 @@ const oToolbarMenuItem = {
 
 ## ToolbarMenuItemType
 
-`类型："button" | "big-button"`
+**类型：** `"button" | "big-button"`
 
-工具栏菜单项类型。*button* 和 *big-button* 两个值等效，可用于指定工具栏按钮。
+工具栏菜单项类型。`button` 和 `big-button` 两个值等效，可用于指定工具栏按钮。
 
 ## 标准工具栏标签页 ID {#standard-toolbar-tab-ids}
 
@@ -220,7 +220,7 @@ const oToolbarMenuItem = {
 
 普通按钮。
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -234,7 +234,7 @@ const oToolbarMenuItem = {
 
 一个被拆分为两部分的按钮：按钮的上半部分可以单独切换，下半部分包含一个下拉菜单。
 
-``` json
+```json
 {
   "text": "caption",
   "split": true,
@@ -249,7 +249,7 @@ const oToolbarMenuItem = {
 
 一个拆分为两部分的按钮，每部分可以单独点击，按钮的下半部分包含一个下拉菜单。
 
-``` json
+```json
 {
   "text": "caption",
   "split": true,
@@ -264,7 +264,7 @@ const oToolbarMenuItem = {
 
 带有下拉菜单的按钮，点击按钮时会打开该菜单。
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -279,7 +279,7 @@ const oToolbarMenuItem = {
 
 可切换的按钮。
 
-``` json
+```json
 {
   "text": "caption",
   "split": false,
@@ -291,7 +291,7 @@ const oToolbarMenuItem = {
 
 ## onToolbarMenuClick
 
-`类型：事件`
+**类型：** `event`
 
 当工具栏菜单按钮被点击时调用的事件。[订阅](../interacting-with-editors/overview/how-to-attach-events.md)此事件以处理工具栏按钮点击。
 
@@ -303,9 +303,7 @@ const oToolbarMenuItem = {
 
 **示例**：
 
-<!-- eslint-skip -->
-
-``` ts
+```ts
 window.Asc.plugin.event_onToolbarMenuClick = (id) => {
   console.log("Toolbar menu item clicked: " + id);
 };
@@ -313,7 +311,7 @@ window.Asc.plugin.event_onToolbarMenuClick = (id) => {
 
 ## UpdateToolbarMenuItem
 
-`类型：方法`
+**类型：** `method`
 
 更新工具栏菜单项。
 
@@ -329,7 +327,7 @@ window.Asc.plugin.event_onToolbarMenuClick = (id) => {
 
 **示例**：
 
-``` ts
+```ts
 Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
   {
     let buttonMainToolbar = new Asc.ButtonToolbar(null, id);
@@ -353,7 +351,7 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
 
 ## attachToolbarMenuClickEvent
 
-`类型：方法`
+**类型：** `method`
 
 添加事件监听器，即当工具栏菜单中指定按钮被点击并触发事件时调用的函数。对于每个工具栏菜单按钮，可以通过其 ID 指定单独的事件监听器。
 
@@ -370,7 +368,7 @@ Asc.Buttons.updateToolbarMenu = function(id, name, buttons)
 
 **示例**：
 
-``` ts
+```ts
 plugin.attachToolbarMenuClickEvent("my_tab", (data) => {
   console.log(data);
 });

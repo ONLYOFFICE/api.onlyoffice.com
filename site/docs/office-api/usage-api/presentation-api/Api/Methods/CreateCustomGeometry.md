@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates creating a preset geometry in presentations.
+Create a custom shape using drawing paths in a presentation.
 
 ```javascript editor-pptx
+// How do I design a custom shape with precise point coordinates in a presentation?
+
+// Build a complex shape from lines and curves defined by coordinates in a presentation.
+
 let presentation = Api.GetPresentation();
 let slide = presentation.GetSlideByIndex(0);
 
@@ -146,8 +150,8 @@ path.CubicBezTo(
 
 path.Close();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 200, 0));
-let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(200, 150, 0)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 200, 0));
+let stroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.RGB(200, 150, 0)));
 let shape = Api.CreateShape("rect", 80 * 36000, 80 * 36000, fill, stroke);
 shape.SetGeometry(customGeometry);
 shape.SetPosition(1000000, 1000000);

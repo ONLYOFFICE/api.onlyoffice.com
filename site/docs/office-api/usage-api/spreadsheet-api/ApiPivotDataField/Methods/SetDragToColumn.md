@@ -2,32 +2,16 @@
 
 Sets the setting which specifies whether the specified field can be dragged to the column position.
 
-## Syntax
-
-```javascript
-expression.SetDragToColumn(flag);
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| flag | Required | boolean |  | Specifies whether the specified field can be dragged to the column position. |
-
-## Returns
-
-This method doesn't return any data.
+Inherited from [ApiPivotField.SetDragToColumn](../../ApiPivotField/Methods/SetDragToColumn.md).
 
 ## Example
 
-This example shows how to set a drag to column of a pivot field.
+Control whether a pivot field can be dragged into the columns area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to rename a pivot field drag to column.
+// How do I prevent a pivot field from being moved to the columns area in a spreadsheet?
 
-// Create a pivot table, add data to it then set drag to column of a specified pivot using boolean value.
+// Lock a pivot field so users cannot reposition it as a column in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

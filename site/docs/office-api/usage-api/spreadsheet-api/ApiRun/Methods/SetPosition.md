@@ -15,7 +15,8 @@ expression.SetPosition(nPosition);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text) measurement in half-points (1/144 of an inch). |
+| nPosition | Required | [hps](../../Enumeration/hps.md) |  | Specifies a positive (raised text) or negative (lowered text)
+measurement in half-points (1/144 of an inch). |
 
 ## Returns
 
@@ -23,15 +24,15 @@ expression.SetPosition(nPosition);
 
 ## Example
 
-This example specifies an amount by which text is raised or lowered for this run in relation to the default baseline of the surrounding non-positioned text.
+Raise or lower a text run relative to the surrounding text baseline in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set an inline position of a text.
+// How do I shift text up or down without changing its font size in a spreadsheet?
 
-// Create a text run object, specify its position to move down or up.
+// Adjust the vertical offset of a word or phrase to create superscript or subscript-like effects in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

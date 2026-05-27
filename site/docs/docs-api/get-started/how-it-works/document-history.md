@@ -4,28 +4,25 @@ sidebar_position: -19
 
 # Document history
 
-You can view the history of text documents, spreadsheets or presentations using the **document editor**.
+The **document editor** can display a version history for documents, spreadsheets, presentations, and PDFs. The version data itself is stored by the **document storage service** — after each editing session, ONLYOFFICE Docs returns change information that the integrator saves alongside the document. The **document editor** then shows this history as a version list in a side panel, where the user can select any version to preview it.
 
-The document history is stored with the document storage service. The **document editor** displays the document history as a version list at the left-side panel. When you select a document version from the list it will be displayed for preview.
-
-The reference figure and the steps below explain the process of viewing the history in ONLYOFFICE Docs.
+The figure and steps below explain how document history viewing works in ONLYOFFICE Docs.
 
 ![Document history](/assets/images/editor/viewing-history.svg)
 
-1. The user clicks the *Version History* button while editing the document within the **document editor**.
-2. The **document editor** requests the list of the document versions from the **document storage service**.
-3. The **document storage service** sends the list of the document versions with the version number to be displayed.
-4. The **document editor** requests the information about the selected document version from the **document storage service**.
-5. The **document storage service** sends the link to the selected version of the document.
-6. The **document editor** displays the selected document version.
-7. When the user clicks another version in the document version list, the **document editor** requests the information about the version to be displayed anew.
-8. The user clicks the *Close History* button and the **document editor** hides the list of the document versions.
+1. The user clicks the *Version History* button in the **document editor**.
+2. The **document editor** requests the list of document versions from the **document storage service**.
+3. The **document storage service** returns the version list, including which version to display.
+4. The **document editor** requests the data for the selected version from the **document storage service**.
+5. The **document storage service** returns a link to the selected version's file.
+6. The **document editor** displays the selected version. If the user selects a different version, steps 4–6 repeat.
+7. The user clicks the *Close History* button, and the **document editor** returns to normal editing mode.
 
 ## How this can be done in practice
 
-1. Create an *html* file to [Open the document](./opening-file.md#how-this-can-be-done-in-practice).
+1. Create an `.html` file to [open the document](./opening-file.md#how-this-can-be-done-in-practice).
 
-2. Specify the event handler for opening the [version history](../../usage-api/config/events.md#onrequesthistory) list in the configuration script for Document Editor initialization. When the [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed. This method contains document history for each document version, if the history parameter has been present for each version.
+2. Add an [onRequestHistory](../../usage-api/config/events.md#onrequesthistory) event handler to the editor config. When the user opens the version history, this event fires. In the handler, call [refreshHistory](../../usage-api/methods.md#refreshhistory) with the full version list. To highlight individual changes within each version, pass additional data as described in [highlighting changes](#highlighting-changes).
 
    ``` ts
    function onRequestHistory() {
@@ -63,11 +60,11 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px" />
+   ![Opening History](/assets/images/editor/history_open.png#gh-light-mode-only)![Opening History](/assets/images/editor/history_open.dark.png#gh-dark-mode-only)
 
-3. In the configuration script for Document Editor initialization, specify the event handler which will select the [version from history](../../usage-api/config/events.md#onrequesthistorydata). When the [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) event is called, the [setHistoryData](../../usage-api/methods.md#sethistorydata) method must be executed. This method contains the absolute URL to the file of the corresponding version.
+3. Add an [onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata) event handler. When the user selects a version from the list, this event fires with the version number. In the handler, call [setHistoryData](../../usage-api/methods.md#sethistorydata) with the absolute URL to that version's file.
 
-   When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
+   When calling `setHistoryData`, a [`token`](./security.md) must be included to validate the parameters.
 
    ``` ts
    function onRequestHistoryData(event) {
@@ -90,9 +87,9 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![History](/assets/images/editor/history.png)
+   ![History](/assets/images/editor/history.png#gh-light-mode-only)![History](/assets/images/editor/history.dark.png#gh-dark-mode-only)
 
-4. In the configuration script for Document Editor initialization, specify the event handler which will [restore](../../usage-api/config/events.md#onrequestrestore) the file version when the user clicks the *Restore* button in the version history. When the [onRequestRestore](../../usage-api/config/events.md#onrequestrestore) event is called, the [refreshHistory](../../usage-api/methods.md#refreshhistory) method must be executed to initialize version history again. This method contains document history for each document version, if the history parameter has been present for each version.
+4. Add an [onRequestRestore](../../usage-api/config/events.md#onrequestrestore) event handler. When the user clicks the *Restore* button, this event fires with the selected version's data. In the handler, save the restored version on your server and call [refreshHistory](../../usage-api/methods.md#refreshhistory) to reload the version list.
 
    ``` ts
    function onRequestRestore(event) {
@@ -127,7 +124,7 @@ The reference figure and the steps below explain the process of viewing the hist
      })
    };
    
-   const cconfig = {
+   const config = {
      events: {
        onRequestRestore,
      },
@@ -136,20 +133,16 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+   ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
-5. Open your *html* file in the browser.
-
-6. Open the *Version History* option in the Document Editor menu.
-
-7. Specify the event handler for the *Close History* button to be displayed in the configuration script for Document Editor initialization. When the user is trying to go back to the document from viewing the document version history by clicking the *Close History* button, the [onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose) event is called and the version history list is hidden. When the function is called, the editor must be initialized again, in the editing mode.
+5. Add an [onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose) event handler. When the user clicks the *Close History* button, this event fires. In the handler, reinitialize the editor in editing mode — for example, by reloading the page.
 
    ``` ts
    function onRequestHistoryClose() {
      document.location.reload()
    };
    
-   const configg = {
+   const config = {
      events: {
        onRequestHistoryClose,
      },
@@ -158,15 +151,23 @@ The reference figure and the steps below explain the process of viewing the hist
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
-## Opening the document history with changes highlighting
+6. Open your `.html` file in the browser.
 
-If the document version was created with the **document editor**, then the document changes can be displayed when viewing the document history. The additional data must be saved to the **document storage service** when [saving](./saving-file.md) the editing session beside the document versions themselves to achieve that. After editing in **document editor** the information about the changes during the editing session is sent together with the changed document:
+7. Open the *Version History* option in the Document Editor menu.
 
-> When the server version is updated, the **document editor** does not use the *changes* data to highlight changes in the history. It only returns the changed document in the *changesurl* parameter.
+## Highlighting changes
 
-- [history](../../usage-api/callback-handler.md#history) - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the [refreshHistory](../../usage-api/methods.md#refreshhistory) method.
+If a document version was created with the **document editor**, the individual changes within that version can be highlighted when viewing the history. To enable this, the **document storage service** must save additional data returned by ONLYOFFICE Docs when [saving](./saving-file.md) each editing session.
+
+:::note
+When the server version is updated, the **document editor** does not use the `changes` data to highlight changes in the history. It only returns the changed document in the `changesurl` parameter.
+:::
+
+Along with the changed document itself, the **document editing service** sends:
+
+- [history](../../usage-api/callback-handler.md#history) — contains the timestamp and author for each change, displayed in the version history side panel. Pass this data as the `changes` property of each version in the object passed to [refreshHistory](../../usage-api/methods.md#refreshhistory).
 
   ``` ts
   docEditor.refreshHistory({
@@ -196,15 +197,15 @@ If the document version was created with the **document editor**, then the docum
   })
   ```
 
-  Where the **changes** is the *changes* from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
+  Where `changes` and `serverVersion` are the values from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
 
-  Where the **serverVersion** is the *serverVersion* from [the history object](../../usage-api/callback-handler.md#history) returned after saving the document.
+  :::note
+  ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
+  :::
 
-  > ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version. And even if several document versions are created during one session, all changes from this session will be highlighted. Therefore, you cannot see the document versions created with the [force saving option](./saving-file.md#force-saving) in the document history.
+- [changesurl](../../usage-api/callback-handler.md#changesurl) — the absolute URL to a zip file with the editing data used to highlight changes for a specific version. Save this file and pass its address as the `changesUrl` parameter when calling [setHistoryData](../../usage-api/methods.md#sethistorydata). You must also include a link to the previous document version in `previous.url`.
 
-- [changesurl](../../usage-api/callback-handler.md#changesurl) - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the [setHistoryData](../../usage-api/methods.md#sethistorydata) method. The link to the previous document version (*previous.url*) must be added into the object.
-
-  When calling the *setHistoryData* method to view the document history version, the token must be added to validate the parameters.
+  When calling `setHistoryData`, a [`token`](./security.md) must be included to validate the parameters.
 
   ``` ts
   docEditor.setHistoryData({
@@ -222,6 +223,8 @@ If the document version was created with the **document editor**, then the docum
   })
   ```
 
-  > The *changesurl* request is made in the browser from the added iframe with the **documentserver** domain, where the **documentserver** is the name of the server with the ONLYOFFICE Docs installed. For its correct work the cross-origin HTTP requests must be allowed (CORS). This can be achieved using the *Access-Control-Allow-Origin* header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  :::warning
+  The `changesurl` request is made in the browser from the added iframe with the `documentserver` domain, where `documentserver` is the name of the server with ONLYOFFICE Docs installed. For correct operation, cross-origin HTTP requests must be allowed (CORS). This can be achieved using the `Access-Control-Allow-Origin` header. You can [register](https://www.onlyoffice.com/docs-registration.aspx?from=api) a free ONLYOFFICE Cloud and use its public IP address or public DNS that can be found in the **Instances** section of the cloud console.
+  :::
 
-  ![changesurl](/assets/images/editor/changesurl.png)
+  ![changesurl](/assets/images/editor/changesurl.png#gh-light-mode-only)![changesurl](/assets/images/editor/changesurl.dark.png#gh-dark-mode-only)

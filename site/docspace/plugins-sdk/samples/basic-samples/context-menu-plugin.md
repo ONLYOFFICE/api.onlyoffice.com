@@ -1,3 +1,8 @@
+---
+description: Add a custom item to the file context menu.
+tags: ["DocSpace", "Plugins", "Basic"]
+---
+
 # Context menu plugin
 
 This guide walks you through creating a basic plugin for DocSpace that adds an item to the file context menu and logs an action when clicked.

@@ -12,12 +12,11 @@ Enumeration
 - [TextFormPrBase](../Enumeration/TextFormPrBase.md)
 - [FormInsertPr](../Enumeration/FormInsertPr.md)
 
-
 ## Example
 
-This example inserts a text box with the specified text box properties over the selected text.
+Insert a text box with the specified text box properties over the selected text.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to insert a text form with adding properties like tip text, placeholder, etc. to it.
 
 // Add a text form with properties.
@@ -36,5 +35,4 @@ let textFormInsertPr = {
 	"keepSelectedTextInForm": false
 };
 doc.InsertTextForm(textFormInsertPr);
-
 ```

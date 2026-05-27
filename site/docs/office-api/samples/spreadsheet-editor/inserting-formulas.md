@@ -1,5 +1,7 @@
 ---
 hide_table_of_contents: true
+description: Add SUM formulas to calculate totals with formatting.
+tags: ["Docs", "Office API", "Spreadsheets"]
 ---
 
 # Inserting formulas

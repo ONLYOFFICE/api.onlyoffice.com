@@ -199,10 +199,9 @@ Enumeration
 - "yellow"
 - "yellowGreen"
 
-
 ## Example
 
-This example creates a scheme color using the 'lightYellow' color preset.
+Create a scheme color using the 'lightYellow' color preset.
 
 ```javascript editor-xlsx
 // How to create a preset color.

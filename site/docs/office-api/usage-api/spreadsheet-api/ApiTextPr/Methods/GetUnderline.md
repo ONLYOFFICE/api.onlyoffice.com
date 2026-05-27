@@ -20,15 +20,15 @@ boolean
 
 ## Example
 
-This example gets a text underline using its property.
+Check whether underline formatting is turned on for a text run in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is underlined or not.
+// How do I find out if text has an underline applied in a spreadsheet?
 
-// Get underlined property of a text run object.
+// Confirm the underline state of a text run by reading its formatting property in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

@@ -22,12 +22,12 @@ expression.Add(nodeName);
 
 ## Example
 
-This example shows how to create a new child node and insert it as a child of the current XML node.
+Add a child element to an XML structure in a presentation.
 
 ```javascript editor-pptx
-// How to add a child node to an XML node.
+// How do I create and attach a new XML node to an existing one?
 
-// Add a new child node.
+// Build nested XML elements and verify their types in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -37,7 +37,7 @@ let textNode = rootNode.Add("text");
 let classType = textNode.GetClassType();
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

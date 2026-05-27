@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the chart legend.
+Apply a background color to the chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to fill the chart legend with the solid fill.
+// How do I fill the chart legend with a custom color in a spreadsheet?
 
-// Color the legend of the chart.
+// Give the legend a solid background to make it stand out from the chart area in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -43,10 +43,10 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(128, 128, 128));
+fill = Api.CreateSolidFill(Api.RGB(128, 128, 128));
 chart.SetLegendFill(fill);
 ```

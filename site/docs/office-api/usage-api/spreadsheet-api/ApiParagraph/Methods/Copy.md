@@ -20,15 +20,15 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example creates a paragraph copy.
+Duplicate a paragraph and append it to a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to create an identical paragraph.
+// How do I reuse an existing paragraph without rewriting it in a spreadsheet?
 
-// Get a paragraph from the content of the shape create its copy and add it to the shape.
+// Clone a formatted paragraph and attach the duplicate at the end of the shape content in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

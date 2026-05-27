@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the user ID of the comment author.
+Retrieve the unique identifier of the person who wrote a comment in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a comment author's user ID.
+// How do I look up the user ID belonging to the author of a comment in a spreadsheet?
 
-// Add a comment author's ID to a range of the worksheet.
+// Identify who created a comment by reading their account identifier in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the yield for a Treasury bill.
+Return the yield for a Treasury bill in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the yield for a Treasury bill.
+// Calculate the yield based on settlement date, maturity date, and price.
 
-// Use a function to calculate a Treasury bill yield.
+// Apply the TBILLYIELD function with Treasury bill parameters.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -14,7 +14,8 @@ expression.ChangeLineStyles(arrLine);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| arrLine | Required | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | The array of line styles must contain 3 elements - subtle, moderate and intense fills. If an array is empty or ApiStroke elements are with no fill, it will be filled with the Api.CreateStroke(0, Api.CreateNoFill()) elements. |
+| arrLine | Required | [ApiStroke](../../ApiStroke/ApiStroke.md)[] |  | The array of line styles must contain 3 elements - subtle, moderate and intense fills.
+If an array is empty or ApiStroke elements are with no fill, it will be filled with the Api.CreateStroke(0, Api.CreateNoFill()) elements. |
 
 ## Returns
 
@@ -22,12 +23,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the line styles to the current theme format scheme.
+Change the line styles of a theme format scheme in a presentation.
 
 ```javascript editor-pptx
-// How to change line styles of a format scheme.
+// How do I update the line appearance used by a theme in a presentation?
 
-// Get format scheme and update its line styles.
+// Modify the stroke patterns applied to shapes using a theme format scheme in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,13 +38,13 @@ const master = presentation.GetMaster(0);
 
 let theme = slide.GetTheme();
 const formatScheme = theme.GetFormatScheme();
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill1 = Api.CreateRadialGradientFill([gs1, gs2]);
 const stroke1 = Api.CreateStroke(3 * 36000, fill1);
-const fill2 = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 111, 61), Api.CreateRGBColor(51, 51, 51));
+const fill2 = Api.CreatePatternFill("dashDnDiag", Api.RGB(255, 111, 61), Api.RGB(51, 51, 51));
 const stroke2 = Api.CreateStroke(3 * 36000, fill2);
-const fill3 = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill3 = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke3 = Api.CreateStroke(3 * 36000, fill3);
 formatScheme.ChangeLineStyles([stroke1, stroke2, stroke3]);
 
@@ -58,7 +59,7 @@ const fontScheme = Api.CreateThemeFontScheme("Arial", "Noto Sans Simplified Chin
 theme = Api.CreateTheme("Theme 1", master, colorScheme, formatScheme, fontScheme);
 presentation.ApplyTheme(theme);
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -69,5 +70,4 @@ const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("Create a shape by yourself to see the stroke style set to this presentation.");
 slide.AddObject(shape);
-
 ```

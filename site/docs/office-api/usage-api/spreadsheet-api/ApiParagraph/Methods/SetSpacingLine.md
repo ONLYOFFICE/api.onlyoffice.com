@@ -5,36 +5,19 @@ Sets the paragraph line spacing. If the value of the sLineRule parameter is eith
 the value of the sLineRule parameter is "auto", then the value of the 
 nLine parameter will be interpreted as 240ths of a line.
 
-## Syntax
-
-```javascript
-expression.SetSpacingLine(nLine, sLineRule);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLine | Required | [twips](../../Enumeration/twips.md) \| [line240](../../Enumeration/line240.md) |  | The line spacing value measured either in twentieths of a point (1/1440 of an inch) or in 240ths of a line. |
-| sLineRule | Required | "auto" \| "atLeast" \| "exact" |  | The rule that determines the measuring units of the line spacing. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetSpacingLine](../../ApiParaPr/Methods/SetSpacingLine.md).
 
 ## Example
 
-This example sets the paragraph line spacing.
+Widen the space between lines of text in a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a spacing line between paragraphs.
+// How do I make a paragraph easier to read by spreading out its lines in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying spacing between text lines.
+// Apply a triple line-height multiplier to loosen the vertical rhythm of paragraph text in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

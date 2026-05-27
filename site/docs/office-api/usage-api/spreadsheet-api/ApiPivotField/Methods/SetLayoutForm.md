@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set a layout form of a pivot field.
+Change the display format of a pivot field to tabular, outline, or compact in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a pivot field layout form.
+// How do I choose the layout style for a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then set layout form of a specified pivot.
+// Apply a tabular presentation to a pivot field for a cleaner row-by-row view in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

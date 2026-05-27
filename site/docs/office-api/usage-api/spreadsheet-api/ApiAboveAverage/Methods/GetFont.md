@@ -2,30 +2,16 @@
 
 Returns the font applied by the current format condition.
 
-## Syntax
-
-```javascript
-expression.GetFont();
-```
-
-`expression` - A variable that represents a [ApiAboveAverage](../ApiAboveAverage.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiFont](../../ApiFont/ApiFont.md) \| null
+Inherited from [ApiFormatCondition.GetFont](../../ApiFormatCondition/Methods/GetFont.md).
 
 ## Example
 
-This example gets the font applied by a conditional formatting rule.
+Access the font settings that a conditional formatting rule applies to matching cells in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve font settings from conditional formatting rules.
+// How do I retrieve the text style that a conditional formatting rule uses for highlighted cells in a spreadsheet?
 
-// Get conditional formatting rule font.
+// Inspect and adjust the font of a formatting condition to ensure consistent text styling in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -52,5 +38,4 @@ if (font) {
 worksheet.GetRange("C1").SetValue("Font applied:");
 worksheet.GetRange("C2").SetValue("Bold: " + (font ? font.Bold : "false"));
 worksheet.GetRange("C3").SetValue("Size: " + (font ? font.Size : "default"));
-
 ```

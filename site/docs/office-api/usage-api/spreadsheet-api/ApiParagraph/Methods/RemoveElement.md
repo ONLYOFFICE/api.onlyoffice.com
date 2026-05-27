@@ -25,15 +25,15 @@ boolean
 
 ## Example
 
-This example removes an element using the position specified.
+Delete a single text run from a paragraph by its position in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to delete a paragraph element knowing its index.
+// How do I remove one specific piece of text from a paragraph in a spreadsheet?
 
-// Change the content of a shape by removing elements.
+// Trim unwanted content from a paragraph by targeting the run at a given index in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

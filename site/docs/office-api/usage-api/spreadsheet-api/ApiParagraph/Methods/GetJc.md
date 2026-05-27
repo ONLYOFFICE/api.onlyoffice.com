@@ -2,33 +2,19 @@
 
 Returns the paragraph contents justification.
 
-## Syntax
-
-```javascript
-expression.GetJc();
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-"left" \| "right" \| "both" \| "center" \| undefined
+Inherited from [ApiParaPr.GetJc](../../ApiParaPr/Methods/GetJc.md).
 
 ## Example
 
-This example shows how to get the paragraph contents justification.
+Read the text alignment setting of a paragraph in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to know the justification type of a paragraph.
+// How do I find out whether a paragraph's text is centered, left-aligned, or right-aligned in a spreadsheet?
 
-// Create a paragraph set justification type, get it and display in the worksheet.
+// Confirm the justification applied to a paragraph after changing its alignment in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

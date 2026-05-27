@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the cumulative lognormal distribution of x, where ln(x) is normally distributed with the specified parameters.
+Calculate the cumulative probability for a lognormal distribution in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the cumulative lognormal distribution of x.
+// How do I find the probability that a value falls below a given threshold in a lognormal distribution in a spreadsheet?
 
-// Use a function to return the cumulative lognormal distribution.
+// Determine the cumulative probability of a lognormal dataset in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -52,5 +52,4 @@ let ans = func.LOGNORMDIST(xValue, mean, standardDeviation);
 
 //print answer
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

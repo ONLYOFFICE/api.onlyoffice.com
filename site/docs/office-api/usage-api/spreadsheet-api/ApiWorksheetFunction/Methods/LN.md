@@ -22,15 +22,14 @@ number
 
 ## Example
 
-This example shows how to return the natural logarithm of a number.
+Calculate the natural logarithm of a number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get the natural logarithm.
+// How do I find the natural logarithm (base e) of a value in a spreadsheet?
 
-// Use a function to return a natural logarithm.
+// Get the inverse exponential of a number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;
 worksheet.GetRange("A1").SetValue(func.LN(23));
-
 ```

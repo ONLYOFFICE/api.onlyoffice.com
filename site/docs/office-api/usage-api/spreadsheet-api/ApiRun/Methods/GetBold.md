@@ -2,33 +2,19 @@
 
 Gets the bold property from the current text properties.
 
-## Syntax
-
-```javascript
-expression.GetBold();
-```
-
-`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiTextPr.GetBold](../../ApiTextPr/Methods/GetBold.md).
 
 ## Example
 
-This example gets a text bold using its property.
+Check whether text is formatted as bold in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out whether a text is bold or not.
+// How do I find out if text is bold in a spreadsheet?
 
-// Get a text bold property.
+// Read the bold setting from a text style and display the result in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

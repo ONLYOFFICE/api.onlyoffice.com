@@ -1,0 +1,58 @@
+# GetAllSeries
+
+返回图表空间中的所有系列。
+
+## 语法
+
+```javascript
+expression.GetAllSeries();
+```
+
+`expression` - 表示 [ApiChart](../ApiChart.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiChartSeries](../../ApiChartSeries/ApiChartSeries.md)[]
+
+## 示例
+
+从 PDF 中的图表读取所有数据系列。
+
+```javascript editor-pdf
+// How do I access the individual data series in a chart in a PDF?
+
+// Iterate through each series to get its type in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const chart = Api.CreateChart("comboBarLine", [
+	[200, 240, 280],
+	[250, 260, 280]
+], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);
+chart.SetVerAxisTitle("USD In Hundred Thousands", 10);
+chart.SetHorAxisTitle("Year", 11);
+chart.SetLegendPos("bottom");
+chart.SetShowDataLabels(false, false, true, false);
+
+let series, seriesType, title = "";
+const allSeries = chart.GetAllSeries();
+for (let seriesIndex = 0; seriesIndex < allSeries.length; ++seriesIndex) {
+	series = allSeries[seriesIndex];
+	seriesType = series.GetChartType();
+	title += ((seriesIndex + 1) + " Series Type = " + seriesType + "\n");
+}
+chart.SetTitle(title, 20);
+chart.SetSize(150 * 36000, 65 * 36000);
+chart.SetPosition(608400, 1267200);
+
+let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+chart.SetSeriesFill(fill, 0, false);
+fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+chart.SetSeriesFill(fill, 1, false);
+page.AddObject(chart);
+```

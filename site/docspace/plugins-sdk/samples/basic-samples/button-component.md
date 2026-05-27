@@ -1,3 +1,8 @@
+---
+description: Render and configure the Button component.
+tags: ["DocSpace", "Plugins", "Basic"]
+---
+
 # Button component
 
 This guide demonstrates how to render and configure the [Button](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-components/button) component using the DocSpace Plugins SDK.

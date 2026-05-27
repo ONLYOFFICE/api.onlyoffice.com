@@ -1,6 +1,6 @@
-# 设置属性
+# SetProperties
 
-设置文档属性。
+为文档设置属性。
 
 ## 语法
 
@@ -12,18 +12,18 @@ expression.SetProperties(obj);
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **描述** |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| obj | 必填 | object |  | 文档属性对象。 |
-| obj.copyoutenabled | 必填 | boolean |  | 如果设置为 **false**，则禁止从编辑器中复制内容。 |
-| obj.hideContentControlTrack | 必填 | boolean |  | 如果设置为 **true**，则禁用内容控件的更改跟踪功能。 |
-| obj.watermark_on_draw | 必填 | string |  | 以 JSON 格式表示的 [绘图水印](../Enumeration/watermark_on_draw.md) 字符串值。 |
-| obj.disableAutostartMacros | 必填 | boolean |  | 设置一个标志，指示是否在打开编辑器时自动启动宏。 |
-| obj.fillForms | 必填 | string |  | 以 JSON 格式设置用于通过标签填写文档 [表单](../Enumeration/fillForms.md) 的规则。 |
+| obj | 必需 | object |  | 文档属性。 |
+| obj.copyoutenabled | 必需 | boolean |  | 如果设置为 **false**，则禁止从编辑器复制。 |
+| obj.hideContentControlTrack | 必需 | boolean |  | 如果设置为 **true**，则禁止跟踪内容控件。 |
+| obj.watermark_on_draw | 必需 | string |  | JSON 格式的[水印](../Enumeration/watermark_on_draw.md)字符串值。 |
+| obj.disableAutostartMacros | 必需 | boolean |  | 设置一个标志，指定编辑器打开时自动启动宏。 |
+| obj.fillForms | 必需 | string |  | 设置 JSON 格式的规则，用于按标签填写文档[表单](../Enumeration/fillForms.md)。 |
 
 ## 返回值
 
-此方法不返回任何值。
+此方法不返回任何数据。
 
 ## 示例
 

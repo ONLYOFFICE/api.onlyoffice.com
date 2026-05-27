@@ -27,12 +27,12 @@ JSON[]
 
 ## Example
 
-This example shows how to convert the slides from the current ApiPresentation object into the JSON objects.
+Convert slides to JSON format in a presentation.
 
 ```javascript editor-pptx
-// How to convert slides to JSON objects.
+// How do I export slides to JSON in a presentation?
 
-// Get JSON representations of each slide from the presentation.
+// Save each slide as a JSON object and reload it in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,7 +44,7 @@ const slideFromJSON = allSlidesFromJSON[0];
 presentation.AddSlide(slideFromJSON);
 const classType = slideFromJSON.GetClassType();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 drawing.SetPosition(608400, 1267200);
@@ -54,5 +54,4 @@ slide.AddObject(drawing);
 const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.AddText("Class type = " + classType);
-
 ```

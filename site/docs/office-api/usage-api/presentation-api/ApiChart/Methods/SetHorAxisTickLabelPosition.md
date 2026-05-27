@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example spicifies tick label position for the horizontal axis.
+Choose where to display labels on a chart's horizontal axis in a presentation.
 
 ```javascript editor-pptx
-// How to change a position of tick label.
+// How do I position the numbers on a chart's horizontal axis in a presentation?
 
-// Create a chart, set its properties and its horizontal axis tick label position.
+// Create a chart and set where the horizontal axis labels appear relative to the axis in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -44,10 +44,9 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetHorAxisTickLabelPosition("high");
 chart.SetPosition(608400, 1267200);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 slide.AddObject(chart);
-
 ```

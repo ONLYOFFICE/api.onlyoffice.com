@@ -32,7 +32,7 @@ Custom providers parsed from this file are instances of the [`Provider`](https:/
 
 #### Provider class
 
-``` ts
+```ts
 class Provider {
     constructor(name, url, key, addon) {
         this.name  = name  || "";
@@ -57,13 +57,13 @@ class Provider {
 
 #### Example
 
-``` ts
+```ts
 "use strict";
 
 class Provider extends AI.Provider {
 
     constructor() {
-        super("Alibab Cloud", "https://dashscope.aliyuncs.com/compatible-mode", "yourAPIKey", "v1");
+        super("Alibaba Cloud", "https://dashscope.aliyuncs.com/compatible-mode", "yourAPIKey", "v1");
     }
 }
 ```

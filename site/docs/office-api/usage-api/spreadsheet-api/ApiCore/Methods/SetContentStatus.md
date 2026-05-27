@@ -22,15 +22,19 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the content status of the current workbook using the ApiCore.
+Record a content status value in the workbook document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I mark the content status of a workbook in a spreadsheet?
+
+// Save a status label such as "Final" or "Draft" in the file metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 core.SetContentStatus("Final");
 const contentStatus = core.GetContentStatus();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -41,5 +45,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Content Status: " + contentStatus);
-
 ```

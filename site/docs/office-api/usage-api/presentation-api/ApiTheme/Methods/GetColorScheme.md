@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the color scheme of the theme.
+Get the color scheme from a theme in a presentation.
 
 ```javascript editor-pptx
-// How to get a color scheme of presentation master's theme.
+// How do I access the colors defined in a presentation's theme?
 
-// Get a theme color scheme and change its colors.
+// Retrieve the theme's color scheme and modify its colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -50,5 +50,4 @@ chart.SetTitle("Financial Overview", 20);
 chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 slide.AddObject(chart);
-
 ```

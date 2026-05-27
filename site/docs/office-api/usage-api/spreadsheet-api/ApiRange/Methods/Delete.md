@@ -14,7 +14,7 @@ expression.Delete(shift);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shift | Optional | [DeleteShiftDirection](../../Enumeration/DeleteShiftDirection.md) |  | Specifies how to shift cells to replace the deleted cells. |
+| shift | Optional | [DeleteShiftDirection](../../Enumeration/DeleteShiftDirection.md) |  | Specifies how to shift cells to replace the deleted cells. If omitted, the direction is determined automatically: *"up"* if the range has more columns than rows, otherwise *"left"*. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example deletes the Range object.
+Remove a range of cells and shift the remaining data to fill the gap in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to remove a range from the worksheet.
+// How do I delete a group of cells and choose which direction the surrounding data moves in a spreadsheet?
 
-// Get a range from the worksheet and delete it specifying the direction.
+// Erase selected cells while controlling whether neighboring content slides up or across in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B4").SetValue("1");

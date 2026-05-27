@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example shows how to set source of a pivot table.
+Change the data range that a pivot table reads from in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set source of a table.
+// How do I point a pivot table to a different range of data in a spreadsheet?
 
-// Create a pivot table, add data to it then set its source.
+// Update the source cells so the pivot table reflects a new or expanded dataset in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -65,9 +65,5 @@ let pivotWorksheet = Api.GetActiveSheet();
 pivotWorksheet.GetRange('A12').SetValue('Source Range');
 pivotWorksheet.GetRange('B12').SetValue(pivotTable.GetSource().GetAddress(true, true));
 
-Api.GetActiveSheet().GetRange('D12').SetValue('Source range will be changed soon');
-
-setTimeout(function () {
-    pivotTable.SetSource(worksheet.GetRange('C1:D5'));
-}, 5000);
+pivotTable.SetSource(worksheet.GetRange('C1:D5'));
 ```

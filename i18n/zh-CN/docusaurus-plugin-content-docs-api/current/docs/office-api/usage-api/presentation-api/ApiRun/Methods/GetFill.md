@@ -1,0 +1,43 @@
+# GetFill
+
+从当前文本属性获取文本颜色。
+
+继承自 [ApiTextPr.GetFill](../../ApiTextPr/Methods/GetFill.md)。
+
+## 示例
+
+从文本运行属性检索填充属性。
+
+```javascript editor-pptx
+// Create a shape with a text run and apply fill color.
+
+// Get and display the text fill type.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetDocContent();
+let paragraph = docContent.GetElement(0);
+const run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+run.AddText("The text properties are changed and the style is added to the paragraph. ");
+run.AddLineBreak();
+paragraph.AddElement(run);
+
+const textPr = run.GetTextPr();
+fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+textPr.SetFill(fill);
+slide.AddObject(shape);
+paragraph = Api.CreateParagraph();
+
+fill = textPr.GetFill();
+const type = fill.GetClassType();
+paragraph.AddText("Text color type: " + type);
+docContent.Push(paragraph);
+```

@@ -2,30 +2,16 @@
 
 Returns the setting which specifies whether the specified field can be dragged to the column position.
 
-## Syntax
-
-```javascript
-expression.GetDragToColumn();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-boolean
+Inherited from [ApiPivotField.GetDragToColumn](../../ApiPivotField/Methods/GetDragToColumn.md).
 
 ## Example
 
-This example shows how to get a drag to column of a pivot field.
+Check whether a pivot field can be moved to the column area in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field drag to column.
+// How do I find out if a pivot field is allowed to be dragged to the column zone in a spreadsheet?
 
-// Create a pivot table, add data to it then get a drag to column of a specified pivot field.
+// Verify that a pivot field supports placement as a column header in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

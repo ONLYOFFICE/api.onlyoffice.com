@@ -4,9 +4,9 @@
 
 ## 下载失败
 
-![下载失败](/assets/images/editor/e-download.png)
+![下载失败](/assets/images/editor/e-download.png#gh-light-mode-only)![下载失败](/assets/images/editor/e-download.dark.png#gh-dark-mode-only)
 
-在编辑器加载过程中会显示"下载失败"消息。
+在编辑器加载过程中会显示“下载失败”消息。
 
 **文档编辑服务**无法上传文件进行编辑。
 
@@ -16,15 +16,17 @@
 
 编辑后关闭编辑器时，**文档管理器**中的文件不变。
 
->**文档编辑服务**无法将数据发送到**文档存储服务**。
+:::note
+**文档编辑服务**无法将数据发送到**文档存储服务**。
+:::
 
  检查 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 链接是否正确。**文档管理器**中的保存必须通过[回调处理程序](../usage-api/callback-handler.md#document-save-examples)实现。
 
 ## 无法保存
 
-![无法保存](/assets/images/editor/e-error0.png)
+![无法保存](/assets/images/editor/e-error0.png#gh-light-mode-only)![无法保存](/assets/images/editor/e-error0.dark.png#gh-dark-mode-only)
 
-编辑器加载了"无法保存文档"消息。
+编辑器加载了“无法保存文档”消息。
 
 **文档编辑服务**无法连接到 [editorConfig.callbackUrl](../usage-api/config/editor/editor.md#callbackurl) 地址的**文档存储服务**。
 
@@ -32,9 +34,9 @@
 
 ## 文件版本已更改 {#the-file-version-has-been-changed}
 
-![文件版本已更改](/assets/images/editor/e-key.png)
+![文件版本已更改](/assets/images/editor/e-key.png#gh-light-mode-only)![文件版本已更改](/assets/images/editor/e-key.dark.png#gh-dark-mode-only)
 
-编辑器加载了"文件版本已更改。将重新加载页面"消息。
+编辑器加载了“文件版本已更改。将重新加载页面”消息。
 
 **文档编辑服务**无法打开之前编辑和保存过的文件来进行编辑。
 
@@ -42,7 +44,7 @@
 
 ## 文件版本打不开
 
-![文件版本打不开](/assets/images/editor/changes-url.png)
+![文件版本打不开](/assets/images/editor/changes-url.png#gh-light-mode-only)![文件版本打不开](/assets/images/editor/changes-url.dark.png#gh-dark-mode-only)
 
 **文档编辑服务**无法打开文件版本。
 
@@ -50,7 +52,7 @@
 
 ## 没有协作编辑
 
-![没有协作编辑](/assets/images/editor/e-coedit.png)
+![没有协作编辑](/assets/images/editor/e-coedit.png#gh-light-mode-only)![没有协作编辑](/assets/images/editor/e-coedit.dark.png#gh-dark-mode-only)
 
 当不同用户打开文档进行编辑时，无法进行共同编辑。
 
@@ -60,9 +62,9 @@
 
 ## 令牌无效
 
-![令牌无效](/assets/images/editor/e-token.png)
+![令牌无效](/assets/images/editor/e-token.png#gh-light-mode-only)![令牌无效](/assets/images/editor/e-token.dark.png#gh-dark-mode-only)
 
-编辑器加载了"文档安全令牌没有正确生成。请联系您的文档服务器管理员"消息。
+编辑器加载了“文档安全令牌没有正确生成。请联系您的文档服务器管理员”消息。
 
 **文档编辑服务**会请求一个加密**签名**。
 

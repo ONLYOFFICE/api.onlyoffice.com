@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to set the text content of a custom XML node.
+Set the text content of a custom XML node in a presentation.
 
 ```javascript editor-pptx
-// How to set text content on an XML node.
+// Assign plain text to a custom XML node in a presentation.
 
-// Set XML node text.
+// Update the text value inside a custom XML node in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -37,7 +37,7 @@ messageNode.SetText("Updated message from CustomXml!");
 let updatedText = messageNode.GetText();
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

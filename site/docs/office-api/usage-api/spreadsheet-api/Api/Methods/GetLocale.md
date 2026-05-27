@@ -20,14 +20,15 @@ number
 
 ## Example
 
-This example shows how to get the current locale ID.
+Read the active regional language setting and display it in a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set and get current locale ID.
+// How do I find out which locale or language region is currently set in a spreadsheet?
 
-// Get region ID and insert information into the cell.
+// Confirm the applied locale by printing its identifier into a cell in a spreadsheet.
 
-let worksheet = Api.GetActiveSheet();Api.SetLocale("en-CA");
+let worksheet = Api.GetActiveSheet();
+Api.SetLocale("en-CA");
 let locale = Api.GetLocale();
 worksheet.GetRange("A1").SetValue("Locale: " + locale);
 ```

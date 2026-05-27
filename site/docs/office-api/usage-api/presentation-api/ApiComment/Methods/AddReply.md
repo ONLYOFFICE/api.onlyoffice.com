@@ -25,12 +25,12 @@ expression.AddReply(sText, sAuthorName, sUserId, nPos);
 
 ## Example
 
-This example shows how to add a reply to the comment.
+Write a response message to an existing comment in a presentation.
 
 ```javascript editor-pptx
-// How to reply to the comment.
+// How do I add a reply to a comment in a presentation?
 
-// Get all comments from the presentation and reply to the first one.
+// Create a new reply thread beneath a comment in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,7 +41,7 @@ const posY = 35 * 36000;
 const shapeWidth = 300 * 36000;
 const shapeHeight = 100 * 36000;
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", shapeWidth, shapeHeight, fill, stroke);
 shape.SetPosition(posX, posY);
@@ -60,5 +60,4 @@ paragraph.AddText("First comment and its reply are aligned to the top left corne
 paragraph.AddText("Comment from John Doe is aligned to the bottom right corner of the shape." + "\n");
 paragraph.AddLineBreak();
 paragraph.AddText("Comment's reply text: " + reply.GetText());
-
 ```

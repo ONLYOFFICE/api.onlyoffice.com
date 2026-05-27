@@ -1,0 +1,40 @@
+# GetRepliesCount
+
+Returns a number of the comment replies.
+
+## Syntax
+
+```javascript
+expression.GetRepliesCount();
+```
+
+`expression` - A variable that represents a [ApiComment](../ApiComment.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+Number
+
+## Example
+
+Count the replies attached to a comment in a document.
+
+```javascript editor-docx
+// How do I find out how many replies a comment has in a document?
+
+// Check the reply count before iterating over a comment thread to avoid out-of-range errors.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("This is just a sample text");
+Api.AddComment(paragraph, "comment", "John Smith");
+let comments = doc.GetAllComments();
+comments[0].AddReply("reply1", "Mark Potato", "uid-2", 0);
+let repliesCount = comments[0].GetRepliesCount();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Number of comment replies: " + repliesCount);
+doc.Push(paragraph);
+```

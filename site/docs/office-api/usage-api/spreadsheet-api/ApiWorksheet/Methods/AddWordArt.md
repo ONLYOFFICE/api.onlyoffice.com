@@ -33,21 +33,21 @@ expression.AddWordArt(oTextPr, sText, sTransform, oFill, oStroke, nRotAngle, nWi
 
 ## Example
 
-This example adds a Text Art object to the sheet with the parameters specified.
+Place a styled decorative text object onto a sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add a word art to the worksheet specifying its properties, color, size, etc.
+// How do I add eye-catching artistic text with custom fonts and colors in a spreadsheet?
 
-// Insert a word art to the worksheet.
+// Render a bold curved text banner with a solid fill and outline on the worksheet.
 
 let worksheet = Api.GetActiveSheet();
 let textProps = Api.CreateTextPr();
 textProps.SetFontSize(72);
 textProps.SetBold(true);
 textProps.SetCaps(true);
-textProps.SetColor(51, 51, 51, false);
+textProps.SetColor(Api.HexColor('#333333'));
 textProps.SetFontFamily("Comic Sans MS");
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+let stroke = Api.CreateStroke(1 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 worksheet.AddWordArt(textProps, "onlyoffice", "textArchUp", fill, stroke, 0, 100 * 36000, 20 * 36000, 0, 2, 2 * 36000, 3 * 36000);
 ```

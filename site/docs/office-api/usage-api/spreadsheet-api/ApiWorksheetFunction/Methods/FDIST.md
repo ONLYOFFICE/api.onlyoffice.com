@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the (right-tailed) F probability distribution (degree of diversity) for two data sets.
+Return the (right-tailed) F probability distribution (degree of diversity) for two data sets in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an F probability distribution of two datasets.
+// Get an F probability distribution of two datasets.
 
-// Use function to get F probability distribution (degree of diversity).
+// Calculate F probability distribution (degree of diversity) using FDIST function in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

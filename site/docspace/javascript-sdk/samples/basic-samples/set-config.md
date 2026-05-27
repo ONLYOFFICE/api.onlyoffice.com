@@ -1,6 +1,13 @@
+---
+description: Update the embedded frame configuration using the JS SDK.
+tags: ["DocSpace", "Embed SDK", "Integration"]
+---
+
 # Set config
 
 This example demonstrates how to update the configuration of the embedded DocSpace frame using the JavaScript SDK.
+
+Complete source code on GitHub: [JavaScript](https://github.com/ONLYOFFICE/docspace-samples/blob/master/js-sdk/basic-samples/set-config.html)
 
 ## Before you start
 
@@ -19,7 +26,7 @@ You need to [add the URL](/docspace/javascript-sdk/get-started/get-started.md#st
     <title>Set Config</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -86,7 +93,7 @@ Create a simple HTML page with a DocSpace frame and a button to update the confi
     <title>Set Config</title>
 
     <!-- Replace with your actual portal URL -->
-    <script src="{PORTAL_SRC}/static/scripts/sdk/2.0.0/api.js"></script>
+    <script src="{PORTAL_SRC}/static/scripts/sdk/2.1.0/api.js"></script>
 
     <style>
       #button {
@@ -116,7 +123,7 @@ Create a simple HTML page with a DocSpace frame and a button to update the confi
 ```
 
 :::info
-The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.0.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
+The API JavaScript file can normally be found in the following DocSpace folder: **\{PORTAL_SRC\}/static/scripts/sdk/2.1.0/api.js** where **\{PORTAL_SRC\}** is the name of the server with the ONLYOFFICE DocSpace installed.
 :::
 
 ## Step 2. JavaScript SDK logic

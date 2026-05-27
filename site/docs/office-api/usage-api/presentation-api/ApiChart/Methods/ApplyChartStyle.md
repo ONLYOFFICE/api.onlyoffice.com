@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to apply a style for chart.
+Apply a preset style to a chart in a presentation.
 
 ```javascript editor-pptx
-// How to change a style of a chart.
+// How do I change the visual style of a chart in a presentation?
 
-// Update chart style.
+// Set a predefined style for a chart and customize its colors in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -41,15 +41,14 @@ chart.SetSize(300 * 36000, 130 * 36000);
 chart.SetPosition(608400, 1267200);
 chart.ApplyChartStyle(2);
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
-let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetSeriesFill(fill, 0, false);
 chart.SetSeriesOutLine(stroke, 0, false);
 
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
-stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetSeriesFill(fill, 1, false);
 chart.SetSeriesOutLine(stroke, 1, false);
 slide.AddObject(chart);
-
 ```

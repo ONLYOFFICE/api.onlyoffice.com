@@ -1,0 +1,50 @@
+# GetCurrentRun
+
+返回光标所在的当前文本域。
+
+## 语法
+
+```javascript
+expression.GetCurrentRun();
+```
+
+`expression` - 表示 [ApiDocumentContent](../ApiDocumentContent.md) 类的变量。
+
+## 参数
+
+此方法没有任何参数。
+
+## 返回值
+
+[ApiRun](../../ApiRun/ApiRun.md)
+
+## 示例
+
+访问演示文稿中形状内容中的当前文本运行。
+
+```javascript editor-pptx
+// How do I get the text run where the cursor is positioned in a shape in a presentation?
+
+// Retrieve the active text run from a shape and add text to it.
+
+const presentation = Api.GetPresentation();
+const slide = presentation.GetSlideByIndex(0);
+slide.RemoveAllObjects();
+
+const fill = Api.CreateSolidFill(Api.HexColor('#F5C6AA'));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape('roundRect', Api.MillimetersToEmus(300), Api.MillimetersToEmus(130), fill, stroke);
+shape.SetPosition(Api.MillimetersToEmus(20), Api.MillimetersToEmus(35));
+const docContent = shape.GetContent();
+
+const paragraph = docContent.GetElement(0);
+const run = Api.CreateRun();
+run.AddText('This is a run inside the shape.');
+paragraph.AddElement(run);
+
+const currentRun = docContent.GetCurrentRun();
+if (currentRun) {
+  currentRun.AddText(' (Current run detected!)');
+}
+slide.AddObject(shape);
+```

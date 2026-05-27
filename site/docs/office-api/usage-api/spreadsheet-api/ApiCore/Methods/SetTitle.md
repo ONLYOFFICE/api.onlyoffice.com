@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the title of the workbook.
+Give a workbook a descriptive title through its document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I assign a title to a workbook's metadata in a spreadsheet?
+
+// Name the workbook by writing a title into its document properties so it is easy to identify in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetTitle("My Workbook Title");
 const title = core.GetTitle();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Title: " + title);
-
 ```

@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to get the smallest number in the field (column) of records in the database that match the conditions you specify.
+Get the smallest number in a database column that matches specified conditions.
 
 ```javascript editor-xlsx
-// How to get the minimum number from the database column that match the conditions you specify.
+// Find the minimum value among records meeting the given criteria.
 
-// Use function to get the minimum number from the database column that satisfies the conditions.
+// Use the DMIN function to retrieve the lowest value from a database field with conditions.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -20,18 +20,18 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and pastes it into the presentation.
+Identify the type of a shape's text content in a presentation.
 
 ```javascript editor-pptx
-// How to get a class type of ApiDocumentContent.
+// How do I find out what type of text content a shape has in a presentation?
 
-// Retrieve class type of ApiDocumentContent object and insert it to the slide.
+// Retrieve the class type of a shape's content and display it on the slide.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -41,5 +41,4 @@ const paragraph = docContent.GetElement(0);
 const classType = docContent.GetClassType();
 paragraph.AddText("Class Type: " + classType);
 slide.AddObject(shape);
-
 ```

@@ -14,7 +14,7 @@ expression.RecalculateAllFormulas(fLogger);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fLogger | Required | function |  | A function which specifies the logger object for checking recalculation of formulas. |
+| fLogger | Optional | function |  | A function which specifies the logger object for checking recalculation of formulas. |
 
 ## Returns
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example recalculates all formulas in the active workbook.
+Recalculate all formula results after changing cell values in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to recalculate all formulas in a worksheet.
+// How do I force all formulas to update their results after editing data in a spreadsheet?
 
-// Reset all values calculated by formulas.
+// Refresh every computed value to reflect the latest input changes in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(1);

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get a visible fields of a pivot table.
+List the fields currently shown in a pivot table in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get an unhidden fields of a table.
+// How do I find out which fields are visible in a pivot table in a spreadsheet?
 
-// Create a pivot table, add data to it then get its visible fields.
+// Collect the names of all unhidden pivot table fields to display them in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

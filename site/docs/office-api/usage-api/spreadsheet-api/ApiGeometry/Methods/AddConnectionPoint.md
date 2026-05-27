@@ -24,10 +24,13 @@ boolean
 
 ## Example
 
-Creates adjustable custom geometry with guides and connection points.
+Attach a named connector anchor to a custom shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays adjustment value in a cell and applies geometry to shape.
+// How do I place a fixed connection spot on a custom shape in a spreadsheet?
+
+// Mark a specific position on a custom shape so lines can snap to it in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 customGeometry.AddAdj("adj1", 25000);
@@ -45,8 +48,8 @@ path.LineTo("r", "b");
 path.LineTo("l", "b");
 path.LineTo("x1", "hd2");
 path.Close();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 9, 0, 2, 2);
 shape.SetGeometry(customGeometry);
 ```

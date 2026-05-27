@@ -1,0 +1,47 @@
+# GetTextPr
+
+Returns the text properties of the current run.
+
+## Syntax
+
+```javascript
+expression.GetTextPr();
+```
+
+`expression` - A variable that represents a [ApiRun](../ApiRun.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiTextPr](../../ApiTextPr/ApiTextPr.md)
+
+## Example
+
+Access all formatting settings for text in a PDF.
+
+```javascript editor-pdf
+// How do I get the text formatting properties in a PDF?
+
+// Modify the font size using text properties in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+const run = Api.CreateRun();
+const textPr = run.GetTextPr();
+textPr.SetFontSize(30);
+paragraph.SetJc("left");
+run.AddText("This is a sample text inside the shape with the font size set to 15 points using the text properties.");
+paragraph.AddElement(run);
+page.AddObject(shape);
+```

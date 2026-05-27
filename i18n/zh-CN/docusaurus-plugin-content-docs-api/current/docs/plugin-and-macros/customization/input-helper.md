@@ -23,7 +23,6 @@ description: 了解如何在 ONLYOFFICE 插件中创建和使用输入辅助。
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -44,7 +43,6 @@ window.Asc.plugin.init = (text) => {
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentContentControl = null;
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -53,16 +51,16 @@ window.Asc.plugin.init = (text) => {
 
 ## 显示输入辅助 {#showing-an-input-helper}
 
-要显示输入辅助，请使用 *window.Asc.plugin.executeMethod* 的 **ShowInputHelper** 方法。
+要显示输入辅助，请使用 `window.Asc.plugin.executeMethod` 的 **ShowInputHelper** 方法。
 
 **参数**：
 
 | 名称             | 类型      | 描述                                                             |
 |------------------|-----------|------------------------------------------------------------------|
-| *guid*           | `string`  | 一个字符串值，指定插件标识符，必须是 *asc.\{UUID\}* 类型。       |
+| *guid*           | `string`  | 一个字符串值，指定插件标识符，必须是 `asc.{UUID}` 类型。       |
 | *w*              | `number`  | 一个数字，指定窗口宽度，单位为毫米。                             |
 | *h*              | `number`  | 一个数字，指定窗口高度，单位为毫米。                             |
-| *isKeyboardTake* | `boolean` | 定义键盘是否被捕获（**true**）或未捕获（**false**）。            |
+| *isKeyboardTake* | `boolean` | 键盘是否被捕获（`true`）或未捕获（`false`）。                |
 
 **返回值**：此方法不返回任何数据。
 
@@ -74,14 +72,14 @@ window.Asc.plugin.executeMethod("ShowInputHelper", ["asc.{UUID}", 70, 70, true])
 
 ## 隐藏输入辅助 {#unshowing-an-input-helper}
 
-要隐藏输入辅助，使用 *window.Asc.plugin.executeMethod* 的 **UnShowInputHelper** 方法。
+要隐藏输入辅助，使用 `window.Asc.plugin.executeMethod` 的 **UnShowInputHelper** 方法。
 
 **参数**：
 
 | 名称      | 类型      | 描述                                                             |
 |-----------|-----------|------------------------------------------------------------------|
-| *guid*    | `string`  | 一个字符串值，指定插件标识符，必须是 *asc.\{UUID\}* 类型。       |
-| *isclear* | `boolean` | 定义输入上下文是否会被清除（**true**）或不清除（**false**）。    |
+| *guid*    | `string`  | 一个字符串值，指定插件标识符，必须是 `asc.{UUID}` 类型。       |
+| *isclear* | `boolean` | 输入上下文是否会被清除（`true`）或不清除（`false`）。        |
 
 **返回值**：此方法不返回任何数据。
 
@@ -111,7 +109,6 @@ window.Asc.plugin.executeMethod("UnShowInputHelper", ["asc.{UUID}", true]);
 window.Asc.plugin.init = (text) => {
   if (!window.isInit) {
     window.isInit = true;
-    window.Asc.plugin.currentText = "";
     window.Asc.plugin.createInputHelper();
     window.Asc.plugin.getInputHelper().createWindow();
   }
@@ -124,7 +121,7 @@ window.Asc.plugin.init = (text) => {
 
 **参数**：此方法不带任何参数。
 
-**返回值**：Array.\<[InputHelperItem](#inputhelperitem)\>
+**返回值**：[InputHelperItem](#inputhelperitem)[]
 
 **示例**：
 
@@ -171,14 +168,14 @@ const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().
 
 **参数**：此方法不接受任何参数。
 
-**返回值**：object（具有 *w* 和 *h* 属性）
+**返回值**：object（具有 `w` 和 `h` 属性）
 
 **示例**：
 
 ```ts
 function getInputHelperSize() {
   const size = window.Asc.plugin.getInputHelper().getScrollSizes();
-  let width = 200;
+  let width = 150;
   let height = size.h;
   const inputHelper = window.Asc.plugin.getInputHelper();
   const heightMin = inputHelper.getItemsHeight(Math.min(5, inputHelper.getItems().length));
@@ -201,7 +198,7 @@ function getInputHelperSize() {
 
 | 名称    | 类型                      | 描述                                                                             |
 |---------|---------------------------|----------------------------------------------------------------------------------|
-| *items* | `Array.<InputHelperItem>` | 定义一个包含所有输入辅助条目的 [InputHelperItem](#inputhelperitem) 对象数组。    |
+| *items* | [InputHelperItem](#inputhelperitem)[] | 包含所有输入辅助条目的 [InputHelperItem](#inputhelperitem) 对象数组。            |
 
 **返回值**：此方法不返回任何值。
 
@@ -238,7 +235,7 @@ window.Asc.plugin.getInputHelper().show(sizes.w, sizes.h, true);
 |---------------------|-----------|--------------------------------------------------------|
 | *width*             | `number`  | 输入辅助窗口宽度，单位为毫米。                         |
 | *height*            | `number`  | 输入辅助窗口高度，单位为毫米。                         |
-| *isCaptureKeyboard* | `boolean` | 定义是否捕获键盘（**true**）或不捕获（**false**）。    |
+| *isCaptureKeyboard* | `boolean` | 是否捕获键盘（`true`）或不捕获（`false`）。        |
 
 **返回值**：此方法无返回值。
 
@@ -284,7 +281,7 @@ window.Asc.plugin.executeMethod("SelectContentControl", [window.Asc.plugin.curre
 
 ## InputHelperItem
 
-定义输入辅助项。
+输入辅助项。
 
 `Type: object`
 

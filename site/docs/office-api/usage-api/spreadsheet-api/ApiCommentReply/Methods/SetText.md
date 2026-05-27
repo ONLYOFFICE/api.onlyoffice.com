@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example sets the comment reply text.
+Update the written message of a comment reply in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change a reply text.
+// How do I edit the text of an existing reply to a comment in a spreadsheet?
 
-// Replace a reply text with a new text.
+// Overwrite the current reply content with new wording in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

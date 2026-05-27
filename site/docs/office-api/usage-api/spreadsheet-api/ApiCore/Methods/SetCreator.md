@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the creator of the current workbook using the ApiCore.
+Assign an author name to a workbook's document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I record who created a workbook in a spreadsheet?
+
+// Store the author's identity in the workbook metadata in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetCreator("John Smith");
 const creator = core.GetCreator();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Creator: " + creator);
-
 ```

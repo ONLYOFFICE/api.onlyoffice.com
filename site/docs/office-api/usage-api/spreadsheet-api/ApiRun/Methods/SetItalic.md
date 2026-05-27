@@ -22,15 +22,15 @@ expression.SetItalic(isItalic);
 
 ## Example
 
-This example sets the italic property to the text character.
+Make a text run italic inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make a text italic.
+// How do I slant a portion of text to italic style in a spreadsheet?
 
-// Create a text run object, change its properties by making it italic.
+// Distinguish a run visually by applying an italic style to it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

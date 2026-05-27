@@ -20,12 +20,12 @@ string
 
 ## Example
 
-This example shows how to get the XML string representation of a custom XML node.
+Export an XML element as a string in a presentation.
 
 ```javascript editor-pptx
-// How to get XML content from an XML node.
+// How do I get the XML markup of a node in a presentation?
 
-// Get XML node content.
+// Retrieve the serialized form of an XML element in a presentation.
 
 let presentation = Api.GetPresentation();
 let xmlManager = presentation.GetCustomXmlParts();
@@ -34,7 +34,7 @@ let bookNode = xml.GetNodes('/book')[0];
 let xmlString = bookNode.GetXml();
 let slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);

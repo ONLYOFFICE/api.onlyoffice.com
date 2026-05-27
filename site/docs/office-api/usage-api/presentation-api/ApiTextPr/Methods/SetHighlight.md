@@ -22,18 +22,18 @@ expression.SetHighlight(sColor);
 
 ## Example
 
-This example specifies a highlighting color which is added to the text properties and applied as a background to the contents of the run.
+Add background highlighting color to text in a presentation.
 
 ```javascript editor-pptx
-// How to highlight a text with a color.
+// What highlight colors work best for text in a presentation?
 
-// Get the text properties of the run and highlight it.
+// Set a background color that fills behind the text characters in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the text highlighted with light gray color using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

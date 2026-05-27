@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example specifies the legend font size.
+Change the text size of the chart legend in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the font size of the chart legend.
+// How do I make the chart legend text larger or smaller in a spreadsheet?
 
-// Resize the font of the chart legend.
+// Adjust the legend font size so the labels are easier to read in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -44,8 +44,8 @@ worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "bar3D", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 5, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
 chart.SetLegendFontSize(13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetSeriesFill(fill, 0, false);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetSeriesFill(fill, 1, false);
 ```

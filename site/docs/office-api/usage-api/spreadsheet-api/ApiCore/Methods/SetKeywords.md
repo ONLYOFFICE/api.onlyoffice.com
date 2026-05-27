@@ -22,16 +22,20 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates how to set the string of keywords of the workbook using the ApiCore.
+Add searchable keywords to a workbook's document properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I attach search tags to a workbook's metadata in a spreadsheet?
+
+// Tag the workbook with descriptive terms that make it easier to find in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetKeywords("Example; ApiCore; Workbook");
 const keywords = core.GetKeywords();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -42,5 +46,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```

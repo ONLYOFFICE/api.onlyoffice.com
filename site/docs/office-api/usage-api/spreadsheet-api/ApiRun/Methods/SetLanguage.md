@@ -15,7 +15,8 @@ expression.SetLanguage(sLangId);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by RFC 4646/BCP 47. Example: "en-CA". |
+| sLangId | Required | string |  | The possible value for this parameter is a language identifier as defined by
+RFC 4646/BCP 47. Example: "en-CA". |
 
 ## Returns
 
@@ -23,15 +24,15 @@ expression.SetLanguage(sLangId);
 
 ## Example
 
-This example specifies the languages which will be used to check spelling and grammar (if requested) when processing the contents of this text run.
+Assign a language to a text run so spelling and grammar checks use the correct rules in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to set a language to the text for grammar checking.
+// How do I set the proofreading language for a piece of text in a spreadsheet?
 
-// Create a text run object, change its language to English for grammar check.
+// Mark text with a specific locale so the editor checks it against the right dictionary in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

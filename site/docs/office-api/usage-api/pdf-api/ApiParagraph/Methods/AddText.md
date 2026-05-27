@@ -1,0 +1,49 @@
+# AddText
+
+Adds some text to the current paragraph.
+
+## Syntax
+
+```javascript
+expression.AddText(text);
+```
+
+`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| text | Required | string |  | The text that we want to insert into the current document element. |
+
+## Returns
+
+[ApiRun](../../ApiRun/ApiRun.md)
+
+## Example
+
+Add text content to a paragraph in a PDF.
+
+```javascript editor-pdf
+// How do I insert text into a paragraph in a PDF?
+
+// Place text inside a paragraph in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+const fill = Api.CreateRadialGradientFill([gs1, gs2]);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+
+paragraph.SetJc("left");
+paragraph.AddText("This is a text inside the shape aligned left.");
+paragraph.AddLineBreak();
+paragraph.AddText("This is a text after the line break.");
+page.AddObject(shape);
+```

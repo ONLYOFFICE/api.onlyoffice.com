@@ -14,7 +14,8 @@ expression.SetJc(sJc);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that will be applied to the paragraph contents. |
+| sJc | Required | "left" \| "right" \| "both" \| "center" |  | The justification type that
+will be applied to the paragraph contents. |
 
 ## Returns
 
@@ -22,15 +23,15 @@ boolean
 
 ## Example
 
-This example sets the paragraph contents justification.
+Align paragraph text to the center inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to center a paragraph text.
+// How do I change the horizontal alignment of a paragraph in a spreadsheet?
 
-// Get a paragraph from the shape's content then add a text specifying its justification type.
+// Control whether paragraph text snaps to the left, right, center, or stretches across the full width in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

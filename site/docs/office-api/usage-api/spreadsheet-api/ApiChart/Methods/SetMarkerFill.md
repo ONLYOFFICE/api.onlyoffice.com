@@ -25,14 +25,12 @@ boolean
 
 ## Example
 
-This example sets the fill to the marker in the specified chart series.
+Color the data point markers in a chart series in a spreadsheet.
 
 ```javascript editor-xlsx
-// Create the "scatter" chart and apply an RGB color to its markers.
+// How do I fill the markers of a scatter chart with a specific color in a spreadsheet?
 
-// How to use the ApiFill object as a color of the chart markers.
-
-// How to fill the markers of the ApiChart object.
+// Give each series its own marker color to make data points easy to distinguish in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -48,12 +46,12 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "scatter", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetMarkerFill(fill, 0, 0, true);
-let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerOutLine(stroke, 0, 0, true);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
-stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61)));
+stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(255, 111, 61)));
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```

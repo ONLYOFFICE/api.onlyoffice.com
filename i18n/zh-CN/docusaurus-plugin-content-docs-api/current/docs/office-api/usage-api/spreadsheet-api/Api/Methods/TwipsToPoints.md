@@ -1,0 +1,38 @@
+# TwipsToPoints
+
+将缇转换为磅。
+
+## 语法
+
+```javascript
+expression.TwipsToPoints(twips);
+```
+
+`expression` - 表示 [Api](../Api.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| twips | 必需 | number |  | 要转换为磅的缇数。 |
+
+## 返回值
+
+number
+
+## 示例
+
+在电子表格中将缇转换为其对应的磅值。
+
+```javascript editor-xlsx
+// How do I translate a twip-based size into points for use with drawing or layout properties in a spreadsheet?
+
+// Express a twip value as points so it can be applied consistently to document elements in a spreadsheet.
+
+const twips = 100;
+const points = Api.TwipsToPoints(twips);
+const text = twips + ' twips are equal to ' + points + ' points.';
+
+let worksheet = Api.GetActiveSheet();
+worksheet.GetRange('B2').SetValue(text);
+```

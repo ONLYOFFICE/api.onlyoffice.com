@@ -22,12 +22,12 @@ expression.SetUserId(sUserId);
 
 ## Example
 
-This example shows how to set a user ID.
+Set a user ID for a comment in a presentation.
 
 ```javascript editor-pptx
-// How to change an author's user ID of a comment.
+// How do I assign a user ID to a comment in a presentation?
 
-// Get all comments from the presentation and change its first one's user ID.
+// Change the author's user ID of a comment to track comment ownership in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -36,7 +36,7 @@ slide.RemoveAllObjects();
 const posX = 15 * 36000;
 const posY = 35 * 36000;
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(posX, posY);
@@ -51,5 +51,4 @@ const userId = comment.GetUserId();
 const paragraph = shape.GetDocContent().GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The ID of the user who commented on this presentation is " + userId);
-
 ```

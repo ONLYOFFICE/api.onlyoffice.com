@@ -20,12 +20,12 @@ number
 
 ## Example
 
-This example shows how to get a column number for the selected cell.
+Look up the column number of a specific cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a cell column index.
+// How do I find which column number a cell belongs to in a spreadsheet?
 
-// Get a range and display its column number.
+// Read a cell's column position and print that number onto the sheet.
 
 let worksheet = Api.GetActiveSheet();
 let range = worksheet.GetRange("D9").GetCol();

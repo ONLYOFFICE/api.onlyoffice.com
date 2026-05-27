@@ -22,18 +22,18 @@ expression.SetCaps(isCaps);
 
 ## Example
 
-This example specifies that any lowercase characters in the current text run are formatted for display only as their capital letter character equivalents.
+Format text to display all letters as capitals in a presentation.
 
 ```javascript editor-pptx
-// How to make a text capitalized.
+// What is the caps formatting option in a presentation?
 
-// Create a new text run and make each letters capitalized.
+// Apply capital letter formatting to text runs in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -49,5 +49,4 @@ run.SetCaps(true);
 run.AddText("This is a text run with the font set to capitalized letters.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

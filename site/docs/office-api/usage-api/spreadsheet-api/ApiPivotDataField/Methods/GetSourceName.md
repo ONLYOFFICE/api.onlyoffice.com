@@ -2,30 +2,16 @@
 
 Returns a source name for the pivot table field.
 
-## Syntax
-
-```javascript
-expression.GetSourceName();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-string
+Inherited from [ApiPivotField.GetSourceName](../../ApiPivotField/Methods/GetSourceName.md).
 
 ## Example
 
-This example shows how to get a source name of a pivot field.
+Read the original data source name of a pivot field in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's source name.
+// How do I find out what column a pivot field was built from in a spreadsheet?
 
-// Create a pivot table, add data to it then get source name of a specified pivot field.
+// Distinguish a field's display name from its underlying source column name in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

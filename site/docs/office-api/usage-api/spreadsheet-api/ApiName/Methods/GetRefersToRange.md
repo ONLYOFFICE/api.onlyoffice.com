@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get the ApiRange object by its name.
+Access the cells that a named range covers in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a range knowig its defname.
+// How do I work with the actual cells behind a named range in a spreadsheet?
 
-// Find a range by its name and change its properties.
+// Look up a range by its label and apply formatting to those cells in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");

@@ -22,12 +22,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example demonstrates setting the maximum percentage length of a data bar conditional formatting rule.
+Cap the longest bar in a data bar rule to a specific percentage of the column width in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to change the maximum length setting of a data bar.
+// How do I limit how wide the largest data bar can grow inside a cell in a spreadsheet?
 
-// Set the maximum percentage length of a data bar conditional formatting rule.
+// Prevent oversized bars by defining an upper percentage boundary for bar length in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -50,5 +50,4 @@ dataBar.SetPercentMax(80);
 
 worksheet.GetRange("C3").SetValue("After:");
 worksheet.GetRange("C4").SetValue(dataBar.GetPercentMax() + "%");
-
 ```

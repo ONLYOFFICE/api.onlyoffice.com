@@ -4,28 +4,25 @@ sidebar_position: -19
 
 # 文档历史记录
 
-您可以使用**文档编辑器**查看文本文档、电子表格或演示文稿的历史记录。
+**文档编辑器**可以显示文本文档、电子表格、演示文稿和PDF的版本历史记录。版本数据本身由**文档存储服务**存储——每次编辑会话结束后，ONLYOFFICE 文档会返回变更信息，集成商将其与文档一起保存。然后，**文档编辑器**在侧面板中将此历史记录显示为版本列表，用户可以选择任何版本进行预览。
 
-文档历史记录存储在文档存储服务中。**文档编辑器**在左侧面板中将文档历史记录显示为版本列表。当您从列表中选择一个文档版本时，它将显示出来以供预览。
-
-以下参考图和步骤解释了在ONLYOFFICE文档中查看历史记录的过程。
+以下图表和步骤解释了在ONLYOFFICE 文档中查看文档历史记录的工作方式。
 
 ![文档历史](/assets/images/editor/viewing-history.svg)
 
-1. 用户在**文档编辑器**中编辑文档时，点击*版本历史记录*按钮
+1. 用户在**文档编辑器**中点击*版本历史记录*按钮。
 2. **文档编辑器**向**文档存储服务**请求文档版本列表。
-3. **文档存储服务**发送带有要显示的版本号的文档版本列表。
-4. **文档编辑器**向**文档存储服务**请求有关所选文档版本的信息。
-5. **文档存储服务**发送所选文档版本的链接。
-6. **文档编辑器**显示所选的文档版本。
-7. 当用户点击文档版本列表中的另一个版本时，**文档编辑器**会重新请求要显示的该版本的信息。
-8. 用户点击*关闭历史记录*按钮，**文档编辑器**隐藏文档版本列表。
+3. **文档存储服务**返回版本列表，包括要显示的版本。
+4. **文档编辑器**向**文档存储服务**请求所选版本的数据。
+5. **文档存储服务**返回所选版本文件的链接。
+6. **文档编辑器**显示所选版本。如果用户选择其他版本，则重复步骤4–6。
+7. 用户点击*关闭历史记录*按钮，**文档编辑器**返回正常编辑模式。
 
 ## 实际操作方法 {#how-this-can-be-done-in-practice}
 
-1. 创建一个*html*文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
+1. 创建一个`.html`文件，用于[打开文档](./opening-file.md#how-this-can-be-done-in-practice)。
 
-2. 在文档编辑器初始化的配置脚本中，指定用于打开[版本历史记录](../../usage-api/config/events.md#onrequesthistory)列表的事件处理程序。当调用[onRequestHistory](../../usage-api/config/events.md#onrequesthistory)事件时，必须执行[refreshHistory](../../usage-api/methods.md#refreshhistory)方法。如果每个版本都存在历史记录参数，此方法包含每个文档版本的文档历史记录。
+2. 在编辑器配置中添加[onRequestHistory](../../usage-api/config/events.md#onrequesthistory)事件处理程序。当用户打开版本历史记录时，此事件将触发。在处理程序中，调用[refreshHistory](../../usage-api/methods.md#refreshhistory)方法并传入完整的版本列表。要突出显示每个版本中的各个更改，请按照[突出显示更改](#highlighting-changes)中的说明传递额外数据。
 
    ``` ts
    function onRequestHistory() {
@@ -63,11 +60,11 @@ sidebar_position: -19
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   <img alt="Opening File" src="/assets/images/editor/history_open.png" width="300px" />
+   ![打开文件](/assets/images/editor/history_open.png)
 
-3. 在文档编辑器初始化的配置脚本中，指定将从[历史记录中选择版本](../../usage-api/config/events.md#onrequesthistorydata)的事件处理程序。当调用[onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata)事件时，必须执行[setHistoryData](../../usage-api/methods.md#sethistorydata)方法。此方法包含相应版本文件的绝对URL。
+3. 添加[onRequestHistoryData](../../usage-api/config/events.md#onrequesthistorydata)事件处理程序。当用户从列表中选择一个版本时，此事件将触发并传入版本号。在处理程序中，调用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法并传入该版本文件的绝对URL。
 
-   调用*setHistoryData*方法查看文档历史版本时，必须添加令牌以验证参数。
+   调用`setHistoryData`时，必须包含[`token`](./security.md)以验证参数。
 
    ``` ts
    function onRequestHistoryData(event) {
@@ -92,7 +89,7 @@ sidebar_position: -19
 
    ![历史记录](/assets/images/editor/history.png)
 
-4. 在文档编辑器初始化的配置脚本中，指定当用户点击版本历史记录中的*恢复*按钮时将[恢复](../../usage-api/config/events.md#onrequestrestore)文件版本的事件处理程序。当调用[onRequestRestore](../../usage-api/config/events.md#onrequestrestore)事件时，必须执行[refreshHistory](../../usage-api/methods.md#refreshhistory)方法以再次初始化版本历史记录。如果每个版本都存在历史记录参数，此方法包含每个文档版本的文档历史记录。
+4. 添加[onRequestRestore](../../usage-api/config/events.md#onrequestrestore)事件处理程序。当用户点击*恢复*按钮时，此事件将触发并传入所选版本的数据。在处理程序中，将恢复的版本保存到您的服务器上，然后调用[refreshHistory](../../usage-api/methods.md#refreshhistory)重新加载版本列表。
 
    ``` ts
    function onRequestRestore(event) {
@@ -127,7 +124,7 @@ sidebar_position: -19
      })
    };
    
-   const cconfig = {
+   const config = {
      events: {
        onRequestRestore,
      },
@@ -136,20 +133,16 @@ sidebar_position: -19
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestRestore](/assets/images/editor/onRequestRestore.png)
+   ![onRequestRestore](/assets/images/editor/onRequestRestore.png#gh-light-mode-only)![onRequestRestore](/assets/images/editor/onRequestRestore.dark.png#gh-dark-mode-only)
 
-5. 在浏览器中打开您的*html*文件，
-
-6. 在文档编辑器菜单中打开*版本历史记录*选项。
-
-7. 在文档编辑器初始化的配置脚本中，指定用于显示*关闭历史记录*按钮的事件处理程序。当用户点击*关闭历史记录*按钮，试图从查看文档版本历史记录返回文档时，将调用[onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose)事件，版本历史记录列表将被隐藏。调用该函数时，必须在编辑模式下再次初始化编辑器。
+5. 添加[onRequestHistoryClose](../../usage-api/config/events.md#onrequesthistoryclose)事件处理程序。当用户点击*关闭历史记录*按钮时，此事件将触发。在处理程序中，重新初始化编辑器为编辑模式——例如，通过重新加载页面。
 
    ``` ts
    function onRequestHistoryClose() {
      document.location.reload()
    };
    
-   const configg = {
+   const config = {
      events: {
        onRequestHistoryClose,
      },
@@ -158,15 +151,23 @@ sidebar_position: -19
    const docEditor = new DocsAPI.DocEditor("placeholder", config);
    ```
 
-   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png)
+   ![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.png#gh-light-mode-only)![onRequestHistoryClose](/assets/images/editor/onRequestHistoryClose.dark.png#gh-dark-mode-only)
 
-## 打开带有更改突出显示的文档历史记录
+6. 在浏览器中打开您的`.html`文件。
 
-如果文档版本是使用文档编辑器创建的，那么在查看文档历史记录时可以显示文档的更改。为了实现这一点，在[保存](./saving-file.md)编辑会话时，除了文档版本本身之外，还必须将额外的数据保存到**文档存储服务**中。在**文档编辑器**中编辑后，有关编辑会话期间的更改信息将与已更改的文档一起发送：
+7. 在文档编辑器菜单中打开*版本历史记录*选项。
 
-> 当服务器版本更新时，**文档编辑器**不会使用*changes*s数据来突出显示历史记录中的更改。它只会在*changesurl*参数中返回已更改的文档。
+## 突出显示更改 {#highlighting-changes}
 
-- [历史记录](../../usage-api/callback-handler.md#history)：当您在侧面板中查看文档历史记录时，此信息允许显示每个文档版本的时间和作者。必须作为发送给[refreshHistory](../../usage-api/methods.md#refreshhistory)方法的对象的属性changes发送。
+如果文档版本是使用**文档编辑器**创建的，则在查看历史记录时可以突出显示该版本中的各个更改。要启用此功能，**文档存储服务**必须保存ONLYOFFICE 文档在[保存](./saving-file.md)每次编辑会话时返回的额外数据。
+
+:::note
+当服务器版本更新时，**文档编辑器**不会使用`changes`数据来突出显示历史记录中的更改。它只会在`changesurl`参数中返回已更改的文档。
+:::
+
+除了已更改的文档本身之外，**文档编辑服务**还会发送：
+
+- [history](../../usage-api/callback-handler.md#history)——包含每个更改的时间戳和作者，显示在版本历史记录侧面板中。将此数据作为传递给[refreshHistory](../../usage-api/methods.md#refreshhistory)的对象中每个版本的`changes`属性传递。
 
   ``` ts
   docEditor.refreshHistory({
@@ -196,15 +197,15 @@ sidebar_position: -19
   })
   ```
 
-  其中**changes**是保存文档后从[历史记录对象](../../usage-api/callback-handler.md#history)返回的*changes*。
+  其中`changes`和`serverVersion`是保存文档后从[历史记录对象](../../usage-api/callback-handler.md#history)返回的值。
 
-  其中**serverVersion**是保存文档后从[历史记录对象](../../usage-api/callback-handler.md#history)返回的*serverVersion*。
+  :::note
+  ONLYOFFICE 文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
+  :::
 
-  > ONLYOFFICE文档会突出显示从当前文档会话开始所做的更改，而不是从文档版本开始时的更改。即使在一个会话期间创建了多个文档版本，该会话中的所有更改都将被突出显示。因此，您无法在文档历史记录中看到使用[强制保存选项](./saving-file.md#force-saving)创建的文档版本。
+- [changesurl](../../usage-api/callback-handler.md#changesurl)——包含编辑数据的zip文件的绝对URL，用于突出显示特定版本的更改。保存此文件，并在调用[setHistoryData](../../usage-api/methods.md#sethistorydata)时将其地址作为`changesUrl`参数传递。还必须在`previous.url`中包含前一个文档版本的链接。
 
-- [changesurl](../../usage-api/callback-handler.md#changesurl)：包含文档编辑数据的文件的绝对URL，用于显示与特定文档版本相对应的更改。必须保存该文件，并且必须使用[setHistoryData](../../usage-api/methods.md#sethistorydata)方法将其地址作为*changesUrl*参数发送。必须将前一个文档版本的链接(*previous.url*)添加到对象中。
-
-  调用*setHistoryData*方法查看文档历史版本时，必须添加令牌以验证参数。
+  调用`setHistoryData`时，必须包含[`token`](./security.md)以验证参数。
 
   ``` ts
   docEditor.setHistoryData({
@@ -222,6 +223,8 @@ sidebar_position: -19
   })
   ```
 
-  > *changesurl*请求是在浏览器中从添加的具有**documentserver**域的iframe中发出的，其中**documentserver**是安装了ONLYOFFICE文档的服务器名称。为了使其正常工作，必须允许跨源HTTP请求（CORS）。这可以通过使用*Access-Control-Allow-Origin*标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的 ONLYOFFICE 云，并使用其公共 IP 地址或公共 DNS，这些地址或 DNS 可以在云控制台的**实例**部分找到。
+  :::warning
+  `changesurl`请求是在浏览器中从添加的具有`documentserver`域的iframe中发出的，其中`documentserver`是安装了ONLYOFFICE 文档的服务器名称。为了正常运行，必须允许跨源HTTP请求（CORS）。这可以通过使用`Access-Control-Allow-Origin`标头来实现。您可以[注册](https://www.onlyoffice.com/zh/docs-registration.aspx?from=api)一个免费的ONLYOFFICE云，并使用其公共IP地址或公共DNS，这些可以在云控制台的**实例**部分找到。
+  :::
 
   ![变更目录](/assets/images/editor/changesurl.png)

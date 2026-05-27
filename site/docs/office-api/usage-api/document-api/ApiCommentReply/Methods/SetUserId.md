@@ -1,0 +1,44 @@
+# SetUserId
+
+Sets the user ID to the comment reply author.
+
+## Syntax
+
+```javascript
+expression.SetUserId(sUserId);
+```
+
+`expression` - A variable that represents a [ApiCommentReply](../ApiCommentReply.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| sUserId | Required | string |  | The user ID of the comment reply author. |
+
+## Returns
+
+[ApiCommentReply](../../ApiCommentReply/ApiCommentReply.md)
+
+## Example
+
+Assign a user ID to a comment reply author in a document.
+
+```javascript editor-docx
+// How do I set the user ID for a comment reply in a document?
+
+// Link a reply to a specific user account by updating the identifier attached to it.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+paragraph.AddText("This is just a sample text");
+Api.AddComment(paragraph, "comment", "John Smith");
+let comments = doc.GetAllComments();
+comments[0].AddReply("reply1", "Mark Potato", "uid-2", 0);
+let commentReply = comments[0].GetReply(0);
+commentReply.SetUserId("uid-1");
+let userId = commentReply.GetUserId();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Comment reply user ID: " + userId);
+doc.Push(paragraph);
+```

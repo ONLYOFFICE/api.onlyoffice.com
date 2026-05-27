@@ -20,15 +20,15 @@ boolean
 
 ## Example
 
-This example adds a line break to the run position and starts the next element from a new line.
+Insert a line break inside a text run so the following text starts on a new line in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to start a sentence on a new line.
+// How do I split text across two lines inside a shape in a spreadsheet?
 
-// Break two lines of a text run with a line. 
+// Force a paragraph of text to continue on a fresh line without creating a new paragraph in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

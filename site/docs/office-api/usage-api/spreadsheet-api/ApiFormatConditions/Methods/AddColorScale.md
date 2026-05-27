@@ -22,12 +22,12 @@ expression.AddColorScale(ColorScaleType);
 
 ## Example
 
-This example adds color scale conditional formatting to a range.
+Apply a gradient color range across cells to visualize high and low values at a glance in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add color scale conditional formatting rules to highlight cells with gradient colors.
+// How do I shade a column of numbers from one color to another based on their relative size in a spreadsheet?
 
-// Add color scale conditional formatting to cells.
+// Give a range a heat-map appearance by mapping cell values to a color spectrum in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -46,5 +46,4 @@ let dataRange = worksheet.GetRange("A2:A9");
 let formatConditions = dataRange.GetFormatConditions();
 
 formatConditions.AddColorScale(3);
-
 ```

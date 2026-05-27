@@ -25,14 +25,12 @@ boolean
 
 ## Example
 
-This example sets the outline to the marker in the specified chart series.
+Add a colored border to the data point markers in a chart series in a spreadsheet.
 
 ```javascript editor-xlsx
-// Create the "scatter" chart and set an outline of the specified width and color to its markers.
+// How do I outline the markers of a scatter chart with a specific color and width in a spreadsheet?
 
-// How to use the ApiStroke object as an outline of the chart markers.
-
-// How to outline the markers of the ApiChart object.
+// Give each series marker a distinct border to make individual data points easier to identify in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(2014);
@@ -48,11 +46,11 @@ worksheet.GetRange("D2").SetValue(280);
 worksheet.GetRange("D3").SetValue(280);
 let chart = worksheet.AddChart("'Sheet1'!$A$1:$D$3", true, "scatter", 2, 100 * 36000, 70 * 36000, 0, 2 * 36000, 7, 3 * 36000);
 chart.SetTitle("Financial Overview", 13);
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));
+let fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
 chart.SetMarkerFill(fill, 0, 0, true);
-let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51)));
+let stroke = Api.CreateStroke(0.5 * 36000, Api.CreateSolidFill(Api.RGB(51, 51, 51)));
 chart.SetMarkerOutLine(stroke, 0, 0, true);
-fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 chart.SetMarkerFill(fill, 1, 0, true);
 chart.SetMarkerOutLine(stroke, 1, 0, true);
 ```

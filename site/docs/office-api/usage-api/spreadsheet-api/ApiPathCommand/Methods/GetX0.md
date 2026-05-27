@@ -20,10 +20,13 @@ string \| null
 
 ## Example
 
-Extracts control points from a cubic bezier curve command.
+Read the horizontal position of the first control point of a bezier curve and write it to a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// Displays all bezier control points coordinates in spreadsheet cells.
+// How do I find the X coordinate of the first bezier handle on a curve path command in a spreadsheet?
+
+// Inspect the initial horizontal anchor that shapes a cubic curve segment in a spreadsheet.
+
 let worksheet = Api.GetActiveSheet();
 let customGeometry = Api.CreateCustomGeometry();
 let path = customGeometry.AddPath();
@@ -38,8 +41,8 @@ let cmd = path.GetCommand(1);
 worksheet.GetRange("A10").SetValue("CP1: (" + cmd.GetX0() + ", " + cmd.GetY0() + ")");
 worksheet.GetRange("A11").SetValue("CP2: (" + cmd.GetX1() + ", " + cmd.GetY1() + ")");
 worksheet.GetRange("A12").SetValue("End: (" + cmd.GetX2() + ", " + cmd.GetY2() + ")");
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 150, 200));
-let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.CreateRGBColor(50, 75, 100)));
+let fill = Api.CreateSolidFill(Api.RGB(100, 150, 200));
+let stroke = Api.CreateStroke(18000, Api.CreateSolidFill(Api.RGB(50, 75, 100)));
 let shape = worksheet.AddShape("rect", 60 * 36000, 60 * 36000, fill, stroke, 3, 0, 2, 0);
 shape.SetGeometry(customGeometry);
 ```

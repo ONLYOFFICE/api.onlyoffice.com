@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example removes the layouts from the current slide master.
+Remove layouts from a slide master by index.
 
 ```javascript editor-pptx
-// How to delete layout from a master.
+// Use RemoveLayout to delete one or more layouts from the master.
 
-// Delete a slide master layout.
+// Compare the layout count before and after deletion to verify the removal.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -38,7 +38,7 @@ const countBefore = master.GetLayoutsCount();
 master.RemoveLayout(0, 2);
 const countAfter = master.GetLayoutsCount();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -51,5 +51,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of layouts after deletion: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

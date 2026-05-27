@@ -6,13 +6,11 @@ Twentieths of a point (equivalent to 1/1440th of an inch).
 
 number
 
-
-
 ## Example
 
-This example set the distance between columns equal to 36 points.
+Set the distance between columns equal to 36 points.
 
-```javascript editor-pdf
+```javascript editor-forms
 // How to set a column distance in twips.
 
 // Set column distance in twips.

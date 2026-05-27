@@ -20,14 +20,18 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an object for a Slide that is currently visible.
+Retrieve the slide object currently visible on screen.
 
 ```javascript editor-pptx
+// Access the slide displayed in the presentation view.
+
+// Add a label to the visible slide.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetCurrentVisibleSlide();
 
 if (slide) {
-	const labelFill = Api.CreateSolidFill(Api.CreateRGBColor(150, 200, 150));
+	const labelFill = Api.CreateSolidFill(Api.RGB(150, 200, 150));
 	const labelStroke = Api.CreateStroke(0, Api.CreateNoFill());
 	const label = Api.CreateShape('rect', 60 * 36000, 20 * 36000, labelFill, labelStroke);
 	label.SetPosition(0, 50 * 36000);
@@ -37,5 +41,4 @@ if (slide) {
 	const paragraph = docContent.GetElement(0);
 	paragraph.AddText('This slide is currently visible');
 }
-
 ```

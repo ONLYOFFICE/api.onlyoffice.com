@@ -1,18 +1,17 @@
-# 宏
+# Macros
 
-一个包含文档中所有宏相关数据的对象。
+包含文档中所有宏数据的对象。
+
+## 类型
+
+Object
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
-| ---- | ---- | ---- |
-| current | number | 当前宏的索引。 |
-| macrosArray | string[] | 宏代码数组（格式：*[&#123;"name": "Macros1", "value": "&#123;macrosCode&#125;"&#125;]*）。 |
-## 类型
-
-Object（对象）
-
-
+| ---- | ---- | ----------- |
+| current | number | 当前宏索引。 |
+| macrosArray | string[] | 宏代码数组（*[&#123;"name": "Macros1", "value": "&#123;macrosCode&#125;"&#125;]*）。 |
 
 ## 示例
 

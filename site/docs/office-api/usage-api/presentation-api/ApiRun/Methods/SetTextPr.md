@@ -22,18 +22,18 @@ expression.SetTextPr(oTextPr);
 
 ## Example
 
-This example sets the text properties to the current run.
+Apply multiple text properties to a run in a presentation.
 
 ```javascript editor-pptx
-// How to create the new text properties and apply it to the text run.
+// Configure font size, weight, color, and other formatting options together.
 
-// Create a new text run and set its properties like font size, color, etc.
+// Create a text run and set comprehensive text properties including font size and weight.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -49,5 +49,4 @@ textPr.SetBold(true);
 run.SetTextPr(textPr);
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

@@ -22,12 +22,12 @@ expression.Duplicate(nPos);
 
 ## Example
 
-This example creates a duplicate of the specified slide master object, adds the new slide master to the slide masters collection.
+Add a copy of a slide master to a presentation.
 
 ```javascript editor-pptx
-// How to create a duplicate of a slide master.
+// How do I add a copy of a slide master in a presentation?
 
-// Add a duplicate master.
+// Insert a duplicate slide master at a specific position in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -37,7 +37,7 @@ const countBefore = presentation.GetMastersCount();
 master.Duplicate(1);
 const countAfter = presentation.GetMastersCount();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -50,5 +50,4 @@ paragraph.AddLineBreak();
 paragraph.AddText("Number of masters after duplicating: " + countAfter);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

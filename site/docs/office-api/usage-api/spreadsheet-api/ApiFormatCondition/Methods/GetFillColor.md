@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets the background color from a conditional formatting rule.
+Read the background color set by a conditional formatting rule in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to retrieve background colors from conditional formatting rules.
+// How do I find out what background color a conditional formatting rule applies to matching cells in a spreadsheet?
 
-// Get conditional formatting rule background color.
+// Confirm the highlight color of an existing rule before updating it in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -48,5 +48,4 @@ let currentColor = condition1.GetFillColor();
 
 worksheet.GetRange("C1").SetValue("Background color:");
 worksheet.GetRange("C2").SetValue(currentColor === "No Fill" ? "No Fill" : "Color applied");
-
 ```

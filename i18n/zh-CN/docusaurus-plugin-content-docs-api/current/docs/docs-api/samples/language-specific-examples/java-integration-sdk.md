@@ -2,7 +2,7 @@
 sidebar_position: -2
 ---
 
-# Java 集成软件开发工具包（SDK）
+# Java SDK 集成
 
 [ONLYOFFICE 文档集成 SDK](https://central.sonatype.com/artifact/com.onlyoffice/docs-integration-sdk) 提供通用接口和默认实现，用于将 ONLYOFFICE 文档集成到您自己的 Java 网站或应用程序中。
 
@@ -58,7 +58,7 @@ SDK 由 5 个主要管理器和 4 个服务组成。
 
    ``` java
    @Override
-   public String getDocumentKey(final  String fileId, final boolean embedded) {
+   public String getDocumentKey(final String fileId, final boolean embedded) {
        return String.valueOf(fileId.hashCode());
    }
 
@@ -84,7 +84,7 @@ SDK 由 5 个主要管理器和 4 个服务组成。
    }
    ```
 
-   完整的示例代码可以在[此处](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/UrlMangerImpl.java)找到。
+   完整的示例代码可以在[此处](https://github.com/ONLYOFFICE/docs-integration-sdk-java/blob/main/demo-example/src/main/java/com/onlyoffice/demoexample/manager/UrlManagerImpl.java)找到。
 
 4. 初始化 **JwtManager** 和 **RequestManager** Spring bean 并将它们添加到 DI 容器中。这允许您在应用程序中的任何位置调用注册的 bean：
 

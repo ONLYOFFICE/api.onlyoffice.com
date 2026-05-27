@@ -1,0 +1,51 @@
+# GetShowAllItems
+
+返回指定是否显示无数据项的设置。
+
+继承自 [ApiPivotField.GetShowAllItems](../../ApiPivotField/Methods/GetShowAllItems.md)。
+
+## 示例
+
+检查电子表格中的透视字段是否设置为显示所有项目，包括没有数据的项目。
+
+```javascript editor-xlsx
+// How do I find out if a pivot field shows items that have no matching data in a spreadsheet?
+
+// Confirm the show-all-items flag for a pivot field to see if empty categories are still listed in the table.
+
+let worksheet = Api.GetActiveSheet();
+
+worksheet.GetRange('B1').SetValue('Region');
+worksheet.GetRange('C1').SetValue('Style');
+worksheet.GetRange('D1').SetValue('Price');
+
+worksheet.GetRange('B2').SetValue('East');
+worksheet.GetRange('B3').SetValue('West');
+worksheet.GetRange('B4').SetValue('East');
+worksheet.GetRange('B5').SetValue('West');
+
+worksheet.GetRange('C2').SetValue('Fancy');
+worksheet.GetRange('C3').SetValue('Tee');
+worksheet.GetRange('C4').SetValue('Tee');
+worksheet.GetRange('C5').SetValue('Tee');
+
+worksheet.GetRange('D2').SetValue(42.5);
+worksheet.GetRange('D3').SetValue(35.2);
+worksheet.GetRange('D4').SetValue(12.3);
+worksheet.GetRange('D5').SetValue(24.8);
+
+let dataRef = Api.GetRange("'Sheet1'!$B$1:$D$5");
+let pivotTable = Api.InsertPivotNewWorksheet(dataRef);
+
+pivotTable.AddFields({
+    rows: ['Region', 'Style'],
+});
+
+pivotTable.AddDataField('Price');
+
+let pivotWorksheet = Api.GetActiveSheet();
+let pivotField = pivotTable.GetPivotFields('Style');
+
+pivotWorksheet.GetRange('A12').SetValue('Style get show all items');
+pivotWorksheet.GetRange('B12').SetValue(pivotField.GetShowAllItems());
+```

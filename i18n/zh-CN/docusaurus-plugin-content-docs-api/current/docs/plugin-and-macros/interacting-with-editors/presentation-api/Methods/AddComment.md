@@ -1,6 +1,6 @@
-# 添加评论
+# AddComment
 
-向演示文稿添加评论。
+向演示文稿添加批注。
 
 ## 语法
 
@@ -8,17 +8,17 @@
 expression.AddComment(oCommentData);
 ```
 
-`expression` - 表示一个 [Api](Methods.md) 类的变量。
+`expression` - 表示 [Api](Methods.md) 类的变量。
 
 ## 参数
 
-| **名称** | **必填/选填** | **数据类型** | **默认值** | **描述** |
-| -------- | -------------- | ------------- | ----------- | -------- |
-| oCommentData | 必填 | [批注数据](../Enumeration/CommentData.md) | 无 | 包含评论数据的对象。 |
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| oCommentData | 必需 | [CommentData](../Enumeration/CommentData.md) |  | 包含批注数据的对象。 |
 
 ## 返回值
 
-string（字符串） \| null  
+string \| null
 
 ## 示例
 

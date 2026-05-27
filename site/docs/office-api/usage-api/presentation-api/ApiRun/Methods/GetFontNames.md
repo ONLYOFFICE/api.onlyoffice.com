@@ -20,18 +20,18 @@ string[]
 
 ## Example
 
-This example shows how to get all font names from all elements inside the run.
+Get all font names used in text runs in a presentation.
 
 ```javascript editor-pptx
-// How to get all font names used in the text.
+// What font families are applied to text in a presentation?
 
-// Retrieve ApiRun font names and display them in the slide.
+// Retrieve and list the font names of text runs in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -58,5 +58,4 @@ for (let i = 0; i < fontNames.length; i++) {
 }
 docContent.Push(paragraph);
 slide.AddObject(shape);
-
 ```

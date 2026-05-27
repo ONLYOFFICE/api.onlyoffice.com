@@ -20,12 +20,12 @@ string \| string[][]
 
 ## Example
 
-This example shows how to get a formula of the specified range.
+Read the formula stored in a cell in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to find out a range formula.
+// How do I find out what formula a cell contains in a spreadsheet?
 
-// Get a range, get its cell formula and show it in the worksheet.
+// Display a cell's formula as text in another cell in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("B1").SetValue(1);

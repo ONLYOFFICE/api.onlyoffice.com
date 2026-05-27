@@ -15,7 +15,8 @@ expression.AddRow(oCell, isBefore);
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | oCell | Optional | [ApiTableCell](../../ApiTableCell/ApiTableCell.md) |  | If not specified, a new row will be added to the end of the table. |
-| isBefore | Optional | boolean | false | Adds a new row before or after the specified cell. If no cell is specified, then this parameter will be ignored. |
+| isBefore | Optional | boolean | false | Adds a new row before or after the specified cell. If no cell is specified,
+then this parameter will be ignored. |
 
 ## Returns
 
@@ -23,12 +24,12 @@ expression.AddRow(oCell, isBefore);
 
 ## Example
 
-This example adds a new row to the table.
+Insert a new row into a table in a presentation.
 
 ```javascript editor-pptx
-// How to insert a row to the table.
+// How do I add a new row to a table in a presentation?
 
-// Create a 2x4 table, set its position and then insert a row to it.
+// Create a table and add an extra row with content in a presentation.
 
 const presentation = Api.GetPresentation();
 
@@ -44,5 +45,4 @@ content.Push(paragraph);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(table);
-
 ```

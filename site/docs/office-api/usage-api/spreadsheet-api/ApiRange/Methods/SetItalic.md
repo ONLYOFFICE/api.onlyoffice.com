@@ -18,16 +18,16 @@ expression.SetItalic(isItalic);
 
 ## Returns
 
-This method doesn't return any data.
+boolean
 
 ## Example
 
-This example sets the italic property to the text characters in the cell.
+Display cell text in italic style in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to make a text value of cells italic.
+// How do I make the text inside a cell appear slanted in a spreadsheet?
 
-// Get a range and make specified cells font style italic.
+// Emphasize content by switching the font to italic in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A2").SetValue("Italicized text");

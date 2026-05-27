@@ -1,0 +1,37 @@
+# SUMSQ
+
+返回参数的平方和。
+
+## 语法
+
+```javascript
+expression.SUMSQ(args);
+```
+
+`expression` - 表示 [ApiWorksheetFunction](../ApiWorksheetFunction.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| args | 必需 | [ApiRange](../../ApiRange/ApiRange.md) \| [ApiName](../../ApiName/ApiName.md) \| number \| string \| boolean \| (number \| string \| boolean)[] |  | 最多 255 个数值，将计算这些数值的平方和。
+第一个参数是必需的，后续参数是可选的。
+参数可以是数字、名称、逻辑值或数字的文本表示、包含数字的单元格范围或数组。 |
+
+## 返回值
+
+number
+
+## 示例
+
+在电子表格中返回参数的平方和。
+
+```javascript editor-xlsx
+// Calculate the sum of squared values using the SUMSQ function.
+
+// Returns the total of all squared arguments.
+
+let worksheet = Api.GetActiveSheet();
+let func = Api.WorksheetFunction;
+worksheet.GetRange("A1").SetValue(func.SUMSQ(1, 0, 0, 0, 4, 1, 0, 0, 2, 3, 6, 7, 6, 8, 10, 12));
+```

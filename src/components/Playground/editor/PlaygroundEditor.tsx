@@ -1,38 +1,48 @@
-'use client'
+'use client';
 
-import MonacoEditor, {OnMount} from '@monaco-editor/react'
+import MonacoEditor, {OnMount} from '@monaco-editor/react';
 import {usePlaygroundRootContext} from "@site/src/components/Playground";
 import styles from './PlaygroundEditor.module.css';
 import {getFullUrl} from "@site/src/utils/url";
+import PlayIcon from '@site/static/icons/icon-play.svg';
+import {useCallback} from "react";
 
 export const PlaygroundEditor = () => {
-    const { scriptValue, setScriptValue, setIsScriptModified, theme, editorType, scriptType } = usePlaygroundRootContext()
+    const {scriptValue, theme, editorType, scriptType, dispatch} = usePlaygroundRootContext();
 
-    const onChange = (newValue: string | undefined) => {
-        setScriptValue(newValue)
-        setIsScriptModified(true)
-    }
+    const onChange = useCallback((newValue: string | undefined) => {
+        if (newValue !== undefined) {
+            dispatch({type: 'SET_SCRIPT_VALUE', payload: newValue});
+        }
+    }, [dispatch]);
 
-    const apiUrl = getFullUrl(`/libs/${editorType}/api.js`)
+    const apiUrl = getFullUrl(`/libs/${editorType}/api.js`);
 
     const onMount: OnMount = (_, monaco) => {
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`Failed to fetch ${apiUrl}: ${response.status}`)
+                    throw new Error(`Failed to fetch ${apiUrl}: ${response.status}`);
                 }
-                return response.text()
+                return response.text();
             })
             .then(libSource => {
-                monaco.languages.typescript.javascriptDefaults.addExtraLib(libSource)
+                monaco.languages.typescript.javascriptDefaults.addExtraLib(libSource);
             })
             .catch(error => {
-                console.error('Failed to load API library:', error)
-            })
-    }
+                console.error('Failed to load API library:', error);
+            });
+    };
+
+    const handleRun = () => {
+        window.dispatchEvent(new Event('playground-run'));
+    };
 
     return (
         <div className={styles.editorContainer}>
+            <button onClick={handleRun} className={styles.runButton}>
+                <PlayIcon fill='currentColor'/>
+            </button>
             <MonacoEditor
                 key={`${editorType}-${scriptType}`}
                 defaultLanguage="javascript"
@@ -41,12 +51,13 @@ export const PlaygroundEditor = () => {
                 onMount={onMount}
                 theme={theme === 'dark' ? 'vs-dark' : 'vs-light'}
                 options={{
-                    minimap: { enabled: false },
+                    minimap: {enabled: false},
                     scrollBeyondLastLine: false,
                     fontSize: 14,
                     lineNumbers: 'on',
                     renderLineHighlight: 'all',
                     automaticLayout: true,
+                    fixedOverflowWidgets: true,
                 }}
             />
         </div>

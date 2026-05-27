@@ -20,14 +20,18 @@ string
 
 ## Example
 
-This example demonstrates how to get the category of the presentation using the ApiCore.
+Read the category from the presentation's metadata in a presentation.
 
 ```javascript editor-pptx
+// How do I check what category a presentation is labeled as in a presentation?
+
+// Retrieve the category value stored in the presentation's core properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const core = presentation.GetCore();
 core.SetCategory("Examples");
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(200, 50, 200));
+const fill = Api.CreateSolidFill(Api.RGB(200, 50, 200));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("rect", 200 * 36000, 100 * 36000, fill, stroke);
 shape.SetPosition(0, 0);
@@ -40,5 +44,4 @@ paragraph.AddText("Category: " + category);
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 slide.AddObject(shape);
-
 ```

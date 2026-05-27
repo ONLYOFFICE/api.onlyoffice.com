@@ -1,0 +1,35 @@
+# SetIndLeft
+
+设置段落左侧缩进。
+
+继承自 [ApiParaPr.SetIndLeft](../../ApiParaPr/Methods/SetIndLeft.md)。
+
+## 示例
+
+在 PDF 中从左边缘缩进段落。
+
+```javascript editor-pdf
+// How do I indent a paragraph from the left in a PDF?
+
+// Add left margin indentation to a paragraph in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+const fill = Api.CreateRadialGradientFill([gs1, gs2]);
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+const paragraph = docContent.GetElement(0);
+const paraPr = paragraph.GetParaPr();
+paraPr.SetIndLeft(2880);
+paragraph.AddText("This is the first paragraph with the indent of 2 inches set to it. ");
+paragraph.AddText("This indent is set by the paragraph style. No paragraph inline style is applied. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+paragraph.AddText("These sentences are used to add lines for demonstrative purposes. ");
+page.AddObject(shape);
+```

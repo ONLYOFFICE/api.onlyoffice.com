@@ -22,15 +22,15 @@ boolean
 
 ## Example
 
-This example pushes 5 paragraphs to actually add its to the document content.
+Append a new paragraph to the end of a shape's content in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to insert paragraphs into a document.
+// How do I add a paragraph to the bottom of a shape's text area in a spreadsheet?
 
-// Add text to a newly created paragraph and add this paragraph into document.
+// Build a paragraph separately and place it at the end of a shape in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

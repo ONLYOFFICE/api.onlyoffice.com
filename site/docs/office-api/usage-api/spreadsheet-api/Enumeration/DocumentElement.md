@@ -10,10 +10,9 @@ Enumeration
 
 - [ApiParagraph](../ApiParagraph/ApiParagraph.md)
 
-
 ## Example
 
-This example adds a document element called "paragraph" to the document.
+Add a document element called "paragraph" to the document.
 
 ```javascript editor-xlsx
 // How to add a paragraph element to the document.

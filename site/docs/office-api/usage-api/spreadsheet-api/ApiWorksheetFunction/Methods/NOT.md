@@ -1,6 +1,6 @@
 # NOT
 
-Checks if the specified logical value is -**true** or -**false**. The function returns -**true** if the argument is -**false** and -**false** if the argument is -**true**.
+Checks if the specified logical value is - **true** or - **false**. The function returns - **true** if the argument is - **false** and - **false** if the argument is - **true**.
 
 ## Syntax
 
@@ -22,12 +22,12 @@ boolean
 
 ## Example
 
-This example shows how to сheck if the specified logical value is true or false. The function returns true if the argument is false and false if the argument is true.
+Reverse a boolean value in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to negate a boolean value.
+// How do I negate a true or false value in a spreadsheet?
 
-// Use a function to get the opposite of the boolean value.
+// Get the opposite result of a logical condition in a spreadsheet.
 
 const worksheet = Api.GetActiveSheet();
 
@@ -36,5 +36,4 @@ let func = Api.WorksheetFunction;
 let ans = func.NOT(condition);
 
 worksheet.GetRange("C1").SetValue(ans);
-
 ```

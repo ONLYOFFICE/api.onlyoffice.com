@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example demonstrates getting the bar fill type from a data bar conditional formatting rule.
+Read whether data bars use a solid or gradient fill in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to check the fill type setting of a data bar.
+// How do I find out which fill style is applied to data bars in a spreadsheet?
 
-// Get the bar fill type of a data bar conditional formatting rule.
+// Determine the shading style of data bars to understand their visual format in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 
@@ -45,5 +45,4 @@ let fillType = dataBar.GetBarFillType();
 
 worksheet.GetRange("C1").SetValue("Fill Type:");
 worksheet.GetRange("C2").SetValue(fillType);
-
 ```

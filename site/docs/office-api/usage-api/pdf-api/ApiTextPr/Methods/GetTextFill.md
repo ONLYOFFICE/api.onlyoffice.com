@@ -1,0 +1,55 @@
+# GetTextFill
+
+Gets the text fill from the current text properties.
+
+## Syntax
+
+```javascript
+expression.GetTextFill();
+```
+
+`expression` - A variable that represents a [ApiTextPr](../ApiTextPr.md) class.
+
+## Parameters
+
+This method doesn't have any parameters.
+
+## Returns
+
+[ApiFill](../../ApiFill/ApiFill.md)
+
+## Example
+
+Get the color or fill effect applied to text in a PDF.
+
+```javascript editor-pdf
+// How do I check what color the text uses in a PDF?
+
+// Retrieve the fill properties assigned to text content in a PDF.
+
+const doc = Api.GetDocument();
+const page = doc.GetPage(0);
+
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
+const stroke = Api.CreateStroke(0, Api.CreateNoFill());
+const shape = Api.CreateShape("flowChartMagneticTape", 150 * 36000, 65 * 36000, fill, stroke);
+shape.SetPosition(608400, 1267200);
+
+const docContent = shape.GetContent();
+let paragraph = docContent.GetElement(0);
+const run = Api.CreateRun();
+run.AddText("This is just a sample text. ");
+run.AddText("The text properties are changed and the style is added to the paragraph. ");
+run.AddLineBreak();
+paragraph.AddElement(run);
+const textPr = run.GetTextPr();
+fill = Api.CreateSolidFill(Api.RGB(51, 51, 51));
+textPr.SetTextFill(fill);
+page.AddObject(shape);
+
+paragraph = Api.CreateParagraph();
+fill = textPr.GetTextFill();
+const type = fill.GetClassType();
+paragraph.AddText("Text fill type: " + type);
+docContent.Push(paragraph);
+```

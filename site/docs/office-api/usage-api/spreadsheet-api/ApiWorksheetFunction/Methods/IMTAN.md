@@ -22,12 +22,12 @@ number
 
 ## Example
 
-This example shows how to return the tangent of a complex numbers.
+Get the tangent of a complex number in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a tangent of a complex numbers.
+// How do I calculate the tangent of a complex number in a spreadsheet?
 
-// Use a function to get the tangent.
+// Find the tangent value for a complex number in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

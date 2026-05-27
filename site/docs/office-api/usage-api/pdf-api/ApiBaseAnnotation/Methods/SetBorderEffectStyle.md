@@ -1,0 +1,39 @@
+# SetBorderEffectStyle
+
+Sets annotation border effect style.
+💡  Can be applied to circle, square, freeText and polygon annotations 
+
+## Syntax
+
+```javascript
+expression.SetBorderEffectStyle(style);
+```
+
+`expression` - A variable that represents a [ApiBaseAnnotation](../ApiBaseAnnotation.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| style | Required | [AnnotBorderEffectStyle](../../Enumeration/AnnotBorderEffectStyle.md) |  | The border effect style: **"none"** or **"cloud"**. |
+
+## Returns
+
+boolean
+
+## Example
+
+Apply a visual effect style to an annotation's border in a PDF.
+
+```javascript editor-pdf
+// What visual effect should appear on an annotation's border in a PDF?
+
+// Configure a border effect style on an annotation object in a PDF.
+
+let doc = Api.GetDocument();
+let squareAnnot = Api.CreateSquareAnnot([10, 10, 160, 32]);
+let page = doc.GetPage(0);
+page.AddObject(squareAnnot);
+squareAnnot.SetBorderEffectStyle("cloud");
+squareAnnot.SetBorderEffectIntensity(1);
+```

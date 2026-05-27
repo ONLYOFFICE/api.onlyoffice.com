@@ -22,18 +22,18 @@ expression.SetFontSize(nSize);
 
 ## Example
 
-This example sets the font size to the characters of the text run.
+Adjust the size of text characters in a presentation.
 
 ```javascript editor-pptx
-// How to change a text font size.
+// What text sizes are available in a presentation?
 
-// Get the text properties of the run and set its font size.
+// Specify the font size in points for the text run in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -47,5 +47,4 @@ paragraph.SetJc("left");
 run.AddText("This is a sample text inside the shape with the font size set to 30 points using the text properties.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

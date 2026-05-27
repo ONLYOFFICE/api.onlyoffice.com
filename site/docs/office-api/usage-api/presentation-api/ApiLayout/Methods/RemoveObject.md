@@ -23,12 +23,12 @@ boolean
 
 ## Example
 
-This example shows how to remove objects from a slide layout.
+Delete a shape or object from a layout in a presentation.
 
 ```javascript editor-pptx
-// How to remove objects from a layout using their index position.
+// How do I remove an element from a layout by its position in a presentation?
 
-// Delete an element from the slide.
+// Remove a specific shape using its index on a layout in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -36,7 +36,7 @@ const master = presentation.GetMaster(0);
 const layout = master.GetLayout(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const drawing = Api.CreateShape("cube", 3212465, 963295, fill, stroke);
 drawing.SetPosition(30 * 36000, 1267200);
@@ -54,5 +54,4 @@ const docContent = drawing.GetDocContent();
 const paragraph = docContent.GetElement(0);
 paragraph.SetJc("left");
 paragraph.AddText("The second cube was removed from this layout.");
-
 ```

@@ -20,16 +20,20 @@ string
 
 ## Example
 
-This example demonstrates how to get the string of keywords of the current workbook using the ApiCore.
+Read the keywords stored in the workbook properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I find the search keywords associated with a workbook in a spreadsheet?
+
+// Extract and display the tag words saved with the workbook in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetKeywords("Example; ApiCore; Workbook");
 const keywords = core.GetKeywords();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Keywords: " + keywords);
-
 ```

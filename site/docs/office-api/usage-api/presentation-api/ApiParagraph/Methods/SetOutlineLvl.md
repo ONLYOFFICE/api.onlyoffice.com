@@ -2,29 +2,17 @@
 
 Sets the outline level for the specified properties.
 
-## Syntax
-
-```javascript
-expression.SetOutlineLvl(nLvl);
-```
-
-`expression` - A variable that represents a [ApiParagraph](../ApiParagraph.md) class.
-
-## Parameters
-
-| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| nLvl | Optional | Number |  | The outline level. Possible values: 0-8. The 0 value means the basic outline level. To set no outline level, use this method without a parameter. |
-
-## Returns
-
-boolean
+Inherited from [ApiParaPr.SetOutlineLvl](../../ApiParaPr/Methods/SetOutlineLvl.md).
 
 ## Example
 
-This example sets the outline level for the specified paragraph via paragraph properties.
+Assign an outline level to a paragraph in a presentation.
 
 ```javascript editor-pptx
+// How do I set the outline hierarchy level of a paragraph in a presentation?
+
+// Configure the outline depth of a paragraph using paragraph properties in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -43,5 +31,4 @@ const paragraph = content.GetElement(0);
 const paraPr = paragraph.GetParaPr();
 paraPr.SetOutlineLvl(outlineLvlIndex);
 paragraph.AddText("This is a paragraph with outline level parameter set to " + (outlineLvlIndex + 1));
-
 ```

@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example gets a class type and inserts it into the document.
+Retrieve the class type of a complex form in a document.
 
-```javascript editor-pdf
+```javascript editor-forms
+// How do I get the class type of a complex form in a document?
+
+// Identify what kind of object a complex form is by reading its type label at runtime.
+
 let doc = Api.GetDocument();
 let complexForm = Api.CreateComplexForm();
 let paragraph = doc.GetElement(0);

@@ -2,30 +2,16 @@
 
 Returns the ApiPivotTable object which represents the pivot table for the current field.
 
-## Syntax
-
-```javascript
-expression.GetTable();
-```
-
-`expression` - A variable that represents a [ApiPivotDataField](../ApiPivotDataField.md) class.
-
-## Parameters
-
-This method doesn't have any parameters.
-
-## Returns
-
-[ApiPivotTable](../../ApiPivotTable/ApiPivotTable.md)
+Inherited from [ApiPivotField.GetTable](../../ApiPivotField/Methods/GetTable.md).
 
 ## Example
 
-This example shows how to get table object of a pivot field.
+Access the parent pivot table from one of its fields in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a pivot field's table.
+// How do I get back to the whole pivot table when I only have a pivot field in a spreadsheet?
 
-// Create a pivot table, add data to it then get a table object of a specified pivot field and add data to it.
+// Use a pivot field as an entry point to modify the pivot table it belongs to in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 

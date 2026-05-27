@@ -20,9 +20,13 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get all slide masters from current presentation.
+Access slide templates in a presentation.
 
 ```javascript editor-pptx
+// How do I retrieve every slide master design in a presentation?
+
+// Add new masters and display the total count in a presentation.
+
 const presentation = Api.GetPresentation();
 const firstSlide = presentation.GetSlideByIndex(0);
 firstSlide.RemoveAllObjects();
@@ -43,5 +47,4 @@ firstSlide.AddObject(shape);
 
 const paragraph =  shape.GetContent().GetElement(0);
 paragraph.AddText('Total slide masters count: ' + mastersCount);
-
 ```

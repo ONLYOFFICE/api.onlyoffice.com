@@ -1,39 +1,38 @@
-# 字体信息
+# FontInfo
 
-一个包含字体信息的对象。
+包含字体信息的对象。
+
+## 类型
+
+Object
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
-| ---- | ---- | ---- |
-| m_aPanose | number[] | PANOSE 字体分类号，用于简洁描述字体关键的视觉特性（如对比度、字重、衬线风格等），共 10 字节。 |
-| m_bBold | boolean | 指定字体字符是否为加粗。 |
+| ---- | ---- | ----------- |
+| m_aPanose | number[] | PANOSE 字体分类编号，是对字体关键视觉特征（如对比度、粗细和衬线样式）的紧凑 10 字节描述。 |
+| m_bBold | boolean | 指定字体字符是否为粗体。 |
 | m_bIsFixed | boolean | 指定当前字体是否为等宽字体。 |
 | m_bItalic | boolean | 指定字体字符是否为斜体。 |
-| m_eFontFormat | number | 字体数据所使用的具体文件类型：**0** - *.fon，**1** - *.ttf，**2** - *.ttf, *.otf（CFF），**3** - 未知字体格式。 |
-| m_lIndex | number | 当字体文件中包含多个字体时，表示当前字体在文件中的编号。 |
-| m_sFamilyClass | number | 字体家族分类，由 IBM 为每个字体家族分配的数值。 |
-| m_shAscent | number | 基线以上的高度，用于裁剪区域。 |
-| m_shAvgCharWidth | number | 字体中所有非零宽度字符的平均转义宽度。 |
-| m_shCapHeight | number | 从基线到大写字母大致高度的距离，以 FUnits（字体单位）为单位。 |
-| m_shDescent | number | 基线以下的垂直范围，用于裁剪区域。 |
+| m_eFontFormat | number | 用于存储字体数据的特定文件类型：**0** - *.fon，**1** - *.ttf，**2** - *.ttf、*.otf (CFF)，**3** - 未知字体格式。 |
+| m_lIndex | number | 如果文件中有多个字体，则为文件中的字体编号。 |
+| m_sFamilyClass | number | 由 IBM 分配给每个字体系列的字体系列类值。 |
+| m_shAscent | number | 裁剪区域基线以上的高度。 |
+| m_shAvgCharWidth | number | 字体中所有非零宽度字形的字宽（宽度）的算术平均值。 |
+| m_shCapHeight | number | 基线与大写字母近似高度之间的距离，以 FUnits 为单位。 |
+| m_shDescent | number | 裁剪区域基线以下的垂直范围。 |
 | m_shLineGap | number | 当前字体的排版行间距。 |
-| m_shXHeight | number | 从基线到不带上升部的中小写字母大致高度的距离（以 FUnits 计）。 |
-| m_ulCodePageRange1 | number | 字体文件覆盖的代码页（第 0-31 位）。 |
-| m_ulCodePageRange2 | number | 字体文件覆盖的代码页（第 32-63 位）。 |
-| m_ulUnicodeRange1 | number | 字体文件覆盖的 Unicode 范围（第 0-31 位）。 |
-| m_ulUnicodeRange2 | number | 字体文件覆盖的 Unicode 范围（第 32-63 位）。 |
-| m_ulUnicodeRange3 | number | 字体文件覆盖的 Unicode 范围（第 64-95 位）。 |
-| m_ulUnicodeRange4 | number | 字体文件覆盖的 Unicode 范围（第 96-127 位）。 |
-| m_usWeigth | number | 字体字符的视觉字重（笔画黑度或粗细），取值范围 1–1000。 |
-| m_usWidth | number | 与正常宽高比相比的相对变化（宽度与高度的比例）。 |
+| m_shXHeight | number | 基线与非上升小写字母近似高度之间的距离，以 FUnits 为单位。 |
+| m_ulCodePageRange1 | number | 字体文件涵盖的代码页（位 0-31）。 |
+| m_ulCodePageRange2 | number | 字体文件涵盖的代码页（位 32-63）。 |
+| m_ulUnicodeRange1 | number | 字体文件涵盖的 Unicode 范围（位 0-31）。 |
+| m_ulUnicodeRange2 | number | 字体文件涵盖的 Unicode 范围（位 32-63）。 |
+| m_ulUnicodeRange3 | number | 字体文件涵盖的 Unicode 范围（位 64-95）。 |
+| m_ulUnicodeRange4 | number | 字体文件涵盖的 Unicode 范围（位 96-127）。 |
+| m_usWeigth | number | 字体字符的视觉粗细（笔画黑度或粗细）（1-1000）。 |
+| m_usWidth | number | 与正常宽高比（宽度与高度的比率）的相对变化。 |
 | m_wsFontName | string | 字体名称。 |
-| m_wsFontPath | string | 当前字体对应文件的路径。 |
-## 类型
-
-对象（Object）
-
-
+| m_wsFontPath | string | 当前字体文件的路径。 |
 
 ## 示例
 

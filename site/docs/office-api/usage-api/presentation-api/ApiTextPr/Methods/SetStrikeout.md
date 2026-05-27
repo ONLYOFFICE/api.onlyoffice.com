@@ -22,18 +22,18 @@ expression.SetStrikeout(isStrikeout);
 
 ## Example
 
-This example specifies that the contents of the run are displayed with a single horizontal line through the center of the line.
+Draw a line through text to mark it as deleted in a presentation.
 
 ```javascript editor-pptx
-// How to strike out a text with one line.
+// Can I add a strikethrough effect to text in a presentation?
 
-// Get the text properties of the run and cross it out.
+// Enable a horizontal line that crosses through the center of the text in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
 
-const fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+const fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 const stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = Api.CreateShape("flowChartMagneticTape", 300 * 36000, 130 * 36000, fill, stroke);
 shape.SetPosition(608400, 1267200);
@@ -48,5 +48,4 @@ paragraph.SetJc("left");
 run.AddText("This is a struck out text inside the shape.");
 paragraph.AddElement(run);
 slide.AddObject(shape);
-
 ```

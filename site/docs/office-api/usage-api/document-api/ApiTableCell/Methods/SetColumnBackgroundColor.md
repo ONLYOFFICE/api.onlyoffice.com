@@ -1,0 +1,41 @@
+# SetColumnBackgroundColor
+
+Sets the background color to all cells in the column containing the current cell.
+
+## Syntax
+
+```javascript
+expression.SetColumnBackgroundColor(color);
+```
+
+`expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
+
+## Parameters
+
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| color | Optional | [ApiColor](../../ApiColor/ApiColor.md) |  | If not passed, the background color will be cleared. |
+
+## Returns
+
+boolean
+
+## Example
+
+Apply a background color to every cell in a table column in a document.
+
+```javascript editor-docx
+// How do I change the background color of an entire column of table cells in a document?
+
+// Give all cells in the same column a consistent fill color in a document.
+
+let doc = Api.GetDocument();
+let tableStyle = doc.CreateStyle("CustomTableStyle", "table");
+tableStyle.SetBasedOn(doc.GetStyle("Bordered"));
+let table = Api.CreateTable(4, 4);
+table.SetWidth("percent", 100);
+table.SetStyle(tableStyle);
+let cell = table.GetRow(0).GetCell(0);
+cell.SetColumnBackgroundColor(Api.HexColor('#FF6F3D'));
+doc.Push(table);
+```

@@ -22,12 +22,12 @@ expression.GetDrawingsByPlaceholderType(sType);
 
 ## Example
 
-This example gets drawings by placeholder type and removes it from slide master.
+Get all drawings by placeholder type from a slide master.
 
 ```javascript editor-pptx
-// How to get all drawings as an array by indicating placeholder type from a master.
+// Retrieve drawings using GetDrawingsByPlaceholderType, specifying the placeholder type.
 
-// Get drawings by their placeholder type knowing a slide master.
+// Delete all drawings with the specified placeholder type from the master.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
@@ -36,5 +36,4 @@ const aDrawingsWithPh = master.GetDrawingsByPlaceholderType("title");
 for (let i = 0; i < aDrawingsWithPh.length; i++) {
 	aDrawingsWithPh[i].Delete();
 }
-
 ```

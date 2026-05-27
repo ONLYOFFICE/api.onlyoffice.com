@@ -11,14 +11,14 @@ The **document editing service** informs the **document storage service** about 
   ``` ts
   const config = {
     editorConfig: {
-      callbackUrl: "https://example.com/url-to-callback.ashx",
+      callbackUrl: "https://example.com/url-to-callback",
     },
   };
 
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-Here the `https://example.com/url-to-callback.ashx` is the address of the special handler which can process the response from the **document editing service** and response with the *"error": 0* status code. This handler can be written in the programming language of your choice.
+Here the `https://example.com/url-to-callback` is the address of the special handler which can process the response from the **document editing service** and response with the *"error": 0* status code. This handler can be written in the programming language of your choice.
 
 All the parameters which can be sent to the callback handler and their description can be found at [this page](../../usage-api/callback-handler.md).
 
@@ -30,7 +30,7 @@ The *document.key* parameter is a unique document identifier which helps disting
 
 Each time the document is changed, the *document.key* parameter must also be generated anew as the documents with the known key are taken from cache.
 
-More information on this parameter is available [here](../../usage-api/config/document/document.md#key).
+For more information, see [document.key](../../usage-api/config/document/document.md#key).
 
 ## How to define the mode that the file should be opened in (viewing or editing)?
 
@@ -51,4 +51,4 @@ Set the mode using the *editorConfig* section of the configuration file:
   const docEditor = new DocsAPI.DocEditor("placeholder", config);
   ```
 
-More information on this parameter is available [here](../../usage-api/config/editor/editor.md#mode).
+For more information, see [editorConfig.mode](../../usage-api/config/editor/editor.md#mode).

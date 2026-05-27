@@ -14,7 +14,9 @@ expression.SetCharactersLimit(nChars);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nChars | Required | number |  | The maximum number of characters in the text field. If this parameter is equal to -1, no limit will be set. A limit is required to be set if a comb of characters is applied. Maximum value for this parameter is 1000000. |
+| nChars | Required | number |  | The maximum number of characters in the text field. If this parameter is equal to -1, no limit will be set.
+A limit is required to be set if a comb of characters is applied.
+Maximum value for this parameter is 1000000. |
 
 ## Returns
 
@@ -22,12 +24,12 @@ boolean
 
 ## Example
 
-This example sets a limit to the text field characters.
+Limit the number of characters a user can enter in a text field in a document.
 
-```javascript editor-pdf
-// How to specify the characters limit of the text form.
+```javascript editor-forms
+// How do I cap the total number of characters allowed in a text field in a document?
 
-// Set the maximum number of characters that can be inserted to the text form.
+// Enforce a maximum input length to keep text field entries concise in a document.
 
 let doc = Api.GetDocument();
 let textForm = Api.CreateTextForm({"key": "Personal information", "tip": "Enter your first name", "required": true, "placeholder": "First name", "comb": true, "cellWidth": 3, "multiLine": false, "autoFit": false});

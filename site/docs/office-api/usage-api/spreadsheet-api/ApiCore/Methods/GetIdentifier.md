@@ -20,16 +20,20 @@ string
 
 ## Example
 
-This example demonstrates how to get the identifier of the current workbook using the ApiCore.
+Read the unique identifier stored in the workbook properties in a spreadsheet.
 
 ```javascript editor-xlsx
+// How do I look up the identifier assigned to a workbook in a spreadsheet?
+
+// Extract and display the workbook's unique ID from the document properties in a spreadsheet.
+
 const worksheet = Api.GetActiveSheet();
 const core = Api.GetCore();
 
 core.SetIdentifier("#ID42");
 const identifier = core.GetIdentifier();
 
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(100, 50, 200));
+let fill = Api.CreateSolidFill(Api.RGB(100, 50, 200));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 const shape = worksheet.AddShape(
 	"rect",
@@ -40,5 +44,4 @@ const shape = worksheet.AddShape(
 
 let paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText("Identifier: " + identifier);
-
 ```

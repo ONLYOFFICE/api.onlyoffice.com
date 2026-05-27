@@ -14,8 +14,10 @@ expression.AddElement(oElement, nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the oElement type is not supported by a paragraph. |
-| nPos | Optional | number |  | The position where the current element will be added. If this value is not specified, then the element will be added at the end of the current paragraph. |
+| oElement | Required | [ParagraphContent](../../Enumeration/ParagraphContent.md) |  | The document element which will be added at the current position. Returns false if the
+oElement type is not supported by a paragraph. |
+| nPos | Optional | number |  | The position where the current element will be added. If this value is not
+specified, then the element will be added at the end of the current paragraph. |
 
 ## Returns
 
@@ -23,15 +25,15 @@ boolean
 
 ## Example
 
-This example adds a Run to the paragraph.
+Insert a formatted text run into a paragraph inside a shape in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add text to the paragraph.
+// How do I append a styled piece of text to an existing paragraph in a spreadsheet?
 
-// Get the paragraph from the shape and change its text.
+// Build a run with custom content and attach it to the paragraph as a new element in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
-let fill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));
+let fill = Api.CreateSolidFill(Api.RGB(255, 111, 61));
 let stroke = Api.CreateStroke(0, Api.CreateNoFill());
 let shape = worksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, fill, stroke, 0, 2 * 36000, 0, 3 * 36000);
 let content = shape.GetContent();

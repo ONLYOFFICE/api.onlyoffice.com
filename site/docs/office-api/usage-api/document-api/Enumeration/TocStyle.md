@@ -1,0 +1,38 @@
+# TocStyle
+
+Possible values for the table of contents style.
+
+## Type
+
+Enumeration
+
+## Values
+
+- "simple"
+- "online"
+- "standard"
+- "modern"
+- "classic"
+
+## Example
+
+Add a table of contents of the standard style to the document.
+
+```javascript editor-docx
+// How to create a table of contents properties indicating its style.
+
+// Add a table of contents with standard style.
+
+let tocStyle = "standard";
+let tocPr = {
+	"ShowPageNums": true,
+	"RightAlgn": true,
+	"LeaderType": "dot",
+	"FormatAsLinks": true,
+	"BuildFrom": {
+		"OutlineLvls": 9
+	},
+	"TocStyle": tocStyle
+};
+doc.AddTableOfContents(tocPr);
+```

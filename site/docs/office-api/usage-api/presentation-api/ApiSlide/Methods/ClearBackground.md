@@ -20,22 +20,21 @@ boolean
 
 ## Example
 
-This example clears the slide background.
+Remove the background from a slide in a presentation.
 
 ```javascript editor-pptx
-// How to remove the background from the slide.
+// How do I remove a slide's background in a presentation?
 
-// Create a duplicate slide and change its background.
+// Create a duplicate of the slide and then clear its background in a presentation.
 
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 
-const gs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 213, 191), 0);
-const gs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 111, 61), 100000);
+const gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+const gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
 const fill = Api.CreateRadialGradientFill([gs1, gs2]);
 slide.SetBackground(fill);
 
 const duplicateSlide = slide.Duplicate(1);
 duplicateSlide.ClearBackground();
-
 ```

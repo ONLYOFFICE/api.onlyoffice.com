@@ -20,9 +20,13 @@ string
 
 ## Example
 
-This example show how to get a name of the current layout.
+Read the name of a layout in a presentation.
 
 ```javascript editor-pptx
+// How do I view the layout name in a presentation?
+
+// Display the name of a layout after assigning it a custom value in a presentation.
+
 const presentation = Api.GetPresentation();
 const slide = presentation.GetSlideByIndex(0);
 slide.RemoveAllObjects();
@@ -39,5 +43,4 @@ const shape = Api.CreateShape('rect', 300 * 36000, 100 * 36000, fill, stroke);
 const paragraph = shape.GetContent().GetElement(0);
 paragraph.AddText('Name of the first layout: ' + layout.GetName());
 layout.AddObject(shape);
-
 ```

@@ -20,12 +20,12 @@ This method doesn't have any parameters.
 
 ## Example
 
-This example shows how to get an array of ApiName objects.
+Collect all named ranges defined on the active sheet in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get all def names.
+// How do I list every named range on a worksheet in a spreadsheet?
 
-// Get all def names as an array.
+// Loop through all named ranges and display their names in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 worksheet.GetRange("A1").SetValue("1");
@@ -36,5 +36,4 @@ worksheet.AddDefName("numbers", "Sheet1!$A$1:$B$1");
 worksheet.AddDefName("letters", "Sheet1!$A$2:$B$2");
 let defNames = worksheet.GetDefNames();
 worksheet.GetRange("A4").SetValue("DefNames: " + defNames[0].GetName() + ", " + defNames[1].GetName());
-
 ```

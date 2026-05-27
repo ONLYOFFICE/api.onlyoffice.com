@@ -1,22 +1,21 @@
-# 批注数据
+# CommentData
 
-批注数据对象。
+批注数据。
+
+## 类型
+
+Object
 
 ## 属性
 
 | 名称 | 类型 | 描述 |
-| ---- | ---- | ---- |
-| QuoteText | string | 被引用的批注文本。 |
-| Replies | [批注数据](../Enumeration/CommentData.md)[] | 包含批注回复的数组，每个元素都是一个批注数据对象。 |
-| Solved | boolean | 指定该批注是否已被解决（**true**）或未解决（**false**）。 |
-| Text | string | 批注内容文本。 |
-| Time | string | 批注的创建时间（以毫秒为单位）。 |
+| ---- | ---- | ----------- |
+| QuoteText | string | 引用批注文本。 |
+| Replies | [CommentData](../Enumeration/CommentData.md)[] | 包含以 *CommentData* 对象表示的批注回复的数组。 |
+| Solved | boolean | 指定批注是否已解决（**true**）或未解决（**false**）。 |
+| Text | string | 批注文本。 |
+| Time | string | 批注发布的时间（以毫秒为单位）。 |
 | UserName | string | 批注作者。 |
-## 类型
-
-Object（对象）
-
-
 
 ## 示例
 

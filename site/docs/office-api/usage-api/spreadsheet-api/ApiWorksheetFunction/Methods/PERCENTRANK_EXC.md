@@ -24,12 +24,12 @@ number
 
 ## Example
 
-This example shows how to return the rank of a value in a data set as a percentage (0..1, exclusive) of the data set.
+Get the rank of a value as a percentage within a range, excluding edges in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to return the rank of a value in a data set as a percentage.
+// How do I find a value's percentile rank within a dataset in a spreadsheet?
 
-// Use a function to get a rank of a value in a data set.
+// Determine the relative position of a number between other values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

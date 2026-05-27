@@ -29,14 +29,12 @@ This method doesn't return any data.
 
 ## Example
 
-This example calculates custom function result.
+Register a custom function and call it from a cell formula in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to add custom function.
+// How do I define my own calculation function for use in cells in a spreadsheet?
 
-// How to use custom function.
-
-// How to add cell values using custom function.
+// Extend built-in formulas with a user-written function that sums two numbers in a spreadsheet.
 
 /**
  * Function that returns the argument

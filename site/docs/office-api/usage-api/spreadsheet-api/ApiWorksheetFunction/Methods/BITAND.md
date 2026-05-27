@@ -23,12 +23,12 @@ number
 
 ## Example
 
-This example shows how to return a bitwise "AND" of two numbers.
+Compare two numbers using bitwise AND in a spreadsheet.
 
 ```javascript editor-xlsx
-// How to get a two numbers bitwise AND.
+// What do two numbers share at the binary level in a spreadsheet?
 
-// Use function to calculate bitwise AND opertation.
+// Get the common bits between two values in a spreadsheet.
 
 let worksheet = Api.GetActiveSheet();
 let func = Api.WorksheetFunction;

@@ -1,0 +1,46 @@
+# SetRotation
+
+设置当前绘图对象的旋转角度。
+
+## 语法
+
+```javascript
+expression.SetRotation(nRotAngle);
+```
+
+`expression` - 表示 [ApiDrawing](../ApiDrawing.md) 类的变量。
+
+## 参数
+
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| nRotAngle | 必需 | number |  | 新的绘图旋转角度。 |
+
+## 返回值
+
+boolean
+
+## 示例
+
+在文档中按指定角度旋转绘图。
+
+```javascript editor-docx
+// How do I tilt a shape to a particular degree in a document?
+
+// Turn a wide rectangle ninety degrees and display the resulting angle inside it in a document.
+
+let doc = Api.GetDocument();
+let paragraph = doc.GetElement(0);
+let gs1 = Api.CreateGradientStop(Api.RGB(255, 213, 191), 0);
+let gs2 = Api.CreateGradientStop(Api.RGB(255, 111, 61), 100000);
+let fill = Api.CreateLinearGradientFill([gs1, gs2], 5400000);
+let stroke = Api.CreateStroke(0, Api.CreateNoFill());
+let drawing = Api.CreateShape("rect", 110 * 36000, 10 * 36000, fill, stroke);
+paragraph.AddDrawing(drawing);
+drawing.SetRotation(90);
+let rotAngle = drawing.GetRotation();
+let docContent = drawing.GetContent();
+paragraph = Api.CreateParagraph();
+paragraph.AddText("Drawing rotation angle is set to: " + rotAngle + " degrees");
+docContent.AddElement(0, paragraph);
+```

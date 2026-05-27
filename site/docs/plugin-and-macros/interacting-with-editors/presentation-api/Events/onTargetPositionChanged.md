@@ -6,12 +6,10 @@ The function called when the target position in the editor is changed.
 
 This event has no parameters.
 
+## Example
+
 ```javascript
 window.Asc.plugin.attachEditorEvent("onTargetPositionChanged", () => {
-    if (!fClickLabel) {
-        window.Asc.plugin.executeMethod("GetCurrentContentControl");
-    }
-    fClickLabel = false;
+    console.log("event: onTargetPositionChanged");
 });
 ```
-
