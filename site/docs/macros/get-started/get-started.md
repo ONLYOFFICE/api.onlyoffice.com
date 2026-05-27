@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: Learn how to extend ONLYOFFICE editors with plugins, macros, and custom AI tools.
+description: Learn how to create and run macros in ONLYOFFICE editors.
 ---
 
 # Getting started

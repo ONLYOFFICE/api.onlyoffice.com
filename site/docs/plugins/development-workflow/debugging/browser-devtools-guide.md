@@ -4,15 +4,13 @@ sidebar_position: 1
 
 # Browser DevTools guide
 
-## Overview
-
 Browser DevTools are essential for debugging ONLYOFFICE plugins. This guide covers how to access, use, and master debugging tools to quickly identify and fix issues in your plugins.
 
 ## Accessing DevTools
 
 ### In ONLYOFFICE Desktop Editors
 
-Desktop Editors must be launched with the `--ascdesktop-support-debug-info` flag to enable DevTools access. See the [debug mode guides](/docs/desktop-editors/usage-api/debugging/running-in-debug-mode-on-windows.md) for platform-specific launch instructions.
+Desktop Editors must be launched with the `--ascdesktop-support-debug-info` flag to enable DevTools access. See the [debug mode guides](/docs/desktop-editors/usage-api/debugging/debugging) for platform-specific launch instructions (Windows, macOS, and Linux).
 
 Once Desktop Editors is running in debug mode:
 1. Right-click inside the plugin panel.
@@ -299,7 +297,3 @@ if (DEBUG) {
 }
 ```
 :::
-
-## Conclusion
-
-Mastering Browser DevTools is essential for efficient plugin debugging. Use breakpoints strategically, monitor network requests, profile performance, and leverage advanced features to quickly identify and fix issues in your ONLYOFFICE plugins.

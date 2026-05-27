@@ -106,6 +106,10 @@ Add custom buttons to plugin toolbars for quick actions.
 
 Create modal dialogs and side panels for plugin content.
 
+:::warning[Deprecated parameters]
+`isModal` and `isInsideMode` are deprecated. Use the `type` field with `"window"` or `"panel"` values instead. See [config.json](../fundamentals/configuration/config-json.md) for the current variation parameters.
+:::
+
 **Modal window example:**
 
 ```json

@@ -19,7 +19,7 @@ The plugin runs in isolation — it cannot directly manipulate the editor's DOM.
 - **Display custom UI** — modal dialogs, side panels, toolbar buttons, context menu items
 - **Call external APIs** — REST services, AI providers, databases, cloud storage
 - **React to editor events** — selection changes, document open/close, button clicks
-- **Support all editor types** — Writer (word), Spreadsheet (cell), Presentation (slide)
+- **Support all editor types** — Document Editor (word), Spreadsheet Editor (cell), Presentation Editor (slide)
 
 ## What plugins cannot do
 

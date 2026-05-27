@@ -4,9 +4,9 @@ sidebar_position: 5
 
 # Converting VBA macros
 
-ONLYOFFICE macros are different from Microsoft macros due to the reason the latter use the Visual Basic for Applications (VBA) scripting language. JavaScript is more flexible and can be used with any platform (which is important as ONLYOFFICE editors are supported on Windows, Linux and macOS platforms).
+ONLYOFFICE macros are different from Microsoft macros because the latter use the Visual Basic for Applications (VBA) scripting language. JavaScript is more flexible and can be used with any platform (which is important as ONLYOFFICE editors are supported on Windows, Linux, and macOS).
 
-This can be the reason for some inconvenience in case you previously used Microsoft Office with macros, as they will become incompatible with ONLYOFFICE macros. You can convert your previously used macros to use them with the new editors in two ways:
+This means that macros created in Microsoft Office are not compatible with ONLYOFFICE macros. You can convert them for use with ONLYOFFICE in two ways:
 
 - [Automatically](#automatic-conversion-using-ai-plugin) — using the AI plugin for ONLYOFFICE (recommended for quick conversion).
 
@@ -16,7 +16,7 @@ This can be the reason for some inconvenience in case you previously used Micros
 
 If you want to speed up the process, starting from version 9.0, you can use the AI plugin built into ONLYOFFICE to automatically convert VBA code into JavaScript compatible with ONLYOFFICE macros:
 
-1. Configure the AI plugin. The detailed instructions on how to do this can be found [here](/docs/ai/ai/ai-plugin.md#configuring).
+1. Configure the AI plugin. See [Configuring the AI plugin](/docs/ai/ai/ai-plugin.md#configuring) for details.
 2. Open the **View** tab and click **Macros**.
 3. Click the **AI** icon in the **Macros** window and select **Convert from VBA**.
 
@@ -34,7 +34,7 @@ If you want to speed up the process, starting from version 9.0, you can use the 
 
 6. Click ![Play icon](/assets/images/plugins/play.svg) to test the script.
 
-For example, you have a simple VBA macro that unmerges all merged cells in the active sheet:
+For example, the following VBA macro unmerges all merged cells in the active sheet:
 
 ``` vba
 Sub UnmergeAllCells()
@@ -78,7 +78,7 @@ If the AI-generated version doesn't work properly, or you want to fully understa
 3. Rewrite the macro in JavaScript.
 4. Test it directly in ONLYOFFICE editors.
 
-The process is not too complicated. Let's see the following example:
+For example:
 
 ``` vb
 Sub Example()
@@ -100,9 +100,9 @@ Sub Example()
 End Sub
 ```
 
-The macro counts the sum of the values from the three cell ranges of the **A** column and puts the results to the three cells of the **B** column.
+The macro calculates the sum of the values from the three cell ranges of the **A** column and writes the results to the three cells of the **B** column.
 
-The exact same thing can be achieved using ONLYOFFICE macros, the code will be almost identical and easy to understand if you know both Visual Basic for Applications and JavaScript:
+The same result can be achieved using ONLYOFFICE macros. The code is almost identical if you know both VBA and JavaScript:
 
 ``` ts
 (function()
@@ -127,4 +127,4 @@ The exact same thing can be achieved using ONLYOFFICE macros, the code will be a
 })();
 ```
 
-The same way any other Visual Basic for Applications script can be converted into JavaScript code compatible with ONLYOFFICE macros.
+The same approach applies to any other VBA macro.

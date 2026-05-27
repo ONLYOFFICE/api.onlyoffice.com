@@ -24,7 +24,7 @@ This file tells ONLYOFFICE about your plugin:
   "variations": [
     {
       "url": "index.html",
-      "icons": ["icon.png"],
+      "icons": "resources/%theme-type%(light|dark)/icon%scale%(default).%extension%(png)",
       "isViewer": false,
       "EditorsSupport": ["word", "cell", "slide"]
     }
