@@ -37,13 +37,13 @@ ONLYOFFICE offers these ways to access and use DocSpace:
     - [Get ONLYOFFICE DocSpace for Linux](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
     - [Get ONLYOFFICE DocSpace for Docker](https://helpcenter.onlyoffice.com/docspace/installation/docspace-developer-install-script.aspx?from=api)
 
-### Step 2:  Authenticate your account
+### Step 2: Authenticate your account
 
 Authenticate your account using API keys, OAuth, or any of the other [authentication methods](authentication/authentication.md) available on ONLYOFFICE DocSpace. This quickstart uses API keys. Follow these steps on [how to create and use API keys](./authentication/api-keys.md#how-to-create-api-keys) for your request.
 
 ### Step 3: Create a room
 
-This sample request creates a **Public Room** titled **Graduation Planning**.
+This sample request creates a **Public Room** titled **Graduation Planning**. You can replace `PublicRoom` with any other [supported room type](https://api.onlyoffice.com/docspace/api-backend/usage-api/create-room/).
 
 :::note
 Set your Content-Type and Accept headers to application/json, as every endpoint in the DocSpace API supports JSON.
@@ -61,8 +61,8 @@ Content-Length: 115
 {
     "title": "Graduation planning",
     "roomType": "PublicRoom",
-    "color": "FF0000"
-    "private": false  
+    "color": "FF0000",
+    "private": false
 }
 
 ```
@@ -73,7 +73,7 @@ Content-Length: 115
 - **yourportal**: Your DocSpace portal
 
 :::important
-Note that the color should be a hex-code string as any other method leads to an error accessing your portal
+The color must be specified as a hex code string (e.g., `FF0000`), not as a color name.
 :::
 
 You can send requests to customize and change room details to fit your specific needs.
