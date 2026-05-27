@@ -26,6 +26,8 @@ To start working with the plugin:
 
 Once the API token is enabled, the plugin becomes available to all users of the current DocSpace portal. 
 
+By default, the plugin is initialized with `PluginStatus.hide`, so it remains hidden from users until an API token is configured.
+
 There you can also view the plugin metadata, such as the author, version, status, homepage, and description.
 
 ## Usage

@@ -257,7 +257,7 @@ declare global {
   }
 }
 
-window.Plugins.Boxcomponentplugin = plugin || {};
+window.Plugins.Buttoncomponentplugin = plugin || {};
 
 export default plugin;
 ```

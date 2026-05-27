@@ -245,7 +245,7 @@ declare global {
   }
 }
 
-window.Plugins.Textcomponentplugin = plugin || {};
+window.Plugins.Combocomponentplugin = plugin || {};
 
 export default plugin;
 ```

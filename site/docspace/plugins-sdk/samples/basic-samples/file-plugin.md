@@ -46,7 +46,9 @@ import {
   IPlugin,
   PluginStatus,
   IFilePlugin,
-  IFileItem
+  IFileItem,
+  Devices,
+  File
 } from '@onlyoffice/docspace-plugin-sdk'
 
 class Filesplugin implements IPlugin, IFilePlugin {
@@ -89,9 +91,10 @@ export const fileItem: IFileItem = {
   fileTypeName: "Markdown",
   fileRowIcon: "icon.svg",
   fileTileIcon: "icon.svg",
-  onClick: () => {
-    console.log("Markdown file clicked!")
-  }
+  devices: [Devices.desktop, Devices.mobile, Devices.tablet,],
+  onClick: (item: File) => {
+    console.log("Markdown file clicked!",item);
+  },
 }
 
 plugin.addFileItem(fileItem)
@@ -132,3 +135,4 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 - The [`extension`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#extension) must match a file type used in your DocSpace (e.g. `.md`).
 - You can customize both list and tile icons using [`fileRowIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileRowIcon) and [`fileTileIcon`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#fileTileIcon).
 - Without this plugin, unknown file types simply download on click. This plugin runs your [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#onClick) logic instead.
+- You can control where the current file item is shown using [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/fileitem.md#devices) (for example, desktop, mobile, and tablet).

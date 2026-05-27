@@ -48,6 +48,7 @@ import {
   IContextMenuPlugin,
   IContextMenuItem,
   FilesType,
+  Devices,
   UsersType
 } from '@onlyoffice/docspace-plugin-sdk'
 
@@ -91,6 +92,7 @@ const contextMenuItem: IContextMenuItem = {
     console.log("Context Menu works!")
   },
   fileType: [FilesType.file],
+  devices: [Devices.desktop, Devices.mobile, Devices.tablet],
   usersTypes: [UsersType.owner, UsersType.docSpaceAdmin, UsersType.roomAdmin],
 };
 
@@ -124,5 +126,5 @@ This compiles `src/index.ts` to `dist/plugin.js`.
 ## Notes
 
 - You can define multiple context items using different keys.
-- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType) and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
+- Use the [`fileType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#fileType), [`devices`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#devices), and [`usersType`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#usersType) fields to control visibility.
 - The [`onClick`](/docspace/plugins-sdk/usage-sdk/coding-plugin/plugin-items/contextmenuitem.md#onClick) function receives the selected file's ID.

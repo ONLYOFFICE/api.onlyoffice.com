@@ -486,8 +486,28 @@ const viewFilesButtonProps: IButton = {
       }
     }));
 
-    // Replace modal content with new list
-    modalBody.children = [...fileBlocks];
+    const backButtonBlock = {
+      component: Components.button,
+      props: {
+        label: "Back",
+        primary: false,
+        size: ButtonSize.normal,
+        scale: false,
+        onClick: (): IMessage => {
+          modalBody.children = [
+            { component: Components.comboBox, props: comboBox },
+            { component: Components.button, props: viewFilesButtonProps }
+          ];
+          return {
+            actions: [Actions.showModal],
+            modalDialogProps: modalProps
+          };
+        }
+      }
+    };
+
+    // Replace modal content with back button + file list
+    modalBody.children = [backButtonBlock, ...fileBlocks];
 
     return {
       actions: [Actions.showModal],
@@ -499,8 +519,10 @@ const viewFilesButtonProps: IButton = {
 // Modal layout combining dropdown and action button
 const modalBody: IBox = {
   widthProp: "700px",
-  heightProp: "150px",
+  heightProp: "300px",
+  overflowProp: "auto",
   marginProp: "0 0 24px",
+  paddingProp: "0 12px 0 0",
   children: [
     {
       component: Components.comboBox,
@@ -533,8 +555,11 @@ const contextMenuItem: IContextMenuItem = {
   label: "Ext Search",
   icon: "icon.svg",
   onClick: (id: number) => {
-    // Store selected room ID and show modal
     currentRoomId = id;
+    modalBody.children = [
+      { component: Components.comboBox, props: comboBox },
+      { component: Components.button, props: viewFilesButtonProps }
+    ];
     return {
       actions: [Actions.showModal],
       modalDialogProps: modalProps
