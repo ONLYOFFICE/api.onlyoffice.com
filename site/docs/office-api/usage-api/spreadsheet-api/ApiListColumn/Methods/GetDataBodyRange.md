@@ -2,8 +2,8 @@
 
 Returns the range of the data body of the column, excluding the header and totals rows.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

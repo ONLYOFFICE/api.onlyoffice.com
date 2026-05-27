@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetMultiline(bMultiline);
+expression.SetMultiline(multiline);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetMultiline(bMultiline);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bMultiline | 必需 | boolean |  | 字段是否为多行 |
+| multiline | 必需 | boolean |  | 字段是否为多行 |
 
 ## 返回值
 

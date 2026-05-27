@@ -2,8 +2,8 @@
 
 Adds a formatted table to the worksheet and returns the ApiListObject object.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

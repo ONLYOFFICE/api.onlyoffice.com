@@ -14,7 +14,7 @@ expression.SetBorderWidth(borderWidth);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| borderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 边框宽度：**"none"**、**"thin"**、**"medium"** 或 **"thick"**。 |
+| borderWidth | 必需 | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | 要设置的边框宽度。 |
 
 ## 返回值
 

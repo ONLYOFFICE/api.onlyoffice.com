@@ -5,7 +5,7 @@ Creates a text field.
 ## Syntax
 
 ```javascript
-expression.CreateTextField(aRect);
+expression.CreateTextField(rect);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,7 +14,7 @@ expression.CreateTextField(aRect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | widget rect |
 
 ## Returns
 

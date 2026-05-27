@@ -1,6 +1,6 @@
 # SetCommitOnSelChange
 
-Sets field commit on selection change prop.
+Sets whether the field commits changes immediately after selection changes.
 
 Inherited from [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md).
 

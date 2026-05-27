@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetScaleHow(sType);
+expression.SetScaleHow(scaleHow);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetScaleHow(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | 按钮控件缩放方式类型 |
+| scaleHow | 必需 | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | 图标缩放模式。 |
 
 ## 返回值
 

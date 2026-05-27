@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.GetPage(nPos);
+expression.GetPage(index);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -14,7 +14,7 @@ expression.GetPage(nPos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | 必需 | number |  | 页面位置 |
+| index | 必需 | number |  | 页面索引。 |
 
 ## 返回值
 

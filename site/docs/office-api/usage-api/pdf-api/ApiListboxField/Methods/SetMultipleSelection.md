@@ -1,11 +1,11 @@
 # SetMultipleSelection
 
-Sets field multiselect prop.
+Sets whether multiple values can be selected.
 
 ## Syntax
 
 ```javascript
-expression.SetMultipleSelection(bMulti);
+expression.SetMultipleSelection(allowMultipleSelection);
 ```
 
 `expression` - A variable that represents a [ApiListboxField](../ApiListboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetMultipleSelection(bMulti);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bMulti | Required | boolean |  | allow user select multi values |
+| allowMultipleSelection | Required | boolean |  | Specifies whether multiple values can be selected. |
 
 ## Returns
 

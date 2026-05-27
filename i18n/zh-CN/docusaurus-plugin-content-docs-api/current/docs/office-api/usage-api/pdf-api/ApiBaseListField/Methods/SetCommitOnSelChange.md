@@ -1,11 +1,11 @@
 # SetCommitOnSelChange
 
-设置字段在选择更改时提交的属性。
+设置字段是否在选择更改后立即提交更改。
 
 ## 语法
 
 ```javascript
-expression.SetCommitOnSelChange(bCommit);
+expression.SetCommitOnSelChange(commitOnSelectionChange);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetCommitOnSelChange(bCommit);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bCommit | 必需 | boolean |  | 更改后字段值是否立即应用于所有同名字段 |
+| commitOnSelectionChange | 必需 | boolean |  | 指定选择更改是否立即提交。 |
 
 ## 返回值
 

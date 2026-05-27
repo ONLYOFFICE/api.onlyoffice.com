@@ -5,7 +5,7 @@ Adds a new page to document.
 ## Syntax
 
 ```javascript
-expression.AddPage(nPos, nWidth, nHeight);
+expression.AddPage(index, width, height);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,9 +14,9 @@ expression.AddPage(nPos, nWidth, nHeight);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | pos to add page. |
-| nWidth | Optional | [pt](../../Enumeration/pt.md) |  | page width. |
-| nHeight | Optional | [pt](../../Enumeration/pt.md) |  | page height. |
+| index | Required | number |  | The index where the page will be added. |
+| width | Optional | [pt](../../Enumeration/pt.md) |  | The page width. |
+| height | Optional | [pt](../../Enumeration/pt.md) |  | The page height. |
 
 ## Returns
 

@@ -2,8 +2,8 @@
 
 Adds a detached drawing object (e.g. a copy returned by ApiDrawing.Copy) to the worksheet at the specified anchor.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

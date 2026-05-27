@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetImage(sImageUrl, sApType);
+expression.SetImage(imageUrl, appearance);
 ```
 
 `expression` - 表示 [ApiButtonWidget](../ApiButtonWidget.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetImage(sImageUrl, sApType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageUrl | 可选 | string | '' | 图像 URL |
-| sApType | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | 'normal' | 为哪种状态设置图片 |
+| imageUrl | 可选 | string | "" | 图像 URL。 |
+| appearance | 可选 | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | 外观状态。 |
 
 ## 返回值
 

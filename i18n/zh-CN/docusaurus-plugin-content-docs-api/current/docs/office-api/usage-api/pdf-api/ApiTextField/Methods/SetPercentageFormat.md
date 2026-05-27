@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetPercentageFormat(nDemical, sSepStyle);
+expression.SetPercentageFormat(decimalPlaces, separatorStyle);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetPercentageFormat(nDemical, sSepStyle);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nDemical | 必需 | number |  | 小数位数 |
-| sSepStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔样式 |
+| decimalPlaces | 必需 | number |  | 小数点后的位数。 |
+| separatorStyle | 必需 | [NumberSepStyle](../../Enumeration/NumberSepStyle.md) |  | 数字分隔符样式。 |
 
 ## 返回值
 

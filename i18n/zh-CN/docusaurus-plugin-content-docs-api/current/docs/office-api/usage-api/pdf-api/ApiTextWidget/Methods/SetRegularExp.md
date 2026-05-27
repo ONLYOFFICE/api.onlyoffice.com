@@ -1,11 +1,11 @@
 # SetRegularExp
 
-设置文本控件的正则验证表达式。
+设置文本小部件的正则验证表达式。
 
 ## 语法
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - 表示 [ApiTextWidget](../ApiTextWidget.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | 必需 | string |  | 字段正则表达式 |
+| regularExpression | 必需 | string |  | 验证正则表达式。 |
 
 ## 返回值
 

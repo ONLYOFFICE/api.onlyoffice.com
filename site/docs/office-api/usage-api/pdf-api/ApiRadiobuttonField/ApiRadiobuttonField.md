@@ -19,12 +19,12 @@ ApiRadiobuttonField is a subclass of [ApiCheckboxField](../ApiCheckboxField/ApiC
 | [IsCheckInUnison](./Methods/IsCheckInUnison.md) | boolean | Checks if field will check in unison. |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if field is required |
-| [IsToggleToOff](./Methods/IsToggleToOff.md) | boolean | Checks if field is toggle to off. |
+| [IsToggleToOff](./Methods/IsToggleToOff.md) | boolean | Checks if the field can be toggled off. |
 | [SetCheckInUnison](./Methods/SetCheckInUnison.md) | boolean | Sets field in unison prop. |
 | [SetFullName](./Methods/SetFullName.md) | boolean | Sets new field name if possible. |
 | [SetPartialName](./Methods/SetPartialName.md) | boolean | Sets new field partial name. |
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Sets field required |
-| [SetToggleToOff](./Methods/SetToggleToOff.md) | boolean | Sets field toggle to off prop. |
+| [SetToggleToOff](./Methods/SetToggleToOff.md) | boolean | Sets whether the checked state can be toggled off. |
 | [SetTooltip](./Methods/SetTooltip.md) | boolean | Sets field tooltip |
 | [SetValue](./Methods/SetValue.md) | boolean | Sets field value |

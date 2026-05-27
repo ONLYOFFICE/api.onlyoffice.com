@@ -5,7 +5,7 @@ Removes option from list options.
 ## Syntax
 
 ```javascript
-expression.RemoveOption(nPos);
+expression.RemoveOption(index);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.RemoveOption(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | pos to remove option |
+| index | Required | number |  | The option index. |
 
 ## Returns
 

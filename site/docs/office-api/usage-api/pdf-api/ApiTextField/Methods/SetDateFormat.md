@@ -5,7 +5,7 @@ Sets date format for field.
 ## Syntax
 
 ```javascript
-expression.SetDateFormat(sFormat);
+expression.SetDateFormat(format);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetDateFormat(sFormat);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sFormat | Required | string |  | date format (e.g. "dd.mm.yyyy") |
+| format | Required | string |  | date format (e.g. "dd.mm.yyyy") |
 
 ## Returns
 

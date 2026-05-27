@@ -2,8 +2,8 @@
 
 Sets the 1-based priority of this sort field, repositioning it within the collection.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetFill(oFill);
+expression.SetFill(fill);
 ```
 
 `expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetFill(oFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充形状的填充类型。 |
+| fill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充形状的填充类型。 |
 
 ## 返回值
 

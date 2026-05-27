@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | 必需 | string |  | 字段正则表达式（例如 “\\S+@\\S+\\.\\S+”） |
+| regularExpression | 必需 | string |  | 验证正则表达式（例如 "\\S+@\\S+\\.\\S+"） |
 
 ## 返回值
 

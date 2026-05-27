@@ -2,8 +2,8 @@
 
 设置此排序字段从 1 开始的优先级，在集合中重新定位。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

@@ -5,7 +5,7 @@ Returns a cell by its position in the current row.
 ## Syntax
 
 ```javascript
-expression.GetCell(nPos);
+expression.GetCell(cellIndex);
 ```
 
 `expression` - A variable that represents a [ApiTableRow](../ApiTableRow.md) class.
@@ -14,7 +14,7 @@ expression.GetCell(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | The cell position in the table row. |
+| cellIndex | Required | number |  | The zero-based cell index in the table row. |
 
 ## Returns
 

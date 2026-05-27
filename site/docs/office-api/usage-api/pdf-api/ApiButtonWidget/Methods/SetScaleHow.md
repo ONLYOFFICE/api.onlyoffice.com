@@ -5,7 +5,7 @@ Sets button widget scale how type
 ## Syntax
 
 ```javascript
-expression.SetScaleHow(sType);
+expression.SetScaleHow(scaleHow);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetScaleHow(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | button widget scale how type |
+| scaleHow | Required | [ButtonScaleHow](../../Enumeration/ButtonScaleHow.md) |  | The icon scaling mode. |
 
 ## Returns
 

@@ -5,14 +5,16 @@
 ## 语法
 
 ```javascript
-expression.GetFieldByName();
+expression.GetFieldByName(name);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
 
 ## 参数
 
-此方法没有任何参数。
+| **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | 必需 | string |  | 完整名称参数。 |
 
 ## 返回值
 

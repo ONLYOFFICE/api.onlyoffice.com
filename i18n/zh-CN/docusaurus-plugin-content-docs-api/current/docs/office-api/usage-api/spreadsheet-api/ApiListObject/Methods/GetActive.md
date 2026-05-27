@@ -3,8 +3,8 @@
 返回一个布尔值，指示 ListObject 是否处于活动状态，
 即活动单元格是否在 ListObject 的范围内。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

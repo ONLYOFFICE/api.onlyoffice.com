@@ -2,8 +2,8 @@
 
 返回整个列的范围，包括标题行和汇总行。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

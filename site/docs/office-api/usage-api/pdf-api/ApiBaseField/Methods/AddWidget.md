@@ -5,7 +5,7 @@ Adds new widget - visual representation for field
 ## Syntax
 
 ```javascript
-expression.AddWidget(nPage, aRect);
+expression.AddWidget(pageIndex, rect);
 ```
 
 `expression` - A variable that represents a [ApiBaseField](../ApiBaseField.md) class.
@@ -14,8 +14,8 @@ expression.AddWidget(nPage, aRect);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | Required | number |  | page to add widget |
-| aRect | Required | [Rect](../../Enumeration/Rect.md) |  | field rect |
+| pageIndex | Required | number |  | page index to add widget |
+| rect | Required | [Rect](../../Enumeration/Rect.md) |  | field rect |
 
 ## Returns
 

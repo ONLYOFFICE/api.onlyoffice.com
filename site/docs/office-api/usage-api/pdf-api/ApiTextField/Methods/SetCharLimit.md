@@ -1,12 +1,12 @@
 # SetCharLimit
 
-Sets text field chars limit.
-&lt;note&gt; Char limit 0 means field doesn't have char limit
+Sets the text field character limit.
+&lt;note&gt; Character limit 0 means the field doesn't have a character limit.
 
 ## Syntax
 
 ```javascript
-expression.SetCharLimit(nChars);
+expression.SetCharLimit(charLimit);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -15,7 +15,7 @@ expression.SetCharLimit(nChars);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nChars | Required | number |  | chars limit number |
+| charLimit | Required | number |  | The maximum number of characters allowed in the field. |
 
 ## Returns
 

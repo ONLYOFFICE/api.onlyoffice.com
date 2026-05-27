@@ -3,8 +3,8 @@
 Returns the ApiAutoFilter object representing the autofilter applied to the table.
 Returns null if the table has no autofilter.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

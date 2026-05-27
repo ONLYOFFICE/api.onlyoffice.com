@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetCellBorderTop(fSize, oApiFill);
+expression.SetCellBorderTop(borderWidth, fill);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,8 +14,8 @@ expression.SetCellBorderTop(fSize, oApiFill);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| fSize | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
-| oApiFill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
+| borderWidth | 必需 | [mm](../../Enumeration/mm.md) |  | 当前边框的宽度。 |
+| fill | 必需 | [ApiFill](../../ApiFill/ApiFill.md) |  | 用于填充当前边框的颜色或图案。 |
 
 ## 返回值
 

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetHeight(nValue);
+expression.SetHeight(height);
 ```
 
 `expression` - 表示 [ApiTableRow](../ApiTableRow.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetHeight(nValue);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nValue | 可选 | [EMU](../../Enumeration/EMU.md) |  | 以英制单位表示的行高。 |
+| height | 必需 | [EMU](../../Enumeration/EMU.md) |  | 以英制单位表示的行高。 |
 
 ## 返回值
 

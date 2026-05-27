@@ -2,8 +2,8 @@
 
 向工作表添加格式化表格并返回 ApiListObject 对象。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

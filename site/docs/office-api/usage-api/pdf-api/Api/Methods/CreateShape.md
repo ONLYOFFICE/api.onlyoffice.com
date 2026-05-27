@@ -5,7 +5,7 @@ Creates a shape with the parameters specified.
 ## Syntax
 
 ```javascript
-expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
+expression.CreateShape(shapeType, width, height, fill, stroke);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,11 +14,11 @@ expression.CreateShape(sType, nWidth, nHeight, oFill, oStroke);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The shape type which specifies the preset shape geometry. |
-| nWidth | Optional | [EMU](../../Enumeration/EMU.md) | 72 | The shape width in English measure units. |
-| nHeight | Optional | [EMU](../../Enumeration/EMU.md) | 72 | The shape height in English measure units. |
-| oFill | Optional | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | The color or pattern used to fill the shape. |
-| oStroke | Optional | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | The stroke used to create the element shadow. |
+| shapeType | Optional | [ShapeType](../../Enumeration/ShapeType.md) | "rect" | The shape type which specifies the preset shape geometry. |
+| width | Optional | [EMU](../../Enumeration/EMU.md) | 72 | The shape width in English measure units. |
+| height | Optional | [EMU](../../Enumeration/EMU.md) | 72 | The shape height in English measure units. |
+| fill | Optional | [ApiFill](../../ApiFill/ApiFill.md) | Api.CreateNoFill() | The color or pattern used to fill the shape. |
+| stroke | Optional | [ApiStroke](../../ApiStroke/ApiStroke.md) | Api.CreateStroke(0, Api.CreateNoFill()) | The stroke used to create the element shadow. |
 
 ## Returns
 

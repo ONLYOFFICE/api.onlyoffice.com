@@ -1,12 +1,12 @@
 # SetComb
 
-设置文本字段的梳状属性。
-💡 字符限制应大于 0
+设置文本字段是否使用梳状格式。
+💡 字符限制必须大于 0。
 
 ## 语法
 
 ```javascript
-expression.SetComb(bComb);
+expression.SetComb(comb);
 ```
 
 `expression` - 表示 [ApiTextField](../ApiTextField.md) 类的变量。
@@ -15,7 +15,7 @@ expression.SetComb(bComb);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bComb | 必需 | boolean |  | 字段是否为梳状 |
+| comb | 必需 | boolean |  | 指定是否启用梳状格式。 |
 
 ## 返回值
 

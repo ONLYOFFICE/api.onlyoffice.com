@@ -3,8 +3,8 @@
 返回此排序字段排序依据的值（颜色或 null）。
 对于基于颜色的排序，返回填充/字体颜色；否则返回 null。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

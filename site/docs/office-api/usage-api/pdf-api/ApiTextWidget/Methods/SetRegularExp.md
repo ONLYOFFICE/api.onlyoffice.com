@@ -1,11 +1,11 @@
 # SetRegularExp
 
-Sets text widget regular validate expression.
+Sets the text widget regular validation expression.
 
 ## Syntax
 
 ```javascript
-expression.SetRegularExp(sReg);
+expression.SetRegularExp(regularExpression);
 ```
 
 `expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetRegularExp(sReg);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sReg | Required | string |  | field regular exp |
+| regularExpression | Required | string |  | The validation regular expression. |
 
 ## Returns
 

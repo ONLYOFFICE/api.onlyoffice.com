@@ -1,12 +1,12 @@
 # SetComb
 
-Sets text field comb prop.
-💡  Should have char limit more then 0 
+Sets whether the text field uses comb formatting.
+💡 The character limit must be greater than 0.
 
 ## Syntax
 
 ```javascript
-expression.SetComb(bComb);
+expression.SetComb(comb);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -15,7 +15,7 @@ expression.SetComb(bComb);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bComb | Required | boolean |  | will the field be comb |
+| comb | Required | boolean |  | Specifies whether comb formatting is enabled. |
 
 ## Returns
 

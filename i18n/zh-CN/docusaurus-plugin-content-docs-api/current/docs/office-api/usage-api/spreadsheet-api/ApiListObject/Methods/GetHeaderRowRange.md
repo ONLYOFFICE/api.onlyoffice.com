@@ -3,8 +3,8 @@
 返回表格标题行的范围。
 如果表格没有标题行，则返回 null。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

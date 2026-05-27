@@ -1,6 +1,6 @@
 # IsMultipleSelection
 
-检查字段是否为多选。
+检查字段是否支持多选。
 
 ## 语法
 

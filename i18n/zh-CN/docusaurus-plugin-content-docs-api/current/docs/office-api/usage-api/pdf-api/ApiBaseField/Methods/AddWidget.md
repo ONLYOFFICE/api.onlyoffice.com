@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.AddWidget(nPage, aRect);
+expression.AddWidget(pageIndex, rect);
 ```
 
 `expression` - 表示 [ApiBaseField](../ApiBaseField.md) 类的变量。
@@ -14,8 +14,8 @@ expression.AddWidget(nPage, aRect);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPage | 必需 | number |  | 添加控件的页面 |
-| aRect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 字段矩形 |
+| pageIndex | 必需 | number |  | 要添加小部件的页面索引 |
+| rect | 必需 | [Rect](../../Enumeration/Rect.md) |  | 字段矩形 |
 
 ## 返回值
 

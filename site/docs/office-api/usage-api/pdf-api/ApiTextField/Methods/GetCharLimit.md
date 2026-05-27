@@ -1,6 +1,6 @@
 # GetCharLimit
 
-Gets text field chars limit.
+Gets the text field character limit.
 &lt;note&gt; Char limit 0 means field doesn't have char limit
 
 ## Syntax

@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetVerticalAlign(sType);
+expression.SetVerticalAlign(verticalAlign);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetVerticalAlign(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | 垂直对齐类型。 |
+| verticalAlign | 必需 | [VerticalTextAlign](../../Enumeration/VerticalTextAlign.md) |  | 垂直对齐类型。 |
 
 ## 返回值
 

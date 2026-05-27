@@ -1,6 +1,6 @@
 # IsMultipleSelection
 
-Checks if field is multiselect.
+Checks if the field supports multiple selection.
 
 ## Syntax
 

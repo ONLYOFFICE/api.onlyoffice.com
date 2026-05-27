@@ -5,14 +5,16 @@ Gets field by it's name.
 ## Syntax
 
 ```javascript
-expression.GetFieldByName();
+expression.GetFieldByName(name);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
 
 ## Parameters
 
-This method doesn't have any parameters.
+| **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| name | Required | string |  | the full name parameter. |
 
 ## Returns
 

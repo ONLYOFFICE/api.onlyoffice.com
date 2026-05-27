@@ -1,6 +1,6 @@
 # IsToggleToOff
 
-检查字段是否可切换为关闭。
+检查字段是否可以取消选中。
 
 继承自 [ApiCheckboxField.IsToggleToOff](../../ApiCheckboxField/Methods/IsToggleToOff.md)。
 

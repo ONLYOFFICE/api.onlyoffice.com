@@ -1,11 +1,11 @@
 # SetMask
 
-Sets mask for entered text for field.
+Sets the input mask for entered text.
 
 ## Syntax
 
 ```javascript
-expression.SetMask(sMask);
+expression.SetMask(inputMask);
 ```
 
 `expression` - A variable that represents a [ApiTextField](../ApiTextField.md) class.
@@ -14,7 +14,7 @@ expression.SetMask(sMask);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sMask | Required | string |  | field mask (e.g. "(999)999-9999") |
+| inputMask | Required | string |  | The input mask (e.g. "(999)999-9999"). |
 
 ## Returns
 

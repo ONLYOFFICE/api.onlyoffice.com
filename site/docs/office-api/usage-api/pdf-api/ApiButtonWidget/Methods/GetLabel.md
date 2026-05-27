@@ -5,7 +5,7 @@ Gets label from button widget field.
 ## Syntax
 
 ```javascript
-expression.GetLabel(sApType);
+expression.GetLabel(appearance);
 ```
 
 `expression` - A variable that represents a [ApiButtonWidget](../ApiButtonWidget.md) class.
@@ -14,7 +14,7 @@ expression.GetLabel(sApType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sApType | Optional | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | 'normal' | from what state is the label set |
+| appearance | Optional | [ButtonAppearance](../../Enumeration/ButtonAppearance.md) | "normal" | The appearance state. |
 
 ## Returns
 

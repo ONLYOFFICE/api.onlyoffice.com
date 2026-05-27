@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetTextDirection(sType);
+expression.SetTextDirection(textDirection);
 ```
 
 `expression` - 表示 [ApiTableCell](../ApiTableCell.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 文本流动方向的类型。 |
+| textDirection | 必需 | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | 文本流方向。 |
 
 ## 返回值
 

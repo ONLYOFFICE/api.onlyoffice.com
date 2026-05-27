@@ -5,7 +5,7 @@ Creates an image with the parameters specified.
 ## Syntax
 
 ```javascript
-expression.CreateImage(sImageSrc, nWidth, nHeight);
+expression.CreateImage(imageSrc, width, height);
 ```
 
 `expression` - A variable that represents a [Api](../Api.md) class.
@@ -14,10 +14,10 @@ expression.CreateImage(sImageSrc, nWidth, nHeight);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sImageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently,
+| imageSrc | Required | string |  | The image source where the image to be inserted should be taken from (currently,
 only internet URL or Base64 encoded images are supported). |
-| nWidth | Required | [EMU](../../Enumeration/EMU.md) |  | The image width in English measure units. |
-| nHeight | Required | [EMU](../../Enumeration/EMU.md) |  | The image height in English measure units. |
+| width | Required | [EMU](../../Enumeration/EMU.md) |  | The image width in English measure units. |
+| height | Required | [EMU](../../Enumeration/EMU.md) |  | The image height in English measure units. |
 
 ## Returns
 

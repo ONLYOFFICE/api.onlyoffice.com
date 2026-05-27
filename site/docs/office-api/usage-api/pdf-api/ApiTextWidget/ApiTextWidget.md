@@ -17,7 +17,7 @@ ApiTextWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md
 | [GetPlaceholder](./Methods/GetPlaceholder.md) | string | Gets text field placeholder. |
 | [GetPosition](./Methods/GetPosition.md) | [Point](../Enumeration/Point.md) | Gets widget position. |
 | [GetRect](./Methods/GetRect.md) | [Rect](../Enumeration/Rect.md) | Sets field rect. |
-| [GetRegularExp](./Methods/GetRegularExp.md) | boolean | Gets text widget regular validate expression. |
+| [GetRegularExp](./Methods/GetRegularExp.md) | boolean | Gets the text widget regular validation expression. |
 | [GetTextColor](./Methods/GetTextColor.md) | [ApiColor](../ApiColor/ApiColor.md) | Gets widget text color. |
 | [GetTextSize](./Methods/GetTextSize.md) | [pt](../Enumeration/pt.md) | Gets widget text size. |
 | [IsAutoFit](./Methods/IsAutoFit.md) | boolean | Checks if text is autofit. |
@@ -29,6 +29,6 @@ ApiTextWidget is a subclass of [ApiBaseWidget](../ApiBaseWidget/ApiBaseWidget.md
 | [SetPlaceholder](./Methods/SetPlaceholder.md) | boolean | Sets text field placeholder. |
 | [SetPosition](./Methods/SetPosition.md) | boolean | Sets widget position. |
 | [SetRect](./Methods/SetRect.md) | boolean | Sets field rect. |
-| [SetRegularExp](./Methods/SetRegularExp.md) | boolean | Sets text widget regular validate expression. |
+| [SetRegularExp](./Methods/SetRegularExp.md) | boolean | Sets the text widget regular validation expression. |
 | [SetTextColor](./Methods/SetTextColor.md) | boolean | Sets widget text color. |
 | [SetTextSize](./Methods/SetTextSize.md) | boolean | Sets widget text size. |

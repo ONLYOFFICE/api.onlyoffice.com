@@ -1,11 +1,11 @@
 # SetEditable
 
-Sets field editable prop.
+Sets whether custom text can be entered.
 
 ## Syntax
 
 ```javascript
-expression.SetEditable(bEditable);
+expression.SetEditable(allowCustomText);
 ```
 
 `expression` - A variable that represents a [ApiComboboxField](../ApiComboboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetEditable(bEditable);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bEditable | Required | boolean |  | allow user enter custom text |
+| allowCustomText | Required | boolean |  | Specifies whether custom text can be entered. |
 
 ## Returns
 

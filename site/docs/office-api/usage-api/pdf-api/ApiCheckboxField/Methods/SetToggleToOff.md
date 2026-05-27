@@ -1,11 +1,11 @@
 # SetToggleToOff
 
-Sets field toggle to off prop.
+Sets whether the checked state can be toggled off.
 
 ## Syntax
 
 ```javascript
-expression.SetToggleToOff(bToggle);
+expression.SetToggleToOff(allowToggleOff);
 ```
 
 `expression` - A variable that represents a [ApiCheckboxField](../ApiCheckboxField.md) class.
@@ -14,7 +14,7 @@ expression.SetToggleToOff(bToggle);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bToggle | Required | boolean |  | can toggle to off |
+| allowToggleOff | Required | boolean |  | Specifies whether the checked state can be toggled off. |
 
 ## Returns
 

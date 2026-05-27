@@ -5,7 +5,7 @@ Specifies the direction of the text flow for the current table cell.
 ## Syntax
 
 ```javascript
-expression.SetTextDirection(sType);
+expression.SetTextDirection(textDirection);
 ```
 
 `expression` - A variable that represents a [ApiTableCell](../ApiTableCell.md) class.
@@ -14,7 +14,7 @@ expression.SetTextDirection(sType);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The type of the text flow direction. |
+| textDirection | Required | [TextFlowDirection](../../Enumeration/TextFlowDirection.md) |  | The text flow direction. |
 
 ## Returns
 

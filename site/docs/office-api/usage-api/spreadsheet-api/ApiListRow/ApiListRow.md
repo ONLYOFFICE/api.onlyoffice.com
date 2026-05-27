@@ -2,8 +2,8 @@
 
 Represents the ApiListRow class.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Properties

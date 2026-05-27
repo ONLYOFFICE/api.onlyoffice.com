@@ -2,8 +2,8 @@
 
 Sets the name of the table. Equivalent to SetDisplayName.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

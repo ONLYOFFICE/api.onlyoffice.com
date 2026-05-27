@@ -14,7 +14,7 @@ expression.SetBorderWidth(borderWidth);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| borderWidth | Required | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | The border width: **"none"**, **"thin"**, **"medium"**, or **"thick"**. |
+| borderWidth | Required | [WidgetBorderWidth](../../Enumeration/WidgetBorderWidth.md) |  | the width to set to the border. |
 
 ## Returns
 

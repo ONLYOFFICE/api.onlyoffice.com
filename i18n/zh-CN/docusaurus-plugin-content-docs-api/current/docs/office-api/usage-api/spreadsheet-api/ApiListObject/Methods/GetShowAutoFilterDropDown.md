@@ -3,8 +3,8 @@
 返回自动筛选下拉箭头是否显示在表格的标题行上。
 对于新表格，默认返回 true。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

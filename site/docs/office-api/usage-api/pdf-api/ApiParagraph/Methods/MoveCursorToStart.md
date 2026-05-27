@@ -2,8 +2,8 @@
 
 Moves the cursor to the start of the paragraph.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

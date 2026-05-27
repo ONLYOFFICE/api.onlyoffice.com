@@ -2,8 +2,8 @@
 
 返回表示工作表上格式化表格的 ApiListObject 对象数组。
 
-:::note\
-此功能仅在 ONLYOFFICE Docs 付费版本中可用。\
+:::note
+此功能仅在 ONLYOFFICE Docs 付费版本中可用。
 :::
 
 ## 语法

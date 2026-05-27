@@ -2,8 +2,8 @@
 
 Returns an array of all data rows in the table, excluding the header and totals rows.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

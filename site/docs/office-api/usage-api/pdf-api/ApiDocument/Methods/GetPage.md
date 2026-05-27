@@ -5,7 +5,7 @@ Gets page by index from document.
 ## Syntax
 
 ```javascript
-expression.GetPage(nPos);
+expression.GetPage(index);
 ```
 
 `expression` - A variable that represents a [ApiDocument](../ApiDocument.md) class.
@@ -14,7 +14,7 @@ expression.GetPage(nPos);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| nPos | Required | number |  | page position |
+| index | Required | number |  | page index. |
 
 ## Returns
 

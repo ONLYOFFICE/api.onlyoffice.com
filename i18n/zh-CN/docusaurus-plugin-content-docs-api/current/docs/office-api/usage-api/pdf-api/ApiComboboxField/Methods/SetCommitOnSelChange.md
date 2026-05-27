@@ -1,6 +1,6 @@
 # SetCommitOnSelChange
 
-设置字段在选择更改时提交的属性。
+设置字段是否在选择更改后立即提交更改。
 
 继承自 [ApiBaseListField.SetCommitOnSelChange](../../ApiBaseListField/Methods/SetCommitOnSelChange.md)。
 

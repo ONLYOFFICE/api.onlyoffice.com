@@ -6,7 +6,7 @@
 ## 语法
 
 ```javascript
-expression.RemovePage(pos);
+expression.RemovePage(index);
 ```
 
 `expression` - 表示 [ApiDocument](../ApiDocument.md) 类的变量。
@@ -15,7 +15,7 @@ expression.RemovePage(pos);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| pos | 必需 | number |  | 页面位置 |
+| index | 必需 | number |  | 页面索引 |
 
 ## 返回值
 

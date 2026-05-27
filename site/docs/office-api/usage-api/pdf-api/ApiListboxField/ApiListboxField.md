@@ -20,14 +20,14 @@ ApiListboxField is a subclass of [ApiBaseListField](../ApiBaseListField/ApiBaseL
 | [GetValue](./Methods/GetValue.md) | string | Gets field value |
 | [GetValueIndexes](./Methods/GetValueIndexes.md) | number[] | Gets selected value indexes. |
 | [IsCommitOnSelChange](./Methods/IsCommitOnSelChange.md) | boolean | Checks if field can commit on selection change. |
-| [IsMultipleSelection](./Methods/IsMultipleSelection.md) | boolean | Checks if field is multiselect. |
+| [IsMultipleSelection](./Methods/IsMultipleSelection.md) | boolean | Checks if the field supports multiple selection. |
 | [IsReadOnly](./Methods/IsReadOnly.md) | boolean | Checks if field is read only |
 | [IsRequired](./Methods/IsRequired.md) | boolean | Checks if field is required |
 | [MoveOption](./Methods/MoveOption.md) | boolean | Moves option to specified position in list options. |
 | [RemoveOption](./Methods/RemoveOption.md) | boolean | Removes option from list options. |
-| [SetCommitOnSelChange](./Methods/SetCommitOnSelChange.md) | boolean | Sets field commit on selection change prop. |
+| [SetCommitOnSelChange](./Methods/SetCommitOnSelChange.md) | boolean | Sets whether the field commits changes immediately after selection changes. |
 | [SetFullName](./Methods/SetFullName.md) | boolean | Sets new field name if possible. |
-| [SetMultipleSelection](./Methods/SetMultipleSelection.md) | boolean | Sets field multiselect prop. |
+| [SetMultipleSelection](./Methods/SetMultipleSelection.md) | boolean | Sets whether multiple values can be selected. |
 | [SetPartialName](./Methods/SetPartialName.md) | boolean | Sets new field partial name. |
 | [SetReadOnly](./Methods/SetReadOnly.md) | boolean | Sets field read only |
 | [SetRequired](./Methods/SetRequired.md) | boolean | Sets field required |

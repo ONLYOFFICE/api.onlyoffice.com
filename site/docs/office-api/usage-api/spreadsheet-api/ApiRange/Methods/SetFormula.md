@@ -2,8 +2,8 @@
 
 Sets a formula or value to the current cell or cell range.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

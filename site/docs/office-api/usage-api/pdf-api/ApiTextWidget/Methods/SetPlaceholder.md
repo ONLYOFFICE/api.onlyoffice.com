@@ -5,7 +5,7 @@ Sets text field placeholder.
 ## Syntax
 
 ```javascript
-expression.SetPlaceholder(sPlaceholder);
+expression.SetPlaceholder(placeholder);
 ```
 
 `expression` - A variable that represents a [ApiTextWidget](../ApiTextWidget.md) class.
@@ -14,7 +14,7 @@ expression.SetPlaceholder(sPlaceholder);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sPlaceholder | Required | string |  | field placeholder |
+| placeholder | Required | string |  | The placeholder text. |
 
 ## Returns
 

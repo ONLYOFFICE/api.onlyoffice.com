@@ -1,11 +1,11 @@
 # SetCommitOnSelChange
 
-Sets field commit on selection change prop.
+Sets whether the field commits changes immediately after selection changes.
 
 ## Syntax
 
 ```javascript
-expression.SetCommitOnSelChange(bCommit);
+expression.SetCommitOnSelChange(commitOnSelectionChange);
 ```
 
 `expression` - A variable that represents a [ApiBaseListField](../ApiBaseListField.md) class.
@@ -14,7 +14,7 @@ expression.SetCommitOnSelChange(bCommit);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bCommit | Required | boolean |  | will the field value be applied to all with the same name immediately after the change |
+| commitOnSelectionChange | Required | boolean |  | Specifies whether selection changes are committed immediately. |
 
 ## Returns
 

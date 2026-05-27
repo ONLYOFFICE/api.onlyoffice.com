@@ -1,6 +1,6 @@
 # IsToggleToOff
 
-Checks if field is toggle to off.
+Checks if the field can be toggled off.
 
 ## Syntax
 

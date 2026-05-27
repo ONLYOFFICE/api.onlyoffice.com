@@ -5,7 +5,7 @@ Specifies the shading which shall be applied to the extents of the current table
 ## Syntax
 
 ```javascript
-expression.SetShd(sType, r, g, b);
+expression.SetShd(shadingType, r, g, b);
 ```
 
 `expression` - A variable that represents a [ApiTable](../ApiTable.md) class.
@@ -14,7 +14,7 @@ expression.SetShd(sType, r, g, b);
 
 | **Name** | **Required/Optional** | **Data type** | **Default** | **Description** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| sType | Required | [ShdType](../../Enumeration/ShdType.md) \| [ApiFill](../../ApiFill/ApiFill.md) |  | The shading type applied to the contents of the current table. Can be ShdType or ApiFill. |
+| shadingType | Required | [ShdType](../../Enumeration/ShdType.md) \| [ApiFill](../../ApiFill/ApiFill.md) |  | The shading type or fill to apply. |
 | r | Required | [byte](../../Enumeration/byte.md) |  | Red color component value. |
 | g | Required | [byte](../../Enumeration/byte.md) |  | Green color component value. |
 | b | Required | [byte](../../Enumeration/byte.md) |  | Blue color component value. |

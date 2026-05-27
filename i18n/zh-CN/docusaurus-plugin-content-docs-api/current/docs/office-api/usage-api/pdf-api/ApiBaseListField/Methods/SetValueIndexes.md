@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetValueIndexes(aIndexes);
+expression.SetValueIndexes(valueIndexes);
 ```
 
 `expression` - 表示 [ApiBaseListField](../ApiBaseListField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetValueIndexes(aIndexes);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| aIndexes | 必需 | number[] |  | 选定的索引 |
+| valueIndexes | 必需 | number[] |  | 所选值的索引。 |
 
 ## 返回值
 

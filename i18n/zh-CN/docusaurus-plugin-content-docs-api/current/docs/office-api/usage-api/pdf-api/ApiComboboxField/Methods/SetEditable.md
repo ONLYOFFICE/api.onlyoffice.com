@@ -1,11 +1,11 @@
 # SetEditable
 
-设置字段的可编辑属性。
+设置是否可以输入自定义文本。
 
 ## 语法
 
 ```javascript
-expression.SetEditable(bEditable);
+expression.SetEditable(allowCustomText);
 ```
 
 `expression` - 表示 [ApiComboboxField](../ApiComboboxField.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetEditable(bEditable);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| bEditable | 必需 | boolean |  | 允许用户输入自定义文本 |
+| allowCustomText | 必需 | boolean |  | 指定是否可以输入自定义文本。 |
 
 ## 返回值
 

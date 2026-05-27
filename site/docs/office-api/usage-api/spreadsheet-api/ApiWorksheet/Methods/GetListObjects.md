@@ -2,8 +2,8 @@
 
 Returns an array of ApiListObject objects representing the formatted tables on the worksheet.
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax

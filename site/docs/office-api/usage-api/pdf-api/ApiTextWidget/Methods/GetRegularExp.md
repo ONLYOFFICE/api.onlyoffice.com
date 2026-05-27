@@ -1,6 +1,6 @@
 # GetRegularExp
 
-Gets text widget regular validate expression.
+Gets the text widget regular validation expression.
 
 ## Syntax
 

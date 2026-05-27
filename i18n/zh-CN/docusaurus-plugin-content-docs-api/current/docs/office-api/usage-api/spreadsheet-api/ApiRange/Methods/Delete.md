@@ -14,7 +14,7 @@ expression.Delete(shift);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| shift | 可选 | [DeleteShiftDirection](../../Enumeration/DeleteShiftDirection.md) |  | 指定如何移动单元格以替换已删除的单元格。 |
+| shift | 可选 | [DeleteShiftDirection](../../Enumeration/DeleteShiftDirection.md) |  | 指定如何移动单元格以替换已删除的单元格。如果省略，方向将自动确定：如果范围的列数多于行数，则为 *"up"*，否则为 *"left"*。 |
 
 ## 返回值
 

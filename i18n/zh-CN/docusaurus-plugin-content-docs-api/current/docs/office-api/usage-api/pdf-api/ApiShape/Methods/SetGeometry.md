@@ -5,7 +5,7 @@
 ## 语法
 
 ```javascript
-expression.SetGeometry(oGeometry);
+expression.SetGeometry(geometry);
 ```
 
 `expression` - 表示 [ApiShape](../ApiShape.md) 类的变量。
@@ -14,7 +14,7 @@ expression.SetGeometry(oGeometry);
 
 | **名称** | **必需/可选** | **数据类型** | **默认值** | **描述** |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| oGeometry | 必需 | [ApiGeometry](../../ApiGeometry/ApiGeometry.md) |  | 要设置的几何图形。 |
+| geometry | 必需 | [ApiGeometry](../../ApiGeometry/ApiGeometry.md) |  | 要设置的几何图形。 |
 
 ## 返回值
 

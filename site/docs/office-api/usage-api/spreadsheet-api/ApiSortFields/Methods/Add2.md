@@ -2,8 +2,8 @@
 
 Adds a sort field with subfield support for linked data types (Stocks, Geography).
 
-:::note\
-This functionality is available in paid ONLYOFFICE Docs editions.\
+:::note
+This functionality is available in paid ONLYOFFICE Docs editions.
 :::
 
 ## Syntax
