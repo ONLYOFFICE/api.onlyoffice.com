@@ -1,40 +1,45 @@
 ---
 hide_table_of_contents: true
-description: Insert a custom text watermark on every page of a document.
+description: Insert a text watermark into a document.
 tags: ["Docs", "Macros", "Documents"]
 ---
 
-import Video from '@site/src/components/Video/Video';
-
 # Insert watermark
 
-Inserts a custom text watermark on every page of the document.
+Inserts or removes a custom watermark on every page of the document.
 
-```js
+```ts
 (function () {
   let doc = Api.GetDocument();
-  let watermarkSettings = doc.GetWatermarkSettings();
+  let action = "insert"; // Change to "remove" to delete watermark
 
-  watermarkSettings.SetType("text");
-  watermarkSettings.SetText("Example Watermark");
+  if (action === "insert") {
+    let watermarkSettings = doc.GetWatermarkSettings();
 
-  let textProperties = watermarkSettings.GetTextPr();
-  textProperties.SetFontFamily("Calibri");
-  textProperties.SetFontSize(48);
-  textProperties.SetDoubleStrikeout(true);
-  textProperties.SetItalic(true);
-  textProperties.SetBold(true);
-  textProperties.SetUnderline(true);
-  textProperties.SetColor(0, 255, 0, false);
-  textProperties.SetHighlight("blue");
+    watermarkSettings.SetType("text");
+    watermarkSettings.SetText("Example Watermark");
 
-  watermarkSettings.SetTextPr(textProperties);
-  doc.SetWatermarkSettings(watermarkSettings);
+    let textProperties = watermarkSettings.GetTextPr();
+    textProperties.SetFontFamily("Calibri");
+    textProperties.SetFontSize(48);
+    textProperties.SetDoubleStrikeout(true);
+    textProperties.SetItalic(true);
+    textProperties.SetBold(true);
+    textProperties.SetUnderline(true);
+    textProperties.SetColor(0, 255, 0, false);
+    textProperties.SetHighlight("blue");
+
+    watermarkSettings.SetTextPr(textProperties);
+    doc.SetWatermarkSettings(watermarkSettings);
+  } else if (action === "remove") {
+    doc.RemoveWatermark();
+  }
 })();
 ```
 
-Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetWatermarkSettings](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetWatermarkSettings.md), [SetType](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetType.md), [SetText](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetText.md), [GetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetTextPr.md), [SetFontFamily](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetFontFamily.md), [SetFontSize](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize.md), [SetDoubleStrikeout](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetDoubleStrikeout.md), [SetItalic](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic.md), [SetBold](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetUnderline](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetUnderline.md), [SetColor](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetColor.md), [SetHighlight](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr.md), [SetWatermarkSettings](/docs/office-api/usage-api/document-api/ApiDocument/Methods/SetWatermarkSettings.md)
+Methods used: [GetDocument](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetWatermarkSettings](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetWatermarkSettings.md), [SetType](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetType.md), [SetText](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetText.md), [GetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetTextPr.md), [SetFontFamily](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetFontFamily.md), [SetFontSize](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize.md), [SetDoubleStrikeout](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetDoubleStrikeout.md), [SetItalic](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic.md), [SetBold](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetUnderline](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetUnderline.md), [SetColor](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetColor.md), [SetHighlight](/docs/office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight.md), [SetTextPr](/docs/office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr.md), [SetWatermarkSettings](/docs/office-api/usage-api/document-api/ApiDocument/Methods/SetWatermarkSettings.md), [RemoveWatermark](/docs/office-api/usage-api/document-api/ApiDocument/Methods/RemoveWatermark.md)
 
 ## Result
 
-<Video src="/assets/video/macros/document-editor/insert-watermark" dark />
+![Insert watermark](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
+![Insert watermark](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)

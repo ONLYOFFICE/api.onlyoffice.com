@@ -43,7 +43,7 @@ export const DocsFeatures: Features = {
       icon: <OfficeApiIcon/>,
     },
     {
-      title: 'Plugins and macros',
+      title: 'Plugins',
       link: 'plugins/get-started',
       description: (
         <>
