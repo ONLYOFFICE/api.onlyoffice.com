@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 更改背景颜色
 
 为偶数索引的幻灯片设置蓝色背景，奇数索引的幻灯片设置图片背景。
 
-``` ts
+```ts
 (function()
 {
     let presentation = Api.GetPresentation(); 
@@ -34,7 +36,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount), [CreateRGBColor](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor), [CreateSolidFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill), [CreateBlipFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateBlipFill), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex), [SetBackground](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [CreateRGBColor](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateRGBColor.md), [CreateSolidFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSolidFill.md), [CreateBlipFill](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateBlipFill.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [SetBackground](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/SetBackground.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -101,4 +103,4 @@ End Sub
 
 ## 结果
 
-![Change Background Color](/assets/images/plugins/change-background-color.png#gh-light-mode-only)![Change Background Color](/assets/images/plugins/change-background-color.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/change-background-color" dark />

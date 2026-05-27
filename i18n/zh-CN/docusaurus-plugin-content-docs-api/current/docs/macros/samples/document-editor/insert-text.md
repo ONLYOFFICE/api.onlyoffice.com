@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 插入文本
 
 在文档当前光标位置插入文本。
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();
@@ -16,8 +18,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md)
 
 ## 结果
 
-![Insert text](/assets/images/plugins/macro-window.png#gh-light-mode-only)![Insert text](/assets/images/plugins/macro-window.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/insert-text" dark />

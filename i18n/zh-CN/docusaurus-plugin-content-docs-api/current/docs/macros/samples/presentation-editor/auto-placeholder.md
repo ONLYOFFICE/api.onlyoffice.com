@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自动占位符填充
 
 自动将幻灯片中的空文本框填充为占位符内容，并以结构化格式排列文本。
@@ -69,8 +71,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings), [GetClassType](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/GetClassType), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [RemoveAllElements](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/RemoveAllElements), [CreateParagraph](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText), [Push](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/Push) 
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetClassType](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/GetClassType.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [RemoveAllElements](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/RemoveAllElements.md), [CreateParagraph](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [Push](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/Push.md) 
 
 ## 结果
 
-![AutoPlaceholder](/assets/images/plugins/auto-placeholder.png#gh-light-mode-only)![AutoPlaceholder](/assets/images/plugins/auto-placeholder.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/auto-placeholder" dark />

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除重复幻灯片
 
 删除演示文稿中所有重复的幻灯片。
@@ -84,9 +86,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [GetAllCharts](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllCharts), [GetAllSeries](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/GetAllSeries), [GetChartType](../../../../office-api/usage-api/presentation-api/ApiChartSeries/Methods/GetChartType), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings), [GetPlaceholder](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetPlaceholder), [GetWidth](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetWidth), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight), [GetAllOleObjects](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllOleObjects), [GetData](../../../../office-api/usage-api/presentation-api/ApiOleObject/Methods/GetData), [RemoveSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/RemoveSlides)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetAllCharts](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllCharts.md), [GetAllSeries](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/GetAllSeries.md), [GetChartType](../../../../office-api/usage-api/presentation-api/ApiChartSeries/Methods/GetChartType.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetPlaceholder](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetPlaceholder.md), [GetWidth](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetWidth.md), [GetHeight](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetHeight.md), [GetAllOleObjects](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllOleObjects.md), [GetData](../../../../office-api/usage-api/presentation-api/ApiOleObject/Methods/GetData.md), [RemoveSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/RemoveSlides.md)
 
 ## 结果
 
-![删除重复幻灯片](/assets/images/plugins/remove-duplicate-slides.png#gh-light-mode-only)
-![删除重复幻灯片](/assets/images/plugins/remove-duplicate-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-duplicate-slides" dark />

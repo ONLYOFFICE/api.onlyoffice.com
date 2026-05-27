@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除空段落
 
 删除演示文稿中所有不必要的空白段落。
@@ -51,9 +53,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [GetElementsCount](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElementsCount), [GetElement](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElement), [Delete](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/Delete)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [GetElementsCount](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElementsCount.md), [GetElement](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/GetElement.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/Delete.md)
 
 ## 结果
 
-![删除空段落](/assets/images/plugins/remove-empty-paragraphs.png#gh-light-mode-only)
-![删除空段落](/assets/images/plugins/remove-empty-paragraphs.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-empty-paragraphs" dark />

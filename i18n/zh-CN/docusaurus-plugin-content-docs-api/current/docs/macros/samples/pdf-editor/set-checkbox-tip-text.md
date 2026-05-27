@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置复选框提示文本
 
 为所有具有特定键值的复选框设置所需的提示文本。
@@ -22,9 +24,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey), [SetTipText](../../../../office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetTipText)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [SetTipText](../../../../office-api/usage-api/form-api/ApiCheckBoxForm/Methods/SetTipText.md)
 
 ## 结果
 
-![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.png#gh-light-mode-only)
-![TipTextSetter](/assets/images/plugins/set-checkbox-tip-text.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-checkbox-tip-text" dark />

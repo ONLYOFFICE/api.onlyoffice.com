@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 隐藏卡号信息
 
 对所有具有指定表单键的表单应用掩码，以隐藏卡号。
@@ -27,8 +29,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms), [GetFormKey](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormKey), [GetText](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetText), [SetText](../../../../office-api/usage-api/document-api/ApiTextForm/Methods/SetText)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetText.md), [SetText](../../../../office-api/usage-api/document-api/ApiTextForm/Methods/SetText.md)
 
 ## 结果
 
-![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.png#gh-light-mode-only)![Mask Card Numbers](/assets/images/plugins/mask-card-numbers.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/mask-card-numbers" dark />

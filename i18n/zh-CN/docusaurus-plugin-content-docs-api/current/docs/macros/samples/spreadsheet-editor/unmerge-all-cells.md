@@ -2,15 +2,17 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 取消合并单元格
 
 取消当前工作表中所有已合并的单元格。
 
 :::note
-该宏由 VBA 代码通过 [AI 插件](/docs/macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)转换而来。
+该宏由 VBA 代码通过 [AI 插件](/docs/macros/macros/converting-vba-macros#automatic-conversion-using-ai-plugin)转换而来。
 :::
 
-``` ts
+```ts
 (function(){
     // 获取当前工作表
     var oWorksheet = Api.GetActiveSheet();
@@ -31,7 +33,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange), [UnMerge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [UnMerge](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/UnMerge.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -43,4 +45,4 @@ End Sub
 
 ## 结果
 
-![取消合并单元格前](/assets/images/plugins/unmerge-before.png#gh-light-mode-only)![取消合并单元格前](/assets/images/plugins/unmerge-before.dark.png#gh-dark-mode-only) ![取消合并单元格后](/assets/images/plugins/unmerge-after.png#gh-light-mode-only)![取消合并单元格后](/assets/images/plugins/unmerge-after.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/unmerge-all-cells" dark />

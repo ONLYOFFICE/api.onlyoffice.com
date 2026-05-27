@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 表格转换图表
 
 由选定的表格数据生成图表。
@@ -130,9 +132,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings), [GetClassType](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetClassType), [Delete](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete), [GetRow](../../../../office-api/usage-api/presentation-api/ApiTable/Methods/GetRow), [GetCellsCount](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCellsCount), [GetCell](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCell), [GetContent](../../../../office-api/usage-api/presentation-api/ApiTableCell/Methods/GetContent), [CreateChart](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateChart), [SetHorAxisTitle](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetHorAxisTitle), [SetLegendPos](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetLegendPos), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllDrawings](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllDrawings.md), [GetClassType](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/GetClassType.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/Delete.md), [GetRow](../../../../office-api/usage-api/presentation-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../../office-api/usage-api/presentation-api/ApiTableRow/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/presentation-api/ApiTableCell/Methods/GetContent.md), [CreateChart](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateChart.md), [SetHorAxisTitle](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetHorAxisTitle.md), [SetLegendPos](../../../../office-api/usage-api/presentation-api/ApiChart/Methods/SetLegendPos.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md)
 
 ## 结果
 
-![表格转换图表](/assets/images/plugins/table-to-chart.png#gh-light-mode-only)
-![表格转换图表](/assets/images/plugins/table-to-chart.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/table-to-chart" dark />

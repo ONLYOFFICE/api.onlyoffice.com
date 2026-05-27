@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 插入计算
 
 对表单中的指定字段执行自动计算并插入结果。
@@ -57,9 +59,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
 
 ## 结果
 
-![插入计算结果](/assets/images/plugins/insert-calculations.png#gh-light-mode-only)
-![插入计算结果](/assets/images/plugins/insert-calculations.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/insert-calculations" dark />

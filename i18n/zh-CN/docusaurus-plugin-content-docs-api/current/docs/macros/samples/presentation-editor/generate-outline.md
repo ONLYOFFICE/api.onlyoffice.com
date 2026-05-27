@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成演示文稿大纲
 
 根据标题自动生成演示文稿大纲。
@@ -49,9 +51,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/GetDrawingsByPlaceholderType), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [CreateSlide](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSlide), [CreateShape](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateShape), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition), [CreateParagraph](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText), [SetColor](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetColor), [SetFontSize](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize), [SetBold](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetBold), [Push](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/Push), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject), [AddSlide](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/AddSlide)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiMaster/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [CreateSlide](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSlide.md), [CreateShape](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateShape.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [CreateParagraph](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [SetColor](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetColor.md), [SetFontSize](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/presentation-api/ApiRun/Methods/SetBold.md), [Push](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/Push.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md), [AddSlide](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md)
 
 ## 结果
 
-![生成演示文稿大纲](/assets/images/plugins/generate-outline.png#gh-light-mode-only)
-![生成演示文稿大纲](/assets/images/plugins/generate-outline.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/generate-outline" dark />

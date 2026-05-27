@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自动填充字段
 
 自动填充文档中所有具有相同占位符或提示文本的文本字段。
@@ -26,9 +28,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetText.md)
 
 ## 结果
 
-![自动填充字段](/assets/images/plugins/autofill-fields.png#gh-light-mode-only)
-![自动填充字段](/assets/images/plugins/autofill-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/autofill-fields" dark />

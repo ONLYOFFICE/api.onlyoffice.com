@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除幻灯片
 
 根据幻灯片标题删除演示文稿中的指定幻灯片。
@@ -49,9 +51,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [Delete](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/Delete)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetAllSlides](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetAllSlides.md), [GetDrawingsByPlaceholderType](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetDrawingsByPlaceholderType.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [Delete](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/Delete.md)
 
 ## 结果
 
-![删除幻灯片](/assets/images/plugins/remove-slides.png#gh-light-mode-only)
-![删除幻灯片](/assets/images/plugins/remove-slides.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/remove-slides" dark />

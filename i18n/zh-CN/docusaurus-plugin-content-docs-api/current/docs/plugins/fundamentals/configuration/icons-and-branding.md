@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: 4
 description: 了解如何为 ONLYOFFICE 插件添加和配置图标。
 ---
 

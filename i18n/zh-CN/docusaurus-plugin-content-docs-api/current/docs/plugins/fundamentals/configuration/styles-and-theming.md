@@ -1,5 +1,5 @@
 ---
-sidebar_position: -1
+sidebar_position: 6
 description: 了解如何使用提供的 CSS 类和组件来设计 ONLYOFFICE 插件界面的样式。
 ---
 

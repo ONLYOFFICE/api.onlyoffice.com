@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自动生成书签
 
 自动为文档中的所有标题段落生成书签，并使用标题文本作为书签名称。
@@ -22,8 +24,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllHeadingParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllHeadingParagraphs), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange), [AddBookmark](../../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllHeadingParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllHeadingParagraphs.md), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange.md), [AddBookmark](../../../../office-api/usage-api/document-api/ApiRange/Methods/AddBookmark.md)
 
 ## 结果
 
-![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.png#gh-light-mode-only)![AutomaticBookmarkGeneration](/assets/images/plugins/automatic-bookmark-generation.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/automatic-bookmark-generation" dark />

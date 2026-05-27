@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除重复工作表
 
 识别并删除电子表格中的重复工作表。
@@ -50,9 +52,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetSheets](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber), [Delete](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Delete)
+使用方法: [GetSheets](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheets.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Delete](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Delete.md)
 
 ## 结果
 
-![删除重复工作表](/assets/images/plugins/remove-duplicate-sheet.png#gh-light-mode-only)
-![删除重复工作表](/assets/images/plugins/remove-duplicate-sheet.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/remove-duplicate-sheet" dark />

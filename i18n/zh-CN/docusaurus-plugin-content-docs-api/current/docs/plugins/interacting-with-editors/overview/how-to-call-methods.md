@@ -1,5 +1,5 @@
 ---
-sidebar_position: -3
+sidebar_position: 3
 ---
 
 # 如何调用方法

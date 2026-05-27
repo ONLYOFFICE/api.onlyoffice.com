@@ -1,4 +1,4 @@
-﻿# OCR
+# OCR
 
 连接 [TesseractJS-Core 库](https://tesseract.projectnaptha.com/)，用于从图像（*.png*、*.jpg*）中提取文本并将其插入文档。OCR 支持 60 多种语言。
 

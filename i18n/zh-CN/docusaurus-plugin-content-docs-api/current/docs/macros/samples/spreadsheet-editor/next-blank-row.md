@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 下一空白行
 
 查找工作表中下一个可用的空白行。该宏可帮助你定位数据末尾的空白行（而非数据中间的空白行）。
 
-``` ts
+```ts
 (function () 
 {
     // 获取当前活动工作表
@@ -32,7 +34,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -46,4 +48,4 @@ End Sub
 
 ## 结果
 
-![Next blank row](/assets/images/plugins/next-blank-row.png#gh-light-mode-only)![Next blank row](/assets/images/plugins/next-blank-row.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/next-blank-row" dark />

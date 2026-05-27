@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 查找无效邮箱
 
 检测并高亮显示指定列或整个工作表中的无效邮箱地址。
@@ -53,9 +55,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRows), [GetCols](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetRows](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRows.md), [GetCols](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCols.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
 
 ## 结果
 
-![查找无效邮箱](/assets/images/plugins/find-invalid-emails.png#gh-light-mode-only)
-![查找无效邮箱](/assets/images/plugins/find-invalid-emails.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/find-invalid-emails" dark />

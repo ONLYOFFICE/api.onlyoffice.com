@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 字符数限制
 
 对键值包含特定关键词的文本字段设置允许输入的字符数限制。
@@ -27,9 +29,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetFormKey](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetFormKey), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText), [SetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetTipText), [SetCharactersLimit](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetTipText.md), [SetCharactersLimit](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit.md)
 
 ## 结果
 
-![文本表单字符数限制](/assets/images/plugins/limit-number-of-characters.png#gh-light-mode-only)
-![文本表单字符数限制](/assets/images/plugins/limit-number-of-characters.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/limit-number-of-characters" dark />

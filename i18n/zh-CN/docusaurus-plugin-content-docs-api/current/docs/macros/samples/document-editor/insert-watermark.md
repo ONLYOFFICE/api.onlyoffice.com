@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 插入水印
 
 在文档的每一页插入或移除自定义水印。
@@ -35,9 +37,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetWatermarkSettings](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetWatermarkSettings), [SetType](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetType), [SetText](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetText), [GetTextPr](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetTextPr), [SetFontFamily](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontFamily), [SetFontSize](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize), [SetDoubleStrikeout](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetDoubleStrikeout), [SetItalic](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic), [SetBold](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetBold), [SetUnderline](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetUnderline), [SetColor](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetColor), [SetHighlight](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight), [SetTextPr](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr), [SetWatermarkSettings](../../../../office-api/usage-api/document-api/ApiDocument/Methods/SetWatermarkSettings), [RemoveWatermark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/RemoveWatermark)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetWatermarkSettings](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetWatermarkSettings.md), [SetType](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetType.md), [SetText](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetText.md), [GetTextPr](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/GetTextPr.md), [SetFontFamily](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontFamily.md), [SetFontSize](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize.md), [SetDoubleStrikeout](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetDoubleStrikeout.md), [SetItalic](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic.md), [SetBold](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetUnderline](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetUnderline.md), [SetColor](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetColor.md), [SetHighlight](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight.md), [SetTextPr](../../../../office-api/usage-api/document-api/ApiWatermarkSettings/Methods/SetTextPr.md), [SetWatermarkSettings](../../../../office-api/usage-api/document-api/ApiDocument/Methods/SetWatermarkSettings.md), [RemoveWatermark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/RemoveWatermark.md)
 
 ## 结果
 
-![WatermarkInserter](/assets/images/plugins/insert-watermark.png#gh-light-mode-only)
-![WatermarkInserter](/assets/images/plugins/insert-watermark.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/insert-watermark" dark />

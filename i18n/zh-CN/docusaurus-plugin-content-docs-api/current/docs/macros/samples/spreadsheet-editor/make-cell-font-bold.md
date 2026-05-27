@@ -2,18 +2,20 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置单元格字体加粗
 
 将单元格 A2 的字体设置为加粗。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("A2").SetBold(true);
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Font bold](/assets/images/plugins/font-bold.png#gh-light-mode-only)![Font bold](/assets/images/plugins/font-bold.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/make-cell-font-bold" dark />

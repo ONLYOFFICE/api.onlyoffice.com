@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 根据邮政编码填写州名
 
 如果输入的是加利福尼亚州的邮政编码，本插件会添加“州（State）”标签，并在文本表单中预填“CA（加利福尼亚州的简写）”。您也可以通过 API 扩展功能，实现根据邮政编码自动填写“州”。
 
-``` ts
+```ts
 (function()
 {
     let doc = Api.GetDocument();
@@ -38,8 +40,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms), [GetFormKey](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormKey), [GetText](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetText), [CreateTextForm](../../../../office-api/usage-api/form-api/Api/Methods/CreateTextForm), [SetText](../../../../office-api/usage-api/document-api/ApiTextForm/Methods/SetText), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [AddTabStop](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddTabStop), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [AddElement](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddElement), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormKey](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetText.md), [CreateTextForm](../../../../office-api/usage-api/form-api/Api/Methods/CreateTextForm.md), [SetText](../../../../office-api/usage-api/document-api/ApiTextForm/Methods/SetText.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddTabStop](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddTabStop.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddElement.md), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md)
 
 ## 结果
 
-![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.png#gh-light-mode-only)![Add State From ZipCode](/assets/images/plugins/add-state-from-zipcode.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/add-state-from-zip-code" dark />

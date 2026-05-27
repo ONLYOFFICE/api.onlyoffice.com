@@ -1,4 +1,4 @@
-﻿# YouTube
+# YouTube
 
 连接 [youtube iframe_api](https://developers.google.com/youtube/iframe_api_reference)，用于将 YouTube 视频作为 OLE 对象嵌入文档，并通过调整大小、旋转和改变位置来管理它们。
 

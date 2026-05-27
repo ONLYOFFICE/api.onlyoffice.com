@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 统计形状数量
 
 通过遍历所有幻灯片，统计演示文稿中的形状总数，并在一张新建幻灯片上显示该数量。
@@ -39,7 +41,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes), [CreateSlide](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSlide), [CreateShape](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateShape), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition), [CreateParagraph](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [Push](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/Push), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject), [AddSlide](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/AddSlide)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [CreateSlide](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateSlide.md), [CreateShape](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateShape.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [CreateParagraph](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/presentation-api/ApiParagraph/Methods/AddText.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [Push](../../../../office-api/usage-api/presentation-api/ApiDocumentContent/Methods/Push.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md), [AddSlide](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/AddSlide.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -67,4 +69,4 @@ End Sub
 
 ## 结果
 
-![CountNumberOfShapes](/assets/images/plugins/count-number-of-shapes.png#gh-light-mode-only)![CountNumberOfShapes](/assets/images/plugins/count-number-of-shapes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/count-number-of-shapes" dark />

@@ -2,18 +2,20 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 更改单元格字体颜色
 
 将单元格 **B4** 的字体颜色设置为红色。
 
-``` ts
+```ts
 (function()
 {
     Api.GetActiveSheet().GetRange("B4").SetFontColor(Api.CreateColorFromRGB(255, 0, 0));
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [SetFontColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontColor)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFontColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontColor.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Font color](/assets/images/plugins/font-color.png#gh-light-mode-only)![Font color](/assets/images/plugins/font-color.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-font-color" dark />

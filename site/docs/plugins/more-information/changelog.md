@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Changelog
 
-The list of changes for ONLYOFFICE Plugins and Macros API.
+The list of changes for ONLYOFFICE Plugins API.
 
 ## Version 9.3
 

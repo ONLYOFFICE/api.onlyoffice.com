@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 插入唯一 ID
 
 在表单文档中插入唯一 ID。
 
-``` ts
+```ts
 (function()
 {
     function generate () {
@@ -28,8 +30,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md)
 
 ## 结果
 
-![Insert id](/assets/images/plugins/insert-id.png#gh-light-mode-only)![Insert id](/assets/images/plugins/insert-id.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/insert-unique-id" dark />

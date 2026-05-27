@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 高亮显示重复值
 
 在选定区域中使用不同颜色高亮显示重复项，帮助快速识别重复值。
 
-``` ts
+```ts
 (function () 
 {
     // 非重复值单元格的背景色
@@ -65,7 +67,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor)
+使用方法: [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -110,4 +112,4 @@ End Sub
 
 ## 结果
 
-![Highlight duplicates](/assets/images/plugins/highlight-duplicates.png#gh-light-mode-only)![Highlight duplicates](/assets/images/plugins/highlight-duplicates.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/highlight-duplicates" dark />

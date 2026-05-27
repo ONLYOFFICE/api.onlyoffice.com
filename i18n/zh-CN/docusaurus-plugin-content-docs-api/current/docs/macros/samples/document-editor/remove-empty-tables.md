@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除空表格
 
 删除文档中的所有空表格。
@@ -50,9 +52,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用的方法：[获取文档](/docs/office-api/usage-api/document-api/Api/Methods/GetDocument.md)，[获取所有表格](/docs/office-api/usage-api/document-api/ApiDocument/Methods/GetAllTables.md)，[获取单元格内容](/docs/office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md)，[获取所有段落](/docs/office-api/usage-api/document-api/ApiDocumentContent/Methods/GetAllParagraphs.md)，[获取文本内容](/docs/office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md)，[获取表格行数](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetRowsCount.md)，[获取表格行](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetRow.md)，[获取单元格数量](/docs/office-api/usage-api/document-api/ApiTableRow/Methods/GetCellsCount.md)，[获取单元格](/docs/office-api/usage-api/document-api/ApiTable/Methods/GetCell.md)，[删除表格](/docs/office-api/usage-api/document-api/ApiTable/Methods/Delete.md)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllTables](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllTables.md), [GetContent](../../../../office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [GetRowsCount](../../../../office-api/usage-api/document-api/ApiTable/Methods/GetRowsCount.md), [GetRow](../../../../office-api/usage-api/document-api/ApiTable/Methods/GetRow.md), [GetCellsCount](../../../../office-api/usage-api/document-api/ApiTableRow/Methods/GetCellsCount.md), [GetCell](../../../../office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [Delete](../../../../office-api/usage-api/document-api/ApiTable/Methods/Delete.md)
 
 ## 结果
 
-![删除空表格](/assets/images/plugins/remove-empty-tables.png#gh-light-mode-only)
-![删除空表格](/assets/images/plugins/remove-empty-tables.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/remove-empty-tables" dark />

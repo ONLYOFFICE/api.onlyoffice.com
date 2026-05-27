@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 段落转表格
 
 将编号的段落列表转换为表格格式。
@@ -52,9 +54,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllNumberedParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllNumberedParagraphs), [GetNumbering](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetNumbering), [GetLevelIndex](../../../../office-api/usage-api/document-api/ApiNumberingLevel/Methods/GetLevelIndex), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText), [CreateTable](../../../../office-api/usage-api/document-api/Api/Methods/CreateTable), [Push](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Push), [GetCell](../../../../office-api/usage-api/document-api/ApiTable/Methods/GetCell), [GetContent](../../../../office-api/usage-api/document-api/ApiTableCell/Methods/GetContent), [GetElement](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetElement), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [GetNumbering](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetNumbering.md), [GetLevelIndex](../../../../office-api/usage-api/document-api/ApiNumberingLevel/Methods/GetLevelIndex.md), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [CreateTable](../../../../office-api/usage-api/document-api/Api/Methods/CreateTable.md), [Push](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Push.md), [GetCell](../../../../office-api/usage-api/document-api/ApiTable/Methods/GetCell.md), [GetContent](../../../../office-api/usage-api/document-api/ApiTableCell/Methods/GetContent.md), [GetElement](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md)
 
 ## 结果
 
-![段落转表格](/assets/images/plugins/paragraphs-to-table.png#gh-light-mode-only)
-![段落转表格](/assets/images/plugins/paragraphs-to-table.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/paragraphs-to-table" dark />

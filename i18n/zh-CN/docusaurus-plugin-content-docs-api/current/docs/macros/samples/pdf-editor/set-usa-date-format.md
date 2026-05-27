@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 设置美国日期格式
 
 将所有日期表单字段的格式设置为美国格式。
@@ -22,8 +24,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormType), [SetFormat](../../../../office-api/usage-api/document-api/ApiDateForm/Methods/SetFormat)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/document-api/ApiFormBase/Methods/GetFormType.md), [SetFormat](../../../../office-api/usage-api/document-api/ApiDateForm/Methods/SetFormat.md)
 
 ## 结果
 
-![Set USA Date Format](/assets/images/plugins/set-usa-date-format.png#gh-light-mode-only)![Set USA Date Format](/assets/images/plugins/set-usa-date-format.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/set-usa-date-format" dark />

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 排序范围
 
 自动对选定范围或电子表格中的整个已用范围进行排序。
@@ -62,8 +64,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 结果
 
-![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.png#gh-light-mode-only)![AutomaticRangeSorter](/assets/images/plugins/automatic-range-sorter.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/sort-range" dark />

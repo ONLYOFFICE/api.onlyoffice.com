@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 创建内容控件列表
 
 将文档中所有单级编号列表及手动选中的文本区域转换为内容控件下拉列表。
@@ -89,9 +91,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetNumbering](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetNumbering), [GetClassType](../../../../office-api/usage-api/document-api/ApiNumberingLevel/Methods/GetClassType), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText), [Delete](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/Delete), [GetAllNumberedParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllNumberedParagraphs), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [InsertParagraph](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange), [Select](../../../../office-api/usage-api/document-api/ApiRange/Methods/Select), [AddDropDownListContentControl](../../../../office-api/usage-api/document-api/ApiDocument/Methods/AddDropDownListContentControl), [GetDropdownList](../../../../office-api/usage-api/document-api/ApiInlineLvlSdt/Methods/GetDropdownList), [Add](../../../../office-api/usage-api/document-api/ApiContentControlList/Methods/Add), [GetRangeBySelect](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiRange/Methods/GetAllParagraphs)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetNumbering](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetNumbering.md), [GetClassType](../../../../office-api/usage-api/document-api/ApiNumberingLevel/Methods/GetClassType.md), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [Delete](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/Delete.md), [GetAllNumberedParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllNumberedParagraphs.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertParagraph](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/InsertParagraph.md), [GetRange](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetRange.md), [Select](../../../../office-api/usage-api/document-api/ApiRange/Methods/Select.md), [AddDropDownListContentControl](../../../../office-api/usage-api/document-api/ApiDocument/Methods/AddDropDownListContentControl.md), [GetDropdownList](../../../../office-api/usage-api/document-api/ApiInlineLvlSdt/Methods/GetDropdownList.md), [Add](../../../../office-api/usage-api/document-api/ApiContentControlList/Methods/Add.md), [GetRangeBySelect](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiRange/Methods/GetAllParagraphs.md)
 
 ## 结果
 
-![创建内容控件列表](/assets/images/plugins/create-content-control-list.png#gh-light-mode-only)
-![创建内容控件列表](/assets/images/plugins/create-content-control-list.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/create-content-control-list" dark />

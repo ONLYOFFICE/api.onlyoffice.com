@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 查找公司徽标
 
 通过使用 [API Ninjas](https://api-ninjas.com) 提供的 [Logo API](https://api-ninjas.com/api/logo)，在整个表格中搜索公司徽标。
@@ -60,8 +62,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue), [GetRow](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRow), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetRow](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetRow.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md)
 
 ## 结果
 
-![Find Company Logos](/assets/images/plugins/find-company-logos.png#gh-light-mode-only)![Find Company Logos](/assets/images/plugins/find-company-logos.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/find-company-logos" dark />

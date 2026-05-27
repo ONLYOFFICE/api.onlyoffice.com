@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: 2
 ---
 
 # 如何调用命令

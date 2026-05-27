@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 重置文本属性
 
 将文档中所有段落的文本属性重置为默认设置。
@@ -29,9 +31,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [CreateTextPr](../../../../office-api/usage-api/document-api/Api/Methods/CreateTextPr), [SetFontSize](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize), [SetFontFamily](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontFamily), [SetBold](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetBold), [SetItalic](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic), [SetHighlight](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight), [SetColor](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetColor), [SetUnderline](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetUnderline), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllParagraphs), [SetTextPr](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetTextPr)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [CreateTextPr](../../../../office-api/usage-api/document-api/Api/Methods/CreateTextPr.md), [SetFontSize](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontSize.md), [SetFontFamily](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetFontFamily.md), [SetBold](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetBold.md), [SetItalic](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetItalic.md), [SetHighlight](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight.md), [SetColor](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetColor.md), [SetUnderline](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetUnderline.md), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllParagraphs.md), [SetTextPr](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetTextPr.md)
 
 ## 结果
 
-![重置文本属性](/assets/images/plugins/reset-text-properties.png#gh-light-mode-only)
-![重置文本属性](/assets/images/plugins/reset-text-properties.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/reset-text-properties" dark />

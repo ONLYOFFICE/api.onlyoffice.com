@@ -1,4 +1,4 @@
-﻿# Telegram
+# Telegram
 
 将 Telegram 即时通讯应用集成到 ONLYOFFICE 编辑器中。
 

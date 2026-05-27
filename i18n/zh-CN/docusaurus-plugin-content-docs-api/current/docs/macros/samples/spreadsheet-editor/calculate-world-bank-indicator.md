@@ -2,9 +2,11 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 计算世界银行指标
 
-创建一个[异步自定义函数](/docs/macros/macros/adding-custom-functions.md#asynchronous-functions)来计算特定年份的世界银行指标值。
+创建一个[异步自定义函数](/docs/macros/macros/adding-custom-functions#asynchronous-functions)来计算特定年份的世界银行指标值。
 
 可计算的指标包括：
 
@@ -85,8 +87,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [AddCustomFunction](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [FormatAsTable](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable), [AddChart](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart), [SetTitle](../../../../office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle)
+使用方法: [AddCustomFunction](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddCustomFunction.md), [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [FormatAsTable](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/FormatAsTable.md), [AddChart](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/AddChart.md), [SetTitle](../../../../office-api/usage-api/spreadsheet-api/ApiChart/Methods/SetTitle.md)
 
 ## 结果
 
-![世界银行指标](/assets/images/plugins/world-bank-indicator.png#gh-light-mode-only)![世界银行指标](/assets/images/plugins/world-bank-indicator.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/calculate-world-bank-indicator" dark />

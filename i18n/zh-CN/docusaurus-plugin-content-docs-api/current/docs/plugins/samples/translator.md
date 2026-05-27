@@ -1,4 +1,4 @@
-﻿# 翻译器
+# 翻译器
 
 连接 [Google Translate API](https://cloud.google.com/translate?hl=zh)，用于将选中的文本翻译成其他语言。
 

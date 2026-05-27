@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 自定义页眉和页脚
 
 将预定义的页眉和页脚应用到文档中的所有页面。
@@ -36,8 +38,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetSections](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetSections), [RemoveHeader](../../../../office-api/usage-api/document-api/ApiSection/Methods/RemoveHeader), [RemoveFooter](../../../../office-api/usage-api/document-api/ApiSection/Methods/RemoveFooter), [GetHeader](../../../../office-api/usage-api/document-api/ApiSection/Methods/GetHeader), [GetFooter](../../../../office-api/usage-api/document-api/ApiSection/Methods/GetFooter), [GetElement](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetElement), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [SetJc](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc), [AddPageNumber](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddPageNumber)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetSections](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetSections.md), [RemoveHeader](../../../../office-api/usage-api/document-api/ApiSection/Methods/RemoveHeader.md), [RemoveFooter](../../../../office-api/usage-api/document-api/ApiSection/Methods/RemoveFooter.md), [GetHeader](../../../../office-api/usage-api/document-api/ApiSection/Methods/GetHeader.md), [GetFooter](../../../../office-api/usage-api/document-api/ApiSection/Methods/GetFooter.md), [GetElement](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/GetElement.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetJc](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetJc.md), [AddPageNumber](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddPageNumber.md)
 
 ## 结果
 
-![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.png#gh-light-mode-only)![CustomHeaderFooterGeneration](/assets/images/plugins/custom-header-footer-generation.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/custom-header-footer" dark />

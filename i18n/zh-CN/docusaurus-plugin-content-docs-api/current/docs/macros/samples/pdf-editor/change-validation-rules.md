@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 修改验证规则
 
 修改文档中数字和邮箱字段的验证规则。
@@ -33,9 +35,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText), [SetCharactersLimit](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit), [SetRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetRequired), [SetPlaceholderText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetPlaceholderText), [SetComb](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetComb)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [GetText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetText.md), [SetCharactersLimit](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetCharactersLimit.md), [SetRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetRequired.md), [SetPlaceholderText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetPlaceholderText.md), [SetComb](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetComb.md)
 
 ## 结果
 
-![修改验证规则](/assets/images/plugins/change-validation-rules.png#gh-light-mode-only)
-![修改验证规则](/assets/images/plugins/change-validation-rules.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/change-validation-rules" dark />

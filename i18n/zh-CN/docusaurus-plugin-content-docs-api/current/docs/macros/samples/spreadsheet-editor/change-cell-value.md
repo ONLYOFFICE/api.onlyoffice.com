@@ -2,15 +2,17 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 修改单元格的值
 
 修改选定单元格的值。
 
 :::note
-该宏是通过 [AI 插件](/docs/macros/macros/converting-vba-macros.md#automatic-conversion-using-ai-plugin)从  VBA 代码转换而来。
+该宏是通过 [AI 插件](/docs/macros/macros/converting-vba-macros#automatic-conversion-using-ai-plugin)从  VBA 代码转换而来。
 :::
 
-``` ts
+```ts
 (function(){
     // 获取当前活动工作表
     var activeSheet = Api.GetActiveSheet();
@@ -23,7 +25,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [Select](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/Select.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -36,4 +38,4 @@ End Sub
 
 ## 结果
 
-![修改单元格的值](/assets/images/plugins/change-cell-value.png#gh-light-mode-only)![修改单元格的值](/assets/images/plugins/change-cell-value.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/change-cell-value" dark />

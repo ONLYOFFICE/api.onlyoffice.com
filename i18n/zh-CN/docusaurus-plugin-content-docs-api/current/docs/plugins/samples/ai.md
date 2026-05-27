@@ -1,4 +1,4 @@
-﻿# AI
+# AI
 
 将 AI 提供商（如 OpenAI、DeepSeek）接入 ONLYOFFICE 编辑器，实现智能文本生成、编辑、摘要提取及宏自动创建功能。
 

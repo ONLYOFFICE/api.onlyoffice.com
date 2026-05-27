@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 为所有页面添加水印
 
 为 PDF 文档的每一页添加对角线水印形状。水印为旋转 -45 度的灰色矩形，带有白色粗体文字。您可以根据需要修改水印文字、颜色、大小和位置。
@@ -49,9 +51,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/pdf-api/Api/Methods/GetDocument), [CreateSolidFill](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateSolidFill), [CreateRGBColor](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateRGBColor), [CreateStroke](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateStroke), [CreateNoFill](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateNoFill), [CreateShape](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateShape), [SetRotation](../../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/SetRotation), [GetContent](../../../../office-api/usage-api/pdf-api/ApiShape/Methods/GetContent), [GetElement](../../../../office-api/usage-api/pdf-api/ApiDocumentContent/Methods/GetElement), [SetJc](../../../../office-api/usage-api/pdf-api/ApiParagraph/Methods/SetJc), [AddText](../../../../office-api/usage-api/pdf-api/ApiParagraph/Methods/AddText), [SetFontSize](../../../../office-api/usage-api/pdf-api/ApiRun/Methods/SetFontSize), [SetBold](../../../../office-api/usage-api/pdf-api/ApiRun/Methods/SetBold), [SetFill](../../../../office-api/usage-api/pdf-api/ApiRun/Methods/SetFill), [GetPagesCount](../../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount), [GetPage](../../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage), [SetPosition](../../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/SetPosition), [AddObject](../../../../office-api/usage-api/pdf-api/ApiPage/Methods/AddObject)
+使用方法: [GetDocument](../../../../office-api/usage-api/pdf-api/Api/Methods/GetDocument.md), [CreateSolidFill](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateSolidFill.md), [CreateRGBColor](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateRGBColor.md), [CreateStroke](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateStroke.md), [CreateNoFill](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateNoFill.md), [CreateShape](../../../../office-api/usage-api/pdf-api/Api/Methods/CreateShape.md), [SetRotation](../../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/SetRotation.md), [GetContent](../../../../office-api/usage-api/pdf-api/ApiShape/Methods/GetContent.md), [GetElement](../../../../office-api/usage-api/pdf-api/ApiDocumentContent/Methods/GetElement.md), [SetJc](../../../../office-api/usage-api/pdf-api/ApiParagraph/Methods/SetJc.md), [AddText](../../../../office-api/usage-api/pdf-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/pdf-api/ApiRun/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/pdf-api/ApiRun/Methods/SetBold.md), [SetFill](../../../../office-api/usage-api/pdf-api/ApiRun/Methods/SetFill.md), [GetPagesCount](../../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPagesCount.md), [GetPage](../../../../office-api/usage-api/pdf-api/ApiDocument/Methods/GetPage.md), [SetPosition](../../../../office-api/usage-api/pdf-api/ApiDrawing/Methods/SetPosition.md), [AddObject](../../../../office-api/usage-api/pdf-api/ApiPage/Methods/AddObject.md)
 
 ## 结果
 
-![为所有页面添加水印](/assets/images/plugins/add-watermark-to-all-pages.png#gh-light-mode-only)
-![为所有页面添加水印](/assets/images/plugins/add-watermark-to-all-pages.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/add-watermark-to-all-pages" dark />

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 拆分数据工作表
 
 当工作表数据量超过指定行数限制时，自动将其拆分为多个新工作表，以便高效管理大型数据集。
@@ -81,9 +83,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [GetCharacters](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCharacters), [GetFont](../../../../office-api/usage-api/spreadsheet-api/ApiCharacters/Methods/GetFont), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue), [SetFontName](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontName), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetName), [SetFontSize](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontSize), [GetSize](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetSize), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit), [GetBold](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetBold), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold), [GetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetItalic), [SetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetItalic), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber), [AddSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddSheet), [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetUsedRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetUsedRange.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetCharacters](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetCharacters.md), [GetFont](../../../../office-api/usage-api/spreadsheet-api/ApiCharacters/Methods/GetFont.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md), [SetFontName](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontName.md), [GetName](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetName.md), [SetFontSize](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFontSize.md), [GetSize](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetSize.md), [AutoFit](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AutoFit.md), [GetBold](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetBold.md), [SetBold](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetBold.md), [GetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiFont/Methods/GetItalic.md), [SetItalic](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetItalic.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [AddSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/AddSheet.md), [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md)
 
 ## 结果
 
-![拆分数据工作表](/assets/images/plugins/split-data-sheets.png#gh-light-mode-only)
-![拆分数据工作表](/assets/images/plugins/split-data-sheets.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/split-data-sheets" dark />

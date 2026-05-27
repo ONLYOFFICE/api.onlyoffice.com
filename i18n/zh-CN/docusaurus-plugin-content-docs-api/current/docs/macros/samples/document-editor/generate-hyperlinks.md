@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 生成超链接
 
 生成并插入超链接，替代文本形式的 URL。
@@ -41,8 +43,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllParagraphs), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText), [RemoveAllElements](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/RemoveAllElements), [CreateRun](../../../../office-api/usage-api/document-api/Api/Methods/CreateRun), [AddText](../../../../office-api/usage-api/document-api/ApiRun/Methods/AddText), [AddElement](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddElement), [AddHyperlink](../../../../office-api/usage-api/document-api/ApiRun/Methods/AddHyperlink)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllParagraphs](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllParagraphs.md), [GetText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/GetText.md), [RemoveAllElements](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/RemoveAllElements.md), [CreateRun](../../../../office-api/usage-api/document-api/Api/Methods/CreateRun.md), [AddText](../../../../office-api/usage-api/document-api/ApiRun/Methods/AddText.md), [AddElement](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddElement.md), [AddHyperlink](../../../../office-api/usage-api/document-api/ApiRun/Methods/AddHyperlink.md)
 
 ## 结果
 
-![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.png#gh-light-mode-only)![Generate Hyperlinks](/assets/images/plugins/generate-hyperlinks.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/generate-hyperlinks" dark />

@@ -1,4 +1,4 @@
-﻿# 同义词典
+# 同义词典
 
 连接 [Big Huge Thesaurus](https://words.bighugelabs.com/)，用于查找单词的同义词和反义词。
 

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 删除书签
 
 查找并删除文档中包含特定文本的书签。
@@ -28,9 +30,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllBookmarksNames](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames), [GetBookmark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetBookmark), [GetText](../../../../office-api/usage-api/document-api/ApiBookmark/Methods/GetText), [DeleteBookmark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllBookmarksNames](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllBookmarksNames.md), [GetBookmark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetBookmark.md), [GetText](../../../../office-api/usage-api/document-api/ApiBookmark/Methods/GetText.md), [DeleteBookmark](../../../../office-api/usage-api/document-api/ApiDocument/Methods/DeleteBookmark.md)
 
 ## 结果
 
-![删除书签](/assets/images/plugins/delete-bookmark.png#gh-light-mode-only)
-![删除书签](/assets/images/plugins/delete-bookmark.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/delete-bookmark" dark />

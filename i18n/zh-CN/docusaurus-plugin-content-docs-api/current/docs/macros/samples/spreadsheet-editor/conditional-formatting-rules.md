@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 条件格式规则
 
 对所选区域应用多个条件格式规则。
@@ -37,8 +39,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor), [AddComment](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment)
+使用方法: [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [AddComment](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/AddComment.md)
 
 ## 结果
 
-![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.png#gh-light-mode-only)![Conditional formatting rules](/assets/images/plugins/conditional-formatting-rules.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/conditional-formatting-rules" dark />

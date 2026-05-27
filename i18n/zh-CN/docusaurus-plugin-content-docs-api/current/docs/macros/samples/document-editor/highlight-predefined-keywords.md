@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 高亮预设关键词
 
 在文本文档中高亮预设关键词。
@@ -22,8 +24,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [Search](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Search), [SetHighlight](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [Search](../../../../office-api/usage-api/document-api/ApiDocument/Methods/Search.md), [SetHighlight](../../../../office-api/usage-api/document-api/ApiTextPr/Methods/SetHighlight.md)
 
 ## 结果
 
-![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.png#gh-light-mode-only)![Highlight predefined keywords](/assets/images/plugins/highlight-predefined-keywords.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/highlight-predefined-keywords" dark />

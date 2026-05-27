@@ -1,4 +1,4 @@
-﻿# Hello world
+# Hello world
 
 当用户按下按钮时，插入 *Hello world!* 这句话。
 

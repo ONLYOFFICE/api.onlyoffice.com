@@ -2,18 +2,20 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 向工作表单元格写入数据
 
 将数据（*Hello world* 这个短语）写入工作表第 4 行第 3 列的单元格中。
 
-``` ts
+```ts
 (function()
 {
   Api.GetActiveSheet().GetRange("C4").SetValue("Hello world");
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -25,4 +27,4 @@ End Sub
 
 ## 结果
 
-![Write data](/assets/images/plugins/write-data-to-cell.png#gh-light-mode-only)![Write data](/assets/images/plugins/write-data-to-cell.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/write-data-to-worksheet-cell" dark />

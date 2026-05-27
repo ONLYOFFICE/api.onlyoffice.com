@@ -2,9 +2,11 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 加权平均函数
 
-创建一个用于计算加权平均值的自定义函数。
+创建一个用于计算加权平均值的[自定义函数](../../../macros/adding-custom-functions.md)。
 
 ```ts
 (function () {
@@ -59,8 +61,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetValue.md)
 
 ## 结果
 
-![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.png#gh-light-mode-only)![WeightedAverageFunction](/assets/images/plugins/weighted-average-function.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/weighted-average-function" dark />

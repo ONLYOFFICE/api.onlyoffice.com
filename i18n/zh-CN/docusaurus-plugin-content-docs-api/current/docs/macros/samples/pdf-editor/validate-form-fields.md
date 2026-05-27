@@ -2,9 +2,11 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 验证表单字段
 
-使用指定颜色高亮显示文档中为空或非必填的文本字段。
+使用指定颜色高亮显示文档中为空的可选文本字段。
 
 ```ts
 (function () {
@@ -38,9 +40,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormsData](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetFormsData), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey), [IsRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/IsRequired), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText), [SetBorderColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBorderColor), [SetBackgroundColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBackgroundColor)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormsData](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetFormsData.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormKey.md), [IsRequired](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/IsRequired.md), [GetTipText](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/GetTipText.md), [SetBorderColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBorderColor.md), [SetBackgroundColor](../../../../office-api/usage-api/form-api/ApiTextForm/Methods/SetBackgroundColor.md)
 
 ## 结果
 
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.png#gh-light-mode-only)
-![ValidateFormFields](/assets/images/plugins/validate-form-fields.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/validate-form-fields" dark />

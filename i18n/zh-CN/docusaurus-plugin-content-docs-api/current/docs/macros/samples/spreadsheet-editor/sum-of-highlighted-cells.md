@@ -2,11 +2,13 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 高亮单元格求和
 
 计算电子表格中所有高亮单元格的数值总和。
 
-``` ts
+```ts
 (function () {
     let worksheet = Api.GetActiveSheet();
     let range1 = worksheet.GetRange("B1"); // 设置用于颜色参考的单元格范围
@@ -37,7 +39,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB), [GetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetFillColor), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach), [GetRGB](../../../../office-api/usage-api/spreadsheet-api/ApiColor/Methods/GetRGB), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue)
+使用方法: [GetActiveSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetActiveSheet.md), [GetRange](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRange.md), [SetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/SetFillColor.md), [CreateColorFromRGB](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/CreateColorFromRGB.md), [GetFillColor](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetFillColor.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetRGB](../../../../office-api/usage-api/spreadsheet-api/ApiColor/Methods/GetRGB.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -61,4 +63,4 @@ End Sub
 
 ## 结果
 
-![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.png#gh-light-mode-only)![Sum of highlighted cells](/assets/images/plugins/sum-of-highlighted-cells.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/sum-of-highlighted-cells" dark />

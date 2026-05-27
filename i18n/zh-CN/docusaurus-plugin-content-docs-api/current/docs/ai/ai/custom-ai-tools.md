@@ -1,5 +1,5 @@
 ---
-sidebar_position: -1
+sidebar_position: 4
 ---
 
 # 自定义 AI 工具（测试版）

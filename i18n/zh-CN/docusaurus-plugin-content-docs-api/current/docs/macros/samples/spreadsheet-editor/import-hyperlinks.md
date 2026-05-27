@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 导入超链接
 
 导入表格中不同工作表之间的超链接。
@@ -23,7 +25,7 @@ hide_table_of_contents: true
   worksheetA.SetActive();
   worksheetA.GetRange("A1").SetValue("title1");
   worksheetA.GetRange("A2").SetValue("title2");
-  worksheetA.GetRange("A3").SetValue("title2");
+  worksheetA.GetRange("A3").SetValue("title3");
   worksheetA.GetRange("B1").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/spreadsheet-api/");
   worksheetA.GetRange("B2").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/document-api/");
   worksheetA.GetRange("B3").SetValue("https://api.onlyoffice.com/docs/office-api/usage-api/presentation-api/");
@@ -59,7 +61,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach), [GetAddress](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress), [SetHyperlink](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetHyperlink)
+使用方法: [GetSheet](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSheet.md), [GetRangeByNumber](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/GetRangeByNumber.md), [GetValue](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetValue.md), [GetSelection](../../../../office-api/usage-api/spreadsheet-api/Api/Methods/GetSelection.md), [ForEach](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/ForEach.md), [GetAddress](../../../../office-api/usage-api/spreadsheet-api/ApiRange/Methods/GetAddress.md), [SetHyperlink](../../../../office-api/usage-api/spreadsheet-api/ApiWorksheet/Methods/SetHyperlink.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -99,4 +101,4 @@ End Sub
 
 ## 结果
 
-![Import hyperlinks](/assets/images/plugins/import-hyperlinks.png#gh-light-mode-only)![Import hyperlinks](/assets/images/plugins/import-hyperlinks.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/spreadsheet-editor/import-hyperlinks" dark />

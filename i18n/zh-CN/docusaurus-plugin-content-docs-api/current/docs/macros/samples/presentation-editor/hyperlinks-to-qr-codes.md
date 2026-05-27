@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 将超链接转换为二维码
 
 使用外部 API 将演示文稿中的所有超链接转换为二维码。
@@ -58,8 +60,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent), [CreateOleObject](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateOleObject), [SetSize](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetSize), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject)
+使用方法: [GetPresentation](../../../../office-api/usage-api/presentation-api/Api/Methods/GetPresentation.md), [GetSlidesCount](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlidesCount.md), [GetSlideByIndex](../../../../office-api/usage-api/presentation-api/ApiPresentation/Methods/GetSlideByIndex.md), [GetAllShapes](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/GetAllShapes.md), [GetDocContent](../../../../office-api/usage-api/presentation-api/ApiShape/Methods/GetDocContent.md), [CreateOleObject](../../../../office-api/usage-api/presentation-api/Api/Methods/CreateOleObject.md), [SetSize](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetSize.md), [SetPosition](../../../../office-api/usage-api/presentation-api/ApiDrawing/Methods/SetPosition.md), [AddObject](../../../../office-api/usage-api/presentation-api/ApiSlide/Methods/AddObject.md)
 
 ## 结果
 
-![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.png#gh-light-mode-only)![Hyperlinks to QR codes](/assets/images/plugins/hyperlinks-to-qr-codes.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/presentation-editor/hyperlinks-to-qr-codes" dark />

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 替换文档中的单词
 
 在整个文档中搜索指定单词，并将其替换为给定的替换词。
@@ -27,7 +29,7 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetRangeBySelect](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect), [GetText](../../../../office-api/usage-api/document-api/ApiRange/Methods/GetText), [Delete](../../../../office-api/usage-api/document-api/ApiRange/Methods/Delete), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetRangeBySelect](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetRangeBySelect.md), [GetText](../../../../office-api/usage-api/document-api/ApiRange/Methods/GetText.md), [Delete](../../../../office-api/usage-api/document-api/ApiRange/Methods/Delete.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [InsertContent](../../../../office-api/usage-api/document-api/ApiDocument/Methods/InsertContent.md)
 
 ## 参考 Microsoft VBA 宏代码
 
@@ -39,4 +41,4 @@ End Sub
 
 ## 结果
 
-![Replace Words in Document](/assets/images/plugins/replace-words-in-document.png#gh-light-mode-only)![Replace Words in Document](/assets/images/plugins/replace-words-in-document.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/replace-words-in-document" dark />

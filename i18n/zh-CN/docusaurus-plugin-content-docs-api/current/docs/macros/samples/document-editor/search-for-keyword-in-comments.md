@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 搜索注释中的关键字
 
 将包含指定关键字的文档注释标记为已解决。
@@ -38,9 +40,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllComments](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllComments), [GetText](../../../../office-api/usage-api/document-api/ApiComment/Methods/GetText), [SetSolved](../../../../office-api/usage-api/document-api/ApiComment/Methods/SetSolved)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllComments](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetAllComments.md), [GetText](../../../../office-api/usage-api/document-api/ApiComment/Methods/GetText.md), [SetSolved](../../../../office-api/usage-api/document-api/ApiComment/Methods/SetSolved.md)
 
 ## 结果
 
-![CommentWordSearch](/assets/images/plugins/comment-word-search.png#gh-light-mode-only)
-![CommentWordSearch](/assets/images/plugins/comment-word-search.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/search-for-keyword-in-comments" dark />

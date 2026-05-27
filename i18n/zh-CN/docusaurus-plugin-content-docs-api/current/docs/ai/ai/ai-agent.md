@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: 3
 ---
 
 # AI 助手（测试版）

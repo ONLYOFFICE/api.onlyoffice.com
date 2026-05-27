@@ -1,5 +1,5 @@
 ---
-sidebar_position: -2
+sidebar_position: 4
 description: 了解如何在 ONLYOFFICE 插件中创建和使用输入辅助。
 ---
 

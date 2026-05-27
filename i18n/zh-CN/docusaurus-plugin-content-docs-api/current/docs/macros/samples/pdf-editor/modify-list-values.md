@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 修改列表选项值
 
 从包含特定键值的所有组合框中删除指定的列表选项。
@@ -29,9 +31,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey), [GetListValues](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetListValues), [SetListValues](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetListValues)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetAllForms](../../../../office-api/usage-api/form-api/ApiDocument/Methods/GetAllForms.md), [GetFormType](../../../../office-api/usage-api/form-api/ApiFormBase/Methods/GetFormType.md), [GetFormKey](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetFormKey.md), [GetListValues](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/GetListValues.md), [SetListValues](../../../../office-api/usage-api/form-api/ApiComboBoxForm/Methods/SetListValues.md)
 
 ## 结果
 
-![修改列表选项值](/assets/images/plugins/modify-list-values.png#gh-light-mode-only)
-![修改列表选项值](/assets/images/plugins/modify-list-values.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/pdf-editor/modify-list-values" dark />

@@ -2,6 +2,8 @@
 hide_table_of_contents: true
 ---
 
+import Video from '@site/src/components/Video/Video';
+
 # 创建自定义页眉
 
 创建一个包含图像和标题的自定义页眉。图像在代码中以 base64 字符串的形式表示，可根据需要进行自定义或替换。
@@ -37,9 +39,8 @@ hide_table_of_contents: true
 })();
 ```
 
-使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument), [GetFinalSection](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetFinalSection), [GetHeader](../../../../office-api/usage-api/document-api/ApiSection/Methods/GetHeader), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph), [CreateImage](../../../../office-api/usage-api/document-api/Api/Methods/CreateImage), [AddDrawing](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddDrawing), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText), [SetFontSize](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize), [SetBold](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold), [Push](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/Push)
+使用方法: [GetDocument](../../../../office-api/usage-api/document-api/Api/Methods/GetDocument.md), [GetFinalSection](../../../../office-api/usage-api/document-api/ApiDocument/Methods/GetFinalSection.md), [GetHeader](../../../../office-api/usage-api/document-api/ApiSection/Methods/GetHeader.md), [CreateParagraph](../../../../office-api/usage-api/document-api/Api/Methods/CreateParagraph.md), [CreateImage](../../../../office-api/usage-api/document-api/Api/Methods/CreateImage.md), [AddDrawing](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddDrawing.md), [AddText](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/AddText.md), [SetFontSize](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetFontSize.md), [SetBold](../../../../office-api/usage-api/document-api/ApiParagraph/Methods/SetBold.md), [Push](../../../../office-api/usage-api/document-api/ApiDocumentContent/Methods/Push.md)
 
 ## 结果
 
-![CustomHeader](/assets/images/plugins/create-custom-header.png#gh-light-mode-only)
-![CustomHeader](/assets/images/plugins/create-custom-header.dark.png#gh-dark-mode-only)
+<Video src="/assets/video/macros/document-editor/create-custom-header" dark />
