@@ -1,6 +1,7 @@
 import SdkIcon from "@site/static/icons/javascript-sdk-icon.svg";
 import PluginIcon from "@site/static/icons/plugins-icon.svg";
 import MacrosIcon from "@site/static/icons/code-icon.svg";
+import AIIcon from "@site/static/icons/ai-icon.svg";
 import DocsApiIcon from "@site/static/icons/docs-api-icon.svg";
 import DocSpaceApiIcon from "@site/static/icons/docspace-api-icon.svg";
 import OfficeApiIcon from "@site/static/icons/office-api-icon.svg";
@@ -62,6 +63,16 @@ export const DocsFeatures: Features = {
         </>
       ),
       icon: <MacrosIcon/>,
+    },
+    {
+      title: 'AI',
+      link: 'ai/get-started/get-started',
+      description: (
+        <>
+          Build AI-powered tools and workflows inside ONLYOFFICE editors using the AI plugin and custom AI functions.
+        </>
+      ),
+      icon: <AIIcon/>,
     },
     {
       title: 'Document Builder',

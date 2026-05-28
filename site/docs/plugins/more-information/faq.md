@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # FAQ
 
+:::note
+This page covers plugin-related questions. For macros-specific questions, see the [Macros FAQ](/docs/macros/more-information/faq).
+:::
+
 ## How to install plugins to the ONLYOFFICE editors?
 
 Some plugins are installed by default. Switch to the **Plugins** tab to see the available ones. To install additional plugins, see the [desktop](../development-workflow/installing-and-testing/desktop-editors-installation.md), [on-premises](../development-workflow/installing-and-testing/docs-on-premises-installation.md) or [cloud](../development-workflow/installing-and-testing/cloud-saas-installation.md) installation instructions.
