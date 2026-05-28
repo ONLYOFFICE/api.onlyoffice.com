@@ -7,7 +7,7 @@ import PlayIcon from '@site/static/icons/icon-play.svg';
 import {useCallback} from "react";
 
 export const PlaygroundEditor = () => {
-    const {scriptValue, theme, editorType, scriptType, documentServerUrl, dispatch} = usePlaygroundRootContext();
+    const {scriptValue, theme, editorType, scriptType, documentServerUrl, isEditorReady, dispatch} = usePlaygroundRootContext();
 
     const onChange = useCallback((newValue: string | undefined) => {
         if (newValue !== undefined) {
@@ -40,7 +40,7 @@ export const PlaygroundEditor = () => {
 
     return (
         <div className={styles.editorContainer}>
-            <button onClick={handleRun} className={styles.runButton}>
+            <button onClick={handleRun} disabled={!isEditorReady} className={styles.runButton}>
                 <PlayIcon fill='currentColor'/>
             </button>
             <MonacoEditor

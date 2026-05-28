@@ -4,7 +4,7 @@ import { EditorPreview, type EditorPreviewRef } from "@site/src/components/Edito
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export const PlaygroundPreview = () => {
-    const { theme, scriptValue, modeType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, fileType } = usePlaygroundRootContext();
+    const { theme, scriptValue, modeType, scriptType, editorType, documentServerUrl, documentServerSecret, templateUrl, hasInitialScript, fileType, dispatch } = usePlaygroundRootContext();
 
     const editorRef = useRef<EditorPreviewRef>(null);
     const initialScriptExecutedRef = useRef(!hasInitialScript);
@@ -91,6 +91,8 @@ export const PlaygroundPreview = () => {
                             new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
                         );
 
+                        dispatch({type: 'SET_EDITOR_READY', payload: true});
+
                         if (!initialScriptExecutedRef.current) {
                             initialScriptExecutedRef.current = true;
                             executeCode(scriptValueRef.current, scriptTypeRef.current);
@@ -105,9 +107,10 @@ export const PlaygroundPreview = () => {
 
     const initEditorWithConfig = useCallback(() => {
         if (!isApiReadyRef.current || !editorRef.current) return;
+        dispatch({type: 'SET_EDITOR_READY', payload: false});
         const config = buildConfig();
         editorRef.current.initEditor(config);
-    }, [buildConfig]);
+    }, [buildConfig, dispatch]);
 
     const handleApiReady = useCallback(() => {
         isApiReadyRef.current = true;
