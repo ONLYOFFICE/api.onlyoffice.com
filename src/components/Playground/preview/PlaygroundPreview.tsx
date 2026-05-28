@@ -13,6 +13,16 @@ export const PlaygroundPreview = () => {
     scriptValueRef.current = scriptValue;
     const scriptTypeRef = useRef(scriptType);
     scriptTypeRef.current = scriptType;
+    const pluginInstalledRef = useRef(false);
+
+    const installPlugin = useCallback(() => {
+        if (pluginInstalledRef.current || !window.connector) return;
+        const pluginConfigUrl = `${window.location.origin}/playground/plugin/config.json`;
+        window.connector.callCommand(
+            new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
+        );
+        pluginInstalledRef.current = true;
+    }, []);
 
     const executeCode = useCallback((code: string, type: string) => {
         if (!window.connector) {
@@ -84,12 +94,12 @@ export const PlaygroundPreview = () => {
             events: {
                 onDocumentReady: () => {
                     try {
-                        const pluginConfigUrl = `${window.location.origin}/playground/plugin/config.json`;
-
                         window.connector = window.docEditor.createConnector();
-                        window.connector.callCommand(
-                            new Function(`Api.installDeveloperPlugin("${pluginConfigUrl}");`)
-                        );
+                        pluginInstalledRef.current = false;
+
+                        if (scriptTypeRef.current === 'plugin') {
+                            installPlugin();
+                        }
 
                         dispatch({type: 'SET_EDITOR_READY', payload: true});
 
@@ -120,6 +130,12 @@ export const PlaygroundPreview = () => {
     useEffect(() => {
         initEditorWithConfig();
     }, [theme, modeType, editorType, initEditorWithConfig]);
+
+    useEffect(() => {
+        if (scriptType === 'plugin') {
+            installPlugin();
+        }
+    }, [scriptType, installPlugin]);
 
     useEffect(() => {
         const handleRefresh = () => {
