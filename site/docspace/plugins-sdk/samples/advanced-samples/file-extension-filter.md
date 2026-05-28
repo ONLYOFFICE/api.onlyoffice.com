@@ -179,8 +179,28 @@ const viewFilesButtonProps: IButton = {
       }
     }));
 
-    // Replace modal content with new list
-    modalBody.children = [...fileBlocks];
+    const backButtonBlock = {
+      component: Components.button,
+      props: {
+        label: "Back",
+        primary: false,
+        size: ButtonSize.normal,
+        scale: false,
+        onClick: (): IMessage => {
+          modalBody.children = [
+            { component: Components.comboBox, props: comboBox },
+            { component: Components.button, props: viewFilesButtonProps }
+          ];
+          return {
+            actions: [Actions.showModal],
+            modalDialogProps: modalProps
+          };
+        }
+      }
+    };
+
+    // Replace modal content with back button + file list
+    modalBody.children = [backButtonBlock, ...fileBlocks];
 
     return {
       actions: [Actions.showModal],
@@ -192,8 +212,10 @@ const viewFilesButtonProps: IButton = {
 // Modal layout combining dropdown and action button
 const modalBody: IBox = {
   widthProp: "700px",
-  heightProp: "150px",
+  heightProp: "300px",
+  overflowProp: "auto",
   marginProp: "0 0 24px",
+  paddingProp: "0 12px 0 0",
   children: [
     {
       component: Components.comboBox,
@@ -226,8 +248,11 @@ const contextMenuItem: IContextMenuItem = {
   label: "Ext Search",
   icon: "icon.svg",
   onClick: (id: number) => {
-    // Store selected room ID and show modal
     currentRoomId = id;
+    modalBody.children = [
+      { component: Components.comboBox, props: comboBox },
+      { component: Components.button, props: viewFilesButtonProps }
+    ];
     return {
       actions: [Actions.showModal],
       modalDialogProps: modalProps
@@ -271,8 +296,11 @@ npm i -g @onlyoffice/docspace-plugin-sdk
    npx create-docspace-plugin
    ```
 
-2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage.
-
+2. Fill out [basic metadata](/docspace/plugins-sdk/usage-sdk/creating-plugin-template.md): plugin name, version, author, description, logo, license, homepage. In this case, set the plugin name to `extsearch` and the `pluginName` will be generated as `Extsearch`.  
+:::note
+This key is used to register the plugin: `window.Plugins.Extsearch = plugin;`.
+See the full example code for more details.
+:::
 3. Select the required scopes from the list of available options. Use the arrow keys to highlight `Context menu`, press `Space` to select it, then press `Enter` to confirm and generate the plugin template.
 
 ## Step 2: Confirm plugin configuration
