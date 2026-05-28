@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
 import { usePlaygroundRootContext } from "@site/src/components/Playground";
 import { EditorPreview, type EditorPreviewRef } from "@site/src/components/EditorPreview";
-import { getFullUrl } from "@site/src/utils/url";
 import { FILE_CONFIGS, SAMPLE_FILE_CONFIGS } from "../defaultScripts";
 
 export const PlaygroundPreview = () => {
@@ -85,7 +84,7 @@ export const PlaygroundPreview = () => {
             events: {
                 onDocumentReady: () => {
                     try {
-                        const pluginConfigUrl = getFullUrl("/plugin/config.json");
+                        const pluginConfigUrl = `${window.location.origin}/playground/plugin/config.json`;
 
                         window.connector = window.docEditor.createConnector();
                         window.connector.callCommand(

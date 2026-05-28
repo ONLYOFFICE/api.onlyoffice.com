@@ -2,16 +2,14 @@ import {ColorModeProvider} from "@docusaurus/theme-common/internal";
 import {useLocation} from "react-router-dom";
 import Head from '@docusaurus/Head';
 import BrowserOnly from "@docusaurus/BrowserOnly";
-import {getSearchParams} from "@site/src/utils/url";
 import type {DocSpaceMode} from "@site/src/components/DocSpacePlayground/codeSnippets";
 import {DocSpacePlayground} from "@site/src/components/DocSpacePlayground/DocSpacePlayground";
 
 const DocSpacePlaygroundRoute = () => {
     const location = useLocation();
 
-    const {mode} = getSearchParams<{ mode: DocSpaceMode }>(location.search, {
-        mode: 'mode',
-    });
+    const params = new URLSearchParams(location.search);
+    const mode = params.get('mode') as DocSpaceMode | undefined;
 
     return (
         <ColorModeProvider>
