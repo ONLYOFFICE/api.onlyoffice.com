@@ -10,7 +10,7 @@ Playground 是一个互动平台，用户无需注册或安装任何软件，就
 
 ## 功能特点
 
-- **脚本测试**：使用提供的 ONLYOFFICE API（[Office JavaScript API](/docs/office-api/get-started/overview)、[自动 API](/docs/docs-api/usage-api/automation-api/) 或 [插件 API](/docs/plugins/get-started/)编写和运行 JavaScript 代码。
+- **脚本测试**：使用提供的 ONLYOFFICE API（[Office JavaScript API](/docs/office-api/get-started/overview)、[自动 API](/docs/docs-api/usage-api/automation-api/) 或 [插件 API](/docs/plugins/get-started/)）编写和运行 JavaScript 代码。
 - **实时预览**：在嵌入式文档编辑器中即时查看脚本运行结果。
 - **多平台支持**：支持桌面、移动端或嵌入式平台。
 - **自定义设置**：可切换主题和界面语言，使用方便。

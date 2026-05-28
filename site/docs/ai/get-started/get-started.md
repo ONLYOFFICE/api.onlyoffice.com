@@ -5,13 +5,9 @@ description: Learn how to build custom AI tools for ONLYOFFICE editors.
 
 # Getting started
 
-ONLYOFFICE supports three ways to extend editor functionality: **plugins**, **macros**, and **custom AI tools**. This page helps you choose the right approach and get started.
+Custom AI tools are AI-powered extensions built on top of the ONLYOFFICE plugin system. They connect the editor to AI providers and expose intelligent actions — such as text generation, translation, data analysis, and other custom document actions — directly inside documents.
 
 If you prefer to start coding right away, go directly to the [quick start guides](quick-start/comment-text-ai-tool.md) or try things out in the [interactive playground](playground.md).
-
-import GetStartedOverview from '../../_shared/_get-started-overview.md';
-
-<GetStartedOverview />
 
 ## Resources {#resources}
 
@@ -19,13 +15,10 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 
 - **[Interactive playground](playground.md)** — Test code without installation
 - **[UI component library](https://onlyoffice.github.io/storybook/static/)** — Pre-built components
-- **[Plugin templates](https://github.com/ONLYOFFICE/sdkjs-plugins)** — Starter projects
 - **[Browser DevTools](/docs/plugins/development-workflow/debugging/browser-devtools-guide)** — Debugging guide
 
 ### Sample code
 
-- **[Plugin examples](/samples/?doctype=docs&text=plugin)** — Working examples
-- **[Macro examples](/samples/?doctype=docs&text=macros)** — Common automation scripts
 - **[AI function examples](/samples/?doctype=ai&text=ai+tools)** — AI integration patterns
 
 ### Documentation
@@ -34,7 +27,7 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 - **[Plugin structure](/docs/plugins/fundamentals/configuration/config-json)** — Configuration guide
 - **[Macro guide](/docs/macros/macros/writing-macros)** — Macro development
 - **[AI integration](/docs/ai/ai/ai-plugin)** — AI plugin setup
-- **[FAQ](../more-information/faq.md)** — Frequently asked questions
+- **[FAQ](/docs/ai/more-information/faq)** — Frequently asked questions
 
 ### Community
 
