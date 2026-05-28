@@ -34,7 +34,7 @@ import GetStartedOverview from '../../_shared/_get-started-overview.md';
 - **[Plugin structure](/docs/plugins/fundamentals/configuration/config-json)** — Configuration guide
 - **[Macro guide](/docs/macros/macros/writing-macros)** — Macro development
 - **[AI integration](/docs/ai/ai/ai-plugin)** — AI plugin setup
-- **[FAQ](../more-information/faq.md)** — Frequently asked questions
+- **[FAQ](/docs/macros/more-information/faq)** — Frequently asked questions
 
 ### Community
 

@@ -40,14 +40,6 @@ Please make sure that your plugin archive **doesn't** look the following way:
 
 All the plugin files and subfolders must be at the archive root. To do it, unpack the plugin folder first and then archive its elements only.
 
-## Can I use Microsoft Office macros in ONLYOFFICE editors?
+## Have macro-related questions?
 
-Microsoft Office macros use Visual Basic for Applications (VBA) scripting language, while ONLYOFFICE editors use JavaScript. But this is not difficult to convert your previously used macros into the new format. Some examples of converting MS VBA macros you can see [here](/docs/macros/macros/converting-vba-macros).
-
-## Where can I find methods for writing macros?
-
-Macros use JavaScript language syntax and [Office JavaScript API](../../office-api/get-started/overview.md) scripting notation, thus the methods available in JavaScript and all the methods supported by **Office API** are also supported by macros.
-
-## Can I make a macro global?
-
-Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../fundamentals/configuration/config-json.md) that will be loaded for all the users.
+For questions about writing, running, and converting macros, see the [Macros FAQ](../../macros/more-information/faq.md).

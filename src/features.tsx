@@ -1,5 +1,6 @@
 import SdkIcon from "@site/static/icons/javascript-sdk-icon.svg";
 import PluginIcon from "@site/static/icons/plugins-icon.svg";
+import MacrosIcon from "@site/static/icons/code-icon.svg";
 import DocsApiIcon from "@site/static/icons/docs-api-icon.svg";
 import DocSpaceApiIcon from "@site/static/icons/docspace-api-icon.svg";
 import OfficeApiIcon from "@site/static/icons/office-api-icon.svg";
@@ -47,11 +48,20 @@ export const DocsFeatures: Features = {
       link: 'plugins/get-started',
       description: (
         <>
-          Extend the ONLYOFFICE Docs{" "}
-          functionality by creating your own plugins/macros.
+          Extend the ONLYOFFICE Docs functionality by creating your own plugins.
         </>
       ),
       icon: <PluginIcon/>,
+    },
+    {
+      title: 'Macros',
+      link: 'macros/get-started/get-started',
+      description: (
+        <>
+          Automate document tasks using JavaScript macros across all editor types.
+        </>
+      ),
+      icon: <MacrosIcon/>,
     },
     {
       title: 'Document Builder',

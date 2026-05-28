@@ -16,6 +16,6 @@ Macros use JavaScript language syntax and [Office JavaScript API](../../office-a
 
 Macros are attached to the specific documents and there is no possibility to make them global. However, you can write a [plugin](../../plugins/fundamentals/configuration/config-json.md) that will be loaded for all the users.
 
-## Plugin-related questions
+## Have plugin-related questions?
 
 For questions about plugin installation, styling, localization, and distribution, see the [Plugins FAQ](../../plugins/more-information/faq.md).
